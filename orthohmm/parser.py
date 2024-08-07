@@ -114,6 +114,30 @@ def create_parser() -> ArgumentParser:
             Lower values are more permissive resulting in larger orthogroups.
             Higher values are stricter resulting in smaller orthogroups.
             The default value is 1.5.
+
+        -------------------
+        | OrthoHMM output | 
+        -------------------
+        All OrthoHMM outputs have the prefix `orthohmm` so that they are easy to find.
+
+        orthohmm_gene_count.txt
+            A gene count matrix per taxa for each orthogroup. Space delimited.
+        
+        orthohmm_orthogroups.txt
+            Genes present in each orthogroup. Space delimited.
+        
+        orthohmm_single_copy_orthogroups.txt
+            A single-column list of single-copy orthologs.
+        
+        orthohmm_orthogroups
+            A directory of FASTA files wherein each file is an orthogroup.
+        
+        orthohmm_single_copy_orthogroups
+            A directory of FASTA files wherein each file is a single-copy ortholog.
+            Headers are modified to have taxon names come before the gene identifier. Taxon names are the file name
+            excluding the extension. Taxon name and gene identifier are separated by a pipe symbol "|".
+            This aims to help streamline phylogenomic workflows wherein sequences will be concatenated downstream
+            based on taxon names.
         """  # noqa
         ),
     )

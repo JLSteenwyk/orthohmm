@@ -131,6 +131,7 @@ def execute(
         files,
         fasta_directory,
         single_copy_threshold,
+        extensions,
     )
     print("          Completed!\n")
 

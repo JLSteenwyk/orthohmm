@@ -108,7 +108,7 @@ Note, the virtual environment must be activated to use orthohmm.
 
 **2) Usage**
 
-To use ClipKIT in its simpliest form, execute the following command:
+To use OrthoHMM in its simpliest form, execute the following command:
 
 .. code-block:: shell
 

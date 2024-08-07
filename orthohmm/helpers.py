@@ -87,7 +87,7 @@ def determine_edge_thresholds(
         output_directory: str,
         col_names: list,
         columns_to_drop: list,
-) -> Tuple[list, dict, dict]:
+) -> Tuple[pd.DataFrame, dict, dict]:
     # get sequence lengths
     gene_lengths = []
     for file in files:
@@ -233,10 +233,11 @@ def execute_mcl(
 
 def generate_orthogroup_files(
     output_directory: str,
-    gene_lengths: list,
+    gene_lengths: pd.DataFrame,
     files: list,
     fasta_directory: str,
     single_copy_threshold: float,
+    extensions: tuple,
 ) -> Tuple[list, list, dict]:
     clustering_res = []
     with open(
@@ -327,14 +328,20 @@ def generate_orthogroup_files(
     if not os.path.isdir(f"{output_directory}/orthohmm_orthogroups"):
         os.mkdir(f"{output_directory}/orthohmm_orthogroups")
     for og_id, fasta_dat in ogs_dat.items():
-        with open(f"{output_directory}/orthohmm_orthogroups/{og_id}.fa", 'w') as file:
+        with open(f"{output_directory}/orthohmm_orthogroups/{og_id}.fa", "w") as file:
             file.write("\n".join(fasta_dat)+"\n")
 
     # write single-copy og files
     if not os.path.isdir(f"{output_directory}/orthohmm_single_copy_orthogroups"):
         os.mkdir(f"{output_directory}/orthohmm_single_copy_orthogroups")
     for single_copy_og in single_copy_ogs:
-        with open(f"{output_directory}/orthohmm_single_copy_orthogroups/{single_copy_og}.fa", 'w') as file:
-            file.write("\n".join(ogs_dat[single_copy_og])+"\n")
+        for idx in range(len(ogs_dat[single_copy_og])):
+            if ogs_dat[single_copy_og][idx][0] == ">":
+                taxon_name = gene_lengths.loc[gene_lengths["target name"] == ogs_dat[single_copy_og][idx][1:], "spp"].values[0]
+                # remove extension
+                taxon_name = next((taxon_name[:-len(ext)] for ext in extensions if taxon_name.endswith(ext)), taxon_name)
+                ogs_dat[single_copy_og][idx] = f">{taxon_name}|{ogs_dat[single_copy_og][idx][1:]}"
+        with open(f"{output_directory}/orthohmm_single_copy_orthogroups/{single_copy_og}.fa", "w") as file:
+            file.write("\n".join(ogs_dat[single_copy_og]) + "\n")
 
     return single_copy_ogs, singletons, ogs_dat
