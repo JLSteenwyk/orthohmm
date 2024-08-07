@@ -22,7 +22,7 @@ REQUIRES = ["biopython>=1.84", "pandas>=2.2.2", "cython"]
 
 setup(
     name="orthohmm",
-    description="HMM-based inference of orthologous groups.",
+    description="HMM-based orthology",
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="Jacob L. Steenwyk",
