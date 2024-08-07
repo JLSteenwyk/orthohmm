@@ -3,267 +3,114 @@ Advanced Usage
 
 ^^^^^
 
-This section describes the various features and options of ClipKIT.
+This section describes the various features and options of OrthoHMM.
 
-- Modes_
-- Output_
-- Log_
-- Complementary_
-- Codon_
-- `Custom site trimming (cst mode)`_
-- Gaps_
-- `Gap Characters`_
-- `Sequence Type`_
+- `Output directory`_
+- Phmmer_
+- CPU_
+- `Single-copy Threshold`_
+- MCL_
+- `Inflation Value`_
 - `All options`_
 
 |
 
-.. _Modes:
+.. _`Output directory`:
 
-Modes
------
+Output directory
+----------------
 
-Herein, we describe the various trimming modes implemented in ClipKIT. If you are unsure which is appropriate for you,
-**we recommend using the default smart-gap trimming mode**. 
-
-ClipKIT can be run with eight different modes, which are specified with the -m/--mode argument.
-*Default: 'smart-gap'*
-
-* smart-gap: dynamic determination of gaps threshold
-* gappy: trim all sites that are above a threshold of gappyness (default: 0.9)
-* kpic: keep only parismony informative and constant sites
-* kpic-smart-gap: a combination of kpic- and smart-gap-based trimming 
-* kpic-gappy: a combination of kpic- and gappy-based trimming
-* kpi: keep only parsimony informative sites
-* kpi-smart-gap: a combination of kpi- and smart-gap-based trimming
-* kpi-gappy: a combination of kpi- and gappy-based trimming
-* c3: remove third codon position from alignment
-* cst: custom site trimming (remove sites specified by the user)
+Output directory name to store OrthoHMM results. This directory should already exist.
+By default, results files will be written to the same directory as the input
+directory of FASTA files. (-o, --output_directory)
 
 .. code-block:: shell
 
-	# smart-gap-based trimming
-	clipkit <input>
-	clipkit -m smart-gap
+	# specifying output directory
+	orthohmm <path_to_directory_of_FASTA_files> -o <output_directory>
 
-	# gappy-based trimming
-	clipkit <input> -m gappy
-
-	# kpic-based trimming
-	clipkit <input> -m kpic
-
-	# kpic- and smart-gap-based trimming
-	clipkit <input> -m kpic-smart-gap
-
-	# kpic- and gappy-based trimming
-	clipkit <input> -m kpic-gappy
-
-	# kpi-based trimming
-	clipkit <input> -m kpi
-
-	# kpi- and smart-gap-based trimming
-	clipkit <input> -m kpi-smart-gap
-
-	# kpi- and gappy-based trimming
-	clipkit <input> -m kpi-gappy
-
-	# remove third codon position
-	clipkit <input> -m c3
-
-	# conduct site-specific trimming
-	clipkit <input> -m cst -a <auxiliary file>
-
-.. _Output:
+.. _Phmmer:
 
 |
 
-Output
+Phmmer
 ------
 
-By default, output files will have the same name as the input file with the suffix ".clipkit"
-appended to the name. Users can specify output file names with the -o option. 
+Path to phmmer executable from HMMER suite. By default, phmmer
+is assumed to be in the PATH variable; in other words, phmmer
+can be evoked by typing `phmmer`.
 
 .. code-block:: shell
 
-	# specify output
-	clipkit <input> -o <output>
+	# specify path to phmmer executable 
+	orthohmm <path_to_directory_of_FASTA_files> -p /path/to/phmmer
 
 |
 
-.. _Log:
+.. _CPU:
 
-Log
+CPU
 ---
-It can be very useful to have information about the each position in an alignment. For
-example, this information could be used in alignment diagnostics, fine-tuning of trimming
-parameters, etc. To create the log file, use the -l/\\-\\-log option. Using this option
-will create a four column file with the suffix 'clipkit.log'. *Default: off*
-
-* col1: position in the alignment (starting at 1)
-* col2: reports if site was trimmed or kept (trim or keep, respectively)
-* col3: reports if the site is parsimony informative or not (PI or nPI, respectively)
-* col4: reports the gappyness of the position (number of gaps / entries in alignment)
+Number of CPU workers for multithreading during sequence search.
+This argument is used by phmmer during all-vs-all comparisons.
+By default, the number of CPUs available will be auto-detected.
 
 .. code-block:: shell
 
-	clipkit <input> -l 
+	# run orthohmm using 8 CPUs 
+	orthohmm <path_to_directory_of_FASTA_files> -c 8
 
 |
 
-.. _Complementary:
+.. _`Single-copy Threshold`:
 
-Complementary
--------------
+Single-copy Threshold
+---------------------
 
-Having an alignment of the sequences that were trimmed can be useful for other analyses. 
-To obtain an alignment of the sequences that were trimmed, use the -c/\\-\\-complementary 
-option.
+Taxon occupancy threshold when identifying single-copy orthologs.
+By default, the threshold is 50% taxon occupancy, which is specified
+as a fraction - that is, 0.5.
 
 .. code-block:: shell
 
-	clipkit <input> -c
+	# specify single-copy threshold as a fraction 
+	orthohmm <path_to_directory_of_FASTA_files> -s 0.5
 
 Output file with the suffix '.clipkit.complementary'
 
 |
 
-.. _Codon:
+.. _MCL:
 
-Codon
------
+MCL
+---
 
-Trims codon-based alignments. If one position in a codon should be trimmed, the whole
-codon will be trimmed. To conduct codon-based trimming, use the -co/\\-\\-codon argument.
+Path to mcl executable from MCL software. By default, mcl
+is assumed to be in the PATH variable; in other words,
+mcl can be evoked by typing `mcl`.
 
 .. code-block:: shell
 
-	clipkit <input> --codon
-
-    # or
-
-	clipkit <input> --co
+	# specify path to mcl executable 
+	orthohmm <path_to_directory_of_FASTA_files> -m /path/to/mcl
 
 |
 
 
-.. _`Custom site trimming (cst mode)`:
+.. _`Inflation Value`:
 
-Custom site trimming (cst mode)
--------------------------------
+Inflation Value
+---------------
 
-Custom site trimming specified using a tab-delimited text file specified using the -a argument.
-
-.. code-block:: shell
-
-	clipkit <input> -m cst -a <auxiliary_file>
-
-|
-
-The `auxiliary_file` is a two column tab-delimited file wherein the first column is the site
-(starting at 1) and the second column specifies if the site should be kept or trimmed using the
-strings "keep" or "trim".
+MCL inflation parameter for clustering genes into orthologous groups.
+Lower values are more permissive resulting in larger orthogroups.
+Higher values are stricter resulting in smaller orthogroups.
+The default value is 1.5.
 
 .. code-block:: shell
 
-	cat auxiliary_file.txt
-
-	1	keep
-	2	trim
-	3	keep
-	4	keep
-	5	keep
-	6	keep
-
-|
-
-Alternatively, users can specify sites that are only kept or trimmed using the `auxiliary_file`.
-For example, the following would be equivalent to the auxiliary file described above.
-
-.. code-block:: shell
-
-	cat auxiliary_file.txt
-
-	2	trim
-
-|
-
-Similarly, the following would conduct the trimming, wherein the second site is removed but all
-others are kept. 
-
-.. code-block:: shell
-
-	cat auxiliary_file.txt
-
-	1	keep
-	3	keep
-	4	keep
-	5	keep
-	6	keep
-
-|
-
-.. _Gaps:
-
-Gaps
-----
-
-Positions with gappyness greater than threshold will be trimmed. 
-Must be between 0 and 1. (Default: 0.9). This argument is ignored
-when using the kpi and kpic mdoes of trimming as well as an 
-iteration of trimming that uses smart-gap.
-
-To specify a gaps threshold, use the -g/\\-\\-gaps argument.
-
-.. code-block:: shell
-
-	clipkit <input> --gaps 0.4
-
-    # or
-
-	clipkit <input> --g 0.4
-
-|
-
-.. _`Gap Characters`:
-
-Gap Characters
---------------
-
-Specifies gap characters used in the input file. For example,
-"NnXx-?" would specify that "N", "n", "X", "x", "-", and "?" are
-gap characters. Note, the first gap character cannot be "-" because
-the parser will interpret the gaps list as a new argument.
-
-.. code-block:: shell
-
-	clipkit <input> -gc NnXx-?
-
-|
-
-.. _`Sequence Type`:
-
-Sequence Type
--------------
-
-Specifies the type of sequences in the input file. The default
-is auto-detection of sequence type. Valid options
-include aa or nt for amino acids and nucleotides. This argument
-is case insensitive. This matters for what characters are
-considered gaps. For amino acids, -, ?, \*, and X are considered
-gaps. For nucleotide sequences, the same characters are
-considered gaps as well as N.
-
-.. code-block:: shell
-
-	clipkit <input> -s aa
-
-Specify input sequences are amino acids
-
-.. code-block:: shell
-
-	clipkit <input> -s nt
-
-Specify input sequences are nucleotides 
+	# use an inflation value of 1.5 during mcl clustering 
+	orthohmm <path_to_directory_of_FASTA_files> -i 1.5
 
 |
 
@@ -273,44 +120,23 @@ All options
 ---------------------
 
 
-+-----------------------------+-------------------------------------------------------------------------+
-| Option                      | Usage and meaning                                                       |
-+=============================+=========================================================================+
-| -h/\\-\\-help               | Print help message                                                      |
-+-----------------------------+-------------------------------------------------------------------------+
-| -v/\\-\\-version            | Print software version                                                  |
-+-----------------------------+-------------------------------------------------------------------------+
-| -m/\\-\\-mode               | Specify trimming mode (default: smart-gap)                              |
-+-----------------------------+-------------------------------------------------------------------------+
-| -o/\\-\\-output             | Specify output file name                                                |
-+-----------------------------+-------------------------------------------------------------------------+
-| -g/\\-\\-gaps               | Specify gappyness threshold (between 0 and 1). *Default: 0.9*           |
-+-----------------------------+-------------------------------------------------------------------------+
-| -gc/\\-\\-gap_characters    | Specifies gap characters used in input file (AAs: Xx-?*; NTs: XxNn-?*   |
-+-----------------------------+-------------------------------------------------------------------------+
-| -co/\\-\\-codon             | Codon codon-based trimming. *Default: off*                              |
-+-----------------------------+-------------------------------------------------------------------------+
-| -s/\\-\\-sequence           | Specifies sequence type of input file. *Default: auto-detect*           |
-+-----------------------------+-------------------------------------------------------------------------+
-| -if/\\-\\-input_file_format | Specify input file format*. *Default: auto-detect*                      |
-+-----------------------------+-------------------------------------------------------------------------+
-| -of/\\-\\-output_file_format| Specify output file format*. *Default: input file type*                 |
-+-----------------------------+-------------------------------------------------------------------------+
-| -l/\\-\\-log                | Create a log file. *Default: off*                                       |
-+-----------------------------+-------------------------------------------------------------------------+
-| -c/\\-\\-complementary      | Create a complementary alignment file. *Default: off*                   |
-+-----------------------------+-------------------------------------------------------------------------+
-| -a/\\-\\-auxiliary_file     | Auxiliary file. Currently used for specifying sites to trim in cst mode |
-+-----------------------------+-------------------------------------------------------------------------+
-
-
-\*Acceptable file formats include: 
-`fasta <https://en.wikipedia.org/wiki/FASTA_format>`_,
-`clustal <http://meme-suite.org/doc/clustalw-format.html>`_,
-`maf <http://www.bx.psu.edu/~dcking/man/maf.xhtml>`_,
-`mauve <http://darlinglab.org/mauve/user-guide/files.html>`_,
-`phylip <http://scikit-bio.org/docs/0.2.3/generated/skbio.io.phylip.html>`_,
-`phylip-sequential <http://rosalind.info/glossary/phylip-format/>`_,
-`phylip-relaxed <https://www.hiv.lanl.gov/content/sequence/FORMAT_CONVERSION/FormatExplain.html>`_,
-`stockholm <https://en.wikipedia.org/wiki/Stockholm_format>`_
++------------------------------+--------------------------------------------------------------------------------+
+| Option                       | Usage and meaning                                                              |
++==============================+================================================================================+
+| -h/\-\-help                  | Print help message                                                             |
++------------------------------+--------------------------------------------------------------------------------+
+| -v/\-\-version               | Print software version                                                         |
++------------------------------+--------------------------------------------------------------------------------+
+| -o/\-\-output_directory      | Output directory name. Default: same directory as directory of FASTA files     |
++------------------------------+--------------------------------------------------------------------------------+
+| -p/\-\-phhmer                | Path to phmmer from HMMER suite. Default: phmmer                               |
++------------------------------+--------------------------------------------------------------------------------+
+| -c\-\-cpu                    | Number of parallel CPU workers to use for multithreading. Default: auto detect |
++------------------------------+--------------------------------------------------------------------------------+
+| -s/\-\-single_copy_threshold | Taxon occupancy threshold for single-copy orthologs. Default 0.5               |
++------------------------------+--------------------------------------------------------------------------------+
+| -m/\-\-mcl                   | Path to mcl software. Default: mcl                                             |
++------------------------------+--------------------------------------------------------------------------------+
+| -i/\-\-inflation_value       | MCL inflation parameter. Default: 1.5                                          |
++------------------------------+--------------------------------------------------------------------------------+
 

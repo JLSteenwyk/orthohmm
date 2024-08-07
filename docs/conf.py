@@ -22,8 +22,8 @@ sys.path.append(os.path.abspath("./_ext"))
 
 # -- Project information -----------------------------------------------------
 
-project = "clipkit"
-copyright = "2020 Jacob L. Steenwyk"
+project = "orthohmm"
+copyright = "2024 Jacob L. Steenwyk"
 author = "Jacob L. Steenwyk <jlsteenwyk@gmail.com>"
 
 # The short X.Y version
@@ -89,7 +89,7 @@ html_theme_options = {
     "logo_only": True,
     "analytics_id": "UA-104875636-1",
 }
-html_logo = "_static/img/ClipKIT_logo_top_only_v1.png"
+html_logo = "_static/img/logo_top_only.png"
 html_show_sourcelink = False
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -118,7 +118,7 @@ html_sidebars = {
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "clipkitdoc"
+htmlhelp_basename = "orthohmmdoc"
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -144,8 +144,8 @@ latex_elements = {
 latex_documents = [
     (
         master_doc,
-        "clipkit.tex",
-        "clipkit Documentation",
+        "orthohmm.tex",
+        "orthohmm Documentation",
         "Jacob L. Steenwyk \\textless{}jlsteenwyk@gmail.com\\textgreater{}",
         "manual",
     ),
@@ -156,7 +156,7 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(master_doc, "clipkit", "clipkit Documentation", [author], 1)]
+man_pages = [(master_doc, "orthohmm", "orthohmm Documentation", [author], 1)]
 
 
 # -- Options for Texinfo output ----------------------------------------------
@@ -167,10 +167,10 @@ man_pages = [(master_doc, "clipkit", "clipkit Documentation", [author], 1)]
 texinfo_documents = [
     (
         master_doc,
-        "clipkit",
-        "clipkit Documentation",
+        "orthohmm",
+        "orthohmm Documentation",
         author,
-        "clipkit",
+        "orthohmm",
         "A data transformation engine.",
         "Miscellaneous",
     ),

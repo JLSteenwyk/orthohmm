@@ -1,15 +1,14 @@
-.. image:: _static/img/ClipKIT_logo_top_only_v1.jpg
+.. image:: _static/img/logo_condensed.png
    :width: 55%
    :align: center
-   :target: https://jlsteenwyk.com/ClipKIT
+   :target: https://jlsteenwyk.com/orthohmm
 
 ^^^^^
 
 
-ClipKIT is a fast and flexible alignment trimming tool that keeps phylogenetically informative sites and removes those that display characteristics poor phylogenetic signal.
+OrthoHMM using high sensitivity and specificity Hidden Markov Models for orthology inference.
 
-
-If you found clipkit useful, please cite *ClipKIT: a multiple sequence alignment trimming software for accurate phylogenomic inference*. Steenwyk et al. 2020, PLoS Biology. doi: |doiLink|_.
+If you found OrthoHMM useful, please cite *MANUSCRIPT TITLE*. Steenwyk et al. 2020, JOURNAL. doi: |doiLink|_.
 
 .. _doiLink: https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001007
 .. |doiLink| replace:: 10.1371/journal.pbio.3001007
@@ -17,20 +16,20 @@ If you found clipkit useful, please cite *ClipKIT: a multiple sequence alignment
 
 Quick Start
 -----------
-These two lines represent the simpliest method to rapidly install and run ClipKIT.
+These two lines represent the simpliest method to rapidly install and run OrthoHMM.
 
 .. code-block:: shell
 
 	# install
-	pip install clipkit
+	pip install orthohmm
 	# run
-	clipkit input.fa
+	orthohmm input.fa
 
 Below are more detailed instructions, including alternative installation methods.
 
 **1) Installation**
 
-To help ensure ClipKIT can be installed using your favorite workflow, we have made ClipKIT available from pip, source, and the anaconda cloud.
+To help ensure OrthoHMM can be installed using your favorite workflow, we have made OrthoHMM available from pip, source, and the anaconda cloud.
 
 **Install from pip**
 
@@ -42,10 +41,10 @@ To install from pip, use the following commands:
 	python -m venv venv
 	# activate virtual environment
 	source venv/bin/activate
-	# install clipkit
-	pip install clipkit
+	# install orthohmm
+	pip install orthohmm
 
-**Note, the virtual environment must be activated to use clipkit.**
+**Note, the virtual environment must be activated to use orthohmm.**
 
 |
 
@@ -56,8 +55,8 @@ Similarly, to install from source, we strongly recommend using a virtual environ
 .. code-block:: shell
 
 	# download
-	git clone https://github.com/JLSteenwyk/ClipKIT.git
-	cd ClipKIT/
+	git clone https://github.com/JLSteenwyk/orthohmm.git
+	cd orthohmm/
 	# create virtual environment
 	python -m venv venv
 	# activate virtual environment
@@ -72,12 +71,12 @@ To deactivate your virtual environment, use the following command:
 	# deactivate virtual environment
 	deactivate
 
-**Note, the virtual environment must be activated to use clipkit.**
+**Note, the virtual environment must be activated to use orthohmm.**
 
 .. code-block:: shell
 
-	git clone https://github.com/JLSteenwyk/ClipKIT.git
-	cd ClipKIT/
+	git clone https://github.com/JLSteenwyk/orthohmm.git
+	cd orthohmm/
 	make install
 
 If you run into permission errors when executing *make install*, create a 
@@ -85,27 +84,27 @@ virtual environemnt for your installation:
 
 .. code-block:: shell
 
-	git clone https://github.com/JLSteenwyk/ClipKIT.git
-	cd ClipKIT/
+	git clone https://github.com/JLSteenwyk/orthohmm.git
+	cd orthohmm/
 	python -m venv venv 
 	source venv/bin/activate
 	make install
 
-Note, the virtual environment must be activated to use clipkit.
+Note, the virtual environment must be activated to use orthohmm.
 
 |
 
-**Install from anaconda**
+.. **Install from anaconda**
 
-To install via anaconda, execute the following command:
+.. To install via anaconda, execute the following command:
 
-.. code-block:: shell
+.. .. code-block:: shell
 
-	conda install bioconda::clipkit
+.. 	conda install bioconda::orthohmm
 
-Visit here for more information: https://anaconda.org/bioconda/clipkit
+.. Visit here for more information: https://anaconda.org/bioconda/orthohmm
 
-|
+.. |
 
 **2) Usage**
 
@@ -113,9 +112,7 @@ To use ClipKIT in its simpliest form, execute the following command:
 
 .. code-block:: shell
 
-	clipkit <input>
-
-Output file with the suffix ".clipkit"
+	orthohmm <path_to_directory_of_FASTA_files>
 
 |
 

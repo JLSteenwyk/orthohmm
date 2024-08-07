@@ -6,6 +6,7 @@ from argparse import (
     SUPPRESS,
     RawDescriptionHelpFormatter,
 )
+
 from .version import __version__
 
 
@@ -84,9 +85,9 @@ def create_parser() -> ArgumentParser:
         | Detailed explanation of arguments | 
         -------------------------------------
         Output directory (-o, --output_directory)
-            Output directory name to store OrthoHMM results. By default,
-            results files will be written to the same directory as the input
-            directory of FASTA files.
+            Output directory name to store OrthoHMM results. This directory
+            should already exist. By default, results files will be written
+            to the same directory as the input directory of FASTA files.
 
         Phmmer (-p, --phmmer) 
             Path to phmmer executable from HMMER suite. By default, phmmer
@@ -174,7 +175,7 @@ def create_parser() -> ArgumentParser:
         "-v",
         "--version",
         action="version",
-        version=f"clipkit {__version__}",
+        version=f"orthohmm v{__version__}",
         help=SUPPRESS,
     )
 
