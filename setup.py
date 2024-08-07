@@ -18,7 +18,7 @@ CLASSIFIERS = [
     "Topic :: Scientific/Engineering",
 ]
 
-REQUIRES = ["biopython>=1.84", "numpy>=1.24.0", "pandas>=2.2.2", "cython"]
+REQUIRES = ["biopython>=1.84", "pandas>=2.2.2", "cython"]
 
 setup(
     name="orthohmm",
