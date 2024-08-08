@@ -30,6 +30,7 @@ jobs:
         wget https://raw.githubusercontent.com/micans/mcl/main/install-this-mcl.sh -o install-this-mcl
         chmod u+x install-this-mcl.sh
         ./install-this-mcl.sh
+        PATH=$PATH:$HOME/local/bin
         mcl --version
     - name: Run tests
       run: |
@@ -62,6 +63,7 @@ jobs:
         wget https://raw.githubusercontent.com/micans/mcl/main/install-this-mcl.sh -o install-this-mcl
         chmod u+x install-this-mcl.sh
         ./install-this-mcl.sh
+        PATH=$PATH:$HOME/local/bin
         mcl --version
     - name: Generate coverage report
       run: |
