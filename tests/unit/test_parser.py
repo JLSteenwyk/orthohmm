@@ -10,6 +10,6 @@ def parser():
 
 class TestParser(object):
     def test_required_only(self, parser):
-        input_directory = "./tests/samples/"
-        parsed = parser.parse_args([input_directory])
-        assert parsed.input == input_directory
+        fasta_directory = "./tests/samples/"
+        parsed = parser.parse_args([fasta_directory])
+        assert parsed.fasta_directory == fasta_directory

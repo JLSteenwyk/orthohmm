@@ -2,8 +2,6 @@ import itertools
 import multiprocessing
 import os
 import subprocess
-import sys
-import time
 from typing import Tuple
 
 from Bio import SeqIO
@@ -31,6 +29,7 @@ def run_phmmer(
     pool.join()
 
 
+# TODO: write unit test
 def calculate_sequence_lengths(
     fasta_directory: str,
     file: str,
@@ -56,9 +55,10 @@ def calculate_sequence_lengths(
     return sequence_lengths
 
 
+# TODO: write unit test
 def get_best_hits(
     df: pd.DataFrame
-) -> pd.DataFrame:
+) -> Tuple[dict, dict]:
     best_hits = df.loc[df.groupby("query name")["norm_score"].idxmax()]
     return best_hits.set_index("query name")["target name"].to_dict(), \
         best_hits.set_index("query name")["norm_score"].to_dict()
@@ -219,9 +219,10 @@ def determine_network_edges(
 def execute_mcl(
     mcl: str,
     inflation_value: float,
+    cpu: int,
     output_directory: str,
 ) -> None:
-    cmd = f"{mcl} {output_directory}/working_dir/orthohmm_edges.txt --abc -I {inflation_value} -o {output_directory}/working_dir/orthohmm_edges_clustered.txt"
+    cmd = f"{mcl} {output_directory}/working_dir/orthohmm_edges.txt -te {cpu} --abc -I {inflation_value} -o {output_directory}/working_dir/orthohmm_edges_clustered.txt"
     subprocess.run(
         cmd,
         shell=True,

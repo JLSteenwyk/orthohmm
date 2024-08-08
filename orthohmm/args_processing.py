@@ -1,4 +1,5 @@
 from distutils.spawn import find_executable
+import shutil
 import logging
 import multiprocessing
 import os.path
@@ -27,7 +28,7 @@ def process_args(args) -> dict:
 
     if args.phmmer:
         phmmer = args.phmmer
-        if not os.path.isfile(phmmer):
+        if not shutil.which(phmmer):
             logger.warning(f"phmmer can't be found at {phmmer}.")
             sys.exit()
     else:
@@ -50,7 +51,7 @@ def process_args(args) -> dict:
 
     if args.mcl:
         mcl = args.mcl
-        if not os.path.isfile(mcl):
+        if not shutil.which(mcl):
             logger.warning(f"mcl can't be found at {mcl}.")
             sys.exit()
     else:

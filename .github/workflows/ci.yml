@@ -20,6 +20,17 @@ jobs:
         # install deps for tests
         pip install pytest
         pip install pytest-cov
+    - name: Install HMMER
+      run: |
+        brew install hmmer
+    - name: Install MCL
+      run: |
+        mkdir installmcl
+        cd installmcl
+        wget https://raw.githubusercontent.com/micans/mcl/main/install-this-mcl.sh -o install-this-mcl
+        chmod u+x install-this-mcl.sh
+        ./install-this-mcl.sh
+        mcl --version
     - name: Run tests
       run: |
         make test.fast
@@ -41,6 +52,17 @@ jobs:
         # install test dependencies
         pip install pytest
         pip install pytest-cov
+    - name: Install HMMER
+      run: |
+        brew install hmmer
+    - name: Install MCL
+      run: |
+        mkdir installmcl
+        cd installmcl
+        wget https://raw.githubusercontent.com/micans/mcl/main/install-this-mcl.sh -o install-this-mcl
+        chmod u+x install-this-mcl.sh
+        ./install-this-mcl.sh
+        mcl --version
     - name: Generate coverage report
       run: |
         make test.coverage

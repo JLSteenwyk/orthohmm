@@ -33,6 +33,16 @@ class TestArgsProcessing(object):
         with pytest.raises(SystemExit):
             process_args(args)
 
+    def test_process_args_phmmer_not_installed(self, args):
+        args.phmmer = "phmmer-that-dne"
+        with pytest.raises(SystemExit):
+            process_args(args)
+
+    def test_process_args_mcl_not_installed(self, args):
+        args.mcl = "mcl-that-dne"
+        with pytest.raises(SystemExit):
+            process_args(args)
+
     def test_process_args_default_single_copy_threshold(self, args):
         args.single_copy_threshold = None
         res = process_args(args)

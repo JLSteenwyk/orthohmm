@@ -34,7 +34,7 @@ def execute(
     mcl: str,
     inflation_value: float,
     **kwargs,
-):
+) -> None:
     print(textwrap.dedent(
             f"""\
           ____       _   _           _    _ __  __ __  __ 
@@ -62,6 +62,18 @@ def execute(
         "reg", "clu", "ov", "env", "dom", "rep", "inc", "description of target"
     ]
 
+    # # wrap execute() in try, except, and finally
+    # try:
+    #     do_something()
+    # except Exception as e:
+    #     logger.error(e)
+    # finally:  # guaranteed to execute
+    #     # if I have the temp directory, delete it
+    #     do_cleanup()
+
+    # TODO: support specific temporary directory supplied by user
+    # Default /tmp/orthohmm-v489q48710ds
+    # v489q48710ds should be a random string
     # create working directory
     if not os.path.isdir(f"{output_directory}/working_dir"):
         os.mkdir(f"{output_directory}/working_dir")
@@ -120,7 +132,7 @@ def execute(
 
     # Step 4: Conduct mcl clustering
     print("Step 4/6: Conducting clustering")
-    execute_mcl(mcl, inflation_value, output_directory)
+    execute_mcl(mcl, inflation_value, cpu, output_directory)
     print("          Completed!\n")
 
     # Step 5: Write out orthogroup files
