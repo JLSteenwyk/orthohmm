@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""Convenience wrapper for running clipkit directly from source tree."""
+"""Convenience wrapper for running orthohmm directly from source tree."""
 import sys
 
 from orthohmm.orthohmm import main

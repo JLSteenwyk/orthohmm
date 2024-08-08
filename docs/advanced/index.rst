@@ -101,8 +101,6 @@ as a fraction - that is, 0.5.
 	# specify single-copy threshold as a fraction 
 	orthohmm <path_to_directory_of_FASTA_files> -s 0.5
 
-Output file with the suffix '.clipkit.complementary'
-
 |
 
 .. _MCL:
