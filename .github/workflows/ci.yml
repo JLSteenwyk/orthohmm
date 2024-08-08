@@ -32,6 +32,7 @@ jobs:
         ./install-this-mcl.sh
         PATH=$PATH:$HOME/local/bin
         mcl --version
+        cd ..
     - name: Run tests
       run: |
         make test.fast
@@ -56,6 +57,7 @@ jobs:
     - name: Install HMMER
       run: |
         brew install hmmer
+        phmmer --version
     - name: Install MCL
       run: |
         mkdir installmcl
@@ -65,6 +67,7 @@ jobs:
         ./install-this-mcl.sh
         PATH=$PATH:$HOME/local/bin
         mcl --version
+        cd ..
     - name: Generate coverage report
       run: |
         make test.coverage
