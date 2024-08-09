@@ -10,7 +10,6 @@ here = Path(__file__)
 
 @pytest.mark.integration
 class TestSimpleCase(object):
-    @pytest.mark.slow
     def test_simple_case(self):
         """
         test simple case
