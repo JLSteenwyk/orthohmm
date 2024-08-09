@@ -35,6 +35,7 @@ jobs:
         cd ..
     - name: Run tests
       run: |
+        PATH=$PATH:$HOME/local/bin
         make test.fast
   test-full:
     runs-on: macos-latest
@@ -57,7 +58,6 @@ jobs:
     - name: Install HMMER
       run: |
         brew install hmmer
-        phmmer --version
     - name: Install MCL
       run: |
         mkdir installmcl

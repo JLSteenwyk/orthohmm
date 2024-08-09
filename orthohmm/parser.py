@@ -134,9 +134,10 @@ def create_parser() -> ArgumentParser:
         
         orthohmm_single_copy_orthogroups
             A directory of FASTA files wherein each file is a single-copy ortholog.
-            Headers are modified to have taxon names come before the gene identifier. Taxon names are the file name
-            excluding the extension. Taxon name and gene identifier are separated by a pipe symbol "|".
-            This aims to help streamline phylogenomic workflows wherein sequences will be concatenated downstream
+            Headers are modified to have taxon names come before the gene identifier.
+            Taxon names are the file name excluding the extension. Taxon name and gene
+            identifier are separated by a pipe symbol "|". This aims to help streamline
+            phylogenomic workflows wherein sequences will be concatenated downstream
             based on taxon names.
         """  # noqa
         ),
