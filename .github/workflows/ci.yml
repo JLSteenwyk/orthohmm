@@ -70,6 +70,7 @@ jobs:
         cd ..
     - name: Generate coverage report
       run: |
+        PATH=$PATH:$HOME/local/bin
         make test.coverage
     - name: Upload unit test coverage to Codecov
       uses: codecov/codecov-action@v1.0.7
