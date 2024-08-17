@@ -10,6 +10,7 @@ def write_user_args(
     cpu: int,
     single_copy_threshold: float,
     files: list,
+    temporary_directory: str,
 ) -> None:
 
     print(
@@ -22,6 +23,7 @@ def write_user_args(
     Directory of FASTA files: {fasta_directory}
     Number of FASTA files: {len(files)}
     Directory for output files: {output_directory}
+    Temporary directory: {temporary_directory}
     Path to phmmer: {phmmer}
     Path to mcl: {mcl}
     Single-copy threshold: {single_copy_threshold}

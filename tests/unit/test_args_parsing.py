@@ -18,6 +18,7 @@ def args():
         single_copy_threshold=0.5,
         mcl="mcl",
         inflation_value=1.5,
+        temporary_directory="/tmp/"
     )
     return Namespace(**kwargs)
 
@@ -30,6 +31,11 @@ class TestArgsProcessing(object):
 
     def test_process_args_output_directory_dne(self, args):
         args.output_directory = "some/file/that/doesnt/exist"
+        with pytest.raises(SystemExit):
+            process_args(args)
+
+    def test_process_args_temporary_directory_dne(self, args):
+        args.temporary_directory = "some/file/that/doesnt/exist"
         with pytest.raises(SystemExit):
             process_args(args)
 
@@ -63,5 +69,6 @@ class TestArgsProcessing(object):
             "single_copy_threshold",
             "mcl",
             "inflation_value",
+            "temporary_directory",
         ]
         assert sorted(res.keys()) == sorted(expected_keys)

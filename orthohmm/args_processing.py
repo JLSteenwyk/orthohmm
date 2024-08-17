@@ -1,3 +1,4 @@
+from datetime import datetime
 from distutils.spawn import find_executable
 import shutil
 import logging
@@ -25,6 +26,15 @@ def process_args(args) -> dict:
     if not os.path.isdir(output_directory):
         logger.warning("Output directory does not exist")
         sys.exit()
+
+    temporary_directory = args.temporary_directory or "/tmp"
+    if not os.path.isdir(temporary_directory):
+        logger.warning("Temporary directory path does not exist")
+        sys.exit()
+    # create full temporary directory path
+    current_time = datetime.now()
+    time_string = current_time.strftime("%Y%m%d%H%M%S")
+    temporary_directory = f"{temporary_directory}/orthohmm-{time_string}"
 
     if args.phmmer:
         phmmer = args.phmmer
@@ -70,5 +80,6 @@ def process_args(args) -> dict:
         cpu=int(cpu),
         single_copy_threshold=single_copy_threshold,
         mcl=mcl,
-        inflation_value=float(inflation_value)
+        inflation_value=float(inflation_value),
+        temporary_directory=temporary_directory,
     )

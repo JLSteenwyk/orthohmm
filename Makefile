@@ -1,5 +1,5 @@
 profile:
-	python3 -m cProfile -s 'time' orthohmm-runner.py ./tests/samples/ > large_profile.txt
+	python3 -m cProfile -s 'time' orthohmm-runner.py ./tests/samples/three_proteome_set/ |tee large_profile.txt
 
 run:
 	python3 -m orthohmm-runner ./tests/samples/

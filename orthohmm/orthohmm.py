@@ -8,11 +8,13 @@ import time
 import textwrap
 
 from .args_processing import process_args
+from .externals import (
+    execute_mcl,
+    execute_phmmer_search,
+)
 from .helpers import (
     determine_edge_thresholds,
     determine_network_edges,
-    execute_mcl,
-    execute_phmmer_search,
     generate_orthogroup_files,
 )
 from .parser import create_parser
@@ -33,6 +35,7 @@ def execute(
     single_copy_threshold: float,
     mcl: str,
     inflation_value: float,
+    temporary_directory: str,
     **kwargs,
 ) -> None:
     print(textwrap.dedent(
@@ -51,32 +54,8 @@ def execute(
     # for reporting runtime duration to user
     start_time = time.time()
 
-    # column names and columns to drop
-    col_names = [
-        "target name", "accession", "query name", "accession", "E-value", "score", "bias", "domain E-value", "domain score",
-        "domain bias", "exp", "reg", "clu", "ov", "env", "dom", "rep", "inc", "description of target"
-    ]
-
-    columns_to_drop = [
-        "accession", "E-value", "bias", "domain E-value", "domain score", "domain bias", "exp",
-        "reg", "clu", "ov", "env", "dom", "rep", "inc", "description of target"
-    ]
-
-    # # wrap execute() in try, except, and finally
-    # try:
-    #     do_something()
-    # except Exception as e:
-    #     logger.error(e)
-    # finally:  # guaranteed to execute
-    #     # if I have the temp directory, delete it
-    #     do_cleanup()
-
-    # TODO: support specific temporary directory supplied by user
-    # Default /tmp/orthohmm-v489q48710ds
-    # v489q48710ds should be a random string
-    # create working directory
-    if not os.path.isdir(f"{output_directory}/working_dir"):
-        os.mkdir(f"{output_directory}/working_dir")
+    # make temporary directory
+    os.mkdir(temporary_directory)
 
     # get FASTA files to identify orthologs from
     extensions = (".fa", ".faa", ".fas", ".fasta")
@@ -90,40 +69,38 @@ def execute(
         mcl,
         cpu,
         single_copy_threshold,
-        files
+        files,
+        temporary_directory,
     )
 
+    # try:
     # Step 1: all-to-all comparisons
-    print("Step 1/6: Conducting all-to-all comparisons.")
+    print("Step 1/5: Conducting all-to-all comparisons.")
     print("          This is typically the longest step.")
     execute_phmmer_search(
         files,
         cpu,
-        output_directory,
         fasta_directory,
         phmmer,
+        temporary_directory,
     )
     print("          Completed!\n")
 
     # Step 2: Determining edge thresholds
-    print("Step 2/6: Determining edge thresholds")
+    print("Step 2/5: Determining edge thresholds")
     gene_lengths, reciprocal_best_hit_thresholds, pairwise_rbh_corr = \
         determine_edge_thresholds(
             files,
             fasta_directory,
-            output_directory,
-            col_names,
-            columns_to_drop,
+            temporary_directory,
         )
     print("          Completed!\n")
 
     # Step 3: Determining network edges
-    print("Step 3/6: Identifying network edges")
+    print("Step 3/5: Identifying network edges")
     edges = determine_network_edges(
         files,
-        output_directory,
-        col_names,
-        columns_to_drop,
+        temporary_directory,
         gene_lengths,
         pairwise_rbh_corr,
         reciprocal_best_hit_thresholds,
@@ -131,12 +108,17 @@ def execute(
     print("          Completed!\n")
 
     # Step 4: Conduct mcl clustering
-    print("Step 4/6: Conducting clustering")
-    execute_mcl(mcl, inflation_value, cpu, output_directory)
+    print("Step 4/5: Conducting clustering")
+    execute_mcl(
+        mcl,
+        inflation_value,
+        cpu,
+        temporary_directory
+    )
     print("          Completed!\n")
 
     # Step 5: Write out orthogroup files
-    print("Step 5/6: Writing orthogroup information")
+    print("Step 5/5: Writing orthogroup information")
     single_copy_ogs, singletons, ogs_dat = generate_orthogroup_files(
         output_directory,
         gene_lengths,
@@ -144,12 +126,8 @@ def execute(
         fasta_directory,
         single_copy_threshold,
         extensions,
+        temporary_directory,
     )
-    print("          Completed!\n")
-
-    # Step 6: Clean
-    print("Step 6/6: Cleaning up workspace")
-    shutil.rmtree(f"{output_directory}/working_dir")
     print("          Completed!\n")
 
     write_output_stats(
@@ -161,6 +139,12 @@ def execute(
         gene_lengths,
     )
 
+    # except Exception as e:
+    #     print(f"Error: {e}")
+    # finally:
+    shutil.rmtree(temporary_directory)
+
+
 
 def main(argv=None):
     """
@@ -168,6 +152,19 @@ def main(argv=None):
     """
     parser = create_parser()
     args = parser.parse_args()
+
+    
+
+    # # wrap execute() in try, except, and finally
+    # try:
+    #     execute(**process_args(args))
+    # except Exception as e:
+    #     print(f"Error: {e}")
+    # finally:  # guaranteed to execute
+    #     # if I have the temp directory, delete it
+    #     print("Step 6/6: Cleaning up workspace")
+    #     shutil.rmtree(f"/tmp/orthohmm-{time_string}/")
+    #     print("          Completed!\n")
 
     execute(**process_args(args))
 

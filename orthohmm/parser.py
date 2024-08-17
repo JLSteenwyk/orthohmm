@@ -81,6 +81,11 @@ def create_parser() -> ArgumentParser:
         -i, --inflation_value <float>               mcl inflation parameter
                                                     (default: 1.5)
 
+        -t, --temporary_directory <path>            specify path for temporary
+                                                    directory of intermediate
+                                                    files
+                                                    (default: /tmp/)
+
         -------------------------------------
         | Detailed explanation of arguments | 
         -------------------------------------
@@ -114,6 +119,12 @@ def create_parser() -> ArgumentParser:
             Lower values are more permissive resulting in larger orthogroups.
             Higher values are stricter resulting in smaller orthogroups.
             The default value is 1.5.
+        
+        Temporary Directory (-t, --temporary_directory)
+            Path for temporary directory location. This temporary directory will
+            have the prefix "orthohmm" and a randomly generated suffix. Files
+            like the output of phmmer are kept here while OrthoHMM processes them.
+            The default path is /tmp/.
 
         -------------------
         | OrthoHMM output | 
@@ -148,6 +159,13 @@ def create_parser() -> ArgumentParser:
         "--output_directory",
         help=SUPPRESS,
         metavar="output_directory"
+    )
+
+    optional.add_argument(
+        "-t",
+        "--temporary_directory",
+        help=SUPPRESS,
+        metavar="temporary_directory"
     )
 
     optional.add_argument(
