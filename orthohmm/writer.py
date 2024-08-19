@@ -57,6 +57,7 @@ def write_output_stats(
         Number of edges in network: {len(edges)}
         Number of single-copy orthogroups: {len(single_copy_ogs)}
         Number of singletons: {len(singletons)}
+        
         Execution time: {round(time.time() - start_time, 3)}s
     """  # noqa
         )

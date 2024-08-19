@@ -1,8 +1,14 @@
-import os
 from typing import Tuple, List, Dict
 
-from Bio import SeqIO
 import numpy as np
+
+from .files import (
+    write_fasta_files_for_all_ogs,
+    write_fasta_files_for_single_copy_orthologs,
+    write_file_of_single_copy_ortholog_names,
+    write_clusters_file,
+    write_copy_number_file,
+)
 
 
 def get_sequence_lengths(
@@ -84,6 +90,41 @@ def normalize_by_gene_length(res_merged: np.ndarray) -> np.ndarray:
     return res_merged
 
 
+def correct_by_phylogenetic_distance(
+    best_hits_A_to_B: Dict[np.str_, Dict[np.str_, np.float64]],
+    best_hits_B_to_A: Dict[np.str_, Dict[np.str_, np.float64]],
+    pair: Tuple[str, str],
+    pairwise_rbh_corr: Dict[frozenset, np.float64],
+) -> Tuple[
+        Dict[np.str_, np.float64],
+        Dict[np.str_, np.float64],
+        Dict[frozenset, np.float64],
+]:
+    # get rbh scores
+    rbh_scores = []
+    rbh_pairs_identified = 0
+    for query, best_hit in best_hits_A_to_B.items():
+        target = best_hit['target']
+        # Check if the reciprocal hit is also the best hit
+        if target in best_hits_B_to_A and best_hits_B_to_A[target]["target"] == query:
+            score_between_rbh_pair = (
+                (best_hit["score"] + best_hits_B_to_A[target]["score"]) / 2
+            )
+            rbh_scores.append(score_between_rbh_pair)
+            rbh_pairs_identified += 1
+
+    if frozenset(pair) not in pairwise_rbh_corr:
+        pairwise_rbh_corr[frozenset(pair)] = np.mean(rbh_scores)
+    else:
+        pairwise_rbh_corr[frozenset(pair)] = (pairwise_rbh_corr[frozenset(pair)] + np.mean(rbh_scores)) / 2
+
+    # Phylogenetic correction
+    best_hit_scores_A_to_B = {key: value["score"] / pairwise_rbh_corr[frozenset(pair)] for key, value in best_hits_A_to_B.items()}
+    best_hit_scores_B_to_A = {key: value["score"] / pairwise_rbh_corr[frozenset(pair)] for key, value in best_hits_B_to_A.items()}
+
+    return best_hit_scores_A_to_B, best_hit_scores_B_to_A, pairwise_rbh_corr
+
+
 def get_best_hits_and_scores(
     res_merged: np.ndarray
 ) -> Dict[np.str_, Dict[np.str_, np.float64]]:
@@ -102,22 +143,52 @@ def get_best_hits_and_scores(
     return best_hits
 
 
+def get_threshold_per_gene(
+    best_hits_A_to_B: Dict[np.str_, Dict[np.str_, np.float64]],
+    best_hits_B_to_A: Dict[np.str_, Dict[np.str_, np.float64]],
+    best_hit_scores_A_to_B: Dict[np.str_, np.float64],
+    best_hit_scores_B_to_A: Dict[np.str_, np.float64],
+    reciprocal_best_hit_thresholds: Dict[np.str_, np.float64],
+):
+    for geneA, geneB in best_hits_A_to_B.items():
+        geneB = geneB["target"]
+        if best_hits_B_to_A.get(geneB)["target"] == geneA:
+            score = ((best_hit_scores_A_to_B[geneA] + best_hit_scores_B_to_A[geneB]) / 2)
+            if geneA in reciprocal_best_hit_thresholds:
+                if score < reciprocal_best_hit_thresholds[geneA]:
+                    reciprocal_best_hit_thresholds[geneA] = score
+            else:
+                reciprocal_best_hit_thresholds[geneA] = score
+
+    return reciprocal_best_hit_thresholds
+
+
 def determine_edge_thresholds(
     files: List[str],
     fasta_directory: str,
     temporary_directory: str,
-) -> Tuple[np.ndarray, Dict[np.str_, np.float64], Dict[frozenset, np.float64]]:
-    gene_lengths = get_sequence_lengths(fasta_directory, files)
+) -> Tuple[
+        np.ndarray,
+        Dict[np.str_, np.float64],
+        Dict[frozenset, np.float64],
+]:
+    pairwise_rbh_corr = dict()
+    reciprocal_best_hit_thresholds = dict()
 
-    reciprocal_best_hit_thresholds = {}
-    pairwise_rbh_corr = {}
+    gene_lengths = get_sequence_lengths(fasta_directory, files)
 
     for file in files:
         file_pairs = [(file, i) for i in files]
 
         for pair in file_pairs:
-            fwd_res = read_and_filter_phmmer_output(pair[0], pair[1], temporary_directory)
-            rev_res = read_and_filter_phmmer_output(pair[1], pair[0], temporary_directory)
+            fwd_res = read_and_filter_phmmer_output(
+                pair[0], pair[1],
+                temporary_directory
+            )
+            rev_res = read_and_filter_phmmer_output(
+                pair[1], pair[0],
+                temporary_directory
+            )
 
             fwd_res_merged = merge_with_gene_lengths(fwd_res, gene_lengths)
             rev_res_merged = merge_with_gene_lengths(rev_res, gene_lengths)
@@ -125,41 +196,23 @@ def determine_edge_thresholds(
             fwd_res_merged = normalize_by_gene_length(fwd_res_merged)
             rev_res_merged = normalize_by_gene_length(rev_res_merged)
 
-            # get dictionaries of scores for best hit and best hit
             best_hits_A_to_B = get_best_hits_and_scores(fwd_res_merged)
             best_hits_B_to_A = get_best_hits_and_scores(rev_res_merged)
 
-            # TODO: continue refactoring here
-            # get rbh scores
-            rbh_scores = []
-            rbh_pairs_identified = 0
-            for query, best_hit in best_hits_A_to_B.items():
-                target = best_hit['target']
-                # Check if the reciprocal hit is also the best hit
-                if target in best_hits_B_to_A and best_hits_B_to_A[target]['target'] == query:
-                    score_between_rbh_pair = ((best_hit['score'] + best_hits_B_to_A[target]['score']) / 2)
-                    rbh_scores.append(score_between_rbh_pair)
-                    rbh_pairs_identified += 1
+            best_hit_scores_A_to_B, best_hit_scores_B_to_A, pairwise_rbh_corr = \
+                correct_by_phylogenetic_distance(
+                    best_hits_A_to_B,
+                    best_hits_B_to_A,
+                    pair,
+                    pairwise_rbh_corr
+                )
 
-            if frozenset(pair) not in pairwise_rbh_corr:
-                pairwise_rbh_corr[frozenset(pair)] = np.mean(rbh_scores)
-            else:
-                pairwise_rbh_corr[frozenset(pair)] = (pairwise_rbh_corr[frozenset(pair)] + np.mean(rbh_scores)) / 2
-
-            # Phylogenetic correction
-            best_hit_scores_A_to_B = {key: value["score"] / pairwise_rbh_corr[frozenset(pair)] for key, value in best_hits_A_to_B.items()}
-            best_hit_scores_B_to_A = {key: value["score"] / pairwise_rbh_corr[frozenset(pair)] for key, value in best_hits_B_to_A.items()}
-
-            # get lower bound threshold, which is sequence length and distance corrected
-            for geneA, geneB in best_hits_A_to_B.items():
-                geneB = geneB["target"]
-                if best_hits_B_to_A.get(geneB)["target"] == geneA:
-                    score = ((best_hit_scores_A_to_B[geneA] + best_hit_scores_B_to_A[geneB]) / 2)
-                    if geneA in reciprocal_best_hit_thresholds:
-                        if score < reciprocal_best_hit_thresholds[geneA]:
-                            reciprocal_best_hit_thresholds[geneA] = score
-                    else:
-                        reciprocal_best_hit_thresholds[geneA] = score
+            reciprocal_best_hit_thresholds = \
+                get_threshold_per_gene(
+                    best_hits_A_to_B, best_hits_B_to_A,
+                    best_hit_scores_A_to_B, best_hit_scores_B_to_A,
+                    reciprocal_best_hit_thresholds
+                )
 
     return gene_lengths, reciprocal_best_hit_thresholds, pairwise_rbh_corr
 
@@ -172,32 +225,42 @@ def determine_network_edges(
     reciprocal_best_hit_thresholds: Dict[np.str_, np.float64],
 ) -> Dict[frozenset, np.float64]:
     edges = dict()
-    gene_lengths = {str(row['name']): int(row['length']) for row in gene_lengths}
+
+    gene_lengths = {
+        str(row["name"]): int(row["length"]) for row in gene_lengths
+    }
+
     for file in files:
 
         file_pairs = [(file, i) for i in files]
 
         for pair in file_pairs:
-            res = f"{temporary_directory}/{pair[0]}_2_{pair[1]}.phmmerout.txt"
-
-            dtype_res = [("target_name", "U50"), ("query_name", "U50"), ("evalue", float), ("score", float)]
-            res = np.genfromtxt(res, comments="#", dtype=dtype_res, usecols=[0, 2, 4, 5], encoding='utf-8')
-
-            res = res[res["evalue"] < 0.0001]
+            res = read_and_filter_phmmer_output(
+                pair[0], pair[1],
+                temporary_directory
+            )
 
             for hit in res:
-                query_length = gene_lengths[hit['query_name']]
-                target_length = gene_lengths[hit['target_name']]
-                norm_score = (hit['score'] / (query_length + target_length)) / pairwise_rbh_corr[frozenset(pair)]
+                query_length = gene_lengths[hit["query_name"]]
+                target_length = gene_lengths[hit["target_name"]]
+
+                norm_score = (
+                    hit['score'] / (query_length + target_length)
+                ) / pairwise_rbh_corr[frozenset(pair)]
+
                 try:
                     if norm_score >= reciprocal_best_hit_thresholds[hit["query_name"]]:
-                        genes = frozenset([hit['query_name'], hit['target_name']])
+                        genes = frozenset(
+                            [hit["query_name"], hit["target_name"]]
+                        )
+
                         if len(genes) == 2:
                             if genes in edges:
                                 if edges[genes] <= norm_score:
                                     edges[genes] = norm_score
                             else:
                                 edges[genes] = norm_score
+
                 # except reciprocal_best_hit_thresholds[hit["query_name"]] doesn't exist
                 except KeyError:
                     continue
@@ -210,54 +273,78 @@ def determine_network_edges(
     return edges
 
 
-def generate_orthogroup_files(
-    output_directory: str,
+def get_singletons(
     gene_lengths: np.ndarray,
-    files: list,
-    fasta_directory: str,
-    single_copy_threshold: float,
-    extensions: Tuple[str],
-    temporary_directory: str,
-) -> Tuple[list, list, dict]:
-    clustering_res = []
-    with open(
-        f"{temporary_directory}/orthohmm_edges_clustered.txt",
-        "r"
-    ) as file:
-        for line in file:
-            line = line.strip()
-            if line:
-                clustering_res.append(line.split())
-
-    # get singletons - genes that aren't in groups with other genes
-    singletons = list(set(gene_lengths["name"]) - set([j for i in clustering_res for j in i]))
-    singletons = [[x] for x in singletons]
+    clustering_res: List[List[str]],
+) -> Tuple[List[List[str]], List[List[str]]]:
+    singletons = list(
+        set(gene_lengths["name"]) - set([j for i in clustering_res for j in i])
+    )
+    singletons = [[str(i)] for i in singletons]
     clustering_res.extend(singletons)
 
-    total_ogs = len(clustering_res)
-    width = len(str(total_ogs))  # Determine the width needed for the largest number
-    total_number_of_taxa = len(np.unique(gene_lengths["spp"]))
+    return clustering_res, singletons
 
-    # get all FASTA entries
+
+def get_all_fasta_entries(
+    fasta_directory: str,
+    files: List[str]
+) -> Dict[str, str]:
     entries = {}
     for fasta_file in files:
         fasta_file_entries = {}
 
-        for record in SeqIO.parse(f"{fasta_directory}/{fasta_file}", "fasta"):
-            # Store gene ID and sequence in the dictionary
-            fasta_file_entries[record.id] = str(record.seq)
+        header = None
+        sequence = []
 
-        # Add the file_entries dictionary to the all_entries dictionary
+        with open(f"{fasta_directory}/{fasta_file}", "r") as file:
+            for line in file:
+                line = line.strip()
+                if line.startswith(">"):
+                    if header:
+                        fasta_file_entries[header] = ''.join(sequence)
+                    header = line[1:]  # Remove the '>' character
+                    sequence = []
+                else:
+                    sequence.append(line)
+
+            # Don't forget to add the last entry to the dictionary
+            if header:
+                fasta_file_entries[header] = ''.join(sequence)
+
         entries[fasta_file] = fasta_file_entries
 
+    return entries
+
+
+def get_orthogroup_information(
+    files: List[str],
+    gene_lengths: np.ndarray,
+    clustering_res: List[List[str]],
+    single_copy_threshold: float,
+    entries: Dict[str, str],
+) -> Tuple[
+    List[List[str]],
+    Dict[str, List[str]],
+    Dict[str, List[str]],
+    List[str],
+]:
     ogs_dat = dict()
     og_cn = dict()
     single_copy_ogs = list()
+
+    total_ogs = len(clustering_res)
+    width = len(str(total_ogs))
+    total_number_of_taxa = len(np.unique(gene_lengths["spp"]))
+
     og_cn["files:"] = files
+
     for i in range(total_ogs):
         # Format the OG number with leading zeros
         og_id = f"OG{i:0{width}}:"
-        og_rows = gene_lengths[np.isin(gene_lengths['name'], clustering_res[i])]
+        og_rows = gene_lengths[
+            np.isin(gene_lengths["name"], clustering_res[i])
+        ]
         # test if single-copy
         if len(np.unique(og_rows["spp"])) == len(og_rows["spp"]):
             # test if sufficient occupancy
@@ -276,7 +363,6 @@ def generate_orthogroup_files(
         cnts = []
         for file in files:
             try:
-                # cnts.append(str(spp_counts[spp_counts["spp"] == file]["cnt"].values[0]))
                 cnts.append(str(spp_counts.get(file, 0)))
             except IndexError:
                 cnts.append("0")
@@ -284,44 +370,58 @@ def generate_orthogroup_files(
 
         clustering_res[i].insert(0, og_id)
 
-    # write clusters file
-    with open(f"{output_directory}/orthohmm_orthogroups.txt", 'w') as file:
-        for cluster in clustering_res:
-            # Join the elements of the sublist with spaces and write to the file
-            genes_in_cluster = cluster[1:]
-            genes_in_cluster.sort()
-            file.write(cluster[0] + " " + " ".join(map(str, genes_in_cluster)) + "\n")
+    return clustering_res, og_cn, ogs_dat, single_copy_ogs
 
-    # write copy number per species
-    with open(f"{output_directory}/orthohmm_gene_count.txt", 'w') as file:
-        for key, value in og_cn.items():
-            # Write each key-value pair as a space-delimited string
-            file.write(f"{key} {' '.join(value)}\n")
 
-    # write list of single-copy orthologs
-    with open(f"{output_directory}/orthohmm_single_copy_orthogroups.txt", 'w') as file:
-        for key in og_cn.keys():
-            if key != "files:":
-                file.write(f"{key[:-1]}\n")
+def generate_orthogroup_files(
+    output_directory: str,
+    gene_lengths: np.ndarray,
+    files: list,
+    fasta_directory: str,
+    single_copy_threshold: float,
+    extensions: Tuple[str],
+    temporary_directory: str,
+) -> Tuple[
+    List[str],
+    List[List[str]],
+    Dict[str, List[str]]
+]:
+    clustering_res = list()
 
-    # write all og files
-    if not os.path.isdir(f"{output_directory}/orthohmm_orthogroups"):
-        os.mkdir(f"{output_directory}/orthohmm_orthogroups")
-    for og_id, fasta_dat in ogs_dat.items():
-        with open(f"{output_directory}/orthohmm_orthogroups/{og_id}.fa", "w") as file:
-            file.write("\n".join(fasta_dat)+"\n")
+    with open(
+        f"{temporary_directory}/orthohmm_edges_clustered.txt",
+        "r",
+    ) as file:
+        for line in file:
+            line = line.strip()
+            if line:
+                clustering_res.append(line.split())
 
-    # write single-copy og files
-    if not os.path.isdir(f"{output_directory}/orthohmm_single_copy_orthogroups"):
-        os.mkdir(f"{output_directory}/orthohmm_single_copy_orthogroups")
-    for single_copy_og in single_copy_ogs:
-        for idx in range(len(ogs_dat[single_copy_og])):
-            if ogs_dat[single_copy_og][idx][0] == ">":
-                taxon_name = gene_lengths[gene_lengths["name"] == ogs_dat[single_copy_og][idx][1:]]["spp"][0]
-                # remove extension
-                taxon_name = next((taxon_name[:-len(ext)] for ext in extensions if taxon_name.endswith(ext)), taxon_name)
-                ogs_dat[single_copy_og][idx] = f">{taxon_name}|{ogs_dat[single_copy_og][idx][1:]}"
-        with open(f"{output_directory}/orthohmm_single_copy_orthogroups/{single_copy_og}.fa", "w") as file:
-            file.write("\n".join(ogs_dat[single_copy_og]) + "\n")
+    # get singletons - i.e., genes that aren't in groups with other genes
+    clustering_res, singletons = get_singletons(
+        gene_lengths,
+        clustering_res,
+    )
+
+    # get all FASTA entries
+    entries = get_all_fasta_entries(fasta_directory, files)
+
+    clustering_res, og_cn, ogs_dat, single_copy_ogs = \
+        get_orthogroup_information(
+            files,
+            gene_lengths,
+            clustering_res,
+            single_copy_threshold,
+            entries
+        )
+
+    # write results files
+    write_clusters_file(output_directory, clustering_res)
+    write_copy_number_file(output_directory, og_cn)
+    write_file_of_single_copy_ortholog_names(output_directory, og_cn)
+    write_fasta_files_for_all_ogs(output_directory, ogs_dat)
+    write_fasta_files_for_single_copy_orthologs(
+        output_directory, ogs_dat, gene_lengths, single_copy_ogs, extensions
+    )
 
     return single_copy_ogs, singletons, ogs_dat
