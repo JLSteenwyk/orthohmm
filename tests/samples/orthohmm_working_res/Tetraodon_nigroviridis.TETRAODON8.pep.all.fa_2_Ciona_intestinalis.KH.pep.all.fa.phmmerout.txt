@@ -1,0 +1,16 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+ENSCINP00000005198   -          ENSTNIP00000005325   -           1.7e-157  511.6  18.5  1.9e-157  511.4  18.5   1.0   1   0   0   1   1   1   1 -
+ENSCINP00000010262   -          ENSTNIP00000019800   -            1.5e-74  237.8   0.4   1.7e-74  237.6   0.4   1.0   1   0   0   1   1   1   1 -
+ENSCINP00000024362   -          ENSTNIP00000017394   -           4.9e-284  933.2 104.0  2.7e-271  890.9  70.4   4.0   1   1   1   2   2   2   2 -
+#
+# Program:         phmmer
+# Version:         3.3.1 (Jul 2020)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Tetraodon_nigroviridis.TETRAODON8.pep.all.fa
+# Target file:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Ciona_intestinalis.KH.pep.all.fa
+# Option settings: phmmer --tblout /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//orthohmm_working_res/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa_2_Ciona_intestinalis.KH.pep.all.fa.phmmerout.txt --noali --notextw /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Tetraodon_nigroviridis.TETRAODON8.pep.all.fa /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Ciona_intestinalis.KH.pep.all.fa 
+# Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
+# Date:            Wed Aug 21 11:32:54 2024
+# [ok]

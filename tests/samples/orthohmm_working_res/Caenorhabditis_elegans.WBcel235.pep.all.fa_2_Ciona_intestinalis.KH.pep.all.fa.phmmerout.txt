@@ -1,0 +1,15 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+ENSCINP00000005198   -          WBGene00003806.1     -            1.5e-79  254.8  11.9   2.1e-79  254.3  11.9   1.2   1   0   0   1   1   1   1 -
+ENSCINP00000010262   -          WBGene00013724.1     -            4.1e-65  207.3   0.1   4.5e-65  207.1   0.1   1.0   1   0   0   1   1   1   1 -
+#
+# Program:         phmmer
+# Version:         3.3.1 (Jul 2020)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Caenorhabditis_elegans.WBcel235.pep.all.fa
+# Target file:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Ciona_intestinalis.KH.pep.all.fa
+# Option settings: phmmer --tblout /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//orthohmm_working_res/Caenorhabditis_elegans.WBcel235.pep.all.fa_2_Ciona_intestinalis.KH.pep.all.fa.phmmerout.txt --noali --notextw /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Caenorhabditis_elegans.WBcel235.pep.all.fa /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Ciona_intestinalis.KH.pep.all.fa 
+# Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
+# Date:            Wed Aug 21 11:32:56 2024
+# [ok]

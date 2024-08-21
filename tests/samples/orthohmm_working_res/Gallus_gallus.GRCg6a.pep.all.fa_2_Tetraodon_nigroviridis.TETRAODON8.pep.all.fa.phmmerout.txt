@@ -1,0 +1,16 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+ENSTNIP00000005325   -          ENSGALP00000060372   -           1.5e-203  665.2  18.1  1.7e-203  665.1  18.1   1.0   1   0   0   1   1   1   1 -
+ENSTNIP00000019800   -          ENSGALP00000028084   -           5.8e-130  420.7   0.5  6.5e-130  420.6   0.5   1.0   1   0   0   1   1   1   1 -
+ENSTNIP00000017394   -          ENSGALP00000046461   -                  0 3326.4  54.4         0 3326.1  54.4   1.0   1   0   0   1   1   1   1 -
+#
+# Program:         phmmer
+# Version:         3.3.1 (Jul 2020)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Gallus_gallus.GRCg6a.pep.all.fa
+# Target file:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Tetraodon_nigroviridis.TETRAODON8.pep.all.fa
+# Option settings: phmmer --tblout /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//orthohmm_working_res/Gallus_gallus.GRCg6a.pep.all.fa_2_Tetraodon_nigroviridis.TETRAODON8.pep.all.fa.phmmerout.txt --noali --notextw /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Gallus_gallus.GRCg6a.pep.all.fa /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Tetraodon_nigroviridis.TETRAODON8.pep.all.fa 
+# Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
+# Date:            Wed Aug 21 11:32:57 2024
+# [ok]

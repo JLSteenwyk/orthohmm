@@ -1,0 +1,16 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+ENSMODP00000006811   -          ENSMUSP00000032440   -           3.9e-222  723.9  19.8  4.4e-222  723.8  19.8   1.0   1   0   0   1   1   1   1 -
+ENSMODP00000002384   -          ENSMUSP00000025631   -           9.2e-145  467.2   0.4    1e-144  467.0   0.4   1.0   1   0   0   1   1   1   1 -
+ENSMODP00000016287   -          ENSMUSP00000058613   -                  0 4649.4  50.7         0 4649.2  50.7   1.0   1   0   0   1   1   1   1 -
+#
+# Program:         phmmer
+# Version:         3.3.1 (Jul 2020)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Mus_musculus.GRCm38.pep.all.fa
+# Target file:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Monodelphis_domestica.ASM229v1.pep.all.fa
+# Option settings: phmmer --tblout /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//orthohmm_working_res/Mus_musculus.GRCm38.pep.all.fa_2_Monodelphis_domestica.ASM229v1.pep.all.fa.phmmerout.txt --noali --notextw /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Mus_musculus.GRCm38.pep.all.fa /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Monodelphis_domestica.ASM229v1.pep.all.fa 
+# Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
+# Date:            Wed Aug 21 11:32:54 2024
+# [ok]

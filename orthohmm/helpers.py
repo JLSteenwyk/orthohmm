@@ -1,3 +1,5 @@
+from enum import Enum
+import itertools
 from typing import Tuple, List, Dict
 
 import numpy as np
@@ -11,9 +13,38 @@ from .files import (
 )
 
 
+class StopStep(Enum):
+    prepare = "prepare"
+    infer = "infer"
+    write = "write"
+
+
+class StartStep(Enum):
+    search_res = "search_res"
+
+
+def generate_phmmer_cmds(
+    files: List[str],
+    phmmer: str,
+    output_directory: str,
+    fasta_directory: str,
+    cpu: int,
+    stop: str,
+):
+    pairwise_combos = list(itertools.product(files, repeat=2))
+    phmmer_cmds = []
+    for combo in pairwise_combos:
+        if stop == "prepare":
+            phmmer_cmds.append(f"{phmmer} --noali --notextw --cpu {cpu} --tblout {output_directory}/orthohmm_working_res/{combo[0]}_2_{combo[1]}.phmmerout.txt {fasta_directory}/{combo[0]} {fasta_directory}/{combo[1]}")
+        else:
+            phmmer_cmds.append(f"{phmmer} --noali --notextw --tblout {output_directory}/orthohmm_working_res/{combo[0]}_2_{combo[1]}.phmmerout.txt {fasta_directory}/{combo[0]} {fasta_directory}/{combo[1]}")
+
+    return phmmer_cmds
+
+
 def get_sequence_lengths(
     fasta_directory: str,
-    files: List[str]
+    files: List[str],
 ) -> np.ndarray:
     # Get sequence lengths
     gene_lengths = []
@@ -66,9 +97,9 @@ def merge_with_gene_lengths(
 def read_and_filter_phmmer_output(
     taxon_a: str,
     taxon_b: str,
-    temporary_directory: str,
+    output_directory: str,
 ) -> np.ndarray:
-    res_path = f"{temporary_directory}/{taxon_a}_2_{taxon_b}.phmmerout.txt"
+    res_path = f"{output_directory}/orthohmm_working_res/{taxon_a}_2_{taxon_b}.phmmerout.txt"
 
     dtype_res = [
         ("target_name", "U50"),
@@ -166,7 +197,7 @@ def get_threshold_per_gene(
 def determine_edge_thresholds(
     files: List[str],
     fasta_directory: str,
-    temporary_directory: str,
+    output_directory: str,
 ) -> Tuple[
         np.ndarray,
         Dict[np.str_, np.float64],
@@ -183,11 +214,11 @@ def determine_edge_thresholds(
         for pair in file_pairs:
             fwd_res = read_and_filter_phmmer_output(
                 pair[0], pair[1],
-                temporary_directory
+                output_directory
             )
             rev_res = read_and_filter_phmmer_output(
                 pair[1], pair[0],
-                temporary_directory
+                output_directory
             )
 
             fwd_res_merged = merge_with_gene_lengths(fwd_res, gene_lengths)
@@ -219,7 +250,7 @@ def determine_edge_thresholds(
 
 def determine_network_edges(
     files: List[str],
-    temporary_directory: str,
+    output_directory: str,
     gene_lengths: np.ndarray,
     pairwise_rbh_corr: Dict[frozenset, np.float64],
     reciprocal_best_hit_thresholds: Dict[np.str_, np.float64],
@@ -237,7 +268,7 @@ def determine_network_edges(
         for pair in file_pairs:
             res = read_and_filter_phmmer_output(
                 pair[0], pair[1],
-                temporary_directory
+                output_directory
             )
 
             for hit in res:
@@ -265,7 +296,7 @@ def determine_network_edges(
                 except KeyError:
                     continue
 
-    with open(f"{temporary_directory}/orthohmm_edges.txt", "w") as file:
+    with open(f"{output_directory}/orthohmm_working_res/orthohmm_edges.txt", "w") as file:
         for key, value in edges.items():
             key_str = "\t".join(map(str, key))
             file.write(f"{key_str}\t{value}\n")
@@ -373,23 +404,24 @@ def get_orthogroup_information(
     return clustering_res, og_cn, ogs_dat, single_copy_ogs
 
 
-def generate_orthogroup_files(
+def generate_orthogroup_clusters_file(
     output_directory: str,
     gene_lengths: np.ndarray,
-    files: list,
-    fasta_directory: str,
+    files: List[str],
     single_copy_threshold: float,
-    extensions: Tuple[str],
-    temporary_directory: str,
+    fasta_directory: str,
 ) -> Tuple[
-    List[str],
     List[List[str]],
-    Dict[str, List[str]]
+    Dict[str, List[str]],
+    Dict[str, List[str]],
+    List[str],
 ]:
     clustering_res = list()
 
+    entries = get_all_fasta_entries(fasta_directory, files)
+
     with open(
-        f"{temporary_directory}/orthohmm_edges_clustered.txt",
+        f"{output_directory}/orthohmm_working_res/orthohmm_edges_clustered.txt",
         "r",
     ) as file:
         for line in file:
@@ -403,25 +435,31 @@ def generate_orthogroup_files(
         clustering_res,
     )
 
-    # get all FASTA entries
-    entries = get_all_fasta_entries(fasta_directory, files)
-
     clustering_res, og_cn, ogs_dat, single_copy_ogs = \
         get_orthogroup_information(
             files,
             gene_lengths,
             clustering_res,
             single_copy_threshold,
-            entries
+            entries,
         )
 
-    # write results files
     write_clusters_file(output_directory, clustering_res)
+
+    return singletons, og_cn, ogs_dat, single_copy_ogs
+
+
+def generate_orthogroup_files(
+    output_directory: str,
+    gene_lengths: np.ndarray,
+    extensions: Tuple[str],
+    og_cn: Dict[str, List[str]],
+    ogs_dat: Dict[str, List[str]],
+    single_copy_ogs: List[str],
+) -> None:
     write_copy_number_file(output_directory, og_cn)
     write_file_of_single_copy_ortholog_names(output_directory, og_cn)
     write_fasta_files_for_all_ogs(output_directory, ogs_dat)
     write_fasta_files_for_single_copy_orthologs(
         output_directory, ogs_dat, gene_lengths, single_copy_ogs, extensions
     )
-
-    return single_copy_ogs, singletons, ogs_dat

@@ -2,10 +2,9 @@
 
 import logging
 import os
-import shutil
 import sys
 import time
-import textwrap
+from typing import Union
 
 from .args_processing import process_args
 from .externals import (
@@ -15,10 +14,13 @@ from .externals import (
 from .helpers import (
     determine_edge_thresholds,
     determine_network_edges,
+    generate_orthogroup_clusters_file,
     generate_orthogroup_files,
+    generate_phmmer_cmds,
+    StartStep,
+    StopStep,
 )
 from .parser import create_parser
-from .version import __version__
 from .writer import (
     write_user_args,
     write_output_stats
@@ -35,31 +37,36 @@ def execute(
     single_copy_threshold: float,
     mcl: str,
     inflation_value: float,
-    temporary_directory: str,
+    start: Union[StartStep, None],
+    stop: Union[StopStep, None],
     **kwargs,
 ) -> None:
-    print(textwrap.dedent(
-            f"""\
-          ____       _   _           _    _ __  __ __  __ 
-         / __ \     | | | |         | |  | |  \/  |  \/  |
-        | |  | |_ __| |_| |__   ___ | |__| | \  / | \  / |
-        | |  | | '__| __| '_ \ / _ \|  __  | |\/| | |\/| |
-        | |__| | |  | |_| | | | (_) | |  | | |  | | |  | |
-         \____/|_|   \__|_| |_|\___/|_|  |_|_|  |_|_|  |_|
-
-        Version: {__version__}
-        """  # noqa
-    ))
-
     # for reporting runtime duration to user
     start_time = time.time()
 
-    # make temporary directory
-    os.mkdir(temporary_directory)
+    # make working dir
+    if not os.path.exists(f"{output_directory}/orthohmm_working_res/"):
+        os.makedirs(f"{output_directory}/orthohmm_working_res/")
 
     # get FASTA files to identify orthologs from
     extensions = (".fa", ".faa", ".fas", ".fasta")
     files = [file for file in os.listdir(fasta_directory) if os.path.splitext(file)[1].lower() in extensions]
+
+    if start != StartStep.search_res:
+        phmmer_cmds = generate_phmmer_cmds(
+            files,
+            phmmer,
+            output_directory,
+            fasta_directory,
+            cpu,
+            stop,
+        )
+
+    # print phmmer cmds and exit is users only want to prepare phmmer cmds
+    if stop == StopStep.prepare:
+        for cmd in phmmer_cmds:
+            print(cmd)
+        sys.exit()
 
     # display to user what args are being used in stdout
     write_user_args(
@@ -70,63 +77,81 @@ def execute(
         cpu,
         single_copy_threshold,
         files,
-        temporary_directory,
+        start,
+        stop,
     )
 
-    # try:
-    # Step 1: all-to-all comparisons
-    print("Step 1/5: Conducting all-to-all comparisons.")
-    print("          This is typically the longest step.")
-    execute_phmmer_search(
-        files,
-        cpu,
-        fasta_directory,
-        phmmer,
-        temporary_directory,
-    )
-    print("          Completed!\n")
+    # set current step and determine the total number of
+    # steps that will be used in the run
+    current_step = 1
+    if stop == StopStep.infer:
+        total_steps = 4
+    else:
+        total_steps = 5
 
-    # Step 2: Determining edge thresholds
-    print("Step 2/5: Determining edge thresholds")
+    if start == StartStep.search_res:
+        total_steps -= 1
+    else:
+        print(f"Step {current_step}/{total_steps}: Conducting all-to-all comparisons.")
+        print("          This is typically the longest step.")
+        execute_phmmer_search(
+            phmmer_cmds,
+            cpu,
+        )
+        print("          Completed!\n")
+        current_step += 1
+
+    print(f"Step {current_step}/{total_steps}: Determining edge thresholds")
     gene_lengths, reciprocal_best_hit_thresholds, pairwise_rbh_corr = \
         determine_edge_thresholds(
             files,
             fasta_directory,
-            temporary_directory,
+            output_directory,
         )
     print("          Completed!\n")
+    current_step += 1
 
-    # Step 3: Determining network edges
-    print("Step 3/5: Identifying network edges")
+    print(f"Step {current_step}/{total_steps}: Identifying network edges")
     edges = determine_network_edges(
         files,
-        temporary_directory,
+        output_directory,
         gene_lengths,
         pairwise_rbh_corr,
         reciprocal_best_hit_thresholds,
     )
     print("          Completed!\n")
+    current_step += 1
 
-    # Step 4: Conduct mcl clustering
-    print("Step 4/5: Conducting clustering")
+    print(f"Step {current_step}/{total_steps}: Conducting clustering")
     execute_mcl(
         mcl,
         inflation_value,
         cpu,
-        temporary_directory
+        output_directory,
     )
+    singletons, og_cn, ogs_dat, single_copy_ogs = \
+        generate_orthogroup_clusters_file(
+            output_directory,
+            gene_lengths,
+            files,
+            single_copy_threshold,
+            fasta_directory,
+        )
     print("          Completed!\n")
+    current_step += 1
 
-    # Step 5: Write out orthogroup files
-    print("Step 5/5: Writing orthogroup information")
-    single_copy_ogs, singletons, ogs_dat = generate_orthogroup_files(
+    # exit if users only want orthogroups to be inferred
+    if stop == StopStep.infer:
+        sys.exit()
+
+    print(f"Step {current_step}/{total_steps}: Writing orthogroup information")
+    generate_orthogroup_files(
         output_directory,
         gene_lengths,
-        files,
-        fasta_directory,
-        single_copy_threshold,
         extensions,
-        temporary_directory,
+        og_cn,
+        ogs_dat,
+        single_copy_ogs,
     )
     print("          Completed!\n")
 
@@ -139,12 +164,6 @@ def execute(
         gene_lengths,
     )
 
-    # except Exception as e:
-    #     print(f"Error: {e}")
-    # finally:
-    shutil.rmtree(temporary_directory)
-
-
 
 def main(argv=None):
     """
@@ -152,19 +171,6 @@ def main(argv=None):
     """
     parser = create_parser()
     args = parser.parse_args()
-
-    
-
-    # # wrap execute() in try, except, and finally
-    # try:
-    #     execute(**process_args(args))
-    # except Exception as e:
-    #     print(f"Error: {e}")
-    # finally:  # guaranteed to execute
-    #     # if I have the temp directory, delete it
-    #     print("Step 6/6: Cleaning up workspace")
-    #     shutil.rmtree(f"/tmp/orthohmm-{time_string}/")
-    #     print("          Completed!\n")
 
     execute(**process_args(args))
 

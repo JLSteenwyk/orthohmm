@@ -1,0 +1,18 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+ENSDARP00000071531   -          WBGene00003806.1     -            7.5e-80  256.8  12.7   1.2e-79  256.1  12.7   1.3   1   1   0   1   1   1   1 -
+ENSDARP00000147265   -          WBGene00003806.1     -            1.6e-79  255.7  12.9   2.7e-79  255.0  12.9   1.3   1   1   0   1   1   1   1 -
+ENSDARP00000154605   -          WBGene00003806.1     -            1.6e-79  255.7  12.9   2.7e-79  255.0  12.9   1.3   1   1   0   1   1   1   1 -
+ENSDARP00000110254   -          WBGene00013724.1     -            1.3e-64  206.6   0.0   1.5e-64  206.4   0.0   1.0   1   0   0   1   1   1   1 -
+ENSDARP00000149121   -          WBGene00013724.1     -              4e-50  159.3   0.1     1e-49  157.9   0.1   1.6   1   1   0   1   1   1   1 -
+#
+# Program:         phmmer
+# Version:         3.3.1 (Jul 2020)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Caenorhabditis_elegans.WBcel235.pep.all.fa
+# Target file:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Danio_rerio.GRCz11.pep.all.fa
+# Option settings: phmmer --tblout /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//orthohmm_working_res/Caenorhabditis_elegans.WBcel235.pep.all.fa_2_Danio_rerio.GRCz11.pep.all.fa.phmmerout.txt --noali --notextw /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Caenorhabditis_elegans.WBcel235.pep.all.fa /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Danio_rerio.GRCz11.pep.all.fa 
+# Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
+# Date:            Wed Aug 21 11:32:56 2024
+# [ok]

@@ -1,0 +1,16 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+ENSCAFP00000053904   -          ENSGALP00000060372   -           4.8e-216  706.5  20.2  5.8e-216  706.2  20.2   1.0   1   0   0   1   1   1   1 -
+ENSCAFP00000048558   -          ENSGALP00000028084   -           3.9e-121  391.7   0.1  3.9e-121  391.7   0.1   2.1   2   0   0   2   2   2   1 -
+ENSCAFP00000017344   -          ENSGALP00000046461   -                  0 4127.4  53.8         0 4127.1  53.8   1.0   1   0   0   1   1   1   1 -
+#
+# Program:         phmmer
+# Version:         3.3.1 (Jul 2020)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Gallus_gallus.GRCg6a.pep.all.fa
+# Target file:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Canis_familiaris.CanFam3.1.pep.all.fa
+# Option settings: phmmer --tblout /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//orthohmm_working_res/Gallus_gallus.GRCg6a.pep.all.fa_2_Canis_familiaris.CanFam3.1.pep.all.fa.phmmerout.txt --noali --notextw /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Gallus_gallus.GRCg6a.pep.all.fa /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Canis_familiaris.CanFam3.1.pep.all.fa 
+# Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
+# Date:            Wed Aug 21 11:32:57 2024
+# [ok]

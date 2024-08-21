@@ -1,0 +1,16 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+ENSCINP00000005198   -          ENSMODP00000006811   -           1.7e-161  524.8  18.9  1.8e-161  524.6  18.9   1.0   1   0   0   1   1   1   1 -
+ENSCINP00000010262   -          ENSMODP00000002384   -            1.3e-74  237.9   0.6   1.4e-74  237.7   0.6   1.0   1   0   0   1   1   1   1 -
+ENSCINP00000024362   -          ENSMODP00000016287   -           1.3e-288  947.9  95.6  8.2e-279  915.5  61.0   2.5   1   1   1   2   2   2   2 -
+#
+# Program:         phmmer
+# Version:         3.3.1 (Jul 2020)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Monodelphis_domestica.ASM229v1.pep.all.fa
+# Target file:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Ciona_intestinalis.KH.pep.all.fa
+# Option settings: phmmer --tblout /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//orthohmm_working_res/Monodelphis_domestica.ASM229v1.pep.all.fa_2_Ciona_intestinalis.KH.pep.all.fa.phmmerout.txt --noali --notextw /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Monodelphis_domestica.ASM229v1.pep.all.fa /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Ciona_intestinalis.KH.pep.all.fa 
+# Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
+# Date:            Wed Aug 21 11:32:58 2024
+# [ok]

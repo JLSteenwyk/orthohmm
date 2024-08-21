@@ -7,6 +7,10 @@ from argparse import (
     RawDescriptionHelpFormatter,
 )
 
+from .helpers import (
+    StartStep,
+    StopStep
+)
 from .version import __version__
 
 
@@ -80,11 +84,14 @@ def create_parser() -> ArgumentParser:
 
         -i, --inflation_value <float>               mcl inflation parameter
                                                     (default: 1.5)
+    
+        --stop <prepare, infer, write>              options for stopping
+                                                    an analysis at a specific
+                                                    intermediate step
 
-        -t, --temporary_directory <path>            specify path for temporary
-                                                    directory of intermediate
-                                                    files
-                                                    (default: /tmp/)
+        --start <search_res>                        start analysis from
+                                                    completed all-vs-all
+                                                    search results
 
         -------------------------------------
         | Detailed explanation of arguments | 
@@ -101,7 +108,7 @@ def create_parser() -> ArgumentParser:
 
         CPU (-c, --cpu) 
             Number of CPU workers for multithreading during sequence search.
-            This argument is used by phmmer during all-vs-all comparisons.
+            This argument is used by phmmer during all-by-all comparisons.
             By default, the number of CPUs available will be auto-detected.
         
         Single-Copy Threshold (-s, --single_copy_threshold)
@@ -120,12 +127,23 @@ def create_parser() -> ArgumentParser:
             Higher values are stricter resulting in smaller orthogroups.
             The default value is 1.5.
         
-        Temporary Directory (-t, --temporary_directory)
-            Path for temporary directory location. This temporary directory will
-            have the prefix "orthohmm" and a randomly generated suffix. Files
-            like the output of phmmer are kept here while OrthoHMM processes them.
-            The default path is /tmp/.
+        Stop (--stop)
+            Similar to other ortholog calling algorithms, different steps in the
+            OrthoHMM workflow can be cpu or memory intensive. Thus, users may
+            want to stop OrthoHMM at certain steps, to faciltiate more
+            practical resource allocation. There are three choices for when to
+            stop the analysis: prepare, infer, and write.
+            - prepare: Stop after preparing input files for the all-by-all search
+            - infer: Stop after inferring the orthogroups
+            - write: Stop after writing sequence files for the orthogroups.
+                    Currently, this is synonymous with not specifying a step
+                    to stop the analysis at.
 
+        Start (--start)
+            Start analysis from a specific intermediate step. Currently, this
+            can only be applied to the results from the all-by-all search.
+            - search_res: Start analysis from all-by-all search results.
+                          
         -------------------
         | OrthoHMM output | 
         -------------------
@@ -150,6 +168,10 @@ def create_parser() -> ArgumentParser:
             identifier are separated by a pipe symbol "|". This aims to help streamline
             phylogenomic workflows wherein sequences will be concatenated downstream
             based on taxon names.
+        
+        orthohmm_working_res
+            Various intermediate results files that help OrthoHMM start analyses
+            from an intermediate step in the analysis
         """  # noqa
         ),
     )
@@ -162,19 +184,32 @@ def create_parser() -> ArgumentParser:
     )
 
     optional.add_argument(
-        "-t",
-        "--temporary_directory",
-        help=SUPPRESS,
-        metavar="temporary_directory"
-    )
-
-    optional.add_argument(
         "-s",
         "--single_copy_threshold",
         type=float,
         required=False,
         help=SUPPRESS,
         metavar="single_copy_threshold",
+    )
+
+    stop_choices = [step.value for step in StopStep]
+    optional.add_argument(
+        "--stop",
+        type=str,
+        required=False,
+        help=SUPPRESS,
+        metavar="stop step",
+        choices=stop_choices
+    )
+
+    start_choices = [step.value for step in StartStep]
+    optional.add_argument(
+        "--start",
+        type=str,
+        required=False,
+        help=SUPPRESS,
+        metavar="start step",
+        choices=start_choices
     )
 
     optional.add_argument(

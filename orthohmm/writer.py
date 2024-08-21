@@ -1,5 +1,9 @@
 import textwrap
 import time
+from typing import List, Union
+
+from .helpers import StartStep, StopStep
+from .version import __version__
 
 
 def write_user_args(
@@ -9,13 +13,34 @@ def write_user_args(
     mcl: str,
     cpu: int,
     single_copy_threshold: float,
-    files: list,
-    temporary_directory: str,
+    files: List[str],
+    start: Union[StartStep, None],
+    stop: Union[StopStep, None],
 ) -> None:
+
+    try:
+        if start.value:
+            start_print = start.value
+    except AttributeError:
+        start_print = "NA"
+
+    try:
+        if stop.value:
+            stop_print = stop.value
+    except AttributeError:
+        stop_print = "NA"
 
     print(
         textwrap.dedent(
             f"""\
+          ____       _   _           _    _ __  __ __  __ 
+         / __ \     | | | |         | |  | |  \/  |  \/  |
+        | |  | |_ __| |_| |__   ___ | |__| | \  / | \  / |
+        | |  | | '__| __| '_ \ / _ \|  __  | |\/| | |\/| |
+        | |__| | |  | |_| | | | (_) | |  | | |  | | |  | |
+         \____/|_|   \__|_| |_|\___/|_|  |_|_|  |_|_|  |_|
+
+        Version: {__version__}
 
     -------------
     | Arguments |
@@ -23,7 +48,8 @@ def write_user_args(
     Directory of FASTA files: {fasta_directory}
     Number of FASTA files: {len(files)}
     Directory for output files: {output_directory}
-    Temporary directory: {temporary_directory}
+    Step to start analysis: {start_print}
+    Step to stop analysis: {stop_print}
     Path to phmmer: {phmmer}
     Path to mcl: {mcl}
     Single-copy threshold: {single_copy_threshold}
@@ -57,7 +83,7 @@ def write_output_stats(
         Number of edges in network: {len(edges)}
         Number of single-copy orthogroups: {len(single_copy_ogs)}
         Number of singletons: {len(singletons)}
-        
+
         Execution time: {round(time.time() - start_time, 3)}s
     """  # noqa
         )

@@ -1,0 +1,16 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+ENSMODP00000006811   -          ENSP00000373312      -           1.9e-220  719.2  19.9  2.1e-220  719.1  19.9   1.0   1   0   0   1   1   1   1 -
+ENSMODP00000002384   -          ENSP00000340836      -           1.6e-146  472.9   0.3  1.8e-146  472.7   0.3   1.0   1   0   0   1   1   1   1 -
+ENSMODP00000016287   -          ENSP00000260197      -                  0 4737.4  51.1         0 4737.2  51.1   1.0   1   0   0   1   1   1   1 -
+#
+# Program:         phmmer
+# Version:         3.3.1 (Jul 2020)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Homo_sapiens.GRCh38.pep.all.fa
+# Target file:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Monodelphis_domestica.ASM229v1.pep.all.fa
+# Option settings: phmmer --tblout /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//orthohmm_working_res/Homo_sapiens.GRCh38.pep.all.fa_2_Monodelphis_domestica.ASM229v1.pep.all.fa.phmmerout.txt --noali --notextw /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Homo_sapiens.GRCh38.pep.all.fa /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Monodelphis_domestica.ASM229v1.pep.all.fa 
+# Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
+# Date:            Wed Aug 21 11:32:56 2024
+# [ok]

@@ -1,0 +1,19 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+ENSP00000373312      -          ENSDARP00000071531   -           2.4e-205  668.8  20.8  2.8e-205  668.7  20.8   1.0   1   0   0   1   1   1   1 -
+ENSP00000373312      -          ENSDARP00000147265   -             4e-205  668.4  20.6  4.8e-205  668.1  20.6   1.0   1   0   0   1   1   1   1 -
+ENSP00000373312      -          ENSDARP00000154605   -             4e-205  668.4  20.6  4.8e-205  668.1  20.6   1.0   1   0   0   1   1   1   1 -
+ENSP00000340836      -          ENSDARP00000110254   -           1.2e-126  408.3   0.2  1.3e-126  408.1   0.2   1.0   1   0   0   1   1   1   1 -
+ENSP00000340836      -          ENSDARP00000149121   -           7.1e-103  329.8   2.7  2.9e-102  327.8   2.7   1.7   1   1   0   1   1   1   1 -
+ENSP00000260197      -          ENSDARP00000129655   -                  0 3439.1  53.9         0 3438.9  53.9   1.0   1   0   0   1   1   1   1 -
+#
+# Program:         phmmer
+# Version:         3.3.1 (Jul 2020)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Danio_rerio.GRCz11.pep.all.fa
+# Target file:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Homo_sapiens.GRCh38.pep.all.fa
+# Option settings: phmmer --tblout /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//orthohmm_working_res/Danio_rerio.GRCz11.pep.all.fa_2_Homo_sapiens.GRCh38.pep.all.fa.phmmerout.txt --noali --notextw /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Danio_rerio.GRCz11.pep.all.fa /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Homo_sapiens.GRCh38.pep.all.fa 
+# Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
+# Date:            Wed Aug 21 11:32:55 2024
+# [ok]

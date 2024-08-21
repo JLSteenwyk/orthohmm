@@ -1,0 +1,16 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+ENSCINP00000005198   -          ENSPTRP00000071151   -           8.2e-160  519.6  19.4    9e-160  519.4  19.4   1.0   1   0   0   1   1   1   1 -
+ENSCINP00000010262   -          ENSPTRP00000079818   -              1e-73  234.9   0.5   1.2e-73  234.8   0.5   1.0   1   0   0   1   1   1   1 -
+ENSCINP00000024362   -          ENSPTRP00000007532   -           2.7e-288  947.0  97.6  2.8e-287  943.6  97.6   2.5   1   1   0   1   1   1   1 -
+#
+# Program:         phmmer
+# Version:         3.3.1 (Jul 2020)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Pan_troglodytes.Pan_tro_3.0.pep.all.fa
+# Target file:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Ciona_intestinalis.KH.pep.all.fa
+# Option settings: phmmer --tblout /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//orthohmm_working_res/Pan_troglodytes.Pan_tro_3.0.pep.all.fa_2_Ciona_intestinalis.KH.pep.all.fa.phmmerout.txt --noali --notextw /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Pan_troglodytes.Pan_tro_3.0.pep.all.fa /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Ciona_intestinalis.KH.pep.all.fa 
+# Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
+# Date:            Wed Aug 21 11:32:55 2024
+# [ok]

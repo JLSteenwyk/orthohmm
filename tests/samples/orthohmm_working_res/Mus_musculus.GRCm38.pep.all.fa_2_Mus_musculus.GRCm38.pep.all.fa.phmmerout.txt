@@ -1,0 +1,20 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+ENSMUSP00000032440   -          ENSMUSP00000032440   -           3.3e-231  754.5  20.3  3.7e-231  754.4  20.3   1.0   1   0   0   1   1   1   1 -
+ENSMUSP00000025631   -          ENSMUSP00000025631   -           1.1e-152  493.8   0.4  1.3e-152  493.6   0.4   1.0   1   0   0   1   1   1   1 -
+ENSMUSP00000086311   -          ENSMUSP00000086311   -                  0 1288.3  25.1         0 1288.1  25.1   1.0   1   0   0   1   1   1   1 -
+ENSMUSP00000086314   -          ENSMUSP00000086311   -                  0 1273.7  25.5         0 1273.5  25.5   1.0   1   0   0   1   1   1   1 -
+ENSMUSP00000086314   -          ENSMUSP00000086314   -                  0 1288.0  25.9         0 1287.8  25.9   1.0   1   0   0   1   1   1   1 -
+ENSMUSP00000086311   -          ENSMUSP00000086314   -                  0 1273.8  25.5         0 1273.6  25.5   1.0   1   0   0   1   1   1   1 -
+ENSMUSP00000058613   -          ENSMUSP00000058613   -                  0 5320.5  53.3         0 5320.3  53.3   1.0   1   0   0   1   1   1   1 -
+#
+# Program:         phmmer
+# Version:         3.3.1 (Jul 2020)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Mus_musculus.GRCm38.pep.all.fa
+# Target file:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Mus_musculus.GRCm38.pep.all.fa
+# Option settings: phmmer --tblout /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//orthohmm_working_res/Mus_musculus.GRCm38.pep.all.fa_2_Mus_musculus.GRCm38.pep.all.fa.phmmerout.txt --noali --notextw /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Mus_musculus.GRCm38.pep.all.fa /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Mus_musculus.GRCm38.pep.all.fa 
+# Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
+# Date:            Wed Aug 21 11:32:53 2024
+# [ok]

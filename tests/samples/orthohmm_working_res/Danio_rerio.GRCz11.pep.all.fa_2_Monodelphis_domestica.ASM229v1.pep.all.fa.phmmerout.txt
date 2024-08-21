@@ -1,0 +1,19 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+ENSMODP00000006811   -          ENSDARP00000071531   -           1.5e-210  686.0  20.7  1.7e-210  685.8  20.7   1.0   1   0   0   1   1   1   1 -
+ENSMODP00000006811   -          ENSDARP00000147265   -             6e-210  684.2  20.7  6.6e-210  684.1  20.7   1.0   1   0   0   1   1   1   1 -
+ENSMODP00000006811   -          ENSDARP00000154605   -             6e-210  684.2  20.7  6.6e-210  684.1  20.7   1.0   1   0   0   1   1   1   1 -
+ENSMODP00000002384   -          ENSDARP00000110254   -             8e-130  418.7   0.3  8.9e-130  418.5   0.3   1.0   1   0   0   1   1   1   1 -
+ENSMODP00000002384   -          ENSDARP00000149121   -             2e-105  338.1   4.0    1e-104  335.8   4.0   1.8   1   1   0   1   1   1   1 -
+ENSMODP00000016287   -          ENSDARP00000129655   -                  0 3474.4  53.6         0 3474.1  53.6   1.0   1   0   0   1   1   1   1 -
+#
+# Program:         phmmer
+# Version:         3.3.1 (Jul 2020)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Danio_rerio.GRCz11.pep.all.fa
+# Target file:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Monodelphis_domestica.ASM229v1.pep.all.fa
+# Option settings: phmmer --tblout /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//orthohmm_working_res/Danio_rerio.GRCz11.pep.all.fa_2_Monodelphis_domestica.ASM229v1.pep.all.fa.phmmerout.txt --noali --notextw /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Danio_rerio.GRCz11.pep.all.fa /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Monodelphis_domestica.ASM229v1.pep.all.fa 
+# Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
+# Date:            Wed Aug 21 11:32:56 2024
+# [ok]

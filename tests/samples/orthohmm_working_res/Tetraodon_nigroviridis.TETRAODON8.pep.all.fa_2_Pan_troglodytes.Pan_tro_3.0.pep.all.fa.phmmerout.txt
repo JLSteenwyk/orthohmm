@@ -1,0 +1,16 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+ENSPTRP00000071151   -          ENSTNIP00000005325   -             5e-204  664.6  19.1  5.8e-204  664.4  19.1   1.0   1   0   0   1   1   1   1 -
+ENSPTRP00000079818   -          ENSTNIP00000019800   -           1.7e-128  414.1   0.2  1.9e-128  413.9   0.2   1.0   1   0   0   1   1   1   1 -
+ENSPTRP00000007532   -          ENSTNIP00000017394   -                  0 3336.2  49.0         0 3335.9  49.0   1.0   1   0   0   1   1   1   1 -
+#
+# Program:         phmmer
+# Version:         3.3.1 (Jul 2020)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Tetraodon_nigroviridis.TETRAODON8.pep.all.fa
+# Target file:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Pan_troglodytes.Pan_tro_3.0.pep.all.fa
+# Option settings: phmmer --tblout /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//orthohmm_working_res/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa_2_Pan_troglodytes.Pan_tro_3.0.pep.all.fa.phmmerout.txt --noali --notextw /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Tetraodon_nigroviridis.TETRAODON8.pep.all.fa /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Pan_troglodytes.Pan_tro_3.0.pep.all.fa 
+# Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
+# Date:            Wed Aug 21 11:32:54 2024
+# [ok]

@@ -22,13 +22,11 @@ test.unit:
 
 test.integration:
 	rm -rf ./tests/samples/orthohmm_*
-	rm -rf /tmp/orthohmm-test/
 	python3 -m pytest --basetemp=output -m "integration"
 
 test.fast:
 	python3 -m pytest -m "not (integration or slow)"
 	rm -rf ./tests/samples/orthohmm_*
-	rm -rf /tmp/orthohmm-test/
 	python3 -m pytest --basetemp=output -m "integration and not slow"
 
 # used by GitHub actions during CI workflow

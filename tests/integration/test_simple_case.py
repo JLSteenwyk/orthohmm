@@ -23,7 +23,8 @@ class TestSimpleCase(object):
             single_copy_threshold=0.5,
             mcl="mcl",
             inflation_value=1.5,
-            temporary_directory="/tmp/orthohmm-test"
+            start=None,
+            stop=None,
         )
 
         execute(**kwargs)

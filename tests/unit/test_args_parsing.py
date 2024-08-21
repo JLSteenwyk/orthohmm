@@ -3,6 +3,7 @@ import pytest
 from pathlib import Path
 
 from orthohmm.args_processing import process_args
+from orthohmm.helpers import StartStep, StopStep
 
 
 here = Path(__file__)
@@ -18,7 +19,8 @@ def args():
         single_copy_threshold=0.5,
         mcl="mcl",
         inflation_value=1.5,
-        temporary_directory="/tmp/"
+        start=None,
+        stop=None,
     )
     return Namespace(**kwargs)
 
@@ -31,11 +33,6 @@ class TestArgsProcessing(object):
 
     def test_process_args_output_directory_dne(self, args):
         args.output_directory = "some/file/that/doesnt/exist"
-        with pytest.raises(SystemExit):
-            process_args(args)
-
-    def test_process_args_temporary_directory_dne(self, args):
-        args.temporary_directory = "some/file/that/doesnt/exist"
         with pytest.raises(SystemExit):
             process_args(args)
 
@@ -59,6 +56,36 @@ class TestArgsProcessing(object):
         res = process_args(args)
         assert res["inflation_value"] == 1.5
 
+    def test_process_args_default_start(self, args):
+        args.start = None
+        res = process_args(args)
+        assert res["start"] is None
+
+    def test_process_args_search_res_start(self, args):
+        args.start = "search_res"
+        res = process_args(args)
+        assert res["start"] is StartStep.search_res
+
+    def test_process_args_default_stop(self, args):
+        args.stop = None
+        res = process_args(args)
+        assert res["stop"] is None
+
+    def test_process_args_prepare_stop(self, args):
+        args.stop = "prepare"
+        res = process_args(args)
+        assert res["stop"] == StopStep.prepare
+
+    def test_process_args_infer_stop(self, args):
+        args.stop = "infer"
+        res = process_args(args)
+        assert res["stop"] == StopStep.infer
+
+    def test_process_args_write_stop(self, args):
+        args.stop = "write"
+        res = process_args(args)
+        assert res["stop"] == StopStep.write
+
     def test_process_args_expected_keywords(self, args):
         res = process_args(args)
         expected_keys = [
@@ -69,6 +96,7 @@ class TestArgsProcessing(object):
             "single_copy_threshold",
             "mcl",
             "inflation_value",
-            "temporary_directory",
+            "start",
+            "stop",
         ]
         assert sorted(res.keys()) == sorted(expected_keys)

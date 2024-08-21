@@ -1,10 +1,14 @@
-from datetime import datetime
 from distutils.spawn import find_executable
 import shutil
 import logging
 import multiprocessing
 import os.path
 import sys
+
+from .helpers import (
+    StartStep,
+    StopStep,
+)
 
 
 logger = logging.getLogger(__name__)
@@ -27,15 +31,6 @@ def process_args(args) -> dict:
         logger.warning("Output directory does not exist")
         sys.exit()
 
-    temporary_directory = args.temporary_directory or "/tmp"
-    if not os.path.isdir(temporary_directory):
-        logger.warning("Temporary directory path does not exist")
-        sys.exit()
-    # create full temporary directory path
-    current_time = datetime.now()
-    time_string = current_time.strftime("%Y%m%d%H%M%S")
-    temporary_directory = f"{temporary_directory}/orthohmm-{time_string}"
-
     if args.phmmer:
         phmmer = args.phmmer
         if not shutil.which(phmmer):
@@ -49,7 +44,7 @@ def process_args(args) -> dict:
             sys.exit()
 
     if args.cpu:
-        cpu = args.cpu
+        cpu = int(args.cpu)
         if cpu > multiprocessing.cpu_count():
             logger.warning(f"{cpu} CPUs requested exceeds {multiprocessing.cpu_count()} CPUs available.")
             logger.warning(f"Changing CPUs to {multiprocessing.cpu_count()}.")
@@ -73,6 +68,9 @@ def process_args(args) -> dict:
 
     inflation_value = args.inflation_value or 1.5
 
+    start = StartStep(args.start) if args.start else None
+    stop = StopStep(args.stop) if args.stop else None
+
     return dict(
         fasta_directory=fasta_directory,
         output_directory=output_directory,
@@ -81,5 +79,6 @@ def process_args(args) -> dict:
         single_copy_threshold=single_copy_threshold,
         mcl=mcl,
         inflation_value=float(inflation_value),
-        temporary_directory=temporary_directory,
+        start=start,
+        stop=stop,
     )
