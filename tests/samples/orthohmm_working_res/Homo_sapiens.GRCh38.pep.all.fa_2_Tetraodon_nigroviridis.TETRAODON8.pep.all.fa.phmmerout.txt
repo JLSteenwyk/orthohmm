@@ -10,7 +10,7 @@ ENSTNIP00000017394   -          ENSP00000260197      -                  0 3327.5
 # Pipeline mode:   SEARCH
 # Query file:      /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Homo_sapiens.GRCh38.pep.all.fa
 # Target file:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Tetraodon_nigroviridis.TETRAODON8.pep.all.fa
-# Option settings: phmmer --tblout /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//orthohmm_working_res/Homo_sapiens.GRCh38.pep.all.fa_2_Tetraodon_nigroviridis.TETRAODON8.pep.all.fa.phmmerout.txt --noali --notextw /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Homo_sapiens.GRCh38.pep.all.fa /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Tetraodon_nigroviridis.TETRAODON8.pep.all.fa 
+# Option settings: phmmer --tblout /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//orthohmm_working_res/Homo_sapiens.GRCh38.pep.all.fa_2_Tetraodon_nigroviridis.TETRAODON8.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Homo_sapiens.GRCh38.pep.all.fa /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Tetraodon_nigroviridis.TETRAODON8.pep.all.fa 
 # Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
-# Date:            Wed Aug 21 11:32:56 2024
+# Date:            Fri Aug 23 14:08:46 2024
 # [ok]

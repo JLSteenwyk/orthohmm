@@ -2,7 +2,11 @@ import textwrap
 import time
 from typing import List, Union
 
-from .helpers import StartStep, StopStep
+from .helpers import (
+    StartStep,
+    StopStep,
+    SubstitutionMatrix,
+)
 from .version import __version__
 
 
@@ -16,6 +20,7 @@ def write_user_args(
     files: List[str],
     start: Union[StartStep, None],
     stop: Union[StopStep, None],
+    substitution_matrix: SubstitutionMatrix,
 ) -> None:
 
     try:
@@ -51,6 +56,7 @@ def write_user_args(
     Step to start analysis: {start_print}
     Step to stop analysis: {stop_print}
     Path to phmmer: {phmmer}
+    Substitution matrix: {substitution_matrix.value}
     Path to mcl: {mcl}
     Single-copy threshold: {single_copy_threshold}
     CPUs: {cpu}

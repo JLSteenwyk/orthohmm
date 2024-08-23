@@ -3,7 +3,11 @@ import pytest
 from pathlib import Path
 
 from orthohmm.args_processing import process_args
-from orthohmm.helpers import StartStep, StopStep
+from orthohmm.helpers import (
+    StartStep,
+    StopStep,
+    SubstitutionMatrix,
+)
 
 
 here = Path(__file__)
@@ -21,6 +25,7 @@ def args():
         inflation_value=1.5,
         start=None,
         stop=None,
+        substitution_matrix=SubstitutionMatrix.blosum62
     )
     return Namespace(**kwargs)
 
@@ -66,6 +71,11 @@ class TestArgsProcessing(object):
         res = process_args(args)
         assert res["start"] is StartStep.search_res
 
+    def test_process_args_substitution_matrix_default(self, args):
+        args.substitution_matrix = "BLOSUM62"
+        res = process_args(args)
+        assert res["substitution_matrix"] is SubstitutionMatrix.blosum62
+
     def test_process_args_default_stop(self, args):
         args.stop = None
         res = process_args(args)
@@ -98,5 +108,6 @@ class TestArgsProcessing(object):
             "inflation_value",
             "start",
             "stop",
+            "substitution_matrix",
         ]
         assert sorted(res.keys()) == sorted(expected_keys)

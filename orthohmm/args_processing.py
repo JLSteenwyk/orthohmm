@@ -8,6 +8,7 @@ import sys
 from .helpers import (
     StartStep,
     StopStep,
+    SubstitutionMatrix,
 )
 
 
@@ -71,6 +72,8 @@ def process_args(args) -> dict:
     start = StartStep(args.start) if args.start else None
     stop = StopStep(args.stop) if args.stop else None
 
+    substitution_matrix = SubstitutionMatrix(args.substitution_matrix) if args.substitution_matrix else SubstitutionMatrix.blosum62
+
     return dict(
         fasta_directory=fasta_directory,
         output_directory=output_directory,
@@ -81,4 +84,5 @@ def process_args(args) -> dict:
         inflation_value=float(inflation_value),
         start=start,
         stop=stop,
+        substitution_matrix=substitution_matrix,
     )

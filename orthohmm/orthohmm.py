@@ -19,6 +19,7 @@ from .helpers import (
     generate_phmmer_cmds,
     StartStep,
     StopStep,
+    SubstitutionMatrix,
 )
 from .parser import create_parser
 from .writer import (
@@ -39,6 +40,7 @@ def execute(
     inflation_value: float,
     start: Union[StartStep, None],
     stop: Union[StopStep, None],
+    substitution_matrix: SubstitutionMatrix,
     **kwargs,
 ) -> None:
     # for reporting runtime duration to user
@@ -60,6 +62,7 @@ def execute(
             fasta_directory,
             cpu,
             stop,
+            substitution_matrix,
         )
 
     # print phmmer cmds and exit is users only want to prepare phmmer cmds
@@ -79,6 +82,7 @@ def execute(
         files,
         start,
         stop,
+        substitution_matrix,
     )
 
     # set current step and determine the total number of

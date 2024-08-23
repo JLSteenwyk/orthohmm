@@ -9,7 +9,7 @@ from argparse import (
 
 from .helpers import (
     StartStep,
-    StopStep
+    StopStep,
 )
 from .version import __version__
 
@@ -71,6 +71,10 @@ def create_parser() -> ArgumentParser:
         -p, --phmmer <path>                         path to phmmer from HMMER suite
                                                     (default: phmmer)
 
+        -x, --substitution_matrix <subs. matrix>    substitution matrix to use for
+                                                    residue probabilities
+                                                    (default: BLOSUM62)
+
         -c, --cpu <integer>                         number of parallel CPU workers
                                                     to use for multithreading
                                                     (default: auto detect)
@@ -105,6 +109,12 @@ def create_parser() -> ArgumentParser:
             Path to phmmer executable from HMMER suite. By default, phmmer
             is assumed to be in the PATH variable; in other words, phmmer
             can be evoked by typing `phmmer`.
+
+        Substitution matrix (-x, --substitution_matrix)
+            Residue alignment probabilities will be determined from the
+            specified substitution matrix. Supported substitution matrices
+            include: BLOSUM45, BLOSUM50, BLOSUM62, BLOSUM80, BLOSUM90,
+            PAM30, PAM70, PAM120, and PAM240.
 
         CPU (-c, --cpu) 
             Number of CPU workers for multithreading during sequence search.
@@ -171,7 +181,9 @@ def create_parser() -> ArgumentParser:
         
         orthohmm_working_res
             Various intermediate results files that help OrthoHMM start analyses
-            from an intermediate step in the analysis
+            from an intermediate step in the analysis. This includes outputs
+            from phmmer searches, initial edges inputted to MCL, and the 
+            output from MCL clustering.
         """  # noqa
         ),
     )
@@ -181,6 +193,17 @@ def create_parser() -> ArgumentParser:
         "--output_directory",
         help=SUPPRESS,
         metavar="output_directory"
+    )
+
+    substitution_matrix_choices = [step.value for step in StartStep]
+    optional.add_argument(
+        "-x",
+        "--substitution_matrix",
+        type=str,
+        required=False,
+        help=SUPPRESS,
+        metavar="substitution_model",
+        choices=substitution_matrix_choices,
     )
 
     optional.add_argument(

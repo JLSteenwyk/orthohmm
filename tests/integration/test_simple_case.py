@@ -4,6 +4,7 @@ from pathlib import Path
 
 from orthohmm.orthohmm import execute
 
+from orthohmm.helpers import SubstitutionMatrix
 
 here = Path(__file__)
 
@@ -25,6 +26,7 @@ class TestSimpleCase(object):
             inflation_value=1.5,
             start=None,
             stop=None,
+            substitution_matrix=SubstitutionMatrix.blosum62,
         )
 
         execute(**kwargs)

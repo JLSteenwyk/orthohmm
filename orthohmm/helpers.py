@@ -23,6 +23,18 @@ class StartStep(Enum):
     search_res = "search_res"
 
 
+class SubstitutionMatrix(Enum):
+    blosum45 = "BLOSUM45"
+    blosum50 = "BLOSUM50"
+    blosum62 = "BLOSUM62"
+    blosum80 = "BLOSUM80"
+    blosum90 = "BLOSUM90"
+    pam30 = "PAM30"
+    pam70 = "PAM70"
+    pam120 = "PAM120"
+    pam240 = "PAM240"
+
+
 def generate_phmmer_cmds(
     files: List[str],
     phmmer: str,
@@ -30,14 +42,15 @@ def generate_phmmer_cmds(
     fasta_directory: str,
     cpu: int,
     stop: str,
+    substitution_matrix: SubstitutionMatrix,
 ):
     pairwise_combos = list(itertools.product(files, repeat=2))
     phmmer_cmds = []
     for combo in pairwise_combos:
         if stop == "prepare":
-            phmmer_cmds.append(f"{phmmer} --noali --notextw --cpu {cpu} --tblout {output_directory}/orthohmm_working_res/{combo[0]}_2_{combo[1]}.phmmerout.txt {fasta_directory}/{combo[0]} {fasta_directory}/{combo[1]}")
+            phmmer_cmds.append(f"{phmmer} --mx {substitution_matrix.value} --noali --notextw --cpu {cpu} --tblout {output_directory}/orthohmm_working_res/{combo[0]}_2_{combo[1]}.phmmerout.txt {fasta_directory}/{combo[0]} {fasta_directory}/{combo[1]}")
         else:
-            phmmer_cmds.append(f"{phmmer} --noali --notextw --tblout {output_directory}/orthohmm_working_res/{combo[0]}_2_{combo[1]}.phmmerout.txt {fasta_directory}/{combo[0]} {fasta_directory}/{combo[1]}")
+            phmmer_cmds.append(f"{phmmer} --mx {substitution_matrix.value} --noali --notextw --tblout {output_directory}/orthohmm_working_res/{combo[0]}_2_{combo[1]}.phmmerout.txt {fasta_directory}/{combo[0]} {fasta_directory}/{combo[1]}")
 
     return phmmer_cmds
 

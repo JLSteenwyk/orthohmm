@@ -1,4 +1,3 @@
-import itertools
 import multiprocessing
 import subprocess
 from typing import List
