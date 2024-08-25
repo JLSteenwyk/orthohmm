@@ -11,9 +11,9 @@ ENSDARP00000129655   -          ENSCAFP00000017344   -                  0 3406.2
 # Program:         phmmer
 # Version:         3.3.1 (Jul 2020)
 # Pipeline mode:   SEARCH
-# Query file:      /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Canis_familiaris.CanFam3.1.pep.all.fa
-# Target file:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Danio_rerio.GRCz11.pep.all.fa
-# Option settings: phmmer --tblout /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//orthohmm_working_res/Canis_familiaris.CanFam3.1.pep.all.fa_2_Danio_rerio.GRCz11.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Canis_familiaris.CanFam3.1.pep.all.fa /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Danio_rerio.GRCz11.pep.all.fa 
+# Query file:      ./tests/samples//Canis_familiaris.CanFam3.1.pep.all.fa
+# Target file:     ./tests/samples//Danio_rerio.GRCz11.pep.all.fa
+# Option settings: phmmer --tblout ./tests/samples//orthohmm_working_res/Canis_familiaris.CanFam3.1.pep.all.fa_2_Danio_rerio.GRCz11.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 ./tests/samples//Canis_familiaris.CanFam3.1.pep.all.fa ./tests/samples//Danio_rerio.GRCz11.pep.all.fa 
 # Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
-# Date:            Fri Aug 23 14:08:44 2024
+# Date:            Sun Aug 25 08:57:21 2024
 # [ok]

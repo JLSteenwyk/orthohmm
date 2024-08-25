@@ -196,7 +196,7 @@ def create_parser() -> ArgumentParser:
         metavar="output_directory"
     )
 
-    substitution_matrix_choices = [step.value for step in SubstitutionMatrix]
+    substitution_matrix_choices = [matrix.value for matrix in SubstitutionMatrix]
     optional.add_argument(
         "-x",
         "--substitution_matrix",
