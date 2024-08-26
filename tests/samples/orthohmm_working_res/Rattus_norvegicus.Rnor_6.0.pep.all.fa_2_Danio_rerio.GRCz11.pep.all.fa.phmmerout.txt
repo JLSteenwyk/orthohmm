@@ -13,9 +13,9 @@ ENSDARP00000149121   -          ENSRNOP00000016871   -           1.9e-103  333.1
 # Program:         phmmer
 # Version:         3.3.1 (Jul 2020)
 # Pipeline mode:   SEARCH
-# Query file:      ./tests/samples//Rattus_norvegicus.Rnor_6.0.pep.all.fa
-# Target file:     ./tests/samples//Danio_rerio.GRCz11.pep.all.fa
-# Option settings: phmmer --tblout ./tests/samples//orthohmm_working_res/Rattus_norvegicus.Rnor_6.0.pep.all.fa_2_Danio_rerio.GRCz11.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 ./tests/samples//Rattus_norvegicus.Rnor_6.0.pep.all.fa ./tests/samples//Danio_rerio.GRCz11.pep.all.fa 
+# Query file:      tests/samples//Rattus_norvegicus.Rnor_6.0.pep.all.fa
+# Target file:     tests/samples//Danio_rerio.GRCz11.pep.all.fa
+# Option settings: phmmer --tblout tests/samples//orthohmm_working_res/Rattus_norvegicus.Rnor_6.0.pep.all.fa_2_Danio_rerio.GRCz11.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 tests/samples//Rattus_norvegicus.Rnor_6.0.pep.all.fa tests/samples//Danio_rerio.GRCz11.pep.all.fa 
 # Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
-# Date:            Sun Aug 25 08:57:23 2024
+# Date:            Mon Aug 26 08:38:18 2024
 # [ok]

@@ -7,9 +7,9 @@ WBGene00013724.1     -          ENSP00000340836      -              1e-68  218.0
 # Program:         phmmer
 # Version:         3.3.1 (Jul 2020)
 # Pipeline mode:   SEARCH
-# Query file:      ./tests/samples//Homo_sapiens.GRCh38.pep.all.fa
-# Target file:     ./tests/samples//Caenorhabditis_elegans.WBcel235.pep.all.fa
-# Option settings: phmmer --tblout ./tests/samples//orthohmm_working_res/Homo_sapiens.GRCh38.pep.all.fa_2_Caenorhabditis_elegans.WBcel235.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 ./tests/samples//Homo_sapiens.GRCh38.pep.all.fa ./tests/samples//Caenorhabditis_elegans.WBcel235.pep.all.fa 
+# Query file:      tests/samples//Homo_sapiens.GRCh38.pep.all.fa
+# Target file:     tests/samples//Caenorhabditis_elegans.WBcel235.pep.all.fa
+# Option settings: phmmer --tblout tests/samples//orthohmm_working_res/Homo_sapiens.GRCh38.pep.all.fa_2_Caenorhabditis_elegans.WBcel235.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 tests/samples//Homo_sapiens.GRCh38.pep.all.fa tests/samples//Caenorhabditis_elegans.WBcel235.pep.all.fa 
 # Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
-# Date:            Sun Aug 25 08:57:23 2024
+# Date:            Mon Aug 26 08:38:16 2024
 # [ok]
