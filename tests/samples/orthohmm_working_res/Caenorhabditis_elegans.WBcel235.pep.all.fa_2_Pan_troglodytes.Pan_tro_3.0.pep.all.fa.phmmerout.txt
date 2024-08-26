@@ -7,9 +7,9 @@ ENSPTRP00000079818   -          WBGene00013724.1     -            4.7e-68  216.9
 # Program:         phmmer
 # Version:         3.3.1 (Jul 2020)
 # Pipeline mode:   SEARCH
-# Query file:      ./tests/samples//Caenorhabditis_elegans.WBcel235.pep.all.fa
-# Target file:     ./tests/samples//Pan_troglodytes.Pan_tro_3.0.pep.all.fa
-# Option settings: phmmer --tblout ./tests/samples//orthohmm_working_res/Caenorhabditis_elegans.WBcel235.pep.all.fa_2_Pan_troglodytes.Pan_tro_3.0.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 ./tests/samples//Caenorhabditis_elegans.WBcel235.pep.all.fa ./tests/samples//Pan_troglodytes.Pan_tro_3.0.pep.all.fa 
+# Query file:      tests/samples//Caenorhabditis_elegans.WBcel235.pep.all.fa
+# Target file:     tests/samples//Pan_troglodytes.Pan_tro_3.0.pep.all.fa
+# Option settings: phmmer --tblout tests/samples//orthohmm_working_res/Caenorhabditis_elegans.WBcel235.pep.all.fa_2_Pan_troglodytes.Pan_tro_3.0.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 tests/samples//Caenorhabditis_elegans.WBcel235.pep.all.fa tests/samples//Pan_troglodytes.Pan_tro_3.0.pep.all.fa 
 # Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
-# Date:            Sun Aug 25 08:57:23 2024
+# Date:            Mon Aug 26 08:38:17 2024
 # [ok]

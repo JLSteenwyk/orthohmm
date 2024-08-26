@@ -8,9 +8,9 @@ ENSMUSP00000058613   -          ENSPTRP00000007532   -                  0 5013.0
 # Program:         phmmer
 # Version:         3.3.1 (Jul 2020)
 # Pipeline mode:   SEARCH
-# Query file:      ./tests/samples//Pan_troglodytes.Pan_tro_3.0.pep.all.fa
-# Target file:     ./tests/samples//Mus_musculus.GRCm38.pep.all.fa
-# Option settings: phmmer --tblout ./tests/samples//orthohmm_working_res/Pan_troglodytes.Pan_tro_3.0.pep.all.fa_2_Mus_musculus.GRCm38.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 ./tests/samples//Pan_troglodytes.Pan_tro_3.0.pep.all.fa ./tests/samples//Mus_musculus.GRCm38.pep.all.fa 
+# Query file:      tests/samples//Pan_troglodytes.Pan_tro_3.0.pep.all.fa
+# Target file:     tests/samples//Mus_musculus.GRCm38.pep.all.fa
+# Option settings: phmmer --tblout tests/samples//orthohmm_working_res/Pan_troglodytes.Pan_tro_3.0.pep.all.fa_2_Mus_musculus.GRCm38.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 tests/samples//Pan_troglodytes.Pan_tro_3.0.pep.all.fa tests/samples//Mus_musculus.GRCm38.pep.all.fa 
 # Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
-# Date:            Sun Aug 25 08:57:22 2024
+# Date:            Mon Aug 26 08:38:09 2024
 # [ok]
