@@ -1,7 +1,9 @@
+import math
 import multiprocessing
 from multiprocessing.synchronize import Lock
 from multiprocessing.sharedctypes import Synchronized
 import subprocess
+import sys
 from typing import List
 
 
@@ -21,11 +23,12 @@ def update_progress(
     lock: Lock,
     completed_tasks: Synchronized,
     total_tasks: int,
-) -> None:
+) -> None:    
     with lock:
         completed_tasks.value += 1
         progress = (completed_tasks.value / total_tasks) * 100
-        print(f"          {progress:.1f}% complete")
+        sys.stdout.write(f"\r          {math.floor(progress)}% complete")
+        sys.stdout.flush()
 
 
 def execute_phmmer_search(
@@ -37,7 +40,7 @@ def execute_phmmer_search(
     pool = multiprocessing.Pool(processes=cpu)
 
     # Create a counter and lock for tracking progress
-    completed_tasks = multiprocessing.Value('i', 0)
+    completed_tasks = multiprocessing.Value("i", 0)
     total_tasks = len(phmmer_cmds)
     lock = multiprocessing.Lock()
 
