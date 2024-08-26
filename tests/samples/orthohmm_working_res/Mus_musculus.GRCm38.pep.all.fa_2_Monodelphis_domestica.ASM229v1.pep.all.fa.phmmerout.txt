@@ -8,9 +8,9 @@ ENSMODP00000016287   -          ENSMUSP00000058613   -                  0 4649.4
 # Program:         phmmer
 # Version:         3.3.1 (Jul 2020)
 # Pipeline mode:   SEARCH
-# Query file:      tests/samples//Mus_musculus.GRCm38.pep.all.fa
-# Target file:     tests/samples//Monodelphis_domestica.ASM229v1.pep.all.fa
-# Option settings: phmmer --tblout tests/samples//orthohmm_working_res/Mus_musculus.GRCm38.pep.all.fa_2_Monodelphis_domestica.ASM229v1.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 tests/samples//Mus_musculus.GRCm38.pep.all.fa tests/samples//Monodelphis_domestica.ASM229v1.pep.all.fa 
+# Query file:      ./tests/samples//Mus_musculus.GRCm38.pep.all.fa
+# Target file:     ./tests/samples//Monodelphis_domestica.ASM229v1.pep.all.fa
+# Option settings: phmmer --tblout ./tests/samples//orthohmm_working_res/Mus_musculus.GRCm38.pep.all.fa_2_Monodelphis_domestica.ASM229v1.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 ./tests/samples//Mus_musculus.GRCm38.pep.all.fa ./tests/samples//Monodelphis_domestica.ASM229v1.pep.all.fa 
 # Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
-# Date:            Mon Aug 26 08:38:04 2024
+# Date:            Mon Aug 26 16:30:20 2024
 # [ok]

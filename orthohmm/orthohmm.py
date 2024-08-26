@@ -4,7 +4,7 @@ import logging
 import os
 import sys
 import time
-from typing import Union
+from typing import Union, List
 
 from .args_processing import process_args
 from .externals import (
@@ -52,7 +52,7 @@ def execute(
 
     # get FASTA files to identify orthologs from
     extensions = (".fa", ".faa", ".fas", ".fasta")
-    files = [file for file in os.listdir(fasta_directory) if os.path.splitext(file)[1].lower() in extensions]
+    files: List[str] = [file for file in os.listdir(fasta_directory) if os.path.splitext(file)[1].lower() in extensions]
 
     if start != StartStep.search_res:
         phmmer_cmds = generate_phmmer_cmds(
@@ -102,7 +102,7 @@ def execute(
             phmmer_cmds,
             cpu,
         )
-        print("          Completed!\n")
+        print("\r          Completed!   \n")
         current_step += 1
 
     print(f"Step {current_step}/{total_steps}: Determining edge thresholds")

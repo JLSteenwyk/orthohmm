@@ -8,9 +8,9 @@ ENSRNOP00000016871   -          ENSMODP00000002384   -           3.7e-145  468.8
 # Program:         phmmer
 # Version:         3.3.1 (Jul 2020)
 # Pipeline mode:   SEARCH
-# Query file:      tests/samples//Monodelphis_domestica.ASM229v1.pep.all.fa
-# Target file:     tests/samples//Rattus_norvegicus.Rnor_6.0.pep.all.fa
-# Option settings: phmmer --tblout tests/samples//orthohmm_working_res/Monodelphis_domestica.ASM229v1.pep.all.fa_2_Rattus_norvegicus.Rnor_6.0.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 tests/samples//Monodelphis_domestica.ASM229v1.pep.all.fa tests/samples//Rattus_norvegicus.Rnor_6.0.pep.all.fa 
+# Query file:      ./tests/samples//Monodelphis_domestica.ASM229v1.pep.all.fa
+# Target file:     ./tests/samples//Rattus_norvegicus.Rnor_6.0.pep.all.fa
+# Option settings: phmmer --tblout ./tests/samples//orthohmm_working_res/Monodelphis_domestica.ASM229v1.pep.all.fa_2_Rattus_norvegicus.Rnor_6.0.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 ./tests/samples//Monodelphis_domestica.ASM229v1.pep.all.fa ./tests/samples//Rattus_norvegicus.Rnor_6.0.pep.all.fa 
 # Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
-# Date:            Mon Aug 26 08:38:25 2024
+# Date:            Mon Aug 26 16:30:24 2024
 # [ok]
