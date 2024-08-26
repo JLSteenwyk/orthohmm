@@ -3,7 +3,7 @@ About
 
 ^^^^^
 
-**Ortho**\logy inference using **H**\idden **M**\narkov **M**\rodels (**OrthoHMM**) was developed as
+**Ortho**\logy inference using **H**\idden **M**\arkov **M**\odels (**OrthoHMM**) was developed as
 part of `Jacob L. Steenwyk <https://jlsteenwyk.github.io/>`_'s post-doctoral work. 
 
 Inferring orthology (that is, genes that have shared ancestry) is a major challenge in bioinformatics.
