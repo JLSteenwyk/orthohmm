@@ -112,7 +112,7 @@ def execute(
             fasta_directory,
             output_directory,
         )
-    print("          Completed!\n")
+    print("\r          Completed!   \n")
     current_step += 1
 
     print(f"Step {current_step}/{total_steps}: Identifying network edges")
@@ -123,7 +123,7 @@ def execute(
         pairwise_rbh_corr,
         reciprocal_best_hit_thresholds,
     )
-    print("          Completed!\n")
+    print("\r          Completed!   \n")
     current_step += 1
 
     print(f"Step {current_step}/{total_steps}: Conducting clustering")

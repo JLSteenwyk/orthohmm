@@ -1,5 +1,7 @@
 from enum import Enum
 import itertools
+import math
+import sys
 from typing import Tuple, List, Dict
 
 import numpy as np
@@ -221,6 +223,8 @@ def determine_edge_thresholds(
 
     gene_lengths = get_sequence_lengths(fasta_directory, files)
 
+    completed_tasks = 0
+    total_tasks = len(files)
     for file in files:
         file_pairs = [(file, i) for i in files]
 
@@ -258,6 +262,11 @@ def determine_edge_thresholds(
                     reciprocal_best_hit_thresholds
                 )
 
+        completed_tasks += 1
+        progress = (completed_tasks / total_tasks) * 100
+        sys.stdout.write(f"\r          {math.floor(progress)}% complete")
+        sys.stdout.flush()
+
     return gene_lengths, reciprocal_best_hit_thresholds, pairwise_rbh_corr
 
 
@@ -274,6 +283,8 @@ def determine_network_edges(
         str(row["name"]): int(row["length"]) for row in gene_lengths
     }
 
+    completed_tasks = 0
+    total_tasks = len(files)
     for file in files:
 
         file_pairs = [(file, i) for i in files]
@@ -308,6 +319,11 @@ def determine_network_edges(
                 # except reciprocal_best_hit_thresholds[hit["query_name"]] doesn't exist
                 except KeyError:
                     continue
+
+        completed_tasks += 1
+        progress = (completed_tasks / total_tasks) * 100
+        sys.stdout.write(f"\r          {math.floor(progress)}% complete")
+        sys.stdout.flush()
 
     with open(f"{output_directory}/orthohmm_working_res/orthohmm_edges.txt", "w") as file:
         for key, value in edges.items():
