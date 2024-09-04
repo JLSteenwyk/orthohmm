@@ -23,7 +23,7 @@ def update_progress(
     lock: Lock,
     completed_tasks: Synchronized,
     total_tasks: int,
-) -> None:    
+) -> None:
     with lock:
         completed_tasks.value += 1
         progress = (completed_tasks.value / total_tasks) * 100

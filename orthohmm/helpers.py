@@ -1,8 +1,16 @@
+from collections import defaultdict
 from enum import Enum
 import itertools
 import math
+import multiprocessing
+import os
 import sys
-from typing import Tuple, List, Dict
+from typing import (
+    Tuple,
+    List,
+    DefaultDict,
+    Dict,
+)
 
 import numpy as np
 
@@ -64,22 +72,24 @@ def get_sequence_lengths(
     # Get sequence lengths
     gene_lengths = []
     for file in files:
-        with open(f"{fasta_directory}/{file}", 'r') as fasta_file:
+        with open(os.path.join(fasta_directory, file), "r") as fasta_file:
             sequence_id = None
             sequence_length = 0
 
             for line in fasta_file:
                 line = line.strip()
-                if line.startswith('>'):
+                if line.startswith(">"):
                     if sequence_id:
-                        gene_lengths.append([file, sequence_id, sequence_length])
+                        gene_lengths.append(
+                            (file, sequence_id, sequence_length)
+                        )
                     sequence_id = line[1:]
                     sequence_length = 0
                 else:
                     sequence_length += len(line)
 
             if sequence_id:
-                gene_lengths.append([file, sequence_id, sequence_length])
+                gene_lengths.append((file, sequence_id, sequence_length))
     # make sure types are correct
     gene_lengths = [(str(row[0]), str(row[1]), int(row[2])) for row in gene_lengths]
     dtype = [("spp", "U50"), ("name", "U50"), ("length", int)]
@@ -91,21 +101,26 @@ def merge_with_gene_lengths(
     res: np.ndarray,
     gene_lengths: np.ndarray,
 ) -> np.ndarray:
-    res_merged = np.empty([len(res), 6], dtype=object)
-    for idx in range(len(res)):
-        temp = [None, None, None, None, None, None]
-        for spp_gene_length in gene_lengths:
-            if spp_gene_length[1] == res[idx][0]:
-                temp[0] = res[idx][0]
-                temp[1] = res[idx][1]
-                temp[2] = res[idx][2]
-                temp[3] = res[idx][3]
-                temp[4] = spp_gene_length[2]
+    # Create a dictionary to map gene names to their lengths
+    length_dict = {name: length for _, name, length in gene_lengths}
 
-            if spp_gene_length[1] == res[idx][1]:
-                temp[5] = spp_gene_length[2]
+    # Create the merged array with an additional 2 columns for the lengths
+    res_merged = np.empty((len(res), 6), dtype=object)
 
-            res_merged[idx] = temp
+    # Fill the result with res columns
+    res_merged[:, 0] = res["target_name"]
+    res_merged[:, 1] = res["query_name"]
+    res_merged[:, 2] = res["evalue"]
+    res_merged[:, 3] = res["score"]
+
+    # Lookup the lengths for target_name and query_name
+    res_merged[:, 4] = [
+        length_dict.get(name, None) for name in res["target_name"]
+    ]
+    res_merged[:, 5] = [
+        length_dict.get(name, None) for name in res["query_name"]
+    ]
+
     return res_merged
 
 
@@ -123,7 +138,13 @@ def read_and_filter_phmmer_output(
         ("score", float)
     ]
 
-    res = np.genfromtxt(res_path, comments="#", dtype=dtype_res, usecols=[0, 2, 4, 5], encoding='utf-8')
+    res = np.genfromtxt(
+        res_path,
+        comments="#",
+        dtype=dtype_res,
+        usecols=[0, 2, 4, 5],
+        encoding="utf-8"
+    )
 
     res = res[res["evalue"] < 0.0001]
 
@@ -146,11 +167,12 @@ def correct_by_phylogenetic_distance(
         Dict[np.str_, np.float64],
         Dict[frozenset, np.float64],
 ]:
+    pair_set = frozenset(pair)
     # get rbh scores
     rbh_scores = []
     rbh_pairs_identified = 0
     for query, best_hit in best_hits_A_to_B.items():
-        target = best_hit['target']
+        target = best_hit["target"]
         # Check if the reciprocal hit is also the best hit
         if target in best_hits_B_to_A and best_hits_B_to_A[target]["target"] == query:
             score_between_rbh_pair = (
@@ -159,25 +181,28 @@ def correct_by_phylogenetic_distance(
             rbh_scores.append(score_between_rbh_pair)
             rbh_pairs_identified += 1
 
-    if frozenset(pair) not in pairwise_rbh_corr:
-        pairwise_rbh_corr[frozenset(pair)] = np.mean(rbh_scores)
+    mean_rbh_scores = np.mean(rbh_scores) if rbh_scores else 0
+
+    if pair_set not in pairwise_rbh_corr:
+        pairwise_rbh_corr[pair_set] = np.mean(rbh_scores)
     else:
-        pairwise_rbh_corr[frozenset(pair)] = (pairwise_rbh_corr[frozenset(pair)] + np.mean(rbh_scores)) / 2
+        pairwise_rbh_corr[pair_set] = (pairwise_rbh_corr[pair_set] + mean_rbh_scores) / 2
 
     # Phylogenetic correction
-    best_hit_scores_A_to_B = {key: value["score"] / pairwise_rbh_corr[frozenset(pair)] for key, value in best_hits_A_to_B.items()}
-    best_hit_scores_B_to_A = {key: value["score"] / pairwise_rbh_corr[frozenset(pair)] for key, value in best_hits_B_to_A.items()}
+    correction_factor = pairwise_rbh_corr[pair_set]
+    best_hit_scores_A_to_B = {key: value["score"] / correction_factor for key, value in best_hits_A_to_B.items()}
+    best_hit_scores_B_to_A = {key: value["score"] / correction_factor for key, value in best_hits_B_to_A.items()}
 
     return best_hit_scores_A_to_B, best_hit_scores_B_to_A, pairwise_rbh_corr
 
 
 def get_best_hits_and_scores(
     res_merged: np.ndarray
-) -> Dict[np.str_, Dict[np.str_, np.float64]]:
+) -> DefaultDict[np.str_, Dict[np.str_, np.float64]]:
     """
     get dictionaries of scores for best hit and best hit
     """
-    best_hits = dict()
+    best_hits = defaultdict(dict)
 
     for record in res_merged:
         query = record[1]
@@ -196,78 +221,90 @@ def get_threshold_per_gene(
     best_hit_scores_B_to_A: Dict[np.str_, np.float64],
     reciprocal_best_hit_thresholds: Dict[np.str_, np.float64],
 ):
-    for geneA, geneB in best_hits_A_to_B.items():
-        geneB = geneB["target"]
-        if best_hits_B_to_A.get(geneB)["target"] == geneA:
-            score = ((best_hit_scores_A_to_B[geneA] + best_hit_scores_B_to_A[geneB]) / 2)
-            if geneA in reciprocal_best_hit_thresholds:
-                if score < reciprocal_best_hit_thresholds[geneA]:
-                    reciprocal_best_hit_thresholds[geneA] = score
-            else:
-                reciprocal_best_hit_thresholds[geneA] = score
+    for gene_A, data_A in best_hits_A_to_B.items():
+        gene_B = data_A["target"]
+        data_B = best_hits_B_to_A.get(gene_B)
+        if data_B is not None and data_B["target"] == gene_A:
+            score = (best_hit_scores_A_to_B[gene_A] + best_hit_scores_B_to_A[gene_B]) / 2
+
+            current_threshold = reciprocal_best_hit_thresholds.get(gene_A)
+
+            if current_threshold is None or score < current_threshold:
+                reciprocal_best_hit_thresholds[gene_A] = score
 
     return reciprocal_best_hit_thresholds
+
+
+def process_pair_edge_thresholds(pair, output_directory, gene_lengths):
+    fwd_res = read_and_filter_phmmer_output(pair[0], pair[1], output_directory)
+    rev_res = read_and_filter_phmmer_output(pair[1], pair[0], output_directory)
+
+    fwd_res_merged = merge_with_gene_lengths(fwd_res, gene_lengths)
+    rev_res_merged = merge_with_gene_lengths(rev_res, gene_lengths)
+
+    fwd_res_merged = normalize_by_gene_length(fwd_res_merged)
+    rev_res_merged = normalize_by_gene_length(rev_res_merged)
+
+    best_hits_A_to_B = get_best_hits_and_scores(fwd_res_merged)
+    best_hits_B_to_A = get_best_hits_and_scores(rev_res_merged)
+
+    best_hit_scores_A_to_B, best_hit_scores_B_to_A, pairwise_rbh_corr = \
+        correct_by_phylogenetic_distance(
+            best_hits_A_to_B,
+            best_hits_B_to_A,
+            pair,
+            {}
+        )
+
+    reciprocal_best_hit_thresholds = \
+        get_threshold_per_gene(
+            best_hits_A_to_B, best_hits_B_to_A,
+            best_hit_scores_A_to_B, best_hit_scores_B_to_A,
+            {}
+        )
+
+    return reciprocal_best_hit_thresholds, pairwise_rbh_corr
 
 
 def determine_edge_thresholds(
     files: List[str],
     fasta_directory: str,
     output_directory: str,
-) -> Tuple[
-        np.ndarray,
-        Dict[np.str_, np.float64],
-        Dict[frozenset, np.float64],
-]:
-    pairwise_rbh_corr = dict()
-    reciprocal_best_hit_thresholds = dict()
-
+    cpu: int,
+):
     gene_lengths = get_sequence_lengths(fasta_directory, files)
 
-    completed_tasks = 0
-    total_tasks = len(files)
-    for file in files:
-        file_pairs = [(file, i) for i in files]
+    file_pairs = [(file1, file2) for file1 in files for file2 in files]
 
-        for pair in file_pairs:
-            fwd_res = read_and_filter_phmmer_output(
-                pair[0], pair[1],
-                output_directory
-            )
-            rev_res = read_and_filter_phmmer_output(
-                pair[1], pair[0],
-                output_directory
-            )
+    with multiprocessing.Pool(processes=cpu) as pool:
+        results = pool.starmap(
+            process_pair_edge_thresholds, [
+                (pair, output_directory, gene_lengths) for pair in file_pairs
+            ]
+        )
 
-            fwd_res_merged = merge_with_gene_lengths(fwd_res, gene_lengths)
-            rev_res_merged = merge_with_gene_lengths(rev_res, gene_lengths)
+    # Initialize containers for the final results
+    final_reciprocal_thresholds = {}
+    final_pairwise_corr = {}
 
-            fwd_res_merged = normalize_by_gene_length(fwd_res_merged)
-            rev_res_merged = normalize_by_gene_length(rev_res_merged)
-
-            best_hits_A_to_B = get_best_hits_and_scores(fwd_res_merged)
-            best_hits_B_to_A = get_best_hits_and_scores(rev_res_merged)
-
-            best_hit_scores_A_to_B, best_hit_scores_B_to_A, pairwise_rbh_corr = \
-                correct_by_phylogenetic_distance(
-                    best_hits_A_to_B,
-                    best_hits_B_to_A,
-                    pair,
-                    pairwise_rbh_corr
+    # Aggregate results from multiprocessing
+    for thresholds, pairwise_corr in results:
+        for key, value in thresholds.items():
+            if key in final_reciprocal_thresholds:
+                final_reciprocal_thresholds[key] = min(
+                    final_reciprocal_thresholds[key], value
                 )
+            else:
+                final_reciprocal_thresholds[key] = value
+        for key, value in pairwise_corr.items():
+            if key in final_pairwise_corr:
+                final_pairwise_corr[key] = (
+                    final_pairwise_corr[key] + value
+                ) / 2
+            else:
+                final_pairwise_corr[key] = value
 
-            reciprocal_best_hit_thresholds = \
-                get_threshold_per_gene(
-                    best_hits_A_to_B, best_hits_B_to_A,
-                    best_hit_scores_A_to_B, best_hit_scores_B_to_A,
-                    reciprocal_best_hit_thresholds
-                )
-
-        completed_tasks += 1
-        progress = (completed_tasks / total_tasks) * 100
-        sys.stdout.write(f"\r          {math.floor(progress)}% complete")
-        sys.stdout.flush()
-
-    return gene_lengths, reciprocal_best_hit_thresholds, pairwise_rbh_corr
+    return gene_lengths, final_reciprocal_thresholds, final_pairwise_corr
 
 
 def determine_network_edges(
@@ -300,7 +337,7 @@ def determine_network_edges(
                 target_length = gene_lengths[hit["target_name"]]
 
                 norm_score = (
-                    hit['score'] / (query_length + target_length)
+                    hit["score"] / (query_length + target_length)
                 ) / pairwise_rbh_corr[frozenset(pair)]
 
                 try:
@@ -362,15 +399,15 @@ def get_all_fasta_entries(
                 line = line.strip()
                 if line.startswith(">"):
                     if header:
-                        fasta_file_entries[header] = ''.join(sequence)
-                    header = line[1:]  # Remove the '>' character
+                        fasta_file_entries[header] = "".join(sequence)
+                    header = line[1:]  # Remove the ">" character
                     sequence = []
                 else:
                     sequence.append(line)
 
             # Don't forget to add the last entry to the dictionary
             if header:
-                fasta_file_entries[header] = ''.join(sequence)
+                fasta_file_entries[header] = "".join(sequence)
 
         entries[fasta_file] = fasta_file_entries
 
