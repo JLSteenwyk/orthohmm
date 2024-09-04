@@ -111,6 +111,7 @@ def execute(
             files,
             fasta_directory,
             output_directory,
+            cpu,
         )
     print("\r          Completed!   \n")
     current_step += 1
