@@ -8,9 +8,9 @@ ENSCINP00000024362   -          ENSTNIP00000017394   -           4.9e-284  933.2
 # Program:         phmmer
 # Version:         3.3.1 (Jul 2020)
 # Pipeline mode:   SEARCH
-# Query file:      /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Tetraodon_nigroviridis.TETRAODON8.pep.all.fa
-# Target file:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Ciona_intestinalis.KH.pep.all.fa
-# Option settings: phmmer --tblout /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//orthohmm_working_res/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa_2_Ciona_intestinalis.KH.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Tetraodon_nigroviridis.TETRAODON8.pep.all.fa /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Ciona_intestinalis.KH.pep.all.fa 
+# Query file:      ./tests/samples//Tetraodon_nigroviridis.TETRAODON8.pep.all.fa
+# Target file:     ./tests/samples//Ciona_intestinalis.KH.pep.all.fa
+# Option settings: phmmer --tblout ./tests/samples//orthohmm_working_res/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa_2_Ciona_intestinalis.KH.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 ./tests/samples//Tetraodon_nigroviridis.TETRAODON8.pep.all.fa ./tests/samples//Ciona_intestinalis.KH.pep.all.fa 
 # Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
-# Date:            Thu Sep  5 10:45:43 2024
+# Date:            Thu Sep  5 11:16:09 2024
 # [ok]

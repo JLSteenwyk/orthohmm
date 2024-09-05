@@ -51,8 +51,8 @@ def create_parser() -> ArgumentParser:
         "required argument",
         description=textwrap.dedent(
             """\
-        <fasta_directory>                           Directory of FASTA files ending in
-                                                    .fa, .faa, .fas, or .fasta
+        <input_directory>                           Directory of FASTA files ending in
+                                                    .fa, .faa, .fas, .fasta, .pep, or .prot
                                                     (must be the first argument)
         """
         ),
@@ -105,6 +105,12 @@ def create_parser() -> ArgumentParser:
         -------------------------------------
         | Detailed explanation of arguments | 
         -------------------------------------
+        Input Directory (first argument)
+            A directory that contains FASTA files of protein sequences that
+            also have the extensions .fa, .faa, .fas, .fasta, .pep, or .prot.
+            OrthoHMM will automatically identify files with these extensions
+            and use them for analyses.
+            
         Output Directory (-o, --output_directory)
             Output directory name to store OrthoHMM results. This directory
             should already exist. By default, results files will be written

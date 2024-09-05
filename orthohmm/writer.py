@@ -21,6 +21,7 @@ def write_user_args(
     start: Union[StartStep, None],
     stop: Union[StopStep, None],
     substitution_matrix: SubstitutionMatrix,
+    evalue_threshold: float,
 ) -> None:
 
     try:
@@ -56,6 +57,7 @@ def write_user_args(
     Step to start analysis: {start_print}
     Step to stop analysis: {stop_print}
     Path to phmmer: {phmmer}
+    E-value threshold: {evalue_threshold}
     Substitution matrix: {substitution_matrix.value}
     Path to mcl: {mcl}
     Single-copy threshold: {single_copy_threshold}

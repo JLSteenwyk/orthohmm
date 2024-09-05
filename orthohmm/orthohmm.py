@@ -52,7 +52,7 @@ def execute(
         os.makedirs(f"{output_directory}/orthohmm_working_res/")
 
     # get FASTA files to identify orthologs from
-    extensions = (".fa", ".faa", ".fas", ".fasta")
+    extensions = (".fa", ".faa", ".fas", ".fasta", ".pep", ".prot")
     files: List[str] = [file for file in os.listdir(fasta_directory) if os.path.splitext(file)[1].lower() in extensions]
 
     if start != StartStep.search_res:
@@ -84,6 +84,7 @@ def execute(
         start,
         stop,
         substitution_matrix,
+        evalue_threshold,
     )
 
     # set current step and determine the total number of
@@ -98,7 +99,6 @@ def execute(
         total_steps -= 1
     else:
         print(f"Step {current_step}/{total_steps}: Conducting all-to-all comparisons.")
-        print("          This is typically the longest step.")
         execute_phmmer_search(
             phmmer_cmds,
             cpu,
@@ -115,7 +115,7 @@ def execute(
             cpu,
             evalue_threshold,
         )
-    print("\r          Completed!   \n")
+    print("\r          Completed!      \n")
     current_step += 1
 
     print(f"Step {current_step}/{total_steps}: Identifying network edges")

@@ -11,8 +11,7 @@ def run_bash_commands(
     command: List[str]
 ) -> None:
     subprocess.run(
-        command,
-        shell=True,
+        command.split(),
         check=True,
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL,
@@ -35,16 +34,12 @@ def execute_phmmer_search(
     phmmer_cmds: List[str],
     cpu: int,
 ) -> None:
-
-    # Create a pool of workers
     pool = multiprocessing.Pool(processes=cpu)
 
-    # Create a counter and lock for tracking progress
     completed_tasks = multiprocessing.Value("i", 0)
     total_tasks = len(phmmer_cmds)
     lock = multiprocessing.Lock()
 
-    # Apply async with a callback to update progress
     for command in phmmer_cmds:
         pool.apply_async(
             run_bash_commands,

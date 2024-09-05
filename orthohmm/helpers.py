@@ -247,8 +247,16 @@ def process_pair_edge_thresholds(
     Dict[str, np.float64],
     Dict[frozenset, np.float64]
 ]:
-    fwd_res = read_and_filter_phmmer_output(pair[0], pair[1], output_directory, evalue_threshold)
-    rev_res = read_and_filter_phmmer_output(pair[1], pair[0], output_directory, evalue_threshold)
+    fwd_res = read_and_filter_phmmer_output(
+        pair[0], pair[1],
+        output_directory,
+        evalue_threshold
+    )
+    rev_res = read_and_filter_phmmer_output(
+        pair[1], pair[0],
+        output_directory,
+        evalue_threshold
+    )
 
     fwd_res_merged = merge_with_gene_lengths(fwd_res, gene_lengths)
     rev_res_merged = merge_with_gene_lengths(rev_res, gene_lengths)
@@ -277,51 +285,115 @@ def process_pair_edge_thresholds(
     return reciprocal_best_hit_thresholds, pairwise_rbh_corr
 
 
+def update_progress(lock, completed_tasks, total_tasks):
+    with lock:
+        completed_tasks.value += 1
+        progress = (completed_tasks.value / total_tasks) * 100
+        sys.stdout.write(f"\r          {progress:.2f}% complete")
+        sys.stdout.flush()
+
+
 def determine_edge_thresholds(
     files: List[str],
     fasta_directory: str,
     output_directory: str,
     cpu: int,
     evalue_threshold: float,
-) -> Tuple[
-    np.ndarray,
-    Dict[str, np.float64],
-    Dict[frozenset, np.float64],
-]:
+) -> Tuple[np.ndarray, Dict[str, float], Dict[frozenset, float]]:
     gene_lengths = get_sequence_lengths(fasta_directory, files)
-
     file_pairs = [(file1, file2) for file1 in files for file2 in files]
 
-    with multiprocessing.Pool(processes=cpu) as pool:
-        results = pool.starmap(
-            process_pair_edge_thresholds, [
-                (pair, output_directory, gene_lengths, evalue_threshold)
-                for pair in file_pairs
-            ]
-        )
+    # Setting up the multiprocessing pool
+    pool = multiprocessing.Pool(processes=cpu)
+    completed_tasks = multiprocessing.Value("i", 0)
+    total_tasks = len(file_pairs)
+    lock = multiprocessing.Lock()
+
+    # Create a callback for updating progress
+    def callback(_):
+        update_progress(lock, completed_tasks, total_tasks)
+
+    # Map the function over the file pairs
+    results = [pool.apply_async(
+        process_pair_edge_thresholds,
+        args=(
+            pair,
+            output_directory,
+            gene_lengths,
+            evalue_threshold
+        ), callback=callback)
+        for pair in file_pairs
+    ]
+
+    # Close the pool and wait for the work to finish
+    pool.close()
+    pool.join()
 
     # Initialize containers for the final results
     final_reciprocal_thresholds = {}
     final_pairwise_corr = {}
 
     # Aggregate results from multiprocessing
-    for thresholds, pairwise_corr in results:
+    for res in results:
+        thresholds, pairwise_corr = res.get()  # Retrieve the result from each async call
         for key, value in thresholds.items():
             if key in final_reciprocal_thresholds:
-                final_reciprocal_thresholds[key] = min(
-                    final_reciprocal_thresholds[key], value
-                )
+                final_reciprocal_thresholds[key] = min(final_reciprocal_thresholds[key], value)
             else:
                 final_reciprocal_thresholds[key] = value
         for key, value in pairwise_corr.items():
             if key in final_pairwise_corr:
-                final_pairwise_corr[key] = (
-                    final_pairwise_corr[key] + value
-                ) / 2
+                final_pairwise_corr[key] = (final_pairwise_corr[key] + value) / 2
             else:
                 final_pairwise_corr[key] = value
 
     return gene_lengths, final_reciprocal_thresholds, final_pairwise_corr
+
+# def determine_edge_thresholds(
+#     files: List[str],
+#     fasta_directory: str,
+#     output_directory: str,
+#     cpu: int,
+#     evalue_threshold: float,
+# ) -> Tuple[
+#     np.ndarray,
+#     Dict[str, np.float64],
+#     Dict[frozenset, np.float64],
+# ]:
+#     gene_lengths = get_sequence_lengths(fasta_directory, files)
+
+#     file_pairs = [(file1, file2) for file1 in files for file2 in files]
+
+#     with multiprocessing.Pool(processes=cpu) as pool:
+#         results = pool.starmap(
+#             process_pair_edge_thresholds, [
+#                 (pair, output_directory, gene_lengths, evalue_threshold)
+#                 for pair in file_pairs
+#             ]
+#         )
+
+#     # Initialize containers for the final results
+#     final_reciprocal_thresholds = {}
+#     final_pairwise_corr = {}
+
+#     # Aggregate results from multiprocessing
+#     for thresholds, pairwise_corr in results:
+#         for key, value in thresholds.items():
+#             if key in final_reciprocal_thresholds:
+#                 final_reciprocal_thresholds[key] = min(
+#                     final_reciprocal_thresholds[key], value
+#                 )
+#             else:
+#                 final_reciprocal_thresholds[key] = value
+#         for key, value in pairwise_corr.items():
+#             if key in final_pairwise_corr:
+#                 final_pairwise_corr[key] = (
+#                     final_pairwise_corr[key] + value
+#                 ) / 2
+#             else:
+#                 final_pairwise_corr[key] = value
+
+#     return gene_lengths, final_reciprocal_thresholds, final_pairwise_corr
 
 
 def determine_network_edges(

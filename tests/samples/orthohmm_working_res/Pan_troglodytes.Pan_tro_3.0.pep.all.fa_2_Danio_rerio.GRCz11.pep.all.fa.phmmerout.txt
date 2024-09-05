@@ -11,9 +11,9 @@ ENSDARP00000129655   -          ENSPTRP00000007532   -                  0 3436.8
 # Program:         phmmer
 # Version:         3.3.1 (Jul 2020)
 # Pipeline mode:   SEARCH
-# Query file:      /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Pan_troglodytes.Pan_tro_3.0.pep.all.fa
-# Target file:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Danio_rerio.GRCz11.pep.all.fa
-# Option settings: phmmer --tblout /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//orthohmm_working_res/Pan_troglodytes.Pan_tro_3.0.pep.all.fa_2_Danio_rerio.GRCz11.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Pan_troglodytes.Pan_tro_3.0.pep.all.fa /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Danio_rerio.GRCz11.pep.all.fa 
+# Query file:      ./tests/samples//Pan_troglodytes.Pan_tro_3.0.pep.all.fa
+# Target file:     ./tests/samples//Danio_rerio.GRCz11.pep.all.fa
+# Option settings: phmmer --tblout ./tests/samples//orthohmm_working_res/Pan_troglodytes.Pan_tro_3.0.pep.all.fa_2_Danio_rerio.GRCz11.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 ./tests/samples//Pan_troglodytes.Pan_tro_3.0.pep.all.fa ./tests/samples//Danio_rerio.GRCz11.pep.all.fa 
 # Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
-# Date:            Thu Sep  5 10:45:44 2024
+# Date:            Thu Sep  5 11:16:09 2024
 # [ok]
