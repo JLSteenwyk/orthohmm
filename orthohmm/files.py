@@ -1,9 +1,21 @@
+import glob
 import os
 from typing import (
     Dict, List, Tuple
 )
 
 import numpy as np
+
+
+def fetch_fasta_files(
+    fasta_directory: str
+) -> List[str]:
+    extensions = (".fa", ".faa", ".fas", ".fasta", ".pep", ".prot")
+    files = [
+        os.path.basename(f)
+        for ext in extensions for f in glob.glob(f"{fasta_directory}/*{ext}")
+    ]
+    return files
 
 
 def write_clusters_file(

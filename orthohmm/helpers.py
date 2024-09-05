@@ -3,6 +3,7 @@ from enum import Enum
 import itertools
 import math
 import multiprocessing
+from multiprocessing import Lock, Value
 import os
 import sys
 from typing import (
@@ -90,8 +91,9 @@ def get_sequence_lengths(
 
             if sequence_id:
                 gene_lengths.append((file, sequence_id, sequence_length))
-    # make sure types are correct
-    gene_lengths = [(str(row[0]), str(row[1]), int(row[2])) for row in gene_lengths]
+    gene_lengths = [
+        (str(row[0]), str(row[1]), int(row[2])) for row in gene_lengths
+    ]
     dtype = [("spp", "U50"), ("name", "U50"), ("length", int)]
 
     return np.array(gene_lengths, dtype=dtype)
@@ -101,19 +103,15 @@ def merge_with_gene_lengths(
     res: np.ndarray,
     gene_lengths: np.ndarray,
 ) -> np.ndarray:
-    # Create a dictionary to map gene names to their lengths
     length_dict = {name: length for _, name, length in gene_lengths}
 
-    # Create the merged array with an additional 2 columns for the lengths
     res_merged = np.empty((len(res), 6), dtype=object)
 
-    # Fill the result with res columns
     res_merged[:, 0] = res["target_name"]
     res_merged[:, 1] = res["query_name"]
     res_merged[:, 2] = res["evalue"]
     res_merged[:, 3] = res["score"]
 
-    # Lookup the lengths for target_name and query_name
     res_merged[:, 4] = [
         length_dict.get(name, None) for name in res["target_name"]
     ]
@@ -200,7 +198,8 @@ def correct_by_phylogenetic_distance(
 def get_best_hits_and_scores(
     res_merged: np.ndarray
 ) -> DefaultDict[
-    np.str_, Dict[np.str_, np.float64]
+    np.str_,
+    Dict[np.str_, np.float64],
 ]:
     """
     get dictionaries of scores for best hit and best hit
@@ -245,7 +244,7 @@ def process_pair_edge_thresholds(
     evalue_threshold: float,
 ) -> Tuple[
     Dict[str, np.float64],
-    Dict[frozenset, np.float64]
+    Dict[frozenset, np.float64],
 ]:
     fwd_res = read_and_filter_phmmer_output(
         pair[0], pair[1],
@@ -285,7 +284,11 @@ def process_pair_edge_thresholds(
     return reciprocal_best_hit_thresholds, pairwise_rbh_corr
 
 
-def update_progress(lock, completed_tasks, total_tasks):
+def update_progress(
+    lock: Lock,
+    completed_tasks: Value,
+    total_tasks: int,
+) -> None:
     with lock:
         completed_tasks.value += 1
         progress = (completed_tasks.value / total_tasks) * 100
@@ -299,11 +302,14 @@ def determine_edge_thresholds(
     output_directory: str,
     cpu: int,
     evalue_threshold: float,
-) -> Tuple[np.ndarray, Dict[str, float], Dict[frozenset, float]]:
+) -> Tuple[
+    np.ndarray,
+    Dict[str, float],
+    Dict[frozenset, float],
+]:
     gene_lengths = get_sequence_lengths(fasta_directory, files)
     file_pairs = [(file1, file2) for file1 in files for file2 in files]
 
-    # Setting up the multiprocessing pool
     pool = multiprocessing.Pool(processes=cpu)
     completed_tasks = multiprocessing.Value("i", 0)
     total_tasks = len(file_pairs)
@@ -311,7 +317,9 @@ def determine_edge_thresholds(
 
     # Create a callback for updating progress
     def callback(_):
-        update_progress(lock, completed_tasks, total_tasks)
+        update_progress(
+            lock, completed_tasks, total_tasks
+        )
 
     # Map the function over the file pairs
     results = [pool.apply_async(
@@ -325,17 +333,14 @@ def determine_edge_thresholds(
         for pair in file_pairs
     ]
 
-    # Close the pool and wait for the work to finish
     pool.close()
     pool.join()
 
-    # Initialize containers for the final results
     final_reciprocal_thresholds = {}
     final_pairwise_corr = {}
 
-    # Aggregate results from multiprocessing
     for res in results:
-        thresholds, pairwise_corr = res.get()  # Retrieve the result from each async call
+        thresholds, pairwise_corr = res.get()
         for key, value in thresholds.items():
             if key in final_reciprocal_thresholds:
                 final_reciprocal_thresholds[key] = min(final_reciprocal_thresholds[key], value)
@@ -348,52 +353,6 @@ def determine_edge_thresholds(
                 final_pairwise_corr[key] = value
 
     return gene_lengths, final_reciprocal_thresholds, final_pairwise_corr
-
-# def determine_edge_thresholds(
-#     files: List[str],
-#     fasta_directory: str,
-#     output_directory: str,
-#     cpu: int,
-#     evalue_threshold: float,
-# ) -> Tuple[
-#     np.ndarray,
-#     Dict[str, np.float64],
-#     Dict[frozenset, np.float64],
-# ]:
-#     gene_lengths = get_sequence_lengths(fasta_directory, files)
-
-#     file_pairs = [(file1, file2) for file1 in files for file2 in files]
-
-#     with multiprocessing.Pool(processes=cpu) as pool:
-#         results = pool.starmap(
-#             process_pair_edge_thresholds, [
-#                 (pair, output_directory, gene_lengths, evalue_threshold)
-#                 for pair in file_pairs
-#             ]
-#         )
-
-#     # Initialize containers for the final results
-#     final_reciprocal_thresholds = {}
-#     final_pairwise_corr = {}
-
-#     # Aggregate results from multiprocessing
-#     for thresholds, pairwise_corr in results:
-#         for key, value in thresholds.items():
-#             if key in final_reciprocal_thresholds:
-#                 final_reciprocal_thresholds[key] = min(
-#                     final_reciprocal_thresholds[key], value
-#                 )
-#             else:
-#                 final_reciprocal_thresholds[key] = value
-#         for key, value in pairwise_corr.items():
-#             if key in final_pairwise_corr:
-#                 final_pairwise_corr[key] = (
-#                     final_pairwise_corr[key] + value
-#                 ) / 2
-#             else:
-#                 final_pairwise_corr[key] = value
-
-#     return gene_lengths, final_reciprocal_thresholds, final_pairwise_corr
 
 
 def determine_network_edges(
@@ -464,7 +423,10 @@ def determine_network_edges(
 def get_singletons(
     gene_lengths: np.ndarray,
     clustering_res: List[List[str]],
-) -> Tuple[List[List[str]], List[List[str]]]:
+) -> Tuple[
+    List[List[str]],
+    List[List[str]],
+]:
     singletons = list(
         set(gene_lengths["name"]) - set([j for i in clustering_res for j in i])
     )
@@ -609,11 +571,11 @@ def generate_orthogroup_clusters_file(
 def generate_orthogroup_files(
     output_directory: str,
     gene_lengths: np.ndarray,
-    extensions: Tuple[str],
     og_cn: Dict[str, List[str]],
     ogs_dat: Dict[str, List[str]],
     single_copy_ogs: List[str],
 ) -> None:
+    extensions = (".fa", ".faa", ".fas", ".fasta", ".pep", ".prot")
     write_copy_number_file(output_directory, og_cn)
     write_file_of_single_copy_ortholog_names(output_directory, og_cn)
     write_fasta_files_for_all_ogs(output_directory, ogs_dat)

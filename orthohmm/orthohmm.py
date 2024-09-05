@@ -4,13 +4,14 @@ import logging
 import os
 import sys
 import time
-from typing import Union, List
+from typing import Union
 
 from .args_processing import process_args
 from .externals import (
     execute_mcl,
     execute_phmmer_search,
 )
+from .files import fetch_fasta_files
 from .helpers import (
     determine_edge_thresholds,
     determine_network_edges,
@@ -51,9 +52,7 @@ def execute(
     if not os.path.exists(f"{output_directory}/orthohmm_working_res/"):
         os.makedirs(f"{output_directory}/orthohmm_working_res/")
 
-    # get FASTA files to identify orthologs from
-    extensions = (".fa", ".faa", ".fas", ".fasta", ".pep", ".prot")
-    files: List[str] = [file for file in os.listdir(fasta_directory) if os.path.splitext(file)[1].lower() in extensions]
+    files = fetch_fasta_files(fasta_directory)
 
     if start != StartStep.search_res:
         phmmer_cmds = generate_phmmer_cmds(
@@ -156,7 +155,6 @@ def execute(
     generate_orthogroup_files(
         output_directory,
         gene_lengths,
-        extensions,
         og_cn,
         ogs_dat,
         single_copy_ogs,
