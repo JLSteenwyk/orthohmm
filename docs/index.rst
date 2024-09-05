@@ -23,7 +23,7 @@ These two lines represent the simpliest method to rapidly install and run OrthoH
 	# install
 	pip install orthohmm
 	# run
-	orthohmm input.fa
+	orthohmm <path_to_directory_of_FASTA_files>
 
 Below are more detailed instructions, including alternative installation methods.
 

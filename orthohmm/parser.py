@@ -72,6 +72,10 @@ def create_parser() -> ArgumentParser:
         -p, --phmmer <path>                         path to phmmer from HMMER suite
                                                     (default: phmmer)
 
+        -e, --evalue <float>                        e-value threshold to use for
+                                                    phmmer search results
+                                                    (default: 0.0001)
+                                                    
         -x, --substitution_matrix <subs. matrix>    substitution matrix to use for
                                                     residue probabilities
                                                     (default: BLOSUM62)
@@ -101,7 +105,7 @@ def create_parser() -> ArgumentParser:
         -------------------------------------
         | Detailed explanation of arguments | 
         -------------------------------------
-        Output directory (-o, --output_directory)
+        Output Directory (-o, --output_directory)
             Output directory name to store OrthoHMM results. This directory
             should already exist. By default, results files will be written
             to the same directory as the input directory of FASTA files.
@@ -111,7 +115,13 @@ def create_parser() -> ArgumentParser:
             is assumed to be in the PATH variable; in other words, phmmer
             can be evoked by typing `phmmer`.
 
-        Substitution matrix (-x, --substitution_matrix)
+        E-value Threshold (-e, --evalue)
+            E-value threshold to use when filtering phmmer results. E-value
+            thresholds are applied after searches are made. This is done so
+            that users can change the e-value threshold if they are using
+            the --start argument.
+
+        Substitution Matrix (-x, --substitution_matrix)
             Residue alignment probabilities will be determined from the
             specified substitution matrix. Supported substitution matrices
             include: BLOSUM45, BLOSUM50, BLOSUM62, BLOSUM80, BLOSUM90,
@@ -205,6 +215,15 @@ def create_parser() -> ArgumentParser:
         help=SUPPRESS,
         metavar="substitution_model",
         choices=substitution_matrix_choices,
+    )
+
+    optional.add_argument(
+        "-e",
+        "--evalue",
+        type=float,
+        required=False,
+        help=SUPPRESS,
+        metavar="e-value threshold",
     )
 
     optional.add_argument(

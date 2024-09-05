@@ -128,6 +128,7 @@ def read_and_filter_phmmer_output(
     taxon_a: str,
     taxon_b: str,
     output_directory: str,
+    evalue_threshold: float,
 ) -> np.ndarray:
     res_path = f"{output_directory}/orthohmm_working_res/{taxon_a}_2_{taxon_b}.phmmerout.txt"
 
@@ -146,7 +147,7 @@ def read_and_filter_phmmer_output(
         encoding="utf-8"
     )
 
-    res = res[res["evalue"] < 0.0001]
+    res = res[res["evalue"] < evalue_threshold]
 
     return res
 
@@ -235,9 +236,9 @@ def get_threshold_per_gene(
     return reciprocal_best_hit_thresholds
 
 
-def process_pair_edge_thresholds(pair, output_directory, gene_lengths):
-    fwd_res = read_and_filter_phmmer_output(pair[0], pair[1], output_directory)
-    rev_res = read_and_filter_phmmer_output(pair[1], pair[0], output_directory)
+def process_pair_edge_thresholds(pair, output_directory, gene_lengths, evalue_threshold):
+    fwd_res = read_and_filter_phmmer_output(pair[0], pair[1], output_directory, evalue_threshold)
+    rev_res = read_and_filter_phmmer_output(pair[1], pair[0], output_directory, evalue_threshold)
 
     fwd_res_merged = merge_with_gene_lengths(fwd_res, gene_lengths)
     rev_res_merged = merge_with_gene_lengths(rev_res, gene_lengths)
@@ -271,6 +272,7 @@ def determine_edge_thresholds(
     fasta_directory: str,
     output_directory: str,
     cpu: int,
+    evalue_threshold: float,
 ):
     gene_lengths = get_sequence_lengths(fasta_directory, files)
 
@@ -279,7 +281,7 @@ def determine_edge_thresholds(
     with multiprocessing.Pool(processes=cpu) as pool:
         results = pool.starmap(
             process_pair_edge_thresholds, [
-                (pair, output_directory, gene_lengths) for pair in file_pairs
+                (pair, output_directory, gene_lengths, evalue_threshold) for pair in file_pairs
             ]
         )
 
@@ -313,6 +315,7 @@ def determine_network_edges(
     gene_lengths: np.ndarray,
     pairwise_rbh_corr: Dict[frozenset, np.float64],
     reciprocal_best_hit_thresholds: Dict[np.str_, np.float64],
+    evalue_threshold: float,
 ) -> Dict[frozenset, np.float64]:
     edges = dict()
 
@@ -329,7 +332,8 @@ def determine_network_edges(
         for pair in file_pairs:
             res = read_and_filter_phmmer_output(
                 pair[0], pair[1],
-                output_directory
+                output_directory,
+                evalue_threshold
             )
 
             for hit in res:

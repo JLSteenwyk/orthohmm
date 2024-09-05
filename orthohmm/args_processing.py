@@ -74,6 +74,8 @@ def process_args(args) -> dict:
 
     substitution_matrix = SubstitutionMatrix(args.substitution_matrix) if args.substitution_matrix else SubstitutionMatrix.blosum62
 
+    evalue_threshold = args.evalue or 0.0001
+
     return dict(
         fasta_directory=fasta_directory,
         output_directory=output_directory,
@@ -85,4 +87,5 @@ def process_args(args) -> dict:
         start=start,
         stop=stop,
         substitution_matrix=substitution_matrix,
+        evalue_threshold=evalue_threshold,
     )
