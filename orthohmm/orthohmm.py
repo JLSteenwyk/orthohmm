@@ -49,8 +49,8 @@ def execute(
     start_time = time.time()
 
     # make working dir
-    if not os.path.exists(f"{output_directory}/orthohmm_working_res/"):
-        os.makedirs(f"{output_directory}/orthohmm_working_res/")
+    working_dir = f"{output_directory}/orthohmm_working_res/"
+    os.makedirs(working_dir, exist_ok=True)
 
     files = fetch_fasta_files(fasta_directory)
 
@@ -102,7 +102,7 @@ def execute(
             phmmer_cmds,
             cpu,
         )
-        print("\r          Completed!   \n")
+        print("\r          Completed!      \n")
         current_step += 1
 
     print(f"Step {current_step}/{total_steps}: Determining edge thresholds")
@@ -125,8 +125,9 @@ def execute(
         pairwise_rbh_corr,
         reciprocal_best_hit_thresholds,
         evalue_threshold,
+        cpu,
     )
-    print("\r          Completed!   \n")
+    print("\r          Completed!      \n")
     current_step += 1
 
     print(f"Step {current_step}/{total_steps}: Conducting clustering")
