@@ -25,7 +25,8 @@ def args():
         inflation_value=1.5,
         start=None,
         stop=None,
-        substitution_matrix=SubstitutionMatrix.blosum62
+        substitution_matrix=SubstitutionMatrix.blosum62,
+        evalue=0.0001,
     )
     return Namespace(**kwargs)
 
@@ -60,6 +61,11 @@ class TestArgsProcessing(object):
         args.inflation_value = None
         res = process_args(args)
         assert res["inflation_value"] == 1.5
+
+    def test_process_args_default_evalue_threshold(self, args):
+        args.evalue = None
+        res = process_args(args)
+        assert res["evalue_threshold"] == 0.0001
 
     def test_process_args_default_start(self, args):
         args.start = None
@@ -109,5 +115,6 @@ class TestArgsProcessing(object):
             "start",
             "stop",
             "substitution_matrix",
+            "evalue_threshold",
         ]
         assert sorted(res.keys()) == sorted(expected_keys)

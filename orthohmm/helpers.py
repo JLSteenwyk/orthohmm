@@ -236,7 +236,15 @@ def get_threshold_per_gene(
     return reciprocal_best_hit_thresholds
 
 
-def process_pair_edge_thresholds(pair, output_directory, gene_lengths, evalue_threshold):
+def process_pair_edge_thresholds(
+    pair: Tuple[str, str],
+    output_directory: str,
+    gene_lengths: np.ndarray,
+    evalue_threshold: float,
+) -> Tuple[
+    Dict[str, np.float64],
+    Dict[frozenset, np.float64]
+]:
     fwd_res = read_and_filter_phmmer_output(pair[0], pair[1], output_directory, evalue_threshold)
     rev_res = read_and_filter_phmmer_output(pair[1], pair[0], output_directory, evalue_threshold)
 
@@ -281,7 +289,8 @@ def determine_edge_thresholds(
     with multiprocessing.Pool(processes=cpu) as pool:
         results = pool.starmap(
             process_pair_edge_thresholds, [
-                (pair, output_directory, gene_lengths, evalue_threshold) for pair in file_pairs
+                (pair, output_directory, gene_lengths, evalue_threshold)
+                for pair in file_pairs
             ]
         )
 
