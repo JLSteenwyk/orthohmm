@@ -316,13 +316,6 @@ def determine_edge_thresholds(
     total_tasks = len(file_pairs)
     lock = multiprocessing.Lock()
 
-    # # Create a callback for updating progress
-    # def callback(_):
-    #     update_progress(
-    #         lock, completed_tasks, total_tasks
-    #     )
-
-    # Map the function over the file pairs
     results = [pool.apply_async(
         process_pair_edge_thresholds,
         args=(
@@ -448,71 +441,6 @@ def determine_network_edges(
             file.write(f"{key_str}\t{value}\n")
 
     return edges
-
-
-# def determine_network_edges(
-#     files: List[str],
-#     output_directory: str,
-#     gene_lengths: np.ndarray,
-#     pairwise_rbh_corr: Dict[frozenset, np.float64],
-#     reciprocal_best_hit_thresholds: Dict[np.str_, np.float64],
-#     evalue_threshold: float,
-# ) -> Dict[frozenset, np.float64]:
-#     edges = dict()
-
-#     gene_lengths = {
-#         str(row["name"]): int(row["length"]) for row in gene_lengths
-#     }
-
-#     completed_tasks = 0
-#     total_tasks = len(files)
-#     for file in files:
-
-#         file_pairs = [(file, i) for i in files]
-
-#         for pair in file_pairs:
-#             res = read_and_filter_phmmer_output(
-#                 pair[0], pair[1],
-#                 output_directory,
-#                 evalue_threshold
-#             )
-
-#             for hit in res:
-#                 query_length = gene_lengths[hit["query_name"]]
-#                 target_length = gene_lengths[hit["target_name"]]
-
-#                 norm_score = (
-#                     hit["score"] / (query_length + target_length)
-#                 ) / pairwise_rbh_corr[frozenset(pair)]
-
-#                 try:
-#                     if norm_score >= reciprocal_best_hit_thresholds[hit["query_name"]]:
-#                         genes = frozenset(
-#                             [hit["query_name"], hit["target_name"]]
-#                         )
-
-#                         if len(genes) == 2:
-#                             if genes in edges:
-#                                 if edges[genes] <= norm_score:
-#                                     edges[genes] = norm_score
-#                             else:
-#                                 edges[genes] = norm_score
-
-#                 # except reciprocal_best_hit_thresholds[hit["query_name"]] doesn't exist
-#                 except KeyError:
-#                     continue
-
-#         completed_tasks += 1
-#         progress = (completed_tasks / total_tasks) * 100
-#         sys.stdout.write(f"\r          {math.floor(progress)}% complete")
-#         sys.stdout.flush()
-
-#     with open(f"{output_directory}/orthohmm_working_res/orthohmm_edges.txt", "w") as file:
-#         for key, value in edges.items():
-#             key_str = "\t".join(map(str, key))
-#             file.write(f"{key_str}\t{value}\n")
-
-#     return edges
 
 
 def get_singletons(

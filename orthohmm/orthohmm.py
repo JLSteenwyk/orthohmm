@@ -49,8 +49,8 @@ def execute(
     start_time = time.time()
 
     # make working dir
-    if not os.path.exists(f"{output_directory}/orthohmm_working_res/"):
-        os.makedirs(f"{output_directory}/orthohmm_working_res/")
+    working_dir = f"{output_directory}/orthohmm_working_res/"
+    os.makedirs(working_dir, exist_ok=True)
 
     files = fetch_fasta_files(fasta_directory)
 

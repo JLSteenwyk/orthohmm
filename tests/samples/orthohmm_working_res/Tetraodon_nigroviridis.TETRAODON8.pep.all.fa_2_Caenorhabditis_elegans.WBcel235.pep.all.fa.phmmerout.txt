@@ -7,9 +7,9 @@ WBGene00013724.1     -          ENSTNIP00000019800   -            6.1e-66  209.0
 # Program:         phmmer
 # Version:         3.3.1 (Jul 2020)
 # Pipeline mode:   SEARCH
-# Query file:      /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Tetraodon_nigroviridis.TETRAODON8.pep.all.fa
-# Target file:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Caenorhabditis_elegans.WBcel235.pep.all.fa
-# Option settings: phmmer --tblout /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//orthohmm_working_res/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa_2_Caenorhabditis_elegans.WBcel235.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Tetraodon_nigroviridis.TETRAODON8.pep.all.fa /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Caenorhabditis_elegans.WBcel235.pep.all.fa 
+# Query file:      ./tests/samples//Tetraodon_nigroviridis.TETRAODON8.pep.all.fa
+# Target file:     ./tests/samples//Caenorhabditis_elegans.WBcel235.pep.all.fa
+# Option settings: phmmer --tblout ./tests/samples//orthohmm_working_res/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa_2_Caenorhabditis_elegans.WBcel235.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 ./tests/samples//Tetraodon_nigroviridis.TETRAODON8.pep.all.fa ./tests/samples//Caenorhabditis_elegans.WBcel235.pep.all.fa 
 # Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
-# Date:            Thu Sep  5 16:05:23 2024
+# Date:            Thu Sep  5 16:41:44 2024
 # [ok]
