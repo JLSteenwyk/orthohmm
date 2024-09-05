@@ -28,6 +28,7 @@ All OrthoHMM outputs have the prefix *orthohmm* so that they are easy to find.
 
 This remaining sections describe the various features and options of OrthoHMM.
 
+- `Input Directory`_
 - `Output Directory`_
 - Phmmer_
 - `E-value Threshold`
@@ -40,9 +41,25 @@ This remaining sections describe the various features and options of OrthoHMM.
 - `Start`_
 - `All Options`_
 
+.. _`Input Directory`:
+
 |
 
+Input Directory
+---------------
+A directory that contains FASTA files of protein sequences that
+also have the extensions .fa, .faa, .fas, .fasta, .pep, or .prot.
+OrthoHMM will automatically identify files with these extensions
+and use them for analyses. This directory must be the first argument.
+
+.. code-block:: shell
+
+	# specifying output directory
+	orthohmm <path_to_directory_of_FASTA_files>
+
 .. _`Output Directory`:
+
+|
 
 Output directory
 ----------------

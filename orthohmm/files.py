@@ -1,9 +1,21 @@
+import glob
 import os
 from typing import (
     Dict, List, Tuple
 )
 
 import numpy as np
+
+
+def fetch_fasta_files(
+    fasta_directory: str
+) -> List[str]:
+    extensions = (".fa", ".faa", ".fas", ".fasta", ".pep", ".prot")
+    files = [
+        os.path.basename(f)
+        for ext in extensions for f in glob.glob(f"{fasta_directory}/*{ext}")
+    ]
+    return files
 
 
 def write_clusters_file(
@@ -45,8 +57,9 @@ def write_fasta_files_for_all_ogs(
     output_directory: str,
     ogs_dat: Dict[str, List[str]],
 ) -> None:
-    if not os.path.isdir(f"{output_directory}/orthohmm_orthogroups"):
-        os.mkdir(f"{output_directory}/orthohmm_orthogroups")
+    output_dir = f"{output_directory}/orthohmm_orthogroups"
+    os.makedirs(output_dir, exist_ok=True)
+
     for og_id, fasta_dat in ogs_dat.items():
         with open(
             f"{output_directory}/orthohmm_orthogroups/{og_id}.fa", "w"
@@ -59,18 +72,26 @@ def write_fasta_files_for_single_copy_orthologs(
     ogs_dat: Dict[str, List[str]],
     gene_lengths: np.ndarray,
     single_copy_ogs: List[str],
-    extensions: Tuple,
+    extensions: Tuple
 ) -> None:
-    # write single-copy og files
-    if not os.path.isdir(f"{output_directory}/orthohmm_single_copy_orthogroups"):
-        os.mkdir(f"{output_directory}/orthohmm_single_copy_orthogroups")
+    output_dir = f"{output_directory}/orthohmm_single_copy_orthogroups"
+    os.makedirs(output_dir, exist_ok=True)
+
+    name_to_species = {row["name"]: row["spp"] for row in gene_lengths}
+
     for single_copy_og in single_copy_ogs:
-        for idx in range(len(ogs_dat[single_copy_og])):
-            if ogs_dat[single_copy_og][idx][0] == ">":
-                taxon_name = \
-                    gene_lengths[gene_lengths["name"] == ogs_dat[single_copy_og][idx][1:]]["spp"][0]
-                # remove extension
-                taxon_name = next((taxon_name[:-len(ext)] for ext in extensions if taxon_name.endswith(ext)), taxon_name)
-                ogs_dat[single_copy_og][idx] = f">{taxon_name}|{ogs_dat[single_copy_og][idx][1:]}"
-        with open(f"{output_directory}/orthohmm_single_copy_orthogroups/{single_copy_og}.fa", "w") as file:
-            file.write("\n".join(ogs_dat[single_copy_og]) + "\n")
+        updated_entries = []
+        for entry in ogs_dat[single_copy_og]:
+            if entry.startswith(">"):
+                gene_name = entry[1:]
+                # Find the species, handling the absence case
+                species = name_to_species.get(gene_name, "UnknownSpecies")
+                taxon_name = next((species[:-len(ext)] for ext in extensions if species.endswith(ext)), species)
+                new_header = f">{taxon_name}|{gene_name}"
+                updated_entries.append(new_header)
+            else:
+                updated_entries.append(entry)
+
+        filepath = os.path.join(output_dir, f"{single_copy_og}.fa")
+        with open(filepath, "w") as file:
+            file.write("\n".join(updated_entries) + "\n")
