@@ -53,7 +53,7 @@ def generate_phmmer_cmds(
     cpu: int,
     stop: str,
     substitution_matrix: SubstitutionMatrix,
-):
+) -> List[str]:
     pairwise_combos = list(itertools.product(files, repeat=2))
     phmmer_cmds = []
     for combo in pairwise_combos:
@@ -164,9 +164,9 @@ def correct_by_phylogenetic_distance(
     pair: Tuple[str, str],
     pairwise_rbh_corr: Dict[frozenset, np.float64],
 ) -> Tuple[
-        Dict[np.str_, np.float64],
-        Dict[np.str_, np.float64],
-        Dict[frozenset, np.float64],
+    Dict[np.str_, np.float64],
+    Dict[np.str_, np.float64],
+    Dict[frozenset, np.float64],
 ]:
     pair_set = frozenset(pair)
     # get rbh scores
@@ -199,7 +199,9 @@ def correct_by_phylogenetic_distance(
 
 def get_best_hits_and_scores(
     res_merged: np.ndarray
-) -> DefaultDict[np.str_, Dict[np.str_, np.float64]]:
+) -> DefaultDict[
+    np.str_, Dict[np.str_, np.float64]
+]:
     """
     get dictionaries of scores for best hit and best hit
     """
@@ -221,7 +223,7 @@ def get_threshold_per_gene(
     best_hit_scores_A_to_B: Dict[np.str_, np.float64],
     best_hit_scores_B_to_A: Dict[np.str_, np.float64],
     reciprocal_best_hit_thresholds: Dict[np.str_, np.float64],
-):
+) -> Dict[str, np.float64]:
     for gene_A, data_A in best_hits_A_to_B.items():
         gene_B = data_A["target"]
         data_B = best_hits_B_to_A.get(gene_B)
@@ -281,7 +283,11 @@ def determine_edge_thresholds(
     output_directory: str,
     cpu: int,
     evalue_threshold: float,
-):
+) -> Tuple[
+    np.ndarray,
+    Dict[str, np.float64],
+    Dict[frozenset, np.float64],
+]:
     gene_lengths = get_sequence_lengths(fasta_directory, files)
 
     file_pairs = [(file1, file2) for file1 in files for file2 in files]
