@@ -45,8 +45,9 @@ def write_fasta_files_for_all_ogs(
     output_directory: str,
     ogs_dat: Dict[str, List[str]],
 ) -> None:
-    if not os.path.isdir(f"{output_directory}/orthohmm_orthogroups"):
-        os.mkdir(f"{output_directory}/orthohmm_orthogroups")
+    output_dir = f"{output_directory}/orthohmm_orthogroups"
+    os.makedirs(output_dir, exist_ok=True)
+
     for og_id, fasta_dat in ogs_dat.items():
         with open(
             f"{output_directory}/orthohmm_orthogroups/{og_id}.fa", "w"
@@ -66,7 +67,6 @@ def write_fasta_files_for_single_copy_orthologs(
 
     name_to_species = {row["name"]: row["spp"] for row in gene_lengths}
 
-    # Process each single-copy ortholog group
     for single_copy_og in single_copy_ogs:
         updated_entries = []
         for entry in ogs_dat[single_copy_og]:
@@ -74,15 +74,12 @@ def write_fasta_files_for_single_copy_orthologs(
                 gene_name = entry[1:]
                 # Find the species, handling the absence case
                 species = name_to_species.get(gene_name, "UnknownSpecies")
-                # Remove extension, if present
                 taxon_name = next((species[:-len(ext)] for ext in extensions if species.endswith(ext)), species)
-                # Create the new header with adjusted species name
                 new_header = f">{taxon_name}|{gene_name}"
                 updated_entries.append(new_header)
             else:
                 updated_entries.append(entry)
 
-        # Write to file
         filepath = os.path.join(output_dir, f"{single_copy_og}.fa")
         with open(filepath, "w") as file:
             file.write("\n".join(updated_entries) + "\n")
