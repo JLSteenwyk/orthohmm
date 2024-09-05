@@ -3,7 +3,6 @@ from enum import Enum
 import itertools
 import math
 import multiprocessing
-from multiprocessing import Lock, Value
 import os
 import sys
 from typing import (
@@ -276,8 +275,10 @@ def process_pair_edge_thresholds(
 
     reciprocal_best_hit_thresholds = \
         get_threshold_per_gene(
-            best_hits_A_to_B, best_hits_B_to_A,
-            best_hit_scores_A_to_B, best_hit_scores_B_to_A,
+            best_hits_A_to_B,
+            best_hits_B_to_A,
+            best_hit_scores_A_to_B,
+            best_hit_scores_B_to_A,
             {}
         )
 
@@ -285,8 +286,8 @@ def process_pair_edge_thresholds(
 
 
 def update_progress(
-    lock: Lock,
-    completed_tasks: Value,
+    lock,
+    completed_tasks,
     total_tasks: int,
 ) -> None:
     with lock:
