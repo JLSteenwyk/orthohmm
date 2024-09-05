@@ -28,20 +28,21 @@ All OrthoHMM outputs have the prefix *orthohmm* so that they are easy to find.
 
 This remaining sections describe the various features and options of OrthoHMM.
 
-- `Output directory`_
+- `Output Directory`_
 - Phmmer_
-- `Substitution matrix`_
+- `E-value Threshold`
+- `Substitution Matrix`_
 - CPU_
-- `Single-copy Threshold`_
+- `Single-Copy Threshold`_
 - MCL_
 - `Inflation Value`_
 - `Stop`_
 - `Start`_
-- `All options`_
+- `All Options`_
 
 |
 
-.. _`Output directory`:
+.. _`Output Directory`:
 
 Output directory
 ----------------
@@ -71,9 +72,27 @@ can be evoked by typing `phmmer`.
 
 |
 
-.. _`Substitution matrix`:
+.. _`E-value Threshold`:
 
-Substitution matrix
+|
+
+E-value Threshold
+-----------------
+E-value threshold to use when filtering phmmer results. E-value
+thresholds are applied after searches are made. This is done so
+that users can change the e-value threshold if they are using
+the --start argument. The default is 0.0001.
+
+.. code-block:: shell
+
+	# specify e-value threshold
+	orthohmm <path_to_directory_of_FASTA_files> -e 0.0001
+
+|
+
+.. _`Substitution Matrix`:
+
+Substitution Matrix
 -------------------
 Residue alignment probabilities will be determined from the
 specified substitution matrix. Supported substitution matrices
@@ -102,9 +121,9 @@ By default, the number of CPUs available will be auto-detected.
 
 |
 
-.. _`Single-copy Threshold`:
+.. _`Single-Copy Threshold`:
 
-Single-copy Threshold
+Single-Copy Threshold
 ---------------------
 Taxon occupancy threshold when identifying single-copy orthologs.
 By default, the threshold is 50% taxon occupancy, which is specified
@@ -188,10 +207,10 @@ can only be applied to the results from the all-by-all search.
 |
 
 
-.. _`All options`:
+.. _`All Options`:
 
 All options
----------------------
+-----------
 
 
 +------------------------------+--------------------------------------------------------------------------------+

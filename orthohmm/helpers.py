@@ -53,7 +53,7 @@ def generate_phmmer_cmds(
     cpu: int,
     stop: str,
     substitution_matrix: SubstitutionMatrix,
-):
+) -> List[str]:
     pairwise_combos = list(itertools.product(files, repeat=2))
     phmmer_cmds = []
     for combo in pairwise_combos:
@@ -128,6 +128,7 @@ def read_and_filter_phmmer_output(
     taxon_a: str,
     taxon_b: str,
     output_directory: str,
+    evalue_threshold: float,
 ) -> np.ndarray:
     res_path = f"{output_directory}/orthohmm_working_res/{taxon_a}_2_{taxon_b}.phmmerout.txt"
 
@@ -146,7 +147,7 @@ def read_and_filter_phmmer_output(
         encoding="utf-8"
     )
 
-    res = res[res["evalue"] < 0.0001]
+    res = res[res["evalue"] < evalue_threshold]
 
     return res
 
@@ -163,9 +164,9 @@ def correct_by_phylogenetic_distance(
     pair: Tuple[str, str],
     pairwise_rbh_corr: Dict[frozenset, np.float64],
 ) -> Tuple[
-        Dict[np.str_, np.float64],
-        Dict[np.str_, np.float64],
-        Dict[frozenset, np.float64],
+    Dict[np.str_, np.float64],
+    Dict[np.str_, np.float64],
+    Dict[frozenset, np.float64],
 ]:
     pair_set = frozenset(pair)
     # get rbh scores
@@ -198,7 +199,9 @@ def correct_by_phylogenetic_distance(
 
 def get_best_hits_and_scores(
     res_merged: np.ndarray
-) -> DefaultDict[np.str_, Dict[np.str_, np.float64]]:
+) -> DefaultDict[
+    np.str_, Dict[np.str_, np.float64]
+]:
     """
     get dictionaries of scores for best hit and best hit
     """
@@ -220,7 +223,7 @@ def get_threshold_per_gene(
     best_hit_scores_A_to_B: Dict[np.str_, np.float64],
     best_hit_scores_B_to_A: Dict[np.str_, np.float64],
     reciprocal_best_hit_thresholds: Dict[np.str_, np.float64],
-):
+) -> Dict[str, np.float64]:
     for gene_A, data_A in best_hits_A_to_B.items():
         gene_B = data_A["target"]
         data_B = best_hits_B_to_A.get(gene_B)
@@ -235,9 +238,17 @@ def get_threshold_per_gene(
     return reciprocal_best_hit_thresholds
 
 
-def process_pair_edge_thresholds(pair, output_directory, gene_lengths):
-    fwd_res = read_and_filter_phmmer_output(pair[0], pair[1], output_directory)
-    rev_res = read_and_filter_phmmer_output(pair[1], pair[0], output_directory)
+def process_pair_edge_thresholds(
+    pair: Tuple[str, str],
+    output_directory: str,
+    gene_lengths: np.ndarray,
+    evalue_threshold: float,
+) -> Tuple[
+    Dict[str, np.float64],
+    Dict[frozenset, np.float64]
+]:
+    fwd_res = read_and_filter_phmmer_output(pair[0], pair[1], output_directory, evalue_threshold)
+    rev_res = read_and_filter_phmmer_output(pair[1], pair[0], output_directory, evalue_threshold)
 
     fwd_res_merged = merge_with_gene_lengths(fwd_res, gene_lengths)
     rev_res_merged = merge_with_gene_lengths(rev_res, gene_lengths)
@@ -271,7 +282,12 @@ def determine_edge_thresholds(
     fasta_directory: str,
     output_directory: str,
     cpu: int,
-):
+    evalue_threshold: float,
+) -> Tuple[
+    np.ndarray,
+    Dict[str, np.float64],
+    Dict[frozenset, np.float64],
+]:
     gene_lengths = get_sequence_lengths(fasta_directory, files)
 
     file_pairs = [(file1, file2) for file1 in files for file2 in files]
@@ -279,7 +295,8 @@ def determine_edge_thresholds(
     with multiprocessing.Pool(processes=cpu) as pool:
         results = pool.starmap(
             process_pair_edge_thresholds, [
-                (pair, output_directory, gene_lengths) for pair in file_pairs
+                (pair, output_directory, gene_lengths, evalue_threshold)
+                for pair in file_pairs
             ]
         )
 
@@ -313,6 +330,7 @@ def determine_network_edges(
     gene_lengths: np.ndarray,
     pairwise_rbh_corr: Dict[frozenset, np.float64],
     reciprocal_best_hit_thresholds: Dict[np.str_, np.float64],
+    evalue_threshold: float,
 ) -> Dict[frozenset, np.float64]:
     edges = dict()
 
@@ -329,7 +347,8 @@ def determine_network_edges(
         for pair in file_pairs:
             res = read_and_filter_phmmer_output(
                 pair[0], pair[1],
-                output_directory
+                output_directory,
+                evalue_threshold
             )
 
             for hit in res:

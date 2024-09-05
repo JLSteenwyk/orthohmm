@@ -27,6 +27,7 @@ class TestSimpleCase(object):
             start=None,
             stop=None,
             substitution_matrix=SubstitutionMatrix.blosum62,
+            evalue_threshold=0.0001,
         )
 
         execute(**kwargs)

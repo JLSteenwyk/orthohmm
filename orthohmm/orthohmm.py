@@ -41,6 +41,7 @@ def execute(
     start: Union[StartStep, None],
     stop: Union[StopStep, None],
     substitution_matrix: SubstitutionMatrix,
+    evalue_threshold: float,
     **kwargs,
 ) -> None:
     # for reporting runtime duration to user
@@ -112,6 +113,7 @@ def execute(
             fasta_directory,
             output_directory,
             cpu,
+            evalue_threshold,
         )
     print("\r          Completed!   \n")
     current_step += 1
@@ -123,6 +125,7 @@ def execute(
         gene_lengths,
         pairwise_rbh_corr,
         reciprocal_best_hit_thresholds,
+        evalue_threshold,
     )
     print("\r          Completed!   \n")
     current_step += 1
