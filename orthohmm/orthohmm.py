@@ -84,6 +84,7 @@ def execute(
         stop,
         substitution_matrix,
         evalue_threshold,
+        inflation_value,
     )
 
     # set current step and determine the total number of
