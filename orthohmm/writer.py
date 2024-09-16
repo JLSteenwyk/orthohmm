@@ -22,6 +22,7 @@ def write_user_args(
     stop: Union[StopStep, None],
     substitution_matrix: SubstitutionMatrix,
     evalue_threshold: float,
+    inflation_value: float,
 ) -> None:
 
     try:
@@ -60,6 +61,7 @@ def write_user_args(
     E-value threshold: {evalue_threshold}
     Substitution matrix: {substitution_matrix.value}
     Path to mcl: {mcl}
+    Inflation value: {inflation_value}
     Single-copy threshold: {single_copy_threshold}
     CPUs: {cpu}
 

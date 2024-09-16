@@ -83,7 +83,8 @@ def get_sequence_lengths(
                         gene_lengths.append(
                             (file, sequence_id, sequence_length)
                         )
-                    sequence_id = line[1:]
+                    # TODO: remove everything after first space and use only first field
+                    sequence_id = line[1:].split()[0]
                     sequence_length = 0
                 else:
                     sequence_length += len(line)
@@ -461,7 +462,7 @@ def get_singletons(
 
 def get_all_fasta_entries(
     fasta_directory: str,
-    files: List[str]
+    files: List[str],
 ) -> Dict[str, str]:
     entries = {}
     for fasta_file in files:
@@ -476,7 +477,7 @@ def get_all_fasta_entries(
                 if line.startswith(">"):
                     if header:
                         fasta_file_entries[header] = "".join(sequence)
-                    header = line[1:]  # Remove the ">" character
+                    header = line[1:].split()[0]  # Remove the ">" character
                     sequence = []
                 else:
                     sequence.append(line)
