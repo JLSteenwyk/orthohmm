@@ -10,7 +10,7 @@ ENSCINP00000010262   -          ENSRNOP00000016871   -            1.6e-74  237.6
 # Pipeline mode:   SEARCH
 # Query file:      ./tests/samples//Rattus_norvegicus.Rnor_6.0.pep.all.fa
 # Target file:     ./tests/samples//Ciona_intestinalis.KH.pep.all.fa
-# Option settings: phmmer --tblout ./tests/samples//orthohmm_working_res/Rattus_norvegicus.Rnor_6.0.pep.all.fa_2_Ciona_intestinalis.KH.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 ./tests/samples//Rattus_norvegicus.Rnor_6.0.pep.all.fa ./tests/samples//Ciona_intestinalis.KH.pep.all.fa 
+# Option settings: phmmer --tblout ./tests/samples//orthohmm_working_res/Rattus_norvegicus.Rnor_6.0.pep.all.fa_2_Ciona_intestinalis.KH.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 --cpu 8 ./tests/samples//Rattus_norvegicus.Rnor_6.0.pep.all.fa ./tests/samples//Ciona_intestinalis.KH.pep.all.fa 
 # Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
-# Date:            Thu Sep  5 16:41:46 2024
+# Date:            Fri Oct 25 13:19:05 2024
 # [ok]

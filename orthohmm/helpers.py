@@ -1,7 +1,6 @@
 from collections import defaultdict
 from enum import Enum
 import itertools
-import math
 import multiprocessing
 import os
 import sys
@@ -51,16 +50,12 @@ def generate_phmmer_cmds(
     output_directory: str,
     fasta_directory: str,
     cpu: int,
-    stop: str,
     substitution_matrix: SubstitutionMatrix,
 ) -> List[str]:
     pairwise_combos = list(itertools.product(files, repeat=2))
     phmmer_cmds = []
     for combo in pairwise_combos:
-        if stop == "prepare":
-            phmmer_cmds.append(f"{phmmer} --mx {substitution_matrix.value} --noali --notextw --cpu {cpu} --tblout {output_directory}/orthohmm_working_res/{combo[0]}_2_{combo[1]}.phmmerout.txt {fasta_directory}/{combo[0]} {fasta_directory}/{combo[1]}")
-        else:
-            phmmer_cmds.append(f"{phmmer} --mx {substitution_matrix.value} --noali --notextw --tblout {output_directory}/orthohmm_working_res/{combo[0]}_2_{combo[1]}.phmmerout.txt {fasta_directory}/{combo[0]} {fasta_directory}/{combo[1]}")
+        phmmer_cmds.append(f"{phmmer} --mx {substitution_matrix.value} --noali --notextw --cpu {cpu} --tblout {output_directory}/orthohmm_working_res/{combo[0]}_2_{combo[1]}.phmmerout.txt {fasta_directory}/{combo[0]} {fasta_directory}/{combo[1]}")
 
     return phmmer_cmds
 
@@ -69,9 +64,10 @@ def get_sequence_lengths(
     fasta_directory: str,
     files: List[str],
 ) -> np.ndarray:
-    # Get sequence lengths
-    gene_lengths = []
+    gene_lengths = list()
+
     for file in files:
+        ids = set()
         with open(os.path.join(fasta_directory, file), "r") as fasta_file:
             sequence_id = None
             sequence_length = 0
@@ -83,19 +79,19 @@ def get_sequence_lengths(
                         gene_lengths.append(
                             (file, sequence_id, sequence_length)
                         )
-                    # TODO: remove everything after first space and use only first field
                     sequence_id = line[1:].split()[0]
+                    if sequence_id in ids:
+                        print(f"{sequence_id} appears twice in file {file}. Please ensure all FASTA headers are unique within each file.")
+                        sys.exit(1)
+                    ids.add(sequence_id)
                     sequence_length = 0
                 else:
                     sequence_length += len(line)
 
             if sequence_id:
                 gene_lengths.append((file, sequence_id, sequence_length))
-    gene_lengths = [
-        (str(row[0]), str(row[1]), int(row[2])) for row in gene_lengths
-    ]
-    dtype = [("spp", "U50"), ("name", "U50"), ("length", int)]
 
+    dtype = [("spp", "U50"), ("name", "U50"), ("length", int)]
     return np.array(gene_lengths, dtype=dtype)
 
 

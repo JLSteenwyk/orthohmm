@@ -10,7 +10,7 @@ ENSMODP00000016287   -          ENSPTRP00000007532   -                  0 4745.8
 # Pipeline mode:   SEARCH
 # Query file:      ./tests/samples//Pan_troglodytes.Pan_tro_3.0.pep.all.fa
 # Target file:     ./tests/samples//Monodelphis_domestica.ASM229v1.pep.all.fa
-# Option settings: phmmer --tblout ./tests/samples//orthohmm_working_res/Pan_troglodytes.Pan_tro_3.0.pep.all.fa_2_Monodelphis_domestica.ASM229v1.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 ./tests/samples//Pan_troglodytes.Pan_tro_3.0.pep.all.fa ./tests/samples//Monodelphis_domestica.ASM229v1.pep.all.fa 
+# Option settings: phmmer --tblout ./tests/samples//orthohmm_working_res/Pan_troglodytes.Pan_tro_3.0.pep.all.fa_2_Monodelphis_domestica.ASM229v1.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 --cpu 8 ./tests/samples//Pan_troglodytes.Pan_tro_3.0.pep.all.fa ./tests/samples//Monodelphis_domestica.ASM229v1.pep.all.fa 
 # Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
-# Date:            Thu Sep  5 16:41:45 2024
+# Date:            Fri Oct 25 13:18:57 2024
 # [ok]

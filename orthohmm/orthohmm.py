@@ -61,7 +61,6 @@ def execute(
             output_directory,
             fasta_directory,
             cpu,
-            stop,
             substitution_matrix,
         )
 
@@ -101,7 +100,6 @@ def execute(
         print(f"Step {current_step}/{total_steps}: Conducting all-to-all comparisons.")
         execute_phmmer_search(
             phmmer_cmds,
-            cpu,
         )
         print("\r          Completed!      \n")
         current_step += 1
