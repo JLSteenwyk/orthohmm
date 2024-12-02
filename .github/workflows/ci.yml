@@ -107,6 +107,7 @@ jobs:
         run: |
           cd docs
           pipenv install
+          pipenv install sphnix
           pipenv run make html
           cd ..
       - name: Deploy
