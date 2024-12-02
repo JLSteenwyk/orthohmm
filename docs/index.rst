@@ -13,6 +13,7 @@ If you found OrthoHMM useful, please cite *MANUSCRIPT TITLE*. Steenwyk et al. 20
 .. _doiLink: https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001007
 .. |doiLink| replace:: 10.1371/journal.pbio.3001007
 
+|
 
 Quick Start
 -----------
@@ -26,6 +27,8 @@ These two lines represent the simpliest method to rapidly install and run OrthoH
 	orthohmm <path_to_directory_of_FASTA_files>
 
 Below are more detailed instructions, including alternative installation methods.
+
+|
 
 **1) Installation**
 
