@@ -31,7 +31,7 @@ This remaining sections describe the various features and options of OrthoHMM.
 - `Input Directory`_
 - `Output Directory`_
 - Phmmer_
-- `E-value Threshold`
+- `E-value Threshold`_
 - `Substitution Matrix`_
 - CPU_
 - `Single-Copy Threshold`_
@@ -86,8 +86,6 @@ can be evoked by typing `phmmer`.
 
 	# specify path to phmmer executable 
 	orthohmm <path_to_directory_of_FASTA_files> -p /path/to/phmmer
-
-|
 
 .. _`E-value Threshold`:
 

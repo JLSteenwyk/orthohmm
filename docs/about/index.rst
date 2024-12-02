@@ -34,7 +34,7 @@ and `Thomas J. Buida III <www.tjbiii.com>`_.
 
 |JLSteenwyk|
 
-|GoogleScholarSteenwyk| |GitHubSteenwyk| |TwitterSteenwyk| 
+|GoogleScholarSteenwyk| |GitHubSteenwyk| |BlueSkySteenwyk| |TwitterSteenwyk| 
 
 `Jacob L. Steenwyk <https://jlsteenwyk.github.io/>`_ is a Howard Hughes Medical Institute
 awardee of the Life Science Research Foundation at the University of California, Berkeley.
@@ -45,6 +45,10 @@ Find out more information at his `personal website <http://jlsteenwyk.github.io/
 
 .. |GoogleScholarSteenwyk| image:: ../_static/img/GoogleScholar.png
    :target: https://scholar.google.com/citations?user=VXV2j6gAAAAJ&hl=en
+   :width: 4.5%
+
+.. |BlueSkySteenwyk| image:: ../_static/img/Bluesky.png
+   :target: https://bsky.app/profile/jlsteenwyk.bsky.social
    :width: 4.5%
 
 .. |TwitterSteenwyk| image:: ../_static/img/Twitter.png
@@ -59,7 +63,7 @@ Find out more information at his `personal website <http://jlsteenwyk.github.io/
 
 |TJBuida|
 
-|GitHubBuida| |TwitterBuida|
+|GoogleScholarBuida| |GitHubBuida| |BlueSkyBuida| |TwitterBuida|
 
 `Thomas J. Buida III <http://tjbiii.com/>`_ is a senior software and data engineer at
 `Initial State <https://www.initialstate.com/>`_. 
@@ -69,6 +73,14 @@ Find out more information at his
 
 .. |TJBuida| image:: ../_static/img/Buida.jpeg  
    :width: 35%
+
+.. |GoogleScholarBuida| image:: ../_static/img/GoogleScholar.png
+   :target: https://scholar.google.com/citations?user=tXNWGFEAAAAJ&hl=en
+   :width: 4.5%
+
+.. |BlueSkyBuida| image:: ../_static/img/Bluesky.png
+   :target: https://bsky.app/profile/tjbiii.bsky.social
+   :width: 4.5%
 
 .. |TwitterBuida| image:: ../_static/img/Twitter.png
    :target: https://twitter.com/thomasbuida
@@ -99,3 +111,31 @@ Find out more information at her `laboratory’s website <https://kinglab.berkel
 .. |GoogleScholarKing| image:: ../_static/img/GoogleScholar.png
    :target: https://scholar.google.com/citations?hl=en&user=PDOSGdIAAAAJ
    :width: 4.5%
+
+|
+
+|ARokas|
+
+|GoogleScholarRokas| |TwitterRokas| 
+
+`Antonis Rokas <https://as.vanderbilt.edu/rokaslab/>`_ is the Cornelius Vanderbilt Chair in 
+Biological Sciences and Director of the `Evolutionary Studies Initiative 
+<https://www.vanderbilt.edu/evolution/>`_ at `Vanderbilt University <https://www.vanderbilt.edu/>`_.
+Research in his laboratory focuses on the study of the DNA record to gain insight into the patterns and 
+processes of evolution. Using a combination of computational and experimental approaches, his lab’s current
+research aims to understand the molecular foundations of the fungal lifestyle, the reconstruction of the
+tree of life, and the evolution of human pregnancy. Find out more information at his 
+`laboratory’s website <https://as.vanderbilt.edu/rokaslab/>`_.
+
+.. |ARokas| image:: ../_static/img/Rokas.jpeg
+   :width: 35%
+
+.. |GoogleScholarRokas| image:: ../_static/img/GoogleScholar.png
+   :target: https://scholar.google.com/citations?user=OvAV_eoAAAAJ&hl=en
+   :width: 4.5%
+
+.. |TwitterRokas| image:: ../_static/img/Twitter.png
+   :target: https://twitter.com/RokasLab
+   :width: 4.5%
+
+|
