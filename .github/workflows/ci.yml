@@ -101,6 +101,9 @@ jobs:
         uses: actions/setup-python@master
         with:
           python-version: 3.9
+      - name: Install dependencies
+        run: |
+          pip install requirements_docs.txt
       - name: Install pipenv
         uses: dschep/install-pipenv-action@v1
       - name: Build docs
