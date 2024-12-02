@@ -104,7 +104,7 @@ jobs:
       - name: Install dependencies
         run: |
           cd docs
-          pip install requirements_docs.txt
+          pip install -r requirements_docs.txt
           cd ..
       - name: Install pipenv
         uses: dschep/install-pipenv-action@v1
