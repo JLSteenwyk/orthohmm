@@ -103,7 +103,9 @@ jobs:
           python-version: 3.9
       - name: Install dependencies
         run: |
+          cd docs
           pip install requirements_docs.txt
+          cd ..
       - name: Install pipenv
         uses: dschep/install-pipenv-action@v1
       - name: Build docs
