@@ -41,9 +41,7 @@
 
 
 OrthoHMM infers gene orthology using Hidden Markov Models.<br /><br />
-If you found orthohmm useful, please cite *MANUSCRIPT TITLE*. Steenwyk et al. 2020, JOURNAL. doi: [DOI](https://jlsteenwyk.com/publication_pdfs/2020_Steenwyk_etal_PLOS_Biology.pdf).
-
-<br />
+If you found orthohmm useful, please cite *COMING SOON  *. Steenwyk et al. 2024, [JOURNAL]. doi: [DOI](https://jlsteenwyk.com/publication_pdfs/2020_Steenwyk_etal_PLOS_Biology.pdf).
 
 ---
 
