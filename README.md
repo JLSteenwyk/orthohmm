@@ -19,9 +19,8 @@
         <a href="https://github.com/jlsteenwyk/orthohmm/graphs/contributors" alt="Contributors">
             <img src="https://img.shields.io/github/contributors/jlsteenwyk/orthohmm">
         </a>
-        <a href="https://twitter.com/intent/follow?screen_name=jlsteenwyk" alt="Author Twitter">
-            <img src="https://img.shields.io/twitter/follow/jlsteenwyk?style=social&logo=twitter"
-                alt="follow on Twitter">
+        <a href="https://bsky.app/profile/jlsteenwyk.bsky.social" target="_blank" rel="noopener noreferrer">
+          <img src="https://img.shields.io/badge/Bluesky-0285FF?logo=bluesky&logoColor=fff">
         </a>
         <br />
         <a href="https://pepy.tech/badge/orthohmm">
@@ -41,7 +40,7 @@
 
 
 OrthoHMM infers gene orthology using Hidden Markov Models.<br /><br />
-If you found orthohmm useful, please cite *COMING SOON  *. Steenwyk et al. 2024, [JOURNAL]. doi: [DOI](https://jlsteenwyk.com/publication_pdfs/2020_Steenwyk_etal_PLOS_Biology.pdf).
+If you found orthohmm useful, please cite *COMING SOON*. Steenwyk et al. 2024, JOURNAL. doi: [DOI](https://jlsteenwyk.com/publication_pdfs/2020_Steenwyk_etal_PLOS_Biology.pdf).
 
 ---
 
@@ -52,6 +51,15 @@ This documentation covers downloading and installing OrthoHMM. Details about eac
 <br />
 
 **Quick Start**
+
+1\. Install external dependencies
+
+OrthoHMM has two external dependencies — [HMMER](http://hmmer.org/download.html) and [mcl](https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions) — that can't be installed using pip.
+Download and install these programs from their respective websites, which are linked in the previous sentence.
+
+<br>
+
+2\. Install OrthoHMM
 
 ```shell
 # install
@@ -64,7 +72,16 @@ orthohmm <path_to_directory_of_FASTA_files>
 
 **Installation**
 
-**If you are having trouble installing OrthoHMM, please contact the lead developer, Jacob L. Steenwyk, via [email](https://jlsteenwyk.com/contact.html) or [twitter](https://twitter.com/jlsteenwyk) to get help.**
+**If you are having trouble installing OrthoHMM, please contact the lead developer, Jacob L. Steenwyk, via [email](https://jlsteenwyk.com/contact.html) or [Bluesky](https://bsky.app/profile/jlsteenwyk.bsky.social) to get help.**
+
+1\. Install external dependencies
+
+OrthoHMM has two external dependencies — [HMMER](http://hmmer.org/download.html) and [mcl](https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions) — that can't be installed using pip.
+Download and install these programs from their respective websites, which are linked in the previous sentence.
+
+<br>
+
+2a\. Install OrthoHMM from pip
 
 To install using *pip*, we recommend building a virtual environment to avoid software dependency issues. To do so, execute the following commands:
 ```shell
@@ -84,6 +101,8 @@ deactivate
 ```
 
 <br />
+
+2b\. Install OrthoHMM from source
 
 Similarly, to install from source, we recommend using a virtual environment. To do so, use the following commands:
 ```shell
