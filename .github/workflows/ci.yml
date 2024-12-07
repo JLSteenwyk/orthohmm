@@ -101,7 +101,7 @@ jobs:
         uses: astral-sh/setup-uv@v4
         with:
           enable-cache: true
-          cache-dependency-glob: "uv.lock"
+          cache-dependency-glob: "docs/uv.lock"
       - name: Build docs
         run: |
           cd docs
