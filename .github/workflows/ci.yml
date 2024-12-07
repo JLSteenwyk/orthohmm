@@ -97,18 +97,17 @@ jobs:
         uses: actions/checkout@master
         with:
           persist-credentials: false
-      - name: Setup Python
-        uses: actions/setup-python@master
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
         with:
-          python-version: 3.9
-      - name: Install pipenv
-        uses: dschep/install-pipenv-action@v1
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
       - name: Build docs
         run: |
           cd docs
-          pipenv install
-          pipenv install sphnix
-          pipenv run make html
+          uv python install
+          uv sync --all-extras --dev
+          make html
           cd ..
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
