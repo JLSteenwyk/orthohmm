@@ -13,8 +13,8 @@
         <a href="https://github.com/JLSteenwyk/orthohmm/actions" alt="Build">
             <img src="https://img.shields.io/github/actions/workflow/status/JLSteenwyk/orthohmm/ci.yml?branch=main">
         </a>
-        <a href="https://codecov.io/gh/jlsteenwyk/orthohmm" alt="Coverage">
-          <img src="https://codecov.io/gh/jlsteenwyk/orthohmm/branch/master/graph/badge.svg?token=0J49I6441V">
+        <a href="https://codecov.io/gh/JLSteenwyk/orthohmm" >
+          <img src="https://codecov.io/gh/JLSteenwyk/orthohmm/graph/badge.svg?token=YEXCJN8D4E"/>
         </a>
         <a href="https://github.com/jlsteenwyk/orthohmm/graphs/contributors" alt="Contributors">
             <img src="https://img.shields.io/github/contributors/jlsteenwyk/orthohmm">
