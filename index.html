@@ -86,7 +86,13 @@
 </div>
 <section id="quick-start">
 <h1>Quick Start<a class="headerlink" href="#quick-start" title="Link to this heading"></a></h1>
-<p>These two lines represent the simpliest method to rapidly install and run OrthoHMM.</p>
+<p>1. Install external dependencies</p>
+<p>OrthoHMM has two external dependencies — [HMMER](<a class="reference external" href="http://hmmer.org/download.html">http://hmmer.org/download.html</a>) and [mcl](<a class="reference external" href="https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions">https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions</a>) — that can’t be installed using pip.
+Download and install these programs from their respective websites, which are linked in the previous sentence.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>2. Install OrthoHMM</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># install</span>
 pip<span class="w"> </span>install<span class="w"> </span>orthohmm
 <span class="c1"># run</span>
@@ -98,9 +104,12 @@ orthohmm<span class="w"> </span>&lt;path_to_directory_of_FASTA_files&gt;
 <div class="line"><br /></div>
 </div>
 <p><strong>1) Installation</strong></p>
-<p>To help ensure OrthoHMM can be installed using your favorite workflow, we have made OrthoHMM available from pip, source, and the anaconda cloud.</p>
-<p><strong>Install from pip</strong></p>
-<p>To install from pip, use the following commands:</p>
+<p><strong>If you are having trouble installing OrthoHMM, please contact the lead developer, Jacob L. Steenwyk, via [email](https://jlsteenwyk.com/contact.html) or [Bluesky](https://bsky.app/profile/jlsteenwyk.bsky.social) to get help.</strong></p>
+<p>1. Install external dependencies</p>
+<p>OrthoHMM has two external dependencies — [HMMER](<a class="reference external" href="http://hmmer.org/download.html">http://hmmer.org/download.html</a>) and [mcl](<a class="reference external" href="https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions">https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions</a>) — that can’t be installed using pip.
+Download and install these programs from their respective websites, which are linked in the previous sentence.</p>
+<p>2a. Install OrthoHMM from pip</p>
+<p>To install using <em>pip</em>, we recommend building a virtual environment to avoid software dependency issues. To do so, execute the following commands:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># create virtual environment</span>
 python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
 <span class="c1"># activate virtual environment</span>
@@ -131,7 +140,12 @@ make<span class="w"> </span>install
 deactivate
 </pre></div>
 </div>
-<p><strong>Note, the virtual environment must be activated to use orthohmm.</strong></p>
+<p>Note, the virtual environment must be activated to use orthohmm.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>2b. Install OrthoHMM from source</p>
+<p>Similarly, to install from source, we recommend using a virtual environment. To do so, use the following commands:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/JLSteenwyk/orthohmm.git
 <span class="nb">cd</span><span class="w"> </span>orthohmm/
 make<span class="w"> </span>install
