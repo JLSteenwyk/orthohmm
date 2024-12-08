@@ -63,7 +63,7 @@ Download and install these programs from their respective websites, which are li
 
 ```shell
 # install
-pip install orthohmm
+pip install orthohmm 
 # run
 orthohmm <path_to_directory_of_FASTA_files>
 ```
