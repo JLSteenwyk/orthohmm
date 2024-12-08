@@ -17,7 +17,14 @@ If you found OrthoHMM useful, please cite *MANUSCRIPT TITLE*. Steenwyk et al. 20
 
 Quick Start
 -----------
-These two lines represent the simpliest method to rapidly install and run OrthoHMM.
+1\. Install external dependencies
+
+OrthoHMM has two external dependencies — [HMMER](http://hmmer.org/download.html) and [mcl](https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions) — that can't be installed using pip.
+Download and install these programs from their respective websites, which are linked in the previous sentence.
+
+|
+
+2\. Install OrthoHMM
 
 .. code-block:: shell
 
@@ -32,11 +39,16 @@ Below are more detailed instructions, including alternative installation methods
 
 **1) Installation**
 
-To help ensure OrthoHMM can be installed using your favorite workflow, we have made OrthoHMM available from pip, source, and the anaconda cloud.
+**If you are having trouble installing OrthoHMM, please contact the lead developer, Jacob L. Steenwyk, via [email](https://jlsteenwyk.com/contact.html) or [Bluesky](https://bsky.app/profile/jlsteenwyk.bsky.social) to get help.**
 
-**Install from pip**
+1\. Install external dependencies
 
-To install from pip, use the following commands:
+OrthoHMM has two external dependencies — [HMMER](http://hmmer.org/download.html) and [mcl](https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions) — that can't be installed using pip.
+Download and install these programs from their respective websites, which are linked in the previous sentence.
+
+2a\. Install OrthoHMM from pip
+
+To install using *pip*, we recommend building a virtual environment to avoid software dependency issues. To do so, execute the following commands:
 
 .. code-block:: shell
 
@@ -74,7 +86,13 @@ To deactivate your virtual environment, use the following command:
 	# deactivate virtual environment
 	deactivate
 
-**Note, the virtual environment must be activated to use orthohmm.**
+Note, the virtual environment must be activated to use orthohmm.
+
+|
+
+2b\. Install OrthoHMM from source
+
+Similarly, to install from source, we recommend using a virtual environment. To do so, use the following commands:
 
 .. code-block:: shell
 
