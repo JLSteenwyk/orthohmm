@@ -1,0 +1,414 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced Usage &mdash; orthohmm  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b745eb55" />
+
+  
+    <link rel="shortcut icon" href="../_static/flavicon.png"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Performance Assessment" href="../performance_assessment/index.html" />
+    <link rel="prev" title="About" href="../about/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/logo_top_only.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">About</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Advanced Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#orthohmm-output">OrthoHMM output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Input Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Output directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">Phmmer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">E-value Threshold</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#substitution-matrix">Substitution Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cpu">CPU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#single-copy-threshold">Single-Copy Threshold</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mcl">MCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#inflation-value">Inflation Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stop">Stop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#start">Start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#all-options">All options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../performance_assessment/index.html">Performance Assessment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../change_log/index.html">Change log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other_software/index.html">Other software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../frequently_asked_questions/index.html">FAQ</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">orthohmm</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Advanced Usage</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="advanced-usage">
+<h1>Advanced Usage<a class="headerlink" href="#advanced-usage" title="Link to this heading"></a></h1>
+<hr class="docutils" />
+<section id="orthohmm-output">
+<h2>OrthoHMM output<a class="headerlink" href="#orthohmm-output" title="Link to this heading"></a></h2>
+<p>All OrthoHMM outputs have the prefix <em>orthohmm</em> so that they are easy to find.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>orthohmm_gene_count.txt</dt><dd><ul>
+<li><p>A gene count matrix per taxa for each orthogroup.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>orthohmm_orthogroups.txt</dt><dd><ul>
+<li><p>Genes present in each orthogroup.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>orthohmm_single_copy_orthogroups.txt</dt><dd><ul>
+<li><p>A single-column list of single-copy orthologs.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>orthohmm_orthogroups</dt><dd><ul>
+<li><p>A directory of FASTA files wherein each file is an orthogroup.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>orthohmm_single_copy_orthogroups</dt><dd><ul>
+<li><p>A directory of FASTA files wherein each file is a single-copy ortholog.</p></li>
+<li><p>Headers are modified to have taxon names come before the gene identifier.</p></li>
+<li><p>Taxon names are the file name excluding the extension.</p></li>
+<li><p>Taxon name and gene identifier are separated by a pipe symbol “|”.</p></li>
+<li><p>This aims to help streamline phylogenomic workflows wherein sequences will be concatenated downstream based on taxon names.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>orthohmm_working_res</dt><dd><ul>
+<li><p>A directory of intermediate files, such as all-by-all search results, network edges, and clusters inferred from network edges.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<hr class="docutils" />
+<p>This remaining sections describe the various features and options of OrthoHMM.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#input-directory">Input Directory</a></p></li>
+<li><p><a class="reference internal" href="#output-directory">Output Directory</a></p></li>
+<li><p><a class="reference internal" href="#phmmer">Phmmer</a></p></li>
+<li><p><a class="reference internal" href="#e-value-threshold">E-value Threshold</a></p></li>
+<li><p><a class="reference internal" href="#substitution-matrix">Substitution Matrix</a></p></li>
+<li><p><a class="reference internal" href="#cpu">CPU</a></p></li>
+<li><p><a class="reference internal" href="#single-copy-threshold">Single-Copy Threshold</a></p></li>
+<li><p><a class="reference internal" href="#mcl">MCL</a></p></li>
+<li><p><a class="reference internal" href="#inflation-value">Inflation Value</a></p></li>
+<li><p><a class="reference internal" href="#stop">Stop</a></p></li>
+<li><p><a class="reference internal" href="#start">Start</a></p></li>
+<li><p><a class="reference internal" href="#all-options">All Options</a></p></li>
+</ul>
+<div class="line-block" id="input-directory">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="id1">
+<h2>Input Directory<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p>A directory that contains FASTA files of protein sequences that
+also have the extensions .fa, .faa, .fas, .fasta, .pep, or .prot.
+OrthoHMM will automatically identify files with these extensions
+and use them for analyses. This directory must be the first argument.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># specifying output directory</span>
+orthohmm<span class="w"> </span>&lt;path_to_directory_of_FASTA_files&gt;
+</pre></div>
+</div>
+<div class="line-block" id="output-directory">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="id2">
+<h2>Output directory<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>Output directory name to store OrthoHMM results. This directory should already exist.
+By default, results files will be written to the same directory as the input
+directory of FASTA files. (-o, –output_directory)</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># specifying output directory</span>
+orthohmm<span class="w"> </span>&lt;path_to_directory_of_FASTA_files&gt;<span class="w"> </span>-o<span class="w"> </span>&lt;output_directory&gt;
+</pre></div>
+</div>
+<div class="line-block" id="phmmer">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="id3">
+<h2>Phmmer<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<p>Path to phmmer executable from HMMER suite. By default, phmmer
+is assumed to be in the PATH variable; in other words, phmmer
+can be evoked by typing <cite>phmmer</cite>.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># specify path to phmmer executable</span>
+orthohmm<span class="w"> </span>&lt;path_to_directory_of_FASTA_files&gt;<span class="w"> </span>-p<span class="w"> </span>/path/to/phmmer
+</pre></div>
+</div>
+<div class="line-block" id="e-value-threshold">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="id4">
+<h2>E-value Threshold<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<p>E-value threshold to use when filtering phmmer results. E-value
+thresholds are applied after searches are made. This is done so
+that users can change the e-value threshold if they are using
+the –start argument. The default is 0.0001.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># specify e-value threshold</span>
+orthohmm<span class="w"> </span>&lt;path_to_directory_of_FASTA_files&gt;<span class="w"> </span>-e<span class="w"> </span><span class="m">0</span>.0001
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="substitution-matrix">
+<span id="id5"></span><h2>Substitution Matrix<a class="headerlink" href="#substitution-matrix" title="Link to this heading"></a></h2>
+<p>Residue alignment probabilities will be determined from the
+specified substitution matrix. Supported substitution matrices
+include: BLOSUM45, BLOSUM50, BLOSUM62, BLOSUM80, BLOSUM90,
+PAM30, PAM70, PAM120, and PAM240. The default is BLOSUM62.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># specify using the BLOSUM80 substitution matrix</span>
+orthohmm<span class="w"> </span>&lt;path_to_directory_of_FASTA_files&gt;<span class="w"> </span>-x<span class="w"> </span>BLOSUM80
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="cpu">
+<span id="id6"></span><h2>CPU<a class="headerlink" href="#cpu" title="Link to this heading"></a></h2>
+<p>Number of CPU workers for multithreading during sequence search.
+This argument is used by phmmer during all-vs-all comparisons.
+By default, the number of CPUs available will be auto-detected.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># run orthohmm using 8 CPUs</span>
+orthohmm<span class="w"> </span>&lt;path_to_directory_of_FASTA_files&gt;<span class="w"> </span>-c<span class="w"> </span><span class="m">8</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="single-copy-threshold">
+<span id="id7"></span><h2>Single-Copy Threshold<a class="headerlink" href="#single-copy-threshold" title="Link to this heading"></a></h2>
+<p>Taxon occupancy threshold when identifying single-copy orthologs.
+By default, the threshold is 50% taxon occupancy, which is specified
+as a fraction - that is, 0.5.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># specify single-copy threshold as a fraction</span>
+orthohmm<span class="w"> </span>&lt;path_to_directory_of_FASTA_files&gt;<span class="w"> </span>-s<span class="w"> </span><span class="m">0</span>.5
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="mcl">
+<span id="id8"></span><h2>MCL<a class="headerlink" href="#mcl" title="Link to this heading"></a></h2>
+<p>Path to mcl executable from MCL software. By default, mcl
+is assumed to be in the PATH variable; in other words,
+mcl can be evoked by typing <cite>mcl</cite>.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># specify path to mcl executable</span>
+orthohmm<span class="w"> </span>&lt;path_to_directory_of_FASTA_files&gt;<span class="w"> </span>-m<span class="w"> </span>/path/to/mcl
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="inflation-value">
+<span id="id9"></span><h2>Inflation Value<a class="headerlink" href="#inflation-value" title="Link to this heading"></a></h2>
+<p>MCL inflation parameter for clustering genes into orthologous groups.
+Lower values are more permissive resulting in larger orthogroups.
+Higher values are stricter resulting in smaller orthogroups.
+The default value is 1.5.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># use an inflation value of 1.5 during mcl clustering</span>
+orthohmm<span class="w"> </span>&lt;path_to_directory_of_FASTA_files&gt;<span class="w"> </span>-i<span class="w"> </span><span class="m">1</span>.5
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="stop">
+<span id="id10"></span><h2>Stop<a class="headerlink" href="#stop" title="Link to this heading"></a></h2>
+<p>Similar to other ortholog calling algorithms, different steps in the
+OrthoHMM workflow can be cpu or memory intensive. Thus, users may
+want to stop OrthoHMM at certain steps, to faciltiate more
+practical resource allocation. There are three choices for when to
+stop the analysis: prepare, infer, and write.</p>
+<ul class="simple">
+<li><p>prepare: Stop after preparing input files for the all-by-all search</p></li>
+<li><p>infer: Stop after inferring the orthogroups</p></li>
+<li><p>write: Stop after writing sequence files for the orthogroups. Currently, this is synonymous with not specifying a step to stop the analysis at.</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># stop orthohmm after preparing the all-by-all search commands</span>
+orthohmm<span class="w"> </span>&lt;path_to_directory_of_FASTA_files&gt;<span class="w"> </span>--stop<span class="w"> </span>prepare
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="start">
+<span id="id11"></span><h2>Start<a class="headerlink" href="#start" title="Link to this heading"></a></h2>
+<p>Start analysis from a specific intermediate step. Currently, this
+can only be applied to the results from the all-by-all search.</p>
+<ul class="simple">
+<li><p>search_res: Start analysis from all-by-all search results.</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># start orthohmm from after the all-by-all searches are complete</span>
+orthohmm<span class="w"> </span>&lt;path_to_directory_of_FASTA_files&gt;<span class="w"> </span>--start<span class="w"> </span>search_res
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="all-options">
+<span id="id12"></span><h2>All options<a class="headerlink" href="#all-options" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Option</p></th>
+<th class="head"><p>Usage and meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-h/--help</p></td>
+<td><p>Print help message</p></td>
+</tr>
+<tr class="row-odd"><td><p>-v/--version</p></td>
+<td><p>Print software version</p></td>
+</tr>
+<tr class="row-even"><td><p>-o/--output_directory</p></td>
+<td><p>Output directory name. Default: same directory as directory of FASTA files</p></td>
+</tr>
+<tr class="row-odd"><td><p>-p/--phhmer</p></td>
+<td><p>Path to phmmer from HMMER suite. Default: phmmer</p></td>
+</tr>
+<tr class="row-even"><td><p>-x/--substitution_matrix</p></td>
+<td><p>Specify substitution matrix to use for generating the HMMs. Default: BLOSUM62</p></td>
+</tr>
+<tr class="row-odd"><td><p>-c/--cpu</p></td>
+<td><p>Number of parallel CPU workers to use for multithreading. Default: auto detect</p></td>
+</tr>
+<tr class="row-even"><td><p>-s/--single_copy_threshold</p></td>
+<td><p>Taxon occupancy threshold for single-copy orthologs. Default 0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>-m/--mcl</p></td>
+<td><p>Path to mcl software. Default: mcl</p></td>
+</tr>
+<tr class="row-even"><td><p>-i/--inflation_value</p></td>
+<td><p>MCL inflation parameter. Default: 1.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>--stop</p></td>
+<td><p>Stop OrthoHMM run at a specific step. Default: None</p></td>
+</tr>
+<tr class="row-even"><td><p>--start</p></td>
+<td><p>Start OrthoHMM run at a specific step. Default: None</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../about/index.html" class="btn btn-neutral float-left" title="About" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../performance_assessment/index.html" class="btn btn-neutral float-right" title="Performance Assessment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024 Jacob L. Steenwyk.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104875636-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-104875636-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

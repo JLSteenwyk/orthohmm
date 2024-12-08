@@ -1,0 +1,235 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quick Start &mdash; orthohmm  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=b745eb55" />
+
+  
+    <link rel="shortcut icon" href="_static/flavicon.png"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="About" href="about/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#">
+            
+              <img src="_static/logo_top_only.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="about/index.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced/index.html">Advanced Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performance_assessment/index.html">Performance Assessment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="change_log/index.html">Change log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_software/index.html">Other software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="frequently_asked_questions/index.html">FAQ</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">orthohmm</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Quick Start</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <a class="reference external image-reference" href="https://jlsteenwyk.com/orthohmm"><img alt="_images/logo_condensed.png" class="align-center" src="_images/logo_condensed.png" style="width: 55%;" />
+</a>
+<hr class="docutils" />
+<p>OrthoHMM using high sensitivity and specificity Hidden Markov Models for orthology inference.</p>
+<p>If you found OrthoHMM useful, please cite <em>MANUSCRIPT TITLE</em>. Steenwyk et al. 2020, JOURNAL. doi: <a class="reference external" href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001007">10.1371/journal.pbio.3001007</a>.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="quick-start">
+<h1>Quick Start<a class="headerlink" href="#quick-start" title="Link to this heading"></a></h1>
+<p>These two lines represent the simpliest method to rapidly install and run OrthoHMM.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># install</span>
+pip<span class="w"> </span>install<span class="w"> </span>orthohmm
+<span class="c1"># run</span>
+orthohmm<span class="w"> </span>&lt;path_to_directory_of_FASTA_files&gt;
+</pre></div>
+</div>
+<p>Below are more detailed instructions, including alternative installation methods.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>1) Installation</strong></p>
+<p>To help ensure OrthoHMM can be installed using your favorite workflow, we have made OrthoHMM available from pip, source, and the anaconda cloud.</p>
+<p><strong>Install from pip</strong></p>
+<p>To install from pip, use the following commands:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># create virtual environment</span>
+python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+<span class="c1"># activate virtual environment</span>
+<span class="nb">source</span><span class="w"> </span>venv/bin/activate
+<span class="c1"># install orthohmm</span>
+pip<span class="w"> </span>install<span class="w"> </span>orthohmm
+</pre></div>
+</div>
+<p><strong>Note, the virtual environment must be activated to use orthohmm.</strong></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Install from source</strong></p>
+<p>Similarly, to install from source, we strongly recommend using a virtual environment. To do so, use the following commands:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># download</span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/JLSteenwyk/orthohmm.git
+<span class="nb">cd</span><span class="w"> </span>orthohmm/
+<span class="c1"># create virtual environment</span>
+python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+<span class="c1"># activate virtual environment</span>
+<span class="nb">source</span><span class="w"> </span>venv/bin/activate
+<span class="c1"># install</span>
+make<span class="w"> </span>install
+</pre></div>
+</div>
+<p>To deactivate your virtual environment, use the following command:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># deactivate virtual environment</span>
+deactivate
+</pre></div>
+</div>
+<p><strong>Note, the virtual environment must be activated to use orthohmm.</strong></p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/JLSteenwyk/orthohmm.git
+<span class="nb">cd</span><span class="w"> </span>orthohmm/
+make<span class="w"> </span>install
+</pre></div>
+</div>
+<p>If you run into permission errors when executing <em>make install</em>, create a
+virtual environemnt for your installation:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/JLSteenwyk/orthohmm.git
+<span class="nb">cd</span><span class="w"> </span>orthohmm/
+python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+<span class="nb">source</span><span class="w"> </span>venv/bin/activate
+make<span class="w"> </span>install
+</pre></div>
+</div>
+<p>Note, the virtual environment must be activated to use orthohmm.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>2) Usage</strong></p>
+<p>To use OrthoHMM in its simpliest form, execute the following command:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>orthohmm<span class="w"> </span>&lt;path_to_directory_of_FASTA_files&gt;
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<hr class="docutils" />
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="about/index.html#the-developers">The Developers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about/index.html#more-team-members">More Team Members</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="advanced/index.html">Advanced Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="advanced/index.html#orthohmm-output">OrthoHMM output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/index.html#id1">Input Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/index.html#id2">Output directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/index.html#id3">Phmmer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/index.html#id4">E-value Threshold</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/index.html#substitution-matrix">Substitution Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/index.html#cpu">CPU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/index.html#single-copy-threshold">Single-Copy Threshold</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/index.html#mcl">MCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/index.html#inflation-value">Inflation Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/index.html#stop">Stop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/index.html#start">Start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/index.html#all-options">All options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="performance_assessment/index.html">Performance Assessment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="change_log/index.html">Change log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_software/index.html">Other software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="frequently_asked_questions/index.html">FAQ</a></li>
+</ul>
+</div>
+<hr class="docutils" />
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="about/index.html" class="btn btn-neutral float-right" title="About" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024 Jacob L. Steenwyk.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104875636-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-104875636-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>
