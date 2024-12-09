@@ -19,8 +19,13 @@ Quick Start
 -----------
 1\. Install external dependencies
 
-OrthoHMM has two external dependencies — [HMMER](http://hmmer.org/download.html) and [mcl](https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions) — that can't be installed using pip.
+OrthoHMM has two external dependencies — |hmmerLink|_ and |mclLink|_ — that can't be installed using pip.
 Download and install these programs from their respective websites, which are linked in the previous sentence.
+
+.. _hmmerLink: http://hmmer.org/download.html
+.. |hmmerLink| replace:: HMMER
+.. _mclLink: https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions
+.. |mclLink| replace:: mcl
 
 |
 
@@ -39,11 +44,16 @@ Below are more detailed instructions, including alternative installation methods
 
 **1) Installation**
 
-**If you are having trouble installing OrthoHMM, please contact the lead developer, Jacob L. Steenwyk, via [email](https://jlsteenwyk.com/contact.html) or [Bluesky](https://bsky.app/profile/jlsteenwyk.bsky.social) to get help.**
+**If you are having trouble installing OrthoHMM, please contact the lead developer, Jacob L. Steenwyk, via |contactSteenwyk|_ or |blueskySteenwyk|_ to get help.**
+
+.. _contactSteenwyk: https://jlsteenwyk.com/contact.html
+.. |contactSteenwyk| replace:: email
+.. _blueskySteenwyk: https://bsky.app/profile/jlsteenwyk.bsky.social
+.. |blueskySteenwyk| replace:: Bluesky
 
 1\. Install external dependencies
 
-OrthoHMM has two external dependencies — [HMMER](http://hmmer.org/download.html) and [mcl](https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions) — that can't be installed using pip.
+OrthoHMM has two external dependencies — |hmmerLink|_ and |mclLink|_ — that can't be installed using pip.
 Download and install these programs from their respective websites, which are linked in the previous sentence.
 
 2a\. Install OrthoHMM from pip
