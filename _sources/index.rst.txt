@@ -8,10 +8,10 @@
 
 OrthoHMM using high sensitivity and specificity Hidden Markov Models for orthology inference.
 
-If you found OrthoHMM useful, please cite *MANUSCRIPT TITLE*. Steenwyk et al. 2020, JOURNAL. doi: |doiLink|_.
+If you found OrthoHMM useful, please cite *OrthoHMM: Improved Inference of Ortholog Groups using Hidden Markov Models*. Steenwyk et al. 2024, bioRxiv. doi: |doiLink|_.
 
-.. _doiLink: https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001007
-.. |doiLink| replace:: 10.1371/journal.pbio.3001007
+.. _doiLink: https://www.biorxiv.org/content/10.1101/2024.12.07.627370v1
+.. |doiLink| replace:: 10.1101/2024.12.07.627370
 
 |
 
