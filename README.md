@@ -32,8 +32,8 @@
         <a href="https://pypi.org/project/orthohmm/" alt="PyPI - Python Version">
             <img src="https://img.shields.io/pypi/pyversions/orthohmm">
         </a>
-        <a href="https://www.biorxiv.org/content/10.1101/2024.12.07.627370v1">
-          <img src="https://zenodo.org/badge/10.1101/2024.12.07.627370/10.1101/2024.12.07.627370.svg">  
+        <a href="https://www.biorxiv.org/content/10.1101/2024.12.07.627370">
+          <img src="https://zenodo.org/badge/DOI/10.1101/2024.12.07.627370.svg">  
         </a>   
     </p>
 </p>
