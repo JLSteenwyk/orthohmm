@@ -46,7 +46,7 @@ If you found orthohmm useful, please cite *OrthoHMM: Improved Inference of Ortho
 
 <br />
 
-This documentation covers downloading and installing OrthoHMM. Details about each function as well as tutorials for using OrthoHMM are available in the [online documentation](https://jlsteenwyk.com/OrthoHMM/).
+This documentation covers downloading and installing OrthoHMM. Details about each function as well as tutorials for using OrthoHMM are available in the [online documentation](https://jlsteenwyk.com/orthohmm/).
 
 <br />
 
