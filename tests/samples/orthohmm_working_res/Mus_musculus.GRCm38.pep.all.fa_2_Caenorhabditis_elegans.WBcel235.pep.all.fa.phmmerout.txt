@@ -7,9 +7,9 @@ WBGene00013724.1     -          ENSMUSP00000025631   -            4.9e-68  215.8
 # Program:         phmmer
 # Version:         3.3.1 (Jul 2020)
 # Pipeline mode:   SEARCH
-# Query file:      /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Mus_musculus.GRCm38.pep.all.fa
-# Target file:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Caenorhabditis_elegans.WBcel235.pep.all.fa
-# Option settings: phmmer --tblout /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//orthohmm_working_res/Mus_musculus.GRCm38.pep.all.fa_2_Caenorhabditis_elegans.WBcel235.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 --cpu 8 /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Mus_musculus.GRCm38.pep.all.fa /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Caenorhabditis_elegans.WBcel235.pep.all.fa 
+# Query file:      ./tests/samples//Mus_musculus.GRCm38.pep.all.fa
+# Target file:     ./tests/samples//Caenorhabditis_elegans.WBcel235.pep.all.fa
+# Option settings: phmmer --tblout ./tests/samples//orthohmm_working_res/Mus_musculus.GRCm38.pep.all.fa_2_Caenorhabditis_elegans.WBcel235.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 --cpu 8 ./tests/samples//Mus_musculus.GRCm38.pep.all.fa ./tests/samples//Caenorhabditis_elegans.WBcel235.pep.all.fa 
 # Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
-# Date:            Thu Nov  7 18:38:58 2024
+# Date:            Wed Dec 25 05:40:41 2024
 # [ok]

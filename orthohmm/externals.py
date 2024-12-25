@@ -1,8 +1,10 @@
-import math
 import os
 import subprocess
 import sys
 from typing import List
+import multiprocessing
+from multiprocessing.synchronize import Lock
+from multiprocessing.sharedctypes import Synchronized
 
 
 def run_bash_command(command: str) -> None:
@@ -15,25 +17,43 @@ def run_bash_command(command: str) -> None:
 
 
 def update_progress(
-    completed_tasks: int,
+    lock: Lock,
+    completed_tasks: Synchronized,
     total_tasks: int,
 ) -> None:
-    progress = (completed_tasks / total_tasks) * 100
-    sys.stdout.write(f"\r          {math.floor(progress)}% complete")
-    sys.stdout.flush()
+    with lock:
+        completed_tasks.value += 1
+        progress = (completed_tasks.value / total_tasks) * 100
+        sys.stdout.write(f"\r          {progress:.1f}% complete")
+        sys.stdout.flush()
 
 
 def execute_phmmer_search(
-    phmmer_cmds: List[str]
+    phmmer_cmds: List[str],
+    cpu: int,
 ) -> None:
-    total_tasks = len(phmmer_cmds)
-    completed_tasks = 0
 
+    # create a pool of workers
+    pool = multiprocessing.Pool(processes=cpu)
+
+    # create a counter and lock for tracking progress
+    completed_tasks = multiprocessing.Value('i', 0)
+    total_tasks = len(phmmer_cmds)
+    lock = multiprocessing.Lock()
+
+    # apply async with a callback to update progress
     for command in phmmer_cmds:
-        if not check_if_phmmer_command_completed(command.split()[8]):
-            run_bash_command(command)
-        completed_tasks += 1
-        update_progress(completed_tasks, total_tasks)
+        pool.apply_async(
+            run_bash_command,
+            args=(command,),
+            callback=lambda _: update_progress(
+                lock, completed_tasks, total_tasks
+            )
+        )
+
+    # close the pool and wait for the work to finish
+    pool.close()
+    pool.join()
 
 
 def check_if_phmmer_command_completed(
