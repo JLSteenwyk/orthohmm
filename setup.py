@@ -22,7 +22,7 @@ REQUIRES = ["numpy>=2.0.1", "cython"]
 
 setup(
     name="orthohmm",
-    description="HMM-based orthology",
+    description="HMM-based orthogroups",
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="Jacob L. Steenwyk",
