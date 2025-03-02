@@ -1,0 +1,16 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+ENSCAFP00000053904   -          ENSCAFP00000053904   -           2.8e-233  760.7  21.0  3.1e-233  760.6  21.0   1.0   1   0   0   1   1   1   1 -
+ENSCAFP00000048558   -          ENSCAFP00000048558   -           9.2e-260  848.4  22.6    1e-259  848.2  22.6   1.0   1   0   0   1   1   1   1 -
+ENSCAFP00000017344   -          ENSCAFP00000017344   -                  0 5307.6  49.5         0 5307.5  49.5   1.0   1   0   0   1   1   1   1 -
+#
+# Program:         phmmer
+# Version:         3.3.1 (Jul 2020)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Canis_familiaris.CanFam3.1.pep.all.fa
+# Target file:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Canis_familiaris.CanFam3.1.pep.all.fa
+# Option settings: phmmer --tblout /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//orthohmm_working_res/Canis_familiaris.CanFam3.1.pep.all.fa_2_Canis_familiaris.CanFam3.1.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 --cpu 8 /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Canis_familiaris.CanFam3.1.pep.all.fa /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Canis_familiaris.CanFam3.1.pep.all.fa 
+# Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
+# Date:            Sun Mar  2 10:00:10 2025
+# [ok]

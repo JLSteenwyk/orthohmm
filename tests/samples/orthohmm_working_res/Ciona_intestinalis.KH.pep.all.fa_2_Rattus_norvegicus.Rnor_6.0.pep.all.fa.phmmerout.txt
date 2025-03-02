@@ -1,0 +1,16 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+ENSRNOP00000014377   -          ENSCINP00000005198   -           2.7e-162  527.3  19.4  3.3e-162  527.0  19.4   1.0   1   0   0   1   1   1   1 -
+ENSRNOP00000007474   -          ENSCINP00000005198   -              2e-97  314.1   3.9   2.6e-96  310.4   3.9   1.9   1   1   0   1   1   1   1 -
+ENSRNOP00000016871   -          ENSCINP00000010262   -            4.5e-74  236.7   0.2   5.2e-74  236.5   0.2   1.0   1   0   0   1   1   1   1 -
+#
+# Program:         phmmer
+# Version:         3.3.1 (Jul 2020)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Ciona_intestinalis.KH.pep.all.fa
+# Target file:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Rattus_norvegicus.Rnor_6.0.pep.all.fa
+# Option settings: phmmer --tblout /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//orthohmm_working_res/Ciona_intestinalis.KH.pep.all.fa_2_Rattus_norvegicus.Rnor_6.0.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 --cpu 8 /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Ciona_intestinalis.KH.pep.all.fa /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Rattus_norvegicus.Rnor_6.0.pep.all.fa 
+# Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
+# Date:            Sun Mar  2 10:00:13 2025
+# [ok]

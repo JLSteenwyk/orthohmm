@@ -1,0 +1,19 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+ENSDARP00000147265   -          ENSCAFP00000053904   -           5.9e-207  675.2  21.0  6.7e-207  675.0  21.0   1.0   1   0   0   1   1   1   1 -
+ENSDARP00000154605   -          ENSCAFP00000053904   -           5.9e-207  675.2  21.0  6.7e-207  675.0  21.0   1.0   1   0   0   1   1   1   1 -
+ENSDARP00000071531   -          ENSCAFP00000053904   -           9.1e-207  674.5  21.1    1e-206  674.4  21.1   1.0   1   0   0   1   1   1   1 -
+ENSDARP00000110254   -          ENSCAFP00000048558   -           9.3e-113  365.6   0.1  1.2e-112  365.2   0.1   1.0   1   0   0   1   1   1   1 -
+ENSDARP00000149121   -          ENSCAFP00000048558   -            3.2e-96  311.1   0.2   4.5e-96  310.6   0.2   1.2   1   0   0   1   1   1   1 -
+ENSDARP00000129655   -          ENSCAFP00000017344   -                  0 3406.2  59.3         0 3405.9  59.3   1.0   1   0   0   1   1   1   1 -
+#
+# Program:         phmmer
+# Version:         3.3.1 (Jul 2020)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Canis_familiaris.CanFam3.1.pep.all.fa
+# Target file:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Danio_rerio.GRCz11.pep.all.fa
+# Option settings: phmmer --tblout /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//orthohmm_working_res/Canis_familiaris.CanFam3.1.pep.all.fa_2_Danio_rerio.GRCz11.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 --cpu 8 /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Canis_familiaris.CanFam3.1.pep.all.fa /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Danio_rerio.GRCz11.pep.all.fa 
+# Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
+# Date:            Sun Mar  2 10:00:10 2025
+# [ok]

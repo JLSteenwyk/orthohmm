@@ -1,0 +1,21 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+ENSRNOP00000014377   -          ENSDARP00000071531   -           4.8e-206  671.6  20.7  5.4e-206  671.4  20.7   1.0   1   0   0   1   1   1   1 -
+ENSRNOP00000007474   -          ENSDARP00000071531   -           1.3e-124  403.8   6.0  1.4e-123  400.4   6.0   1.9   1   1   0   1   1   1   1 -
+ENSRNOP00000014377   -          ENSDARP00000147265   -           1.9e-205  669.8  20.8  2.1e-205  669.7  20.8   1.0   1   0   0   1   1   1   1 -
+ENSRNOP00000007474   -          ENSDARP00000147265   -           1.1e-124  404.1   6.0  1.1e-123  400.8   6.0   1.9   1   1   0   1   1   1   1 -
+ENSRNOP00000014377   -          ENSDARP00000154605   -           1.9e-205  669.8  20.8  2.1e-205  669.7  20.8   1.0   1   0   0   1   1   1   1 -
+ENSRNOP00000007474   -          ENSDARP00000154605   -           1.1e-124  404.1   6.0  1.1e-123  400.8   6.0   1.9   1   1   0   1   1   1   1 -
+ENSRNOP00000016871   -          ENSDARP00000110254   -           9.3e-128  412.4   0.3    1e-127  412.2   0.3   1.0   1   0   0   1   1   1   1 -
+ENSRNOP00000016871   -          ENSDARP00000149121   -           6.6e-104  333.6   3.2  2.6e-103  331.6   3.2   1.7   1   1   0   1   1   1   1 -
+#
+# Program:         phmmer
+# Version:         3.3.1 (Jul 2020)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Danio_rerio.GRCz11.pep.all.fa
+# Target file:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Rattus_norvegicus.Rnor_6.0.pep.all.fa
+# Option settings: phmmer --tblout /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//orthohmm_working_res/Danio_rerio.GRCz11.pep.all.fa_2_Rattus_norvegicus.Rnor_6.0.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 --cpu 8 /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Danio_rerio.GRCz11.pep.all.fa /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Rattus_norvegicus.Rnor_6.0.pep.all.fa 
+# Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
+# Date:            Sun Mar  2 10:00:12 2025
+# [ok]

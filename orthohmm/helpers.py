@@ -91,7 +91,11 @@ def get_sequence_lengths(
             if sequence_id:
                 gene_lengths.append((file, sequence_id, sequence_length))
 
-    dtype = [("spp", "U50"), ("name", "U50"), ("length", int)]
+    dtype = [
+        ("spp", object),
+        ("name", object),
+        ("length", int)
+    ]
     return np.array(gene_lengths, dtype=dtype)
 
 
@@ -473,12 +477,12 @@ def get_all_fasta_entries(
                 if line.startswith(">"):
                     if header:
                         fasta_file_entries[header] = "".join(sequence)
-                    header = line[1:].split()[0]  # Remove the ">" character
+                    header = line[1:].split()[0]  # remove the ">" character
                     sequence = []
                 else:
                     sequence.append(line)
 
-            # Don't forget to add the last entry to the dictionary
+            # don't forget to add the last entry to the dictionary
             if header:
                 fasta_file_entries[header] = "".join(sequence)
 

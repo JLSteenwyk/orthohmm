@@ -1,0 +1,19 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+ENSPTRP00000071151   -          ENSDARP00000071531   -           4.4e-206  671.3  20.6  5.1e-206  671.1  20.6   1.0   1   0   0   1   1   1   1 -
+ENSPTRP00000071151   -          ENSDARP00000147265   -           7.9e-206  670.7  20.6  9.8e-206  670.4  20.6   1.0   1   0   0   1   1   1   1 -
+ENSPTRP00000071151   -          ENSDARP00000154605   -           7.9e-206  670.7  20.6  9.8e-206  670.4  20.6   1.0   1   0   0   1   1   1   1 -
+ENSPTRP00000079818   -          ENSDARP00000110254   -           1.2e-126  408.3   0.2  1.3e-126  408.1   0.2   1.0   1   0   0   1   1   1   1 -
+ENSPTRP00000079818   -          ENSDARP00000149121   -           7.1e-103  329.8   2.7  2.9e-102  327.8   2.7   1.7   1   1   0   1   1   1   1 -
+ENSPTRP00000007532   -          ENSDARP00000129655   -                  0 3439.8  53.8         0 3439.6  53.8   1.0   1   0   0   1   1   1   1 -
+#
+# Program:         phmmer
+# Version:         3.3.1 (Jul 2020)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Danio_rerio.GRCz11.pep.all.fa
+# Target file:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Pan_troglodytes.Pan_tro_3.0.pep.all.fa
+# Option settings: phmmer --tblout /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//orthohmm_working_res/Danio_rerio.GRCz11.pep.all.fa_2_Pan_troglodytes.Pan_tro_3.0.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 --cpu 8 /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Danio_rerio.GRCz11.pep.all.fa /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Pan_troglodytes.Pan_tro_3.0.pep.all.fa 
+# Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
+# Date:            Sun Mar  2 10:00:11 2025
+# [ok]

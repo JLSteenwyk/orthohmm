@@ -1,0 +1,27 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+ENSDARP00000071531   -          ENSDARP00000071531   -           2.4e-230  752.1  22.3  2.7e-230  751.9  22.3   1.0   1   0   0   1   1   1   1 -
+ENSDARP00000147265   -          ENSDARP00000071531   -           9.4e-230  750.1  22.5  1.1e-229  749.9  22.5   1.0   1   0   0   1   1   1   1 -
+ENSDARP00000154605   -          ENSDARP00000071531   -           9.4e-230  750.1  22.5  1.1e-229  749.9  22.5   1.0   1   0   0   1   1   1   1 -
+ENSDARP00000147265   -          ENSDARP00000147265   -           3.3e-243  794.6  19.5  3.7e-243  794.5  19.5   1.0   1   0   0   1   1   1   1 -
+ENSDARP00000154605   -          ENSDARP00000147265   -           3.3e-243  794.6  19.5  3.7e-243  794.5  19.5   1.0   1   0   0   1   1   1   1 -
+ENSDARP00000071531   -          ENSDARP00000147265   -           9.7e-230  750.3  22.3  1.1e-229  750.2  22.3   1.0   1   0   0   1   1   1   1 -
+ENSDARP00000147265   -          ENSDARP00000154605   -           3.3e-243  794.6  19.5  3.7e-243  794.5  19.5   1.0   1   0   0   1   1   1   1 -
+ENSDARP00000154605   -          ENSDARP00000154605   -           3.3e-243  794.6  19.5  3.7e-243  794.5  19.5   1.0   1   0   0   1   1   1   1 -
+ENSDARP00000071531   -          ENSDARP00000154605   -           9.7e-230  750.3  22.3  1.1e-229  750.2  22.3   1.0   1   0   0   1   1   1   1 -
+ENSDARP00000110254   -          ENSDARP00000110254   -           2.1e-165  536.1   0.3  2.4e-165  536.0   0.3   1.0   1   0   0   1   1   1   1 -
+ENSDARP00000149121   -          ENSDARP00000110254   -           9.2e-126  406.4   3.0  1.6e-125  405.6   3.0   1.4   1   1   0   1   1   1   1 -
+ENSDARP00000149121   -          ENSDARP00000149121   -           1.2e-136  441.0   0.9  1.3e-136  440.8   0.9   1.0   1   0   0   1   1   1   1 -
+ENSDARP00000110254   -          ENSDARP00000149121   -           6.1e-126  406.0   4.5  2.5e-125  404.1   4.5   1.7   1   1   0   1   1   1   1 -
+ENSDARP00000129655   -          ENSDARP00000129655   -                  0 5322.8  67.5         0 5322.6  67.5   1.0   1   0   0   1   1   1   1 -
+#
+# Program:         phmmer
+# Version:         3.3.1 (Jul 2020)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Danio_rerio.GRCz11.pep.all.fa
+# Target file:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Danio_rerio.GRCz11.pep.all.fa
+# Option settings: phmmer --tblout /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//orthohmm_working_res/Danio_rerio.GRCz11.pep.all.fa_2_Danio_rerio.GRCz11.pep.all.fa.phmmerout.txt --noali --notextw --mx BLOSUM62 --cpu 8 /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Danio_rerio.GRCz11.pep.all.fa /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli/tests/samples//Danio_rerio.GRCz11.pep.all.fa 
+# Current dir:     /Users/jacoblsteenwyk/Desktop/BERKELEY/ORTHOHMM/orthohmm/orthohmm_cli
+# Date:            Sun Mar  2 10:00:12 2025
+# [ok]
