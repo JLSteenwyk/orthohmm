@@ -8,8 +8,6 @@ from typing import Union
 
 from .args_processing import process_args
 from .externals import execute_mcl
-from .clustering_methods import cluster_network, ClusteringMethod
-from .normalization_methods import NormalizationMethod
 from .files import fetch_fasta_files
 from .helpers import (
     determine_edge_thresholds_pyhmmer,
@@ -20,8 +18,8 @@ from .helpers import (
     StopStep,
     SubstitutionMatrix,
 )
-from .pyhmmer_externals import execute_pyhmmer_search_batch_optimized
 from .parser import create_parser
+from .pyhmmer_externals import execute_pyhmmer_search_all_pairs
 from .writer import (
     write_user_args,
     write_output_stats
@@ -30,16 +28,14 @@ from .writer import (
 logger = logging.getLogger(__name__)
 
 
-def execute(
+def execute_pyhmmer(
     fasta_directory: str,
     output_directory: str,
-    phmmer: str,
+    phmmer: str,  # Not used in pyhmmer version but kept for compatibility
     cpu: int,
     single_copy_threshold: float,
     mcl: str,
     inflation_value: float,
-    clustering_method: ClusteringMethod,
-    normalization_method: NormalizationMethod,
     start: Union[StartStep, None],
     stop: Union[StopStep, None],
     substitution_matrix: SubstitutionMatrix,
@@ -55,19 +51,11 @@ def execute(
 
     files = fetch_fasta_files(fasta_directory)
 
-    # Display GPU status
-    try:
-        from .gpu_utils import print_gpu_status
-        print_gpu_status()
-    except ImportError:
-        print("💻 GPU acceleration: DISABLED (GPU utils not available)")
-    print()
-
     # display to user what args are being used in stdout
     write_user_args(
         fasta_directory,
         output_directory,
-        "pyhmmer",  # Show that we're using pyhmmer
+        "pyhmmer",  # Indicate we're using pyhmmer
         mcl,
         cpu,
         single_copy_threshold,
@@ -91,11 +79,12 @@ def execute(
     
     if start == StartStep.search_res:
         total_steps -= 1
-        print("Starting from search results not supported with pyhmmer. Please run full analysis.")
+        # Would need to load previous results from files
+        print("Starting from search results not yet implemented for pyhmmer version")
         sys.exit(1)
     else:
         print(f"Step {current_step}/{total_steps}: Conducting all-to-all comparisons with PyHMMER.")
-        pyhmmer_results = execute_pyhmmer_search_batch_optimized(
+        pyhmmer_results = execute_pyhmmer_search_all_pairs(
             files,
             fasta_directory,
             substitution_matrix,
@@ -114,7 +103,6 @@ def execute(
             cpu,
             evalue_threshold,
             pyhmmer_results,
-            normalization_method.value,
         )
     print("\r          Completed!      \n")
     current_step += 1
@@ -129,32 +117,17 @@ def execute(
         pyhmmer_results,
         cpu,
         output_directory,
-        normalization_method.value,
     )
     print("\r          Completed!      \n")
     current_step += 1
 
-    print(f"Step {current_step}/{total_steps}: Conducting clustering ({clustering_method.value})")
-    
-    edges_file = f"{output_directory}/orthohmm_working_res/orthohmm_edges.txt"
-    clustered_file = f"{output_directory}/orthohmm_working_res/orthohmm_edges_clustered.txt"
-    
-    if clustering_method == ClusteringMethod.MCL:
-        execute_mcl(
-            mcl,
-            inflation_value,
-            cpu,
-            output_directory,
-        )
-    else:
-        cluster_network(
-            edges_file=edges_file,
-            output_file=clustered_file,
-            method=clustering_method,
-            mcl_path=mcl,
-            inflation=inflation_value,
-            cpu=cpu
-        )
+    print(f"Step {current_step}/{total_steps}: Conducting clustering")
+    execute_mcl(
+        mcl,
+        inflation_value,
+        cpu,
+        output_directory,
+    )
     singletons, og_cn, ogs_dat, single_copy_ogs = \
         generate_orthogroup_clusters_file(
             output_directory,
@@ -190,15 +163,15 @@ def execute(
     )
 
 
-def main(argv=None):
+def main_pyhmmer(argv=None):
     """
-    Function that parses and collects arguments
+    PyHMMER version of main function
     """
     parser = create_parser()
     args = parser.parse_args()
 
-    execute(**process_args(args))
+    execute_pyhmmer(**process_args(args))
 
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    main_pyhmmer(sys.argv[1:])

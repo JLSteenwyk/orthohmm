@@ -12,6 +12,8 @@ from .helpers import (
     StopStep,
     SubstitutionMatrix,
 )
+from .clustering_methods import ClusteringMethod
+from .normalization_methods import NormalizationMethod
 from .version import __version__
 
 
@@ -93,6 +95,14 @@ def create_parser() -> ArgumentParser:
 
         -i, --inflation_value <float>               mcl inflation parameter
                                                     (default: 1.5)
+        
+        --clustering_method <method>                clustering algorithm to use
+                                                    (default: mcl)
+                                                    options: mcl, leiden, spectral, affinity_propagation
+        
+        --normalization_method <method>             gene length normalization method to use
+                                                    (default: default)
+                                                    options: default, geometric_mean, max_length, logarithmic, min_length
     
         --stop <prepare, infer, write>              options for stopping
                                                     an analysis at a specific
@@ -153,6 +163,25 @@ def create_parser() -> ArgumentParser:
             Lower values are more permissive resulting in larger orthogroups.
             Higher values are stricter resulting in smaller orthogroups.
             The default value is 1.5.
+        
+        Clustering Method (--clustering_method)
+            Clustering algorithm to use for grouping genes into orthologous groups.
+            Available methods:
+            - mcl: Markov Cluster Algorithm (default, requires mcl binary)
+            - leiden: Leiden community detection (requires igraph and leidenalg)
+            - spectral: Spectral clustering (requires scikit-learn)
+            - affinity_propagation: Affinity Propagation (requires scikit-learn)
+            Install optional dependencies with: pip install orthohmm[clustering]
+        
+        Normalization Method (--normalization_method)
+            Gene length normalization method to account for protein length bias in scores.
+            Available methods:
+            - default: score / (target_length + query_length) - Current production method
+            - geometric_mean: score / sqrt(target_length × query_length) 
+            - max_length: score / max(target_length, query_length)
+            - logarithmic: score / log(target_length + query_length + 1)
+            - min_length: score / min(target_length, query_length)
+            Default method uses GPU acceleration when available.
         
         Stop (--stop)
             Similar to other ortholog calling algorithms, different steps in the
@@ -289,6 +318,26 @@ def create_parser() -> ArgumentParser:
         required=False,
         help=SUPPRESS,
         metavar="inflation_value",
+    )
+
+    clustering_method_choices = [method.value for method in ClusteringMethod]
+    optional.add_argument(
+        "--clustering_method",
+        type=str,
+        required=False,
+        help=SUPPRESS,
+        metavar="clustering_method",
+        choices=clustering_method_choices,
+    )
+
+    normalization_method_choices = [method.value for method in NormalizationMethod]
+    optional.add_argument(
+        "--normalization_method",
+        type=str,
+        required=False,
+        help=SUPPRESS,
+        metavar="normalization_method",
+        choices=normalization_method_choices,
     )
 
     optional.add_argument(

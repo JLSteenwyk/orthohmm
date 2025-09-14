@@ -18,7 +18,18 @@ CLASSIFIERS = [
     "Topic :: Scientific/Engineering",
 ]
 
-REQUIRES = ["numpy>=2.0.1", "cython"]
+REQUIRES = ["numpy>=2.0.1", "cython", "pyhmmer>=0.11.0"]
+
+# Optional dependencies
+EXTRAS_REQUIRE = {
+    "gpu": ["cupy>=12.0.0"],
+    "clustering": [
+        "scikit-learn>=1.0.0",
+        "igraph>=0.10.0", 
+        "leidenalg>=0.8.0",
+        "scipy>=1.7.0"
+    ],
+}
 
 setup(
     name="orthohmm",
@@ -34,6 +45,7 @@ setup(
     version=__version__,
     include_package_data=True,
     install_requires=REQUIRES,
+    extras_require=EXTRAS_REQUIRE,
 )
 
 ## push new version to pypi

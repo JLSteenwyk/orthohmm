@@ -10,6 +10,8 @@ from .helpers import (
     StopStep,
     SubstitutionMatrix,
 )
+from .clustering_methods import ClusteringMethod
+from .normalization_methods import NormalizationMethod
 
 
 logger = logging.getLogger(__name__)
@@ -55,17 +57,27 @@ def process_args(args) -> dict:
 
     single_copy_threshold = float(args.single_copy_threshold) if args.single_copy_threshold is not None else 0.5
 
-    if args.mcl:
-        mcl = args.mcl
-        if not shutil.which(mcl):
-            logger.warning(f"mcl can't be found at {mcl}.")
-            sys.exit()
-    else:
-        if find_executable("mcl"):
-            mcl = "mcl"
+    # Handle clustering method
+    clustering_method = ClusteringMethod(args.clustering_method) if args.clustering_method else ClusteringMethod.MCL
+    
+    # Handle normalization method
+    normalization_method = NormalizationMethod(args.normalization_method) if args.normalization_method else NormalizationMethod.DEFAULT
+    
+    # Only check for MCL binary if using MCL method
+    if clustering_method == ClusteringMethod.MCL:
+        if args.mcl:
+            mcl = args.mcl
+            if not shutil.which(mcl):
+                logger.warning(f"mcl can't be found at {mcl}.")
+                sys.exit()
         else:
-            logger.warning("mcl can't be found. Provide path with the -m argument or add path to PATH variable")
-            sys.exit()
+            if find_executable("mcl"):
+                mcl = "mcl"
+            else:
+                logger.warning("mcl can't be found. Provide path with the -m argument or add path to PATH variable")
+                sys.exit()
+    else:
+        mcl = args.mcl or "mcl"  # Set default even if not using MCL
 
     inflation_value = args.inflation_value or 1.5
 
@@ -84,6 +96,8 @@ def process_args(args) -> dict:
         single_copy_threshold=single_copy_threshold,
         mcl=mcl,
         inflation_value=float(inflation_value),
+        clustering_method=clustering_method,
+        normalization_method=normalization_method,
         start=start,
         stop=stop,
         substitution_matrix=substitution_matrix,

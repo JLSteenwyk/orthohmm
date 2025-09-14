@@ -1,2 +1,9 @@
 Cython==3.0.4
 numpy>=2.0.1
+pyhmmer>=0.11.0
+
+# Optional clustering method dependencies
+scikit-learn>=1.0.0  # For Spectral Clustering and Affinity Propagation
+igraph>=0.10.0       # For Leiden algorithm
+leidenalg>=0.8.0     # For Leiden algorithm
+scipy>=1.7.0         # For eigenvalue computations

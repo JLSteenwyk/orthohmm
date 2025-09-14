@@ -9,6 +9,7 @@ from typing import (
     List,
     DefaultDict,
     Dict,
+    Optional,
 )
 
 import numpy as np
@@ -58,6 +59,119 @@ def generate_phmmer_cmds(
         phmmer_cmds.append(f"{phmmer} --mx {substitution_matrix.value} --noali --notextw --cpu {cpu} --tblout {output_directory}/orthohmm_working_res/{combo[0]}_2_{combo[1]}.phmmerout.txt {fasta_directory}/{combo[0]} {fasta_directory}/{combo[1]}")
 
     return phmmer_cmds
+
+
+def process_pair_edge_thresholds_pyhmmer(
+    pair: Tuple[str, str],
+    fasta_directory: str,
+    gene_lengths: np.ndarray,
+    substitution_matrix: SubstitutionMatrix,
+    evalue_threshold: float,
+    normalization_method: Optional[str] = None,
+) -> Tuple[
+    Dict[str, np.float64],
+    Dict[frozenset, np.float64],
+]:
+    """Process pair using pyhmmer instead of reading files"""
+    from .pyhmmer_externals import execute_pyhmmer_search_pair, pyhmmer_results_to_numpy
+    
+    query_path = os.path.join(fasta_directory, pair[0])
+    target_path = os.path.join(fasta_directory, pair[1])
+    
+    # Get results for both directions
+    fwd_results = execute_pyhmmer_search_pair(
+        query_path, target_path, substitution_matrix, evalue_threshold, 1
+    )
+    rev_results = execute_pyhmmer_search_pair(
+        target_path, query_path, substitution_matrix, evalue_threshold, 1
+    )
+    
+    # Convert to numpy arrays
+    fwd_res = pyhmmer_results_to_numpy(fwd_results)
+    rev_res = pyhmmer_results_to_numpy(rev_results)
+    
+    if len(fwd_res) == 0 or len(rev_res) == 0:
+        return {}, {}
+    
+    fwd_res_merged = merge_with_gene_lengths(fwd_res, gene_lengths)
+    rev_res_merged = merge_with_gene_lengths(rev_res, gene_lengths)
+    
+    fwd_res_merged = normalize_by_gene_length(fwd_res_merged, normalization_method)
+    rev_res_merged = normalize_by_gene_length(rev_res_merged, normalization_method)
+    
+    best_hits_A_to_B = get_best_hits_and_scores(fwd_res_merged)
+    best_hits_B_to_A = get_best_hits_and_scores(rev_res_merged)
+    
+    best_hit_scores_A_to_B, best_hit_scores_B_to_A, pairwise_rbh_corr = \
+        correct_by_phylogenetic_distance(
+            best_hits_A_to_B,
+            best_hits_B_to_A,
+            pair,
+            {}
+        )
+    
+    reciprocal_best_hit_thresholds = \
+        get_threshold_per_gene(
+            best_hits_A_to_B,
+            best_hits_B_to_A,
+            best_hit_scores_A_to_B,
+            best_hit_scores_B_to_A,
+            {}
+        )
+    
+    return reciprocal_best_hit_thresholds, pairwise_rbh_corr
+
+
+def process_pair_edge_thresholds_pyhmmer_memory(
+    pair: Tuple[str, str],
+    gene_lengths: np.ndarray,
+    pyhmmer_results: Dict[Tuple[str, str], List[Dict]],
+    normalization_method: Optional[str] = None,
+) -> Tuple[
+    Dict[str, np.float64],
+    Dict[frozenset, np.float64],
+]:
+    """Process pair using pre-computed pyhmmer results from memory"""
+    from .pyhmmer_externals import pyhmmer_results_to_numpy
+    
+    # Get results for both directions from memory
+    fwd_results = pyhmmer_results.get(pair, [])
+    rev_results = pyhmmer_results.get((pair[1], pair[0]), [])
+    
+    # Convert to numpy arrays
+    fwd_res = pyhmmer_results_to_numpy(fwd_results)
+    rev_res = pyhmmer_results_to_numpy(rev_results)
+    
+    if len(fwd_res) == 0 or len(rev_res) == 0:
+        return {}, {}
+    
+    fwd_res_merged = merge_with_gene_lengths(fwd_res, gene_lengths)
+    rev_res_merged = merge_with_gene_lengths(rev_res, gene_lengths)
+    
+    fwd_res_merged = normalize_by_gene_length(fwd_res_merged, normalization_method)
+    rev_res_merged = normalize_by_gene_length(rev_res_merged, normalization_method)
+    
+    best_hits_A_to_B = get_best_hits_and_scores(fwd_res_merged)
+    best_hits_B_to_A = get_best_hits_and_scores(rev_res_merged)
+    
+    best_hit_scores_A_to_B, best_hit_scores_B_to_A, pairwise_rbh_corr = \
+        correct_by_phylogenetic_distance(
+            best_hits_A_to_B,
+            best_hits_B_to_A,
+            pair,
+            {}
+        )
+    
+    reciprocal_best_hit_thresholds = \
+        get_threshold_per_gene(
+            best_hits_A_to_B,
+            best_hits_B_to_A,
+            best_hit_scores_A_to_B,
+            best_hit_scores_B_to_A,
+            {}
+        )
+    
+    return reciprocal_best_hit_thresholds, pairwise_rbh_corr
 
 
 def get_sequence_lengths(
@@ -150,10 +264,43 @@ def read_and_filter_phmmer_output(
     return res
 
 
-def normalize_by_gene_length(res_merged: np.ndarray) -> np.ndarray:
-    res_merged[:, 3] = res_merged[:, 3] / (res_merged[:, 4] + res_merged[:, 5])
-
-    return res_merged
+def normalize_by_gene_length(
+    res_merged: np.ndarray, 
+    normalization_method: Optional[str] = None
+) -> np.ndarray:
+    """
+    Normalize scores by gene length using specified method
+    
+    Args:
+        res_merged: Array with columns [target_name, query_name, evalue, score, target_len, query_len]
+        normalization_method: Method to use ('default', 'geometric_mean', 'max_length', 'logarithmic', 'min_length_penalty')
+    
+    Returns:
+        Modified array with normalized scores
+    """
+    
+    # Default to current method if none specified
+    if normalization_method is None or normalization_method == "default":
+        # Try GPU acceleration first, fallback to CPU if not available
+        try:
+            from .gpu_utils import normalize_by_gene_length_gpu
+            return normalize_by_gene_length_gpu(res_merged)
+        except ImportError:
+            # Fallback to original CPU implementation
+            res_merged[:, 3] = res_merged[:, 3] / (res_merged[:, 4] + res_merged[:, 5])
+            return res_merged
+    else:
+        # Use alternative normalization method
+        try:
+            from .normalization_methods import normalize_by_gene_length_method, NormalizationMethod
+            method_enum = NormalizationMethod(normalization_method)
+            return normalize_by_gene_length_method(res_merged, method_enum)
+        except (ImportError, ValueError) as e:
+            print(f"Warning: Could not use normalization method '{normalization_method}': {e}")
+            print("Falling back to default method")
+            # Fallback to default
+            res_merged[:, 3] = res_merged[:, 3] / (res_merged[:, 4] + res_merged[:, 5])
+            return res_merged
 
 
 def correct_by_phylogenetic_distance(
@@ -242,6 +389,7 @@ def process_pair_edge_thresholds(
     output_directory: str,
     gene_lengths: np.ndarray,
     evalue_threshold: float,
+    normalization_method: Optional[str] = None,
 ) -> Tuple[
     Dict[str, np.float64],
     Dict[frozenset, np.float64],
@@ -260,8 +408,8 @@ def process_pair_edge_thresholds(
     fwd_res_merged = merge_with_gene_lengths(fwd_res, gene_lengths)
     rev_res_merged = merge_with_gene_lengths(rev_res, gene_lengths)
 
-    fwd_res_merged = normalize_by_gene_length(fwd_res_merged)
-    rev_res_merged = normalize_by_gene_length(rev_res_merged)
+    fwd_res_merged = normalize_by_gene_length(fwd_res_merged, normalization_method)
+    rev_res_merged = normalize_by_gene_length(rev_res_merged, normalization_method)
 
     best_hits_A_to_B = get_best_hits_and_scores(fwd_res_merged)
     best_hits_B_to_A = get_best_hits_and_scores(rev_res_merged)
@@ -324,6 +472,60 @@ def determine_edge_thresholds(
             output_directory,
             gene_lengths,
             evalue_threshold
+        ),
+        callback=lambda _: update_progress(
+                lock, completed_tasks, total_tasks
+            )
+        )
+        for pair in file_pairs
+    ]
+
+    pool.close()
+    pool.join()
+
+    final_reciprocal_thresholds = {}
+    final_pairwise_corr = {}
+
+    for res in results:
+        thresholds, pairwise_corr = res.get()
+        for key, value in thresholds.items():
+            if key in final_reciprocal_thresholds:
+                final_reciprocal_thresholds[key] = min(
+                    final_reciprocal_thresholds[key], value
+                )
+            else:
+                final_reciprocal_thresholds[key] = value
+
+
+def determine_edge_thresholds_pyhmmer(
+    files: List[str],
+    fasta_directory: str,
+    substitution_matrix: SubstitutionMatrix,
+    cpu: int,
+    evalue_threshold: float,
+    pyhmmer_results: Dict[Tuple[str, str], List[Dict]],
+    normalization_method: Optional[str] = None,
+) -> Tuple[
+    np.ndarray,
+    Dict[str, float],
+    Dict[frozenset, float],
+]:
+    """PyHMMER version that uses in-memory results instead of files"""
+    gene_lengths = get_sequence_lengths(fasta_directory, files)
+    file_pairs = [(file1, file2) for file1 in files for file2 in files]
+
+    pool = multiprocessing.Pool(processes=cpu)
+    completed_tasks = multiprocessing.Value("i", 0)
+    total_tasks = len(file_pairs)
+    lock = multiprocessing.Lock()
+
+    results = [pool.apply_async(
+        process_pair_edge_thresholds_pyhmmer_memory,
+        args=(
+            pair,
+            gene_lengths,
+            pyhmmer_results,
+            normalization_method,
         ),
         callback=lambda _: update_progress(
                 lock, completed_tasks, total_tasks
@@ -441,6 +643,114 @@ def determine_network_edges(
             key_str = "\t".join(map(str, key))
             file.write(f"{key_str}\t{value}\n")
 
+    return edges
+
+
+def determine_network_edges_pyhmmer(
+    files: List[str],
+    gene_lengths: np.ndarray,
+    pairwise_rbh_corr: Dict[frozenset, np.float64],
+    reciprocal_best_hit_thresholds: Dict[str, np.float64],
+    evalue_threshold: float,
+    pyhmmer_results: Dict[Tuple[str, str], List[Dict]],
+    cpu: int,
+    output_directory: str,
+    normalization_method: Optional[str] = None,
+) -> Dict[frozenset, np.float64]:
+    """PyHMMER version that uses in-memory results"""
+    
+    gene_lengths_dict = {str(row["name"]): int(row["length"]) for row in gene_lengths}
+    file_pairs = [(file1, file2) for file1 in files for file2 in files]
+    
+    total_tasks = len(file_pairs)
+    completed_tasks = multiprocessing.Value("i", 0)
+    lock = multiprocessing.Lock()
+    
+    pool = multiprocessing.Pool(processes=cpu)
+    
+    results = []
+    for pair in file_pairs:
+        result = pool.apply_async(
+            process_pair_determine_network_edges_pyhmmer,
+            args=(
+                pair,
+                gene_lengths_dict,
+                pairwise_rbh_corr,
+                reciprocal_best_hit_thresholds,
+                evalue_threshold,
+                pyhmmer_results,
+            ),
+            callback=lambda _: update_progress(
+                lock, completed_tasks, total_tasks
+            )
+        )
+        results.append(result)
+    
+    pool.close()
+    pool.join()
+    
+    edges = {}
+    for result in results:
+        edge_result = result.get()
+        for key, value in edge_result.items():
+            if key in edges:
+                edges[key] = max(edges[key], value)
+            else:
+                edges[key] = value
+    
+    # Write edges file for MCL
+    with open(f"{output_directory}/orthohmm_working_res/orthohmm_edges.txt", "w") as file:
+        for key, value in edges.items():
+            key_str = "\t".join(map(str, key))
+            file.write(f"{key_str}\t{value}\n")
+    
+    return edges
+
+
+def process_pair_determine_network_edges_pyhmmer(
+    pair: Tuple[str, str],
+    gene_lengths: Dict[str, int],
+    pairwise_rbh_corr: Dict[frozenset, np.float64],
+    reciprocal_best_hit_thresholds: Dict[str, np.float64],
+    evalue_threshold: float,
+    pyhmmer_results: Dict[Tuple[str, str], List[Dict]],
+):
+    """Process network edges using pyhmmer results from memory"""
+    edges = {}
+    
+    # Get results from memory instead of reading files
+    results = pyhmmer_results.get(pair, [])
+    
+    for hit in results:
+        query_name = hit["query_name"]
+        target_name = hit["target_name"]
+        
+        if hit["evalue"] > evalue_threshold:
+            continue
+            
+        query_length = gene_lengths.get(query_name)
+        target_length = gene_lengths.get(target_name)
+        
+        if query_length is None or target_length is None:
+            continue
+            
+        pair_set = frozenset(pair)
+        if pair_set not in pairwise_rbh_corr:
+            continue
+            
+        norm_score = (hit["score"] / (query_length + target_length)) / pairwise_rbh_corr[pair_set]
+        
+        try:
+            if norm_score >= reciprocal_best_hit_thresholds[query_name]:
+                genes = frozenset([query_name, target_name])
+                if len(genes) == 2:
+                    if genes in edges and edges[genes] < norm_score:
+                        edges[genes] = norm_score
+                    elif genes not in edges:
+                        edges[genes] = norm_score
+        except KeyError:
+            continue
+    
     return edges
 
 
