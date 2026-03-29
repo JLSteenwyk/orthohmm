@@ -44,6 +44,11 @@ If you found orthohmm useful, please cite *OrthoHMM: Improved Inference of Ortho
 
 ---
 
+> [!WARNING]
+> **OrthoHMM is currently too slow for broad-scale application.** Runtime scales poorly with the number and size of input proteomes, making it impractical for large or genome-wide datasets. We are actively developing heuristics to substantially improve performance. Until then, please consider this limitation before investing time in large analyses.
+
+---
+
 <br />
 
 This documentation covers downloading and installing OrthoHMM. Details about each function as well as tutorials for using OrthoHMM are available in the [online documentation](https://jlsteenwyk.com/orthohmm/).
