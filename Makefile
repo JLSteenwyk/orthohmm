@@ -8,12 +8,15 @@ run.simple:
 	python3 -m orthohmm-runner ./tests/samples/	
 
 install:
-	# install so orthohmm command is available in terminal
-	python3 setup.py install
+	# install so orthohmm command is available in terminal.
+	# pip (not `setup.py install`) so transitive deps like leidenalg /
+	# python-igraph resolve to prebuilt wheels instead of compiling
+	# from source — easy_install would otherwise fall back to building
+	# from sdist and fail on hosts without igraph C headers.
+	python3 -m pip install .
 
 develop:
-	# https://setuptools.readthedocs.io/en/latest/setuptools.html#development-mode
-	python3 setup.py develop
+	python3 -m pip install -e .
 
 test: test.unit test.integration
 

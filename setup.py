@@ -168,10 +168,10 @@ CLASSIFIERS = [
     "Operating System :: MacOS :: MacOS X",
     "Intended Audience :: Science/Research",
     "Programming Language :: Python",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Topic :: Scientific/Engineering :: Bio-Informatics",
 ]
 
@@ -199,6 +199,7 @@ setup(
     version=__version__,
     include_package_data=True,
     install_requires=REQUIRES,
+    python_requires=">=3.10",
     cmdclass={
         "build_py": CustomBuildPy,
         "develop": CustomDevelop,

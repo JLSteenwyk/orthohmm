@@ -27,6 +27,7 @@ def args():
         stop=None,
         substitution_matrix=SubstitutionMatrix.blosum62,
         evalue=0.0001,
+        search_mode="builtin",
     )
     return Namespace(**kwargs)
 
@@ -43,7 +44,11 @@ class TestArgsProcessing(object):
             process_args(args)
 
     def test_process_args_phmmer_not_installed(self, args):
+        # phmmer-missing only fails when the user explicitly opts into the
+        # legacy phmmer search path; in builtin mode (the default) phmmer
+        # is optional and process_args falls through.
         args.phmmer = "phmmer-that-dne"
+        args.search_mode = "phmmer"
         with pytest.raises(SystemExit):
             process_args(args)
 
@@ -116,5 +121,6 @@ class TestArgsProcessing(object):
             "stop",
             "substitution_matrix",
             "evalue_threshold",
+            "search_mode",
         ]
         assert sorted(res.keys()) == sorted(expected_keys)
