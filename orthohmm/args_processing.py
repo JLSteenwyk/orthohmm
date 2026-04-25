@@ -32,17 +32,30 @@ def process_args(args) -> dict:
         logger.warning("Output directory does not exist")
         sys.exit()
 
-    if args.phmmer:
-        phmmer = args.phmmer
-        if not shutil.which(phmmer):
-            logger.warning(f"phmmer can't be found at {phmmer}.")
-            sys.exit()
+    search_mode = getattr(args, "search_mode", None) or "builtin"
+
+    # Only require phmmer when using phmmer search mode
+    phmmer = None
+    if search_mode == "phmmer":
+        if args.phmmer:
+            phmmer = args.phmmer
+            if not shutil.which(phmmer):
+                logger.warning(f"phmmer can't be found at {phmmer}.")
+                sys.exit()
+        else:
+            if find_executable("phmmer"):
+                phmmer = "phmmer"
+            else:
+                logger.warning("phmmer can't be found. Provide path with the -p argument or add path to PATH variable")
+                sys.exit()
     else:
-        if find_executable("phmmer"):
+        # Built-in mode: phmmer path is optional
+        if args.phmmer:
+            phmmer = args.phmmer
+        elif find_executable("phmmer"):
             phmmer = "phmmer"
         else:
-            logger.warning("phmmer can't be found. Provide path with the -p argument or add path to PATH variable")
-            sys.exit()
+            phmmer = "builtin"
 
     if args.cpu:
         cpu = int(args.cpu)
@@ -88,4 +101,5 @@ def process_args(args) -> dict:
         stop=stop,
         substitution_matrix=substitution_matrix,
         evalue_threshold=evalue_threshold,
+        search_mode=search_mode,
     )

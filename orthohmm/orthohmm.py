@@ -43,6 +43,7 @@ def execute(
     stop: Union[StopStep, None],
     substitution_matrix: SubstitutionMatrix,
     evalue_threshold: float,
+    search_mode: str = "builtin",
     **kwargs,
 ) -> None:
     # for reporting runtime duration to user
@@ -54,7 +55,9 @@ def execute(
 
     files = fetch_fasta_files(fasta_directory)
 
-    if start != StartStep.search_res:
+    search_results = None
+
+    if start != StartStep.search_res and search_mode == "phmmer":
         phmmer_cmds = generate_phmmer_cmds(
             files,
             phmmer,
@@ -66,6 +69,9 @@ def execute(
 
     # print phmmer cmds and exit is users only want to prepare phmmer cmds
     if stop == StopStep.prepare:
+        if search_mode == "builtin":
+            print("--stop prepare is only supported with --search_mode phmmer")
+            sys.exit(1)
         for cmd in phmmer_cmds:
             print(cmd)
         sys.exit()
@@ -84,6 +90,7 @@ def execute(
         substitution_matrix,
         evalue_threshold,
         inflation_value,
+        search_mode,
     )
 
     # set current step and determine the total number of
@@ -96,6 +103,19 @@ def execute(
 
     if start == StartStep.search_res:
         total_steps -= 1
+    elif search_mode == "builtin":
+        print(f"Step {current_step}/{total_steps}: Conducting all-to-all comparisons (built-in search).")
+        from .search.engine import execute_builtin_search
+        search_results = execute_builtin_search(
+            files,
+            fasta_directory,
+            output_directory,
+            cpu,
+            substitution_matrix,
+            evalue_threshold=evalue_threshold,
+        )
+        print("\r          Completed!      \n")
+        current_step += 1
     else:
         print(f"Step {current_step}/{total_steps}: Conducting all-to-all comparisons.")
         execute_phmmer_search(
@@ -113,6 +133,7 @@ def execute(
             output_directory,
             cpu,
             evalue_threshold,
+            search_results=search_results,
         )
     print("\r          Completed!      \n")
     current_step += 1
@@ -126,6 +147,7 @@ def execute(
         reciprocal_best_hit_thresholds,
         evalue_threshold,
         cpu,
+        search_results=search_results,
     )
     print("\r          Completed!      \n")
     current_step += 1

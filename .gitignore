@@ -146,3 +146,21 @@ submitting_to_conda.txt
 # mac specific files
 .DS_Store
 
+
+# Reference papers (not distributed)
+*.full.pdf
+papers/
+
+# Manuscript + paper-only benchmark artifacts (not part of the deployable tool)
+manuscript/
+bacterial_scaling/
+qfo_benchmark/
+benchmarks/
+
+# Research / paper source notes (not part of public docs)
+docs/DEVELOPMENT_HISTORY.md
+
+# Local plan + scratch
+*.plan.md
+.claude/
+nohup.out

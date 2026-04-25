@@ -23,6 +23,7 @@ def write_user_args(
     substitution_matrix: SubstitutionMatrix,
     evalue_threshold: float,
     inflation_value: float,
+    search_mode: str = "builtin",
 ) -> None:
 
     try:
@@ -37,10 +38,16 @@ def write_user_args(
     except AttributeError:
         stop_print = "NA"
 
+    search_info = (
+        "built-in (profile HMM + k-mer prefilter)"
+        if search_mode == "builtin"
+        else f"phmmer ({phmmer})"
+    )
+
     print(
         textwrap.dedent(
             f"""\
-      ____       _   _           _    _ __  __ __  __ 
+      ____       _   _           _    _ __  __ __  __
      / __ \     | | | |         | |  | |  \/  |  \/  |
     | |  | |_ __| |_| |__   ___ | |__| | \  / | \  / |
     | |  | | '__| __| '_ \ / _ \|  __  | |\/| | |\/| |
@@ -57,7 +64,7 @@ def write_user_args(
     Directory for output files: {output_directory}
     Step to start analysis: {start_print}
     Step to stop analysis: {stop_print}
-    Path to phmmer: {phmmer}
+    Search engine: {search_info}
     E-value threshold: {evalue_threshold}
     Substitution matrix: {substitution_matrix.value}
     Path to mcl: {mcl}

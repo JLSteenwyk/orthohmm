@@ -131,7 +131,8 @@ def create_parser() -> ArgumentParser:
             Residue alignment probabilities will be determined from the
             specified substitution matrix. Supported substitution matrices
             include: BLOSUM45, BLOSUM50, BLOSUM62, BLOSUM80, BLOSUM90,
-            PAM30, PAM70, PAM120, and PAM240. The default is BLOSUM62.
+            PAM30, PAM70, PAM120, PAM240, WAG, and LG. The default is
+            BLOSUM62.
 
         CPU (-c, --cpu) 
             Number of CPU workers for multithreading during sequence search.
@@ -289,6 +290,16 @@ def create_parser() -> ArgumentParser:
         required=False,
         help=SUPPRESS,
         metavar="inflation_value",
+    )
+
+    optional.add_argument(
+        "--search_mode",
+        type=str,
+        required=False,
+        choices=["builtin", "phmmer"],
+        default="builtin",
+        help=SUPPRESS,
+        metavar="search_mode",
     )
 
     optional.add_argument(

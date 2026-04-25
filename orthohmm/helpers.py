@@ -42,6 +42,8 @@ class SubstitutionMatrix(Enum):
     pam70 = "PAM70"
     pam120 = "PAM120"
     pam240 = "PAM240"
+    wag = "WAG"
+    lg = "LG"
 
 
 def generate_phmmer_cmds(
@@ -127,7 +129,22 @@ def read_and_filter_phmmer_output(
     taxon_b: str,
     output_directory: str,
     evalue_threshold: float,
+    search_results=None,
 ) -> np.ndarray:
+    # If in-memory search results are available, use them
+    if search_results is not None:
+        from .search.engine import results_to_phmmer_format
+        pair_results = search_results.get((taxon_a, taxon_b))
+        if pair_results is None:
+            dtype_res = [
+                ("target_name", "U50"),
+                ("query_name", "U50"),
+                ("evalue", float),
+                ("score", float)
+            ]
+            return np.array([], dtype=dtype_res)
+        return results_to_phmmer_format(pair_results, evalue_threshold)
+
     res_path = f"{output_directory}/orthohmm_working_res/{taxon_a}_2_{taxon_b}.phmmerout.txt"
 
     dtype_res = [
@@ -242,6 +259,7 @@ def process_pair_edge_thresholds(
     output_directory: str,
     gene_lengths: np.ndarray,
     evalue_threshold: float,
+    search_results=None,
 ) -> Tuple[
     Dict[str, np.float64],
     Dict[frozenset, np.float64],
@@ -249,12 +267,14 @@ def process_pair_edge_thresholds(
     fwd_res = read_and_filter_phmmer_output(
         pair[0], pair[1],
         output_directory,
-        evalue_threshold
+        evalue_threshold,
+        search_results=search_results,
     )
     rev_res = read_and_filter_phmmer_output(
         pair[1], pair[0],
         output_directory,
-        evalue_threshold
+        evalue_threshold,
+        search_results=search_results,
     )
 
     fwd_res_merged = merge_with_gene_lengths(fwd_res, gene_lengths)
@@ -304,6 +324,7 @@ def determine_edge_thresholds(
     output_directory: str,
     cpu: int,
     evalue_threshold: float,
+    search_results=None,
 ) -> Tuple[
     np.ndarray,
     Dict[str, float],
@@ -311,6 +332,41 @@ def determine_edge_thresholds(
 ]:
     gene_lengths = get_sequence_lengths(fasta_directory, files)
     file_pairs = [(file1, file2) for file1 in files for file2 in files]
+
+    if search_results is not None:
+        # In-memory path: process sequentially (results already computed)
+        results_list = []
+        total_tasks = len(file_pairs)
+        for idx, pair in enumerate(file_pairs):
+            res = process_pair_edge_thresholds(
+                pair, output_directory, gene_lengths,
+                evalue_threshold, search_results=search_results,
+            )
+            results_list.append(res)
+            progress = ((idx + 1) / total_tasks) * 100
+            sys.stdout.write(f"\r          {progress:.2f}% complete")
+            sys.stdout.flush()
+
+        final_reciprocal_thresholds = {}
+        final_pairwise_corr = {}
+
+        for thresholds, pairwise_corr in results_list:
+            for key, value in thresholds.items():
+                if key in final_reciprocal_thresholds:
+                    final_reciprocal_thresholds[key] = min(
+                        final_reciprocal_thresholds[key], value
+                    )
+                else:
+                    final_reciprocal_thresholds[key] = value
+            for key, value in pairwise_corr.items():
+                if key in final_pairwise_corr:
+                    final_pairwise_corr[key] = (
+                        final_pairwise_corr[key] + value
+                    ) / 2
+                else:
+                    final_pairwise_corr[key] = value
+
+        return gene_lengths, final_reciprocal_thresholds, final_pairwise_corr
 
     pool = multiprocessing.Pool(processes=cpu)
     completed_tasks = multiprocessing.Value("i", 0)
@@ -364,10 +420,14 @@ def process_pair_determine_network_edges(
     gene_lengths,
     pairwise_rbh_corr,
     reciprocal_best_hit_thresholds,
-    evalue_threshold
+    evalue_threshold,
+    search_results=None,
 ):
     edges = {}
-    res = read_and_filter_phmmer_output(pair[0], pair[1], output_directory, evalue_threshold)
+    res = read_and_filter_phmmer_output(
+        pair[0], pair[1], output_directory, evalue_threshold,
+        search_results=search_results,
+    )
 
     for hit in res:
         query_length = gene_lengths[hit["query_name"]]
@@ -395,10 +455,37 @@ def determine_network_edges(
     reciprocal_best_hit_thresholds: Dict[np.str_, np.float64],
     evalue_threshold: float,
     cpu: int,
+    search_results=None,
 ) -> Dict[frozenset, np.float64]:
 
     gene_lengths = {str(row["name"]): int(row["length"]) for row in gene_lengths}
     file_pairs = [(file1, file2) for file1 in files for file2 in files]
+
+    if search_results is not None:
+        # In-memory path: process sequentially
+        edges = {}
+        total_tasks = len(file_pairs)
+        for idx, pair in enumerate(file_pairs):
+            edge_result = process_pair_determine_network_edges(
+                pair, output_directory, gene_lengths,
+                pairwise_rbh_corr, reciprocal_best_hit_thresholds,
+                evalue_threshold, search_results=search_results,
+            )
+            for key, value in edge_result.items():
+                if key in edges:
+                    edges[key] = max(edges[key], value)
+                else:
+                    edges[key] = value
+            progress = ((idx + 1) / total_tasks) * 100
+            sys.stdout.write(f"\r          {progress:.2f}% complete")
+            sys.stdout.flush()
+
+        with open(f"{output_directory}/orthohmm_working_res/orthohmm_edges.txt", "w") as file:
+            for key, value in edges.items():
+                key_str = "\t".join(map(str, key))
+                file.write(f"{key_str}\t{value}\n")
+
+        return edges
 
     total_tasks = len(file_pairs)
     completed_tasks = multiprocessing.Value("i", 0)
