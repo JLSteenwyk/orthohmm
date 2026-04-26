@@ -303,6 +303,25 @@ def create_parser() -> ArgumentParser:
     )
 
     optional.add_argument(
+        "--clustering",
+        type=str,
+        required=False,
+        choices=["leiden", "mcl"],
+        default="leiden",
+        help=SUPPRESS,
+        metavar="clustering",
+    )
+
+    optional.add_argument(
+        "--cpm_resolution",
+        type=float,
+        required=False,
+        default=0.1,
+        help=SUPPRESS,
+        metavar="cpm_resolution",
+    )
+
+    optional.add_argument(
         "-h",
         "--help",
         action="help",

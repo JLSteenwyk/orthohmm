@@ -8,6 +8,7 @@ from typing import Union
 
 from .args_processing import process_args
 from .externals import (
+    execute_leiden,
     execute_mcl,
     execute_phmmer_search,
 )
@@ -44,6 +45,8 @@ def execute(
     substitution_matrix: SubstitutionMatrix,
     evalue_threshold: float,
     search_mode: str = "builtin",
+    clustering: str = "leiden",
+    cpm_resolution: float = 0.1,
     **kwargs,
 ) -> None:
     # for reporting runtime duration to user
@@ -153,12 +156,18 @@ def execute(
     current_step += 1
 
     print(f"Step {current_step}/{total_steps}: Conducting clustering")
-    execute_mcl(
-        mcl,
-        inflation_value,
-        cpu,
-        output_directory,
-    )
+    if clustering == "mcl":
+        execute_mcl(
+            mcl,
+            inflation_value,
+            cpu,
+            output_directory,
+        )
+    else:
+        execute_leiden(
+            cpm_resolution,
+            output_directory,
+        )
     singletons, og_cn, ogs_dat, single_copy_ogs = \
         generate_orthogroup_clusters_file(
             output_directory,

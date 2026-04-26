@@ -71,17 +71,34 @@ def process_args(args) -> dict:
 
     single_copy_threshold = float(args.single_copy_threshold) if args.single_copy_threshold is not None else 0.5
 
-    if args.mcl:
-        mcl = args.mcl
-        if not shutil.which(mcl):
-            logger.warning(f"mcl can't be found at {mcl}.")
-            sys.exit()
+    clustering = getattr(args, "clustering", None) or "leiden"
+    cpm_resolution = getattr(args, "cpm_resolution", None)
+    if cpm_resolution is None:
+        cpm_resolution = 0.1
+
+    # MCL is only required when the user explicitly opts into it. The default
+    # `leiden` clustering uses Python igraph + leidenalg (pip-installed).
+    if clustering == "mcl":
+        if args.mcl:
+            mcl = args.mcl
+            if not shutil.which(mcl):
+                logger.warning(f"mcl can't be found at {mcl}.")
+                sys.exit()
+        else:
+            if find_executable("mcl"):
+                mcl = "mcl"
+            else:
+                logger.warning("mcl can't be found. Provide path with the -m argument or add path to PATH variable")
+                sys.exit()
     else:
-        if find_executable("mcl"):
+        # Leiden mode: mcl is optional. Resolve it if available so legacy
+        # callers passing --mcl still get a sensible value back.
+        if args.mcl:
+            mcl = args.mcl
+        elif find_executable("mcl"):
             mcl = "mcl"
         else:
-            logger.warning("mcl can't be found. Provide path with the -m argument or add path to PATH variable")
-            sys.exit()
+            mcl = "mcl"  # placeholder; never invoked in leiden mode
 
     inflation_value = args.inflation_value or 1.5
 
@@ -105,4 +122,6 @@ def process_args(args) -> dict:
         substitution_matrix=substitution_matrix,
         evalue_threshold=evalue_threshold,
         search_mode=search_mode,
+        clustering=clustering,
+        cpm_resolution=float(cpm_resolution),
     )

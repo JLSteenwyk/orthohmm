@@ -28,6 +28,8 @@ def args():
         substitution_matrix=SubstitutionMatrix.blosum62,
         evalue=0.0001,
         search_mode="builtin",
+        clustering="leiden",
+        cpm_resolution=0.1,
     )
     return Namespace(**kwargs)
 
@@ -53,7 +55,10 @@ class TestArgsProcessing(object):
             process_args(args)
 
     def test_process_args_mcl_not_installed(self, args):
+        # mcl-missing only fails when the user explicitly opts into MCL
+        # clustering; the default leiden path has no external mcl dep.
         args.mcl = "mcl-that-dne"
+        args.clustering = "mcl"
         with pytest.raises(SystemExit):
             process_args(args)
 
@@ -122,5 +127,7 @@ class TestArgsProcessing(object):
             "substitution_matrix",
             "evalue_threshold",
             "search_mode",
+            "clustering",
+            "cpm_resolution",
         ]
         assert sorted(res.keys()) == sorted(expected_keys)

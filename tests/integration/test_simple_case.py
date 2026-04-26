@@ -29,6 +29,7 @@ class TestSimpleCase(object):
             substitution_matrix=SubstitutionMatrix.blosum62,
             evalue_threshold=0.0001,
             search_mode="phmmer",
+            clustering="mcl",
         )
 
         execute(**kwargs)
@@ -135,6 +136,7 @@ class TestSimpleCase(object):
             substitution_matrix=SubstitutionMatrix.blosum62,
             evalue_threshold=0.0001,
             search_mode="phmmer",
+            clustering="mcl",
         )
 
         execute(**kwargs)
@@ -166,6 +168,7 @@ class TestSimpleCase(object):
             substitution_matrix=SubstitutionMatrix.blosum62,
             evalue_threshold=0.0001,
             search_mode="phmmer",
+            clustering="mcl",
         )
 
         execute(**kwargs)
@@ -197,6 +200,7 @@ class TestSimpleCase(object):
             substitution_matrix=SubstitutionMatrix.blosum62,
             evalue_threshold=0.0001,
             search_mode="phmmer",
+            clustering="mcl",
         )
 
         execute(**kwargs)
@@ -228,6 +232,7 @@ class TestSimpleCase(object):
             substitution_matrix=SubstitutionMatrix.blosum62,
             evalue_threshold=0.0001,
             search_mode="phmmer",
+            clustering="mcl",
         )
 
         execute(**kwargs)
@@ -265,6 +270,7 @@ class TestSimpleCase(object):
             substitution_matrix=SubstitutionMatrix.blosum62,
             evalue_threshold=0.0001,
             search_mode="phmmer",
+            clustering="mcl",
         )
 
         execute(**kwargs)
@@ -324,6 +330,7 @@ class TestSimpleCase(object):
             substitution_matrix=SubstitutionMatrix.blosum62,
             evalue_threshold=0.0001,
             search_mode="phmmer",
+            clustering="mcl",
         )
 
         execute(**kwargs)

@@ -61,6 +61,12 @@ Numbers from the bacterial scaling benchmark (RefSeq, 32 threads, 1 TB
 node). The legacy `phmmer` path is still available via
 `--search_mode phmmer` but is no longer the default.
 
+v0.3.0 also swaps **MCL → Leiden CPM** for the clustering step. On
+identical RBNH edges from OrthoBench 2020, Leiden CPM (resolution=0.1)
+hits **F=65.7%** vs MCL's best **F=62.4%** at inflation=1.5. MCL remains
+available via `--clustering mcl` for users who need bit-for-bit parity
+with prior releases.
+
 ---
 
 <br />
@@ -73,10 +79,9 @@ This documentation covers downloading and installing OrthoHMM. Details about eac
 
 1\. Install external dependencies
 
-OrthoHMM has one external dependency — [mcl](https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions) — that can't be installed using pip.
-Download and install it from the website linked above.
+As of v0.3.0, OrthoHMM has **no required external binaries** — clustering uses Leiden via `igraph`/`leidenalg` (installed by pip), and the search engine is built in.
 
-[HMMER](http://hmmer.org/download.html) is optional and only required if you opt into the legacy `--search_mode phmmer` pipeline; the default built-in search engine has no HMMER dependency.
+[HMMER](http://hmmer.org/download.html) is optional and only required if you opt into the legacy `--search_mode phmmer` pipeline; [mcl](https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions) is optional and only required if you opt into `--clustering mcl`.
 
 <br>
 
@@ -97,10 +102,9 @@ orthohmm <path_to_directory_of_FASTA_files>
 
 1\. Install external dependencies
 
-OrthoHMM has one external dependency — [mcl](https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions) — that can't be installed using pip.
-Download and install it from the website linked above.
+As of v0.3.0, OrthoHMM has **no required external binaries** — clustering uses Leiden via `igraph`/`leidenalg` (installed by pip), and the search engine is built in.
 
-[HMMER](http://hmmer.org/download.html) is optional and only required if you opt into the legacy `--search_mode phmmer` pipeline; the default built-in search engine has no HMMER dependency.
+[HMMER](http://hmmer.org/download.html) is optional and only required if you opt into the legacy `--search_mode phmmer` pipeline; [mcl](https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions) is optional and only required if you opt into `--clustering mcl`.
 
 <br>
 

@@ -8,6 +8,16 @@ Change log
 
 Major changes to OrthoHMM are summarized here.
 
+**0.3.0**
+Replaced the external MCL binary with in-process Leiden CPM clustering
+via ``igraph`` + ``leidenalg``. Both libraries are pip-installed wheels,
+so OrthoHMM no longer requires any external executable when run with
+defaults. Leiden CPM (resolution=0.1) beats MCL on the OrthoBench 2020
+reference: F=65.7% vs MCL's best F=62.4% (inflation=1.5) on the
+identical RBNH edge set. New flags: ``--clustering {leiden, mcl}`` and
+``--cpm_resolution``. Selecting ``--clustering mcl`` reverts to the
+prior MCL pipeline and re-introduces the external ``mcl`` requirement.
+
 **0.2.0**
 Added a built-in profile HMM + k-mer prefilter search engine that
 replaces the ``phmmer`` subprocess. The new engine is the default and

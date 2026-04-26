@@ -36,6 +36,8 @@ This remaining sections describe the various features and options of OrthoHMM.
 - `Substitution Matrix`_
 - CPU_
 - `Single-Copy Threshold`_
+- Clustering_
+- `CPM Resolution`_
 - MCL_
 - `Inflation Value`_
 - `Stop`_
@@ -177,13 +179,56 @@ as a fraction - that is, 0.5.
 
 |
 
+.. _Clustering:
+
+|
+
+Clustering
+----------
+Selects which clustering algorithm groups RBNH edges into orthogroups.
+Two choices:
+
+* ``leiden`` *(default)*: Leiden community detection with the Constant
+  Potts Model. Pure Python via ``igraph`` and ``leidenalg``; no external
+  binary required. Best F-score on OrthoBench 2020 (F=65.7% at
+  resolution=0.1).
+* ``mcl``: Markov Cluster algorithm via the external ``mcl`` binary.
+  Best F-score on the same edge set is 62.4% (inflation=1.5). Retained
+  for parity with prior releases.
+
+.. code-block:: shell
+
+	# default — Leiden CPM
+	orthohmm <path_to_directory_of_FASTA_files>
+
+	# opt into the legacy MCL pipeline
+	orthohmm <path_to_directory_of_FASTA_files> --clustering mcl
+
+.. _`CPM Resolution`:
+
+|
+
+CPM Resolution
+--------------
+Resolution parameter for Leiden CPM clustering. Lower values produce
+larger, more permissive orthogroups; higher values produce smaller,
+stricter ones. The default is ``0.1``, which gave the best F-score on
+the OrthoBench reference.
+
+.. code-block:: shell
+
+	# tighter clustering
+	orthohmm <path_to_directory_of_FASTA_files> --cpm_resolution 0.3
+
 .. _MCL:
+
+|
 
 MCL
 ---
-Path to mcl executable from MCL software. By default, mcl
-is assumed to be in the PATH variable; in other words,
-mcl can be evoked by typing `mcl`.
+Path to mcl executable. Only consulted when ``--clustering mcl`` is set.
+By default, mcl is assumed to be in the PATH variable; in other words,
+mcl can be evoked by typing ``mcl``.
 
 .. code-block:: shell
 
@@ -266,6 +311,10 @@ All options
 | -p/\-\-phhmer                | Path to phmmer from HMMER suite. Default: phmmer                               |
 +------------------------------+--------------------------------------------------------------------------------+
 | \-\-search_mode              | Search engine: ``builtin`` (default) or ``phmmer``                             |
++------------------------------+--------------------------------------------------------------------------------+
+| \-\-clustering               | Clustering algorithm: ``leiden`` (default) or ``mcl``                          |
++------------------------------+--------------------------------------------------------------------------------+
+| \-\-cpm_resolution           | Leiden CPM resolution. Default: 0.1                                            |
 +------------------------------+--------------------------------------------------------------------------------+
 | -x/\-\-substitution_matrix   | Specify substitution matrix to use for generating the HMMs. Default: BLOSUM62  |
 +------------------------------+--------------------------------------------------------------------------------+
