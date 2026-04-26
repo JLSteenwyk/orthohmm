@@ -81,6 +81,15 @@
 <span id="id1"></span><h1>Change log<a class="headerlink" href="#change-log" title="Link to this heading"></a></h1>
 <hr class="docutils" />
 <p>Major changes to OrthoHMM are summarized here.</p>
+<p><strong>0.3.0</strong>
+Replaced the external MCL binary with in-process Leiden CPM clustering
+via <code class="docutils literal notranslate"><span class="pre">igraph</span></code> + <code class="docutils literal notranslate"><span class="pre">leidenalg</span></code>. Both libraries are pip-installed wheels,
+so OrthoHMM no longer requires any external executable when run with
+defaults. Leiden CPM (resolution=0.1) beats MCL on the OrthoBench 2020
+reference: F=65.7% vs MCL’s best F=62.4% (inflation=1.5) on the
+identical RBNH edge set. New flags: <code class="docutils literal notranslate"><span class="pre">--clustering</span> <span class="pre">{leiden,</span> <span class="pre">mcl}</span></code> and
+<code class="docutils literal notranslate"><span class="pre">--cpm_resolution</span></code>. Selecting <code class="docutils literal notranslate"><span class="pre">--clustering</span> <span class="pre">mcl</span></code> reverts to the
+prior MCL pipeline and re-introduces the external <code class="docutils literal notranslate"><span class="pre">mcl</span></code> requirement.</p>
 <p><strong>0.2.0</strong>
 Added a built-in profile HMM + k-mer prefilter search engine that
 replaces the <code class="docutils literal notranslate"><span class="pre">phmmer</span></code> subprocess. The new engine is the default and

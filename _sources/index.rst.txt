@@ -41,12 +41,14 @@ Quick Start
 -----------
 1\. Install external dependencies
 
-OrthoHMM has one external dependency — |mclLink|_ — that can't be installed using pip.
-Download and install it from the website linked above.
+As of v0.3.0, OrthoHMM has **no required external binaries** — both the
+search engine (built-in profile HMM) and the clustering step (Leiden
+CPM via ``igraph``/``leidenalg``) are pure-Python wheels installed by
+pip.
 
 |hmmerLink|_ is optional and only required if you opt into the legacy
-``--search_mode phmmer`` pipeline; the default built-in search engine has
-no HMMER dependency.
+``--search_mode phmmer`` pipeline. |mclLink|_ is optional and only
+required if you opt into ``--clustering mcl``.
 
 .. _hmmerLink: http://hmmer.org/download.html
 .. |hmmerLink| replace:: HMMER
@@ -79,12 +81,14 @@ Below are more detailed instructions, including alternative installation methods
 
 1\. Install external dependencies
 
-OrthoHMM has one external dependency — |mclLink|_ — that can't be installed using pip.
-Download and install it from the website linked above.
+As of v0.3.0, OrthoHMM has **no required external binaries** — both the
+search engine (built-in profile HMM) and the clustering step (Leiden
+CPM via ``igraph``/``leidenalg``) are pure-Python wheels installed by
+pip.
 
 |hmmerLink|_ is optional and only required if you opt into the legacy
-``--search_mode phmmer`` pipeline; the default built-in search engine has
-no HMMER dependency.
+``--search_mode phmmer`` pipeline. |mclLink|_ is optional and only
+required if you opt into ``--clustering mcl``.
 
 2a\. Install OrthoHMM from pip
 
