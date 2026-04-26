@@ -28,6 +28,7 @@ class TestLongNames(object):
             stop=None,
             substitution_matrix=SubstitutionMatrix.blosum62,
             evalue_threshold=0.0001,
+            search_mode="phmmer",
         )
 
         execute(**kwargs)
