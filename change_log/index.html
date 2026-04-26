@@ -81,6 +81,17 @@
 <span id="id1"></span><h1>Change log<a class="headerlink" href="#change-log" title="Link to this heading"></a></h1>
 <hr class="docutils" />
 <p>Major changes to OrthoHMM are summarized here.</p>
+<p><strong>0.2.0</strong>
+Added a built-in profile HMM + k-mer prefilter search engine that
+replaces the <code class="docutils literal notranslate"><span class="pre">phmmer</span></code> subprocess. The new engine is the default and
+substantially reduces wall time and memory on multi-proteome datasets
+(see the bacterial scaling table on the home page). HMMER is now
+optional — only required when opting into <code class="docutils literal notranslate"><span class="pre">--search_mode</span> <span class="pre">phmmer</span></code>.
+Also adds the WAG and LG substitution matrices, drops Python 3.9
+support (now requires Python 3.10+), and adds optional C/AVX2 + CUDA
+kernels that are compiled at install time when a suitable toolchain
+is available; otherwise the runtime falls back to a Numba
+implementation transparently.</p>
 <p><strong>0.1.1</strong>
 There is no longer a limit on the length of gene names for single-copy orthologous genes.</p>
 <p><strong>0.1.0</strong>

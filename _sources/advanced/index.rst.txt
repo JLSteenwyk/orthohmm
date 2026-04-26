@@ -30,6 +30,7 @@ This remaining sections describe the various features and options of OrthoHMM.
 
 - `Input Directory`_
 - `Output Directory`_
+- `Search Mode`_
 - Phmmer_
 - `E-value Threshold`_
 - `Substitution Matrix`_
@@ -72,20 +73,45 @@ directory of FASTA files. (-o, --output_directory)
 	# specifying output directory
 	orthohmm <path_to_directory_of_FASTA_files> -o <output_directory>
 
+.. _`Search Mode`:
+
+|
+
+Search Mode
+-----------
+Selects which sequence search engine OrthoHMM uses for the all-vs-all
+homology step. Two choices:
+
+* ``builtin`` *(default)*: a built-in profile HMM + k-mer prefilter
+  scorer. No external HMMER dependency. Faster on bacterial proteomes
+  and the recommended path for large datasets.
+* ``phmmer``: legacy path that shells out to the ``phmmer`` binary from
+  the HMMER suite. Requires HMMER to be installed and reachable on
+  ``PATH`` (or via ``-p``).
+
+.. code-block:: shell
+
+	# default — uses the built-in engine
+	orthohmm <path_to_directory_of_FASTA_files>
+
+	# opt into the legacy phmmer pipeline
+	orthohmm <path_to_directory_of_FASTA_files> --search_mode phmmer
+
 .. _Phmmer:
 
 |
 
 Phmmer
 ------
-Path to phmmer executable from HMMER suite. By default, phmmer
-is assumed to be in the PATH variable; in other words, phmmer
-can be evoked by typing `phmmer`.
+Path to phmmer executable from HMMER suite. Only consulted when
+``--search_mode phmmer`` is set. By default, phmmer is assumed to be
+in the PATH variable; in other words, phmmer can be evoked by typing
+``phmmer``.
 
 .. code-block:: shell
 
-	# specify path to phmmer executable 
-	orthohmm <path_to_directory_of_FASTA_files> -p /path/to/phmmer
+	# specify path to phmmer executable
+	orthohmm <path_to_directory_of_FASTA_files> --search_mode phmmer -p /path/to/phmmer
 
 .. _`E-value Threshold`:
 
@@ -112,7 +138,7 @@ Substitution Matrix
 Residue alignment probabilities will be determined from the
 specified substitution matrix. Supported substitution matrices
 include: BLOSUM45, BLOSUM50, BLOSUM62, BLOSUM80, BLOSUM90,
-PAM30, PAM70, PAM120, and PAM240. The default is BLOSUM62.
+PAM30, PAM70, PAM120, PAM240, WAG, and LG. The default is BLOSUM62.
 
 .. code-block:: shell
 
@@ -238,6 +264,8 @@ All options
 | -o/\-\-output_directory      | Output directory name. Default: same directory as directory of FASTA files     |
 +------------------------------+--------------------------------------------------------------------------------+
 | -p/\-\-phhmer                | Path to phmmer from HMMER suite. Default: phmmer                               |
++------------------------------+--------------------------------------------------------------------------------+
+| \-\-search_mode              | Search engine: ``builtin`` (default) or ``phmmer``                             |
 +------------------------------+--------------------------------------------------------------------------------+
 | -x/\-\-substitution_matrix   | Specify substitution matrix to use for generating the HMMs. Default: BLOSUM62  |
 +------------------------------+--------------------------------------------------------------------------------+

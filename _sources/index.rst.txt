@@ -15,13 +15,25 @@ If you found OrthoHMM useful, please cite *OrthoHMM: Improved Inference of Ortho
 
 |
 
-.. warning::
+Performance
+-----------
 
-   **OrthoHMM is currently too slow for broad-scale application.**
-   Runtime scales poorly with the number and size of input proteomes, making it
-   impractical for large or genome-wide datasets. We are actively developing
-   heuristics to substantially improve performance. Until then, please consider
-   this limitation before investing time in large analyses.
+As of v0.2.0, OrthoHMM ships a built-in profile HMM + k-mer prefilter
+search engine that replaces the ``phmmer`` subprocess. It scales to
+100 bacterial proteomes (~352K total proteins) on a single 32-core node:
+
+============  ============  ==========  =============
+proteomes     wall time     peak RAM    orthogroups
+============  ============  ==========  =============
+5             13 s          0.29 GB     1,196
+20            4 min         0.44 GB     8,680
+60            28 min        1.65 GB     19,029
+100           77 min        4.67 GB     27,328
+============  ============  ==========  =============
+
+Numbers from the bacterial scaling benchmark (RefSeq, 32 threads).
+The legacy ``phmmer`` path is still available via
+``--search_mode phmmer`` but is no longer the default.
 
 |
 
@@ -29,8 +41,12 @@ Quick Start
 -----------
 1\. Install external dependencies
 
-OrthoHMM has two external dependencies — |hmmerLink|_ and |mclLink|_ — that can't be installed using pip.
-Download and install these programs from their respective websites, which are linked in the previous sentence.
+OrthoHMM has one external dependency — |mclLink|_ — that can't be installed using pip.
+Download and install it from the website linked above.
+
+|hmmerLink|_ is optional and only required if you opt into the legacy
+``--search_mode phmmer`` pipeline; the default built-in search engine has
+no HMMER dependency.
 
 .. _hmmerLink: http://hmmer.org/download.html
 .. |hmmerLink| replace:: HMMER
@@ -63,8 +79,12 @@ Below are more detailed instructions, including alternative installation methods
 
 1\. Install external dependencies
 
-OrthoHMM has two external dependencies — |hmmerLink|_ and |mclLink|_ — that can't be installed using pip.
-Download and install these programs from their respective websites, which are linked in the previous sentence.
+OrthoHMM has one external dependency — |mclLink|_ — that can't be installed using pip.
+Download and install it from the website linked above.
+
+|hmmerLink|_ is optional and only required if you opt into the legacy
+``--search_mode phmmer`` pipeline; the default built-in search engine has
+no HMMER dependency.
 
 2a\. Install OrthoHMM from pip
 
