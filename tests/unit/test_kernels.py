@@ -186,8 +186,12 @@ def test_pair_align_self_gives_top_score():
 
 def test_center_star_msa_aligns_identical_sequences():
     """Identical sequences should produce an un-gapped MSA."""
-    from orthohmm.search.msa_center_star import center_star_msa
+    from orthohmm.search.msa_center_star import center_star_msa, _load_pair_align
     from orthohmm.search.matrices import get_matrix
+    try:
+        _load_pair_align()
+    except OSError:
+        pytest.skip("pair_align.so not built")
     sm = get_matrix("BLOSUM62")
     seq = "MVLSPADKTNVKAAWGKVGAHAGEYGAEALERMFLSFPTTKTYFPHFDLSHGSAQVKGHGK"
     seqs = [seq, seq, seq]

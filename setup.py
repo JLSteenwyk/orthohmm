@@ -83,6 +83,17 @@ def build_cpu_kernels(csrc_dir: Path) -> list[str]:
         return []
 
     cc = "gcc" if shutil.which("gcc") else "cc"
+    # OpenMP is required: every kernel uses #include <omp.h> and calls
+    # omp_set_num_threads / omp_get_thread_num. macOS clang rejects -fopenmp
+    # unless libomp is installed via homebrew; if the probe fails, skip the
+    # kernel build entirely — the runtime falls back to Numba.
+    if not _gcc_supports("-fopenmp", cc=cc):
+        print("[orthohmm] -fopenmp not supported by this compiler; skipping "
+              "CPU kernel build. Install libomp (`brew install libomp` on "
+              "macOS) and reinstall for native-speed kernels. Falling back "
+              "to Numba.", file=sys.stderr)
+        return []
+
     base = [cc, "-O3", "-fopenmp", "-shared", "-fPIC"]
     # -march=native and -mavx2 aren't universally available; probe.
     march_native = _gcc_supports("-march=native", cc=cc)
