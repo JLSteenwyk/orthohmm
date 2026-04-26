@@ -1,9 +1,12 @@
-from distutils.spawn import find_executable
 import shutil
 import logging
 import multiprocessing
 import os.path
 import sys
+
+# distutils.spawn was removed in Python 3.12; shutil.which is the
+# standard-library replacement that's been available since Python 3.3.
+find_executable = shutil.which
 
 from .helpers import (
     StartStep,
