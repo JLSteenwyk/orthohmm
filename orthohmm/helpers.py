@@ -168,6 +168,11 @@ def read_and_filter_phmmer_output(
 
 
 def normalize_by_gene_length(res_merged: np.ndarray) -> np.ndarray:
+    # Sum-of-lengths normalization for phmmer bit scores. Phmmer's bit
+    # scores already include implicit length correction via Karlin–Altschul,
+    # so dividing by sqrt(L_q*L_t) over-normalizes and degrades clustering.
+    # The built-in Viterbi engine pre-normalizes its raw integer scores
+    # inside results_to_phmmer_format (geometric-mean) and skips this step.
     res_merged[:, 3] = res_merged[:, 3] / (res_merged[:, 4] + res_merged[:, 5])
 
     return res_merged
@@ -280,8 +285,11 @@ def process_pair_edge_thresholds(
     fwd_res_merged = merge_with_gene_lengths(fwd_res, gene_lengths)
     rev_res_merged = merge_with_gene_lengths(rev_res, gene_lengths)
 
-    fwd_res_merged = normalize_by_gene_length(fwd_res_merged)
-    rev_res_merged = normalize_by_gene_length(rev_res_merged)
+    # Built-in search results are pre-normalized by sqrt(L_q*L_t) inside the
+    # engine; phmmer bit scores still need the legacy sum-of-lengths step.
+    if search_results is None:
+        fwd_res_merged = normalize_by_gene_length(fwd_res_merged)
+        rev_res_merged = normalize_by_gene_length(rev_res_merged)
 
     best_hits_A_to_B = get_best_hits_and_scores(fwd_res_merged)
     best_hits_B_to_A = get_best_hits_and_scores(rev_res_merged)
@@ -429,10 +437,18 @@ def process_pair_determine_network_edges(
         search_results=search_results,
     )
 
+    # Phmmer bit scores: divide by (L_q + L_t) — Karlin–Altschul-style sum
+    # normalization. Built-in Viterbi raw scores are pre-normalized by
+    # sqrt(L_q*L_t) inside results_to_phmmer_format, so skip the divisor here.
+    use_builtin = search_results is not None
     for hit in res:
         query_length = gene_lengths[hit["query_name"]]
         target_length = gene_lengths[hit["target_name"]]
-        norm_score = (hit["score"] / (query_length + target_length)) / pairwise_rbh_corr[frozenset(pair)]
+        if use_builtin:
+            length_norm = 1.0  # already applied in the search engine
+        else:
+            length_norm = float(query_length + target_length)
+        norm_score = (hit["score"] / length_norm) / pairwise_rbh_corr[frozenset(pair)]
 
         try:
             if norm_score >= reciprocal_best_hit_thresholds[hit["query_name"]]:

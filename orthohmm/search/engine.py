@@ -281,13 +281,24 @@ def search_species_pair(
         dtype="U50",
     )
 
+    # Geometric-mean length normalization: divides each Viterbi raw score by
+    # sqrt(L_q * L_t). This matches the bacterial-scaling driver and the
+    # OrthoBench paper benchmarks. Downstream helpers (helpers.process_pair_
+    # edge_thresholds, helpers.process_pair_network_edges) skip their
+    # length-correction step when these search results are present, so the
+    # normalization is applied exactly once.
+    target_lens_for_pairs = target_species.lengths[pairs[:, 1]].astype(np.float64)
+    norm_denom = np.sqrt(query_lens_for_pairs.astype(np.float64) * target_lens_for_pairs)
+    norm_denom = np.where(norm_denom == 0, 1.0, norm_denom)
+    normalized_scores = scores.astype(np.float64) / norm_denom
+
     return SpeciesPairResults(
         query_species=query_species.species_file,
         target_species=target_species.species_file,
         target_names=target_names,
         query_names=query_names,
         evalues=evalues,
-        scores=scores.astype(np.float64),
+        scores=normalized_scores,
     )
 
 
