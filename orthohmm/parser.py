@@ -314,9 +314,9 @@ def create_parser() -> ArgumentParser:
 
     optional.add_argument(
         "--cpm_resolution",
-        type=float,
+        type=str,
         required=False,
-        default=0.1,
+        default="0.1",
         help=SUPPRESS,
         metavar="cpm_resolution",
     )

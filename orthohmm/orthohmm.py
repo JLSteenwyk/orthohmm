@@ -46,7 +46,7 @@ def execute(
     evalue_threshold: float,
     search_mode: str = "builtin",
     clustering: str = "leiden",
-    cpm_resolution: float = 0.1,
+    cpm_resolution=0.1,
     **kwargs,
 ) -> None:
     # for reporting runtime duration to user

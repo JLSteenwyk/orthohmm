@@ -74,7 +74,15 @@ def process_args(args) -> dict:
     clustering = getattr(args, "clustering", None) or "leiden"
     cpm_resolution = getattr(args, "cpm_resolution", None)
     if cpm_resolution is None:
-        cpm_resolution = 0.1
+        cpm_resolution = "0.1"
+    # Pass-through string. The library accepts a float or "auto"; we
+    # validate/coerce here so downstream sees a clean value.
+    if isinstance(cpm_resolution, str) and cpm_resolution.lower() != "auto":
+        try:
+            cpm_resolution = float(cpm_resolution)
+        except ValueError:
+            logger.warning(f"--cpm_resolution must be a float or 'auto', got {cpm_resolution!r}")
+            sys.exit()
 
     # MCL is only required when the user explicitly opts into it. The default
     # `leiden` clustering uses Python igraph + leidenalg (pip-installed).
@@ -123,5 +131,5 @@ def process_args(args) -> dict:
         evalue_threshold=evalue_threshold,
         search_mode=search_mode,
         clustering=clustering,
-        cpm_resolution=float(cpm_resolution),
+        cpm_resolution=cpm_resolution,
     )

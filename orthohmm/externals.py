@@ -100,7 +100,7 @@ def check_if_mcl_command_completed(
 
 
 def execute_leiden(
-    cpm_resolution: float,
+    cpm_resolution,
     output_directory: str,
 ) -> None:
     """In-process Leiden CPM clustering on the ABC edge file.
@@ -110,9 +110,15 @@ def execute_leiden(
     no external binary dependency — both libraries ship as wheels via pip.
     Output format matches what `execute_mcl` produces so downstream parsing
     in helpers.generate_orthogroup_clusters_file is unchanged.
+
+    cpm_resolution may be a positive float, or the string "auto" to set γ
+    to the 10th percentile of edge weights. Auto adapts to input diversity:
+    closely-related species (bacteria) land near γ≈0.1, cross-kingdom
+    eukaryotic inputs near γ≈0.001 — without manual tuning.
     """
     import igraph
     import leidenalg
+    import numpy as np
 
     edges_path = f"{output_directory}/orthohmm_working_res/orthohmm_edges.txt"
     out_path = f"{output_directory}/orthohmm_working_res/orthohmm_edges_clustered.txt"
@@ -132,12 +138,22 @@ def execute_leiden(
             edges.append((ai, bi))
             weights.append(w)
 
+    if isinstance(cpm_resolution, str) and cpm_resolution.lower() == "auto":
+        if weights:
+            gamma = float(np.percentile(weights, 10))
+        else:
+            gamma = 0.1
+        print(f"          CPM auto: γ={gamma:.5f} from {len(weights):,} edges",
+              flush=True)
+    else:
+        gamma = float(cpm_resolution)
+
     g = igraph.Graph(n=len(name_to_id), edges=edges, directed=False)
     g.es["weight"] = weights
 
     part = leidenalg.find_partition(
         g, leidenalg.CPMVertexPartition,
-        weights="weight", resolution_parameter=cpm_resolution,
+        weights="weight", resolution_parameter=gamma,
     )
 
     id_to_name = [None] * len(name_to_id)
