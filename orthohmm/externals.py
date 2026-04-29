@@ -139,11 +139,20 @@ def execute_leiden(
             weights.append(w)
 
     if isinstance(cpm_resolution, str) and cpm_resolution.lower() == "auto":
+        # γ = 4 × min(edge_weight). The minimum surviving edge weight is
+        # the weakest credible RBNH edge; γ slightly above it means even
+        # the weakest credible edges still count toward keeping clusters
+        # together, while pure noise (which would have weight ≪ min) is
+        # filtered out by the RBNH step that came earlier.
+        # Empirically beats both the fixed default (cpm=0.1) and a
+        # 10th-percentile heuristic on both OrthoBench (homogeneous,
+        # closely-related bilaterians) and the cross-kingdom Three
+        # Kingdoms benchmark.
         if weights:
-            gamma = float(np.percentile(weights, 10))
+            gamma = 4.0 * float(min(weights))
         else:
             gamma = 0.1
-        print(f"          CPM auto: γ={gamma:.5f} from {len(weights):,} edges",
+        print(f"          CPM auto: γ={gamma:.5f} (4 × min of {len(weights):,} edge weights)",
               flush=True)
     else:
         gamma = float(cpm_resolution)
