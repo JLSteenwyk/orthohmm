@@ -139,20 +139,20 @@ def execute_leiden(
             weights.append(w)
 
     if isinstance(cpm_resolution, str) and cpm_resolution.lower() == "auto":
-        # γ = 4 × min(edge_weight). The minimum surviving edge weight is
-        # the weakest credible RBNH edge; γ slightly above it means even
-        # the weakest credible edges still count toward keeping clusters
-        # together, while pure noise (which would have weight ≪ min) is
-        # filtered out by the RBNH step that came earlier.
-        # Empirically beats both the fixed default (cpm=0.1) and a
-        # 10th-percentile heuristic on both OrthoBench (homogeneous,
-        # closely-related bilaterians) and the cross-kingdom Three
-        # Kingdoms benchmark.
-        if weights:
-            gamma = 4.0 * float(min(weights))
+        # γ = 4 × min(edge_weight) over edges with strictly positive weight.
+        # The weakest credible RBNH edge anchors the resolution; γ slightly
+        # above it lets even weak credible edges count toward keeping
+        # clusters together. We filter out exact-zero weights — they're
+        # numerical artifacts (Viterbi raw score 0) and would collapse
+        # γ to 0, which causes Leiden to try to merge everything and
+        # crash on large graphs.
+        positive = [w for w in weights if w > 0]
+        if positive:
+            gamma = 4.0 * float(min(positive))
         else:
             gamma = 0.1
-        print(f"          CPM auto: γ={gamma:.5f} (4 × min of {len(weights):,} edge weights)",
+        print(f"          CPM auto: γ={gamma:.6g} "
+              f"(4 × min over {len(positive):,} positive of {len(weights):,} edges)",
               flush=True)
     else:
         gamma = float(cpm_resolution)
