@@ -130,13 +130,14 @@ The legacy <code class="docutils literal notranslate"><span class="pre">phmmer</
 <section id="quick-start">
 <h1>Quick Start<a class="headerlink" href="#quick-start" title="Link to this heading"></a></h1>
 <p>1. Install external dependencies</p>
-<p>As of v0.3.0, OrthoHMM has <strong>no required external binaries</strong> — both the
-search engine (built-in profile HMM) and the clustering step (Leiden
-CPM via <code class="docutils literal notranslate"><span class="pre">igraph</span></code>/<code class="docutils literal notranslate"><span class="pre">leidenalg</span></code>) are pure-Python wheels installed by
-pip.</p>
+<p>OrthoHMM has one required external binary — <a class="reference external" href="https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions">mcl</a> — used for the
+default clustering step. Install via your package manager
+(<code class="docutils literal notranslate"><span class="pre">apt</span> <span class="pre">install</span> <span class="pre">mcl</span></code>, <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">mcl</span></code>, <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">bioconda</span>
+<span class="pre">mcl</span></code>) or from source.</p>
 <p><a class="reference external" href="http://hmmer.org/download.html">HMMER</a> is optional and only required if you opt into the legacy
-<code class="docutils literal notranslate"><span class="pre">--search_mode</span> <span class="pre">phmmer</span></code> pipeline. <a class="reference external" href="https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions">mcl</a> is optional and only
-required if you opt into <code class="docutils literal notranslate"><span class="pre">--clustering</span> <span class="pre">mcl</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">--search_mode</span> <span class="pre">phmmer</span></code> pipeline. If you’d rather avoid the mcl
+external dependency, <code class="docutils literal notranslate"><span class="pre">--clustering</span> <span class="pre">leiden</span> <span class="pre">--cpm_resolution</span> <span class="pre">auto</span></code> uses
+pure-Python <code class="docutils literal notranslate"><span class="pre">igraph</span></code>/<code class="docutils literal notranslate"><span class="pre">leidenalg</span></code> and is competitive on most inputs.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -154,13 +155,14 @@ orthohmm<span class="w"> </span>&lt;path_to_directory_of_FASTA_files&gt;
 <p><strong>1) Installation</strong></p>
 <p><strong>If you are having trouble installing OrthoHMM, please contact the lead developer, Jacob L. Steenwyk, via |contactSteenwyk|_ or |blueskySteenwyk|_ to get help.</strong></p>
 <p>1. Install external dependencies</p>
-<p>As of v0.3.0, OrthoHMM has <strong>no required external binaries</strong> — both the
-search engine (built-in profile HMM) and the clustering step (Leiden
-CPM via <code class="docutils literal notranslate"><span class="pre">igraph</span></code>/<code class="docutils literal notranslate"><span class="pre">leidenalg</span></code>) are pure-Python wheels installed by
-pip.</p>
+<p>OrthoHMM has one required external binary — <a class="reference external" href="https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions">mcl</a> — used for the
+default clustering step. Install via your package manager
+(<code class="docutils literal notranslate"><span class="pre">apt</span> <span class="pre">install</span> <span class="pre">mcl</span></code>, <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">mcl</span></code>, <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">bioconda</span>
+<span class="pre">mcl</span></code>) or from source.</p>
 <p><a class="reference external" href="http://hmmer.org/download.html">HMMER</a> is optional and only required if you opt into the legacy
-<code class="docutils literal notranslate"><span class="pre">--search_mode</span> <span class="pre">phmmer</span></code> pipeline. <a class="reference external" href="https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions">mcl</a> is optional and only
-required if you opt into <code class="docutils literal notranslate"><span class="pre">--clustering</span> <span class="pre">mcl</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">--search_mode</span> <span class="pre">phmmer</span></code> pipeline. If you’d rather avoid the mcl
+external dependency, <code class="docutils literal notranslate"><span class="pre">--clustering</span> <span class="pre">leiden</span> <span class="pre">--cpm_resolution</span> <span class="pre">auto</span></code> uses
+pure-Python <code class="docutils literal notranslate"><span class="pre">igraph</span></code>/<code class="docutils literal notranslate"><span class="pre">leidenalg</span></code> and is competitive on most inputs.</p>
 <p>2a. Install OrthoHMM from pip</p>
 <p>To install using <em>pip</em>, we recommend building a virtual environment to avoid software dependency issues. To do so, execute the following commands:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># create virtual environment</span>
