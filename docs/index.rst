@@ -41,14 +41,15 @@ Quick Start
 -----------
 1\. Install external dependencies
 
-As of v0.3.0, OrthoHMM has **no required external binaries** — both the
-search engine (built-in profile HMM) and the clustering step (Leiden
-CPM via ``igraph``/``leidenalg``) are pure-Python wheels installed by
-pip.
+OrthoHMM has one required external binary — |mclLink|_ — used for the
+default clustering step. Install via your package manager
+(``apt install mcl``, ``brew install mcl``, ``conda install -c bioconda
+mcl``) or from source.
 
 |hmmerLink|_ is optional and only required if you opt into the legacy
-``--search_mode phmmer`` pipeline. |mclLink|_ is optional and only
-required if you opt into ``--clustering mcl``.
+``--search_mode phmmer`` pipeline. If you'd rather avoid the mcl
+external dependency, ``--clustering leiden --cpm_resolution auto`` uses
+pure-Python ``igraph``/``leidenalg`` and is competitive on most inputs.
 
 .. _hmmerLink: http://hmmer.org/download.html
 .. |hmmerLink| replace:: HMMER
@@ -81,14 +82,15 @@ Below are more detailed instructions, including alternative installation methods
 
 1\. Install external dependencies
 
-As of v0.3.0, OrthoHMM has **no required external binaries** — both the
-search engine (built-in profile HMM) and the clustering step (Leiden
-CPM via ``igraph``/``leidenalg``) are pure-Python wheels installed by
-pip.
+OrthoHMM has one required external binary — |mclLink|_ — used for the
+default clustering step. Install via your package manager
+(``apt install mcl``, ``brew install mcl``, ``conda install -c bioconda
+mcl``) or from source.
 
 |hmmerLink|_ is optional and only required if you opt into the legacy
-``--search_mode phmmer`` pipeline. |mclLink|_ is optional and only
-required if you opt into ``--clustering mcl``.
+``--search_mode phmmer`` pipeline. If you'd rather avoid the mcl
+external dependency, ``--clustering leiden --cpm_resolution auto`` uses
+pure-Python ``igraph``/``leidenalg`` and is competitive on most inputs.
 
 2a\. Install OrthoHMM from pip
 

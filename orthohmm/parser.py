@@ -307,7 +307,7 @@ def create_parser() -> ArgumentParser:
         type=str,
         required=False,
         choices=["leiden", "mcl"],
-        default="leiden",
+        default="mcl",
         help=SUPPRESS,
         metavar="clustering",
     )

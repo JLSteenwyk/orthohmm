@@ -71,7 +71,7 @@ def process_args(args) -> dict:
 
     single_copy_threshold = float(args.single_copy_threshold) if args.single_copy_threshold is not None else 0.5
 
-    clustering = getattr(args, "clustering", None) or "leiden"
+    clustering = getattr(args, "clustering", None) or "mcl"
     cpm_resolution = getattr(args, "cpm_resolution", None)
     if cpm_resolution is None:
         cpm_resolution = "0.1"

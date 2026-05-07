@@ -45,7 +45,7 @@ def execute(
     substitution_matrix: SubstitutionMatrix,
     evalue_threshold: float,
     search_mode: str = "builtin",
-    clustering: str = "leiden",
+    clustering: str = "mcl",
     cpm_resolution=0.1,
     **kwargs,
 ) -> None:

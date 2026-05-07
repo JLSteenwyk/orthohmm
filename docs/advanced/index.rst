@@ -188,21 +188,24 @@ Clustering
 Selects which clustering algorithm groups RBNH edges into orthogroups.
 Two choices:
 
-* ``leiden`` *(default)*: Leiden community detection with the Constant
-  Potts Model. Pure Python via ``igraph`` and ``leidenalg``; no external
-  binary required. Best F-score on OrthoBench 2020 (F=65.7% at
-  resolution=0.1).
-* ``mcl``: Markov Cluster algorithm via the external ``mcl`` binary.
-  Best F-score on the same edge set is 62.4% (inflation=1.5). Retained
-  for parity with prior releases.
+* ``mcl`` *(default)*: Markov Cluster algorithm with inflation=1.5,
+  via the external ``mcl`` binary. Robust across phylogenetic diversity
+  ranges — never collapses to all-singletons even on cross-kingdom
+  inputs. F=62.4% on OrthoBench, F=88.4% on Three Kingdoms.
+* ``leiden``: Leiden community detection with the Constant Potts Model.
+  Pure Python via ``igraph`` and ``leidenalg``; no external binary
+  required. Higher peak F-score on closely-related inputs (F=65.7-65.9%
+  on OrthoBench), but the fixed default ``cpm_resolution=0.1`` collapses
+  on cross-kingdom data — pair with ``--cpm_resolution auto`` for
+  robustness, which yields F=90.7% on Three Kingdoms.
 
 .. code-block:: shell
 
-	# default — Leiden CPM
+	# default — MCL inflation=1.5
 	orthohmm <path_to_directory_of_FASTA_files>
 
-	# opt into the legacy MCL pipeline
-	orthohmm <path_to_directory_of_FASTA_files> --clustering mcl
+	# Leiden with auto-tuned CPM resolution
+	orthohmm <path_to_directory_of_FASTA_files> --clustering leiden --cpm_resolution auto
 
 .. _`CPM Resolution`:
 
@@ -312,9 +315,9 @@ All options
 +------------------------------+--------------------------------------------------------------------------------+
 | \-\-search_mode              | Search engine: ``builtin`` (default) or ``phmmer``                             |
 +------------------------------+--------------------------------------------------------------------------------+
-| \-\-clustering               | Clustering algorithm: ``leiden`` (default) or ``mcl``                          |
+| \-\-clustering               | Clustering algorithm: ``mcl`` (default) or ``leiden``                          |
 +------------------------------+--------------------------------------------------------------------------------+
-| \-\-cpm_resolution           | Leiden CPM resolution. Default: 0.1                                            |
+| \-\-cpm_resolution           | Leiden CPM resolution: float or ``auto``. Default: 0.1                         |
 +------------------------------+--------------------------------------------------------------------------------+
 | -x/\-\-substitution_matrix   | Specify substitution matrix to use for generating the HMMs. Default: BLOSUM62  |
 +------------------------------+--------------------------------------------------------------------------------+
