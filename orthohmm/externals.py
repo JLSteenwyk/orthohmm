@@ -94,7 +94,10 @@ def check_if_mcl_command_completed(
 
     with open(file_to_check, "r") as file:
         lines = file.readlines()
-        if lines and lines[-1].strip() == "    ( http://link.aip.org/link/?SJMAEL/30/121/1 )":
+        # The MCL completion sentinel is the citation footer line. We compare
+        # against the stripped form because mcl prints the line with leading
+        # whitespace that varies between versions.
+        if lines and lines[-1].strip() == "( http://link.aip.org/link/?SJMAEL/30/121/1 )":
             return True
     return False
 
