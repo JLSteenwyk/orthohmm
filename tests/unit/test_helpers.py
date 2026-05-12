@@ -1,4 +1,7 @@
 """Unit tests for orthohmm/helpers.py (pure-function utilities)."""
+import multiprocessing
+import os
+
 import numpy as np
 import pytest
 
@@ -6,13 +9,22 @@ from orthohmm.helpers import (
     StartStep,
     StopStep,
     SubstitutionMatrix,
+    correct_by_phylogenetic_distance,
+    generate_orthogroup_clusters_file,
+    generate_orthogroup_files,
     generate_phmmer_cmds,
     get_all_fasta_entries,
+    get_best_hits_and_scores,
     get_orthogroup_information,
     get_sequence_lengths,
     get_singletons,
+    get_threshold_per_gene,
     merge_with_gene_lengths,
     normalize_by_gene_length,
+    process_pair_determine_network_edges,
+    process_pair_edge_thresholds,
+    read_and_filter_phmmer_output,
+    update_progress,
 )
 
 
@@ -246,3 +258,301 @@ class TestMergeAndNormalize:
         normalized = normalize_by_gene_length(merged.copy())
         # 200 / (100 + 200) = 0.6667
         assert float(normalized[0, 3]) == pytest.approx(0.6667, rel=1e-3)
+
+
+# ─── read_and_filter_phmmer_output ──────────────────────────────────────
+
+
+def _write_phmmer_file(directory, taxon_a, taxon_b, rows):
+    """Helper: write a phmmer-formatted tblout file."""
+    wd = os.path.join(directory, "orthohmm_working_res")
+    os.makedirs(wd, exist_ok=True)
+    path = os.path.join(wd, f"{taxon_a}_2_{taxon_b}.phmmerout.txt")
+    with open(path, "w") as f:
+        f.write("# phmmer tabular output\n")
+        for r in rows:
+            # phmmer tblout columns: target_name(0) accession(1) query_name(2)
+            # accession(3) evalue(4) score(5) ...
+            f.write(
+                f"{r['target']}\t-\t{r['query']}\t-\t{r['evalue']}\t{r['score']}\n"
+            )
+        f.write("# [ok]\n")
+    return path
+
+
+class TestReadAndFilterPhmmerOutput:
+    def test_reads_phmmer_file_and_filters_by_evalue(self, tmp_path):
+        _write_phmmer_file(str(tmp_path), "a.fa", "b.fa", [
+            {"target": "t1", "query": "q1", "evalue": "1e-10", "score": "100"},
+            {"target": "t2", "query": "q2", "evalue": "1e-3",  "score": "30"},
+            {"target": "t3", "query": "q3", "evalue": "1e-50", "score": "200"},
+        ])
+        res = read_and_filter_phmmer_output(
+            "a.fa", "b.fa", str(tmp_path), evalue_threshold=1e-4,
+        )
+        # 1e-3 fails (not < 1e-4); other two pass
+        assert len(res) == 2
+        assert sorted(res["target_name"].tolist()) == ["t1", "t3"]
+
+    def test_search_results_path_returns_pair_results(self, tmp_path):
+        from orthohmm.search.engine import SpeciesPairResults
+        spr = SpeciesPairResults(
+            query_species="b.fa", target_species="a.fa",
+            target_names=np.array(["t1", "t2"], dtype="U50"),
+            query_names=np.array(["q1", "q2"], dtype="U50"),
+            evalues=np.array([1e-10, 1e-3]),
+            scores=np.array([100.0, 30.0]),
+        )
+        search_results = {("a.fa", "b.fa"): spr}
+        res = read_and_filter_phmmer_output(
+            "a.fa", "b.fa", str(tmp_path), evalue_threshold=1e-4,
+            search_results=search_results,
+        )
+        # results_to_phmmer_format filters by threshold → only t1 passes
+        assert len(res) == 1
+        assert res["target_name"][0] == "t1"
+
+    def test_search_results_missing_pair_returns_empty(self, tmp_path):
+        res = read_and_filter_phmmer_output(
+            "a.fa", "b.fa", str(tmp_path), evalue_threshold=1e-4,
+            search_results={},
+        )
+        assert len(res) == 0
+        assert res.dtype.names == ("target_name", "query_name", "evalue", "score")
+
+
+# ─── get_best_hits_and_scores ───────────────────────────────────────────
+
+
+class TestGetBestHitsAndScores:
+    def test_highest_scoring_target_kept_per_query(self):
+        # 6-column merged: target, query, evalue, score, t_len, q_len
+        merged = np.array([
+            ["t1", "q1", 1e-10, 100.0, 100, 100],
+            ["t2", "q1", 1e-50, 200.0, 100, 100],  # better hit for q1
+            ["t3", "q2", 1e-5,   50.0, 100, 100],
+        ], dtype=object)
+        best = get_best_hits_and_scores(merged)
+        assert best["q1"]["target"] == "t2"
+        assert best["q1"]["score"] == 200.0
+        assert best["q2"]["target"] == "t3"
+
+    def test_empty_input_yields_empty_mapping(self):
+        merged = np.empty((0, 6), dtype=object)
+        best = get_best_hits_and_scores(merged)
+        assert dict(best) == {}
+
+
+# ─── get_threshold_per_gene ─────────────────────────────────────────────
+
+
+class TestGetThresholdPerGene:
+    def test_rbh_pair_threshold_is_score_average(self):
+        a_to_b = {"a1": {"target": "b1", "score": 0.8}}
+        b_to_a = {"b1": {"target": "a1", "score": 0.6}}
+        score_a = {"a1": 0.8}
+        score_b = {"b1": 0.6}
+        thresh = get_threshold_per_gene(a_to_b, b_to_a, score_a, score_b, {})
+        # Reciprocal pair: threshold = (0.8 + 0.6) / 2 = 0.7
+        assert thresh["a1"] == pytest.approx(0.7)
+
+    def test_non_reciprocal_hit_skipped(self):
+        # b1's best is b2, not a1 → not reciprocal
+        a_to_b = {"a1": {"target": "b1", "score": 0.8}}
+        b_to_a = {"b1": {"target": "b2", "score": 0.6}}
+        thresh = get_threshold_per_gene(
+            a_to_b, b_to_a, {"a1": 0.8}, {"b1": 0.6}, {},
+        )
+        assert thresh == {}
+
+    def test_minimum_score_wins_across_pairs(self):
+        a_to_b = {"a1": {"target": "b1", "score": 1.0}}
+        b_to_a = {"b1": {"target": "a1", "score": 1.0}}
+        # Pre-existing threshold higher than current → keep current
+        thresh = get_threshold_per_gene(
+            a_to_b, b_to_a, {"a1": 0.5}, {"b1": 0.5},
+            reciprocal_best_hit_thresholds={"a1": 0.9},
+        )
+        assert thresh["a1"] == 0.5
+        # Pre-existing threshold lower than current → keep existing
+        thresh2 = get_threshold_per_gene(
+            a_to_b, b_to_a, {"a1": 0.5}, {"b1": 0.5},
+            reciprocal_best_hit_thresholds={"a1": 0.1},
+        )
+        assert thresh2["a1"] == 0.1
+
+
+# ─── correct_by_phylogenetic_distance ───────────────────────────────────
+
+
+class TestCorrectByPhylogeneticDistance:
+    def test_score_divided_by_mean_rbh_correction(self):
+        a_to_b = {
+            "a1": {"target": "b1", "score": 1.0},
+            "a2": {"target": "b2", "score": 2.0},
+        }
+        b_to_a = {
+            "b1": {"target": "a1", "score": 1.0},
+            "b2": {"target": "a2", "score": 2.0},
+        }
+        # RBH scores = [(1+1)/2, (2+2)/2] = [1, 2] → mean = 1.5
+        sc_ab, sc_ba, corr = correct_by_phylogenetic_distance(
+            a_to_b, b_to_a, ("a.fa", "b.fa"), {},
+        )
+        assert corr[frozenset(("a.fa", "b.fa"))] == pytest.approx(1.5)
+        assert sc_ab["a1"] == pytest.approx(1.0 / 1.5)
+        assert sc_ba["b2"] == pytest.approx(2.0 / 1.5)
+
+    def test_existing_corr_averaged_with_new(self):
+        a_to_b = {"a1": {"target": "b1", "score": 2.0}}
+        b_to_a = {"b1": {"target": "a1", "score": 2.0}}
+        pair = ("a.fa", "b.fa")
+        pre = {frozenset(pair): 1.0}  # prior correction = 1.0
+        _, _, corr = correct_by_phylogenetic_distance(
+            a_to_b, b_to_a, pair, pre,
+        )
+        # New mean = 2.0; averaged with prior 1.0 → 1.5
+        assert corr[frozenset(pair)] == pytest.approx(1.5)
+
+
+# ─── update_progress ────────────────────────────────────────────────────
+
+
+class TestUpdateProgress:
+    def test_increments_counter_and_writes_percent(self, capsys):
+        completed = multiprocessing.Value("i", 0)
+        lock = multiprocessing.Lock()
+        update_progress(lock, completed, total_tasks=4)
+        update_progress(lock, completed, total_tasks=4)
+        assert completed.value == 2
+        out = capsys.readouterr().out
+        # Latest write is 2/4 = 50.00%
+        assert "50.00%" in out
+
+
+# ─── process_pair_edge_thresholds (file-based path) ─────────────────────
+
+
+class TestProcessPairEdgeThresholds:
+    def test_reciprocal_pair_produces_threshold(self, tmp_path):
+        # Two species, one RBH pair → threshold should be populated
+        _write_phmmer_file(str(tmp_path), "a.fa", "b.fa", [
+            {"target": "b1", "query": "a1", "evalue": "1e-50", "score": "100"},
+        ])
+        _write_phmmer_file(str(tmp_path), "b.fa", "a.fa", [
+            {"target": "a1", "query": "b1", "evalue": "1e-50", "score": "100"},
+        ])
+        gl = np.array(
+            [("a.fa", "a1", 100), ("b.fa", "b1", 100)],
+            dtype=[("spp", object), ("name", object), ("length", int)],
+        )
+        thresholds, corr = process_pair_edge_thresholds(
+            ("a.fa", "b.fa"), str(tmp_path), gl, evalue_threshold=1e-4,
+        )
+        # Normalized score = 100/(100+100) = 0.5; correction = 0.5;
+        # corrected score = 1.0; threshold (avg of both directions) = 1.0
+        assert "a1" in thresholds
+        assert corr[frozenset(("a.fa", "b.fa"))] == pytest.approx(0.5)
+
+
+# ─── process_pair_determine_network_edges ───────────────────────────────
+
+
+class TestProcessPairDetermineNetworkEdges:
+    def test_hit_above_threshold_yields_edge(self, tmp_path):
+        _write_phmmer_file(str(tmp_path), "a.fa", "b.fa", [
+            {"target": "b1", "query": "a1", "evalue": "1e-50", "score": "100"},
+        ])
+        # gene_lengths comes through this function as a {name: length} dict
+        gene_lengths = {"a1": 100, "b1": 100}
+        pairwise_rbh_corr = {frozenset(("a.fa", "b.fa")): 0.5}
+        thresholds = {"a1": 0.5}
+        edges = process_pair_determine_network_edges(
+            ("a.fa", "b.fa"), str(tmp_path), gene_lengths,
+            pairwise_rbh_corr, thresholds, evalue_threshold=1e-4,
+        )
+        # 100 / (100+100) / 0.5 = 1.0, which is >= threshold 0.5
+        assert frozenset(("a1", "b1")) in edges
+        assert edges[frozenset(("a1", "b1"))] == pytest.approx(1.0)
+
+    def test_self_hit_excluded(self, tmp_path):
+        # query == target → frozenset has length 1, should be skipped
+        _write_phmmer_file(str(tmp_path), "a.fa", "a.fa", [
+            {"target": "a1", "query": "a1", "evalue": "1e-50", "score": "100"},
+        ])
+        gene_lengths = {"a1": 100}
+        edges = process_pair_determine_network_edges(
+            ("a.fa", "a.fa"), str(tmp_path), gene_lengths,
+            {frozenset(("a.fa", "a.fa")): 0.5}, {"a1": 0.0},
+            evalue_threshold=1e-4,
+        )
+        assert edges == {}
+
+
+# ─── generate_orthogroup_clusters_file ──────────────────────────────────
+
+
+def _make_minimal_outdir(tmp_path, edges_clustered_lines):
+    wd = tmp_path / "orthohmm_working_res"
+    wd.mkdir(parents=True, exist_ok=True)
+    (wd / "orthohmm_edges_clustered.txt").write_text(
+        "\n".join(edges_clustered_lines) + "\n"
+    )
+    return wd
+
+
+class TestGenerateOrthogroupClustersFile:
+    def test_reads_clusters_and_assigns_og_ids(self, tmp_path):
+        _make_minimal_outdir(tmp_path, ["a1 b1", "a2 b2"])
+        # Two species with one gene each per cluster
+        fasta_dir = tmp_path / "fasta"
+        fasta_dir.mkdir()
+        (fasta_dir / "a.fa").write_text(">a1\nAAA\n>a2\nAAA\n")
+        (fasta_dir / "b.fa").write_text(">b1\nBBB\n>b2\nBBB\n")
+        gl = np.array(
+            [("a.fa", "a1", 3), ("a.fa", "a2", 3),
+             ("b.fa", "b1", 3), ("b.fa", "b2", 3)],
+            dtype=[("spp", object), ("name", object), ("length", int)],
+        )
+        singletons, og_cn, ogs_dat, sc_ogs = generate_orthogroup_clusters_file(
+            output_directory=str(tmp_path),
+            gene_lengths=gl,
+            files=["a.fa", "b.fa"],
+            single_copy_threshold=0.5,
+            fasta_directory=str(fasta_dir),
+        )
+        # No singletons — every gene is in a cluster
+        assert singletons == []
+        # Two single-copy OGs (one gene per species per cluster)
+        assert sorted(sc_ogs) == ["OG0", "OG1"]
+        # Clusters file written at output_directory root
+        assert (tmp_path / "orthohmm_orthogroups.txt").exists()
+
+
+# ─── generate_orthogroup_files ──────────────────────────────────────────
+
+
+class TestGenerateOrthogroupFiles:
+    def test_writes_expected_files(self, tmp_path):
+        # Layout the working subdirectory the writer functions expect
+        (tmp_path / "orthohmm_working_res").mkdir(parents=True, exist_ok=True)
+        (tmp_path / "orthohmm_orthogroups").mkdir(parents=True, exist_ok=True)
+        (tmp_path / "orthohmm_single_copy_orthogroups").mkdir(parents=True, exist_ok=True)
+
+        gl = np.array(
+            [("a.fa", "a1", 3), ("b.fa", "b1", 3)],
+            dtype=[("spp", object), ("name", object), ("length", int)],
+        )
+        og_cn = {"files:": ["a.fa", "b.fa"], "OG0:": ["1", "1"]}
+        ogs_dat = {"OG0": [">a1", "AAA", ">b1", "BBB"]}
+        single_copy_ogs = ["OG0"]
+        generate_orthogroup_files(
+            output_directory=str(tmp_path),
+            gene_lengths=gl,
+            og_cn=og_cn,
+            ogs_dat=ogs_dat,
+            single_copy_ogs=single_copy_ogs,
+        )
+        # Copy-number and single-copy-name files written
+        assert (tmp_path / "orthohmm_gene_count.txt").exists()
+        assert (tmp_path / "orthohmm_single_copy_orthogroups.txt").exists()
