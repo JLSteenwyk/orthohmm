@@ -89,6 +89,8 @@ def create_parser() -> ArgumentParser:
                                                     (default: 0.5)
         
         -m, --mcl <path>                            path to mcl software
+                                                    when using
+                                                    --clustering mcl
                                                     (default: mcl)
 
         -i, --inflation_value <float>               mcl inflation parameter
@@ -145,9 +147,9 @@ def create_parser() -> ArgumentParser:
             as a fraction - that is, 0.5.
         
         MCL (-m, --mcl)
-            Path to mcl executable from MCL software. By default, mcl
-            is assumed to be in the PATH variable; in other words,
-            mcl can be evoked by typing `mcl`.
+            Path to mcl executable from MCL software. MCL is optional and
+            only required when using --clustering mcl. By default, mcl is
+            assumed to be in the PATH variable when that mode is selected.
 
         Inflation Value (-i, --inflation_value)
             MCL inflation parameter for clustering genes into orthologous groups.
@@ -307,7 +309,7 @@ def create_parser() -> ArgumentParser:
         type=str,
         required=False,
         choices=["leiden", "mcl"],
-        default="mcl",
+        default="leiden",
         help=SUPPRESS,
         metavar="clustering",
     )

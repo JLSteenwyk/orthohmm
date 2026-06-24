@@ -24,6 +24,8 @@ def write_user_args(
     evalue_threshold: float,
     inflation_value: float,
     search_mode: str = "builtin",
+    clustering: str = "leiden",
+    cpm_resolution=0.1,
 ) -> None:
 
     try:
@@ -42,6 +44,11 @@ def write_user_args(
         "built-in (profile HMM + k-mer prefilter)"
         if search_mode == "builtin"
         else f"phmmer ({phmmer})"
+    )
+    clustering_info = (
+        f"MCL ({mcl}, inflation={inflation_value})"
+        if clustering == "mcl"
+        else f"Leiden CPM (resolution={cpm_resolution})"
     )
 
     print(
@@ -67,8 +74,7 @@ def write_user_args(
     Search engine: {search_info}
     E-value threshold: {evalue_threshold}
     Substitution matrix: {substitution_matrix.value}
-    Path to mcl: {mcl}
-    Inflation value: {inflation_value}
+    Clustering: {clustering_info}
     Single-copy threshold: {single_copy_threshold}
     CPUs: {cpu}
 

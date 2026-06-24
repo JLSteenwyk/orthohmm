@@ -61,18 +61,15 @@ Numbers from the bacterial scaling benchmark (RefSeq, 32 threads, 1 TB
 node). The legacy `phmmer` path is still available via
 `--search_mode phmmer` but is no longer the default.
 
-**Clustering step.** v0.5.0 uses **MCL with inflation=1.5** as the default
-clustering algorithm. We evaluated MCL@1.5 vs Leiden CPM (cpm=0.1, the
-v0.3.x default) vs Leiden CPM with auto-tuned γ across three benchmarks
-spanning closely-related to cross-kingdom proteomes. MCL@1.5 is the only
-choice that never fails: Leiden cpm=0.1 collapses to all-singletons on
-cross-kingdom inputs (Three Kingdoms benchmark, F=0.0003) and
-auto-tuned Leiden over-merges on mixed-domain inputs (QfO functional
-metrics drop). MCL@1.5 trails the best Leiden setting by ~3 pp on
-closely-related sets but is robust across the full diversity range.
+**Clustering step.** OrthoHMM uses **Leiden CPM with resolution=0.1** as
+the default clustering algorithm. This setting is the best local choice for
+the highest-priority accuracy benchmarks: it outperforms MCL@1.5 on
+OrthoBench and is the recommended fixed setting for QfO-style mixed inputs.
+MCL@1.5 remains available as a conservative robustness option for very
+distant cross-kingdom datasets, where fixed Leiden CPM can fragment heavily.
 
-Power users can still opt into Leiden via `--clustering leiden
---cpm_resolution {auto, <float>}`.
+Power users can opt into MCL via `--clustering mcl --inflation_value 1.5`,
+or use adaptive Leiden via `--clustering leiden --cpm_resolution auto`.
 
 ---
 
@@ -86,9 +83,13 @@ This documentation covers downloading and installing OrthoHMM. Details about eac
 
 1\. Install external dependencies
 
-OrthoHMM has one required external binary — [mcl](https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions) — used for the default clustering step. Install via your package manager (`apt install mcl`, `brew install mcl`, `conda install -c bioconda mcl`) or from source.
+OrthoHMM's default pipeline does not require external bioinformatics
+binaries. [MCL](https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions)
+is optional and only required if you opt into `--clustering mcl`. Install it
+via your package manager (`apt install mcl`, `brew install mcl`,
+`conda install -c bioconda mcl`) or from source.
 
-[HMMER](http://hmmer.org/download.html) is optional and only required if you opt into the legacy `--search_mode phmmer` pipeline; the default built-in search engine has no HMMER dependency. If you'd rather avoid mcl entirely, `--clustering leiden --cpm_resolution auto` uses pure-Python `igraph`/`leidenalg` and gives competitive results on most inputs (see Performance).
+[HMMER](http://hmmer.org/download.html) is optional and only required if you opt into the legacy `--search_mode phmmer` pipeline; the default built-in search engine has no HMMER dependency.
 
 <br>
 
@@ -109,9 +110,13 @@ orthohmm <path_to_directory_of_FASTA_files>
 
 1\. Install external dependencies
 
-OrthoHMM has one required external binary — [mcl](https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions) — used for the default clustering step. Install via your package manager (`apt install mcl`, `brew install mcl`, `conda install -c bioconda mcl`) or from source.
+OrthoHMM's default pipeline does not require external bioinformatics
+binaries. [MCL](https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions)
+is optional and only required if you opt into `--clustering mcl`. Install it
+via your package manager (`apt install mcl`, `brew install mcl`,
+`conda install -c bioconda mcl`) or from source.
 
-[HMMER](http://hmmer.org/download.html) is optional and only required if you opt into the legacy `--search_mode phmmer` pipeline; the default built-in search engine has no HMMER dependency. If you'd rather avoid mcl entirely, `--clustering leiden --cpm_resolution auto` uses pure-Python `igraph`/`leidenalg` and gives competitive results on most inputs (see Performance).
+[HMMER](http://hmmer.org/download.html) is optional and only required if you opt into the legacy `--search_mode phmmer` pipeline; the default built-in search engine has no HMMER dependency.
 
 <br>
 

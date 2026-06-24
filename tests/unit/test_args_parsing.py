@@ -55,11 +55,19 @@ class TestArgsProcessing(object):
             process_args(args)
 
     def test_process_args_mcl_not_installed(self, args):
-        # mcl is the default clustering algorithm (v0.5.0+) — missing mcl
-        # binary should cause SystemExit at the strict check.
+        # Missing mcl should fail only when the user opts into MCL
+        # clustering.
         args.mcl = "mcl-that-dne"
+        args.clustering = "mcl"
         with pytest.raises(SystemExit):
             process_args(args)
+
+    def test_process_args_default_clustering_does_not_require_mcl(self, args):
+        args.clustering = None
+        args.mcl = "mcl-that-dne"
+        res = process_args(args)
+        assert res["clustering"] == "leiden"
+        assert res["mcl"] == "mcl-that-dne"
 
     def test_process_args_default_single_copy_threshold(self, args):
         args.single_copy_threshold = None

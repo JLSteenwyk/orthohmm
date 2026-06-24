@@ -27,6 +27,8 @@ class TestWriteUserArgs:
         out = capsys.readouterr().out
         assert "built-in" in out
         assert "BLOSUM62" in out
+        assert "Clustering: Leiden CPM (resolution=0.1)" in out
+        assert "Path to mcl" not in out
         assert "Number of FASTA files: 2" in out
         assert "Step to start analysis: NA" in out
         assert "Step to stop analysis: NA" in out
@@ -49,6 +51,25 @@ class TestWriteUserArgs:
         )
         out = capsys.readouterr().out
         assert "phmmer (/path/to/phmmer)" in out
+
+    def test_mcl_mode_shows_mcl_settings(self, capsys):
+        write_user_args(
+            fasta_directory="/in",
+            output_directory="/out",
+            phmmer="phmmer",
+            mcl="/path/to/mcl",
+            cpu=4,
+            single_copy_threshold=0.5,
+            files=[],
+            start=None,
+            stop=None,
+            substitution_matrix=SubstitutionMatrix.blosum62,
+            evalue_threshold=1e-4,
+            inflation_value=2.0,
+            clustering="mcl",
+        )
+        out = capsys.readouterr().out
+        assert "Clustering: MCL (/path/to/mcl, inflation=2.0)" in out
 
     def test_start_and_stop_step_names_are_printed(self, capsys):
         write_user_args(

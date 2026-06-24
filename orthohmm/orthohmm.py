@@ -45,7 +45,7 @@ def execute(
     substitution_matrix: SubstitutionMatrix,
     evalue_threshold: float,
     search_mode: str = "builtin",
-    clustering: str = "mcl",
+    clustering: str = "leiden",
     cpm_resolution=0.1,
     **kwargs,
 ) -> None:
@@ -94,6 +94,8 @@ def execute(
         evalue_threshold,
         inflation_value,
         search_mode,
+        clustering,
+        cpm_resolution,
     )
 
     # set current step and determine the total number of

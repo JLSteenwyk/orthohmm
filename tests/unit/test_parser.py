@@ -13,3 +13,5 @@ class TestParser(object):
         fasta_directory = "./tests/samples/"
         parsed = parser.parse_args([fasta_directory])
         assert parsed.fasta_directory == fasta_directory
+        assert parsed.clustering == "leiden"
+        assert parsed.cpm_resolution == "0.1"
