@@ -24,12 +24,55 @@ from .helpers import (
     SubstitutionMatrix,
 )
 from .parser import create_parser
+from .refinement import refine_clusters
 from .writer import (
     write_user_args,
     write_output_stats
 )
 
 logger = logging.getLogger(__name__)
+
+
+def _iter_search_hits(search_results, evalue_threshold):
+    for result in search_results.values():
+        for query, target, evalue, score in zip(
+            result.query_names,
+            result.target_names,
+            result.evalues,
+            result.scores,
+        ):
+            if evalue < evalue_threshold:
+                yield str(query), str(target), float(score)
+
+
+def _refine_cluster_file(output_directory, gene_lengths, search_results, edges,
+                         evalue_threshold):
+    if search_results is None:
+        return
+
+    cluster_path = f"{output_directory}/orthohmm_working_res/orthohmm_edges_clustered.txt"
+    clusters = []
+    with open(cluster_path, "r") as handle:
+        for line in handle:
+            genes = line.strip().split()
+            if genes:
+                clusters.append(genes)
+
+    gene_to_species = {
+        str(row["name"]): str(row["spp"])
+        for row in gene_lengths
+    }
+    refined = refine_clusters(
+        clusters,
+        _iter_search_hits(search_results, evalue_threshold),
+        edges,
+        gene_to_species,
+    )
+
+    with open(cluster_path, "w") as handle:
+        for cluster in refined:
+            if cluster:
+                handle.write(" ".join(sorted(cluster)) + "\n")
 
 
 def execute(
@@ -169,6 +212,13 @@ def execute(
         execute_leiden(
             cpm_resolution,
             output_directory,
+        )
+        _refine_cluster_file(
+            output_directory,
+            gene_lengths,
+            search_results,
+            edges,
+            evalue_threshold,
         )
     singletons, og_cn, ogs_dat, single_copy_ogs = \
         generate_orthogroup_clusters_file(
