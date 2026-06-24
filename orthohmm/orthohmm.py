@@ -24,7 +24,7 @@ from .helpers import (
     SubstitutionMatrix,
 )
 from .parser import create_parser
-from .refinement import refine_clusters
+from .refinement import refine_cluster_indices
 from .writer import (
     write_user_args,
     write_output_stats
@@ -33,7 +33,10 @@ from .writer import (
 logger = logging.getLogger(__name__)
 
 
-def _iter_search_hits(search_results, evalue_threshold):
+def _collect_search_hit_arrays(search_results, evalue_threshold, gene_to_id):
+    hit_queries = []
+    hit_targets = []
+    hit_scores = []
     for result in search_results.values():
         for query, target, evalue, score in zip(
             result.query_names,
@@ -42,7 +45,30 @@ def _iter_search_hits(search_results, evalue_threshold):
             result.scores,
         ):
             if evalue < evalue_threshold:
-                yield str(query), str(target), float(score)
+                query_id = gene_to_id.get(str(query))
+                target_id = gene_to_id.get(str(target))
+                if query_id is None or target_id is None:
+                    continue
+                hit_queries.append(query_id)
+                hit_targets.append(target_id)
+                hit_scores.append(float(score))
+    return hit_queries, hit_targets, hit_scores
+
+
+def _collect_edge_arrays(edges, gene_to_id):
+    edge_queries = []
+    edge_targets = []
+    for edge in edges:
+        if len(edge) != 2:
+            continue
+        gene_a, gene_b = tuple(edge)
+        gene_a_id = gene_to_id.get(str(gene_a))
+        gene_b_id = gene_to_id.get(str(gene_b))
+        if gene_a_id is None or gene_b_id is None:
+            continue
+        edge_queries.append(gene_a_id)
+        edge_targets.append(gene_b_id)
+    return edge_queries, edge_targets
 
 
 def _refine_cluster_file(output_directory, gene_lengths, search_results, edges,
@@ -51,28 +77,48 @@ def _refine_cluster_file(output_directory, gene_lengths, search_results, edges,
         return
 
     cluster_path = f"{output_directory}/orthohmm_working_res/orthohmm_edges_clustered.txt"
+    gene_names = [str(row["name"]) for row in gene_lengths]
+    gene_to_id = {gene: idx for idx, gene in enumerate(gene_names)}
+    species_to_id = {}
+    gene_to_species = []
+    for row in gene_lengths:
+        species = str(row["spp"])
+        species_to_id.setdefault(species, len(species_to_id))
+        gene_to_species.append(species_to_id[species])
+
     clusters = []
     with open(cluster_path, "r") as handle:
         for line in handle:
             genes = line.strip().split()
             if genes:
-                clusters.append(genes)
+                cluster_ids = [
+                    gene_to_id[gene]
+                    for gene in genes
+                    if gene in gene_to_id
+                ]
+                if cluster_ids:
+                    clusters.append(cluster_ids)
 
-    gene_to_species = {
-        str(row["name"]): str(row["spp"])
-        for row in gene_lengths
-    }
-    refined = refine_clusters(
+    hit_queries, hit_targets, hit_scores = _collect_search_hit_arrays(
+        search_results,
+        evalue_threshold,
+        gene_to_id,
+    )
+    edge_queries, edge_targets = _collect_edge_arrays(edges, gene_to_id)
+    refined = refine_cluster_indices(
         clusters,
-        _iter_search_hits(search_results, evalue_threshold),
-        edges,
+        hit_queries,
+        hit_targets,
+        hit_scores,
+        edge_queries,
+        edge_targets,
         gene_to_species,
     )
 
     with open(cluster_path, "w") as handle:
         for cluster in refined:
             if cluster:
-                handle.write(" ".join(sorted(cluster)) + "\n")
+                handle.write(" ".join(sorted(gene_names[i] for i in cluster)) + "\n")
 
 
 def execute(

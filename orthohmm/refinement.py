@@ -16,9 +16,12 @@ from collections import Counter, defaultdict
 from dataclasses import dataclass
 from typing import Dict, Iterable, List, Mapping, MutableMapping, Sequence, Tuple
 
+import numpy as np
+
 
 Gene = str
 Cluster = List[Gene]
+IndexCluster = List[int]
 DirectedHit = Tuple[Gene, Gene, float]
 EdgeMap = Mapping[frozenset, float]
 
@@ -42,6 +45,36 @@ class _DSU:
         self.gene_size = [len(c) for c in clusters]
         self.species_counts = [
             Counter(gene_to_species.get(g, "") for g in c)
+            for c in clusters
+        ]
+
+    def find(self, item: int) -> int:
+        while self.parent[item] != item:
+            self.parent[item] = self.parent[self.parent[item]]
+            item = self.parent[item]
+        return item
+
+    def union(self, a: int, b: int, max_genes: int | None = None) -> bool:
+        root_a = self.find(a)
+        root_b = self.find(b)
+        if root_a == root_b:
+            return False
+        if max_genes is not None and self.gene_size[root_a] + self.gene_size[root_b] > max_genes:
+            return False
+        if self.gene_size[root_a] < self.gene_size[root_b]:
+            root_a, root_b = root_b, root_a
+        self.parent[root_b] = root_a
+        self.gene_size[root_a] += self.gene_size[root_b]
+        self.species_counts[root_a].update(self.species_counts[root_b])
+        return True
+
+
+class _IndexedDSU:
+    def __init__(self, clusters: Sequence[Sequence[int]], gene_to_species: Sequence[int]):
+        self.parent = list(range(len(clusters)))
+        self.gene_size = [len(c) for c in clusters]
+        self.species_counts = [
+            Counter(int(gene_to_species[g]) for g in c)
             for c in clusters
         ]
 
@@ -103,6 +136,16 @@ def _component_clusters(clusters: Sequence[Cluster], dsu: _DSU) -> List[Cluster]
     components: MutableMapping[int, Cluster] = defaultdict(list)
     for idx, cluster in enumerate(clusters):
         components[dsu.find(idx)].extend(cluster)
+    return list(components.values())
+
+
+def _component_index_clusters(
+    clusters: Sequence[Sequence[int]],
+    dsu: _IndexedDSU,
+) -> List[IndexCluster]:
+    components: MutableMapping[int, IndexCluster] = defaultdict(list)
+    for idx, cluster in enumerate(clusters):
+        components[dsu.find(idx)].extend(int(gene) for gene in cluster)
     return list(components.values())
 
 
@@ -262,6 +305,265 @@ def _split_high_duplication_clusters(
     return refined
 
 
+def _gene_to_cluster_array(
+    clusters: Sequence[Sequence[int]],
+    total_genes: int,
+) -> np.ndarray:
+    gene_to_cluster = np.full(total_genes, -1, dtype=np.int32)
+    for cluster_idx, cluster in enumerate(clusters):
+        if cluster:
+            gene_to_cluster[np.asarray(cluster, dtype=np.int64)] = cluster_idx
+    return gene_to_cluster
+
+
+def _cluster_pair_arrays(
+    clusters: Sequence[Sequence[int]],
+    hit_queries: Sequence[int],
+    hit_targets: Sequence[int],
+    hit_scores: Sequence[float],
+    total_genes: int,
+) -> Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
+    gene_to_cluster = _gene_to_cluster_array(clusters, total_genes)
+    queries = np.asarray(hit_queries, dtype=np.int64)
+    targets = np.asarray(hit_targets, dtype=np.int64)
+    scores = np.asarray(hit_scores, dtype=np.float64)
+    if len(queries) == 0:
+        empty_i = np.asarray([], dtype=np.int32)
+        empty_f = np.asarray([], dtype=np.float64)
+        return empty_i, empty_i, empty_f, empty_i, empty_f
+
+    source_clusters = gene_to_cluster[queries]
+    target_clusters = gene_to_cluster[targets]
+    valid = (
+        (source_clusters >= 0)
+        & (target_clusters >= 0)
+        & (source_clusters != target_clusters)
+    )
+    if not np.any(valid):
+        empty_i = np.asarray([], dtype=np.int32)
+        empty_f = np.asarray([], dtype=np.float64)
+        return empty_i, empty_i, empty_f, empty_i, empty_f
+
+    source_valid = source_clusters[valid].astype(np.int64, copy=False)
+    target_valid = target_clusters[valid].astype(np.int64, copy=False)
+    score_valid = scores[valid]
+    pair_key = (source_valid << 32) | target_valid
+    order = np.argsort(pair_key, kind="stable")
+    key_sorted = pair_key[order]
+    score_sorted = score_valid[order]
+    run_starts = np.concatenate(
+        ([0], np.nonzero(np.diff(key_sorted))[0] + 1)
+    )
+    run_ends = np.concatenate((run_starts[1:], [len(key_sorted)]))
+    key_unique = key_sorted[run_starts]
+    sources = (key_unique >> 32).astype(np.int32)
+    targets = (key_unique & 0xFFFFFFFF).astype(np.int32)
+    totals = np.add.reduceat(score_sorted, run_starts).astype(np.float64)
+    counts = (run_ends - run_starts).astype(np.int32)
+    max_scores = np.maximum.reduceat(score_sorted, run_starts).astype(np.float64)
+    return sources, targets, totals, counts, max_scores
+
+
+def _indexed_features(
+    sources: np.ndarray,
+    targets: np.ndarray,
+    totals: np.ndarray,
+    counts: np.ndarray,
+    max_scores: np.ndarray,
+    sizes: np.ndarray,
+) -> Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
+    min_sizes = np.maximum(1, np.minimum(sizes[sources], sizes[targets]))
+    avg_scores = totals / np.maximum(1, counts)
+    coverages = counts / min_sizes
+    norms = totals / np.sqrt(np.maximum(1, sizes[sources] * sizes[targets]))
+    return avg_scores, max_scores, coverages, norms
+
+
+def _merge_reciprocal_cluster_best_indexed(
+    sources: np.ndarray,
+    targets: np.ndarray,
+    totals: np.ndarray,
+    counts: np.ndarray,
+    max_scores: np.ndarray,
+    sizes: np.ndarray,
+    dsu: _IndexedDSU,
+    max_merges: int,
+    max_genes: int,
+) -> int:
+    avg_scores, max_scores, coverages, norms = _indexed_features(
+        sources, targets, totals, counts, max_scores, sizes
+    )
+    candidate = (avg_scores >= 0.5) & (max_scores >= 0.8) & (coverages >= 1.0)
+    best_norm = np.full(len(sizes), -np.inf, dtype=np.float64)
+    best_target = np.full(len(sizes), -1, dtype=np.int32)
+    for source, target, norm in zip(sources[candidate], targets[candidate], norms[candidate]):
+        if norm > best_norm[source]:
+            best_norm[source] = norm
+            best_target[source] = target
+
+    reciprocal = []
+    for source, target in enumerate(best_target):
+        if target < 0 or source >= target:
+            continue
+        if best_target[target] == source:
+            reciprocal.append((min(best_norm[source], best_norm[target]), source, int(target)))
+    reciprocal.sort(reverse=True)
+
+    merged = 0
+    for _score, source, target in reciprocal:
+        if merged >= max_merges:
+            break
+        if dsu.union(source, target, max_genes=max_genes):
+            merged += 1
+    return merged
+
+
+def _merge_weak_balanced_rescue_indexed(
+    sources: np.ndarray,
+    targets: np.ndarray,
+    totals: np.ndarray,
+    counts: np.ndarray,
+    max_scores: np.ndarray,
+    sizes: np.ndarray,
+    dsu: _IndexedDSU,
+    max_genes: int,
+) -> int:
+    avg_scores, max_scores, coverages, norms = _indexed_features(
+        sources, targets, totals, counts, max_scores, sizes
+    )
+    pair_sizes = sizes[sources] + sizes[targets]
+    plausible = (
+        (pair_sizes <= min(45, max_genes))
+        & (avg_scores >= 0.22)
+        & (avg_scores <= 0.36)
+        & (max_scores >= 0.65)
+        & (max_scores <= 0.90)
+        & (coverages >= 1.0)
+        & (coverages <= 1.4)
+        & (norms >= 0.20)
+        & (norms <= 0.50)
+    )
+    plausible_lookup = {
+        (int(source) << 32) | int(target): idx
+        for idx, (source, target) in enumerate(zip(sources[plausible], targets[plausible]))
+    }
+    plausible_indices = np.nonzero(plausible)[0]
+    candidates = []
+    for idx in plausible_indices:
+        source = int(sources[idx])
+        target = int(targets[idx])
+        if source >= target:
+            continue
+        reverse_key = (target << 32) | source
+        reverse_pos = plausible_lookup.get(reverse_key)
+        if reverse_pos is None:
+            continue
+        reverse_idx = int(plausible_indices[reverse_pos])
+        root_a = dsu.find(source)
+        root_b = dsu.find(target)
+        if root_a == root_b:
+            continue
+        comp_a = dsu.species_counts[root_a]
+        comp_b = dsu.species_counts[root_b]
+        combined_species = comp_a + comp_b
+        size_a = dsu.gene_size[root_a]
+        size_b = dsu.gene_size[root_b]
+        total_size = size_a + size_b
+        if total_size > 45 or total_size > max_genes:
+            continue
+        size_ratio = max(size_a, size_b) / max(1, min(size_a, size_b))
+        shared_species = _species_overlap(comp_a, comp_b)
+        max_species_count = max(combined_species.values()) if combined_species else 0
+        min_avg = min(avg_scores[idx], avg_scores[reverse_idx])
+        min_max = min(max_scores[idx], max_scores[reverse_idx])
+        min_cov = min(coverages[idx], coverages[reverse_idx])
+        min_norm = min(norms[idx], norms[reverse_idx])
+
+        if (
+            shared_species == 9
+            and max_species_count <= 6
+            and size_ratio <= 1.35
+            and 0.22 <= min_avg <= 0.36
+            and 0.65 <= min_max <= 0.90
+            and 1.0 <= min_cov <= 1.4
+            and 0.20 <= min_norm <= 0.50
+        ):
+            candidates.append((
+                -size_ratio,
+                -abs(min_max - 0.75),
+                min_avg,
+                source,
+                target,
+            ))
+
+    candidates.sort(reverse=True)
+    merged = 0
+    for _ratio, _max_dist, _avg, source, target in candidates:
+        if dsu.union(source, target, max_genes=max_genes):
+            merged += 1
+    return merged
+
+
+def _split_high_duplication_index_clusters(
+    clusters: Sequence[Sequence[int]],
+    rbnh_queries: Sequence[int],
+    rbnh_targets: Sequence[int],
+    gene_to_species: Sequence[int],
+    total_genes: int,
+    min_size: int,
+    min_species_count: int,
+    degree_ratio: float,
+) -> List[IndexCluster]:
+    gene_to_cluster = _gene_to_cluster_array(clusters, total_genes)
+    edge_queries = np.asarray(rbnh_queries, dtype=np.int64)
+    edge_targets = np.asarray(rbnh_targets, dtype=np.int64)
+    degrees = np.zeros(total_genes, dtype=np.int32)
+    if len(edge_queries) > 0:
+        source_clusters = gene_to_cluster[edge_queries]
+        target_clusters = gene_to_cluster[edge_targets]
+        same_cluster = (
+            (source_clusters >= 0)
+            & (source_clusters == target_clusters)
+            & (edge_queries != edge_targets)
+        )
+        if np.any(same_cluster):
+            np.add.at(degrees, edge_queries[same_cluster], 1)
+            np.add.at(degrees, edge_targets[same_cluster], 1)
+
+    species = np.asarray(gene_to_species)
+    refined: List[IndexCluster] = []
+    for cluster in clusters:
+        cluster_list = [int(gene) for gene in cluster]
+        if len(cluster_list) < min_size:
+            refined.append(cluster_list)
+            continue
+        species_counts = Counter(int(species[gene]) for gene in cluster_list)
+        if max(species_counts.values()) < min_species_count:
+            refined.append(cluster_list)
+            continue
+        cluster_degrees = degrees[np.asarray(cluster_list, dtype=np.int64)]
+        max_degree = int(cluster_degrees.max()) if len(cluster_degrees) else 0
+        if max_degree == 0:
+            refined.append(cluster_list)
+            continue
+        keep = [
+            gene
+            for gene, degree in zip(cluster_list, cluster_degrees)
+            if int(degree) * degree_ratio >= max_degree
+        ]
+        cut = [
+            gene
+            for gene, degree in zip(cluster_list, cluster_degrees)
+            if int(degree) * degree_ratio < max_degree
+        ]
+        if len(keep) > 1:
+            refined.append(keep)
+        else:
+            refined.extend([[gene] for gene in keep])
+        refined.extend([[gene] for gene in cut])
+    return refined
+
+
 def refine_clusters(
     clusters: Sequence[Cluster],
     directed_hits: Iterable[DirectedHit],
@@ -311,6 +613,79 @@ def refine_clusters(
         merged,
         rbnh_edges,
         gene_to_species,
+        min_size=split_min_size,
+        min_species_count=split_min_species_count,
+        degree_ratio=split_degree_ratio,
+    )
+
+
+def refine_cluster_indices(
+    clusters: Sequence[Sequence[int]],
+    hit_queries: Sequence[int],
+    hit_targets: Sequence[int],
+    hit_scores: Sequence[float],
+    rbnh_queries: Sequence[int],
+    rbnh_targets: Sequence[int],
+    gene_to_species: Sequence[int],
+    max_reciprocal_merges: int = 150,
+    max_component_genes: int = 80,
+    split_min_size: int = 20,
+    split_min_species_count: int = 20,
+    split_degree_ratio: float = 1.1,
+) -> List[IndexCluster]:
+    """Refine int-indexed clusters without materializing string hit triples."""
+    if not clusters:
+        return []
+    total_genes = len(gene_to_species)
+    sources, targets, totals, counts, max_scores = _cluster_pair_arrays(
+        clusters,
+        hit_queries,
+        hit_targets,
+        hit_scores,
+        total_genes,
+    )
+    if len(sources) == 0:
+        return _split_high_duplication_index_clusters(
+            clusters,
+            rbnh_queries,
+            rbnh_targets,
+            gene_to_species,
+            total_genes,
+            min_size=split_min_size,
+            min_species_count=split_min_species_count,
+            degree_ratio=split_degree_ratio,
+        )
+
+    sizes = np.asarray([len(cluster) for cluster in clusters], dtype=np.int64)
+    dsu = _IndexedDSU(clusters, gene_to_species)
+    _merge_reciprocal_cluster_best_indexed(
+        sources,
+        targets,
+        totals,
+        counts,
+        max_scores,
+        sizes,
+        dsu,
+        max_merges=max_reciprocal_merges,
+        max_genes=max_component_genes,
+    )
+    _merge_weak_balanced_rescue_indexed(
+        sources,
+        targets,
+        totals,
+        counts,
+        max_scores,
+        sizes,
+        dsu,
+        max_genes=max_component_genes,
+    )
+    merged = _component_index_clusters(clusters, dsu)
+    return _split_high_duplication_index_clusters(
+        merged,
+        rbnh_queries,
+        rbnh_targets,
+        gene_to_species,
+        total_genes,
         min_size=split_min_size,
         min_species_count=split_min_species_count,
         degree_ratio=split_degree_ratio,
