@@ -186,6 +186,31 @@ def test_indexed_copy_split_breaks_qfo_scale_high_copy_cluster():
     assert {c[0] for c in refined} == set(cluster)
 
 
+def test_indexed_broad_dataset_skips_cluster_merges():
+    clusters = [[0, 1, 2], [3, 4, 5]] + [[i] for i in range(6, 53)]
+    gene_to_species = [0, 1, 2, 0, 1, 2]
+    gene_to_species.extend(range(3, 50))
+    hit_queries = np.asarray([0, 1, 2, 3, 4, 5], dtype=np.int32)
+    hit_targets = np.asarray([3, 4, 5, 0, 1, 2], dtype=np.int32)
+    hit_scores = np.asarray([1.0, 1.1, 1.2, 1.0, 1.1, 1.2], dtype=np.float32)
+
+    refined = refine_cluster_indices(
+        clusters,
+        hit_queries,
+        hit_targets,
+        hit_scores,
+        np.asarray([], dtype=np.int32),
+        np.asarray([], dtype=np.int32),
+        np.asarray(gene_to_species, dtype=np.int32),
+        max_reciprocal_merges=1,
+    )
+
+    refined_sets = {frozenset(c) for c in refined}
+    assert frozenset(clusters[0]) in refined_sets
+    assert frozenset(clusters[1]) in refined_sets
+    assert frozenset(range(6)) not in refined_sets
+
+
 def test_indexed_copy_split_is_disabled_for_small_species_panels():
     cluster = list(range(150))
     gene_to_species = np.repeat(np.arange(15, dtype=np.int32), 10)
