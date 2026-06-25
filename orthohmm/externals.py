@@ -125,11 +125,17 @@ def execute_leiden(
 
     edges_path = f"{output_directory}/orthohmm_working_res/orthohmm_edges.txt"
     out_path = f"{output_directory}/orthohmm_working_res/orthohmm_edges_clustered.txt"
+    use_auto_resolution = (
+        isinstance(cpm_resolution, str)
+        and cpm_resolution.lower() == "auto"
+    )
 
     # Load edges: ABC format (gene_a \t gene_b \t weight)
     name_to_id = {}
     edges = []
     weights = []
+    min_positive_weight = None
+    positive_weight_count = 0
     with open(edges_path, "r") as f:
         for line in f:
             parts = line.rstrip("\n").split()
@@ -140,8 +146,12 @@ def execute_leiden(
             bi = name_to_id.setdefault(b, len(name_to_id))
             edges.append((ai, bi))
             weights.append(w)
+            if use_auto_resolution and w > 0:
+                positive_weight_count += 1
+                if min_positive_weight is None or w < min_positive_weight:
+                    min_positive_weight = w
 
-    if isinstance(cpm_resolution, str) and cpm_resolution.lower() == "auto":
+    if use_auto_resolution:
         # γ = 4 × min(edge_weight) over edges with strictly positive weight.
         # The weakest credible RBNH edge anchors the resolution; γ slightly
         # above it lets even weak credible edges count toward keeping
@@ -149,13 +159,13 @@ def execute_leiden(
         # numerical artifacts (Viterbi raw score 0) and would collapse
         # γ to 0, which causes Leiden to try to merge everything and
         # crash on large graphs.
-        positive = [w for w in weights if w > 0]
-        if positive:
-            gamma = 4.0 * float(min(positive))
+        if min_positive_weight is not None:
+            gamma = 4.0 * float(min_positive_weight)
         else:
             gamma = 0.1
         print(f"          CPM auto: γ={gamma:.6g} "
-              f"(4 × min over {len(positive):,} positive of {len(weights):,} edges)",
+              f"(4 × min over {positive_weight_count:,} positive of "
+              f"{len(weights):,} edges)",
               flush=True)
     else:
         gamma = float(cpm_resolution)
