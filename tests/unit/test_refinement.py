@@ -211,6 +211,33 @@ def test_indexed_broad_dataset_skips_cluster_merges():
     assert frozenset(range(6)) not in refined_sets
 
 
+def test_indexed_broad_dataset_allows_confident_component_split():
+    cluster = list(range(70))
+    gene_to_species = np.zeros(72, dtype=np.int32)
+    gene_to_species[:14] = 0
+    for idx, gene in enumerate(range(14, 70), 1):
+        gene_to_species[gene] = idx
+    gene_to_species[70] = 1
+    gene_to_species[71] = 2
+
+    refined = refine_cluster_indices(
+        [cluster, [70, 71]],
+        np.asarray([], dtype=np.int32),
+        np.asarray([], dtype=np.int32),
+        np.asarray([], dtype=np.float32),
+        np.asarray([0, 1, 2], dtype=np.int32),
+        np.asarray([1, 2, 0], dtype=np.int32),
+        gene_to_species,
+        rbnh_scores=np.asarray([2.0, 2.0, 2.0], dtype=np.float32),
+    )
+
+    refined_sets = {frozenset(c) for c in refined}
+    assert frozenset([0, 1, 2]) in refined_sets
+    assert frozenset([3]) in refined_sets
+    assert all(frozenset([gene]) in refined_sets for gene in cluster[3:])
+    assert len(refined) == 69
+
+
 def test_indexed_copy_split_is_disabled_for_small_species_panels():
     cluster = list(range(150))
     gene_to_species = np.repeat(np.arange(15, dtype=np.int32), 10)
