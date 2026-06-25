@@ -61,7 +61,8 @@ def _collect_search_hit_arrays(search_results, evalue_threshold, gene_to_id):
 def _collect_edge_arrays(edges, gene_to_id):
     edge_queries = []
     edge_targets = []
-    for edge in edges:
+    edge_scores = []
+    for edge, score in edges.items():
         if len(edge) != 2:
             continue
         gene_a, gene_b = tuple(edge)
@@ -71,7 +72,8 @@ def _collect_edge_arrays(edges, gene_to_id):
             continue
         edge_queries.append(gene_a_id)
         edge_targets.append(gene_b_id)
-    return edge_queries, edge_targets
+        edge_scores.append(float(score))
+    return edge_queries, edge_targets, edge_scores
 
 
 def _refine_cluster_file(output_directory, gene_lengths, search_results, edges,
@@ -111,13 +113,14 @@ def _refine_cluster_file(output_directory, gene_lengths, search_results, edges,
         hit_scores = []
         edge_queries = []
         edge_targets = []
+        edge_scores = []
     else:
         hit_queries, hit_targets, hit_scores = _collect_search_hit_arrays(
             search_results,
             evalue_threshold,
             gene_to_id,
         )
-        edge_queries, edge_targets = _collect_edge_arrays(edges, gene_to_id)
+        edge_queries, edge_targets, edge_scores = _collect_edge_arrays(edges, gene_to_id)
     refined = refine_cluster_indices(
         clusters,
         hit_queries,
@@ -126,6 +129,7 @@ def _refine_cluster_file(output_directory, gene_lengths, search_results, edges,
         edge_queries,
         edge_targets,
         gene_to_species,
+        rbnh_scores=edge_scores,
     )
 
     with open(cluster_path, "w") as handle:

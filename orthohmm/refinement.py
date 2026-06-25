@@ -44,6 +44,7 @@ DEFAULT_PANEL_COPY_SPLIT_MIN_SIZE = 70
 DEFAULT_PANEL_COPY_SPLIT_MAX_SIZE = 150
 DEFAULT_PANEL_COPY_SPLIT_MIN_SPECIES_COUNT = 14
 DEFAULT_PANEL_COPY_SPLIT_MIN_DATASET_SPECIES = 10
+DEFAULT_PANEL_COPY_COMPONENT_MIN_EDGE_WEIGHT = 1.5
 
 
 @dataclass
@@ -267,6 +268,55 @@ def _copy_split_large_index_clusters(
     return refined
 
 
+def _split_string_cluster_by_components(
+    cluster: Sequence[Gene],
+    adjacency: Mapping[Gene, set],
+) -> List[Cluster]:
+    members = set(cluster)
+    seen: set[Gene] = set()
+    components: List[Cluster] = []
+    for gene in cluster:
+        if gene in seen:
+            continue
+        seen.add(gene)
+        stack = [gene]
+        component: Cluster = []
+        while stack:
+            current = stack.pop()
+            component.append(current)
+            for neighbor in adjacency.get(current, set()):
+                if neighbor in members and neighbor not in seen:
+                    seen.add(neighbor)
+                    stack.append(neighbor)
+        components.append(component)
+    return components
+
+
+def _split_index_cluster_by_components(
+    cluster: Sequence[int],
+    adjacency: Mapping[int, set],
+) -> List[IndexCluster]:
+    members = {int(gene) for gene in cluster}
+    seen: set[int] = set()
+    components: List[IndexCluster] = []
+    for gene in cluster:
+        gene = int(gene)
+        if gene in seen:
+            continue
+        seen.add(gene)
+        stack = [gene]
+        component: IndexCluster = []
+        while stack:
+            current = stack.pop()
+            component.append(current)
+            for neighbor in adjacency.get(current, set()):
+                if neighbor in members and neighbor not in seen:
+                    seen.add(neighbor)
+                    stack.append(neighbor)
+        components.append(component)
+    return components
+
+
 def _is_broad_string_dataset(
     gene_to_species: Mapping[Gene, str],
     min_dataset_species: int,
@@ -403,14 +453,19 @@ def _split_high_duplication_clusters(
     panel_copy_split_max_size: int,
     panel_copy_split_min_species_count: int,
     panel_copy_split_min_dataset_species: int,
+    panel_copy_component_min_edge_weight: float,
 ) -> List[Cluster]:
     adjacency: MutableMapping[Gene, set] = defaultdict(set)
-    for edge in rbnh_edges:
+    component_adjacency: MutableMapping[Gene, set] = defaultdict(set)
+    for edge, weight in rbnh_edges.items():
         if len(edge) != 2:
             continue
         gene_a, gene_b = tuple(edge)
         adjacency[gene_a].add(gene_b)
         adjacency[gene_b].add(gene_a)
+        if float(weight) >= panel_copy_component_min_edge_weight:
+            component_adjacency[gene_a].add(gene_b)
+            component_adjacency[gene_b].add(gene_a)
 
     dataset_species_count = len({
         species for species in gene_to_species.values()
@@ -444,7 +499,9 @@ def _split_high_duplication_clusters(
             panel_copy_split_min_dataset_species,
             copy_split_min_dataset_species,
         ):
-            refined.extend([[gene] for gene in cluster])
+            refined.extend(
+                _split_string_cluster_by_components(cluster, component_adjacency)
+            )
             continue
         if len(cluster) < min_size:
             refined.append(list(cluster))
@@ -692,11 +749,19 @@ def _split_high_duplication_index_clusters(
     panel_copy_split_max_size: int,
     panel_copy_split_min_species_count: int,
     panel_copy_split_min_dataset_species: int,
+    panel_copy_component_min_edge_weight: float,
+    rbnh_scores: Sequence[float] | None,
 ) -> List[IndexCluster]:
     gene_to_cluster = _gene_to_cluster_array(clusters, total_genes)
     edge_queries = np.asarray(rbnh_queries, dtype=np.int64)
     edge_targets = np.asarray(rbnh_targets, dtype=np.int64)
+    edge_scores = (
+        np.asarray(rbnh_scores, dtype=np.float64)
+        if rbnh_scores is not None
+        else np.asarray([], dtype=np.float64)
+    )
     degrees = np.zeros(total_genes, dtype=np.int32)
+    component_adjacency: MutableMapping[int, set] = defaultdict(set)
     if len(edge_queries) > 0:
         source_clusters = gene_to_cluster[edge_queries]
         target_clusters = gene_to_cluster[edge_targets]
@@ -708,6 +773,18 @@ def _split_high_duplication_index_clusters(
         if np.any(same_cluster):
             np.add.at(degrees, edge_queries[same_cluster], 1)
             np.add.at(degrees, edge_targets[same_cluster], 1)
+            if len(edge_scores) == len(edge_queries):
+                component_edges = same_cluster & (
+                    edge_scores >= panel_copy_component_min_edge_weight
+                )
+                for query, target in zip(
+                    edge_queries[component_edges],
+                    edge_targets[component_edges],
+                ):
+                    query_i = int(query)
+                    target_i = int(target)
+                    component_adjacency[query_i].add(target_i)
+                    component_adjacency[target_i].add(query_i)
 
     species = np.asarray(gene_to_species)
     dataset_species_count = int(np.unique(species).size) if len(species) else 0
@@ -740,7 +817,9 @@ def _split_high_duplication_index_clusters(
             panel_copy_split_min_dataset_species,
             copy_split_min_dataset_species,
         ):
-            refined.extend([[gene] for gene in cluster_list])
+            refined.extend(
+                _split_index_cluster_by_components(cluster_list, component_adjacency)
+            )
             continue
         if len(cluster_list) < min_size:
             refined.append(cluster_list)
@@ -788,6 +867,7 @@ def refine_clusters(
     panel_copy_split_max_size: int = DEFAULT_PANEL_COPY_SPLIT_MAX_SIZE,
     panel_copy_split_min_species_count: int = DEFAULT_PANEL_COPY_SPLIT_MIN_SPECIES_COUNT,
     panel_copy_split_min_dataset_species: int = DEFAULT_PANEL_COPY_SPLIT_MIN_DATASET_SPECIES,
+    panel_copy_component_min_edge_weight: float = DEFAULT_PANEL_COPY_COMPONENT_MIN_EDGE_WEIGHT,
 ) -> List[Cluster]:
     """Refine orthogroup clusters using cluster-level support and graph degree.
 
@@ -821,6 +901,7 @@ def refine_clusters(
             panel_copy_split_max_size=panel_copy_split_max_size,
             panel_copy_split_min_species_count=panel_copy_split_min_species_count,
             panel_copy_split_min_dataset_species=panel_copy_split_min_dataset_species,
+            panel_copy_component_min_edge_weight=panel_copy_component_min_edge_weight,
         )
 
     dsu = _DSU(clusters, gene_to_species)
@@ -852,6 +933,7 @@ def refine_clusters(
         panel_copy_split_max_size=panel_copy_split_max_size,
         panel_copy_split_min_species_count=panel_copy_split_min_species_count,
         panel_copy_split_min_dataset_species=panel_copy_split_min_dataset_species,
+        panel_copy_component_min_edge_weight=panel_copy_component_min_edge_weight,
     )
 
 
@@ -875,6 +957,8 @@ def refine_cluster_indices(
     panel_copy_split_max_size: int = DEFAULT_PANEL_COPY_SPLIT_MAX_SIZE,
     panel_copy_split_min_species_count: int = DEFAULT_PANEL_COPY_SPLIT_MIN_SPECIES_COUNT,
     panel_copy_split_min_dataset_species: int = DEFAULT_PANEL_COPY_SPLIT_MIN_DATASET_SPECIES,
+    panel_copy_component_min_edge_weight: float = DEFAULT_PANEL_COPY_COMPONENT_MIN_EDGE_WEIGHT,
+    rbnh_scores: Sequence[float] | None = None,
 ) -> List[IndexCluster]:
     """Refine int-indexed clusters without materializing string hit triples."""
     if not clusters:
@@ -912,6 +996,8 @@ def refine_cluster_indices(
             panel_copy_split_max_size=panel_copy_split_max_size,
             panel_copy_split_min_species_count=panel_copy_split_min_species_count,
             panel_copy_split_min_dataset_species=panel_copy_split_min_dataset_species,
+            panel_copy_component_min_edge_weight=panel_copy_component_min_edge_weight,
+            rbnh_scores=rbnh_scores,
         )
 
     sizes = np.asarray([len(cluster) for cluster in clusters], dtype=np.int64)
@@ -954,4 +1040,6 @@ def refine_cluster_indices(
         panel_copy_split_max_size=panel_copy_split_max_size,
         panel_copy_split_min_species_count=panel_copy_split_min_species_count,
         panel_copy_split_min_dataset_species=panel_copy_split_min_dataset_species,
+        panel_copy_component_min_edge_weight=panel_copy_component_min_edge_weight,
+        rbnh_scores=rbnh_scores,
     )

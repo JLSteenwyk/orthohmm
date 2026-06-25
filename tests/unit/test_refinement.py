@@ -250,6 +250,55 @@ def test_indexed_medium_panel_copy_split_breaks_large_high_copy_cluster():
     assert {c[0] for c in refined} == set(cluster)
 
 
+def test_indexed_medium_panel_copy_split_keeps_strong_edge_components():
+    cluster = list(range(70))
+    gene_to_species = [0] * 14
+    for species_idx in range(1, 12):
+        gene_to_species.extend([species_idx] * 5)
+    gene_to_species.append(1)
+
+    refined = refine_cluster_indices(
+        [cluster],
+        np.asarray([], dtype=np.int32),
+        np.asarray([], dtype=np.int32),
+        np.asarray([], dtype=np.float32),
+        np.asarray([0, 1, 3], dtype=np.int32),
+        np.asarray([1, 2, 4], dtype=np.int32),
+        np.asarray(gene_to_species, dtype=np.int32),
+        rbnh_scores=np.asarray([2.0, 1.6, 0.5], dtype=np.float32),
+    )
+
+    refined_sets = {frozenset(c) for c in refined}
+    assert frozenset([0, 1, 2]) in refined_sets
+    assert frozenset([3]) in refined_sets
+    assert frozenset([4]) in refined_sets
+    assert len(refined) == 68
+    assert {gene for component in refined for gene in component} == set(cluster)
+
+
+def test_string_medium_panel_copy_split_keeps_strong_edge_components():
+    cluster, gene_to_species = _cluster("panel", [14] + [5] * 11 + [1])
+    rbnh_edges = {
+        frozenset([cluster[0], cluster[1]]): 2.0,
+        frozenset([cluster[1], cluster[2]]): 1.6,
+        frozenset([cluster[3], cluster[4]]): 0.5,
+    }
+
+    refined = refine_clusters(
+        [cluster],
+        [],
+        rbnh_edges,
+        gene_to_species,
+    )
+
+    refined_sets = {frozenset(c) for c in refined}
+    assert frozenset(cluster[:3]) in refined_sets
+    assert frozenset([cluster[3]]) in refined_sets
+    assert frozenset([cluster[4]]) in refined_sets
+    assert len(refined) == 68
+    assert {gene for component in refined for gene in component} == set(cluster)
+
+
 def test_indexed_medium_panel_copy_split_respects_copy_and_size_bounds():
     below_copy_cluster = list(range(70))
     below_copy_species = [0] * 13
