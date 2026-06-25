@@ -7,6 +7,8 @@ signals:
   support that Leiden can miss when evidence is spread across many genes; and
 * the stricter RBNH graph to split very large duplicated clusters whose member
   degrees show obvious outliers.
+* a broad-dataset copy-number guard to break the largest high-copy overmerges
+  that dominate pairwise false positives on QfO-scale inputs.
 """
 
 from __future__ import annotations
@@ -153,6 +155,23 @@ def _species_overlap(a: Counter, b: Counter) -> int:
     return len(set(a) & set(b))
 
 
+def _should_split_large_copy_cluster(
+    cluster_size: int,
+    species_counts: Counter,
+    dataset_species_count: int,
+    min_size: int,
+    min_species_count: int,
+    min_dataset_species: int,
+) -> bool:
+    if min_size <= 0 or min_species_count <= 0:
+        return False
+    if dataset_species_count < min_dataset_species:
+        return False
+    if cluster_size < min_size:
+        return False
+    return bool(species_counts) and max(species_counts.values()) >= min_species_count
+
+
 def _merge_reciprocal_cluster_best(
     clusters: Sequence[Cluster],
     pair_stats: Mapping[Tuple[int, int], _PairStats],
@@ -262,6 +281,9 @@ def _split_high_duplication_clusters(
     min_size: int,
     min_species_count: int,
     degree_ratio: float,
+    copy_split_min_size: int,
+    copy_split_min_species_count: int,
+    copy_split_min_dataset_species: int,
 ) -> List[Cluster]:
     adjacency: MutableMapping[Gene, set] = defaultdict(set)
     for edge in rbnh_edges:
@@ -271,12 +293,31 @@ def _split_high_duplication_clusters(
         adjacency[gene_a].add(gene_b)
         adjacency[gene_b].add(gene_a)
 
+    dataset_species_count = len({
+        species for species in gene_to_species.values()
+        if species != ""
+    })
     refined: List[Cluster] = []
     for cluster in clusters:
-        if len(cluster) < min_size:
+        if len(cluster) < min_size and (
+            copy_split_min_size <= 0 or len(cluster) < copy_split_min_size
+        ):
             refined.append(list(cluster))
             continue
         species_counts = Counter(gene_to_species.get(g, "") for g in cluster)
+        if _should_split_large_copy_cluster(
+            len(cluster),
+            species_counts,
+            dataset_species_count,
+            copy_split_min_size,
+            copy_split_min_species_count,
+            copy_split_min_dataset_species,
+        ):
+            refined.extend([[gene] for gene in cluster])
+            continue
+        if len(cluster) < min_size:
+            refined.append(list(cluster))
+            continue
         if max(species_counts.values()) < min_species_count:
             refined.append(list(cluster))
             continue
@@ -513,6 +554,9 @@ def _split_high_duplication_index_clusters(
     min_size: int,
     min_species_count: int,
     degree_ratio: float,
+    copy_split_min_size: int,
+    copy_split_min_species_count: int,
+    copy_split_min_dataset_species: int,
 ) -> List[IndexCluster]:
     gene_to_cluster = _gene_to_cluster_array(clusters, total_genes)
     edge_queries = np.asarray(rbnh_queries, dtype=np.int64)
@@ -531,13 +575,29 @@ def _split_high_duplication_index_clusters(
             np.add.at(degrees, edge_targets[same_cluster], 1)
 
     species = np.asarray(gene_to_species)
+    dataset_species_count = int(np.unique(species).size) if len(species) else 0
     refined: List[IndexCluster] = []
     for cluster in clusters:
         cluster_list = [int(gene) for gene in cluster]
-        if len(cluster_list) < min_size:
+        if len(cluster_list) < min_size and (
+            copy_split_min_size <= 0 or len(cluster_list) < copy_split_min_size
+        ):
             refined.append(cluster_list)
             continue
         species_counts = Counter(int(species[gene]) for gene in cluster_list)
+        if _should_split_large_copy_cluster(
+            len(cluster_list),
+            species_counts,
+            dataset_species_count,
+            copy_split_min_size,
+            copy_split_min_species_count,
+            copy_split_min_dataset_species,
+        ):
+            refined.extend([[gene] for gene in cluster_list])
+            continue
+        if len(cluster_list) < min_size:
+            refined.append(cluster_list)
+            continue
         if max(species_counts.values()) < min_species_count:
             refined.append(cluster_list)
             continue
@@ -574,6 +634,9 @@ def refine_clusters(
     split_min_size: int = 20,
     split_min_species_count: int = 20,
     split_degree_ratio: float = 1.1,
+    copy_split_min_size: int = 150,
+    copy_split_min_species_count: int = 10,
+    copy_split_min_dataset_species: int = 50,
 ) -> List[Cluster]:
     """Refine orthogroup clusters using cluster-level support and graph degree.
 
@@ -592,6 +655,9 @@ def refine_clusters(
             min_size=split_min_size,
             min_species_count=split_min_species_count,
             degree_ratio=split_degree_ratio,
+            copy_split_min_size=copy_split_min_size,
+            copy_split_min_species_count=copy_split_min_species_count,
+            copy_split_min_dataset_species=copy_split_min_dataset_species,
         )
 
     dsu = _DSU(clusters, gene_to_species)
@@ -616,6 +682,9 @@ def refine_clusters(
         min_size=split_min_size,
         min_species_count=split_min_species_count,
         degree_ratio=split_degree_ratio,
+        copy_split_min_size=copy_split_min_size,
+        copy_split_min_species_count=copy_split_min_species_count,
+        copy_split_min_dataset_species=copy_split_min_dataset_species,
     )
 
 
@@ -632,6 +701,9 @@ def refine_cluster_indices(
     split_min_size: int = 20,
     split_min_species_count: int = 20,
     split_degree_ratio: float = 1.1,
+    copy_split_min_size: int = 150,
+    copy_split_min_species_count: int = 10,
+    copy_split_min_dataset_species: int = 50,
 ) -> List[IndexCluster]:
     """Refine int-indexed clusters without materializing string hit triples."""
     if not clusters:
@@ -654,6 +726,9 @@ def refine_cluster_indices(
             min_size=split_min_size,
             min_species_count=split_min_species_count,
             degree_ratio=split_degree_ratio,
+            copy_split_min_size=copy_split_min_size,
+            copy_split_min_species_count=copy_split_min_species_count,
+            copy_split_min_dataset_species=copy_split_min_dataset_species,
         )
 
     sizes = np.asarray([len(cluster) for cluster in clusters], dtype=np.int64)
@@ -689,4 +764,7 @@ def refine_cluster_indices(
         min_size=split_min_size,
         min_species_count=split_min_species_count,
         degree_ratio=split_degree_ratio,
+        copy_split_min_size=copy_split_min_size,
+        copy_split_min_species_count=copy_split_min_species_count,
+        copy_split_min_dataset_species=copy_split_min_dataset_species,
     )
