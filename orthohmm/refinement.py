@@ -40,6 +40,7 @@ DEFAULT_SPLIT_DEGREE_RATIO = 1.1
 DEFAULT_COPY_SPLIT_MIN_SIZE = 150
 DEFAULT_COPY_SPLIT_MIN_SPECIES_COUNT = 10
 DEFAULT_COPY_SPLIT_MIN_DATASET_SPECIES = 50
+DEFAULT_BROAD_COPY_SPLIT_MIN_SPECIES_COUNT = 20
 DEFAULT_PANEL_COPY_SPLIT_MIN_SIZE = 70
 DEFAULT_PANEL_COPY_SPLIT_MAX_SIZE = 150
 DEFAULT_PANEL_COPY_SPLIT_MIN_SPECIES_COUNT = 14
@@ -199,13 +200,10 @@ def _should_split_medium_panel_copy_cluster(
     max_size: int,
     min_species_count: int,
     min_dataset_species: int,
-    broad_dataset_species: int,
 ) -> bool:
     if min_size <= 0 or max_size <= min_size or min_species_count <= 0:
         return False
     if dataset_species_count < min_dataset_species:
-        return False
-    if dataset_species_count >= broad_dataset_species:
         return False
     if cluster_size < min_size or cluster_size >= max_size:
         return False
@@ -335,6 +333,17 @@ def _is_broad_index_dataset(
     species = np.asarray(gene_to_species)
     dataset_species_count = int(np.unique(species).size) if len(species) else 0
     return dataset_species_count >= min_dataset_species
+
+
+def _resolve_broad_copy_split_min_species_count(
+    dataset_species_count: int,
+    requested_min_species_count: int,
+    min_dataset_species: int,
+    broad_copy_split_min_species_count: int,
+) -> int:
+    if dataset_species_count >= min_dataset_species:
+        return max(requested_min_species_count, broad_copy_split_min_species_count)
+    return requested_min_species_count
 
 
 def _merge_reciprocal_cluster_best(
@@ -502,7 +511,6 @@ def _split_high_duplication_clusters(
             panel_copy_split_max_size,
             panel_copy_split_min_species_count,
             panel_copy_split_min_dataset_species,
-            copy_split_min_dataset_species,
         ):
             if broad_mode and not (members & component_nodes):
                 refined.append(list(cluster))
@@ -835,7 +843,6 @@ def _split_high_duplication_index_clusters(
             panel_copy_split_max_size,
             panel_copy_split_min_species_count,
             panel_copy_split_min_dataset_species,
-            copy_split_min_dataset_species,
         ):
             if broad_mode and not (cluster_set & component_nodes):
                 refined.append(cluster_list)
@@ -909,21 +916,23 @@ def refine_clusters(
     if not clusters:
         return []
     if _is_broad_string_dataset(gene_to_species, copy_split_min_dataset_species):
+        resolved_copy_split_min_species_count = (
+            _resolve_broad_copy_split_min_species_count(
+                len({sp for sp in gene_to_species.values() if sp != ""}),
+                copy_split_min_species_count,
+                copy_split_min_dataset_species,
+                DEFAULT_BROAD_COPY_SPLIT_MIN_SPECIES_COUNT,
+            )
+        )
         return _split_high_duplication_clusters(
-            _copy_split_large_clusters(
-                clusters,
-                gene_to_species,
-                min_size=copy_split_min_size,
-                min_species_count=copy_split_min_species_count,
-                min_dataset_species=copy_split_min_dataset_species,
-            ),
+            clusters,
             rbnh_edges,
             gene_to_species,
             min_size=split_min_size,
             min_species_count=split_min_species_count,
             degree_ratio=split_degree_ratio,
             copy_split_min_size=copy_split_min_size,
-            copy_split_min_species_count=copy_split_min_species_count,
+            copy_split_min_species_count=resolved_copy_split_min_species_count,
             copy_split_min_dataset_species=copy_split_min_dataset_species,
             panel_copy_split_min_size=panel_copy_split_min_size,
             panel_copy_split_max_size=panel_copy_split_max_size,
@@ -1012,14 +1021,14 @@ def refine_cluster_indices(
         return []
     total_genes = len(gene_to_species)
     if _is_broad_index_dataset(gene_to_species, copy_split_min_dataset_species):
+        resolved_copy_split_min_species_count = _resolve_broad_copy_split_min_species_count(
+            int(np.unique(np.asarray(gene_to_species)).size),
+            copy_split_min_species_count,
+            copy_split_min_dataset_species,
+            DEFAULT_BROAD_COPY_SPLIT_MIN_SPECIES_COUNT,
+        )
         return _split_high_duplication_index_clusters(
-            _copy_split_large_index_clusters(
-                clusters,
-                gene_to_species,
-                min_size=copy_split_min_size,
-                min_species_count=copy_split_min_species_count,
-                min_dataset_species=copy_split_min_dataset_species,
-            ),
+            clusters,
             rbnh_queries,
             rbnh_targets,
             gene_to_species,
@@ -1028,7 +1037,7 @@ def refine_cluster_indices(
             min_species_count=split_min_species_count,
             degree_ratio=split_degree_ratio,
             copy_split_min_size=copy_split_min_size,
-            copy_split_min_species_count=copy_split_min_species_count,
+            copy_split_min_species_count=resolved_copy_split_min_species_count,
             copy_split_min_dataset_species=copy_split_min_dataset_species,
             panel_copy_split_min_size=panel_copy_split_min_size,
             panel_copy_split_max_size=panel_copy_split_max_size,

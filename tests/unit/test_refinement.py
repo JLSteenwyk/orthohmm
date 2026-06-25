@@ -163,13 +163,34 @@ def test_indexed_refinement_splits_large_low_degree_members():
     assert all(frozenset([gene]) in refined_sets for gene in cluster[5:])
 
 
-def test_indexed_copy_split_breaks_qfo_scale_high_copy_cluster():
+def test_indexed_copy_split_stays_intact_below_broad_threshold():
     cluster = list(range(150))
     gene_to_species = [0] * 10
     for species_idx in range(1, 50):
         gene_to_species.extend([species_idx] * 2)
     for species_idx in range(1, 43):
         gene_to_species.append(species_idx)
+
+    refined = refine_cluster_indices(
+        [cluster],
+        np.asarray([], dtype=np.int32),
+        np.asarray([], dtype=np.int32),
+        np.asarray([], dtype=np.float32),
+        np.asarray([], dtype=np.int32),
+        np.asarray([], dtype=np.int32),
+        np.asarray(gene_to_species, dtype=np.int32),
+    )
+
+    assert len(refined) == 1
+    assert [set(cluster)] == [set(c) for c in refined]
+
+
+def test_indexed_copy_split_breaks_qfo_scale_high_copy_cluster():
+    cluster = list(range(150))
+    gene_to_species = [0] * 20
+    for species_idx in range(1, 131):
+        gene_to_species.append(species_idx)
+    gene_to_species = gene_to_species[:150]
 
     refined = refine_cluster_indices(
         [cluster],

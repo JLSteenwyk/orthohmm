@@ -40,5 +40,5 @@ def test_broad_refinement_skips_unused_hit_and_edge_collection(tmp_path, monkeyp
     )
 
     refined = cluster_path.read_text().splitlines()
-    assert len(refined) == len(genes)
-    assert {line for line in refined} == set(genes)
+    assert len(refined) == 1
+    assert set(refined) == {" ".join(sorted(genes))}
