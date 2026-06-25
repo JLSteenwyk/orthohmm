@@ -46,6 +46,11 @@ DEFAULT_PANEL_COPY_SPLIT_MAX_SIZE = 150
 DEFAULT_PANEL_COPY_SPLIT_MIN_SPECIES_COUNT = 14
 DEFAULT_PANEL_COPY_SPLIT_MIN_DATASET_SPECIES = 10
 DEFAULT_PANEL_COPY_COMPONENT_MIN_EDGE_WEIGHT = 1.5
+DEFAULT_BROAD_RECIPROCAL_MIN_AVG_SCORE = 1.0
+DEFAULT_BROAD_RECIPROCAL_MIN_MAX_SCORE = 1.0
+DEFAULT_BROAD_RECIPROCAL_MIN_COVERAGE = 2.0
+DEFAULT_BROAD_RECIPROCAL_MIN_NORM = 1.0
+DEFAULT_BROAD_MAX_RECIPROCAL_MERGES = 32
 
 
 @dataclass
@@ -352,6 +357,10 @@ def _merge_reciprocal_cluster_best(
     dsu: _DSU,
     max_merges: int,
     max_genes: int,
+    min_avg_score: float = 0.5,
+    min_max_score: float = 0.8,
+    min_coverage: float = 1.0,
+    min_norm: float | None = None,
 ) -> int:
     sizes = [len(c) for c in clusters]
     best_out: Dict[int, Tuple[float, int]] = {}
@@ -359,7 +368,9 @@ def _merge_reciprocal_cluster_best(
         avg_score, max_score, coverage, norm = _features(
             stats, sizes[source], sizes[target]
         )
-        if avg_score < 0.5 or max_score < 0.8 or coverage < 1.0:
+        if avg_score < min_avg_score or max_score < min_max_score or coverage < min_coverage:
+            continue
+        if min_norm is not None and norm < min_norm:
             continue
         current = best_out.get(source)
         if current is None or norm > current[0]:
@@ -574,12 +585,34 @@ def _cluster_pair_arrays(
     hit_targets: Sequence[int],
     hit_scores: Sequence[float],
     total_genes: int,
+    default_score: float | None = None,
 ) -> Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
     gene_to_cluster = _gene_to_cluster_array(clusters, total_genes)
     queries = np.asarray(hit_queries, dtype=np.int64)
     targets = np.asarray(hit_targets, dtype=np.int64)
     scores = np.asarray(hit_scores, dtype=np.float64)
+    if len(queries) != len(targets):
+        common = min(len(queries), len(targets))
+        queries = queries[:common]
+        targets = targets[:common]
+    if len(scores) > 0 and (len(scores) != len(queries)):
+        if len(queries) == 0:
+            scores = np.asarray([], dtype=np.float64)
+        else:
+            scores = scores[: min(len(queries), len(scores))]
+            queries = queries[: len(scores)]
+            targets = targets[: len(scores)]
     if len(queries) == 0:
+        empty_i = np.asarray([], dtype=np.int32)
+        empty_f = np.asarray([], dtype=np.float64)
+        return empty_i, empty_i, empty_f, empty_i, empty_f
+    if len(scores) == 0:
+        if default_score is None:
+            empty_i = np.asarray([], dtype=np.int32)
+            empty_f = np.asarray([], dtype=np.float64)
+            return empty_i, empty_i, empty_f, empty_i, empty_f
+        scores = np.full(len(queries), default_score, dtype=np.float64)
+    if len(scores) == 0:
         empty_i = np.asarray([], dtype=np.int32)
         empty_f = np.asarray([], dtype=np.float64)
         return empty_i, empty_i, empty_f, empty_i, empty_f
@@ -641,11 +674,21 @@ def _merge_reciprocal_cluster_best_indexed(
     dsu: _IndexedDSU,
     max_merges: int,
     max_genes: int,
+    min_avg_score: float = 0.5,
+    min_max_score: float = 0.8,
+    min_coverage: float = 1.0,
+    min_norm: float | None = None,
 ) -> int:
     avg_scores, max_scores, coverages, norms = _indexed_features(
         sources, targets, totals, counts, max_scores, sizes
     )
-    candidate = (avg_scores >= 0.5) & (max_scores >= 0.8) & (coverages >= 1.0)
+    candidate = (
+        (avg_scores >= min_avg_score)
+        & (max_scores >= min_max_score)
+        & (coverages >= min_coverage)
+    )
+    if min_norm is not None:
+        candidate = candidate & (norms >= min_norm)
     best_norm = np.full(len(sizes), -np.inf, dtype=np.float64)
     best_target = np.full(len(sizes), -1, dtype=np.int32)
     for source, target, norm in zip(sources[candidate], targets[candidate], norms[candidate]):
@@ -784,6 +827,14 @@ def _split_high_duplication_index_clusters(
         if rbnh_scores is not None
         else np.asarray([], dtype=np.float64)
     )
+    if len(edge_queries) != len(edge_targets):
+        common = min(len(edge_queries), len(edge_targets))
+        edge_queries = edge_queries[:common]
+        edge_targets = edge_targets[:common]
+    if len(edge_scores) > 0 and (len(edge_scores) != len(edge_queries)):
+        edge_scores = edge_scores[: min(len(edge_scores), len(edge_queries))]
+        edge_queries = edge_queries[: len(edge_scores)]
+        edge_targets = edge_targets[: len(edge_scores)]
     degrees = np.zeros(total_genes, dtype=np.int32)
     component_adjacency: MutableMapping[int, set] = defaultdict(set)
     component_nodes = set()
@@ -1020,6 +1071,20 @@ def refine_cluster_indices(
     if not clusters:
         return []
     total_genes = len(gene_to_species)
+    rbnh_queries_arr = np.asarray(rbnh_queries, dtype=np.int64)
+    rbnh_targets_arr = np.asarray(rbnh_targets, dtype=np.int64)
+    rbnh_scores_arr = (
+        np.asarray(rbnh_scores, dtype=np.float64)
+        if rbnh_scores is not None else np.asarray([], dtype=np.float64)
+    )
+    rbnh_sources, rbnh_target_pairs, rbnh_totals, rbnh_counts, rbnh_max_scores = _cluster_pair_arrays(
+        clusters,
+        rbnh_queries_arr,
+        rbnh_targets_arr,
+        rbnh_scores_arr,
+        total_genes,
+        default_score=1.0,
+    )
     if _is_broad_index_dataset(gene_to_species, copy_split_min_dataset_species):
         resolved_copy_split_min_species_count = _resolve_broad_copy_split_min_species_count(
             int(np.unique(np.asarray(gene_to_species)).size),
@@ -1027,10 +1092,60 @@ def refine_cluster_indices(
             copy_split_min_dataset_species,
             DEFAULT_BROAD_COPY_SPLIT_MIN_SPECIES_COUNT,
         )
+        if len(rbnh_sources) == 0:
+            return _split_high_duplication_index_clusters(
+                clusters,
+                rbnh_queries_arr,
+                rbnh_targets_arr,
+                gene_to_species,
+                total_genes,
+                min_size=split_min_size,
+                min_species_count=split_min_species_count,
+                degree_ratio=split_degree_ratio,
+                copy_split_min_size=copy_split_min_size,
+                copy_split_min_species_count=resolved_copy_split_min_species_count,
+                copy_split_min_dataset_species=copy_split_min_dataset_species,
+                panel_copy_split_min_size=panel_copy_split_min_size,
+                panel_copy_split_max_size=panel_copy_split_max_size,
+                panel_copy_split_min_species_count=panel_copy_split_min_species_count,
+                panel_copy_split_min_dataset_species=panel_copy_split_min_dataset_species,
+                panel_copy_component_min_edge_weight=panel_copy_component_min_edge_weight,
+                rbnh_scores=rbnh_scores,
+                broad_mode=True,
+            )
+
+        sizes = np.asarray([len(cluster) for cluster in clusters], dtype=np.int64)
+        dsu = _IndexedDSU(clusters, gene_to_species)
+        _merge_reciprocal_cluster_best_indexed(
+            rbnh_sources,
+            rbnh_target_pairs,
+            rbnh_totals,
+            rbnh_counts,
+            rbnh_max_scores,
+            sizes,
+            dsu,
+            max_merges=DEFAULT_BROAD_MAX_RECIPROCAL_MERGES,
+            max_genes=max_component_genes,
+            min_avg_score=DEFAULT_BROAD_RECIPROCAL_MIN_AVG_SCORE,
+            min_max_score=DEFAULT_BROAD_RECIPROCAL_MIN_MAX_SCORE,
+            min_coverage=DEFAULT_BROAD_RECIPROCAL_MIN_COVERAGE,
+            min_norm=DEFAULT_BROAD_RECIPROCAL_MIN_NORM,
+        )
+        _merge_weak_balanced_rescue_indexed(
+            rbnh_sources,
+            rbnh_target_pairs,
+            rbnh_totals,
+            rbnh_counts,
+            rbnh_max_scores,
+            sizes,
+            dsu,
+            max_genes=max_component_genes,
+        )
+        merged = _component_index_clusters(clusters, dsu)
         return _split_high_duplication_index_clusters(
-            clusters,
-            rbnh_queries,
-            rbnh_targets,
+            merged,
+            rbnh_queries_arr,
+            rbnh_targets_arr,
             gene_to_species,
             total_genes,
             min_size=split_min_size,
@@ -1047,6 +1162,7 @@ def refine_cluster_indices(
             rbnh_scores=rbnh_scores,
             broad_mode=True,
         )
+
     sources, targets, totals, counts, max_scores = _cluster_pair_arrays(
         clusters,
         hit_queries,
@@ -1057,8 +1173,8 @@ def refine_cluster_indices(
     if len(sources) == 0:
         return _split_high_duplication_index_clusters(
             clusters,
-            rbnh_queries,
-            rbnh_targets,
+            rbnh_queries_arr,
+            rbnh_targets_arr,
             gene_to_species,
             total_genes,
             min_size=split_min_size,
@@ -1101,8 +1217,8 @@ def refine_cluster_indices(
     merged = _component_index_clusters(clusters, dsu)
     return _split_high_duplication_index_clusters(
         merged,
-        rbnh_queries,
-        rbnh_targets,
+        rbnh_queries_arr,
+        rbnh_targets_arr,
         gene_to_species,
         total_genes,
         min_size=split_min_size,

@@ -111,9 +111,10 @@ def _refine_cluster_file(output_directory, gene_lengths, search_results, edges,
         hit_queries = []
         hit_targets = []
         hit_scores = []
-        edge_queries = []
-        edge_targets = []
-        edge_scores = []
+        edge_queries, edge_targets, edge_scores = _collect_edge_arrays(
+            edges,
+            gene_to_id,
+        )
     else:
         hit_queries, hit_targets, hit_scores = _collect_search_hit_arrays(
             search_results,

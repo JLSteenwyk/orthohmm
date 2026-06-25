@@ -259,6 +259,35 @@ def test_indexed_broad_dataset_allows_confident_component_split():
     assert len(refined) == 69
 
 
+def test_indexed_broad_dataset_allows_confident_reciprocal_merge():
+    cluster_a = list(range(5))
+    cluster_b = list(range(5, 10))
+    clusters = [cluster_a, cluster_b]
+
+    gene_to_species = np.asarray(list(range(10)) + list(range(10, 60)), dtype=np.int32)
+
+    rbnh_queries = []
+    rbnh_targets = []
+    rbnh_scores = []
+    for source in cluster_a:
+        for target in cluster_b:
+            rbnh_queries.extend([source, target])
+            rbnh_targets.extend([target, source])
+            rbnh_scores.extend([1.2, 1.2])
+
+    refined = refine_cluster_indices(
+        clusters,
+        np.asarray([], dtype=np.int32),
+        np.asarray([], dtype=np.int32),
+        np.asarray([], dtype=np.float32),
+        np.asarray(rbnh_queries, dtype=np.int32),
+        np.asarray(rbnh_targets, dtype=np.int32),
+        np.asarray(gene_to_species, dtype=np.int32),
+    )
+
+    assert [set(range(10))] == [set(c) for c in refined]
+
+
 def test_indexed_copy_split_is_disabled_for_small_species_panels():
     cluster = list(range(150))
     gene_to_species = np.repeat(np.arange(15, dtype=np.int32), 10)

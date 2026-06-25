@@ -25,11 +25,15 @@ def test_broad_refinement_skips_unused_hit_and_edge_collection(tmp_path, monkeyp
     def fail_hit_collection(*_args, **_kwargs):
         raise AssertionError("broad refinement should not collect directed hits")
 
-    def fail_edge_collection(*_args, **_kwargs):
-        raise AssertionError("broad refinement should not collect RBNH edges")
+    def collect_empty_edges(*_args, **_kwargs):
+        return (
+            np.asarray([], dtype=np.int32),
+            np.asarray([], dtype=np.int32),
+            np.asarray([], dtype=np.float32),
+        )
 
     monkeypatch.setattr(pipeline, "_collect_search_hit_arrays", fail_hit_collection)
-    monkeypatch.setattr(pipeline, "_collect_edge_arrays", fail_edge_collection)
+    monkeypatch.setattr(pipeline, "_collect_edge_arrays", collect_empty_edges)
 
     pipeline._refine_cluster_file(
         str(tmp_path),
