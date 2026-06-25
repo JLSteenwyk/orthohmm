@@ -11,6 +11,8 @@ signals:
   that dominate pairwise false positives on QfO-scale inputs. On broad inputs
   this guard is applied by itself so the production path matches the validated
   QfO-scale transformation.
+* a medium-panel copy-number guard for large-but-not-huge clusters dominated
+  by many copies from one species.
 """
 
 from __future__ import annotations
@@ -38,6 +40,10 @@ DEFAULT_SPLIT_DEGREE_RATIO = 1.1
 DEFAULT_COPY_SPLIT_MIN_SIZE = 150
 DEFAULT_COPY_SPLIT_MIN_SPECIES_COUNT = 10
 DEFAULT_COPY_SPLIT_MIN_DATASET_SPECIES = 50
+DEFAULT_PANEL_COPY_SPLIT_MIN_SIZE = 70
+DEFAULT_PANEL_COPY_SPLIT_MAX_SIZE = 150
+DEFAULT_PANEL_COPY_SPLIT_MIN_SPECIES_COUNT = 14
+DEFAULT_PANEL_COPY_SPLIT_MIN_DATASET_SPECIES = 10
 
 
 @dataclass
@@ -180,6 +186,27 @@ def _should_split_large_copy_cluster(
     if dataset_species_count < min_dataset_species:
         return False
     if cluster_size < min_size:
+        return False
+    return bool(species_counts) and max(species_counts.values()) >= min_species_count
+
+
+def _should_split_medium_panel_copy_cluster(
+    cluster_size: int,
+    species_counts: Counter,
+    dataset_species_count: int,
+    min_size: int,
+    max_size: int,
+    min_species_count: int,
+    min_dataset_species: int,
+    broad_dataset_species: int,
+) -> bool:
+    if min_size <= 0 or max_size <= min_size or min_species_count <= 0:
+        return False
+    if dataset_species_count < min_dataset_species:
+        return False
+    if dataset_species_count >= broad_dataset_species:
+        return False
+    if cluster_size < min_size or cluster_size >= max_size:
         return False
     return bool(species_counts) and max(species_counts.values()) >= min_species_count
 
@@ -372,6 +399,10 @@ def _split_high_duplication_clusters(
     copy_split_min_size: int,
     copy_split_min_species_count: int,
     copy_split_min_dataset_species: int,
+    panel_copy_split_min_size: int,
+    panel_copy_split_max_size: int,
+    panel_copy_split_min_species_count: int,
+    panel_copy_split_min_dataset_species: int,
 ) -> List[Cluster]:
     adjacency: MutableMapping[Gene, set] = defaultdict(set)
     for edge in rbnh_edges:
@@ -399,6 +430,18 @@ def _split_high_duplication_clusters(
             dataset_species_count,
             copy_split_min_size,
             copy_split_min_species_count,
+            copy_split_min_dataset_species,
+        ):
+            refined.extend([[gene] for gene in cluster])
+            continue
+        if _should_split_medium_panel_copy_cluster(
+            len(cluster),
+            species_counts,
+            dataset_species_count,
+            panel_copy_split_min_size,
+            panel_copy_split_max_size,
+            panel_copy_split_min_species_count,
+            panel_copy_split_min_dataset_species,
             copy_split_min_dataset_species,
         ):
             refined.extend([[gene] for gene in cluster])
@@ -645,6 +688,10 @@ def _split_high_duplication_index_clusters(
     copy_split_min_size: int,
     copy_split_min_species_count: int,
     copy_split_min_dataset_species: int,
+    panel_copy_split_min_size: int,
+    panel_copy_split_max_size: int,
+    panel_copy_split_min_species_count: int,
+    panel_copy_split_min_dataset_species: int,
 ) -> List[IndexCluster]:
     gene_to_cluster = _gene_to_cluster_array(clusters, total_genes)
     edge_queries = np.asarray(rbnh_queries, dtype=np.int64)
@@ -679,6 +726,18 @@ def _split_high_duplication_index_clusters(
             dataset_species_count,
             copy_split_min_size,
             copy_split_min_species_count,
+            copy_split_min_dataset_species,
+        ):
+            refined.extend([[gene] for gene in cluster_list])
+            continue
+        if _should_split_medium_panel_copy_cluster(
+            len(cluster_list),
+            species_counts,
+            dataset_species_count,
+            panel_copy_split_min_size,
+            panel_copy_split_max_size,
+            panel_copy_split_min_species_count,
+            panel_copy_split_min_dataset_species,
             copy_split_min_dataset_species,
         ):
             refined.extend([[gene] for gene in cluster_list])
@@ -725,6 +784,10 @@ def refine_clusters(
     copy_split_min_size: int = DEFAULT_COPY_SPLIT_MIN_SIZE,
     copy_split_min_species_count: int = DEFAULT_COPY_SPLIT_MIN_SPECIES_COUNT,
     copy_split_min_dataset_species: int = DEFAULT_COPY_SPLIT_MIN_DATASET_SPECIES,
+    panel_copy_split_min_size: int = DEFAULT_PANEL_COPY_SPLIT_MIN_SIZE,
+    panel_copy_split_max_size: int = DEFAULT_PANEL_COPY_SPLIT_MAX_SIZE,
+    panel_copy_split_min_species_count: int = DEFAULT_PANEL_COPY_SPLIT_MIN_SPECIES_COUNT,
+    panel_copy_split_min_dataset_species: int = DEFAULT_PANEL_COPY_SPLIT_MIN_DATASET_SPECIES,
 ) -> List[Cluster]:
     """Refine orthogroup clusters using cluster-level support and graph degree.
 
@@ -754,6 +817,10 @@ def refine_clusters(
             copy_split_min_size=copy_split_min_size,
             copy_split_min_species_count=copy_split_min_species_count,
             copy_split_min_dataset_species=copy_split_min_dataset_species,
+            panel_copy_split_min_size=panel_copy_split_min_size,
+            panel_copy_split_max_size=panel_copy_split_max_size,
+            panel_copy_split_min_species_count=panel_copy_split_min_species_count,
+            panel_copy_split_min_dataset_species=panel_copy_split_min_dataset_species,
         )
 
     dsu = _DSU(clusters, gene_to_species)
@@ -781,6 +848,10 @@ def refine_clusters(
         copy_split_min_size=copy_split_min_size,
         copy_split_min_species_count=copy_split_min_species_count,
         copy_split_min_dataset_species=copy_split_min_dataset_species,
+        panel_copy_split_min_size=panel_copy_split_min_size,
+        panel_copy_split_max_size=panel_copy_split_max_size,
+        panel_copy_split_min_species_count=panel_copy_split_min_species_count,
+        panel_copy_split_min_dataset_species=panel_copy_split_min_dataset_species,
     )
 
 
@@ -800,6 +871,10 @@ def refine_cluster_indices(
     copy_split_min_size: int = DEFAULT_COPY_SPLIT_MIN_SIZE,
     copy_split_min_species_count: int = DEFAULT_COPY_SPLIT_MIN_SPECIES_COUNT,
     copy_split_min_dataset_species: int = DEFAULT_COPY_SPLIT_MIN_DATASET_SPECIES,
+    panel_copy_split_min_size: int = DEFAULT_PANEL_COPY_SPLIT_MIN_SIZE,
+    panel_copy_split_max_size: int = DEFAULT_PANEL_COPY_SPLIT_MAX_SIZE,
+    panel_copy_split_min_species_count: int = DEFAULT_PANEL_COPY_SPLIT_MIN_SPECIES_COUNT,
+    panel_copy_split_min_dataset_species: int = DEFAULT_PANEL_COPY_SPLIT_MIN_DATASET_SPECIES,
 ) -> List[IndexCluster]:
     """Refine int-indexed clusters without materializing string hit triples."""
     if not clusters:
@@ -833,6 +908,10 @@ def refine_cluster_indices(
             copy_split_min_size=copy_split_min_size,
             copy_split_min_species_count=copy_split_min_species_count,
             copy_split_min_dataset_species=copy_split_min_dataset_species,
+            panel_copy_split_min_size=panel_copy_split_min_size,
+            panel_copy_split_max_size=panel_copy_split_max_size,
+            panel_copy_split_min_species_count=panel_copy_split_min_species_count,
+            panel_copy_split_min_dataset_species=panel_copy_split_min_dataset_species,
         )
 
     sizes = np.asarray([len(cluster) for cluster in clusters], dtype=np.int64)
@@ -871,4 +950,8 @@ def refine_cluster_indices(
         copy_split_min_size=copy_split_min_size,
         copy_split_min_species_count=copy_split_min_species_count,
         copy_split_min_dataset_species=copy_split_min_dataset_species,
+        panel_copy_split_min_size=panel_copy_split_min_size,
+        panel_copy_split_max_size=panel_copy_split_max_size,
+        panel_copy_split_min_species_count=panel_copy_split_min_species_count,
+        panel_copy_split_min_dataset_species=panel_copy_split_min_dataset_species,
     )

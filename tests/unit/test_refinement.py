@@ -226,3 +226,61 @@ def test_indexed_copy_split_is_disabled_for_small_species_panels():
     )
 
     assert [set(cluster)] == [set(c) for c in refined]
+
+
+def test_indexed_medium_panel_copy_split_breaks_large_high_copy_cluster():
+    cluster = list(range(70))
+    gene_to_species = [0] * 14
+    for species_idx in range(1, 12):
+        gene_to_species.extend([species_idx] * 5)
+    gene_to_species.append(1)
+
+    refined = refine_cluster_indices(
+        [cluster],
+        np.asarray([], dtype=np.int32),
+        np.asarray([], dtype=np.int32),
+        np.asarray([], dtype=np.float32),
+        np.asarray([], dtype=np.int32),
+        np.asarray([], dtype=np.int32),
+        np.asarray(gene_to_species, dtype=np.int32),
+    )
+
+    assert len(refined) == 70
+    assert all(len(c) == 1 for c in refined)
+    assert {c[0] for c in refined} == set(cluster)
+
+
+def test_indexed_medium_panel_copy_split_respects_copy_and_size_bounds():
+    below_copy_cluster = list(range(70))
+    below_copy_species = [0] * 13
+    for species_idx in range(1, 12):
+        below_copy_species.extend([species_idx] * 5)
+    below_copy_species.extend([1, 2])
+
+    too_large_cluster = list(range(150))
+    too_large_species = [0] * 14
+    for species_idx in range(1, 12):
+        too_large_species.extend([species_idx] * 12)
+    too_large_species.extend([1, 2, 3, 4])
+
+    below_copy_refined = refine_cluster_indices(
+        [below_copy_cluster],
+        np.asarray([], dtype=np.int32),
+        np.asarray([], dtype=np.int32),
+        np.asarray([], dtype=np.float32),
+        np.asarray([], dtype=np.int32),
+        np.asarray([], dtype=np.int32),
+        np.asarray(below_copy_species, dtype=np.int32),
+    )
+    too_large_refined = refine_cluster_indices(
+        [too_large_cluster],
+        np.asarray([], dtype=np.int32),
+        np.asarray([], dtype=np.int32),
+        np.asarray([], dtype=np.float32),
+        np.asarray([], dtype=np.int32),
+        np.asarray([], dtype=np.int32),
+        np.asarray(too_large_species, dtype=np.int32),
+    )
+
+    assert [set(below_copy_cluster)] == [set(c) for c in below_copy_refined]
+    assert [set(too_large_cluster)] == [set(c) for c in too_large_refined]
