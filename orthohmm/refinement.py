@@ -30,6 +30,16 @@ DirectedHit = Tuple[Gene, Gene, float]
 EdgeMap = Mapping[frozenset, float]
 
 
+DEFAULT_MAX_RECIPROCAL_MERGES = 150
+DEFAULT_MAX_COMPONENT_GENES = 80
+DEFAULT_SPLIT_MIN_SIZE = 20
+DEFAULT_SPLIT_MIN_SPECIES_COUNT = 20
+DEFAULT_SPLIT_DEGREE_RATIO = 1.1
+DEFAULT_COPY_SPLIT_MIN_SIZE = 150
+DEFAULT_COPY_SPLIT_MIN_SPECIES_COUNT = 10
+DEFAULT_COPY_SPLIT_MIN_DATASET_SPECIES = 50
+
+
 @dataclass
 class _PairStats:
     total: float = 0.0
@@ -707,14 +717,14 @@ def refine_clusters(
     directed_hits: Iterable[DirectedHit],
     rbnh_edges: EdgeMap,
     gene_to_species: Mapping[Gene, str],
-    max_reciprocal_merges: int = 150,
-    max_component_genes: int = 80,
-    split_min_size: int = 20,
-    split_min_species_count: int = 20,
-    split_degree_ratio: float = 1.1,
-    copy_split_min_size: int = 150,
-    copy_split_min_species_count: int = 10,
-    copy_split_min_dataset_species: int = 50,
+    max_reciprocal_merges: int = DEFAULT_MAX_RECIPROCAL_MERGES,
+    max_component_genes: int = DEFAULT_MAX_COMPONENT_GENES,
+    split_min_size: int = DEFAULT_SPLIT_MIN_SIZE,
+    split_min_species_count: int = DEFAULT_SPLIT_MIN_SPECIES_COUNT,
+    split_degree_ratio: float = DEFAULT_SPLIT_DEGREE_RATIO,
+    copy_split_min_size: int = DEFAULT_COPY_SPLIT_MIN_SIZE,
+    copy_split_min_species_count: int = DEFAULT_COPY_SPLIT_MIN_SPECIES_COUNT,
+    copy_split_min_dataset_species: int = DEFAULT_COPY_SPLIT_MIN_DATASET_SPECIES,
 ) -> List[Cluster]:
     """Refine orthogroup clusters using cluster-level support and graph degree.
 
@@ -782,14 +792,14 @@ def refine_cluster_indices(
     rbnh_queries: Sequence[int],
     rbnh_targets: Sequence[int],
     gene_to_species: Sequence[int],
-    max_reciprocal_merges: int = 150,
-    max_component_genes: int = 80,
-    split_min_size: int = 20,
-    split_min_species_count: int = 20,
-    split_degree_ratio: float = 1.1,
-    copy_split_min_size: int = 150,
-    copy_split_min_species_count: int = 10,
-    copy_split_min_dataset_species: int = 50,
+    max_reciprocal_merges: int = DEFAULT_MAX_RECIPROCAL_MERGES,
+    max_component_genes: int = DEFAULT_MAX_COMPONENT_GENES,
+    split_min_size: int = DEFAULT_SPLIT_MIN_SIZE,
+    split_min_species_count: int = DEFAULT_SPLIT_MIN_SPECIES_COUNT,
+    split_degree_ratio: float = DEFAULT_SPLIT_DEGREE_RATIO,
+    copy_split_min_size: int = DEFAULT_COPY_SPLIT_MIN_SIZE,
+    copy_split_min_species_count: int = DEFAULT_COPY_SPLIT_MIN_SPECIES_COUNT,
+    copy_split_min_dataset_species: int = DEFAULT_COPY_SPLIT_MIN_DATASET_SPECIES,
 ) -> List[IndexCluster]:
     """Refine int-indexed clusters without materializing string hit triples."""
     if not clusters:

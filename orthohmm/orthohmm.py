@@ -24,7 +24,10 @@ from .helpers import (
     SubstitutionMatrix,
 )
 from .parser import create_parser
-from .refinement import refine_cluster_indices
+from .refinement import (
+    DEFAULT_COPY_SPLIT_MIN_DATASET_SPECIES,
+    refine_cluster_indices,
+)
 from .writer import (
     write_user_args,
     write_output_stats
@@ -85,6 +88,9 @@ def _refine_cluster_file(output_directory, gene_lengths, search_results, edges,
         species = str(row["spp"])
         species_to_id.setdefault(species, len(species_to_id))
         gene_to_species.append(species_to_id[species])
+    broad_copy_only = (
+        len(species_to_id) >= DEFAULT_COPY_SPLIT_MIN_DATASET_SPECIES
+    )
 
     clusters = []
     with open(cluster_path, "r") as handle:
@@ -99,12 +105,19 @@ def _refine_cluster_file(output_directory, gene_lengths, search_results, edges,
                 if cluster_ids:
                     clusters.append(cluster_ids)
 
-    hit_queries, hit_targets, hit_scores = _collect_search_hit_arrays(
-        search_results,
-        evalue_threshold,
-        gene_to_id,
-    )
-    edge_queries, edge_targets = _collect_edge_arrays(edges, gene_to_id)
+    if broad_copy_only:
+        hit_queries = []
+        hit_targets = []
+        hit_scores = []
+        edge_queries = []
+        edge_targets = []
+    else:
+        hit_queries, hit_targets, hit_scores = _collect_search_hit_arrays(
+            search_results,
+            evalue_threshold,
+            gene_to_id,
+        )
+        edge_queries, edge_targets = _collect_edge_arrays(edges, gene_to_id)
     refined = refine_cluster_indices(
         clusters,
         hit_queries,
