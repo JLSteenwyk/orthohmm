@@ -115,9 +115,9 @@ def execute_leiden(
     in helpers.generate_orthogroup_clusters_file is unchanged.
 
     cpm_resolution may be a positive float, or the string "auto" to set γ
-    to the 10th percentile of edge weights. Auto adapts to input diversity:
-    closely-related species (bacteria) land near γ≈0.1, cross-kingdom
-    eukaryotic inputs near γ≈0.001 — without manual tuning.
+    to 4 × the smallest positive edge weight. Auto adapts to input diversity:
+    closely-related species land near γ≈0.1, cross-kingdom eukaryotic inputs
+    near γ≈0.00004 — without manual tuning.
     """
     import igraph
     import leidenalg
