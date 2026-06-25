@@ -458,6 +458,7 @@ def _split_high_duplication_clusters(
 ) -> List[Cluster]:
     adjacency: MutableMapping[Gene, set] = defaultdict(set)
     component_adjacency: MutableMapping[Gene, set] = defaultdict(set)
+    component_nodes = set()
     for edge, weight in rbnh_edges.items():
         if len(edge) != 2:
             continue
@@ -467,6 +468,8 @@ def _split_high_duplication_clusters(
         if float(weight) >= panel_copy_component_min_edge_weight:
             component_adjacency[gene_a].add(gene_b)
             component_adjacency[gene_b].add(gene_a)
+            component_nodes.add(gene_a)
+            component_nodes.add(gene_b)
 
     dataset_species_count = len({
         species for species in gene_to_species.values()
@@ -474,6 +477,7 @@ def _split_high_duplication_clusters(
     })
     refined: List[Cluster] = []
     for cluster in clusters:
+        members = set(cluster)
         if len(cluster) < min_size and (
             copy_split_min_size <= 0 or len(cluster) < copy_split_min_size
         ):
@@ -500,6 +504,9 @@ def _split_high_duplication_clusters(
             panel_copy_split_min_dataset_species,
             copy_split_min_dataset_species,
         ):
+            if broad_mode and not (members & component_nodes):
+                refined.append(list(cluster))
+                continue
             split_components = _split_string_cluster_by_components(
                 cluster,
                 component_adjacency,
@@ -518,7 +525,6 @@ def _split_high_duplication_clusters(
         if max(species_counts.values()) < min_species_count:
             refined.append(list(cluster))
             continue
-        members = set(cluster)
         degrees = {
             gene: len(adjacency.get(gene, set()) & members)
             for gene in cluster
@@ -772,6 +778,7 @@ def _split_high_duplication_index_clusters(
     )
     degrees = np.zeros(total_genes, dtype=np.int32)
     component_adjacency: MutableMapping[int, set] = defaultdict(set)
+    component_nodes = set()
     if len(edge_queries) > 0:
         source_clusters = gene_to_cluster[edge_queries]
         target_clusters = gene_to_cluster[edge_targets]
@@ -795,12 +802,15 @@ def _split_high_duplication_index_clusters(
                     target_i = int(target)
                     component_adjacency[query_i].add(target_i)
                     component_adjacency[target_i].add(query_i)
+                    component_nodes.add(query_i)
+                    component_nodes.add(target_i)
 
     species = np.asarray(gene_to_species)
     dataset_species_count = int(np.unique(species).size) if len(species) else 0
     refined: List[IndexCluster] = []
     for cluster in clusters:
         cluster_list = [int(gene) for gene in cluster]
+        cluster_set = set(cluster_list)
         if len(cluster_list) < min_size and (
             copy_split_min_size <= 0 or len(cluster_list) < copy_split_min_size
         ):
@@ -827,6 +837,9 @@ def _split_high_duplication_index_clusters(
             panel_copy_split_min_dataset_species,
             copy_split_min_dataset_species,
         ):
+            if broad_mode and not (cluster_set & component_nodes):
+                refined.append(cluster_list)
+                continue
             split_components = _split_index_cluster_by_components(
                 cluster_list,
                 component_adjacency,
