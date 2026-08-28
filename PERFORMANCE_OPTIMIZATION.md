@@ -1,6 +1,6 @@
 # Production Performance Optimization
 
-Date: 2026-08-27
+Date: 2026-08-28
 
 This work improves the production OrthoHMM CLI while preserving its computed
 graph and orthogroups. QfO and OrthoBench are the primary accuracy benchmarks;
@@ -100,13 +100,21 @@ checkpoints are byte-identical to the pre-optimization baseline:
 | pre-singleton clusters | `c989cdea5fd927d4318d4ef235e3560feea7f9068e8d11e1d3f1deeaba50760e` |
 | final orthogroups | `16444a7fc1818a0bc2921cd6a390ed10f71147a8d2ccae402acb86e9c8c064d8` |
 
-The documented F=70.4, precision=79.1, recall=63.4 candidate is still a valid
-official score, but it is a cached downstream replay. Its base was generated
-by the experimental multi-pass pipeline from a fixed-`mc100` search with about
-298 million candidates, not by the current production CLI. The production
-baseline therefore exposes a pre-existing accuracy/provenance gap; it is not
-an optimization regression. The 70.4 result must not be described as a fresh
-production default until that multi-pass path is integrated and rerun.
+The high-sensitivity path now productionizes the bounded k=4 search,
+multi-pass graph inference, and strict profile expansion. A committed-source
+replay of the historical fixed-`mc100` checkpoint reproduced F=70.4,
+precision=78.9, recall=63.5, with 13 exact RefOGs. The first fresh production
+run scored F=69.6, precision=79.1, recall=62.1, with 12 exact RefOGs. It used
+2,203.51 seconds and 11.87 GiB peak process-tree RSS on 32 CPUs. The fresh run
+therefore improves substantially over the 63.8 production baseline, but does
+not reproduce the cached 70.4 result and remains below OrthoFinder 3.1.5 at
+F=72.7. The fresh and replay results remain separate provenance records.
+
+The fresh run produced 298,209,630 prefilter candidates, 18,486,508
+significant hits, 1,698,762 RBNH edges, and 1,865,672 final graph edges. The
+historical checkpoint contained 18,235,373 significant hits and 1,803,122 RBNH
+edges, so the remaining accuracy gap is upstream of profile refinement rather
+than a failure to invoke the production multipass workflow.
 
 Cached QfO evidence remains approximately 0.674 for
 `orthohmm_split_s150_c10`. No QfO search result is attributed to the new

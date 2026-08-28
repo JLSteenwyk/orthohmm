@@ -1,0 +1,412 @@
+{
+  "command": [
+    "/home/bizon/anaconda3/bin/python",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/orthohmm/__main__.py",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input",
+    "-o",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/production_high_sensitivity_orthobench_20260828/output",
+    "-c",
+    "32",
+    "--threads_per_worker",
+    "8",
+    "-x",
+    "BLOSUM62",
+    "-e",
+    "0.0001",
+    "--clustering",
+    "leiden",
+    "--cpm_resolution",
+    "0.1",
+    "--refinement_profile",
+    "default",
+    "--accuracy_profile",
+    "high_sensitivity",
+    "--metrics_json",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/production_high_sensitivity_orthobench_20260828/metrics.json",
+    "--stop",
+    "infer"
+  ],
+  "counts": {
+    "genes": 251378,
+    "high_sensitivity_final_singleton_edges": 160242,
+    "high_sensitivity_profile_candidates": 5014543,
+    "high_sensitivity_profile_edges": 25264,
+    "high_sensitivity_profile_hits": 564504,
+    "high_sensitivity_profiles": 14974,
+    "high_sensitivity_rbnh_edges": 1698762,
+    "high_sensitivity_singleton_edges": 182337,
+    "network_edges": 1865672,
+    "orthogroups": 68061,
+    "search_candidates": 298209630,
+    "significant_hits": 18486508,
+    "single_copy_orthogroups": 2759,
+    "singletons": 0,
+    "species": 12,
+    "species_pairs": 144
+  },
+  "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+  "finished_at_epoch_s": 1787894757.258677,
+  "harness": {
+    "command": [
+      "/home/bizon/anaconda3/bin/python",
+      "-m",
+      "orthohmm",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input",
+      "-o",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/production_high_sensitivity_orthobench_20260828/output",
+      "-c",
+      "32",
+      "--threads_per_worker",
+      "8",
+      "-x",
+      "BLOSUM62",
+      "-e",
+      "0.0001",
+      "--clustering",
+      "leiden",
+      "--cpm_resolution",
+      "0.1",
+      "--refinement_profile",
+      "default",
+      "--accuracy_profile",
+      "high_sensitivity",
+      "--metrics_json",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/production_high_sensitivity_orthobench_20260828/metrics.json",
+      "--stop",
+      "infer"
+    ],
+    "exit_code": 0,
+    "git_commit": "cdec072a1f1c90f5fc2505d7e2685f941fe1fcfc",
+    "git_dirty": true,
+    "input_manifest": [
+      {
+        "bytes": 8784620,
+        "path": "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+        "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+      },
+      {
+        "bytes": 11973324,
+        "path": "Canis_familiaris.CanFam3.1.pep.all.fa",
+        "sha256": "0d87161a9990b9d8b0d56b4e71dfbe74c6016b0dda3352247b35d85501c33b33"
+      },
+      {
+        "bytes": 5797677,
+        "path": "Ciona_intestinalis.KH.pep.all.fa",
+        "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+      },
+      {
+        "bytes": 17020497,
+        "path": "Danio_rerio.GRCz11.pep.all.fa",
+        "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+      },
+      {
+        "bytes": 7778910,
+        "path": "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+        "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+      },
+      {
+        "bytes": 9883133,
+        "path": "Gallus_gallus.GRCg6a.pep.all.fa",
+        "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+      },
+      {
+        "bytes": 13576811,
+        "path": "Homo_sapiens.GRCh38.pep.all.fa",
+        "sha256": "bff5d1f0f259c801dc607045e4c13bfc759098f17d536b307c13a89a523569ac"
+      },
+      {
+        "bytes": 11930628,
+        "path": "Monodelphis_domestica.ASM229v1.pep.all.fa",
+        "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+      },
+      {
+        "bytes": 12880578,
+        "path": "Mus_musculus.GRCm38.pep.all.fa",
+        "sha256": "3b6e0a68688294135324824e1879de86c1715a9f3c655406f6ec8fcfdd75db1a"
+      },
+      {
+        "bytes": 12782304,
+        "path": "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+        "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+      },
+      {
+        "bytes": 12000073,
+        "path": "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+        "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+      },
+      {
+        "bytes": 10463972,
+        "path": "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+        "sha256": "1f6ebacc342da127e4ab9c1a9cf7b627e8169df3cbc0d971d57655d974c8d9b2"
+      }
+    ],
+    "name": "benchmark_tools.benchmark_production",
+    "output_line_counts": {
+      "clusters_before_singletons": 68061,
+      "edges": 1865672,
+      "orthogroups": 68061
+    },
+    "output_manifest": [
+      {
+        "bytes": 5180265,
+        "path": "orthohmm_orthogroups.txt",
+        "sha256": "1f7f1e13621ef3a053123a458824d2fe3f42d4ee682aa7f6e80be479a51428a3"
+      },
+      {
+        "bytes": 103088015,
+        "path": "orthohmm_working_res/orthohmm_edges.txt",
+        "sha256": "5c8f6ad158247e29bf90ac721a66c8b26d11de85fcb90a590bcd1557601ee3b0"
+      },
+      {
+        "bytes": 4567716,
+        "path": "orthohmm_working_res/orthohmm_edges_clustered.txt",
+        "sha256": "e045fe169a6c204e51e7b67f3b08afce97636a120d38a0b8483b6cf691f0e677"
+      },
+      {
+        "bytes": 4944,
+        "path": "benchmark.log",
+        "sha256": "0f2758bb6837f0a2291c2960ae7ea7b9e6e6a248108165a3d89bb46121b48278"
+      }
+    ],
+    "schema_version": 1,
+    "source_manifest": [
+      {
+        "bytes": 0,
+        "path": "orthohmm/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 127,
+        "path": "orthohmm/__main__.py",
+        "sha256": "59690e02073880a5ec60087a93d77e3448a3370bb78fb17ee9ce9d5300d0d45a"
+      },
+      {
+        "bytes": 9375,
+        "path": "orthohmm/accuracy.py",
+        "sha256": "cd2baf4506a12cc592e4bfaa64bc7e53da29644041f8b1a16bca66f19bdd0b84"
+      },
+      {
+        "bytes": 5847,
+        "path": "orthohmm/args_processing.py",
+        "sha256": "1a0e14598b7754260c1b277537b7154eec7356cf979ae9f7600a588b6c889527"
+      },
+      {
+        "bytes": 7398,
+        "path": "orthohmm/externals.py",
+        "sha256": "c305a01e02a4b067dcef697fcd85cc5e8e1bda1d09252221f925f0e7a516c3dc"
+      },
+      {
+        "bytes": 2977,
+        "path": "orthohmm/files.py",
+        "sha256": "f1ec2acaea2566615b06b0a37e17b77f76bbd87fe6f2c76560a318343f6871a1"
+      },
+      {
+        "bytes": 32293,
+        "path": "orthohmm/helpers.py",
+        "sha256": "faf9e85c6af8ad5f5740c81157e8ce40bbd98c1731991d9f3fbe1f47a05f6149"
+      },
+      {
+        "bytes": 6812,
+        "path": "orthohmm/metrics.py",
+        "sha256": "d19bc9c9777b2dd01943f6421930f9fab02b7153519ab76e6a40272328195a1a"
+      },
+      {
+        "bytes": 21265,
+        "path": "orthohmm/orthohmm.py",
+        "sha256": "c04560da14ece231e4d33a9aab78af95bbd75d40d7dff9217a152ea25945b671"
+      },
+      {
+        "bytes": 12840,
+        "path": "orthohmm/parser.py",
+        "sha256": "49f00fde484c89f558eaed545958990f554150a1553e3bc83ee7441608e69071"
+      },
+      {
+        "bytes": 48145,
+        "path": "orthohmm/refinement.py",
+        "sha256": "1d6a7d067c6af3b252a04689c052982cec74b7a40ed181e5333a4a71039e0440"
+      },
+      {
+        "bytes": 0,
+        "path": "orthohmm/search/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 0,
+        "path": "orthohmm/search/_experimental/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 8599,
+        "path": "orthohmm/search/_experimental/viterbi_cuda_numba.py",
+        "sha256": "be998cf737f5c468417a84cc42d6f9c288133b6da09989ba1630d2c7d07fbdd2"
+      },
+      {
+        "bytes": 21146,
+        "path": "orthohmm/search/engine.py",
+        "sha256": "596e6e56b6dd3c2e72bbfa5bb67087285bd22833e4897443df0f9629a2f18b74"
+      },
+      {
+        "bytes": 1865,
+        "path": "orthohmm/search/evalue.py",
+        "sha256": "b395cd48874d75963512b5d1e249c5251796f869592a52983c8d55b98fe11841"
+      },
+      {
+        "bytes": 27982,
+        "path": "orthohmm/search/matrices.py",
+        "sha256": "36e59a6c649a72f9c3a5d6eca117b7fe84d5ff8e975a1d7561a82ee8d6c29fcb"
+      },
+      {
+        "bytes": 9180,
+        "path": "orthohmm/search/msa_center_star.py",
+        "sha256": "3790801fc294f2df9ae3c84897de410b1a1bb487b8ea4226d86c388c379f40ab"
+      },
+      {
+        "bytes": 6728,
+        "path": "orthohmm/search/msa_profile.py",
+        "sha256": "d4076b61905325f643dca1f7a6b4dbd6f2833398840fad7b79e3f255f2240468"
+      },
+      {
+        "bytes": 22855,
+        "path": "orthohmm/search/prefilter.py",
+        "sha256": "9842b1787d98a89bd819f9adbe340b6e2a170d63d16057645720a6bc9faf6d06"
+      },
+      {
+        "bytes": 6143,
+        "path": "orthohmm/search/profile.py",
+        "sha256": "20dca3dea06a85bdcf99e03e3abfab921fce38b9d7715097b0b4588a7cd7587e"
+      },
+      {
+        "bytes": 18453,
+        "path": "orthohmm/search/profile_expansion.py",
+        "sha256": "484e47f41ea9cf530de293eb17f52aee9843e89b80a36a91db7397380ed80b40"
+      },
+      {
+        "bytes": 4509,
+        "path": "orthohmm/search/sequences.py",
+        "sha256": "e083679cb9ea780664943355d260f398a96d93a2db336bb615af1032766f5980"
+      },
+      {
+        "bytes": 5324,
+        "path": "orthohmm/search/species_prune.py",
+        "sha256": "d729b9aa8ddf311c52e1d46c51d89dc5a6ef5d64ccd979deca90b7d980905b9e"
+      },
+      {
+        "bytes": 17693,
+        "path": "orthohmm/search/viterbi.py",
+        "sha256": "ba8543538d9bcbd55c5eaf5c7c3d5725a62c071b00d925f5fabaa474001948ba"
+      },
+      {
+        "bytes": 4420,
+        "path": "orthohmm/search/viterbi_cuda_ctypes.py",
+        "sha256": "fba688e77941c92c5e4080ef5de3dc23e4dfee6c5c2dad5d7ccdf876f81f9d20"
+      },
+      {
+        "bytes": 22,
+        "path": "orthohmm/version.py",
+        "sha256": "2c12b8ea17aeb6f9f72a6b02aca218bbc4508a46df9e365a8f6c45ad769e0b34"
+      },
+      {
+        "bytes": 2949,
+        "path": "orthohmm/writer.py",
+        "sha256": "d3dc7a318166272762395dfcb772d8779286bbf60023b2934a7d7bef0e0003fe"
+      },
+      {
+        "bytes": 5732,
+        "path": "benchmark_tools/benchmark_production.py",
+        "sha256": "09f133ae7feac36bb44005e7f0c5e84d36680d351ca4abaa58aaa58a3ecfb286"
+      }
+    ]
+  },
+  "metadata": {
+    "accuracy_profile": "high_sensitivity",
+    "clustering": "leiden",
+    "cpm_resolution": 0.1,
+    "cpu_budget": 32,
+    "evalue_threshold": 0.0001,
+    "fasta_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input",
+    "leiden_seed": 4,
+    "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/production_high_sensitivity_orthobench_20260828/output",
+    "refinement_substages_s": {
+      "cluster_write": 0.095265,
+      "hit_and_edge_collection": 0.203164,
+      "numeric_refinement": 3.901148,
+      "setup_and_cluster_read": 0.376242
+    },
+    "search_kmer_k": 4,
+    "search_max_candidates_per_query": 100,
+    "search_mode": "builtin",
+    "search_threads_per_worker": 8,
+    "search_total_threads": 32,
+    "search_workers": 4,
+    "substitution_matrix": "BLOSUM62"
+  },
+  "official_orthobench": {
+    "exact_refogs": 12,
+    "f_score": 69.6,
+    "precision": 79.1,
+    "recall": 62.1
+  },
+  "peak_process_tree_rss_bytes": 12740120576,
+  "peak_process_tree_rss_gib": 11.865162,
+  "pid": 3548334,
+  "platform": "Linux-6.8.0-55-generic-x86_64-with-glibc2.39",
+  "python": "3.10.13",
+  "rss_measurement": "sampled_sum_of_linux_proc_tree_rss",
+  "schema_version": 1,
+  "stages": {
+    "clustering": {
+      "peak_process_tree_rss_bytes": 1408520192,
+      "peak_process_tree_rss_gib": 1.311787,
+      "system_cpu_s": 0.785036,
+      "user_cpu_s": 37.739607,
+      "wall_s": 38.390015
+    },
+    "edge_thresholds": {
+      "peak_process_tree_rss_bytes": 607830016,
+      "peak_process_tree_rss_gib": 0.566086,
+      "system_cpu_s": 0.144959,
+      "user_cpu_s": 0.940911,
+      "wall_s": 1.008005
+    },
+    "network_edges": {
+      "peak_process_tree_rss_bytes": 1588170752,
+      "peak_process_tree_rss_gib": 1.479099,
+      "system_cpu_s": 0.441985,
+      "user_cpu_s": 3.750692,
+      "wall_s": 4.177919
+    },
+    "orthogroup_materialization": {
+      "peak_process_tree_rss_bytes": 2168946688,
+      "peak_process_tree_rss_gib": 2.019989,
+      "system_cpu_s": 0.381464,
+      "user_cpu_s": 5.076933,
+      "wall_s": 5.33858
+    },
+    "profile_expansion": {
+      "peak_process_tree_rss_bytes": 12740120576,
+      "peak_process_tree_rss_gib": 11.865162,
+      "system_cpu_s": 22.85269,
+      "user_cpu_s": 4946.059848,
+      "wall_s": 258.01957
+    },
+    "refinement": {
+      "peak_process_tree_rss_bytes": 3380699136,
+      "peak_process_tree_rss_gib": 3.148521,
+      "system_cpu_s": 0.312158,
+      "user_cpu_s": 4.323969,
+      "wall_s": 4.612019
+    },
+    "search": {
+      "peak_process_tree_rss_bytes": 3212603392,
+      "peak_process_tree_rss_gib": 2.99197,
+      "system_cpu_s": 33.400504,
+      "user_cpu_s": 37599.148524,
+      "wall_s": 1891.766407
+    }
+  },
+  "started_at_epoch_s": 1787892553.7455785,
+  "status": "complete",
+  "system_cpu_s": 58.38829,
+  "user_cpu_s": 42604.065488,
+  "wall_s": 2203.513099
+}
