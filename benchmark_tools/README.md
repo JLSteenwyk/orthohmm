@@ -100,3 +100,14 @@ Summarize completed QfO assessments with:
 python benchmark_tools/qfo_summarize_scores.py \
   qfo_benchmark/scoring/orthofinder_v3_diamond
 ```
+
+Run the production OrthoHMM high-sensitivity QfO workflow separately with:
+
+```bash
+benchmark_tools/submit_orthohmm_high_sensitivity_qfo.sh
+```
+
+The inference job uses `benchmark_production.py`, records production stage
+metrics and manifests, converts final orthogroups to cross-species QfO pairs,
+and filters identifiers against the official mapping. Official six-metric QfO
+scoring starts only after successful inference.

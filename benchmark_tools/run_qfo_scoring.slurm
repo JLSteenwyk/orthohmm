@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-: "${METHOD:?METHOD must name the OrthoFinder v3 result}"
+: "${METHOD:?METHOD must name the QfO result}"
 : "${PAIRS:?PAIRS must point to the QfO pair predictions}"
 
 case "${METHOD}" in
-    orthofinder_v3_diamond|orthofinder_v3_mmseqs) ;;
+    orthofinder_v3_diamond|orthofinder_v3_mmseqs|orthohmm_high_sensitivity) ;;
     *)
         echo "Unsupported scoring method: ${METHOD}" >&2
         exit 2
