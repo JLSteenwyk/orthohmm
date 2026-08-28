@@ -1,0 +1,129 @@
+{
+  "command": [
+    "/home/bizon/anaconda3/bin/python",
+    "benchmark_tools/replay_high_sensitivity.py",
+    "--hits-pickle",
+    "benchmarks/results/hits_BLOSUM62_mc100.pkl",
+    "--fasta-directory",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input",
+    "--cpu",
+    "32",
+    "--leiden-seed",
+    "4",
+    "--output-directory",
+    "benchmarks/results/production_high_sensitivity_replay_profiles_seed4_committed_20260828",
+    "--official-benchmark",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/benchmark.py",
+    "--json",
+    "benchmarks/results/production_high_sensitivity_replay_profiles_seed4_committed_20260828/result.json"
+  ],
+  "counts": {
+    "final_singleton_assignment_edges": 125937,
+    "genes": 251378,
+    "multipass_edges": 1927501,
+    "profile_candidates": 5014697,
+    "profile_multipass_edges": 1935903,
+    "profiles_built": 15901,
+    "rbnh_edges": 1803122,
+    "significant_hits": 18235373,
+    "significant_profile_hits": 579444,
+    "singleton_assignment_edges": 137482,
+    "species": 12,
+    "strict_profile_edges": 24738
+  },
+  "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+  "generated_at": "2026-08-28T04:46:17.589473+00:00",
+  "git": {
+    "commit": "37c89fdd39e1b28aeccdfcfc46c1ba80b47209f0",
+    "dirty": true
+  },
+  "input": {
+    "bytes": 952325450,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hits_BLOSUM62_mc100.pkl",
+    "sha256": "78a5af40ea2683a69e1baefefb0966c3549cffe71b24bda03b9ba4a6e29e65e1"
+  },
+  "parameters": {
+    "accuracy_profile": "high_sensitivity",
+    "cpm_resolution": 0.1,
+    "leiden_seed": 4,
+    "matrix": "BLOSUM62",
+    "profile_expansion": true
+  },
+  "peak_process_rss_gib": 5.560291,
+  "schema_version": 1,
+  "source": {
+    "bytes": 11146,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_high_sensitivity.py",
+    "sha256": "f1348354a66bc81284846c94d7f42b4c4591b72d373d4ca916d2b2be852412a5"
+  },
+  "stages": [
+    {
+      "clusters": 51181,
+      "label": "multipass",
+      "official_orthobench": {
+        "exact_refogs": 11,
+        "f_score": 66.3,
+        "precision": 73.3,
+        "recall": 60.5
+      },
+      "output": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/production_high_sensitivity_replay_profiles_seed4_committed_20260828/orthogroups_multipass.txt",
+        "sha256": "c6057d2428322c3b1922200cf68cedcd4c2ebfc2e814f525f93ec458b452560f"
+      }
+    },
+    {
+      "clusters": 63245,
+      "label": "multipass_refined",
+      "official_orthobench": {
+        "exact_refogs": 12,
+        "f_score": 69.8,
+        "precision": 78.9,
+        "recall": 62.5
+      },
+      "output": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/production_high_sensitivity_replay_profiles_seed4_committed_20260828/orthogroups_multipass_refined.txt",
+        "sha256": "3ab1c37f8f073492b3c28f6bf261f3db85e4882020cce74cfd17b66cdb356899"
+      }
+    },
+    {
+      "clusters": 50894,
+      "label": "strict_profiles",
+      "official_orthobench": {
+        "exact_refogs": 13,
+        "f_score": 66.8,
+        "precision": 73.7,
+        "recall": 61.2
+      },
+      "output": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/production_high_sensitivity_replay_profiles_seed4_committed_20260828/orthogroups_profiles.txt",
+        "sha256": "ca4b49542fbe4f5d874d4f5346003ffa5a1bdc3d636a74182ee91db1c316f283"
+      }
+    },
+    {
+      "clusters": 62885,
+      "label": "strict_profiles_refined",
+      "official_orthobench": {
+        "exact_refogs": 13,
+        "f_score": 70.4,
+        "precision": 78.9,
+        "recall": 63.5
+      },
+      "output": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/production_high_sensitivity_replay_profiles_seed4_committed_20260828/orthogroups_profiles_refined.txt",
+        "sha256": "8ee100f4370fef6e3e6a3e0fd36112adcc3aefeb60197331115667c519ca121f"
+      }
+    }
+  ],
+  "timings": {
+    "load_and_index_hits_s": 19.269124,
+    "production_refinement_s": 3.812879,
+    "rbnh_edges_s": 1.310061,
+    "singleton_reassignment_s": 37.646028,
+    "strict_profile_expansion_and_refinement_s": 249.381983
+  },
+  "wall_s": 319.467197
+}

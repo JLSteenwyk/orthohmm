@@ -9,13 +9,18 @@ python benchmark_tools/benchmark_production.py \
   bacterial_scaling/subsets/n005 \
   /tmp/orthohmm_n005 \
   /tmp/orthohmm_n005.metrics.json \
-  --cpu 32
+  --cpu 32 \
+  --accuracy-profile high_sensitivity
 ```
 
 The JSON records exact commands, input/output checksums, stage wall time,
 sampled process-tree RSS, search candidates, significant hits, graph edges,
 and orthogroup counts. The bacterial SLURM runner uses this harness rather
 than maintaining a second OrthoHMM implementation.
+
+The harness defaults to `--accuracy-profile standard`. Select
+`high_sensitivity` explicitly when measuring the bounded k=4 search,
+multi-pass graph inference, and strict profile expansion workflow.
 
 ## OrthoBench stage diagnostics
 

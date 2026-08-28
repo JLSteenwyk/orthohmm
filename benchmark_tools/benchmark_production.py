@@ -62,6 +62,11 @@ def parse_args(argv=None):
     parser.add_argument("--clustering", choices=("leiden", "mcl"), default="leiden")
     parser.add_argument("--cpm-resolution", default="0.1")
     parser.add_argument("--refinement-profile", choices=("default", "qfo"), default="default")
+    parser.add_argument(
+        "--accuracy-profile",
+        choices=("standard", "high_sensitivity"),
+        default="standard",
+    )
     parser.add_argument("--full-output", action="store_true")
     return parser.parse_args(argv)
 
@@ -102,6 +107,8 @@ def main(argv=None) -> int:
         args.cpm_resolution,
         "--refinement_profile",
         args.refinement_profile,
+        "--accuracy_profile",
+        args.accuracy_profile,
         "--metrics_json",
         str(result_json),
     ]
