@@ -86,11 +86,22 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--matrix", default="BLOSUM62")
     parser.add_argument("--cpu", type=int, default=os.cpu_count() or 1)
     parser.add_argument("--leiden-seed", type=int, default=4)
+    parser.add_argument(
+        "--profile-iterations",
+        type=int,
+        choices=(1, 2),
+        default=1,
+        help="Number of strict profile rebuild/search passes (default: 1)",
+    )
     return parser
 
 
 def main(argv=None) -> int:
     args = build_parser().parse_args(argv)
+    if args.profile_iterations > 1 and not args.fasta_directory:
+        raise SystemExit(
+            "--profile-iterations 2 requires --fasta-directory"
+        )
     started = time.perf_counter()
     timings = {}
     args.output_directory.mkdir(parents=True, exist_ok=True)
@@ -173,73 +184,92 @@ def main(argv=None) -> int:
         time.perf_counter() - stage_started, 6
     )
 
-    profile_result = None
-    profile_path = None
-    profile_refined_path = None
+    profile_results = []
+    profile_stage_paths = []
     profile_edges = None
+    profile_base_edges = rbnh_edges
     final_singleton_edges = None
     if args.fasta_directory:
         stage_started = time.perf_counter()
         files = fetch_fasta_files(str(args.fasta_directory))
-        profile_result = expand_profiles(
-            multipass_clusters,
-            gene_names,
-            str(args.fasta_directory),
-            files,
-            args.matrix,
-            args.cpu,
-            1e-4,
-            queries,
-            targets,
-            scores,
-        )
-        profile_base_edges = combine_edges(rbnh_edges, profile_result.edges)
-        execute_leiden(
-            args.cpm_resolution,
-            str(args.output_directory),
-            edges=profile_base_edges,
-            include_isolates=True,
-            seed=args.leiden_seed,
-        )
-        profile_base_clusters = read_index_clusters(
-            str(clustered_path), gene_names
-        )
-        final_singleton_edges = build_singleton_assignment_edges(
-            gene_names,
-            profile_base_clusters,
-            queries,
-            targets,
-            scores,
-        )
-        profile_edges = combine_edges(
-            profile_base_edges, final_singleton_edges
-        )
-        execute_leiden(
-            args.cpm_resolution,
-            str(args.output_directory),
-            edges=profile_edges,
-            include_isolates=True,
-            seed=args.leiden_seed,
-        )
-        profile_clusters = read_index_clusters(str(clustered_path), gene_names)
-        profile_path = args.output_directory / "orthogroups_profiles.txt"
-        shutil.copyfile(clustered_path, profile_path)
-        refined_profile_clusters = refine_cluster_indices(
-            profile_clusters,
-            queries,
-            targets,
-            scores,
-            profile_edges.sources,
-            profile_edges.targets,
-            gene_to_species,
-            rbnh_scores=profile_edges.weights,
-        )
-        profile_refined_path = (
-            args.output_directory / "orthogroups_profiles_refined.txt"
-        )
-        write_clusters(
-            profile_refined_path, refined_profile_clusters, gene_names
-        )
+        profile_clusters = multipass_clusters
+        for iteration in range(1, args.profile_iterations + 1):
+            profile_result = expand_profiles(
+                profile_clusters,
+                gene_names,
+                str(args.fasta_directory),
+                files,
+                args.matrix,
+                args.cpu,
+                1e-4,
+                queries,
+                targets,
+                scores,
+            )
+            profile_results.append(profile_result)
+            profile_base_edges = combine_edges(
+                profile_base_edges, profile_result.edges
+            )
+            execute_leiden(
+                args.cpm_resolution,
+                str(args.output_directory),
+                edges=profile_base_edges,
+                include_isolates=True,
+                seed=args.leiden_seed,
+            )
+            profile_base_clusters = read_index_clusters(
+                str(clustered_path), gene_names
+            )
+            final_singleton_edges = build_singleton_assignment_edges(
+                gene_names,
+                profile_base_clusters,
+                queries,
+                targets,
+                scores,
+            )
+            profile_edges = combine_edges(
+                profile_base_edges, final_singleton_edges
+            )
+            execute_leiden(
+                args.cpm_resolution,
+                str(args.output_directory),
+                edges=profile_edges,
+                include_isolates=True,
+                seed=args.leiden_seed,
+            )
+            profile_clusters = read_index_clusters(
+                str(clustered_path), gene_names
+            )
+            suffix = "" if iteration == 1 else f"_iteration_{iteration}"
+            profile_path = (
+                args.output_directory / f"orthogroups_profiles{suffix}.txt"
+            )
+            shutil.copyfile(clustered_path, profile_path)
+            refined_profile_clusters = refine_cluster_indices(
+                profile_clusters,
+                queries,
+                targets,
+                scores,
+                profile_edges.sources,
+                profile_edges.targets,
+                gene_to_species,
+                rbnh_scores=profile_edges.weights,
+            )
+            profile_refined_path = (
+                args.output_directory
+                / f"orthogroups_profiles{suffix}_refined.txt"
+            )
+            write_clusters(
+                profile_refined_path, refined_profile_clusters, gene_names
+            )
+            label_suffix = "" if iteration == 1 else f"_iteration_{iteration}"
+            profile_stage_paths.extend([
+                (f"strict_profiles{label_suffix}", profile_path),
+                (
+                    f"strict_profiles{label_suffix}_refined",
+                    profile_refined_path,
+                ),
+            ])
         timings["strict_profile_expansion_and_refinement_s"] = round(
             time.perf_counter() - stage_started, 6
         )
@@ -249,11 +279,7 @@ def main(argv=None) -> int:
         ("multipass", multipass_path),
         ("multipass_refined", refined_path),
     ]
-    if profile_path is not None:
-        stage_paths.extend([
-            ("strict_profiles", profile_path),
-            ("strict_profiles_refined", profile_refined_path),
-        ])
+    stage_paths.extend(profile_stage_paths)
     for label, path in stage_paths:
         record = {
             "label": label,
@@ -278,7 +304,8 @@ def main(argv=None) -> int:
         "parameters": {
             "accuracy_profile": "high_sensitivity",
             "cpm_resolution": args.cpm_resolution,
-            "profile_expansion": profile_result is not None,
+            "profile_expansion": bool(profile_results),
+            "profile_iterations": args.profile_iterations,
             "matrix": args.matrix,
             "leiden_seed": args.leiden_seed,
         },
@@ -295,17 +322,33 @@ def main(argv=None) -> int:
         "peak_process_rss_gib": round(max_rss_kib / (1024 ** 2), 6),
         "stages": stages,
     }
-    if profile_result is not None:
+    if profile_results:
         result["counts"].update({
-            "profiles_built": profile_result.profiles_built,
-            "profile_candidates": profile_result.profile_candidates,
-            "significant_profile_hits": (
-                profile_result.significant_profile_hits
+            "profiles_built": sum(
+                item.profiles_built for item in profile_results
             ),
-            "strict_profile_edges": len(profile_result.edges),
+            "profile_candidates": sum(
+                item.profile_candidates for item in profile_results
+            ),
+            "significant_profile_hits": (
+                sum(item.significant_profile_hits for item in profile_results)
+            ),
+            "strict_profile_edges": sum(
+                len(item.edges) for item in profile_results
+            ),
             "final_singleton_assignment_edges": len(final_singleton_edges),
             "profile_multipass_edges": len(profile_edges),
         })
+        result["profile_iterations"] = [
+            {
+                "iteration": iteration,
+                "profiles_built": item.profiles_built,
+                "profile_candidates": item.profile_candidates,
+                "significant_profile_hits": item.significant_profile_hits,
+                "strict_profile_edges": len(item.edges),
+            }
+            for iteration, item in enumerate(profile_results, start=1)
+        ]
     args.json.parent.mkdir(parents=True, exist_ok=True)
     temporary = args.json.with_suffix(args.json.suffix + ".tmp")
     temporary.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")

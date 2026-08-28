@@ -61,6 +61,11 @@ and input checksums, graph counts, runtime, peak process RSS, output checksums,
 and optional post-inference OrthoBench scores. Omit `--fasta-directory` to
 validate only RBNH, singleton reassignment, and production refinement.
 
+Use `--profile-iterations 2` only to evaluate iterative profile rebuilding.
+The production-equivalent default remains one pass. The recorded two-pass
+OrthoBench experiment doubled profile-search work and reduced refined F-score
+from 70.4 to 70.2, so iterative refinement is not a production recommendation.
+
 ## OrthoFinder comparator
 
 This directory pins the OrthoFinder comparator to version 3.1.5 and keeps new
