@@ -17,6 +17,26 @@ sampled process-tree RSS, search candidates, significant hits, graph edges,
 and orthogroup counts. The bacterial SLURM runner uses this harness rather
 than maintaining a second OrthoHMM implementation.
 
+## OrthoBench stage diagnostics
+
+Use the offline diagnostic to measure whether reference relationships survive
+search hits, graph construction, clustering, and refinement:
+
+```bash
+python benchmark_tools/orthobench_stage_diagnostics.py \
+  --refogs /path/to/Open_Orthobench/BENCHMARKS/RefOGs \
+  --hits-pickle mc100_hits=benchmarks/results/hits_BLOSUM62_mc100.pkl \
+  --pairs production_edges=/path/to/orthohmm_edges.txt \
+  --clusters production_final=/path/to/orthohmm_orthogroups.txt \
+  --official-benchmark /path/to/Open_Orthobench/BENCHMARKS/benchmark.py \
+  --json /path/to/stage_diagnostics.json
+```
+
+The tool records input hashes and reports both direct reference-pair recovery
+and recovery through connected components. Reference labels are read only by
+this post-run process; they are never passed into OrthoHMM inference. Pickle
+input is provided only for trusted local historical caches.
+
 ## OrthoFinder comparator
 
 This directory pins the OrthoFinder comparator to version 3.1.5 and keeps new
