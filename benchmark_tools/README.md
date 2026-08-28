@@ -111,3 +111,14 @@ The inference job uses `benchmark_production.py`, records production stage
 metrics and manifests, converts final orthogroups to cross-species QfO pairs,
 and filters identifiers against the official mapping. Official six-metric QfO
 scoring starts only after successful inference.
+
+Run the secondary Three Kingdoms validation with:
+
+```bash
+benchmark_tools/submit_orthohmm_high_sensitivity_three_kingdoms.sh
+```
+
+This uses the same production benchmark harness and accuracy profile, then
+scores the final orthogroups against the local BUSCO-derived reference. The
+workflow expects exactly 12 FASTA files and refuses to replace an existing
+result directory.
