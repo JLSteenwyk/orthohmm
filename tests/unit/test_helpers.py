@@ -6,10 +6,15 @@ import numpy as np
 import pytest
 
 from orthohmm.helpers import (
+    IndexedEdgeThresholds,
+    IndexedEdges,
+    _best_indexed_hits,
+    _determine_indexed_network_edges,
     StartStep,
     StopStep,
     SubstitutionMatrix,
     correct_by_phylogenetic_distance,
+    determine_edge_thresholds,
     generate_orthogroup_clusters_file,
     generate_orthogroup_files,
     generate_phmmer_cmds,
@@ -26,6 +31,7 @@ from orthohmm.helpers import (
     read_and_filter_phmmer_output,
     update_progress,
 )
+from orthohmm.search.engine import IndexedSearchResults, IndexedSpeciesPairResults
 
 
 # ─── Enums ──────────────────────────────────────────────────────────────
@@ -115,9 +121,8 @@ class TestGetSingletons:
         gl = self._make_gene_lengths("g1", "g2", "g3", "g4", "g5")
         clusters = [["g1", "g2"]]  # only 2 of 5 covered
         out_clusters, singletons = get_singletons(gl, clusters)
-        # 3 singletons appended (g3, g4, g5), order not guaranteed
-        singleton_genes = sorted(s[0] for s in singletons)
-        assert singleton_genes == ["g3", "g4", "g5"]
+        # Stable ordering keeps orthogroup IDs reproducible across processes.
+        assert singletons == [["g3"], ["g4"], ["g5"]]
         # The output clusters list contains the original cluster + 3 singletons
         assert len(out_clusters) == 1 + 3
 
@@ -455,6 +460,101 @@ class TestProcessPairEdgeThresholds:
         assert corr[frozenset(("a.fa", "b.fa"))] == pytest.approx(0.5)
 
 
+def test_best_indexed_hits_keeps_first_equal_scoring_target():
+    result = IndexedSpeciesPairResults(
+        query_species="a.fa",
+        target_species="b.fa",
+        query_indices=np.array([0, 0, 1], dtype=np.int32),
+        target_indices=np.array([1, 0, 0], dtype=np.int32),
+        evalues=np.array([1e-20, 1e-30, 1.0]),
+        scores=np.array([2.0, 2.0, 9.0]),
+    )
+    targets, scores = _best_indexed_hits(result, 2, 1e-4)
+    assert targets.tolist() == [1, -1]
+    assert scores[0] == 2.0
+    assert np.isnan(scores[1])
+
+
+def test_indexed_edge_thresholds_match_legacy_rbh_semantics(tmp_path):
+    (tmp_path / "a.fa").write_text(">a0\nAAAA\n>a1\nAAAA\n")
+    (tmp_path / "b.fa").write_text(">b0\nAAAA\n>b1\nAAAA\n")
+    ab = IndexedSpeciesPairResults(
+        query_species="a.fa",
+        target_species="b.fa",
+        query_indices=np.array([0, 0, 1], dtype=np.int32),
+        target_indices=np.array([0, 1, 1], dtype=np.int32),
+        evalues=np.array([1e-20, 1e-20, 1e-20]),
+        scores=np.array([2.0, 2.0, 4.0]),
+    )
+    ba = IndexedSpeciesPairResults(
+        query_species="b.fa",
+        target_species="a.fa",
+        query_indices=np.array([0, 1], dtype=np.int32),
+        target_indices=np.array([0, 1], dtype=np.int32),
+        evalues=np.array([1e-20, 1e-20]),
+        scores=np.array([2.0, 4.0]),
+    )
+    search_results = IndexedSearchResults(
+        {("a.fa", "b.fa"): ab, ("b.fa", "a.fa"): ba},
+        {"a.fa": ["a0", "a1"], "b.fa": ["b0", "b1"]},
+    )
+
+    _, thresholds, corr = determine_edge_thresholds(
+        ["a.fa", "b.fa"], str(tmp_path), str(tmp_path), 1, 1e-4,
+        search_results=search_results,
+    )
+
+    assert isinstance(thresholds, IndexedEdgeThresholds)
+    assert thresholds.values == pytest.approx([2 / 3, 4 / 3, 2 / 3, 4 / 3])
+    assert corr[frozenset(("a.fa", "b.fa"))] == pytest.approx(3.0)
+    assert corr[frozenset(("a.fa",))] == 0.0
+    assert corr[frozenset(("b.fa",))] == 0.0
+
+
+def test_indexed_thresholds_preserve_legacy_float_operation_order(tmp_path):
+    for species in ("a", "b"):
+        (tmp_path / f"{species}.fa").write_text(
+            "".join(f">{species}{idx}\nAAAA\n" for idx in range(3))
+        )
+    fwd_scores = np.array([
+        9.430561055723675,
+        5.113275528143616,
+        9.762437057077042,
+    ])
+    rev_scores = np.array([
+        0.8083602389560218,
+        6.073558319950296,
+        3.764865843772726,
+    ])
+
+    def pair(query, target, scores):
+        indices = np.arange(3, dtype=np.int32)
+        return IndexedSpeciesPairResults(
+            query_species=query,
+            target_species=target,
+            query_indices=indices,
+            target_indices=indices,
+            evalues=np.full(3, 1e-20),
+            scores=scores,
+        )
+
+    search_results = IndexedSearchResults(
+        {
+            ("a.fa", "b.fa"): pair("a.fa", "b.fa", fwd_scores),
+            ("b.fa", "a.fa"): pair("b.fa", "a.fa", rev_scores),
+        },
+        {"a.fa": ["a0", "a1", "a2"], "b.fa": ["b0", "b1", "b2"]},
+    )
+    _, thresholds, corr = determine_edge_thresholds(
+        ["a.fa", "b.fa"], str(tmp_path), str(tmp_path), 1, 1e-4,
+        search_results=search_results,
+    )
+    correction = corr[frozenset(("a.fa", "b.fa"))]
+    legacy_order = (fwd_scores / correction + rev_scores / correction) / 2.0
+
+    assert np.array_equal(thresholds.values[:3], legacy_order)
+
+
 # ─── process_pair_determine_network_edges ───────────────────────────────
 
 
@@ -487,6 +587,42 @@ class TestProcessPairDetermineNetworkEdges:
             evalue_threshold=1e-4,
         )
         assert edges == {}
+
+
+def test_indexed_network_edges_match_legacy_threshold_semantics(tmp_path):
+    (tmp_path / "orthohmm_working_res").mkdir()
+    pair = IndexedSpeciesPairResults(
+        query_species="a.fa",
+        target_species="b.fa",
+        query_indices=np.array([0, 1], dtype=np.int32),
+        target_indices=np.array([0, 0], dtype=np.int32),
+        evalues=np.array([1e-20, 1e-20]),
+        scores=np.array([2.0, 0.5]),
+        candidate_count=2,
+    )
+    search_results = IndexedSearchResults(
+        {("a.fa", "b.fa"): pair},
+        {"a.fa": ["a0", "a1"], "b.fa": ["b0"]},
+    )
+    gene_lengths = np.array(
+        [("a.fa", "a0", 10), ("a.fa", "a1", 10), ("b.fa", "b0", 10)],
+        dtype=[("spp", object), ("name", object), ("length", int)],
+    )
+    edges = _determine_indexed_network_edges(
+        search_results,
+        gene_lengths,
+        {frozenset(("a.fa", "b.fa")): 2.0},
+        {"a0": 0.75, "a1": 0.75},
+        1e-4,
+        str(tmp_path),
+    )
+    assert isinstance(edges, IndexedEdges)
+    assert edges.sources.tolist() == [0]
+    assert edges.targets.tolist() == [2]
+    assert edges.weights.tolist() == [1.0]
+    assert (tmp_path / "orthohmm_working_res" / "orthohmm_edges.txt").read_text() == (
+        "a0\tb0\t1.0\n"
+    )
 
 
 # ─── generate_orthogroup_clusters_file ──────────────────────────────────

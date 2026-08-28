@@ -142,5 +142,7 @@ class TestArgsProcessing(object):
             "clustering",
             "cpm_resolution",
             "refinement_profile",
+            "metrics_json",
+            "threads_per_worker",
         ]
         assert sorted(res.keys()) == sorted(expected_keys)

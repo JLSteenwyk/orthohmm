@@ -9,6 +9,8 @@ from orthohmm.search.prefilter import (
     build_kmer_index,
     compute_freq_threshold,
     is_c_prefilter_available,
+    prefilter_candidates,
+    prepare_kmer_index,
 )
 from orthohmm.search.sequences import SpeciesSequences
 
@@ -131,3 +133,41 @@ class TestComputeFreqThreshold:
         # max(100, 200/200=1) = floor of 100; percentile catches the 500s
         # so threshold should be at least 100
         assert int(thresh) >= 100
+
+
+class TestPreparedKmerIndex:
+    def test_reuse_preserves_candidates(self, tmp_path):
+        species = _make_species(tmp_path, [
+            ("g1", "ACDEFGHIKLMNPQRSTVWY"),
+            ("g2", "ACDEFGHIKLMNPQAAAAAA"),
+        ])
+        kwargs = dict(
+            k=3,
+            use_reduced_alphabet=False,
+            min_total_hits=1,
+            min_diag_hits=1,
+            max_candidates_per_query=10,
+        )
+        direct = prefilter_candidates(species, species, **kwargs)
+        prepared = prepare_kmer_index(
+            species, k=3, use_reduced_alphabet=False
+        )
+        reused = prefilter_candidates(
+            species, species, prepared_index=prepared, **kwargs
+        )
+        assert np.array_equal(reused[0], direct[0])
+        assert np.array_equal(reused[1], direct[1])
+
+    def test_rejects_mismatched_settings(self, tmp_path):
+        species = _make_species(tmp_path, [("g1", "ACDEFGHIK")])
+        prepared = prepare_kmer_index(
+            species, k=3, use_reduced_alphabet=False
+        )
+        with pytest.raises(ValueError, match="does not match"):
+            prefilter_candidates(
+                species,
+                species,
+                k=4,
+                use_reduced_alphabet=False,
+                prepared_index=prepared,
+            )

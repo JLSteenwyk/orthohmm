@@ -1,6 +1,7 @@
 """Unit tests for orthohmm/externals.py (clustering + run-completion helpers)."""
 import os
 
+import numpy as np
 import pytest
 
 from orthohmm.externals import (
@@ -8,6 +9,7 @@ from orthohmm.externals import (
     check_if_phmmer_command_completed,
     execute_leiden,
 )
+from orthohmm.helpers import IndexedEdges
 
 
 # ─── completion-check helpers ───────────────────────────────────────────
@@ -106,3 +108,20 @@ class TestExecuteLeiden:
         # alphabetically sorted (matches what helpers.generate_orthogroup_
         # clusters_file consumes via .split())
         assert content.strip() == "g1 g2"
+
+    def test_compact_edges_bypass_abc_reload(self, tmp_path):
+        wd = os.path.join(tmp_path, "orthohmm_working_res")
+        os.makedirs(wd)
+        edges = IndexedEdges(
+            gene_names=["a", "b", "c", "d"],
+            sources=np.array([0, 2], dtype=np.int32),
+            targets=np.array([1, 3], dtype=np.int32),
+            weights=np.array([1.0, 1.0]),
+        )
+        execute_leiden(0.1, str(tmp_path), edges=edges)
+        clusters = [
+            line.split()
+            for line in open(os.path.join(wd, "orthohmm_edges_clustered.txt"))
+            if line.strip()
+        ]
+        assert clusters == [["a", "b"], ["c", "d"]]

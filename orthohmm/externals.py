@@ -105,6 +105,7 @@ def check_if_mcl_command_completed(
 def execute_leiden(
     cpm_resolution,
     output_directory: str,
+    edges=None,
 ) -> None:
     """In-process Leiden CPM clustering on the ABC edge file.
 
@@ -130,26 +131,43 @@ def execute_leiden(
         and cpm_resolution.lower() == "auto"
     )
 
-    # Load edges: ABC format (gene_a \t gene_b \t weight)
+    # Load legacy ABC input or consume compact production edge arrays directly.
     name_to_id = {}
-    edges = []
+    graph_edges = []
     weights = []
+    id_to_name = None
     min_positive_weight = None
     positive_weight_count = 0
-    with open(edges_path, "r") as f:
-        for line in f:
-            parts = line.rstrip("\n").split()
-            if len(parts) < 3:
-                continue
-            a, b, w = parts[0], parts[1], float(parts[2])
-            ai = name_to_id.setdefault(a, len(name_to_id))
-            bi = name_to_id.setdefault(b, len(name_to_id))
-            edges.append((ai, bi))
-            weights.append(w)
-            if use_auto_resolution and w > 0:
-                positive_weight_count += 1
-                if min_positive_weight is None or w < min_positive_weight:
-                    min_positive_weight = w
+    if edges is not None and hasattr(edges, "sources"):
+        used_ids = np.unique(np.concatenate((edges.sources, edges.targets)))
+        local_sources = np.searchsorted(used_ids, edges.sources).astype(np.int32)
+        local_targets = np.searchsorted(used_ids, edges.targets).astype(np.int32)
+        graph_edges = np.column_stack((local_sources, local_targets))
+        weights = np.asarray(edges.weights, dtype=np.float64)
+        id_to_name = [edges.gene_names[int(gene_id)] for gene_id in used_ids]
+        if use_auto_resolution:
+            positive = weights[weights > 0]
+            positive_weight_count = len(positive)
+            if len(positive) > 0:
+                min_positive_weight = float(positive.min())
+    else:
+        with open(edges_path, "r") as f:
+            for line in f:
+                parts = line.rstrip("\n").split()
+                if len(parts) < 3:
+                    continue
+                a, b, w = parts[0], parts[1], float(parts[2])
+                ai = name_to_id.setdefault(a, len(name_to_id))
+                bi = name_to_id.setdefault(b, len(name_to_id))
+                graph_edges.append((ai, bi))
+                weights.append(w)
+                if use_auto_resolution and w > 0:
+                    positive_weight_count += 1
+                    if min_positive_weight is None or w < min_positive_weight:
+                        min_positive_weight = w
+        id_to_name = [None] * len(name_to_id)
+        for name, idx in name_to_id.items():
+            id_to_name[idx] = name
 
     if use_auto_resolution:
         # γ = 4 × min(edge_weight) over edges with strictly positive weight.
@@ -170,20 +188,20 @@ def execute_leiden(
     else:
         gamma = float(cpm_resolution)
 
-    g = igraph.Graph(n=len(name_to_id), edges=edges, directed=False)
+    g = igraph.Graph(n=len(id_to_name), edges=graph_edges, directed=False)
     g.es["weight"] = weights
 
     part = leidenalg.find_partition(
         g, leidenalg.CPMVertexPartition,
         weights="weight", resolution_parameter=gamma,
+        seed=0,
     )
 
-    id_to_name = [None] * len(name_to_id)
-    for name, idx in name_to_id.items():
-        id_to_name[idx] = name
-
+    output_clusters = []
+    for cluster in part:
+        if cluster:
+            output_clusters.append(sorted(id_to_name[i] for i in cluster))
+    output_clusters.sort()
     with open(out_path, "w") as out:
-        for cluster in part:
-            if not cluster:
-                continue
-            out.write(" ".join(sorted(id_to_name[i] for i in cluster)) + "\n")
+        for cluster in output_clusters:
+            out.write(" ".join(cluster) + "\n")

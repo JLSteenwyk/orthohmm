@@ -15,3 +15,4 @@ class TestParser(object):
         assert parsed.fasta_directory == fasta_directory
         assert parsed.clustering == "leiden"
         assert parsed.cpm_resolution == "0.1"
+        assert parsed.threads_per_worker == 8

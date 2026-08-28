@@ -714,10 +714,19 @@ def _merge_reciprocal_cluster_best_indexed(
         candidate = candidate & (norms >= min_norm)
     best_norm = np.full(len(sizes), -np.inf, dtype=np.float64)
     best_target = np.full(len(sizes), -1, dtype=np.int32)
-    for source, target, norm in zip(sources[candidate], targets[candidate], norms[candidate]):
-        if norm > best_norm[source]:
-            best_norm[source] = norm
-            best_target[source] = target
+    candidate_sources = sources[candidate]
+    candidate_targets = targets[candidate]
+    candidate_norms = norms[candidate]
+    if len(candidate_sources):
+        np.maximum.at(best_norm, candidate_sources, candidate_norms)
+        winning_rows = np.flatnonzero(
+            candidate_norms == best_norm[candidate_sources]
+        )
+        winning_sources, first = np.unique(
+            candidate_sources[winning_rows], return_index=True
+        )
+        selected_rows = winning_rows[first]
+        best_target[winning_sources] = candidate_targets[selected_rows]
 
     reciprocal = []
     for source, target in enumerate(best_target):

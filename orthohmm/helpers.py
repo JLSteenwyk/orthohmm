@@ -1,4 +1,5 @@
 from collections import defaultdict
+from dataclasses import dataclass
 from enum import Enum
 import itertools
 import multiprocessing
@@ -44,6 +45,122 @@ class SubstitutionMatrix(Enum):
     pam240 = "PAM240"
     wag = "WAG"
     lg = "LG"
+
+
+@dataclass
+class IndexedEdges:
+    """Compact undirected weighted graph keyed by global gene indices."""
+
+    gene_names: List[str]
+    sources: np.ndarray
+    targets: np.ndarray
+    weights: np.ndarray
+
+    def __len__(self) -> int:
+        return len(self.sources)
+
+
+@dataclass
+class IndexedEdgeThresholds:
+    """Per-gene edge thresholds aligned with the global gene table."""
+
+    values: np.ndarray
+
+
+def _write_indexed_edges(edges: IndexedEdges, output_directory: str) -> None:
+    path = f"{output_directory}/orthohmm_working_res/orthohmm_edges.txt"
+    with open(path, "w") as handle:
+        for source, target, weight in zip(
+            edges.sources, edges.targets, edges.weights
+        ):
+            handle.write(
+                f"{edges.gene_names[int(source)]}\t"
+                f"{edges.gene_names[int(target)]}\t{float(weight)}\n"
+            )
+
+
+def _determine_indexed_network_edges(
+    search_results,
+    gene_lengths: np.ndarray,
+    pairwise_rbh_corr: Dict[frozenset, np.float64],
+    reciprocal_best_hit_thresholds: Dict[np.str_, np.float64],
+    evalue_threshold: float,
+    output_directory: str,
+) -> IndexedEdges:
+    """Build and deduplicate numeric edges without per-edge Python objects."""
+    gene_names = [str(row["name"]) for row in gene_lengths]
+    gene_to_id = {name: idx for idx, name in enumerate(gene_names)}
+    species_global_ids = {
+        species: np.fromiter(
+            (gene_to_id[gene] for gene in names),
+            dtype=np.int32,
+            count=len(names),
+        )
+        for species, names in search_results.species_ids.items()
+    }
+    if isinstance(reciprocal_best_hit_thresholds, IndexedEdgeThresholds):
+        thresholds = reciprocal_best_hit_thresholds.values
+        if len(thresholds) != len(gene_names):
+            raise ValueError("indexed edge thresholds do not match gene table")
+    else:
+        thresholds = np.full(len(gene_names), np.nan, dtype=np.float64)
+        for gene, threshold in reciprocal_best_hit_thresholds.items():
+            gene_id = gene_to_id.get(str(gene))
+            if gene_id is not None:
+                thresholds[gene_id] = float(threshold)
+
+    source_chunks = []
+    target_chunks = []
+    weight_chunks = []
+    for pair, result in search_results.items():
+        mask = result.evalues < evalue_threshold
+        if not mask.any():
+            continue
+        correction = float(pairwise_rbh_corr[frozenset(pair)])
+        query_ids = species_global_ids[pair[0]][result.query_indices[mask]]
+        target_ids = species_global_ids[pair[1]][result.target_indices[mask]]
+        with np.errstate(divide="ignore", invalid="ignore"):
+            weights = result.scores[mask] / correction
+        keep = (
+            ~np.isnan(thresholds[query_ids])
+            & (weights >= thresholds[query_ids])
+            & (query_ids != target_ids)
+        )
+        if keep.any():
+            source_chunks.append(np.minimum(query_ids[keep], target_ids[keep]))
+            target_chunks.append(np.maximum(query_ids[keep], target_ids[keep]))
+            weight_chunks.append(weights[keep])
+
+    if not source_chunks:
+        edges = IndexedEdges(
+            gene_names,
+            np.empty(0, dtype=np.int32),
+            np.empty(0, dtype=np.int32),
+            np.empty(0, dtype=np.float64),
+        )
+        _write_indexed_edges(edges, output_directory)
+        return edges
+
+    sources = np.concatenate(source_chunks).astype(np.int32, copy=False)
+    targets = np.concatenate(target_chunks).astype(np.int32, copy=False)
+    weights = np.concatenate(weight_chunks).astype(np.float64, copy=False)
+    packed = (sources.astype(np.int64) << 32) | targets.astype(np.int64)
+    order = np.argsort(packed, kind="stable")
+    packed_sorted = packed[order]
+    weights_sorted = weights[order]
+    starts = np.concatenate(
+        (np.array([0], dtype=np.int64), np.flatnonzero(np.diff(packed_sorted)) + 1)
+    )
+    unique_packed = packed_sorted[starts]
+    unique_weights = np.maximum.reduceat(weights_sorted, starts)
+    edges = IndexedEdges(
+        gene_names,
+        (unique_packed >> 32).astype(np.int32),
+        (unique_packed & 0xFFFFFFFF).astype(np.int32),
+        unique_weights,
+    )
+    _write_indexed_edges(edges, output_directory)
+    return edges
 
 
 def generate_phmmer_cmds(
@@ -133,7 +250,11 @@ def read_and_filter_phmmer_output(
 ) -> np.ndarray:
     # If in-memory search results are available, use them
     if search_results is not None:
-        from .search.engine import results_to_phmmer_format
+        from .search.engine import (
+            IndexedSearchResults,
+            indexed_results_to_phmmer_format,
+            results_to_phmmer_format,
+        )
         pair_results = search_results.get((taxon_a, taxon_b))
         if pair_results is None:
             dtype_res = [
@@ -143,6 +264,13 @@ def read_and_filter_phmmer_output(
                 ("score", float)
             ]
             return np.array([], dtype=dtype_res)
+        if isinstance(search_results, IndexedSearchResults):
+            return indexed_results_to_phmmer_format(
+                pair_results,
+                search_results.species_ids[taxon_a],
+                search_results.species_ids[taxon_b],
+                evalue_threshold,
+            )
         return results_to_phmmer_format(pair_results, evalue_threshold)
 
     res_path = f"{output_directory}/orthohmm_working_res/{taxon_a}_2_{taxon_b}.phmmerout.txt"
@@ -314,6 +442,116 @@ def process_pair_edge_thresholds(
     return reciprocal_best_hit_thresholds, pairwise_rbh_corr
 
 
+def _best_indexed_hits(result, n_queries, evalue_threshold):
+    """Return the first maximum-scoring target for each local query index."""
+    best_targets = np.full(n_queries, -1, dtype=np.int32)
+    best_scores = np.full(n_queries, -np.inf, dtype=np.float64)
+    if result is None or len(result.scores) == 0:
+        best_scores.fill(np.nan)
+        return best_targets, best_scores
+
+    mask = result.evalues < evalue_threshold
+    if not mask.any():
+        best_scores.fill(np.nan)
+        return best_targets, best_scores
+
+    query_indices = result.query_indices[mask]
+    target_indices = result.target_indices[mask]
+    scores = result.scores[mask]
+    np.maximum.at(best_scores, query_indices, scores)
+
+    # np.unique returns the first matching row for each query, preserving the
+    # legacy strict-maximum behavior when multiple targets have equal scores.
+    winning_rows = np.flatnonzero(scores == best_scores[query_indices])
+    winning_queries, first = np.unique(
+        query_indices[winning_rows], return_index=True
+    )
+    selected_rows = winning_rows[first]
+    best_targets[winning_queries] = target_indices[selected_rows]
+    best_scores[best_targets == -1] = np.nan
+    return best_targets, best_scores
+
+
+def _determine_indexed_edge_thresholds(
+    files,
+    gene_lengths,
+    evalue_threshold,
+    search_results,
+):
+    """Calculate reciprocal-best-hit thresholds using compact integer arrays."""
+    gene_names = [str(row["name"]) for row in gene_lengths]
+    gene_to_id = {name: idx for idx, name in enumerate(gene_names)}
+    species_global_ids = {
+        species: np.fromiter(
+            (gene_to_id[gene] for gene in names),
+            dtype=np.int32,
+            count=len(names),
+        )
+        for species, names in search_results.species_ids.items()
+    }
+    best_hits = {
+        pair: _best_indexed_hits(
+            search_results.get(pair),
+            len(search_results.species_ids[pair[0]]),
+            evalue_threshold,
+        )
+        for pair in itertools.product(files, repeat=2)
+    }
+
+    threshold_values = np.full(len(gene_names), np.nan, dtype=np.float64)
+    threshold_initialized = np.zeros(len(gene_names), dtype=bool)
+    pairwise_corr = {}
+    file_pairs = list(itertools.product(files, repeat=2))
+
+    for idx, pair in enumerate(file_pairs):
+        fwd_targets, fwd_scores = best_hits[pair]
+        rev_targets, rev_scores = best_hits[(pair[1], pair[0])]
+        query_indices = np.flatnonzero(fwd_targets >= 0)
+        target_indices = fwd_targets[query_indices]
+        reciprocal = (
+            (target_indices < len(rev_targets))
+            & (rev_targets[target_indices] == query_indices)
+        )
+        reciprocal_queries = query_indices[reciprocal]
+        reciprocal_targets = target_indices[reciprocal]
+
+        if len(reciprocal_queries):
+            pair_scores = (
+                fwd_scores[reciprocal_queries]
+                + rev_scores[reciprocal_targets]
+            ) / 2.0
+            correction = np.mean(pair_scores)
+        else:
+            correction = np.float64(0.0)
+
+        pair_key = frozenset(pair)
+        if pair_key in pairwise_corr:
+            pairwise_corr[pair_key] = (
+                pairwise_corr[pair_key] + correction
+            ) / 2.0
+        else:
+            pairwise_corr[pair_key] = correction
+
+        if len(reciprocal_queries):
+            with np.errstate(divide="ignore", invalid="ignore"):
+                new_values = (
+                    fwd_scores[reciprocal_queries] / correction
+                    + rev_scores[reciprocal_targets] / correction
+                ) / 2.0
+            global_ids = species_global_ids[pair[0]][reciprocal_queries]
+            initialized = threshold_initialized[global_ids]
+            current = threshold_values[global_ids]
+            update = ~initialized | (new_values < current)
+            threshold_values[global_ids[update]] = new_values[update]
+            threshold_initialized[global_ids] = True
+
+        progress = ((idx + 1) / len(file_pairs)) * 100
+        sys.stdout.write(f"\r          {progress:.2f}% complete")
+        sys.stdout.flush()
+
+    return IndexedEdgeThresholds(threshold_values), pairwise_corr
+
+
 def update_progress(
     lock,
     completed_tasks,
@@ -342,6 +580,16 @@ def determine_edge_thresholds(
     file_pairs = [(file1, file2) for file1 in files for file2 in files]
 
     if search_results is not None:
+        from .search.engine import IndexedSearchResults
+        if isinstance(search_results, IndexedSearchResults):
+            thresholds, pairwise_corr = _determine_indexed_edge_thresholds(
+                files,
+                gene_lengths,
+                evalue_threshold,
+                search_results,
+            )
+            return gene_lengths, thresholds, pairwise_corr
+
         # In-memory path: process sequentially (results already computed)
         results_list = []
         total_tasks = len(file_pairs)
@@ -474,6 +722,17 @@ def determine_network_edges(
     search_results=None,
 ) -> Dict[frozenset, np.float64]:
 
+    from .search.engine import IndexedSearchResults
+    if isinstance(search_results, IndexedSearchResults):
+        return _determine_indexed_network_edges(
+            search_results,
+            gene_lengths,
+            pairwise_rbh_corr,
+            reciprocal_best_hit_thresholds,
+            evalue_threshold,
+            output_directory,
+        )
+
     gene_lengths = {str(row["name"]): int(row["length"]) for row in gene_lengths}
     file_pairs = [(file1, file2) for file1 in files for file2 in files]
 
@@ -554,7 +813,7 @@ def get_singletons(
     List[List[str]],
     List[List[str]],
 ]:
-    singletons = list(
+    singletons = sorted(
         set(gene_lengths["name"]) - set([j for i in clustering_res for j in i])
     )
     singletons = [[str(i)] for i in singletons]
@@ -613,19 +872,27 @@ def get_orthogroup_information(
     total_ogs = len(clustering_res)
     width = len(str(total_ogs))
     total_number_of_taxa = len(np.unique(gene_lengths["spp"]))
+    gene_to_row = {
+        str(row["name"]): row_idx
+        for row_idx, row in enumerate(gene_lengths)
+    }
 
     og_cn["files:"] = files
 
     for i in range(total_ogs):
         # Format the OG number with leading zeros
         og_id = f"OG{i:0{width}}:"
-        og_rows = gene_lengths[
-            np.isin(gene_lengths["name"], clustering_res[i])
-        ]
+        row_indices = sorted(
+            gene_to_row[gene]
+            for gene in clustering_res[i]
+            if gene in gene_to_row
+        )
+        og_rows = gene_lengths[np.asarray(row_indices, dtype=np.intp)]
         # test if single-copy
-        if len(np.unique(og_rows["spp"])) == len(og_rows["spp"]):
+        unique_species = np.unique(og_rows["spp"])
+        if len(unique_species) == len(og_rows["spp"]):
             # test if sufficient occupancy
-            if len(np.unique(og_rows["spp"])) / total_number_of_taxa > single_copy_threshold:
+            if len(unique_species) / total_number_of_taxa > single_copy_threshold:
                 single_copy_ogs.append(f"OG{i}")
         og_dat = list()
         for row in og_rows:

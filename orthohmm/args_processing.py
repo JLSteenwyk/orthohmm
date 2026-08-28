@@ -62,6 +62,9 @@ def process_args(args) -> dict:
 
     if args.cpu:
         cpu = int(args.cpu)
+        if cpu < 1:
+            logger.warning("CPU count must be at least 1.")
+            sys.exit()
         if cpu > multiprocessing.cpu_count():
             logger.warning(f"{cpu} CPUs requested exceeds {multiprocessing.cpu_count()} CPUs available.")
             logger.warning(f"Changing CPUs to {multiprocessing.cpu_count()}.")
@@ -110,6 +113,11 @@ def process_args(args) -> dict:
 
     inflation_value = args.inflation_value or 1.5
     refinement_profile = getattr(args, "refinement_profile", None) or "default"
+    metrics_json = getattr(args, "metrics_json", None)
+    threads_per_worker = int(getattr(args, "threads_per_worker", 8) or 8)
+    if threads_per_worker < 1:
+        logger.warning("--threads_per_worker must be at least 1.")
+        sys.exit()
 
     start = StartStep(args.start) if args.start else None
     stop = StopStep(args.stop) if args.stop else None
@@ -134,4 +142,6 @@ def process_args(args) -> dict:
         clustering=clustering,
         cpm_resolution=cpm_resolution,
         refinement_profile=refinement_profile,
+        metrics_json=metrics_json,
+        threads_per_worker=threads_per_worker,
     )

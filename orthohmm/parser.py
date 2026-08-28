@@ -334,6 +334,23 @@ def create_parser() -> ArgumentParser:
     )
 
     optional.add_argument(
+        "--metrics_json",
+        type=str,
+        required=False,
+        help=SUPPRESS,
+        metavar="metrics_json",
+    )
+
+    optional.add_argument(
+        "--threads_per_worker",
+        type=int,
+        required=False,
+        default=8,
+        help=SUPPRESS,
+        metavar="threads_per_worker",
+    )
+
+    optional.add_argument(
         "-h",
         "--help",
         action="help",

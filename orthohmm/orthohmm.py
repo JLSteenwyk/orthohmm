@@ -6,6 +6,8 @@ import sys
 import time
 from typing import Union
 
+import numpy as np
+
 from .args_processing import process_args
 from .externals import (
     execute_leiden,
@@ -19,11 +21,13 @@ from .helpers import (
     generate_orthogroup_clusters_file,
     generate_orthogroup_files,
     generate_phmmer_cmds,
+    IndexedEdges,
     StartStep,
     StopStep,
     SubstitutionMatrix,
 )
 from .parser import create_parser
+from .metrics import PipelineMetrics
 from .refinement import (
     DEFAULT_COPY_SPLIT_MIN_DATASET_SPECIES,
     resolve_refinement_profile,
@@ -38,6 +42,43 @@ logger = logging.getLogger(__name__)
 
 
 def _collect_search_hit_arrays(search_results, evalue_threshold, gene_to_id):
+    from .search.engine import IndexedSearchResults
+
+    if isinstance(search_results, IndexedSearchResults):
+        query_chunks = []
+        target_chunks = []
+        score_chunks = []
+        species_global_ids = {
+            species: np.fromiter(
+                (gene_to_id[gene] for gene in names),
+                dtype=np.int32,
+                count=len(names),
+            )
+            for species, names in search_results.species_ids.items()
+        }
+        for (query_species, target_species), result in search_results.items():
+            mask = result.evalues < evalue_threshold
+            if not mask.any():
+                continue
+            query_chunks.append(
+                species_global_ids[query_species][result.query_indices[mask]]
+            )
+            target_chunks.append(
+                species_global_ids[target_species][result.target_indices[mask]]
+            )
+            score_chunks.append(result.scores[mask])
+        if not query_chunks:
+            return (
+                np.empty(0, dtype=np.int32),
+                np.empty(0, dtype=np.int32),
+                np.empty(0, dtype=np.float64),
+            )
+        return (
+            np.concatenate(query_chunks),
+            np.concatenate(target_chunks),
+            np.concatenate(score_chunks),
+        )
+
     hit_queries = []
     hit_targets = []
     hit_scores = []
@@ -60,6 +101,9 @@ def _collect_search_hit_arrays(search_results, evalue_threshold, gene_to_id):
 
 
 def _collect_edge_arrays(edges, gene_to_id):
+    if isinstance(edges, IndexedEdges):
+        return edges.sources, edges.targets, edges.weights
+
     edge_queries = []
     edge_targets = []
     edge_scores = []
@@ -80,7 +124,9 @@ def _collect_edge_arrays(edges, gene_to_id):
 def _refine_cluster_file(output_directory, gene_lengths, search_results, edges,
                          evalue_threshold, refinement_profile="default", **kwargs):
     if search_results is None:
-        return
+        return {}
+
+    started = time.perf_counter()
 
     cluster_path = f"{output_directory}/orthohmm_working_res/orthohmm_edges_clustered.txt"
     gene_names = [str(row["name"]) for row in gene_lengths]
@@ -107,6 +153,7 @@ def _refine_cluster_file(output_directory, gene_lengths, search_results, edges,
                 ]
                 if cluster_ids:
                     clusters.append(cluster_ids)
+    setup_finished = time.perf_counter()
 
     if broad_copy_only:
         hit_queries = []
@@ -123,6 +170,7 @@ def _refine_cluster_file(output_directory, gene_lengths, search_results, edges,
             gene_to_id,
         )
         edge_queries, edge_targets, edge_scores = _collect_edge_arrays(edges, gene_to_id)
+    collection_finished = time.perf_counter()
     refinement_kwargs = resolve_refinement_profile(refinement_profile)
     refinement_kwargs.update(kwargs)
     refined = refine_cluster_indices(
@@ -136,11 +184,23 @@ def _refine_cluster_file(output_directory, gene_lengths, search_results, edges,
         rbnh_scores=edge_scores,
         **refinement_kwargs,
     )
+    refinement_finished = time.perf_counter()
 
     with open(cluster_path, "w") as handle:
         for cluster in refined:
             if cluster:
                 handle.write(" ".join(sorted(gene_names[i] for i in cluster)) + "\n")
+    write_finished = time.perf_counter()
+    return {
+        "setup_and_cluster_read": round(setup_finished - started, 6),
+        "hit_and_edge_collection": round(
+            collection_finished - setup_finished, 6
+        ),
+        "numeric_refinement": round(
+            refinement_finished - collection_finished, 6
+        ),
+        "cluster_write": round(write_finished - refinement_finished, 6),
+    }
 
 
 def execute(
@@ -161,6 +221,51 @@ def execute(
     refinement_profile: str = "default",
     **kwargs,
 ) -> None:
+    metrics_json = kwargs.pop("metrics_json", None)
+    threads_per_worker = kwargs.pop("threads_per_worker", 8)
+    with PipelineMetrics(metrics_json) as metrics:
+        return _execute(
+            fasta_directory=fasta_directory,
+            output_directory=output_directory,
+            phmmer=phmmer,
+            cpu=cpu,
+            single_copy_threshold=single_copy_threshold,
+            mcl=mcl,
+            inflation_value=inflation_value,
+            start=start,
+            stop=stop,
+            substitution_matrix=substitution_matrix,
+            evalue_threshold=evalue_threshold,
+            search_mode=search_mode,
+            clustering=clustering,
+            cpm_resolution=cpm_resolution,
+            refinement_profile=refinement_profile,
+            metrics=metrics,
+            threads_per_worker=threads_per_worker,
+            **kwargs,
+        )
+
+
+def _execute(
+    fasta_directory: str,
+    output_directory: str,
+    phmmer: str,
+    cpu: int,
+    single_copy_threshold: float,
+    mcl: str,
+    inflation_value: float,
+    start: Union[StartStep, None],
+    stop: Union[StopStep, None],
+    substitution_matrix: SubstitutionMatrix,
+    evalue_threshold: float,
+    search_mode: str,
+    clustering: str,
+    cpm_resolution,
+    refinement_profile: str,
+    metrics: PipelineMetrics,
+    threads_per_worker: int,
+    **kwargs,
+) -> None:
     # for reporting runtime duration to user
     start_time = time.time()
 
@@ -169,6 +274,17 @@ def execute(
     os.makedirs(working_dir, exist_ok=True)
 
     files = fetch_fasta_files(fasta_directory)
+    metrics.add_metadata(
+        fasta_directory=os.path.abspath(fasta_directory),
+        output_directory=os.path.abspath(output_directory),
+        search_mode=search_mode,
+        clustering=clustering,
+        cpm_resolution=cpm_resolution,
+        substitution_matrix=substitution_matrix.value,
+        evalue_threshold=evalue_threshold,
+        cpu_budget=cpu,
+    )
+    metrics.add_counts(species=len(files), species_pairs=len(files) ** 2)
 
     search_results = None
 
@@ -223,66 +339,93 @@ def execute(
     elif search_mode == "builtin":
         print(f"Step {current_step}/{total_steps}: Conducting all-to-all comparisons (built-in search).")
         from .search.engine import execute_builtin_search
-        search_results = execute_builtin_search(
-            files,
-            fasta_directory,
-            output_directory,
-            cpu,
-            substitution_matrix,
-            evalue_threshold=evalue_threshold,
+        from .search.engine import resolve_parallelism
+        search_workers, worker_threads = resolve_parallelism(
+            cpu, len(files) ** 2, threads_per_worker
+        )
+        metrics.add_metadata(
+            search_workers=search_workers,
+            search_threads_per_worker=worker_threads,
+            search_total_threads=search_workers * worker_threads,
+        )
+        with metrics.stage("search"):
+            search_results = execute_builtin_search(
+                files,
+                fasta_directory,
+                output_directory,
+                cpu,
+                substitution_matrix,
+                evalue_threshold=evalue_threshold,
+                threads_per_worker=threads_per_worker,
+            )
+        metrics.add_counts(
+            search_candidates=sum(
+                result.candidate_count for result in search_results.values()
+            ),
+            significant_hits=sum(
+                len(result.scores) for result in search_results.values()
+            ),
         )
         print("\r          Completed!      \n")
         current_step += 1
     else:
         print(f"Step {current_step}/{total_steps}: Conducting all-to-all comparisons.")
-        execute_phmmer_search(
-            phmmer_cmds,
-            cpu,
-        )
+        with metrics.stage("search"):
+            execute_phmmer_search(
+                phmmer_cmds,
+                cpu,
+            )
         print("\r          Completed!      \n")
         current_step += 1
 
     print(f"Step {current_step}/{total_steps}: Determining edge thresholds")
-    gene_lengths, reciprocal_best_hit_thresholds, pairwise_rbh_corr = \
-        determine_edge_thresholds(
-            files,
-            fasta_directory,
-            output_directory,
-            cpu,
-            evalue_threshold,
-            search_results=search_results,
-        )
+    with metrics.stage("edge_thresholds"):
+        gene_lengths, reciprocal_best_hit_thresholds, pairwise_rbh_corr = \
+            determine_edge_thresholds(
+                files,
+                fasta_directory,
+                output_directory,
+                cpu,
+                evalue_threshold,
+                search_results=search_results,
+            )
+    metrics.add_counts(genes=len(gene_lengths))
     print("\r          Completed!      \n")
     current_step += 1
 
     print(f"Step {current_step}/{total_steps}: Identifying network edges")
-    edges = determine_network_edges(
-        files,
-        output_directory,
-        gene_lengths,
-        pairwise_rbh_corr,
-        reciprocal_best_hit_thresholds,
-        evalue_threshold,
-        cpu,
-        search_results=search_results,
-    )
+    with metrics.stage("network_edges"):
+        edges = determine_network_edges(
+            files,
+            output_directory,
+            gene_lengths,
+            pairwise_rbh_corr,
+            reciprocal_best_hit_thresholds,
+            evalue_threshold,
+            cpu,
+            search_results=search_results,
+        )
+    metrics.add_counts(network_edges=len(edges))
     print("\r          Completed!      \n")
     current_step += 1
 
     print(f"Step {current_step}/{total_steps}: Conducting clustering")
-    if clustering == "mcl":
-        execute_mcl(
-            mcl,
-            inflation_value,
-            cpu,
-            output_directory,
-        )
-    else:
-        execute_leiden(
-            cpm_resolution,
-            output_directory,
-        )
-        _refine_cluster_file(
+    with metrics.stage("clustering"):
+        if clustering == "mcl":
+            execute_mcl(
+                mcl,
+                inflation_value,
+                cpu,
+                output_directory,
+            )
+        else:
+            execute_leiden(
+                cpm_resolution,
+                output_directory,
+                edges=edges,
+            )
+    with metrics.stage("refinement"):
+        refinement_substages = _refine_cluster_file(
             output_directory,
             gene_lengths,
             search_results,
@@ -290,14 +433,21 @@ def execute(
             evalue_threshold,
             refinement_profile=refinement_profile,
         )
-    singletons, og_cn, ogs_dat, single_copy_ogs = \
-        generate_orthogroup_clusters_file(
-            output_directory,
-            gene_lengths,
-            files,
-            single_copy_threshold,
-            fasta_directory,
-        )
+    metrics.add_metadata(refinement_substages_s=refinement_substages)
+    with metrics.stage("orthogroup_materialization"):
+        singletons, og_cn, ogs_dat, single_copy_ogs = \
+            generate_orthogroup_clusters_file(
+                output_directory,
+                gene_lengths,
+                files,
+                single_copy_threshold,
+                fasta_directory,
+            )
+    metrics.add_counts(
+        orthogroups=len(ogs_dat),
+        singletons=len(singletons),
+        single_copy_orthogroups=len(single_copy_ogs),
+    )
     print("          Completed!\n")
     current_step += 1
 
@@ -306,13 +456,14 @@ def execute(
         sys.exit()
 
     print(f"Step {current_step}/{total_steps}: Writing orthogroup information")
-    generate_orthogroup_files(
-        output_directory,
-        gene_lengths,
-        og_cn,
-        ogs_dat,
-        single_copy_ogs,
-    )
+    with metrics.stage("output"):
+        generate_orthogroup_files(
+            output_directory,
+            gene_lengths,
+            og_cn,
+            ogs_dat,
+            single_copy_ogs,
+        )
     print("          Completed!\n")
 
     write_output_stats(

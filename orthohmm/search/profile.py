@@ -143,8 +143,8 @@ def build_profiles_batch(
     N = species_seqs.num_sequences
     total_len = int(species_seqs.lengths.sum())
 
-    flat_match_emit = np.empty((total_len, ALPHABET_SIZE), dtype=np.int8)
-    profile_offsets = np.empty(N, dtype=np.int64)
+    flat_match_emit = np.zeros((total_len, ALPHABET_SIZE), dtype=np.int8)
+    profile_offsets = species_seqs.offsets.copy()
     profile_lengths = species_seqs.lengths.copy()
 
     gap_close = max(gap_extend + 1, -1)
@@ -154,17 +154,13 @@ def build_profiles_batch(
 
     insert_emit = np.full(ALPHABET_SIZE, -1, dtype=np.int8)
 
-    pos = 0
-    for i in range(N):
-        profile_offsets[i] = pos
-        seq = species_seqs.get_sequence(i)
-        length = int(species_seqs.lengths[i])
-        for j in range(length):
-            aa = seq[j]
-            if aa < ALPHABET_SIZE:
-                flat_match_emit[pos + j, :] = sub_matrix[aa, :]
-            else:
-                flat_match_emit[pos + j, :] = 0
-        pos += length
+    np.take(
+        sub_matrix,
+        species_seqs.flat_sequences,
+        axis=0,
+        out=flat_match_emit,
+        mode="clip",
+    )
+    flat_match_emit[species_seqs.flat_sequences >= ALPHABET_SIZE] = 0
 
     return flat_match_emit, insert_emit, transitions, profile_offsets, profile_lengths

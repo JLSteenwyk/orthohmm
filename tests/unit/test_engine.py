@@ -3,13 +3,34 @@ import numpy as np
 import pytest
 
 from orthohmm.search.engine import (
+    IndexedSearchResults,
+    IndexedSpeciesPairResults,
     SpeciesPairResults,
     _filter_significant,
     execute_builtin_search,
+    indexed_results_to_phmmer_format,
+    resolve_parallelism,
     results_to_phmmer_format,
     search_species_pair,
 )
 from orthohmm.search.sequences import SpeciesSequences
+
+
+@pytest.mark.parametrize(
+    "budget,tasks,threads,expected",
+    [
+        (32, 25, 4, (8, 4)),
+        (8, 25, 4, (2, 4)),
+        (2, 25, 4, (1, 2)),
+        (32, 2, 4, (2, 4)),
+    ],
+)
+def test_resolve_parallelism_stays_within_budget(
+    budget, tasks, threads, expected
+):
+    assert resolve_parallelism(budget, tasks, threads) == expected
+    workers, worker_threads = expected
+    assert workers * worker_threads <= budget
 
 
 # ─── SpeciesPairResults dataclass ───────────────────────────────────────
@@ -35,6 +56,29 @@ class TestSpeciesPairResults:
         r = self._make(2)
         assert r.target_names[0] == "t0"
         assert r.query_names[1] == "q1"
+
+
+def test_indexed_results_materialize_names_on_demand():
+    pair = IndexedSpeciesPairResults(
+        query_species="q.fa",
+        target_species="t.fa",
+        target_indices=np.array([1, 0], dtype=np.int32),
+        query_indices=np.array([0, 1], dtype=np.int32),
+        evalues=np.array([1e-10, 1e-2]),
+        scores=np.array([2.0, 1.0]),
+        candidate_count=8,
+    )
+    all_results = IndexedSearchResults(
+        {("q.fa", "t.fa"): pair},
+        {"q.fa": ["q0", "q1"], "t.fa": ["t0", "t1"]},
+    )
+    out = indexed_results_to_phmmer_format(
+        all_results.get(("q.fa", "t.fa")),
+        all_results.species_ids["q.fa"],
+        all_results.species_ids["t.fa"],
+        1e-4,
+    )
+    assert out.tolist() == [("t1", "q0", 1e-10, 2.0)]
 
 
 # ─── _filter_significant ────────────────────────────────────────────────

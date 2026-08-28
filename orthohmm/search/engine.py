@@ -6,6 +6,7 @@ and E-value estimation into a complete phmmer replacement.
 
 import itertools
 import multiprocessing
+import os
 import sys
 from dataclasses import dataclass, field
 from typing import Dict, List, Tuple
@@ -15,7 +16,7 @@ import numpy as np
 from .matrices import get_matrix, get_background_freqs, get_ka_params
 from .sequences import SequenceStore, SpeciesSequences
 from .profile import build_profiles_batch
-from .prefilter import prefilter_candidates
+from .prefilter import prefilter_candidates, prepare_kmer_index
 from .viterbi import (
     batch_viterbi_score, batch_viterbi_c, batch_viterbi_multipair_c,
     is_c_available,
@@ -38,36 +39,68 @@ class SpeciesPairResults:
     query_names: np.ndarray    # U50 string array
     evalues: np.ndarray        # float64
     scores: np.ndarray         # float64
+    candidate_count: int = 0
+
+
+@dataclass
+class IndexedSpeciesPairResults:
+    """Compact local-index results for one directed species comparison."""
+
+    query_species: str
+    target_species: str
+    target_indices: np.ndarray  # int32 local indices in target species
+    query_indices: np.ndarray   # int32 local indices in query species
+    evalues: np.ndarray         # float64
+    scores: np.ndarray          # float64
+    candidate_count: int = 0
+
+
+@dataclass
+class IndexedSearchResults:
+    """All species-pair results plus one gene-name table per species."""
+
+    pair_results: Dict[Tuple[str, str], IndexedSpeciesPairResults]
+    species_ids: Dict[str, List[str]]
+
+    def get(self, key, default=None):
+        return self.pair_results.get(key, default)
+
+    def values(self):
+        return self.pair_results.values()
+
+    def items(self):
+        return self.pair_results.items()
 
 
 def _adaptive_max_candidates(query_species, target_species, kmer_k, min_total_hits,
-                             use_reduced_alphabet, base_mc=20):
+                             use_reduced_alphabet, base_mc=20,
+                             prepared_index=None):
     """Determine max_candidates based on k-mer coverage between species.
 
     Runs a lightweight Phase A probe (no extension scoring) to measure
     what fraction of queries share enough k-mers with the target database.
     Close species → high coverage → low mc. Distant → low coverage → high mc.
     """
-    from .prefilter import (build_kmer_index, compute_freq_threshold,
-                            REDUCED_ALPHA, REDUCED_ALPHA_SIZE, _remap_flat)
+    from .prefilter import REDUCED_ALPHA, _remap_flat
     from numba import int32
 
     if use_reduced_alphabet:
-        alpha_size = REDUCED_ALPHA_SIZE
-        target_flat = _remap_flat(target_species.flat_sequences, REDUCED_ALPHA,
-                                  len(target_species.flat_sequences))
         query_flat = _remap_flat(query_species.flat_sequences, REDUCED_ALPHA,
                                  len(query_species.flat_sequences))
     else:
-        alpha_size = 20
-        target_flat = target_species.flat_sequences
         query_flat = query_species.flat_sequences
 
-    kmer_offsets, kmer_entries, kmer_freqs = build_kmer_index(
-        target_flat, target_species.offsets, target_species.lengths,
-        k=kmer_k, alpha_size=alpha_size,
-    )
-    freq_thresh = compute_freq_threshold(kmer_freqs, target_species.num_sequences)
+    if prepared_index is None:
+        prepared_index = prepare_kmer_index(
+            target_species,
+            k=kmer_k,
+            use_reduced_alphabet=use_reduced_alphabet,
+        )
+    alpha_size = prepared_index.alpha_size
+    kmer_offsets = prepared_index.kmer_offsets
+    kmer_entries = prepared_index.kmer_entries
+    kmer_freqs = prepared_index.kmer_freqs
+    freq_thresh = prepared_index.freq_threshold
 
     # Quick probe: count how many queries have >= min_total_hits k-mer matches
     # Use the Numba Phase A on a sample of queries for speed
@@ -104,7 +137,7 @@ def _adaptive_max_candidates(query_species, target_species, kmer_k, min_total_hi
     return mc, coverage
 
 
-def search_species_pair(
+def search_species_pair_indexed(
     query_species: SpeciesSequences,
     target_species: SpeciesSequences,
     matrix_name: str,
@@ -115,7 +148,9 @@ def search_species_pair(
     min_diag_hits: int = 1,
     diag_bin_width: int = 10,
     max_candidates_per_query: int = 0,
-) -> SpeciesPairResults:
+    n_threads: int = 4,
+    prepared_index=None,
+) -> IndexedSpeciesPairResults:
     """Execute profile HMM search for one species pair.
 
     Steps:
@@ -136,20 +171,28 @@ def search_species_pair(
     N_target = target_species.num_sequences
 
     if N_query == 0 or N_target == 0:
-        return SpeciesPairResults(
+        return IndexedSpeciesPairResults(
             query_species=query_species.species_file,
             target_species=target_species.species_file,
-            target_names=np.empty(0, dtype="U50"),
-            query_names=np.empty(0, dtype="U50"),
+            target_indices=np.empty(0, dtype=np.int32),
+            query_indices=np.empty(0, dtype=np.int32),
             evalues=np.empty(0, dtype=np.float64),
             scores=np.empty(0, dtype=np.float64),
+            candidate_count=0,
+        )
+
+    if prepared_index is None:
+        prepared_index = prepare_kmer_index(
+            target_species,
+            k=kmer_k,
+            use_reduced_alphabet=use_reduced_alphabet,
         )
 
     # Step 1: Determine adaptive mc if not specified
     if max_candidates_per_query <= 0:
         adaptive_mc, coverage = _adaptive_max_candidates(
             query_species, target_species, kmer_k, min_total_hits,
-            use_reduced_alphabet,
+            use_reduced_alphabet, prepared_index=prepared_index,
         )
         max_candidates_per_query = max(adaptive_mc, 20)
 
@@ -162,28 +205,28 @@ def search_species_pair(
         min_diag_hits=min_diag_hits,
         diag_bin_width=diag_bin_width,
         max_candidates_per_query=max_candidates_per_query,
+        n_threads=n_threads,
         sub_matrix=sub_matrix,
+        prepared_index=prepared_index,
     )
+    del prepared_index
 
-    # Build pairs array from prefilter results
-    pairs_list = []
-    for qi in range(N_query):
-        start = int(cand_offsets[qi])
-        end = int(cand_offsets[qi + 1])
-        for j in range(start, end):
-            pairs_list.append((qi, int(cand_ids[j])))
-
-    if not pairs_list:
-        return SpeciesPairResults(
+    if len(cand_ids) == 0:
+        return IndexedSpeciesPairResults(
             query_species=query_species.species_file,
             target_species=target_species.species_file,
-            target_names=np.empty(0, dtype="U50"),
-            query_names=np.empty(0, dtype="U50"),
+            target_indices=np.empty(0, dtype=np.int32),
+            query_indices=np.empty(0, dtype=np.int32),
             evalues=np.empty(0, dtype=np.float64),
             scores=np.empty(0, dtype=np.float64),
+            candidate_count=0,
         )
 
-    pairs = np.array(pairs_list, dtype=np.int32)
+    pairs = np.empty((len(cand_ids), 2), dtype=np.int32)
+    pairs[:, 0] = np.repeat(
+        np.arange(N_query, dtype=np.int32), np.diff(cand_offsets)
+    )
+    pairs[:, 1] = cand_ids
 
     # Step 2: Build profiles for all queries
     flat_match_emit, insert_emit, transitions, profile_offsets, profile_lengths = \
@@ -227,6 +270,7 @@ def search_species_pair(
                 profile_offsets, profile_lengths,
                 target_species.flat_sequences, target_species.offsets,
                 target_species.lengths, sub_pairs, band_width,
+                n_threads=n_threads,
             )
         except RuntimeError:
             return batch_viterbi_c(
@@ -234,6 +278,7 @@ def search_species_pair(
                 profile_offsets, profile_lengths,
                 target_species.flat_sequences, target_species.offsets,
                 target_species.lengths, sub_pairs, band_width,
+                n_threads=n_threads,
             )
 
     if n_gpu > 0:
@@ -262,26 +307,13 @@ def search_species_pair(
 
     # Step 4: Compute E-values
     db_total_residues = int(target_species.lengths.sum())
-    query_lens_for_pairs = np.array(
-        [query_species.lengths[pairs[i, 0]] for i in range(len(pairs))],
-        dtype=np.int32,
-    )
+    query_lens_for_pairs = query_species.lengths[pairs[:, 0]]
     evalues = batch_estimate_evalues(
         scores, query_lens_for_pairs,
         db_total_residues, lam, K,
     )
 
-    # Step 5: Build result arrays with names
-    target_names = np.array(
-        [target_species.ids[pairs[i, 1]] for i in range(len(pairs))],
-        dtype="U50",
-    )
-    query_names = np.array(
-        [query_species.ids[pairs[i, 0]] for i in range(len(pairs))],
-        dtype="U50",
-    )
-
-    # Geometric-mean length normalization: divides each Viterbi raw score by
+    # Step 5: Geometric-mean length normalization divides each Viterbi raw score by
     # sqrt(L_q * L_t). This matches the bacterial-scaling driver and the
     # OrthoBench paper benchmarks. Downstream helpers (helpers.process_pair_
     # edge_thresholds, helpers.process_pair_network_edges) skip their
@@ -292,13 +324,56 @@ def search_species_pair(
     norm_denom = np.where(norm_denom == 0, 1.0, norm_denom)
     normalized_scores = scores.astype(np.float64) / norm_denom
 
-    return SpeciesPairResults(
+    return IndexedSpeciesPairResults(
         query_species=query_species.species_file,
         target_species=target_species.species_file,
-        target_names=target_names,
-        query_names=query_names,
+        target_indices=pairs[:, 1].copy(),
+        query_indices=pairs[:, 0].copy(),
         evalues=evalues,
         scores=normalized_scores,
+        candidate_count=len(pairs),
+    )
+
+
+def search_species_pair(
+    query_species: SpeciesSequences,
+    target_species: SpeciesSequences,
+    matrix_name: str,
+    band_width: int = 64,
+    kmer_k: int = 4,
+    use_reduced_alphabet: bool = False,
+    min_total_hits: int = 4,
+    min_diag_hits: int = 1,
+    diag_bin_width: int = 10,
+    max_candidates_per_query: int = 0,
+    n_threads: int = 4,
+) -> SpeciesPairResults:
+    """Public name-based wrapper around the compact indexed search path."""
+    indexed = search_species_pair_indexed(
+        query_species=query_species,
+        target_species=target_species,
+        matrix_name=matrix_name,
+        band_width=band_width,
+        kmer_k=kmer_k,
+        use_reduced_alphabet=use_reduced_alphabet,
+        min_total_hits=min_total_hits,
+        min_diag_hits=min_diag_hits,
+        diag_bin_width=diag_bin_width,
+        max_candidates_per_query=max_candidates_per_query,
+        n_threads=n_threads,
+    )
+    return SpeciesPairResults(
+        query_species=indexed.query_species,
+        target_species=indexed.target_species,
+        target_names=np.asarray(target_species.ids, dtype="U50")[
+            indexed.target_indices
+        ],
+        query_names=np.asarray(query_species.ids, dtype="U50")[
+            indexed.query_indices
+        ],
+        evalues=indexed.evalues,
+        scores=indexed.scores,
+        candidate_count=indexed.candidate_count,
     )
 
 
@@ -321,13 +396,40 @@ def _filter_significant(r: SpeciesPairResults,
         query_names=r.query_names[mask],
         evalues=r.evalues[mask],
         scores=r.scores[mask],
+        candidate_count=r.candidate_count,
+    )
+
+
+def _filter_significant_indexed(
+    r: IndexedSpeciesPairResults,
+    evalue_threshold: float,
+) -> IndexedSpeciesPairResults:
+    """Filter compact results before returning them over multiprocessing IPC."""
+    mask = r.evalues < evalue_threshold
+    if mask.all():
+        return r
+    return IndexedSpeciesPairResults(
+        query_species=r.query_species,
+        target_species=r.target_species,
+        target_indices=r.target_indices[mask],
+        query_indices=r.query_indices[mask],
+        evalues=r.evalues[mask],
+        scores=r.scores[mask],
+        candidate_count=r.candidate_count,
     )
 
 
 def _search_pair_worker(args):
-    """Worker function for multiprocessing."""
+    """Worker function for one directed species comparison."""
     (query_file, target_file, fasta_directory,
-     matrix_name, band_width, kmer_k, evalue_threshold) = args
+     matrix_name, band_width, kmer_k, evalue_threshold, n_threads) = args
+
+    os.environ["OMP_NUM_THREADS"] = str(n_threads)
+    try:
+        import numba
+        numba.set_num_threads(n_threads)
+    except (ImportError, ValueError):
+        pass
 
     query_sp = SpeciesSequences.from_fasta(
         f"{fasta_directory}/{query_file}", query_file
@@ -335,12 +437,31 @@ def _search_pair_worker(args):
     target_sp = SpeciesSequences.from_fasta(
         f"{fasta_directory}/{target_file}", target_file
     )
-
-    r = search_species_pair(
-        query_sp, target_sp, matrix_name,
-        band_width=band_width, kmer_k=kmer_k,
+    r = search_species_pair_indexed(
+        query_sp,
+        target_sp,
+        matrix_name,
+        band_width=band_width,
+        kmer_k=kmer_k,
+        n_threads=n_threads,
     )
-    return _filter_significant(r, evalue_threshold)
+    species_ids = query_sp.ids if query_file == target_file else None
+    return _filter_significant_indexed(r, evalue_threshold), species_ids
+
+
+def resolve_parallelism(
+    cpu_budget: int,
+    total_tasks: int,
+    threads_per_worker: int = 8,
+) -> Tuple[int, int]:
+    """Resolve process and OpenMP counts within a total CPU budget."""
+    if cpu_budget < 1:
+        raise ValueError("cpu_budget must be at least 1")
+    if total_tasks < 1:
+        return 0, 0
+    threads = max(1, min(int(threads_per_worker), cpu_budget))
+    workers = max(1, min(total_tasks, cpu_budget // threads))
+    return workers, threads
 
 
 def execute_builtin_search(
@@ -352,7 +473,8 @@ def execute_builtin_search(
     band_width: int = 64,
     kmer_k: int = 5,
     evalue_threshold: float = 1e-4,
-) -> Dict[Tuple[str, str], SpeciesPairResults]:
+    threads_per_worker: int = 8,
+) -> IndexedSearchResults:
     """Replace execute_phmmer_search with built-in search engine.
 
     Parameters
@@ -371,27 +493,33 @@ def execute_builtin_search(
     """
     matrix_name = substitution_matrix.value
     file_pairs = list(itertools.product(files, repeat=2))
-
     total_tasks = len(file_pairs)
     results = {}
+    ids_by_species = {}
+    if total_tasks == 0:
+        return IndexedSearchResults(results, ids_by_species)
+    workers, worker_threads = resolve_parallelism(
+        cpu, total_tasks, threads_per_worker
+    )
 
-    # Build worker args. Worker filters hits by evalue_threshold before
-    # returning, which cuts IPC payload ~20x at typical max_candidates settings.
+    # Workers filter hits by evalue before IPC, keeping payloads small.
     worker_args = [
-        (qf, tf, fasta_directory, matrix_name, band_width, kmer_k,
-         evalue_threshold)
-        for qf, tf in file_pairs
+        (query, target, fasta_directory, matrix_name, band_width, kmer_k,
+         evalue_threshold, worker_threads)
+        for query, target in file_pairs
     ]
 
     # Drain as-completed instead of holding all AsyncResults — lets the OS
     # reclaim each worker's pickled payload as soon as the parent has it.
-    pool = multiprocessing.Pool(processes=cpu)
+    pool = multiprocessing.Pool(processes=workers)
     completed = 0
     try:
-        for r in pool.imap_unordered(
+        for r, species_ids in pool.imap_unordered(
             _search_pair_worker, worker_args, chunksize=1,
         ):
             results[(r.query_species, r.target_species)] = r
+            if species_ids is not None:
+                ids_by_species[r.query_species] = species_ids
             completed += 1
             progress = (completed / total_tasks) * 100
             sys.stdout.write(f"\r          {progress:.2f}% complete")
@@ -401,7 +529,7 @@ def execute_builtin_search(
         pool.join()
     sys.stdout.write("\n")
 
-    return results
+    return IndexedSearchResults(results, ids_by_species)
 
 
 def results_to_phmmer_format(
@@ -440,4 +568,32 @@ def results_to_phmmer_format(
     out["evalue"] = results.evalues[mask]
     out["score"] = results.scores[mask]
 
+    return out
+
+
+def indexed_results_to_phmmer_format(
+    results: IndexedSpeciesPairResults,
+    query_ids: List[str],
+    target_ids: List[str],
+    evalue_threshold: float,
+) -> np.ndarray:
+    """Materialize names for one compact pair only when legacy logic needs it."""
+    dtype = [
+        ("target_name", "U50"),
+        ("query_name", "U50"),
+        ("evalue", float),
+        ("score", float),
+    ]
+    if len(results.scores) == 0:
+        return np.array([], dtype=dtype)
+    mask = results.evalues < evalue_threshold
+    out = np.empty(int(mask.sum()), dtype=dtype)
+    out["target_name"] = np.asarray(target_ids, dtype="U50")[
+        results.target_indices[mask]
+    ]
+    out["query_name"] = np.asarray(query_ids, dtype="U50")[
+        results.query_indices[mask]
+    ]
+    out["evalue"] = results.evalues[mask]
+    out["score"] = results.scores[mask]
     return out

@@ -16,6 +16,7 @@ Adapted from ClustKIT's kmer_index.py / kmer_score.c.
 import ctypes
 import logging
 import os
+from dataclasses import dataclass
 import numpy as np
 from numba import njit, prange, int32, int64, int16
 from pathlib import Path as _Path
@@ -179,6 +180,54 @@ def compute_freq_threshold(kmer_freqs, num_sequences, percentile=99.5):
     pctl = int(np.percentile(nonzero, percentile))
     floor = max(100, num_sequences // 200)
     return int32(max(pctl, floor))
+
+
+@dataclass(frozen=True)
+class PreparedKmerIndex:
+    """Reusable target-side arrays for one prefilter configuration."""
+
+    k: int
+    use_reduced_alphabet: bool
+    alpha_size: int
+    target_flat: np.ndarray
+    kmer_offsets: np.ndarray
+    kmer_entries: np.ndarray
+    kmer_freqs: np.ndarray
+    freq_threshold: int
+
+
+def prepare_kmer_index(target_species, k=5, use_reduced_alphabet=True):
+    """Build the target index once for adaptive probing and filtering."""
+    if use_reduced_alphabet:
+        alpha_size = REDUCED_ALPHA_SIZE
+        target_flat = _remap_flat(
+            target_species.flat_sequences,
+            REDUCED_ALPHA,
+            len(target_species.flat_sequences),
+        )
+    else:
+        alpha_size = 20
+        target_flat = target_species.flat_sequences
+
+    kmer_offsets, kmer_entries, kmer_freqs = build_kmer_index(
+        target_flat,
+        target_species.offsets,
+        target_species.lengths,
+        k=k,
+        alpha_size=alpha_size,
+    )
+    return PreparedKmerIndex(
+        k=int(k),
+        use_reduced_alphabet=bool(use_reduced_alphabet),
+        alpha_size=alpha_size,
+        target_flat=target_flat,
+        kmer_offsets=kmer_offsets,
+        kmer_entries=kmer_entries,
+        kmer_freqs=kmer_freqs,
+        freq_threshold=int(compute_freq_threshold(
+            kmer_freqs, target_species.num_sequences
+        )),
+    )
 
 
 # ──────────────────────────────────────────────────────────────────────
@@ -491,6 +540,7 @@ def prefilter_candidates(
     max_candidates_per_query=500,
     n_threads=4,
     sub_matrix=None,
+    prepared_index=None,
 ):
     """K-mer pre-filtering with ungapped extension re-ranking.
 
@@ -517,29 +567,34 @@ def prefilter_candidates(
     all_candidate_ids : int32 array (flat)
     all_candidate_offsets : int64 array (N_queries + 1)
     """
-    if use_reduced_alphabet:
-        alpha_size = REDUCED_ALPHA_SIZE
-        target_flat = _remap_flat(
-            target_species.flat_sequences, REDUCED_ALPHA,
-            len(target_species.flat_sequences)
+    if prepared_index is None:
+        prepared_index = prepare_kmer_index(
+            target_species,
+            k=k,
+            use_reduced_alphabet=use_reduced_alphabet,
         )
+    elif (
+        prepared_index.k != int(k)
+        or prepared_index.use_reduced_alphabet != bool(use_reduced_alphabet)
+    ):
+        raise ValueError("prepared k-mer index does not match prefilter settings")
+
+    alpha_size = prepared_index.alpha_size
+    target_flat = prepared_index.target_flat
+    kmer_offsets = prepared_index.kmer_offsets
+    kmer_entries = prepared_index.kmer_entries
+    kmer_freqs = prepared_index.kmer_freqs
+    freq_thresh = int32(prepared_index.freq_threshold)
+
+    if use_reduced_alphabet:
         query_flat = _remap_flat(
             query_species.flat_sequences, REDUCED_ALPHA,
             len(query_species.flat_sequences)
         )
     else:
-        alpha_size = 20
-        target_flat = target_species.flat_sequences
         query_flat = query_species.flat_sequences
 
-    # Build index on target
-    kmer_offsets, kmer_entries, kmer_freqs = build_kmer_index(
-        target_flat, target_species.offsets, target_species.lengths,
-        k=k, alpha_size=alpha_size,
-    )
-
     num_db = target_species.num_sequences
-    freq_thresh = compute_freq_threshold(kmer_freqs, num_db)
 
     # Prefer C/OpenMP path
     _, c_available = _load_c_prefilter()
