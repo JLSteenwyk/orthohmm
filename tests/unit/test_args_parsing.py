@@ -84,6 +84,27 @@ class TestArgsProcessing(object):
         res = process_args(args)
         assert res["refinement_profile"] == "qfo"
 
+    def test_process_args_accuracy_profile(self, args):
+        args.accuracy_profile = "high_sensitivity"
+        args.clustering = "leiden"
+        res = process_args(args)
+        assert res["accuracy_profile"] == "high_sensitivity"
+
+    def test_high_sensitivity_rejects_phmmer(self, args):
+        args.accuracy_profile = "high_sensitivity"
+        args.search_mode = "phmmer"
+        args.phmmer = "true"
+        args.clustering = "leiden"
+        with pytest.raises(SystemExit):
+            process_args(args)
+
+    def test_high_sensitivity_rejects_mcl(self, args):
+        args.accuracy_profile = "high_sensitivity"
+        args.clustering = "mcl"
+        args.mcl = "true"
+        with pytest.raises(SystemExit):
+            process_args(args)
+
     def test_process_args_default_evalue_threshold(self, args):
         args.evalue = None
         res = process_args(args)
@@ -142,6 +163,7 @@ class TestArgsProcessing(object):
             "clustering",
             "cpm_resolution",
             "refinement_profile",
+            "accuracy_profile",
             "metrics_json",
             "threads_per_worker",
         ]

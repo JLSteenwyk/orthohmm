@@ -37,6 +37,23 @@ and recovery through connected components. Reference labels are read only by
 this post-run process; they are never passed into OrthoHMM inference. Pickle
 input is provided only for trusted local historical caches.
 
+## High-sensitivity graph replay
+
+Validate production graph and refinement code against a trusted normalized-hit
+checkpoint without rerunning the all-to-all sequence search:
+
+```bash
+python benchmark_tools/replay_high_sensitivity.py \
+  --hits-pickle benchmarks/results/hits_BLOSUM62_mc100.pkl \
+  --output-directory /tmp/orthohmm_high_replay \
+  --official-benchmark /path/to/Open_Orthobench/BENCHMARKS/benchmark.py \
+  --json /tmp/orthohmm_high_replay.json
+```
+
+The replay uses no reference labels during inference. Its JSON records source
+and input checksums, graph counts, runtime, peak process RSS, output checksums,
+and optional post-inference OrthoBench scores.
+
 ## OrthoFinder comparator
 
 This directory pins the OrthoFinder comparator to version 3.1.5 and keeps new

@@ -67,7 +67,7 @@ class IndexedEdgeThresholds:
     values: np.ndarray
 
 
-def _write_indexed_edges(edges: IndexedEdges, output_directory: str) -> None:
+def write_indexed_edges(edges: IndexedEdges, output_directory: str) -> None:
     path = f"{output_directory}/orthohmm_working_res/orthohmm_edges.txt"
     with open(path, "w") as handle:
         for source, target, weight in zip(
@@ -77,6 +77,11 @@ def _write_indexed_edges(edges: IndexedEdges, output_directory: str) -> None:
                 f"{edges.gene_names[int(source)]}\t"
                 f"{edges.gene_names[int(target)]}\t{float(weight)}\n"
             )
+
+
+def _write_indexed_edges(edges: IndexedEdges, output_directory: str) -> None:
+    """Backward-compatible alias for the former private writer."""
+    write_indexed_edges(edges, output_directory)
 
 
 def _determine_indexed_network_edges(
@@ -138,7 +143,7 @@ def _determine_indexed_network_edges(
             np.empty(0, dtype=np.int32),
             np.empty(0, dtype=np.float64),
         )
-        _write_indexed_edges(edges, output_directory)
+        write_indexed_edges(edges, output_directory)
         return edges
 
     sources = np.concatenate(source_chunks).astype(np.int32, copy=False)
@@ -159,7 +164,7 @@ def _determine_indexed_network_edges(
         (unique_packed & 0xFFFFFFFF).astype(np.int32),
         unique_weights,
     )
-    _write_indexed_edges(edges, output_directory)
+    write_indexed_edges(edges, output_directory)
     return edges
 
 

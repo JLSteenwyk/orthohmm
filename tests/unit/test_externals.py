@@ -125,3 +125,27 @@ class TestExecuteLeiden:
             if line.strip()
         ]
         assert clusters == [["a", "b"], ["c", "d"]]
+
+    def test_compact_edges_can_include_isolated_genes(self, tmp_path):
+        wd = os.path.join(tmp_path, "orthohmm_working_res")
+        os.makedirs(wd)
+        edges = IndexedEdges(
+            gene_names=["a", "b", "isolated"],
+            sources=np.array([0], dtype=np.int32),
+            targets=np.array([1], dtype=np.int32),
+            weights=np.array([1.0]),
+        )
+
+        execute_leiden(
+            0.1,
+            str(tmp_path),
+            edges=edges,
+            include_isolates=True,
+        )
+
+        clusters = [
+            line.split()
+            for line in open(os.path.join(wd, "orthohmm_edges_clustered.txt"))
+            if line.strip()
+        ]
+        assert clusters == [["a", "b"], ["isolated"]]

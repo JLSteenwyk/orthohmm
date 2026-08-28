@@ -26,6 +26,7 @@ def write_user_args(
     search_mode: str = "builtin",
     clustering: str = "leiden",
     cpm_resolution=0.1,
+    accuracy_profile: str = "standard",
 ) -> None:
 
     try:
@@ -72,6 +73,7 @@ def write_user_args(
     Step to start analysis: {start_print}
     Step to stop analysis: {stop_print}
     Search engine: {search_info}
+    Accuracy profile: {accuracy_profile}
     E-value threshold: {evalue_threshold}
     Substitution matrix: {substitution_matrix.value}
     Clustering: {clustering_info}

@@ -106,6 +106,7 @@ def execute_leiden(
     cpm_resolution,
     output_directory: str,
     edges=None,
+    include_isolates: bool = False,
 ) -> None:
     """In-process Leiden CPM clustering on the ABC edge file.
 
@@ -139,7 +140,10 @@ def execute_leiden(
     min_positive_weight = None
     positive_weight_count = 0
     if edges is not None and hasattr(edges, "sources"):
-        used_ids = np.unique(np.concatenate((edges.sources, edges.targets)))
+        if include_isolates:
+            used_ids = np.arange(len(edges.gene_names), dtype=np.int32)
+        else:
+            used_ids = np.unique(np.concatenate((edges.sources, edges.targets)))
         local_sources = np.searchsorted(used_ids, edges.sources).astype(np.int32)
         local_targets = np.searchsorted(used_ids, edges.targets).astype(np.int32)
         graph_edges = np.column_stack((local_sources, local_targets))

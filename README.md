@@ -70,6 +70,12 @@ distant cross-kingdom datasets, where fixed Leiden CPM can fragment heavily.
 Power users can opt into MCL via `--clustering mcl --inflation_value 1.5`,
 or use adaptive Leiden via `--clustering leiden --cpm_resolution auto`.
 
+For divergent datasets where recall is more important than runtime, use
+`--accuracy_profile high_sensitivity`. This profile broadens the built-in
+k-mer candidate search and runs reciprocal-best normalized-hit clustering
+followed by singleton reassignment. It currently requires the built-in search
+and Leiden clustering. The default `standard` profile is unchanged.
+
 ---
 
 <br />

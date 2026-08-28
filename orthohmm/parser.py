@@ -315,6 +315,16 @@ def create_parser() -> ArgumentParser:
     )
 
     optional.add_argument(
+        "--accuracy_profile",
+        type=str,
+        required=False,
+        default="standard",
+        choices=["standard", "high_sensitivity"],
+        help=SUPPRESS,
+        metavar="accuracy_profile",
+    )
+
+    optional.add_argument(
         "--clustering",
         type=str,
         required=False,

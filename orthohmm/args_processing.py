@@ -113,6 +113,16 @@ def process_args(args) -> dict:
 
     inflation_value = args.inflation_value or 1.5
     refinement_profile = getattr(args, "refinement_profile", None) or "default"
+    accuracy_profile = getattr(args, "accuracy_profile", None) or "standard"
+    if accuracy_profile == "high_sensitivity" and search_mode != "builtin":
+        logger.warning("--accuracy_profile high_sensitivity requires --search_mode builtin.")
+        sys.exit()
+    if accuracy_profile == "high_sensitivity" and clustering != "leiden":
+        logger.warning("--accuracy_profile high_sensitivity requires --clustering leiden.")
+        sys.exit()
+    if accuracy_profile == "high_sensitivity" and args.start:
+        logger.warning("--accuracy_profile high_sensitivity cannot resume from --start search_res.")
+        sys.exit()
     metrics_json = getattr(args, "metrics_json", None)
     threads_per_worker = int(getattr(args, "threads_per_worker", 8) or 8)
     if threads_per_worker < 1:
@@ -142,6 +152,7 @@ def process_args(args) -> dict:
         clustering=clustering,
         cpm_resolution=cpm_resolution,
         refinement_profile=refinement_profile,
+        accuracy_profile=accuracy_profile,
         metrics_json=metrics_json,
         threads_per_worker=threads_per_worker,
     )

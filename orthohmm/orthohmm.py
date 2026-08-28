@@ -8,6 +8,13 @@ from typing import Union
 
 import numpy as np
 
+from .accuracy import (
+    build_rbnh_edges,
+    build_singleton_assignment_edges,
+    combine_edges,
+    read_index_clusters,
+    resolve_accuracy_profile,
+)
 from .args_processing import process_args
 from .externals import (
     execute_leiden,
@@ -21,10 +28,12 @@ from .helpers import (
     generate_orthogroup_clusters_file,
     generate_orthogroup_files,
     generate_phmmer_cmds,
+    get_sequence_lengths,
     IndexedEdges,
     StartStep,
     StopStep,
     SubstitutionMatrix,
+    write_indexed_edges,
 )
 from .parser import create_parser
 from .metrics import PipelineMetrics
@@ -219,6 +228,7 @@ def execute(
     clustering: str = "leiden",
     cpm_resolution=0.1,
     refinement_profile: str = "default",
+    accuracy_profile: str = "standard",
     **kwargs,
 ) -> None:
     metrics_json = kwargs.pop("metrics_json", None)
@@ -240,6 +250,7 @@ def execute(
             clustering=clustering,
             cpm_resolution=cpm_resolution,
             refinement_profile=refinement_profile,
+            accuracy_profile=accuracy_profile,
             metrics=metrics,
             threads_per_worker=threads_per_worker,
             **kwargs,
@@ -262,6 +273,7 @@ def _execute(
     clustering: str,
     cpm_resolution,
     refinement_profile: str,
+    accuracy_profile: str,
     metrics: PipelineMetrics,
     threads_per_worker: int,
     **kwargs,
@@ -274,6 +286,13 @@ def _execute(
     os.makedirs(working_dir, exist_ok=True)
 
     files = fetch_fasta_files(fasta_directory)
+    accuracy_config = resolve_accuracy_profile(accuracy_profile)
+    if accuracy_config.multipass_graph and (
+        search_mode != "builtin" or clustering != "leiden"
+    ):
+        raise ValueError(
+            "high_sensitivity accuracy requires built-in search and Leiden clustering"
+        )
     metrics.add_metadata(
         fasta_directory=os.path.abspath(fasta_directory),
         output_directory=os.path.abspath(output_directory),
@@ -282,6 +301,11 @@ def _execute(
         cpm_resolution=cpm_resolution,
         substitution_matrix=substitution_matrix.value,
         evalue_threshold=evalue_threshold,
+        accuracy_profile=accuracy_config.name,
+        search_kmer_k=accuracy_config.kmer_k,
+        search_max_candidates_per_query=(
+            accuracy_config.max_candidates_per_query
+        ),
         cpu_budget=cpu,
     )
     metrics.add_counts(species=len(files), species_pairs=len(files) ** 2)
@@ -324,6 +348,7 @@ def _execute(
         search_mode,
         clustering,
         cpm_resolution,
+        accuracy_config.name,
     )
 
     # set current step and determine the total number of
@@ -355,6 +380,10 @@ def _execute(
                 output_directory,
                 cpu,
                 substitution_matrix,
+                kmer_k=accuracy_config.kmer_k,
+                max_candidates_per_query=(
+                    accuracy_config.max_candidates_per_query
+                ),
                 evalue_threshold=evalue_threshold,
                 threads_per_worker=threads_per_worker,
             )
@@ -380,8 +409,13 @@ def _execute(
 
     print(f"Step {current_step}/{total_steps}: Determining edge thresholds")
     with metrics.stage("edge_thresholds"):
-        gene_lengths, reciprocal_best_hit_thresholds, pairwise_rbh_corr = \
-            determine_edge_thresholds(
+        if accuracy_config.multipass_graph:
+            gene_lengths = get_sequence_lengths(fasta_directory, files)
+            reciprocal_best_hit_thresholds = None
+            pairwise_rbh_corr = None
+        else:
+            gene_lengths, reciprocal_best_hit_thresholds, pairwise_rbh_corr = \
+                determine_edge_thresholds(
                 files,
                 fasta_directory,
                 output_directory,
@@ -394,17 +428,43 @@ def _execute(
     current_step += 1
 
     print(f"Step {current_step}/{total_steps}: Identifying network edges")
+    accuracy_hits = None
     with metrics.stage("network_edges"):
-        edges = determine_network_edges(
-            files,
-            output_directory,
-            gene_lengths,
-            pairwise_rbh_corr,
-            reciprocal_best_hit_thresholds,
-            evalue_threshold,
-            cpu,
-            search_results=search_results,
-        )
+        if accuracy_config.multipass_graph:
+            if search_results is None:
+                raise ValueError(
+                    "high_sensitivity accuracy requires in-memory built-in search results"
+                )
+            gene_names = [str(row["name"]) for row in gene_lengths]
+            gene_to_id = {gene: idx for idx, gene in enumerate(gene_names)}
+            species_to_id = {}
+            gene_to_species = []
+            for row in gene_lengths:
+                species = str(row["spp"])
+                species_to_id.setdefault(species, len(species_to_id))
+                gene_to_species.append(species_to_id[species])
+            accuracy_hits = _collect_search_hit_arrays(
+                search_results,
+                evalue_threshold,
+                gene_to_id,
+            )
+            edges = build_rbnh_edges(
+                gene_names,
+                gene_to_species,
+                *accuracy_hits,
+            )
+            write_indexed_edges(edges, output_directory)
+        else:
+            edges = determine_network_edges(
+                files,
+                output_directory,
+                gene_lengths,
+                pairwise_rbh_corr,
+                reciprocal_best_hit_thresholds,
+                evalue_threshold,
+                cpu,
+                search_results=search_results,
+            )
     metrics.add_counts(network_edges=len(edges))
     print("\r          Completed!      \n")
     current_step += 1
@@ -423,7 +483,35 @@ def _execute(
                 cpm_resolution,
                 output_directory,
                 edges=edges,
+                include_isolates=accuracy_config.multipass_graph,
             )
+            if accuracy_config.multipass_graph:
+                cluster_path = (
+                    f"{output_directory}/orthohmm_working_res/"
+                    "orthohmm_edges_clustered.txt"
+                )
+                initial_clusters = read_index_clusters(
+                    cluster_path,
+                    edges.gene_names,
+                )
+                singleton_edges = build_singleton_assignment_edges(
+                    edges.gene_names,
+                    initial_clusters,
+                    *accuracy_hits,
+                )
+                metrics.add_counts(
+                    high_sensitivity_rbnh_edges=len(edges),
+                    high_sensitivity_singleton_edges=len(singleton_edges),
+                )
+                edges = combine_edges(edges, singleton_edges)
+                write_indexed_edges(edges, output_directory)
+                execute_leiden(
+                    cpm_resolution,
+                    output_directory,
+                    edges=edges,
+                    include_isolates=True,
+                )
+                metrics.add_counts(network_edges=len(edges))
     with metrics.stage("refinement"):
         refinement_substages = _refine_cluster_file(
             output_directory,

@@ -422,7 +422,8 @@ def _filter_significant_indexed(
 def _search_pair_worker(args):
     """Worker function for one directed species comparison."""
     (query_file, target_file, fasta_directory,
-     matrix_name, band_width, kmer_k, evalue_threshold, n_threads) = args
+     matrix_name, band_width, kmer_k, max_candidates_per_query,
+     evalue_threshold, n_threads) = args
 
     os.environ["OMP_NUM_THREADS"] = str(n_threads)
     try:
@@ -443,6 +444,7 @@ def _search_pair_worker(args):
         matrix_name,
         band_width=band_width,
         kmer_k=kmer_k,
+        max_candidates_per_query=max_candidates_per_query,
         n_threads=n_threads,
     )
     species_ids = query_sp.ids if query_file == target_file else None
@@ -474,6 +476,7 @@ def execute_builtin_search(
     kmer_k: int = 5,
     evalue_threshold: float = 1e-4,
     threads_per_worker: int = 8,
+    max_candidates_per_query: int = 0,
 ) -> IndexedSearchResults:
     """Replace execute_phmmer_search with built-in search engine.
 
@@ -486,6 +489,7 @@ def execute_builtin_search(
     substitution_matrix : SubstitutionMatrix enum value
     band_width : Viterbi band width
     kmer_k : k-mer size for pre-filtering
+    max_candidates_per_query : fixed candidate cap, or 0 for adaptive
 
     Returns
     -------
@@ -505,7 +509,7 @@ def execute_builtin_search(
     # Workers filter hits by evalue before IPC, keeping payloads small.
     worker_args = [
         (query, target, fasta_directory, matrix_name, band_width, kmer_k,
-         evalue_threshold, worker_threads)
+         max_candidates_per_query, evalue_threshold, worker_threads)
         for query, target in file_pairs
     ]
 
