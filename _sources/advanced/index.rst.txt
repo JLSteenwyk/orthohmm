@@ -188,20 +188,18 @@ Clustering
 Selects which clustering algorithm groups RBNH edges into orthogroups.
 Two choices:
 
-* ``mcl`` *(default)*: Markov Cluster algorithm with inflation=1.5,
-  via the external ``mcl`` binary. Robust across phylogenetic diversity
-  ranges — never collapses to all-singletons even on cross-kingdom
-  inputs. F=62.4% on OrthoBench, F=88.4% on Three Kingdoms.
-* ``leiden``: Leiden community detection with the Constant Potts Model.
+* ``leiden`` *(default)*: Leiden community detection with the Constant Potts Model.
   Pure Python via ``igraph`` and ``leidenalg``; no external binary
-  required. Higher peak F-score on closely-related inputs (F=65.7-65.9%
-  on OrthoBench), but the fixed default ``cpm_resolution=0.1`` collapses
-  on cross-kingdom data — pair with ``--cpm_resolution auto`` for
-  robustness, which yields F=90.7% on Three Kingdoms.
+  required. ``cpm_resolution=0.1`` is the default fixed setting for the
+  highest-priority OrthoBench and QfO benchmarks. Pair with
+  ``--cpm_resolution auto`` for distant cross-kingdom data; auto yields
+  F=90.7% on Three Kingdoms.
+* ``mcl``: Markov Cluster algorithm with inflation=1.5, via the external
+  ``mcl`` binary. Available as a conservative robustness option.
 
 .. code-block:: shell
 
-	# default — MCL inflation=1.5
+	# default — Leiden CPM at resolution 0.1
 	orthohmm <path_to_directory_of_FASTA_files>
 
 	# Leiden with auto-tuned CPM resolution
@@ -315,7 +313,7 @@ All options
 +------------------------------+--------------------------------------------------------------------------------+
 | \-\-search_mode              | Search engine: ``builtin`` (default) or ``phmmer``                             |
 +------------------------------+--------------------------------------------------------------------------------+
-| \-\-clustering               | Clustering algorithm: ``mcl`` (default) or ``leiden``                          |
+| \-\-clustering               | Clustering algorithm: ``leiden`` (default) or ``mcl``                          |
 +------------------------------+--------------------------------------------------------------------------------+
 | \-\-cpm_resolution           | Leiden CPM resolution: float or ``auto``. Default: 0.1                         |
 +------------------------------+--------------------------------------------------------------------------------+

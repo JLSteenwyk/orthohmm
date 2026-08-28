@@ -9,19 +9,14 @@ Change log
 Major changes to OrthoHMM are summarized here.
 
 **0.5.0**
-Reverted the v0.3.0 default clustering choice. After head-to-head
-benchmarking across phylogenetic-diversity ranges (OrthoBench 12
-bilaterians, QfO 2020 78 mixed-domain proteomes, Three Kingdoms
-12 cross-kingdom proteomes), MCL with inflation=1.5 is the only
-clustering choice that never catastrophically fails: Leiden CPM with
-the fixed cpm=0.1 default collapses to all-singletons on cross-kingdom
-inputs (F=0.0003 on Three Kingdoms), and Leiden with --cpm_resolution
-auto over-merges on QfO functional metrics. MCL@1.5 trails the best
-Leiden setting by ~3 pp on closely-related inputs but is robust across
-the full diversity range. ``--clustering leiden --cpm_resolution auto``
-remains the recommended choice for users who prefer the pure-Python
-path or who can confirm their inputs are tightly clustered. mcl is
-once again a required external binary; see the README/install docs.
+Sets Leiden CPM at resolution 0.1 as the default clustering path after
+head-to-head benchmarking across OrthoBench, QfO 2020, and Three Kingdoms.
+The default fixed setting is best for the highest-priority OrthoBench and
+QfO benchmarks. ``--cpm_resolution auto`` remains available for distant
+cross-kingdom inputs, where it improves Three Kingdoms substantially
+(F=0.907 vs 0.0003 for fixed 0.1). ``--clustering mcl`` remains available
+as an optional conservative fallback, but mcl is no longer required for
+the default pipeline.
 
 **0.4.2**
 ``--cpm_resolution auto`` now anchors γ on the smallest *positive* edge

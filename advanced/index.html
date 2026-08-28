@@ -298,18 +298,16 @@ orthohmm<span class="w"> </span>&lt;path_to_directory_of_FASTA_files&gt;<span cl
 <p>Selects which clustering algorithm groups RBNH edges into orthogroups.
 Two choices:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">mcl</span></code> <em>(default)</em>: Markov Cluster algorithm with inflation=1.5,
-via the external <code class="docutils literal notranslate"><span class="pre">mcl</span></code> binary. Robust across phylogenetic diversity
-ranges — never collapses to all-singletons even on cross-kingdom
-inputs. F=62.4% on OrthoBench, F=88.4% on Three Kingdoms.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">leiden</span></code>: Leiden community detection with the Constant Potts Model.
+<li><p><code class="docutils literal notranslate"><span class="pre">leiden</span></code> <em>(default)</em>: Leiden community detection with the Constant Potts Model.
 Pure Python via <code class="docutils literal notranslate"><span class="pre">igraph</span></code> and <code class="docutils literal notranslate"><span class="pre">leidenalg</span></code>; no external binary
-required. Higher peak F-score on closely-related inputs (F=65.7-65.9%
-on OrthoBench), but the fixed default <code class="docutils literal notranslate"><span class="pre">cpm_resolution=0.1</span></code> collapses
-on cross-kingdom data — pair with <code class="docutils literal notranslate"><span class="pre">--cpm_resolution</span> <span class="pre">auto</span></code> for
-robustness, which yields F=90.7% on Three Kingdoms.</p></li>
+required. <code class="docutils literal notranslate"><span class="pre">cpm_resolution=0.1</span></code> is the default fixed setting for the
+highest-priority OrthoBench and QfO benchmarks. Pair with
+<code class="docutils literal notranslate"><span class="pre">--cpm_resolution</span> <span class="pre">auto</span></code> for distant cross-kingdom data; auto yields
+F=90.7% on Three Kingdoms.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mcl</span></code>: Markov Cluster algorithm with inflation=1.5, via the external
+<code class="docutils literal notranslate"><span class="pre">mcl</span></code> binary. Available as a conservative robustness option.</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># default — MCL inflation=1.5</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># default — Leiden CPM at resolution 0.1</span>
 orthohmm<span class="w"> </span>&lt;path_to_directory_of_FASTA_files&gt;
 
 <span class="c1"># Leiden with auto-tuned CPM resolution</span>
@@ -421,7 +419,7 @@ orthohmm<span class="w"> </span>&lt;path_to_directory_of_FASTA_files&gt;<span cl
 <td><p>Search engine: <code class="docutils literal notranslate"><span class="pre">builtin</span></code> (default) or <code class="docutils literal notranslate"><span class="pre">phmmer</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p>--clustering</p></td>
-<td><p>Clustering algorithm: <code class="docutils literal notranslate"><span class="pre">mcl</span></code> (default) or <code class="docutils literal notranslate"><span class="pre">leiden</span></code></p></td>
+<td><p>Clustering algorithm: <code class="docutils literal notranslate"><span class="pre">leiden</span></code> (default) or <code class="docutils literal notranslate"><span class="pre">mcl</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p>--cpm_resolution</p></td>
 <td><p>Leiden CPM resolution: float or <code class="docutils literal notranslate"><span class="pre">auto</span></code>. Default: 0.1</p></td>
