@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import multiprocessing
 import os
-from concurrent.futures import ProcessPoolExecutor, as_completed
+from concurrent.futures import FIRST_COMPLETED, ProcessPoolExecutor, wait
 from dataclasses import dataclass
 from typing import Mapping, Sequence
 
@@ -128,37 +128,56 @@ def build_cluster_profiles(
     """Build center-star MSA profiles for informative cluster sizes."""
     sub_matrix = get_matrix(matrix_name)
     background = get_background_freqs(matrix_name)
-    tasks = []
-    for cluster_id, cluster in enumerate(clusters):
-        if not min_cluster_size <= len(cluster) <= max_cluster_size:
-            continue
-        member_ids = [gene_names[int(gene)] for gene in cluster]
-        sequences = [
-            sequence_database.get_sequence(int(gene)) for gene in cluster
-        ]
-        tasks.append(
-            (cluster_id, member_ids, sequences, sub_matrix, background)
-        )
+    cluster_ids = [
+        cluster_id
+        for cluster_id, cluster in enumerate(clusters)
+        if min_cluster_size <= len(cluster) <= max_cluster_size
+    ]
+
+    def tasks():
+        for cluster_id in cluster_ids:
+            cluster = clusters[cluster_id]
+            member_ids = [gene_names[int(gene)] for gene in cluster]
+            sequences = [
+                sequence_database.get_sequence(int(gene)) for gene in cluster
+            ]
+            yield (
+                cluster_id, member_ids, sequences, sub_matrix, background
+            )
 
     profiles = {}
-    workers = max(1, min(int(cpu), len(tasks))) if tasks else 1
+    workers = max(1, min(int(cpu), len(cluster_ids))) if cluster_ids else 1
     if workers == 1:
-        for task in tasks:
+        for task in tasks():
             cluster_id, profile = _build_profile_worker(task)
             if profile is not None:
                 profiles[cluster_id] = profile
         return profiles
 
+    task_iter = iter(tasks())
+    max_pending = workers * 2
     context = multiprocessing.get_context("spawn")
     with ProcessPoolExecutor(
         max_workers=workers,
         mp_context=context,
     ) as executor:
-        futures = [executor.submit(_build_profile_worker, task) for task in tasks]
-        for future in as_completed(futures):
-            cluster_id, profile = future.result()
-            if profile is not None:
-                profiles[cluster_id] = profile
+        pending = {
+            executor.submit(_build_profile_worker, next(task_iter))
+            for _ in range(min(max_pending, len(cluster_ids)))
+        }
+        while pending:
+            completed, pending = wait(
+                pending, return_when=FIRST_COMPLETED
+            )
+            for future in completed:
+                cluster_id, profile = future.result()
+                if profile is not None:
+                    profiles[cluster_id] = profile
+                try:
+                    task = next(task_iter)
+                except StopIteration:
+                    continue
+                pending.add(executor.submit(_build_profile_worker, task))
     return profiles
 
 

@@ -50,6 +50,33 @@ def test_build_cluster_profiles_skips_clusters_outside_size_range(tmp_path):
     assert profiles[0].member_ids == ["a1", "a2", "a3"]
 
 
+def test_parallel_profile_build_matches_serial(tmp_path):
+    (tmp_path / "a.fa").write_text(
+        ">a1\nACDEFG\n>a2\nACDEYG\n>a3\nACDEWG\n"
+        ">b1\nKLMNPQ\n>b2\nKLMNAQ\n>b3\nKLMNWQ\n"
+    )
+    names = ["a1", "a2", "a3", "b1", "b2", "b3"]
+    database = load_global_sequence_database(
+        str(tmp_path), ["a.fa"], names
+    )
+    clusters = [[0, 1, 2], [3, 4, 5]]
+
+    serial = build_cluster_profiles(
+        clusters, names, database, "BLOSUM62", cpu=1
+    )
+    parallel = build_cluster_profiles(
+        clusters, names, database, "BLOSUM62", cpu=2
+    )
+
+    assert sorted(parallel) == sorted(serial)
+    for cluster_id in serial:
+        assert parallel[cluster_id].member_ids == serial[cluster_id].member_ids
+        np.testing.assert_array_equal(
+            parallel[cluster_id].match_emissions,
+            serial[cluster_id].match_emissions,
+        )
+
+
 def test_strict_profile_edges_use_best_profile_and_one_sequence_anchor():
     names = ["a", "b", "c", "d", "candidate"]
     clusters = [[0, 1], [2, 3], [4]]
