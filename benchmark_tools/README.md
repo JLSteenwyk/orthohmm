@@ -1,4 +1,23 @@
-# OrthoFinder Comparator Workflow
+# Benchmark Workflows
+
+## Production OrthoHMM performance harness
+
+Use the production CLI benchmark harness for runtime and memory measurements:
+
+```bash
+python benchmark_tools/benchmark_production.py \
+  bacterial_scaling/subsets/n005 \
+  /tmp/orthohmm_n005 \
+  /tmp/orthohmm_n005.metrics.json \
+  --cpu 32
+```
+
+The JSON records exact commands, input/output checksums, stage wall time,
+sampled process-tree RSS, search candidates, significant hits, graph edges,
+and orthogroup counts. The bacterial SLURM runner uses this harness rather
+than maintaining a second OrthoHMM implementation.
+
+## OrthoFinder comparator
 
 This directory pins the OrthoFinder comparator to version 3.1.5 and keeps new
 results separate from the historical 2.5.5 outputs.

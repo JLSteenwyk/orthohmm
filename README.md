@@ -47,18 +47,17 @@ If you found orthohmm useful, please cite *OrthoHMM: Improved Inference of Ortho
 **Performance**
 
 As of v0.2.0, OrthoHMM ships a built-in profile HMM + k-mer prefilter
-search engine that replaces the `phmmer` subprocess. It scales to 100
-bacterial proteomes (~352K total proteins) on a single 32-core node:
+search engine that replaces the `phmmer` subprocess. The production CLI was
+rebenchmarked with summed process-tree memory on a single 32-core node:
 
-| proteomes | wall time | peak RAM | orthogroups |
-|----------:|----------:|---------:|------------:|
-|         5 |       13s |  0.29 GB |       1,196 |
-|        20 |     4 min |  0.44 GB |       8,680 |
-|        60 |    28 min |  1.65 GB |      19,029 |
-|       100 |    77 min |  4.67 GB |      27,328 |
+| proteomes | proteins | wall time | peak process-tree RSS | orthogroups |
+|----------:|---------:|----------:|----------------------:|------------:|
+|         5 |   15,932 |      7.0s |             1.36 GiB |      12,995 |
 
-Numbers from the bacterial scaling benchmark (RefSeq, 32 threads, 1 TB
-node). The legacy `phmmer` path is still available via
+The output includes singleton orthogroups. The previous 20-100 proteome table
+came from a separate experimental driver and was removed pending a production
+harness rerun. See `PERFORMANCE_OPTIMIZATION.md` for commands, checksums,
+stage timings, and rejected experiments. The legacy `phmmer` path is still available via
 `--search_mode phmmer` but is no longer the default.
 
 **Clustering step.** OrthoHMM uses **Leiden CPM with resolution=0.1** as

@@ -22,6 +22,22 @@ def harmonic_mean(x, y):
 
 def read_metric(path, mode):
     data = json.loads(path.read_text())
+    if isinstance(data, list):
+        values = {
+            record["metrics"]["metric_id"]: record["metrics"]["value"]
+            for record in data
+            if record.get("type") == "assessment"
+        }
+        if mode == "f_score":
+            return harmonic_mean(values["TPR"], values["PPV"])
+        scores = [
+            value for metric_id, value in values.items()
+            if metric_id != "NR_ORTHOLOGS"
+        ]
+        if len(scores) != 1:
+            raise ValueError(f"Expected one score metric in {path}, found {values}")
+        return scores[0]
+
     participants = data["datalink"]["inline_data"]["challenge_participants"]
     if len(participants) != 1:
         raise ValueError(f"Expected one participant in {path}, found {len(participants)}")
@@ -31,10 +47,21 @@ def read_metric(path, mode):
     return participant["metric_y"]
 
 
+def metric_path(scoring_dir, relative_path):
+    current = scoring_dir / "results" / relative_path
+    if current.exists():
+        return current
+    historical = scoring_dir / "assessment_out" / Path(relative_path).name
+    if historical.exists():
+        return historical
+    raise FileNotFoundError(
+        f"QfO metric not found in current or historical layout: {relative_path}"
+    )
+
+
 def summarize(scoring_dir):
-    results_dir = scoring_dir / "results"
     scores = {
-        name: read_metric(results_dir / relative_path, mode)
+        name: read_metric(metric_path(scoring_dir, relative_path), mode)
         for name, (relative_path, mode) in METRICS.items()
     }
     return {
