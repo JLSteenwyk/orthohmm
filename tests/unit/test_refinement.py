@@ -2,7 +2,11 @@ from itertools import combinations
 
 import numpy as np
 
-from orthohmm.refinement import refine_cluster_indices, refine_clusters
+from orthohmm.refinement import (
+    refine_cluster_indices,
+    refine_clusters,
+    resolve_refinement_profile,
+)
 
 
 def _cluster(prefix, counts):
@@ -165,10 +169,10 @@ def test_indexed_refinement_splits_large_low_degree_members():
 
 def test_indexed_copy_split_stays_intact_below_broad_threshold():
     cluster = list(range(150))
-    gene_to_species = [0] * 10
+    gene_to_species = [0] * 9
     for species_idx in range(1, 50):
         gene_to_species.extend([species_idx] * 2)
-    for species_idx in range(1, 43):
+    for species_idx in range(1, 44):
         gene_to_species.append(species_idx)
 
     refined = refine_cluster_indices(
@@ -187,8 +191,8 @@ def test_indexed_copy_split_stays_intact_below_broad_threshold():
 
 def test_indexed_copy_split_breaks_qfo_scale_high_copy_cluster():
     cluster = list(range(150))
-    gene_to_species = [0] * 20
-    for species_idx in range(1, 131):
+    gene_to_species = [0] * 10
+    for species_idx in range(1, 141):
         gene_to_species.append(species_idx)
     gene_to_species = gene_to_species[:150]
 
@@ -230,6 +234,39 @@ def test_indexed_broad_dataset_skips_cluster_merges():
     assert frozenset(clusters[0]) in refined_sets
     assert frozenset(clusters[1]) in refined_sets
     assert frozenset(range(6)) not in refined_sets
+
+
+def test_resolve_refinement_profile_qfo_relaxes_copy_split():
+    params = resolve_refinement_profile("qfo")
+    assert params["broad_copy_split_min_species_count"] > 20
+
+    cluster = list(range(150))
+    gene_to_species = [0] * 10
+    gene_to_species.extend(range(1, 141))
+    gene_to_species = gene_to_species[:150]
+
+    default = refine_cluster_indices(
+        [cluster],
+        np.asarray([], dtype=np.int32),
+        np.asarray([], dtype=np.int32),
+        np.asarray([], dtype=np.float32),
+        np.asarray([], dtype=np.int32),
+        np.asarray([], dtype=np.int32),
+        np.asarray(gene_to_species, dtype=np.int32),
+    )
+    qfo = refine_cluster_indices(
+        [cluster],
+        np.asarray([], dtype=np.int32),
+        np.asarray([], dtype=np.int32),
+        np.asarray([], dtype=np.float32),
+        np.asarray([], dtype=np.int32),
+        np.asarray([], dtype=np.int32),
+        np.asarray(gene_to_species, dtype=np.int32),
+        **params,
+    )
+
+    assert len(default) == 150
+    assert len(qfo) == 1
 
 
 def test_indexed_broad_dataset_allows_confident_component_split():

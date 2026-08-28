@@ -26,6 +26,7 @@ from .helpers import (
 from .parser import create_parser
 from .refinement import (
     DEFAULT_COPY_SPLIT_MIN_DATASET_SPECIES,
+    resolve_refinement_profile,
     refine_cluster_indices,
 )
 from .writer import (
@@ -77,7 +78,7 @@ def _collect_edge_arrays(edges, gene_to_id):
 
 
 def _refine_cluster_file(output_directory, gene_lengths, search_results, edges,
-                         evalue_threshold):
+                         evalue_threshold, refinement_profile="default", **kwargs):
     if search_results is None:
         return
 
@@ -122,6 +123,8 @@ def _refine_cluster_file(output_directory, gene_lengths, search_results, edges,
             gene_to_id,
         )
         edge_queries, edge_targets, edge_scores = _collect_edge_arrays(edges, gene_to_id)
+    refinement_kwargs = resolve_refinement_profile(refinement_profile)
+    refinement_kwargs.update(kwargs)
     refined = refine_cluster_indices(
         clusters,
         hit_queries,
@@ -131,6 +134,7 @@ def _refine_cluster_file(output_directory, gene_lengths, search_results, edges,
         edge_targets,
         gene_to_species,
         rbnh_scores=edge_scores,
+        **refinement_kwargs,
     )
 
     with open(cluster_path, "w") as handle:
@@ -154,6 +158,7 @@ def execute(
     search_mode: str = "builtin",
     clustering: str = "leiden",
     cpm_resolution=0.1,
+    refinement_profile: str = "default",
     **kwargs,
 ) -> None:
     # for reporting runtime duration to user
@@ -283,6 +288,7 @@ def execute(
             search_results,
             edges,
             evalue_threshold,
+            refinement_profile=refinement_profile,
         )
     singletons, og_cn, ogs_dat, single_copy_ogs = \
         generate_orthogroup_clusters_file(

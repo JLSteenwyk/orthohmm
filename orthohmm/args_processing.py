@@ -109,6 +109,7 @@ def process_args(args) -> dict:
             mcl = "mcl"  # placeholder; never invoked in leiden mode
 
     inflation_value = args.inflation_value or 1.5
+    refinement_profile = getattr(args, "refinement_profile", None) or "default"
 
     start = StartStep(args.start) if args.start else None
     stop = StopStep(args.stop) if args.stop else None
@@ -132,4 +133,5 @@ def process_args(args) -> dict:
         search_mode=search_mode,
         clustering=clustering,
         cpm_resolution=cpm_resolution,
+        refinement_profile=refinement_profile,
     )

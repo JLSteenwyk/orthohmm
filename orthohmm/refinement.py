@@ -40,7 +40,7 @@ DEFAULT_SPLIT_DEGREE_RATIO = 1.1
 DEFAULT_COPY_SPLIT_MIN_SIZE = 150
 DEFAULT_COPY_SPLIT_MIN_SPECIES_COUNT = 10
 DEFAULT_COPY_SPLIT_MIN_DATASET_SPECIES = 50
-DEFAULT_BROAD_COPY_SPLIT_MIN_SPECIES_COUNT = 20
+DEFAULT_BROAD_COPY_SPLIT_MIN_SPECIES_COUNT = 10
 DEFAULT_PANEL_COPY_SPLIT_MIN_SIZE = 70
 DEFAULT_PANEL_COPY_SPLIT_MAX_SIZE = 150
 DEFAULT_PANEL_COPY_SPLIT_MIN_SPECIES_COUNT = 14
@@ -51,6 +51,29 @@ DEFAULT_BROAD_RECIPROCAL_MIN_MAX_SCORE = 1.0
 DEFAULT_BROAD_RECIPROCAL_MIN_COVERAGE = 2.0
 DEFAULT_BROAD_RECIPROCAL_MIN_NORM = 1.0
 DEFAULT_BROAD_MAX_RECIPROCAL_MERGES = 32
+DEFAULT_REFINE_PROFILE = "default"
+
+# Tunable refinement presets. "default" preserves current production behavior.
+_REFINE_PROFILE_PRESETS: Dict[str, Dict[str, object]] = {
+    "default": {},
+    "qfo": {
+        "broad_copy_split_min_species_count": 24,
+        "broad_max_reciprocal_merges": 64,
+        "broad_reciprocal_min_avg_score": 0.95,
+        "broad_reciprocal_min_max_score": 0.95,
+        "broad_reciprocal_min_coverage": 1.6,
+        "broad_reciprocal_min_norm": 0.8,
+        "copy_split_min_size": 180,
+    },
+}
+
+
+def resolve_refinement_profile(name: str) -> Dict[str, object]:
+    """Return supported refinement parameter overrides for a named preset."""
+    profile = name.lower() if isinstance(name, str) else DEFAULT_REFINE_PROFILE
+    if profile not in _REFINE_PROFILE_PRESETS:
+        raise ValueError(f"Unknown refinement profile: {name!r}")
+    return dict(_REFINE_PROFILE_PRESETS[profile])
 
 
 @dataclass
@@ -949,6 +972,7 @@ def refine_clusters(
     split_min_size: int = DEFAULT_SPLIT_MIN_SIZE,
     split_min_species_count: int = DEFAULT_SPLIT_MIN_SPECIES_COUNT,
     split_degree_ratio: float = DEFAULT_SPLIT_DEGREE_RATIO,
+    broad_copy_split_min_species_count: int = DEFAULT_BROAD_COPY_SPLIT_MIN_SPECIES_COUNT,
     copy_split_min_size: int = DEFAULT_COPY_SPLIT_MIN_SIZE,
     copy_split_min_species_count: int = DEFAULT_COPY_SPLIT_MIN_SPECIES_COUNT,
     copy_split_min_dataset_species: int = DEFAULT_COPY_SPLIT_MIN_DATASET_SPECIES,
@@ -972,7 +996,7 @@ def refine_clusters(
                 len({sp for sp in gene_to_species.values() if sp != ""}),
                 copy_split_min_species_count,
                 copy_split_min_dataset_species,
-                DEFAULT_BROAD_COPY_SPLIT_MIN_SPECIES_COUNT,
+                broad_copy_split_min_species_count,
             )
         )
         return _split_high_duplication_clusters(
@@ -1054,6 +1078,12 @@ def refine_cluster_indices(
     gene_to_species: Sequence[int],
     max_reciprocal_merges: int = DEFAULT_MAX_RECIPROCAL_MERGES,
     max_component_genes: int = DEFAULT_MAX_COMPONENT_GENES,
+    broad_copy_split_min_species_count: int = DEFAULT_BROAD_COPY_SPLIT_MIN_SPECIES_COUNT,
+    broad_max_reciprocal_merges: int = DEFAULT_BROAD_MAX_RECIPROCAL_MERGES,
+    broad_reciprocal_min_avg_score: float = DEFAULT_BROAD_RECIPROCAL_MIN_AVG_SCORE,
+    broad_reciprocal_min_max_score: float = DEFAULT_BROAD_RECIPROCAL_MIN_MAX_SCORE,
+    broad_reciprocal_min_coverage: float = DEFAULT_BROAD_RECIPROCAL_MIN_COVERAGE,
+    broad_reciprocal_min_norm: float = DEFAULT_BROAD_RECIPROCAL_MIN_NORM,
     split_min_size: int = DEFAULT_SPLIT_MIN_SIZE,
     split_min_species_count: int = DEFAULT_SPLIT_MIN_SPECIES_COUNT,
     split_degree_ratio: float = DEFAULT_SPLIT_DEGREE_RATIO,
@@ -1090,7 +1120,7 @@ def refine_cluster_indices(
             int(np.unique(np.asarray(gene_to_species)).size),
             copy_split_min_species_count,
             copy_split_min_dataset_species,
-            DEFAULT_BROAD_COPY_SPLIT_MIN_SPECIES_COUNT,
+            broad_copy_split_min_species_count,
         )
         if len(rbnh_sources) == 0:
             return _split_high_duplication_index_clusters(
@@ -1124,12 +1154,12 @@ def refine_cluster_indices(
             rbnh_max_scores,
             sizes,
             dsu,
-            max_merges=DEFAULT_BROAD_MAX_RECIPROCAL_MERGES,
+            max_merges=broad_max_reciprocal_merges,
             max_genes=max_component_genes,
-            min_avg_score=DEFAULT_BROAD_RECIPROCAL_MIN_AVG_SCORE,
-            min_max_score=DEFAULT_BROAD_RECIPROCAL_MIN_MAX_SCORE,
-            min_coverage=DEFAULT_BROAD_RECIPROCAL_MIN_COVERAGE,
-            min_norm=DEFAULT_BROAD_RECIPROCAL_MIN_NORM,
+            min_avg_score=broad_reciprocal_min_avg_score,
+            min_max_score=broad_reciprocal_min_max_score,
+            min_coverage=broad_reciprocal_min_coverage,
+            min_norm=broad_reciprocal_min_norm,
         )
         _merge_weak_balanced_rescue_indexed(
             rbnh_sources,

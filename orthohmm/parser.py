@@ -305,6 +305,16 @@ def create_parser() -> ArgumentParser:
     )
 
     optional.add_argument(
+        "--refinement_profile",
+        type=str,
+        required=False,
+        default="default",
+        choices=["default", "qfo"],
+        help=SUPPRESS,
+        metavar="refinement_profile",
+    )
+
+    optional.add_argument(
         "--clustering",
         type=str,
         required=False,

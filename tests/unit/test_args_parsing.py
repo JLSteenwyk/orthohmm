@@ -79,6 +79,11 @@ class TestArgsProcessing(object):
         res = process_args(args)
         assert res["inflation_value"] == 1.5
 
+    def test_process_args_refinement_profile(self, args):
+        args.refinement_profile = "qfo"
+        res = process_args(args)
+        assert res["refinement_profile"] == "qfo"
+
     def test_process_args_default_evalue_threshold(self, args):
         args.evalue = None
         res = process_args(args)
@@ -136,5 +141,6 @@ class TestArgsProcessing(object):
             "search_mode",
             "clustering",
             "cpm_resolution",
+            "refinement_profile",
         ]
         assert sorted(res.keys()) == sorted(expected_keys)

@@ -8,10 +8,10 @@ def test_broad_refinement_skips_unused_hit_and_edge_collection(tmp_path, monkeyp
     work_dir.mkdir()
 
     genes = [f"g{i}" for i in range(150)]
-    species = [0] * 10
+    species = [0] * 9
     for species_idx in range(1, 50):
         species.extend([species_idx] * 2)
-    for species_idx in range(1, 43):
+    for species_idx in range(1, 44):
         species.append(species_idx)
 
     cluster_path = work_dir / "orthohmm_edges_clustered.txt"
@@ -46,3 +46,34 @@ def test_broad_refinement_skips_unused_hit_and_edge_collection(tmp_path, monkeyp
     refined = cluster_path.read_text().splitlines()
     assert len(refined) == 1
     assert set(refined) == {" ".join(sorted(genes))}
+
+
+def test_refinement_profile_allows_explicit_overrides(tmp_path, monkeypatch):
+    work_dir = tmp_path / "orthohmm_working_res"
+    work_dir.mkdir()
+    (work_dir / "orthohmm_edges_clustered.txt").write_text("g0 g1\n")
+
+    gene_lengths = np.asarray(
+        [("s0", "g0", 100), ("s1", "g1", 100)],
+        dtype=[("spp", object), ("name", object), ("length", int)],
+    )
+    captured = {}
+
+    def capture_refinement(*args, **kwargs):
+        captured.update(kwargs)
+        return args[0]
+
+    monkeypatch.setattr(pipeline, "refine_cluster_indices", capture_refinement)
+
+    pipeline._refine_cluster_file(
+        str(tmp_path),
+        gene_lengths,
+        search_results={},
+        edges={},
+        evalue_threshold=0.0001,
+        refinement_profile="qfo",
+        copy_split_min_size=200,
+    )
+
+    assert captured["broad_copy_split_min_species_count"] == 24
+    assert captured["copy_split_min_size"] == 200
