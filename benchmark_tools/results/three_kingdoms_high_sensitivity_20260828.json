@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "benchmark": "Three Kingdoms BUSCO",
+  "priority": "secondary",
+  "run": {
+    "accuracy_profile": "high_sensitivity",
+    "cpu_budget": 32,
+    "threads_per_worker": 8,
+    "inference_revision": "599dda43569d28faae9844368d54733c632435d4",
+    "harness_revision_at_completion": "63aeb8a83b81a89719ac87042d131c03557d727e",
+    "wall_s": 6556.426547,
+    "peak_process_tree_rss_gib": 11.12159
+  },
+  "score": {
+    "f_score": 0.8263,
+    "precision": 1.0,
+    "recall": 0.704,
+    "true_positive_gene_pairs": 5176,
+    "false_positive_reference_pairs": 0,
+    "missed_reference_pairs": 2176,
+    "reference_orthogroups": 255,
+    "reference_genes": 2035
+  },
+  "counts": {
+    "genes": 443217,
+    "search_candidates": 519062531,
+    "significant_hits": 18022218,
+    "rbnh_edges": 2010615,
+    "singleton_assignment_edges": 217230,
+    "profiles_built": 38463,
+    "profile_candidates": 8845581,
+    "significant_profile_hits": 1011219,
+    "strict_profile_edges": 62146,
+    "final_singleton_assignment_edges": 196898,
+    "network_edges": 2242431,
+    "orthogroups": 164826
+  },
+  "comparators": [
+    {
+      "tool": "ProteinOrtho",
+      "f_score": 0.9305,
+      "precision": 1.0,
+      "recall": 0.87
+    },
+    {
+      "tool": "OrthoHMM prior CPM M4 experiment",
+      "f_score": 0.907,
+      "precision": 1.0,
+      "recall": 0.8298
+    },
+    {
+      "tool": "SonicParanoid",
+      "f_score": 0.8859,
+      "precision": 1.0,
+      "recall": 0.7952
+    },
+    {
+      "tool": "OrthoFinder 2.5.5 DIAMOND",
+      "f_score": 0.8552,
+      "precision": 1.0,
+      "recall": 0.747
+    },
+    {
+      "tool": "OrthoHMM previous fixed CPM production",
+      "f_score": 0.0003,
+      "precision": 1.0,
+      "recall": 0.0001
+    }
+  ],
+  "checksums": {
+    "metrics_sha256": "73342f751abc0e96e039832dbbbedb049c1596392db5b176a7b2a5d6e880afd2",
+    "orthogroups_sha256": "28ba45202afc7f51e719d59405674023c9b284a2d5ea18575b03c7b949e13db1",
+    "score_sha256": "733078afd6bf78f2733c0e0a616d75f152b180074f5801e9504f6cad0a22122d",
+    "reference_sha256": "a5f3447056ecfa305442caff0d898d524eed350f13587d3247d3e1ba4c19757d",
+    "graph_edges_sha256": "276897bb5cc270de2fe84cbb4800fdce4a87a2bff45d3c91941b92323325a1e6",
+    "final_clusters_sha256": "592042b43c0ded2c51a10759c4c53fd998992a1fbbfa7c009206bf2c7c287f61"
+  },
+  "decision": {
+    "beats_previous_fixed_cpm_production": true,
+    "beats_orthofinder_2_5_5_diamond": false,
+    "beats_best_prior_orthohmm_experiment": false,
+    "supports_new_default": false,
+    "interpretation": "High sensitivity prevents the catastrophic fragmentation of fixed CPM production but does not match the better cross-kingdom clustering configurations or external comparators."
+  },
+  "source_metrics": "three_kingdoms/results/orthohmm_high_sensitivity/metrics.json"
+}

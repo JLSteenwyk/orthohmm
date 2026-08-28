@@ -122,7 +122,14 @@
   "validation": {
     "orthobench": "complete",
     "qfo": "running",
-    "three_kingdoms": "running",
+    "three_kingdoms": {
+      "status": "complete",
+      "f_score": 0.8263,
+      "precision": 1.0,
+      "recall": 0.704,
+      "beats_orthofinder_2_5_5_diamond": false,
+      "supports_new_default": false
+    },
     "recommendation": "Keep high_sensitivity opt-in until fresh QfO scoring completes."
   },
   "artifact_sha256": {

@@ -139,6 +139,17 @@ Cached QfO evidence remains approximately 0.674 for
 production harness until a full production run and official assessment are
 completed.
 
+The fresh secondary Three Kingdoms run scored F=0.8263, precision=1.0000,
+and recall=0.7040. It processed 443,217 proteins in 6,556.43 seconds with
+11.12 GiB peak process-tree RSS, producing 519,062,531 candidates, 18,022,218
+significant hits, 2,242,431 final edges, and 164,826 orthogroups. This is a
+large recovery from fixed-CPM production at F=0.0003, but it remains below
+OrthoFinder 2.5.5 DIAMOND at F=0.8552, the prior OrthoHMM CPM-M4 experiment
+at F=0.9070, and ProteinOrtho at F=0.9305. No OrthoFinder 3.1.5 Three
+Kingdoms result is available, so this secondary comparison is not attributed
+to the upgraded comparator. The result does not support making the
+high-sensitivity profile the default.
+
 ## Sequence-Accuracy Proposal Assessment
 
 Several proposed mechanisms are already present in the production design and
