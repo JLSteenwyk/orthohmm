@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "objective": "Improve sequence-based OrthoHMM accuracy without benchmark-label leakage, uncontrolled specificity loss, or unjustified runtime and memory growth.",
+  "benchmark_priority": [
+    "OrthoBench",
+    "QfO",
+    "Three Kingdoms"
+  ],
+  "baselines": {
+    "previous_production_orthobench": {
+      "f_score": 63.8,
+      "precision": 85.2,
+      "recall": 51.0,
+      "exact_refogs": 12
+    },
+    "orthofinder_3_1_5_diamond_orthobench": {
+      "f_score": 72.7,
+      "precision": 66.1,
+      "recall": 80.9,
+      "exact_refogs": 19
+    }
+  },
+  "accepted": [
+    {
+      "change": "Production high-sensitivity multipass inference",
+      "decision": "retain_opt_in",
+      "evidence": "Fresh OrthoBench F=70.4, precision=78.9, recall=63.5, 13 exact RefOGs; +6.6 F-score points over previous production but -2.3 points versus OrthoFinder 3.1.5.",
+      "cost": "The independent fresh estimate is 2.25x standard wall time and 4.2x standard peak process-tree RSS."
+    },
+    {
+      "change": "Exclude self-hits before reciprocal-best threshold estimation",
+      "decision": "accept",
+      "evidence": "Recovered 1,803,122 RBNH edges and exactly reproduced historical final-cluster SHA-256 8ee100f4370fef6e3e6a3e0fd36112adcc3aefeb60197331115667c519ca121f."
+    },
+    {
+      "change": "Bound concurrent profile-build futures",
+      "decision": "accept",
+      "evidence": "Preserves byte-identical scientific output while bounding queued task payloads to twice the worker count."
+    }
+  ],
+  "already_implemented": [
+    {
+      "proposal": "Position-specific conservation scoring",
+      "implementation": "Center-star MSA profiles estimate a position-specific frequency matrix, substitution-matrix pseudocounts, and per-position log-odds emissions."
+    },
+    {
+      "proposal": "Length-normalized scoring",
+      "implementation": "Built-in Viterbi scores are normalized once by sqrt(query_length * target_length); E-values also include query length and target database size."
+    },
+    {
+      "proposal": "Adaptive decision boundaries",
+      "implementation": "RBNH derives a per-gene threshold from reciprocal best hits across species; strict profile expansion uses each profile's weakest existing-member score."
+    },
+    {
+      "proposal": "Evolutionary-distance adaptation",
+      "implementation": "Species-pair search adapts candidate capacity from k-mer coverage, and downstream weights are corrected using pairwise reciprocal-best-hit scores."
+    },
+    {
+      "proposal": "Two-stage and score-aware prefiltering",
+      "implementation": "The native prefilter performs k-mer counting and diagonal support, then reranks candidates with substitution-matrix ungapped extension scores before HMM scoring."
+    }
+  ],
+  "rejected": [
+    {
+      "experiment": "Relax profile self-threshold or anchor requirements",
+      "decision": "reject",
+      "result": "Best comparable variant F=69.7 or lower versus F=70.4."
+    },
+    {
+      "experiment": "Multiply RBNH thresholds by 0.90-1.05",
+      "decision": "reject",
+      "result": "No factor beat the unmodified 1.00 boundary; factor 1.00 gave the best pre-profile F=69.8."
+    },
+    {
+      "experiment": "Global BLOSUM45 search",
+      "decision": "reject",
+      "result": "Refined OrthoBench F=65.9, precision=66.8, recall=65.1."
+    },
+    {
+      "experiment": "Wider BLOSUM62 Viterbi band",
+      "decision": "reject",
+      "result": "Refined OrthoBench F=67.7, precision=69.2, recall=66.2."
+    },
+    {
+      "experiment": "Second iterative strict-profile pass",
+      "decision": "reject",
+      "result": "F-score fell from 70.4 to 70.2 while candidates doubled from 5,014,697 to 10,029,408 and replay wall time increased from about 319 to 721 seconds."
+    },
+    {
+      "experiment": "Reduced-alphabet prefilter replacement",
+      "decision": "reject",
+      "result": "One species-pair screen lost 10,168 exact-alphabet significant pairs and added 2,073."
+    },
+    {
+      "experiment": "Reduced-alphabet fallback for exact no-hit queries",
+      "decision": "reject",
+      "result": "Rescued only 110 of 14,300 no-hit queries and 122 significant pairs in the screened species pair."
+    }
+  ],
+  "deferred": [
+    {
+      "proposal": "Adaptive or multi-matrix consensus scoring",
+      "reason": "Scores from different matrices are not directly calibrated; global BLOSUM45 regressed, so mixing matrices now risks uncontrolled decision-boundary shifts."
+    },
+    {
+      "proposal": "Position-specific gap transitions",
+      "reason": "Current transitions are uniform. A defensible change requires transition estimation and held-out calibration, not hard-coded loop/core penalties."
+    },
+    {
+      "proposal": "Bimodal or composition-specific null calibration",
+      "reason": "Per-group score sets can be sparse and non-Gaussian. This requires a benchmark-independent calibration corpus and train/validation split before production use."
+    },
+    {
+      "proposal": "Profile-profile comparison",
+      "reason": "Requires a calibrated profile-pair alignment model and null distribution; the estimated 2-3x cost is unjustified without evidence beyond the current one-pass profile gain."
+    },
+    {
+      "proposal": "Bootstrap assignment confidence",
+      "reason": "Adds confidence reporting rather than directly improving assignments and has approximately 100x profile-build cost at the proposed replicate count."
+    }
+  ],
+  "validation": {
+    "orthobench": "complete",
+    "qfo": "running",
+    "three_kingdoms": "running",
+    "recommendation": "Keep high_sensitivity opt-in until fresh QfO scoring completes."
+  },
+  "artifact_sha256": {
+    "corrected_production_metrics": "e0ef152ac4ae4df6e9c0294c3ab44657ad7f10445e5e8b2844ac1b6bfbf3ecf8",
+    "profile_threshold_sweep": "e14c914db925e4139fbeaa9b0e159c292639be94ef42c1ef3d27e6313f232631",
+    "rbnh_margin_sweep": "5e5d807c56fe0d81c63412e6211a97a7dd90af76acf8b8f4cd6e3b743391163e",
+    "blosum45_replay": "810fb29310c0fdbc54d849cd248ef47ecbfb98494327d198faa05ca5621af1e3",
+    "wide_band_replay": "203dfb17d60a0fc01f932a0274f3793d3904fab73aeaf86ca9d4cd0b22ddc433",
+    "bounded_profile_queue_replay": "5ead3feb2aaa200bd4dd3443d499cf264d28fda6c6d5b0bfe4f54d5acf3cd877",
+    "iterative_profile_replay": "b9f4fde1922a89d0df28668d4cdf35c883b9f78b7768cb157017a6cec3724ad1",
+    "fresh_cached_pair_diagnostic": "bffa4b23c0a2667c1ee55a5ba47babc1267ee7872ac1b7bed6ab4844d463ca6d",
+    "reduced_alphabet_pair_screen": "d84712dc1fc67b78eb67701b5b216d4c9c471758fdd318af2954707e66cbfc00",
+    "reduced_alphabet_no_hit_rescue": "54392d749ceaa34c3596b9271662c2a2339089712686df9eb8a0399bfa609d02"
+  }
+}

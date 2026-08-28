@@ -139,6 +139,29 @@ Cached QfO evidence remains approximately 0.674 for
 production harness until a full production run and official assessment are
 completed.
 
+## Sequence-Accuracy Proposal Assessment
+
+Several proposed mechanisms are already present in the production design and
+should not be reimplemented as generic post-hoc score adjustments:
+
+| proposal | current implementation | decision |
+| --- | --- | --- |
+| position-specific conservation | MSA-derived per-position frequencies, substitution-matrix pseudocounts, and log-odds emissions | retain |
+| length normalization | Viterbi score divided once by `sqrt(Lq * Lt)`; length-aware E-values | retain |
+| dynamic thresholds | per-gene RBNH boundaries and per-profile weakest-member boundaries | retain |
+| evolutionary-distance adaptation | k-mer-coverage candidate capacity and pairwise RBH score correction | retain |
+| score-aware two-stage prefilter | k-mer count and diagonal support followed by substitution-matrix ungapped-extension reranking | retain |
+
+Position-specific gap transitions remain a potentially useful model extension,
+but hard-coded loop/core penalties are not justified by the current data.
+Adaptive or consensus substitution matrices require matrix-specific score and
+E-value calibration before scores can be combined. Bimodal thresholds and
+composition-specific nulls require an independent calibration corpus because
+per-orthogroup score sets can be sparse and non-Gaussian. Profile-profile
+comparison also needs a calibrated null distribution, while bootstrap scoring
+primarily reports confidence and would multiply profile-build cost. These are
+research candidates, not current production changes.
+
 ## Rejected Experiments
 
 - Target-species batching retained fewer concurrent indices but made search
