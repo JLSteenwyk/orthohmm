@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "benchmark": "QfO 2020 retained six-metric assessment",
+  "method": "OrthoFinder 3.1.5 DIAMOND",
+  "inference": {
+    "tool_version": "OrthoFinder:v3.1.5",
+    "command": "orthofinder -f INPUT -t 32 -a 32 -S diamond",
+    "cpu_budget": 32,
+    "wall_s": 80953,
+    "peak_rss_kib": 6398864,
+    "peak_rss_gib": 6.10243,
+    "assigned_genes": 845109,
+    "assigned_gene_percent": 86.5,
+    "orthogroups": 46593,
+    "native_pairs": 13441634,
+    "qfo_filtered_pairs": 13403651,
+    "orthogroup_source": "Root-level HOGs from OrthoFinder 3.1.5 Orthogroups/Orthogroups.txt, equivalent to the pre-3.1.5 N0.tsv source."
+  },
+  "assessment": {
+    "event_year": 2020,
+    "scoring_job_id": 20863,
+    "scoring_exit_code": "0:0",
+    "scoring_elapsed_s": 1773,
+    "scores": {
+      "VGNC F": 0.9882293593408441,
+      "SwissTrees F": 0.8591604357197734,
+      "TreeFam-A F": 0.7428869916535419,
+      "EC": 0.94198234,
+      "GO": 0.46816557,
+      "FAS": 0.6920006330234186
+    },
+    "mean": 0.7820708882895963,
+    "all_six_metrics_complete": true
+  },
+  "checksums": {
+    "orthogroups_sha256": "5d24227906e78b0c10e5404752e0c3bba1f75b6850ca1d28665853aaa7dd60d7",
+    "qfo_filtered_pairs_sha256": "5581c9b81314e7d074b04564b4ce7d0ac66d909c0e512e88ba30e14e05dba6a2",
+    "VGNC_sha256": "53ebec6eae7f59aefa7f19686de492ba6b590e38f7c18b0bfa6ceabd6c55eff9",
+    "SwissTrees_sha256": "470f4df521dd78ae66874b5da1dc0cf5aded4758db9d78a08ca48afe53dfa8fb",
+    "TreeFam-A_sha256": "753012179d9cba1b33b0d24f4f5e4dbf6d488dc04faa1d0a17ecc5651c790947",
+    "EC_sha256": "2738765e131156c0b240db8a393b861833cadf4d3f0b645cd27534c48f4853cd",
+    "GO_sha256": "042f125034267520f598244d42fcb95c7a0108e04239495b59f0514fc4f3f1f6",
+    "FAS_sha256": "96476034af7313f607f38723725b7f13116fc2c9d342ce692f90bc548066a489",
+    "assessment_manifest_sha256": "130741e6c974523e6fa3f9fd87f074f5993299556c0b993aa6638f5529d60625",
+    "assessment_datasets_sha256": "681470d6d24904799f64eea3f602f72cd28074602cdb78eb98cbbad948617699"
+  },
+  "source_paths": {
+    "inference": "qfo_benchmark/results/orthofinder_v3_diamond",
+    "assessment": "qfo_benchmark/scoring/orthofinder_v3_diamond"
+  },
+  "provenance_note": "The v3.1.5 inference completed on 2026-07-16. The official six-metric assessment was completed on 2026-08-28 after rerunning FAS with sufficient memory; no inference output was changed during scoring."
+}
