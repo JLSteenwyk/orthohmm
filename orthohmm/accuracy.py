@@ -161,19 +161,29 @@ def build_rbnh_edges(
     ):
         raise ValueError("hit IDs fall outside the gene table")
 
+    eligible = (queries != targets) & np.isfinite(scores)
+    if not eligible.any():
+        return _empty_edges(gene_names)
+    best_queries = queries[eligible]
+    best_targets_input = targets[eligible]
+    best_input_scores = scores[eligible]
+
     n_species = int(species.max()) + 1 if len(species) else 0
-    keys = queries.astype(np.int64) * n_species + species[targets]
+    keys = (
+        best_queries.astype(np.int64) * n_species
+        + species[best_targets_input]
+    )
     n_slots = n_genes * n_species
     best_scores = np.full(n_slots, -np.inf, dtype=np.float64)
-    np.maximum.at(best_scores, keys, scores)
+    np.maximum.at(best_scores, keys, best_input_scores)
 
     # Preserve the first target on exact ties, matching the historical strict
     # greater-than update used by the validated benchmark implementation.
-    winning_rows = np.flatnonzero(scores == best_scores[keys])
+    winning_rows = np.flatnonzero(best_input_scores == best_scores[keys])
     winning_keys, first = np.unique(keys[winning_rows], return_index=True)
     selected_rows = winning_rows[first]
     best_targets = np.full(n_slots, -1, dtype=np.int32)
-    best_targets[winning_keys] = targets[selected_rows]
+    best_targets[winning_keys] = best_targets_input[selected_rows]
 
     source_genes = (winning_keys // n_species).astype(np.int32)
     target_genes = best_targets[winning_keys]
@@ -192,10 +202,8 @@ def build_rbnh_edges(
     thresholds = np.full(n_genes, np.inf, dtype=np.float64)
     np.minimum.at(thresholds, reciprocal_sources, reciprocal_scores)
     np.minimum.at(thresholds, reciprocal_targets, reciprocal_scores)
-    keep = (
-        (queries != targets)
-        & np.isfinite(scores)
-        & (scores >= np.minimum(thresholds[queries], thresholds[targets]))
+    keep = eligible & (
+        scores >= np.minimum(thresholds[queries], thresholds[targets])
     )
     return deduplicate_undirected_edges(
         gene_names,

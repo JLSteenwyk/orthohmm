@@ -68,6 +68,18 @@ def test_rbnh_preserves_first_best_target_on_exact_tie():
     assert _edge_map(edges) == {(0, 1): 5.0, (0, 2): 5.0}
 
 
+def test_rbnh_excludes_self_hits_before_estimating_thresholds():
+    names = ["a1", "a2"]
+    species = np.array([0, 0], dtype=np.int32)
+    queries = np.array([0, 1, 0, 1], dtype=np.int32)
+    targets = np.array([0, 1, 1, 0], dtype=np.int32)
+    scores = np.array([10, 10, 5, 5], dtype=np.float64)
+
+    edges = build_rbnh_edges(names, species, queries, targets, scores)
+
+    assert _edge_map(edges) == {(0, 1): 5.0}
+
+
 def test_singleton_assignment_accepts_cluster_zero_and_all_matching_hits():
     names = ["a", "b", "singleton", "c", "d"]
     clusters = [[0, 1], [2], [3, 4]]
