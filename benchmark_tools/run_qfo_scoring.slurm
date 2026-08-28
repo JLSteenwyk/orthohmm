@@ -17,8 +17,8 @@ if [[ ! -s "${PAIRS}" ]]; then
     exit 1
 fi
 
-readonly SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
-readonly BASE=$(dirname "${SCRIPT_DIR}")
+readonly BASE=${REPO_ROOT:-$(dirname "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)")}
+readonly SCRIPT_DIR="${BASE}/benchmark_tools"
 readonly PIPELINE=${QFO_PIPELINE:-${BASE}/qfo_benchmark/benchmark-webservice}
 readonly SCORING_ROOT=${QFO_SCORING_ROOT:-${BASE}/qfo_benchmark/scoring}
 readonly SCORING_DIR="${SCORING_ROOT}/${METHOD}"

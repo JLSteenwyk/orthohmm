@@ -4,8 +4,10 @@ set -euo pipefail
 : "${INPUT_DIR:?INPUT_DIR must contain the 78 QfO FASTA files}"
 : "${OUTDIR:?OUTDIR must name a new result directory}"
 
-readonly SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
-readonly BASE=$(dirname "${SCRIPT_DIR}")
+: "${REPO_ROOT:?REPO_ROOT must point to the OrthoHMM repository}"
+
+readonly BASE=${REPO_ROOT}
+readonly SCRIPT_DIR="${BASE}/benchmark_tools"
 readonly THREADS=${THREADS:-${SLURM_CPUS_PER_TASK:-32}}
 readonly THREADS_PER_WORKER=${THREADS_PER_WORKER:-8}
 readonly PYTHON_BIN=${PYTHON_BIN:-/home/bizon/anaconda3/bin/python}

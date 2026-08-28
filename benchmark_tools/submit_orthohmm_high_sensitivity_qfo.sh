@@ -20,7 +20,7 @@ inference_job=$(sbatch --parsable \
     --mem="${MEM}" \
     --output="${LOG_DIR}/qfo_orthohmm_high_%j.out" \
     --error="${LOG_DIR}/qfo_orthohmm_high_%j.err" \
-    --export=ALL,INPUT_DIR="${INPUT_DIR}",OUTDIR="${OUTDIR}" \
+    --export=ALL,REPO_ROOT="${BASE}",INPUT_DIR="${INPUT_DIR}",OUTDIR="${OUTDIR}" \
     "${SCRIPT_DIR}/run_orthohmm_qfo.slurm")
 
 scoring_job=$(sbatch --parsable \
@@ -31,7 +31,7 @@ scoring_job=$(sbatch --parsable \
     --mem="${SCORE_MEM}" \
     --output="${LOG_DIR}/qfo_score_orthohmm_high_%j.out" \
     --error="${LOG_DIR}/qfo_score_orthohmm_high_%j.err" \
-    --export=ALL,METHOD=orthohmm_high_sensitivity,PAIRS="${OUTDIR}/pairs.qfo.tsv" \
+    --export=ALL,REPO_ROOT="${BASE}",METHOD=orthohmm_high_sensitivity,PAIRS="${OUTDIR}/pairs.qfo.tsv" \
     "${SCRIPT_DIR}/run_qfo_scoring.slurm")
 
 printf 'QfO inference: %s\n' "${inference_job}"
