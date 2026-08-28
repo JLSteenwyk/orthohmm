@@ -73,8 +73,11 @@ or use adaptive Leiden via `--clustering leiden --cpm_resolution auto`.
 For divergent datasets where recall is more important than runtime, use
 `--accuracy_profile high_sensitivity`. This profile broadens the built-in
 k-mer candidate search and runs reciprocal-best normalized-hit clustering
-followed by singleton reassignment. It currently requires the built-in search
-and Leiden clustering. The default `standard` profile is unchanged.
+followed by singleton reassignment and strict center-star MSA-profile
+expansion. Profile candidates must score at least as well as the weakest
+existing group member and receive a sequence-supported anchor before they can
+change a cluster. The profile currently requires the built-in search and
+Leiden clustering. The default `standard` profile is unchanged.
 
 ---
 

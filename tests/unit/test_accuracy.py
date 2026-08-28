@@ -25,8 +25,12 @@ def test_accuracy_profiles_keep_standard_and_high_search_distinct():
 
     assert (standard.kmer_k, standard.max_candidates_per_query) == (5, 0)
     assert standard.multipass_graph is False
+    assert standard.profile_expansion is False
+    assert standard.leiden_seed == 0
     assert (high.kmer_k, high.max_candidates_per_query) == (4, 100)
     assert high.multipass_graph is True
+    assert high.profile_expansion is True
+    assert high.leiden_seed == 4
 
 
 def test_unknown_accuracy_profile_is_rejected():

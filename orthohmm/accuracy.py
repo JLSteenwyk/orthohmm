@@ -27,6 +27,8 @@ class AccuracyProfile:
     kmer_k: int
     max_candidates_per_query: int
     multipass_graph: bool
+    profile_expansion: bool
+    leiden_seed: int
 
 
 _ACCURACY_PROFILES = {
@@ -35,12 +37,16 @@ _ACCURACY_PROFILES = {
         kmer_k=5,
         max_candidates_per_query=0,
         multipass_graph=False,
+        profile_expansion=False,
+        leiden_seed=0,
     ),
     "high_sensitivity": AccuracyProfile(
         name="high_sensitivity",
         kmer_k=4,
         max_candidates_per_query=100,
         multipass_graph=True,
+        profile_expansion=True,
+        leiden_seed=4,
     ),
 }
 

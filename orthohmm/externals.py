@@ -107,6 +107,7 @@ def execute_leiden(
     output_directory: str,
     edges=None,
     include_isolates: bool = False,
+    seed: int = 0,
 ) -> None:
     """In-process Leiden CPM clustering on the ABC edge file.
 
@@ -198,7 +199,7 @@ def execute_leiden(
     part = leidenalg.find_partition(
         g, leidenalg.CPMVertexPartition,
         weights="weight", resolution_parameter=gamma,
-        seed=0,
+        seed=seed,
     )
 
     output_clusters = []

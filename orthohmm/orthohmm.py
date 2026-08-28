@@ -306,6 +306,7 @@ def _execute(
         search_max_candidates_per_query=(
             accuracy_config.max_candidates_per_query
         ),
+        leiden_seed=accuracy_config.leiden_seed,
         cpu_budget=cpu,
     )
     metrics.add_counts(species=len(files), species_pairs=len(files) ** 2)
@@ -411,6 +412,11 @@ def _execute(
     with metrics.stage("edge_thresholds"):
         if accuracy_config.multipass_graph:
             gene_lengths = get_sequence_lengths(fasta_directory, files)
+            gene_order = np.argsort(
+                np.asarray([str(row["name"]) for row in gene_lengths]),
+                kind="stable",
+            )
+            gene_lengths = gene_lengths[gene_order]
             reciprocal_best_hit_thresholds = None
             pairwise_rbh_corr = None
         else:
@@ -453,6 +459,7 @@ def _execute(
                 gene_to_species,
                 *accuracy_hits,
             )
+            rbnh_edges = edges
             write_indexed_edges(edges, output_directory)
         else:
             edges = determine_network_edges(
@@ -484,6 +491,7 @@ def _execute(
                 output_directory,
                 edges=edges,
                 include_isolates=accuracy_config.multipass_graph,
+                seed=accuracy_config.leiden_seed,
             )
             if accuracy_config.multipass_graph:
                 cluster_path = (
@@ -510,8 +518,73 @@ def _execute(
                     output_directory,
                     edges=edges,
                     include_isolates=True,
+                    seed=accuracy_config.leiden_seed,
                 )
                 metrics.add_counts(network_edges=len(edges))
+    if accuracy_config.profile_expansion:
+        from .search.profile_expansion import expand_profiles
+
+        with metrics.stage("profile_expansion"):
+            seed_clusters = read_index_clusters(
+                cluster_path,
+                edges.gene_names,
+            )
+            profile_result = expand_profiles(
+                seed_clusters,
+                edges.gene_names,
+                fasta_directory,
+                files,
+                substitution_matrix.value,
+                cpu,
+                evalue_threshold,
+                *accuracy_hits,
+            )
+            profile_base_edges = combine_edges(
+                rbnh_edges,
+                profile_result.edges,
+            )
+            execute_leiden(
+                cpm_resolution,
+                output_directory,
+                edges=profile_base_edges,
+                include_isolates=True,
+                seed=accuracy_config.leiden_seed,
+            )
+            profile_base_clusters = read_index_clusters(
+                cluster_path,
+                edges.gene_names,
+            )
+            final_singleton_edges = build_singleton_assignment_edges(
+                edges.gene_names,
+                profile_base_clusters,
+                *accuracy_hits,
+            )
+            edges = combine_edges(
+                profile_base_edges,
+                final_singleton_edges,
+            )
+            write_indexed_edges(edges, output_directory)
+            execute_leiden(
+                cpm_resolution,
+                output_directory,
+                edges=edges,
+                include_isolates=True,
+                seed=accuracy_config.leiden_seed,
+            )
+        metrics.add_counts(
+            high_sensitivity_profiles=profile_result.profiles_built,
+            high_sensitivity_profile_candidates=(
+                profile_result.profile_candidates
+            ),
+            high_sensitivity_profile_hits=(
+                profile_result.significant_profile_hits
+            ),
+            high_sensitivity_profile_edges=len(profile_result.edges),
+            high_sensitivity_final_singleton_edges=(
+                len(final_singleton_edges)
+            ),
+            network_edges=len(edges),
+        )
     with metrics.stage("refinement"):
         refinement_substages = _refine_cluster_file(
             output_directory,

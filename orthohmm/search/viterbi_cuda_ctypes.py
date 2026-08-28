@@ -100,7 +100,10 @@ def batch_viterbi_cuda(
     _pr = np.ascontiguousarray(np.asarray(pairs, dtype=np.int32).flatten())
     out_scores = np.empty(M, dtype=np.int32)
 
-    max_T = int(_tl.max()) if len(_tl) else 0
+    # The caller may route only GPU-eligible pairs from a target database that
+    # also contains longer sequences. Size shared memory from selected targets,
+    # not from unrelated entries in the full length table.
+    max_T = int(_tl[_pr.reshape(-1, 2)[:, 1]].max()) if M else 0
     rc = lib.hmm_viterbi_cuda_run(
         _me.ctypes.data, _me.size,
         _ie.ctypes.data, _tr.ctypes.data,

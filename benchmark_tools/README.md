@@ -45,6 +45,7 @@ checkpoint without rerunning the all-to-all sequence search:
 ```bash
 python benchmark_tools/replay_high_sensitivity.py \
   --hits-pickle benchmarks/results/hits_BLOSUM62_mc100.pkl \
+  --fasta-directory /path/to/Open_Orthobench/BENCHMARKS/Input \
   --output-directory /tmp/orthohmm_high_replay \
   --official-benchmark /path/to/Open_Orthobench/BENCHMARKS/benchmark.py \
   --json /tmp/orthohmm_high_replay.json
@@ -52,7 +53,8 @@ python benchmark_tools/replay_high_sensitivity.py \
 
 The replay uses no reference labels during inference. Its JSON records source
 and input checksums, graph counts, runtime, peak process RSS, output checksums,
-and optional post-inference OrthoBench scores.
+and optional post-inference OrthoBench scores. Omit `--fasta-directory` to
+validate only RBNH, singleton reassignment, and production refinement.
 
 ## OrthoFinder comparator
 

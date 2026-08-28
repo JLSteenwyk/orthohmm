@@ -35,7 +35,9 @@ from orthohmm.accuracy import (
     read_index_clusters,
 )
 from orthohmm.externals import execute_leiden
+from orthohmm.files import fetch_fasta_files
 from orthohmm.refinement import refine_cluster_indices
+from orthohmm.search.profile_expansion import expand_profiles
 
 
 def load_hits(path: Path):
@@ -80,6 +82,10 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--json", required=True, type=Path)
     parser.add_argument("--official-benchmark", type=Path)
     parser.add_argument("--cpm-resolution", type=float, default=0.1)
+    parser.add_argument("--fasta-directory", type=Path)
+    parser.add_argument("--matrix", default="BLOSUM62")
+    parser.add_argument("--cpu", type=int, default=os.cpu_count() or 1)
+    parser.add_argument("--leiden-seed", type=int, default=4)
     return parser
 
 
@@ -128,6 +134,7 @@ def main(argv=None) -> int:
         str(args.output_directory),
         edges=rbnh_edges,
         include_isolates=True,
+        seed=args.leiden_seed,
     )
     clustered_path = working / "orthohmm_edges_clustered.txt"
     initial_clusters = read_index_clusters(str(clustered_path), gene_names)
@@ -140,6 +147,7 @@ def main(argv=None) -> int:
         str(args.output_directory),
         edges=multipass_edges,
         include_isolates=True,
+        seed=args.leiden_seed,
     )
     multipass_path = args.output_directory / "orthogroups_multipass.txt"
     shutil.copyfile(clustered_path, multipass_path)
@@ -165,11 +173,88 @@ def main(argv=None) -> int:
         time.perf_counter() - stage_started, 6
     )
 
+    profile_result = None
+    profile_path = None
+    profile_refined_path = None
+    profile_edges = None
+    final_singleton_edges = None
+    if args.fasta_directory:
+        stage_started = time.perf_counter()
+        files = fetch_fasta_files(str(args.fasta_directory))
+        profile_result = expand_profiles(
+            multipass_clusters,
+            gene_names,
+            str(args.fasta_directory),
+            files,
+            args.matrix,
+            args.cpu,
+            1e-4,
+            queries,
+            targets,
+            scores,
+        )
+        profile_base_edges = combine_edges(rbnh_edges, profile_result.edges)
+        execute_leiden(
+            args.cpm_resolution,
+            str(args.output_directory),
+            edges=profile_base_edges,
+            include_isolates=True,
+            seed=args.leiden_seed,
+        )
+        profile_base_clusters = read_index_clusters(
+            str(clustered_path), gene_names
+        )
+        final_singleton_edges = build_singleton_assignment_edges(
+            gene_names,
+            profile_base_clusters,
+            queries,
+            targets,
+            scores,
+        )
+        profile_edges = combine_edges(
+            profile_base_edges, final_singleton_edges
+        )
+        execute_leiden(
+            args.cpm_resolution,
+            str(args.output_directory),
+            edges=profile_edges,
+            include_isolates=True,
+            seed=args.leiden_seed,
+        )
+        profile_clusters = read_index_clusters(str(clustered_path), gene_names)
+        profile_path = args.output_directory / "orthogroups_profiles.txt"
+        shutil.copyfile(clustered_path, profile_path)
+        refined_profile_clusters = refine_cluster_indices(
+            profile_clusters,
+            queries,
+            targets,
+            scores,
+            profile_edges.sources,
+            profile_edges.targets,
+            gene_to_species,
+            rbnh_scores=profile_edges.weights,
+        )
+        profile_refined_path = (
+            args.output_directory / "orthogroups_profiles_refined.txt"
+        )
+        write_clusters(
+            profile_refined_path, refined_profile_clusters, gene_names
+        )
+        timings["strict_profile_expansion_and_refinement_s"] = round(
+            time.perf_counter() - stage_started, 6
+        )
+
     stages = []
-    for label, path in (
+    stage_paths = [
         ("multipass", multipass_path),
         ("multipass_refined", refined_path),
-    ):
+    ]
+    if profile_path is not None:
+        stage_paths.extend([
+            ("strict_profiles", profile_path),
+            ("strict_profiles_refined", profile_refined_path),
+        ])
+    for label, path in stage_paths:
         record = {
             "label": label,
             "clusters": sum(1 for line in path.open() if line.strip()),
@@ -193,7 +278,9 @@ def main(argv=None) -> int:
         "parameters": {
             "accuracy_profile": "high_sensitivity",
             "cpm_resolution": args.cpm_resolution,
-            "profile_expansion": False,
+            "profile_expansion": profile_result is not None,
+            "matrix": args.matrix,
+            "leiden_seed": args.leiden_seed,
         },
         "counts": {
             "genes": len(gene_names),
@@ -208,6 +295,17 @@ def main(argv=None) -> int:
         "peak_process_rss_gib": round(max_rss_kib / (1024 ** 2), 6),
         "stages": stages,
     }
+    if profile_result is not None:
+        result["counts"].update({
+            "profiles_built": profile_result.profiles_built,
+            "profile_candidates": profile_result.profile_candidates,
+            "significant_profile_hits": (
+                profile_result.significant_profile_hits
+            ),
+            "strict_profile_edges": len(profile_result.edges),
+            "final_singleton_assignment_edges": len(final_singleton_edges),
+            "profile_multipass_edges": len(profile_edges),
+        })
     args.json.parent.mkdir(parents=True, exist_ok=True)
     temporary = args.json.with_suffix(args.json.suffix + ".tmp")
     temporary.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
