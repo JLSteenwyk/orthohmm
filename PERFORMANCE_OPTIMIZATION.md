@@ -106,15 +106,33 @@ replay of the historical fixed-`mc100` checkpoint reproduced F=70.4,
 precision=78.9, recall=63.5, with 13 exact RefOGs. The first fresh production
 run scored F=69.6, precision=79.1, recall=62.1, with 12 exact RefOGs. It used
 2,203.51 seconds and 11.87 GiB peak process-tree RSS on 32 CPUs. The fresh run
-therefore improves substantially over the 63.8 production baseline, but does
-not reproduce the cached 70.4 result and remains below OrthoFinder 3.1.5 at
-F=72.7. The fresh and replay results remain separate provenance records.
+therefore improved substantially over the 63.8 production baseline but did not
+initially reproduce the cached result.
 
 The fresh run produced 298,209,630 prefilter candidates, 18,486,508
 significant hits, 1,698,762 RBNH edges, and 1,865,672 final graph edges. The
 historical checkpoint contained 18,235,373 significant hits and 1,803,122 RBNH
-edges, so the remaining accuracy gap is upstream of profile refinement rather
-than a failure to invoke the production multipass workflow.
+edges. Pair-level diagnostics showed that the biological hit sets agreed; the
+global significant-hit difference was one same-sequence self-hit per protein.
+Those self-hits had been excluded from the historical RBNH calculation but
+were retained while production estimated same-species reciprocal-best
+thresholds. They raised the threshold and removed valid paralog edges.
+
+Production now excludes self-hits before estimating reciprocal-best
+thresholds. A fresh run from the corrected source scored F=70.4,
+precision=78.9, recall=63.5, with 13 exact RefOGs. It produced 1,803,122 RBNH
+edges and 1,935,903 final graph edges. The refined cluster SHA-256 is
+`8ee100f4370fef6e3e6a3e0fd36112adcc3aefeb60197331115667c519ca121f`,
+exactly matching the historical checkpoint. This clears the first production
+milestone and improves F-score by 6.6 points over the prior default, but it
+remains 2.3 points below OrthoFinder 3.1.5 at F=72.7.
+
+The corrected run used 2,185.48 seconds and 11.90 GiB peak process-tree RSS.
+It was co-scheduled with QfO and Three Kingdoms, so that wall time is not a
+controlled runtime comparison. The independent first fresh run remains the
+best estimate of high-sensitivity cost: 2.25x the optimized standard runtime
+and 4.2x its peak RSS. High sensitivity therefore remains opt-in while its QfO
+validation is in progress.
 
 Cached QfO evidence remains approximately 0.674 for
 `orthohmm_split_s150_c10`. No QfO search result is attributed to the new
@@ -143,6 +161,21 @@ completed.
 - Fixed wall-clock assertions were rejected as hardware dependent. The harness
   records relative measurements while unit tests enforce numerical and
   representation parity.
+- Relaxing strict profile self-thresholds or sequence anchors reduced the best
+  comparable OrthoBench F-score from 70.4 to 69.7 or lower.
+- Multiplying RBNH thresholds by 0.90-1.05 did not beat the unmodified
+  reciprocal-best boundary. The factor-1.00 screen was best at F=69.8 before
+  strict profile expansion.
+- A global BLOSUM45 search scored F=65.9 after refinement. A wider BLOSUM62
+  extension band scored F=67.7. Cross-matrix score mixing is not defensible
+  without matrix-specific calibration.
+- A second strict-profile iteration doubled candidates and profile builds,
+  increased replay wall time from about 319 to 721 seconds, and reduced the
+  final score from F=70.4 to F=70.2.
+- A reduced-alphabet prefilter lost 10,168 exact-alphabet significant pairs in
+  the screened species pair while adding 2,073. Running it only for exact
+  no-hit queries rescued 110 of 14,300 queries and 122 significant pairs, too
+  little evidence for its cost and specificity risk.
 
 No unmeasured 15-25x claim is supported. Only the controlled measurements
 above should be reported.
@@ -151,7 +184,9 @@ above should be reported.
 
 Adopt the compact representations, 4 x 8 scheduler on 32 CPUs, deterministic
 direct Leiden path, numeric thresholds, and indexed orthogroup materialization
-as production defaults. The full OrthoBench checksum and accuracy gates pass.
-Do not change the scientific search or clustering defaults based solely on the
-cached 70.4 replay. Recover and productionize the multi-pass generator first,
-then evaluate it on both OrthoBench and QfO under the same harness.
+as production defaults. Retain the corrected high-sensitivity workflow as an
+opt-in profile: its fresh OrthoBench checksum and accuracy gates pass, but it
+has a substantial compute and memory cost and does not yet beat OrthoFinder.
+Do not adopt multi-matrix consensus, relaxed profile boundaries, iterative
+profiles, or reduced-alphabet rescue from the present evidence. Complete the
+fresh QfO assessment before considering high sensitivity as the default.

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "benchmark": "OrthoBench",
+  "run": {
+    "accuracy_profile": "high_sensitivity",
+    "cpu_budget": 32,
+    "threads_per_worker": 8,
+    "inference_revision": "599dda43569d28faae9844368d54733c632435d4",
+    "harness_revision_at_completion": "7321c807b3236b50edf7b74a69e4bba1a3d39aec",
+    "note": "The run began from inference revision 599dda4. Later commits changed only benchmark tooling and documentation; the harness records repository state at completion. The source manifest below identifies the exact inference source.",
+    "wall_s": 2185.484815,
+    "peak_process_tree_rss_gib": 11.901123,
+    "runtime_comparison_controlled": false,
+    "runtime_note": "OrthoBench was co-scheduled with the QfO and Three Kingdoms validations, so this wall time is not a controlled runtime comparison."
+  },
+  "official_orthobench": {
+    "f_score": 70.4,
+    "precision": 78.9,
+    "recall": 63.5,
+    "exact_refogs": 13
+  },
+  "counts": {
+    "genes": 251378,
+    "search_candidates": 298209630,
+    "significant_hits": 18486508,
+    "rbnh_edges": 1803122,
+    "singleton_assignment_edges": 137482,
+    "profiles_built": 15901,
+    "profile_candidates": 5014697,
+    "significant_profile_hits": 579444,
+    "strict_profile_edges": 24738,
+    "final_singleton_assignment_edges": 125937,
+    "network_edges": 1935903,
+    "orthogroups": 62885
+  },
+  "checksums": {
+    "accuracy_source_sha256": "4d64a017a9ac793a57db3e2dffc740321a6f8c860ab07ce7cd434be4bf928701",
+    "profile_expansion_source_sha256": "7f41570e1c86d33683dd04b3df93589297f0c9dffdea62bd867e82d6b1800458",
+    "orthogroups_sha256": "6e45166cde26bcf17585c208f385b4a8ab5b2460a642f1ce2e5e619cd465e5d5",
+    "final_clusters_sha256": "8ee100f4370fef6e3e6a3e0fd36112adcc3aefeb60197331115667c519ca121f",
+    "graph_edges_sha256": "01b8f135ac6b31aff141fba7ed47728866cda5ef0a3016cabf36c04750baac9c",
+    "historical_final_clusters_sha256": "8ee100f4370fef6e3e6a3e0fd36112adcc3aefeb60197331115667c519ca121f"
+  },
+  "acceptance": {
+    "fresh_run_completed": true,
+    "historical_score_reproduced": true,
+    "historical_final_clusters_reproduced": true,
+    "beats_previous_production_f_score": true,
+    "beats_orthofinder_3_1_5_f_score": false
+  },
+  "source_metrics": "benchmarks/results/production_high_sensitivity_orthobench_selfhit_fixed_20260828/metrics.json"
+}
