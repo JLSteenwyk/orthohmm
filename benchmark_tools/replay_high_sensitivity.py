@@ -146,6 +146,23 @@ def build_parser() -> argparse.ArgumentParser:
         default=2,
         help="Minimum unique supporting genes in each direction",
     )
+    parser.add_argument(
+        "--profile-profile-merges",
+        action="store_true",
+        help="Add calibrated mutual-nearest profile-profile edges",
+    )
+    parser.add_argument(
+        "--profile-profile-similarity-threshold",
+        type=float,
+        default=0.6,
+        help="Minimum self-normalized profile-profile similarity",
+    )
+    parser.add_argument(
+        "--profile-profile-max-combined-genes",
+        type=int,
+        default=80,
+        help="Maximum combined seed-cluster size for a profile pair",
+    )
     return parser
 
 
@@ -281,6 +298,13 @@ def main(argv=None) -> int:
                 score_per_target_residue=(
                     args.profile_score_per_target_residue
                 ),
+                profile_profile_merges=args.profile_profile_merges,
+                profile_profile_similarity_threshold=(
+                    args.profile_profile_similarity_threshold
+                ),
+                profile_profile_max_combined_genes=(
+                    args.profile_profile_max_combined_genes
+                ),
             )
             profile_results.append(profile_result)
             profile_base_edges = combine_edges(
@@ -397,6 +421,13 @@ def main(argv=None) -> int:
             "reciprocal_profile_min_support": (
                 args.reciprocal_profile_min_support
             ),
+            "profile_profile_merges": args.profile_profile_merges,
+            "profile_profile_similarity_threshold": (
+                args.profile_profile_similarity_threshold
+            ),
+            "profile_profile_max_combined_genes": (
+                args.profile_profile_max_combined_genes
+            ),
             "matrix": args.matrix,
             "leiden_seed": args.leiden_seed,
         },
@@ -436,6 +467,15 @@ def main(argv=None) -> int:
             "calibrated_profiles": sum(
                 item.calibrated_profiles for item in profile_results
             ),
+            "profile_pair_candidates": sum(
+                item.profile_pair_candidates for item in profile_results
+            ),
+            "profile_pair_merges": sum(
+                item.profile_pair_merges for item in profile_results
+            ),
+            "profile_pair_edges": sum(
+                item.profile_pair_edges for item in profile_results
+            ),
             "final_singleton_assignment_edges": len(final_singleton_edges),
             "profile_multipass_edges": len(profile_edges),
         })
@@ -449,6 +489,9 @@ def main(argv=None) -> int:
                 "reciprocal_profile_pairs": item.reciprocal_profile_pairs,
                 "reciprocal_profile_edges": item.reciprocal_profile_edges,
                 "calibrated_profiles": item.calibrated_profiles,
+                "profile_pair_candidates": item.profile_pair_candidates,
+                "profile_pair_merges": item.profile_pair_merges,
+                "profile_pair_edges": item.profile_pair_edges,
             }
             for iteration, item in enumerate(profile_results, start=1)
         ]

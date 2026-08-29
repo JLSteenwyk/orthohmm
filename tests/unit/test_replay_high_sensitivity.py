@@ -18,6 +18,9 @@ def test_replay_profile_iterations_default_to_one():
     assert args.reciprocal_profile_merges is False
     assert args.reciprocal_profile_threshold_ratio == 0.7
     assert args.reciprocal_profile_min_support == 2
+    assert args.profile_profile_merges is False
+    assert args.profile_profile_similarity_threshold == 0.6
+    assert args.profile_profile_max_combined_genes == 80
 
 
 def test_replay_accepts_jackknife_profile_thresholds():
@@ -88,6 +91,21 @@ def test_replay_accepts_reciprocal_profile_merges():
     assert args.reciprocal_profile_merges is True
     assert args.reciprocal_profile_threshold_ratio == 0.65
     assert args.reciprocal_profile_min_support == 3
+
+
+def test_replay_accepts_profile_profile_merges():
+    args = replay_high_sensitivity.build_parser().parse_args([
+        "--hits-pickle", "hits.pkl",
+        "--output-directory", "output",
+        "--json", "result.json",
+        "--profile-profile-merges",
+        "--profile-profile-similarity-threshold", "0.65",
+        "--profile-profile-max-combined-genes", "60",
+    ])
+
+    assert args.profile_profile_merges is True
+    assert args.profile_profile_similarity_threshold == 0.65
+    assert args.profile_profile_max_combined_genes == 60
 
 
 def test_second_replay_profile_iteration_requires_fasta_directory():

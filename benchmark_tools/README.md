@@ -107,6 +107,23 @@ close-paralog and unrelated rejection while recovering partial proteins missed
 by raw full-length score thresholds. Both replay flags remain off by default
 until fresh production benchmarks pass.
 
+Evaluate direct profile-profile repair with:
+
+```bash
+python -m benchmark_tools.profile_profile_holdout \
+  --development-seed 1103 \
+  --holdout-seed 2909 \
+  --families 36 \
+  --cpu 4 \
+  --output /tmp/profile_profile_holdout.json
+```
+
+`--profile-profile-merges` aligns only exact-4-mer-prefiltered profile pairs,
+normalizes each local alignment by both profile self-scores, and connects only
+mutual nearest profiles above 0.60. Candidate capacity is 30 per profile and a
+pair may contain at most 80 seed genes, bounding both alignment work and graph
+growth. The mode is disabled by default pending production benchmarks.
+
 ## OrthoFinder comparator
 
 This directory pins the OrthoFinder comparator to version 3.1.5 and keeps new

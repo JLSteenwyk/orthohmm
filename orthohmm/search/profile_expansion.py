@@ -21,6 +21,7 @@ from .matrices import (
 )
 from .msa_profile import MSAProfile, build_msa_profile
 from .prefilter import prefilter_candidates
+from .profile_profile import build_profile_profile_edges
 from .sequences import SequenceStore, SpeciesSequences
 from .viterbi import (
     batch_viterbi_c,
@@ -67,6 +68,9 @@ class ProfileExpansionResult:
     reciprocal_profile_pairs: int = 0
     reciprocal_profile_edges: int = 0
     calibrated_profiles: int = 0
+    profile_pair_candidates: int = 0
+    profile_pair_merges: int = 0
+    profile_pair_edges: int = 0
 
 
 def load_global_sequence_database(
@@ -862,6 +866,9 @@ def expand_profiles(
     reciprocal_profile_threshold_ratio: float = 0.7,
     reciprocal_profile_min_support: int = 2,
     score_per_target_residue: bool = False,
+    profile_profile_merges: bool = False,
+    profile_profile_similarity_threshold: float = 0.6,
+    profile_profile_max_combined_genes: int = 80,
 ) -> ProfileExpansionResult:
     """Run the complete strict profile-expansion stage."""
     os.environ["OMP_NUM_THREADS"] = str(cpu)
@@ -927,6 +934,23 @@ def expand_profiles(
         )
         reciprocal_edge_count = len(reciprocal_edges)
         edges = combine_edges(edges, reciprocal_edges)
+    profile_pair_candidates = 0
+    profile_pair_merges = 0
+    profile_pair_edge_count = 0
+    if profile_profile_merges:
+        profile_pair_result = build_profile_profile_edges(
+            profiles,
+            clusters,
+            gene_names,
+            get_background_freqs(matrix_name),
+            cpu,
+            similarity_threshold=profile_profile_similarity_threshold,
+            max_combined_genes=profile_profile_max_combined_genes,
+        )
+        profile_pair_candidates = profile_pair_result.candidate_pairs
+        profile_pair_merges = profile_pair_result.reciprocal_pairs
+        profile_pair_edge_count = len(profile_pair_result.edges)
+        edges = combine_edges(edges, profile_pair_result.edges)
     return ProfileExpansionResult(
         edges=edges,
         profiles_built=len(profiles),
@@ -940,4 +964,7 @@ def expand_profiles(
             if calibrate_weakest_member
             else len(calibration_profile_ids or ())
         ),
+        profile_pair_candidates=profile_pair_candidates,
+        profile_pair_merges=profile_pair_merges,
+        profile_pair_edges=profile_pair_edge_count,
     )

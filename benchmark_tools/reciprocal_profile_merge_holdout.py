@@ -45,6 +45,7 @@ class SplitEvidence:
     gene_names: tuple[str, ...]
     clusters: tuple[tuple[int, ...], ...]
     gene_to_species: np.ndarray
+    profiles: dict[int, MSAProfile]
     profile_hits: ProfileHits
     self_thresholds: dict[int, float]
     true_pairs: frozenset[tuple[int, int]]
@@ -139,6 +140,7 @@ def build_split_evidence(seed: int, families: int, cpu: int) -> SplitEvidence:
         tuple(gene_names),
         tuple(clusters),
         np.asarray(gene_to_species, dtype=np.int32),
+        profiles,
         profile_hits,
         self_thresholds,
         true_pairs,
