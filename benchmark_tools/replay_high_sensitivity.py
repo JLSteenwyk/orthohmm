@@ -154,7 +154,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--profile-profile-similarity-threshold",
         type=float,
-        default=0.4,
+        default=0.6,
         help="Minimum self-normalized profile-profile similarity",
     )
     parser.add_argument(

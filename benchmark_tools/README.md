@@ -120,9 +120,10 @@ python -m benchmark_tools.profile_profile_holdout \
 
 `--profile-profile-merges` aligns only exact-4-mer-prefiltered profile pairs,
 normalizes each local alignment by both profile self-scores, and connects only
-mutual nearest profiles above 0.40. Candidate capacity is 30 per profile and a
+mutual nearest profiles above 0.60. Candidate capacity is 30 per profile and a
 pair may contain at most 80 seed genes, bounding both alignment work and graph
-growth. The mode is disabled by default pending production benchmarks.
+growth. The mode is disabled by default: 0.60 was inactive on OrthoBench, while
+the independently screened 0.40 sensitivity follow-up reduced F-score.
 
 ## OrthoFinder comparator
 
