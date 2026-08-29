@@ -82,6 +82,12 @@ includes close paralogs as negative merge candidates. The replay flag
 `--reciprocal-profile-merges` enables the independently screened rule; it is
 off by default until fresh production benchmarks pass.
 
+Use `python -m benchmark_tools.selective_jackknife_holdout` to test profile
+threshold calibration in the presence of mixed, duplicated-species profiles.
+The replay flag `--jackknife-single-copy-profiles` applies the jackknife only
+when every profile member comes from a distinct species. This mode is separate
+from the rejected global `--jackknife-profile-thresholds` ablation.
+
 ## OrthoFinder comparator
 
 This directory pins the OrthoFinder comparator to version 3.1.5 and keeps new

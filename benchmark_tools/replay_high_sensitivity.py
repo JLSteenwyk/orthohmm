@@ -102,6 +102,14 @@ def build_parser() -> argparse.ArgumentParser:
         ),
     )
     parser.add_argument(
+        "--jackknife-single-copy-profiles",
+        action="store_true",
+        help=(
+            "Calibrate weakest-member thresholds only for profiles with "
+            "one gene per represented species (default: disabled)"
+        ),
+    )
+    parser.add_argument(
         "--profile-min-species",
         type=int,
         default=1,
@@ -135,6 +143,13 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv=None) -> int:
     args = build_parser().parse_args(argv)
+    if (
+        args.jackknife_profile_thresholds
+        and args.jackknife_single_copy_profiles
+    ):
+        raise SystemExit(
+            "choose either global or single-copy jackknife thresholds"
+        )
     if args.profile_iterations > 1 and not args.fasta_directory:
         raise SystemExit(
             "--profile-iterations 2 requires --fasta-directory"
@@ -245,6 +260,9 @@ def main(argv=None) -> int:
                 calibrate_weakest_member=args.jackknife_profile_thresholds,
                 gene_to_species=gene_to_species,
                 min_profile_species=args.profile_min_species,
+                calibrate_single_copy_profiles=(
+                    args.jackknife_single_copy_profiles
+                ),
                 reciprocal_profile_merges=args.reciprocal_profile_merges,
                 reciprocal_profile_threshold_ratio=(
                     args.reciprocal_profile_threshold_ratio
@@ -354,6 +372,9 @@ def main(argv=None) -> int:
             "profile_expansion": bool(profile_results),
             "profile_iterations": args.profile_iterations,
             "jackknife_profile_thresholds": args.jackknife_profile_thresholds,
+            "jackknife_single_copy_profiles": (
+                args.jackknife_single_copy_profiles
+            ),
             "profile_min_species": args.profile_min_species,
             "reciprocal_profile_merges": args.reciprocal_profile_merges,
             "reciprocal_profile_threshold_ratio": (
@@ -398,6 +419,9 @@ def main(argv=None) -> int:
             "reciprocal_profile_edges": sum(
                 item.reciprocal_profile_edges for item in profile_results
             ),
+            "calibrated_profiles": sum(
+                item.calibrated_profiles for item in profile_results
+            ),
             "final_singleton_assignment_edges": len(final_singleton_edges),
             "profile_multipass_edges": len(profile_edges),
         })
@@ -410,6 +434,7 @@ def main(argv=None) -> int:
                 "strict_profile_edges": item.strict_profile_edges,
                 "reciprocal_profile_pairs": item.reciprocal_profile_pairs,
                 "reciprocal_profile_edges": item.reciprocal_profile_edges,
+                "calibrated_profiles": item.calibrated_profiles,
             }
             for iteration, item in enumerate(profile_results, start=1)
         ]

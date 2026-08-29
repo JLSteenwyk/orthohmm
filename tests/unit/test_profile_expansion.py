@@ -7,6 +7,7 @@ from orthohmm.search.profile_expansion import (
     build_strict_profile_edges,
     compute_profile_self_thresholds,
     load_global_sequence_database,
+    select_single_copy_profile_ids,
 )
 
 
@@ -151,6 +152,42 @@ def test_weakest_member_jackknife_never_tightens_threshold(tmp_path):
     )
 
     assert calibrated[0] < in_sample[0]
+
+
+def test_jackknife_can_be_limited_to_single_copy_profiles(tmp_path):
+    (tmp_path / "a.fa").write_text(
+        ">a1\nACDEFGHIKLMNPQRSTVWYACDEFGHIKLMNPQRSTVWY\n"
+        ">a2\nACDEFGHIKLMNPQRSTVWYACDEYGHIKLMNPQRSTVWY\n"
+        ">a3\nACDEYGHIKLMAPQRSTVWYFCDEFGHIKLMNPQKSTVWY\n"
+        ">b1\nKLMNPQRSTVWYACDEFGHIKLMNPQRSTVWYACDEFGHI\n"
+        ">b2\nKLMNPQRSTVWYACDEYGHIKLMNPQRSTVWYACDEFGHI\n"
+        ">b3\nKLMAPQRSTVWYFCDEFGHIKLMNPQKSTVWYACDEFGHI\n"
+    )
+    names = ["a1", "a2", "a3", "b1", "b2", "b3"]
+    clusters = [[0, 1, 2], [3, 4, 5]]
+    database = load_global_sequence_database(str(tmp_path), ["a.fa"], names)
+    profiles = build_cluster_profiles(
+        clusters, names, database, "BLOSUM62", cpu=1
+    )
+    selected = select_single_copy_profile_ids(
+        profiles, clusters, [0, 1, 2, 0, 0, 1]
+    )
+    strict = compute_profile_self_thresholds(
+        profiles, names, database, cpu=1
+    )
+    calibrated = compute_profile_self_thresholds(
+        profiles,
+        names,
+        database,
+        cpu=1,
+        matrix_name="BLOSUM62",
+        calibrate_weakest_member=True,
+        calibration_profile_ids=selected,
+    )
+
+    assert selected == {0}
+    assert calibrated[0] < strict[0]
+    assert calibrated[1] == strict[1]
 
 
 def test_strict_profile_edges_use_best_profile_and_one_sequence_anchor():

@@ -6,7 +6,7 @@ import multiprocessing
 import os
 from concurrent.futures import FIRST_COMPLETED, ProcessPoolExecutor, wait
 from dataclasses import dataclass
-from typing import Mapping, Sequence
+from typing import Collection, Mapping, Sequence
 
 import numpy as np
 
@@ -60,6 +60,7 @@ class ProfileExpansionResult:
     strict_profile_edges: int = 0
     reciprocal_profile_pairs: int = 0
     reciprocal_profile_edges: int = 0
+    calibrated_profiles: int = 0
 
 
 def load_global_sequence_database(
@@ -207,6 +208,23 @@ def build_cluster_profiles(
             )
 
     return _execute_profile_build_tasks(tasks(), len(cluster_ids), cpu)
+
+
+def select_single_copy_profile_ids(
+    profiles: Mapping[int, MSAProfile],
+    clusters: Sequence[Sequence[int]],
+    gene_to_species,
+) -> set[int]:
+    """Return profiles whose source cluster has at most one gene per species."""
+    if gene_to_species is None:
+        raise ValueError("gene_to_species is required for single-copy profiles")
+    species = np.asarray(gene_to_species, dtype=np.int32)
+    selected = set()
+    for profile_id in profiles:
+        cluster = np.asarray(clusters[int(profile_id)], dtype=np.int32)
+        if len(cluster) and len(np.unique(species[cluster])) == len(cluster):
+            selected.add(int(profile_id))
+    return selected
 
 
 def _pack_profiles(profiles: Mapping[int, MSAProfile]):
@@ -416,6 +434,7 @@ def compute_profile_self_thresholds(
     band_width: int = 64,
     matrix_name: str | None = None,
     calibrate_weakest_member: bool = False,
+    calibration_profile_ids: Collection[int] | None = None,
 ) -> dict[int, float]:
     """Return member thresholds, optionally calibrated by one jackknife.
 
@@ -474,11 +493,20 @@ def compute_profile_self_thresholds(
     if not calibrate_weakest_member:
         return thresholds
 
+    calibrated_ids = (
+        set(int(profile_id) for profile_id in calibration_profile_ids)
+        if calibration_profile_ids is not None
+        else set(weakest_members)
+    )
+    calibrated_ids.intersection_update(weakest_members)
+    if not calibrated_ids:
+        return thresholds
+
     sub_matrix = get_matrix(matrix_name)
     background = get_background_freqs(matrix_name)
 
     def jackknife_tasks():
-        for cluster_id in sorted(weakest_members):
+        for cluster_id in sorted(calibrated_ids):
             weakest_gene_id = weakest_members[cluster_id]
             weakest_name = gene_names[weakest_gene_id]
             retained_names = [
@@ -506,6 +534,7 @@ def compute_profile_self_thresholds(
     jackknife_cluster_ids = [
         cluster_id
         for cluster_id, weakest_gene_id in weakest_members.items()
+        if cluster_id in calibrated_ids
         if len(profiles[cluster_id].member_ids) >= 3
         and gene_names[weakest_gene_id] in profiles[cluster_id].member_ids
     ]
@@ -779,6 +808,7 @@ def expand_profiles(
     calibrate_weakest_member: bool = False,
     gene_to_species=None,
     min_profile_species: int = 1,
+    calibrate_single_copy_profiles: bool = False,
     reciprocal_profile_merges: bool = False,
     reciprocal_profile_threshold_ratio: float = 0.7,
     reciprocal_profile_min_support: int = 2,
@@ -804,13 +834,21 @@ def expand_profiles(
         cpu,
         evalue_threshold=evalue_threshold,
     )
+    calibration_profile_ids = None
+    calibrate_profiles = calibrate_weakest_member
+    if calibrate_single_copy_profiles and not calibrate_weakest_member:
+        calibration_profile_ids = select_single_copy_profile_ids(
+            profiles, clusters, gene_to_species
+        )
+        calibrate_profiles = True
     self_thresholds = compute_profile_self_thresholds(
         profiles,
         gene_names,
         sequence_database,
         cpu,
         matrix_name=matrix_name,
-        calibrate_weakest_member=calibrate_weakest_member,
+        calibrate_weakest_member=calibrate_profiles,
+        calibration_profile_ids=calibration_profile_ids,
     )
     edges = build_strict_profile_edges(
         gene_names,
@@ -844,4 +882,9 @@ def expand_profiles(
         strict_profile_edges=strict_edge_count,
         reciprocal_profile_pairs=reciprocal_pairs,
         reciprocal_profile_edges=reciprocal_edge_count,
+        calibrated_profiles=(
+            len(profiles)
+            if calibrate_weakest_member
+            else len(calibration_profile_ids or ())
+        ),
     )

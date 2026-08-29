@@ -1,0 +1,345 @@
+{
+  "configuration": {
+    "cpu": 8,
+    "development_seed": 1103,
+    "evalue_threshold": 0.0001,
+    "families": 36,
+    "holdout_seed": 2909,
+    "matrix": "BLOSUM62"
+  },
+  "created_at": "2026-08-29T22:34:57.184387+00:00",
+  "description": "Synthetic development/holdout comparison of strict, global jackknife, and single-copy-gated jackknife profile thresholds.",
+  "development": {
+    "contaminated_profiles": 18,
+    "contaminated_profiles_kept_strict": 18,
+    "evaluations": {
+      "global_jackknife": {
+        "by_category": {
+          "close": {
+            "accuracy": 1.0,
+            "assigned": 36,
+            "correct": 36,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.05555555555555555,
+            "assigned": 2,
+            "correct": 2,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.027777777777777776,
+            "assigned": 1,
+            "correct": 1,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.8611111111111112,
+            "assigned": 31,
+            "correct": 31,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "contaminated_profile_wins": 0,
+        "f_score": 0.6542056074766355,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.5888888888888889,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 70,
+        "recall": 0.4861111111111111,
+        "true_family_assignments": 70
+      },
+      "single_copy_jackknife": {
+        "by_category": {
+          "close": {
+            "accuracy": 1.0,
+            "assigned": 36,
+            "correct": 36,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.05555555555555555,
+            "assigned": 2,
+            "correct": 2,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.027777777777777776,
+            "assigned": 1,
+            "correct": 1,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.8611111111111112,
+            "assigned": 31,
+            "correct": 31,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "contaminated_profile_wins": 0,
+        "f_score": 0.6542056074766355,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.5888888888888889,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 70,
+        "recall": 0.4861111111111111,
+        "true_family_assignments": 70
+      },
+      "strict": {
+        "by_category": {
+          "close": {
+            "accuracy": 0.027777777777777776,
+            "assigned": 1,
+            "correct": 1,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "contaminated_profile_wins": 0,
+        "f_score": 0.013793103448275862,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.20555555555555555,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 1,
+        "recall": 0.006944444444444444,
+        "true_family_assignments": 1
+      }
+    },
+    "families": 36,
+    "globally_relaxed_contaminated_profiles": 18,
+    "passed": true,
+    "seed": 1103,
+    "selected_profiles": 36,
+    "selectively_relaxed_contaminated_profiles": 0,
+    "single_copy_profiles": 36
+  },
+  "git": {
+    "commit": "6a60b77c94ca5cf0e319f02ae9d04bc6b63e6984",
+    "dirty": true
+  },
+  "holdout": {
+    "contaminated_profiles": 18,
+    "contaminated_profiles_kept_strict": 18,
+    "evaluations": {
+      "global_jackknife": {
+        "by_category": {
+          "close": {
+            "accuracy": 1.0,
+            "assigned": 36,
+            "correct": 36,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.1111111111111111,
+            "assigned": 4,
+            "correct": 4,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.05555555555555555,
+            "assigned": 2,
+            "correct": 2,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.9444444444444444,
+            "assigned": 34,
+            "correct": 34,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "contaminated_profile_wins": 0,
+        "f_score": 0.6909090909090909,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.6222222222222222,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 76,
+        "recall": 0.5277777777777778,
+        "true_family_assignments": 76
+      },
+      "single_copy_jackknife": {
+        "by_category": {
+          "close": {
+            "accuracy": 1.0,
+            "assigned": 36,
+            "correct": 36,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.1111111111111111,
+            "assigned": 4,
+            "correct": 4,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.05555555555555555,
+            "assigned": 2,
+            "correct": 2,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.9444444444444444,
+            "assigned": 34,
+            "correct": 34,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "contaminated_profile_wins": 0,
+        "f_score": 0.6909090909090909,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.6222222222222222,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 76,
+        "recall": 0.5277777777777778,
+        "true_family_assignments": 76
+      },
+      "strict": {
+        "by_category": {
+          "close": {
+            "accuracy": 0.027777777777777776,
+            "assigned": 1,
+            "correct": 1,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "contaminated_profile_wins": 0,
+        "f_score": 0.013793103448275862,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.20555555555555555,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 1,
+        "recall": 0.006944444444444444,
+        "true_family_assignments": 1
+      }
+    },
+    "families": 36,
+    "globally_relaxed_contaminated_profiles": 18,
+    "passed": true,
+    "seed": 2909,
+    "selected_profiles": 36,
+    "selectively_relaxed_contaminated_profiles": 0,
+    "single_copy_profiles": 36
+  },
+  "label_policy": "Uses generated family, contamination, and species labels only; no final benchmark labels or competing-tool output is read.",
+  "passed": true,
+  "schema_version": 1
+}
