@@ -163,6 +163,14 @@ def build_parser() -> argparse.ArgumentParser:
         default=80,
         help="Maximum combined seed-cluster size for a profile pair",
     )
+    parser.add_argument(
+        "--component-split-high-duplication",
+        action="store_true",
+        help=(
+            "Split paralog-rich clusters into strong evidence components "
+            "before falling back to the maximum-degree core"
+        ),
+    )
     return parser
 
 
@@ -254,6 +262,9 @@ def main(argv=None) -> int:
         multipass_edges.targets,
         gene_to_species,
         rbnh_scores=multipass_edges.weights,
+        component_split_high_duplication=(
+            args.component_split_high_duplication
+        ),
     )
     refined_path = args.output_directory / "orthogroups_multipass_refined.txt"
     write_clusters(refined_path, refined_clusters, gene_names)
@@ -354,6 +365,9 @@ def main(argv=None) -> int:
                 profile_edges.targets,
                 gene_to_species,
                 rbnh_scores=profile_edges.weights,
+                component_split_high_duplication=(
+                    args.component_split_high_duplication
+                ),
             )
             profile_refined_path = (
                 args.output_directory
@@ -427,6 +441,9 @@ def main(argv=None) -> int:
             ),
             "profile_profile_max_combined_genes": (
                 args.profile_profile_max_combined_genes
+            ),
+            "component_split_high_duplication": (
+                args.component_split_high_duplication
             ),
             "matrix": args.matrix,
             "leiden_seed": args.leiden_seed,

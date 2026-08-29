@@ -125,6 +125,23 @@ pair may contain at most 80 seed genes, bounding both alignment work and graph
 growth. The mode is disabled by default: 0.60 was inactive on OrthoBench, while
 the independently screened 0.40 sensitivity follow-up reduced F-score.
 
+Evaluate HMM-supported component splitting with:
+
+```bash
+python -m benchmark_tools.profile_component_split_holdout \
+  --development-seed 1103 \
+  --holdout-seed 2909 \
+  --families 36 \
+  --cpu 4 \
+  --output /tmp/profile_component_split_holdout.json
+```
+
+`--component-split-high-duplication` retains separate strong-edge components
+inside paralog-rich clusters before falling back to the historical single-core
+degree rule. Profile-HMM anchor edges participate in these components, while
+edges below the existing 1.5 component threshold do not. The mode is disabled
+by default pending fresh production benchmarks.
+
 ## OrthoFinder comparator
 
 This directory pins the OrthoFinder comparator to version 3.1.5 and keeps new

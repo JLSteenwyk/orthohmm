@@ -497,6 +497,7 @@ def _split_high_duplication_clusters(
     panel_copy_split_min_species_count: int,
     panel_copy_split_min_dataset_species: int,
     panel_copy_component_min_edge_weight: float,
+    component_split_high_duplication: bool = False,
     broad_mode: bool = False,
 ) -> List[Cluster]:
     adjacency: MutableMapping[Gene, set] = defaultdict(set)
@@ -567,6 +568,16 @@ def _split_high_duplication_clusters(
         if max(species_counts.values()) < min_species_count:
             refined.append(list(cluster))
             continue
+        if component_split_high_duplication:
+            split_components = _split_string_cluster_by_components(
+                cluster,
+                component_adjacency,
+            )
+            if len(split_components) > 1 and any(
+                len(component) > 1 for component in split_components
+            ):
+                refined.extend(split_components)
+                continue
         degrees = {
             gene: len(adjacency.get(gene, set()) & members)
             for gene in cluster
@@ -849,6 +860,7 @@ def _split_high_duplication_index_clusters(
     panel_copy_split_min_dataset_species: int,
     panel_copy_component_min_edge_weight: float,
     rbnh_scores: Sequence[float] | None,
+    component_split_high_duplication: bool = False,
     broad_mode: bool = False,
 ) -> List[IndexCluster]:
     gene_to_cluster = _gene_to_cluster_array(clusters, total_genes)
@@ -948,6 +960,16 @@ def _split_high_duplication_index_clusters(
         if max(species_counts.values()) < min_species_count:
             refined.append(cluster_list)
             continue
+        if component_split_high_duplication:
+            split_components = _split_index_cluster_by_components(
+                cluster_list,
+                component_adjacency,
+            )
+            if len(split_components) > 1 and any(
+                len(component) > 1 for component in split_components
+            ):
+                refined.extend(split_components)
+                continue
         cluster_degrees = degrees[np.asarray(cluster_list, dtype=np.int64)]
         max_degree = int(cluster_degrees.max()) if len(cluster_degrees) else 0
         if max_degree == 0:
@@ -990,6 +1012,7 @@ def refine_clusters(
     panel_copy_split_min_species_count: int = DEFAULT_PANEL_COPY_SPLIT_MIN_SPECIES_COUNT,
     panel_copy_split_min_dataset_species: int = DEFAULT_PANEL_COPY_SPLIT_MIN_DATASET_SPECIES,
     panel_copy_component_min_edge_weight: float = DEFAULT_PANEL_COPY_COMPONENT_MIN_EDGE_WEIGHT,
+    component_split_high_duplication: bool = False,
 ) -> List[Cluster]:
     """Refine orthogroup clusters using cluster-level support and graph degree.
 
@@ -1023,6 +1046,7 @@ def refine_clusters(
             panel_copy_split_min_species_count=panel_copy_split_min_species_count,
             panel_copy_split_min_dataset_species=panel_copy_split_min_dataset_species,
             panel_copy_component_min_edge_weight=panel_copy_component_min_edge_weight,
+            component_split_high_duplication=component_split_high_duplication,
             broad_mode=True,
         )
     pair_stats = _cluster_pair_stats(clusters, directed_hits)
@@ -1042,6 +1066,7 @@ def refine_clusters(
             panel_copy_split_min_species_count=panel_copy_split_min_species_count,
             panel_copy_split_min_dataset_species=panel_copy_split_min_dataset_species,
             panel_copy_component_min_edge_weight=panel_copy_component_min_edge_weight,
+            component_split_high_duplication=component_split_high_duplication,
         )
 
     dsu = _DSU(clusters, gene_to_species)
@@ -1074,6 +1099,7 @@ def refine_clusters(
         panel_copy_split_min_species_count=panel_copy_split_min_species_count,
         panel_copy_split_min_dataset_species=panel_copy_split_min_dataset_species,
         panel_copy_component_min_edge_weight=panel_copy_component_min_edge_weight,
+        component_split_high_duplication=component_split_high_duplication,
     )
 
 
@@ -1105,6 +1131,7 @@ def refine_cluster_indices(
     panel_copy_split_min_dataset_species: int = DEFAULT_PANEL_COPY_SPLIT_MIN_DATASET_SPECIES,
     panel_copy_component_min_edge_weight: float = DEFAULT_PANEL_COPY_COMPONENT_MIN_EDGE_WEIGHT,
     rbnh_scores: Sequence[float] | None = None,
+    component_split_high_duplication: bool = False,
 ) -> List[IndexCluster]:
     """Refine int-indexed clusters without materializing string hit triples."""
     if not clusters:
@@ -1150,6 +1177,7 @@ def refine_cluster_indices(
                 panel_copy_split_min_dataset_species=panel_copy_split_min_dataset_species,
                 panel_copy_component_min_edge_weight=panel_copy_component_min_edge_weight,
                 rbnh_scores=rbnh_scores,
+                component_split_high_duplication=component_split_high_duplication,
                 broad_mode=True,
             )
 
@@ -1199,6 +1227,7 @@ def refine_cluster_indices(
             panel_copy_split_min_dataset_species=panel_copy_split_min_dataset_species,
             panel_copy_component_min_edge_weight=panel_copy_component_min_edge_weight,
             rbnh_scores=rbnh_scores,
+            component_split_high_duplication=component_split_high_duplication,
             broad_mode=True,
         )
 
@@ -1228,6 +1257,7 @@ def refine_cluster_indices(
             panel_copy_split_min_dataset_species=panel_copy_split_min_dataset_species,
             panel_copy_component_min_edge_weight=panel_copy_component_min_edge_weight,
             rbnh_scores=rbnh_scores,
+            component_split_high_duplication=component_split_high_duplication,
         )
 
     sizes = np.asarray([len(cluster) for cluster in clusters], dtype=np.int64)
@@ -1272,4 +1302,5 @@ def refine_cluster_indices(
         panel_copy_split_min_dataset_species=panel_copy_split_min_dataset_species,
         panel_copy_component_min_edge_weight=panel_copy_component_min_edge_weight,
         rbnh_scores=rbnh_scores,
+        component_split_high_duplication=component_split_high_duplication,
     )
