@@ -21,8 +21,9 @@ readonly BASE=${REPO_ROOT:-$(dirname "$(cd "$(dirname "${BASH_SOURCE[0]}")" && p
 readonly SCRIPT_DIR="${BASE}/benchmark_tools"
 readonly PIPELINE=${QFO_PIPELINE:-${BASE}/qfo_benchmark/benchmark-webservice}
 readonly SCORING_ROOT=${QFO_SCORING_ROOT:-${BASE}/qfo_benchmark/scoring}
+readonly WORK_ROOT=${QFO_WORK_ROOT:-${SCORING_ROOT}}
 readonly SCORING_DIR="${SCORING_ROOT}/${METHOD}"
-readonly WORK_DIR="${SCORING_ROOT}/work-${METHOD}"
+readonly WORK_DIR="${WORK_ROOT}/work-${METHOD}"
 readonly LAUNCH_DIR="${SCORING_ROOT}/launch-${METHOD}"
 readonly MAPPING=${QFO_MAPPING:-${PIPELINE}/reference_data/2020/mapping.json.gz}
 readonly FILTERED_PAIRS="$(dirname "${PAIRS}")/pairs.qfo.tsv"
@@ -41,7 +42,11 @@ if [[ "${RESUME}" == "1" ]]; then
 else
     rm -rf "${SCORING_DIR}" "${WORK_DIR}" "${LAUNCH_DIR}"
 fi
-mkdir -p "${SCORING_DIR}" "${LAUNCH_DIR}" "${SCORING_ROOT}/container_cache"
+mkdir -p \
+    "${SCORING_DIR}" \
+    "${LAUNCH_DIR}" \
+    "${WORK_ROOT}" \
+    "${SCORING_ROOT}/container_cache"
 cd "${LAUNCH_DIR}"
 
 export JAVA_HOME="${JAVA_HOME_17}"

@@ -10,8 +10,9 @@ readonly CPUS=${CPUS:-32}
 readonly MEM=${MEM:-500G}
 readonly SCORE_CPUS=${SCORE_CPUS:-8}
 readonly SCORE_MEM=${SCORE_MEM:-150G}
+readonly QFO_WORK_ROOT=${QFO_WORK_ROOT:-${BASE}/qfo_benchmark/w}
 
-mkdir -p "${LOG_DIR}" "${OUTDIR}"
+mkdir -p "${LOG_DIR}" "${OUTDIR}" "${QFO_WORK_ROOT}"
 
 inference_job=$(sbatch --parsable \
     --job-name=qfo_ohmm_high \
@@ -31,7 +32,7 @@ scoring_job=$(sbatch --parsable \
     --mem="${SCORE_MEM}" \
     --output="${LOG_DIR}/qfo_score_orthohmm_high_%j.out" \
     --error="${LOG_DIR}/qfo_score_orthohmm_high_%j.err" \
-    --export=ALL,REPO_ROOT="${BASE}",METHOD=orthohmm_high_sensitivity,PAIRS="${OUTDIR}/pairs.qfo.tsv" \
+    --export=ALL,REPO_ROOT="${BASE}",METHOD=orthohmm_high_sensitivity,PAIRS="${OUTDIR}/pairs.qfo.tsv",QFO_WORK_ROOT="${QFO_WORK_ROOT}" \
     "${SCRIPT_DIR}/run_qfo_scoring.slurm")
 
 printf 'QfO inference: %s\n' "${inference_job}"
