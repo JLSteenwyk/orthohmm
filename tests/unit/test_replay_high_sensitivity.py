@@ -19,7 +19,7 @@ def test_replay_profile_iterations_default_to_one():
     assert args.reciprocal_profile_threshold_ratio == 0.7
     assert args.reciprocal_profile_min_support == 2
     assert args.profile_profile_merges is False
-    assert args.profile_profile_similarity_threshold == 0.6
+    assert args.profile_profile_similarity_threshold == 0.4
     assert args.profile_profile_max_combined_genes == 80
 
 

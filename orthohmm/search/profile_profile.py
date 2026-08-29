@@ -215,7 +215,7 @@ def build_profile_profile_edges(
     gene_names: Sequence[str],
     background: np.ndarray,
     cpu: int,
-    similarity_threshold: float = 0.6,
+    similarity_threshold: float = 0.4,
     max_combined_genes: int = 80,
 ) -> ProfilePairResult:
     """Connect mutually closest profiles that clear a calibrated similarity."""

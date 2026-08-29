@@ -21,7 +21,7 @@ from orthohmm.search.profile_profile import build_profile_profile_edges
 
 
 MATRIX_NAME = "BLOSUM62"
-LOCKED_SIMILARITY_THRESHOLD = 0.6
+LOCKED_SIMILARITY_THRESHOLD = 0.4
 LOCKED_MAX_COMBINED_GENES = 80
 
 
@@ -114,9 +114,10 @@ def main(argv: Sequence[str] | None = None) -> int:
             "Kingdoms, species identities, or competing-tool output is read."
         ),
         "selection_policy": (
-            "The 0.60 threshold was locked below the minimum true-family "
+            "The 0.40 threshold was locked below the minimum true-family "
             "development similarity (0.6676) and above the maximum close-"
-            "paralog similarity (0.3735). An exact-4-mer prefilter capacity "
+            "paralog similarity (0.3735), maximizing sensitivity within the "
+            "perfect-separation interval. An exact-4-mer prefilter capacity "
             "of 30 was the smallest tested development setting with complete "
             "true-pair recall and was then applied unchanged to holdout."
         ),

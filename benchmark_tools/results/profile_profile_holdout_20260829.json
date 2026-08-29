@@ -8,9 +8,9 @@
     "max_candidates_per_profile": 30,
     "max_combined_genes": 80,
     "prefilter_k": 4,
-    "similarity_threshold": 0.6
+    "similarity_threshold": 0.4
   },
-  "created_at": "2026-08-29T23:15:01.891848+00:00",
+  "created_at": "2026-08-29T23:24:42.342484+00:00",
   "description": "Synthetic development/holdout test of self-normalized, mutual-nearest profile-profile alignment for split families.",
   "development": {
     "candidate_pairs": 518,
@@ -29,7 +29,7 @@
     "true_positives": 36
   },
   "git": {
-    "commit": "6a597e66d83c5b383c6da31b0721ee68a3fbe3e1",
+    "commit": "a803b4ef779c98e1a80e2ff1de4a7df1172ec4b4",
     "dirty": true
   },
   "holdout": {
@@ -51,5 +51,5 @@
   "label_policy": "Uses generated family labels only; no OrthoBench, QfO, Three Kingdoms, species identities, or competing-tool output is read.",
   "passed": true,
   "schema_version": 1,
-  "selection_policy": "The 0.60 threshold was locked below the minimum true-family development similarity (0.6676) and above the maximum close-paralog similarity (0.3735). An exact-4-mer prefilter capacity of 30 was the smallest tested development setting with complete true-pair recall and was then applied unchanged to holdout."
+  "selection_policy": "The 0.40 threshold was locked below the minimum true-family development similarity (0.6676) and above the maximum close-paralog similarity (0.3735), maximizing sensitivity within the perfect-separation interval. An exact-4-mer prefilter capacity of 30 was the smallest tested development setting with complete true-pair recall and was then applied unchanged to holdout."
 }

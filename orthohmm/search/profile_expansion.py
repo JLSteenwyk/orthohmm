@@ -867,7 +867,7 @@ def expand_profiles(
     reciprocal_profile_min_support: int = 2,
     score_per_target_residue: bool = False,
     profile_profile_merges: bool = False,
-    profile_profile_similarity_threshold: float = 0.6,
+    profile_profile_similarity_threshold: float = 0.4,
     profile_profile_max_combined_genes: int = 80,
 ) -> ProfileExpansionResult:
     """Run the complete strict profile-expansion stage."""
