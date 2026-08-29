@@ -1,10 +1,15 @@
+import json
 import os
 import subprocess
 import sys
+import tempfile
 from typing import List
 import multiprocessing
 from multiprocessing.synchronize import Lock
 from multiprocessing.sharedctypes import Synchronized
+
+
+LEIDEN_ISOLATION_MIN_EDGES = 5_000_000
 
 
 def run_bash_command(command: str) -> None:
@@ -109,7 +114,7 @@ def execute_leiden(
     include_isolates: bool = False,
     seed: int = 0,
 ) -> None:
-    """In-process Leiden CPM clustering on the ABC edge file.
+    """Run Leiden CPM clustering, isolating benchmark-scale native graphs.
 
     Beats MCL on the OrthoBench reference (F=65.7% at resolution=0.1 vs MCL's
     best F=62.4% at inflation=1.5 on the identical RBNH edge graph) and has
@@ -117,11 +122,94 @@ def execute_leiden(
     Output format matches what `execute_mcl` produces so downstream parsing
     in helpers.generate_orthogroup_clusters_file is unchanged.
 
-    cpm_resolution may be a positive float, or the string "auto" to set γ
+    cpm_resolution may be a positive float, or the string "auto" to set gamma
     to 4 × the smallest positive edge weight. Auto adapts to input diversity:
     closely-related species land near γ≈0.1, cross-kingdom eukaryotic inputs
     near γ≈0.00004 — without manual tuning.
     """
+    if (
+        edges is not None
+        and hasattr(edges, "sources")
+        and len(edges.sources) >= LEIDEN_ISOLATION_MIN_EDGES
+    ):
+        _execute_leiden_isolated(
+            cpm_resolution,
+            output_directory,
+            edges,
+            include_isolates,
+            seed,
+        )
+        return
+    _execute_leiden_in_process(
+        cpm_resolution,
+        output_directory,
+        edges=edges,
+        include_isolates=include_isolates,
+        seed=seed,
+    )
+
+
+def _execute_leiden_isolated(
+    cpm_resolution,
+    output_directory: str,
+    edges,
+    include_isolates: bool,
+    seed: int,
+) -> None:
+    """Serialize compact arrays and run native graph code in a fresh process."""
+    import numpy as np
+
+    working_directory = os.path.join(output_directory, "orthohmm_working_res")
+    os.makedirs(working_directory, exist_ok=True)
+    with tempfile.TemporaryDirectory(
+        prefix=".leiden-payload-",
+        dir=working_directory,
+    ) as payload_directory:
+        for gene_name in edges.gene_names:
+            if "\n" in gene_name or "\r" in gene_name:
+                raise ValueError("gene names cannot contain newlines")
+        names_path = os.path.join(payload_directory, "gene_names.txt")
+        with open(names_path, "w") as handle:
+            for gene_name in edges.gene_names:
+                handle.write(f"{gene_name}\n")
+        np.save(
+            os.path.join(payload_directory, "sources.npy"),
+            np.asarray(edges.sources, dtype=np.int32),
+            allow_pickle=False,
+        )
+        np.save(
+            os.path.join(payload_directory, "targets.npy"),
+            np.asarray(edges.targets, dtype=np.int32),
+            allow_pickle=False,
+        )
+        np.save(
+            os.path.join(payload_directory, "weights.npy"),
+            np.asarray(edges.weights, dtype=np.float64),
+            allow_pickle=False,
+        )
+        metadata = {
+            "cpm_resolution": cpm_resolution,
+            "include_isolates": bool(include_isolates),
+            "output_directory": os.path.abspath(output_directory),
+            "seed": int(seed),
+        }
+        metadata_path = os.path.join(payload_directory, "metadata.json")
+        with open(metadata_path, "w") as handle:
+            json.dump(metadata, handle)
+        subprocess.run(
+            [sys.executable, "-m", "orthohmm.leiden_worker", payload_directory],
+            check=True,
+        )
+
+
+def _execute_leiden_in_process(
+    cpm_resolution,
+    output_directory: str,
+    edges=None,
+    include_isolates: bool = False,
+    seed: int = 0,
+) -> None:
+    """Execute Leiden in the current process for small graphs and workers."""
     import igraph
     import leidenalg
     import numpy as np

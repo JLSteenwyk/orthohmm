@@ -4,6 +4,7 @@ import os
 import numpy as np
 import pytest
 
+from orthohmm import externals
 from orthohmm.externals import (
     check_if_mcl_command_completed,
     check_if_phmmer_command_completed,
@@ -149,3 +150,32 @@ class TestExecuteLeiden:
             if line.strip()
         ]
         assert clusters == [["a", "b"], ["isolated"]]
+
+    def test_large_compact_edges_use_isolated_worker(self, tmp_path, monkeypatch):
+        wd = os.path.join(tmp_path, "orthohmm_working_res")
+        os.makedirs(wd)
+        edges = IndexedEdges(
+            gene_names=["a", "b", "isolated"],
+            sources=np.array([0], dtype=np.int32),
+            targets=np.array([1], dtype=np.int32),
+            weights=np.array([1.0]),
+        )
+        monkeypatch.setattr(externals, "LEIDEN_ISOLATION_MIN_EDGES", 1)
+
+        execute_leiden(
+            0.1,
+            str(tmp_path),
+            edges=edges,
+            include_isolates=True,
+            seed=4,
+        )
+
+        clusters = [
+            line.split()
+            for line in open(os.path.join(wd, "orthohmm_edges_clustered.txt"))
+            if line.strip()
+        ]
+        assert clusters == [["a", "b"], ["isolated"]]
+        assert not any(
+            name.startswith(".leiden-payload-") for name in os.listdir(wd)
+        )

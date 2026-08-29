@@ -14,6 +14,7 @@ from .accuracy import (
     combine_edges,
     read_index_clusters,
     resolve_accuracy_profile,
+    write_accuracy_checkpoint,
 )
 from .args_processing import process_args
 from .externals import (
@@ -453,6 +454,15 @@ def _execute(
                 search_results,
                 evalue_threshold,
                 gene_to_id,
+            )
+            checkpoint_path = write_accuracy_checkpoint(
+                output_directory,
+                gene_names,
+                gene_to_species,
+                *accuracy_hits,
+            )
+            metrics.add_metadata(
+                high_sensitivity_checkpoint=str(checkpoint_path.resolve())
             )
             edges = build_rbnh_edges(
                 gene_names,

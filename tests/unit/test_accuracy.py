@@ -6,7 +6,9 @@ from orthohmm.accuracy import (
     build_singleton_assignment_edges,
     combine_edges,
     deduplicate_undirected_edges,
+    load_accuracy_checkpoint,
     resolve_accuracy_profile,
+    write_accuracy_checkpoint,
 )
 
 
@@ -116,3 +118,35 @@ def test_edge_combination_keeps_maximum_duplicate_weight():
     merged = combine_edges(first, second)
 
     assert _edge_map(merged) == {(0, 1): 4.0, (0, 2): 1.0, (1, 2): 3.0}
+
+
+def test_accuracy_checkpoint_round_trip(tmp_path):
+    checkpoint = write_accuracy_checkpoint(
+        str(tmp_path),
+        ["a", "b", "c"],
+        [0, 1, 1],
+        [0, 1],
+        [1, 2],
+        [3.5, 2.0],
+    )
+
+    names, species, queries, targets, scores = load_accuracy_checkpoint(
+        checkpoint
+    )
+
+    assert names == ["a", "b", "c"]
+    np.testing.assert_array_equal(species, [0, 1, 1])
+    np.testing.assert_array_equal(queries, [0, 1])
+    np.testing.assert_array_equal(targets, [1, 2])
+    np.testing.assert_array_equal(scores, [3.5, 2.0])
+
+
+def test_accuracy_checkpoint_rejects_corruption(tmp_path):
+    checkpoint = write_accuracy_checkpoint(
+        str(tmp_path), ["a", "b"], [0, 1], [0], [1], [2.0]
+    )
+    with (checkpoint / "hit_scores.npy").open("ab") as handle:
+        handle.write(b"corrupt")
+
+    with pytest.raises(ValueError, match="checksum mismatch"):
+        load_accuracy_checkpoint(checkpoint)

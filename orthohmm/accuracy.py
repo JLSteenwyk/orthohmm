@@ -9,6 +9,12 @@ datasets do not require Python dictionaries for every hit or edge.
 from __future__ import annotations
 
 from dataclasses import dataclass
+import hashlib
+import json
+import os
+from pathlib import Path
+import shutil
+import tempfile
 from typing import Sequence
 
 import numpy as np
@@ -17,6 +23,7 @@ from .helpers import IndexedEdges
 
 
 DEFAULT_ACCURACY_PROFILE = "standard"
+ACCURACY_CHECKPOINT_DIRECTORY = "high_sensitivity_checkpoint"
 
 
 @dataclass(frozen=True)
@@ -63,6 +70,104 @@ def resolve_accuracy_profile(name: str) -> AccuracyProfile:
         raise ValueError(
             f"Unknown accuracy profile {name!r}; expected one of: {choices}"
         ) from exc
+
+
+def _sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def write_accuracy_checkpoint(
+    output_directory: str,
+    gene_names: Sequence[str],
+    gene_to_species,
+    hit_queries,
+    hit_targets,
+    hit_scores,
+) -> Path:
+    """Atomically persist high-sensitivity hits before native graph stages."""
+    working_directory = Path(output_directory) / "orthohmm_working_res"
+    working_directory.mkdir(parents=True, exist_ok=True)
+    checkpoint = working_directory / ACCURACY_CHECKPOINT_DIRECTORY
+    if checkpoint.exists():
+        raise FileExistsError(f"accuracy checkpoint already exists: {checkpoint}")
+    temporary = Path(
+        tempfile.mkdtemp(
+            prefix=".accuracy-checkpoint-",
+            dir=working_directory,
+        )
+    )
+    try:
+        for gene_name in gene_names:
+            if "\n" in gene_name or "\r" in gene_name:
+                raise ValueError("gene names cannot contain newlines")
+        names_path = temporary / "gene_names.txt"
+        with names_path.open("w") as handle:
+            for gene_name in gene_names:
+                handle.write(f"{gene_name}\n")
+        arrays = {
+            "gene_to_species.npy": np.asarray(gene_to_species, dtype=np.int32),
+            "hit_queries.npy": np.asarray(hit_queries, dtype=np.int32),
+            "hit_targets.npy": np.asarray(hit_targets, dtype=np.int32),
+            "hit_scores.npy": np.asarray(hit_scores, dtype=np.float64),
+        }
+        for filename, values in arrays.items():
+            np.save(temporary / filename, values, allow_pickle=False)
+        files = [names_path, *(temporary / filename for filename in arrays)]
+        manifest = {
+            "schema_version": 1,
+            "complete": True,
+            "genes": len(gene_names),
+            "hits": len(arrays["hit_scores.npy"]),
+            "files": {
+                path.name: {
+                    "bytes": path.stat().st_size,
+                    "sha256": _sha256(path),
+                }
+                for path in files
+            },
+        }
+        (temporary / "manifest.json").write_text(
+            json.dumps(manifest, indent=2, sort_keys=True) + "\n"
+        )
+        os.replace(temporary, checkpoint)
+    except BaseException:
+        shutil.rmtree(temporary, ignore_errors=True)
+        raise
+    return checkpoint
+
+
+def load_accuracy_checkpoint(checkpoint: str | Path, verify: bool = True):
+    """Load a complete hit checkpoint, optionally verifying every file hash."""
+    checkpoint = Path(checkpoint)
+    manifest = json.loads((checkpoint / "manifest.json").read_text())
+    if manifest.get("schema_version") != 1 or not manifest.get("complete"):
+        raise ValueError(f"incomplete accuracy checkpoint: {checkpoint}")
+    if verify:
+        for filename, record in manifest["files"].items():
+            path = checkpoint / filename
+            invalid_size = path.stat().st_size != record["bytes"]
+            invalid_hash = _sha256(path) != record["sha256"]
+            if invalid_size or invalid_hash:
+                raise ValueError(f"accuracy checkpoint checksum mismatch: {path}")
+    gene_names = (checkpoint / "gene_names.txt").read_text().splitlines()
+    arrays = tuple(
+        np.load(checkpoint / filename, mmap_mode="r", allow_pickle=False)
+        for filename in (
+            "gene_to_species.npy",
+            "hit_queries.npy",
+            "hit_targets.npy",
+            "hit_scores.npy",
+        )
+    )
+    invalid_genes = len(gene_names) != manifest["genes"]
+    invalid_hits = len(arrays[-1]) != manifest["hits"]
+    if invalid_genes or invalid_hits:
+        raise ValueError(f"accuracy checkpoint counts do not match: {checkpoint}")
+    return gene_names, *arrays
 
 
 def _empty_edges(gene_names: Sequence[str]) -> IndexedEdges:
