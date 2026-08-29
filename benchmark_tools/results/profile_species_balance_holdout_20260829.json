@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "candidate": "species-balanced profile HMM emission weights",
+  "description": "Synthetic development/holdout test of down-weighting duplicate members from the same species while building profile HMM emissions.",
+  "decision": "reject_before_orthobench",
+  "reason": "Species balancing preserved top-1 family identification but made the strict weakest-member threshold substantially harder to clear. Strict true-query recovery fell from 13-14 to 2-4, median threshold margins decreased by 55-73.5 score units, and unrelated-negative maximum scores increased slightly. The candidate therefore failed the independent gate and was removed before an OrthoBench run.",
+  "configuration": {
+    "development_seed": 1103,
+    "holdout_seed": 2909,
+    "families": 36,
+    "true_queries_per_split": 144,
+    "perturbation": "Duplicate one species in every family before profile construction",
+    "matrix": "BLOSUM62"
+  },
+  "development": {
+    "seed": 1103,
+    "unbalanced": {
+      "top1_correct": 144,
+      "top1_total": 144,
+      "strict_true_queries_recovered": 13,
+      "unrelated_negative_max_score_mean": 377.89
+    },
+    "species_balanced": {
+      "top1_correct": 144,
+      "top1_total": 144,
+      "strict_true_queries_recovered": 4,
+      "unrelated_negative_max_score_mean": 379.64
+    },
+    "median_true_score_delta": -2.0,
+    "true_score_delta_positive_fraction": 0.382,
+    "median_threshold_margin_delta": -55.0,
+    "threshold_margin_delta_positive_fraction": 0.09,
+    "passed": false
+  },
+  "holdout": {
+    "seed": 2909,
+    "unbalanced": {
+      "top1_correct": 144,
+      "top1_total": 144,
+      "strict_true_queries_recovered": 14,
+      "unrelated_negative_max_score_mean": 409.39
+    },
+    "species_balanced": {
+      "top1_correct": 144,
+      "top1_total": 144,
+      "strict_true_queries_recovered": 2,
+      "unrelated_negative_max_score_mean": 411.58
+    },
+    "median_true_score_delta": -1.0,
+    "true_score_delta_positive_fraction": 0.431,
+    "median_threshold_margin_delta": -73.5,
+    "threshold_margin_delta_positive_fraction": 0.083,
+    "passed": false
+  },
+  "label_policy": "Uses generated family and species labels only; no OrthoBench, QfO, Three Kingdoms, or competing-tool labels or scores are read during inference or selection.",
+  "implementation_committed": false,
+  "orthobench_run": false,
+  "default_changed": false
+}
