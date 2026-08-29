@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "candidate": "self-normalized mutual-nearest profile-profile repair at similarity 0.60",
+  "independent_screen": {
+    "artifact": "benchmark_tools/results/profile_profile_holdout_20260829.json",
+    "sha256": "fda0f6246a04e06198b1ce8b007594f893844aec8f0547cc62b21923a3d0e030",
+    "development": {
+      "true_pairs": 36,
+      "false_pairs": 0
+    },
+    "holdout": {
+      "true_pairs": 36,
+      "false_pairs": 0
+    }
+  },
+  "fresh_orthobench": {
+    "result": "benchmarks/results/production_high_sensitivity_replay_profiles_profile_pair_20260829/result.json",
+    "result_sha256": "48236e72851a4f549f4a209de95f6d89fadf17f1dbbc86ee4c41b4dc35d2fe59",
+    "final_output_sha256": "55f9e3a2912bf3b3aabb1371a34f8dcae91fed6144cbd7273aea47253fa1263a",
+    "f_score": 70.5,
+    "precision": 78.7,
+    "recall": 63.8,
+    "exact_refogs": 12,
+    "profile_pair_candidates": 476228,
+    "profile_pair_merges": 0,
+    "profile_pair_edges": 0,
+    "wall_seconds": 383.64,
+    "maximum_rss_kib": 6160892
+  },
+  "selective_jackknife_comparator": {
+    "f_score": 70.5,
+    "precision": 78.7,
+    "recall": 63.8,
+    "exact_refogs": 12,
+    "final_output_sha256": "55f9e3a2912bf3b3aabb1371a34f8dcae91fed6144cbd7273aea47253fa1263a"
+  },
+  "decision": "rejected_inactive",
+  "reason": "The locked 0.60 score found no real-data mutual profile pairs, produced byte-identical output, and added about 36 seconds to the profile stage. One sensitivity follow-up at 0.40 is pre-justified by the independent perfect-separation interval; no threshold will be selected from OrthoBench labels."
+}
