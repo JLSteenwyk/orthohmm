@@ -66,6 +66,22 @@ The production-equivalent default remains one pass. The recorded two-pass
 OrthoBench experiment doubled profile-search work and reduced refined F-score
 from 70.4 to 70.2, so iterative refinement is not a production recommendation.
 
+Evaluate reciprocal profile-HMM repair without final benchmark labels with:
+
+```bash
+python -m benchmark_tools.reciprocal_profile_merge_holdout \
+  --development-seed 1103 \
+  --holdout-seed 2909 \
+  --families 36 \
+  --cpu 8 \
+  --output /tmp/reciprocal_profile_merge_holdout.json
+```
+
+The harness splits each synthetic family into two three-species profiles and
+includes close paralogs as negative merge candidates. The replay flag
+`--reciprocal-profile-merges` enables the independently screened rule; it is
+off by default until fresh production benchmarks pass.
+
 ## OrthoFinder comparator
 
 This directory pins the OrthoFinder comparator to version 3.1.5 and keeps new

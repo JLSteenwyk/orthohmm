@@ -10,7 +10,7 @@ from typing import Mapping, Sequence
 
 import numpy as np
 
-from ..accuracy import deduplicate_undirected_edges
+from ..accuracy import combine_edges, deduplicate_undirected_edges
 from ..helpers import IndexedEdges
 from .evalue import batch_estimate_evalues
 from .matrices import (
@@ -57,6 +57,9 @@ class ProfileExpansionResult:
     profiles_built: int
     profile_candidates: int
     significant_profile_hits: int
+    strict_profile_edges: int = 0
+    reciprocal_profile_pairs: int = 0
+    reciprocal_profile_edges: int = 0
 
 
 def load_global_sequence_database(
@@ -653,6 +656,115 @@ def build_strict_profile_edges(
     )
 
 
+def build_reciprocal_profile_edges(
+    gene_names: Sequence[str],
+    clusters: Sequence[Sequence[int]],
+    profile_hits: ProfileHits,
+    self_thresholds: Mapping[int, float],
+    gene_to_species,
+    threshold_ratio: float = 0.7,
+    min_support: int = 2,
+) -> tuple[IndexedEdges, int]:
+    """Connect complementary split clusters with reciprocal profile evidence.
+
+    A directed observation is a member of one cluster scoring against another
+    cluster's profile.  Edges are emitted only when both directions have the
+    requested number of unique supporting genes and the two clusters have no
+    species in common.  Edge weights are the weaker of the two profile scores
+    after calibration by each profile's weakest-member score.
+    """
+    if not 0.0 < threshold_ratio <= 1.0:
+        raise ValueError("threshold_ratio must be in (0, 1]")
+    if min_support < 1:
+        raise ValueError("min_support must be >= 1")
+    if gene_to_species is None:
+        raise ValueError("gene_to_species is required for reciprocal profiles")
+    species = np.asarray(gene_to_species, dtype=np.int32)
+    if len(species) != len(gene_names):
+        raise ValueError("gene_to_species must match gene_names")
+
+    n_genes = len(gene_names)
+    cluster_by_gene = np.full(n_genes, -1, dtype=np.int32)
+    cluster_species = []
+    for cluster_id, cluster in enumerate(clusters):
+        members = np.asarray(cluster, dtype=np.int32)
+        cluster_by_gene[members] = cluster_id
+        cluster_species.append(set(int(item) for item in species[members]))
+
+    profile_ids = np.asarray(profile_hits.profile_cluster_ids, dtype=np.int32)
+    candidate_genes = np.asarray(profile_hits.gene_ids, dtype=np.int32)
+    profile_scores = np.asarray(profile_hits.scores, dtype=np.float64)
+    if not (
+        len(profile_ids) == len(candidate_genes) == len(profile_scores)
+    ):
+        raise ValueError("profile-hit arrays must align")
+    if len(profile_ids) == 0:
+        return deduplicate_undirected_edges(gene_names, [], [], []), 0
+
+    valid_profiles = (profile_ids >= 0) & (profile_ids < len(clusters))
+    valid_genes = (candidate_genes >= 0) & (candidate_genes < n_genes)
+    thresholds = np.fromiter(
+        (
+            self_thresholds.get(int(profile_id), np.inf)
+            for profile_id in profile_ids
+        ),
+        dtype=np.float64,
+        count=len(profile_ids),
+    )
+    source_clusters = np.full(len(candidate_genes), -1, dtype=np.int32)
+    source_clusters[valid_genes] = cluster_by_gene[candidate_genes[valid_genes]]
+    eligible = (
+        valid_profiles
+        & valid_genes
+        & (source_clusters >= 0)
+        & (source_clusters != profile_ids)
+        & np.isfinite(thresholds)
+        & (thresholds > 0.0)
+        & np.isfinite(profile_scores)
+        & (profile_scores >= thresholds * threshold_ratio)
+    )
+    if not eligible.any():
+        return deduplicate_undirected_edges(gene_names, [], [], []), 0
+
+    directed: dict[tuple[int, int], dict[int, float]] = {}
+    for row in np.flatnonzero(eligible):
+        source = int(source_clusters[row])
+        target = int(profile_ids[row])
+        gene = int(candidate_genes[row])
+        ratio = float(profile_scores[row] / thresholds[row])
+        support = directed.setdefault((source, target), {})
+        support[gene] = max(support.get(gene, -np.inf), ratio)
+
+    edge_sources = []
+    edge_targets = []
+    edge_weights = []
+    reciprocal_pairs = 0
+    for source, target in sorted(directed):
+        if source >= target:
+            continue
+        forward = directed[(source, target)]
+        reverse = directed.get((target, source))
+        if reverse is None:
+            continue
+        if len(forward) < min_support or len(reverse) < min_support:
+            continue
+        if cluster_species[source] & cluster_species[target]:
+            continue
+        reciprocal_pairs += 1
+        for source_gene, forward_ratio in sorted(forward.items()):
+            for target_gene, reverse_ratio in sorted(reverse.items()):
+                edge_sources.append(source_gene)
+                edge_targets.append(target_gene)
+                edge_weights.append(min(forward_ratio, reverse_ratio))
+
+    return (
+        deduplicate_undirected_edges(
+            gene_names, edge_sources, edge_targets, edge_weights
+        ),
+        reciprocal_pairs,
+    )
+
+
 def expand_profiles(
     clusters: Sequence[Sequence[int]],
     gene_names: Sequence[str],
@@ -667,6 +779,9 @@ def expand_profiles(
     calibrate_weakest_member: bool = False,
     gene_to_species=None,
     min_profile_species: int = 1,
+    reciprocal_profile_merges: bool = False,
+    reciprocal_profile_threshold_ratio: float = 0.7,
+    reciprocal_profile_min_support: int = 2,
 ) -> ProfileExpansionResult:
     """Run the complete strict profile-expansion stage."""
     os.environ["OMP_NUM_THREADS"] = str(cpu)
@@ -706,9 +821,27 @@ def expand_profiles(
         hit_targets,
         hit_scores,
     )
+    strict_edge_count = len(edges)
+    reciprocal_pairs = 0
+    reciprocal_edge_count = 0
+    if reciprocal_profile_merges:
+        reciprocal_edges, reciprocal_pairs = build_reciprocal_profile_edges(
+            gene_names,
+            clusters,
+            profile_hits,
+            self_thresholds,
+            gene_to_species,
+            threshold_ratio=reciprocal_profile_threshold_ratio,
+            min_support=reciprocal_profile_min_support,
+        )
+        reciprocal_edge_count = len(reciprocal_edges)
+        edges = combine_edges(edges, reciprocal_edges)
     return ProfileExpansionResult(
         edges=edges,
         profiles_built=len(profiles),
         profile_candidates=profile_hits.candidate_count,
         significant_profile_hits=len(profile_hits.scores),
+        strict_profile_edges=strict_edge_count,
+        reciprocal_profile_pairs=reciprocal_pairs,
+        reciprocal_profile_edges=reciprocal_edge_count,
     )

@@ -110,6 +110,26 @@ def build_parser() -> argparse.ArgumentParser:
             "building its profile HMM (default: 1)"
         ),
     )
+    parser.add_argument(
+        "--reciprocal-profile-merges",
+        action="store_true",
+        help=(
+            "Add profile-HMM edges between species-complementary clusters "
+            "with reciprocal support (default: disabled)"
+        ),
+    )
+    parser.add_argument(
+        "--reciprocal-profile-threshold-ratio",
+        type=float,
+        default=0.7,
+        help="Weakest-member threshold ratio for reciprocal evidence",
+    )
+    parser.add_argument(
+        "--reciprocal-profile-min-support",
+        type=int,
+        default=2,
+        help="Minimum unique supporting genes in each direction",
+    )
     return parser
 
 
@@ -225,6 +245,13 @@ def main(argv=None) -> int:
                 calibrate_weakest_member=args.jackknife_profile_thresholds,
                 gene_to_species=gene_to_species,
                 min_profile_species=args.profile_min_species,
+                reciprocal_profile_merges=args.reciprocal_profile_merges,
+                reciprocal_profile_threshold_ratio=(
+                    args.reciprocal_profile_threshold_ratio
+                ),
+                reciprocal_profile_min_support=(
+                    args.reciprocal_profile_min_support
+                ),
             )
             profile_results.append(profile_result)
             profile_base_edges = combine_edges(
@@ -328,6 +355,13 @@ def main(argv=None) -> int:
             "profile_iterations": args.profile_iterations,
             "jackknife_profile_thresholds": args.jackknife_profile_thresholds,
             "profile_min_species": args.profile_min_species,
+            "reciprocal_profile_merges": args.reciprocal_profile_merges,
+            "reciprocal_profile_threshold_ratio": (
+                args.reciprocal_profile_threshold_ratio
+            ),
+            "reciprocal_profile_min_support": (
+                args.reciprocal_profile_min_support
+            ),
             "matrix": args.matrix,
             "leiden_seed": args.leiden_seed,
         },
@@ -356,7 +390,13 @@ def main(argv=None) -> int:
                 sum(item.significant_profile_hits for item in profile_results)
             ),
             "strict_profile_edges": sum(
-                len(item.edges) for item in profile_results
+                item.strict_profile_edges for item in profile_results
+            ),
+            "reciprocal_profile_pairs": sum(
+                item.reciprocal_profile_pairs for item in profile_results
+            ),
+            "reciprocal_profile_edges": sum(
+                item.reciprocal_profile_edges for item in profile_results
             ),
             "final_singleton_assignment_edges": len(final_singleton_edges),
             "profile_multipass_edges": len(profile_edges),
@@ -367,7 +407,9 @@ def main(argv=None) -> int:
                 "profiles_built": item.profiles_built,
                 "profile_candidates": item.profile_candidates,
                 "significant_profile_hits": item.significant_profile_hits,
-                "strict_profile_edges": len(item.edges),
+                "strict_profile_edges": item.strict_profile_edges,
+                "reciprocal_profile_pairs": item.reciprocal_profile_pairs,
+                "reciprocal_profile_edges": item.reciprocal_profile_edges,
             }
             for iteration, item in enumerate(profile_results, start=1)
         ]

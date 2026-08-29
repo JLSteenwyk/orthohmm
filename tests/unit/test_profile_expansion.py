@@ -3,6 +3,7 @@ import numpy as np
 from orthohmm.search.profile_expansion import (
     ProfileHits,
     build_cluster_profiles,
+    build_reciprocal_profile_edges,
     build_strict_profile_edges,
     compute_profile_self_thresholds,
     load_global_sequence_database,
@@ -202,4 +203,78 @@ def test_strict_profile_edges_reject_hits_below_weakest_member():
         np.array([5.0]),
     )
 
+    assert len(edges) == 0
+
+
+def test_reciprocal_profile_edges_use_bidirectional_calibrated_support():
+    names = ["a0", "a1", "b0", "b1"]
+    hits = ProfileHits(
+        profile_cluster_ids=np.array([1, 1, 0, 0], dtype=np.int32),
+        gene_ids=np.array([0, 1, 2, 3], dtype=np.int32),
+        scores=np.array([8.0, 7.5, 9.0, 8.0]),
+        evalues=np.full(4, 1e-20),
+        candidate_count=4,
+    )
+
+    edges, pair_count = build_reciprocal_profile_edges(
+        names,
+        [[0, 1], [2, 3]],
+        hits,
+        {0: 10.0, 1: 10.0},
+        [0, 1, 2, 3],
+        threshold_ratio=0.7,
+        min_support=2,
+    )
+
+    assert pair_count == 1
+    assert _edge_map(edges) == {
+        (0, 2): 0.8,
+        (0, 3): 0.8,
+        (1, 2): 0.75,
+        (1, 3): 0.75,
+    }
+
+
+def test_reciprocal_profile_edges_reject_species_overlap():
+    names = ["a0", "a1", "b0", "b1"]
+    hits = ProfileHits(
+        profile_cluster_ids=np.array([1, 1, 0, 0], dtype=np.int32),
+        gene_ids=np.array([0, 1, 2, 3], dtype=np.int32),
+        scores=np.full(4, 8.0),
+        evalues=np.full(4, 1e-20),
+        candidate_count=4,
+    )
+
+    edges, pair_count = build_reciprocal_profile_edges(
+        names,
+        [[0, 1], [2, 3]],
+        hits,
+        {0: 10.0, 1: 10.0},
+        [0, 1, 2, 1],
+    )
+
+    assert pair_count == 0
+    assert len(edges) == 0
+
+
+def test_reciprocal_profile_edges_require_minimum_support_each_way():
+    names = ["a0", "a1", "b0", "b1"]
+    hits = ProfileHits(
+        profile_cluster_ids=np.array([1, 1, 0], dtype=np.int32),
+        gene_ids=np.array([0, 1, 2], dtype=np.int32),
+        scores=np.full(3, 8.0),
+        evalues=np.full(3, 1e-20),
+        candidate_count=3,
+    )
+
+    edges, pair_count = build_reciprocal_profile_edges(
+        names,
+        [[0, 1], [2, 3]],
+        hits,
+        {0: 10.0, 1: 10.0},
+        [0, 1, 2, 3],
+        min_support=2,
+    )
+
+    assert pair_count == 0
     assert len(edges) == 0
