@@ -88,6 +88,25 @@ The replay flag `--jackknife-single-copy-profiles` applies the jackknife only
 when every profile member comes from a distinct species. This mode is separate
 from the rejected global `--jackknife-profile-thresholds` ablation.
 
+The same harness tests `--profile-score-per-target-residue`, which compares
+local HMM scores and their member-derived thresholds after dividing each by the
+target protein length. Use both screened flags together for the fragment-aware
+candidate:
+
+```bash
+python -m benchmark_tools.selective_jackknife_holdout \
+  --development-seed 1103 \
+  --holdout-seed 2909 \
+  --families 36 \
+  --cpu 4 \
+  --output /tmp/profile_length_calibration_holdout.json
+```
+
+On both synthetic splits, per-target-residue calibration retains perfect
+close-paralog and unrelated rejection while recovering partial proteins missed
+by raw full-length score thresholds. Both replay flags remain off by default
+until fresh production benchmarks pass.
+
 ## OrthoFinder comparator
 
 This directory pins the OrthoFinder comparator to version 3.1.5 and keeps new

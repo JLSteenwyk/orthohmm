@@ -110,6 +110,14 @@ def build_parser() -> argparse.ArgumentParser:
         ),
     )
     parser.add_argument(
+        "--profile-score-per-target-residue",
+        action="store_true",
+        help=(
+            "Compare profile hits and member thresholds as score per target "
+            "residue (default: disabled)"
+        ),
+    )
+    parser.add_argument(
         "--profile-min-species",
         type=int,
         default=1,
@@ -270,6 +278,9 @@ def main(argv=None) -> int:
                 reciprocal_profile_min_support=(
                     args.reciprocal_profile_min_support
                 ),
+                score_per_target_residue=(
+                    args.profile_score_per_target_residue
+                ),
             )
             profile_results.append(profile_result)
             profile_base_edges = combine_edges(
@@ -374,6 +385,9 @@ def main(argv=None) -> int:
             "jackknife_profile_thresholds": args.jackknife_profile_thresholds,
             "jackknife_single_copy_profiles": (
                 args.jackknife_single_copy_profiles
+            ),
+            "profile_score_per_target_residue": (
+                args.profile_score_per_target_residue
             ),
             "profile_min_species": args.profile_min_species,
             "reciprocal_profile_merges": args.reciprocal_profile_merges,

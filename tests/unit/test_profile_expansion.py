@@ -154,6 +154,34 @@ def test_weakest_member_jackknife_never_tightens_threshold(tmp_path):
     assert calibrated[0] < in_sample[0]
 
 
+def test_profile_thresholds_can_be_expressed_per_target_residue(tmp_path):
+    (tmp_path / "a.fa").write_text(
+        ">a1\nACDEFGHIKLMNPQRSTVWYACDEFGHIKLMNPQRSTVWY\n"
+        ">a2\nACDEFGHIKLMNPQRSTVWYACDEYGHIKLMNPQRSTVWY\n"
+        ">a3\nACDEYGHIKLMAPQRSTVWYFCDEFGHIKLMNPQKSTVWY\n"
+    )
+    names = ["a1", "a2", "a3"]
+    database = load_global_sequence_database(
+        str(tmp_path), ["a.fa"], names
+    )
+    profiles = build_cluster_profiles(
+        [[0, 1, 2]], names, database, "BLOSUM62", cpu=1
+    )
+
+    raw = compute_profile_self_thresholds(
+        profiles, names, database, cpu=1
+    )
+    per_residue = compute_profile_self_thresholds(
+        profiles,
+        names,
+        database,
+        cpu=1,
+        score_per_target_residue=True,
+    )
+
+    assert per_residue[0] == raw[0] / 40.0
+
+
 def test_jackknife_can_be_limited_to_single_copy_profiles(tmp_path):
     (tmp_path / "a.fa").write_text(
         ">a1\nACDEFGHIKLMNPQRSTVWYACDEFGHIKLMNPQRSTVWY\n"
@@ -241,6 +269,31 @@ def test_strict_profile_edges_reject_hits_below_weakest_member():
     )
 
     assert len(edges) == 0
+
+
+def test_strict_profile_edges_support_per_residue_thresholds():
+    names = ["a", "b", "candidate"]
+    hits = ProfileHits(
+        profile_cluster_ids=np.array([0], dtype=np.int32),
+        gene_ids=np.array([2], dtype=np.int32),
+        scores=np.array([7.9]),
+        evalues=np.array([1e-20]),
+        candidate_count=1,
+        scores_per_target_residue=np.array([3.95]),
+    )
+
+    edges = build_strict_profile_edges(
+        names,
+        [[0, 1], [2]],
+        hits,
+        {0: 3.8},
+        np.array([2], dtype=np.int32),
+        np.array([0], dtype=np.int32),
+        np.array([5.0]),
+        score_per_target_residue=True,
+    )
+
+    assert _edge_map(edges) == {(0, 2): 5.0}
 
 
 def test_reciprocal_profile_edges_use_bidirectional_calibrated_support():

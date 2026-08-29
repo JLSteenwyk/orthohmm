@@ -40,13 +40,19 @@ except Exception:  # pragma: no cover - CUDA is optional
 
 @dataclass(frozen=True)
 class ProfileHits:
-    """Significant gene-to-MSA-profile scores using global integer IDs."""
+    """Significant gene-to-MSA-profile scores using global integer IDs.
+
+    Raw scores remain the source for E-values, profile ranking, and graph edge
+    weights.  Per-target-residue scores are an optional decision statistic for
+    comparing candidates with member-derived thresholds.
+    """
 
     profile_cluster_ids: np.ndarray
     gene_ids: np.ndarray
     scores: np.ndarray
     evalues: np.ndarray
     candidate_count: int
+    scores_per_target_residue: np.ndarray | None = None
 
 
 @dataclass(frozen=True)
@@ -417,12 +423,18 @@ def search_genes_against_profiles(
         k_parameter,
     )
     significant = evalues < evalue_threshold
+    significant_gene_ids = pairs[significant, 1].copy()
+    scores_per_target_residue = scores[significant].astype(np.float64)
+    scores_per_target_residue /= np.maximum(
+        sequence_database.lengths[significant_gene_ids], 1
+    )
     return ProfileHits(
         profile_ids[pairs[significant, 0]],
-        pairs[significant, 1].copy(),
+        significant_gene_ids,
         scores[significant].astype(np.float64),
         evalues[significant],
         candidate_count,
+        scores_per_target_residue,
     )
 
 
@@ -435,6 +447,7 @@ def compute_profile_self_thresholds(
     matrix_name: str | None = None,
     calibrate_weakest_member: bool = False,
     calibration_profile_ids: Collection[int] | None = None,
+    score_per_target_residue: bool = False,
 ) -> dict[int, float]:
     """Return member thresholds, optionally calibrated by one jackknife.
 
@@ -442,6 +455,8 @@ def compute_profile_self_thresholds(
     rebuilds each profile without its weakest in-sample member, scores that
     member against the held-out profile, and keeps the lower score.  This
     removes profile-construction optimism without using benchmark labels.
+    Per-target-residue mode applies the same normalization to members and
+    candidates so partial proteins are not compared with full-length totals.
     """
     if calibrate_weakest_member and not matrix_name:
         raise ValueError(
@@ -483,9 +498,16 @@ def compute_profile_self_thresholds(
         band_width,
         cpu,
     )
+    decision_scores = scores.astype(np.float64)
+    if score_per_target_residue:
+        decision_scores /= np.maximum(
+            sequence_database.lengths[pairs[:, 1]], 1
+        )
     thresholds = {}
     weakest_members = {}
-    for cluster_id, pair, score in zip(pair_clusters, pairs, scores):
+    for cluster_id, pair, score in zip(
+        pair_clusters, pairs, decision_scores
+    ):
         score = float(score)
         if score < thresholds.get(cluster_id, np.inf):
             thresholds[cluster_id] = score
@@ -567,7 +589,14 @@ def compute_profile_self_thresholds(
         band_width,
         cpu,
     )
-    for cluster_id, score in zip(jackknife_ids, jackknife_scores):
+    jackknife_decision_scores = jackknife_scores.astype(np.float64)
+    if score_per_target_residue:
+        jackknife_decision_scores /= np.maximum(
+            sequence_database.lengths[jackknife_pairs[:, 1]], 1
+        )
+    for cluster_id, score in zip(
+        jackknife_ids, jackknife_decision_scores
+    ):
         cluster_id = int(cluster_id)
         thresholds[cluster_id] = min(
             thresholds[cluster_id], float(score)
@@ -583,6 +612,7 @@ def build_strict_profile_edges(
     hit_queries,
     hit_targets,
     hit_scores,
+    score_per_target_residue: bool = False,
 ) -> IndexedEdges:
     """Create one sequence-supported anchor for each strict profile candidate."""
     n_genes = len(gene_names)
@@ -598,6 +628,16 @@ def build_strict_profile_edges(
     profile_scores = np.asarray(profile_hits.scores, dtype=np.float64)
     if len(profile_ids) == 0:
         return deduplicate_undirected_edges(gene_names, [], [], [])
+    decision_scores = profile_scores
+    if score_per_target_residue:
+        if profile_hits.scores_per_target_residue is None:
+            raise ValueError(
+                "per-residue profile scores are required for normalized "
+                "thresholding"
+            )
+        decision_scores = np.asarray(
+            profile_hits.scores_per_target_residue, dtype=np.float64
+        )
     thresholds = np.fromiter(
         (self_thresholds.get(int(profile_id), np.inf) for profile_id in profile_ids),
         dtype=np.float64,
@@ -605,7 +645,7 @@ def build_strict_profile_edges(
     )
     eligible = (
         (cluster_by_gene[candidate_genes] != profile_ids)
-        & (profile_scores >= thresholds)
+        & (decision_scores >= thresholds)
     )
     if not eligible.any():
         return deduplicate_undirected_edges(gene_names, [], [], [])
@@ -693,6 +733,7 @@ def build_reciprocal_profile_edges(
     gene_to_species,
     threshold_ratio: float = 0.7,
     min_support: int = 2,
+    score_per_target_residue: bool = False,
 ) -> tuple[IndexedEdges, int]:
     """Connect complementary split clusters with reciprocal profile evidence.
 
@@ -723,13 +764,21 @@ def build_reciprocal_profile_edges(
     profile_ids = np.asarray(profile_hits.profile_cluster_ids, dtype=np.int32)
     candidate_genes = np.asarray(profile_hits.gene_ids, dtype=np.int32)
     profile_scores = np.asarray(profile_hits.scores, dtype=np.float64)
+    if len(profile_ids) == 0:
+        return deduplicate_undirected_edges(gene_names, [], [], []), 0
+    if score_per_target_residue:
+        if profile_hits.scores_per_target_residue is None:
+            raise ValueError(
+                "per-residue profile scores are required for normalized "
+                "thresholding"
+            )
+        profile_scores = np.asarray(
+            profile_hits.scores_per_target_residue, dtype=np.float64
+        )
     if not (
         len(profile_ids) == len(candidate_genes) == len(profile_scores)
     ):
         raise ValueError("profile-hit arrays must align")
-    if len(profile_ids) == 0:
-        return deduplicate_undirected_edges(gene_names, [], [], []), 0
-
     valid_profiles = (profile_ids >= 0) & (profile_ids < len(clusters))
     valid_genes = (candidate_genes >= 0) & (candidate_genes < n_genes)
     thresholds = np.fromiter(
@@ -812,6 +861,7 @@ def expand_profiles(
     reciprocal_profile_merges: bool = False,
     reciprocal_profile_threshold_ratio: float = 0.7,
     reciprocal_profile_min_support: int = 2,
+    score_per_target_residue: bool = False,
 ) -> ProfileExpansionResult:
     """Run the complete strict profile-expansion stage."""
     os.environ["OMP_NUM_THREADS"] = str(cpu)
@@ -849,6 +899,7 @@ def expand_profiles(
         matrix_name=matrix_name,
         calibrate_weakest_member=calibrate_profiles,
         calibration_profile_ids=calibration_profile_ids,
+        score_per_target_residue=score_per_target_residue,
     )
     edges = build_strict_profile_edges(
         gene_names,
@@ -858,6 +909,7 @@ def expand_profiles(
         hit_queries,
         hit_targets,
         hit_scores,
+        score_per_target_residue=score_per_target_residue,
     )
     strict_edge_count = len(edges)
     reciprocal_pairs = 0
@@ -871,6 +923,7 @@ def expand_profiles(
             gene_to_species,
             threshold_ratio=reciprocal_profile_threshold_ratio,
             min_support=reciprocal_profile_min_support,
+            score_per_target_residue=score_per_target_residue,
         )
         reciprocal_edge_count = len(reciprocal_edges)
         edges = combine_edges(edges, reciprocal_edges)

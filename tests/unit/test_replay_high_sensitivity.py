@@ -13,6 +13,7 @@ def test_replay_profile_iterations_default_to_one():
     assert args.profile_iterations == 1
     assert args.jackknife_profile_thresholds is False
     assert args.jackknife_single_copy_profiles is False
+    assert args.profile_score_per_target_residue is False
     assert args.profile_min_species == 1
     assert args.reciprocal_profile_merges is False
     assert args.reciprocal_profile_threshold_ratio == 0.7
@@ -39,6 +40,17 @@ def test_replay_accepts_single_copy_jackknife_thresholds():
     ])
 
     assert args.jackknife_single_copy_profiles is True
+
+
+def test_replay_accepts_profile_score_per_target_residue():
+    args = replay_high_sensitivity.build_parser().parse_args([
+        "--hits-pickle", "hits.pkl",
+        "--output-directory", "output",
+        "--json", "result.json",
+        "--profile-score-per-target-residue",
+    ])
+
+    assert args.profile_score_per_target_residue is True
 
 
 def test_replay_rejects_two_jackknife_modes():
