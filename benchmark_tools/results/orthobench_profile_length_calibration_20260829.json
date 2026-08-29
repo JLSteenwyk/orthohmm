@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "candidate": "single-copy weakest-member calibration with profile score per target residue",
+  "independent_screen": {
+    "artifact": "benchmark_tools/results/profile_length_calibration_holdout_20260829.json",
+    "sha256": "87f481c58e6dce9a6b1ccd1fbc241ff7107dd58ed91515adc3c066586a818b8a",
+    "development": {
+      "f_score": 0.8244897959183674,
+      "precision": 1.0,
+      "recall": 0.7013888888888888,
+      "negative_rejection_rate": 1.0
+    },
+    "holdout": {
+      "f_score": 0.8571428571428571,
+      "precision": 1.0,
+      "recall": 0.75,
+      "negative_rejection_rate": 1.0
+    }
+  },
+  "fresh_orthobench": {
+    "result": "benchmarks/results/production_high_sensitivity_replay_profiles_single_copy_per_residue_20260829/result.json",
+    "result_sha256": "b286b5ada8f52d36cb51de80103c2ce9d05f6edc3d07db340b70afac8a018f13",
+    "final_output_sha256": "1c8b39c2d7c0913428a4fcc3b4c04c63db1502b2da5e87aa4b2ead0b5941ccfd",
+    "f_score": 69.7,
+    "precision": 76.6,
+    "recall": 63.9,
+    "exact_refogs": 13,
+    "strict_profile_edges": 30391,
+    "wall_seconds": 348.39,
+    "maximum_rss_kib": 6162072
+  },
+  "selective_jackknife_comparator": {
+    "f_score": 70.5,
+    "precision": 78.7,
+    "recall": 63.8,
+    "exact_refogs": 12,
+    "strict_profile_edges": 27241
+  },
+  "orthofinder_3_1_5": {
+    "f_score": 72.7,
+    "precision": 66.1,
+    "recall": 80.9,
+    "exact_refogs": 19
+  },
+  "decision": "rejected",
+  "reason": "Per-target-residue thresholding admitted 3150 additional strict profile edges but reduced final F-score by 0.8 points relative to selective jackknife. The synthetic fragment screen did not model short domain-level false matches in full proteomes. The option remains disabled by default and QfO and Three Kingdoms were not run."
+}
