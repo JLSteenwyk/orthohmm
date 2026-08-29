@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "candidate": "single-copy-gated weakest-member jackknife profile calibration",
+  "decision": "retain_opt_in",
+  "reason": "The independently gated method improved refined OrthoBench F-score from 70.4 to 70.5 and recall from 63.5 to 63.8 with effectively unchanged peak RSS. The gain remains below OrthoFinder 3.1.5 at F=72.7, precision decreased by 0.2 points, exact RefOGs decreased from 13 to 12, and wall time increased by 8.7%, so it is not promoted to the default and does not yet justify a QfO run.",
+  "independent_gate": {
+    "artifact": "benchmark_tools/results/selective_jackknife_holdout_20260829.json",
+    "sha256": "37b9025ac6ddd2fc830736ed96033fff6675e3e3c18e13e0b617e9cf78e246a3",
+    "development": {
+      "single_copy_profiles": 36,
+      "contaminated_profiles": 18,
+      "selectively_relaxed_contaminated_profiles": 0,
+      "precision": 1.0,
+      "recall": 0.4861111111111111,
+      "negative_rejection_rate": 1.0
+    },
+    "holdout": {
+      "single_copy_profiles": 36,
+      "contaminated_profiles": 18,
+      "selectively_relaxed_contaminated_profiles": 0,
+      "precision": 1.0,
+      "recall": 0.5277777777777778,
+      "negative_rejection_rate": 1.0
+    }
+  },
+  "orthobench": {
+    "input_hits_sha256": "78a5af40ea2683a69e1baefefb0966c3549cffe71b24bda03b9ba4a6e29e65e1",
+    "baseline": {
+      "calibrated_profiles": 0,
+      "strict_profile_edges": 24738,
+      "f_score": 70.4,
+      "precision": 78.9,
+      "recall": 63.5,
+      "exact_refogs": 13,
+      "wall_s": 319.467197,
+      "peak_process_rss_gib": 5.560291,
+      "final_clusters": 62885,
+      "final_cluster_sha256": "8ee100f4370fef6e3e6a3e0fd36112adcc3aefeb60197331115667c519ca121f"
+    },
+    "candidate": {
+      "profiles_built": 15901,
+      "calibrated_profiles": 4328,
+      "strict_profile_edges": 27241,
+      "f_score": 70.5,
+      "precision": 78.7,
+      "recall": 63.8,
+      "exact_refogs": 12,
+      "wall_s": 347.148762,
+      "wall_ratio": 1.0866491623,
+      "peak_process_rss_gib": 5.561882,
+      "final_clusters": 63008,
+      "final_cluster_sha256": "55f9e3a2912bf3b3aabb1371a34f8dcae91fed6144cbd7273aea47253fa1263a",
+      "raw_result_sha256": "e2a4606cf9d0c6143256d4c58279f371987d342c18601f503622ec805f7850d3"
+    }
+  },
+  "implementation_commit": "6d48b357a9ba0bca5ce042992d60eaedb695ca9a",
+  "default_changed": false,
+  "qfo_run": false,
+  "three_kingdoms_run": false
+}
