@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "objective": "Improve sequence-based OrthoHMM accuracy without benchmark-label leakage, uncontrolled specificity loss, or unjustified runtime and memory growth.",
+  "benchmark_priority": [
+    "OrthoBench",
+    "QfO",
+    "Three Kingdoms"
+  ],
+  "orthobench": {
+    "previous_production": {
+      "f_score": 63.8,
+      "precision": 85.2,
+      "recall": 51.0,
+      "exact_refogs": 12,
+      "wall_s": 978.63,
+      "peak_process_tree_rss_gib": 2.83
+    },
+    "orthohmm_high_sensitivity": {
+      "f_score": 70.4,
+      "precision": 78.9,
+      "recall": 63.5,
+      "exact_refogs": 13,
+      "wall_s": 2185.484815,
+      "peak_process_tree_rss_gib": 11.901123,
+      "runtime_comparison_controlled": false,
+      "final_clusters_sha256": "8ee100f4370fef6e3e6a3e0fd36112adcc3aefeb60197331115667c519ca121f"
+    },
+    "independent_resource_comparison": {
+      "high_sensitivity_wall_s": 2203.513,
+      "high_sensitivity_peak_process_tree_rss_gib": 11.865,
+      "wall_ratio_vs_previous_production": 2.25163,
+      "peak_rss_ratio_vs_previous_production": 4.19258,
+      "note": "The independent first fresh run preceded the self-hit threshold correction but uses the same search workload and remains the best controlled high-sensitivity cost estimate."
+    },
+    "orthofinder_3_1_5_diamond": {
+      "f_score": 72.7,
+      "precision": 66.1,
+      "recall": 80.9,
+      "exact_refogs": 19
+    },
+    "gates": {
+      "reproduces_or_exceeds_cached_milestone": true,
+      "beats_previous_production": true,
+      "beats_orthofinder_3_1_5": false
+    },
+    "detail_artifact": "benchmark_tools/results/orthobench_high_sensitivity_selfhit_fixed_20260828.json"
+  },
+  "qfo": {
+    "status": "complete",
+    "orthohmm_high_sensitivity": {
+      "mean": 0.6825484075119435,
+      "scores": {
+        "VGNC F": 0.6674480910917616,
+        "SwissTrees F": 0.6738508557156822,
+        "TreeFam-A F": 0.5758699637439971,
+        "EC": 0.93104489,
+        "GO": 0.47228231,
+        "FAS": 0.7747943345202203
+      },
+      "wall_s": 69438,
+      "peak_process_tree_rss_gib": 16.700291,
+      "orthogroups": 390817,
+      "qfo_filtered_pairs": 8720518
+    },
+    "orthofinder_3_1_5_diamond": {
+      "mean": 0.7820708882895963,
+      "scores": {
+        "VGNC F": 0.9882293593408441,
+        "SwissTrees F": 0.8591604357197734,
+        "TreeFam-A F": 0.7428869916535419,
+        "EC": 0.94198234,
+        "GO": 0.46816557,
+        "FAS": 0.6920006330234186
+      },
+      "wall_s": 80953,
+      "peak_process_tree_rss_gib": 6.10243
+    },
+    "orthohmm_wins": [
+      "GO",
+      "FAS"
+    ],
+    "orthohmm_mean_delta": -0.0995224807776528,
+    "beats_orthofinder_3_1_5_mean": false,
+    "detail_artifact": "benchmark_tools/results/qfo_high_sensitivity_20260829.json"
+  },
+  "three_kingdoms": {
+    "priority": "secondary",
+    "orthohmm_high_sensitivity": {
+      "f_score": 0.8263,
+      "precision": 1.0,
+      "recall": 0.704,
+      "wall_s": 6556.426547,
+      "peak_process_tree_rss_gib": 11.12159
+    },
+    "comparators": {
+      "proteinortho": 0.9305,
+      "orthohmm_prior_cpm_m4": 0.907,
+      "sonicparanoid": 0.8859,
+      "orthofinder_2_5_5_diamond": 0.8552,
+      "orthohmm_previous_fixed_cpm_production": 0.0003
+    },
+    "supports_new_default": false,
+    "detail_artifact": "benchmark_tools/results/three_kingdoms_high_sensitivity_20260828.json"
+  },
+  "implementation": {
+    "production_profile": "high_sensitivity",
+    "inference_revision": "694a77fe56167754ca949751bca88aa7d11353dc",
+    "scoring_harness_revision": "d1055f66284cf795b86dccde2eccfd8c39c577b7",
+    "accepted": [
+      "bounded k=4 multipass sequence search",
+      "reciprocal-best and singleton graph recovery",
+      "strict profile expansion",
+      "self-hit exclusion before RBNH threshold estimation",
+      "bounded concurrent profile-build futures",
+      "atomic high-sensitivity hit checkpoints",
+      "subprocess isolation for benchmark-scale Leiden graphs"
+    ],
+    "rejected": [
+      "relaxed profile thresholds or anchors",
+      "RBNH threshold multipliers",
+      "global BLOSUM45 search",
+      "wider BLOSUM62 extension band",
+      "second iterative profile pass",
+      "reduced-alphabet prefilter replacement or fallback"
+    ],
+    "deferred": [
+      "adaptive or multi-matrix consensus pending calibration",
+      "position-specific gap transitions pending learned parameters",
+      "bimodal or composition-specific nulls pending an independent calibration corpus",
+      "profile-profile comparison pending a calibrated model and null",
+      "bootstrap confidence because it validates rather than directly improves assignments"
+    ],
+    "experiment_ledger": "benchmark_tools/results/sequence_accuracy_experiments_20260828.json"
+  },
+  "validation": {
+    "unit_tests": {
+      "status": "passed",
+      "passed": 260,
+      "duration_s": 8.68
+    },
+    "fresh_production_runs": [
+      "OrthoBench",
+      "QfO",
+      "Three Kingdoms"
+    ],
+    "benchmark_labels_used_during_inference": false
+  },
+  "recommendation": {
+    "status": "final",
+    "default_profile": "standard",
+    "high_sensitivity_profile": "retain_opt_in",
+    "reason": "High sensitivity improves OrthoBench by 6.6 F-score points over previous production, but it remains 2.3 points below OrthoFinder 3.1.5 there, trails OrthoFinder by 0.100 mean QfO score, uses substantially more peak memory, and does not lead the secondary Three Kingdoms benchmark."
+  },
+  "commits": [
+    "5f8681a Add OrthoBench accuracy stage diagnostics",
+    "12c0726 Record OrthoBench accuracy loss stages",
+    "308defa Optimize the production OrthoHMM pipeline",
+    "9d0a6ca Document production benchmark results",
+    "c530c7b Add high-sensitivity multipass inference",
+    "37c89fd Add strict profile expansion for sensitive inference",
+    "a6bb789 Record high-sensitivity OrthoBench milestone",
+    "b5a68bf Add production high-sensitivity QfO workflow",
+    "e493291 Fix QfO scheduler repository resolution",
+    "cdec072 Add production Three Kingdoms validation",
+    "622774e Record fresh high-sensitivity OrthoBench result",
+    "ab745a0 Bound profile build task memory",
+    "599dda4 Exclude self hits from RBNH thresholds",
+    "7321c80 Evaluate iterative profile refinement",
+    "41225fc Record corrected high-sensitivity OrthoBench result",
+    "63aeb8a Summarize sequence accuracy experiments",
+    "41d61f1 Record fresh Three Kingdoms validation",
+    "355d952 Record OrthoFinder 3.1.5 QfO assessment",
+    "694a77f Isolate large Leiden graphs and checkpoint hits",
+    "d1055f6 Shorten QfO scoring work paths"
+  ]
+}

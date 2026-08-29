@@ -36,6 +36,11 @@
       "change": "Bound concurrent profile-build futures",
       "decision": "accept",
       "evidence": "Preserves byte-identical scientific output while bounding queued task payloads to twice the worker count."
+    },
+    {
+      "change": "Isolate benchmark-scale Leiden graphs and checkpoint significant hits",
+      "decision": "accept",
+      "evidence": "The first QfO attempt exited with SIGSEGV after initial Leiden clustering. The isolated retry completed 88,729,858 significant hits, three large Leiden invocations, 390,817 orthogroups, and all downstream pair exports without changing the scientific parameters."
     }
   ],
   "already_implemented": [
@@ -121,7 +126,24 @@
   ],
   "validation": {
     "orthobench": "complete",
-    "qfo": "running",
+    "qfo": {
+      "status": "complete",
+      "mean": 0.6825484075119435,
+      "orthofinder_3_1_5_mean": 0.7820708882895963,
+      "beats_orthofinder_3_1_5": false,
+      "wins": [
+        "GO",
+        "FAS"
+      ],
+      "losses": [
+        "VGNC F",
+        "SwissTrees F",
+        "TreeFam-A F",
+        "EC"
+      ],
+      "supports_new_default": false,
+      "detail_artifact": "benchmark_tools/results/qfo_high_sensitivity_20260829.json"
+    },
     "three_kingdoms": {
       "status": "complete",
       "f_score": 0.8263,
@@ -130,7 +152,7 @@
       "beats_orthofinder_2_5_5_diamond": false,
       "supports_new_default": false
     },
-    "recommendation": "Keep high_sensitivity opt-in until fresh QfO scoring completes."
+    "recommendation": "Keep high_sensitivity opt-in. It improves OrthoBench by 6.6 F-score points over previous production but remains below OrthoFinder 3.1.5 on OrthoBench and mean QfO score, costs more memory, and does not lead Three Kingdoms."
   },
   "artifact_sha256": {
     "corrected_production_metrics": "e0ef152ac4ae4df6e9c0294c3ab44657ad7f10445e5e8b2844ac1b6bfbf3ecf8",
@@ -142,6 +164,9 @@
     "iterative_profile_replay": "b9f4fde1922a89d0df28668d4cdf35c883b9f78b7768cb157017a6cec3724ad1",
     "fresh_cached_pair_diagnostic": "bffa4b23c0a2667c1ee55a5ba47babc1267ee7872ac1b7bed6ab4844d463ca6d",
     "reduced_alphabet_pair_screen": "d84712dc1fc67b78eb67701b5b216d4c9c471758fdd318af2954707e66cbfc00",
-    "reduced_alphabet_no_hit_rescue": "54392d749ceaa34c3596b9271662c2a2339089712686df9eb8a0399bfa609d02"
+    "reduced_alphabet_no_hit_rescue": "54392d749ceaa34c3596b9271662c2a2339089712686df9eb8a0399bfa609d02",
+    "qfo_inference_metrics": "fb6b8d7e6824e1801c7cdb794e319d30ee9c16d9eada9213ef345b8de54d8893",
+    "qfo_filtered_pairs": "3abde0f64063ce8ce0432d358faa340556df95a8b5d4aa6d30b0e19deea7cb0f",
+    "qfo_consolidated_results": "b35a972990563d650db24fdd1b56fccec25a1321d67e4fbc7772fdec60948ca0"
   }
 }

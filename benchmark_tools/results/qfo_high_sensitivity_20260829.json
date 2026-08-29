@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "benchmark": "QfO 2020 retained six-metric assessment",
+  "method": "OrthoHMM high_sensitivity",
+  "inference": {
+    "job_id": 20864,
+    "source_commit": "694a77fe56167754ca949751bca88aa7d11353dc",
+    "source_worktree_dirty": true,
+    "source_worktree_note": "The benchmark harness recorded a dirty worktree because documentation and generated sample fixtures were modified. All inference source changes were committed in source_commit before submission.",
+    "command": "python -m orthohmm INPUT -o OUTPUT -c 32 --threads_per_worker 8 -x BLOSUM62 -e 0.0001 --clustering leiden --cpm_resolution 0.1 --refinement_profile default --accuracy_profile high_sensitivity --stop infer",
+    "cpu_budget": 32,
+    "wall_s": 69407.7878,
+    "end_to_end_wall_s": 69438,
+    "peak_process_tree_rss_bytes": 17931800576,
+    "peak_process_tree_rss_gib": 16.700291,
+    "genes": 976504,
+    "orthogroups": 390817,
+    "search_candidates": 6902869855,
+    "significant_hits": 88729858,
+    "rbnh_edges": 24148515,
+    "initial_singleton_edges": 1361622,
+    "profiles": 57883,
+    "profile_candidates": 19519955,
+    "profile_hits": 1966961,
+    "profile_edges": 98085,
+    "final_singleton_edges": 1250874,
+    "network_edges": 25168957,
+    "native_pairs": 8751707,
+    "qfo_filtered_pairs": 8720518,
+    "checkpoint": {
+      "status": "complete_and_verified",
+      "genes": 976504,
+      "hits": 88729858,
+      "manifest_sha256": "b90c787f050a087adeeb81b1cace18c9cbb30e1724926a40a1df6d7e49bd549c"
+    }
+  },
+  "assessment": {
+    "event_year": 2020,
+    "initial_scoring_job_id": 20865,
+    "initial_scoring_exit_code": "1:0",
+    "initial_scoring_failure": "Darwin truncated the 161-character resolved predictions.db path; no metric result was used from this attempt.",
+    "scoring_job_id": 20866,
+    "scoring_harness_commit": "d1055f66284cf795b86dccde2eccfd8c39c577b7",
+    "scoring_exit_code": "0:0",
+    "scoring_elapsed_s": 1837,
+    "scores": {
+      "VGNC F": 0.6674480910917616,
+      "SwissTrees F": 0.6738508557156822,
+      "TreeFam-A F": 0.5758699637439971,
+      "EC": 0.93104489,
+      "GO": 0.47228231,
+      "FAS": 0.7747943345202203
+    },
+    "mean": 0.6825484075119435,
+    "all_six_metrics_complete": true
+  },
+  "orthofinder_3_1_5_comparison": {
+    "artifact": "benchmark_tools/results/qfo_orthofinder_v3_1_5_20260828.json",
+    "mean": 0.7820708882895963,
+    "orthohmm_mean_delta": -0.0995224807776528,
+    "orthohmm_wins": [
+      "GO",
+      "FAS"
+    ],
+    "orthofinder_wins": [
+      "VGNC F",
+      "SwissTrees F",
+      "TreeFam-A F",
+      "EC"
+    ],
+    "inference_wall_ratio": 0.8577569700937581,
+    "peak_rss_ratio": 2.7366624443049736,
+    "beats_orthofinder_mean": false
+  },
+  "checksums": {
+    "metrics_sha256": "fb6b8d7e6824e1801c7cdb794e319d30ee9c16d9eada9213ef345b8de54d8893",
+    "orthogroups_sha256": "ec15728adaac612cbe37e9d3585742a6c79afc05a15e9d44a1fc1a0b26767e26",
+    "native_pairs_sha256": "4c1ae88a80ce8fded412691d8d37d6cccf3ffc32bd7be2fd7be2b4c63e3a28bc",
+    "qfo_filtered_pairs_sha256": "3abde0f64063ce8ce0432d358faa340556df95a8b5d4aa6d30b0e19deea7cb0f",
+    "network_edges_sha256": "edfdc2728231c2606de63a13073ef9ecd960254f35836a1e6cc5e66caf054dad",
+    "final_clusters_sha256": "63ade2f317c6343bd0d1e98af0fe0e299dd61530fb6094dec62d97dab30a4df3",
+    "VGNC_sha256": "c051f7dd23209368852d71eb1226b83358345bcbe6fbda6b6bad46a12fb97bba",
+    "SwissTrees_sha256": "fd176816bee0bfc7ff50ea5198f9969de7ab73b923c6c8bf01f331c951b35a4e",
+    "TreeFam-A_sha256": "41db4856097380ac073b3614aa964736a4f93c9f6f5397f989cd23599cb9e893",
+    "EC_sha256": "4df2e5ab66fc6873f3c3e84caba20e06f48ba875ae285f5c613f2624cd2f9ccb",
+    "GO_sha256": "6828e49f152050855831ea9764331c9af31b2a804c14a59ceac187500b0aca25",
+    "FAS_sha256": "32bded13129090d6899587020264eccd59c761862487fa3aad78936a96900224",
+    "assessment_manifest_sha256": "20ab6169c89e77800054e9dce3ad2414b26862f00a3efa39b0c384a02b231124",
+    "assessment_datasets_sha256": "c316171d9bb09413ed8bfc859da5d806eaae6369ba8f3ddc0bebd938b2da7b4e",
+    "consolidated_results_sha256": "b35a972990563d650db24fdd1b56fccec25a1321d67e4fbc7772fdec60948ca0"
+  },
+  "failed_attempt": {
+    "job_id": 20860,
+    "wrapper_exit_code": 117,
+    "child_exit_code": -11,
+    "failure_stage": "post-initial-Leiden high-sensitivity processing",
+    "recovery_change": "Large Leiden graphs now run in short-lived subprocesses and significant hit arrays are atomically checkpointed before native graph stages."
+  },
+  "source_paths": {
+    "inference": "qfo_benchmark/results/orthohmm_high_sensitivity_isolated",
+    "assessment": "qfo_benchmark/scoring/orthohmm_high_sensitivity"
+  },
+  "recommendation": "Retain high_sensitivity as opt-in. It improves OrthoBench substantially but does not beat OrthoFinder 3.1.5 on OrthoBench or mean QfO score and uses substantially more peak memory."
+}

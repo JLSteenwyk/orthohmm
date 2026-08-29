@@ -1,6 +1,6 @@
 # Production Performance Optimization
 
-Date: 2026-08-28
+Completed: 2026-08-29
 
 This work improves the production OrthoHMM CLI while preserving its computed
 graph and orthogroups. QfO and OrthoBench are the primary accuracy benchmarks;
@@ -43,6 +43,10 @@ driver.
    the complete gene table for every orthogroup.
 9. Linux process-tree RSS and detailed stage metrics are opt-in through the
    benchmark harness, so normal CLI runs do not pay monitoring overhead.
+10. High-sensitivity significant-hit arrays are written atomically with byte
+    counts and SHA-256 checksums before native graph processing.
+11. Leiden graphs with at least five million edges run in short-lived worker
+    processes so native graph state cannot corrupt later multiprocessing.
 
 ## Controlled Results
 
@@ -131,13 +135,44 @@ The corrected run used 2,185.48 seconds and 11.90 GiB peak process-tree RSS.
 It was co-scheduled with QfO and Three Kingdoms, so that wall time is not a
 controlled runtime comparison. The independent first fresh run remains the
 best estimate of high-sensitivity cost: 2.25x the optimized standard runtime
-and 4.2x its peak RSS. High sensitivity therefore remains opt-in while its QfO
-validation is in progress.
+and 4.2x its peak RSS.
 
-Cached QfO evidence remains approximately 0.674 for
-`orthohmm_split_s150_c10`. No QfO search result is attributed to the new
-production harness until a full production run and official assessment are
-completed.
+The fresh QfO production run processed 976,504 proteins in 69,438 seconds on
+32 CPUs with 16.70 GiB peak process-tree RSS. It produced 88,729,858
+significant hits, 25,168,957 final network edges, 390,817 orthogroups, and
+8,720,518 filtered QfO pairs. The official six-metric assessment completed
+successfully. Its mean score is 0.6825, compared with 0.7821 for OrthoFinder
+3.1.5 DIAMOND. OrthoHMM leads on GO and FAS but trails on VGNC, SwissTrees,
+TreeFam-A, and EC.
+
+The first QfO attempt exited with SIGSEGV after initial Leiden clustering.
+The retry used atomic hit checkpoints and isolated every benchmark-scale
+Leiden graph in a short-lived process; it completed the same search workload
+and all downstream stages. The initial scoring job then exposed a separate
+Darwin 160-character path limit. A configurable short Nextflow work root fixed
+that harness issue, and the clean scoring-only retry completed all six metrics.
+
+The primary benchmark comparison is therefore:
+
+| method | OrthoBench F | precision | recall | exact RefOGs | status |
+| --- | ---: | ---: | ---: | ---: | --- |
+| OrthoHMM previous production | 63.8 | 85.2 | 51.0 | 12 | fresh production baseline |
+| OrthoHMM high sensitivity | 70.4 | 78.9 | 63.5 | 13 | fresh production result |
+| OrthoFinder 3.1.5 DIAMOND | 72.7 | 66.1 | 80.9 | 19 | fresh comparator result |
+
+High sensitivity recovers 12.5 recall points while retaining a 12.8-point
+precision advantage over OrthoFinder, but its lower recall leaves it 2.3
+F-score points behind.
+
+| method | VGNC F | SwissTrees F | TreeFam-A F | EC | GO | FAS | mean |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| OrthoHMM high sensitivity | 0.667 | 0.674 | 0.576 | 0.931 | 0.472 | 0.775 | 0.683 |
+| OrthoFinder 3.1.5 DIAMOND | 0.988 | 0.859 | 0.743 | 0.942 | 0.468 | 0.692 | 0.782 |
+
+OrthoHMM inference was 14.2% faster in these separate production runs, but it
+used 2.74x the peak process-tree RSS and scored 0.100 lower on the six-metric
+mean. Because the runs were not co-scheduled, the resource comparison is
+descriptive rather than a controlled speed claim.
 
 The fresh secondary Three Kingdoms run scored F=0.8263, precision=1.0000,
 and recall=0.7040. It processed 443,217 proteins in 6,556.43 seconds with
@@ -149,6 +184,15 @@ at F=0.9070, and ProteinOrtho at F=0.9305. No OrthoFinder 3.1.5 Three
 Kingdoms result is available, so this secondary comparison is not attributed
 to the upgraded comparator. The result does not support making the
 high-sensitivity profile the default.
+
+| method | Three Kingdoms F | precision | recall | comparator version |
+| --- | ---: | ---: | ---: | --- |
+| ProteinOrtho | 0.9305 | 1.0000 | 0.8700 | recorded benchmark output |
+| OrthoHMM prior CPM-M4 experiment | 0.9070 | 1.0000 | 0.8298 | historical experimental output |
+| SonicParanoid | 0.8859 | 1.0000 | 0.7952 | recorded benchmark output |
+| OrthoFinder DIAMOND | 0.8552 | 1.0000 | 0.7470 | 2.5.5 |
+| OrthoHMM high sensitivity | 0.8263 | 1.0000 | 0.7040 | fresh production result |
+| OrthoHMM previous fixed CPM production | 0.0003 | 1.0000 | 0.0001 | historical production output |
 
 ## Sequence-Accuracy Proposal Assessment
 
@@ -220,7 +264,7 @@ Adopt the compact representations, 4 x 8 scheduler on 32 CPUs, deterministic
 direct Leiden path, numeric thresholds, and indexed orthogroup materialization
 as production defaults. Retain the corrected high-sensitivity workflow as an
 opt-in profile: its fresh OrthoBench checksum and accuracy gates pass, but it
-has a substantial compute and memory cost and does not yet beat OrthoFinder.
+has a substantial compute and memory cost and does not beat OrthoFinder on
+OrthoBench or mean QfO score.
 Do not adopt multi-matrix consensus, relaxed profile boundaries, iterative
-profiles, or reduced-alphabet rescue from the present evidence. Complete the
-fresh QfO assessment before considering high sensitivity as the default.
+profiles, or reduced-alphabet rescue from the present evidence.
