@@ -162,14 +162,34 @@ def build_cluster_profiles(
     cpu: int,
     min_cluster_size: int = 3,
     max_cluster_size: int = 200,
+    gene_to_species=None,
+    min_species_count: int = 1,
 ) -> dict[int, MSAProfile]:
     """Build center-star MSA profiles for informative cluster sizes."""
+    if min_species_count < 1:
+        raise ValueError("min_species_count must be >= 1")
+    if min_species_count > 1 and gene_to_species is None:
+        raise ValueError(
+            "gene_to_species is required when min_species_count > 1"
+        )
+    species = (
+        np.asarray(gene_to_species, dtype=np.int32)
+        if gene_to_species is not None
+        else None
+    )
+    if species is not None and len(species) != len(gene_names):
+        raise ValueError("gene_to_species must match gene_names")
     sub_matrix = get_matrix(matrix_name)
     background = get_background_freqs(matrix_name)
     cluster_ids = [
         cluster_id
         for cluster_id, cluster in enumerate(clusters)
         if min_cluster_size <= len(cluster) <= max_cluster_size
+        and (
+            min_species_count == 1
+            or len(np.unique(species[np.asarray(cluster, dtype=np.int32)]))
+            >= min_species_count
+        )
     ]
 
     def tasks():
@@ -645,6 +665,8 @@ def expand_profiles(
     hit_targets,
     hit_scores,
     calibrate_weakest_member: bool = False,
+    gene_to_species=None,
+    min_profile_species: int = 1,
 ) -> ProfileExpansionResult:
     """Run the complete strict profile-expansion stage."""
     os.environ["OMP_NUM_THREADS"] = str(cpu)
@@ -657,6 +679,8 @@ def expand_profiles(
         sequence_database,
         matrix_name,
         cpu,
+        gene_to_species=gene_to_species,
+        min_species_count=min_profile_species,
     )
     profile_hits = search_genes_against_profiles(
         profiles,

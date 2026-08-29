@@ -101,6 +101,15 @@ def build_parser() -> argparse.ArgumentParser:
             "member (default: disabled)"
         ),
     )
+    parser.add_argument(
+        "--profile-min-species",
+        type=int,
+        default=1,
+        help=(
+            "Minimum distinct species represented by a cluster before "
+            "building its profile HMM (default: 1)"
+        ),
+    )
     return parser
 
 
@@ -214,6 +223,8 @@ def main(argv=None) -> int:
                 targets,
                 scores,
                 calibrate_weakest_member=args.jackknife_profile_thresholds,
+                gene_to_species=gene_to_species,
+                min_profile_species=args.profile_min_species,
             )
             profile_results.append(profile_result)
             profile_base_edges = combine_edges(
@@ -316,6 +327,7 @@ def main(argv=None) -> int:
             "profile_expansion": bool(profile_results),
             "profile_iterations": args.profile_iterations,
             "jackknife_profile_thresholds": args.jackknife_profile_thresholds,
+            "profile_min_species": args.profile_min_species,
             "matrix": args.matrix,
             "leiden_seed": args.leiden_seed,
         },

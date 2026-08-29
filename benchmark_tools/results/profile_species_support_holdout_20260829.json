@@ -1,0 +1,43 @@
+{
+  "configuration": {
+    "cpu": 8,
+    "development_seed": 1103,
+    "families": 36,
+    "holdout_seed": 2909,
+    "matrix": "BLOSUM62",
+    "minimum_species": 3
+  },
+  "created_at": "2026-08-29T21:51:48.723045+00:00",
+  "description": "Synthetic development/holdout construction test for requiring cross-species support before building a profile HMM.",
+  "development": {
+    "families": 36,
+    "gated_profiles": 36,
+    "lineage_specific_profiles": 18,
+    "lineage_specific_profiles_retained": 0,
+    "minimum_species": 3,
+    "passed": true,
+    "seed": 1103,
+    "true_profiles": 36,
+    "true_profiles_retained": 36,
+    "ungated_profiles": 54
+  },
+  "git": {
+    "commit": "858cd09ae8761ffbb6db59665af9a567f0963149",
+    "dirty": true
+  },
+  "holdout": {
+    "families": 36,
+    "gated_profiles": 36,
+    "lineage_specific_profiles": 18,
+    "lineage_specific_profiles_retained": 0,
+    "minimum_species": 3,
+    "passed": true,
+    "seed": 2909,
+    "true_profiles": 36,
+    "true_profiles_retained": 36,
+    "ungated_profiles": 54
+  },
+  "label_policy": "Uses generated family and species labels only; no final benchmark labels or tool outputs are read.",
+  "passed": true,
+  "schema_version": 1
+}

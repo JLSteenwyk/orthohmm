@@ -51,6 +51,51 @@ def test_build_cluster_profiles_skips_clusters_outside_size_range(tmp_path):
     assert profiles[0].member_ids == ["a1", "a2", "a3"]
 
 
+def test_build_cluster_profiles_requires_cross_species_support(tmp_path):
+    (tmp_path / "a.fa").write_text(
+        ">a1\nACDEFG\n>a2\nACDEYG\n>a3\nACDEWG\n"
+        ">b1\nKLMNPQ\n>b2\nKLMNAQ\n>b3\nKLMNWQ\n"
+    )
+    names = ["a1", "a2", "a3", "b1", "b2", "b3"]
+    database = load_global_sequence_database(
+        str(tmp_path), ["a.fa"], names
+    )
+
+    profiles = build_cluster_profiles(
+        [[0, 1, 2], [3, 4, 5]],
+        names,
+        database,
+        "BLOSUM62",
+        cpu=1,
+        gene_to_species=[0, 0, 0, 0, 1, 2],
+        min_species_count=3,
+    )
+
+    assert list(profiles) == [1]
+
+
+def test_profile_species_gate_requires_species_mapping(tmp_path):
+    (tmp_path / "a.fa").write_text(
+        ">a1\nACDEFG\n>a2\nACDEYG\n>a3\nACDEWG\n"
+    )
+    names = ["a1", "a2", "a3"]
+    database = load_global_sequence_database(
+        str(tmp_path), ["a.fa"], names
+    )
+
+    with np.testing.assert_raises_regex(
+        ValueError, "gene_to_species is required"
+    ):
+        build_cluster_profiles(
+            [[0, 1, 2]],
+            names,
+            database,
+            "BLOSUM62",
+            cpu=1,
+            min_species_count=3,
+        )
+
+
 def test_parallel_profile_build_matches_serial(tmp_path):
     (tmp_path / "a.fa").write_text(
         ">a1\nACDEFG\n>a2\nACDEYG\n>a3\nACDEWG\n"
