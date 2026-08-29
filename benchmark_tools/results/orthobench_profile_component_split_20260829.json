@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "candidate": "strong-component refinement with profile-HMM anchor edges",
+  "independent_screen": {
+    "artifact": "benchmark_tools/results/profile_component_split_holdout_20260829.json",
+    "sha256": "c5d770d30470ab95b1cfdc67dff18fac7a4b6f7cb3ee5f9f5c72be434d6d3018",
+    "development": {
+      "f_score": 0.7312775330396475,
+      "precision": 1.0,
+      "recall": 0.5763888888888888,
+      "negative_profile_edges": 0
+    },
+    "holdout": {
+      "f_score": 0.7550432276657061,
+      "precision": 1.0,
+      "recall": 0.6064814814814815,
+      "negative_profile_edges": 0
+    }
+  },
+  "fresh_orthobench": {
+    "result": "benchmarks/results/production_high_sensitivity_replay_profiles_component_split_20260829/result.json",
+    "result_sha256": "fec3909f4d825e8cf6154a81d76139649cb14531648498caba2f13679958f3dd",
+    "final_output_sha256": "48d3277bf56ba2bb69da9d10068de7971b736109d85e858d424c6779c0187bca",
+    "f_score": 70.5,
+    "precision": 78.7,
+    "recall": 63.8,
+    "exact_refogs": 12,
+    "final_clusters": 54969,
+    "wall_seconds": 348.42,
+    "maximum_rss_kib": 6170952
+  },
+  "selective_jackknife_comparator": {
+    "f_score": 70.5,
+    "precision": 78.7,
+    "recall": 63.8,
+    "exact_refogs": 12,
+    "final_clusters": 63008,
+    "final_output_sha256": "55f9e3a2912bf3b3aabb1371a34f8dcae91fed6144cbd7273aea47253fa1263a"
+  },
+  "decision": "retain_opt_in_neutral",
+  "reason": "The method reduced final cluster count by 8,039 and changed the partition, but F-score, precision, recall, and exact RefOGs were all unchanged at official reporting precision. It remains disabled by default and does not justify a QfO run."
+}
