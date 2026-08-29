@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "candidate": "weakest-member jackknife calibration of HMM profile thresholds",
+  "decision": "reject",
+  "reason": "The independent synthetic gate passed, but the fresh OrthoBench replay lost 1.3 F-score points. The additional profile edges reduced precision without improving final recall.",
+  "independent_gate": {
+    "artifact": "benchmark_tools/results/hmm_generalization_holdout_20260829.json",
+    "sha256": "a6204780b0ecd87676b37d3f2b296bc435dee488ac8f2d61a00981a3314808c9",
+    "development": {
+      "in_sample_f_score": 0.013793103448275862,
+      "jackknife_f_score": 0.6542056074766355,
+      "jackknife_precision": 1.0,
+      "jackknife_recall": 0.4861111111111111,
+      "negative_rejection_rate": 1.0
+    },
+    "holdout": {
+      "in_sample_f_score": 0.013793103448275862,
+      "jackknife_f_score": 0.6909090909090909,
+      "jackknife_precision": 1.0,
+      "jackknife_recall": 0.5277777777777778,
+      "negative_rejection_rate": 1.0
+    }
+  },
+  "orthobench": {
+    "input_hits": {
+      "bytes": 952325450,
+      "sha256": "78a5af40ea2683a69e1baefefb0966c3549cffe71b24bda03b9ba4a6e29e65e1"
+    },
+    "baseline": {
+      "f_score": 70.4,
+      "precision": 78.9,
+      "recall": 63.5,
+      "exact_refogs": 13,
+      "strict_profile_edges": 24738,
+      "profile_multipass_edges": 1935903,
+      "wall_s": 319.467197,
+      "peak_process_rss_gib": 5.560291,
+      "final_cluster_sha256": "8ee100f4370fef6e3e6a3e0fd36112adcc3aefeb60197331115667c519ca121f"
+    },
+    "candidate_result": {
+      "f_score": 69.1,
+      "precision": 76.4,
+      "recall": 63.1,
+      "exact_refogs": 13,
+      "strict_profile_edges": 41118,
+      "profile_multipass_edges": 1943113,
+      "wall_s": 407.81703,
+      "peak_process_rss_gib": 5.561787,
+      "final_cluster_sha256": "044417d8fe577727768843eaa5f292a8403560d6f9632562da34b7e21779da3d"
+    },
+    "deltas": {
+      "f_score": -1.3,
+      "precision": -2.5,
+      "recall": -0.4,
+      "strict_profile_edges": 16380,
+      "profile_multipass_edges": 7210,
+      "wall_factor": 1.2765536926158962,
+      "peak_process_rss_gib": 0.001496
+    },
+    "raw_result": {
+      "path": "benchmarks/results/production_high_sensitivity_replay_profiles_jackknife_20260829/result.json",
+      "bytes": 4807,
+      "sha256": "9e86b8894a5bdc0b381118f711cf1adb8e18323dd5fa9acad3e5234fa9d7b369"
+    }
+  },
+  "implementation_commit": "1daf6fca3d4131de7f953d99526d23d6c7e13d7e",
+  "default_changed": false
+}
