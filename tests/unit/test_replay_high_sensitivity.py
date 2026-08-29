@@ -22,6 +22,7 @@ def test_replay_profile_iterations_default_to_one():
     assert args.profile_profile_similarity_threshold == 0.6
     assert args.profile_profile_max_combined_genes == 80
     assert args.component_split_high_duplication is False
+    assert args.direct_profile_fallback is False
 
 
 def test_replay_accepts_jackknife_profile_thresholds():

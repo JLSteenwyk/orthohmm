@@ -142,6 +142,22 @@ degree rule. Profile-HMM anchor edges participate in these components, while
 edges below the existing 1.5 component threshold do not. The mode is disabled
 by default pending fresh production benchmarks.
 
+Evaluate direct HMM fallback for pairwise-unanchored candidates with:
+
+```bash
+python -m benchmark_tools.direct_profile_fallback_holdout \
+  --development-seed 1103 \
+  --holdout-seed 2909 \
+  --families 36 \
+  --cpu 4 \
+  --output /tmp/direct_profile_fallback_holdout.json
+```
+
+`--direct-profile-fallback` requires single-copy jackknife calibration. It adds
+one confidence-ratio edge only when a significant calibrated profile winner has
+no positive pairwise hit to any member of its selected cluster. Edge weights
+are bounded to the existing graph scale, and the mode is disabled by default.
+
 ## OrthoFinder comparator
 
 This directory pins the OrthoFinder comparator to version 3.1.5 and keeps new

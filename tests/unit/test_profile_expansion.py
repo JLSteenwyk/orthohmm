@@ -3,6 +3,7 @@ import numpy as np
 from orthohmm.search.profile_expansion import (
     ProfileHits,
     build_cluster_profiles,
+    build_direct_profile_fallback_edges,
     build_reciprocal_profile_edges,
     build_strict_profile_edges,
     compute_profile_self_thresholds,
@@ -294,6 +295,78 @@ def test_strict_profile_edges_support_per_residue_thresholds():
     )
 
     assert _edge_map(edges) == {(0, 2): 5.0}
+
+
+def test_direct_profile_fallback_anchors_unconnected_calibrated_winner():
+    names = ["a", "b", "candidate"]
+    hits = ProfileHits(
+        profile_cluster_ids=np.array([0], dtype=np.int32),
+        gene_ids=np.array([2], dtype=np.int32),
+        scores=np.array([10.0]),
+        evalues=np.array([1e-20]),
+        candidate_count=1,
+    )
+
+    edges = build_direct_profile_fallback_edges(
+        names,
+        [[0, 1], [2]],
+        hits,
+        {0: 8.0},
+        np.array([], dtype=np.int32),
+        np.array([], dtype=np.int32),
+        np.array([], dtype=np.float64),
+        {0},
+    )
+
+    assert _edge_map(edges) == {(0, 2): 1.25}
+
+
+def test_direct_profile_fallback_skips_existing_sequence_anchor():
+    names = ["a", "b", "candidate"]
+    hits = ProfileHits(
+        profile_cluster_ids=np.array([0], dtype=np.int32),
+        gene_ids=np.array([2], dtype=np.int32),
+        scores=np.array([10.0]),
+        evalues=np.array([1e-20]),
+        candidate_count=1,
+    )
+
+    edges = build_direct_profile_fallback_edges(
+        names,
+        [[0, 1], [2]],
+        hits,
+        {0: 8.0},
+        np.array([2], dtype=np.int32),
+        np.array([1], dtype=np.int32),
+        np.array([0.5]),
+        {0},
+    )
+
+    assert len(edges) == 0
+
+
+def test_direct_profile_fallback_requires_allowed_profile():
+    names = ["a", "b", "candidate"]
+    hits = ProfileHits(
+        profile_cluster_ids=np.array([0], dtype=np.int32),
+        gene_ids=np.array([2], dtype=np.int32),
+        scores=np.array([10.0]),
+        evalues=np.array([1e-20]),
+        candidate_count=1,
+    )
+
+    edges = build_direct_profile_fallback_edges(
+        names,
+        [[0, 1], [2]],
+        hits,
+        {0: 8.0},
+        np.array([], dtype=np.int32),
+        np.array([], dtype=np.int32),
+        np.array([], dtype=np.float64),
+        set(),
+    )
+
+    assert len(edges) == 0
 
 
 def test_reciprocal_profile_edges_use_bidirectional_calibrated_support():

@@ -171,6 +171,14 @@ def build_parser() -> argparse.ArgumentParser:
             "before falling back to the maximum-degree core"
         ),
     )
+    parser.add_argument(
+        "--direct-profile-fallback",
+        action="store_true",
+        help=(
+            "Add one direct HMM edge for calibrated single-copy profile "
+            "winners lacking a pairwise sequence anchor"
+        ),
+    )
     return parser
 
 
@@ -186,6 +194,14 @@ def main(argv=None) -> int:
     if args.profile_iterations > 1 and not args.fasta_directory:
         raise SystemExit(
             "--profile-iterations 2 requires --fasta-directory"
+        )
+    if (
+        args.direct_profile_fallback
+        and not args.jackknife_single_copy_profiles
+    ):
+        raise SystemExit(
+            "--direct-profile-fallback requires "
+            "--jackknife-single-copy-profiles"
         )
     started = time.perf_counter()
     timings = {}
@@ -316,6 +332,7 @@ def main(argv=None) -> int:
                 profile_profile_max_combined_genes=(
                     args.profile_profile_max_combined_genes
                 ),
+                direct_profile_fallback=args.direct_profile_fallback,
             )
             profile_results.append(profile_result)
             profile_base_edges = combine_edges(
@@ -445,6 +462,7 @@ def main(argv=None) -> int:
             "component_split_high_duplication": (
                 args.component_split_high_duplication
             ),
+            "direct_profile_fallback": args.direct_profile_fallback,
             "matrix": args.matrix,
             "leiden_seed": args.leiden_seed,
         },
@@ -493,6 +511,10 @@ def main(argv=None) -> int:
             "profile_pair_edges": sum(
                 item.profile_pair_edges for item in profile_results
             ),
+            "direct_profile_fallback_edges": sum(
+                item.direct_profile_fallback_edges
+                for item in profile_results
+            ),
             "final_singleton_assignment_edges": len(final_singleton_edges),
             "profile_multipass_edges": len(profile_edges),
         })
@@ -509,6 +531,9 @@ def main(argv=None) -> int:
                 "profile_pair_candidates": item.profile_pair_candidates,
                 "profile_pair_merges": item.profile_pair_merges,
                 "profile_pair_edges": item.profile_pair_edges,
+                "direct_profile_fallback_edges": (
+                    item.direct_profile_fallback_edges
+                ),
             }
             for iteration, item in enumerate(profile_results, start=1)
         ]

@@ -71,6 +71,7 @@ class ProfileExpansionResult:
     profile_pair_candidates: int = 0
     profile_pair_merges: int = 0
     profile_pair_edges: int = 0
+    direct_profile_fallback_edges: int = 0
 
 
 def load_global_sequence_database(
@@ -729,6 +730,128 @@ def build_strict_profile_edges(
     )
 
 
+def build_direct_profile_fallback_edges(
+    gene_names: Sequence[str],
+    clusters: Sequence[Sequence[int]],
+    profile_hits: ProfileHits,
+    self_thresholds: Mapping[int, float],
+    hit_queries,
+    hit_targets,
+    hit_scores,
+    allowed_profile_ids: Collection[int],
+    score_per_target_residue: bool = False,
+) -> IndexedEdges:
+    """Anchor calibrated profile winners lacking a pairwise sequence hit."""
+    n_genes = len(gene_names)
+    cluster_by_gene = np.full(n_genes, -1, dtype=np.int32)
+    representatives = np.full(len(clusters), -1, dtype=np.int32)
+    for cluster_id, cluster in enumerate(clusters):
+        members = np.asarray(cluster, dtype=np.int32)
+        if len(members):
+            cluster_by_gene[members] = cluster_id
+            representatives[cluster_id] = int(members[0])
+
+    profile_ids = np.asarray(profile_hits.profile_cluster_ids, dtype=np.int32)
+    candidate_genes = np.asarray(profile_hits.gene_ids, dtype=np.int32)
+    raw_scores = np.asarray(profile_hits.scores, dtype=np.float64)
+    if not len(profile_ids) or not allowed_profile_ids:
+        return deduplicate_undirected_edges(gene_names, [], [], [])
+    decision_scores = raw_scores
+    if score_per_target_residue:
+        if profile_hits.scores_per_target_residue is None:
+            raise ValueError(
+                "per-residue profile scores are required for normalized "
+                "thresholding"
+            )
+        decision_scores = np.asarray(
+            profile_hits.scores_per_target_residue, dtype=np.float64
+        )
+    thresholds = np.fromiter(
+        (
+            self_thresholds.get(int(profile_id), np.inf)
+            for profile_id in profile_ids
+        ),
+        dtype=np.float64,
+        count=len(profile_ids),
+    )
+    allowed = np.isin(
+        profile_ids,
+        np.fromiter(allowed_profile_ids, dtype=np.int32),
+    )
+    eligible = (
+        allowed
+        & (cluster_by_gene[candidate_genes] != profile_ids)
+        & np.isfinite(decision_scores)
+        & np.isfinite(thresholds)
+        & (thresholds > 0.0)
+        & (decision_scores >= thresholds)
+    )
+    if not eligible.any():
+        return deduplicate_undirected_edges(gene_names, [], [], [])
+
+    eligible_rows = np.flatnonzero(eligible)
+    best_scores = np.full(n_genes, -np.inf, dtype=np.float64)
+    np.maximum.at(
+        best_scores,
+        candidate_genes[eligible_rows],
+        raw_scores[eligible_rows],
+    )
+    winning_rows = eligible_rows[
+        raw_scores[eligible_rows]
+        == best_scores[candidate_genes[eligible_rows]]
+    ]
+    winning_genes, first = np.unique(
+        candidate_genes[winning_rows], return_index=True
+    )
+    selected_rows = winning_rows[first]
+    selected_profiles = profile_ids[selected_rows]
+
+    queries = np.asarray(hit_queries, dtype=np.int32)
+    targets = np.asarray(hit_targets, dtype=np.int32)
+    scores = np.asarray(hit_scores, dtype=np.float64)
+    anchored = np.zeros(n_genes, dtype=np.bool_)
+    selected_profile_by_gene = np.full(n_genes, -1, dtype=np.int32)
+    selected_profile_by_gene[winning_genes] = selected_profiles
+    outgoing = (
+        (selected_profile_by_gene[queries] >= 0)
+        & (
+            cluster_by_gene[targets]
+            == selected_profile_by_gene[queries]
+        )
+        & (queries != targets)
+        & (scores > 0.0)
+    )
+    reverse = (
+        (selected_profile_by_gene[targets] >= 0)
+        & (
+            cluster_by_gene[queries]
+            == selected_profile_by_gene[targets]
+        )
+        & (queries != targets)
+        & (scores > 0.0)
+    )
+    anchored[queries[outgoing]] = True
+    anchored[targets[reverse]] = True
+
+    fallback = ~anchored[winning_genes]
+    fallback_genes = winning_genes[fallback]
+    fallback_rows = selected_rows[fallback]
+    fallback_profiles = profile_ids[fallback_rows]
+    fallback_members = representatives[fallback_profiles]
+    valid = fallback_members >= 0
+    confidence = np.clip(
+        decision_scores[fallback_rows] / thresholds[fallback_rows],
+        1.0,
+        5.0,
+    )
+    return deduplicate_undirected_edges(
+        gene_names,
+        fallback_genes[valid],
+        fallback_members[valid],
+        confidence[valid],
+    )
+
+
 def build_reciprocal_profile_edges(
     gene_names: Sequence[str],
     clusters: Sequence[Sequence[int]],
@@ -869,6 +992,7 @@ def expand_profiles(
     profile_profile_merges: bool = False,
     profile_profile_similarity_threshold: float = 0.6,
     profile_profile_max_combined_genes: int = 80,
+    direct_profile_fallback: bool = False,
 ) -> ProfileExpansionResult:
     """Run the complete strict profile-expansion stage."""
     os.environ["OMP_NUM_THREADS"] = str(cpu)
@@ -919,6 +1043,21 @@ def expand_profiles(
         score_per_target_residue=score_per_target_residue,
     )
     strict_edge_count = len(edges)
+    direct_fallback_edge_count = 0
+    if direct_profile_fallback:
+        fallback_edges = build_direct_profile_fallback_edges(
+            gene_names,
+            clusters,
+            profile_hits,
+            self_thresholds,
+            hit_queries,
+            hit_targets,
+            hit_scores,
+            calibration_profile_ids or set(),
+            score_per_target_residue=score_per_target_residue,
+        )
+        direct_fallback_edge_count = len(fallback_edges)
+        edges = combine_edges(edges, fallback_edges)
     reciprocal_pairs = 0
     reciprocal_edge_count = 0
     if reciprocal_profile_merges:
@@ -967,4 +1106,5 @@ def expand_profiles(
         profile_pair_candidates=profile_pair_candidates,
         profile_pair_merges=profile_pair_merges,
         profile_pair_edges=profile_pair_edge_count,
+        direct_profile_fallback_edges=direct_fallback_edge_count,
     )
