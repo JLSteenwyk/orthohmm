@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "candidate": "minimum distinct-species support for profile HMM construction",
+  "decision": "reject",
+  "reason": "Both cross-species gates removed useful profile recovery and finished below the unchanged 70.4 OrthoBench baseline. The implementation remains opt-in and is not promoted to a default.",
+  "independent_gate": {
+    "artifact": "benchmark_tools/results/profile_species_support_holdout_20260829.json",
+    "sha256": "c9a35c556190722038cd06ee904f9c908159fe5cb1efb32c392a857906ddfa59",
+    "development_passed": true,
+    "holdout_passed": true,
+    "true_profiles_retained_per_split": 36,
+    "lineage_specific_profiles_removed_per_split": 18
+  },
+  "orthobench": {
+    "input_hits_sha256": "78a5af40ea2683a69e1baefefb0966c3549cffe71b24bda03b9ba4a6e29e65e1",
+    "baseline": {
+      "profiles_built": 15901,
+      "strict_profile_edges": 24738,
+      "f_score": 70.4,
+      "precision": 78.9,
+      "recall": 63.5,
+      "exact_refogs": 13,
+      "wall_s": 319.467197,
+      "peak_process_rss_gib": 5.560291,
+      "final_cluster_sha256": "8ee100f4370fef6e3e6a3e0fd36112adcc3aefeb60197331115667c519ca121f"
+    },
+    "minimum_two_species": {
+      "profiles_built": 13646,
+      "strict_profile_edges": 23370,
+      "f_score": 69.9,
+      "precision": 78.7,
+      "recall": 62.9,
+      "exact_refogs": 13,
+      "wall_s": 314.437554,
+      "peak_process_rss_gib": 5.56086,
+      "final_cluster_sha256": "80354025f3803ad3332a17ee6b74d6979a69bd22cc3e8507e876eb40159deabd",
+      "raw_result_sha256": "e1153f1b4000ffe3258a7025d440adec8a953dba755460d5780a182d9fb9ddd8"
+    },
+    "minimum_three_species": {
+      "profiles_built": 12704,
+      "strict_profile_edges": 22333,
+      "f_score": 69.8,
+      "precision": 78.7,
+      "recall": 62.6,
+      "exact_refogs": 13,
+      "wall_s": 314.280761,
+      "peak_process_rss_gib": 5.557819,
+      "final_cluster_sha256": "961d9d8e04ae3b3617c046bbcec06a22886c63b1312d20f8849a8423eb415c68",
+      "raw_result_sha256": "1d7ad8dc2e2a753efdcd1d8d651baa7919027495867087f59e3e9abfd570a623"
+    }
+  },
+  "implementation_commit": "59e96ed8911b215f0aac9012da7e4139530814dc",
+  "default_changed": false
+}
