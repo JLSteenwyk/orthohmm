@@ -1,0 +1,1941 @@
+{
+  "configuration": {
+    "cpu": 8,
+    "development_seed": 1103,
+    "families": 36,
+    "holdout_seed": 2909,
+    "matrix": "BLOSUM62"
+  },
+  "created_at": "2026-08-29T21:29:57.373505+00:00",
+  "description": "Benchmark-independent synthetic protein-family development and holdout evaluation for OrthoHMM profile calibration.",
+  "development": {
+    "calibration": {
+      "full_leave_one_out_to_in_sample_ratio": {
+        "maximum": 0.8346709470304976,
+        "median": 0.7650409694582867,
+        "minimum": 0.6994727592267135
+      },
+      "jackknife_profiles_built": 36,
+      "leave_one_out_profiles_built": 180,
+      "profiles": 36,
+      "weakest_jackknife_to_in_sample_ratio": {
+        "maximum": 0.8796147672552167,
+        "median": 0.7695644606883348,
+        "minimum": 0.6994727592267135
+      }
+    },
+    "evaluations": {
+      "full_leave_one_out__margin_per_model_position__all_profiles": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 1.0,
+            "assigned": 36,
+            "correct": 36,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.05555555555555555,
+            "assigned": 2,
+            "correct": 2,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.027777777777777776,
+            "assigned": 1,
+            "correct": 1,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.8611111111111112,
+            "assigned": 31,
+            "correct": 31,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.6542056074766355,
+        "fallback_queries": 0,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.5888888888888889,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 70,
+        "recall": 0.4861111111111111,
+        "true_family_assignments": 70
+      },
+      "full_leave_one_out__margin_per_model_position__k3_fallback": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 1.0,
+            "assigned": 36,
+            "correct": 36,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.05555555555555555,
+            "assigned": 2,
+            "correct": 2,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.027777777777777776,
+            "assigned": 1,
+            "correct": 1,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.8611111111111112,
+            "assigned": 31,
+            "correct": 31,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.6542056074766355,
+        "fallback_queries": 110,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.5888888888888889,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 70,
+        "recall": 0.4861111111111111,
+        "true_family_assignments": 70
+      },
+      "full_leave_one_out__margin_per_model_position__k4": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 1.0,
+            "assigned": 36,
+            "correct": 36,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.05555555555555555,
+            "assigned": 2,
+            "correct": 2,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.027777777777777776,
+            "assigned": 1,
+            "correct": 1,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.8611111111111112,
+            "assigned": 31,
+            "correct": 31,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.6542056074766355,
+        "fallback_queries": 0,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.5888888888888889,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 70,
+        "recall": 0.4861111111111111,
+        "true_family_assignments": 70
+      },
+      "full_leave_one_out__raw_score__all_profiles": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 1.0,
+            "assigned": 36,
+            "correct": 36,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.05555555555555555,
+            "assigned": 2,
+            "correct": 2,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.027777777777777776,
+            "assigned": 1,
+            "correct": 1,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.8611111111111112,
+            "assigned": 31,
+            "correct": 31,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.6542056074766355,
+        "fallback_queries": 0,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.5888888888888889,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 70,
+        "recall": 0.4861111111111111,
+        "true_family_assignments": 70
+      },
+      "full_leave_one_out__raw_score__k3_fallback": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 1.0,
+            "assigned": 36,
+            "correct": 36,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.05555555555555555,
+            "assigned": 2,
+            "correct": 2,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.027777777777777776,
+            "assigned": 1,
+            "correct": 1,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.8611111111111112,
+            "assigned": 31,
+            "correct": 31,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.6542056074766355,
+        "fallback_queries": 110,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.5888888888888889,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 70,
+        "recall": 0.4861111111111111,
+        "true_family_assignments": 70
+      },
+      "full_leave_one_out__raw_score__k4": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 1.0,
+            "assigned": 36,
+            "correct": 36,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.05555555555555555,
+            "assigned": 2,
+            "correct": 2,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.027777777777777776,
+            "assigned": 1,
+            "correct": 1,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.8611111111111112,
+            "assigned": 31,
+            "correct": 31,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.6542056074766355,
+        "fallback_queries": 0,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.5888888888888889,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 70,
+        "recall": 0.4861111111111111,
+        "true_family_assignments": 70
+      },
+      "in_sample__margin_per_model_position__all_profiles": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 0.027777777777777776,
+            "assigned": 1,
+            "correct": 1,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.013793103448275862,
+        "fallback_queries": 0,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.20555555555555555,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 1,
+        "recall": 0.006944444444444444,
+        "true_family_assignments": 1
+      },
+      "in_sample__margin_per_model_position__k3_fallback": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 0.027777777777777776,
+            "assigned": 1,
+            "correct": 1,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.013793103448275862,
+        "fallback_queries": 179,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.20555555555555555,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 1,
+        "recall": 0.006944444444444444,
+        "true_family_assignments": 1
+      },
+      "in_sample__margin_per_model_position__k4": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 0.027777777777777776,
+            "assigned": 1,
+            "correct": 1,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.013793103448275862,
+        "fallback_queries": 0,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.20555555555555555,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 1,
+        "recall": 0.006944444444444444,
+        "true_family_assignments": 1
+      },
+      "in_sample__raw_score__all_profiles": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 0.027777777777777776,
+            "assigned": 1,
+            "correct": 1,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.013793103448275862,
+        "fallback_queries": 0,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.20555555555555555,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 1,
+        "recall": 0.006944444444444444,
+        "true_family_assignments": 1
+      },
+      "in_sample__raw_score__k3_fallback": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 0.027777777777777776,
+            "assigned": 1,
+            "correct": 1,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.013793103448275862,
+        "fallback_queries": 179,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.20555555555555555,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 1,
+        "recall": 0.006944444444444444,
+        "true_family_assignments": 1
+      },
+      "in_sample__raw_score__k4": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 0.027777777777777776,
+            "assigned": 1,
+            "correct": 1,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.013793103448275862,
+        "fallback_queries": 0,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.20555555555555555,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 1,
+        "recall": 0.006944444444444444,
+        "true_family_assignments": 1
+      },
+      "weakest_jackknife__margin_per_model_position__all_profiles": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 1.0,
+            "assigned": 36,
+            "correct": 36,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.05555555555555555,
+            "assigned": 2,
+            "correct": 2,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.027777777777777776,
+            "assigned": 1,
+            "correct": 1,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.8611111111111112,
+            "assigned": 31,
+            "correct": 31,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.6542056074766355,
+        "fallback_queries": 0,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.5888888888888889,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 70,
+        "recall": 0.4861111111111111,
+        "true_family_assignments": 70
+      },
+      "weakest_jackknife__margin_per_model_position__k3_fallback": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 1.0,
+            "assigned": 36,
+            "correct": 36,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.05555555555555555,
+            "assigned": 2,
+            "correct": 2,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.027777777777777776,
+            "assigned": 1,
+            "correct": 1,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.8611111111111112,
+            "assigned": 31,
+            "correct": 31,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.6542056074766355,
+        "fallback_queries": 110,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.5888888888888889,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 70,
+        "recall": 0.4861111111111111,
+        "true_family_assignments": 70
+      },
+      "weakest_jackknife__margin_per_model_position__k4": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 1.0,
+            "assigned": 36,
+            "correct": 36,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.05555555555555555,
+            "assigned": 2,
+            "correct": 2,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.027777777777777776,
+            "assigned": 1,
+            "correct": 1,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.8611111111111112,
+            "assigned": 31,
+            "correct": 31,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.6542056074766355,
+        "fallback_queries": 0,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.5888888888888889,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 70,
+        "recall": 0.4861111111111111,
+        "true_family_assignments": 70
+      },
+      "weakest_jackknife__raw_score__all_profiles": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 1.0,
+            "assigned": 36,
+            "correct": 36,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.05555555555555555,
+            "assigned": 2,
+            "correct": 2,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.027777777777777776,
+            "assigned": 1,
+            "correct": 1,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.8611111111111112,
+            "assigned": 31,
+            "correct": 31,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.6542056074766355,
+        "fallback_queries": 0,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.5888888888888889,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 70,
+        "recall": 0.4861111111111111,
+        "true_family_assignments": 70
+      },
+      "weakest_jackknife__raw_score__k3_fallback": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 1.0,
+            "assigned": 36,
+            "correct": 36,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.05555555555555555,
+            "assigned": 2,
+            "correct": 2,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.027777777777777776,
+            "assigned": 1,
+            "correct": 1,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.8611111111111112,
+            "assigned": 31,
+            "correct": 31,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.6542056074766355,
+        "fallback_queries": 110,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.5888888888888889,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 70,
+        "recall": 0.4861111111111111,
+        "true_family_assignments": 70
+      },
+      "weakest_jackknife__raw_score__k4": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 1.0,
+            "assigned": 36,
+            "correct": 36,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.05555555555555555,
+            "assigned": 2,
+            "correct": 2,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.027777777777777776,
+            "assigned": 1,
+            "correct": 1,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.8611111111111112,
+            "assigned": 31,
+            "correct": 31,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.6542056074766355,
+        "fallback_queries": 0,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.5888888888888889,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 70,
+        "recall": 0.4861111111111111,
+        "true_family_assignments": 70
+      }
+    },
+    "families": 36,
+    "negative_queries": 36,
+    "positive_queries": 144,
+    "prefilter": {
+      "3": {
+        "candidate_pairs": 3597,
+        "max_candidates_per_query": 20,
+        "mean_candidates_per_query": 19.983333333333334,
+        "true_profile_recall": 1.0
+      },
+      "4": {
+        "candidate_pairs": 412,
+        "max_candidates_per_query": 20,
+        "mean_candidates_per_query": 2.2888888888888888,
+        "true_profile_recall": 1.0
+      }
+    },
+    "profile_length": {
+      "maximum": 448.0,
+      "median": 226.0,
+      "minimum": 100.0
+    },
+    "queries": 180,
+    "seed": 1103,
+    "training_members_per_family": 5
+  },
+  "git": {
+    "commit": "ffa4c7d5f8d16c9909a645c33a64b62679af78c3",
+    "status_short": "M tests/samples/long_names/orthohmm_working_res/Calbicans_GCF_000182965.3_ASM18296v3_protein.small.faa_2_Calbicans_GCF_000182965.3_ASM18296v3_protein.small.faa.phmmerout.txt\n M tests/samples/long_names/orthohmm_working_res/Calbicans_GCF_000182965.3_ASM18296v3_protein.small.faa_2_Cduobushaemulonii_GCF_002926085.2_CanDuoHae_v1.0_protein.small.faa.phmmerout.txt\n M tests/samples/long_names/orthohmm_working_res/Calbicans_GCF_000182965.3_ASM18296v3_protein.small.faa_2_Chaemulonii_GCF_002926055.2_CanHae_1.0_protein.small.faa.phmmerout.txt\n M tests/samples/long_names/orthohmm_working_res/Calbicans_GCF_000182965.3_ASM18296v3_protein.small.faa_2_Clusitaniae_GCF_014636115.1_ASM1463611v1_protein.small.faa.phmmerout.txt\n M tests/samples/long_names/orthohmm_working_res/Cduobushaemulonii_GCF_002926085.2_CanDuoHae_v1.0_protein.small.faa_2_Calbicans_GCF_000182965.3_ASM18296v3_protein.small.faa.phmmerout.txt\n M tests/samples/long_names/orthohmm_working_res/Cduobushaemulonii_GCF_002926085.2_CanDuoHae_v1.0_protein.small.faa_2_Cduobushaemulonii_GCF_002926085.2_CanDuoHae_v1.0_protein.small.faa.phmmerout.txt\n M tests/samples/long_names/orthohmm_working_res/Cduobushaemulonii_GCF_002926085.2_CanDuoHae_v1.0_protein.small.faa_2_Chaemulonii_GCF_002926055.2_CanHae_1.0_protein.small.faa.phmmerout.txt\n M tests/samples/long_names/orthohmm_working_res/Cduobushaemulonii_GCF_002926085.2_CanDuoHae_v1.0_protein.small.faa_2_Clusitaniae_GCF_014636115.1_ASM1463611v1_protein.small.faa.phmmerout.txt\n M tests/samples/long_names/orthohmm_working_res/Chaemulonii_GCF_002926055.2_CanHae_1.0_protein.small.faa_2_Calbicans_GCF_000182965.3_ASM18296v3_protein.small.faa.phmmerout.txt\n M tests/samples/long_names/orthohmm_working_res/Chaemulonii_GCF_002926055.2_CanHae_1.0_protein.small.faa_2_Cduobushaemulonii_GCF_002926085.2_CanDuoHae_v1.0_protein.small.faa.phmmerout.txt\n M tests/samples/long_names/orthohmm_working_res/Chaemulonii_GCF_002926055.2_CanHae_1.0_protein.small.faa_2_Chaemulonii_GCF_002926055.2_CanHae_1.0_protein.small.faa.phmmerout.txt\n M tests/samples/long_names/orthohmm_working_res/Chaemulonii_GCF_002926055.2_CanHae_1.0_protein.small.faa_2_Clusitaniae_GCF_014636115.1_ASM1463611v1_protein.small.faa.phmmerout.txt\n M tests/samples/long_names/orthohmm_working_res/Clusitaniae_GCF_014636115.1_ASM1463611v1_protein.small.faa_2_Calbicans_GCF_000182965.3_ASM18296v3_protein.small.faa.phmmerout.txt\n M tests/samples/long_names/orthohmm_working_res/Clusitaniae_GCF_014636115.1_ASM1463611v1_protein.small.faa_2_Cduobushaemulonii_GCF_002926085.2_CanDuoHae_v1.0_protein.small.faa.phmmerout.txt\n M tests/samples/long_names/orthohmm_working_res/Clusitaniae_GCF_014636115.1_ASM1463611v1_protein.small.faa_2_Chaemulonii_GCF_002926055.2_CanHae_1.0_protein.small.faa.phmmerout.txt\n M tests/samples/long_names/orthohmm_working_res/Clusitaniae_GCF_014636115.1_ASM1463611v1_protein.small.faa_2_Clusitaniae_GCF_014636115.1_ASM1463611v1_protein.small.faa.phmmerout.txt\n M tests/samples/long_names/orthohmm_working_res/orthohmm_edges.txt\n M tests/samples/orthohmm_gene_count.txt\n M tests/samples/orthohmm_orthogroups.txt\n M tests/samples/orthohmm_orthogroups/OG0.fa\n M tests/samples/orthohmm_orthogroups/OG1.fa\n M tests/samples/orthohmm_orthogroups/OG2.fa\n M tests/samples/orthohmm_orthogroups/OG3.fa\n M tests/samples/orthohmm_single_copy_orthogroups.txt\n M tests/samples/orthohmm_working_res/Caenorhabditis_elegans.WBcel235.pep.all.fa_2_Caenorhabditis_elegans.WBcel235.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Caenorhabditis_elegans.WBcel235.pep.all.fa_2_Canis_familiaris.CanFam3.1.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Caenorhabditis_elegans.WBcel235.pep.all.fa_2_Ciona_intestinalis.KH.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Caenorhabditis_elegans.WBcel235.pep.all.fa_2_Danio_rerio.GRCz11.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Caenorhabditis_elegans.WBcel235.pep.all.fa_2_Gallus_gallus.GRCg6a.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Caenorhabditis_elegans.WBcel235.pep.all.fa_2_Homo_sapiens.GRCh38.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Caenorhabditis_elegans.WBcel235.pep.all.fa_2_Monodelphis_domestica.ASM229v1.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Caenorhabditis_elegans.WBcel235.pep.all.fa_2_Mus_musculus.GRCm38.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Caenorhabditis_elegans.WBcel235.pep.all.fa_2_Pan_troglodytes.Pan_tro_3.0.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Caenorhabditis_elegans.WBcel235.pep.all.fa_2_Rattus_norvegicus.Rnor_6.0.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Caenorhabditis_elegans.WBcel235.pep.all.fa_2_Tetraodon_nigroviridis.TETRAODON8.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Canis_familiaris.CanFam3.1.pep.all.fa_2_Caenorhabditis_elegans.WBcel235.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Canis_familiaris.CanFam3.1.pep.all.fa_2_Canis_familiaris.CanFam3.1.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Canis_familiaris.CanFam3.1.pep.all.fa_2_Ciona_intestinalis.KH.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Canis_familiaris.CanFam3.1.pep.all.fa_2_Danio_rerio.GRCz11.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Canis_familiaris.CanFam3.1.pep.all.fa_2_Gallus_gallus.GRCg6a.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Canis_familiaris.CanFam3.1.pep.all.fa_2_Homo_sapiens.GRCh38.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Canis_familiaris.CanFam3.1.pep.all.fa_2_Monodelphis_domestica.ASM229v1.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Canis_familiaris.CanFam3.1.pep.all.fa_2_Mus_musculus.GRCm38.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Canis_familiaris.CanFam3.1.pep.all.fa_2_Pan_troglodytes.Pan_tro_3.0.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Canis_familiaris.CanFam3.1.pep.all.fa_2_Rattus_norvegicus.Rnor_6.0.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Canis_familiaris.CanFam3.1.pep.all.fa_2_Tetraodon_nigroviridis.TETRAODON8.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Ciona_intestinalis.KH.pep.all.fa_2_Caenorhabditis_elegans.WBcel235.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Ciona_intestinalis.KH.pep.all.fa_2_Canis_familiaris.CanFam3.1.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Ciona_intestinalis.KH.pep.all.fa_2_Ciona_intestinalis.KH.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Ciona_intestinalis.KH.pep.all.fa_2_Danio_rerio.GRCz11.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Ciona_intestinalis.KH.pep.all.fa_2_Gallus_gallus.GRCg6a.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Ciona_intestinalis.KH.pep.all.fa_2_Homo_sapiens.GRCh38.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Ciona_intestinalis.KH.pep.all.fa_2_Monodelphis_domestica.ASM229v1.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Ciona_intestinalis.KH.pep.all.fa_2_Mus_musculus.GRCm38.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Ciona_intestinalis.KH.pep.all.fa_2_Pan_troglodytes.Pan_tro_3.0.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Ciona_intestinalis.KH.pep.all.fa_2_Rattus_norvegicus.Rnor_6.0.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Ciona_intestinalis.KH.pep.all.fa_2_Tetraodon_nigroviridis.TETRAODON8.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Danio_rerio.GRCz11.pep.all.fa_2_Caenorhabditis_elegans.WBcel235.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Danio_rerio.GRCz11.pep.all.fa_2_Canis_familiaris.CanFam3.1.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Danio_rerio.GRCz11.pep.all.fa_2_Ciona_intestinalis.KH.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Danio_rerio.GRCz11.pep.all.fa_2_Danio_rerio.GRCz11.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Danio_rerio.GRCz11.pep.all.fa_2_Gallus_gallus.GRCg6a.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Danio_rerio.GRCz11.pep.all.fa_2_Homo_sapiens.GRCh38.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Danio_rerio.GRCz11.pep.all.fa_2_Monodelphis_domestica.ASM229v1.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Danio_rerio.GRCz11.pep.all.fa_2_Mus_musculus.GRCm38.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Danio_rerio.GRCz11.pep.all.fa_2_Pan_troglodytes.Pan_tro_3.0.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Danio_rerio.GRCz11.pep.all.fa_2_Rattus_norvegicus.Rnor_6.0.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Danio_rerio.GRCz11.pep.all.fa_2_Tetraodon_nigroviridis.TETRAODON8.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Gallus_gallus.GRCg6a.pep.all.fa_2_Caenorhabditis_elegans.WBcel235.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Gallus_gallus.GRCg6a.pep.all.fa_2_Canis_familiaris.CanFam3.1.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Gallus_gallus.GRCg6a.pep.all.fa_2_Ciona_intestinalis.KH.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Gallus_gallus.GRCg6a.pep.all.fa_2_Danio_rerio.GRCz11.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Gallus_gallus.GRCg6a.pep.all.fa_2_Gallus_gallus.GRCg6a.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Gallus_gallus.GRCg6a.pep.all.fa_2_Homo_sapiens.GRCh38.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Gallus_gallus.GRCg6a.pep.all.fa_2_Monodelphis_domestica.ASM229v1.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Gallus_gallus.GRCg6a.pep.all.fa_2_Mus_musculus.GRCm38.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Gallus_gallus.GRCg6a.pep.all.fa_2_Pan_troglodytes.Pan_tro_3.0.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Gallus_gallus.GRCg6a.pep.all.fa_2_Rattus_norvegicus.Rnor_6.0.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Gallus_gallus.GRCg6a.pep.all.fa_2_Tetraodon_nigroviridis.TETRAODON8.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Homo_sapiens.GRCh38.pep.all.fa_2_Caenorhabditis_elegans.WBcel235.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Homo_sapiens.GRCh38.pep.all.fa_2_Canis_familiaris.CanFam3.1.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Homo_sapiens.GRCh38.pep.all.fa_2_Ciona_intestinalis.KH.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Homo_sapiens.GRCh38.pep.all.fa_2_Danio_rerio.GRCz11.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Homo_sapiens.GRCh38.pep.all.fa_2_Gallus_gallus.GRCg6a.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Homo_sapiens.GRCh38.pep.all.fa_2_Homo_sapiens.GRCh38.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Homo_sapiens.GRCh38.pep.all.fa_2_Monodelphis_domestica.ASM229v1.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Homo_sapiens.GRCh38.pep.all.fa_2_Mus_musculus.GRCm38.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Homo_sapiens.GRCh38.pep.all.fa_2_Pan_troglodytes.Pan_tro_3.0.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Homo_sapiens.GRCh38.pep.all.fa_2_Rattus_norvegicus.Rnor_6.0.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Homo_sapiens.GRCh38.pep.all.fa_2_Tetraodon_nigroviridis.TETRAODON8.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Monodelphis_domestica.ASM229v1.pep.all.fa_2_Caenorhabditis_elegans.WBcel235.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Monodelphis_domestica.ASM229v1.pep.all.fa_2_Canis_familiaris.CanFam3.1.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Monodelphis_domestica.ASM229v1.pep.all.fa_2_Ciona_intestinalis.KH.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Monodelphis_domestica.ASM229v1.pep.all.fa_2_Danio_rerio.GRCz11.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Monodelphis_domestica.ASM229v1.pep.all.fa_2_Gallus_gallus.GRCg6a.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Monodelphis_domestica.ASM229v1.pep.all.fa_2_Homo_sapiens.GRCh38.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Monodelphis_domestica.ASM229v1.pep.all.fa_2_Monodelphis_domestica.ASM229v1.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Monodelphis_domestica.ASM229v1.pep.all.fa_2_Mus_musculus.GRCm38.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Monodelphis_domestica.ASM229v1.pep.all.fa_2_Pan_troglodytes.Pan_tro_3.0.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Monodelphis_domestica.ASM229v1.pep.all.fa_2_Rattus_norvegicus.Rnor_6.0.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Monodelphis_domestica.ASM229v1.pep.all.fa_2_Tetraodon_nigroviridis.TETRAODON8.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Mus_musculus.GRCm38.pep.all.fa_2_Caenorhabditis_elegans.WBcel235.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Mus_musculus.GRCm38.pep.all.fa_2_Canis_familiaris.CanFam3.1.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Mus_musculus.GRCm38.pep.all.fa_2_Ciona_intestinalis.KH.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Mus_musculus.GRCm38.pep.all.fa_2_Danio_rerio.GRCz11.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Mus_musculus.GRCm38.pep.all.fa_2_Gallus_gallus.GRCg6a.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Mus_musculus.GRCm38.pep.all.fa_2_Homo_sapiens.GRCh38.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Mus_musculus.GRCm38.pep.all.fa_2_Monodelphis_domestica.ASM229v1.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Mus_musculus.GRCm38.pep.all.fa_2_Mus_musculus.GRCm38.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Mus_musculus.GRCm38.pep.all.fa_2_Pan_troglodytes.Pan_tro_3.0.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Mus_musculus.GRCm38.pep.all.fa_2_Rattus_norvegicus.Rnor_6.0.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Mus_musculus.GRCm38.pep.all.fa_2_Tetraodon_nigroviridis.TETRAODON8.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Pan_troglodytes.Pan_tro_3.0.pep.all.fa_2_Caenorhabditis_elegans.WBcel235.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Pan_troglodytes.Pan_tro_3.0.pep.all.fa_2_Canis_familiaris.CanFam3.1.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Pan_troglodytes.Pan_tro_3.0.pep.all.fa_2_Ciona_intestinalis.KH.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Pan_troglodytes.Pan_tro_3.0.pep.all.fa_2_Danio_rerio.GRCz11.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Pan_troglodytes.Pan_tro_3.0.pep.all.fa_2_Gallus_gallus.GRCg6a.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Pan_troglodytes.Pan_tro_3.0.pep.all.fa_2_Homo_sapiens.GRCh38.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Pan_troglodytes.Pan_tro_3.0.pep.all.fa_2_Monodelphis_domestica.ASM229v1.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Pan_troglodytes.Pan_tro_3.0.pep.all.fa_2_Mus_musculus.GRCm38.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Pan_troglodytes.Pan_tro_3.0.pep.all.fa_2_Pan_troglodytes.Pan_tro_3.0.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Pan_troglodytes.Pan_tro_3.0.pep.all.fa_2_Rattus_norvegicus.Rnor_6.0.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Pan_troglodytes.Pan_tro_3.0.pep.all.fa_2_Tetraodon_nigroviridis.TETRAODON8.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Rattus_norvegicus.Rnor_6.0.pep.all.fa_2_Caenorhabditis_elegans.WBcel235.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Rattus_norvegicus.Rnor_6.0.pep.all.fa_2_Canis_familiaris.CanFam3.1.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Rattus_norvegicus.Rnor_6.0.pep.all.fa_2_Ciona_intestinalis.KH.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Rattus_norvegicus.Rnor_6.0.pep.all.fa_2_Danio_rerio.GRCz11.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Rattus_norvegicus.Rnor_6.0.pep.all.fa_2_Gallus_gallus.GRCg6a.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Rattus_norvegicus.Rnor_6.0.pep.all.fa_2_Homo_sapiens.GRCh38.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Rattus_norvegicus.Rnor_6.0.pep.all.fa_2_Monodelphis_domestica.ASM229v1.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Rattus_norvegicus.Rnor_6.0.pep.all.fa_2_Mus_musculus.GRCm38.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Rattus_norvegicus.Rnor_6.0.pep.all.fa_2_Pan_troglodytes.Pan_tro_3.0.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Rattus_norvegicus.Rnor_6.0.pep.all.fa_2_Rattus_norvegicus.Rnor_6.0.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Rattus_norvegicus.Rnor_6.0.pep.all.fa_2_Tetraodon_nigroviridis.TETRAODON8.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa_2_Caenorhabditis_elegans.WBcel235.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa_2_Canis_familiaris.CanFam3.1.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa_2_Ciona_intestinalis.KH.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa_2_Danio_rerio.GRCz11.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa_2_Gallus_gallus.GRCg6a.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa_2_Homo_sapiens.GRCh38.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa_2_Monodelphis_domestica.ASM229v1.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa_2_Mus_musculus.GRCm38.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa_2_Pan_troglodytes.Pan_tro_3.0.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa_2_Rattus_norvegicus.Rnor_6.0.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa_2_Tetraodon_nigroviridis.TETRAODON8.pep.all.fa.phmmerout.txt\n M tests/samples/orthohmm_working_res/orthohmm_edges.txt\n M tests/samples/orthohmm_working_res/orthohmm_edges_clustered.txt\n?? benchmark_tools/hmm_generalization_holdout.py\n?? tests/samples/orthohmm_single_copy_orthogroups/OG0.fa\n?? tests/unit/test_hmm_generalization_holdout.py"
+  },
+  "holdout": {
+    "calibration": {
+      "full_leave_one_out_to_in_sample_ratio": {
+        "maximum": 0.8014955812372536,
+        "median": 0.7630808270305496,
+        "minimum": 0.715780998389694
+      },
+      "jackknife_profiles_built": 36,
+      "leave_one_out_profiles_built": 180,
+      "profiles": 36,
+      "weakest_jackknife_to_in_sample_ratio": {
+        "maximum": 0.8014955812372536,
+        "median": 0.7630808270305496,
+        "minimum": 0.715780998389694
+      }
+    },
+    "evaluations": {
+      "full_leave_one_out__margin_per_model_position__all_profiles": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 1.0,
+            "assigned": 36,
+            "correct": 36,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.1111111111111111,
+            "assigned": 4,
+            "correct": 4,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.05555555555555555,
+            "assigned": 2,
+            "correct": 2,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.9444444444444444,
+            "assigned": 34,
+            "correct": 34,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.6909090909090909,
+        "fallback_queries": 0,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.6222222222222222,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 76,
+        "recall": 0.5277777777777778,
+        "true_family_assignments": 76
+      },
+      "full_leave_one_out__margin_per_model_position__k3_fallback": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 1.0,
+            "assigned": 36,
+            "correct": 36,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.1111111111111111,
+            "assigned": 4,
+            "correct": 4,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.05555555555555555,
+            "assigned": 2,
+            "correct": 2,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.9444444444444444,
+            "assigned": 34,
+            "correct": 34,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.6909090909090909,
+        "fallback_queries": 104,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.6222222222222222,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 76,
+        "recall": 0.5277777777777778,
+        "true_family_assignments": 76
+      },
+      "full_leave_one_out__margin_per_model_position__k4": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 1.0,
+            "assigned": 36,
+            "correct": 36,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.1111111111111111,
+            "assigned": 4,
+            "correct": 4,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.05555555555555555,
+            "assigned": 2,
+            "correct": 2,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.9444444444444444,
+            "assigned": 34,
+            "correct": 34,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.6909090909090909,
+        "fallback_queries": 0,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.6222222222222222,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 76,
+        "recall": 0.5277777777777778,
+        "true_family_assignments": 76
+      },
+      "full_leave_one_out__raw_score__all_profiles": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 1.0,
+            "assigned": 36,
+            "correct": 36,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.1111111111111111,
+            "assigned": 4,
+            "correct": 4,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.05555555555555555,
+            "assigned": 2,
+            "correct": 2,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.9444444444444444,
+            "assigned": 34,
+            "correct": 34,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.6909090909090909,
+        "fallback_queries": 0,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.6222222222222222,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 76,
+        "recall": 0.5277777777777778,
+        "true_family_assignments": 76
+      },
+      "full_leave_one_out__raw_score__k3_fallback": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 1.0,
+            "assigned": 36,
+            "correct": 36,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.1111111111111111,
+            "assigned": 4,
+            "correct": 4,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.05555555555555555,
+            "assigned": 2,
+            "correct": 2,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.9444444444444444,
+            "assigned": 34,
+            "correct": 34,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.6909090909090909,
+        "fallback_queries": 104,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.6222222222222222,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 76,
+        "recall": 0.5277777777777778,
+        "true_family_assignments": 76
+      },
+      "full_leave_one_out__raw_score__k4": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 1.0,
+            "assigned": 36,
+            "correct": 36,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.1111111111111111,
+            "assigned": 4,
+            "correct": 4,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.05555555555555555,
+            "assigned": 2,
+            "correct": 2,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.9444444444444444,
+            "assigned": 34,
+            "correct": 34,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.6909090909090909,
+        "fallback_queries": 0,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.6222222222222222,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 76,
+        "recall": 0.5277777777777778,
+        "true_family_assignments": 76
+      },
+      "in_sample__margin_per_model_position__all_profiles": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 0.027777777777777776,
+            "assigned": 1,
+            "correct": 1,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.013793103448275862,
+        "fallback_queries": 0,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.20555555555555555,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 1,
+        "recall": 0.006944444444444444,
+        "true_family_assignments": 1
+      },
+      "in_sample__margin_per_model_position__k3_fallback": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 0.027777777777777776,
+            "assigned": 1,
+            "correct": 1,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.013793103448275862,
+        "fallback_queries": 179,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.20555555555555555,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 1,
+        "recall": 0.006944444444444444,
+        "true_family_assignments": 1
+      },
+      "in_sample__margin_per_model_position__k4": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 0.027777777777777776,
+            "assigned": 1,
+            "correct": 1,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.013793103448275862,
+        "fallback_queries": 0,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.20555555555555555,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 1,
+        "recall": 0.006944444444444444,
+        "true_family_assignments": 1
+      },
+      "in_sample__raw_score__all_profiles": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 0.027777777777777776,
+            "assigned": 1,
+            "correct": 1,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.013793103448275862,
+        "fallback_queries": 0,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.20555555555555555,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 1,
+        "recall": 0.006944444444444444,
+        "true_family_assignments": 1
+      },
+      "in_sample__raw_score__k3_fallback": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 0.027777777777777776,
+            "assigned": 1,
+            "correct": 1,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.013793103448275862,
+        "fallback_queries": 179,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.20555555555555555,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 1,
+        "recall": 0.006944444444444444,
+        "true_family_assignments": 1
+      },
+      "in_sample__raw_score__k4": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 0.027777777777777776,
+            "assigned": 1,
+            "correct": 1,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.0,
+            "assigned": 0,
+            "correct": 0,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.013793103448275862,
+        "fallback_queries": 0,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.20555555555555555,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 1,
+        "recall": 0.006944444444444444,
+        "true_family_assignments": 1
+      },
+      "weakest_jackknife__margin_per_model_position__all_profiles": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 1.0,
+            "assigned": 36,
+            "correct": 36,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.1111111111111111,
+            "assigned": 4,
+            "correct": 4,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.05555555555555555,
+            "assigned": 2,
+            "correct": 2,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.9444444444444444,
+            "assigned": 34,
+            "correct": 34,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.6909090909090909,
+        "fallback_queries": 0,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.6222222222222222,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 76,
+        "recall": 0.5277777777777778,
+        "true_family_assignments": 76
+      },
+      "weakest_jackknife__margin_per_model_position__k3_fallback": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 1.0,
+            "assigned": 36,
+            "correct": 36,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.1111111111111111,
+            "assigned": 4,
+            "correct": 4,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.05555555555555555,
+            "assigned": 2,
+            "correct": 2,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.9444444444444444,
+            "assigned": 34,
+            "correct": 34,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.6909090909090909,
+        "fallback_queries": 104,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.6222222222222222,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 76,
+        "recall": 0.5277777777777778,
+        "true_family_assignments": 76
+      },
+      "weakest_jackknife__margin_per_model_position__k4": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 1.0,
+            "assigned": 36,
+            "correct": 36,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.1111111111111111,
+            "assigned": 4,
+            "correct": 4,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.05555555555555555,
+            "assigned": 2,
+            "correct": 2,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.9444444444444444,
+            "assigned": 34,
+            "correct": 34,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.6909090909090909,
+        "fallback_queries": 0,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.6222222222222222,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 76,
+        "recall": 0.5277777777777778,
+        "true_family_assignments": 76
+      },
+      "weakest_jackknife__raw_score__all_profiles": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 1.0,
+            "assigned": 36,
+            "correct": 36,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.1111111111111111,
+            "assigned": 4,
+            "correct": 4,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.05555555555555555,
+            "assigned": 2,
+            "correct": 2,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.9444444444444444,
+            "assigned": 34,
+            "correct": 34,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.6909090909090909,
+        "fallback_queries": 0,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.6222222222222222,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 76,
+        "recall": 0.5277777777777778,
+        "true_family_assignments": 76
+      },
+      "weakest_jackknife__raw_score__k3_fallback": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 1.0,
+            "assigned": 36,
+            "correct": 36,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.1111111111111111,
+            "assigned": 4,
+            "correct": 4,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.05555555555555555,
+            "assigned": 2,
+            "correct": 2,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.9444444444444444,
+            "assigned": 34,
+            "correct": 34,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.6909090909090909,
+        "fallback_queries": 104,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.6222222222222222,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 76,
+        "recall": 0.5277777777777778,
+        "true_family_assignments": 76
+      },
+      "weakest_jackknife__raw_score__k4": {
+        "ambiguous_queries": 0,
+        "by_category": {
+          "close": {
+            "accuracy": 1.0,
+            "assigned": 36,
+            "correct": 36,
+            "queries": 36
+          },
+          "close_paralog": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          },
+          "distant": {
+            "accuracy": 0.1111111111111111,
+            "assigned": 4,
+            "correct": 4,
+            "queries": 36
+          },
+          "fragment": {
+            "accuracy": 0.05555555555555555,
+            "assigned": 2,
+            "correct": 2,
+            "queries": 36
+          },
+          "standard": {
+            "accuracy": 0.9444444444444444,
+            "assigned": 34,
+            "correct": 34,
+            "queries": 36
+          },
+          "unrelated": {
+            "accuracy": 1.0,
+            "assigned": 0,
+            "correct": 18,
+            "queries": 18
+          }
+        },
+        "f_score": 0.6909090909090909,
+        "fallback_queries": 0,
+        "negative_queries": 36,
+        "negative_rejection_rate": 1.0,
+        "overall_accuracy": 0.6222222222222222,
+        "positive_queries": 144,
+        "precision": 1.0,
+        "predictions_made": 76,
+        "recall": 0.5277777777777778,
+        "true_family_assignments": 76
+      }
+    },
+    "families": 36,
+    "negative_queries": 36,
+    "positive_queries": 144,
+    "prefilter": {
+      "3": {
+        "candidate_pairs": 3594,
+        "max_candidates_per_query": 20,
+        "mean_candidates_per_query": 19.966666666666665,
+        "true_profile_recall": 1.0
+      },
+      "4": {
+        "candidate_pairs": 455,
+        "max_candidates_per_query": 20,
+        "mean_candidates_per_query": 2.5277777777777777,
+        "true_profile_recall": 1.0
+      }
+    },
+    "profile_length": {
+      "maximum": 450.0,
+      "median": 270.0,
+      "minimum": 90.0
+    },
+    "queries": 180,
+    "seed": 2909,
+    "training_members_per_family": 5
+  },
+  "label_policy": "Uses generated family labels only; no OrthoBench, QfO, Three Kingdoms, or OrthoFinder outputs are read.",
+  "schema_version": 1
+}

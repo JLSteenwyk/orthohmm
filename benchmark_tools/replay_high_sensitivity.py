@@ -93,6 +93,14 @@ def build_parser() -> argparse.ArgumentParser:
         default=1,
         help="Number of strict profile rebuild/search passes (default: 1)",
     )
+    parser.add_argument(
+        "--jackknife-profile-thresholds",
+        action="store_true",
+        help=(
+            "Calibrate each profile threshold by holding out its weakest "
+            "member (default: disabled)"
+        ),
+    )
     return parser
 
 
@@ -205,6 +213,7 @@ def main(argv=None) -> int:
                 queries,
                 targets,
                 scores,
+                calibrate_weakest_member=args.jackknife_profile_thresholds,
             )
             profile_results.append(profile_result)
             profile_base_edges = combine_edges(
@@ -306,6 +315,7 @@ def main(argv=None) -> int:
             "cpm_resolution": args.cpm_resolution,
             "profile_expansion": bool(profile_results),
             "profile_iterations": args.profile_iterations,
+            "jackknife_profile_thresholds": args.jackknife_profile_thresholds,
             "matrix": args.matrix,
             "leiden_seed": args.leiden_seed,
         },

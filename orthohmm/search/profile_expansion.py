@@ -116,6 +116,44 @@ def _build_profile_worker(task):
     return cluster_id, profile
 
 
+def _execute_profile_build_tasks(tasks, task_count: int, cpu: int):
+    """Build a bounded stream of profiles serially or with spawn workers."""
+    task_iter = iter(tasks)
+    profiles = {}
+    workers = max(1, min(int(cpu), task_count)) if task_count else 1
+    if workers == 1:
+        for task in task_iter:
+            cluster_id, profile = _build_profile_worker(task)
+            if profile is not None:
+                profiles[cluster_id] = profile
+        return profiles
+
+    max_pending = workers * 2
+    context = multiprocessing.get_context("spawn")
+    with ProcessPoolExecutor(
+        max_workers=workers,
+        mp_context=context,
+    ) as executor:
+        pending = {
+            executor.submit(_build_profile_worker, next(task_iter))
+            for _ in range(min(max_pending, task_count))
+        }
+        while pending:
+            completed, pending = wait(
+                pending, return_when=FIRST_COMPLETED
+            )
+            for future in completed:
+                cluster_id, profile = future.result()
+                if profile is not None:
+                    profiles[cluster_id] = profile
+                try:
+                    task = next(task_iter)
+                except StopIteration:
+                    continue
+                pending.add(executor.submit(_build_profile_worker, task))
+    return profiles
+
+
 def build_cluster_profiles(
     clusters: Sequence[Sequence[int]],
     gene_names: Sequence[str],
@@ -145,40 +183,7 @@ def build_cluster_profiles(
                 cluster_id, member_ids, sequences, sub_matrix, background
             )
 
-    profiles = {}
-    workers = max(1, min(int(cpu), len(cluster_ids))) if cluster_ids else 1
-    if workers == 1:
-        for task in tasks():
-            cluster_id, profile = _build_profile_worker(task)
-            if profile is not None:
-                profiles[cluster_id] = profile
-        return profiles
-
-    task_iter = iter(tasks())
-    max_pending = workers * 2
-    context = multiprocessing.get_context("spawn")
-    with ProcessPoolExecutor(
-        max_workers=workers,
-        mp_context=context,
-    ) as executor:
-        pending = {
-            executor.submit(_build_profile_worker, next(task_iter))
-            for _ in range(min(max_pending, len(cluster_ids)))
-        }
-        while pending:
-            completed, pending = wait(
-                pending, return_when=FIRST_COMPLETED
-            )
-            for future in completed:
-                cluster_id, profile = future.result()
-                if profile is not None:
-                    profiles[cluster_id] = profile
-                try:
-                    task = next(task_iter)
-                except StopIteration:
-                    continue
-                pending.add(executor.submit(_build_profile_worker, task))
-    return profiles
+    return _execute_profile_build_tasks(tasks(), len(cluster_ids), cpu)
 
 
 def _pack_profiles(profiles: Mapping[int, MSAProfile]):
@@ -386,8 +391,20 @@ def compute_profile_self_thresholds(
     sequence_database: SpeciesSequences,
     cpu: int,
     band_width: int = 64,
+    matrix_name: str | None = None,
+    calibrate_weakest_member: bool = False,
 ) -> dict[int, float]:
-    """Return each profile's weakest existing-member Viterbi score."""
+    """Return member thresholds, optionally calibrated by one jackknife.
+
+    The default reproduces the historical in-sample minimum.  Calibration
+    rebuilds each profile without its weakest in-sample member, scores that
+    member against the held-out profile, and keeps the lower score.  This
+    removes profile-construction optimism without using benchmark labels.
+    """
+    if calibrate_weakest_member and not matrix_name:
+        raise ValueError(
+            "matrix_name is required for weakest-member calibration"
+        )
     profile_ids, packed = _pack_profiles(profiles)
     if packed is None:
         return {}
@@ -425,9 +442,83 @@ def compute_profile_self_thresholds(
         cpu,
     )
     thresholds = {}
-    for cluster_id, score in zip(pair_clusters, scores):
+    weakest_members = {}
+    for cluster_id, pair, score in zip(pair_clusters, pairs, scores):
+        score = float(score)
+        if score < thresholds.get(cluster_id, np.inf):
+            thresholds[cluster_id] = score
+            weakest_members[cluster_id] = int(pair[1])
+    if not calibrate_weakest_member:
+        return thresholds
+
+    sub_matrix = get_matrix(matrix_name)
+    background = get_background_freqs(matrix_name)
+
+    def jackknife_tasks():
+        for cluster_id in sorted(weakest_members):
+            weakest_gene_id = weakest_members[cluster_id]
+            weakest_name = gene_names[weakest_gene_id]
+            retained_names = [
+                member
+                for member in profiles[cluster_id].member_ids
+                if member != weakest_name
+            ]
+            if len(retained_names) < 2:
+                continue
+            retained_sequences = [
+                sequence_database.get_sequence(gene_to_id[member])
+                for member in retained_names
+                if member in gene_to_id
+            ]
+            if len(retained_sequences) != len(retained_names):
+                continue
+            yield (
+                cluster_id,
+                retained_names,
+                retained_sequences,
+                sub_matrix,
+                background,
+            )
+
+    jackknife_cluster_ids = [
+        cluster_id
+        for cluster_id, weakest_gene_id in weakest_members.items()
+        if len(profiles[cluster_id].member_ids) >= 3
+        and gene_names[weakest_gene_id] in profiles[cluster_id].member_ids
+    ]
+    jackknife_profiles = _execute_profile_build_tasks(
+        jackknife_tasks(), len(jackknife_cluster_ids), cpu
+    )
+    jackknife_ids, jackknife_packed = _pack_profiles(jackknife_profiles)
+    if jackknife_packed is None:
+        return thresholds
+    (
+        jackknife_lengths,
+        jackknife_offsets,
+        jackknife_emissions,
+        _jackknife_consensus,
+        jackknife_inserts,
+        jackknife_transitions,
+    ) = jackknife_packed
+    jackknife_pairs = np.asarray([
+        (local_profile_id, weakest_members[int(cluster_id)])
+        for local_profile_id, cluster_id in enumerate(jackknife_ids)
+    ], dtype=np.int32)
+    jackknife_scores = _score_profile_pairs(
+        jackknife_emissions,
+        jackknife_inserts,
+        jackknife_transitions,
+        jackknife_offsets,
+        jackknife_lengths,
+        sequence_database,
+        jackknife_pairs,
+        band_width,
+        cpu,
+    )
+    for cluster_id, score in zip(jackknife_ids, jackknife_scores):
+        cluster_id = int(cluster_id)
         thresholds[cluster_id] = min(
-            thresholds.get(cluster_id, np.inf), float(score)
+            thresholds[cluster_id], float(score)
         )
     return thresholds
 
@@ -553,6 +644,7 @@ def expand_profiles(
     hit_queries,
     hit_targets,
     hit_scores,
+    calibrate_weakest_member: bool = False,
 ) -> ProfileExpansionResult:
     """Run the complete strict profile-expansion stage."""
     os.environ["OMP_NUM_THREADS"] = str(cpu)
@@ -578,6 +670,8 @@ def expand_profiles(
         gene_names,
         sequence_database,
         cpu,
+        matrix_name=matrix_name,
+        calibrate_weakest_member=calibrate_weakest_member,
     )
     edges = build_strict_profile_edges(
         gene_names,
