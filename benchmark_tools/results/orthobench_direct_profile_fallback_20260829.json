@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "candidate": "direct HMM fallback for pairwise-unanchored single-copy profile winners",
+  "independent_screen": {
+    "artifact": "benchmark_tools/results/direct_profile_fallback_holdout_20260829.json",
+    "sha256": "bacc50b73bef5bf3f0028f74236edd3b97e7bee2cc50310267c443f5e237b14f",
+    "development": {
+      "edges": 70,
+      "f_score": 0.6542056074766355,
+      "precision": 1.0,
+      "recall": 0.4861111111111111,
+      "negative_rejection_rate": 1.0
+    },
+    "holdout": {
+      "edges": 76,
+      "f_score": 0.6909090909090909,
+      "precision": 1.0,
+      "recall": 0.5277777777777778,
+      "negative_rejection_rate": 1.0
+    }
+  },
+  "fresh_orthobench": {
+    "result": "benchmarks/results/production_high_sensitivity_replay_profiles_direct_fallback_20260829/result.json",
+    "result_sha256": "e5c5a5c4a2e030bbca5cd394076161142402bca3486c26a94654137bafcc3b2e",
+    "final_output_sha256": "a105f22db0d771f56160421c2447bb479c319b806c0c2b331d13fb25916da9f6",
+    "f_score": 70.3,
+    "precision": 78.8,
+    "recall": 63.5,
+    "exact_refogs": 13,
+    "direct_profile_fallback_edges": 1225,
+    "final_clusters": 62970,
+    "wall_seconds": 348.49,
+    "maximum_rss_kib": 6164376
+  },
+  "selective_jackknife_comparator": {
+    "f_score": 70.5,
+    "precision": 78.7,
+    "recall": 63.8,
+    "exact_refogs": 12,
+    "final_clusters": 63008,
+    "final_output_sha256": "55f9e3a2912bf3b3aabb1371a34f8dcae91fed6144cbd7273aea47253fa1263a"
+  },
+  "decision": "rejected_regression",
+  "reason": "The 1,225 direct HMM-only edges increased exact RefOGs and precision slightly but reduced recall by 0.3 points and F-score by 0.2 points. A calibrated profile winner without sequence-to-member support is not sufficient evidence for production graph insertion; the option remains disabled."
+}
