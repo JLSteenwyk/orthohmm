@@ -453,6 +453,7 @@ def compute_profile_self_thresholds(
     calibrate_weakest_member: bool = False,
     calibration_profile_ids: Collection[int] | None = None,
     score_per_target_residue: bool = False,
+    pair_profile_threshold_ratio: float = 1.0,
 ) -> dict[int, float]:
     """Return member thresholds, optionally calibrated by one jackknife.
 
@@ -467,6 +468,8 @@ def compute_profile_self_thresholds(
         raise ValueError(
             "matrix_name is required for weakest-member calibration"
         )
+    if not 0.0 < pair_profile_threshold_ratio <= 1.0:
+        raise ValueError("pair_profile_threshold_ratio must be in (0, 1]")
     profile_ids, packed = _pack_profiles(profiles)
     if packed is None:
         return {}
@@ -531,6 +534,70 @@ def compute_profile_self_thresholds(
 
     sub_matrix = get_matrix(matrix_name)
     background = get_background_freqs(matrix_name)
+
+    pair_tasks = []
+    pair_task_metadata = []
+    pair_task_id = 0
+    for cluster_id in sorted(calibrated_ids):
+        member_ids = profiles[cluster_id].member_ids
+        if len(member_ids) != 2:
+            continue
+        for held_index in range(2):
+            retained_name = member_ids[1 - held_index]
+            held_name = member_ids[held_index]
+            retained_gene = gene_to_id.get(retained_name)
+            held_gene = gene_to_id.get(held_name)
+            if retained_gene is None or held_gene is None:
+                continue
+            retained_sequence = sequence_database.get_sequence(retained_gene)
+            pair_tasks.append((
+                pair_task_id,
+                [retained_name, retained_name],
+                [retained_sequence, retained_sequence],
+                sub_matrix,
+                background,
+            ))
+            pair_task_metadata.append((cluster_id, held_gene))
+            pair_task_id += 1
+    pair_profiles = _execute_profile_build_tasks(
+        pair_tasks, len(pair_tasks), cpu
+    )
+    if pair_profiles:
+        pair_ids, pair_packed = _pack_profiles(pair_profiles)
+        if pair_packed is not None:
+            (
+                pair_lengths,
+                pair_offsets,
+                pair_emissions,
+                _pair_consensus,
+                pair_inserts,
+                pair_transitions,
+            ) = pair_packed
+            pair_pairs = np.asarray([
+                (local_id, pair_task_metadata[int(task_id)][1])
+                for local_id, task_id in enumerate(pair_ids)
+            ], dtype=np.int32)
+            pair_scores = _score_profile_pairs(
+                pair_emissions,
+                pair_inserts,
+                pair_transitions,
+                pair_offsets,
+                pair_lengths,
+                sequence_database,
+                pair_pairs,
+                band_width,
+                cpu,
+            ).astype(np.float64)
+            if score_per_target_residue:
+                pair_scores /= np.maximum(
+                    sequence_database.lengths[pair_pairs[:, 1]], 1
+                )
+            for task_id, score in zip(pair_ids, pair_scores):
+                cluster_id = pair_task_metadata[int(task_id)][0]
+                thresholds[cluster_id] = min(
+                    thresholds[cluster_id],
+                    float(score) * pair_profile_threshold_ratio,
+                )
 
     def jackknife_tasks():
         for cluster_id in sorted(calibrated_ids):
@@ -993,6 +1060,8 @@ def expand_profiles(
     profile_profile_similarity_threshold: float = 0.6,
     profile_profile_max_combined_genes: int = 80,
     direct_profile_fallback: bool = False,
+    profile_min_cluster_size: int = 3,
+    pair_profile_threshold_ratio: float = 1.0,
 ) -> ProfileExpansionResult:
     """Run the complete strict profile-expansion stage."""
     os.environ["OMP_NUM_THREADS"] = str(cpu)
@@ -1005,6 +1074,7 @@ def expand_profiles(
         sequence_database,
         matrix_name,
         cpu,
+        min_cluster_size=profile_min_cluster_size,
         gene_to_species=gene_to_species,
         min_species_count=min_profile_species,
     )
@@ -1031,6 +1101,7 @@ def expand_profiles(
         calibrate_weakest_member=calibrate_profiles,
         calibration_profile_ids=calibration_profile_ids,
         score_per_target_residue=score_per_target_residue,
+        pair_profile_threshold_ratio=pair_profile_threshold_ratio,
     )
     edges = build_strict_profile_edges(
         gene_names,

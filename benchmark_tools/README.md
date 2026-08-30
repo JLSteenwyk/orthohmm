@@ -158,6 +158,24 @@ one confidence-ratio edge only when a significant calibrated profile winner has
 no positive pairwise hit to any member of its selected cluster. Edge weights
 are bounded to the existing graph scale, and the mode is disabled by default.
 
+Evaluate calibrated pair-seeded profiles with:
+
+```bash
+python -m benchmark_tools.pair_profile_holdout \
+  --development-seed 1103 \
+  --holdout-seed 2909 \
+  --families 36 \
+  --cpu 4 \
+  --output /tmp/pair_profile_holdout.json
+```
+
+Set `--profile-min-cluster-size 2 --pair-profile-threshold-ratio 0.7` together
+with `--jackknife-single-copy-profiles` to include cross-species two-gene seed
+clusters. Their thresholds come from both leave-one-out directions using a
+duplicated retained-member profile; same-species pairs remain at the strict
+in-sample threshold. Pair profiles remain disabled by default pending a fresh
+production benchmark.
+
 ## OrthoFinder comparator
 
 This directory pins the OrthoFinder comparator to version 3.1.5 and keeps new

@@ -23,6 +23,8 @@ def test_replay_profile_iterations_default_to_one():
     assert args.profile_profile_max_combined_genes == 80
     assert args.component_split_high_duplication is False
     assert args.direct_profile_fallback is False
+    assert args.profile_min_cluster_size == 3
+    assert args.pair_profile_threshold_ratio == 1.0
 
 
 def test_replay_accepts_jackknife_profile_thresholds():

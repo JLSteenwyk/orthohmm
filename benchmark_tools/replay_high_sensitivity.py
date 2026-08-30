@@ -179,6 +179,19 @@ def build_parser() -> argparse.ArgumentParser:
             "winners lacking a pairwise sequence anchor"
         ),
     )
+    parser.add_argument(
+        "--profile-min-cluster-size",
+        type=int,
+        choices=(2, 3),
+        default=3,
+        help="Minimum seed-cluster size for profile construction",
+    )
+    parser.add_argument(
+        "--pair-profile-threshold-ratio",
+        type=float,
+        default=1.0,
+        help="Held-out pair-profile score ratio in (0, 1]",
+    )
     return parser
 
 
@@ -201,6 +214,16 @@ def main(argv=None) -> int:
     ):
         raise SystemExit(
             "--direct-profile-fallback requires "
+            "--jackknife-single-copy-profiles"
+        )
+    if not 0.0 < args.pair_profile_threshold_ratio <= 1.0:
+        raise SystemExit("--pair-profile-threshold-ratio must be in (0, 1]")
+    if (
+        args.profile_min_cluster_size == 2
+        and not args.jackknife_single_copy_profiles
+    ):
+        raise SystemExit(
+            "pair-seeded profiles require "
             "--jackknife-single-copy-profiles"
         )
     started = time.perf_counter()
@@ -333,6 +356,10 @@ def main(argv=None) -> int:
                     args.profile_profile_max_combined_genes
                 ),
                 direct_profile_fallback=args.direct_profile_fallback,
+                profile_min_cluster_size=args.profile_min_cluster_size,
+                pair_profile_threshold_ratio=(
+                    args.pair_profile_threshold_ratio
+                ),
             )
             profile_results.append(profile_result)
             profile_base_edges = combine_edges(
@@ -463,6 +490,10 @@ def main(argv=None) -> int:
                 args.component_split_high_duplication
             ),
             "direct_profile_fallback": args.direct_profile_fallback,
+            "profile_min_cluster_size": args.profile_min_cluster_size,
+            "pair_profile_threshold_ratio": (
+                args.pair_profile_threshold_ratio
+            ),
             "matrix": args.matrix,
             "leiden_seed": args.leiden_seed,
         },

@@ -219,6 +219,47 @@ def test_jackknife_can_be_limited_to_single_copy_profiles(tmp_path):
     assert calibrated[1] == strict[1]
 
 
+def test_pair_profile_uses_scaled_bidirectional_holdout_threshold(tmp_path):
+    (tmp_path / "a.fa").write_text(
+        ">a1\nACDEFGHIKLMNPQRSTVWYACDEFGHIKLMNPQRSTVWY\n"
+        ">a2\nACDEFGHIKLMNPQRSTVWYACDEYGHIKLMNPQRSTVWY\n"
+    )
+    names = ["a1", "a2"]
+    clusters = [[0, 1]]
+    database = load_global_sequence_database(str(tmp_path), ["a.fa"], names)
+    profiles = build_cluster_profiles(
+        clusters,
+        names,
+        database,
+        "BLOSUM62",
+        cpu=1,
+        min_cluster_size=2,
+    )
+    selected = select_single_copy_profile_ids(profiles, clusters, [0, 1])
+    heldout = compute_profile_self_thresholds(
+        profiles,
+        names,
+        database,
+        cpu=1,
+        matrix_name="BLOSUM62",
+        calibrate_weakest_member=True,
+        calibration_profile_ids=selected,
+    )
+    relaxed = compute_profile_self_thresholds(
+        profiles,
+        names,
+        database,
+        cpu=1,
+        matrix_name="BLOSUM62",
+        calibrate_weakest_member=True,
+        calibration_profile_ids=selected,
+        pair_profile_threshold_ratio=0.7,
+    )
+
+    assert selected == {0}
+    assert relaxed[0] == heldout[0] * 0.7
+
+
 def test_strict_profile_edges_use_best_profile_and_one_sequence_anchor():
     names = ["a", "b", "c", "d", "candidate"]
     clusters = [[0, 1], [2, 3], [4]]
