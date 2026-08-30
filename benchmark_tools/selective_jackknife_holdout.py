@@ -37,27 +37,24 @@ EVALUE_THRESHOLD = 1e-4
 
 
 def _predictions(
-    decision_scores: np.ndarray,
+    query_scores: np.ndarray,
     evalues: np.ndarray,
     thresholds: dict[int, float],
-    ranking_scores: np.ndarray | None = None,
 ) -> list[int | None]:
-    if ranking_scores is None:
-        ranking_scores = decision_scores
     predictions = []
-    for query_index in range(decision_scores.shape[1]):
+    for query_index in range(query_scores.shape[1]):
         eligible = [
             profile_id
-            for profile_id in range(decision_scores.shape[0])
+            for profile_id in range(query_scores.shape[0])
             if evalues[profile_id, query_index] < EVALUE_THRESHOLD
-            and decision_scores[profile_id, query_index]
+            and query_scores[profile_id, query_index]
             >= thresholds[profile_id]
         ]
         predictions.append(
             max(
                 eligible,
                 key=lambda profile_id: (
-                    ranking_scores[profile_id, query_index], -profile_id
+                    query_scores[profile_id, query_index], -profile_id
                 ),
             )
             if eligible
@@ -146,16 +143,6 @@ def evaluate_split(seed: int, families: int, cpu: int) -> dict:
         calibrate_weakest_member=True,
         calibration_profile_ids=selected_profiles,
     )
-    normalized_selective_thresholds = compute_profile_self_thresholds(
-        profiles,
-        gene_names,
-        database,
-        cpu,
-        matrix_name=MATRIX_NAME,
-        calibrate_weakest_member=True,
-        calibration_profile_ids=selected_profiles,
-        score_per_target_residue=True,
-    )
 
     query_count = len(dataset.queries)
     pairs = np.asarray(
@@ -170,8 +157,6 @@ def evaluate_split(seed: int, families: int, cpu: int) -> dict:
         profiles, database, pairs, cpu
     )
     query_scores = scores.reshape(len(profiles), query_count)
-    query_lengths = database.lengths[query_start:].astype(np.float64)
-    scores_per_target_residue = query_scores / query_lengths[None, :]
     lam, k_parameter = get_ka_params(MATRIX_NAME)
     evalues = batch_estimate_evalues(
         scores,
@@ -182,22 +167,12 @@ def evaluate_split(seed: int, families: int, cpu: int) -> dict:
     ).reshape(query_scores.shape)
 
     evaluations = {}
-    for name, decision_scores, thresholds in (
-        ("strict", query_scores, strict_thresholds),
-        ("global_jackknife", query_scores, global_thresholds),
-        ("single_copy_jackknife", query_scores, selective_thresholds),
-        (
-            "single_copy_jackknife_per_target_residue",
-            scores_per_target_residue,
-            normalized_selective_thresholds,
-        ),
+    for name, thresholds in (
+        ("strict", strict_thresholds),
+        ("global_jackknife", global_thresholds),
+        ("single_copy_jackknife", selective_thresholds),
     ):
-        predictions = _predictions(
-            decision_scores,
-            evalues,
-            thresholds,
-            ranking_scores=query_scores,
-        )
+        predictions = _predictions(query_scores, evalues, thresholds)
         metrics = classification_metrics(dataset.queries, predictions)
         metrics["contaminated_profile_wins"] = sum(
             prediction is not None and prediction >= families
@@ -218,18 +193,6 @@ def evaluate_split(seed: int, families: int, cpu: int) -> dict:
         == 1.0
         and evaluations["single_copy_jackknife"]["recall"]
         == evaluations["global_jackknife"]["recall"]
-        and evaluations[
-            "single_copy_jackknife_per_target_residue"
-        ]["precision"] == 1.0
-        and evaluations[
-            "single_copy_jackknife_per_target_residue"
-        ]["negative_rejection_rate"] == 1.0
-        and evaluations[
-            "single_copy_jackknife_per_target_residue"
-        ]["contaminated_profile_wins"] == 0
-        and evaluations[
-            "single_copy_jackknife_per_target_residue"
-        ]["recall"] > evaluations["single_copy_jackknife"]["recall"]
     )
     return {
         "seed": seed,
@@ -283,8 +246,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         "schema_version": 1,
         "description": (
             "Synthetic development/holdout comparison of strict, global "
-            "jackknife, single-copy-gated jackknife, and per-target-residue "
-            "profile thresholds."
+            "jackknife, and single-copy-gated jackknife profile thresholds."
         ),
         "label_policy": (
             "Uses generated family, contamination, and species labels only; "
@@ -314,9 +276,9 @@ def main(argv: Sequence[str] | None = None) -> int:
         "sha256": sha256_file(args.output),
         "passed": passed,
         "development_recall": development["evaluations"]
-        ["single_copy_jackknife_per_target_residue"]["recall"],
+        ["single_copy_jackknife"]["recall"],
         "holdout_recall": holdout["evaluations"]
-        ["single_copy_jackknife_per_target_residue"]["recall"],
+        ["single_copy_jackknife"]["recall"],
     }, indent=2))
     return 0 if passed else 1
 

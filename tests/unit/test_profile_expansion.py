@@ -3,13 +3,10 @@ import numpy as np
 from orthohmm.search.profile_expansion import (
     ProfileHits,
     build_cluster_profiles,
-    build_direct_profile_fallback_edges,
-    build_reciprocal_profile_edges,
     build_strict_profile_edges,
     compute_profile_self_thresholds,
     load_global_sequence_database,
     select_single_copy_profile_ids,
-    select_species_completion_cluster_ids,
 )
 
 
@@ -76,15 +73,6 @@ def test_build_cluster_profiles_requires_cross_species_support(tmp_path):
     )
 
     assert list(profiles) == [1]
-
-
-def test_species_completion_selects_incomplete_single_copy_clusters():
-    selected = select_species_completion_cluster_ids(
-        [[0, 1, 2], [3, 4, 5], [6]],
-        [0, 1, 2, 0, 0, 1, 3],
-    )
-
-    assert selected == {0}
 
 
 def test_profile_species_gate_requires_species_mapping(tmp_path):
@@ -165,34 +153,6 @@ def test_weakest_member_jackknife_never_tightens_threshold(tmp_path):
     assert calibrated[0] < in_sample[0]
 
 
-def test_profile_thresholds_can_be_expressed_per_target_residue(tmp_path):
-    (tmp_path / "a.fa").write_text(
-        ">a1\nACDEFGHIKLMNPQRSTVWYACDEFGHIKLMNPQRSTVWY\n"
-        ">a2\nACDEFGHIKLMNPQRSTVWYACDEYGHIKLMNPQRSTVWY\n"
-        ">a3\nACDEYGHIKLMAPQRSTVWYFCDEFGHIKLMNPQKSTVWY\n"
-    )
-    names = ["a1", "a2", "a3"]
-    database = load_global_sequence_database(
-        str(tmp_path), ["a.fa"], names
-    )
-    profiles = build_cluster_profiles(
-        [[0, 1, 2]], names, database, "BLOSUM62", cpu=1
-    )
-
-    raw = compute_profile_self_thresholds(
-        profiles, names, database, cpu=1
-    )
-    per_residue = compute_profile_self_thresholds(
-        profiles,
-        names,
-        database,
-        cpu=1,
-        score_per_target_residue=True,
-    )
-
-    assert per_residue[0] == raw[0] / 40.0
-
-
 def test_jackknife_can_be_limited_to_single_copy_profiles(tmp_path):
     (tmp_path / "a.fa").write_text(
         ">a1\nACDEFGHIKLMNPQRSTVWYACDEFGHIKLMNPQRSTVWY\n"
@@ -227,47 +187,6 @@ def test_jackknife_can_be_limited_to_single_copy_profiles(tmp_path):
     assert selected == {0}
     assert calibrated[0] < strict[0]
     assert calibrated[1] == strict[1]
-
-
-def test_pair_profile_uses_scaled_bidirectional_holdout_threshold(tmp_path):
-    (tmp_path / "a.fa").write_text(
-        ">a1\nACDEFGHIKLMNPQRSTVWYACDEFGHIKLMNPQRSTVWY\n"
-        ">a2\nACDEFGHIKLMNPQRSTVWYACDEYGHIKLMNPQRSTVWY\n"
-    )
-    names = ["a1", "a2"]
-    clusters = [[0, 1]]
-    database = load_global_sequence_database(str(tmp_path), ["a.fa"], names)
-    profiles = build_cluster_profiles(
-        clusters,
-        names,
-        database,
-        "BLOSUM62",
-        cpu=1,
-        min_cluster_size=2,
-    )
-    selected = select_single_copy_profile_ids(profiles, clusters, [0, 1])
-    heldout = compute_profile_self_thresholds(
-        profiles,
-        names,
-        database,
-        cpu=1,
-        matrix_name="BLOSUM62",
-        calibrate_weakest_member=True,
-        calibration_profile_ids=selected,
-    )
-    relaxed = compute_profile_self_thresholds(
-        profiles,
-        names,
-        database,
-        cpu=1,
-        matrix_name="BLOSUM62",
-        calibrate_weakest_member=True,
-        calibration_profile_ids=selected,
-        pair_profile_threshold_ratio=0.7,
-    )
-
-    assert selected == {0}
-    assert relaxed[0] == heldout[0] * 0.7
 
 
 def test_strict_profile_edges_use_best_profile_and_one_sequence_anchor():
@@ -320,200 +239,4 @@ def test_strict_profile_edges_reject_hits_below_weakest_member():
         np.array([5.0]),
     )
 
-    assert len(edges) == 0
-
-
-def test_strict_profile_edges_support_per_residue_thresholds():
-    names = ["a", "b", "candidate"]
-    hits = ProfileHits(
-        profile_cluster_ids=np.array([0], dtype=np.int32),
-        gene_ids=np.array([2], dtype=np.int32),
-        scores=np.array([7.9]),
-        evalues=np.array([1e-20]),
-        candidate_count=1,
-        scores_per_target_residue=np.array([3.95]),
-    )
-
-    edges = build_strict_profile_edges(
-        names,
-        [[0, 1], [2]],
-        hits,
-        {0: 3.8},
-        np.array([2], dtype=np.int32),
-        np.array([0], dtype=np.int32),
-        np.array([5.0]),
-        score_per_target_residue=True,
-    )
-
-    assert _edge_map(edges) == {(0, 2): 5.0}
-
-
-def test_strict_profile_edges_can_require_an_absent_species():
-    names = ["a", "b", "same_species", "missing_species"]
-    hits = ProfileHits(
-        profile_cluster_ids=np.array([0, 0], dtype=np.int32),
-        gene_ids=np.array([2, 3], dtype=np.int32),
-        scores=np.array([10.0, 10.0]),
-        evalues=np.array([1e-20, 1e-20]),
-        candidate_count=2,
-    )
-
-    edges = build_strict_profile_edges(
-        names,
-        [[0, 1], [2], [3]],
-        hits,
-        {0: 8.0},
-        np.array([2, 3], dtype=np.int32),
-        np.array([0, 0], dtype=np.int32),
-        np.array([5.0, 5.0]),
-        candidate_missing_species_only=True,
-        gene_to_species=np.array([0, 1, 1, 2], dtype=np.int32),
-    )
-
-    assert _edge_map(edges) == {(0, 3): 5.0}
-
-
-def test_direct_profile_fallback_anchors_unconnected_calibrated_winner():
-    names = ["a", "b", "candidate"]
-    hits = ProfileHits(
-        profile_cluster_ids=np.array([0], dtype=np.int32),
-        gene_ids=np.array([2], dtype=np.int32),
-        scores=np.array([10.0]),
-        evalues=np.array([1e-20]),
-        candidate_count=1,
-    )
-
-    edges = build_direct_profile_fallback_edges(
-        names,
-        [[0, 1], [2]],
-        hits,
-        {0: 8.0},
-        np.array([], dtype=np.int32),
-        np.array([], dtype=np.int32),
-        np.array([], dtype=np.float64),
-        {0},
-    )
-
-    assert _edge_map(edges) == {(0, 2): 1.25}
-
-
-def test_direct_profile_fallback_skips_existing_sequence_anchor():
-    names = ["a", "b", "candidate"]
-    hits = ProfileHits(
-        profile_cluster_ids=np.array([0], dtype=np.int32),
-        gene_ids=np.array([2], dtype=np.int32),
-        scores=np.array([10.0]),
-        evalues=np.array([1e-20]),
-        candidate_count=1,
-    )
-
-    edges = build_direct_profile_fallback_edges(
-        names,
-        [[0, 1], [2]],
-        hits,
-        {0: 8.0},
-        np.array([2], dtype=np.int32),
-        np.array([1], dtype=np.int32),
-        np.array([0.5]),
-        {0},
-    )
-
-    assert len(edges) == 0
-
-
-def test_direct_profile_fallback_requires_allowed_profile():
-    names = ["a", "b", "candidate"]
-    hits = ProfileHits(
-        profile_cluster_ids=np.array([0], dtype=np.int32),
-        gene_ids=np.array([2], dtype=np.int32),
-        scores=np.array([10.0]),
-        evalues=np.array([1e-20]),
-        candidate_count=1,
-    )
-
-    edges = build_direct_profile_fallback_edges(
-        names,
-        [[0, 1], [2]],
-        hits,
-        {0: 8.0},
-        np.array([], dtype=np.int32),
-        np.array([], dtype=np.int32),
-        np.array([], dtype=np.float64),
-        set(),
-    )
-
-    assert len(edges) == 0
-
-
-def test_reciprocal_profile_edges_use_bidirectional_calibrated_support():
-    names = ["a0", "a1", "b0", "b1"]
-    hits = ProfileHits(
-        profile_cluster_ids=np.array([1, 1, 0, 0], dtype=np.int32),
-        gene_ids=np.array([0, 1, 2, 3], dtype=np.int32),
-        scores=np.array([8.0, 7.5, 9.0, 8.0]),
-        evalues=np.full(4, 1e-20),
-        candidate_count=4,
-    )
-
-    edges, pair_count = build_reciprocal_profile_edges(
-        names,
-        [[0, 1], [2, 3]],
-        hits,
-        {0: 10.0, 1: 10.0},
-        [0, 1, 2, 3],
-        threshold_ratio=0.7,
-        min_support=2,
-    )
-
-    assert pair_count == 1
-    assert _edge_map(edges) == {
-        (0, 2): 0.8,
-        (0, 3): 0.8,
-        (1, 2): 0.75,
-        (1, 3): 0.75,
-    }
-
-
-def test_reciprocal_profile_edges_reject_species_overlap():
-    names = ["a0", "a1", "b0", "b1"]
-    hits = ProfileHits(
-        profile_cluster_ids=np.array([1, 1, 0, 0], dtype=np.int32),
-        gene_ids=np.array([0, 1, 2, 3], dtype=np.int32),
-        scores=np.full(4, 8.0),
-        evalues=np.full(4, 1e-20),
-        candidate_count=4,
-    )
-
-    edges, pair_count = build_reciprocal_profile_edges(
-        names,
-        [[0, 1], [2, 3]],
-        hits,
-        {0: 10.0, 1: 10.0},
-        [0, 1, 2, 1],
-    )
-
-    assert pair_count == 0
-    assert len(edges) == 0
-
-
-def test_reciprocal_profile_edges_require_minimum_support_each_way():
-    names = ["a0", "a1", "b0", "b1"]
-    hits = ProfileHits(
-        profile_cluster_ids=np.array([1, 1, 0], dtype=np.int32),
-        gene_ids=np.array([0, 1, 2], dtype=np.int32),
-        scores=np.full(3, 8.0),
-        evalues=np.full(3, 1e-20),
-        candidate_count=3,
-    )
-
-    edges, pair_count = build_reciprocal_profile_edges(
-        names,
-        [[0, 1], [2, 3]],
-        hits,
-        {0: 10.0, 1: 10.0},
-        [0, 1, 2, 3],
-        min_support=2,
-    )
-
-    assert pair_count == 0
     assert len(edges) == 0

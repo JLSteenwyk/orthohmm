@@ -10,7 +10,7 @@ from typing import Collection, Mapping, Sequence
 
 import numpy as np
 
-from ..accuracy import combine_edges, deduplicate_undirected_edges
+from ..accuracy import deduplicate_undirected_edges
 from ..helpers import IndexedEdges
 from .evalue import batch_estimate_evalues
 from .matrices import (
@@ -21,7 +21,6 @@ from .matrices import (
 )
 from .msa_profile import MSAProfile, build_msa_profile
 from .prefilter import prefilter_candidates
-from .profile_profile import build_profile_profile_edges
 from .sequences import SequenceStore, SpeciesSequences
 from .viterbi import (
     batch_viterbi_c,
@@ -41,19 +40,13 @@ except Exception:  # pragma: no cover - CUDA is optional
 
 @dataclass(frozen=True)
 class ProfileHits:
-    """Significant gene-to-MSA-profile scores using global integer IDs.
-
-    Raw scores remain the source for E-values, profile ranking, and graph edge
-    weights.  Per-target-residue scores are an optional decision statistic for
-    comparing candidates with member-derived thresholds.
-    """
+    """Significant gene-to-MSA-profile scores using global integer IDs."""
 
     profile_cluster_ids: np.ndarray
     gene_ids: np.ndarray
     scores: np.ndarray
     evalues: np.ndarray
     candidate_count: int
-    scores_per_target_residue: np.ndarray | None = None
 
 
 @dataclass(frozen=True)
@@ -64,15 +57,7 @@ class ProfileExpansionResult:
     profiles_built: int
     profile_candidates: int
     significant_profile_hits: int
-    strict_profile_edges: int = 0
-    reciprocal_profile_pairs: int = 0
-    reciprocal_profile_edges: int = 0
     calibrated_profiles: int = 0
-    profile_pair_candidates: int = 0
-    profile_pair_merges: int = 0
-    profile_pair_edges: int = 0
-    direct_profile_fallback_edges: int = 0
-    species_completion_profiles: int = 0
 
 
 def load_global_sequence_database(
@@ -180,7 +165,6 @@ def build_cluster_profiles(
     max_cluster_size: int = 200,
     gene_to_species=None,
     min_species_count: int = 1,
-    allowed_cluster_ids: Collection[int] | None = None,
 ) -> dict[int, MSAProfile]:
     """Build center-star MSA profiles for informative cluster sizes."""
     if min_species_count < 1:
@@ -198,16 +182,10 @@ def build_cluster_profiles(
         raise ValueError("gene_to_species must match gene_names")
     sub_matrix = get_matrix(matrix_name)
     background = get_background_freqs(matrix_name)
-    allowed = (
-        set(int(cluster_id) for cluster_id in allowed_cluster_ids)
-        if allowed_cluster_ids is not None
-        else None
-    )
     cluster_ids = [
         cluster_id
         for cluster_id, cluster in enumerate(clusters)
         if min_cluster_size <= len(cluster) <= max_cluster_size
-        and (allowed is None or cluster_id in allowed)
         and (
             min_species_count == 1
             or len(np.unique(species[np.asarray(cluster, dtype=np.int32)]))
@@ -227,25 +205,6 @@ def build_cluster_profiles(
             )
 
     return _execute_profile_build_tasks(tasks(), len(cluster_ids), cpu)
-
-
-def select_species_completion_cluster_ids(
-    clusters: Sequence[Sequence[int]],
-    gene_to_species,
-    min_cluster_size: int = 3,
-    max_cluster_size: int = 200,
-) -> set[int]:
-    """Select incomplete seed clusters containing at most one gene per species."""
-    species = np.asarray(gene_to_species, dtype=np.int32)
-    total_species = len(np.unique(species))
-    selected = set()
-    for cluster_id, cluster in enumerate(clusters):
-        if not min_cluster_size <= len(cluster) <= max_cluster_size:
-            continue
-        represented = np.unique(species[np.asarray(cluster, dtype=np.int32)])
-        if len(represented) == len(cluster) and len(represented) < total_species:
-            selected.add(cluster_id)
-    return selected
 
 
 def select_single_copy_profile_ids(
@@ -455,18 +414,12 @@ def search_genes_against_profiles(
         k_parameter,
     )
     significant = evalues < evalue_threshold
-    significant_gene_ids = pairs[significant, 1].copy()
-    scores_per_target_residue = scores[significant].astype(np.float64)
-    scores_per_target_residue /= np.maximum(
-        sequence_database.lengths[significant_gene_ids], 1
-    )
     return ProfileHits(
         profile_ids[pairs[significant, 0]],
-        significant_gene_ids,
+        pairs[significant, 1].copy(),
         scores[significant].astype(np.float64),
         evalues[significant],
         candidate_count,
-        scores_per_target_residue,
     )
 
 
@@ -479,8 +432,6 @@ def compute_profile_self_thresholds(
     matrix_name: str | None = None,
     calibrate_weakest_member: bool = False,
     calibration_profile_ids: Collection[int] | None = None,
-    score_per_target_residue: bool = False,
-    pair_profile_threshold_ratio: float = 1.0,
 ) -> dict[int, float]:
     """Return member thresholds, optionally calibrated by one jackknife.
 
@@ -488,15 +439,11 @@ def compute_profile_self_thresholds(
     rebuilds each profile without its weakest in-sample member, scores that
     member against the held-out profile, and keeps the lower score.  This
     removes profile-construction optimism without using benchmark labels.
-    Per-target-residue mode applies the same normalization to members and
-    candidates so partial proteins are not compared with full-length totals.
     """
     if calibrate_weakest_member and not matrix_name:
         raise ValueError(
             "matrix_name is required for weakest-member calibration"
         )
-    if not 0.0 < pair_profile_threshold_ratio <= 1.0:
-        raise ValueError("pair_profile_threshold_ratio must be in (0, 1]")
     profile_ids, packed = _pack_profiles(profiles)
     if packed is None:
         return {}
@@ -533,16 +480,9 @@ def compute_profile_self_thresholds(
         band_width,
         cpu,
     )
-    decision_scores = scores.astype(np.float64)
-    if score_per_target_residue:
-        decision_scores /= np.maximum(
-            sequence_database.lengths[pairs[:, 1]], 1
-        )
     thresholds = {}
     weakest_members = {}
-    for cluster_id, pair, score in zip(
-        pair_clusters, pairs, decision_scores
-    ):
+    for cluster_id, pair, score in zip(pair_clusters, pairs, scores):
         score = float(score)
         if score < thresholds.get(cluster_id, np.inf):
             thresholds[cluster_id] = score
@@ -561,70 +501,6 @@ def compute_profile_self_thresholds(
 
     sub_matrix = get_matrix(matrix_name)
     background = get_background_freqs(matrix_name)
-
-    pair_tasks = []
-    pair_task_metadata = []
-    pair_task_id = 0
-    for cluster_id in sorted(calibrated_ids):
-        member_ids = profiles[cluster_id].member_ids
-        if len(member_ids) != 2:
-            continue
-        for held_index in range(2):
-            retained_name = member_ids[1 - held_index]
-            held_name = member_ids[held_index]
-            retained_gene = gene_to_id.get(retained_name)
-            held_gene = gene_to_id.get(held_name)
-            if retained_gene is None or held_gene is None:
-                continue
-            retained_sequence = sequence_database.get_sequence(retained_gene)
-            pair_tasks.append((
-                pair_task_id,
-                [retained_name, retained_name],
-                [retained_sequence, retained_sequence],
-                sub_matrix,
-                background,
-            ))
-            pair_task_metadata.append((cluster_id, held_gene))
-            pair_task_id += 1
-    pair_profiles = _execute_profile_build_tasks(
-        pair_tasks, len(pair_tasks), cpu
-    )
-    if pair_profiles:
-        pair_ids, pair_packed = _pack_profiles(pair_profiles)
-        if pair_packed is not None:
-            (
-                pair_lengths,
-                pair_offsets,
-                pair_emissions,
-                _pair_consensus,
-                pair_inserts,
-                pair_transitions,
-            ) = pair_packed
-            pair_pairs = np.asarray([
-                (local_id, pair_task_metadata[int(task_id)][1])
-                for local_id, task_id in enumerate(pair_ids)
-            ], dtype=np.int32)
-            pair_scores = _score_profile_pairs(
-                pair_emissions,
-                pair_inserts,
-                pair_transitions,
-                pair_offsets,
-                pair_lengths,
-                sequence_database,
-                pair_pairs,
-                band_width,
-                cpu,
-            ).astype(np.float64)
-            if score_per_target_residue:
-                pair_scores /= np.maximum(
-                    sequence_database.lengths[pair_pairs[:, 1]], 1
-                )
-            for task_id, score in zip(pair_ids, pair_scores):
-                cluster_id = pair_task_metadata[int(task_id)][0]
-                thresholds[cluster_id] = min(
-                    thresholds[cluster_id],
-                    float(score) * pair_profile_threshold_ratio,
-                )
 
     def jackknife_tasks():
         for cluster_id in sorted(calibrated_ids):
@@ -688,14 +564,7 @@ def compute_profile_self_thresholds(
         band_width,
         cpu,
     )
-    jackknife_decision_scores = jackknife_scores.astype(np.float64)
-    if score_per_target_residue:
-        jackknife_decision_scores /= np.maximum(
-            sequence_database.lengths[jackknife_pairs[:, 1]], 1
-        )
-    for cluster_id, score in zip(
-        jackknife_ids, jackknife_decision_scores
-    ):
+    for cluster_id, score in zip(jackknife_ids, jackknife_scores):
         cluster_id = int(cluster_id)
         thresholds[cluster_id] = min(
             thresholds[cluster_id], float(score)
@@ -711,9 +580,6 @@ def build_strict_profile_edges(
     hit_queries,
     hit_targets,
     hit_scores,
-    score_per_target_residue: bool = False,
-    candidate_missing_species_only: bool = False,
-    gene_to_species=None,
 ) -> IndexedEdges:
     """Create one sequence-supported anchor for each strict profile candidate."""
     n_genes = len(gene_names)
@@ -729,16 +595,6 @@ def build_strict_profile_edges(
     profile_scores = np.asarray(profile_hits.scores, dtype=np.float64)
     if len(profile_ids) == 0:
         return deduplicate_undirected_edges(gene_names, [], [], [])
-    decision_scores = profile_scores
-    if score_per_target_residue:
-        if profile_hits.scores_per_target_residue is None:
-            raise ValueError(
-                "per-residue profile scores are required for normalized "
-                "thresholding"
-            )
-        decision_scores = np.asarray(
-            profile_hits.scores_per_target_residue, dtype=np.float64
-        )
     thresholds = np.fromiter(
         (self_thresholds.get(int(profile_id), np.inf) for profile_id in profile_ids),
         dtype=np.float64,
@@ -746,26 +602,8 @@ def build_strict_profile_edges(
     )
     eligible = (
         (cluster_by_gene[candidate_genes] != profile_ids)
-        & (decision_scores >= thresholds)
+        & (profile_scores >= thresholds)
     )
-    if candidate_missing_species_only:
-        if gene_to_species is None:
-            raise ValueError(
-                "gene_to_species is required for missing-species candidates"
-            )
-        species = np.asarray(gene_to_species, dtype=np.int32)
-        if len(species) != n_genes:
-            raise ValueError("gene_to_species must match gene_names")
-        species_count = int(species.max()) + 1 if len(species) else 0
-        represented = np.zeros(
-            (len(clusters), species_count), dtype=np.bool_
-        )
-        for cluster_id, cluster in enumerate(clusters):
-            members = np.asarray(cluster, dtype=np.int32)
-            represented[cluster_id, species[members]] = True
-        eligible &= ~represented[
-            profile_ids, species[candidate_genes]
-        ]
     if not eligible.any():
         return deduplicate_undirected_edges(gene_names, [], [], [])
 
@@ -844,246 +682,6 @@ def build_strict_profile_edges(
     )
 
 
-def build_direct_profile_fallback_edges(
-    gene_names: Sequence[str],
-    clusters: Sequence[Sequence[int]],
-    profile_hits: ProfileHits,
-    self_thresholds: Mapping[int, float],
-    hit_queries,
-    hit_targets,
-    hit_scores,
-    allowed_profile_ids: Collection[int],
-    score_per_target_residue: bool = False,
-) -> IndexedEdges:
-    """Anchor calibrated profile winners lacking a pairwise sequence hit."""
-    n_genes = len(gene_names)
-    cluster_by_gene = np.full(n_genes, -1, dtype=np.int32)
-    representatives = np.full(len(clusters), -1, dtype=np.int32)
-    for cluster_id, cluster in enumerate(clusters):
-        members = np.asarray(cluster, dtype=np.int32)
-        if len(members):
-            cluster_by_gene[members] = cluster_id
-            representatives[cluster_id] = int(members[0])
-
-    profile_ids = np.asarray(profile_hits.profile_cluster_ids, dtype=np.int32)
-    candidate_genes = np.asarray(profile_hits.gene_ids, dtype=np.int32)
-    raw_scores = np.asarray(profile_hits.scores, dtype=np.float64)
-    if not len(profile_ids) or not allowed_profile_ids:
-        return deduplicate_undirected_edges(gene_names, [], [], [])
-    decision_scores = raw_scores
-    if score_per_target_residue:
-        if profile_hits.scores_per_target_residue is None:
-            raise ValueError(
-                "per-residue profile scores are required for normalized "
-                "thresholding"
-            )
-        decision_scores = np.asarray(
-            profile_hits.scores_per_target_residue, dtype=np.float64
-        )
-    thresholds = np.fromiter(
-        (
-            self_thresholds.get(int(profile_id), np.inf)
-            for profile_id in profile_ids
-        ),
-        dtype=np.float64,
-        count=len(profile_ids),
-    )
-    allowed = np.isin(
-        profile_ids,
-        np.fromiter(allowed_profile_ids, dtype=np.int32),
-    )
-    eligible = (
-        allowed
-        & (cluster_by_gene[candidate_genes] != profile_ids)
-        & np.isfinite(decision_scores)
-        & np.isfinite(thresholds)
-        & (thresholds > 0.0)
-        & (decision_scores >= thresholds)
-    )
-    if not eligible.any():
-        return deduplicate_undirected_edges(gene_names, [], [], [])
-
-    eligible_rows = np.flatnonzero(eligible)
-    best_scores = np.full(n_genes, -np.inf, dtype=np.float64)
-    np.maximum.at(
-        best_scores,
-        candidate_genes[eligible_rows],
-        raw_scores[eligible_rows],
-    )
-    winning_rows = eligible_rows[
-        raw_scores[eligible_rows]
-        == best_scores[candidate_genes[eligible_rows]]
-    ]
-    winning_genes, first = np.unique(
-        candidate_genes[winning_rows], return_index=True
-    )
-    selected_rows = winning_rows[first]
-    selected_profiles = profile_ids[selected_rows]
-
-    queries = np.asarray(hit_queries, dtype=np.int32)
-    targets = np.asarray(hit_targets, dtype=np.int32)
-    scores = np.asarray(hit_scores, dtype=np.float64)
-    anchored = np.zeros(n_genes, dtype=np.bool_)
-    selected_profile_by_gene = np.full(n_genes, -1, dtype=np.int32)
-    selected_profile_by_gene[winning_genes] = selected_profiles
-    outgoing = (
-        (selected_profile_by_gene[queries] >= 0)
-        & (
-            cluster_by_gene[targets]
-            == selected_profile_by_gene[queries]
-        )
-        & (queries != targets)
-        & (scores > 0.0)
-    )
-    reverse = (
-        (selected_profile_by_gene[targets] >= 0)
-        & (
-            cluster_by_gene[queries]
-            == selected_profile_by_gene[targets]
-        )
-        & (queries != targets)
-        & (scores > 0.0)
-    )
-    anchored[queries[outgoing]] = True
-    anchored[targets[reverse]] = True
-
-    fallback = ~anchored[winning_genes]
-    fallback_genes = winning_genes[fallback]
-    fallback_rows = selected_rows[fallback]
-    fallback_profiles = profile_ids[fallback_rows]
-    fallback_members = representatives[fallback_profiles]
-    valid = fallback_members >= 0
-    confidence = np.clip(
-        decision_scores[fallback_rows] / thresholds[fallback_rows],
-        1.0,
-        5.0,
-    )
-    return deduplicate_undirected_edges(
-        gene_names,
-        fallback_genes[valid],
-        fallback_members[valid],
-        confidence[valid],
-    )
-
-
-def build_reciprocal_profile_edges(
-    gene_names: Sequence[str],
-    clusters: Sequence[Sequence[int]],
-    profile_hits: ProfileHits,
-    self_thresholds: Mapping[int, float],
-    gene_to_species,
-    threshold_ratio: float = 0.7,
-    min_support: int = 2,
-    score_per_target_residue: bool = False,
-) -> tuple[IndexedEdges, int]:
-    """Connect complementary split clusters with reciprocal profile evidence.
-
-    A directed observation is a member of one cluster scoring against another
-    cluster's profile.  Edges are emitted only when both directions have the
-    requested number of unique supporting genes and the two clusters have no
-    species in common.  Edge weights are the weaker of the two profile scores
-    after calibration by each profile's weakest-member score.
-    """
-    if not 0.0 < threshold_ratio <= 1.0:
-        raise ValueError("threshold_ratio must be in (0, 1]")
-    if min_support < 1:
-        raise ValueError("min_support must be >= 1")
-    if gene_to_species is None:
-        raise ValueError("gene_to_species is required for reciprocal profiles")
-    species = np.asarray(gene_to_species, dtype=np.int32)
-    if len(species) != len(gene_names):
-        raise ValueError("gene_to_species must match gene_names")
-
-    n_genes = len(gene_names)
-    cluster_by_gene = np.full(n_genes, -1, dtype=np.int32)
-    cluster_species = []
-    for cluster_id, cluster in enumerate(clusters):
-        members = np.asarray(cluster, dtype=np.int32)
-        cluster_by_gene[members] = cluster_id
-        cluster_species.append(set(int(item) for item in species[members]))
-
-    profile_ids = np.asarray(profile_hits.profile_cluster_ids, dtype=np.int32)
-    candidate_genes = np.asarray(profile_hits.gene_ids, dtype=np.int32)
-    profile_scores = np.asarray(profile_hits.scores, dtype=np.float64)
-    if len(profile_ids) == 0:
-        return deduplicate_undirected_edges(gene_names, [], [], []), 0
-    if score_per_target_residue:
-        if profile_hits.scores_per_target_residue is None:
-            raise ValueError(
-                "per-residue profile scores are required for normalized "
-                "thresholding"
-            )
-        profile_scores = np.asarray(
-            profile_hits.scores_per_target_residue, dtype=np.float64
-        )
-    if not (
-        len(profile_ids) == len(candidate_genes) == len(profile_scores)
-    ):
-        raise ValueError("profile-hit arrays must align")
-    valid_profiles = (profile_ids >= 0) & (profile_ids < len(clusters))
-    valid_genes = (candidate_genes >= 0) & (candidate_genes < n_genes)
-    thresholds = np.fromiter(
-        (
-            self_thresholds.get(int(profile_id), np.inf)
-            for profile_id in profile_ids
-        ),
-        dtype=np.float64,
-        count=len(profile_ids),
-    )
-    source_clusters = np.full(len(candidate_genes), -1, dtype=np.int32)
-    source_clusters[valid_genes] = cluster_by_gene[candidate_genes[valid_genes]]
-    eligible = (
-        valid_profiles
-        & valid_genes
-        & (source_clusters >= 0)
-        & (source_clusters != profile_ids)
-        & np.isfinite(thresholds)
-        & (thresholds > 0.0)
-        & np.isfinite(profile_scores)
-        & (profile_scores >= thresholds * threshold_ratio)
-    )
-    if not eligible.any():
-        return deduplicate_undirected_edges(gene_names, [], [], []), 0
-
-    directed: dict[tuple[int, int], dict[int, float]] = {}
-    for row in np.flatnonzero(eligible):
-        source = int(source_clusters[row])
-        target = int(profile_ids[row])
-        gene = int(candidate_genes[row])
-        ratio = float(profile_scores[row] / thresholds[row])
-        support = directed.setdefault((source, target), {})
-        support[gene] = max(support.get(gene, -np.inf), ratio)
-
-    edge_sources = []
-    edge_targets = []
-    edge_weights = []
-    reciprocal_pairs = 0
-    for source, target in sorted(directed):
-        if source >= target:
-            continue
-        forward = directed[(source, target)]
-        reverse = directed.get((target, source))
-        if reverse is None:
-            continue
-        if len(forward) < min_support or len(reverse) < min_support:
-            continue
-        if cluster_species[source] & cluster_species[target]:
-            continue
-        reciprocal_pairs += 1
-        for source_gene, forward_ratio in sorted(forward.items()):
-            for target_gene, reverse_ratio in sorted(reverse.items()):
-                edge_sources.append(source_gene)
-                edge_targets.append(target_gene)
-                edge_weights.append(min(forward_ratio, reverse_ratio))
-
-    return (
-        deduplicate_undirected_edges(
-            gene_names, edge_sources, edge_targets, edge_weights
-        ),
-        reciprocal_pairs,
-    )
-
-
 def expand_profiles(
     clusters: Sequence[Sequence[int]],
     gene_names: Sequence[str],
@@ -1099,44 +697,20 @@ def expand_profiles(
     gene_to_species=None,
     min_profile_species: int = 1,
     calibrate_single_copy_profiles: bool = False,
-    reciprocal_profile_merges: bool = False,
-    reciprocal_profile_threshold_ratio: float = 0.7,
-    reciprocal_profile_min_support: int = 2,
-    score_per_target_residue: bool = False,
-    profile_profile_merges: bool = False,
-    profile_profile_similarity_threshold: float = 0.6,
-    profile_profile_max_combined_genes: int = 80,
-    direct_profile_fallback: bool = False,
-    profile_min_cluster_size: int = 3,
-    pair_profile_threshold_ratio: float = 1.0,
-    species_completion_only: bool = False,
 ) -> ProfileExpansionResult:
     """Run the complete strict profile-expansion stage."""
     os.environ["OMP_NUM_THREADS"] = str(cpu)
     sequence_database = load_global_sequence_database(
         fasta_directory, files, gene_names
     )
-    completion_profile_ids = None
-    if species_completion_only:
-        if gene_to_species is None:
-            raise ValueError(
-                "gene_to_species is required for species completion"
-            )
-        completion_profile_ids = select_species_completion_cluster_ids(
-            clusters,
-            gene_to_species,
-            min_cluster_size=profile_min_cluster_size,
-        )
     profiles = build_cluster_profiles(
         clusters,
         gene_names,
         sequence_database,
         matrix_name,
         cpu,
-        min_cluster_size=profile_min_cluster_size,
         gene_to_species=gene_to_species,
         min_species_count=min_profile_species,
-        allowed_cluster_ids=completion_profile_ids,
     )
     profile_hits = search_genes_against_profiles(
         profiles,
@@ -1160,8 +734,6 @@ def expand_profiles(
         matrix_name=matrix_name,
         calibrate_weakest_member=calibrate_profiles,
         calibration_profile_ids=calibration_profile_ids,
-        score_per_target_residue=score_per_target_residue,
-        pair_profile_threshold_ratio=pair_profile_threshold_ratio,
     )
     edges = build_strict_profile_edges(
         gene_names,
@@ -1171,76 +743,15 @@ def expand_profiles(
         hit_queries,
         hit_targets,
         hit_scores,
-        score_per_target_residue=score_per_target_residue,
-        candidate_missing_species_only=species_completion_only,
-        gene_to_species=gene_to_species,
     )
-    strict_edge_count = len(edges)
-    direct_fallback_edge_count = 0
-    if direct_profile_fallback:
-        fallback_edges = build_direct_profile_fallback_edges(
-            gene_names,
-            clusters,
-            profile_hits,
-            self_thresholds,
-            hit_queries,
-            hit_targets,
-            hit_scores,
-            calibration_profile_ids or set(),
-            score_per_target_residue=score_per_target_residue,
-        )
-        direct_fallback_edge_count = len(fallback_edges)
-        edges = combine_edges(edges, fallback_edges)
-    reciprocal_pairs = 0
-    reciprocal_edge_count = 0
-    if reciprocal_profile_merges:
-        reciprocal_edges, reciprocal_pairs = build_reciprocal_profile_edges(
-            gene_names,
-            clusters,
-            profile_hits,
-            self_thresholds,
-            gene_to_species,
-            threshold_ratio=reciprocal_profile_threshold_ratio,
-            min_support=reciprocal_profile_min_support,
-            score_per_target_residue=score_per_target_residue,
-        )
-        reciprocal_edge_count = len(reciprocal_edges)
-        edges = combine_edges(edges, reciprocal_edges)
-    profile_pair_candidates = 0
-    profile_pair_merges = 0
-    profile_pair_edge_count = 0
-    if profile_profile_merges:
-        profile_pair_result = build_profile_profile_edges(
-            profiles,
-            clusters,
-            gene_names,
-            get_background_freqs(matrix_name),
-            cpu,
-            similarity_threshold=profile_profile_similarity_threshold,
-            max_combined_genes=profile_profile_max_combined_genes,
-        )
-        profile_pair_candidates = profile_pair_result.candidate_pairs
-        profile_pair_merges = profile_pair_result.reciprocal_pairs
-        profile_pair_edge_count = len(profile_pair_result.edges)
-        edges = combine_edges(edges, profile_pair_result.edges)
     return ProfileExpansionResult(
         edges=edges,
         profiles_built=len(profiles),
         profile_candidates=profile_hits.candidate_count,
         significant_profile_hits=len(profile_hits.scores),
-        strict_profile_edges=strict_edge_count,
-        reciprocal_profile_pairs=reciprocal_pairs,
-        reciprocal_profile_edges=reciprocal_edge_count,
         calibrated_profiles=(
             len(profiles)
             if calibrate_weakest_member
             else len(calibration_profile_ids or ())
-        ),
-        profile_pair_candidates=profile_pair_candidates,
-        profile_pair_merges=profile_pair_merges,
-        profile_pair_edges=profile_pair_edge_count,
-        direct_profile_fallback_edges=direct_fallback_edge_count,
-        species_completion_profiles=(
-            len(profiles) if species_completion_only else 0
         ),
     )

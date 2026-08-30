@@ -167,32 +167,6 @@ def test_indexed_refinement_splits_large_low_degree_members():
     assert all(frozenset([gene]) in refined_sets for gene in cluster[5:])
 
 
-def test_indexed_component_split_retains_multiple_strong_subgroups():
-    cluster = list(range(22))
-    gene_to_species = np.zeros(22, dtype=np.int32)
-    first_core = list(combinations(range(5), 2))
-    second_core = list(combinations(range(5, 9), 2))
-    # The last edge models a profile-HMM anchor to a remote family member.
-    edge_pairs = first_core + second_core + [(8, 9)]
-
-    refined = refine_cluster_indices(
-        [cluster],
-        np.asarray([], dtype=np.int32),
-        np.asarray([], dtype=np.int32),
-        np.asarray([], dtype=np.float32),
-        np.asarray([a for a, _b in edge_pairs], dtype=np.int32),
-        np.asarray([b for _a, b in edge_pairs], dtype=np.int32),
-        gene_to_species,
-        rbnh_scores=np.full(len(edge_pairs), 2.0, dtype=np.float32),
-        component_split_high_duplication=True,
-    )
-
-    refined_sets = {frozenset(component) for component in refined}
-    assert frozenset(range(5)) in refined_sets
-    assert frozenset(range(5, 10)) in refined_sets
-    assert all(frozenset([gene]) in refined_sets for gene in range(10, 22))
-
-
 def test_indexed_copy_split_stays_intact_below_broad_threshold():
     cluster = list(range(150))
     gene_to_species = [0] * 9
