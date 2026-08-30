@@ -1161,8 +1161,6 @@ def expand_profiles(
         calibrate_weakest_member=calibrate_profiles,
         calibration_profile_ids=calibration_profile_ids,
         score_per_target_residue=score_per_target_residue,
-        candidate_missing_species_only=species_completion_only,
-        gene_to_species=gene_to_species,
         pair_profile_threshold_ratio=pair_profile_threshold_ratio,
     )
     edges = build_strict_profile_edges(
@@ -1174,6 +1172,8 @@ def expand_profiles(
         hit_targets,
         hit_scores,
         score_per_target_residue=score_per_target_residue,
+        candidate_missing_species_only=species_completion_only,
+        gene_to_species=gene_to_species,
     )
     strict_edge_count = len(edges)
     direct_fallback_edge_count = 0
