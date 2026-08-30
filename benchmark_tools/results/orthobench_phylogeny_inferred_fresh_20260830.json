@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "benchmark": "Open OrthoBench official benchmark",
+  "method": "OrthoHMM high_sensitivity with internally inferred species tree and conservative reconciliation",
+  "status": "complete",
+  "selection_status": "frozen before QfO",
+  "inference": {
+    "source_commit": "ee0fddde1c738dd50cdbe1d9f77a076faecc9b4f",
+    "source_worktree_dirty": true,
+    "source_worktree_note": "The recorded dirty state consists of pre-existing generated sample changes. Inference code was committed and pushed; commits after the frozen candidate changed only post-inference benchmark analysis.",
+    "command": "python benchmark_tools/benchmark_production.py /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input benchmarks/results/production_phylogeny_inferred_orthobench_20260830_r1 benchmarks/results/production_phylogeny_inferred_orthobench_20260830_r1/metrics.json --cpu 32 --threads-per-worker 8 --matrix BLOSUM62 --evalue 0.0001 --clustering leiden --cpm-resolution 0.1 --refinement-profile default --accuracy-profile high_sensitivity --phylogeny reconcile --species-tree-mode infer --aligner /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin/mafft --tree-builder /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220/FastTree",
+    "cpu_budget": 32,
+    "wall_s": 3023.350049,
+    "peak_process_tree_rss_bytes": 12561215488,
+    "peak_process_tree_rss_gib": 11.698544,
+    "user_cpu_s": 64041.046388,
+    "system_cpu_s": 3040.223683,
+    "genes": 251378,
+    "species": 12,
+    "candidate_families": 62885,
+    "bypassed_families": 53621,
+    "reconciled_families": 9264,
+    "root_hogs": 63514,
+    "native_ortholog_pairs": 800254,
+    "duplications": 51227,
+    "speciations": 96164,
+    "species_tree_families": 200,
+    "checkpoint_hits": 0
+  },
+  "stages": {
+    "search": {
+      "wall_s": 1848.088553,
+      "peak_process_tree_rss_gib": 2.651394
+    },
+    "edge_thresholds": {
+      "wall_s": 1.016082,
+      "peak_process_tree_rss_gib": 0.568855
+    },
+    "network_edges": {
+      "wall_s": 4.938874,
+      "peak_process_tree_rss_gib": 1.74181
+    },
+    "clustering": {
+      "wall_s": 40.955182,
+      "peak_process_tree_rss_gib": 1.340508
+    },
+    "refinement": {
+      "wall_s": 4.649241,
+      "peak_process_tree_rss_gib": 3.120609
+    },
+    "profile_expansion": {
+      "wall_s": 253.666563,
+      "peak_process_tree_rss_gib": 11.698544
+    },
+    "phylogeny": {
+      "wall_s": 864.508356,
+      "peak_process_tree_rss_gib": 2.907284
+    },
+    "orthogroup_materialization": {
+      "wall_s": 5.324825,
+      "peak_process_tree_rss_gib": 2.077667
+    }
+  },
+  "tools": {
+    "mafft": {
+      "version": "v7.525 (2024/Mar/13)",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin/mafft"
+    },
+    "fasttree": {
+      "version": "FastTree Version 2.2.0 Double precision",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220/FastTree"
+    }
+  },
+  "official_orthobench": {
+    "f_score": 70.9,
+    "precision": 80.4,
+    "recall": 63.5,
+    "exact_refogs": 14,
+    "genes_in_predicted_groups": 251378,
+    "gene_coverage": 1.0
+  },
+  "comparisons": {
+    "orthohmm_high_sensitivity_without_phylogeny": {
+      "f_score": 70.4,
+      "precision": 78.9,
+      "recall": 63.5,
+      "exact_refogs": 13,
+      "wall_s": 2185.484815,
+      "peak_process_tree_rss_gib": 11.901123,
+      "f_score_delta": 0.5,
+      "precision_delta": 1.5,
+      "recall_delta": 0.0,
+      "wall_ratio": 1.3833772846415318,
+      "peak_rss_ratio": 0.9829781609685069
+    },
+    "orthofinder_3_1_5_sequence_only": {
+      "f_score": 58.7,
+      "precision": 45.7,
+      "recall": 82.0,
+      "exact_refogs": 18,
+      "f_score_delta": 12.2
+    },
+    "orthofinder_3_1_5_full": {
+      "f_score": 72.7,
+      "precision": 66.1,
+      "recall": 80.9,
+      "exact_refogs": 19,
+      "f_score_delta": -1.8
+    },
+    "orthohmm_supplied_orthofinder_species_tree": {
+      "f_score": 73.0,
+      "precision": 86.2,
+      "recall": 63.3,
+      "exact_refogs": 15,
+      "information_budget_comparable": false,
+      "note": "This development replay uses OrthoFinder's inferred species tree and cached OrthoHMM gene trees; it is not a fair primary runtime or accuracy comparison."
+    }
+  },
+  "checksums": {
+    "metrics_sha256": "6c4eff3850415c0f0c7cb47ee1c8fd13efec11d5c47e6f863eb31b3b0a81e41f",
+    "root_hogs_sha256": "b1911d1b9c31b2c72a95bb357a052cd83007cb5f9c36bb0f97afe1005e1399f0",
+    "native_pairs_sha256": "836315166790cf09a0a9fc973d51a818204b77722cea09d7ba82cb87225dbe79",
+    "reconciliation_summary_sha256": "9ea68ba4fcc091a4fda91ce8b7a1cba342fea1d3f4ae73b2f485e6e5af9a5677",
+    "provenance_manifest_sha256": "a9ad2a8329b6f95e2d88e8e743a2b4627496c27eca9a7ab4e7b0be2844ed936a",
+    "benchmark_log_sha256": "47823cab5d53b1f8c76f1bd8db4d5038bc4fc6cbc6039d164c7f98ad695de349"
+  },
+  "reproducibility": {
+    "fresh_end_to_end": true,
+    "benchmark_labels_used_during_inference": false,
+    "root_hogs_match_frozen_replay": true,
+    "frozen_replay_root_hogs_sha256": "b1911d1b9c31b2c72a95bb357a052cd83007cb5f9c36bb0f97afe1005e1399f0"
+  },
+  "decision": {
+    "passes_orthohmm_improvement_gate": true,
+    "preserves_precision_advantage": true,
+    "beats_full_orthofinder_3_1_5": false,
+    "eligible_for_frozen_qfo_evaluation": true,
+    "default_status": "pending QfO; current evidence supports opt-in rather than default"
+  },
+  "source_paths": {
+    "production_run": "benchmarks/results/production_phylogeny_inferred_orthobench_20260830_r1",
+    "development_ledger": "benchmark_tools/results/phylogeny_development_20260830.json"
+  }
+}
