@@ -1,0 +1,1667 @@
+{
+  "command": [
+    "/home/bizon/anaconda3/bin/python",
+    "benchmark_tools/phylogeny_holdout.py",
+    "benchmark_tools/results/phylogeny_holdout_20260830.json",
+    "--work-directory",
+    "benchmarks/results/phylogeny_holdout_20260830",
+    "--aligner",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin/mafft",
+    "--tree-builder",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220/FastTree",
+    "--cpu",
+    "6",
+    "--seeds",
+    "101",
+    "211",
+    "307"
+  ],
+  "description": "Independent synthetic phylogeny holdouts",
+  "results": [
+    {
+      "infer": {
+        "by_scenario": {
+          "ancient_duplication": {
+            "expected_pairs": 30,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 30,
+            "recall": 1.0,
+            "true_positive_pairs": 30
+          },
+          "ancient_duplication_remote_fragment_multidomain_composition_bias": {
+            "expected_pairs": 30,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 30,
+            "recall": 1.0,
+            "true_positive_pairs": 30
+          },
+          "ancient_duplication_with_differential_loss": {
+            "expected_pairs": 12,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 12,
+            "recall": 1.0,
+            "true_positive_pairs": 12
+          },
+          "lineage_specific_expansion": {
+            "expected_pairs": 36,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 36,
+            "recall": 1.0,
+            "true_positive_pairs": 36
+          },
+          "marker_00": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_01": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_02": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_03": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_04": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_05": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_06": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_07": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_08": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_09": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_10": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_11": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_12": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_13": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_14": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_15": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_16": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_17": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_18": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_19": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_20": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_21": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_22": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_23": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "recent_duplication": {
+            "expected_pairs": 28,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 28,
+            "recall": 1.0,
+            "true_positive_pairs": 28
+          }
+        },
+        "native_ortholog_pairs": {
+          "expected_pairs": 489,
+          "f_score": 1.0,
+          "precision": 1.0,
+          "predicted_pairs": 489,
+          "recall": 1.0,
+          "true_positive_pairs": 489
+        },
+        "root_groups": {
+          "exact_groups": 32,
+          "expected_pairs": 496,
+          "f_score": 1.0,
+          "precision": 1.0,
+          "predicted_pairs": 496,
+          "recall": 1.0,
+          "total_groups": 32,
+          "true_positive_pairs": 496
+        },
+        "species_tree": {
+          "exact_rooted_topology": true,
+          "rooted_symmetric_difference": 0
+        },
+        "stage": {
+          "bypassed_families": 24,
+          "candidate_families": 29,
+          "checkpoint_hits": 0,
+          "duplications": 8,
+          "ortholog_pairs": 489,
+          "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/phylogeny_holdout_20260830/seed_101/infer/orthohmm_phylogeny",
+          "reconciled_families": 5,
+          "root_hogs": 32,
+          "speciations": 36,
+          "species_tree_checkpoint_hit": false,
+          "species_tree_families": 24
+        },
+        "wall_s": 1.8324691120069474
+      },
+      "seed": 101,
+      "supplied": {
+        "by_scenario": {
+          "ancient_duplication": {
+            "expected_pairs": 30,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 30,
+            "recall": 1.0,
+            "true_positive_pairs": 30
+          },
+          "ancient_duplication_remote_fragment_multidomain_composition_bias": {
+            "expected_pairs": 30,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 30,
+            "recall": 1.0,
+            "true_positive_pairs": 30
+          },
+          "ancient_duplication_with_differential_loss": {
+            "expected_pairs": 12,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 12,
+            "recall": 1.0,
+            "true_positive_pairs": 12
+          },
+          "lineage_specific_expansion": {
+            "expected_pairs": 36,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 36,
+            "recall": 1.0,
+            "true_positive_pairs": 36
+          },
+          "marker_00": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_01": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_02": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_03": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_04": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_05": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_06": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_07": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_08": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_09": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_10": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_11": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_12": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_13": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_14": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_15": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_16": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_17": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_18": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_19": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_20": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_21": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_22": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_23": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "recent_duplication": {
+            "expected_pairs": 28,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 28,
+            "recall": 1.0,
+            "true_positive_pairs": 28
+          }
+        },
+        "native_ortholog_pairs": {
+          "expected_pairs": 489,
+          "f_score": 1.0,
+          "precision": 1.0,
+          "predicted_pairs": 489,
+          "recall": 1.0,
+          "true_positive_pairs": 489
+        },
+        "root_groups": {
+          "exact_groups": 32,
+          "expected_pairs": 496,
+          "f_score": 1.0,
+          "precision": 1.0,
+          "predicted_pairs": 496,
+          "recall": 1.0,
+          "total_groups": 32,
+          "true_positive_pairs": 496
+        },
+        "stage": {
+          "bypassed_families": 24,
+          "candidate_families": 29,
+          "checkpoint_hits": 0,
+          "duplications": 8,
+          "ortholog_pairs": 489,
+          "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/phylogeny_holdout_20260830/seed_101/supplied/orthohmm_phylogeny",
+          "reconciled_families": 5,
+          "root_hogs": 32,
+          "speciations": 36,
+          "species_tree_checkpoint_hit": false,
+          "species_tree_families": 0
+        },
+        "wall_s": 0.49885535694193095
+      }
+    },
+    {
+      "infer": {
+        "by_scenario": {
+          "ancient_duplication": {
+            "expected_pairs": 30,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 30,
+            "recall": 1.0,
+            "true_positive_pairs": 30
+          },
+          "ancient_duplication_remote_fragment_multidomain_composition_bias": {
+            "expected_pairs": 30,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 30,
+            "recall": 1.0,
+            "true_positive_pairs": 30
+          },
+          "ancient_duplication_with_differential_loss": {
+            "expected_pairs": 12,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 12,
+            "recall": 1.0,
+            "true_positive_pairs": 12
+          },
+          "lineage_specific_expansion": {
+            "expected_pairs": 36,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 36,
+            "recall": 1.0,
+            "true_positive_pairs": 36
+          },
+          "marker_00": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_01": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_02": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_03": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_04": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_05": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_06": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_07": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_08": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_09": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_10": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_11": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_12": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_13": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_14": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_15": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_16": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_17": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_18": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_19": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_20": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_21": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_22": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_23": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "recent_duplication": {
+            "expected_pairs": 28,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 28,
+            "recall": 1.0,
+            "true_positive_pairs": 28
+          }
+        },
+        "native_ortholog_pairs": {
+          "expected_pairs": 489,
+          "f_score": 1.0,
+          "precision": 1.0,
+          "predicted_pairs": 489,
+          "recall": 1.0,
+          "true_positive_pairs": 489
+        },
+        "root_groups": {
+          "exact_groups": 32,
+          "expected_pairs": 496,
+          "f_score": 1.0,
+          "precision": 1.0,
+          "predicted_pairs": 496,
+          "recall": 1.0,
+          "total_groups": 32,
+          "true_positive_pairs": 496
+        },
+        "species_tree": {
+          "exact_rooted_topology": true,
+          "rooted_symmetric_difference": 0
+        },
+        "stage": {
+          "bypassed_families": 24,
+          "candidate_families": 29,
+          "checkpoint_hits": 0,
+          "duplications": 8,
+          "ortholog_pairs": 489,
+          "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/phylogeny_holdout_20260830/seed_211/infer/orthohmm_phylogeny",
+          "reconciled_families": 5,
+          "root_hogs": 32,
+          "speciations": 36,
+          "species_tree_checkpoint_hit": false,
+          "species_tree_families": 24
+        },
+        "wall_s": 1.829001258010976
+      },
+      "seed": 211,
+      "supplied": {
+        "by_scenario": {
+          "ancient_duplication": {
+            "expected_pairs": 30,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 30,
+            "recall": 1.0,
+            "true_positive_pairs": 30
+          },
+          "ancient_duplication_remote_fragment_multidomain_composition_bias": {
+            "expected_pairs": 30,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 30,
+            "recall": 1.0,
+            "true_positive_pairs": 30
+          },
+          "ancient_duplication_with_differential_loss": {
+            "expected_pairs": 12,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 12,
+            "recall": 1.0,
+            "true_positive_pairs": 12
+          },
+          "lineage_specific_expansion": {
+            "expected_pairs": 36,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 36,
+            "recall": 1.0,
+            "true_positive_pairs": 36
+          },
+          "marker_00": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_01": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_02": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_03": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_04": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_05": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_06": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_07": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_08": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_09": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_10": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_11": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_12": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_13": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_14": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_15": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_16": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_17": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_18": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_19": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_20": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_21": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_22": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_23": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "recent_duplication": {
+            "expected_pairs": 28,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 28,
+            "recall": 1.0,
+            "true_positive_pairs": 28
+          }
+        },
+        "native_ortholog_pairs": {
+          "expected_pairs": 489,
+          "f_score": 1.0,
+          "precision": 1.0,
+          "predicted_pairs": 489,
+          "recall": 1.0,
+          "true_positive_pairs": 489
+        },
+        "root_groups": {
+          "exact_groups": 32,
+          "expected_pairs": 496,
+          "f_score": 1.0,
+          "precision": 1.0,
+          "predicted_pairs": 496,
+          "recall": 1.0,
+          "total_groups": 32,
+          "true_positive_pairs": 496
+        },
+        "stage": {
+          "bypassed_families": 24,
+          "candidate_families": 29,
+          "checkpoint_hits": 0,
+          "duplications": 8,
+          "ortholog_pairs": 489,
+          "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/phylogeny_holdout_20260830/seed_211/supplied/orthohmm_phylogeny",
+          "reconciled_families": 5,
+          "root_hogs": 32,
+          "speciations": 36,
+          "species_tree_checkpoint_hit": false,
+          "species_tree_families": 0
+        },
+        "wall_s": 0.43664765707217157
+      }
+    },
+    {
+      "infer": {
+        "by_scenario": {
+          "ancient_duplication": {
+            "expected_pairs": 30,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 30,
+            "recall": 1.0,
+            "true_positive_pairs": 30
+          },
+          "ancient_duplication_remote_fragment_multidomain_composition_bias": {
+            "expected_pairs": 30,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 30,
+            "recall": 1.0,
+            "true_positive_pairs": 30
+          },
+          "ancient_duplication_with_differential_loss": {
+            "expected_pairs": 12,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 12,
+            "recall": 1.0,
+            "true_positive_pairs": 12
+          },
+          "lineage_specific_expansion": {
+            "expected_pairs": 36,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 36,
+            "recall": 1.0,
+            "true_positive_pairs": 36
+          },
+          "marker_00": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_01": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_02": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_03": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_04": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_05": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_06": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_07": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_08": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_09": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_10": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_11": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_12": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_13": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_14": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_15": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_16": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_17": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_18": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_19": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_20": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_21": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_22": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_23": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "recent_duplication": {
+            "expected_pairs": 28,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 28,
+            "recall": 1.0,
+            "true_positive_pairs": 28
+          }
+        },
+        "native_ortholog_pairs": {
+          "expected_pairs": 489,
+          "f_score": 0.9917525773195875,
+          "precision": 1.0,
+          "predicted_pairs": 481,
+          "recall": 0.983640081799591,
+          "true_positive_pairs": 481
+        },
+        "root_groups": {
+          "exact_groups": 32,
+          "expected_pairs": 496,
+          "f_score": 1.0,
+          "precision": 1.0,
+          "predicted_pairs": 496,
+          "recall": 1.0,
+          "total_groups": 32,
+          "true_positive_pairs": 496
+        },
+        "species_tree": {
+          "exact_rooted_topology": true,
+          "rooted_symmetric_difference": 0
+        },
+        "stage": {
+          "bypassed_families": 24,
+          "candidate_families": 29,
+          "checkpoint_hits": 0,
+          "duplications": 9,
+          "ortholog_pairs": 481,
+          "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/phylogeny_holdout_20260830/seed_307/infer/orthohmm_phylogeny",
+          "reconciled_families": 5,
+          "root_hogs": 32,
+          "speciations": 35,
+          "species_tree_checkpoint_hit": false,
+          "species_tree_families": 24
+        },
+        "wall_s": 1.8769313680240884
+      },
+      "seed": 307,
+      "supplied": {
+        "by_scenario": {
+          "ancient_duplication": {
+            "expected_pairs": 30,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 30,
+            "recall": 1.0,
+            "true_positive_pairs": 30
+          },
+          "ancient_duplication_remote_fragment_multidomain_composition_bias": {
+            "expected_pairs": 30,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 30,
+            "recall": 1.0,
+            "true_positive_pairs": 30
+          },
+          "ancient_duplication_with_differential_loss": {
+            "expected_pairs": 12,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 12,
+            "recall": 1.0,
+            "true_positive_pairs": 12
+          },
+          "lineage_specific_expansion": {
+            "expected_pairs": 36,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 36,
+            "recall": 1.0,
+            "true_positive_pairs": 36
+          },
+          "marker_00": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_01": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_02": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_03": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_04": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_05": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_06": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_07": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_08": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_09": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_10": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_11": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_12": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_13": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_14": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_15": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_16": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_17": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_18": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_19": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_20": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_21": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_22": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "marker_23": {
+            "expected_pairs": 15,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 15,
+            "recall": 1.0,
+            "true_positive_pairs": 15
+          },
+          "recent_duplication": {
+            "expected_pairs": 28,
+            "f_score": 1.0,
+            "precision": 1.0,
+            "predicted_pairs": 28,
+            "recall": 1.0,
+            "true_positive_pairs": 28
+          }
+        },
+        "native_ortholog_pairs": {
+          "expected_pairs": 489,
+          "f_score": 0.9917525773195875,
+          "precision": 1.0,
+          "predicted_pairs": 481,
+          "recall": 0.983640081799591,
+          "true_positive_pairs": 481
+        },
+        "root_groups": {
+          "exact_groups": 32,
+          "expected_pairs": 496,
+          "f_score": 1.0,
+          "precision": 1.0,
+          "predicted_pairs": 496,
+          "recall": 1.0,
+          "total_groups": 32,
+          "true_positive_pairs": 496
+        },
+        "stage": {
+          "bypassed_families": 24,
+          "candidate_families": 29,
+          "checkpoint_hits": 0,
+          "duplications": 9,
+          "ortholog_pairs": 481,
+          "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/phylogeny_holdout_20260830/seed_307/supplied/orthohmm_phylogeny",
+          "reconciled_families": 5,
+          "root_hogs": 32,
+          "speciations": 35,
+          "species_tree_checkpoint_hit": false,
+          "species_tree_families": 0
+        },
+        "wall_s": 0.4791946740588173
+      }
+    }
+  ],
+  "scenarios": [
+    "ancient duplication",
+    "recent duplication",
+    "differential gene loss",
+    "remote homolog",
+    "fragment",
+    "multidomain protein",
+    "lineage-specific expansion",
+    "composition bias"
+  ],
+  "schema_version": 1,
+  "source_commit": "c6f2b9035db7586b3a03dfff84dbba27640cdc8c",
+  "tools": {
+    "aligner": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin/mafft",
+    "tree_builder": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220/FastTree"
+  }
+}
