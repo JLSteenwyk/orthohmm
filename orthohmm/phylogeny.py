@@ -127,6 +127,132 @@ def _species_node_labels(species_tree) -> dict[object, str]:
     return labels
 
 
+def root_gene_tree_min_duplication_loss(
+    gene_tree,
+    species_tree,
+    gene_to_species: dict[str, str],
+):
+    """Root an unrooted gene tree by minimizing LCA duplications then losses."""
+
+    species_leaves = {
+        str(node.taxon.label): node for node in species_tree.leaf_node_iter()
+    }
+    species_depth = {
+        node: len(list(node.ancestor_iter()))
+        for node in species_tree.preorder_node_iter()
+    }
+    ancestor_paths = {
+        label: (node,) + tuple(node.ancestor_iter())
+        for label, node in species_leaves.items()
+    }
+
+    def species_lca(species: frozenset[str]):
+        unknown = sorted(species - species_leaves.keys())
+        if unknown:
+            raise PhylogenyConfigurationError(
+                "Gene tree references species absent from the species tree: "
+                + ", ".join(unknown)
+            )
+        common = set(ancestor_paths[next(iter(species))])
+        for label in species:
+            common.intersection_update(ancestor_paths[label])
+        return max(common, key=species_depth.__getitem__)
+
+    leaf_species = {}
+    leaf_genes = {}
+    for leaf in gene_tree.leaf_node_iter():
+        gene = str(leaf.taxon.label) if leaf.taxon is not None else ""
+        if gene not in gene_to_species:
+            raise PhylogenyConfigurationError(
+                f"Gene-tree leaf {gene!r} is absent from the candidate family."
+            )
+        species = canonical_species_name(gene_to_species[gene])
+        if species not in species_leaves:
+            raise PhylogenyConfigurationError(
+                f"Gene-tree leaf {gene!r} maps to unknown species {species!r}."
+            )
+        leaf_species[leaf] = species
+        leaf_genes[leaf] = gene
+
+    if gene_tree.seed_node.num_child_nodes() == 2:
+        gene_tree.deroot()
+    gene_tree.is_rooted = False
+    nodes = list(gene_tree.preorder_node_iter())
+    adjacency = {node: [] for node in nodes}
+    candidate_edges = []
+    for node in nodes:
+        parent = node.parent_node
+        if parent is None:
+            continue
+        adjacency[node].append(parent)
+        adjacency[parent].append(node)
+        candidate_edges.append((parent, node, node.edge))
+    if not candidate_edges:
+        raise PhylogenyConfigurationError("Gene tree has no edge on which to root.")
+
+    cache = {}
+
+    def orient(node, parent):
+        key = (node, parent)
+        if key in cache:
+            return cache[key]
+        children = [neighbor for neighbor in adjacency[node] if neighbor is not parent]
+        if not children:
+            species = frozenset((leaf_species[node],))
+            state = (species, species_lca(species), 0, 0, (leaf_genes[node],))
+            cache[key] = state
+            return state
+        child_states = [orient(child, node) for child in children]
+        child_species = [state[0] for state in child_states]
+        species = frozenset().union(*child_species)
+        mapped = species_lca(species)
+        overlap = any(
+            left & right for left, right in combinations(child_species, 2)
+        )
+        duplication = overlap or any(state[1] is mapped for state in child_states)
+        duplications = sum(state[2] for state in child_states) + int(duplication)
+        losses = sum(state[3] for state in child_states)
+        for state in child_states:
+            depth_delta = species_depth[state[1]] - species_depth[mapped]
+            losses += max(0, depth_delta - (0 if duplication else 1))
+        genes = tuple(sorted(gene for state in child_states for gene in state[4]))
+        state = (species, mapped, duplications, losses, genes)
+        cache[key] = state
+        return state
+
+    best = None
+    for left, right, edge in candidate_edges:
+        left_state = orient(left, right)
+        right_state = orient(right, left)
+        child_species = (left_state[0], right_state[0])
+        species = frozenset().union(*child_species)
+        mapped = species_lca(species)
+        overlap = bool(child_species[0] & child_species[1])
+        duplication = overlap or left_state[1] is mapped or right_state[1] is mapped
+        duplications = left_state[2] + right_state[2] + int(duplication)
+        losses = left_state[3] + right_state[3]
+        for state in (left_state, right_state):
+            depth_delta = species_depth[state[1]] - species_depth[mapped]
+            losses += max(0, depth_delta - (0 if duplication else 1))
+        split = tuple(sorted((left_state[4], right_state[4])))
+        score = (duplications, losses, split)
+        if best is None or score < best[0]:
+            best = (score, edge)
+
+    selected_edge = best[1]
+    length = selected_edge.length
+    if length is None or length < 0:
+        length = 0.0
+    gene_tree.reroot_at_edge(
+        selected_edge,
+        length1=length / 2.0,
+        length2=length / 2.0,
+        update_bipartitions=False,
+    )
+    gene_tree.is_rooted = True
+    return gene_tree
+
+
 def reconcile_gene_tree(
     gene_tree,
     species_tree,
@@ -238,10 +364,15 @@ def reconcile_gene_tree(
     species_root = species_tree.seed_node
 
     def root_lineages(node) -> list[tuple[str, ...]]:
+        root_mapped_children = sum(
+            mapped_species_node[child] is species_root
+            for child in node.child_node_iter()
+        )
         if (
             not node.is_leaf()
             and event_by_node[node] == "duplication"
             and mapped_species_node[node] is species_root
+            and root_mapped_children >= 2
         ):
             groups = []
             for child in node.child_node_iter():

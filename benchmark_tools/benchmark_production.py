@@ -68,6 +68,13 @@ def parse_args(argv=None):
         default="standard",
     )
     parser.add_argument("--full-output", action="store_true")
+    parser.add_argument("--phylogeny", choices=("off", "reconcile"), default="off")
+    parser.add_argument(
+        "--species-tree-mode", choices=("supplied", "infer"), default="supplied"
+    )
+    parser.add_argument("--species-tree", type=Path)
+    parser.add_argument("--aligner", default="mafft")
+    parser.add_argument("--tree-builder", default="FastTree")
     return parser.parse_args(argv)
 
 
@@ -114,6 +121,15 @@ def main(argv=None) -> int:
     ]
     if not args.full_output:
         command.extend(["--stop", "infer"])
+    if args.phylogeny == "reconcile":
+        command.extend([
+            "--phylogeny", "reconcile",
+            "--species_tree_mode", args.species_tree_mode,
+            "--aligner", args.aligner,
+            "--tree_builder", args.tree_builder,
+        ])
+        if args.species_tree is not None:
+            command.extend(["--species_tree", str(args.species_tree.resolve())])
 
     log_path = output_directory / "benchmark.log"
     environment = os.environ.copy()
@@ -141,6 +157,10 @@ def main(argv=None) -> int:
         output_directory / "orthohmm_orthogroups.txt",
         output_directory / "orthohmm_working_res" / "orthohmm_edges.txt",
         output_directory / "orthohmm_working_res" / "orthohmm_edges_clustered.txt",
+        output_directory / "orthohmm_phylogeny" / "orthohmm_root_hogs.tsv",
+        output_directory / "orthohmm_phylogeny" / "orthohmm_pairwise_orthologs.tsv",
+        output_directory / "orthohmm_phylogeny" / "reconciliation_summary.json",
+        output_directory / "orthohmm_phylogeny" / "provenance_manifest.json",
         log_path,
     ]
     source_files = sorted((repo_root / "orthohmm").rglob("*.py"))

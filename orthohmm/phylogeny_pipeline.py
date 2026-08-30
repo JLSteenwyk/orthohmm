@@ -24,6 +24,7 @@ from .phylogeny import (
     parse_gene_tree,
     parse_species_tree,
     reconcile_gene_tree,
+    root_gene_tree_min_duplication_loss,
     validate_phylogeny_config,
     _load_dendropy,
 )
@@ -389,7 +390,12 @@ def _tree_command(executable: str, alignment_path: Path) -> list[str]:
     return [executable, str(alignment_path)]
 
 
-def _root_external_gene_tree(newick: str, token_to_gene: dict[str, str]):
+def _root_external_gene_tree(
+    newick: str,
+    token_to_gene: dict[str, str],
+    species_tree=None,
+    gene_species: dict[str, str] | None = None,
+):
     explicitly_rooted = newick.lstrip().upper().startswith("[&R]")
     if explicitly_rooted:
         tree = parse_gene_tree(newick)
@@ -402,11 +408,9 @@ def _root_external_gene_tree(newick: str, token_to_gene: dict[str, str]):
                 preserve_underscores=True,
                 rooting="default-unrooted",
             )
-            tree.reroot_at_midpoint(update_bipartitions=False)
-            tree.is_rooted = True
         except Exception as exc:
             raise PhylogenyConfigurationError(
-                f"Could not parse and midpoint-root inferred gene tree: {exc}"
+                f"Could not parse inferred tree: {exc}"
             ) from exc
     observed_tokens = set()
     for leaf in tree.leaf_node_iter():
@@ -422,6 +426,16 @@ def _root_external_gene_tree(newick: str, token_to_gene: dict[str, str]):
         raise PhylogenyConfigurationError(
             "Tree builder omitted candidate sequences: " + ", ".join(missing)
         )
+    if not explicitly_rooted:
+        if species_tree is not None and gene_species is not None:
+            tree = root_gene_tree_min_duplication_loss(
+                tree,
+                species_tree,
+                gene_species,
+            )
+        else:
+            tree.reroot_at_midpoint(update_bipartitions=False)
+            tree.is_rooted = True
     return tree
 
 
@@ -464,7 +478,7 @@ def _family_input_hash(
         "tree_builder": config.tree_builder,
         "alignment_mode": "auto_single_thread",
         "tree_model": "LG",
-        "rooting": "explicit_or_midpoint",
+        "rooting": "explicit_or_min_duplication_loss",
     }
     return _sha256_text(json.dumps(payload, sort_keys=True, separators=(",", ":")))
 
@@ -526,6 +540,8 @@ def _reconcile_family(
         tree = _root_external_gene_tree(
             raw_tree_path.read_text(encoding="utf-8"),
             token_to_gene,
+            species_tree=species_tree,
+            gene_species={gene: gene_species[gene] for gene in genes},
         )
         rooted_newick = tree.as_string(
             schema="newick",
@@ -834,7 +850,7 @@ def run_phylogeny_stage(
         ],
         "cpu_budget": int(cpu),
         "parallelism": "deterministic_family_order_external_tools_one_thread_each",
-        "gene_tree_rooting": "explicit_root_or_midpoint",
+        "gene_tree_rooting": "explicit_root_or_min_duplication_loss",
         "tools": {
             "aligner": {
                 "path": config.aligner,

@@ -10,6 +10,7 @@ from orthohmm.phylogeny import (
     parse_species_tree,
     parse_gene_tree,
     reconcile_gene_tree,
+    root_gene_tree_min_duplication_loss,
     validate_phylogeny_config,
 )
 
@@ -182,6 +183,17 @@ def test_recent_duplication_does_not_split_root_orthogroup(tmp_path):
     assert ("a2", "b") in result.ortholog_pairs
 
 
+def test_sparse_root_duplication_is_not_split_without_two_root_lineages(tmp_path):
+    gene_tree = parse_gene_tree("(a,((b,c),c2));")
+    result = reconcile_gene_tree(
+        gene_tree,
+        species_tree(tmp_path),
+        {"a": "A", "b": "B", "c": "C", "c2": "C"},
+    )
+    assert result.duplication_count >= 1
+    assert result.root_groups == (("a", "b", "c", "c2"),)
+
+
 def test_differential_loss_preserves_two_ancient_lineages(tmp_path):
     gene_tree = parse_gene_tree("((a1,c1),(b2,c2));")
     result = reconcile_gene_tree(
@@ -200,3 +212,33 @@ def test_gene_tree_rejects_unknown_gene(tmp_path):
             species_tree(tmp_path),
             {"a": "A"},
         )
+
+
+def test_minimum_duplication_loss_roots_ancient_duplication(tmp_path):
+    tree = parse_gene_tree("(((a1,b1),c1),((a2,b2),c2));")
+    tree.is_rooted = False
+    gene_species = {
+        "a1": "A", "b1": "B", "c1": "C",
+        "a2": "A", "b2": "B", "c2": "C",
+    }
+    rooted = root_gene_tree_min_duplication_loss(
+        tree, species_tree(tmp_path), gene_species
+    )
+    result = reconcile_gene_tree(rooted, species_tree(tmp_path), gene_species)
+    assert result.duplication_count == 1
+    assert result.root_groups == (
+        ("a1", "b1", "c1"),
+        ("a2", "b2", "c2"),
+    )
+
+
+def test_minimum_duplication_loss_keeps_recent_duplication_in_root_hog(tmp_path):
+    tree = parse_gene_tree("(((a1,a2),b),c);")
+    tree.is_rooted = False
+    gene_species = {"a1": "A", "a2": "A", "b": "B", "c": "C"}
+    rooted = root_gene_tree_min_duplication_loss(
+        tree, species_tree(tmp_path), gene_species
+    )
+    result = reconcile_gene_tree(rooted, species_tree(tmp_path), gene_species)
+    assert result.duplication_count == 1
+    assert result.root_groups == (("a1", "a2", "b", "c"),)
