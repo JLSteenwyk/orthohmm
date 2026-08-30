@@ -44,6 +44,14 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--aligner", default="mafft")
     parser.add_argument("--tree-builder", default="FastTree")
     parser.add_argument("--official-benchmark", type=Path)
+    parser.add_argument(
+        "--checkpoint-source",
+        type=Path,
+        help=(
+            "Previous replay output whose immutable alignment and raw-tree "
+            "checkpoints should seed this run"
+        ),
+    )
     return parser
 
 
@@ -52,6 +60,42 @@ def _atomic_json(path: Path, payload: dict) -> None:
     temporary = path.with_suffix(path.suffix + ".tmp")
     temporary.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n")
     os.replace(temporary, path)
+
+
+def _link_or_copy(source: str, destination: str) -> str:
+    try:
+        os.link(source, destination)
+    except OSError:
+        shutil.copy2(source, destination)
+    return destination
+
+
+def seed_checkpoint_output(source: Path, output: Path) -> Path:
+    """Seed a new replay without allowing it to mutate the source run."""
+
+    source = source.resolve()
+    source_phylogeny = (
+        source / "orthohmm_phylogeny"
+        if (source / "orthohmm_phylogeny").is_dir()
+        else source
+    )
+    required = (
+        source_phylogeny / "checkpoints",
+        source_phylogeny / "gene_trees",
+    )
+    missing = [str(path) for path in required if not path.is_dir()]
+    if missing:
+        raise SystemExit(
+            "checkpoint source is missing required directories: "
+            + ", ".join(missing)
+        )
+    destination = output.resolve() / "orthohmm_phylogeny"
+    shutil.copytree(
+        source_phylogeny,
+        destination,
+        copy_function=_link_or_copy,
+    )
+    return source_phylogeny
 
 
 def main(argv=None) -> int:
@@ -69,6 +113,14 @@ def main(argv=None) -> int:
     )
     if output_directory.exists() and any(output_directory.iterdir()):
         raise SystemExit(f"output directory is not empty: {output_directory}")
+    checkpoint_source = None
+    if args.checkpoint_source is not None:
+        if args.checkpoint_source.resolve() == output_directory:
+            raise SystemExit("checkpoint source and output directory must differ")
+        checkpoint_source = seed_checkpoint_output(
+            args.checkpoint_source,
+            output_directory,
+        )
     cluster_path.parent.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(args.candidate_clusters.resolve(), cluster_path)
 
@@ -123,6 +175,9 @@ def main(argv=None) -> int:
             "aligner": args.aligner,
             "tree_builder": args.tree_builder,
             "cpu": args.cpu,
+            "checkpoint_source": (
+                str(checkpoint_source) if checkpoint_source is not None else None
+            ),
         },
         "outputs": {
             "root_hogs": file_provenance(root_groups),

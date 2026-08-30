@@ -89,6 +89,10 @@ python benchmark_tools/replay_phylogeny.py \
 The JSON records source/input checksums, process-tree memory, stage runtime,
 reconciliation counts, output checksums, and optional post-run scores. This is
 a development harness; final claims still require fresh end-to-end runs.
+For a reconciliation-only comparison, pass `--checkpoint-source` with a prior
+replay output. The harness hard-links immutable raw-tree checkpoints when the
+filesystem permits, recomputes rooting and reconciliation in a distinct output
+directory, and records the source path and checkpoint-hit counts.
 
 ## OrthoFinder comparator
 
