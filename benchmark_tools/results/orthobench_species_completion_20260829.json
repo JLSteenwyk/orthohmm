@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "candidate": "selective second HMM pass for absent species in incomplete single-copy groups",
+  "independent_screen": {
+    "artifact": "benchmark_tools/results/species_completion_holdout_20260829.json",
+    "sha256": "b300659ac640f3ea7a01bf2821ee21db59ba154b958c1000282b816f0b60199e",
+    "development": {
+      "missing_species_edges": 21,
+      "represented_species_edges_blocked": 34,
+      "close_paralog_edges": 0,
+      "unrelated_edges": 0
+    },
+    "holdout": {
+      "missing_species_edges": 9,
+      "represented_species_edges_blocked": 35,
+      "close_paralog_edges": 0,
+      "unrelated_edges": 0
+    }
+  },
+  "fresh_orthobench": {
+    "result": "benchmarks/results/production_high_sensitivity_replay_species_completion_retry_20260829/result.json",
+    "result_sha256": "43d0baa55247ef1889f88880b378ff4aa09799d8b43095213687f8b86a1ec59b",
+    "final_output_sha256": "dbcaf4449a5bff4f6eb3841d53118f92b70c964bfed35ec9fdc46715787e4732",
+    "f_score": 70.4,
+    "precision": 79.0,
+    "recall": 63.5,
+    "exact_refogs": 13,
+    "species_completion_profiles": 4028,
+    "second_pass_significant_profile_hits": 185632,
+    "second_pass_strict_profile_edges": 2975,
+    "wall_seconds": 532.12,
+    "maximum_rss_kib": 6168392
+  },
+  "selective_jackknife_comparator": {
+    "f_score": 70.5,
+    "precision": 78.7,
+    "recall": 63.8,
+    "exact_refogs": 12,
+    "wall_seconds": 347.15,
+    "final_output_sha256": "55f9e3a2912bf3b3aabb1371a34f8dcae91fed6144cbd7273aea47253fa1263a"
+  },
+  "decision": "rejected_regression",
+  "reason": "The species guard made pass two substantially safer than the rejected global second pass, but final F-score fell by 0.1 and recall by 0.3 while wall time increased by 53%. The option remains disabled and does not justify QfO or Three Kingdoms runs."
+}
