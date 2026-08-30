@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "objective": "Evaluate whether optional gene-tree/species-tree reconciliation can improve OrthoHMM without benchmark-specific inference logic.",
+  "selection_policy": {
+    "development_gate": "OrthoBench",
+    "independent_holdouts_first": true,
+    "qfo_used_for_tuning": false,
+    "three_kingdoms_used_for_tuning": false,
+    "frozen_primary_candidate": "high_sensitivity candidates plus inferred species tree and conservative supported-children root-HOG rule"
+  },
+  "locked_orthobench_baselines": {
+    "orthohmm_high_sensitivity": {
+      "f_score": 70.4,
+      "precision": 78.9,
+      "recall": 63.5,
+      "exact_refogs": 13,
+      "artifact": "benchmark_tools/results/orthobench_high_sensitivity_selfhit_fixed_20260828.json",
+      "artifact_sha256": "ac2010782d5ab17071ce6bd648a51dfcf1677340d0808aca2b0e0987eaa38b1f"
+    },
+    "orthofinder_3_1_5_sequence_only": {
+      "f_score": 58.7,
+      "precision": 45.7,
+      "recall": 82.0,
+      "exact_refogs": 18,
+      "artifact": "benchmark_tools/results/orthofinder_sequence_only_ablation_20260830.json",
+      "artifact_sha256": "ef35006a65014415cab98860f5b9e63cfab2af704411fd270a0216f3f6e5b08c"
+    },
+    "orthofinder_3_1_5_full": {
+      "f_score": 72.7,
+      "precision": 66.1,
+      "recall": 80.9,
+      "exact_refogs": 19
+    }
+  },
+  "independent_holdouts": {
+    "reconciliation": {
+      "seeds": [101, 211, 307],
+      "supplied_and_inferred_root_group_f_score": 1.0,
+      "supplied_and_inferred_root_group_precision": 1.0,
+      "supplied_and_inferred_root_group_recall": 1.0,
+      "exact_root_groups_per_seed": 32,
+      "inferred_species_tree_rooted_symmetric_difference": 0,
+      "native_pair_f_scores": [1.0, 1.0, 0.9917525773195875],
+      "artifact": "benchmark_tools/results/phylogeny_holdout_20260830.json",
+      "artifact_sha256": "057dd8b756c71a4863793e81d1353773628844583a439bb23b6f60f003ad8dfa"
+    },
+    "candidate_superfamily_merging": {
+      "seeds": [101, 211, 307],
+      "one_pass_precision": 1.0,
+      "one_pass_recall_range": [0.18045112781954886, 0.20168067226890757],
+      "bounded_four_pass_precision": 1.0,
+      "bounded_four_pass_recall": 1.0,
+      "artifact": "benchmark_tools/results/candidate_superfamily_holdout_20260830.json",
+      "artifact_sha256": "102b6cc37a42ef9d349f50eb626931b78c9f74698d23d92e2b983ab0f7cef134"
+    }
+  },
+  "orthobench_replays": {
+    "frozen_inferred_candidate": {
+      "candidate_families": 62885,
+      "reconciled_families": 9264,
+      "root_hogs": 63514,
+      "ortholog_pairs": 800254,
+      "f_score": 70.9,
+      "precision": 80.4,
+      "recall": 63.5,
+      "exact_refogs": 14,
+      "wall_s": 787.367633,
+      "peak_process_tree_rss_gib": 0.887566,
+      "root_hogs_sha256": "b1911d1b9c31b2c72a95bb357a052cd83007cb5f9c36bb0f97afe1005e1399f0",
+      "raw_artifact": "benchmarks/results/phylogeny_inferred_selfhit_fixed_barrier_20260830_r1/result.json",
+      "raw_artifact_sha256": "c03295ede9ba91c1b0fa8e0ff298e5ae0623b4053c958b0f0b0c40ff4a24c253",
+      "decision": "selected for fresh end-to-end OrthoBench and then frozen QfO evaluation"
+    },
+    "supplied_orthofinder_species_tree": {
+      "candidate_families": 62885,
+      "reconciled_families": 9264,
+      "root_hogs": 64100,
+      "ortholog_pairs": 794303,
+      "f_score": 73.0,
+      "precision": 86.2,
+      "recall": 63.3,
+      "exact_refogs": 15,
+      "wall_s": 65.404942,
+      "peak_process_tree_rss_gib": 0.915398,
+      "checkpoint_hits": 9264,
+      "root_hogs_sha256": "d510aaff8b14d8efc289a25c7731820b64b746938758954d3712c8a38ce2dbf9",
+      "species_tree_sha256": "fbca54454c7dacaedf73ac176f4d2e9b466a8eb9d9f5d326875613f17b861be2",
+      "raw_artifact": "benchmarks/results/phylogeny_supplied_orthofinder_tree_selfhit_fixed_barrier_20260830_r1/result.json",
+      "raw_artifact_sha256": "90494829819b95e6286a5ac44f9f956fee20e7b3965e1d04d2464136c4ff10a9",
+      "information_budget": "Uses the species tree inferred by full OrthoFinder; report separately and do not treat as a fair primary win. Runtime excludes candidate construction and uses cached gene trees."
+    },
+    "broad_sequence_only_mcl_candidates_before_final_barrier": {
+      "candidate_families": 34230,
+      "reconciled_families": 8266,
+      "root_hogs": 34509,
+      "f_score": 59.6,
+      "precision": 47.0,
+      "recall": 81.6,
+      "exact_refogs": 18,
+      "wall_s": 1463.890475,
+      "peak_process_tree_rss_gib": 1.858711,
+      "raw_artifact_sha256": "a7915a772999c9e7514a269278bd346475be59ae057eb426a7532056808da4c4",
+      "decision": "rejected: reconciliation alone did not prevent candidate over-grouping"
+    },
+    "broad_sequence_only_mcl_candidates_after_final_barrier": {
+      "candidate_families": 34230,
+      "reconciled_families": 8266,
+      "root_hogs": 35116,
+      "f_score": 68.8,
+      "precision": 59.7,
+      "recall": 81.2,
+      "exact_refogs": 18,
+      "wall_s": 80.387289,
+      "peak_process_tree_rss_gib": 1.388233,
+      "checkpoint_hits": 8266,
+      "raw_artifact_sha256": "0a5119b333022ba6b2faef024438d9511f0fc4cb5ce046cd934d7f92b85efa73",
+      "decision": "rejected: recall recovered but precision remained too low"
+    },
+    "reciprocal_candidate_merging_then_inferred_phylogeny": {
+      "candidate_families": 58645,
+      "reconciled_families": 8562,
+      "root_hogs": 59644,
+      "f_score": 60.3,
+      "precision": 55.3,
+      "recall": 66.3,
+      "exact_refogs": 15,
+      "wall_s": 1047.840854,
+      "peak_process_tree_rss_gib": 1.423862,
+      "raw_artifact_sha256": "d0e3f4df88f3b168df3715b0829e3ebdafa47e0cf7f224a6f4ecfd5d267dcdae",
+      "decision": "rejected: family merging created false bridges that reconciliation did not remove"
+    }
+  },
+  "root_hog_rule_replay": {
+    "fixed_inputs": "broad sequence-only MCL candidates and immutable rooted gene trees",
+    "supported_children": {
+      "f_score": 68.8,
+      "precision": 59.7,
+      "recall": 81.2,
+      "exact_refogs": 18,
+      "root_hogs": 35116
+    },
+    "species_overlap": {
+      "f_score": 72.1,
+      "precision": 66.0,
+      "recall": 79.5,
+      "exact_refogs": 18,
+      "root_hogs": 35895,
+      "decision": "rejected despite higher OrthoBench score because it over-split an independent recent lineage-specific duplication holdout"
+    },
+    "mapped_event": {
+      "f_score": 72.0,
+      "precision": 65.9,
+      "recall": 79.2,
+      "exact_refogs": 18,
+      "root_hogs": 36217,
+      "decision": "rejected with the same independent-holdout failure mode"
+    },
+    "raw_artifact_sha256": "c6c38b6e9bf9d1dfc823accd42e76d83bac06cbc86fa4a6d2d9b21c7ba1bbb45"
+  },
+  "permissive_candidate_negatives": {
+    "binary_hmm_graph_mcl": [
+      {
+        "threshold_factor": 1.0,
+        "candidate_edges": 1803122,
+        "candidate_families": 43023,
+        "f_score": 6.5,
+        "precision": 3.4,
+        "recall": 75.1,
+        "raw_artifact_sha256": "e0d863fd19e8eeaa5c9ef1e53e0752f24bd41dbfb2f0f140069c243c6cda8e5c"
+      },
+      {
+        "threshold_factor": 0.8,
+        "candidate_edges": 2636432,
+        "candidate_families": 38963,
+        "f_score": 6.2,
+        "precision": 3.2,
+        "recall": 76.5,
+        "raw_artifact_sha256": "464098887d6e248b227928b870de80657dab1f4f495f105ffd0b3ade4127244e"
+      },
+      {
+        "threshold_factor": 0.6,
+        "candidate_edges": 4084004,
+        "candidate_families": 35592,
+        "f_score": 2.0,
+        "precision": 1.0,
+        "recall": 80.1,
+        "raw_artifact_sha256": "eeaab61ba2fbb473e3b8e5da663557e466635ced16a3ebdd868e630907c9fdeb"
+      }
+    ],
+    "four_pass_reciprocal_family_merging": [
+      {
+        "gates": "none",
+        "merges": 7707,
+        "candidate_families": 55178,
+        "f_score": 47.2,
+        "precision": 35.3,
+        "recall": 71.3,
+        "raw_artifact_sha256": "137e3eea731650ce65b460ce40695b7cb361115955e9990d1a18866f6aaa4655"
+      },
+      {
+        "gates": "moderate",
+        "merges": 6254,
+        "candidate_families": 56631,
+        "f_score": 48.4,
+        "precision": 36.9,
+        "recall": 70.2,
+        "raw_artifact_sha256": "3b36efa39156ec8f2baa00af2a6e1bebd15af637d3964ad6733fc2d0de6706fb"
+      },
+      {
+        "gates": "strict",
+        "merges": 4897,
+        "candidate_families": 57988,
+        "f_score": 55.5,
+        "precision": 47.3,
+        "recall": 67.2,
+        "raw_artifact_sha256": "de5999e4329eacd5cfce8a3739e0e213c19ffded3b09f67a0fbf181408cba91f"
+      }
+    ],
+    "conclusion": "The HMM hit graph contains enough weak transitive bridges that permissive family merging destroys precision faster than reconciliation can restore it."
+  },
+  "development_conclusion": {
+    "phylogeny_can_improve_conservative_candidates": true,
+    "phylogeny_makes_unrestricted_permissive_candidates_safe": false,
+    "frozen_inferred_delta_vs_orthohmm_f_score": 0.5,
+    "frozen_inferred_delta_vs_full_orthofinder_f_score": -1.8,
+    "supplied_tree_delta_vs_full_orthofinder_f_score": 0.3,
+    "production_default_decision": "pending fresh end-to-end OrthoBench and frozen QfO; supplied-tree mode cannot justify a default by itself"
+  },
+  "source_commit": "5a3e9bcb82edf9e077626ad10e775f130064103e"
+}
