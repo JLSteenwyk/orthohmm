@@ -219,7 +219,7 @@ def _infer_species_tree(
         "taxa": list(expected_species),
         "aligner": config.aligner,
         "tree_builder": config.tree_builder,
-        "alignment_mode": "auto_single_thread",
+        "alignment_mode": "auto_single_thread_anysymbol",
         "tree_model": "LG",
         "rooting": "midpoint",
     }
@@ -380,7 +380,13 @@ def _run_to_file(command: list[str], output_path: Path, role: str) -> None:
 
 def _aligner_command(executable: str, input_path: Path) -> list[str]:
     if "mafft" in Path(executable).name.lower():
-        return [executable, "--thread", "1", "--auto", str(input_path)]
+        return [
+            executable,
+            "--thread", "1",
+            "--auto",
+            "--anysymbol",
+            str(input_path),
+        ]
     return [executable, str(input_path)]
 
 
@@ -476,7 +482,7 @@ def _family_input_hash(
         "species_tree_sha256": species_tree_sha256,
         "aligner": config.aligner,
         "tree_builder": config.tree_builder,
-        "alignment_mode": "auto_single_thread",
+        "alignment_mode": "auto_single_thread_anysymbol",
         "tree_model": "LG",
         "rooting": "explicit_or_min_duplication_loss",
     }

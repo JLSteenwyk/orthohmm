@@ -5,6 +5,7 @@ import pytest
 
 from orthohmm.phylogeny import PhylogenyConfig, PhylogenyConfigurationError
 from orthohmm.phylogeny_pipeline import (
+    _aligner_command,
     family_requires_reconciliation,
     run_phylogeny_stage,
     select_species_tree_families,
@@ -25,7 +26,7 @@ def _make_fixture(tmp_path: Path, name: str):
     inputs.mkdir(parents=True)
     working.mkdir(parents=True)
     proteins = {
-        "A.faa": {"a1": "MKTAA", "a2": "MKTAT", "single_a": "MCCCC"},
+        "A.faa": {"a1": "MKTUA", "a2": "MKTAT", "single_a": "MCCCC"},
         "B.faa": {"b1": "MKTGA", "b2": "MKTGT", "single_b": "MCCCD"},
         "C.faa": {"c1": "MKAGA", "c2": "MKAGT", "single_c": "MCCCE"},
     }
@@ -77,6 +78,11 @@ def test_family_reconciliation_bypass_rules():
     assert not family_requires_reconciliation(("a",), species)
     assert not family_requires_reconciliation(("a", "b", "c"), species)
     assert family_requires_reconciliation(("a", "a2", "b"), species)
+
+
+def test_mafft_backend_accepts_nonstandard_protein_symbols(tmp_path):
+    command = _aligner_command("/tools/mafft", tmp_path / "family.faa")
+    assert "--anysymbol" in command
 
 
 def test_species_tree_family_selection_is_ranked_and_requires_all_taxa():
