@@ -218,6 +218,42 @@
     ],
     "conclusion": "The HMM hit graph contains enough weak transitive bridges that permissive family merging destroys precision faster than reconciliation can restore it."
   },
+  "orthobench_change_analysis": {
+    "partition": {
+      "candidate_families": 62885,
+      "root_hogs": 63514,
+      "split_source_families": 364,
+      "reference_bearing_split_source_families": 6,
+      "cross_source_merges": 0,
+      "all_251378_candidate_genes_preserved": true
+    },
+    "reference_pairs": {
+      "baseline_true_pairs": 20197,
+      "phylogeny_true_pairs": 20197,
+      "removed_true_pairs": 0,
+      "added_true_pairs": 0,
+      "baseline_reference_to_nonreference_relations": 4381,
+      "phylogeny_reference_to_nonreference_relations": 4190,
+      "removed_reference_to_nonreference_relations": 191
+    },
+    "copy_number_strata": {
+      "multi_copy_refogs": 64,
+      "single_copy_refogs": 6,
+      "multi_copy_external_relations_removed": 191,
+      "single_copy_external_relations_removed": 0,
+      "pair_recall_delta_in_both_strata": 0.0
+    },
+    "sequence_identity_strata": {
+      "median_mean_pairwise_identity": 0.5750101295191854,
+      "lower_identity_external_relations_removed": 29,
+      "higher_identity_external_relations_removed": 162,
+      "pair_recall_delta_in_both_strata": 0.0,
+      "interpretation": "The modest precision gain concentrated in multi-copy, higher-identity families; it did not recover additional divergent RefOG relationships."
+    },
+    "method": "MAFFT alignment; pairwise identity excludes gap-bearing positions",
+    "raw_artifact": "benchmarks/results/phylogeny_change_analysis_20260830/result.json",
+    "raw_artifact_sha256": "09e1953c2f07d26df6fd23b3ea4067e25297de0fbf82d5af20ba37bd24637829"
+  },
   "development_conclusion": {
     "phylogeny_can_improve_conservative_candidates": true,
     "phylogeny_makes_unrestricted_permissive_candidates_safe": false,
