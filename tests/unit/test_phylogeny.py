@@ -219,6 +219,27 @@ def test_root_duplication_below_speciation_splits_root_hogs(tmp_path):
     )
 
 
+def test_root_duplication_rule_validation(tmp_path):
+    with pytest.raises(ValueError, match="root duplication rule"):
+        reconcile_gene_tree(
+            parse_gene_tree("(a,b);"),
+            species_tree(tmp_path),
+            {"a": "A", "b": "B"},
+            root_duplication_rule="unknown",
+        )
+
+
+def test_species_overlap_rule_exposes_sparse_duplication_tradeoff(tmp_path):
+    result = reconcile_gene_tree(
+        parse_gene_tree("(a,((b,c),c2));"),
+        species_tree(tmp_path),
+        {"a": "A", "b": "B", "c": "C", "c2": "C"},
+        root_duplication_rule="species_overlap",
+    )
+
+    assert result.root_groups == (("a",), ("b", "c"), ("c2",))
+
+
 def test_gene_tree_rejects_unknown_gene(tmp_path):
     with pytest.raises(PhylogenyConfigurationError, match="absent"):
         reconcile_gene_tree(

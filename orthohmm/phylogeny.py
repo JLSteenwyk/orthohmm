@@ -258,8 +258,16 @@ def reconcile_gene_tree(
     species_tree,
     gene_to_species: dict[str, str],
     family_id: str = "family",
+    root_duplication_rule: str = "supported_children",
 ) -> ReconciliationResult:
     """Reconcile a rooted gene tree by LCA mapping onto a rooted species tree."""
+
+    valid_root_rules = {"supported_children", "species_overlap", "mapped_event"}
+    if root_duplication_rule not in valid_root_rules:
+        raise ValueError(
+            "root duplication rule must be one of: "
+            + ", ".join(sorted(valid_root_rules))
+        )
 
     species_leaves = {
         str(node.taxon.label): node for node in species_tree.leaf_node_iter()
@@ -372,11 +380,18 @@ def reconcile_gene_tree(
             mapped_species_node[child] is species_root
             for child in node.child_node_iter()
         )
+        mapped_to_root = mapped_species_node[node] is species_root
+        if root_duplication_rule == "supported_children":
+            root_duplication = (
+                species_overlap_by_node[node]
+                and root_mapped_children >= 2
+            )
+        elif root_duplication_rule == "species_overlap":
+            root_duplication = species_overlap_by_node[node]
+        else:
+            root_duplication = event_by_node[node] == "duplication"
         root_duplication_by_node[node] = (
-            not node.is_leaf()
-            and species_overlap_by_node[node]
-            and mapped_species_node[node] is species_root
-            and root_mapped_children >= 2
+            not node.is_leaf() and mapped_to_root and root_duplication
         )
         contains_root_duplication[node] = (
             root_duplication_by_node[node]

@@ -145,6 +145,23 @@ The synthetic graph contains two-to-five-fragment true families and a cycle of
 weaker asymmetric cross-family decoys. It reports pair precision and recall for
 one pass and four bounded passes across fixed holdout seeds.
 
+Root-HOG duplication evidence can be replayed without rebuilding alignments or
+trees:
+
+```bash
+python benchmark_tools/replay_root_hog_rules.py \
+  --fasta-directory /path/to/proteomes \
+  --candidate-clusters /path/to/candidates.txt \
+  --phylogeny-output /path/to/run/orthohmm_phylogeny \
+  --output-directory /tmp/root_hog_rules \
+  --json /tmp/root_hog_rules/result.json \
+  --official-benchmark /path/to/Open_Orthobench/BENCHMARKS/benchmark.py
+```
+
+The production default remains `supported_children`; the replay compares that
+rule with progressively broader root-level duplication evidence from the same
+rooted trees.
+
 ## OrthoFinder comparator
 
 This directory pins the OrthoFinder comparator to version 3.1.5 and keeps new
