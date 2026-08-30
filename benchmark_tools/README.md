@@ -100,6 +100,21 @@ whose IDs occur in the QfO mapping (`pairs.qfo.tsv`). Only the filtered file is
 submitted to the official assessment pipeline. The scoring workflow retains
 VGNC, SwissTrees, TreeFam-A, EC, GO, and FAS.
 
+To isolate the contribution of OrthoFinder's phylogenetic stages, convert the
+pre-phylogenetic DIAMOND/MCL checkpoint retained in `WorkingDirectory`:
+
+```bash
+python benchmark_tools/orthofinder_mcl_to_orthogroups.py \
+  WorkingDirectory/clusters_OrthoFinder_I1.2.txt_id_pairs.txt \
+  WorkingDirectory/SequenceIDs.txt \
+  orthogroups_sequence_only.txt
+```
+
+This output precedes MSA, gene-tree, species-tree, reconciliation, and HOG
+delineation. For QfO it is converted to cross-species co-cluster pairs with
+`qfo_benchmark/og_to_pairwise.py`, the same representation used for every
+group-only method.
+
 Useful environment overrides include `ORTHOFINDER_BIN`, `SOFTWARE_ROOT`,
 `ORTHOBENCH_ROOT`, `QFO_PIPELINE`, `QFO_MAPPING`, `NEXTFLOW_BIN`, and
 `JAVA_HOME_17`. Set `RESUME=1` when retrying an interrupted QfO assessment so
