@@ -79,6 +79,30 @@ existing group member and receive a sequence-supported anchor before they can
 change a cluster. The profile currently requires the built-in search and
 Leiden clustering. The default `standard` profile is unchanged.
 
+**Phylogeny-aware mode (experimental).** OrthoHMM can reconcile ambiguous
+multi-copy families against a validated rooted species tree. This mode is
+opt-in; `--phylogeny off` remains the default and does not load tree libraries
+or require external phylogenetic programs.
+
+Install the optional parser dependency and provide MAFFT, FastTree, and a
+rooted Newick tree whose leaf names match input proteome filenames without
+their FASTA extensions:
+
+```shell
+pip install 'orthohmm[phylogeny]'
+orthohmm proteomes/ --accuracy_profile high_sensitivity \
+  --phylogeny reconcile --species_tree_mode supplied \
+  --species_tree species_tree.nwk --aligner mafft --tree_builder FastTree
+```
+
+Only multi-copy, multi-species candidate families receive alignments and gene
+trees. Results and restart checkpoints are written under
+`orthohmm_phylogeny/`, including root-level HOGs, hierarchical node records,
+native pairwise orthologs, rooted and annotated gene trees, a reconciliation
+summary, and a provenance manifest. The conventional
+`orthohmm_orthogroups.txt` remains available and contains the reconciled
+root-level groups when this mode is enabled.
+
 ---
 
 <br />

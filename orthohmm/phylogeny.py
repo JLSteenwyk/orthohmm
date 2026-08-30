@@ -37,6 +37,7 @@ class ValidatedSpeciesTree:
 @dataclass(frozen=True)
 class ReconciledNode:
     node_id: str
+    parent_node_id: str | None
     event: str
     species_tree_node: str
     genes: tuple[str, ...]
@@ -251,14 +252,18 @@ def reconcile_gene_tree(
     root_groups = tuple(
         sorted(root_lineages(gene_tree.seed_node), key=lambda group: group)
     )
-    reconciled_nodes = []
+    node_ids = {}
     internal_index = 0
     for node in gene_tree.postorder_node_iter():
         if node.is_leaf():
-            node_id = leaf_gene[node]
+            node_ids[node] = leaf_gene[node]
         else:
-            node_id = f"G{internal_index:05d}"
+            node_ids[node] = f"G{internal_index:05d}"
             internal_index += 1
+    reconciled_nodes = []
+    for node in gene_tree.postorder_node_iter():
+        node_id = node_ids[node]
+        if not node.is_leaf():
             event_code = "D" if event_by_node[node] == "duplication" else "S"
             node.label = (
                 f"{node_id}|{event_code}@{species_labels[mapped_species_node[node]]}"
@@ -266,6 +271,11 @@ def reconcile_gene_tree(
         reconciled_nodes.append(
             ReconciledNode(
                 node_id=node_id,
+                parent_node_id=(
+                    node_ids[node.parent_node]
+                    if node.parent_node is not None
+                    else None
+                ),
                 event=event_by_node[node],
                 species_tree_node=species_labels[mapped_species_node[node]],
                 genes=descendant_genes[node],

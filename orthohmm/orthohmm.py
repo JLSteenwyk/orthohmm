@@ -287,6 +287,11 @@ def _execute(
     os.makedirs(working_dir, exist_ok=True)
 
     files = fetch_fasta_files(fasta_directory)
+    phylogeny = kwargs.pop("phylogeny", "off")
+    species_tree_mode = kwargs.pop("species_tree_mode", "supplied")
+    species_tree = kwargs.pop("species_tree", None)
+    aligner = kwargs.pop("aligner", "mafft")
+    tree_builder = kwargs.pop("tree_builder", "FastTree")
     accuracy_config = resolve_accuracy_profile(accuracy_profile)
     if accuracy_config.multipass_graph and (
         search_mode != "builtin" or clustering != "leiden"
@@ -311,6 +316,14 @@ def _execute(
         cpu_budget=cpu,
     )
     metrics.add_counts(species=len(files), species_pairs=len(files) ** 2)
+    if phylogeny != "off":
+        metrics.add_metadata(
+            phylogeny=phylogeny,
+            species_tree_mode=species_tree_mode,
+            species_tree=species_tree,
+            aligner=aligner,
+            tree_builder=tree_builder,
+        )
 
     search_results = None
 
@@ -605,6 +618,35 @@ def _execute(
             refinement_profile=refinement_profile,
         )
     metrics.add_metadata(refinement_substages_s=refinement_substages)
+    if phylogeny == "reconcile":
+        from .phylogeny import PhylogenyConfig
+        from .phylogeny_pipeline import run_phylogeny_stage
+
+        print("          Reconciling ambiguous families with the species tree")
+        with metrics.stage("phylogeny"):
+            phylogeny_result = run_phylogeny_stage(
+                fasta_directory=fasta_directory,
+                output_directory=output_directory,
+                files=files,
+                config=PhylogenyConfig(
+                    mode=phylogeny,
+                    species_tree_mode=species_tree_mode,
+                    species_tree=species_tree,
+                    aligner=aligner,
+                    tree_builder=tree_builder,
+                ),
+                cpu=cpu,
+            )
+        metrics.add_counts(
+            phylogeny_candidate_families=phylogeny_result.candidate_families,
+            phylogeny_reconciled_families=phylogeny_result.reconciled_families,
+            phylogeny_bypassed_families=phylogeny_result.bypassed_families,
+            phylogeny_checkpoint_hits=phylogeny_result.checkpoint_hits,
+            phylogeny_root_hogs=phylogeny_result.root_hogs,
+            phylogeny_ortholog_pairs=phylogeny_result.ortholog_pairs,
+            phylogeny_duplications=phylogeny_result.duplications,
+            phylogeny_speciations=phylogeny_result.speciations,
+        )
     with metrics.stage("orthogroup_materialization"):
         singletons, og_cn, ogs_dat, single_copy_ogs = \
             generate_orthogroup_clusters_file(
