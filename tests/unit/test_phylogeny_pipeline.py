@@ -1,10 +1,13 @@
 from pathlib import Path
 import json
 
-from orthohmm.phylogeny import PhylogenyConfig
+import pytest
+
+from orthohmm.phylogeny import PhylogenyConfig, PhylogenyConfigurationError
 from orthohmm.phylogeny_pipeline import (
     family_requires_reconciliation,
     run_phylogeny_stage,
+    select_species_tree_families,
 )
 
 
@@ -50,9 +53,11 @@ def _make_fixture(tmp_path: Path, name: str):
     tree_builder = _write_executable(
         root / "fake_FastTree",
         "#!/usr/bin/env python3\n"
-        "import sys\n"
+        "import pathlib, sys\n"
         "if len(sys.argv) == 1:\n"
         "    print('fake-fasttree 1.0')\n"
+        "elif pathlib.Path(sys.argv[-1]).name == 'species_tree_alignment.faa':\n"
+        "    print('[&R] ((s00000000,s00000001),s00000002);')\n"
         "else:\n"
         "    print('[&R] (((g00000000,g00000002),g00000004),"
         "((g00000001,g00000003),g00000005));')\n",
@@ -72,6 +77,28 @@ def test_family_reconciliation_bypass_rules():
     assert not family_requires_reconciliation(("a",), species)
     assert not family_requires_reconciliation(("a", "b", "c"), species)
     assert family_requires_reconciliation(("a", "a2", "b"), species)
+
+
+def test_species_tree_family_selection_is_ranked_and_requires_all_taxa():
+    records = [
+        ("Family2", ("a2", "b2")),
+        ("Family1", ("a1", "b1", "c1")),
+    ]
+    species = {
+        "a1": "A", "b1": "B", "c1": "C", "a2": "A", "b2": "B"
+    }
+    sequences = {gene: "M" * 10 for gene in species}
+    selected = select_species_tree_families(
+        records, species, sequences, ("A", "B", "C"), max_families=1
+    )
+    assert selected == [("Family1", ("a1", "b1", "c1"))]
+    with pytest.raises(PhylogenyConfigurationError, match="represent these taxa"):
+        select_species_tree_families(
+            [("Family2", ("a2", "b2"))],
+            species,
+            sequences,
+            ("A", "B", "C"),
+        )
 
 
 def test_supplied_tree_stage_end_to_end_and_checkpoint_restart(tmp_path):
@@ -146,3 +173,42 @@ def test_parallel_results_are_deterministic(tmp_path):
         summary.pop("output_directory")
         summaries.append(summary)
     assert summaries[0] == summaries[1]
+
+
+def test_inferred_species_tree_end_to_end_and_restart(tmp_path):
+    inputs, output, cluster_path, candidates, supplied_config = _make_fixture(
+        tmp_path, "inferred"
+    )
+    for filename, gene, sequence in (
+        ("A.faa", "marker_a", "MNNNN"),
+        ("B.faa", "marker_b", "MNNND"),
+        ("C.faa", "marker_c", "MNNNE"),
+    ):
+        with (inputs / filename).open("a", encoding="utf-8") as handle:
+            handle.write(f">{gene}\n{sequence}\n")
+    candidates += "marker_a marker_b marker_c\n"
+    cluster_path.write_text(candidates, encoding="utf-8")
+    config = PhylogenyConfig(
+        mode="reconcile",
+        species_tree_mode="infer",
+        aligner=supplied_config.aligner,
+        tree_builder=supplied_config.tree_builder,
+    )
+    files = ["A.faa", "B.faa", "C.faa"]
+    first = run_phylogeny_stage(
+        str(inputs), str(output), files, config, cpu=3
+    )
+    assert first.species_tree_families == 2
+    assert first.species_tree_checkpoint_hit is False
+    assert first.reconciled_families == 1
+    assert first.root_hogs == 4
+    inferred_tree = output / "orthohmm_phylogeny" / "species_tree.rooted.nwk"
+    assert inferred_tree.is_file()
+    assert "A" in inferred_tree.read_text(encoding="utf-8")
+
+    cluster_path.write_text(candidates, encoding="utf-8")
+    second = run_phylogeny_stage(
+        str(inputs), str(output), files, config, cpu=1
+    )
+    assert second.species_tree_checkpoint_hit is True
+    assert second.checkpoint_hits == 1

@@ -50,6 +50,14 @@ def test_parse_common_unmarked_rooted_tree(tmp_path):
     assert result.taxa == ("A", "B", "C")
 
 
+def test_parse_explicitly_rooted_polytomy(tmp_path):
+    result = parse_species_tree(
+        write_tree(tmp_path, "[&R] (A,B,C);"),
+        PROTEOMES,
+    )
+    assert result.tree.seed_node.num_child_nodes() == 3
+
+
 @pytest.mark.parametrize(
     "newick",
     [

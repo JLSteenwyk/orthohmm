@@ -646,6 +646,12 @@ def _execute(
             phylogeny_ortholog_pairs=phylogeny_result.ortholog_pairs,
             phylogeny_duplications=phylogeny_result.duplications,
             phylogeny_speciations=phylogeny_result.speciations,
+            phylogeny_species_tree_families=(
+                phylogeny_result.species_tree_families
+            ),
+            phylogeny_species_tree_checkpoint_hit=(
+                phylogeny_result.species_tree_checkpoint_hit
+            ),
         )
     with metrics.stage("orthogroup_materialization"):
         singletons, og_cn, ogs_dat, single_copy_ogs = \

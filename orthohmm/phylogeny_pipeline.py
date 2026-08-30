@@ -7,11 +7,13 @@ from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict, dataclass
 import hashlib
 import json
+import math
 import os
 from pathlib import Path
 import subprocess
 import time
 from typing import Sequence
+import statistics
 
 from .helpers import get_all_fasta_entries
 from .phylogeny import (
@@ -47,6 +49,8 @@ class PhylogenyStageResult:
     ortholog_pairs: int
     duplications: int
     speciations: int
+    species_tree_families: int
+    species_tree_checkpoint_hit: bool
     output_directory: str
 
 
@@ -109,6 +113,220 @@ def family_requires_reconciliation(
         and len(species_counts) >= 2
         and max(species_counts.values(), default=0) > 1
     )
+
+
+def select_species_tree_families(
+    family_records: Sequence[tuple[str, tuple[str, ...]]],
+    gene_species: dict[str, str],
+    sequences: dict[str, str],
+    expected_species: Sequence[str],
+    max_families: int = 200,
+) -> list[tuple[str, tuple[str, ...]]]:
+    """Select stable, high-occupancy single-copy families for tree inference."""
+
+    minimum_taxa = max(2, min(len(expected_species), math.ceil(
+        len(expected_species) * 0.5
+    )))
+    eligible = []
+    for family_id, genes in family_records:
+        species = [gene_species[gene] for gene in genes]
+        if len(species) != len(set(species)) or len(species) < minimum_taxa:
+            continue
+        median_length = statistics.median(len(sequences[gene]) for gene in genes)
+        eligible.append((family_id, genes, len(species), median_length))
+    eligible.sort(key=lambda row: (-row[2], -row[3], row[0], row[1]))
+    selected = eligible[:max_families]
+
+    represented = {
+        gene_species[gene] for _, genes, _, _ in selected for gene in genes
+    }
+    missing = set(expected_species) - represented
+    if missing:
+        selected_ids = {family_id for family_id, _, _, _ in selected}
+        for record in eligible[max_families:]:
+            family_id, genes, _, _ = record
+            family_species = {gene_species[gene] for gene in genes}
+            if family_id not in selected_ids and family_species & missing:
+                selected.append(record)
+                selected_ids.add(family_id)
+                represented.update(family_species)
+                missing = set(expected_species) - represented
+                if not missing:
+                    break
+    if missing:
+        raise PhylogenyConfigurationError(
+            "Cannot infer a species tree because no selected single-copy "
+            "families represent these taxa: " + ", ".join(sorted(missing))
+        )
+    if not selected:
+        raise PhylogenyConfigurationError(
+            "Cannot infer a species tree: no multi-species single-copy "
+            "candidate families passed the occupancy filter."
+        )
+    return [(family_id, genes) for family_id, genes, _, _ in selected]
+
+
+def _read_fasta(path: Path) -> dict[str, str]:
+    records = {}
+    header = None
+    parts = []
+    with path.open(encoding="utf-8") as handle:
+        for raw_line in handle:
+            line = raw_line.strip()
+            if not line:
+                continue
+            if line.startswith(">"):
+                if header is not None:
+                    records[header] = "".join(parts)
+                header = line[1:].split()[0]
+                parts = []
+            elif header is not None:
+                parts.append(line)
+    if header is not None:
+        records[header] = "".join(parts)
+    return records
+
+
+def _infer_species_tree(
+    family_records: Sequence[tuple[str, tuple[str, ...]]],
+    sequences: dict[str, str],
+    gene_species: dict[str, str],
+    files: Sequence[str],
+    config: PhylogenyConfig,
+    phylogeny_directory: Path,
+    cpu: int,
+):
+    expected_species = tuple(sorted(canonical_species_name(name) for name in files))
+    selected = select_species_tree_families(
+        family_records,
+        gene_species,
+        sequences,
+        expected_species,
+    )
+    species_directory = phylogeny_directory / "species_tree_inference"
+    rooted_path = phylogeny_directory / "species_tree.rooted.nwk"
+    checkpoint_path = species_directory / "checkpoint.json"
+    payload = {
+        "schema_version": 1,
+        "families": [
+            [
+                family_id,
+                [[gene, gene_species[gene], sequences[gene]] for gene in genes],
+            ]
+            for family_id, genes in selected
+        ],
+        "taxa": list(expected_species),
+        "aligner": config.aligner,
+        "tree_builder": config.tree_builder,
+        "alignment_mode": "auto_single_thread",
+        "tree_model": "LG",
+        "rooting": "midpoint",
+    }
+    input_hash = _sha256_text(
+        json.dumps(payload, sort_keys=True, separators=(",", ":"))
+    )
+    checkpoint_hit = False
+    if checkpoint_path.is_file() and rooted_path.is_file():
+        try:
+            checkpoint = json.loads(checkpoint_path.read_text(encoding="utf-8"))
+            checkpoint_hit = (
+                checkpoint.get("status") == "complete"
+                and checkpoint.get("input_sha256") == input_hash
+                and checkpoint.get("species_tree_sha256") == _sha256_file(rooted_path)
+            )
+        except (OSError, ValueError):
+            checkpoint_hit = False
+    if checkpoint_hit:
+        return parse_species_tree(rooted_path, files), {
+            "families": len(selected),
+            "checkpoint_hit": True,
+            "selected_family_ids": [family_id for family_id, _ in selected],
+        }
+
+    def align_family(record):
+        family_id, genes = record
+        input_path = species_directory / "candidate_fastas" / f"{family_id}.faa"
+        alignment_path = species_directory / "alignments" / f"{family_id}.faa"
+        token_to_gene = _write_token_fasta(input_path, genes, sequences)
+        _run_to_file(
+            _aligner_command(config.aligner, input_path),
+            alignment_path,
+            "species-tree family alignment",
+        )
+        aligned_tokens = _read_fasta(alignment_path)
+        if set(aligned_tokens) != set(token_to_gene):
+            raise PhylogenyConfigurationError(
+                f"Aligner changed or omitted identifiers for {family_id}."
+            )
+        widths = {len(sequence) for sequence in aligned_tokens.values()}
+        if len(widths) != 1:
+            raise PhylogenyConfigurationError(
+                f"Aligner returned unequal sequence lengths for {family_id}."
+            )
+        by_species = {
+            gene_species[token_to_gene[token]]: sequence
+            for token, sequence in aligned_tokens.items()
+        }
+        return family_id, next(iter(widths)), by_species
+
+    with ThreadPoolExecutor(max_workers=max(1, min(int(cpu), len(selected)))) as pool:
+        alignments = list(pool.map(align_family, selected))
+
+    concatenated = {species: [] for species in expected_species}
+    for _, width, by_species in alignments:
+        for species in expected_species:
+            concatenated[species].append(by_species.get(species, "-" * width))
+    species_token_map = {
+        f"s{index:08d}": species
+        for index, species in enumerate(expected_species)
+    }
+    supermatrix_lines = []
+    for token, species in species_token_map.items():
+        sequence = "".join(concatenated[species])
+        if not sequence.strip("-"):
+            raise PhylogenyConfigurationError(
+                f"Species-tree supermatrix contains no residues for {species}."
+            )
+        supermatrix_lines.extend((f">{token}", sequence))
+    supermatrix_path = species_directory / "species_tree_alignment.faa"
+    _atomic_write(supermatrix_path, "\n".join(supermatrix_lines) + "\n")
+    raw_tree_path = species_directory / "species_tree.raw.nwk"
+    _run_to_file(
+        _tree_command(config.tree_builder, supermatrix_path),
+        raw_tree_path,
+        "species-tree inference",
+    )
+    tree = _root_external_gene_tree(
+        raw_tree_path.read_text(encoding="utf-8"),
+        species_token_map,
+    )
+    rooted_newick = tree.as_string(
+        schema="newick",
+        suppress_rooting=False,
+        suppress_internal_node_labels=True,
+        preserve_spaces=True,
+    ).strip()
+    _atomic_write(rooted_path, rooted_newick + "\n")
+    checkpoint = {
+        "schema_version": 1,
+        "status": "complete",
+        "input_sha256": input_hash,
+        "species_tree_sha256": _sha256_file(rooted_path),
+        "selected_family_ids": [family_id for family_id, _ in selected],
+        "supermatrix_sha256": _sha256_file(supermatrix_path),
+    }
+    _atomic_write(
+        checkpoint_path,
+        json.dumps(checkpoint, indent=2, sort_keys=True) + "\n",
+    )
+    return parse_species_tree(rooted_path, files), {
+        "families": len(selected),
+        "checkpoint_hit": False,
+        "selected_family_ids": [family_id for family_id, _ in selected],
+        "supermatrix_columns": sum(
+            len(part) for part in next(iter(concatenated.values()))
+        ),
+    }
 
 
 def _write_token_fasta(
@@ -482,6 +700,14 @@ def _write_stage_outputs(
         ortholog_pairs=len(pairs),
         duplications=duplications,
         speciations=speciations,
+        species_tree_families=int(
+            manifest.get("species_tree_inference", {}).get("families", 0)
+        ),
+        species_tree_checkpoint_hit=bool(
+            manifest.get("species_tree_inference", {}).get(
+                "checkpoint_hit", False
+            )
+        ),
         output_directory=str(phylogeny_directory.resolve()),
     )
     summary = asdict(result)
@@ -512,11 +738,6 @@ def run_phylogeny_stage(
         raise PhylogenyConfigurationError(
             "run_phylogeny_stage requires --phylogeny reconcile."
         )
-    if config.species_tree_mode != "supplied":
-        raise PhylogenyConfigurationError(
-            "Internally inferred species trees are not implemented in this stage."
-        )
-    validated_tree = parse_species_tree(str(config.species_tree), files)
     cluster_path = (
         Path(output_directory)
         / "orthohmm_working_res"
@@ -534,18 +755,33 @@ def run_phylogeny_stage(
 
     phylogeny_directory = Path(output_directory) / "orthohmm_phylogeny"
     phylogeny_directory.mkdir(parents=True, exist_ok=True)
-    normalized_species_tree = validated_tree.tree.as_string(
-        schema="newick",
-        suppress_rooting=False,
-        preserve_spaces=True,
-    ).strip()
-    species_tree_path = phylogeny_directory / "species_tree.rooted.nwk"
-    _atomic_write(species_tree_path, normalized_species_tree + "\n")
-    species_tree_sha256 = _sha256_file(species_tree_path)
-
     family_records = [
         (f"Family{index:07d}", cluster) for index, cluster in enumerate(clusters)
     ]
+    species_tree_inference = {"families": 0, "checkpoint_hit": False}
+    if config.species_tree_mode == "supplied":
+        validated_tree = parse_species_tree(str(config.species_tree), files)
+        normalized_species_tree = validated_tree.tree.as_string(
+            schema="newick",
+            suppress_rooting=False,
+            preserve_spaces=True,
+        ).strip()
+        species_tree_path = phylogeny_directory / "species_tree.rooted.nwk"
+        _atomic_write(species_tree_path, normalized_species_tree + "\n")
+        species_tree_source = str(validated_tree.path)
+    else:
+        validated_tree, species_tree_inference = _infer_species_tree(
+            family_records,
+            sequences,
+            gene_species,
+            files,
+            config,
+            phylogeny_directory,
+            cpu,
+        )
+        species_tree_path = validated_tree.path
+        species_tree_source = "internally_inferred_from_orthohmm_single_copy_families"
+    species_tree_sha256 = _sha256_file(species_tree_path)
     ambiguous = [
         record
         for record in family_records
@@ -583,9 +819,10 @@ def run_phylogeny_stage(
         "created_at_epoch_s": time.time(),
         "mode": config.mode,
         "species_tree_mode": config.species_tree_mode,
-        "species_tree_source": str(validated_tree.path),
+        "species_tree_source": species_tree_source,
         "species_tree_sha256": species_tree_sha256,
         "species_tree_taxa": list(validated_tree.taxa),
+        "species_tree_inference": species_tree_inference,
         "input_cluster_sha256": _sha256_file(cluster_path),
         "input_proteomes": [
             {

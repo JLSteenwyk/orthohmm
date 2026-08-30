@@ -351,12 +351,15 @@ def parse_species_tree(
 
     tree = trees[0]
     explicitly_unrooted = newick.lstrip().upper().startswith("[&U]")
+    explicitly_rooted = newick.lstrip().upper().startswith("[&R]")
     root_children = tree.seed_node.num_child_nodes()
-    if explicitly_unrooted or root_children != 2:
+    if explicitly_unrooted or root_children < 2 or (
+        not explicitly_rooted and root_children != 2
+    ):
         raise PhylogenyConfigurationError(
-            "Species tree must be rooted and bifurcate at the root. For an "
-            "unmarked rooted Newick tree, place the root on an edge so it has "
-            "exactly two children; '[&U]' trees are not accepted."
+            "Species tree must be rooted. Unmarked Newick is accepted only "
+            "when the root has exactly two children; explicitly rooted '[&R]' "
+            "polytomies are accepted, and '[&U]' trees are not."
         )
     tree.is_rooted = True
 
