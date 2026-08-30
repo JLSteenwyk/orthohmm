@@ -82,6 +82,44 @@ def test_rbnh_excludes_self_hits_before_estimating_thresholds():
     assert _edge_map(edges) == {(0, 1): 5.0}
 
 
+def test_rbnh_threshold_factor_can_expand_edges_without_changing_default():
+    names = ["a", "b", "c", "d", "e"]
+    species = np.array([0, 1, 2, 1, 0], dtype=np.int32)
+    queries = np.array([0, 1, 2, 3, 2, 4, 0, 2], dtype=np.int32)
+    targets = np.array([1, 0, 3, 2, 4, 2, 2, 0], dtype=np.int32)
+    scores = np.array([10, 10, 10, 10, 10, 10, 4, 4], dtype=np.float64)
+
+    default_edges = build_rbnh_edges(
+        names, species, queries, targets, scores
+    )
+    expanded_edges = build_rbnh_edges(
+        names,
+        species,
+        queries,
+        targets,
+        scores,
+        threshold_factor=0.4,
+    )
+
+    assert _edge_map(default_edges) == {
+        (0, 1): 10.0,
+        (2, 3): 10.0,
+        (2, 4): 10.0,
+    }
+    assert _edge_map(expanded_edges) == {
+        (0, 1): 10.0,
+        (0, 2): 4.0,
+        (2, 3): 10.0,
+        (2, 4): 10.0,
+    }
+
+
+@pytest.mark.parametrize("factor", [0.0, -1.0, np.inf, np.nan])
+def test_rbnh_rejects_invalid_threshold_factor(factor):
+    with pytest.raises(ValueError, match="finite and positive"):
+        build_rbnh_edges([], [], [], [], [], threshold_factor=factor)
+
+
 def test_singleton_assignment_accepts_cluster_zero_and_all_matching_hits():
     names = ["a", "b", "singleton", "c", "d"]
     clusters = [[0, 1], [2], [3, 4]]

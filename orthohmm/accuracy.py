@@ -240,13 +240,18 @@ def build_rbnh_edges(
     hit_queries,
     hit_targets,
     hit_scores,
+    threshold_factor: float = 1.0,
 ) -> IndexedEdges:
     """Build reciprocal-best normalized-hit edges from significant hits.
 
     A gene's edge threshold is its weakest reciprocal best hit across target
     species. A directed hit becomes an undirected edge when it satisfies at
     least one endpoint's threshold, matching the validated multipass recipe.
+    ``threshold_factor`` supports label-blind sensitivity experiments while
+    preserving the production behavior at its default value of 1.0.
     """
+    if not np.isfinite(threshold_factor) or threshold_factor <= 0.0:
+        raise ValueError("RBNH threshold factor must be finite and positive")
     species = np.asarray(gene_to_species, dtype=np.int32)
     queries = np.asarray(hit_queries, dtype=np.int32)
     targets = np.asarray(hit_targets, dtype=np.int32)
@@ -308,7 +313,10 @@ def build_rbnh_edges(
     np.minimum.at(thresholds, reciprocal_sources, reciprocal_scores)
     np.minimum.at(thresholds, reciprocal_targets, reciprocal_scores)
     keep = eligible & (
-        scores >= np.minimum(thresholds[queries], thresholds[targets])
+        scores >= (
+            np.minimum(thresholds[queries], thresholds[targets])
+            * threshold_factor
+        )
     )
     return deduplicate_undirected_edges(
         gene_names,

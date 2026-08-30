@@ -94,6 +94,27 @@ replay output. The harness hard-links immutable raw-tree checkpoints when the
 filesystem permits, recomputes rooting and reconciliation in a distinct output
 directory, and records the source path and checkpoint-hit counts.
 
+## Permissive HMM candidate graphs
+
+Build candidate superfamilies from a trusted normalized-hit checkpoint before
+testing phylogenetic reconciliation:
+
+```bash
+python benchmark_tools/build_permissive_candidates.py \
+  --hits-pickle benchmarks/results/hits_BLOSUM62_mc100.pkl \
+  --output-directory /tmp/orthohmm_candidates \
+  --json /tmp/orthohmm_candidates/result.json \
+  --threshold-factor 0.8 --inflation 1.2 \
+  --mcl /path/to/mcl --cpu 32 \
+  --official-benchmark /path/to/Open_Orthobench/BENCHMARKS/benchmark.py
+```
+
+The support factor scales each gene's weakest reciprocal-best normalized-hit
+threshold. Graph construction is label-blind, MCL receives binary edge weights,
+and omitted isolates are restored before the candidate file is finalized. The
+JSON records parameters, checksums, stage runtimes, peak process-tree memory,
+graph/family counts, and any post-inference OrthoBench score.
+
 ## OrthoFinder comparator
 
 This directory pins the OrthoFinder comparator to version 3.1.5 and keeps new
