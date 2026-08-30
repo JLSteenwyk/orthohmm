@@ -745,6 +745,83 @@ def _merge_reciprocal_cluster_best_indexed(
     return merged
 
 
+def merge_reciprocal_candidate_clusters(
+    clusters: Sequence[Sequence[int]],
+    hit_queries: Sequence[int],
+    hit_targets: Sequence[int],
+    hit_scores: Sequence[float],
+    gene_to_species: Sequence[int],
+    max_component_genes: int = 500,
+    min_avg_score: float = 0.0,
+    min_max_score: float = 0.0,
+    min_coverage: float = 0.0,
+    min_norm: float = 0.0,
+    max_iterations: int = 1,
+) -> tuple[List[IndexCluster], int, int, int]:
+    """Join mutually best-supported clusters into candidate superfamilies.
+
+    The relative reciprocal-best decision is label-free. Absolute evidence
+    gates and the component-size cap are exposed for independent holdout
+    validation before this operation is considered for a production profile.
+    """
+    if max_component_genes < 1:
+        raise ValueError("candidate family size cap must be positive")
+    if max_iterations < 1:
+        raise ValueError("candidate merge iterations must be positive")
+    gates = (min_avg_score, min_max_score, min_coverage, min_norm)
+    if any(not math.isfinite(value) or value < 0.0 for value in gates):
+        raise ValueError(
+            "candidate merge evidence gates must be finite and nonnegative"
+        )
+    if not clusters:
+        return [], 0, 0, 0
+    total_genes = len(gene_to_species)
+    current = [list(cluster) for cluster in clusters]
+    total_merges = 0
+    initial_relation_count = 0
+    completed_iterations = 0
+    for iteration in range(max_iterations):
+        sources, targets, totals, counts, max_scores = _cluster_pair_arrays(
+            current,
+            hit_queries,
+            hit_targets,
+            hit_scores,
+            total_genes,
+        )
+        if iteration == 0:
+            initial_relation_count = len(sources)
+        sizes = np.asarray(
+            [len(cluster) for cluster in current], dtype=np.int64
+        )
+        dsu = _IndexedDSU(current, gene_to_species)
+        merged = _merge_reciprocal_cluster_best_indexed(
+            sources,
+            targets,
+            totals,
+            counts,
+            max_scores,
+            sizes,
+            dsu,
+            max_merges=len(current),
+            max_genes=max_component_genes,
+            min_avg_score=min_avg_score,
+            min_max_score=min_max_score,
+            min_coverage=min_coverage,
+            min_norm=min_norm,
+        )
+        if merged == 0:
+            break
+        current = _component_index_clusters(current, dsu)
+        total_merges += merged
+        completed_iterations += 1
+    return (
+        current,
+        total_merges,
+        initial_relation_count,
+        completed_iterations,
+    )
+
+
 def _merge_weak_balanced_rescue_indexed(
     sources: np.ndarray,
     targets: np.ndarray,

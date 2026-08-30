@@ -115,6 +115,25 @@ and omitted isolates are restored before the candidate file is finalized. The
 JSON records parameters, checksums, stage runtimes, peak process-tree memory,
 graph/family counts, and any post-inference OrthoBench score.
 
+To preserve OrthoHMM's precise seed groups and merge only mutually
+best-supported group pairs, run:
+
+```bash
+python benchmark_tools/merge_candidate_superfamilies.py \
+  --hits-pickle benchmarks/results/hits_BLOSUM62_mc100.pkl \
+  --seed-clusters /path/to/orthohmm_edges_clustered.txt \
+  --output-directory /tmp/orthohmm_superfamilies \
+  --json /tmp/orthohmm_superfamilies/result.json \
+  --max-family-genes 500 --iterations 2 \
+  --official-benchmark /path/to/Open_Orthobench/BENCHMARKS/benchmark.py
+```
+
+This alternative aggregates directed HMM evidence between seed groups and
+joins only reciprocal-best partners. It is intended to avoid giant components
+while recovering split remote homologs for subsequent reconciliation. Bounded
+iterations let a newly merged group recruit another mutually best-supported
+fragment without relaxing the evidence rule.
+
 ## OrthoFinder comparator
 
 This directory pins the OrthoFinder comparator to version 3.1.5 and keeps new

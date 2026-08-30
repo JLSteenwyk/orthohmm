@@ -3,10 +3,71 @@ from itertools import combinations
 import numpy as np
 
 from orthohmm.refinement import (
+    merge_reciprocal_candidate_clusters,
     refine_cluster_indices,
     refine_clusters,
     resolve_refinement_profile,
 )
+
+
+def test_reciprocal_candidate_clusters_merge_mutual_best_support():
+    clusters = [[0, 1], [2, 3], [4]]
+    species = np.array([0, 1, 0, 1, 2], dtype=np.int32)
+    queries = np.array([0, 1, 2, 3, 4], dtype=np.int32)
+    targets = np.array([2, 3, 0, 1, 0], dtype=np.int32)
+    scores = np.array([2.0, 2.0, 2.0, 2.0, 0.5], dtype=np.float64)
+
+    merged, merge_count, relation_count, iterations = (
+        merge_reciprocal_candidate_clusters(
+            clusters, queries, targets, scores, species
+        )
+    )
+
+    assert sorted(sorted(cluster) for cluster in merged) == [[0, 1, 2, 3], [4]]
+    assert merge_count == 1
+    assert relation_count == 3
+    assert iterations == 1
+
+
+def test_reciprocal_candidate_clusters_respect_family_size_cap():
+    clusters = [[0, 1], [2, 3]]
+    species = np.array([0, 1, 0, 1], dtype=np.int32)
+    queries = np.array([0, 2], dtype=np.int32)
+    targets = np.array([2, 0], dtype=np.int32)
+    scores = np.array([2.0, 2.0], dtype=np.float64)
+
+    merged, merge_count, _, _ = merge_reciprocal_candidate_clusters(
+        clusters,
+        queries,
+        targets,
+        scores,
+        species,
+        max_component_genes=3,
+    )
+
+    assert sorted(sorted(cluster) for cluster in merged) == clusters
+    assert merge_count == 0
+
+
+def test_reciprocal_candidate_clusters_support_bounded_iterations():
+    clusters = [[0], [1], [2]]
+    species = np.array([0, 1, 2], dtype=np.int32)
+    queries = np.array([0, 1, 1, 2], dtype=np.int32)
+    targets = np.array([1, 0, 2, 1], dtype=np.int32)
+    scores = np.array([10.0, 10.0, 5.0, 5.0], dtype=np.float64)
+
+    merged, merge_count, _, iterations = merge_reciprocal_candidate_clusters(
+        clusters,
+        queries,
+        targets,
+        scores,
+        species,
+        max_iterations=2,
+    )
+
+    assert merged == [[0, 1, 2]]
+    assert merge_count == 2
+    assert iterations == 2
 
 
 def _cluster(prefix, counts):
