@@ -134,6 +134,17 @@ while recovering split remote homologs for subsequent reconciliation. Bounded
 iterations let a newly merged group recruit another mutually best-supported
 fragment without relaxing the evidence rule.
 
+Validate that bounded behavior independently with:
+
+```bash
+python benchmark_tools/candidate_superfamily_holdout.py \
+  benchmark_tools/results/candidate_superfamily_holdout.json
+```
+
+The synthetic graph contains two-to-five-fragment true families and a cycle of
+weaker asymmetric cross-family decoys. It reports pair precision and recall for
+one pass and four bounded passes across fixed holdout seeds.
+
 ## OrthoFinder comparator
 
 This directory pins the OrthoFinder comparator to version 3.1.5 and keeps new
