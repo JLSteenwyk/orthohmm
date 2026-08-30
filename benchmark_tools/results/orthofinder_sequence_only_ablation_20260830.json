@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "experiment": "OrthoFinder 3.1.5 pre-phylogenetic sequence-only ablation",
+  "date": "2026-08-30",
+  "definition": {
+    "tool_version": "OrthoFinder:v3.1.5",
+    "search_backend": "DIAMOND",
+    "mcl_inflation": 1.2,
+    "checkpoint": "WorkingDirectory/clusters_OrthoFinder_I1.2.txt_id_pairs.txt",
+    "included_stages": [
+      "DIAMOND all-versus-all sequence search",
+      "OrthoFinder similarity graph construction",
+      "MCL clustering"
+    ],
+    "excluded_stages": [
+      "multiple-sequence alignment",
+      "gene-tree inference",
+      "species-tree inference",
+      "STRIDE rooting",
+      "gene-tree/species-tree reconciliation",
+      "hierarchical orthogroup inference"
+    ],
+    "external_species_tree_supplied": false,
+    "method_note": "OrthoFinder 3.1.5 has no CLI mode that exits after initial MCL clustering. The exact preserved MCL checkpoint from each completed 3.1.5 run was converted with SequenceIDs.txt, giving a controlled pre-phylogenetic ablation with the same search and graph inputs as the full run."
+  },
+  "orthobench": {
+    "sequence_only_orthofinder": {
+      "clusters": 34230,
+      "genes": 251378,
+      "gene_coverage_percent": 100.0,
+      "f_score": 58.7,
+      "precision": 45.7,
+      "recall": 82.0,
+      "exact_refogs": 18
+    },
+    "orthohmm_high_sensitivity": {
+      "f_score": 70.4,
+      "precision": 78.9,
+      "recall": 63.5,
+      "exact_refogs": 13
+    },
+    "full_phylogenetic_orthofinder_3_1_5": {
+      "f_score": 72.7,
+      "precision": 66.1,
+      "recall": 80.9,
+      "exact_refogs": 19
+    },
+    "orthohmm_minus_sequence_only": {
+      "f_score": 11.7,
+      "precision": 33.2,
+      "recall": -18.5,
+      "exact_refogs": -5
+    },
+    "full_minus_sequence_only": {
+      "f_score": 14.0,
+      "precision": 20.4,
+      "recall": -1.1,
+      "exact_refogs": 1
+    },
+    "conversion": {
+      "wall_s": 0.42,
+      "peak_rss_kib": 85744
+    }
+  },
+  "qfo": {
+    "sequence_only_inference": {
+      "clusters": 166967,
+      "genes": 976504,
+      "native_cross_species_pairs": 163522231,
+      "qfo_filtered_pairs": 162991772,
+      "full_orthofinder_filtered_pairs": 13403651,
+      "orthohmm_filtered_pairs": 8720518,
+      "pair_ratio_vs_full_orthofinder": 12.160251,
+      "pair_ratio_vs_orthohmm": 18.690606
+    },
+    "sequence_only_assessment": {
+      "event_year": 2020,
+      "scoring_job_id": 20868,
+      "scoring_exit_code": "0:0",
+      "scoring_elapsed_s": 4868,
+      "scores": {
+        "VGNC F": 0.14029994022396872,
+        "SwissTrees F": 0.699507355915096,
+        "TreeFam-A F": 0.7110131951633483,
+        "EC": 0.75339446,
+        "GO": 0.4076002,
+        "FAS": 0.5579413821474536
+      },
+      "mean": 0.5449594222416444,
+      "all_six_metrics_complete": true,
+      "longest_metric": "FAS",
+      "fas_wall_s": 3520,
+      "fas_peak_rss": "45.6 GB"
+    },
+    "orthohmm_high_sensitivity": {
+      "scores": {
+        "VGNC F": 0.6674480910917616,
+        "SwissTrees F": 0.6738508557156822,
+        "TreeFam-A F": 0.5758699637439971,
+        "EC": 0.93104489,
+        "GO": 0.47228231,
+        "FAS": 0.7747943345202203
+      },
+      "mean": 0.6825484075119435
+    },
+    "full_phylogenetic_orthofinder_3_1_5": {
+      "scores": {
+        "VGNC F": 0.9882293593408441,
+        "SwissTrees F": 0.8591604357197734,
+        "TreeFam-A F": 0.7428869916535419,
+        "EC": 0.94198234,
+        "GO": 0.46816557,
+        "FAS": 0.6920006330234186
+      },
+      "mean": 0.7820708882895963
+    },
+    "orthohmm_minus_sequence_only": {
+      "VGNC F": 0.5271481508677929,
+      "SwissTrees F": -0.0256565001994139,
+      "TreeFam-A F": -0.13514323141935114,
+      "EC": 0.17765043000000003,
+      "GO": 0.06468210999999996,
+      "FAS": 0.2168529523727667,
+      "mean": 0.13758898527029906
+    },
+    "full_minus_sequence_only": {
+      "VGNC F": 0.8479294191168754,
+      "SwissTrees F": 0.15965307980467736,
+      "TreeFam-A F": 0.03187379649019362,
+      "EC": 0.18858788000000004,
+      "GO": 0.06056536999999995,
+      "FAS": 0.13405925087596504,
+      "mean": 0.23711146604795186
+    }
+  },
+  "checksums": {
+    "orthobench_mcl_source_sha256": "ea9eb298600ee0f22cf6244ece14359c5893ec28a0817a1f23fc0513655b9080",
+    "orthobench_sequence_ids_sha256": "cc326a396bf388b1a2a65f1303b392fb2af4214390a536df60c74a9460cf2356",
+    "orthobench_orthogroups_sha256": "15fecab99b19751e5bba47ccc53fd7eed16480b16f087f8d8b133e4a7696c182",
+    "qfo_mcl_source_sha256": "66303627b80c8d7a3ffc74e503d69e8690eba053c773bfde3bcc8032fc711954",
+    "qfo_sequence_ids_sha256": "fdbf38c40fda24a7a27c1e5167c9f02d8c7078fa3f435fedfc34fa35dabd2145",
+    "qfo_orthogroups_sha256": "8bef28604dca21045469c32edc061203b4df1cc0580fabbe33264692c2e55f81",
+    "qfo_native_pairs_sha256": "069b5ddb9c700fb99ebd60978ecbea21a8e544059310d72bd7f8b13314cd4be6",
+    "qfo_filtered_pairs_sha256": "9d017167b5c7fa30a03851fe45b0efbb73502fc43edfea973941a6b5475a0386",
+    "VGNC_sha256": "5edb520d3733944056eaec67249635cb2bf271682374a9eb9363e14b89d27f2a",
+    "SwissTrees_sha256": "e2f4312a517e884515ee4840ea319847461adbb3e21e376e52d60d7e41e655ce",
+    "TreeFam-A_sha256": "77cf6f65b7b786906e6ba695efc363730df246a50969f17f2217bad70ce6ae2c",
+    "EC_sha256": "2319def5d14d95a9b317da8af00bb3a9554adee10fbd2b4632008a4ed42b3597",
+    "GO_sha256": "030804374fdc3774fdb4ca706f8ccce423887b3557c49542496ea6ab69d9f720",
+    "FAS_sha256": "9d9d0a3ec9aa33993ffc95bd4d4a847ff9fa24147508d3446a5fa18f160f593e",
+    "assessment_manifest_sha256": "13eb80c13f2a00126233bf540333f94903907e0785b95863e8ae024d577dccd8",
+    "assessment_datasets_sha256": "4b52f002c18d04639a0aa224f82c7b56310b7168701f31ad98b7b469c35beca3",
+    "consolidated_results_sha256": "4c0c2c87141d86d8cb25a9985009f4423ab0c1d13e9a1079525017c7ff0e144c"
+  },
+  "failed_scoring_attempt": {
+    "job_id": 20867,
+    "reason": "The repository root resolved to the Slurm spool directory because REPO_ROOT was not exported. No benchmark task ran and no result from this attempt was used.",
+    "correction": "Job 20868 was submitted with an explicit REPO_ROOT and completed successfully."
+  },
+  "source_paths": {
+    "orthobench_sequence_only": "benchmarks/results/orthofinder_v3_sequence_only_20260830",
+    "qfo_sequence_only": "qfo_benchmark/results/orthofinder_v3_sequence_only",
+    "qfo_assessment": "qfo_benchmark/scoring/orthofinder_v3_sequence_only"
+  },
+  "conclusion": "OrthoHMM high_sensitivity outperforms the pre-phylogenetic OrthoFinder 3.1.5 MCL checkpoint on both primary benchmarks: +11.7 OrthoBench F-score points and +0.137589 QfO mean. Full OrthoFinder remains better than both. The pre-phylogenetic checkpoint has high OrthoBench recall but severe over-grouping; OrthoFinder's tree and reconciliation stages recover 20.4 precision points at a cost of only 1.1 recall points and improve the QfO mean by 0.237111."
+}
