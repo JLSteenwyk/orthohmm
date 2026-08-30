@@ -228,6 +228,15 @@ metrics and manifests, converts final orthogroups to cross-species QfO pairs,
 and filters identifiers against the official mapping. Official six-metric QfO
 scoring starts only after successful inference.
 
+After freezing a phylogeny-aware candidate, submit its QfO workflow with:
+
+```bash
+benchmark_tools/submit_orthohmm_phylogeny_qfo.sh
+```
+
+This run infers its species tree internally and submits OrthoHMM's native
+reconciled cross-species pairs to QfO. It does not expand root HOGs into cliques.
+
 Run the secondary Three Kingdoms validation with:
 
 ```bash

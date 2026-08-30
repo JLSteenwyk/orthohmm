@@ -1,0 +1,66 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+: "${INPUT_DIR:?INPUT_DIR must contain the 78 QfO FASTA files}"
+: "${OUTDIR:?OUTDIR must name a new result directory}"
+: "${REPO_ROOT:?REPO_ROOT must point to the OrthoHMM repository}"
+
+readonly BASE=${REPO_ROOT}
+readonly SCRIPT_DIR="${BASE}/benchmark_tools"
+readonly THREADS=${THREADS:-${SLURM_CPUS_PER_TASK:-32}}
+readonly THREADS_PER_WORKER=${THREADS_PER_WORKER:-8}
+readonly PYTHON_BIN=${PYTHON_BIN:-/home/bizon/anaconda3/bin/python}
+readonly OUTPUT_DIR="${OUTDIR}/output"
+readonly METRICS_JSON="${OUTDIR}/metrics.json"
+readonly QFO_PIPELINE=${QFO_PIPELINE:-${BASE}/qfo_benchmark/benchmark-webservice}
+readonly QFO_MAPPING=${QFO_MAPPING:-${QFO_PIPELINE}/reference_data/2020/mapping.json.gz}
+readonly ALIGNER=${ALIGNER:-/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin/mafft}
+readonly TREE_BUILDER=${TREE_BUILDER:-/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220/FastTree}
+
+if [[ $(find "${INPUT_DIR}" -maxdepth 1 -type f -name '*.fasta' | wc -l) -ne 78 ]]; then
+    echo "Expected 78 QfO proteomes in ${INPUT_DIR}" >&2
+    exit 1
+fi
+if [[ -e "${OUTPUT_DIR}" || -e "${METRICS_JSON}" ]]; then
+    echo "Refusing to reuse an existing production result in ${OUTDIR}" >&2
+    exit 1
+fi
+
+mkdir -p "${OUTDIR}"
+git -C "${BASE}" rev-parse HEAD > "${OUTDIR}/source_commit.txt"
+start_epoch=$(date +%s)
+
+"${PYTHON_BIN}" "${SCRIPT_DIR}/benchmark_production.py" \
+    "${INPUT_DIR}" \
+    "${OUTPUT_DIR}" \
+    "${METRICS_JSON}" \
+    --cpu "${THREADS}" \
+    --threads-per-worker "${THREADS_PER_WORKER}" \
+    --accuracy-profile high_sensitivity \
+    --phylogeny reconcile \
+    --species-tree-mode infer \
+    --aligner "${ALIGNER}" \
+    --tree-builder "${TREE_BUILDER}" \
+    > "${OUTDIR}/run.log" 2>&1
+
+cp "${OUTPUT_DIR}/orthohmm_phylogeny/orthohmm_root_hogs.tsv" \
+    "${OUTDIR}/root_hogs.tsv"
+cp "${OUTPUT_DIR}/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv" \
+    "${OUTDIR}/native_pairs.tsv"
+"${PYTHON_BIN}" "${SCRIPT_DIR}/native_pairs_to_qfo.py" \
+    "${OUTDIR}/native_pairs.tsv" "${OUTDIR}/pairs.tsv" \
+    >> "${OUTDIR}/run.log" 2>&1
+"${PYTHON_BIN}" "${SCRIPT_DIR}/qfo_filter_pairs.py" \
+    "${OUTDIR}/pairs.tsv" "${QFO_MAPPING}" "${OUTDIR}/pairs.qfo.tsv" \
+    2>> "${OUTDIR}/run.log"
+
+echo "$(( $(date +%s) - start_epoch ))" > "${OUTDIR}/wall_time_s.txt"
+"${PYTHON_BIN}" - "${METRICS_JSON}" "${OUTDIR}/peak_rss.txt" <<'PY'
+import json
+import sys
+
+metrics = json.load(open(sys.argv[1]))
+peak_kib = int(metrics["peak_process_tree_rss_bytes"]) // 1024
+with open(sys.argv[2], "w") as handle:
+    handle.write(f"{peak_kib}\n")
+PY
