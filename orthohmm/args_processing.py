@@ -13,6 +13,12 @@ from .helpers import (
     StopStep,
     SubstitutionMatrix,
 )
+from .files import fetch_fasta_files
+from .phylogeny import (
+    PhylogenyConfig,
+    PhylogenyConfigurationError,
+    validate_phylogeny_config,
+)
 
 
 logger = logging.getLogger(__name__)
@@ -129,6 +135,24 @@ def process_args(args) -> dict:
         logger.warning("--threads_per_worker must be at least 1.")
         sys.exit()
 
+    phylogeny_config = PhylogenyConfig(
+        mode=getattr(args, "phylogeny", "off") or "off",
+        species_tree_mode=(
+            getattr(args, "species_tree_mode", "supplied") or "supplied"
+        ),
+        species_tree=getattr(args, "species_tree", None),
+        aligner=getattr(args, "aligner", "mafft") or "mafft",
+        tree_builder=getattr(args, "tree_builder", "FastTree") or "FastTree",
+    )
+    try:
+        phylogeny_config = validate_phylogeny_config(
+            phylogeny_config,
+            fetch_fasta_files(fasta_directory),
+        )
+    except PhylogenyConfigurationError as exc:
+        logger.warning(str(exc))
+        sys.exit(1)
+
     start = StartStep(args.start) if args.start else None
     stop = StopStep(args.stop) if args.stop else None
 
@@ -155,4 +179,9 @@ def process_args(args) -> dict:
         accuracy_profile=accuracy_profile,
         metrics_json=metrics_json,
         threads_per_worker=threads_per_worker,
+        phylogeny=phylogeny_config.mode,
+        species_tree_mode=phylogeny_config.species_tree_mode,
+        species_tree=phylogeny_config.species_tree,
+        aligner=phylogeny_config.aligner,
+        tree_builder=phylogeny_config.tree_builder,
     )

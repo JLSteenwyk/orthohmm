@@ -210,6 +210,7 @@ setup(
     version=__version__,
     include_package_data=True,
     install_requires=REQUIRES,
+    extras_require={"phylogeny": ["dendropy>=5.0"]},
     python_requires=">=3.10",
     cmdclass={
         "build_py": CustomBuildPy,

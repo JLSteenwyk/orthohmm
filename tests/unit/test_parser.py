@@ -16,3 +16,8 @@ class TestParser(object):
         assert parsed.clustering == "leiden"
         assert parsed.cpm_resolution == "0.1"
         assert parsed.threads_per_worker == 8
+        assert parsed.phylogeny == "off"
+        assert parsed.species_tree_mode == "supplied"
+        assert parsed.species_tree is None
+        assert parsed.aligner == "mafft"
+        assert parsed.tree_builder == "FastTree"

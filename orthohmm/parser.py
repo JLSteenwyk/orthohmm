@@ -104,6 +104,21 @@ def create_parser() -> ArgumentParser:
                                                     completed all-vs-all
                                                     search results
 
+        --phylogeny <off, reconcile>                optional gene-tree/species-tree
+                                                    reconciliation (default: off)
+
+        --species_tree <path>                       rooted Newick species tree
+
+        --species_tree_mode <supplied, infer>       obtain the species tree from a
+                                                    supplied file or infer it
+                                                    (default: supplied)
+
+        --aligner <command>                         protein aligner command or path
+                                                    (default: mafft)
+
+        --tree_builder <command>                    protein tree-builder command or path
+                                                    (default: FastTree)
+
         -------------------------------------
         | Detailed explanation of arguments | 
         -------------------------------------
@@ -358,6 +373,42 @@ def create_parser() -> ArgumentParser:
         default=8,
         help=SUPPRESS,
         metavar="threads_per_worker",
+    )
+
+    optional.add_argument(
+        "--phylogeny",
+        choices=["off", "reconcile"],
+        default="off",
+        help=SUPPRESS,
+        metavar="phylogeny",
+    )
+
+    optional.add_argument(
+        "--species_tree",
+        help=SUPPRESS,
+        metavar="species_tree",
+    )
+
+    optional.add_argument(
+        "--species_tree_mode",
+        choices=["supplied", "infer"],
+        default="supplied",
+        help=SUPPRESS,
+        metavar="species_tree_mode",
+    )
+
+    optional.add_argument(
+        "--aligner",
+        default="mafft",
+        help=SUPPRESS,
+        metavar="aligner",
+    )
+
+    optional.add_argument(
+        "--tree_builder",
+        default="FastTree",
+        help=SUPPRESS,
+        metavar="tree_builder",
     )
 
     optional.add_argument(

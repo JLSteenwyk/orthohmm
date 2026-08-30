@@ -166,5 +166,23 @@ class TestArgsProcessing(object):
             "accuracy_profile",
             "metrics_json",
             "threads_per_worker",
+            "phylogeny",
+            "species_tree_mode",
+            "species_tree",
+            "aligner",
+            "tree_builder",
         ]
         assert sorted(res.keys()) == sorted(expected_keys)
+
+    def test_process_args_phylogeny_defaults_off(self, args):
+        res = process_args(args)
+        assert res["phylogeny"] == "off"
+        assert res["species_tree_mode"] == "supplied"
+        assert res["species_tree"] is None
+
+    def test_reconcile_supplied_requires_species_tree(self, args):
+        args.phylogeny = "reconcile"
+        args.species_tree_mode = "supplied"
+        args.species_tree = None
+        with pytest.raises(SystemExit):
+            process_args(args)
