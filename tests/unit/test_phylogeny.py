@@ -8,6 +8,8 @@ from orthohmm.phylogeny import (
     canonical_species_name,
     canonical_species_names,
     parse_species_tree,
+    parse_gene_tree,
+    reconcile_gene_tree,
     validate_phylogeny_config,
 )
 
@@ -107,3 +109,86 @@ def test_infer_mode_rejects_supplied_tree(tmp_path):
     )
     with pytest.raises(PhylogenyConfigurationError, match="cannot be used"):
         validate_phylogeny_config(config, PROTEOMES)
+
+
+def species_tree(tmp_path):
+    return parse_species_tree(
+        write_tree(tmp_path, "((A,B),C);"),
+        PROTEOMES,
+    ).tree
+
+
+def test_reconcile_labels_speciation_nodes_and_ortholog_pairs(tmp_path):
+    gene_tree = parse_gene_tree("((a,b),c);")
+    result = reconcile_gene_tree(
+        gene_tree,
+        species_tree(tmp_path),
+        {"a": "A.faa", "b": "B.fasta", "c": "C.pep"},
+        family_id="OG0",
+    )
+    assert result.duplication_count == 0
+    assert result.speciation_count == 2
+    assert result.root_groups == (("a", "b", "c"),)
+    assert result.ortholog_pairs == (("a", "b"), ("a", "c"), ("b", "c"))
+    assert result.paralog_pairs == ()
+    assert "|S@" in result.annotated_newick
+
+
+def test_ancient_duplication_splits_root_lineages(tmp_path):
+    gene_tree = parse_gene_tree("(((a1,b1),c1),((a2,b2),c2));")
+    gene_species = {
+        "a1": "A",
+        "b1": "B",
+        "c1": "C",
+        "a2": "A",
+        "b2": "B",
+        "c2": "C",
+    }
+    result = reconcile_gene_tree(
+        gene_tree,
+        species_tree(tmp_path),
+        gene_species,
+        family_id="OG1",
+    )
+    assert result.duplication_count == 1
+    assert result.root_groups == (
+        ("a1", "b1", "c1"),
+        ("a2", "b2", "c2"),
+    )
+    assert ("a1", "b1") in result.ortholog_pairs
+    assert ("a1", "b2") in result.paralog_pairs
+    assert "|D@S0000" in result.annotated_newick
+
+
+def test_recent_duplication_does_not_split_root_orthogroup(tmp_path):
+    gene_tree = parse_gene_tree("(((a1,a2),b),c);")
+    result = reconcile_gene_tree(
+        gene_tree,
+        species_tree(tmp_path),
+        {"a1": "A", "a2": "A", "b": "B", "c": "C"},
+    )
+    assert result.duplication_count == 1
+    assert result.root_groups == (("a1", "a2", "b", "c"),)
+    assert ("a1", "a2") not in result.ortholog_pairs
+    assert ("a1", "b") in result.ortholog_pairs
+    assert ("a2", "b") in result.ortholog_pairs
+
+
+def test_differential_loss_preserves_two_ancient_lineages(tmp_path):
+    gene_tree = parse_gene_tree("((a1,c1),(b2,c2));")
+    result = reconcile_gene_tree(
+        gene_tree,
+        species_tree(tmp_path),
+        {"a1": "A", "c1": "C", "b2": "B", "c2": "C"},
+    )
+    assert result.root_groups == (("a1", "c1"), ("b2", "c2"))
+    assert result.duplication_count == 1
+
+
+def test_gene_tree_rejects_unknown_gene(tmp_path):
+    with pytest.raises(PhylogenyConfigurationError, match="absent"):
+        reconcile_gene_tree(
+            parse_gene_tree("(a,unknown);"),
+            species_tree(tmp_path),
+            {"a": "A"},
+        )
