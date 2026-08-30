@@ -72,6 +72,7 @@ class ProfileExpansionResult:
     profile_pair_merges: int = 0
     profile_pair_edges: int = 0
     direct_profile_fallback_edges: int = 0
+    species_completion_profiles: int = 0
 
 
 def load_global_sequence_database(
@@ -179,6 +180,7 @@ def build_cluster_profiles(
     max_cluster_size: int = 200,
     gene_to_species=None,
     min_species_count: int = 1,
+    allowed_cluster_ids: Collection[int] | None = None,
 ) -> dict[int, MSAProfile]:
     """Build center-star MSA profiles for informative cluster sizes."""
     if min_species_count < 1:
@@ -196,10 +198,16 @@ def build_cluster_profiles(
         raise ValueError("gene_to_species must match gene_names")
     sub_matrix = get_matrix(matrix_name)
     background = get_background_freqs(matrix_name)
+    allowed = (
+        set(int(cluster_id) for cluster_id in allowed_cluster_ids)
+        if allowed_cluster_ids is not None
+        else None
+    )
     cluster_ids = [
         cluster_id
         for cluster_id, cluster in enumerate(clusters)
         if min_cluster_size <= len(cluster) <= max_cluster_size
+        and (allowed is None or cluster_id in allowed)
         and (
             min_species_count == 1
             or len(np.unique(species[np.asarray(cluster, dtype=np.int32)]))
@@ -219,6 +227,25 @@ def build_cluster_profiles(
             )
 
     return _execute_profile_build_tasks(tasks(), len(cluster_ids), cpu)
+
+
+def select_species_completion_cluster_ids(
+    clusters: Sequence[Sequence[int]],
+    gene_to_species,
+    min_cluster_size: int = 3,
+    max_cluster_size: int = 200,
+) -> set[int]:
+    """Select incomplete seed clusters containing at most one gene per species."""
+    species = np.asarray(gene_to_species, dtype=np.int32)
+    total_species = len(np.unique(species))
+    selected = set()
+    for cluster_id, cluster in enumerate(clusters):
+        if not min_cluster_size <= len(cluster) <= max_cluster_size:
+            continue
+        represented = np.unique(species[np.asarray(cluster, dtype=np.int32)])
+        if len(represented) == len(cluster) and len(represented) < total_species:
+            selected.add(cluster_id)
+    return selected
 
 
 def select_single_copy_profile_ids(
@@ -685,6 +712,8 @@ def build_strict_profile_edges(
     hit_targets,
     hit_scores,
     score_per_target_residue: bool = False,
+    candidate_missing_species_only: bool = False,
+    gene_to_species=None,
 ) -> IndexedEdges:
     """Create one sequence-supported anchor for each strict profile candidate."""
     n_genes = len(gene_names)
@@ -719,6 +748,24 @@ def build_strict_profile_edges(
         (cluster_by_gene[candidate_genes] != profile_ids)
         & (decision_scores >= thresholds)
     )
+    if candidate_missing_species_only:
+        if gene_to_species is None:
+            raise ValueError(
+                "gene_to_species is required for missing-species candidates"
+            )
+        species = np.asarray(gene_to_species, dtype=np.int32)
+        if len(species) != n_genes:
+            raise ValueError("gene_to_species must match gene_names")
+        species_count = int(species.max()) + 1 if len(species) else 0
+        represented = np.zeros(
+            (len(clusters), species_count), dtype=np.bool_
+        )
+        for cluster_id, cluster in enumerate(clusters):
+            members = np.asarray(cluster, dtype=np.int32)
+            represented[cluster_id, species[members]] = True
+        eligible &= ~represented[
+            profile_ids, species[candidate_genes]
+        ]
     if not eligible.any():
         return deduplicate_undirected_edges(gene_names, [], [], [])
 
@@ -1062,12 +1109,24 @@ def expand_profiles(
     direct_profile_fallback: bool = False,
     profile_min_cluster_size: int = 3,
     pair_profile_threshold_ratio: float = 1.0,
+    species_completion_only: bool = False,
 ) -> ProfileExpansionResult:
     """Run the complete strict profile-expansion stage."""
     os.environ["OMP_NUM_THREADS"] = str(cpu)
     sequence_database = load_global_sequence_database(
         fasta_directory, files, gene_names
     )
+    completion_profile_ids = None
+    if species_completion_only:
+        if gene_to_species is None:
+            raise ValueError(
+                "gene_to_species is required for species completion"
+            )
+        completion_profile_ids = select_species_completion_cluster_ids(
+            clusters,
+            gene_to_species,
+            min_cluster_size=profile_min_cluster_size,
+        )
     profiles = build_cluster_profiles(
         clusters,
         gene_names,
@@ -1077,6 +1136,7 @@ def expand_profiles(
         min_cluster_size=profile_min_cluster_size,
         gene_to_species=gene_to_species,
         min_species_count=min_profile_species,
+        allowed_cluster_ids=completion_profile_ids,
     )
     profile_hits = search_genes_against_profiles(
         profiles,
@@ -1101,6 +1161,8 @@ def expand_profiles(
         calibrate_weakest_member=calibrate_profiles,
         calibration_profile_ids=calibration_profile_ids,
         score_per_target_residue=score_per_target_residue,
+        candidate_missing_species_only=species_completion_only,
+        gene_to_species=gene_to_species,
         pair_profile_threshold_ratio=pair_profile_threshold_ratio,
     )
     edges = build_strict_profile_edges(
@@ -1178,4 +1240,7 @@ def expand_profiles(
         profile_pair_merges=profile_pair_merges,
         profile_pair_edges=profile_pair_edge_count,
         direct_profile_fallback_edges=direct_fallback_edge_count,
+        species_completion_profiles=(
+            len(profiles) if species_completion_only else 0
+        ),
     )

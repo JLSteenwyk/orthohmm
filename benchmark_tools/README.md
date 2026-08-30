@@ -176,6 +176,22 @@ duplicated retained-member profile; same-species pairs remain at the strict
 in-sample threshold. Pair profiles remain disabled by default pending a fresh
 production benchmark.
 
+Evaluate a selective species-completion second pass with:
+
+```bash
+python -m benchmark_tools.species_completion_holdout \
+  --development-seed 1103 \
+  --holdout-seed 2909 \
+  --families 36 \
+  --cpu 4 \
+  --output /tmp/species_completion_holdout.json
+```
+
+`--profile-iterations 2 --selective-species-completion-pass` rebuilds HMMs
+only for incomplete single-copy groups on pass two and accepts candidates only
+from species absent from the source group. This avoids the previously rejected
+unconditional second profile pass and remains disabled by default.
+
 ## OrthoFinder comparator
 
 This directory pins the OrthoFinder comparator to version 3.1.5 and keeps new

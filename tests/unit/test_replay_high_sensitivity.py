@@ -25,6 +25,7 @@ def test_replay_profile_iterations_default_to_one():
     assert args.direct_profile_fallback is False
     assert args.profile_min_cluster_size == 3
     assert args.pair_profile_threshold_ratio == 1.0
+    assert args.selective_species_completion_pass is False
 
 
 def test_replay_accepts_jackknife_profile_thresholds():

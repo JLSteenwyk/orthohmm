@@ -9,6 +9,7 @@ from orthohmm.search.profile_expansion import (
     compute_profile_self_thresholds,
     load_global_sequence_database,
     select_single_copy_profile_ids,
+    select_species_completion_cluster_ids,
 )
 
 
@@ -75,6 +76,15 @@ def test_build_cluster_profiles_requires_cross_species_support(tmp_path):
     )
 
     assert list(profiles) == [1]
+
+
+def test_species_completion_selects_incomplete_single_copy_clusters():
+    selected = select_species_completion_cluster_ids(
+        [[0, 1, 2], [3, 4, 5], [6]],
+        [0, 1, 2, 0, 0, 1, 3],
+    )
+
+    assert selected == {0}
 
 
 def test_profile_species_gate_requires_species_mapping(tmp_path):
@@ -336,6 +346,31 @@ def test_strict_profile_edges_support_per_residue_thresholds():
     )
 
     assert _edge_map(edges) == {(0, 2): 5.0}
+
+
+def test_strict_profile_edges_can_require_an_absent_species():
+    names = ["a", "b", "same_species", "missing_species"]
+    hits = ProfileHits(
+        profile_cluster_ids=np.array([0, 0], dtype=np.int32),
+        gene_ids=np.array([2, 3], dtype=np.int32),
+        scores=np.array([10.0, 10.0]),
+        evalues=np.array([1e-20, 1e-20]),
+        candidate_count=2,
+    )
+
+    edges = build_strict_profile_edges(
+        names,
+        [[0, 1], [2], [3]],
+        hits,
+        {0: 8.0},
+        np.array([2, 3], dtype=np.int32),
+        np.array([0, 0], dtype=np.int32),
+        np.array([5.0, 5.0]),
+        candidate_missing_species_only=True,
+        gene_to_species=np.array([0, 1, 1, 2], dtype=np.int32),
+    )
+
+    assert _edge_map(edges) == {(0, 3): 5.0}
 
 
 def test_direct_profile_fallback_anchors_unconnected_calibrated_winner():

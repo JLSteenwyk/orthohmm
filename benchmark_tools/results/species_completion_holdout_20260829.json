@@ -1,0 +1,87 @@
+{
+  "configuration": {
+    "cpu": 4,
+    "development_seed": 1103,
+    "evalue_threshold": 0.0001,
+    "families": 36,
+    "holdout_seed": 2909,
+    "matrix": "BLOSUM62"
+  },
+  "created_at": "2026-08-30T00:18:01.735661+00:00",
+  "description": "Synthetic development/holdout test of a selective second HMM pass for missing species in incomplete single-copy groups.",
+  "development": {
+    "candidate_categories": {
+      "close_paralog": {
+        "candidates": 18,
+        "completion_assigned": 0,
+        "completion_correct_or_rejected": 18,
+        "unrestricted_assigned": 0
+      },
+      "missing_species": {
+        "candidates": 72,
+        "completion_assigned": 21,
+        "completion_correct_or_rejected": 21,
+        "unrestricted_assigned": 21
+      },
+      "represented_species": {
+        "candidates": 36,
+        "completion_assigned": 0,
+        "completion_correct_or_rejected": 0,
+        "unrestricted_assigned": 34
+      },
+      "unrelated": {
+        "candidates": 18,
+        "completion_assigned": 0,
+        "completion_correct_or_rejected": 18,
+        "unrestricted_assigned": 0
+      }
+    },
+    "families": 36,
+    "passed": true,
+    "seed": 1103,
+    "source_species_per_profile": 3,
+    "species_completion_edges": 21,
+    "unrestricted_edges": 55
+  },
+  "git": {
+    "commit": "3b8a0f326b71e34da747033b655b70c06f7e17fd",
+    "dirty": true
+  },
+  "holdout": {
+    "candidate_categories": {
+      "close_paralog": {
+        "candidates": 18,
+        "completion_assigned": 0,
+        "completion_correct_or_rejected": 18,
+        "unrestricted_assigned": 0
+      },
+      "missing_species": {
+        "candidates": 72,
+        "completion_assigned": 9,
+        "completion_correct_or_rejected": 9,
+        "unrestricted_assigned": 9
+      },
+      "represented_species": {
+        "candidates": 36,
+        "completion_assigned": 0,
+        "completion_correct_or_rejected": 0,
+        "unrestricted_assigned": 35
+      },
+      "unrelated": {
+        "candidates": 18,
+        "completion_assigned": 0,
+        "completion_correct_or_rejected": 18,
+        "unrestricted_assigned": 0
+      }
+    },
+    "families": 36,
+    "passed": true,
+    "seed": 2909,
+    "source_species_per_profile": 3,
+    "species_completion_edges": 9,
+    "unrestricted_edges": 44
+  },
+  "label_policy": "Uses generated family and species labels only; no OrthoBench, QfO, Three Kingdoms, or competing-tool output is read.",
+  "passed": true,
+  "schema_version": 1
+}

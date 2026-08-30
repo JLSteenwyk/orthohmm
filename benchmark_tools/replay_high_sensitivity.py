@@ -192,6 +192,14 @@ def build_parser() -> argparse.ArgumentParser:
         default=1.0,
         help="Held-out pair-profile score ratio in (0, 1]",
     )
+    parser.add_argument(
+        "--selective-species-completion-pass",
+        action="store_true",
+        help=(
+            "Restrict profile pass two to incomplete single-copy groups and "
+            "candidate species absent from each group"
+        ),
+    )
     return parser
 
 
@@ -225,6 +233,14 @@ def main(argv=None) -> int:
         raise SystemExit(
             "pair-seeded profiles require "
             "--jackknife-single-copy-profiles"
+        )
+    if (
+        args.selective_species_completion_pass
+        and args.profile_iterations != 2
+    ):
+        raise SystemExit(
+            "--selective-species-completion-pass requires "
+            "--profile-iterations 2"
         )
     started = time.perf_counter()
     timings = {}
@@ -321,6 +337,9 @@ def main(argv=None) -> int:
         files = fetch_fasta_files(str(args.fasta_directory))
         profile_clusters = multipass_clusters
         for iteration in range(1, args.profile_iterations + 1):
+            species_completion_only = (
+                args.selective_species_completion_pass and iteration == 2
+            )
             profile_result = expand_profiles(
                 profile_clusters,
                 gene_names,
@@ -360,6 +379,7 @@ def main(argv=None) -> int:
                 pair_profile_threshold_ratio=(
                     args.pair_profile_threshold_ratio
                 ),
+                species_completion_only=species_completion_only,
             )
             profile_results.append(profile_result)
             profile_base_edges = combine_edges(
@@ -494,6 +514,9 @@ def main(argv=None) -> int:
             "pair_profile_threshold_ratio": (
                 args.pair_profile_threshold_ratio
             ),
+            "selective_species_completion_pass": (
+                args.selective_species_completion_pass
+            ),
             "matrix": args.matrix,
             "leiden_seed": args.leiden_seed,
         },
@@ -546,6 +569,9 @@ def main(argv=None) -> int:
                 item.direct_profile_fallback_edges
                 for item in profile_results
             ),
+            "species_completion_profiles": sum(
+                item.species_completion_profiles for item in profile_results
+            ),
             "final_singleton_assignment_edges": len(final_singleton_edges),
             "profile_multipass_edges": len(profile_edges),
         })
@@ -564,6 +590,9 @@ def main(argv=None) -> int:
                 "profile_pair_edges": item.profile_pair_edges,
                 "direct_profile_fallback_edges": (
                     item.direct_profile_fallback_edges
+                ),
+                "species_completion_profiles": (
+                    item.species_completion_profiles
                 ),
             }
             for iteration, item in enumerate(profile_results, start=1)
