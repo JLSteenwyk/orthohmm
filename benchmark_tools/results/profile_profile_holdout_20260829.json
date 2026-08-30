@@ -1,0 +1,55 @@
+{
+  "configuration": {
+    "cpu": 4,
+    "development_seed": 1103,
+    "families": 36,
+    "holdout_seed": 2909,
+    "matrix": "BLOSUM62",
+    "max_candidates_per_profile": 30,
+    "max_combined_genes": 80,
+    "prefilter_k": 4,
+    "similarity_threshold": 0.4
+  },
+  "created_at": "2026-08-29T23:24:42.342484+00:00",
+  "description": "Synthetic development/holdout test of self-normalized, mutual-nearest profile-profile alignment for split families.",
+  "development": {
+    "candidate_pairs": 518,
+    "f_score": 1.0,
+    "false_negatives": 0,
+    "false_positives": 0,
+    "families": 36,
+    "passed": true,
+    "precision": 1.0,
+    "predicted_pairs": 36,
+    "profile_edges": 324,
+    "profiles": 72,
+    "recall": 1.0,
+    "reported_mutual_pairs": 36,
+    "seed": 1103,
+    "true_positives": 36
+  },
+  "git": {
+    "commit": "a803b4ef779c98e1a80e2ff1de4a7df1172ec4b4",
+    "dirty": true
+  },
+  "holdout": {
+    "candidate_pairs": 700,
+    "f_score": 1.0,
+    "false_negatives": 0,
+    "false_positives": 0,
+    "families": 36,
+    "passed": true,
+    "precision": 1.0,
+    "predicted_pairs": 36,
+    "profile_edges": 324,
+    "profiles": 72,
+    "recall": 1.0,
+    "reported_mutual_pairs": 36,
+    "seed": 2909,
+    "true_positives": 36
+  },
+  "label_policy": "Uses generated family labels only; no OrthoBench, QfO, Three Kingdoms, species identities, or competing-tool output is read.",
+  "passed": true,
+  "schema_version": 1,
+  "selection_policy": "The 0.40 threshold was locked below the minimum true-family development similarity (0.6676) and above the maximum close-paralog similarity (0.3735), maximizing sensitivity within the perfect-separation interval. An exact-4-mer prefilter capacity of 30 was the smallest tested development setting with complete true-pair recall and was then applied unchanged to holdout."
+}

@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "objective": "Outperform OrthoFinder 3.1.5 on fresh OrthoBench and QfO with a generalizable HMM-centered method",
+  "status": "blocked_by_missing_alignment_coverage_and_representative_calibration_data",
+  "success_criteria_met": false,
+  "recommendation": {
+    "default_profile": "standard",
+    "high_sensitivity": "retain_opt_in",
+    "selective_single_copy_jackknife": "retain_experimental_opt_in",
+    "run_qfo_for_candidate": false,
+    "reason": "The best candidate scored OrthoBench F=70.5, below OrthoFinder 3.1.5 at F=72.7. No candidate passed the locked gate for a new QfO or Three Kingdoms run."
+  },
+  "primary_comparison": {
+    "orthobench": {
+      "orthohmm_high_sensitivity": {
+        "f_score": 70.4,
+        "precision": 78.9,
+        "recall": 63.5,
+        "exact_refogs": 13
+      },
+      "orthohmm_selective_single_copy_jackknife": {
+        "evaluation": "cached-search replay with production graph and refinement",
+        "f_score": 70.5,
+        "precision": 78.7,
+        "recall": 63.8,
+        "exact_refogs": 12,
+        "wall_s": 347.148762,
+        "peak_process_rss_gib": 5.561882,
+        "final_cluster_sha256": "55f9e3a2912bf3b3aabb1371a34f8dcae91fed6144cbd7273aea47253fa1263a"
+      },
+      "orthofinder_3_1_5": {
+        "evaluation": "fresh production",
+        "f_score": 72.7,
+        "precision": 66.1,
+        "recall": 80.9,
+        "exact_refogs": 19,
+        "wall_s": 3421.07,
+        "peak_rss_gib": 4.56617,
+        "orthogroups_sha256": "e0bf8d21b7ddc4494f0df1224dc2cd57d964cb92507eb40bd1f058cbc6f47af7"
+      },
+      "best_candidate_delta_vs_orthofinder": {
+        "f_score": -2.2,
+        "precision": 12.6,
+        "recall": -17.1,
+        "exact_refogs": -7
+      }
+    },
+    "qfo": {
+      "candidate_rerun": false,
+      "gate_reason": "No candidate beat OrthoFinder on OrthoBench",
+      "orthohmm_high_sensitivity": {
+        "VGNC_F": 0.6674480910917616,
+        "SwissTrees_F": 0.6738508557156822,
+        "TreeFam_A_F": 0.5758699637439971,
+        "EC": 0.93104489,
+        "GO": 0.47228231,
+        "FAS": 0.7747943345202203,
+        "mean": 0.6825484075119435,
+        "wall_s": 69438,
+        "peak_process_tree_rss_gib": 16.700291,
+        "orthogroups": 390817,
+        "filtered_pairs_sha256": "3abde0f64063ce8ce0432d358faa340556df95a8b5d4aa6d30b0e19deea7cb0f"
+      },
+      "orthofinder_3_1_5": {
+        "VGNC_F": 0.9882293593408441,
+        "SwissTrees_F": 0.8591604357197734,
+        "TreeFam_A_F": 0.7428869916535419,
+        "EC": 0.94198234,
+        "GO": 0.46816557,
+        "FAS": 0.6920006330234186,
+        "mean": 0.7820708882895963,
+        "wall_s": 80953,
+        "peak_rss_gib": 6.10243,
+        "orthogroups": 46593,
+        "filtered_pairs_sha256": "5581c9b81314e7d074b04564b4ce7d0ac66d909c0e512e88ba30e14e05dba6a2"
+      },
+      "orthohmm_mean_delta": -0.0995224807776528
+    },
+    "three_kingdoms": {
+      "candidate_rerun": false,
+      "orthohmm_high_sensitivity": {
+        "f_score": 0.8263,
+        "precision": 1.0,
+        "recall": 0.704,
+        "wall_s": 6556.426547,
+        "peak_process_tree_rss_gib": 11.12159,
+        "orthogroups_sha256": "28ba45202afc7f51e719d59405674023c9b284a2d5ea18575b03c7b949e13db1"
+      },
+      "comparators": [
+        {"tool": "ProteinOrtho", "f_score": 0.9305, "precision": 1.0, "recall": 0.87},
+        {"tool": "OrthoHMM prior CPM-M4", "f_score": 0.907, "precision": 1.0, "recall": 0.8298},
+        {"tool": "SonicParanoid", "f_score": 0.8859, "precision": 1.0, "recall": 0.7952},
+        {"tool": "OrthoFinder 2.5.5", "f_score": 0.8552, "precision": 1.0, "recall": 0.747}
+      ]
+    }
+  },
+  "experiments": [
+    {"candidate": "selective single-copy weakest-member calibration", "orthobench_f": 70.5, "decision": "retain_opt_in", "implementation_commit": "6d48b35", "result_commit": "90d591a"},
+    {"candidate": "HMM-supported component refinement", "orthobench_f": 70.5, "decision": "neutral_reverted", "implementation_commit": "63fc686", "result_commit": "368ba57"},
+    {"candidate": "selective absent-species second pass", "orthobench_f": 70.4, "decision": "rejected_reverted", "implementation_commit": "6161532", "result_commit": "9ad6b5f"},
+    {"candidate": "direct profile-only fallback", "orthobench_f": 70.3, "decision": "rejected_reverted", "implementation_commit": "da1c881", "result_commit": "b4fd0b5"},
+    {"candidate": "reciprocal split-cluster repair", "orthobench_f": 70.3, "decision": "rejected_reverted", "implementation_commit": "528bdd5", "result_commit": "6a60b77"},
+    {"candidate": "pair-seeded HMM profiles", "orthobench_f": 69.9, "decision": "rejected_reverted", "implementation_commit": "c1615a5", "result_commit": "3b8a0f3"},
+    {"candidate": "profile-profile repair at 0.40", "orthobench_f": 69.9, "decision": "rejected_reverted", "implementation_commit": "2c9024f", "result_commit": "eb6efa8"},
+    {"candidate": "per-target-residue calibration", "orthobench_f": 69.7, "decision": "rejected_reverted", "implementation_commit": "ba1fed4", "result_commit": "6a597e6"},
+    {"candidate": "global weakest-member calibration", "orthobench_f": 69.1, "decision": "rejected"},
+    {"candidate": "profile-profile repair at 0.60", "orthobench_f": 70.5, "decision": "inactive_reverted", "implementation_commit": "2c9024f", "result_commit": "a803b4e"},
+    {"candidate": "species-balanced profile emissions", "orthobench_f": null, "decision": "rejected_before_orthobench", "result_commit": "c3e60ec"}
+  ],
+  "cleanup": {
+    "commit": "23008d8",
+    "reverted_failed_production_paths": true,
+    "retained_result_artifacts": true,
+    "unrelated_generated_test_samples_touched": false
+  },
+  "verification": {
+    "unit_tests": {"passed": 274, "failed": 0},
+    "scoped_ruff": "pass",
+    "repository_wide_ruff_preexisting_findings": 37,
+    "active_scheduler_jobs": 0
+  },
+  "blocker": {
+    "technical": "Current HMM Viterbi kernels return scores without alignment endpoints, traceback, or model/query coverage.",
+    "scientific": "The independent synthetic corpus does not represent multidomain proteins, fragments, domain shuffles, and recent paralogs well enough to calibrate the next mechanism.",
+    "strongest_next_hypothesis": "Add bounded score-and-coverage HMM output, calibrate domain-coverage-aware evidence on an independent multidomain/paralog corpus, then test multiple profiles for multimodal families.",
+    "why_iteration_stopped": "Further scalar tuning on final OrthoBench results would violate the no-leakage constraint."
+  },
+  "report": "HMM_HILLCLIMB_20260829.md"
+}
