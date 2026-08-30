@@ -313,12 +313,14 @@ def reconcile_gene_tree(
     descendant_species = {}
     mapped_species_node = {}
     event_by_node = {}
+    species_overlap_by_node = {}
     for node in gene_tree.postorder_node_iter():
         if node.is_leaf():
             gene = leaf_gene[node]
             genes = (gene,)
             species = {canonical_species_name(gene_to_species[gene])}
             event = "leaf"
+            overlap = False
         else:
             children = node.child_nodes()
             genes = tuple(
@@ -343,6 +345,7 @@ def reconcile_gene_tree(
         descendant_species[node] = species
         mapped_species_node[node] = species_lca(species)
         event_by_node[node] = event
+        species_overlap_by_node[node] = bool(overlap)
 
     ortholog_pairs = set()
     paralog_pairs = set()
@@ -362,18 +365,29 @@ def reconcile_gene_tree(
                     destination.add(tuple(sorted((gene_a, gene_b))))
 
     species_root = species_tree.seed_node
-
-    def root_lineages(node) -> list[tuple[str, ...]]:
+    root_duplication_by_node = {}
+    contains_root_duplication = {}
+    for node in gene_tree.postorder_node_iter():
         root_mapped_children = sum(
             mapped_species_node[child] is species_root
             for child in node.child_node_iter()
         )
-        if (
+        root_duplication_by_node[node] = (
             not node.is_leaf()
-            and event_by_node[node] == "duplication"
+            and species_overlap_by_node[node]
             and mapped_species_node[node] is species_root
             and root_mapped_children >= 2
-        ):
+        )
+        contains_root_duplication[node] = (
+            root_duplication_by_node[node]
+            or any(
+                contains_root_duplication[child]
+                for child in node.child_node_iter()
+            )
+        )
+
+    def root_lineages(node) -> list[tuple[str, ...]]:
+        if contains_root_duplication[node]:
             groups = []
             for child in node.child_node_iter():
                 groups.extend(root_lineages(child))

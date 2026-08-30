@@ -205,6 +205,20 @@ def test_differential_loss_preserves_two_ancient_lineages(tmp_path):
     assert result.duplication_count == 1
 
 
+def test_root_duplication_below_speciation_splits_root_hogs(tmp_path):
+    gene_tree = parse_gene_tree("(a,((b1,c1),(b2,c2)));")
+    result = reconcile_gene_tree(
+        gene_tree,
+        species_tree(tmp_path),
+        {"a": "A", "b1": "B", "c1": "C", "b2": "B", "c2": "C"},
+    )
+    assert result.root_groups == (
+        ("a",),
+        ("b1", "c1"),
+        ("b2", "c2"),
+    )
+
+
 def test_gene_tree_rejects_unknown_gene(tmp_path):
     with pytest.raises(PhylogenyConfigurationError, match="absent"):
         reconcile_gene_tree(
