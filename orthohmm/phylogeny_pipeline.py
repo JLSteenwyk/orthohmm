@@ -335,9 +335,7 @@ def _write_token_fasta(
     genes: Sequence[str],
     sequences: dict[str, str],
 ) -> dict[str, str]:
-    token_to_gene = {
-        f"g{index:08d}": gene for index, gene in enumerate(sorted(genes))
-    }
+    token_to_gene = _gene_tokens(genes)
     lines = []
     for token, gene in token_to_gene.items():
         lines.append(f">{token}")
@@ -345,6 +343,12 @@ def _write_token_fasta(
         lines.extend(sequence[i:i + 80] for i in range(0, len(sequence), 80))
     _atomic_write(path, "\n".join(lines) + "\n")
     return token_to_gene
+
+
+def _gene_tokens(genes: Sequence[str]) -> dict[str, str]:
+    return {
+        f"g{index:08d}": gene for index, gene in enumerate(sorted(genes))
+    }
 
 
 def _run_to_file(command: list[str], output_path: Path, role: str) -> None:
@@ -465,26 +469,24 @@ def _tool_version(executable: str) -> str:
     return lines[0][:500] if lines else "version unavailable"
 
 
-def _family_input_hash(
+def _family_tree_input_hash(
     family_id: str,
     genes: Sequence[str],
     sequences: dict[str, str],
-    gene_species: dict[str, str],
-    species_tree_sha256: str,
     config: PhylogenyConfig,
 ) -> str:
+    """Hash only inputs that can change alignment or unrooted gene inference."""
+
     payload = {
-        "schema_version": 1,
+        "schema_version": 2,
         "family_id": family_id,
         "sequences": [
-            [gene, gene_species[gene], sequences[gene]] for gene in sorted(genes)
+            [gene, sequences[gene]] for gene in sorted(genes)
         ],
-        "species_tree_sha256": species_tree_sha256,
         "aligner": config.aligner,
         "tree_builder": config.tree_builder,
         "alignment_mode": "auto_single_thread_anysymbol",
         "tree_model": "LG",
-        "rooting": "explicit_or_min_duplication_loss",
     }
     return _sha256_text(json.dumps(payload, sort_keys=True, separators=(",", ":")))
 
@@ -507,31 +509,28 @@ def _reconcile_family(
         phylogeny_directory / "gene_trees" / f"{family_id}.reconciled.nwk"
     )
     checkpoint_path = phylogeny_directory / "checkpoints" / f"{family_id}.json"
-    input_hash = _family_input_hash(
+    tree_input_hash = _family_tree_input_hash(
         family_id,
         genes,
         sequences,
-        gene_species,
-        species_tree_sha256,
         config,
     )
 
     checkpoint_hit = False
-    if checkpoint_path.is_file() and rooted_tree_path.is_file():
+    if checkpoint_path.is_file() and raw_tree_path.is_file():
         try:
             checkpoint = json.loads(checkpoint_path.read_text(encoding="utf-8"))
             checkpoint_hit = (
                 checkpoint.get("status") == "complete"
-                and checkpoint.get("input_sha256") == input_hash
-                and checkpoint.get("rooted_tree_sha256")
-                == _sha256_file(rooted_tree_path)
+                and checkpoint.get("tree_input_sha256") == tree_input_hash
+                and checkpoint.get("raw_tree_sha256")
+                == _sha256_file(raw_tree_path)
             )
         except (OSError, ValueError):
             checkpoint_hit = False
 
-    if checkpoint_hit:
-        tree = parse_gene_tree(rooted_tree_path.read_text(encoding="utf-8"))
-    else:
+    token_to_gene = _gene_tokens(genes)
+    if not checkpoint_hit:
         token_to_gene = _write_token_fasta(candidate_path, genes, sequences)
         _run_to_file(
             _aligner_command(config.aligner, candidate_path),
@@ -543,19 +542,22 @@ def _reconcile_family(
             raw_tree_path,
             "gene-tree inference",
         )
-        tree = _root_external_gene_tree(
-            raw_tree_path.read_text(encoding="utf-8"),
-            token_to_gene,
-            species_tree=species_tree,
-            gene_species={gene: gene_species[gene] for gene in genes},
-        )
-        rooted_newick = tree.as_string(
-            schema="newick",
-            suppress_rooting=False,
-            suppress_internal_node_labels=True,
-            preserve_spaces=True,
-        ).strip()
-        _atomic_write(rooted_tree_path, rooted_newick + "\n")
+
+    # Rooting and reconciliation depend on the species tree and are cheap
+    # relative to alignment and gene-tree inference, so always recompute them.
+    tree = _root_external_gene_tree(
+        raw_tree_path.read_text(encoding="utf-8"),
+        token_to_gene,
+        species_tree=species_tree,
+        gene_species={gene: gene_species[gene] for gene in genes},
+    )
+    rooted_newick = tree.as_string(
+        schema="newick",
+        suppress_rooting=False,
+        suppress_internal_node_labels=True,
+        preserve_spaces=True,
+    ).strip()
+    _atomic_write(rooted_tree_path, rooted_newick + "\n")
 
     reconciliation = reconcile_gene_tree(
         tree,
@@ -565,10 +567,12 @@ def _reconcile_family(
     )
     _atomic_write(annotated_tree_path, reconciliation.annotated_newick + "\n")
     checkpoint = {
-        "schema_version": 1,
+        "schema_version": 2,
         "status": "complete",
         "family_id": family_id,
-        "input_sha256": input_hash,
+        "tree_input_sha256": tree_input_hash,
+        "raw_tree_sha256": _sha256_file(raw_tree_path),
+        "species_tree_sha256": species_tree_sha256,
         "rooted_tree_sha256": _sha256_file(rooted_tree_path),
         "annotated_tree_sha256": _sha256_file(annotated_tree_path),
         "genes": list(genes),

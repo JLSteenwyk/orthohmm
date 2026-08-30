@@ -146,6 +146,41 @@ def test_supplied_tree_stage_end_to_end_and_checkpoint_restart(tmp_path):
     assert second == first.__class__(**{**first.__dict__, "checkpoint_hits": 1})
 
 
+def test_gene_tree_checkpoint_survives_species_tree_change(tmp_path):
+    inputs, output, cluster_path, candidates, config = _make_fixture(
+        tmp_path, "tree-change"
+    )
+    files = ["A.faa", "B.faa", "C.faa"]
+    run_phylogeny_stage(str(inputs), str(output), files, config, cpu=2)
+
+    # Keep version probes working but make repeated alignment/tree inference fail.
+    Path(config.aligner).write_text(
+        "#!/usr/bin/env python3\n"
+        "import sys\n"
+        "if '--version' in sys.argv:\n"
+        "    print('fake-mafft 1.0')\n"
+        "else:\n"
+        "    raise SystemExit(91)\n",
+        encoding="utf-8",
+    )
+    Path(config.tree_builder).write_text(
+        "#!/usr/bin/env python3\n"
+        "import sys\n"
+        "if len(sys.argv) == 1:\n"
+        "    print('fake-fasttree 1.0')\n"
+        "else:\n"
+        "    raise SystemExit(92)\n",
+        encoding="utf-8",
+    )
+    Path(config.species_tree).write_text("((A,C),B);\n", encoding="utf-8")
+    cluster_path.write_text(candidates, encoding="utf-8")
+
+    rerooted = run_phylogeny_stage(
+        str(inputs), str(output), files, config, cpu=2
+    )
+    assert rerooted.checkpoint_hits == 1
+
+
 def test_parallel_results_are_deterministic(tmp_path):
     fixture_a = _make_fixture(tmp_path, "run_a")
     fixture_b = _make_fixture(tmp_path, "run_b")

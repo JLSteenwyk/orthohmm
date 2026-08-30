@@ -72,6 +72,24 @@ The replay flag `--jackknife-single-copy-profiles` applies the jackknife only
 when every profile member comes from a distinct species. This mode is separate
 from the rejected global `--jackknife-profile-thresholds` ablation.
 
+## Phylogeny-stage replay
+
+Replay the optional phylogeny stage from a frozen candidate-cluster file:
+
+```bash
+python benchmark_tools/replay_phylogeny.py \
+  --fasta-directory /path/to/proteomes \
+  --candidate-clusters /path/to/orthohmm_edges_clustered.txt \
+  --output-directory /tmp/orthohmm_phylogeny_replay \
+  --json /tmp/orthohmm_phylogeny_replay.json \
+  --species-tree-mode infer --cpu 32 \
+  --official-benchmark /path/to/OrthoBench/benchmark.py
+```
+
+The JSON records source/input checksums, process-tree memory, stage runtime,
+reconciliation counts, output checksums, and optional post-run scores. This is
+a development harness; final claims still require fresh end-to-end runs.
+
 ## OrthoFinder comparator
 
 This directory pins the OrthoFinder comparator to version 3.1.5 and keeps new
