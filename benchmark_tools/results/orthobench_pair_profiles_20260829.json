@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "candidate": "cross-species pair-seeded HMM profiles with bidirectional holdout calibration at 0.70",
+  "independent_screen": {
+    "artifact": "benchmark_tools/results/pair_profile_holdout_20260829.json",
+    "sha256": "a63cedbad00061852b190fd0e25efe356df1bf4b56a3e23b37679ced0014fbbf",
+    "selected_development_ratio": 0.7,
+    "development": {
+      "f_score": 0.9132075471698113,
+      "precision": 1.0,
+      "recall": 0.8402777777777778,
+      "negative_rejection_rate": 1.0
+    },
+    "holdout": {
+      "f_score": 0.9489051094890512,
+      "precision": 1.0,
+      "recall": 0.9027777777777778,
+      "negative_rejection_rate": 1.0
+    }
+  },
+  "fresh_orthobench": {
+    "result": "benchmarks/results/production_high_sensitivity_replay_pair_profiles_20260829/result.json",
+    "result_sha256": "9adb353e8436ba9ab7811926832c758c068f7fe38bede4f737ef45f12f9c270e",
+    "final_output_sha256": "4f8a7255ffe70f4fb39db4f74a060f8202d2fa84dee18dbcc7398645999188eb",
+    "f_score": 69.9,
+    "precision": 78.6,
+    "recall": 62.9,
+    "exact_refogs": 13,
+    "profiles_built": 19898,
+    "calibrated_profiles": 5889,
+    "significant_profile_hits": 623493,
+    "strict_profile_edges": 28515,
+    "wall_seconds": 378.14,
+    "maximum_rss_kib": 6159256
+  },
+  "selective_jackknife_comparator": {
+    "f_score": 70.5,
+    "precision": 78.7,
+    "recall": 63.8,
+    "exact_refogs": 12,
+    "profiles_built": 15901,
+    "strict_profile_edges": 27241,
+    "final_output_sha256": "55f9e3a2912bf3b3aabb1371a34f8dcae91fed6144cbd7273aea47253fa1263a"
+  },
+  "decision": "rejected_regression",
+  "reason": "Adding 3,997 pair profiles and 1,274 strict edges reduced final F-score by 0.6 points and recall by 0.9 points while adding about 30 seconds to the profile stage. Two-member synthetic families did not model domain and paralog pair clusters in complete proteomes; pair profiles remain disabled."
+}
