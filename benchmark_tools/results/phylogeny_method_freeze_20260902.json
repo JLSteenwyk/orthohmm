@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "frozen_at": "2026-09-02T17:45:00Z",
+  "status": "frozen_before_validation",
+  "selection_policy": {
+    "qfo_used_for_tuning": false,
+    "orthobench_validation_opened": false,
+    "inputs": [
+      "generated synthetic holdouts",
+      "35-family OrthoBench development partition"
+    ]
+  },
+  "partition": {
+    "path": "benchmark_tools/results/orthobench_phylogeny_partition_20260902.json",
+    "sha256": "71ce14f0c0df944cb40028a2f63b667875b28e2ac8397831d15c56a421e5826d",
+    "development_refogs": 35,
+    "validation_refogs": 35
+  },
+  "frozen_method": {
+    "commit": "95e312bc0c37442d6a6cb992a11975376f6a89ff",
+    "accuracy_profile": "high_sensitivity",
+    "phylogeny_mode": "reconcile",
+    "species_tree_mode": "infer",
+    "species_tree_rooting": "min_variance",
+    "candidate_policy": "satellite_v1",
+    "root_duplication_rule": "species_overlap",
+    "pair_orthology_rule": "positive_paralogy",
+    "cpu": 32,
+    "candidate_parameters": {
+      "max_family_genes": 500,
+      "max_iterations": 1,
+      "max_satellite_genes": 8,
+      "max_satellite_ratio": 0.75,
+      "max_satellites_per_anchor": 2,
+      "max_species_overlap_fraction": 1.0,
+      "min_average_score": 0.0,
+      "min_coverage": 0.5,
+      "min_margin": 1.5,
+      "min_maximum_score": 0.0,
+      "min_normalized_support": 0.02
+    }
+  },
+  "candidate_development": {
+    "artifact": "benchmark_tools/results/phylogeny_candidate_satellite_m8_margin15_dev_audit_20260902.json",
+    "artifact_sha256": "e9a4ee87509dd66756ca20fa52a3125d1d2230a20aa5593ebe2a11a03d94e2a7",
+    "candidate_families": 56874,
+    "candidate_pair_recall_micro": 0.4749702334731066,
+    "candidate_pair_recall_macro": 0.7786833505607317,
+    "fully_colocated_refogs": 11,
+    "mixed_reference_candidates": 0,
+    "cross_refog_pairs": 0,
+    "reference_to_nonreference_relations": 4816
+  },
+  "development_scores": {
+    "orthohmm_high_sensitivity": {
+      "f_score": 64.75363066616443,
+      "precision": 69.50100489062277,
+      "recall": 60.61334207227912,
+      "exact_refogs": 8
+    },
+    "orthohmm_previous_inferred_phylogeny": {
+      "f_score": 65.84586563113031,
+      "precision": 72.06715401971378,
+      "recall": 60.61334207227912,
+      "exact_refogs": 9
+    },
+    "orthofinder_3_1_5_full": {
+      "f_score": 65.96973469197746,
+      "precision": 54.64499668606814,
+      "recall": 83.21547570248,
+      "exact_refogs": 12
+    },
+    "frozen_orthohmm": {
+      "f_score": 68.197218,
+      "precision": 71.216076,
+      "recall": 65.423892,
+      "exact_refogs": 9
+    }
+  },
+  "root_rule_ablation": {
+    "supported_children": {
+      "f_score": 66.947763,
+      "precision": 68.140585,
+      "recall": 65.795985,
+      "exact_refogs": 8
+    },
+    "confidence": {
+      "f_score": 68.094049,
+      "precision": 70.991435,
+      "recall": 65.423892,
+      "exact_refogs": 8
+    },
+    "species_overlap": {
+      "f_score": 68.197218,
+      "precision": 71.216076,
+      "recall": 65.423892,
+      "exact_refogs": 9
+    }
+  },
+  "rooting_experiments": "benchmark_tools/results/phylogeny_rooting_experiments_20260902.json",
+  "synthetic_holdouts": [
+    "benchmark_tools/results/candidate_superfamily_satellite_holdout_20260902.json",
+    "benchmark_tools/results/phylogeny_confidence_root_holdout_20260902.json",
+    "benchmark_tools/results/phylogeny_positive_paralogy_holdout_20260902.json"
+  ],
+  "validation_rule": "Open the validation partition once, without changing these parameters in response to its score."
+}

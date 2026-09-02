@@ -1,0 +1,65 @@
+{
+  "description": "Root-HOG rule replay from immutable rooted gene trees",
+  "generated_at": "2026-09-02T17:33:44.816085+00:00",
+  "git": {
+    "commit": "614687feb7778cb0ae21e431b6d1b5796723552d",
+    "dirty": true
+  },
+  "inputs": {
+    "candidate_clusters": {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/phylogeny_candidate_satellite_m8_margin15_20260902/candidate_clusters.txt",
+      "sha256": "ac0029887375d4d421dc83ecbcf04ef562d26e70e585183ad76c7329d04d0c54"
+    },
+    "phylogeny_output": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/phylogeny_satellite_m8_internal_20260902_r1/orthohmm_phylogeny",
+    "species_tree": {
+      "bytes": 733,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/phylogeny_satellite_m8_internal_20260902_r1/orthohmm_phylogeny/species_tree.rooted.nwk",
+      "sha256": "ad416d28d1a6c5b3d08776e95e2316df6aad5058d3a0b5e72ddcb65bbe0293b8"
+    }
+  },
+  "rules": {
+    "confidence": {
+      "candidate_families": 56874,
+      "output": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/phylogeny_satellite_m8_root_rules_20260902/root_hogs_confidence.txt",
+        "sha256": "156049123707d307a58433e6ea1b2cc59707616e451b4a5dfecfecbc38739081"
+      },
+      "reconciled_families": 9182,
+      "root_hogs": 58199,
+      "rule": "confidence",
+      "wall_s": 25.723375
+    },
+    "species_overlap": {
+      "candidate_families": 56874,
+      "output": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/phylogeny_satellite_m8_root_rules_20260902/root_hogs_species_overlap.txt",
+        "sha256": "849a5fce240084548502f559aaa377e7acc611a00b81c1d181262094b4af47d1"
+      },
+      "reconciled_families": 9182,
+      "root_hogs": 58317,
+      "rule": "species_overlap",
+      "wall_s": 25.818535
+    },
+    "supported_children": {
+      "candidate_families": 56874,
+      "output": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/phylogeny_satellite_m8_root_rules_20260902/root_hogs_supported_children.txt",
+        "sha256": "dfc94dc7c70dae57df3a5ef93f3523afdd8fdbf678f37c5ca27b6798c808b314"
+      },
+      "reconciled_families": 9182,
+      "root_hogs": 57754,
+      "rule": "supported_children",
+      "wall_s": 25.525038
+    }
+  },
+  "schema_version": 1,
+  "source": {
+    "bytes": 5362,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_root_hog_rules.py",
+    "sha256": "1219e68695dc578840e0fb785bf9de849f0d6939b4f25cc155cda4c5531e969b"
+  }
+}

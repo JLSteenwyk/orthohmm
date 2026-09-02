@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-02T17:45:00Z",
+  "description": "Rooting experiments performed without reading OrthoBench validation labels or QfO scores",
+  "input": {
+    "supermatrix": "benchmarks/results/phylogeny_satellite_m8_internal_20260902_r1/orthohmm_phylogeny/species_tree_inference/species_tree_alignment.faa",
+    "taxa": 12,
+    "unrooted_topology_note": "The OrthoHMM FastTree topology matches the OrthoFinder topology when root placement is ignored."
+  },
+  "experiments": [
+    {
+      "method": "midpoint",
+      "status": "rejected",
+      "root_small_side": [
+        "Caenorhabditis_elegans.WBcel235.pep.all"
+      ],
+      "reason": "A long terminal branch attracted the root."
+    },
+    {
+      "method": "nonreversible_iqtree_full_search",
+      "status": "rejected",
+      "command": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/iqtree-3.0.1-Linux-intel/bin/iqtree3 -s species_tree_alignment.faa -m NQ.pfam+F+R4 -nt 16 -pre /tmp/orthohmm_iqtree_nq_pfam_20260902 --redo",
+      "root_small_side": [
+        "Caenorhabditis_elegans.WBcel235.pep.all"
+      ],
+      "wall_s": 1099.553,
+      "cpu_s": 17246.683,
+      "peak_rss_bytes": 1052192768,
+      "tree_sha256": "432c09afde816e8487f2d1430078febcde1db411433c3b340ec14fad42981bb0",
+      "reason": "The much more expensive nonreversible search retained the same terminal root as midpoint."
+    },
+    {
+      "method": "nonreversible_iqtree_fixed_topology",
+      "status": "rejected",
+      "root_small_side": [
+        "Caenorhabditis_elegans.WBcel235.pep.all"
+      ],
+      "wall_s_approx": 3.28,
+      "peak_rss_kib": 272060,
+      "tree_sha256": "7b1ded72c54ae2f24ea94796f812bb114933129fd349abe6cde450ffce871c01",
+      "reason": "Fixing the topology did not alter the nonreversible terminal root."
+    },
+    {
+      "method": "unconstrained_minimum_variance",
+      "status": "rejected",
+      "root_small_side": [
+        "Caenorhabditis_elegans.WBcel235.pep.all"
+      ],
+      "best_variance": 0.0010678610783765483,
+      "best_internal_variance": 0.011909864869873714,
+      "replay": "benchmark_tools/results/phylogeny_satellite_m8_minvariance_20260902_r1.json",
+      "reason": "Optimizing over terminal edges reproduced long-branch attraction."
+    },
+    {
+      "method": "internal_minimum_variance",
+      "status": "selected_for_validation",
+      "root_small_side": [
+        "Caenorhabditis_elegans.WBcel235.pep.all",
+        "Drosophila_melanogaster.BDGP6.28.pep.all"
+      ],
+      "objective": "Minimum analytical root-to-tip variance over edges with at least two taxa on each side for trees with four or more taxa",
+      "replay": "benchmark_tools/results/phylogeny_satellite_m8_minvariance_internal_20260902_r1.json",
+      "reason": "Avoids unsupported singleton roots and selected the best internal edge without species labels or benchmark annotations."
+    }
+  ]
+}

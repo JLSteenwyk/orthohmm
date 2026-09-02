@@ -1,0 +1,135 @@
+{
+  "command": [
+    "/home/bizon/anaconda3/bin/python3",
+    "benchmark_tools/replay_phylogeny.py",
+    "--fasta-directory",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input",
+    "--candidate-clusters",
+    "benchmarks/results/phylogeny_candidate_satellite_m8_margin15_20260902/candidate_clusters.txt",
+    "--output-directory",
+    "benchmarks/results/phylogeny_satellite_m8_minvariance_20260902_r1",
+    "--json",
+    "benchmark_tools/results/phylogeny_satellite_m8_minvariance_20260902_r1.json",
+    "--cpu",
+    "32",
+    "--species-tree-mode",
+    "infer",
+    "--species-tree-rooting",
+    "min_variance",
+    "--aligner",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin/mafft",
+    "--tree-builder",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220/FastTree",
+    "--root-rule",
+    "species_overlap",
+    "--pair-rule",
+    "positive_paralogy",
+    "--checkpoint-source",
+    "benchmarks/results/phylogeny_satellite_m8_internal_20260902_r1"
+  ],
+  "counts": {
+    "bypassed_families": 47692,
+    "candidate_families": 56874,
+    "checkpoint_hits": 9182,
+    "duplications": 56323,
+    "ortholog_pairs": 965760,
+    "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/phylogeny_satellite_m8_minvariance_20260902_r1/orthohmm_phylogeny",
+    "reconciled_families": 9182,
+    "root_hogs": 58317,
+    "speciations": 101877,
+    "species_tree_checkpoint_hit": false,
+    "species_tree_families": 200,
+    "uncertain_events": 12560
+  },
+  "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+  "finished_at_epoch_s": 1788370801.0282993,
+  "generated_at": "2026-09-02T17:40:01.028756+00:00",
+  "git": {
+    "commit": "3c93adcec3c00a09a51075c8b958bfae29d3ff40",
+    "dirty": true
+  },
+  "input": {
+    "candidate_clusters": {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/phylogeny_candidate_satellite_m8_margin15_20260902/candidate_clusters.txt",
+      "sha256": "ac0029887375d4d421dc83ecbcf04ef562d26e70e585183ad76c7329d04d0c54"
+    },
+    "fasta_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input",
+    "files": [
+      "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "Ciona_intestinalis.KH.pep.all.fa",
+      "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "Mus_musculus.GRCm38.pep.all.fa",
+      "Danio_rerio.GRCz11.pep.all.fa",
+      "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "Gallus_gallus.GRCg6a.pep.all.fa",
+      "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "Homo_sapiens.GRCh38.pep.all.fa"
+    ]
+  },
+  "metadata": {
+    "cpu_budget": 32,
+    "harness": "benchmark_tools.replay_phylogeny",
+    "pair_orthology_rule": "positive_paralogy",
+    "root_duplication_rule": "species_overlap",
+    "species_tree_mode": "infer",
+    "species_tree_rooting": "min_variance"
+  },
+  "outputs": {
+    "manifest": {
+      "bytes": 9483,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/phylogeny_satellite_m8_minvariance_20260902_r1/orthohmm_phylogeny/provenance_manifest.json",
+      "sha256": "c31825b132da3f97a9a19273cd475b7ddd5825a79e022ae37f3072e0d47cfab5"
+    },
+    "root_hogs": {
+      "bytes": 6258938,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/phylogeny_satellite_m8_minvariance_20260902_r1/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "sha256": "e067d6ab2e16a42619c3726e1ec14878f081f8ddabf894d43d47012c07b9c769"
+    },
+    "summary": {
+      "bytes": 516,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/phylogeny_satellite_m8_minvariance_20260902_r1/orthohmm_phylogeny/reconciliation_summary.json",
+      "sha256": "3e992b0b5eafc095e13fe2a1d529264b08aa78ae5e3da89ee60eb0c5c462ee84"
+    }
+  },
+  "parameters": {
+    "aligner": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin/mafft",
+    "checkpoint_source": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/phylogeny_satellite_m8_internal_20260902_r1/orthohmm_phylogeny",
+    "cpu": 32,
+    "pair_orthology_rule": "positive_paralogy",
+    "root_duplication_rule": "species_overlap",
+    "species_tree": null,
+    "species_tree_mode": "infer",
+    "species_tree_rooting": "min_variance",
+    "tree_builder": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220/FastTree"
+  },
+  "peak_process_tree_rss_bytes": 1710620672,
+  "peak_process_tree_rss_gib": 1.59314,
+  "pid": 2228840,
+  "platform": "Linux-6.8.0-55-generic-x86_64-with-glibc2.39",
+  "python": "3.10.13",
+  "rss_measurement": "sampled_sum_of_linux_proc_tree_rss",
+  "schema_version": 1,
+  "source": {
+    "bytes": 8325,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_phylogeny.py",
+    "sha256": "47c09f8c01c2cd483e2f853e847de7cd0e691a1870d7ca5e45ecdd38c57c8411"
+  },
+  "stages": {
+    "phylogeny": {
+      "peak_process_tree_rss_bytes": 1710620672,
+      "peak_process_tree_rss_gib": 1.59314,
+      "system_cpu_s": 79.999905,
+      "user_cpu_s": 337.162308,
+      "wall_s": 154.749831
+    }
+  },
+  "started_at_epoch_s": 1788370646.2755113,
+  "status": "complete",
+  "system_cpu_s": 81.534713,
+  "user_cpu_s": 344.228488,
+  "wall_s": 154.752788
+}

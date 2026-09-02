@@ -1,0 +1,131 @@
+{
+  "command": [
+    "/home/bizon/anaconda3/bin/python3",
+    "benchmark_tools/merge_candidate_superfamilies.py",
+    "--method",
+    "satellite",
+    "--hits-pickle",
+    "benchmarks/results/hits_BLOSUM62_mc100.pkl",
+    "--seed-clusters",
+    "benchmarks/results/production_high_sensitivity_orthobench_selfhit_fixed_20260828/output/orthohmm_working_res/orthohmm_edges_clustered.txt",
+    "--output-directory",
+    "benchmarks/results/phylogeny_candidate_satellite_m5_margin125_20260902",
+    "--json",
+    "benchmark_tools/results/phylogeny_candidate_satellite_m5_margin125_20260902.json",
+    "--max-family-genes",
+    "500",
+    "--iterations",
+    "1",
+    "--max-satellite-genes",
+    "5",
+    "--max-satellite-ratio",
+    "0.75",
+    "--min-margin",
+    "1.25",
+    "--max-satellites-per-anchor",
+    "2",
+    "--max-species-overlap-fraction",
+    "1.0",
+    "--min-average-score",
+    "0.0",
+    "--min-maximum-score",
+    "0.0",
+    "--min-coverage",
+    "0.5",
+    "--min-normalized-support",
+    "0.02"
+  ],
+  "counts": {
+    "candidate_families": 56535,
+    "completed_merge_iterations": 1,
+    "cross_family_directed_relations": 4121901,
+    "genes": 251378,
+    "reciprocal_family_merges": 6350,
+    "seed_families": 62885,
+    "significant_hits": 18235373,
+    "species": 12
+  },
+  "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+  "finished_at_epoch_s": 1788367920.12326,
+  "generated_at": "2026-09-02T16:52:00.123946+00:00",
+  "git": {
+    "commit": "1ee84748fdd88100ffef90f027f5dfae090aa794",
+    "dirty": true
+  },
+  "input": {
+    "hits": {
+      "bytes": 952325450,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hits_BLOSUM62_mc100.pkl",
+      "sha256": "78a5af40ea2683a69e1baefefb0966c3549cffe71b24bda03b9ba4a6e29e65e1"
+    },
+    "seed_clusters": {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/production_high_sensitivity_orthobench_selfhit_fixed_20260828/output/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "sha256": "8ee100f4370fef6e3e6a3e0fd36112adcc3aefeb60197331115667c519ca121f"
+    }
+  },
+  "metadata": {
+    "harness": "benchmark_tools.merge_candidate_superfamilies"
+  },
+  "outputs": {
+    "candidate_clusters": {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/phylogeny_candidate_satellite_m5_margin125_20260902/candidate_clusters.txt",
+      "sha256": "6b8c408f0f04ac4afbd2c1ccb8b9f2b48e31a6fbcf86a31a402bc879fc10c643"
+    }
+  },
+  "parameters": {
+    "max_family_genes": 500,
+    "max_iterations": 1,
+    "max_satellite_genes": 5,
+    "max_satellite_ratio": 0.75,
+    "max_satellites_per_anchor": 2,
+    "max_species_overlap_fraction": 1.0,
+    "min_average_score": 0.0,
+    "min_coverage": 0.5,
+    "min_margin": 1.25,
+    "min_maximum_score": 0.0,
+    "min_normalized_support": 0.02,
+    "selection": "satellite"
+  },
+  "peak_process_tree_rss_bytes": 5955604480,
+  "peak_process_tree_rss_gib": 5.546589,
+  "pid": 577164,
+  "platform": "Linux-6.8.0-55-generic-x86_64-with-glibc2.39",
+  "python": "3.10.13",
+  "rss_measurement": "sampled_sum_of_linux_proc_tree_rss",
+  "schema_version": 1,
+  "source": {
+    "bytes": 9430,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/merge_candidate_superfamilies.py",
+    "sha256": "7cb7fc89dd246f6392d50b2a3afec9f0ca702b3e3ae26a0806b0c58ae5ad6158"
+  },
+  "stages": {
+    "load_hits_and_seeds": {
+      "peak_process_tree_rss_bytes": 5955604480,
+      "peak_process_tree_rss_gib": 5.546589,
+      "system_cpu_s": 4.190342,
+      "user_cpu_s": 16.200648,
+      "wall_s": 20.324521
+    },
+    "reciprocal_candidate_merges": {
+      "peak_process_tree_rss_bytes": 2089267200,
+      "peak_process_tree_rss_gib": 1.945782,
+      "system_cpu_s": 0.307703,
+      "user_cpu_s": 3.222755,
+      "wall_s": 3.526334
+    },
+    "write_candidates": {
+      "peak_process_tree_rss_bytes": 635453440,
+      "peak_process_tree_rss_gib": 0.591812,
+      "system_cpu_s": 0.005784,
+      "user_cpu_s": 0.231923,
+      "wall_s": 0.238142
+    }
+  },
+  "started_at_epoch_s": 1788367896.0314338,
+  "status": "complete",
+  "system_cpu_s": 4.6107,
+  "user_cpu_s": 26.694435,
+  "wall_s": 24.091826
+}
