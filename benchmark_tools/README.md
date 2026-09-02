@@ -202,6 +202,17 @@ python benchmark_tools/create_orthobench_partition.py \
   --json benchmark_tools/results/orthobench_partition.json
 ```
 
+Score a prediction on only one frozen partition with the official
+equal-RefOG pairwise formula:
+
+```bash
+python benchmark_tools/score_orthobench_partition.py \
+  --predictions /path/to/root_hogs.txt \
+  --refogs /path/to/Open_Orthobench/BENCHMARKS/RefOGs \
+  --partition-json benchmark_tools/results/orthobench_partition.json \
+  --partition development --json /tmp/development_score.json
+```
+
 Synthetic phylogeny holdouts accept independent reconciliation policies. For
 example, evaluate the policy that preserves pairs at mapping-only conflicts
 while retaining the conservative root-HOG rule with:
