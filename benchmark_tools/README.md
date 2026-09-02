@@ -83,6 +83,7 @@ python benchmark_tools/replay_phylogeny.py \
   --output-directory /tmp/orthohmm_phylogeny_replay \
   --json /tmp/orthohmm_phylogeny_replay.json \
   --species-tree-mode infer --cpu 32 \
+  --root-rule supported_children --pair-rule positive_paralogy \
   --official-benchmark /path/to/OrthoBench/benchmark.py
 ```
 

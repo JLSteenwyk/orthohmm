@@ -43,6 +43,16 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--species-tree", type=Path)
     parser.add_argument("--aligner", default="mafft")
     parser.add_argument("--tree-builder", default="FastTree")
+    parser.add_argument(
+        "--root-rule",
+        choices=("supported_children", "species_overlap", "mapped_event"),
+        default="supported_children",
+    )
+    parser.add_argument(
+        "--pair-rule",
+        choices=("lca", "positive_paralogy"),
+        default="lca",
+    )
     parser.add_argument("--official-benchmark", type=Path)
     parser.add_argument(
         "--checkpoint-source",
@@ -134,6 +144,8 @@ def main(argv=None) -> int:
         ),
         aligner=args.aligner,
         tree_builder=args.tree_builder,
+        root_duplication_rule=args.root_rule,
+        pair_orthology_rule=args.pair_rule,
     )
     result_json = args.json.resolve()
     with PipelineMetrics(str(result_json)) as metrics:
@@ -141,6 +153,8 @@ def main(argv=None) -> int:
             harness="benchmark_tools.replay_phylogeny",
             species_tree_mode=args.species_tree_mode,
             cpu_budget=args.cpu,
+            root_duplication_rule=args.root_rule,
+            pair_orthology_rule=args.pair_rule,
         )
         with metrics.stage("phylogeny"):
             stage_result = run_phylogeny_stage(
@@ -174,6 +188,8 @@ def main(argv=None) -> int:
             ),
             "aligner": args.aligner,
             "tree_builder": args.tree_builder,
+            "root_duplication_rule": args.root_rule,
+            "pair_orthology_rule": args.pair_rule,
             "cpu": args.cpu,
             "checkpoint_source": (
                 str(checkpoint_source) if checkpoint_source is not None else None

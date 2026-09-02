@@ -12,9 +12,13 @@ def test_parser_accepts_checkpoint_source():
         "--output-directory", "output",
         "--json", "result.json",
         "--checkpoint-source", "previous",
+        "--root-rule", "species_overlap",
+        "--pair-rule", "positive_paralogy",
     ])
 
     assert args.checkpoint_source == Path("previous")
+    assert args.root_rule == "species_overlap"
+    assert args.pair_rule == "positive_paralogy"
 
 
 def test_seed_checkpoint_output_copies_required_tree(tmp_path):
