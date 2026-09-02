@@ -19,7 +19,10 @@ from benchmark_tools.orthobench_stage_diagnostics import (
     file_provenance,
     git_state,
 )
-from orthohmm.refinement import merge_reciprocal_candidate_clusters
+from orthohmm.refinement import (
+    merge_reciprocal_candidate_clusters,
+    merge_supported_satellite_candidate_clusters,
+)
 
 
 def build_case(seed: int, families: int = 24):
@@ -128,6 +131,40 @@ def evaluate(seed: int, iterations: int) -> dict:
     }
 
 
+def evaluate_satellite(seed: int, iterations: int = 1) -> dict:
+    clusters, queries, targets, scores, species, truth = build_case(seed)
+    predicted, merges, relations, completed = (
+        merge_supported_satellite_candidate_clusters(
+            clusters,
+            queries,
+            targets,
+            scores,
+            species,
+            max_component_genes=5,
+            max_satellite_genes=1,
+            max_satellite_to_anchor_ratio=1.0,
+            min_margin=1.0,
+            max_satellites_per_anchor=4,
+            min_avg_score=0.05,
+            min_max_score=0.05,
+            min_coverage=0.0,
+            min_norm=0.0,
+            max_iterations=iterations,
+        )
+    )
+    return {
+        "seed": seed,
+        "requested_iterations": iterations,
+        "completed_iterations": completed,
+        "seed_fragments": len(clusters),
+        "truth_families": len(truth),
+        "candidate_families": len(predicted),
+        "merges": merges,
+        "directed_cluster_relations": relations,
+        "pair_score": pair_score(predicted, truth),
+    }
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("json", type=Path)
@@ -143,6 +180,7 @@ def main(argv=None) -> int:
             "seed": seed,
             "one_pass": evaluate(seed, 1),
             "bounded_four_pass": evaluate(seed, 4),
+            "satellite_one_pass": evaluate_satellite(seed),
         })
     payload = {
         "schema_version": 1,

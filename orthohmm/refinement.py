@@ -745,6 +745,111 @@ def _merge_reciprocal_cluster_best_indexed(
     return merged
 
 
+def _merge_supported_satellite_best_indexed(
+    sources: np.ndarray,
+    targets: np.ndarray,
+    totals: np.ndarray,
+    counts: np.ndarray,
+    max_scores: np.ndarray,
+    sizes: np.ndarray,
+    dsu: _IndexedDSU,
+    max_genes: int,
+    max_satellite_genes: int,
+    max_satellite_to_anchor_ratio: float,
+    min_margin: float,
+    max_satellites_per_anchor: int,
+    max_species_overlap_fraction: float,
+    min_avg_score: float,
+    min_max_score: float,
+    min_coverage: float,
+    min_norm: float,
+) -> int:
+    """Attach a small group's best supported target without requiring reciprocity."""
+
+    if len(sources) == 0:
+        return 0
+    avg_scores, maximums, coverages, norms = _indexed_features(
+        sources, targets, totals, counts, max_scores, sizes
+    )
+    keys = (sources.astype(np.int64) << 32) | targets.astype(np.int64)
+    reverse_keys = (targets.astype(np.int64) << 32) | sources.astype(np.int64)
+    reverse_rows = np.searchsorted(keys, reverse_keys)
+    safe_reverse_rows = np.minimum(reverse_rows, len(keys) - 1)
+    has_reverse = (
+        (reverse_rows < len(keys))
+        & (keys[safe_reverse_rows] == reverse_keys)
+    )
+    reverse_avg = avg_scores[safe_reverse_rows]
+    reverse_maximum = maximums[safe_reverse_rows]
+    reverse_coverage = coverages[safe_reverse_rows]
+    reverse_norm = norms[safe_reverse_rows]
+    supported = (
+        has_reverse
+        & (np.minimum(avg_scores, reverse_avg) >= min_avg_score)
+        & (np.minimum(maximums, reverse_maximum) >= min_max_score)
+        & (np.minimum(coverages, reverse_coverage) >= min_coverage)
+        & (np.minimum(norms, reverse_norm) >= min_norm)
+    )
+
+    best = np.full(len(sizes), -np.inf, dtype=np.float64)
+    np.maximum.at(best, sources[has_reverse], norms[has_reverse])
+    is_best = has_reverse & np.isclose(
+        norms, best[sources], rtol=1e-12, atol=1e-12
+    )
+    best_counts = np.zeros(len(sizes), dtype=np.int32)
+    np.add.at(best_counts, sources[is_best], 1)
+    second = np.full(len(sizes), -np.inf, dtype=np.float64)
+    np.maximum.at(second, sources[has_reverse & ~is_best], norms[has_reverse & ~is_best])
+    margins = np.full(len(sources), np.inf, dtype=np.float64)
+    finite_second = second[sources] > 0.0
+    margins[finite_second] = best[sources[finite_second]] / second[
+        sources[finite_second]
+    ]
+    margins[best_counts[sources] > 1] = 1.0
+
+    candidate_rows = np.flatnonzero(
+        supported
+        & is_best
+        & (margins >= min_margin)
+        & (sizes[sources] <= max_satellite_genes)
+        & (
+            sizes[sources]
+            <= sizes[targets] * max_satellite_to_anchor_ratio
+        )
+    )
+    candidates = []
+    seen_pairs = set()
+    for row in candidate_rows:
+        source = int(sources[row])
+        target = int(targets[row])
+        pair = (min(source, target), max(source, target))
+        if pair in seen_pairs:
+            continue
+        seen_pairs.add(pair)
+        source_species = dsu.species_counts[source]
+        target_species = dsu.species_counts[target]
+        overlap = _species_overlap(source_species, target_species)
+        overlap_denominator = max(
+            1, min(len(source_species), len(target_species))
+        )
+        if overlap / overlap_denominator > max_species_overlap_fraction:
+            continue
+        support = min(float(norms[row]), float(reverse_norm[row]))
+        candidates.append((support, float(margins[row]), source, target))
+    candidates.sort(key=lambda item: (-item[0], -item[1], item[2], item[3]))
+
+    anchor_attachments = Counter()
+    merged = 0
+    for _support, _margin, source, target in candidates:
+        anchor = dsu.find(target)
+        if anchor_attachments[anchor] >= max_satellites_per_anchor:
+            continue
+        if dsu.union(source, target, max_genes=max_genes):
+            anchor_attachments[dsu.find(target)] += 1
+            merged += 1
+    return merged
+
+
 def merge_reciprocal_candidate_clusters(
     clusters: Sequence[Sequence[int]],
     hit_queries: Sequence[int],
@@ -820,6 +925,98 @@ def merge_reciprocal_candidate_clusters(
         initial_relation_count,
         completed_iterations,
     )
+
+
+def merge_supported_satellite_candidate_clusters(
+    clusters: Sequence[Sequence[int]],
+    hit_queries: Sequence[int],
+    hit_targets: Sequence[int],
+    hit_scores: Sequence[float],
+    gene_to_species: Sequence[int],
+    max_component_genes: int = 500,
+    max_satellite_genes: int = 5,
+    max_satellite_to_anchor_ratio: float = 0.75,
+    min_margin: float = 1.5,
+    max_satellites_per_anchor: int = 2,
+    max_species_overlap_fraction: float = 1.0,
+    min_avg_score: float = 0.0,
+    min_max_score: float = 0.0,
+    min_coverage: float = 0.5,
+    min_norm: float = 0.02,
+    max_iterations: int = 1,
+) -> tuple[List[IndexCluster], int, int, int]:
+    """Build bounded HMM candidates by attaching supported satellite groups."""
+
+    positive_integers = (
+        max_component_genes,
+        max_satellite_genes,
+        max_satellites_per_anchor,
+        max_iterations,
+    )
+    if any(value < 1 for value in positive_integers):
+        raise ValueError("candidate size, attachment, and iteration caps must be positive")
+    fractions = (
+        max_satellite_to_anchor_ratio,
+        max_species_overlap_fraction,
+    )
+    if any(not math.isfinite(value) or value < 0.0 for value in fractions):
+        raise ValueError("candidate ratio limits must be finite and nonnegative")
+    if max_species_overlap_fraction > 1.0:
+        raise ValueError("maximum species-overlap fraction cannot exceed one")
+    gates = (
+        min_margin,
+        min_avg_score,
+        min_max_score,
+        min_coverage,
+        min_norm,
+    )
+    if any(not math.isfinite(value) or value < 0.0 for value in gates):
+        raise ValueError("candidate evidence gates must be finite and nonnegative")
+    if not clusters:
+        return [], 0, 0, 0
+
+    total_genes = len(gene_to_species)
+    current = [list(cluster) for cluster in clusters]
+    total_merges = 0
+    initial_relation_count = 0
+    completed_iterations = 0
+    for iteration in range(max_iterations):
+        sources, targets, totals, counts, maximums = _cluster_pair_arrays(
+            current,
+            hit_queries,
+            hit_targets,
+            hit_scores,
+            total_genes,
+        )
+        if iteration == 0:
+            initial_relation_count = len(sources)
+        sizes = np.asarray([len(cluster) for cluster in current], dtype=np.int64)
+        dsu = _IndexedDSU(current, gene_to_species)
+        merged = _merge_supported_satellite_best_indexed(
+            sources,
+            targets,
+            totals,
+            counts,
+            maximums,
+            sizes,
+            dsu,
+            max_genes=max_component_genes,
+            max_satellite_genes=max_satellite_genes,
+            max_satellite_to_anchor_ratio=max_satellite_to_anchor_ratio,
+            min_margin=min_margin,
+            max_satellites_per_anchor=max_satellites_per_anchor,
+            max_species_overlap_fraction=max_species_overlap_fraction,
+            min_avg_score=min_avg_score,
+            min_max_score=min_max_score,
+            min_coverage=min_coverage,
+            min_norm=min_norm,
+        )
+        if merged == 0:
+            break
+        current = _component_index_clusters(current, dsu)
+        total_merges += merged
+        completed_iterations += 1
+    return current, total_merges, initial_relation_count, completed_iterations
 
 
 def _merge_weak_balanced_rescue_indexed(

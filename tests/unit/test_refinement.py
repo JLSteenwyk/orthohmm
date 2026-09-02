@@ -4,6 +4,7 @@ import numpy as np
 
 from orthohmm.refinement import (
     merge_reciprocal_candidate_clusters,
+    merge_supported_satellite_candidate_clusters,
     refine_cluster_indices,
     refine_clusters,
     resolve_refinement_profile,
@@ -68,6 +69,76 @@ def test_reciprocal_candidate_clusters_support_bounded_iterations():
     assert merged == [[0, 1, 2]]
     assert merge_count == 2
     assert iterations == 2
+
+
+def test_satellite_candidate_attaches_one_sided_best_bidirectional_support():
+    clusters = [[0, 1, 2], [3], [4]]
+    species = np.asarray([0, 1, 2, 3, 4], dtype=np.int32)
+    queries = np.asarray([3, 0, 3, 4], dtype=np.int32)
+    targets = np.asarray([0, 3, 4, 3], dtype=np.int32)
+    scores = np.asarray([4.0, 2.0, 1.0, 1.0], dtype=np.float64)
+
+    merged, merge_count, _, _ = merge_supported_satellite_candidate_clusters(
+        clusters,
+        queries,
+        targets,
+        scores,
+        species,
+        min_margin=2.0,
+        min_coverage=0.0,
+        min_norm=0.0,
+    )
+
+    assert {frozenset(group) for group in merged} == {
+        frozenset((0, 1, 2, 3)),
+        frozenset((4,)),
+    }
+    assert merge_count == 1
+
+
+def test_satellite_candidate_rejects_one_way_or_ambiguous_support():
+    clusters = [[0, 1, 2], [3], [4]]
+    species = np.asarray([0, 1, 2, 3, 4], dtype=np.int32)
+    queries = np.asarray([3, 0, 3, 4], dtype=np.int32)
+    targets = np.asarray([0, 3, 4, 3], dtype=np.int32)
+    scores = np.asarray([4.0, 2.0, 3.5, 3.5], dtype=np.float64)
+
+    merged, merge_count, _, _ = merge_supported_satellite_candidate_clusters(
+        clusters,
+        queries,
+        targets,
+        scores,
+        species,
+        min_margin=2.0,
+        min_coverage=0.0,
+        min_norm=0.0,
+    )
+
+    assert {frozenset(group) for group in merged} == {
+        frozenset(group) for group in clusters
+    }
+    assert merge_count == 0
+
+
+def test_satellite_candidate_respects_taxonomic_overlap_gate():
+    clusters = [[0, 1], [2]]
+    species = np.asarray([0, 1, 0], dtype=np.int32)
+
+    merged, merge_count, _, _ = merge_supported_satellite_candidate_clusters(
+        clusters,
+        np.asarray([0, 2]),
+        np.asarray([2, 0]),
+        np.asarray([3.0, 3.0]),
+        species,
+        max_species_overlap_fraction=0.0,
+        min_coverage=0.0,
+        min_norm=0.0,
+    )
+
+    assert {frozenset(group) for group in merged} == {
+        frozenset(group) for group in clusters
+    }
+    assert merge_count == 0
 
 
 def _cluster(prefix, counts):

@@ -147,6 +147,23 @@ while recovering split remote homologs for subsequent reconciliation. Bounded
 iterations let a newly merged group recruit another mutually best-supported
 fragment without relaxing the evidence rule.
 
+The experimental `--method satellite` mode relaxes mutual-best ranking only
+for a bounded small source group. It still requires bidirectional HMM support,
+a source-side best-target margin, size and component caps, and an optional
+species-overlap limit. This is intended for fragments whose larger anchor has
+another stronger bridge:
+
+```bash
+python benchmark_tools/merge_candidate_superfamilies.py \
+  --method satellite --hits-pickle /path/to/hits.pkl \
+  --seed-clusters /path/to/orthohmm_edges_clustered.txt \
+  --output-directory /tmp/orthohmm_satellite_candidates \
+  --json /tmp/orthohmm_satellite_candidates.json \
+  --max-satellite-genes 5 --max-satellite-ratio 0.75 \
+  --min-margin 1.5 --max-satellites-per-anchor 2 \
+  --min-coverage 0.5 --min-normalized-support 0.02
+```
+
 Validate that bounded behavior independently with:
 
 ```bash
