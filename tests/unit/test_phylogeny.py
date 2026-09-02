@@ -282,6 +282,51 @@ def test_positive_paralogy_still_removes_species_overlap_pairs(tmp_path):
     assert result.uncertain_count == 0
 
 
+def test_supported_paralogy_preserves_weak_single_overlap_pairs(tmp_path):
+    result = reconcile_gene_tree(
+        parse_gene_tree("((a1,b1),(a2,c1))0.50;"),
+        species_tree(tmp_path),
+        {"a1": "A", "b1": "B", "a2": "A", "c1": "C"},
+        pair_orthology_rule="supported_paralogy",
+    )
+
+    assert ("a1", "c1") in result.ortholog_pairs
+    assert ("a2", "b1") in result.ortholog_pairs
+    assert ("a1", "c1", "medium") in result.ortholog_pair_confidence
+    assert result.uncertain_count == 1
+
+
+@pytest.mark.parametrize(
+    ("tree", "mapping"),
+    [
+        (
+            "((a1,b1),(a2,c1))0.95;",
+            {"a1": "A", "b1": "B", "a2": "A", "c1": "C"},
+        ),
+        (
+            "((a1,b1),(a2,b2))0.50;",
+            {"a1": "A", "b1": "B", "a2": "A", "b2": "B"},
+        ),
+    ],
+)
+def test_supported_paralogy_removes_well_supported_overlap_pairs(
+    tmp_path, tree, mapping
+):
+    result = reconcile_gene_tree(
+        parse_gene_tree(tree),
+        species_tree(tmp_path),
+        mapping,
+        pair_orthology_rule="supported_paralogy",
+    )
+
+    assert ("a1", "a2") not in result.ortholog_pairs
+    assert any(
+        node.pair_event == "duplication"
+        and node.event_confidence == "high"
+        for node in result.nodes
+    )
+
+
 def test_species_overlap_rule_exposes_sparse_duplication_tradeoff(tmp_path):
     result = reconcile_gene_tree(
         parse_gene_tree("(a,((b,c),c2));"),

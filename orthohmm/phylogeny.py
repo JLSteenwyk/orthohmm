@@ -374,7 +374,9 @@ def reconcile_gene_tree(
             "root duplication rule must be one of: "
             + ", ".join(sorted(valid_root_rules))
         )
-    valid_pair_rules = {"lca", "positive_paralogy"}
+    valid_pair_rules = {
+        "lca", "positive_paralogy", "supported_paralogy"
+    }
     if pair_orthology_rule not in valid_pair_rules:
         raise ValueError(
             "pair orthology rule must be one of: "
@@ -484,13 +486,20 @@ def reconcile_gene_tree(
             event = (
                 "duplication" if overlap or mapping_conflict else "speciation"
             )
-            if pair_orthology_rule == "positive_paralogy":
+            if pair_orthology_rule in {
+                "positive_paralogy", "supported_paralogy"
+            }:
                 if overlap:
-                    pair_event = "duplication"
                     event_confidence = (
                         "high"
                         if overlap_count >= 2 or (branch_support or 0.0) >= 0.9
                         else "medium"
+                    )
+                    pair_event = (
+                        "uncertain"
+                        if pair_orthology_rule == "supported_paralogy"
+                        and event_confidence != "high"
+                        else "duplication"
                     )
                 elif mapping_conflict:
                     pair_event = "uncertain"
@@ -778,7 +787,9 @@ def validate_phylogeny_config(
             "Unsupported root-duplication rule: "
             f"{config.root_duplication_rule!r}"
         )
-    if config.pair_orthology_rule not in {"lca", "positive_paralogy"}:
+    if config.pair_orthology_rule not in {
+        "lca", "positive_paralogy", "supported_paralogy"
+    }:
         raise PhylogenyConfigurationError(
             "Unsupported pair-orthology rule: "
             f"{config.pair_orthology_rule!r}"

@@ -359,7 +359,7 @@ def parse_args(argv=None):
     )
     parser.add_argument(
         "--pair-rule",
-        choices=("lca", "positive_paralogy"),
+        choices=("lca", "positive_paralogy", "supported_paralogy"),
         default="lca",
     )
     return parser.parse_args(argv)

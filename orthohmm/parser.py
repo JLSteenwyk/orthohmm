@@ -435,7 +435,7 @@ def create_parser() -> ArgumentParser:
 
     optional.add_argument(
         "--phylogeny_pair_rule",
-        choices=["lca", "positive_paralogy"],
+        choices=["lca", "positive_paralogy", "supported_paralogy"],
         default="lca",
         help=SUPPRESS,
         metavar="phylogeny_pair_rule",
