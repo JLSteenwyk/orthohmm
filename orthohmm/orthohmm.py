@@ -739,6 +739,9 @@ def _execute(
             phylogeny_reconciled_families=phylogeny_result.reconciled_families,
             phylogeny_bypassed_families=phylogeny_result.bypassed_families,
             phylogeny_checkpoint_hits=phylogeny_result.checkpoint_hits,
+            phylogeny_remapped_checkpoint_hits=(
+                phylogeny_result.remapped_checkpoint_hits
+            ),
             phylogeny_root_hogs=phylogeny_result.root_hogs,
             phylogeny_ortholog_pairs=phylogeny_result.ortholog_pairs,
             phylogeny_duplications=phylogeny_result.duplications,

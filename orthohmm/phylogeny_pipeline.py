@@ -40,6 +40,7 @@ class FamilyOutcome:
     ortholog_pair_confidence: tuple[tuple[str, str, str], ...]
     reconciliation: ReconciliationResult | None
     checkpoint_hit: bool
+    remapped_checkpoint_hit: bool = False
 
 
 @dataclass(frozen=True)
@@ -56,6 +57,16 @@ class PhylogenyStageResult:
     species_tree_families: int
     species_tree_checkpoint_hit: bool
     output_directory: str
+    remapped_checkpoint_hits: int = 0
+
+
+@dataclass(frozen=True)
+class _ReusableRawTree:
+    family_id: str
+    genes: tuple[str, ...]
+    tree_input_sha256: str
+    raw_tree_sha256: str
+    raw_tree_text: str
 
 
 def _atomic_write(path: Path, text: str) -> None:
@@ -550,6 +561,44 @@ def _family_tree_input_hash(
     return _sha256_text(json.dumps(payload, sort_keys=True, separators=(",", ":")))
 
 
+def _load_reusable_raw_trees(
+    phylogeny_directory: Path,
+) -> dict[tuple[str, ...], _ReusableRawTree]:
+    """Load validated raw trees before candidate IDs can be overwritten."""
+
+    reusable = {}
+    checkpoint_directory = phylogeny_directory / "checkpoints"
+    tree_directory = phylogeny_directory / "gene_trees"
+    if not checkpoint_directory.is_dir() or not tree_directory.is_dir():
+        return reusable
+    for checkpoint_path in sorted(checkpoint_directory.glob("*.json")):
+        try:
+            checkpoint = json.loads(checkpoint_path.read_text(encoding="utf-8"))
+            if checkpoint.get("status") != "complete":
+                continue
+            family_id = str(checkpoint["family_id"])
+            genes = tuple(sorted(str(gene) for gene in checkpoint["genes"]))
+            tree_input_sha256 = str(checkpoint["tree_input_sha256"])
+            raw_tree_sha256 = str(checkpoint["raw_tree_sha256"])
+            raw_tree_path = tree_directory / f"{family_id}.raw.nwk"
+            raw_tree_text = raw_tree_path.read_text(encoding="utf-8")
+        except (KeyError, OSError, TypeError, ValueError):
+            continue
+        if _sha256_text(raw_tree_text) != raw_tree_sha256:
+            continue
+        reusable.setdefault(
+            genes,
+            _ReusableRawTree(
+                family_id=family_id,
+                genes=genes,
+                tree_input_sha256=tree_input_sha256,
+                raw_tree_sha256=raw_tree_sha256,
+                raw_tree_text=raw_tree_text,
+            ),
+        )
+    return reusable
+
+
 def _reconcile_family(
     family_id: str,
     genes: tuple[str, ...],
@@ -559,6 +608,7 @@ def _reconcile_family(
     species_tree_sha256: str,
     config: PhylogenyConfig,
     phylogeny_directory: Path,
+    reusable_raw_trees: dict[tuple[str, ...], _ReusableRawTree],
 ) -> FamilyOutcome:
     candidate_path = phylogeny_directory / "candidate_fastas" / f"{family_id}.faa"
     alignment_path = phylogeny_directory / "alignments" / f"{family_id}.faa"
@@ -587,6 +637,21 @@ def _reconcile_family(
             )
         except (OSError, ValueError):
             checkpoint_hit = False
+
+    remapped_checkpoint_hit = False
+    if not checkpoint_hit:
+        cached = reusable_raw_trees.get(tuple(sorted(genes)))
+        if cached is not None:
+            cached_input_hash = _family_tree_input_hash(
+                cached.family_id,
+                genes,
+                sequences,
+                config,
+            )
+            if cached.tree_input_sha256 == cached_input_hash:
+                _atomic_write(raw_tree_path, cached.raw_tree_text)
+                checkpoint_hit = True
+                remapped_checkpoint_hit = cached.family_id != family_id
 
     token_to_gene = _gene_tokens(genes)
     if not checkpoint_hit:
@@ -650,6 +715,7 @@ def _reconcile_family(
         ortholog_pair_confidence=reconciliation.ortholog_pair_confidence,
         reconciliation=reconciliation,
         checkpoint_hit=checkpoint_hit,
+        remapped_checkpoint_hit=remapped_checkpoint_hit,
     )
 
 
@@ -674,6 +740,7 @@ def _bypass_family(
         ortholog_pair_confidence=tuple((*pair, "high") for pair in pairs),
         reconciliation=None,
         checkpoint_hit=False,
+        remapped_checkpoint_hit=False,
     )
 
 
@@ -817,6 +884,9 @@ def _write_stage_outputs(
 
     reconciled = sum(outcome.reconciliation is not None for outcome in outcomes)
     checkpoint_hits = sum(outcome.checkpoint_hit for outcome in outcomes)
+    remapped_checkpoint_hits = sum(
+        outcome.remapped_checkpoint_hit for outcome in outcomes
+    )
     result = PhylogenyStageResult(
         candidate_families=len(outcomes),
         reconciled_families=reconciled,
@@ -836,6 +906,7 @@ def _write_stage_outputs(
             )
         ),
         output_directory=str(phylogeny_directory.resolve()),
+        remapped_checkpoint_hits=remapped_checkpoint_hits,
     )
     summary = asdict(result)
     summary["schema_version"] = 1
@@ -909,6 +980,7 @@ def run_phylogeny_stage(
         species_tree_path = validated_tree.path
         species_tree_source = "internally_inferred_from_orthohmm_single_copy_families"
     species_tree_sha256 = _sha256_file(species_tree_path)
+    reusable_raw_trees = _load_reusable_raw_trees(phylogeny_directory)
     ambiguous = [
         record
         for record in family_records
@@ -932,6 +1004,7 @@ def run_phylogeny_stage(
             species_tree_sha256,
             config,
             phylogeny_directory,
+            reusable_raw_trees,
         )
 
     with ThreadPoolExecutor(max_workers=max(1, min(int(cpu), len(ambiguous) or 1))) as pool:

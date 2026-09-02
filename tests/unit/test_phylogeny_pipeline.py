@@ -162,6 +162,7 @@ def test_supplied_tree_stage_end_to_end_and_checkpoint_restart(tmp_path):
     assert first.root_hogs == 3
     assert first.duplications == 1
     assert first.checkpoint_hits == 0
+    assert first.remapped_checkpoint_hits == 0
     assert cluster_path.read_text(encoding="utf-8") == (
         "a1 b1 c1\na2 b2 c2\nsingle_a single_b single_c\n"
     )
@@ -194,6 +195,48 @@ def test_supplied_tree_stage_end_to_end_and_checkpoint_restart(tmp_path):
     )
     assert second.checkpoint_hits == 1
     assert second == first.__class__(**{**first.__dict__, "checkpoint_hits": 1})
+
+
+def test_gene_tree_checkpoint_survives_candidate_renumbering(tmp_path):
+    inputs, output, cluster_path, candidates, config = _make_fixture(
+        tmp_path, "renumbered"
+    )
+    files = ["A.faa", "B.faa", "C.faa"]
+    first = run_phylogeny_stage(
+        str(inputs), str(output), files, config, cpu=2
+    )
+    assert first.checkpoint_hits == 0
+
+    Path(config.aligner).write_text(
+        "#!/usr/bin/env python3\n"
+        "import sys\n"
+        "if '--version' in sys.argv:\n"
+        "    print('fake-mafft 1.0')\n"
+        "else:\n"
+        "    raise SystemExit(91)\n",
+        encoding="utf-8",
+    )
+    Path(config.tree_builder).write_text(
+        "#!/usr/bin/env python3\n"
+        "import sys\n"
+        "if len(sys.argv) == 1:\n"
+        "    print('fake-fasttree 1.0')\n"
+        "else:\n"
+        "    raise SystemExit(92)\n",
+        encoding="utf-8",
+    )
+    cluster_path.write_text(
+        "single_a single_b single_c\n"
+        "a1 a2 b1 b2 c1 c2\n",
+        encoding="utf-8",
+    )
+
+    renumbered = run_phylogeny_stage(
+        str(inputs), str(output), files, config, cpu=2
+    )
+
+    assert renumbered.checkpoint_hits == 1
+    assert renumbered.remapped_checkpoint_hits == 1
 
 
 def test_gene_tree_checkpoint_survives_species_tree_change(tmp_path):
