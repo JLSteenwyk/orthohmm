@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "frozen_at": "2026-09-02T23:24:36Z",
+  "method": "OrthoHMM phylogeny satellite_v3",
+  "source_commit": "1145b885823353aba6c93f74b7adf82f94126017",
+  "hypothesis": "A single species overlap on a weak gene-tree branch is insufficient evidence to discard all cross-child ortholog pairs. Requiring repeated overlap or branch support of at least 0.9 should recover valid co-orthologs without changing root HOGs.",
+  "parameters": {
+    "accuracy_profile": "high_sensitivity",
+    "phylogeny_candidates": "satellite_v2",
+    "phylogeny_mode": "reconcile",
+    "species_tree_mode": "infer",
+    "species_tree_rooting": "min_variance",
+    "root_duplication_rule": "species_overlap",
+    "pair_orthology_rule": "supported_paralogy",
+    "aligner": "MAFFT v7.525",
+    "tree_builder": "FastTree 2.2.0 Double precision"
+  },
+  "selection": {
+    "qfo_scores_used": false,
+    "qfo_satellite_v3_submitted_before_freeze": false,
+    "note": "A separately frozen satellite_v2 QfO run was active, but no satellite_v3 predictions or assessments existed. The v3 pair policy and its fixed 0.9 support boundary were selected only from the stated reconciliation rule, synthetic tests, synthetic holdouts, and predefined OrthoBench partitions.",
+    "synthetic_holdout": {
+      "artifact": "benchmark_tools/results/phylogeny_supported_paralogy_holdout_20260902.json",
+      "sha256": "73d3fbbf81aaffc38091b6367af542d37b3d81c0416aeba48776afed2631fdd1",
+      "replicate_seeds": [101, 211, 307],
+      "supplied_and_inferred_pair_f_score": 1.0
+    },
+    "orthobench_root_hogs": {
+      "artifact": "benchmark_tools/results/phylogeny_supported_paralogy_orthobench_replay_20260902.json",
+      "sha256": "f0baabc7355d332eb052468245e4ff62b05bc372d371da5ccc5e4155f10b1d44",
+      "root_hogs_sha256": "76229249770b1f875c6bd319ec524fb50721b048e68c284c4c3a3dba611ea216",
+      "f_score": 74.106074,
+      "precision": 81.770454,
+      "recall": 67.755336,
+      "exact_refogs": 15
+    },
+    "orthobench_pair_diagnostics": {
+      "development": {
+        "artifact": "benchmark_tools/results/orthobench_development_supported_paralogy_pair_diagnostics_20260902.json",
+        "sha256": "eaa0e4e324af33ef10a853e02541ec6f8abc060125aee916a8e73b1858380126",
+        "direct_recall_before": 0.5075729530255226,
+        "direct_recall_after": 0.5368776533270584,
+        "transitive_recall_before": 0.6782290546605267,
+        "transitive_recall_after": 0.6903003296221243,
+        "cross_refog_pairs_after": 0
+      },
+      "validation": {
+        "artifact": "benchmark_tools/results/orthobench_validation_supported_paralogy_pair_diagnostics_20260902.json",
+        "sha256": "43188b199410a0d28476632c019f6d2f2040a44e4204dae60f3df787f2ab41e6",
+        "direct_recall_before": 0.4344917771212678,
+        "direct_recall_after": 0.4469168597069538,
+        "transitive_recall_before": 0.6674949539264606,
+        "transitive_recall_after": 0.6695357702529913,
+        "cross_refog_pairs_after": 0
+      },
+      "all": {
+        "artifact": "benchmark_tools/results/orthobench_supported_paralogy_pair_diagnostics_20260902.json",
+        "sha256": "46aff890014f4ff3da357f06e895c2c45d1e778339683e2816622af68b82f62c",
+        "direct_recall_before": 0.47103236507339535,
+        "direct_recall_after": 0.49189725651700617,
+        "transitive_recall_before": 0.6728620042934939,
+        "transitive_recall_after": 0.679918049937558,
+        "cross_refog_pairs_after": 0,
+        "native_pairs_before": 966439,
+        "native_pairs_after": 1033790
+      }
+    }
+  },
+  "defaults": {
+    "nonphylogenetic_default_changed": false,
+    "phylogeny_default_changed": false,
+    "status": "opt-in validation candidate"
+  },
+  "success_targets": {
+    "orthobench_f_score_greater_than": 72.7,
+    "qfo_six_metric_mean_greater_than": 0.7820708882895963
+  }
+}
