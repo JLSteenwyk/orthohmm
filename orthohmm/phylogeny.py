@@ -25,6 +25,7 @@ class PhylogenyConfig:
     tree_builder: str = "FastTree"
     root_duplication_rule: str = "supported_children"
     pair_orthology_rule: str = "lca"
+    species_tree_rooting: str = "midpoint"
 
 
 @dataclass(frozen=True)
@@ -260,6 +261,86 @@ def root_gene_tree_min_duplication_loss(
     )
     gene_tree.is_rooted = True
     return gene_tree
+
+
+def root_tree_min_variance(tree):
+    """Root a tree where the variance of root-to-tip distances is minimal."""
+
+    if tree.seed_node.num_child_nodes() == 2:
+        tree.deroot()
+    tree.is_rooted = False
+    nodes = list(tree.preorder_node_iter())
+    adjacency = {node: [] for node in nodes}
+    candidate_edges = []
+    for node in nodes:
+        parent = node.parent_node
+        if parent is None:
+            continue
+        length = max(0.0, float(node.edge.length or 0.0))
+        adjacency[node].append((parent, length))
+        adjacency[parent].append((node, length))
+        candidate_edges.append((parent, node, node.edge, length))
+    if not candidate_edges:
+        raise PhylogenyConfigurationError("Tree has no edge on which to root.")
+
+    def distances(start, blocked):
+        observed = []
+        stack = [(start, blocked, 0.0)]
+        while stack:
+            node, parent, distance = stack.pop()
+            if node.is_leaf():
+                label = str(node.taxon.label) if node.taxon is not None else ""
+                observed.append((label, distance))
+            for neighbor, length in adjacency[node]:
+                if neighbor is not parent:
+                    stack.append((neighbor, node, distance + length))
+        return observed
+
+    best = None
+    all_labels = {
+        str(node.taxon.label) for node in tree.leaf_node_iter()
+    }
+    for parent, child, edge, length in candidate_edges:
+        parent_side = distances(parent, child)
+        child_side = distances(child, parent)
+        bases = [distance for _, distance in parent_side]
+        bases.extend(distance + length for _, distance in child_side)
+        signs = [1.0] * len(parent_side) + [-1.0] * len(child_side)
+        count = len(bases)
+        mean_base = sum(bases) / count
+        mean_sign = sum(signs) / count
+        coefficient = 1.0 - mean_sign * mean_sign
+        covariance = (
+            sum(base * sign for base, sign in zip(bases, signs)) / count
+            - mean_base * mean_sign
+        )
+        position = min(length, max(0.0, -covariance / coefficient))
+        rooted_distances = [
+            base + sign * position for base, sign in zip(bases, signs)
+        ]
+        mean_distance = sum(rooted_distances) / count
+        variance = sum(
+            (distance - mean_distance) ** 2 for distance in rooted_distances
+        ) / count
+        parent_labels = frozenset(label for label, _ in parent_side)
+        child_labels = frozenset(all_labels - parent_labels)
+        canonical_split = min(
+            (tuple(sorted(parent_labels)), tuple(sorted(child_labels))),
+            (tuple(sorted(child_labels)), tuple(sorted(parent_labels))),
+        )
+        score = (variance, canonical_split)
+        if best is None or score < best[0]:
+            best = (score, edge, position, length - position)
+
+    _, edge, parent_length, child_length = best
+    tree.reroot_at_edge(
+        edge,
+        length1=parent_length,
+        length2=child_length,
+        update_bipartitions=False,
+    )
+    tree.is_rooted = True
+    return tree
 
 
 def reconcile_gene_tree(
@@ -689,6 +770,11 @@ def validate_phylogeny_config(
             "Unsupported pair-orthology rule: "
             f"{config.pair_orthology_rule!r}"
         )
+    if config.species_tree_rooting not in {"midpoint", "min_variance"}:
+        raise PhylogenyConfigurationError(
+            "Unsupported species-tree rooting policy: "
+            f"{config.species_tree_rooting!r}"
+        )
 
     canonical_species_names(proteome_files)
     species_tree = config.species_tree
@@ -711,4 +797,5 @@ def validate_phylogeny_config(
         tree_builder=resolve_executable(config.tree_builder, "tree builder"),
         root_duplication_rule=config.root_duplication_rule,
         pair_orthology_rule=config.pair_orthology_rule,
+        species_tree_rooting=config.species_tree_rooting,
     )

@@ -11,6 +11,7 @@ from orthohmm.phylogeny import (
     parse_gene_tree,
     reconcile_gene_tree,
     root_gene_tree_min_duplication_loss,
+    root_tree_min_variance,
     validate_phylogeny_config,
 )
 
@@ -355,3 +356,25 @@ def test_minimum_duplication_loss_keeps_recent_duplication_in_root_hog(tmp_path)
     result = reconcile_gene_tree(rooted, species_tree(tmp_path), gene_species)
     assert result.duplication_count == 1
     assert result.root_groups == (("a1", "a2", "b", "c"),)
+
+
+def test_minimum_variance_root_is_deterministic_and_uses_internal_edge():
+    dendropy = pytest.importorskip("dendropy")
+    tree = dendropy.Tree.get(
+        data="((a:1,b:1):3,(c:1,d:1):1,e:1);",
+        schema="newick",
+        preserve_underscores=True,
+        rooting="default-unrooted",
+    )
+
+    rooted = root_tree_min_variance(tree)
+
+    root_sides = {
+        frozenset(str(leaf.taxon.label) for leaf in child.leaf_iter())
+        for child in rooted.seed_node.child_node_iter()
+    }
+    assert root_sides == {
+        frozenset(("a", "b")),
+        frozenset(("c", "d", "e")),
+    }
+    assert rooted.is_rooted

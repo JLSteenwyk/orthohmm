@@ -174,6 +174,7 @@ class TestArgsProcessing(object):
             "phylogeny_root_rule",
             "phylogeny_pair_rule",
             "phylogeny_candidates",
+            "species_tree_rooting",
         ]
         assert sorted(res.keys()) == sorted(expected_keys)
 
@@ -185,6 +186,7 @@ class TestArgsProcessing(object):
         assert res["phylogeny_root_rule"] == "supported_children"
         assert res["phylogeny_pair_rule"] == "lca"
         assert res["phylogeny_candidates"] == "seed"
+        assert res["species_tree_rooting"] == "midpoint"
 
     def test_satellite_phylogeny_candidates_require_high_sensitivity(self, args):
         args.phylogeny_candidates = "satellite_v1"

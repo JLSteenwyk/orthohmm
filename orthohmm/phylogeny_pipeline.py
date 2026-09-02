@@ -25,6 +25,7 @@ from .phylogeny import (
     parse_species_tree,
     reconcile_gene_tree,
     root_gene_tree_min_duplication_loss,
+    root_tree_min_variance,
     validate_phylogeny_config,
     _load_dendropy,
 )
@@ -262,7 +263,7 @@ def _infer_species_tree(
         "tree_builder": config.tree_builder,
         "alignment_mode": "auto_single_thread_anysymbol",
         "tree_model": "LG",
-        "rooting": "midpoint",
+        "rooting": config.species_tree_rooting,
         "marker_selection": {
             "strategy": "high_occupancy_core_plus_sparse_taxon_placement",
             "minimum_core_taxa": minimum_core_taxa,
@@ -349,6 +350,7 @@ def _infer_species_tree(
     tree = _root_external_gene_tree(
         raw_tree_path.read_text(encoding="utf-8"),
         species_token_map,
+        unrooted_rooting=config.species_tree_rooting,
     )
     rooted_newick = tree.as_string(
         schema="newick",
@@ -459,6 +461,7 @@ def _root_external_gene_tree(
     token_to_gene: dict[str, str],
     species_tree=None,
     gene_species: dict[str, str] | None = None,
+    unrooted_rooting: str = "midpoint",
 ):
     explicitly_rooted = newick.lstrip().upper().startswith("[&R]")
     if explicitly_rooted:
@@ -497,6 +500,8 @@ def _root_external_gene_tree(
                 species_tree,
                 gene_species,
             )
+        elif unrooted_rooting == "min_variance":
+            tree = root_tree_min_variance(tree)
         else:
             tree.reroot_at_midpoint(update_bipartitions=False)
             tree.is_rooted = True
@@ -959,6 +964,7 @@ def run_phylogeny_stage(
         "gene_tree_rooting": "explicit_root_or_min_duplication_loss",
         "root_duplication_rule": config.root_duplication_rule,
         "pair_orthology_rule": config.pair_orthology_rule,
+        "species_tree_rooting": config.species_tree_rooting,
         "tools": {
             "aligner": {
                 "path": config.aligner,

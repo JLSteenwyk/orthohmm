@@ -92,6 +92,11 @@ def parse_args(argv=None):
         choices=("lca", "positive_paralogy"),
         default="lca",
     )
+    parser.add_argument(
+        "--species-tree-rooting",
+        choices=("midpoint", "min_variance"),
+        default="midpoint",
+    )
     return parser.parse_args(argv)
 
 
@@ -147,6 +152,7 @@ def main(argv=None) -> int:
             "--phylogeny_candidates", args.phylogeny_candidates,
             "--phylogeny_root_rule", args.phylogeny_root_rule,
             "--phylogeny_pair_rule", args.phylogeny_pair_rule,
+            "--species_tree_rooting", args.species_tree_rooting,
         ])
         if args.species_tree is not None:
             command.extend(["--species_tree", str(args.species_tree.resolve())])

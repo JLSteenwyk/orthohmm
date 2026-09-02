@@ -159,6 +159,9 @@ def process_args(args) -> dict:
         pair_orthology_rule=(
             getattr(args, "phylogeny_pair_rule", "lca") or "lca"
         ),
+        species_tree_rooting=(
+            getattr(args, "species_tree_rooting", "midpoint") or "midpoint"
+        ),
     )
     try:
         phylogeny_config = validate_phylogeny_config(
@@ -203,4 +206,5 @@ def process_args(args) -> dict:
         phylogeny_root_rule=phylogeny_config.root_duplication_rule,
         phylogeny_pair_rule=phylogeny_config.pair_orthology_rule,
         phylogeny_candidates=phylogeny_candidates,
+        species_tree_rooting=phylogeny_config.species_tree_rooting,
     )

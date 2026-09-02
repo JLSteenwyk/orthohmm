@@ -364,6 +364,7 @@ def _execute(
     )
     phylogeny_pair_rule = kwargs.pop("phylogeny_pair_rule", "lca")
     phylogeny_candidates = kwargs.pop("phylogeny_candidates", "seed")
+    species_tree_rooting = kwargs.pop("species_tree_rooting", "midpoint")
     accuracy_config = resolve_accuracy_profile(accuracy_profile)
     if accuracy_config.multipass_graph and (
         search_mode != "builtin" or clustering != "leiden"
@@ -398,6 +399,7 @@ def _execute(
             phylogeny_root_rule=phylogeny_root_rule,
             phylogeny_pair_rule=phylogeny_pair_rule,
             phylogeny_candidates=phylogeny_candidates,
+            species_tree_rooting=species_tree_rooting,
         )
 
     search_results = None
@@ -728,6 +730,7 @@ def _execute(
                     tree_builder=tree_builder,
                     root_duplication_rule=phylogeny_root_rule,
                     pair_orthology_rule=phylogeny_pair_rule,
+                    species_tree_rooting=species_tree_rooting,
                 ),
                 cpu=cpu,
             )

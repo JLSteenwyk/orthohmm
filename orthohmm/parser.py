@@ -128,6 +128,9 @@ def create_parser() -> ArgumentParser:
         --phylogeny_candidates <seed, satellite_v1> candidate-family expansion policy
                                                     (default: seed)
 
+        --species_tree_rooting <policy>              internally inferred tree rooting policy
+                                                    (default: midpoint)
+
         -------------------------------------
         | Detailed explanation of arguments | 
         -------------------------------------
@@ -444,6 +447,14 @@ def create_parser() -> ArgumentParser:
         default="seed",
         help=SUPPRESS,
         metavar="phylogeny_candidates",
+    )
+
+    optional.add_argument(
+        "--species_tree_rooting",
+        choices=["midpoint", "min_variance"],
+        default="midpoint",
+        help=SUPPRESS,
+        metavar="species_tree_rooting",
     )
 
     optional.add_argument(

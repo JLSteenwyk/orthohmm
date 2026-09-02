@@ -24,3 +24,4 @@ class TestParser(object):
         assert parsed.phylogeny_root_rule == "supported_children"
         assert parsed.phylogeny_pair_rule == "lca"
         assert parsed.phylogeny_candidates == "seed"
+        assert parsed.species_tree_rooting == "midpoint"
