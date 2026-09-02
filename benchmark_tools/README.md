@@ -162,6 +162,25 @@ The production default remains `supported_children`; the replay compares that
 rule with progressively broader root-level duplication evidence from the same
 rooted trees.
 
+After predictions are frozen, stratify reconciliation changes by RefOG copy
+number and alignment-derived sequence identity:
+
+```bash
+python benchmark_tools/analyze_phylogeny_changes.py \
+  --refogs /path/to/Open_Orthobench/BENCHMARKS/RefOGs \
+  --fasta-directory /path/to/Open_Orthobench/BENCHMARKS/Input \
+  --baseline-clusters /path/to/orthohmm_edges_clustered.txt \
+  --phylogeny-root-hogs /path/to/orthohmm_root_hogs.tsv \
+  --alignment-directory /tmp/refog_alignments \
+  --aligner /path/to/mafft --cpu 4 \
+  --json /tmp/phylogeny_changes.json
+```
+
+This diagnostic reads benchmark labels only after inference. It verifies that
+root HOGs remain subsets of their source families, distinguishes splitting
+from cross-family merging, counts retained and removed reference relations,
+and reports copy-number and median pairwise-identity strata.
+
 ## OrthoFinder comparator
 
 This directory pins the OrthoFinder comparator to version 3.1.5 and keeps new
@@ -236,6 +255,12 @@ benchmark_tools/submit_orthohmm_phylogeny_qfo.sh
 
 This run infers its species tree internally and submits OrthoHMM's native
 reconciled cross-species pairs to QfO. It does not expand root HOGs into cliques.
+
+If a fresh production run reaches a verified candidate-cluster checkpoint but
+fails during phylogeny, `submit_resume_orthohmm_phylogeny_qfo.sh` resumes only
+that stage. The restart harness verifies and preserves the failed-run
+checkpoint, retains both metrics files, and emits `result.json` with combined
+wall time and peak process-tree memory before submitting QfO scoring.
 
 Run the secondary Three Kingdoms validation with:
 
