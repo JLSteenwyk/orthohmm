@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "benchmark": "QfO 2020 retained six-metric assessment",
+  "method": "OrthoHMM high_sensitivity with internally inferred phylogeny",
+  "candidate_selection": {
+    "frozen_before_qfo": true,
+    "selection_inputs": [
+      "independent synthetic holdouts",
+      "OrthoBench"
+    ],
+    "qfo_used_for_tuning": false
+  },
+  "inference": {
+    "run_kind": "fresh_end_to_end_with_verified_phylogeny_restart",
+    "initial_job_id": 20869,
+    "initial_job_exit_code": "1:0",
+    "initial_source_commit": "baf8e40875c509a5de076affe9b02c3d3da3ba86",
+    "restart_job_id": 20871,
+    "restart_job_exit_code": "0:0",
+    "restart_source_commit": "d849166bf61990b30752ffd1f720d8deecf14db5",
+    "cpu_budget": 32,
+    "instrumented_wall_s": 74011.297754,
+    "scheduler_end_to_end_wall_s": 74032,
+    "peak_process_tree_rss_bytes": 17909035008,
+    "peak_process_tree_rss_gib": 16.679089,
+    "genes": 976504,
+    "candidate_families": 390657,
+    "reconciled_families": 26159,
+    "bypassed_families": 364498,
+    "split_source_families": 549,
+    "root_hogs": 391874,
+    "duplications": 186596,
+    "speciations": 223582,
+    "native_pairs": 2659577,
+    "qfo_filtered_pairs": 2648403,
+    "species_tree": {
+      "mode": "internally_inferred",
+      "core_markers": 15,
+      "placement_markers": 1,
+      "minimum_core_taxa": 39,
+      "taxa": 78,
+      "supermatrix_columns": 19851,
+      "aligner": "MAFFT v7.525",
+      "tree_builder": "FastTree 2.2.0 Double precision"
+    },
+    "checkpoint_restart": {
+      "reason": "The high-occupancy marker core omitted one taxon.",
+      "fix": "Add deterministic connected lower-occupancy single-copy placement markers for taxa absent from the high-occupancy core.",
+      "candidate_checkpoint_verified": true,
+      "candidate_checkpoint_bytes": 23667336,
+      "search_or_clustering_rerun": false,
+      "initial_failure_retained": true
+    },
+    "source_worktree_note": "Generated sample outputs and unrelated local files made the worktree dirty. Inference source was pinned by the recorded commits and source manifests."
+  },
+  "assessment": {
+    "event_year": 2020,
+    "scoring_job_id": 20872,
+    "scoring_exit_code": "0:0",
+    "scoring_elapsed_s": 1587,
+    "all_six_metrics_complete": true,
+    "scores": {
+      "VGNC F": 0.7453611489673969,
+      "SwissTrees F": 0.6451489484282715,
+      "TreeFam-A F": 0.34793250884469673,
+      "EC": 0.97428495,
+      "GO": 0.48504497,
+      "FAS": 0.7791737499318365
+    },
+    "mean": 0.6628243793620335,
+    "pairwise_components": {
+      "VGNC": {
+        "TPR": 0.5941338681373778,
+        "PPV": 0.9998593728027001
+      },
+      "SwissTrees": {
+        "TPR": 0.49764641,
+        "PPV": 0.91692611
+      },
+      "TreeFam-A": {
+        "TPR": 0.21216644,
+        "PPV": 0.96622046
+      }
+    }
+  },
+  "comparisons": {
+    "orthohmm_high_sensitivity": {
+      "baseline_mean": 0.6825484075119435,
+      "mean_delta": -0.019724028149909922,
+      "metric_deltas": {
+        "VGNC F": 0.0779130578756353,
+        "SwissTrees F": -0.028701907287410622,
+        "TreeFam-A F": -0.2279374548993004,
+        "EC": 0.043240060000000025,
+        "GO": 0.012762660000000037,
+        "FAS": 0.004379415411616239
+      },
+      "improved_metrics": [
+        "VGNC F",
+        "EC",
+        "GO",
+        "FAS"
+      ],
+      "regressed_metrics": [
+        "SwissTrees F",
+        "TreeFam-A F"
+      ],
+      "beats_baseline_mean": false
+    },
+    "orthofinder_3_1_5": {
+      "baseline_mean": 0.7820708882895963,
+      "mean_delta": -0.11924650892756272,
+      "metric_deltas": {
+        "VGNC F": -0.2428682103734472,
+        "SwissTrees F": -0.21401148729150188,
+        "TreeFam-A F": -0.39495448280884515,
+        "EC": 0.03230261000000001,
+        "GO": 0.016879400000000044,
+        "FAS": 0.08717311690841789
+      },
+      "orthohmm_wins": [
+        "EC",
+        "GO",
+        "FAS"
+      ],
+      "orthofinder_wins": [
+        "VGNC F",
+        "SwissTrees F",
+        "TreeFam-A F"
+      ],
+      "beats_orthofinder_mean": false
+    }
+  },
+  "interpretation": {
+    "native_pairs_improve_vgnc": true,
+    "native_pairs_improve_swisstrees": false,
+    "native_pairs_improve_treefam_a": false,
+    "dominant_regression": "TreeFam-A recall falls from 0.44748082 to 0.21216644 despite precision rising from 0.80757595 to 0.96622046.",
+    "conclusion": "The conservative reconciliation rule removes too many valid pairwise relationships on QfO. It modestly improves root-level OrthoBench precision but does not generalize to a better six-metric QfO mean."
+  },
+  "checksums": {
+    "aggregate_inference_result_sha256": "b1769596dc6f7db9bbbb003911594bea6e2cc25c2e9c0456052495b5e66bc065",
+    "initial_failed_metrics_sha256": "325de9b573d377a20c7f96ad78f0ec6d55d121a4baf5e7205a0a92db3807d843",
+    "restart_metrics_sha256": "f93b0a857a15b0461e52364829b004ad96aad5973bedda8dd789390b117be5c9",
+    "candidate_checkpoint_sha256": "3b3ee97a1caef1775e7a5f89ff385a72316298428cbf5ca04ae493ebaf5b4fcc",
+    "root_hogs_sha256": "64ba4c5c6fec5313569fd0782d39387e59e37e32e299e95b032234dfca431ae5",
+    "native_pairs_sha256": "b1b63e1d8d0c3e2d0c8206f7b0391725f471efd027edbae0119f47d71107b04a",
+    "qfo_filtered_pairs_sha256": "c84a6e00cf58a028e091bd131327c79bfb4ebf731d36c5f587c800aa9319634c",
+    "species_tree_sha256": "e15c72ab42c469bf0f9ebf82d13f2b5ca0dab1cd96c35a6014d72c6cfcc76990",
+    "phylogeny_manifest_sha256": "12742b083976e1e8d487bbe0a9626b2b9fa566b8c2008e141ce1596681362b21",
+    "VGNC_sha256": "09fffa8ab26b6382b1d0d0e4c1b23e0f8860589629194e246829ee7cbe6e9e32",
+    "SwissTrees_sha256": "15216e058903246a6efcc1cbf65daad85bd45b83aa6fc79e149cfdefe6c43de5",
+    "TreeFam-A_sha256": "e97bb72d7c457631b4cd00f2e039e8d3cc97fd650b0c6d7f95ccc5489bf96120",
+    "EC_sha256": "a441d23e229afc736b85f03a626650f50ac8c1070ba5b0049ec35ce8b97dadc9",
+    "GO_sha256": "e4a2dd74a880e1f46c8237e68494f6f842d82b594742ad63f5cf3a80217cbe94",
+    "FAS_sha256": "21b275269e54a49d4a818ca3e09c073be89371b20726a236b5e01a874b221946",
+    "assessment_manifest_sha256": "0e703b7ed388814b6aa0fc69f5b26aa6a9ca18cdc9cf3371acb232ff0728e3a9",
+    "assessment_datasets_sha256": "b77f2868c8b56b49a6fd255570e7d419a17c0dd9c098cf39a559c8ddf09e7799",
+    "consolidated_results_sha256": "0143ff8dc28871108a02e6a003a112bda0f000f48dbd0492e8f7a9b3cd04ac5d"
+  },
+  "source_paths": {
+    "inference": "qfo_benchmark/results/orthohmm_phylogeny_inferred",
+    "assessment": "qfo_benchmark/scoring/orthohmm_phylogeny_inferred"
+  },
+  "recommendation": "Keep phylogeny-aware mode opt-in and do not make this reconciliation rule the default. Future work should recover pairwise recall with clade-aware orthology extraction and must be selected on independent holdouts and OrthoBench before another QfO evaluation."
+}
