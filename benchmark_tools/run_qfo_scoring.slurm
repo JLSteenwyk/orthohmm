@@ -23,13 +23,31 @@ readonly PIPELINE=${QFO_PIPELINE:-${BASE}/qfo_benchmark/benchmark-webservice}
 readonly SCORING_ROOT=${QFO_SCORING_ROOT:-${BASE}/qfo_benchmark/scoring}
 readonly WORK_ROOT=${QFO_WORK_ROOT:-${SCORING_ROOT}}
 readonly SCORING_DIR="${SCORING_ROOT}/${METHOD}"
-readonly WORK_DIR="${WORK_ROOT}/work-${METHOD}"
 readonly LAUNCH_DIR="${SCORING_ROOT}/launch-${METHOD}"
 readonly MAPPING=${QFO_MAPPING:-${PIPELINE}/reference_data/2020/mapping.json.gz}
 readonly FILTERED_PAIRS="$(dirname "${PAIRS}")/pairs.qfo.tsv"
 readonly NEXTFLOW_BIN=${NEXTFLOW_BIN:-/home/bizon/bin/nextflow}
 readonly JAVA_HOME_17=${JAVA_HOME_17:-/home/bizon/anaconda3/pkgs/openjdk-17.0.18-ha668962_0/lib/jvm}
 readonly RESUME=${RESUME:-0}
+
+# Darwin 4 truncates resolved database paths longer than 159 characters. Keep
+# the reporting identifier intact while using a compact, overridable work tag.
+case "${METHOD}" in
+    orthohmm_phylogeny_satellite_v2) default_work_tag=ohmm_phylo_v2 ;;
+    *) default_work_tag=${METHOD} ;;
+esac
+readonly WORK_TAG=${QFO_WORK_TAG:-${default_work_tag}}
+if [[ ! "${WORK_TAG}" =~ ^[A-Za-z0-9._-]+$ ]]; then
+    echo "QFO_WORK_TAG contains unsupported path characters: ${WORK_TAG}" >&2
+    exit 2
+fi
+readonly WORK_DIR=$(realpath -m -- "${WORK_ROOT}/work-${WORK_TAG}")
+readonly DARWIN_DB_PATH_SUFFIX="/xx/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/predictions.db"
+readonly DARWIN_DB_PATH_MAX=159
+if (( ${#WORK_DIR} + ${#DARWIN_DB_PATH_SUFFIX} > DARWIN_DB_PATH_MAX )); then
+    echo "QfO work path is too long for Darwin; choose a shorter QFO_WORK_ROOT or QFO_WORK_TAG: ${WORK_DIR}" >&2
+    exit 2
+fi
 
 if [[ "${PAIRS}" != "${FILTERED_PAIRS}" ]]; then
     python3 "${SCRIPT_DIR}/qfo_filter_pairs.py" \
@@ -52,6 +70,8 @@ cd "${LAUNCH_DIR}"
 export JAVA_HOME="${JAVA_HOME_17}"
 export JAVA_CMD="${JAVA_HOME_17}/bin/java"
 export NXF_SINGULARITY_CACHEDIR="${SCORING_ROOT}/container_cache"
+
+printf 'QfO participant: %s\nQfO work tag:    %s\n' "${METHOD}" "${WORK_TAG}"
 
 "${NEXTFLOW_BIN}" run "${PIPELINE}/main.nf" \
     -profile singularity \
