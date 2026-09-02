@@ -199,6 +199,29 @@ def _component_index_clusters(
     return list(components.values())
 
 
+def _component_index_clusters_with_counts(
+    clusters: Sequence[Sequence[int]],
+    component_counts: Sequence[int],
+    dsu: _IndexedDSU,
+) -> tuple[List[IndexCluster], np.ndarray]:
+    """Collapse components while preserving an additive provenance count."""
+
+    components: MutableMapping[int, IndexCluster] = {}
+    counts: MutableMapping[int, int] = {}
+    for idx, cluster in enumerate(clusters):
+        root = dsu.find(idx)
+        components.setdefault(root, []).extend(int(gene) for gene in cluster)
+        counts[root] = counts.get(root, 0) + int(component_counts[idx])
+    return (
+        list(components.values()),
+        np.fromiter(
+            (counts[root] for root in components),
+            dtype=np.int32,
+            count=len(components),
+        ),
+    )
+
+
 def _species_overlap(a: Counter, b: Counter) -> int:
     return len(set(a) & set(b))
 
@@ -752,6 +775,7 @@ def _merge_supported_satellite_best_indexed(
     counts: np.ndarray,
     max_scores: np.ndarray,
     sizes: np.ndarray,
+    seed_family_counts: np.ndarray,
     dsu: _IndexedDSU,
     max_genes: int,
     max_satellite_genes: int,
@@ -811,6 +835,7 @@ def _merge_supported_satellite_best_indexed(
         supported
         & is_best
         & (margins >= min_margin)
+        & (seed_family_counts[sources] == 1)
         & (sizes[sources] <= max_satellite_genes)
         & (
             sizes[sources]
@@ -977,6 +1002,7 @@ def merge_supported_satellite_candidate_clusters(
 
     total_genes = len(gene_to_species)
     current = [list(cluster) for cluster in clusters]
+    seed_family_counts = np.ones(len(current), dtype=np.int32)
     total_merges = 0
     initial_relation_count = 0
     completed_iterations = 0
@@ -999,6 +1025,7 @@ def merge_supported_satellite_candidate_clusters(
             counts,
             maximums,
             sizes,
+            seed_family_counts,
             dsu,
             max_genes=max_component_genes,
             max_satellite_genes=max_satellite_genes,
@@ -1013,7 +1040,11 @@ def merge_supported_satellite_candidate_clusters(
         )
         if merged == 0:
             break
-        current = _component_index_clusters(current, dsu)
+        current, seed_family_counts = _component_index_clusters_with_counts(
+            current,
+            seed_family_counts,
+            dsu,
+        )
         total_merges += merged
         completed_iterations += 1
     return current, total_merges, initial_relation_count, completed_iterations

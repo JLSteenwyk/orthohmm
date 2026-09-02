@@ -141,6 +141,37 @@ def test_satellite_candidate_respects_taxonomic_overlap_gate():
     assert merge_count == 0
 
 
+def test_satellite_candidate_does_not_reuse_merged_anchor_as_satellite():
+    clusters = [[0, 1], [2, 3], [4, 5, 6, 7, 8, 9]]
+    species = np.arange(10, dtype=np.int32)
+    queries = np.asarray([0, 2, 0, 4, 2, 5], dtype=np.int32)
+    targets = np.asarray([2, 0, 4, 0, 5, 2], dtype=np.int32)
+    scores = np.asarray([10.0, 10.0, 2.0, 2.0, 2.0, 2.0])
+
+    merged, merge_count, _, iterations = (
+        merge_supported_satellite_candidate_clusters(
+            clusters,
+            queries,
+            targets,
+            scores,
+            species,
+            max_satellite_genes=12,
+            max_satellite_to_anchor_ratio=1.0,
+            min_margin=1.0,
+            min_coverage=0.0,
+            min_norm=0.0,
+            max_iterations=2,
+        )
+    )
+
+    assert {frozenset(group) for group in merged} == {
+        frozenset((0, 1, 2, 3)),
+        frozenset((4, 5, 6, 7, 8, 9)),
+    }
+    assert merge_count == 1
+    assert iterations == 1
+
+
 def _cluster(prefix, counts):
     genes = []
     species = {}
