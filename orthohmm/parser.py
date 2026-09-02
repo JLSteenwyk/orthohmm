@@ -119,6 +119,12 @@ def create_parser() -> ArgumentParser:
         --tree_builder <command>                    protein tree-builder command or path
                                                     (default: FastTree)
 
+        --phylogeny_root_rule <rule>                root-HOG duplication evidence rule
+                                                    (default: supported_children)
+
+        --phylogeny_pair_rule <rule>                pairwise orthology evidence rule
+                                                    (default: lca)
+
         -------------------------------------
         | Detailed explanation of arguments | 
         -------------------------------------
@@ -409,6 +415,22 @@ def create_parser() -> ArgumentParser:
         default="FastTree",
         help=SUPPRESS,
         metavar="tree_builder",
+    )
+
+    optional.add_argument(
+        "--phylogeny_root_rule",
+        choices=["supported_children", "species_overlap", "mapped_event"],
+        default="supported_children",
+        help=SUPPRESS,
+        metavar="phylogeny_root_rule",
+    )
+
+    optional.add_argument(
+        "--phylogeny_pair_rule",
+        choices=["lca", "positive_paralogy"],
+        default="lca",
+        help=SUPPRESS,
+        metavar="phylogeny_pair_rule",
     )
 
     optional.add_argument(

@@ -229,6 +229,58 @@ def test_root_duplication_rule_validation(tmp_path):
         )
 
 
+def test_pair_orthology_rule_validation(tmp_path):
+    with pytest.raises(ValueError, match="pair orthology rule"):
+        reconcile_gene_tree(
+            parse_gene_tree("(a,b);"),
+            species_tree(tmp_path),
+            {"a": "A", "b": "B"},
+            pair_orthology_rule="unknown",
+        )
+
+
+def test_positive_paralogy_preserves_pairs_at_mapping_only_conflict(tmp_path):
+    mapping = {"a": "A", "b": "B", "c": "C"}
+    legacy = reconcile_gene_tree(
+        parse_gene_tree("(a,(b,c));"),
+        species_tree(tmp_path),
+        mapping,
+    )
+    confidence_aware = reconcile_gene_tree(
+        parse_gene_tree("(a,(b,c));"),
+        species_tree(tmp_path),
+        mapping,
+        pair_orthology_rule="positive_paralogy",
+    )
+
+    assert ("a", "b") not in legacy.ortholog_pairs
+    assert ("a", "b") in confidence_aware.ortholog_pairs
+    assert ("a", "b", "medium") in (
+        confidence_aware.ortholog_pair_confidence
+    )
+    assert confidence_aware.uncertain_count == 1
+    assert any(
+        node.pair_event == "uncertain"
+        and node.mapping_conflict
+        and node.species_overlap_count == 0
+        for node in confidence_aware.nodes
+    )
+
+
+def test_positive_paralogy_still_removes_species_overlap_pairs(tmp_path):
+    result = reconcile_gene_tree(
+        parse_gene_tree("((a1,b1),(a2,c1));"),
+        species_tree(tmp_path),
+        {"a1": "A", "b1": "B", "a2": "A", "c1": "C"},
+        pair_orthology_rule="positive_paralogy",
+    )
+
+    assert ("a1", "c1") in result.paralog_pairs
+    assert ("a2", "b1") in result.paralog_pairs
+    assert ("a1", "b1") in result.ortholog_pairs
+    assert result.uncertain_count == 0
+
+
 def test_species_overlap_rule_exposes_sparse_duplication_tradeoff(tmp_path):
     result = reconcile_gene_tree(
         parse_gene_tree("(a,((b,c),c2));"),

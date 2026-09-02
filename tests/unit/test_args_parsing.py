@@ -171,6 +171,8 @@ class TestArgsProcessing(object):
             "species_tree",
             "aligner",
             "tree_builder",
+            "phylogeny_root_rule",
+            "phylogeny_pair_rule",
         ]
         assert sorted(res.keys()) == sorted(expected_keys)
 
@@ -179,6 +181,8 @@ class TestArgsProcessing(object):
         assert res["phylogeny"] == "off"
         assert res["species_tree_mode"] == "supplied"
         assert res["species_tree"] is None
+        assert res["phylogeny_root_rule"] == "supported_children"
+        assert res["phylogeny_pair_rule"] == "lca"
 
     def test_reconcile_supplied_requires_species_tree(self, args):
         args.phylogeny = "reconcile"

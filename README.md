@@ -110,6 +110,15 @@ summary, and a provenance manifest. The conventional
 `orthohmm_orthogroups.txt` remains available and contains the reconciled
 root-level groups when this mode is enabled.
 
+Experimental reconciliation policies are independently configurable. The
+legacy defaults are `--phylogeny_root_rule supported_children` and
+`--phylogeny_pair_rule lca`. The alternative
+`--phylogeny_pair_rule positive_paralogy` preserves medium-confidence pairs at
+species-tree mapping conflicts and removes pairs only when the two gene-tree
+children share an observed species. Pair confidence is written to
+`orthohmm_pairwise_orthologs_confidence.tsv`; the original pair file and its
+schema are unchanged.
+
 ---
 
 <br />

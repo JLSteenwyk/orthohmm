@@ -36,6 +36,7 @@ class FamilyOutcome:
     genes: tuple[str, ...]
     root_groups: tuple[tuple[str, ...], ...]
     ortholog_pairs: tuple[tuple[str, str], ...]
+    ortholog_pair_confidence: tuple[tuple[str, str, str], ...]
     reconciliation: ReconciliationResult | None
     checkpoint_hit: bool
 
@@ -50,6 +51,7 @@ class PhylogenyStageResult:
     ortholog_pairs: int
     duplications: int
     speciations: int
+    uncertain_events: int
     species_tree_families: int
     species_tree_checkpoint_hit: bool
     output_directory: str
@@ -606,7 +608,7 @@ def _reconcile_family(
     rooted_newick = tree.as_string(
         schema="newick",
         suppress_rooting=False,
-        suppress_internal_node_labels=True,
+        suppress_internal_node_labels=False,
         preserve_spaces=True,
     ).strip()
     _atomic_write(rooted_tree_path, rooted_newick + "\n")
@@ -616,6 +618,8 @@ def _reconcile_family(
         species_tree,
         {gene: gene_species[gene] for gene in genes},
         family_id=family_id,
+        root_duplication_rule=config.root_duplication_rule,
+        pair_orthology_rule=config.pair_orthology_rule,
     )
     _atomic_write(annotated_tree_path, reconciliation.annotated_newick + "\n")
     checkpoint = {
@@ -638,6 +642,7 @@ def _reconcile_family(
         genes=genes,
         root_groups=reconciliation.root_groups,
         ortholog_pairs=reconciliation.ortholog_pairs,
+        ortholog_pair_confidence=reconciliation.ortholog_pair_confidence,
         reconciliation=reconciliation,
         checkpoint_hit=checkpoint_hit,
     )
@@ -661,6 +666,7 @@ def _bypass_family(
         genes=genes,
         root_groups=(genes,),
         ortholog_pairs=pairs,
+        ortholog_pair_confidence=tuple((*pair, "high") for pair in pairs),
         reconciliation=None,
         checkpoint_hit=False,
     )
@@ -676,11 +682,13 @@ def _write_stage_outputs(
     root_rows = []
     replacement_clusters = []
     pairs = set()
+    pair_confidence = {}
     annotations = []
     hierarchical = []
     root_index = 0
     duplications = 0
     speciations = 0
+    uncertain_events = 0
     for outcome in outcomes:
         for group in outcome.root_groups:
             root_id = f"RootHOG{root_index:07d}"
@@ -690,6 +698,12 @@ def _write_stage_outputs(
                 "\t".join((root_id, outcome.family_id, ",".join(group)))
             )
         pairs.update(outcome.ortholog_pairs)
+        pair_confidence.update(
+            {
+                (gene_a, gene_b): confidence
+                for gene_a, gene_b, confidence in outcome.ortholog_pair_confidence
+            }
+        )
         result = outcome.reconciliation
         if result is None:
             hierarchical.append(
@@ -701,6 +715,7 @@ def _write_stage_outputs(
             continue
         duplications += result.duplication_count
         speciations += result.speciation_count
+        uncertain_events += result.uncertain_count
         for node in result.nodes:
             annotations.append(
                 "\t".join(
@@ -712,6 +727,10 @@ def _write_stage_outputs(
                         node.species_tree_node,
                         ",".join(node.species),
                         ",".join(node.genes),
+                        node.pair_event,
+                        node.event_confidence,
+                        str(node.species_overlap_count),
+                        str(node.mapping_conflict).lower(),
                     )
                 )
             )
@@ -753,10 +772,29 @@ def _write_stage_outputs(
         + "\n".join(pair_rows)
         + "\n",
     )
+    confidence_rows = [
+        "\t".join(
+            (
+                gene_a,
+                gene_species[gene_a],
+                gene_b,
+                gene_species[gene_b],
+                pair_confidence[(gene_a, gene_b)],
+            )
+        )
+        for gene_a, gene_b in sorted(pairs)
+    ]
+    _atomic_write(
+        phylogeny_directory / "orthohmm_pairwise_orthologs_confidence.tsv",
+        "gene_a\tspecies_a\tgene_b\tspecies_b\tconfidence\n"
+        + "\n".join(confidence_rows)
+        + "\n",
+    )
     _atomic_write(
         phylogeny_directory / "orthohmm_reconciliation_nodes.tsv",
         "source_family\tnode_id\tparent_node_id\tevent\tspecies_tree_node\t"
-        "species\tgenes\n"
+        "species\tgenes\tpair_event\tevent_confidence\t"
+        "species_overlap_count\tmapping_conflict\n"
         + "\n".join(annotations)
         + "\n",
     )
@@ -778,6 +816,7 @@ def _write_stage_outputs(
         ortholog_pairs=len(pairs),
         duplications=duplications,
         speciations=speciations,
+        uncertain_events=uncertain_events,
         species_tree_families=int(
             manifest.get("species_tree_inference", {}).get("families", 0)
         ),
@@ -913,6 +952,8 @@ def run_phylogeny_stage(
         "cpu_budget": int(cpu),
         "parallelism": "deterministic_family_order_external_tools_one_thread_each",
         "gene_tree_rooting": "explicit_root_or_min_duplication_loss",
+        "root_duplication_rule": config.root_duplication_rule,
+        "pair_orthology_rule": config.pair_orthology_rule,
         "tools": {
             "aligner": {
                 "path": config.aligner,

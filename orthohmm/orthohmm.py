@@ -292,6 +292,10 @@ def _execute(
     species_tree = kwargs.pop("species_tree", None)
     aligner = kwargs.pop("aligner", "mafft")
     tree_builder = kwargs.pop("tree_builder", "FastTree")
+    phylogeny_root_rule = kwargs.pop(
+        "phylogeny_root_rule", "supported_children"
+    )
+    phylogeny_pair_rule = kwargs.pop("phylogeny_pair_rule", "lca")
     accuracy_config = resolve_accuracy_profile(accuracy_profile)
     if accuracy_config.multipass_graph and (
         search_mode != "builtin" or clustering != "leiden"
@@ -323,6 +327,8 @@ def _execute(
             species_tree=species_tree,
             aligner=aligner,
             tree_builder=tree_builder,
+            phylogeny_root_rule=phylogeny_root_rule,
+            phylogeny_pair_rule=phylogeny_pair_rule,
         )
 
     search_results = None
@@ -634,6 +640,8 @@ def _execute(
                     species_tree=species_tree,
                     aligner=aligner,
                     tree_builder=tree_builder,
+                    root_duplication_rule=phylogeny_root_rule,
+                    pair_orthology_rule=phylogeny_pair_rule,
                 ),
                 cpu=cpu,
             )
@@ -646,6 +654,7 @@ def _execute(
             phylogeny_ortholog_pairs=phylogeny_result.ortholog_pairs,
             phylogeny_duplications=phylogeny_result.duplications,
             phylogeny_speciations=phylogeny_result.speciations,
+            phylogeny_uncertain_events=phylogeny_result.uncertain_events,
             phylogeny_species_tree_families=(
                 phylogeny_result.species_tree_families
             ),

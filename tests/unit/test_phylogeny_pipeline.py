@@ -172,6 +172,15 @@ def test_supplied_tree_stage_end_to_end_and_checkpoint_restart(tmp_path):
     assert "a1\tA\tb1\tB" in pairwise
     assert "a1\tA\tb2\tB" not in pairwise
     assert "single_a\tA\tsingle_b\tB" in pairwise
+    confidence_pairwise = (
+        output
+        / "orthohmm_phylogeny"
+        / "orthohmm_pairwise_orthologs_confidence.tsv"
+    ).read_text(encoding="utf-8")
+    assert "gene_a\tspecies_a\tgene_b\tspecies_b\tconfidence" in (
+        confidence_pairwise
+    )
+    assert "a1\tA\tb1\tB\thigh" in confidence_pairwise
     assert (
         output
         / "orthohmm_phylogeny"
@@ -238,6 +247,7 @@ def test_parallel_results_are_deterministic(tmp_path):
     for filename in (
         "orthohmm_root_hogs.tsv",
         "orthohmm_pairwise_orthologs.tsv",
+        "orthohmm_pairwise_orthologs_confidence.tsv",
         "orthohmm_reconciliation_nodes.tsv",
         "orthohmm_hierarchical_orthogroups.tsv",
     ):

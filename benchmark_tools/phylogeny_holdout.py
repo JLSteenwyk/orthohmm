@@ -299,7 +299,16 @@ def evaluate_mode(dataset: SyntheticDataset, output_directory: Path):
     }
 
 
-def run_mode(dataset, root, mode, aligner, tree_builder, cpu):
+def run_mode(
+    dataset,
+    root,
+    mode,
+    aligner,
+    tree_builder,
+    cpu,
+    root_rule,
+    pair_rule,
+):
     output = root / mode
     working = output / "orthohmm_working_res"
     working.mkdir(parents=True, exist_ok=True)
@@ -312,6 +321,8 @@ def run_mode(dataset, root, mode, aligner, tree_builder, cpu):
         species_tree=str(dataset.species_tree) if mode == "supplied" else None,
         aligner=aligner,
         tree_builder=tree_builder,
+        root_duplication_rule=root_rule,
+        pair_orthology_rule=pair_rule,
     )
     started = time.perf_counter()
     stage = run_phylogeny_stage(
@@ -339,6 +350,16 @@ def parse_args(argv=None):
     parser.add_argument("--tree-builder", required=True)
     parser.add_argument("--cpu", type=int, default=4)
     parser.add_argument("--seeds", type=int, nargs="+", default=[101, 211, 307])
+    parser.add_argument(
+        "--root-rule",
+        choices=("supported_children", "species_overlap", "mapped_event"),
+        default="supported_children",
+    )
+    parser.add_argument(
+        "--pair-rule",
+        choices=("lca", "positive_paralogy"),
+        default="lca",
+    )
     return parser.parse_args(argv)
 
 
@@ -356,10 +377,12 @@ def main(argv=None):
             "supplied": run_mode(
                 dataset, replicate_root, "supplied",
                 args.aligner, args.tree_builder, args.cpu,
+                args.root_rule, args.pair_rule,
             ),
             "infer": run_mode(
                 dataset, replicate_root, "infer",
                 args.aligner, args.tree_builder, args.cpu,
+                args.root_rule, args.pair_rule,
             ),
         })
     completed = subprocess.run(
@@ -374,6 +397,8 @@ def main(argv=None):
         "description": "Independent synthetic phylogeny holdouts",
         "source_commit": completed.stdout.strip() or None,
         "command": [sys.executable, *sys.argv],
+        "root_duplication_rule": args.root_rule,
+        "pair_orthology_rule": args.pair_rule,
         "scenarios": [
             "ancient duplication",
             "recent duplication",

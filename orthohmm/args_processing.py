@@ -143,6 +143,13 @@ def process_args(args) -> dict:
         species_tree=getattr(args, "species_tree", None),
         aligner=getattr(args, "aligner", "mafft") or "mafft",
         tree_builder=getattr(args, "tree_builder", "FastTree") or "FastTree",
+        root_duplication_rule=(
+            getattr(args, "phylogeny_root_rule", "supported_children")
+            or "supported_children"
+        ),
+        pair_orthology_rule=(
+            getattr(args, "phylogeny_pair_rule", "lca") or "lca"
+        ),
     )
     try:
         phylogeny_config = validate_phylogeny_config(
@@ -184,4 +191,6 @@ def process_args(args) -> dict:
         species_tree=phylogeny_config.species_tree,
         aligner=phylogeny_config.aligner,
         tree_builder=phylogeny_config.tree_builder,
+        phylogeny_root_rule=phylogeny_config.root_duplication_rule,
+        phylogeny_pair_rule=phylogeny_config.pair_orthology_rule,
     )

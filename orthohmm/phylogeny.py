@@ -23,6 +23,8 @@ class PhylogenyConfig:
     species_tree: str | None = None
     aligner: str = "mafft"
     tree_builder: str = "FastTree"
+    root_duplication_rule: str = "supported_children"
+    pair_orthology_rule: str = "lca"
 
 
 @dataclass(frozen=True)
@@ -42,6 +44,10 @@ class ReconciledNode:
     species_tree_node: str
     genes: tuple[str, ...]
     species: tuple[str, ...]
+    pair_event: str
+    event_confidence: str
+    species_overlap_count: int
+    mapping_conflict: bool
 
 
 @dataclass(frozen=True)
@@ -50,9 +56,11 @@ class ReconciliationResult:
     nodes: tuple[ReconciledNode, ...]
     root_groups: tuple[tuple[str, ...], ...]
     ortholog_pairs: tuple[tuple[str, str], ...]
+    ortholog_pair_confidence: tuple[tuple[str, str, str], ...]
     paralog_pairs: tuple[tuple[str, str], ...]
     duplication_count: int
     speciation_count: int
+    uncertain_count: int
     annotated_newick: str
 
 
@@ -259,6 +267,7 @@ def reconcile_gene_tree(
     gene_to_species: dict[str, str],
     family_id: str = "family",
     root_duplication_rule: str = "supported_children",
+    pair_orthology_rule: str = "lca",
 ) -> ReconciliationResult:
     """Reconcile a rooted gene tree by LCA mapping onto a rooted species tree."""
 
@@ -267,6 +276,12 @@ def reconcile_gene_tree(
         raise ValueError(
             "root duplication rule must be one of: "
             + ", ".join(sorted(valid_root_rules))
+        )
+    valid_pair_rules = {"lca", "positive_paralogy"}
+    if pair_orthology_rule not in valid_pair_rules:
+        raise ValueError(
+            "pair orthology rule must be one of: "
+            + ", ".join(sorted(valid_pair_rules))
         )
 
     species_leaves = {
@@ -321,7 +336,11 @@ def reconcile_gene_tree(
     descendant_species = {}
     mapped_species_node = {}
     event_by_node = {}
+    pair_event_by_node = {}
+    event_confidence_by_node = {}
     species_overlap_by_node = {}
+    species_overlap_count_by_node = {}
+    mapping_conflict_by_node = {}
     for node in gene_tree.postorder_node_iter():
         if node.is_leaf():
             gene = leaf_gene[node]
@@ -329,6 +348,10 @@ def reconcile_gene_tree(
             species = {canonical_species_name(gene_to_species[gene])}
             event = "leaf"
             overlap = False
+            overlap_count = 0
+            mapping_conflict = False
+            pair_event = "leaf"
+            event_confidence = "not_applicable"
         else:
             children = node.child_nodes()
             genes = tuple(
@@ -338,39 +361,61 @@ def reconcile_gene_tree(
             )
             child_species = [descendant_species[child] for child in children]
             species = set().union(*child_species)
-            overlap = any(
-                left & right
-                for left, right in combinations(child_species, 2)
+            overlapping_species = set().union(
+                *(
+                    left & right
+                    for left, right in combinations(child_species, 2)
+                )
             )
+            overlap_count = len(overlapping_species)
+            overlap = bool(overlap_count)
             mapped = species_lca(species)
-            child_maps_to_parent = any(
+            mapping_conflict = any(
                 mapped_species_node[child] is mapped for child in children
             )
             event = (
-                "duplication" if overlap or child_maps_to_parent else "speciation"
+                "duplication" if overlap or mapping_conflict else "speciation"
             )
+            if pair_orthology_rule == "positive_paralogy":
+                if overlap:
+                    pair_event = "duplication"
+                    event_confidence = "high" if overlap_count >= 2 else "medium"
+                elif mapping_conflict:
+                    pair_event = "uncertain"
+                    event_confidence = "medium"
+                else:
+                    pair_event = "speciation"
+                    event_confidence = "high"
+            else:
+                pair_event = event
+                event_confidence = "high"
         descendant_genes[node] = tuple(sorted(genes))
         descendant_species[node] = species
         mapped_species_node[node] = species_lca(species)
         event_by_node[node] = event
+        pair_event_by_node[node] = pair_event
+        event_confidence_by_node[node] = event_confidence
         species_overlap_by_node[node] = bool(overlap)
+        species_overlap_count_by_node[node] = overlap_count
+        mapping_conflict_by_node[node] = mapping_conflict
 
     ortholog_pairs = set()
+    ortholog_pair_confidence = {}
     paralog_pairs = set()
     for node in gene_tree.postorder_node_iter():
         if node.is_leaf():
             continue
-        destination = (
-            ortholog_pairs
-            if event_by_node[node] == "speciation"
-            else paralog_pairs
-        )
+        pair_event = pair_event_by_node[node]
+        destination = paralog_pairs if pair_event == "duplication" else ortholog_pairs
         for left, right in combinations(node.child_nodes(), 2):
             for gene_a in descendant_genes[left]:
                 for gene_b in descendant_genes[right]:
                     if gene_to_species[gene_a] == gene_to_species[gene_b]:
                         continue
-                    destination.add(tuple(sorted((gene_a, gene_b))))
+                    pair = tuple(sorted((gene_a, gene_b)))
+                    destination.add(pair)
+                    if destination is ortholog_pairs:
+                        ortholog_pair_confidence[pair] = event_confidence_by_node[node]
 
     species_root = species_tree.seed_node
     root_duplication_by_node = {}
@@ -424,7 +469,11 @@ def reconcile_gene_tree(
     for node in gene_tree.postorder_node_iter():
         node_id = node_ids[node]
         if not node.is_leaf():
-            event_code = "D" if event_by_node[node] == "duplication" else "S"
+            event_code = {
+                "duplication": "D",
+                "speciation": "S",
+                "uncertain": "U",
+            }[pair_event_by_node[node]]
             node.label = (
                 f"{node_id}|{event_code}@{species_labels[mapped_species_node[node]]}"
             )
@@ -440,6 +489,10 @@ def reconcile_gene_tree(
                 species_tree_node=species_labels[mapped_species_node[node]],
                 genes=descendant_genes[node],
                 species=tuple(sorted(descendant_species[node])),
+                pair_event=pair_event_by_node[node],
+                event_confidence=event_confidence_by_node[node],
+                species_overlap_count=species_overlap_count_by_node[node],
+                mapping_conflict=mapping_conflict_by_node[node],
             )
         )
 
@@ -454,12 +507,19 @@ def reconcile_gene_tree(
         nodes=tuple(reconciled_nodes),
         root_groups=root_groups,
         ortholog_pairs=tuple(sorted(ortholog_pairs)),
+        ortholog_pair_confidence=tuple(
+            (*pair, ortholog_pair_confidence[pair])
+            for pair in sorted(ortholog_pairs)
+        ),
         paralog_pairs=tuple(sorted(paralog_pairs)),
         duplication_count=sum(
             event == "duplication" for event in event_by_node.values()
         ),
         speciation_count=sum(
             event == "speciation" for event in event_by_node.values()
+        ),
+        uncertain_count=sum(
+            event == "uncertain" for event in pair_event_by_node.values()
         ),
         annotated_newick=annotated_newick,
     )
@@ -591,6 +651,18 @@ def validate_phylogeny_config(
         raise PhylogenyConfigurationError(
             f"Unsupported species-tree mode: {config.species_tree_mode!r}"
         )
+    if config.root_duplication_rule not in {
+        "supported_children", "species_overlap", "mapped_event"
+    }:
+        raise PhylogenyConfigurationError(
+            "Unsupported root-duplication rule: "
+            f"{config.root_duplication_rule!r}"
+        )
+    if config.pair_orthology_rule not in {"lca", "positive_paralogy"}:
+        raise PhylogenyConfigurationError(
+            "Unsupported pair-orthology rule: "
+            f"{config.pair_orthology_rule!r}"
+        )
 
     canonical_species_names(proteome_files)
     species_tree = config.species_tree
@@ -611,4 +683,6 @@ def validate_phylogeny_config(
         species_tree=species_tree,
         aligner=resolve_executable(config.aligner, "aligner"),
         tree_builder=resolve_executable(config.tree_builder, "tree builder"),
+        root_duplication_rule=config.root_duplication_rule,
+        pair_orthology_rule=config.pair_orthology_rule,
     )

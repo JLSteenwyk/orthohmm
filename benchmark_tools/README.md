@@ -175,6 +175,17 @@ The production default remains `supported_children`; the replay compares that
 rule with progressively broader root-level duplication evidence from the same
 rooted trees.
 
+Synthetic phylogeny holdouts accept independent reconciliation policies. For
+example, evaluate the policy that preserves pairs at mapping-only conflicts
+while retaining the conservative root-HOG rule with:
+
+```bash
+python benchmark_tools/phylogeny_holdout.py /tmp/phylogeny_holdout.json \
+  --work-directory /tmp/phylogeny_holdout \
+  --aligner /path/to/mafft --tree-builder /path/to/FastTree --cpu 4 \
+  --root-rule supported_children --pair-rule positive_paralogy
+```
+
 After predictions are frozen, stratify reconciliation changes by RefOG copy
 number and alignment-derived sequence identity:
 

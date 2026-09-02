@@ -21,3 +21,5 @@ class TestParser(object):
         assert parsed.species_tree is None
         assert parsed.aligner == "mafft"
         assert parsed.tree_builder == "FastTree"
+        assert parsed.phylogeny_root_rule == "supported_children"
+        assert parsed.phylogeny_pair_rule == "lca"
