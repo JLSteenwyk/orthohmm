@@ -378,3 +378,24 @@ def test_minimum_variance_root_is_deterministic_and_uses_internal_edge():
         frozenset(("c", "d", "e")),
     }
     assert rooted.is_rooted
+
+
+def test_minimum_variance_root_rejects_long_terminal_edge():
+    dendropy = pytest.importorskip("dendropy")
+    tree = dendropy.Tree.get(
+        data="((a:1,b:1):1,c:1,d:10);",
+        schema="newick",
+        preserve_underscores=True,
+        rooting="default-unrooted",
+    )
+
+    rooted = root_tree_min_variance(tree)
+
+    root_sides = {
+        frozenset(str(leaf.taxon.label) for leaf in child.leaf_iter())
+        for child in rooted.seed_node.child_node_iter()
+    }
+    assert root_sides == {
+        frozenset(("a", "b")),
+        frozenset(("c", "d")),
+    }

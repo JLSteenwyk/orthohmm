@@ -264,7 +264,12 @@ def root_gene_tree_min_duplication_loss(
 
 
 def root_tree_min_variance(tree):
-    """Root a tree where the variance of root-to-tip distances is minimal."""
+    """Root on the internal edge minimizing root-to-tip distance variance.
+
+    Terminal edges are excluded when the tree has at least four taxa. Without
+    an explicit outgroup, a single fast lineage can otherwise attract the root
+    even when the best internal split is substantially more clock-like.
+    """
 
     if tree.seed_node.num_child_nodes() == 2:
         tree.deroot()
@@ -303,6 +308,10 @@ def root_tree_min_variance(tree):
     for parent, child, edge, length in candidate_edges:
         parent_side = distances(parent, child)
         child_side = distances(child, parent)
+        if len(all_labels) >= 4 and (
+            len(parent_side) < 2 or len(child_side) < 2
+        ):
+            continue
         bases = [distance for _, distance in parent_side]
         bases.extend(distance + length for _, distance in child_side)
         signs = [1.0] * len(parent_side) + [-1.0] * len(child_side)
@@ -332,6 +341,10 @@ def root_tree_min_variance(tree):
         if best is None or score < best[0]:
             best = (score, edge, position, length - position)
 
+    if best is None:
+        raise PhylogenyConfigurationError(
+            "Tree has no eligible edge on which to root."
+        )
     _, edge, parent_length, child_length = best
     tree.reroot_at_edge(
         edge,

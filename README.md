@@ -127,9 +127,9 @@ expansion. The original groups are retained as seed provenance in
 `orthohmm_working_res/phylogeny_candidate_seeds.tsv`.
 For internally inferred species trees,
 `--species_tree_rooting min_variance` minimizes root-to-tip distance variance
-over every edge and avoids midpoint sensitivity to a single long terminal
-branch. The backward-compatible default remains `midpoint` while this policy
-is under evaluation.
+over internal edges and avoids placing the root on a single long terminal
+branch when no explicit outgroup is available. The backward-compatible default
+remains `midpoint` while this policy is under evaluation.
 
 ---
 
