@@ -69,6 +69,14 @@ def build_parser() -> argparse.ArgumentParser:
             "checkpoints should seed this run"
         ),
     )
+    parser.add_argument(
+        "--membership-constraints",
+        type=Path,
+        help=(
+            "Candidate-merge trace whose source and target seed groups should "
+            "be verified after reconciliation"
+        ),
+    )
     return parser
 
 
@@ -115,6 +123,26 @@ def seed_checkpoint_output(source: Path, output: Path) -> Path:
     return source_phylogeny
 
 
+def load_membership_constraints(path: Path) -> list[dict]:
+    """Load and validate candidate membership constraints for replay."""
+
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(payload, list):
+        raise SystemExit("membership constraints must be a JSON list")
+    for index, constraint in enumerate(payload):
+        if not isinstance(constraint, dict):
+            raise SystemExit(
+                f"membership constraint {index} must be a JSON object"
+            )
+        missing = {"source_genes", "target_genes"} - constraint.keys()
+        if missing:
+            raise SystemExit(
+                f"membership constraint {index} is missing: "
+                + ", ".join(sorted(missing))
+            )
+    return payload
+
+
 def main(argv=None) -> int:
     args = build_parser().parse_args(argv)
     if args.species_tree_mode == "supplied" and args.species_tree is None:
@@ -137,6 +165,11 @@ def main(argv=None) -> int:
         checkpoint_source = seed_checkpoint_output(
             args.checkpoint_source,
             output_directory,
+        )
+    membership_constraints = None
+    if args.membership_constraints is not None:
+        membership_constraints = load_membership_constraints(
+            args.membership_constraints.resolve()
         )
     cluster_path.parent.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(args.candidate_clusters.resolve(), cluster_path)
@@ -164,6 +197,11 @@ def main(argv=None) -> int:
             root_duplication_rule=args.root_rule,
             pair_orthology_rule=args.pair_rule,
             species_tree_rooting=args.species_tree_rooting,
+            membership_constraints=(
+                file_provenance(args.membership_constraints)
+                if args.membership_constraints is not None
+                else None
+            ),
         )
         with metrics.stage("phylogeny"):
             stage_result = run_phylogeny_stage(
@@ -172,6 +210,7 @@ def main(argv=None) -> int:
                 files,
                 config,
                 args.cpu,
+                membership_constraints=membership_constraints,
             )
         metrics.add_counts(**asdict(stage_result))
 
@@ -203,6 +242,11 @@ def main(argv=None) -> int:
             "cpu": args.cpu,
             "checkpoint_source": (
                 str(checkpoint_source) if checkpoint_source is not None else None
+            ),
+            "membership_constraints": (
+                file_provenance(args.membership_constraints)
+                if args.membership_constraints is not None
+                else None
             ),
         },
         "outputs": {

@@ -1,4 +1,5 @@
 from pathlib import Path
+import json
 
 import pytest
 
@@ -15,12 +16,30 @@ def test_parser_accepts_checkpoint_source():
         "--root-rule", "species_overlap",
         "--pair-rule", "positive_paralogy",
         "--species-tree-rooting", "min_variance",
+        "--membership-constraints", "merges.json",
     ])
 
     assert args.checkpoint_source == Path("previous")
     assert args.root_rule == "species_overlap"
     assert args.pair_rule == "positive_paralogy"
     assert args.species_tree_rooting == "min_variance"
+    assert args.membership_constraints == Path("merges.json")
+
+
+def test_load_membership_constraints(tmp_path):
+    path = tmp_path / "merges.json"
+    payload = [{"source_genes": ["a"], "target_genes": ["b"]}]
+    path.write_text(json.dumps(payload))
+
+    assert replay_phylogeny.load_membership_constraints(path) == payload
+
+
+def test_load_membership_constraints_rejects_missing_groups(tmp_path):
+    path = tmp_path / "merges.json"
+    path.write_text('[{"source_genes": ["a"]}]')
+
+    with pytest.raises(SystemExit, match="target_genes"):
+        replay_phylogeny.load_membership_constraints(path)
 
 
 def test_seed_checkpoint_output_copies_required_tree(tmp_path):
