@@ -1,9 +1,13 @@
+import json
+
 import pytest
 
 from benchmark_tools.orthobench_stage_diagnostics import file_provenance
 from benchmark_tools.resume_phylogeny_benchmark import (
     CANDIDATE_RELATIVE_PATH,
+    MEMBERSHIP_RELATIVE_PATH,
     combine_run_metrics,
+    load_membership_constraints,
     verify_candidate_checkpoint,
 )
 
@@ -46,3 +50,25 @@ def test_combine_run_metrics_sums_wall_and_preserves_failed_stage():
     assert combined["stages"]["phylogeny_initial_failure"]["wall_s"] == 2
     assert combined["stages"]["phylogeny_restart"]["wall_s"] == 20
     assert combined["counts"] == {"genes": 10, "root_hogs": 4}
+
+
+def test_membership_constraints_require_verified_nonempty_groups(tmp_path):
+    path = tmp_path / "merges.json"
+    path.write_text(json.dumps([
+        {"source_genes": ["a"], "target_genes": ["b", "c"]}
+    ]))
+    expected = file_provenance(path)
+    expected["path"] = MEMBERSHIP_RELATIVE_PATH
+    failed = {
+        "status": "failed",
+        "harness": {"output_manifest": [expected]},
+    }
+
+    constraints, actual = load_membership_constraints(failed, path)
+
+    assert constraints[0]["source_genes"] == ["a"]
+    assert actual["sha256"] == expected["sha256"]
+
+    path.write_text("[]")
+    with pytest.raises(ValueError, match="does not match"):
+        load_membership_constraints(failed, path)

@@ -116,17 +116,29 @@ def _expand_phylogeny_candidates(
         )
     )
     temporary = cluster_path + ".candidates.tmp"
+    candidate_checkpoint = os.path.join(
+        output_directory,
+        "orthohmm_working_res",
+        "phylogeny_candidate_superfamilies.txt",
+    )
+    candidate_checkpoint_temporary = candidate_checkpoint + ".tmp"
     sidecar = os.path.join(
         output_directory,
         "orthohmm_working_res",
         "phylogeny_candidate_seeds.tsv",
     )
     sidecar_temporary = sidecar + ".tmp"
-    with open(temporary, "w") as handle, open(sidecar_temporary, "w") as seed_handle:
+    with (
+        open(temporary, "w") as handle,
+        open(candidate_checkpoint_temporary, "w") as candidate_handle,
+        open(sidecar_temporary, "w") as seed_handle,
+    ):
         seed_handle.write("candidate_family\tseed_families\n")
         for candidate_id, cluster in enumerate(candidates):
             genes = sorted(gene_names[gene] for gene in cluster)
-            handle.write(" ".join(genes) + "\n")
+            candidate_line = " ".join(genes) + "\n"
+            handle.write(candidate_line)
+            candidate_handle.write(candidate_line)
             seed_ids = sorted({int(gene_to_seed[gene]) for gene in cluster})
             seed_handle.write(
                 f"Family{candidate_id:07d}\t"
@@ -134,6 +146,7 @@ def _expand_phylogeny_candidates(
                 + "\n"
             )
     os.replace(temporary, cluster_path)
+    os.replace(candidate_checkpoint_temporary, candidate_checkpoint)
     os.replace(sidecar_temporary, sidecar)
     result = {
         "profile": profile,
@@ -143,6 +156,7 @@ def _expand_phylogeny_candidates(
         "merges": merges,
         "directed_relations": relations,
         "iterations": iterations,
+        "candidate_checkpoint": os.path.abspath(candidate_checkpoint),
         "seed_sidecar": os.path.abspath(sidecar),
     }
     if merge_trace is not None:

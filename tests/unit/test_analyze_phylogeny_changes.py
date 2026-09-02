@@ -4,6 +4,7 @@ import pytest
 
 from benchmark_tools.analyze_phylogeny_changes import (
     external_relation_count,
+    family_size_category,
     mean_pairwise_identity,
     pair_metrics,
     read_root_hogs,
@@ -11,6 +12,15 @@ from benchmark_tools.analyze_phylogeny_changes import (
     reference_nonreference_relations,
     split_summary,
 )
+
+
+@pytest.mark.parametrize(
+    ("size", "expected"),
+    [(2, "small_2_20"), (20, "small_2_20"), (21, "medium_21_50"),
+     (50, "medium_21_50"), (51, "large_gt_50")],
+)
+def test_family_size_category_uses_fixed_boundaries(size, expected):
+    assert family_size_category(size) == expected
 
 
 def test_mean_pairwise_identity_ignores_gap_bearing_positions():

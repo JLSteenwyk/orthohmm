@@ -5,7 +5,7 @@ set -euo pipefail
 : "${PAIRS:?PAIRS must point to the QfO pair predictions}"
 
 case "${METHOD}" in
-    orthofinder_v3_diamond|orthofinder_v3_mmseqs|orthofinder_v3_sequence_only|orthohmm_high_sensitivity|orthohmm_phylogeny_inferred) ;;
+    orthofinder_v3_diamond|orthofinder_v3_mmseqs|orthofinder_v3_sequence_only|orthohmm_high_sensitivity|orthohmm_phylogeny_inferred|orthohmm_phylogeny_satellite_v2) ;;
     *)
         echo "Unsupported scoring method: ${METHOD}" >&2
         exit 2

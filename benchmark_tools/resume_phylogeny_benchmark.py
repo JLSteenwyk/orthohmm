@@ -28,6 +28,9 @@ from orthohmm.phylogeny_pipeline import run_phylogeny_stage
 
 
 CANDIDATE_RELATIVE_PATH = "orthohmm_working_res/orthohmm_edges_clustered.txt"
+MEMBERSHIP_RELATIVE_PATH = (
+    "orthohmm_working_res/phylogeny_candidate_merges.json"
+)
 
 
 def _atomic_json(path: Path, payload: dict) -> None:
@@ -48,27 +51,53 @@ def _git_commit(repo_root: Path) -> str:
     return completed.stdout.strip()
 
 
-def verify_candidate_checkpoint(failed: dict, candidate: Path) -> dict:
-    """Verify a candidate checkpoint against the failed harness manifest."""
-
+def verify_output_checkpoint(
+    failed: dict,
+    path: Path,
+    relative_path: str,
+) -> dict:
+    """Verify one output against the failed production harness manifest."""
     if failed.get("status") != "failed":
         raise ValueError("initial metrics must describe a failed production run")
     records = failed.get("harness", {}).get("output_manifest", [])
     matching = [
         record
         for record in records
-        if record.get("path") == CANDIDATE_RELATIVE_PATH
+        if record.get("path") == relative_path
     ]
     if len(matching) != 1:
-        raise ValueError("failed metrics do not identify one candidate checkpoint")
+        raise ValueError(
+            f"failed metrics do not identify one checkpoint for {relative_path}"
+        )
     expected = matching[0]
-    actual = file_provenance(candidate)
+    actual = file_provenance(path)
     if (
         actual["bytes"] != expected.get("bytes")
         or actual["sha256"] != expected.get("sha256")
     ):
-        raise ValueError("candidate checkpoint does not match failed-run manifest")
+        raise ValueError(
+            f"checkpoint does not match failed-run manifest: {relative_path}"
+        )
     return actual
+
+
+def verify_candidate_checkpoint(failed: dict, candidate: Path) -> dict:
+    """Verify a candidate checkpoint against the failed harness manifest."""
+    return verify_output_checkpoint(failed, candidate, CANDIDATE_RELATIVE_PATH)
+
+
+def load_membership_constraints(failed: dict, path: Path) -> tuple[list, dict]:
+    """Load a verified satellite-membership checkpoint."""
+    record = verify_output_checkpoint(failed, path, MEMBERSHIP_RELATIVE_PATH)
+    constraints = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(constraints, list) or any(
+        not isinstance(item, dict)
+        or not item.get("source_genes")
+        or not item.get("target_genes")
+        for item in constraints
+    ):
+        raise ValueError("membership checkpoint is not a constraint list")
+    return constraints, record
 
 
 def combine_run_metrics(
@@ -111,6 +140,24 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--cpu", type=int, default=os.cpu_count() or 1)
     parser.add_argument("--aligner", default="mafft")
     parser.add_argument("--tree-builder", default="FastTree")
+    parser.add_argument(
+        "--species-tree-rooting",
+        choices=("midpoint", "min_variance"),
+        default="midpoint",
+    )
+    parser.add_argument(
+        "--root-rule",
+        choices=(
+            "supported_children", "confidence", "species_overlap", "mapped_event"
+        ),
+        default="supported_children",
+    )
+    parser.add_argument(
+        "--pair-rule",
+        choices=("lca", "positive_paralogy"),
+        default="lca",
+    )
+    parser.add_argument("--membership-constraints", type=Path)
     return parser
 
 
@@ -123,6 +170,11 @@ def main(argv=None) -> int:
     resume_metrics = args.resume_metrics.resolve()
     aggregate_json = args.aggregate_json.resolve()
     qfo_mapping = args.qfo_mapping.resolve()
+    membership_path = (
+        args.membership_constraints.resolve()
+        if args.membership_constraints is not None
+        else None
+    )
     artifact_directory = aggregate_json.parent
     candidate = production_output / CANDIDATE_RELATIVE_PATH
 
@@ -148,12 +200,25 @@ def main(argv=None) -> int:
     except ValueError as error:
         raise SystemExit(str(error)) from error
 
+    membership_constraints = None
+    membership_record = None
+    if membership_path is not None:
+        try:
+            membership_constraints, membership_record = (
+                load_membership_constraints(failed, membership_path)
+            )
+        except ValueError as error:
+            raise SystemExit(str(error)) from error
+
     files = fetch_fasta_files(str(fasta_directory))
     config = PhylogenyConfig(
         mode="reconcile",
         species_tree_mode="infer",
         aligner=args.aligner,
         tree_builder=args.tree_builder,
+        root_duplication_rule=args.root_rule,
+        pair_orthology_rule=args.pair_rule,
+        species_tree_rooting=args.species_tree_rooting,
     )
     restart_commit = _git_commit(repo_root)
     with PipelineMetrics(str(resume_metrics)) as metrics:
@@ -165,6 +230,10 @@ def main(argv=None) -> int:
             initial_commit=failed.get("harness", {}).get("git_commit"),
             restart_commit=restart_commit,
             cpu_budget=args.cpu,
+            root_duplication_rule=args.root_rule,
+            pair_orthology_rule=args.pair_rule,
+            species_tree_rooting=args.species_tree_rooting,
+            membership_constraints=membership_record,
         )
         with metrics.stage("phylogeny"):
             stage_result = run_phylogeny_stage(
@@ -173,6 +242,7 @@ def main(argv=None) -> int:
                 files,
                 config,
                 args.cpu,
+                membership_constraints=membership_constraints,
             )
         metrics.add_counts(**asdict(stage_result))
 
@@ -205,6 +275,7 @@ def main(argv=None) -> int:
             "initial_failed_metrics": file_provenance(failed_metrics),
             "restart_metrics": file_provenance(resume_metrics),
             "candidate_checkpoint": file_provenance(preserved_candidate),
+            "membership_constraints": membership_record,
             "qfo_mapping": file_provenance(qfo_mapping),
             "source": file_provenance(Path(__file__)),
         },

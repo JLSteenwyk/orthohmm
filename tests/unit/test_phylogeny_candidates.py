@@ -21,11 +21,17 @@ def test_expand_phylogeny_candidates_writes_partition_and_seed_sidecar(tmp_path)
     )
 
     assert clusters.read_text() == "a b c d\n"
+    assert (working / "phylogeny_candidate_superfamilies.txt").read_text() == (
+        "a b c d\n"
+    )
     assert (working / "phylogeny_candidate_seeds.tsv").read_text() == (
         "candidate_family\tseed_families\n"
         "Family0000000\tSeed0000000,Seed0000001\n"
     )
     assert result["profile"] == "satellite_v1"
+    assert result["candidate_checkpoint"] == str(
+        (working / "phylogeny_candidate_superfamilies.txt").resolve()
+    )
     assert result["merges"] == 1
 
 

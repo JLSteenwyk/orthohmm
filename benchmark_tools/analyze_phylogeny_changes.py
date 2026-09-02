@@ -344,6 +344,15 @@ def _stratified_external_relations(
     return result
 
 
+def family_size_category(size: int) -> str:
+    """Return a fixed, benchmark-independent RefOG size stratum."""
+    if size <= 20:
+        return "small_2_20"
+    if size <= 50:
+        return "medium_21_50"
+    return "large_gt_50"
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--refogs", required=True, type=Path)
@@ -392,6 +401,11 @@ def main(argv: Sequence[str] | None = None) -> int:
         )
     identity_cutoff = statistics.median(identities)
     copy_categories = {"single_copy": [], "multi_copy": []}
+    size_categories = {
+        "small_2_20": [],
+        "medium_21_50": [],
+        "large_gt_50": [],
+    }
     identity_categories = {"lower_identity": [], "higher_identity": []}
     refog_records = []
     for index, (group, identity) in enumerate(zip(refogs, identities)):
@@ -408,6 +422,8 @@ def main(argv: Sequence[str] | None = None) -> int:
             "lower_identity" if identity <= identity_cutoff else "higher_identity"
         )
         copy_categories[copy_label].append(index)
+        size_label = family_size_category(len(group))
+        size_categories[size_label].append(index)
         identity_categories[identity_label].append(index)
         possible = {
             (index, left, right)
@@ -420,6 +436,7 @@ def main(argv: Sequence[str] | None = None) -> int:
                 "species": len(species_counts),
                 "max_species_copies": max(species_counts.values(), default=0),
                 "copy_category": copy_label,
+                "size_category": size_label,
                 "mean_pairwise_identity": identity,
                 "identity_category": identity_label,
                 "baseline_pair_recall": len(possible & baseline_within) / len(possible),
@@ -474,6 +491,14 @@ def main(argv: Sequence[str] | None = None) -> int:
                 refogs, candidates, root_hogs, copy_categories
             ),
         },
+        "family_size_strata": {
+            "pair_recall": _stratified_recall(
+                refogs, baseline_within, phylogeny_within, size_categories
+            ),
+            "external_relations": _stratified_external_relations(
+                refogs, candidates, root_hogs, size_categories
+            ),
+        },
         "sequence_identity_strata": {
             "median_mean_pairwise_identity": identity_cutoff,
             "method": "MAFFT alignment; pairwise identity excludes gap-bearing positions",
@@ -497,6 +522,7 @@ def main(argv: Sequence[str] | None = None) -> int:
                 "partition_changes": payload["partition_changes"],
                 "reference_pair_metrics": payload["reference_pair_metrics"],
                 "copy_number_strata": payload["copy_number_strata"],
+                "family_size_strata": payload["family_size_strata"],
                 "sequence_identity_strata": payload["sequence_identity_strata"],
             },
             indent=2,

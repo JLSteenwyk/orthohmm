@@ -36,9 +36,18 @@ start_epoch=$(date +%s)
     "${METRICS_JSON}" \
     --cpu "${THREADS}" \
     --threads-per-worker "${THREADS_PER_WORKER}" \
+    --matrix BLOSUM62 \
+    --evalue 1e-4 \
+    --clustering leiden \
+    --cpm-resolution 0.1 \
+    --refinement-profile default \
     --accuracy-profile high_sensitivity \
     --phylogeny reconcile \
     --species-tree-mode infer \
+    --species-tree-rooting min_variance \
+    --phylogeny-candidates satellite_v2 \
+    --phylogeny-root-rule species_overlap \
+    --phylogeny-pair-rule positive_paralogy \
     --aligner "${ALIGNER}" \
     --tree-builder "${TREE_BUILDER}" \
     > "${OUTDIR}/run.log" 2>&1

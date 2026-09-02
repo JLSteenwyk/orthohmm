@@ -23,4 +23,9 @@ readonly TREE_BUILDER=${TREE_BUILDER:-/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/
     --cpu "${THREADS}" \
     --aligner "${ALIGNER}" \
     --tree-builder "${TREE_BUILDER}" \
+    --species-tree-rooting min_variance \
+    --root-rule species_overlap \
+    --pair-rule positive_paralogy \
+    --membership-constraints \
+        "${OUTDIR}/output/orthohmm_working_res/phylogeny_candidate_merges.json" \
     > "${OUTDIR}/resume.log" 2>&1

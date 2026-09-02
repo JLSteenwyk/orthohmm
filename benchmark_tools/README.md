@@ -315,8 +315,11 @@ After freezing a phylogeny-aware candidate, submit its QfO workflow with:
 benchmark_tools/submit_orthohmm_phylogeny_qfo.sh
 ```
 
-This run infers its species tree internally and submits OrthoHMM's native
-reconciled cross-species pairs to QfO. It does not expand root HOGs into cliques.
+This run freezes `high_sensitivity` plus the `satellite_v2` HMM candidate
+profile, minimum-variance internal species-tree rooting, the `species_overlap`
+root-HOG rule, and the `positive_paralogy` pair rule. It infers its species tree
+internally and submits OrthoHMM's native reconciled cross-species pairs to QfO.
+It does not expand root HOGs into cliques.
 
 If a fresh production run reaches a verified candidate-cluster checkpoint but
 fails during phylogeny, `submit_resume_orthohmm_phylogeny_qfo.sh` resumes only
