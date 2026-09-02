@@ -175,6 +175,15 @@ The production default remains `supported_children`; the replay compares that
 rule with progressively broader root-level duplication evidence from the same
 rooted trees.
 
+Before tuning candidate-family or reconciliation parameters, freeze the
+OrthoBench development and validation RefOGs without reading their members:
+
+```bash
+python benchmark_tools/create_orthobench_partition.py \
+  --refogs /path/to/Open_Orthobench/BENCHMARKS/RefOGs \
+  --json benchmark_tools/results/orthobench_partition.json
+```
+
 Synthetic phylogeny holdouts accept independent reconciliation policies. For
 example, evaluate the policy that preserves pairs at mapping-only conflicts
 while retaining the conservative root-HOG rule with:

@@ -1,0 +1,445 @@
+{
+  "command": [
+    "/home/bizon/anaconda3/bin/python3",
+    "benchmark_tools/create_orthobench_partition.py",
+    "--refogs",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs",
+    "--json",
+    "benchmark_tools/results/orthobench_phylogeny_partition_20260902.json"
+  ],
+  "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+  "description": "Predefined OrthoBench development/validation partition; assignment uses filenames only and does not inspect RefOG membership labels.",
+  "development": [
+    "RefOG001.txt",
+    "RefOG004.txt",
+    "RefOG008.txt",
+    "RefOG010.txt",
+    "RefOG012.txt",
+    "RefOG014.txt",
+    "RefOG017.txt",
+    "RefOG019.txt",
+    "RefOG021.txt",
+    "RefOG023.txt",
+    "RefOG024.txt",
+    "RefOG025.txt",
+    "RefOG027.txt",
+    "RefOG029.txt",
+    "RefOG030.txt",
+    "RefOG031.txt",
+    "RefOG033.txt",
+    "RefOG034.txt",
+    "RefOG035.txt",
+    "RefOG039.txt",
+    "RefOG040.txt",
+    "RefOG041.txt",
+    "RefOG042.txt",
+    "RefOG045.txt",
+    "RefOG046.txt",
+    "RefOG048.txt",
+    "RefOG049.txt",
+    "RefOG053.txt",
+    "RefOG056.txt",
+    "RefOG059.txt",
+    "RefOG061.txt",
+    "RefOG062.txt",
+    "RefOG064.txt",
+    "RefOG069.txt",
+    "RefOG070.txt"
+  ],
+  "generated_at": "2026-09-02T16:39:49.538960+00:00",
+  "git": {
+    "commit": "30a3a17fab9d38482839f9223fd19c2b4b839cdb",
+    "dirty": true
+  },
+  "partition_salt": "orthohmm-phylogeny-candidates-v1",
+  "refogs": {
+    "RefOG001.txt": {
+      "bytes": 273,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG001.txt",
+      "sha256": "83429b3e93256557d7b22e5262702de391bb81c5d94c3d1d409103e87e46cb30"
+    },
+    "RefOG002.txt": {
+      "bytes": 346,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG002.txt",
+      "sha256": "cc41b273ef98fb394b52b2167f9f7277c5914c4baf481afcbe96dee0319b4a61"
+    },
+    "RefOG003.txt": {
+      "bytes": 935,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG003.txt",
+      "sha256": "0eab9b709426d7b3303d621215c1fe6bb5c9ad2032697c053ae062bf12086224"
+    },
+    "RefOG004.txt": {
+      "bytes": 223,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG004.txt",
+      "sha256": "8ad2db4e9a3ced09fe52ffff2c1aa90986de760f5df22266c301099b0061fbc2"
+    },
+    "RefOG005.txt": {
+      "bytes": 628,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG005.txt",
+      "sha256": "21d3c8f98e4e6402cc9e90d649aa5acc0b269082a550c2b6b2637b2e26d1d505"
+    },
+    "RefOG006.txt": {
+      "bytes": 886,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG006.txt",
+      "sha256": "2a4b44023011b5e7b88ae8f6089ab43d0a4d5d9857d8ee1e0db4b132ce42fb8c"
+    },
+    "RefOG007.txt": {
+      "bytes": 1065,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG007.txt",
+      "sha256": "f55ee153b25f544784d13319ab2cf5eacb564e90ae9161dadc818a55a7d2eabc"
+    },
+    "RefOG008.txt": {
+      "bytes": 251,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG008.txt",
+      "sha256": "34b3bfdb70a847d36fa2afb1230271ce7bec67cab42bab3f88b659c7fe994626"
+    },
+    "RefOG009.txt": {
+      "bytes": 422,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG009.txt",
+      "sha256": "77a03d9e055790dd789d12032e54ef15fb2f7c61834d695685176d5e0b6a6c21"
+    },
+    "RefOG010.txt": {
+      "bytes": 57,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG010.txt",
+      "sha256": "cffa508146453c480a0959a9e2ed08617804d519c937be9094385ec4c5795ff5"
+    },
+    "RefOG011.txt": {
+      "bytes": 1743,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG011.txt",
+      "sha256": "1f32f081e3f1ef11a507164620b5e6d05b76e6e8f0fabc86bb4e4f0de3789047"
+    },
+    "RefOG012.txt": {
+      "bytes": 846,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG012.txt",
+      "sha256": "697b92f069841e7b9ec967db9e045e331b58403acc1dcf177a92be24ec262ddd"
+    },
+    "RefOG013.txt": {
+      "bytes": 339,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG013.txt",
+      "sha256": "ccd3d5e217b5485620465f27e71b0477c895f4bc6f8349b8f94e1021165a0bd1"
+    },
+    "RefOG014.txt": {
+      "bytes": 781,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG014.txt",
+      "sha256": "b9d2746e3d4485239f992db90fb3ac69d0e0114f9a47ebfd947a5ff190f5fca3"
+    },
+    "RefOG015.txt": {
+      "bytes": 551,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG015.txt",
+      "sha256": "042d77fb136b840e4e46f089c1923ba077226d860e14829bd684f09863040504"
+    },
+    "RefOG016.txt": {
+      "bytes": 462,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG016.txt",
+      "sha256": "b88255bb9a44d76fe001d10395edadfa4055a451352d6d7870a5cf82cfe0e191"
+    },
+    "RefOG017.txt": {
+      "bytes": 545,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG017.txt",
+      "sha256": "873750215ea94753e998895d4f3fc344a75720cada7bf372bb3d6318bed81813"
+    },
+    "RefOG018.txt": {
+      "bytes": 219,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG018.txt",
+      "sha256": "29a622397ed97572bf0483f0095eb4efbc2073b0439d260a16c10c202b92b09a"
+    },
+    "RefOG019.txt": {
+      "bytes": 235,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG019.txt",
+      "sha256": "e685d81377adc9ba9df0f2c8ab387799698c70c824a7f9e6ffaac5d116dd4006"
+    },
+    "RefOG020.txt": {
+      "bytes": 514,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG020.txt",
+      "sha256": "fe3bd2f9b42f1d4229a57b8384dc94ba101da00b5e817bf91960c874461fd5dd"
+    },
+    "RefOG021.txt": {
+      "bytes": 2323,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG021.txt",
+      "sha256": "8e5b2c8a45af7d108d9e63282b6544b518ddeaf68b033ed3b3f65de71f85c211"
+    },
+    "RefOG022.txt": {
+      "bytes": 647,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG022.txt",
+      "sha256": "0b19a8ec969fac32886200de47c4641a0d269df81d603d12807fbc2eb6a2c606"
+    },
+    "RefOG023.txt": {
+      "bytes": 1275,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG023.txt",
+      "sha256": "6a1b29994c981d6d6c1ffd3ceb2e3f66c0bcbb9aef1acfe52561c85ea67c40be"
+    },
+    "RefOG024.txt": {
+      "bytes": 945,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG024.txt",
+      "sha256": "127afacdd0443f0f2106706f51dfeebbdca3010d8891a7f4072d18793c3caa83"
+    },
+    "RefOG025.txt": {
+      "bytes": 237,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG025.txt",
+      "sha256": "f7b773801fde7b29ececec18eab286caa4fed334ff5a4513776e2f0beff8e186"
+    },
+    "RefOG026.txt": {
+      "bytes": 789,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG026.txt",
+      "sha256": "e5d3ec13969b8c881106427b6aa7ebd5bfd1d8570faf750da181c7b076272a58"
+    },
+    "RefOG027.txt": {
+      "bytes": 367,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG027.txt",
+      "sha256": "96219227d0d623ab6e866b0f8479defb2765dff6fadd1614389f088db8e7728d"
+    },
+    "RefOG028.txt": {
+      "bytes": 443,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG028.txt",
+      "sha256": "c9c1011e5cd7985abf5090097a341c162c53384a9267d00a54e51dea02b1a851"
+    },
+    "RefOG029.txt": {
+      "bytes": 237,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG029.txt",
+      "sha256": "7dc2b1ba66646679201360b40df5f593393944e8c96e8578eaa2aefa9f1af05f"
+    },
+    "RefOG030.txt": {
+      "bytes": 232,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG030.txt",
+      "sha256": "f54fb4593b909faee8b179c7214167f68a0a62596b901b61ab77c5c8ffb9107b"
+    },
+    "RefOG031.txt": {
+      "bytes": 587,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG031.txt",
+      "sha256": "5bfc570a11355d5855bf421ce855e68e8ab87ad69893993243ae4a0d8356dce9"
+    },
+    "RefOG032.txt": {
+      "bytes": 240,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG032.txt",
+      "sha256": "d383a06984f78e2d6a25356ca8ae9b3fce2864082a9deb08fc26db3fa67dbbc2"
+    },
+    "RefOG033.txt": {
+      "bytes": 561,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG033.txt",
+      "sha256": "3d59ba23ebde8498d2597e4c386f49ad36bbdbf5a502ac146b871485931e4668"
+    },
+    "RefOG034.txt": {
+      "bytes": 393,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG034.txt",
+      "sha256": "37d37458c70f2b002f3a6da00f200e2acf07f5788e01f09afe34038b1a4f781a"
+    },
+    "RefOG035.txt": {
+      "bytes": 599,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG035.txt",
+      "sha256": "938760f99423516db71efa3744b9876ea6b4a015a337f30dbc437b80bb169cd9"
+    },
+    "RefOG036.txt": {
+      "bytes": 853,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG036.txt",
+      "sha256": "8fe4b897a7cf9d0d45b247064eb4cf306e98dba2875becf9b40bba602db6fa89"
+    },
+    "RefOG037.txt": {
+      "bytes": 630,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG037.txt",
+      "sha256": "81607943a81f43af7fa27b1ca4c426c4285dd0b5008b7755e100feffc8294008"
+    },
+    "RefOG038.txt": {
+      "bytes": 168,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG038.txt",
+      "sha256": "4e196096b0a785d18edd335c2c5fce33cfe647132bd6dbea1c6162631f569180"
+    },
+    "RefOG039.txt": {
+      "bytes": 372,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG039.txt",
+      "sha256": "fd884b568fc7a38bbf72d37858c318385be126688535ed2e7c3a3e4467f0fb78"
+    },
+    "RefOG040.txt": {
+      "bytes": 235,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG040.txt",
+      "sha256": "dd543547410ce8d8e19869ff271dadca05cc04c6bb4e7e8c2b6615192420554b"
+    },
+    "RefOG041.txt": {
+      "bytes": 309,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG041.txt",
+      "sha256": "56f003823b1313a6e719286591201a9cc156ee62717dd91129872f385d124553"
+    },
+    "RefOG042.txt": {
+      "bytes": 199,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG042.txt",
+      "sha256": "a285ba294591e98fb6932e5321ebe25714503419cc49559e717cbc94f42c7f7a"
+    },
+    "RefOG043.txt": {
+      "bytes": 311,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG043.txt",
+      "sha256": "5ea47e0533f6475d8ba7a88738929be897d89aa1736d05bc2b77fc7d5eb28505"
+    },
+    "RefOG044.txt": {
+      "bytes": 251,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG044.txt",
+      "sha256": "1b3c6818c8fcfc4595a85773f1080bd2b8b64239c70f3d62a878c86e6ccd82b5"
+    },
+    "RefOG045.txt": {
+      "bytes": 233,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG045.txt",
+      "sha256": "a15febeab6c95f24711bf5e6ce74e3f0af6d627342727836f98e3838a359ba9a"
+    },
+    "RefOG046.txt": {
+      "bytes": 596,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG046.txt",
+      "sha256": "d144bd70880389693b80ecd78446bf1f6a5095001e221d16f90a6f4523cc636d"
+    },
+    "RefOG047.txt": {
+      "bytes": 663,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG047.txt",
+      "sha256": "bb42a9c8b8a551c1824deb190ebde19d5c4bd18f6c77d660815f7a4e77cfe484"
+    },
+    "RefOG048.txt": {
+      "bytes": 745,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG048.txt",
+      "sha256": "042ec2230f0266557b989b9a7e18e2a97196b7a8cbfdc3fef436634c1b5353ba"
+    },
+    "RefOG049.txt": {
+      "bytes": 184,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG049.txt",
+      "sha256": "650593062675fe03672ead1bb2c99ea019033087d6d2affc99db93ea840223c6"
+    },
+    "RefOG050.txt": {
+      "bytes": 248,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG050.txt",
+      "sha256": "b8709f35070f357fcdbde427cf421c53f02de6b2de79ccaa2033afb013c1e002"
+    },
+    "RefOG051.txt": {
+      "bytes": 311,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG051.txt",
+      "sha256": "7ed92e4910292450ecb63193946105125f017d28b256a8796df83d79a5f101ee"
+    },
+    "RefOG052.txt": {
+      "bytes": 282,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG052.txt",
+      "sha256": "cfab4664d45c49c68ac8285e2205d79d5c7737f7b1f56268a892b440015d2478"
+    },
+    "RefOG053.txt": {
+      "bytes": 237,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG053.txt",
+      "sha256": "79aeb065ecb4ef38326288187e3c478e73abace5e6ae09ff1c99c2f669602290"
+    },
+    "RefOG054.txt": {
+      "bytes": 801,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG054.txt",
+      "sha256": "7f136708ffb2ea5ef3185ed4ab3fc9f199caa3d56c81fd2f57589df819aee2ef"
+    },
+    "RefOG055.txt": {
+      "bytes": 539,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG055.txt",
+      "sha256": "38611031e58d4c818f900044b091b9fdb5e377a147a1322a653cba557cb29298"
+    },
+    "RefOG056.txt": {
+      "bytes": 161,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG056.txt",
+      "sha256": "947e4834280633318c0e236d7b9ee95406cf5b610333001ff5ac888e227c082a"
+    },
+    "RefOG057.txt": {
+      "bytes": 292,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG057.txt",
+      "sha256": "15b85f9f0575b69408ce48b9da07cdc2539f4df9bcb65c99c52fd346716f55bd"
+    },
+    "RefOG058.txt": {
+      "bytes": 929,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG058.txt",
+      "sha256": "5697a188e1f95be9ba1cb8d07fc510c449eb680b0e9c64ede9e75d891fe444fd"
+    },
+    "RefOG059.txt": {
+      "bytes": 187,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG059.txt",
+      "sha256": "232e7260d7ebe987757520539390d71862d9632b68729c35621f2260a82ae9c7"
+    },
+    "RefOG060.txt": {
+      "bytes": 1263,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG060.txt",
+      "sha256": "8d86da3230a2c31ce57a1d3e1042f8b4c9b40e9853fb8ef17869432848e6e377"
+    },
+    "RefOG061.txt": {
+      "bytes": 561,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG061.txt",
+      "sha256": "87476a60757a7e8fc8286ab2b325df5cb020a8e4b35b61fc4166bb0834a59c60"
+    },
+    "RefOG062.txt": {
+      "bytes": 199,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG062.txt",
+      "sha256": "6960f0a5a9768a53684f6a181fc80c6971850edc0716b268f5cc69e19abc9368"
+    },
+    "RefOG063.txt": {
+      "bytes": 386,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG063.txt",
+      "sha256": "350a327be6b22ca3cfa0721d75188f34835be03368549a83061368a714114bf3"
+    },
+    "RefOG064.txt": {
+      "bytes": 264,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG064.txt",
+      "sha256": "98d3b3b091217279227b5924293bb6c6fa740b3658415c3793a8a643511c504a"
+    },
+    "RefOG065.txt": {
+      "bytes": 180,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG065.txt",
+      "sha256": "b6255142e05c38a987eb06562ff1ee6491aeb766c2419833b84f6784cd8e7149"
+    },
+    "RefOG066.txt": {
+      "bytes": 252,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG066.txt",
+      "sha256": "f5ab9dc90a1385c3df885483670bc43f147d06d17b1b95f643575f379d0c1f0b"
+    },
+    "RefOG067.txt": {
+      "bytes": 235,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG067.txt",
+      "sha256": "25122b591f8f1bea20e25940669f02e693a2aba9e2b370e3bd6738cc1279dd53"
+    },
+    "RefOG068.txt": {
+      "bytes": 590,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG068.txt",
+      "sha256": "1d096936b040969a593ee687c5121d0bb73d94101300ded9225898059d34d312"
+    },
+    "RefOG069.txt": {
+      "bytes": 570,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG069.txt",
+      "sha256": "0d218d0bcd422e20b11bef77627de30d84b64f28517d6cd03707ca09507980c5"
+    },
+    "RefOG070.txt": {
+      "bytes": 235,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG070.txt",
+      "sha256": "8c47b04182dc619071875562f04d867a1b59c97e0635a4e262af72d85dfd8205"
+    }
+  },
+  "schema_version": 1,
+  "validation": [
+    "RefOG002.txt",
+    "RefOG003.txt",
+    "RefOG005.txt",
+    "RefOG006.txt",
+    "RefOG007.txt",
+    "RefOG009.txt",
+    "RefOG011.txt",
+    "RefOG013.txt",
+    "RefOG015.txt",
+    "RefOG016.txt",
+    "RefOG018.txt",
+    "RefOG020.txt",
+    "RefOG022.txt",
+    "RefOG026.txt",
+    "RefOG028.txt",
+    "RefOG032.txt",
+    "RefOG036.txt",
+    "RefOG037.txt",
+    "RefOG038.txt",
+    "RefOG043.txt",
+    "RefOG044.txt",
+    "RefOG047.txt",
+    "RefOG050.txt",
+    "RefOG051.txt",
+    "RefOG052.txt",
+    "RefOG054.txt",
+    "RefOG055.txt",
+    "RefOG057.txt",
+    "RefOG058.txt",
+    "RefOG060.txt",
+    "RefOG063.txt",
+    "RefOG065.txt",
+    "RefOG066.txt",
+    "RefOG067.txt",
+    "RefOG068.txt"
+  ]
+}
