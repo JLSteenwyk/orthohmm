@@ -1,0 +1,63 @@
+{
+  "command": [
+    "/home/bizon/anaconda3/bin/python3",
+    "benchmark_tools/replay_phylogeny.py",
+    "--fasta-directory",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input",
+    "--candidate-clusters",
+    "benchmarks/results/phylogeny_candidate_satellite_m12_i2_margin15_20260902/candidate_clusters.txt",
+    "--output-directory",
+    "benchmarks/results/phylogeny_satellite_m12_i2_minvariance_20260902_r1",
+    "--json",
+    "benchmark_tools/results/phylogeny_satellite_m12_i2_minvariance_20260902_r1.json",
+    "--cpu",
+    "32",
+    "--species-tree-mode",
+    "infer",
+    "--species-tree-rooting",
+    "min_variance",
+    "--aligner",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin/mafft",
+    "--tree-builder",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220/FastTree",
+    "--root-rule",
+    "species_overlap",
+    "--pair-rule",
+    "positive_paralogy",
+    "--checkpoint-source",
+    "benchmarks/results/phylogeny_satellite_m8_internal_20260902_r1"
+  ],
+  "counts": {},
+  "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+  "error": "KeyboardInterrupt: ",
+  "finished_at_epoch_s": 1788372321.4665296,
+  "metadata": {
+    "cpu_budget": 32,
+    "harness": "benchmark_tools.replay_phylogeny",
+    "pair_orthology_rule": "positive_paralogy",
+    "root_duplication_rule": "species_overlap",
+    "species_tree_mode": "infer",
+    "species_tree_rooting": "min_variance"
+  },
+  "peak_process_tree_rss_bytes": 1596534784,
+  "peak_process_tree_rss_gib": 1.486889,
+  "pid": 2497966,
+  "platform": "Linux-6.8.0-55-generic-x86_64-with-glibc2.39",
+  "python": "3.10.13",
+  "rss_measurement": "sampled_sum_of_linux_proc_tree_rss",
+  "schema_version": 1,
+  "stages": {
+    "phylogeny": {
+      "peak_process_tree_rss_bytes": 1596534784,
+      "peak_process_tree_rss_gib": 1.486889,
+      "system_cpu_s": 309.952188,
+      "user_cpu_s": 5776.001833,
+      "wall_s": 260.523149
+    }
+  },
+  "started_at_epoch_s": 1788372060.9404416,
+  "status": "failed",
+  "system_cpu_s": 311.49074,
+  "user_cpu_s": 5783.065237,
+  "wall_s": 260.526088
+}

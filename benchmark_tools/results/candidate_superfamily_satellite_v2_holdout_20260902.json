@@ -1,0 +1,228 @@
+{
+  "description": "Independent fragmented-family graph holdout with asymmetric cross-family decoys",
+  "generated_at": "2026-09-02T18:13:57.332346+00:00",
+  "git": {
+    "commit": "1686e78b59e80357eb80fa876c1423264f725354",
+    "dirty": true
+  },
+  "results": [
+    {
+      "bounded_four_pass": {
+        "candidate_families": 24,
+        "completed_iterations": 4,
+        "directed_cluster_relations": 154,
+        "merges": 65,
+        "pair_score": {
+          "expected_pairs": 133,
+          "f_score": 1.0,
+          "precision": 1.0,
+          "predicted_pairs": 133,
+          "recall": 1.0,
+          "true_positive_pairs": 133
+        },
+        "requested_iterations": 4,
+        "seed": 101,
+        "seed_fragments": 89,
+        "truth_families": 24
+      },
+      "one_pass": {
+        "candidate_families": 65,
+        "completed_iterations": 1,
+        "directed_cluster_relations": 154,
+        "merges": 24,
+        "pair_score": {
+          "expected_pairs": 133,
+          "f_score": 0.3057324840764331,
+          "precision": 1.0,
+          "predicted_pairs": 24,
+          "recall": 0.18045112781954886,
+          "true_positive_pairs": 24
+        },
+        "requested_iterations": 1,
+        "seed": 101,
+        "seed_fragments": 89,
+        "truth_families": 24
+      },
+      "satellite_one_pass": {
+        "candidate_families": 24,
+        "completed_iterations": 1,
+        "directed_cluster_relations": 154,
+        "merges": 65,
+        "pair_score": {
+          "expected_pairs": 133,
+          "f_score": 1.0,
+          "precision": 1.0,
+          "predicted_pairs": 133,
+          "recall": 1.0,
+          "true_positive_pairs": 133
+        },
+        "requested_iterations": 1,
+        "seed": 101,
+        "seed_fragments": 89,
+        "truth_families": 24
+      },
+      "seed": 101
+    },
+    {
+      "bounded_four_pass": {
+        "candidate_families": 24,
+        "completed_iterations": 4,
+        "directed_cluster_relations": 146,
+        "merges": 61,
+        "pair_score": {
+          "expected_pairs": 119,
+          "f_score": 1.0,
+          "precision": 1.0,
+          "predicted_pairs": 119,
+          "recall": 1.0,
+          "true_positive_pairs": 119
+        },
+        "requested_iterations": 4,
+        "seed": 211,
+        "seed_fragments": 85,
+        "truth_families": 24
+      },
+      "one_pass": {
+        "candidate_families": 61,
+        "completed_iterations": 1,
+        "directed_cluster_relations": 146,
+        "merges": 24,
+        "pair_score": {
+          "expected_pairs": 119,
+          "f_score": 0.3356643356643357,
+          "precision": 1.0,
+          "predicted_pairs": 24,
+          "recall": 0.20168067226890757,
+          "true_positive_pairs": 24
+        },
+        "requested_iterations": 1,
+        "seed": 211,
+        "seed_fragments": 85,
+        "truth_families": 24
+      },
+      "satellite_one_pass": {
+        "candidate_families": 24,
+        "completed_iterations": 1,
+        "directed_cluster_relations": 146,
+        "merges": 61,
+        "pair_score": {
+          "expected_pairs": 119,
+          "f_score": 1.0,
+          "precision": 1.0,
+          "predicted_pairs": 119,
+          "recall": 1.0,
+          "true_positive_pairs": 119
+        },
+        "requested_iterations": 1,
+        "seed": 211,
+        "seed_fragments": 85,
+        "truth_families": 24
+      },
+      "seed": 211
+    },
+    {
+      "bounded_four_pass": {
+        "candidate_families": 24,
+        "completed_iterations": 4,
+        "directed_cluster_relations": 148,
+        "merges": 62,
+        "pair_score": {
+          "expected_pairs": 124,
+          "f_score": 1.0,
+          "precision": 1.0,
+          "predicted_pairs": 124,
+          "recall": 1.0,
+          "true_positive_pairs": 124
+        },
+        "requested_iterations": 4,
+        "seed": 307,
+        "seed_fragments": 86,
+        "truth_families": 24
+      },
+      "one_pass": {
+        "candidate_families": 62,
+        "completed_iterations": 1,
+        "directed_cluster_relations": 148,
+        "merges": 24,
+        "pair_score": {
+          "expected_pairs": 124,
+          "f_score": 0.3243243243243243,
+          "precision": 1.0,
+          "predicted_pairs": 24,
+          "recall": 0.1935483870967742,
+          "true_positive_pairs": 24
+        },
+        "requested_iterations": 1,
+        "seed": 307,
+        "seed_fragments": 86,
+        "truth_families": 24
+      },
+      "satellite_one_pass": {
+        "candidate_families": 24,
+        "completed_iterations": 1,
+        "directed_cluster_relations": 148,
+        "merges": 62,
+        "pair_score": {
+          "expected_pairs": 124,
+          "f_score": 1.0,
+          "precision": 1.0,
+          "predicted_pairs": 124,
+          "recall": 1.0,
+          "true_positive_pairs": 124
+        },
+        "requested_iterations": 1,
+        "seed": 307,
+        "seed_fragments": 86,
+        "truth_families": 24
+      },
+      "seed": 307
+    }
+  ],
+  "schema_version": 1,
+  "selection_rule": {
+    "max_component_genes": 5,
+    "max_iterations": 4,
+    "method": "reciprocal_best_cluster_normalized_support",
+    "min_average_score": 0.05,
+    "min_maximum_score": 0.05
+  },
+  "source": {
+    "bytes": 9722,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/candidate_superfamily_holdout.py",
+    "sha256": "49afc62583eb117e12ce99a71b3230ba374251f7b418ea82c4fb8cc6436c81bb"
+  },
+  "two_hop_satellite": {
+    "one_pass": {
+      "candidate_families": 3,
+      "completed_iterations": 1,
+      "directed_cluster_relations": 12,
+      "merges": 2,
+      "pair_score": {
+        "expected_pairs": 168,
+        "f_score": 0.8,
+        "precision": 1.0,
+        "predicted_pairs": 112,
+        "recall": 0.6666666666666666,
+        "true_positive_pairs": 112
+      },
+      "requested_iterations": 1,
+      "seed_fragments": 5
+    },
+    "two_pass": {
+      "candidate_families": 2,
+      "completed_iterations": 2,
+      "directed_cluster_relations": 12,
+      "merges": 3,
+      "pair_score": {
+        "expected_pairs": 168,
+        "f_score": 1.0,
+        "precision": 1.0,
+        "predicted_pairs": 168,
+        "recall": 1.0,
+        "true_positive_pairs": 168
+      },
+      "requested_iterations": 2,
+      "seed_fragments": 5
+    }
+  }
+}
