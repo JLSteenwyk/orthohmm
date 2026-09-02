@@ -23,3 +23,4 @@ class TestParser(object):
         assert parsed.tree_builder == "FastTree"
         assert parsed.phylogeny_root_rule == "supported_children"
         assert parsed.phylogeny_pair_rule == "lca"
+        assert parsed.phylogeny_candidates == "seed"

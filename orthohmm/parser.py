@@ -125,6 +125,9 @@ def create_parser() -> ArgumentParser:
         --phylogeny_pair_rule <rule>                pairwise orthology evidence rule
                                                     (default: lca)
 
+        --phylogeny_candidates <seed, satellite_v1> candidate-family expansion policy
+                                                    (default: seed)
+
         -------------------------------------
         | Detailed explanation of arguments | 
         -------------------------------------
@@ -433,6 +436,14 @@ def create_parser() -> ArgumentParser:
         default="lca",
         help=SUPPRESS,
         metavar="phylogeny_pair_rule",
+    )
+
+    optional.add_argument(
+        "--phylogeny_candidates",
+        choices=["seed", "satellite_v1"],
+        default="seed",
+        help=SUPPRESS,
+        metavar="phylogeny_candidates",
     )
 
     optional.add_argument(

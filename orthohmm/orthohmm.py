@@ -40,6 +40,7 @@ from .parser import create_parser
 from .metrics import PipelineMetrics
 from .refinement import (
     DEFAULT_COPY_SPLIT_MIN_DATASET_SPECIES,
+    merge_supported_satellite_candidate_clusters,
     resolve_refinement_profile,
     refine_cluster_indices,
 )
@@ -49,6 +50,72 @@ from .writer import (
 )
 
 logger = logging.getLogger(__name__)
+
+
+def _expand_phylogeny_candidates(
+    output_directory,
+    gene_names,
+    gene_to_species,
+    accuracy_hits,
+):
+    """Apply the frozen satellite-v1 profile and record seed provenance."""
+
+    cluster_path = os.path.join(
+        output_directory,
+        "orthohmm_working_res",
+        "orthohmm_edges_clustered.txt",
+    )
+    seed_clusters = read_index_clusters(cluster_path, gene_names)
+    gene_to_seed = np.full(len(gene_names), -1, dtype=np.int32)
+    for seed_id, cluster in enumerate(seed_clusters):
+        gene_to_seed[np.asarray(cluster, dtype=np.int64)] = seed_id
+    candidates, merges, relations, iterations = (
+        merge_supported_satellite_candidate_clusters(
+            seed_clusters,
+            *accuracy_hits,
+            gene_to_species,
+            max_component_genes=500,
+            max_satellite_genes=8,
+            max_satellite_to_anchor_ratio=0.75,
+            min_margin=1.5,
+            max_satellites_per_anchor=2,
+            max_species_overlap_fraction=1.0,
+            min_avg_score=0.0,
+            min_max_score=0.0,
+            min_coverage=0.5,
+            min_norm=0.02,
+            max_iterations=1,
+        )
+    )
+    temporary = cluster_path + ".candidates.tmp"
+    sidecar = os.path.join(
+        output_directory,
+        "orthohmm_working_res",
+        "phylogeny_candidate_seeds.tsv",
+    )
+    sidecar_temporary = sidecar + ".tmp"
+    with open(temporary, "w") as handle, open(sidecar_temporary, "w") as seed_handle:
+        seed_handle.write("candidate_family\tseed_families\n")
+        for candidate_id, cluster in enumerate(candidates):
+            genes = sorted(gene_names[gene] for gene in cluster)
+            handle.write(" ".join(genes) + "\n")
+            seed_ids = sorted({int(gene_to_seed[gene]) for gene in cluster})
+            seed_handle.write(
+                f"Family{candidate_id:07d}\t"
+                + ",".join(f"Seed{seed_id:07d}" for seed_id in seed_ids)
+                + "\n"
+            )
+    os.replace(temporary, cluster_path)
+    os.replace(sidecar_temporary, sidecar)
+    return {
+        "profile": "satellite_v1",
+        "seed_families": len(seed_clusters),
+        "candidate_families": len(candidates),
+        "merges": merges,
+        "directed_relations": relations,
+        "iterations": iterations,
+        "seed_sidecar": os.path.abspath(sidecar),
+    }
 
 
 def _collect_search_hit_arrays(search_results, evalue_threshold, gene_to_id):
@@ -296,6 +363,7 @@ def _execute(
         "phylogeny_root_rule", "supported_children"
     )
     phylogeny_pair_rule = kwargs.pop("phylogeny_pair_rule", "lca")
+    phylogeny_candidates = kwargs.pop("phylogeny_candidates", "seed")
     accuracy_config = resolve_accuracy_profile(accuracy_profile)
     if accuracy_config.multipass_graph and (
         search_mode != "builtin" or clustering != "leiden"
@@ -329,6 +397,7 @@ def _execute(
             tree_builder=tree_builder,
             phylogeny_root_rule=phylogeny_root_rule,
             phylogeny_pair_rule=phylogeny_pair_rule,
+            phylogeny_candidates=phylogeny_candidates,
         )
 
     search_results = None
@@ -624,6 +693,23 @@ def _execute(
             refinement_profile=refinement_profile,
         )
     metrics.add_metadata(refinement_substages_s=refinement_substages)
+    if phylogeny == "reconcile" and phylogeny_candidates == "satellite_v1":
+        if accuracy_hits is None:
+            raise ValueError(
+                "satellite_v1 phylogeny candidates require high_sensitivity accuracy"
+            )
+        with metrics.stage("phylogeny_candidates"):
+            candidate_result = _expand_phylogeny_candidates(
+                output_directory,
+                gene_names,
+                gene_to_species,
+                accuracy_hits,
+            )
+        metrics.add_metadata(phylogeny_candidate_profile=candidate_result)
+        metrics.add_counts(
+            phylogeny_seed_families=candidate_result["seed_families"],
+            phylogeny_candidate_merges=candidate_result["merges"],
+        )
     if phylogeny == "reconcile":
         from .phylogeny import PhylogenyConfig
         from .phylogeny_pipeline import run_phylogeny_stage

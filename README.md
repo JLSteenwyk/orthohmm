@@ -121,6 +121,10 @@ schema are unchanged.
 The `--phylogeny_root_rule confidence` policy additionally permits a
 root-level split supported by repeated species overlap or a gene-tree branch
 support of at least 0.9; missing and weak support remain conservative.
+Use `--phylogeny_candidates satellite_v1` with
+`--accuracy_profile high_sensitivity` to opt into bounded HMM-backed candidate
+expansion. The original groups are retained as seed provenance in
+`orthohmm_working_res/phylogeny_candidate_seeds.tsv`.
 
 ---
 

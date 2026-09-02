@@ -173,6 +173,7 @@ class TestArgsProcessing(object):
             "tree_builder",
             "phylogeny_root_rule",
             "phylogeny_pair_rule",
+            "phylogeny_candidates",
         ]
         assert sorted(res.keys()) == sorted(expected_keys)
 
@@ -183,6 +184,13 @@ class TestArgsProcessing(object):
         assert res["species_tree"] is None
         assert res["phylogeny_root_rule"] == "supported_children"
         assert res["phylogeny_pair_rule"] == "lca"
+        assert res["phylogeny_candidates"] == "seed"
+
+    def test_satellite_phylogeny_candidates_require_high_sensitivity(self, args):
+        args.phylogeny_candidates = "satellite_v1"
+
+        with pytest.raises(SystemExit):
+            process_args(args)
 
     def test_reconcile_supplied_requires_species_tree(self, args):
         args.phylogeny = "reconcile"

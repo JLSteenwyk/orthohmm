@@ -75,6 +75,23 @@ def parse_args(argv=None):
     parser.add_argument("--species-tree", type=Path)
     parser.add_argument("--aligner", default="mafft")
     parser.add_argument("--tree-builder", default="FastTree")
+    parser.add_argument(
+        "--phylogeny-candidates",
+        choices=("seed", "satellite_v1"),
+        default="seed",
+    )
+    parser.add_argument(
+        "--phylogeny-root-rule",
+        choices=(
+            "supported_children", "confidence", "species_overlap", "mapped_event"
+        ),
+        default="supported_children",
+    )
+    parser.add_argument(
+        "--phylogeny-pair-rule",
+        choices=("lca", "positive_paralogy"),
+        default="lca",
+    )
     return parser.parse_args(argv)
 
 
@@ -127,6 +144,9 @@ def main(argv=None) -> int:
             "--species_tree_mode", args.species_tree_mode,
             "--aligner", args.aligner,
             "--tree_builder", args.tree_builder,
+            "--phylogeny_candidates", args.phylogeny_candidates,
+            "--phylogeny_root_rule", args.phylogeny_root_rule,
+            "--phylogeny_pair_rule", args.phylogeny_pair_rule,
         ])
         if args.species_tree is not None:
             command.extend(["--species_tree", str(args.species_tree.resolve())])

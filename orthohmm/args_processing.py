@@ -129,6 +129,15 @@ def process_args(args) -> dict:
     if accuracy_profile == "high_sensitivity" and args.start:
         logger.warning("--accuracy_profile high_sensitivity cannot resume from --start search_res.")
         sys.exit()
+    phylogeny_candidates = (
+        getattr(args, "phylogeny_candidates", "seed") or "seed"
+    )
+    if phylogeny_candidates == "satellite_v1" and accuracy_profile != "high_sensitivity":
+        logger.warning(
+            "--phylogeny_candidates satellite_v1 requires "
+            "--accuracy_profile high_sensitivity."
+        )
+        sys.exit()
     metrics_json = getattr(args, "metrics_json", None)
     threads_per_worker = int(getattr(args, "threads_per_worker", 8) or 8)
     if threads_per_worker < 1:
@@ -193,4 +202,5 @@ def process_args(args) -> dict:
         tree_builder=phylogeny_config.tree_builder,
         phylogeny_root_rule=phylogeny_config.root_duplication_rule,
         phylogeny_pair_rule=phylogeny_config.pair_orthology_rule,
+        phylogeny_candidates=phylogeny_candidates,
     )
