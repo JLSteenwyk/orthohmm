@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "benchmark": "QfO 2020 retained six-metric assessment",
+  "method": "OrthoHMM phylogeny satellite_v2 checkpoint preview",
+  "status": "complete_non_authoritative_preview",
+  "purpose": "Label-blind scale and reproducibility check while the frozen fresh end-to-end satellite_v2 run remained active. This result was not eligible for the success claim or parameter tuning.",
+  "inference": {
+    "job_id": 20875,
+    "exit_code": "0:0",
+    "source_commit": "681ce931743caa570f3b2495dd273c0925c59029",
+    "checkpoint_source": "qfo_benchmark/results/orthohmm_high_sensitivity_isolated/output/orthohmm_working_res/high_sensitivity_checkpoint",
+    "checkpoint_manifest_sha256": "b90c787f050a087adeeb81b1cace18c9cbb30e1724926a40a1df6d7e49bd549c",
+    "wall_s": 3288.878,
+    "peak_process_tree_rss_gib": 6.8946,
+    "cpu_budget": 64,
+    "genes": 976504,
+    "seed_families": 390817,
+    "candidate_families": 350689,
+    "candidate_merges": 40128,
+    "reconciled_families": 24267,
+    "bypassed_families": 326422,
+    "checkpoint_hits": 10298,
+    "remapped_checkpoint_hits": 10297,
+    "root_hogs": 373904,
+    "duplications": 228842,
+    "speciations": 247897,
+    "uncertain_events": 76938,
+    "native_pairs": 5376471,
+    "qfo_filtered_pairs": 5359122,
+    "species_tree": {
+      "mode": "internally_inferred",
+      "core_markers": 23,
+      "placement_markers": 2,
+      "minimum_core_taxa": 39,
+      "rooting": "min_variance"
+    },
+    "membership_reconciliation": {
+      "constraints": 40128,
+      "supported_constraints": 27761,
+      "detached_constraints": 12367,
+      "detached_genes": 28515,
+      "root_hogs_added": 11704,
+      "ortholog_pairs_removed": 554255
+    }
+  },
+  "assessment": {
+    "initial_wrap_job_id": 20876,
+    "initial_wrap_exit_code": "2:0",
+    "initial_wrap_failure": "Slurm --wrap used /bin/sh, which rejected set -o pipefail before scoring started.",
+    "path_failure_job_id": 20877,
+    "path_failure_exit_code": "1:0",
+    "path_failure": "Darwin truncated the 161-character resolved predictions.db path to predictions.d.",
+    "successful_job_id": 20878,
+    "successful_exit_code": "0:0",
+    "successful_elapsed_s": 1743,
+    "scoring_fix_commit": "58ca3d3",
+    "event_year": 2020,
+    "all_six_metrics_complete": true,
+    "scores": {
+      "VGNC F": 0.9005326965466568,
+      "SwissTrees F": 0.7967509658653852,
+      "TreeFam-A F": 0.5703955983841587,
+      "EC": 0.97337863,
+      "GO": 0.48877334,
+      "FAS": 0.7609458114921752
+    },
+    "mean": 0.748462840381396,
+    "pairwise_components": {
+      "VGNC": {
+        "TPR": 0.8193365087323473,
+        "PPV": 0.9995922112345805
+      },
+      "SwissTrees": {
+        "TPR": 0.68562602,
+        "PPV": 0.9508654
+      },
+      "TreeFam-A": {
+        "TPR": 0.4057778,
+        "PPV": 0.95975232
+      }
+    }
+  },
+  "comparison": {
+    "orthofinder_3_1_5_mean": 0.7820708882895963,
+    "mean_delta": -0.03360804790820027,
+    "beats_orthofinder_mean": false
+  },
+  "checksums": {
+    "qfo_filtered_pairs_sha256": "5a7db3ed9644361ab5ea1df55fe71590df4eaf9cfb59a7182a0e4ddd312bb1d5",
+    "consolidated_results_sha256": "85cfef8ce51dfff2f02a04c7c000da289c926f910c380c34274459291ecdf094"
+  },
+  "source_paths": {
+    "inference": "qfo_benchmark/results/orthohmm_phylogeny_satellite_v2_candidate_preview",
+    "assessment": "qfo_benchmark/scoring/orthohmm_phylogeny_satellite_v2_candidate_preview_saved_20260902"
+  }
+}
