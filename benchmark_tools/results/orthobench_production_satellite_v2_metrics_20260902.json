@@ -1,0 +1,536 @@
+{
+  "command": [
+    "/home/bizon/anaconda3/bin/python",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/orthohmm/__main__.py",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input",
+    "-o",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/production_phylogeny_satellite_v2_orthobench_20260902",
+    "-c",
+    "32",
+    "--threads_per_worker",
+    "8",
+    "-x",
+    "BLOSUM62",
+    "-e",
+    "0.0001",
+    "--clustering",
+    "leiden",
+    "--cpm_resolution",
+    "0.1",
+    "--refinement_profile",
+    "default",
+    "--accuracy_profile",
+    "high_sensitivity",
+    "--metrics_json",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/production_phylogeny_satellite_v2_orthobench_20260902/metrics.json",
+    "--stop",
+    "infer",
+    "--phylogeny",
+    "reconcile",
+    "--species_tree_mode",
+    "infer",
+    "--aligner",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin/mafft",
+    "--tree_builder",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220/FastTree",
+    "--phylogeny_candidates",
+    "satellite_v2",
+    "--phylogeny_root_rule",
+    "species_overlap",
+    "--phylogeny_pair_rule",
+    "positive_paralogy",
+    "--species_tree_rooting",
+    "min_variance"
+  ],
+  "counts": {
+    "genes": 251378,
+    "high_sensitivity_final_singleton_edges": 125937,
+    "high_sensitivity_profile_candidates": 5014697,
+    "high_sensitivity_profile_edges": 24738,
+    "high_sensitivity_profile_hits": 579444,
+    "high_sensitivity_profiles": 15901,
+    "high_sensitivity_rbnh_edges": 1803122,
+    "high_sensitivity_singleton_edges": 137482,
+    "network_edges": 1935903,
+    "orthogroups": 59770,
+    "phylogeny_bypassed_families": 45764,
+    "phylogeny_candidate_families": 54445,
+    "phylogeny_candidate_merges": 8440,
+    "phylogeny_checkpoint_hits": 0,
+    "phylogeny_duplications": 59379,
+    "phylogeny_ortholog_pairs": 966439,
+    "phylogeny_reconciled_families": 8681,
+    "phylogeny_remapped_checkpoint_hits": 0,
+    "phylogeny_root_hogs": 59770,
+    "phylogeny_seed_families": 62885,
+    "phylogeny_speciations": 104016,
+    "phylogeny_species_tree_checkpoint_hit": false,
+    "phylogeny_species_tree_families": 200,
+    "phylogeny_uncertain_events": 13034,
+    "search_candidates": 298209630,
+    "significant_hits": 18486508,
+    "single_copy_orthogroups": 2595,
+    "singletons": 0,
+    "species": 12,
+    "species_pairs": 144
+  },
+  "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+  "finished_at_epoch_s": 1788383742.2587247,
+  "harness": {
+    "command": [
+      "/home/bizon/anaconda3/bin/python",
+      "-m",
+      "orthohmm",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input",
+      "-o",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/production_phylogeny_satellite_v2_orthobench_20260902",
+      "-c",
+      "32",
+      "--threads_per_worker",
+      "8",
+      "-x",
+      "BLOSUM62",
+      "-e",
+      "0.0001",
+      "--clustering",
+      "leiden",
+      "--cpm_resolution",
+      "0.1",
+      "--refinement_profile",
+      "default",
+      "--accuracy_profile",
+      "high_sensitivity",
+      "--metrics_json",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/production_phylogeny_satellite_v2_orthobench_20260902/metrics.json",
+      "--stop",
+      "infer",
+      "--phylogeny",
+      "reconcile",
+      "--species_tree_mode",
+      "infer",
+      "--aligner",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin/mafft",
+      "--tree_builder",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220/FastTree",
+      "--phylogeny_candidates",
+      "satellite_v2",
+      "--phylogeny_root_rule",
+      "species_overlap",
+      "--phylogeny_pair_rule",
+      "positive_paralogy",
+      "--species_tree_rooting",
+      "min_variance"
+    ],
+    "exit_code": 0,
+    "git_commit": "bb27197e4a2f5a21139af5d6f39d8db42e483fc3",
+    "git_dirty": true,
+    "input_manifest": [
+      {
+        "bytes": 8784620,
+        "path": "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+        "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+      },
+      {
+        "bytes": 11973324,
+        "path": "Canis_familiaris.CanFam3.1.pep.all.fa",
+        "sha256": "0d87161a9990b9d8b0d56b4e71dfbe74c6016b0dda3352247b35d85501c33b33"
+      },
+      {
+        "bytes": 5797677,
+        "path": "Ciona_intestinalis.KH.pep.all.fa",
+        "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+      },
+      {
+        "bytes": 17020497,
+        "path": "Danio_rerio.GRCz11.pep.all.fa",
+        "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+      },
+      {
+        "bytes": 7778910,
+        "path": "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+        "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+      },
+      {
+        "bytes": 9883133,
+        "path": "Gallus_gallus.GRCg6a.pep.all.fa",
+        "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+      },
+      {
+        "bytes": 13576811,
+        "path": "Homo_sapiens.GRCh38.pep.all.fa",
+        "sha256": "bff5d1f0f259c801dc607045e4c13bfc759098f17d536b307c13a89a523569ac"
+      },
+      {
+        "bytes": 11930628,
+        "path": "Monodelphis_domestica.ASM229v1.pep.all.fa",
+        "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+      },
+      {
+        "bytes": 12880578,
+        "path": "Mus_musculus.GRCm38.pep.all.fa",
+        "sha256": "3b6e0a68688294135324824e1879de86c1715a9f3c655406f6ec8fcfdd75db1a"
+      },
+      {
+        "bytes": 12782304,
+        "path": "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+        "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+      },
+      {
+        "bytes": 12000073,
+        "path": "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+        "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+      },
+      {
+        "bytes": 10463972,
+        "path": "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+        "sha256": "1f6ebacc342da127e4ab9c1a9cf7b627e8169df3cbc0d971d57655d974c8d9b2"
+      }
+    ],
+    "name": "benchmark_tools.benchmark_production",
+    "output_line_counts": {
+      "clusters_before_singletons": 59770,
+      "edges": 1935903,
+      "orthogroups": 59770
+    },
+    "output_manifest": [
+      {
+        "bytes": 5105646,
+        "path": "orthohmm_orthogroups.txt",
+        "sha256": "3889c432442ad57f0a3c1be989c1c706078218c651488084f33ede0240c83d8a"
+      },
+      {
+        "bytes": 106960165,
+        "path": "orthohmm_working_res/orthohmm_edges.txt",
+        "sha256": "01b8f135ac6b31aff141fba7ed47728866cda5ef0a3016cabf36c04750baac9c"
+      },
+      {
+        "bytes": 4567716,
+        "path": "orthohmm_working_res/orthohmm_edges_clustered.txt",
+        "sha256": "00c6039f7affa533622d2885a767ae455add01c7edac65649dc8be189a6acc9e"
+      },
+      {
+        "bytes": 6301075,
+        "path": "orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+        "sha256": "76229249770b1f875c6bd319ec524fb50721b048e68c284c4c3a3dba611ea216"
+      },
+      {
+        "bytes": 100248198,
+        "path": "orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+        "sha256": "4987854aa79ef4affe2c3c15997b4111885849ffa69b65ed1f3fce9ff05920d8"
+      },
+      {
+        "bytes": 553,
+        "path": "orthohmm_phylogeny/reconciliation_summary.json",
+        "sha256": "bb09371b046dc558a0d48ca2ae39abe265266e55a7d9457d62894570db0e0c3d"
+      },
+      {
+        "bytes": 9786,
+        "path": "orthohmm_phylogeny/provenance_manifest.json",
+        "sha256": "c94d35235e4ea8530284c9602838e341f4469c76c42bf19b7e1b90476f6e31f2"
+      },
+      {
+        "bytes": 5006,
+        "path": "benchmark.log",
+        "sha256": "e9fff79ea8ae74e0802ba3dbc9ae6aadd866f9a5fbfd78f317cfcf187346f4cc"
+      }
+    ],
+    "schema_version": 1,
+    "source_manifest": [
+      {
+        "bytes": 0,
+        "path": "orthohmm/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 127,
+        "path": "orthohmm/__main__.py",
+        "sha256": "59690e02073880a5ec60087a93d77e3448a3370bb78fb17ee9ce9d5300d0d45a"
+      },
+      {
+        "bytes": 14046,
+        "path": "orthohmm/accuracy.py",
+        "sha256": "1a35944ab7fea859143f599b1262aa111272787f6f735b9acc37d299427f2ad6"
+      },
+      {
+        "bytes": 7908,
+        "path": "orthohmm/args_processing.py",
+        "sha256": "12648aeaa4e8d0b0af60f707e90ec2c95b6983c4498dacd9bccfade1839f4c54"
+      },
+      {
+        "bytes": 10166,
+        "path": "orthohmm/externals.py",
+        "sha256": "5304b4190b01a53c7c4e3235f9d1df9e7eff1f01d09633d07750103487268115"
+      },
+      {
+        "bytes": 2977,
+        "path": "orthohmm/files.py",
+        "sha256": "f1ec2acaea2566615b06b0a37e17b77f76bbd87fe6f2c76560a318343f6871a1"
+      },
+      {
+        "bytes": 32293,
+        "path": "orthohmm/helpers.py",
+        "sha256": "faf9e85c6af8ad5f5740c81157e8ce40bbd98c1731991d9f3fbe1f47a05f6149"
+      },
+      {
+        "bytes": 1411,
+        "path": "orthohmm/leiden_worker.py",
+        "sha256": "7d6d9fa5827bd99dcce28d2248688bbeb762b4b547bbc4e7491c16f0e2090c41"
+      },
+      {
+        "bytes": 6812,
+        "path": "orthohmm/metrics.py",
+        "sha256": "d19bc9c9777b2dd01943f6421930f9fab02b7153519ab76e6a40272328195a1a"
+      },
+      {
+        "bytes": 30111,
+        "path": "orthohmm/orthohmm.py",
+        "sha256": "97fb3cf8388293ffb84b2aeef906b03b3659577e684b4bdc39ce5f2c9c02df53"
+      },
+      {
+        "bytes": 15939,
+        "path": "orthohmm/parser.py",
+        "sha256": "9a959b9948d944fc5361a661ac3faad55575674993c746800daf6db7eccceba5"
+      },
+      {
+        "bytes": 29732,
+        "path": "orthohmm/phylogeny.py",
+        "sha256": "216d97608e6dede8960f3b06fe7036bd23da8fae5677df88583ba9369ec3c1bf"
+      },
+      {
+        "bytes": 41369,
+        "path": "orthohmm/phylogeny_pipeline.py",
+        "sha256": "44e00316546b5df78354badd2b1a6bb595b685e98b86f686f1a32543d7f15e4f"
+      },
+      {
+        "bytes": 61183,
+        "path": "orthohmm/refinement.py",
+        "sha256": "991f1eb6a5f73d0442529ed19095a34b7c6ba8bff8dfe43a1127e24ec73fb26d"
+      },
+      {
+        "bytes": 0,
+        "path": "orthohmm/search/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 0,
+        "path": "orthohmm/search/_experimental/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 8599,
+        "path": "orthohmm/search/_experimental/viterbi_cuda_numba.py",
+        "sha256": "be998cf737f5c468417a84cc42d6f9c288133b6da09989ba1630d2c7d07fbdd2"
+      },
+      {
+        "bytes": 21146,
+        "path": "orthohmm/search/engine.py",
+        "sha256": "596e6e56b6dd3c2e72bbfa5bb67087285bd22833e4897443df0f9629a2f18b74"
+      },
+      {
+        "bytes": 1865,
+        "path": "orthohmm/search/evalue.py",
+        "sha256": "b395cd48874d75963512b5d1e249c5251796f869592a52983c8d55b98fe11841"
+      },
+      {
+        "bytes": 27982,
+        "path": "orthohmm/search/matrices.py",
+        "sha256": "36e59a6c649a72f9c3a5d6eca117b7fe84d5ff8e975a1d7561a82ee8d6c29fcb"
+      },
+      {
+        "bytes": 9180,
+        "path": "orthohmm/search/msa_center_star.py",
+        "sha256": "3790801fc294f2df9ae3c84897de410b1a1bb487b8ea4226d86c388c379f40ab"
+      },
+      {
+        "bytes": 6728,
+        "path": "orthohmm/search/msa_profile.py",
+        "sha256": "d4076b61905325f643dca1f7a6b4dbd6f2833398840fad7b79e3f255f2240468"
+      },
+      {
+        "bytes": 22855,
+        "path": "orthohmm/search/prefilter.py",
+        "sha256": "9842b1787d98a89bd819f9adbe340b6e2a170d63d16057645720a6bc9faf6d06"
+      },
+      {
+        "bytes": 6143,
+        "path": "orthohmm/search/profile.py",
+        "sha256": "20dca3dea06a85bdcf99e03e3abfab921fce38b9d7715097b0b4588a7cd7587e"
+      },
+      {
+        "bytes": 25077,
+        "path": "orthohmm/search/profile_expansion.py",
+        "sha256": "1025cfab4f80e3a85d6eaa3e768ae5e0e25dedb48fdba9deb08cb6e6aa7bb42a"
+      },
+      {
+        "bytes": 4509,
+        "path": "orthohmm/search/sequences.py",
+        "sha256": "e083679cb9ea780664943355d260f398a96d93a2db336bb615af1032766f5980"
+      },
+      {
+        "bytes": 5324,
+        "path": "orthohmm/search/species_prune.py",
+        "sha256": "d729b9aa8ddf311c52e1d46c51d89dc5a6ef5d64ccd979deca90b7d980905b9e"
+      },
+      {
+        "bytes": 17693,
+        "path": "orthohmm/search/viterbi.py",
+        "sha256": "ba8543538d9bcbd55c5eaf5c7c3d5725a62c071b00d925f5fabaa474001948ba"
+      },
+      {
+        "bytes": 4420,
+        "path": "orthohmm/search/viterbi_cuda_ctypes.py",
+        "sha256": "fba688e77941c92c5e4080ef5de3dc23e4dfee6c5c2dad5d7ccdf876f81f9d20"
+      },
+      {
+        "bytes": 22,
+        "path": "orthohmm/version.py",
+        "sha256": "2c12b8ea17aeb6f9f72a6b02aca218bbc4508a46df9e365a8f6c45ad769e0b34"
+      },
+      {
+        "bytes": 2949,
+        "path": "orthohmm/writer.py",
+        "sha256": "d3dc7a318166272762395dfcb772d8779286bbf60023b2934a7d7bef0e0003fe"
+      },
+      {
+        "bytes": 7689,
+        "path": "benchmark_tools/benchmark_production.py",
+        "sha256": "8817b2dbc08725aac4d53af3d33b7ee7967909483f1982c6747be52215adc984"
+      }
+    ]
+  },
+  "metadata": {
+    "accuracy_profile": "high_sensitivity",
+    "aligner": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin/mafft",
+    "clustering": "leiden",
+    "cpm_resolution": 0.1,
+    "cpu_budget": 32,
+    "evalue_threshold": 0.0001,
+    "fasta_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input",
+    "high_sensitivity_checkpoint": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/production_phylogeny_satellite_v2_orthobench_20260902/orthohmm_working_res/high_sensitivity_checkpoint",
+    "leiden_seed": 4,
+    "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/production_phylogeny_satellite_v2_orthobench_20260902",
+    "phylogeny": "reconcile",
+    "phylogeny_candidate_profile": {
+      "candidate_families": 54445,
+      "directed_relations": 4121901,
+      "iterations": 2,
+      "membership_policy": "high_confidence_pair",
+      "merge_trace_sidecar": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/production_phylogeny_satellite_v2_orthobench_20260902/orthohmm_working_res/phylogeny_candidate_merges.json",
+      "merges": 8440,
+      "parameters": {
+        "iteration_margin_increment": 0.5,
+        "max_component_genes": 500,
+        "max_iterations": 2,
+        "max_satellite_genes": 12,
+        "max_satellite_to_anchor_ratio": 0.75,
+        "max_satellites_per_anchor": 4,
+        "max_species_overlap_fraction": 1.0,
+        "min_avg_score": 0.0,
+        "min_coverage": 0.5,
+        "min_margin": 1.5,
+        "min_max_score": 0.0,
+        "min_norm": 0.03
+      },
+      "profile": "satellite_v2",
+      "seed_families": 62885,
+      "seed_sidecar": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/production_phylogeny_satellite_v2_orthobench_20260902/orthohmm_working_res/phylogeny_candidate_seeds.tsv"
+    },
+    "phylogeny_candidates": "satellite_v2",
+    "phylogeny_pair_rule": "positive_paralogy",
+    "phylogeny_root_rule": "species_overlap",
+    "refinement_substages_s": {
+      "cluster_write": 0.093451,
+      "hit_and_edge_collection": 0.206747,
+      "numeric_refinement": 3.746665,
+      "setup_and_cluster_read": 0.376851
+    },
+    "search_kmer_k": 4,
+    "search_max_candidates_per_query": 100,
+    "search_mode": "builtin",
+    "search_threads_per_worker": 8,
+    "search_total_threads": 32,
+    "search_workers": 4,
+    "species_tree": null,
+    "species_tree_mode": "infer",
+    "species_tree_rooting": "min_variance",
+    "substitution_matrix": "BLOSUM62",
+    "tree_builder": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220/FastTree"
+  },
+  "peak_process_tree_rss_bytes": 12733403136,
+  "peak_process_tree_rss_gib": 11.858906,
+  "pid": 3588573,
+  "platform": "Linux-6.8.0-55-generic-x86_64-with-glibc2.39",
+  "python": "3.10.13",
+  "rss_measurement": "sampled_sum_of_linux_proc_tree_rss",
+  "schema_version": 1,
+  "stages": {
+    "clustering": {
+      "peak_process_tree_rss_bytes": 1414565888,
+      "peak_process_tree_rss_gib": 1.317417,
+      "system_cpu_s": 0.808044,
+      "user_cpu_s": 39.043805,
+      "wall_s": 39.734672
+    },
+    "edge_thresholds": {
+      "peak_process_tree_rss_bytes": 609275904,
+      "peak_process_tree_rss_gib": 0.567432,
+      "system_cpu_s": 0.150333,
+      "user_cpu_s": 0.884268,
+      "wall_s": 0.969753
+    },
+    "network_edges": {
+      "peak_process_tree_rss_bytes": 1826349056,
+      "peak_process_tree_rss_gib": 1.70092,
+      "system_cpu_s": 0.798103,
+      "user_cpu_s": 4.174685,
+      "wall_s": 4.954332
+    },
+    "orthogroup_materialization": {
+      "peak_process_tree_rss_bytes": 2330894336,
+      "peak_process_tree_rss_gib": 2.170815,
+      "system_cpu_s": 0.179125,
+      "user_cpu_s": 5.022198,
+      "wall_s": 5.090679
+    },
+    "phylogeny": {
+      "peak_process_tree_rss_bytes": 3147235328,
+      "peak_process_tree_rss_gib": 2.931091,
+      "system_cpu_s": 2940.823431,
+      "user_cpu_s": 31355.745949,
+      "wall_s": 1152.87809
+    },
+    "phylogeny_candidates": {
+      "peak_process_tree_rss_bytes": 3245469696,
+      "peak_process_tree_rss_gib": 3.022579,
+      "system_cpu_s": 0.523247,
+      "user_cpu_s": 7.115373,
+      "wall_s": 7.603204
+    },
+    "profile_expansion": {
+      "peak_process_tree_rss_bytes": 12733403136,
+      "peak_process_tree_rss_gib": 11.858906,
+      "system_cpu_s": 24.257695,
+      "user_cpu_s": 4667.443201,
+      "wall_s": 247.651586
+    },
+    "refinement": {
+      "peak_process_tree_rss_bytes": 3380543488,
+      "peak_process_tree_rss_gib": 3.148376,
+      "system_cpu_s": 0.356179,
+      "user_cpu_s": 4.128008,
+      "wall_s": 4.462515
+    },
+    "search": {
+      "peak_process_tree_rss_bytes": 3066572800,
+      "peak_process_tree_rss_gib": 2.855968,
+      "system_cpu_s": 33.047842,
+      "user_cpu_s": 37232.385365,
+      "wall_s": 1810.557262
+    }
+  },
+  "started_at_epoch_s": 1788380468.1560495,
+  "status": "complete",
+  "system_cpu_s": 3001.015671,
+  "user_cpu_s": 73322.972274,
+  "wall_s": 3274.102675
+}

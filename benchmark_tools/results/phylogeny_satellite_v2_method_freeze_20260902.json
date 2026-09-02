@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "objective": "Freeze the HMM-centered satellite_v2 phylogeny method before QfO evaluation.",
+  "selection_policy": {
+    "frozen_before_qfo": true,
+    "qfo_used_for_tuning": false,
+    "selection_inputs": [
+      "benchmark-independent synthetic duplication/loss and bridge holdouts",
+      "predefined OrthoBench development partition",
+      "predefined OrthoBench validation partition"
+    ],
+    "information_budget": "internally inferred species tree; no OrthoFinder tree or benchmark labels used during inference"
+  },
+  "source": {
+    "inference_commit": "bb27197e4a2f5a21139af5d6f39d8db42e483fc3",
+    "qfo_launcher_commit": "3eab02851d00ead920a7a87c25390d0414ad4ca6"
+  },
+  "method": {
+    "accuracy_profile": "high_sensitivity",
+    "candidate_profile": "satellite_v2",
+    "candidate_parameters": {
+      "max_component_genes": 500,
+      "max_satellite_genes": 12,
+      "max_satellite_to_anchor_ratio": 0.75,
+      "min_margin": 1.5,
+      "iteration_margin_increment": 0.5,
+      "max_satellites_per_anchor": 4,
+      "max_species_overlap_fraction": 1.0,
+      "min_coverage": 0.5,
+      "min_normalized_support": 0.03,
+      "max_iterations": 2
+    },
+    "membership_policy": "retain a satellite attachment only when reconciliation yields at least one high-confidence cross-seed ortholog pair",
+    "species_tree_mode": "infer",
+    "species_tree_rooting": "min_variance",
+    "root_duplication_rule": "species_overlap",
+    "pair_orthology_rule": "positive_paralogy",
+    "cpu": 32,
+    "threads_per_worker": 8
+  },
+  "orthobench": {
+    "baselines": {
+      "orthohmm_high_sensitivity": {
+        "f_score": 70.4,
+        "precision": 78.9,
+        "recall": 63.5,
+        "exact_refogs": 13
+      },
+      "orthohmm_previous_inferred_phylogeny": {
+        "f_score": 70.9,
+        "precision": 80.4,
+        "recall": 63.5,
+        "exact_refogs": 14
+      },
+      "orthofinder_3_1_5_full": {
+        "f_score": 72.7,
+        "precision": 66.1,
+        "recall": 80.9,
+        "exact_refogs": 19
+      }
+    },
+    "fresh_production": {
+      "development": {
+        "f_score": 72.52168607750889,
+        "precision": 80.41105256610544,
+        "recall": 66.04210006918008,
+        "exact_refogs": 10
+      },
+      "validation": {
+        "f_score": 75.41298136486965,
+        "precision": 82.88192210939299,
+        "recall": 69.17889492241083,
+        "exact_refogs": 5
+      },
+      "all": {
+        "f_score": 74.10607351873405,
+        "precision": 81.77045380181866,
+        "recall": 67.75533630827974,
+        "exact_refogs": 15
+      },
+      "wall_s": 3274.102675,
+      "peak_process_tree_rss_gib": 11.858906,
+      "candidate_families": 54445,
+      "root_hogs": 59770,
+      "duplications": 59379,
+      "speciations": 104016,
+      "uncertain_events": 13034,
+      "native_ortholog_pairs": 966439
+    },
+    "candidate_ceiling": {
+      "seed_reference_pair_recall": 0.49583875481796086,
+      "satellite_v2_reference_pair_recall": 0.6007168634767879,
+      "satellite_v2_reference_pair_precision": 0.9972286750621511,
+      "seed_merges": 8440,
+      "largest_candidate_genes": 180
+    },
+    "membership_reconciliation": {
+      "constraints": 8440,
+      "supported_constraints": 5852,
+      "detached_constraints": 2588,
+      "detached_genes": 8401,
+      "root_hogs_added": 2117,
+      "ortholog_pairs_removed": 16885
+    },
+    "gates": {
+      "development_and_validation_improve_over_previous_phylogeny": true,
+      "fresh_end_to_end": true,
+      "internally_inferred_species_tree": true,
+      "beats_orthofinder_3_1_5_f_score": true,
+      "f_score_margin": 1.40607351873405
+    }
+  },
+  "diagnostic_limits": {
+    "candidate_to_root_pair_recall_delta_large_gt_50": -0.06540579119086459,
+    "candidate_to_root_pair_recall_delta_lower_identity": -0.048370302590477365,
+    "candidate_to_root_cross_refog_pairs_removed": 68,
+    "candidate_to_root_true_pairs_removed": 1575
+  },
+  "tools": {
+    "mafft": "v7.525 (2024/Mar/13)",
+    "fasttree": "2.2.0 Double precision"
+  },
+  "validation": {
+    "unit_tests": {
+      "passed": 371,
+      "duration_s": 12.47
+    },
+    "synthetic_holdout_artifact": "benchmark_tools/results/candidate_superfamily_satellite_v2_holdout_20260902.json"
+  },
+  "artifacts": {
+    "production_metrics": {
+      "path": "benchmark_tools/results/orthobench_production_satellite_v2_metrics_20260902.json",
+      "sha256": "dbde87690a592a6bfa1adfbbb560106d593d5a1b5ae59febea73f34d37603f49"
+    },
+    "phylogeny_provenance": {
+      "path": "benchmark_tools/results/orthobench_production_satellite_v2_provenance_20260902.json",
+      "sha256": "c94d35235e4ea8530284c9602838e341f4469c76c42bf19b7e1b90476f6e31f2"
+    },
+    "development_score": {
+      "path": "benchmark_tools/results/orthobench_development_production_satellite_v2_20260902.json",
+      "sha256": "99a4a59ed90683fd005aeed9f68a7f7c9a00e0c19265a56d069184587d11c86a"
+    },
+    "validation_score": {
+      "path": "benchmark_tools/results/orthobench_validation_production_satellite_v2_20260902.json",
+      "sha256": "c11378b1474675ae8e89f321a940aebb4936d577520e616965a6148e78a62794"
+    },
+    "all_score": {
+      "path": "benchmark_tools/results/orthobench_all_production_satellite_v2_20260902.json",
+      "sha256": "ac3e4892a5a1f18f2058e383663b83423fa37b8b664b53adb40b0bc72ec01f7c"
+    },
+    "candidate_audit": {
+      "path": "benchmark_tools/results/orthobench_production_satellite_v2_candidate_audit_20260902.json",
+      "sha256": "d9f8a188087a1447c1cfb2cdc2a63ca9aa004a7a24252e101644b1c5b40556c2"
+    },
+    "seed_candidate_audit": {
+      "path": "benchmark_tools/results/orthobench_high_sensitivity_candidate_audit_20260902.json",
+      "sha256": "1dc343dd99179c0e8e95c9d11a62d35466dff092518efe039e0c71c18fd28c05"
+    },
+    "reconciliation_diagnostics": {
+      "path": "benchmark_tools/results/orthobench_production_satellite_v2_reconciliation_diagnostics_20260902.json",
+      "sha256": "79ae31b87e41886a70d7717905ecdfcad425e1a3dd54463df07eda3d3ce17fa8"
+    },
+    "candidate_superfamilies": {
+      "path": "benchmarks/results/production_phylogeny_satellite_v2_orthobench_20260902/orthohmm_working_res/phylogeny_candidate_superfamilies.txt",
+      "sha256": "75bfe5f5c8edafe51cc14541489f31df5e452fa4493a183752da80591b2ab77d"
+    },
+    "candidate_merge_trace": {
+      "path": "benchmarks/results/production_phylogeny_satellite_v2_orthobench_20260902/orthohmm_working_res/phylogeny_candidate_merges.json",
+      "sha256": "e12759fa010ae96331fb91c3d3b1d8387a41cea67f9018f85ca038e010d834d3"
+    },
+    "root_hogs": {
+      "path": "benchmarks/results/production_phylogeny_satellite_v2_orthobench_20260902/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "sha256": "76229249770b1f875c6bd319ec524fb50721b048e68c284c4c3a3dba611ea216"
+    },
+    "species_tree": {
+      "path": "benchmarks/results/production_phylogeny_satellite_v2_orthobench_20260902/orthohmm_phylogeny/species_tree.rooted.nwk",
+      "sha256": "61ba4deadbc1f1e357b892bad11ac6b605e0495393816f077badaeb35b183878"
+    }
+  },
+  "decision": "Freeze satellite_v2 unchanged and run the one-shot QfO 2020 six-metric assessment."
+}
