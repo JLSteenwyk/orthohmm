@@ -48,6 +48,7 @@ class ReconciledNode:
     event_confidence: str
     species_overlap_count: int
     mapping_conflict: bool
+    branch_support: float | None
 
 
 @dataclass(frozen=True)
@@ -271,7 +272,9 @@ def reconcile_gene_tree(
 ) -> ReconciliationResult:
     """Reconcile a rooted gene tree by LCA mapping onto a rooted species tree."""
 
-    valid_root_rules = {"supported_children", "species_overlap", "mapped_event"}
+    valid_root_rules = {
+        "supported_children", "confidence", "species_overlap", "mapped_event"
+    }
     if root_duplication_rule not in valid_root_rules:
         raise ValueError(
             "root duplication rule must be one of: "
@@ -341,7 +344,18 @@ def reconcile_gene_tree(
     species_overlap_by_node = {}
     species_overlap_count_by_node = {}
     mapping_conflict_by_node = {}
+    branch_support_by_node = {}
     for node in gene_tree.postorder_node_iter():
+        branch_support = None
+        if not node.is_leaf() and node.label is not None:
+            try:
+                branch_support = float(node.label)
+                if 1.0 < branch_support <= 100.0:
+                    branch_support /= 100.0
+                if not 0.0 <= branch_support <= 1.0:
+                    branch_support = None
+            except (TypeError, ValueError):
+                branch_support = None
         if node.is_leaf():
             gene = leaf_gene[node]
             genes = (gene,)
@@ -379,7 +393,11 @@ def reconcile_gene_tree(
             if pair_orthology_rule == "positive_paralogy":
                 if overlap:
                     pair_event = "duplication"
-                    event_confidence = "high" if overlap_count >= 2 else "medium"
+                    event_confidence = (
+                        "high"
+                        if overlap_count >= 2 or (branch_support or 0.0) >= 0.9
+                        else "medium"
+                    )
                 elif mapping_conflict:
                     pair_event = "uncertain"
                     event_confidence = "medium"
@@ -398,6 +416,7 @@ def reconcile_gene_tree(
         species_overlap_by_node[node] = bool(overlap)
         species_overlap_count_by_node[node] = overlap_count
         mapping_conflict_by_node[node] = mapping_conflict
+        branch_support_by_node[node] = branch_support
 
     ortholog_pairs = set()
     ortholog_pair_confidence = {}
@@ -430,6 +449,12 @@ def reconcile_gene_tree(
             root_duplication = (
                 species_overlap_by_node[node]
                 and root_mapped_children >= 2
+            )
+        elif root_duplication_rule == "confidence":
+            root_duplication = species_overlap_by_node[node] and (
+                root_mapped_children >= 2
+                or species_overlap_count_by_node[node] >= 2
+                or (branch_support_by_node[node] or 0.0) >= 0.9
             )
         elif root_duplication_rule == "species_overlap":
             root_duplication = species_overlap_by_node[node]
@@ -493,6 +518,7 @@ def reconcile_gene_tree(
                 event_confidence=event_confidence_by_node[node],
                 species_overlap_count=species_overlap_count_by_node[node],
                 mapping_conflict=mapping_conflict_by_node[node],
+                branch_support=branch_support_by_node[node],
             )
         )
 
@@ -652,7 +678,7 @@ def validate_phylogeny_config(
             f"Unsupported species-tree mode: {config.species_tree_mode!r}"
         )
     if config.root_duplication_rule not in {
-        "supported_children", "species_overlap", "mapped_event"
+        "supported_children", "confidence", "species_overlap", "mapped_event"
     }:
         raise PhylogenyConfigurationError(
             "Unsupported root-duplication rule: "

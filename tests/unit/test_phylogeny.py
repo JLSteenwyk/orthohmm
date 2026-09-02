@@ -292,6 +292,32 @@ def test_species_overlap_rule_exposes_sparse_duplication_tradeoff(tmp_path):
     assert result.root_groups == (("a",), ("b", "c"), ("c2",))
 
 
+@pytest.mark.parametrize(
+    ("support", "expected"),
+    [
+        ("0.50", (("a", "b", "c", "c2"),)),
+        ("95", (("a",), ("b", "c"), ("c2",))),
+    ],
+)
+def test_confidence_root_rule_requires_strong_sparse_split_support(
+    tmp_path, support, expected
+):
+    result = reconcile_gene_tree(
+        parse_gene_tree(f"(a,((b,c),c2){support});"),
+        species_tree(tmp_path),
+        {"a": "A", "b": "B", "c": "C", "c2": "C"},
+        root_duplication_rule="confidence",
+    )
+
+    assert result.root_groups == expected
+    supported_node = next(
+        node for node in result.nodes if set(node.genes) == {"b", "c", "c2"}
+    )
+    assert supported_node.branch_support == pytest.approx(float(support) / (
+        100.0 if float(support) > 1.0 else 1.0
+    ))
+
+
 def test_gene_tree_rejects_unknown_gene(tmp_path):
     with pytest.raises(PhylogenyConfigurationError, match="absent"):
         reconcile_gene_tree(

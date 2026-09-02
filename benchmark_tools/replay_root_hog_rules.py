@@ -26,7 +26,7 @@ from orthohmm.phylogeny_pipeline import (
 )
 
 
-RULES = ("supported_children", "species_overlap", "mapped_event")
+RULES = ("supported_children", "confidence", "species_overlap", "mapped_event")
 
 
 def build_parser() -> argparse.ArgumentParser:

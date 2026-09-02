@@ -45,7 +45,9 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--tree-builder", default="FastTree")
     parser.add_argument(
         "--root-rule",
-        choices=("supported_children", "species_overlap", "mapped_event"),
+        choices=(
+            "supported_children", "confidence", "species_overlap", "mapped_event"
+        ),
         default="supported_children",
     )
     parser.add_argument(

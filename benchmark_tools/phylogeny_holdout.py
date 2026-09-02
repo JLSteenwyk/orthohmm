@@ -352,7 +352,9 @@ def parse_args(argv=None):
     parser.add_argument("--seeds", type=int, nargs="+", default=[101, 211, 307])
     parser.add_argument(
         "--root-rule",
-        choices=("supported_children", "species_overlap", "mapped_event"),
+        choices=(
+            "supported_children", "confidence", "species_overlap", "mapped_event"
+        ),
         default="supported_children",
     )
     parser.add_argument(

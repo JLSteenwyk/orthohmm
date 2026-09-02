@@ -419,7 +419,9 @@ def create_parser() -> ArgumentParser:
 
     optional.add_argument(
         "--phylogeny_root_rule",
-        choices=["supported_children", "species_overlap", "mapped_event"],
+        choices=[
+            "supported_children", "confidence", "species_overlap", "mapped_event"
+        ],
         default="supported_children",
         help=SUPPRESS,
         metavar="phylogeny_root_rule",

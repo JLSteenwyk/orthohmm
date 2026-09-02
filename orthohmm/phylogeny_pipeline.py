@@ -731,6 +731,11 @@ def _write_stage_outputs(
                         node.event_confidence,
                         str(node.species_overlap_count),
                         str(node.mapping_conflict).lower(),
+                        (
+                            f"{node.branch_support:.6f}"
+                            if node.branch_support is not None
+                            else ""
+                        ),
                     )
                 )
             )
@@ -794,7 +799,7 @@ def _write_stage_outputs(
         phylogeny_directory / "orthohmm_reconciliation_nodes.tsv",
         "source_family\tnode_id\tparent_node_id\tevent\tspecies_tree_node\t"
         "species\tgenes\tpair_event\tevent_confidence\t"
-        "species_overlap_count\tmapping_conflict\n"
+        "species_overlap_count\tmapping_conflict\tbranch_support\n"
         + "\n".join(annotations)
         + "\n",
     )
