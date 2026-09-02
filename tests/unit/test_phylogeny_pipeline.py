@@ -5,11 +5,53 @@ import pytest
 
 from orthohmm.phylogeny import PhylogenyConfig, PhylogenyConfigurationError
 from orthohmm.phylogeny_pipeline import (
+    FamilyOutcome,
     _aligner_command,
+    apply_satellite_membership_constraints,
     family_requires_reconciliation,
     run_phylogeny_stage,
     select_species_tree_families,
 )
+
+
+def test_satellite_membership_requires_high_confidence_cross_seed_pair():
+    outcome = FamilyOutcome(
+        family_id="Family0000000",
+        genes=("a", "b", "c", "d"),
+        root_groups=(("a", "b", "c", "d"),),
+        ortholog_pairs=(("a", "c"), ("a", "d"), ("b", "d")),
+        ortholog_pair_confidence=(
+            ("a", "c", "high"),
+            ("a", "d", "high"),
+            ("b", "d", "medium"),
+        ),
+        reconciliation=None,
+        checkpoint_hit=False,
+    )
+    constraints = (
+        {"source_genes": ("a",), "target_genes": ("c",)},
+        {"source_genes": ("b",), "target_genes": ("d",)},
+    )
+
+    refined, audit = apply_satellite_membership_constraints(
+        (outcome,), constraints
+    )
+
+    assert refined[0].root_groups == (("a", "c", "d"), ("b",))
+    assert refined[0].ortholog_pairs == (("a", "c"), ("a", "d"))
+    assert refined[0].ortholog_pair_confidence == (
+        ("a", "c", "high"),
+        ("a", "d", "high"),
+    )
+    assert audit == {
+        "policy": "high_confidence_pair",
+        "constraints": 2,
+        "supported_constraints": 1,
+        "detached_constraints": 1,
+        "detached_genes": 1,
+        "root_hogs_added": 1,
+        "ortholog_pairs_removed": 1,
+    }
 
 
 def _write_executable(path: Path, source: str) -> str:

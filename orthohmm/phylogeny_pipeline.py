@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, replace
 import hashlib
 import json
 import math
@@ -12,7 +12,7 @@ import os
 from pathlib import Path
 import subprocess
 import time
-from typing import Sequence
+from typing import Mapping, Sequence
 import statistics
 
 from .helpers import get_all_fasta_entries
@@ -744,6 +744,95 @@ def _bypass_family(
     )
 
 
+def apply_satellite_membership_constraints(
+    outcomes: Sequence[FamilyOutcome],
+    constraints: Sequence[Mapping[str, object]],
+) -> tuple[list[FamilyOutcome], dict[str, int | str]]:
+    """Detach candidate satellites lacking high-confidence tree support."""
+
+    high_confidence_pairs = {
+        (gene_a, gene_b)
+        for outcome in outcomes
+        for gene_a, gene_b, confidence in outcome.ortholog_pair_confidence
+        if confidence == "high"
+    }
+    detached_sources: list[frozenset[str]] = []
+    supported = 0
+    for constraint in constraints:
+        source = frozenset(str(gene) for gene in constraint["source_genes"])
+        target = frozenset(str(gene) for gene in constraint["target_genes"])
+        if not source or not target or source & target:
+            raise PhylogenyConfigurationError(
+                "Satellite membership constraints require disjoint non-empty groups."
+            )
+        has_support = any(
+            tuple(sorted((source_gene, target_gene))) in high_confidence_pairs
+            for source_gene in source
+            for target_gene in target
+        )
+        if has_support:
+            supported += 1
+        else:
+            detached_sources.append(source)
+
+    detached_gene_group = {}
+    for group_index, source in enumerate(detached_sources):
+        for gene in source:
+            if gene in detached_gene_group:
+                raise PhylogenyConfigurationError(
+                    f"Satellite gene occurs in multiple constraints: {gene}"
+                )
+            detached_gene_group[gene] = group_index
+
+    refined = []
+    groups_added = 0
+    pairs_removed = 0
+    for outcome in outcomes:
+        root_groups = []
+        for root_group in outcome.root_groups:
+            partitions: dict[int, list[str]] = {}
+            for gene in root_group:
+                partition = detached_gene_group.get(gene, -1)
+                partitions.setdefault(partition, []).append(gene)
+            root_groups.extend(
+                tuple(sorted(partition))
+                for _, partition in sorted(partitions.items())
+            )
+            groups_added += max(0, len(partitions) - 1)
+        group_by_gene = {
+            gene: group_index
+            for group_index, root_group in enumerate(root_groups)
+            for gene in root_group
+        }
+        ortholog_pairs = tuple(
+            pair
+            for pair in outcome.ortholog_pairs
+            if group_by_gene[pair[0]] == group_by_gene[pair[1]]
+        )
+        retained_pairs = set(ortholog_pairs)
+        pair_confidence = tuple(
+            row
+            for row in outcome.ortholog_pair_confidence
+            if (row[0], row[1]) in retained_pairs
+        )
+        pairs_removed += len(outcome.ortholog_pairs) - len(ortholog_pairs)
+        refined.append(
+            replace(
+                outcome,
+                root_groups=tuple(root_groups),
+                ortholog_pairs=ortholog_pairs,
+                ortholog_pair_confidence=pair_confidence,
+            )
+        )
+    return refined, {
+        "policy": "high_confidence_pair",
+        "constraints": len(constraints),
+        "supported_constraints": supported,
+        "detached_constraints": len(detached_sources),
+        "detached_genes": len(detached_gene_group),
+        "root_hogs_added": groups_added,
+        "ortholog_pairs_removed": pairs_removed,
+    }
 def _write_stage_outputs(
     outcomes: Sequence[FamilyOutcome],
     cluster_path: Path,
@@ -928,6 +1017,7 @@ def run_phylogeny_stage(
     files: Sequence[str],
     config: PhylogenyConfig,
     cpu: int,
+    membership_constraints: Sequence[Mapping[str, object]] | None = None,
 ) -> PhylogenyStageResult:
     """Run supplied-tree reconciliation and replace clusters atomically."""
 
@@ -1014,6 +1104,13 @@ def run_phylogeny_stage(
     )
     outcomes = [outcomes_by_id[family_id] for family_id, _ in family_records]
 
+    membership_audit = None
+    if membership_constraints:
+        outcomes, membership_audit = apply_satellite_membership_constraints(
+            outcomes,
+            membership_constraints,
+        )
+
     manifest = {
         "schema_version": 1,
         "created_at_epoch_s": time.time(),
@@ -1038,6 +1135,7 @@ def run_phylogeny_stage(
         "root_duplication_rule": config.root_duplication_rule,
         "pair_orthology_rule": config.pair_orthology_rule,
         "species_tree_rooting": config.species_tree_rooting,
+        "membership_reconciliation": membership_audit,
         "tools": {
             "aligner": {
                 "path": config.aligner,

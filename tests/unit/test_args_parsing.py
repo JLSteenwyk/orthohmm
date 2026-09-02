@@ -188,8 +188,11 @@ class TestArgsProcessing(object):
         assert res["phylogeny_candidates"] == "seed"
         assert res["species_tree_rooting"] == "midpoint"
 
-    def test_satellite_phylogeny_candidates_require_high_sensitivity(self, args):
-        args.phylogeny_candidates = "satellite_v1"
+    @pytest.mark.parametrize("profile", ["satellite_v1", "satellite_v2"])
+    def test_satellite_phylogeny_candidates_require_high_sensitivity(
+        self, args, profile
+    ):
+        args.phylogeny_candidates = profile
 
         with pytest.raises(SystemExit):
             process_args(args)

@@ -77,7 +77,7 @@ def parse_args(argv=None):
     parser.add_argument("--tree-builder", default="FastTree")
     parser.add_argument(
         "--phylogeny-candidates",
-        choices=("seed", "satellite_v1"),
+        choices=("seed", "satellite_v1", "satellite_v2"),
         default="seed",
     )
     parser.add_argument(

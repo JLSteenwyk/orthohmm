@@ -125,7 +125,7 @@ def create_parser() -> ArgumentParser:
         --phylogeny_pair_rule <rule>                pairwise orthology evidence rule
                                                     (default: lca)
 
-        --phylogeny_candidates <seed, satellite_v1> candidate-family expansion policy
+        --phylogeny_candidates <seed, satellite_v1, satellite_v2> candidate-family expansion policy
                                                     (default: seed)
 
         --species_tree_rooting <policy>              internally inferred tree rooting policy
@@ -443,7 +443,7 @@ def create_parser() -> ArgumentParser:
 
     optional.add_argument(
         "--phylogeny_candidates",
-        choices=["seed", "satellite_v1"],
+        choices=["seed", "satellite_v1", "satellite_v2"],
         default="seed",
         help=SUPPRESS,
         metavar="phylogeny_candidates",

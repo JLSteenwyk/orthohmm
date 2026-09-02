@@ -132,9 +132,9 @@ def process_args(args) -> dict:
     phylogeny_candidates = (
         getattr(args, "phylogeny_candidates", "seed") or "seed"
     )
-    if phylogeny_candidates == "satellite_v1" and accuracy_profile != "high_sensitivity":
+    if phylogeny_candidates.startswith("satellite_") and accuracy_profile != "high_sensitivity":
         logger.warning(
-            "--phylogeny_candidates satellite_v1 requires "
+            f"--phylogeny_candidates {phylogeny_candidates} requires "
             "--accuracy_profile high_sensitivity."
         )
         sys.exit()

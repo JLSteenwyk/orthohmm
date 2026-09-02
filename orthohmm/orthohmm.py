@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import json
 import logging
 import os
 import sys
@@ -57,8 +58,43 @@ def _expand_phylogeny_candidates(
     gene_names,
     gene_to_species,
     accuracy_hits,
+    profile="satellite_v1",
 ):
-    """Apply the frozen satellite-v1 profile and record seed provenance."""
+    """Apply a frozen satellite profile and record seed provenance."""
+
+    profiles = {
+        "satellite_v1": {
+            "max_component_genes": 500,
+            "max_satellite_genes": 8,
+            "max_satellite_to_anchor_ratio": 0.75,
+            "min_margin": 1.5,
+            "iteration_margin_increment": 0.0,
+            "max_satellites_per_anchor": 2,
+            "max_species_overlap_fraction": 1.0,
+            "min_avg_score": 0.0,
+            "min_max_score": 0.0,
+            "min_coverage": 0.5,
+            "min_norm": 0.02,
+            "max_iterations": 1,
+        },
+        "satellite_v2": {
+            "max_component_genes": 500,
+            "max_satellite_genes": 12,
+            "max_satellite_to_anchor_ratio": 0.75,
+            "min_margin": 1.5,
+            "iteration_margin_increment": 0.5,
+            "max_satellites_per_anchor": 4,
+            "max_species_overlap_fraction": 1.0,
+            "min_avg_score": 0.0,
+            "min_max_score": 0.0,
+            "min_coverage": 0.5,
+            "min_norm": 0.03,
+            "max_iterations": 2,
+        },
+    }
+    if profile not in profiles:
+        raise ValueError(f"Unsupported phylogeny candidate profile: {profile}")
+    parameters = profiles[profile]
 
     cluster_path = os.path.join(
         output_directory,
@@ -69,22 +105,14 @@ def _expand_phylogeny_candidates(
     gene_to_seed = np.full(len(gene_names), -1, dtype=np.int32)
     for seed_id, cluster in enumerate(seed_clusters):
         gene_to_seed[np.asarray(cluster, dtype=np.int64)] = seed_id
+    merge_trace = [] if profile == "satellite_v2" else None
     candidates, merges, relations, iterations = (
         merge_supported_satellite_candidate_clusters(
             seed_clusters,
             *accuracy_hits,
             gene_to_species,
-            max_component_genes=500,
-            max_satellite_genes=8,
-            max_satellite_to_anchor_ratio=0.75,
-            min_margin=1.5,
-            max_satellites_per_anchor=2,
-            max_species_overlap_fraction=1.0,
-            min_avg_score=0.0,
-            min_max_score=0.0,
-            min_coverage=0.5,
-            min_norm=0.02,
-            max_iterations=1,
+            merge_trace=merge_trace,
+            **parameters,
         )
     )
     temporary = cluster_path + ".candidates.tmp"
@@ -107,8 +135,9 @@ def _expand_phylogeny_candidates(
             )
     os.replace(temporary, cluster_path)
     os.replace(sidecar_temporary, sidecar)
-    return {
-        "profile": "satellite_v1",
+    result = {
+        "profile": profile,
+        "parameters": parameters,
         "seed_families": len(seed_clusters),
         "candidate_families": len(candidates),
         "merges": merges,
@@ -116,6 +145,29 @@ def _expand_phylogeny_candidates(
         "iterations": iterations,
         "seed_sidecar": os.path.abspath(sidecar),
     }
+    if merge_trace is not None:
+        named_trace = []
+        for record in merge_trace:
+            named_record = dict(record)
+            for field in ("source_genes", "target_genes"):
+                named_record[field] = tuple(
+                    gene_names[int(gene)] for gene in record[field]
+                )
+            named_trace.append(named_record)
+        trace_path = os.path.join(
+            output_directory,
+            "orthohmm_working_res",
+            "phylogeny_candidate_merges.json",
+        )
+        trace_temporary = trace_path + ".tmp"
+        with open(trace_temporary, "w") as handle:
+            json.dump(named_trace, handle, indent=2, sort_keys=True)
+            handle.write("\n")
+        os.replace(trace_temporary, trace_path)
+        result["membership_policy"] = "high_confidence_pair"
+        result["merge_trace_sidecar"] = os.path.abspath(trace_path)
+        result["_membership_constraints"] = named_trace
+    return result
 
 
 def _collect_search_hit_arrays(search_results, evalue_threshold, gene_to_id):
@@ -695,10 +747,14 @@ def _execute(
             refinement_profile=refinement_profile,
         )
     metrics.add_metadata(refinement_substages_s=refinement_substages)
-    if phylogeny == "reconcile" and phylogeny_candidates == "satellite_v1":
+    candidate_membership_constraints = None
+    if phylogeny == "reconcile" and phylogeny_candidates in {
+        "satellite_v1", "satellite_v2"
+    }:
         if accuracy_hits is None:
             raise ValueError(
-                "satellite_v1 phylogeny candidates require high_sensitivity accuracy"
+                f"{phylogeny_candidates} phylogeny candidates require "
+                "high_sensitivity accuracy"
             )
         with metrics.stage("phylogeny_candidates"):
             candidate_result = _expand_phylogeny_candidates(
@@ -706,7 +762,11 @@ def _execute(
                 gene_names,
                 gene_to_species,
                 accuracy_hits,
+                profile=phylogeny_candidates,
             )
+        candidate_membership_constraints = candidate_result.pop(
+            "_membership_constraints", None
+        )
         metrics.add_metadata(phylogeny_candidate_profile=candidate_result)
         metrics.add_counts(
             phylogeny_seed_families=candidate_result["seed_families"],
@@ -733,6 +793,7 @@ def _execute(
                     species_tree_rooting=species_tree_rooting,
                 ),
                 cpu=cpu,
+                membership_constraints=candidate_membership_constraints,
             )
         metrics.add_counts(
             phylogeny_candidate_families=phylogeny_result.candidate_families,

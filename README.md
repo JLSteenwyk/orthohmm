@@ -125,6 +125,22 @@ Use `--phylogeny_candidates satellite_v1` with
 `--accuracy_profile high_sensitivity` to opt into bounded HMM-backed candidate
 expansion. The original groups are retained as seed provenance in
 `orthohmm_working_res/phylogeny_candidate_seeds.tsv`.
+The `satellite_v2` profile adds seed-bounded iterative expansion and requires
+each attachment to receive a high-confidence cross-seed ortholog pair from the
+reconciled gene tree before it can remain in the final root HOG. Candidate
+evidence is recorded in
+`orthohmm_working_res/phylogeny_candidate_merges.json`. A complete v2 run that
+infers its own species tree can be requested with:
+
+```shell
+orthohmm proteomes/ --accuracy_profile high_sensitivity \
+  --phylogeny reconcile --phylogeny_candidates satellite_v2 \
+  --species_tree_mode infer --species_tree_rooting min_variance \
+  --phylogeny_root_rule species_overlap \
+  --phylogeny_pair_rule positive_paralogy \
+  --aligner mafft --tree_builder FastTree
+```
+
 For internally inferred species trees,
 `--species_tree_rooting min_variance` minimizes root-to-tip distance variance
 over internal edges and avoids placing the root on a single long terminal
