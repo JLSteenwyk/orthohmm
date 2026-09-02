@@ -107,6 +107,47 @@ def test_species_tree_family_selection_is_ranked_and_requires_all_taxa():
         )
 
 
+def test_species_tree_selection_adds_sparse_taxon_placement_markers():
+    records = [
+        ("Core", ("a1", "b1", "c1")),
+        ("PlaceD", ("a2", "d1")),
+        ("PlaceE", ("b2", "e1")),
+        ("PlaceF", ("c2", "f1")),
+    ]
+    species = {
+        "a1": "A", "a2": "A", "b1": "B", "b2": "B",
+        "c1": "C", "c2": "C", "d1": "D", "e1": "E", "f1": "F",
+    }
+    sequences = {gene: "M" * 10 for gene in species}
+
+    selected = select_species_tree_families(
+        records,
+        species,
+        sequences,
+        ("A", "B", "C", "D", "E", "F"),
+        max_families=1,
+    )
+
+    assert selected == records
+
+
+def test_species_tree_selection_rejects_disconnected_sparse_markers():
+    records = [
+        ("Core", ("a1", "b1", "c1")),
+        ("Detached", ("d1", "e1")),
+    ]
+    species = {gene: gene[0].upper() for _, genes in records for gene in genes}
+    sequences = {gene: "M" * 10 for gene in species}
+
+    with pytest.raises(PhylogenyConfigurationError, match="no connected"):
+        select_species_tree_families(
+            records,
+            species,
+            sequences,
+            ("A", "B", "C", "D", "E"),
+        )
+
+
 def test_supplied_tree_stage_end_to_end_and_checkpoint_restart(tmp_path):
     inputs, output, cluster_path, candidates, config = _make_fixture(
         tmp_path, "first"

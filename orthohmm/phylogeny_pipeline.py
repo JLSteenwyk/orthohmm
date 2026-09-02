@@ -123,20 +123,27 @@ def select_species_tree_families(
     expected_species: Sequence[str],
     max_families: int = 200,
 ) -> list[tuple[str, tuple[str, ...]]]:
-    """Select stable, high-occupancy single-copy families for tree inference."""
+    """Select a high-occupancy core plus sparse single-copy placement markers."""
 
     minimum_taxa = max(2, min(len(expected_species), math.ceil(
         len(expected_species) * 0.5
     )))
-    eligible = []
+    single_copy = []
     for family_id, genes in family_records:
         species = [gene_species[gene] for gene in genes]
-        if len(species) != len(set(species)) or len(species) < minimum_taxa:
+        if len(species) != len(set(species)) or len(species) < 2:
             continue
         median_length = statistics.median(len(sequences[gene]) for gene in genes)
-        eligible.append((family_id, genes, len(species), median_length))
+        single_copy.append((family_id, genes, len(species), median_length))
+    eligible = [record for record in single_copy if record[2] >= minimum_taxa]
     eligible.sort(key=lambda row: (-row[2], -row[3], row[0], row[1]))
     selected = eligible[:max_families]
+
+    if not selected:
+        raise PhylogenyConfigurationError(
+            "Cannot infer a species tree: no multi-species single-copy "
+            "candidate families passed the occupancy filter."
+        )
 
     represented = {
         gene_species[gene] for _, genes, _, _ in selected for gene in genes
@@ -155,15 +162,41 @@ def select_species_tree_families(
                 if not missing:
                     break
     if missing:
-        raise PhylogenyConfigurationError(
-            "Cannot infer a species tree because no selected single-copy "
-            "families represent these taxa: " + ", ".join(sorted(missing))
-        )
-    if not selected:
-        raise PhylogenyConfigurationError(
-            "Cannot infer a species tree: no multi-species single-copy "
-            "candidate families passed the occupancy filter."
-        )
+        selected_ids = {family_id for family_id, _, _, _ in selected}
+        placement_pool = [
+            record for record in single_copy if record[0] not in selected_ids
+        ]
+        while missing:
+            candidates = [
+                record
+                for record in placement_pool
+                if (
+                    {gene_species[gene] for gene in record[1]} & missing
+                    and {gene_species[gene] for gene in record[1]} & represented
+                )
+            ]
+            if not candidates:
+                raise PhylogenyConfigurationError(
+                    "Cannot infer a species tree because no connected "
+                    "multi-species single-copy families represent these taxa: "
+                    + ", ".join(sorted(missing))
+                )
+            candidates.sort(
+                key=lambda row: (
+                    -len({gene_species[gene] for gene in row[1]} & missing),
+                    -row[2],
+                    -row[3],
+                    row[0],
+                    row[1],
+                )
+            )
+            selected_record = candidates[0]
+            selected.append(selected_record)
+            placement_pool.remove(selected_record)
+            represented.update(
+                gene_species[gene] for gene in selected_record[1]
+            )
+            missing = set(expected_species) - represented
     return [(family_id, genes) for family_id, genes, _, _ in selected]
 
 
@@ -204,11 +237,17 @@ def _infer_species_tree(
         sequences,
         expected_species,
     )
+    minimum_core_taxa = max(2, min(len(expected_species), math.ceil(
+        len(expected_species) * 0.5
+    )))
+    placement_family_ids = [
+        family_id for family_id, genes in selected if len(genes) < minimum_core_taxa
+    ]
     species_directory = phylogeny_directory / "species_tree_inference"
     rooted_path = phylogeny_directory / "species_tree.rooted.nwk"
     checkpoint_path = species_directory / "checkpoint.json"
     payload = {
-        "schema_version": 1,
+        "schema_version": 2,
         "families": [
             [
                 family_id,
@@ -222,6 +261,11 @@ def _infer_species_tree(
         "alignment_mode": "auto_single_thread_anysymbol",
         "tree_model": "LG",
         "rooting": "midpoint",
+        "marker_selection": {
+            "strategy": "high_occupancy_core_plus_sparse_taxon_placement",
+            "minimum_core_taxa": minimum_core_taxa,
+            "placement_family_ids": placement_family_ids,
+        },
     }
     input_hash = _sha256_text(
         json.dumps(payload, sort_keys=True, separators=(",", ":"))
@@ -242,6 +286,9 @@ def _infer_species_tree(
             "families": len(selected),
             "checkpoint_hit": True,
             "selected_family_ids": [family_id for family_id, _ in selected],
+            "minimum_core_taxa": minimum_core_taxa,
+            "placement_families": len(placement_family_ids),
+            "placement_family_ids": placement_family_ids,
         }
 
     def align_family(record):
@@ -309,11 +356,13 @@ def _infer_species_tree(
     ).strip()
     _atomic_write(rooted_path, rooted_newick + "\n")
     checkpoint = {
-        "schema_version": 1,
+        "schema_version": 2,
         "status": "complete",
         "input_sha256": input_hash,
         "species_tree_sha256": _sha256_file(rooted_path),
         "selected_family_ids": [family_id for family_id, _ in selected],
+        "minimum_core_taxa": minimum_core_taxa,
+        "placement_family_ids": placement_family_ids,
         "supermatrix_sha256": _sha256_file(supermatrix_path),
     }
     _atomic_write(
@@ -324,6 +373,9 @@ def _infer_species_tree(
         "families": len(selected),
         "checkpoint_hit": False,
         "selected_family_ids": [family_id for family_id, _ in selected],
+        "minimum_core_taxa": minimum_core_taxa,
+        "placement_families": len(placement_family_ids),
+        "placement_family_ids": placement_family_ids,
         "supermatrix_columns": sum(
             len(part) for part in next(iter(concatenated.values()))
         ),

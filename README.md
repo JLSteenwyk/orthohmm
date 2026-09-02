@@ -97,8 +97,10 @@ orthohmm proteomes/ --accuracy_profile high_sensitivity \
 
 To infer the species tree from OrthoHMM's own occupancy-ranked, single-copy
 families instead, omit `--species_tree` and use
-`--species_tree_mode infer`. Supplied-tree and inferred-tree results should be
-reported separately because they use different external information budgets.
+`--species_tree_mode infer`. Inference uses a high-occupancy marker core and,
+when necessary, connected lower-occupancy single-copy markers to place taxa
+that are absent from the core. Supplied-tree and inferred-tree results should
+be reported separately because they use different external information budgets.
 
 Only multi-copy, multi-species candidate families receive alignments and gene
 trees. Results and restart checkpoints are written under
