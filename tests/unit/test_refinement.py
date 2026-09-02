@@ -77,6 +77,7 @@ def test_satellite_candidate_attaches_one_sided_best_bidirectional_support():
     queries = np.asarray([3, 0, 3, 4], dtype=np.int32)
     targets = np.asarray([0, 3, 4, 3], dtype=np.int32)
     scores = np.asarray([4.0, 2.0, 1.0, 1.0], dtype=np.float64)
+    trace = []
 
     merged, merge_count, _, _ = merge_supported_satellite_candidate_clusters(
         clusters,
@@ -87,6 +88,7 @@ def test_satellite_candidate_attaches_one_sided_best_bidirectional_support():
         min_margin=2.0,
         min_coverage=0.0,
         min_norm=0.0,
+        merge_trace=trace,
     )
 
     assert {frozenset(group) for group in merged} == {
@@ -94,6 +96,15 @@ def test_satellite_candidate_attaches_one_sided_best_bidirectional_support():
         frozenset((4,)),
     }
     assert merge_count == 1
+    assert len(trace) == 1
+    assert trace[0]["iteration"] == 0
+    assert trace[0]["source_genes"] == (3,)
+    assert trace[0]["target_genes"] == (0, 1, 2)
+    assert trace[0]["source_seed_families"] == 1
+    assert trace[0]["target_seed_families"] == 1
+    assert trace[0]["forward_hits"] == 1
+    assert trace[0]["reverse_hits"] == 1
+    assert np.isclose(trace[0]["margin"], 4.0 / np.sqrt(3.0))
 
 
 def test_satellite_candidate_rejects_one_way_or_ambiguous_support():

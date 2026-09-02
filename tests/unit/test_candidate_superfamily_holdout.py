@@ -33,3 +33,10 @@ def test_two_pass_satellite_recovers_aggregate_support_without_decoy_merge():
         "expected_pairs": two_pass["pair_score"]["expected_pairs"],
         "true_positive_pairs": two_pass["pair_score"]["expected_pairs"],
     }
+
+
+def test_two_pass_satellite_tolerates_stricter_iterative_margin():
+    result = evaluate_two_hop_satellite(2, iteration_margin_increment=0.5)
+
+    assert result["pair_score"]["precision"] == 1.0
+    assert result["pair_score"]["recall"] == 1.0

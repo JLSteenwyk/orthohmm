@@ -776,6 +776,7 @@ def _merge_supported_satellite_best_indexed(
     max_scores: np.ndarray,
     sizes: np.ndarray,
     seed_family_counts: np.ndarray,
+    clusters: Sequence[Sequence[int]],
     dsu: _IndexedDSU,
     max_genes: int,
     max_satellite_genes: int,
@@ -787,6 +788,8 @@ def _merge_supported_satellite_best_indexed(
     min_max_score: float,
     min_coverage: float,
     min_norm: float,
+    iteration: int,
+    merge_trace: list[dict[str, object]] | None,
 ) -> int:
     """Attach a small group's best supported target without requiring reciprocity."""
 
@@ -860,16 +863,51 @@ def _merge_supported_satellite_best_indexed(
         if overlap / overlap_denominator > max_species_overlap_fraction:
             continue
         support = min(float(norms[row]), float(reverse_norm[row]))
-        candidates.append((support, float(margins[row]), source, target))
+        candidates.append(
+            (
+                support,
+                float(margins[row]),
+                source,
+                target,
+                int(row),
+                overlap / overlap_denominator,
+            )
+        )
     candidates.sort(key=lambda item: (-item[0], -item[1], item[2], item[3]))
 
     anchor_attachments = Counter()
     merged = 0
-    for _support, _margin, source, target in candidates:
+    for support, margin, source, target, row, overlap_fraction in candidates:
         anchor = dsu.find(target)
         if anchor_attachments[anchor] >= max_satellites_per_anchor:
             continue
         if dsu.union(source, target, max_genes=max_genes):
+            if merge_trace is not None:
+                reverse_row = int(safe_reverse_rows[row])
+                merge_trace.append({
+                    "iteration": iteration,
+                    "source_cluster": source,
+                    "target_cluster": target,
+                    "source_genes": tuple(int(gene) for gene in clusters[source]),
+                    "target_genes": tuple(int(gene) for gene in clusters[target]),
+                    "source_size": int(sizes[source]),
+                    "target_size": int(sizes[target]),
+                    "source_seed_families": int(seed_family_counts[source]),
+                    "target_seed_families": int(seed_family_counts[target]),
+                    "support": support,
+                    "margin": margin,
+                    "species_overlap_fraction": float(overlap_fraction),
+                    "forward_hits": int(counts[row]),
+                    "reverse_hits": int(counts[reverse_row]),
+                    "forward_average": float(avg_scores[row]),
+                    "reverse_average": float(reverse_avg[row]),
+                    "forward_maximum": float(maximums[row]),
+                    "reverse_maximum": float(reverse_maximum[row]),
+                    "forward_coverage": float(coverages[row]),
+                    "reverse_coverage": float(reverse_coverage[row]),
+                    "forward_normalized_support": float(norms[row]),
+                    "reverse_normalized_support": float(reverse_norm[row]),
+                })
             anchor_attachments[dsu.find(target)] += 1
             merged += 1
     return merged
@@ -962,6 +1000,7 @@ def merge_supported_satellite_candidate_clusters(
     max_satellite_genes: int = 5,
     max_satellite_to_anchor_ratio: float = 0.75,
     min_margin: float = 1.5,
+    iteration_margin_increment: float = 0.0,
     max_satellites_per_anchor: int = 2,
     max_species_overlap_fraction: float = 1.0,
     min_avg_score: float = 0.0,
@@ -969,6 +1008,7 @@ def merge_supported_satellite_candidate_clusters(
     min_coverage: float = 0.5,
     min_norm: float = 0.02,
     max_iterations: int = 1,
+    merge_trace: list[dict[str, object]] | None = None,
 ) -> tuple[List[IndexCluster], int, int, int]:
     """Build bounded HMM candidates by attaching supported satellite groups."""
 
@@ -990,6 +1030,7 @@ def merge_supported_satellite_candidate_clusters(
         raise ValueError("maximum species-overlap fraction cannot exceed one")
     gates = (
         min_margin,
+        iteration_margin_increment,
         min_avg_score,
         min_max_score,
         min_coverage,
@@ -1026,17 +1067,20 @@ def merge_supported_satellite_candidate_clusters(
             maximums,
             sizes,
             seed_family_counts,
+            current,
             dsu,
             max_genes=max_component_genes,
             max_satellite_genes=max_satellite_genes,
             max_satellite_to_anchor_ratio=max_satellite_to_anchor_ratio,
-            min_margin=min_margin,
+            min_margin=min_margin + iteration * iteration_margin_increment,
             max_satellites_per_anchor=max_satellites_per_anchor,
             max_species_overlap_fraction=max_species_overlap_fraction,
             min_avg_score=min_avg_score,
             min_max_score=min_max_score,
             min_coverage=min_coverage,
             min_norm=min_norm,
+            iteration=iteration,
+            merge_trace=merge_trace,
         )
         if merged == 0:
             break

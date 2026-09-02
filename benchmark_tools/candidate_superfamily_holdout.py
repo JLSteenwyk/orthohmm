@@ -165,7 +165,10 @@ def evaluate_satellite(seed: int, iterations: int = 1) -> dict:
     }
 
 
-def evaluate_two_hop_satellite(iterations: int) -> dict:
+def evaluate_two_hop_satellite(
+    iterations: int,
+    iteration_margin_increment: float = 0.0,
+) -> dict:
     """Exercise aggregate second-pass support with an unsupported decoy."""
 
     sizes = (6, 4, 4, 4, 6)
@@ -194,13 +197,13 @@ def evaluate_two_hop_satellite(iterations: int) -> dict:
             scores.append(reverse_norm * scale / 2.0)
 
     # Clusters 1 and 2 first attach to anchor 0. Cluster 3 has individually
-    # weaker links to all three, but their aggregate support clears the 1.5
-    # margin only after the first-pass component is rebuilt.
+    # weaker links to all three, but their aggregate support clears a 2.0
+    # second-pass margin only after the first-pass component is rebuilt.
     add_relation(1, 0, 3.0)
     add_relation(2, 0, 3.0)
-    add_relation(3, 0, 0.9)
-    add_relation(3, 1, 0.9)
-    add_relation(3, 2, 0.9)
+    add_relation(3, 0, 1.2)
+    add_relation(3, 1, 1.2)
+    add_relation(3, 2, 1.2)
     add_relation(3, 4, 1.0, reverse_norm=0.001)
 
     predicted, merges, relations, completed = (
@@ -214,6 +217,7 @@ def evaluate_two_hop_satellite(iterations: int) -> dict:
             max_satellite_genes=12,
             max_satellite_to_anchor_ratio=0.75,
             min_margin=1.5,
+            iteration_margin_increment=iteration_margin_increment,
             max_satellites_per_anchor=2,
             max_species_overlap_fraction=1.0,
             min_avg_score=0.0,
@@ -226,6 +230,7 @@ def evaluate_two_hop_satellite(iterations: int) -> dict:
     truth = [sum(clusters[:4], []), clusters[4]]
     return {
         "requested_iterations": iterations,
+        "iteration_margin_increment": iteration_margin_increment,
         "completed_iterations": completed,
         "seed_fragments": len(clusters),
         "candidate_families": len(predicted),

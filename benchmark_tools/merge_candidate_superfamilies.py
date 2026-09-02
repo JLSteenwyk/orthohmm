@@ -48,12 +48,14 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--max-satellite-genes", type=int, default=5)
     parser.add_argument("--max-satellite-ratio", type=float, default=0.75)
     parser.add_argument("--min-margin", type=float, default=1.5)
+    parser.add_argument("--iteration-margin-increment", type=float, default=0.0)
     parser.add_argument("--max-satellites-per-anchor", type=int, default=2)
     parser.add_argument("--max-species-overlap-fraction", type=float, default=1.0)
     parser.add_argument("--min-average-score", type=float, default=0.0)
     parser.add_argument("--min-maximum-score", type=float, default=0.0)
     parser.add_argument("--min-coverage", type=float, default=0.0)
     parser.add_argument("--min-normalized-support", type=float, default=0.0)
+    parser.add_argument("--trace-json", type=Path)
     parser.add_argument("--official-benchmark", type=Path)
     return parser
 
@@ -94,6 +96,7 @@ def main(argv=None) -> int:
         args.min_maximum_score,
         args.min_coverage,
         args.min_normalized_support,
+        args.iteration_margin_increment,
     )
     if args.max_family_genes < 1:
         raise SystemExit("--max-family-genes must be positive")
@@ -101,6 +104,8 @@ def main(argv=None) -> int:
         raise SystemExit("--iterations must be positive")
     if any(not np.isfinite(value) or value < 0.0 for value in gates):
         raise SystemExit("evidence gates must be finite and nonnegative")
+    if args.trace_json is not None and args.method != "satellite":
+        raise SystemExit("--trace-json requires --method satellite")
 
     output_directory = args.output_directory.resolve()
     if output_directory.exists() and any(output_directory.iterdir()):
@@ -146,15 +151,20 @@ def main(argv=None) -> int:
                 else merge_reciprocal_candidate_clusters
             )
             method_parameters = {}
+            merge_trace = [] if args.trace_json is not None else None
             if args.method == "satellite":
                 method_parameters = {
                     "max_satellite_genes": args.max_satellite_genes,
                     "max_satellite_to_anchor_ratio": args.max_satellite_ratio,
                     "min_margin": args.min_margin,
+                    "iteration_margin_increment": (
+                        args.iteration_margin_increment
+                    ),
                     "max_satellites_per_anchor": args.max_satellites_per_anchor,
                     "max_species_overlap_fraction": (
                         args.max_species_overlap_fraction
                     ),
+                    "merge_trace": merge_trace,
                 }
             clusters, merge_count, relation_count, completed_iterations = (
                 merge_function(
@@ -174,6 +184,26 @@ def main(argv=None) -> int:
             )
         with metrics.stage("write_candidates"):
             write_clusters(output_path, clusters, gene_names)
+            if args.trace_json is not None:
+                trace_payload = {
+                    "schema_version": 1,
+                    "description": "Accepted label-blind satellite merge evidence",
+                    "command": [sys.executable, *sys.argv],
+                    "git": git_state(),
+                    "input": {
+                        "hits": file_provenance(args.hits_pickle),
+                        "seed_clusters": file_provenance(args.seed_clusters),
+                    },
+                    "merges": [],
+                }
+                for record in merge_trace or []:
+                    named_record = dict(record)
+                    for field in ("source_genes", "target_genes"):
+                        named_record[field] = [
+                            gene_names[int(gene)] for gene in record[field]
+                        ]
+                    trace_payload["merges"].append(named_record)
+                _atomic_json(args.trace_json.resolve(), trace_payload)
         metrics.add_counts(
             genes=len(gene_names),
             species=len(species_names),
@@ -205,11 +235,16 @@ def main(argv=None) -> int:
             "max_satellite_genes": args.max_satellite_genes,
             "max_satellite_ratio": args.max_satellite_ratio,
             "min_margin": args.min_margin,
+            "iteration_margin_increment": args.iteration_margin_increment,
             "max_satellites_per_anchor": args.max_satellites_per_anchor,
             "max_species_overlap_fraction": args.max_species_overlap_fraction,
         },
         "outputs": {"candidate_clusters": file_provenance(output_path)},
     })
+    if args.trace_json is not None:
+        payload["outputs"]["merge_trace"] = file_provenance(
+            args.trace_json.resolve()
+        )
     if args.official_benchmark is not None:
         payload["official_orthobench"] = run_official_benchmark(
             args.official_benchmark.resolve(), output_path
