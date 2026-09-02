@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-02T18:00:00Z",
+  "description": "First and only evaluation of the predeclared frozen phylogeny method on the sealed OrthoBench validation partition",
+  "freeze": {
+    "artifact": "benchmark_tools/results/phylogeny_method_freeze_20260902.json",
+    "commit": "fd3031556c68d2cabaf8ea9eb67ee1d74c63e84c"
+  },
+  "validation": {
+    "artifact": "benchmark_tools/results/orthobench_validation_frozen_phylogeny_20260902.json",
+    "refogs": 35,
+    "f_score": 74.47581525130697,
+    "precision": 83.9136505881633,
+    "recall": 66.94631024177198,
+    "exact_refogs": 5
+  },
+  "combined": {
+    "artifact": "benchmark_tools/results/orthobench_all_frozen_phylogeny_20260902.json",
+    "refogs": 70,
+    "f_score": 71.52489457402505,
+    "precision": 77.70501546657259,
+    "recall": 66.25539732481262,
+    "exact_refogs": 14
+  },
+  "candidate_validation": {
+    "artifact": "benchmark_tools/results/phylogeny_candidate_satellite_m8_margin15_validation_audit_20260902.json",
+    "pair_recall_micro": 0.615334329473291,
+    "pair_recall_macro": 0.7229700907380587,
+    "fully_colocated_refogs": 4,
+    "cross_refog_pairs": 0,
+    "mixed_reference_candidates": 0,
+    "reference_to_nonreference_relations": 3311
+  },
+  "comparison": {
+    "orthofinder_3_1_5_full_f_score": 72.7,
+    "f_score_difference": -1.1751054259749544,
+    "strict_orthobench_target_met": false,
+    "interpretation": "The selected method generalized and beat OrthoFinder on the sealed-half F-score, but its combined recall remained too low to meet the full OrthoBench target."
+  },
+  "next_step_policy": "Post-validation work may use these results only as a consistency check. New method choices must be justified by label-blind evidence, synthetic holdouts, and non-benchmark-specific rules."
+}

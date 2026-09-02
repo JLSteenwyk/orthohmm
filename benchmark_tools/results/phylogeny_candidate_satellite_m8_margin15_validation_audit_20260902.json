@@ -1,0 +1,424 @@
+{
+  "audit": {
+    "candidate_families": 56874,
+    "candidate_family_sizes": {
+      "maximum": 150,
+      "median": 1.0,
+      "minimum": 1,
+      "p90": 12.0
+    },
+    "candidates_combining_seeds": 4393,
+    "genes": 251378,
+    "largest_candidate_fraction": 0.0005967109293573821,
+    "reference": {
+      "cross_refog_pairs": 0,
+      "fully_colocated_refogs": 4,
+      "mixed_reference_candidates": 0,
+      "pair_precision_among_reference_genes": 1.0,
+      "pair_recall_macro": 0.7229700907380587,
+      "pair_recall_micro": 0.615334329473291,
+      "possible_pairs": 21416,
+      "recovered_pairs": 13178,
+      "reference_genes": 1062,
+      "reference_to_nonreference_relations": 3311,
+      "refogs": 35
+    },
+    "refog_records": [
+      {
+        "candidate_components": 11,
+        "genes": 19,
+        "genes_observed": 19,
+        "pair_recall": 0.12280701754385964,
+        "possible_pairs": 171,
+        "recovered_pairs": 21,
+        "refog": "RefOG001",
+        "seed_components": 11
+      },
+      {
+        "candidate_components": 3,
+        "genes": 50,
+        "genes_observed": 50,
+        "pair_recall": 0.9208163265306123,
+        "possible_pairs": 1225,
+        "recovered_pairs": 1128,
+        "refog": "RefOG002",
+        "seed_components": 3
+      },
+      {
+        "candidate_components": 2,
+        "genes": 34,
+        "genes_observed": 34,
+        "pair_recall": 0.8342245989304813,
+        "possible_pairs": 561,
+        "recovered_pairs": 468,
+        "refog": "RefOG003",
+        "seed_components": 2
+      },
+      {
+        "candidate_components": 5,
+        "genes": 48,
+        "genes_observed": 48,
+        "pair_recall": 0.8014184397163121,
+        "possible_pairs": 1128,
+        "recovered_pairs": 904,
+        "refog": "RefOG004",
+        "seed_components": 6
+      },
+      {
+        "candidate_components": 7,
+        "genes": 57,
+        "genes_observed": 57,
+        "pair_recall": 0.531328320802005,
+        "possible_pairs": 1596,
+        "recovered_pairs": 848,
+        "refog": "RefOG005",
+        "seed_components": 8
+      },
+      {
+        "candidate_components": 5,
+        "genes": 23,
+        "genes_observed": 23,
+        "pair_recall": 0.6086956521739131,
+        "possible_pairs": 253,
+        "recovered_pairs": 154,
+        "refog": "RefOG006",
+        "seed_components": 5
+      },
+      {
+        "candidate_components": 13,
+        "genes": 94,
+        "genes_observed": 94,
+        "pair_recall": 0.1981239990848776,
+        "possible_pairs": 4371,
+        "recovered_pairs": 866,
+        "refog": "RefOG007",
+        "seed_components": 18
+      },
+      {
+        "candidate_components": 19,
+        "genes": 27,
+        "genes_observed": 27,
+        "pair_recall": 0.045584045584045586,
+        "possible_pairs": 351,
+        "recovered_pairs": 16,
+        "refog": "RefOG008",
+        "seed_components": 22
+      },
+      {
+        "candidate_components": 2,
+        "genes": 30,
+        "genes_observed": 30,
+        "pair_recall": 0.9333333333333333,
+        "possible_pairs": 435,
+        "recovered_pairs": 406,
+        "refog": "RefOG009",
+        "seed_components": 3
+      },
+      {
+        "candidate_components": 3,
+        "genes": 25,
+        "genes_observed": 25,
+        "pair_recall": 0.8433333333333334,
+        "possible_pairs": 300,
+        "recovered_pairs": 253,
+        "refog": "RefOG010",
+        "seed_components": 3
+      },
+      {
+        "candidate_components": 1,
+        "genes": 12,
+        "genes_observed": 12,
+        "pair_recall": 1.0,
+        "possible_pairs": 66,
+        "recovered_pairs": 66,
+        "refog": "RefOG011",
+        "seed_components": 1
+      },
+      {
+        "candidate_components": 4,
+        "genes": 28,
+        "genes_observed": 28,
+        "pair_recall": 0.7936507936507936,
+        "possible_pairs": 378,
+        "recovered_pairs": 300,
+        "refog": "RefOG012",
+        "seed_components": 4
+      },
+      {
+        "candidate_components": 2,
+        "genes": 35,
+        "genes_observed": 35,
+        "pair_recall": 0.8890756302521008,
+        "possible_pairs": 595,
+        "recovered_pairs": 529,
+        "refog": "RefOG013",
+        "seed_components": 2
+      },
+      {
+        "candidate_components": 3,
+        "genes": 43,
+        "genes_observed": 43,
+        "pair_recall": 0.9080841638981174,
+        "possible_pairs": 903,
+        "recovered_pairs": 820,
+        "refog": "RefOG014",
+        "seed_components": 3
+      },
+      {
+        "candidate_components": 5,
+        "genes": 24,
+        "genes_observed": 24,
+        "pair_recall": 0.36231884057971014,
+        "possible_pairs": 276,
+        "recovered_pairs": 100,
+        "refog": "RefOG015",
+        "seed_components": 5
+      },
+      {
+        "candidate_components": 1,
+        "genes": 14,
+        "genes_observed": 14,
+        "pair_recall": 1.0,
+        "possible_pairs": 91,
+        "recovered_pairs": 91,
+        "refog": "RefOG016",
+        "seed_components": 1
+      },
+      {
+        "candidate_components": 2,
+        "genes": 46,
+        "genes_observed": 46,
+        "pair_recall": 0.9565217391304348,
+        "possible_pairs": 1035,
+        "recovered_pairs": 990,
+        "refog": "RefOG017",
+        "seed_components": 3
+      },
+      {
+        "candidate_components": 4,
+        "genes": 34,
+        "genes_observed": 34,
+        "pair_recall": 0.8288770053475936,
+        "possible_pairs": 561,
+        "recovered_pairs": 465,
+        "refog": "RefOG018",
+        "seed_components": 4
+      },
+      {
+        "candidate_components": 1,
+        "genes": 9,
+        "genes_observed": 9,
+        "pair_recall": 1.0,
+        "possible_pairs": 36,
+        "recovered_pairs": 36,
+        "refog": "RefOG019",
+        "seed_components": 1
+      },
+      {
+        "candidate_components": 1,
+        "genes": 17,
+        "genes_observed": 17,
+        "pair_recall": 1.0,
+        "possible_pairs": 136,
+        "recovered_pairs": 136,
+        "refog": "RefOG020",
+        "seed_components": 1
+      },
+      {
+        "candidate_components": 3,
+        "genes": 14,
+        "genes_observed": 14,
+        "pair_recall": 0.46153846153846156,
+        "possible_pairs": 91,
+        "recovered_pairs": 42,
+        "refog": "RefOG021",
+        "seed_components": 3
+      },
+      {
+        "candidate_components": 2,
+        "genes": 36,
+        "genes_observed": 36,
+        "pair_recall": 0.7968253968253968,
+        "possible_pairs": 630,
+        "recovered_pairs": 502,
+        "refog": "RefOG022",
+        "seed_components": 3
+      },
+      {
+        "candidate_components": 3,
+        "genes": 14,
+        "genes_observed": 14,
+        "pair_recall": 0.7252747252747253,
+        "possible_pairs": 91,
+        "recovered_pairs": 66,
+        "refog": "RefOG023",
+        "seed_components": 3
+      },
+      {
+        "candidate_components": 2,
+        "genes": 17,
+        "genes_observed": 17,
+        "pair_recall": 0.8823529411764706,
+        "possible_pairs": 136,
+        "recovered_pairs": 120,
+        "refog": "RefOG024",
+        "seed_components": 3
+      },
+      {
+        "candidate_components": 2,
+        "genes": 15,
+        "genes_observed": 15,
+        "pair_recall": 0.8666666666666667,
+        "possible_pairs": 105,
+        "recovered_pairs": 91,
+        "refog": "RefOG025",
+        "seed_components": 3
+      },
+      {
+        "candidate_components": 7,
+        "genes": 44,
+        "genes_observed": 44,
+        "pair_recall": 0.4788583509513742,
+        "possible_pairs": 946,
+        "recovered_pairs": 453,
+        "refog": "RefOG026",
+        "seed_components": 8
+      },
+      {
+        "candidate_components": 3,
+        "genes": 29,
+        "genes_observed": 29,
+        "pair_recall": 0.8645320197044335,
+        "possible_pairs": 406,
+        "recovered_pairs": 351,
+        "refog": "RefOG027",
+        "seed_components": 4
+      },
+      {
+        "candidate_components": 3,
+        "genes": 16,
+        "genes_observed": 16,
+        "pair_recall": 0.7583333333333333,
+        "possible_pairs": 120,
+        "recovered_pairs": 91,
+        "refog": "RefOG028",
+        "seed_components": 4
+      },
+      {
+        "candidate_components": 14,
+        "genes": 50,
+        "genes_observed": 50,
+        "pair_recall": 0.10448979591836735,
+        "possible_pairs": 1225,
+        "recovered_pairs": 128,
+        "refog": "RefOG029",
+        "seed_components": 15
+      },
+      {
+        "candidate_components": 5,
+        "genes": 68,
+        "genes_observed": 68,
+        "pair_recall": 0.8849868305531168,
+        "possible_pairs": 2278,
+        "recovered_pairs": 2016,
+        "refog": "RefOG030",
+        "seed_components": 6
+      },
+      {
+        "candidate_components": 3,
+        "genes": 21,
+        "genes_observed": 21,
+        "pair_recall": 0.8142857142857143,
+        "possible_pairs": 210,
+        "recovered_pairs": 171,
+        "refog": "RefOG031",
+        "seed_components": 3
+      },
+      {
+        "candidate_components": 3,
+        "genes": 10,
+        "genes_observed": 10,
+        "pair_recall": 0.6222222222222222,
+        "possible_pairs": 45,
+        "recovered_pairs": 28,
+        "refog": "RefOG032",
+        "seed_components": 3
+      },
+      {
+        "candidate_components": 2,
+        "genes": 14,
+        "genes_observed": 14,
+        "pair_recall": 0.8571428571428571,
+        "possible_pairs": 91,
+        "recovered_pairs": 78,
+        "refog": "RefOG033",
+        "seed_components": 2
+      },
+      {
+        "candidate_components": 2,
+        "genes": 13,
+        "genes_observed": 13,
+        "pair_recall": 0.8461538461538461,
+        "possible_pairs": 78,
+        "recovered_pairs": 66,
+        "refog": "RefOG034",
+        "seed_components": 2
+      },
+      {
+        "candidate_components": 5,
+        "genes": 32,
+        "genes_observed": 32,
+        "pair_recall": 0.7620967741935484,
+        "possible_pairs": 496,
+        "recovered_pairs": 378,
+        "refog": "RefOG035",
+        "seed_components": 6
+      }
+    ],
+    "seed_families": 62885,
+    "seed_families_per_candidate": {
+      "maximum": 4,
+      "median": 1.0,
+      "minimum": 1,
+      "p90": 1.0
+    },
+    "seed_merges": 6011
+  },
+  "command": [
+    "/home/bizon/anaconda3/bin/python3",
+    "benchmark_tools/candidate_family_diagnostics.py",
+    "--seed-clusters",
+    "benchmarks/results/production_high_sensitivity_orthobench_selfhit_fixed_20260828/output/orthohmm_working_res/orthohmm_edges_clustered.txt",
+    "--candidate-clusters",
+    "benchmarks/results/phylogeny_candidate_satellite_m8_margin15_20260902/candidate_clusters.txt",
+    "--refogs",
+    "/tmp/orthohmm_refogs_validation_20260902_fd30315",
+    "--json",
+    "benchmark_tools/results/phylogeny_candidate_satellite_m8_margin15_validation_audit_20260902.json"
+  ],
+  "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+  "description": "Candidate-superfamily pre-reconciliation audit",
+  "git": {
+    "commit": "fd3031556c68d2cabaf8ea9eb67ee1d74c63e84c",
+    "dirty": true
+  },
+  "inputs": {
+    "candidate_clusters": {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/phylogeny_candidate_satellite_m8_margin15_20260902/candidate_clusters.txt",
+      "sha256": "ac0029887375d4d421dc83ecbcf04ef562d26e70e585183ad76c7329d04d0c54"
+    },
+    "refog_directory": "/tmp/orthohmm_refogs_validation_20260902_fd30315",
+    "seed_clusters": {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/production_high_sensitivity_orthobench_selfhit_fixed_20260828/output/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "sha256": "8ee100f4370fef6e3e6a3e0fd36112adcc3aefeb60197331115667c519ca121f"
+    }
+  },
+  "schema_version": 1,
+  "source": {
+    "bytes": 9085,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/candidate_family_diagnostics.py",
+    "sha256": "4cdc830db1e17d2d8b1b12d604338a6f6ed66814dafbc2ee28881729f2d68870"
+  }
+}
