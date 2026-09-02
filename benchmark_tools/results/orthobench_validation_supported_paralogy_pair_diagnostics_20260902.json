@@ -1,0 +1,270 @@
+{
+  "command": [
+    "/home/bizon/anaconda3/bin/python",
+    "benchmark_tools/orthobench_stage_diagnostics.py",
+    "--refogs",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs",
+    "--pairs",
+    "positive_paralogy=benchmarks/work/orthobench_positive_paralogy_pairs.tsv",
+    "--pairs",
+    "supported_paralogy=benchmarks/work/orthobench_supported_paralogy_pairs.tsv",
+    "--partition-json",
+    "benchmark_tools/results/orthobench_phylogeny_partition_20260902.json",
+    "--partition",
+    "validation",
+    "--json",
+    "benchmark_tools/results/orthobench_validation_supported_paralogy_pair_diagnostics_20260902.json"
+  ],
+  "cwd": "/tmp/orthohmm-phylogeny-support-v3",
+  "generated_at": "2026-09-02T23:18:55.946188+00:00",
+  "git": {
+    "commit": "4f0e127158dc71d24ae8feaf51e25f79f183bb77",
+    "dirty": true
+  },
+  "refogs": {
+    "directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs",
+    "genes": 1062,
+    "groups": 35,
+    "manifest": [
+      {
+        "bytes": 346,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG002.txt",
+        "sha256": "cc41b273ef98fb394b52b2167f9f7277c5914c4baf481afcbe96dee0319b4a61"
+      },
+      {
+        "bytes": 935,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG003.txt",
+        "sha256": "0eab9b709426d7b3303d621215c1fe6bb5c9ad2032697c053ae062bf12086224"
+      },
+      {
+        "bytes": 628,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG005.txt",
+        "sha256": "21d3c8f98e4e6402cc9e90d649aa5acc0b269082a550c2b6b2637b2e26d1d505"
+      },
+      {
+        "bytes": 886,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG006.txt",
+        "sha256": "2a4b44023011b5e7b88ae8f6089ab43d0a4d5d9857d8ee1e0db4b132ce42fb8c"
+      },
+      {
+        "bytes": 1065,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG007.txt",
+        "sha256": "f55ee153b25f544784d13319ab2cf5eacb564e90ae9161dadc818a55a7d2eabc"
+      },
+      {
+        "bytes": 422,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG009.txt",
+        "sha256": "77a03d9e055790dd789d12032e54ef15fb2f7c61834d695685176d5e0b6a6c21"
+      },
+      {
+        "bytes": 1743,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG011.txt",
+        "sha256": "1f32f081e3f1ef11a507164620b5e6d05b76e6e8f0fabc86bb4e4f0de3789047"
+      },
+      {
+        "bytes": 339,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG013.txt",
+        "sha256": "ccd3d5e217b5485620465f27e71b0477c895f4bc6f8349b8f94e1021165a0bd1"
+      },
+      {
+        "bytes": 551,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG015.txt",
+        "sha256": "042d77fb136b840e4e46f089c1923ba077226d860e14829bd684f09863040504"
+      },
+      {
+        "bytes": 462,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG016.txt",
+        "sha256": "b88255bb9a44d76fe001d10395edadfa4055a451352d6d7870a5cf82cfe0e191"
+      },
+      {
+        "bytes": 219,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG018.txt",
+        "sha256": "29a622397ed97572bf0483f0095eb4efbc2073b0439d260a16c10c202b92b09a"
+      },
+      {
+        "bytes": 514,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG020.txt",
+        "sha256": "fe3bd2f9b42f1d4229a57b8384dc94ba101da00b5e817bf91960c874461fd5dd"
+      },
+      {
+        "bytes": 647,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG022.txt",
+        "sha256": "0b19a8ec969fac32886200de47c4641a0d269df81d603d12807fbc2eb6a2c606"
+      },
+      {
+        "bytes": 789,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG026.txt",
+        "sha256": "e5d3ec13969b8c881106427b6aa7ebd5bfd1d8570faf750da181c7b076272a58"
+      },
+      {
+        "bytes": 443,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG028.txt",
+        "sha256": "c9c1011e5cd7985abf5090097a341c162c53384a9267d00a54e51dea02b1a851"
+      },
+      {
+        "bytes": 240,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG032.txt",
+        "sha256": "d383a06984f78e2d6a25356ca8ae9b3fce2864082a9deb08fc26db3fa67dbbc2"
+      },
+      {
+        "bytes": 853,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG036.txt",
+        "sha256": "8fe4b897a7cf9d0d45b247064eb4cf306e98dba2875becf9b40bba602db6fa89"
+      },
+      {
+        "bytes": 630,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG037.txt",
+        "sha256": "81607943a81f43af7fa27b1ca4c426c4285dd0b5008b7755e100feffc8294008"
+      },
+      {
+        "bytes": 168,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG038.txt",
+        "sha256": "4e196096b0a785d18edd335c2c5fce33cfe647132bd6dbea1c6162631f569180"
+      },
+      {
+        "bytes": 311,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG043.txt",
+        "sha256": "5ea47e0533f6475d8ba7a88738929be897d89aa1736d05bc2b77fc7d5eb28505"
+      },
+      {
+        "bytes": 251,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG044.txt",
+        "sha256": "1b3c6818c8fcfc4595a85773f1080bd2b8b64239c70f3d62a878c86e6ccd82b5"
+      },
+      {
+        "bytes": 663,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG047.txt",
+        "sha256": "bb42a9c8b8a551c1824deb190ebde19d5c4bd18f6c77d660815f7a4e77cfe484"
+      },
+      {
+        "bytes": 248,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG050.txt",
+        "sha256": "b8709f35070f357fcdbde427cf421c53f02de6b2de79ccaa2033afb013c1e002"
+      },
+      {
+        "bytes": 311,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG051.txt",
+        "sha256": "7ed92e4910292450ecb63193946105125f017d28b256a8796df83d79a5f101ee"
+      },
+      {
+        "bytes": 282,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG052.txt",
+        "sha256": "cfab4664d45c49c68ac8285e2205d79d5c7737f7b1f56268a892b440015d2478"
+      },
+      {
+        "bytes": 801,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG054.txt",
+        "sha256": "7f136708ffb2ea5ef3185ed4ab3fc9f199caa3d56c81fd2f57589df819aee2ef"
+      },
+      {
+        "bytes": 539,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG055.txt",
+        "sha256": "38611031e58d4c818f900044b091b9fdb5e377a147a1322a653cba557cb29298"
+      },
+      {
+        "bytes": 292,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG057.txt",
+        "sha256": "15b85f9f0575b69408ce48b9da07cdc2539f4df9bcb65c99c52fd346716f55bd"
+      },
+      {
+        "bytes": 929,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG058.txt",
+        "sha256": "5697a188e1f95be9ba1cb8d07fc510c449eb680b0e9c64ede9e75d891fe444fd"
+      },
+      {
+        "bytes": 1263,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG060.txt",
+        "sha256": "8d86da3230a2c31ce57a1d3e1042f8b4c9b40e9853fb8ef17869432848e6e377"
+      },
+      {
+        "bytes": 386,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG063.txt",
+        "sha256": "350a327be6b22ca3cfa0721d75188f34835be03368549a83061368a714114bf3"
+      },
+      {
+        "bytes": 180,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG065.txt",
+        "sha256": "b6255142e05c38a987eb06562ff1ee6491aeb766c2419833b84f6784cd8e7149"
+      },
+      {
+        "bytes": 252,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG066.txt",
+        "sha256": "f5ab9dc90a1385c3df885483670bc43f147d06d17b1b95f643575f379d0c1f0b"
+      },
+      {
+        "bytes": 235,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG067.txt",
+        "sha256": "25122b591f8f1bea20e25940669f02e693a2aba9e2b370e3bd6738cc1279dd53"
+      },
+      {
+        "bytes": 590,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG068.txt",
+        "sha256": "1d096936b040969a593ee687c5121d0bb73d94101300ded9225898059d34d312"
+      }
+    ],
+    "partition": "validation",
+    "partition_manifest": {
+      "bytes": 18883,
+      "path": "/tmp/orthohmm-phylogeny-support-v3/benchmark_tools/results/orthobench_phylogeny_partition_20260902.json",
+      "sha256": "71ce14f0c0df944cb40028a2f63b667875b28e2ac8397831d15c56a421e5826d"
+    }
+  },
+  "schema_version": 1,
+  "source": {
+    "bytes": 15042,
+    "path": "/tmp/orthohmm-phylogeny-support-v3/benchmark_tools/orthobench_stage_diagnostics.py",
+    "sha256": "1b0a347e000664390a16333f7386d232ce9c01cfd219cd21f985e0ca281ea6fb"
+  },
+  "stages": [
+    {
+      "input": {
+        "bytes": 35202707,
+        "path": "/tmp/orthohmm-phylogeny-support-v3/benchmarks/work/orthobench_positive_paralogy_pairs.tsv",
+        "sha256": "3435da85644111d498a8d71701d8ac142da7e7e188ae0966d213eaeaec1737de"
+      },
+      "kind": "pairs",
+      "label": "positive_paralogy",
+      "metrics": {
+        "cross_refog_reference_pairs": 0,
+        "direct_reference_pair_recall_macro": 0.4344917771212678,
+        "direct_reference_pair_recall_micro": 0.21245797534553604,
+        "direct_reference_pairs": 4550,
+        "fully_connected_refogs": 4,
+        "mean_largest_refog_component_fraction": 0.7520026567110951,
+        "reference_genes": 1062,
+        "reference_genes_observed": 943,
+        "reference_pairs": 21416,
+        "refogs": 35,
+        "relation_records": 966439,
+        "transitive_reference_pair_recall_macro": 0.6674949539264606,
+        "transitive_reference_pair_recall_micro": 0.5164363093014569,
+        "transitive_reference_pairs": 11060
+      }
+    },
+    {
+      "input": {
+        "bytes": 37715866,
+        "path": "/tmp/orthohmm-phylogeny-support-v3/benchmarks/work/orthobench_supported_paralogy_pairs.tsv",
+        "sha256": "ac186acdd8c76c6b4a9e63a5d4794f7d7c60d44d8fed0658ac37adee3c4e2f73"
+      },
+      "kind": "pairs",
+      "label": "supported_paralogy",
+      "metrics": {
+        "cross_refog_reference_pairs": 0,
+        "direct_reference_pair_recall_macro": 0.4469168597069538,
+        "direct_reference_pair_recall_micro": 0.22016249533059395,
+        "direct_reference_pairs": 4715,
+        "fully_connected_refogs": 4,
+        "mean_largest_refog_component_fraction": 0.7555114286409197,
+        "reference_genes": 1062,
+        "reference_genes_observed": 945,
+        "reference_pairs": 21416,
+        "refogs": 35,
+        "relation_records": 1033790,
+        "transitive_reference_pair_recall_macro": 0.6695357702529913,
+        "transitive_reference_pair_recall_micro": 0.5217594322002241,
+        "transitive_reference_pairs": 11174
+      }
+    }
+  ]
+}

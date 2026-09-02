@@ -69,8 +69,14 @@ def sha256_file(path: Path, chunk_size: int = 1024 * 1024) -> str:
     return digest.hexdigest()
 
 
-def load_refogs(directory: Path) -> list[set[str]]:
-    paths = sorted(directory.glob("RefOG*.txt"))
+def load_refogs(
+    directory: Path, names: Sequence[str] | None = None
+) -> list[set[str]]:
+    paths = (
+        [directory / name for name in names]
+        if names is not None
+        else sorted(directory.glob("RefOG*.txt"))
+    )
     if not paths:
         raise ValueError(f"No RefOG*.txt files found in {directory}")
     groups = []
@@ -311,6 +317,10 @@ def build_parser() -> argparse.ArgumentParser:
         metavar="LABEL=PATH", help="Orthogroup/cluster checkpoint",
     )
     parser.add_argument("--official-benchmark", type=Path)
+    parser.add_argument("--partition-json", type=Path)
+    parser.add_argument(
+        "--partition", choices=("development", "validation", "all")
+    )
     parser.add_argument("--json", type=Path, required=True)
     return parser
 
@@ -323,7 +333,25 @@ def main(argv: Sequence[str] | None = None) -> int:
     if not labels:
         raise SystemExit("At least one stage checkpoint is required")
 
-    refogs = load_refogs(args.refogs)
+    if (args.partition_json is None) != (args.partition is None):
+        raise SystemExit(
+            "--partition-json and --partition must be specified together"
+        )
+    selected_names = None
+    partition_provenance = None
+    if args.partition_json is not None:
+        partition_manifest = json.loads(args.partition_json.read_text())
+        selected_names = (
+            sorted(
+                partition_manifest["development"]
+                + partition_manifest["validation"]
+            )
+            if args.partition == "all"
+            else partition_manifest[args.partition]
+        )
+        partition_provenance = file_provenance(args.partition_json)
+
+    refogs = load_refogs(args.refogs, selected_names)
     reference_genes = set().union(*refogs)
     stages = []
     for spec in args.pairs:
@@ -366,11 +394,19 @@ def main(argv: Sequence[str] | None = None) -> int:
         "source": file_provenance(Path(__file__)),
         "refogs": {
             "directory": str(args.refogs.resolve()),
+            "partition": args.partition,
+            "partition_manifest": partition_provenance,
             "groups": len(refogs),
             "genes": len(reference_genes),
             "manifest": [
-                file_provenance(path)
-                for path in sorted(args.refogs.glob("RefOG*.txt"))
+                file_provenance(args.refogs / name)
+                for name in (
+                    selected_names
+                    if selected_names is not None
+                    else sorted(
+                        path.name for path in args.refogs.glob("RefOG*.txt")
+                    )
+                )
             ],
         },
         "stages": stages,

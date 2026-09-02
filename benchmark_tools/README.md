@@ -321,6 +321,21 @@ root-HOG rule, and the `positive_paralogy` pair rule. It infers its species tree
 internally and submits OrthoHMM's native reconciled cross-species pairs to QfO.
 It does not expand root HOGs into cliques.
 
+The support-aware pair-retention ablation keeps the same frozen
+`satellite_v2` candidates and root-HOG settings while changing only pair
+extraction:
+
+```bash
+METHOD=orthohmm_phylogeny_satellite_v3 \
+PHYLOGENY_PAIR_RULE=supported_paralogy \
+bash benchmark_tools/submit_orthohmm_phylogeny_qfo.sh
+```
+
+`supported_paralogy` preserves cross-species pairs at weak single-overlap
+nodes and removes them only for repeated species overlap or branch support of
+at least 0.9. Select and freeze this ablation on synthetic and partitioned
+OrthoBench diagnostics before submitting QfO.
+
 If a fresh production run reaches a verified candidate-cluster checkpoint but
 fails during phylogeny, `submit_resume_orthohmm_phylogeny_qfo.sh` resumes only
 that stage. The restart harness verifies and preserves the failed-run

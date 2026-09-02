@@ -16,6 +16,7 @@ readonly QFO_PIPELINE=${QFO_PIPELINE:-${BASE}/qfo_benchmark/benchmark-webservice
 readonly QFO_MAPPING=${QFO_MAPPING:-${QFO_PIPELINE}/reference_data/2020/mapping.json.gz}
 readonly ALIGNER=${ALIGNER:-/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin/mafft}
 readonly TREE_BUILDER=${TREE_BUILDER:-/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220/FastTree}
+readonly PHYLOGENY_PAIR_RULE=${PHYLOGENY_PAIR_RULE:-positive_paralogy}
 
 if [[ $(find "${INPUT_DIR}" -maxdepth 1 -type f -name '*.fasta' | wc -l) -ne 78 ]]; then
     echo "Expected 78 QfO proteomes in ${INPUT_DIR}" >&2
@@ -47,7 +48,7 @@ start_epoch=$(date +%s)
     --species-tree-rooting min_variance \
     --phylogeny-candidates satellite_v2 \
     --phylogeny-root-rule species_overlap \
-    --phylogeny-pair-rule positive_paralogy \
+    --phylogeny-pair-rule "${PHYLOGENY_PAIR_RULE}" \
     --aligner "${ALIGNER}" \
     --tree-builder "${TREE_BUILDER}" \
     > "${OUTDIR}/run.log" 2>&1

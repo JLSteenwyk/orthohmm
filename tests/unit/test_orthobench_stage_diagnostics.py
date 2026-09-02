@@ -98,6 +98,33 @@ def test_main_records_provenance_and_metrics(tmp_path, monkeypatch):
     assert payload["stages"][1]["metrics"]["fully_connected_refogs"] == 2
 
 
+def test_main_selects_predefined_partition(tmp_path, monkeypatch):
+    refogs = _write_refogs(tmp_path)
+    pairs = tmp_path / "pairs.tsv"
+    pairs.write_text("a\tb\n")
+    partition = tmp_path / "partition.json"
+    partition.write_text(json.dumps({
+        "development": ["RefOG001.txt"],
+        "validation": ["RefOG002.txt"],
+    }))
+    output = tmp_path / "diagnostics.json"
+    monkeypatch.setattr("sys.argv", ["orthobench_stage_diagnostics.py"])
+
+    assert main([
+        "--refogs", str(refogs),
+        "--pairs", f"pairs={pairs}",
+        "--partition-json", str(partition),
+        "--partition", "development",
+        "--json", str(output),
+    ]) == 0
+
+    payload = json.loads(output.read_text())
+    assert payload["refogs"]["groups"] == 1
+    assert payload["refogs"]["partition"] == "development"
+    assert payload["refogs"]["partition_manifest"]["sha256"]
+    assert payload["stages"][0]["metrics"]["reference_pairs"] == 3
+
+
 def test_parse_labeled_path_requires_existing_file(tmp_path):
     with pytest.raises(Exception):
         parse_labeled_path("missing")

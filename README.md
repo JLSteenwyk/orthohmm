@@ -118,6 +118,10 @@ species-tree mapping conflicts and removes pairs only when the two gene-tree
 children share an observed species. Pair confidence is written to
 `orthohmm_pairwise_orthologs_confidence.tsv`; the original pair file and its
 schema are unchanged.
+The higher-recall opt-in `--phylogeny_pair_rule supported_paralogy` also
+preserves pairs at weak single-species-overlap nodes. It removes pairs only
+when at least two species overlap or branch support is at least 0.9. This pair
+policy does not alter root-HOG splitting.
 The `--phylogeny_root_rule confidence` policy additionally permits a
 root-level split supported by repeated species overlap or a gene-tree branch
 support of at least 0.9; missing and weak support remain conservative.
