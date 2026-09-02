@@ -96,6 +96,19 @@ directory, and records the source path and checkpoint-hit counts.
 
 ## Permissive HMM candidate graphs
 
+Audit a frozen candidate partition before spending time on gene-tree
+inference. The diagnostic verifies that candidates only combine immutable seed
+families and reports the reference-pair recall ceiling, reference contamination,
+family growth, and per-RefOG component recovery:
+
+```bash
+python benchmark_tools/candidate_family_diagnostics.py \
+  --seed-clusters /path/to/seed_clusters.txt \
+  --candidate-clusters /path/to/candidate_clusters.txt \
+  --refogs /path/to/OrthoBench/RefOGs \
+  --json /tmp/candidate_audit.json
+```
+
 Build candidate superfamilies from a trusted normalized-hit checkpoint before
 testing phylogenetic reconciliation:
 
