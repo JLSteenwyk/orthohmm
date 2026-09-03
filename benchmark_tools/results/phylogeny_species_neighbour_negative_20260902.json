@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "status": "rejected_on_development",
+  "hypothesis": "Resolve sparse species-overlap duplications by comparing each repeated copy's nearest heterospecific gene-tree context against species-tree neighbourhoods, then retain medium-confidence ortholog pairs after removing the inferred misplaced copies.",
+  "selection_policy": {
+    "qfo_scores_used": false,
+    "orthobench_partition_used": "development",
+    "orthobench_validation_opened": false
+  },
+  "implementation": {
+    "base_commit": "3939921e247f6344e6d9a49335e12d8b157c3493",
+    "pair_rule": "species_neighbour",
+    "root_rule": "species_overlap",
+    "membership_support_confidence": "medium",
+    "membership_min_profile_support": 1.25,
+    "species_tree_mode": "infer",
+    "species_tree_rooting": "min_variance",
+    "note": "The implementation was evaluated from a dirty experimental worktree and was not retained after rejection."
+  },
+  "verification": {
+    "focused_tests": "86 passed",
+    "ruff": "passed",
+    "synthetic_holdout": {
+      "path": "/tmp/phylogeny_species_neighbour_holdout_v6_20260902.json",
+      "sha256": "661dbbc2e72509a6182175d66c124c617ac8c66c2175a0503e244772edd99e37",
+      "seeds": [101, 211, 307],
+      "supplied_pair_f_score": 1.0,
+      "inferred_pair_f_score": 1.0
+    }
+  },
+  "orthobench_replay": {
+    "metrics_path": "/tmp/orthobench_species_neighbour_v6_20260902.json",
+    "metrics_sha256": "15db51b530f4d8a0f07fcb9a86cdd7cf7b237cf51fc6e91c137f2659729fc89c",
+    "candidate_families": 54445,
+    "reconciled_families": 8681,
+    "checkpoint_hits": 8681,
+    "root_hogs": 59456,
+    "ortholog_pairs": 1165627,
+    "wall_s": 82.904535,
+    "peak_process_tree_rss_gib": 1.714138,
+    "root_hogs_sha256": "8ea4f449e6f9db8d26a6d3d977657917d9d9e7569b72b26d1977b293d687ac97",
+    "pairs_sha256": "74588e27aaecf5bdde13570ee430205c338ec0547409f0d793b7e38105d508d3"
+  },
+  "development_results": {
+    "diagnostics_path": "/tmp/orthobench_species_neighbour_v6_dev_pairs.json",
+    "diagnostics_sha256": "3d27fbf5480654cb6aba8400c63276a372f198dfcfa317620800c95ced104d79",
+    "root_score_path": "/tmp/orthobench_species_neighbour_v6_dev_root.json",
+    "root_score_sha256": "4b44f477a98aac4b97fa68dcf28468baecb460a6f15515f73e547f1eb75c5081",
+    "root_f_score": 72.89013937359736,
+    "root_precision": 80.1592386859904,
+    "root_recall": 66.82979699341114,
+    "exact_refogs": 10,
+    "hmm_membership_v5": {
+      "direct_recall_macro": 0.5649794119709022,
+      "transitive_recall_macro": 0.6981815574413944,
+      "cross_refog_pairs": 0
+    },
+    "species_neighbour_v6": {
+      "direct_recall_macro": 0.5649794119709022,
+      "transitive_recall_macro": 0.6981815574413944,
+      "cross_refog_pairs": 0
+    }
+  },
+  "decision": "Reject before OrthoBench validation or QfO. The resolver produced byte-identical pair predictions and exactly the same development root score as HMM-gated v5, so it adds complexity without measurable benefit."
+}
