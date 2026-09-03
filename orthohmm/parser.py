@@ -437,7 +437,7 @@ def create_parser() -> ArgumentParser:
         "--phylogeny_pair_rule",
         choices=[
             "lca", "positive_paralogy", "supported_paralogy",
-            "sparse_overlap", "topology_overlap",
+            "sparse_overlap", "depth_two_overlap",
         ],
         default="lca",
         help=SUPPRESS,

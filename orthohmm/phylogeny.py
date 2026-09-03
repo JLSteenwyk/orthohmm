@@ -455,15 +455,15 @@ def _group_siblings(parent, nodes):
     return grouped
 
 
-def resolve_gene_tree_species_overlap(
+def resolve_gene_tree_depth_two_overlap(
     gene_tree,
     gene_to_species: dict[str, str],
 ) -> tuple[object, int]:
-    """Concentrate shallow duplicated-species clades before LCA reconciliation.
+    """Resolve duplicated-species clades nested exactly two levels apart.
 
-    The three direct cases mirror the local A/B/C rearrangements in
-    OrthoFinder's overlap resolver. Deferred parent-level moves are omitted:
-    every accepted edit must be justified by the current node alone.
+    This is the conservative depth-two case from OrthoFinder's local overlap
+    resolver. Shallower rearrangements are deliberately excluded because they
+    do not add orthology evidence and can erase useful root-HOG boundaries.
     """
 
     resolutions = 0
@@ -487,7 +487,11 @@ def resolve_gene_tree_species_overlap(
             right_ok, right_overlap, right_depth = _overlap_clade(
                 children[1], overlap, species_by_node
             )
-            if left_depth + right_depth > 2:
+            if (
+                {left_depth, right_depth} != {0, 2}
+                or not left_ok
+                or not right_ok
+            ):
                 continue
 
             siblings = (
@@ -499,84 +503,47 @@ def resolve_gene_tree_species_overlap(
             sister_species = (
                 species_by_node[siblings[0]] if len(siblings) == 1 else set()
             )
+            deep_index = 0 if left_depth == 2 else 1
+            deep = children[deep_index]
+            whole_overlap = children[1 - deep_index]
+            first_overlap = left_overlap if deep_index == 0 else right_overlap
+            first_branch = first_overlap.parent_node
+            shallow_others = [
+                child for child in deep.child_node_iter()
+                if child is not first_branch
+            ]
+            deep_others = [
+                child for child in first_branch.child_node_iter()
+                if child is not first_overlap
+            ]
+            shallow_species = set().union(
+                *(species_by_node[child] for child in shallow_others)
+            )
+            deep_species = set().union(
+                *(species_by_node[child] for child in deep_others)
+            )
+            case = (
+                bool(sister_species & shallow_species),
+                bool(sister_species & deep_species),
+                bool(sister_species & overlap),
+                bool(shallow_species & deep_species),
+            )
+            direct_deep = {
+                (False, False, False, False),
+                (False, False, True, False),
+            }
+            move_shallow = {
+                (False, False, False, True), (False, False, True, True),
+                (False, True, False, True), (False, True, True, True),
+                (True, False, True, True), (True, True, False, False),
+                (True, True, False, True), (True, True, True, True),
+            }
             moving = target = None
-
-            if {left_depth, right_depth} == {0, 1} and left_ok and right_ok:
-                branching_index = 0 if left_depth == 1 else 1
-                branching = children[branching_index]
-                whole_overlap = children[1 - branching_index]
-                overlap_child = left_overlap if branching_index == 0 else right_overlap
-                other_species = set().union(
-                    *(species_by_node[child]
-                      for child in branching.child_node_iter()
-                      if child is not overlap_child)
-                )
-                case = (bool(sister_species & overlap),
-                        bool(sister_species & other_species))
-                if case in {(False, False), (True, False), (True, True)}:
-                    moving, target = whole_overlap, overlap_child
-
-            elif left_depth == right_depth == 1 and left_ok and right_ok:
-                left_other = set().union(
-                    *(species_by_node[child]
-                      for child in children[0].child_node_iter()
-                      if child is not left_overlap)
-                )
-                right_other = set().union(
-                    *(species_by_node[child]
-                      for child in children[1].child_node_iter()
-                      if child is not right_overlap)
-                )
-                case = (
-                    bool(sister_species & overlap),
-                    bool(sister_species & right_other),
-                    bool(sister_species & left_other),
-                )
-                if case in {
-                    (False, False, False), (True, True, True),
-                    (True, True, False), (True, False, True),
-                }:
-                    moving, target = right_overlap, left_overlap
-
-            elif {left_depth, right_depth} == {0, 2} and left_ok and right_ok:
-                deep_index = 0 if left_depth == 2 else 1
-                deep = children[deep_index]
-                whole_overlap = children[1 - deep_index]
-                first_overlap = left_overlap if deep_index == 0 else right_overlap
-                first_branch = first_overlap.parent_node
-                shallow_others = [
-                    child for child in deep.child_node_iter()
-                    if child is not first_branch
-                ]
-                deep_others = [
-                    child for child in first_branch.child_node_iter()
-                    if child is not first_overlap
-                ]
-                shallow_species = set().union(
-                    *(species_by_node[child] for child in shallow_others)
-                )
-                deep_species = set().union(
-                    *(species_by_node[child] for child in deep_others)
-                )
-                case = (
-                    bool(sister_species & shallow_species),
-                    bool(sister_species & deep_species),
-                    bool(sister_species & overlap),
-                    bool(shallow_species & deep_species),
-                )
-                direct_deep = {(False, False, False, False),
-                               (False, False, True, False)}
-                move_shallow = {
-                    (False, False, False, True), (False, False, True, True),
-                    (False, True, False, True), (False, True, True, True),
-                    (True, False, True, True), (True, True, False, False),
-                    (True, True, False, True), (True, True, True, True),
-                }
-                if case in direct_deep:
-                    moving, target = whole_overlap, first_overlap
-                elif case in move_shallow and shallow_others:
-                    moving = _group_siblings(deep, shallow_others)
-                    target = whole_overlap
+            if case in direct_deep:
+                moving, target = whole_overlap, first_overlap
+            elif case in move_shallow and shallow_others:
+                moving = _group_siblings(deep, shallow_others)
+                target = whole_overlap
 
             if moving is None or target is None:
                 continue
@@ -609,7 +576,7 @@ def reconcile_gene_tree(
         )
     valid_pair_rules = {
         "lca", "positive_paralogy", "supported_paralogy",
-        "sparse_overlap", "topology_overlap",
+        "sparse_overlap", "depth_two_overlap",
     }
     if pair_orthology_rule not in valid_pair_rules:
         raise ValueError(
@@ -618,8 +585,8 @@ def reconcile_gene_tree(
         )
 
     topology_resolution_count = 0
-    if pair_orthology_rule == "topology_overlap":
-        gene_tree, topology_resolution_count = resolve_gene_tree_species_overlap(
+    if pair_orthology_rule == "depth_two_overlap":
+        gene_tree, topology_resolution_count = resolve_gene_tree_depth_two_overlap(
             gene_tree, gene_to_species
         )
         pair_orthology_rule = "sparse_overlap"
@@ -1040,7 +1007,7 @@ def validate_phylogeny_config(
         )
     if config.pair_orthology_rule not in {
         "lca", "positive_paralogy", "supported_paralogy",
-        "sparse_overlap", "topology_overlap",
+        "sparse_overlap", "depth_two_overlap",
     }:
         raise PhylogenyConfigurationError(
             "Unsupported pair-orthology rule: "
