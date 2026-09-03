@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "status": "rejected_on_development",
+  "hypothesis": "Cross-child pairs should be retained when species overlap occupies less than one quarter of either binary child clade and does not consume either child.",
+  "selection_policy": {
+    "qfo_scores_used": false,
+    "orthobench_partition_used": "development",
+    "orthobench_validation_opened": false
+  },
+  "implementation": {
+    "base_commit": "96f7b2c9969ed68c7526da1f0cb4cdb844a4618c",
+    "pair_rule": "relative_overlap",
+    "root_rule": "species_overlap",
+    "species_tree_mode": "infer",
+    "species_tree_rooting": "min_variance",
+    "note": "The implementation was evaluated from a dirty experimental worktree and was replaced after rejection."
+  },
+  "verification": {
+    "focused_tests": "60 passed",
+    "ruff": "passed",
+    "synthetic_holdout": {
+      "path": "/tmp/phylogeny_relative_overlap_holdout_20260902.json",
+      "sha256": "7352f9173d30ed578b216d04154f7628d3f907e7420f5b6f64117b4fb04a1b6d",
+      "seeds": [101, 211, 307],
+      "supplied_pair_f_score": 1.0,
+      "inferred_pair_f_score": 1.0
+    }
+  },
+  "orthobench_replay": {
+    "metrics_path": "/tmp/orthobench_relative_overlap_v4_20260902.json",
+    "metrics_sha256": "90332ff20c8ee322f4cef58ba5ba00af636d7917a919425f7d9048f93644fea2",
+    "candidate_families": 54445,
+    "reconciled_families": 8681,
+    "checkpoint_hits": 8681,
+    "root_hogs": 59770,
+    "ortholog_pairs": 983580,
+    "wall_s": 79.803433,
+    "peak_process_tree_rss_gib": 1.572525,
+    "root_hogs_sha256": "76229249770b1f875c6bd319ec524fb50721b048e68c284c4c3a3dba611ea216",
+    "pairs_sha256": "71b99a2b3abc9cd4b838e23a151a64a1b31d4518368fb2226336947c8a8327e4"
+  },
+  "development_results": {
+    "diagnostics_path": "/tmp/orthobench_development_relative_overlap_v4_diagnostics.json",
+    "diagnostics_sha256": "4d9e93253f2f584ca178d3f8ddbf40a14a5941a325b1308463b2c3ec359413dc",
+    "positive_paralogy": {
+      "direct_recall_macro": 0.5075729530255226,
+      "transitive_recall_macro": 0.6782290546605267,
+      "cross_refog_pairs": 0
+    },
+    "supported_paralogy": {
+      "direct_recall_macro": 0.5368776533270584,
+      "transitive_recall_macro": 0.6903003296221243,
+      "cross_refog_pairs": 0
+    },
+    "relative_overlap": {
+      "direct_recall_macro": 0.50824999287372,
+      "transitive_recall_macro": 0.6784576260890981,
+      "cross_refog_pairs": 0
+    }
+  },
+  "decision": "Reject before OrthoBench validation or QfO. The fixed quarter-clade boundary added 17141 pairs but did not exceed supported_paralogy on either development recall measure."
+}
