@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "status": "frozen_for_final_qfo_evaluation",
+  "frozen_at": "2026-09-02",
+  "method": "OrthoHMM depth-two topology resolution with HMM-gated membership",
+  "hypothesis": "Large HMM-supported candidate families should be retained, but a duplicated-species clade nested exactly two levels below its matching overlap clade should be moved locally before LCA reconciliation when the surrounding species sets satisfy a benchmark-independent topology rule.",
+  "source_commit": "cb54b2b82cb64bd4305467a16f49474781415c32",
+  "selection_policy": {
+    "qfo_scores_used": false,
+    "orthobench_development_used_for_selection": true,
+    "orthobench_validation_opened_after_selection": true,
+    "further_tuning_after_validation": false,
+    "selection_order": ["A only", "A+B", "A+B+C", "C only"],
+    "selection_reason": "Only the depth-two C case increased development pair recall; C alone improved root F-score while the shallower cases were neutral or harmful."
+  },
+  "parameters": {
+    "accuracy_profile": "high_sensitivity",
+    "phylogeny_candidates": "satellite_v2",
+    "phylogeny_mode": "reconcile",
+    "species_tree_mode": "infer",
+    "species_tree_rooting": "min_variance",
+    "root_duplication_rule": "species_overlap",
+    "pair_orthology_rule": "depth_two_overlap",
+    "membership_support_confidence": "medium",
+    "membership_min_profile_support": 1.25
+  },
+  "verification": {
+    "focused_tests": "83 passed",
+    "ruff": "passed",
+    "synthetic_holdout": {
+      "path": "/tmp/phylogeny_depth_two_holdout_v7_20260902.json",
+      "sha256": "6d2cf6761ffe6d665401d61079ad5d2dc4173d882afba3e6946abca0c452d0e5",
+      "seeds": [101, 211, 307],
+      "supplied_root_and_pair_f_score": 1.0,
+      "inferred_root_and_pair_f_score": 1.0
+    }
+  },
+  "orthobench_replay": {
+    "metrics_path": "/tmp/orthobench_depth_two_v7_frozen_20260902.json",
+    "metrics_sha256": "0a84b22b6d0aefd37ff5a37845a0d62fa6111d77e9c3a9b5d437066ccaaa468b",
+    "candidate_families": 54445,
+    "reconciled_families": 8681,
+    "checkpoint_hits": 8681,
+    "topology_resolutions": 1493,
+    "root_hogs": 59340,
+    "ortholog_pairs": 1164840,
+    "wall_s": 83.575665,
+    "peak_process_tree_rss_gib": 1.711643,
+    "root_hogs_sha256": "bd22b3ef76f857873ee3c5c8a54468c766cfdb3f5414a42789eca9630ae31d21",
+    "pairs_sha256": "09032f1ff9dd11d9d72c1b9ac6c9606d876b0d53cbd1281b1242d8a8801efd25"
+  },
+  "orthobench_scores": {
+    "development": {
+      "artifact_sha256": "3734be003bfb530d5df8d5038efda39b8b524ca2bccb03cb6d1f900a5af46f70",
+      "f_score": 73.05114052836181,
+      "precision": 80.21442908992563,
+      "recall": 67.06235513294601,
+      "exact_refogs": 11
+    },
+    "validation": {
+      "artifact_sha256": "2c5578ec3d6885ec411c6b8d2ea581efe9f3b781283a639c06a8a0ce06fc222f",
+      "f_score": 75.33160379094144,
+      "precision": 82.68558561571699,
+      "recall": 69.17889492241083,
+      "exact_refogs": 4
+    },
+    "all": {
+      "artifact_sha256": "d202c1ab2e966c1ec3a4a32cc73f745ec20a4c3e28cd97c848d7ce16933949d1",
+      "f_score": 74.29685880404027,
+      "precision": 81.56455868014956,
+      "recall": 68.21835443748222,
+      "exact_refogs": 15,
+      "delta_vs_hmm_membership_v5": 0.02848275047659,
+      "delta_vs_orthofinder_3_1_5": 1.59685880404027
+    }
+  },
+  "pair_diagnostics": {
+    "development": {
+      "direct_recall_macro": 0.5701480417906949,
+      "transitive_recall_macro": 0.7051623286082122,
+      "fully_connected_refogs": 12,
+      "cross_refog_pairs": 0
+    },
+    "validation": {
+      "direct_recall_macro": 0.46490009943149774,
+      "transitive_recall_macro": 0.6703174182505363,
+      "fully_connected_refogs": 4,
+      "cross_refog_pairs": 0
+    },
+    "all": {
+      "direct_recall_macro": 0.5175240706110962,
+      "transitive_recall_macro": 0.6877398734293741,
+      "fully_connected_refogs": 16,
+      "cross_refog_pairs": 0
+    }
+  },
+  "decision": "Freeze without post-validation tuning and spend one QfO evaluation. The method exceeds the OrthoBench target and improves the all-set result, while the small validation decline is within the accepted neutral range."
+}
