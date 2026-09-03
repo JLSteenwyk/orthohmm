@@ -1,0 +1,344 @@
+{
+  "schema_version": 1,
+  "status": "interim_negative_result_pending_fresh_qfo_v2_v3",
+  "generated_at": "2026-09-03",
+  "objective": "Improve HMM-centered, internally inferred OrthoHMM phylogeny results beyond full OrthoFinder 3.1.5 on both OrthoBench and QfO.",
+  "selection_policy": {
+    "qfo_scores_used_for_v9_selection": false,
+    "development_data": "Predefined 35-family OrthoBench development partition",
+    "validation_data": "Predefined 35-family OrthoBench validation partition; not reopened for v9 tuning",
+    "benchmark_specific_inference_logic": false,
+    "nonphylogenetic_default_changed": false
+  },
+  "targets": {
+    "orthobench_f_score_greater_than": 72.7,
+    "qfo_six_metric_mean_greater_than": 0.7820708882895963
+  },
+  "strongest_results": {
+    "orthobench": {
+      "method": "depth-two topology resolution v7",
+      "run_kind": "frozen checkpoint replay after independently selected method",
+      "development": {
+        "f_score": 73.05114052836181,
+        "precision": 80.21442908992563,
+        "recall": 67.06235513294601,
+        "exact_refogs": 11
+      },
+      "validation": {
+        "f_score": 75.33160379094144,
+        "precision": 82.68558561571699,
+        "recall": 69.17889492241083,
+        "exact_refogs": 4
+      },
+      "all": {
+        "f_score": 74.29685880404027,
+        "precision": 81.56455868014956,
+        "recall": 68.21835443748222,
+        "exact_refogs": 15,
+        "delta_f_vs_orthofinder": 1.59685880404027
+      },
+      "artifact": "benchmark_tools/results/phylogeny_depth_two_v7_freeze_20260902.json"
+    },
+    "qfo": {
+      "method": "sparse-overlap pair extraction v4",
+      "run_kind": "complete checkpoint preview, not a fresh end-to-end result",
+      "scores": {
+        "VGNC_F": 0.9064581917063221,
+        "SwissTrees_F": 0.8060920099695316,
+        "TreeFam_A_F": 0.5861089215903044,
+        "EC": 0.97083545,
+        "GO": 0.48560258,
+        "FAS": 0.7578762078591804,
+        "six_metric_mean": 0.7521622268542231,
+        "delta_vs_orthofinder": -0.029908661435373185
+      },
+      "artifact": "benchmark_tools/results/qfo_sparse_overlap_v4_checkpoint_preview_20260902.json"
+    },
+    "combined_success": false
+  },
+  "qfo_topology_components": {
+    "orthohmm_high_sensitivity": {
+      "VGNC": {"TPR": 0.8327066098437369, "PPV": 0.5569217012239424},
+      "SwissTrees": {"TPR": 0.70586947, "PPV": 0.64461096},
+      "TreeFam_A": {"TPR": 0.44748082, "PPV": 0.80757595}
+    },
+    "orthohmm_sparse_overlap_v4": {
+      "VGNC": {"TPR": 0.8356731010278265, "PPV": 0.9903446226975638},
+      "SwissTrees": {"TPR": 0.70368915, "PPV": 0.94337458},
+      "TreeFam_A": {"TPR": 0.42633078, "PPV": 0.93743688}
+    },
+    "orthohmm_root_closure_v8": {
+      "VGNC": {"TPR": 0.8378457424584274, "PPV": 0.5464777217604578},
+      "SwissTrees": {"TPR": 0.70773625, "PPV": 0.64399644},
+      "TreeFam_A": {"TPR": 0.44513847, "PPV": 0.8061216}
+    },
+    "orthofinder_3_1_5_full": {
+      "VGNC": {"TPR": 0.9822010528954626, "PPV": 0.9943321208019626},
+      "SwissTrees": {"TPR": 0.78799056, "PPV": 0.94446258},
+      "TreeFam_A": {"TPR": 0.62058513, "PPV": 0.92522597}
+    }
+  },
+  "v9_implementation": {
+    "branch": "phylogeny-iterative-hmm-v9",
+    "commits": [
+      "ea61a7f Add self-calibrated profile candidate merging",
+      "2d90fec Add label-blind iterative HMM candidate harness",
+      "f393785 Expose sensitive profile candidate prefilter",
+      "bbf4d31 Allow relaxed HMM thresholds for phylogeny candidates",
+      "68d86ec Require reciprocal support for profile candidates"
+    ],
+    "production_default_enabled": false,
+    "purpose": "Keep profile candidate generation independently configurable for controlled ablation."
+  },
+  "v9_orthobench_development_experiments": [
+    {
+      "name": "high_sensitivity_seed",
+      "f_score": 64.75363066616443,
+      "precision": 69.50100489062277,
+      "recall": 60.61334207227912,
+      "exact_refogs": 8,
+      "decision": "baseline"
+    },
+    {
+      "name": "rebuilt_profile_default_candidate_groups",
+      "profiles": 15656,
+      "profile_candidates": 5014660,
+      "significant_hits": 568385,
+      "strict_hits": 199569,
+      "merges": 1383,
+      "candidate_families": 61502,
+      "f_score": 64.92067235391372,
+      "precision": 68.76979823658652,
+      "recall": 61.479588045537156,
+      "exact_refogs": 8,
+      "wall_s": 209.165667,
+      "peak_process_tree_rss_gib": 10.921749,
+      "artifact_sha256": "0465f82ce646b551fb3787109a054350dc35ed6bee4d6377d3a1ee3c7eed8257",
+      "decision": "reject: negligible candidate gain"
+    },
+    {
+      "name": "rebuilt_profile_default_then_v7_reconciliation",
+      "candidate_families": 61502,
+      "root_hogs": 63553,
+      "ortholog_pairs": 1066265,
+      "f_score": 70.7776794778142,
+      "precision": 84.40432213605985,
+      "recall": 60.93933759830996,
+      "exact_refogs": 10,
+      "wall_s": 438.736801,
+      "peak_process_tree_rss_gib": 1.533596,
+      "artifact_sha256": "42995ff44598b206bb6f8a9e22eec477fea35107981e776bcba4537999ca302e",
+      "decision": "reject: 2.273 development F points below v7"
+    },
+    {
+      "name": "second_profile_pass_after_satellite_v2",
+      "merges": 1544,
+      "candidate_families": 52901,
+      "f_score": 58.32500317689724,
+      "precision": 50.226691049965666,
+      "recall": 69.53678232922863,
+      "exact_refogs": 7,
+      "decision": "reject: severe candidate contamination"
+    },
+    {
+      "name": "second_profile_pass_overlap_at_most_0_5_then_v7",
+      "candidate_families": 54271,
+      "root_hogs": 59179,
+      "ortholog_pairs": 1169787,
+      "f_score": 73.00197496158893,
+      "precision": 80.03749991834565,
+      "recall": 67.10339480462864,
+      "exact_refogs": 11,
+      "wall_s": 176.062615,
+      "peak_process_tree_rss_gib": 1.703033,
+      "artifact_sha256": "203d27bf938db6f2ea185ea91c2fe32270871b66acfc78b28352a8da096edb85",
+      "decision": "reject: 0.049 development F points below v7"
+    },
+    {
+      "name": "unrestricted_reciprocal_sequence_links_four_passes",
+      "merges": 7707,
+      "candidate_families": 55178,
+      "f_score": 49.18999784746848,
+      "precision": 38.348697686894,
+      "recall": 68.57691116968168,
+      "exact_refogs": 8,
+      "decision": "reject: weak transitive bridges"
+    },
+    {
+      "name": "reduced_alphabet_profile_prefilter",
+      "profile_candidates": 12568442,
+      "merges": 943,
+      "candidate_families": 61942,
+      "f_score": 64.51756721141703,
+      "precision": 68.90633421032287,
+      "recall": 60.654381743961764,
+      "exact_refogs": 8,
+      "wall_s": 417.373621,
+      "peak_process_tree_rss_gib": 10.88213,
+      "decision": "reject: slower and below baseline"
+    },
+    {
+      "name": "default_plus_reduced_alphabet_accepted_union",
+      "union_merges": 1642,
+      "intersection_merges": 684,
+      "candidate_families": 61246,
+      "f_score": 64.92067235391372,
+      "precision": 68.76979823658652,
+      "recall": 61.479588045537156,
+      "exact_refogs": 8,
+      "decision": "reject: score identical to default profile expansion"
+    },
+    {
+      "name": "relaxed_profile_score_ratio_0_8",
+      "merges": 1730,
+      "candidate_families": 61155,
+      "f_score": 64.92067235391372,
+      "precision": 68.76979823658652,
+      "recall": 61.479588045537156,
+      "exact_refogs": 8,
+      "decision": "reject: no score change"
+    },
+    {
+      "name": "minimum_profile_size_2",
+      "profiles": 19527,
+      "merges": 1448,
+      "candidate_families": 61437,
+      "f_score": 64.92067235391372,
+      "precision": 68.76979823658652,
+      "recall": 61.479588045537156,
+      "exact_refogs": 8,
+      "wall_s": 226.457798,
+      "peak_process_tree_rss_gib": 12.582146,
+      "decision": "reject: no score gain and more memory"
+    },
+    {
+      "name": "allow_source_groups_up_to_500_genes",
+      "merges": 3132,
+      "candidate_families": 59753,
+      "f_score": 58.04315162533834,
+      "precision": 54.970542021931166,
+      "recall": 61.479588045537156,
+      "exact_refogs": 8,
+      "decision": "reject: precision collapse without recall gain"
+    },
+    {
+      "name": "minimum_reciprocal_profile_coverage_0_5",
+      "merges": 41,
+      "candidate_families": 62844,
+      "candidate_reference_pair_recall": 0.49583875481796086,
+      "candidate_reference_pair_precision": 1.0,
+      "f_score": 64.75363066616443,
+      "precision": 69.50100489062277,
+      "recall": 60.61334207227912,
+      "exact_refogs": 8,
+      "artifact_sha256": "c77afb26f30d740df8e906faebf9649d84cfed2248a929444cb7a392c3df9b7e",
+      "decision": "reject: inactive relative to seed baseline"
+    },
+    {
+      "name": "preserve_original_seeds_after_v7_root_coalescence",
+      "root_hogs_before": 59340,
+      "root_hogs_after": 56763,
+      "f_score": 66.58137847013926,
+      "precision": 65.54682128559756,
+      "recall": 67.64911720808018,
+      "exact_refogs": 9,
+      "decision": "reject: root-level over-grouping"
+    },
+    {
+      "name": "union_v7_pairs_with_cross_species_seed_pairs",
+      "pairs_before": 1164840,
+      "pairs_after": 2228434,
+      "direct_reference_pair_recall_before": 0.5701480417906949,
+      "direct_reference_pair_recall_after": 0.7101229863927034,
+      "transitive_reference_pair_recall_before": 0.7051623286082122,
+      "transitive_reference_pair_recall_after": 0.7769337115185293,
+      "cross_refog_reference_pairs": 0,
+      "decision": "diagnostic only: high-sensitivity QfO topology recall shows this ceiling is still below OrthoFinder"
+    }
+  ],
+  "root_closure_v8": {
+    "hypothesis": "Complete co-ortholog closure within final root HOGs should restore pairs omitted by local reconciliation.",
+    "qfo_pairs": 8401212,
+    "qfo_scores": {
+      "VGNC_F": 0.661498622771281,
+      "SwissTrees_F": 0.6743635466254057,
+      "TreeFam_A_F": 0.5735589974639757,
+      "EC": 0.95679382,
+      "GO": 0.47202445,
+      "FAS": 0.7552510239220853,
+      "six_metric_mean": 0.682248410130458
+    },
+    "decision": "reject: tiny topology TPR gains accompanied by severe PPV collapse"
+  },
+  "targeted_prefilter_diagnostics": {
+    "species_pair": "Caenorhabditis_elegans_to_Homo_sapiens",
+    "labels": "OrthoBench development partition only; labels read after candidate and HMM scoring",
+    "cap_100_vs_200": {
+      "k": 4,
+      "cap_100_candidates": 2000717,
+      "cap_100_retained_at_evalue_1e_4": 44878,
+      "cap_200_candidates": 3964268,
+      "cap_200_retained_at_evalue_1e_4": 52862,
+      "added_retained_hits": 7984,
+      "lost_retained_hits": 0,
+      "added_same_development_refog": 1,
+      "added_cross_development_refog": 0,
+      "added_reference_to_nonreference": 33,
+      "added_other": 7950,
+      "interpretation": "Doubling the cap nearly doubled scoring work but did not expose meaningful labeled recall."
+    },
+    "exact_k3_additive": {
+      "k3_candidates": 2018960,
+      "k3_retained_at_evalue_1e_4": 40110,
+      "k4_candidates": 2000717,
+      "k4_retained_at_evalue_1e_4": 44878,
+      "k3_only_retained": 5482,
+      "k4_only_retained": 10250,
+      "k3_only_same_development_refog": 0,
+      "k3_only_cross_development_refog": 0,
+      "k3_only_reference_to_nonreference": 4,
+      "k3_only_other": 5478,
+      "interpretation": "Shorter exact k-mers add noise and would lose more retained k4 hits if used as a replacement."
+    },
+    "evalue_relaxation": [
+      {"threshold": 0.0001, "retained": 44878, "same_development_refog": 10, "reference_to_nonreference": 234},
+      {"threshold": 0.001, "retained": 50883, "same_development_refog": 10, "reference_to_nonreference": 276},
+      {"threshold": 0.01, "retained": 58124, "same_development_refog": 10, "reference_to_nonreference": 334},
+      {"threshold": 0.1, "retained": 66968, "same_development_refog": 10, "reference_to_nonreference": 426}
+    ],
+    "interpretation": "Relaxing HMM significance by three orders of magnitude added no same-RefOG development link for this difficult pair."
+  },
+  "limiting_stage": {
+    "stage": "remote-homolog candidate generation and family assembly",
+    "evidence": [
+      "Satellite v2 raises OrthoBench candidate reference-pair recall from 0.495839 to only 0.600717 while retaining 0.997229 precision.",
+      "Sparse v4 already has high QfO PPV but remains far below OrthoFinder TPR, especially TreeFam-A 0.426331 versus 0.620585.",
+      "Root closure restores only the high-sensitivity TPR ceiling and collapses PPV, so pair extraction is not the remaining primary bottleneck.",
+      "Broader exact-k-mer caps, shorter k-mers, relaxed HMM E-values, and rebuilt profile searches add predominantly unlabeled or contaminating links.",
+      "OrthoFinder sequence-only candidates are highly sensitive but over-grouped; its phylogenetic stages recover precision without sacrificing most recall."
+    ],
+    "conclusion": "The current exact-k-mer-prefiltered sequence-to-profile scoring architecture does not provide enough separable remote-homolog evidence to reach the QfO target by threshold hill-climbing. A materially different high-recall candidate source plus HMM validation and phylogenetic pruning is required."
+  },
+  "recommended_next_architecture": [
+    "Generate broad weighted candidate edges with a sensitive translated-search engine such as MMseqs2 or DIAMOND, or with true profile-profile search for difficult families.",
+    "Retain profile HMMs as the family-membership validator and score-margin calibrator rather than treating broad sequence edges as final membership.",
+    "Use domain and length compatibility to reject partial or shuffled weak bridges before candidate coalescence.",
+    "Reconcile broad candidates and preserve seed boundaries as priors; remove pairs only with positive supported paralogy evidence.",
+    "Select the candidate source and fixed gates on synthetic holdouts and OrthoBench development, then open validation and QfO once."
+  ],
+  "active_fresh_confirmations": [
+    {
+      "slurm_inference_job": 20873,
+      "slurm_scoring_job": 20874,
+      "method": "satellite_v2 with positive_paralogy pairs",
+      "state_at_record": "inference_running"
+    },
+    {
+      "slurm_inference_job": 20880,
+      "slurm_scoring_job": 20881,
+      "method": "satellite_v2 with supported_paralogy pairs",
+      "state_at_record": "inference_running"
+    }
+  ],
+  "recommendation": "Keep phylogeny opt-in. Do not change the existing default: v7 is the strongest OrthoBench method, v4 is the strongest QfO preview, and no single fresh end-to-end method meets both targets."
+}
