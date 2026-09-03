@@ -1108,6 +1108,7 @@ def merge_profile_supported_satellite_candidate_clusters(
     max_satellites_per_anchor: int = 4,
     max_species_overlap_fraction: float = 1.0,
     min_coverage: float = 0.5,
+    min_reciprocal_coverage: float = 0.0,
     min_score_ratio: float = 1.0,
     merge_trace: list[dict[str, object]] | None = None,
 ) -> tuple[List[IndexCluster], int, int, int]:
@@ -1133,10 +1134,15 @@ def merge_profile_supported_satellite_candidate_clusters(
         max_satellite_to_anchor_ratio,
         max_species_overlap_fraction,
         min_coverage,
+        min_reciprocal_coverage,
     )
     if any(not math.isfinite(value) or value < 0.0 for value in fractions):
         raise ValueError("candidate ratio limits must be finite and nonnegative")
-    if max_species_overlap_fraction > 1.0 or min_coverage > 1.0:
+    if any(value > 1.0 for value in (
+        max_species_overlap_fraction,
+        min_coverage,
+        min_reciprocal_coverage,
+    )):
         raise ValueError("species overlap and coverage fractions cannot exceed one")
     if not math.isfinite(min_margin) or min_margin < 1.0:
         raise ValueError("candidate margin must be finite and at least one")
@@ -1225,10 +1231,21 @@ def merge_profile_supported_satellite_candidate_clusters(
     coverages = counts / np.maximum(1, sizes[sources])
     support = totals / np.maximum(1, sizes[sources])
 
+    reverse_keys = (targets.astype(np.int64) << 32) | sources.astype(np.int64)
+    reverse_rows = np.searchsorted(unique_keys, reverse_keys)
+    safe_reverse_rows = np.minimum(reverse_rows, len(unique_keys) - 1)
+    has_reverse = (
+        (reverse_rows < len(unique_keys))
+        & (unique_keys[safe_reverse_rows] == reverse_keys)
+    )
+    reverse_coverages = np.zeros(len(sources), dtype=np.float64)
+    reverse_coverages[has_reverse] = coverages[safe_reverse_rows[has_reverse]]
+
     plausible = (
         (sizes[sources] <= max_satellite_genes)
         & (sizes[sources] <= sizes[targets] * max_satellite_to_anchor_ratio)
         & (coverages >= min_coverage)
+        & (reverse_coverages >= min_reciprocal_coverage)
     )
     best = np.full(len(clusters), -np.inf, dtype=np.float64)
     np.maximum.at(best, sources[plausible], support[plausible])
@@ -1296,6 +1313,9 @@ def merge_profile_supported_satellite_candidate_clusters(
                     "species_overlap_fraction": overlap_fraction,
                     "profile_hits": int(counts[row]),
                     "profile_coverage": float(coverages[row]),
+                    "reciprocal_profile_coverage": float(
+                        reverse_coverages[row]
+                    ),
                     "average_score_ratio": float(totals[row] / counts[row]),
                     "maximum_score_ratio": float(maximums[row]),
                 })

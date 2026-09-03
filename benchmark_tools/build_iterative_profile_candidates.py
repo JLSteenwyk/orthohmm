@@ -52,6 +52,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--max-satellites-per-anchor", type=int, default=4)
     parser.add_argument("--max-species-overlap", type=float, default=1.0)
     parser.add_argument("--min-coverage", type=float, default=0.5)
+    parser.add_argument("--min-reciprocal-coverage", type=float, default=0.0)
     parser.add_argument("--min-score-ratio", type=float, default=1.0)
     return parser
 
@@ -130,6 +131,7 @@ def main(argv=None) -> int:
         "max_satellites_per_anchor": args.max_satellites_per_anchor,
         "max_species_overlap_fraction": args.max_species_overlap,
         "min_coverage": args.min_coverage,
+        "min_reciprocal_coverage": args.min_reciprocal_coverage,
         "min_score_ratio": args.min_score_ratio,
     }
     with PipelineMetrics(str(result_json)) as metrics:
@@ -169,6 +171,7 @@ def main(argv=None) -> int:
                 max_satellites_per_anchor=args.max_satellites_per_anchor,
                 max_species_overlap_fraction=args.max_species_overlap,
                 min_coverage=args.min_coverage,
+                min_reciprocal_coverage=args.min_reciprocal_coverage,
                 min_score_ratio=args.min_score_ratio,
             )
         with metrics.stage("write_outputs"):

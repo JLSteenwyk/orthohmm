@@ -797,6 +797,7 @@ def build_iterative_profile_candidates(
     max_satellites_per_anchor: int = 4,
     max_species_overlap_fraction: float = 1.0,
     min_coverage: float = 0.5,
+    min_reciprocal_coverage: float = 0.0,
     min_score_ratio: float = 1.0,
 ) -> IterativeProfileCandidateResult:
     """Rebuild profiles from final seeds and form strict phylogeny candidates."""
@@ -864,6 +865,7 @@ def build_iterative_profile_candidates(
             max_satellites_per_anchor=max_satellites_per_anchor,
             max_species_overlap_fraction=max_species_overlap_fraction,
             min_coverage=min_coverage,
+            min_reciprocal_coverage=min_reciprocal_coverage,
             min_score_ratio=min_score_ratio,
             merge_trace=merge_trace,
         )

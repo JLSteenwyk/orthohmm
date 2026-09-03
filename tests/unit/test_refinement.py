@@ -286,6 +286,54 @@ def test_profile_satellite_can_relax_self_score_for_phylogeny_candidates():
     assert relaxed_count == 1
 
 
+def test_profile_satellite_can_require_reciprocal_profile_coverage():
+    clusters = [[0, 1, 2, 3], [4, 5], [6, 7]]
+    species = np.arange(8, dtype=np.int32)
+    arguments = {
+        "clusters": clusters,
+        "profile_cluster_ids": np.asarray([0, 0, 2, 2]),
+        "gene_ids": np.asarray([6, 7, 0, 1]),
+        "scores": np.asarray([12.0, 11.0, 10.5, 10.2]),
+        "self_thresholds": {0: 10.0, 2: 10.0},
+        "gene_to_species": species,
+        "max_satellite_to_anchor_ratio": 1.0,
+        "min_margin": 1.0,
+        "min_reciprocal_coverage": 0.5,
+    }
+
+    merged, merge_count, _, _ = (
+        merge_profile_supported_satellite_candidate_clusters(**arguments)
+    )
+
+    assert {frozenset(group) for group in merged} == {
+        frozenset((0, 1, 2, 3, 6, 7)),
+        frozenset((4, 5)),
+    }
+    assert merge_count == 1
+
+
+def test_profile_satellite_rejects_insufficient_reciprocal_coverage():
+    clusters = [[0, 1, 2, 3], [4, 5], [6, 7]]
+    species = np.arange(8, dtype=np.int32)
+
+    merged, merge_count, _, _ = (
+        merge_profile_supported_satellite_candidate_clusters(
+            clusters,
+            profile_cluster_ids=np.asarray([0, 0, 2]),
+            gene_ids=np.asarray([6, 7, 0]),
+            scores=np.asarray([12.0, 11.0, 10.5]),
+            self_thresholds={0: 10.0, 2: 10.0},
+            gene_to_species=species,
+            max_satellite_to_anchor_ratio=1.0,
+            min_margin=1.0,
+            min_reciprocal_coverage=0.5,
+        )
+    )
+
+    assert merged == clusters
+    assert merge_count == 0
+
+
 def _cluster(prefix, counts):
     genes = []
     species = {}
