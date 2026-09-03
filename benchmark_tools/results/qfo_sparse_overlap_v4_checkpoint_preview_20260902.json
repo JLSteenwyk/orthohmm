@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "status": "complete_checkpoint_preview_not_authoritative",
+  "method": "OrthoHMM phylogeny sparse-overlap v4",
+  "source": {
+    "frozen_method_commit": "8d9ae9198677dc34923a3681d6f0ec96589e1615",
+    "freeze_artifact_commit": "6ccb06f",
+    "scoring_harness_commit": "de12fa8",
+    "note": "Inference behavior did not change after method freeze. The later commits contain only provenance and scoring-harness changes."
+  },
+  "selection": {
+    "qfo_used_to_select_method": false,
+    "freeze_artifact": "benchmark_tools/results/phylogeny_sparse_overlap_v4_method_freeze_20260902.json",
+    "limitation": "This preview reused the frozen satellite_v2 all-to-all search, candidate clusters, alignments, raw gene trees, and inferred species tree, so it cannot satisfy the fresh end-to-end success criterion."
+  },
+  "parameters": {
+    "accuracy_profile": "high_sensitivity",
+    "phylogeny_candidates": "satellite_v2",
+    "phylogeny_mode": "reconcile",
+    "species_tree_mode": "infer",
+    "species_tree_rooting": "min_variance",
+    "root_duplication_rule": "species_overlap",
+    "pair_orthology_rule": "sparse_overlap"
+  },
+  "inference": {
+    "metrics": "qfo_benchmark/results/orthohmm_phylogeny_sparse_v4_candidate_preview/phylogeny_metrics.json",
+    "metrics_sha256": "be08de824b482e1128c5347662768bc9f05822c21e57f0561cf6acc667642916",
+    "candidate_families": 350689,
+    "reconciled_families": 24267,
+    "bypassed_families": 326422,
+    "checkpoint_hits": 24267,
+    "root_hogs": 373904,
+    "native_pairs": 6190459,
+    "qfo_mapped_pairs": 6171212,
+    "duplications": 228842,
+    "speciations": 247897,
+    "uncertain_events": 216613,
+    "wall_s": 376.307687,
+    "peak_process_tree_rss_gib": 7.610825,
+    "pairs_qfo_sha256": "92637a94d5ca2a3115d75d0c16ad40c4a75a47f2d2c2da863ed19873548dbe54",
+    "native_pairs_sha256": "b7d566be86fe513bde31faaf668e2061abec0dcf98f143d7649b778615cf5a26",
+    "root_hogs_sha256": "ac29ffb3402034dfa41b6cf00e0ac0bf26f5e342acae6adc00927ef0b995515f",
+    "manifest_sha256": "3e7d7829242257e2aba8ac6908554971f2b1f88fffb049a3f99d22c0b9cf2b97"
+  },
+  "qfo_2020": {
+    "scoring_mode": "direct local QfO benchmark-webservice execution",
+    "event_year": 2020,
+    "elapsed_s": 1424,
+    "peak_task_rss_gib": 34.2,
+    "saved_raw_directory": "qfo_benchmark/scoring/orthohmm_phylogeny_sparse_v4_candidate_preview_saved_20260902",
+    "scores": {
+      "VGNC F": 0.9064581917063221,
+      "SwissTrees F": 0.8060920099695316,
+      "TreeFam-A F": 0.5861089215903044,
+      "EC": 0.97083545,
+      "GO": 0.48560258,
+      "FAS": 0.7578762078591804
+    },
+    "pairwise_components": {
+      "VGNC": {
+        "TPR": 0.8356731010278265,
+        "PPV": 0.9903446226975638
+      },
+      "SwissTrees": {
+        "TPR": 0.70368915,
+        "PPV": 0.94337458
+      },
+      "TreeFam-A": {
+        "TPR": 0.42633078,
+        "PPV": 0.93743688
+      }
+    },
+    "mean": 0.7521622268542231,
+    "delta_vs_satellite_v3_preview": 0.001293067106699075,
+    "delta_vs_orthofinder_3_1_5_full": -0.029908661435373185,
+    "metric_sha256": {
+      "VGNC": "53e7652c48549c6e7dd308cee54d74473ad5a83ecdf20da32c6defc5e5f2542b",
+      "SwissTrees": "cd9c1d113f4e479c1f532fe7020c4961b4ddf8d9af9ea57adfd746df94206d2c",
+      "TreeFam-A": "0a6b5accd97cd8fbaa4e2a85f26f04a5a9967a0cf59a5a16dadd86f4227653e1",
+      "EC": "aa99cccdd5b8aa847ab421ba4ca521bf71ee28b944f3e89822c4e90bcca41d64",
+      "GO": "527c4d27888336c137bf4d86af5ae910eb5970be143df59f7b7d579b5ecf2207",
+      "FAS": "07c4fbbb0e58bb8d8ac529ef35e9cd13bfda06bd59f59f2b5478f749d1d5e993"
+    }
+  },
+  "comparison": {
+    "satellite_v3_qfo_pairs": 5724582,
+    "pairs_added_over_satellite_v3": 446630,
+    "relative_pair_increase": 0.078011,
+    "reference_tree_f_scores_improved": true,
+    "six_metric_target_met": false
+  },
+  "decision": "Do not promote sparse-overlap v4 as the winning phylogeny profile. It improves reference-tree recall and all three reference-tree F-scores, but its six-metric mean remains below the strict OrthoFinder target. Reconciliation relaxation alone is insufficient; continue benchmark-independent development at the candidate-family and topology-resolution stages."
+}
