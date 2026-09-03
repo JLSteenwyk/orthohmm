@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "status": "rejected",
+  "evaluated_at": "2026-09-03",
+  "method": "OrthoHMM depth-two reconciliation with final root-HOG co-ortholog closure",
+  "source_commit": "1033f960420f04cbc27e234d7336c1df39a2856e",
+  "selection_freeze": "benchmark_tools/results/phylogeny_coortholog_v8_freeze_20260903.json",
+  "qfo_labels_or_scores_used_for_selection": false,
+  "inputs": {
+    "native_pairs": 8434196,
+    "qfo_mapped_pairs": 8401212,
+    "unmapped_pairs_removed": 32984,
+    "pairs_qfo_sha256": "5afe10889d65a1bd1b4c5203603d6fff2e0a5cd0ebd70e108b6269750c50945c"
+  },
+  "replay": {
+    "artifact": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthohmm_phylogeny_coortholog_v8_candidate_preview/phylogeny_metrics.json",
+    "artifact_sha256": "8f715a57241c93c52a85c86e96a74ef6ca5c2144c375591dc1f42271912bb327",
+    "git_dirty": false,
+    "candidate_families": 350689,
+    "reconciled_families": 24267,
+    "checkpoint_hits": 24267,
+    "topology_resolutions": 3681,
+    "root_hogs": 372768,
+    "native_ortholog_pairs": 8434196,
+    "coortholog_pairs_added": 2192522,
+    "wall_s": 413.435642,
+    "peak_process_tree_rss_gib": 9.48312,
+    "root_hogs_sha256": "74c3da4774604c85693702929b8f4fb1a61327c22b7f4b03c12953b908e09096",
+    "pairs_sha256": "c1e9b32d47894be2226decb23ed2e5d4d98d54c0d36ceef93ad7a973717b4dc0"
+  },
+  "qfo_scores": {
+    "VGNC_F": 0.661498622771281,
+    "SwissTrees_F": 0.6743635466254057,
+    "TreeFam_A_F": 0.5735589974639757,
+    "EC": 0.95679382,
+    "GO": 0.47202445,
+    "FAS": 0.7552510239220853,
+    "six_metric_mean": 0.682248410130458,
+    "delta_vs_sparse_v4": -0.0699138167237651,
+    "delta_vs_depth_two_v7": -0.0694036394001153,
+    "delta_vs_orthofinder_3_1_5_full": -0.0998224781591383
+  },
+  "topology_metrics": {
+    "VGNC": {
+      "tpr": 0.8378457424584274,
+      "ppv": 0.5464777217604578
+    },
+    "SwissTrees": {
+      "tpr": 0.70773625,
+      "ppv": 0.64399644
+    },
+    "TreeFam_A": {
+      "tpr": 0.44513847,
+      "ppv": 0.8061216
+    }
+  },
+  "scoring_resources": {
+    "wall_s": 1321.70,
+    "maximum_resident_set_kib": 34120724,
+    "maximum_resident_set_gib": 32.540058,
+    "exit_status": 0
+  },
+  "comparison_artifact": {
+    "path": "/tmp/qfo_phylogeny_v4_v7_v8_of_20260903.json",
+    "sha256": "674ade731616f56b9de62b55a5f3e9fef9b6a58f7416f72dc10fac65015c8816"
+  },
+  "decision": "Reject root-HOG-wide closure. It produces only small TPR gains but severe PPV losses on all three topology tests. Do not use QfO outcomes to tune a closure threshold; future candidates must be selected on synthetic and frozen OrthoBench development evidence and require event-aware duplication/speciation support."
+}
