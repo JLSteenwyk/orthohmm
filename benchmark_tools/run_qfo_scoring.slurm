@@ -5,7 +5,7 @@ set -euo pipefail
 : "${PAIRS:?PAIRS must point to the QfO pair predictions}"
 
 case "${METHOD}" in
-    orthofinder_v3_diamond|orthofinder_v3_mmseqs|orthofinder_v3_sequence_only|orthohmm_high_sensitivity|orthohmm_phylogeny_inferred|orthohmm_phylogeny_satellite_v2|orthohmm_phylogeny_satellite_v3|orthohmm_phylogeny_sparse_v4|orthohmm_phylogeny_depth_two_v7) ;;
+    orthofinder_v3_diamond|orthofinder_v3_mmseqs|orthofinder_v3_sequence_only|orthohmm_high_sensitivity|orthohmm_phylogeny_inferred|orthohmm_phylogeny_satellite_v2|orthohmm_phylogeny_satellite_v3|orthohmm_phylogeny_sparse_v4|orthohmm_phylogeny_depth_two_v7|orthohmm_phylogeny_coortholog_v8) ;;
     *)
         echo "Unsupported scoring method: ${METHOD}" >&2
         exit 2
@@ -37,6 +37,7 @@ case "${METHOD}" in
     orthohmm_phylogeny_satellite_v3) default_work_tag=ohmm_phylo_v3 ;;
     orthohmm_phylogeny_sparse_v4) default_work_tag=ohmm_phylo_v4 ;;
     orthohmm_phylogeny_depth_two_v7) default_work_tag=ohmm_phylo_v7 ;;
+    orthohmm_phylogeny_coortholog_v8) default_work_tag=ohmm_phylo_v8 ;;
     *) default_work_tag=${METHOD} ;;
 esac
 readonly WORK_TAG=${QFO_WORK_TAG:-${default_work_tag}}
