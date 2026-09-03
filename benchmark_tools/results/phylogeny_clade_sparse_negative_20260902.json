@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "status": "rejected_on_development",
+  "hypothesis": "In addition to sparse-overlap v4, cross-child pairs should be retained when three or more overlapping species still occupy less than one quarter of both binary child clades.",
+  "selection_policy": {
+    "qfo_scores_used": false,
+    "orthobench_partition_used": "development",
+    "orthobench_validation_opened": false
+  },
+  "implementation": {
+    "base_commit": "860d1e3",
+    "pair_rule": "clade_sparse",
+    "root_rule": "species_overlap",
+    "species_tree_mode": "infer",
+    "species_tree_rooting": "min_variance",
+    "note": "The implementation was evaluated from a dirty experimental worktree and removed after rejection."
+  },
+  "verification": {
+    "focused_tests": "72 passed",
+    "ruff": "passed",
+    "synthetic_holdout": {
+      "path": "/tmp/phylogeny_clade_sparse_holdout_v5_20260902.json",
+      "sha256": "b571d194093ed9868fb77f086a14ae34822ae075ff29bf50a458d004b46f62f1",
+      "seeds": [101, 211, 307],
+      "supplied_pair_f_score": 1.0,
+      "inferred_pair_f_score": 1.0
+    }
+  },
+  "orthobench_replay": {
+    "metrics_path": "/tmp/orthobench_clade_sparse_v5_20260902.json",
+    "metrics_sha256": "ef0c234689a241ee8127a9daf161526f9693aaf527dd4d8009e3a2dc781cf778",
+    "candidate_families": 54445,
+    "reconciled_families": 8681,
+    "checkpoint_hits": 8681,
+    "root_hogs": 59770,
+    "ortholog_pairs": 1155100,
+    "wall_s": 81.070171,
+    "peak_process_tree_rss_gib": 1.703625,
+    "root_hogs_sha256": "76229249770b1f875c6bd319ec524fb50721b048e68c284c4c3a3dba611ea216",
+    "pairs_sha256": "95c58cd76b39e1770e6f83d95812bafb4a61ec0bdb0ec65786c6bb1546607764"
+  },
+  "development_results": {
+    "diagnostics_path": "/tmp/orthobench_development_clade_sparse_v5_diagnostics.json",
+    "diagnostics_sha256": "883ab7a4965dac6c85425036535dd252ef2b9b3f6fdc178b7ee3825fed5b12d9",
+    "sparse_overlap": {
+      "direct_recall_macro": 0.5649536055192894,
+      "transitive_recall_macro": 0.6965889307132838,
+      "cross_refog_pairs": 0
+    },
+    "clade_sparse": {
+      "direct_recall_macro": 0.5649536055192894,
+      "transitive_recall_macro": 0.6965889307132838,
+      "cross_refog_pairs": 0
+    }
+  },
+  "decision": "Reject before OrthoBench validation or QfO. No frozen OrthoBench node satisfied the conservative clade-relative extension, so the candidate produced byte-identical pair predictions and added complexity without benefit."
+}
