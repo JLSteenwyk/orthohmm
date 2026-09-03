@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "status": "rejected_on_development",
+  "hypothesis": "Sparse species overlap caused by a topologically misplaced gene can be resolved by comparing each overlapping copy's nearest heterospecific context on the inferred species tree.",
+  "selection_policy": {
+    "qfo_scores_used": false,
+    "orthobench_partition_used": "development",
+    "orthobench_validation_opened": false
+  },
+  "implementation": {
+    "base_commit": "72b1ca42b022d204ae36ce90681558f9ea839810",
+    "pair_rule": "topology_paralogy",
+    "root_rule": "species_overlap",
+    "species_tree_mode": "infer",
+    "species_tree_rooting": "min_variance",
+    "note": "The implementation was evaluated from a dirty experimental worktree and is intentionally not retained after rejection."
+  },
+  "verification": {
+    "focused_tests": "60 passed",
+    "ruff": "passed",
+    "synthetic_holdout": {
+      "path": "/tmp/phylogeny_topology_paralogy_holdout_20260902.json",
+      "sha256": "951c15a004132ff5501fe8286652ad93ed5fd1e1abc1a1694e4447c6ea76c023",
+      "seeds": [101, 211, 307],
+      "supplied_pair_f_score": 1.0,
+      "inferred_pair_f_score": 1.0
+    }
+  },
+  "orthobench_replay": {
+    "metrics_path": "/tmp/orthobench_topology_paralogy_v4_20260902.json",
+    "metrics_sha256": "ef7c34cdf9e5e11227d915add349a3486a9f006bb86a5e0601e93035823b0519",
+    "candidate_families": 54445,
+    "reconciled_families": 8681,
+    "checkpoint_hits": 8681,
+    "root_hogs": 59849,
+    "ortholog_pairs": 966950,
+    "wall_s": 82.848775,
+    "peak_process_tree_rss_gib": 1.604599,
+    "root_hogs_sha256": "89196b25ab07aa8d7a0aa0e99724ebe14d2dc924dac45e2bbbc43a419aade142",
+    "pairs_sha256": "c9e4268457f0f0435e65e5eb7ce8663be24836abaf2ca76dbfed1ca7372be356"
+  },
+  "development_results": {
+    "diagnostics_path": "/tmp/orthobench_development_topology_paralogy_v4_diagnostics.json",
+    "diagnostics_sha256": "3cf233ee3c05256462b4cdb6a46654efe6968f57e92f442f1c832a668168ec58",
+    "pair_metrics": {
+      "positive_paralogy": {
+        "direct_recall_macro": 0.5075729530255226,
+        "transitive_recall_macro": 0.6782290546605267,
+        "cross_refog_pairs": 0
+      },
+      "supported_paralogy": {
+        "direct_recall_macro": 0.5368776533270584,
+        "transitive_recall_macro": 0.6903003296221243,
+        "cross_refog_pairs": 0
+      },
+      "topology_paralogy": {
+        "direct_recall_macro": 0.506743550741806,
+        "transitive_recall_macro": 0.6770162422385613,
+        "cross_refog_pairs": 0
+      }
+    },
+    "root_hog_score": {
+      "artifact_path": "/tmp/orthobench_development_topology_paralogy_v4_root_score.json",
+      "artifact_sha256": "0bff2429832eb6664e19f08292d8a38bba2699482d137eb6fea6f71b7796fbd3",
+      "f_score": 71.9978168188254,
+      "precision": 80.77495558565866,
+      "recall": 64.94119984412382,
+      "exact_refogs": 10
+    }
+  },
+  "decision": "Reject before OrthoBench validation or QfO. The rule underperformed supported_paralogy on both direct and transitive development recall and weakened the development root-HOG score through its interaction with membership constraints."
+}
