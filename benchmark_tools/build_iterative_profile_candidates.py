@@ -40,6 +40,10 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--evalue", type=float, default=1e-4)
     parser.add_argument("--min-profile-cluster-size", type=int, default=3)
     parser.add_argument("--max-profile-cluster-size", type=int, default=200)
+    parser.add_argument("--profile-kmer-k", type=int, default=4)
+    parser.add_argument("--profile-reduced-alphabet", action="store_true")
+    parser.add_argument("--profile-min-total-hits", type=int, default=4)
+    parser.add_argument("--profile-min-diag-hits", type=int, default=1)
     parser.add_argument("--max-candidates-per-gene", type=int, default=20)
     parser.add_argument("--max-component-genes", type=int, default=500)
     parser.add_argument("--max-satellite-genes", type=int, default=12)
@@ -114,6 +118,10 @@ def main(argv=None) -> int:
         "evalue_threshold": args.evalue,
         "min_profile_cluster_size": args.min_profile_cluster_size,
         "max_profile_cluster_size": args.max_profile_cluster_size,
+        "profile_kmer_k": args.profile_kmer_k,
+        "profile_use_reduced_alphabet": args.profile_reduced_alphabet,
+        "profile_min_total_hits": args.profile_min_total_hits,
+        "profile_min_diag_hits": args.profile_min_diag_hits,
         "max_candidates_per_gene": args.max_candidates_per_gene,
         "max_component_genes": args.max_component_genes,
         "max_satellite_genes": args.max_satellite_genes,
@@ -149,6 +157,10 @@ def main(argv=None) -> int:
                 gene_to_species=gene_to_species,
                 min_profile_cluster_size=args.min_profile_cluster_size,
                 max_profile_cluster_size=args.max_profile_cluster_size,
+                profile_kmer_k=args.profile_kmer_k,
+                profile_use_reduced_alphabet=args.profile_reduced_alphabet,
+                profile_min_total_hits=args.profile_min_total_hits,
+                profile_min_diag_hits=args.profile_min_diag_hits,
                 max_candidates_per_gene=args.max_candidates_per_gene,
                 max_component_genes=args.max_component_genes,
                 max_satellite_genes=args.max_satellite_genes,

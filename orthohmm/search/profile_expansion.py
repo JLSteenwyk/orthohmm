@@ -358,6 +358,9 @@ def search_genes_against_profiles(
     kmer_k: int = 4,
     max_candidates_per_gene: int = 20,
     evalue_threshold: float = 1e-4,
+    use_reduced_alphabet: bool = False,
+    min_total_hits: int = 4,
+    min_diag_hits: int = 1,
 ) -> ProfileHits:
     """Prefilter and Viterbi-score all genes against MSA profiles."""
     profile_ids, packed = _pack_profiles(profiles)
@@ -385,9 +388,9 @@ def search_genes_against_profiles(
         sequence_database,
         profile_database,
         k=kmer_k,
-        use_reduced_alphabet=False,
-        min_total_hits=4,
-        min_diag_hits=1,
+        use_reduced_alphabet=use_reduced_alphabet,
+        min_total_hits=min_total_hits,
+        min_diag_hits=min_diag_hits,
         max_candidates_per_query=max_candidates_per_gene,
         n_threads=cpu,
         sub_matrix=sub_matrix,
@@ -782,6 +785,10 @@ def build_iterative_profile_candidates(
     gene_to_species=None,
     min_profile_cluster_size: int = 3,
     max_profile_cluster_size: int = 200,
+    profile_kmer_k: int = 4,
+    profile_use_reduced_alphabet: bool = False,
+    profile_min_total_hits: int = 4,
+    profile_min_diag_hits: int = 1,
     max_candidates_per_gene: int = 20,
     max_component_genes: int = 500,
     max_satellite_genes: int = 12,
@@ -814,8 +821,12 @@ def build_iterative_profile_candidates(
         sequence_database,
         matrix_name,
         cpu,
+        kmer_k=profile_kmer_k,
         max_candidates_per_gene=max_candidates_per_gene,
         evalue_threshold=evalue_threshold,
+        use_reduced_alphabet=profile_use_reduced_alphabet,
+        min_total_hits=profile_min_total_hits,
+        min_diag_hits=profile_min_diag_hits,
     )
     self_thresholds = compute_profile_self_thresholds(
         profiles,

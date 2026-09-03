@@ -1,5 +1,7 @@
 import numpy as np
 
+import orthohmm.search.profile_expansion as profile_expansion
+
 from orthohmm.search.profile_expansion import (
     ProfileHits,
     build_cluster_profiles,
@@ -7,6 +9,7 @@ from orthohmm.search.profile_expansion import (
     compute_profile_self_thresholds,
     load_global_sequence_database,
     select_single_copy_profile_ids,
+    search_genes_against_profiles,
 )
 
 
@@ -240,3 +243,50 @@ def test_strict_profile_edges_reject_hits_below_weakest_member():
     )
 
     assert len(edges) == 0
+
+
+def test_profile_search_forwards_sensitive_prefilter_settings(monkeypatch):
+    captured = {}
+
+    def fake_pack(_profiles):
+        return np.asarray([7], dtype=np.int32), (
+            np.asarray([3], dtype=np.int32),
+            np.asarray([0], dtype=np.int64),
+            np.zeros((3, 20), dtype=np.int8),
+            np.asarray([0, 1, 2], dtype=np.uint8),
+            np.zeros(20, dtype=np.int8),
+            np.zeros(7, dtype=np.int8),
+        )
+
+    def fake_prefilter(_queries, _targets, **kwargs):
+        captured.update(kwargs)
+        return np.empty(0, dtype=np.int32), np.asarray([0, 0], dtype=np.int64)
+
+    monkeypatch.setattr(profile_expansion, "_pack_profiles", fake_pack)
+    monkeypatch.setattr(profile_expansion, "prefilter_candidates", fake_prefilter)
+    database = profile_expansion.SpeciesSequences(
+        "queries",
+        ["gene"],
+        np.asarray([0, 1, 2], dtype=np.uint8),
+        np.asarray([0], dtype=np.int64),
+        np.asarray([3], dtype=np.int32),
+    )
+
+    result = search_genes_against_profiles(
+        {7: object()},
+        database,
+        "BLOSUM62",
+        cpu=2,
+        kmer_k=3,
+        max_candidates_per_gene=50,
+        use_reduced_alphabet=True,
+        min_total_hits=2,
+        min_diag_hits=1,
+    )
+
+    assert result.candidate_count == 0
+    assert captured["k"] == 3
+    assert captured["use_reduced_alphabet"] is True
+    assert captured["min_total_hits"] == 2
+    assert captured["min_diag_hits"] == 1
+    assert captured["max_candidates_per_query"] == 50
