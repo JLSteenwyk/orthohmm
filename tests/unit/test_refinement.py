@@ -3,6 +3,7 @@ from itertools import combinations
 import numpy as np
 
 from orthohmm.refinement import (
+    merge_profile_supported_satellite_candidate_clusters,
     merge_reciprocal_candidate_clusters,
     merge_supported_satellite_candidate_clusters,
     refine_cluster_indices,
@@ -181,6 +182,76 @@ def test_satellite_candidate_does_not_reuse_merged_anchor_as_satellite():
     }
     assert merge_count == 1
     assert iterations == 1
+
+
+def test_profile_satellite_requires_self_calibrated_consensus():
+    clusters = [[0, 1, 2, 3], [4, 5, 6], [7, 8]]
+    species = np.arange(9, dtype=np.int32)
+    trace = []
+
+    merged, merge_count, relations, iterations = (
+        merge_profile_supported_satellite_candidate_clusters(
+            clusters,
+            profile_cluster_ids=np.asarray([0, 0, 1]),
+            gene_ids=np.asarray([7, 8, 7]),
+            scores=np.asarray([12.0, 11.0, 10.1]),
+            self_thresholds={0: 10.0, 1: 10.0},
+            gene_to_species=species,
+            min_margin=2.0,
+            merge_trace=trace,
+        )
+    )
+
+    assert {frozenset(group) for group in merged} == {
+        frozenset((0, 1, 2, 3, 7, 8)),
+        frozenset((4, 5, 6)),
+    }
+    assert (merge_count, relations, iterations) == (1, 2, 1)
+    assert trace[0]["evidence"] == "iterative_profile_hmm"
+    assert np.isclose(trace[0]["support"], 1.15)
+    assert trace[0]["profile_hits"] == 2
+    assert trace[0]["profile_coverage"] == 1.0
+
+
+def test_profile_satellite_rejects_ambiguous_and_subthreshold_hits():
+    clusters = [[0, 1, 2], [3, 4, 5], [6, 7]]
+    species = np.arange(8, dtype=np.int32)
+
+    merged, merge_count, relations, iterations = (
+        merge_profile_supported_satellite_candidate_clusters(
+            clusters,
+            profile_cluster_ids=np.asarray([0, 1, 0]),
+            gene_ids=np.asarray([6, 7, 7]),
+            scores=np.asarray([10.0, 10.0, 9.9]),
+            self_thresholds={0: 10.0, 1: 10.0},
+            gene_to_species=species,
+            min_margin=1.5,
+        )
+    )
+
+    assert {frozenset(group) for group in merged} == {
+        frozenset(group) for group in clusters
+    }
+    assert (merge_count, relations, iterations) == (0, 2, 0)
+
+
+def test_profile_satellite_deduplicates_gene_profile_scores():
+    clusters = [[0, 1, 2], [3]]
+    species = np.arange(4, dtype=np.int32)
+
+    merged, merge_count, relations, _ = (
+        merge_profile_supported_satellite_candidate_clusters(
+            clusters,
+            profile_cluster_ids=np.asarray([0, 0]),
+            gene_ids=np.asarray([3, 3]),
+            scores=np.asarray([10.0, 12.0]),
+            self_thresholds={0: 10.0},
+            gene_to_species=species,
+        )
+    )
+
+    assert merged == [[0, 1, 2, 3]]
+    assert (merge_count, relations) == (1, 1)
 
 
 def _cluster(prefix, counts):

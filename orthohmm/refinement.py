@@ -1094,6 +1094,214 @@ def merge_supported_satellite_candidate_clusters(
     return current, total_merges, initial_relation_count, completed_iterations
 
 
+def merge_profile_supported_satellite_candidate_clusters(
+    clusters: Sequence[Sequence[int]],
+    profile_cluster_ids: Sequence[int],
+    gene_ids: Sequence[int],
+    scores: Sequence[float],
+    self_thresholds: Mapping[int, float],
+    gene_to_species: Sequence[int],
+    max_component_genes: int = 500,
+    max_satellite_genes: int = 12,
+    max_satellite_to_anchor_ratio: float = 0.75,
+    min_margin: float = 1.5,
+    max_satellites_per_anchor: int = 4,
+    max_species_overlap_fraction: float = 1.0,
+    min_coverage: float = 0.5,
+    min_score_ratio: float = 1.0,
+    merge_trace: list[dict[str, object]] | None = None,
+) -> tuple[List[IndexCluster], int, int, int]:
+    """Attach small seed groups to uniquely supported, self-calibrated profiles.
+
+    Each gene-to-profile score must meet that profile's weakest-member score.
+    Scores are divided by the magnitude of the profile threshold before they
+    are aggregated, which makes support comparable across profile lengths.
+    Missing members contribute zero support through the coverage-weighted mean.
+    """
+
+    positive_integers = (
+        max_component_genes,
+        max_satellite_genes,
+        max_satellites_per_anchor,
+    )
+    if any(value < 1 for value in positive_integers):
+        raise ValueError("candidate size and attachment caps must be positive")
+    fractions = (
+        max_satellite_to_anchor_ratio,
+        max_species_overlap_fraction,
+        min_coverage,
+    )
+    if any(not math.isfinite(value) or value < 0.0 for value in fractions):
+        raise ValueError("candidate ratio limits must be finite and nonnegative")
+    if max_species_overlap_fraction > 1.0 or min_coverage > 1.0:
+        raise ValueError("species overlap and coverage fractions cannot exceed one")
+    if not math.isfinite(min_margin) or min_margin < 1.0:
+        raise ValueError("candidate margin must be finite and at least one")
+    if not math.isfinite(min_score_ratio) or min_score_ratio <= 0.0:
+        raise ValueError("minimum score ratio must be finite and positive")
+    if not clusters:
+        return [], 0, 0, 0
+
+    total_genes = len(gene_to_species)
+    profiles = np.asarray(profile_cluster_ids, dtype=np.int64)
+    genes = np.asarray(gene_ids, dtype=np.int64)
+    profile_scores = np.asarray(scores, dtype=np.float64)
+    if not (len(profiles) == len(genes) == len(profile_scores)):
+        raise ValueError("profile IDs, gene IDs, and scores must have equal length")
+    if len(profiles) == 0:
+        return [list(cluster) for cluster in clusters], 0, 0, 0
+    if (
+        profiles.min(initial=0) < 0
+        or profiles.max(initial=-1) >= len(clusters)
+        or genes.min(initial=0) < 0
+        or genes.max(initial=-1) >= total_genes
+    ):
+        raise ValueError("profile or gene ID is outside the seed partition")
+
+    sizes = np.asarray([len(cluster) for cluster in clusters], dtype=np.int64)
+    gene_to_cluster = _gene_to_cluster_array(clusters, total_genes)
+    thresholds = np.fromiter(
+        (self_thresholds.get(int(profile), np.inf) for profile in profiles),
+        dtype=np.float64,
+        count=len(profiles),
+    )
+    denominators = np.maximum(np.abs(thresholds), 1.0)
+    score_ratios = profile_scores / denominators
+    source_clusters = gene_to_cluster[genes]
+    eligible = (
+        np.isfinite(profile_scores)
+        & np.isfinite(thresholds)
+        & (source_clusters >= 0)
+        & (source_clusters != profiles)
+        & (profile_scores >= thresholds)
+        & (score_ratios >= min_score_ratio)
+    )
+    if not eligible.any():
+        return [list(cluster) for cluster in clusters], 0, 0, 0
+
+    profiles = profiles[eligible]
+    genes = genes[eligible]
+    score_ratios = score_ratios[eligible]
+    source_clusters = source_clusters[eligible].astype(np.int64, copy=False)
+
+    # Retain one score for each gene/profile pair before group aggregation.
+    gene_profile_keys = (genes << 32) | profiles
+    order = np.argsort(gene_profile_keys, kind="stable")
+    sorted_keys = gene_profile_keys[order]
+    starts = np.concatenate(([0], np.nonzero(np.diff(sorted_keys))[0] + 1))
+    best_rows = order[starts]
+    for start, end, selected in zip(
+        starts,
+        np.concatenate((starts[1:], [len(order)])),
+        range(len(starts)),
+    ):
+        run = order[start:end]
+        best_rows[selected] = run[np.argmax(score_ratios[run])]
+
+    profiles = profiles[best_rows]
+    genes = genes[best_rows]
+    score_ratios = score_ratios[best_rows]
+    source_clusters = source_clusters[best_rows]
+
+    relation_keys = (source_clusters << 32) | profiles
+    order = np.argsort(relation_keys, kind="stable")
+    sorted_keys = relation_keys[order]
+    starts = np.concatenate(([0], np.nonzero(np.diff(sorted_keys))[0] + 1))
+    ends = np.concatenate((starts[1:], [len(order)]))
+    unique_keys = sorted_keys[starts]
+    sources = (unique_keys >> 32).astype(np.int32)
+    targets = (unique_keys & 0xFFFFFFFF).astype(np.int32)
+    sorted_ratios = score_ratios[order]
+    totals = np.add.reduceat(sorted_ratios, starts)
+    maximums = np.maximum.reduceat(sorted_ratios, starts)
+    counts = (ends - starts).astype(np.int32)
+    coverages = counts / np.maximum(1, sizes[sources])
+    support = totals / np.maximum(1, sizes[sources])
+
+    plausible = (
+        (sizes[sources] <= max_satellite_genes)
+        & (sizes[sources] <= sizes[targets] * max_satellite_to_anchor_ratio)
+        & (coverages >= min_coverage)
+    )
+    best = np.full(len(clusters), -np.inf, dtype=np.float64)
+    np.maximum.at(best, sources[plausible], support[plausible])
+    is_best = plausible & np.isclose(
+        support, best[sources], rtol=1e-12, atol=1e-12
+    )
+    best_counts = np.zeros(len(clusters), dtype=np.int32)
+    np.add.at(best_counts, sources[is_best], 1)
+    second = np.full(len(clusters), -np.inf, dtype=np.float64)
+    np.maximum.at(second, sources[plausible & ~is_best], support[plausible & ~is_best])
+    margins = np.full(len(sources), np.inf, dtype=np.float64)
+    has_second = second[sources] > 0.0
+    margins[has_second] = best[sources[has_second]] / second[sources[has_second]]
+    margins[best_counts[sources] > 1] = 1.0
+
+    candidate_rows = np.flatnonzero(
+        is_best
+        & (best_counts[sources] == 1)
+        & (margins >= min_margin)
+    )
+    dsu = _IndexedDSU(clusters, gene_to_species)
+    candidates = []
+    for row in candidate_rows:
+        source = int(sources[row])
+        target = int(targets[row])
+        source_species = dsu.species_counts[source]
+        target_species = dsu.species_counts[target]
+        overlap_denominator = max(1, min(len(source_species), len(target_species)))
+        overlap_fraction = (
+            _species_overlap(source_species, target_species) / overlap_denominator
+        )
+        if overlap_fraction > max_species_overlap_fraction:
+            continue
+        candidates.append((
+            float(support[row]),
+            float(margins[row]),
+            source,
+            target,
+            int(row),
+            float(overlap_fraction),
+        ))
+    candidates.sort(key=lambda item: (-item[0], -item[1], item[2], item[3]))
+
+    anchor_attachments = Counter()
+    merged = 0
+    for aggregate, margin, source, target, row, overlap_fraction in candidates:
+        anchor = dsu.find(target)
+        if anchor_attachments[anchor] >= max_satellites_per_anchor:
+            continue
+        if dsu.union(source, target, max_genes=max_component_genes):
+            if merge_trace is not None:
+                merge_trace.append({
+                    "iteration": 0,
+                    "evidence": "iterative_profile_hmm",
+                    "source_cluster": source,
+                    "target_cluster": target,
+                    "source_genes": tuple(int(gene) for gene in clusters[source]),
+                    "target_genes": tuple(int(gene) for gene in clusters[target]),
+                    "source_size": int(sizes[source]),
+                    "target_size": int(sizes[target]),
+                    "source_seed_families": 1,
+                    "target_seed_families": 1,
+                    "support": aggregate,
+                    "margin": margin,
+                    "species_overlap_fraction": overlap_fraction,
+                    "profile_hits": int(counts[row]),
+                    "profile_coverage": float(coverages[row]),
+                    "average_score_ratio": float(totals[row] / counts[row]),
+                    "maximum_score_ratio": float(maximums[row]),
+                })
+            anchor_attachments[dsu.find(target)] += 1
+            merged += 1
+    return (
+        _component_index_clusters(clusters, dsu),
+        merged,
+        len(sources),
+        int(merged > 0),
+    )
+
+
 def _merge_weak_balanced_rescue_indexed(
     sources: np.ndarray,
     targets: np.ndarray,

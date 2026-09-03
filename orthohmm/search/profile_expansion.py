@@ -60,6 +60,20 @@ class ProfileExpansionResult:
     calibrated_profiles: int = 0
 
 
+@dataclass(frozen=True)
+class IterativeProfileCandidateResult:
+    """Candidate partition and audit counts from a rebuilt profile-HMM pass."""
+
+    clusters: list[list[int]]
+    merge_trace: list[dict[str, object]]
+    profiles_built: int
+    profile_candidates: int
+    significant_profile_hits: int
+    strict_profile_hits: int
+    directed_relations: int
+    merges: int
+
+
 def load_global_sequence_database(
     fasta_directory: str,
     files: Sequence[str],
@@ -754,4 +768,102 @@ def expand_profiles(
             if calibrate_weakest_member
             else len(calibration_profile_ids or ())
         ),
+    )
+
+
+def build_iterative_profile_candidates(
+    clusters: Sequence[Sequence[int]],
+    gene_names: Sequence[str],
+    fasta_directory: str,
+    files: Sequence[str],
+    matrix_name: str,
+    cpu: int,
+    evalue_threshold: float = 1e-4,
+    gene_to_species=None,
+    min_profile_cluster_size: int = 3,
+    max_profile_cluster_size: int = 200,
+    max_candidates_per_gene: int = 20,
+    max_component_genes: int = 500,
+    max_satellite_genes: int = 12,
+    max_satellite_to_anchor_ratio: float = 0.75,
+    min_margin: float = 1.5,
+    max_satellites_per_anchor: int = 4,
+    max_species_overlap_fraction: float = 1.0,
+    min_coverage: float = 0.5,
+    min_score_ratio: float = 1.0,
+) -> IterativeProfileCandidateResult:
+    """Rebuild profiles from final seeds and form strict phylogeny candidates."""
+
+    if gene_to_species is None:
+        raise ValueError("gene_to_species is required for profile candidates")
+    os.environ["OMP_NUM_THREADS"] = str(cpu)
+    sequence_database = load_global_sequence_database(
+        fasta_directory, files, gene_names
+    )
+    profiles = build_cluster_profiles(
+        clusters,
+        gene_names,
+        sequence_database,
+        matrix_name,
+        cpu,
+        min_cluster_size=min_profile_cluster_size,
+        max_cluster_size=max_profile_cluster_size,
+    )
+    profile_hits = search_genes_against_profiles(
+        profiles,
+        sequence_database,
+        matrix_name,
+        cpu,
+        max_candidates_per_gene=max_candidates_per_gene,
+        evalue_threshold=evalue_threshold,
+    )
+    self_thresholds = compute_profile_self_thresholds(
+        profiles,
+        gene_names,
+        sequence_database,
+        cpu,
+    )
+    hit_thresholds = np.fromiter(
+        (
+            self_thresholds.get(int(profile_id), np.inf)
+            for profile_id in profile_hits.profile_cluster_ids
+        ),
+        dtype=np.float64,
+        count=len(profile_hits.profile_cluster_ids),
+    )
+    strict_profile_hits = int(np.count_nonzero(
+        np.asarray(profile_hits.scores, dtype=np.float64) >= hit_thresholds
+    ))
+
+    from ..refinement import merge_profile_supported_satellite_candidate_clusters
+
+    merge_trace: list[dict[str, object]] = []
+    candidates, merges, relations, _iterations = (
+        merge_profile_supported_satellite_candidate_clusters(
+            clusters,
+            profile_hits.profile_cluster_ids,
+            profile_hits.gene_ids,
+            profile_hits.scores,
+            self_thresholds,
+            gene_to_species,
+            max_component_genes=max_component_genes,
+            max_satellite_genes=max_satellite_genes,
+            max_satellite_to_anchor_ratio=max_satellite_to_anchor_ratio,
+            min_margin=min_margin,
+            max_satellites_per_anchor=max_satellites_per_anchor,
+            max_species_overlap_fraction=max_species_overlap_fraction,
+            min_coverage=min_coverage,
+            min_score_ratio=min_score_ratio,
+            merge_trace=merge_trace,
+        )
+    )
+    return IterativeProfileCandidateResult(
+        clusters=candidates,
+        merge_trace=merge_trace,
+        profiles_built=len(profiles),
+        profile_candidates=profile_hits.candidate_count,
+        significant_profile_hits=len(profile_hits.scores),
+        strict_profile_hits=strict_profile_hits,
+        directed_relations=relations,
+        merges=merges,
     )
