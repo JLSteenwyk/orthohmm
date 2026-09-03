@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_qfo",
+  "frozen_at": "2026-09-03T01:03:59Z",
+  "method": "OrthoHMM phylogeny sparse-overlap v4",
+  "source_commit": "8d9ae9198677dc34923a3681d6f0ec96589e1615",
+  "source_sha256": {
+    "orthohmm/phylogeny.py": "2eb3d632fe1f718d58192174302927ee41a2b3e4eb8cfb1dc8c3f7af1feaac09",
+    "benchmark_tools/replay_phylogeny.py": "47ae9e02b057cb51ccf75d4d2e13ec3a3b228a450af5f48bab99283313245f51"
+  },
+  "hypothesis": "Sparse species overlap in an inferred gene tree is often insufficient evidence to discard every cross-child ortholog pair. Treat one- or two-species overlap as uncertain unless a two-species overlap covers at least half of the smaller artificial-root child; retain duplication calls for three or more repeated species.",
+  "parameters": {
+    "accuracy_profile": "high_sensitivity",
+    "phylogeny_candidates": "satellite_v2",
+    "phylogeny_mode": "reconcile",
+    "species_tree_mode": "infer",
+    "species_tree_rooting": "min_variance",
+    "root_duplication_rule": "species_overlap",
+    "pair_orthology_rule": "sparse_overlap",
+    "aligner": "MAFFT v7.525",
+    "tree_builder": "FastTree 2.2.0 Double precision"
+  },
+  "selection_policy": {
+    "qfo_scores_used": false,
+    "orthobench_development_used_for_selection": true,
+    "orthobench_validation_opened_after_selection": true,
+    "further_threshold_tuning_after_validation": false,
+    "note": "The fixed sparse-overlap boundary was selected after synthetic holdout and OrthoBench development evaluation. Validation was opened once for confirmation. No v4 QfO prediction or assessment existed before this freeze."
+  },
+  "verification": {
+    "focused_tests": "71 passed",
+    "full_unit_tests": "381 passed",
+    "ruff": "passed",
+    "synthetic_holdout": {
+      "path": "/tmp/phylogeny_sparse_overlap_holdout_v4_20260902.json",
+      "sha256": "d6e43a26a0f1a11be1abfb772f22b9eb24dcf5359438f7af505c36176e4e35eb",
+      "replicate_seeds": [101, 211, 307],
+      "supplied_root_group_f_score": 1.0,
+      "supplied_pair_f_score": 1.0,
+      "inferred_root_group_f_score": 1.0,
+      "inferred_pair_f_score": 1.0,
+      "inferred_species_tree_exact_topology": true
+    }
+  },
+  "orthobench_replay": {
+    "metrics_path": "/tmp/orthobench_sparse_overlap_v4_20260902.json",
+    "metrics_sha256": "032988e0fe0ce2c0d075827418954ad59b11fc1e07d5ffb4827a93457eb4e414",
+    "candidate_families": 54445,
+    "reconciled_families": 8681,
+    "bypassed_families": 45764,
+    "checkpoint_hits": 8681,
+    "root_hogs": 59770,
+    "ortholog_pairs": 1155100,
+    "duplications": 59379,
+    "speciations": 104016,
+    "uncertain_events": 51640,
+    "wall_s": 79.47185,
+    "peak_process_tree_rss_gib": 1.705181,
+    "root_hogs_sha256": "76229249770b1f875c6bd319ec524fb50721b048e68c284c4c3a3dba611ea216",
+    "pairs_path": "/tmp/orthobench_sparse_overlap_v4_pairs.tsv",
+    "pairs_sha256": "95c58cd76b39e1770e6f83d95812bafb4a61ec0bdb0ec65786c6bb1546607764",
+    "root_hog_score": {
+      "basis": "byte-identical to the fresh satellite_v2 root HOG output",
+      "f_score": 74.10607351873405,
+      "precision": 81.77045380181866,
+      "recall": 67.75533630827974,
+      "exact_refogs": 15
+    }
+  },
+  "orthobench_pair_diagnostics": {
+    "development": {
+      "path": "/tmp/orthobench_development_sparse_overlap_v4_diagnostics.json",
+      "sha256": "2d6b3b5caaca21fb864d731fa9faad73a3b1f8b86cf8969626412b8adb32194a",
+      "supported_paralogy_direct_recall_macro": 0.5368776533270584,
+      "single_overlap_direct_recall_macro": 0.5464077484202631,
+      "sparse_overlap_direct_recall_macro": 0.5649536055192894,
+      "supported_paralogy_transitive_recall_macro": 0.6903003296221243,
+      "single_overlap_transitive_recall_macro": 0.693698947133645,
+      "sparse_overlap_transitive_recall_macro": 0.6965889307132838,
+      "sparse_overlap_cross_refog_pairs": 0
+    },
+    "validation": {
+      "path": "/tmp/orthobench_validation_sparse_overlap_v4_diagnostics.json",
+      "sha256": "cbd495fe47243f6f7b80a8b2f92e2b1cf0c2fea4248635d193ac7ddbd9ebae96",
+      "supported_paralogy_direct_recall_macro": 0.4469168597069538,
+      "sparse_overlap_direct_recall_macro": 0.46734833825515776,
+      "supported_paralogy_transitive_recall_macro": 0.6695357702529913,
+      "sparse_overlap_transitive_recall_macro": 0.6703174182505363,
+      "sparse_overlap_cross_refog_pairs": 0
+    }
+  },
+  "comparison": {
+    "supported_paralogy_pairs": 1033790,
+    "single_overlap_pairs": 1066177,
+    "sparse_overlap_pairs": 1155100,
+    "pairs_added_over_supported_paralogy": 121310,
+    "root_hogs_changed": false
+  },
+  "defaults": {
+    "nonphylogenetic_default_changed": false,
+    "phylogeny_default_changed": false,
+    "status": "opt-in validation candidate"
+  },
+  "success_targets": {
+    "orthobench_f_score_greater_than": 72.7,
+    "qfo_six_metric_mean_greater_than": 0.7820708882895963
+  }
+}
