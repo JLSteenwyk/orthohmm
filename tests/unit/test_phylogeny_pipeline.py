@@ -8,6 +8,7 @@ from orthohmm.phylogeny_pipeline import (
     FamilyOutcome,
     _aligner_command,
     apply_satellite_membership_constraints,
+    complete_root_hog_coorthologs,
     family_requires_reconciliation,
     run_phylogeny_stage,
     select_species_tree_families,
@@ -119,6 +120,38 @@ def test_medium_membership_applies_profile_support_floor():
     assert refined[0].ortholog_pairs == (("b", "d"),)
     assert audit["supported_constraints"] == 1
     assert audit["minimum_profile_support"] == 5.9
+
+
+def test_root_hog_completion_adds_only_cross_species_pairs():
+    outcome = FamilyOutcome(
+        family_id="Family0000000",
+        genes=("a", "b", "c", "d"),
+        root_groups=(("a", "b", "c", "d"),),
+        ortholog_pairs=(("a", "c"),),
+        ortholog_pair_confidence=(("a", "c", "high"),),
+        reconciliation=None,
+        checkpoint_hit=False,
+    )
+
+    completed, audit = complete_root_hog_coorthologs(
+        (outcome,),
+        {"a": "A", "b": "A", "c": "B", "d": "C"},
+    )
+
+    assert completed[0].ortholog_pairs == (
+        ("a", "c"), ("a", "d"), ("b", "c"), ("b", "d"), ("c", "d")
+    )
+    assert completed[0].ortholog_pair_confidence == (
+        ("a", "c", "high"),
+        ("a", "d", "medium"),
+        ("b", "c", "medium"),
+        ("b", "d", "medium"),
+        ("c", "d", "medium"),
+    )
+    assert audit == {
+        "policy": "all_cross_species_pairs_within_final_root_hog",
+        "pairs_added": 4,
+    }
 
 
 def _write_executable(path: Path, source: str) -> str:

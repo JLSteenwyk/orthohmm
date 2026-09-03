@@ -576,7 +576,7 @@ def reconcile_gene_tree(
         )
     valid_pair_rules = {
         "lca", "positive_paralogy", "supported_paralogy",
-        "sparse_overlap", "depth_two_overlap",
+        "sparse_overlap", "depth_two_overlap", "depth_two_closure",
     }
     if pair_orthology_rule not in valid_pair_rules:
         raise ValueError(
@@ -585,7 +585,7 @@ def reconcile_gene_tree(
         )
 
     topology_resolution_count = 0
-    if pair_orthology_rule == "depth_two_overlap":
+    if pair_orthology_rule in {"depth_two_overlap", "depth_two_closure"}:
         gene_tree, topology_resolution_count = resolve_gene_tree_depth_two_overlap(
             gene_tree, gene_to_species
         )
@@ -1007,7 +1007,7 @@ def validate_phylogeny_config(
         )
     if config.pair_orthology_rule not in {
         "lca", "positive_paralogy", "supported_paralogy",
-        "sparse_overlap", "depth_two_overlap",
+        "sparse_overlap", "depth_two_overlap", "depth_two_closure",
     }:
         raise PhylogenyConfigurationError(
             "Unsupported pair-orthology rule: "

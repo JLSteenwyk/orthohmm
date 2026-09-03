@@ -91,7 +91,7 @@ def parse_args(argv=None):
         "--phylogeny-pair-rule",
         choices=(
             "lca", "positive_paralogy", "supported_paralogy",
-            "sparse_overlap", "depth_two_overlap",
+            "sparse_overlap", "depth_two_overlap", "depth_two_closure",
         ),
         default="lca",
     )

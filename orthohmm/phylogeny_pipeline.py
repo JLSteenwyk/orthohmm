@@ -59,6 +59,7 @@ class PhylogenyStageResult:
     output_directory: str
     remapped_checkpoint_hits: int = 0
     topology_resolutions: int = 0
+    coortholog_pairs_added: int = 0
 
 
 @dataclass(frozen=True)
@@ -858,6 +859,47 @@ def apply_satellite_membership_constraints(
         "root_hogs_added": groups_added,
         "ortholog_pairs_removed": pairs_removed,
     }
+
+
+def complete_root_hog_coorthologs(
+    outcomes: Sequence[FamilyOutcome],
+    gene_species: Mapping[str, str],
+) -> tuple[list[FamilyOutcome], dict[str, int | str]]:
+    """Complete cross-species co-orthology inside final root HOGs."""
+
+    refined = []
+    pairs_added = 0
+    for outcome in outcomes:
+        pairs = set(outcome.ortholog_pairs)
+        confidence = {
+            (gene_a, gene_b): value
+            for gene_a, gene_b, value in outcome.ortholog_pair_confidence
+        }
+        before = len(pairs)
+        for root_group in outcome.root_groups:
+            for index, gene_a in enumerate(root_group):
+                for gene_b in root_group[index + 1:]:
+                    if gene_species[gene_a] == gene_species[gene_b]:
+                        continue
+                    pair = tuple(sorted((gene_a, gene_b)))
+                    pairs.add(pair)
+                    confidence.setdefault(pair, "medium")
+        pairs_added += len(pairs) - before
+        refined.append(
+            replace(
+                outcome,
+                ortholog_pairs=tuple(sorted(pairs)),
+                ortholog_pair_confidence=tuple(
+                    (*pair, confidence[pair]) for pair in sorted(pairs)
+                ),
+            )
+        )
+    return refined, {
+        "policy": "all_cross_species_pairs_within_final_root_hog",
+        "pairs_added": pairs_added,
+    }
+
+
 def _write_stage_outputs(
     outcomes: Sequence[FamilyOutcome],
     cluster_path: Path,
@@ -1024,6 +1066,9 @@ def _write_stage_outputs(
         output_directory=str(phylogeny_directory.resolve()),
         remapped_checkpoint_hits=remapped_checkpoint_hits,
         topology_resolutions=topology_resolutions,
+        coortholog_pairs_added=int(
+            (manifest.get("pair_completion") or {}).get("pairs_added", 0)
+        ),
     )
     summary = asdict(result)
     summary["schema_version"] = 1
@@ -1141,6 +1186,12 @@ def run_phylogeny_stage(
             minimum_profile_support=config.membership_min_profile_support,
         )
 
+    pair_completion_audit = None
+    if config.pair_orthology_rule == "depth_two_closure":
+        outcomes, pair_completion_audit = complete_root_hog_coorthologs(
+            outcomes, gene_species
+        )
+
     manifest = {
         "schema_version": 1,
         "created_at_epoch_s": time.time(),
@@ -1172,6 +1223,7 @@ def run_phylogeny_stage(
         ),
         "species_tree_rooting": config.species_tree_rooting,
         "membership_reconciliation": membership_audit,
+        "pair_completion": pair_completion_audit,
         "tools": {
             "aligner": {
                 "path": config.aligner,
