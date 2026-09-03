@@ -44,7 +44,8 @@ def test_satellite_membership_requires_high_confidence_cross_seed_pair():
         ("a", "d", "high"),
     )
     assert audit == {
-        "policy": "high_confidence_pair",
+        "policy": "minimum_high_confidence_pair",
+        "minimum_profile_support": 0.0,
         "constraints": 2,
         "supported_constraints": 1,
         "detached_constraints": 1,
@@ -52,6 +53,72 @@ def test_satellite_membership_requires_high_confidence_cross_seed_pair():
         "root_hogs_added": 1,
         "ortholog_pairs_removed": 1,
     }
+
+
+def test_satellite_membership_can_accept_medium_confidence_cross_seed_pair():
+    outcome = FamilyOutcome(
+        family_id="Family0000000",
+        genes=("a", "b", "c", "d"),
+        root_groups=(("a", "b", "c", "d"),),
+        ortholog_pairs=(("a", "c"), ("b", "d")),
+        ortholog_pair_confidence=(
+            ("a", "c", "high"),
+            ("b", "d", "medium"),
+        ),
+        reconciliation=None,
+        checkpoint_hit=False,
+    )
+    constraints = (
+        {"source_genes": ("a",), "target_genes": ("c",)},
+        {"source_genes": ("b",), "target_genes": ("d",)},
+    )
+
+    refined, audit = apply_satellite_membership_constraints(
+        (outcome,), constraints, minimum_confidence="medium"
+    )
+
+    assert refined == [outcome]
+    assert audit == {
+        "policy": "minimum_medium_confidence_pair",
+        "minimum_profile_support": 0.0,
+        "constraints": 2,
+        "supported_constraints": 2,
+        "detached_constraints": 0,
+        "detached_genes": 0,
+        "root_hogs_added": 0,
+        "ortholog_pairs_removed": 0,
+    }
+
+
+def test_medium_membership_applies_profile_support_floor():
+    outcome = FamilyOutcome(
+        family_id="Family0000000",
+        genes=("a", "b", "c", "d"),
+        root_groups=(("a", "b", "c", "d"),),
+        ortholog_pairs=(("a", "c"), ("b", "d")),
+        ortholog_pair_confidence=(
+            ("a", "c", "medium"),
+            ("b", "d", "medium"),
+        ),
+        reconciliation=None,
+        checkpoint_hit=False,
+    )
+    constraints = (
+        {"source_genes": ("a",), "target_genes": ("c",), "support": 1.0},
+        {"source_genes": ("b",), "target_genes": ("d",), "support": 6.0},
+    )
+
+    refined, audit = apply_satellite_membership_constraints(
+        (outcome,),
+        constraints,
+        minimum_confidence="medium",
+        minimum_profile_support=5.9,
+    )
+
+    assert refined[0].root_groups == (("b", "c", "d"), ("a",))
+    assert refined[0].ortholog_pairs == (("b", "d"),)
+    assert audit["supported_constraints"] == 1
+    assert audit["minimum_profile_support"] == 5.9
 
 
 def _write_executable(path: Path, source: str) -> str:

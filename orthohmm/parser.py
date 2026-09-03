@@ -445,6 +445,22 @@ def create_parser() -> ArgumentParser:
     )
 
     optional.add_argument(
+        "--phylogeny_membership_support",
+        choices=["high", "medium"],
+        default="high",
+        help=SUPPRESS,
+        metavar="phylogeny_membership_support",
+    )
+
+    optional.add_argument(
+        "--phylogeny_membership_min_profile_support",
+        type=float,
+        default=0.0,
+        help=SUPPRESS,
+        metavar="phylogeny_membership_min_profile_support",
+    )
+
+    optional.add_argument(
         "--phylogeny_candidates",
         choices=["seed", "satellite_v1", "satellite_v2"],
         default="seed",

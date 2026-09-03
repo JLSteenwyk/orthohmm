@@ -12,6 +12,9 @@ readonly QFO_PIPELINE=${QFO_PIPELINE:-${BASE}/qfo_benchmark/benchmark-webservice
 readonly QFO_MAPPING=${QFO_MAPPING:-${QFO_PIPELINE}/reference_data/2020/mapping.json.gz}
 readonly ALIGNER=${ALIGNER:-/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin/mafft}
 readonly TREE_BUILDER=${TREE_BUILDER:-/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220/FastTree}
+readonly PHYLOGENY_PAIR_RULE=${PHYLOGENY_PAIR_RULE:-positive_paralogy}
+readonly PHYLOGENY_MEMBERSHIP_SUPPORT=${PHYLOGENY_MEMBERSHIP_SUPPORT:-high}
+readonly PHYLOGENY_MEMBERSHIP_MIN_PROFILE_SUPPORT=${PHYLOGENY_MEMBERSHIP_MIN_PROFILE_SUPPORT:-0.0}
 
 "${PYTHON_BIN}" "${BASE}/benchmark_tools/resume_phylogeny_benchmark.py" \
     --fasta-directory "${INPUT_DIR}" \
@@ -25,7 +28,10 @@ readonly TREE_BUILDER=${TREE_BUILDER:-/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/
     --tree-builder "${TREE_BUILDER}" \
     --species-tree-rooting min_variance \
     --root-rule species_overlap \
-    --pair-rule positive_paralogy \
+    --pair-rule "${PHYLOGENY_PAIR_RULE}" \
+    --membership-support "${PHYLOGENY_MEMBERSHIP_SUPPORT}" \
+    --membership-min-profile-support \
+        "${PHYLOGENY_MEMBERSHIP_MIN_PROFILE_SUPPORT}" \
     --membership-constraints \
         "${OUTDIR}/output/orthohmm_working_res/phylogeny_candidate_merges.json" \
     > "${OUTDIR}/resume.log" 2>&1

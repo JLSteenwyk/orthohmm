@@ -173,6 +173,8 @@ class TestArgsProcessing(object):
             "tree_builder",
             "phylogeny_root_rule",
             "phylogeny_pair_rule",
+            "phylogeny_membership_support",
+            "phylogeny_membership_min_profile_support",
             "phylogeny_candidates",
             "species_tree_rooting",
         ]
@@ -185,6 +187,8 @@ class TestArgsProcessing(object):
         assert res["species_tree"] is None
         assert res["phylogeny_root_rule"] == "supported_children"
         assert res["phylogeny_pair_rule"] == "lca"
+        assert res["phylogeny_membership_support"] == "high"
+        assert res["phylogeny_membership_min_profile_support"] == 0.0
         assert res["phylogeny_candidates"] == "seed"
         assert res["species_tree_rooting"] == "midpoint"
 

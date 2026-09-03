@@ -160,6 +160,16 @@ def build_parser() -> argparse.ArgumentParser:
         ),
         default="lca",
     )
+    parser.add_argument(
+        "--membership-support",
+        choices=("high", "medium"),
+        default="high",
+    )
+    parser.add_argument(
+        "--membership-min-profile-support",
+        type=float,
+        default=0.0,
+    )
     parser.add_argument("--membership-constraints", type=Path)
     return parser
 
@@ -222,6 +232,8 @@ def main(argv=None) -> int:
         root_duplication_rule=args.root_rule,
         pair_orthology_rule=args.pair_rule,
         species_tree_rooting=args.species_tree_rooting,
+        membership_support_confidence=args.membership_support,
+        membership_min_profile_support=args.membership_min_profile_support,
     )
     restart_commit = _git_commit(repo_root)
     with PipelineMetrics(str(resume_metrics)) as metrics:
@@ -235,6 +247,8 @@ def main(argv=None) -> int:
             cpu_budget=args.cpu,
             root_duplication_rule=args.root_rule,
             pair_orthology_rule=args.pair_rule,
+            membership_support_confidence=args.membership_support,
+            membership_min_profile_support=args.membership_min_profile_support,
             species_tree_rooting=args.species_tree_rooting,
             membership_constraints=membership_record,
         )

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from itertools import combinations
+import math
 from pathlib import Path
 import shutil
 from typing import Sequence
@@ -26,6 +27,8 @@ class PhylogenyConfig:
     root_duplication_rule: str = "supported_children"
     pair_orthology_rule: str = "lca"
     species_tree_rooting: str = "midpoint"
+    membership_support_confidence: str = "high"
+    membership_min_profile_support: float = 0.0
 
 
 @dataclass(frozen=True)
@@ -805,6 +808,18 @@ def validate_phylogeny_config(
             "Unsupported pair-orthology rule: "
             f"{config.pair_orthology_rule!r}"
         )
+    if config.membership_support_confidence not in {"high", "medium"}:
+        raise PhylogenyConfigurationError(
+            "Unsupported membership-support confidence: "
+            f"{config.membership_support_confidence!r}"
+        )
+    if (
+        not math.isfinite(config.membership_min_profile_support)
+        or config.membership_min_profile_support < 0.0
+    ):
+        raise PhylogenyConfigurationError(
+            "Membership minimum profile support must be finite and non-negative."
+        )
     if config.species_tree_rooting not in {"midpoint", "min_variance"}:
         raise PhylogenyConfigurationError(
             "Unsupported species-tree rooting policy: "
@@ -833,4 +848,6 @@ def validate_phylogeny_config(
         root_duplication_rule=config.root_duplication_rule,
         pair_orthology_rule=config.pair_orthology_rule,
         species_tree_rooting=config.species_tree_rooting,
+        membership_support_confidence=config.membership_support_confidence,
+        membership_min_profile_support=config.membership_min_profile_support,
     )

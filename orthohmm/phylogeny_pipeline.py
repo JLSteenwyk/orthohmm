@@ -747,14 +747,28 @@ def _bypass_family(
 def apply_satellite_membership_constraints(
     outcomes: Sequence[FamilyOutcome],
     constraints: Sequence[Mapping[str, object]],
-) -> tuple[list[FamilyOutcome], dict[str, int | str]]:
-    """Detach candidate satellites lacking high-confidence tree support."""
+    minimum_confidence: str = "high",
+    minimum_profile_support: float = 0.0,
+) -> tuple[list[FamilyOutcome], dict[str, int | float | str]]:
+    """Detach candidate satellites below the configured confidence floor."""
 
-    high_confidence_pairs = {
-        (gene_a, gene_b)
+    accepted_confidences = {
+        "high": {"high"},
+        "medium": {"high", "medium"},
+    }
+    if minimum_confidence not in accepted_confidences:
+        raise PhylogenyConfigurationError(
+            "Membership confidence must be 'high' or 'medium'."
+        )
+    if not math.isfinite(minimum_profile_support) or minimum_profile_support < 0.0:
+        raise PhylogenyConfigurationError(
+            "Membership minimum profile support must be finite and non-negative."
+        )
+
+    pair_confidence = {
+        (gene_a, gene_b): confidence
         for outcome in outcomes
         for gene_a, gene_b, confidence in outcome.ortholog_pair_confidence
-        if confidence == "high"
     }
     detached_sources: list[frozenset[str]] = []
     supported = 0
@@ -765,11 +779,20 @@ def apply_satellite_membership_constraints(
             raise PhylogenyConfigurationError(
                 "Satellite membership constraints require disjoint non-empty groups."
             )
-        has_support = any(
-            tuple(sorted((source_gene, target_gene))) in high_confidence_pairs
-            for source_gene in source
-            for target_gene in target
-        )
+        profile_support = float(constraint.get("support", 0.0))
+        has_support = False
+        for source_gene in source:
+            for target_gene in target:
+                confidence = pair_confidence.get(
+                    tuple(sorted((source_gene, target_gene)))
+                )
+                if confidence not in accepted_confidences[minimum_confidence]:
+                    continue
+                if confidence == "high" or profile_support >= minimum_profile_support:
+                    has_support = True
+                    break
+            if has_support:
+                break
         if has_support:
             supported += 1
         else:
@@ -825,7 +848,8 @@ def apply_satellite_membership_constraints(
             )
         )
     return refined, {
-        "policy": "high_confidence_pair",
+        "policy": f"minimum_{minimum_confidence}_confidence_pair",
+        "minimum_profile_support": float(minimum_profile_support),
         "constraints": len(constraints),
         "supported_constraints": supported,
         "detached_constraints": len(detached_sources),
@@ -1109,6 +1133,8 @@ def run_phylogeny_stage(
         outcomes, membership_audit = apply_satellite_membership_constraints(
             outcomes,
             membership_constraints,
+            minimum_confidence=config.membership_support_confidence,
+            minimum_profile_support=config.membership_min_profile_support,
         )
 
     manifest = {
@@ -1134,6 +1160,12 @@ def run_phylogeny_stage(
         "gene_tree_rooting": "explicit_root_or_min_duplication_loss",
         "root_duplication_rule": config.root_duplication_rule,
         "pair_orthology_rule": config.pair_orthology_rule,
+        "membership_support_confidence": (
+            config.membership_support_confidence
+        ),
+        "membership_min_profile_support": (
+            config.membership_min_profile_support
+        ),
         "species_tree_rooting": config.species_tree_rooting,
         "membership_reconciliation": membership_audit,
         "tools": {

@@ -6,6 +6,8 @@ readonly BASE=$(dirname "${SCRIPT_DIR}")
 readonly INPUT_DIR=${INPUT_DIR:-${BASE}/qfo_benchmark/input}
 readonly METHOD=${METHOD:-orthohmm_phylogeny_satellite_v2}
 readonly PHYLOGENY_PAIR_RULE=${PHYLOGENY_PAIR_RULE:-positive_paralogy}
+readonly PHYLOGENY_MEMBERSHIP_SUPPORT=${PHYLOGENY_MEMBERSHIP_SUPPORT:-high}
+readonly PHYLOGENY_MEMBERSHIP_MIN_PROFILE_SUPPORT=${PHYLOGENY_MEMBERSHIP_MIN_PROFILE_SUPPORT:-0.0}
 readonly OUTDIR=${OUTDIR:-${BASE}/qfo_benchmark/results/${METHOD}}
 readonly LOG_DIR="${BASE}/benchmark_tools/slurm_logs"
 readonly CPUS=${CPUS:-32}
@@ -23,7 +25,7 @@ inference_job=$(sbatch --parsable \
     --mem="${MEM}" \
     --output="${LOG_DIR}/qfo_${METHOD}_%j.out" \
     --error="${LOG_DIR}/qfo_${METHOD}_%j.err" \
-    --export=ALL,REPO_ROOT="${BASE}",INPUT_DIR="${INPUT_DIR}",OUTDIR="${OUTDIR}",PHYLOGENY_PAIR_RULE="${PHYLOGENY_PAIR_RULE}" \
+    --export=ALL,REPO_ROOT="${BASE}",INPUT_DIR="${INPUT_DIR}",OUTDIR="${OUTDIR}",PHYLOGENY_PAIR_RULE="${PHYLOGENY_PAIR_RULE}",PHYLOGENY_MEMBERSHIP_SUPPORT="${PHYLOGENY_MEMBERSHIP_SUPPORT}",PHYLOGENY_MEMBERSHIP_MIN_PROFILE_SUPPORT="${PHYLOGENY_MEMBERSHIP_MIN_PROFILE_SUPPORT}" \
     "${SCRIPT_DIR}/run_orthohmm_phylogeny_qfo.slurm")
 
 scoring_job=$(sbatch --parsable \

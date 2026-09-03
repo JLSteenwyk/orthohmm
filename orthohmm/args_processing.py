@@ -162,6 +162,12 @@ def process_args(args) -> dict:
         species_tree_rooting=(
             getattr(args, "species_tree_rooting", "midpoint") or "midpoint"
         ),
+        membership_support_confidence=(
+            getattr(args, "phylogeny_membership_support", "high") or "high"
+        ),
+        membership_min_profile_support=getattr(
+            args, "phylogeny_membership_min_profile_support", 0.0
+        ),
     )
     try:
         phylogeny_config = validate_phylogeny_config(
@@ -205,6 +211,12 @@ def process_args(args) -> dict:
         tree_builder=phylogeny_config.tree_builder,
         phylogeny_root_rule=phylogeny_config.root_duplication_rule,
         phylogeny_pair_rule=phylogeny_config.pair_orthology_rule,
+        phylogeny_membership_support=(
+            phylogeny_config.membership_support_confidence
+        ),
+        phylogeny_membership_min_profile_support=(
+            phylogeny_config.membership_min_profile_support
+        ),
         phylogeny_candidates=phylogeny_candidates,
         species_tree_rooting=phylogeny_config.species_tree_rooting,
     )

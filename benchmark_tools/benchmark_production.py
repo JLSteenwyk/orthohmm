@@ -96,6 +96,16 @@ def parse_args(argv=None):
         default="lca",
     )
     parser.add_argument(
+        "--phylogeny-membership-support",
+        choices=("high", "medium"),
+        default="high",
+    )
+    parser.add_argument(
+        "--phylogeny-membership-min-profile-support",
+        type=float,
+        default=0.0,
+    )
+    parser.add_argument(
         "--species-tree-rooting",
         choices=("midpoint", "min_variance"),
         default="midpoint",
@@ -155,6 +165,10 @@ def main(argv=None) -> int:
             "--phylogeny_candidates", args.phylogeny_candidates,
             "--phylogeny_root_rule", args.phylogeny_root_rule,
             "--phylogeny_pair_rule", args.phylogeny_pair_rule,
+            "--phylogeny_membership_support",
+            args.phylogeny_membership_support,
+            "--phylogeny_membership_min_profile_support",
+            str(args.phylogeny_membership_min_profile_support),
             "--species_tree_rooting", args.species_tree_rooting,
         ])
         if args.species_tree is not None:

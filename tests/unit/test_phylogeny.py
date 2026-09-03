@@ -38,6 +38,23 @@ def test_canonical_species_names_reject_collisions():
         canonical_species_names(["A.fa", "A.faa"])
 
 
+def test_validate_phylogeny_config_preserves_membership_confidence(
+    tmp_path,
+):
+    config = PhylogenyConfig(
+        mode="reconcile",
+        species_tree_mode="supplied",
+        species_tree=str(write_tree(tmp_path, "((A,B),C);")),
+        aligner="true",
+        tree_builder="true",
+        membership_support_confidence="medium",
+    )
+
+    validated = validate_phylogeny_config(config, PROTEOMES)
+
+    assert validated.membership_support_confidence == "medium"
+
+
 def test_parse_rooted_tree_and_canonicalize_labels(tmp_path):
     result = parse_species_tree(
         write_tree(tmp_path, "[&R] ((A.faa,B.fasta),C.pep);"),

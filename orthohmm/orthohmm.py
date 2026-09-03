@@ -429,6 +429,12 @@ def _execute(
         "phylogeny_root_rule", "supported_children"
     )
     phylogeny_pair_rule = kwargs.pop("phylogeny_pair_rule", "lca")
+    phylogeny_membership_support = kwargs.pop(
+        "phylogeny_membership_support", "high"
+    )
+    phylogeny_membership_min_profile_support = kwargs.pop(
+        "phylogeny_membership_min_profile_support", 0.0
+    )
     phylogeny_candidates = kwargs.pop("phylogeny_candidates", "seed")
     species_tree_rooting = kwargs.pop("species_tree_rooting", "midpoint")
     accuracy_config = resolve_accuracy_profile(accuracy_profile)
@@ -464,6 +470,10 @@ def _execute(
             tree_builder=tree_builder,
             phylogeny_root_rule=phylogeny_root_rule,
             phylogeny_pair_rule=phylogeny_pair_rule,
+            phylogeny_membership_support=phylogeny_membership_support,
+            phylogeny_membership_min_profile_support=(
+                phylogeny_membership_min_profile_support
+            ),
             phylogeny_candidates=phylogeny_candidates,
             species_tree_rooting=species_tree_rooting,
         )
@@ -805,6 +815,12 @@ def _execute(
                     root_duplication_rule=phylogeny_root_rule,
                     pair_orthology_rule=phylogeny_pair_rule,
                     species_tree_rooting=species_tree_rooting,
+                    membership_support_confidence=(
+                        phylogeny_membership_support
+                    ),
+                    membership_min_profile_support=(
+                        phylogeny_membership_min_profile_support
+                    ),
                 ),
                 cpu=cpu,
                 membership_constraints=candidate_membership_constraints,

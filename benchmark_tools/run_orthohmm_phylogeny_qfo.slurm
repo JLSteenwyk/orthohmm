@@ -17,6 +17,8 @@ readonly QFO_MAPPING=${QFO_MAPPING:-${QFO_PIPELINE}/reference_data/2020/mapping.
 readonly ALIGNER=${ALIGNER:-/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin/mafft}
 readonly TREE_BUILDER=${TREE_BUILDER:-/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220/FastTree}
 readonly PHYLOGENY_PAIR_RULE=${PHYLOGENY_PAIR_RULE:-positive_paralogy}
+readonly PHYLOGENY_MEMBERSHIP_SUPPORT=${PHYLOGENY_MEMBERSHIP_SUPPORT:-high}
+readonly PHYLOGENY_MEMBERSHIP_MIN_PROFILE_SUPPORT=${PHYLOGENY_MEMBERSHIP_MIN_PROFILE_SUPPORT:-0.0}
 
 if [[ $(find "${INPUT_DIR}" -maxdepth 1 -type f -name '*.fasta' | wc -l) -ne 78 ]]; then
     echo "Expected 78 QfO proteomes in ${INPUT_DIR}" >&2
@@ -49,6 +51,9 @@ start_epoch=$(date +%s)
     --phylogeny-candidates satellite_v2 \
     --phylogeny-root-rule species_overlap \
     --phylogeny-pair-rule "${PHYLOGENY_PAIR_RULE}" \
+    --phylogeny-membership-support "${PHYLOGENY_MEMBERSHIP_SUPPORT}" \
+    --phylogeny-membership-min-profile-support \
+        "${PHYLOGENY_MEMBERSHIP_MIN_PROFILE_SUPPORT}" \
     --aligner "${ALIGNER}" \
     --tree-builder "${TREE_BUILDER}" \
     > "${OUTDIR}/run.log" 2>&1
