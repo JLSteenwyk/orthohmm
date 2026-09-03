@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "status": "complete_checkpoint_preview_not_authoritative",
+  "method": "OrthoHMM depth-two topology resolution v7",
+  "source": {
+    "method_commit": "cb54b2b82cb64bd4305467a16f49474781415c32",
+    "scoring_harness_commit": "9f8095942dc9c683247fb86c0af83613780a6e5d"
+  },
+  "selection": {
+    "qfo_used_to_select_method": false,
+    "freeze_artifact": "benchmark_tools/results/phylogeny_depth_two_v7_freeze_20260902.json",
+    "limitation": "The replay reused frozen all-to-all search, candidate clusters, alignments, raw gene trees, and the inferred species tree. Reconciliation and membership filtering were recomputed, but this is not a fresh end-to-end run."
+  },
+  "parameters": {
+    "accuracy_profile": "high_sensitivity",
+    "phylogeny_candidates": "satellite_v2",
+    "species_tree_mode": "infer",
+    "species_tree_rooting": "min_variance",
+    "root_duplication_rule": "species_overlap",
+    "pair_orthology_rule": "depth_two_overlap",
+    "membership_support_confidence": "medium",
+    "membership_min_profile_support": 1.25
+  },
+  "inference": {
+    "metrics": "qfo_benchmark/results/orthohmm_phylogeny_depth_two_v7_candidate_preview/phylogeny_metrics.json",
+    "candidate_families": 350689,
+    "reconciled_families": 24267,
+    "checkpoint_hits": 24267,
+    "topology_resolutions": 3681,
+    "root_hogs": 372768,
+    "native_pairs": 6241674,
+    "qfo_mapped_pairs": 6222315,
+    "duplications": 227445,
+    "speciations": 249294,
+    "uncertain_events": 214912,
+    "wall_s": 383.499561,
+    "peak_process_tree_rss_gib": 7.633327,
+    "native_pairs_sha256": "ec8911afd545c62b5fd7e6e36b265e743db60f687b7c7cb8a64337602ebfabbb",
+    "root_hogs_sha256": "74c3da4774604c85693702929b8f4fb1a61327c22b7f4b03c12953b908e09096",
+    "manifest_sha256": "429302de801909fc5116eee4489610c79d716156494508ae3928233d45bf9685"
+  },
+  "qfo_2020": {
+    "scoring_mode": "direct local QfO benchmark-webservice execution",
+    "event_year": 2020,
+    "elapsed_s": 1402,
+    "peak_task_rss_gib": 34.2,
+    "scores": {
+      "VGNC F": 0.9065155807365439,
+      "SwissTrees F": 0.8042574033036649,
+      "TreeFam-A F": 0.5863456312964189,
+      "EC": 0.97074825,
+      "GO": 0.48549269,
+      "FAS": 0.7565527418468113
+    },
+    "pairwise_components": {
+      "VGNC": {"TPR": 0.8356313194618534, "PPV": 0.9905403397553365},
+      "SwissTrees": {"TPR": 0.70368915, "PPV": 0.93836445},
+      "TreeFam-A": {"TPR": 0.4266982, "PPV": 0.93687289}
+    },
+    "mean": 0.7516520495305733,
+    "delta_vs_sparse_overlap_v4": -0.0005101773236498,
+    "delta_vs_orthofinder_3_1_5_full": -0.030418838759023,
+    "comparison_sha256": "34af3aa7edfa76de2c0e95abfd81494937c888cfadfc318c8396704287578fec"
+  },
+  "decision": "Do not promote depth-two v7 as the winning QfO method. It improves the independently selected OrthoBench objective, but the six-metric QfO mean regresses slightly from sparse v4 and remains below OrthoFinder 3.1.5."
+}
