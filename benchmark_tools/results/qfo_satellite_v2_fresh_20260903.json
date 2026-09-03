@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "benchmark": "QfO 2020 retained six-metric assessment",
+  "method": "OrthoHMM phylogeny satellite_v2 positive_paralogy",
+  "status": "complete_fresh_end_to_end",
+  "information_budget": "internally inferred species tree",
+  "selection": {
+    "parameters_frozen_before_qfo": true,
+    "qfo_labels_used_for_selection": false,
+    "benchmark_specific_inference_logic": false
+  },
+  "inference": {
+    "slurm_job": 20873,
+    "slurm_state": "COMPLETED",
+    "slurm_exit_code": "0:0",
+    "slurm_elapsed_s": 75875,
+    "cpu_budget": 32,
+    "requested_memory": "500G",
+    "pipeline_wall_s": 75848.144212,
+    "peak_process_tree_rss_gib": 16.752132,
+    "source_commit_at_launch": "681ce931743caa570f3b2495dd273c0925c59029",
+    "harness_commit_at_finalize": "58ca3d344e804667001d85842249e6ab6c06b7ac",
+    "source_manifest_matches_launch_commit": true,
+    "git_dirty_at_finalize": true,
+    "command": [
+      "/home/bizon/anaconda3/bin/python",
+      "-m",
+      "orthohmm",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input",
+      "-o",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthohmm_phylogeny_satellite_v2/output",
+      "-c",
+      "32",
+      "--threads_per_worker",
+      "8",
+      "-x",
+      "BLOSUM62",
+      "-e",
+      "0.0001",
+      "--clustering",
+      "leiden",
+      "--cpm_resolution",
+      "0.1",
+      "--refinement_profile",
+      "default",
+      "--accuracy_profile",
+      "high_sensitivity",
+      "--metrics_json",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthohmm_phylogeny_satellite_v2/metrics.json",
+      "--stop",
+      "infer",
+      "--phylogeny",
+      "reconcile",
+      "--species_tree_mode",
+      "infer",
+      "--aligner",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin/mafft",
+      "--tree_builder",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220/FastTree",
+      "--phylogeny_candidates",
+      "satellite_v2",
+      "--phylogeny_root_rule",
+      "species_overlap",
+      "--phylogeny_pair_rule",
+      "positive_paralogy",
+      "--species_tree_rooting",
+      "min_variance"
+    ],
+    "counts": {
+      "species": 78,
+      "genes": 976504,
+      "search_candidates": 6902869855,
+      "significant_hits": 88729858,
+      "network_edges": 25167435,
+      "seed_families": 391160,
+      "candidate_families": 351071,
+      "candidate_merges": 40089,
+      "reconciled_families": 24228,
+      "bypassed_families": 326843,
+      "root_hogs": 372821,
+      "duplications": 229507,
+      "speciations": 246691,
+      "uncertain_events": 77903,
+      "native_pairs": 5501084,
+      "qfo_pairs": 5483453,
+      "qfo_pairs_removed_by_mapping": 17631,
+      "species_tree_marker_families": 22
+    },
+    "stage_wall_s": {
+      "search": 66569.100949,
+      "clustering": 682.949814,
+      "profile_expansion": 1880.99723,
+      "candidate_assembly": 68.148044,
+      "phylogeny": 6549.816184
+    },
+    "tools": {
+      "OrthoHMM": "0.5.0",
+      "Python": "3.10.13",
+      "NumPy": "2.2.6",
+      "SciPy": "1.15.3",
+      "igraph": "1.0.0",
+      "leidenalg": "0.11.0",
+      "Biopython": "1.86",
+      "MAFFT": "7.525",
+      "FastTree": "2.2.0 Double precision"
+    }
+  },
+  "assessment": {
+    "initial_job": 20874,
+    "initial_job_state": "FAILED",
+    "initial_job_exit_code": "1:0",
+    "initial_failure": "Darwin truncated predictions.db under an overlong Nextflow work path.",
+    "successful_job": 20883,
+    "successful_job_state": "COMPLETED",
+    "successful_job_exit_code": "0:0",
+    "successful_elapsed_s": 1609,
+    "cpu_budget": 8,
+    "requested_memory": "150G",
+    "nextflow": "22.10.8",
+    "workflow_revision": "27338c9fe9",
+    "work_directory": "/tmp/qw/work-v2f",
+    "launcher": "benchmark_tools/run_qfo_scoring.slurm",
+    "launcher_environment": {
+      "METHOD": "orthohmm_phylogeny_satellite_v2",
+      "QFO_WORK_ROOT": "/tmp/qw",
+      "QFO_WORK_TAG": "v2f",
+      "RESUME": "0"
+    },
+    "largest_task_peak_rss": "34.2 GB",
+    "largest_task": "fas_benchmark",
+    "scores": {
+      "VGNC_F": 0.9007300610680012,
+      "SwissTrees_F": 0.7919759719774048,
+      "TreeFam_A_F": 0.5754949101931345,
+      "EC": 0.96919541,
+      "GO": 0.49012048,
+      "FAS": 0.7619389407434497,
+      "six_metric_mean": 0.7482426289969983
+    },
+    "topology_components": {
+      "VGNC": {
+        "TPR": 0.8196289796941589,
+        "PPV": 0.9996432939258051
+      },
+      "SwissTrees": {
+        "TPR": 0.67932201,
+        "PPV": 0.94942129
+      },
+      "TreeFam_A": {
+        "TPR": 0.41089882,
+        "PPV": 0.96007941
+      }
+    }
+  },
+  "comparison": {
+    "orthofinder_3_1_5_full_mean": 0.7820708882895963,
+    "mean_delta": -0.03382825929259792,
+    "beats_orthofinder": false
+  },
+  "checksums": {
+    "inference_metrics": "78c37a16275868f88416495b1963acc490c7474d023464172f2de4394084db07",
+    "orthogroups": "65d01512983167b4c62405144da75175eccf1fcaebfd8830b5297b8f51b5e983",
+    "root_hogs": "7326b59c4d154e8fc9cd35acc0724c64dbc09e42d53ae2a7908d85b8528935bf",
+    "native_pairs": "cc4938b0d0eef01e3c6bc048128b5298f077764b29bfba2c347662b454a917d1",
+    "pairs": "c2b865a6a4fe08452818da4bc2efe2bb5eaf0e248c4e6101de99250e66c8210a",
+    "qfo_pairs": "a92bd269f3bedb70f80ecdcdefb3acf26b3d634f2fdd25ba6d3299be86ebfc10",
+    "qfo_consolidated_results": "2b19a1eda734b6a6ff78d33f99141bf9ac97187df66a7dde6664e8e95020132f",
+    "qfo_results_manifest": "6229bb4c6f0643e294f4253c156c03b6b74329ad7874c84ae1bfec99b79d26d6"
+  },
+  "source_paths": {
+    "inference": "qfo_benchmark/results/orthohmm_phylogeny_satellite_v2",
+    "assessment": "qfo_benchmark/scoring/orthohmm_phylogeny_satellite_v2"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "interim_negative_result_pending_fresh_qfo_v2_v3",
+  "status": "complete_negative_result",
   "generated_at": "2026-09-03",
   "objective": "Improve HMM-centered, internally inferred OrthoHMM phylogeny results beyond full OrthoFinder 3.1.5 on both OrthoBench and QfO.",
   "selection_policy": {
@@ -85,7 +85,8 @@
       "2d90fec Add label-blind iterative HMM candidate harness",
       "f393785 Expose sensitive profile candidate prefilter",
       "bbf4d31 Allow relaxed HMM thresholds for phylogeny candidates",
-      "68d86ec Require reciprocal support for profile candidates"
+      "68d86ec Require reciprocal support for profile candidates",
+      "a7134bd Retry transient Leiden worker crashes"
     ],
     "production_default_enabled": false,
     "purpose": "Keep profile candidate generation independently configurable for controlled ablation."
@@ -270,6 +271,40 @@
     },
     "decision": "reject: tiny topology TPR gains accompanied by severe PPV collapse"
   },
+  "fresh_qfo_production": {
+    "satellite_v2_positive_paralogy": {
+      "status": "complete_fresh_end_to_end",
+      "inference_job": 20873,
+      "scoring_job": 20883,
+      "source_commit": "681ce931743caa570f3b2495dd273c0925c59029",
+      "pipeline_wall_s": 75848.144212,
+      "peak_process_tree_rss_gib": 16.752132,
+      "candidate_families": 351071,
+      "root_hogs": 372821,
+      "qfo_pairs": 5483453,
+      "scores": {
+        "VGNC_F": 0.9007300610680012,
+        "SwissTrees_F": 0.7919759719774048,
+        "TreeFam_A_F": 0.5754949101931345,
+        "EC": 0.96919541,
+        "GO": 0.49012048,
+        "FAS": 0.7619389407434497,
+        "six_metric_mean": 0.7482426289969983,
+        "delta_vs_orthofinder": -0.03382825929259792
+      },
+      "artifact": "benchmark_tools/results/qfo_satellite_v2_fresh_20260903.json"
+    },
+    "satellite_v2_supported_paralogy": {
+      "status": "failed_before_candidate_assembly",
+      "inference_job": 20880,
+      "source_commit": "b4ca0aab6f48462311ffaa7f92d7ccb6b325187d",
+      "pipeline_wall_s": 68864.231007,
+      "peak_process_tree_rss_gib": 16.771957,
+      "failure": "isolated Leiden worker SIGSEGV",
+      "qfo_scored": false,
+      "artifact": "benchmark_tools/results/qfo_satellite_v3_failed_20260903.json"
+    }
+  },
   "targeted_prefilter_diagnostics": {
     "species_pair": "Caenorhabditis_elegans_to_Homo_sapiens",
     "labels": "OrthoBench development partition only; labels read after candidate and HMM scoring",
@@ -326,19 +361,12 @@
     "Reconcile broad candidates and preserve seed boundaries as priors; remove pairs only with positive supported paralogy evidence.",
     "Select the candidate source and fixed gates on synthetic holdouts and OrthoBench development, then open validation and QfO once."
   ],
-  "active_fresh_confirmations": [
-    {
-      "slurm_inference_job": 20873,
-      "slurm_scoring_job": 20874,
-      "method": "satellite_v2 with positive_paralogy pairs",
-      "state_at_record": "inference_running"
-    },
-    {
-      "slurm_inference_job": 20880,
-      "slurm_scoring_job": 20881,
-      "method": "satellite_v2 with supported_paralogy pairs",
-      "state_at_record": "inference_running"
-    }
-  ],
-  "recommendation": "Keep phylogeny opt-in. Do not change the existing default: v7 is the strongest OrthoBench method, v4 is the strongest QfO preview, and no single fresh end-to-end method meets both targets."
+  "verification": {
+    "unit_tests": "394 passed",
+    "focused_ruff": "passed",
+    "scoped_diff_check": "passed for touched source, test, report, and result files",
+    "integration_tests": "8 failed before v9 assertions because the installed MCL 2.0 binary rejects the modern --abc option",
+    "protected_generated_test_outputs_modified": true
+  },
+  "recommendation": "Keep phylogeny opt-in. Do not change the existing default: v7 is the strongest OrthoBench method, v4 is the strongest QfO preview, the fresh satellite-v2 QfO confirmation reaches only 0.748243, and no single fresh end-to-end method meets both targets."
 }
