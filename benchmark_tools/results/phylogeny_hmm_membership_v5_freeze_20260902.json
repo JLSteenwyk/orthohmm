@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "status": "retained_component_frozen_without_qfo",
+  "frozen_at": "2026-09-03T02:16:16Z",
+  "method": "OrthoHMM sparse-overlap phylogeny with HMM-gated membership",
+  "source_commit": "dbe8a814c29dc1a0ddb6b7602274146fa3a8b4a0",
+  "source_sha256": {
+    "orthohmm/phylogeny.py": "6bf2848d3e972050020f092f0bfa6235fa5bea057a52d080e9e3ce17da4eb9d3",
+    "orthohmm/phylogeny_pipeline.py": "73ea199f6121e0b686cbba63345be12e754d351e3a2494eb6e1498a71303fd6b"
+  },
+  "hypothesis": "Candidate superfamilies should start larger when both profile-HMM evidence and phylogenetic evidence support a satellite merge. Medium-confidence reconciliation links are accepted for membership only when the frozen bidirectional profile-HMM support is at least 1.25; high-confidence links remain sufficient regardless of profile support.",
+  "parameters": {
+    "accuracy_profile": "high_sensitivity",
+    "phylogeny_candidates": "satellite_v2",
+    "phylogeny_mode": "reconcile",
+    "species_tree_mode": "infer",
+    "species_tree_rooting": "min_variance",
+    "root_duplication_rule": "species_overlap",
+    "pair_orthology_rule": "sparse_overlap",
+    "membership_support_confidence": "medium",
+    "membership_min_profile_support": 1.25
+  },
+  "selection_policy": {
+    "qfo_scores_used": false,
+    "orthobench_development_used_for_selection": true,
+    "orthobench_validation_opened_after_selection": true,
+    "further_threshold_tuning_after_validation": false,
+    "thresholds_predefined_from_unlabeled_support_distribution": [1.25, 5.9, 10.0],
+    "distribution_basis": "approximately upper quartile, upper decile, and strict tail of the frozen OrthoBench profile-HMM merge support distribution"
+  },
+  "verification": {
+    "focused_tests": "85 passed",
+    "full_unit_tests": "384 passed",
+    "ruff": "passed with the three pre-existing E402 findings in orthohmm/args_processing.py ignored",
+    "shell_syntax": "passed"
+  },
+  "orthobench_replay": {
+    "metrics_path": "/tmp/orthobench_medium_support_1p25_v5_20260902.json",
+    "metrics_sha256": "1bc86739955ee33bcd9463f961ca29723e9dcdf99befd3a49d5468dc07e49d96",
+    "candidate_families": 54445,
+    "reconciled_families": 8681,
+    "checkpoint_hits": 8681,
+    "root_hogs": 59456,
+    "ortholog_pairs": 1165627,
+    "wall_s": 80.295583,
+    "peak_process_tree_rss_gib": 1.717083,
+    "root_hogs_sha256": "8ea4f449e6f9db8d26a6d3d977657917d9d9e7569b72b26d1977b293d687ac97",
+    "pairs_sha256": "74588e27aaecf5bdde13570ee430205c338ec0547409f0d793b7e38105d508d3",
+    "membership_audit": {
+      "constraints": 8440,
+      "supported_constraints": 6240,
+      "detached_constraints": 2200,
+      "detached_genes": 6720,
+      "root_hogs_added": 1803,
+      "ortholog_pairs_removed": 126495
+    }
+  },
+  "orthobench_scores": {
+    "development": {
+      "artifact_sha256": "336334d5fbe1f3b082755bbf17d7066aa3b121cc3d11c622f51eeca9db166241",
+      "f_score": 72.89013937359736,
+      "precision": 80.1592386859904,
+      "recall": 66.82979699341114,
+      "exact_refogs": 10
+    },
+    "validation": {
+      "artifact_sha256": "bd8e511cf9e7be3b95e411d58f4e7e8ea9e049aa9bf2d1fbd71856188135acd0",
+      "f_score": 75.41298136486965,
+      "precision": 82.88192210939299,
+      "recall": 69.17889492241083,
+      "exact_refogs": 5
+    },
+    "all": {
+      "artifact_sha256": "5cce862e0fd0413b439b53cadc12f755f034e87ad7a01d0c39929b98a7311898",
+      "f_score": 74.26837605356368,
+      "precision": 81.64707062071389,
+      "recall": 68.1128135403846,
+      "exact_refogs": 15,
+      "delta_vs_sparse_overlap_v4": 0.16230253482963,
+      "delta_vs_orthofinder_3_1_5": 1.56837605356368
+    }
+  },
+  "pair_diagnostics": {
+    "development": {
+      "artifact_sha256": "c81e9edcee5ed1a68ba44fb8004feb9ec746e61d79f8f6c27fe337c2485ebe8e",
+      "direct_recall_macro": 0.5649794119709022,
+      "transitive_recall_macro": 0.6981815574413944,
+      "cross_refog_pairs": 0
+    },
+    "validation": {
+      "artifact_sha256": "de8dd8a7b1b0e955f2ffa78064e8705a845fcd611e2b53cf37e982fe4812bc1e",
+      "direct_recall_macro": 0.46734833825515776,
+      "transitive_recall_macro": 0.6703174182505363,
+      "cross_refog_pairs": 0
+    },
+    "all": {
+      "artifact_sha256": "b1ad383353e0aa7c7593778a4cfec2899cf92ab03fab013d699e90d0a515b54c",
+      "direct_recall_macro": 0.51616387511303,
+      "transitive_recall_macro": 0.6842494878459654,
+      "cross_refog_pairs": 0
+    }
+  },
+  "negative_control": {
+    "ungated_medium_membership_development_f_score": 72.16113303169898,
+    "high_only_development_f_score": 72.52168607750889,
+    "support_5p9_development_f_score": 72.52168607750889,
+    "support_10_development_f_score": 72.52168607750889
+  },
+  "defaults": {
+    "nonphylogenetic_default_changed": false,
+    "phylogeny_default_changed": false,
+    "membership_support_default": "high",
+    "membership_min_profile_support_default": 0.0
+  },
+  "decision": "Retain the 1.25 HMM-gated membership rule as a component. It improves development and all-set OrthoBench F-score, is neutral on validation, and keeps cross-RefOG pairs at zero. Do not spend a QfO evaluation on this small isolated change; combine it with an independently validated topology-resolution improvement first."
+}
