@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "status": "frozen_for_qfo_evaluation",
+  "frozen_at": "2026-09-03",
+  "method": "OrthoHMM depth-two reconciliation with final root-HOG co-ortholog closure",
+  "hypothesis": "After HMM-gated membership and phylogenetic root-HOG inference are complete, all cross-species gene pairs within a final root HOG are co-ortholog candidates. Completing those pairs should recover pairwise recall without feeding permissive relationships back into root-HOG construction.",
+  "source_commit": "94e0cbea97fd7ffb2131b9b3ab776844bde125b6",
+  "selection_policy": {
+    "qfo_scores_used": false,
+    "orthobench_development_used_for_selection": true,
+    "orthobench_validation_exposed_before_freeze": true,
+    "validation_exposure_note": "An offline all-partition pair diagnostic was run while evaluating the predefined full-closure rule. No threshold, subset, or parameter was selected from validation behavior, and no further variant was evaluated before this freeze.",
+    "further_tuning_after_validation": false,
+    "selection_reason": "The single predefined full-closure rule raised development direct pair recall from 0.570148 to 0.715097 and transitive recall from 0.705162 to 0.764921 with zero cross-RefOG pairs. Root-HOG output is byte-identical to frozen v7."
+  },
+  "parameters": {
+    "accuracy_profile": "high_sensitivity",
+    "phylogeny_candidates": "satellite_v2",
+    "phylogeny_mode": "reconcile",
+    "species_tree_mode": "infer",
+    "species_tree_rooting": "min_variance",
+    "root_duplication_rule": "species_overlap",
+    "pair_orthology_rule": "depth_two_closure",
+    "pair_completion_policy": "all_cross_species_pairs_within_final_root_hog",
+    "membership_support_confidence": "medium",
+    "membership_min_profile_support": 1.25
+  },
+  "verification": {
+    "focused_tests": "84 passed",
+    "non_integration_tests": "387 passed, 8 deselected",
+    "integration_tests": "not runnable on this host because the installed mcl rejects the repository's existing --abc option",
+    "ruff": "passed",
+    "synthetic_holdout": {
+      "path": "/tmp/phylogeny_coortholog_holdout_v8_frozen_20260903.json",
+      "sha256": "00aaecccfa5b40367e80dd112ef2b319da5beed4317320f1ad88c23f4573079c",
+      "seeds": [101, 211, 307],
+      "supplied_root_and_pair_f_score": 1.0,
+      "inferred_root_and_pair_f_score": 1.0
+    }
+  },
+  "orthobench_replay": {
+    "metrics_path": "/tmp/orthobench_depth_two_closure_v8_20260903.json",
+    "metrics_sha256": "99fe8bbf80e57562d897df61c09b7d7c35a7f59cb85940c5de3f01390d2140a8",
+    "candidate_families": 54445,
+    "reconciled_families": 8681,
+    "checkpoint_hits": 8681,
+    "topology_resolutions": 1493,
+    "root_hogs": 59340,
+    "ortholog_pairs": 2017929,
+    "coortholog_pairs_added": 853089,
+    "wall_s": 92.048613,
+    "peak_process_tree_rss_gib": 2.477825,
+    "root_hogs_sha256": "bd22b3ef76f857873ee3c5c8a54468c766cfdb3f5414a42789eca9630ae31d21",
+    "pairs_sha256": "0b3b1e379626697170588a14f02e30986cfa8774f1f2c05dd493db7475d3d1d7"
+  },
+  "orthobench_development": {
+    "root_score_artifact": "/tmp/orthobench_depth_two_closure_v8_development_20260903.json",
+    "root_score_sha256": "33e522800d4d90e3a4732bb589a8fa436fcd436de35943961efef877bd6d41f1",
+    "f_score": 73.05114052836181,
+    "precision": 80.21442908992563,
+    "recall": 67.06235513294601,
+    "exact_refogs": 11,
+    "delta_vs_orthofinder_3_1_5": 0.35114052836181,
+    "pair_diagnostic_artifact": "/tmp/orthobench_depth_two_closure_v8_development_pair_diagnostics_20260903.json",
+    "pair_diagnostic_sha256": "9f204e05806a7452441590dca789ad52b8f9193aa5a4e93d6b7eb5005353600b",
+    "direct_pair_recall_macro": 0.7150969829525704,
+    "transitive_pair_recall_macro": 0.7649207217433277,
+    "fully_connected_refogs": 12,
+    "cross_refog_pairs": 0
+  },
+  "decision": "Freeze the exact implementation and spend one QfO evaluation without further parameter changes. The OrthoBench root-HOG target is already met; QfO determines whether broader co-ortholog reporting improves the six-metric mean enough to retain the rule."
+}
