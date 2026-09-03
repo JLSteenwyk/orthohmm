@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "status": "complete_checkpoint_preview_not_authoritative",
+  "method": "OrthoHMM phylogeny satellite_v3",
+  "source": {
+    "frozen_method_commit": "1145b885823353aba6c93f74b7adf82f94126017",
+    "submitted_source_commit": "b4ca0aab6f48462311ffaa7f92d7ccb6b325187d",
+    "note": "The replay finished after a results-only branch commit; no inference source changed after submission."
+  },
+  "selection": {
+    "qfo_used_to_select_method": false,
+    "freeze_artifact": "benchmark_tools/results/phylogeny_satellite_v3_method_freeze_20260902.json",
+    "authoritative_fresh_run": "Slurm jobs 20880 and 20881",
+    "limitation": "This preview reused the frozen satellite_v2 all-to-all search, candidate clusters, alignments, raw gene trees, and inferred species tree, so it cannot satisfy the fresh end-to-end success criterion."
+  },
+  "parameters": {
+    "accuracy_profile": "high_sensitivity",
+    "phylogeny_candidates": "satellite_v2",
+    "phylogeny_mode": "reconcile",
+    "species_tree_mode": "infer",
+    "species_tree_rooting": "min_variance",
+    "root_duplication_rule": "species_overlap",
+    "pair_orthology_rule": "supported_paralogy"
+  },
+  "inference": {
+    "metrics": "qfo_benchmark/results/orthohmm_phylogeny_satellite_v3_candidate_preview/phylogeny_metrics.json",
+    "metrics_sha256": "20d557cf5078243a38a4a4b0d12dccfb4440ad7553f34db96e5f87bee0ecb49a",
+    "candidate_families": 350689,
+    "reconciled_families": 24267,
+    "bypassed_families": 326422,
+    "checkpoint_hits": 24267,
+    "root_hogs": 373904,
+    "native_pairs": 5742898,
+    "qfo_mapped_pairs": 5724582,
+    "duplications": 228842,
+    "speciations": 247897,
+    "uncertain_events": 137240,
+    "wall_s": 379.004948,
+    "peak_process_tree_rss_gib": 7.319836,
+    "pairs_qfo_sha256": "397ed56f6c595fb43d8f4eb4d6e03515b2624901b54e1a48fc253e0b7396dd41",
+    "native_pairs_sha256": "2780615f9498db6a0710f9f4841989cdb6c42fa0a19affdcd60790b7fee0527f",
+    "root_hogs_sha256": "ac29ffb3402034dfa41b6cf00e0ac0bf26f5e342acae6adc00927ef0b995515f",
+    "species_tree_sha256": "99a266aaed71e9eba468a6b2c9015eeec09ef6e886a59b4ddad8f7435daf4010",
+    "manifest_sha256": "94a181ca1f48cbde6167dbad4df8fed78586a91a7abb0f07bfb0eef7277fc94f"
+  },
+  "qfo_2020": {
+    "scoring_mode": "direct local QfO benchmark-webservice execution",
+    "event_year": 2020,
+    "elapsed_s": 1427,
+    "peak_task_rss_gib": 34.2,
+    "saved_raw_directory": "qfo_benchmark/scoring/orthohmm_phylogeny_satellite_v3_candidate_preview_saved_20260902",
+    "scores": {
+      "VGNC F": 0.9046357615894038,
+      "SwissTrees F": 0.801896271105439,
+      "TreeFam-A F": 0.5782444849625858,
+      "EC": 0.97260791,
+      "GO": 0.48782482,
+      "FAS": 0.7600057108277157
+    },
+    "pairwise_components": {
+      "VGNC": {"TPR": 0.8275674772290466, "PPV": 0.9975322320709106},
+      "SwissTrees": {"TPR": 0.69437087, "PPV": 0.94882459},
+      "TreeFam-A": {"TPR": 0.41413677, "PPV": 0.9577779}
+    },
+    "mean": 0.750869159747524,
+    "delta_vs_satellite_v2_preview": 0.002406319365382,
+    "delta_vs_orthofinder_3_1_5_full": -0.0312017285420723,
+    "metric_sha256": {
+      "VGNC": "50b735090e45009b3b40c7df209389abd4516d42fa144d80f3690239658c3681",
+      "SwissTrees": "20044b5be83f6dec9fc8b87f20e5680fc9210bc14ebf7b46eaa3e9f4283244c9",
+      "TreeFam-A": "fdc9072246da994a5fff4db774956df719d98475fc2887882a52b92505e3b176",
+      "EC": "b2016f518857b0fcf46881865f6834936bb3a326b60486795c948f7bb905bf93",
+      "GO": "978155bc41a3782060ec86992e94af080aaff04d6d415d6335b166a6b4503739",
+      "FAS": "c8f36359fb60eb75cf1aeded7c56b9e73a2f421b1aeafe28dee07177bcd85d45"
+    }
+  },
+  "decision": "Do not promote v3 as the winning profile. It improves all three pairwise reference-tree F scores over v2, but the six-metric mean remains below the strict OrthoFinder target. Continue independent development while the fresh v3 run completes."
+}
