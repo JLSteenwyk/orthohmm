@@ -58,6 +58,7 @@ class PhylogenyStageResult:
     species_tree_checkpoint_hit: bool
     output_directory: str
     remapped_checkpoint_hits: int = 0
+    topology_resolutions: int = 0
 
 
 @dataclass(frozen=True)
@@ -874,6 +875,7 @@ def _write_stage_outputs(
     duplications = 0
     speciations = 0
     uncertain_events = 0
+    topology_resolutions = 0
     for outcome in outcomes:
         for group in outcome.root_groups:
             root_id = f"RootHOG{root_index:07d}"
@@ -901,6 +903,7 @@ def _write_stage_outputs(
         duplications += result.duplication_count
         speciations += result.speciation_count
         uncertain_events += result.uncertain_count
+        topology_resolutions += result.topology_resolution_count
         for node in result.nodes:
             annotations.append(
                 "\t".join(
@@ -1020,6 +1023,7 @@ def _write_stage_outputs(
         ),
         output_directory=str(phylogeny_directory.resolve()),
         remapped_checkpoint_hits=remapped_checkpoint_hits,
+        topology_resolutions=topology_resolutions,
     )
     summary = asdict(result)
     summary["schema_version"] = 1

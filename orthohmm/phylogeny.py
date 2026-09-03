@@ -67,6 +67,7 @@ class ReconciliationResult:
     speciation_count: int
     uncertain_count: int
     annotated_newick: str
+    topology_resolution_count: int = 0
 
 
 def canonical_species_name(filename: str) -> str:
@@ -359,6 +360,235 @@ def root_tree_min_variance(tree):
     return tree
 
 
+def _gene_tree_species_sets(gene_tree, gene_to_species: dict[str, str]):
+    species_by_node = {}
+    for node in gene_tree.postorder_node_iter():
+        if node.is_leaf():
+            gene = str(node.taxon.label) if node.taxon is not None else ""
+            species_by_node[node] = {
+                canonical_species_name(gene_to_species[gene])
+            }
+        else:
+            species_by_node[node] = set().union(
+                *(species_by_node[child] for child in node.child_node_iter())
+            )
+    return species_by_node
+
+
+def _overlap_clade(node, overlap: set[str], species_by_node, max_depth: int = 3):
+    """Find a shallow clade containing exactly the overlapping species."""
+
+    current = node
+    for depth in range(max_depth + 1):
+        if species_by_node[current] == overlap:
+            return True, current, depth
+        if depth == max_depth or current.is_leaf():
+            return False, current, depth
+        candidates = [
+            child
+            for child in current.child_node_iter()
+            if species_by_node[child] & overlap
+        ]
+        if len(candidates) != 1:
+            return False, current, depth
+        current = candidates[0]
+    return False, current, max_depth
+
+
+def _combined_edge_length(*nodes) -> float | None:
+    lengths = [node.edge.length for node in nodes if node.edge.length is not None]
+    return sum(lengths) if lengths else None
+
+
+def _detach_and_suppress(gene_tree, node) -> None:
+    parent = node.parent_node
+    if parent is None:
+        raise PhylogenyConfigurationError("Cannot detach the gene-tree root.")
+    parent.remove_child(node, suppress_unifurcations=False)
+    children = parent.child_nodes()
+    if len(children) != 1:
+        return
+
+    remaining = children[0]
+    combined_length = _combined_edge_length(parent, remaining)
+    parent.remove_child(remaining, suppress_unifurcations=False)
+    grandparent = parent.parent_node
+    if grandparent is None:
+        gene_tree.seed_node = remaining
+        remaining.edge.length = None
+        return
+    grandparent.remove_child(parent, suppress_unifurcations=False)
+    remaining.edge.length = combined_length
+    grandparent.add_child(remaining)
+
+
+def _graft_as_sister(gene_tree, moving, target) -> None:
+    """Move one clade next to another while preserving a valid rooted tree."""
+
+    _detach_and_suppress(gene_tree, moving)
+    parent = target.parent_node
+    if parent is None:
+        raise PhylogenyConfigurationError("Cannot graft next to the gene-tree root.")
+    target_length = target.edge.length
+    parent.remove_child(target, suppress_unifurcations=False)
+    dendropy = _load_dendropy()
+    joined = dendropy.Node()
+    joined.edge.length = 0.1 * target_length if target_length is not None else None
+    if target_length is not None:
+        target.edge.length = 0.9 * target_length
+    joined.add_child(target)
+    joined.add_child(moving)
+    parent.add_child(joined)
+
+
+def _group_siblings(parent, nodes):
+    if len(nodes) == 1:
+        return nodes[0]
+    dendropy = _load_dendropy()
+    grouped = dendropy.Node()
+    lengths = [node.edge.length for node in nodes if node.edge.length is not None]
+    grouped.edge.length = min(lengths) if lengths else None
+    parent.add_child(grouped)
+    for node in nodes:
+        parent.remove_child(node, suppress_unifurcations=False)
+        grouped.add_child(node)
+    return grouped
+
+
+def resolve_gene_tree_species_overlap(
+    gene_tree,
+    gene_to_species: dict[str, str],
+) -> tuple[object, int]:
+    """Concentrate shallow duplicated-species clades before LCA reconciliation.
+
+    The three direct cases mirror the local A/B/C rearrangements in
+    OrthoFinder's overlap resolver. Deferred parent-level moves are omitted:
+    every accepted edit must be justified by the current node alone.
+    """
+
+    resolutions = 0
+    maximum_edits = max(1, 2 * len(list(gene_tree.leaf_node_iter())))
+    while resolutions < maximum_edits:
+        changed = False
+        species_by_node = _gene_tree_species_sets(gene_tree, gene_to_species)
+        for node in list(gene_tree.postorder_node_iter()):
+            children = node.child_nodes()
+            if len(children) != 2:
+                continue
+            left_species, right_species = (
+                species_by_node[children[0]], species_by_node[children[1]]
+            )
+            overlap = left_species & right_species
+            if not overlap or left_species == right_species:
+                continue
+            left_ok, left_overlap, left_depth = _overlap_clade(
+                children[0], overlap, species_by_node
+            )
+            right_ok, right_overlap, right_depth = _overlap_clade(
+                children[1], overlap, species_by_node
+            )
+            if left_depth + right_depth > 2:
+                continue
+
+            siblings = (
+                [sibling for sibling in node.parent_node.child_node_iter()
+                 if sibling is not node]
+                if node.parent_node is not None
+                else []
+            )
+            sister_species = (
+                species_by_node[siblings[0]] if len(siblings) == 1 else set()
+            )
+            moving = target = None
+
+            if {left_depth, right_depth} == {0, 1} and left_ok and right_ok:
+                branching_index = 0 if left_depth == 1 else 1
+                branching = children[branching_index]
+                whole_overlap = children[1 - branching_index]
+                overlap_child = left_overlap if branching_index == 0 else right_overlap
+                other_species = set().union(
+                    *(species_by_node[child]
+                      for child in branching.child_node_iter()
+                      if child is not overlap_child)
+                )
+                case = (bool(sister_species & overlap),
+                        bool(sister_species & other_species))
+                if case in {(False, False), (True, False), (True, True)}:
+                    moving, target = whole_overlap, overlap_child
+
+            elif left_depth == right_depth == 1 and left_ok and right_ok:
+                left_other = set().union(
+                    *(species_by_node[child]
+                      for child in children[0].child_node_iter()
+                      if child is not left_overlap)
+                )
+                right_other = set().union(
+                    *(species_by_node[child]
+                      for child in children[1].child_node_iter()
+                      if child is not right_overlap)
+                )
+                case = (
+                    bool(sister_species & overlap),
+                    bool(sister_species & right_other),
+                    bool(sister_species & left_other),
+                )
+                if case in {
+                    (False, False, False), (True, True, True),
+                    (True, True, False), (True, False, True),
+                }:
+                    moving, target = right_overlap, left_overlap
+
+            elif {left_depth, right_depth} == {0, 2} and left_ok and right_ok:
+                deep_index = 0 if left_depth == 2 else 1
+                deep = children[deep_index]
+                whole_overlap = children[1 - deep_index]
+                first_overlap = left_overlap if deep_index == 0 else right_overlap
+                first_branch = first_overlap.parent_node
+                shallow_others = [
+                    child for child in deep.child_node_iter()
+                    if child is not first_branch
+                ]
+                deep_others = [
+                    child for child in first_branch.child_node_iter()
+                    if child is not first_overlap
+                ]
+                shallow_species = set().union(
+                    *(species_by_node[child] for child in shallow_others)
+                )
+                deep_species = set().union(
+                    *(species_by_node[child] for child in deep_others)
+                )
+                case = (
+                    bool(sister_species & shallow_species),
+                    bool(sister_species & deep_species),
+                    bool(sister_species & overlap),
+                    bool(shallow_species & deep_species),
+                )
+                direct_deep = {(False, False, False, False),
+                               (False, False, True, False)}
+                move_shallow = {
+                    (False, False, False, True), (False, False, True, True),
+                    (False, True, False, True), (False, True, True, True),
+                    (True, False, True, True), (True, True, False, False),
+                    (True, True, False, True), (True, True, True, True),
+                }
+                if case in direct_deep:
+                    moving, target = whole_overlap, first_overlap
+                elif case in move_shallow and shallow_others:
+                    moving = _group_siblings(deep, shallow_others)
+                    target = whole_overlap
+
+            if moving is None or target is None:
+                continue
+            _graft_as_sister(gene_tree, moving, target)
+            resolutions += 1
+            changed = True
+            break
+        if not changed:
+            break
+    return gene_tree, resolutions
+
+
 def reconcile_gene_tree(
     gene_tree,
     species_tree,
@@ -379,13 +609,20 @@ def reconcile_gene_tree(
         )
     valid_pair_rules = {
         "lca", "positive_paralogy", "supported_paralogy",
-        "sparse_overlap",
+        "sparse_overlap", "topology_overlap",
     }
     if pair_orthology_rule not in valid_pair_rules:
         raise ValueError(
             "pair orthology rule must be one of: "
             + ", ".join(sorted(valid_pair_rules))
         )
+
+    topology_resolution_count = 0
+    if pair_orthology_rule == "topology_overlap":
+        gene_tree, topology_resolution_count = resolve_gene_tree_species_overlap(
+            gene_tree, gene_to_species
+        )
+        pair_orthology_rule = "sparse_overlap"
 
     species_leaves = {
         str(node.taxon.label): node for node in species_tree.leaf_node_iter()
@@ -664,6 +901,7 @@ def reconcile_gene_tree(
             event == "uncertain" for event in pair_event_by_node.values()
         ),
         annotated_newick=annotated_newick,
+        topology_resolution_count=topology_resolution_count,
     )
 
 
@@ -802,7 +1040,7 @@ def validate_phylogeny_config(
         )
     if config.pair_orthology_rule not in {
         "lca", "positive_paralogy", "supported_paralogy",
-        "sparse_overlap",
+        "sparse_overlap", "topology_overlap",
     }:
         raise PhylogenyConfigurationError(
             "Unsupported pair-orthology rule: "

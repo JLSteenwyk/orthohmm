@@ -420,6 +420,60 @@ def test_sparse_overlap_preserves_pairs_across_internal_two_species_overlap(
     )
 
 
+def test_topology_overlap_concentrates_shallow_duplicate_clades(tmp_path):
+    taxa = ("A.faa", "B.faa", "C.faa")
+    species_tree_path = write_tree(tmp_path, "[&R] ((A,B),C);")
+    species_tree = parse_species_tree(species_tree_path, taxa).tree
+    mapping = {"a1": "A", "a2": "A", "b": "B", "c": "C"}
+
+    baseline = reconcile_gene_tree(
+        parse_gene_tree("((a1,(b,c)),a2);"),
+        species_tree,
+        mapping,
+        root_duplication_rule="species_overlap",
+        pair_orthology_rule="sparse_overlap",
+    )
+    resolved = reconcile_gene_tree(
+        parse_gene_tree("((a1,(b,c)),a2);"),
+        species_tree,
+        mapping,
+        root_duplication_rule="species_overlap",
+        pair_orthology_rule="topology_overlap",
+    )
+
+    assert baseline.topology_resolution_count == 0
+    assert baseline.root_groups == (("a1", "b", "c"), ("a2",))
+    assert resolved.topology_resolution_count == 1
+    assert resolved.root_groups == (("a1", "a2", "b", "c"),)
+    assert resolved.ortholog_pairs == baseline.ortholog_pairs
+
+
+@pytest.mark.parametrize(
+    "gene_tree",
+    (
+        "((a1,b),(a2,c));",
+        "(((a1,b),c),a2);",
+    ),
+)
+def test_topology_overlap_resolves_symmetric_and_depth_two_cases(
+    tmp_path,
+    gene_tree,
+):
+    taxa = ("A.faa", "B.faa", "C.faa")
+    species_tree_path = write_tree(tmp_path, "[&R] ((A,B),C);")
+    species_tree = parse_species_tree(species_tree_path, taxa).tree
+    result = reconcile_gene_tree(
+        parse_gene_tree(gene_tree),
+        species_tree,
+        {"a1": "A", "a2": "A", "b": "B", "c": "C"},
+        root_duplication_rule="species_overlap",
+        pair_orthology_rule="topology_overlap",
+    )
+
+    assert result.topology_resolution_count == 1
+    assert result.root_groups == (("a1", "a2", "b", "c"),)
+
+
 def test_species_overlap_rule_exposes_sparse_duplication_tradeoff(tmp_path):
     result = reconcile_gene_tree(
         parse_gene_tree("(a,((b,c),c2));"),

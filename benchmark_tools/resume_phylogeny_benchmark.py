@@ -156,7 +156,7 @@ def build_parser() -> argparse.ArgumentParser:
         "--pair-rule",
         choices=(
             "lca", "positive_paralogy", "supported_paralogy",
-            "sparse_overlap",
+            "sparse_overlap", "topology_overlap",
         ),
         default="lca",
     )
