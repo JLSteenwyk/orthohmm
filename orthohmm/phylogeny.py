@@ -375,7 +375,8 @@ def reconcile_gene_tree(
             + ", ".join(sorted(valid_root_rules))
         )
     valid_pair_rules = {
-        "lca", "positive_paralogy", "supported_paralogy"
+        "lca", "positive_paralogy", "supported_paralogy",
+        "sparse_overlap",
     }
     if pair_orthology_rule not in valid_pair_rules:
         raise ValueError(
@@ -487,20 +488,29 @@ def reconcile_gene_tree(
                 "duplication" if overlap or mapping_conflict else "speciation"
             )
             if pair_orthology_rule in {
-                "positive_paralogy", "supported_paralogy"
+                "positive_paralogy", "supported_paralogy",
+                "sparse_overlap",
             }:
                 if overlap:
-                    event_confidence = (
-                        "high"
-                        if overlap_count >= 2 or (branch_support or 0.0) >= 0.9
-                        else "medium"
+                    weak_single_overlap = (
+                        overlap_count < 2
+                        and (branch_support or 0.0) < 0.9
                     )
-                    pair_event = (
-                        "uncertain"
-                        if pair_orthology_rule == "supported_paralogy"
-                        and event_confidence != "high"
-                        else "duplication"
-                    )
+                    if pair_orthology_rule == "supported_paralogy":
+                        uncertain_overlap = weak_single_overlap
+                    elif pair_orthology_rule == "sparse_overlap":
+                        broad_root_overlap = (
+                            node.parent_node is None
+                            and overlap_count >= 2
+                            and 2 * overlap_count >= min(map(len, child_species))
+                        )
+                        uncertain_overlap = (
+                            overlap_count < 3 and not broad_root_overlap
+                        )
+                    else:
+                        uncertain_overlap = False
+                    pair_event = "uncertain" if uncertain_overlap else "duplication"
+                    event_confidence = "medium" if uncertain_overlap else "high"
                 elif mapping_conflict:
                     pair_event = "uncertain"
                     event_confidence = "medium"
@@ -788,7 +798,8 @@ def validate_phylogeny_config(
             f"{config.root_duplication_rule!r}"
         )
     if config.pair_orthology_rule not in {
-        "lca", "positive_paralogy", "supported_paralogy"
+        "lca", "positive_paralogy", "supported_paralogy",
+        "sparse_overlap",
     }:
         raise PhylogenyConfigurationError(
             "Unsupported pair-orthology rule: "

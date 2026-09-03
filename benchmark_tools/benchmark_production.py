@@ -89,7 +89,10 @@ def parse_args(argv=None):
     )
     parser.add_argument(
         "--phylogeny-pair-rule",
-        choices=("lca", "positive_paralogy", "supported_paralogy"),
+        choices=(
+            "lca", "positive_paralogy", "supported_paralogy",
+            "sparse_overlap",
+        ),
         default="lca",
     )
     parser.add_argument(

@@ -154,7 +154,10 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         "--pair-rule",
-        choices=("lca", "positive_paralogy", "supported_paralogy"),
+        choices=(
+            "lca", "positive_paralogy", "supported_paralogy",
+            "sparse_overlap",
+        ),
         default="lca",
     )
     parser.add_argument("--membership-constraints", type=Path)

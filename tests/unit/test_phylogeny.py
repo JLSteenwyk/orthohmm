@@ -327,6 +327,82 @@ def test_supported_paralogy_removes_well_supported_overlap_pairs(
     )
 
 
+def test_sparse_overlap_preserves_pairs_across_single_overlap(tmp_path):
+    taxa = tuple(f"{species}.faa" for species in "ABCDEFGH")
+    species_tree_path = write_tree(
+        tmp_path,
+        "(((A,B),(C,D)),((E,F),(G,H)));")
+    resolved_species_tree = parse_species_tree(species_tree_path, taxa).tree
+    mapping = {
+        gene: gene[0].upper()
+        for gene in ("a1", "b", "c", "d", "a2", "e", "f", "g", "h")
+    }
+    result = reconcile_gene_tree(
+        parse_gene_tree("((a1,b,c,d),(a2,e,f,g,h));"),
+        resolved_species_tree,
+        mapping,
+        pair_orthology_rule="sparse_overlap",
+    )
+
+    assert ("a1", "e") in result.ortholog_pairs
+    assert ("a2", "b") in result.ortholog_pairs
+    assert any(
+        node.pair_event == "uncertain"
+        and node.species_overlap_count == 1
+        for node in result.nodes
+    )
+
+
+def test_sparse_overlap_ignores_support_for_single_overlap(tmp_path):
+    result = reconcile_gene_tree(
+        parse_gene_tree("((a1,b1),(a2,c1))0.95;"),
+        species_tree(tmp_path),
+        {"a1": "A", "b1": "B", "a2": "A", "c1": "C"},
+        pair_orthology_rule="sparse_overlap",
+    )
+
+    assert ("a1", "c1") in result.ortholog_pairs
+    assert ("a2", "b1") in result.ortholog_pairs
+
+
+def test_sparse_overlap_keeps_broad_root_duplication(tmp_path):
+    result = reconcile_gene_tree(
+        parse_gene_tree("((a1,b1),(a2,b2));"),
+        species_tree(tmp_path),
+        {"a1": "A", "b1": "B", "a2": "A", "b2": "B"},
+        pair_orthology_rule="sparse_overlap",
+    )
+
+    assert ("a1", "b2") in result.paralog_pairs
+    assert ("a2", "b1") in result.paralog_pairs
+
+
+def test_sparse_overlap_preserves_pairs_across_internal_two_species_overlap(
+    tmp_path,
+):
+    taxa = tuple(f"{species}.faa" for species in "ABCDE")
+    species_tree_path = write_tree(tmp_path, "(((A,B),(C,D)),E);")
+    resolved_species_tree = parse_species_tree(species_tree_path, taxa).tree
+    mapping = {
+        gene: gene[0].upper()
+        for gene in ("a1", "b1", "c1", "a2", "b2", "d1", "e1")
+    }
+    result = reconcile_gene_tree(
+        parse_gene_tree("(((a1,b1,c1),(a2,b2,d1)),e1);"),
+        resolved_species_tree,
+        mapping,
+        pair_orthology_rule="sparse_overlap",
+    )
+
+    assert ("a1", "d1") in result.ortholog_pairs
+    assert ("a2", "c1") in result.ortholog_pairs
+    assert any(
+        node.pair_event == "uncertain"
+        and node.species_overlap_count == 2
+        for node in result.nodes
+    )
+
+
 def test_species_overlap_rule_exposes_sparse_duplication_tradeoff(tmp_path):
     result = reconcile_gene_tree(
         parse_gene_tree("(a,((b,c),c2));"),
