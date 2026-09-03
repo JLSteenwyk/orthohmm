@@ -254,6 +254,38 @@ def test_profile_satellite_deduplicates_gene_profile_scores():
     assert (merge_count, relations) == (1, 1)
 
 
+def test_profile_satellite_can_relax_self_score_for_phylogeny_candidates():
+    clusters = [[0, 1, 2], [3]]
+    species = np.arange(4, dtype=np.int32)
+
+    strict, strict_count, _, _ = (
+        merge_profile_supported_satellite_candidate_clusters(
+            clusters,
+            profile_cluster_ids=np.asarray([0]),
+            gene_ids=np.asarray([3]),
+            scores=np.asarray([8.5]),
+            self_thresholds={0: 10.0},
+            gene_to_species=species,
+        )
+    )
+    relaxed, relaxed_count, _, _ = (
+        merge_profile_supported_satellite_candidate_clusters(
+            clusters,
+            profile_cluster_ids=np.asarray([0]),
+            gene_ids=np.asarray([3]),
+            scores=np.asarray([8.5]),
+            self_thresholds={0: 10.0},
+            gene_to_species=species,
+            min_score_ratio=0.8,
+        )
+    )
+
+    assert strict == clusters
+    assert strict_count == 0
+    assert relaxed == [[0, 1, 2, 3]]
+    assert relaxed_count == 1
+
+
 def _cluster(prefix, counts):
     genes = []
     species = {}

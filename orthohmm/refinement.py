@@ -1113,10 +1113,13 @@ def merge_profile_supported_satellite_candidate_clusters(
 ) -> tuple[List[IndexCluster], int, int, int]:
     """Attach small seed groups to uniquely supported, self-calibrated profiles.
 
-    Each gene-to-profile score must meet that profile's weakest-member score.
-    Scores are divided by the magnitude of the profile threshold before they
-    are aggregated, which makes support comparable across profile lengths.
-    Missing members contribute zero support through the coverage-weighted mean.
+    At the default score ratio, each gene-to-profile score must meet that
+    profile's weakest-member score. Lower ratios support explicitly relaxed
+    candidate discovery while leaving gene-tree reconciliation as a second
+    specificity gate. Scores are divided by the magnitude of the profile
+    threshold before aggregation, which makes support comparable across
+    profile lengths. Missing members contribute zero support through the
+    coverage-weighted mean.
     """
 
     positive_integers = (
@@ -1167,14 +1170,18 @@ def merge_profile_supported_satellite_candidate_clusters(
     )
     denominators = np.maximum(np.abs(thresholds), 1.0)
     score_ratios = profile_scores / denominators
+    score_cutoffs = np.where(
+        thresholds >= 0.0,
+        thresholds * min_score_ratio,
+        thresholds / min_score_ratio,
+    )
     source_clusters = gene_to_cluster[genes]
     eligible = (
         np.isfinite(profile_scores)
         & np.isfinite(thresholds)
         & (source_clusters >= 0)
         & (source_clusters != profiles)
-        & (profile_scores >= thresholds)
-        & (score_ratios >= min_score_ratio)
+        & (profile_scores >= score_cutoffs)
     )
     if not eligible.any():
         return [list(cluster) for cluster in clusters], 0, 0, 0
