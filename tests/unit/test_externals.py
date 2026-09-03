@@ -1,8 +1,9 @@
 """Unit tests for orthohmm/externals.py (clustering + run-completion helpers)."""
 import os
+import signal
+import subprocess
 
 import numpy as np
-import pytest
 
 from orthohmm import externals
 from orthohmm.externals import (
@@ -179,3 +180,39 @@ class TestExecuteLeiden:
         assert not any(
             name.startswith(".leiden-payload-") for name in os.listdir(wd)
         )
+
+    def test_isolated_worker_retries_sigsegv_and_removes_stale_output(
+        self,
+        tmp_path,
+        monkeypatch,
+    ):
+        wd = os.path.join(tmp_path, "orthohmm_working_res")
+        os.makedirs(wd)
+        output = os.path.join(wd, "orthohmm_edges_clustered.txt")
+        with open(output, "w") as handle:
+            handle.write("stale result\n")
+        edges = IndexedEdges(
+            gene_names=["a", "b"],
+            sources=np.array([0], dtype=np.int32),
+            targets=np.array([1], dtype=np.int32),
+            weights=np.array([1.0]),
+        )
+        monkeypatch.setattr(externals, "LEIDEN_ISOLATION_MIN_EDGES", 1)
+        real_run = subprocess.run
+        worker_attempts = 0
+
+        def flaky_run(command, **kwargs):
+            nonlocal worker_attempts
+            if command[1:3] == ["-m", "orthohmm.leiden_worker"]:
+                worker_attempts += 1
+                assert not os.path.exists(output)
+                if worker_attempts == 1:
+                    raise subprocess.CalledProcessError(-signal.SIGSEGV, command)
+            return real_run(command, **kwargs)
+
+        monkeypatch.setattr(externals.subprocess, "run", flaky_run)
+
+        execute_leiden(0.1, str(tmp_path), edges=edges, seed=4)
+
+        assert worker_attempts == 2
+        assert open(output).read().strip() == "a b"

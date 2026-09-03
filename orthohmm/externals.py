@@ -1,5 +1,6 @@
 import json
 import os
+import signal
 import subprocess
 import sys
 import tempfile
@@ -10,6 +11,7 @@ from multiprocessing.sharedctypes import Synchronized
 
 
 LEIDEN_ISOLATION_MIN_EDGES = 5_000_000
+LEIDEN_SIGSEGV_RETRIES = 1
 
 
 def run_bash_command(command: str) -> None:
@@ -160,6 +162,10 @@ def _execute_leiden_isolated(
     import numpy as np
 
     working_directory = os.path.join(output_directory, "orthohmm_working_res")
+    cluster_path = os.path.join(
+        working_directory,
+        "orthohmm_edges_clustered.txt",
+    )
     os.makedirs(working_directory, exist_ok=True)
     with tempfile.TemporaryDirectory(
         prefix=".leiden-payload-",
@@ -196,10 +202,30 @@ def _execute_leiden_isolated(
         metadata_path = os.path.join(payload_directory, "metadata.json")
         with open(metadata_path, "w") as handle:
             json.dump(metadata, handle)
-        subprocess.run(
-            [sys.executable, "-m", "orthohmm.leiden_worker", payload_directory],
-            check=True,
-        )
+        command = [
+            sys.executable,
+            "-m",
+            "orthohmm.leiden_worker",
+            payload_directory,
+        ]
+        for attempt in range(LEIDEN_SIGSEGV_RETRIES + 1):
+            if os.path.exists(cluster_path):
+                os.remove(cluster_path)
+            try:
+                subprocess.run(command, check=True)
+                break
+            except subprocess.CalledProcessError as error:
+                retry = (
+                    error.returncode == -signal.SIGSEGV
+                    and attempt < LEIDEN_SIGSEGV_RETRIES
+                )
+                if not retry:
+                    raise
+                print(
+                    "          Leiden worker received SIGSEGV; retrying once",
+                    file=sys.stderr,
+                    flush=True,
+                )
 
 
 def _execute_leiden_in_process(
@@ -295,6 +321,12 @@ def _execute_leiden_in_process(
         if cluster:
             output_clusters.append(sorted(id_to_name[i] for i in cluster))
     output_clusters.sort()
-    with open(out_path, "w") as out:
-        for cluster in output_clusters:
-            out.write(" ".join(cluster) + "\n")
+    temporary_out_path = f"{out_path}.tmp.{os.getpid()}"
+    try:
+        with open(temporary_out_path, "w") as out:
+            for cluster in output_clusters:
+                out.write(" ".join(cluster) + "\n")
+        os.replace(temporary_out_path, out_path)
+    finally:
+        if os.path.exists(temporary_out_path):
+            os.remove(temporary_out_path)
