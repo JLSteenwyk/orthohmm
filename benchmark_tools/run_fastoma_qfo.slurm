@@ -11,6 +11,7 @@ readonly FASTOMA_ROOT=${FASTOMA_ROOT:-/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/
 readonly FASTOMA_VERSION=${FASTOMA_VERSION:-0.3.5}
 readonly NEXTFLOW_BIN=${NEXTFLOW_BIN:-/home/bizon/bin/nextflow}
 readonly JAVA_HOME_17=${JAVA_HOME_17:-/home/bizon/anaconda3/pkgs/openjdk-17.0.18-ha668962_0/lib/jvm}
+readonly FASTOMA_CONFIG=${FASTOMA_CONFIG:-${SCRIPT_DIR}/fastoma_qfo.config}
 readonly THREADS=${THREADS:-${SLURM_CPUS_PER_TASK:-32}}
 readonly MAX_MEMORY=${MAX_MEMORY:-700.GB}
 readonly RUN_DIR="${OUTDIR}/run"
@@ -28,7 +29,7 @@ if [[ $(find "${INPUT_DIR}" -maxdepth 1 -type f -name '*.fasta' | wc -l) -ne 78 
     echo "Expected 78 QfO proteomes in ${INPUT_DIR}" >&2
     exit 1
 fi
-for required in "${NEXTFLOW_BIN}" "${FASTOMA_ROOT}/FastOMA.nf" "${SPECIES_TREE}" "${OMAMER_DB}" "${QFO_MAPPING}"; do
+for required in "${NEXTFLOW_BIN}" "${FASTOMA_ROOT}/FastOMA.nf" "${FASTOMA_CONFIG}" "${SPECIES_TREE}" "${OMAMER_DB}" "${QFO_MAPPING}"; do
     if [[ ! -s "${required}" ]]; then
         echo "Required FastOMA input is missing or empty: ${required}" >&2
         exit 1
@@ -55,7 +56,7 @@ cd "${FASTOMA_ROOT}"
 export JAVA_HOME="${JAVA_HOME_17}"
 export JAVA_CMD="${JAVA_HOME_17}/bin/java"
 /usr/bin/time -v -o "${TIME_LOG}" \
-    "${NEXTFLOW_BIN}" run FastOMA.nf \
+    "${NEXTFLOW_BIN}" -c "${FASTOMA_CONFIG}" run FastOMA.nf \
         -profile docker \
         -ansi-log false \
         --container_version "${FASTOMA_VERSION}" \

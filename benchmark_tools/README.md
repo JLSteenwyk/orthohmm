@@ -14,7 +14,9 @@ accessions, and forces FastOMA's pairwise ortholog output for the 78-species
 dataset. FastOMA requires a supplied species tree, so this comparator uses the
 OrthoFinder 3.1.5 tree inferred from the same input proteomes. This tree does
 not contain QfO benchmark labels. The runner records the tree checksum and
-refuses to overwrite an existing production result.
+refuses to overwrite an existing production result. OMAmer searches start
+with 24 GB each and are capped at 28 concurrent tasks to stay within the
+default 700 GB job allocation.
 
 ## Production OrthoHMM performance harness
 
