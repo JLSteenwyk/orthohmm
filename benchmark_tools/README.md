@@ -35,6 +35,10 @@ COLLECT_WORK_DIR=/absolute/path/to/failed/collect_subhogs/workdir \
   benchmark_tools/submit_fastoma_qfo_recovery.sh
 ```
 
+The completed FastOMA result and the current cross-tool QfO/OrthoBench tables
+are recorded in `results/EXTERNAL_TOOL_COMPARISON_20260904.md` and its paired
+machine-readable JSON file.
+
 ## Production OrthoHMM performance harness
 
 Use the production CLI benchmark harness for runtime and memory measurements:
