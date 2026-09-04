@@ -11,6 +11,7 @@ readonly MEM=${MEM:-700G}
 readonly SCORE_CPUS=${SCORE_CPUS:-8}
 readonly SCORE_MEM=${SCORE_MEM:-150G}
 readonly QFO_WORK_ROOT=${QFO_WORK_ROOT:-${BASE}/qfo_benchmark/w}
+readonly RESUME=${RESUME:-false}
 
 mkdir -p "${LOG_DIR}" "${OUTDIR}" "${QFO_WORK_ROOT}"
 
@@ -21,7 +22,7 @@ inference_job=$(sbatch --parsable \
     --mem="${MEM}" \
     --output="${LOG_DIR}/qfo_fastoma_%j.out" \
     --error="${LOG_DIR}/qfo_fastoma_%j.err" \
-    --export=ALL,REPO_ROOT="${BASE}",INPUT_DIR="${INPUT_DIR}",OUTDIR="${OUTDIR}" \
+    --export=ALL,REPO_ROOT="${BASE}",INPUT_DIR="${INPUT_DIR}",OUTDIR="${OUTDIR}",RESUME="${RESUME}" \
     "${SCRIPT_DIR}/run_fastoma_qfo.slurm")
 
 scoring_job=$(sbatch --parsable \

@@ -18,6 +18,13 @@ refuses to overwrite an existing production result. OMAmer searches start
 with 24 GB each and are capped at 28 concurrent tasks to stay within the
 default 700 GB job allocation.
 
+If FastOMA or its executor fails after producing reusable Nextflow work,
+resume it and recreate the dependency-chained scoring job with:
+
+```bash
+RESUME=true benchmark_tools/submit_fastoma_qfo.sh
+```
+
 ## Production OrthoHMM performance harness
 
 Use the production CLI benchmark harness for runtime and memory measurements:

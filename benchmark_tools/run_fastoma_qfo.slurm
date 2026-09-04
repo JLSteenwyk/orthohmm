@@ -14,12 +14,12 @@ readonly JAVA_HOME_17=${JAVA_HOME_17:-/home/bizon/anaconda3/pkgs/openjdk-17.0.18
 readonly FASTOMA_CONFIG=${FASTOMA_CONFIG:-${SCRIPT_DIR}/fastoma_qfo.config}
 readonly THREADS=${THREADS:-${SLURM_CPUS_PER_TASK:-32}}
 readonly MAX_MEMORY=${MAX_MEMORY:-700.GB}
+readonly RESUME=${RESUME:-false}
 readonly RUN_DIR="${OUTDIR}/run"
 readonly STAGE_DIR="${RUN_DIR}/input"
 readonly PROTEOME_DIR="${STAGE_DIR}/proteome"
 readonly OUTPUT_DIR="${OUTDIR}/output"
 readonly WORK_DIR="${OUTDIR}/work"
-readonly TIME_LOG="${OUTDIR}/time.log"
 readonly QFO_PIPELINE=${QFO_PIPELINE:-${BASE}/qfo_benchmark/benchmark-webservice}
 readonly QFO_MAPPING=${QFO_MAPPING:-${QFO_PIPELINE}/reference_data/2020/mapping.json.gz}
 readonly SPECIES_TREE=${SPECIES_TREE:-${BASE}/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/Species_Tree/SpeciesTree_rooted.txt}
@@ -35,7 +35,11 @@ for required in "${NEXTFLOW_BIN}" "${FASTOMA_ROOT}/FastOMA.nf" "${FASTOMA_CONFIG
         exit 1
     fi
 done
-if [[ -e "${OUTPUT_DIR}" || -e "${OUTDIR}/pairs.qfo.tsv" ]]; then
+if [[ "${RESUME}" != true && "${RESUME}" != false ]]; then
+    echo "RESUME must be true or false" >&2
+    exit 1
+fi
+if [[ "${RESUME}" == false && ( -e "${OUTPUT_DIR}" || -e "${OUTDIR}/pairs.qfo.tsv" ) ]]; then
     echo "Refusing to reuse an existing production result in ${OUTDIR}" >&2
     exit 1
 fi
@@ -51,19 +55,29 @@ printf 'FastOMA version: %s\n' "${FASTOMA_VERSION}" > "${OUTDIR}/tool_version.tx
 printf 'FastOMA source: %s\n' "$(git -C "${FASTOMA_ROOT}" rev-parse HEAD)" >> "${OUTDIR}/tool_version.txt"
 sha256sum "${STAGE_DIR}/species_tree.nwk" > "${OUTDIR}/species_tree.sha256"
 
-start_epoch=$(date +%s)
+if [[ ! -s "${OUTDIR}/run_start_epoch.txt" ]]; then
+    date +%s > "${OUTDIR}/run_start_epoch.txt"
+fi
+start_epoch=$(<"${OUTDIR}/run_start_epoch.txt")
+time_log="${OUTDIR}/time.log"
+resume_args=()
+if [[ "${RESUME}" == true ]]; then
+    time_log="${OUTDIR}/time.resume.$(date +%Y%m%dT%H%M%S).log"
+    resume_args=(-resume)
+fi
+
 cd "${FASTOMA_ROOT}"
 export JAVA_HOME="${JAVA_HOME_17}"
 export JAVA_CMD="${JAVA_HOME_17}/bin/java"
-/usr/bin/time -v -o "${TIME_LOG}" \
-    "${NEXTFLOW_BIN}" -c "${FASTOMA_CONFIG}" run FastOMA.nf \
+/usr/bin/time -v -o "${time_log}" \
+    "${NEXTFLOW_BIN}" -c "${FASTOMA_CONFIG}" run FastOMA.nf "${resume_args[@]}" \
         -profile docker \
         -ansi-log false \
         --container_version "${FASTOMA_VERSION}" \
         --input_folder "${STAGE_DIR}" \
         --output_folder "${OUTPUT_DIR}" \
         --omamer_db "${OMAMER_DB}" \
-        --fasta_header_id_transformer uniprot \
+        --fasta_header_id_transformer UniProt \
         --force_pairwise_ortholog_generation true \
         --max_cpus "${THREADS}" \
         --max_memory "${MAX_MEMORY}" \
@@ -83,5 +97,6 @@ python3 "${SCRIPT_DIR}/qfo_filter_pairs.py" \
     2>> "${OUTDIR}/run.log"
 
 echo "$(( $(date +%s) - start_epoch ))" > "${OUTDIR}/wall_time_s.txt"
-awk '/Maximum resident set size/ {print $NF}' "${TIME_LOG}" > "${OUTDIR}/peak_rss.txt"
+awk '/Maximum resident set size/ {if ($NF > peak) peak = $NF} END {print peak}' \
+    "${OUTDIR}"/time*.log > "${OUTDIR}/peak_rss.txt"
 wc -l "${OUTDIR}/pairs.tsv" "${OUTDIR}/pairs.qfo.tsv" > "${OUTDIR}/pair_counts.txt"
