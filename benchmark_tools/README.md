@@ -1,5 +1,21 @@
 # Benchmark Workflows
 
+## FastOMA comparator
+
+Run FastOMA 0.3.5 on the complete 78-proteome QfO 2020 input and chain the
+result into the retained six-metric assessment with:
+
+```bash
+benchmark_tools/submit_fastoma_qfo.sh
+```
+
+The inference runner uses the cached LUCA OMAmer database, emits bare UniProt
+accessions, and forces FastOMA's pairwise ortholog output for the 78-species
+dataset. FastOMA requires a supplied species tree, so this comparator uses the
+OrthoFinder 3.1.5 tree inferred from the same input proteomes. This tree does
+not contain QfO benchmark labels. The runner records the tree checksum and
+refuses to overwrite an existing production result.
+
 ## Production OrthoHMM performance harness
 
 Use the production CLI benchmark harness for runtime and memory measurements:
