@@ -25,6 +25,16 @@ resume it and recreate the dependency-chained scoring job with:
 RESUME=true benchmark_tools/submit_fastoma_qfo.sh
 ```
 
+FastOMA 0.3.5 rejects a lowercase `uniprot` identifier transformer during
+final collection even though all inference tasks have finished. For a legacy
+run that reached this exact failure, recover its staged 271-batch collection
+without rerunning inference:
+
+```bash
+COLLECT_WORK_DIR=/absolute/path/to/failed/collect_subhogs/workdir \
+  benchmark_tools/submit_fastoma_qfo_recovery.sh
+```
+
 ## Production OrthoHMM performance harness
 
 Use the production CLI benchmark harness for runtime and memory measurements:

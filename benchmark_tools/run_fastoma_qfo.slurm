@@ -44,12 +44,19 @@ if [[ "${RESUME}" == false && ( -e "${OUTPUT_DIR}" || -e "${OUTDIR}/pairs.qfo.ts
     exit 1
 fi
 
-mkdir -p "${PROTEOME_DIR}" "${OUTDIR}"
-for source in "${INPUT_DIR}/"*.fasta; do
-    filename=$(basename "${source}" .fasta)
-    cp -L --reflink=auto "${source}" "${PROTEOME_DIR}/${filename}.fa"
-done
-cp -L "${SPECIES_TREE}" "${STAGE_DIR}/species_tree.nwk"
+mkdir -p "${OUTDIR}"
+if [[ "${RESUME}" == false ]]; then
+    mkdir -p "${PROTEOME_DIR}"
+    for source in "${INPUT_DIR}/"*.fasta; do
+        filename=$(basename "${source}" .fasta)
+        cp -L --reflink=auto "${source}" "${PROTEOME_DIR}/${filename}.fa"
+    done
+    cp -L "${SPECIES_TREE}" "${STAGE_DIR}/species_tree.nwk"
+elif [[ $(find "${PROTEOME_DIR}" -maxdepth 1 -type f -name '*.fa' | wc -l) -ne 78 \
+    || ! -s "${STAGE_DIR}/species_tree.nwk" ]]; then
+    echo "Cannot resume: staged FastOMA inputs are incomplete in ${STAGE_DIR}" >&2
+    exit 1
+fi
 
 printf 'FastOMA version: %s\n' "${FASTOMA_VERSION}" > "${OUTDIR}/tool_version.txt"
 printf 'FastOMA source: %s\n' "$(git -C "${FASTOMA_ROOT}" rev-parse HEAD)" >> "${OUTDIR}/tool_version.txt"
