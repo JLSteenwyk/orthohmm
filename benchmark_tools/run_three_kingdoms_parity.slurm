@@ -226,14 +226,8 @@ run_orthomcl() {
     readonly DATA_DIR="${TOOL_DIR}/data"
     mkdir -p "${DATA_DIR}"
     cp "${TEMPLATE_DIR}/orthomcl.pl" "${TEMPLATE_DIR}/orthomcl_module.pm" "${TOOL_DIR}/"
-    sed -i -E \
-        "s|^our \\$PATH_TO_ORTHOMCL.*|our \\$PATH_TO_ORTHOMCL = \"${TOOL_DIR}/\";|" \
-        "${TOOL_DIR}/orthomcl_module.pm"
-    sed -i -E \
-        "s|^our \\$ORTHOMCL_DATA_DIR.*|our \\$ORTHOMCL_DATA_DIR = \"${DATA_DIR}/\";|" \
-        "${TOOL_DIR}/orthomcl_module.pm"
-    sed -i -E 's|^our \$BLAST_NOCPU.*|our \$BLAST_NOCPU = 32;|' \
-        "${TOOL_DIR}/orthomcl_module.pm"
+    "${PYTHON_BIN}" "${BASE}/benchmark_tools/configure_orthomcl_1_4.py" \
+        "${TOOL_DIR}/orthomcl_module.pm" "${TOOL_DIR}" "${DATA_DIR}" "${THREADS}"
     local files=()
     for source in "${INPUT_DIR}"/*.fasta; do
         local target="$(basename "${source}" .fasta).fa"
