@@ -222,8 +222,18 @@ run_orthomcl() {
     local workspace_root
     workspace_root=$(dirname "$(dirname "${BASE}")")
     readonly TEMPLATE_DIR=${ORTHOMCL_TEMPLATE_DIR:-${workspace_root}/SOFTWARE/ORTHOMCLV1.4}
+    readonly ORTHOMCL_ENV=${ORTHOMCL_ENV:-${TEMPLATE_DIR}/venv_orthomcl}
+    readonly ORTHOMCL_PERL=${ORTHOMCL_PERL:-${ORTHOMCL_ENV}/bin/perl}
     readonly TOOL_DIR="${OUTDIR}/orthomcl"
     readonly DATA_DIR="${TOOL_DIR}/data"
+    [[ -x "${ORTHOMCL_PERL}" ]] || {
+        echo "Missing OrthoMCL Perl interpreter: ${ORTHOMCL_PERL}" >&2
+        exit 1
+    }
+    "${ORTHOMCL_PERL}" -MBio::SearchIO -e 1 || {
+        echo "OrthoMCL Perl environment lacks Bio::SearchIO" >&2
+        exit 1
+    }
     mkdir -p "${DATA_DIR}"
     cp "${TEMPLATE_DIR}/orthomcl.pl" "${TEMPLATE_DIR}/orthomcl_module.pm" "${TOOL_DIR}/"
     "${PYTHON_BIN}" "${BASE}/benchmark_tools/configure_orthomcl_1_4.py" \
@@ -244,8 +254,9 @@ run_orthomcl() {
     inference_start=$(date +%s)
     cd "${TOOL_DIR}"
     /usr/bin/time -v -o "${OUTDIR}/time.log" \
-        env PERL5LIB="${TOOL_DIR}:${PERL5LIB:-}" \
-        perl "${TOOL_DIR}/orthomcl.pl" --mode 1 --fa_files "${file_list}" \
+        env PATH="${ORTHOMCL_ENV}/bin:${PATH}" PERL5LIB="${TOOL_DIR}:${PERL5LIB:-}" \
+        "${ORTHOMCL_PERL}" "${TOOL_DIR}/orthomcl.pl" \
+        --mode 1 --fa_files "${file_list}" \
         > "${OUTDIR}/run.log" 2>&1
     printf '%s\n' "$(( $(date +%s) - inference_start ))" \
         > "${OUTDIR}/inference_wall_time_s.txt"
