@@ -144,28 +144,9 @@ run_orthofinder_sequence_only() {
         "${PYTHON_BIN}" "${BASE}/benchmark_tools/orthofinder_mcl_to_orthogroups.py" \
         "${clusters}" "${sequence_ids}" "${OUTDIR}/orthogroups.txt" \
         > "${OUTDIR}/run.log" 2>&1
-    "${PYTHON_BIN}" - "${results_dir}/Log.txt" "${OUTDIR}/inference_wall_time_s.txt" <<'PY'
-import datetime as dt
-import re
-import sys
-
-timestamp = re.compile(r"^(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) : (.+)$")
-start = end = None
-for line in open(sys.argv[1]):
-    match = timestamp.match(line)
-    if not match:
-        continue
-    when = dt.datetime.strptime(match.group(1), "%Y-%m-%d %H:%M:%S")
-    if start is None and "Started OrthoFinder version 3.1.5" in match.group(2):
-        start = when
-    if "Ran MCL" in match.group(2):
-        end = when
-        break
-if start is None or end is None or end <= start:
-    raise SystemExit("Could not derive OrthoFinder sequence-only runtime")
-with open(sys.argv[2], "w") as handle:
-    handle.write(f"{int((end - start).total_seconds())}\n")
-PY
+    "${PYTHON_BIN}" "${BASE}/benchmark_tools/derive_orthofinder_mcl_runtime.py" \
+        "${OUTDIR}/inference_wall_time_s.txt" \
+        "${results_dir}/Log.txt" "${SOURCE_OUTDIR}/run.log"
     sha256sum "${clusters}" "${sequence_ids}" > "${OUTDIR}/checkpoint.sha256"
 }
 
