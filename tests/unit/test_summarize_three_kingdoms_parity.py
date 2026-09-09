@@ -1,4 +1,5 @@
 from benchmark_tools.summarize_three_kingdoms_parity import (
+    METHODS,
     format_duration,
     parse_run_metadata,
     parse_score,
@@ -42,3 +43,9 @@ def test_parse_run_metadata_and_format_duration(tmp_path):
     }
     assert format_duration(6332) == "1:45:32"
     assert format_duration(None) == "n/a"
+
+
+def test_fastoma_variant_describes_scored_output():
+    fastoma = next(method for method in METHODS if method.key == "fastoma_0_3_5")
+
+    assert fastoma.variant == "final orthologous groups; supplied species tree"

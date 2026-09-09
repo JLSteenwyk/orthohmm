@@ -106,7 +106,7 @@ METHODS = (
         "fastoma_0_3_5",
         "FastOMA",
         "0.3.5",
-        "root HOGs; supplied species tree",
+        "final orthologous groups; supplied species tree",
         "three_kingdoms/results/parity_20260907/fastoma_0_3_5",
         True,
         128,
