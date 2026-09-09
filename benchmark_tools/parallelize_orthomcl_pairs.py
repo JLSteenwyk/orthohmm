@@ -14,12 +14,12 @@ PARALLEL_MARKER = "ORTHOMCL_PAIR_WORKERS"
 FORWARD_LOOKUP = """\t\t\t\t\tif (blastqueryab($nodes1[$k],$nodes2[$l])) {
 \t\t\t\t\t\tmy ($s,$pm,$pe,$pi)=(blastqueryab($nodes1[$k],$nodes2[$l]))[0,3,4,5];"""
 FORWARD_LOOKUP_ONCE = """\t\t\t\t\tmy @forward_hit=$cached_blastqueryab->($nodes1[$k],$nodes2[$l]);
-\t\t\t\t\tif (@forward_hit) {
+\t\t\t\t\tif (@forward_hit && $forward_hit[-1]) {
 \t\t\t\t\t\tmy ($s,$pm,$pe,$pi)=@forward_hit[0,3,4,5];"""
 REVERSE_LOOKUP = """\t\t\t\t\tif (blastqueryab($nodes2[$l],$nodes1[$k])) {
 \t\t\t\t\t\tmy ($s,$pm,$pe,$pi)=(blastqueryab($nodes2[$l],$nodes1[$k]))[0,3,4,5];"""
 REVERSE_LOOKUP_ONCE = """\t\t\t\t\tmy @reverse_hit=$cached_blastqueryab->($nodes2[$l],$nodes1[$k]);
-\t\t\t\t\tif (@reverse_hit) {
+\t\t\t\t\tif (@reverse_hit && $reverse_hit[-1]) {
 \t\t\t\t\t\tmy ($s,$pm,$pe,$pi)=@reverse_hit[0,3,4,5];"""
 
 
@@ -61,7 +61,7 @@ def parallelize_source(source: str) -> str:
 \t\t}}
 \t\treturn @{{$query_hit_cache{{$query}}{{$subject}}}}
 \t\t\tif exists $query_hit_cache{{$query}}{{$subject}};
-\t\treturn 0;
+\t\treturn ();
 \t}};
 {body}
 \treturn $connect{{$ta.' '.$tb}};

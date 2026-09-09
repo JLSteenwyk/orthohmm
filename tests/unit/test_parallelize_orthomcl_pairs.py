@@ -34,6 +34,9 @@ def test_parallelizes_original_pair_body():
     assert "Reusing completed inter-taxon result" in result
     assert result.count("$cached_blastqueryab->($nodes1[$k],$nodes2[$l])") == 1
     assert result.count("$cached_blastqueryab->($nodes2[$l],$nodes1[$k])") == 1
+    assert "if (@forward_hit && $forward_hit[-1])" in result
+    assert "if (@reverse_hit && $reverse_hit[-1])" in result
+    assert "return ();" in result
     assert "%blastquery=();" in result
 
 
