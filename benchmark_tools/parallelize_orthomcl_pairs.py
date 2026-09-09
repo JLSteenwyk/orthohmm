@@ -11,6 +11,16 @@ LOOP_START = "for(my $i=0;$i<scalar(@taxa)-1;$i++) {"
 INNER_START = "\tfor(my $j=$i+1;$j<scalar(@taxa);$j++) {"
 LOOP_END_MARKER = "\n\n%blastquery=();"
 PARALLEL_MARKER = "ORTHOMCL_PAIR_WORKERS"
+FORWARD_LOOKUP = """\t\t\t\t\tif (blastqueryab($nodes1[$k],$nodes2[$l])) {
+\t\t\t\t\t\tmy ($s,$pm,$pe,$pi)=(blastqueryab($nodes1[$k],$nodes2[$l]))[0,3,4,5];"""
+FORWARD_LOOKUP_ONCE = """\t\t\t\t\tmy @forward_hit=blastqueryab($nodes1[$k],$nodes2[$l]);
+\t\t\t\t\tif (@forward_hit) {
+\t\t\t\t\t\tmy ($s,$pm,$pe,$pi)=@forward_hit[0,3,4,5];"""
+REVERSE_LOOKUP = """\t\t\t\t\tif (blastqueryab($nodes2[$l],$nodes1[$k])) {
+\t\t\t\t\t\tmy ($s,$pm,$pe,$pi)=(blastqueryab($nodes2[$l],$nodes1[$k]))[0,3,4,5];"""
+REVERSE_LOOKUP_ONCE = """\t\t\t\t\tmy @reverse_hit=blastqueryab($nodes2[$l],$nodes1[$k]);
+\t\t\t\t\tif (@reverse_hit) {
+\t\t\t\t\t\tmy ($s,$pm,$pe,$pi)=@reverse_hit[0,3,4,5];"""
 
 
 def parallelize_source(source: str) -> str:
@@ -29,6 +39,10 @@ def parallelize_source(source: str) -> str:
 
     body = "\n".join(lines[2:-2])
     body = body.replace("$taxa[$i]", "$ta").replace("$taxa[$j]", "$tb")
+    if body.count(FORWARD_LOOKUP) != 1 or body.count(REVERSE_LOOKUP) != 1:
+        raise ValueError("Could not locate duplicate OrthoMCL co-ortholog lookups")
+    body = body.replace(FORWARD_LOOKUP, FORWARD_LOOKUP_ONCE)
+    body = body.replace(REVERSE_LOOKUP, REVERSE_LOOKUP_ONCE)
     replacement = f"""my $process_intertaxon_pair = sub {{
 \tmy ($ta, $tb) = @_;
 {body}
@@ -57,31 +71,47 @@ if ($pair_workers <= 1) {{
 
 \tmy %children;
 \tmy %result_files;
-\tmy $next_pair = 0;
-\twhile ($next_pair < scalar(@intertaxon_pairs) || scalar(keys %children)) {{
-\t\twhile ($next_pair < scalar(@intertaxon_pairs) &&
+\tmy @pending_pair_ids;
+\tfor (my $pair_id=0; $pair_id<scalar(@intertaxon_pairs); $pair_id++) {{
+\t\tmy ($ta, $tb) = @{{$intertaxon_pairs[$pair_id]}};
+\t\tmy $pair_key = $ta.' '.$tb;
+\t\tmy $result_file = dirname($bpo_file)."/pair_$pair_id.storable";
+\t\t$result_files{{$pair_key}} = $result_file;
+\t\tif (-s $result_file && eval {{ Storable::retrieve($result_file); 1 }}) {{
+\t\t\twrite_log("Reusing completed inter-taxon result for $ta and $tb\\n");
+\t\t}} else {{
+\t\t\tunlink $result_file if -e $result_file;
+\t\t\tpush @pending_pair_ids, $pair_id;
+\t\t}}
+\t}}
+
+\tmy $next_pending = 0;
+\twhile ($next_pending < scalar(@pending_pair_ids) || scalar(keys %children)) {{
+\t\twhile ($next_pending < scalar(@pending_pair_ids) &&
 \t\t       scalar(keys %children) < $pair_workers) {{
-\t\t\tmy $pair_id = $next_pair;
+\t\t\tmy $pair_id = $pending_pair_ids[$next_pending];
 \t\t\tmy ($ta, $tb) = @{{$intertaxon_pairs[$pair_id]}};
 \t\t\tmy $pair_key = $ta.' '.$tb;
-\t\t\tmy $result_file = dirname($bpo_file)."/pair_$pair_id.storable";
-\t\t\t$result_files{{$pair_key}} = $result_file;
+\t\t\tmy $result_file = $result_files{{$pair_key}};
 \t\t\tmy $pid = fork();
 \t\t\tdieWithUnexpectedError("fork failed: $!") unless defined $pid;
 \t\t\tif ($pid == 0) {{
 \t\t\t\topen_bpofile($bpo_file);
 \t\t\t\t%ortho = ();
 \t\t\t\t$process_intertaxon_pair->($ta, $tb);
+\t\t\t\tmy $temporary_result = $result_file.".".$$;
 \t\t\t\tStorable::nstore(
 \t\t\t\t\t[$connect{{$pair_key}}, [keys %ortho]],
-\t\t\t\t\t$result_file
+\t\t\t\t\t$temporary_result
 \t\t\t\t);
+\t\t\t\trename $temporary_result, $result_file or
+\t\t\t\t\tdieWithUnexpectedError("cannot publish $result_file: $!");
 \t\t\t\torthomcl_module::LOG->flush();
 \t\t\t\torthomcl_module::BBH->flush();
 \t\t\t\tPOSIX::_exit(0);
 \t\t\t}}
 \t\t\t$children{{$pid}} = $pair_key;
-\t\t\t$next_pair++;
+\t\t\t$next_pending++;
 \t\t}}
 
 \t\tmy $finished = wait();
@@ -97,7 +127,6 @@ if ($pair_workers <= 1) {{
 \t\t\t@{{Storable::retrieve($result_files{{$pair_key}})}};
 \t\t$connect{{$pair_key}} = $pair_connect;
 \t\tforeach my $gene (@$pair_ortho) {{ $ortho{{$gene}} = 1; }}
-\t\tunlink $result_files{{$pair_key}};
 \t}}
 }}
 """
