@@ -32,8 +32,8 @@ def test_parallelizes_original_pair_body():
     assert "$process_intertaxon_pair->(@$pair)" in result
     assert "Storable::nstore" in result
     assert "Reusing completed inter-taxon result" in result
-    assert result.count("blastqueryab($nodes1[$k],$nodes2[$l])") == 1
-    assert result.count("blastqueryab($nodes2[$l],$nodes1[$k])") == 1
+    assert result.count("$cached_blastqueryab->($nodes1[$k],$nodes2[$l])") == 1
+    assert result.count("$cached_blastqueryab->($nodes2[$l],$nodes1[$k])") == 1
     assert "%blastquery=();" in result
 
 

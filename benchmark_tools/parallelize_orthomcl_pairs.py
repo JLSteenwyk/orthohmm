@@ -13,12 +13,12 @@ LOOP_END_MARKER = "\n\n%blastquery=();"
 PARALLEL_MARKER = "ORTHOMCL_PAIR_WORKERS"
 FORWARD_LOOKUP = """\t\t\t\t\tif (blastqueryab($nodes1[$k],$nodes2[$l])) {
 \t\t\t\t\t\tmy ($s,$pm,$pe,$pi)=(blastqueryab($nodes1[$k],$nodes2[$l]))[0,3,4,5];"""
-FORWARD_LOOKUP_ONCE = """\t\t\t\t\tmy @forward_hit=blastqueryab($nodes1[$k],$nodes2[$l]);
+FORWARD_LOOKUP_ONCE = """\t\t\t\t\tmy @forward_hit=$cached_blastqueryab->($nodes1[$k],$nodes2[$l]);
 \t\t\t\t\tif (@forward_hit) {
 \t\t\t\t\t\tmy ($s,$pm,$pe,$pi)=@forward_hit[0,3,4,5];"""
 REVERSE_LOOKUP = """\t\t\t\t\tif (blastqueryab($nodes2[$l],$nodes1[$k])) {
 \t\t\t\t\t\tmy ($s,$pm,$pe,$pi)=(blastqueryab($nodes2[$l],$nodes1[$k]))[0,3,4,5];"""
-REVERSE_LOOKUP_ONCE = """\t\t\t\t\tmy @reverse_hit=blastqueryab($nodes2[$l],$nodes1[$k]);
+REVERSE_LOOKUP_ONCE = """\t\t\t\t\tmy @reverse_hit=$cached_blastqueryab->($nodes2[$l],$nodes1[$k]);
 \t\t\t\t\tif (@reverse_hit) {
 \t\t\t\t\t\tmy ($s,$pm,$pe,$pi)=@reverse_hit[0,3,4,5];"""
 
@@ -45,6 +45,24 @@ def parallelize_source(source: str) -> str:
     body = body.replace(REVERSE_LOOKUP, REVERSE_LOOKUP_ONCE)
     replacement = f"""my $process_intertaxon_pair = sub {{
 \tmy ($ta, $tb) = @_;
+\tmy %query_hit_cache;
+\tmy $cached_blastqueryab = sub {{
+\t\tmy ($query, $subject) = @_;
+\t\tunless (exists $query_hit_cache{{$query}}) {{
+\t\t\tmy %hits;
+\t\t\tif (defined $blastquery{{$query}}) {{
+\t\t\t\tmy ($start, $end) = split(";", $blastquery{{$query}});
+\t\t\t\tforeach my $line_id ($start..$end) {{
+\t\t\t\t\tmy @hit = (getline_from_bpofile($line_id))[0,1,3,5,6,7];
+\t\t\t\t\t$hits{{$hit[2]}} = \\@hit unless exists $hits{{$hit[2]}};
+\t\t\t\t}}
+\t\t\t}}
+\t\t\t$query_hit_cache{{$query}} = \\%hits;
+\t\t}}
+\t\treturn @{{$query_hit_cache{{$query}}{{$subject}}}}
+\t\t\tif exists $query_hit_cache{{$query}}{{$subject}};
+\t\treturn 0;
+\t}};
 {body}
 \treturn $connect{{$ta.' '.$tb}};
 }};
