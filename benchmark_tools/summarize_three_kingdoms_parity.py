@@ -120,7 +120,7 @@ METHODS = (
         False,
         32,
         runtime_kind="measured stage sum",
-        memory_kind="maximum stage RSS reported by GNU time",
+        memory_kind="maximum process-tree cgroup or stage RSS",
     ),
 )
 

@@ -144,6 +144,12 @@ for time_log in "${OUTDIR}/time.log" "${OUTDIR}/bpo_converter.time.log" \
         peak_rss_kib=${value}
     fi
 done
+if [[ -s "${OUTDIR}/parallel_process_tree_peak_rss_kib.txt" ]]; then
+    value=$(<"${OUTDIR}/parallel_process_tree_peak_rss_kib.txt")
+    if [[ ${value} =~ ^[0-9]+$ && ${value} -gt ${peak_rss_kib} ]]; then
+        peak_rss_kib=${value}
+    fi
+fi
 printf '%s\n' "${peak_rss_kib}" > "${OUTDIR}/peak_rss_kib.txt"
 sha256sum "${OUTDIR}/all_orthomcl.out" "${OUTDIR}/orthogroups.txt" \
     "${OUTDIR}/score.txt" > "${OUTDIR}/result.sha256"
