@@ -1,0 +1,315 @@
+{
+  "schema_version": 1,
+  "benchmark": "Three Kingdoms BUSCO",
+  "priority": "secondary",
+  "generated_at": "2026-09-09T07:06:21.777074+00:00",
+  "dataset": {
+    "proteomes": 12,
+    "proteins": 443217,
+    "reference_orthogroups": 255,
+    "reference_genes": 2035,
+    "reference_sha256": "a5f3447056ecfa305442caff0d898d524eed350f13587d3247d3e1ba4c19757d"
+  },
+  "scoring": {
+    "metric": "gene-pair micro-averaged precision, recall, and F-score",
+    "script": "three_kingdoms/score_against_busco.py"
+  },
+  "methods": [
+    {
+      "key": "orthohmm_high_sensitivity",
+      "tool": "OrthoHMM",
+      "version": "0.5.0",
+      "variant": "high sensitivity",
+      "uses_phylogeny": false,
+      "result_dir": "three_kingdoms/results/orthohmm_high_sensitivity",
+      "reused_completed_inference": true,
+      "score": {
+        "reference_orthogroups": 255,
+        "reference_genes": 2035,
+        "reference_genes_in_prediction": 2035,
+        "predicted_orthogroups": 164826,
+        "true_positive_gene_pairs": 5176,
+        "false_positive_gene_pairs": 0,
+        "false_negative_gene_pairs": 2176,
+        "precision": 1.0,
+        "recall": 0.704,
+        "f_score": 0.8263,
+        "reference_gene_coverage": 1.0
+      },
+      "performance": {
+        "wall_s": 6556.426547,
+        "runtime_kind": "measured",
+        "cpus_requested": 32,
+        "peak_rss_kib": 11661832.0,
+        "peak_rss_gib": 11.121589660644531,
+        "memory_measurement": "sampled peak process-tree RSS"
+      },
+      "provenance": {
+        "slurm_job_id": null,
+        "recovery_slurm_job_id": null,
+        "source_commit": "599dda43569d28faae9844368d54733c632435d4",
+        "orthogroups_sha256": "28ba45202afc7f51e719d59405674023c9b284a2d5ea18575b03c7b949e13db1",
+        "score_sha256": "733078afd6bf78f2733c0e0a616d75f152b180074f5801e9504f6cad0a22122d"
+      }
+    },
+    {
+      "key": "orthohmm_phylogeny_satellite_v2",
+      "tool": "OrthoHMM",
+      "version": "0.5.0",
+      "variant": "high sensitivity + inferred phylogeny (satellite_v2)",
+      "uses_phylogeny": true,
+      "result_dir": "three_kingdoms/results/parity_20260907/orthohmm_phylogeny_satellite_v2",
+      "reused_completed_inference": false,
+      "score": {
+        "reference_orthogroups": 255,
+        "reference_genes": 2035,
+        "reference_genes_in_prediction": 2035,
+        "predicted_orthogroups": 152748,
+        "true_positive_gene_pairs": 5685,
+        "false_positive_gene_pairs": 0,
+        "false_negative_gene_pairs": 1667,
+        "precision": 1.0,
+        "recall": 0.7733,
+        "f_score": 0.8721,
+        "reference_gene_coverage": 1.0
+      },
+      "performance": {
+        "wall_s": 8225,
+        "runtime_kind": "measured",
+        "cpus_requested": 32,
+        "peak_rss_kib": 11508204,
+        "peak_rss_gib": 10.975078582763672,
+        "memory_measurement": "sampled peak process-tree RSS"
+      },
+      "provenance": {
+        "slurm_job_id": 20893,
+        "recovery_slurm_job_id": null,
+        "source_commit": "6bb08e5bafc791d557296f99acb80abd735ecdff",
+        "orthogroups_sha256": "07eae3dad852c6376d95e76fb7c7a5f08554342fd44f7bf8a5cf40cf999ca0e3",
+        "score_sha256": "f03557597476d28d31e75a47d9e95c6f8095e927fffbe436570f6687df12a414"
+      }
+    },
+    {
+      "key": "orthofinder_3_1_5_full",
+      "tool": "OrthoFinder",
+      "version": "3.1.5",
+      "variant": "full pipeline; root HOGs",
+      "uses_phylogeny": true,
+      "result_dir": "three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full",
+      "reused_completed_inference": false,
+      "score": {
+        "reference_orthogroups": 255,
+        "reference_genes": 2035,
+        "reference_genes_in_prediction": 1792,
+        "predicted_orthogroups": 67131,
+        "true_positive_gene_pairs": 5502,
+        "false_positive_gene_pairs": 0,
+        "false_negative_gene_pairs": 1850,
+        "precision": 1.0,
+        "recall": 0.7484,
+        "f_score": 0.8561,
+        "reference_gene_coverage": 0.8805896805896806
+      },
+      "performance": {
+        "wall_s": 6332,
+        "runtime_kind": "measured",
+        "cpus_requested": 32,
+        "peak_rss_kib": 4178948,
+        "peak_rss_gib": 3.9853553771972656,
+        "memory_measurement": "maximum RSS reported by GNU time"
+      },
+      "provenance": {
+        "slurm_job_id": 20892,
+        "recovery_slurm_job_id": null,
+        "source_commit": "6bb08e5bafc791d557296f99acb80abd735ecdff",
+        "orthogroups_sha256": "4f0d1d8a43a1e8bf1d1c987587e58eddde690838a0769b8350346b3826fb55a7",
+        "score_sha256": "974f7b5b220707187b6d4e7972c8153cfdbe18a26c3a92da2acd5294c0e6c5bb"
+      }
+    },
+    {
+      "key": "orthofinder_3_1_5_sequence_only",
+      "tool": "OrthoFinder",
+      "version": "3.1.5",
+      "variant": "sequence-only MCL checkpoint",
+      "uses_phylogeny": false,
+      "result_dir": "three_kingdoms/results/parity_20260907/orthofinder_3_1_5_sequence_only",
+      "reused_completed_inference": false,
+      "score": {
+        "reference_orthogroups": 255,
+        "reference_genes": 2035,
+        "reference_genes_in_prediction": 2035,
+        "predicted_orthogroups": 65602,
+        "true_positive_gene_pairs": 7269,
+        "false_positive_gene_pairs": 72,
+        "false_negative_gene_pairs": 83,
+        "precision": 0.9902,
+        "recall": 0.9887,
+        "f_score": 0.9895,
+        "reference_gene_coverage": 1.0
+      },
+      "performance": {
+        "wall_s": 4884,
+        "runtime_kind": "derived from matching full run's MCL checkpoint",
+        "cpus_requested": 32,
+        "peak_rss_kib": null,
+        "peak_rss_gib": null,
+        "memory_measurement": null
+      },
+      "provenance": {
+        "slurm_job_id": 20897,
+        "recovery_slurm_job_id": null,
+        "source_commit": "9c293177446e2881cc480b625e8121f18edb4c26",
+        "orthogroups_sha256": "e94fb298e8fa7807f5c98038dd55f147d1fdb7fa5491592641049d5fd1988d50",
+        "score_sha256": "240b1bf2685da59577d0ba4501460a7dd12be06d8e9577bdd17d63e8ced48b31"
+      }
+    },
+    {
+      "key": "proteinortho_6_3_6",
+      "tool": "ProteinOrtho",
+      "version": "6.3.6",
+      "variant": "default ProteinOrtho mode; DIAMOND",
+      "uses_phylogeny": false,
+      "result_dir": "three_kingdoms/results/proteinortho",
+      "reused_completed_inference": true,
+      "score": {
+        "reference_orthogroups": 255,
+        "reference_genes": 2035,
+        "reference_genes_in_prediction": 1953,
+        "predicted_orthogroups": 37201,
+        "true_positive_gene_pairs": 6396,
+        "false_positive_gene_pairs": 0,
+        "false_negative_gene_pairs": 956,
+        "precision": 1.0,
+        "recall": 0.87,
+        "f_score": 0.9305,
+        "reference_gene_coverage": 0.9597051597051597
+      },
+      "performance": {
+        "wall_s": 569,
+        "runtime_kind": "measured",
+        "cpus_requested": 32,
+        "peak_rss_kib": 2698752,
+        "peak_rss_gib": 2.57373046875,
+        "memory_measurement": "maximum RSS reported by GNU time"
+      },
+      "provenance": {
+        "slurm_job_id": null,
+        "recovery_slurm_job_id": null,
+        "source_commit": null,
+        "orthogroups_sha256": "4069a10ce5f302c17a915cc7d2bff8c97b6fc801e314b4743eb34d2b7d3d50b0",
+        "score_sha256": "a7b97f82477a47b31e1052af61ddaf80ed60637782a50a612fe374302d290367"
+      }
+    },
+    {
+      "key": "sonicparanoid_2_0_9",
+      "tool": "SonicParanoid",
+      "version": "2.0.9",
+      "variant": "default mode; DIAMOND very-sensitive",
+      "uses_phylogeny": false,
+      "result_dir": "three_kingdoms/results/sonicparanoid",
+      "reused_completed_inference": true,
+      "score": {
+        "reference_orthogroups": 255,
+        "reference_genes": 2035,
+        "reference_genes_in_prediction": 1787,
+        "predicted_orthogroups": 19853,
+        "true_positive_gene_pairs": 5846,
+        "false_positive_gene_pairs": 0,
+        "false_negative_gene_pairs": 1506,
+        "precision": 1.0,
+        "recall": 0.7952,
+        "f_score": 0.8859,
+        "reference_gene_coverage": 0.8781326781326781
+      },
+      "performance": {
+        "wall_s": 4479,
+        "runtime_kind": "measured",
+        "cpus_requested": 32,
+        "peak_rss_kib": 8279040,
+        "peak_rss_gib": 7.8955078125,
+        "memory_measurement": "maximum RSS reported by GNU time"
+      },
+      "provenance": {
+        "slurm_job_id": null,
+        "recovery_slurm_job_id": null,
+        "source_commit": null,
+        "orthogroups_sha256": "e2f9648681fcb3303c5f2f0095b88f06fe211f5d8da8a1214f27477c8c5710b9",
+        "score_sha256": "7d0f921ff11160c24652c096c643a06fa98bf16c913984889c0eee0f20eb67fb"
+      }
+    },
+    {
+      "key": "fastoma_0_3_5",
+      "tool": "FastOMA",
+      "version": "0.3.5",
+      "variant": "final orthologous groups; supplied species tree",
+      "uses_phylogeny": true,
+      "result_dir": "three_kingdoms/results/parity_20260907/fastoma_0_3_5",
+      "reused_completed_inference": false,
+      "score": {
+        "reference_orthogroups": 255,
+        "reference_genes": 2035,
+        "reference_genes_in_prediction": 1820,
+        "predicted_orthogroups": 28019,
+        "true_positive_gene_pairs": 5565,
+        "false_positive_gene_pairs": 0,
+        "false_negative_gene_pairs": 1787,
+        "precision": 1.0,
+        "recall": 0.7569,
+        "f_score": 0.8617,
+        "reference_gene_coverage": 0.8943488943488943
+      },
+      "performance": {
+        "wall_s": 6523,
+        "runtime_kind": "measured",
+        "cpus_requested": 128,
+        "peak_rss_kib": 621124,
+        "peak_rss_gib": 0.5923500061035156,
+        "memory_measurement": "maximum RSS reported by GNU time"
+      },
+      "provenance": {
+        "slurm_job_id": 20895,
+        "recovery_slurm_job_id": null,
+        "source_commit": "6bb08e5bafc791d557296f99acb80abd735ecdff",
+        "orthogroups_sha256": "3a8b30791c01b847244dfb86e86bebaec97731275d8bbfbf7517902758adf7ef",
+        "score_sha256": "ad6a4a9049958383cc088fb28bddc21a28884324e198cc0e932c8312b4f45d19"
+      }
+    },
+    {
+      "key": "orthomcl_1_4",
+      "tool": "OrthoMCL",
+      "version": "1.4",
+      "variant": "defaults; legacy BLASTP; byte-compatible conversion and pair parallelism; MCL inflation 1.5",
+      "uses_phylogeny": false,
+      "result_dir": "three_kingdoms/results/parity_20260907/orthomcl_1_4",
+      "reused_completed_inference": false,
+      "score": {
+        "reference_orthogroups": 255,
+        "reference_genes": 2035,
+        "reference_genes_in_prediction": 2028,
+        "predicted_orthogroups": 49276,
+        "true_positive_gene_pairs": 7191,
+        "false_positive_gene_pairs": 0,
+        "false_negative_gene_pairs": 161,
+        "precision": 1.0,
+        "recall": 0.9781,
+        "f_score": 0.9889,
+        "reference_gene_coverage": 0.9965601965601966
+      },
+      "performance": {
+        "wall_s": 141193,
+        "runtime_kind": "measured stage sum",
+        "cpus_requested": 32,
+        "peak_rss_kib": 93351928,
+        "peak_rss_gib": 89.02733612060547,
+        "memory_measurement": "sampled sum of process-tree RSS; shared fork pages double-counted"
+      },
+      "provenance": {
+        "slurm_job_id": 20899,
+        "recovery_slurm_job_id": 20903,
+        "source_commit": "fd1b55e08b3916119adfe3416b5c7eaa4d929a81",
+        "orthogroups_sha256": "e2edb47e56844adcc16f196b530e15c9ca872cbc2fe9b018d8a64b2ddc47b7d8",
+        "score_sha256": "4bb40cfd19f545657b22f86a6cb3af69e14281e3b60f54836edd4a410119c35b"
+      }
+    }
+  ]
+}

@@ -115,12 +115,12 @@ METHODS = (
         "orthomcl_1_4",
         "OrthoMCL",
         "1.4",
-        "defaults; legacy BLASTP; exact-compatible conversion and pair parallelism; MCL inflation 1.5",
+        "defaults; legacy BLASTP; byte-compatible conversion and pair parallelism; MCL inflation 1.5",
         "three_kingdoms/results/parity_20260907/orthomcl_1_4",
         False,
         32,
         runtime_kind="measured stage sum",
-        memory_kind="maximum process-tree cgroup or stage RSS",
+        memory_kind="sampled sum of process-tree RSS; shared fork pages double-counted",
     ),
 )
 
@@ -280,6 +280,7 @@ def render_markdown(report: dict[str, Any]) -> str:
     phylogeny = by_key["orthohmm_phylogeny_satellite_v2"]["score"]["f_score"]
     of_full = by_key["orthofinder_3_1_5_full"]["score"]["f_score"]
     of_sequence = by_key["orthofinder_3_1_5_sequence_only"]["score"]["f_score"]
+    orthomcl = by_key["orthomcl_1_4"]["score"]["f_score"]
     lines.extend(
         [
             "",
@@ -290,6 +291,12 @@ def render_markdown(report: dict[str, Any]) -> str:
                 f"over high sensitivity alone and is {phylogeny - of_full:+.4f} versus "
                 f"OrthoFinder's full root-HOG output. OrthoFinder's sequence-only "
                 f"checkpoint remains higher by {of_sequence - phylogeny:.4f}."
+            ),
+            "",
+            (
+                f"OrthoMCL is {of_sequence - orthomcl:.4f} below OrthoFinder's "
+                "sequence-only checkpoint, but its legacy BLAST stage makes it much "
+                "slower on this dataset."
             ),
             "",
             (
@@ -305,6 +312,7 @@ def render_markdown(report: dict[str, Any]) -> str:
             "- ProteinOrtho and SonicParanoid inference outputs were retained because they already used this exact biological input; they were rescored with the common evaluator for this report.",
             "- Root-HOG outputs are reported for phylogenetic pipelines, while flat orthogroups are reported for sequence-only methods.",
             "- OrthoMCL used its native legacy BLAST and inference rules. Its serial BioPerl BLAST-to-BPO conversion was replaced by a byte-compatible streaming converter validated against 6,417,790 native records, and independent species-pair calculations were process-parallelized before native matrix construction and MCL. Its wall time sums the separately measured BLAST, conversion, indexing, and accepted downstream stages. Failed validation attempts are excluded; the accepted 66-pair stage was rerun from zero checkpoints.",
+            "- OrthoMCL peak memory is the sampled sum of worker RSS values. Forked workers share copy-on-write pages, so 89.03 GiB is a conservative accounting value rather than physical unique memory.",
             "- External-tool GNU time RSS values may omit memory held by container descendants and are not directly comparable to OrthoHMM's sampled process-tree RSS.",
             "- Historical OrthoFinder 2.5.5 runs are excluded from the parity table; OrthoFinder 3.1.5 is the retained comparator.",
             "",
