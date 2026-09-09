@@ -17,11 +17,14 @@ readonly ORTHOMCL_ENV=${ORTHOMCL_ENV:-/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/
 readonly ORTHOMCL_PERL=${ORTHOMCL_PERL:-${ORTHOMCL_ENV}/bin/perl}
 readonly NORMALIZER="${BASE}/benchmark_tools/normalize_three_kingdoms_orthogroups.py"
 readonly SCORER="${BASE}/three_kingdoms/score_against_busco.py"
+readonly PAIR_PARALLELIZER="${BASE}/benchmark_tools/parallelize_orthomcl_pairs.py"
+readonly PAIR_WORKERS=${ORTHOMCL_PAIR_WORKERS:-1}
+readonly INDEX_WALL_S=${ORTHOMCL_INDEX_WALL_S:-0}
 readonly RECOVERY_START_EPOCH=$(date +%s)
 
 for required in "${BPO_FILE}" "${BLAST_FILE}" "${GG_FILE}" "${REFERENCE}" \
     "${TOOL_DIR}/orthomcl.pl" "${TOOL_DIR}/orthomcl_module.pm" \
-    "${NORMALIZER}" "${SCORER}"; do
+    "${NORMALIZER}" "${SCORER}" "${PAIR_PARALLELIZER}"; do
     [[ -s "${required}" ]] || { echo "Missing recovery input: ${required}" >&2; exit 1; }
 done
 [[ -x "${ORTHOMCL_PERL}" ]] || { echo "Missing Perl: ${ORTHOMCL_PERL}" >&2; exit 1; }
@@ -67,32 +70,49 @@ printf 'recovery_slurm_job_id\t%s\nrecovery_started_epoch_s\t%s\n' \
     >> "${OUTDIR}/run_metadata.tsv"
 git -C "${BASE}" rev-parse HEAD > "${OUTDIR}/source_commit.txt"
 printf '%s\n' \
-    'OrthoMCL 1.4 + MCL 02-063; 32-thread legacy BLAST; exact-compatible BPO conversion' \
+    "OrthoMCL 1.4 + MCL 02-063; 32-thread legacy BLAST; exact-compatible BPO conversion; ${PAIR_WORKERS} pair workers" \
     > "${OUTDIR}/tool_version.txt"
+if [[ ${PAIR_WORKERS} -gt 1 ]]; then
+    if ! grep -q 'ORTHOMCL_PAIR_WORKERS' "${TOOL_DIR}/orthomcl.pl"; then
+        "${PYTHON_BIN}" "${PAIR_PARALLELIZER}" "${TOOL_DIR}/orthomcl.pl"
+    fi
+    "${ORTHOMCL_PERL}" -I "${TOOL_DIR}" -c "${TOOL_DIR}/orthomcl.pl"
+fi
+sha256sum "${TOOL_DIR}/orthomcl.pl" "${TOOL_DIR}/orthomcl_module.pm" \
+    > "${OUTDIR}/recovery_tool.sha256"
 sha256sum "${BLAST_FILE}" "${BPO_FILE}" "${GG_FILE}" \
     > "${OUTDIR}/recovery_inputs.sha256"
 printf '%s\n' "${blast_wall_s}" > "${OUTDIR}/blast_wall_time_s.txt"
 printf '%s\n' "${BPO_CONVERTER_WALL_S}" \
     > "${OUTDIR}/bpo_conversion_wall_time_s.txt"
+printf '%s\n' "${INDEX_WALL_S}" > "${OUTDIR}/bpo_index_wall_time_s.txt"
 
 bpo_base=${BPO_FILE%.*}
-for stale_index in "${bpo_base}_bpo.idx" "${bpo_base}_bpo.se"; do
-    [[ ! -e "${stale_index}" ]] || {
-        echo "Refusing to reuse a partial OrthoMCL index: ${stale_index}" >&2
-        exit 1
-    }
-done
+if [[ ${ORTHOMCL_REUSE_INDEXES:-0} == 1 ]]; then
+    for index in "${bpo_base}_bpo.idx" "${bpo_base}_bpo.se"; do
+        [[ -s "${index}" ]] || { echo "Missing reusable index: ${index}" >&2; exit 1; }
+    done
+else
+    for stale_index in "${bpo_base}_bpo.idx" "${bpo_base}_bpo.se"; do
+        [[ ! -e "${stale_index}" ]] || {
+            echo "Refusing to reuse an unverified OrthoMCL index: ${stale_index}" >&2
+            exit 1
+        }
+    done
+fi
 
 downstream_start_epoch=$(date +%s)
 cd "${TOOL_DIR}"
 /usr/bin/time -v -o "${OUTDIR}/downstream_time.log" \
     env PATH="${ORTHOMCL_ENV}/bin:${PATH}" PERL5LIB="${TOOL_DIR}:${PERL5LIB:-}" \
+    ORTHOMCL_PAIR_WORKERS="${PAIR_WORKERS}" \
     "${ORTHOMCL_PERL}" "${TOOL_DIR}/orthomcl.pl" \
     --mode 4 --bpo_file "${BPO_FILE}" --gg_file "${GG_FILE}" \
     > "${OUTDIR}/recovery_run.log" 2>&1
 downstream_wall_s=$(( $(date +%s) - downstream_start_epoch ))
 printf '%s\n' "${downstream_wall_s}" > "${OUTDIR}/downstream_wall_time_s.txt"
-printf '%s\n' "$((blast_wall_s + BPO_CONVERTER_WALL_S + downstream_wall_s))" \
+printf '%s\n' \
+    "$((blast_wall_s + BPO_CONVERTER_WALL_S + INDEX_WALL_S + downstream_wall_s))" \
     > "${OUTDIR}/inference_wall_time_s.txt"
 
 mapfile -t native_outputs < <(
