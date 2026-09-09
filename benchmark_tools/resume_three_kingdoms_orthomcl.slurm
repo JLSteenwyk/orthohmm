@@ -56,10 +56,12 @@ finish() {
         > "${OUTDIR}/recovery_runner_wall_time_s.txt"
     printf 'recovery_finished_epoch_s\t%s\nrecovery_exit_code\t%s\n' \
         "${end_epoch}" "${exit_code}" >> "${OUTDIR}/run_metadata.tsv"
-    if [[ ${exit_code} -eq 0 ]]; then
+    if [[ ${exit_code} -eq 0 && -s "${OUTDIR}/orthogroups.txt" && \
+          -s "${OUTDIR}/score.txt" ]]; then
         printf 'complete\n' > "${OUTDIR}/status.txt"
     else
-        printf 'failed_recovery:%s\n' "${exit_code}" > "${OUTDIR}/status.txt"
+        printf 'failed_recovery:%s:incomplete\n' "${exit_code}" \
+            > "${OUTDIR}/status.txt"
     fi
 }
 trap finish EXIT
