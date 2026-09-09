@@ -119,7 +119,7 @@ METHODS = (
         "three_kingdoms/results/parity_20260907/orthomcl_1_4",
         False,
         32,
-        runtime_kind="measured stage sum; checkpoint-recovered downstream stage",
+        runtime_kind="measured stage sum",
         memory_kind="maximum process-tree cgroup or stage RSS",
     ),
 )
@@ -304,7 +304,7 @@ def render_markdown(report: dict[str, Any]) -> str:
             "- OrthoFinder sequence-only time is derived from the matching full 3.1.5 run at its MCL checkpoint; it is not a separate timed invocation.",
             "- ProteinOrtho and SonicParanoid inference outputs were retained because they already used this exact biological input; they were rescored with the common evaluator for this report.",
             "- Root-HOG outputs are reported for phylogenetic pipelines, while flat orthogroups are reported for sequence-only methods.",
-            "- OrthoMCL used its native legacy BLAST and inference rules. Its serial BioPerl BLAST-to-BPO conversion was replaced by a byte-compatible streaming converter validated against 6,417,790 native records, and independent species-pair calculations were process-parallelized before native matrix construction and MCL. Its wall time sums the measured BLAST, conversion, indexing, and final checkpoint-recovery attempt; completed pair checkpoints from earlier attempts are not added, so it is not a clean single-invocation runtime.",
+            "- OrthoMCL used its native legacy BLAST and inference rules. Its serial BioPerl BLAST-to-BPO conversion was replaced by a byte-compatible streaming converter validated against 6,417,790 native records, and independent species-pair calculations were process-parallelized before native matrix construction and MCL. Its wall time sums the separately measured BLAST, conversion, indexing, and accepted downstream stages. Failed validation attempts are excluded; the accepted 66-pair stage was rerun from zero checkpoints.",
             "- External-tool GNU time RSS values may omit memory held by container descendants and are not directly comparable to OrthoHMM's sampled process-tree RSS.",
             "- Historical OrthoFinder 2.5.5 runs are excluded from the parity table; OrthoFinder 3.1.5 is the retained comparator.",
             "",

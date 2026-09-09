@@ -55,6 +55,4 @@ def test_orthomcl_variant_discloses_compatible_conversion():
     orthomcl = next(method for method in METHODS if method.key == "orthomcl_1_4")
 
     assert "exact-compatible conversion and pair parallelism" in orthomcl.variant
-    assert orthomcl.runtime_kind == (
-        "measured stage sum; checkpoint-recovered downstream stage"
-    )
+    assert orthomcl.runtime_kind == "measured stage sum"
