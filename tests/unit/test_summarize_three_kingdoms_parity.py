@@ -49,3 +49,10 @@ def test_fastoma_variant_describes_scored_output():
     fastoma = next(method for method in METHODS if method.key == "fastoma_0_3_5")
 
     assert fastoma.variant == "final orthologous groups; supplied species tree"
+
+
+def test_orthomcl_variant_discloses_compatible_conversion():
+    orthomcl = next(method for method in METHODS if method.key == "orthomcl_1_4")
+
+    assert "exact-compatible BPO conversion" in orthomcl.variant
+    assert orthomcl.runtime_kind == "measured stage sum"
