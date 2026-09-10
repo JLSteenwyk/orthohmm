@@ -179,20 +179,30 @@ and recall=0.7040. It processed 443,217 proteins in 6,556.43 seconds with
 11.12 GiB peak process-tree RSS, producing 519,062,531 candidates, 18,022,218
 significant hits, 2,242,431 final edges, and 164,826 orthogroups. This is a
 large recovery from fixed-CPM production at F=0.0003, but it remains below
-OrthoFinder 2.5.5 DIAMOND at F=0.8552, the prior OrthoHMM CPM-M4 experiment
-at F=0.9070, and ProteinOrtho at F=0.9305. No OrthoFinder 3.1.5 Three
-Kingdoms result is available, so this secondary comparison is not attributed
-to the upgraded comparator. The result does not support making the
-high-sensitivity profile the default.
+SonicParanoid at corrected F=0.9908, OrthoFinder 3.1.5 sequence-only at
+F=0.9895, full OrthoFinder 3.1.5 at F=0.9886, OrthoMCL at F=0.9889,
+ProteinOrtho at F=0.9305, and the prior OrthoHMM CPM-M4 experiment at F=0.9070.
+At the time of this
+experiment, no OrthoFinder 3.1.5 Three Kingdoms result was available, so this
+secondary comparison was not attributed to the upgraded comparator. The
+result does not support making the high-sensitivity profile the default.
 
 | method | Three Kingdoms F | precision | recall | comparator version |
 | --- | ---: | ---: | ---: | --- |
+| SonicParanoid | 0.9908 | 0.9934 | 0.9882 | 2.0.9; corrected native table conversion |
+| OrthoFinder sequence-only | 0.9895 | 0.9902 | 0.9887 | 3.1.5 pre-phylogenetic MCL checkpoint |
+| OrthoMCL | 0.9889 | 1.0000 | 0.9781 | 1.4; native final groups |
+| OrthoFinder full | 0.9886 | 1.0000 | 0.9774 | 3.1.5 full pipeline |
 | ProteinOrtho | 0.9305 | 1.0000 | 0.8700 | recorded benchmark output |
 | OrthoHMM prior CPM-M4 experiment | 0.9070 | 1.0000 | 0.8298 | historical experimental output |
-| SonicParanoid | 0.8859 | 1.0000 | 0.7952 | recorded benchmark output |
-| OrthoFinder DIAMOND | 0.8552 | 1.0000 | 0.7470 | 2.5.5 |
+| OrthoFinder DIAMOND | 0.9879 | 1.0000 | 0.9761 | 2.5.5; restored identifiers |
 | OrthoHMM high sensitivity | 0.8263 | 1.0000 | 0.7040 | fresh production result |
 | OrthoHMM previous fixed CPM production | 0.0003 | 1.0000 | 0.0001 | historical production output |
+
+The SonicParanoid and OrthoFinder Three Kingdoms values were corrected post
+hoc on 2026-09-10. The prior parser mishandled SonicParanoid's species columns,
+and the prior OrthoFinder score did not restore sanitized identifiers. These
+corrections strengthen, rather than reverse, the original default decision.
 
 ## Sequence-Accuracy Proposal Assessment
 

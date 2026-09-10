@@ -95,12 +95,18 @@
     "comparators": {
       "proteinortho": 0.9305,
       "orthohmm_prior_cpm_m4": 0.907,
-      "sonicparanoid": 0.8859,
-      "orthofinder_2_5_5_diamond": 0.8552,
+      "sonicparanoid": 0.9907944084555063,
+      "orthofinder_2_5_5_diamond": 0.987885462555066,
       "orthohmm_previous_fixed_cpm_production": 0.0003
     },
     "supports_new_default": false,
     "detail_artifact": "benchmark_tools/results/three_kingdoms_high_sensitivity_20260828.json"
+  },
+  "posthoc_scoring_audit": {
+    "date": "2026-09-10",
+    "corrected_comparators": ["SonicParanoid Three Kingdoms", "OrthoFinder 2.5.5 Three Kingdoms"],
+    "decision_changed": false,
+    "reason": "The original SonicParanoid parser mishandled species-column cells, and OrthoFinder-sanitized identifiers were not restored before BUSCO scoring."
   },
   "implementation": {
     "production_profile": "high_sensitivity",

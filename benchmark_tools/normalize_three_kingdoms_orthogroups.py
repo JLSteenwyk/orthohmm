@@ -11,6 +11,64 @@ from collections.abc import Iterable, Iterator
 from pathlib import Path
 
 
+_SONICPARANOID_METADATA = (
+    "group_id",
+    "group_size",
+    "sp_in_grp",
+    "seed_ortholog_cnt",
+)
+
+
+def iter_sonicparanoid(path: Path) -> Iterator[tuple[str, tuple[str, ...]]]:
+    """Yield groups from SonicParanoid's species-column output."""
+    observed_groups: set[str] = set()
+    with path.open(newline="") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        if not reader.fieldnames or tuple(reader.fieldnames[:4]) != _SONICPARANOID_METADATA:
+            raise ValueError(
+                f"Unexpected SonicParanoid columns in {path}: {reader.fieldnames}"
+            )
+        species_columns = reader.fieldnames[4:]
+        if not species_columns:
+            raise ValueError(f"No species columns in SonicParanoid table: {path}")
+
+        for line_number, row in enumerate(reader, start=2):
+            group = row["group_id"].strip()
+            if not group or group in observed_groups:
+                raise ValueError(
+                    f"Empty or duplicate SonicParanoid group at {path}:{line_number}: "
+                    f"{group!r}"
+                )
+            observed_groups.add(group)
+
+            genes: list[str] = []
+            occupied_species = 0
+            for column in species_columns:
+                cell = row[column]
+                if cell is None:
+                    raise ValueError(f"Truncated SonicParanoid row at {path}:{line_number}")
+                cell = cell.strip()
+                if not cell or cell == "*":
+                    continue
+                occupied_species += 1
+                genes.extend(gene.strip() for gene in cell.split(",") if gene.strip())
+
+            try:
+                expected_size = int(row["group_size"])
+                expected_species = int(row["sp_in_grp"])
+            except (TypeError, ValueError) as error:
+                raise ValueError(
+                    f"Invalid SonicParanoid counts at {path}:{line_number}"
+                ) from error
+            if len(genes) != expected_size or occupied_species != expected_species:
+                raise ValueError(
+                    f"SonicParanoid count mismatch at {path}:{line_number}: "
+                    f"found {len(genes)} genes in {occupied_species} species, expected "
+                    f"{expected_size} genes in {expected_species} species"
+                )
+            yield group, tuple(genes)
+
+
 def iter_fastoma(path: Path) -> Iterator[tuple[str, tuple[str, ...]]]:
     """Yield groups from FastOMA's two-column OrthologousGroups.tsv."""
     groups: OrderedDict[str, list[str]] = OrderedDict()
@@ -88,7 +146,9 @@ def write_groups(
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("format", choices=("fastoma", "root-hogs", "orthomcl"))
+    parser.add_argument(
+        "format", choices=("fastoma", "root-hogs", "orthomcl", "sonicparanoid")
+    )
     parser.add_argument("input", type=Path)
     parser.add_argument("output", type=Path)
     args = parser.parse_args()
@@ -97,6 +157,7 @@ def main() -> int:
         "fastoma": iter_fastoma,
         "root-hogs": iter_root_hogs,
         "orthomcl": iter_orthomcl,
+        "sonicparanoid": iter_sonicparanoid,
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)
     group_count, gene_count = write_groups(readers[args.format](args.input), args.output)

@@ -34,7 +34,7 @@ for required in "${PYTHON_BIN}" "${ORTHOMCL_PERL}" "${BLASTALL}" "${FORMATDB}" \
     "${SCRIPT_DIR}/convert_orthomcl_blast.py" \
     "${SCRIPT_DIR}/parallelize_orthomcl_pairs.py" \
     "${SCRIPT_DIR}/normalize_three_kingdoms_orthogroups.py" \
-    "${BASE}/qfo_benchmark/og_to_pairwise.py" \
+    "${SCRIPT_DIR}/orthomcl_matrix_to_pairwise.py" \
     "${SCRIPT_DIR}/qfo_filter_pairs.py" \
     "${BASE}/qfo_benchmark/benchmark-webservice/reference_data/2020/mapping.json.gz"; do
     [[ -s "${required}" && -x "${required}" || -s "${required}" ]] || {
@@ -263,8 +263,23 @@ if [[ ! -e "${STAGE_DIR}/pairs.complete" ]]; then
         orthomcl "${OUTDIR}/all_orthomcl.out" "${OUTDIR}/orthogroups.txt.partial" \
         > "${OUTDIR}/pairs.log" 2>&1
     mv "${OUTDIR}/orthogroups.txt.partial" "${OUTDIR}/orthogroups.txt"
-    "${PYTHON_BIN}" "${BASE}/qfo_benchmark/og_to_pairwise.py" \
-        "${OUTDIR}/orthogroups.txt" "${INPUT_DIR}" \
+    mapfile -t native_outputs < <(
+        find "${TOOL_DIR}" -mindepth 2 -maxdepth 2 -type f \
+            -name all_orthomcl.out -size +0c -print
+    )
+    if [[ ${#native_outputs[@]} -ne 1 ]]; then
+        echo "Expected one completed native OrthoMCL result; found ${#native_outputs[@]}" >&2
+        exit 1
+    fi
+    readonly NATIVE_RUN_DIR=$(dirname "${native_outputs[0]}")
+    readonly NATIVE_MATRIX="${NATIVE_RUN_DIR}/tmp/all_ortho.mtx"
+    readonly NATIVE_INDEX="${NATIVE_RUN_DIR}/tmp/all_ortho.idx"
+    [[ -s "${NATIVE_MATRIX}" && -s "${NATIVE_INDEX}" ]] || {
+        echo "Native OrthoMCL matrix or index is missing from ${NATIVE_RUN_DIR}" >&2
+        exit 1
+    }
+    "${PYTHON_BIN}" "${SCRIPT_DIR}/orthomcl_matrix_to_pairwise.py" \
+        "${NATIVE_MATRIX}" "${NATIVE_INDEX}" "${GG_FILE}" \
         > "${OUTDIR}/pairs.tsv.partial" 2>> "${OUTDIR}/pairs.log"
     mv "${OUTDIR}/pairs.tsv.partial" "${OUTDIR}/pairs.tsv"
     "${PYTHON_BIN}" "${SCRIPT_DIR}/qfo_filter_pairs.py" \
@@ -273,8 +288,11 @@ if [[ ! -e "${STAGE_DIR}/pairs.complete" ]]; then
         "${OUTDIR}/pairs.qfo.tsv.partial" >> "${OUTDIR}/pairs.log" 2>&1
     mv "${OUTDIR}/pairs.qfo.tsv.partial" "${OUTDIR}/pairs.qfo.tsv"
     [[ -s "${OUTDIR}/pairs.qfo.tsv" ]] || { echo "No QfO pairs were retained" >&2; exit 1; }
+    printf '%s\n' "native OrthoMCL cross-species ortholog/co-ortholog matrix edges" \
+        > "${OUTDIR}/pair_source.txt"
     sha256sum "${OUTDIR}/all_orthomcl.out" "${OUTDIR}/orthogroups.txt" \
-        "${OUTDIR}/pairs.qfo.tsv" > "${OUTDIR}/result.sha256"
+        "${NATIVE_MATRIX}" "${NATIVE_INDEX}" "${OUTDIR}/pairs.qfo.tsv" \
+        > "${OUTDIR}/result.sha256"
     stage_complete
 fi
 [[ -s "${OUTDIR}/orthogroups.txt" && -s "${OUTDIR}/pairs.qfo.tsv" ]] || {

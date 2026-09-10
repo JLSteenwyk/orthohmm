@@ -24,6 +24,10 @@ def filter_pairs(input_path, output_path, valid_ids):
                 raise ValueError(
                     f"Expected two tab-separated IDs at {input_path}:{line_number}"
                 )
+            if fields[0] == fields[1]:
+                raise ValueError(f"Self-pair at {input_path}:{line_number}")
+            if fields[0] > fields[1]:
+                raise ValueError(f"Noncanonical pair at {input_path}:{line_number}")
             total += 1
             if fields[0] in valid_ids and fields[1] in valid_ids:
                 output_handle.write(line)

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "benchmark": "Three Kingdoms BUSCO",
   "priority": "secondary",
-  "generated_at": "2026-09-10T08:43:36.273821+00:00",
+  "generated_at": "2026-09-10T09:37:06.825996+00:00",
   "dataset": {
     "proteomes": 12,
     "proteins": 443217,
@@ -32,8 +32,8 @@
         "false_positive_gene_pairs": 0,
         "false_negative_gene_pairs": 2176,
         "precision": 1.0,
-        "recall": 0.704,
-        "f_score": 0.8263,
+        "recall": 0.7040261153427638,
+        "f_score": 0.826309067688378,
         "reference_gene_coverage": 1.0
       },
       "performance": {
@@ -69,8 +69,8 @@
         "false_positive_gene_pairs": 0,
         "false_negative_gene_pairs": 1667,
         "precision": 1.0,
-        "recall": 0.7733,
-        "f_score": 0.8721,
+        "recall": 0.7732589771490751,
+        "f_score": 0.872133159469203,
         "reference_gene_coverage": 1.0
       },
       "performance": {
@@ -106,8 +106,8 @@
         "false_positive_gene_pairs": 0,
         "false_negative_gene_pairs": 166,
         "precision": 1.0,
-        "recall": 0.9774,
-        "f_score": 0.9886,
+        "recall": 0.9774211099020674,
+        "f_score": 0.9885816480946484,
         "reference_gene_coverage": 1.0
       },
       "performance": {
@@ -142,9 +142,9 @@
         "true_positive_gene_pairs": 7269,
         "false_positive_gene_pairs": 72,
         "false_negative_gene_pairs": 83,
-        "precision": 0.9902,
-        "recall": 0.9887,
-        "f_score": 0.9895,
+        "precision": 0.9901920719248059,
+        "recall": 0.9887105549510338,
+        "f_score": 0.9894507588647655,
         "reference_gene_coverage": 1.0
       },
       "performance": {
@@ -180,8 +180,8 @@
         "false_positive_gene_pairs": 0,
         "false_negative_gene_pairs": 956,
         "precision": 1.0,
-        "recall": 0.87,
-        "f_score": 0.9305,
+        "recall": 0.8699673558215452,
+        "f_score": 0.9304626127436718,
         "reference_gene_coverage": 0.9597051597051597
       },
       "performance": {
@@ -211,15 +211,15 @@
       "score": {
         "reference_orthogroups": 255,
         "reference_genes": 2035,
-        "reference_genes_in_prediction": 1787,
+        "reference_genes_in_prediction": 2031,
         "predicted_orthogroups": 19853,
-        "true_positive_gene_pairs": 5846,
-        "false_positive_gene_pairs": 0,
-        "false_negative_gene_pairs": 1506,
-        "precision": 1.0,
-        "recall": 0.7952,
-        "f_score": 0.8859,
-        "reference_gene_coverage": 0.8781326781326781
+        "true_positive_gene_pairs": 7265,
+        "false_positive_gene_pairs": 48,
+        "false_negative_gene_pairs": 87,
+        "precision": 0.9934363462327362,
+        "recall": 0.9881664853101197,
+        "f_score": 0.9907944084555063,
+        "reference_gene_coverage": 0.9980343980343981
       },
       "performance": {
         "wall_s": 4479,
@@ -233,8 +233,8 @@
         "slurm_job_id": null,
         "recovery_slurm_job_id": null,
         "source_commit": null,
-        "orthogroups_sha256": "e2f9648681fcb3303c5f2f0095b88f06fe211f5d8da8a1214f27477c8c5710b9",
-        "score_sha256": "7d0f921ff11160c24652c096c643a06fa98bf16c913984889c0eee0f20eb67fb"
+        "orthogroups_sha256": "f5902139fc2bfae2864f98c41b40f39c16c740d8a66b2e6ab3f2c1d1697a7c3a",
+        "score_sha256": "b3cd784d14b63d49a6958efa277789dd349ec0cc65d0c846f169bb30392a9758"
       }
     },
     {
@@ -254,8 +254,8 @@
         "false_positive_gene_pairs": 0,
         "false_negative_gene_pairs": 1787,
         "precision": 1.0,
-        "recall": 0.7569,
-        "f_score": 0.8617,
+        "recall": 0.7569368879216539,
+        "f_score": 0.8616551830920491,
         "reference_gene_coverage": 0.8943488943488943
       },
       "performance": {
@@ -291,8 +291,8 @@
         "false_positive_gene_pairs": 0,
         "false_negative_gene_pairs": 161,
         "precision": 1.0,
-        "recall": 0.9781,
-        "f_score": 0.9889,
+        "recall": 0.97810119695321,
+        "f_score": 0.9889293818331844,
         "reference_gene_coverage": 0.9965601965601966
       },
       "performance": {

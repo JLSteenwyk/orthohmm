@@ -50,15 +50,15 @@
     },
     {
       "tool": "SonicParanoid",
-      "f_score": 0.8859,
-      "precision": 1.0,
-      "recall": 0.7952
+      "f_score": 0.9907944084555063,
+      "precision": 0.9934363462327362,
+      "recall": 0.9881664853101197
     },
     {
       "tool": "OrthoFinder 2.5.5 DIAMOND",
-      "f_score": 0.8552,
+      "f_score": 0.987885462555066,
       "precision": 1.0,
-      "recall": 0.747
+      "recall": 0.9760609357997824
     },
     {
       "tool": "OrthoHMM previous fixed CPM production",
@@ -67,6 +67,12 @@
       "recall": 0.0001
     }
   ],
+  "posthoc_scoring_audit": {
+    "date": "2026-09-10",
+    "corrected_comparators": ["SonicParanoid", "OrthoFinder 2.5.5 DIAMOND"],
+    "decision_changed": false,
+    "reason": "The original SonicParanoid parser mishandled species-column cells, and OrthoFinder-sanitized identifiers were not restored before BUSCO scoring."
+  },
   "checksums": {
     "metrics_sha256": "73342f751abc0e96e039832dbbbedb049c1596392db5b176a7b2a5d6e880afd2",
     "orthogroups_sha256": "28ba45202afc7f51e719d59405674023c9b284a2d5ea18575b03c7b949e13db1",

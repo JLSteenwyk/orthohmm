@@ -1,3 +1,5 @@
+import pytest
+
 from benchmark_tools.summarize_three_kingdoms_parity import (
     METHODS,
     format_duration,
@@ -28,7 +30,7 @@ def test_parse_score(tmp_path):
     assert result["reference_genes_in_prediction"] == 1820
     assert result["predicted_orthogroups"] == 28019
     assert result["precision"] == 1.0
-    assert result["f_score"] == 0.8617
+    assert result["f_score"] == pytest.approx(2 * 5565 / (2 * 5565 + 1787))
     assert result["reference_gene_coverage"] == 1820 / 2035
 
 

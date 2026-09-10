@@ -89,10 +89,16 @@
       "comparators": [
         {"tool": "ProteinOrtho", "f_score": 0.9305, "precision": 1.0, "recall": 0.87},
         {"tool": "OrthoHMM prior CPM-M4", "f_score": 0.907, "precision": 1.0, "recall": 0.8298},
-        {"tool": "SonicParanoid", "f_score": 0.8859, "precision": 1.0, "recall": 0.7952},
-        {"tool": "OrthoFinder 2.5.5", "f_score": 0.8552, "precision": 1.0, "recall": 0.747}
+        {"tool": "SonicParanoid", "f_score": 0.9907944084555063, "precision": 0.9934363462327362, "recall": 0.9881664853101197},
+        {"tool": "OrthoFinder 2.5.5", "f_score": 0.987885462555066, "precision": 1.0, "recall": 0.9760609357997824}
       ]
     }
+  },
+  "posthoc_scoring_audit": {
+    "date": "2026-09-10",
+    "corrected_comparators": ["SonicParanoid Three Kingdoms", "OrthoFinder 2.5.5 Three Kingdoms"],
+    "decision_changed": false,
+    "reason": "The original SonicParanoid parser mishandled species-column cells, and OrthoFinder-sanitized identifiers were not restored before BUSCO scoring."
   },
   "experiments": [
     {"candidate": "selective single-copy weakest-member calibration", "orthobench_f": 70.5, "decision": "retain_opt_in", "implementation_commit": "6d48b35", "result_commit": "90d591a"},

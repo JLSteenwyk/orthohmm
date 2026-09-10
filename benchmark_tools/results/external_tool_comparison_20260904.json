@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-04",
+  "generated_at": "2026-09-10",
   "qfo": {
     "benchmark": "QfO 2020 retained six-metric assessment",
     "summary_statistic": "unweighted arithmetic mean of VGNC F, SwissTrees F, TreeFam-A F, EC, GO, and FAS",
@@ -18,16 +18,30 @@
         "mean": 0.7820708882895963
       },
       {
+        "method": "SonicParanoid 2.0.9",
+        "scores": {
+          "VGNC F": 0.9829419349383838,
+          "SwissTrees F": 0.7771065227399168,
+          "TreeFam-A F": 0.7335313708124016,
+          "EC": 0.87166642,
+          "GO": 0.45441311,
+          "FAS": 0.7338243932523304
+        },
+        "mean": 0.7589139586238387,
+        "pair_source": "native SonicParanoid species-pair tables"
+      },
+      {
         "method": "ProteinOrtho 6.3.6",
         "scores": {
-          "VGNC F": 0.8931938422371614,
-          "SwissTrees F": 0.7432492030931073,
-          "TreeFam-A F": 0.6424804646614193,
-          "EC": 0.94836975,
-          "GO": 0.47959714,
-          "FAS": 0.7995163338305089
+          "VGNC F": 0.9544967191319639,
+          "SwissTrees F": 0.6978352643182929,
+          "TreeFam-A F": 0.6061325924415994,
+          "EC": 0.96283793,
+          "GO": 0.4859624,
+          "FAS": 0.8113319140954288
         },
-        "mean": 0.7510677889703662
+        "mean": 0.7530994699978808,
+        "pair_source": "native ProteinOrtho graph"
       },
       {
         "method": "OrthoHMM phylogeny satellite_v2",
@@ -64,18 +78,6 @@
           "FAS": 0.7747943345202203
         },
         "mean": 0.6825484075119435
-      },
-      {
-        "method": "SonicParanoid 2.0.9",
-        "scores": {
-          "VGNC F": 0.545708643475619,
-          "SwissTrees F": 0.2598791000679922,
-          "TreeFam-A F": 0.3388822579203528,
-          "EC": 0.9601673,
-          "GO": 0.51305182,
-          "FAS": 0.7426694700290151
-        },
-        "mean": 0.5600597652488298
       },
       {
         "method": "OrthoFinder 3.1.5 sequence-only checkpoint",
@@ -127,6 +129,23 @@
         "pairs": "qfo_benchmark/results/fastoma/pairs.qfo.tsv",
         "assessment": "qfo_benchmark/scoring/fastoma"
       }
+    },
+    "pair_source_audit": {
+      "native_pair_methods": [
+        "OrthoFinder 3.1.5 full",
+        "OrthoHMM phylogeny satellite_v2",
+        "FastOMA 0.3.5",
+        "SonicParanoid 2.0.9",
+        "ProteinOrtho 6.3.6"
+      ],
+      "group_clique_methods": [
+        "OrthoHMM high sensitivity",
+        "OrthoFinder 3.1.5 sequence-only checkpoint"
+      ],
+      "retracted_means": {
+        "SonicParanoid 2.0.9 group clique": 0.5600597652488298,
+        "ProteinOrtho 6.3.6 group clique": 0.7510677889703662
+      }
     }
   },
   "orthobench": {
@@ -143,68 +162,74 @@
       },
       {
         "method": "OrthoFinder 3.1.5 full",
-        "f_score_percent": 72.7,
-        "precision_percent": 66.1,
-        "recall_percent": 80.9,
+        "f_score_percent": 72.736480004,
+        "precision_percent": 66.065102996,
+        "recall_percent": 80.906576631,
         "exact_refogs": 19,
         "genes_in_orthogroups": 251378,
         "coverage_percent": 100.0
       },
       {
         "method": "OrthoHMM high sensitivity",
-        "f_score_percent": 70.4,
-        "precision_percent": 78.9,
-        "recall_percent": 63.5,
+        "f_score_percent": 70.358997655,
+        "precision_percent": 78.949543952,
+        "recall_percent": 63.454478536,
         "exact_refogs": 13,
         "genes_in_orthogroups": 251378,
         "coverage_percent": 100.0
       },
       {
         "method": "OrthoFinder 3.1.5 sequence-only checkpoint",
-        "f_score_percent": 58.7,
-        "precision_percent": 45.7,
-        "recall_percent": 82.0,
+        "f_score_percent": 58.705963184,
+        "precision_percent": 45.706162743,
+        "recall_percent": 82.039827068,
         "exact_refogs": 18,
         "genes_in_orthogroups": 251378,
         "coverage_percent": 100.0
       },
       {
         "method": "OrthoMCL 1.4",
-        "f_score_percent": 55.1,
-        "precision_percent": 59.1,
-        "recall_percent": 51.6,
+        "f_score_percent": 55.065342292,
+        "precision_percent": 59.078055333,
+        "recall_percent": 51.563064181,
         "exact_refogs": 12,
         "genes_in_orthogroups": 216950,
         "coverage_percent": 86.3
       },
       {
         "method": "SonicParanoid 2.0.9",
-        "f_score_percent": 46.8,
-        "precision_percent": 36.5,
-        "recall_percent": 64.9,
+        "f_score_percent": 46.75760912,
+        "precision_percent": 36.535179568,
+        "recall_percent": 64.92280907,
         "exact_refogs": 19,
         "genes_in_orthogroups": 206466,
         "coverage_percent": 82.1
       },
       {
         "method": "ProteinOrtho 6.3.6",
-        "f_score_percent": 45.1,
-        "precision_percent": 97.1,
-        "recall_percent": 29.3,
+        "f_score_percent": 45.057346674,
+        "precision_percent": 97.056207735,
+        "recall_percent": 29.338788906,
         "exact_refogs": 6,
         "genes_in_orthogroups": 184897,
         "coverage_percent": 73.6
       },
       {
         "method": "FastOMA 0.3.5 final orthologous groups",
-        "f_score_percent": 30.9,
-        "precision_percent": 93.6,
-        "recall_percent": 18.5,
+        "f_score_percent": 30.906942172,
+        "precision_percent": 93.631476193,
+        "recall_percent": 18.508163621,
         "exact_refogs": 4,
         "genes_in_orthogroups": 130010,
         "coverage_percent": 51.7
       }
     ],
+    "score_audit": {
+      "official_evaluator_reproduced_all_records": true,
+      "independent_equal_refog_recomputation_agrees": true,
+      "native_gene_count_definition": "genes present in each retained native group output before evaluator-only singleton padding",
+      "singleton_padding_note": "SonicParanoid and ProteinOrtho normalized inputs add unassigned genes as singleton groups; singleton groups do not change pairwise precision or recall."
+    },
     "fastoma_root_hog_diagnostic": {
       "primary_result": false,
       "f_score_percent": 50.8,
@@ -235,13 +260,20 @@
     "fastoma_qfo_go_sha256": "bdd25402f31fa0fcc5c77547d19c8f10e3ab6a86c059c97d36afc5f58c9098c4",
     "fastoma_qfo_fas_sha256": "c9930705c71105c3cde1628d38ed6cbc315b7a2d00932b61826208eca1e1761b",
     "fastoma_qfo_manifest_sha256": "fdaf688b994a893004017ff89e165ba60bd5b32edd5745ce3d79c1bffd48d210",
-    "fastoma_qfo_consolidated_results_sha256": "e8e8a629903bc32f622ff5a62540f1b943ac956743cb2bb2872b50c3d81f49ce"
+    "fastoma_qfo_consolidated_results_sha256": "e8e8a629903bc32f622ff5a62540f1b943ac956743cb2bb2872b50c3d81f49ce",
+    "sonicparanoid_native_qfo_pairs_sha256": "ce01ac6492c3d59fe79e2b4298d258d864ea2925b93a02e93d257f927f4c0741",
+    "sonicparanoid_native_qfo_manifest_sha256": "2d7ca58cceec694c9d1f31257f4b9df39d0b82bc9183dc54af7b611cf98b409e",
+    "proteinortho_native_qfo_pairs_sha256": "2245d37f7a35e8764dcd35adc914a21e5f5b31fb9791478e5fc5a78445285981",
+    "proteinortho_native_qfo_manifest_sha256": "fed308265d43f1179902296458367716f49b60455c7fd0086412bb9f1047d526"
   },
-  "not_run": [
+  "not_run": [],
+  "pending": [
     {
       "method": "OrthoMCL 1.4",
       "benchmark": "QfO 2020",
-      "reason": "The complete 12-proteome OrthoBench run required more than three days for its legacy all-versus-all BLAST workflow. A 78-proteome QfO run is not computationally practical on the current system."
+      "inference_job_id": 20909,
+      "scoring_job_id": 20910,
+      "pair_source": "native cross-species OrthoMCL ortholog/co-ortholog matrix edges"
     }
   ]
 }

@@ -12,13 +12,13 @@ def test_filter_pairs_keeps_only_mapped_identifiers(tmp_path):
         json.dump({"mapping": {"A": 1, "B": 2, "C": 3}}, handle)
 
     input_path = tmp_path / "pairs.tsv"
-    input_path.write_text("A\tB\nA\tmissing\nC\tB\n")
+    input_path.write_text("A\tB\nA\tmissing\nB\tC\n")
     output_path = tmp_path / "pairs.qfo.tsv"
 
     total, retained = filter_pairs(input_path, output_path, load_mapping(mapping_path))
 
     assert (total, retained) == (3, 2)
-    assert output_path.read_text() == "A\tB\nC\tB\n"
+    assert output_path.read_text() == "A\tB\nB\tC\n"
 
 
 def test_filter_pairs_rejects_malformed_rows(tmp_path):
@@ -26,4 +26,16 @@ def test_filter_pairs_rejects_malformed_rows(tmp_path):
     input_path.write_text("A\tB\textra\n")
 
     with pytest.raises(ValueError, match="Expected two tab-separated IDs"):
+        filter_pairs(input_path, tmp_path / "out.tsv", {"A": 1, "B": 2})
+
+
+@pytest.mark.parametrize(
+    ("row", "message"),
+    [("A\tA\n", "Self-pair"), ("B\tA\n", "Noncanonical pair")],
+)
+def test_filter_pairs_rejects_invalid_pairs(tmp_path, row, message):
+    input_path = tmp_path / "pairs.tsv"
+    input_path.write_text(row)
+
+    with pytest.raises(ValueError, match=message):
         filter_pairs(input_path, tmp_path / "out.tsv", {"A": 1, "B": 2})

@@ -22,18 +22,26 @@ primary OrthoFinder row is the fresh 3.1.5 result.
 
 | method | OrthoBench F | P | R | exact | QfO mean | Three Kingdoms F | P | R |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| OrthoFinder 3.1.5 DIAMOND | 72.7 | 66.1 | 80.9 | 19 | 0.782071 | - | - | - |
+| OrthoFinder 3.1.5 DIAMOND | 72.7 | 66.1 | 80.9 | 19 | 0.782071 | 0.9886 | 1.0000 | 0.9774 |
 | OrthoHMM selective HMM jackknife | 70.5 | 78.7 | 63.8 | 12 | - | - | - | - |
 | OrthoHMM high sensitivity | 70.4 | 78.9 | 63.5 | 13 | 0.682548 | 0.8263 | 1.0000 | 0.7040 |
-| FastOMA, historical | 50.8 | 52.0 | 49.7 | 21 | - | - | - | - |
-| SonicParanoid, historical | 46.8 | 36.5 | 64.9 | 19 | - | 0.8859 | 1.0000 | 0.7952 |
-| ProteinOrtho, historical | 45.1 | 97.1 | 29.3 | 6 | - | 0.9305 | 1.0000 | 0.8700 |
-| OrthoFinder 2.5.5 DIAMOND | - | - | - | - | - | 0.8552 | 1.0000 | 0.7470 |
+| FastOMA 0.3.5 final OGs | 30.9 | 93.6 | 18.5 | 4 | 0.724519 | 0.8617 | 1.0000 | 0.7569 |
+| SonicParanoid 2.0.9 | 46.8 | 36.5 | 64.9 | 19 | 0.758914 | 0.9908 | 0.9934 | 0.9882 |
+| ProteinOrtho 6.3.6 | 45.1 | 97.1 | 29.3 | 6 | 0.753099 | 0.9305 | 1.0000 | 0.8700 |
+| OrthoFinder 2.5.5 DIAMOND | - | - | - | - | - | 0.9879 | 1.0000 | 0.9761 |
 | OrthoHMM prior CPM-M4 experiment | - | - | - | - | - | 0.9070 | 1.0000 | 0.8298 |
 
 Against OrthoFinder 3.1.5 on OrthoBench, selective jackknife is +12.6 points
 in precision, -17.1 points in recall, -2.2 points in F-score, and -7 exact
 RefOGs. The limiting problem is recall, not precision.
+
+The external comparator values were audited on 2026-09-10. SonicParanoid's
+species-column output had been whitespace-parsed, OrthoFinder's sanitized
+identifiers had not been restored for Three Kingdoms, and the old QfO
+SonicParanoid and ProteinOrtho rows used group cliques instead of native pair
+relations. FastOMA's final orthologous groups are the primary OrthoBench output;
+the earlier 50.8 root-HOG score is diagnostic only. These corrections do not
+change this experiment's OrthoBench gate or candidate decision.
 
 ## QfO Metrics
 

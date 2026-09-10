@@ -147,6 +147,31 @@ def parse_score(path: Path) -> dict[str, int | float]:
     missing = {key for key, _ in SCORE_FIELDS.values()} - result.keys()
     if missing:
         raise ValueError(f"Missing fields in {path}: {sorted(missing)}")
+
+    true_positive = int(result["true_positive_gene_pairs"])
+    false_positive = int(result["false_positive_gene_pairs"])
+    false_negative = int(result["false_negative_gene_pairs"])
+    precision_denominator = true_positive + false_positive
+    recall_denominator = true_positive + false_negative
+    precision = true_positive / precision_denominator if precision_denominator else 0.0
+    recall = true_positive / recall_denominator if recall_denominator else 0.0
+    f_score = (
+        2 * precision * recall / (precision + recall)
+        if precision + recall
+        else 0.0
+    )
+    for key, exact in (
+        ("precision", precision),
+        ("recall", recall),
+        ("f_score", f_score),
+    ):
+        if abs(float(result[key]) - exact) > 0.00005:
+            raise ValueError(
+                f"Reported {key} in {path} disagrees with TP/FP/FN counts: "
+                f"{result[key]} versus {exact}"
+            )
+        result[key] = exact
+
     reference_genes = int(result["reference_genes"])
     represented = int(result["reference_genes_in_prediction"])
     result["reference_gene_coverage"] = represented / reference_genes
@@ -324,6 +349,7 @@ def render_markdown(report: dict[str, Any]) -> str:
             "- OrthoFinder sequence-only time is derived from the matching full 3.1.5 run at its MCL checkpoint; it is not a separate timed invocation.",
             "- OrthoFinder 3.1.5 sanitizes `:`, `,`, `(`, and `)` in reported accessions. Full-pipeline identifiers were restored from the exact staged FASTA headers with ambiguity and coverage checks before scoring.",
             "- ProteinOrtho and SonicParanoid inference outputs were retained because they already used this exact biological input; they were rescored with the common evaluator for this report.",
+            "- SonicParanoid's species-column table is parsed using its four metadata columns, comma-delimited member cells, declared group sizes, and declared occupied-species counts. The earlier whitespace-only conversion and its 0.8859 F-score are invalid and retracted; the corrected score is 0.9908.",
             "- Root-HOG outputs are reported for phylogenetic pipelines, while flat orthogroups are reported for sequence-only methods.",
             "- OrthoMCL used its native legacy BLAST and inference rules. Its serial BioPerl BLAST-to-BPO conversion was replaced by a byte-compatible streaming converter validated against 6,417,790 native records, and independent species-pair calculations were process-parallelized before native matrix construction and MCL. Its wall time sums the separately measured BLAST, conversion, indexing, and accepted downstream stages. Failed validation attempts are excluded; the accepted 66-pair stage was rerun from zero checkpoints.",
             "- OrthoMCL peak memory is the sampled sum of worker RSS values. Forked workers share copy-on-write pages, so 89.03 GiB is a conservative accounting value rather than physical unique memory.",

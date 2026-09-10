@@ -9,12 +9,15 @@ not an official single QfO score.
 | Rank | Method | VGNC F | SwissTrees F | TreeFam-A F | EC | GO | FAS | Mean |
 | ---: | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | 1 | OrthoFinder 3.1.5 full | 0.988 | 0.859 | 0.743 | 0.942 | 0.468 | 0.692 | 0.782 |
-| 2 | ProteinOrtho 6.3.6 | 0.893 | 0.743 | 0.642 | 0.948 | 0.480 | 0.800 | 0.751 |
-| 3 | OrthoHMM phylogeny `satellite_v2` | 0.901 | 0.792 | 0.575 | 0.969 | 0.490 | 0.762 | 0.748 |
-| 4 | FastOMA 0.3.5 | 0.951 | 0.763 | 0.631 | 0.917 | 0.434 | 0.651 | 0.725 |
-| 5 | OrthoHMM high sensitivity | 0.667 | 0.674 | 0.576 | 0.931 | 0.472 | 0.775 | 0.683 |
-| 6 | SonicParanoid 2.0.9 | 0.546 | 0.260 | 0.339 | 0.960 | 0.513 | 0.743 | 0.560 |
+| 2 | SonicParanoid 2.0.9 | 0.983 | 0.777 | 0.734 | 0.872 | 0.454 | 0.734 | 0.759 |
+| 3 | ProteinOrtho 6.3.6 | 0.954 | 0.698 | 0.606 | 0.963 | 0.486 | 0.811 | 0.753 |
+| 4 | OrthoHMM phylogeny `satellite_v2` | 0.901 | 0.792 | 0.575 | 0.969 | 0.490 | 0.762 | 0.748 |
+| 5 | FastOMA 0.3.5 | 0.951 | 0.763 | 0.631 | 0.917 | 0.434 | 0.651 | 0.725 |
+| 6 | OrthoHMM high sensitivity | 0.667 | 0.674 | 0.576 | 0.931 | 0.472 | 0.775 | 0.683 |
 | 7 | OrthoFinder 3.1.5 sequence-only checkpoint | 0.140 | 0.700 | 0.711 | 0.753 | 0.408 | 0.558 | 0.545 |
+
+SonicParanoid and ProteinOrtho are scored from their native pairwise outputs.
+Their earlier group-clique means, 0.560 and 0.751, are invalid and retracted.
 
 FastOMA produced 15,320,615 canonical pair rows, of which 15,277,489 passed
 QfO identifier validation. Its retained-six mean is 0.724519. OrthoHMM
@@ -29,7 +32,7 @@ The primary FastOMA result is its final `OrthologousGroups.tsv`. Its root-HOG
 score is a useful diagnostic but is not substituted for the tool's final OG
 output.
 
-| Rank | Method | F-score (%) | Precision (%) | Recall (%) | Exact RefOGs | Genes in OGs |
+| Rank | Method | F-score (%) | Precision (%) | Recall (%) | Exact RefOGs | Native genes reported |
 | ---: | --- | ---: | ---: | ---: | ---: | ---: |
 | 1 | OrthoHMM phylogeny `satellite_v2` | 74.1 | 81.8 | 67.8 | 15 | 251,378 (100.0%) |
 | 2 | OrthoFinder 3.1.5 full | 72.7 | 66.1 | 80.9 | 19 | 251,378 (100.0%) |
@@ -40,17 +43,24 @@ output.
 | 7 | ProteinOrtho 6.3.6 | 45.1 | 97.1 | 29.3 | 6 | 184,897 (73.6%) |
 | 8 | FastOMA 0.3.5 final OGs | 30.9 | 93.6 | 18.5 | 4 | 130,010 (51.7%) |
 
+All eight rows were rerun through the official OrthoBench evaluator and also
+recomputed with the repository's independent equal-RefOG implementation; both
+calculations agree. “Native genes reported” counts genes in each tool's
+retained native group output. The normalized SonicParanoid and ProteinOrtho
+evaluator inputs add unassigned proteins as singleton groups to satisfy the
+input-coverage requirement. Those singleton groups do not alter the pairwise
+precision or recall.
+
 On OrthoBench, OrthoHMM `satellite_v2` leads this set and exceeds full
-OrthoFinder by 1.4 F-score points. On QfO, it ranks third and trails full
+OrthoFinder by 1.4 F-score points. On QfO, it ranks fourth and trails full
 OrthoFinder by 0.033828 mean score. This split means there is no defensible
 claim that one method wins “overall” without choosing an explicit weighting
 between benchmarks.
 
-Classic OrthoMCL QfO was not launched. Its complete 12-proteome OrthoBench run
-took 3 days 3 hours with a 9.7 GB all-versus-all BLAST table. Scaling that
-legacy quadratic workflow to 78 QfO proteomes is not a practical comparator
-run on the current system. Both retained OrthoMCL OrthoBench runs reproduce
-the reported score.
+Classic OrthoMCL QfO is running as inference job `20909`, followed by official
+scoring job `20910`. It uses 180 BLAST threads and will submit validated native
+cross-species ortholog/co-ortholog matrix edges. Both retained OrthoMCL
+OrthoBench runs reproduce the reported score.
 
 Exact values, source paths, job IDs, and checksums are in
 `external_tool_comparison_20260904.json`.

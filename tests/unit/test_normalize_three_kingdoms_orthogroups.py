@@ -2,8 +2,36 @@ from benchmark_tools.normalize_three_kingdoms_orthogroups import (
     iter_fastoma,
     iter_orthomcl,
     iter_root_hogs,
+    iter_sonicparanoid,
     write_groups,
 )
+
+
+def test_normalize_sonicparanoid(tmp_path):
+    source = tmp_path / "ortholog_groups.tsv"
+    source.write_text(
+        "group_id\tgroup_size\tsp_in_grp\tseed_ortholog_cnt\tsp1\tsp2\n"
+        "1\t3\t2\t2\ta,b\tc\n"
+        "2\t2\t1\t1\t*\td,e\n"
+    )
+
+    assert list(iter_sonicparanoid(source)) == [
+        ("1", ("a", "b", "c")),
+        ("2", ("d", "e")),
+    ]
+
+
+def test_normalize_sonicparanoid_rejects_bad_counts(tmp_path):
+    source = tmp_path / "ortholog_groups.tsv"
+    source.write_text(
+        "group_id\tgroup_size\tsp_in_grp\tseed_ortholog_cnt\tsp1\tsp2\n"
+        "1\t4\t2\t2\ta,b\tc\n"
+    )
+
+    import pytest
+
+    with pytest.raises(ValueError, match="count mismatch"):
+        list(iter_sonicparanoid(source))
 
 
 def test_normalize_fastoma(tmp_path):
