@@ -39,6 +39,20 @@ The completed FastOMA result and the current cross-tool QfO/OrthoBench tables
 are recorded in `results/EXTERNAL_TOOL_COMPARISON_20260904.md` and its paired
 machine-readable JSON file.
 
+## OrthoMCL comparator
+
+Run the restartable OrthoMCL 1.4 QfO benchmark and queue official scoring:
+
+```bash
+benchmark_tools/submit_orthomcl_qfo.sh
+```
+
+This retains OrthoMCL 1.4's legacy BLAST 2.2.13 search and MCL 02-063
+clustering defaults. The runner replaces the impractical serial BPO parser
+with the byte-compatible streaming converter validated against native output,
+and uses checkpointed process parallelism for independent species pairs. A
+rerun with the same output directory resumes at the first incomplete stage.
+
 ## Production OrthoHMM performance harness
 
 Use the production CLI benchmark harness for runtime and memory measurements:
