@@ -118,7 +118,7 @@ run_orthofinder_full() {
         > "${OUTDIR}/inference_wall_time_s.txt"
     local results_dir
     results_dir=$(orthofinder_results_dir "${stage_dir}")
-    orthofinder_collect_orthogroups "${results_dir}" "${OUTDIR}"
+    orthofinder_collect_orthogroups "${results_dir}" "${OUTDIR}" "${stage_dir}"
     awk '/Maximum resident set size/ {print $NF}' "${OUTDIR}/time.log" \
         > "${OUTDIR}/peak_rss_kib.txt"
 }

@@ -58,7 +58,7 @@ else
 fi
 
 results_dir=$(orthofinder_results_dir "${STAGE_DIR}")
-orthofinder_collect_orthogroups "${results_dir}" "${OUTDIR}"
+orthofinder_collect_orthogroups "${results_dir}" "${OUTDIR}" "${STAGE_DIR}"
 "${PYTHON_BIN}" "${SCRIPT_DIR}/orthofinder_to_pairwise.py" \
     "${results_dir}" > "${OUTDIR}/pairs.tsv" 2>> "${OUTDIR}/run.log"
 "${PYTHON_BIN}" "${SCRIPT_DIR}/qfo_filter_pairs.py" \

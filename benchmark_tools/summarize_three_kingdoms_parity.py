@@ -248,7 +248,9 @@ def format_duration(seconds: int | float | None) -> str:
 
 
 def render_markdown(report: dict[str, Any]) -> str:
-    rows = sorted(report["methods"], key=lambda method: method["score"]["f_score"], reverse=True)
+    rows = sorted(
+        report["methods"], key=lambda method: method["score"]["f_score"], reverse=True
+    )
     lines = [
         "# Three Kingdoms Method Parity Benchmark",
         "",
@@ -280,6 +282,8 @@ def render_markdown(report: dict[str, Any]) -> str:
     phylogeny = by_key["orthohmm_phylogeny_satellite_v2"]["score"]["f_score"]
     of_full = by_key["orthofinder_3_1_5_full"]["score"]["f_score"]
     of_sequence = by_key["orthofinder_3_1_5_sequence_only"]["score"]["f_score"]
+    of_full_score = by_key["orthofinder_3_1_5_full"]["score"]
+    of_sequence_score = by_key["orthofinder_3_1_5_sequence_only"]["score"]
     orthomcl = by_key["orthomcl_1_4"]["score"]["f_score"]
     lines.extend(
         [
@@ -289,8 +293,17 @@ def render_markdown(report: dict[str, Any]) -> str:
             (
                 f"OrthoHMM phylogeny improves F-score by {phylogeny - sensitive:+.4f} "
                 f"over high sensitivity alone and is {phylogeny - of_full:+.4f} versus "
-                f"OrthoFinder's full root-HOG output. OrthoFinder's sequence-only "
-                f"checkpoint remains higher by {of_sequence - phylogeny:.4f}."
+                "OrthoFinder's full root-HOG output."
+            ),
+            "",
+            (
+                f"OrthoFinder sequence-only is {of_sequence - of_full:.4f} above its "
+                "full root-HOG output. The full pipeline removes "
+                f"{of_sequence_score['false_positive_gene_pairs'] - of_full_score['false_positive_gene_pairs']:,} "
+                "false-positive pairs but has "
+                f"{of_full_score['false_negative_gene_pairs'] - of_sequence_score['false_negative_gene_pairs']:,} "
+                "more false-negative pairs, so its precision gain does not fully offset "
+                "the recall loss under this BUSCO-family F-score."
             ),
             "",
             (
@@ -309,6 +322,7 @@ def render_markdown(report: dict[str, Any]) -> str:
             "## Provenance Notes",
             "",
             "- OrthoFinder sequence-only time is derived from the matching full 3.1.5 run at its MCL checkpoint; it is not a separate timed invocation.",
+            "- OrthoFinder 3.1.5 sanitizes `:`, `,`, `(`, and `)` in reported accessions. Full-pipeline identifiers were restored from the exact staged FASTA headers with ambiguity and coverage checks before scoring.",
             "- ProteinOrtho and SonicParanoid inference outputs were retained because they already used this exact biological input; they were rescored with the common evaluator for this report.",
             "- Root-HOG outputs are reported for phylogenetic pipelines, while flat orthogroups are reported for sequence-only methods.",
             "- OrthoMCL used its native legacy BLAST and inference rules. Its serial BioPerl BLAST-to-BPO conversion was replaced by a byte-compatible streaming converter validated against 6,417,790 native records, and independent species-pair calculations were process-parallelized before native matrix construction and MCL. Its wall time sums the separately measured BLAST, conversion, indexing, and accepted downstream stages. Failed validation attempts are excluded; the accepted 66-pair stage was rerun from zero checkpoints.",
@@ -348,7 +362,9 @@ def build_report(root: Path) -> dict[str, Any]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
+    parser.add_argument(
+        "--root", type=Path, default=Path(__file__).resolve().parents[1]
+    )
     parser.add_argument(
         "--json-output",
         type=Path,
@@ -363,7 +379,9 @@ def main() -> int:
 
     root = args.root.resolve()
     report = build_report(root)
-    json_output = args.json_output if args.json_output.is_absolute() else root / args.json_output
+    json_output = (
+        args.json_output if args.json_output.is_absolute() else root / args.json_output
+    )
     markdown_output = (
         args.markdown_output
         if args.markdown_output.is_absolute()

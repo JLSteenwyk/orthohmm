@@ -25,7 +25,7 @@ different properties and should not be averaged without a declared weighting.
 
 | Method | QfO mean | OrthoBench F | Three Kingdoms F |
 | --- | ---: | ---: | ---: |
-| OrthoFinder 3.1.5 full | 0.7821 | 0.7270 | 0.8561 |
+| OrthoFinder 3.1.5 full | 0.7821 | 0.7270 | 0.9886 |
 | ProteinOrtho 6.3.6 | 0.7511 | 0.4510 | 0.9305 |
 | OrthoHMM phylogeny `satellite_v2` | 0.7482 | 0.7411 | 0.8721 |
 | FastOMA 0.3.5 | 0.7245 | 0.3090 | 0.8617 |
@@ -33,6 +33,9 @@ different properties and should not be averaged without a declared weighting.
 | SonicParanoid 2.0.9 | 0.5601 | 0.4680 | 0.8859 |
 | OrthoFinder 3.1.5 sequence-only checkpoint | 0.5450 | 0.5870 | 0.9895 |
 | OrthoMCL 1.4 | Running | 0.5510 | 0.9889 |
+
+The Three Kingdoms full-pipeline score restores OrthoFinder-sanitized
+accessions from the exact staged FASTA headers before evaluation.
 
 The OrthoMCL QfO inference uses all 78 proteomes and 976,504 proteins with
 native OrthoMCL 1.4 defaults, legacy NCBI BLAST 2.2.13, and MCL 02-063. Its

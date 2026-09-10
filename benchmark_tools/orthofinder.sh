@@ -41,6 +41,7 @@ orthofinder_results_dir() {
 orthofinder_collect_orthogroups() {
     local results_dir=$1
     local output_dir=$2
+    local input_dir=$3
     local log_file="${results_dir}/Log.txt"
     local source_file="${results_dir}/Orthogroups/Orthogroups.txt"
 
@@ -53,9 +54,10 @@ orthofinder_collect_orthogroups() {
         return 1
     fi
 
-    cp "${source_file}" "${output_dir}/orthogroups.txt"
+    "${PYTHON_BIN:-python3}" "${ORTHOFINDER_SCRIPT_DIR}/restore_orthofinder_ids.py" \
+        "${input_dir}" "${source_file}" "${output_dir}/orthogroups.txt"
     printf 'OrthoFinder:v%s\n' "${ORTHOFINDER_VERSION}" > "${output_dir}/tool_version.txt"
     printf '%s\n' \
-        'Orthogroups/Orthogroups.txt (v3.1.5 root HOGs; equivalent to pre-3.1.5 N0.tsv)' \
+        'Orthogroups/Orthogroups.txt (v3.1.5 root HOGs; original FASTA IDs restored)' \
         > "${output_dir}/orthogroups_source.txt"
 }

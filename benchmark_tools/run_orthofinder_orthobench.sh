@@ -45,7 +45,7 @@ else
 fi
 
 OF_RESULTS=$(orthofinder_results_dir "${STAGE_DIR}")
-orthofinder_collect_orthogroups "${OF_RESULTS}" "${OUTDIR}"
+orthofinder_collect_orthogroups "${OF_RESULTS}" "${OUTDIR}" "${STAGE_DIR}"
 cp "${OUTDIR}/orthogroups.txt" \
     "${BASE}/benchmarks/results/orthogroups_orthofinder_v3_${SEARCH}.txt"
 

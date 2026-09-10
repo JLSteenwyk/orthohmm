@@ -2,7 +2,7 @@
   "schema_version": 1,
   "benchmark": "Three Kingdoms BUSCO",
   "priority": "secondary",
-  "generated_at": "2026-09-09T07:06:21.777074+00:00",
+  "generated_at": "2026-09-10T08:43:36.273821+00:00",
   "dataset": {
     "proteomes": 12,
     "proteins": 443217,
@@ -100,15 +100,15 @@
       "score": {
         "reference_orthogroups": 255,
         "reference_genes": 2035,
-        "reference_genes_in_prediction": 1792,
+        "reference_genes_in_prediction": 2035,
         "predicted_orthogroups": 67131,
-        "true_positive_gene_pairs": 5502,
+        "true_positive_gene_pairs": 7186,
         "false_positive_gene_pairs": 0,
-        "false_negative_gene_pairs": 1850,
+        "false_negative_gene_pairs": 166,
         "precision": 1.0,
-        "recall": 0.7484,
-        "f_score": 0.8561,
-        "reference_gene_coverage": 0.8805896805896806
+        "recall": 0.9774,
+        "f_score": 0.9886,
+        "reference_gene_coverage": 1.0
       },
       "performance": {
         "wall_s": 6332,
@@ -122,8 +122,8 @@
         "slurm_job_id": 20892,
         "recovery_slurm_job_id": null,
         "source_commit": "6bb08e5bafc791d557296f99acb80abd735ecdff",
-        "orthogroups_sha256": "4f0d1d8a43a1e8bf1d1c987587e58eddde690838a0769b8350346b3826fb55a7",
-        "score_sha256": "974f7b5b220707187b6d4e7972c8153cfdbe18a26c3a92da2acd5294c0e6c5bb"
+        "orthogroups_sha256": "cb730780d6577d446f7f30e155baa2d1800087cbafa54e128d4f52967010f9c4",
+        "score_sha256": "9657805b680c12c6b3a524b371c5edc8a7d45ab2faa926161ad917d5e1fa5523"
       }
     },
     {
