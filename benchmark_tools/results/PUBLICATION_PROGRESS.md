@@ -1209,3 +1209,20 @@ replay and verification snapshots as `ob_native_replay_20260916.json` and
 This satisfies the cached-stage equivalence gate, not the remaining publication
 requirements or end-to-end search equivalence. Commit the two new simulation
 manifests and replay evidence before submitting the selective rerun arrays.
+
+After pushing manifest/equivalence milestone **62c18a2**, submitted corrected
+variable-length OrthoHMM array **21142** and fixed-length array **21143**.
+Both use the existing generic Slurm launcher in pinned executor
+`publication_native_simulation_v3` (b66225dc5fc355702575aebe34b644916894f236),
+the new manifest/hash above and their unchanged panel roots. Each array has
+70 tasks, at most two concurrent, four CPUs and 16 GiB per task, 12-hour limit.
+Only the two OrthoHMM modes execute; OrthoFinder outputs are reused separately.
+Logs: `benchmarks/work/publication_native_simulation_logs_v3/{variable,fixed}_%A_%a.log`.
+Live squeue confirms tasks 0/1 RUNNING in both arrays; remaining tasks pending
+array limits. No corrected accuracy has been evaluated.
+
+Next required work: native completion/scoring after both corrected panels are
+terminal (reuse original arrays 21010 variable and 20957 fixed with their own
+pinned executors), restore YGOB with runtime guards, and prepare/run the
+OrthoBench factorial now that cached replay equivalence is established.
+All remaining original publication requirements remain active.
