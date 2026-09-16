@@ -29,6 +29,7 @@ from benchmark_tools.orthobench_stage_diagnostics import (
     run_official_benchmark,
 )
 from orthohmm.accuracy import (
+    load_accuracy_checkpoint,
     build_rbnh_edges,
     build_singleton_assignment_edges,
     combine_edges,
@@ -38,6 +39,7 @@ from orthohmm.externals import execute_leiden
 from orthohmm.files import fetch_fasta_files
 from orthohmm.refinement import refine_cluster_indices, DEFAULT_COPY_SPLIT_MIN_DATASET_SPECIES
 from orthohmm.search.profile_expansion import expand_profiles
+from benchmark_tools.audit_accuracy_checkpoint import audit as audit_numeric_checkpoint
 
 
 def production_refinement_hits(queries, targets, scores, gene_to_species):
@@ -72,6 +74,27 @@ def hit_arrays(all_hits, gene_to_id):
     return queries, targets, scores
 
 
+def load_replay_input(pickle_path=None, checkpoint=None, checkpoint_sha256=None):
+    if (pickle_path is None) == (checkpoint is None):
+        raise ValueError("Choose exactly one hit input format")
+    if checkpoint is not None:
+        if not checkpoint_sha256:
+            raise ValueError("Numeric checkpoint requires --checkpoint-sha256")
+        evidence = audit_numeric_checkpoint(checkpoint, checkpoint_sha256)
+        names, species, queries, targets, scores = load_accuracy_checkpoint(checkpoint, verify=False)
+        return names, species, queries, targets, scores, evidence
+    if checkpoint_sha256:
+        raise ValueError("--checkpoint-sha256 requires --accuracy-checkpoint")
+    payload = load_hits(pickle_path)
+    names = sorted({str(gene) for gene in payload["all_gene_ids"]})
+    gene_to_id = {gene: idx for idx, gene in enumerate(names)}
+    species_names = sorted({str(payload["gene_to_species"][gene]) for gene in names})
+    species_to_id = {species: idx for idx, species in enumerate(species_names)}
+    species = np.fromiter((species_to_id[str(payload["gene_to_species"][gene])] for gene in names), dtype=np.int32, count=len(names))
+    queries, targets, scores = hit_arrays(payload["all_hits"], gene_to_id)
+    return names, species, queries, targets, scores, file_provenance(pickle_path)
+
+
 def write_clusters(path: Path, clusters, gene_names) -> None:
     with path.open("w") as handle:
         for cluster in clusters:
@@ -84,7 +107,10 @@ def write_clusters(path: Path, clusters, gene_names) -> None:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--hits-pickle", required=True, type=Path)
+    inputs = parser.add_mutually_exclusive_group(required=True)
+    inputs.add_argument("--hits-pickle", type=Path)
+    inputs.add_argument("--accuracy-checkpoint", type=Path)
+    parser.add_argument("--checkpoint-sha256")
     parser.add_argument("--output-directory", required=True, type=Path)
     parser.add_argument("--json", required=True, type=Path)
     parser.add_argument("--official-benchmark", type=Path)
@@ -141,6 +167,8 @@ def main(argv=None) -> int:
         raise SystemExit(
             "--profile-iterations 2 requires --fasta-directory"
         )
+    if bool(args.accuracy_checkpoint) != bool(args.checkpoint_sha256):
+        raise SystemExit("--accuracy-checkpoint and --checkpoint-sha256 are required together")
     started = time.perf_counter()
     timings = {}
     args.output_directory.mkdir(parents=True, exist_ok=True)
@@ -148,26 +176,9 @@ def main(argv=None) -> int:
     working.mkdir(parents=True, exist_ok=True)
 
     stage_started = time.perf_counter()
-    payload = load_hits(args.hits_pickle)
-    all_hits = payload["all_hits"]
-    gene_names = sorted({str(gene) for gene in payload["all_gene_ids"]})
-    gene_to_id = {gene: idx for idx, gene in enumerate(gene_names)}
-    species_names = sorted({
-        str(payload["gene_to_species"][gene]) for gene in gene_names
-    })
-    species_to_id = {
-        species: idx for idx, species in enumerate(species_names)
-    }
-    gene_to_species = np.fromiter(
-        (
-            species_to_id[str(payload["gene_to_species"][gene])]
-            for gene in gene_names
-        ),
-        dtype=np.int32,
-        count=len(gene_names),
+    gene_names, gene_to_species, queries, targets, scores, input_evidence = load_replay_input(
+        args.hits_pickle, args.accuracy_checkpoint, args.checkpoint_sha256
     )
-    queries, targets, scores = hit_arrays(all_hits, gene_to_id)
-    del payload, all_hits, gene_to_id
     timings["load_and_index_hits_s"] = round(
         time.perf_counter() - stage_started, 6
     )
@@ -348,7 +359,7 @@ def main(argv=None) -> int:
         "cwd": os.getcwd(),
         "git": git_state(),
         "source": file_provenance(Path(__file__)),
-        "input": file_provenance(args.hits_pickle),
+        "input": input_evidence,
         "parameters": {
             "accuracy_profile": "high_sensitivity",
             "cpm_resolution": args.cpm_resolution,
@@ -364,7 +375,7 @@ def main(argv=None) -> int:
         },
         "counts": {
             "genes": len(gene_names),
-            "species": len(species_names),
+            "species": len(np.unique(gene_to_species)),
             "significant_hits": len(scores),
             "refinement_directed_hits": len(refinement_scores),
             "rbnh_edges": len(rbnh_edges),

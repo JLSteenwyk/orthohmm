@@ -1811,3 +1811,27 @@ hit completeness, duplicate ordered-pair absence or production replay
 equivalence. Next: add and test a numeric-checkpoint replay adapter, freeze
 the exact source/runtime/input manifest and run label-blind QfO equivalence.
 No search rerun, QfO ablation scoring or held-out scoring was performed.
+
+## Numeric Checkpoint Replay Input
+
+Previous turn audited the retained QfO numeric checkpoint. Read the objective
+and confirmed YGOB 21192 remains live. Added mutually exclusive
+`--accuracy-checkpoint` and legacy `--hits-pickle` replay inputs, requiring
+`--checkpoint-sha256` with numeric checkpoints. Numeric input runs the exact
+inventory/hash/chunked-array audit, then retains the existing native gene
+indices, species codes, score values and self-hits as read-only memory maps.
+No large Python hit dictionary or numeric reindexing is introduced. Legacy
+pickle indexing and its input provenance format remain available.
+
+Five added regression cases cover unsorted native gene order, readonly mmap
+arrays and self-hits, wrong manifest hash, missing/conflicting input modes,
+and rejection of a missing hash before creating outputs. All 24 targeted
+replay/checkpoint tests and the full **775-test suite pass** (25.45s).
+Scoped whitespace checks pass. Actual QfO adapter integration also passes:
+976,504 names, 88,729,858 hits, four readonly memmaps and 976,195 self-hits.
+
+This completes numeric input adaptation, not graph/profile replay equivalence.
+Before the QfO run, freeze a launcher using this adapter and the broad-panel
+refinement correction while preserving the intended frozen core algorithm;
+verify FASTAs, historical source/runtime and target partition provenance.
+No inference search, graph replay, QfO scoring or held-out scoring was run.

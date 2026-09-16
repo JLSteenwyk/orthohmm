@@ -92,3 +92,41 @@ def test_second_replay_profile_iteration_requires_fasta_directory():
             "--json", "result.json",
             "--profile-iterations", "2",
         ])
+
+
+def test_numeric_replay_keeps_gene_indices_self_hits_and_mmaps(tmp_path):
+    from orthohmm.accuracy import write_accuracy_checkpoint
+    from benchmark_tools.orthobench_stage_diagnostics import file_provenance
+    checkpoint = write_accuracy_checkpoint(str(tmp_path), ["z", "a"], [9, 4], [0, 1], [0, 0], [3., 2.])
+    checksum = file_provenance(checkpoint / "manifest.json")["sha256"]
+    names, species, queries, targets, scores, evidence = replay_high_sensitivity.load_replay_input(
+        checkpoint=checkpoint, checkpoint_sha256=checksum)
+    assert names == ["z", "a"]
+    for array in (species, queries, targets, scores):
+        assert isinstance(array, np.memmap)
+        assert not array.flags.writeable
+    assert species.tolist() == [9, 4]
+    assert queries.tolist() == [0, 1]
+    assert targets.tolist() == [0, 0]
+    assert scores.tolist() == [3., 2.]
+    assert evidence["summary"]["self_hits"] == 1
+
+
+def test_numeric_replay_rejects_wrong_manifest_hash(tmp_path):
+    from orthohmm.accuracy import write_accuracy_checkpoint
+    checkpoint = write_accuracy_checkpoint(str(tmp_path), ["a"], [0], [0], [0], [1.])
+    with pytest.raises(ValueError):
+        replay_high_sensitivity.load_replay_input(checkpoint=checkpoint, checkpoint_sha256="0" * 64)
+
+
+@pytest.mark.parametrize("flags", [[], ["--hits-pickle", "x", "--accuracy-checkpoint", "y"]])
+def test_replay_requires_exactly_one_input(flags):
+    with pytest.raises(SystemExit):
+        replay_high_sensitivity.build_parser().parse_args([*flags, "--output-directory", "out", "--json", "out.json"])
+
+
+def test_numeric_manifest_required_before_outputs(tmp_path):
+    output = tmp_path / "out"
+    with pytest.raises(SystemExit, match="required together"):
+        replay_high_sensitivity.main(["--accuracy-checkpoint", "missing", "--output-directory", str(output), "--json", str(tmp_path / "out.json")])
+    assert not output.exists()
