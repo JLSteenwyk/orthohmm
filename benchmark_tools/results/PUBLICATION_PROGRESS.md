@@ -2197,3 +2197,38 @@ still active. Latest scheduler evidence:21291 RUNNING4:37,
 search completion and implement the frozen graph-only replay/coverage checks.
 
 Full unit suite: **835 passed in33.23s**; scoped whitespace checks passed.
+
+### Sequence control downstream jobs queued (2026-09-16)
+
+Previous turn was progress: numeric adapter and real first-target validation.
+Reread the objective; confirmed all three existing jobs live and four completed
+sequence-search targets. Available disk12TB; no storage blocker. Created
+conversion executor freeze**8b8b0d3** at
+`benchmarks/work/publication_ob_sequence_conversion_v1`. Submitted
+`ob_sequence_conversion_batch_20260916.sh` as **21292**, afterok21291,
+CPU8/64GiB/24h, output `benchmarks/results/ob_sequence_numeric_v1`.
+The converter independently rechecks terminal parent success, not just Slurm
+dependency satisfaction. This is queued work, not completed conversion.
+
+Implemented `run_sequence_graph_control.py`, using the existing frozen49ab110
+replay without FASTA inputs to disable profile expansion. No core algorithm
+change is introduced. It requires completed conversion21292, both admitted
+variants, recorded source/execution hashes and exact native runtime; each
+variant receives separate no-overwrite outputs. Replay retains CPU32,
+BLOSUM62, Leiden CPM0.1/seed4 and production graph/refinement. Native postflight
+requires exactly multipass/multipass_refined stages, no profile expansion,
+251,378 genes/12 species, complete final partition and unchanged runtime/
+checkpoint hashes. No reference labels or scoring are passed to inference.
+
+Executor freeze**588d92f** at
+`benchmarks/work/publication_ob_sequence_graph_v1` is queued as array
+**21293_[0-1%1]**, afterok21292, CPU32/64GiB/24h per task, serial variants
+all_hits/top100. Output `benchmarks/results/ob_sequence_graph_v1/{variant}`;
+batch logs `benchmarks/work/ob_seq_graph_21293_{0,1}.log`. Six new tests cover
+the profile-free command and rejection of unexpected stages/universes.
+Full unit suite **841 passed in37.71s**; scoped whitespace checks passed.
+
+Latest scheduler:21293 and21292 PENDING Dependency;21291 RUNNING9:05;
+21290 RUNNING17:04;21288 RUNNING41:10. No new completed inference or accuracy
+outcome is claimed. After completion, validate native provenance, compare
+hit coverage/sensitivity and score both controls against frozen p0_c0_r0.
