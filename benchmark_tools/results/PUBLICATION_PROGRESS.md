@@ -674,3 +674,33 @@ invocation passed for `baseline_20261001`, against manifest SHA-256
 No scientific-panel simulation was launched. The next gate is the pinned
 method execution/conversion manifest and remaining matched-history checks;
 all existing validation and replay jobs were preserved.
+
+## Native Simulation Method Adapters
+
+`simulation_method_outputs.py` connects high-sensitivity groups, native
+OrthoHMM phylogenetic pairs, full OrthoFinder tables and its sequence-only
+MCL checkpoint to the simulation pair scorer. Native species annotations
+must agree with the input mapping. Artifact discovery requires unique paths.
+OrthoFinder default output must contain every directed species-pair table,
+including empty tables, and opposite orientations must agree. It then uses
+the existing audited native converter. The MCL adapter reuses the strict
+complete-universe ID restoration tested for YGOB. Unknown/duplicate IDs,
+missing tables and inconsistent outputs cannot become empty successful
+predictions. Tool completion remains a separate execution gate.
+
+Nine new format/completeness tests pass; 31 focused adapter/converter/scorer
+tests pass. A real unscored OrthoFinder 3.1.5 run used the four-species,
+41-gene simulation smoke FASTAs with `-t 4 -a 4 -S diamond`. Native execution
+and GNU time record exit zero; elapsed wall time was 5.80 seconds under
+uncontrolled machine load, not matched efficiency evidence. Full output
+passed all 12 directed table checks; checkpoint restoration also passed.
+Both conversions yielded 63 pair rows, without computing overlap/F1 against
+truth. Equal pair counts alone are not proof of equal predictions or accuracy.
+
+Input/native artifact hashes, converter hashes and execution-log hashes are
+in `orthofinder_simulation_adapter_smoke_20260916.json`. Raw inputs/results
+and logs are preserved at `benchmarks/work/orthofinder_simulation_adapter_smoke_v1`.
+This smoke dataset is not one of the 70 scientific-panel entries; no panel
+or held-out YGOB outcome was inspected. Pinned method execution commands,
+completion checks and matched-history validation remain to finish before
+scientific panel launch.

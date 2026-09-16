@@ -1,0 +1,153 @@
+{
+  "accuracy_computed": false,
+  "execution_evidence": [
+    {
+      "bytes": 5593,
+      "path": "native.log",
+      "sha256": "b73332b06a974556580bb9a6c33d7612ae51e7e96f392bc8678f7d4e667a86a5"
+    },
+    {
+      "bytes": 906,
+      "path": "time.log",
+      "sha256": "9d7328afc9a4ff95b6dcd977816c68cd945858af209f74785bdd1b24b2588c88"
+    }
+  ],
+  "input_genes": 41,
+  "inputs": [
+    {
+      "bytes": 1222,
+      "path": "input/n3.fasta",
+      "sha256": "1e685f34120f8b6c471201597a7df82718e4494c5a9605ee0f5685c6f9e7a225"
+    },
+    {
+      "bytes": 1111,
+      "path": "input/n4.fasta",
+      "sha256": "afaebfd2c3f0f88bd96645dd8100a1f42b83ba827a5594c63b07ef9da34ee042"
+    },
+    {
+      "bytes": 1111,
+      "path": "input/n5.fasta",
+      "sha256": "7fde004cd8da1233bcbf2a00bf77b950926a2210b214ac0077267b3a91d17c5d"
+    },
+    {
+      "bytes": 1111,
+      "path": "input/n6.fasta",
+      "sha256": "eba04c97dbf50241d4d6e595dcadf4b97f7a11a4e76293590660c4885c1bd9f6"
+    }
+  ],
+  "methods": {
+    "orthofinder_full": {
+      "native_artifacts": [
+        {
+          "bytes": 320,
+          "path": "input/OrthoFinder/Results_Sep16/Orthologues/Orthologues_n3/n3__v__n4.tsv",
+          "sha256": "f63fa7a7306af0ffb2d919f72b1f80655853509573cfcc6ae4381f06ca43d3fd"
+        },
+        {
+          "bytes": 320,
+          "path": "input/OrthoFinder/Results_Sep16/Orthologues/Orthologues_n3/n3__v__n5.tsv",
+          "sha256": "3bc6863ffe14a47a7a3853b779fca5d2d7deb9044d200b4c6310d2ff4362d370"
+        },
+        {
+          "bytes": 320,
+          "path": "input/OrthoFinder/Results_Sep16/Orthologues/Orthologues_n3/n3__v__n6.tsv",
+          "sha256": "58dfb4bd294c1e5c1da9b0bb3f22a09f823721ff96de08eb76e1c8acc7cff480"
+        },
+        {
+          "bytes": 320,
+          "path": "input/OrthoFinder/Results_Sep16/Orthologues/Orthologues_n4/n4__v__n3.tsv",
+          "sha256": "d37ffe786f04dc85244798bb3c9629c952ae7ba2731ad16c1d27572595409f6c"
+        },
+        {
+          "bytes": 310,
+          "path": "input/OrthoFinder/Results_Sep16/Orthologues/Orthologues_n4/n4__v__n5.tsv",
+          "sha256": "c06b1bc2354a0e03ae7c573b72b03df82fa2f83d49e949190177736c91ebb43b"
+        },
+        {
+          "bytes": 310,
+          "path": "input/OrthoFinder/Results_Sep16/Orthologues/Orthologues_n4/n4__v__n6.tsv",
+          "sha256": "be1c66c19c2b602bb81bc2fe5ef3d56b2bada3ffaa1bc7f6b8e0f2cc46408a0c"
+        },
+        {
+          "bytes": 320,
+          "path": "input/OrthoFinder/Results_Sep16/Orthologues/Orthologues_n5/n5__v__n3.tsv",
+          "sha256": "7ef180c48b827dca2c896f3782a0b07aea7dc8e32b15d7e5958a2ba2aeed3ba1"
+        },
+        {
+          "bytes": 310,
+          "path": "input/OrthoFinder/Results_Sep16/Orthologues/Orthologues_n5/n5__v__n4.tsv",
+          "sha256": "aec4571b35ad010c76ca461605bb4c674c90d8c5221fa2ebba16923ed36c281a"
+        },
+        {
+          "bytes": 310,
+          "path": "input/OrthoFinder/Results_Sep16/Orthologues/Orthologues_n5/n5__v__n6.tsv",
+          "sha256": "d583e9d41a927370f3bdf1b3467e52e85d73e8e841248796477b6d3262020b1a"
+        },
+        {
+          "bytes": 320,
+          "path": "input/OrthoFinder/Results_Sep16/Orthologues/Orthologues_n6/n6__v__n3.tsv",
+          "sha256": "9a661ea4fe9c7421b646273f5caca86a8b46628e36cfc623a82b00f441dd21c1"
+        },
+        {
+          "bytes": 310,
+          "path": "input/OrthoFinder/Results_Sep16/Orthologues/Orthologues_n6/n6__v__n4.tsv",
+          "sha256": "6430b48ccf85b65edcf6206e60aefdb1d5d3e840e7ecbb44284b46f82374389a"
+        },
+        {
+          "bytes": 310,
+          "path": "input/OrthoFinder/Results_Sep16/Orthologues/Orthologues_n6/n6__v__n5.tsv",
+          "sha256": "a94cc3e92036008c3e926caceccbd7317d1261419623201d25929012e2ee0e8f"
+        }
+      ],
+      "pair_rows": 63,
+      "unique_pairs": 63
+    },
+    "orthofinder_sequence_only": {
+      "native_artifacts": [
+        {
+          "bytes": 753,
+          "path": "input/OrthoFinder/Results_Sep16/WorkingDirectory/clusters_OrthoFinder_I1.2.txt_id_pairs.txt",
+          "sha256": "7f032616729e5459e7aec49e97e7417a16ec36d6c846395f21189d484664dc42"
+        },
+        {
+          "bytes": 579,
+          "path": "input/OrthoFinder/Results_Sep16/WorkingDirectory/SequenceIDs.txt",
+          "sha256": "b9191bc340f4b2762e6eed49f88a37c1bc0ef8e79f266c226e807fae751ffce8"
+        }
+      ],
+      "pair_rows": 63,
+      "unique_pairs": 63
+    }
+  },
+  "native_exit_code": 0,
+  "schema_version": 1,
+  "scope": "Unscored adapter smoke test; not scientific panel or matched timing evidence",
+  "sources": [
+    {
+      "bytes": 4524,
+      "path": "simulation_method_outputs.py",
+      "sha256": "1f776b65a49c699d7e006bd7224a88361c6b7d926fdbadb3a36150e7c973b2b8"
+    },
+    {
+      "bytes": 2472,
+      "path": "orthofinder_to_pairwise.py",
+      "sha256": "aac5975a51cb093b0d41ced64201b2c7250eecc12f70404dc5c8f9a103caa31d"
+    },
+    {
+      "bytes": 5399,
+      "path": "report_ygob_validation.py",
+      "sha256": "cba8ca3a7d8b46fe704945e6af844c015e33749cdaa77823ba0c84469b73a2a5"
+    },
+    {
+      "bytes": 4518,
+      "path": "orthofinder_mcl_to_orthogroups.py",
+      "sha256": "20879a9a041b2a9b48e4bf0d81c895793d8b0a75c8d2e06c777f472e72484eb8"
+    }
+  ],
+  "species": [
+    "n3",
+    "n4",
+    "n5",
+    "n6"
+  ]
+}
