@@ -3096,3 +3096,9 @@ both single-CPU workers also match affinity. Complete independent native-file/
 partition admission is next, before committing a result snapshot or promoting
 any reproducibility claim. This bounded panel does not isolate a root cause;
 same-affinity disagreement remains unexplained and preserved without selection.
+
+Before closeout21314 completed0:0 in1:12; manifest reports all five candidate
+arms prepared unscored. Unchanged control passed both byte-equivalence gates.
+Reported candidate counts:control54,445;norm_low54,370;norm_high54,540;
+margin_low52,912;margin_high55,434. Independent admission and full-pipeline
+reconciliation remain next; these counts are not accuracy results.
