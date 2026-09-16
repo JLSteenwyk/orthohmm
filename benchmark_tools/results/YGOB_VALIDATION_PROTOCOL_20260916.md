@@ -98,3 +98,28 @@ native-output conversions, independent score arithmetic, and paired uncertainty.
 Further biological case studies, HMM ablations, simulation robustness,
 reference-resource auditing, and manuscript work remain required by the full
 publication goal. This protocol does not replace those requirements.
+
+## Native Runtime And Scheduling Amendment
+
+Original job 20917 was cancelled while still pending (zero runtime), after
+label-blind OrthoBench replay revealed that its source-only checkout lacked
+the profile-alignment binary. No YGOB outcome has been inspected. Resubmit
+using separate CPU-native checkout `publication_method_native_v2`, retaining
+the exact source commit, prepared inputs/reference, scientific settings and
+32-CPU/eight-worker-thread allocation. Corrected cached replay 21138 now
+matches all four historical OrthoBench partitions byte-for-byte.
+
+The corrected launcher requires a pinned launcher revision and build-manifest
+hash, verifies all native binaries, and records exact-checkout profile probes
+before and after both OrthoHMM stages. It preserves copies of the submitted
+launcher and runtime manifest in the result directory so provenance does not
+depend on a disappearing Slurm spool file. Pin MAFFT/FastTree/DIAMOND lookup
+to the benchmark installations, record entrypoint hashes and both Python
+package inventories, and verify OrthoFinder 3.1.5 before inference.
+
+Use a shared-node allocation (32 CPUs, 128 GiB, 24-hour limit), rather than the
+original exclusive request, to allow accuracy validation to progress alongside
+other work. This is a prospective scheduling deviation, not controlled timing
+evidence. Retain per-method GNU-time logs but label them contended; matched
+efficiency measurements remain a separate unfulfilled requirement. Do not
+change scientific settings or use test outcomes to select a runtime.

@@ -1226,3 +1226,32 @@ terminal (reuse original arrays 21010 variable and 20957 fixed with their own
 pinned executors), restore YGOB with runtime guards, and prepare/run the
 OrthoBench factorial now that cached replay equivalence is established.
 All remaining original publication requirements remain active.
+
+## Factorial Preparation And YGOB Runtime Guard
+
+Previous turn progressed through verified replay equivalence and selective
+simulation submissions. Re-read the full objective and rechecked live arrays
+21142/21143 before proceeding; neither corrected panel has been scored.
+
+Submitted label-blind OrthoBench candidate preparation **21161** using pinned
+builder b66225d, verified replay 21138, and fresh `publication_ob_factorial_v1`.
+Job completed 0:0 in 00:01:03. Manifest is `prepared_not_reconciled`, with eight
+planned cells. No-profile arm has 63,245 seed families and 54,745 expanded
+candidates (8,500 merges); profile arm has 62,885 seed families and 54,445
+candidates (8,440 merges). Each expansion produced and validated its own
+membership trace. These are stage counts, not accuracy. Reconciliation cells,
+unconstrained diagnostic, matched sequence control and QfO remain unfinished.
+
+YGOB launcher now requires a pinned launcher revision and validated native
+build manifest, verifies exact prepared file sets, and records synthetic
+profile probes before/after each OrthoHMM stage. Fixed its ephemeral Slurm
+spool-file provenance by preserving the exact submitted script in the output.
+Records MAFFT/FastTree/DIAMOND/OrthoFinder entrypoint hashes and both Python
+environments; confirms OrthoFinder 3.1.5 before inference. The label-blind YGOB
+verifier checks the native manifest snapshot and all four exact-source/binary
+probes in addition to existing completion/input/output checks.
+
+Prospective YGOB amendment retains all scientific settings and references but
+changes exclusive scheduling to shared 32-CPU/128-GiB/24-hour execution. Timings
+are explicitly contended, not matched efficiency evidence. No YGOB outcomes
+have been inspected and no existing result directory has been overwritten.

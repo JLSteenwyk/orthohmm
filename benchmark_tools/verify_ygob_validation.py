@@ -10,6 +10,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from benchmark_tools.benchmark_production import file_record
+from benchmark_tools.build_publication_runtime import verify_runtime
 
 
 def require_completed_job(accounting, job_id):
@@ -47,6 +48,35 @@ def verify_records(records, base):
     return observed
 
 
+def validate_runtime_probe(probe, frozen_root, binary_hash, source_hash):
+    root = frozen_root.resolve()
+    if probe.get("status") != "passed" or probe.get("exit_code") != 0 or probe.get("root") != str(root):
+        raise ValueError("Missing successful exact-checkout runtime probe")
+    library = probe.get("pair_align", {})
+    if library.get("sha256") != binary_hash or library.get("path") != str(root / "orthohmm/search/csrc/pair_align.so"):
+        raise ValueError("Profile probe used a different native library")
+    if probe.get("profile_source_sha256") != source_hash or probe.get("profile_source") != str(root / "orthohmm/search/msa_profile.py"):
+        raise ValueError("Profile probe used a different source")
+    if probe.get("profile_length", 0) < 1:
+        raise ValueError("Profile probe produced no profile")
+
+
+def verify_native_evidence(out, frozen_root, expected_manifest):
+    snapshot = out / "native_runtime.json"
+    if snapshot.read_bytes() != expected_manifest.read_bytes():
+        raise ValueError("YGOB native runtime differs from the frozen build manifest")
+    build = verify_runtime(snapshot, frozen_root)
+    binary = next(r for r in build["binaries"] if Path(r["path"]).name == "pair_align.so")
+    source = file_record(frozen_root / "orthohmm/search/msa_profile.py", frozen_root)
+    probes = []
+    for method in ("high_sensitivity", "satellite_v2"):
+        for stage in ("before", "after"):
+            path = out / f"{method}_{stage}.runtime.json"
+            validate_runtime_probe(json.loads(path.read_text()), frozen_root, binary["sha256"], source["sha256"])
+            probes.append(file_record(path, out))
+    return {"manifest": file_record(snapshot, out), "probes": probes}
+
+
 def verify_run(root, frozen_root, job_id, accounting):
     scheduler = require_completed_job(accounting, job_id)
     out = root / "benchmarks/results/ygob_validation_v1"
@@ -54,12 +84,14 @@ def verify_run(root, frozen_root, job_id, accounting):
     metadata = read_metadata(out / "run_metadata.tsv")
     if metadata.get("job_id") != str(job_id) or metadata.get("runner_exit_code") != "0" or not metadata.get("finished"):
         raise ValueError("Runner metadata does not confirm successful requested job")
+    native_runtime = verify_native_evidence(out, frozen_root,
+                        root / "benchmark_tools/results/publication_native_runtime_20260916.json")
     source_commit = subprocess.check_output(["git", "-C", str(frozen_root), "rev-parse", "HEAD"], text=True).strip()
     if not source_commit.startswith("7f3a9e4") or (out / "inference_source_commit.txt").read_text().strip() != source_commit:
         raise ValueError("Inference source is not the frozen revision")
     subprocess.run(["git", "-C", str(frozen_root), "diff", "--exit-code", "HEAD", "--",
                     "orthohmm", "benchmark_tools/benchmark_production.py"], check=True, capture_output=True)
-    for name in ("launcher_inputs.sha256", "orthofinder_entrypoint.sha256"):
+    for name in ("launcher_inputs.sha256", "orthofinder_entrypoint.sha256", "tool_entrypoints.sha256"):
         subprocess.run(["sha256sum", "--check", "--status", str(out / name)], check=True)
     manifest = json.loads((prepared / "manifest.json").read_text())
     frozen = json.loads((root / "benchmark_tools/results/ygob_validation_inputs_20260916.json").read_text())
@@ -103,6 +135,7 @@ def verify_run(root, frozen_root, job_id, accounting):
         raise ValueError("Expected exactly one finalized OrthoFinder orthogroup file")
     return {"schema_version": 1, "inference_files_verified": True, "accuracy_computed": False,
             "all_scoring_gates_verified": False, "scheduler": scheduler, "runner_metadata": metadata,
+            "native_runtime": native_runtime,
             "source_commit": source_commit, "orthohmm": verified_methods,
             "orthofinder_final_groups": file_record(full[0], out),
             "remaining_checks": ["Exact inference commands and installed tool versions",

@@ -1,0 +1,3148 @@
+{
+  "accuracy_computed": false,
+  "cache": {
+    "bytes": 952325450,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hits_BLOSUM62_mc100.pkl",
+    "sha256": "78a5af40ea2683a69e1baefefb0966c3549cffe71b24bda03b9ba4a6e29e65e1"
+  },
+  "candidate_arms": {
+    "p0_c0": {
+      "candidate_expansion": false,
+      "candidate_partition": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p0_c0/orthohmm_working_res/orthohmm_edges_clustered.txt",
+        "sha256": "3ab1c37f8f073492b3c28f6bf261f3db85e4882020cce74cfd17b66cdb356899"
+      },
+      "incremental_preparation_seconds": 0.9084064690032392,
+      "seed_partition": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_replay_check_v2/replay/orthogroups_multipass_refined.txt",
+        "sha256": "3ab1c37f8f073492b3c28f6bf261f3db85e4882020cce74cfd17b66cdb356899"
+      }
+    },
+    "p0_c1": {
+      "candidate_expansion": true,
+      "candidate_partition": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p0_c1/orthohmm_working_res/orthohmm_edges_clustered.txt",
+        "sha256": "def179f076fcd7813f4b34303b581cc7aeda1f0329012825da5cb6c401ad1eea"
+      },
+      "expansion": {
+        "candidate_checkpoint": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p0_c1/orthohmm_working_res/phylogeny_candidate_superfamilies.txt",
+        "candidate_families": 54745,
+        "directed_relations": 4331201,
+        "iterations": 2,
+        "membership_policy": "high_confidence_pair",
+        "merge_trace_sidecar": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p0_c1/orthohmm_working_res/phylogeny_candidate_merges.json",
+        "merges": 8500,
+        "parameters": {
+          "iteration_margin_increment": 0.5,
+          "max_component_genes": 500,
+          "max_iterations": 2,
+          "max_satellite_genes": 12,
+          "max_satellite_to_anchor_ratio": 0.75,
+          "max_satellites_per_anchor": 4,
+          "max_species_overlap_fraction": 1.0,
+          "min_avg_score": 0.0,
+          "min_coverage": 0.5,
+          "min_margin": 1.5,
+          "min_max_score": 0.0,
+          "min_norm": 0.03
+        },
+        "profile": "satellite_v2",
+        "seed_families": 63245,
+        "seed_sidecar": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p0_c1/orthohmm_working_res/phylogeny_candidate_seeds.tsv"
+      },
+      "incremental_preparation_seconds": 14.539036974001647,
+      "membership_constraints": {
+        "bytes": 13721572,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p0_c1/orthohmm_working_res/phylogeny_candidate_merges.json",
+        "sha256": "e55fe12b36748804f237eb9168f65b5e3fbff18f064bc1574f144a96ef178761"
+      },
+      "seed_partition": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_replay_check_v2/replay/orthogroups_multipass_refined.txt",
+        "sha256": "3ab1c37f8f073492b3c28f6bf261f3db85e4882020cce74cfd17b66cdb356899"
+      }
+    },
+    "p1_c0": {
+      "candidate_expansion": false,
+      "candidate_partition": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p1_c0/orthohmm_working_res/orthohmm_edges_clustered.txt",
+        "sha256": "8ee100f4370fef6e3e6a3e0fd36112adcc3aefeb60197331115667c519ca121f"
+      },
+      "incremental_preparation_seconds": 0.6539557700016303,
+      "seed_partition": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_replay_check_v2/replay/orthogroups_profiles_refined.txt",
+        "sha256": "8ee100f4370fef6e3e6a3e0fd36112adcc3aefeb60197331115667c519ca121f"
+      }
+    },
+    "p1_c1": {
+      "candidate_expansion": true,
+      "candidate_partition": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p1_c1/orthohmm_working_res/orthohmm_edges_clustered.txt",
+        "sha256": "44f201dbc7e4eccf06d9401e5ce1b20fdf6ad523e15ee6007fe1c58f3941842d"
+      },
+      "expansion": {
+        "candidate_checkpoint": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p1_c1/orthohmm_working_res/phylogeny_candidate_superfamilies.txt",
+        "candidate_families": 54445,
+        "directed_relations": 4121901,
+        "iterations": 2,
+        "membership_policy": "high_confidence_pair",
+        "merge_trace_sidecar": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p1_c1/orthohmm_working_res/phylogeny_candidate_merges.json",
+        "merges": 8440,
+        "parameters": {
+          "iteration_margin_increment": 0.5,
+          "max_component_genes": 500,
+          "max_iterations": 2,
+          "max_satellite_genes": 12,
+          "max_satellite_to_anchor_ratio": 0.75,
+          "max_satellites_per_anchor": 4,
+          "max_species_overlap_fraction": 1.0,
+          "min_avg_score": 0.0,
+          "min_coverage": 0.5,
+          "min_margin": 1.5,
+          "min_max_score": 0.0,
+          "min_norm": 0.03
+        },
+        "profile": "satellite_v2",
+        "seed_families": 62885,
+        "seed_sidecar": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p1_c1/orthohmm_working_res/phylogeny_candidate_seeds.tsv"
+      },
+      "incremental_preparation_seconds": 11.490967000001547,
+      "membership_constraints": {
+        "bytes": 13661409,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p1_c1/orthohmm_working_res/phylogeny_candidate_merges.json",
+        "sha256": "55dee278b7feac6cc480c4e88b21adabc7ba093d8c9534501794e7efcb3270a9"
+      },
+      "seed_partition": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_replay_check_v2/replay/orthogroups_profiles_refined.txt",
+        "sha256": "8ee100f4370fef6e3e6a3e0fd36112adcc3aefeb60197331115667c519ca121f"
+      }
+    }
+  },
+  "cells": [
+    {
+      "candidate_expansion": false,
+      "candidate_partition": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p0_c0/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "label": "p0_c0_r0",
+      "prediction": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p0_c0/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "prediction_format": "space_separated_groups",
+      "profile_expansion": false,
+      "reconciliation": false,
+      "runtime_kind": "incremental_cached_replay"
+    },
+    {
+      "argv": [
+        "/home/bizon/anaconda3/bin/python",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_native_simulation_v3/benchmark_tools/replay_phylogeny.py",
+        "--fasta-directory",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input",
+        "--candidate-clusters",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p0_c0/orthohmm_working_res/orthohmm_edges_clustered.txt",
+        "--output-directory",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/cells/p0_c0_r1",
+        "--json",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/cells/p0_c0_r1.json",
+        "--cpu",
+        "32",
+        "--species-tree-mode",
+        "infer",
+        "--aligner",
+        "mafft",
+        "--tree-builder",
+        "FastTree",
+        "--root-rule",
+        "species_overlap",
+        "--pair-rule",
+        "positive_paralogy",
+        "--species-tree-rooting",
+        "min_variance"
+      ],
+      "candidate_expansion": false,
+      "candidate_partition": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p0_c0/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "label": "p0_c0_r1",
+      "prediction": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/cells/p0_c0_r1/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "prediction_format": "root_hogs",
+      "profile_expansion": false,
+      "reconciliation": true,
+      "runtime_kind": "incremental_cached_replay"
+    },
+    {
+      "candidate_expansion": true,
+      "candidate_partition": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p0_c1/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "label": "p0_c1_r0",
+      "prediction": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p0_c1/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "prediction_format": "space_separated_groups",
+      "profile_expansion": false,
+      "reconciliation": false,
+      "runtime_kind": "incremental_cached_replay"
+    },
+    {
+      "argv": [
+        "/home/bizon/anaconda3/bin/python",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_native_simulation_v3/benchmark_tools/replay_phylogeny.py",
+        "--fasta-directory",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input",
+        "--candidate-clusters",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p0_c1/orthohmm_working_res/orthohmm_edges_clustered.txt",
+        "--output-directory",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/cells/p0_c1_r1",
+        "--json",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/cells/p0_c1_r1.json",
+        "--cpu",
+        "32",
+        "--species-tree-mode",
+        "infer",
+        "--aligner",
+        "mafft",
+        "--tree-builder",
+        "FastTree",
+        "--root-rule",
+        "species_overlap",
+        "--pair-rule",
+        "positive_paralogy",
+        "--species-tree-rooting",
+        "min_variance",
+        "--membership-constraints",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p0_c1/orthohmm_working_res/phylogeny_candidate_merges.json"
+      ],
+      "candidate_expansion": true,
+      "candidate_partition": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p0_c1/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "label": "p0_c1_r1",
+      "prediction": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/cells/p0_c1_r1/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "prediction_format": "root_hogs",
+      "profile_expansion": false,
+      "reconciliation": true,
+      "runtime_kind": "incremental_cached_replay"
+    },
+    {
+      "candidate_expansion": false,
+      "candidate_partition": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p1_c0/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "label": "p1_c0_r0",
+      "prediction": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p1_c0/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "prediction_format": "space_separated_groups",
+      "profile_expansion": true,
+      "reconciliation": false,
+      "runtime_kind": "incremental_cached_replay"
+    },
+    {
+      "argv": [
+        "/home/bizon/anaconda3/bin/python",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_native_simulation_v3/benchmark_tools/replay_phylogeny.py",
+        "--fasta-directory",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input",
+        "--candidate-clusters",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p1_c0/orthohmm_working_res/orthohmm_edges_clustered.txt",
+        "--output-directory",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/cells/p1_c0_r1",
+        "--json",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/cells/p1_c0_r1.json",
+        "--cpu",
+        "32",
+        "--species-tree-mode",
+        "infer",
+        "--aligner",
+        "mafft",
+        "--tree-builder",
+        "FastTree",
+        "--root-rule",
+        "species_overlap",
+        "--pair-rule",
+        "positive_paralogy",
+        "--species-tree-rooting",
+        "min_variance"
+      ],
+      "candidate_expansion": false,
+      "candidate_partition": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p1_c0/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "label": "p1_c0_r1",
+      "prediction": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/cells/p1_c0_r1/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "prediction_format": "root_hogs",
+      "profile_expansion": true,
+      "reconciliation": true,
+      "runtime_kind": "incremental_cached_replay"
+    },
+    {
+      "candidate_expansion": true,
+      "candidate_partition": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p1_c1/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "label": "p1_c1_r0",
+      "prediction": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p1_c1/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "prediction_format": "space_separated_groups",
+      "profile_expansion": true,
+      "reconciliation": false,
+      "runtime_kind": "incremental_cached_replay"
+    },
+    {
+      "argv": [
+        "/home/bizon/anaconda3/bin/python",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_native_simulation_v3/benchmark_tools/replay_phylogeny.py",
+        "--fasta-directory",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input",
+        "--candidate-clusters",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p1_c1/orthohmm_working_res/orthohmm_edges_clustered.txt",
+        "--output-directory",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/cells/p1_c1_r1",
+        "--json",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/cells/p1_c1_r1.json",
+        "--cpu",
+        "32",
+        "--species-tree-mode",
+        "infer",
+        "--aligner",
+        "mafft",
+        "--tree-builder",
+        "FastTree",
+        "--root-rule",
+        "species_overlap",
+        "--pair-rule",
+        "positive_paralogy",
+        "--species-tree-rooting",
+        "min_variance",
+        "--membership-constraints",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p1_c1/orthohmm_working_res/phylogeny_candidate_merges.json"
+      ],
+      "candidate_expansion": true,
+      "candidate_partition": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p1_c1/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "label": "p1_c1_r1",
+      "prediction": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/cells/p1_c1_r1/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "prediction_format": "root_hogs",
+      "profile_expansion": true,
+      "reconciliation": true,
+      "runtime_kind": "incremental_cached_replay"
+    }
+  ],
+  "core_commit": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+  "core_source_equivalence_verified": true,
+  "core_sources": [
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 127,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/__main__.py",
+      "sha256": "59690e02073880a5ec60087a93d77e3448a3370bb78fb17ee9ce9d5300d0d45a"
+    },
+    {
+      "bytes": 14046,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/accuracy.py",
+      "sha256": "1a35944ab7fea859143f599b1262aa111272787f6f735b9acc37d299427f2ad6"
+    },
+    {
+      "bytes": 7908,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/args_processing.py",
+      "sha256": "12648aeaa4e8d0b0af60f707e90ec2c95b6983c4498dacd9bccfade1839f4c54"
+    },
+    {
+      "bytes": 10166,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/externals.py",
+      "sha256": "5304b4190b01a53c7c4e3235f9d1df9e7eff1f01d09633d07750103487268115"
+    },
+    {
+      "bytes": 2977,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/files.py",
+      "sha256": "f1ec2acaea2566615b06b0a37e17b77f76bbd87fe6f2c76560a318343f6871a1"
+    },
+    {
+      "bytes": 32293,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/helpers.py",
+      "sha256": "faf9e85c6af8ad5f5740c81157e8ce40bbd98c1731991d9f3fbe1f47a05f6149"
+    },
+    {
+      "bytes": 1411,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/leiden_worker.py",
+      "sha256": "7d6d9fa5827bd99dcce28d2248688bbeb762b4b547bbc4e7491c16f0e2090c41"
+    },
+    {
+      "bytes": 6812,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/metrics.py",
+      "sha256": "d19bc9c9777b2dd01943f6421930f9fab02b7153519ab76e6a40272328195a1a"
+    },
+    {
+      "bytes": 30663,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/orthohmm.py",
+      "sha256": "2afb89b9dc683e64e58208188f720e07701d4760ff09d1ac3a53c7a8075b84bb"
+    },
+    {
+      "bytes": 15939,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/parser.py",
+      "sha256": "9a959b9948d944fc5361a661ac3faad55575674993c746800daf6db7eccceba5"
+    },
+    {
+      "bytes": 29732,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/phylogeny.py",
+      "sha256": "216d97608e6dede8960f3b06fe7036bd23da8fae5677df88583ba9369ec3c1bf"
+    },
+    {
+      "bytes": 41369,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/phylogeny_pipeline.py",
+      "sha256": "44e00316546b5df78354badd2b1a6bb595b685e98b86f686f1a32543d7f15e4f"
+    },
+    {
+      "bytes": 61183,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/refinement.py",
+      "sha256": "991f1eb6a5f73d0442529ed19095a34b7c6ba8bff8dfe43a1127e24ec73fb26d"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/_experimental/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 7759,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/_experimental/csrc/hmm_forward.c",
+      "sha256": "f29e0ce42978e43ca2b3a8576e327e536a1ec8537757feff01d756d96045c026"
+    },
+    {
+      "bytes": 15413,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/_experimental/csrc/hmm_viterbi_striped.c",
+      "sha256": "261c1a298663b9c9c46050c9b5a521e8be9cc5997e07b06204e08f4a45a19917"
+    },
+    {
+      "bytes": 7506,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/_experimental/csrc/kmer_merge.c",
+      "sha256": "8dce3c7e882c0ec68195b6dacc96c31d246bfa38c2515a473cd03542a8f28c2a"
+    },
+    {
+      "bytes": 8599,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/_experimental/viterbi_cuda_numba.py",
+      "sha256": "be998cf737f5c468417a84cc42d6f9c288133b6da09989ba1630d2c7d07fbdd2"
+    },
+    {
+      "bytes": 46012,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/csrc/hmm_viterbi.c",
+      "sha256": "b668f86de525776e939f1c3196b41f3c870dd22cc56e35a93dff6a957d01f67c"
+    },
+    {
+      "bytes": 13696,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/csrc/hmm_viterbi_cuda.cu",
+      "sha256": "aa0a7a6fa53da025f28607a055364c08c365e561033a48dcf2c4381d350301d2"
+    },
+    {
+      "bytes": 10657,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/csrc/kmer_prefilter.c",
+      "sha256": "8124e2652cb382549f2a282c3122aaa9f5c393da2b304b5d4f6cb92fae243f01"
+    },
+    {
+      "bytes": 9098,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/csrc/pair_align.c",
+      "sha256": "c5a3c2bc869ec59ca8261c976d6e77e5938faf5bfd8571566315b81cf5b08e9a"
+    },
+    {
+      "bytes": 21146,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/engine.py",
+      "sha256": "596e6e56b6dd3c2e72bbfa5bb67087285bd22833e4897443df0f9629a2f18b74"
+    },
+    {
+      "bytes": 1865,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/evalue.py",
+      "sha256": "b395cd48874d75963512b5d1e249c5251796f869592a52983c8d55b98fe11841"
+    },
+    {
+      "bytes": 27982,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/matrices.py",
+      "sha256": "36e59a6c649a72f9c3a5d6eca117b7fe84d5ff8e975a1d7561a82ee8d6c29fcb"
+    },
+    {
+      "bytes": 9180,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/msa_center_star.py",
+      "sha256": "3790801fc294f2df9ae3c84897de410b1a1bb487b8ea4226d86c388c379f40ab"
+    },
+    {
+      "bytes": 6728,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/msa_profile.py",
+      "sha256": "d4076b61905325f643dca1f7a6b4dbd6f2833398840fad7b79e3f255f2240468"
+    },
+    {
+      "bytes": 22855,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/prefilter.py",
+      "sha256": "9842b1787d98a89bd819f9adbe340b6e2a170d63d16057645720a6bc9faf6d06"
+    },
+    {
+      "bytes": 6143,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/profile.py",
+      "sha256": "20dca3dea06a85bdcf99e03e3abfab921fce38b9d7715097b0b4588a7cd7587e"
+    },
+    {
+      "bytes": 25077,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/profile_expansion.py",
+      "sha256": "1025cfab4f80e3a85d6eaa3e768ae5e0e25dedb48fdba9deb08cb6e6aa7bb42a"
+    },
+    {
+      "bytes": 4509,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/sequences.py",
+      "sha256": "e083679cb9ea780664943355d260f398a96d93a2db336bb615af1032766f5980"
+    },
+    {
+      "bytes": 5324,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/species_prune.py",
+      "sha256": "d729b9aa8ddf311c52e1d46c51d89dc5a6ef5d64ccd979deca90b7d980905b9e"
+    },
+    {
+      "bytes": 17693,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/viterbi.py",
+      "sha256": "ba8543538d9bcbd55c5eaf5c7c3d5725a62c071b00d925f5fabaa474001948ba"
+    },
+    {
+      "bytes": 4420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/viterbi_cuda_ctypes.py",
+      "sha256": "fba688e77941c92c5e4080ef5de3dc23e4dfee6c5c2dad5d7ccdf876f81f9d20"
+    },
+    {
+      "bytes": 22,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/version.py",
+      "sha256": "2c12b8ea17aeb6f9f72a6b02aca218bbc4508a46df9e365a8f6c45ad769e0b34"
+    },
+    {
+      "bytes": 2949,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/writer.py",
+      "sha256": "d3dc7a318166272762395dfcb772d8779286bbf60023b2934a7d7bef0e0003fe"
+    }
+  ],
+  "environment_overrides": {
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONHASHSEED": "0"
+  },
+  "fasta_inputs": [
+    {
+      "bytes": 8784620,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+    },
+    {
+      "bytes": 11973324,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Canis_familiaris.CanFam3.1.pep.all.fa",
+      "sha256": "0d87161a9990b9d8b0d56b4e71dfbe74c6016b0dda3352247b35d85501c33b33"
+    },
+    {
+      "bytes": 5797677,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Ciona_intestinalis.KH.pep.all.fa",
+      "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+    },
+    {
+      "bytes": 17020497,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Danio_rerio.GRCz11.pep.all.fa",
+      "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+    },
+    {
+      "bytes": 7778910,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+    },
+    {
+      "bytes": 9883133,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Gallus_gallus.GRCg6a.pep.all.fa",
+      "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+    },
+    {
+      "bytes": 13576811,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Homo_sapiens.GRCh38.pep.all.fa",
+      "sha256": "bff5d1f0f259c801dc607045e4c13bfc759098f17d536b307c13a89a523569ac"
+    },
+    {
+      "bytes": 11930628,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+    },
+    {
+      "bytes": 12880578,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Mus_musculus.GRCm38.pep.all.fa",
+      "sha256": "3b6e0a68688294135324824e1879de86c1715a9f3c655406f6ec8fcfdd75db1a"
+    },
+    {
+      "bytes": 12782304,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+    },
+    {
+      "bytes": 12000073,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+    },
+    {
+      "bytes": 10463972,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "sha256": "1f6ebacc342da127e4ab9c1a9cf7b627e8169df3cbc0d971d57655d974c8d9b2"
+    }
+  ],
+  "helper_sources": [
+    {
+      "bytes": 14723,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_native_simulation_v3/benchmark_tools/replay_high_sensitivity.py",
+      "sha256": "852c3e4fc1a53de7e6046aa78324da587376c0df6a0db1cd8265af65c75bea0f"
+    },
+    {
+      "bytes": 11445,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_native_simulation_v3/benchmark_tools/replay_phylogeny.py",
+      "sha256": "e4de6f39c66c0f7e7f63229188a76ece44dbdc9b7771ab1c3b1465cec63aa539"
+    },
+    {
+      "bytes": 10140,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_native_simulation_v3/benchmark_tools/audit_historical_profile_ablation.py",
+      "sha256": "ffdafda2b55c9580eccc7497881f0e160450af6c9029e3540009bebba2081b31"
+    }
+  ],
+  "initial_search": "frozen HMM normalized-hit cache; profile-off is not HMM-free",
+  "launcher": {
+    "bytes": 11445,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_native_simulation_v3/benchmark_tools/replay_phylogeny.py",
+    "sha256": "e4de6f39c66c0f7e7f63229188a76ece44dbdc9b7771ab1c3b1465cec63aa539"
+  },
+  "packages": [
+    [
+      "Brotli",
+      "1.0.9"
+    ],
+    [
+      "CoolProp",
+      "7.2.0"
+    ],
+    [
+      "Cython",
+      "3.1.8"
+    ],
+    [
+      "DataProperty",
+      "1.1.1"
+    ],
+    [
+      "DendroPy",
+      "5.0.8"
+    ],
+    [
+      "Farama-Notifications",
+      "0.0.4"
+    ],
+    [
+      "FlagEmbedding",
+      "1.4.0"
+    ],
+    [
+      "GitPython",
+      "3.1.46"
+    ],
+    [
+      "ImageIO",
+      "2.37.3"
+    ],
+    [
+      "Jinja2",
+      "3.1.6"
+    ],
+    [
+      "Keras-Preprocessing",
+      "1.1.2"
+    ],
+    [
+      "Markdown",
+      "3.10.2"
+    ],
+    [
+      "MarkupSafe",
+      "3.0.3"
+    ],
+    [
+      "POT",
+      "0.9.7"
+    ],
+    [
+      "PyJWT",
+      "2.12.1"
+    ],
+    [
+      "PyLEMS",
+      "0.6.9"
+    ],
+    [
+      "PyMuPDF",
+      "1.27.2.3"
+    ],
+    [
+      "PyQt5",
+      "5.15.10"
+    ],
+    [
+      "PyQt5-sip",
+      "12.13.0"
+    ],
+    [
+      "PyQt6",
+      "6.8.1"
+    ],
+    [
+      "PyQt6-Qt6",
+      "6.8.2"
+    ],
+    [
+      "PyQt6-WebEngine",
+      "6.8.0"
+    ],
+    [
+      "PyQt6-WebEngine-Qt6",
+      "6.8.2"
+    ],
+    [
+      "PyQt6_sip",
+      "13.10.0"
+    ],
+    [
+      "PySocks",
+      "1.7.1"
+    ],
+    [
+      "PyYAML",
+      "6.0.1"
+    ],
+    [
+      "Pygments",
+      "2.19.2"
+    ],
+    [
+      "Pyvolve",
+      "1.1.0"
+    ],
+    [
+      "QtPy",
+      "2.4.1"
+    ],
+    [
+      "RapidFuzz",
+      "3.14.5"
+    ],
+    [
+      "Send2Trash",
+      "1.8.0"
+    ],
+    [
+      "Sphinx",
+      "8.1.3"
+    ],
+    [
+      "ViennaRNA",
+      "2.7.2"
+    ],
+    [
+      "Werkzeug",
+      "3.1.6"
+    ],
+    [
+      "absl-py",
+      "2.4.0"
+    ],
+    [
+      "accelerate",
+      "1.13.0"
+    ],
+    [
+      "adjustText",
+      "1.3.0"
+    ],
+    [
+      "aiohappyeyeballs",
+      "2.6.1"
+    ],
+    [
+      "aiohttp",
+      "3.13.3"
+    ],
+    [
+      "aiosignal",
+      "1.4.0"
+    ],
+    [
+      "airspeed",
+      "0.6.1"
+    ],
+    [
+      "alabaster",
+      "1.0.0"
+    ],
+    [
+      "altgraph",
+      "0.17.2"
+    ],
+    [
+      "anaconda-client",
+      "1.11.1"
+    ],
+    [
+      "anaconda-navigator",
+      "2.4.0"
+    ],
+    [
+      "anaconda-project",
+      "0.11.1"
+    ],
+    [
+      "annotated-doc",
+      "0.0.4"
+    ],
+    [
+      "annotated-types",
+      "0.7.0"
+    ],
+    [
+      "anthropic",
+      "0.84.0"
+    ],
+    [
+      "anyio",
+      "4.13.0"
+    ],
+    [
+      "apache-tvm-ffi",
+      "0.1.9"
+    ],
+    [
+      "appdirs",
+      "1.4.4"
+    ],
+    [
+      "archspec",
+      "0.2.3"
+    ],
+    [
+      "argon2-cffi",
+      "21.3.0"
+    ],
+    [
+      "argon2-cffi-bindings",
+      "21.2.0"
+    ],
+    [
+      "astor",
+      "0.8.1"
+    ],
+    [
+      "asttokens",
+      "2.0.5"
+    ],
+    [
+      "astunparse",
+      "1.6.3"
+    ],
+    [
+      "async-timeout",
+      "5.0.1"
+    ],
+    [
+      "attrs",
+      "23.1.0"
+    ],
+    [
+      "attrs",
+      "26.1.0"
+    ],
+    [
+      "av",
+      "17.0.1"
+    ],
+    [
+      "babel",
+      "2.18.0"
+    ],
+    [
+      "backcall",
+      "0.2.0"
+    ],
+    [
+      "backports.asyncio.runner",
+      "1.2.0"
+    ],
+    [
+      "backports.functools-lru-cache",
+      "1.6.4"
+    ],
+    [
+      "backports.tarfile",
+      "1.2.0"
+    ],
+    [
+      "backports.tempfile",
+      "1.0"
+    ],
+    [
+      "backports.weakref",
+      "1.0.post1"
+    ],
+    [
+      "beartype",
+      "0.14.1"
+    ],
+    [
+      "beautifulsoup4",
+      "4.11.1"
+    ],
+    [
+      "beautifulsoup4",
+      "4.12.2"
+    ],
+    [
+      "better-abc",
+      "0.0.3"
+    ],
+    [
+      "bidict",
+      "0.23.1"
+    ],
+    [
+      "biopython",
+      "1.86"
+    ],
+    [
+      "biotite",
+      "1.2.0"
+    ],
+    [
+      "biotraj",
+      "1.2.2"
+    ],
+    [
+      "bitsandbytes",
+      "0.49.2"
+    ],
+    [
+      "blake3",
+      "1.0.8"
+    ],
+    [
+      "bleach",
+      "5.0.0"
+    ],
+    [
+      "blessings",
+      "1.7"
+    ],
+    [
+      "blosc2",
+      "4.1.2"
+    ],
+    [
+      "boltons",
+      "23.0.0"
+    ],
+    [
+      "cachetools",
+      "5.0.0"
+    ],
+    [
+      "cattrs",
+      "26.1.0"
+    ],
+    [
+      "cbor",
+      "1.0.0"
+    ],
+    [
+      "cbor2",
+      "6.0.1"
+    ],
+    [
+      "cect",
+      "0.3.1"
+    ],
+    [
+      "certifi",
+      "2025.1.31"
+    ],
+    [
+      "cffi",
+      "1.16.0"
+    ],
+    [
+      "cffi",
+      "2.0.0"
+    ],
+    [
+      "chardet",
+      "4.0.0"
+    ],
+    [
+      "charset-normalizer",
+      "2.1.1"
+    ],
+    [
+      "charset-normalizer",
+      "3.4.1"
+    ],
+    [
+      "click",
+      "8.3.1"
+    ],
+    [
+      "clipkit",
+      "2.11.4"
+    ],
+    [
+      "cloudpathlib",
+      "0.23.0"
+    ],
+    [
+      "cloudpickle",
+      "3.1.2"
+    ],
+    [
+      "clustkit",
+      "0.1.0"
+    ],
+    [
+      "clyent",
+      "1.2.2"
+    ],
+    [
+      "colorama",
+      "0.4.6"
+    ],
+    [
+      "coloredlogs",
+      "15.0.1"
+    ],
+    [
+      "compressed-tensors",
+      "0.15.0.1"
+    ],
+    [
+      "conda",
+      "25.1.1"
+    ],
+    [
+      "conda-build",
+      "3.28.2"
+    ],
+    [
+      "conda-content-trust",
+      "0.1.3"
+    ],
+    [
+      "conda-libmamba-solver",
+      "25.1.1"
+    ],
+    [
+      "conda-pack",
+      "0.6.0"
+    ],
+    [
+      "conda-package-handling",
+      "2.2.0"
+    ],
+    [
+      "conda-repo-cli",
+      "1.0.75"
+    ],
+    [
+      "conda-token",
+      "0.4.0"
+    ],
+    [
+      "conda-verify",
+      "3.4.2"
+    ],
+    [
+      "conda_index",
+      "0.3.0"
+    ],
+    [
+      "conda_package_streaming",
+      "0.9.0"
+    ],
+    [
+      "contourpy",
+      "1.3.2"
+    ],
+    [
+      "coverage",
+      "7.13.4"
+    ],
+    [
+      "cryptography",
+      "41.0.7"
+    ],
+    [
+      "cuda-bindings",
+      "13.2.0"
+    ],
+    [
+      "cuda-pathfinder",
+      "1.5.1"
+    ],
+    [
+      "cuda-python",
+      "13.2.0"
+    ],
+    [
+      "cuda-tile",
+      "1.3.0"
+    ],
+    [
+      "cuda-toolkit",
+      "13.0.3.0"
+    ],
+    [
+      "cupy-cuda12x",
+      "13.6.0"
+    ],
+    [
+      "curl_cffi",
+      "0.14.0"
+    ],
+    [
+      "cvdbench",
+      "0.1.0"
+    ],
+    [
+      "cvdbench",
+      "0.1.0"
+    ],
+    [
+      "cycler",
+      "0.12.1"
+    ],
+    [
+      "datacache",
+      "1.7.0"
+    ],
+    [
+      "datasets",
+      "4.8.3"
+    ],
+    [
+      "debugpy",
+      "1.6.0"
+    ],
+    [
+      "decorator",
+      "5.1.1"
+    ],
+    [
+      "defusedxml",
+      "0.7.1"
+    ],
+    [
+      "defusedxml",
+      "0.7.1"
+    ],
+    [
+      "depyf",
+      "0.20.0"
+    ],
+    [
+      "dill",
+      "0.4.1"
+    ],
+    [
+      "diskcache",
+      "5.6.3"
+    ],
+    [
+      "distro",
+      "1.8.0"
+    ],
+    [
+      "dnspython",
+      "2.8.0"
+    ],
+    [
+      "docker",
+      "7.1.0"
+    ],
+    [
+      "docopt-ng",
+      "0.9.0"
+    ],
+    [
+      "docstring_parser",
+      "0.17.0"
+    ],
+    [
+      "docutils",
+      "0.21.2"
+    ],
+    [
+      "duckdb",
+      "1.5.4"
+    ],
+    [
+      "easyocr",
+      "1.7.2"
+    ],
+    [
+      "einops",
+      "0.8.2"
+    ],
+    [
+      "email-validator",
+      "2.3.0"
+    ],
+    [
+      "entrypoints",
+      "0.4"
+    ],
+    [
+      "epistemic-vectors",
+      "0.1.0"
+    ],
+    [
+      "esm",
+      "3.2.1.post1"
+    ],
+    [
+      "et_xmlfile",
+      "2.0.0"
+    ],
+    [
+      "eval_type_backport",
+      "0.3.1"
+    ],
+    [
+      "evaluate",
+      "0.4.6"
+    ],
+    [
+      "exceptiongroup",
+      "1.3.1"
+    ],
+    [
+      "execnet",
+      "2.1.2"
+    ],
+    [
+      "executing",
+      "2.2.1"
+    ],
+    [
+      "fancy-einsum",
+      "0.0.3"
+    ],
+    [
+      "fastapi",
+      "0.129.0"
+    ],
+    [
+      "fastapi-cli",
+      "0.0.24"
+    ],
+    [
+      "fastapi-cloud-cli",
+      "0.17.1"
+    ],
+    [
+      "fastar",
+      "0.11.0"
+    ],
+    [
+      "fastjsonschema",
+      "2.15.3"
+    ],
+    [
+      "fastjsonschema",
+      "2.16.2"
+    ],
+    [
+      "fastrlock",
+      "0.8.3"
+    ],
+    [
+      "fastsafetensors",
+      "0.3"
+    ],
+    [
+      "filelock",
+      "3.25.2"
+    ],
+    [
+      "filetype",
+      "1.2.0"
+    ],
+    [
+      "flashinfer-cubin",
+      "0.6.8.post1"
+    ],
+    [
+      "flashinfer-python",
+      "0.6.8.post1"
+    ],
+    [
+      "flatbuffers",
+      "25.12.19"
+    ],
+    [
+      "fonttools",
+      "4.61.1"
+    ],
+    [
+      "frozendict",
+      "2.4.2"
+    ],
+    [
+      "frozenlist",
+      "1.8.0"
+    ],
+    [
+      "fsspec",
+      "2026.2.0"
+    ],
+    [
+      "ftpretty",
+      "0.4.0"
+    ],
+    [
+      "future",
+      "0.18.3"
+    ],
+    [
+      "gast",
+      "0.4.0"
+    ],
+    [
+      "gdown",
+      "6.0.0"
+    ],
+    [
+      "genplan",
+      "0.1.0"
+    ],
+    [
+      "gensim",
+      "4.4.0"
+    ],
+    [
+      "gguf",
+      "0.18.0"
+    ],
+    [
+      "gh",
+      "0.0.4"
+    ],
+    [
+      "gitdb",
+      "4.0.12"
+    ],
+    [
+      "goatools",
+      "1.5.2"
+    ],
+    [
+      "google-ai-generativelanguage",
+      "0.6.15"
+    ],
+    [
+      "google-api-core",
+      "2.30.3"
+    ],
+    [
+      "google-api-python-client",
+      "2.194.0"
+    ],
+    [
+      "google-auth",
+      "2.49.2"
+    ],
+    [
+      "google-auth-httplib2",
+      "0.3.1"
+    ],
+    [
+      "google-auth-oauthlib",
+      "0.4.6"
+    ],
+    [
+      "google-generativeai",
+      "0.8.6"
+    ],
+    [
+      "google-pasta",
+      "0.2.0"
+    ],
+    [
+      "googleapis-common-protos",
+      "1.74.0"
+    ],
+    [
+      "gpustat",
+      "0.6.0"
+    ],
+    [
+      "graphviz",
+      "0.21"
+    ],
+    [
+      "grpcio",
+      "1.78.0"
+    ],
+    [
+      "grpcio-status",
+      "1.71.2"
+    ],
+    [
+      "gtfparse",
+      "2.8.0"
+    ],
+    [
+      "gymnasium",
+      "1.2.3"
+    ],
+    [
+      "h11",
+      "0.16.0"
+    ],
+    [
+      "h5py",
+      "3.14.0"
+    ],
+    [
+      "hf-xet",
+      "1.4.3"
+    ],
+    [
+      "hiveplotlib",
+      "0.25.1"
+    ],
+    [
+      "hnswlib",
+      "0.8.0"
+    ],
+    [
+      "httpcore",
+      "1.0.9"
+    ],
+    [
+      "httplib2",
+      "0.31.2"
+    ],
+    [
+      "httptools",
+      "0.7.1"
+    ],
+    [
+      "httpx",
+      "0.28.1"
+    ],
+    [
+      "httpx-sse",
+      "0.4.3"
+    ],
+    [
+      "huggingface_hub",
+      "1.13.0"
+    ],
+    [
+      "humanfriendly",
+      "10.0"
+    ],
+    [
+      "icalendar",
+      "7.1.1"
+    ],
+    [
+      "idna",
+      "3.10"
+    ],
+    [
+      "igraph",
+      "1.0.0"
+    ],
+    [
+      "igv-reports",
+      "1.16.3"
+    ],
+    [
+      "ijson",
+      "3.5.0"
+    ],
+    [
+      "imagesize",
+      "2.0.0"
+    ],
+    [
+      "importlib_metadata",
+      "8.7.1"
+    ],
+    [
+      "iniconfig",
+      "2.3.0"
+    ],
+    [
+      "inscriptis",
+      "2.7.1"
+    ],
+    [
+      "interegular",
+      "0.3.3"
+    ],
+    [
+      "intervaltree",
+      "3.2.1"
+    ],
+    [
+      "ipykernel",
+      "6.13.0"
+    ],
+    [
+      "ipython",
+      "8.3.0"
+    ],
+    [
+      "ipython-genutils",
+      "0.2.0"
+    ],
+    [
+      "ir_datasets",
+      "0.5.11"
+    ],
+    [
+      "jaxtyping",
+      "0.3.7"
+    ],
+    [
+      "jedi",
+      "0.18.1"
+    ],
+    [
+      "jiter",
+      "0.13.0"
+    ],
+    [
+      "jmespath",
+      "1.1.0"
+    ],
+    [
+      "joblib",
+      "1.5.3"
+    ],
+    [
+      "json5",
+      "0.9.8"
+    ],
+    [
+      "jsonpatch",
+      "1.32"
+    ],
+    [
+      "jsonpath-python",
+      "1.1.5"
+    ],
+    [
+      "jsonpointer",
+      "2.1"
+    ],
+    [
+      "jsonschema",
+      "4.19.2"
+    ],
+    [
+      "jsonschema",
+      "4.26.0"
+    ],
+    [
+      "jsonschema-specifications",
+      "2023.7.1"
+    ],
+    [
+      "jupyter-client",
+      "7.3.1"
+    ],
+    [
+      "jupyter-core",
+      "4.10.0"
+    ],
+    [
+      "jupyter-server",
+      "1.17.0"
+    ],
+    [
+      "jupyter_core",
+      "5.5.0"
+    ],
+    [
+      "jupyterlab",
+      "3.4.1"
+    ],
+    [
+      "jupyterlab-pygments",
+      "0.2.2"
+    ],
+    [
+      "jupyterlab-server",
+      "2.13.0"
+    ],
+    [
+      "kiwisolver",
+      "1.4.9"
+    ],
+    [
+      "lark",
+      "1.2.2"
+    ],
+    [
+      "lazy-loader",
+      "0.5"
+    ],
+    [
+      "leidenalg",
+      "0.11.0"
+    ],
+    [
+      "libNeuroML",
+      "0.6.7"
+    ],
+    [
+      "libarchive-c",
+      "2.9"
+    ],
+    [
+      "libclang",
+      "18.1.1"
+    ],
+    [
+      "libmambapy",
+      "2.0.5"
+    ],
+    [
+      "librt",
+      "0.9.0"
+    ],
+    [
+      "lightgbm",
+      "4.6.0"
+    ],
+    [
+      "llguidance",
+      "1.3.0"
+    ],
+    [
+      "llvmlite",
+      "0.47.0"
+    ],
+    [
+      "lm-format-enforcer",
+      "0.11.3"
+    ],
+    [
+      "lm_eval",
+      "0.4.12"
+    ],
+    [
+      "loguru",
+      "0.7.3"
+    ],
+    [
+      "lxml",
+      "6.0.2"
+    ],
+    [
+      "lz4",
+      "4.4.5"
+    ],
+    [
+      "markdown-it-py",
+      "4.0.0"
+    ],
+    [
+      "markdown2",
+      "2.5.5"
+    ],
+    [
+      "markov-clustering",
+      "0.0.6.dev0"
+    ],
+    [
+      "matplotlib",
+      "3.10.8"
+    ],
+    [
+      "matplotlib-inline",
+      "0.1.3"
+    ],
+    [
+      "matplotlib-scalebar",
+      "0.9.0"
+    ],
+    [
+      "mbstrdecoder",
+      "1.1.5"
+    ],
+    [
+      "mcl",
+      "0.0.6"
+    ],
+    [
+      "mcp",
+      "1.27.0"
+    ],
+    [
+      "mdurl",
+      "0.1.2"
+    ],
+    [
+      "memoized-property",
+      "1.0.3"
+    ],
+    [
+      "menuinst",
+      "2.0.1"
+    ],
+    [
+      "metagraph-mdap",
+      "0.1.0"
+    ],
+    [
+      "mhcflurry",
+      "2.2.1"
+    ],
+    [
+      "mhcgnomes",
+      "3.32.0"
+    ],
+    [
+      "mi-esmfold",
+      "0.0.1"
+    ],
+    [
+      "mi-esmfold",
+      "0.0.1"
+    ],
+    [
+      "mistral_common",
+      "1.11.1"
+    ],
+    [
+      "mistralai",
+      "2.4.0"
+    ],
+    [
+      "mistune",
+      "0.8.4"
+    ],
+    [
+      "ml_dtypes",
+      "0.5.4"
+    ],
+    [
+      "mock",
+      "4.0.3"
+    ],
+    [
+      "model-hosting-container-standards",
+      "0.1.14"
+    ],
+    [
+      "modelgenerator",
+      "0.1.3.post0"
+    ],
+    [
+      "modelspec",
+      "0.3.8"
+    ],
+    [
+      "mordred",
+      "1.2.0"
+    ],
+    [
+      "mordredcommunity",
+      "2.0.7"
+    ],
+    [
+      "more-itertools",
+      "10.1.0"
+    ],
+    [
+      "mpmath",
+      "1.3.0"
+    ],
+    [
+      "msgpack",
+      "1.1.2"
+    ],
+    [
+      "msgpack-numpy",
+      "0.4.8"
+    ],
+    [
+      "msgspec",
+      "0.21.1"
+    ],
+    [
+      "multidict",
+      "6.7.1"
+    ],
+    [
+      "multiprocess",
+      "0.70.19"
+    ],
+    [
+      "mypy",
+      "1.20.1"
+    ],
+    [
+      "mypy_extensions",
+      "1.1.0"
+    ],
+    [
+      "namex",
+      "0.1.0"
+    ],
+    [
+      "narwhals",
+      "2.18.1"
+    ],
+    [
+      "natsort",
+      "8.4.0"
+    ],
+    [
+      "navigator-updater",
+      "0.4.0"
+    ],
+    [
+      "nbclassic",
+      "0.3.7"
+    ],
+    [
+      "nbclient",
+      "0.6.3"
+    ],
+    [
+      "nbconvert",
+      "6.5.0"
+    ],
+    [
+      "nbformat",
+      "5.4.0"
+    ],
+    [
+      "nbformat",
+      "5.9.2"
+    ],
+    [
+      "ndindex",
+      "1.10.1"
+    ],
+    [
+      "nest-asyncio",
+      "1.5.5"
+    ],
+    [
+      "networkx",
+      "2.8.8"
+    ],
+    [
+      "neuromllite",
+      "0.6.1"
+    ],
+    [
+      "newick",
+      "1.11.0"
+    ],
+    [
+      "ninja",
+      "1.13.0"
+    ],
+    [
+      "nltk",
+      "3.10.3"
+    ],
+    [
+      "nnsight",
+      "0.6.3"
+    ],
+    [
+      "notebook",
+      "6.4.11"
+    ],
+    [
+      "notebook-shim",
+      "0.1.0"
+    ],
+    [
+      "numba",
+      "0.65.0"
+    ],
+    [
+      "numexpr",
+      "2.14.1"
+    ],
+    [
+      "numpy",
+      "2.2.6"
+    ],
+    [
+      "nvidia-cublas",
+      "13.1.1.3"
+    ],
+    [
+      "nvidia-cublas-cu12",
+      "12.6.4.1"
+    ],
+    [
+      "nvidia-cuda-cupti",
+      "13.0.85"
+    ],
+    [
+      "nvidia-cuda-cupti-cu12",
+      "12.6.80"
+    ],
+    [
+      "nvidia-cuda-nvrtc",
+      "13.0.88"
+    ],
+    [
+      "nvidia-cuda-nvrtc-cu12",
+      "12.6.77"
+    ],
+    [
+      "nvidia-cuda-runtime",
+      "13.0.96"
+    ],
+    [
+      "nvidia-cuda-runtime-cu12",
+      "12.6.77"
+    ],
+    [
+      "nvidia-cudnn-cu12",
+      "9.5.1.17"
+    ],
+    [
+      "nvidia-cudnn-cu13",
+      "9.20.0.48"
+    ],
+    [
+      "nvidia-cudnn-frontend",
+      "1.18.0"
+    ],
+    [
+      "nvidia-cufft",
+      "12.0.0.61"
+    ],
+    [
+      "nvidia-cufft-cu12",
+      "11.3.0.4"
+    ],
+    [
+      "nvidia-cufile",
+      "1.15.1.6"
+    ],
+    [
+      "nvidia-cufile-cu12",
+      "1.13.1.3"
+    ],
+    [
+      "nvidia-curand",
+      "10.4.0.35"
+    ],
+    [
+      "nvidia-curand-cu12",
+      "10.3.7.77"
+    ],
+    [
+      "nvidia-cusolver",
+      "12.0.4.66"
+    ],
+    [
+      "nvidia-cusolver-cu12",
+      "11.7.1.2"
+    ],
+    [
+      "nvidia-cusparse",
+      "12.6.3.3"
+    ],
+    [
+      "nvidia-cusparse-cu12",
+      "12.5.4.2"
+    ],
+    [
+      "nvidia-cusparselt-cu12",
+      "0.6.3"
+    ],
+    [
+      "nvidia-cusparselt-cu13",
+      "0.8.1"
+    ],
+    [
+      "nvidia-cutlass-dsl",
+      "4.4.2"
+    ],
+    [
+      "nvidia-cutlass-dsl-libs-base",
+      "4.4.2"
+    ],
+    [
+      "nvidia-ml-py",
+      "13.595.45"
+    ],
+    [
+      "nvidia-ml-py3",
+      "7.352.0"
+    ],
+    [
+      "nvidia-nccl-cu12",
+      "2.21.5"
+    ],
+    [
+      "nvidia-nccl-cu13",
+      "2.29.7"
+    ],
+    [
+      "nvidia-nvjitlink",
+      "13.0.88"
+    ],
+    [
+      "nvidia-nvjitlink-cu12",
+      "12.6.85"
+    ],
+    [
+      "nvidia-nvshmem-cu12",
+      "3.4.5"
+    ],
+    [
+      "nvidia-nvshmem-cu13",
+      "3.4.5"
+    ],
+    [
+      "nvidia-nvtx",
+      "13.0.85"
+    ],
+    [
+      "nvidia-nvtx-cu12",
+      "12.6.77"
+    ],
+    [
+      "nvitop",
+      "0.5.5"
+    ],
+    [
+      "oauthlib",
+      "3.3.1"
+    ],
+    [
+      "onnxruntime",
+      "1.23.2"
+    ],
+    [
+      "openai",
+      "2.26.0"
+    ],
+    [
+      "openai-harmony",
+      "0.0.8"
+    ],
+    [
+      "opencv-python",
+      "4.13.0.92"
+    ],
+    [
+      "opencv-python-headless",
+      "4.13.0.92"
+    ],
+    [
+      "openpyxl",
+      "3.1.5"
+    ],
+    [
+      "opentelemetry-api",
+      "1.41.1"
+    ],
+    [
+      "opentelemetry-exporter-otlp",
+      "1.41.1"
+    ],
+    [
+      "opentelemetry-exporter-otlp-proto-common",
+      "1.41.1"
+    ],
+    [
+      "opentelemetry-exporter-otlp-proto-grpc",
+      "1.41.1"
+    ],
+    [
+      "opentelemetry-exporter-otlp-proto-http",
+      "1.41.1"
+    ],
+    [
+      "opentelemetry-proto",
+      "1.41.1"
+    ],
+    [
+      "opentelemetry-sdk",
+      "1.41.1"
+    ],
+    [
+      "opentelemetry-semantic-conventions",
+      "0.62b1"
+    ],
+    [
+      "opentelemetry-semantic-conventions-ai",
+      "0.5.1"
+    ],
+    [
+      "opt_einsum",
+      "3.4.0"
+    ],
+    [
+      "optree",
+      "0.19.1"
+    ],
+    [
+      "orthohmm",
+      "0.5.0"
+    ],
+    [
+      "outlines_core",
+      "0.2.14"
+    ],
+    [
+      "packaging",
+      "26.0"
+    ],
+    [
+      "packaging",
+      "26.1"
+    ],
+    [
+      "padelpy",
+      "0.1.14"
+    ],
+    [
+      "pandas",
+      "2.3.3"
+    ],
+    [
+      "pandocfilters",
+      "1.5.0"
+    ],
+    [
+      "parasail",
+      "1.3.4"
+    ],
+    [
+      "parso",
+      "0.8.3"
+    ],
+    [
+      "partial-json-parser",
+      "0.2.1.1.post7"
+    ],
+    [
+      "pathlib",
+      "1.0.1"
+    ],
+    [
+      "pathspec",
+      "1.0.4"
+    ],
+    [
+      "pathvalidate",
+      "3.3.1"
+    ],
+    [
+      "patsy",
+      "1.0.2"
+    ],
+    [
+      "pdoc",
+      "16.0.0"
+    ],
+    [
+      "peft",
+      "0.19.1"
+    ],
+    [
+      "pexpect",
+      "4.9.0"
+    ],
+    [
+      "pickleshare",
+      "0.7.5"
+    ],
+    [
+      "pillow",
+      "12.2.0"
+    ],
+    [
+      "pip",
+      "26.0.1"
+    ],
+    [
+      "pkginfo",
+      "1.9.6"
+    ],
+    [
+      "platformdirs",
+      "3.10.0"
+    ],
+    [
+      "plotly",
+      "6.6.0"
+    ],
+    [
+      "pluggy",
+      "1.6.0"
+    ],
+    [
+      "ply",
+      "3.11"
+    ],
+    [
+      "polars",
+      "1.43.2"
+    ],
+    [
+      "polars-runtime-32",
+      "1.43.2"
+    ],
+    [
+      "portalocker",
+      "4.2.0"
+    ],
+    [
+      "ppft",
+      "1.7.8"
+    ],
+    [
+      "primer3-py",
+      "2.3.0"
+    ],
+    [
+      "progressbar2",
+      "4.5.0"
+    ],
+    [
+      "project-lantern-oversight",
+      "0.1.0"
+    ],
+    [
+      "prometheus-fastapi-instrumentator",
+      "7.1.0"
+    ],
+    [
+      "prometheus_client",
+      "0.25.0"
+    ],
+    [
+      "prompt-toolkit",
+      "3.0.29"
+    ],
+    [
+      "propcache",
+      "0.4.1"
+    ],
+    [
+      "proto-plus",
+      "1.27.2"
+    ],
+    [
+      "protobuf",
+      "7.35.1"
+    ],
+    [
+      "psutil",
+      "7.2.2"
+    ],
+    [
+      "psycopg",
+      "3.3.3"
+    ],
+    [
+      "psycopg-binary",
+      "3.3.3"
+    ],
+    [
+      "ptyprocess",
+      "0.7.0"
+    ],
+    [
+      "pubfig",
+      "0.2.0"
+    ],
+    [
+      "pure-eval",
+      "0.2.2"
+    ],
+    [
+      "py-cpuinfo",
+      "9.0.0"
+    ],
+    [
+      "py-spy",
+      "0.4.1"
+    ],
+    [
+      "pyNeuroML",
+      "1.3.21"
+    ],
+    [
+      "pyOpenSSL",
+      "23.2.0"
+    ],
+    [
+      "pyahocorasick",
+      "2.3.1"
+    ],
+    [
+      "pyarrow",
+      "23.0.1"
+    ],
+    [
+      "pyasn1",
+      "0.6.3"
+    ],
+    [
+      "pyasn1_modules",
+      "0.4.2"
+    ],
+    [
+      "pybase64",
+      "1.4.3"
+    ],
+    [
+      "pyclipper",
+      "1.4.0"
+    ],
+    [
+      "pycosat",
+      "0.6.6"
+    ],
+    [
+      "pycountry",
+      "26.2.16"
+    ],
+    [
+      "pycparser",
+      "2.21"
+    ],
+    [
+      "pycparser",
+      "2.21"
+    ],
+    [
+      "pydantic",
+      "2.12.5"
+    ],
+    [
+      "pydantic-extra-types",
+      "2.11.1"
+    ],
+    [
+      "pydantic-settings",
+      "2.14.0"
+    ],
+    [
+      "pydantic_core",
+      "2.41.5"
+    ],
+    [
+      "pydot",
+      "4.0.1"
+    ],
+    [
+      "pyensembl",
+      "2.10.4"
+    ],
+    [
+      "pyfaidx",
+      "0.9.0.4"
+    ],
+    [
+      "pyinstaller",
+      "5.1"
+    ],
+    [
+      "pyinstaller-hooks-contrib",
+      "2022.7"
+    ],
+    [
+      "pymongo",
+      "4.16.0"
+    ],
+    [
+      "pyparsing",
+      "3.2.1"
+    ],
+    [
+      "pypdf",
+      "6.10.2"
+    ],
+    [
+      "pypubfigs",
+      "1.1.3"
+    ],
+    [
+      "pyrsistent",
+      "0.18.1"
+    ],
+    [
+      "pysam",
+      "0.24.0"
+    ],
+    [
+      "pytablewriter",
+      "1.2.1"
+    ],
+    [
+      "pyteomics",
+      "4.7.5"
+    ],
+    [
+      "pytesseract",
+      "0.3.13"
+    ],
+    [
+      "pytest",
+      "9.0.2"
+    ],
+    [
+      "pytest-asyncio",
+      "1.3.0"
+    ],
+    [
+      "pytest-cov",
+      "7.0.0"
+    ],
+    [
+      "pytest-xdist",
+      "3.8.0"
+    ],
+    [
+      "python-bidi",
+      "0.6.7"
+    ],
+    [
+      "python-dateutil",
+      "2.8.2"
+    ],
+    [
+      "python-dateutil",
+      "2.8.2"
+    ],
+    [
+      "python-docx",
+      "1.2.0"
+    ],
+    [
+      "python-dotenv",
+      "1.2.2"
+    ],
+    [
+      "python-engineio",
+      "4.13.1"
+    ],
+    [
+      "python-igraph",
+      "1.0.0"
+    ],
+    [
+      "python-json-logger",
+      "4.1.0"
+    ],
+    [
+      "python-multipart",
+      "0.0.27"
+    ],
+    [
+      "python-socketio",
+      "5.16.1"
+    ],
+    [
+      "python-utils",
+      "3.9.1"
+    ],
+    [
+      "python_codon_tables",
+      "0.1.18"
+    ],
+    [
+      "pytwobit",
+      "0.3.1"
+    ],
+    [
+      "pytz",
+      "2023.3.post1"
+    ],
+    [
+      "pyzmq",
+      "27.1.0"
+    ],
+    [
+      "quack-kernels",
+      "0.4.1"
+    ],
+    [
+      "rapidocr-onnxruntime",
+      "1.4.4"
+    ],
+    [
+      "rdkit",
+      "2026.3.1"
+    ],
+    [
+      "referencing",
+      "0.30.2"
+    ],
+    [
+      "regex",
+      "2026.4.4"
+    ],
+    [
+      "requests",
+      "2.32.3"
+    ],
+    [
+      "requests",
+      "2.32.5"
+    ],
+    [
+      "requests-oauthlib",
+      "2.0.0"
+    ],
+    [
+      "respx",
+      "0.23.1"
+    ],
+    [
+      "reviewer",
+      "0.1.0"
+    ],
+    [
+      "rich",
+      "14.3.2"
+    ],
+    [
+      "rich-toolkit",
+      "0.19.7"
+    ],
+    [
+      "rignore",
+      "0.7.6"
+    ],
+    [
+      "rouge_score",
+      "0.1.2"
+    ],
+    [
+      "rpds-py",
+      "0.30.0"
+    ],
+    [
+      "ruamel-yaml-conda",
+      "0.17.21"
+    ],
+    [
+      "ruamel.yaml",
+      "0.17.21"
+    ],
+    [
+      "ruamel.yaml.clib",
+      "0.2.6"
+    ],
+    [
+      "ruff",
+      "0.15.4"
+    ],
+    [
+      "sacrebleu",
+      "2.6.0"
+    ],
+    [
+      "safetensors",
+      "0.7.0"
+    ],
+    [
+      "scikit-image",
+      "0.25.2"
+    ],
+    [
+      "scikit-learn",
+      "1.7.2"
+    ],
+    [
+      "scipy",
+      "1.15.3"
+    ],
+    [
+      "seaborn",
+      "0.13.2"
+    ],
+    [
+      "sentence-transformers",
+      "5.4.1"
+    ],
+    [
+      "sentencepiece",
+      "0.2.1"
+    ],
+    [
+      "sentry-sdk",
+      "2.57.0"
+    ],
+    [
+      "sercol",
+      "1.0.0"
+    ],
+    [
+      "serializable",
+      "1.1.0"
+    ],
+    [
+      "setproctitle",
+      "1.3.7"
+    ],
+    [
+      "setuptools",
+      "81.0.0"
+    ],
+    [
+      "shapely",
+      "2.1.2"
+    ],
+    [
+      "shellingham",
+      "1.5.4"
+    ],
+    [
+      "simple-websocket",
+      "1.1.0"
+    ],
+    [
+      "simplejson",
+      "4.1.1"
+    ],
+    [
+      "sip",
+      "6.7.12"
+    ],
+    [
+      "six",
+      "1.16.0"
+    ],
+    [
+      "smart_open",
+      "7.6.0"
+    ],
+    [
+      "smmap",
+      "5.0.3"
+    ],
+    [
+      "sniffio",
+      "1.2.0"
+    ],
+    [
+      "snowballstemmer",
+      "3.0.1"
+    ],
+    [
+      "sonicparanoid",
+      "2.0.9"
+    ],
+    [
+      "sortedcontainers",
+      "2.4.0"
+    ],
+    [
+      "soundfile",
+      "0.13.1"
+    ],
+    [
+      "soupsieve",
+      "2.3.2.post1"
+    ],
+    [
+      "soupsieve",
+      "2.5"
+    ],
+    [
+      "soxr",
+      "1.1.0"
+    ],
+    [
+      "sparkit",
+      "0.1.0"
+    ],
+    [
+      "sparkit",
+      "0.2.0"
+    ],
+    [
+      "sparkit",
+      "0.2.0"
+    ],
+    [
+      "sparkit-api",
+      "0.1.0"
+    ],
+    [
+      "sparkit-memory",
+      "0.0.3"
+    ],
+    [
+      "sparkit-memory",
+      "0.0.3"
+    ],
+    [
+      "sparkit-memory-client",
+      "0.0.15"
+    ],
+    [
+      "sparkit-memory-client",
+      "0.0.15"
+    ],
+    [
+      "sparkit-reboot",
+      "0.1.0"
+    ],
+    [
+      "sparkit-reboot",
+      "0.1.0"
+    ],
+    [
+      "sparkit-science",
+      "0.1.2"
+    ],
+    [
+      "sphinx_rtd_theme",
+      "3.1.0"
+    ],
+    [
+      "sphinxcontrib-applehelp",
+      "2.0.0"
+    ],
+    [
+      "sphinxcontrib-devhelp",
+      "2.0.0"
+    ],
+    [
+      "sphinxcontrib-htmlhelp",
+      "2.1.0"
+    ],
+    [
+      "sphinxcontrib-jquery",
+      "4.1"
+    ],
+    [
+      "sphinxcontrib-jsmath",
+      "1.0.1"
+    ],
+    [
+      "sphinxcontrib-qthelp",
+      "2.0.0"
+    ],
+    [
+      "sphinxcontrib-serializinghtml",
+      "2.0.0"
+    ],
+    [
+      "sqlitedict",
+      "2.1.0"
+    ],
+    [
+      "sse-starlette",
+      "3.4.1"
+    ],
+    [
+      "stable_baselines3",
+      "2.7.1"
+    ],
+    [
+      "stack-data",
+      "0.2.0"
+    ],
+    [
+      "starlette",
+      "0.52.1"
+    ],
+    [
+      "statannotations",
+      "0.7.2"
+    ],
+    [
+      "statsmodels",
+      "0.14.6"
+    ],
+    [
+      "supervisor",
+      "4.3.0"
+    ],
+    [
+      "sympy",
+      "1.13.1"
+    ],
+    [
+      "tabledata",
+      "1.3.5"
+    ],
+    [
+      "tables",
+      "3.10.1"
+    ],
+    [
+      "tabulate",
+      "0.10.0"
+    ],
+    [
+      "tantivy",
+      "0.26.0"
+    ],
+    [
+      "tcolorpy",
+      "0.1.7"
+    ],
+    [
+      "tenacity",
+      "9.1.4"
+    ],
+    [
+      "tensorboard",
+      "2.10.1"
+    ],
+    [
+      "tensorboard-data-server",
+      "0.6.1"
+    ],
+    [
+      "tensorboard-plugin-wit",
+      "1.8.1"
+    ],
+    [
+      "tensorflow-cpu",
+      "2.10.1"
+    ],
+    [
+      "tensorflow-estimator",
+      "2.10.0"
+    ],
+    [
+      "tensorflow-io-gcs-filesystem",
+      "0.37.1"
+    ],
+    [
+      "termcolor",
+      "1.1.0"
+    ],
+    [
+      "terminado",
+      "0.13.3"
+    ],
+    [
+      "texttable",
+      "1.7.0"
+    ],
+    [
+      "threadpoolctl",
+      "3.6.0"
+    ],
+    [
+      "tifffile",
+      "2025.5.10"
+    ],
+    [
+      "tiktoken",
+      "0.12.0"
+    ],
+    [
+      "tilelang",
+      "0.1.8"
+    ],
+    [
+      "tinycss2",
+      "1.1.1"
+    ],
+    [
+      "tinytimer",
+      "0.0.0"
+    ],
+    [
+      "tokenizers",
+      "0.22.2"
+    ],
+    [
+      "toml",
+      "0.10.2"
+    ],
+    [
+      "tomli",
+      "2.0.1"
+    ],
+    [
+      "torch",
+      "2.6.0+cu126"
+    ],
+    [
+      "torch_c_dlpack_ext",
+      "0.1.5"
+    ],
+    [
+      "torchaudio",
+      "2.11.0"
+    ],
+    [
+      "torchvision",
+      "0.21.0+cu126"
+    ],
+    [
+      "tornado",
+      "6.1"
+    ],
+    [
+      "tornado",
+      "6.3.3"
+    ],
+    [
+      "tqdm",
+      "4.67.3"
+    ],
+    [
+      "traitlets",
+      "5.2.0"
+    ],
+    [
+      "traitlets",
+      "5.7.1"
+    ],
+    [
+      "transformer-lens",
+      "2.17.0"
+    ],
+    [
+      "transformers",
+      "5.7.0"
+    ],
+    [
+      "transformers-stream-generator",
+      "0.0.5"
+    ],
+    [
+      "trec-car-tools",
+      "2.6"
+    ],
+    [
+      "treeswift",
+      "1.1.45"
+    ],
+    [
+      "triton",
+      "3.2.0"
+    ],
+    [
+      "truststore",
+      "0.8.0"
+    ],
+    [
+      "typechecks",
+      "0.1.0"
+    ],
+    [
+      "typeguard",
+      "4.5.1"
+    ],
+    [
+      "typepy",
+      "1.3.5"
+    ],
+    [
+      "typer",
+      "0.24.1"
+    ],
+    [
+      "typer-slim",
+      "0.24.0"
+    ],
+    [
+      "typing-inspection",
+      "0.4.2"
+    ],
+    [
+      "typing_extensions",
+      "4.15.0"
+    ],
+    [
+      "tzdata",
+      "2025.3"
+    ],
+    [
+      "ujson",
+      "5.4.0"
+    ],
+    [
+      "unlzw3",
+      "0.2.3"
+    ],
+    [
+      "uritemplate",
+      "4.2.0"
+    ],
+    [
+      "urllib3",
+      "1.26.15"
+    ],
+    [
+      "urllib3",
+      "2.3.0"
+    ],
+    [
+      "uvicorn",
+      "0.41.0"
+    ],
+    [
+      "uvloop",
+      "0.22.1"
+    ],
+    [
+      "varcode",
+      "7.0.0"
+    ],
+    [
+      "vllm",
+      "0.20.1"
+    ],
+    [
+      "wadler_lindig",
+      "0.1.7"
+    ],
+    [
+      "wandb",
+      "0.25.1"
+    ],
+    [
+      "warc3-wet",
+      "0.2.5"
+    ],
+    [
+      "warc3-wet-clueweb09",
+      "0.2.5"
+    ],
+    [
+      "watchfiles",
+      "1.1.1"
+    ],
+    [
+      "wcwidth",
+      "0.2.5"
+    ],
+    [
+      "webcolors",
+      "25.10.0"
+    ],
+    [
+      "webencodings",
+      "0.5.1"
+    ],
+    [
+      "websocket-client",
+      "1.3.2"
+    ],
+    [
+      "websockets",
+      "16.0"
+    ],
+    [
+      "wget",
+      "3.2"
+    ],
+    [
+      "wheel",
+      "0.46.3"
+    ],
+    [
+      "word2number",
+      "1.1"
+    ],
+    [
+      "wormneuroatlas",
+      "0.0.7.3"
+    ],
+    [
+      "wrapt",
+      "2.1.2"
+    ],
+    [
+      "wsproto",
+      "1.3.2"
+    ],
+    [
+      "xgboost",
+      "3.2.0"
+    ],
+    [
+      "xgrammar",
+      "0.2.0"
+    ],
+    [
+      "xlrd",
+      "2.0.2"
+    ],
+    [
+      "xlsxwriter",
+      "3.2.9"
+    ],
+    [
+      "xxhash",
+      "3.6.0"
+    ],
+    [
+      "yarl",
+      "1.23.0"
+    ],
+    [
+      "youtube-transcript-api",
+      "1.2.4"
+    ],
+    [
+      "yt-dlp",
+      "2026.6.9"
+    ],
+    [
+      "z3-solver",
+      "4.15.4.0"
+    ],
+    [
+      "zipp",
+      "3.23.0"
+    ],
+    [
+      "zlib-state",
+      "0.1.12"
+    ],
+    [
+      "zstandard",
+      "0.19.0"
+    ],
+    [
+      "zstd",
+      "1.5.7.3"
+    ]
+  ],
+  "remaining_controls": [
+    "unconstrained membership replay",
+    "matched sequence-search control",
+    "QfO factorial"
+  ],
+  "replay_verification": {
+    "bytes": 2471,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_replay_check_v2/verification.json",
+    "sha256": "b5dcac4012a84659d6c52f179671d3f4fc10c9e04cc1283cf48635ce7fb09b79"
+  },
+  "scheduler": {
+    "Elapsed": "00:08:59",
+    "ExitCode": "0:0",
+    "JobIDRaw": "21138",
+    "State": "COMPLETED"
+  },
+  "schema_version": 1,
+  "source": {
+    "bytes": 10824,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_native_simulation_v3/benchmark_tools/prepare_orthobench_factorial.py",
+    "sha256": "8363f1f5720424ed2aa79ad073eac3b09d726be0f8c63157293dfb20683f8bdd"
+  },
+  "status": "prepared_not_reconciled"
+}
