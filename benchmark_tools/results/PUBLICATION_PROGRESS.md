@@ -123,3 +123,19 @@ Dataset acquisition succeeded via the official HTTP endpoint; raw sequences
 remain outside Git. Next: settle exclusions and output-level semantics,
 complete taxonomic/homology-overlap screening, and commit the evaluation
 freeze before launching independent inference.
+
+## YGOB Input Preparation And Scientific Freeze
+
+`prepare_ygob_validation.py` verifies the acquired snapshot and prepares
+83,404 proteins from 16 non-Saccharomyces species. The reference has 83,391
+genes in 10,250 pillars; 13 genes from ambiguous pillars remain as inference
+inputs but are not scored. Input hashes and exclusion lists are recorded in
+`ygob_validation_inputs_20260916.json`. Preparation and overlap tests pass.
+
+`YGOB_VALIDATION_PROTOCOL_20260916.md` freezes the scientific specification
+before method runs: curated-group recovery, specified micro statistic,
+paired pillar bootstrap, two OrthoHMM-versus-full-OrthoFinder contrasts, and
+an OrthoFinder MCL checkpoint diagnostic. It explicitly does not claim
+family-disjointness. Homology screening and shared-resource checks are still
+required before accuracy interpretation. `run_ygob_validation.slurm` performs
+only inference from pinned production code, not scoring.
