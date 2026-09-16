@@ -485,3 +485,30 @@ repository files, reports, or commits. The user was notified to rotate the
 affected credentials. Subsequent diagnostics used targeted queries and the
 simulation invocation used `--cleanenv`. This security issue must not be
 confused with the unrelated pre-existing dependency alerts.
+
+## Reproducible Zombi Execution Path
+
+The alternative Zombi source is pinned at
+`8db13ee4ba007f46c17f38586d31e5aa617c1647`. An isolated overlay environment
+adds ETE3 3.1.3 and uses Pyvolve 1.1.0 without changing the base environment.
+Source inspection found that Zombi's global seed does not seed Pyvolve's
+per-call generator. `run_zombi_seeded.py` therefore supplies a stable
+128-bit SHA-256-derived family seed through the native Pyvolve seed API,
+preserving other arguments and explicitly supplied seeds. The adapter and
+its version are part of simulation provenance, not hidden upstream changes.
+
+`smoke_zombi.py` ran T/G/S for two equal seeds and one independent seed.
+All nine stages completed; all 84 products match byte-for-byte between
+equal-seed runs, and the independent seed changes sequences. The two
+distinct histories include one versus two duplication events; the second
+also includes a loss. All outputs, parameters/defaults, commands, source
+pin and package versions are recorded in `zombi_smoke_20260916.json` and
+explained in `ZOMBI_SMOKE_20260916.md`. Raw v1 (32-bit seed adapter) and
+v2 (retained 128-bit adapter) outputs are separately preserved.
+
+Five focused adapter tests pass; the full unit suite now passes 533 tests
+in 22.51s. This establishes reproducible simulator execution, not validated
+orthology truth or method accuracy. Extant-only sequence extraction,
+event/tree/XML truth checks, scientific multi-seed conditions, indel/fragment
+limitations, matched method runs, and robustness/resource analyses remain
+open. No held-out YGOB outcomes or method parameters were inspected/changed.
