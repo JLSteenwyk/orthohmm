@@ -106,6 +106,13 @@ gene. No configurations were changed in response to these held-out outcomes.
 [Frozen results](YGOB_FROZEN_RESULTS_20260916.md),
 [machine-readable evidence](ygob_frozen_results_20260916.json).
 
+![Frozen YGOB scores and paired differences](figures_ygob_frozen_20260916/ygob_validation.png)
+
+Figure: observed co-membership scores and paired OrthoHMM-minus-OrthoFinder
+differences. Thick intervals are nominal 95%; thin intervals apply the frozen
+six-endpoint Bonferroni adjustment. The checkpoint is diagnostic. All methods
+cover every scored reference gene; this does not establish family independence.
+
 This experiment tests novel-taxon transfer, not family-disjoint validation.
 The completed label-independent homology screen found qualifying development
 input hits for 71,714 of 83,404 proteins and 6,952 of 10,250 pillars.

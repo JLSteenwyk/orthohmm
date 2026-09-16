@@ -2037,3 +2037,29 @@ Nine focused enumeration/screen tests pass; full suite **810 passed in
 overall publication goal. QfO factorial, matched sequence-search controls,
 robustness/scaling, error analysis, biological application and archive/release
 requirements remain open; raw YGOB redistribution permissions unresolved.
+
+### Frozen YGOB publication figure (2026-09-16)
+
+Previous turn was progress: completed the bounded held-out evaluation. Reread
+the objective and confirmed QfO replay21288 live. Added
+`plot_ygob_validation.py`, consuming the hash-pinned frozen result snapshot
+3927d81b1fd851eef3c8ce1343679558ef4f93bcfe2e643435e369587a44a4ef.
+It requires the admitted four-method panel and frozen bootstrap specification.
+The figure shows all12 observed F1/precision/recall scores and all6 prespecified
+paired differences, displaying nominal and Bonferroni intervals separately.
+Its caption discloses complete coverage, the diagnostic checkpoint, the
+curated-group endpoint and non-family-disjoint scope. The primary F1 interval
+including zero is not presented as equivalence or superiority.
+
+Generated PNG/PDF/SVG plus source/result/output hash manifest in
+`figures_ygob_frozen_20260916/`. Visually inspected the PNG: axes, labels,
+numeric annotations, interval marks and footnotes render without clipping or
+overlap. Linked the figure and caption in the manuscript draft. Four tests
+check panel contents, admission rejection, multiplicity and nonfinite scores.
+No analysis settings or scientific results were changed.
+
+Full suite: **814 passed in 25.46s**. QfO21288 is RUNNING at19:03 and
+scontrol reports its live batch/process IDs. Both multipass and refined
+multipass partitions now exist; profile-stage completion and final partition
+equivalence remain pending. Do not treat those intermediate files as final
+successful inference.
