@@ -63,5 +63,17 @@ cfe0a09. Native validation passed for the entire panel, including exact tree
 topologies/distances, input/output provenance, supplied-control equivalence,
 and complete251,378-gene partitions with zero cross-candidate-family merges.
 See `ob_species_tree_perturbations_native_validation_20260916.json`.
-The18-endpoint accuracy comparison remains outstanding; no tree-error
-robustness conclusion is made from successful execution or group counts.
+No tree-error robustness conclusion is made from successful execution or
+group counts alone.
+
+## Completed Accuracy Comparison
+
+Frozen assembler1891846, scoring job21306, completed0:0 in4:10. Fresh native
+admission and all seven official-score crosschecks passed. Results retain all
+six perturbations,18 adjusted endpoints and20,000 paired70-RefOG resamples
+with seed20260918. F1 spans73.744102-74.270946% versus control74.106074%; every
+adjusted endpoint interval includes zero. This is not an equivalence result
+and does not justify selecting a new species tree or changing defaults.
+See `OB_SPECIES_TREE_ROBUSTNESS_RESULTS_20260916.md` and its machine-readable
+counterpart. Separate parameter, QfO, simulation-truth and scaling requirements
+remain open.

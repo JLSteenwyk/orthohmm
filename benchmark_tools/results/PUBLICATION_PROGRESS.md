@@ -2659,3 +2659,21 @@ clustering execution, before profiles; specific cause remains unproven.
 Preserved capture/comparison JSONs and updated drift diagnosis. Next bounded
 saved-graph worker repeats should record native binary/runtime identity;
 no best-repeat selection or full-profile restart justified yet.
+
+Tree scoring21306 completed0:0 in4:10. All seven native/scoring crosschecks
+passed. Preserved exact result snapshot SHA256
+8a00c80bb638c46ec37050f19caea3ed35cbf7488ef03578abead06d4d8b3412 at
+`ob_species_tree_robustness_results_20260916.json` with generated Markdown.
+Rechecked recorded assembler/reference/prediction hashes and all official
+score comparisons. F1 spans73.744102-74.270946% versus supplied control74.106074%;
+all18 adjusted intervals include zero. Family F1 ties62-69/70 per variant.
+No equivalence/arbitrary-tree robustness claim and no new tree/default selected.
+
+Added the all-variant score/18-effect figure with input hash verification,
+seven malformed-evidence/rendering tests, PNG/PDF/SVG and provenance manifest.
+Visually checked the rendered PNG: complete labels, no overlaps, all effects
+visible. Full unit suite **977 passed in28.15s**. Integrated findings, figure,
+QfO drift limitation and remaining requirements into manuscript/claim checklist.
+Next QfO saved-graph worker identity/repeatability experiments, followed by
+QfO component evaluation once reproducibility is understood; parameter/error/
+application/scaling/release work remains required. Goal not complete.

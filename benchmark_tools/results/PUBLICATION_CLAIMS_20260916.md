@@ -87,6 +87,18 @@ evidence that an experiment completed or a biological hypothesis is true.
   frozen settings; subsequent outcome-informed changes need new confirmation.
 - Dependency security alerts remain untriaged. Resolve and document them
   for release without silently changing the historical benchmark environment.
+- The six prespecified OrthoBench supplied-tree perturbations completed native
+  validation and official-score crosschecks. F1 ranged73.744102-74.270946%
+  versus control74.106074%; all18 adjusted endpoint intervals include zero.
+  [Results](OB_SPECIES_TREE_ROBUSTNESS_RESULTS_20260916.md) support small observed
+  changes in this fixed exploratory panel, not equivalence or arbitrary-tree
+  robustness. Parameter sensitivity, simulation-truth tree-error controls and
+  QfO robustness remain outstanding.
+- QfO capture21305 confirms identical initial graph arrays/gene order but a
+  different first clustering partition relative to diagnostic21295. The
+  [drift diagnosis](QFO_REPLAY_DRIFT_DIAGNOSIS_20260916.md) localizes observed
+  divergence before profiles, without establishing its specific cause or
+  historical replay equivalence. Preserve all runs; no best-repeat selection.
 - Archival deposition, submission, and any external permissions remain
   unexecuted. Document these explicitly; do not invent identifiers or approvals.
 

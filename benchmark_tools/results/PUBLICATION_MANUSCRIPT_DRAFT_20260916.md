@@ -324,8 +324,6 @@ not a demonstrated F1 improvement or statistically established F1 loss.
 They do not justify removing constraints as a new default.
 [Diagnostic results](ORTHOBENCH_UNCONSTRAINED_RESULTS_20260916.md).
 
-## Limitations And Unfinished Analyses
-
 ### Sequence-Search Replacement Control
 
 With profile expansion, candidate expansion and reconciliation disabled,
@@ -349,6 +347,37 @@ All three final partitions cover251,378 input genes, including singletons.
 The same normalization formula and E-value cutoff do not equate calibration,
 candidate filtering or computational effort. [Full control results](OB_SEQUENCE_SEARCH_RESULTS_20260916.md).
 
+### Supplied-Tree Perturbations Had Small Observed Aggregate Effects
+
+Six prespecified rooted topology perturbations were evaluated against an
+unchanged supplied-tree control, with candidate groups, membership constraints,
+raw gene trees and reconciliation rules held fixed. The control exactly
+reproduced the inferred baseline partition and74.106074% F1. Three variants
+had rooted clade distance2 and three distance4. Their F1 ranged from73.744102%
+to74.270946%, or -0.361972 to+0.164872 percentage points relative to control.
+Every one of the18 Bonferroni-adjusted F1/precision/recall intervals included
+zero. Family F1 tied in62-69 of70 RefOGs per perturbation, although complete
+predicted partitions changed. All runs preserved251,378 genes and passed
+native-provenance checks and official-score crosschecks.
+
+These observations describe this limited, development-exposed topology panel;
+they do not establish equivalence, robustness to arbitrary species-tree error,
+or improved tree estimation. Intervals remain compatible with larger effects
+than the observed differences, and the variants are not posterior draws.
+No variant was selected to change the method. Recorded reconciliation costs
+reuse raw gene trees and are not end-to-end efficiency measurements.
+[Full scores, uncertainty and coverage](OB_SPECIES_TREE_ROBUSTNESS_RESULTS_20260916.md).
+
+![Supplied-tree perturbation scores and all paired effects](figures_species_tree_robustness_20260916/species_tree_robustness.png)
+
+Figure: control and six fixed topology perturbations, ordered by the frozen
+variant indices. Thick intervals are nominal95% paired RefOG intervals;
+thin intervals retain Bonferroni adjustment over all18 endpoints using20,000
+paired resamples. Gene-tree checkpoints are shared; rooting/reconciliation
+is recomputed against each supplied species tree.
+
+## Limitations And Unfinished Analyses
+
 ### Remaining Requirements
 
 No universal superiority, arbitrary-dataset generalization, or controlled
@@ -360,8 +389,15 @@ sequence-search control; QfO extension remains outstanding. The interaction
 between broader candidates and reconciliation has descriptive OrthoBench
 evidence but awaits QfO evaluation and additional controls. Corrected multi-seed simulations are complete
 but do not establish an OrthoHMM advantage or profile-expansion benefit.
-Error strata, mechanistic tracing, tree/parameter robustness, matched resource scaling,
+Error strata, mechanistic tracing, broader tree-error and parameter robustness, matched resource scaling,
 and a prespecified biological application remain required.
+
+QfO historical replay equivalence remains unresolved. A bounded capture
+verified identical initial RBNH graph arrays and gene order but a different
+first clustering partition than an earlier diagnostic. Thus the observed
+discrepancy precedes profile refinement; its specific cause is not yet
+established. No replay result is silently substituted for the historical
+baseline. [Diagnostic evidence](QFO_REPLAY_DRIFT_DIAGNOSIS_20260916.md).
 
 Historical timing and memory records differ in scope and accounting.
 Cached replays are incremental computations, not end-to-end timings;
