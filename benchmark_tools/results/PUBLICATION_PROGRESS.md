@@ -2369,3 +2369,29 @@ Full evidence preserved in original output directory; committed copy
 QfO accuracy as a current frozen-core baseline or force equivalence. Next
 investigate stage partitions, algorithm/source differences and determinism;
 preserve both outputs and do not blindly restart the completed replay.
+
+### QfO drift localized before profiles; targeted experiment prepared (2026-09-16)
+
+Previous turn was progress: coverage implementation/queue and preserved QfO
+nonequivalence evidence. Reread objective, confirmed conversion21292 live and
+graph/coverage jobs dependency-pending. Compared historical/frozen source paths
+and recorded stage counts. Initial RBNH edge counts agree24,148,515, but first
+singleton-assignment counts differ1,361,622 vs1,360,934, preceding profiles.
+This rules out profile scoring alone as the cause of the earlier count drift;
+does not prove initial graph equality or identify the cause.
+
+Added `QFO_REPLAY_DRIFT_DIAGNOSIS_20260916.md` with all recorded stage counts,
+code-path findings and explicit limitations. Prepared targeted diagnostic
+loading old/frozen RBNH implementations from exact Git blobs, checking graph
+array byte equality and then repeating initial clustering twice on the same
+preserved graph. Uses fixedCPM0.1/seed4, identical verified graph helpers,
+full input universe, preserved partitions and singleton-array fingerprints.
+No search, profile expansion, accuracy scoring or parameter tuning is rerun.
+Historical intermediate partitions/native package inventory remain missing;
+current repeatability alone cannot certify historical runtime equivalence.
+
+Three new tests pass (one-bit weight/name mismatch, dtype/layout evidence,
+actual old/frozen builder behavior on ties/self hits); full unit suite
+**879 passed in26.13s**. One-CPU64GiB four-hour diagnostic batch prepared for
+a committed frozen executor. Latest conversion check RUNNING21:40; no control
+scores or hit-overlap results yet. Submission details follow separately.
