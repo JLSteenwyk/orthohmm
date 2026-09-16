@@ -2429,3 +2429,29 @@ clustering repeat in progress. Do not infer final repeatability from these
 intermediate files. Next: terminal admission of coverage and graph controls,
 paired control scoring with six-endpoint correction, and completed QfO
 diagnostic interpretation before choosing any additional replay experiment.
+
+### Both sequence graph controls admitted; paired scoring prepared (2026-09-16)
+
+Previous turn was progress: native validator and completed numeric conversion.
+Reread objective and confirmed both21293 array tasks now COMPLETED0:0:
+all_hits1:55,top1001:22, shared-node incremental replay times only. Ran
+`validate_sequence_graph_control.py` on actual outputs; admission passed for
+both variants, including checkpoint audits, source/runtime/command identity,
+stage hashes/counts and full gene partition coverage. Evidence committed at
+`ob_sequence_graph_native_validation_20260916.json`. No accuracy evaluated.
+
+Added `assemble_sequence_search_control.py`: fresh native admission plus
+successful terminal coverage21294 and its matching input/source/checkpoint
+provenance are required before reference labels. Frozen HMM p0_c0_r0 candidate
+partition and FASTAs are verified before comparison. Official OrthoBench
+crosschecks and20,000 paired RefOG draws, seed20260918, six F1/P/R endpoints
+with Bonferroni adjustment; no partial variant set or output overwrite.
+Reports label-free hit diagnostics, gene coverage and graph resources with
+process-only RSS/shared-node/incremental scope. Baseline graph cost remains
+unmeasured, not zero. Does not assert equal E-values imply matched sensitivity.
+
+Full unit suite901 passed in27.61s before adding resource extraction; all
+eight focused assembler tests passed afterward, including two new resource
+scope/invalid-value tests. Coverage21294 remains live5:29; QfO graph
+diagnostic21295 live7:46. Prepared dependent scoring batch to recheck gates
+when coverage completes; frozen executor/submission details follow.
