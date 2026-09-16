@@ -101,6 +101,17 @@ evidence that an experiment completed or a biological hypothesis is true.
   historical replay equivalence. Preserve all runs; no best-repeat selection.
 - Archival deposition, submission, and any external permissions remain
   unexecuted. Document these explicitly; do not invent identifiers or approvals.
+- The [84-endpoint feature-stratified analysis](OB_STRATIFIED_ERROR_RESULTS_20260916.md)
+  completed with full-reference sufficient-statistic and official-score
+  agreement. None of22 adjusted F1 intervals excludes zero. Two precision
+  advantages and seven recall deficits survive adjustment across overlapping
+  strata; neither subgroup superiority nor a causal mechanism is established.
+  The one-family composition bin has no intervals; empty bins remain visible.
+- QfO21307's three instrumented single-CPU repeats are byte-identical and
+  match diagnostic21295, with matching recorded loaded-library/runtime
+  evidence. They still differ from capture21305; affinity/process-context
+  experiments remain needed before changing defaults or admitting a historical
+  replay. This is configuration-specific repeatability, not general determinism.
 
 The manuscript must retain negative and neutral findings. Missing evidence
 cannot be replaced with a claim that the method is generally applicable,

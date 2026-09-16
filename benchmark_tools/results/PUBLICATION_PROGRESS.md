@@ -2838,3 +2838,29 @@ Full unit suite and frozen scoring submission details follow.
 
 Full unit suite **1047 passed in26.90s**; focused assembler tests rerun after
 adding job/scorer provenance and an explicit unknown-method guard.
+
+Frozen scoring executora336255 at
+`benchmarks/work/publication_ob_stratified_errors_v1`, job21310 completed0:0
+in18s. All native predictions cover251,378 genes; fresh full-reference family
+counts and official-score crosschecks exactly reproduce retained benchmarks.
+All84 endpoint records regenerated from sufficient statistics; input/source
+hashes rechecked. Snapshot `ob_stratified_error_results_20260916.json` SHA256
+a8a072e9a3917fa7dabf25dba4affb8c3fd6b30c02286dda3efe882baceb3cac.
+Eleven bins have66 interval endpoints, one bin is descriptive-only, two empty.
+None of22 adjusted F1 intervals exclude zero. Two precision advantages/seven recall
+deficits exclude zero across overlapping strata, not independent replication.
+Both modes have lower recall in short-relative families; no fragment mechanism
+is inferred. Full84-effect Markdown and manuscript/claim updates preserve
+negative, neutral, missing and small-bin results.
+
+QfO21307 completed0:0 in32:26. All three workers reproduce349,898 groups with
+SHA2568c162782bba955078a8f7e4e6088df5b34c9f15b055803224e513fdea8b33cdd,
+matching diagnostic21295 but not capture21305. All recorded modules,71 loaded
+libraries, Python/packages/environment/host/platform/affinity agree; independent
+file/hash/full-partition checks passed. Preserved `qfo_saved_graph_repeats_20260916.json`
+SHA25633c3e27f3ec750335c6368de55b2240deb26f74b0864b186fab79761c13a1e75.
+This is single-CPU configuration repeatability, not an identified root cause.
+Next controlled one-versus32-CPU affinity repeats on the same graph/worker,
+then process-context tests as needed; no default change or full-profile restart
+based on selecting a preferred partition. Error-analysis figures/tracing and
+the wider parameter/scaling/annotation/application/QfO/release tasks remain open.

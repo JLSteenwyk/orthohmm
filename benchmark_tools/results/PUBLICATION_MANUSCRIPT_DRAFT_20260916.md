@@ -376,6 +376,38 @@ thin intervals retain Bonferroni adjustment over all18 endpoints using20,000
 paired resamples. Gene-tree checkpoints are shared; rooting/reconciliation
 is recomputed against each supplied species tree.
 
+### Exploratory Feature Strata Show Precision-Recall Tradeoffs
+
+Fourteen feature strata were frozen before joining the new features to method
+errors. They describe reference-family size, copy number, canonical alignment
+identity, relative sequence length and global composition, not independently
+verified duplication history, fragments or domain architecture. All70 RefOGs
+remain represented in each dimension. Twelve families have missing identity
+because at least one aligned pair lacks comparable canonical positions.
+
+Both OrthoHMM configurations were compared with full OrthoFinder3.1.5 for
+F1, precision and recall, retaining84 endpoints in multiplicity adjustment.
+Eleven bins had at least five families, yielding66 interval-bearing endpoints;
+one single-family composition bin was descriptive only and two empty bins
+were explicitly nonestimable. None of the22 adjusted F1 intervals excluded
+zero. Nine adjusted precision/recall intervals excluded zero: two precision
+advantages and seven recall deficits for OrthoHMM across overlapping strata.
+These are not independent replications or tests of differences between strata.
+
+In the40-family short-relative stratum, high-sensitivity recall was18.901
+percentage points below OrthoFinder (adjusted interval[-36.475,-5.208]);
+phylogenetic-mode recall was14.833 points lower ([-34.240,-0.370]). In the
+six large families, observed F1 differences were-16.469 and-11.616 points,
+but both adjusted F1 intervals included zero. These observations do not prove
+a fragmentation mechanism or justify outcome-selected parameter changes.
+
+All three native-format parsers preserved251,378 input genes, and fresh
+full-reference sufficient statistics and official-score crosschecks reproduced
+the frozen overall estimates. Stratified estimates restrict those original
+per-family counts without changing the reference or low-certainty conventions.
+Percentile intervals are approximate; the84-endpoint adjusted tails contain
+only about six of20,000 resamples each. [All effects and limitations](OB_STRATIFIED_ERROR_RESULTS_20260916.md).
+
 ## Limitations And Unfinished Analyses
 
 ### Remaining Requirements
@@ -389,7 +421,7 @@ sequence-search control; QfO extension remains outstanding. The interaction
 between broader candidates and reconciliation has descriptive OrthoBench
 evidence but awaits QfO evaluation and additional controls. Corrected multi-seed simulations are complete
 but do not establish an OrthoHMM advantage or profile-expansion benefit.
-Error strata, mechanistic tracing, broader tree-error and parameter robustness, matched resource scaling,
+QfO and independently annotated error strata, mechanistic tracing, broader tree-error and parameter robustness, matched resource scaling,
 and a prespecified biological application remain required.
 
 QfO historical replay equivalence remains unresolved. A bounded capture
@@ -398,6 +430,10 @@ first clustering partition than an earlier diagnostic. Thus the observed
 discrepancy precedes profile refinement; its specific cause is not yet
 established. No replay result is silently substituted for the historical
 baseline. [Diagnostic evidence](QFO_REPLAY_DRIFT_DIAGNOSIS_20260916.md).
+Three subsequent instrumented single-CPU workers with matching recorded
+native-library/runtime identities reproduced the earlier diagnostic partition,
+but not the replay capture. The cross-configuration discrepancy remains open;
+repeatability in that configuration does not establish general determinism.
 
 Historical timing and memory records differ in scope and accounting.
 Cached replays are incremental computations, not end-to-end timings;

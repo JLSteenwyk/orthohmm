@@ -118,3 +118,29 @@ Next run bounded fresh-worker repeats directly on the preserved identical
 graph, recording worker inputs, command, native-library binaries and runtime
 settings. Keep all partitions; do not select the repeat closest to historical
 accuracy or restart full profile inference before this is understood.
+
+## Three Preserved-Graph Repeats
+
+Job21307 completed0:0 in32:26 using frozen executora69d505. Three sequential
+fresh instrumented workers consumed the same preserved graph and gene order,
+CPM0.1/seed4/include-isolates, with observed CPU affinity[8]. Each produced
+349,898 groups and the identical partition SHA256
+8c162782bba955078a8f7e4e6088df5b34c9f15b055803224e513fdea8b33cdd.
+All match diagnostic21295 exactly and differ from capture21305.
+
+Imported module files,71 loaded shared libraries, Python/package versions,
+recorded environment, host/platform and affinity agree across these repeats.
+Independently rechecked graph/source/native file hashes and every complete
+partition comparison. Evidence: `qfo_saved_graph_repeats_20260916.json`.
+The three worker durations were627.29,693.45 and555.00 seconds; these are
+shared-node diagnostic costs, not a controlled performance comparison.
+
+This supports repeatability for this instrumented single-CPU configuration.
+It does not establish general determinism or identify the earlier discrepancy.
+The matching diagnostic also requested one CPU, whereas the replay/capture
+requested32; exact affinity and loaded-library records were not captured for
+those earlier workers. CPU affinity and process/import context are candidates
+for controlled tests, not established causes. Next vary one factor at a time
+on the same preserved graph, starting with repeated one-versus32-CPU affinity
+within a single allocation while keeping the worker code, inputs and settings
+fixed. Do not change inference defaults or select the best partition by score.
