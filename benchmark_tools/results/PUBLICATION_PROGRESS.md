@@ -323,3 +323,18 @@ YGOB job `20917`. This is an incremental cached replay, not a controlled
 end-to-end runtime. Its successful completion is a prerequisite to reusing
 these stages in the new factorial; no new factorial accuracy result has
 been evaluated by this workflow.
+
+After committing and pushing launcher `4ae0a82`, a detached launcher worktree
+was created at `benchmarks/work/publication_launchers_4ae0a82`. Slurm job
+`20919` was submitted with 32 CPUs, 64 GB, a two-hour limit, exclusive
+allocation, and `afterok:20917`; `scontrol show job 20919` confirms that
+dependency is unfulfilled and the job is pending. It reads the committed
+historical audit from the pinned launcher tree and executes inference from
+the separate existing `publication_method_7f3a9e4` worktree. Logs will be
+`benchmarks/work/ob_replay_check_20919.log`; fresh outputs will be under
+`benchmarks/results/publication_ob_replay_check_v1`.
+
+OrthoMCL final-group scoring `20916` remained running at 1h18m13s, and YGOB
+`20917` remained queued. The unrelated `foxy_unique720` job was observed but
+not modified. Submission is not completion; inspect replay verification
+status before using its stage outputs as current-source evidence.
