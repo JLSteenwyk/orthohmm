@@ -620,3 +620,30 @@ generation/truth/derivation commands, and 20 required history-equivalence
 checks. Status is `materialized_not_executed`; no successful simulation or
 method outcome is inferred from these files. Generation runner checks,
 seed-level aggregation and pinned method conversion/launch remain open.
+
+## Prespecified Simulation Seed Aggregation
+
+`summarize_simulation_panel.py` implements the frozen ten-seed/seven-condition
+analysis for the two OrthoHMM modes, full OrthoFinder and its diagnostic
+checkpoint. It requires all 280 explicit terminal method/dataset rows;
+missing or pending rows are not silently considered failures. Successful
+scores require consistent counts/metrics, explicit undefined-ratio flags,
+and a shared truth hash/input universe among methods for each condition/seed.
+Failures/inapplicable rows require reasons and cannot carry imputed scores.
+
+The statistic is the mean of seed-level F1/P/R, not pooled gene-pair counts.
+Paired complete-seed resampling uses 20,000 PCG64 draws and seed 20261031,
+reset per contrast so identical included seed sets share draws. F1 intervals
+carry the prespecified 14-comparison Bonferroni adjustment; P/R intervals are
+exploratory. Reports retain included/excluded seed IDs, all original rows,
+available-case means, failure fractions and conditional-estimation caveats.
+Zero/one complete pair sets do not produce misleading bootstrap intervals.
+CLI output records source/input hashes, command, Python and NumPy versions.
+
+Eleven new tests verify direct multinomial resampling, the distinction from
+pooled counts, diagnostic exclusion, failures, invalid provenance/metrics,
+missing rows and insufficient seeds. Twenty-six focused aggregation/scoring/
+parameter tests pass. Only synthetic test records were evaluated; no real
+method scores or held-out validation outcomes were inspected. The generation
+runner integrity checks and pinned method execution/conversion manifest
+remain the outstanding panel launch prerequisites.
