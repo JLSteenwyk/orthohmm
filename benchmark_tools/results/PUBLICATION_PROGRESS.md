@@ -704,3 +704,26 @@ This smoke dataset is not one of the 70 scientific-panel entries; no panel
 or held-out YGOB outcome was inspected. Pinned method execution commands,
 completion checks and matched-history validation remain to finish before
 scientific panel launch.
+
+## Frozen Simulation Method Command Builder
+
+`prepare_simulation_methods.py` constructs exact inference commands for all
+70 prespecified datasets from the immutable generation manifest. OrthoHMM
+uses source `7f3a9e40dd7e79f842cc2c11fb8b548f9a802806`, explicit high-sensitivity
+settings and four CPUs/worker threads; satellite_v2 has explicit inferred
+tree/rooting/pair settings. OrthoFinder is checked through installed package
+metadata as version 3.1.5 and uses four search/analysis threads plus DIAMOND.
+Its sequence-only checkpoint has a parent relation, not an extra command
+or independent timing. OrthoFinder receives a separate, verified input copy.
+
+The builder records tracked OrthoHMM sources, adapter/scorer sources, resolved
+tool entrypoints, the installed OrthoFinder distribution files, both Python
+package inventories and required environment overrides. Reference truth paths
+are kept out of inference argv. All external-tool auxiliary dependencies and
+actual runtime resolution still need explicit accounting; the manifest does
+not claim complete portable reproducibility from entrypoint hashes alone.
+
+Two new command/gate tests and nine native-adapter tests pass. Installed
+OrthoFinder metadata confirms 3.1.5 with 189 distribution entries. Pin this
+builder in a detached worktree before producing the committed command
+manifest. No panel inference or held-out accuracy has been evaluated.
