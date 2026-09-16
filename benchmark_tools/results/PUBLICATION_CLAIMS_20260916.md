@@ -45,6 +45,10 @@ evidence that an experiment completed or a biological hypothesis is true.
   [prepared manifest](orthobench_factorial_prepared_20260916.json) contains four
   candidate sets and eight planned cells; reconciliation and accuracy evaluation
   are not yet complete.
+- Reconciliation array `21248` is now running the four R=1 cells, using pinned
+  executor 9a86301. Both expanded and unexpanded actual-data preflights pass.
+  Native completion, correct root-HOG conversion and the prespecified paired
+  ablation statistics remain unverified; queued/running cells are not results.
 - Replay `20919` was cancelled before execution and replaced by `21088`,
   using the identical pinned command without the unnecessary YGOB dependency
   or exclusive allocation. **21088 failed equivalence**: profile construction

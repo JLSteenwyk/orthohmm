@@ -1308,3 +1308,23 @@ timing limitation before any reconciliation outcomes. Full tests pending.
 Full suite **664 passed in 27.67s**; shell syntax and scoped diff checks pass.
 Set the child working directory explicitly to the pinned replay worktree and
 record it, so git provenance cannot inherit an unrelated submission directory.
+
+Pushed execution milestone **9a8630197401d97e4fcc131f4939433bd3b89aac** and
+pinned `publication_ob_factorial_execution_v1` there. Real expanded-cell
+p1_c1_r1 preflight passes through the actual pinned Slurm launcher, in addition
+to the previously checked unexpanded p0_c0_r1. Seven focused tests also pass
+after explicit working-directory recording.
+
+Submitted reconciliation array **21248**, four tasks with concurrency two.
+Live squeue confirms tasks 0/1 RUNNING and 2/3 pending the array limit. Initial
+cell status records confirm p0_c0_r1 running with the correct pinned replay
+working directory `publication_native_simulation_v3`. Cell mapping is
+0=p0_c0_r1, 1=p0_c1_r1, 2=p1_c0_r1, 3=p1_c1_r1. Outputs remain under
+`publication_ob_factorial_v1/cells`, execution evidence under its `execution`
+directory, and Slurm logs under `publication_ob_factorial_logs_v1`.
+
+At submission, YGOB 21192 and corrected simulation arrays 21142/21143 were
+still active. No ablation, YGOB or corrected simulation accuracy has been
+inspected. Next: validate terminal outputs and frozen statistics, finish
+matched sequence/unconstrained controls and QfO factorial, then continue the
+remaining error, robustness, biological-application and publication work.
