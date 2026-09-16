@@ -2455,3 +2455,11 @@ eight focused assembler tests passed afterward, including two new resource
 scope/invalid-value tests. Coverage21294 remains live5:29; QfO graph
 diagnostic21295 live7:46. Prepared dependent scoring batch to recheck gates
 when coverage completes; frozen executor/submission details follow.
+
+Submitted scoring job**21297**, afterok21294, one CPU32GiB/four hours,
+from frozen executor**b14b057** at
+`benchmarks/work/publication_ob_search_scoring_v1`. Output
+`benchmarks/results/ob_sequence_search_scoring_v1`; log
+`benchmarks/work/ob_search_score_21297.log`. The batch starts from the original
+repository verification directory and revalidates both graph tasks itself.
+No score or coverage outcome claimed from a pending/live job.
