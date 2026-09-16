@@ -562,3 +562,28 @@ single-survivor families; 17 truth tests pass. Re-evaluating both real smoke
 histories confirms unchanged family membership and ortholog pairs (comparison
 normalizes Python tuples to JSON lists). The historical reports retain their
 original source provenance and were not overwritten.
+
+## Implemented Simulation Transforms And Pair Scoring
+
+`simulation_conditions.py` implements the frozen missing20, uneven-clade,
+and taxon-count control selections, using no labels or sequence information.
+It projects event-derived truth and scores all retained-universe predicted
+pairs, including cross-family false positives. Invalid IDs/pairs and
+duplicate truth are rejected; orientation/duplicate prediction rows are
+explicitly canonicalized. Pair-endpoint coverage and undefined ratios are
+labeled. Successful method completion remains a separate caller gate.
+
+`derive_simulation_conditions.py` validates native baseline truth before
+exporting transformed FASTAs, projected truth and provenance. Existing
+outputs are refused, and inapplicable tree selections remain inapplicable.
+The real four-species smoke export retained 33 genes/38 true pairs for
+missing20, 31/32 for uneven_taxa, and 30/30 for taxon_count_control, from
+41/63 baseline. This is a workflow check, not a scientific panel outcome.
+The manifest is `zombi_transforms_smoke_20260916.json`; interpretation and
+reproduction are in `SIMULATION_TRANSFORMS_20260916.md`.
+
+Thirteen new tests cover selections, false-positive accounting and exports;
+30 focused transform/export/truth tests pass. No method accuracy was
+computed, no validation outcomes were inspected, and no frozen method
+configuration was changed. Executable panel materialization, seed-level
+aggregation and matched method execution remain the next simulation steps.
