@@ -3082,3 +3082,17 @@ arm/full admission pending; no selection, restart or accuracy scoring.
 
 Full unit suite **1117 passed in27.74s**. Scientific defaults and held-out
 evaluation remain unchanged.
+
+Frozen candidate preparer **a09b740** committed/pushed at
+`benchmarks/work/publication_ob_candidate_neighborhood_v1`, job**21314**
+submitted oneCPU/32GiB/one-hour limit/no-requeue. Scheduler confirmed RUNNING
+at14s; output`benchmarks/results/ob_candidate_neighborhood_v1`. No accuracy
+evaluation or completed downstream parameter panel claimed.
+
+QfO21311 subsequently reached COMPLETED0:0 in43:09. Final manifest status
+affinity_panel_complete: one_cpu_0/all_cpus_0/all_cpus_1 all8c162782;one_cpu_1
+def06c42. Recorded software identity excluding affinity matches throughout;
+both single-CPU workers also match affinity. Complete independent native-file/
+partition admission is next, before committing a result snapshot or promoting
+any reproducibility claim. This bounded panel does not isolate a root cause;
+same-affinity disagreement remains unexplained and preserved without selection.
