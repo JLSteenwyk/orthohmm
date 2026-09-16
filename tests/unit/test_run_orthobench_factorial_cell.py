@@ -5,6 +5,7 @@ import pytest
 
 from benchmark_tools.prepare_orthobench_factorial import plan_cells
 from benchmark_tools.run_orthobench_factorial_cell import select_cell
+from benchmark_tools.run_orthobench_factorial_cell import unconstrained_cell
 from benchmark_tools import run_orthobench_factorial_cell as runner
 
 
@@ -25,6 +26,28 @@ def test_selects_exact_four_reconciliation_cells():
         assert root == Path("/experiment") and launcher == Path("/pinned")
         assert "--official-benchmark" not in cell["argv"]
         assert ("--membership-constraints" in cell["argv"]) == cell["candidate_expansion"]
+
+
+def test_unconstrained_changes_only_filter_and_output_paths():
+    cell, root, _ = select_cell(fixture(), 3)
+    original = deepcopy(cell)
+    changed = unconstrained_cell(cell, root)
+    assert cell == original
+    assert changed["label"] == "p1_c1_r1_unconstrained"
+    assert "--membership-constraints" not in changed["argv"]
+    argv = list(changed["argv"])
+    for flag in ("--output-directory", "--json"):
+        argv[argv.index(flag) + 1] = original["argv"][original["argv"].index(flag) + 1]
+    argv += ["--membership-constraints", changed["omitted_membership_constraints"]]
+    assert argv == original["argv"]
+    assert changed["candidate_partition"] == original["candidate_partition"]
+
+
+@pytest.mark.parametrize("index", [0, 1, 2])
+def test_unconstrained_rejects_other_factorial_cells(index):
+    cell, root, _ = select_cell(fixture(), index)
+    with pytest.raises(ValueError, match="full satellite"):
+        unconstrained_cell(cell, root)
 
 
 @pytest.mark.parametrize("change", ["cpu", "constraints", "reference", "incomplete", "scored", "index"])

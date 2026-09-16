@@ -38,6 +38,17 @@ estimation effects, but must be labeled a supplied-tree replay.
   refinement is not synonymous with HMM expansion.
 - Add an explicitly labeled unconstrained satellite_v2 reconciliation replay
   to measure the high-confidence membership filter independently.
+  Execution specification: use the already-frozen OrthoBench p1_c1 candidate
+  partition, remove only the membership-constraints argument, and retain
+  CPU32, the same frozen source/tools and all reconciliation/tree settings.
+  Write separate p1_c1_r1_unconstrained outputs; never overwrite the eight
+  factorial cells. Compare to p1_c1_r1 using the existing official score and
+  paired reference-family bootstrap (20,000 replicates, seed20260918).
+  Treat F1/precision/recall differences as an exploratory three-endpoint
+  family with Bonferroni correction. The experiment was named prospectively,
+  but this detailed execution specification follows inspection of the core
+  factorial results; it is not independent confirmation. It does not use
+  YGOB outcomes for selecting a configuration or changing the frozen method.
 - Omitting profile expansion does NOT remove the HMM-based initial search.
   A matched sequence-search alternative remains required before attributing
   an advantage to HMMs overall. Freeze its search sensitivity, score

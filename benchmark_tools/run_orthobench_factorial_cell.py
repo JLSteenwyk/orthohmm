@@ -74,6 +74,26 @@ def verify_prepared(manifest, cell, launcher_root, preparation_job):
     return scheduler
 
 
+def unconstrained_cell(cell, output):
+    """Prespecified satellite diagnostic: change only constraints and destinations."""
+    if cell["label"] != "p1_c1_r1" or not all(cell[k] for k in
+                                               ("profile_expansion", "candidate_expansion", "reconciliation")):
+        raise ValueError("Unconstrained diagnostic requires the full satellite cell")
+    argv = list(cell["argv"])
+    if argv.count("--membership-constraints") != 1:
+        raise ValueError("Expected exactly one membership constraint argument")
+    index = argv.index("--membership-constraints")
+    omitted = argv[index + 1]
+    del argv[index:index + 2]
+    label = "p1_c1_r1_unconstrained"
+    target = output / "cells" / label
+    argv[argv.index("--output-directory") + 1] = str(target)
+    argv[argv.index("--json") + 1] = str(output / "cells" / (label + ".json"))
+    return {**cell, "label": label, "argv": argv, "parent_cell": cell["label"],
+            "omitted_membership_constraints": omitted,
+            "prediction": str(target / "orthohmm_phylogeny/orthohmm_root_hogs.tsv")}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--manifest", type=Path, required=True)
@@ -83,10 +103,14 @@ def main():
     parser.add_argument("--preparation-job", type=int, required=True)
     parser.add_argument("--index", type=int, required=True)
     parser.add_argument("--check-only", action="store_true")
+    parser.add_argument("--unconstrained", action="store_true",
+                        help="Separate prespecified p1_c1_r1 membership-filter diagnostic")
     args = parser.parse_args()
     manifest = read_frozen(args.manifest, args.manifest_sha256)
     cell, output, launcher_root = select_cell(manifest, args.index)
     scheduler = verify_prepared(manifest, cell, launcher_root, args.preparation_job)
+    if args.unconstrained:
+        cell = unconstrained_cell(cell, output)
     environment = read_frozen(args.environment_manifest, args.environment_sha256)
     verify_environment(environment)
     env, resolved = execution_environment(environment)
@@ -109,6 +133,10 @@ def main():
                   "runtime_kind": "incremental_cached_reconciliation; shared-machine timings",
                   "cwd": str(launcher_root),
                   "scope": "Reconciliation only; profile expansion is a verified upstream checkpoint"}
+    if args.unconstrained:
+        provenance.update(parent_cell=cell["parent_cell"],
+                          omitted_membership_constraints=cell["omitted_membership_constraints"],
+                          diagnostic="No membership filter; not an additional factorial cell")
     verified = {"status": "ready", "inputs": [{**r, "absolute_path": r["path"]} for r in manifest["fasta_inputs"]]}
     verification_cwd = Path.cwd()
     try:
