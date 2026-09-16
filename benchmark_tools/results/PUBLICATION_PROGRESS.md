@@ -535,3 +535,30 @@ family cases, scientific conditions and multiple-seed evaluation, missingness
 transformations, root-time group semantics, and matched method runs remain
 open. YGOB and replay jobs were still queued at the start of this milestone;
 their inputs and frozen configurations were not changed.
+
+## Prospective Simulation Panel Specification
+
+`PUBLICATION_SIMULATION_PROTOCOL_20260916.md` freezes a ten-seed, seven-condition
+design before method inference or scoring: baseline, divergent, turnover,
+divergent_turnover, 20% gene missingness, clade-thinned taxa, and a taxon-count
+control. Forty native simulations plus thirty derived datasets give seventy
+condition/seed evaluations. Genome-level rates, realized-event reporting,
+native-history reuse checks, deterministic label-independent transformations,
+matched four-CPU method settings, event-derived pair endpoints, seed-level
+uncertainty, multiplicity and failure handling are specified explicitly.
+
+This is a scientific protocol, not an executed or fully materialized panel.
+An executable manifest with expanded defaults, hashes and exact commands,
+tested transformation/scoring/aggregation code, and frozen dependencies is
+required before launch. Tree-error/parameter-neighborhood experiments,
+representative scaling, curated validation and biological application remain
+separate requirements; the small synthetic panel does not replace them.
+
+The native source confirms that fully lost single-node trees may have no
+sequence file. The truth adapter now permits that only when independent
+event/XML/genome/pruned-tree checks establish zero survivors. Missing sequence
+files for survivors still fail. Two new fixtures cover completely lost and
+single-survivor families; 17 truth tests pass. Re-evaluating both real smoke
+histories confirms unchanged family membership and ortholog pairs (comparison
+normalizes Python tuples to JSON lists). The historical reports retain their
+original source provenance and were not overwritten.

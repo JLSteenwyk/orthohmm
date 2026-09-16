@@ -127,7 +127,7 @@ def validate_run(run):
         family = events.name.removesuffix("_events.tsv")
         xml = run / "G/Gene_trees" / f"{family}_rec.xml"
         fasta = run / "S" / f"{family}_complete.fasta"
-        sources.extend([events, xml, fasta])
+        sources.extend([events, xml])
         graph = event_graph(events)
         reconciliation = xml_graph(xml)
         # Child ordering is not a biological property.
@@ -138,7 +138,14 @@ def validate_run(run):
         expected = {gene for f, gene in genomes if f == family}
         if terminal != expected:
             raise ValueError("Terminal history genes disagree with extant genomes")
-        proteins = read_fasta(fasta)
+        if fasta.exists():
+            proteins = read_fasta(fasta)
+            sources.append(fasta)
+        elif not terminal:
+            # Zombi skips sequence simulation for a fully lost single-node tree.
+            proteins = {}
+        else:
+            raise ValueError("Missing sequence file for a surviving family")
         if not terminal <= proteins.keys():
             raise ValueError("Missing extant sequences")
         native = run / "G/Gene_trees" / f"{family}_prunedtree.nwk"

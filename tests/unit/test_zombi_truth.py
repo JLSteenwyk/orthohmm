@@ -98,3 +98,34 @@ def test_inconsistent_simulator_outputs_rejected(tmp_path, artifact, old, new):
     path.write_text(path.read_text().replace(old, new))
     with pytest.raises(ValueError):
         validate_run(tmp_path)
+
+
+def test_fully_lost_family_requires_independent_empty_truth(tmp_path):
+    fixture_run(tmp_path)
+    (tmp_path / "G/Gene_families/2_events.tsv").write_text("TIME\tEVENT\tNODES\n0\tO\tRoot\n1\tL\tRoot;1\n")
+    (tmp_path / "G/Gene_trees/2_rec.xml").write_text('<recGeneTree><phylogeny><clade><name>Root_1</name><eventsRec><loss speciesLocation="Root"/></eventsRec></clade></phylogeny></recGeneTree>')
+    (tmp_path / "G/Gene_trees/2_prunedtree.nwk").write_text(";")
+    report, _ = validate_run(tmp_path)
+    assert report["families"]["2"] == []
+    assert report["ortholog_pair_count"] == 1
+    (tmp_path / "G/Gene_trees/2_prunedtree.nwk").write_text("A_1;")
+    with pytest.raises(ValueError, match="Pruned gene tree"):
+        validate_run(tmp_path)
+
+
+def test_single_survivor_is_retained_without_pairs(tmp_path):
+    fixture_run(tmp_path)
+    events = tmp_path / "G/Gene_families/1_events.tsv"
+    events.write_text(events.read_text().replace("2\tF\tB;3", "2\tL\tB;3"))
+    xml = tmp_path / "G/Gene_trees/1_rec.xml"
+    xml.write_text(xml.read_text().replace('<P speciesLocation="B"/>', '<loss speciesLocation="B"/>'))
+    genome = tmp_path / "G/Genomes/B_GENOME.tsv"
+    genome.write_text(genome.read_text().splitlines()[0] + "\n")
+    (tmp_path / "G/Gene_trees/1_prunedtree.nwk").write_text("A_2;")
+    report, proteins = validate_run(tmp_path)
+    assert report["extant_genes"] == 1
+    assert report["ortholog_pairs"] == []
+    assert set(proteins) == {"F1__A_2"}
+    (tmp_path / "S/1_complete.fasta").unlink()
+    with pytest.raises(ValueError, match="surviving family"):
+        validate_run(tmp_path)
