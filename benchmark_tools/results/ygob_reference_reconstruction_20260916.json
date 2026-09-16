@@ -1,0 +1,138 @@
+{
+  "accuracy_evaluated": false,
+  "excluded_rows": [
+    113,
+    9896
+  ],
+  "input_genes_excluded_from_reference": [
+    "AFR326W",
+    "CAGL0F01419g",
+    "Ecym_1222",
+    "KAFR0G03010",
+    "KAFR0K01230",
+    "KNAG0G01040",
+    "NCAS0F00790",
+    "NCAS0I00670",
+    "NDAI0A08370",
+    "NDAI0H01280",
+    "SAKL0F04312g",
+    "TBLA0A01150",
+    "TPHA0L00810"
+  ],
+  "prepared_inputs": [
+    {
+      "bytes": 2755993,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Cglabrata.fasta",
+      "sha256": "23c5ec11aa481ef5754a7e8f81dfc9b0c86bac2da526b3c95bf6574d63f66022"
+    },
+    {
+      "bytes": 2242541,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Ecymbalariae.fasta",
+      "sha256": "9ff390efa20873101199737a4593cb467ff3afcf5dcfe7fbe75085dab237cf18"
+    },
+    {
+      "bytes": 2400738,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Egossypii.fasta",
+      "sha256": "331dda92a9e941b69a084102320af0839ce28004e176481fbeedaf858205d51f"
+    },
+    {
+      "bytes": 2728985,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Kafricana.fasta",
+      "sha256": "5782eed777e872e836204ca725d488d27a00973c646ba89c648710769005ef34"
+    },
+    {
+      "bytes": 2588659,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Klactis.fasta",
+      "sha256": "5c44fec49a501a5f5b07373bb54d4759a20ef9f4be36b11946f9637600fd50f5"
+    },
+    {
+      "bytes": 2767825,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Knaganishii.fasta",
+      "sha256": "823c86a3222f2673752920f613b6b30e57b9023195df563cf7e37967b0361dcf"
+    },
+    {
+      "bytes": 2781584,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Lkluyveri.fasta",
+      "sha256": "b6c892b9e446ee14875f7e46aa422f7c750f70c5e0d4737ebc328e23383b3296"
+    },
+    {
+      "bytes": 2628955,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Lthermotolerans.fasta",
+      "sha256": "08d9388de8d081a9c08aeb9f817a05dc691f961efba799f6039d94fe652d9dfa"
+    },
+    {
+      "bytes": 2578283,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Lwaltii.fasta",
+      "sha256": "ffb6f2c2f4c38d7ef1e463c5b574313e297abcb3d87ae548330cfe4747c13370"
+    },
+    {
+      "bytes": 2917096,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Ncastellii.fasta",
+      "sha256": "2f11b9b23af565e9b13d0db468026c24b8c60c2e72b843c3426d9b45ad21778c"
+    },
+    {
+      "bytes": 2992009,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Ndairenensis.fasta",
+      "sha256": "7a337cd162958fed9a413197d2759053d1915e18e1e1e5564747e026e7171956"
+    },
+    {
+      "bytes": 3036539,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Tblattae.fasta",
+      "sha256": "1ed287df2ccd27259b0e425515ee13225f892ca19d62671fb1d23ec3a95c70a5"
+    },
+    {
+      "bytes": 2520555,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Tdelbrueckii.fasta",
+      "sha256": "cdf62e4ea719403c8a41d18657f05ed5000d78c479802e2c44181e818f6a33e6"
+    },
+    {
+      "bytes": 2791571,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Tphaffii.fasta",
+      "sha256": "c35e3d8cd8d6592fc139e38885f058475b4543f0f655e2cad988ca4876129465"
+    },
+    {
+      "bytes": 2953372,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Vpolyspora.fasta",
+      "sha256": "845ef99847e332d764b6439077b80df1164920a1b7e98e29d1e5ee706f0b3d3a"
+    },
+    {
+      "bytes": 2597406,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Zrouxii.fasta",
+      "sha256": "51431e29fb872a7704c3fc99800a7597ed36d808b54fb4252994192da14eec7a"
+    }
+  ],
+  "proteins": 83404,
+  "reference": {
+    "bytes": 1832410,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/reference_groups.json",
+    "sha256": "37d5632e7c5329b0fcea3910f48f69f84c3a3723f246314388da17e060337557"
+  },
+  "reference_genes": 83391,
+  "reference_groups": 10250,
+  "schema_version": 1,
+  "scope": "Independent raw-table and raw-FASTA reconstruction, not independent biological truth or prediction scoring.",
+  "source_inputs": [
+    {
+      "bytes": 68932999,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/independent_ygob_v7/AA.fsa",
+      "sha256": "f4b8389493b567a688650d6b6c41003a9346649e150efabdf7c8b6f15ac8f356"
+    },
+    {
+      "bytes": 2778211,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/independent_ygob_v7/Pillars.tab",
+      "sha256": "162c1919b762f34006d0be8ea00b090531ea6c67be43d63b6bf683c4bc48212b"
+    },
+    {
+      "bytes": 4958,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/independent_ygob_v7/README",
+      "sha256": "162fb37cf0f7a50b44fae47f0d2c2f9b126b728660b65d9bee8d3175af8317f6"
+    }
+  ],
+  "species": 16,
+  "status": "reference_reconstruction_verified",
+  "verifier": {
+    "bytes": 5840,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/verify_ygob_reference.py",
+    "sha256": "62f422e9a4f99d23f2c1238c6ccac3ca110ddf33c4e2d77ff007651f8b9ac557"
+  }
+}

@@ -1934,3 +1934,35 @@ complete the remaining YGOB admission gates, then evaluate the frozen held-out
 panel. QfO factorial preparation depends on the replay result. The full
 publication objective, including matched-search controls, robustness/scaling,
 error analysis, biological application and archival deliverables, remains open.
+
+### Independent YGOB reference reconstruction (2026-09-16)
+
+Previous turn was progress: QfO launch and YGOB file verification. Reread the
+objective and confirmed QfO job 21288 still RUNNING (4:36 at latest check).
+Read the frozen YGOB protocol and recorded launcher. The two native OrthoHMM
+commands agree with the declared CPU32/eight-worker-thread, BLOSUM62,
+E-value1e-4, Leiden/CPM0.1, high-sensitivity/default-refinement settings;
+satellite additionally records the prescribed inference/rooting/pair rules.
+OrthoFinder log explicitly records version3.1.5, 32 search and eight algorithm
+threads, and full default MSA tree inference. These observations still need
+integration into the final machine-checked command/conversion admission gate.
+
+Added `verify_ygob_reference.py`, a second reconstruction that does not import
+the original preparation code or pillar parser. It transcribes retained
+columns from the acquired README, independently detects duplicated genes and
+excludes their entire rows, applies the frozen FASTA filters, and compares
+every prepared protein's sequence/species and every reference membership.
+Pinned raw snapshot hashes are checked before reconstruction. Actual-data
+verification passed: 83,404 proteins, 16 species, 83,391 reference genes,
+10,250 groups, excluded rows113/9896 and 13 retained input-only genes.
+Evidence: `ygob_reference_reconstruction_20260916.json`.
+
+Six targeted tests cover column/species mapping, genus/OFF filtering,
+terminal-stop normalization, whole-row duplicate exclusion with retained
+inputs, invalid FASTAs and malformed column counts. This establishes an
+independent implementation check, not independent biological ground truth.
+No accuracy predictions or outcomes were read. Remaining YGOB gates include
+machine-checked commands/versions, native conversions, overlap/resource
+audits and the frozen score/uncertainty assembly. Do not retune on YGOB.
+
+Full unit suite: **800 passed in 24.63s**; scoped whitespace checks passed.
