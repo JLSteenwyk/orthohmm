@@ -1,0 +1,598 @@
+{
+  "extant_genes": 44,
+  "families": {
+    "1": [
+      "F1__n1_4",
+      "F1__n1_6",
+      "F1__n4_11",
+      "F1__n4_9",
+      "F1__n5_12",
+      "F1__n5_14",
+      "F1__n6_13",
+      "F1__n6_15"
+    ],
+    "10": [
+      "F10__n1_2",
+      "F10__n4_5",
+      "F10__n5_6",
+      "F10__n6_7"
+    ],
+    "2": [
+      "F2__n1_4",
+      "F2__n4_7",
+      "F2__n5_8",
+      "F2__n6_9"
+    ],
+    "3": [
+      "F3__n1_2",
+      "F3__n4_5",
+      "F3__n5_6",
+      "F3__n6_7"
+    ],
+    "4": [
+      "F4__n1_2",
+      "F4__n4_5",
+      "F4__n5_6",
+      "F4__n6_7"
+    ],
+    "5": [
+      "F5__n1_2",
+      "F5__n4_5",
+      "F5__n5_6",
+      "F5__n6_7"
+    ],
+    "6": [
+      "F6__n1_2",
+      "F6__n4_5",
+      "F6__n5_6",
+      "F6__n6_7"
+    ],
+    "7": [
+      "F7__n1_2",
+      "F7__n4_5",
+      "F7__n5_6",
+      "F7__n6_7"
+    ],
+    "8": [
+      "F8__n1_2",
+      "F8__n4_5",
+      "F8__n5_6",
+      "F8__n6_7"
+    ],
+    "9": [
+      "F9__n1_2",
+      "F9__n4_5",
+      "F9__n5_6",
+      "F9__n6_7"
+    ]
+  },
+  "inputs": [
+    {
+      "bytes": 89,
+      "path": "T/ExtantTree.nwk",
+      "sha256": "937802d6d6ec452ad3fc0c39dbbca292f969460efc4c89c278d742c244f379ae"
+    },
+    {
+      "bytes": 131,
+      "path": "G/Genomes/n1_GENOME.tsv",
+      "sha256": "91f79c52f7fd3911717c5e90d672a33b2ed6a541d6e3d4cc3337925748200da7"
+    },
+    {
+      "bytes": 133,
+      "path": "G/Genomes/n5_GENOME.tsv",
+      "sha256": "eda885edeb80b0bae16534cbfd3da12772725824480078860af7c65536bd2174"
+    },
+    {
+      "bytes": 133,
+      "path": "G/Genomes/n6_GENOME.tsv",
+      "sha256": "ff193f2c9c7bf0b466191f1347de5bfbcc35a465b452624446d5f625931c95ec"
+    },
+    {
+      "bytes": 132,
+      "path": "G/Genomes/n4_GENOME.tsv",
+      "sha256": "5fe7d3032d4cfdbff36756eb415596d8d3ffc8ddf7a40aaa1c8f531080cee5ca"
+    },
+    {
+      "bytes": 233,
+      "path": "G/Gene_families/10_events.tsv",
+      "sha256": "1571dda88ccc5394ef3e1e4f55c1f2b40fb2e0b6108f885472b22046b6ddced0"
+    },
+    {
+      "bytes": 1183,
+      "path": "G/Gene_trees/10_rec.xml",
+      "sha256": "cb08f4a961c1a98c50f2b8ec65cc82fca077a970672e84c2d91aa45f0578c342"
+    },
+    {
+      "bytes": 758,
+      "path": "S/10_complete.fasta",
+      "sha256": "6f75681d9faf09b68d9c7c9f3eab5782767de78b4f995cb7228200a19d92e3e3"
+    },
+    {
+      "bytes": 97,
+      "path": "G/Gene_trees/10_prunedtree.nwk",
+      "sha256": "4c52cf6496358c2a9fbed3fcdeb32323798bfc3ef815ebd13f582477b8c0a322"
+    },
+    {
+      "bytes": 494,
+      "path": "G/Gene_families/1_events.tsv",
+      "sha256": "4b41a87274d3224da3b561c459857585c630643d49a3167d79f39d330f8f1ba3"
+    },
+    {
+      "bytes": 2623,
+      "path": "G/Gene_trees/1_rec.xml",
+      "sha256": "ac47c0fdf9a7f2611dd7cde1f8e0d511157b85b00b690c98af9703c871d7a796"
+    },
+    {
+      "bytes": 1632,
+      "path": "S/1_complete.fasta",
+      "sha256": "cd0885e9f3ccdd1a30a73b10e6a69f41abdd4200b20e984263df22264812d84b"
+    },
+    {
+      "bytes": 222,
+      "path": "G/Gene_trees/1_prunedtree.nwk",
+      "sha256": "0213fa2d6f67aaad43e6815f243621cad15aef0f945cedf9b288d2fc278cbdd9"
+    },
+    {
+      "bytes": 305,
+      "path": "G/Gene_families/2_events.tsv",
+      "sha256": "4657faab4ee4aced8738f84cd0588d1111f8927a8c58ab50c1cfa415d535ebe7"
+    },
+    {
+      "bytes": 1573,
+      "path": "G/Gene_trees/2_rec.xml",
+      "sha256": "df0b0c768a1a94e033e586fcc56b6c026020d3283eb6a4e6de4d81a11acf657a"
+    },
+    {
+      "bytes": 978,
+      "path": "S/2_complete.fasta",
+      "sha256": "6ae249339f14564f6cf29e4d17ff586af478fa9d0459c87fc501dbe15f17a255"
+    },
+    {
+      "bytes": 97,
+      "path": "G/Gene_trees/2_prunedtree.nwk",
+      "sha256": "bf5273e460b1ca0cc31a617647b85e764cb5f2a669c5a6d3fb665e279a0c76e3"
+    },
+    {
+      "bytes": 233,
+      "path": "G/Gene_families/3_events.tsv",
+      "sha256": "1571dda88ccc5394ef3e1e4f55c1f2b40fb2e0b6108f885472b22046b6ddced0"
+    },
+    {
+      "bytes": 1183,
+      "path": "G/Gene_trees/3_rec.xml",
+      "sha256": "cb08f4a961c1a98c50f2b8ec65cc82fca077a970672e84c2d91aa45f0578c342"
+    },
+    {
+      "bytes": 758,
+      "path": "S/3_complete.fasta",
+      "sha256": "1fc83a660c538e157547180a5d240e083a1b28ba39bf4c7593d00cf08ac3df18"
+    },
+    {
+      "bytes": 97,
+      "path": "G/Gene_trees/3_prunedtree.nwk",
+      "sha256": "4c52cf6496358c2a9fbed3fcdeb32323798bfc3ef815ebd13f582477b8c0a322"
+    },
+    {
+      "bytes": 233,
+      "path": "G/Gene_families/4_events.tsv",
+      "sha256": "1571dda88ccc5394ef3e1e4f55c1f2b40fb2e0b6108f885472b22046b6ddced0"
+    },
+    {
+      "bytes": 1183,
+      "path": "G/Gene_trees/4_rec.xml",
+      "sha256": "cb08f4a961c1a98c50f2b8ec65cc82fca077a970672e84c2d91aa45f0578c342"
+    },
+    {
+      "bytes": 758,
+      "path": "S/4_complete.fasta",
+      "sha256": "b13dad60ca9fa8ea198ea22f15aa2d19abde7fa946c444e6a48fb3ed17bec5cf"
+    },
+    {
+      "bytes": 97,
+      "path": "G/Gene_trees/4_prunedtree.nwk",
+      "sha256": "4c52cf6496358c2a9fbed3fcdeb32323798bfc3ef815ebd13f582477b8c0a322"
+    },
+    {
+      "bytes": 233,
+      "path": "G/Gene_families/5_events.tsv",
+      "sha256": "1571dda88ccc5394ef3e1e4f55c1f2b40fb2e0b6108f885472b22046b6ddced0"
+    },
+    {
+      "bytes": 1183,
+      "path": "G/Gene_trees/5_rec.xml",
+      "sha256": "cb08f4a961c1a98c50f2b8ec65cc82fca077a970672e84c2d91aa45f0578c342"
+    },
+    {
+      "bytes": 758,
+      "path": "S/5_complete.fasta",
+      "sha256": "89405d36629a60436ad277ea8c007a519ca182ce1d359703595908591732f264"
+    },
+    {
+      "bytes": 97,
+      "path": "G/Gene_trees/5_prunedtree.nwk",
+      "sha256": "4c52cf6496358c2a9fbed3fcdeb32323798bfc3ef815ebd13f582477b8c0a322"
+    },
+    {
+      "bytes": 233,
+      "path": "G/Gene_families/6_events.tsv",
+      "sha256": "1571dda88ccc5394ef3e1e4f55c1f2b40fb2e0b6108f885472b22046b6ddced0"
+    },
+    {
+      "bytes": 1183,
+      "path": "G/Gene_trees/6_rec.xml",
+      "sha256": "cb08f4a961c1a98c50f2b8ec65cc82fca077a970672e84c2d91aa45f0578c342"
+    },
+    {
+      "bytes": 758,
+      "path": "S/6_complete.fasta",
+      "sha256": "9a8a32b7088c39abcb0577a3ababd727f33660a2bbefbd35da790bd4642b22d4"
+    },
+    {
+      "bytes": 97,
+      "path": "G/Gene_trees/6_prunedtree.nwk",
+      "sha256": "4c52cf6496358c2a9fbed3fcdeb32323798bfc3ef815ebd13f582477b8c0a322"
+    },
+    {
+      "bytes": 233,
+      "path": "G/Gene_families/7_events.tsv",
+      "sha256": "1571dda88ccc5394ef3e1e4f55c1f2b40fb2e0b6108f885472b22046b6ddced0"
+    },
+    {
+      "bytes": 1183,
+      "path": "G/Gene_trees/7_rec.xml",
+      "sha256": "cb08f4a961c1a98c50f2b8ec65cc82fca077a970672e84c2d91aa45f0578c342"
+    },
+    {
+      "bytes": 758,
+      "path": "S/7_complete.fasta",
+      "sha256": "2a6fa03892f92d2666f718f9fd29dfaf827c553da4331d76191eb7f1e268c1be"
+    },
+    {
+      "bytes": 97,
+      "path": "G/Gene_trees/7_prunedtree.nwk",
+      "sha256": "4c52cf6496358c2a9fbed3fcdeb32323798bfc3ef815ebd13f582477b8c0a322"
+    },
+    {
+      "bytes": 233,
+      "path": "G/Gene_families/8_events.tsv",
+      "sha256": "1571dda88ccc5394ef3e1e4f55c1f2b40fb2e0b6108f885472b22046b6ddced0"
+    },
+    {
+      "bytes": 1183,
+      "path": "G/Gene_trees/8_rec.xml",
+      "sha256": "cb08f4a961c1a98c50f2b8ec65cc82fca077a970672e84c2d91aa45f0578c342"
+    },
+    {
+      "bytes": 758,
+      "path": "S/8_complete.fasta",
+      "sha256": "7a6eb5fb6e32936a1dfb1960e1f5ee4ff0141a072dee053b4b039f26bc9a33d0"
+    },
+    {
+      "bytes": 97,
+      "path": "G/Gene_trees/8_prunedtree.nwk",
+      "sha256": "4c52cf6496358c2a9fbed3fcdeb32323798bfc3ef815ebd13f582477b8c0a322"
+    },
+    {
+      "bytes": 233,
+      "path": "G/Gene_families/9_events.tsv",
+      "sha256": "1571dda88ccc5394ef3e1e4f55c1f2b40fb2e0b6108f885472b22046b6ddced0"
+    },
+    {
+      "bytes": 1183,
+      "path": "G/Gene_trees/9_rec.xml",
+      "sha256": "cb08f4a961c1a98c50f2b8ec65cc82fca077a970672e84c2d91aa45f0578c342"
+    },
+    {
+      "bytes": 758,
+      "path": "S/9_complete.fasta",
+      "sha256": "d7ba76b712e3d5e96c9cf07eba79ec21536a9019913da988838a1b1f6f5c3a7a"
+    },
+    {
+      "bytes": 97,
+      "path": "G/Gene_trees/9_prunedtree.nwk",
+      "sha256": "4c52cf6496358c2a9fbed3fcdeb32323798bfc3ef815ebd13f582477b8c0a322"
+    }
+  ],
+  "ortholog_pair_count": 66,
+  "ortholog_pairs": [
+    [
+      "F10__n1_2",
+      "F10__n4_5"
+    ],
+    [
+      "F10__n1_2",
+      "F10__n5_6"
+    ],
+    [
+      "F10__n1_2",
+      "F10__n6_7"
+    ],
+    [
+      "F10__n4_5",
+      "F10__n5_6"
+    ],
+    [
+      "F10__n4_5",
+      "F10__n6_7"
+    ],
+    [
+      "F10__n5_6",
+      "F10__n6_7"
+    ],
+    [
+      "F1__n1_4",
+      "F1__n4_9"
+    ],
+    [
+      "F1__n1_4",
+      "F1__n5_12"
+    ],
+    [
+      "F1__n1_4",
+      "F1__n6_13"
+    ],
+    [
+      "F1__n1_6",
+      "F1__n4_11"
+    ],
+    [
+      "F1__n1_6",
+      "F1__n5_14"
+    ],
+    [
+      "F1__n1_6",
+      "F1__n6_15"
+    ],
+    [
+      "F1__n4_11",
+      "F1__n5_14"
+    ],
+    [
+      "F1__n4_11",
+      "F1__n6_15"
+    ],
+    [
+      "F1__n4_9",
+      "F1__n5_12"
+    ],
+    [
+      "F1__n4_9",
+      "F1__n6_13"
+    ],
+    [
+      "F1__n5_12",
+      "F1__n6_13"
+    ],
+    [
+      "F1__n5_14",
+      "F1__n6_15"
+    ],
+    [
+      "F2__n1_4",
+      "F2__n4_7"
+    ],
+    [
+      "F2__n1_4",
+      "F2__n5_8"
+    ],
+    [
+      "F2__n1_4",
+      "F2__n6_9"
+    ],
+    [
+      "F2__n4_7",
+      "F2__n5_8"
+    ],
+    [
+      "F2__n4_7",
+      "F2__n6_9"
+    ],
+    [
+      "F2__n5_8",
+      "F2__n6_9"
+    ],
+    [
+      "F3__n1_2",
+      "F3__n4_5"
+    ],
+    [
+      "F3__n1_2",
+      "F3__n5_6"
+    ],
+    [
+      "F3__n1_2",
+      "F3__n6_7"
+    ],
+    [
+      "F3__n4_5",
+      "F3__n5_6"
+    ],
+    [
+      "F3__n4_5",
+      "F3__n6_7"
+    ],
+    [
+      "F3__n5_6",
+      "F3__n6_7"
+    ],
+    [
+      "F4__n1_2",
+      "F4__n4_5"
+    ],
+    [
+      "F4__n1_2",
+      "F4__n5_6"
+    ],
+    [
+      "F4__n1_2",
+      "F4__n6_7"
+    ],
+    [
+      "F4__n4_5",
+      "F4__n5_6"
+    ],
+    [
+      "F4__n4_5",
+      "F4__n6_7"
+    ],
+    [
+      "F4__n5_6",
+      "F4__n6_7"
+    ],
+    [
+      "F5__n1_2",
+      "F5__n4_5"
+    ],
+    [
+      "F5__n1_2",
+      "F5__n5_6"
+    ],
+    [
+      "F5__n1_2",
+      "F5__n6_7"
+    ],
+    [
+      "F5__n4_5",
+      "F5__n5_6"
+    ],
+    [
+      "F5__n4_5",
+      "F5__n6_7"
+    ],
+    [
+      "F5__n5_6",
+      "F5__n6_7"
+    ],
+    [
+      "F6__n1_2",
+      "F6__n4_5"
+    ],
+    [
+      "F6__n1_2",
+      "F6__n5_6"
+    ],
+    [
+      "F6__n1_2",
+      "F6__n6_7"
+    ],
+    [
+      "F6__n4_5",
+      "F6__n5_6"
+    ],
+    [
+      "F6__n4_5",
+      "F6__n6_7"
+    ],
+    [
+      "F6__n5_6",
+      "F6__n6_7"
+    ],
+    [
+      "F7__n1_2",
+      "F7__n4_5"
+    ],
+    [
+      "F7__n1_2",
+      "F7__n5_6"
+    ],
+    [
+      "F7__n1_2",
+      "F7__n6_7"
+    ],
+    [
+      "F7__n4_5",
+      "F7__n5_6"
+    ],
+    [
+      "F7__n4_5",
+      "F7__n6_7"
+    ],
+    [
+      "F7__n5_6",
+      "F7__n6_7"
+    ],
+    [
+      "F8__n1_2",
+      "F8__n4_5"
+    ],
+    [
+      "F8__n1_2",
+      "F8__n5_6"
+    ],
+    [
+      "F8__n1_2",
+      "F8__n6_7"
+    ],
+    [
+      "F8__n4_5",
+      "F8__n5_6"
+    ],
+    [
+      "F8__n4_5",
+      "F8__n6_7"
+    ],
+    [
+      "F8__n5_6",
+      "F8__n6_7"
+    ],
+    [
+      "F9__n1_2",
+      "F9__n4_5"
+    ],
+    [
+      "F9__n1_2",
+      "F9__n5_6"
+    ],
+    [
+      "F9__n1_2",
+      "F9__n6_7"
+    ],
+    [
+      "F9__n4_5",
+      "F9__n5_6"
+    ],
+    [
+      "F9__n4_5",
+      "F9__n6_7"
+    ],
+    [
+      "F9__n5_6",
+      "F9__n6_7"
+    ]
+  ],
+  "prepared_inputs": [
+    {
+      "bytes": 1222,
+      "path": "input/n1.fasta",
+      "sha256": "69e3cd3023fc7465dd34b5a58b003a6989e6c228a4760f5ad99d2da694301ca9"
+    },
+    {
+      "bytes": 1223,
+      "path": "input/n4.fasta",
+      "sha256": "b077dfbf19f2edc9f27d1459dcbbbe18139c269fddf07f5285b83d59aad45a31"
+    },
+    {
+      "bytes": 1224,
+      "path": "input/n5.fasta",
+      "sha256": "d93cbe8f0502fb738fc73253c69ad9f8abcf3111f679553480faddc62deb7698"
+    },
+    {
+      "bytes": 1224,
+      "path": "input/n6.fasta",
+      "sha256": "2e91268b314e4fe878855c02b397c25a49c0cf6d742ed9c4ea543bee10c028d9"
+    }
+  ],
+  "schema_version": 1,
+  "scope": "root-origin duplication/loss histories; no transfer",
+  "source": {
+    "bytes": 8601,
+    "path": "zombi_truth.py",
+    "sha256": "e5baad78cbf4467d2c189d65b5f0785ef398a58182952792098d625422b6797c"
+  },
+  "species": [
+    "n1",
+    "n4",
+    "n5",
+    "n6"
+  ]
+}

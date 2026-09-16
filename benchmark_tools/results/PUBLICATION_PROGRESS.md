@@ -512,3 +512,26 @@ orthology truth or method accuracy. Extant-only sequence extraction,
 event/tree/XML truth checks, scientific multi-seed conditions, indel/fragment
 limitations, matched method runs, and robustness/resource analyses remain
 open. No held-out YGOB outcomes or method parameters were inspected/changed.
+
+## Event-Derived Simulation Truth
+
+`zombi_truth.py` now cross-checks native event histories against reconciled
+XML, extant genomes, pruned gene trees, and protein sequences. It exports
+extant-only FASTAs with globally unique IDs and event-derived ortholog pairs,
+not family cliques. Unsupported transfer/origination histories, inconsistent
+outputs, invalid graph structure, duplicate IDs, and invalid proteins fail
+closed. Root-origin homolog families are explicitly not a root-HOG truth set.
+
+Both independent smoke histories pass: seed 20260916 has 41 extant genes
+and 63 cross-species ortholog pairs; seed 20260917 has 44 genes and 66 pairs.
+Reports and hashes are in `zombi_truth_repeat_a_20260916.json` and
+`zombi_truth_independent_20260916.json`; interpretation and limitations are
+in `ZOMBI_TRUTH_VALIDATION_20260916.md`. Fifteen new tests, including
+duplication timing, co-orthologs, loss, and corrupted-output fixtures, pass;
+20 tests pass together with the seed-adapter tests.
+
+No method accuracy has been computed on these inputs. Extinct/single-tip
+family cases, scientific conditions and multiple-seed evaluation, missingness
+transformations, root-time group semantics, and matched method runs remain
+open. YGOB and replay jobs were still queued at the start of this milestone;
+their inputs and frozen configurations were not changed.
