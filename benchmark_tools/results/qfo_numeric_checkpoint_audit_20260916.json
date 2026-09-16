@@ -1,0 +1,26 @@
+{
+  "accuracy_evaluated": false,
+  "auditor": {
+    "bytes": 4044,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_accuracy_checkpoint.py",
+    "sha256": "b71fa9cf1d2cb954206e61179535d7e22fc39946c4de97af6fa45533f7eb9643"
+  },
+  "limitations": "Checks hashes and numeric integrity, not FASTA/source equivalence, hit completeness or duplicate ordered pairs.",
+  "manifest": {
+    "bytes": 806,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthohmm_high_sensitivity_isolated/output/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json",
+    "sha256": "b90c787f050a087adeeb81b1cace18c9cbb30e1724926a40a1df6d7e49bd549c"
+  },
+  "schema_version": 1,
+  "status": "numeric_checkpoint_verified",
+  "summary": {
+    "gene_names_lexically_sorted": true,
+    "genes": 976504,
+    "hits": 88729858,
+    "maximum_score": 7.4837209302325585,
+    "minimum_score": 0.0047840368172403286,
+    "nonpositive_scores": 0,
+    "self_hits": 976195,
+    "species": 78
+  }
+}

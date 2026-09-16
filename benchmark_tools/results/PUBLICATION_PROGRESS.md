@@ -1784,3 +1784,30 @@ it is not proof of QfO production equivalence. Next: inventory and validate
 the actual QfO normalized-hit checkpoint, freeze a corrected replay launcher,
 reproduce production outputs before preparing the QfO factorial. No QfO
 ablation or held-out validation accuracy was inspected this turn.
+
+## QfO Numeric Checkpoint Audit
+
+Previous turn corrected the broad-panel replay branch. Read the objective and
+confirmed YGOB 21192 remains live. Located the retained QfO checkpoint under
+`qfo_benchmark/results/orthohmm_high_sensitivity_isolated/output/orthohmm_working_res/high_sensitivity_checkpoint`.
+It is the production numeric checkpoint, not the pickle dictionary currently
+accepted by the cached replay. Reuse requires a numeric input adapter rather
+than reconstructing an 88-million-entry Python dictionary.
+
+Added `audit_accuracy_checkpoint.py` with exact inventory, pinned manifest,
+all-file SHA256 verification, mmap loading, bounded-chunk shape/dtype/index and
+finite-score checks, unique gene IDs and descriptive self-hit accounting.
+Ran against the historical manifest hash b90c787f...: all checks pass.
+`qfo_numeric_checkpoint_audit_20260916.json` records 976,504 genes, 88,729,858
+hits, 78 species and lexically sorted gene names. There are 976,195 self-hits,
+zero nonpositive scores, and score range 0.0047840368-7.4837209302. Self-hits
+are observed cached evidence, not automatically discarded or classified as
+invalid. The eventual replay must preserve the same production treatment.
+
+Seven targeted tests pass and scoped whitespace checks pass; the real-data
+audit completed successfully without modifying checkpoint files or evaluating
+orthology accuracy. This verifies numeric integrity, not FASTA/source matching,
+hit completeness, duplicate ordered-pair absence or production replay
+equivalence. Next: add and test a numeric-checkpoint replay adapter, freeze
+the exact source/runtime/input manifest and run label-blind QfO equivalence.
+No search rerun, QfO ablation scoring or held-out scoring was performed.
