@@ -938,3 +938,14 @@ manifest. A generic pinned method-array launcher uses the same four-CPU,
 two-concurrent-task resource settings. Ten focused method/variable-length
 tests pass. Pin this code and materialize/freeze method commands before
 submitting v2 generation, as required by the prospective protocol.
+
+Pinned method builder/executor `f5f4e1b662118e7624746546e81505ddeabf9bb8`
+in `benchmarks/work/publication_variable_methods_v2`. It generated
+`publication_variable_methods_20260916.json`, SHA-256
+`f68b0caf508fde8f40d311b5d303f7569a118bd15e8cf960d227a7d1cfee5984`.
+All 70 datasets have the unchanged three inference commands and diagnostic
+OrthoFinder checkpoint definition. Verified exact equality of the frozen
+core revision, tool-entrypoint records and scientific command options with
+v1; all recorded source/tool files and both interpreter inventories passed
+preflight. The generic generation launcher also passed its full check-only
+preflight for the final task (divergent_turnover_20261110).
