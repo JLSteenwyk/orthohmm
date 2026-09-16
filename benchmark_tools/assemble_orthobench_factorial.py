@@ -24,6 +24,51 @@ REFERENCE_SNAPSHOT = "660ead29c5b6ac0b8278cd1e62cdcdb0a513db81dda317e634b805e661
 OFFICIAL_HASH = "81eb1e660c17819549b07eea8a54b4fb42a89180cafeb4569d92195d282f5e6f"
 
 
+def coverage_and_resources(groups, gene_species, metrics=None):
+    seen = membership({str(i): list(group) for i, group in enumerate(groups)})
+    if set(seen) != set(gene_species):
+        raise ValueError("Coverage requires the complete input gene universe")
+    sizes = [len(group) for group in groups]
+    multispecies = [group for group in groups if len({gene_species[g] for g in group}) > 1]
+    result = {"input_genes": len(gene_species), "assigned_genes": len(seen),
+              "groups": len(groups), "singleton_groups": sizes.count(1),
+              "genes_in_nonsingleton_groups": sum(n for n in sizes if n > 1),
+              "multispecies_groups": len(multispecies),
+              "genes_in_multispecies_groups": sum(map(len, multispecies)),
+              "resource_scope": "Upstream cached partition; separate cell cost not measured",
+              "wall_s": None, "user_cpu_s": None, "system_cpu_s": None,
+              "mean_cpu_cores": None, "peak_process_tree_rss_bytes": None}
+    if metrics is not None:
+        if metrics.get("rss_measurement") != "sampled_sum_of_linux_proc_tree_rss":
+            raise ValueError("Unexpected memory accounting convention")
+        for key in ("wall_s", "user_cpu_s", "system_cpu_s", "peak_process_tree_rss_bytes"):
+            value = metrics[key]
+            if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value) or value < 0:
+                raise ValueError("Invalid resource measurement")
+            result[key] = value
+        if result["wall_s"] <= 0:
+            raise ValueError("Nonpositive wall time")
+        result["mean_cpu_cores"] = (result["user_cpu_s"] + result["system_cpu_s"]) / result["wall_s"]
+        result["resource_scope"] = "Incremental cached reconciliation; shared node; sampled sum of process-tree RSS"
+    return result
+
+
+def render_execution(result):
+    lines = ["", "## Coverage And Incremental Resources", "",
+             "All assigned genes includes singletons; multispecies coverage is not orthology accuracy.",
+             "Times are shared-node cached reconciliation costs, not end-to-end efficiency comparisons.",
+             "NA for candidate-only cells means no separate cell cost was measured, not zero cost.", "",
+             "| Cell | Groups | Singleton Groups | Genes In Multispecies Groups | Wall (s) | Mean CPU Cores | Peak Tree RSS (GiB) |",
+             "| --- | ---: | ---: | ---: | ---: | ---: | ---: |"]
+    for label in CELLS:
+        row = result["coverage_resources"][label]
+        timing = "NA | NA | NA" if row["wall_s"] is None else f"{row['wall_s']:.2f} | {row['mean_cpu_cores']:.2f} | {row['peak_process_tree_rss_bytes'] / 2**30:.3f}"
+        lines.append(f"| {label} | {row['groups']} | {row['singleton_groups']} | {row['genes_in_multispecies_groups']} | {timing} |")
+    lines += ["", "Original reconciliation batch failures are retained in the machine-readable scheduler records.",
+              "Recovered postflight verification errors are not relabeled as native inference failures."]
+    return "\n".join(lines) + "\n"
+
+
 def require_terminal_array(accounting):
     rows = list(csv.DictReader(io.StringIO(accounting), delimiter="|"))
     expected = {f"21248_{i}" for i in range(4)}
@@ -81,12 +126,14 @@ def assemble(root, output):
     cell, _, launcher = select_cell(prepared, 0)
     verify_prepared(prepared, cell, launcher, 21161)
     genes = set()
+    gene_species = {}
     for item in prepared["fasta_inputs"]:
         for record in SeqIO.parse(item["path"], "fasta"):
             if record.id in genes:
                 raise ValueError("Duplicate FASTA ID")
             genes.add(record.id)
-    predictions, prediction_sources = {}, {}
+            gene_species[record.id] = Path(item["path"]).name
+    predictions, prediction_sources, coverage = {}, {}, {}
     for cell in prepared["cells"]:
         path = Path(cell["prediction"])
         if cell["reconciliation"]:
@@ -101,6 +148,10 @@ def assemble(root, output):
             raise ValueError("Cell does not partition the complete input universe")
         predictions[cell["label"]] = [set(g) for g in groups.values()]
         prediction_sources[cell["label"]] = file_provenance(path)
+        metrics = None
+        if cell["reconciliation"]:
+            metrics = json.loads(Path(native[cell["label"]]["native_metrics"]["path"]).read_text())
+        coverage[cell["label"]] = coverage_and_resources(predictions[cell["label"]], gene_species, metrics)
     if set(predictions) != set(CELLS):
         raise ValueError("Incomplete factorial design")
     references, uncertain, official, reference_records = load_reference_snapshot(results / "orthobench_paired_uncertainty_20260916.json")
@@ -122,14 +173,14 @@ def assemble(root, output):
     result = factorial_bootstrap({label: {"status": "complete", "refog_records": scores[label]["refog_records"]} for label in CELLS})
     result.update(schema_version=1, scores=scores, official_scores=official_scores,
                   native_validation=native, scheduler=tasks, accounting_raw=accounting,
-                  predictions=prediction_sources, references=reference_records,
+                  predictions=prediction_sources, references=reference_records, coverage_resources=coverage,
                   official_scorer=file_provenance(official), assembler=file_provenance(Path(__file__)),
                   publication_ready=False, timing_scope="Incremental cached reconciliation on a shared node")
     with (output / "results.json").open("x") as handle:
         json.dump(result, handle, indent=2, sort_keys=True)
         handle.write("\n")
     with (output / "results.md").open("x") as handle:
-        handle.write(render_report(result))
+        handle.write(render_report(result) + render_execution(result))
     return result
 
 

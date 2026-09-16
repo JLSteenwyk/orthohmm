@@ -1,0 +1,83 @@
+{
+  "accuracy_evaluated": false,
+  "cell": "p1_c0_r1",
+  "integrity": {
+    "accounting_raw": "JobID|JobIDRaw|State|ExitCode|Elapsed\n21248_0|21249|FAILED|1:0|00:26:37\n21248_0.batch|21249.batch|FAILED|1:0|00:26:37\n21248_1|21250|FAILED|1:0|00:32:45\n21248_1.batch|21250.batch|FAILED|1:0|00:32:45\n21248_2|21287|FAILED|1:0|00:25:30\n21248_2.batch|21287.batch|FAILED|1:0|00:25:30\n21248_3|21248|RUNNING|0:0|00:19:43\n21248_3.batch|21248.batch|RUNNING|0:0|00:19:43\n",
+    "accuracy_evaluated": false,
+    "cell": "p1_c0_r1",
+    "environment_manifest": {
+      "bytes": 488540,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_variable_native_methods_20260916.json",
+      "sha256": "bf677728cf9312edd9755d9ac1ceefbce3abb8c3848d43413631dc00ca00eb2f"
+    },
+    "executor_commit": "9a8630197401d97e4fcc131f4939433bd3b89aac",
+    "limitation": "Original scheduler failure retained; native semantics and conversion gates remain required.",
+    "native_outputs_validated": false,
+    "original_batch_log": {
+      "bytes": 775,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_ob_factorial_logs_v1/cell_21248_2.log",
+      "sha256": "6de2a46a27dbde05e849ea85883881d934c8889cd9f770f7033ec9e322054d83"
+    },
+    "original_status": {
+      "bytes": 21319740,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/execution/p1_c0_r1/status.json",
+      "sha256": "24e5418013ca154b44573866d37b58302ce11368fefbe4341d8e0760b8a67159"
+    },
+    "prepared_manifest": {
+      "bytes": 63452,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/orthobench_factorial_prepared_20260916.json",
+      "sha256": "5c325f4d77865e0c7571fe4bb4df0be0959977a49e1d22169f192518700f9382"
+    },
+    "scheduler": {
+      "Elapsed": "00:25:30",
+      "ExitCode": "1:0",
+      "JobID": "21248_2",
+      "JobIDRaw": "21287",
+      "State": "FAILED"
+    },
+    "schema_version": 1,
+    "scoring_admitted": false,
+    "status": "postflight_integrity_verified",
+    "verification_cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+    "verified_artifact_count": 55997,
+    "verifier": {
+      "bytes": 6638,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/recover_factorial_postflight.py",
+      "sha256": "d7c1d6bf4fd38c16cb9d8724f7558a08749aab34de9b776a6db288b93ab09198"
+    }
+  },
+  "membership": null,
+  "native_manifest": {
+    "bytes": 9548,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/cells/p1_c0_r1/orthohmm_phylogeny/provenance_manifest.json",
+    "sha256": "dad2b5eb40be9cf0f8ca7bd7da4363cbbbc40dcb9d7a08de5949e5d7e33f3692"
+  },
+  "native_metrics": {
+    "bytes": 5654,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/cells/p1_c0_r1.json",
+    "sha256": "8acd4e63bc33f9cad08eee84fc9921a8f5fe07b11cef599ec6ae49100fec68de"
+  },
+  "native_outputs_validated": true,
+  "partition": {
+    "all_candidate_genes_preserved": true,
+    "candidate_families": 62885,
+    "candidate_genes": 251378,
+    "cross_source_merges": 0,
+    "root_hog_genes": 251378,
+    "root_hogs": 64616,
+    "split_source_families": 676
+  },
+  "schema_version": 1,
+  "scope": "Root-HOG group benchmark admission only; no pairwise-truth evaluation or independent tree reconstruction.",
+  "species_tree": {
+    "bytes": 717,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/cells/p1_c0_r1/orthohmm_phylogeny/species_tree.rooted.nwk",
+    "sha256": "3b7db76a889404464804aa3d9ae0b5fdb2ca5f86e3a7b2c7abed3198d5cf6587"
+  },
+  "status": "native_group_output_verified",
+  "verifier": {
+    "bytes": 8340,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_factorial_native.py",
+    "sha256": "dde279bbf98826b20523f4cbc2d4d31ba066f3565d7e3182f2f53bdb303a9379"
+  }
+}

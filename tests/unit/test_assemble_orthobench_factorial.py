@@ -60,3 +60,49 @@ def test_rejects_scorer_disagreement(change):
         printed[change] += 1
     with pytest.raises(ValueError):
         assembler.compare_official(exact, printed)
+
+
+def test_coverage_distinguishes_singletons_paralogs_and_multispecies_groups():
+    groups = [{"a", "b"}, {"c", "d"}, {"e"}]
+    species = {"a": "s1", "b": "s1", "c": "s1", "d": "s2", "e": "s2"}
+    result = assembler.coverage_and_resources(groups, species)
+    assert result["assigned_genes"] == 5
+    assert result["singleton_groups"] == 1
+    assert result["genes_in_nonsingleton_groups"] == 4
+    assert result["multispecies_groups"] == 1
+    assert result["genes_in_multispecies_groups"] == 2
+    assert result["wall_s"] is None
+
+
+def resource_metrics():
+    return {"rss_measurement": "sampled_sum_of_linux_proc_tree_rss", "wall_s": 10,
+            "user_cpu_s": 20, "system_cpu_s": 5, "peak_process_tree_rss_bytes": 2**30}
+
+
+def test_resource_accounting_uses_cpu_seconds_and_keeps_bytes():
+    result = assembler.coverage_and_resources([{"a"}], {"a": "s1"}, resource_metrics())
+    assert result["mean_cpu_cores"] == 2.5
+    assert result["peak_process_tree_rss_bytes"] == 2**30
+    assert "shared node" in result["resource_scope"]
+
+
+@pytest.mark.parametrize("key,value", [("wall_s", 0), ("user_cpu_s", -1), ("system_cpu_s", float("nan")),
+                                       ("peak_process_tree_rss_bytes", True), ("rss_measurement", "maxrss")])
+def test_rejects_invalid_or_incommensurate_resources(key, value):
+    metrics = resource_metrics()
+    metrics[key] = value
+    with pytest.raises(ValueError):
+        assembler.coverage_and_resources([{"a"}], {"a": "s1"}, metrics)
+
+
+def test_missing_input_gene_is_not_reported_as_full_coverage():
+    with pytest.raises(ValueError):
+        assembler.coverage_and_resources([{"a"}], {"a": "s1", "b": "s2"})
+
+
+def test_execution_table_labels_unmeasured_resources():
+    row = assembler.coverage_and_resources([{"a"}], {"a": "s1"})
+    report = assembler.render_execution({"coverage_resources": {label: row for label in assembler.CELLS}})
+    assert report.count("NA | NA | NA") == 8
+    assert "not zero cost" in report
+    assert "not orthology accuracy" in report

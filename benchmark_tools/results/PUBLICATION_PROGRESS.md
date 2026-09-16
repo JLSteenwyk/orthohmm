@@ -1628,3 +1628,31 @@ official-source hashes without scoring predictions: 70 references and 11
 exclusion files match. End-to-end scoring integration remains untested until
 the final two cells are terminal and validated. No ablation accuracy has been
 inspected and no completion claim is made.
+
+## Third Cell Validated; Coverage And Resource Reporting
+
+Previous turn implemented the all-cell scoring assembly. Read the full
+objective and confirmed YGOB 21192 and factorial task 3 remain live. Task 2
+terminated FAILED 1:0 at 25:30 with the same postflight verification defect.
+Ran the unchanged combined native validator: p1_c0_r1 passes, with original
+scheduler history preserved in `orthobench_native_p1c0r1_20260916.json`.
+It retains all 251,378 genes across 64,616 root HOGs from 62,885 candidate
+families, with 676 split sources and no cross-source merges. No accuracy read.
+
+Extended the assembly report with per-cell coverage: all assigned genes,
+singletons, nonsingleton membership, multispecies groups and their gene count.
+The report explicitly distinguishes assignment including singletons from
+orthology accuracy. Added native replay wall/user/system CPU measurements,
+mean utilized CPU cores and sampled process-tree RSS, retaining byte units in
+JSON and GiB only for display. Reject nonfinite/negative measurements and
+incompatible RSS conventions. R=0 upstream partitions have null separate
+resource measurements, never fabricated zero costs. All timings remain
+incremental cached shared-node work, not matched end-to-end speed evidence.
+
+Nine additional tests cover coverage categories, omitted genes, CPU arithmetic,
+memory convention, invalid measurements and NA rendering. All 24 assembler
+tests and the full **748-test suite pass** (33.02s). Scoped whitespace checks
+pass. Fourth-cell validation and eight-cell scoring remain pending; no
+inferential comparison is reported from the three available cells. YGOB
+batch log now records the high-sensitivity metrics path, but the overall job
+is still running and held-out outcomes remain uninspected.
