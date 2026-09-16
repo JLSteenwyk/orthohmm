@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pytest
 
-from benchmark_tools.run_species_tree_control import control_cell
+from benchmark_tools.run_species_tree_control import control_cell, perturbation_cell, PERTURBATIONS
 
 
 def inputs():
@@ -46,3 +46,31 @@ def test_unplanned_control_inputs_rejected(change):
         original["argv"].extend(["--membership-constraints", "/other"])
     with pytest.raises(ValueError):
         control_cell(original, tree, Path("/new"))
+
+
+@pytest.mark.parametrize("index", range(6))
+def test_each_fixed_perturbation_keeps_baseline_constraints_and_checkpoint(index):
+    original, tree = inputs()
+    tree.update(label=PERTURBATIONS[index], rooted_rf_clade_distance=2 if index < 3 else 4)
+    result = perturbation_cell(original, tree, Path("/new"), index)
+    assert result["label"] == "p1_c1_r1_" + PERTURBATIONS[index]
+    assert result["checkpoint_source"] == "/original"
+    assert result["argv"][result["argv"].index("--membership-constraints") + 1] == "/constraints"
+    assert original["argv"][3] == "infer"
+
+
+@pytest.mark.parametrize("index", [-1, 6, True, "0"])
+def test_unknown_perturbation_rejected(index):
+    original, tree = inputs()
+    with pytest.raises(ValueError):
+        perturbation_cell(original, tree, Path("/new"), index)
+
+
+def test_wrong_distance_or_tree_identity_rejected():
+    original, tree = inputs()
+    tree.update(label="nni1_0", rooted_rf_clade_distance=4)
+    with pytest.raises(ValueError):
+        perturbation_cell(original, tree, Path("/new"), 0)
+    tree.update(rooted_rf_clade_distance=2)
+    with pytest.raises(ValueError):
+        perturbation_cell(original, tree, Path("/new"), 1)

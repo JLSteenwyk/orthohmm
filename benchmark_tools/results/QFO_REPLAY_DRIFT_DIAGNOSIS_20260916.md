@@ -60,3 +60,29 @@ native/package inventories are unavailable in the retained run records.
 The experiment can test current graph-source equivalence and repeatability;
 it cannot by itself certify or reconstruct the historical runtime. No cause
 is established yet, and no automatic restart of the full replay is planned.
+
+## Completed Initial-Graph Experiment
+
+Job21295 completed0:0 in24:18. Historical and frozen builders, both evaluated
+in the current environment on the same checkpoint, produced byte-identical
+source/target/weight arrays for24,148,515 RBNH edges. This rules out the
+threshold-factor source change as an explanation for this graph. It does
+not compare against an archived historical graph, which is unavailable.
+
+Two separate initial-clustering workers produced byte-identical349,898-group
+partitions (SHA2568c162782bba955078a8f7e4e6088df5b34c9f15b055803224e513fdea8b33cdd).
+Both yielded1,361,622 singleton-assignment edges, matching the historical
+recorded count rather than the failed-equivalence replay's1,360,934.
+All singleton source/target/weight fingerprints also agree between repeats.
+Recorded environment: NumPy2.2.6, igraph1.0.0, leidenalg0.11.0.
+
+Independently rechecked saved source/checkpoint/graph-file hashes, graph-array
+fingerprints, complete input-gene coverage and exact partition comparison.
+Evidence: `qfo_initial_graph_diagnostic_20260916.json`.
+
+The discrepancy is not resolved. In particular, the failed-equivalence
+replay did not retain its initial RBNH arrays or initial partition. Next
+instrument that exact replay entry point to capture these before proceeding
+to profiles, then compare them with the preserved deterministic diagnostic.
+Do not infer general Leiden nondeterminism, an HMM-profile defect, or full
+historical reproduction from the current evidence. No accuracy was scored.

@@ -2552,3 +2552,30 @@ the six already-selected perturbation commands against this validated control,
 then native-validate and score all18 prespecified F1/P/R contrasts. QfO graph
 diagnostic21295 still RUNNING23:06 in its second clustering repeat; no final
 repeatability result claimed from intermediate artifacts.
+
+### QfO graph diagnostic completed; six tree perturbations ready (2026-09-16)
+
+Previous turn was progress: supplied-control native admission and equivalence.
+Reread objective. QfO21295 completed0:0 in24:18. Both old/frozen builders in
+the current environment yield byte-identical24,148,515-edge graphs. Two
+initial Leiden repeats yield identical349,898-group partitions and1,361,622
+singleton edges, matching the historical count, not replay21288's1,360,934.
+Independently verified recorded source/checkpoint/graph-file hashes, array
+fingerprints and complete partition equality. Preserved exact report at
+`qfo_initial_graph_diagnostic_20260916.json` and updated drift diagnosis.
+This excludes the threshold-factor source change for this graph but does not
+resolve replay drift. No archived historical initial graph/partition exists.
+Next capture the exact replay entry point's initial graph/partition before
+profile execution; do not claim general Leiden nondeterminism or historical
+reproduction from the present evidence.
+
+Extended the tree runner with six fixed perturbation indices. Each task
+revalidates supplied-control equivalence, tree manifest, original native
+source, inputs/environment, then retains original candidate constraints and
+rules with only its tree/output changed. Reuses original raw gene trees,
+recomputes reconciliation, and verifies source preservation afterward. Separate
+outputs at `benchmarks/results/ob_species_tree_perturbations_v1/{nni1_0..nni2_2}`;
+prepared array0-5%2,32 CPUs64GiB per task, four-hour limit. All18 planned
+accuracy endpoints remain prespecified; none evaluated yet.
+Eleven new index/identity/distance/command tests passed; full unit suite
+**936 passed in26.24s**. Frozen executor/submission details follow.
