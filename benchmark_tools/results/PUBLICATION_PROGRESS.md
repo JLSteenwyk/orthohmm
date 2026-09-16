@@ -230,3 +230,29 @@ This completes the planned source-level resource review for the YGOB scoring
 gate, with those limitations retained. It does not waive inference/output
 completion and arithmetic checks, and does not cover all historical tools.
 No held-out scores were inspected and no inference settings were changed.
+
+## OrthoMCL Failure Reference Impact And Baseline Decision
+
+`audit_orthomcl_reference_impact.py` and its native Darwin query script
+measure direct reference exposure of the 53 previously audited failed
+queries. `orthomcl_reference_impact_20260916.json` preserves per-protein
+annotations, reference and executable hashes, and native-log provenance;
+`ORTHOMCL_FAILURE_IMPACT_20260916.md` explains the baseline decision.
+
+None of the 53 occurs in mapped SwissTrees/TreeFam-A cases or VGNC's 23,934
+asserted pairs, and none has an EC annotation. Four have experimental GO
+annotations. All 53 have FAS annotation entries, but only 46 have nonempty
+feature-type dictionaries. These are direct exposure counts, not a bound on
+indirect clustering changes or a measured counterfactual score difference.
+The native TreeFam-A file is a single pooled case, not a single gene family.
+
+Retain the unchanged standard OrthoMCL 1.4 baseline with explicit failure
+disclosure. No full replacement BLAST run is justified solely by this audit;
+altered masking or sequence handling would require a separate diagnostic
+configuration, not silent replacement. The modified-search counterfactual
+remains unmeasured. Seventeen focused tests pass, and native execution
+completed with no reported errors/warnings. Initial audit v1 remains on disk;
+v2 clarifies case counts and records actual FAS feature content.
+
+Last live job check: final-group QfO scoring `20916` RUNNING at 1h02m23s;
+YGOB inference `20917` PENDING for resources. No active jobs were restarted.

@@ -1,0 +1,47 @@
+# Read-only reference queries using the benchmark's native data structures.
+refset_path := getenv('QFO_REFSET_PATH'):
+ReadProgram(getenv('DARWIN_ORTHOLOG_BENCHMARK_REPO_PATH').'/lib/darwinit'):
+targets := parse(getenv('QFO_AUDIT_TARGETS')):
+for testset in ['SwissTrees','TreeFam-A'] do
+    ReadProgram(refset_path.'/ReconciledTrees_'.testset.'.drw'):
+    for family in Indices(ReconciledTrees) do
+        prts := ReconciledTrees[family,'MappedProts']:
+        printf('QFOAUDIT\tFAMILY\t%s\t%s\t%d\n',testset,family,length(prts)):
+        for p in intersect(prts, targets) do
+            printf('QFOAUDIT\tMEMBER\t%s\t%s\t%d\n',testset,family,p):
+        od:
+        rels := ReconciledTrees[family,'Relations']:
+        for rel in Indices(rels) do
+            if rel[1] < rel[2] and length(intersect(rel, targets)) > 0 then
+                ev := rels[rel]:
+                if member(ev, {':D=N','D=N','S','SPECIATION'}) then typ := 'S':
+                elif member(ev, {':D=Y','D=Y','D','DUPLICATION'}) then typ := 'D':
+                else typ := 'OTHER': fi:
+                printf('QFOAUDIT\tRELATION\t%s\t%s\t%d\t%d\t%s\n',
+                       testset,family,rel[1],rel[2],typ):
+            fi:
+        od:
+    od:
+od:
+ReadProgram(refset_path.'/enzymes.drw'):
+DB := ReadDb(refset_path.'/ServerIndexed.db'):
+filter := {'EXP','IDA','IPI','IMP','IGI','IEP'}:
+for p in targets do
+    ec_count := 0:
+    if EC[p] <> 0 then ec_count := length(EC[p]): fi:
+    exp_count := 0:
+    gos := SearchTag('GO',Entry(p)):
+    if gos <> '' then
+        for term in SearchDelim('; ',gos) do
+            fields := SearchDelim('@',term):
+            annotation := parse(fields[2]):
+            evidence := {seq(x[1],x=annotation)}:
+            if length(intersect(evidence,filter)) > 0 then
+                exp_count := exp_count+1:
+            fi:
+        od:
+    fi:
+    printf('QFOAUDIT\tANNOTATION\t%d\t%d\t%d\n',p,ec_count,exp_count):
+od:
+printf('QFOAUDIT\tCOMPLETE\t%d\n',length(targets)):
+exit(0);
