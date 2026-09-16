@@ -2063,3 +2063,40 @@ scontrol reports its live batch/process IDs. Both multipass and refined
 multipass partitions now exist; profile-stage completion and final partition
 equivalence remain pending. Do not treat those intermediate files as final
 successful inference.
+
+### Unconstrained satellite diagnostic launched (2026-09-16)
+
+Previous turn was progress: YGOB figure. Reread the objective, confirmed QfO
+21288 live, and implemented the outstanding unconstrained satellite control
+named in the prospective ablation protocol. The current factorial executor
+has a narrowly scoped --unconstrained mode, restricted to p1_c1_r1, with
+separate output/evidence paths and the same frozen candidate partition,
+core/replay launcher, environment, CPU32 and reconciliation settings.
+Detailed exploratory three-endpoint comparison specification is now recorded
+in the protocol; it follows factorial outcome inspection and is not presented
+as independent confirmation. No YGOB outcome selects a new configuration.
+
+First executor freeze3b885bf/job**21289** failed terminal1:0 after5s, before
+native inference, because removing the constraints path was insufficient:
+the frozen replay requires explicit --unconstrained-membership when a sibling
+merge trace exists. Preserved its status/logs and original executor worktree.
+Corrected the invocation, tested the exact flag, and moved outputs to
+`p1_c1_r1_unconstrained_v2`. Executor freeze**d52add7** at
+`benchmarks/work/publication_ob_unconstrained_executor_v2` was submitted as
+**21290**, CPU32/64GiB/24h shared node. Native/core settings are unchanged;
+this is a diagnostic, not a ninth core factorial cell.
+
+New evidence/output paths are under
+`benchmarks/results/publication_ob_factorial_v1/execution/p1_c1_r1_unconstrained_v2`
+and `cells/p1_c1_r1_unconstrained_v2`, respectively. Batch logs are
+`benchmarks/work/ob_unconstrained_21290.log`. Do not reuse the failed21289
+directories or modify the completed original cells. Native validation and
+official scoring must follow terminal success; no diagnostic score exists yet.
+Four added tests prove unchanged original cells, exact argument-only changes,
+and rejection of other factorial cells. All14 focused executor tests pass.
+
+Corrected job21290 confirmed RUNNING and has created native phylogeny/working
+directories. QfO21288 confirmed RUNNING at24:34. Full suite on the corrected
+invocation: **818 passed in31.30s**. The prior 818-test run also passed before
+the first launch, illustrating why unit/preflight success alone did not prove
+the frozen replay would accept an incomplete diagnostic CLI invocation.
