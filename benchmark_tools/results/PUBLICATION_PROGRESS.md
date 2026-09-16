@@ -185,3 +185,31 @@ novel-taxon transfer remains the intended claim, not family-disjointness.
 No families or endpoint definitions were changed in response to the screen.
 `20917` now waits for resources after its dependency succeeded; `20916`
 continues running. Full unit-suite verification: 469 passed in 18.73s.
+
+## Ablation Audit And Replay Controls
+
+`PUBLICATION_ABLATION_PROTOCOL_20260916.md` specifies the profile-expansion,
+candidate-expansion, and reconciliation factorial design, separate refinement
+and membership-filter diagnostics, and the still-required matched sequence
+search control. Existing explorations do not substitute for these controls.
+
+The replay audit found that `replay_phylogeny.py` did not pass production
+satellite_v2 membership constraints into reconciliation. This does not alter
+the full production path, which already passes them. The replay now accepts
+and validates the merge trace, records its checksum and selected policy, and
+rejects silent omission when a production trace exists next to the supplied
+candidate checkpoint. An explicit unconstrained option supports the separate
+filter ablation. Historical replays remain labeled as originally executed;
+do not retroactively claim they reproduce satellite_v2.
+
+All 8,440 historical OrthoBench production trace records validate against
+the preserved candidate partition. The replay and phylogeny-pipeline unit
+tests pass (25 tests), including argument propagation, malformed traces,
+candidate mismatch, and fail-before-output protection. Frozen YGOB source,
+inputs, settings, and queued job were not changed. Latest live check:
+`20916` RUNNING at 49m13s; `20917` PENDING for resources.
+
+Next ablation gate: freeze executable commands and input manifests and
+demonstrate cached replay equivalence to the production baseline before
+launching and interpreting factorial cells. Shared-reference-resource review,
+YGOB report wiring, and all previously listed publication work remain open.

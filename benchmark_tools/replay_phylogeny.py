@@ -61,6 +61,15 @@ def build_parser() -> argparse.ArgumentParser:
         default="midpoint",
     )
     parser.add_argument("--official-benchmark", type=Path)
+    membership = parser.add_mutually_exclusive_group()
+    membership.add_argument(
+        "--membership-constraints", type=Path,
+        help="Production satellite_v2 phylogeny_candidate_merges.json checkpoint",
+    )
+    membership.add_argument(
+        "--unconstrained-membership", action="store_true",
+        help="Explicit diagnostic ablation of satellite membership constraints",
+    )
     parser.add_argument(
         "--checkpoint-source",
         type=Path,
@@ -85,6 +94,37 @@ def _link_or_copy(source: str, destination: str) -> str:
     except OSError:
         shutil.copy2(source, destination)
     return destination
+
+
+def load_membership_constraints(path: Path, candidates: Path) -> list:
+    """Validate a production merge trace against the supplied candidate partition."""
+    gene_to_group = {}
+    for index, line in enumerate(candidates.read_text().splitlines()):
+        for gene in line.split():
+            if gene in gene_to_group:
+                raise ValueError(f"Duplicate candidate gene: {gene}")
+            gene_to_group[gene] = index
+    constraints = json.loads(path.read_text())
+    if not isinstance(constraints, list):
+        raise ValueError("Membership checkpoint must be a list")
+    for item in constraints:
+        if not isinstance(item, dict):
+            raise ValueError("Membership constraint must be an object")
+        groups = []
+        for key in ("source_genes", "target_genes"):
+            genes = item.get(key)
+            if (not isinstance(genes, list) or not genes
+                    or any(not isinstance(g, str) or not g for g in genes)
+                    or len(genes) != len(set(genes))):
+                raise ValueError("Membership requires nonempty unique gene lists")
+            if not set(genes) <= gene_to_group.keys():
+                raise ValueError("Membership genes missing from candidate checkpoint")
+            groups.append(set(genes))
+        if groups[0] & groups[1]:
+            raise ValueError("Membership source and target must be disjoint")
+        if len({gene_to_group[g] for g in groups[0] | groups[1]}) != 1:
+            raise ValueError("Membership source and target must share a candidate")
+    return constraints
 
 
 def seed_checkpoint_output(source: Path, output: Path) -> Path:
@@ -121,6 +161,21 @@ def main(argv=None) -> int:
         raise SystemExit("--species-tree is required in supplied mode")
     if args.species_tree_mode == "infer" and args.species_tree is not None:
         raise SystemExit("--species-tree cannot be used in infer mode")
+
+    membership_constraints = None
+    membership_record = None
+    sibling_trace = args.candidate_clusters.parent / "phylogeny_candidate_merges.json"
+    if (sibling_trace.exists() and args.membership_constraints is None
+            and not args.unconstrained_membership):
+        raise SystemExit(
+            "Candidate directory contains a satellite merge trace; pass "
+            "--membership-constraints or explicitly --unconstrained-membership"
+        )
+    if args.membership_constraints is not None:
+        membership_constraints = load_membership_constraints(
+            args.membership_constraints, args.candidate_clusters
+        )
+        membership_record = file_provenance(args.membership_constraints)
 
     output_directory = args.output_directory.resolve()
     cluster_path = (
@@ -164,6 +219,7 @@ def main(argv=None) -> int:
             root_duplication_rule=args.root_rule,
             pair_orthology_rule=args.pair_rule,
             species_tree_rooting=args.species_tree_rooting,
+            membership_constraints=membership_record,
         )
         with metrics.stage("phylogeny"):
             stage_result = run_phylogeny_stage(
@@ -172,6 +228,7 @@ def main(argv=None) -> int:
                 files,
                 config,
                 args.cpu,
+                membership_constraints=membership_constraints,
             )
         metrics.add_counts(**asdict(stage_result))
 
@@ -187,6 +244,7 @@ def main(argv=None) -> int:
             "candidate_clusters": file_provenance(args.candidate_clusters),
             "fasta_directory": str(fasta_directory),
             "files": files,
+            "membership_constraints": membership_record,
         },
         "parameters": {
             "species_tree_mode": args.species_tree_mode,
@@ -201,6 +259,11 @@ def main(argv=None) -> int:
             "pair_orthology_rule": args.pair_rule,
             "species_tree_rooting": args.species_tree_rooting,
             "cpu": args.cpu,
+            "satellite_membership_policy": (
+                "high_confidence_pair" if membership_constraints is not None
+                else "unconstrained"
+            ),
+            "explicit_unconstrained_ablation": args.unconstrained_membership,
             "checkpoint_source": (
                 str(checkpoint_source) if checkpoint_source is not None else None
             ),
