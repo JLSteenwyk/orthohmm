@@ -1,0 +1,52 @@
+{
+  "endpoint_inventory": {
+    "finite_points": 72,
+    "interval_endpoints": 66,
+    "nonestimable_endpoints": 12,
+    "planned_endpoints": 84
+  },
+  "matplotlib": "3.10.8",
+  "outputs": [
+    {
+      "bytes": 284837,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_ob_stratified_errors_20260916/stratified_errors.png",
+      "sha256": "18ae6fcbfe0374177681216f22b02d312a32422dfbfed6f576d994f689d1ffb4"
+    },
+    {
+      "bytes": 32616,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_ob_stratified_errors_20260916/stratified_errors.pdf",
+      "sha256": "c201e86d0193e5862f44e726e0ab2249ce832b1505095f19851a4efd59a8fb59"
+    },
+    {
+      "bytes": 181340,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_ob_stratified_errors_20260916/stratified_errors.svg",
+      "sha256": "1514f0389e90536b0a17ff0a0ef831642a3b826c49da8867d3e9a114504aeec0"
+    }
+  ],
+  "plotter": {
+    "bytes": 10514,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_ob_stratified_errors.py",
+    "sha256": "56393659495212e46f1dcb11e21f2da431339f35e3f4652e1bf11e080be18705"
+  },
+  "source_results": {
+    "bytes": 423573,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ob_stratified_error_results_20260916.json",
+    "sha256": "a8a072e9a3917fa7dabf25dba4affb8c3fd6b30c02286dda3efe882baceb3cac"
+  },
+  "stratum_order": [
+    "size:small_2_20",
+    "size:medium_21_50",
+    "size:large_gt_50",
+    "copy_number:single_copy",
+    "copy_number:multi_copy",
+    "identity:lower_identity",
+    "identity:higher_identity",
+    "identity:missing",
+    "relative_length:short_relative",
+    "relative_length:not_short_relative",
+    "relative_length:missing",
+    "composition:concentrated",
+    "composition:not_concentrated",
+    "composition:missing"
+  ]
+}

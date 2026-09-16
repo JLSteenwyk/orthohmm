@@ -2901,3 +2901,31 @@ can proceed. All broader publication requirements remain active.
 Push again reports21 dependency alerts (one critical, seven high, eleven moderate,
 two low). These remain untriaged release work; frozen scientific environments
 were not modified to address them during this diagnostic.
+
+### Complete stratified error figure (2026-09-16)
+
+Previous turn made progress: tested/pushed affinity executor and confirmed21311
+live. Reread the objective and polled21311 again: still RUNNING, no restart.
+While it runs, completed the OrthoBench error figure from the hash-pinned
+a8a072e9 result snapshot. All14 strata/84 endpoints remain represented:
+66 interval-bearing effects, six descriptive points,12 explicitly nonestimable
+endpoints. F1/precision/recall share a horizontal scale; family counts, missing
+rows, exploratory scope, overlapping strata and sparse adjusted tails remain
+visible. No outcome-based filtering or biological-mechanism claim was added.
+
+New `plot_ob_stratified_errors.py` validates feature-based membership, complete
+methods/metrics, uncertainty specification, full-reference sufficient-statistic
+point estimates, contrasts, interval nesting and small/empty-bin conventions.
+Eleven focused tests passed including altered-input rejection and complete
+rendered point/interval/missing-row inventory with text-bounds checks. Generated
+PNG/PDF/SVG plus provenance manifest under
+`figures_ob_stratified_errors_20260916`; PNG visually inspected with no clipped
+labels or overlapping content. Integrated figure/caption into manuscript.
+All70-family mechanistic tracing, independent domain/fragment/duplication
+annotations, QfO strata and the wider publication requirements remain open.
+
+Full unit suite **1066 passed in28.77s**. Independently rechecked result, plotter
+and all three generated figure checksums against the manifest. Job21311 remains
+RUNNING at5:36; first worker recorded actual affinity[8]. No terminal output or
+affinity-effect conclusion yet. Next: complete mechanistic stage tracing and
+admit the four-worker QfO result when terminal.

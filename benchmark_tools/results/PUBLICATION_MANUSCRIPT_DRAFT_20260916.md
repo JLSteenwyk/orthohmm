@@ -408,6 +408,18 @@ per-family counts without changing the reference or low-certainty conventions.
 Percentile intervals are approximate; the84-endpoint adjusted tails contain
 only about six of20,000 resamples each. [All effects and limitations](OB_STRATIFIED_ERROR_RESULTS_20260916.md).
 
+![All stratified OrthoBench F1, precision and recall effects](figures_ob_stratified_errors_20260916/stratified_errors.png)
+
+Figure: both OrthoHMM configurations minus full OrthoFinder3.1.5 across all14
+prespecified strata, with identical horizontal scales. Filled points show66
+interval-bearing endpoints: thick lines are nominal95% paired intervals and
+thin lines retain the84-endpoint Bonferroni adjustment. Six open points are
+descriptive estimates from a single-family stratum;12 endpoints in empty strata
+remain explicitly nonestimable. Family counts are shown for every row. Strata
+overlap, and differences between their effect estimates are not interaction
+tests. Scores and points are checked against full-reference sufficient statistics;
+the figure does not add new inference runs or independent biological evidence.
+
 ## Limitations And Unfinished Analyses
 
 ### Remaining Requirements
