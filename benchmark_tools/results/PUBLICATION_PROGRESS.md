@@ -1863,3 +1863,36 @@ mean equivalence cannot be inferred from checkpoint integrity alone. Next:
 pin the corrected adapter/runtime while keeping intended core settings,
 execute the label-blind cached QfO replay and compare its native partition.
 No graph inference or benchmark accuracy was evaluated this turn.
+
+### QfO isolated replay launcher freeze (2026-09-16)
+
+The immediately preceding conversational turn supplied a goal prompt, not an
+analysis milestone. This continuation reread the actual objective and confirmed
+YGOB job 21192 live. Created the isolated branch
+`publication/qfo-replay-native-v1`, commit
+`49ab110358c0b4c73806a640de9068494a311f63`, based on the corrected numeric replay
+adapter at 9effec3. Only in that dedicated checkout, restored the historical
+profile-worker exception behavior so all core sources match the frozen 7f3a9e4
+publication implementation. The main development branch retains its explicit
+profile-error reporting fix. Do not merge this launcher branch into development.
+
+Copied the three already-verified CPU native libraries into the isolated
+checkout without rebuilding them. `verify_qfo_replay_launcher.py` checks pinned
+Git revisions, tracked source cleanliness, complete source/native file sets,
+byte equality, the original native runtime manifest, and an actual profile
+construction probe in the launcher interpreter. The successful evidence is
+`qfo_replay_launcher_20260916.json`. It explicitly retains the limitation of
+historical exception-to-None behavior; the probe is not per-cluster validation.
+
+The isolated replay/input audits pass 30 targeted tests. Six new verifier tests
+exercise source changes, native changes, added files, missing libraries, and
+the exact-match path. An initial test command used the wrong tests directory;
+the corrected tests/unit command passed. No QfO inference or accuracy scoring
+has been launched by this milestone. Next: use this immutable launcher in a
+no-overwrite, pre/postflight-verified QfO batch, compare the final partition
+against the audited historical target, and retain non-equivalence if observed.
+
+Full development unit suite: **787 passed in 23.95s**. Isolated launcher branch
+was pushed successfully. GitHub still reports 21 dependency vulnerabilities
+(1 critical, 7 high, 11 moderate, 2 low); triage remains required and no frozen
+runtime dependencies were modified.
