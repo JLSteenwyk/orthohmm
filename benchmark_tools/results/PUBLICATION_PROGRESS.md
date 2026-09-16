@@ -1570,3 +1570,30 @@ valid-family-split case was added after collection; all **12 targeted converter
 tests pass**, including that case. Scoped whitespace checks pass. These
 structural counts do not establish an accuracy advantage or completion of the
 ablation experiment or publication goal.
+
+## Combined Native Group-Output Gates
+
+Previous turn completed strict root-HOG conversion. Re-read the objective and
+confirmed live YGOB 21192 and remaining factorial tasks 2/3. Added
+`validate_factorial_native.py`, joining a fresh full artifact-integrity audit
+with native replay command/source/input checks, exact scientific parameters,
+summary agreement, candidate/constraint/output hashes, tool paths/versions,
+inferred species-tree source/hash/taxon coverage and finite branch lengths,
+membership accounting, and complete root-HOG partition validation.
+
+Actual-data audits pass for p0_c0_r1 and p0_c1_r1. New records
+`orthobench_native_p0c0r1_20260916.json` and
+`orthobench_native_p0c1r1_20260916.json` retain the failed scheduler history
+inside the successful postflight recovery evidence. Their scope is native
+root-HOG group benchmark admission, not independent reconstruction of trees
+or validation against pairwise truth. No reference labels or scores were read.
+
+Expanded-cell native accounting matches all 8,500 supplied constraints:
+5,928 supported and 2,572 detached. The unexpanded cell has no constraint
+filtering. Both trees have complete native taxon coverage. Twelve targeted
+metadata tests and the full **724-test suite pass** (36.42s); scoped whitespace
+checks pass. Original executors, inference artifacts and scientific settings
+are unchanged. Next: finish remaining cells' same gates and assemble all eight
+prespecified OrthoBench cells, crosscheck scoring and run paired factorial
+statistics. QfO ablations, independent validation and the other full publication
+requirements remain outstanding; this is not publication completion.
