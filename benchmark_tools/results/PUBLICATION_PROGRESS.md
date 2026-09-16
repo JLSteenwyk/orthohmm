@@ -2579,3 +2579,9 @@ prepared array0-5%2,32 CPUs64GiB per task, four-hour limit. All18 planned
 accuracy endpoints remain prespecified; none evaluated yet.
 Eleven new index/identity/distance/command tests passed; full unit suite
 **936 passed in26.24s**. Frozen executor/submission details follow.
+
+Submitted tree-perturbation array**21299_0..5%2**, frozen executor**cfe0a09**
+at `benchmarks/work/publication_ob_tree_perturbations_v1`. Logs
+`benchmarks/work/ob_tree_perturb_21299_{0..5}.log`;32 CPUs64GiB/four hours per
+task. Each task performs its own supplied-control and source-integrity gates.
+No perturbation score claimed until terminal/native admission of the panel.
