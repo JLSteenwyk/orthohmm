@@ -141,3 +141,8 @@ independent curated validation, or the biological application. Completion
 requires retained outputs, verified truth, all planned method evaluations,
 failure accounting, paired summaries, and generated figures, not merely
 parameter files or successful simulator exits.
+# Runtime Correction Notice
+
+The [native runtime correction amendment](SIMULATION_RUNTIME_CORRECTION_PROTOCOL_20260916.md)
+governs corrected OrthoHMM reruns after discovery of the missing profile
+library. Original scientific design and statistical endpoints remain fixed.

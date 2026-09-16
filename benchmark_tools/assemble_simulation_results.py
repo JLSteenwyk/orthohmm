@@ -13,7 +13,7 @@ from Bio import SeqIO
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from benchmark_tools.benchmark_production import file_record
 from benchmark_tools.run_simulation_generation import verify_file
-from benchmark_tools.run_simulation_methods import read_frozen, verify_inputs
+from benchmark_tools.run_simulation_methods import read_frozen, verify_inputs, verify_native_runtime
 from benchmark_tools.simulation_conditions import score_pairs
 from benchmark_tools.simulation_method_outputs import load_predictions
 from benchmark_tools.summarize_simulation_panel import METHODS, PANELS, summarize
@@ -88,6 +88,18 @@ def admit_method(method, dataset, status, verified, manifest):
                 "exit_code": record.get("exit_code")}
     if record["status"] != "process_succeeded":
         raise ValueError("Unknown process record status")
+    if parent.startswith("orthohmm_"):
+        if "native_runtime" not in manifest:
+            return {"status": "failed", "failure_stage": "native_runtime_unverified",
+                    "reason": "Source-only runtime did not establish execution of the requested profile stage"}
+        runtime_hash = manifest["native_runtime"]["sha256"]
+        for key in ("native_runtime_before", "native_runtime_after"):
+            evidence = record.get(key, {})
+            if evidence.get("manifest_sha256") != runtime_hash or evidence.get("status") != "verified":
+                raise ValueError("Missing or inconsistent per-method native runtime evidence")
+        if record["native_runtime_before"].get("profile_probe", {}).get("status") != "passed":
+            raise ValueError("Missing per-method successful profile runtime probe")
+        verify_native_runtime(manifest)
     try:
         if parent == "orthofinder_full":
             evidence = validate_orthofinder(config, record, verified["inputs"])
@@ -102,7 +114,8 @@ def dataset_records(dataset, task, manifest, manifest_hash, generation, generati
     verified = verify_inputs(dataset, generation, panel, generation_hash)
     evidence = Path(dataset["methods"]["orthohmm_high_sensitivity"]["output"]).parent / "execution"
     status_path = evidence / "status.json"
-    common = {"condition": dataset["condition"], "seed": dataset["seed"], "scheduler": task}
+    common = {"condition": dataset["condition"], "seed": dataset["seed"], "scheduler": task,
+              "inference_method_manifest_sha256": manifest_hash}
     if not status_path.exists():
         if task["State"] == "COMPLETED":
             raise ValueError("Successful scheduler task has no execution evidence")
@@ -145,6 +158,26 @@ def verify_scoring_dependencies(manifest):
         verify_file(Path(__file__).with_name(name), records[name])
 
 
+def merge_runtime_rows(corrected, original):
+    if len(corrected) != len(METHODS) or len(original) != len(METHODS):
+        raise ValueError("Incomplete corrected or reused method rows")
+    old = {row["method"]: row for row in original}
+    if set(old) != set(METHODS) or {row["method"] for row in corrected} != set(METHODS):
+        raise ValueError("Duplicate or unknown method rows")
+    result = []
+    for row in corrected:
+        previous = old[row["method"]]
+        if (row["condition"], row["seed"]) != (previous["condition"], previous["seed"]):
+            raise ValueError("Corrected and reused results have different datasets or truth")
+        # Preflight failures have no scored truth hash; both generation/input
+        # manifests were independently verified before constructing these rows.
+        if row.get("truth_sha256") and previous.get("truth_sha256") and row["truth_sha256"] != previous["truth_sha256"]:
+            raise ValueError("Corrected and reused results have different datasets or truth")
+        selected = previous if row["method"].startswith("orthofinder_") else row
+        result.append({**selected, "reused_comparator": selected is previous})
+    return result
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--manifest", type=Path, required=True)
@@ -155,6 +188,9 @@ def main():
     parser.add_argument("--executor", type=Path, required=True)
     parser.add_argument("--executor-commit", required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--reused-array-job", type=int)
+    parser.add_argument("--reused-executor", type=Path)
+    parser.add_argument("--reused-executor-commit")
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError("Refusing to replace assembled scientific results")
@@ -175,12 +211,45 @@ def main():
                                          "--format=JobID,JobIDRaw,State,ExitCode,Elapsed"], text=True)
     tasks = terminal_tasks(accounting, args.array_job, 70)
     verify_scoring_dependencies(manifest)
+    reused = None
+    reused_args = (args.reused_array_job, args.reused_executor, args.reused_executor_commit)
+    if "reused_comparator_manifest" in manifest:
+        if any(value is None for value in reused_args):
+            raise ValueError("Reused comparator requires original scheduler and pinned executor")
+        item = manifest["reused_comparator_manifest"]
+        previous = read_frozen(Path(item["absolute_path"]), item["sha256"])
+        if previous["generation_manifest"] != manifest["generation_manifest"]:
+            raise ValueError("Reused generation provenance differs")
+        previous_executor = args.reused_executor.resolve()
+        actual = subprocess.check_output(["git", "-C", str(previous_executor), "rev-parse", "HEAD"], text=True).strip()
+        if actual != args.reused_executor_commit:
+            raise ValueError("Wrong reused inference executor revision")
+        subprocess.run(["git", "-C", str(previous_executor), "diff", "--quiet", "HEAD", "--", "benchmark_tools"], check=True)
+        previous_accounting = subprocess.check_output(["sacct", "-j", str(args.reused_array_job), "--parsable2",
+                                                       "--format=JobID,JobIDRaw,State,ExitCode,Elapsed"], text=True)
+        previous_tasks = terminal_tasks(previous_accounting, args.reused_array_job, 70)
+        verify_scoring_dependencies(previous)
+        if [d["label"] for d in previous["datasets"]] != [d["label"] for d in datasets]:
+            raise ValueError("Reused dataset ordering differs")
+        for new, old in zip(datasets, previous["datasets"]):
+            for method in ("orthofinder_full", "orthofinder_sequence_only"):
+                if new["methods"][method] != old["methods"][method]:
+                    raise ValueError("Reused comparator configuration differs")
+        reused = {"manifest": item, "executor_commit": actual, "accounting_raw": previous_accounting}
+    elif any(value is not None for value in reused_args):
+        raise ValueError("Reused execution arguments without a frozen reuse manifest")
     rows = []
-    for dataset, task in zip(datasets, tasks):
-        rows.extend(dataset_records(dataset, task, manifest, args.manifest_sha256, generation, generation_hash,
-                                    args.panel.resolve(), executor))
+    for index, (dataset, task) in enumerate(zip(datasets, tasks)):
+        current = dataset_records(dataset, task, manifest, args.manifest_sha256, generation, generation_hash,
+                                  args.panel.resolve(), executor)
+        if reused is not None:
+            old_rows = dataset_records(previous["datasets"][index], previous_tasks[index], previous, item["sha256"],
+                                       generation, generation_hash, args.panel.resolve(), previous_executor)
+            current = merge_runtime_rows(current, old_rows)
+        rows.extend(current)
     report = summarize(rows, args.panel_variant)
     report.update(method_manifest_sha256=args.manifest_sha256, generation_manifest_sha256=generation_hash,
+                  reused_comparator_execution=reused,
                   inference_executor_commit=commit, accounting_raw=accounting,
                   command=[sys.executable, *sys.argv], python=sys.version,
                   sources=[file_record(Path(__file__).with_name(n), Path(__file__).parent) for n in

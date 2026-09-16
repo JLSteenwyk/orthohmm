@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pytest
 
-from benchmark_tools.prepare_simulation_methods import commands, prepare
+from benchmark_tools.prepare_simulation_methods import commands, prepare, reuse_comparators
 
 
 def test_frozen_commands_and_diagnostic_parent():
@@ -42,3 +42,40 @@ def test_explicit_generation_hash_still_requires_full_panel(tmp_path):
     with pytest.raises(ValueError, match="complete frozen"):
         prepare(path, tmp_path, tmp_path / "python", tmp_path / "of", tmp_path / "out", tmp_path / "manifest.json",
                 hashlib.sha256(path.read_bytes()).hexdigest())
+
+
+def reuse_fixture():
+    data = {"input": "/data/input", "truth": "/data/truth", "label": "baseline", "seed": 1}
+    def manifest(output, root):
+        return {"generation_manifest": {"sha256": "same"}, "core_commit": "frozen",
+                "core_root": root, "tool_entrypoints": {"orthohmm_python": {"absolute_path": "/python"},
+                                                          "orthofinder": {"absolute_path": "/of"}},
+                "orthofinder_distribution": [], "environments": {},
+                "datasets": [{**data, "methods": commands(data, Path(output), Path(root), Path("/python"), Path("/of"))}]}
+    return manifest("/new", "/native"), manifest("/old", "/source")
+
+
+def test_reuse_retains_old_comparator_paths_and_new_hmm_paths():
+    report, previous = reuse_fixture()
+    reuse_comparators(report, previous)
+    assert report["execution_order"] == ["orthohmm_high_sensitivity", "orthohmm_satellite_v2"]
+    methods = report["datasets"][0]["methods"]
+    assert methods["orthofinder_full"]["output"] == "/old/orthofinder_full"
+    assert methods["orthohmm_high_sensitivity"]["output"] == "/new/orthohmm_high_sensitivity"
+
+
+@pytest.mark.parametrize("change", ["generation", "seed", "sensitivity", "comparator", "duplicate"])
+def test_reuse_rejects_scientific_drift(change):
+    report, previous = reuse_fixture()
+    if change == "generation":
+        previous["generation_manifest"]["sha256"] = "different"
+    elif change == "seed":
+        previous["datasets"][0]["seed"] = 2
+    elif change == "sensitivity":
+        previous["datasets"][0]["methods"]["orthohmm_high_sensitivity"]["argv"][-1] = "fast"
+    elif change == "comparator":
+        previous["datasets"][0]["methods"]["orthofinder_full"]["argv"][-1] = "blast"
+    else:
+        previous["datasets"].append(previous["datasets"][0])
+    with pytest.raises(ValueError):
+        reuse_comparators(report, previous)

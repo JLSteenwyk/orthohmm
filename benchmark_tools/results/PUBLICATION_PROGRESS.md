@@ -1152,3 +1152,40 @@ dependency. Recovered submitted batch script is
 same historical audit and fresh `publication_ob_replay_check_v2` output.
 No claim of equivalence until terminal verification; no factorial preparation
 or corrected validation submitted behind an unverified outcome.
+
+## Corrected Simulation Execution And Comparator Reuse
+
+Previous goal turn made progress by building/pinning the native runtime and
+launching replay 21138. Re-read the full objective and confirmed that job still
+RUNNING before continuing. Original variable-length array 21010 is now fully
+terminal: 67 tasks COMPLETED, three FAILED (60, 62, 69). This is scheduler
+evidence only, not native admission or accuracy; no variable-length scores
+have been inspected. Preserve all original outputs and executors.
+
+Extended simulation preparation to require native build provenance and an
+exact-checkout profile smoke. Optional comparator reuse verifies the original
+manifest hash, identical generation/seed metadata, environments and scientific
+arguments, then schedules only the two OrthoHMM modes. Reused comparator paths
+remain unchanged. The executor checks only scheduled output paths for absence,
+never launches reused tools, and records runtime verification before and after
+each OrthoHMM process. Source-only OrthoHMM execution is now refused.
+
+Extended the results assembler to reject source-only OrthoHMM admission and
+require per-method native evidence for corrected runs. Mixed-provenance
+assembly verifies both terminal arrays and their own pinned executors, reads
+each run's original input/output/native evidence, and selects corrected
+OrthoHMM plus original OrthoFinder rows. Scheduler IDs and method-manifest
+hashes remain distinct; comparator failures are retained, not upgraded by reuse.
+
+Prospective amendment `SIMULATION_RUNTIME_CORRECTION_PROTOCOL_20260916.md`
+preserves both panels' scientific settings and statistical endpoints. The
+corrected CPU build also enables compiled search kernels; that runtime change
+is disclosed. No corrected simulation inference has been submitted. Replay
+equivalence and newly pinned execution manifests remain prerequisites.
+
+Targeted preparation/execution/assembly tests: 24 passed before mixed-row
+support; final full suite after mixed-row support: **656 passed in 24.78s**.
+Tests cover scientific-argument drift, changed generation/seed/comparator
+settings, duplicate datasets, refusal to run without native evidence,
+preservation of reused files, source-only admission rejection, mixed-row
+provenance and mismatched truth rejection. No new accuracy was calculated.

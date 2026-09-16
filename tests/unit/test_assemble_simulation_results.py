@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pytest
 
-from benchmark_tools.assemble_simulation_results import admit_method, dataset_records, input_universe, terminal_tasks, verify_execution_status
+from benchmark_tools.assemble_simulation_results import admit_method, dataset_records, input_universe, terminal_tasks, verify_execution_status, merge_runtime_rows
 from benchmark_tools.benchmark_production import file_record
 from benchmark_tools.summarize_simulation_panel import METHODS
 from benchmark_tools.validate_simulation_outputs import NativeOutputFailure
@@ -45,6 +45,32 @@ def test_execution_and_interruption_retain_distinct_reasons():
     status["methods"]["orthofinder_full"] = {"status": "failed", "argv": ["tool"], "exit_code": 7}
     row = admit_method("orthofinder_full", dataset, status, {}, {})
     assert row["exit_code"] == 7 and row["failure_stage"] == "execution"
+
+
+def test_source_only_hmm_is_not_admitted():
+    name = "orthohmm_high_sensitivity"
+    dataset = {"methods": {name: {"argv": ["tool"]}}}
+    status = {"methods": {name: {"status": "process_succeeded", "argv": ["tool"], "exit_code": 0}}}
+    row = admit_method(name, dataset, status, {}, {})
+    assert row["failure_stage"] == "native_runtime_unverified"
+    assert "score" not in row
+    with pytest.raises(ValueError, match="per-method native runtime"):
+        admit_method(name, dataset, status, {}, {"native_runtime": {"sha256": "expected"}})
+
+
+def test_merge_preserves_original_comparator_failure_and_provenance():
+    rows = [{"method": m, "condition": "baseline", "seed": 1, "truth_sha256": "truth",
+             "status": "complete", "scheduler": "new"} for m in METHODS]
+    old = [{**r, "status": "failed", "scheduler": "old"} for r in rows]
+    result = merge_runtime_rows(rows, old)
+    for row in result:
+        reused = row["method"].startswith("orthofinder_")
+        assert row["reused_comparator"] == reused
+        assert row["scheduler"] == ("old" if reused else "new")
+        assert row["status"] == ("failed" if reused else "complete")
+    old[0]["truth_sha256"] = "different"
+    with pytest.raises(ValueError, match="different datasets or truth"):
+        merge_runtime_rows(rows, old)
 
 
 def test_input_universe_checks_duplicates_and_truth_counts(tmp_path):

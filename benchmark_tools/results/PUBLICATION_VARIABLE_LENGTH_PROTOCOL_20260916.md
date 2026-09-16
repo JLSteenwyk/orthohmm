@@ -79,3 +79,8 @@ curated validation, ablations, other robustness experiments and the remaining
 publication requirements are still necessary. The protocol, mapping algorithm,
 implementation, manifests and method commands must be committed and pinned
 before scientific generation/inference, with any later deviation disclosed.
+# Runtime Correction Notice
+
+The [native runtime correction amendment](SIMULATION_RUNTIME_CORRECTION_PROTOCOL_20260916.md)
+governs corrected OrthoHMM reruns after discovery of the missing profile
+library. Original scientific design and statistical endpoints remain fixed.

@@ -7,7 +7,7 @@ import sys
 import pytest
 
 from benchmark_tools.benchmark_production import file_record
-from benchmark_tools.run_simulation_methods import copy_inputs, execute, read_frozen, verify_inputs
+from benchmark_tools.run_simulation_methods import copy_inputs, execute, read_frozen, verify_inputs, verify_native_runtime
 
 
 def test_frozen_hash_gate(tmp_path):
@@ -79,3 +79,38 @@ def test_missing_generated_species_file_rejected(tmp_path, monkeypatch):
     (inputs / "c.fasta").unlink()
     with pytest.raises(ValueError, match="file set changed"):
         verify_inputs(dataset, generation, tmp_path)
+
+
+def test_hmm_without_runtime_never_executes(tmp_path):
+    name = "orthohmm_high_sensitivity"
+    marker = tmp_path / "executed"
+    dataset = {"label": "fixture", "methods": {name: {"output": str(marker),
+               "argv": [sys.executable, "-c", "raise AssertionError('must not execute')"]}}}
+    result = execute(dataset, [name], {}, tmp_path / "evidence", {"status": "ready", "inputs": []}, {})
+    assert result["failed_methods"] == [name]
+    assert "Missing native runtime" in result["methods"][name]["error"]
+    assert "exit_code" not in result["methods"][name]
+    assert not marker.exists()
+
+
+def test_existing_reused_output_is_not_executed_or_overwritten(tmp_path):
+    existing = tmp_path / "old"
+    existing.mkdir()
+    sentinel = existing / "sentinel"
+    sentinel.write_text("preserved")
+    output = tmp_path / "new"
+    dataset = {"label": "fixture", "methods": {
+        "new": {"output": str(output), "argv": [sys.executable, "-c",
+            "from pathlib import Path; import sys; p=Path(sys.argv[1]); p.mkdir(); (p/'out').write_text('new')", str(output)]},
+        "reused": {"output": str(existing), "argv": ["never-execute"]}}}
+    result = execute(dataset, ["new"], os.environ.copy(), tmp_path / "evidence", {"status": "ready", "inputs": []}, {})
+    assert set(result["methods"]) == {"new"}
+    assert sentinel.read_text() == "preserved"
+
+
+def test_runtime_manifest_hash_checked_before_probe(tmp_path):
+    path = tmp_path / "runtime.json"
+    path.write_text("{}")
+    manifest = {"native_runtime": {"absolute_path": str(path), "bytes": 2, "sha256": "0" * 64}}
+    with pytest.raises(ValueError, match="changed"):
+        verify_native_runtime(manifest, smoke=True)

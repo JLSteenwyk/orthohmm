@@ -14,6 +14,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from benchmark_tools.benchmark_production import file_record
 from benchmark_tools.run_simulation_generation import child_path, verify_file
 from benchmark_tools.verify_simulation_histories import compare_histories, verify_generation
+from benchmark_tools.build_publication_runtime import verify_runtime
+from benchmark_tools.validate_profile_runtime import require_profile_runtime
 
 METHOD_HASH = "4f0717fa8b0c34d5a6982a3193772d64bc39a3d75b8fe23195d9ce1b21eee186"
 GENERATION_HASH = "ee31ea38d3b5c047abf80f04636f06838959f941d6704649a216bb93958343b2"
@@ -42,6 +44,7 @@ def execution_environment(manifest):
 
 
 def verify_environment(manifest):
+    verify_native_runtime(manifest, smoke=True)
     for record in (manifest["core_sources"] + manifest["adapter_sources"] +
                    manifest["orthofinder_distribution"] + list(manifest["tool_entrypoints"].values())):
         verify_file(Path(record["absolute_path"]), record)
@@ -109,9 +112,25 @@ def copy_inputs(source, destination, expected):
         verify_file(target, record)
 
 
-def execute(dataset, order, env, evidence, verified, provenance):
+def verify_native_runtime(manifest, smoke=False):
+    item = manifest.get("native_runtime")
+    if item is None:
+        raise ValueError("Missing native runtime provenance; source-only execution is not authorized")
+    path = Path(item["absolute_path"])
+    verify_file(path, item)
+    verify_runtime(path, manifest["core_root"])
+    result = {"manifest_sha256": item["sha256"], "status": "verified"}
+    if smoke:
+        result["profile_probe"] = require_profile_runtime(manifest["core_root"],
+                                    manifest["tool_entrypoints"]["orthohmm_python"]["absolute_path"])
+    return result
+
+
+def execute(dataset, order, env, evidence, verified, provenance, runtime_manifest=None):
+    if len(set(order)) != len(order) or not set(order).issubset(dataset["methods"]):
+        raise ValueError("Invalid method execution order")
     if evidence.exists() or any(Path(m["output"]).exists() or ("metrics" in m and Path(m["metrics"]).exists())
-                                for m in dataset["methods"].values()):
+                                for name, m in dataset["methods"].items() if name in order):
         raise FileExistsError("Existing inference artifacts; no automatic restart")
     evidence.mkdir(parents=True)
     status = {"schema_version": 1, "dataset": dataset["label"], "status": "running",
@@ -135,6 +154,8 @@ def execute(dataset, order, env, evidence, verified, provenance):
         status["methods"][name] = record
         save()
         try:
+            if name.startswith("orthohmm_"):
+                record["native_runtime_before"] = verify_native_runtime(runtime_manifest or {}, smoke=True)
             for item in verified["inputs"]:
                 verify_file(Path(item["absolute_path"]), item)
             if "copy_inputs_to" in method:
@@ -145,6 +166,8 @@ def execute(dataset, order, env, evidence, verified, provenance):
             with (evidence / f"{name}.log").open("w") as log:
                 result = subprocess.run(command, env=env, stdout=log, stderr=subprocess.STDOUT, check=False)
             record.update(exit_code=result.returncode, status="process_succeeded" if result.returncode == 0 else "failed")
+            if name.startswith("orthohmm_"):
+                record["native_runtime_after"] = verify_native_runtime(runtime_manifest or {})
             if result.returncode == 0:
                 files = [p for p in sorted(Path(method["output"]).rglob("*")) if p.is_file()]
                 if "metrics" in method:
@@ -191,7 +214,7 @@ def main():
                               ("run_simulation_methods.py", "verify_simulation_histories.py", "run_simulation_generation.py", "benchmark_production.py")],
                   "slurm_job_id": os.environ.get("SLURM_JOB_ID"), "slurm_array_task_id": os.environ.get("SLURM_ARRAY_TASK_ID"),
                   "timing_limitation": "Shared-machine inference timings are not controlled scaling measurements"}
-    result = execute(dataset, manifest["execution_order"], env, evidence.resolve(), verified, provenance)
+    result = execute(dataset, manifest["execution_order"], env, evidence.resolve(), verified, provenance, manifest)
     if result.get("failed_methods"):
         raise SystemExit("One or more methods failed; other method outcomes preserved")
 
