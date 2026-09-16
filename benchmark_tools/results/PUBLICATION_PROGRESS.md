@@ -861,3 +861,43 @@ Verification: **607 unit tests passed in 22.81s**; fifteen focused native
 validator/adapter tests passed. The installed-tool numerical diagnostic
 completed successfully and preserved its warnings/counts without modifying
 native outputs or the competitor installation.
+
+### Prospective variable-length protocol and successful smoke (2026-09-16)
+
+Protocol `PUBLICATION_VARIABLE_LENGTH_PROTOCOL_20260916.md` was committed
+and pushed as `cec7da4` before the smoke test. It specifies new scientific
+seeds 20261101-20261110 and a fixed SHA-256 mapping of root-family IDs to
+100-500 amino-acid lengths; it is not an empirically fitted proteome model.
+All other scientific conditions and frozen method settings remain unchanged.
+Keep the original constant-length panel as a distinct stress test.
+
+Native Zombi Sf mode switches to a codon model, so it cannot isolate length
+variation while retaining WAG. Added an optional length-aware wrapper around
+ordinary S mode: verify the mapping against the frozen rule and exact native
+family-tree set, set sequence size for one family call, and restore it in a
+finally block. Native evolution and name correction remain unchanged. Default
+fixed-length execution is unchanged, and already-running jobs use their
+previous pinned source. Added eight tests for stable length assignment,
+invalid inputs and wrapper behavior; seventeen driver/builder tests pass.
+
+Ran `smoke_zombi_variable_lengths.py` with the prespecified non-panel seed
+20260918, eight species and 100 root families, in
+`benchmarks/work/zombi_variable_length_smoke_v1`. Both repeats completed all
+native stages with byte-identical products; native event/XML/tree/FASTA truth
+validation succeeded for 816 extant genes. Exported proteins have 88 distinct
+lengths, minimum 102 and maximum 495, each exactly matching its assigned
+family length. OrthoFinder 3.1.5 completed using the unchanged four-thread
+command; native version/command/completion checks and finite-graph checks
+passed. No smoke accuracy was computed. The complete hash/command evidence
+is `zombi_variable_length_smoke_20260916.json`.
+
+Next: materialize and pin the additional panel's length mappings, generation
+and method manifests; extend existing verification/aggregation interfaces
+without changing original-panel semantics; run the new panel; finish native
+failure accounting and scoring for the original stress panel. Independent
+validation, ablations, other robustness tests and remaining publication work
+are still required.
+
+Full unit-suite verification after the optional length adapter: **615 passed
+in 24.29s**. This is implementation and simulator smoke evidence, not a
+scientific-panel accuracy result or a publication-readiness claim.

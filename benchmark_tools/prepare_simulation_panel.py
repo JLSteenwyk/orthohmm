@@ -18,8 +18,8 @@ CONDITIONS = {"baseline": (2, 1, 0.2), "divergent": (2, 1, 0.8),
 DEFAULTS = {"T": "SpeciesTreeParameters.tsv", "G": "GenomeParameters.tsv", "S": "SequenceParameters.tsv"}
 
 
-def parameter_sets(defaults, seed, condition):
-    if seed not in SEEDS or condition not in CONDITIONS:
+def parameter_sets(defaults, seed, condition, allowed_seeds=SEEDS):
+    if seed not in allowed_seeds or condition not in CONDITIONS:
         raise ValueError("Seed or condition outside frozen panel")
     duplication, loss, scaling = CONDITIONS[condition]
     overrides = {
