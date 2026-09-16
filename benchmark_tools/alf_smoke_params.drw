@@ -1,0 +1,29 @@
+# Infrastructure test only; not a frozen scientific simulation panel.
+ReadProgram('/alfroot/simulator/alf-params.drw'):
+SetRand(20260916):
+protStart := 10:
+gammaLengthDist := [2.4, 50]:
+minGeneLength := 30:
+substModels := [SubstitutionModel('WAG')]:
+indelModels := [IndelModel(0)]:
+rateVarModels := [RateVarModel()]:
+seqTypes := [[1,1,1,'protein']]:
+seqTypeAssignments := [1]:
+modelSwitchS := [[1]]:
+modelSwitchD := [[1]]:
+treeType := 'Custom':
+treeFile := Tree(Tree(Leaf(S1,10),10,Leaf(S2,10)),0,Tree(Leaf(S3,10),10,Leaf(S4,10))):
+scaleTree := false:
+unitIsPam := true:
+geneDuplRate := 0:
+geneLossRate := 0:
+lgtRate := 0:
+lgtGRate := 0:
+invers := 0:
+transloc := 0:
+invtrans := 0:
+fissionRate := 0:
+fusionRate := 0:
+mname := 'alf_smoke':
+wdir := getenv('ALF_SMOKE_OUTPUT'):
+simOutput := {'GeneTrees', 'DarwinTree', 'Newick', 'MSA', 'VP', 'DarwinDB', 'Fasta'}:

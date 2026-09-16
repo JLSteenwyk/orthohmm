@@ -465,3 +465,23 @@ linked audited result reports; this draft is not a replacement scoring
 pipeline. No inference or scoring code changed at this milestone.
 Jobs `20917` and `20919` remain queued as resource/dependency waits; unrelated
 workloads and the frozen validation configuration were not modified.
+
+## Evolutionary Simulator Compatibility Test
+
+Inspected the primary ALF source/manual and publication, pinned the author
+repository at `b674ab10018c3c0fcc0806434dddf7b36136e2c1`, and ran a small
+protein-evolution smoke-test driver against the existing Darwin container.
+The unmodified source/engine combination failed before parameter loading
+with `Bad VectorABQMode`, exit 1. No simulation or accuracy result exists.
+Driver, test parameters, native failure log, source/container hashes, and
+reproduction instructions are retained in `SIMULATOR_PREFLIGHT_20260916.md`.
+This resolves an infrastructure feasibility question but does not fulfill
+the simulation requirement. A compatible official ALF engine or another
+published simulator must be evaluated next; no algorithm patches were made.
+
+An overly broad container-environment diagnostic exposed credentials in
+tool output. No environment dump or credential values were copied into
+repository files, reports, or commits. The user was notified to rotate the
+affected credentials. Subsequent diagnostics used targeted queries and the
+simulation invocation used `--cleanenv`. This security issue must not be
+confused with the unrelated pre-existing dependency alerts.

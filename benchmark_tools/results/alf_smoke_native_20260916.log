@@ -1,0 +1,12 @@
+Darwin: Sequence Searching Facility
+Version 4.0, 2019-02-06
+  (c) E.T.H. Zurich
+> paramfile := getenv('ALF_SMOKE_PARAMS'):
+> ReadProgram('/alfroot/simulator/evolstart.drw'):
+
+IO procedures for Synthetic Evolution sucessfully loaded
+Procedures for Genome Rearrangement sucessfully loaded
+Procedures for Synthetic Evolution sucessfully loaded
+
+The program terminated incorrectly: Bad VectorABQMode
+    0.12 secs of cpu used
