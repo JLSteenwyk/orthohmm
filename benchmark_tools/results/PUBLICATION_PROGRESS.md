@@ -2395,3 +2395,10 @@ actual old/frozen builder behavior on ties/self hits); full unit suite
 **879 passed in26.13s**. One-CPU64GiB four-hour diagnostic batch prepared for
 a committed frozen executor. Latest conversion check RUNNING21:40; no control
 scores or hit-overlap results yet. Submission details follow separately.
+
+Submitted initial-graph diagnostic**21295**, executor**1ff3154** at
+`benchmarks/work/publication_qfo_graph_diagnostic_v1`, one CPU64GiB/four hours.
+Output `benchmarks/results/qfo_initial_graph_diagnostic_v1`; log
+`benchmarks/work/qfo_graph_diag_21295.log`. This is a targeted new experiment,
+not a restart or replacement of failed-equivalence21288. Original outputs
+remain unchanged. No graph-equivalence or repeatability outcome claimed yet.
