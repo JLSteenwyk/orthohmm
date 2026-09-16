@@ -2347,3 +2347,11 @@ Twelve focused tests passed; full unit suite **876 passed in27.12s**.
 Prepared one-CPU64GiB dependent batch for an isolated committed executor;
 submission details will follow. Conversion still actively writes its SQLite
 database; did not inspect that database or restart any active process.
+
+Submitted coverage job**21294**, afterok21292, from detached frozen executor
+`benchmarks/work/publication_ob_hit_coverage_v1` at**4880d5d**. One CPU,
+64GiB, four-hour limit; output `benchmarks/results/ob_search_hit_coverage_v1.json`,
+log `benchmarks/work/ob_hit_coverage_21294.log`. Batch recorded in
+`ob_search_coverage_batch_20260916.sh`. This diagnostic is label-free and may
+run alongside graph inference; its timing is not an efficiency comparison.
+No completed coverage result claimed until terminal and artifact validation.
