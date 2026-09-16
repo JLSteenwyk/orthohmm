@@ -2355,3 +2355,17 @@ log `benchmarks/work/ob_hit_coverage_21294.log`. Batch recorded in
 `ob_search_coverage_batch_20260916.sh`. This diagnostic is label-free and may
 run alongside graph inference; its timing is not an efficiency comparison.
 No completed coverage result claimed until terminal and artifact validation.
+
+### QfO replay completed but is not equivalent (2026-09-16)
+
+Final polling showed21288 FAILED1:0 after1:03:45. This is the wrapper's
+deliberate equivalence failure, not a native inference crash: native exit0,
+postflight runtime/input/package checks passed, accuracy remains unevaluated.
+Observed390,657 groups versus historical390,817;9,414 observed-only and9,574
+expected-only groups. Final partition hash3b3ee97a1caef1775e7a5f89ff385a72316298428cbf5ca04ae493ebaf5b4fcc
+differs from historical63ade2f317c6343bd0d1e98af0fe0e299dd61530fb6094dec62d97dab30a4df3.
+Full evidence preserved in original output directory; committed copy
+`qfo_native_replay_nonequivalence_20260916.json`. Do not reuse historical
+QfO accuracy as a current frozen-core baseline or force equivalence. Next
+investigate stage partitions, algorithm/source differences and determinism;
+preserve both outputs and do not blindly restart the completed replay.
