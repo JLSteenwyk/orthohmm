@@ -1328,3 +1328,40 @@ still active. No ablation, YGOB or corrected simulation accuracy has been
 inspected. Next: validate terminal outputs and frozen statistics, finish
 matched sequence/unconstrained controls and QfO factorial, then continue the
 remaining error, robustness, biological-application and publication work.
+
+## Prespecified OrthoBench Factorial Statistics
+
+Previous goal turn made progress by validating and launching reconciliation
+array 21248. Re-read the full publication objective and confirmed active
+simulation arrays, YGOB and factorial jobs before working on statistics.
+No ablation, YGOB or corrected simulation accuracy has been inspected.
+
+Added `bootstrap_orthobench_factorial.py`, consuming already-validated per-RefOG
+sufficient statistics rather than reading inference outputs. It reuses the
+audited weighted OrthoBench statistic and recomputes it for each shared RefOG
+bootstrap draw. Defaults retain the prespecified 20,000 PCG64 multinomial
+draws and seed 20260918. All eight cells are explicit; running/unknown cells
+are rejected. Failed cells have reasons and no scores; their three affected
+conditional effects are unavailable, with no zero imputation or reduction of
+the 36-endpoint Bonferroni adjustment.
+
+Implements all 12 conditional factor effects with nominal and adjusted F1/P/R
+intervals and descriptive family wins/ties/losses. Adds the six descriptive
+two-factor differences of differences, without interaction confidence intervals
+or extra inferential claims, consistent with the original protocol. Renderer
+includes all cells, all contrasts, failures and scope limitations. Profile-off
+still retains HMM-based initial search; reconciliation changes output level.
+Native completion/conversion/reference/provenance validation remains separate.
+
+Initial ten tests pass, including independently recomputed scalar bootstrap
+quantiles, weighted-vs-macro F1 distinction, zero effects for identical cells,
+order invariance, unavailable contrasts without zero scores, and invalid family
+or cell-state rejection. Added an explicit interaction-sign check and reporting
+of zero generated draws when all cells fail. Full suite verification pending.
+
+Full suite **675 passed in 29.54s**; final focused factorial tests **11 passed**
+after the all-failed draw-count clarification. This statistical implementation
+has not been applied to the running factorial. Corrected fixed-length array
+21143 is no longer in squeue; next action is terminal-accounting-gated assembly
+using pinned b66225d and original comparator execution evidence, not assuming
+that absence from the queue alone proves scientific completion.
