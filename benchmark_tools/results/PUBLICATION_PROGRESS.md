@@ -1597,3 +1597,34 @@ are unchanged. Next: finish remaining cells' same gates and assemble all eight
 prespecified OrthoBench cells, crosscheck scoring and run paired factorial
 statistics. QfO ablations, independent validation and the other full publication
 requirements remain outstanding; this is not publication completion.
+
+## Eight-Cell Scoring Assembly Prepared
+
+Previous turn validated native provenance for two finished cells. Read the
+objective and rechecked YGOB 21192 and factorial tasks 2/3, all still live.
+Implemented `assemble_orthobench_factorial.py`: it requires all four native
+tasks terminal before reading outcomes, then freshly validates all four R=1
+cells and the frozen R=0 candidate partitions before any scoring. A genuine
+execution/integrity failure halts for diagnosis rather than silently dropping
+a cell or imputing zero. No automatic inference restart is performed.
+
+The assembly pins the previous reference snapshot SHA256 and official scorer
+source, checks the complete 70-RefOG and 11-exclusion file sets, requires all
+cells to partition the full FASTA universe, converts native groups explicitly,
+and crosschecks weighted F1/P/R and exact-family counts against the native
+OrthoBench CLI. The official CLI prints one decimal percentage place; its
+rounding tolerance is 0.05000001 percentage points, not a precision claim.
+It then uses the existing prespecified 20,000 paired-RefOG draws and 36-endpoint
+Bonferroni factorial analysis. Inputs are rehashed after scoring and no result
+directory may be overwritten. Genuine terminal inference failures currently
+require a separately reviewed explicit failure path before analysis can proceed.
+
+Fifteen new tests cover missing/duplicate/live task gates, rejection before
+outcome reads, and official scoring agreement/rounding. Full **739-test suite
+passes** (26.28s), with scoped whitespace checks passing. The actual assembly
+command correctly exits at `Factorial still running; no partial scoring` and
+creates no result directory. Independently checked the frozen reference and
+official-source hashes without scoring predictions: 70 references and 11
+exclusion files match. End-to-end scoring integration remains untested until
+the final two cells are terminal and validated. No ablation accuracy has been
+inspected and no completion claim is made.
