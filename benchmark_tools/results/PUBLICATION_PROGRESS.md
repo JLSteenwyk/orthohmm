@@ -2701,3 +2701,9 @@ suite and frozen submission details follow. Planned one CPU64GiB/one hour;
 no end-to-end performance claim from this shared-node diagnostic.
 
 Full unit suite **988 passed in25.33s** before freezing the repeat executor.
+
+Frozen executor**a69d505** at
+`benchmarks/work/publication_qfo_saved_graph_repeats_v1`; submitted**21307**.
+Output `benchmarks/results/qfo_saved_graph_repeats_v1`, log
+`benchmarks/work/qfo_saved_graph_repeats_21307.log`. No repeat outcome claimed
+before terminal execution and source/partition validation.
