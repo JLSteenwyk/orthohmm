@@ -9,7 +9,7 @@ publication readiness. Existing benchmark outcomes are development-exposed.
 | Requirement | Status | Evidence / next action |
 | --- | --- | --- |
 | Baseline and scoring audit | In progress | Historical audit: SCORING_AUDIT_20260910.md; refresh OrthoMCL and correct output semantics before freezing tables. |
-| Independent generalization | Not complete | Inventory all development exposure; choose a genuinely independent reference and freeze protocol before scoring. |
+| Independent generalization | In progress | YGOB v7 acquired and audited before scoring; taxon/family overlap, reference semantics, and committed evaluation freeze remain required. |
 | HMM and phylogeny ablations | Not complete | Existing experiments are exploratory; design matched controls and preserve negative results. |
 | Uncertainty and error analysis | In progress | Primary OrthoBench comparisons now have paired RefOG bootstrap estimates; other comparisons, QfO uncertainty, error strata, and tracing remain. |
 | Robustness and efficiency | Not complete | Validate simulator, multi-seed conditions, tree perturbations, and matched resource measurements. |
@@ -109,3 +109,17 @@ generates it after removing cut edges (line 1852). The
 [versioned 6.3.6 manual](https://gitlab.com/paulklemm_PHD/proteinortho/-/raw/v6.3.6/README.md)
 agrees under "Clustering Output (step 3)". The retained native-pair choice
 therefore does include clustering, unlike the OrthoMCL matrix diagnostic.
+
+## Completed Milestone: Candidate Generalization Data Audit
+
+`INDEPENDENT_VALIDATION_CANDIDATES_20260916.md` documents the current exposure
+inventory and candidate-selection rationale. `audit_ygob_overlap.py` audits
+the downloaded YGOB v7 snapshot against QfO, OrthoBench, Three Kingdoms, and
+test samples. Results and checksums are in `ygob_overlap_20260916.json`.
+The audit found 107,277 ON proteins, substantial S. cerevisiae sequence
+overlap, and two genes with ambiguous pillar membership. No candidate scores
+were calculated. Exact-match absence is not a family-disjointness test.
+Dataset acquisition succeeded via the official HTTP endpoint; raw sequences
+remain outside Git. Next: settle exclusions and output-level semantics,
+complete taxonomic/homology-overlap screening, and commit the evaluation
+freeze before launching independent inference.
