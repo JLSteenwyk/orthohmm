@@ -1,0 +1,64 @@
+{
+  "exit_code": 0,
+  "finished_at": "2026-09-16T18:02:58.374992+00:00",
+  "preflight": {
+    "bytes": 44270,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_replay_check_v2/preflight.json",
+    "sha256": "5790339a500e985f07409a7f922fcb9e148dabe4978ba269cb15725bd188e3f2"
+  },
+  "stages": {
+    "multipass": {
+      "byte_equal": true,
+      "expected_groups": 51181,
+      "expected_only_groups": 0,
+      "observed_groups": 51181,
+      "observed_only_groups": 0,
+      "output": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_replay_check_v2/replay/orthogroups_multipass.txt",
+        "sha256": "c6057d2428322c3b1922200cf68cedcd4c2ebfc2e814f525f93ec458b452560f"
+      },
+      "partition_equal": true
+    },
+    "multipass_refined": {
+      "byte_equal": true,
+      "expected_groups": 63245,
+      "expected_only_groups": 0,
+      "observed_groups": 63245,
+      "observed_only_groups": 0,
+      "output": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_replay_check_v2/replay/orthogroups_multipass_refined.txt",
+        "sha256": "3ab1c37f8f073492b3c28f6bf261f3db85e4882020cce74cfd17b66cdb356899"
+      },
+      "partition_equal": true
+    },
+    "strict_profiles": {
+      "byte_equal": true,
+      "expected_groups": 50894,
+      "expected_only_groups": 0,
+      "observed_groups": 50894,
+      "observed_only_groups": 0,
+      "output": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_replay_check_v2/replay/orthogroups_profiles.txt",
+        "sha256": "ca4b49542fbe4f5d874d4f5346003ffa5a1bdc3d636a74182ee91db1c316f283"
+      },
+      "partition_equal": true
+    },
+    "strict_profiles_refined": {
+      "byte_equal": true,
+      "expected_groups": 62885,
+      "expected_only_groups": 0,
+      "observed_groups": 62885,
+      "observed_only_groups": 0,
+      "output": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_replay_check_v2/replay/orthogroups_profiles_refined.txt",
+        "sha256": "8ee100f4370fef6e3e6a3e0fd36112adcc3aefeb60197331115667c519ca121f"
+      },
+      "partition_equal": true
+    }
+  },
+  "status": "equivalent"
+}

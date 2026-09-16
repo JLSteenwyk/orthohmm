@@ -1189,3 +1189,23 @@ Tests cover scientific-argument drift, changed generation/seed/comparator
 settings, duplicate datasets, refusal to run without native evidence,
 preservation of reused files, source-only admission rejection, mixed-row
 provenance and mismatched truth rejection. No new accuracy was calculated.
+
+Pushed **b66225dc5fc355702575aebe34b644916894f236** and pinned
+`publication_native_simulation_v3` there. Materialized both corrected manifests
+from that pinned builder, retaining 70 datasets each and scheduling only the
+two OrthoHMM modes. Fixed manifest SHA256:
+`523a603b3a3ba759d50ddd8cdcae540d148920d189de073bbf768c3d1b4c17ed`;
+variable manifest SHA256:
+`bf677728cf9312edd9755d9ac1ceefbce3abb8c3848d43413631dc00ca00eb2f`.
+Pinned executor --check-only passes on actual baseline_20261001 and
+baseline_20261101 inputs, including environment/runtime/history/input gates.
+
+Replay **21138 completed 0:0 in 00:08:59**. All four partitions are byte-equal
+and partition-equal to historical stages (no differences). Corrected runtime
+built **15,901 profiles**, considered 5,014,697 candidates, retained 579,444
+significant profile hits and 24,738 strict profile edges. Preserved lightweight
+replay and verification snapshots as `ob_native_replay_20260916.json` and
+`ob_native_replay_verification_20260916.json`. No reference accuracy was scored.
+This satisfies the cached-stage equivalence gate, not the remaining publication
+requirements or end-to-end search equivalence. Commit the two new simulation
+manifests and replay evidence before submitting the selective rerun arrays.

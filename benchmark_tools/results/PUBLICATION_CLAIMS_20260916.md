@@ -46,8 +46,9 @@ evidence that an experiment completed or a biological hypothesis is true.
 - Corrected native build is recorded in
   [runtime manifest](publication_native_runtime_20260916.json). All three CPU
   libraries built and the exact-checkout profile smoke passed. Corrected replay
-  `21138` is running from pinned launcher 36e45a2; historical equivalence is not
-  yet established. Original defective outputs remain preserved.
+  `21138` completed successfully: [all four partitions match byte-for-byte](ob_native_replay_verification_20260916.json).
+  This establishes cached-stage equivalence; factorial and corrected validation
+  remain incomplete. Original defective outputs remain preserved.
 - Simulation OrthoHMM runs used the same incomplete checkout. Existing results
   are defective-runtime diagnostics, not publication estimates of the intended
   method. Retain valid comparator outputs and rerun OrthoHMM with a prospectively
