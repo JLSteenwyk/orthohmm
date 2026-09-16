@@ -2780,3 +2780,33 @@ log `benchmarks/work/ob_reference_alignments_21309.log`. QfO21307 remains live.
 Next terminal/native alignment admission and sequence-feature join, followed
 by the frozen84-endpoint stratified outcome analysis. No family-error result
 is claimed from this preparatory work; the full publication goal remains open.
+
+### Native alignment admission and frozen family strata (2026-09-16)
+
+Previous turn made progress: legacy alignment audit, tested normalized
+rebuild and frozen21309 submission. Reread full objective;21307 remains live.
+Alignment21309 completed0:0 in4:24; all70 families/1,944 distinct reference
+genes succeeded. New assembler independently checked frozen executor/tool
+inventories, scheduler completion, status/command/input/output provenance,
+normalized sequence preservation and canonical-only identities. Verified the
+entire251,378-row feature table against gene/species inventory, recomputing
+all reference proteins' features from the frozen FASTAs.
+
+Prepared outcome-independent family categories at
+`benchmarks/results/ob_error_strata_v1/manifest.json`; preserved snapshots
+`ob_reference_alignments_prepared_20260916.json` and
+`ob_error_strata_prepared_20260916.json`. Size bins34/30/6; single/multi-copy
+6/64; lower/higher/missing identity29/29/12; short-relative/not-short/missing
+40/30/0; concentrated/not-concentrated/missing composition1/69/0.
+Identity median among58 evaluable families:0.5783660968575601. Twelve missing
+families have at least one pair without canonical overlap; do not assign zero
+identity or silently omit them. The one-family composition bin receives no
+bootstrap interval under the frozen minimum-five rule.
+
+Illustrations were selected by SHA256 ranking of canonical RefOG filenames
+(including .txt) within each occupied bin, with deduplication:005,014,021,024,
+038,067. No method accuracy/error outcome entered selection. All70 families
+remain scheduled for mechanistic tracing. Sixteen focused tests passed;
+full unit suite **1031 passed in25.92s**. Next the84-endpoint stratified outcome
+assembly, with fresh scoring/provenance crosschecks. Parameter/scaling/domain/
+biological-application/QfO/release requirements remain open.
