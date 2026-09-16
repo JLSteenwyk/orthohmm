@@ -2626,3 +2626,21 @@ report: `ob_species_tree_perturbations_native_validation_20260916.json`.
 Full unit suite **959 passed in25.11s**. Next implement and validate the frozen
 18-endpoint official-score/paired-RefOG bootstrap comparison against supplied
 control. QfO21305 confirmed RUNNING5:17; no diagnostic outcome yet.
+
+### Tree robustness scoring prepared (2026-09-16)
+
+Previous turn made progress: six native admissions, tested validator, and
+frozen QfO capture submission. Reread full objective. QfO21305 remains live;
+no restart or diagnostic result inferred from incomplete files.
+
+Added a separately frozen scoring assembler for all six perturbations against
+the unchanged supplied-tree control. Fresh all-panel native admission precedes
+reference access; full input coverage and official-score agreement are
+required. Uses the existing weighted70-RefOG statistic, paired20,000-replicate
+bootstrap seed20260918, and all18 F1/P/R endpoints for Bonferroni adjustment.
+Preserves family wins/ties/losses and incremental process-tree resource data;
+does not select a best tree or alter defaults. Eleven focused tests passed.
+Full unit suite and frozen submission details follow.
+
+Full unit suite **970 passed in26.52s**. Prepared single-CPU16GiB/one-hour
+scoring job with no output overwrite and frozen executor worktree.
