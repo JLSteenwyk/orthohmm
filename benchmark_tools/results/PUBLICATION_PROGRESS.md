@@ -301,3 +301,25 @@ sequence-search control, and controlled per-arm efficiency measurements
 remain required. Latest job check: `20916` RUNNING at 1h12m54s; `20917`
 PENDING for resources. Frozen YGOB settings and active jobs were unchanged.
 Full unit-suite verification at this milestone: 500 passed in 16.62s.
+
+## Pinned-Source Replay Check Workflow
+
+`run_publication_replay_check.py` validates the historical audit's inputs,
+cache, and all four partitions before launching a label-blind replay from
+the detached `7f3a9e4` source tree. Current production core has no tracked
+differences from that pinned revision. Explicit settings are BLOSUM62,
+resolution 0.1, Leiden seed 4, one profile pass, and minimum profile species
+one; no jackknife or benchmark-scoring argument is enabled.
+
+The workflow writes source/environment/preflight provenance before inference,
+records GNU time separately, preserves failures, and compares all four
+resulting partitions with the verified historical partitions. Byte equality
+is recorded separately from membership equality so ordering changes cannot
+be mistaken for biological differences. Six focused tests pass across the
+workflow comparison and historical partition-validation helpers.
+
+Submit with 32 CPUs, an exclusive allocation, and an afterok dependency on
+YGOB job `20917`. This is an incremental cached replay, not a controlled
+end-to-end runtime. Its successful completion is a prerequisite to reusing
+these stages in the new factorial; no new factorial accuracy result has
+been evaluated by this workflow.
