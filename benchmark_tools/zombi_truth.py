@@ -170,14 +170,41 @@ def validate_run(run):
             "inputs": [file_record(p, run) for p in sources]}, sequences
 
 
+def check_family_lengths(sequences, mapping):
+    from benchmark_tools.run_zombi_seeded import family_lengths
+    expected = family_lengths(mapping["seed"], mapping["lengths"])
+    if mapping != {"schema_version": 1, "seed": mapping["seed"], "lengths": expected}:
+        raise ValueError("Family length mapping differs from frozen rule")
+    observed = set()
+    for gene, (_, sequence) in sequences.items():
+        prefix, separator, _ = gene.partition("__")
+        if not separator or not prefix.startswith("F") or prefix[1:] not in expected:
+            raise ValueError("Sequence has no assigned family length")
+        if len(sequence) != expected[prefix[1:]]:
+            raise ValueError("Sequence length differs from frozen family assignment")
+        observed.add(len(sequence))
+    if not observed:
+        raise ValueError("No extant sequences for length validation")
+    return {"verified_sequences": len(sequences), "unique_extant_lengths": len(observed),
+            "minimum_length": min(observed), "maximum_length": max(observed)}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--run", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--family-lengths", type=Path)
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError("Refusing to overwrite extracted truth")
     report, sequences = validate_run(args.run)
+    if args.family_lengths is not None:
+        mapping = json.loads(args.family_lengths.read_text())
+        report["family_length_validation"] = check_family_lengths(sequences, mapping)
+        report["family_length_assignment"] = dict(file_record(args.family_lengths, args.family_lengths.parent),
+                                                  absolute_path=str(args.family_lengths.resolve()))
+        source = Path(__file__).with_name("run_zombi_seeded.py")
+        report["family_length_rule_source"] = file_record(source, source.parent)
     args.output.mkdir(parents=True)
     fasta_dir = args.output / "input"
     fasta_dir.mkdir()

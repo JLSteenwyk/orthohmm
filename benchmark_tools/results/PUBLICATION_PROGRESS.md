@@ -901,3 +901,21 @@ are still required.
 Full unit-suite verification after the optional length adapter: **615 passed
 in 24.29s**. This is implementation and simulator smoke evidence, not a
 scientific-panel accuracy result or a publication-readiness claim.
+
+### Materializing the variable-length panel (2026-09-16)
+
+The existing generation builder now accepts an explicit `variable_length_v2`
+variant with the new protocol/seeds. Default fixed-length settings remain
+unchanged. The new variant writes one deterministic 100-family mapping per
+seed, records each mapping as a hashed extra input, and passes it to both
+sequence generation and truth export. The generation preflight verifies all
+extra inputs before any stage starts. The truth exporter checks every extant
+sequence against the frozen length rule and records mapping/rule provenance.
+
+Added a generic pinned-worktree generation launcher; existing v1 launchers,
+manifests and running jobs are untouched. Two new tests cover disjoint seeds,
+unchanged evolutionary settings and rejection of invalid exported lengths.
+All 27 focused parameter/generation/truth tests pass. The new export gate also
+passed on the real 816-gene variable-length smoke run, using a new output
+directory rather than replacing its earlier evidence. Pin and push the
+builder/runner before materializing or launching the scientific v2 panel.

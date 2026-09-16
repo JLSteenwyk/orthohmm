@@ -46,6 +46,8 @@ def preflight(manifest_path, expected_hash, panel, label):
         verify_file(child_path(source, record["path"]), record)
     for record in manifest["workflow_sources"]:
         verify_file(Path(record["absolute_path"]), record)
+    for record in manifest.get("extra_inputs", []):
+        verify_file(child_path(panel, record["path"]), record)
     for row in manifest["simulation_runs"]:
         for record in row["parameters"].values():
             verify_file(child_path(panel, record["file"]["path"]), record["file"])

@@ -9,10 +9,11 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from benchmark_tools.benchmark_production import file_record
-from benchmark_tools.run_zombi_seeded import ZOMBI_COMMIT
+from benchmark_tools.run_zombi_seeded import ZOMBI_COMMIT, family_lengths
 
 
 SEEDS = tuple(range(20261001, 20261011))
+VARIABLE_SEEDS = tuple(range(20261101, 20261111))
 CONDITIONS = {"baseline": (2, 1, 0.2), "divergent": (2, 1, 0.8),
               "turnover": (10, 8, 0.2), "divergent_turnover": (10, 8, 0.8)}
 DEFAULTS = {"T": "SpeciesTreeParameters.tsv", "G": "GenomeParameters.tsv", "S": "SequenceParameters.tsv"}
@@ -37,7 +38,11 @@ def parameter_sets(defaults, seed, condition, allowed_seeds=SEEDS):
     return {mode: {**defaults[mode], **overrides[mode], "SEED": str(seed)} for mode in DEFAULTS}
 
 
-def prepare(source, output):
+def prepare(source, output, variant="fixed_length_v1"):
+    if variant not in {"fixed_length_v1", "variable_length_v2"}:
+        raise ValueError("Unknown simulation panel variant")
+    variable = variant == "variable_length_v2"
+    seeds = VARIABLE_SEEDS if variable else SEEDS
     source, output = source.resolve(), output.resolve()
     if output.exists():
         raise FileExistsError("Refusing to overwrite a materialized panel")
@@ -59,7 +64,9 @@ def prepare(source, output):
     output.mkdir(parents=True)
     report = {"schema_version": 1, "status": "materialized_not_executed", "source_commit": commit,
               "source": str(source), "python": sys.executable, "python_version": sys.version, "packages": packages,
-              "protocol": file_record(workflow / "results/PUBLICATION_SIMULATION_PROTOCOL_20260916.md", workflow),
+              "protocol": file_record(workflow / "results" / ("PUBLICATION_VARIABLE_LENGTH_PROTOCOL_20260916.md" if variable else
+                                                             "PUBLICATION_SIMULATION_PROTOCOL_20260916.md"), workflow),
+              "panel_variant": variant, "seeds": list(seeds), "extra_inputs": [],
               "workflow_sources": [dict(file_record(p, workflow), absolute_path=str(p)) for p in scripts],
               "native_sources": [file_record(p, source) for p in sorted(source.glob("*.py"))],
               "native_defaults": [file_record(source / "Parameters" / name, source) for name in DEFAULTS.values()],
@@ -74,7 +81,14 @@ def prepare(source, output):
     freeze_path = output / "environment.freeze.txt"
     freeze_path.write_text(freeze)
     report["environment_freeze"] = file_record(freeze_path, output)
-    for seed in SEEDS:
+    for seed in seeds:
+        length_path = None
+        if variable:
+            length_path = output / "family_lengths" / f"{seed}.json"
+            length_path.parent.mkdir(exist_ok=True)
+            length_path.write_text(json.dumps({"schema_version": 1, "seed": seed,
+                "lengths": family_lengths(seed, [str(i) for i in range(1, 101)])}, indent=2, sort_keys=True) + "\n")
+            report["extra_inputs"].append(file_record(length_path, output))
         for condition in CONDITIONS:
             label = f"{condition}_{seed}"
             run = output / "native" / label
@@ -82,14 +96,18 @@ def prepare(source, output):
             params = output / "parameters" / label
             params.mkdir(parents=True)
             parameter_records, commands = {}, []
-            for mode, values in parameter_sets(defaults, seed, condition).items():
+            for mode, values in parameter_sets(defaults, seed, condition, allowed_seeds=seeds).items():
                 path = params / DEFAULTS[mode]
                 path.write_text("".join(f"{k}\t{v}\n" for k, v in sorted(values.items())))
                 parameter_records[mode] = {"values": values, "file": file_record(path, output)}
                 commands.append({"stage": mode, "argv": [sys.executable, str(workflow / "run_zombi_seeded.py"),
                     "--source", str(source), "--mode", mode, "--parameters", str(path), "--output", str(run), "--seed", str(seed)]})
+                if mode == "S" and length_path is not None:
+                    commands[-1]["argv"].extend(["--family-lengths", str(length_path)])
             commands.append({"stage": "truth", "argv": [sys.executable, str(workflow / "zombi_truth.py"),
                 "--run", str(run), "--output", str(prepared)]})
+            if length_path is not None:
+                commands[-1]["argv"].extend(["--family-lengths", str(length_path)])
             if condition == "baseline":
                 derived = output / "derived" / str(seed)
                 commands.append({"stage": "derive", "argv": [sys.executable, str(workflow / "derive_simulation_conditions.py"),
@@ -115,8 +133,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--variant", choices=["fixed_length_v1", "variable_length_v2"], default="fixed_length_v1")
     args = parser.parse_args()
-    report = prepare(args.source, args.output)
+    report = prepare(args.source, args.output, args.variant)
     print(f"Materialized {len(report['simulation_runs'])} simulations and {len(report['datasets'])} datasets; no execution")
 
 
