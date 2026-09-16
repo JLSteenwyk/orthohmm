@@ -25,6 +25,12 @@ from benchmark_tools.score_ygob_groups import membership, read_predictions
 
 FACTORIAL_SHA = "6a0d588b5cb47c60fc6bc8bae8aa0c83e5f2aadb11de970919d8c6527c387141"
 STAGES = ("multipass", "multipass_refined", "strict_profiles", "strict_profiles_refined", "candidates", "root_hogs")
+TRANSITIONS = (("multipass", "multipass_refined", "profile_off_refinement"),
+               ("multipass", "strict_profiles", "profile_expansion_and_reclustering"),
+               ("strict_profiles", "strict_profiles_refined", "profile_on_refinement"),
+               ("multipass_refined", "strict_profiles_refined", "matched_refined_branch_comparison_not_direct_step"),
+               ("strict_profiles_refined", "candidates", "candidate_expansion"),
+               ("candidates", "root_hogs", "tree_inference_reconciliation_and_constraints"))
 
 
 def reference_inventory(references):
@@ -75,7 +81,7 @@ def pair_trace(genes, hits, indices, owners):
 
 def transitions(rows):
     result = {}
-    for before, after in zip(STAGES, STAGES[1:]):
+    for before, after, _ in TRANSITIONS:
         counts = Counter("retained" if row[before] and row[after] else "lost" if row[before]
                          else "gained" if row[after] else "absent_both" for row in rows)
         result[before + "_to_" + after] = {key: counts[key] for key in ("retained", "lost", "gained", "absent_both")}
@@ -208,6 +214,7 @@ def assemble(root, output):
         verify_file(Path(item["path"]), item)
     report = {"status": "retained_stage_trace_complete", "publication_ready": False, "job_id": os.environ.get("SLURM_JOB_ID"),
         "source": file_provenance(Path(__file__)), "inputs": records, "families": families, "scores": scores,
+        "transition_specification": TRANSITIONS,
         "reference_inventory": inventory,
         "frozen_snapshots": [file_provenance(results / name) for name in
             ("orthobench_factorial_prepared_20260916.json", "orthobench_factorial_results_20260916.json", "ob_error_strata_prepared_20260916.json")],

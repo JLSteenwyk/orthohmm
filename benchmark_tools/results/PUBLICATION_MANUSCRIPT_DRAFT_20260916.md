@@ -420,6 +420,27 @@ overlap, and differences between their effect estimates are not interaction
 tests. Scores and points are checked against full-reference sufficient statistics;
 the figure does not add new inference runs or independent biological evidence.
 
+### Retained Checkpoints Localize Membership Changes
+
+All70 OrthoBench families were traced across six retained checkpoints, with
+40,733 pair rows checked against native partitions. Both assignments of the
+one shared reference gene were preserved. The8,440 logged candidate merges
+reconstructed the candidate partition;168 events touched reference genes.
+These checks establish consistency of the retained evidence, not biological
+correctness. Profile expansion starts from unrefined multipass clusters;
+profile-off refinement is a separate branch, not its input.
+
+Comparing matched refined endpoints, the profile-on branch gained836 and
+lost160 within-family pairs. Candidate expansion added4,272; final tree,
+reconciliation and constraint processing removed1,575. These raw co-membership
+counts include within-species pairs and low-certainty assignments and are not
+official benchmark recall. All six hash-selected illustrations were retained,
+including neutral examples and candidate gains subsequently partly removed.
+[Trace interpretation and full-family evidence](OB_FAMILY_TRACE_INTERPRETATION_20260916.md).
+Rejected-search candidates, added profile-edge identities and per-family
+tree/constraint mechanisms still require inspection; no biological mechanism
+or new default is inferred from these membership changes alone.
+
 ## Limitations And Unfinished Analyses
 
 ### Remaining Requirements

@@ -2976,3 +2976,35 @@ RUNNING at11s, empty stderr so far. Output target`benchmarks/results/ob_family_t
 Next admit terminal results against all source/pair-table hashes, independently
 verify family transitions/merge reconstruction, and inspect the frozen illustrative
 families. Both21313 and21311 remain live; no publication-completion claim.
+
+### Native pair-trace admission and branch correction (2026-09-16)
+
+Previous turn made progress: corrected overlap handling and frozen21313
+submission. Reread objective;21313 is now COMPLETED0:0 in41s,21311 still live.
+All70 families,40,733 pair rows,1,945 memberships/1,944 distinct genes retained.
+All8,440 candidate merges reconstruct the candidate partition;168 logged events
+touch reference genes. Pair table4,390,860bytes remains outside Git, SHA256
+aabf71d4f79aff06b18890b49996895cd729bd6ac1f6fb0b7f14e79ab5295e4b.
+
+Frozen replay source review found a reporting error in the new tracer: checkpoints
+were treated as a linear chain although profile expansion starts from unrefined
+multipass clusters. Preserved original82883d3d result; corrected source-defined
+branches and separately labeled refined-endpoint comparison. No pair membership,
+inference output, score or method default changed. Added a native-file admission
+that verifies exhaustive pair coverage, exact booleans/species/membership,
+fresh full-reference scores and all group summaries/source hashes. Tests reject
+missing/duplicate/reversed/malformed pairs and wrong native memberships.
+
+Admission output`ob_family_trace_admitted_v2` adds helper provenance; first
+admission output is preserved. Committed snapshot
+`ob_family_trace_verified_20260916.json` SHA256
+bda00fb593b357bc8f07e43544feae598150ae891ed82c988fb339a92349de0c.
+All-family table, full six frozen illustrations, interpretation and manuscript
+text retain adverse and neutral cases. Profile-on versus off refined endpoints
+gain836/lose160 raw within-family pairs; candidates gain4,272; final rootHOGs
+lose1,575. These are descriptive co-membership counts, not official recall or
+causal attribution. Rejected-hit/added-edge/gene-tree/constraint mechanisms,
+independent annotations and biological application remain open.
+
+Focused26 tests passed; full unit suite **1092 passed in29.51s**.21311 remains
+RUNNING at21:36, first one-CPU arm only completed; no affinity conclusion yet.

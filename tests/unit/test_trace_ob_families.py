@@ -50,7 +50,9 @@ def test_pair_trace_directionality_and_nonmonotone_transitions():
     assert rows[0]["same_species"] is True
     counts = trace.transitions(rows)
     assert counts["multipass_to_multipass_refined"] == {"lost": 1, "gained": 0, "retained": 0, "absent_both": 2}
-    assert counts["multipass_refined_to_strict_profiles"]["gained"] == 1
+    assert "multipass_refined_to_strict_profiles" not in counts
+    assert counts["multipass_to_strict_profiles"]["retained"] == 1
+    assert counts["multipass_refined_to_strict_profiles_refined"]["absent_both"] == 3
     assert all(sum(row.values()) == 3 for row in counts.values())
 
 

@@ -128,8 +128,8 @@ are frozen before the new family features are joined to method errors.
 
 ## Retained Stage Trace Execution
 
-Trace all70 families along the fixed production path: multipass grouping,
-copy-refined multipass grouping, strict-profile grouping, copy-refined profile
+Trace all70 families across retained checkpoints: multipass grouping,
+refined multipass grouping, strict-profile grouping, refined profile
 grouping, satellite_v2 candidate expansion, and final root HOGs. Use the
 hash-admitted cached replay checkpoints and frozen factorial predictions.
 These are descriptive post-development traces, not new hypothesis tests or
@@ -138,7 +138,7 @@ additional independent benchmark endpoints.
 For every within-family unordered pair, retain both directional normalized
 search-hit values (NA when absent), same-species status, and co-membership at
 each checkpoint. Report retained/lost/gained/absent-both counts separately
-for each consecutive transition; do not assume membership changes monotonically.
+for each source-defined branch transition; do not assume membership changes monotonically.
 Store the full pair table outside Git with a checksum. Family summaries retain
 the intersecting group IDs, family genes, other reference genes and unlabelled
 member counts. Raw pair counts include low-certainty and within-species members;
@@ -168,3 +168,14 @@ Retain both assignments and report the shared-gene inventory explicitly.
 Per-family traces are not disjoint totals; no deduplication or ground-truth
 modification is permitted. The first extraction stopped at an overly restrictive
 disjointness check before producing results; its failure is retained.
+
+Branch-order correction following frozen-source review: profile expansion uses
+the unrefined multipass clusters. Multipass-to-refined-multipass is the
+profile-off refinement branch; multipass-to-strict-profiles includes profile
+expansion and graph reclustering, followed by profile-on refinement. Comparing
+the two refined endpoints is a matched branch comparison, not a direct process
+step. Refined profile groups feed candidates, then tree/reconciliation/constraint
+processing produces root HOGs. The first extraction's consecutive checkpoint
+differences are numerically descriptive but were incorrectly labeled as a
+single computational chain. Keep that report and correct the transition labels
+using the unchanged full pair table; no inference or search rerun is needed.
