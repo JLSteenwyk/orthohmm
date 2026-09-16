@@ -381,3 +381,34 @@ STRUCTURAL_GENOMICS IQ-TREE processes were observed, so exclusive Slurm
 allocation alone cannot establish controlled timing conditions. Unrelated
 workloads were not changed. Independent validation, current-source replay,
 prospective ablations, robustness, application, and release remain open.
+
+## Frozen YGOB Report Assembly
+
+`report_ygob_validation.py` assembles the four-method score table and the
+prespecified paired differences using the independently tested co-membership
+scorer. The method set is exact, not inferred from available successful
+outputs. Bootstrap settings are fixed at 20,000 PCG64 replicates with seed
+20260917; the sequence-only diagnostic is excluded from the two comparisons
+and six-metric multiplicity family. Reports label within-species-inclusive
+homolog-group recovery, projection of non-reference inputs, coverage, and
+the limitations of novel-taxon transfer explicitly.
+
+Its OrthoFinder MCL checkpoint adapter uses the existing native parser and
+requires a one-to-one original-ID map matching all inference genes, unique
+cluster membership, and complete checkpoint coverage. Unlike checkpoint
+validation, final-method scoring permits genuinely missing predictions and
+reports coverage rather than silently imputing them.
+
+Eight new synthetic tests cover fixed reporting, the diagnostic exclusion,
+method-set validation, and valid/invalid checkpoint mappings. The 21 focused
+report/scorer/converter tests pass; the full unit suite passes 515 tests in
+18.46s. No held-out accuracy has been computed or inspected. The module is
+report assembly, not an end-to-end completion verifier: its output explicitly
+marks completion gates as unverified by this module. A caller must still
+verify terminal job status, tool completion/versions, source and input hashes,
+the frozen reference, and overlap/resource audits before real evaluation.
+
+Latest live scheduler check: YGOB `20917` PENDING Resources, replay `20919`
+PENDING Dependency. The frozen inference job, parameters, and input files
+were not changed. The next validation milestone is the gated evaluation
+entrypoint, followed by real scoring only after successful inference.
