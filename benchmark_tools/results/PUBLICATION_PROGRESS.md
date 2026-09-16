@@ -1386,3 +1386,27 @@ terminal-accounting-gated assembly using b66225d and original comparator array
 21010/pinned executor f5f4e1b. Output is a new
 `simulation_variable_native_results_20260916.json`; no partial scientific
 summary has been inspected. Assembly session remains active at this update.
+
+Variable native assembly completed: 280 explicit outcomes, separately verified
+against original comparator array 21010/f5f4e1b and corrected array 21142/b66225d.
+Generated `SIMULATION_VARIABLE_NATIVE_RESULTS_20260916.md` and interpretation
+from `simulation_variable_native_results_20260916.json`. These are the first
+inspected variable-panel accuracy results; no scientific settings changed.
+
+High sensitivity admits 70/70, satellite_v2 67/70, full OrthoFinder and its
+checkpoint each 65/70. Full OrthoFinder leads every paired condition mean.
+Adjusted F1 intervals exclude zero below it for all seven high-sensitivity
+contrasts and four satellite contrasts; satellite turnover/missing20/uneven_taxa
+intervals include zero. Baseline satellite/full F1 is 99.46/99.94%; turnover
+98.84/99.36%. Divergent satellite paired differences are -11.74 points (n=5)
+and -12.28 for divergent_turnover (n=8), not differences of unmatched table
+means. Recall is the main observed deficit, not a demonstrated causal mechanism.
+
+Rechecked native failures: three satellite tree-coverage failures (seed 9 in
+both divergent conditions, seed 10 in divergent_turnover); five OrthoFinder
+nonfinite-graph failures in divergent seeds 1/2/7/8/9, with checkpoint exclusion.
+Exact causes of those remaining comparator numerical failures need diagnosis.
+All 140 OrthoHMM runs build 62-193 profiles but add no profile edges. No HMM
+expansion advantage or overall-superiority claim follows. Both simulation
+panels remain separate; YGOB and factorial inference/scoring and other original
+publication requirements are still incomplete.

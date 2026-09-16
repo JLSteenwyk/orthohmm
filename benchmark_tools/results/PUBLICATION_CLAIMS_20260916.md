@@ -69,7 +69,12 @@ evidence that an experiment completed or a biological hypothesis is true.
   are now assembled: 70 high-sensitivity and 64 satellite_v2 successes, six
   persistent species-tree failures, and no admitted OrthoFinder comparisons.
   Profile construction ran but added zero graph edges. This is not a superiority
-  result. Corrected variable-length assembly remains in progress.
+  result.
+- [Corrected variable-length results](SIMULATION_VARIABLE_NATIVE_RESULTS_20260916.md)
+  are also assembled: 70 high-sensitivity, 67 satellite_v2 and 65 full
+  OrthoFinder successes. Full OrthoFinder leads all paired condition means;
+  failures and complete-case exclusions remain explicit. This does not support
+  general OrthoHMM superiority. Profile expansion again added no graph edges.
 - The label-blind verifier checks inference files and completion; it does
   not yet certify every scientific scoring gate. Its output retains that
   distinction explicitly.
