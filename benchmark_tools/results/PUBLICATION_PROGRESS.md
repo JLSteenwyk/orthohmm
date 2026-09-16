@@ -788,3 +788,30 @@ Full unit-suite verification after this change: **596 passed in 23.46s**.
 Slurm accounting independently confirms array tasks 0-9 completed with exit
 `0:0`; task-generation timings are approximately 19-21 seconds, not inference
 benchmarks. Other tasks remain in progress.
+
+### Frozen simulation inference executor (2026-09-16)
+
+Added `run_simulation_methods.py` and a 70-task Slurm launcher. These execute
+the already frozen 210 method commands, not a revised scientific design.
+Preflight verifies method/generation manifest hashes, recorded core/tool/
+adapter files, interpreter package inventories, generated file checksums,
+exact species input file sets, and the parent's paired biological history.
+OrthoFinder receives a verified copy. PATH resolution is recorded explicitly
+as lookup evidence, not a trace of every spawned executable.
+
+Each method's command, exit status, GNU time log, output hashes and failures
+are preserved separately. A failed method does not suppress the remaining
+methods. Successful exits remain `process_succeeded`, with dataset status
+`finished_pending_native_validation`: no native validation or accuracy is
+implied. No existing output or evidence is automatically overwritten.
+Inapplicable derived conditions require verified generation evidence and
+run no inference. Full native validation/conversion/scoring is still needed.
+
+Five new tests cover manifest integrity, copies, failed-method continuation,
+inapplicable conditions and missing species files; these and three history
+tests pass. Real baseline_20261001 preflight passes without inference.
+Generation array 20920 has progressed to tasks 28-29 running, with earlier
+tasks finished. Pin and push the executor before scheduling method tasks
+behind generation completion; requested resources are four CPUs, 16 GiB,
+12 hours per task and at most two concurrent tasks. These shared-machine
+timings are descriptive, not controlled scaling evidence.
