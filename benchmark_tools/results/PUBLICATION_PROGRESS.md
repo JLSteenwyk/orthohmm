@@ -2165,3 +2165,35 @@ then frozen graph replay and descriptive sensitivity/coverage comparisons;
 do not infer equal sensitivity from equal E-values or similar score scaling.
 
 Full unit suite: **824 passed in32.11s**; scoped whitespace checks passed.
+
+### Sequence-search numeric adapter implemented (2026-09-16)
+
+Previous turn was progress: launched the frozen search. Reread the objective
+and confirmed all three jobs live. Added `convert_sequence_search_control.py`:
+full conversion requires terminal-success job21291 and all12 successful
+recorded phase commands plus frozen input/output hashes. It checks every
+seven-field hit for known IDs, exact sequence lengths, target-species ownership,
+finite positive scores and the frozen E-value cutoff. Raw score is divided
+once by sqrt(query_length*target_length); bit scores are validated but not
+mistakenly used as raw scores. SQLite primary keys reject duplicate directed
+pairs instead of silently aggregating them. A disk-backed ranking supplies
+the prespecified top100-per-query/target-species diagnostic, raw-score order
+with lexical target-ID ties, independently of the all-hit variant.
+
+Writes chunked memory-mapped arrays and native numeric checkpoints, then
+applies the existing numeric audit. Both preserve the full input gene universe
+and directed pair semantics; self hits are not explicitly discarded.
+Original TSVs and frozen inference code remain unchanged. Refuses existing
+outputs and verifies hashes again after conversion. Eleven targeted tests
+cover normalization, malformed/unknown/wrong-length/wrong-species/nonfinite
+hits, significance rejection, duplicate pairs, deterministic per-species caps,
+and a real written/audited checkpoint including self hits.
+
+Read-only parser validation of completed target00 passed for **2,948,026 hit
+rows**. This is not full-panel numeric admission and produces no accuracy
+result. Full conversion has not been launched while the12-target search is
+still active. Latest scheduler evidence:21291 RUNNING4:37,
+21290 RUNNING12:36,21288 RUNNING36:42. Next run guarded conversion after
+search completion and implement the frozen graph-only replay/coverage checks.
+
+Full unit suite: **835 passed in33.23s**; scoped whitespace checks passed.
