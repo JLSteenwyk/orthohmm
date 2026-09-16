@@ -147,3 +147,41 @@ OrthoFinder runs. Frozen OrthoHMM source is the detached worktree at `7f3a9e4`.
 The job is queued; do not interpret pending status as failure or restart it.
 Log path: `benchmarks/work/ygob_validation_v1/inference_20917.log`.
 Complete the prespecified homology screen while waiting and before scoring.
+
+## YGOB Overlap Gate And Scoring Arithmetic
+
+The homology-screen implementation was committed and pushed as `fc42cf1`.
+Slurm job `20918` runs the frozen DIAMOND screen with 32 CPUs against QfO,
+OrthoBench, and Three Kingdoms development inputs. Job `20917` now has an
+`afterok:20918` dependency, enforcing successful screen completion before
+validation inference. At the latest check, `20918` was running its search,
+`20917` was pending on that dependency, and final-group OrthoMCL QfO scoring
+job `20916` was still running. No replacement jobs were submitted.
+
+`score_ygob_groups.py` implements the frozen group co-membership statistic,
+strict native-group readers, explicit input-ID validation, scoring-universe
+projection, exact recovery, and coverage counts with stated denominators.
+Singletons and within-species pairs are included as specified. Cross-pillar
+false positives are allocated half to each incident pillar for the paired
+bootstrap; batched sampling avoids a full 20,000 by 10,250 count matrix.
+Ten tests check explicit pair enumeration over 100 random partitions,
+excluded genes, missing genes, malformed membership, adapters, paired
+resampling arithmetic, and batch invariance. Together with the screen and
+input-preparation tests, 20 tests pass. No YGOB method scores were inspected.
+
+Next: complete the gated runs and shared-reference-resource audit, then
+connect verified output manifests to the scorer and generate the frozen
+two-contrast validation report. The OrthoFinder sequence checkpoint remains
+diagnostic and must not enter the six primary/secondary contrast-metric
+multiplicity count. Publication ablations, simulations, resource comparisons,
+biological application, and manuscript deliverables remain open.
+
+The subsequent scheduler check confirms `20918` COMPLETED with exit `0:0`
+in 5m23s. The saved report `ygob_homology_screen_20260916.json` contains
+input/tool/source provenance and hit-file checksums, verified against disk.
+71,714/83,404 proteins (85.98%) and 6,952/10,250 pillars (67.82%) have a
+qualifying development hit. This establishes substantial family overlap;
+novel-taxon transfer remains the intended claim, not family-disjointness.
+No families or endpoint definitions were changed in response to the screen.
+`20917` now waits for resources after its dependency succeeded; `20916`
+continues running. Full unit-suite verification: 469 passed in 18.73s.
