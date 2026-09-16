@@ -919,3 +919,22 @@ All 27 focused parameter/generation/truth tests pass. The new export gate also
 passed on the real 816-gene variable-length smoke run, using a new output
 directory rather than replacing its earlier evidence. Pin and push the
 builder/runner before materializing or launching the scientific v2 panel.
+
+Pinned generation builder/runner `08f2888125c46f376d5e0da2181d18ce067f8d5e`
+in `benchmarks/work/publication_variable_generation_v2` after pushing it.
+Materialized `benchmarks/work/publication_variable_simulation_panel_v2` with
+40 native runs, 70 datasets, 120 parameter files and ten hashed family-length
+mappings. Committed-manifest candidate
+`publication_variable_simulation_manifest_20260916.json` has SHA-256
+`806aa1e5f6976c323ff2f6641dd88e25264e7417749e7d77565294666aee776b`.
+Real first-run preflight passed without execution, including extra-input
+checks. No scientific v2 native run has started at this checkpoint.
+
+Extended method preparation/execution to accept an explicit frozen manifest
+hash, retaining the original hashes as defaults for v1 callers. Generation
+provenance is derived from the hash-protected method manifest instead of a
+v1-only constant. Native validation sources are included in the new method
+manifest. A generic pinned method-array launcher uses the same four-CPU,
+two-concurrent-task resource settings. Ten focused method/variable-length
+tests pass. Pin this code and materialize/freeze method commands before
+submitting v2 generation, as required by the prospective protocol.

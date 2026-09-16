@@ -33,3 +33,12 @@ def test_wrong_generation_manifest_fails_before_external_inspection(tmp_path):
     with pytest.raises(ValueError, match="Wrong frozen"):
         prepare(path, tmp_path, tmp_path / "python", tmp_path / "of", tmp_path / "out", tmp_path / "manifest.json")
     assert not (tmp_path / "manifest.json").exists()
+
+
+def test_explicit_generation_hash_still_requires_full_panel(tmp_path):
+    import hashlib
+    path = tmp_path / "generation.json"
+    path.write_text("{}")
+    with pytest.raises(ValueError, match="complete frozen"):
+        prepare(path, tmp_path, tmp_path / "python", tmp_path / "of", tmp_path / "out", tmp_path / "manifest.json",
+                hashlib.sha256(path.read_bytes()).hexdigest())

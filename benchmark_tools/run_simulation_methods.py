@@ -57,13 +57,13 @@ def verify_environment(manifest):
             raise ValueError(f"Package inventory changed: {name}")
 
 
-def verify_inputs(dataset, generation, panel):
+def verify_inputs(dataset, generation, panel, generation_hash=GENERATION_HASH):
     runs = {r["label"]: r for r in generation["simulation_runs"]}
     parent = dataset["parent"]
-    native = verify_generation(panel, runs[parent], GENERATION_HASH)
+    native = verify_generation(panel, runs[parent], generation_hash)
     check = next(c for c in generation["history_equivalence_checks"] if parent in (c["first"], c["second"]))
     other = check["second"] if parent == check["first"] else check["first"]
-    paired = verify_generation(panel, runs[other], GENERATION_HASH)
+    paired = verify_generation(panel, runs[other], generation_hash)
     if not compare_histories(native, paired)["matched"]:
         raise ValueError("Required matched biological histories differ")
     status = json.loads((panel / "execution" / parent / "status.json").read_text())
@@ -165,30 +165,33 @@ def execute(dataset, order, env, evidence, verified, provenance):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--manifest", type=Path, required=True)
+    parser.add_argument("--manifest-sha256", default=METHOD_HASH)
     parser.add_argument("--panel", type=Path, required=True)
     parser.add_argument("--dataset", required=True)
-    parser.add_argument("--evidence", type=Path, required=True)
+    parser.add_argument("--evidence", type=Path)
     parser.add_argument("--check-only", action="store_true")
     args = parser.parse_args()
-    manifest = read_frozen(args.manifest, METHOD_HASH)
-    generation = read_frozen(Path(manifest["generation_manifest"]["absolute_path"]), GENERATION_HASH)
+    manifest = read_frozen(args.manifest, args.manifest_sha256)
+    generation_hash = manifest["generation_manifest"]["sha256"]
+    generation = read_frozen(Path(manifest["generation_manifest"]["absolute_path"]), generation_hash)
     matches = [d for d in manifest["datasets"] if d["label"] == args.dataset]
     if len(matches) != 1:
         raise ValueError("Unknown or duplicate dataset")
     dataset = matches[0]
+    evidence = args.evidence if args.evidence is not None else Path(dataset["methods"]["orthohmm_high_sensitivity"]["output"]).parent / "execution"
     verify_environment(manifest)
     env, resolved = execution_environment(manifest)
-    verified = verify_inputs(dataset, generation, args.panel.resolve())
+    verified = verify_inputs(dataset, generation, args.panel.resolve(), generation_hash)
     if args.check_only:
         print(f"Verified {args.dataset}: {verified['status']}; no inference")
         return
-    provenance = {"method_manifest_sha256": METHOD_HASH, "generation_manifest_sha256": GENERATION_HASH,
+    provenance = {"method_manifest_sha256": args.manifest_sha256, "generation_manifest_sha256": generation_hash,
                   "path_resolved_executables": resolved, "resolution_scope": "PATH lookup, not process execution tracing",
                   "sources": [file_record(Path(__file__).with_name(n), Path(__file__).parent) for n in
                               ("run_simulation_methods.py", "verify_simulation_histories.py", "run_simulation_generation.py", "benchmark_production.py")],
                   "slurm_job_id": os.environ.get("SLURM_JOB_ID"), "slurm_array_task_id": os.environ.get("SLURM_ARRAY_TASK_ID"),
                   "timing_limitation": "Shared-machine inference timings are not controlled scaling measurements"}
-    result = execute(dataset, manifest["execution_order"], env, args.evidence.resolve(), verified, provenance)
+    result = execute(dataset, manifest["execution_order"], env, evidence.resolve(), verified, provenance)
     if result.get("failed_methods"):
         raise SystemExit("One or more methods failed; other method outcomes preserved")
 

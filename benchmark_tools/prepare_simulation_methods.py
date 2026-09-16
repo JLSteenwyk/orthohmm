@@ -43,11 +43,13 @@ def commands(dataset, output, frozen, python, orthofinder):
     return records
 
 
-def prepare(generation_path, frozen, python, orthofinder, output_root, destination):
+def prepare(generation_path, frozen, python, orthofinder, output_root, destination, generation_hash=GENERATION_HASH):
     raw = generation_path.read_bytes()
-    if hashlib.sha256(raw).hexdigest() != GENERATION_HASH:
+    if hashlib.sha256(raw).hexdigest() != generation_hash:
         raise ValueError("Wrong frozen simulation generation manifest")
     generation = json.loads(raw)
+    if generation.get("status") != "materialized_not_executed" or len(generation.get("datasets", [])) != 70:
+        raise ValueError("Expected complete frozen generation panel")
     if destination.exists() or output_root.exists():
         raise FileExistsError("Refusing existing method manifest or output root")
     frozen = frozen.resolve()
@@ -76,7 +78,8 @@ def prepare(generation_path, frozen, python, orthofinder, output_root, destinati
     workflow = Path(__file__).resolve().parent
     adapters = [workflow / name for name in ("simulation_method_outputs.py", "simulation_conditions.py",
         "orthofinder_to_pairwise.py", "orthofinder_mcl_to_orthogroups.py", "report_ygob_validation.py",
-        "score_ygob_groups.py", "summarize_simulation_panel.py", "prepare_simulation_methods.py", "benchmark_production.py")]
+        "score_ygob_groups.py", "summarize_simulation_panel.py", "prepare_simulation_methods.py", "benchmark_production.py",
+        "validate_simulation_outputs.py", "verify_ygob_validation.py", "run_simulation_generation.py")]
     report = {"schema_version": 1, "status": "frozen_not_executed", "core_commit": commit,
         "core_root": str(frozen), "generation_manifest": dict(file_record(generation_path, generation_path.parent), absolute_path=str(generation_path.resolve())),
         "core_sources": [dict(file_record(p, frozen), absolute_path=str(p)) for p in core_sources],
@@ -107,6 +110,7 @@ def prepare(generation_path, frozen, python, orthofinder, output_root, destinati
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--generation-manifest", type=Path, required=True)
+    parser.add_argument("--generation-manifest-sha256", default=GENERATION_HASH)
     parser.add_argument("--frozen-root", type=Path, required=True)
     parser.add_argument("--python", type=Path, required=True)
     parser.add_argument("--orthofinder", type=Path, required=True)
@@ -114,7 +118,7 @@ def main():
     parser.add_argument("--manifest", type=Path, required=True)
     args = parser.parse_args()
     report = prepare(args.generation_manifest.resolve(), args.frozen_root, args.python, args.orthofinder,
-                     args.output_root.resolve(), args.manifest.resolve())
+                     args.output_root.resolve(), args.manifest.resolve(), args.generation_manifest_sha256)
     print(f"Froze {len(report['datasets'])} method configurations; no inference")
 
 
