@@ -727,3 +727,22 @@ Two new command/gate tests and nine native-adapter tests pass. Installed
 OrthoFinder metadata confirms 3.1.5 with 189 distribution entries. Pin this
 builder in a detached worktree before producing the committed command
 manifest. No panel inference or held-out accuracy has been evaluated.
+
+Builder `213b180` was committed/pushed and pinned in detached worktree
+`benchmarks/work/publication_methods_frozen`. It generated
+`publication_simulation_methods_20260916.json` with SHA-256
+`4f0717fa8b0c34d5a6982a3193772d64bc39a3d75b8fe23195d9ce1b21eee186`.
+Verified all 186 recorded source/tool artifacts against actual lengths and
+hashes, 210 inference commands, and 70 checkpoint definitions. Command and
+adapter references point to pinned worktrees; no mutable main source is
+used for the prospective OrthoHMM core or adapters.
+
+Resolved tool paths are the existing MAFFT 7.525-with-extensions launcher,
+FastTree_v220 binary, diamond-linux64 binary, and OrthoFinder 3.1.5 virtual
+environment launcher. Exact paths/hashes are in the manifest. Its output
+root `benchmarks/results/publication_simulation_methods_v1` does not exist:
+no scientific-panel inference has started. Remaining execution work includes
+matched-history verification, generation scheduling/completion, and a method
+runner that verifies generated input hashes and terminal success before
+native conversion/scoring. These are execution tasks, not an invitation to
+change the frozen scientific settings after seeing results.
