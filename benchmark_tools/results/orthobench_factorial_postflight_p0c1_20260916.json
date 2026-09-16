@@ -1,0 +1,45 @@
+{
+  "accounting_raw": "JobID|JobIDRaw|State|ExitCode|Elapsed\n21248_0|21249|FAILED|1:0|00:26:37\n21248_0.batch|21249.batch|FAILED|1:0|00:26:37\n21248_1|21250|FAILED|1:0|00:32:45\n21248_1.batch|21250.batch|FAILED|1:0|00:32:45\n21248_2|21287|RUNNING|0:0|00:10:57\n21248_2.batch|21287.batch|RUNNING|0:0|00:10:57\n21248_3|21248|RUNNING|0:0|00:04:49\n21248_3.batch|21248.batch|RUNNING|0:0|00:04:49\n",
+  "accuracy_evaluated": false,
+  "cell": "p0_c1_r1",
+  "environment_manifest": {
+    "bytes": 488540,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_variable_native_methods_20260916.json",
+    "sha256": "bf677728cf9312edd9755d9ac1ceefbce3abb8c3848d43413631dc00ca00eb2f"
+  },
+  "executor_commit": "9a8630197401d97e4fcc131f4939433bd3b89aac",
+  "limitation": "Original scheduler failure retained; native semantics and conversion gates remain required.",
+  "native_outputs_validated": false,
+  "original_batch_log": {
+    "bytes": 775,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_ob_factorial_logs_v1/cell_21248_1.log",
+    "sha256": "6de2a46a27dbde05e849ea85883881d934c8889cd9f770f7033ec9e322054d83"
+  },
+  "original_status": {
+    "bytes": 19929280,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/execution/p0_c1_r1/status.json",
+    "sha256": "7c7bf4d33f747a1543a109c85298aaca5aaa675b68b30b07250530357fa9e027"
+  },
+  "prepared_manifest": {
+    "bytes": 63452,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/orthobench_factorial_prepared_20260916.json",
+    "sha256": "5c325f4d77865e0c7571fe4bb4df0be0959977a49e1d22169f192518700f9382"
+  },
+  "scheduler": {
+    "Elapsed": "00:32:45",
+    "ExitCode": "1:0",
+    "JobID": "21248_1",
+    "JobIDRaw": "21250",
+    "State": "FAILED"
+  },
+  "schema_version": 1,
+  "scoring_admitted": false,
+  "status": "postflight_integrity_verified",
+  "verification_cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+  "verified_artifact_count": 52331,
+  "verifier": {
+    "bytes": 6638,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/recover_factorial_postflight.py",
+    "sha256": "d7c1d6bf4fd38c16cb9d8724f7558a08749aab34de9b776a6db288b93ab09198"
+  }
+}

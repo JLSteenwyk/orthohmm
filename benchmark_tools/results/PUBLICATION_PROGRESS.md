@@ -1502,3 +1502,38 @@ admit either failed batch. Required next work is separately recorded recovery
 verification of finished artifacts and exact execution provenance, followed
 by native completion, root-HOG conversion and all-cell scoring gates. A
 successful check-only preflight is not a substitute for these output checks.
+
+## Preserved Factorial Output Integrity Recovery
+
+The preceding turn fixed and tested verification cwd restoration. Read the
+full objective again and confirmed YGOB 21192 and factorial tasks 2/3 live.
+Added `recover_factorial_postflight.py` for the specifically diagnosed array
+21248 defect. It requires unique FAILED 1:0 scheduler records, exact task/raw
+job identities, the known postflight traceback, successful method execution,
+and unscored/unvalidated original statuses. Other failures and live tasks are
+rejected. It does not change scheduler state or any inference artifact.
+
+Rechecked the original 9a86301 executor revision and clean tracked benchmark
+sources, recorded source/manifest provenance, exact cell command and inputs,
+prepared source/FASTA/candidate checks, current native runtime/environment and
+executable resolution from the original verification cwd. Verified every
+recorded output hash and the complete output file set with `verify_process`;
+original status and batch-log hashes remain unchanged during the audit.
+
+Both completed cells pass integrity recovery: p0_c0_r1 has 56,021 artifacts;
+p0_c1_r1 has 52,331. New separate records are
+`orthobench_factorial_postflight_p0c0_20260916.json` and
+`orthobench_factorial_postflight_p0c1_20260916.json`. Both retain FAILED
+scheduler evidence and explicitly set native validation, accuracy evaluation,
+and scoring admission false. No inference rerun or scientific score occurred.
+These checks cannot retrospectively prove every transient execution state;
+they establish preservation and present postflight integrity under the
+documented cwd correction, not complete native-output semantics.
+
+Twelve failure-gate tests and the full **700-test unit suite pass** (31.80s).
+Actual-data audits cover both finished tasks; scoped whitespace checks pass.
+Next: native completion/root-HOG conversion validation and all-eight-cell
+scoring assembly, followed by prespecified factorial statistics. Remaining
+tasks, YGOB independent validation, QfO ablations, matched search control,
+robustness/scaling, biological application and publication packaging remain
+unfinished. No full-goal completion claim is made.
