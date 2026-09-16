@@ -2134,3 +2134,34 @@ strict numeric adapter, hit-coverage diagnostics and frozen downstream replay.
 Latest scheduler check:21290 RUNNING4:52;21288 RUNNING28:58.
 
 Full unit suite: **822 passed in38.55s**; scoped whitespace checks pass.
+
+### Sequence-search execution launched (2026-09-16)
+
+Previous turn was progress: frozen protocol and actual input preparation.
+Reread the objective and confirmed both existing jobs live. Added
+`run_sequence_search_control.py` to execute the hash-pinned12-target plan.
+It verifies preparation/source/input/query/metadata/binary records and exact
+commands; refuses non-pristine output/evidence directories; records each
+database/search phase's argv, exit code, elapsed time, stdout and GNU-time
+log; preserves failures; and repeats input checks after all searches.
+Successful execution is labeled pending numeric validation, never scored.
+The two phase tests cover both successful and failed subprocesses and refusal
+to overwrite evidence. Actual prepared-plan check-only validation passed.
+
+Executor freeze**861eabf** at
+`benchmarks/work/publication_ob_sequence_executor_v1` was submitted via
+`ob_sequence_search_batch_20260916.sh` as **21291**, CPU32/128GiB/24h shared
+node. It executes12 species-target searches sequentially. Confirmed RUNNING
+and native DIAMOND alignment progress in target00/search.log; the first
+database phase has completed. No control accuracy or hit-coverage summary
+exists yet. Root evidence is
+`benchmarks/work/ob_sequence_search_control_v1/execution.json`; batch log is
+`benchmarks/work/ob_sequence_search_21291.log`. Do not rerun into that root.
+
+Latest scheduler check:21291 RUNNING0:16;21290 RUNNING8:15;
+21288 RUNNING32:21. Native logs provide actual search-progress evidence,
+not merely a submitted-job claim. Next implement/validate numeric conversion,
+then frozen graph replay and descriptive sensitivity/coverage comparisons;
+do not infer equal sensitivity from equal E-values or similar score scaling.
+
+Full unit suite: **824 passed in32.11s**; scoped whitespace checks passed.
