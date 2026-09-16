@@ -256,3 +256,20 @@ v2 clarifies case counts and records actual FAS feature content.
 
 Last live job check: final-group QfO scoring `20916` RUNNING at 1h02m23s;
 YGOB inference `20917` PENDING for resources. No active jobs were restarted.
+
+## Generated Historical Accuracy Figures
+
+`plot_publication_accuracy.py` generates three figures directly from the
+audited comparison: OrthoBench precision/recall plus supplementary BUSCO F1,
+all six QfO native endpoint coordinates, and paired OrthoBench differences
+with nominal and multiplicity-adjusted intervals. PNG/PDF/SVG versions and
+a coordinate/provenance manifest are in `figures_accuracy_20260916`;
+captions and reproduction instructions are in `FIGURE_CAPTIONS_20260916.md`.
+
+Six plotting tests pass, including pending-result exclusion, native-axis
+validation, invalid-value rejection, and actual interval coordinates.
+All three PNGs were visually inspected for clipping, overlap, visible
+pending status, and correct scale labels. QfO uncertainty bars are omitted
+because the native recorded fields do not have a uniform interpretation.
+The pending OrthoMCL result is not replaced by its pre-clustering diagnostic.
+These are explicitly work-in-progress figures, not publication readiness.
