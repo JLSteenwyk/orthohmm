@@ -40,8 +40,8 @@ publication readiness. Existing benchmark outcomes are development-exposed.
   membership. Then assess reference-family coverage and whether a repair is
   scientifically warranted; a zero process exit code does not resolve this.
 - Confirm final versus intermediate output semantics for every retained tool,
-  especially OrthoFinder hierarchical versus legacy groups and ProteinOrtho
-  graph stage. Do not infer semantics from method labels alone.
+  retaining the resolved OrthoFinder and ProteinOrtho checks below. Do not
+  infer semantics from method labels alone.
 - Consolidate commands, checksums, measured resources, historical resumptions,
   and source revisions. Do not overwrite historical provenance with current HEAD.
 - Do not call the historical development/validation RefOG split independent
@@ -87,3 +87,25 @@ dependency alerts (one critical, seven high, eleven moderate, two low) during
 push. This is an untriaged remote notification, not a validated assessment
 of runtime exposure. Dependency review is required before release; do not
 silently update pinned benchmarking environments and change their provenance.
+
+## Completed Milestone: Consolidated Comparison
+
+`publication_comparison.py` generates `publication_comparison_20260916.json`
+and `PUBLICATION_COMPARISON_20260916.md` from the retained OrthoBench and
+Three Kingdoms audits, the primary paired analysis, and the official QfO
+assessment JSONs. It preserves QfO axes, participant identity, standard-error
+fields, and per-metric checksums, rather than retaining only the custom mean.
+It validates Three Kingdoms counts and reproduces primary OrthoBench scores.
+Missing QfO results remain pending; the pre-MCL OrthoMCL graph is a separate
+diagnostic. Rerun the generator after job 20916 completes to incorporate its
+final-group assessment. The report explicitly does not freeze the baseline:
+raw-output provenance for some OrthoBench competitors, matched resources,
+and the other publication requirements remain open.
+
+ProteinOrtho graph-stage semantics are now confirmed. The installed
+`proteinortho_6.3.6--h2b77389_0.sif` contains `/usr/local/bin/proteinortho6.pl`,
+which describes `.proteinortho-graph` as the clustered graph (line 383) and
+generates it after removing cut edges (line 1852). The
+[versioned 6.3.6 manual](https://gitlab.com/paulklemm_PHD/proteinortho/-/raw/v6.3.6/README.md)
+agrees under "Clustering Output (step 3)". The retained native-pair choice
+therefore does include clustering, unlike the OrthoMCL matrix diagnostic.
