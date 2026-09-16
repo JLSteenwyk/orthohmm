@@ -2323,3 +2323,27 @@ Latest scheduler:21288 RUNNING59:09,21292 RUNNING9:32,
 Next: finish conversion/graph-control admission and sensitivity diagnostics;
 complete QfO replay then its component analysis; retain remaining robustness,
 error tracing, controlled scaling, biological application and release scope.
+
+### Label-free search coverage implementation (2026-09-16)
+
+Previous turn was progress: completed diagnostic scoring and publication figure.
+Reread objective and confirmed21288/21292 RUNNING,21293 dependency-pending.
+Implemented `compare_search_hit_coverage.py` to compare frozen HMM hits with
+all-hit and post-search top100 DIAMOND variants before accuracy interpretation.
+Requires successful terminal conversion21292, frozen input plan and cache
+hashes, admitted numeric checkpoints, exact gene order and matching species
+ownership. No benchmark reference labels are loaded. Rechecks input hashes
+after analysis and refuses output overwrite.
+
+Reports directed and nonself intersections, set-specific recovered fractions,
+Jaccard, self hits, reciprocal directed/unordered pairs, queries without hits
+or cross-species hits, target coverage, species-direction hit/query counts,
+and normalized-score/count quantiles. Rejects duplicate or invalid pairs.
+Checks top100 is a subset of all hits. Explicitly distinguishes hit overlap
+from ground-truth sensitivity and score quantiles from comparable significance
+thresholds. No accuracy, matched-efficiency or general HMM benefit is inferred.
+
+Twelve focused tests passed; full unit suite **876 passed in27.12s**.
+Prepared one-CPU64GiB dependent batch for an isolated committed executor;
+submission details will follow. Conversion still actively writes its SQLite
+database; did not inspect that database or restart any active process.
