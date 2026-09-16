@@ -1028,3 +1028,23 @@ instances: every length matched its frozen assignment and exported validation
 metadata, and assignment hashes matched. No v2 accuracy has been evaluated.
 The broader publication goal remains active; queued YGOB/replay, ablations,
 additional robustness/efficiency/application work and final packaging remain.
+
+### Unblocking the OrthoBench replay (2026-09-16)
+
+Audited job 20919's actual batch script and pinned replay implementation:
+it reads no YGOB output and does no accuracy scoring. The original dependency
+on 20917 and exclusive allocation were scheduling precautions, not required
+scientific inputs. This cached correctness check is already excluded from
+controlled end-to-end runtime comparisons. Added an explicit scheduling
+amendment to the ablation protocol, preserving CPU=32, memory=64 GiB, two-hour
+limit, exact command, source revisions, input/cache hashes and output path.
+
+Attempted `scontrol update JobId=20919 OverSubscribe=YES Dependency=`;
+Slurm refused permission and the job remained unchanged/pending. Cancelled
+only this unstarted job; accounting confirms `CANCELLED by 1000`, runtime
+00:00:00. No replay output directory exists. Recovered the original submitted
+script with `scontrol write batch_script` and preserved it as
+`ob_replay_batch_command_20260916.sh`. Commit this amendment and command before
+resubmitting normally without exclusive allocation/dependency. YGOB job
+20917 and unrelated jobs were not modified. V2 simulation inference remains
+active; its partial results have not been scored.

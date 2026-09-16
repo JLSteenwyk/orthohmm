@@ -81,3 +81,20 @@ mean as a secondary project summary and do not bootstrap that mean by genes.
 
 Freeze an executable manifest with exact commands and hashes before launching
 the cells. This protocol is not evidence that those runs are complete.
+
+## Replay Scheduling Amendment
+
+The label-blind cached OrthoBench equivalence check does not consume YGOB
+outputs or require YGOB completion. Its initial exclusive/afterok scheduling
+was a resource precaution, not a scientific dependency. To unblock ablation
+preparation, run the identical pinned replay command with 32 allocated CPUs
+and 64 GiB on a shared node, without the YGOB dependency. Retain the two-hour
+limit. Record its time only as an incremental, potentially contended replay
+cost, never as controlled end-to-end efficiency evidence. Do not alter YGOB's
+allocation or use any held-out scores to select replay settings.
+
+Original job 20919 was confirmed unstarted, then cancelled (zero runtime)
+after Slurm refused an in-place sharing update. Its exact submitted command
+was recovered with `scontrol write batch_script` and preserved in
+`ob_replay_batch_command_20260916.sh`. Scientific source, cache, settings,
+inputs, output path and verification criteria are unchanged on resubmission.
