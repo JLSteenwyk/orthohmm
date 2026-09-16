@@ -326,11 +326,37 @@ They do not justify removing constraints as a new default.
 
 ## Limitations And Unfinished Analyses
 
+### Sequence-Search Replacement Control
+
+With profile expansion, candidate expansion and reconciliation disabled,
+the frozen HMM-search baseline scored69.763388% F1,78.868592% precision and
+62.542944% recall. DIAMOND all-hit replacement scored65.762183/55.036231/
+81.680884%; the post-search top100 diagnostic scored66.484803/55.897861/
+82.019046%. Six-endpoint adjusted F1 intervals for control-minus-HMM were
+[-14.834,6.688] and[-14.424,7.844] percentage points. Both include zero;
+these results do not establish an HMM-specific F1 advantage. Precision was
+lower and recall higher for both controls, with adjusted intervals excluding
+zero. Each control improved family F1 in39, tied in10, and declined in21
+RefOGs; the aggregate is not a mean of those family scores.
+
+Hit sets were not sensitivity-matched. HMM/all-hit/top100 nonself counts were
+18,235,373/99,848,167/48,740,683. Queries lacking cross-species hits numbered
+33,351/24,526/24,526. DIAMOND all-hit recovery overlapped65.12% of HMM hits,
+while only11.89% of its nonself hits were shared with HMM. This asymmetry is
+not ground-truth sensitivity. The historical HMM cache omits self hits,
+whereas DIAMOND retains250,980; raw no-hit query counts are not commensurate.
+All three final partitions cover251,378 input genes, including singletons.
+The same normalization formula and E-value cutoff do not equate calibration,
+candidate filtering or computational effort. [Full control results](OB_SEQUENCE_SEARCH_RESULTS_20260916.md).
+
+### Remaining Requirements
+
 No universal superiority, arbitrary-dataset generalization, or controlled
 speedup is established. Frozen YGOB evaluation is complete and supports
 novel-taxon transfer, not family-disjoint confirmation. Homolog-family
 overlap remains substantial even after taxon exclusions. The proposed HMM
-contribution requires a matched sequence-search control, and the interaction
+contribution is not established by the completed exploratory OrthoBench
+sequence-search control; QfO extension remains outstanding. The interaction
 between broader candidates and reconciliation has descriptive OrthoBench
 evidence but awaits QfO evaluation and additional controls. Corrected multi-seed simulations are complete
 but do not establish an OrthoHMM advantage or profile-expansion benefit.

@@ -2463,3 +2463,36 @@ from frozen executor**b14b057** at
 `benchmarks/work/ob_search_score_21297.log`. The batch starts from the original
 repository verification directory and revalidates both graph tasks itself.
 No score or coverage outcome claimed from a pending/live job.
+
+### Sequence controls scored; tree perturbation panel prepared (2026-09-16)
+
+Previous turn was progress: paired scorer/native admission and queued job.
+Reread objective; coverage21294 completed0:0 in8:31 and scorer21297 completed
+0:0 in0:30. Scorer repeated native/coverage/input/reference gates and official
+crosschecks before20,000 paired RefOG draws/six-endpoint correction. Committed
+exact result copies `ob_sequence_search_results_20260916.json` (includes full
+coverage report) and `OB_SEQUENCE_SEARCH_RESULTS_20260916.md`.
+
+HMM baseline F1/P/R69.763388/78.868592/62.542944%;DIAMOND all_hits65.762183/
+55.036231/81.680884%;top10066.484803/55.897861/82.019046%. Control-minus-HMM
+F1 -4.001/-3.279pp;adjusted CIs[-14.834,6.688]/[-14.424,7.844],both include0.
+Precision decreases and recall increases with adjusted intervals excluding0.
+Both controls family F1 wins/ties/losses39/10/21. No HMM-specific F1 advantage
+established. Hit coverage differs substantially:18,235,373 HMM nonself hits
+versus99,848,167/48,740,683; all-hit intersection covers65.12% of HMM hits.
+HMM cache has no self hits, DIAMOND250,980, so raw no-hit query counts are not
+commensurate. Cross-species/no-nonself coverage is retained for interpretation.
+Manuscript and claims updated; no independent confirmation or default change.
+
+Started separate robustness requirement: added prespecified rooted-NNI
+protocol and deterministic topology generator using Bio.Phylo. Validated
+actual p1_c1_r1 native tree, then generated unchanged supplied control, three
+one-NNI and three two-NNI trees, selected by canonical topology hashes only.
+Preserved taxa, branch-value multiset, explicit rooting and rooted clade
+distances0/2/4. Roundtrip checks passed; source unchanged. Seven tests cover
+neighbor enumeration, deterministic panel, topology/length preservation and
+invalid inputs. Full unit suite **910 passed in27.25s**.
+Prepared output `benchmarks/results/ob_species_tree_robustness_v1`; committed
+manifest `ob_species_tree_robustness_prepared_20260916.json`. No reconciliation
+or robustness accuracy has run; first require supplied-control equivalence
+and validate checkpoint reuse. QfO graph diagnostic21295 still RUNNING13:12.

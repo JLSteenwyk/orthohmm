@@ -11,7 +11,8 @@ evidence that an experiment completed or a biological hypothesis is true.
 | Satellite_v2 has a higher observed OrthoBench aggregate F1 than full OrthoFinder | [Paired analysis](ORTHOBENCH_UNCERTAINTY_20260916.md) | Descriptively supported; interval includes zero; development-exposed |
 | Satellite_v2 trades higher precision for lower recall on OrthoBench | [Paired analysis](ORTHOBENCH_UNCERTAINTY_20260916.md) | Supported within this benchmark; not selection-adjusted generalization |
 | OrthoHMM outperforms full OrthoFinder overall | [Eight-method comparison](PUBLICATION_COMPARISON_ORTHOMCL_COMPLETE_20260916.md) | Not supported; endpoints and benchmark rankings differ |
-| HMM expansion contributes in historical OrthoBench processing | [Historical component audit](HISTORICAL_PROFILE_ABLATION_20260916.md) | Descriptive +0.595610 F1 points after refinement; no matched HMM-free control |
+| HMM expansion contributes in historical OrthoBench processing | [Historical component audit](HISTORICAL_PROFILE_ABLATION_20260916.md) | Descriptive +0.595610 F1 points; current factorial intervals include zero |
+| Initial HMM search improves F1 over sequence-search replacement | [Completed sequence controls](OB_SEQUENCE_SEARCH_RESULTS_20260916.md) | Not established: observed HMM F1 higher, both adjusted difference intervals include zero; hit sensitivity/calibration unmatched |
 | Broad candidates improve reconciliation | [Completed OrthoBench factorial](ORTHOBENCH_FACTORIAL_INTERPRETATION_20260916.md) | Recall rises and precision falls; candidate-expansion F1 intervals include zero; QfO and additional controls pending |
 | The frozen method was evaluated on novel taxa | [YGOB evaluation](YGOB_FROZEN_INTERPRETATION_20260916.md) | Complete bounded transfer evaluation; satellite F1 difference interval includes zero, precision higher and recall lower; not family-disjoint or superiority evidence |
 | Validation is family-disjoint | [Homology screen](ygob_homology_screen_20260916.json) | Not established; substantial detected overlap |
@@ -50,7 +51,9 @@ evidence that an experiment completed or a biological hypothesis is true.
   scheduler records retained. The complete eight-cell OrthoBench analysis and
   official-score crosschecks are in the
   [factorial results](ORTHOBENCH_FACTORIAL_RESULTS_20260916.md); QfO ablations,
-  matched sequence control and unconstrained membership diagnostic remain pending.
+  remain pending. OrthoBench [sequence controls](OB_SEQUENCE_SEARCH_RESULTS_20260916.md)
+  and [unconstrained diagnostic](ORTHOBENCH_UNCONSTRAINED_RESULTS_20260916.md)
+  are complete, without an established F1 advantage for either proposed change.
 - Replay `20919` was cancelled before execution and replaced by `21088`,
   using the identical pinned command without the unnecessary YGOB dependency
   or exclusive allocation. **21088 failed equivalence**: profile construction
