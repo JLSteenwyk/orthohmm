@@ -2100,3 +2100,37 @@ directories. QfO21288 confirmed RUNNING at24:34. Full suite on the corrected
 invocation: **818 passed in31.30s**. The prior 818-test run also passed before
 the first launch, illustrating why unit/preflight success alone did not prove
 the frozen replay would accept an incomplete diagnostic CLI invocation.
+
+### Sequence-search control prepared (2026-09-16)
+
+Previous turn was progress: launched the unconstrained diagnostic. Reread
+the objective and confirmed QfO21288/unconstrained21290 live. Inspected the
+built-in engine/profile implementation: initial HMM scores use raw integer
+scores divided once by sqrt(query_length*target_length), while phmmer mode
+uses different normalization and cannot directly enter high-sensitivity's
+in-memory multipass branch. A sequence-search adapter is therefore required.
+
+Read official DIAMOND command documentation and froze
+`SEQUENCE_SEARCH_CONTROL_PROTOCOL_20260916.md` before control outcomes.
+This is exploratory after development/held-out outcome inspection, not new
+independent confirmation or a new default. Use DIAMOND2.1.11 very-sensitive,
+12 species-specific target databases, all251,378 frozen query proteins,
+CPU32, E-value1e-4, BLOSUM62 gaps11/1, composition1/masking1, all targets and
+one HSP per pair. Record raw scores and both lengths; normalize with the same
+formula but do not claim equal score calibration or sensitivity. Retain
+self hits/asymmetry. Compare profile-off graph control to p0_c0_r0; a post
+search top100-per-query/target-species diagnostic does not reproduce the
+HMM prefilter cap. Two variants times F1/P/R form six exploratory endpoints.
+
+Added and ran `prepare_sequence_search_control.py` against pinned OrthoBench
+FASTA records. Prepared combined queries and gene/species/length metadata at
+`benchmarks/work/ob_sequence_search_control_v1`, plus12 exact search plans.
+Committed compact manifest snapshot `ob_sequence_search_prepared_20260916.json`
+SHA9edb1bb8232e114e12a6199412dd45a31d740c8a1dcba36fcf05d2c58b23095b.
+Four tests cover explicit settings/raw-score output, exact sequence/ID/length
+preservation, no overwrite, changed inputs and duplicate IDs. No control
+search or accuracy scoring has been run. Next: guarded search execution,
+strict numeric adapter, hit-coverage diagnostics and frozen downstream replay.
+Latest scheduler check:21290 RUNNING4:52;21288 RUNNING28:58.
+
+Full unit suite: **822 passed in38.55s**; scoped whitespace checks pass.
