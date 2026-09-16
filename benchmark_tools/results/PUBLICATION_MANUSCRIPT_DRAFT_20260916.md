@@ -303,10 +303,32 @@ Shared-node cached reconciliation costs are not end-to-end timings. The
 factorial remains development-exposed and supplies no new direct OrthoFinder
 comparison. [Results and interpretation](ORTHOBENCH_FACTORIAL_INTERPRETATION_20260916.md).
 
+![OrthoBench factorial scores and paired conditional effects](figures_orthobench_factorial_20260916/orthobench_factorial.png)
+
+Figure: all eight cell scores and 36 conditional-effect endpoints. Thick
+intervals are nominal 95% paired RefOG bootstrap intervals; thin intervals
+retain Bonferroni adjustment across all 36 endpoints. Each effect holds the
+other two factors fixed. Profile-off retains initial HMM search; this figure
+does not compare an HMM-free method or establish independent superiority.
+
+An exploratory unconstrained replay used the same expanded candidate families
+and reconciliation rules but omitted membership constraints. Native output
+validation and official-score crosschecks passed. Its F1 was72.614510%,
+precision76.092405%, and recall69.440641%, compared with74.106074%,81.770454%,
+and67.755336% under constraints. Unconstrained-minus-constrained F1 was
+-1.492 percentage points (three-endpoint Bonferroni interval[-5.873,0.931]);
+precision decreased5.678 points ([-14.307,-0.794]) and recall increased1.685
+points ([0.013,3.804]). Family F1 improved in5, tied in55, and declined in10
+RefOGs. These development-exposed results describe a precision-recall tradeoff,
+not a demonstrated F1 improvement or statistically established F1 loss.
+They do not justify removing constraints as a new default.
+[Diagnostic results](ORTHOBENCH_UNCONSTRAINED_RESULTS_20260916.md).
+
 ## Limitations And Unfinished Analyses
 
 No universal superiority, arbitrary-dataset generalization, or controlled
-speedup is established. Independent validation is pending. Homolog-family
+speedup is established. Frozen YGOB evaluation is complete and supports
+novel-taxon transfer, not family-disjoint confirmation. Homolog-family
 overlap remains substantial even after taxon exclusions. The proposed HMM
 contribution requires a matched sequence-search control, and the interaction
 between broader candidates and reconciliation has descriptive OrthoBench

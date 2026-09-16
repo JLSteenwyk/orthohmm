@@ -2289,3 +2289,37 @@ Latest scheduler check:21290 RUNNING29:20,21288 RUNNING53:26,
 21292 RUNNING3:49,21293 dependency-pending. Next: native-admit and score
 the diagnostic after terminal completion; audit conversion and graph controls;
 complete the QfO replay equivalence check without interrupting its active job.
+
+### Factorial figure and unconstrained diagnostic completed (2026-09-16)
+
+Previous turn was progress: gated diagnostic scoring implementation and tests.
+Reread objective and polled authoritative scheduler state. Added publication
+factorial plotter, seven tests, and PNG/PDF/SVG with hash manifest. It renders
+all eight cells and all36 contrast endpoints, with nominal and adjusted
+intervals; validated identities, point differences, finite scores and nested
+intervals. Visually inspected the PNG: no overlapping labels or omitted
+endpoints. Integrated figure into manuscript and corrected stale independent-
+validation status to completed YGOB novel-taxon transfer with family overlap.
+Full unit suite **864 passed in23.94s**.
+
+During this turn21290 completed0:0 in32:44. Ran the gated assembler end to end:
+both native outputs/provenance passed, complete input coverage was checked,
+frozen reference admission and official-score crosschecks passed, and
+20,000 paired RefOG draws with three-endpoint Bonferroni adjustment completed.
+Full source output: `benchmarks/results/ob_unconstrained_scoring_v1`.
+Committed copies: `orthobench_unconstrained_results_20260916.json` and
+`ORTHOBENCH_UNCONSTRAINED_RESULTS_20260916.md`.
+
+Unconstrained F1/P/R72.614510/76.092405/69.440641%, versus constrained
+74.106074/81.770454/67.755336%. Differences -1.492/-5.678/+1.685pp;
+adjusted intervals[-5.873,0.931]/[-14.307,-0.794]/[0.013,3.804].
+Family F1 wins/ties/losses5/55/10. No F1 superiority or established F1 loss;
+precision-recall tradeoff does not justify removing constraints by default.
+Exploratory development-exposed evidence, not a ninth factorial cell or a new
+independent confirmation. Manuscript records results and limitations.
+
+Latest scheduler:21288 RUNNING59:09,21292 RUNNING9:32,
+21293 dependency-pending. No numeric-control or QfO equivalence outcome yet.
+Next: finish conversion/graph-control admission and sensitivity diagnostics;
+complete QfO replay then its component analysis; retain remaining robustness,
+error tracing, controlled scaling, biological application and release scope.
