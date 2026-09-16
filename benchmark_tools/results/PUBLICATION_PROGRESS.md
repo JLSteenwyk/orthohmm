@@ -1280,3 +1280,31 @@ reconciliation cells from this manifest, then score all eight cells under the
 prespecified protocol; retain required unconstrained and sequence controls and
 the QfO factorial. Continue monitoring both corrected simulation arrays and
 YGOB without changing active runtime/source files.
+
+## OrthoBench Reconciliation Execution Wrapper
+
+Previous turn progressed through candidate preparation and guarded YGOB
+resubmission. Re-read the full objective and confirmed live simulation arrays
+21142/21143 and YGOB 21192. None has been scored. Now implementing the four
+R=1 cells from the prepared eight-cell factorial; the four R=0 cells use the
+existing candidate partitions.
+
+Added `run_orthobench_factorial_cell.py`: exact plan comparison rejects changed
+CPU/settings, foreign constraints or reference-scoring arguments; verifies
+preparation completion, replay equivalence, input/trace/source file hashes and
+full core source sets; uses the pinned replay harness and frozen tool environment.
+Reuses the tested execution recorder for refusal to overwrite outputs, per-cell
+GNU-time/log/status evidence and complete output inventories. Dependencies are
+rechecked after execution. Success remains pending native validation/scoring.
+The execution scope is reconciliation only, with profile expansion inherited
+from the verified upstream replay, not recomputed in a source-only checkout.
+
+Seven targeted tests pass. Actual p0_c0_r1 --check-only passes against the full
+OrthoBench inputs and frozen files, without inference or labels. Added a pinned
+Slurm array launcher, four tasks with at most two concurrent, 32 CPUs/64 GiB
+and 24 hours each. Prospective execution amendment records the shared-node
+timing limitation before any reconciliation outcomes. Full tests pending.
+
+Full suite **664 passed in 27.67s**; shell syntax and scoped diff checks pass.
+Set the child working directory explicitly to the pinned replay worktree and
+record it, so git provenance cannot inherit an unrelated submission directory.

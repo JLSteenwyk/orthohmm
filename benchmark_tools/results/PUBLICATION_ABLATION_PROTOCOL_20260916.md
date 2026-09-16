@@ -124,3 +124,23 @@ scoring. Pin the amended launcher before submission. The original evidence
 and original checkout remain untouched. Success means all four partitions
 match, not merely that the profile probe or native process succeeded. Any
 remaining discrepancy must be diagnosed before preparing factorial cells.
+
+## Reconciliation Execution Freeze
+
+Corrected replay 21138 passed all four historical partitions byte-for-byte.
+Preparation 21161 completed successfully and produced the committed
+`orthobench_factorial_prepared_20260916.json` (SHA256
+5c325f4d77865e0c7571fe4bb4df0be0959977a49e1d22169f192518700f9382).
+Its eight cell definitions are unchanged. Execute the four R=1 cells using
+their recorded commands and per-arm constraints; R=0 outputs remain the
+already-prepared partitions, not additional inference jobs.
+
+Use at most two concurrent reconciliation tasks, each with 32 CPUs, 64 GiB
+and a 24-hour limit on the shared node. Record incremental resource use and
+retain failures. The cell wrapper verifies frozen commands, full core source
+sets, FASTA/candidate/trace hashes, successful preparation, replay equivalence
+and the pinned tool environment before execution, then rechecks dependencies
+afterward. It refuses existing output directories and records complete output
+inventories. Pipeline exit and file inventory do not replace native validation
+or correct output conversion. No official reference benchmark is passed into
+the inference process. Freeze/push the wrapper before submission.
