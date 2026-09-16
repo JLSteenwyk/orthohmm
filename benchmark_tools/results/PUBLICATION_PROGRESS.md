@@ -949,3 +949,20 @@ core revision, tool-entrypoint records and scientific command options with
 v1; all recorded source/tool files and both interpreter inventories passed
 preflight. The generic generation launcher also passed its full check-only
 preflight for the final task (divergent_turnover_20261110).
+
+After committing/pushing both manifests, submitted v2 generation array
+**21009** (40 tasks, one CPU and 8 GiB each, concurrency two) and method
+array **21010** (70 tasks, four CPUs and 16 GiB each, concurrency two), with
+`afterok:21009` on the method array. Both use the pinned worktrees/commits
+above; neither changes v1 job 20957. Logs are under the v2 panel's `slurm/`
+and `method_slurm/` directories. The scheduler initially reports generation
+pending on priority; completion is not assumed. Full unit suite: **618 passed
+in 23.00s**.
+
+Next: monitor authoritative terminal outcomes; verify all v2 paired histories
+and exported length checks; finish native numerical/completion failure
+accounting and scoring for both panels; extend the prespecified aggregation
+to the new seed/bootstrap constants without pooling panels. The queued YGOB
+validation and OrthoBench replay, HMM/phylogeny ablations, other robustness
+and efficiency experiments, biological application and final publication
+package remain outstanding.
