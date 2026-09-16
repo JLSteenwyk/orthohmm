@@ -179,3 +179,23 @@ processing produces root HOGs. The first extraction's consecutive checkpoint
 differences are numerically descriptive but were incorrectly labeled as a
 single computational chain. Keep that report and correct the transition labels
 using the unchanged full pair table; no inference or search rerun is needed.
+
+## Recorded Reconciliation Decomposition
+
+Extend the retained trace to every candidate family touching any of the70
+references, independent of whether it lost pairs. Validate source-family labels
+against the native candidate partition; retain both reconciled and bypassed
+candidates. Read the hash-recorded native node table and selected checkpoints
+and tree files. Reconstruct fixed species-overlap root groups and native
+high-confidence cross-species support pairs from these saved calls, then apply
+every logged constraint within each selected candidate. Require exact native
+final membership before reporting any decomposition.
+
+For each reference pair, report already-separated candidates, root-lineage
+separation, subsequent constraint separation, or final retention. Preserve
+execution order and do not double-count a root-lineage loss as a later
+constraint loss. Root duplication is species-root-mapped overlap under the
+frozen rule, including splits propagated through ancestors. Saved calls are
+not independent verification of rooting or evolutionary history. This is a
+descriptive mechanism audit of retained outputs, not a new significance test,
+parameter optimization or biological confidence calibration.

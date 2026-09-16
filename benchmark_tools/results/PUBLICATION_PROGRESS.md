@@ -3008,3 +3008,45 @@ independent annotations and biological application remain open.
 
 Focused26 tests passed; full unit suite **1092 passed in29.51s**.21311 remains
 RUNNING at21:36, first one-CPU arm only completed; no affinity conclusion yet.
+
+### Recorded root-lineage versus constraint decomposition (2026-09-16)
+
+Previous turn made progress: admitted complete native pair trace and corrected
+branch semantics. Reread objective;21311 still running. Source inspection
+established the node table retains pre-constraint reconciliation calls, while
+rootHOGs are post-constraint. Frozen phylogeny.py/pipeline.py are byte-identical
+to reviewed main sources. Added a reconstruction helper plus full native-file
+assembler, supporting only the frozen species_overlap/positive_paralogy rules.
+
+All250 reference-incident candidate families reconstructed exactly:114 have
+node tables,136 valid bypass cases. All193 internal constraints included,
+121supported/72detached. This scope differs from168 directly reference-incident
+logged merges and does not claim the genome-wide8,440-constraint audit.
+Node topology, child membership/species overlap, pair-event rules, selected
+tree/checkpoint hashes, final candidate boundaries and all final group memberships
+checked. Complete pair decomposition matches the prior40,733-row trace.
+
+Native pair dispositions:16,264 already in different candidates;134 root-lineage
+splits;1,441 subsequent constraint splits;22,894 retained. Four reference families
+have root-lineage losses and six constraint losses, withRefOG011 shared. All61
+other families have no post-candidate within-reference loss. Frozen illustrations
+014and021 lose95/806 pairs at the constraint step; four other illustrations are
+neutral at these steps. No biological truth or default change follows; the
+unconstrained control's precision cost remains relevant.
+
+Preserved exploratory extracts v1/v2; their only candidate-report difference
+was unordered final-group serialization. Canonicalized group order forv3;
+all candidate partitions and reference classifications agree after normalization.
+Final564 provenance records independently rechecked. Snapshot
+`ob_reconciliation_trace_20260916.json` SHA256
+4d5822db16b7c326ce2ac923ecd98395ea4bf9d0ef77cfa0a3cae4a9d1d0ebb9.
+Result interpretation, all affected families, six frozen illustrations, protocol
+and manuscript updated. Fifteen focused tests include native-reconciler parity;
+full unit suite **1107 passed in29.41s**.
+
+QfO21311 remains RUNNING at34:10. First one-CPU and32-CPU arms both yielded
+8c162782bba955078a8f7e4e6088df5b34c9f15b055803224e513fdea8b33cdd,
+with recorded software identity excluding affinity equal. Two repeats remain;
+do not infer affinity causation or general determinism from this partial panel.
+Tree-history validation, edge/rejection tracing, independent annotations,
+QfO/control/parameter/scaling/application/release requirements remain active.

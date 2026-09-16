@@ -441,6 +441,19 @@ Rejected-search candidates, added profile-edge identities and per-family
 tree/constraint mechanisms still require inspection; no biological mechanism
 or new default is inferred from these membership changes alone.
 
+Reconstruction of the250 reference-incident candidate families distinguished
+root-lineage extraction from subsequent satellite membership constraints.
+For114 reconciled and136 bypassed candidates, saved node calls and all193
+local constraints exactly reproduced native final groups. Of1,575 lost
+within-reference pairs,134 were separated by root-lineage rules and1,441
+by subsequent constraints, affecting four and six families respectively
+(one family in both sets). Among the frozen illustrations, losses inRefOG014
+andRefOG021 occurred at the constraint step. These are execution-order
+descriptions, not official recall, independent tree validation or a claim that
+constraints should be removed; the unconstrained control showed a precision
+cost without established F1 improvement.
+[Full reconciliation trace and limitations](OB_RECONCILIATION_TRACE_20260916.md).
+
 ## Limitations And Unfinished Analyses
 
 ### Remaining Requirements
