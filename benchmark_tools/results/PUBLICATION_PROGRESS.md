@@ -2526,3 +2526,29 @@ Log `benchmarks/work/ob_tree_control_21298.log`; evidence and new native output
 under `benchmarks/results/ob_supplied_tree_control_v1`. No perturbation cells
 launched: first require this arm's native validation and partition equivalence
 to inferred p1_c1_r1. QfO graph diagnostic21295 remains a separate live job.
+
+### Supplied-tree control equivalence established (2026-09-16)
+
+Previous turn was progress: checkpoint-reuse test strengthening and supplied
+control launch. Reread objective and revalidated live handles. Job21298
+completed0:0 in2:35. Added `validate_species_tree_control.py`, requiring
+terminal scheduler success, exact frozen executor/tree/candidate/environment
+provenance, successful unscored execution/postflight and unchanged original
+native checkpoint source. It reuses shared native checks, extended only for
+explicitly declared supplied tree/checkpoint parameters and argv destinations.
+Ordinary factorial cells retain inferred-tree requirements.
+
+Actual full validation passed, including original p1_c1_r1 validation after
+the shared-validator refactor. Supplied and inferred root-HOG partitions are
+exactly equivalent:59,770 groups each, zero expected-only/observed-only groups.
+Every reconciled family reused its raw gene-tree checkpoint:8,681/8,681;
+rooting/reconciliation was recomputed. No benchmark accuracy recomputed.
+Evidence: `ob_supplied_tree_control_validation_20260916.json`.
+
+Eight new tests cover supplied metadata and execution-status admission;
+full unit suite **925 passed in26.26s**. This establishes supplied-mode
+baseline compatibility, not robustness to tree errors. Next freeze and launch
+the six already-selected perturbation commands against this validated control,
+then native-validate and score all18 prespecified F1/P/R contrasts. QfO graph
+diagnostic21295 still RUNNING23:06 in its second clustering repeat; no final
+repeatability result claimed from intermediate artifacts.

@@ -1,0 +1,176 @@
+{
+  "accuracy_evaluated": false,
+  "baseline_validation": {
+    "accuracy_evaluated": false,
+    "cell": "p1_c1_r1",
+    "integrity": {
+      "accounting_raw": "JobID|JobIDRaw|State|ExitCode|Elapsed\n21248_0|21249|FAILED|1:0|00:26:37\n21248_0.batch|21249.batch|FAILED|1:0|00:26:37\n21248_1|21250|FAILED|1:0|00:32:45\n21248_1.batch|21250.batch|FAILED|1:0|00:32:45\n21248_2|21287|FAILED|1:0|00:25:30\n21248_2.batch|21287.batch|FAILED|1:0|00:25:30\n21248_3|21248|FAILED|1:0|00:32:55\n21248_3.batch|21248.batch|FAILED|1:0|00:32:55\n",
+      "accuracy_evaluated": false,
+      "cell": "p1_c1_r1",
+      "environment_manifest": {
+        "bytes": 488540,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_variable_native_methods_20260916.json",
+        "sha256": "bf677728cf9312edd9755d9ac1ceefbce3abb8c3848d43413631dc00ca00eb2f"
+      },
+      "executor_commit": "9a8630197401d97e4fcc131f4939433bd3b89aac",
+      "limitation": "Original scheduler failure retained; native semantics and conversion gates remain required.",
+      "native_outputs_validated": false,
+      "original_batch_log": {
+        "bytes": 775,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_ob_factorial_logs_v1/cell_21248_3.log",
+        "sha256": "6de2a46a27dbde05e849ea85883881d934c8889cd9f770f7033ec9e322054d83"
+      },
+      "original_status": {
+        "bytes": 19993193,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/execution/p1_c1_r1/status.json",
+        "sha256": "eb1592b01e157d266ec089bb790b62fa0aea4b35d1f01b6e9d08f9357fc8b1dd"
+      },
+      "prepared_manifest": {
+        "bytes": 63452,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/orthobench_factorial_prepared_20260916.json",
+        "sha256": "5c325f4d77865e0c7571fe4bb4df0be0959977a49e1d22169f192518700f9382"
+      },
+      "scheduler": {
+        "Elapsed": "00:32:55",
+        "ExitCode": "1:0",
+        "JobID": "21248_3",
+        "JobIDRaw": "21248",
+        "State": "FAILED"
+      },
+      "schema_version": 1,
+      "scoring_admitted": false,
+      "status": "postflight_integrity_verified",
+      "verification_cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "verified_artifact_count": 52499,
+      "verifier": {
+        "bytes": 6638,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/recover_factorial_postflight.py",
+        "sha256": "d7c1d6bf4fd38c16cb9d8724f7558a08749aab34de9b776a6db288b93ab09198"
+      }
+    },
+    "membership": {
+      "constraints": 8440,
+      "detached_constraints": 2588,
+      "detached_genes": 8401,
+      "ortholog_pairs_removed": 16885,
+      "policy": "high_confidence_pair",
+      "root_hogs_added": 2117,
+      "supported_constraints": 5852
+    },
+    "native_manifest": {
+      "bytes": 9775,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/cells/p1_c1_r1/orthohmm_phylogeny/provenance_manifest.json",
+      "sha256": "0521bccd0697f9e0fc464c9a0cd8ab05dcf74c02d00d26dfa006d5520fec5a54"
+    },
+    "native_metrics": {
+      "bytes": 6489,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/cells/p1_c1_r1.json",
+      "sha256": "e87e31f5715d1cca1a3934b7731cd3ad68e62209d6df67a23d2463f1b814816f"
+    },
+    "native_outputs_validated": true,
+    "partition": {
+      "all_candidate_genes_preserved": true,
+      "candidate_families": 54445,
+      "candidate_genes": 251378,
+      "cross_source_merges": 0,
+      "root_hog_genes": 251378,
+      "root_hogs": 59770,
+      "split_source_families": 2016
+    },
+    "schema_version": 1,
+    "scope": "Root-HOG group benchmark admission only; no pairwise-truth evaluation or independent tree reconstruction.",
+    "species_tree": {
+      "bytes": 717,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/cells/p1_c1_r1/orthohmm_phylogeny/species_tree.rooted.nwk",
+      "sha256": "61ba4deadbc1f1e357b892bad11ac6b605e0495393816f077badaeb35b183878"
+    },
+    "status": "native_group_output_verified",
+    "verifier": {
+      "bytes": 9039,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_factorial_native.py",
+      "sha256": "25675b8ac6e0699c5c584fa45abbb7ab09d2df9f4b89cb1cc25dadb4dc652224"
+    }
+  },
+  "execution": [
+    {
+      "bytes": 9090,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_supplied_tree_control_v1/preflight.json",
+      "sha256": "df8d3aefa56c5635bdf6034e785bb67d4efe92982d24d93490463dfcb45269ad"
+    },
+    {
+      "bytes": 2846,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_supplied_tree_control_v1/postflight.json",
+      "sha256": "02275f3b00262b09d78e85ec63cf1c6d504066f0c0659def3307cd47c24fc2ef"
+    },
+    {
+      "bytes": 19580659,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_supplied_tree_control_v1/execution/status.json",
+      "sha256": "b08689c1a70cbe48ffb3e005a107d16ad037ca90cf6349721ed6c7417796f083"
+    }
+  ],
+  "expected_groups": 59770,
+  "expected_only_groups": 0,
+  "native_validation": {
+    "accuracy_evaluated": false,
+    "cell": "p1_c1_r1_supplied_control",
+    "integrity": {
+      "scheduler": {
+        "Elapsed": "00:02:35",
+        "ExitCode": "0:0",
+        "JobIDRaw": "21298",
+        "State": "COMPLETED"
+      },
+      "verified_artifacts": 52499
+    },
+    "membership": {
+      "constraints": 8440,
+      "detached_constraints": 2588,
+      "detached_genes": 8401,
+      "ortholog_pairs_removed": 16885,
+      "policy": "high_confidence_pair",
+      "root_hogs_added": 2117,
+      "supported_constraints": 5852
+    },
+    "native_manifest": {
+      "bytes": 5085,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_supplied_tree_control_v1/output/orthohmm_phylogeny/provenance_manifest.json",
+      "sha256": "be7a4251cfe5ecc4df9886af83c88bfae831bacd2001d1b461e1d5ba2f60c49f"
+    },
+    "native_metrics": {
+      "bytes": 7149,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_supplied_tree_control_v1/metrics.json",
+      "sha256": "34dbaa70a83d851c0f5fb4b333abc99c7a798fb8be6ded6cf186c453fe3b3578"
+    },
+    "native_outputs_validated": true,
+    "partition": {
+      "all_candidate_genes_preserved": true,
+      "candidate_families": 54445,
+      "candidate_genes": 251378,
+      "cross_source_merges": 0,
+      "root_hog_genes": 251378,
+      "root_hogs": 59770,
+      "split_source_families": 2016
+    },
+    "schema_version": 1,
+    "scope": "Root-HOG group benchmark admission only; no pairwise-truth evaluation or independent tree reconstruction.",
+    "species_tree": {
+      "bytes": 721,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_supplied_tree_control_v1/output/orthohmm_phylogeny/species_tree.rooted.nwk",
+      "sha256": "2d32226c46c08d0665a50e2691bd931130e048313b9d9338bd85c484600a3291"
+    },
+    "status": "native_group_output_verified",
+    "verifier": {
+      "bytes": 9039,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_factorial_native.py",
+      "sha256": "25675b8ac6e0699c5c584fa45abbb7ab09d2df9f4b89cb1cc25dadb4dc652224"
+    }
+  },
+  "observed_groups": 59770,
+  "observed_only_groups": 0,
+  "status": "equivalent",
+  "verifier": {
+    "bytes": 6789,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_species_tree_control.py",
+    "sha256": "89fd9648b588957c2250ca105c7c340e24f7a58cc5c4ae6f481a18facd164ea6"
+  }
+}

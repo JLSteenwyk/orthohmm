@@ -19,10 +19,12 @@ from benchmark_tools.validate_factorial_partition import validate_partition
 def check_native_metadata(metrics, native, cell, constraint_count):
     explicit = bool(cell.get("omitted_membership_constraints"))
     expanded = cell["candidate_expansion"] and not explicit
-    expected = {"aligner": "mafft", "checkpoint_source": None, "cpu": 32,
+    supplied = cell.get("species_tree")
+    checkpoint = cell.get("checkpoint_source")
+    expected = {"aligner": "mafft", "checkpoint_source": str(Path(checkpoint) / "orthohmm_phylogeny") if checkpoint else None, "cpu": 32,
                 "explicit_unconstrained_ablation": explicit, "pair_orthology_rule": "positive_paralogy",
-                "root_duplication_rule": "species_overlap", "species_tree": None,
-                "species_tree_mode": "infer", "species_tree_rooting": "min_variance",
+                "root_duplication_rule": "species_overlap", "species_tree": supplied,
+                "species_tree_mode": "supplied" if supplied else "infer", "species_tree_rooting": "min_variance",
                 "tree_builder": "FastTree",
                 "satellite_membership_policy": "high_confidence_pair" if expanded else "unconstrained"}
     if metrics.get("status") != "complete" or metrics.get("parameters") != expected:
@@ -34,8 +36,9 @@ def check_native_metadata(metrics, native, cell, constraint_count):
     for key in ("pair_orthology_rule", "root_duplication_rule", "species_tree_mode", "species_tree_rooting"):
         if native.get(key) != expected[key]:
             raise ValueError(f"Native rule mismatch: {key}")
-    if native.get("species_tree_source") != "internally_inferred_from_orthohmm_single_copy_families":
-        raise ValueError("Expected independently inferred species tree")
+    expected_source = supplied["path"] if supplied else "internally_inferred_from_orthohmm_single_copy_families"
+    if native.get("species_tree_source") != expected_source:
+        raise ValueError("Species tree source differs from the declared cell")
     membership = native.get("membership_reconciliation")
     if expanded:
         if (not isinstance(membership, dict) or membership.get("policy") != "high_confidence_pair" or
@@ -57,9 +60,9 @@ def validate(root, index):
 
 def validate_native_cell(prepared, environment, cell, output, launcher, integrity):
     """Native semantics shared by factorial cells and the isolated diagnostic."""
-    target = output / "cells" / cell["label"]
+    target = Path(cell["argv"][cell["argv"].index("--output-directory") + 1])
     native_dir = target / "orthohmm_phylogeny"
-    metrics_path = output / "cells" / (cell["label"] + ".json")
+    metrics_path = Path(cell["argv"][cell["argv"].index("--json") + 1])
     metrics = json.loads(metrics_path.read_text())
     native_path = native_dir / "provenance_manifest.json"
     native = json.loads(native_path.read_text())

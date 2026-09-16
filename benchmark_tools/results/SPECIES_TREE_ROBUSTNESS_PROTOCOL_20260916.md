@@ -46,3 +46,13 @@ Report failures, all effects and coverage; no selection of a best tree.
 This panel does not satisfy the separate parameter-neighborhood, QfO
 robustness, simulation-truth tree-error or controlled scaling requirements.
 Tree generation alone is not a completed reconciliation/accuracy experiment.
+
+## Supplied Control Admission
+
+The unchanged supplied-tree control21298 completed successfully. Native
+validation and source-preservation checks passed; its59,770 root-HOG groups
+exactly reproduce inferred p1_c1_r1 (zero unmatched groups). All8,681
+reconciled families reused raw-tree checkpoints while reconciliation reran.
+See `ob_supplied_tree_control_validation_20260916.json`. This satisfies the
+baseline-mode gate only. The six perturbation runs and18-endpoint accuracy
+comparison remain outstanding; no tree-error robustness conclusion is made.

@@ -71,3 +71,16 @@ def test_unconstrained_diagnostic_rejects_unacknowledged_mode():
     cell["omitted_membership_constraints"] = "/original/constraints.json"
     with pytest.raises(ValueError, match="parameters"):
         check_native_metadata(metrics, native, cell, 0)
+
+
+def test_supplied_control_requires_exact_tree_and_checkpoint_provenance():
+    metrics, native, cell, count = fixture(True)
+    cell["species_tree"] = {"path": "/trees/control.nwk", "sha256": "treehash", "bytes": 20}
+    cell["checkpoint_source"] = "/baseline"
+    metrics["parameters"].update(species_tree=cell["species_tree"], species_tree_mode="supplied",
+                                  checkpoint_source="/baseline/orthohmm_phylogeny")
+    native.update(species_tree_mode="supplied", species_tree_source="/trees/control.nwk")
+    check_native_metadata(metrics, native, cell, count)
+    native["species_tree_source"] = "/other.nwk"
+    with pytest.raises(ValueError, match="source"):
+        check_native_metadata(metrics, native, cell, count)
