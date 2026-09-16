@@ -1,0 +1,96 @@
+{
+  "accuracy_evaluated": false,
+  "execution": {
+    "bytes": 47007,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_sequence_search_control_v1/execution.json",
+    "sha256": "9c1b18447a7bd03781c56e6030d6c2c9d7914533e6bc2ffea8b137209445b0e7"
+  },
+  "normalization": "DIAMOND raw score / sqrt(query_length * target_length), once only",
+  "scheduler": {
+    "Elapsed": "00:17:32",
+    "ExitCode": "0:0",
+    "JobIDRaw": "21291",
+    "State": "COMPLETED"
+  },
+  "schema_version": 1,
+  "source": {
+    "bytes": 7396,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_ob_sequence_conversion_v1/benchmark_tools/convert_sequence_search_control.py",
+    "sha256": "b451d89a53102128dee4e65b64b7b970a4a048d51bec1bc6c4aabf762597f70c"
+  },
+  "sqlite_version": "3.41.2",
+  "status": "numeric_checkpoints_verified",
+  "tie_break": "descending raw score, then lexical target gene ID",
+  "variants": {
+    "all_hits": {
+      "audit": {
+        "accuracy_evaluated": false,
+        "auditor": {
+          "bytes": 4044,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_ob_sequence_conversion_v1/benchmark_tools/audit_accuracy_checkpoint.py",
+          "sha256": "b71fa9cf1d2cb954206e61179535d7e22fc39946c4de97af6fa45533f7eb9643"
+        },
+        "limitations": "Checks hashes and numeric integrity, not FASTA/source equivalence, hit completeness or duplicate ordered pairs.",
+        "manifest": {
+          "bytes": 806,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_sequence_numeric_v1/all_hits/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json",
+          "sha256": "d15f4e28d6a43c01c7178272b8849e40ca4e9c2415c1aa2ad126db69b149b2a7"
+        },
+        "schema_version": 1,
+        "status": "numeric_checkpoint_verified",
+        "summary": {
+          "gene_names_lexically_sorted": true,
+          "genes": 251378,
+          "hits": 100099147,
+          "maximum_score": 6.833333333333333,
+          "minimum_score": 0.00790138159352242,
+          "nonpositive_scores": 0,
+          "self_hits": 250980,
+          "species": 12
+        }
+      },
+      "cap": null,
+      "checkpoint": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_sequence_numeric_v1/all_hits/orthohmm_working_res/high_sensitivity_checkpoint",
+      "manifest": {
+        "bytes": 806,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_sequence_numeric_v1/all_hits/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json",
+        "sha256": "d15f4e28d6a43c01c7178272b8849e40ca4e9c2415c1aa2ad126db69b149b2a7"
+      }
+    },
+    "top100": {
+      "audit": {
+        "accuracy_evaluated": false,
+        "auditor": {
+          "bytes": 4044,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_ob_sequence_conversion_v1/benchmark_tools/audit_accuracy_checkpoint.py",
+          "sha256": "b71fa9cf1d2cb954206e61179535d7e22fc39946c4de97af6fa45533f7eb9643"
+        },
+        "limitations": "Checks hashes and numeric integrity, not FASTA/source equivalence, hit completeness or duplicate ordered pairs.",
+        "manifest": {
+          "bytes": 805,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_sequence_numeric_v1/top100/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json",
+          "sha256": "3f4eecf91de8d1ff805321c00f4b929fe47838ea6b26cf57dc61df26e0b81768"
+        },
+        "schema_version": 1,
+        "status": "numeric_checkpoint_verified",
+        "summary": {
+          "gene_names_lexically_sorted": true,
+          "genes": 251378,
+          "hits": 48991663,
+          "maximum_score": 6.833333333333333,
+          "minimum_score": 0.00790138159352242,
+          "nonpositive_scores": 0,
+          "self_hits": 250980,
+          "species": 12
+        }
+      },
+      "cap": 100,
+      "checkpoint": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_sequence_numeric_v1/top100/orthohmm_working_res/high_sensitivity_checkpoint",
+      "manifest": {
+        "bytes": 805,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_sequence_numeric_v1/top100/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json",
+        "sha256": "3f4eecf91de8d1ff805321c00f4b929fe47838ea6b26cf57dc61df26e0b81768"
+      }
+    }
+  }
+}

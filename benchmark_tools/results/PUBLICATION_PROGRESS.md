@@ -2402,3 +2402,30 @@ Output `benchmarks/results/qfo_initial_graph_diagnostic_v1`; log
 `benchmarks/work/qfo_graph_diag_21295.log`. This is a targeted new experiment,
 not a restart or replacement of failed-equivalence21288. Original outputs
 remain unchanged. No graph-equivalence or repeatability outcome claimed yet.
+
+### Sequence conversion completed; graph-control admission prepared (2026-09-16)
+
+Previous turn was progress: targeted QfO diagnostic implementation and launch.
+Reread objective and polled all active handles. Conversion21292 completed0:0
+after25:12. The producer's final manifest records numeric checkpoints verified:
+all_hits100,099,147 rows;top10048,991,663 rows. Both retain251,378 genes across
+12 species and250,980 self hits; all scores positive and finite. Preserved an
+exact committed manifest copy at `ob_sequence_numeric_conversion_20260916.json`.
+These are search/conversion counts, not biological sensitivity or accuracy.
+Both downstream chains started:21293_0 graph inference and21294 hit coverage;
+the second serial graph variant remains dependency-pending.
+
+Added `validate_sequence_graph_control.py`, requiring both terminal-success
+array tasks with correct raw job identity, pinned executor588d92f, unchanged
+source/runtime/commands/environment, admitted checkpoint contents and complete
+gene partitions. Checks profile-off stage inventory, every stage hash/count,
+final native-output hashes, and preflight/postflight provenance. Revalidates
+artifacts after reading. Native admission does not evaluate benchmark labels.
+Sixteen focused scheduler/status/command/profile/environment rejection tests
+pass; full unit suite **895 passed in27.97s**.
+
+QfO diagnostic21295 remains live with preserved RBNH arrays and its first
+clustering repeat in progress. Do not infer final repeatability from these
+intermediate files. Next: terminal admission of coverage and graph controls,
+paired control scoring with six-endpoint correction, and completed QfO
+diagnostic interpretation before choosing any additional replay experiment.
