@@ -999,3 +999,32 @@ without writing results. Label-blind admission checks on completed task
 admitted and both OrthoFinder views were rejected for missing native
 completion despite exit zero. No accuracy was computed in this check.
 Commit/pin the assembler before full-panel scoring once the jobs finish.
+
+Assembler `a58fd3a` was committed/pushed and pinned in
+`benchmarks/work/publication_simulation_scoring_v1`. Once all v1 tasks were
+terminal, it produced `simulation_fixed_length_results_20260916.json` with
+280 explicit outcomes. The generated Markdown table includes completed,
+failed and inapplicable denominators alongside available-case means and
+paired intervals. A renderer test proves all-failed means remain NA. Full
+suite after the renderer: **627 passed in 22.33s**.
+
+Actual v1 admission: high sensitivity 70 complete; satellite_v2 64 complete
+and six execution failures; OrthoFinder full 70 rejected (48 missing native
+completion, 22 nonfinite graphs), with all checkpoint views also rejected.
+Thus no OrthoFinder comparative F1 or CI can be estimated on this stress
+panel. Baseline descriptive OrthoHMM F1 means are 96.29% and 99.68%, each
+from ten successful seeds. Do not interpret these as competitor superiority.
+All six satellite_v2 native logs identify insufficient connected single-copy
+family coverage for species-tree inference on divergent seeds 20261003,
+20261006 and 20261007. Its seven-seed divergent means are conditional and
+not directly paired against the ten-seed high-sensitivity means.
+See `SIMULATION_FIXED_LENGTH_INTERPRETATION_20260916.md` for scope and paths.
+
+V2 generation 21009 finished, and dependent method array 21010 is running.
+Pinned history verification succeeded for all 20 pairs; inventories are in
+`variable_simulation_histories_20260916.json`. Re-read all 40 native prepared
+exports with Bio.SeqIO and re-applied `check_family_lengths` to 33,618 sequence
+instances: every length matched its frozen assignment and exported validation
+metadata, and assignment hashes matched. No v2 accuracy has been evaluated.
+The broader publication goal remains active; queued YGOB/replay, ablations,
+additional robustness/efficiency/application work and final packaging remain.
