@@ -440,3 +440,28 @@ before opening prediction files or writing verification output. This is an
 expected refusal, not a failed inference or grounds to restart the job.
 The prior report assembly milestone remains intact; no held-out outcomes
 were inspected and no queued inference configuration was changed.
+
+## Initial Manuscript And Claim Audit
+
+`PUBLICATION_MANUSCRIPT_DRAFT_20260916.md` now provides the study objective,
+benchmark/output semantics, statistical methods, prospective validation and
+ablation descriptions, evidence-backed development Results, limitations,
+and an explicit unfinished data/code availability statement. It does not
+claim held-out success, overall superiority, controlled speedups, or a
+completed archive. The historical source records are distinguished from
+the prospective source pin. Literature bibliography and detailed final
+algorithm description remain to be completed alongside the open experiments.
+
+`PUBLICATION_CLAIMS_20260916.md` maps proposed claims to evidence and audits
+all seven original work packages. A linked protocol is explicitly not
+treated as a completed experiment. Missing provenance, matched HMM controls,
+error strata/tracing, simulations, robustness/scaling, biological application,
+release/security work, and archival steps remain visible completion gates.
+
+Validated all 29 local evidence links across the two documents and checked
+nine principal manuscript point estimates directly against the committed
+comparison JSON. Remaining detailed numbers were transcribed from their
+linked audited result reports; this draft is not a replacement scoring
+pipeline. No inference or scoring code changed at this milestone.
+Jobs `20917` and `20919` remain queued as resource/dependency waits; unrelated
+workloads and the frozen validation configuration were not modified.
