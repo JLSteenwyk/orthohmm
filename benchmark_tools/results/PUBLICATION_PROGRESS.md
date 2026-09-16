@@ -815,3 +815,14 @@ tasks finished. Pin and push the executor before scheduling method tasks
 behind generation completion; requested resources are four CPUs, 16 GiB,
 12 hours per task and at most two concurrent tasks. These shared-machine
 timings are descriptive, not controlled scaling evidence.
+
+Executor milestone `66dd9c4d62e9495e104d880578084563eeb54ff8` was pushed
+and pinned in `benchmarks/work/publication_execution_v1`. Its Slurm launcher
+also passed a real check-only run for array index 0 (missing20_20261001).
+Submitted method array **20957**, indices 0-69, with `afterok:20920` so no
+method task starts before the full generation array succeeds. Logs reside
+under `benchmarks/work/publication_simulation_panel_v1/method_slurm/`.
+The executor verifies the required paired history itself before each dataset.
+Full unit suite: **601 passed in 22.31s**. At this checkpoint generation
+tasks 36-37 are running and method tasks remain pending on the dependency.
+Native output validation and scientific scoring remain separate next steps.
