@@ -54,5 +54,14 @@ validation and source-preservation checks passed; its59,770 root-HOG groups
 exactly reproduce inferred p1_c1_r1 (zero unmatched groups). All8,681
 reconciled families reused raw-tree checkpoints while reconciliation reran.
 See `ob_supplied_tree_control_validation_20260916.json`. This satisfies the
-baseline-mode gate only. The six perturbation runs and18-endpoint accuracy
-comparison remain outstanding; no tree-error robustness conclusion is made.
+baseline-mode gate only.
+
+## Perturbation Execution And Native Admission
+
+All six tasks of array21299 completed with exit0:0 using frozen executor
+cfe0a09. Native validation passed for the entire panel, including exact tree
+topologies/distances, input/output provenance, supplied-control equivalence,
+and complete251,378-gene partitions with zero cross-candidate-family merges.
+See `ob_species_tree_perturbations_native_validation_20260916.json`.
+The18-endpoint accuracy comparison remains outstanding; no tree-error
+robustness conclusion is made from successful execution or group counts.

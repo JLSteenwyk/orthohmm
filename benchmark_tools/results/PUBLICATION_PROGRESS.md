@@ -2604,3 +2604,25 @@ as a limitation; this experiment is not a complete historical replay.
 Five focused recorder tests passed; full unit suite941 passed in26.56s before
 the final input/package guards, followed by five focused tests passing again.
 Capture executor and Slurm submission will be recorded after freezing.
+
+Capture frozen at**f6da2bc**, worktree
+`benchmarks/work/publication_qfo_replay_capture_v1`, submitted as**21305**
+(32 CPUs64GiB/four-hour limit). Confirmed live; historical input audit passed
+976,504 genes/78 FASTAs. No capture comparison is available yet.
+
+Tree array21299 now all COMPLETED0:0: tasks0-5 elapsed3:04,3:14,3:15,3:22,
+3:50,3:33. Added an all-six native-admission validator checking exact frozen
+executor, manifests, task/raw-job identities, unchanged supplied-control
+equivalence, native output semantics and actual supplied/output topology.
+Eighteen focused tests passed, including failure/live/identity/topology guards.
+Actual panel admission is in progress; accuracy remains uninspected.
+
+Panel native admission completed successfully: all six preserve251,378 genes,
+54,445 candidate families and zero cross-source merges. Actual supplied and
+native-output trees match their prespecified rooted clade distances2/4.
+Root-HOG counts in fixed order are59,867;59,827;58,940;59,908;60,081;59,938.
+These are output-integrity observations, not accuracy results. Exact admission
+report: `ob_species_tree_perturbations_native_validation_20260916.json`.
+Full unit suite **959 passed in25.11s**. Next implement and validate the frozen
+18-endpoint official-score/paired-RefOG bootstrap comparison against supplied
+control. QfO21305 confirmed RUNNING5:17; no diagnostic outcome yet.
