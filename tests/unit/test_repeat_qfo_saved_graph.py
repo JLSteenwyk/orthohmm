@@ -65,7 +65,8 @@ def test_worker_identity_guards(problem):
 
 
 @pytest.mark.skipif(not Path("/proc/self/maps").exists(), reason="Linux loaded-library diagnostic")
-def test_instrumented_real_worker_exits_and_preserves_isolate(tmp_path):
+@pytest.mark.parametrize("explicit_affinity", [False, True])
+def test_instrumented_real_worker_exits_and_preserves_isolate(tmp_path, explicit_affinity):
     root = tmp_path
     launcher = root / "benchmarks/work/publication_qfo_replay_native_v1"
     package = launcher / "orthohmm"
@@ -86,13 +87,50 @@ def test_instrumented_real_worker_exits_and_preserves_isolate(tmp_path):
         "include_isolates": True, "output_directory": str(directory)}))
     overrides = {"PYTHONPATH": str(launcher), "PYTHONHASHSEED": "0", "OMP_NUM_THREADS": "1",
                  "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"}
-    run = subprocess.run([sys.executable, diagnostic.__file__, "--root", str(root), "--output", str(output),
-                          "--worker-payload", str(payload)], cwd=launcher, env={**os.environ, **overrides},
+    inherited = sorted(os.sched_getaffinity(0))
+    command = [sys.executable, diagnostic.__file__, "--root", str(root), "--output", str(output),
+               "--worker-payload", str(payload)]
+    if explicit_affinity:
+        command += ["--cpu-affinity", str(inherited[0])]
+    run = subprocess.run(command, cwd=launcher, env={**os.environ, **overrides},
                          capture_output=True, text=True, timeout=30)
     assert run.returncode == 0, run.stderr
     snapshot = json.loads((payload / "worker_before.json").read_text())
     check_worker(snapshot, launcher, payload, overrides)
+    assert snapshot["inherited_cpu_affinity"] == inherited
+    assert snapshot["requested_cpu_affinity"] == (inherited[:1] if explicit_affinity else None)
+    assert snapshot["cpu_affinity"] == (inherited[:1] if explicit_affinity else inherited)
+    assert sorted(os.sched_getaffinity(0)) == inherited
     assert any("_c_leiden" in name for name in snapshot["modules"])
     assert any("_igraph" in name for name in snapshot["modules"])
     assert snapshot["inputs"] == [record(payload / name) for name in ("gene_names.txt", "sources.npy", "targets.npy", "weights.npy")]
     assert set((directory / "orthohmm_working_res/orthohmm_edges_clustered.txt").read_text().splitlines()) == {"a b", "c"}
+
+
+def test_affinity_panel_is_prespecified_alternating_subset():
+    arms = diagnostic.affinity_arms(range(80, 8, -2))
+    assert [name for name, _ in arms] == ["one_cpu_0", "all_cpus_0", "one_cpu_1", "all_cpus_1"]
+    assert arms[0][1] == arms[2][1] == [10]
+    assert arms[1][1] == arms[3][1] == list(range(10, 74, 2))
+
+
+def test_affinity_panel_rejects_insufficient_distinct_cpus():
+    with pytest.raises(ValueError, match="32 allocated"):
+        diagnostic.affinity_arms([0] * 32)
+
+
+@pytest.mark.parametrize("requested", [[], [1, 1], [9], [-1]])
+def test_invalid_affinity_does_not_call_setter(monkeypatch, requested):
+    monkeypatch.setattr(os, "sched_getaffinity", lambda pid: {1, 3})
+    def forbidden(*args):
+        pytest.fail("Invalid CPU request reached setter")
+    monkeypatch.setattr(os, "sched_setaffinity", forbidden)
+    with pytest.raises(ValueError, match="outside inherited"):
+        diagnostic.set_worker_affinity(requested)
+
+
+def test_affinity_setter_verifies_actual_result(monkeypatch):
+    monkeypatch.setattr(os, "sched_getaffinity", lambda pid: {1, 3})
+    monkeypatch.setattr(os, "sched_setaffinity", lambda pid, cpus: None)
+    with pytest.raises(ValueError, match="Actual worker affinity"):
+        diagnostic.set_worker_affinity([1])

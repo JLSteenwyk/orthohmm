@@ -2864,3 +2864,27 @@ Next controlled one-versus32-CPU affinity repeats on the same graph/worker,
 then process-context tests as needed; no default change or full-profile restart
 based on selecting a preferred partition. Error-analysis figures/tracing and
 the wider parameter/scaling/annotation/application/QfO/release tasks remain open.
+
+### Controlled QfO CPU-affinity panel prepared (2026-09-16)
+
+The preceding user-facing goal-prompt turn was no analysis progress. Reread the
+full objective and revalidated current repository and scheduler state: no active
+OrthoHMM jobs; unrelated job20915 remains untouched. Proceeding with the next
+available reproducibility experiment, not shrinking the publication objective.
+
+Added an optional four-arm affinity panel to the saved-graph observer while
+preserving its default three-repeat interface and the earlier frozen executor.
+Prespecified one/32/one/32 CPUs within one allocation, same graph/worker and
+one-thread BLAS/OpenMP settings. Worker affinity is set before native imports;
+inherited/requested/actual affinity and loaded software identities are checked.
+Every partition is retained, with same-affinity and between-arm comparisons.
+No accuracy scoring, preferred-partition selection, or scientific default change.
+Protocol: `QFO_AFFINITY_DIAGNOSTIC_PROTOCOL_20260916.md`.
+
+Nineteen focused tests passed, including real native-worker execution both with
+and without explicit affinity, isolate preservation, parent affinity preservation,
+allocation guards, and actual-affinity mismatch rejection. Full unit validation
+and frozen submission details follow. Existing unrelated sample changes remain
+untouched; their whitespace warnings are not part of this milestone.
+
+Full unit suite **1055 passed in29.11s**. Scoped whitespace validation passed.

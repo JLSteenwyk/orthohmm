@@ -39,7 +39,28 @@ def mapped_libraries(text):
     return sorted(paths)
 
 
-def worker(launcher, payload):
+def affinity_arms(available):
+    cpus = sorted(set(available))
+    if len(cpus) < 32:
+        raise ValueError("Affinity panel requires at least 32 allocated CPUs")
+    return [(f"{name}_{repeat}", selection) for repeat in range(2)
+            for name, selection in (("one_cpu", cpus[:1]), ("all_cpus", cpus[:32]))]
+
+
+def set_worker_affinity(requested):
+    inherited = sorted(os.sched_getaffinity(0))
+    if requested is not None:
+        if (not requested or len(set(requested)) != len(requested)
+                or not set(requested).issubset(inherited)):
+            raise ValueError("Requested CPU affinity is invalid or outside inherited allocation")
+        os.sched_setaffinity(0, requested)
+        if sorted(os.sched_getaffinity(0)) != sorted(requested):
+            raise ValueError("Actual worker affinity differs from requested affinity")
+    return inherited
+
+
+def worker(launcher, payload, requested_affinity=None):
+    inherited_affinity = set_worker_affinity(requested_affinity)
     # Import in the frozen worker namespace; do not load the development core.
     sys.path[0] = str(launcher)
     from orthohmm import leiden_worker
@@ -60,6 +81,7 @@ def worker(launcher, payload):
                 "modules": modules, "native_libraries": libraries, "python": record(sys.executable),
                 "versions": {name: importlib.metadata.version(name) for name in ("numpy", "igraph", "leidenalg")},
                 "environment": {key: os.environ.get(key) for key in ENV_KEYS},
+                "inherited_cpu_affinity": inherited_affinity, "requested_cpu_affinity": requested_affinity,
                 "cpu_affinity": sorted(os.sched_getaffinity(0)), "platform": platform.platform(),
                 "host": platform.node(), "cwd": str(Path.cwd()), "metadata": metadata,
                 "inputs": [record(payload / name) for name in ("gene_names.txt", "sources.npy", "targets.npy", "weights.npy")],
@@ -91,12 +113,20 @@ def main():
     parser.add_argument("--root", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--worker-payload", type=Path)
+    parser.add_argument("--affinity-panel", action="store_true")
+    parser.add_argument("--cpu-affinity", type=int, nargs="+")
     args = parser.parse_args()
+    if args.cpu_affinity is not None and args.worker_payload is None:
+        parser.error("--cpu-affinity is only valid for a worker")
+    if args.affinity_panel and args.worker_payload is not None:
+        parser.error("--affinity-panel is only valid for the parent")
     root, output = args.root.resolve(), args.output.resolve()
     launcher = root / "benchmarks/work/publication_qfo_replay_native_v1"
     if args.worker_payload is not None:
-        worker(launcher, args.worker_payload.resolve())
+        worker(launcher, args.worker_payload.resolve(), args.cpu_affinity)
         return
+    inherited_affinity = sorted(os.sched_getaffinity(0))
+    arms = affinity_arms(inherited_affinity) if args.affinity_panel else [(f"repeat_{i}", None) for i in range(3)]
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
     import numpy as np
     from benchmark_tools.audit_historical_profile_ablation import verify_file
@@ -140,14 +170,18 @@ def main():
     env.update(overrides)
     report = {"status": "running", "accuracy_evaluated": False, "job_id": os.environ.get("SLURM_JOB_ID"),
               "capture_scheduler": scheduler, "source": record(__file__), "runtime": before,
+              "affinity_panel": args.affinity_panel, "parent_cpu_affinity": inherited_affinity,
+              "planned_arms": [{"name": name, "cpu_affinity": cpus} for name, cpus in arms],
               "graph_inputs": source_records, "repeats": [], "limitations": [
                   "Instrumentation imports native modules before the frozen worker and records their loaded libraries.",
                   "Binary identity is recorded for these repeats, not retroactively proven for historical jobs.",
-                  "Three repeats cannot establish general determinism; every partition is retained without accuracy selection.",
+                  "These repeats cannot establish general determinism; every partition is retained without accuracy selection.",
+                  "Affinity changes CPU availability, not the explicitly fixed one-thread BLAS/OpenMP settings.",
+                  "Shared-node wall times are diagnostic, not controlled performance measurements.",
                   "No HMM searches, profile expansion, graph rebuilding or accuracy scoring are performed."]}
     try:
-        for index in range(3):
-            directory = output / f"repeat_{index}"
+        for index, (arm, affinity) in enumerate(arms):
+            directory = output / arm
             payload = directory / "payload"
             payload.mkdir(parents=True)
             (directory / "orthohmm_working_res").mkdir()
@@ -157,6 +191,8 @@ def main():
                 "include_isolates": True, "output_directory": str(directory)}) + "\n")
             command = [sys.executable, str(Path(__file__).resolve()), "--root", str(root), "--output", str(output),
                        "--worker-payload", str(payload)]
+            if affinity is not None:
+                command += ["--cpu-affinity", *map(str, affinity)]
             started = time.monotonic()
             with (directory / "worker.log").open("x") as log:
                 run = subprocess.run(command, cwd=launcher, env=env, stdout=log, stderr=subprocess.STDOUT)
@@ -166,12 +202,16 @@ def main():
                 raise RuntimeError(f"Repeat {index} failed with exit {run.returncode}; preserved without retry")
             snapshot = json.loads((payload / "worker_before.json").read_text())
             check_worker(snapshot, launcher, payload, overrides)
+            if (snapshot["inherited_cpu_affinity"] != inherited_affinity
+                    or snapshot["requested_cpu_affinity"] != affinity
+                    or snapshot["cpu_affinity"] != (affinity if affinity is not None else inherited_affinity)):
+                raise ValueError("Worker affinity does not match the planned arm")
             if snapshot["inputs"] != source_records:
                 raise ValueError("Worker did not load the intended saved graph")
             for item in [*snapshot["modules"].values(), *snapshot["native_libraries"], snapshot["python"], snapshot["observer"], *source_records]:
                 verify_file(Path(item["path"]), item)
             partition = directory / "orthohmm_working_res/orthohmm_edges_clustered.txt"
-            row = {"index": index, "execution": execution, "worker": snapshot, "partition": record(partition),
+            row = {"index": index, "arm": arm, "execution": execution, "worker": snapshot, "partition": record(partition),
                    "versus_capture": compare_partition(saved / "initial_partition.txt", partition, universe),
                    "versus_diagnostic": compare_partition(Path(comparison["initial_partition_comparison"]["expected"]["path"]), partition, universe)}
             if report["repeats"]:
@@ -179,13 +219,21 @@ def main():
                 row["versus_first_repeat"] = compare_partition(Path(first["partition"]["path"]), partition, universe)
                 row["software_identity_equal"] = all(snapshot[key] == first["worker"][key]
                     for key in ("modules", "native_libraries", "python", "versions", "environment", "platform", "host", "cpu_affinity"))
+                row["software_identity_excluding_affinity_equal"] = all(snapshot[key] == first["worker"][key]
+                    for key in ("modules", "native_libraries", "python", "versions", "environment", "platform", "host"))
+                if not row["software_identity_excluding_affinity_equal"]:
+                    raise ValueError("Software identity changed between workers")
+                previous = next((prior for prior in report["repeats"]
+                                 if prior["worker"]["cpu_affinity"] == snapshot["cpu_affinity"]), None)
+                if previous is not None:
+                    row["versus_previous_same_affinity"] = compare_partition(Path(previous["partition"]["path"]), partition, universe)
             report["repeats"].append(row)
             (output / "progress.json").write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
         if verify(frozen, launcher, runtime) != before:
             raise ValueError("Frozen runtime changed during repeats")
         for item in [*source_records, *reference_records]:
             verify_file(Path(item["path"]), item)
-        report["status"] = "three_repeats_complete"
+        report["status"] = "affinity_panel_complete" if args.affinity_panel else "three_repeats_complete"
     except BaseException as error:
         report.update(status="failed", error_type=type(error).__name__, error=str(error))
         raise
