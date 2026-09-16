@@ -88,8 +88,23 @@ co-membership, including within-species pairs, not resolved orthology.
 The primary contrast is satellite_v2 versus full OrthoFinder; high
 sensitivity is secondary and the sequence checkpoint diagnostic. Its
 20,000-replicate paired pillar bootstrap has seed 20260917 and six-metric
-multiplicity handling. No accuracy outcome is available in this draft.
+multiplicity handling. Native/source/input, command/conversion, independent
+reference reconstruction and overlap checks passed before scoring. Direct
+pair enumeration independently reproduced all four methods' TP/FP/FN counts.
 [Frozen protocol](YGOB_VALIDATION_PROTOCOL_20260916.md).
+
+On this frozen panel, satellite_v2 achieved F1 92.233654%, versus 92.318524%
+for full OrthoFinder. The paired difference was -0.084870 percentage points
+(nominal 95% interval [-0.487503, 0.312676]; six-endpoint Bonferroni interval
+[-0.622528, 0.445222]). This does not establish superiority or equivalence.
+Satellite_v2 had higher precision (+6.401035 points) and lower recall
+(-6.914033 points), with both adjusted intervals excluding zero. High
+sensitivity scored 82.038608% F1, below full OrthoFinder by 10.279916 points
+(adjusted interval [-11.260924, -9.298064]). The diagnostic sequence-only
+OrthoFinder checkpoint scored 85.572844%. All methods covered every reference
+gene. No configurations were changed in response to these held-out outcomes.
+[Frozen results](YGOB_FROZEN_RESULTS_20260916.md),
+[machine-readable evidence](ygob_frozen_results_20260916.json).
 
 This experiment tests novel-taxon transfer, not family-disjoint validation.
 The completed label-independent homology screen found qualifying development

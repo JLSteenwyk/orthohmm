@@ -1,0 +1,239 @@
+{
+  "admission": {
+    "bytes": 21580,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ygob_frozen_evaluation_v1/admission.json",
+    "sha256": "a2ebdd32203f90dc8fc735bf29ccd62abb19eae457cd788f81ef92953088d2cc"
+  },
+  "completion_gates_verified_by_this_module": false,
+  "diagnostic_methods": [
+    "orthofinder_sequence_only"
+  ],
+  "frozen_evaluation_gates_verified": true,
+  "full_results": {
+    "bytes": 7945362,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ygob_frozen_evaluation_v1/results.json",
+    "sha256": "5104e000d0c3bb8687103646be8011fbc97f8b05f7eb0a925bbfdd1e76200e83"
+  },
+  "independent_enumerated_counts": {
+    "orthofinder_full": {
+      "fn": 17542,
+      "fp": 78902,
+      "tp": 579548
+    },
+    "orthofinder_sequence_only": {
+      "fn": 10581,
+      "fp": 187184,
+      "tp": 586509
+    },
+    "orthohmm_high_sensitivity": {
+      "fn": 32778,
+      "fp": 214321,
+      "tp": 564312
+    },
+    "orthohmm_satellite_v2": {
+      "fn": 58825,
+      "fp": 31822,
+      "tp": 538265
+    }
+  },
+  "input_gene_count": 83404,
+  "limitations": [
+    "Curated homolog-group co-membership, including within-species pairs, not resolved pairwise orthology.",
+    "Novel-taxon transfer does not establish family-disjoint or unrestricted generalization.",
+    "Predictions outside the reference universe are projected out, not counted as false positives.",
+    "Coverage and missing predictions must be interpreted alongside F1.",
+    "Run completion, frozen inputs and versions, overlap and resource audits require separate verification.",
+    "Approximate intervals assume exchangeable reference pillars.",
+    "Cross-pillar false positives are allocated half to each endpoint pillar.",
+    "Group recovery does not establish resolved pairwise orthology."
+  ],
+  "primary_contrast": "orthohmm_satellite_v2 versus orthofinder_full",
+  "protocol": "benchmark_tools/results/YGOB_VALIDATION_PROTOCOL_20260916.md",
+  "publication_ready": false,
+  "schema_version": 1,
+  "scores": {
+    "orthofinder_full": {
+      "counts": {
+        "fn": 17542,
+        "fp": 78902.0,
+        "tp": 579548
+      },
+      "covered_reference_genes": 83391,
+      "exact_reference_groups": 5148,
+      "excluded_predicted_genes": 13,
+      "metrics": {
+        "f1": 0.9231852430030106,
+        "precision": 0.8801700964386058,
+        "recall": 0.970620844428813
+      },
+      "predicted_group_coverage": 1.0,
+      "predicted_group_coverage_definition": "fraction of supplied groups retaining at least one scored gene",
+      "predicted_groups_before_projection": 7343,
+      "predicted_groups_with_scored_genes": 7343,
+      "reference_gene_coverage": 1.0,
+      "reference_genes": 83391,
+      "reference_groups": 10250,
+      "represented_reference_groups": 10250
+    },
+    "orthofinder_sequence_only": {
+      "counts": {
+        "fn": 10581,
+        "fp": 187184.0,
+        "tp": 586509
+      },
+      "covered_reference_genes": 83391,
+      "exact_reference_groups": 4977,
+      "excluded_predicted_genes": 13,
+      "metrics": {
+        "f1": 0.8557284413360831,
+        "precision": 0.7580642451204807,
+        "recall": 0.9822790534090338
+      },
+      "predicted_group_coverage": 1.0,
+      "predicted_group_coverage_definition": "fraction of supplied groups retaining at least one scored gene",
+      "predicted_groups_before_projection": 6845,
+      "predicted_groups_with_scored_genes": 6845,
+      "reference_gene_coverage": 1.0,
+      "reference_genes": 83391,
+      "reference_groups": 10250,
+      "represented_reference_groups": 10250
+    },
+    "orthohmm_high_sensitivity": {
+      "counts": {
+        "fn": 32778,
+        "fp": 214321.0,
+        "tp": 564312
+      },
+      "covered_reference_genes": 83391,
+      "exact_reference_groups": 4656,
+      "excluded_predicted_genes": 13,
+      "metrics": {
+        "f1": 0.8203860806281497,
+        "precision": 0.7247470888082062,
+        "recall": 0.9451037532030347
+      },
+      "predicted_group_coverage": 1.0,
+      "predicted_group_coverage_definition": "fraction of supplied groups retaining at least one scored gene",
+      "predicted_groups_before_projection": 8665,
+      "predicted_groups_with_scored_genes": 8665,
+      "reference_gene_coverage": 1.0,
+      "reference_genes": 83391,
+      "reference_groups": 10250,
+      "represented_reference_groups": 10250
+    },
+    "orthohmm_satellite_v2": {
+      "counts": {
+        "fn": 58825,
+        "fp": 31822.0,
+        "tp": 538265
+      },
+      "covered_reference_genes": 83391,
+      "exact_reference_groups": 5060,
+      "excluded_predicted_genes": 13,
+      "metrics": {
+        "f1": 0.9223365436433377,
+        "precision": 0.9441804496506674,
+        "recall": 0.9014805138253864
+      },
+      "predicted_group_coverage": 0.9999007838079175,
+      "predicted_group_coverage_definition": "fraction of supplied groups retaining at least one scored gene",
+      "predicted_groups_before_projection": 10079,
+      "predicted_groups_with_scored_genes": 10078,
+      "reference_gene_coverage": 1.0,
+      "reference_genes": 83391,
+      "reference_groups": 10250,
+      "represented_reference_groups": 10250
+    }
+  },
+  "secondary_contrast": "orthohmm_high_sensitivity versus orthofinder_full",
+  "source": {
+    "bytes": 3751,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/assemble_ygob_validation.py",
+    "sha256": "8a5a028d84f760bce324d90a502f92c6ae598fa703d8c18ce5798f17453edece"
+  },
+  "uncertainty": {
+    "baseline": "orthofinder_full",
+    "comparisons": {
+      "orthohmm_high_sensitivity": {
+        "f1": {
+          "bonferroni_ci": [
+            -11.260924004675731,
+            -9.298063695073669
+          ],
+          "difference_percentage_points": -10.279916237486098,
+          "paired_95_percent_ci": [
+            -11.02133035188268,
+            -9.54028690237426
+          ]
+        },
+        "precision": {
+          "bonferroni_ci": [
+            -17.079385312432304,
+            -13.991748247165537
+          ],
+          "difference_percentage_points": -15.542300763039963,
+          "paired_95_percent_ci": [
+            -16.69500324525523,
+            -14.370327380895747
+          ]
+        },
+        "recall": {
+          "bonferroni_ci": [
+            -3.1513687704964135,
+            -1.9569898497851488
+          ],
+          "difference_percentage_points": -2.5517091225778277,
+          "paired_95_percent_ci": [
+            -3.0005141318691266,
+            -2.098125847561436
+          ]
+        }
+      },
+      "orthohmm_satellite_v2": {
+        "f1": {
+          "bonferroni_ci": [
+            -0.6225284696490123,
+            0.4452219781344026
+          ],
+          "difference_percentage_points": -0.08486993596729109,
+          "paired_95_percent_ci": [
+            -0.4875033553428415,
+            0.3126760367058221
+          ]
+        },
+        "precision": {
+          "bonferroni_ci": [
+            5.841375433767733,
+            6.993930209023208
+          ],
+          "difference_percentage_points": 6.401035321206161,
+          "paired_95_percent_ci": [
+            5.983125483055181,
+            6.8395569811160355
+          ]
+        },
+        "recall": {
+          "bonferroni_ci": [
+            -7.7598409790614085,
+            -6.091851197305681
+          ],
+          "difference_percentage_points": -6.914033060342661,
+          "paired_95_percent_ci": [
+            -7.542546801489827,
+            -6.300239032873995
+          ]
+        }
+      }
+    },
+    "limitations": [
+      "Approximate intervals assume exchangeable reference pillars.",
+      "Cross-pillar false positives are allocated half to each endpoint pillar.",
+      "Group recovery does not establish resolved pairwise orthology."
+    ],
+    "multiplicity_count": 6,
+    "numpy_version": "2.2.6",
+    "replicates": 20000,
+    "rng": "PCG64 multinomial",
+    "seed": 20260917
+  }
+}

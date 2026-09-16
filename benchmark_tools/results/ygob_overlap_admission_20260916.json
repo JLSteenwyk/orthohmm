@@ -1,0 +1,62 @@
+{
+  "accuracy_evaluated": false,
+  "limitations": [
+    "A qualifying hit is a homology-overlap screen, not proof of orthology or reference-label reuse.",
+    "No qualifying hit does not establish absence of remote homology or independence.",
+    "Only the best qualifying hit is retained; dataset counts are not exhaustive per-dataset overlap counts.",
+    "No method accuracy results or outcome-based family selection are used by this screen.",
+    "The source/resource audit is not a syscall trace or exhaustive annotation-ancestry audit.",
+    "Raw database redistribution permissions remain unresolved.",
+    "This rechecks retained inputs/hits, not a fresh search or historical proof of intermediate database bytes."
+  ],
+  "matching_pillars": 6952,
+  "matching_proteins": 71714,
+  "permitted_interpretation": "Frozen novel-taxon curated-group transfer; NOT family-disjoint validation.",
+  "query_proteins": 83404,
+  "reference_pillars": 10250,
+  "reference_resource_audit": {
+    "bytes": 6172,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/YGOB_REFERENCE_RESOURCE_AUDIT_20260916.md",
+    "sha256": "4c0a39d58c1504f2628bb5476c8b1b78cb13a5dd413e40a37283996b5e4087aa"
+  },
+  "reviewed_sources": [
+    {
+      "bytes": 25077,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/profile_expansion.py",
+      "sha256": "1025cfab4f80e3a85d6eaa3e768ae5e0e25dedb48fdba9deb08cb6e6aa7bb42a"
+    },
+    {
+      "bytes": 41369,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/phylogeny_pipeline.py",
+      "sha256": "44e00316546b5df78354badd2b1a6bb595b685e98b86f686f1a32543d7f15e4f"
+    },
+    {
+      "bytes": 5438,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/lib/python3.12/site-packages/orthofinder/run/config.json",
+      "sha256": "10a10a93262c9676865f03ba05b2b77d48285c312dca435d2458939894a474b3"
+    },
+    {
+      "bytes": 8763,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/lib/python3.12/site-packages/orthofinder/run/run_commands.py",
+      "sha256": "10aeb00c3affb31175a337478957807b79b153b9b91597b29e4dccb782d8d387"
+    }
+  ],
+  "scheduler": {
+    "Elapsed": "00:05:23",
+    "ExitCode": "0:0",
+    "JobIDRaw": "20918",
+    "State": "COMPLETED"
+  },
+  "schema_version": 1,
+  "screen": {
+    "bytes": 164899,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ygob_homology_screen_20260916.json",
+    "sha256": "c142f6ecba369c8192eea131de0827eafabd498399ad25c80b7136b33d34a74f"
+  },
+  "status": "overlap_evidence_verified",
+  "verifier": {
+    "bytes": 5557,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/verify_ygob_overlap_screen.py",
+    "sha256": "f5f1fcc129197382f2ea7bef55058d412c8416abe5dd5fba5767822e408cd284"
+  }
+}

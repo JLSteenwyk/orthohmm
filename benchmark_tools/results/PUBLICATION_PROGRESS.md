@@ -1998,3 +1998,42 @@ inventories cover recorded packages/entrypoints, not every executable invoked
 internally by third-party tools; shared-machine timing limitations persist.
 
 Final full unit suite: **808 passed in 25.72s**; scoped whitespace checks pass.
+
+### Frozen YGOB evaluation completed (2026-09-16)
+
+Previous turn was progress: native command/conversion verification. Reread
+the objective and confirmed QfO 21288 still RUNNING (15:20 at latest check).
+Located the already-completed prospective reference-resource audit rather
+than inventing a new independence criterion. Added
+`verify_ygob_overlap_screen.py`: rechecks retained hit/mapping/input/source
+hashes, DIAMOND command/version, terminal screen20918, reviewed biological
+input sources, and recomputes the descriptive overlap summary. All checks
+pass: 71,714/83,404 proteins and 6,952/10,250 pillars have qualifying hits.
+The evidence permits bounded novel-taxon transfer, not family independence.
+Historical intermediate database byte identity is not proven by this check.
+
+Ran `assemble_ygob_validation.py` after fresh native and overlap admission.
+The frozen four-method scorer and 20,000 paired pillar bootstrap completed;
+independent explicit pair enumeration matches every TP/FP/FN count. Full
+per-pillar results and admission evidence are preserved at
+`benchmarks/results/ygob_frozen_evaluation_v1/`. The compact committed snapshot
+`ygob_frozen_results_20260916.json` links the full 7.9MB report by path/hash.
+Markdown and interpretation: `YGOB_FROZEN_RESULTS_20260916.md` and
+`YGOB_FROZEN_INTERPRETATION_20260916.md`. Manuscript and claims updated.
+
+First held-out outcomes: satellite_v2 F1 **92.233654%**, high sensitivity
+**82.038608%**, full OrthoFinder **92.318524%**, sequence checkpoint
+**85.572844%**. Primary satellite-minus-full difference **-0.084870pp**,
+nominal interval [-0.487503,0.312676], Bonferroni-six interval
+[-0.622528,0.445222]. No superiority or formal equivalence established.
+Satellite precision is higher by6.401035pp and recall lower by6.914033pp;
+both adjusted intervals exclude zero. High sensitivity is worse on all
+three endpoints with adjusted intervals excluding zero. All methods have
+100% reference-gene coverage. No parameters, exclusions or endpoints changed.
+Further outcome-driven development requires new independent confirmation.
+
+Nine focused enumeration/screen tests pass; full suite **810 passed in
+25.70s**. This completes the bounded frozen validation experiment, not the
+overall publication goal. QfO factorial, matched sequence-search controls,
+robustness/scaling, error analysis, biological application and archive/release
+requirements remain open; raw YGOB redistribution permissions unresolved.

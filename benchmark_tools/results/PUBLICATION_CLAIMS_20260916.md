@@ -13,7 +13,7 @@ evidence that an experiment completed or a biological hypothesis is true.
 | OrthoHMM outperforms full OrthoFinder overall | [Eight-method comparison](PUBLICATION_COMPARISON_ORTHOMCL_COMPLETE_20260916.md) | Not supported; endpoints and benchmark rankings differ |
 | HMM expansion contributes in historical OrthoBench processing | [Historical component audit](HISTORICAL_PROFILE_ABLATION_20260916.md) | Descriptive +0.595610 F1 points after refinement; no matched HMM-free control |
 | Broad candidates improve reconciliation | [Completed OrthoBench factorial](ORTHOBENCH_FACTORIAL_INTERPRETATION_20260916.md) | Recall rises and precision falls; candidate-expansion F1 intervals include zero; QfO and additional controls pending |
-| The method transfers to novel taxa | [Frozen YGOB protocol](YGOB_VALIDATION_PROTOCOL_20260916.md) | Pending successful inference and gated evaluation |
+| The frozen method was evaluated on novel taxa | [YGOB evaluation](YGOB_FROZEN_INTERPRETATION_20260916.md) | Complete bounded transfer evaluation; satellite F1 difference interval includes zero, precision higher and recall lower; not family-disjoint or superiority evidence |
 | Validation is family-disjoint | [Homology screen](ygob_homology_screen_20260916.json) | Not established; substantial detected overlap |
 | OrthoMCL final-group QfO scoring is complete | [Verified result snapshot](publication_comparison_orthomcl_complete_20260916.json) | Supported by terminal success, six native results, metadata and pair-file hashes |
 | OrthoMCL BLAST failures have negligible impact | [Failure-impact audit](ORTHOMCL_FAILURE_IMPACT_20260916.md) | Not established; direct exposure is measured, indirect and counterfactual effects are not |
@@ -26,7 +26,7 @@ evidence that an experiment completed or a biological hypothesis is true.
 | Original work package | Current evidence | What still proves completion |
 | --- | --- | --- |
 | 1. Frozen publication baseline | Comparator table, scoring corrections, OrthoMCL final-group completion and failure audit, prospective method pin | Consolidated raw-output provenance for every retained row; exact commands/versions/resources and complete claim/endpoints freeze |
-| 2. Independent generalization | YGOB input/reference freeze, overlap screen, source-level resource audit, tested scorer/report helpers; unstarted inference cancelled for runtime correction | Validated native runtime, resubmission, successful run, exact command/version and native conversion checks, reference reconstruction, outcomes and paired uncertainty; explicit overlap-limited claim |
+| 2. Independent generalization | Completed frozen YGOB evaluation with native, command/conversion, independent-reference and overlap gates; pair enumeration and paired uncertainty | Bounded novel-taxon claim only; stronger family independence unproven; any outcome-driven method changes require new independent confirmation |
 | 3. HMM and phylogeny contributions | Historical four partitions; prospective eight-cell protocol; failed replay exposed missing profile runtime | Corrected-runtime replay equivalence, executable frozen factorial, all cells on OrthoBench/QfO, membership-filter diagnostic, matched sequence control, coverage and cost measurements |
 | 4. Uncertainty and error explanation | OrthoBench paired intervals, family summaries, individual QfO endpoints | Prespecified label-independent strata, stage-level error tracing, remaining appropriate uncertainty and prediction coverage |
 | 5. Robustness and practical efficiency | Historical timing records and known accounting caveats | Validated evolutionary simulations, multiple seeds, duplication/loss/divergence/missingness/sampling conditions, tree error and parameter neighborhood, matched scaling and repeated timings |
@@ -35,12 +35,11 @@ evidence that an experiment completed or a biological hypothesis is true.
 
 ## Current Execution Gates
 
-- YGOB `20917`: cancelled before execution after finding the missing native
-  profile runtime. Must be resubmitted after runtime validation; no scores seen.
-- Corrected YGOB `21192` is now running with pinned native-runtime guards.
-  Real-input preflight and first compute-node profile probe pass; native
-  completion, conversion, scoring and independent-validation conclusions remain
-  unverified. Shared-node timings are not matched efficiency measurements.
+- YGOB `20917` was cancelled before execution after finding the missing native
+  profile runtime. Corrected job `21192` completed 0:0; the frozen evaluation
+  and independent pair-count crosscheck now pass. Satellite_v2 F1 is 92.233654%
+  versus full OrthoFinder 92.318524%; adjusted difference interval includes zero.
+  No superiority or equivalence claim. Shared-node timing remains uncontrolled.
 - OrthoBench factorial preparation `21161` completed successfully. The
   [prepared manifest](orthobench_factorial_prepared_20260916.json) contains four
   candidate sets and eight planned cells; reconciliation and accuracy evaluation
@@ -81,8 +80,8 @@ evidence that an experiment completed or a biological hypothesis is true.
 - The label-blind verifier checks inference files and completion; it does
   not yet certify every scientific scoring gate. Its output retains that
   distinction explicitly.
-- No YGOB accuracy has been inspected. Do not change its frozen settings
-  after outcomes; subsequent outcome-informed changes need new confirmation.
+- YGOB accuracy has now been inspected after admission. Do not change its
+  frozen settings; subsequent outcome-informed changes need new confirmation.
 - Dependency security alerts remain untriaged. Resolve and document them
   for release without silently changing the historical benchmark environment.
 - Archival deposition, submission, and any external permissions remain
