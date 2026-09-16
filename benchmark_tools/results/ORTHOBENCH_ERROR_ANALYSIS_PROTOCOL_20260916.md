@@ -125,3 +125,39 @@ without such positions makes the family's mean identity missing rather than
 being dropped or assigned zero. Retain every family, including failures;
 do not assemble scored strata from a partial successful panel. These choices
 are frozen before the new family features are joined to method errors.
+
+## Retained Stage Trace Execution
+
+Trace all70 families along the fixed production path: multipass grouping,
+copy-refined multipass grouping, strict-profile grouping, copy-refined profile
+grouping, satellite_v2 candidate expansion, and final root HOGs. Use the
+hash-admitted cached replay checkpoints and frozen factorial predictions.
+These are descriptive post-development traces, not new hypothesis tests or
+additional independent benchmark endpoints.
+
+For every within-family unordered pair, retain both directional normalized
+search-hit values (NA when absent), same-species status, and co-membership at
+each checkpoint. Report retained/lost/gained/absent-both counts separately
+for each consecutive transition; do not assume membership changes monotonically.
+Store the full pair table outside Git with a checksum. Family summaries retain
+the intersecting group IDs, family genes, other reference genes and unlabelled
+member counts. Raw pair counts include low-certainty and within-species members;
+they are not official precision/recall or calibrated orthology predictions.
+Fresh official-convention family sufficient statistics are separately retained
+and crosschecked against frozen factorial scores at the corresponding stages.
+
+Validate all input universes and require final root HOGs to remain within
+candidate-family boundaries. Reconstruct the full candidate partition by
+applying every logged merge to the seed partition; reject unknown genes,
+duplicate/overlapping sides, inconsistent sizes, out-of-order iterations,
+redundant unions, or a nonmatching reconstructed partition. Logged sides are
+iteration-start clusters and may not describe the entire current union after
+earlier events. Preserve reference-incident event indices and support/margin
+values without treating these search-derived values as biological confidence.
+
+The retained normalized-hit cache does not distinguish prefilter rejection
+from scoring rejection. Initial RBNH edges and profile-added edge identities
+are not covered by this extraction. Root-HOG splits still require per-family
+tree/constraint inspection to distinguish reconciliation mechanisms. State
+these gaps explicitly; this extraction does not complete causal tracing,
+independent annotation, QfO error analysis, or the biological application.

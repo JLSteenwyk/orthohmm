@@ -2929,3 +2929,27 @@ and all three generated figure checksums against the manifest. Job21311 remains
 RUNNING at5:36; first worker recorded actual affinity[8]. No terminal output or
 affinity-effect conclusion yet. Next: complete mechanistic stage tracing and
 admit the four-worker QfO result when terminal.
+
+### All-family retained-stage tracing prepared (2026-09-16)
+
+Previous turn made progress: complete84-endpoint figure and manuscript link
+committed/pushed. Reread objective;21311 remains scheduler-confirmed RUNNING
+at12:19, with no completed worker comparison yet. Preserved its live process.
+
+Inspected retained checkpoints and actual merge-sidecar schema (a list of8440
+events, not the older analysis script's expected wrapper object). Added a new
+tracer for all70 families through six fixed checkpoints with full pair-level
+directional cache evidence and group membership. Reconstructs candidate groups
+from all logged merges, verifies complete input partitions and root-HOG candidate
+boundaries, and crosschecks fresh full-reference scores at four frozen factorial
+stages. Keeps raw co-membership descriptors distinct from official scoring and
+records missing prefilter/edge/tree-level causal evidence explicitly.
+
+Fifteen focused tests passed, covering native membership integrity, reference
+versus unlabelled incident pairs, directional search values, nonmonotone grouping
+transitions, invalid scores, iteration-start merge snapshots, and malformed or
+nonreconstructing merge traces. Execution protocol extended without new endpoint
+selection or inference changes. Full unit validation and frozen submission follow.
+
+Full unit suite **1081 passed in29.42s**. Large pair-level output stays outside
+Git; the committed result will retain its checksum and full70-family summaries.
