@@ -2772,3 +2772,11 @@ Per-family commands/status/failures are retained; no accuracy scoring occurs.
 Fifteen focused tests passed. Full-suite and frozen submission details follow.
 
 Full unit suite **1015 passed in25.48s** before freezing the alignment executor.
+
+Alignment executor frozen**a753d0d** at
+`benchmarks/work/publication_ob_reference_alignments_v1`; submitted**21309**
+(eight CPUs32GiB/two hours). Output `benchmarks/results/ob_reference_alignments_v1`;
+log `benchmarks/work/ob_reference_alignments_21309.log`. QfO21307 remains live.
+Next terminal/native alignment admission and sequence-feature join, followed
+by the frozen84-endpoint stratified outcome analysis. No family-error result
+is claimed from this preparatory work; the full publication goal remains open.
