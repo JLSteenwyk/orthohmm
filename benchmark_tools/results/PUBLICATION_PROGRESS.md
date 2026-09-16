@@ -2732,3 +2732,22 @@ QfO extension, and biological application remain distinct unmet requirements.
 
 Full unit suite **1000 passed in27.41s**, followed by12 focused tests passing
 after adding scheduler identity and explicit zero-valued missingness counters.
+
+Feature executor frozen**8bccb33** at
+`benchmarks/work/publication_ob_sequence_features_v1`, job**21308** completed0:0
+in23s. Verified source/input/table hashes,251,378 unique rows and exact
+per-proteome counts. Preserved summary `ob_sequence_features_prepared_20260916.json`;
+32.5MB TSV remains outside Git, SHA256
+d315da458240fe2020b128b606adfcfdf15d4de34ee937a6b2aa7735f7452f97.
+Input-only counts:13,822 short;2,345 composition-concentrated;460 composition
+unevaluable;3,170 with noncanonical letters;177 with stops;no empty/gap/other
+symbol sequences. No accuracy inference from these descriptors.
+
+Located legacy70-RefOG alignments at
+`benchmarks/results/orthobench_refog_alignments_20260902`; old generator uses
+MAFFT --auto --thread1 but reuses any existing nonempty file without validating
+IDs/sequences. Its identity statistic counts identical ambiguous symbols and
+skips incomparable pairs. Do not reuse those summary values; current protocol
+requires canonical-only comparisons and explicit missingness plus sequence/
+provenance admission or a pinned rebuild. Family strata and outcome scoring
+remain pending. QfO21307 remains running; no repeatability outcome claimed.

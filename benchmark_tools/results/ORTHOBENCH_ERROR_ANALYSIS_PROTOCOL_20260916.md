@@ -85,3 +85,19 @@ within each occupied feature stratum, deduplicating shared selections. Keep
 the full trace table available, including neutral and adverse cases. These
 development-exposed traces are not a separate biological application and
 do not use competitor predictions as ground truth.
+
+## Sequence Feature Preparation Completed
+
+Frozen executor8bccb33, job21308, completed0:0 in23 seconds. All251,378 unique
+proteins are represented. Source/input/table hashes and per-proteome row
+counts were independently verified. The32,500,737-byte TSV is retained outside
+Git with SHA256d315da458240fe2020b128b606adfcfdf15d4de34ee937a6b2aa7735f7452f97;
+`ob_sequence_features_prepared_20260916.json` records provenance and counts.
+
+Descriptive input counts:13,822 sequences below100 residues;2,345 with the
+composition-concentration flag and460 unevaluable for that flag. There are
+3,170 proteins with noncanonical letters and177 with stop symbols; no empty
+residue sequences, gaps or other symbols were observed. No family-stratum
+outcomes, biological error explanations or accuracy effects are inferred
+from these counts. Reference-alignment admission and family-feature joins
+remain to be completed before the prespecified outcome analysis.
