@@ -1835,3 +1835,31 @@ Before the QfO run, freeze a launcher using this adapter and the broad-panel
 refinement correction while preserving the intended frozen core algorithm;
 verify FASTAs, historical source/runtime and target partition provenance.
 No inference search, graph replay, QfO scoring or held-out scoring was run.
+
+## Historical QfO Source And FASTA Binding
+
+Previous turn completed numeric replay input. Read the objective and confirmed
+YGOB 21192 live. Added `audit_qfo_replay_inputs.py` and ran it against pinned
+historical metrics fb6b8d7e..., numeric manifest b90c787f..., source revision
+694a77fe56167754ca949751bca88aa7d11353dc and target partition 63ade2f3....
+All 30 recorded source files match their original Git commit, despite the
+historical harness's dirty-worktree flag. All 78 FASTA hashes match. Every
+one of the 976,504 checkpoint genes occurs exactly once in those FASTAs,
+and each proteome maps bijectively to one cached numeric species code.
+The final historical target partition hash also matches.
+
+`qfo_replay_inputs_audit_20260916.json` records these bindings and seven changed
+recorded source files relative to the newer frozen checkout: accuracy,
+argument processing, main pipeline, parser, refinement, profile expansion,
+and benchmark_production. This compares the historical recorded file set;
+it is not a claim that no new files or native-library differences exist.
+The historical source audit covers the recorded Python files, not an
+unrecorded historical binary/environment inventory.
+
+Six mapping tests and the full **781-test unit suite pass** (24.95s), plus
+actual-data audit and scoped whitespace checks. This provides concrete input
+and target provenance for the replay freeze; seven changed recorded sources
+mean equivalence cannot be inferred from checkpoint integrity alone. Next:
+pin the corrected adapter/runtime while keeping intended core settings,
+execute the label-blind cached QfO replay and compare its native partition.
+No graph inference or benchmark accuracy was evaluated this turn.
