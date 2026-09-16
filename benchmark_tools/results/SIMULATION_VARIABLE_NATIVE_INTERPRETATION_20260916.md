@@ -35,9 +35,10 @@ planned error tracing, not speculation from aggregate scores.
   single-copy family coverage for n11/n12 (seed 9) or n2 (seed 10).
 - Full OrthoFinder has nonfinite graph weights in divergent seeds 20261101,
   20261102, 20261107, 20261108 and 20261109. Both full and checkpoint results
-  are excluded for those runs. The exact cause of these remaining numerical
-  failures requires further diagnosis; the fixed-length explanation must not
-  be assumed to account for every heterogeneous-length failure.
+  are excluded for those runs. The subsequent
+  [native normalization audit](ORTHOFINDER_VARIABLE_NORMALIZATION_AUDIT_20260916.md)
+  reproduces local rank-deficient fits and scale-factor overflow in exactly
+  these five seeds. This is not an assumption of globally constant lengths.
 - All 140 OrthoHMM records show profile construction (62-193 profiles), but
   zero added profile edges. This panel therefore does not demonstrate an
   accuracy contribution from multi-sequence profile expansion. It retains the

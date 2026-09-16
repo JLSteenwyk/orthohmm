@@ -1410,3 +1410,35 @@ All 140 OrthoHMM runs build 62-193 profiles but add no profile edges. No HMM
 expansion advantage or overall-superiority claim follows. Both simulation
 panels remain separate; YGOB and factorial inference/scoring and other original
 publication requirements are still incomplete.
+
+## Native Diagnosis Of Variable-Length Comparator Failures
+
+Previous turn completed corrected simulation scoring and the prespecified
+factorial statistics. Re-read the full objective and confirmed YGOB 21192
+and factorial 21248 remain live before auditing the five variable-panel
+OrthoFinder failures. No active inference sources or files were modified.
+
+Added `diagnose_orthofinder_normalization.py` and ran it under the frozen
+OrthoFinder interpreter on all ten divergent seeds, not only failures. Verified
+native source/package provenance and all saved inference files before/after.
+Recomputed 640 matrices using the native maximum-score BLAST reader with exact
+self-hit exclusion and native length normalization. No scientific accuracy
+was calculated or changed. All input proteomes have 82-92 distinct lengths.
+
+Reproduced seven nonfinite within-species matrices in exactly the five failed
+seeds; the five valid seeds produce none. Each affected matrix has two
+non-self hits at one length product, giving rank-one two-parameter fitting.
+Native intercept exponentiation overflows for the resulting extreme fits.
+This is local degeneracy, not the old global equal-length assumption. Of 23
+rank-deficient fitted subsets, seven are nonfinite, three have no stored
+normalized scores, and thirteen are finite. No normalization call raises.
+
+Result artifact `orthofinder_variable_normalization_diagnostic_20260916.json`
+records all matrices, warnings, fitted parameters, source/input hashes and
+graph correspondence. Interpretation in
+`ORTHOFINDER_VARIABLE_NORMALIZATION_AUDIT_20260916.md` retains original
+exclusions, acknowledges finite rank-deficient cases, and avoids silently
+repairing or relabeling the competitor. Ten targeted tests and the full
+**685-test suite pass** (32.84s); scoped whitespace checks pass. No upstream
+issue was submitted. Native failure explanation is now supported, but general
+failure frequency and remaining publication requirements are not established.
