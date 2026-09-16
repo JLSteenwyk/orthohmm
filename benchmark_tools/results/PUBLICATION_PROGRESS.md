@@ -1729,3 +1729,32 @@ All **26 assembler tests** and the full **757-test unit suite pass** (30.63s);
 scoped whitespace checks pass. The final factorial task remains RUNNING at
 30:28 in the latest accounting poll. No benchmark results or scientific
 settings were changed, and no partial factorial accuracy was inspected.
+
+## Complete OrthoBench Factorial Scoring
+
+Previous turn completed synthetic assembly integration tests. Read the full
+objective and verified/waited on final task 21248_3 until terminal FAILED 1:0
+at 32:55. Its traceback matches the known postflight cwd defect. Started the
+all-cell assembly only after all tasks were terminal. All four fresh recovery
+audits, native group-output validations and complete-gene partition gates pass.
+Every cell matches official OrthoBench F1/P/R to printed precision and exact
+RefOG counts. The 20,000 paired draws and 36-endpoint correction completed.
+Assembly exited zero; no expensive inference was restarted.
+
+First inspected complete factorial outcomes are now recorded in
+`orthobench_factorial_results_20260916.json` and generated
+`ORTHOBENCH_FACTORIAL_RESULTS_20260916.md`. Interpretation, manuscript and
+claim checklist were updated. Reconciliation raises F1 in all four matched
+settings with adjusted intervals above zero. Candidate expansion raises recall
+and lowers precision; its adjusted F1 intervals include zero. Profile expansion
+adds 0.568-0.704 observed F1 points, but all adjusted intervals include zero.
+Full P1/C1/R1 reproduces historical F1 74.106074%; this is not a new OrthoFinder
+superiority test. The initial HMM remains in profile-off cells.
+
+All eight cells preserve 251,378 genes. Shared-node cached reconciliation takes
+1,515-1,964 seconds with 1.467-1.577 GiB sampled summed process-tree RSS; no
+matched end-to-end efficiency claim follows. Failed scheduler histories remain
+explicitly retained despite no excluded scientific cells. YGOB remains live
+and its outcomes uninspected. QfO factorial, matched search/unconstrained
+controls, error tracing, robustness/scaling, biological application and the
+remaining publication package are still required. Full objective remains active.

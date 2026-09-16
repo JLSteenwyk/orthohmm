@@ -105,7 +105,8 @@ cells retain their own membership constraints; independently inferred trees
 are distinguished from supplied-tree diagnostics. A profile-expansion-off
 arm still uses the HMM-centered initial search. A matched sequence-search
 control is required before attributing an overall advantage to HMMs.
-These experiments are specified but not completed.
+The OrthoBench factorial is complete; its QfO counterpart and additional
+matched-search and membership-filter controls remain unfinished.
 [Ablation protocol](PUBLICATION_ABLATION_PROTOCOL_20260916.md).
 
 ### Evolutionary Simulations And Runtime Admission
@@ -260,14 +261,34 @@ explicitly shows the absence of admitted comparator contrasts. Both are
 generated from the corrected machine-readable results without imputing failures;
 PDF/SVG versions and source-hash manifests accompany the PNGs.
 
+### Controlled Components Show A Candidate-Precision Tradeoff
+
+The completed eight-cell OrthoBench factorial reproduced full-pipeline F1
+74.106074%. Reconciliation improved F1 by 2.942-6.899 percentage points across
+four matched settings; all four multiplicity-adjusted intervals excluded zero
+above it. Broader candidates increased recall and reduced precision, with
+adjusted intervals excluding zero in all four settings. Their observed F1
+effect changed from about -3.1 points without reconciliation to +0.697/+0.795
+with reconciliation, but every adjusted candidate-expansion F1 interval
+included zero. Profile expansion added 0.568-0.704 observed F1 points;
+all adjusted profile-expansion intervals included zero. These contrasts do
+not remove the initial HMM search and do not establish a total HMM advantage.
+
+All cells passed output/provenance gates and official-score crosschecks.
+Four batch failures caused by postflight working-directory-dependent package
+discovery were retained and separately recovered; native inference succeeded.
+Shared-node cached reconciliation costs are not end-to-end timings. The
+factorial remains development-exposed and supplies no new direct OrthoFinder
+comparison. [Results and interpretation](ORTHOBENCH_FACTORIAL_INTERPRETATION_20260916.md).
+
 ## Limitations And Unfinished Analyses
 
 No universal superiority, arbitrary-dataset generalization, or controlled
 speedup is established. Independent validation is pending. Homolog-family
 overlap remains substantial even after taxon exclusions. The proposed HMM
 contribution requires a matched sequence-search control, and the interaction
-between broader candidates and reconciliation remains unmeasured under the
-prospective factorial design. Corrected multi-seed simulations are complete
+between broader candidates and reconciliation has descriptive OrthoBench
+evidence but awaits QfO evaluation and additional controls. Corrected multi-seed simulations are complete
 but do not establish an OrthoHMM advantage or profile-expansion benefit.
 Error strata, mechanistic tracing, tree/parameter robustness, matched resource scaling,
 and a prespecified biological application remain required.

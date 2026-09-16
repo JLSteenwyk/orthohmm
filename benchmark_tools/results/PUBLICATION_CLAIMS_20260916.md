@@ -12,7 +12,7 @@ evidence that an experiment completed or a biological hypothesis is true.
 | Satellite_v2 trades higher precision for lower recall on OrthoBench | [Paired analysis](ORTHOBENCH_UNCERTAINTY_20260916.md) | Supported within this benchmark; not selection-adjusted generalization |
 | OrthoHMM outperforms full OrthoFinder overall | [Eight-method comparison](PUBLICATION_COMPARISON_ORTHOMCL_COMPLETE_20260916.md) | Not supported; endpoints and benchmark rankings differ |
 | HMM expansion contributes in historical OrthoBench processing | [Historical component audit](HISTORICAL_PROFILE_ABLATION_20260916.md) | Descriptive +0.595610 F1 points after refinement; no matched HMM-free control |
-| Broad candidates improve reconciliation | [Prospective factorial](PUBLICATION_ABLATION_PROTOCOL_20260916.md) | Untested by completed matched factorial; a plan is not a result |
+| Broad candidates improve reconciliation | [Completed OrthoBench factorial](ORTHOBENCH_FACTORIAL_INTERPRETATION_20260916.md) | Recall rises and precision falls; candidate-expansion F1 intervals include zero; QfO and additional controls pending |
 | The method transfers to novel taxa | [Frozen YGOB protocol](YGOB_VALIDATION_PROTOCOL_20260916.md) | Pending successful inference and gated evaluation |
 | Validation is family-disjoint | [Homology screen](ygob_homology_screen_20260916.json) | Not established; substantial detected overlap |
 | OrthoMCL final-group QfO scoring is complete | [Verified result snapshot](publication_comparison_orthomcl_complete_20260916.json) | Supported by terminal success, six native results, metadata and pair-file hashes |
@@ -45,10 +45,13 @@ evidence that an experiment completed or a biological hypothesis is true.
   [prepared manifest](orthobench_factorial_prepared_20260916.json) contains four
   candidate sets and eight planned cells; reconciliation and accuracy evaluation
   are not yet complete.
-- Reconciliation array `21248` is now running the four R=1 cells, using pinned
-  executor 9a86301. Both expanded and unexpanded actual-data preflights pass.
-  Native completion, correct root-HOG conversion and the prespecified paired
-  ablation statistics remain unverified; queued/running cells are not results.
+- Reconciliation array `21248` is terminal. All four native processes succeeded
+  but failed the known cwd-dependent postflight check. Independent integrity,
+  native provenance and root-HOG conversion audits passed with original failed
+  scheduler records retained. The complete eight-cell OrthoBench analysis and
+  official-score crosschecks are in the
+  [factorial results](ORTHOBENCH_FACTORIAL_RESULTS_20260916.md); QfO ablations,
+  matched sequence control and unconstrained membership diagnostic remain pending.
 - Replay `20919` was cancelled before execution and replaced by `21088`,
   using the identical pinned command without the unnecessary YGOB dependency
   or exclusive allocation. **21088 failed equivalence**: profile construction
