@@ -647,3 +647,30 @@ parameter tests pass. Only synthetic test records were evaluated; no real
 method scores or held-out validation outcomes were inspected. The generation
 runner integrity checks and pinned method execution/conversion manifest
 remain the outstanding panel launch prerequisites.
+
+## Hash-Gated Simulation Generation Runner
+
+`run_simulation_generation.py` executes one named run from the immutable
+panel manifest. Before execution it verifies the externally supplied
+manifest SHA-256, exact simulator revision, source/default/workflow hashes,
+all 120 parameter hashes, interpreter version and complete recorded package
+inventory. It rejects escaping artifact paths, changed inputs, ambiguous
+run labels, and any existing stage output; there is no automatic restart
+that could erase expensive or failed evidence.
+
+Each stage has a native log, separate GNU-time log, explicit argv, start/end
+times and exit status. The first failed stage stops later stages while
+preserving logs, partial native output and manifest/runner provenance.
+Successful stage exits and successful output-hash inventory recording are
+separate fields. Inventory failures are retained as terminal failures, not
+silently left as verified completion. The runner never executes methods or
+computes accuracy; native truth validation is an explicit manifest stage.
+
+Four new tests cover artifact corruption, path escapes, manifest mismatch,
+failure preservation/stopping, non-overwriting and successful stage records.
+Nineteen focused runner/builder/aggregation tests pass. The real check-only
+invocation passed for `baseline_20261001`, against manifest SHA-256
+`ee31ea38d3b5c047abf80f04636f06838959f941d6704649a216bb93958343b2`.
+No scientific-panel simulation was launched. The next gate is the pinned
+method execution/conversion manifest and remaining matched-history checks;
+all existing validation and replay jobs were preserved.
