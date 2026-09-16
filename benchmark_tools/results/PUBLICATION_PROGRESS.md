@@ -412,3 +412,31 @@ Latest live scheduler check: YGOB `20917` PENDING Resources, replay `20919`
 PENDING Dependency. The frozen inference job, parameters, and input files
 were not changed. The next validation milestone is the gated evaluation
 entrypoint, followed by real scoring only after successful inference.
+
+## Label-Blind Inference Verification Entry Point
+
+`verify_ygob_validation.py` queries Slurm accounting for the exact parent
+job, requiring COMPLETED and exit 0:0 before opening outputs. It checks
+runner completion metadata, the frozen source revision, tracked source
+cleanliness, launcher and OrthoFinder-entrypoint checksums, frozen input
+manifest agreement, recorded input/reference hashes, both OrthoHMM harness
+completion records and source/input/output manifests, required native output
+presence, identical OrthoFinder FASTA copies, and its GNU-time exit status.
+Manifest paths must remain inside their expected base directories, without
+duplicates; both file lengths and hashes are checked.
+
+This is an inference file/completion verifier, not a claim that every
+scientific scoring gate has passed. Its output explicitly leaves exact
+command/version review, overlap/reference-resource audit verification,
+native ID conversion, and independent reference reconstruction/scoring
+open. Successful full-run integration remains untested until completed
+inference is available. No accuracy is computed by this entrypoint.
+
+Thirteen new tests cover scheduler ambiguity/failure, early rejection before
+output reads, artifact mutation, bytes/hashes, duplicate/escaping paths, and
+metadata parsing. All 31 focused verifier/report/scorer tests pass. Executing
+the real CLI for pending job `20917` returned exit 1 at the scheduler gate,
+before opening prediction files or writing verification output. This is an
+expected refusal, not a failed inference or grounds to restart the job.
+The prior report assembly milestone remains intact; no held-out outcomes
+were inspected and no queued inference configuration was changed.
