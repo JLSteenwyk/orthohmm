@@ -2707,3 +2707,28 @@ Frozen executor**a69d505** at
 Output `benchmarks/results/qfo_saved_graph_repeats_v1`, log
 `benchmarks/work/qfo_saved_graph_repeats_21307.log`. No repeat outcome claimed
 before terminal execution and source/partition validation.
+
+### Prediction-independent error-feature preparation (2026-09-16)
+
+Previous turn made progress: tested/frozen QfO worker-repeat diagnostic and
+submitted21307. Reread full objective;21307 confirmed live, no restart.
+While it runs, audited older `analyze_phylogeny_changes.py`: useful fixed
+size/copy/identity concepts, but its pair statistics are not the publication
+weighted OrthoBench statistic and cannot be substituted without validation.
+
+Added sequence-only feature preparation against the hash-pinned12 OrthoBench
+FASTA inputs, requiring all251,378 unique proteins. Explicitly records canonical
+and noncanonical content, gaps/stops, length, global normalized entropy and
+missingness. Shortness/composition descriptors are not biological fragment or
+domain calls. No prediction/reference files or accuracy outcomes are read.
+Twelve focused tests passed; frozen batch and full-suite evidence follow.
+
+`ORTHOBENCH_ERROR_ANALYSIS_PROTOCOL_20260916.md` specifies the later exploratory
+14-stratum/two-comparator/three-metric panel (84 adjusted endpoints), small-bin
+and missing-data rules, reference-alignment validation, and all70-family tracing.
+This is prospective for these joins but post-development, not independent
+confirmation. Real duplication history, annotated fragments/domain architecture,
+QfO extension, and biological application remain distinct unmet requirements.
+
+Full unit suite **1000 passed in27.41s**, followed by12 focused tests passing
+after adding scheduler identity and explicit zero-valued missingness counters.
