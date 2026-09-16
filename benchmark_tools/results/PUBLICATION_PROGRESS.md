@@ -2677,3 +2677,27 @@ QfO drift limitation and remaining requirements into manuscript/claim checklist.
 Next QfO saved-graph worker identity/repeatability experiments, followed by
 QfO component evaluation once reproducibility is understood; parameter/error/
 application/scaling/release work remains required. Goal not complete.
+
+### Preserved-graph worker repeatability diagnostic (2026-09-16)
+
+Previous turn made progress: complete tree scoring/figure/manuscript and
+localization of QfO initial-clustering divergence. Reread full objective;
+jobs21305/21306 are confirmed terminal, not restarted.
+
+Prepared three sequential fresh workers on the exact preserved QfO graph
+from21305, without graph rebuilding, profiles or labels. Hash-pinned capture
+records, source arrays, gene order and reference partitions are checked.
+Each worker records imported graph/scientific module files, loaded shared
+library hashes from/proc/self/maps, Python/package identity, relevant
+environment overrides, CPU affinity and actual metadata. After native exit,
+the parent rechecks files and complete partition coverage, comparing each
+partition with both previous experiments and with the first new repeat.
+All repeats remain in the record; failures stop without automatic retry.
+Instrumentation and lack of historical binary identity remain explicit limits.
+
+Eleven focused tests passed, including an actual fresh-process worker with
+native libraries, expected exit behavior and an isolated gene. Full unit
+suite and frozen submission details follow. Planned one CPU64GiB/one hour;
+no end-to-end performance claim from this shared-node diagnostic.
+
+Full unit suite **988 passed in25.33s** before freezing the repeat executor.
