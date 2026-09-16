@@ -213,3 +213,20 @@ Next ablation gate: freeze executable commands and input manifests and
 demonstrate cached replay equivalence to the production baseline before
 launching and interpreting factorial cells. Shared-reference-resource review,
 YGOB report wiring, and all previously listed publication work remain open.
+
+## YGOB Reference-Resource Review
+
+`YGOB_REFERENCE_RESOURCE_AUDIT_20260916.md` records the source/command audit,
+primary-source citations, checked file hashes, known family overlap, and
+limits of the transfer claim. The reviewed frozen inference paths use input
+proteomes rather than supplied YGOB groups; the launcher's reference access
+is a checksum preflight, not an inference label input. YGOB's sequence-plus-
+synteny curation is not wholly independent of sequence-based evidence or
+Saccharomyces annotation history. The audit supports the bounded novel-taxon
+experiment, not unrestricted independence. Full per-pillar historical
+resource ancestry and redistribution permission remain unresolved.
+
+This completes the planned source-level resource review for the YGOB scoring
+gate, with those limitations retained. It does not waive inference/output
+completion and arithmetic checks, and does not cover all historical tools.
+No held-out scores were inspected and no inference settings were changed.
