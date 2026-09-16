@@ -1255,3 +1255,28 @@ Prospective YGOB amendment retains all scientific settings and references but
 changes exclusive scheduling to shared 32-CPU/128-GiB/24-hour execution. Timings
 are explicitly contended, not matched efficiency evidence. No YGOB outcomes
 have been inspected and no existing result directory has been overwritten.
+
+Validation: full unit suite **657 passed in 25.10s**; final YGOB verifier tests
+**14 passed**; shell syntax and scoped diff checks clean. Pushed **db3b5aa**
+and pinned `publication_ygob_native_v2` at full revision
+db3b5aa9ff05eaa81da58b353d4bf6d426bab4bc. Its real-input --check-only verifies
+the frozen inputs/source/native runtime and passes without creating inference
+outputs. Frozen build manifest SHA256 remains
+aebea83807356b02307473506fa30c2dbd2c511d7ba75a0655eb12180a474d74.
+
+Submitted corrected YGOB **21192** with the amended shared-node allocation,
+32 CPUs, 128 GiB and 24-hour limit. Live squeue confirms RUNNING; the first
+compute-node `high_sensitivity_before.runtime.json` reports passed, exit zero,
+the correct separate frozen checkout and profile length 20. Output remains
+`benchmarks/results/ygob_validation_v1` (original job never started); log is
+`benchmarks/work/ygob_native_validation_21192.log`. The job retains the same
+prepared 16-species input/reference and scientific settings. It will execute
+the two OrthoHMM modes and full OrthoFinder sequentially; all scoring remains
+separate and gated. No YGOB or corrected simulation accuracy has been inspected.
+
+Prepared OrthoBench candidate manifest snapshot is committed as
+`orthobench_factorial_prepared_20260916.json`. Next: verify and execute the four
+reconciliation cells from this manifest, then score all eight cells under the
+prespecified protocol; retain required unconstrained and sequence controls and
+the QfO factorial. Continue monitoring both corrected simulation arrays and
+YGOB without changing active runtime/source files.

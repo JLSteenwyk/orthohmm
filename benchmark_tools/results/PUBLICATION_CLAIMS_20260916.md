@@ -37,6 +37,14 @@ evidence that an experiment completed or a biological hypothesis is true.
 
 - YGOB `20917`: cancelled before execution after finding the missing native
   profile runtime. Must be resubmitted after runtime validation; no scores seen.
+- Corrected YGOB `21192` is now running with pinned native-runtime guards.
+  Real-input preflight and first compute-node profile probe pass; native
+  completion, conversion, scoring and independent-validation conclusions remain
+  unverified. Shared-node timings are not matched efficiency measurements.
+- OrthoBench factorial preparation `21161` completed successfully. The
+  [prepared manifest](orthobench_factorial_prepared_20260916.json) contains four
+  candidate sets and eight planned cells; reconciliation and accuracy evaluation
+  are not yet complete.
 - Replay `20919` was cancelled before execution and replaced by `21088`,
   using the identical pinned command without the unnecessary YGOB dependency
   or exclusive allocation. **21088 failed equivalence**: profile construction
