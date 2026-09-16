@@ -85,7 +85,8 @@ def unconstrained_cell(cell, output):
     index = argv.index("--membership-constraints")
     omitted = argv[index + 1]
     del argv[index:index + 2]
-    label = "p1_c1_r1_unconstrained"
+    argv.append("--unconstrained-membership")
+    label = "p1_c1_r1_unconstrained_v2"
     target = output / "cells" / label
     argv[argv.index("--output-directory") + 1] = str(target)
     argv[argv.index("--json") + 1] = str(output / "cells" / (label + ".json"))

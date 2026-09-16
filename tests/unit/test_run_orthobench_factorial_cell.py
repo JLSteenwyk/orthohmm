@@ -33,9 +33,11 @@ def test_unconstrained_changes_only_filter_and_output_paths():
     original = deepcopy(cell)
     changed = unconstrained_cell(cell, root)
     assert cell == original
-    assert changed["label"] == "p1_c1_r1_unconstrained"
+    assert changed["label"] == "p1_c1_r1_unconstrained_v2"
     assert "--membership-constraints" not in changed["argv"]
     argv = list(changed["argv"])
+    assert argv.count("--unconstrained-membership") == 1
+    argv.remove("--unconstrained-membership")
     for flag in ("--output-directory", "--json"):
         argv[argv.index(flag) + 1] = original["argv"][original["argv"].index(flag) + 1]
     argv += ["--membership-constraints", changed["omitted_membership_constraints"]]

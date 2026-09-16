@@ -39,9 +39,10 @@ estimation effects, but must be labeled a supplied-tree replay.
 - Add an explicitly labeled unconstrained satellite_v2 reconciliation replay
   to measure the high-confidence membership filter independently.
   Execution specification: use the already-frozen OrthoBench p1_c1 candidate
-  partition, remove only the membership-constraints argument, and retain
+  partition, replace the membership-constraints argument with the explicit
+  --unconstrained-membership diagnostic flag, and retain
   CPU32, the same frozen source/tools and all reconciliation/tree settings.
-  Write separate p1_c1_r1_unconstrained outputs; never overwrite the eight
+  Write separate p1_c1_r1_unconstrained_v2 outputs; never overwrite the eight
   factorial cells. Compare to p1_c1_r1 using the existing official score and
   paired reference-family bootstrap (20,000 replicates, seed20260918).
   Treat F1/precision/recall differences as an exploratory three-endpoint
