@@ -2261,3 +2261,31 @@ Latest jobs:21288 RUNNING44:58,21290 RUNNING20:52,21291 RUNNING12:53;
 21292 and21293 remain dependency-pending. Eight sequence-search targets are
 complete and target08 is running. Preserve all active outputs and wait for
 authoritative terminal evidence before conversion/scoring claims.
+
+### Unconstrained scoring prepared; sequence search completed (2026-09-16)
+
+Previous response supplied a goal prompt only, so it did not advance analysis.
+Reread the active objective and revalidated live scheduler handles before
+continuing. Job21291 completed successfully (0:0), elapsed17:32; its dependent
+numeric conversion21292 is now RUNNING. Graph controls21293 remain pending
+that conversion. This is terminal execution evidence, not yet numeric or
+accuracy admission. The shared-node elapsed time is not controlled timing.
+
+Added `assemble_unconstrained_control.py` for the prespecified exploratory
+p1_c1_r1_unconstrained_v2 minus p1_c1_r1 comparison. Both native validators
+must pass before predictions or reference labels are loaded. The assembler
+checks full gene coverage, frozen reference resources, official scorer
+agreement, and unchanged scoring inputs. It reuses paired RefOG bootstrap
+statistics with20,000 replicates, seed20260918, and three-endpoint Bonferroni
+adjustment; output is explicitly not a ninth factorial cell, independent
+confirmation, a default change, or a publication-readiness claim. Resource
+records retain their incremental/shared-node scope.
+
+Seven new tests cover validation-before-label access, overwrite refusal,
+comparison inventory, complete report assembly, official disagreement,
+input mutation, and incomplete coverage. Full unit suite **857 passed in28.91s**.
+No diagnostic accuracy has been evaluated while inference remains live.
+Latest scheduler check:21290 RUNNING29:20,21288 RUNNING53:26,
+21292 RUNNING3:49,21293 dependency-pending. Next: native-admit and score
+the diagnostic after terminal completion; audit conversion and graph controls;
+complete the QfO replay equivalence check without interrupting its active job.
