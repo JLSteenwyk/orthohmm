@@ -2888,3 +2888,16 @@ and frozen submission details follow. Existing unrelated sample changes remain
 untouched; their whitespace warnings are not part of this milestone.
 
 Full unit suite **1055 passed in29.11s**. Scoped whitespace validation passed.
+
+Committed/pushed executor **cc3bffa**, frozen at
+`benchmarks/work/publication_qfo_saved_graph_affinity_v1`. Submitted job**21311**
+from its frozen batch script,32CPU/64GiB/two-hour limit. Scheduler independently
+confirmed RUNNING with zero restarts; no results yet. Output destination:
+`benchmarks/results/qfo_saved_graph_affinity_v1`. Next verify all four native
+worker records/partitions and interpret the controlled affinity contrast before
+any full QfO replay. While it runs, error-analysis figures and mechanistic tracing
+can proceed. All broader publication requirements remain active.
+
+Push again reports21 dependency alerts (one critical, seven high, eleven moderate,
+two low). These remain untriaged release work; frozen scientific environments
+were not modified to address them during this diagnostic.
