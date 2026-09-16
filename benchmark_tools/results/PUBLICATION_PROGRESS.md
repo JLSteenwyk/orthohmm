@@ -605,3 +605,18 @@ or method inference. Pin it in a detached worktree before materialization;
 generation-runner integrity checks, seed aggregation and the method launch
 manifest remain open gates. A version inventory is not yet proof of a
 portable environment rebuild or a complete release dependency lock.
+
+Builder `4c5c7b0` was committed/pushed and checked out in detached worktree
+`benchmarks/work/publication_simulation_4c5c7b0`. Running it with the isolated
+simulation Python materialized `benchmarks/work/publication_simulation_panel_v1`.
+The committed manifest is `publication_simulation_manifest_20260916.json`;
+`simulation_environment_versions_20260916.txt` preserves the version inventory.
+Commands reference the pinned worktree rather than the mutable main checkout.
+
+Verified all 120 generated parameter file lengths and hashes, all recorded
+workflow hashes, 70 unique condition/seed dataset entries, and an empty native
+output directory. The manifest contains 40 native configurations, 170 staged
+generation/truth/derivation commands, and 20 required history-equivalence
+checks. Status is `materialized_not_executed`; no successful simulation or
+method outcome is inferred from these files. Generation runner checks,
+seed-level aggregation and pinned method conversion/launch remain open.
