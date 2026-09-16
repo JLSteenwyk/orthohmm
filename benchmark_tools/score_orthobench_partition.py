@@ -84,12 +84,10 @@ def score_partition(
             "splits": splits,
             "exact": false_negative == 0 and false_positive == 0,
         })
-    precision = total_true_positive / (
-        total_true_positive + total_false_positive
-    )
-    recall = total_true_positive / (
-        total_true_positive + total_false_negative
-    )
+    predicted_total = total_true_positive + total_false_positive
+    reference_total = total_true_positive + total_false_negative
+    precision = total_true_positive / predicted_total if predicted_total else 0.0
+    recall = total_true_positive / reference_total if reference_total else 0.0
     f_score = (
         2 * precision * recall / (precision + recall)
         if precision + recall

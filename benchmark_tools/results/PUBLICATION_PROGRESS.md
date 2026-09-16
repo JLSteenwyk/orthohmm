@@ -11,7 +11,7 @@ publication readiness. Existing benchmark outcomes are development-exposed.
 | Baseline and scoring audit | In progress | Historical audit: SCORING_AUDIT_20260910.md; refresh OrthoMCL and correct output semantics before freezing tables. |
 | Independent generalization | Not complete | Inventory all development exposure; choose a genuinely independent reference and freeze protocol before scoring. |
 | HMM and phylogeny ablations | Not complete | Existing experiments are exploratory; design matched controls and preserve negative results. |
-| Uncertainty and error analysis | Not complete | Add paired reference-family bootstrap of the actual benchmark statistic; confirm the retained prediction artifacts first. |
+| Uncertainty and error analysis | In progress | Primary OrthoBench comparisons now have paired RefOG bootstrap estimates; other comparisons, QfO uncertainty, error strata, and tracing remain. |
 | Robustness and efficiency | Not complete | Validate simulator, multi-seed conditions, tree perturbations, and matched resource measurements. |
 | Biological usefulness | Not complete | Prespecify independent families and evidence before selecting examples. |
 | Publication/reproducibility package | Not complete | Generate artifacts from audited records; draft manuscript and claim-to-evidence checklist; release/archive remains pending. |
@@ -60,4 +60,30 @@ Reference-family impact and a justified repair decision remain unresolved.
 The separate `run_orthomcl_final_groups_qfo.slurm` workflow preserves the
 existing pre-clustering result and refuses to overwrite existing artifacts.
 Final-group scoring is required by output semantics, not selected by score.
-Its execution and result remain to be recorded.
+Job 20916 launched this workflow from commit `bef05f6` on 2026-09-16, with
+8 allocated CPUs and 150 GB memory (conversion and scoring only). It is
+running all six QfO assessments. Logs:
+`qfo_benchmark/scoring/orthomcl_final_groups_20916.log`.
+Existing pre-clustering scores are recorded in
+`orthomcl_preclustering_qfo_20260916.json` (secondary project mean
+0.7244137191145797); do not relabel these as final-group results.
+
+## Completed Milestone: Primary OrthoBench Uncertainty
+
+The protocol is `ORTHOBENCH_UNCERTAINTY_PROTOCOL_20260916.md`; results and
+generated report are `orthobench_paired_uncertainty_20260916.json` and
+`ORTHOBENCH_UNCERTAINTY_20260916.md`. The retained point estimates reproduce.
+Satellite_v2 minus full OrthoFinder F1 is +1.3696 percentage points, with
+paired percentile 95% CI [-4.5037, 7.9168]. High sensitivity minus full
+OrthoFinder is -2.3775 points, CI [-8.1780, 3.3483]. Neither F1 interval
+establishes an advantage. Precision is higher and recall lower for both
+OrthoHMM configurations; report the tradeoff, not overall superiority.
+These intervals do not account for historical selection on this benchmark.
+
+## Release Checks Still Needed
+
+The authorized remote accepted milestone `bef05f6`. GitHub reported 21
+dependency alerts (one critical, seven high, eleven moderate, two low) during
+push. This is an untriaged remote notification, not a validated assessment
+of runtime exposure. Dependency review is required before release; do not
+silently update pinned benchmarking environments and change their provenance.

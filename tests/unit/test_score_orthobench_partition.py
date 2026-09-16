@@ -27,3 +27,9 @@ def test_score_partition_penalizes_splits_and_extra_members():
     assert score["weighted_false_positive"] == 1
     assert score["weighted_false_negative"] == 1
     assert score["exact_refogs"] == 0
+
+
+def test_no_predicted_pairs_has_zero_precision_and_recall():
+    score = score_partition([], {"ref": {"a", "b"}}, {})
+    assert score["f_score"] == score["precision"] == score["recall"] == 0
+    assert score["weighted_false_negative"] == 1
