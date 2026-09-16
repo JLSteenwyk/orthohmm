@@ -5,6 +5,7 @@ import pytest
 
 from benchmark_tools.prepare_orthobench_factorial import plan_cells
 from benchmark_tools.run_orthobench_factorial_cell import select_cell
+from benchmark_tools import run_orthobench_factorial_cell as runner
 
 
 def fixture():
@@ -45,3 +46,50 @@ def test_rejects_changed_design(change):
         index = 4
     with pytest.raises(ValueError):
         select_cell(manifest, index)
+
+
+@pytest.mark.parametrize("outcome", ["success", "failed_method", "exception"])
+def test_execution_restores_verification_directory(tmp_path, monkeypatch, outcome):
+    original = tmp_path / "verification"
+    launcher = tmp_path / "launcher"
+    original.mkdir()
+    launcher.mkdir()
+    monkeypatch.chdir(original)
+    manifest = fixture()
+    manifest["environment_overrides"] = {}
+    monkeypatch.setattr(runner.sys, "argv", ["runner", "--manifest", "manifest.json",
+                        "--manifest-sha256", "hash", "--environment-manifest", "env.json",
+                        "--environment-sha256", "hash", "--preparation-job", "1", "--index", "0"])
+    monkeypatch.setattr(runner, "read_frozen", lambda *args: manifest)
+    cell = manifest["cells"][1]
+    monkeypatch.setattr(runner, "select_cell", lambda *args: (cell, tmp_path, launcher))
+    checks = []
+
+    def verify(*args):
+        checks.append(Path.cwd())
+        assert Path.cwd() == original
+        return {}
+
+    monkeypatch.setattr(runner, "verify_prepared", verify)
+    monkeypatch.setattr(runner, "verify_environment", verify)
+    monkeypatch.setattr(runner, "execution_environment", lambda *args: ({}, {}))
+    monkeypatch.setattr(runner, "file_provenance", lambda *args: {})
+
+    def execute(*args):
+        assert Path.cwd() == launcher
+        assert args[-1]["cwd"] == str(launcher)
+        if outcome == "exception":
+            raise RuntimeError("execution error")
+        return {"failed_methods": [cell["label"]] if outcome == "failed_method" else []}
+
+    monkeypatch.setattr(runner, "execute", execute)
+    if outcome == "exception":
+        with pytest.raises(RuntimeError, match="execution error"):
+            runner.main()
+    elif outcome == "failed_method":
+        with pytest.raises(SystemExit, match="Reconciliation failed"):
+            runner.main()
+    else:
+        runner.main()
+    assert Path.cwd() == original
+    assert len(checks) == (2 if outcome == "exception" else 4)

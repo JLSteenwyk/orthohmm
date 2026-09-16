@@ -110,9 +110,14 @@ def main():
                   "cwd": str(launcher_root),
                   "scope": "Reconciliation only; profile expansion is a verified upstream checkpoint"}
     verified = {"status": "ready", "inputs": [{**r, "absolute_path": r["path"]} for r in manifest["fasta_inputs"]]}
-    os.chdir(launcher_root)
-    result = execute({"label": cell["label"], "methods": {cell["label"]: method}},
-                     [cell["label"]], env, evidence, verified, provenance)
+    verification_cwd = Path.cwd()
+    try:
+        os.chdir(launcher_root)
+        result = execute({"label": cell["label"], "methods": {cell["label"]: method}},
+                         [cell["label"]], env, evidence, verified, provenance)
+    finally:
+        # Distribution discovery must use the same cwd before and after inference.
+        os.chdir(verification_cwd)
     verify_prepared(manifest, cell, launcher_root, args.preparation_job)
     verify_environment(environment)
     if result.get("failed_methods"):

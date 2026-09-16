@@ -1476,3 +1476,29 @@ scheduler accounting. Next: correct future verification context with tests,
 perform independently recorded postflight recovery of all affected outputs,
 then complete native validation/conversion before scoring. Do not silently
 relabel the failed batch as successful or restart expensive inference.
+
+## Factorial Runner Working-Directory Fix
+
+Previous turn made progress by integrating simulation evidence and diagnosing
+the first factorial postflight failure. Re-read the objective and confirmed
+YGOB 21192 and remaining factorial tasks are live. Task 21248_1 has now also
+terminated FAILED 1:0 (32:45) at the identical postflight inventory check;
+its inference record reports exit 0, no failed methods, and 52,331 inventoried
+artifacts. These are not yet admitted scientific results.
+
+Changed only the development factorial runner to restore its original cwd in
+a finally block after inference, before source/environment postflight checks.
+Child execution retains the intended pinned replay cwd. Added tests asserting
+the execution cwd, equal pre/post verification contexts, and cwd restoration
+after successful inference, reported method failure, and raised exceptions.
+All 10 targeted tests and the complete **688-test unit suite pass** (31.28s).
+Scoped whitespace checks pass. The real prepared p0_c0_r1 check-only command
+passes the frozen source, input, runtime and environment checks from the
+original repository directory; no inference or scoring was performed.
+
+Pinned running executors, original failed statuses, scientific settings and
+outputs are unchanged. The corrected development runner does not retroactively
+admit either failed batch. Required next work is separately recorded recovery
+verification of finished artifacts and exact execution provenance, followed
+by native completion, root-HOG conversion and all-cell scoring gates. A
+successful check-only preflight is not a substitute for these output checks.
