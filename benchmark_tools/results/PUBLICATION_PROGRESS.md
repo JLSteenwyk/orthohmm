@@ -826,3 +826,38 @@ The executor verifies the required paired history itself before each dataset.
 Full unit suite: **601 passed in 22.31s**. At this checkpoint generation
 tasks 36-37 are running and method tasks remain pending on the dependency.
 Native output validation and scientific scoring remain separate next steps.
+
+### Complete generation and native numerical failure audit (2026-09-16)
+
+All 40 generation tasks are confirmed `COMPLETED/0:0` by Slurm accounting.
+All 70 dataset truth files exist. Full paired-history verification succeeded:
+20 matched comparisons, 437 biological files per side. Committed inventory
+report: `simulation_histories_20260916.json`.
+
+Added native output validation with six tests, including rejection of
+nonfinite MCL graph weights and native failure despite process exit zero.
+Both baseline_20261001 OrthoHMM runs pass completion/provenance checks, but
+OrthoFinder's nominally successful process has no native completion marker
+and reports no usable species-tree alignments. Its graph contains nan/inf.
+This is why process-success records were deliberately not treated as scores.
+
+Reproduced the failure by calling installed, unmodified OrthoFinder 3.1.5
+normalization on saved species 0 versus 1 DIAMOND hits. All 98 raw hits have
+the same length product (90,000); fitted coefficients cause overflow, and
+all 98 normalized values are nonfinite. Actual search hits exist, so the
+initial warning alone was not evidence of a search-program failure.
+See `SIMULATION_NATIVE_FAILURE_AUDIT_20260916.md` and the hashed diagnostic
+JSON/script. This finding changes the next scientific action: preserve this
+fixed-length stress panel, and freeze a separate heterogeneous-family-length
+panel before evaluating additional outcomes. Do not reinterpret this failure
+as ordinary competitor accuracy or as general superiority of OrthoHMM.
+
+Method array 20957 remains active; original outputs and configurations are
+preserved. No accuracy scores have been computed. Native admission checks,
+proper explicit failure records, and the heterogeneous-length protocol are
+next, alongside the queued YGOB/replay and other outstanding goal work.
+
+Verification: **607 unit tests passed in 22.81s**; fifteen focused native
+validator/adapter tests passed. The installed-tool numerical diagnostic
+completed successfully and preserved its warnings/counts without modifying
+native outputs or the competitor installation.

@@ -1,0 +1,60 @@
+{
+  "accuracy_computed": false,
+  "command": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/bin/python",
+    "benchmark_tools/diagnose_orthofinder_constant_lengths.py",
+    "--blast",
+    "benchmarks/results/publication_simulation_methods_v1/baseline_20261001/orthofinder_full/input/OrthoFinder/Results_Sep16/WorkingDirectory/Blast0_1.txt.gz",
+    "--query-count",
+    "99",
+    "--target-count",
+    "97",
+    "--length",
+    "300",
+    "--output",
+    "benchmark_tools/results/orthofinder_constant_length_diagnostic_20260916.json"
+  ],
+  "constant_length_assumption": 300,
+  "diagnostic_only": true,
+  "diagnostic_source": {
+    "bytes": 3602,
+    "path": "diagnose_orthofinder_constant_lengths.py",
+    "sha256": "a2f241cf3962eff7c1d9afab5e5807b9de3c808a60954a642201ad0af083dd42"
+  },
+  "fitting_parameters": [
+    217.07968906052554,
+    -1072.8018499530745
+  ],
+  "input": {
+    "bytes": 1364,
+    "path": "Blast0_1.txt.gz",
+    "sha256": "1ff80ca8d5f75734c73b1b5413c888353e94aab117145babd92b33b1e54c2dd1"
+  },
+  "matrix_shape": [
+    99,
+    97
+  ],
+  "native_source": {
+    "absolute_path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/lib/python3.12/site-packages/orthofinder/tools/waterfall.py",
+    "bytes": 23627,
+    "path": "waterfall.py",
+    "sha256": "304324b1967f917dd523c9d98a7d0c7cffba7cd730ac8b31176ef4f0f80918c8"
+  },
+  "nonfinite_normalized": 98,
+  "normalized_stored": 98,
+  "packages": {
+    "numpy": "2.5.1",
+    "orthofinder": "3.1.5",
+    "scipy": "1.18.0"
+  },
+  "python": "3.12.3 (main, May 26 2025, 18:50:19) [GCC 13.3.0]",
+  "raw_hits": 98,
+  "schema_version": 1,
+  "unique_length_products": [
+    90000.0
+  ],
+  "warnings": [
+    "overflow encountered in scalar power",
+    "invalid value encountered in multiply"
+  ]
+}
