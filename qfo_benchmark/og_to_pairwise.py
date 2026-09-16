@@ -27,17 +27,21 @@ def index_genes(input_dir):
     the accession.
     """
     gene_to_species = {}
+    owners = {}
     for fa in sorted(input_dir.glob("*.fasta")):
         sp = fa.stem
         with open(fa) as f:
             for line in f:
                 if line.startswith(">"):
                     tok = line[1:].split()[0]
-                    gene_to_species[tok] = sp
-                    if "|" in tok:
-                        parts = tok.split("|")
-                        if len(parts) >= 2:
-                            gene_to_species.setdefault(parts[1], sp)
+                    for identifier in {tok, _strip_to_uniprot(tok)}:
+                        if identifier in owners:
+                            raise ValueError(
+                                f"Duplicate or ambiguous FASTA identifier {identifier!r}: "
+                                f"{owners[identifier]!r} and {tok!r}"
+                            )
+                        owners[identifier] = tok
+                        gene_to_species[identifier] = sp
     return gene_to_species
 
 
@@ -81,7 +85,8 @@ def main():
             if len(genes) != len(set(genes)):
                 raise ValueError(f"duplicate gene within {og_path}:{line_number}")
             for gene in genes:
-                previous_line = observed_genes.get(gene)
+                canonical_gene = _strip_to_uniprot(gene)
+                previous_line = observed_genes.get(canonical_gene)
                 if previous_line is not None:
                     raise ValueError(
                         f"gene {gene!r} occurs in multiple groups in {og_path}: "
@@ -92,7 +97,7 @@ def main():
                         f"gene {gene!r} at {og_path}:{line_number} is absent from "
                         f"{input_dir}"
                     )
-                observed_genes[gene] = line_number
+                observed_genes[canonical_gene] = line_number
             if len(genes) < 2:
                 continue
             for a, b in combinations(genes, 2):

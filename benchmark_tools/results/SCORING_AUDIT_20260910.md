@@ -1,5 +1,12 @@
 # Benchmark Scoring Audit (2026-09-10)
 
+**2026-09-16 amendment:** OrthoMCL jobs 20909 and 20910 have completed.
+The assessment used a pre-MCL weight matrix, not the final MCL groups.
+The earlier dismissal of final-group expansion below is withdrawn; both
+representations must be labeled explicitly. See `PUBLICATION_PROGRESS.md`
+and `orthomcl_blast_audit_20260916.json` for current evidence and open work.
+Other numbers below remain historical audit results, not a publication freeze.
+
 This audit covers the retained cross-tool comparisons on QfO 2020,
 OrthoBench, and Three Kingdoms, plus historical external scores referenced by
 the OrthoHMM hill-climb reports. It validates score arithmetic, identifier
@@ -76,9 +83,10 @@ Group-derived methods were also checked for duplicate or unknown genes.
 Native relations are used for OrthoFinder full, OrthoHMM phylogeny, FastOMA,
 SonicParanoid, and ProteinOrtho. Clique expansion remains appropriate for the
 group-only OrthoHMM high-sensitivity and OrthoFinder sequence-only outputs.
-The pending OrthoMCL assessment will use its cross-species native
-ortholog/co-ortholog matrix edges; expanding final MCL groups would introduce
-cross-species pairs that OrthoMCL did not call directly.
+The OrthoMCL assessment used cross-species pre-clustering matrix edges.
+That diagnostic does not evaluate the final MCL clustering; a separate
+final-group-derived assessment is required. It is not valid to reject that
+representation solely because clustering introduces pairs absent from its input.
 
 | Method | VGNC F | SwissTrees F | TreeFam-A F | EC | GO | FAS | Mean |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
