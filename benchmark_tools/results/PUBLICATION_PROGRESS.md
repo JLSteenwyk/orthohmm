@@ -587,3 +587,21 @@ Thirteen new tests cover selections, false-positive accounting and exports;
 computed, no validation outcomes were inspected, and no frozen method
 configuration was changed. Executable panel materialization, seed-level
 aggregation and matched method execution remain the next simulation steps.
+
+## Simulation Manifest Builder
+
+`prepare_simulation_panel.py` expands all pinned native defaults into exact
+T/G/S parameter files for the forty prespecified configurations and indexes
+all seventy native/derived datasets. It records workflow/native-source hashes,
+default and generated parameter hashes, exact generation/truth/transform
+commands, the ten seeds, matched-history checks, six resolved simulation
+dependency versions, and a package-version inventory without direct URLs or
+environment-variable dumps. Existing panel directories are refused.
+
+Four focused tests verify dimensions, matching T/G parameters within the
+divergence contrasts, all overrides, default preservation, and rejection of
+out-of-protocol seed/condition requests. The builder executes no simulator
+or method inference. Pin it in a detached worktree before materialization;
+generation-runner integrity checks, seed aggregation and the method launch
+manifest remain open gates. A version inventory is not yet proof of a
+portable environment rebuild or a complete release dependency lock.
