@@ -54,17 +54,22 @@ evidence that an experiment completed or a biological hypothesis is true.
   or exclusive allocation. **21088 failed equivalence**: profile construction
   silently produced zero profiles because `pair_align.so` was absent. See the
   [runtime audit](PROFILE_RUNTIME_FAILURE_20260916.md). Factorial preparation
-  remains blocked on a corrected-runtime replay, not on a scheduling wait.
+  was blocked until the corrected-runtime replay documented below passed.
 - Corrected native build is recorded in
   [runtime manifest](publication_native_runtime_20260916.json). All three CPU
   libraries built and the exact-checkout profile smoke passed. Corrected replay
   `21138` completed successfully: [all four partitions match byte-for-byte](ob_native_replay_verification_20260916.json).
   This establishes cached-stage equivalence; factorial and corrected validation
   remain incomplete. Original defective outputs remain preserved.
-- Simulation OrthoHMM runs used the same incomplete checkout. Existing results
+- Original simulation OrthoHMM runs used the same incomplete checkout. Those results
   are defective-runtime diagnostics, not publication estimates of the intended
   method. Retain valid comparator outputs and rerun OrthoHMM with a prospectively
   recorded corrected runtime. Source hashes alone did not validate execution.
+- [Corrected fixed-length results](SIMULATION_FIXED_NATIVE_RESULTS_20260916.md)
+  are now assembled: 70 high-sensitivity and 64 satellite_v2 successes, six
+  persistent species-tree failures, and no admitted OrthoFinder comparisons.
+  Profile construction ran but added zero graph edges. This is not a superiority
+  result. Corrected variable-length assembly remains in progress.
 - The label-blind verifier checks inference files and completion; it does
   not yet certify every scientific scoring gate. Its output retains that
   distinction explicitly.

@@ -1,14 +1,5 @@
 # Simulation Results: fixed_length_v1
 
-**Runtime audit warning:** OrthoHMM ran without its required profile-alignment
-binary and built zero profiles. Its scores below are preserved diagnostics,
-not valid results for the intended method. See the
-[runtime failure audit](PROFILE_RUNTIME_FAILURE_20260916.md). The original
-machine-readable snapshot is retained unchanged for provenance.
-
-The [corrected-runtime results](SIMULATION_FIXED_NATIVE_RESULTS_20260916.md)
-are now available separately; do not use this original runtime as their source.
-
 Scores are percentages and means of completed seed-level metrics, not pooled gene pairs.
 Failed or inapplicable seeds have no imputed score. Available-case means are conditional on success.
 
@@ -69,4 +60,4 @@ Intervals use 20,000 whole-seed bootstrap replicates; ten seeds limit tail resol
 Resource logs are descriptive shared-machine measurements, not controlled scaling results.
 This panel is not pooled with the other simulation panel and does not establish publication readiness.
 
-Source results: `simulation_fixed_length_results_20260916.json`, SHA-256 `61aae27584079d5ed3f5c82606f2df8301e3fe5c50ec038d16562454b9936501`.
+Source results: `simulation_fixed_native_results_20260916.json`, SHA-256 `305dcb1dde0c0f57d8b390b0f00cc6148d95103a7efb98bd9f6dce37b96e64a8`.

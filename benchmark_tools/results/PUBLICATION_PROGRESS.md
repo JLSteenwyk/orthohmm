@@ -1365,3 +1365,24 @@ has not been applied to the running factorial. Corrected fixed-length array
 21143 is no longer in squeue; next action is terminal-accounting-gated assembly
 using pinned b66225d and original comparator execution evidence, not assuming
 that absence from the queue alone proves scientific completion.
+
+Pinned b66225d assembler completed the corrected fixed-length panel: all 280
+explicit outcomes recorded in `simulation_fixed_native_results_20260916.json`.
+Verified both corrected array 21143 and original comparator array 20957 with
+their original executors and separate provenance. Generated the corresponding
+table and `SIMULATION_FIXED_NATIVE_INTERPRETATION_20260916.md`.
+
+High sensitivity: 70 admitted; satellite_v2: 64 admitted/six execution failures.
+All original OrthoFinder outputs remain rejected by native gates; all 14
+planned comparisons have zero complete pairs and no differences/intervals.
+Every corrected OrthoHMM run built profiles (62-113), but none added profile
+edges. All 280 status/score dictionaries match the defective-runtime snapshot.
+Directly rechecked corrected failure logs: same missing connected single-copy
+taxon coverage (n2 for seeds 3/6; n3/n4 for seed 7) in both divergent conditions.
+No positive HMM-expansion or superiority claim follows from this panel.
+
+Corrected variable array 21142 also left the queue. Started its separate
+terminal-accounting-gated assembly using b66225d and original comparator array
+21010/pinned executor f5f4e1b. Output is a new
+`simulation_variable_native_results_20260916.json`; no partial scientific
+summary has been inspected. Assembly session remains active at this update.
