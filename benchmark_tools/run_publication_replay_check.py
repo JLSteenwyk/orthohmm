@@ -14,6 +14,7 @@ from Bio import SeqIO
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from benchmark_tools.audit_historical_profile_ablation import STAGES, read_partition, verify_file
 from benchmark_tools.orthobench_stage_diagnostics import file_provenance
+from benchmark_tools.validate_profile_runtime import require_profile_runtime
 
 
 OUTPUTS = dict(zip(STAGES, ("orthogroups_multipass.txt", "orthogroups_multipass_refined.txt",
@@ -55,6 +56,7 @@ def main():
         raise ValueError("Historical replay gate not satisfied")
     if args.output.exists():
         raise ValueError("Refusing to overwrite replay check")
+    profile_runtime = require_profile_runtime(root)
     cache = audit["inputs"]["cache"]
     verify_file(Path(cache["path"]), cache)
     universe = set()
@@ -86,6 +88,7 @@ def main():
     environment.update(PYTHONPATH=str(root), PYTHONHASHSEED="0", OMP_NUM_THREADS="1",
                        OPENBLAS_NUM_THREADS="1", MKL_NUM_THREADS="1")
     metadata = {"source_commit": commit, "launcher": file_provenance(Path(__file__)),
+                "profile_runtime": profile_runtime,
                 "historical_audit": file_provenance(args.historical_audit), "command": command,
                 "source_manifest": [file_provenance(p) for p in sorted((root / "orthohmm").rglob("*"))
                                     if p.is_file() and p.suffix in {".py", ".c", ".cu", ".h"}],

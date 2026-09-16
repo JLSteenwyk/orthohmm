@@ -1,5 +1,11 @@
 # Simulation Results: fixed_length_v1
 
+**Runtime audit warning:** OrthoHMM ran without its required profile-alignment
+binary and built zero profiles. Its scores below are preserved diagnostics,
+not valid results for the intended method. See the
+[runtime failure audit](PROFILE_RUNTIME_FAILURE_20260916.md). The original
+machine-readable snapshot is retained unchanged for provenance.
+
 Scores are percentages and means of completed seed-level metrics, not pooled gene pairs.
 Failed or inapplicable seeds have no imputed score. Available-case means are conditional on success.
 

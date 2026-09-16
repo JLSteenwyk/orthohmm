@@ -1048,3 +1048,68 @@ script with `scontrol write batch_script` and preserved it as
 resubmitting normally without exclusive allocation/dependency. YGOB job
 20917 and unrelated jobs were not modified. V2 simulation inference remains
 active; its partial results have not been scored.
+
+After pushing scheduling amendment `5dadc80`, resubmitted the recovered
+batch command as **21088** with 32 CPUs, 64 GiB, two hours, shared-node
+allocation and no dependency. `scontrol` confirms OverSubscribe=OK and null
+dependency; `squeue` subsequently confirms it RUNNING. Existing pinned
+launcher/core/input/output arguments are unchanged. Original 20919 remains
+cancelled, not a failed or completed scientific run.
+
+Added `prepare_orthobench_factorial.py` for the next step after replay success.
+It gates on scheduler completion, equivalent stage partitions and provenance;
+verifies the launcher's complete core source set against frozen 7f3a9e4;
+checks cached gene/species classes against FASTAs; and prepares four separate
+profile/candidate arms. Satellite expansion uses the production helper and
+rebuilds/validates merge constraints independently for each profile arm.
+Eight planned cells keep the prespecified tree/root/pair settings, with no
+reference-scoring argument in inference commands. Profile-off still retains
+the initial HMM search and must not be labeled HMM-free.
+
+Four new tests cover factorial commands/own-arm constraints, cache species
+ownership, independent expansion traces, preserved seed files, and rejecting
+incomplete partitions. These and the existing phylogeny replay tests pass
+(18 total). No candidate preparation or new factorial accuracy has run yet;
+pin this builder and submit it behind successful replay 21088. Unconstrained
+membership, matched sequence-search and QfO controls remain required.
+
+## Native Profile Runtime Failure: Replay And Simulation Correction Required
+
+Replay 21088 is terminal FAILED (1:0, 00:03:49), despite native inference exit
+zero. Non-profile partitions match exactly; both profile partitions instead
+equal their non-profile counterparts. All profile counters are zero. Direct
+loader and isolated synthetic-cluster probes establish missing `pair_align.so`
+in frozen checkout 7f3a9e4. The profile worker suppresses the resulting OSError.
+See `PROFILE_RUNTIME_FAILURE_20260916.md` and the machine-readable probe.
+
+This supersedes the proposed submission behind 21088 above: no factorial
+preparation has run and that failed job cannot authorize it. Added a fail-fast
+exact-checkout/interpreter profile smoke gate to the current replay launcher;
+pinned historical launchers and active inference sources remain untouched.
+
+Both simulation manifests use this checkout. All 140 fixed-length OrthoHMM
+records and 96 available variable-length records at the audit have zero built
+profiles. Marked fixed-length reports as defective-runtime diagnostics and
+updated the claims checklist. Original machine-readable outcomes remain intact.
+Do not score variable-length OrthoHMM as the intended frozen configuration.
+Array 21010 remains active to complete reusable OrthoFinder results; no core
+or runtime files were changed underneath it and no variable-length accuracy
+was inspected. Repaired OrthoHMM runs and amended execution provenance remain
+required. The independent constant-length OrthoFinder failure remains real.
+
+YGOB 20917 was verified PENDING with elapsed zero; used pending-only scancel.
+Accounting confirms CANCELLED by 1000, 00:00:00. Recovered batch script retained
+as `ygob_cancelled_batch_20260916.sh`. YGOB scientific settings/reference remain
+frozen and no accuracy has been inspected. Resubmit after separate-checkout
+native build/provenance, runtime smoke, and corrected label-blind replay gates.
+
+Previous full-suite handle 24582 was missing on recheck; no test result inferred
+from that. New full-suite run found one test expectation too narrow for editable
+import hooks (635 passed, one failed): wrong-checkout ValueError is also a valid
+failure mode. Corrected that assertion while retaining exact-source rejection.
+
+Final full suite: **636 passed in 22.98s**; scoped `git diff --check` clean.
+Actual isolated probe rejects the incomplete frozen checkout with OSError and
+passes the development checkout with the identical profile Python source hash,
+recording `pair_align.so` hash and a 20-position synthetic profile. This positive
+control does not replace the required separately built frozen runtime.

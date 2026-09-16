@@ -1,5 +1,11 @@
 # Fixed-Length Stress Panel: Interpretation
 
+**Superseding runtime warning:** The
+[runtime audit](PROFILE_RUNTIME_FAILURE_20260916.md) discovered missing
+profile-alignment binaries in the frozen OrthoHMM checkout. OrthoHMM scores
+and tree-failure interpretations below require corrected-runtime reruns;
+they do not establish behavior of the intended high-sensitivity method.
+
 Source: `simulation_fixed_length_results_20260916.json`, assembled with pinned
 scorer a58fd3a after all 70 method-array tasks were terminal. The readable
 table is `SIMULATION_FIXED_LENGTH_RESULTS_20260916.md`. The 280 records include
