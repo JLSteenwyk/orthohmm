@@ -763,3 +763,28 @@ and push this launcher before submission. YGOB job 20917 remains pending for
 resources; replay job 20919 remains dependent on it; unrelated job 20915 is
 running and has not been modified. Next: record submission, validate paired
 histories after generation, and execute the frozen method comparisons.
+
+Launcher milestone `7987474` was pushed before submission. Slurm accepted
+array job **20920** (indices 0-39, concurrency 2), with logs under
+`benchmarks/work/publication_simulation_panel_v1/slurm/20920_%a.log`.
+The first eight tasks completed native stages and truth export successfully;
+both completed baseline tasks also finished their derived conditions.
+Remaining tasks are running/queued, not assumed successful.
+
+Added `verify_simulation_histories.py`, which requires terminal generation
+success, exact manifest and stage commands, and verified output checksums
+before comparing every T/G biological file. Only the two copied parameter
+files are excluded. Missing histories and unrecorded files fail validation;
+history mismatches are retained in a report and return failure. Full-panel
+verification requires all 40 runs and the 20 prespecified comparisons.
+Three new tests plus four generation tests passed. The existing deterministic
+smoke pair matches all 61 history files. The first scientific baseline and
+divergent pair (seed 20261001) passes completion/provenance checks and matches
+all 437 history files. No accuracy outcomes were evaluated. Method execution,
+full-panel validation, other robustness experiments, ablations, and the
+remaining publication requirements are still outstanding.
+
+Full unit-suite verification after this change: **596 passed in 23.46s**.
+Slurm accounting independently confirms array tasks 0-9 completed with exit
+`0:0`; task-generation timings are approximately 19-21 seconds, not inference
+benchmarks. Other tasks remain in progress.
