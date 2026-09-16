@@ -273,3 +273,31 @@ pending status, and correct scale labels. QfO uncertainty bars are omitted
 because the native recorded fields do not have a uniform interpretation.
 The pending OrthoMCL result is not replaced by its pre-clustering diagnostic.
 These are explicitly work-in-progress figures, not publication readiness.
+
+## Verified Historical Profile/Refinement Controls
+
+`audit_historical_profile_ablation.py` verifies the original replay cache,
+all 12 input FASTA hashes, four stage-partition hashes and membership, and
+the corrected fresh production metrics/output. All stages cover 251,378
+genes without duplicate membership. The final replay partition is exactly
+byte-identical to the corrected fresh production partition (`8ee100f...`).
+This comparison uses the self-hit-fixed fresh run, not the superseded earlier
+fresh run. It is historical endpoint equivalence, not proof of every current
+source branch or intermediate normalized-hit value.
+
+The audited scorer recomputes all four stages in
+`historical_profile_ablation_audit_20260916.json`; the generated table is
+`HISTORICAL_PROFILE_ABLATION_20260916.md`. F1 is 66.279051 for multipass,
+69.763388 after cluster refinement, 66.825390 with profile expansion alone,
+and 70.358998 with both. Profile expansion's observed F1 increment after
+refinement is +0.595610 points; refinement's increment with profiles is
++3.533607 points. These descriptive controls retain HMM initial search and
+cannot establish an overall HMM-versus-sequence-search advantage.
+
+Five new validation tests plus three scorer tests pass. The four-cell
+historical audit is reusable evidence, but current-source replay validation,
+the eight-cell expansion/reconciliation factorial, QfO counterparts, matched
+sequence-search control, and controlled per-arm efficiency measurements
+remain required. Latest job check: `20916` RUNNING at 1h12m54s; `20917`
+PENDING for resources. Frozen YGOB settings and active jobs were unchanged.
+Full unit-suite verification at this milestone: 500 passed in 16.62s.
