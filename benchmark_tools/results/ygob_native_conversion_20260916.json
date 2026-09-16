@@ -1,0 +1,453 @@
+{
+  "accuracy_evaluated": false,
+  "all_scoring_gates_verified": false,
+  "commands": {
+    "high_sensitivity": {
+      "harness": [
+        "/home/bizon/anaconda3/bin/python",
+        "-m",
+        "orthohmm",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input",
+        "-o",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ygob_validation_v1/high_sensitivity",
+        "-c",
+        "32",
+        "--threads_per_worker",
+        "8",
+        "-x",
+        "BLOSUM62",
+        "-e",
+        "0.0001",
+        "--clustering",
+        "leiden",
+        "--cpm_resolution",
+        "0.1",
+        "--refinement_profile",
+        "default",
+        "--accuracy_profile",
+        "high_sensitivity",
+        "--metrics_json",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ygob_validation_v1/high_sensitivity.json",
+        "--stop",
+        "infer"
+      ],
+      "native": [
+        "/home/bizon/anaconda3/bin/python",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/__main__.py",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input",
+        "-o",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ygob_validation_v1/high_sensitivity",
+        "-c",
+        "32",
+        "--threads_per_worker",
+        "8",
+        "-x",
+        "BLOSUM62",
+        "-e",
+        "0.0001",
+        "--clustering",
+        "leiden",
+        "--cpm_resolution",
+        "0.1",
+        "--refinement_profile",
+        "default",
+        "--accuracy_profile",
+        "high_sensitivity",
+        "--metrics_json",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ygob_validation_v1/high_sensitivity.json",
+        "--stop",
+        "infer"
+      ]
+    },
+    "orthofinder": [
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/bin/orthofinder",
+      "-f",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ygob_validation_v1/orthofinder/input",
+      "-t",
+      "32",
+      "-a",
+      "8",
+      "-S",
+      "diamond"
+    ],
+    "satellite_v2": {
+      "harness": [
+        "/home/bizon/anaconda3/bin/python",
+        "-m",
+        "orthohmm",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input",
+        "-o",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ygob_validation_v1/satellite_v2",
+        "-c",
+        "32",
+        "--threads_per_worker",
+        "8",
+        "-x",
+        "BLOSUM62",
+        "-e",
+        "0.0001",
+        "--clustering",
+        "leiden",
+        "--cpm_resolution",
+        "0.1",
+        "--refinement_profile",
+        "default",
+        "--accuracy_profile",
+        "high_sensitivity",
+        "--metrics_json",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ygob_validation_v1/satellite_v2.json",
+        "--stop",
+        "infer",
+        "--phylogeny",
+        "reconcile",
+        "--species_tree_mode",
+        "infer",
+        "--aligner",
+        "mafft",
+        "--tree_builder",
+        "FastTree",
+        "--phylogeny_candidates",
+        "satellite_v2",
+        "--phylogeny_root_rule",
+        "species_overlap",
+        "--phylogeny_pair_rule",
+        "positive_paralogy",
+        "--species_tree_rooting",
+        "min_variance"
+      ],
+      "native": [
+        "/home/bizon/anaconda3/bin/python",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/__main__.py",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input",
+        "-o",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ygob_validation_v1/satellite_v2",
+        "-c",
+        "32",
+        "--threads_per_worker",
+        "8",
+        "-x",
+        "BLOSUM62",
+        "-e",
+        "0.0001",
+        "--clustering",
+        "leiden",
+        "--cpm_resolution",
+        "0.1",
+        "--refinement_profile",
+        "default",
+        "--accuracy_profile",
+        "high_sensitivity",
+        "--metrics_json",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ygob_validation_v1/satellite_v2.json",
+        "--stop",
+        "infer",
+        "--phylogeny",
+        "reconcile",
+        "--species_tree_mode",
+        "infer",
+        "--aligner",
+        "mafft",
+        "--tree_builder",
+        "FastTree",
+        "--phylogeny_candidates",
+        "satellite_v2",
+        "--phylogeny_root_rule",
+        "species_overlap",
+        "--phylogeny_pair_rule",
+        "positive_paralogy",
+        "--species_tree_rooting",
+        "min_variance"
+      ]
+    }
+  },
+  "file_verification": {
+    "accuracy_computed": false,
+    "all_scoring_gates_verified": false,
+    "inference_files_verified": true,
+    "native_runtime": {
+      "manifest": {
+        "bytes": 5789,
+        "path": "native_runtime.json",
+        "sha256": "aebea83807356b02307473506fa30c2dbd2c511d7ba75a0655eb12180a474d74"
+      },
+      "probes": [
+        {
+          "bytes": 782,
+          "path": "high_sensitivity_before.runtime.json",
+          "sha256": "b00cc6e67d435367e6e30954762b47badc05e0b23227f4836b2d567b03f8e400"
+        },
+        {
+          "bytes": 782,
+          "path": "high_sensitivity_after.runtime.json",
+          "sha256": "b00cc6e67d435367e6e30954762b47badc05e0b23227f4836b2d567b03f8e400"
+        },
+        {
+          "bytes": 782,
+          "path": "satellite_v2_before.runtime.json",
+          "sha256": "b00cc6e67d435367e6e30954762b47badc05e0b23227f4836b2d567b03f8e400"
+        },
+        {
+          "bytes": 782,
+          "path": "satellite_v2_after.runtime.json",
+          "sha256": "b00cc6e67d435367e6e30954762b47badc05e0b23227f4836b2d567b03f8e400"
+        }
+      ]
+    },
+    "orthofinder_final_groups": {
+      "bytes": 1093845,
+      "path": "orthofinder/input/OrthoFinder/Results_Sep16/Orthogroups/Orthogroups.txt",
+      "sha256": "30722bf72a12c34ea7e4f41516dfa243bcd205053654c9601c48b84fe025b4af"
+    },
+    "orthohmm": {
+      "high_sensitivity": {
+        "metrics": {
+          "bytes": 14721,
+          "path": "high_sensitivity.json",
+          "sha256": "4fc97a93e8bd0041b253e01d2c5a33935370df14e712ce95ba3b5cdaee4bfa13"
+        },
+        "native_output": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ygob_validation_v1/high_sensitivity/orthohmm_orthogroups.txt"
+      },
+      "satellite_v2": {
+        "metrics": {
+          "bytes": 19578,
+          "path": "satellite_v2.json",
+          "sha256": "719c2ad1f049c84758a76787e19c078495c3dbe3ea09353ba51c2e33671368c5"
+        },
+        "native_output": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ygob_validation_v1/satellite_v2/orthohmm_phylogeny/orthohmm_root_hogs.tsv"
+      }
+    },
+    "remaining_checks": [
+      "Exact inference commands and installed tool versions",
+      "Overlap/reference-resource audits and native ID conversion",
+      "Independent reference reconstruction and scoring"
+    ],
+    "runner_metadata": {
+      "finished": "2026-09-16T19:53:10Z",
+      "job_id": "21192",
+      "runner_exit_code": "0",
+      "started": "2026-09-16T18:11:51Z"
+    },
+    "scheduler": {
+      "Elapsed": "01:41:20",
+      "ExitCode": "0:0",
+      "JobIDRaw": "21192",
+      "State": "COMPLETED"
+    },
+    "schema_version": 1,
+    "source_commit": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806"
+  },
+  "limitations": [
+    "Native group membership, not resolved pairwise orthology.",
+    "Recorded package versions and entrypoint hashes do not inventory all external executable dependencies.",
+    "Shared-machine timings are not controlled efficiency comparisons."
+  ],
+  "native_groups": {
+    "orthofinder_full": {
+      "format": "named_groups",
+      "genes": 83404,
+      "groups": 7343,
+      "missing_input_genes": 0,
+      "native": {
+        "bytes": 1093845,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ygob_validation_v1/orthofinder/input/OrthoFinder/Results_Sep16/Orthogroups/Orthogroups.txt",
+        "sha256": "30722bf72a12c34ea7e4f41516dfa243bcd205053654c9601c48b84fe025b4af"
+      },
+      "singletons": 1863
+    },
+    "orthofinder_sequence_only": {
+      "format": "native_mcl_checkpoint",
+      "genes": 83404,
+      "groups": 6845,
+      "missing_input_genes": 0,
+      "native": {
+        "bytes": 715182,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ygob_validation_v1/orthofinder/input/OrthoFinder/Results_Sep16/WorkingDirectory/clusters_OrthoFinder_I1.2.txt_id_pairs.txt",
+        "sha256": "d4bafd06504696d3fed37dc3c9a1d9a2f3a6c8ff7b134051672f91ae560264e9"
+      },
+      "sequence_ids": {
+        "bytes": 1694255,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ygob_validation_v1/orthofinder/input/OrthoFinder/Results_Sep16/WorkingDirectory/SequenceIDs.txt",
+        "sha256": "ec67ef2f84a0cc4d51462ad27b638142764b15947dca3d4e90a84417c75eff28"
+      },
+      "singletons": 1754
+    },
+    "orthohmm_high_sensitivity": {
+      "format": "named_groups",
+      "genes": 83404,
+      "groups": 8665,
+      "missing_input_genes": 0,
+      "native": {
+        "bytes": 1082392,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ygob_validation_v1/high_sensitivity/orthohmm_orthogroups.txt",
+        "sha256": "e98fd8f93e54f0c01d3fe77dc7837f99a5f84f95d4ecfa63622eb2a7ed973d59"
+      },
+      "singletons": 3321
+    },
+    "orthohmm_satellite_v2": {
+      "format": "root_hogs",
+      "genes": 83404,
+      "groups": 10079,
+      "missing_input_genes": 0,
+      "native": {
+        "bytes": 1305392,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ygob_validation_v1/satellite_v2/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+        "sha256": "b472dd22220f1a53991fd0eda91a70d689aeb0faaf009b62b0444c7e96779e26"
+      },
+      "singletons": 3598
+    }
+  },
+  "orthofinder_environment": {
+    "bytes": 1230,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ygob_validation_v1/orthofinder_environment.json",
+    "sha256": "bee34cf144729f58fb0aa21c45de2edfac7e3cc815858a893e842c672e2ba672"
+  },
+  "reference_reconstruction": {
+    "accuracy_evaluated": false,
+    "excluded_rows": [
+      113,
+      9896
+    ],
+    "input_genes_excluded_from_reference": [
+      "AFR326W",
+      "CAGL0F01419g",
+      "Ecym_1222",
+      "KAFR0G03010",
+      "KAFR0K01230",
+      "KNAG0G01040",
+      "NCAS0F00790",
+      "NCAS0I00670",
+      "NDAI0A08370",
+      "NDAI0H01280",
+      "SAKL0F04312g",
+      "TBLA0A01150",
+      "TPHA0L00810"
+    ],
+    "prepared_inputs": [
+      {
+        "bytes": 2755993,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Cglabrata.fasta",
+        "sha256": "23c5ec11aa481ef5754a7e8f81dfc9b0c86bac2da526b3c95bf6574d63f66022"
+      },
+      {
+        "bytes": 2242541,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Ecymbalariae.fasta",
+        "sha256": "9ff390efa20873101199737a4593cb467ff3afcf5dcfe7fbe75085dab237cf18"
+      },
+      {
+        "bytes": 2400738,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Egossypii.fasta",
+        "sha256": "331dda92a9e941b69a084102320af0839ce28004e176481fbeedaf858205d51f"
+      },
+      {
+        "bytes": 2728985,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Kafricana.fasta",
+        "sha256": "5782eed777e872e836204ca725d488d27a00973c646ba89c648710769005ef34"
+      },
+      {
+        "bytes": 2588659,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Klactis.fasta",
+        "sha256": "5c44fec49a501a5f5b07373bb54d4759a20ef9f4be36b11946f9637600fd50f5"
+      },
+      {
+        "bytes": 2767825,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Knaganishii.fasta",
+        "sha256": "823c86a3222f2673752920f613b6b30e57b9023195df563cf7e37967b0361dcf"
+      },
+      {
+        "bytes": 2781584,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Lkluyveri.fasta",
+        "sha256": "b6c892b9e446ee14875f7e46aa422f7c750f70c5e0d4737ebc328e23383b3296"
+      },
+      {
+        "bytes": 2628955,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Lthermotolerans.fasta",
+        "sha256": "08d9388de8d081a9c08aeb9f817a05dc691f961efba799f6039d94fe652d9dfa"
+      },
+      {
+        "bytes": 2578283,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Lwaltii.fasta",
+        "sha256": "ffb6f2c2f4c38d7ef1e463c5b574313e297abcb3d87ae548330cfe4747c13370"
+      },
+      {
+        "bytes": 2917096,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Ncastellii.fasta",
+        "sha256": "2f11b9b23af565e9b13d0db468026c24b8c60c2e72b843c3426d9b45ad21778c"
+      },
+      {
+        "bytes": 2992009,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Ndairenensis.fasta",
+        "sha256": "7a337cd162958fed9a413197d2759053d1915e18e1e1e5564747e026e7171956"
+      },
+      {
+        "bytes": 3036539,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Tblattae.fasta",
+        "sha256": "1ed287df2ccd27259b0e425515ee13225f892ca19d62671fb1d23ec3a95c70a5"
+      },
+      {
+        "bytes": 2520555,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Tdelbrueckii.fasta",
+        "sha256": "cdf62e4ea719403c8a41d18657f05ed5000d78c479802e2c44181e818f6a33e6"
+      },
+      {
+        "bytes": 2791571,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Tphaffii.fasta",
+        "sha256": "c35e3d8cd8d6592fc139e38885f058475b4543f0f655e2cad988ca4876129465"
+      },
+      {
+        "bytes": 2953372,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Vpolyspora.fasta",
+        "sha256": "845ef99847e332d764b6439077b80df1164920a1b7e98e29d1e5ee706f0b3d3a"
+      },
+      {
+        "bytes": 2597406,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/input/Zrouxii.fasta",
+        "sha256": "51431e29fb872a7704c3fc99800a7597ed36d808b54fb4252994192da14eec7a"
+      }
+    ],
+    "proteins": 83404,
+    "reference": {
+      "bytes": 1832410,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ygob_validation_v1/reference_groups.json",
+      "sha256": "37d5632e7c5329b0fcea3910f48f69f84c3a3723f246314388da17e060337557"
+    },
+    "reference_genes": 83391,
+    "reference_groups": 10250,
+    "schema_version": 1,
+    "scope": "Independent raw-table and raw-FASTA reconstruction, not independent biological truth or prediction scoring.",
+    "source_inputs": [
+      {
+        "bytes": 68932999,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/independent_ygob_v7/AA.fsa",
+        "sha256": "f4b8389493b567a688650d6b6c41003a9346649e150efabdf7c8b6f15ac8f356"
+      },
+      {
+        "bytes": 2778211,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/independent_ygob_v7/Pillars.tab",
+        "sha256": "162c1919b762f34006d0be8ea00b090531ea6c67be43d63b6bf683c4bc48212b"
+      },
+      {
+        "bytes": 4958,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/independent_ygob_v7/README",
+        "sha256": "162fb37cf0f7a50b44fae47f0d2c2f9b126b728660b65d9bee8d3175af8317f6"
+      }
+    ],
+    "species": 16,
+    "status": "reference_reconstruction_verified",
+    "verifier": {
+      "bytes": 5840,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/verify_ygob_reference.py",
+      "sha256": "62f422e9a4f99d23f2c1238c6ccac3ca110ddf33c4e2d77ff007651f8b9ac557"
+    }
+  },
+  "remaining": [
+    "Overlap/reference-resource admission audit",
+    "Independent score arithmetic and frozen uncertainty assembly"
+  ],
+  "schema_version": 1,
+  "status": "native_commands_and_conversion_verified",
+  "verifier": {
+    "bytes": 6986,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/verify_ygob_native_outputs.py",
+    "sha256": "da3d302229f7796c68c63af5dc7c45010ef71e05b18c33a197279e3e29979657"
+  }
+}

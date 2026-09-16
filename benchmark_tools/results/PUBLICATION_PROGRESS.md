@@ -1966,3 +1966,35 @@ machine-checked commands/versions, native conversions, overlap/resource
 audits and the frozen score/uncertainty assembly. Do not retune on YGOB.
 
 Full unit suite: **800 passed in 24.63s**; scoped whitespace checks passed.
+
+### YGOB native commands and group conversion verified (2026-09-16)
+
+Previous turn was progress: independent reference reconstruction. This turn
+reread the objective and confirmed QfO 21288 live. Added the label-blind
+`verify_ygob_native_outputs.py`: reruns native file and reference checks,
+requires exact native and harness OrthoHMM commands, verifies the recorded
+OrthoFinder3.1.5 package and executed GNU-time command, confirms full MSA tree
+inference in its log, and validates the four frozen native group conversions.
+
+The first actual-data check rejected the raw global-numeric MCL filename
+because the existing converter requires species/sequence ID pairs. No score
+or final evidence file was emitted. Corrected the selection to the documented
+`clusters_OrthoFinder_I1.2.txt_id_pairs.txt`; added an explicit filename
+regression test. This fixes the new admission script, not an existing result.
+
+Actual validation now passes, recorded in `ygob_native_conversion_20260916.json`:
+all four methods contain exactly **83,404 unique input genes**, no foreign IDs
+and no missing genes. Group/singleton counts: OrthoHMM high-sensitivity
+8,665/3,321; satellite_v2 10,079/3,598; full OrthoFinder 7,343/1,863;
+sequence-only checkpoint 6,845/1,754. These counts are label-independent and
+are not accuracy outcomes. Native files have not been modified.
+
+Eight tests exercise commands, foreign/duplicate membership, explicit missing
+coverage, unknown methods, ambiguous file discovery, and correct MCL variant.
+The report deliberately keeps all_scoring_gates_verified false. Remaining:
+finish the overlap/reference-resource admission audit, then assemble and
+independently check the frozen scores and paired uncertainty. Dependency
+inventories cover recorded packages/entrypoints, not every executable invoked
+internally by third-party tools; shared-machine timing limitations persist.
+
+Final full unit suite: **808 passed in 25.72s**; scoped whitespace checks pass.
