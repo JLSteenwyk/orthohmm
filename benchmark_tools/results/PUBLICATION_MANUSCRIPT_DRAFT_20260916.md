@@ -108,6 +108,40 @@ control is required before attributing an overall advantage to HMMs.
 These experiments are specified but not completed.
 [Ablation protocol](PUBLICATION_ABLATION_PROTOCOL_20260916.md).
 
+### Evolutionary Simulations And Runtime Admission
+
+Two separate panels each contain ten independent simulation seeds and seven
+conditions: baseline, increased divergence, increased duplication/loss,
+combined divergence and turnover, missing proteins, uneven taxon sampling,
+and a taxon-count control. Native Zombi histories provide event-based
+cross-species orthology truth; shared ancestral-family membership alone is
+not treated as resolved orthology. Four configurations are evaluated on each
+of the 70 datasets. The first panel uses fixed 300-residue sequences; a
+prospectively specified second panel assigns each ancestral family a
+deterministic seed-specific length between 100 and 500 residues. Descendants
+retain that length, so this panel does not simulate within-family indels.
+[Fixed protocol](PUBLICATION_SIMULATION_PROTOCOL_20260916.md),
+[variable-length protocol](PUBLICATION_VARIABLE_LENGTH_PROTOCOL_20260916.md).
+
+Initial OrthoHMM runs lacked a required native alignment library; profile
+construction exceptions were silently caught and no profiles were built.
+Those runs are invalid runtime diagnostics, not estimates of the intended
+method. Corrected runs retain the frozen algorithm and verify compiled
+libraries and an actual profile-construction probe before and after execution.
+Valid original comparator outputs are reused with separate provenance.
+Admission requires native completion and output validation, including finite
+OrthoFinder graph weights; a zero process exit code alone is insufficient.
+[Runtime correction](SIMULATION_RUNTIME_CORRECTION_PROTOCOL_20260916.md).
+
+Within each panel, we bootstrap paired successful seeds 20,000 times and
+recompute the mean seed-level statistic. Fourteen primary F1 contrasts use
+Bonferroni-adjusted intervals; precision and recall are exploratory. Failed
+runs are reported separately, not assigned zero accuracy. Complete-case
+contrasts condition on joint success, and available-case table means cannot
+be subtracted when they summarize different seeds. The two panels are not
+pooled. [Fixed results](SIMULATION_FIXED_NATIVE_RESULTS_20260916.md),
+[variable results](SIMULATION_VARIABLE_NATIVE_RESULTS_20260916.md).
+
 ## Results
 
 ### OrthoBench Shows A Precision-Recall Tradeoff
@@ -176,6 +210,49 @@ fresh output. These are historical component observations without paired
 intervals, not a complete current-source factorial or HMM-free control.
 [Historical audit](HISTORICAL_PROFILE_ABLATION_20260916.md).
 
+### Corrected Simulations Do Not Establish An OrthoHMM Advantage
+
+In the fixed-length stress panel, high sensitivity completed all 70 datasets
+and satellite_v2 completed 64. Six satellite_v2 failures persisted because
+species-tree inference lacked connected single-copy taxon coverage. No full
+OrthoFinder or parent-gated checkpoint output passed native admission, so
+this panel provides no admitted paired comparison with OrthoFinder. Native
+normalization diagnostics reproduced degenerate length fitting and nonfinite
+scores; competitor failure is not evidence of an OrthoHMM accuracy advantage.
+[Fixed interpretation](SIMULATION_FIXED_NATIVE_INTERPRETATION_20260916.md),
+[native failure audit](SIMULATION_NATIVE_FAILURE_AUDIT_20260916.md).
+
+In the variable-length panel, high sensitivity, satellite_v2, and full
+OrthoFinder passed admission on 70, 67, and 65 datasets, respectively. Full
+OrthoFinder led every paired condition-mean F1 comparison against either
+OrthoHMM mode. Adjusted intervals excluded zero below OrthoFinder for all
+seven high-sensitivity contrasts and four satellite_v2 contrasts; satellite_v2
+turnover, missing-data, and uneven-sampling intervals included zero. Baseline
+satellite_v2 and full OrthoFinder mean F1 were 99.46% and 99.94%. Satellite_v2
+paired deficits were 11.74 percentage points under divergence (five paired
+seeds) and 12.28 points under combined divergence and turnover (eight seeds).
+Lower recall was the principal observed deficit, but its causal processing
+stage has not yet been established.
+[Variable interpretation](SIMULATION_VARIABLE_NATIVE_INTERPRETATION_20260916.md).
+
+Three variable-panel satellite_v2 failures again involved species-tree
+coverage. Five divergent OrthoFinder runs had nonfinite graph weights.
+Reconstruction of native normalization across all ten divergent seeds
+reproduced seven nonfinite within-species matrices in exactly those five
+failed seeds. Each affected fit had two non-self hits at one length product;
+the rank-deficient fit produced extreme intercepts and scale-factor overflow.
+The proteomes themselves had heterogeneous lengths. This local failure does
+not imply that every rank-deficient fit fails, and no competitor repair or
+post-hoc exclusion of additional finite runs was applied.
+[Normalization audit](ORTHOFINDER_VARIABLE_NORMALIZATION_AUDIT_20260916.md).
+
+All corrected OrthoHMM runs constructed profiles, but neither simulation
+panel added profile-expansion edges. These panels therefore do not demonstrate
+an accuracy contribution from multi-sequence profile expansion, although the
+initial HMM-based search remains present. They are not HMM-free controls.
+Synthetic sequence evolution, limited seed counts, conditional comparisons,
+and absent realistic domain architecture constrain extrapolation to proteomes.
+
 ## Limitations And Unfinished Analyses
 
 No universal superiority, arbitrary-dataset generalization, or controlled
@@ -183,8 +260,9 @@ speedup is established. Independent validation is pending. Homolog-family
 overlap remains substantial even after taxon exclusions. The proposed HMM
 contribution requires a matched sequence-search control, and the interaction
 between broader candidates and reconciliation remains unmeasured under the
-prospective factorial design. Error strata, mechanistic tracing, validated
-multi-seed simulation, tree/parameter robustness, matched resource scaling,
+prospective factorial design. Corrected multi-seed simulations are complete
+but do not establish an OrthoHMM advantage or profile-expansion benefit.
+Error strata, mechanistic tracing, tree/parameter robustness, matched resource scaling,
 and a prespecified biological application remain required.
 
 Historical timing and memory records differ in scope and accounting.

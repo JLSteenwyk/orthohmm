@@ -1442,3 +1442,37 @@ repairing or relabeling the competitor. Ten targeted tests and the full
 **685-test suite pass** (32.84s); scoped whitespace checks pass. No upstream
 issue was submitted. Native failure explanation is now supported, but general
 failure frequency and remaining publication requirements are not established.
+
+## Manuscript Simulation Integration And Factorial Admission Issue
+
+Read the full objective and rechecked live scheduler state. The preceding
+prompt-writing turn did not advance experimental state; this turn updates
+the manuscript and diagnoses a newly terminal verification failure.
+
+Added corrected simulation methods, runtime admission, paired-seed inference,
+both panels' outcomes, normalization failures, and zero profile-expansion
+edges to `PUBLICATION_MANUSCRIPT_DRAFT_20260916.md`. Removed the outdated
+statement that multi-seed simulation remains wholly unfinished, without
+removing the outstanding robustness, error tracing, controls or independent
+validation requirements. Crosschecked reported percentages and contrasts
+against the generated variable-panel results. Checked 26 single-line local
+evidence links with Perl; multiline links also require review. Scoped
+whitespace verification passes. This documentation change does not change
+inference, scores, or frozen scientific settings.
+
+Scheduler accounting: YGOB 21192 remains running; factorial 21248 tasks 1/2
+run and task 3 waits. Task 0 is FAILED 1:0 after 26:37. Its preserved status
+records `finished_pending_native_validation`, no failed methods, and native
+process exit 0. The batch traceback is the post-execution environment check:
+`Package inventory changed: orthofinder`, not an inference error.
+
+Reproduced the exact inventory query under the frozen OrthoFinder interpreter:
+from the repository root it matches the frozen inventory; from the b66225d
+replay root it differs only by absence of `orthohmm: 0.5.0`. The factorial
+runner changes its own cwd to the replay root before execution and does not
+restore it before post-validation. This supports a cwd-dependent distribution
+discovery defect, not an installed-package change. Preserve outputs and failed
+scheduler accounting. Next: correct future verification context with tests,
+perform independently recorded postflight recovery of all affected outputs,
+then complete native validation/conversion before scoring. Do not silently
+relabel the failed batch as successful or restart expensive inference.
