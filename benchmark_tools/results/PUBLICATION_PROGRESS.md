@@ -1706,3 +1706,26 @@ expected no-profile returns can still occur and their causes/counts remain a
 separate diagnostic concern. No active job, frozen checkout or scientific
 output was changed. Remaining validation, ablation scoring and publication
 requirements continue under the original objective.
+
+## Scoring Assembly Integration Tests
+
+Previous turn corrected development profile error handling. Read the objective
+and confirmed final factorial task 21248_3 and YGOB 21192 still live. Added
+two synthetic end-to-end assembly tests rather than reading partial benchmark
+outcomes. They exercise all eight cell conversions, complete input membership,
+all-four-native-validations-before-scoring order, crosscheck calls, 20,000
+paired draws, twelve contrasts, JSON/Markdown serialization, coverage/resource
+sections, and refusal to overwrite existing output.
+
+Known fixture truth is a two-gene reference family: intact candidates score
+100%, split native groups score 0%. The official-call boundary uses independently
+specified expected values, not a second call to the same score function.
+This is a harness integration test with mocked scheduler/native/reference
+gates, not a claim that the real official executable or native inference was
+tested by the fixture. A deliberate crosscheck mismatch leaves no published
+JSON/Markdown result. Real-data official checks remain mandatory at assembly.
+
+All **26 assembler tests** and the full **757-test unit suite pass** (30.63s);
+scoped whitespace checks pass. The final factorial task remains RUNNING at
+30:28 in the latest accounting poll. No benchmark results or scientific
+settings were changed, and no partial factorial accuracy was inspected.
