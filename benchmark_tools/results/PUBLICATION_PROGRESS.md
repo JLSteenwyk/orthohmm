@@ -2585,3 +2585,22 @@ at `benchmarks/work/publication_ob_tree_perturbations_v1`. Logs
 `benchmarks/work/ob_tree_perturb_21299_{0..5}.log`;32 CPUs64GiB/four hours per
 task. Each task performs its own supplied-control and source-integrity gates.
 No perturbation score claimed until terminal/native admission of the panel.
+
+### Exact QfO replay initial-stage capture (2026-09-16)
+
+The preceding prompt-only response made no analysis progress. Reread the full
+objective and revalidated current state: tree array21299 tasks0-3 completed0:0,
+tasks4-5 still live. No accuracy outcomes inspected.
+
+Added a fresh-process observer of the frozen49ab replay entry point. It uses
+the original cached replay arguments and environment overrides, records the
+initial RBNH arrays and partition, calls the unchanged singleton builder, and
+stops before the second clustering call. It compares the captured graph,
+partition and singleton arrays with diagnostic21295. Before/after runtime,
+input and installed-package checks guard interpretation. No profile searches,
+refinement or accuracy evaluation run. Instrumentation itself is documented
+as a limitation; this experiment is not a complete historical replay.
+
+Five focused recorder tests passed; full unit suite941 passed in26.56s before
+the final input/package guards, followed by five focused tests passing again.
+Capture executor and Slurm submission will be recorded after freezing.
