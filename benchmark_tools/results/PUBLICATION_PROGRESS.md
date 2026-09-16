@@ -1142,3 +1142,13 @@ Full unit suite after runtime build/verification changes: **645 passed in
 protocol before submitting the corrected label-blind replay from a pinned
 launcher worktree. Simulation array 21010 remains active (tasks 63/64 running
 at last live check); no variable-length accuracy has been inspected.
+
+Pushed runtime/launcher/protocol milestone **36e45a2209fbc5e2fff644f66a7d08198dadfeff**.
+Created detached launcher worktree `publication_native_launchers_v2` at that
+revision and submitted corrected replay **21138**, confirmed RUNNING with
+32 CPUs on bizon. Allocation remains shared, 64 GiB, two hours; no held-out
+dependency. Recovered submitted batch script is
+`ob_native_replay_v2_batch_20260916.sh`. It points to the pinned build manifest,
+same historical audit and fresh `publication_ob_replay_check_v2` output.
+No claim of equivalence until terminal verification; no factorial preparation
+or corrected validation submitted behind an unverified outcome.
