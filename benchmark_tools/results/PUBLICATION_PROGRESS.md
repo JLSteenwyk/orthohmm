@@ -1113,3 +1113,32 @@ Actual isolated probe rejects the incomplete frozen checkout with OSError and
 passes the development checkout with the identical profile Python source hash,
 recording `pair_align.so` hash and a 20-position synthetic profile. This positive
 control does not replace the required separately built frozen runtime.
+
+## Separate Frozen Native Runtime Built
+
+Previous goal turn made substantive progress: diagnosed missing native profile
+runtime, guarded replay, invalidated affected claims, and pushed 6b0f8e2.
+Re-read the full goal and rechecked live jobs before continuing. Array 21010
+remains active; original frozen source/runtime paths are unchanged.
+
+Created separate detached checkout `benchmarks/work/publication_method_native_v2`
+at the exact frozen 7f3a9e4 revision. Added a fail-closed CPU runtime builder
+that refuses existing binaries/provenance, verifies clean frozen sources,
+records compiler/source/binary hashes and commands, and exercises the native
+profile stage. All three CPU kernels compiled successfully with GCC 13.3.0.
+Synthetic profile construction passes with length 20; pair_align.so matches
+the development control byte-for-byte. CUDA is explicitly absent.
+
+Manifest: `publication_native_runtime_20260916.json`. New replay launcher
+requires it and checks binary/source integrity both before and after inference.
+Fourteen targeted runtime/probe tests pass, including missing/changed/extra
+libraries, changed source, wrong revision and incomplete manifest rejection.
+Amended the ablation protocol before new replay outcomes; preserve all v1
+evidence and write v2 to a fresh output directory. No corrected simulation,
+YGOB or factorial outcome has yet been produced by this build.
+
+Full unit suite after runtime build/verification changes: **645 passed in
+23.69s**. Scoped diff whitespace checks pass. Commit/push this runtime and
+protocol before submitting the corrected label-blind replay from a pinned
+launcher worktree. Simulation array 21010 remains active (tasks 63/64 running
+at last live check); no variable-length accuracy has been inspected.

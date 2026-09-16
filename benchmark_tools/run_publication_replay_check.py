@@ -15,6 +15,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from benchmark_tools.audit_historical_profile_ablation import STAGES, read_partition, verify_file
 from benchmark_tools.orthobench_stage_diagnostics import file_provenance
 from benchmark_tools.validate_profile_runtime import require_profile_runtime
+from benchmark_tools.build_publication_runtime import verify_runtime
 
 
 OUTPUTS = dict(zip(STAGES, ("orthogroups_multipass.txt", "orthogroups_multipass_refined.txt",
@@ -44,6 +45,7 @@ def main():
     parser.add_argument("--historical-audit", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--cpu", type=int, default=32)
+    parser.add_argument("--runtime-manifest", type=Path, required=True)
     args = parser.parse_args()
     root = args.frozen_root.resolve()
     commit = subprocess.check_output(["git", "-C", str(root), "rev-parse", "HEAD"], text=True).strip()
@@ -56,6 +58,8 @@ def main():
         raise ValueError("Historical replay gate not satisfied")
     if args.output.exists():
         raise ValueError("Refusing to overwrite replay check")
+    verify_runtime(args.runtime_manifest, root)
+    runtime_manifest = file_provenance(args.runtime_manifest)
     profile_runtime = require_profile_runtime(root)
     cache = audit["inputs"]["cache"]
     verify_file(Path(cache["path"]), cache)
@@ -89,6 +93,7 @@ def main():
                        OPENBLAS_NUM_THREADS="1", MKL_NUM_THREADS="1")
     metadata = {"source_commit": commit, "launcher": file_provenance(Path(__file__)),
                 "profile_runtime": profile_runtime,
+                "runtime_manifest": runtime_manifest,
                 "historical_audit": file_provenance(args.historical_audit), "command": command,
                 "source_manifest": [file_provenance(p) for p in sorted((root / "orthohmm").rglob("*"))
                                     if p.is_file() and p.suffix in {".py", ".c", ".cu", ".h"}],
@@ -105,6 +110,8 @@ def main():
               "preflight": file_provenance(output / "preflight.json"), "status": "inference_failed"}
     if completed.returncode == 0:
         try:
+            verify_file(args.runtime_manifest, runtime_manifest)
+            verify_runtime(args.runtime_manifest, root)
             result["stages"] = compare_stages(audit["inputs"]["stage_partitions"], output / "replay", universe)
             result["status"] = "equivalent" if all(v["partition_equal"] for v in result["stages"].values()) else "not_equivalent"
         except (ValueError, OSError) as error:

@@ -98,3 +98,29 @@ after Slurm refused an in-place sharing update. Its exact submitted command
 was recovered with `scontrol write batch_script` and preserved in
 `ob_replay_batch_command_20260916.sh`. Scientific source, cache, settings,
 inputs, output path and verification criteria are unchanged on resubmission.
+
+## Native Runtime Correction Before Replay V2
+
+Replay 21088 exposed the missing native profile-alignment library; it failed
+equivalence and is retained as a defective-runtime diagnostic. Before any new
+factorial outcomes, construct a separate checkout `publication_method_native_v2`
+of the same full source commit 7f3a9e40dd7e79f842cc2c11fb8b548f9a802806.
+Build the three production CPU kernels with GCC 13.3.0 and the Linux flags
+used by setup.py (`-O3 -fopenmp -shared -fPIC -march=native`, plus `-mavx2`
+for hmm_viterbi). No CUDA binary is present in this CPU-only runtime. This
+restores the requested profile stage; no scientific threshold or scoring rule
+is changed. Source-only and corrected-native executions are distinct runtimes.
+
+The frozen build manifest `publication_native_runtime_20260916.json` records
+source/binary/compiler hashes, complete commands and a passing synthetic
+profile probe. The current replay launcher requires that manifest, verifies
+the exact native library set before and after inference, and reruns the
+exact-interpreter profile probe before creating its output directory.
+
+Run the same historical stage comparison in a new directory
+`benchmarks/results/publication_ob_replay_check_v2`, with the same cache,
+FASTAs, CPU=32, 64 GiB, two-hour limit, shared-node scheduling and no accuracy
+scoring. Pin the amended launcher before submission. The original evidence
+and original checkout remain untouched. Success means all four partitions
+match, not merely that the profile probe or native process succeeded. Any
+remaining discrepancy must be diagnosed before preparing factorial cells.
