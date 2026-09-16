@@ -746,3 +746,20 @@ matched-history verification, generation scheduling/completion, and a method
 runner that verifies generated input hashes and terminal success before
 native conversion/scoring. These are execution tasks, not an invitation to
 change the frozen scientific settings after seeing results.
+
+### Simulation generation scheduling (2026-09-16)
+
+Added `run_simulation_generation.slurm`: 40 native generation tasks, capped
+at two concurrent tasks, each with one CPU, 8 GiB requested memory, and a
+12-hour limit on bizon. Manifest and pinned runner hashes are checked before
+task selection; the existing runner checks parameters, sources, environment,
+and absent output paths. It preserves failed artifacts instead of restarting.
+The frozen settings and 70-dataset design are unchanged. Generation is not
+method inference, and these shared-machine timings are not scaling evidence.
+
+Shell syntax and the last array entry's full check-only preflight passed;
+index 40 was rejected. Eight generation runner/builder tests passed. Commit
+and push this launcher before submission. YGOB job 20917 remains pending for
+resources; replay job 20919 remains dependent on it; unrelated job 20915 is
+running and has not been modified. Next: record submission, validate paired
+histories after generation, and execute the frozen method comparisons.
