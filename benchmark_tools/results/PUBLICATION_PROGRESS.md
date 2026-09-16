@@ -2519,3 +2519,10 @@ remain separate gates. Output reserved at
 `benchmarks/results/ob_supplied_tree_control_v1`; batch prepared for a pinned
 executor with32 CPUs64GiB/four hours. Submission details follow. This cached
 control is not end-to-end timing or completed tree-robustness evidence.
+
+Submitted supplied-tree control**21298** from frozen executor**d9ea049** at
+`benchmarks/work/publication_ob_tree_control_v1`,32 CPUs64GiB/four hours.
+Log `benchmarks/work/ob_tree_control_21298.log`; evidence and new native output
+under `benchmarks/results/ob_supplied_tree_control_v1`. No perturbation cells
+launched: first require this arm's native validation and partition equivalence
+to inferred p1_c1_r1. QfO graph diagnostic21295 remains a separate live job.
