@@ -1,0 +1,77 @@
+{
+  "accounting_raw": "JobIDRaw|State|ExitCode|Elapsed\n21192|COMPLETED|0:0|01:41:20\n21192.batch|COMPLETED|0:0|01:41:20\n",
+  "accuracy_computed": false,
+  "all_scoring_gates_verified": false,
+  "inference_files_verified": true,
+  "native_runtime": {
+    "manifest": {
+      "bytes": 5789,
+      "path": "native_runtime.json",
+      "sha256": "aebea83807356b02307473506fa30c2dbd2c511d7ba75a0655eb12180a474d74"
+    },
+    "probes": [
+      {
+        "bytes": 782,
+        "path": "high_sensitivity_before.runtime.json",
+        "sha256": "b00cc6e67d435367e6e30954762b47badc05e0b23227f4836b2d567b03f8e400"
+      },
+      {
+        "bytes": 782,
+        "path": "high_sensitivity_after.runtime.json",
+        "sha256": "b00cc6e67d435367e6e30954762b47badc05e0b23227f4836b2d567b03f8e400"
+      },
+      {
+        "bytes": 782,
+        "path": "satellite_v2_before.runtime.json",
+        "sha256": "b00cc6e67d435367e6e30954762b47badc05e0b23227f4836b2d567b03f8e400"
+      },
+      {
+        "bytes": 782,
+        "path": "satellite_v2_after.runtime.json",
+        "sha256": "b00cc6e67d435367e6e30954762b47badc05e0b23227f4836b2d567b03f8e400"
+      }
+    ]
+  },
+  "orthofinder_final_groups": {
+    "bytes": 1093845,
+    "path": "orthofinder/input/OrthoFinder/Results_Sep16/Orthogroups/Orthogroups.txt",
+    "sha256": "30722bf72a12c34ea7e4f41516dfa243bcd205053654c9601c48b84fe025b4af"
+  },
+  "orthohmm": {
+    "high_sensitivity": {
+      "metrics": {
+        "bytes": 14721,
+        "path": "high_sensitivity.json",
+        "sha256": "4fc97a93e8bd0041b253e01d2c5a33935370df14e712ce95ba3b5cdaee4bfa13"
+      },
+      "native_output": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ygob_validation_v1/high_sensitivity/orthohmm_orthogroups.txt"
+    },
+    "satellite_v2": {
+      "metrics": {
+        "bytes": 19578,
+        "path": "satellite_v2.json",
+        "sha256": "719c2ad1f049c84758a76787e19c078495c3dbe3ea09353ba51c2e33671368c5"
+      },
+      "native_output": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ygob_validation_v1/satellite_v2/orthohmm_phylogeny/orthohmm_root_hogs.tsv"
+    }
+  },
+  "remaining_checks": [
+    "Exact inference commands and installed tool versions",
+    "Overlap/reference-resource audits and native ID conversion",
+    "Independent reference reconstruction and scoring"
+  ],
+  "runner_metadata": {
+    "finished": "2026-09-16T19:53:10Z",
+    "job_id": "21192",
+    "runner_exit_code": "0",
+    "started": "2026-09-16T18:11:51Z"
+  },
+  "scheduler": {
+    "Elapsed": "01:41:20",
+    "ExitCode": "0:0",
+    "JobIDRaw": "21192",
+    "State": "COMPLETED"
+  },
+  "schema_version": 1,
+  "source_commit": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806"
+}

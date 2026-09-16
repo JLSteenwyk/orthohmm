@@ -1896,3 +1896,41 @@ Full development unit suite: **787 passed in 23.95s**. Isolated launcher branch
 was pushed successfully. GitHub still reports 21 dependency vulnerabilities
 (1 critical, 7 high, 11 moderate, 2 low); triage remains required and no frozen
 runtime dependencies were modified.
+
+### QfO replay launched; YGOB inference completed (2026-09-16)
+
+Previous turn was progress: isolated launcher freeze and verification. This
+turn reread the objective and implemented `run_qfo_publication_replay.py` with
+no-overwrite outputs, pre/postflight frozen launcher checks, fresh historical
+input audits, installed-package version consistency, and full-universe final
+partition comparison. It does not read benchmark accuracy labels. Parameters
+are CPU32, BLOSUM62, CPM0.1, Leiden seed4, one profile pass, minimum one species,
+and no jackknife. GNU time measurements are explicitly incremental and shared
+machine; max RSS is not a simultaneous process-tree memory measurement.
+
+Pinned executor commit `1c23311f8b01e0ef8fbfe499614bf62054560f54` is checked out at
+`benchmarks/work/publication_qfo_replay_executor_v1`. The core/replay launcher
+remains isolated commit 49ab110. Submitted the committed
+`qfo_native_replay_batch_20260916.sh` as Slurm **21288**, confirmed RUNNING,
+32 CPUs, 128GiB, 24h limit, zero restarts. Output directory:
+`benchmarks/results/publication_qfo_replay_check_v1`; batch log:
+`benchmarks/work/qfo_native_replay_21288.log`. The fresh audit has verified all
+976,504 genes and 78 FASTAs. Replay equivalence remains unproven until native
+inference and postflight finish. No results have been scored or tuned.
+
+YGOB job **21192** became COMPLETED 0:0 after **1:41:20**. Ran the existing
+label-blind verifier successfully and recorded
+`ygob_native_files_verified_20260916.json`. This verifies scheduler/native
+completion, frozen input and source records, OrthoHMM output manifests,
+four profile-runtime probes, native library identity, tool entrypoint hashes,
+and OrthoFinder completion/input copies. `all_scoring_gates_verified` remains
+false: exact commands/versions, native conversion, overlap/reference-resource
+checks and independent reference reconstruction remain before held-out scores
+can be inspected. Do not equate this file gate with completed validation.
+
+Seven new replay command/partition/no-overwrite tests pass, and the full unit
+suite passes **794 tests in 24.14s**. Next: monitor 21288 without restarting;
+complete the remaining YGOB admission gates, then evaluate the frozen held-out
+panel. QfO factorial preparation depends on the replay result. The full
+publication objective, including matched-search controls, robustness/scaling,
+error analysis, biological application and archival deliverables, remains open.
