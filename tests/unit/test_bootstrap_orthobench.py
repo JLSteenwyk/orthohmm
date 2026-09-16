@@ -61,3 +61,24 @@ def test_invalid_statistics_rejected(field, value):
     values[0][field] = value
     with pytest.raises(ValueError):
         weighted_records(values)
+
+
+def test_global_multiplicity_preserves_points_and_nominal_intervals():
+    other = records()
+    other[1].update(true_positive=3, false_negative=3)
+    inputs = {"a": records(), "b": other}
+    local = paired_bootstrap(inputs, "a", 2000, 123)
+    global_result = paired_bootstrap(inputs, "a", 2000, 123, multiplicity_endpoints=84)
+    assert local["point_estimates_percent"] == global_result["point_estimates_percent"]
+    assert "84 planned" in global_result["multiplicity"]
+    for metric, value in local["comparisons"]["b"]["metrics"].items():
+        observed = global_result["comparisons"]["b"]["metrics"][metric]
+        assert observed["paired_percentile_ci"] == value["paired_percentile_ci"]
+        assert observed["bonferroni_percentile_ci"][0] <= value["bonferroni_percentile_ci"][0]
+        assert observed["bonferroni_percentile_ci"][1] >= value["bonferroni_percentile_ci"][1]
+
+
+@pytest.mark.parametrize("endpoints", [0, 2, True, 84.0])
+def test_invalid_global_multiplicity_rejected(endpoints):
+    with pytest.raises(ValueError, match="Multiplicity"):
+        paired_bootstrap({"a": records(), "b": records()}, "a", 100, multiplicity_endpoints=endpoints)

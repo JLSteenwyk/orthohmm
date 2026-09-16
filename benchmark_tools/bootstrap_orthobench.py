@@ -46,7 +46,7 @@ def weighted_records(records):
     return sorted(names), sizes, counts / (sizes[:, None] - 1)
 
 
-def paired_bootstrap(records_by_method, baseline, replicates=20000, seed=20260916, alpha=0.05):
+def paired_bootstrap(records_by_method, baseline, replicates=20000, seed=20260916, alpha=0.05, *, multiplicity_endpoints=None):
     if baseline not in records_by_method or len(records_by_method) < 2:
         raise ValueError("Need a baseline and at least one comparator")
     if replicates < 100 or not 0 < alpha < 1:
@@ -63,6 +63,9 @@ def paired_bootstrap(records_by_method, baseline, replicates=20000, seed=2026091
     draws = {method: statistics(multiplicities @ counts) for method, counts in weights.items()}
     observed = {method: statistics(counts.sum(axis=0)) for method, counts in weights.items()}
     contrasts = len(weights) - 1
+    endpoints = contrasts * len(METRICS) if multiplicity_endpoints is None else multiplicity_endpoints
+    if type(endpoints) is not int or endpoints < contrasts * len(METRICS):
+        raise ValueError("Multiplicity endpoints must cover every reported contrast/metric")
     comparisons = {}
     for method in weights:
         if method == baseline:
@@ -75,8 +78,7 @@ def paired_bootstrap(records_by_method, baseline, replicates=20000, seed=2026091
                 "difference_percentage_points": float(observed[method][index] - observed[baseline][index]),
                 "paired_percentile_ci": np.quantile(differences[:, index], [alpha / 2, 1 - alpha / 2]).tolist(),
                 "bonferroni_percentile_ci": np.quantile(
-                    differences[:, index], [alpha / (2 * contrasts * len(METRICS)),
-                                            1 - alpha / (2 * contrasts * len(METRICS))]
+                    differences[:, index], [alpha / (2 * endpoints), 1 - alpha / (2 * endpoints)]
                 ).tolist(),
             }
         comparisons[method] = {
@@ -91,7 +93,8 @@ def paired_bootstrap(records_by_method, baseline, replicates=20000, seed=2026091
         "numpy_version": np.__version__,
         "point_estimates_percent": {m: dict(zip(METRICS, v.tolist())) for m, v in observed.items()},
         "comparisons": comparisons,
-        "multiplicity": f"Bonferroni tail adjustment over {contrasts * len(METRICS)} reported contrasts/metrics",
+        "multiplicity": f"Bonferroni tail adjustment over {endpoints} " +
+                        ("reported contrasts/metrics" if multiplicity_endpoints is None else "planned endpoints"),
         "limitations": [
             "Development-exposed benchmark; intervals do not correct for previous method selection.",
             "RefOG resampling assumes exchangeable families; shared histories and fused predictions can violate independence.",

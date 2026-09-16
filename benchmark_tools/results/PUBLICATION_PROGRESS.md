@@ -2810,3 +2810,31 @@ remain scheduled for mechanistic tracing. Sixteen focused tests passed;
 full unit suite **1031 passed in25.92s**. Next the84-endpoint stratified outcome
 assembly, with fresh scoring/provenance crosschecks. Parameter/scaling/domain/
 biological-application/QfO/release requirements remain open.
+
+### Frozen 84-endpoint stratified scoring prepared (2026-09-16)
+
+Previous turn made progress: full native alignment admission and frozen
+family strata. Reread full objective;21307 is still live, no automatic restart.
+Implemented a scoring assembler with fresh feature/alignment admission before
+method outcomes, exact native-format parsers, input-universe checks, full
+reference per-family sufficient-statistic reproduction, and official-score
+crosschecks. Retains native prediction coverage without silently adding
+unassigned genes. In retained OrthoFinder3.1.5 full output, Orthogroups.txt
+is root-HOG-postprocessed (documented in the manuscript), not the raw MCL
+checkpoint solely because of its filename.
+
+Extended the shared paired bootstrap with an optional global multiplicity
+count. Default results remain unchanged; the new panel retains84 endpoints
+across all14 bins/two contrasts/three metrics. Empty bins have null estimates;
+bins below five families have point estimates but no intervals. Weighted
+counts and family wins/ties/losses are retained, with full-reference scoring
+conventions unchanged within each bin. Sparse adjusted percentile tails
+(about six draws each at20,000 replicates) are explicitly caveated.
+
+Twenty-six focused bootstrap/assembly tests passed, covering global-adjustment
+invariants, missing/small bins, malformed panels, native parsing, changed
+inputs, mismatched sufficient statistics and official-score disagreement.
+Full unit suite and frozen scoring submission details follow.
+
+Full unit suite **1047 passed in26.90s**; focused assembler tests rerun after
+adding job/scorer provenance and an explicit unknown-method guard.
