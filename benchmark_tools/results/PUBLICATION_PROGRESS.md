@@ -1537,3 +1537,36 @@ scoring assembly, followed by prespecified factorial statistics. Remaining
 tasks, YGOB independent validation, QfO ablations, matched search control,
 robustness/scaling, biological application and publication packaging remain
 unfinished. No full-goal completion claim is made.
+
+## Native Root-HOG Partition Conversion
+
+Previous turn completed preserved-artifact integrity audits. Read the objective
+and verified YGOB 21192 and factorial tasks 2/3 remain live. Inspected native
+replay metrics, reconciliation manifests, summary records and root-HOG writer
+semantics. Implemented `validate_factorial_partition.py` using existing strict
+native readers/membership checks and source-family split accounting.
+
+The converter checks complete FASTA identifier coverage, duplicate membership,
+native sequential HOG IDs, canonical candidate-family IDs, absence of
+cross-source merges, agreement of candidate/root counts with native summary,
+family completion counts, and replay/native summary equality. Singleton groups
+are retained. Files are hashed before and after validation; converted groups
+and a separate evidence record are generated without reading reference labels.
+This checks partition semantics only, not every native reconciliation gate.
+
+Both finished cells pass. p0_c0_r1: 63,245 candidates, 64,925 root HOGs,
+676 split source families. p0_c1_r1: 54,745 candidates, 60,092 root HOGs,
+2,026 split source families. Both preserve all 251,378 FASTA genes and have
+zero cross-source merges. Evidence records are
+`orthobench_partition_p0c0r1_20260916.json` and
+`orthobench_partition_p0c1r1_20260916.json`; converted text remains under
+`benchmarks/results/publication_ob_factorial_v1/validated_partitions/` rather
+than source control. No inference outputs were changed and no accuracy was
+computed. Full native source/tool/tree/membership checks and all-cell scoring
+assembly are still required before admission.
+
+The full collected unit suite passes **711 tests** (38.44s). An additional
+valid-family-split case was added after collection; all **12 targeted converter
+tests pass**, including that case. Scoped whitespace checks pass. These
+structural counts do not establish an accuracy advantage or completion of the
+ablation experiment or publication goal.
