@@ -139,3 +139,11 @@ an OrthoFinder MCL checkpoint diagnostic. It explicitly does not claim
 family-disjointness. Homology screening and shared-resource checks are still
 required before accuracy interpretation. `run_ygob_validation.slurm` performs
 only inference from pinned production code, not scoring.
+
+The scientific freeze was committed and pushed as `ec92413` before submitting
+Slurm job `20917`. It requests an exclusive allocation, 32 threads per method,
+128 GB memory, and sequential fresh high-sensitivity, satellite_v2, and full
+OrthoFinder runs. Frozen OrthoHMM source is the detached worktree at `7f3a9e4`.
+The job is queued; do not interpret pending status as failure or restart it.
+Log path: `benchmarks/work/ygob_validation_v1/inference_20917.log`.
+Complete the prespecified homology screen while waiting and before scoring.
