@@ -1,4 +1,7 @@
 import numpy as np
+import pytest
+
+from orthohmm.search import profile_expansion
 
 from orthohmm.search.profile_expansion import (
     ProfileHits,
@@ -17,6 +20,32 @@ def _edge_map(edges):
             edges.sources, edges.targets, edges.weights
         )
     }
+
+
+def test_profile_worker_preserves_expected_no_profile_result(monkeypatch):
+    monkeypatch.setattr(profile_expansion, "build_msa_profile", lambda *args: None)
+    assert profile_expansion._build_profile_worker((7, [], [], None, None)) == (7, None)
+
+
+def test_missing_native_library_stops_serial_profile_build(monkeypatch):
+    error = OSError("pair_align.so: cannot open shared object file")
+
+    def fail(*args):
+        raise error
+
+    monkeypatch.setattr(profile_expansion, "build_msa_profile", fail)
+    with pytest.raises(RuntimeError, match="cluster 7.*pair_align.so") as caught:
+        profile_expansion._execute_profile_build_tasks([(7, [], [], None, None)], 1, 1)
+    assert caught.value.__cause__ is error
+
+
+@pytest.mark.parametrize("cpu", [1, 2])
+def test_unexpected_profile_error_propagates_from_serial_and_spawn_workers(cpu):
+    # Invalid encoded data exercises a real worker failure without changing a library.
+    tasks = [(7, ["a"], [np.array([-100], dtype=np.int16)], None, None),
+             (8, [], [], None, None)]
+    with pytest.raises(RuntimeError, match="Profile construction failed for cluster 7"):
+        profile_expansion._execute_profile_build_tasks(tasks, 2, cpu)
 
 
 def test_load_global_sequence_database_preserves_gene_table_order(tmp_path):

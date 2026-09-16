@@ -1681,3 +1681,28 @@ are not the manuscript figures. Three plot tests pass, checking exact paired
 interval coordinates, sample-size labels, no imputed effects with no pairs,
 and rejection of unknown panels. These figures retain the negative simulation
 findings and do not complete the remaining publication requirements.
+
+## Development Profile Failures Now Surface
+
+Previous turn completed and visually checked simulation figures. Read the
+objective and verified final factorial task 21248_3 and YGOB 21192 still live.
+Addressed the previously demonstrated silent native-library failure in the
+development checkout only: `_build_profile_worker` now raises a contextual
+RuntimeError, preserving the original exception cause and cluster ID, instead
+of swallowing every unexpected exception as a missing profile.
+
+The underlying builder's expected `None` cases remain unchanged, as do all
+successful profile scores and scientific parameters. Four new regression
+cases cover legitimate no-profile results, a missing-library OSError with
+preserved cause, and unexpected failures in both serial and real spawn-worker
+execution. Existing serial/parallel profile-equivalence tests pass. All
+**13 profile-expansion tests** and the complete **755-test suite pass**
+(34.12s). Scoped whitespace checks pass. Verified the frozen native benchmark
+checkout's profile-expansion source remains identical to HEAD.
+
+This release-oriented error-handling correction is not retroactively applied
+to frozen benchmark results. Unexpected builder errors now stop inference;
+expected no-profile returns can still occur and their causes/counts remain a
+separate diagnostic concern. No active job, frozen checkout or scientific
+output was changed. Remaining validation, ablation scoring and publication
+requirements continue under the original objective.

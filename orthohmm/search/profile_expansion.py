@@ -112,8 +112,10 @@ def _build_profile_worker(task):
             sub_matrix,
             background,
         )
-    except Exception:
-        profile = None
+    except Exception as error:
+        raise RuntimeError(
+            f"Profile construction failed for cluster {cluster_id}: {error}"
+        ) from error
     return cluster_id, profile
 
 
