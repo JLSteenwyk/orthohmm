@@ -478,8 +478,14 @@ established. No replay result is silently substituted for the historical
 baseline. [Diagnostic evidence](QFO_REPLAY_DRIFT_DIAGNOSIS_20260916.md).
 Three subsequent instrumented single-CPU workers with matching recorded
 native-library/runtime identities reproduced the earlier diagnostic partition,
-but not the replay capture. The cross-configuration discrepancy remains open;
-repeatability in that configuration does not establish general determinism.
+but not the replay capture. A subsequent controlled affinity panel exposed
+within-configuration variability: the two one-CPU repeats differed (349,898
+versus349,950 groups), although their recorded sources, libraries, inputs,
+settings and affinity matched. Both32-CPU repeats produced349,898 groups.
+Independent file and complete-partition admission confirmed the discrepancy.
+Thus CPU availability alone does not explain the variation, and the earlier
+matching repeats do not establish general repeatability. The cause remains
+unresolved; no preferred partition is substituted for the historical baseline.
 
 Historical timing and memory records differ in scope and accounting.
 Cached replays are incremental computations, not end-to-end timings;

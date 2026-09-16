@@ -135,8 +135,9 @@ partition comparison. Evidence: `qfo_saved_graph_repeats_20260916.json`.
 The three worker durations were627.29,693.45 and555.00 seconds; these are
 shared-node diagnostic costs, not a controlled performance comparison.
 
-This supports repeatability for this instrumented single-CPU configuration.
-It does not establish general determinism or identify the earlier discrepancy.
+These three observations agreed under this instrumented single-CPU configuration.
+They do not establish general determinism or identify the earlier discrepancy;
+the later affinity panel below contains a same-affinity counterexample.
 The matching diagnostic also requested one CPU, whereas the replay/capture
 requested32; exact affinity and loaded-library records were not captured for
 those earlier workers. CPU affinity and process/import context are candidates
@@ -144,3 +145,47 @@ for controlled tests, not established causes. Next vary one factor at a time
 on the same preserved graph, starting with repeated one-versus32-CPU affinity
 within a single allocation while keeping the worker code, inputs and settings
 fixed. Do not change inference defaults or select the best partition by score.
+
+## Completed Affinity Panel: Same-CPU Disagreement
+
+Job21311 completed0:0 in43:09 from frozen executorcc3bffa. Four fresh workers
+alternated one and32 available CPUs in the same allocation, with unchanged
+graph/gene order, CPM0.1, seed4, include-isolates and one-thread OpenMP/BLAS
+settings. No accuracy was evaluated and no output was selected or retried.
+
+| Arm | Actual Available CPUs | Groups | Partition SHA256 Prefix |
+| --- | ---: | ---: | --- |
+| one_cpu_0 | 1 | 349,898 | 8c162782 |
+| all_cpus_0 | 32 | 349,898 | 8c162782 |
+| one_cpu_1 | 1 | 349,950 | def06c42 |
+| all_cpus_1 | 32 | 349,898 | 8c162782 |
+
+Both single-CPU workers used CPU8. All recorded software identities match
+excluding the intentionally varied affinity, and affinity also matches within
+each repeated arm. The second one-CPU partition has4,479 groups absent from
+the first, while the first has4,427 absent from the second. Every partition
+covers the same976,504 genes. Both32-CPU repeats are byte-identical. Neither
+these matches nor the earlier three matches establish general determinism.
+
+Independent admission re-read worker/execution records, checked248 unique
+source/library/interpreter/graph/partition files, and recomputed all13 recorded
+full-partition comparisons. Evidence:`qfo_affinity_verified_20260916.json`,
+SHA256a927b00477f12e0a4c6548271942bc2f78d047bf0f7d0304d8aa0abd11954ec0.
+The underlying job report SHA256 ise9311a5862b1db605b7d741003b2033de6f41f2c6db7e726316c181d00105de6.
+Ten admission tests cover incomplete panels, changed identity, affinity,
+graphs, arm order and exit status; full unit suite1,127 tests passed.
+
+CPU availability alone cannot explain this panel's variation. Matching files
+and selected runtime settings do not capture all native state, so the cause
+is still unresolved. The installed Python binding passes the requested seed
+to the optimizer; static inspection alone cannot prove its effective native
+state or exclude graph-conversion differences. No library defect or historical
+environment explanation is established by this experiment.
+
+Next instrument the actual igraph edge order and weights at the optimizer
+call boundary, alongside effective arguments and the resulting partition.
+Compare bounded fresh-worker repeats without choosing by accuracy. This can
+separate variability before the optimizer call from variability during native
+optimization, but instrumentation itself must be documented. Do not substitute
+a preferred partition, restart full QfO profiles, or declare the publication
+baseline reproducible before stronger evidence is obtained.

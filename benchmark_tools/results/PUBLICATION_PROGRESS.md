@@ -3102,3 +3102,30 @@ arms prepared unscored. Unchanged control passed both byte-equivalence gates.
 Reported candidate counts:control54,445;norm_low54,370;norm_high54,540;
 margin_low52,912;margin_high55,434. Independent admission and full-pipeline
 reconciliation remain next; these counts are not accuracy results.
+
+### Independent QfO affinity-panel admission (2026-09-16)
+
+Previous turn made progress: frozen parameter panel/preparation executed and
+both jobs reached terminal success. Reread objective and independently admitted
+completed21311. New validator checks the exact four-arm plan, native snapshots,
+execution records, same graph, actual/inherited/requested affinity, module/library
+identities and fixed worker parameters. Recomputed all13 stored full partition
+comparisons and checked248 unique provenance files. No failed check or partial
+panel was treated as complete.
+
+Verified same-CPU difference:349,898 versus349,950 groups;4,427/4,479 unmatched
+groups, all976,504 genes present. Both32-CPU repeats are byte-identical349,898.
+Same-affinity disagreement is now directly verified, not merely a summary-file
+observation. Preserved snapshot`qfo_affinity_verified_20260916.json` SHA256
+a927b00477f12e0a4c6548271942bc2f78d047bf0f7d0304d8aa0abd11954ec0.
+Diagnostic and manuscript corrected to avoid a general single-CPU repeatability
+claim. CPU availability alone is insufficient; effective native graph/state
+still needs investigation. Static installed-binding inspection confirms the
+Python wrapper calls optimizer.set_rng_seed with the supplied seed, but does
+not identify a native cause.
+
+Ten focused admission tests passed; full unit suite **1127 passed in26.82s**.
+Next record actual igraph edges/weights and effective optimizer arguments in
+bounded fresh workers; preserve every partition, with no accuracy selection.
+Candidate-neighborhood21314 independent admission/downstream inferred-tree
+execution, CPM variants and broader publication requirements remain active.
