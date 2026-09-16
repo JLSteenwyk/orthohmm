@@ -2953,3 +2953,18 @@ selection or inference changes. Full unit validation and frozen submission follo
 
 Full unit suite **1081 passed in29.42s**. Large pair-level output stays outside
 Git; the committed result will retain its checksum and full70-family summaries.
+
+Frozen3cb213c executor at`publication_ob_family_trace_v1`, job21312,
+FAILED1:0 in1s before output creation: an incorrect new disjoint-reference
+assumption. Independent input audit confirms1,945 memberships/1,944 unique
+genes: FBpp0309618 belongs toRefOG021 andRefOG068. Existing scorers preserve
+these references; no previous score change is indicated. Removed the tracer's
+unsupported disjointness restriction and added an explicit overlap inventory
+and regression test. Both assignments and all70 families remain intact.
+Preserved failed job/log/frozen source; corrected execution uses separatev2
+paths and is not an automatic retry. Full validation and job ID follow.
+
+Corrected full unit suite **1082 passed in28.09s**, scoped whitespace clean.
+QfO21311 first one-CPU arm completed with the prior single-CPU partition SHA256
+8c162782bba955078a8f7e4e6088df5b34c9f15b055803224e513fdea8b33cdd;
+remaining arms still required before interpreting the affinity contrast.

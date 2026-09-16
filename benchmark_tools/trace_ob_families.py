@@ -27,6 +27,15 @@ FACTORIAL_SHA = "6a0d588b5cb47c60fc6bc8bae8aa0c83e5f2aadb11de970919d8c6527c38714
 STAGES = ("multipass", "multipass_refined", "strict_profiles", "strict_profiles_refined", "candidates", "root_hogs")
 
 
+def reference_inventory(references):
+    owners = {}
+    for name, genes in sorted(references.items()):
+        for gene in sorted(genes):
+            owners.setdefault(gene, []).append(name)
+    return {"families": len(references), "memberships": sum(map(len, references.values())),
+            "unique_genes": len(owners), "shared_genes": {g: names for g, names in owners.items() if len(names) > 1}}
+
+
 def partition(path, format_name, universe):
     if format_name == "plain":
         with path.open() as handle:
@@ -139,8 +148,7 @@ def assemble(root, output):
     if set(references) != set(strata["families"]):
         raise ValueError("Reference family panel differs")
     reference_genes = set().union(*references.values())
-    if len(reference_genes) != sum(map(len, references.values())):
-        raise ValueError("Trace requires nonoverlapping reference families")
+    inventory = reference_inventory(references)
     records = [prepared["cache"], prepared["replay_verification"], *prepared["fasta_inputs"], *reference_records]
     for item in records:
         verify_file(Path(item["path"]), item)
@@ -200,12 +208,14 @@ def assemble(root, output):
         verify_file(Path(item["path"]), item)
     report = {"status": "retained_stage_trace_complete", "publication_ready": False, "job_id": os.environ.get("SLURM_JOB_ID"),
         "source": file_provenance(Path(__file__)), "inputs": records, "families": families, "scores": scores,
+        "reference_inventory": inventory,
         "frozen_snapshots": [file_provenance(results / name) for name in
             ("orthobench_factorial_prepared_20260916.json", "orthobench_factorial_results_20260916.json", "ob_error_strata_prepared_20260916.json")],
         "merge_events_total": len(events), "reference_incident_merge_events": merge_evidence,
         "candidate_partition_reconstructed": True, "pair_trace": file_provenance(pair_path),
         "illustrative_families_by_stratum": strata["illustrative_families_by_stratum"],
         "limitations": ["All70 development-exposed families retained; illustrations follow the frozen feature-based hash ranking.",
+            "Reference memberships can overlap; shared genes retain every reference assignment. Family-level counts are not disjoint totals.",
             "Pair counts include within-species pairs and low-certainty members; these descriptive counts are not official benchmark precision or recall.",
             "Cross-reference and unlabelled incident pairs are raw membership descriptors, not official false-positive counts.",
             "The normalized-hit cache lacks rejected candidates and prefilter logs; absent hits cannot distinguish prefilter rejection from scoring rejection.",

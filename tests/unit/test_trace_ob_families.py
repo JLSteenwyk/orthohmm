@@ -5,6 +5,18 @@ import pytest
 from benchmark_tools import trace_ob_families as trace
 
 
+def test_overlapping_reference_assignments_are_preserved():
+    refs = {"family1": {"a", "b"}, "family2": {"a", "c"}}
+    assert trace.reference_inventory(refs) == {"families": 2, "memberships": 4, "unique_genes": 3,
+                                              "shared_genes": {"a": ["family1", "family2"]}}
+    groups = {"all": {"a", "b", "c"}}
+    index = {gene: "all" for gene in "abc"}
+    for genes in refs.values():
+        result = trace.family_group_summary(genes, groups, index, set("abc"))
+        assert result["within_family_pairs"] == 1
+        assert result["cross_reference_pairs_incident"] == 2
+
+
 def test_partition_rejects_duplicate_and_incomplete_inputs(tmp_path):
     path = tmp_path / "groups.txt"
     for text in ("a b\na\n", "a\n"):

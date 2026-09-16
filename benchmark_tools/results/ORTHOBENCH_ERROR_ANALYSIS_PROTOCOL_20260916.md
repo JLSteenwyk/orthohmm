@@ -161,3 +161,10 @@ are not covered by this extraction. Root-HOG splits still require per-family
 tree/constraint inspection to distinguish reconciliation mechanisms. State
 these gaps explicitly; this extraction does not complete causal tracing,
 independent annotation, QfO error analysis, or the biological application.
+
+Reference-overlap admission: the70 input families contain1,945 memberships
+among1,944 distinct genes. FBpp0309618 belongs to bothRefOG021 andRefOG068.
+Retain both assignments and report the shared-gene inventory explicitly.
+Per-family traces are not disjoint totals; no deduplication or ground-truth
+modification is permitted. The first extraction stopped at an overly restrictive
+disjointness check before producing results; its failure is retained.
