@@ -2496,3 +2496,26 @@ Prepared output `benchmarks/results/ob_species_tree_robustness_v1`; committed
 manifest `ob_species_tree_robustness_prepared_20260916.json`. No reconciliation
 or robustness accuracy has run; first require supplied-control equivalence
 and validate checkpoint reuse. QfO graph diagnostic21295 still RUNNING13:12.
+
+### Supplied-tree baseline replay prepared (2026-09-16)
+
+Previous turn was progress: completed search controls and generated tree panel.
+Reread objective; QfO diagnostic21295 remains live. Audited frozen pipeline
+checkpoint handling: validated raw gene trees may be reused, but rooting and
+reconciliation always rerun. Species-tree, checkpoint and output writes use
+atomic replacement, protecting the original run when the replay helper seeds
+hard links. Strengthened existing tree-change test to require unchanged raw
+gene-tree hash and changed species-tree hash in the new reconciliation
+checkpoint; passed alongside seven new command-treatment guard tests.
+Full unit suite **917 passed in26.15s**.
+
+Added `run_species_tree_control.py` for only the unchanged supplied-tree arm,
+not the six perturbed trees. It verifies frozen tree/FASTA/candidate/environment
+manifests and original native outputs before execution; retains constraints,
+CPU32 and reconciliation rules; changes only supplied-tree mode/input, copied
+checkpoint source and output destinations. Revalidates the original native
+run after execution to detect mutation. Native equivalence and any scoring
+remain separate gates. Output reserved at
+`benchmarks/results/ob_supplied_tree_control_v1`; batch prepared for a pinned
+executor with32 CPUs64GiB/four hours. Submission details follow. This cached
+control is not end-to-end timing or completed tree-robustness evidence.

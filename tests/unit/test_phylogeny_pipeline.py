@@ -287,6 +287,9 @@ def test_gene_tree_checkpoint_survives_species_tree_change(tmp_path):
     )
     files = ["A.faa", "B.faa", "C.faa"]
     run_phylogeny_stage(str(inputs), str(output), files, config, cpu=2)
+    checkpoint_paths = list((output / "orthohmm_phylogeny/checkpoints").glob("*.json"))
+    before = {path.name: json.loads(path.read_text()) for path in checkpoint_paths}
+    assert before
 
     # Keep version probes working but make repeated alignment/tree inference fail.
     Path(config.aligner).write_text(
@@ -314,6 +317,10 @@ def test_gene_tree_checkpoint_survives_species_tree_change(tmp_path):
         str(inputs), str(output), files, config, cpu=2
     )
     assert rerooted.checkpoint_hits == 1
+    after = {path.name: json.loads(path.read_text()) for path in checkpoint_paths}
+    for name in before:
+        assert after[name]["raw_tree_sha256"] == before[name]["raw_tree_sha256"]
+        assert after[name]["species_tree_sha256"] != before[name]["species_tree_sha256"]
 
 
 def test_parallel_results_are_deterministic(tmp_path):
