@@ -2968,3 +2968,11 @@ Corrected full unit suite **1082 passed in28.09s**, scoped whitespace clean.
 QfO21311 first one-CPU arm completed with the prior single-CPU partition SHA256
 8c162782bba955078a8f7e4e6088df5b34c9f15b055803224e513fdea8b33cdd;
 remaining arms still required before interpreting the affinity contrast.
+
+Corrected executorcdea3c3 committed/pushed and frozen at
+`benchmarks/work/publication_ob_family_trace_v2`; job**21313** submitted with
+oneCPU/32GiB/one-hour limit and no automatic requeue. Scheduler confirms
+RUNNING at11s, empty stderr so far. Output target`benchmarks/results/ob_family_trace_v2`.
+Next admit terminal results against all source/pair-table hashes, independently
+verify family transitions/merge reconstruction, and inspect the frozen illustrative
+families. Both21313 and21311 remain live; no publication-completion claim.
