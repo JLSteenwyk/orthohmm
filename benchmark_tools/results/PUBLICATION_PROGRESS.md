@@ -3050,3 +3050,35 @@ with recorded software identity excluding affinity equal. Two repeats remain;
 do not infer affinity causation or general determinism from this partial panel.
 Tree-history validation, edge/rejection tracing, independent annotations,
 QfO/control/parameter/scaling/application/release requirements remain active.
+
+### Prespecified parameter neighborhood prepared (2026-09-16)
+
+Previous turn made progress: recorded reconciliation/constraint decomposition
+tested and pushed. Reread objective and moved to the outstanding limited
+parameter-robustness requirement. Fixed six one-at-a-time20% variants:
+CPM0.08/0.12 around0.1; candidate min_norm0.024/0.036 around0.03;
+candidate min_margin1.2/1.8 around1.5. Unchanged control required. This is an
+exposed-data sensitivity panel, not adaptive optimization or new-default selection.
+Protocol`PARAMETER_NEIGHBORHOOD_PROTOCOL_20260916.md` specifies inferred-tree
+full-pipeline endpoints and18 planned OrthoBench contrasts/metrics, no denominator
+reduction after failures. QfO extension requires a reproducible baseline first.
+
+Implemented candidate-only preparation for the control and four threshold arms,
+with fixed byte-admitted HMM/profile seed groups and cached hits. Scoped
+analysis-only call overrides leave frozen production code unchanged, verify
+exactly one engine call, restore the engine on failure, and retain nominal
+wrapper reports separately from effective parameters. Unchanged control must
+match both full candidate and merge-trace bytes before variants proceed.
+No reconciliation or accuracy is evaluated by this preparer; CPM arms remain
+separate required work. Ten focused override/restoration/guard tests passed;
+full unit validation and submission follow.
+
+QfO21311 still RUNNING at41:50. Third arm(one_cpu_1) produced partition
+def06c421941743617dd3540a14f8d9dc4f19eeedd34c1eb0c86c92160500488,
+unlike the first one-CPU arm8c162782. Recorded software identity and affinity
+match between these one-CPU workers. Thus the interim panel no longer supports
+affinity alone as an explanation or general single-CPU repeatability. Final
+arm/full admission pending; no selection, restart or accuracy scoring.
+
+Full unit suite **1117 passed in27.74s**. Scientific defaults and held-out
+evaluation remain unchanged.
