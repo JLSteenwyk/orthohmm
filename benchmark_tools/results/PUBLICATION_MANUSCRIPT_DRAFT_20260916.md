@@ -253,6 +253,13 @@ initial HMM-based search remains present. They are not HMM-free controls.
 Synthetic sequence evolution, limited seed counts, conditional comparisons,
 and absent realistic domain architecture constrain extrapolation to proteomes.
 
+The [variable-length figure](figures_simulation_variable_native_v2_20260916/simulation_evidence.png)
+shows admitted-run counts beside paired F1 effects and nominal/adjusted
+intervals. The [fixed-length figure](figures_simulation_fixed_native_v2_20260916/simulation_evidence.png)
+explicitly shows the absence of admitted comparator contrasts. Both are
+generated from the corrected machine-readable results without imputing failures;
+PDF/SVG versions and source-hash manifests accompany the PNGs.
+
 ## Limitations And Unfinished Analyses
 
 No universal superiority, arbitrary-dataset generalization, or controlled

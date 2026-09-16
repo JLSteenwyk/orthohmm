@@ -1656,3 +1656,28 @@ pass. Fourth-cell validation and eight-cell scoring remain pending; no
 inferential comparison is reported from the three available cells. YGOB
 batch log now records the high-sensitivity metrics path, but the overall job
 is still running and held-out outcomes remain uninspected.
+
+## Corrected Simulation Evidence Figures
+
+Previous turn validated the third cell and added coverage/resource reporting.
+Read the full objective and confirmed factorial task 3 and YGOB 21192 remain
+live. Used the completed corrected simulation results to generate publication
+figures while these jobs run; no new inference or accuracy calculation.
+
+Added `plot_simulation_evidence.py`, requiring an explicit source JSON hash.
+Each panel shows native-admitted counts for all four methods and paired F1
+effects for the two OrthoHMM modes, with included-seed counts and nominal and
+Bonferroni-14 intervals. The fixed-length panel plots no zero-effect markers
+where no comparator pairs are admitted. Captions disclose conditional success,
+ten-seed uncertainty, nonpooled panels and parent-gated sequence checkpoints.
+
+Generated PNG/PDF/SVG and manifests under
+`figures_simulation_variable_native_v2_20260916` and
+`figures_simulation_fixed_native_v2_20260916`, and linked both in the manuscript.
+Viewed both initial renders, corrected a crowded repeated condition label,
+then visually inspected both final PNGs: labels and intervals are visible
+without overlapping neighboring panels. Initial drafts remain untracked and
+are not the manuscript figures. Three plot tests pass, checking exact paired
+interval coordinates, sample-size labels, no imputed effects with no pairs,
+and rejection of unknown panels. These figures retain the negative simulation
+findings and do not complete the remaining publication requirements.
