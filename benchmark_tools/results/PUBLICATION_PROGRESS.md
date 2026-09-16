@@ -338,3 +338,46 @@ OrthoMCL final-group scoring `20916` remained running at 1h18m13s, and YGOB
 `20917` remained queued. The unrelated `foxy_unique720` job was observed but
 not modified. Submission is not completion; inspect replay verification
 status before using its stage outputs as current-source evidence.
+
+## Completed OrthoMCL Final-Group QfO Assessment
+
+Slurm accounting confirms job `20916` COMPLETED, exit `0:0`, elapsed
+01:20:11. All six native endpoint tasks and consolidation completed with
+exit zero in `qfo_benchmark/scoring/orthomcl_1_4_final_groups/stats/trace_2026-09-16_10-02-58.txt`.
+The final-group workflow metadata records exit zero and a finish timestamp.
+The original final-group inputs and converter pass `inputs.sha256` checks;
+both generated pair files pass their recorded SHA-256 checks.
+
+The comparison builder now verifies successful workflow metadata, exact
+manifest membership, and actual pair-file hashes rather than accepting the
+mere existence of a completion manifest. Six added tests cover pending,
+success, mutation, failure, unfinished, duplicate, and incomplete cases
+(the mutation check shares the success test). All 21 focused comparison,
+plotting, and QfO-summary tests pass.
+
+New snapshot `publication_comparison_orthomcl_complete_20260916.json` and
+`PUBLICATION_COMPARISON_ORTHOMCL_COMPLETE_20260916.md` preserve the earlier
+pending snapshot. OrthoMCL final-group endpoints are VGNC F 0.640957,
+SwissTrees F 0.758358, TreeFam-A F 0.717292, EC 0.922140, GO 0.463019,
+and FAS 0.729298. The project-defined secondary mean is 0.705177, not the
+pre-MCL diagnostic mean 0.724414. No inference or parameter selection was
+repeated to obtain this corrected final-output assessment.
+
+The separate scoring GNU-time log records 1:19:48 wall time, 14,762.84 user
+CPU seconds, 422.43 system seconds, and 34,127,596 KiB maximum RSS. These
+are scoring measurements, not OrthoMCL inference costs or a verified
+simultaneous process-tree memory peak. The Nextflow FAS task dominated at
+1h16m55s and reports 34.2 GB peak RSS under its own accounting convention.
+
+Regenerated PNG/PDF/SVG figures and provenance manifest are in
+`figures_accuracy_orthomcl_complete_20260916/`; all three PNGs were visually
+checked for clipping, overlap, and correct labels. The six-panel QfO figure
+now includes final-group OrthoMCL. Existing endpoint definitions and
+uncertainty caveats are unchanged; these remain work-in-progress figures.
+
+YGOB `20917` remains pending for resources; pinned replay `20919` depends
+on its success. No YGOB accuracy was inspected. Concurrent non-Slurm
+STRUCTURAL_GENOMICS IQ-TREE processes were observed, so exclusive Slurm
+allocation alone cannot establish controlled timing conditions. Unrelated
+workloads were not changed. Independent validation, current-source replay,
+prospective ablations, robustness, application, and release remain open.

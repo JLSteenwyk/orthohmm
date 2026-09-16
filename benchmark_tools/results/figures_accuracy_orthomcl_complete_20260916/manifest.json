@@ -1,0 +1,461 @@
+{
+  "command": [
+    "/home/bizon/anaconda3/bin/python",
+    "benchmark_tools/plot_publication_accuracy.py",
+    "--comparison",
+    "benchmark_tools/results/publication_comparison_orthomcl_complete_20260916.json",
+    "--output",
+    "benchmark_tools/results/figures_accuracy_orthomcl_complete_20260916"
+  ],
+  "generated_at": "2026-09-16T15:28:24.864906+00:00",
+  "input": {
+    "bytes": 67483,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_comparison_orthomcl_complete_20260916.json",
+    "sha256": "094f842ad8211450519d4238c0b3a5020a7969049d4b7306f5465d5acbf914a3"
+  },
+  "matplotlib_version": "3.10.8",
+  "outputs": [
+    {
+      "bytes": 219027,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_accuracy_orthomcl_complete_20260916/accuracy_overview.png",
+      "sha256": "26061fb237586eb8e52bdba956a1d26673b77cb657f27e7aedc360af1c6d1aa0"
+    },
+    {
+      "bytes": 18690,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_accuracy_orthomcl_complete_20260916/accuracy_overview.pdf",
+      "sha256": "8b7c7c44a37eb500ffaeeb9e5d03c31f57a4f226bec68b59ba8d0fee2ff998da"
+    },
+    {
+      "bytes": 100327,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_accuracy_orthomcl_complete_20260916/accuracy_overview.svg",
+      "sha256": "b2e4835c55e1fd9bb5bd257f439c060afa5614197a7209ac0a8322c4f07d1be9"
+    },
+    {
+      "bytes": 182183,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_accuracy_orthomcl_complete_20260916/qfo_endpoints.png",
+      "sha256": "6e6aa96f6e2f5aebdfb0f7bc2d67bd95317719e7bc477c9b48ddd08849b968df"
+    },
+    {
+      "bytes": 22790,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_accuracy_orthomcl_complete_20260916/qfo_endpoints.pdf",
+      "sha256": "02dac94e8c2d544a7cbba7a1372a7ae1339272bf7c5f8f8bbfedf548ec66fbf4"
+    },
+    {
+      "bytes": 133829,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_accuracy_orthomcl_complete_20260916/qfo_endpoints.svg",
+      "sha256": "e144341ac24e137e53c99f12995815e918383a431f66c4a95fa42f8172f22785"
+    },
+    {
+      "bytes": 103918,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_accuracy_orthomcl_complete_20260916/orthobench_paired_differences.png",
+      "sha256": "851c3b17a6fdf64867f1ad59f4d8fdc52c41898ed2e3d1a222d3e8aea5eef3c3"
+    },
+    {
+      "bytes": 15422,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_accuracy_orthomcl_complete_20260916/orthobench_paired_differences.pdf",
+      "sha256": "909139c426f9cc49f88d3425aa2a2555a526d2851a94e22893c4d60732b5fb2f"
+    },
+    {
+      "bytes": 67598,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_accuracy_orthomcl_complete_20260916/orthobench_paired_differences.svg",
+      "sha256": "bba84230c8ee4c61fb83b4f9cf2d82ea5a19b022264f403acb728f1fcf3f1f7b"
+    }
+  ],
+  "plotted_data": [
+    {
+      "color": "#0072B2",
+      "key": "orthohmm_high_sensitivity",
+      "label": "OrthoHMM sensitive",
+      "marker": "o",
+      "orthobench": {
+        "f_score": 70.35899765495243,
+        "precision": 78.94954395226098,
+        "recall": 63.45447853618141
+      },
+      "qfo": {
+        "EC": {
+          "x": 187524,
+          "y": 0.93104489
+        },
+        "FAS": {
+          "x": 8720518.0,
+          "y": 0.7747943345202203
+        },
+        "GO": {
+          "x": 144562,
+          "y": 0.47228231
+        },
+        "SwissTrees F": {
+          "x": 0.70586947,
+          "y": 0.64461096
+        },
+        "TreeFam-A F": {
+          "x": 0.44748082,
+          "y": 0.80757595
+        },
+        "VGNC F": {
+          "x": 0.8327066098437369,
+          "y": 0.5569217012239424
+        }
+      },
+      "qfo_status": "metrics_available",
+      "three_kingdoms_f1": 0.826309067688378,
+      "uncertainty": {
+        "f_score": {
+          "bonferroni_percentile_ci": [
+            -10.135345857716494,
+            5.477967052813582
+          ],
+          "difference_percentage_points": -2.3774823492692434,
+          "paired_percentile_ci": [
+            -8.177974547849907,
+            3.348255288562013
+          ]
+        },
+        "precision": {
+          "bonferroni_percentile_ci": [
+            1.2811088222216178,
+            22.626546576866843
+          ],
+          "difference_percentage_points": 12.88444095618307,
+          "paired_percentile_ci": [
+            4.210965087034371,
+            20.220163716591887
+          ]
+        },
+        "recall": {
+          "bonferroni_percentile_ci": [
+            -30.346835567077264,
+            -5.539600768799987
+          ],
+          "difference_percentage_points": -17.4520980949475,
+          "paired_percentile_ci": [
+            -26.96505910463463,
+            -8.214160377709216
+          ]
+        }
+      }
+    },
+    {
+      "color": "#009E73",
+      "key": "orthohmm_phylogeny_satellite_v2",
+      "label": "OrthoHMM satellite_v2",
+      "marker": "s",
+      "orthobench": {
+        "f_score": 74.10607351873405,
+        "precision": 81.77045380181866,
+        "recall": 67.75533630827974
+      },
+      "qfo": {
+        "EC": {
+          "x": 97159,
+          "y": 0.96919541
+        },
+        "FAS": {
+          "x": 5483453.0,
+          "y": 0.7619389407434497
+        },
+        "GO": {
+          "x": 81001,
+          "y": 0.49012048
+        },
+        "SwissTrees F": {
+          "x": 0.67932201,
+          "y": 0.94942129
+        },
+        "TreeFam-A F": {
+          "x": 0.41089882,
+          "y": 0.96007941
+        },
+        "VGNC F": {
+          "x": 0.8196289796941589,
+          "y": 0.9996432939258051
+        }
+      },
+      "qfo_status": "metrics_available",
+      "three_kingdoms_f1": 0.872133159469203,
+      "uncertainty": {
+        "f_score": {
+          "bonferroni_percentile_ci": [
+            -6.290356252167301,
+            10.626549791416775
+          ],
+          "difference_percentage_points": 1.369593514512374,
+          "paired_percentile_ci": [
+            -4.503694161614439,
+            7.916757835407342
+          ]
+        },
+        "precision": {
+          "bonferroni_percentile_ci": [
+            2.8023384670841636,
+            28.66332565414097
+          ],
+          "difference_percentage_points": 15.70535080574075,
+          "paired_percentile_ci": [
+            5.98290624161023,
+            25.104626446282573
+          ]
+        },
+        "recall": {
+          "bonferroni_percentile_ci": [
+            -25.247940891722266,
+            -2.241727359912702
+          ],
+          "difference_percentage_points": -13.151240322849176,
+          "paired_percentile_ci": [
+            -22.06428193082825,
+            -4.565683173656999
+          ]
+        }
+      }
+    },
+    {
+      "color": "#D55E00",
+      "key": "orthofinder_3_1_5_full",
+      "label": "OrthoFinder 3.1.5 full",
+      "marker": "^",
+      "orthobench": {
+        "f_score": 72.73648000422168,
+        "precision": 66.06510299607791,
+        "recall": 80.90657663112891
+      },
+      "qfo": {
+        "EC": {
+          "x": 160580,
+          "y": 0.94198234
+        },
+        "FAS": {
+          "x": 13403651.0,
+          "y": 0.6920006330234186
+        },
+        "GO": {
+          "x": 166264,
+          "y": 0.46816557
+        },
+        "SwissTrees F": {
+          "x": 0.78799056,
+          "y": 0.94446258
+        },
+        "TreeFam-A F": {
+          "x": 0.62058513,
+          "y": 0.92522597
+        },
+        "VGNC F": {
+          "x": 0.9822010528954626,
+          "y": 0.9943321208019626
+        }
+      },
+      "qfo_status": "metrics_available",
+      "three_kingdoms_f1": 0.9885816480946484,
+      "uncertainty": null
+    },
+    {
+      "color": "#E69F00",
+      "key": "orthofinder_3_1_5_sequence_only",
+      "label": "OrthoFinder 3.1.5 sequence",
+      "marker": "v",
+      "orthobench": {
+        "f_score": 58.705963184,
+        "precision": 45.706162743,
+        "recall": 82.039827068
+      },
+      "qfo": {
+        "EC": {
+          "x": 1671562,
+          "y": 0.75339446
+        },
+        "FAS": {
+          "x": 162991772.0,
+          "y": 0.5579413821474536
+        },
+        "GO": {
+          "x": 2022806,
+          "y": 0.4076002
+        },
+        "SwissTrees F": {
+          "x": 0.83992472,
+          "y": 0.5993148
+        },
+        "TreeFam-A F": {
+          "x": 0.81897304,
+          "y": 0.62820151
+        },
+        "VGNC F": {
+          "x": 0.9953622461769868,
+          "y": 0.07546876930436187
+        }
+      },
+      "qfo_status": "metrics_available",
+      "three_kingdoms_f1": 0.9894507588647655,
+      "uncertainty": null
+    },
+    {
+      "color": "#CC79A7",
+      "key": "sonicparanoid_2_0_9",
+      "label": "SonicParanoid 2.0.9",
+      "marker": "D",
+      "orthobench": {
+        "f_score": 46.75760912,
+        "precision": 36.535179568,
+        "recall": 64.92280907
+      },
+      "qfo": {
+        "EC": {
+          "x": 245612,
+          "y": 0.87166642
+        },
+        "FAS": {
+          "x": 14975235.0,
+          "y": 0.7338243932523304
+        },
+        "GO": {
+          "x": 198243,
+          "y": 0.45441311
+        },
+        "SwissTrees F": {
+          "x": 0.70425748,
+          "y": 0.86676555
+        },
+        "TreeFam-A F": {
+          "x": 0.61243283,
+          "y": 0.91432392
+        },
+        "VGNC F": {
+          "x": 0.9714631904403777,
+          "y": 0.9946951871657754
+        }
+      },
+      "qfo_status": "metrics_available",
+      "three_kingdoms_f1": 0.9907944084555063,
+      "uncertainty": null
+    },
+    {
+      "color": "#6B6B6B",
+      "key": "proteinortho_6_3_6",
+      "label": "ProteinOrtho 6.3.6",
+      "marker": "P",
+      "orthobench": {
+        "f_score": 45.057346674,
+        "precision": 97.056207735,
+        "recall": 29.338788906
+      },
+      "qfo": {
+        "EC": {
+          "x": 143174,
+          "y": 0.96283793
+        },
+        "FAS": {
+          "x": 4563756.0,
+          "y": 0.8113319140954288
+        },
+        "GO": {
+          "x": 89310,
+          "y": 0.4859624
+        },
+        "SwissTrees F": {
+          "x": 0.55129048,
+          "y": 0.95049791
+        },
+        "TreeFam-A F": {
+          "x": 0.44532219,
+          "y": 0.94872798
+        },
+        "VGNC F": {
+          "x": 0.9298905322971505,
+          "y": 0.9804405286343613
+        }
+      },
+      "qfo_status": "metrics_available",
+      "three_kingdoms_f1": 0.9304626127436718,
+      "uncertainty": null
+    },
+    {
+      "color": "#5647A6",
+      "key": "fastoma_0_3_5",
+      "label": "FastOMA 0.3.5 (supplied tree)",
+      "marker": "X",
+      "orthobench": {
+        "f_score": 30.906942172,
+        "precision": 93.631476193,
+        "recall": 18.508163621
+      },
+      "qfo": {
+        "EC": {
+          "x": 176821,
+          "y": 0.91669166
+        },
+        "FAS": {
+          "x": 15277489.0,
+          "y": 0.651282904642409
+        },
+        "GO": {
+          "x": 181535,
+          "y": 0.43448034
+        },
+        "SwissTrees F": {
+          "x": 0.65804087,
+          "y": 0.90702561
+        },
+        "TreeFam-A F": {
+          "x": 0.49237588,
+          "y": 0.87714777
+        },
+        "VGNC F": {
+          "x": 0.9105456672516086,
+          "y": 0.9957052131402202
+        }
+      },
+      "qfo_status": "metrics_available",
+      "three_kingdoms_f1": 0.8616551830920491,
+      "uncertainty": null
+    },
+    {
+      "color": "#111111",
+      "key": "orthomcl_1_4",
+      "label": "OrthoMCL 1.4",
+      "marker": "*",
+      "orthobench": {
+        "f_score": 55.065342292,
+        "precision": 59.078055333,
+        "recall": 51.563064181
+      },
+      "qfo": {
+        "EC": {
+          "x": 221299,
+          "y": 0.92214002
+        },
+        "FAS": {
+          "x": 14095133.0,
+          "y": 0.7292984477333277
+        },
+        "GO": {
+          "x": 176711,
+          "y": 0.4630188
+        },
+        "SwissTrees F": {
+          "x": 0.65495899,
+          "y": 0.90052486
+        },
+        "TreeFam-A F": {
+          "x": 0.61755385,
+          "y": 0.85545235
+        },
+        "VGNC F": {
+          "x": 0.9826188685551934,
+          "y": 0.47559150657229526
+        }
+      },
+      "qfo_status": "metrics_available",
+      "three_kingdoms_f1": 0.9889293818331844,
+      "uncertainty": null
+    }
+  ],
+  "publication_ready": false,
+  "schema_version": 1,
+  "source": {
+    "bytes": 10357,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_publication_accuracy.py",
+    "sha256": "92322aa7f10c3c3e96af7813b1111ae60e5903b87df04345e7cc822107533380"
+  }
+}

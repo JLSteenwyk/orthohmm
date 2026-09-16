@@ -74,6 +74,37 @@ def validate_three_score(score):
             raise ValueError(f"Three Kingdoms {key} disagrees with counts")
 
 
+def verify_final_group_workflow(directory):
+    """Require successful conversion/scoring and verify both submitted pair files."""
+    manifest = directory / "result.sha256"
+    if not manifest.is_file():
+        return None
+    metadata_path = directory / "run_metadata.tsv"
+    metadata = {}
+    for line in metadata_path.read_text().splitlines():
+        key, value = line.split("\t", 1)
+        if key in metadata:
+            raise ValueError(f"Duplicate workflow metadata: {key}")
+        metadata[key] = value
+    if metadata.get("exit_code") != "0" or not metadata.get("finished"):
+        raise ValueError("Final-group workflow did not finish successfully")
+    expected = {(directory / name).resolve() for name in ("pairs.tsv", "pairs.qfo.tsv")}
+    verified = {}
+    for line in manifest.read_text().splitlines():
+        digest, filename = line.split("  ", 1)
+        path = Path(filename).resolve()
+        if path not in expected or str(path) in verified:
+            raise ValueError(f"Unexpected or duplicate final-group artifact: {path}")
+        provenance = file_provenance(path)
+        if provenance["sha256"] != digest:
+            raise ValueError(f"Final-group artifact checksum mismatch: {path}")
+        verified[str(path)] = provenance
+    if set(map(Path, verified)) != expected:
+        raise ValueError("Incomplete final-group artifact manifest")
+    return {"metadata": metadata, "metadata_source": file_provenance(metadata_path),
+            "manifest": file_provenance(manifest), "artifacts": list(verified.values())}
+
+
 def build_report(root):
     results = root / "benchmark_tools/results"
     comparison_path = results / "external_tool_comparison_20260904.json"
@@ -98,8 +129,12 @@ def build_report(root):
         validate_three_score(three_index[key]["score"])
         qfo = qfo_record(root / "qfo_benchmark/scoring" / qfo_dir)
         qfo["output_semantics"] = semantics
-        if key == "orthomcl_1_4" and not (root / "qfo_benchmark/results" / qfo_dir / "result.sha256").exists():
-            qfo["status"] = "awaiting_workflow_completion"
+        if key == "orthomcl_1_4":
+            completion = verify_final_group_workflow(root / "qfo_benchmark/results" / qfo_dir)
+            if completion is None:
+                qfo["status"] = "awaiting_workflow_completion"
+            else:
+                qfo["workflow_completion"] = completion
         records.append({"key": key, "method": label, "qfo": qfo,
                         "orthobench": ob, "three_kingdoms": three_index[key]})
     diagnostic = qfo_record(root / "qfo_benchmark/scoring/orthomcl_1_4")

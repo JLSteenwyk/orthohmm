@@ -1,8 +1,49 @@
 import json
+import hashlib
 
 import pytest
 
 from benchmark_tools.publication_comparison import METRICS, qfo_record, unique_index, validate_three_score
+from benchmark_tools.publication_comparison import verify_final_group_workflow
+
+
+def completed_workflow(directory):
+    lines = []
+    for name in ("pairs.tsv", "pairs.qfo.tsv"):
+        path = directory / name
+        path.write_text("a\tb\n")
+        lines.append(f"{hashlib.sha256(path.read_bytes()).hexdigest()}  {path}\n")
+    (directory / "result.sha256").write_text("".join(lines))
+    (directory / "run_metadata.tsv").write_text("exit_code\t0\nfinished\t2026-09-16T15:22:00Z\n")
+
+
+def test_workflow_pending_without_manifest(tmp_path):
+    assert verify_final_group_workflow(tmp_path) is None
+
+
+def test_workflow_checks_actual_artifacts(tmp_path):
+    completed_workflow(tmp_path)
+    assert len(verify_final_group_workflow(tmp_path)["artifacts"]) == 2
+    (tmp_path / "pairs.tsv").write_text("changed")
+    with pytest.raises(ValueError, match="checksum mismatch"):
+        verify_final_group_workflow(tmp_path)
+
+
+@pytest.mark.parametrize("mutation", ["failure", "unfinished", "duplicate", "missing"])
+def test_workflow_rejects_invalid_completion(tmp_path, mutation):
+    completed_workflow(tmp_path)
+    metadata = tmp_path / "run_metadata.tsv"
+    manifest = tmp_path / "result.sha256"
+    if mutation == "failure":
+        metadata.write_text("exit_code\t1\nfinished\tnow\n")
+    elif mutation == "unfinished":
+        metadata.write_text("exit_code\t0\n")
+    elif mutation == "duplicate":
+        manifest.write_text(manifest.read_text() * 2)
+    else:
+        manifest.write_text(manifest.read_text().splitlines()[0] + "\n")
+    with pytest.raises(ValueError):
+        verify_final_group_workflow(tmp_path)
 
 
 def test_duplicate_methods_rejected():
