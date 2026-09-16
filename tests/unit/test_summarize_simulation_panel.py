@@ -3,7 +3,7 @@ import copy
 import numpy as np
 import pytest
 
-from benchmark_tools.summarize_simulation_panel import CONDITIONS, METHODS, SEEDS, paired_seed_summary, summarize
+from benchmark_tools.summarize_simulation_panel import CONDITIONS, METHODS, PANELS, SEEDS, paired_seed_summary, summarize
 
 
 def score(tp=1, fp=0, fn=0):
@@ -79,3 +79,25 @@ def test_too_few_seeds_do_not_produce_spurious_intervals():
     one = paired_seed_summary({1: score()}, {1: score()})
     assert one["status"] == "insufficient_seeds"
     assert "paired_95_percent_ci" not in one["metrics"]["f1"]
+
+
+def test_variable_panel_uses_frozen_seeds_without_mixing_panels():
+    rows = records()
+    for row in rows:
+        row["seed"] += 100
+    result = summarize(rows, "variable_length_v2")
+    assert result["bootstrap"]["seed"] == 20261130
+    assert result["conditions"]["baseline"]["methods"][METHODS[0]]["complete_seeds"] == list(PANELS["variable_length_v2"][0])
+    with pytest.raises(ValueError, match="out-of-protocol"):
+        summarize(rows)
+    with pytest.raises(ValueError, match="out-of-protocol"):
+        summarize(records(), "variable_length_v2")
+
+
+def test_variable_bootstrap_matches_independent_draws():
+    a, b = {1: score(1, 1), 2: score(100)}, {1: score(1), 2: score(100)}
+    result = paired_seed_summary(a, b, 20261130)
+    rng = np.random.Generator(np.random.PCG64(20261130))
+    weights = rng.multinomial(2, [.5, .5], size=20000)
+    draws = weights[:, 0] * 100 * (2 / 3 - 1) / 2
+    assert result["metrics"]["f1"]["paired_95_percent_ci"] == pytest.approx(np.quantile(draws, [.025, .975]))

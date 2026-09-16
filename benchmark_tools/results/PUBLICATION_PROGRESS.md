@@ -966,3 +966,36 @@ to the new seed/bootstrap constants without pooling panels. The queued YGOB
 validation and OrthoBench replay, HMM/phylogeny ablations, other robustness
 and efficiency experiments, biological application and final publication
 package remain outstanding.
+
+### Terminal result assembly and panel-specific inference (2026-09-16)
+
+Added `assemble_simulation_results.py`. It requires all 70 scheduler tasks
+to be uniquely terminal before any panel scoring, binds execution evidence
+to raw job/task IDs and pinned executor sources, revalidates generated inputs
+and paired histories, and checks native method completion. Frozen conversion
+and pair-scoring source hashes are verified separately from the admission
+gate code. Resource logs and prediction artifacts retain checksums.
+
+Only explicitly identified native failures (missing completion or nonfinite
+weights in verified output) become native-failure records. File integrity,
+command, version and input mismatches raise errors instead of being silently
+classified as poor method performance. Execution/interruption failures have
+distinct reasons; no failed method receives a score. The OrthoFinder MCL
+checkpoint inherits the parent's native admission requirement and has no
+independent timing. Successful predictions are scored across the complete
+input universe, retaining cross-family false positives.
+
+Extended seed aggregation with explicit fixed_length_v1 and variable_length_v2
+protocol choices. Each retains its ten seeds, separate results and fixed
+bootstrap seed (20261031 or 20261130); mixed/wrong-panel seeds are rejected.
+The old default and paired statistic remain unchanged. Eight new tests cover
+terminal-state gating, failure-versus-integrity distinctions, source/job/input
+binding, cross-family false positives, and the new bootstrap specification.
+All 25 focused tests and **626 unit tests (23.84s)** passed.
+
+Live full-panel CLI preflight correctly refused unfinished task 20957_63
+without writing results. Label-blind admission checks on completed task
+20957_0 verified scheduler/source/input provenance: both OrthoHMM runs were
+admitted and both OrthoFinder views were rejected for missing native
+completion despite exit zero. No accuracy was computed in this check.
+Commit/pin the assembler before full-panel scoring once the jobs finish.

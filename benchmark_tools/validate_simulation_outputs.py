@@ -11,6 +11,10 @@ from benchmark_tools.simulation_method_outputs import unique_path
 from benchmark_tools.verify_ygob_validation import verify_records
 
 
+class NativeOutputFailure(ValueError):
+    """Verified process output establishes a scientific/native failure."""
+
+
 def verify_process(config, record):
     if record["status"] != "process_succeeded" or record.get("exit_code") != 0:
         raise ValueError("Method process did not succeed")
@@ -50,8 +54,6 @@ def validate_orthohmm(method, config, record, inputs, manifest):
     metrics_path = Path(config["metrics"])
     metrics = json.loads(metrics_path.read_text())
     harness = metrics["harness"]
-    if metrics.get("status") != "complete" or harness.get("exit_code") != 0:
-        raise ValueError("OrthoHMM native completion not confirmed")
     if harness.get("git_commit") != manifest["core_commit"]:
         raise ValueError("OrthoHMM used wrong source revision")
     expected = input_signature(inputs)
@@ -66,6 +68,8 @@ def validate_orthohmm(method, config, record, inputs, manifest):
         raise ValueError("OrthoHMM native source inventory mismatch")
     for item in manifest["core_sources"]:
         verify_file(Path(item["absolute_path"]), item)
+    if metrics.get("status") != "complete" or harness.get("exit_code") != 0:
+        raise NativeOutputFailure("OrthoHMM native completion not confirmed")
     outputs = verify_records(harness["output_manifest"], Path(config["output"]))
     relative = ("orthohmm_orthogroups.txt" if method == "orthohmm_high_sensitivity" else
                 "orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv")
@@ -85,10 +89,8 @@ def validate_orthofinder(config, record, inputs):
     starts = [line for line in lines if "Started OrthoFinder version " in line]
     ends = [line for line in lines if line.endswith(" : OrthoFinder run completed")]
     commands = [line.removeprefix("Command Line: ") for line in lines if line.startswith("Command Line: ")]
-    if len(starts) != 1 or not starts[0].endswith("Started OrthoFinder version 3.1.5") or len(ends) != 1:
+    if len(starts) != 1 or not starts[0].endswith("Started OrthoFinder version 3.1.5"):
         raise ValueError("OrthoFinder 3.1.5 native completion not confirmed")
-    if lines.index(ends[0]) <= lines.index(starts[0]):
-        raise ValueError("OrthoFinder completion precedes start")
     if len(commands) != 1 or shlex.split(commands[0]) != config["argv"]:
         raise ValueError("OrthoFinder native command mismatch")
     copied = list(Path(config["copy_inputs_to"]).glob("*.fasta"))
@@ -96,6 +98,10 @@ def validate_orthofinder(config, record, inputs):
         raise ValueError("OrthoFinder input copies differ")
     if log.resolve() not in inventory:
         raise ValueError("OrthoFinder completion log not inventoried")
+    if not ends:
+        raise NativeOutputFailure("OrthoFinder 3.1.5 native completion not confirmed")
+    if len(ends) != 1 or lines.index(ends[0]) <= lines.index(starts[0]):
+        raise ValueError("OrthoFinder completion marker is ambiguous or precedes start")
     graph = unique_path(root, "**/OrthoFinder_graph.txt")
     validate_graph_weights(graph)
     return {"completion": "native version, command and completion marker verified",
@@ -113,7 +119,9 @@ def validate_graph_weights(path):
                 if ":" not in token:
                     continue
                 index, value = token.split(":", 1)
-                if not index.isdigit() or not math.isfinite(float(value)):
-                    raise ValueError("Nonfinite or malformed OrthoFinder graph weight")
+                if not index.isdigit():
+                    raise ValueError("Malformed OrthoFinder graph index")
+                if not math.isfinite(float(value)):
+                    raise NativeOutputFailure("Nonfinite OrthoFinder graph weight")
                 entries += 1
     return entries
