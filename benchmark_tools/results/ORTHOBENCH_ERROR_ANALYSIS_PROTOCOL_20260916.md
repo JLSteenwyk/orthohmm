@@ -101,3 +101,27 @@ residue sequences, gaps or other symbols were observed. No family-stratum
 outcomes, biological error explanations or accuracy effects are inferred
 from these counts. Reference-alignment admission and family-feature joins
 remain to be completed before the prespecified outcome analysis.
+
+## Reference Alignment Execution Detail
+
+Input audit found1,944 distinct genes in70 RefOGs (largest family125 members),
+including102 X residues and34 stop symbols. All legacy alignments have the
+expected genes and equal row lengths. Sixty-nine families preserve original
+ungapped sequences exactly; RefOG023 differs only by removal of23 stop symbols
+from ENSP00000487059 and11 from ENSP00000486295. Legacy executable binary
+identity is not proven by the recorded MAFFT path; preserve those alignments
+and rebuild a separate set for this analysis.
+
+Frozen normalization: uppercase, explicitly remove stop symbols, preserve X,
+reject any other unexpected noncanonical input letter or gap. Input FASTAs
+used for inference remain unchanged. Run MAFFT7.525 --amino --auto --thread1,
+eight independent reference families concurrently, with explicit MAFFT_BINARIES
+and before/after inventory of the entry script and companion executable files.
+Retain input, alignment, stderr, command and status per family. Validate exact
+gene inventory, equal alignment lengths and normalized ungapped sequences.
+
+Compute identity only over positions canonical in both sequences. A pair
+without such positions makes the family's mean identity missing rather than
+being dropped or assigned zero. Retain every family, including failures;
+do not assemble scored strata from a partial successful panel. These choices
+are frozen before the new family features are joined to method errors.

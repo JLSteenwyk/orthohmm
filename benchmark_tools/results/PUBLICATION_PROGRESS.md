@@ -2751,3 +2751,24 @@ skips incomparable pairs. Do not reuse those summary values; current protocol
 requires canonical-only comparisons and explicit missingness plus sequence/
 provenance admission or a pinned rebuild. Family strata and outcome scoring
 remain pending. QfO21307 remains running; no repeatability outcome claimed.
+
+### Explicit reference-alignment preparation (2026-09-16)
+
+Previous turn made progress: frozen error-analysis protocol and verified
+sequence-feature inventory. Reread full objective;QfO21307 confirmed live.
+Audited all70 legacy alignments against1,944 reference genes in the frozen
+proteomes. Gene inventories/row lengths pass throughout;69 families preserve
+ungapped residues exactly. RefOG023 matches only after removing23/11 stop
+symbols from ENSP00000487059/ENSP00000486295. All34 reference stop symbols
+occur in those two records;102 X residues also occur in the reference inputs.
+
+Prepared a separate pinned MAFFT7.525 rebuild, leaving legacy outputs intact.
+Explicitly remove stops, preserve X, force amino-acid mode, single thread per
+family/eight concurrent families. Snapshot the entry script and libexec
+companion files before/after execution; set the binary directory explicitly.
+Validate normalized sequence preservation and calculate canonical-only mean
+pairwise identity, with missing family values for any incomparable pair.
+Per-family commands/status/failures are retained; no accuracy scoring occurs.
+Fifteen focused tests passed. Full-suite and frozen submission details follow.
+
+Full unit suite **1015 passed in25.48s** before freezing the alignment executor.
