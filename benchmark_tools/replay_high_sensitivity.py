@@ -36,8 +36,15 @@ from orthohmm.accuracy import (
 )
 from orthohmm.externals import execute_leiden
 from orthohmm.files import fetch_fasta_files
-from orthohmm.refinement import refine_cluster_indices
+from orthohmm.refinement import refine_cluster_indices, DEFAULT_COPY_SPLIT_MIN_DATASET_SPECIES
 from orthohmm.search.profile_expansion import expand_profiles
+
+
+def production_refinement_hits(queries, targets, scores, gene_to_species):
+    """Match production's broad-panel copy-only refinement input branch."""
+    if len(np.unique(gene_to_species)) >= DEFAULT_COPY_SPLIT_MIN_DATASET_SPECIES:
+        return [], [], []
+    return queries, targets, scores
 
 
 def load_hits(path: Path):
@@ -200,11 +207,14 @@ def main(argv=None) -> int:
     )
 
     stage_started = time.perf_counter()
+    refinement_queries, refinement_targets, refinement_scores = production_refinement_hits(
+        queries, targets, scores, gene_to_species
+    )
     refined_clusters = refine_cluster_indices(
         multipass_clusters,
-        queries,
-        targets,
-        scores,
+        refinement_queries,
+        refinement_targets,
+        refinement_scores,
         multipass_edges.sources,
         multipass_edges.targets,
         gene_to_species,
@@ -285,9 +295,9 @@ def main(argv=None) -> int:
             shutil.copyfile(clustered_path, profile_path)
             refined_profile_clusters = refine_cluster_indices(
                 profile_clusters,
-                queries,
-                targets,
-                scores,
+                refinement_queries,
+                refinement_targets,
+                refinement_scores,
                 profile_edges.sources,
                 profile_edges.targets,
                 gene_to_species,
@@ -356,6 +366,7 @@ def main(argv=None) -> int:
             "genes": len(gene_names),
             "species": len(species_names),
             "significant_hits": len(scores),
+            "refinement_directed_hits": len(refinement_scores),
             "rbnh_edges": len(rbnh_edges),
             "singleton_assignment_edges": len(singleton_edges),
             "multipass_edges": len(multipass_edges),

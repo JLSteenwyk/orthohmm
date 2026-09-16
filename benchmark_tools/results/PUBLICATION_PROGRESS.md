@@ -1758,3 +1758,29 @@ explicitly retained despite no excluded scientific cells. YGOB remains live
 and its outcomes uninspected. QfO factorial, matched search/unconstrained
 controls, error tracing, robustness/scaling, biological application and the
 remaining publication package are still required. Full objective remains active.
+
+## QfO Replay Refinement Prerequisite
+
+Previous turn completed the full OrthoBench factorial. Read the objective and
+confirmed YGOB 21192 remains live. Began QfO ablation preparation by comparing
+cached replay refinement with production `_refine_cluster_file`. Production
+omits directed search-hit arrays at 50 or more dataset species, retaining
+weighted graph edges for broad copy-only refinement. The replay supplied
+directed arrays regardless of species count in both refinement stages.
+
+Corrected the development replay to use the production threshold constant
+and unique species count, preserving original arrays below the threshold and
+empty lists above it. Both multipass and post-profile refinement use the
+same selected arrays; initial HMM search, edge construction and profile
+search inputs remain unchanged. Reports now record `refinement_directed_hits`.
+The completed 12-species OrthoBench branch is unchanged, and its pinned
+executor/output artifacts were not edited.
+
+Six added tests cover 12/49/50/51/100 species with sparse repeated labels,
+array identity below threshold, and many genes from only one species. Existing
+replay CLI tests remain present. Full **763-test unit suite passes** (23.95s)
+and scoped whitespace checks pass. This fixes a necessary replay mismatch;
+it is not proof of QfO production equivalence. Next: inventory and validate
+the actual QfO normalized-hit checkpoint, freeze a corrected replay launcher,
+reproduce production outputs before preparing the QfO factorial. No QfO
+ablation or held-out validation accuracy was inspected this turn.
