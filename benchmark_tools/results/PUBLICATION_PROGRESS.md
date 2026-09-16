@@ -2232,3 +2232,32 @@ Latest scheduler:21293 and21292 PENDING Dependency;21291 RUNNING9:05;
 21290 RUNNING17:04;21288 RUNNING41:10. No new completed inference or accuracy
 outcome is claimed. After completion, validate native provenance, compare
 hit coverage/sensitivity and score both controls against frozen p0_c0_r0.
+
+### Unconstrained native admission implemented (2026-09-16)
+
+Previous turn was progress: dependent conversion/graph execution chain.
+Reread the objective and confirmed the five job handles in their expected
+running/dependency states. Added `validate_unconstrained_control.py`, requiring
+terminal-success21290 and its exact executor d52add73035ebe3472e3e1cb95c38a9421b09dee,
+parent/treatment provenance, source/input/environment/tool inventories and
+all execution artifact hashes before native admission. It does not accept
+the failed21289 attempt or any already-scored/mixed-method status.
+
+Extracted the existing native cell validator for reuse, preserving the
+factorial checks and adding an explicit diagnostic policy branch. The branch
+requires acknowledged unconstrained mode, no membership filter/constraint
+accounting, the same frozen candidate input and rules, complete gene partition,
+inferred species-tree coverage/finite branches, and recorded tool/output
+provenance. Original constrained cells still require their own constraints.
+
+Twenty-one focused native/status tests pass, including nine new acceptance/
+rejection cases. Revalidated the actual completed constrained p1_c1_r1 cell
+with the refactored validator: successful, recorded at
+`orthobench_p1c1_native_recheck_20260916.json`; no accuracy recomputed. Full
+unit suite **850 passed in33.91s**. The still-running diagnostic has not been
+admitted or scored. Its validation CLI is ready for terminal completion.
+
+Latest jobs:21288 RUNNING44:58,21290 RUNNING20:52,21291 RUNNING12:53;
+21292 and21293 remain dependency-pending. Eight sequence-search targets are
+complete and target08 is running. Preserve all active outputs and wait for
+authoritative terminal evidence before conversion/scoring claims.

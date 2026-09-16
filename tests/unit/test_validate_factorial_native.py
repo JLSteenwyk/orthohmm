@@ -51,3 +51,23 @@ def test_rejects_constraints_in_unexpanded_arm():
     metrics, native, cell, _ = fixture(False)
     with pytest.raises(ValueError):
         check_native_metadata(metrics, native, cell, 1)
+
+
+def test_explicit_unconstrained_diagnostic_requires_no_filter():
+    metrics, native, cell, _ = fixture(True)
+    cell["omitted_membership_constraints"] = "/original/constraints.json"
+    metrics["parameters"]["explicit_unconstrained_ablation"] = True
+    metrics["parameters"]["satellite_membership_policy"] = "unconstrained"
+    native["membership_reconciliation"] = None
+    check_native_metadata(metrics, native, cell, 0)
+    native["membership_reconciliation"] = {"policy": "high_confidence_pair"}
+    with pytest.raises(ValueError):
+        check_native_metadata(metrics, native, cell, 0)
+
+
+def test_unconstrained_diagnostic_rejects_unacknowledged_mode():
+    metrics, native, cell, _ = fixture(False)
+    cell["candidate_expansion"] = True
+    cell["omitted_membership_constraints"] = "/original/constraints.json"
+    with pytest.raises(ValueError, match="parameters"):
+        check_native_metadata(metrics, native, cell, 0)

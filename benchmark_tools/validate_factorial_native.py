@@ -17,9 +17,10 @@ from benchmark_tools.validate_factorial_partition import validate_partition
 
 
 def check_native_metadata(metrics, native, cell, constraint_count):
-    expanded = cell["candidate_expansion"]
+    explicit = bool(cell.get("omitted_membership_constraints"))
+    expanded = cell["candidate_expansion"] and not explicit
     expected = {"aligner": "mafft", "checkpoint_source": None, "cpu": 32,
-                "explicit_unconstrained_ablation": False, "pair_orthology_rule": "positive_paralogy",
+                "explicit_unconstrained_ablation": explicit, "pair_orthology_rule": "positive_paralogy",
                 "root_duplication_rule": "species_overlap", "species_tree": None,
                 "species_tree_mode": "infer", "species_tree_rooting": "min_variance",
                 "tree_builder": "FastTree",
@@ -51,6 +52,11 @@ def validate(root, index):
     prepared = read_frozen(results / "orthobench_factorial_prepared_20260916.json", PREPARED_HASH)
     environment = read_frozen(results / "publication_variable_native_methods_20260916.json", ENVIRONMENT_HASH)
     cell, output, launcher = select_cell(prepared, index)
+    return validate_native_cell(prepared, environment, cell, output, launcher, integrity)
+
+
+def validate_native_cell(prepared, environment, cell, output, launcher, integrity):
+    """Native semantics shared by factorial cells and the isolated diagnostic."""
     target = output / "cells" / cell["label"]
     native_dir = target / "orthohmm_phylogeny"
     metrics_path = output / "cells" / (cell["label"] + ".json")
@@ -61,7 +67,7 @@ def validate(root, index):
     summary = json.loads(summary_path.read_text())
     arm = prepared["candidate_arms"][f"p{int(cell['profile_expansion'])}_c{int(cell['candidate_expansion'])}"]
     candidate = Path(arm["candidate_partition"]["path"])
-    constraint = arm.get("membership_constraints")
+    constraint = None if cell.get("omitted_membership_constraints") else arm.get("membership_constraints")
     constraints = load_membership_constraints(Path(constraint["path"]), candidate) if constraint else []
     check_native_metadata(metrics, native, cell, len(constraints))
     if metrics["git"] != {"commit": "b66225dc5fc355702575aebe34b644916894f236", "dirty": False}:
