@@ -2644,3 +2644,18 @@ Full unit suite and frozen submission details follow.
 
 Full unit suite **970 passed in26.52s**. Prepared single-CPU16GiB/one-hour
 scoring job with no output overwrite and frozen executor worktree.
+
+Scoring executor frozen**1891846** at
+`benchmarks/work/publication_ob_tree_scoring_v1`; submitted**21306**,
+confirmed RUNNING1:23. Output `benchmarks/results/ob_species_tree_robustness_scoring_v1`.
+
+QfO capture21305 completed0:0 in9:42. Independently reverified array hashes,
+gene-name ordering, source/input records and complete partition comparison.
+Identical24,148,515-edge RBNH arrays yield a different first partition:
+349,950 groups versus diagnostic349,898 (4,427/4,479 unmatched groups).
+Captured singleton edges1,369,532 differ from historical/diagnostic1,361,622
+and earlier replay1,360,934. This localizes observed divergence to initial
+clustering execution, before profiles; specific cause remains unproven.
+Preserved capture/comparison JSONs and updated drift diagnosis. Next bounded
+saved-graph worker repeats should record native binary/runtime identity;
+no best-repeat selection or full-profile restart justified yet.

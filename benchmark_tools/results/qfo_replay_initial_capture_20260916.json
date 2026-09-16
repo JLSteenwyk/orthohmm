@@ -1,0 +1,115 @@
+{
+  "accuracy_evaluated": false,
+  "cluster_source": {
+    "bytes": 10166,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_replay_native_v1/orthohmm/externals.py",
+    "sha256": "5304b4190b01a53c7c4e3235f9d1df9e7eff1f01d09633d07750103487268115"
+  },
+  "command": [
+    "/home/bizon/anaconda3/bin/python",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_replay_native_v1/benchmark_tools/replay_high_sensitivity.py",
+    "--accuracy-checkpoint",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthohmm_high_sensitivity_isolated/output/orthohmm_working_res/high_sensitivity_checkpoint",
+    "--checkpoint-sha256",
+    "b90c787f050a087adeeb81b1cace18c9cbb30e1724926a40a1df6d7e49bd549c",
+    "--fasta-directory",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input",
+    "--output-directory",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_replay_initial_capture_v1/replay",
+    "--json",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_replay_initial_capture_v1/replay.json",
+    "--cpu",
+    "32",
+    "--matrix",
+    "BLOSUM62",
+    "--cpm-resolution",
+    "0.1",
+    "--leiden-seed",
+    "4",
+    "--profile-iterations",
+    "1",
+    "--profile-min-species",
+    "1"
+  ],
+  "multipass_arrays": {
+    "sources": {
+      "dtype": "int32",
+      "sha256": "8ac881b5a6963cb6c26b2f871d15d885dca88938e4ed2b4b91f9d006cebfd611",
+      "shape": [
+        25201037
+      ]
+    },
+    "targets": {
+      "dtype": "int32",
+      "sha256": "f9be6a6ae9259996a6f4b8cbb95e2201665fa710182086e7a35bcb3d6bf9562f",
+      "shape": [
+        25201037
+      ]
+    },
+    "weights": {
+      "dtype": "float64",
+      "sha256": "2fb7dfdc63a79aa1c533cfdd7b55ec4eabca4ed65a19494c6faae3a019dba8d5",
+      "shape": [
+        25201037
+      ]
+    }
+  },
+  "rbnh_arrays": {
+    "sources": {
+      "dtype": "int32",
+      "sha256": "166f6e89fb1fee557250d04597b24ce5c3f33cd22f26392b9e9ab2582188d437",
+      "shape": [
+        24148515
+      ]
+    },
+    "targets": {
+      "dtype": "int32",
+      "sha256": "5c83af551ba7f1af8b9c891883a3bbfa98fa38ca920f363896bd7613e368b571",
+      "shape": [
+        24148515
+      ]
+    },
+    "weights": {
+      "dtype": "float64",
+      "sha256": "d398011be5171a8b6d8f41eab6972a081de5e9419f69536ec69494c746b4ecbf",
+      "shape": [
+        24148515
+      ]
+    }
+  },
+  "replay_source": {
+    "bytes": 16533,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_replay_native_v1/benchmark_tools/replay_high_sensitivity.py",
+    "sha256": "1e220981be64cc75ba772968b9d53fbaea9638da4fff9c48071fec48d33bd6eb"
+  },
+  "singleton_arrays": {
+    "sources": {
+      "dtype": "int32",
+      "sha256": "7416456aef9037d9766126477abcc63c31450a458cec61052a0da8d16e660287",
+      "shape": [
+        1369532
+      ]
+    },
+    "targets": {
+      "dtype": "int32",
+      "sha256": "7c021926c67193b3b0170c6c7015ae423098103d6a3a4203aa5bae8a82356d8e",
+      "shape": [
+        1369532
+      ]
+    },
+    "weights": {
+      "dtype": "float64",
+      "sha256": "aae27de1de337b44544b921bb1d7307f66da51735e723794c2ebfcfe61858c0f",
+      "shape": [
+        1369532
+      ]
+    }
+  },
+  "singleton_edges": 1369532,
+  "singleton_source": {
+    "bytes": 14046,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_replay_native_v1/orthohmm/accuracy.py",
+    "sha256": "1a35944ab7fea859143f599b1262aa111272787f6f735b9acc37d299427f2ad6"
+  },
+  "status": "captured_before_second_clustering"
+}

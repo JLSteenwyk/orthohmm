@@ -86,3 +86,35 @@ instrument that exact replay entry point to capture these before proceeding
 to profiles, then compare them with the preserved deterministic diagnostic.
 Do not infer general Leiden nondeterminism, an HMM-profile defect, or full
 historical reproduction from the current evidence. No accuracy was scored.
+
+## Completed Exact-Entry Capture
+
+Job21305 completed0:0 in9:42 using frozen observerf6da2bc and launcher49ab.
+Before/after historical input, runtime and installed-package checks passed.
+Independent verification confirmed saved graph fingerprints, source/input
+records and complete partition comparison. Gene-name ordering is also
+byte-identical to the checkpoint (SHA256
+246d02da9635576f04e94a51dbec4093d33f3481bf7f761e03afb3a53d51a0d3).
+
+All three initial RBNH arrays are byte-identical to diagnostic21295, but the
+first clustering produced349,950 groups rather than349,898. There are4,427
+diagnostic-only and4,479 capture-only groups; all976,504 genes are retained.
+Capture partition SHA256:
+def06c421941743617dd3540a14f8d9dc4f19eeedd34c1eb0c86c92160500488.
+Its1,369,532 singleton edges differ from both diagnostic21295/historical
+1,361,622 and replay21288's1,360,934.
+
+This localizes the observed difference to the first clustering execution,
+despite identical recorded input graph arrays and gene order, before profiles
+or subsequent refinement. It does not yet identify the cause: the comparison
+spans different processes/jobs, and complete native-library binary and
+worker-environment identity across all historical runs is not established.
+The observer adds instrumentation and an early stop. Do not treat this as
+proof of a general algorithmic nondeterminism defect or a historical replay.
+
+Evidence: `qfo_replay_initial_capture_20260916.json` and
+`qfo_replay_initial_capture_comparison_20260916.json`.
+Next run bounded fresh-worker repeats directly on the preserved identical
+graph, recording worker inputs, command, native-library binaries and runtime
+settings. Keep all partitions; do not select the repeat closest to historical
+accuracy or restart full profile inference before this is understood.
