@@ -1,5 +1,34 @@
 # Publication Progress
 
+## QfO Admission and DGX Orthogroup Probe (2026-09-17)
+
+Re-read the full objective. The previous access-confirmation turn established
+current SSH availability but did not advance implementation; this continuation
+resumed the pending verification and reporting work.
+
+All four QfO21548 stages are now COMPLETED0:0; final stage elapsed29:28.
+Independent auditor21584 completed0:0 in39s, admitting all four stages.
+Copied the immutable admission report and generated all six scores, native
+coordinates, pair counts and four prespecified contrasts. See
+QFO_RECOVERED_STAGE_RESULTS_20260917.md. Profile-branch mean differences are
+-0.001282 before and -0.000877 after sequence-based refinement; these are
+descriptive, not significant effects or phylogenetic contrasts. Paired
+uncertainty remains outstanding. All58 focused reporting/admission/runtime
+tests pass, including7 new report tests. Historical rows are unchanged.
+
+DGX probe21633 failed before inference because Slurm spooled the script away
+from its helper. Fresh21634 with an explicit recipe directory completed0:0
+in26s. Its99 MCL groups match the retained x86 fixture exactly, covering645
+genes, and the graph passes finite-weight validation. Important correction:
+OrthoFinder3.1.5 -og ran phylogenetic processing too; it is NOT a sequence-only
+mode. Executable traces and limitations are in the DGX migration ledger.
+No timing or full-pipeline portability claim is admitted.
+
+FastME21627 failed18:0 after33:17 (incomplete HTTP transfer), then21632
+resumed the same partial archive only after terminal confirmation. Latest
+observed size1109963/1235934 bytes;21632 remains live. Full comparator toolchain,
+prospective timing freeze and27 scientific timing runs remain outstanding.
+
 ## Development Banding Fix Integrated (2026-09-17)
 
 Applied the isolated per-pair SIMD banding correction to development C

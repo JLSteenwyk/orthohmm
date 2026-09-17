@@ -1,0 +1,526 @@
+{
+  "admission_sha256": "89b683d0fc7fe9964ce5b6182832bb8eb28758fad3f6bbb4d706926143805956",
+  "contrasts": [
+    {
+      "candidate": "strict_profiles",
+      "differences": {
+        "EC": 0.00030945999999998364,
+        "FAS": -0.0021319532000858565,
+        "GO": -0.0007968700000000051,
+        "SwissTrees": -0.003706357804291849,
+        "TreeFam-A": -0.0002155840607852566,
+        "VGNC": -0.001149203569650037
+      },
+      "paired_uncertainty": "not_yet_established",
+      "reference": "multipass",
+      "secondary_mean_difference": -0.0012817514391354479
+    },
+    {
+      "candidate": "strict_profiles_refined",
+      "differences": {
+        "EC": 0.00017275999999999403,
+        "FAS": -0.0006192408013013795,
+        "GO": -0.0001864300000000152,
+        "SwissTrees": -0.0037161686237248137,
+        "TreeFam-A": -0.00039751725770598156,
+        "VGNC": -0.0005140842307170823
+      },
+      "paired_uncertainty": "not_yet_established",
+      "reference": "multipass_refined",
+      "secondary_mean_difference": -0.0008767801522416852
+    },
+    {
+      "candidate": "multipass_refined",
+      "differences": {
+        "EC": 0.047064439999999985,
+        "FAS": 0.0015457575033219761,
+        "GO": 0.027733500000000022,
+        "SwissTrees": -0.005328685849908643,
+        "TreeFam-A": -0.10235890162169314,
+        "VGNC": 0.3920018314743754
+      },
+      "paired_uncertainty": "not_yet_established",
+      "reference": "multipass",
+      "secondary_mean_difference": 0.06010965691768266
+    },
+    {
+      "candidate": "strict_profiles_refined",
+      "differences": {
+        "EC": 0.046927739999999996,
+        "FAS": 0.003058469902106453,
+        "GO": 0.028343940000000012,
+        "SwissTrees": -0.005338496669341608,
+        "TreeFam-A": -0.10254083481861387,
+        "VGNC": 0.39263695081330835
+      },
+      "paired_uncertainty": "not_yet_established",
+      "reference": "strict_profiles",
+      "secondary_mean_difference": 0.060514628204576426
+    }
+  ],
+  "limitations": [
+    "Development-exposed cluster-derived predictions, not native reconciled ortholog pairs.",
+    "Profile contrasts include downstream graph and singleton-assignment responses.",
+    "Refined means sequence-based post-clustering refinement, not phylogeny.",
+    "Six-metric mean is a project-defined secondary summary, not official F1.",
+    "Native standard errors do not supply paired difference confidence intervals.",
+    "No significance, independent generalization, superiority or controlled timing claim."
+  ],
+  "publication_ready": false,
+  "source_sha256": "c5014afc6c1813584422cde207fce232172e583da3b37d6da18a2b1afc7a617d",
+  "stages": [
+    {
+      "native_endpoints": {
+        "EC": {
+          "axes": {
+            "type": "2D-plot",
+            "x_axis": "NR_ORTHOLOGS",
+            "y_axis": "avg Schlicker"
+          },
+          "native_participant": {
+            "metric_x": 313327,
+            "metric_y": 0.88411008,
+            "participant_id": "ohmm_checked_v2_0",
+            "stderr_x": 0,
+            "stderr_y": 0.00078625048
+          },
+          "score": 0.88411008,
+          "score_semantics": "avg Schlicker"
+        },
+        "FAS": {
+          "axes": {
+            "type": "2D-plot",
+            "x_axis": "NR_ORTHOLOGS",
+            "y_axis": "FAS"
+          },
+          "native_participant": {
+            "metric_x": 32012674.0,
+            "metric_y": 0.7737068425899689,
+            "participant_id": "ohmm_checked_v2_0",
+            "stderr_x": 0,
+            "stderr_y": 0.0013474936475682143
+          },
+          "score": 0.7737068425899689,
+          "score_semantics": "FAS"
+        },
+        "GO": {
+          "axes": {
+            "type": "2D-plot",
+            "x_axis": "NR_ORTHOLOGS",
+            "y_axis": "avg Schlicker"
+          },
+          "native_participant": {
+            "metric_x": 353317,
+            "metric_y": 0.44480321,
+            "participant_id": "ohmm_checked_v2_0",
+            "stderr_x": 0,
+            "stderr_y": 0.00075100459
+          },
+          "score": 0.44480321,
+          "score_semantics": "avg Schlicker"
+        },
+        "SwissTrees": {
+          "axes": {
+            "type": "2D-plot",
+            "x_axis": "TPR",
+            "y_axis": "PPV"
+          },
+          "native_participant": {
+            "metric_x": 0.72172476,
+            "metric_y": 0.64803139,
+            "participant_id": "ohmm_checked_v2_0",
+            "stderr_x": 0.032047968,
+            "stderr_y": 0.02887901
+          },
+          "score": 0.6828957101893156,
+          "score_semantics": "harmonic mean of native TPR and PPV"
+        },
+        "TreeFam-A": {
+          "axes": {
+            "type": "2D-plot",
+            "x_axis": "TPR",
+            "y_axis": "PPV"
+          },
+          "native_participant": {
+            "metric_x": 0.66235705,
+            "metric_y": 0.69674131,
+            "participant_id": "ohmm_checked_v2_0",
+            "stderr_x": 0.0062816229,
+            "stderr_y": 0.0062622304
+          },
+          "score": 0.6791142308563091,
+          "score_semantics": "harmonic mean of native TPR and PPV"
+        },
+        "VGNC": {
+          "axes": {
+            "type": "2D-plot",
+            "x_axis": "TPR",
+            "y_axis": "PPV"
+          },
+          "native_participant": {
+            "metric_x": 0.9689980780479652,
+            "metric_y": 0.16105779246933985,
+            "participant_id": "ohmm_checked_v2_0",
+            "stderr_x": 0.0021958577120702143,
+            "stderr_y": 0.0018986054998009344
+          },
+          "score": 0.2762070361813115,
+          "score_semantics": "harmonic mean of native TPR and PPV"
+        }
+      },
+      "removed_mapping_pairs": 90179,
+      "retained_pairs": 32012674,
+      "scores": {
+        "EC": 0.88411008,
+        "FAS": 0.7737068425899689,
+        "GO": 0.44480321,
+        "SwissTrees": 0.6828957101893156,
+        "TreeFam-A": 0.6791142308563091,
+        "VGNC": 0.2762070361813115
+      },
+      "secondary_six_metric_mean": 0.6234728516361508,
+      "stage": "multipass",
+      "total_pairs": 32102853
+    },
+    {
+      "native_endpoints": {
+        "EC": {
+          "axes": {
+            "type": "2D-plot",
+            "x_axis": "NR_ORTHOLOGS",
+            "y_axis": "avg Schlicker"
+          },
+          "native_participant": {
+            "metric_x": 188162,
+            "metric_y": 0.93117452,
+            "participant_id": "ohmm_checked_v2_1",
+            "stderr_x": 0,
+            "stderr_y": 0.00083413854
+          },
+          "score": 0.93117452,
+          "score_semantics": "avg Schlicker"
+        },
+        "FAS": {
+          "axes": {
+            "type": "2D-plot",
+            "x_axis": "NR_ORTHOLOGS",
+            "y_axis": "FAS"
+          },
+          "native_participant": {
+            "metric_x": 8710340.0,
+            "metric_y": 0.7752526000932909,
+            "participant_id": "ohmm_checked_v2_1",
+            "stderr_x": 0,
+            "stderr_y": 0.0008527552799573004
+          },
+          "score": 0.7752526000932909,
+          "score_semantics": "FAS"
+        },
+        "GO": {
+          "axes": {
+            "type": "2D-plot",
+            "x_axis": "NR_ORTHOLOGS",
+            "y_axis": "avg Schlicker"
+          },
+          "native_participant": {
+            "metric_x": 144241,
+            "metric_y": 0.47253671,
+            "participant_id": "ohmm_checked_v2_1",
+            "stderr_x": 0,
+            "stderr_y": 0.0012060121
+          },
+          "score": 0.47253671,
+          "score_semantics": "avg Schlicker"
+        },
+        "SwissTrees": {
+          "axes": {
+            "type": "2D-plot",
+            "x_axis": "TPR",
+            "y_axis": "PPV"
+          },
+          "native_participant": {
+            "metric_x": 0.7104991,
+            "metric_y": 0.64755256,
+            "participant_id": "ohmm_checked_v2_1",
+            "stderr_x": 0.03213905,
+            "stderr_y": 0.028903894
+          },
+          "score": 0.677567024339407,
+          "score_semantics": "harmonic mean of native TPR and PPV"
+        },
+        "TreeFam-A": {
+          "axes": {
+            "type": "2D-plot",
+            "x_axis": "TPR",
+            "y_axis": "PPV"
+          },
+          "native_participant": {
+            "metric_x": 0.44791715,
+            "metric_y": 0.80963845,
+            "participant_id": "ohmm_checked_v2_1",
+            "stderr_x": 0.0066053815,
+            "stderr_y": 0.0070109816
+          },
+          "score": 0.5767553292346159,
+          "score_semantics": "harmonic mean of native TPR and PPV"
+        },
+        "VGNC": {
+          "axes": {
+            "type": "2D-plot",
+            "x_axis": "TPR",
+            "y_axis": "PPV"
+          },
+          "native_participant": {
+            "metric_x": 0.83274839140971,
+            "metric_y": 0.5579631029366479,
+            "participant_id": "ohmm_checked_v2_1",
+            "stderr_x": 0.004728141670487702,
+            "stderr_y": 0.005150225779796481
+          },
+          "score": 0.6682088676556869,
+          "score_semantics": "harmonic mean of native TPR and PPV"
+        }
+      },
+      "removed_mapping_pairs": 30884,
+      "retained_pairs": 8710340,
+      "scores": {
+        "EC": 0.93117452,
+        "FAS": 0.7752526000932909,
+        "GO": 0.47253671,
+        "SwissTrees": 0.677567024339407,
+        "TreeFam-A": 0.5767553292346159,
+        "VGNC": 0.6682088676556869
+      },
+      "secondary_six_metric_mean": 0.6835825085538335,
+      "stage": "multipass_refined",
+      "total_pairs": 8741224
+    },
+    {
+      "native_endpoints": {
+        "EC": {
+          "axes": {
+            "type": "2D-plot",
+            "x_axis": "NR_ORTHOLOGS",
+            "y_axis": "avg Schlicker"
+          },
+          "native_participant": {
+            "metric_x": 313912,
+            "metric_y": 0.88441954,
+            "participant_id": "ohmm_checked_v2_2",
+            "stderr_x": 0,
+            "stderr_y": 0.00078459076
+          },
+          "score": 0.88441954,
+          "score_semantics": "avg Schlicker"
+        },
+        "FAS": {
+          "axes": {
+            "type": "2D-plot",
+            "x_axis": "NR_ORTHOLOGS",
+            "y_axis": "FAS"
+          },
+          "native_participant": {
+            "metric_x": 31682321.0,
+            "metric_y": 0.7715748893898831,
+            "participant_id": "ohmm_checked_v2_2",
+            "stderr_x": 0,
+            "stderr_y": 0.0013800172155955246
+          },
+          "score": 0.7715748893898831,
+          "score_semantics": "FAS"
+        },
+        "GO": {
+          "axes": {
+            "type": "2D-plot",
+            "x_axis": "NR_ORTHOLOGS",
+            "y_axis": "avg Schlicker"
+          },
+          "native_participant": {
+            "metric_x": 351531,
+            "metric_y": 0.44400634,
+            "participant_id": "ohmm_checked_v2_2",
+            "stderr_x": 0,
+            "stderr_y": 0.0007515812
+          },
+          "score": 0.44400634,
+          "score_semantics": "avg Schlicker"
+        },
+        "SwissTrees": {
+          "axes": {
+            "type": "2D-plot",
+            "x_axis": "TPR",
+            "y_axis": "PPV"
+          },
+          "native_participant": {
+            "metric_x": 0.71709513,
+            "metric_y": 0.64508979,
+            "participant_id": "ohmm_checked_v2_2",
+            "stderr_x": 0.031833145,
+            "stderr_y": 0.027752428
+          },
+          "score": 0.6791893523850238,
+          "score_semantics": "harmonic mean of native TPR and PPV"
+        },
+        "TreeFam-A": {
+          "axes": {
+            "type": "2D-plot",
+            "x_axis": "TPR",
+            "y_axis": "PPV"
+          },
+          "native_participant": {
+            "metric_x": 0.6627704,
+            "metric_y": 0.69583142,
+            "participant_id": "ohmm_checked_v2_2",
+            "stderr_x": 0.0062797352,
+            "stderr_y": 0.0062614741
+          },
+          "score": 0.6788986467955238,
+          "score_semantics": "harmonic mean of native TPR and PPV"
+        },
+        "VGNC": {
+          "axes": {
+            "type": "2D-plot",
+            "x_axis": "TPR",
+            "y_axis": "PPV"
+          },
+          "native_participant": {
+            "metric_x": 0.9687473886521267,
+            "metric_y": 0.16028370755447408,
+            "participant_id": "ohmm_checked_v2_2",
+            "stderr_x": 0.002204432757847476,
+            "stderr_y": 0.0018905963931394971
+          },
+          "score": 0.27505783261166145,
+          "score_semantics": "harmonic mean of native TPR and PPV"
+        }
+      },
+      "removed_mapping_pairs": 86556,
+      "retained_pairs": 31682321,
+      "scores": {
+        "EC": 0.88441954,
+        "FAS": 0.7715748893898831,
+        "GO": 0.44400634,
+        "SwissTrees": 0.6791893523850238,
+        "TreeFam-A": 0.6788986467955238,
+        "VGNC": 0.27505783261166145
+      },
+      "secondary_six_metric_mean": 0.6221911001970154,
+      "stage": "strict_profiles",
+      "total_pairs": 31768877
+    },
+    {
+      "native_endpoints": {
+        "EC": {
+          "axes": {
+            "type": "2D-plot",
+            "x_axis": "NR_ORTHOLOGS",
+            "y_axis": "avg Schlicker"
+          },
+          "native_participant": {
+            "metric_x": 187772,
+            "metric_y": 0.93134728,
+            "participant_id": "ohmm_checked_v2_3",
+            "stderr_x": 0,
+            "stderr_y": 0.00083405317
+          },
+          "score": 0.93134728,
+          "score_semantics": "avg Schlicker"
+        },
+        "FAS": {
+          "axes": {
+            "type": "2D-plot",
+            "x_axis": "NR_ORTHOLOGS",
+            "y_axis": "FAS"
+          },
+          "native_participant": {
+            "metric_x": 8710722.0,
+            "metric_y": 0.7746333592919895,
+            "participant_id": "ohmm_checked_v2_3",
+            "stderr_x": 0,
+            "stderr_y": 0.0008634903942024991
+          },
+          "score": 0.7746333592919895,
+          "score_semantics": "FAS"
+        },
+        "GO": {
+          "axes": {
+            "type": "2D-plot",
+            "x_axis": "NR_ORTHOLOGS",
+            "y_axis": "avg Schlicker"
+          },
+          "native_participant": {
+            "metric_x": 144347,
+            "metric_y": 0.47235028,
+            "participant_id": "ohmm_checked_v2_3",
+            "stderr_x": 0,
+            "stderr_y": 0.0012059493
+          },
+          "score": 0.47235028,
+          "score_semantics": "avg Schlicker"
+        },
+        "SwissTrees": {
+          "axes": {
+            "type": "2D-plot",
+            "x_axis": "TPR",
+            "y_axis": "PPV"
+          },
+          "native_participant": {
+            "metric_x": 0.70586947,
+            "metric_y": 0.64461096,
+            "participant_id": "ohmm_checked_v2_3",
+            "stderr_x": 0.03192484,
+            "stderr_y": 0.027778322
+          },
+          "score": 0.6738508557156822,
+          "score_semantics": "harmonic mean of native TPR and PPV"
+        },
+        "TreeFam-A": {
+          "axes": {
+            "type": "2D-plot",
+            "x_axis": "TPR",
+            "y_axis": "PPV"
+          },
+          "native_participant": {
+            "metric_x": 0.44803197,
+            "metric_y": 0.80770027,
+            "participant_id": "ohmm_checked_v2_3",
+            "stderr_x": 0.0066055411,
+            "stderr_y": 0.0070288132
+          },
+          "score": 0.5763578119769099,
+          "score_semantics": "harmonic mean of native TPR and PPV"
+        },
+        "VGNC": {
+          "axes": {
+            "type": "2D-plot",
+            "x_axis": "TPR",
+            "y_axis": "PPV"
+          },
+          "native_participant": {
+            "metric_x": 0.8321216679201137,
+            "metric_y": 0.5575275740440065,
+            "participant_id": "ohmm_checked_v2_3",
+            "stderr_x": 0.0047352091517226325,
+            "stderr_y": 0.0051506788230552296
+          },
+          "score": 0.6676947834249698,
+          "score_semantics": "harmonic mean of native TPR and PPV"
+        }
+      },
+      "removed_mapping_pairs": 31051,
+      "retained_pairs": 8710722,
+      "scores": {
+        "EC": 0.93134728,
+        "FAS": 0.7746333592919895,
+        "GO": 0.47235028,
+        "SwissTrees": 0.6738508557156822,
+        "TreeFam-A": 0.5763578119769099,
+        "VGNC": 0.6676947834249698
+      },
+      "secondary_six_metric_mean": 0.6827057284015918,
+      "stage": "strict_profiles_refined",
+      "total_pairs": 8741773
+    }
+  ],
+  "status": "descriptive_prespecified_stage_report"
+}

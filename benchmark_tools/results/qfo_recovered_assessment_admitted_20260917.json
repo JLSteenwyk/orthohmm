@@ -1,0 +1,4362 @@
+{
+  "accounting": "JobID|JobIDRaw|State|ExitCode|Elapsed\n21548_0|21549|COMPLETED|0:0|00:59:53\n21548_0.batch|21549.batch|COMPLETED|0:0|00:59:53\n21548_1|21623|COMPLETED|0:0|00:30:53\n21548_1.batch|21623.batch|COMPLETED|0:0|00:30:53\n21548_2|21624|COMPLETED|0:0|00:58:29\n21548_2.batch|21624.batch|COMPLETED|0:0|00:58:29\n21548_3|21548|COMPLETED|0:0|00:29:28\n21548_3.batch|21548.batch|COMPLETED|0:0|00:29:28\n",
+  "environment_manifest": {
+    "bytes": 172836,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_assessment_environment_20260917.json",
+    "sha256": "e86545fd04cb644ed642cf2a31b4993fb2225ca4c05743cd03e661db129e82bc"
+  },
+  "helper_sources": [
+    {
+      "bytes": 5577,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_assessment_admission_v1/benchmark_tools/validate_qfo_native_assessment.py",
+      "sha256": "4786081a21ce04b8ae25f1f3e83ed8a1766472ff7e4476ae70752fe7f0656da5"
+    },
+    {
+      "bytes": 6424,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_assessment_admission_v1/benchmark_tools/run_qfo_recovered_assessment.py",
+      "sha256": "caca3e622937f9f6006f394a8e063406dd2225ad4b147bc4f6ffa1140ec29b4c"
+    },
+    {
+      "bytes": 6202,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_assessment_admission_v1/benchmark_tools/prepare_qfo_recovered_pairs.py",
+      "sha256": "61b4cf7aee46c02ede32f11a7f3389fdee7e304d939be622d830e46bc65cd5f5"
+    },
+    {
+      "bytes": 16818,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_assessment_admission_v1/benchmark_tools/assemble_simulation_results.py",
+      "sha256": "432016402451c73b6c29a06c75626bc82c1e7e2cefc4973dfbf80b5d06bdf9d2"
+    },
+    {
+      "bytes": 3214,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_assessment_admission_v1/benchmark_tools/qfo_summarize_scores.py",
+      "sha256": "e0b89ddcd99209e8c95b6f8dbd6371be037fea4958fb9ca283b20e940f756688"
+    }
+  ],
+  "limitations": [
+    "Failed tasks are retained, not assigned zero or historical scores.",
+    "Native standard errors are not paired stage-difference confidence intervals.",
+    "Development-exposed stage analysis, not full HMM/phylogeny factorial or independent validation."
+  ],
+  "pairs_manifest": {
+    "bytes": 27900,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_recovered_stage_pairs_v1/results.json",
+    "sha256": "ce6f19cd005b886a91dc3aee63cb7b41e7f448d8cad5e65ff7cb10d92a636100"
+  },
+  "publication_ready": false,
+  "records": [
+    {
+      "assessment": {
+        "endpoints": {
+          "EC": {
+            "axes": {
+              "type": "2D-plot",
+              "x_axis": "NR_ORTHOLOGS",
+              "y_axis": "avg Schlicker"
+            },
+            "native_participant": {
+              "metric_x": 313327,
+              "metric_y": 0.88411008,
+              "participant_id": "ohmm_checked_v2_0",
+              "stderr_x": 0,
+              "stderr_y": 0.00078625048
+            },
+            "score": 0.88411008,
+            "score_semantics": "avg Schlicker"
+          },
+          "FAS": {
+            "axes": {
+              "type": "2D-plot",
+              "x_axis": "NR_ORTHOLOGS",
+              "y_axis": "FAS"
+            },
+            "native_participant": {
+              "metric_x": 32012674.0,
+              "metric_y": 0.7737068425899689,
+              "participant_id": "ohmm_checked_v2_0",
+              "stderr_x": 0,
+              "stderr_y": 0.0013474936475682143
+            },
+            "score": 0.7737068425899689,
+            "score_semantics": "FAS"
+          },
+          "GO": {
+            "axes": {
+              "type": "2D-plot",
+              "x_axis": "NR_ORTHOLOGS",
+              "y_axis": "avg Schlicker"
+            },
+            "native_participant": {
+              "metric_x": 353317,
+              "metric_y": 0.44480321,
+              "participant_id": "ohmm_checked_v2_0",
+              "stderr_x": 0,
+              "stderr_y": 0.00075100459
+            },
+            "score": 0.44480321,
+            "score_semantics": "avg Schlicker"
+          },
+          "SwissTrees": {
+            "axes": {
+              "type": "2D-plot",
+              "x_axis": "TPR",
+              "y_axis": "PPV"
+            },
+            "native_participant": {
+              "metric_x": 0.72172476,
+              "metric_y": 0.64803139,
+              "participant_id": "ohmm_checked_v2_0",
+              "stderr_x": 0.032047968,
+              "stderr_y": 0.02887901
+            },
+            "score": 0.6828957101893156,
+            "score_semantics": "harmonic mean of native TPR and PPV"
+          },
+          "TreeFam-A": {
+            "axes": {
+              "type": "2D-plot",
+              "x_axis": "TPR",
+              "y_axis": "PPV"
+            },
+            "native_participant": {
+              "metric_x": 0.66235705,
+              "metric_y": 0.69674131,
+              "participant_id": "ohmm_checked_v2_0",
+              "stderr_x": 0.0062816229,
+              "stderr_y": 0.0062622304
+            },
+            "score": 0.6791142308563091,
+            "score_semantics": "harmonic mean of native TPR and PPV"
+          },
+          "VGNC": {
+            "axes": {
+              "type": "2D-plot",
+              "x_axis": "TPR",
+              "y_axis": "PPV"
+            },
+            "native_participant": {
+              "metric_x": 0.9689980780479652,
+              "metric_y": 0.16105779246933985,
+              "participant_id": "ohmm_checked_v2_0",
+              "stderr_x": 0.0021958577120702143,
+              "stderr_y": 0.0018986054998009344
+            },
+            "score": 0.2762070361813115,
+            "score_semantics": "harmonic mean of native TPR and PPV"
+          }
+        },
+        "limitations": [
+          "Secondary mean is project-defined, not official QfO F1.",
+          "Native standard errors are not paired method-difference confidence intervals.",
+          "NR_ORTHOLOGS measures challenge-assessed relations, not total submitted pair coverage.",
+          "This validates endpoint content, not scheduler, source/runtime or input provenance."
+        ],
+        "native_assessments": [
+          {
+            "_id": "QfO:SwissTrees-APP_TPR_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-APP",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.065523722,
+              "value": 0.87628866
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-APP_PPV_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-APP",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.08000206,
+              "value": 0.58219178
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-ASTER_TPR_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-ASTER",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.051682193,
+              "value": 0.224
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-ASTER_PPV_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-ASTER",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.034082999,
+              "value": 0.98245614
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-BAMBI_TPR_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-BAMBI",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.14129272,
+              "value": 0.59139785
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-BAMBI_PPV_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-BAMBI",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.080606683,
+              "value": 0.94827586
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-BAR_TPR_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-BAR",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.054606739,
+              "value": 0.62790698
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-BAR_PPV_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-BAR",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.052995069,
+              "value": 0.76209677
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-CASP_TPR_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-CASP",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.12670051,
+              "value": 0.87037037
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-CASP_PPV_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-CASP",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.15404391,
+              "value": 0.61038961
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-CITE_TPR_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-CITE",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.092996269,
+              "value": 0.77070064
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-CITE_PPV_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-CITE",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.0949418,
+              "value": 0.58454106
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-Clusterin_TPR_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-Clusterin",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.057627601,
+              "value": 0.97014925
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-Clusterin_PPV_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-Clusterin",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.12061581,
+              "value": 0.49242424
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-GH14_TPR_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-GH14",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.40008332,
+              "value": 0.5
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-GH14_PPV_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-GH14",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.2955888,
+              "value": 0.31578947
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-HOX_TPR_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-HOX",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.095261403,
+              "value": 0.24358974
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-HOX_PPV_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-HOX",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.11621515,
+              "value": 0.31147541
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-MAPT_TPR_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-MAPT",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.23395466,
+              "value": 0.58823529
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-MAPT_PPV_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-MAPT",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.23186203,
+              "value": 0.57142857
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-NOX_TPR_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-NOX",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.038272611,
+              "value": 0.89690722
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-NOX_PPV_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-NOX",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.042580995,
+              "value": 0.42110358
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-POP_TPR_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-POP",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.074902199,
+              "value": 0.83246073
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-POP_PPV_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-POP",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.084304928,
+              "value": 0.63346614
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-PSEN_TPR_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-PSEN",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.054535592,
+              "value": 0.71266541
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-PSEN_PPV_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-PSEN",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.043941714,
+              "value": 0.87674419
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-RPS_TPR_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-RPS",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.13391444,
+              "value": 0.80597015
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-RPS_PPV_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-RPS",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.068738635,
+              "value": 0.96428571
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-SERC_TPR_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-SERC",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.036564149,
+              "value": 0.84993179
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-SERC_PPV_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-SERC",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.038316129,
+              "value": 0.82516556
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-SUMF_TPR_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-SUMF",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.10875293,
+              "value": 0.94285714
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-SUMF_PPV_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-SUMF",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.16929935,
+              "value": 0.49253731
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-TRFE_TPR_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-TRFE",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.07989404,
+              "value": 0.88983051
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-TRFE_PPV_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-TRFE",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.070905177,
+              "value": 0.31722054
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-VATB_TPR_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-VATB",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.058595996,
+              "value": 0.79778393
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-VATB_PPV_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees-VATB",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.026126109,
+              "value": 0.97297297
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees_TPR_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.032047968,
+              "value": 0.72172476
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees_PPV_ohmm_checked_v2_0_A",
+            "challenge_id": "SwissTrees",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.02887901,
+              "value": 0.64803139
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:VGNC_TPR_ohmm-checked-v2-0_A",
+            "challenge_id": "VGNC",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.0021958577120702143,
+              "value": 0.9689980780479652
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:VGNC_PPV_ohmm-checked-v2-0_A",
+            "challenge_id": "VGNC",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.0018986054998009344,
+              "value": 0.16105779246933985
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:TreeFam-A_TPR_ohmm_checked_v2_0_A",
+            "challenge_id": "TreeFam-A",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.0062816229,
+              "value": 0.66235705
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:TreeFam-A_PPV_ohmm_checked_v2_0_A",
+            "challenge_id": "TreeFam-A",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.0062622304,
+              "value": 0.69674131
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:EC_NR_ORTHOLOGS_ohmm_checked_v2_0_A",
+            "challenge_id": "EC",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "NR_ORTHOLOGS",
+              "stderr": 0,
+              "value": 313327
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:EC_avg Schlicker_ohmm_checked_v2_0_A",
+            "challenge_id": "EC",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "avg Schlicker",
+              "stderr": 0.00078625048,
+              "value": 0.88411008
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:GO_NR_ORTHOLOGS_ohmm_checked_v2_0_A",
+            "challenge_id": "GO",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "NR_ORTHOLOGS",
+              "stderr": 0,
+              "value": 353317
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:GO_avg Schlicker_ohmm_checked_v2_0_A",
+            "challenge_id": "GO",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "avg Schlicker",
+              "stderr": 0.00075100459,
+              "value": 0.44480321
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:FAS_FAS_ohmm-checked-v2-0_A",
+            "challenge_id": "FAS",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "FAS",
+              "stderr": 0.0013474936475682143,
+              "value": 0.7737068425899689
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:FAS_NR_ORTHOLOGS_ohmm-checked-v2-0_A",
+            "challenge_id": "FAS",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "NR_ORTHOLOGS",
+              "stderr": 0,
+              "value": 32012674.0
+            },
+            "participant_id": "ohmm_checked_v2_0",
+            "type": "assessment"
+          }
+        ],
+        "participant": "ohmm_checked_v2_0",
+        "secondary_six_metric_mean": 0.6234728516361508,
+        "swiss_reference_families": [
+          "APP",
+          "ASTER",
+          "BAMBI",
+          "BAR",
+          "CASP",
+          "CITE",
+          "Clusterin",
+          "GH14",
+          "HOX",
+          "MAPT",
+          "NOX",
+          "POP",
+          "PSEN",
+          "RPS",
+          "SERC",
+          "SUMF",
+          "TRFE",
+          "VATB"
+        ]
+      },
+      "conversion": {
+        "command": [
+          "/home/bizon/anaconda3/bin/python",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/og_to_pairwise.py",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_checked_full_replay_v2/replay/orthogroups_multipass.txt",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input"
+        ],
+        "conversion_log": {
+          "bytes": 25,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_recovered_stage_pairs_v1/multipass/conversion.log",
+          "sha256": "6a5cdacdb9e467ef06d8af3a16a35e3e997d914f5048486198c04ba97cb82489"
+        },
+        "filtered_pairs": {
+          "bytes": 497880796,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_recovered_stage_pairs_v1/multipass/pairs.qfo.tsv",
+          "sha256": "5a596a50566546bb2909d691cb9b3004400c2515650821c21a1df53631e3f966"
+        },
+        "index": 0,
+        "pairs": {
+          "bytes": 499315406,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_recovered_stage_pairs_v1/multipass/pairs.tsv",
+          "sha256": "03dabdfb1b3b3e52d56c23b6d67ea34586fa6dd245886cc7b0c8efb29f582012"
+        },
+        "participant": "ohmm_checked_v2_0",
+        "partition": {
+          "bytes": 23667336,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_checked_full_replay_v2/replay/orthogroups_multipass.txt",
+          "sha256": "28e8d61e5377759f9bd5f2f9db992d6e28895365a2ddb1fc42b2b57d9f030026"
+        },
+        "removed_mapping_pairs": 90179,
+        "retained_pairs": 32012674,
+        "stage": "multipass",
+        "total_pairs": 32102853
+      },
+      "execution_report": {
+        "bytes": 203330,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_recovered_assessment_v1/stage_0/results.json",
+        "sha256": "fee2e88eef5d536e577c523b63f8793f339edc93b4d5ad5ea4889f0f85ad310f"
+      },
+      "index": 0,
+      "metric_files": [
+        {
+          "bytes": 16941,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_0/assessment_out/Assessment_datasets.json",
+          "sha256": "91027dcf697c9c5405827ce4c27465d3aa5dec0c775744eae3d3830a66018af8"
+        },
+        {
+          "bytes": 318907,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/ReconciledTrees_SwissTrees.drw",
+          "sha256": "40528e3537ba57e345c443c8024f99dc3940a66e2d102703754b41bb29858ecd"
+        },
+        {
+          "bytes": 670,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_0/results/VGNC/VGNC.json",
+          "sha256": "a7704e1bf58134d4e12914744fbfc97ede0ff499ebe1a4bfa43a88264fe677b6"
+        },
+        {
+          "bytes": 274,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/VGNC.json",
+          "sha256": "fa94b75446a592a3d52174ecf01a843f313f4be526fdad853eea3fa75dfadd0d"
+        },
+        {
+          "bytes": 644,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_0/results/SwissTrees/SwissTrees.json",
+          "sha256": "144522b36fb1ec3b471614703c6205114d3a0dc3161e07dab4505ea18bbee811"
+        },
+        {
+          "bytes": 286,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/SwissTrees.json",
+          "sha256": "79f1a55aa5e1c951c306cb56ed38f03f16b8b10409f41f28aeb6dabe416c1a4b"
+        },
+        {
+          "bytes": 645,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_0/results/TreeFam-A/TreeFam-A.json",
+          "sha256": "8359cb1a71d451365124a74a6b50ded13513637a4545b0abffd31e009ad38f53"
+        },
+        {
+          "bytes": 284,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/TreeFam-A.json",
+          "sha256": "42bdfa2f53ac7c8921a41ec0f91936f7431097dcc54322b2eaef987d4799e595"
+        },
+        {
+          "bytes": 636,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_0/results/EC/EC.json",
+          "sha256": "6a9530ee71709a511108a04e4b5790dcf8247121185439877cdcc409060c7a27"
+        },
+        {
+          "bytes": 289,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/EC.json",
+          "sha256": "19f785029be53ad831c7c42b14f53e1d07c98cbd4f1418fd1746dc7cc9a0c44a"
+        },
+        {
+          "bytes": 636,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_0/results/GO/GO.json",
+          "sha256": "83b26b1e1bd650c33366ff5addcc51069ef0b67f2460247173d6b2d8814f37c5"
+        },
+        {
+          "bytes": 289,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/GO.json",
+          "sha256": "f8ac402370bc597e785e6ea3eeb3a2e177be16d2611b17c83031469980363e46"
+        },
+        {
+          "bytes": 648,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_0/results/FAS/FAS.json",
+          "sha256": "bc80c923353754b23bb08cb09bb4aa23bdbe46b009e5cf3284f9ba80fdf019cc"
+        },
+        {
+          "bytes": 281,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/FAS.json",
+          "sha256": "65e097459d7be1cb318981d1f721ff9bf22880e8d8948e2793625e8ac76b7663"
+        }
+      ],
+      "native_tasks": [
+        {
+          "%cpu": "100.1%",
+          "duration": "35s",
+          "exit": "0",
+          "hash": "6c/daa784",
+          "name": "validate_input_file",
+          "native_id": "918705",
+          "peak_rss": "1.5 GB",
+          "peak_vmem": "1.5 GB",
+          "rchar": "515.5 MB",
+          "realtime": "34.7s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 12:48:08.591",
+          "task_id": "1",
+          "wchar": "708 B"
+        },
+        {
+          "%cpu": "-",
+          "duration": "3ms",
+          "exit": "-",
+          "hash": "a5/b11060",
+          "name": "scheduleMetrics (1)",
+          "native_id": "-",
+          "peak_rss": "-",
+          "peak_vmem": "-",
+          "rchar": "-",
+          "realtime": "1ms",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 12:48:43.626",
+          "task_id": "3",
+          "wchar": "-"
+        },
+        {
+          "%cpu": "-",
+          "duration": "8ms",
+          "exit": "-",
+          "hash": "f1/4639ee",
+          "name": "scheduleMetrics (5)",
+          "native_id": "-",
+          "peak_rss": "-",
+          "peak_vmem": "-",
+          "rchar": "-",
+          "realtime": "1ms",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 12:48:43.632",
+          "task_id": "7",
+          "wchar": "-"
+        },
+        {
+          "%cpu": "-",
+          "duration": "6ms",
+          "exit": "-",
+          "hash": "66/87e0b3",
+          "name": "scheduleMetrics (2)",
+          "native_id": "-",
+          "peak_rss": "-",
+          "peak_vmem": "-",
+          "rchar": "-",
+          "realtime": "0ms",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 12:48:43.639",
+          "task_id": "4",
+          "wchar": "-"
+        },
+        {
+          "%cpu": "-",
+          "duration": "9ms",
+          "exit": "-",
+          "hash": "cc/82b16e",
+          "name": "scheduleMetrics (6)",
+          "native_id": "-",
+          "peak_rss": "-",
+          "peak_vmem": "-",
+          "rchar": "-",
+          "realtime": "1ms",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 12:48:43.640",
+          "task_id": "8",
+          "wchar": "-"
+        },
+        {
+          "%cpu": "-",
+          "duration": "10ms",
+          "exit": "-",
+          "hash": "19/78cda3",
+          "name": "scheduleMetrics (3)",
+          "native_id": "-",
+          "peak_rss": "-",
+          "peak_vmem": "-",
+          "rchar": "-",
+          "realtime": "1ms",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 12:48:43.643",
+          "task_id": "5",
+          "wchar": "-"
+        },
+        {
+          "%cpu": "-",
+          "duration": "11ms",
+          "exit": "-",
+          "hash": "17/8e0bfc",
+          "name": "scheduleMetrics (4)",
+          "native_id": "-",
+          "peak_rss": "-",
+          "peak_vmem": "-",
+          "rchar": "-",
+          "realtime": "0ms",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 12:48:43.644",
+          "task_id": "6",
+          "wchar": "-"
+        },
+        {
+          "%cpu": "100.0%",
+          "duration": "4m 12s",
+          "exit": "0",
+          "hash": "ed/a228af",
+          "name": "convertPredictions",
+          "native_id": "978652",
+          "peak_rss": "1.5 GB",
+          "peak_vmem": "1.5 GB",
+          "rchar": "5.3 GB",
+          "realtime": "4m 12s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 12:48:43.617",
+          "task_id": "2",
+          "wchar": "5.3 GB"
+        },
+        {
+          "%cpu": "92.4%",
+          "duration": "6.7s",
+          "exit": "0",
+          "hash": "83/91782f",
+          "name": "reference_genetrees_benchmark (SwissTrees)",
+          "native_id": "1328466",
+          "peak_rss": "529.5 MB",
+          "peak_vmem": "3 GB",
+          "rchar": "485.6 MB",
+          "realtime": "6.2s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 12:52:55.586",
+          "task_id": "14",
+          "wchar": "13.1 MB"
+        },
+        {
+          "%cpu": "91.3%",
+          "duration": "7.8s",
+          "exit": "0",
+          "hash": "ab/6abc7e",
+          "name": "vgnc_benchmark (1)",
+          "native_id": "1328424",
+          "peak_rss": "117.6 MB",
+          "peak_vmem": "137.1 MB",
+          "rchar": "108.9 MB",
+          "realtime": "7.3s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 12:52:55.569",
+          "task_id": "12",
+          "wchar": "1.8 MB"
+        },
+        {
+          "%cpu": "98.8%",
+          "duration": "22.6s",
+          "exit": "0",
+          "hash": "bd/d7a296",
+          "name": "reference_genetrees_benchmark (TreeFam-A)",
+          "native_id": "1328443",
+          "peak_rss": "819 MB",
+          "peak_vmem": "3.1 GB",
+          "rchar": "488.9 MB",
+          "realtime": "22.2s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 12:52:55.580",
+          "task_id": "13",
+          "wchar": "15 MB"
+        },
+        {
+          "%cpu": "99.9%",
+          "duration": "1m 33s",
+          "exit": "0",
+          "hash": "a4/82a0ff",
+          "name": "ec_benchmark (1)",
+          "native_id": "1328417",
+          "peak_rss": "881.1 MB",
+          "peak_vmem": "3.1 GB",
+          "rchar": "494.3 MB",
+          "realtime": "1m 33s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 12:52:55.561",
+          "task_id": "9",
+          "wchar": "23.3 MB"
+        },
+        {
+          "%cpu": "100.2%",
+          "duration": "5m 44s",
+          "exit": "0",
+          "hash": "17/707c01",
+          "name": "go_benchmark (1)",
+          "native_id": "1328475",
+          "peak_rss": "1.1 GB",
+          "peak_vmem": "3.1 GB",
+          "rchar": "46.4 MB",
+          "realtime": "5m 44s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 12:52:55.594",
+          "task_id": "10",
+          "wchar": "34.2 MB"
+        },
+        {
+          "%cpu": "309.1%",
+          "duration": "54m 36s",
+          "exit": "0",
+          "hash": "74/e589c9",
+          "name": "fas_benchmark (1)",
+          "native_id": "1349573",
+          "peak_rss": "34.2 GB",
+          "peak_vmem": "37.4 GB",
+          "rchar": "255.1 GB",
+          "realtime": "54m 35s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 12:53:02.281",
+          "task_id": "11",
+          "wchar": "1.1 GB"
+        },
+        {
+          "%cpu": "195.5%",
+          "duration": "3.3s",
+          "exit": "0",
+          "hash": "64/86e0b2",
+          "name": "consolidate",
+          "native_id": "2812183",
+          "peak_rss": "96 MB",
+          "peak_vmem": "517.9 MB",
+          "rchar": "32.6 MB",
+          "realtime": "3.1s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 13:47:37.964",
+          "task_id": "15",
+          "wchar": "419.2 KB"
+        }
+      ],
+      "native_trace": {
+        "bytes": 1793,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_0/stats/trace_2026-09-17_12-48-06.txt",
+        "sha256": "a4481a40bdd15b21e9ac8eb1f5ff92a30ddaa722f4d313e0c14558a5a7acf45f"
+      },
+      "participant": "ohmm_checked_v2_0",
+      "scheduler": {
+        "Elapsed": "00:59:53",
+        "ExitCode": "0:0",
+        "JobID": "21548_0",
+        "JobIDRaw": "21549",
+        "State": "COMPLETED"
+      },
+      "stage": "multipass",
+      "status": "admitted"
+    },
+    {
+      "assessment": {
+        "endpoints": {
+          "EC": {
+            "axes": {
+              "type": "2D-plot",
+              "x_axis": "NR_ORTHOLOGS",
+              "y_axis": "avg Schlicker"
+            },
+            "native_participant": {
+              "metric_x": 188162,
+              "metric_y": 0.93117452,
+              "participant_id": "ohmm_checked_v2_1",
+              "stderr_x": 0,
+              "stderr_y": 0.00083413854
+            },
+            "score": 0.93117452,
+            "score_semantics": "avg Schlicker"
+          },
+          "FAS": {
+            "axes": {
+              "type": "2D-plot",
+              "x_axis": "NR_ORTHOLOGS",
+              "y_axis": "FAS"
+            },
+            "native_participant": {
+              "metric_x": 8710340.0,
+              "metric_y": 0.7752526000932909,
+              "participant_id": "ohmm_checked_v2_1",
+              "stderr_x": 0,
+              "stderr_y": 0.0008527552799573004
+            },
+            "score": 0.7752526000932909,
+            "score_semantics": "FAS"
+          },
+          "GO": {
+            "axes": {
+              "type": "2D-plot",
+              "x_axis": "NR_ORTHOLOGS",
+              "y_axis": "avg Schlicker"
+            },
+            "native_participant": {
+              "metric_x": 144241,
+              "metric_y": 0.47253671,
+              "participant_id": "ohmm_checked_v2_1",
+              "stderr_x": 0,
+              "stderr_y": 0.0012060121
+            },
+            "score": 0.47253671,
+            "score_semantics": "avg Schlicker"
+          },
+          "SwissTrees": {
+            "axes": {
+              "type": "2D-plot",
+              "x_axis": "TPR",
+              "y_axis": "PPV"
+            },
+            "native_participant": {
+              "metric_x": 0.7104991,
+              "metric_y": 0.64755256,
+              "participant_id": "ohmm_checked_v2_1",
+              "stderr_x": 0.03213905,
+              "stderr_y": 0.028903894
+            },
+            "score": 0.677567024339407,
+            "score_semantics": "harmonic mean of native TPR and PPV"
+          },
+          "TreeFam-A": {
+            "axes": {
+              "type": "2D-plot",
+              "x_axis": "TPR",
+              "y_axis": "PPV"
+            },
+            "native_participant": {
+              "metric_x": 0.44791715,
+              "metric_y": 0.80963845,
+              "participant_id": "ohmm_checked_v2_1",
+              "stderr_x": 0.0066053815,
+              "stderr_y": 0.0070109816
+            },
+            "score": 0.5767553292346159,
+            "score_semantics": "harmonic mean of native TPR and PPV"
+          },
+          "VGNC": {
+            "axes": {
+              "type": "2D-plot",
+              "x_axis": "TPR",
+              "y_axis": "PPV"
+            },
+            "native_participant": {
+              "metric_x": 0.83274839140971,
+              "metric_y": 0.5579631029366479,
+              "participant_id": "ohmm_checked_v2_1",
+              "stderr_x": 0.004728141670487702,
+              "stderr_y": 0.005150225779796481
+            },
+            "score": 0.6682088676556869,
+            "score_semantics": "harmonic mean of native TPR and PPV"
+          }
+        },
+        "limitations": [
+          "Secondary mean is project-defined, not official QfO F1.",
+          "Native standard errors are not paired method-difference confidence intervals.",
+          "NR_ORTHOLOGS measures challenge-assessed relations, not total submitted pair coverage.",
+          "This validates endpoint content, not scheduler, source/runtime or input provenance."
+        ],
+        "native_assessments": [
+          {
+            "_id": "QfO:VGNC_TPR_ohmm-checked-v2-1_A",
+            "challenge_id": "VGNC",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.004728141670487702,
+              "value": 0.83274839140971
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:VGNC_PPV_ohmm-checked-v2-1_A",
+            "challenge_id": "VGNC",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.005150225779796481,
+              "value": 0.5579631029366479
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-APP_TPR_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-APP",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.065523722,
+              "value": 0.87628866
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-APP_PPV_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-APP",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.08000206,
+              "value": 0.58219178
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-ASTER_TPR_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-ASTER",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.051682193,
+              "value": 0.224
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-ASTER_PPV_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-ASTER",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.034082999,
+              "value": 0.98245614
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-BAMBI_TPR_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-BAMBI",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.14129272,
+              "value": 0.59139785
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-BAMBI_PPV_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-BAMBI",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.080606683,
+              "value": 0.94827586
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-BAR_TPR_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-BAR",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.054606739,
+              "value": 0.62790698
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-BAR_PPV_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-BAR",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.052995069,
+              "value": 0.76209677
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-CASP_TPR_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-CASP",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.12670051,
+              "value": 0.87037037
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-CASP_PPV_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-CASP",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.15404391,
+              "value": 0.61038961
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-CITE_TPR_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-CITE",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.092996269,
+              "value": 0.77070064
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-CITE_PPV_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-CITE",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.0949418,
+              "value": 0.58454106
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-Clusterin_TPR_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-Clusterin",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.057627601,
+              "value": 0.97014925
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-Clusterin_PPV_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-Clusterin",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.12061581,
+              "value": 0.49242424
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-GH14_TPR_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-GH14",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.40008332,
+              "value": 0.5
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-GH14_PPV_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-GH14",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.2955888,
+              "value": 0.31578947
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-HOX_TPR_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-HOX",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.095261403,
+              "value": 0.24358974
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-HOX_PPV_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-HOX",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.11621515,
+              "value": 0.31147541
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-MAPT_TPR_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-MAPT",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.23395466,
+              "value": 0.58823529
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-MAPT_PPV_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-MAPT",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.23186203,
+              "value": 0.57142857
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-NOX_TPR_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-NOX",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.057956783,
+              "value": 0.69484536
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-NOX_PPV_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-NOX",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.047739026,
+              "value": 0.4124847
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-POP_TPR_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-POP",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.074902199,
+              "value": 0.83246073
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-POP_PPV_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-POP",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.084304928,
+              "value": 0.63346614
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-PSEN_TPR_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-PSEN",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.054535592,
+              "value": 0.71266541
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-PSEN_PPV_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-PSEN",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.043941714,
+              "value": 0.87674419
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-RPS_TPR_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-RPS",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.13391444,
+              "value": 0.80597015
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-RPS_PPV_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-RPS",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.068738635,
+              "value": 0.96428571
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-SERC_TPR_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-SERC",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.036564149,
+              "value": 0.84993179
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-SERC_PPV_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-SERC",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.038316129,
+              "value": 0.82516556
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-SUMF_TPR_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-SUMF",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.10875293,
+              "value": 0.94285714
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-SUMF_PPV_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-SUMF",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.16929935,
+              "value": 0.49253731
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-TRFE_TPR_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-TRFE",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.07989404,
+              "value": 0.88983051
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-TRFE_PPV_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-TRFE",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.070905177,
+              "value": 0.31722054
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-VATB_TPR_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-VATB",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.058595996,
+              "value": 0.79778393
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-VATB_PPV_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees-VATB",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.026126109,
+              "value": 0.97297297
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees_TPR_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.03213905,
+              "value": 0.7104991
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees_PPV_ohmm_checked_v2_1_A",
+            "challenge_id": "SwissTrees",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.028903894,
+              "value": 0.64755256
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:TreeFam-A_TPR_ohmm_checked_v2_1_A",
+            "challenge_id": "TreeFam-A",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.0066053815,
+              "value": 0.44791715
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:TreeFam-A_PPV_ohmm_checked_v2_1_A",
+            "challenge_id": "TreeFam-A",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.0070109816,
+              "value": 0.80963845
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:EC_NR_ORTHOLOGS_ohmm_checked_v2_1_A",
+            "challenge_id": "EC",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "NR_ORTHOLOGS",
+              "stderr": 0,
+              "value": 188162
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:EC_avg Schlicker_ohmm_checked_v2_1_A",
+            "challenge_id": "EC",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "avg Schlicker",
+              "stderr": 0.00083413854,
+              "value": 0.93117452
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:GO_NR_ORTHOLOGS_ohmm_checked_v2_1_A",
+            "challenge_id": "GO",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "NR_ORTHOLOGS",
+              "stderr": 0,
+              "value": 144241
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:GO_avg Schlicker_ohmm_checked_v2_1_A",
+            "challenge_id": "GO",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "avg Schlicker",
+              "stderr": 0.0012060121,
+              "value": 0.47253671
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:FAS_FAS_ohmm-checked-v2-1_A",
+            "challenge_id": "FAS",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "FAS",
+              "stderr": 0.0008527552799573004,
+              "value": 0.7752526000932909
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:FAS_NR_ORTHOLOGS_ohmm-checked-v2-1_A",
+            "challenge_id": "FAS",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "NR_ORTHOLOGS",
+              "stderr": 0,
+              "value": 8710340.0
+            },
+            "participant_id": "ohmm_checked_v2_1",
+            "type": "assessment"
+          }
+        ],
+        "participant": "ohmm_checked_v2_1",
+        "secondary_six_metric_mean": 0.6835825085538335,
+        "swiss_reference_families": [
+          "APP",
+          "ASTER",
+          "BAMBI",
+          "BAR",
+          "CASP",
+          "CITE",
+          "Clusterin",
+          "GH14",
+          "HOX",
+          "MAPT",
+          "NOX",
+          "POP",
+          "PSEN",
+          "RPS",
+          "SERC",
+          "SUMF",
+          "TRFE",
+          "VATB"
+        ]
+      },
+      "conversion": {
+        "command": [
+          "/home/bizon/anaconda3/bin/python",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/og_to_pairwise.py",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_checked_full_replay_v2/replay/orthogroups_multipass_refined.txt",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input"
+        ],
+        "conversion_log": {
+          "bytes": 24,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_recovered_stage_pairs_v1/multipass_refined/conversion.log",
+          "sha256": "f5a636dc9e88d325935a9f59e60f1f6a50f38f975e5cbf8d52fcfd1a16d77290"
+        },
+        "filtered_pairs": {
+          "bytes": 133850600,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_recovered_stage_pairs_v1/multipass_refined/pairs.qfo.tsv",
+          "sha256": "aa9976371f5eab9d1d0e2ff32c311565a5f6c2a66225d193d19a23d2da98cb4e"
+        },
+        "index": 1,
+        "pairs": {
+          "bytes": 134352640,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_recovered_stage_pairs_v1/multipass_refined/pairs.tsv",
+          "sha256": "04485f71f993bf79e9cadb0a6125edcbba86df735c52d7bc079817d1b69f00a9"
+        },
+        "participant": "ohmm_checked_v2_1",
+        "partition": {
+          "bytes": 23667336,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_checked_full_replay_v2/replay/orthogroups_multipass_refined.txt",
+          "sha256": "dc6952565562562b8856d8dc24b159abf02184c3bd1f9cf322f222be7510f2df"
+        },
+        "removed_mapping_pairs": 30884,
+        "retained_pairs": 8710340,
+        "stage": "multipass_refined",
+        "total_pairs": 8741224
+      },
+      "execution_report": {
+        "bytes": 203414,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_recovered_assessment_v1/stage_1/results.json",
+        "sha256": "4d5b4860b310f1348bb0829a895651b9fb31af3a8ad19e133e2631b7a5102c14"
+      },
+      "index": 1,
+      "metric_files": [
+        {
+          "bytes": 16932,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_1/assessment_out/Assessment_datasets.json",
+          "sha256": "a2a7f9191d0cc5eef9dae450a776ad1be0c0aaec178dedd969bf89805da415c7"
+        },
+        {
+          "bytes": 318907,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/ReconciledTrees_SwissTrees.drw",
+          "sha256": "40528e3537ba57e345c443c8024f99dc3940a66e2d102703754b41bb29858ecd"
+        },
+        {
+          "bytes": 665,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_1/results/VGNC/VGNC.json",
+          "sha256": "be59107ab519fa59e62904c7321c3a74988c40b9f9db78e38d51c5a2e8e6e8fb"
+        },
+        {
+          "bytes": 274,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/VGNC.json",
+          "sha256": "fa94b75446a592a3d52174ecf01a843f313f4be526fdad853eea3fa75dfadd0d"
+        },
+        {
+          "bytes": 643,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_1/results/SwissTrees/SwissTrees.json",
+          "sha256": "a4b58523a2ff035909c81716452d34b63c064c56679dc44aefd9f8d3bf4964ce"
+        },
+        {
+          "bytes": 286,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/SwissTrees.json",
+          "sha256": "79f1a55aa5e1c951c306cb56ed38f03f16b8b10409f41f28aeb6dabe416c1a4b"
+        },
+        {
+          "bytes": 645,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_1/results/TreeFam-A/TreeFam-A.json",
+          "sha256": "d05edc2e6a0abf57de1a3b650bb0d04bfaf243edba8c3a56cb76869cdebaa1bb"
+        },
+        {
+          "bytes": 284,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/TreeFam-A.json",
+          "sha256": "42bdfa2f53ac7c8921a41ec0f91936f7431097dcc54322b2eaef987d4799e595"
+        },
+        {
+          "bytes": 636,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_1/results/EC/EC.json",
+          "sha256": "f9891e809e4e77ecd29fe241d8488df4e2278bd52b882ceffbbb9a99fc1b9824"
+        },
+        {
+          "bytes": 289,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/EC.json",
+          "sha256": "19f785029be53ad831c7c42b14f53e1d07c98cbd4f1418fd1746dc7cc9a0c44a"
+        },
+        {
+          "bytes": 635,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_1/results/GO/GO.json",
+          "sha256": "6e9470cc010c90a0d7e5433a2400f136772fb7a4a2071128e7bdf408cc535e4f"
+        },
+        {
+          "bytes": 289,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/GO.json",
+          "sha256": "f8ac402370bc597e785e6ea3eeb3a2e177be16d2611b17c83031469980363e46"
+        },
+        {
+          "bytes": 647,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_1/results/FAS/FAS.json",
+          "sha256": "ba208ef7322766c4ed444ca6629311b61bc6877c06cab2e6c32ad8a27ebff65f"
+        },
+        {
+          "bytes": 281,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/FAS.json",
+          "sha256": "65e097459d7be1cb318981d1f721ff9bf22880e8d8948e2793625e8ac76b7663"
+        }
+      ],
+      "native_tasks": [
+        {
+          "%cpu": "100.0%",
+          "duration": "15.1s",
+          "exit": "0",
+          "hash": "64/e650a5",
+          "name": "validate_input_file",
+          "native_id": "2813402",
+          "peak_rss": "1.5 GB",
+          "peak_vmem": "1.5 GB",
+          "rchar": "168.3 MB",
+          "realtime": "14.9s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 13:48:00.006",
+          "task_id": "1",
+          "wchar": "708 B"
+        },
+        {
+          "%cpu": "-",
+          "duration": "6ms",
+          "exit": "-",
+          "hash": "a0/9896ff",
+          "name": "scheduleMetrics (2)",
+          "native_id": "-",
+          "peak_rss": "-",
+          "peak_vmem": "-",
+          "rchar": "-",
+          "realtime": "2ms",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 13:48:15.186",
+          "task_id": "4",
+          "wchar": "-"
+        },
+        {
+          "%cpu": "-",
+          "duration": "15ms",
+          "exit": "-",
+          "hash": "92/0c5a93",
+          "name": "scheduleMetrics (6)",
+          "native_id": "-",
+          "peak_rss": "-",
+          "peak_vmem": "-",
+          "rchar": "-",
+          "realtime": "1ms",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 13:48:15.188",
+          "task_id": "8",
+          "wchar": "-"
+        },
+        {
+          "%cpu": "-",
+          "duration": "20ms",
+          "exit": "-",
+          "hash": "f7/885ee4",
+          "name": "scheduleMetrics (1)",
+          "native_id": "-",
+          "peak_rss": "-",
+          "peak_vmem": "-",
+          "rchar": "-",
+          "realtime": "0ms",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 13:48:15.189",
+          "task_id": "2",
+          "wchar": "-"
+        },
+        {
+          "%cpu": "-",
+          "duration": "16ms",
+          "exit": "-",
+          "hash": "81/6b58c7",
+          "name": "scheduleMetrics (3)",
+          "native_id": "-",
+          "peak_rss": "-",
+          "peak_vmem": "-",
+          "rchar": "-",
+          "realtime": "1ms",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 13:48:15.196",
+          "task_id": "5",
+          "wchar": "-"
+        },
+        {
+          "%cpu": "-",
+          "duration": "14ms",
+          "exit": "-",
+          "hash": "95/de1c7b",
+          "name": "scheduleMetrics (4)",
+          "native_id": "-",
+          "peak_rss": "-",
+          "peak_vmem": "-",
+          "rchar": "-",
+          "realtime": "0ms",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 13:48:15.200",
+          "task_id": "6",
+          "wchar": "-"
+        },
+        {
+          "%cpu": "-",
+          "duration": "10ms",
+          "exit": "-",
+          "hash": "73/d3936e",
+          "name": "scheduleMetrics (5)",
+          "native_id": "-",
+          "peak_rss": "-",
+          "peak_vmem": "-",
+          "rchar": "-",
+          "realtime": "1ms",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 13:48:15.208",
+          "task_id": "7",
+          "wchar": "-"
+        },
+        {
+          "%cpu": "99.9%",
+          "duration": "1m 20s",
+          "exit": "0",
+          "hash": "69/4ac60a",
+          "name": "convertPredictions",
+          "native_id": "2814479",
+          "peak_rss": "1.5 GB",
+          "peak_vmem": "1.5 GB",
+          "rchar": "1.5 GB",
+          "realtime": "1m 20s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 13:48:15.183",
+          "task_id": "3",
+          "wchar": "1.5 GB"
+        },
+        {
+          "%cpu": "86.2%",
+          "duration": "3.6s",
+          "exit": "0",
+          "hash": "74/eb0f46",
+          "name": "vgnc_benchmark (1)",
+          "native_id": "2817198",
+          "peak_rss": "60 MB",
+          "peak_vmem": "77.1 MB",
+          "rchar": "63.6 MB",
+          "realtime": "3.1s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 13:49:35.427",
+          "task_id": "12",
+          "wchar": "550.1 KB"
+        },
+        {
+          "%cpu": "95.9%",
+          "duration": "9.8s",
+          "exit": "0",
+          "hash": "14/871159",
+          "name": "reference_genetrees_benchmark (SwissTrees)",
+          "native_id": "2817204",
+          "peak_rss": "235.4 MB",
+          "peak_vmem": "2.7 GB",
+          "rchar": "179.7 MB",
+          "realtime": "9.3s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 13:49:35.438",
+          "task_id": "11",
+          "wchar": "13.1 MB"
+        },
+        {
+          "%cpu": "97.8%",
+          "duration": "23s",
+          "exit": "0",
+          "hash": "8e/b11075",
+          "name": "reference_genetrees_benchmark (TreeFam-A)",
+          "native_id": "2817226",
+          "peak_rss": "466.5 MB",
+          "peak_vmem": "2.8 GB",
+          "rchar": "183 MB",
+          "realtime": "22.5s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 13:49:35.467",
+          "task_id": "13",
+          "wchar": "15 MB"
+        },
+        {
+          "%cpu": "99.5%",
+          "duration": "48.1s",
+          "exit": "0",
+          "hash": "7e/630005",
+          "name": "ec_benchmark (1)",
+          "native_id": "2817206",
+          "peak_rss": "558 MB",
+          "peak_vmem": "2.8 GB",
+          "rchar": "185.7 MB",
+          "realtime": "47.6s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 13:49:35.446",
+          "task_id": "9",
+          "wchar": "20 MB"
+        },
+        {
+          "%cpu": "99.9%",
+          "duration": "2m 45s",
+          "exit": "0",
+          "hash": "09/cd4c2d",
+          "name": "go_benchmark (1)",
+          "native_id": "2817216",
+          "peak_rss": "1009.5 MB",
+          "peak_vmem": "2.8 GB",
+          "rchar": "41.7 MB",
+          "realtime": "2m 44s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 13:49:35.456",
+          "task_id": "10",
+          "wchar": "28 MB"
+        },
+        {
+          "%cpu": "261.9%",
+          "duration": "28m 54s",
+          "exit": "0",
+          "hash": "ed/3f36f0",
+          "name": "fas_benchmark (1)",
+          "native_id": "2818989",
+          "peak_rss": "34.2 GB",
+          "peak_vmem": "37.4 GB",
+          "rchar": "121.1 GB",
+          "realtime": "28m 53s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 13:49:39.096",
+          "task_id": "14",
+          "wchar": "376.5 MB"
+        },
+        {
+          "%cpu": "176.3%",
+          "duration": "3.7s",
+          "exit": "0",
+          "hash": "a6/bfca0c",
+          "name": "consolidate",
+          "native_id": "2884632",
+          "peak_rss": "90 MB",
+          "peak_vmem": "515.1 MB",
+          "rchar": "32 MB",
+          "realtime": "3.4s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 14:18:32.755",
+          "task_id": "15",
+          "wchar": "412.9 KB"
+        }
+      ],
+      "native_trace": {
+        "bytes": 1790,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_1/stats/trace_2026-09-17_13-47-58.txt",
+        "sha256": "51fef2e87c716830c55a07930918f12d16f1ffc628280e18679e8c08a91edcfc"
+      },
+      "participant": "ohmm_checked_v2_1",
+      "scheduler": {
+        "Elapsed": "00:30:53",
+        "ExitCode": "0:0",
+        "JobID": "21548_1",
+        "JobIDRaw": "21623",
+        "State": "COMPLETED"
+      },
+      "stage": "multipass_refined",
+      "status": "admitted"
+    },
+    {
+      "assessment": {
+        "endpoints": {
+          "EC": {
+            "axes": {
+              "type": "2D-plot",
+              "x_axis": "NR_ORTHOLOGS",
+              "y_axis": "avg Schlicker"
+            },
+            "native_participant": {
+              "metric_x": 313912,
+              "metric_y": 0.88441954,
+              "participant_id": "ohmm_checked_v2_2",
+              "stderr_x": 0,
+              "stderr_y": 0.00078459076
+            },
+            "score": 0.88441954,
+            "score_semantics": "avg Schlicker"
+          },
+          "FAS": {
+            "axes": {
+              "type": "2D-plot",
+              "x_axis": "NR_ORTHOLOGS",
+              "y_axis": "FAS"
+            },
+            "native_participant": {
+              "metric_x": 31682321.0,
+              "metric_y": 0.7715748893898831,
+              "participant_id": "ohmm_checked_v2_2",
+              "stderr_x": 0,
+              "stderr_y": 0.0013800172155955246
+            },
+            "score": 0.7715748893898831,
+            "score_semantics": "FAS"
+          },
+          "GO": {
+            "axes": {
+              "type": "2D-plot",
+              "x_axis": "NR_ORTHOLOGS",
+              "y_axis": "avg Schlicker"
+            },
+            "native_participant": {
+              "metric_x": 351531,
+              "metric_y": 0.44400634,
+              "participant_id": "ohmm_checked_v2_2",
+              "stderr_x": 0,
+              "stderr_y": 0.0007515812
+            },
+            "score": 0.44400634,
+            "score_semantics": "avg Schlicker"
+          },
+          "SwissTrees": {
+            "axes": {
+              "type": "2D-plot",
+              "x_axis": "TPR",
+              "y_axis": "PPV"
+            },
+            "native_participant": {
+              "metric_x": 0.71709513,
+              "metric_y": 0.64508979,
+              "participant_id": "ohmm_checked_v2_2",
+              "stderr_x": 0.031833145,
+              "stderr_y": 0.027752428
+            },
+            "score": 0.6791893523850238,
+            "score_semantics": "harmonic mean of native TPR and PPV"
+          },
+          "TreeFam-A": {
+            "axes": {
+              "type": "2D-plot",
+              "x_axis": "TPR",
+              "y_axis": "PPV"
+            },
+            "native_participant": {
+              "metric_x": 0.6627704,
+              "metric_y": 0.69583142,
+              "participant_id": "ohmm_checked_v2_2",
+              "stderr_x": 0.0062797352,
+              "stderr_y": 0.0062614741
+            },
+            "score": 0.6788986467955238,
+            "score_semantics": "harmonic mean of native TPR and PPV"
+          },
+          "VGNC": {
+            "axes": {
+              "type": "2D-plot",
+              "x_axis": "TPR",
+              "y_axis": "PPV"
+            },
+            "native_participant": {
+              "metric_x": 0.9687473886521267,
+              "metric_y": 0.16028370755447408,
+              "participant_id": "ohmm_checked_v2_2",
+              "stderr_x": 0.002204432757847476,
+              "stderr_y": 0.0018905963931394971
+            },
+            "score": 0.27505783261166145,
+            "score_semantics": "harmonic mean of native TPR and PPV"
+          }
+        },
+        "limitations": [
+          "Secondary mean is project-defined, not official QfO F1.",
+          "Native standard errors are not paired method-difference confidence intervals.",
+          "NR_ORTHOLOGS measures challenge-assessed relations, not total submitted pair coverage.",
+          "This validates endpoint content, not scheduler, source/runtime or input provenance."
+        ],
+        "native_assessments": [
+          {
+            "_id": "QfO:SwissTrees-APP_TPR_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-APP",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.065523722,
+              "value": 0.87628866
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-APP_PPV_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-APP",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.08000206,
+              "value": 0.58219178
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-ASTER_TPR_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-ASTER",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.051682193,
+              "value": 0.224
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-ASTER_PPV_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-ASTER",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.034082999,
+              "value": 0.98245614
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-BAMBI_TPR_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-BAMBI",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.14129272,
+              "value": 0.59139785
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-BAMBI_PPV_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-BAMBI",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.080606683,
+              "value": 0.94827586
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-BAR_TPR_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-BAR",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.054606739,
+              "value": 0.62790698
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-BAR_PPV_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-BAR",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.052995069,
+              "value": 0.76209677
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-CASP_TPR_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-CASP",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.12670051,
+              "value": 0.87037037
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-CASP_PPV_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-CASP",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.15511518,
+              "value": 0.63513514
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-CITE_TPR_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-CITE",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.092996269,
+              "value": 0.77070064
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-CITE_PPV_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-CITE",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.0949418,
+              "value": 0.58454106
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-Clusterin_TPR_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-Clusterin",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.057627601,
+              "value": 0.97014925
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-Clusterin_PPV_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-Clusterin",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.12061581,
+              "value": 0.49242424
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-GH14_TPR_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-GH14",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.39448748,
+              "value": 0.41666667
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-GH14_PPV_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-GH14",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.25762448,
+              "value": 0.23809524
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-HOX_TPR_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-HOX",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.095261403,
+              "value": 0.24358974
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-HOX_PPV_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-HOX",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.11621515,
+              "value": 0.31147541
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-MAPT_TPR_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-MAPT",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.23395466,
+              "value": 0.58823529
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-MAPT_PPV_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-MAPT",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.23186203,
+              "value": 0.57142857
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-NOX_TPR_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-NOX",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.038272611,
+              "value": 0.89690722
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-NOX_PPV_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-NOX",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.042580995,
+              "value": 0.42110358
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-POP_TPR_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-POP",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.074902199,
+              "value": 0.83246073
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-POP_PPV_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-POP",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.084304928,
+              "value": 0.63346614
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-PSEN_TPR_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-PSEN",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.054535592,
+              "value": 0.71266541
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-PSEN_PPV_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-PSEN",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.043941714,
+              "value": 0.87674419
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-RPS_TPR_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-RPS",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.13391444,
+              "value": 0.80597015
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-RPS_PPV_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-RPS",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.068738635,
+              "value": 0.96428571
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-SERC_TPR_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-SERC",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.036564149,
+              "value": 0.84993179
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-SERC_PPV_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-SERC",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.038316129,
+              "value": 0.82516556
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-SUMF_TPR_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-SUMF",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.10875293,
+              "value": 0.94285714
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-SUMF_PPV_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-SUMF",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.16929935,
+              "value": 0.49253731
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-TRFE_TPR_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-TRFE",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.07989404,
+              "value": 0.88983051
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-TRFE_PPV_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-TRFE",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.070905177,
+              "value": 0.31722054
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-VATB_TPR_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-VATB",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.058595996,
+              "value": 0.79778393
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-VATB_PPV_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees-VATB",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.026126109,
+              "value": 0.97297297
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees_TPR_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.031833145,
+              "value": 0.71709513
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees_PPV_ohmm_checked_v2_2_A",
+            "challenge_id": "SwissTrees",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.027752428,
+              "value": 0.64508979
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:VGNC_TPR_ohmm-checked-v2-2_A",
+            "challenge_id": "VGNC",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.002204432757847476,
+              "value": 0.9687473886521267
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:VGNC_PPV_ohmm-checked-v2-2_A",
+            "challenge_id": "VGNC",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.0018905963931394971,
+              "value": 0.16028370755447408
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:TreeFam-A_TPR_ohmm_checked_v2_2_A",
+            "challenge_id": "TreeFam-A",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.0062797352,
+              "value": 0.6627704
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:TreeFam-A_PPV_ohmm_checked_v2_2_A",
+            "challenge_id": "TreeFam-A",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.0062614741,
+              "value": 0.69583142
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:EC_NR_ORTHOLOGS_ohmm_checked_v2_2_A",
+            "challenge_id": "EC",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "NR_ORTHOLOGS",
+              "stderr": 0,
+              "value": 313912
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:EC_avg Schlicker_ohmm_checked_v2_2_A",
+            "challenge_id": "EC",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "avg Schlicker",
+              "stderr": 0.00078459076,
+              "value": 0.88441954
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:GO_NR_ORTHOLOGS_ohmm_checked_v2_2_A",
+            "challenge_id": "GO",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "NR_ORTHOLOGS",
+              "stderr": 0,
+              "value": 351531
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:GO_avg Schlicker_ohmm_checked_v2_2_A",
+            "challenge_id": "GO",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "avg Schlicker",
+              "stderr": 0.0007515812,
+              "value": 0.44400634
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:FAS_FAS_ohmm-checked-v2-2_A",
+            "challenge_id": "FAS",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "FAS",
+              "stderr": 0.0013800172155955246,
+              "value": 0.7715748893898831
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:FAS_NR_ORTHOLOGS_ohmm-checked-v2-2_A",
+            "challenge_id": "FAS",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "NR_ORTHOLOGS",
+              "stderr": 0,
+              "value": 31682321.0
+            },
+            "participant_id": "ohmm_checked_v2_2",
+            "type": "assessment"
+          }
+        ],
+        "participant": "ohmm_checked_v2_2",
+        "secondary_six_metric_mean": 0.6221911001970154,
+        "swiss_reference_families": [
+          "APP",
+          "ASTER",
+          "BAMBI",
+          "BAR",
+          "CASP",
+          "CITE",
+          "Clusterin",
+          "GH14",
+          "HOX",
+          "MAPT",
+          "NOX",
+          "POP",
+          "PSEN",
+          "RPS",
+          "SERC",
+          "SUMF",
+          "TRFE",
+          "VATB"
+        ]
+      },
+      "conversion": {
+        "command": [
+          "/home/bizon/anaconda3/bin/python",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/og_to_pairwise.py",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_checked_full_replay_v2/replay/orthogroups_profiles.txt",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input"
+        ],
+        "conversion_log": {
+          "bytes": 25,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_recovered_stage_pairs_v1/strict_profiles/conversion.log",
+          "sha256": "5776e6c8de20b78786313d69291e2d1c2ac158502b8c0deac5bef3e971a871e4"
+        },
+        "filtered_pairs": {
+          "bytes": 492725902,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_recovered_stage_pairs_v1/strict_profiles/pairs.qfo.tsv",
+          "sha256": "0464a980212e11ec2b3b0f7366f672d83b89221ba9b2580158e5bd32d779ba12"
+        },
+        "index": 2,
+        "pairs": {
+          "bytes": 494107010,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_recovered_stage_pairs_v1/strict_profiles/pairs.tsv",
+          "sha256": "fdbdedef69e097bf03ab6008a2ec8bab2eb121f4b1c86c09435b88c2f3e12704"
+        },
+        "participant": "ohmm_checked_v2_2",
+        "partition": {
+          "bytes": 23667336,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_checked_full_replay_v2/replay/orthogroups_profiles.txt",
+          "sha256": "b3cfa6e570bdb7795016022b2c7b52d73bd07f09995150e2b4f5f10f5ca187b9"
+        },
+        "removed_mapping_pairs": 86556,
+        "retained_pairs": 31682321,
+        "stage": "strict_profiles",
+        "total_pairs": 31768877
+      },
+      "execution_report": {
+        "bytes": 203375,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_recovered_assessment_v1/stage_2/results.json",
+        "sha256": "b2f265f96d3a223112a28f1b826ac474d5f6a80c755eacbf87e72a5eecff1226"
+      },
+      "index": 2,
+      "metric_files": [
+        {
+          "bytes": 16947,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_2/assessment_out/Assessment_datasets.json",
+          "sha256": "be8f746f86ecb54169d6e8d676f6422c10629da23488f5e3c6f6b78d0fc4127a"
+        },
+        {
+          "bytes": 318907,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/ReconciledTrees_SwissTrees.drw",
+          "sha256": "40528e3537ba57e345c443c8024f99dc3940a66e2d102703754b41bb29858ecd"
+        },
+        {
+          "bytes": 669,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_2/results/VGNC/VGNC.json",
+          "sha256": "77985cd31c6e79f9502c78b9c25dae2b49e5c222352c29c020b21a9e373e89d9"
+        },
+        {
+          "bytes": 274,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/VGNC.json",
+          "sha256": "fa94b75446a592a3d52174ecf01a843f313f4be526fdad853eea3fa75dfadd0d"
+        },
+        {
+          "bytes": 645,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_2/results/SwissTrees/SwissTrees.json",
+          "sha256": "b7f783622cab055ff00c29799d8bfcda440f2a2391405fa38741416d0c4535f3"
+        },
+        {
+          "bytes": 286,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/SwissTrees.json",
+          "sha256": "79f1a55aa5e1c951c306cb56ed38f03f16b8b10409f41f28aeb6dabe416c1a4b"
+        },
+        {
+          "bytes": 644,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_2/results/TreeFam-A/TreeFam-A.json",
+          "sha256": "a2a1ffd912a86b2e0ab85001869b6fb02215c20b3c5b3c8bfef3366d4f7ec9b6"
+        },
+        {
+          "bytes": 284,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/TreeFam-A.json",
+          "sha256": "42bdfa2f53ac7c8921a41ec0f91936f7431097dcc54322b2eaef987d4799e595"
+        },
+        {
+          "bytes": 636,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_2/results/EC/EC.json",
+          "sha256": "f6b1a877e0aae0c1910ba2d2f85cd56cfdff2602a844bbb59e7b28049699d07f"
+        },
+        {
+          "bytes": 289,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/EC.json",
+          "sha256": "19f785029be53ad831c7c42b14f53e1d07c98cbd4f1418fd1746dc7cc9a0c44a"
+        },
+        {
+          "bytes": 635,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_2/results/GO/GO.json",
+          "sha256": "b96ba0bc259192c1b39c5895b02da108ce014a62ed0adaa2c8071c660b120bac"
+        },
+        {
+          "bytes": 289,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/GO.json",
+          "sha256": "f8ac402370bc597e785e6ea3eeb3a2e177be16d2611b17c83031469980363e46"
+        },
+        {
+          "bytes": 648,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_2/results/FAS/FAS.json",
+          "sha256": "358e5084873bb7006521a7d4744ab14b1b881c8ac0f4e1c1edefe77ce33b0e79"
+        },
+        {
+          "bytes": 281,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/FAS.json",
+          "sha256": "65e097459d7be1cb318981d1f721ff9bf22880e8d8948e2793625e8ac76b7663"
+        }
+      ],
+      "native_tasks": [
+        {
+          "%cpu": "100.2%",
+          "duration": "35.3s",
+          "exit": "0",
+          "hash": "b8/b3813e",
+          "name": "validate_input_file",
+          "native_id": "2885697",
+          "peak_rss": "1.5 GB",
+          "peak_vmem": "1.5 GB",
+          "rchar": "510.6 MB",
+          "realtime": "35s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 14:18:54.824",
+          "task_id": "1",
+          "wchar": "708 B"
+        },
+        {
+          "%cpu": "-",
+          "duration": "5ms",
+          "exit": "-",
+          "hash": "7c/b39049",
+          "name": "scheduleMetrics (1)",
+          "native_id": "-",
+          "peak_rss": "-",
+          "peak_vmem": "-",
+          "rchar": "-",
+          "realtime": "3ms",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 14:19:30.139",
+          "task_id": "3",
+          "wchar": "-"
+        },
+        {
+          "%cpu": "-",
+          "duration": "14ms",
+          "exit": "-",
+          "hash": "d8/f4c85a",
+          "name": "scheduleMetrics (3)",
+          "native_id": "-",
+          "peak_rss": "-",
+          "peak_vmem": "-",
+          "rchar": "-",
+          "realtime": "0ms",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 14:19:30.142",
+          "task_id": "5",
+          "wchar": "-"
+        },
+        {
+          "%cpu": "-",
+          "duration": "14ms",
+          "exit": "-",
+          "hash": "fa/5ed9a5",
+          "name": "scheduleMetrics (6)",
+          "native_id": "-",
+          "peak_rss": "-",
+          "peak_vmem": "-",
+          "rchar": "-",
+          "realtime": "1ms",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 14:19:30.146",
+          "task_id": "8",
+          "wchar": "-"
+        },
+        {
+          "%cpu": "-",
+          "duration": "14ms",
+          "exit": "-",
+          "hash": "31/b3d9a6",
+          "name": "scheduleMetrics (5)",
+          "native_id": "-",
+          "peak_rss": "-",
+          "peak_vmem": "-",
+          "rchar": "-",
+          "realtime": "0ms",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 14:19:30.148",
+          "task_id": "7",
+          "wchar": "-"
+        },
+        {
+          "%cpu": "-",
+          "duration": "12ms",
+          "exit": "-",
+          "hash": "11/9fc14f",
+          "name": "scheduleMetrics (2)",
+          "native_id": "-",
+          "peak_rss": "-",
+          "peak_vmem": "-",
+          "rchar": "-",
+          "realtime": "0ms",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 14:19:30.152",
+          "task_id": "4",
+          "wchar": "-"
+        },
+        {
+          "%cpu": "-",
+          "duration": "12ms",
+          "exit": "-",
+          "hash": "b7/52ee52",
+          "name": "scheduleMetrics (4)",
+          "native_id": "-",
+          "peak_rss": "-",
+          "peak_vmem": "-",
+          "rchar": "-",
+          "realtime": "0ms",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 14:19:30.154",
+          "task_id": "6",
+          "wchar": "-"
+        },
+        {
+          "%cpu": "99.9%",
+          "duration": "4m 13s",
+          "exit": "0",
+          "hash": "ca/7b5fa7",
+          "name": "convertPredictions",
+          "native_id": "2887218",
+          "peak_rss": "1.5 GB",
+          "peak_vmem": "1.5 GB",
+          "rchar": "5.5 GB",
+          "realtime": "4m 13s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 14:19:30.131",
+          "task_id": "2",
+          "wchar": "5.7 GB"
+        },
+        {
+          "%cpu": "96.8%",
+          "duration": "14.1s",
+          "exit": "0",
+          "hash": "ea/6b70b6",
+          "name": "reference_genetrees_benchmark (SwissTrees)",
+          "native_id": "2897942",
+          "peak_rss": "547 MB",
+          "peak_vmem": "3 GB",
+          "rchar": "481.2 MB",
+          "realtime": "13.5s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 14:23:43.324",
+          "task_id": "14",
+          "wchar": "13.1 MB"
+        },
+        {
+          "%cpu": "98.5%",
+          "duration": "8s",
+          "exit": "0",
+          "hash": "bb/aab5e8",
+          "name": "vgnc_benchmark (1)",
+          "native_id": "2904166",
+          "peak_rss": "121.1 MB",
+          "peak_vmem": "137.4 MB",
+          "rchar": "108.7 MB",
+          "realtime": "7.7s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 14:23:57.389",
+          "task_id": "9",
+          "wchar": "1.8 MB"
+        },
+        {
+          "%cpu": "98.5%",
+          "duration": "26.1s",
+          "exit": "0",
+          "hash": "aa/f5e4fa",
+          "name": "reference_genetrees_benchmark (TreeFam-A)",
+          "native_id": "2897956",
+          "peak_rss": "808.5 MB",
+          "peak_vmem": "3.1 GB",
+          "rchar": "484.6 MB",
+          "realtime": "25.6s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 14:23:43.335",
+          "task_id": "12",
+          "wchar": "15 MB"
+        },
+        {
+          "%cpu": "99.4%",
+          "duration": "1m 26s",
+          "exit": "0",
+          "hash": "57/c5f27c",
+          "name": "ec_benchmark (1)",
+          "native_id": "2897939",
+          "peak_rss": "882 MB",
+          "peak_vmem": "3.1 GB",
+          "rchar": "490 MB",
+          "realtime": "1m 25s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 14:23:43.317",
+          "task_id": "13",
+          "wchar": "23.3 MB"
+        },
+        {
+          "%cpu": "100.1%",
+          "duration": "5m 42s",
+          "exit": "0",
+          "hash": "60/360ae1",
+          "name": "go_benchmark (1)",
+          "native_id": "2897928",
+          "peak_rss": "1.1 GB",
+          "peak_vmem": "3.1 GB",
+          "rchar": "46.3 MB",
+          "realtime": "5m 41s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 14:23:43.295",
+          "task_id": "11",
+          "wchar": "34.1 MB"
+        },
+        {
+          "%cpu": "306.9%",
+          "duration": "53m 16s",
+          "exit": "0",
+          "hash": "69/3c15fc",
+          "name": "fas_benchmark (1)",
+          "native_id": "2897929",
+          "peak_rss": "34.2 GB",
+          "peak_vmem": "37.4 GB",
+          "rchar": "253.9 GB",
+          "realtime": "53m 16s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 14:23:43.305",
+          "task_id": "10",
+          "wchar": "1.1 GB"
+        },
+        {
+          "%cpu": "187.5%",
+          "duration": "3.5s",
+          "exit": "0",
+          "hash": "21/b1dba4",
+          "name": "consolidate",
+          "native_id": "3032400",
+          "peak_rss": "93 MB",
+          "peak_vmem": "516.9 MB",
+          "rchar": "32.6 MB",
+          "realtime": "3.2s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 15:16:59.805",
+          "task_id": "15",
+          "wchar": "417.7 KB"
+        }
+      ],
+      "native_trace": {
+        "bytes": 1793,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_2/stats/trace_2026-09-17_14-18-52.txt",
+        "sha256": "306543f22f2f83c34bf8b510036ef1aa80e9b33451e92d7e29583e9ea73ba1d1"
+      },
+      "participant": "ohmm_checked_v2_2",
+      "scheduler": {
+        "Elapsed": "00:58:29",
+        "ExitCode": "0:0",
+        "JobID": "21548_2",
+        "JobIDRaw": "21624",
+        "State": "COMPLETED"
+      },
+      "stage": "strict_profiles",
+      "status": "admitted"
+    },
+    {
+      "assessment": {
+        "endpoints": {
+          "EC": {
+            "axes": {
+              "type": "2D-plot",
+              "x_axis": "NR_ORTHOLOGS",
+              "y_axis": "avg Schlicker"
+            },
+            "native_participant": {
+              "metric_x": 187772,
+              "metric_y": 0.93134728,
+              "participant_id": "ohmm_checked_v2_3",
+              "stderr_x": 0,
+              "stderr_y": 0.00083405317
+            },
+            "score": 0.93134728,
+            "score_semantics": "avg Schlicker"
+          },
+          "FAS": {
+            "axes": {
+              "type": "2D-plot",
+              "x_axis": "NR_ORTHOLOGS",
+              "y_axis": "FAS"
+            },
+            "native_participant": {
+              "metric_x": 8710722.0,
+              "metric_y": 0.7746333592919895,
+              "participant_id": "ohmm_checked_v2_3",
+              "stderr_x": 0,
+              "stderr_y": 0.0008634903942024991
+            },
+            "score": 0.7746333592919895,
+            "score_semantics": "FAS"
+          },
+          "GO": {
+            "axes": {
+              "type": "2D-plot",
+              "x_axis": "NR_ORTHOLOGS",
+              "y_axis": "avg Schlicker"
+            },
+            "native_participant": {
+              "metric_x": 144347,
+              "metric_y": 0.47235028,
+              "participant_id": "ohmm_checked_v2_3",
+              "stderr_x": 0,
+              "stderr_y": 0.0012059493
+            },
+            "score": 0.47235028,
+            "score_semantics": "avg Schlicker"
+          },
+          "SwissTrees": {
+            "axes": {
+              "type": "2D-plot",
+              "x_axis": "TPR",
+              "y_axis": "PPV"
+            },
+            "native_participant": {
+              "metric_x": 0.70586947,
+              "metric_y": 0.64461096,
+              "participant_id": "ohmm_checked_v2_3",
+              "stderr_x": 0.03192484,
+              "stderr_y": 0.027778322
+            },
+            "score": 0.6738508557156822,
+            "score_semantics": "harmonic mean of native TPR and PPV"
+          },
+          "TreeFam-A": {
+            "axes": {
+              "type": "2D-plot",
+              "x_axis": "TPR",
+              "y_axis": "PPV"
+            },
+            "native_participant": {
+              "metric_x": 0.44803197,
+              "metric_y": 0.80770027,
+              "participant_id": "ohmm_checked_v2_3",
+              "stderr_x": 0.0066055411,
+              "stderr_y": 0.0070288132
+            },
+            "score": 0.5763578119769099,
+            "score_semantics": "harmonic mean of native TPR and PPV"
+          },
+          "VGNC": {
+            "axes": {
+              "type": "2D-plot",
+              "x_axis": "TPR",
+              "y_axis": "PPV"
+            },
+            "native_participant": {
+              "metric_x": 0.8321216679201137,
+              "metric_y": 0.5575275740440065,
+              "participant_id": "ohmm_checked_v2_3",
+              "stderr_x": 0.0047352091517226325,
+              "stderr_y": 0.0051506788230552296
+            },
+            "score": 0.6676947834249698,
+            "score_semantics": "harmonic mean of native TPR and PPV"
+          }
+        },
+        "limitations": [
+          "Secondary mean is project-defined, not official QfO F1.",
+          "Native standard errors are not paired method-difference confidence intervals.",
+          "NR_ORTHOLOGS measures challenge-assessed relations, not total submitted pair coverage.",
+          "This validates endpoint content, not scheduler, source/runtime or input provenance."
+        ],
+        "native_assessments": [
+          {
+            "_id": "QfO:SwissTrees-APP_TPR_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-APP",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.065523722,
+              "value": 0.87628866
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-APP_PPV_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-APP",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.08000206,
+              "value": 0.58219178
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-ASTER_TPR_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-ASTER",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.051682193,
+              "value": 0.224
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-ASTER_PPV_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-ASTER",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.034082999,
+              "value": 0.98245614
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-BAMBI_TPR_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-BAMBI",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.14129272,
+              "value": 0.59139785
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-BAMBI_PPV_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-BAMBI",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.080606683,
+              "value": 0.94827586
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-BAR_TPR_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-BAR",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.054606739,
+              "value": 0.62790698
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-BAR_PPV_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-BAR",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.052995069,
+              "value": 0.76209677
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-CASP_TPR_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-CASP",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.12670051,
+              "value": 0.87037037
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-CASP_PPV_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-CASP",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.15511518,
+              "value": 0.63513514
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-CITE_TPR_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-CITE",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.092996269,
+              "value": 0.77070064
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-CITE_PPV_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-CITE",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.0949418,
+              "value": 0.58454106
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-Clusterin_TPR_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-Clusterin",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.057627601,
+              "value": 0.97014925
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-Clusterin_PPV_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-Clusterin",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.12061581,
+              "value": 0.49242424
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-GH14_TPR_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-GH14",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.39448748,
+              "value": 0.41666667
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-GH14_PPV_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-GH14",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.25762448,
+              "value": 0.23809524
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-HOX_TPR_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-HOX",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.095261403,
+              "value": 0.24358974
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-HOX_PPV_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-HOX",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.11621515,
+              "value": 0.31147541
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-MAPT_TPR_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-MAPT",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.23395466,
+              "value": 0.58823529
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-MAPT_PPV_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-MAPT",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.23186203,
+              "value": 0.57142857
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-NOX_TPR_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-NOX",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.057956783,
+              "value": 0.69484536
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-NOX_PPV_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-NOX",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.047739026,
+              "value": 0.4124847
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-POP_TPR_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-POP",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.074902199,
+              "value": 0.83246073
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-POP_PPV_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-POP",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.084304928,
+              "value": 0.63346614
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-PSEN_TPR_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-PSEN",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.054535592,
+              "value": 0.71266541
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-PSEN_PPV_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-PSEN",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.043941714,
+              "value": 0.87674419
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-RPS_TPR_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-RPS",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.13391444,
+              "value": 0.80597015
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-RPS_PPV_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-RPS",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.068738635,
+              "value": 0.96428571
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-SERC_TPR_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-SERC",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.036564149,
+              "value": 0.84993179
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-SERC_PPV_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-SERC",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.038316129,
+              "value": 0.82516556
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-SUMF_TPR_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-SUMF",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.10875293,
+              "value": 0.94285714
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-SUMF_PPV_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-SUMF",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.16929935,
+              "value": 0.49253731
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-TRFE_TPR_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-TRFE",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.07989404,
+              "value": 0.88983051
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-TRFE_PPV_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-TRFE",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.070905177,
+              "value": 0.31722054
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-VATB_TPR_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-VATB",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.058595996,
+              "value": 0.79778393
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees-VATB_PPV_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees-VATB",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.026126109,
+              "value": 0.97297297
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees_TPR_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.03192484,
+              "value": 0.70586947
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:SwissTrees_PPV_ohmm_checked_v2_3_A",
+            "challenge_id": "SwissTrees",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.027778322,
+              "value": 0.64461096
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:VGNC_TPR_ohmm-checked-v2-3_A",
+            "challenge_id": "VGNC",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.0047352091517226325,
+              "value": 0.8321216679201137
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:VGNC_PPV_ohmm-checked-v2-3_A",
+            "challenge_id": "VGNC",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.0051506788230552296,
+              "value": 0.5575275740440065
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:TreeFam-A_TPR_ohmm_checked_v2_3_A",
+            "challenge_id": "TreeFam-A",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "TPR",
+              "stderr": 0.0066055411,
+              "value": 0.44803197
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:TreeFam-A_PPV_ohmm_checked_v2_3_A",
+            "challenge_id": "TreeFam-A",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "PPV",
+              "stderr": 0.0070288132,
+              "value": 0.80770027
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:EC_NR_ORTHOLOGS_ohmm_checked_v2_3_A",
+            "challenge_id": "EC",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "NR_ORTHOLOGS",
+              "stderr": 0,
+              "value": 187772
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:EC_avg Schlicker_ohmm_checked_v2_3_A",
+            "challenge_id": "EC",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "avg Schlicker",
+              "stderr": 0.00083405317,
+              "value": 0.93134728
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:GO_NR_ORTHOLOGS_ohmm_checked_v2_3_A",
+            "challenge_id": "GO",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "NR_ORTHOLOGS",
+              "stderr": 0,
+              "value": 144347
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:GO_avg Schlicker_ohmm_checked_v2_3_A",
+            "challenge_id": "GO",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "avg Schlicker",
+              "stderr": 0.0012059493,
+              "value": 0.47235028
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:FAS_FAS_ohmm-checked-v2-3_A",
+            "challenge_id": "FAS",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "FAS",
+              "stderr": 0.0008634903942024991,
+              "value": 0.7746333592919895
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          },
+          {
+            "_id": "QfO:FAS_NR_ORTHOLOGS_ohmm-checked-v2-3_A",
+            "challenge_id": "FAS",
+            "community_id": "QfO",
+            "metrics": {
+              "metric_id": "NR_ORTHOLOGS",
+              "stderr": 0,
+              "value": 8710722.0
+            },
+            "participant_id": "ohmm_checked_v2_3",
+            "type": "assessment"
+          }
+        ],
+        "participant": "ohmm_checked_v2_3",
+        "secondary_six_metric_mean": 0.6827057284015918,
+        "swiss_reference_families": [
+          "APP",
+          "ASTER",
+          "BAMBI",
+          "BAR",
+          "CASP",
+          "CITE",
+          "Clusterin",
+          "GH14",
+          "HOX",
+          "MAPT",
+          "NOX",
+          "POP",
+          "PSEN",
+          "RPS",
+          "SERC",
+          "SUMF",
+          "TRFE",
+          "VATB"
+        ]
+      },
+      "conversion": {
+        "command": [
+          "/home/bizon/anaconda3/bin/python",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/og_to_pairwise.py",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_checked_full_replay_v2/replay/orthogroups_profiles_refined.txt",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input"
+        ],
+        "conversion_log": {
+          "bytes": 24,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_recovered_stage_pairs_v1/strict_profiles_refined/conversion.log",
+          "sha256": "3bafc0a2d4743ddabdb993c18e1b3796b769fe8f151958d18aaad2b26fe3eb77"
+        },
+        "filtered_pairs": {
+          "bytes": 133850356,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_recovered_stage_pairs_v1/strict_profiles_refined/pairs.qfo.tsv",
+          "sha256": "1221dca498c3ae4f099763bfe4656f19b23d01a4b33fa220d8aab545042089a3"
+        },
+        "index": 3,
+        "pairs": {
+          "bytes": 134355710,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_recovered_stage_pairs_v1/strict_profiles_refined/pairs.tsv",
+          "sha256": "cabfc6f6ad661f2b8fb06ec9730b634fa9ec1b830ea15ebdbb267def486a4a8f"
+        },
+        "participant": "ohmm_checked_v2_3",
+        "partition": {
+          "bytes": 23667336,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_checked_full_replay_v2/replay/orthogroups_profiles_refined.txt",
+          "sha256": "b145839d6d7ef4654134652a6ecf3d51ffe3657fd2968ef0281b46bdc87ce8fd"
+        },
+        "removed_mapping_pairs": 31051,
+        "retained_pairs": 8710722,
+        "stage": "strict_profiles_refined",
+        "total_pairs": 8741773
+      },
+      "execution_report": {
+        "bytes": 203458,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_recovered_assessment_v1/stage_3/results.json",
+        "sha256": "9ed8967764e40c63dc674c58f1f2ec789d672a9fd53ee12a20874a64ea350f04"
+      },
+      "index": 3,
+      "metric_files": [
+        {
+          "bytes": 16945,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_3/assessment_out/Assessment_datasets.json",
+          "sha256": "d2210b3ce85c49896498d92403099168c6143a816833e0dcd6da250561f32bd8"
+        },
+        {
+          "bytes": 318907,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/ReconciledTrees_SwissTrees.drw",
+          "sha256": "40528e3537ba57e345c443c8024f99dc3940a66e2d102703754b41bb29858ecd"
+        },
+        {
+          "bytes": 669,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_3/results/VGNC/VGNC.json",
+          "sha256": "10ae91a60a340b1264e1464ad6a8e7b1484bb539953da90b15a5185be318624d"
+        },
+        {
+          "bytes": 274,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/VGNC.json",
+          "sha256": "fa94b75446a592a3d52174ecf01a843f313f4be526fdad853eea3fa75dfadd0d"
+        },
+        {
+          "bytes": 644,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_3/results/SwissTrees/SwissTrees.json",
+          "sha256": "7d23ca58fd04dc99dfe4ac3d70c8a289355ad68dc93673b508fe8fd9c1f50c18"
+        },
+        {
+          "bytes": 286,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/SwissTrees.json",
+          "sha256": "79f1a55aa5e1c951c306cb56ed38f03f16b8b10409f41f28aeb6dabe416c1a4b"
+        },
+        {
+          "bytes": 645,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_3/results/TreeFam-A/TreeFam-A.json",
+          "sha256": "8f6867bab090a44ca8b03f8072ce57280ef40ef87375aa88af479198f3470405"
+        },
+        {
+          "bytes": 284,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/TreeFam-A.json",
+          "sha256": "42bdfa2f53ac7c8921a41ec0f91936f7431097dcc54322b2eaef987d4799e595"
+        },
+        {
+          "bytes": 636,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_3/results/EC/EC.json",
+          "sha256": "e894d9bb53d1dc0dde158cede89e657552e3e9ca4777e05cb9834f4637991716"
+        },
+        {
+          "bytes": 289,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/EC.json",
+          "sha256": "19f785029be53ad831c7c42b14f53e1d07c98cbd4f1418fd1746dc7cc9a0c44a"
+        },
+        {
+          "bytes": 635,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_3/results/GO/GO.json",
+          "sha256": "5c8e399ba629ac29c181823c2d4302824ae11471779fff1b4b60c39e7c9dcca5"
+        },
+        {
+          "bytes": 289,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/GO.json",
+          "sha256": "f8ac402370bc597e785e6ea3eeb3a2e177be16d2611b17c83031469980363e46"
+        },
+        {
+          "bytes": 647,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_3/results/FAS/FAS.json",
+          "sha256": "1b30afbec5575c446671165d2b2951b3930d49f99ab3c9eefbff4261b8975cb3"
+        },
+        {
+          "bytes": 281,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/FAS.json",
+          "sha256": "65e097459d7be1cb318981d1f721ff9bf22880e8d8948e2793625e8ac76b7663"
+        }
+      ],
+      "native_tasks": [
+        {
+          "%cpu": "100.1%",
+          "duration": "15.3s",
+          "exit": "0",
+          "hash": "7a/0f1fa1",
+          "name": "validate_input_file",
+          "native_id": "3033275",
+          "peak_rss": "1.5 GB",
+          "peak_vmem": "1.5 GB",
+          "rchar": "168.3 MB",
+          "realtime": "15s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 15:17:22.924",
+          "task_id": "1",
+          "wchar": "708 B"
+        },
+        {
+          "%cpu": "-",
+          "duration": "13ms",
+          "exit": "-",
+          "hash": "d6/7bd25b",
+          "name": "scheduleMetrics (2)",
+          "native_id": "-",
+          "peak_rss": "-",
+          "peak_vmem": "-",
+          "rchar": "-",
+          "realtime": "6ms",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 15:17:38.248",
+          "task_id": "4",
+          "wchar": "-"
+        },
+        {
+          "%cpu": "-",
+          "duration": "14ms",
+          "exit": "-",
+          "hash": "60/fb513f",
+          "name": "scheduleMetrics (4)",
+          "native_id": "-",
+          "peak_rss": "-",
+          "peak_vmem": "-",
+          "rchar": "-",
+          "realtime": "0ms",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 15:17:38.250",
+          "task_id": "6",
+          "wchar": "-"
+        },
+        {
+          "%cpu": "-",
+          "duration": "98ms",
+          "exit": "-",
+          "hash": "bc/d124d1",
+          "name": "scheduleMetrics (5)",
+          "native_id": "-",
+          "peak_rss": "-",
+          "peak_vmem": "-",
+          "rchar": "-",
+          "realtime": "1ms",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 15:17:38.255",
+          "task_id": "7",
+          "wchar": "-"
+        },
+        {
+          "%cpu": "-",
+          "duration": "95ms",
+          "exit": "-",
+          "hash": "93/c676eb",
+          "name": "scheduleMetrics (3)",
+          "native_id": "-",
+          "peak_rss": "-",
+          "peak_vmem": "-",
+          "rchar": "-",
+          "realtime": "0ms",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 15:17:38.260",
+          "task_id": "5",
+          "wchar": "-"
+        },
+        {
+          "%cpu": "-",
+          "duration": "96ms",
+          "exit": "-",
+          "hash": "ab/f7e4e9",
+          "name": "scheduleMetrics (1)",
+          "native_id": "-",
+          "peak_rss": "-",
+          "peak_vmem": "-",
+          "rchar": "-",
+          "realtime": "1ms",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 15:17:38.262",
+          "task_id": "2",
+          "wchar": "-"
+        },
+        {
+          "%cpu": "-",
+          "duration": "95ms",
+          "exit": "-",
+          "hash": "47/68182d",
+          "name": "scheduleMetrics (6)",
+          "native_id": "-",
+          "peak_rss": "-",
+          "peak_vmem": "-",
+          "rchar": "-",
+          "realtime": "0ms",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 15:17:38.265",
+          "task_id": "8",
+          "wchar": "-"
+        },
+        {
+          "%cpu": "99.8%",
+          "duration": "1m 20s",
+          "exit": "0",
+          "hash": "c7/5f6245",
+          "name": "convertPredictions",
+          "native_id": "3034288",
+          "peak_rss": "1.5 GB",
+          "peak_vmem": "1.5 GB",
+          "rchar": "1.5 GB",
+          "realtime": "1m 20s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 15:17:38.242",
+          "task_id": "3",
+          "wchar": "1.5 GB"
+        },
+        {
+          "%cpu": "93.5%",
+          "duration": "9.6s",
+          "exit": "0",
+          "hash": "ce/5e855a",
+          "name": "reference_genetrees_benchmark (SwissTrees)",
+          "native_id": "3037423",
+          "peak_rss": "217.1 MB",
+          "peak_vmem": "2.7 GB",
+          "rchar": "179.7 MB",
+          "realtime": "9.1s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 15:18:58.150",
+          "task_id": "11",
+          "wchar": "13.1 MB"
+        },
+        {
+          "%cpu": "97.0%",
+          "duration": "3.7s",
+          "exit": "0",
+          "hash": "5b/324c8c",
+          "name": "vgnc_benchmark (1)",
+          "native_id": "3041649",
+          "peak_rss": "64.5 MB",
+          "peak_vmem": "77.3 MB",
+          "rchar": "63.8 MB",
+          "realtime": "3.3s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 15:19:07.744",
+          "task_id": "13",
+          "wchar": "550.2 KB"
+        },
+        {
+          "%cpu": "98.4%",
+          "duration": "23.6s",
+          "exit": "0",
+          "hash": "98/954dc7",
+          "name": "reference_genetrees_benchmark (TreeFam-A)",
+          "native_id": "3037464",
+          "peak_rss": "468 MB",
+          "peak_vmem": "2.8 GB",
+          "rchar": "183.1 MB",
+          "realtime": "23.1s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 15:18:58.185",
+          "task_id": "14",
+          "wchar": "15 MB"
+        },
+        {
+          "%cpu": "99.3%",
+          "duration": "54.4s",
+          "exit": "0",
+          "hash": "0f/599dba",
+          "name": "ec_benchmark (1)",
+          "native_id": "3037419",
+          "peak_rss": "553.5 MB",
+          "peak_vmem": "2.8 GB",
+          "rchar": "185.7 MB",
+          "realtime": "54s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 15:18:58.142",
+          "task_id": "10",
+          "wchar": "20 MB"
+        },
+        {
+          "%cpu": "99.9%",
+          "duration": "2m 48s",
+          "exit": "0",
+          "hash": "0e/b07f13",
+          "name": "go_benchmark (1)",
+          "native_id": "3037430",
+          "peak_rss": "1015.5 MB",
+          "peak_vmem": "2.8 GB",
+          "rchar": "41.7 MB",
+          "realtime": "2m 47s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 15:18:58.158",
+          "task_id": "9",
+          "wchar": "28 MB"
+        },
+        {
+          "%cpu": "270.9%",
+          "duration": "27m 32s",
+          "exit": "0",
+          "hash": "bd/bd7261",
+          "name": "fas_benchmark (1)",
+          "native_id": "3037444",
+          "peak_rss": "34.2 GB",
+          "peak_vmem": "37.4 GB",
+          "rchar": "121.5 GB",
+          "realtime": "27m 31s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 15:18:58.168",
+          "task_id": "12",
+          "wchar": "375.6 MB"
+        },
+        {
+          "%cpu": "190.4%",
+          "duration": "3.4s",
+          "exit": "0",
+          "hash": "d6/fe548e",
+          "name": "consolidate",
+          "native_id": "3113431",
+          "peak_rss": "96 MB",
+          "peak_vmem": "516.7 MB",
+          "rchar": "32.3 MB",
+          "realtime": "3.1s",
+          "status": "COMPLETED",
+          "submit": "2026-09-17 15:46:29.896",
+          "task_id": "15",
+          "wchar": "417.9 KB"
+        }
+      ],
+      "native_trace": {
+        "bytes": 1795,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_3/stats/trace_2026-09-17_15-17-21.txt",
+        "sha256": "1c07d96528ba9b34b3241dbe431c37371a9fb9dc42c5ff003213d3bac5bf7c7f"
+      },
+      "participant": "ohmm_checked_v2_3",
+      "scheduler": {
+        "Elapsed": "00:29:28",
+        "ExitCode": "0:0",
+        "JobID": "21548_3",
+        "JobIDRaw": "21548",
+        "State": "COMPLETED"
+      },
+      "stage": "strict_profiles_refined",
+      "status": "admitted"
+    }
+  ],
+  "source": {
+    "bytes": 8180,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_assessment_admission_v1/benchmark_tools/admit_qfo_recovered_assessment.py",
+    "sha256": "7aae757dc199cbb4fe68456f4bfc37e699eb51c38323ce46a4e99213830686e5"
+  },
+  "status": "four_stage_assessments_checked"
+}

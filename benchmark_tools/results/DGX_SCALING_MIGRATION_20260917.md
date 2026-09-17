@@ -589,3 +589,51 @@ The summarizer checks the complete order/thread inventory and recomputes
 all mismatch counts/indices from raw scores. All11 probe-integrity tests
 pass. These checks strengthen finite-fixture evidence only: no frozen
 runtime was modified and no new accuracy or performance claim is admitted.
+
+## OrthoFinder Orthogroup-Mode Functional Probe
+
+Slurm21633 failed2:0 before inference: deriving the helper directory from
+the spooled script's $0 pointed into Slurm's job directory. The original
+recipe/output remain preserved. Fresh recipe/output v2 passes the helper
+directory explicitly;21634 completed0:0 in26s with4CPUs8GiB. Inputs were
+the same8-species645-gene missing20_20261101 fixture used for OrthoHMM.
+
+The script retains the historical name run_dgx_orthofinder_checkpoint_smoke.sh,
+but its -og option is NOT a sequence-only stopping mode in3.1.5: the native
+log shows MSA, gene/species-tree inference, reconciliation and HOG writing.
+The invocation was orthofinder -f INPUT -t4 -a4 -Sdiamond -og -o OUTPUT.
+This is not the full default command planned for the timing panel and must
+not substitute for its end-to-end gate. FastME remains unresolved; this fixture
+completed without it, which does not establish the STAG/FastME path works.
+
+Input and copied-input hashes passed before/after checks, and effective
+runtime snapshots are byte-identical. The MCL graph passes finite-weight
+validation; strict ID restoration and complete unique membership cover645
+input genes in99 groups. Canonical group memberships exactly match the99
+retained x86 MCL checkpoint groups from publication_variable_methods_v2.
+This is one intermediate-fixture agreement, not general portability or
+identity of final HOG/pairwise outputs. Native warnings about absent within-
+species hits for species1 and5 remain in the unmodified log.
+
+strace -f recorded successful executions of the pinned native DIAMOND2.0.13,
+MCL14-137, FAMSA2.2.3-1669fc1 and FastTree2.1.11 paths. At least42/2/89/93
+unsplit successful execve records, respectively, were observed; these are
+not exhaustive task counts because concurrent calls may be split by strace.
+The trace records current execution, not historical x86 child attribution.
+Tracing overhead prohibits treating this smoke as a scientific timing.
+
+Raw local root:
+benchmarks/work/dgx_orthofinder_checkpoint_smoke_v2/orthofinder_checkpoint_smoke_v2.
+Remote roots and both versioned recipes remain under the DGX project directory.
+SHA256:
+
+- runtime.before.json and runtime.after.json:
+  409309bf548b88ab1dc8c768ee5d7db7aeb592737afb84686b744f1e1c20ffde.
+- execve.log:
+  54debdeec11a9c79e57580986d2b9f2be57b5b83545e4ddffb61ac503996e950.
+- native.log:
+  8bbf7436a95cbe7797da6ab45fc90f7d449fd0bc28ef96b13e98baac4984108b.
+
+FastME retrieval21627 terminatedFAILED18:0 after33:17, with1064907 bytes
+(171027 bytes remaining). Resumed only after terminal confirmation as21632,
+same pinned fetch recipe and partial file; no source extraction/build yet.
