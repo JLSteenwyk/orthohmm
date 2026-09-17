@@ -91,7 +91,18 @@ the maximum sampled summed RSS was6,861,684,736 bytes. These measurements only
 describe that window, which was not isolated from other workloads or unit tests.
 Sampling failures are retained and do not imply that the Slurm job terminated.
 
-Inference/stage boundaries, unrelated-workload attribution, whole-run monitoring,
-timeout/failure accounting and end-to-end tests are still required before the
+`measure_slurm_command.py` now wraps command launch through exit in a dedicated
+Slurm task subtree, retaining zero/nonzero exit, timeout, spawn failure and
+measurement failure separately. The [Slurm lifecycle smoke](resource_command_smoke_20260917.json)
+completed as job21330 with two allocated CPUs and a one-GiB inherited limit.
+Thirteen observations captured wrapper-only before/after and wrapper plus parent
+and child during the command. Real subprocess tests also cover failures and
+timeout cleanup, including a TERM-resistant child. The smoke was not a scientific
+scaling run or an isolated performance comparison. Native output correctness is
+not inferred from exit zero, and a sampling failure does not stop native execution
+before its own exit or declared timeout.
+
+Scientific inference/stage command boundaries, unrelated-workload attribution,
+whole-run workload checks and native-output validation are still required before the
 27 timing runs. An anchor's task subtree does not necessarily contain every
 Slurm step in a job; record the scope rather than labeling it whole-job memory.

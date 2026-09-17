@@ -4030,3 +4030,21 @@ Freeze/push before execution. This smoke is instrumentation validation, not one
 of the planned27 scientific scaling runs, and does not count as timing evidence
 for any orthology tool. Controlled workload gates and exact scientific command/
 output validation remain outstanding.
+
+Executor8c54f87 committed/pushed and frozen at
+benchmarks/work/publication_resource_command_v1. Submitted instrumentation
+smoke21330; authoritative sacct confirms COMPLETED0:0 in00:03. Wrapper status
+command_exited_zero, exit0, command wall2.424314534s;13 samples spanning2.427225855s.
+Observed process counts were1 before launch,3 during execution,1 after exit;
+two effective CPUs throughout and inherited1GiB cap passed preflight. No process
+sampling errors. Cgroup CPUdelta450,593microseconds; reported memory peak69,480,448
+bytes and sampled summedRSSmaximum84,934,656bytes retain their different accounting
+definitions (shared pages can make summed RSS exceed cgroup charge).
+
+Independent reread checked retained sample hash, scope CPU count, before/during/
+after process inventory and cumulative CPU difference against the report.
+Results and raw samples copied to resource_command_smoke_20260917.json and
+resource_command_smoke_samples_20260917.jsonl under benchmark_tools/results;
+originals remain at benchmarks/results/resource_command_smoke_v1. No quiet-host
+claim: controlled_workload_verified staysfalse. Updated matched-scaling protocol.
+QfO21329 remains on multipass clustering; its final replay admission is pending.
