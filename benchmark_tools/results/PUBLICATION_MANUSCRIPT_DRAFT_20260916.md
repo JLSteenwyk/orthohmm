@@ -85,6 +85,21 @@ BUSCO-reference pair statistic ignores false positives involving
 non-reference genes and cannot establish proteome-wide orthology accuracy.
 [Machine-readable comparison](publication_comparison_orthomcl_complete_20260916.json).
 
+For the separately recovered four-stage QfO replay, SwissTrees raw counts
+were reconstructed using the frozen native scorer and reference. Each
+one-direction reference relation contributes half a count before a prior
+of one is added to each confusion category. Across18 reference families,
+precision and recall are averaged separately before forming the project F1.
+We used100000 shared paired family draws (PCG64seed20260919), recomputing
+this statistic in each draw, with nominal95% and12-endpoint Bonferroni
+percentile intervals for four contrasts and three metrics. The protocol
+was fixed after point estimates were known but before interval calculation;
+it is development-exposed follow-up, not independent confirmation. Disjoint
+represented genes do not eliminate dependence from shared evolutionary
+history or merged predictions. Other QfO challenges need separate uncertainty
+analyses; these intervals do not cover the secondary six-metric mean.
+[Protocol](QFO_SWISS_UNCERTAINTY_PROTOCOL_20260917.md).
+
 ### Prospective Validation And Ablations
 
 The frozen YGOB experiment retains 16 non-Saccharomyces species, 83,404
@@ -232,6 +247,22 @@ orthology accuracy. The six native endpoint panels retain their assessed
 relation counts or precision-recall axes.
 [Comparison](PUBLICATION_COMPARISON_ORTHOMCL_COMPLETE_20260916.md),
 [endpoint figure](figures_accuracy_orthomcl_complete_20260916/qfo_endpoints.png).
+
+The independently admitted recovered replay is reported separately from
+these historical method rows. Its profile branch had SwissTrees F1
+differences of-0.003706 before and-0.003716 after sequence-based refinement
+(raw0-to1 units). The corresponding adjusted intervals were
+[-0.020824,0.003397] and[-0.020829,0.003347]. Across all four fixed stage
+contrasts and three metrics, every adjusted interval included zero; this
+establishes neither a benefit nor equivalence. Only CASP and GH14 changed
+under profile-branch processing (one family F1 gain, one loss,16 ties),
+while sequence-based refinement changed only NOX (one loss,17 ties).
+These are exhaustive descriptive family effects, not selected biological
+success stories or mechanistic attribution. The profile branch includes
+downstream graph/assignment responses; sequence refinement is not
+phylogenetic reconciliation.
+[Stage results](QFO_RECOVERED_STAGE_RESULTS_20260917.md),
+[paired intervals](QFO_SWISS_INTERVALS_20260917.md).
 
 OrthoMCL final-group scoring completed successfully, with all six endpoint
 tasks and consolidation exiting zero. Its secondary mean was 0.705177.

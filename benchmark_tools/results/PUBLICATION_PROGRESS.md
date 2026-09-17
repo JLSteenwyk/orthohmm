@@ -1,5 +1,30 @@
 # Publication Progress
 
+## SwissTrees Paired Intervals Completed (2026-09-17)
+
+Previous turn progressed the count audit and froze the protocol in9214a81.
+Re-read the objective and protocol. Implemented the fixed100000 paired draws,
+PCG64seed20260919, four contrasts and12 endpoints. Input/protocol hashes,
+counts, family inventories, disjoint genes, reference truth totals, stored
+statistics and native macro aggregation are checked before inference.
+Tests independently reconstruct shared draws, reject malformed evidence,
+and verify identical stages produce exact zero differences and intervals.
+All12 new tests pass; complete unit suite1893passed45.91s.
+
+All12 adjusted intervals include zero. Profile-branch F1 differences are
+-0.003706 and-0.003716, with adjusted intervals[-0.020824,0.003397] and
+[-0.020829,0.003347]. Profile effects occur only in CASP and GH14, and
+sequence-refinement effects only in NOX. These are descriptive findings,
+not superiority, equivalence or evidence of a phylogenetic effect.
+qfo_swiss_intervals_20260917.json SHA256:
+5cc5f6958ad33bd27e10a9062cc474d171eed0c4ee126577ab2442919b373ec2.
+Generated report, claim checklist and manuscript updated; other QfO
+challenge uncertainty and all broader publication requirements remain open.
+
+FastME21632 terminatedFAILED18:0 after15:47 with42197 bytes remaining.
+After terminal confirmation, resumed the same partial archive as21635;
+last confirmedlive3:31. No extraction/build or scientific timing launched.
+
 ## SwissTrees Raw Count Audit (2026-09-17)
 
 Previous turn made progress and pushedbfb93fb. Re-read objective; FastME21632
