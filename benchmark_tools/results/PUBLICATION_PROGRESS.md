@@ -3651,3 +3651,8 @@ pass (four fresh-worker combinations plus input-order/type and panel tests).
 Full1,288 unit tests passed34.93s; batch syntax passed. One-CPU64GiB/two-hour
 format batch ready to freeze/push/submit; allocations differ so clean observations
 alone will not establish a fix or causal mechanism.
+
+Executore919834 pushed/frozen at publication_qfo_constructor_formats_v1.
+Submitted no-requeue21327 and confirmed RUNNING (one CPU);21326 remains
+RUNNING. Outputs are separate at benchmarks/results/qfo_constructor_formats_v1.
+No frozen scientific/runtime files changed and no existing job restarted.
