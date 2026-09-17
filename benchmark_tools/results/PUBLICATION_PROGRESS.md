@@ -3450,3 +3450,26 @@ matched saved arrays; remaining workers running, no dtype conclusion yet.
 Executor7e8c3e1 pushed/frozen at publication_ob_cpm_phylogeny_v1. Submitted
 no-requeue array21324; tasks0(CPM0.08)/1(CPM0.12) both confirmed RUNNING.
 Output benchmarks/results/ob_cpm_phylogeny_v1. QfO21323 remains RUNNING.
+
+### CPM native admission prepared (2026-09-16)
+
+Objective reread. Previous prompt-only turn did not advance authoritative project
+state; resumed implementation after confirming21323 and both21324 tasks RUNNING.
+Extended native candidate validator with explicit --cpm selection: pinned CPM
+admission, executor7e8c3e1, array21324 and separate output directory. Threshold
+panel retains its original executor/job defaults. Adapter retains each CPM arm's
+own seed provenance rather than the baseline seed. Tests reject cross-panel
+scheduler and execution identities;41 focused tests and full1,248 unit tests
+passed (36.84s). Scoped diff check passed; unrelated sample-output whitespace
+reported by repository-wide diff check left unchanged. Scientific core unchanged.
+
+QfO construction21323 remains running. Four completed worker observations in its
+progress report include an explicit_int64 worker with six native endpoint
+differences at indices23493880..23493885. Both original int32 and converted int64
+arrays match saved endpoints; native tuple/source/target agree on mismatches and
+get_eid returns -1 for expected pairs. Explicit conversion alone therefore does
+not eliminate the observed failure. This is partial diagnostic evidence, not an
+admitted completed panel or proof of a particular library defect. No optimizer
+or accuracy scoring invoked by this probe. Preserve all workers and await terminal
+report before full admission. Next: admit CPM phylogeny after terminal success,
+then assemble all six prespecified parameter contrasts with fixed multiplicity.
