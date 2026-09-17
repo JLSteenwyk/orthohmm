@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Prespecified Case Stage Reconstruction (2026-09-17)
+
+Previous continuation progressed independent scoring arithmetic and application
+figures, pushedd90b895. Re-read the objective. Added `trace_wgd_cases.py`,
+reusing the tested frozen-rule reconciliation reconstruction rather than
+reinventing tree logic. Candidate/merge/manifest/final hashes match admission;
+reviewed source hashes and rules match, family trees/checkpoints/species-tree
+identities agree. Final root groups are reconstructed exactly for all seven
+families incident to the six prospective examples (five reconciled, two bypass).
+Retrospective node-table/checkpoint hashes are explicitly distinguished from
+the artifacts admitted at run completion; no stronger custody claim.
+
+All five missing-from-anchor homologs in the three partial-recovery examples
+were present in the anchor candidates. Root-lineage reconstruction separates
+them before constraints: Suva_7.66, Suva_4.396, and Skud_3.16/Smik_3.28/Suva_3.165.
+All remain assigned elsewhere in final HOGs, not absent predictions. Two selected
+families have unsupported constraints, but focal coverage is unchanged by them.
+This rules out candidate omission and constraint splitting for these specific
+losses, not earlier search influence on tree topology or biological tree error.
+The reference-excluded example and both successful cases remain unchanged.
+
+Report: `biological_wgd_case_trace_20260917.json`; explanation and reproduction:
+`BIOLOGICAL_WGD_CASE_TRACE_20260917.md`. Trace retains per-node calls, group
+memberships, exact homolog destinations, constraints and inspected-file hashes.
+32 focused trace/reconstruction/rescore tests pass. Full unit suite was2,115
+passing in the preceding milestone; not rerun for this narrow trace addition.
+DGX21656_4verifiedRUNNING8:29;fourcomplete,22queued, no restarts or remote I/O.
+Broader QfO/error analysis, timing admission, security/licenses/reproducibility
+and release/archive requirements remain. Goal remains active and incomplete.
+
 ## Biological Rescore, Figure and Prospective Cases (2026-09-17)
 
 Previous continuation made progress: assembled frozen application scores and

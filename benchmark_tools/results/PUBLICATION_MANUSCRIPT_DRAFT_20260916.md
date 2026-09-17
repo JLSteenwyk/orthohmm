@@ -670,11 +670,26 @@ all six with support for both anchors. The sixth example, YLR284C/YOR180C,
 remains reference-excluded because its anchors map to different pillars.
 None was replaced after inspecting outcomes.
 
-These observations locate final membership differences, not causal inference
-errors. The two OrthoHMM configurations differ in more than reconciliation,
-so their contrast is not an isolated phylogeny effect. Native search and tree
-decision traces remain necessary before attributing these losses to a specific
-algorithmic mechanism or asserting that every extra group is erroneous.
+The [retained-artifact case trace](BIOLOGICAL_WGD_CASE_TRACE_20260917.md)
+reconstructed seven incident candidate families, including two that bypassed
+tree inference. It required exact agreement between reconstructed final groups
+and admitted native membership. All five non-S. cerevisiae homologs outside
+the anchor groups in the three partial-recovery examples were present in their
+anchor candidates. They separated during root-lineage grouping, before the
+satellite constraints were applied, and remained assigned to other final HOGs.
+Candidate omission and subsequent constraint splitting therefore do not explain
+these five observed coverage losses. Two incident families had unsupported
+logged constraints, but those did not change these focal coverage outcomes.
+
+This localizes the computational stage, not the underlying biological error.
+The trace reproduces recorded node calls rather than independently validating
+tree topology, rooting or duplication history. Node-table and family-checkpoint
+hashes are retrospective, although tree/checkpoint consistency and exact final
+membership were checked. Earlier search effects on candidate composition and
+gene-tree inference remain possible. The two OrthoHMM configurations differ
+in more than reconciliation, so their contrast is not an isolated phylogeny
+effect. No assertion that every extra group is erroneous follows from this
+homology-only reference.
 
 QfO historical replay equivalence remains unresolved. A bounded capture
 verified identical initial RBNH graph arrays and gene order but a different

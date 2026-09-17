@@ -1,0 +1,3477 @@
+{
+  "admission": {
+    "bytes": 15751,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/biological_wgd_satellite_admission_20260917.json",
+    "sha256": "7c95f62911ffc906a54e5d9f2857883ed05920deec2d9508b459e15be70db258"
+  },
+  "application_audit": {
+    "bytes": 2029,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/biological_wgd_rescore_audit_20260917.json",
+    "sha256": "1b8159c30f8ef0073223900164bdc847d089bcf578dd649dacf652336701175e"
+  },
+  "cases": [
+    {
+      "experimental_class": "High",
+      "homolog_destinations": [
+        {
+          "candidate": "Family0003871",
+          "final_group": "RootHOG0005920",
+          "gene": "Skud_5.246",
+          "stage": "retained_in_anchor_group"
+        },
+        {
+          "candidate": "Family0003871",
+          "final_group": "RootHOG0005921",
+          "gene": "Skud_7.75",
+          "stage": "retained_in_anchor_group"
+        },
+        {
+          "candidate": "Family0003871",
+          "final_group": "RootHOG0005920",
+          "gene": "Smik_5.278",
+          "stage": "retained_in_anchor_group"
+        },
+        {
+          "candidate": "Family0003871",
+          "final_group": "RootHOG0005921",
+          "gene": "Smik_7.75",
+          "stage": "retained_in_anchor_group"
+        },
+        {
+          "candidate": "Family0003871",
+          "final_group": "RootHOG0005920",
+          "gene": "Suva_5.253",
+          "stage": "retained_in_anchor_group"
+        },
+        {
+          "candidate": "Family0003871",
+          "final_group": "RootHOG0005922",
+          "gene": "Suva_7.66",
+          "stage": "root_lineage_split"
+        }
+      ],
+      "orf_pair": [
+        "YER132C",
+        "YGL197W"
+      ],
+      "rank_sha256": "0a2bb0377b342913390c5004945729b70880909d5b2d8a10bada3c438839b147",
+      "stages": {
+        "candidates": {
+          "anchor_group_sizes": [
+            8,
+            8
+          ],
+          "anchor_groups": [
+            "Family0003871",
+            "Family0003871"
+          ],
+          "assignment_state": "merged",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_5.246",
+            "Skud_7.75",
+            "Smik_5.278",
+            "Smik_7.75",
+            "Suva_5.253",
+            "Suva_7.66",
+            "YER132C",
+            "YGL197W"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 6,
+          "digenic_counts_by_orf": {
+            "YER132C": 1,
+            "YGL197W": 8
+          },
+          "example_rank_sha256": "0a2bb0377b342913390c5004945729b70880909d5b2d8a10bada3c438839b147",
+          "experimental_class": "High",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "PMD1",
+            "MDS3"
+          ],
+          "homolog_support_by_anchor": [
+            6,
+            6
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 1.0,
+          "orf_pair": [
+            "YER132C",
+            "YGL197W"
+          ],
+          "pillar_native_group_count": 1,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar02115",
+          "reference_reasons": [],
+          "separation_rate": 0,
+          "source_row": 10,
+          "split_eligible": true,
+          "supported_separation_rate": 0,
+          "trigenic_count": 30,
+          "trigenic_fraction": 0.7692307692307693,
+          "unassigned_pillar_members": [],
+          "union_size": 8,
+          "unmapped_members": []
+        },
+        "final": {
+          "anchor_group_sizes": [
+            4,
+            3
+          ],
+          "anchor_groups": [
+            "RootHOG0005920",
+            "RootHOG0005921"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_5.246",
+            "Skud_7.75",
+            "Smik_5.278",
+            "Smik_7.75",
+            "Suva_5.253",
+            "Suva_7.66",
+            "YER132C",
+            "YGL197W"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 5,
+          "digenic_counts_by_orf": {
+            "YER132C": 1,
+            "YGL197W": 8
+          },
+          "example_rank_sha256": "0a2bb0377b342913390c5004945729b70880909d5b2d8a10bada3c438839b147",
+          "experimental_class": "High",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "PMD1",
+            "MDS3"
+          ],
+          "homolog_support_by_anchor": [
+            3,
+            2
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 0.8333333333333334,
+          "orf_pair": [
+            "YER132C",
+            "YGL197W"
+          ],
+          "pillar_native_group_count": 3,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar02115",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 10,
+          "split_eligible": true,
+          "supported_separation_rate": 1,
+          "trigenic_count": 30,
+          "trigenic_fraction": 0.7692307692307693,
+          "unassigned_pillar_members": [],
+          "union_size": 7,
+          "unmapped_members": []
+        },
+        "preconstraint": {
+          "anchor_group_sizes": [
+            4,
+            3
+          ],
+          "anchor_groups": [
+            "Family0003871:pre:2",
+            "Family0003871:pre:1"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_5.246",
+            "Skud_7.75",
+            "Smik_5.278",
+            "Smik_7.75",
+            "Suva_5.253",
+            "Suva_7.66",
+            "YER132C",
+            "YGL197W"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 5,
+          "digenic_counts_by_orf": {
+            "YER132C": 1,
+            "YGL197W": 8
+          },
+          "example_rank_sha256": "0a2bb0377b342913390c5004945729b70880909d5b2d8a10bada3c438839b147",
+          "experimental_class": "High",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "PMD1",
+            "MDS3"
+          ],
+          "homolog_support_by_anchor": [
+            3,
+            2
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 0.8333333333333334,
+          "orf_pair": [
+            "YER132C",
+            "YGL197W"
+          ],
+          "pillar_native_group_count": 3,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar02115",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 10,
+          "split_eligible": true,
+          "supported_separation_rate": 1,
+          "trigenic_count": 30,
+          "trigenic_fraction": 0.7692307692307693,
+          "unassigned_pillar_members": [],
+          "union_size": 7,
+          "unmapped_members": []
+        }
+      }
+    },
+    {
+      "experimental_class": "High",
+      "homolog_destinations": [
+        {
+          "candidate": "Family0000912",
+          "final_group": "RootHOG0001734",
+          "gene": "Skud_12.164",
+          "stage": "retained_in_anchor_group"
+        },
+        {
+          "candidate": "Family0000912",
+          "final_group": "RootHOG0001735",
+          "gene": "Skud_4.383",
+          "stage": "retained_in_anchor_group"
+        },
+        {
+          "candidate": "Family0000912",
+          "final_group": "RootHOG0001734",
+          "gene": "Smik_12.155",
+          "stage": "retained_in_anchor_group"
+        },
+        {
+          "candidate": "Family0000912",
+          "final_group": "RootHOG0001735",
+          "gene": "Smik_4.367",
+          "stage": "retained_in_anchor_group"
+        },
+        {
+          "candidate": "Family0000912",
+          "final_group": "RootHOG0001734",
+          "gene": "Suva_10.180",
+          "stage": "retained_in_anchor_group"
+        },
+        {
+          "candidate": "Family0000912",
+          "final_group": "RootHOG0001735",
+          "gene": "Suva_2.283",
+          "stage": "retained_in_anchor_group"
+        }
+      ],
+      "orf_pair": [
+        "YDR122W",
+        "YLR096W"
+      ],
+      "rank_sha256": "0c2e0887f32764456e6eabbe02bbd7304a7ae8ef76a736b483558e7dc55edf47",
+      "stages": {
+        "candidates": {
+          "anchor_group_sizes": [
+            12,
+            12
+          ],
+          "anchor_groups": [
+            "Family0000912",
+            "Family0000912"
+          ],
+          "assignment_state": "merged",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_12.164",
+            "Skud_4.383",
+            "Smik_12.155",
+            "Smik_4.367",
+            "Suva_10.180",
+            "Suva_2.283",
+            "YDR122W",
+            "YLR096W"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 6,
+          "digenic_counts_by_orf": {
+            "YDR122W": 10,
+            "YLR096W": 3
+          },
+          "example_rank_sha256": "0c2e0887f32764456e6eabbe02bbd7304a7ae8ef76a736b483558e7dc55edf47",
+          "experimental_class": "High",
+          "foreign_pillar_members": [
+            "Skud_5.249",
+            "Smik_5.275",
+            "Suva_5.250",
+            "YER129W"
+          ],
+          "gene_names": [
+            "KIN1",
+            "KIN2"
+          ],
+          "homolog_support_by_anchor": [
+            6,
+            6
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 1.0,
+          "orf_pair": [
+            "YDR122W",
+            "YLR096W"
+          ],
+          "pillar_native_group_count": 1,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar12456",
+          "reference_reasons": [],
+          "separation_rate": 0,
+          "source_row": 39,
+          "split_eligible": true,
+          "supported_separation_rate": 0,
+          "trigenic_count": 17,
+          "trigenic_fraction": 0.5666666666666667,
+          "unassigned_pillar_members": [],
+          "union_size": 12,
+          "unmapped_members": []
+        },
+        "final": {
+          "anchor_group_sizes": [
+            4,
+            4
+          ],
+          "anchor_groups": [
+            "RootHOG0001735",
+            "RootHOG0001734"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_12.164",
+            "Skud_4.383",
+            "Smik_12.155",
+            "Smik_4.367",
+            "Suva_10.180",
+            "Suva_2.283",
+            "YDR122W",
+            "YLR096W"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 6,
+          "digenic_counts_by_orf": {
+            "YDR122W": 10,
+            "YLR096W": 3
+          },
+          "example_rank_sha256": "0c2e0887f32764456e6eabbe02bbd7304a7ae8ef76a736b483558e7dc55edf47",
+          "experimental_class": "High",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "KIN1",
+            "KIN2"
+          ],
+          "homolog_support_by_anchor": [
+            3,
+            3
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 1.0,
+          "orf_pair": [
+            "YDR122W",
+            "YLR096W"
+          ],
+          "pillar_native_group_count": 2,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar12456",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 39,
+          "split_eligible": true,
+          "supported_separation_rate": 1,
+          "trigenic_count": 17,
+          "trigenic_fraction": 0.5666666666666667,
+          "unassigned_pillar_members": [],
+          "union_size": 8,
+          "unmapped_members": []
+        },
+        "preconstraint": {
+          "anchor_group_sizes": [
+            4,
+            4
+          ],
+          "anchor_groups": [
+            "Family0000912:pre:2",
+            "Family0000912:pre:3"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_12.164",
+            "Skud_4.383",
+            "Smik_12.155",
+            "Smik_4.367",
+            "Suva_10.180",
+            "Suva_2.283",
+            "YDR122W",
+            "YLR096W"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 6,
+          "digenic_counts_by_orf": {
+            "YDR122W": 10,
+            "YLR096W": 3
+          },
+          "example_rank_sha256": "0c2e0887f32764456e6eabbe02bbd7304a7ae8ef76a736b483558e7dc55edf47",
+          "experimental_class": "High",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "KIN1",
+            "KIN2"
+          ],
+          "homolog_support_by_anchor": [
+            3,
+            3
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 1.0,
+          "orf_pair": [
+            "YDR122W",
+            "YLR096W"
+          ],
+          "pillar_native_group_count": 2,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar12456",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 39,
+          "split_eligible": true,
+          "supported_separation_rate": 1,
+          "trigenic_count": 17,
+          "trigenic_fraction": 0.5666666666666667,
+          "unassigned_pillar_members": [],
+          "union_size": 8,
+          "unmapped_members": []
+        }
+      }
+    },
+    {
+      "experimental_class": "Low",
+      "homolog_destinations": [
+        {
+          "candidate": "Family0003823",
+          "final_group": "RootHOG0005857",
+          "gene": "Skud_5.173",
+          "stage": "retained_in_anchor_group"
+        },
+        {
+          "candidate": "Family0004616",
+          "final_group": "RootHOG0006725",
+          "gene": "Skud_9.119",
+          "stage": "retained_in_anchor_group"
+        },
+        {
+          "candidate": "Family0003823",
+          "final_group": "RootHOG0005857",
+          "gene": "Smik_5.189",
+          "stage": "retained_in_anchor_group"
+        },
+        {
+          "candidate": "Family0004616",
+          "final_group": "RootHOG0006725",
+          "gene": "Smik_9.140",
+          "stage": "retained_in_anchor_group"
+        },
+        {
+          "candidate": "Family0003823",
+          "final_group": "RootHOG0005857",
+          "gene": "Suva_5.167",
+          "stage": "retained_in_anchor_group"
+        },
+        {
+          "candidate": "Family0004616",
+          "final_group": "RootHOG0006725",
+          "gene": "Suva_9.149",
+          "stage": "retained_in_anchor_group"
+        }
+      ],
+      "orf_pair": [
+        "YER059W",
+        "YIL050W"
+      ],
+      "rank_sha256": "02a0f2fb96f2b9dae979063b0ed3c893270258fc49bb2c77630001d5bf1fe74e",
+      "stages": {
+        "candidates": {
+          "anchor_group_sizes": [
+            4,
+            4
+          ],
+          "anchor_groups": [
+            "Family0003823",
+            "Family0004616"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_5.173",
+            "Skud_9.119",
+            "Smik_5.189",
+            "Smik_9.140",
+            "Suva_5.167",
+            "Suva_9.149",
+            "YER059W",
+            "YIL050W"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 6,
+          "digenic_counts_by_orf": {
+            "YER059W": 44,
+            "YIL050W": 1
+          },
+          "example_rank_sha256": "02a0f2fb96f2b9dae979063b0ed3c893270258fc49bb2c77630001d5bf1fe74e",
+          "experimental_class": "Low",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "PCL6",
+            "PCL7"
+          ],
+          "homolog_support_by_anchor": [
+            3,
+            3
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 1.0,
+          "orf_pair": [
+            "YER059W",
+            "YIL050W"
+          ],
+          "pillar_native_group_count": 2,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar01825",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 58,
+          "split_eligible": true,
+          "supported_separation_rate": 1,
+          "trigenic_count": 20,
+          "trigenic_fraction": 0.3076923076923077,
+          "unassigned_pillar_members": [],
+          "union_size": 8,
+          "unmapped_members": []
+        },
+        "final": {
+          "anchor_group_sizes": [
+            4,
+            4
+          ],
+          "anchor_groups": [
+            "RootHOG0005857",
+            "RootHOG0006725"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_5.173",
+            "Skud_9.119",
+            "Smik_5.189",
+            "Smik_9.140",
+            "Suva_5.167",
+            "Suva_9.149",
+            "YER059W",
+            "YIL050W"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 6,
+          "digenic_counts_by_orf": {
+            "YER059W": 44,
+            "YIL050W": 1
+          },
+          "example_rank_sha256": "02a0f2fb96f2b9dae979063b0ed3c893270258fc49bb2c77630001d5bf1fe74e",
+          "experimental_class": "Low",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "PCL6",
+            "PCL7"
+          ],
+          "homolog_support_by_anchor": [
+            3,
+            3
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 1.0,
+          "orf_pair": [
+            "YER059W",
+            "YIL050W"
+          ],
+          "pillar_native_group_count": 2,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar01825",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 58,
+          "split_eligible": true,
+          "supported_separation_rate": 1,
+          "trigenic_count": 20,
+          "trigenic_fraction": 0.3076923076923077,
+          "unassigned_pillar_members": [],
+          "union_size": 8,
+          "unmapped_members": []
+        },
+        "preconstraint": {
+          "anchor_group_sizes": [
+            4,
+            4
+          ],
+          "anchor_groups": [
+            "Family0003823:pre:0",
+            "Family0004616:pre:0"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_5.173",
+            "Skud_9.119",
+            "Smik_5.189",
+            "Smik_9.140",
+            "Suva_5.167",
+            "Suva_9.149",
+            "YER059W",
+            "YIL050W"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 6,
+          "digenic_counts_by_orf": {
+            "YER059W": 44,
+            "YIL050W": 1
+          },
+          "example_rank_sha256": "02a0f2fb96f2b9dae979063b0ed3c893270258fc49bb2c77630001d5bf1fe74e",
+          "experimental_class": "Low",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "PCL6",
+            "PCL7"
+          ],
+          "homolog_support_by_anchor": [
+            3,
+            3
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 1.0,
+          "orf_pair": [
+            "YER059W",
+            "YIL050W"
+          ],
+          "pillar_native_group_count": 2,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar01825",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 58,
+          "split_eligible": true,
+          "supported_separation_rate": 1,
+          "trigenic_count": 20,
+          "trigenic_fraction": 0.3076923076923077,
+          "unassigned_pillar_members": [],
+          "union_size": 8,
+          "unmapped_members": []
+        }
+      }
+    },
+    {
+      "experimental_class": "Low",
+      "homolog_destinations": [],
+      "orf_pair": [
+        "YLR284C",
+        "YOR180C"
+      ],
+      "rank_sha256": "039034548ff57fa8b564b27a11c12ff20ad3a7e98e0d43868af468762c8c39d9",
+      "stages": {
+        "candidates": {
+          "anchor_group_sizes": [
+            8,
+            8
+          ],
+          "anchor_groups": [
+            "Family0001097",
+            "Family0001097"
+          ],
+          "assignment_state": "merged",
+          "available_members_by_species": {},
+          "available_pillar_members": [],
+          "coverage_denominator": null,
+          "coverage_numerator": null,
+          "digenic_counts_by_orf": {
+            "YLR284C": 1,
+            "YOR180C": 11
+          },
+          "example_rank_sha256": "039034548ff57fa8b564b27a11c12ff20ad3a7e98e0d43868af468762c8c39d9",
+          "experimental_class": "Low",
+          "foreign_pillar_members": null,
+          "gene_names": [
+            "ECI1",
+            "DCI1"
+          ],
+          "homolog_support_by_anchor": null,
+          "input_reasons": [],
+          "mean_non_scer_coverage": null,
+          "orf_pair": [
+            "YLR284C",
+            "YOR180C"
+          ],
+          "pillar_native_group_count": null,
+          "reference_eligible": false,
+          "reference_pillar": null,
+          "reference_reasons": [
+            {
+              "lines": [
+                7877,
+                1095
+              ],
+              "reason": "anchors_in_different_pillars"
+            }
+          ],
+          "separation_rate": 0,
+          "source_row": 162,
+          "split_eligible": true,
+          "supported_separation_rate": null,
+          "trigenic_count": 0,
+          "trigenic_fraction": 0,
+          "unassigned_pillar_members": null,
+          "union_size": 8,
+          "unmapped_members": null
+        },
+        "final": {
+          "anchor_group_sizes": [
+            3,
+            4
+          ],
+          "anchor_groups": [
+            "RootHOG0002038",
+            "RootHOG0002039"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {},
+          "available_pillar_members": [],
+          "coverage_denominator": null,
+          "coverage_numerator": null,
+          "digenic_counts_by_orf": {
+            "YLR284C": 1,
+            "YOR180C": 11
+          },
+          "example_rank_sha256": "039034548ff57fa8b564b27a11c12ff20ad3a7e98e0d43868af468762c8c39d9",
+          "experimental_class": "Low",
+          "foreign_pillar_members": null,
+          "gene_names": [
+            "ECI1",
+            "DCI1"
+          ],
+          "homolog_support_by_anchor": null,
+          "input_reasons": [],
+          "mean_non_scer_coverage": null,
+          "orf_pair": [
+            "YLR284C",
+            "YOR180C"
+          ],
+          "pillar_native_group_count": null,
+          "reference_eligible": false,
+          "reference_pillar": null,
+          "reference_reasons": [
+            {
+              "lines": [
+                7877,
+                1095
+              ],
+              "reason": "anchors_in_different_pillars"
+            }
+          ],
+          "separation_rate": 1,
+          "source_row": 162,
+          "split_eligible": true,
+          "supported_separation_rate": null,
+          "trigenic_count": 0,
+          "trigenic_fraction": 0,
+          "unassigned_pillar_members": null,
+          "union_size": 7,
+          "unmapped_members": null
+        },
+        "preconstraint": {
+          "anchor_group_sizes": [
+            3,
+            4
+          ],
+          "anchor_groups": [
+            "Family0001097:pre:2",
+            "Family0001097:pre:1"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {},
+          "available_pillar_members": [],
+          "coverage_denominator": null,
+          "coverage_numerator": null,
+          "digenic_counts_by_orf": {
+            "YLR284C": 1,
+            "YOR180C": 11
+          },
+          "example_rank_sha256": "039034548ff57fa8b564b27a11c12ff20ad3a7e98e0d43868af468762c8c39d9",
+          "experimental_class": "Low",
+          "foreign_pillar_members": null,
+          "gene_names": [
+            "ECI1",
+            "DCI1"
+          ],
+          "homolog_support_by_anchor": null,
+          "input_reasons": [],
+          "mean_non_scer_coverage": null,
+          "orf_pair": [
+            "YLR284C",
+            "YOR180C"
+          ],
+          "pillar_native_group_count": null,
+          "reference_eligible": false,
+          "reference_pillar": null,
+          "reference_reasons": [
+            {
+              "lines": [
+                7877,
+                1095
+              ],
+              "reason": "anchors_in_different_pillars"
+            }
+          ],
+          "separation_rate": 1,
+          "source_row": 162,
+          "split_eligible": true,
+          "supported_separation_rate": null,
+          "trigenic_count": 0,
+          "trigenic_fraction": 0,
+          "unassigned_pillar_members": null,
+          "union_size": 7,
+          "unmapped_members": null
+        }
+      }
+    },
+    {
+      "experimental_class": "Sparse",
+      "homolog_destinations": [
+        {
+          "candidate": "Family0002367",
+          "final_group": "RootHOG0004002",
+          "gene": "Skud_15.61",
+          "stage": "retained_in_anchor_group"
+        },
+        {
+          "candidate": "Family0002367",
+          "final_group": "RootHOG0004003",
+          "gene": "Skud_2.274",
+          "stage": "retained_in_anchor_group"
+        },
+        {
+          "candidate": "Family0002367",
+          "final_group": "RootHOG0004002",
+          "gene": "Smik_15.64",
+          "stage": "retained_in_anchor_group"
+        },
+        {
+          "candidate": "Family0002367",
+          "final_group": "RootHOG0004003",
+          "gene": "Smik_2.286",
+          "stage": "retained_in_anchor_group"
+        },
+        {
+          "candidate": "Family0002367",
+          "final_group": "RootHOG0004002",
+          "gene": "Suva_15.74",
+          "stage": "retained_in_anchor_group"
+        },
+        {
+          "candidate": "Family0002367",
+          "final_group": "RootHOG0004005",
+          "gene": "Suva_4.396",
+          "stage": "root_lineage_split"
+        }
+      ],
+      "orf_pair": [
+        "YBR147W",
+        "YOL092W"
+      ],
+      "rank_sha256": "033028eecad777890ba67b8cd2305dfdcf9d4690d85dbe360e7fbb102d1de47f",
+      "stages": {
+        "candidates": {
+          "anchor_group_sizes": [
+            12,
+            12
+          ],
+          "anchor_groups": [
+            "Family0002367",
+            "Family0002367"
+          ],
+          "assignment_state": "merged",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_15.61",
+            "Skud_2.274",
+            "Smik_15.64",
+            "Smik_2.286",
+            "Suva_15.74",
+            "Suva_4.396",
+            "YBR147W",
+            "YOL092W"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 6,
+          "digenic_counts_by_orf": {
+            "YBR147W": 2,
+            "YOL092W": 4
+          },
+          "example_rank_sha256": "033028eecad777890ba67b8cd2305dfdcf9d4690d85dbe360e7fbb102d1de47f",
+          "experimental_class": "Sparse",
+          "foreign_pillar_members": [
+            "Skud_4.622",
+            "Smik_4.619",
+            "Suva_2.525",
+            "YDR352W"
+          ],
+          "gene_names": [
+            "RTC2",
+            "YPQ1"
+          ],
+          "homolog_support_by_anchor": [
+            6,
+            6
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 1.0,
+          "orf_pair": [
+            "YBR147W",
+            "YOL092W"
+          ],
+          "pillar_native_group_count": 1,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar06765",
+          "reference_reasons": [],
+          "separation_rate": 0,
+          "source_row": 215,
+          "split_eligible": true,
+          "supported_separation_rate": 0,
+          "trigenic_count": 1,
+          "trigenic_fraction": null,
+          "unassigned_pillar_members": [],
+          "union_size": 12,
+          "unmapped_members": []
+        },
+        "final": {
+          "anchor_group_sizes": [
+            3,
+            4
+          ],
+          "anchor_groups": [
+            "RootHOG0004003",
+            "RootHOG0004002"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_15.61",
+            "Skud_2.274",
+            "Smik_15.64",
+            "Smik_2.286",
+            "Suva_15.74",
+            "Suva_4.396",
+            "YBR147W",
+            "YOL092W"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 5,
+          "digenic_counts_by_orf": {
+            "YBR147W": 2,
+            "YOL092W": 4
+          },
+          "example_rank_sha256": "033028eecad777890ba67b8cd2305dfdcf9d4690d85dbe360e7fbb102d1de47f",
+          "experimental_class": "Sparse",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "RTC2",
+            "YPQ1"
+          ],
+          "homolog_support_by_anchor": [
+            2,
+            3
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 0.8333333333333334,
+          "orf_pair": [
+            "YBR147W",
+            "YOL092W"
+          ],
+          "pillar_native_group_count": 3,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar06765",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 215,
+          "split_eligible": true,
+          "supported_separation_rate": 1,
+          "trigenic_count": 1,
+          "trigenic_fraction": null,
+          "unassigned_pillar_members": [],
+          "union_size": 7,
+          "unmapped_members": []
+        },
+        "preconstraint": {
+          "anchor_group_sizes": [
+            3,
+            4
+          ],
+          "anchor_groups": [
+            "Family0002367:pre:3",
+            "Family0002367:pre:2"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_15.61",
+            "Skud_2.274",
+            "Smik_15.64",
+            "Smik_2.286",
+            "Suva_15.74",
+            "Suva_4.396",
+            "YBR147W",
+            "YOL092W"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 5,
+          "digenic_counts_by_orf": {
+            "YBR147W": 2,
+            "YOL092W": 4
+          },
+          "example_rank_sha256": "033028eecad777890ba67b8cd2305dfdcf9d4690d85dbe360e7fbb102d1de47f",
+          "experimental_class": "Sparse",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "RTC2",
+            "YPQ1"
+          ],
+          "homolog_support_by_anchor": [
+            2,
+            3
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 0.8333333333333334,
+          "orf_pair": [
+            "YBR147W",
+            "YOL092W"
+          ],
+          "pillar_native_group_count": 3,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar06765",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 215,
+          "split_eligible": true,
+          "supported_separation_rate": 1,
+          "trigenic_count": 1,
+          "trigenic_fraction": null,
+          "unassigned_pillar_members": [],
+          "union_size": 7,
+          "unmapped_members": []
+        }
+      }
+    },
+    {
+      "experimental_class": "Sparse",
+      "homolog_destinations": [
+        {
+          "candidate": "Family0003151",
+          "final_group": "RootHOG0005062",
+          "gene": "Skud_3.16",
+          "stage": "root_lineage_split"
+        },
+        {
+          "candidate": "Family0003151",
+          "final_group": "RootHOG0005064",
+          "gene": "Skud_4.796",
+          "stage": "retained_in_anchor_group"
+        },
+        {
+          "candidate": "Family0003151",
+          "final_group": "RootHOG0005062",
+          "gene": "Smik_3.28",
+          "stage": "root_lineage_split"
+        },
+        {
+          "candidate": "Family0003151",
+          "final_group": "RootHOG0005064",
+          "gene": "Smik_4.802",
+          "stage": "retained_in_anchor_group"
+        },
+        {
+          "candidate": "Family0003151",
+          "final_group": "RootHOG0005064",
+          "gene": "Suva_2.702",
+          "stage": "retained_in_anchor_group"
+        },
+        {
+          "candidate": "Family0003151",
+          "final_group": "RootHOG0005062",
+          "gene": "Suva_3.165",
+          "stage": "root_lineage_split"
+        }
+      ],
+      "orf_pair": [
+        "YCL048W",
+        "YDR522C"
+      ],
+      "rank_sha256": "042210b89b2ffc7ae7b48467436d264246fe0c17c534ae35c58039fd58bddb71",
+      "stages": {
+        "candidates": {
+          "anchor_group_sizes": [
+            15,
+            15
+          ],
+          "anchor_groups": [
+            "Family0003151",
+            "Family0003151"
+          ],
+          "assignment_state": "merged",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_3.16",
+            "Skud_4.796",
+            "Smik_3.28",
+            "Smik_4.802",
+            "Suva_2.702",
+            "Suva_3.165",
+            "YCL048W",
+            "YDR522C"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 6,
+          "digenic_counts_by_orf": {
+            "YCL048W": 3,
+            "YDR522C": 0
+          },
+          "example_rank_sha256": "042210b89b2ffc7ae7b48467436d264246fe0c17c534ae35c58039fd58bddb71",
+          "experimental_class": "Sparse",
+          "foreign_pillar_members": [
+            "Skud_4.307",
+            "Smik_2.210",
+            "Smik_4.291",
+            "Suva_2.212",
+            "Suva_4.317",
+            "YBR078W",
+            "YDR055W"
+          ],
+          "gene_names": [
+            "SPS22",
+            "SPS2"
+          ],
+          "homolog_support_by_anchor": [
+            6,
+            6
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 1.0,
+          "orf_pair": [
+            "YCL048W",
+            "YDR522C"
+          ],
+          "pillar_native_group_count": 1,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar10431",
+          "reference_reasons": [],
+          "separation_rate": 0,
+          "source_row": 221,
+          "split_eligible": true,
+          "supported_separation_rate": 0,
+          "trigenic_count": 0,
+          "trigenic_fraction": null,
+          "unassigned_pillar_members": [],
+          "union_size": 15,
+          "unmapped_members": []
+        },
+        "final": {
+          "anchor_group_sizes": [
+            1,
+            4
+          ],
+          "anchor_groups": [
+            "RootHOG0005066",
+            "RootHOG0005064"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_3.16",
+            "Skud_4.796",
+            "Smik_3.28",
+            "Smik_4.802",
+            "Suva_2.702",
+            "Suva_3.165",
+            "YCL048W",
+            "YDR522C"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 3,
+          "digenic_counts_by_orf": {
+            "YCL048W": 3,
+            "YDR522C": 0
+          },
+          "example_rank_sha256": "042210b89b2ffc7ae7b48467436d264246fe0c17c534ae35c58039fd58bddb71",
+          "experimental_class": "Sparse",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "SPS22",
+            "SPS2"
+          ],
+          "homolog_support_by_anchor": [
+            0,
+            3
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 0.5,
+          "orf_pair": [
+            "YCL048W",
+            "YDR522C"
+          ],
+          "pillar_native_group_count": 3,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar10431",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 221,
+          "split_eligible": true,
+          "supported_separation_rate": 0,
+          "trigenic_count": 0,
+          "trigenic_fraction": null,
+          "unassigned_pillar_members": [],
+          "union_size": 5,
+          "unmapped_members": []
+        },
+        "preconstraint": {
+          "anchor_group_sizes": [
+            1,
+            4
+          ],
+          "anchor_groups": [
+            "Family0003151:pre:0",
+            "Family0003151:pre:2"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_3.16",
+            "Skud_4.796",
+            "Smik_3.28",
+            "Smik_4.802",
+            "Suva_2.702",
+            "Suva_3.165",
+            "YCL048W",
+            "YDR522C"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 3,
+          "digenic_counts_by_orf": {
+            "YCL048W": 3,
+            "YDR522C": 0
+          },
+          "example_rank_sha256": "042210b89b2ffc7ae7b48467436d264246fe0c17c534ae35c58039fd58bddb71",
+          "experimental_class": "Sparse",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "SPS22",
+            "SPS2"
+          ],
+          "homolog_support_by_anchor": [
+            0,
+            3
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 0.5,
+          "orf_pair": [
+            "YCL048W",
+            "YDR522C"
+          ],
+          "pillar_native_group_count": 3,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar10431",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 221,
+          "split_eligible": true,
+          "supported_separation_rate": 0,
+          "trigenic_count": 0,
+          "trigenic_fraction": null,
+          "unassigned_pillar_members": [],
+          "union_size": 5,
+          "unmapped_members": []
+        }
+      }
+    }
+  ],
+  "checked_artifacts": [
+    {
+      "bytes": 29732,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/phylogeny.py",
+      "sha256": "216d97608e6dede8960f3b06fe7036bd23da8fae5677df88583ba9369ec3c1bf"
+    },
+    {
+      "bytes": 29732,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/phylogeny.py",
+      "sha256": "216d97608e6dede8960f3b06fe7036bd23da8fae5677df88583ba9369ec3c1bf"
+    },
+    {
+      "bytes": 41369,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/phylogeny_pipeline.py",
+      "sha256": "44e00316546b5df78354badd2b1a6bb595b685e98b86f686f1a32543d7f15e4f"
+    },
+    {
+      "bytes": 41369,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/phylogeny_pipeline.py",
+      "sha256": "44e00316546b5df78354badd2b1a6bb595b685e98b86f686f1a32543d7f15e4f"
+    },
+    {
+      "bytes": 7515,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/provenance_manifest.json",
+      "sha256": "c1748e2772e7a625c717a196fb47e557d0ec2827dda81fa2e0c59514bae6314d"
+    },
+    {
+      "bytes": 250257,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_working_res/phylogeny_candidate_superfamilies.txt",
+      "sha256": "d4c249c6b422ab427617cddbc4ef7977c54bbe91bfe46243b0dee1c7f9b986c6"
+    },
+    {
+      "bytes": 250257,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_working_res/phylogeny_candidate_superfamilies.txt",
+      "sha256": "d4c249c6b422ab427617cddbc4ef7977c54bbe91bfe46243b0dee1c7f9b986c6"
+    },
+    {
+      "bytes": 476631,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "sha256": "b6faf211fba5d822fdfc41a8bbafb7330ecc1a5656456d6df24654b9bd970a83"
+    },
+    {
+      "bytes": 145,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/species_tree.rooted.nwk",
+      "sha256": "6e21c84cd1e35d41737496ae641b944d5ba367d000adee9d974a0180db482101"
+    },
+    {
+      "bytes": 1996009,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/orthohmm_reconciliation_nodes.tsv",
+      "sha256": "0c1eaaa29217221ff1c68f92dfb224acea794c426f974330452f09f9c1fd4cce"
+    },
+    {
+      "bytes": 414879,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_working_res/phylogeny_candidate_merges.json",
+      "sha256": "614c81133429109f2f4d4b005d3fdacdfe33a9ed482e389830b210d5f0545901"
+    },
+    {
+      "bytes": 769,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/checkpoints/Family0000912.json",
+      "sha256": "510768834578053ee2a61d5425d386c01ee205152812730091ebb36e4ff2793b"
+    },
+    {
+      "bytes": 438,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0000912.raw.nwk",
+      "sha256": "f099993a2c7b20bce32473eb92a96670230c1091818f2ec89f3f460f9d9fdf3a"
+    },
+    {
+      "bytes": 479,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0000912.rooted.nwk",
+      "sha256": "195b5864840ee73915e2501138013406b1e689f7113eeacf5785272bee25dc7c"
+    },
+    {
+      "bytes": 588,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0000912.reconciled.nwk",
+      "sha256": "7e45030843eb49f6240d8fd895739f1981fe9abf9788788fb965f7971a9acd65"
+    },
+    {
+      "bytes": 702,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/checkpoints/Family0001097.json",
+      "sha256": "2d6d0bee32c699fe6b32e0489e0b089fab7b7c1a83333245fb2c3c2921f403ac"
+    },
+    {
+      "bytes": 274,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0001097.raw.nwk",
+      "sha256": "49fb05887149898c071d85ed8c65397ecb89665866ba7e6b511e0f477f7071d2"
+    },
+    {
+      "bytes": 312,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0001097.rooted.nwk",
+      "sha256": "d72ff8cc0f3db6c87c6f6bb49fbabb5219ddf81a74506155ce204bf936506682"
+    },
+    {
+      "bytes": 385,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0001097.reconciled.nwk",
+      "sha256": "54ce2de997b3e2b2336d7c84db12d3c3fc436c0ec5929959b5c51b7863400f47"
+    },
+    {
+      "bytes": 766,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/checkpoints/Family0002367.json",
+      "sha256": "4cc7c458217c0a3a7d4a9c05dde0631527048c61275b4d115f249a7bafa114f4"
+    },
+    {
+      "bytes": 438,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0002367.raw.nwk",
+      "sha256": "7569c327e8e0b2d51b6bf577e3c6c5a7bd972d5bafb37bdd5449d4f827b8668c"
+    },
+    {
+      "bytes": 472,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0002367.rooted.nwk",
+      "sha256": "c2b5947d74f652d7e0e22bf1ecc46043fd8fb2838ce49f308e328f3a837d87f2"
+    },
+    {
+      "bytes": 581,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0002367.reconciled.nwk",
+      "sha256": "b78bdb92b0f66035a0c30514a0b5a135ff91203c263472339665995a8ea291a1"
+    },
+    {
+      "bytes": 815,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/checkpoints/Family0003151.json",
+      "sha256": "d38d4c6c99f112b563441414596689c46b919632334f367362a067a7df3f071c"
+    },
+    {
+      "bytes": 561,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0003151.raw.nwk",
+      "sha256": "bd40ce45c93475b967e504f6e7447f1c286b58f1bb64ab982b5dbb2bff9b741e"
+    },
+    {
+      "bytes": 602,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0003151.rooted.nwk",
+      "sha256": "6a0270466a321fcf9875c76f912db82b7438c72f5476a9826c966be609d3c707"
+    },
+    {
+      "bytes": 738,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0003151.reconciled.nwk",
+      "sha256": "d51cec860f38e05cd02142e2077a879523341194752ef323bbe1fd1a921ff09c"
+    },
+    {
+      "bytes": 694,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/checkpoints/Family0003871.json",
+      "sha256": "4634f26cd507d5cb39b4f07488ea44f52a20d315991ee3657e2bdc0c78be20c1"
+    },
+    {
+      "bytes": 274,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0003871.raw.nwk",
+      "sha256": "3b44f54fdb6a7ff7eb593b77ffd5a373580dcc6d3ab8f8a9bc99cc4ce8c7c46d"
+    },
+    {
+      "bytes": 306,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0003871.rooted.nwk",
+      "sha256": "92f7ca6f7c6e6fe4165f8af73b3370a2a3ccb7ea97225c4336ea8f1f34d43217"
+    },
+    {
+      "bytes": 379,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0003871.reconciled.nwk",
+      "sha256": "158e4ae34889a5ef3a42c973283de955a9e3c3441685aa9977d4b9ace6ce9782"
+    }
+  ],
+  "families": {
+    "Family0000912": {
+      "candidate_members": [
+        "Skud_12.164",
+        "Skud_4.383",
+        "Skud_5.249",
+        "Smik_12.155",
+        "Smik_4.367",
+        "Smik_5.275",
+        "Suva_10.180",
+        "Suva_2.283",
+        "Suva_5.250",
+        "YDR122W",
+        "YER129W",
+        "YLR096W"
+      ],
+      "constraints": [
+        {
+          "event_index": 250,
+          "source_genes": [
+            "Skud_5.249",
+            "Smik_5.275",
+            "Suva_5.250",
+            "YER129W"
+          ],
+          "supported": false,
+          "supporting_pair": null,
+          "target_genes": [
+            "Skud_12.164",
+            "Skud_4.383",
+            "Smik_12.155",
+            "Smik_4.367",
+            "Suva_10.180",
+            "Suva_2.283",
+            "YDR122W",
+            "YLR096W"
+          ]
+        }
+      ],
+      "final_groups": [
+        [
+          "Skud_12.164",
+          "Smik_12.155",
+          "Suva_10.180",
+          "YLR096W"
+        ],
+        [
+          "Skud_4.383",
+          "Smik_4.367",
+          "Suva_2.283",
+          "YDR122W"
+        ],
+        [
+          "Skud_5.249",
+          "Smik_5.275",
+          "YER129W"
+        ],
+        [
+          "Suva_5.250"
+        ]
+      ],
+      "nodes": [
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Suva_5.250",
+          "mapping_conflict": "false",
+          "node_id": "Suva_5.250",
+          "pair_event": "leaf",
+          "parent_node_id": "G00010",
+          "source_family": "Family0000912",
+          "species": "Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "Suvarum"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Skud_5.249",
+          "mapping_conflict": "false",
+          "node_id": "Skud_5.249",
+          "pair_event": "leaf",
+          "parent_node_id": "G00001",
+          "source_family": "Family0000912",
+          "species": "Skudriavzevii",
+          "species_overlap_count": "0",
+          "species_tree_node": "Skudriavzevii"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Smik_5.275",
+          "mapping_conflict": "false",
+          "node_id": "Smik_5.275",
+          "pair_event": "leaf",
+          "parent_node_id": "G00000",
+          "source_family": "Family0000912",
+          "species": "Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "Smikatae"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "YER129W",
+          "mapping_conflict": "false",
+          "node_id": "YER129W",
+          "pair_event": "leaf",
+          "parent_node_id": "G00000",
+          "source_family": "Family0000912",
+          "species": "Scerevisiae",
+          "species_overlap_count": "0",
+          "species_tree_node": "Scerevisiae"
+        },
+        {
+          "branch_support": "0.748000",
+          "event": "speciation",
+          "event_confidence": "high",
+          "genes": "Smik_5.275,YER129W",
+          "mapping_conflict": "false",
+          "node_id": "G00000",
+          "pair_event": "speciation",
+          "parent_node_id": "G00001",
+          "source_family": "Family0000912",
+          "species": "Scerevisiae,Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0002"
+        },
+        {
+          "branch_support": "0.913000",
+          "event": "speciation",
+          "event_confidence": "high",
+          "genes": "Skud_5.249,Smik_5.275,YER129W",
+          "mapping_conflict": "false",
+          "node_id": "G00001",
+          "pair_event": "speciation",
+          "parent_node_id": "G00009",
+          "source_family": "Family0000912",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Smik_4.367",
+          "mapping_conflict": "false",
+          "node_id": "Smik_4.367",
+          "pair_event": "leaf",
+          "parent_node_id": "G00002",
+          "source_family": "Family0000912",
+          "species": "Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "Smikatae"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "YDR122W",
+          "mapping_conflict": "false",
+          "node_id": "YDR122W",
+          "pair_event": "leaf",
+          "parent_node_id": "G00002",
+          "source_family": "Family0000912",
+          "species": "Scerevisiae",
+          "species_overlap_count": "0",
+          "species_tree_node": "Scerevisiae"
+        },
+        {
+          "branch_support": "0.439000",
+          "event": "speciation",
+          "event_confidence": "high",
+          "genes": "Smik_4.367,YDR122W",
+          "mapping_conflict": "false",
+          "node_id": "G00002",
+          "pair_event": "speciation",
+          "parent_node_id": "G00004",
+          "source_family": "Family0000912",
+          "species": "Scerevisiae,Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0002"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Skud_4.383",
+          "mapping_conflict": "false",
+          "node_id": "Skud_4.383",
+          "pair_event": "leaf",
+          "parent_node_id": "G00003",
+          "source_family": "Family0000912",
+          "species": "Skudriavzevii",
+          "species_overlap_count": "0",
+          "species_tree_node": "Skudriavzevii"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Suva_2.283",
+          "mapping_conflict": "false",
+          "node_id": "Suva_2.283",
+          "pair_event": "leaf",
+          "parent_node_id": "G00003",
+          "source_family": "Family0000912",
+          "species": "Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "Suvarum"
+        },
+        {
+          "branch_support": "0.841000",
+          "event": "speciation",
+          "event_confidence": "high",
+          "genes": "Skud_4.383,Suva_2.283",
+          "mapping_conflict": "false",
+          "node_id": "G00003",
+          "pair_event": "speciation",
+          "parent_node_id": "G00004",
+          "source_family": "Family0000912",
+          "species": "Skudriavzevii,Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0001"
+        },
+        {
+          "branch_support": "0.999000",
+          "event": "speciation",
+          "event_confidence": "high",
+          "genes": "Skud_4.383,Smik_4.367,Suva_2.283,YDR122W",
+          "mapping_conflict": "false",
+          "node_id": "G00004",
+          "pair_event": "speciation",
+          "parent_node_id": "G00008",
+          "source_family": "Family0000912",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae,Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Suva_10.180",
+          "mapping_conflict": "false",
+          "node_id": "Suva_10.180",
+          "pair_event": "leaf",
+          "parent_node_id": "G00007",
+          "source_family": "Family0000912",
+          "species": "Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "Suvarum"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Skud_12.164",
+          "mapping_conflict": "false",
+          "node_id": "Skud_12.164",
+          "pair_event": "leaf",
+          "parent_node_id": "G00006",
+          "source_family": "Family0000912",
+          "species": "Skudriavzevii",
+          "species_overlap_count": "0",
+          "species_tree_node": "Skudriavzevii"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Smik_12.155",
+          "mapping_conflict": "false",
+          "node_id": "Smik_12.155",
+          "pair_event": "leaf",
+          "parent_node_id": "G00005",
+          "source_family": "Family0000912",
+          "species": "Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "Smikatae"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "YLR096W",
+          "mapping_conflict": "false",
+          "node_id": "YLR096W",
+          "pair_event": "leaf",
+          "parent_node_id": "G00005",
+          "source_family": "Family0000912",
+          "species": "Scerevisiae",
+          "species_overlap_count": "0",
+          "species_tree_node": "Scerevisiae"
+        },
+        {
+          "branch_support": "",
+          "event": "speciation",
+          "event_confidence": "high",
+          "genes": "Smik_12.155,YLR096W",
+          "mapping_conflict": "false",
+          "node_id": "G00005",
+          "pair_event": "speciation",
+          "parent_node_id": "G00006",
+          "source_family": "Family0000912",
+          "species": "Scerevisiae,Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0002"
+        },
+        {
+          "branch_support": "0.998000",
+          "event": "speciation",
+          "event_confidence": "high",
+          "genes": "Skud_12.164,Smik_12.155,YLR096W",
+          "mapping_conflict": "false",
+          "node_id": "G00006",
+          "pair_event": "speciation",
+          "parent_node_id": "G00007",
+          "source_family": "Family0000912",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "0.931000",
+          "event": "duplication",
+          "event_confidence": "medium",
+          "genes": "Skud_12.164,Smik_12.155,Suva_10.180,YLR096W",
+          "mapping_conflict": "true",
+          "node_id": "G00007",
+          "pair_event": "uncertain",
+          "parent_node_id": "G00008",
+          "source_family": "Family0000912",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae,Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "0.983000",
+          "event": "duplication",
+          "event_confidence": "high",
+          "genes": "Skud_12.164,Skud_4.383,Smik_12.155,Smik_4.367,Suva_10.180,Suva_2.283,YDR122W,YLR096W",
+          "mapping_conflict": "true",
+          "node_id": "G00008",
+          "pair_event": "duplication",
+          "parent_node_id": "G00009",
+          "source_family": "Family0000912",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae,Suvarum",
+          "species_overlap_count": "4",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "1.000000",
+          "event": "duplication",
+          "event_confidence": "high",
+          "genes": "Skud_12.164,Skud_4.383,Skud_5.249,Smik_12.155,Smik_4.367,Smik_5.275,Suva_10.180,Suva_2.283,YDR122W,YER129W,YLR096W",
+          "mapping_conflict": "true",
+          "node_id": "G00009",
+          "pair_event": "duplication",
+          "parent_node_id": "G00010",
+          "source_family": "Family0000912",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae,Suvarum",
+          "species_overlap_count": "3",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "",
+          "event": "duplication",
+          "event_confidence": "medium",
+          "genes": "Skud_12.164,Skud_4.383,Skud_5.249,Smik_12.155,Smik_4.367,Smik_5.275,Suva_10.180,Suva_2.283,Suva_5.250,YDR122W,YER129W,YLR096W",
+          "mapping_conflict": "true",
+          "node_id": "G00010",
+          "pair_event": "duplication",
+          "parent_node_id": "",
+          "source_family": "Family0000912",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae,Suvarum",
+          "species_overlap_count": "1",
+          "species_tree_node": "S0000"
+        }
+      ],
+      "preconstraint_groups": [
+        [
+          "Suva_5.250"
+        ],
+        [
+          "Skud_5.249",
+          "Smik_5.275",
+          "YER129W"
+        ],
+        [
+          "Skud_4.383",
+          "Smik_4.367",
+          "Suva_2.283",
+          "YDR122W"
+        ],
+        [
+          "Skud_12.164",
+          "Smik_12.155",
+          "Suva_10.180",
+          "YLR096W"
+        ]
+      ],
+      "propagated_split_nodes": [],
+      "reconciled": true,
+      "root_duplication_nodes": [
+        "G00008",
+        "G00009",
+        "G00010"
+      ]
+    },
+    "Family0001097": {
+      "candidate_members": [
+        "Skud_12.365",
+        "Skud_15.347",
+        "Smik_12.361",
+        "Smik_15.365",
+        "Suva_10.379",
+        "Suva_8.236",
+        "YLR284C",
+        "YOR180C"
+      ],
+      "constraints": [],
+      "final_groups": [
+        [
+          "Skud_12.365",
+          "Smik_12.361",
+          "YLR284C"
+        ],
+        [
+          "Skud_15.347",
+          "Smik_15.365",
+          "Suva_8.236",
+          "YOR180C"
+        ],
+        [
+          "Suva_10.379"
+        ]
+      ],
+      "nodes": [
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Suva_10.379",
+          "mapping_conflict": "false",
+          "node_id": "Suva_10.379",
+          "pair_event": "leaf",
+          "parent_node_id": "G00006",
+          "source_family": "Family0001097",
+          "species": "Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "Suvarum"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Skud_15.347",
+          "mapping_conflict": "false",
+          "node_id": "Skud_15.347",
+          "pair_event": "leaf",
+          "parent_node_id": "G00000",
+          "source_family": "Family0001097",
+          "species": "Skudriavzevii",
+          "species_overlap_count": "0",
+          "species_tree_node": "Skudriavzevii"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Suva_8.236",
+          "mapping_conflict": "false",
+          "node_id": "Suva_8.236",
+          "pair_event": "leaf",
+          "parent_node_id": "G00000",
+          "source_family": "Family0001097",
+          "species": "Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "Suvarum"
+        },
+        {
+          "branch_support": "0.927000",
+          "event": "speciation",
+          "event_confidence": "high",
+          "genes": "Skud_15.347,Suva_8.236",
+          "mapping_conflict": "false",
+          "node_id": "G00000",
+          "pair_event": "speciation",
+          "parent_node_id": "G00001",
+          "source_family": "Family0001097",
+          "species": "Skudriavzevii,Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0001"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "YOR180C",
+          "mapping_conflict": "false",
+          "node_id": "YOR180C",
+          "pair_event": "leaf",
+          "parent_node_id": "G00001",
+          "source_family": "Family0001097",
+          "species": "Scerevisiae",
+          "species_overlap_count": "0",
+          "species_tree_node": "Scerevisiae"
+        },
+        {
+          "branch_support": "0.349000",
+          "event": "speciation",
+          "event_confidence": "high",
+          "genes": "Skud_15.347,Suva_8.236,YOR180C",
+          "mapping_conflict": "false",
+          "node_id": "G00001",
+          "pair_event": "speciation",
+          "parent_node_id": "G00002",
+          "source_family": "Family0001097",
+          "species": "Scerevisiae,Skudriavzevii,Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Smik_15.365",
+          "mapping_conflict": "false",
+          "node_id": "Smik_15.365",
+          "pair_event": "leaf",
+          "parent_node_id": "G00002",
+          "source_family": "Family0001097",
+          "species": "Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "Smikatae"
+        },
+        {
+          "branch_support": "1.000000",
+          "event": "duplication",
+          "event_confidence": "medium",
+          "genes": "Skud_15.347,Smik_15.365,Suva_8.236,YOR180C",
+          "mapping_conflict": "true",
+          "node_id": "G00002",
+          "pair_event": "uncertain",
+          "parent_node_id": "G00005",
+          "source_family": "Family0001097",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae,Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Skud_12.365",
+          "mapping_conflict": "false",
+          "node_id": "Skud_12.365",
+          "pair_event": "leaf",
+          "parent_node_id": "G00004",
+          "source_family": "Family0001097",
+          "species": "Skudriavzevii",
+          "species_overlap_count": "0",
+          "species_tree_node": "Skudriavzevii"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "YLR284C",
+          "mapping_conflict": "false",
+          "node_id": "YLR284C",
+          "pair_event": "leaf",
+          "parent_node_id": "G00003",
+          "source_family": "Family0001097",
+          "species": "Scerevisiae",
+          "species_overlap_count": "0",
+          "species_tree_node": "Scerevisiae"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Smik_12.361",
+          "mapping_conflict": "false",
+          "node_id": "Smik_12.361",
+          "pair_event": "leaf",
+          "parent_node_id": "G00003",
+          "source_family": "Family0001097",
+          "species": "Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "Smikatae"
+        },
+        {
+          "branch_support": "",
+          "event": "speciation",
+          "event_confidence": "high",
+          "genes": "Smik_12.361,YLR284C",
+          "mapping_conflict": "false",
+          "node_id": "G00003",
+          "pair_event": "speciation",
+          "parent_node_id": "G00004",
+          "source_family": "Family0001097",
+          "species": "Scerevisiae,Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0002"
+        },
+        {
+          "branch_support": "0.876000",
+          "event": "speciation",
+          "event_confidence": "high",
+          "genes": "Skud_12.365,Smik_12.361,YLR284C",
+          "mapping_conflict": "false",
+          "node_id": "G00004",
+          "pair_event": "speciation",
+          "parent_node_id": "G00005",
+          "source_family": "Family0001097",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "0.887000",
+          "event": "duplication",
+          "event_confidence": "high",
+          "genes": "Skud_12.365,Skud_15.347,Smik_12.361,Smik_15.365,Suva_8.236,YLR284C,YOR180C",
+          "mapping_conflict": "true",
+          "node_id": "G00005",
+          "pair_event": "duplication",
+          "parent_node_id": "G00006",
+          "source_family": "Family0001097",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae,Suvarum",
+          "species_overlap_count": "3",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "",
+          "event": "duplication",
+          "event_confidence": "medium",
+          "genes": "Skud_12.365,Skud_15.347,Smik_12.361,Smik_15.365,Suva_10.379,Suva_8.236,YLR284C,YOR180C",
+          "mapping_conflict": "true",
+          "node_id": "G00006",
+          "pair_event": "duplication",
+          "parent_node_id": "",
+          "source_family": "Family0001097",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae,Suvarum",
+          "species_overlap_count": "1",
+          "species_tree_node": "S0000"
+        }
+      ],
+      "preconstraint_groups": [
+        [
+          "Suva_10.379"
+        ],
+        [
+          "Skud_15.347",
+          "Smik_15.365",
+          "Suva_8.236",
+          "YOR180C"
+        ],
+        [
+          "Skud_12.365",
+          "Smik_12.361",
+          "YLR284C"
+        ]
+      ],
+      "propagated_split_nodes": [],
+      "reconciled": true,
+      "root_duplication_nodes": [
+        "G00005",
+        "G00006"
+      ]
+    },
+    "Family0002367": {
+      "candidate_members": [
+        "Skud_15.61",
+        "Skud_2.274",
+        "Skud_4.622",
+        "Smik_15.64",
+        "Smik_2.286",
+        "Smik_4.619",
+        "Suva_15.74",
+        "Suva_2.525",
+        "Suva_4.396",
+        "YBR147W",
+        "YDR352W",
+        "YOL092W"
+      ],
+      "constraints": [
+        {
+          "event_index": 61,
+          "source_genes": [
+            "Skud_4.622",
+            "Smik_4.619",
+            "Suva_2.525",
+            "YDR352W"
+          ],
+          "supported": false,
+          "supporting_pair": null,
+          "target_genes": [
+            "Skud_15.61",
+            "Skud_2.274",
+            "Smik_15.64",
+            "Smik_2.286",
+            "Suva_15.74",
+            "Suva_4.396",
+            "YBR147W",
+            "YOL092W"
+          ]
+        }
+      ],
+      "final_groups": [
+        [
+          "Skud_15.61",
+          "Smik_15.64",
+          "Suva_15.74",
+          "YOL092W"
+        ],
+        [
+          "Skud_2.274",
+          "Smik_2.286",
+          "YBR147W"
+        ],
+        [
+          "Skud_4.622",
+          "Smik_4.619",
+          "Suva_2.525",
+          "YDR352W"
+        ],
+        [
+          "Suva_4.396"
+        ]
+      ],
+      "nodes": [
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Suva_4.396",
+          "mapping_conflict": "false",
+          "node_id": "Suva_4.396",
+          "pair_event": "leaf",
+          "parent_node_id": "G00010",
+          "source_family": "Family0002367",
+          "species": "Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "Suvarum"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Suva_2.525",
+          "mapping_conflict": "false",
+          "node_id": "Suva_2.525",
+          "pair_event": "leaf",
+          "parent_node_id": "G00002",
+          "source_family": "Family0002367",
+          "species": "Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "Suvarum"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Skud_4.622",
+          "mapping_conflict": "false",
+          "node_id": "Skud_4.622",
+          "pair_event": "leaf",
+          "parent_node_id": "G00001",
+          "source_family": "Family0002367",
+          "species": "Skudriavzevii",
+          "species_overlap_count": "0",
+          "species_tree_node": "Skudriavzevii"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Smik_4.619",
+          "mapping_conflict": "false",
+          "node_id": "Smik_4.619",
+          "pair_event": "leaf",
+          "parent_node_id": "G00000",
+          "source_family": "Family0002367",
+          "species": "Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "Smikatae"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "YDR352W",
+          "mapping_conflict": "false",
+          "node_id": "YDR352W",
+          "pair_event": "leaf",
+          "parent_node_id": "G00000",
+          "source_family": "Family0002367",
+          "species": "Scerevisiae",
+          "species_overlap_count": "0",
+          "species_tree_node": "Scerevisiae"
+        },
+        {
+          "branch_support": "0.968000",
+          "event": "speciation",
+          "event_confidence": "high",
+          "genes": "Smik_4.619,YDR352W",
+          "mapping_conflict": "false",
+          "node_id": "G00000",
+          "pair_event": "speciation",
+          "parent_node_id": "G00001",
+          "source_family": "Family0002367",
+          "species": "Scerevisiae,Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0002"
+        },
+        {
+          "branch_support": "0.797000",
+          "event": "speciation",
+          "event_confidence": "high",
+          "genes": "Skud_4.622,Smik_4.619,YDR352W",
+          "mapping_conflict": "false",
+          "node_id": "G00001",
+          "pair_event": "speciation",
+          "parent_node_id": "G00002",
+          "source_family": "Family0002367",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "1.000000",
+          "event": "duplication",
+          "event_confidence": "medium",
+          "genes": "Skud_4.622,Smik_4.619,Suva_2.525,YDR352W",
+          "mapping_conflict": "true",
+          "node_id": "G00002",
+          "pair_event": "uncertain",
+          "parent_node_id": "G00006",
+          "source_family": "Family0002367",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae,Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Suva_15.74",
+          "mapping_conflict": "false",
+          "node_id": "Suva_15.74",
+          "pair_event": "leaf",
+          "parent_node_id": "G00005",
+          "source_family": "Family0002367",
+          "species": "Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "Suvarum"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Skud_15.61",
+          "mapping_conflict": "false",
+          "node_id": "Skud_15.61",
+          "pair_event": "leaf",
+          "parent_node_id": "G00004",
+          "source_family": "Family0002367",
+          "species": "Skudriavzevii",
+          "species_overlap_count": "0",
+          "species_tree_node": "Skudriavzevii"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Smik_15.64",
+          "mapping_conflict": "false",
+          "node_id": "Smik_15.64",
+          "pair_event": "leaf",
+          "parent_node_id": "G00003",
+          "source_family": "Family0002367",
+          "species": "Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "Smikatae"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "YOL092W",
+          "mapping_conflict": "false",
+          "node_id": "YOL092W",
+          "pair_event": "leaf",
+          "parent_node_id": "G00003",
+          "source_family": "Family0002367",
+          "species": "Scerevisiae",
+          "species_overlap_count": "0",
+          "species_tree_node": "Scerevisiae"
+        },
+        {
+          "branch_support": "0.619000",
+          "event": "speciation",
+          "event_confidence": "high",
+          "genes": "Smik_15.64,YOL092W",
+          "mapping_conflict": "false",
+          "node_id": "G00003",
+          "pair_event": "speciation",
+          "parent_node_id": "G00004",
+          "source_family": "Family0002367",
+          "species": "Scerevisiae,Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0002"
+        },
+        {
+          "branch_support": "0.574000",
+          "event": "speciation",
+          "event_confidence": "high",
+          "genes": "Skud_15.61,Smik_15.64,YOL092W",
+          "mapping_conflict": "false",
+          "node_id": "G00004",
+          "pair_event": "speciation",
+          "parent_node_id": "G00005",
+          "source_family": "Family0002367",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "0.758000",
+          "event": "duplication",
+          "event_confidence": "medium",
+          "genes": "Skud_15.61,Smik_15.64,Suva_15.74,YOL092W",
+          "mapping_conflict": "true",
+          "node_id": "G00005",
+          "pair_event": "uncertain",
+          "parent_node_id": "G00006",
+          "source_family": "Family0002367",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae,Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "0.965000",
+          "event": "duplication",
+          "event_confidence": "high",
+          "genes": "Skud_15.61,Skud_4.622,Smik_15.64,Smik_4.619,Suva_15.74,Suva_2.525,YDR352W,YOL092W",
+          "mapping_conflict": "true",
+          "node_id": "G00006",
+          "pair_event": "duplication",
+          "parent_node_id": "G00009",
+          "source_family": "Family0002367",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae,Suvarum",
+          "species_overlap_count": "4",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Skud_2.274",
+          "mapping_conflict": "false",
+          "node_id": "Skud_2.274",
+          "pair_event": "leaf",
+          "parent_node_id": "G00008",
+          "source_family": "Family0002367",
+          "species": "Skudriavzevii",
+          "species_overlap_count": "0",
+          "species_tree_node": "Skudriavzevii"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Smik_2.286",
+          "mapping_conflict": "false",
+          "node_id": "Smik_2.286",
+          "pair_event": "leaf",
+          "parent_node_id": "G00007",
+          "source_family": "Family0002367",
+          "species": "Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "Smikatae"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "YBR147W",
+          "mapping_conflict": "false",
+          "node_id": "YBR147W",
+          "pair_event": "leaf",
+          "parent_node_id": "G00007",
+          "source_family": "Family0002367",
+          "species": "Scerevisiae",
+          "species_overlap_count": "0",
+          "species_tree_node": "Scerevisiae"
+        },
+        {
+          "branch_support": "",
+          "event": "speciation",
+          "event_confidence": "high",
+          "genes": "Smik_2.286,YBR147W",
+          "mapping_conflict": "false",
+          "node_id": "G00007",
+          "pair_event": "speciation",
+          "parent_node_id": "G00008",
+          "source_family": "Family0002367",
+          "species": "Scerevisiae,Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0002"
+        },
+        {
+          "branch_support": "0.735000",
+          "event": "speciation",
+          "event_confidence": "high",
+          "genes": "Skud_2.274,Smik_2.286,YBR147W",
+          "mapping_conflict": "false",
+          "node_id": "G00008",
+          "pair_event": "speciation",
+          "parent_node_id": "G00009",
+          "source_family": "Family0002367",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "0.780000",
+          "event": "duplication",
+          "event_confidence": "high",
+          "genes": "Skud_15.61,Skud_2.274,Skud_4.622,Smik_15.64,Smik_2.286,Smik_4.619,Suva_15.74,Suva_2.525,YBR147W,YDR352W,YOL092W",
+          "mapping_conflict": "true",
+          "node_id": "G00009",
+          "pair_event": "duplication",
+          "parent_node_id": "G00010",
+          "source_family": "Family0002367",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae,Suvarum",
+          "species_overlap_count": "3",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "",
+          "event": "duplication",
+          "event_confidence": "medium",
+          "genes": "Skud_15.61,Skud_2.274,Skud_4.622,Smik_15.64,Smik_2.286,Smik_4.619,Suva_15.74,Suva_2.525,Suva_4.396,YBR147W,YDR352W,YOL092W",
+          "mapping_conflict": "true",
+          "node_id": "G00010",
+          "pair_event": "duplication",
+          "parent_node_id": "",
+          "source_family": "Family0002367",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae,Suvarum",
+          "species_overlap_count": "1",
+          "species_tree_node": "S0000"
+        }
+      ],
+      "preconstraint_groups": [
+        [
+          "Suva_4.396"
+        ],
+        [
+          "Skud_4.622",
+          "Smik_4.619",
+          "Suva_2.525",
+          "YDR352W"
+        ],
+        [
+          "Skud_15.61",
+          "Smik_15.64",
+          "Suva_15.74",
+          "YOL092W"
+        ],
+        [
+          "Skud_2.274",
+          "Smik_2.286",
+          "YBR147W"
+        ]
+      ],
+      "propagated_split_nodes": [],
+      "reconciled": true,
+      "root_duplication_nodes": [
+        "G00006",
+        "G00009",
+        "G00010"
+      ]
+    },
+    "Family0003151": {
+      "candidate_members": [
+        "Skud_3.16",
+        "Skud_4.307",
+        "Skud_4.796",
+        "Smik_2.210",
+        "Smik_3.28",
+        "Smik_4.291",
+        "Smik_4.802",
+        "Suva_2.212",
+        "Suva_2.702",
+        "Suva_3.165",
+        "Suva_4.317",
+        "YBR078W",
+        "YCL048W",
+        "YDR055W",
+        "YDR522C"
+      ],
+      "constraints": [],
+      "final_groups": [
+        [
+          "Skud_3.16",
+          "Smik_3.28",
+          "Suva_3.165"
+        ],
+        [
+          "Skud_4.307",
+          "Smik_4.291",
+          "Suva_2.212",
+          "YDR055W"
+        ],
+        [
+          "Skud_4.796",
+          "Smik_4.802",
+          "Suva_2.702",
+          "YDR522C"
+        ],
+        [
+          "Smik_2.210",
+          "Suva_4.317",
+          "YBR078W"
+        ],
+        [
+          "YCL048W"
+        ]
+      ],
+      "nodes": [
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "YCL048W",
+          "mapping_conflict": "false",
+          "node_id": "YCL048W",
+          "pair_event": "leaf",
+          "parent_node_id": "G00013",
+          "source_family": "Family0003151",
+          "species": "Scerevisiae",
+          "species_overlap_count": "0",
+          "species_tree_node": "Scerevisiae"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Smik_3.28",
+          "mapping_conflict": "false",
+          "node_id": "Smik_3.28",
+          "pair_event": "leaf",
+          "parent_node_id": "G00001",
+          "source_family": "Family0003151",
+          "species": "Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "Smikatae"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Skud_3.16",
+          "mapping_conflict": "false",
+          "node_id": "Skud_3.16",
+          "pair_event": "leaf",
+          "parent_node_id": "G00000",
+          "source_family": "Family0003151",
+          "species": "Skudriavzevii",
+          "species_overlap_count": "0",
+          "species_tree_node": "Skudriavzevii"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Suva_3.165",
+          "mapping_conflict": "false",
+          "node_id": "Suva_3.165",
+          "pair_event": "leaf",
+          "parent_node_id": "G00000",
+          "source_family": "Family0003151",
+          "species": "Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "Suvarum"
+        },
+        {
+          "branch_support": "0.974000",
+          "event": "speciation",
+          "event_confidence": "high",
+          "genes": "Skud_3.16,Suva_3.165",
+          "mapping_conflict": "false",
+          "node_id": "G00000",
+          "pair_event": "speciation",
+          "parent_node_id": "G00001",
+          "source_family": "Family0003151",
+          "species": "Skudriavzevii,Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0001"
+        },
+        {
+          "branch_support": "0.796000",
+          "event": "speciation",
+          "event_confidence": "high",
+          "genes": "Skud_3.16,Smik_3.28,Suva_3.165",
+          "mapping_conflict": "false",
+          "node_id": "G00001",
+          "pair_event": "speciation",
+          "parent_node_id": "G00012",
+          "source_family": "Family0003151",
+          "species": "Skudriavzevii,Smikatae,Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Skud_4.796",
+          "mapping_conflict": "false",
+          "node_id": "Skud_4.796",
+          "pair_event": "leaf",
+          "parent_node_id": "G00004",
+          "source_family": "Family0003151",
+          "species": "Skudriavzevii",
+          "species_overlap_count": "0",
+          "species_tree_node": "Skudriavzevii"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Smik_4.802",
+          "mapping_conflict": "false",
+          "node_id": "Smik_4.802",
+          "pair_event": "leaf",
+          "parent_node_id": "G00003",
+          "source_family": "Family0003151",
+          "species": "Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "Smikatae"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "YDR522C",
+          "mapping_conflict": "false",
+          "node_id": "YDR522C",
+          "pair_event": "leaf",
+          "parent_node_id": "G00002",
+          "source_family": "Family0003151",
+          "species": "Scerevisiae",
+          "species_overlap_count": "0",
+          "species_tree_node": "Scerevisiae"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Suva_2.702",
+          "mapping_conflict": "false",
+          "node_id": "Suva_2.702",
+          "pair_event": "leaf",
+          "parent_node_id": "G00002",
+          "source_family": "Family0003151",
+          "species": "Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "Suvarum"
+        },
+        {
+          "branch_support": "0.823000",
+          "event": "speciation",
+          "event_confidence": "high",
+          "genes": "Suva_2.702,YDR522C",
+          "mapping_conflict": "false",
+          "node_id": "G00002",
+          "pair_event": "speciation",
+          "parent_node_id": "G00003",
+          "source_family": "Family0003151",
+          "species": "Scerevisiae,Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "0.779000",
+          "event": "duplication",
+          "event_confidence": "medium",
+          "genes": "Smik_4.802,Suva_2.702,YDR522C",
+          "mapping_conflict": "true",
+          "node_id": "G00003",
+          "pair_event": "uncertain",
+          "parent_node_id": "G00004",
+          "source_family": "Family0003151",
+          "species": "Scerevisiae,Smikatae,Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "0.966000",
+          "event": "duplication",
+          "event_confidence": "medium",
+          "genes": "Skud_4.796,Smik_4.802,Suva_2.702,YDR522C",
+          "mapping_conflict": "true",
+          "node_id": "G00004",
+          "pair_event": "uncertain",
+          "parent_node_id": "G00011",
+          "source_family": "Family0003151",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae,Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Suva_4.317",
+          "mapping_conflict": "false",
+          "node_id": "Suva_4.317",
+          "pair_event": "leaf",
+          "parent_node_id": "G00006",
+          "source_family": "Family0003151",
+          "species": "Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "Suvarum"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Smik_2.210",
+          "mapping_conflict": "false",
+          "node_id": "Smik_2.210",
+          "pair_event": "leaf",
+          "parent_node_id": "G00005",
+          "source_family": "Family0003151",
+          "species": "Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "Smikatae"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "YBR078W",
+          "mapping_conflict": "false",
+          "node_id": "YBR078W",
+          "pair_event": "leaf",
+          "parent_node_id": "G00005",
+          "source_family": "Family0003151",
+          "species": "Scerevisiae",
+          "species_overlap_count": "0",
+          "species_tree_node": "Scerevisiae"
+        },
+        {
+          "branch_support": "0.877000",
+          "event": "speciation",
+          "event_confidence": "high",
+          "genes": "Smik_2.210,YBR078W",
+          "mapping_conflict": "false",
+          "node_id": "G00005",
+          "pair_event": "speciation",
+          "parent_node_id": "G00006",
+          "source_family": "Family0003151",
+          "species": "Scerevisiae,Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0002"
+        },
+        {
+          "branch_support": "0.937000",
+          "event": "speciation",
+          "event_confidence": "high",
+          "genes": "Smik_2.210,Suva_4.317,YBR078W",
+          "mapping_conflict": "false",
+          "node_id": "G00006",
+          "pair_event": "speciation",
+          "parent_node_id": "G00010",
+          "source_family": "Family0003151",
+          "species": "Scerevisiae,Smikatae,Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Suva_2.212",
+          "mapping_conflict": "false",
+          "node_id": "Suva_2.212",
+          "pair_event": "leaf",
+          "parent_node_id": "G00009",
+          "source_family": "Family0003151",
+          "species": "Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "Suvarum"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Skud_4.307",
+          "mapping_conflict": "false",
+          "node_id": "Skud_4.307",
+          "pair_event": "leaf",
+          "parent_node_id": "G00008",
+          "source_family": "Family0003151",
+          "species": "Skudriavzevii",
+          "species_overlap_count": "0",
+          "species_tree_node": "Skudriavzevii"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Smik_4.291",
+          "mapping_conflict": "false",
+          "node_id": "Smik_4.291",
+          "pair_event": "leaf",
+          "parent_node_id": "G00007",
+          "source_family": "Family0003151",
+          "species": "Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "Smikatae"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "YDR055W",
+          "mapping_conflict": "false",
+          "node_id": "YDR055W",
+          "pair_event": "leaf",
+          "parent_node_id": "G00007",
+          "source_family": "Family0003151",
+          "species": "Scerevisiae",
+          "species_overlap_count": "0",
+          "species_tree_node": "Scerevisiae"
+        },
+        {
+          "branch_support": "0.960000",
+          "event": "speciation",
+          "event_confidence": "high",
+          "genes": "Smik_4.291,YDR055W",
+          "mapping_conflict": "false",
+          "node_id": "G00007",
+          "pair_event": "speciation",
+          "parent_node_id": "G00008",
+          "source_family": "Family0003151",
+          "species": "Scerevisiae,Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0002"
+        },
+        {
+          "branch_support": "0.982000",
+          "event": "speciation",
+          "event_confidence": "high",
+          "genes": "Skud_4.307,Smik_4.291,YDR055W",
+          "mapping_conflict": "false",
+          "node_id": "G00008",
+          "pair_event": "speciation",
+          "parent_node_id": "G00009",
+          "source_family": "Family0003151",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "",
+          "event": "duplication",
+          "event_confidence": "medium",
+          "genes": "Skud_4.307,Smik_4.291,Suva_2.212,YDR055W",
+          "mapping_conflict": "true",
+          "node_id": "G00009",
+          "pair_event": "uncertain",
+          "parent_node_id": "G00010",
+          "source_family": "Family0003151",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae,Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "0.998000",
+          "event": "duplication",
+          "event_confidence": "high",
+          "genes": "Skud_4.307,Smik_2.210,Smik_4.291,Suva_2.212,Suva_4.317,YBR078W,YDR055W",
+          "mapping_conflict": "true",
+          "node_id": "G00010",
+          "pair_event": "duplication",
+          "parent_node_id": "G00011",
+          "source_family": "Family0003151",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae,Suvarum",
+          "species_overlap_count": "3",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "1.000000",
+          "event": "duplication",
+          "event_confidence": "high",
+          "genes": "Skud_4.307,Skud_4.796,Smik_2.210,Smik_4.291,Smik_4.802,Suva_2.212,Suva_2.702,Suva_4.317,YBR078W,YDR055W,YDR522C",
+          "mapping_conflict": "true",
+          "node_id": "G00011",
+          "pair_event": "duplication",
+          "parent_node_id": "G00012",
+          "source_family": "Family0003151",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae,Suvarum",
+          "species_overlap_count": "4",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "1.000000",
+          "event": "duplication",
+          "event_confidence": "high",
+          "genes": "Skud_3.16,Skud_4.307,Skud_4.796,Smik_2.210,Smik_3.28,Smik_4.291,Smik_4.802,Suva_2.212,Suva_2.702,Suva_3.165,Suva_4.317,YBR078W,YDR055W,YDR522C",
+          "mapping_conflict": "true",
+          "node_id": "G00012",
+          "pair_event": "duplication",
+          "parent_node_id": "G00013",
+          "source_family": "Family0003151",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae,Suvarum",
+          "species_overlap_count": "3",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "",
+          "event": "duplication",
+          "event_confidence": "medium",
+          "genes": "Skud_3.16,Skud_4.307,Skud_4.796,Smik_2.210,Smik_3.28,Smik_4.291,Smik_4.802,Suva_2.212,Suva_2.702,Suva_3.165,Suva_4.317,YBR078W,YCL048W,YDR055W,YDR522C",
+          "mapping_conflict": "true",
+          "node_id": "G00013",
+          "pair_event": "duplication",
+          "parent_node_id": "",
+          "source_family": "Family0003151",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae,Suvarum",
+          "species_overlap_count": "1",
+          "species_tree_node": "S0000"
+        }
+      ],
+      "preconstraint_groups": [
+        [
+          "YCL048W"
+        ],
+        [
+          "Skud_3.16",
+          "Smik_3.28",
+          "Suva_3.165"
+        ],
+        [
+          "Skud_4.796",
+          "Smik_4.802",
+          "Suva_2.702",
+          "YDR522C"
+        ],
+        [
+          "Smik_2.210",
+          "Suva_4.317",
+          "YBR078W"
+        ],
+        [
+          "Skud_4.307",
+          "Smik_4.291",
+          "Suva_2.212",
+          "YDR055W"
+        ]
+      ],
+      "propagated_split_nodes": [],
+      "reconciled": true,
+      "root_duplication_nodes": [
+        "G00010",
+        "G00011",
+        "G00012",
+        "G00013"
+      ]
+    },
+    "Family0003823": {
+      "candidate_members": [
+        "Skud_5.173",
+        "Smik_5.189",
+        "Suva_5.167",
+        "YER059W"
+      ],
+      "constraints": [],
+      "final_groups": [
+        [
+          "Skud_5.173",
+          "Smik_5.189",
+          "Suva_5.167",
+          "YER059W"
+        ]
+      ],
+      "nodes": [],
+      "preconstraint_groups": [
+        [
+          "Skud_5.173",
+          "Smik_5.189",
+          "Suva_5.167",
+          "YER059W"
+        ]
+      ],
+      "propagated_split_nodes": [],
+      "reconciled": false,
+      "root_duplication_nodes": []
+    },
+    "Family0003871": {
+      "candidate_members": [
+        "Skud_5.246",
+        "Skud_7.75",
+        "Smik_5.278",
+        "Smik_7.75",
+        "Suva_5.253",
+        "Suva_7.66",
+        "YER132C",
+        "YGL197W"
+      ],
+      "constraints": [],
+      "final_groups": [
+        [
+          "Skud_5.246",
+          "Smik_5.278",
+          "Suva_5.253",
+          "YER132C"
+        ],
+        [
+          "Skud_7.75",
+          "Smik_7.75",
+          "YGL197W"
+        ],
+        [
+          "Suva_7.66"
+        ]
+      ],
+      "nodes": [
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Suva_7.66",
+          "mapping_conflict": "false",
+          "node_id": "Suva_7.66",
+          "pair_event": "leaf",
+          "parent_node_id": "G00006",
+          "source_family": "Family0003871",
+          "species": "Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "Suvarum"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Skud_7.75",
+          "mapping_conflict": "false",
+          "node_id": "Skud_7.75",
+          "pair_event": "leaf",
+          "parent_node_id": "G00001",
+          "source_family": "Family0003871",
+          "species": "Skudriavzevii",
+          "species_overlap_count": "0",
+          "species_tree_node": "Skudriavzevii"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Smik_7.75",
+          "mapping_conflict": "false",
+          "node_id": "Smik_7.75",
+          "pair_event": "leaf",
+          "parent_node_id": "G00000",
+          "source_family": "Family0003871",
+          "species": "Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "Smikatae"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "YGL197W",
+          "mapping_conflict": "false",
+          "node_id": "YGL197W",
+          "pair_event": "leaf",
+          "parent_node_id": "G00000",
+          "source_family": "Family0003871",
+          "species": "Scerevisiae",
+          "species_overlap_count": "0",
+          "species_tree_node": "Scerevisiae"
+        },
+        {
+          "branch_support": "0.966000",
+          "event": "speciation",
+          "event_confidence": "high",
+          "genes": "Smik_7.75,YGL197W",
+          "mapping_conflict": "false",
+          "node_id": "G00000",
+          "pair_event": "speciation",
+          "parent_node_id": "G00001",
+          "source_family": "Family0003871",
+          "species": "Scerevisiae,Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0002"
+        },
+        {
+          "branch_support": "0.965000",
+          "event": "speciation",
+          "event_confidence": "high",
+          "genes": "Skud_7.75,Smik_7.75,YGL197W",
+          "mapping_conflict": "false",
+          "node_id": "G00001",
+          "pair_event": "speciation",
+          "parent_node_id": "G00005",
+          "source_family": "Family0003871",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Suva_5.253",
+          "mapping_conflict": "false",
+          "node_id": "Suva_5.253",
+          "pair_event": "leaf",
+          "parent_node_id": "G00004",
+          "source_family": "Family0003871",
+          "species": "Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "Suvarum"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Skud_5.246",
+          "mapping_conflict": "false",
+          "node_id": "Skud_5.246",
+          "pair_event": "leaf",
+          "parent_node_id": "G00003",
+          "source_family": "Family0003871",
+          "species": "Skudriavzevii",
+          "species_overlap_count": "0",
+          "species_tree_node": "Skudriavzevii"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "Smik_5.278",
+          "mapping_conflict": "false",
+          "node_id": "Smik_5.278",
+          "pair_event": "leaf",
+          "parent_node_id": "G00002",
+          "source_family": "Family0003871",
+          "species": "Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "Smikatae"
+        },
+        {
+          "branch_support": "",
+          "event": "leaf",
+          "event_confidence": "not_applicable",
+          "genes": "YER132C",
+          "mapping_conflict": "false",
+          "node_id": "YER132C",
+          "pair_event": "leaf",
+          "parent_node_id": "G00002",
+          "source_family": "Family0003871",
+          "species": "Scerevisiae",
+          "species_overlap_count": "0",
+          "species_tree_node": "Scerevisiae"
+        },
+        {
+          "branch_support": "",
+          "event": "speciation",
+          "event_confidence": "high",
+          "genes": "Smik_5.278,YER132C",
+          "mapping_conflict": "false",
+          "node_id": "G00002",
+          "pair_event": "speciation",
+          "parent_node_id": "G00003",
+          "source_family": "Family0003871",
+          "species": "Scerevisiae,Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0002"
+        },
+        {
+          "branch_support": "0.993000",
+          "event": "speciation",
+          "event_confidence": "high",
+          "genes": "Skud_5.246,Smik_5.278,YER132C",
+          "mapping_conflict": "false",
+          "node_id": "G00003",
+          "pair_event": "speciation",
+          "parent_node_id": "G00004",
+          "source_family": "Family0003871",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "0.964000",
+          "event": "duplication",
+          "event_confidence": "medium",
+          "genes": "Skud_5.246,Smik_5.278,Suva_5.253,YER132C",
+          "mapping_conflict": "true",
+          "node_id": "G00004",
+          "pair_event": "uncertain",
+          "parent_node_id": "G00005",
+          "source_family": "Family0003871",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae,Suvarum",
+          "species_overlap_count": "0",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "1.000000",
+          "event": "duplication",
+          "event_confidence": "high",
+          "genes": "Skud_5.246,Skud_7.75,Smik_5.278,Smik_7.75,Suva_5.253,YER132C,YGL197W",
+          "mapping_conflict": "true",
+          "node_id": "G00005",
+          "pair_event": "duplication",
+          "parent_node_id": "G00006",
+          "source_family": "Family0003871",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae,Suvarum",
+          "species_overlap_count": "3",
+          "species_tree_node": "S0000"
+        },
+        {
+          "branch_support": "",
+          "event": "duplication",
+          "event_confidence": "medium",
+          "genes": "Skud_5.246,Skud_7.75,Smik_5.278,Smik_7.75,Suva_5.253,Suva_7.66,YER132C,YGL197W",
+          "mapping_conflict": "true",
+          "node_id": "G00006",
+          "pair_event": "duplication",
+          "parent_node_id": "",
+          "source_family": "Family0003871",
+          "species": "Scerevisiae,Skudriavzevii,Smikatae,Suvarum",
+          "species_overlap_count": "1",
+          "species_tree_node": "S0000"
+        }
+      ],
+      "preconstraint_groups": [
+        [
+          "Suva_7.66"
+        ],
+        [
+          "Skud_7.75",
+          "Smik_7.75",
+          "YGL197W"
+        ],
+        [
+          "Skud_5.246",
+          "Smik_5.278",
+          "Suva_5.253",
+          "YER132C"
+        ]
+      ],
+      "propagated_split_nodes": [],
+      "reconciled": true,
+      "root_duplication_nodes": [
+        "G00005",
+        "G00006"
+      ]
+    },
+    "Family0004616": {
+      "candidate_members": [
+        "Skud_9.119",
+        "Smik_9.140",
+        "Suva_9.149",
+        "YIL050W"
+      ],
+      "constraints": [],
+      "final_groups": [
+        [
+          "Skud_9.119",
+          "Smik_9.140",
+          "Suva_9.149",
+          "YIL050W"
+        ]
+      ],
+      "nodes": [],
+      "preconstraint_groups": [
+        [
+          "Skud_9.119",
+          "Smik_9.140",
+          "Suva_9.149",
+          "YIL050W"
+        ]
+      ],
+      "propagated_split_nodes": [],
+      "reconciled": false,
+      "root_duplication_nodes": []
+    }
+  },
+  "limitations": [
+    "Retained node calls are reconstructed, not independently inferred evolutionary history.",
+    "Node-table and family checkpoint hashes are recorded retrospectively; tree hashes are cross-checked against checkpoints.",
+    "Only families incident to the six prespecified cases are reconstructed.",
+    "Stage categories follow execution order; root-lineage splits are not also counted as constraint splits.",
+    "This trace does not identify prefilter/search causes or validate the biological correctness of tree rooting.",
+    "No cross-species ancestral-copy labels are supplied by the reference pillars."
+  ],
+  "sources": [
+    {
+      "bytes": 10574,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/trace_wgd_cases.py",
+      "sha256": "e537e2fb55839d0f394d448002e2277040a7b8ce04553af8c404f4272f9e06e4"
+    },
+    {
+      "bytes": 6267,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/reconstruct_reconciliation_trace.py",
+      "sha256": "cd80d2a50e959bf9c530c3f19e1c0c1a99d53251d20791078a74f5a70b739506"
+    },
+    {
+      "bytes": 10875,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_wgd_results.py",
+      "sha256": "3b8a28bb9b300f12b7882ea21fe568201ba6bffcd8853ecbd6f14054aec75a6d"
+    }
+  ],
+  "status": "prespecified_case_native_membership_reconstructed"
+}
