@@ -42,7 +42,28 @@ evidence that an experiment completed or a biological hypothesis is true.
 | 6. Biological usefulness | [Prospective WGD protocol](BIOLOGICAL_WGD_APPLICATION_PROTOCOL_20260917.md), admitted runs, [results](BIOLOGICAL_WGD_RESULTS_20260917.md), [separate native-membership rescore](biological_wgd_rescore_audit_20260917.json), [figure](figures_wgd_application_20260917/wgd_application.pdf) and [all six examples](figures_wgd_application_20260917/PRESPECIFIED_EXAMPLES.md): phylogenetic OrthoHMM improves supported separation over high sensitivity but trails full OrthoFinder and SonicParanoid in supported separation and homolog coverage | Stage-level mechanism tracing remains; development-exposed application, not independent validation or copy-specific orthology truth; YGOB column order does not identify ancestral copies; configurations differ beyond reconciliation |
 | 7. Publication package | Comparison, uncertainty, ablation, simulation, strata, tree/parameter and biological application figures; [method diagram](figures_publication_method_20260916/publication_method.pdf); evolving [manuscript](PUBLICATION_MANUSCRIPT_DRAFT_20260916.md) | Scaling figures, completed Methods/Results and claim audit, verified bibliography, portable workflows/dependencies, versioned release and archival bundle |
 
-## Current Execution Gates
+## Current Execution Status
+
+- Recovered QfO scoring21548_0..3 and admission21584 are all COMPLETED0:0.
+  [Stage results](qfo_recovered_stage_summary_20260917.json) and the SwissTrees
+  interval audit are complete; uncertainty for the other challenges remains open.
+- DGX matched timing21656 has four completed tasks and task4 running at the
+  latest accounting check. No scientific timings have yet passed output and
+  resource admission. The original32CPU plan remains distinct from the DGX plan.
+- Biological application scores, independent arithmetic, figure and all six
+  prospective cases are complete. The [stage trace](BIOLOGICAL_WGD_CASE_TRACE_20260917.md)
+  localizes five focal homolog separations to root-lineage grouping. Tree
+  correctness and upstream search effects remain unresolved.
+- [Docs dependency remediation](DOCS_DEPENDENCY_SECURITY_20260917.md) checks
+  all21 retained alerts against the updated lock with zero affected versions.
+  Post-push GitHub closure is pending; this is not a host or inference-runtime
+  security audit. The docs build still reports14 diagnostics.
+
+## Historical Execution Gates
+
+The entries below retain prior failures and decisions. Statements describing
+then-running jobs or pending analyses are historical, not current job status;
+use the current status above and latest progress ledger for live work.
 
 - YGOB `20917` was cancelled before execution after finding the missing native
   profile runtime. Corrected job `21192` completed 0:0; the frozen evaluation

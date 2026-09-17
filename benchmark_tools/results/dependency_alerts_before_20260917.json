@@ -1,0 +1,644 @@
+{
+  "alerts": [
+    {
+      "cve_id": "CVE-2026-54283",
+      "dependency": {
+        "manifest_path": "docs/uv.lock",
+        "package": {
+          "ecosystem": "pip",
+          "name": "starlette"
+        },
+        "relationship": "unknown",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "1.3.1"
+      },
+      "ghsa_id": "GHSA-82w8-qh3p-5jfq",
+      "number": 30,
+      "references": [
+        "https://github.com/Kludex/starlette/security/advisories/GHSA-82w8-qh3p-5jfq",
+        "https://github.com/advisories/GHSA-82w8-qh3p-5jfq"
+      ],
+      "severity": "high",
+      "state": "open",
+      "summary": "Starlette: request.form() limits silently ignored for application/x-www-form-urlencoded enable DoS",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/30",
+      "vulnerable_version_range": ">= 0.4.1, < 1.3.1"
+    },
+    {
+      "cve_id": "CVE-2026-54282",
+      "dependency": {
+        "manifest_path": "docs/uv.lock",
+        "package": {
+          "ecosystem": "pip",
+          "name": "Starlette"
+        },
+        "relationship": "unknown",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "1.3.0"
+      },
+      "ghsa_id": "GHSA-jp82-jpqv-5vv3",
+      "number": 29,
+      "references": [
+        "https://github.com/Kludex/starlette/security/advisories/GHSA-jp82-jpqv-5vv3",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-54282",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/starlette/PYSEC-2026-248.yaml",
+        "https://github.com/advisories/GHSA-jp82-jpqv-5vv3"
+      ],
+      "severity": "low",
+      "state": "open",
+      "summary": "Starlette: Unvalidated request path concatenated into authority poisons request.url.hostname",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/29",
+      "vulnerable_version_range": "< 1.3.0"
+    },
+    {
+      "cve_id": "CVE-2026-48818",
+      "dependency": {
+        "manifest_path": "docs/uv.lock",
+        "package": {
+          "ecosystem": "pip",
+          "name": "starlette"
+        },
+        "relationship": "unknown",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "1.1.0"
+      },
+      "ghsa_id": "GHSA-wqp7-x3pw-xc5r",
+      "number": 28,
+      "references": [
+        "https://github.com/Kludex/starlette/security/advisories/GHSA-wqp7-x3pw-xc5r",
+        "https://github.com/advisories/GHSA-wqp7-x3pw-xc5r"
+      ],
+      "severity": "high",
+      "state": "open",
+      "summary": "Starlette: SSRF and NTLM credential theft via UNC paths in StaticFiles on Windows",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/28",
+      "vulnerable_version_range": "< 1.1.0"
+    },
+    {
+      "cve_id": "CVE-2026-48817",
+      "dependency": {
+        "manifest_path": "docs/uv.lock",
+        "package": {
+          "ecosystem": "pip",
+          "name": "starlette"
+        },
+        "relationship": "unknown",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "1.1.0"
+      },
+      "ghsa_id": "GHSA-x746-7m8f-x49c",
+      "number": 27,
+      "references": [
+        "https://github.com/Kludex/starlette/security/advisories/GHSA-x746-7m8f-x49c",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-48817",
+        "https://github.com/Kludex/starlette/releases/tag/1.1.0",
+        "https://github.com/advisories/GHSA-x746-7m8f-x49c"
+      ],
+      "severity": "medium",
+      "state": "open",
+      "summary": "Starlette: Arbitrary HTTP method dispatched to `HTTPEndpoint` attributes via `getattr`",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/27",
+      "vulnerable_version_range": "< 1.1.0"
+    },
+    {
+      "cve_id": "CVE-2026-48710",
+      "dependency": {
+        "manifest_path": "docs/uv.lock",
+        "package": {
+          "ecosystem": "pip",
+          "name": "starlette"
+        },
+        "relationship": "unknown",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "1.0.1"
+      },
+      "ghsa_id": "GHSA-86qp-5c8j-p5mr",
+      "number": 26,
+      "references": [
+        "https://github.com/Kludex/starlette/security/advisories/GHSA-86qp-5c8j-p5mr",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-48710",
+        "https://github.com/Kludex/starlette/commit/764dab0dcfb9033d75442d7a359645c9f94648c6",
+        "https://badhost.org",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/starlette/PYSEC-2026-161.yaml",
+        "https://ostif.org/disclosing-the-badhost-vulnerability-in-starlette",
+        "https://www.secwest.net/starlette",
+        "https://www.x41-dsec.de/lab/advisories/x41-2026-002-starlette",
+        "https://www.cve.org/CVERecord?id=CVE-2026-48710",
+        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-48710.json",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=2481742",
+        "https://access.redhat.com/security/cve/CVE-2026-48710",
+        "https://access.redhat.com/errata/RHSA-2026:34532",
+        "https://access.redhat.com/errata/RHSA-2026:34526",
+        "https://access.redhat.com/errata/RHSA-2026:34456",
+        "https://access.redhat.com/errata/RHSA-2026:30089",
+        "https://access.redhat.com/errata/RHSA-2026:30088",
+        "https://access.redhat.com/errata/RHSA-2026:26226",
+        "https://access.redhat.com/errata/RHSA-2026:24866",
+        "https://access.redhat.com/errata/RHSA-2026:23346",
+        "https://access.redhat.com/errata/RHSA-2026:22993",
+        "https://access.redhat.com/errata/RHSA-2026:22992",
+        "https://access.redhat.com/errata/RHSA-2026:37275",
+        "https://access.redhat.com/errata/RHSA-2026:43038",
+        "https://access.redhat.com/errata/RHSA-2026:44696",
+        "https://access.redhat.com/errata/RHSA-2026:51357",
+        "https://access.redhat.com/errata/RHSA-2026:60520",
+        "https://github.com/advisories/GHSA-86qp-5c8j-p5mr"
+      ],
+      "severity": "medium",
+      "state": "open",
+      "summary": "Starlette has missing Host header validation that poisons request.url.path, bypassing path-based security checks",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/26",
+      "vulnerable_version_range": "<= 1.0.0"
+    },
+    {
+      "cve_id": "CVE-2026-45409",
+      "dependency": {
+        "manifest_path": "docs/uv.lock",
+        "package": {
+          "ecosystem": "pip",
+          "name": "idna"
+        },
+        "relationship": "unknown",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "3.15"
+      },
+      "ghsa_id": "GHSA-65pc-fj4g-8rjx",
+      "number": 25,
+      "references": [
+        "https://github.com/kjd/idna/security/advisories/GHSA-65pc-fj4g-8rjx",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-45409",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/idna/PYSEC-2026-215.yaml",
+        "https://github.com/advisories/GHSA-65pc-fj4g-8rjx"
+      ],
+      "severity": "medium",
+      "state": "open",
+      "summary": "Internationalized Domain Names in Applications (IDNA): Specially crafted inputs to idna.encode() can bypass CVE-2024-3651 fix",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/25",
+      "vulnerable_version_range": "< 3.15"
+    },
+    {
+      "cve_id": "CVE-2026-44431",
+      "dependency": {
+        "manifest_path": "docs/uv.lock",
+        "package": {
+          "ecosystem": "pip",
+          "name": "urllib3"
+        },
+        "relationship": "unknown",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "2.7.0"
+      },
+      "ghsa_id": "GHSA-qccp-gfcp-xxvc",
+      "number": 24,
+      "references": [
+        "https://github.com/urllib3/urllib3/security/advisories/GHSA-qccp-gfcp-xxvc",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-44431",
+        "https://github.com/advisories/GHSA-qccp-gfcp-xxvc"
+      ],
+      "severity": "high",
+      "state": "open",
+      "summary": "urllib3: Sensitive headers forwarded across origins in proxied low-level redirects",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/24",
+      "vulnerable_version_range": ">= 1.23, < 2.7.0"
+    },
+    {
+      "cve_id": "CVE-2026-4539",
+      "dependency": {
+        "manifest_path": "docs/uv.lock",
+        "package": {
+          "ecosystem": "pip",
+          "name": "Pygments"
+        },
+        "relationship": "unknown",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "2.20.0"
+      },
+      "ghsa_id": "GHSA-5239-wwwm-4pmq",
+      "number": 23,
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-4539",
+        "https://github.com/pygments/pygments/issues/3058",
+        "https://github.com/pygments/pygments",
+        "https://vuldb.com/?ctiid.352327",
+        "https://vuldb.com/?id.352327",
+        "https://vuldb.com/?submit.774685",
+        "https://github.com/pygments/pygments/pull/3064",
+        "https://github.com/pygments/pygments/commit/24b8aa76c6cd6d70f39c6dd605cce319c98e2ccc",
+        "https://github.com/pygments/pygments/releases/tag/2.20.0",
+        "https://github.com/advisories/GHSA-5239-wwwm-4pmq"
+      ],
+      "severity": "low",
+      "state": "open",
+      "summary": "Pygments has Regular Expression Denial of Service (ReDoS) due to Inefficient Regex for GUID Matching",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/23",
+      "vulnerable_version_range": "< 2.20.0"
+    },
+    {
+      "cve_id": "CVE-2026-25645",
+      "dependency": {
+        "manifest_path": "docs/uv.lock",
+        "package": {
+          "ecosystem": "pip",
+          "name": "requests"
+        },
+        "relationship": "unknown",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "2.33.0"
+      },
+      "ghsa_id": "GHSA-gc5v-m9x4-r6x2",
+      "number": 22,
+      "references": [
+        "https://github.com/psf/requests/security/advisories/GHSA-gc5v-m9x4-r6x2",
+        "https://github.com/psf/requests/commit/66d21cb07bd6255b1280291c4fafb71803cdb3b7",
+        "https://github.com/psf/requests/releases/tag/v2.33.0",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-25645",
+        "https://github.com/advisories/GHSA-gc5v-m9x4-r6x2"
+      ],
+      "severity": "medium",
+      "state": "open",
+      "summary": "Requests has Insecure Temp File Reuse in its extract_zipped_paths() utility function",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/22",
+      "vulnerable_version_range": "< 2.33.0"
+    },
+    {
+      "cve_id": "CVE-2026-21441",
+      "dependency": {
+        "manifest_path": "docs/uv.lock",
+        "package": {
+          "ecosystem": "pip",
+          "name": "urllib3"
+        },
+        "relationship": "unknown",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "2.6.3"
+      },
+      "ghsa_id": "GHSA-38jv-5279-wg99",
+      "number": 21,
+      "references": [
+        "https://github.com/urllib3/urllib3/security/advisories/GHSA-38jv-5279-wg99",
+        "https://github.com/urllib3/urllib3/commit/8864ac407bba8607950025e0979c4c69bc7abc7b",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-21441",
+        "https://lists.debian.org/debian-lts-announce/2026/01/msg00017.html",
+        "https://github.com/advisories/GHSA-38jv-5279-wg99"
+      ],
+      "severity": "high",
+      "state": "open",
+      "summary": "Decompression-bomb safeguards bypassed when following HTTP redirects (streaming API)",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/21",
+      "vulnerable_version_range": ">= 1.22, < 2.6.3"
+    },
+    {
+      "cve_id": "CVE-2025-66471",
+      "dependency": {
+        "manifest_path": "docs/uv.lock",
+        "package": {
+          "ecosystem": "pip",
+          "name": "urllib3"
+        },
+        "relationship": "unknown",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "2.6.0"
+      },
+      "ghsa_id": "GHSA-2xpw-w6gg-jr37",
+      "number": 20,
+      "references": [
+        "https://github.com/urllib3/urllib3/security/advisories/GHSA-2xpw-w6gg-jr37",
+        "https://github.com/urllib3/urllib3/commit/c19571de34c47de3a766541b041637ba5f716ed7",
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-66471",
+        "https://github.com/advisories/GHSA-2xpw-w6gg-jr37"
+      ],
+      "severity": "high",
+      "state": "open",
+      "summary": "urllib3 streaming API improperly handles highly compressed data",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/20",
+      "vulnerable_version_range": ">= 1.0, < 2.6.0"
+    },
+    {
+      "cve_id": "CVE-2025-66418",
+      "dependency": {
+        "manifest_path": "docs/uv.lock",
+        "package": {
+          "ecosystem": "pip",
+          "name": "urllib3"
+        },
+        "relationship": "unknown",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "2.6.0"
+      },
+      "ghsa_id": "GHSA-gm62-xv2j-4w53",
+      "number": 19,
+      "references": [
+        "https://github.com/urllib3/urllib3/security/advisories/GHSA-gm62-xv2j-4w53",
+        "https://github.com/urllib3/urllib3/commit/24d7b67eac89f94e11003424bcf0d8f7b72222a8",
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-66418",
+        "https://github.com/advisories/GHSA-gm62-xv2j-4w53"
+      ],
+      "severity": "high",
+      "state": "open",
+      "summary": "urllib3 allows an unbounded number of links in the decompression chain",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/19",
+      "vulnerable_version_range": ">= 1.24, < 2.6.0"
+    },
+    {
+      "cve_id": "CVE-2025-62727",
+      "dependency": {
+        "manifest_path": "docs/uv.lock",
+        "package": {
+          "ecosystem": "pip",
+          "name": "starlette"
+        },
+        "relationship": "unknown",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "0.49.1"
+      },
+      "ghsa_id": "GHSA-7f5h-v6xp-fcq8",
+      "number": 18,
+      "references": [
+        "https://github.com/Kludex/starlette/security/advisories/GHSA-7f5h-v6xp-fcq8",
+        "https://github.com/Kludex/starlette/commit/4ea6e22b489ec388d6004cfbca52dd5b147127c5",
+        "https://github.com/Kludex/starlette/releases/tag/0.49.1",
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-62727",
+        "https://github.com/Kludex/starlette/commit/69ed26a85956ef4bd0161807eb27abf49be7cd3c",
+        "https://github.com/advisories/GHSA-7f5h-v6xp-fcq8"
+      ],
+      "severity": "high",
+      "state": "open",
+      "summary": "Starlette vulnerable to O(n^2) DoS via Range header merging in ``starlette.responses.FileResponse``",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/18",
+      "vulnerable_version_range": ">= 0.39.0, <= 0.49.0"
+    },
+    {
+      "cve_id": "CVE-2025-54121",
+      "dependency": {
+        "manifest_path": "docs/uv.lock",
+        "package": {
+          "ecosystem": "pip",
+          "name": "starlette"
+        },
+        "relationship": "unknown",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "0.47.2"
+      },
+      "ghsa_id": "GHSA-2c2j-9gv5-cj73",
+      "number": 17,
+      "references": [
+        "https://github.com/encode/starlette/security/advisories/GHSA-2c2j-9gv5-cj73",
+        "https://github.com/encode/starlette/commit/9f7ec2eb512fcc3fe90b43cb9dd9e1d08696bec1",
+        "https://github.com/encode/starlette/blob/fa5355442753f794965ae1af0f87f9fec1b9a3de/starlette/datastructures.py#L436C5-L447C14",
+        "https://github.com/encode/starlette/discussions/2927#discussioncomment-13721403",
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-54121",
+        "https://github.com/advisories/GHSA-2c2j-9gv5-cj73"
+      ],
+      "severity": "medium",
+      "state": "open",
+      "summary": "Starlette has possible denial-of-service vector when parsing large files in multipart forms",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/17",
+      "vulnerable_version_range": "< 0.47.2"
+    },
+    {
+      "cve_id": "CVE-2025-50182",
+      "dependency": {
+        "manifest_path": "docs/uv.lock",
+        "package": {
+          "ecosystem": "pip",
+          "name": "urllib3"
+        },
+        "relationship": "unknown",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "2.5.0"
+      },
+      "ghsa_id": "GHSA-48p4-8xcf-vxj5",
+      "number": 16,
+      "references": [
+        "https://github.com/urllib3/urllib3/security/advisories/GHSA-48p4-8xcf-vxj5",
+        "https://github.com/urllib3/urllib3/commit/7eb4a2aafe49a279c29b6d1f0ed0f42e9736194f",
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-50182",
+        "https://github.com/urllib3/urllib3/releases/tag/2.5.0",
+        "https://github.com/advisories/GHSA-48p4-8xcf-vxj5"
+      ],
+      "severity": "medium",
+      "state": "open",
+      "summary": "urllib3 does not control redirects in browsers and Node.js",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/16",
+      "vulnerable_version_range": ">= 2.2.0, < 2.5.0"
+    },
+    {
+      "cve_id": "CVE-2025-50181",
+      "dependency": {
+        "manifest_path": "docs/uv.lock",
+        "package": {
+          "ecosystem": "pip",
+          "name": "urllib3"
+        },
+        "relationship": "unknown",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "2.5.0"
+      },
+      "ghsa_id": "GHSA-pq67-6m6q-mj2v",
+      "number": 15,
+      "references": [
+        "https://github.com/urllib3/urllib3/security/advisories/GHSA-pq67-6m6q-mj2v",
+        "https://github.com/urllib3/urllib3/commit/f05b1329126d5be6de501f9d1e3e36738bc08857",
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-50181",
+        "https://github.com/urllib3/urllib3/releases/tag/2.5.0",
+        "https://github.com/advisories/GHSA-pq67-6m6q-mj2v"
+      ],
+      "severity": "medium",
+      "state": "open",
+      "summary": "urllib3 redirects are not disabled when retries are disabled on PoolManager instantiation",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/15",
+      "vulnerable_version_range": "< 2.5.0"
+    },
+    {
+      "cve_id": "CVE-2024-47081",
+      "dependency": {
+        "manifest_path": "docs/uv.lock",
+        "package": {
+          "ecosystem": "pip",
+          "name": "requests"
+        },
+        "relationship": "unknown",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "2.32.4"
+      },
+      "ghsa_id": "GHSA-9hjg-9r4m-mvj7",
+      "number": 14,
+      "references": [
+        "https://github.com/psf/requests/security/advisories/GHSA-9hjg-9r4m-mvj7",
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-47081",
+        "https://github.com/psf/requests/pull/6965",
+        "https://github.com/psf/requests/commit/96ba401c1296ab1dda74a2365ef36d88f7d144ef",
+        "https://requests.readthedocs.io/en/latest/api/#requests.Session.trust_env",
+        "https://seclists.org/fulldisclosure/2025/Jun/2",
+        "http://seclists.org/fulldisclosure/2025/Jun/2",
+        "http://www.openwall.com/lists/oss-security/2025/06/03/11",
+        "http://www.openwall.com/lists/oss-security/2025/06/03/9",
+        "http://www.openwall.com/lists/oss-security/2025/06/04/1",
+        "http://www.openwall.com/lists/oss-security/2025/06/04/6",
+        "https://github.com/advisories/GHSA-9hjg-9r4m-mvj7"
+      ],
+      "severity": "medium",
+      "state": "open",
+      "summary": "Requests vulnerable to .netrc credentials leak via malicious URLs",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/14",
+      "vulnerable_version_range": "< 2.32.4"
+    },
+    {
+      "cve_id": "CVE-2025-43859",
+      "dependency": {
+        "manifest_path": "docs/uv.lock",
+        "package": {
+          "ecosystem": "pip",
+          "name": "h11"
+        },
+        "relationship": "unknown",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "0.16.0"
+      },
+      "ghsa_id": "GHSA-vqfr-h8mv-ghfj",
+      "number": 13,
+      "references": [
+        "https://github.com/python-hyper/h11/security/advisories/GHSA-vqfr-h8mv-ghfj",
+        "https://github.com/python-hyper/h11/commit/114803a29ce50116dc47951c690ad4892b1a36ed",
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-43859",
+        "https://github.com/advisories/GHSA-vqfr-h8mv-ghfj"
+      ],
+      "severity": "critical",
+      "state": "open",
+      "summary": "h11 accepts some malformed Chunked-Encoding bodies",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/13",
+      "vulnerable_version_range": "< 0.16.0"
+    },
+    {
+      "cve_id": "CVE-2025-27516",
+      "dependency": {
+        "manifest_path": "docs/uv.lock",
+        "package": {
+          "ecosystem": "pip",
+          "name": "Jinja2"
+        },
+        "relationship": "unknown",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "3.1.6"
+      },
+      "ghsa_id": "GHSA-cpwx-vrp4-4pq7",
+      "number": 12,
+      "references": [
+        "https://github.com/pallets/jinja/security/advisories/GHSA-cpwx-vrp4-4pq7",
+        "https://github.com/pallets/jinja/commit/90457bbf33b8662926ae65cdde4c4c32e756e403",
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-27516",
+        "https://lists.debian.org/debian-lts-announce/2025/04/msg00045.html",
+        "https://lists.debian.org/debian-lts-announce/2025/04/msg00022.html",
+        "https://github.com/advisories/GHSA-cpwx-vrp4-4pq7"
+      ],
+      "severity": "medium",
+      "state": "open",
+      "summary": "Jinja2 vulnerable to sandbox breakout through attr filter selecting format method",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/12",
+      "vulnerable_version_range": "<= 3.1.5"
+    },
+    {
+      "cve_id": "CVE-2024-56201",
+      "dependency": {
+        "manifest_path": "docs/uv.lock",
+        "package": {
+          "ecosystem": "pip",
+          "name": "jinja2"
+        },
+        "relationship": "unknown",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "3.1.5"
+      },
+      "ghsa_id": "GHSA-gmj6-6f8f-6699",
+      "number": 11,
+      "references": [
+        "https://github.com/pallets/jinja/security/advisories/GHSA-gmj6-6f8f-6699",
+        "https://github.com/pallets/jinja/releases/tag/3.1.5",
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-56201",
+        "https://github.com/pallets/jinja/issues/1792",
+        "https://github.com/pallets/jinja/commit/767b23617628419ae3709ccfb02f9602ae9fe51f",
+        "https://github.com/advisories/GHSA-gmj6-6f8f-6699"
+      ],
+      "severity": "medium",
+      "state": "open",
+      "summary": "Jinja has a sandbox breakout through malicious filenames",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/11",
+      "vulnerable_version_range": ">= 3.0.0, <= 3.1.4"
+    },
+    {
+      "cve_id": "CVE-2024-56326",
+      "dependency": {
+        "manifest_path": "docs/uv.lock",
+        "package": {
+          "ecosystem": "pip",
+          "name": "jinja2"
+        },
+        "relationship": "unknown",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "3.1.5"
+      },
+      "ghsa_id": "GHSA-q2x7-8rv6-6q7h",
+      "number": 10,
+      "references": [
+        "https://github.com/pallets/jinja/security/advisories/GHSA-q2x7-8rv6-6q7h",
+        "https://github.com/pallets/jinja/releases/tag/3.1.5",
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-56326",
+        "https://github.com/pallets/jinja/commit/48b0687e05a5466a91cd5812d604fa37ad0943b4",
+        "https://lists.debian.org/debian-lts-announce/2025/04/msg00022.html",
+        "https://github.com/advisories/GHSA-q2x7-8rv6-6q7h"
+      ],
+      "severity": "medium",
+      "state": "open",
+      "summary": "Jinja has a sandbox breakout through indirect reference to format method",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/10",
+      "vulnerable_version_range": "<= 3.1.4"
+    }
+  ],
+  "endpoint": "https://api.github.com/repos/JLSteenwyk/orthohmm/dependabot/alerts",
+  "limitations": "Repository alerts are not a full installed-environment or reachability audit.",
+  "repository": "JLSteenwyk/orthohmm",
+  "retrieved_utc": "2026-09-17T22:57:40.966666+00:00",
+  "state_filter": "open"
+}

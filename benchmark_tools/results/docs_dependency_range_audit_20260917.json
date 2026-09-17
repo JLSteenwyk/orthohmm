@@ -1,0 +1,235 @@
+{
+  "affected_alerts": 0,
+  "alert_snapshot": {
+    "bytes": 24542,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/dependency_alerts_before_20260917.json",
+    "sha256": "de817d17ecd97faae00abde6fb70f12fdfd2233143d21107b917b4f9726b150b"
+  },
+  "auditor": {
+    "bytes": 2783,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_dependency_lock.py",
+    "sha256": "cd1638d3e0f3f40c3a58748a4c77b761a009e97af29844106b6e748bdc31713c"
+  },
+  "comparisons": [
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-82w8-qh3p-5jfq",
+      "locked_versions": [
+        "1.6.0"
+      ],
+      "number": 30,
+      "package": "starlette",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-jp82-jpqv-5vv3",
+      "locked_versions": [
+        "1.6.0"
+      ],
+      "number": 29,
+      "package": "starlette",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-wqp7-x3pw-xc5r",
+      "locked_versions": [
+        "1.6.0"
+      ],
+      "number": 28,
+      "package": "starlette",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-x746-7m8f-x49c",
+      "locked_versions": [
+        "1.6.0"
+      ],
+      "number": 27,
+      "package": "starlette",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-86qp-5c8j-p5mr",
+      "locked_versions": [
+        "1.6.0"
+      ],
+      "number": 26,
+      "package": "starlette",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-65pc-fj4g-8rjx",
+      "locked_versions": [
+        "3.20"
+      ],
+      "number": 25,
+      "package": "idna",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-qccp-gfcp-xxvc",
+      "locked_versions": [
+        "2.8.0"
+      ],
+      "number": 24,
+      "package": "urllib3",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-5239-wwwm-4pmq",
+      "locked_versions": [
+        "2.21.0"
+      ],
+      "number": 23,
+      "package": "pygments",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-gc5v-m9x4-r6x2",
+      "locked_versions": [
+        "2.34.2"
+      ],
+      "number": 22,
+      "package": "requests",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-38jv-5279-wg99",
+      "locked_versions": [
+        "2.8.0"
+      ],
+      "number": 21,
+      "package": "urllib3",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-2xpw-w6gg-jr37",
+      "locked_versions": [
+        "2.8.0"
+      ],
+      "number": 20,
+      "package": "urllib3",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-gm62-xv2j-4w53",
+      "locked_versions": [
+        "2.8.0"
+      ],
+      "number": 19,
+      "package": "urllib3",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-7f5h-v6xp-fcq8",
+      "locked_versions": [
+        "1.6.0"
+      ],
+      "number": 18,
+      "package": "starlette",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-2c2j-9gv5-cj73",
+      "locked_versions": [
+        "1.6.0"
+      ],
+      "number": 17,
+      "package": "starlette",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-48p4-8xcf-vxj5",
+      "locked_versions": [
+        "2.8.0"
+      ],
+      "number": 16,
+      "package": "urllib3",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-pq67-6m6q-mj2v",
+      "locked_versions": [
+        "2.8.0"
+      ],
+      "number": 15,
+      "package": "urllib3",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-9hjg-9r4m-mvj7",
+      "locked_versions": [
+        "2.34.2"
+      ],
+      "number": 14,
+      "package": "requests",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-vqfr-h8mv-ghfj",
+      "locked_versions": [
+        "0.16.0"
+      ],
+      "number": 13,
+      "package": "h11",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-cpwx-vrp4-4pq7",
+      "locked_versions": [
+        "3.1.6"
+      ],
+      "number": 12,
+      "package": "jinja2",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-gmj6-6f8f-6699",
+      "locked_versions": [
+        "3.1.6"
+      ],
+      "number": 11,
+      "package": "jinja2",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-q2x7-8rv6-6q7h",
+      "locked_versions": [
+        "3.1.6"
+      ],
+      "number": 10,
+      "package": "jinja2",
+      "status": "outside_reported_range"
+    }
+  ],
+  "limitations": [
+    "Tests only the retained advisory ranges, not all vulnerabilities or exploitability.",
+    "Checks every locked branch, even versions not selected on the current interpreter.",
+    "GitHub alert closure requires a separate post-push API check."
+  ],
+  "lock": {
+    "bytes": 107182,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/docs/uv.lock",
+    "sha256": "5b57557fc3b4a5dc1c8cf2d28cda0db2d67214d7da0abffb9cea7d7442cd5b31"
+  }
+}

@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Docs Dependency Security Remediation (2026-09-17)
+
+Previous turn made progress with case stage tracing, pushed22b1ed6. Re-read
+objective. Read-only GitHub API snapshot identifies all21open dependency alerts
+in docs/uv.lock (1critical/7high/11medium/2low), not inference requirements.
+Added sanitized snapshot and structured range-audit helpers, with4passingtests.
+Updated only docs dependency resolution and CI locked usage; raised docs Python
+floor3.9to3.10 and interpreter pin3.12 to remove vulnerable3.9branches.
+Exact versions and source references: `DOCS_DEPENDENCY_SECURITY_20260917.md`.
+
+Fresh isolated34-package environment passes dependency consistency, and all21
+retained ranges exclude every updated lock branch. Sphinx exits0but emits14
+diagnostics including source-format errors and missing images; not clean docs.
+Local preview HTTP200smoke passes and its subprocess was terminated. Existing
+benchmark runtimes and inference dependencies untouched. GitHub alert closure
+must still be checked after push; no blanket security claim or alert dismissal.
+
+Verified all recovered QfO scoring/admission jobs terminal0:0 and corrected
+stale claim-ledger job descriptions with explicit historical/current sections.
+DGX21656_4live10:10at initial poll;fourcomplete,22queued. No restart or remote
+artifact transfers. Publication goal still active: remaining statistical/error
+evidence, timing admission, documentation cleanup, licenses, release/archive.
+
 ## Prespecified Case Stage Reconstruction (2026-09-17)
 
 Previous continuation progressed independent scoring arithmetic and application

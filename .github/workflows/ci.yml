@@ -100,14 +100,15 @@ jobs:
       - name: Install uv
         uses: astral-sh/setup-uv@v4
         with:
+          version: "0.12.15"
           enable-cache: true
           cache-dependency-glob: "docs/uv.lock"
       - name: Build docs
         run: |
           cd docs
           uv python install
-          uv sync --all-extras --dev
-          uv run python -m sphinx.cmd.build -b html . ./_build/html
+          uv sync --locked --all-extras --dev
+          uv run --locked python -m sphinx.cmd.build -b html . ./_build/html
           cd ..
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
