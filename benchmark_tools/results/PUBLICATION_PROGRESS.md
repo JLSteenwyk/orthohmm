@@ -3262,3 +3262,36 @@ and CPM21319 remain running; no scores or default changes.
 Enhanced observer executor984355c pushed/frozen at publication_qfo_native_boundary_v2.
 Submitted no-requeue job21321, separate output qfo_native_boundary_v2; scheduler
 confirmed RUNNING. Original21315 remains terminal failed with all artifacts.
+
+### Normalized-support phylogeny variants admitted (2026-09-16)
+
+Previous turn made progress by preserving native mismatch evidence and launching
+the detailed QfO probe21321. Objective reread; both normalized-support tasks of
+21316 completed0:0 (low7:35/high6:05), margin variants still running. Added
+independent native validator with exact array/raw-job identity, frozen command
+and executor, preparation/environment hashes, postflight, native metadata,
+constraint accounting, input/outputs/tree provenance, species coverage and
+complete nonoverlapping root-HOG coverage checks. Execution artifact hashes
+recomputed:63,779low/64,627high. Fresh baseline audit confirms scientific source
+artifacts unchanged. Validator adapts only candidate/constraint records for the
+shared native checker, preserving all other baseline requirements.
+
+Initial validation attempt rejected whole baseline admission equality because
+the verifier path differs between frozen executor and main checkout. Corrected
+to compare native manifests, metrics, species tree, partition, membership and
+status instead of observer location; regression test added. No native outputs
+changed or inference rerun. This validation attempt produced no admitted file.
+
+Both admitted variants retain251,378 genes, with zero cross-candidate merges:
+norm_low54,370candidates/59,729rootHOGs;8,515constraints=5,903supported+2,612detached.
+norm_high54,540candidates/59,822rootHOGs;8,345constraints=5,782supported+2,563detached.
+These are integrity/count results, NOTaccuracy or robustness conclusions.
+Snapshots ob_candidate_norm_low_native_verified_20260916.json SHA256
+2f9c02375fcf7a40c3d11237193dc329545442e199cbb2140df714a4e5bcc6f9;
+ob_candidate_norm_high_native_verified_20260916.json SHA256
+3d81a3bf0c337f8703104abe2260651be29b24af54b6795cb57db3f48fdb3a51.
+
+Fourteen focused validator tests passed; full unit suite1,187 passed34.43s.
+Manuscript limitation updated with partial QfO pre-optimizer discrepancy, without
+claiming a proven cause. Margin-variant admission, CPM replay/candidate/phylogeny,
+six-variant scoring and QfO21321 diagnostic conclusions remain pending.

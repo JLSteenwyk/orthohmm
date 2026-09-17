@@ -487,6 +487,16 @@ Thus CPU availability alone does not explain the variation, and the earlier
 matching repeats do not establish general repeatability. The cause remains
 unresolved; no preferred partition is substituted for the historical baseline.
 
+A subsequent native-boundary diagnostic stopped during its second worker
+before optimization: ordered native endpoint hashes differed from the saved
+graph despite matching vertex/edge counts and ordered weights. The first worker
+had matched the saved graph before and after optimization. Fresh saved-array
+hashing confirmed the expected endpoint fingerprint. This localizes a discrepancy
+to pre-optimizer graph handling in that instrumented run, but does not yet
+distinguish conversion, construction or observation effects, or establish the
+cause of all historical partition differences. The failed partial panel is
+preserved and not presented as a completed reproducibility experiment.
+
 Historical timing and memory records differ in scope and accounting.
 Cached replays are incremental computations, not end-to-end timings;
 supplied trees have upstream costs. Unscheduled competing workloads were
