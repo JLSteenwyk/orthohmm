@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Completed DGX Metadata Contracts (2026-09-17)
+
+Previous turn progressed run00 host diagnostics, pushedde48f7f. Re-read full
+objective; six DGX21656 tasks complete, task6 verified RUNNING7:07. Downloaded
+only completed preparation/verification/measurement JSON for tasks0through5,
+without native outputs or remote runtime-tree hashing.
+
+Added pinned scientific metadata validator. All six recorded contracts match
+the frozen plan: command/cwd, original input identity/order, prepared and checked
+OrthoFinder copies, before/after runtime and recipe identity assertions, actual
+Slurm job mapping, exit-zero completion,20CPU/96GiB allocation and frozen sampler/
+timeout settings. The15focused tests pass, including all three native method
+types and deliberately changed evidence. This does not replay raw resource
+samples, independently hash runtime trees or validate native outputs.
+
+All six retained host summaries are inconclusive; only run00's cause has been
+examined. No generalization of its kworker-name explanation to other runs, no
+quiet-host certification and no scientific timing admitted. Evidence/limitations:
+`dgx_first_six_metadata_20260917.json` and `DGX_FIRST_SIX_METADATA_20260917.md`.
+
+Next: continue nonintrusive workflow preparation while the panel runs, then
+perform full native/resource checks and retain host uncertainty in timing
+interpretation. Other QfO scientific requirements, annotation/ablation gaps,
+portable workflows, licensing and archival/release work remain active.
+
 ## DGX Host-Evidence Admission Review (2026-09-17)
 
 Previous turn made progress with the SwissTrees figure, pushed8006042. Re-read

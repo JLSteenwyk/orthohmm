@@ -71,6 +71,9 @@ evidence that an experiment completed or a biological hypothesis is true.
   [Run00 host review](DGX_RUN00_HOST_REVIEW_20260917.md) reproduces inconclusive
   observations caused by unmatched kworker-named identities. Low observed
   persistent CPU use does not certify absent contention; no monitor rule changed.
+  [First-six metadata checks](DGX_FIRST_SIX_METADATA_20260917.md) match frozen
+  commands, inputs and recorded runtime/resource settings, but all six retained
+  host summaries are inconclusive and no native/resource admission is implied.
 - Biological application scores, independent arithmetic, figure and all six
   prospective cases are complete. The [stage trace](BIOLOGICAL_WGD_CASE_TRACE_20260917.md)
   localizes five focal homolog separations to root-lineage grouping. Tree
