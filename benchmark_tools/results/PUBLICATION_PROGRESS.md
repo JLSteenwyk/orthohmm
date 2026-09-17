@@ -4467,3 +4467,27 @@ suite in progress. Main tree inference/admission/accuracy analysis still pending
 
 Fullunit suite1,622passed31.77s. Independently rehashed all379QfO provenance
 records plus auditor source and failed-parent source report; all passed.
+
+### Recovered QfO Stage-Pair Preparation (2026-09-17)
+
+Previous turn progressed admitted QfO evidence and tree cross-arm checker.
+Re-read objective; tree21406_92/93running,94-209pending,21435pendingdependency.
+Inspected existing native QfO scoring workflow, pair converter, mapping filter,
+pipeline configuration and actual frozen replay stage flow.
+
+Added prospective QFO_RECOVERED_STAGE_ASSESSMENT_PROTOCOL_20260917.md retaining
+allfour stage partitions and four fixed comparisons on six existing2020challenge
+endpoints. Explicitly distinguishes profile-branch/singleton reassignment and
+sequence refinement from candidate/phylogenetic factorial controls. Historical
+scores cannot be transferred. Native metric semantics, paired reference-unit
+uncertainty and mapping exclusions remain required; no new scores inspected.
+
+Added prepare_qfo_recovered_pairs.py using unchanged audited converter/filter.
+Requires exact recovered admission and completed21480; rechecks379provenance
+records,78FASTAs against admitted input hashes, allfour partitions, mapping and
+conversion sources. Records raw/retained pair counts and dropped mapping pairs
+in new unique namespaces; no inference or scoring. Ten focused tests pass for
+complete admitted stage inventory, coverage identity and no-overwrite behavior.
+Prepared four-CPU32GiB2hour conversion-only batch; fullunit suite in progress.
+
+Fullunit suite1,632passed32.74s; batch syntax and whitespace checks pass.
