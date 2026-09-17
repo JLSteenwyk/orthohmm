@@ -20,6 +20,8 @@ evidence that an experiment completed or a biological hypothesis is true.
 | OrthoMCL BLAST failures have negligible impact | [Failure-impact audit](ORTHOMCL_FAILURE_IMPACT_20260916.md) | Not established; direct exposure is measured, indirect and counterfactual effects are not |
 | Three Kingdoms demonstrates proteome-wide accuracy | [Supplementary score record](three_kingdoms_parity_20260907.json) | Unsupported; restricted BUSCO-reference universe |
 | OrthoHMM is faster or more memory efficient under matched conditions | [Progress ledger](PUBLICATION_PROGRESS.md) | Not established; historical resource-accounting and workload differences remain |
+| A nearby parameter choice improves frozen-method OrthoBench F1 | [Six-variant panel](OB_PARAMETER_NEIGHBORHOOD_RESULTS_20260916.md) | Not established: all six adjusted F1 intervals include zero; no default promotion |
+| The QfO native graph is reproducibly constructed | [Construction diagnostic](QFO_CONSTRUCTION_DIAGNOSTIC_20260916.md) | Not established: one explicit-int64 worker has six native endpoint mismatches despite intact input arrays; direct-stage diagnostic pending |
 | The package is publication-ready | All sections below | Not achieved |
 
 ## Completion Requirements
@@ -28,11 +30,11 @@ evidence that an experiment completed or a biological hypothesis is true.
 | --- | --- | --- |
 | 1. Frozen publication baseline | Comparator table, scoring corrections, OrthoMCL final-group completion and failure audit, prospective method pin | Consolidated raw-output provenance for every retained row; exact commands/versions/resources and complete claim/endpoints freeze |
 | 2. Independent generalization | Completed frozen YGOB evaluation with native, command/conversion, independent-reference and overlap gates; pair enumeration and paired uncertainty | Bounded novel-taxon claim only; stronger family independence unproven; any outcome-driven method changes require new independent confirmation |
-| 3. HMM and phylogeny contributions | Historical four partitions; prospective eight-cell protocol; failed replay exposed missing profile runtime | Corrected-runtime replay equivalence, executable frozen factorial, all cells on OrthoBench/QfO, membership-filter diagnostic, matched sequence control, coverage and cost measurements |
-| 4. Uncertainty and error explanation | OrthoBench paired intervals, family summaries, individual QfO endpoints | Prespecified label-independent strata, stage-level error tracing, remaining appropriate uncertainty and prediction coverage |
-| 5. Robustness and practical efficiency | Historical timing records and known accounting caveats | Validated evolutionary simulations, multiple seeds, duplication/loss/divergence/missingness/sampling conditions, tree error and parameter neighborhood, matched scaling and repeated timings |
+| 3. HMM and phylogeny contributions | Corrected-runtime OrthoBench replay equivalence, completed eight-cell factorial, sequence-search replacement and unconstrained-membership controls, native coverage and incremental cost records | QfO reproducible baseline and corresponding ablations; better-matched search sensitivity/calibration; controlled resource evidence |
+| 4. Uncertainty and error explanation | Paired OrthoBench intervals, individual QfO endpoints, completed feature strata, full-family stage trace and reference-incident reconciliation reconstruction | QfO strata/appropriate uncertainty; independent duplication/domain/fragment annotations; additional initial-search and rejected-edge tracing; causal explanations remain unproven |
+| 5. Robustness and practical efficiency | Corrected fixed/variable-length multi-seed simulations, six OrthoBench tree perturbations and six parameter variants, explicit failures and resource caveats | QfO robustness, simulation-truth tree-error controls, matched scaling and repeated timings; broader evolutionary realism remains limited |
 | 6. Biological usefulness | No completed prespecified application | Independently supported family selection, difficult positives and negatives, relevant comparators, successes and failures without outcome-based selection |
-| 7. Publication package | Generated comparison/uncertainty figures, initial [manuscript draft](PUBLICATION_MANUSCRIPT_DRAFT_20260916.md), this checklist | Method diagram, ablation/error/scaling/application figures, completed Methods/Results, verified bibliography, portable workflows/dependencies, versioned release and archival bundle |
+| 7. Publication package | Comparison, uncertainty, ablation, simulation, strata, tree/parameter figures; [method diagram](figures_publication_method_20260916/publication_method.pdf); evolving [manuscript](PUBLICATION_MANUSCRIPT_DRAFT_20260916.md) | Scaling/application figures, completed Methods/Results and claim audit, verified bibliography, portable workflows/dependencies, versioned release and archival bundle |
 
 ## Current Execution Gates
 
@@ -43,8 +45,8 @@ evidence that an experiment completed or a biological hypothesis is true.
   No superiority or equivalence claim. Shared-node timing remains uncontrolled.
 - OrthoBench factorial preparation `21161` completed successfully. The
   [prepared manifest](orthobench_factorial_prepared_20260916.json) contains four
-  candidate sets and eight planned cells; reconciliation and accuracy evaluation
-  are not yet complete.
+  candidate sets and eight planned cells; their subsequent reconciliation and
+  accuracy evaluation are complete as documented immediately below.
 - Reconciliation array `21248` is terminal. All four native processes succeeded
   but failed the known cwd-dependent postflight check. Independent integrity,
   native provenance and root-HOG conversion audits passed with original failed
@@ -64,8 +66,9 @@ evidence that an experiment completed or a biological hypothesis is true.
   [runtime manifest](publication_native_runtime_20260916.json). All three CPU
   libraries built and the exact-checkout profile smoke passed. Corrected replay
   `21138` completed successfully: [all four partitions match byte-for-byte](ob_native_replay_verification_20260916.json).
-  This establishes cached-stage equivalence; factorial and corrected validation
-  remain incomplete. Original defective outputs remain preserved.
+  This establishes cached-stage equivalence. The OrthoBench factorial and frozen
+  YGOB evaluation subsequently completed; QfO equivalence remains unresolved.
+  Original defective outputs remain preserved.
 - Original simulation OrthoHMM runs used the same incomplete checkout. Those results
   are defective-runtime diagnostics, not publication estimates of the intended
   method. Retain valid comparator outputs and rerun OrthoHMM with a prospectively
@@ -92,8 +95,8 @@ evidence that an experiment completed or a biological hypothesis is true.
   versus control74.106074%; all18 adjusted endpoint intervals include zero.
   [Results](OB_SPECIES_TREE_ROBUSTNESS_RESULTS_20260916.md) support small observed
   changes in this fixed exploratory panel, not equivalence or arbitrary-tree
-  robustness. Parameter sensitivity, simulation-truth tree-error controls and
-  QfO robustness remain outstanding.
+  robustness. The OrthoBench parameter panel subsequently completed; simulation-
+  truth tree-error controls and QfO robustness remain outstanding.
 - QfO capture21305 confirms identical initial graph arrays/gene order but a
   different first clustering partition relative to diagnostic21295. The
   [drift diagnosis](QFO_REPLAY_DRIFT_DIAGNOSIS_20260916.md) localizes observed
@@ -107,11 +110,20 @@ evidence that an experiment completed or a biological hypothesis is true.
   advantages and seven recall deficits survive adjustment across overlapping
   strata; neither subgroup superiority nor a causal mechanism is established.
   The one-family composition bin has no intervals; empty bins remain visible.
-- QfO21307's three instrumented single-CPU repeats are byte-identical and
-  match diagnostic21295, with matching recorded loaded-library/runtime
-  evidence. They still differ from capture21305; affinity/process-context
-  experiments remain needed before changing defaults or admitting a historical
-  replay. This is configuration-specific repeatability, not general determinism.
+- QfO21307's three matching single-CPU repeats were followed by an affinity
+  experiment21311 that demonstrated same-affinity partition disagreement.
+  Boundary diagnostics21315/21321 found native endpoint changes before the
+  optimizer. Construction-only21323 completed and was independently admitted:
+  five workers matched; one explicit-int64 worker had six endpoint mismatches
+  with intact original/converted arrays. Full witness/hash consistency and257
+  file records were checked. This does not establish a library or hardware cause.
+  Direct construction before/after weights with minimal/frozen imports is running
+  as21326; no accuracy scores or partition selection are involved.
+- All six [OrthoBench parameter variants](OB_PARAMETER_NEIGHBORHOOD_RESULTS_20260916.md)
+  passed native admission and official-score checks with251,378 genes retained.
+  F1 ranges71.463468-74.973144% versus control74.106074%; all six adjusted F1
+  intervals include zero. Only the CPM0.12 recall deficit excludes zero across
+  the18 planned endpoints. No new default, equivalence or superiority claim.
 
 The manuscript must retain negative and neutral findings. Missing evidence
 cannot be replaced with a claim that the method is generally applicable,

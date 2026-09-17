@@ -1,0 +1,53 @@
+{
+  "evidence": [
+    {
+      "bytes": 63452,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/orthobench_factorial_prepared_20260916.json",
+      "sha256": "5c325f4d77865e0c7571fe4bb4df0be0959977a49e1d22169f192518700f9382"
+    },
+    {
+      "bytes": 199307,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/orthobench_factorial_results_20260916.json",
+      "sha256": "6a0d588b5cb47c60fc6bc8bae8aa0c83e5f2aadb11de970919d8c6527c387141"
+    },
+    {
+      "bytes": 1318480,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ob_family_trace_verified_20260916.json",
+      "sha256": "bda00fb593b357bc8f07e43544feae598150ae891ed82c988fb339a92349de0c"
+    },
+    {
+      "bytes": 1123322,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ob_reconciliation_trace_20260916.json",
+      "sha256": "4d5822db16b7c326ce2ac923ecd98395ea4bf9d0ef77cfa0a3cae4a9d1d0ebb9"
+    },
+    {
+      "bytes": 14723,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/benchmark_tools/replay_high_sensitivity.py",
+      "sha256": "852c3e4fc1a53de7e6046aa78324da587376c0df6a0db1cd8265af65c75bea0f"
+    }
+  ],
+  "matplotlib": "3.10.8",
+  "outputs": [
+    {
+      "bytes": 280561,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_publication_method_20260916/publication_method.png",
+      "sha256": "f802dd79f4ff2ad4ccf790ea88bf27528221aac77cb2b92bb8b031f711bb48cb"
+    },
+    {
+      "bytes": 18925,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_publication_method_20260916/publication_method.pdf",
+      "sha256": "6c480b6af6ba893a040e2e14c32754c71577676e2e240546cb155c471b89e093"
+    },
+    {
+      "bytes": 113963,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_publication_method_20260916/publication_method.svg",
+      "sha256": "f59f25e69769893c529dfae62153748c23806d41403463ecb0bc029474809e36"
+    }
+  ],
+  "scope": "Conceptual frozen-method diagram, not execution or accuracy validation",
+  "source": {
+    "bytes": 5357,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_publication_method.py",
+    "sha256": "78c19977666beeaf0c17ec212c11db95087f0f5dc1460df9dc2ac325ee758c48"
+  }
+}

@@ -31,6 +31,13 @@ Historical runs retain their actual source and configuration records; the
 prospective pin must not be retroactively attributed to them.
 See the [frozen validation protocol](YGOB_VALIDATION_PROTOCOL_20260916.md).
 
+The [method diagram](figures_publication_method_20260916/publication_method.pdf)
+distinguishes initial HMM search, cluster-profile expansion, high-sensitivity
+orthogroups, candidate-family construction, gene/species-tree inference and
+constraint-guided membership decisions. Root HOGs and inferred ortholog pairs
+are separate output levels. This schematic describes the intended frozen
+workflow, not evidence of execution correctness or an HMM accuracy advantage.
+
 Comparators comprise OrthoFinder 3.1.5 full and its sequence-only MCL
 checkpoint, OrthoMCL 1.4, SonicParanoid 2.0.9, ProteinOrtho 6.3.6, and
 FastOMA 0.3.5. The checkpoint is a distinct output level, not another

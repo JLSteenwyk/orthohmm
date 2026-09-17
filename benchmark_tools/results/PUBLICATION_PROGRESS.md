@@ -3596,3 +3596,32 @@ running; unrelated workload20915 left untouched.
 Executorab364e4 pushed and frozen at publication_qfo_direct_graph_v1. Submitted
 no-requeue job21326, confirmed RUNNING; output benchmarks/results/qfo_direct_graph_v1.
 First worker observations pending. No scientific default or frozen runtime changed.
+
+### Method diagram and current claim audit (2026-09-16)
+
+Previous turn progressed via tested/frozen/submitted direct-stage diagnostic.
+Objective reread;21326 confirmed RUNNING. Added method-diagram generator and
+PNG/PDF/SVG manifest, grounded in the prepared factorial, full-family trace,
+reconciliation trace and frozen replay source. Diagram separates initial HMM
+search, cluster profiles/refinement, high-sensitivity groups, satellite candidates,
+gene/species trees, reconciliation, constraints and distinct HOG/pair outputs.
+It is a conceptual schematic, not execution validation. Checked frozen replay
+branching: profiles start from multipass groups, not the no-profile refined
+diagnostic. Constraint trace and species-tree branch shown separately; tree
+bypasses and checkpoint scope disclosed. PNG visually inspected: labels/arrows
+legible, no overlap/clipping. Layout test checks text bounds and pairwise overlaps.
+Full1,284 unit tests passed32.96s. Manuscript links the figure.
+
+Refreshed stale claim-checklist rows and execution gates: OrthoBench factorial,
+sequence/constraint controls, corrected simulations, strata/traces and parameter
+panel are complete; QfO counterparts, independent annotations, controlled scaling,
+biological application and release/archive remain open. No completion claim or
+expansion of scientific conclusions. Generated SVG whitespace retained unchanged
+for manifest consistency.
+
+Partial21326 progress now records minimal_imports_0 with six endpoint mismatches
+before and after weights, with unchanged original constructor array; the indices
+and replacements match earlier construction witnesses. frozen_imports_0 matches
+at both stages. This observation does not require the optimizer or OrthoHMM imports
+and precedes weight assignment, but is not an independently admitted complete
+panel or a proven library/hardware cause. Remaining workers still running.
