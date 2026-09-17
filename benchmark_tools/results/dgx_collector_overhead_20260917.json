@@ -1,0 +1,485 @@
+{
+  "accounting": "21640_0|COMPLETED|0:0|00:01:34|20|96G|spark-7ff0\n21640_0.batch|COMPLETED|0:0|00:01:34|20||spark-7ff0\n21640_1|COMPLETED|0:0|00:01:34|20|96G|spark-7ff0\n21640_1.batch|COMPLETED|0:0|00:01:34|20||spark-7ff0\n21640_2|COMPLETED|0:0|00:01:34|20|96G|spark-7ff0\n21640_2.batch|COMPLETED|0:0|00:01:34|20||spark-7ff0\n21640_3|COMPLETED|0:0|00:01:33|20|96G|spark-7ff0\n21640_3.batch|COMPLETED|0:0|00:01:33|20||spark-7ff0\n21640_4|COMPLETED|0:0|00:01:34|20|96G|spark-7ff0\n21640_4.batch|COMPLETED|0:0|00:01:34|20||spark-7ff0\n21640_5|COMPLETED|0:0|00:01:33|20|96G|spark-7ff0\n21640_5.batch|COMPLETED|0:0|00:01:33|20||spark-7ff0\n",
+  "all_protocol_identity_gates_verified": false,
+  "limitations": [
+    "Sparse mode still has pre/post observations; this is incremental periodic-observation cost.",
+    "Three counterbalanced pairs are descriptive, not a significance test or an overhead correction.",
+    "One compute process,20 threads,small arenas: not disk-heavy or large-process-inventory behavior.",
+    "The original runner pins native/collector files but does not record full interpreter/environment identity before and after each task.",
+    "Complete scientific runtime freeze remains required; this report does not waive that identity gate.",
+    "No overhead subtraction or exclusion of unfavorable runs is authorized."
+  ],
+  "median_wall_inflation": 0.0027342801456391452,
+  "native_work": {
+    "checksums": [
+      "95fc8889c6a29c9c",
+      "24b367d8f1edf7eb",
+      "5ae85beb0c4f22fd",
+      "6403fd011908185b",
+      "4f6ef96b044fc062",
+      "22fd4064da2501a6",
+      "463600ebedb04c8c",
+      "77d59fbfd9c904ca",
+      "ff66c259e55f847b",
+      "7b9bd3e9e0bd3ccd",
+      "cb291aa13df3f0ab",
+      "5ea3a824b374a566",
+      "e8859284a621f16a",
+      "8fbfe1c123110ed2",
+      "0960cdf568c23fd2",
+      "d6b4dbcc3032a37b",
+      "da821e2134d3d7ff",
+      "38c7c21748709137",
+      "cad0b34a3a67ce9d",
+      "ceeed1416c865ecc"
+    ],
+    "iterations_per_worker": 8000000000,
+    "workers": 20
+  },
+  "numerical_wall_budget_met": true,
+  "observed_load_and_workload_gates_met": true,
+  "pairs": [
+    {
+      "cpu_difference_s": 3.7154230000001007,
+      "pair": 0,
+      "sampled_index": 1,
+      "sparse_index": 0,
+      "wall_inflation": 0.0027342801456391452
+    },
+    {
+      "cpu_difference_s": 27.421691999999894,
+      "pair": 1,
+      "sampled_index": 2,
+      "sparse_index": 3,
+      "wall_inflation": 0.015244861693106682
+    },
+    {
+      "cpu_difference_s": -1.4594750000001113,
+      "pair": 2,
+      "sampled_index": 5,
+      "sparse_index": 4,
+      "wall_inflation": -0.0006556823671232115
+    }
+  ],
+  "protocol": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/DGX_COLLECTOR_OVERHEAD_PROTOCOL_20260917.md",
+    "sha256": "eb28b990cc52dadf20ccf7d9201eb70abdaa86aa5c7b8220ec8d87c0ee0a650a"
+  },
+  "range_wall_inflation": [
+    -0.0006556823671232115,
+    0.015244861693106682
+  ],
+  "runs": [
+    {
+      "cpu_s": 1856.841665,
+      "gates": {
+        "full_load": true,
+        "host_cadence": true,
+        "low_observed_competition": true,
+        "minimum_duration": true,
+        "no_host_errors": true
+      },
+      "host_scan_durations_s": [
+        0.05190479289740324,
+        0.05094195203855634
+      ],
+      "index": 0,
+      "max_foreign_cores": 0.00311673440469349,
+      "max_host_gap_s": 92.99446327518672,
+      "max_reported_cgroup_peak_bytes": 56684544,
+      "max_sampled_sum_rss_bytes": 20422656,
+      "mean_cpu_cores": 19.94399005785848,
+      "mode": "sparse",
+      "replay": {
+        "benchmark_admitted": false,
+        "controlled_workload_verified": false,
+        "host_observations": 2,
+        "host_status": "inconclusive",
+        "limitations": [
+          "Does not certify source/input/native output correctness, scheduler accounting or host exclusivity.",
+          "Observed resource span includes collector overhead; sampling gaps remain.",
+          "Clock domain is retained provenance, not independent authentication of the originating host."
+        ],
+        "raw_evidence": [
+          {
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_collector_overhead_v1/collector_load_panel_v1_0_sparse/samples.jsonl",
+            "sha256": "5460a7b1f22519b0608cee4b0ffce890382ba86c4fdb526ca5d2c7b53da4aec2"
+          },
+          {
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_collector_overhead_v1/collector_load_panel_v1_0_sparse/host_samples.jsonl",
+            "sha256": "7c8f7a9bf35145b05a56f1b20ec5106fa1002015409a428ca8a3427902a46693"
+          },
+          {
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_collector_overhead_v1/collector_load_panel_v1_0_sparse/command.log",
+            "sha256": "5599a5c240a7199e5e769a654e2126e8dd61f442e4e0ba8a266ca1faf6e96f11"
+          }
+        ],
+        "report": {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_collector_overhead_v1/collector_load_panel_v1_0_sparse/results.json",
+          "sha256": "4e2d0066702b61fa51ef8612659ad6bef191cc937e74aca670d6d813fdc5fe06"
+        },
+        "resource_observations": 2,
+        "source": {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_slurm_measurement.py",
+          "sha256": "7684fe1865616640c479356dadf18ba9faebafd476114bc6029e00c46c4bee86"
+        },
+        "status": "collector_evidence_replayed"
+      },
+      "scheduler": [
+        "21640_0",
+        "COMPLETED",
+        "0:0",
+        "00:01:34",
+        "20",
+        "96G",
+        "spark-7ff0"
+      ],
+      "wall_s": 92.99356283806264
+    },
+    {
+      "cpu_s": 1860.557088,
+      "gates": {
+        "full_load": true,
+        "host_cadence": true,
+        "low_observed_competition": true,
+        "minimum_duration": true,
+        "no_host_errors": true
+      },
+      "host_scan_durations_s": [
+        0.04931284161284566,
+        0.09868640219792724,
+        0.09883643221110106,
+        0.09905744018033147,
+        0.04816337814554572
+      ],
+      "index": 1,
+      "max_foreign_cores": 0.003455417519287081,
+      "max_host_gap_s": 30.04370984202251,
+      "max_reported_cgroup_peak_bytes": 58388480,
+      "max_sampled_sum_rss_bytes": 63295488,
+      "mean_cpu_cores": 19.930741339489515,
+      "mode": "sampled",
+      "replay": {
+        "benchmark_admitted": false,
+        "controlled_workload_verified": false,
+        "host_observations": 5,
+        "host_status": "inconclusive",
+        "limitations": [
+          "Does not certify source/input/native output correctness, scheduler accounting or host exclusivity.",
+          "Observed resource span includes collector overhead; sampling gaps remain.",
+          "Clock domain is retained provenance, not independent authentication of the originating host."
+        ],
+        "raw_evidence": [
+          {
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_collector_overhead_v1/collector_load_panel_v1_1_sampled/samples.jsonl",
+            "sha256": "5380a0b5179f03004bf273469bb0d36ba4dd0b3353c17850601a5fe3449895f7"
+          },
+          {
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_collector_overhead_v1/collector_load_panel_v1_1_sampled/host_samples.jsonl",
+            "sha256": "e1cbb8e225a7964da36926bf7dae60696c5d32b3f0fe5839abe020bb91badce0"
+          },
+          {
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_collector_overhead_v1/collector_load_panel_v1_1_sampled/command.log",
+            "sha256": "5599a5c240a7199e5e769a654e2126e8dd61f442e4e0ba8a266ca1faf6e96f11"
+          }
+        ],
+        "report": {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_collector_overhead_v1/collector_load_panel_v1_1_sampled/results.json",
+          "sha256": "639428cc9057ecf7bf39327e5965030da5eb2a0334b11c02a1ef2c27b41f1f26"
+        },
+        "resource_observations": 94,
+        "source": {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_slurm_measurement.py",
+          "sha256": "7684fe1865616640c479356dadf18ba9faebafd476114bc6029e00c46c4bee86"
+        },
+        "status": "collector_evidence_replayed"
+      },
+      "scheduler": [
+        "21640_1",
+        "COMPLETED",
+        "0:0",
+        "00:01:34",
+        "20",
+        "96G",
+        "spark-7ff0"
+      ],
+      "wall_s": 93.24783329060301
+    },
+    {
+      "cpu_s": 1870.149853,
+      "gates": {
+        "full_load": true,
+        "host_cadence": true,
+        "low_observed_competition": true,
+        "minimum_duration": true,
+        "no_host_errors": true
+      },
+      "host_scan_durations_s": [
+        0.04882635688409209,
+        0.10499415080994368,
+        0.09821023186668754,
+        0.09764051623642445,
+        0.05135588487610221
+      ],
+      "index": 2,
+      "max_foreign_cores": 0.003648432005284038,
+      "max_host_gap_s": 30.051888240966946,
+      "max_reported_cgroup_peak_bytes": 57937920,
+      "max_sampled_sum_rss_bytes": 63197184,
+      "mean_cpu_cores": 19.933793017387238,
+      "mode": "sampled",
+      "replay": {
+        "benchmark_admitted": false,
+        "controlled_workload_verified": false,
+        "host_observations": 5,
+        "host_status": "inconclusive",
+        "limitations": [
+          "Does not certify source/input/native output correctness, scheduler accounting or host exclusivity.",
+          "Observed resource span includes collector overhead; sampling gaps remain.",
+          "Clock domain is retained provenance, not independent authentication of the originating host."
+        ],
+        "raw_evidence": [
+          {
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_collector_overhead_v1/collector_load_panel_v1_2_sampled/samples.jsonl",
+            "sha256": "b15b00d43a0cda57a3ae1a5f2a6f079a434ca842d055e868cc7e28a244f9ff76"
+          },
+          {
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_collector_overhead_v1/collector_load_panel_v1_2_sampled/host_samples.jsonl",
+            "sha256": "fd581647948b737336aea602ee4f3ee4099a36644f9542504aa818643eab3e70"
+          },
+          {
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_collector_overhead_v1/collector_load_panel_v1_2_sampled/command.log",
+            "sha256": "5599a5c240a7199e5e769a654e2126e8dd61f442e4e0ba8a266ca1faf6e96f11"
+          }
+        ],
+        "report": {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_collector_overhead_v1/collector_load_panel_v1_2_sampled/results.json",
+          "sha256": "dc68aca25d5b281175d682d5b4650d3c42f675bf0da78d4e493c80270a18d017"
+        },
+        "resource_observations": 95,
+        "source": {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_slurm_measurement.py",
+          "sha256": "7684fe1865616640c479356dadf18ba9faebafd476114bc6029e00c46c4bee86"
+        },
+        "status": "collector_evidence_replayed"
+      },
+      "scheduler": [
+        "21640_2",
+        "COMPLETED",
+        "0:0",
+        "00:01:34",
+        "20",
+        "96G",
+        "spark-7ff0"
+      ],
+      "wall_s": 93.7119286712259
+    },
+    {
+      "cpu_s": 1842.728161,
+      "gates": {
+        "full_load": true,
+        "host_cadence": true,
+        "low_observed_competition": true,
+        "minimum_duration": true,
+        "no_host_errors": true
+      },
+      "host_scan_durations_s": [
+        0.05106895603239536,
+        0.05126316286623478
+      ],
+      "index": 3,
+      "max_foreign_cores": 0.0023820680362233184,
+      "max_host_gap_s": 92.30559557210654,
+      "max_reported_cgroup_peak_bytes": 56643584,
+      "max_sampled_sum_rss_bytes": 20434944,
+      "mean_cpu_cores": 19.93998576307171,
+      "mode": "sparse",
+      "replay": {
+        "benchmark_admitted": false,
+        "controlled_workload_verified": false,
+        "host_observations": 2,
+        "host_status": "inconclusive",
+        "limitations": [
+          "Does not certify source/input/native output correctness, scheduler accounting or host exclusivity.",
+          "Observed resource span includes collector overhead; sampling gaps remain.",
+          "Clock domain is retained provenance, not independent authentication of the originating host."
+        ],
+        "raw_evidence": [
+          {
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_collector_overhead_v1/collector_load_panel_v1_3_sparse/samples.jsonl",
+            "sha256": "bc02b412dd78b297ddba034248000d783daa57a11911fc2aeeaeb6ffad2559fc"
+          },
+          {
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_collector_overhead_v1/collector_load_panel_v1_3_sparse/host_samples.jsonl",
+            "sha256": "c926519d880b1a832e3a3130c381dda01672ff5717709f250996509fb37067e0"
+          },
+          {
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_collector_overhead_v1/collector_load_panel_v1_3_sparse/command.log",
+            "sha256": "5599a5c240a7199e5e769a654e2126e8dd61f442e4e0ba8a266ca1faf6e96f11"
+          }
+        ],
+        "report": {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_collector_overhead_v1/collector_load_panel_v1_3_sparse/results.json",
+          "sha256": "5fff867b3281dd95b054f83f6cd1f8206c43e2423da83a4df6eb2d3d12427c0e"
+        },
+        "resource_observations": 2,
+        "source": {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_slurm_measurement.py",
+          "sha256": "7684fe1865616640c479356dadf18ba9faebafd476114bc6029e00c46c4bee86"
+        },
+        "status": "collector_evidence_replayed"
+      },
+      "scheduler": [
+        "21640_3",
+        "COMPLETED",
+        "0:0",
+        "00:01:33",
+        "20",
+        "96G",
+        "spark-7ff0"
+      ],
+      "wall_s": 92.30475544091314
+    },
+    {
+      "cpu_s": 1852.839684,
+      "gates": {
+        "full_load": true,
+        "host_cadence": true,
+        "low_observed_competition": true,
+        "minimum_duration": true,
+        "no_host_errors": true
+      },
+      "host_scan_durations_s": [
+        0.05041466327384114,
+        0.0508087407797575
+      ],
+      "index": 4,
+      "max_foreign_cores": 0.002584157532090189,
+      "max_host_gap_s": 92.82287745596841,
+      "max_reported_cgroup_peak_bytes": 57184256,
+      "max_sampled_sum_rss_bytes": 20582400,
+      "mean_cpu_cores": 19.938036692204108,
+      "mode": "sparse",
+      "replay": {
+        "benchmark_admitted": false,
+        "controlled_workload_verified": false,
+        "host_observations": 2,
+        "host_status": "no_large_persistent_competitor_observed",
+        "limitations": [
+          "Does not certify source/input/native output correctness, scheduler accounting or host exclusivity.",
+          "Observed resource span includes collector overhead; sampling gaps remain.",
+          "Clock domain is retained provenance, not independent authentication of the originating host."
+        ],
+        "raw_evidence": [
+          {
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_collector_overhead_v1/collector_load_panel_v1_4_sparse/samples.jsonl",
+            "sha256": "b912005810d2c99a3bf88486f25a517b4e8c69b95144aa79c4592f74853aa6ed"
+          },
+          {
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_collector_overhead_v1/collector_load_panel_v1_4_sparse/host_samples.jsonl",
+            "sha256": "93463207c4e03aa9a00aef042e4edbabe497afb06d31f440195ce4002b11afc9"
+          },
+          {
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_collector_overhead_v1/collector_load_panel_v1_4_sparse/command.log",
+            "sha256": "5599a5c240a7199e5e769a654e2126e8dd61f442e4e0ba8a266ca1faf6e96f11"
+          }
+        ],
+        "report": {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_collector_overhead_v1/collector_load_panel_v1_4_sparse/results.json",
+          "sha256": "78fd9d9b8f50989dd57687e625ace0065f12afbd7d918b35ff2b147a35742b89"
+        },
+        "resource_observations": 2,
+        "source": {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_slurm_measurement.py",
+          "sha256": "7684fe1865616640c479356dadf18ba9faebafd476114bc6029e00c46c4bee86"
+        },
+        "status": "collector_evidence_replayed"
+      },
+      "scheduler": [
+        "21640_4",
+        "COMPLETED",
+        "0:0",
+        "00:01:34",
+        "20",
+        "96G",
+        "spark-7ff0"
+      ],
+      "wall_s": 92.82199141988531
+    },
+    {
+      "cpu_s": 1851.380209,
+      "gates": {
+        "full_load": true,
+        "host_cadence": true,
+        "low_observed_competition": true,
+        "minimum_duration": true,
+        "no_host_errors": true
+      },
+      "host_scan_durations_s": [
+        0.048932029865682125,
+        0.09575755521655083,
+        0.10205718083307147,
+        0.09888004697859287,
+        0.04830249072983861
+      ],
+      "index": 5,
+      "max_foreign_cores": 0.003980454034095564,
+      "max_host_gap_s": 30.04559938283637,
+      "max_reported_cgroup_peak_bytes": 58261504,
+      "max_sampled_sum_rss_bytes": 63102976,
+      "mean_cpu_cores": 19.936426090761703,
+      "mode": "sampled",
+      "replay": {
+        "benchmark_admitted": false,
+        "controlled_workload_verified": false,
+        "host_observations": 5,
+        "host_status": "inconclusive",
+        "limitations": [
+          "Does not certify source/input/native output correctness, scheduler accounting or host exclusivity.",
+          "Observed resource span includes collector overhead; sampling gaps remain.",
+          "Clock domain is retained provenance, not independent authentication of the originating host."
+        ],
+        "raw_evidence": [
+          {
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_collector_overhead_v1/collector_load_panel_v1_5_sampled/samples.jsonl",
+            "sha256": "7b59c396bc34ac389cbd7a8528ac59dfea0d4bec6a6e6c74d4a0df2783ffa9a0"
+          },
+          {
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_collector_overhead_v1/collector_load_panel_v1_5_sampled/host_samples.jsonl",
+            "sha256": "9a6f2e9c88c5ae8ec21696b665472f2949fea81c2c62498ec7bb25dc272d5899"
+          },
+          {
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_collector_overhead_v1/collector_load_panel_v1_5_sampled/command.log",
+            "sha256": "5599a5c240a7199e5e769a654e2126e8dd61f442e4e0ba8a266ca1faf6e96f11"
+          }
+        ],
+        "report": {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_collector_overhead_v1/collector_load_panel_v1_5_sampled/results.json",
+          "sha256": "789bfaed9d5b5698bfa193980e49ee2a1afb301ba17fba589b85f65ee4fab764"
+        },
+        "resource_observations": 94,
+        "source": {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_slurm_measurement.py",
+          "sha256": "7684fe1865616640c479356dadf18ba9faebafd476114bc6029e00c46c4bee86"
+        },
+        "status": "collector_evidence_replayed"
+      },
+      "scheduler": [
+        "21640_5",
+        "COMPLETED",
+        "0:0",
+        "00:01:33",
+        "20",
+        "96G",
+        "spark-7ff0"
+      ],
+      "wall_s": 92.76112967683002
+    }
+  ],
+  "scientific_execution_authorized": false,
+  "source": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/report_dgx_collector_overhead.py",
+    "sha256": "99fa612d46c81666ba688bcd2858a7617beb149afd5ef43e4413099a36cd237f"
+  },
+  "status": "bounded_overhead_panel_evaluated"
+}

@@ -5,6 +5,7 @@ import pytest
 
 from benchmark_tools.prepare_ob_candidate_neighborhood import record
 from benchmark_tools.validate_scaling_outputs import validate
+from benchmark_tools.gnu_time_companion import command as time_command
 
 
 def fixture(tmp_path, method="orthohmm_satellite_v2"):
@@ -55,6 +56,30 @@ def test_native_outputs_without_harness_provenance(tmp_path, method):
     assert result["status"] == "native_scaling_outputs_checked"
     assert result["input_genes"] == 2 and result["checked_files"]
     assert not result["accuracy_evaluated"] and not result["resource_measurements_admitted"]
+
+
+@pytest.mark.parametrize("method", ["orthohmm_high_sensitivity", "orthohmm_satellite_v2", "orthofinder_full"])
+def test_explicit_gnu_time_keeps_native_command_checks(tmp_path, method):
+    run, measurement = fixture(tmp_path, method)
+    output = tmp_path / "time.tsv"
+    run["gnu_time"] = {"executable": "/usr/bin/time", "output": str(output)}
+    measurement["command"] = time_command(run["native_argv"], output)
+    output.write_text("elapsed_seconds\t1\nuser_seconds\t0\nsystem_seconds\t0\nmax_process_rss_kib\t1\nexit_status\t0\n")
+    result = validate(run, measurement)
+    assert result["gnu_time_companion"]["wrapper_in_collector_wall_time"]
+    measurement["command"][-1] = "changed_native_argument"
+    with pytest.raises(ValueError, match="Measured command"):
+        validate(run, measurement)
+
+
+def test_gnu_time_exit_disagreement(tmp_path):
+    run, measurement = fixture(tmp_path)
+    output = tmp_path / "time.tsv"
+    run["gnu_time"] = {"executable": "/usr/bin/time", "output": str(output)}
+    measurement["command"] = time_command(run["native_argv"], output)
+    output.write_text("elapsed_seconds\t1\nuser_seconds\t0\nsystem_seconds\t0\nmax_process_rss_kib\t1\nexit_status\t7\n")
+    with pytest.raises(ValueError, match="statuses disagree"):
+        validate(run, measurement)
 
 
 @pytest.mark.parametrize("problem", ["command", "exit", "timeout", "missing_gene", "duplicate_gene", "pair_species", "duplicate_pair", "metrics_command", "metrics_count"])

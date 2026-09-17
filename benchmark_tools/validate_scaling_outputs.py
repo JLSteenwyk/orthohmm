@@ -11,6 +11,7 @@ from benchmark_tools.report_ygob_validation import read_checkpoint
 from benchmark_tools.score_ygob_groups import membership, read_predictions
 from benchmark_tools.simulation_method_outputs import unique_path, orthohmm_pairs, orthofinder_pairs
 from benchmark_tools.validate_simulation_outputs import NativeOutputFailure, validate_graph_weights
+from benchmark_tools.gnu_time_companion import command as time_command, parse as parse_time
 
 
 def input_universe(dataset):
@@ -109,7 +110,13 @@ def validate_orthofinder(run, owners, species):
 
 
 def validate(run, measurement):
-    if measurement["command"] != run["native_argv"] or measurement["cwd"] != run["cwd"]:
+    companion = run.get("gnu_time")
+    expected = run["native_argv"]
+    if companion is not None:
+        if set(companion) != {"executable", "output"}:
+            raise ValueError("Unexpected GNU-time specification")
+        expected = time_command(expected, companion["output"], companion["executable"])
+    if measurement["command"] != expected or measurement["cwd"] != run["cwd"]:
         raise ValueError("Measured command differs from frozen native command")
     if measurement["exit_code"] != 0 or measurement["timed_out"]:
         raise NativeOutputFailure("Native process did not finish successfully")
@@ -120,6 +127,13 @@ def validate(run, measurement):
         result = validate_orthofinder(run, owners, species)
     else:
         raise ValueError("Unknown native scaling method")
+    if companion is not None:
+        path = Path(companion["output"])
+        timing = parse_time(path.read_text())
+        if timing["exit_status"] != measurement["exit_code"]:
+            raise NativeOutputFailure("GNU-time and measured exit statuses disagree")
+        result["gnu_time_companion"] = {"source": record(path), "accounting": timing,
+                                        "wrapper_in_collector_wall_time": True}
     return {"status": "native_scaling_outputs_checked", "accuracy_evaluated": False,
             "resource_measurements_admitted": False, "source": record(__file__), **result,
             "limitations": ["Caller must independently verify frozen manifest/source/runtime before and after inference.",

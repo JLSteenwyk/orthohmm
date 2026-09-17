@@ -1,5 +1,30 @@
 # Dedicated DGX Scaling Migration
 
+## Latest Status: Overhead Panel
+
+All six tasks21640_0 through21640_5 completed successfully and passed independent
+raw-record replay. The frozen three counterbalanced comparisons yield median
+wall inflation0.2734% (range-0.0656% to1.5245%), within the5%median/10%per-pair
+engineering budgets. Native workload checksums agree; all observed load and
+competition gates pass. Machine-readable report:
+`dgx_collector_overhead_20260917.json`, SHA256
+`436e6fe144ec9537e49dff38947dd43b05b36bcf244d6bbd724542b992ea2eb4`.
+
+Sparse mode retains pre/post observations. These results measure incremental
+periodic sampling cost for one20-thread compute process, not general overhead,
+and authorize neither subtraction nor scientific inference. The original
+runner pinned native/collector files but not the complete interpreter/package
+environment before and after each task. Full identity verification remains
+open and must be resolved prospectively, not inferred from today's environment.
+
+GNU-time companion support now preserves exact native command validation and
+separately reports native child wall/CPU time and maximum process RSS. The latter
+is not simultaneous process-tree RSS or cgroup peak memory. Wrapper overhead
+remains included in collector wall time. This support is tested but not yet
+incorporated into the frozen27-run DGX launch plan. Full environment and actual
+input-enumeration freeze and launch/admission tests remain due;0/27 scientific
+timing runs have started. Existing historical sections below retain chronology.
+
 The user requested a different dedicated machine for timing and identified the
 DGX reachable over Ethernet. Read-only connection checks succeeded using the
 existing SSH alias `spark`, with strict known-host checking and batch-mode

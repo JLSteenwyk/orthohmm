@@ -1,5 +1,30 @@
 # Publication Progress
 
+## DGX Overhead Panel Evaluated (2026-09-17)
+
+Re-read the publication objective. The preceding status turn confirmed the full
+unit suite finished (1,932 passed in46.67s) and Spark was idle. All six tasks
+in21640 completed0:0; independently replayed their pinned raw collector records.
+All workload checksums agree, observed mean CPU use exceeds19.9 cores, and
+observed foreign CPU use remains below0.004 cores. Numerical overhead budgets
+pass: median sampled-versus-sparse wall inflation0.2734%, range-0.0656% to1.5245%.
+This is a small compute-only engineering panel, not general observer overhead
+or an overhead correction. Preserve all six runs.
+
+The original runner did not capture full interpreter/package identity before
+and after each task. Accordingly, the report explicitly leaves the full
+protocol identity gate unverified and scientific execution unauthorized.
+Report: dgx_collector_overhead_20260917.json, SHA256
+436e6fe144ec9537e49dff38947dd43b05b36bcf244d6bbd724542b992ea2eb4.
+
+Added strict GNU-time companion parsing and optional native-output validation
+for wrapped commands. Native argv remains independently checked; elapsed time,
+child CPU and maximum process RSS are distinguished from collector wall time,
+simultaneous RSS and cgroup memory. No existing command manifest was changed.
+Next: freeze remote runtime and actual FASTA enumeration, resolve the overhead
+identity gap prospectively, and validate the launch/admission workflow.
+Scientific scaling0/27; all broader publication requirements remain active.
+
 ## DGX Native Commands Prepared (2026-09-17)
 
 Previous turn progressed load calibration and launched the overhead panel,
