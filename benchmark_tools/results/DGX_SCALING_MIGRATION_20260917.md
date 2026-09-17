@@ -1,5 +1,10 @@
 # Dedicated DGX Scaling Migration
 
+Scientific scaling array21656 is now launched (indices0-26, concurrency1).
+Run0 was verified in native all-to-all inference on four proteomes with20CPUs;
+remaining26tasks queued. All scientific completion and post-run admission remain
+pending. See PUBLICATION_PROGRESS.md for identities and current observations.
+
 ## Scientific Launch Authorization
 
 The tested native entry point now has separate scientific authorization after

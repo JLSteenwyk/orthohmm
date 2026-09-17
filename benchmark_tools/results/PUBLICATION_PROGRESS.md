@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Scientific DGX Scaling Started (2026-09-17)
+
+After admission/authorization commit b92bb22 was pushed and Spark was observed
+idle, submitted array21656, indices0-26%1, exclusive spark-7ff0,20CPUs96GiB,
+24h per task. Passed exact recipe/specification digests recorded below.
+21656_0 confirmedRUNNING at15seconds;1-26queued on the array task limit.
+Native run_00 log confirms4FASTAs,20CPUs,high_sensitivity,BLOSUM62,E-value0.0001,
+Leiden CPM0.1 and Step1/4 all-to-all built-in HMM/prefilter comparisons started.
+This is the first scientific scaling inference, not another engineering smoke.
+
+Outputs `scaling_native_v1/run_00` through `run_26` under the DGX project root;
+logs `ortho_scaling_21656_INDEX.log`. Preserve all jobs and artifacts; do not
+restart live work. Completion and resource/native-output admission are still
+pending:1/27started,0/27completed at this observation. No comparative runtime
+or accuracy result is established yet. Broader publication work remains active
+and can proceed locally without competing with the dedicated timing host.
+Full local unit suite after authorization/admission changes:2,001passed47.74s.
+
 ## Native Smokes Admitted and Scientific Execution Authorized (2026-09-17)
 
 After f4bee65 was pushed, launched the three sequential native launcher smokes
