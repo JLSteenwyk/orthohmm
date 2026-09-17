@@ -4523,3 +4523,12 @@ Sixteen focused tests pass; fullunit suite and real environment recheck running.
 
 Fullunit suite1,648passed36.76s. Rechecked704environment records and dryconstructed
 allfour commands within the Darwin limit. Batch passes bash syntax validation.
+
+Committed/pusheddca7325; froze publication_qfo_recovered_assessment_v1 at
+dca732540f1ac3a56629f9cc6cdf0bbf58fc6d25. Submitted21548_0-3%1,
+8CPU64GiB24hoursperstage,norequeue. New outputs in
+benchmarks/results/qfo_recovered_assessment_v1/stage_<index>, native results in
+qfo_benchmark/scoring/checked_v2_<index>, short workqfo_benchmark/w/qrv2_<index>.
+First task running; remaining tasks pendingarraylimit. No historical overwrite.
+Tree21406_136/137running,138-209pending,21435pendingdependency. Independent
+scoring admission and complete tree-panel analysis remain due.
