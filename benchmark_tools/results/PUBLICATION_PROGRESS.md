@@ -4119,3 +4119,27 @@ Eighteen new focused tests passed; full unit suite1,481 passed36.52s. Updated
 simulation protocol with parser incompatibility, derivative provenance and
 execution semantics. Next: freeze and execute unchanged-tree mode controls with
 native source/input/output admission before the420 main method/tree runs.
+
+### Unchanged-tree execution pilot prepared (2026-09-17)
+
+Previous continuation progressed committed26b97ca native parser compatibility.
+Re-read objective and confirmed21329 RUNNING at00:44:01, then observed its
+authoritative terminal FAILED1:0 at00:46:36. It completed checked initial and
+multipass clustering; profile_base native execution returned but the validator
+rejected OMP_NUM_THREADS=32 instead of1. Frozen profile_expansion.py:702 sets
+this variable in the parent. Failure and outputs are preserved without retry;
+the child environment needs explicit isolation before any corrected replay.
+
+Added run_simulation_tree_mode_control.py and a four-CPU16GiB one-hour batch
+for baseline_20261101, the first baseline seed, as an execution pilot, not a
+selected accuracy result. Both methods rerun fresh using their own previously
+inferred tree. No cache reuse, source changes or accuracy scoring. Native
+admission, pair membership, rooted topology and retained artifact hashes are
+reported separately; postprocessed OF artifacts alone do not prove every
+upstream state. Independent admission and all-dataset mode controls remain.
+
+Preflight freshly re-admitted both original methods, verified806inputgenes,
+and passed both native tree parsers. Retained inventories contain27OH and202OF
+artifacts. New runner preserves failures and refuses existing destinations.
+Nine focused tests pass; full1,490unit tests passed36.49s. Executor will be
+committed/frozen before scheduler submission; no pilot results claimed yet.
