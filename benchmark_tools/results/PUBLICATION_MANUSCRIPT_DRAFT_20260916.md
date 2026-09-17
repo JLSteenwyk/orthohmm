@@ -347,6 +347,12 @@ All three final partitions cover251,378 input genes, including singletons.
 The same normalization formula and E-value cutoff do not equate calibration,
 candidate filtering or computational effort. [Full control results](OB_SEQUENCE_SEARCH_RESULTS_20260916.md).
 
+[Sequence-search control figure](figures_ob_sequence_search_20260916/sequence_search_control.pdf)
+shows all observed scores and all six paired effects on a common percentage-point
+axis. Thin intervals retain the six-endpoint correction; thick intervals are
+nominal95% intervals. Search sensitivity/calibration are not matched, and this
+control disables subsequent profile expansion and phylogenetic inference.
+
 ### Supplied-Tree Perturbations Had Small Observed Aggregate Effects
 
 Six prespecified rooted topology perturbations were evaluated against an

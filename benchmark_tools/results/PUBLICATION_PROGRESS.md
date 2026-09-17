@@ -3317,3 +3317,27 @@ CPM0.08 is now running;CPM0.12 remains planned after it. This control success is
 not completion of the whole CPM panel or evidence of universal repeatability.
 Margin-variant21316_2/3 and detailed QfO21321 remain running. Next finish/admit
 these outputs and CPM downstream candidate/phylogeny before six-variant scoring.
+
+### Sequence-search figure and high-margin admission (2026-09-16)
+
+Previous turn made progress with fixed statistics implementation and verified
+CPM control. Objective reread and remaining jobs checked. Generated missing
+sequence-search control figure from hash-pinned b3740104... admitted results.
+Three-arm score table plus all six paired F1/precision/recall effects, same x-axis,
+nominal and multiplicity-adjusted intervals. Clearly labels disabled profile/
+candidate/phylogeny stages, unmatched sensitivity/calibration and no established
+HMM F1 advantage. Plot validation recomputes scores from sufficient statistics,
+checks coverage, contrast arithmetic, interval nesting and exact endpoint plan.
+PNG visually inspected: nonblank, legible, no clipping or overlapping labels;
+PNG/PDF/SVG plus provenance manifest retained and manuscript linked.
+Ten focused tests passed; full unit suite1,206 passed29.20s.
+
+Completed21316_3 (margin_high)0:0 in11:37 independently admitted via the existing
+native validator;75,035 execution artifacts verified. All251,378genes retained,
+55,434candidates/60,156rootHOGs, zero cross-source merges. Constraints7,451=
+5,361supported+2,090detached. Unscored snapshot
+ob_candidate_margin_high_native_verified_20260916.json SHA256
+07a0035414254da6ccbb5fbc8928fd22720caedf48e77188ba615d220cc1e4ec.
+Only margin_low remains running in21316. CPM21319 and QfO21321 still running;
+first v2 QfO worker matches8c162782... partition, not a completed repeat panel.
+No parameter accuracy results or new defaults inferred from these observations.
