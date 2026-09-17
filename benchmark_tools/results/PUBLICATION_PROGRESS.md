@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Biological Application Launcher Passed Preflight (2026-09-17)
+
+Previous continuation progressed runtime inspection, pushed83630b3. Re-read
+objective. Supplemental system snapshot covers14,600entries:system bin,
+x86shared libraries, Python3.12stdlib, loader configuration and conda terminfo.
+No external directory links remain in this supplemental snapshot; unrelated
+Qt default.conf broken link is retained and disclosed. Raw system inventory
+`benchmarks/work/biological_wgd_system_trees_v1.json`, SHA256
+`5a19ac94e14aff479c7bd7a09a757a8471056d23a9b51fbbc8c51a2d8aee0e27`.
+
+Launcher0c6fc7e committed/pushed, frozen worktree
+`benchmarks/work/publication_wgd_launcher_v1`.24focused tests pass, including
+command exit/failure/log retention, timeout process-group cleanup, input-copy
+identity and runtime/order helpers. Batch syntax passes. Frozen execution spec
+`biological_wgd_execution_20260917.json`, SHA256
+`c43704020c56ead316678461f5be3e8d4efc43a56ff5ced4f0e3cfd3c189025c`.
+Plan commands unchanged. Explicit environment, absent isolated bytecode prefix,
+disabled user-site loading/writes,32CPU128GiBoriginal-host task required.
+Three inventories(runtime/system/recipe) checked before/after every method;
+fresh comparator inputs verified before/after. Failures retained, output
+admission separate. Per-method85800s timeout within24hSlurm limit.
+
+Actual frozen launcher --check-only passed all current runtime/system/recipe,
+input-byte/order,reference/protocol/entrypoint checks with no inference or
+output creation. Ready to submit four sequential original-host tasks. No
+controlled application timing claims. Runtime snapshots are not hermetic and
+cannot exclude temporary mutations. Native/scoring/case results remain open.
+DGX21656_0..2COMPLETED0:0,21656_3RUNNING5:49,23queued at last poll.
+
 ## Biological Runtime Resolution Captured (2026-09-17)
 
 Previous turn progressed the command plan, pushedbb8c48c. Re-read objective.

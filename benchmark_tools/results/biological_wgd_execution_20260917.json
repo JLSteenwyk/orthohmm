@@ -1,0 +1,67 @@
+{
+  "command_plan": {
+    "bytes": 6389,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/biological_wgd_commands_20260917.json",
+    "sha256": "9a4f1af732d7e535818afe8d0da93743da99401dfe37f97433d94a860eaed1f3"
+  },
+  "environment": {
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PATH": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/diamond-linux64:/home/bizon/anaconda3/bin:/usr/bin:/bin",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONHASHSEED": "0",
+    "PYTHONNOUSERSITE": "1",
+    "PYTHONPATH": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2",
+    "PYTHONUNBUFFERED": "1"
+  },
+  "execution_authorized": true,
+  "input_order": {
+    "bytes": 2925,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/biological_wgd_input_order_20260917.json",
+    "sha256": "3a2cb367f10ec3df1c1c07b929672090d7e19e3f4caa3e2ca72a617875f0ea1b"
+  },
+  "launcher_commit": "0c6fc7e65e5b93c42e59f54a8e14d6f99c74b9f0",
+  "launcher_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_wgd_launcher_v1",
+  "limitations": [
+    "Execution authorization does not admit native outputs or scientific claims.",
+    "Original shared host: no controlled cross-method timing comparison.",
+    "Explicit runtime identities are not a hermetic operating-system snapshot.",
+    "System Qt default.conf broken link retained; no Qt workflow is used.",
+    "Before/after identity cannot exclude temporary changes during inference."
+  ],
+  "purpose": "wgd_application",
+  "runtime_manifests": [
+    {
+      "bytes": 37039196,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/biological_wgd_runtime_trees_v1.json",
+      "sha256": "70eda6198d28d6c36c697d2862911a0853d9482c9e15f504f17574ca73f99071"
+    },
+    {
+      "bytes": 3581976,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/biological_wgd_system_trees_v1.json",
+      "sha256": "5a19ac94e14aff479c7bd7a09a757a8471056d23a9b51fbbc8c51a2d8aee0e27"
+    },
+    {
+      "bytes": 2957,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/biological_wgd_launcher_recipe_20260917.json",
+      "sha256": "6eb79b8c445dfd351b19c53757c77a3a22ba54f97911d23568c0cd243e548528"
+    }
+  ],
+  "source": {
+    "bytes": 4182,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_wgd_execution.py",
+    "sha256": "59bce5c1e40572a9abf8e50f0621775ae63b32ab632a2ec235a5145c8a7055c9"
+  },
+  "timeout_s": 85800,
+  "unset_environment": [
+    "CONDA_PREFIX",
+    "LD_PRELOAD",
+    "LD_LIBRARY_PATH",
+    "LD_AUDIT",
+    "GOMP_CPU_AFFINITY",
+    "OMP_PROC_BIND",
+    "OMP_PLACES",
+    "OMP_DYNAMIC"
+  ]
+}

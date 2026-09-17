@@ -1,0 +1,61 @@
+{
+  "exclusions": [
+    "__pycache__",
+    ".git",
+    "*.pyc",
+    "*.pyo"
+  ],
+  "external_symlinks": [],
+  "limitations": [
+    "Explicit tree identity, not a hermetic operating-system or loader snapshot.",
+    "Directory symlinks are recorded but not traversed; external targets require separate review.",
+    "Python bytecode caches are excluded; execution must isolate cache lookup to a fresh prefix and disable writes.",
+    "Before/after equality cannot rule out a temporary change during execution."
+  ],
+  "records": [
+    {
+      "bytes": 59,
+      "kind": "file",
+      "mode": 436,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_wgd_launcher_v1/benchmark_tools/__init__.py",
+      "sha256": "f379db82028a8af2ba14a89ec9ef6381346807470523fa1836554ba6f26a2746"
+    },
+    {
+      "bytes": 8275,
+      "kind": "file",
+      "mode": 436,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_wgd_launcher_v1/benchmark_tools/run_wgd_application.py",
+      "sha256": "002e4a71d6e77299e8846873b9811cdaf3e0b0073c94ab85e9aff68707c39c26"
+    },
+    {
+      "bytes": 586,
+      "kind": "file",
+      "mode": 436,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_wgd_launcher_v1/benchmark_tools/run_wgd_application.slurm",
+      "sha256": "8e70bfa28888de790d903b8cfeb6edc72af2a471ada410232393f3e6e7607893"
+    },
+    {
+      "bytes": 3883,
+      "kind": "file",
+      "mode": 436,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_wgd_launcher_v1/benchmark_tools/snapshot_orthohmm_input_order.py",
+      "sha256": "730609276dbaba4671cce8e3caea6bb2dc535a263110febf08a3f4d0afd7d9c8"
+    },
+    {
+      "bytes": 4083,
+      "kind": "file",
+      "mode": 436,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_wgd_launcher_v1/benchmark_tools/snapshot_runtime_trees.py",
+      "sha256": "ab0008651e75ebadc1be3c87503f09bffd9e5be87f2e6b0c3eec49e552d9bd4c"
+    }
+  ],
+  "roots": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_wgd_launcher_v1/benchmark_tools/__init__.py",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_wgd_launcher_v1/benchmark_tools/run_wgd_application.py",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_wgd_launcher_v1/benchmark_tools/run_wgd_application.slurm",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_wgd_launcher_v1/benchmark_tools/snapshot_orthohmm_input_order.py",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_wgd_launcher_v1/benchmark_tools/snapshot_runtime_trees.py"
+  ],
+  "schema": 1,
+  "scientific_execution_authorized": false
+}
