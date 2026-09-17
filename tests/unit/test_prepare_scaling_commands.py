@@ -74,3 +74,29 @@ def test_changed_panel_rejected(tmp_path, change):
 def test_existing_destination_rejected(tmp_path):
     with pytest.raises(FileExistsError):
         prepare(tmp_path, tmp_path, tmp_path / "manifest.json")
+
+
+def test_dgx_resource_change_preserves_all_other_settings(tmp_path):
+    inputs, baseline = fixtures(tmp_path)
+    original = configurations(inputs, baseline, tmp_path / "runs")
+    dgx = configurations(inputs, baseline, tmp_path / "runs", cpu_count=20)
+    assert len(dgx) == len(original) == 27
+    for before, after in zip(original, dgx):
+        # Normalize only declared allocation flags, then compare the entire record.
+        changes = []
+        for key, flags in (("native_argv", ("-t", "-a") if before["native_method"] == "orthofinder_full" else ("-c",)),
+                           ("configuration", ("-t", "-a") if before["native_method"] == "orthofinder_full" else ("--cpu",))):
+            argv = after[key]["argv"] if key == "configuration" else after[key]
+            for flag in flags:
+                assert argv[argv.index(flag) + 1] == "20"
+                changes.append((argv, argv.index(flag) + 1))
+        for argv, index in changes:
+            argv[index] = "32"
+        assert after == before
+
+
+@pytest.mark.parametrize("cpus", [0, -1, True, 20.0, "20", None])
+def test_invalid_cpu_count_rejected(tmp_path, cpus):
+    inputs, baseline = fixtures(tmp_path)
+    with pytest.raises(ValueError, match="CPU allocation"):
+        configurations(inputs, baseline, tmp_path / "runs", cpu_count=cpus)

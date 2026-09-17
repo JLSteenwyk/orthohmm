@@ -1,5 +1,22 @@
 # Publication Progress
 
+## DGX Nested Inputs and Allocation (2026-09-17)
+
+Materialized and hash-verified all4/8/12-proteome input directories on DGX.
+Added explicit CPU allocation to command preparation; tested20CPU against
+all27 original configurations with no non-resource changes. Slurm21626
+verified the intended20CPU/96GiB cpuset and memory cap; its short collector
+smoke completed, and all host intervals replay exactly. Manifests and
+limitations are in DGX_SCALING_MIGRATION_20260917.md. FastME2.1.4 is available
+at an alternate ATGC HTTP archive URL but retrieval is slow and incomplete;
+no source authentication or build admission is claimed. Full inference
+validation and scientific timing remain pending (0/27 launched). QfO21548_2
+verified RUNNING at41:37 elapsed; stage3 and21584 still pending.
+All1809 unit tests pass. After the resumed FastME HTTP request terminated
+with curl28 at600s, download-only Slurm21627 was submitted to continue the
+partial archive, validate its advertised length/gzip and report a checksum.
+Archive completeness/authenticity and native build are not yet established.
+
 ## DGX Collector Boundaries and Replay (2026-09-17)
 
 Added absolute monotonic command/resource-observation boundaries, clock

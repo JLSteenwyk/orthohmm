@@ -1,0 +1,102 @@
+{
+  "accuracy_evaluated": false,
+  "baseline_scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_21626/step_0/user/task_0",
+  "child_pid": 234817,
+  "clock_domain": {
+    "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+    "clock": "time.monotonic",
+    "hostname": "spark-7ff0",
+    "unit": "seconds"
+  },
+  "command": [
+    "/bin/sleep",
+    "5"
+  ],
+  "command.log": {
+    "path": "/home/jlsteenwyk/projects/orthohmm-publication/timing_allocation_smoke_v1/command.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "command_launch_started_monotonic_s": 2156873.634490391,
+  "command_wait_finished_monotonic_s": 2156878.661783922,
+  "command_wall_s": 5.027293531224132,
+  "controlled_workload_verified": false,
+  "cwd": "/home/jlsteenwyk",
+  "exit_code": 0,
+  "host_interval_s": 2.0,
+  "host_samples.jsonl": {
+    "path": "/home/jlsteenwyk/projects/orthohmm-publication/timing_allocation_smoke_v1/host_samples.jsonl",
+    "sha256": "6d14f821addaa8bd32bd0ca1b16d3f5e1d0d8ccf2fb91302d9338b10195e89ad"
+  },
+  "host_workload": {
+    "command_bracketed_by_samples": true,
+    "command_launch_started_monotonic_s": 2156873.634490391,
+    "command_wait_finished_monotonic_s": 2156878.661783922,
+    "controlled_workload_verified": false,
+    "interval_counts": {
+      "no_large_persistent_competitor_observed": 3
+    },
+    "limitations": [
+      "Snapshots miss short-lived processes and non-CPU contention.",
+      "Per-process CPU intervals are not simultaneous; no exclusivity or quiet-host certification.",
+      "Sampling overhead is included in measured resources; raw process inventory is local evidence."
+    ],
+    "maximum_between_snapshot_gap_s": 2.0078171328641474,
+    "maximum_observed_foreign_average_cores": 0.03358854599256157,
+    "observation_errors": 0,
+    "observer_pid": 234816,
+    "observer_source": {
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/timing_recipe_v1/observe_host_competition.py",
+      "sha256": "d8b66001bdabf4c436aab8185f218dac019dd45b3075c71521513235a1c07e0a"
+    },
+    "source": {
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/timing_recipe_v1/command_host_monitor.py",
+      "sha256": "3ef0f82132bad825509f8fade0e11c1b17d12be11d578327a7c593cbe3db30c9"
+    },
+    "status": "no_large_persistent_competitor_observed",
+    "successful_snapshots": 4,
+    "threshold_average_cores": 0.25
+  },
+  "interval_s": 1.0,
+  "job_id": 21626,
+  "limitations": [
+    "Caller must independently verify source/runtime, inputs, host workload and native output correctness.",
+    "Cgroup CPU and memory include this wrapper; sampling and accounting overhead are retained.",
+    "Cgroup peak may include preflight and predate command launch; sampled RSS misses transient peaks and may double-count shared pages.",
+    "Command wall time includes spawn/wait scheduling overhead; separate conversion/scoring must use separate measurements.",
+    "A command exit does not certify biological output success. Measurement failure does not silently terminate a still-running command."
+  ],
+  "requested_cpus": 20,
+  "requested_memory_bytes": 103079215104,
+  "samples.jsonl": {
+    "path": "/home/jlsteenwyk/projects/orthohmm-publication/timing_allocation_smoke_v1/samples.jsonl",
+    "sha256": "a25d9f3b8f0289fe24c5cca03748a257285de581c9afc97e7dabd7c95f271547"
+  },
+  "snapshot_source": {
+    "path": "/home/jlsteenwyk/projects/orthohmm-publication/timing_recipe_v1/slurm_resource_snapshot.py",
+    "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+  },
+  "source": {
+    "path": "/home/jlsteenwyk/projects/orthohmm-publication/timing_recipe_v1/measure_slurm_command.py",
+    "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+  },
+  "status": "command_exited_zero",
+  "summary": {
+    "cpu_delta_usec": {
+      "system_usec": 147758,
+      "usage_usec": 272401,
+      "user_usec": 124642
+    },
+    "maximum_reported_cgroup_peak_bytes": 12197888,
+    "maximum_sampled_sum_rss_bytes": 22433792,
+    "mean_cpu_cores_over_observed_span": 0.053041787224527764,
+    "observation_span_s": 5.13559241220355,
+    "observations": 6,
+    "samples_with_process_errors": 0
+  },
+  "timed_out": false,
+  "timeout_s": 30.0,
+  "wrapper_finished_monotonic_s": 2156878.717769909,
+  "wrapper_pid": 234816,
+  "wrapper_started_monotonic_s": 2156873.581381803,
+  "wrapper_wall_s": 5.136388106271625
+}

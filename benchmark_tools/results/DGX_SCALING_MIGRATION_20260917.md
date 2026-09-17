@@ -398,3 +398,53 @@ DGX method/command manifests and independent timing admission remain open.
 All79 focused collector, host-monitor, cgroup snapshot and resource-summary
 tests pass, including native exit/failure, timeout cleanup and sampling error
 retention. Existing measurements were not regenerated.
+
+## Nested Inputs and Full Allocation Smoke
+
+`materialize_scaling_transfer.py` checks the pinned transfer manifest, input
+SHA256/size, exact inventory and nested membership before creating fresh
+4/8/12-proteome directories. Every copy is rehashed. On the DGX it created
+scaling_inputs_v1/{4,8,12};24 input copies preserve the original frozen
+bytes. The destination manifest is retained as
+dgx_scaling_inputs_20260917.json, SHA256
+fa95fa60494c12d55f3bc277629c842ddbd2646a691c973882059708714e815e.
+Five tests cover successful materialization, existing destination refusal,
+changed hashes, extra files, symlink inputs and manifest mismatch.
+
+Command configuration now accepts an explicit positive integer CPU count,
+defaulting to32 for the original plan. A27-run comparison verifies that
+20CPU changes only the allocation flags (-c or -t/-a), retaining all other
+settings and run order. The original prepared manifests remain unchanged;
+this does not yet establish a frozen, runnable DGX method manifest.
+
+Slurm21626 and step21626.0 completed0:0 with an exclusive scheduler request
+for20CPU/96GiB on spark-7ff0. Collector cpuset and inherited-memory-cap gates
+passed. Five-second sleep wall time was5.027293531s, with six resource
+snapshots and four host snapshots. All three host intervals replay exactly;
+maximum observed foreign average CPU was0.033589cores. Scheduler exclusivity
+does not exclude unscheduled processes, and this finite smoke does not
+certify a quiet future benchmark window or measure full-load overhead.
+Report: dgx_timing_allocation_smoke_20260917.json, SHA256
+de5d60bfd8cb42133b6f6f1c119bcd782794f18b53145e84cd788a0aad3e7a10.
+
+FastME2.1.4 archive was located at the alternate ATGC HTTP URL
+http://atgc.lirmm.fr/download/sources/fastme/fastme-2.1.4.tar.gz.
+The server reports1235934 bytes, last modified2015-10-05. HTTPS verification
+failed (expired staging certificate for a different hostname); verification
+was not disabled. HTTP retrieval remains unauthenticated, and no independent
+historical checksum has yet been recovered. The initial30s request timed
+out with117059 bytes; a resumed request is still incomplete. Partial-file
+hashes and gzip failures are not final source evidence. The retrieval-only
+script records a final hash only after expected length and gzip checks;
+it does not execute the archive or certify authenticity.
+
+The600s resumed request subsequently timed out (curl28), adding379089 bytes
+to the initial117059. Only after this terminal result, Slurm21627 was
+submitted to continue the same partial archive on bizon (1CPU/1GiB,
+65-minute scheduler limit,60-minute curl limit). Retrieval script SHA256:
+72f8addc2da1057abcfb29a9a1cb37e221853fc25343ae4824c1ae9e9db35bc3.
+Log: benchmarks/work/fastme_source_214_21627.log. This is a download-only
+job and must be independently checked before building. All1809 unit tests
+pass after the input-materialization and CPU-configuration changes; the
+download shell script passes bash syntax validation. No scientific scaling
+run has been launched.

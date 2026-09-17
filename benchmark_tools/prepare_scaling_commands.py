@@ -37,7 +37,9 @@ def native_orthohmm(config):
     return argv
 
 
-def configurations(inputs, baseline, output):
+def configurations(inputs, baseline, output, cpu_count=32):
+    if type(cpu_count) is not int or cpu_count < 1:
+        raise ValueError("Require a positive integer CPU allocation")
     if inputs["planned_runs"] != planned_runs() or [d["proteomes"] for d in inputs["datasets"]] != [4, 8, 12]:
         raise ValueError("Changed complete scaling inventory or run order")
     datasets = {d["proteomes"]: d for d in inputs["datasets"]}
@@ -55,7 +57,7 @@ def configurations(inputs, baseline, output):
         for flag in flags:
             if config["argv"].count(flag) != 1:
                 raise ValueError("Ambiguous thread option")
-            config["argv"][config["argv"].index(flag) + 1] = "32"
+            config["argv"][config["argv"].index(flag) + 1] = str(cpu_count)
         native = config["argv"] if method == "orthofinder_full" else native_orthohmm(config)
         runs.append({**row, "native_method": method, "dataset": dataset, "configuration": config,
                      "native_argv": native, "cwd": str(core), "measurement_directory": str(directory / "measurement"),
