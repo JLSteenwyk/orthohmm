@@ -1,0 +1,88 @@
+{
+  "datasets": [
+    {
+      "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input",
+      "inputs_in_native_order": [
+        {
+          "bytes": 25773,
+          "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n14.fasta",
+          "sha256": "fa639b0dd9da1c40743221a5e85a48a2d1183e2583782cbc28743077b92cc095"
+        },
+        {
+          "bytes": 25419,
+          "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n11.fasta",
+          "sha256": "c9e7e01d18b0bd4d133b1588b417c2598b120901c38f3e12ebdeba2a8f97369f"
+        },
+        {
+          "bytes": 22575,
+          "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n5.fasta",
+          "sha256": "fe32ef88650cabe1e0239385a8f646020a0c8c01b02abb1487eab91dd3f014f7"
+        },
+        {
+          "bytes": 25992,
+          "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n13.fasta",
+          "sha256": "460b6ba93725298cb9e415b19ca38ec2679d622e0309bb69a683b0c4d428d75b"
+        },
+        {
+          "bytes": 24465,
+          "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n6.fasta",
+          "sha256": "9c12b7f6233a2fa1161fe5bdb904d8416935f43f1d66832db643723db2b98e5c"
+        },
+        {
+          "bytes": 25804,
+          "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n7.fasta",
+          "sha256": "bd5a375e99f12fc22bece6a6553a1636104321b1b5ddf2f7a398e909a6477a57"
+        },
+        {
+          "bytes": 26367,
+          "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n12.fasta",
+          "sha256": "3c5356bfbd29f872755fcf8cb83d092bc63b83bf1117f87546580baf503598b1"
+        },
+        {
+          "bytes": 26353,
+          "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n9.fasta",
+          "sha256": "8b92d25187584bbc38daff6dec0d671294e30d3484a77a31cc7dcc5b3483867f"
+        }
+      ],
+      "native_order": [
+        "n14.fasta",
+        "n11.fasta",
+        "n5.fasta",
+        "n13.fasta",
+        "n6.fasta",
+        "n7.fasta",
+        "n12.fasta",
+        "n9.fasta"
+      ],
+      "proteomes": 8
+    }
+  ],
+  "input_manifest": {
+    "bytes": 2189,
+    "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/dgx_launcher_smoke_inputs_v1.json",
+    "sha256": "49d7a79d891d28407fe758c1fcc22892159c1e155572dea1739e4a2c521f931f"
+  },
+  "interpreter": {
+    "bytes": 4266384,
+    "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python3.10",
+    "sha256": "04cfcf89245697b703ce0faa6a0096c293e4fec837e0f82a7ea55cbdb2331920"
+  },
+  "limitations": [
+    "Actual frozen OrthoHMM enumerator, not a sorted metadata listing.",
+    "Must recheck immediately before every run and after inference.",
+    "OrthoFinder separately sorts accepted basenames; its fresh copies need independent validation."
+  ],
+  "python_version": "3.10.13 | packaged by conda-forge | (main, Dec 23 2023, 15:26:55) [GCC 12.3.0]",
+  "runtime_manifest": {
+    "bytes": 7892659,
+    "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/trees.json",
+    "sha256": "2f38fc57683e51a7b6768b4709db16293590983640c41cfe12a56ed6036750ae"
+  },
+  "scientific_execution_authorized": false,
+  "source": {
+    "bytes": 2977,
+    "path": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2/orthohmm/files.py",
+    "sha256": "f1ec2acaea2566615b06b0a37e17b77f76bbd87fe6f2c76560a318343f6871a1"
+  },
+  "status": "orthohmm_native_enumeration_captured"
+}

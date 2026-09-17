@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Native Launcher Smoke Prepared (2026-09-17)
+
+Previous turn completed verified overhead audit, pushed91de6ed. Re-read the
+full objective. Implemented a checksum-pinned one-run entry point, with separate
+three-run smoke and27-run scientific authorization. Scientific mode requires
+an admitted launcher-smoke report and exact equality with the frozen DGX runs.
+Entry checks host/allocation, startup hash seed and isolated cache, rejects
+loader overrides, applies frozen method-specific PATH/settings, then invokes
+the verified preparation/measurement composition. Output validity remains an
+independent admission step, not inferred from zero exit.
+
+Prepared the existing missing20_20261101 fixture:8species645genes, exact original
+bytes rechecked and native DGX enumeration captured. The three smoke commands
+are the frozen first three scientific commands with input/output paths replaced;
+scientific flags and20CPU settings unchanged. No scientific run authorized.
+Frozen specification SHA256
+`8af8a049c69b7e479e8443e1e0e14b74c78d67b345c03d7f557768488d057fa2`;
+recipe-tree manifest SHA256
+`ee62c74d1c9710967b00b417040c9d6a4a8b5b495c5f8afd4184542b3d76f595`.
+Recipe `native_launcher_recipe_v1/benchmark_tools` under the DGX project root;
+manifest `runtime_inventory_v1/native_launcher_recipe_v1.json` outside it.
+Seven launcher tests and21focused launcher/composition/preparation tests pass.
+Shell syntax check passes. These identities are recorded before submission;
+scientific scaling0/27. Run the three sequential native smokes and independently
+validate their outputs and measurements before preparing scientific authorization.
+
 ## Verified Overhead Panel Completed (2026-09-17)
 
 Previous turn progressed native preparation/measurement composition, pushed

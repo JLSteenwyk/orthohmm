@@ -1,0 +1,489 @@
+{
+  "collector_directory": "/home/jlsteenwyk/projects/orthohmm-publication/collector_load_recipe_v2",
+  "enumerator": {
+    "bytes": 2977,
+    "path": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2/orthohmm/files.py",
+    "sha256": "f1ec2acaea2566615b06b0a37e17b77f76bbd87fe6f2c76560a318343f6871a1"
+  },
+  "environment_overrides": {
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONHASHSEED": "0",
+    "PYTHONPATH": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+    "PYTHONUNBUFFERED": "1"
+  },
+  "environment_paths": {
+    "orthofinder": [
+      "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/bin",
+      "/home/jlsteenwyk/projects/orthohmm-publication/diamond-2.0.13-build-v2",
+      "/home/jlsteenwyk/projects/orthohmm-publication/mcl-prefix-v3/bin",
+      "/home/jlsteenwyk/projects/orthohmm-publication/external-prefix-v1/fasttree-2.1.11",
+      "/home/jlsteenwyk/projects/orthohmm-publication/external-prefix-v1/mafft-7.525/bin",
+      "/home/jlsteenwyk/projects/orthohmm-publication/famsa-source-v1",
+      "/home/jlsteenwyk/projects/orthohmm-publication/fastme-prefix-v1/bin",
+      "/usr/bin",
+      "/bin"
+    ],
+    "orthohmm": [
+      "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin",
+      "/home/jlsteenwyk/projects/orthohmm-publication/external-prefix-v1/mafft-7.525/bin",
+      "/home/jlsteenwyk/projects/orthohmm-publication/external-prefix-v1/fasttree-2.2.0",
+      "/usr/bin",
+      "/bin"
+    ]
+  },
+  "execution_authorized": true,
+  "limitations": [
+    "Engineering fixture with identical scientific flags but different input/output paths.",
+    "Three small smokes are not the27 scientific scaling measurements."
+  ],
+  "native_timeout_s": 900,
+  "orders": [
+    {
+      "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input",
+      "inputs_in_native_order": [
+        {
+          "bytes": 25773,
+          "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n14.fasta",
+          "sha256": "fa639b0dd9da1c40743221a5e85a48a2d1183e2583782cbc28743077b92cc095"
+        },
+        {
+          "bytes": 25419,
+          "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n11.fasta",
+          "sha256": "c9e7e01d18b0bd4d133b1588b417c2598b120901c38f3e12ebdeba2a8f97369f"
+        },
+        {
+          "bytes": 22575,
+          "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n5.fasta",
+          "sha256": "fe32ef88650cabe1e0239385a8f646020a0c8c01b02abb1487eab91dd3f014f7"
+        },
+        {
+          "bytes": 25992,
+          "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n13.fasta",
+          "sha256": "460b6ba93725298cb9e415b19ca38ec2679d622e0309bb69a683b0c4d428d75b"
+        },
+        {
+          "bytes": 24465,
+          "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n6.fasta",
+          "sha256": "9c12b7f6233a2fa1161fe5bdb904d8416935f43f1d66832db643723db2b98e5c"
+        },
+        {
+          "bytes": 25804,
+          "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n7.fasta",
+          "sha256": "bd5a375e99f12fc22bece6a6553a1636104321b1b5ddf2f7a398e909a6477a57"
+        },
+        {
+          "bytes": 26367,
+          "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n12.fasta",
+          "sha256": "3c5356bfbd29f872755fcf8cb83d092bc63b83bf1117f87546580baf503598b1"
+        },
+        {
+          "bytes": 26353,
+          "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n9.fasta",
+          "sha256": "8b92d25187584bbc38daff6dec0d671294e30d3484a77a31cc7dcc5b3483867f"
+        }
+      ],
+      "native_order": [
+        "n14.fasta",
+        "n11.fasta",
+        "n5.fasta",
+        "n13.fasta",
+        "n6.fasta",
+        "n7.fasta",
+        "n12.fasta",
+        "n9.fasta"
+      ],
+      "proteomes": 8
+    }
+  ],
+  "overhead": {
+    "path": "/home/jlsteenwyk/projects/orthohmm-publication/native_launcher_recipe_v1/benchmark_tools/dgx_verified_overhead_20260917.json",
+    "sha256": "0184d54be2f55720aff35f27b6db0123de28ca7dfcdabd50cbf1d8d79d60b437"
+  },
+  "purpose": "launcher_smoke",
+  "resource_plan": {
+    "concurrency": 1,
+    "cpus": 20,
+    "exclusive": true,
+    "fresh_output_each_run": true,
+    "gpu": false,
+    "host": "spark-7ff0",
+    "memory_gib": 96,
+    "partition": "spark",
+    "shared_search_cache": false,
+    "wall_limit_hours_per_run": 24
+  },
+  "runs": [
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+          "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2/benchmark_tools/benchmark_production.py",
+          "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input",
+          "/home/jlsteenwyk/projects/orthohmm-publication/launcher_smoke_v1/run_00/orthohmm_high_sensitivity",
+          "/home/jlsteenwyk/projects/orthohmm-publication/launcher_smoke_v1/run_00/orthohmm_high_sensitivity.json",
+          "--cpu",
+          "20",
+          "--threads-per-worker",
+          "4",
+          "--matrix",
+          "BLOSUM62",
+          "--evalue",
+          "0.0001",
+          "--clustering",
+          "leiden",
+          "--cpm-resolution",
+          "0.1",
+          "--refinement-profile",
+          "default",
+          "--accuracy-profile",
+          "high_sensitivity"
+        ],
+        "metrics": "/home/jlsteenwyk/projects/orthohmm-publication/launcher_smoke_v1/run_00/orthohmm_high_sensitivity.json",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/launcher_smoke_v1/run_00/orthohmm_high_sensitivity",
+        "semantics": "group-derived cross-species pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input",
+        "inputs": [
+          {
+            "bytes": 25419,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n11.fasta",
+            "sha256": "c9e7e01d18b0bd4d133b1588b417c2598b120901c38f3e12ebdeba2a8f97369f"
+          },
+          {
+            "bytes": 26367,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n12.fasta",
+            "sha256": "3c5356bfbd29f872755fcf8cb83d092bc63b83bf1117f87546580baf503598b1"
+          },
+          {
+            "bytes": 25992,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n13.fasta",
+            "sha256": "460b6ba93725298cb9e415b19ca38ec2679d622e0309bb69a683b0c4d428d75b"
+          },
+          {
+            "bytes": 25773,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n14.fasta",
+            "sha256": "fa639b0dd9da1c40743221a5e85a48a2d1183e2583782cbc28743077b92cc095"
+          },
+          {
+            "bytes": 22575,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n5.fasta",
+            "sha256": "fe32ef88650cabe1e0239385a8f646020a0c8c01b02abb1487eab91dd3f014f7"
+          },
+          {
+            "bytes": 24465,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n6.fasta",
+            "sha256": "9c12b7f6233a2fa1161fe5bdb904d8416935f43f1d66832db643723db2b98e5c"
+          },
+          {
+            "bytes": 25804,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n7.fasta",
+            "sha256": "bd5a375e99f12fc22bece6a6553a1636104321b1b5ddf2f7a398e909a6477a57"
+          },
+          {
+            "bytes": 26353,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n9.fasta",
+            "sha256": "8b92d25187584bbc38daff6dec0d671294e30d3484a77a31cc7dcc5b3483867f"
+          }
+        ],
+        "proteins": 645,
+        "proteomes": 8,
+        "sequence_characters": 194308
+      },
+      "environment_role": "orthohmm",
+      "index": 0,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/launcher_smoke_v1/run_00/measurement",
+      "method": "orthohmm_high_sensitivity",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+        "-m",
+        "orthohmm",
+        "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input",
+        "-o",
+        "/home/jlsteenwyk/projects/orthohmm-publication/launcher_smoke_v1/run_00/orthohmm_high_sensitivity",
+        "-c",
+        "20",
+        "--threads_per_worker",
+        "4",
+        "-x",
+        "BLOSUM62",
+        "-e",
+        "0.0001",
+        "--clustering",
+        "leiden",
+        "--cpm_resolution",
+        "0.1",
+        "--refinement_profile",
+        "default",
+        "--accuracy_profile",
+        "high_sensitivity",
+        "--metrics_json",
+        "/home/jlsteenwyk/projects/orthohmm-publication/launcher_smoke_v1/run_00/orthohmm_high_sensitivity.json",
+        "--stop",
+        "infer"
+      ],
+      "native_method": "orthohmm_high_sensitivity",
+      "preparation": "create fresh empty native output directory before inference",
+      "proteomes": 8,
+      "repeat": 0
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+          "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2/benchmark_tools/benchmark_production.py",
+          "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input",
+          "/home/jlsteenwyk/projects/orthohmm-publication/launcher_smoke_v1/run_01/orthohmm_satellite_v2",
+          "/home/jlsteenwyk/projects/orthohmm-publication/launcher_smoke_v1/run_01/orthohmm_satellite_v2.json",
+          "--cpu",
+          "20",
+          "--threads-per-worker",
+          "4",
+          "--matrix",
+          "BLOSUM62",
+          "--evalue",
+          "0.0001",
+          "--clustering",
+          "leiden",
+          "--cpm-resolution",
+          "0.1",
+          "--refinement-profile",
+          "default",
+          "--accuracy-profile",
+          "high_sensitivity",
+          "--phylogeny",
+          "reconcile",
+          "--species-tree-mode",
+          "infer",
+          "--aligner",
+          "mafft",
+          "--tree-builder",
+          "FastTree",
+          "--phylogeny-candidates",
+          "satellite_v2",
+          "--phylogeny-root-rule",
+          "species_overlap",
+          "--phylogeny-pair-rule",
+          "positive_paralogy",
+          "--species-tree-rooting",
+          "min_variance"
+        ],
+        "metrics": "/home/jlsteenwyk/projects/orthohmm-publication/launcher_smoke_v1/run_01/orthohmm_satellite_v2.json",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/launcher_smoke_v1/run_01/orthohmm_satellite_v2",
+        "semantics": "native phylogenetic ortholog pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input",
+        "inputs": [
+          {
+            "bytes": 25419,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n11.fasta",
+            "sha256": "c9e7e01d18b0bd4d133b1588b417c2598b120901c38f3e12ebdeba2a8f97369f"
+          },
+          {
+            "bytes": 26367,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n12.fasta",
+            "sha256": "3c5356bfbd29f872755fcf8cb83d092bc63b83bf1117f87546580baf503598b1"
+          },
+          {
+            "bytes": 25992,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n13.fasta",
+            "sha256": "460b6ba93725298cb9e415b19ca38ec2679d622e0309bb69a683b0c4d428d75b"
+          },
+          {
+            "bytes": 25773,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n14.fasta",
+            "sha256": "fa639b0dd9da1c40743221a5e85a48a2d1183e2583782cbc28743077b92cc095"
+          },
+          {
+            "bytes": 22575,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n5.fasta",
+            "sha256": "fe32ef88650cabe1e0239385a8f646020a0c8c01b02abb1487eab91dd3f014f7"
+          },
+          {
+            "bytes": 24465,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n6.fasta",
+            "sha256": "9c12b7f6233a2fa1161fe5bdb904d8416935f43f1d66832db643723db2b98e5c"
+          },
+          {
+            "bytes": 25804,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n7.fasta",
+            "sha256": "bd5a375e99f12fc22bece6a6553a1636104321b1b5ddf2f7a398e909a6477a57"
+          },
+          {
+            "bytes": 26353,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n9.fasta",
+            "sha256": "8b92d25187584bbc38daff6dec0d671294e30d3484a77a31cc7dcc5b3483867f"
+          }
+        ],
+        "proteins": 645,
+        "proteomes": 8,
+        "sequence_characters": 194308
+      },
+      "environment_role": "orthohmm",
+      "index": 1,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/launcher_smoke_v1/run_01/measurement",
+      "method": "orthohmm_satellite_v2",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+        "-m",
+        "orthohmm",
+        "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input",
+        "-o",
+        "/home/jlsteenwyk/projects/orthohmm-publication/launcher_smoke_v1/run_01/orthohmm_satellite_v2",
+        "-c",
+        "20",
+        "--threads_per_worker",
+        "4",
+        "-x",
+        "BLOSUM62",
+        "-e",
+        "0.0001",
+        "--clustering",
+        "leiden",
+        "--cpm_resolution",
+        "0.1",
+        "--refinement_profile",
+        "default",
+        "--accuracy_profile",
+        "high_sensitivity",
+        "--metrics_json",
+        "/home/jlsteenwyk/projects/orthohmm-publication/launcher_smoke_v1/run_01/orthohmm_satellite_v2.json",
+        "--stop",
+        "infer",
+        "--phylogeny",
+        "reconcile",
+        "--species_tree_mode",
+        "infer",
+        "--aligner",
+        "mafft",
+        "--tree_builder",
+        "FastTree",
+        "--phylogeny_candidates",
+        "satellite_v2",
+        "--phylogeny_root_rule",
+        "species_overlap",
+        "--phylogeny_pair_rule",
+        "positive_paralogy",
+        "--species_tree_rooting",
+        "min_variance"
+      ],
+      "native_method": "orthohmm_satellite_v2",
+      "preparation": "create fresh empty native output directory before inference",
+      "proteomes": 8,
+      "repeat": 0
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/bin/orthofinder",
+          "-f",
+          "/home/jlsteenwyk/projects/orthohmm-publication/launcher_smoke_v1/run_02/orthofinder_full/input",
+          "-t",
+          "20",
+          "-a",
+          "20",
+          "-S",
+          "diamond"
+        ],
+        "copy_inputs_from": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input",
+        "copy_inputs_to": "/home/jlsteenwyk/projects/orthohmm-publication/launcher_smoke_v1/run_02/orthofinder_full/input",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/launcher_smoke_v1/run_02/orthofinder_full",
+        "semantics": "native phylogenetic ortholog pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input",
+        "inputs": [
+          {
+            "bytes": 25419,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n11.fasta",
+            "sha256": "c9e7e01d18b0bd4d133b1588b417c2598b120901c38f3e12ebdeba2a8f97369f"
+          },
+          {
+            "bytes": 26367,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n12.fasta",
+            "sha256": "3c5356bfbd29f872755fcf8cb83d092bc63b83bf1117f87546580baf503598b1"
+          },
+          {
+            "bytes": 25992,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n13.fasta",
+            "sha256": "460b6ba93725298cb9e415b19ca38ec2679d622e0309bb69a683b0c4d428d75b"
+          },
+          {
+            "bytes": 25773,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n14.fasta",
+            "sha256": "fa639b0dd9da1c40743221a5e85a48a2d1183e2583782cbc28743077b92cc095"
+          },
+          {
+            "bytes": 22575,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n5.fasta",
+            "sha256": "fe32ef88650cabe1e0239385a8f646020a0c8c01b02abb1487eab91dd3f014f7"
+          },
+          {
+            "bytes": 24465,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n6.fasta",
+            "sha256": "9c12b7f6233a2fa1161fe5bdb904d8416935f43f1d66832db643723db2b98e5c"
+          },
+          {
+            "bytes": 25804,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n7.fasta",
+            "sha256": "bd5a375e99f12fc22bece6a6553a1636104321b1b5ddf2f7a398e909a6477a57"
+          },
+          {
+            "bytes": 26353,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n9.fasta",
+            "sha256": "8b92d25187584bbc38daff6dec0d671294e30d3484a77a31cc7dcc5b3483867f"
+          }
+        ],
+        "proteins": 645,
+        "proteomes": 8,
+        "sequence_characters": 194308
+      },
+      "environment_role": "orthofinder",
+      "index": 2,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/launcher_smoke_v1/run_02/measurement",
+      "method": "orthofinder_3_1_5_full",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/bin/orthofinder",
+        "-f",
+        "/home/jlsteenwyk/projects/orthohmm-publication/launcher_smoke_v1/run_02/orthofinder_full/input",
+        "-t",
+        "20",
+        "-a",
+        "20",
+        "-S",
+        "diamond"
+      ],
+      "native_method": "orthofinder_full",
+      "preparation": "fresh original-basename input copies; native outputs must not exist",
+      "proteomes": 8,
+      "repeat": 0
+    }
+  ],
+  "runtime_manifests": [
+    {
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/trees.json",
+      "sha256": "2f38fc57683e51a7b6768b4709db16293590983640c41cfe12a56ed6036750ae"
+    },
+    {
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/system_trees.json",
+      "sha256": "4083d15c0ffc40013756c4588763aa8af24ca39165622665ee5074662e4b46ce"
+    }
+  ],
+  "scientific_timing_runs_authorized": false,
+  "unset_environment": [
+    "CONDA_PREFIX",
+    "GOMP_CPU_AFFINITY",
+    "OMP_PROC_BIND",
+    "OMP_PLACES",
+    "OMP_DYNAMIC"
+  ]
+}
