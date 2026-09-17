@@ -1,8 +1,11 @@
 from copy import deepcopy
+from contextlib import contextmanager
+from types import SimpleNamespace
 
 import pytest
 
 from benchmark_tools.observe_host_competition import analyze, observe
+from benchmark_tools import observe_host_competition as observer
 
 
 def process(pid, cpu=0., when=1., created=1., group="/other"):
@@ -68,3 +71,50 @@ def test_duplicate_pid_rejected():
 def test_existing_observation_not_overwritten(tmp_path):
     with pytest.raises(FileExistsError):
         observe(1, 1, 1., tmp_path)
+
+
+@pytest.mark.parametrize("problem", [None, "pid_reuse", "cgroup", "disappeared", "permission"])
+def test_snapshot_fresh_identity_check_outside_oneshot(monkeypatch, problem):
+    class Process:
+        cached = False
+        creations = 0
+
+        @contextmanager
+        def oneshot(self):
+            self.cached = True
+            try:
+                yield
+            finally:
+                self.cached = False
+
+        def create_time(self):
+            assert self.cached
+            self.creations += 1
+            return 10.
+
+        def cpu_times(self):
+            assert self.cached
+            return SimpleNamespace(user=2., system=3.)
+
+        def name(self):
+            if problem == "permission":
+                raise observer.psutil.AccessDenied(123)
+            return "fixture"
+
+        def is_running(self):
+            assert not self.cached
+            return problem not in {"pid_reuse", "disappeared"}
+
+    proc = Process()
+    groups = iter(["/first", "/changed" if problem == "cgroup" else "/first"])
+    monkeypatch.setattr(observer.psutil, "pids", lambda: [123])
+    monkeypatch.setattr(observer.psutil, "Process", lambda pid: proc)
+    monkeypatch.setattr(observer, "membership", lambda pid: next(groups))
+    result = observer.snapshot()
+    assert proc.creations == 1
+    if problem:
+        assert not result["processes"] and len(result["errors"]) == 1
+    else:
+        assert not result["errors"]
+        row = result["processes"][0]
+        assert (row["pid"], row["created"], row["cgroup"], row["user_s"], row["system_s"]) == (123, 10., "/first", 2., 3.)

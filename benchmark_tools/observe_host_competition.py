@@ -32,12 +32,14 @@ def snapshot():
     for pid in psutil.pids():
         try:
             process = psutil.Process(pid)
-            created = process.create_time()
             group = membership(pid)
-            cpu = process.cpu_times()
-            observed = time.monotonic()
-            name = process.name()
-            if psutil.Process(pid).create_time() != created or membership(pid) != group:
+            with process.oneshot():
+                created = process.create_time()
+                cpu = process.cpu_times()
+                observed = time.monotonic()
+                name = process.name()
+            # Outside oneshot, is_running performs psutil's fresh PID-reuse check.
+            if not process.is_running() or membership(pid) != group:
                 raise ValueError("Process identity or cgroup changed during collection")
             rows.append({"pid": pid, "created": created, "cgroup": group, "name": name,
                          "user_s": cpu.user, "system_s": cpu.system, "observed_monotonic_s": observed})

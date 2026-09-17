@@ -51,9 +51,10 @@ def stop_owned_group(process, grace=5.):
 
 
 def measure(command, output, job_id, cpu_count, memory_bytes, timeout_s, interval_s=1., snapshot_fn=None,
-            monitor_host=False, host_snapshot_fn=None):
+            monitor_host=False, host_snapshot_fn=None, host_interval_s=30.):
     if (not command or cpu_count < 1 or memory_bytes < 1 or not math.isfinite(timeout_s)
-            or timeout_s <= 0 or not math.isfinite(interval_s) or interval_s <= 0):
+            or timeout_s <= 0 or not math.isfinite(interval_s) or interval_s <= 0
+            or not math.isfinite(host_interval_s) or host_interval_s <= 0):
         raise ValueError("Invalid command or resource measurement plan")
     if output.exists():
         raise FileExistsError(output)
@@ -65,6 +66,7 @@ def measure(command, output, job_id, cpu_count, memory_bytes, timeout_s, interva
     report = {"status": "preflight", "command": command, "cwd": str(Path.cwd()), "job_id": job_id,
               "requested_cpus": cpu_count, "requested_memory_bytes": memory_bytes, "timeout_s": timeout_s,
               "interval_s": interval_s, "source": source_record(__file__),
+              "host_interval_s": host_interval_s if monitor_host else None,
               "snapshot_source": source_record(slurm_resource_snapshot.__file__), "accuracy_evaluated": False,
               "controlled_workload_verified": False, "limitations": [
                   "Caller must independently verify source/runtime, inputs, host workload and native output correctness.",
@@ -94,6 +96,7 @@ def measure(command, output, job_id, cpu_count, memory_bytes, timeout_s, interva
                 handle = stack.enter_context((output / "host_samples.jsonl").open("x"))
                 host = HostMonitor(handle, baseline["scope"], host_snapshot_fn)
                 host.observe()
+                next_host = time.monotonic() + host_interval_s
             launch = time.monotonic()
             process = subprocess.Popen(command, stdout=log, stderr=subprocess.STDOUT, start_new_session=True)
             report.update(status="running", child_pid=process.pid)
@@ -107,8 +110,9 @@ def measure(command, output, job_id, cpu_count, memory_bytes, timeout_s, interva
                     process.wait(timeout=min(interval_s, remaining))
                     break
                 except subprocess.TimeoutExpired:
-                    if host is not None:
+                    if host is not None and time.monotonic() >= next_host:
                         host.observe()
+                        next_host = time.monotonic() + host_interval_s
                     if "measurement_error" not in report:
                         try:
                             observe()
@@ -155,9 +159,10 @@ if __name__ == "__main__":
     parser.add_argument("--timeout", type=float, required=True)
     parser.add_argument("--interval", type=float, default=1.)
     parser.add_argument("--monitor-host", action="store_true")
+    parser.add_argument("--host-interval", type=float, default=30.)
     parser.add_argument("command", nargs=argparse.REMAINDER)
     args = parser.parse_args()
     command = args.command[1:] if args.command[:1] == ["--"] else args.command
     result = measure(command, args.output.resolve(), args.job_id, args.cpus, args.memory_gib * 1024 ** 3, args.timeout,
-                     args.interval, monitor_host=args.monitor_host)
+                     args.interval, monitor_host=args.monitor_host, host_interval_s=args.host_interval)
     raise SystemExit(0 if result["status"] == "command_exited_zero" else 1)

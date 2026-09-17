@@ -9,6 +9,7 @@ import psutil
 import pytest
 
 from benchmark_tools.measure_slurm_command import check_allocation, measure, stop_owned_group
+from benchmark_tools import measure_slurm_command as measurement
 
 
 def snapshot(pid, job):
@@ -117,3 +118,42 @@ def test_timeout_cleanup_reaches_child_that_ignores_term():
     finally:
         stop_owned_group(process, grace=.05)
         process.stdout.close()
+
+
+@pytest.mark.parametrize("interval,expected", [(30., 2), (1., 5)])
+def test_host_cadence_independent_of_resource_sampling(tmp_path, monkeypatch, interval, expected):
+    clock = [0.]
+
+    class Command:
+        pid = 999999
+        returncode = None
+        waits = 0
+
+        def wait(self, timeout):
+            self.waits += 1
+            clock[0] += 1.
+            if self.waits < 4:
+                raise subprocess.TimeoutExpired("fixture", timeout)
+            self.returncode = 0
+            return 0
+
+    def host_snapshot():
+        return {"started_monotonic_s": clock[0], "finished_monotonic_s": clock[0],
+                "processes": [], "errors": []}
+
+    monkeypatch.setattr(measurement.time, "monotonic", lambda: clock[0])
+    monkeypatch.setattr(measurement.subprocess, "Popen", lambda *a, **kw: Command())
+    result = measure(["fixture"], tmp_path / "run", 123, 1, 1024, 10., .02, snapshot,
+                     monitor_host=True, host_snapshot_fn=host_snapshot, host_interval_s=interval)
+    assert result["status"] == "command_exited_zero"
+    assert result["summary"]["observations"] == 5
+    assert result["host_interval_s"] == interval
+    assert result["host_workload"]["successful_snapshots"] == expected
+    assert result["host_workload"]["command_bracketed_by_samples"]
+
+
+@pytest.mark.parametrize("interval", [0., -1., float("inf"), float("nan")])
+def test_invalid_host_cadence_rejected_before_launch(tmp_path, interval):
+    with pytest.raises(ValueError):
+        measure(["unused"], tmp_path / "absent", 123, 1, 1024, 5., host_interval_s=interval)
+    assert not (tmp_path / "absent").exists()

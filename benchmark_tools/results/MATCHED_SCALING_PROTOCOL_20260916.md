@@ -168,3 +168,36 @@ not a0.5-second sampling cadence, and the monitor itself materially burdens this
 short smoke. Before scientific timing, reduce or amortize collection cost with
 a prespecified cadence and retain the resulting missed-work limitations. Do not
 treat functional monitoring success as acceptable measurement overhead.
+
+## Lower-Cost Collection and Separate Host Cadence
+
+Prospective update before any scientific scaling run: the observer uses
+psutil's public `oneshot()` context for shared process reads and its fresh
+`is_running()` PID-reuse check outside that context, followed by an uncached
+cgroup-membership check. No private psutil API or custom proc-stat parser is
+used. The installed7.2.2 implementation compares fresh monotonic process-start
+identity on Linux; no per-process second epoch conversion is needed.
+
+Three alternating old/new live snapshot pairs observed1,946-1,948 processes,
+zero sampling errors, and consistent observer PID/start identity. Old elapsed
+times were1.769263,1.768316,1.767543seconds; new times were1.060566,1.055259,
+1.059101seconds. This is a local collector diagnostic on a busy host, not a
+controlled inference speed comparison. Old source SHA256:
+8b0f20b50aaa0efee5fb3f7a4b924323d771e39b791be5aaac15caac6c132113;
+new source SHA256:
+d8b66001bdabf4c436aab8185f218dac019dd45b3075c71521513235a1c07e0a.
+
+The wrapper adds `--host-interval` (default30seconds) independently of the
+cgroup `--interval`. It always attempts pre-launch/post-exit scans; intervening
+scans become due30seconds after the preceding host scan finishes and occur on
+the next command-wait timeout. Thus30seconds is not an exact start-to-start
+cadence, and actual gaps remain reported. Short-lived competition can be
+missed, and no quiet-host certification is introduced. Observer overhead is
+still part of cgroup accounting. At this host size, one approximately1-second
+scan per30seconds remains nontrivial; acceptable overhead for scientific
+measurements still needs explicit evaluation.
+
+A prepared35-second parent/child Slurm smoke uses2CPU/1GiB,1-second cgroup
+waits,30-second host intervals and a90-second command timeout. It exercises
+the independent cadence rather than changing or repeating inference. Frozen
+execution and recorded output verification precede any use in scaling runs.

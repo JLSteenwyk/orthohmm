@@ -4650,3 +4650,26 @@ nonzero endpoints, seed-count caveats and upstream differences into manuscript
 Methods/Results. Claims and protocol now point to completed bounded evidence;
 no superiority or arbitrary-tree robustness asserted. Fullunit suite passed
 1,710 before the added single-pair test; final fullsuite1,711passed43.50s.
+
+### Lower-Overhead Host Collection Prepared (2026-09-17)
+
+Previous continuation progressed all-endpoint figure/manuscript integration,
+committed/pushed25f7024. Its Python/Markdown/JSON whitespace checks passed;
+Matplotlib-generated SVG has normal trailing path whitespace, not manual-code
+errors. Re-read objective and confirmed QfO21548/21584 states; no duplicate run.
+
+Updated observer to public psutil oneshot plus uncached is_running PID-reuse
+check and independent cgroup recheck. Installed psutil7.2.2 source verifies
+fresh monotonic start identity without repeated epoch conversion. Three
+alternating old/new probes retained observer identity with zero errors across
+1,946-1,948processes; elapsed decreased1.768s to1.058s approximately. Exact
+measurements/source hashes are in MATCHED_SCALING_PROTOCOL_20260916.md.
+This is collector evidence, not inference speedup or a controlled quiet window.
+
+Added separately configurable30-second host cadence, retaining mandatory
+pre/post-command observations, actual gaps and explicit missing-work caveats.
+Resource sampling retains its own cadence. Prepared35-second Slurm lifecycle
+smoke; native benchmark commands and scientific data unchanged. Forty-six
+focused tests and fullunit1,722tests passed42.56s. Tests cover uncached identity,
+PID reuse/disappearance, membership/permission errors, cadence separation,
+invalid intervals, native completion and owned-process timeout cleanup.
