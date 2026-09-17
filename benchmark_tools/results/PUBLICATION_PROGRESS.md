@@ -3756,3 +3756,25 @@ benchmarks/work/qfo_checked_repeats_21328.log. No result is admitted yet.
 The remote still reports 21 dependency alerts (1 critical, 7 high, 11 moderate,
 2 low); release/security review remains outstanding and the frozen scientific
 environment was not changed.
+
+### Independent checked-repeat admission prepared (2026-09-16)
+
+Previous goal continuation made progress: committed/pushed the tested executor and
+launched job 21328. This continuation confirmed the same job RUNNING via sacct;
+no restart. At 00:04:03 the first worker's saved native-boundary record showed
+all 24,148,515 canonical edge endpoints and ordered weights matching the saved
+976,504-vertex graph before optimization. No post-optimizer result is claimed.
+
+Added admit_qfo_checked_repeats.py for independent post-completion admission of
+the exact job/executor/three-repeat inventory. It reconstructs graph/input hashes
+using separate chunking and canonicalization, validates native before/after
+observations and exact optimizer settings, verifies preserved files against the
+parent report, commands, source/runtime identities and prior provenance, and
+recomputes all three pairwise partition comparisons with full gene coverage.
+Partition disagreement is valid evidence and is never rejected merely for being
+disagreement. Admission requires a separately supplied raw-report SHA256 and
+completed Slurm accounting; no incomplete run is admitted. This remains an
+initial-graph diagnostic, not full HMM replay or historical equivalence.
+Focused tests: 22 passed, including real igraph/Leiden observations, independent
+multi-chunk hash reconstruction, invalid arrays, altered native records, exact
+panel guards, and refusal to reuse output. Full suite: 1,371 passed in 35.37s.
