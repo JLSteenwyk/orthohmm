@@ -1,0 +1,55 @@
+{
+  "exclusions": [
+    "__pycache__",
+    ".git",
+    "*.pyc",
+    "*.pyo"
+  ],
+  "external_symlinks": [],
+  "limitations": [
+    "Explicit tree identity, not a hermetic operating-system or loader snapshot.",
+    "Directory symlinks are recorded but not traversed; external targets require separate review.",
+    "Python bytecode caches are excluded; execution must isolate cache lookup to a fresh prefix and disable writes.",
+    "Before/after equality cannot rule out a temporary change during execution."
+  ],
+  "records": [
+    {
+      "kind": "directory",
+      "mode": 509,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/verified_collector_recipe_v2"
+    },
+    {
+      "bytes": 4125,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/verified_collector_recipe_v2/DGX_VERIFIED_OVERHEAD_PROTOCOL_20260917.md",
+      "sha256": "d04f2c114fdf4934cb3cff20d511f0678f1abb3f2873adb436a636e1ca0cda87"
+    },
+    {
+      "bytes": 1956,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/verified_collector_recipe_v2/run_dgx_verified_collector_panel.sh",
+      "sha256": "e366841c565c015aa6f13f9620cc4c2fdeffdc815aef90751179cd6c7a21ac20"
+    },
+    {
+      "bytes": 5070,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/verified_collector_recipe_v2/run_verified_slurm_measurement.py",
+      "sha256": "36243fcdfe6f49e73dbe1dd1b627bf4a330f19f3cd52dcf94a9618ddf0415cf8"
+    },
+    {
+      "bytes": 4083,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/verified_collector_recipe_v2/snapshot_runtime_trees.py",
+      "sha256": "ab0008651e75ebadc1be3c87503f09bffd9e5be87f2e6b0c3eec49e552d9bd4c"
+    }
+  ],
+  "roots": [
+    "/home/jlsteenwyk/projects/orthohmm-publication/verified_collector_recipe_v2"
+  ],
+  "schema": 1,
+  "scientific_execution_authorized": false
+}

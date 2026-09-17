@@ -1,5 +1,49 @@
 # Publication Progress
 
+## Verified Collector Smoke and Frozen Repeat (2026-09-17)
+
+Previous turn progressed actual input-order checks, pushed3c64ca5. Re-read the
+full objective. Added a same-process wrapper that checks pinned runtime-tree
+manifests before and after the unchanged collector, including failed commands
+and collector exceptions. Changed runtime blocks admission; failed preflight
+does not launch. Verification wall time is separate, but hashing warms caches
+and cgroup memory peaks can retain preparation allocations. Ten new tests pass;
+full unit suite1,954passed47.57s. Wrapper milestone pushed20e5375.
+
+Captured10,066 system entries covering /usr/lib/aarch64-linux-gnu, /usr/bin,
+ARM dynamic loader, OS-release and loader config/cache. External file symlink
+targets are hashed; all seven directory symlink targets lie within included
+roots. Not a hermetic OS snapshot. Raw local system inventory:
+`benchmarks/work/dgx_system_trees_v1.json`, SHA256
+`4083d15c0ffc40013756c4588763aa8af24ca39165622665ee5074662e4b46ce`;
+remote `runtime_inventory_v1/system_trees.json` under the DGX project root.
+
+Exclusive20CPU96GiB engineering smoke21646 COMPLETED0:0 in20seconds.
+Before/after verification matched26,673 runtime and10,066 system entries.
+Verification4.3854/4.3068seconds; collector native wall10.8833seconds;
+GNU time10.87seconds,214.64user/0.02system CPU seconds,40,168KiB maximum
+process RSS. Mean observed19.5501cores; two host scans are inconclusive for
+quiet-host certification. Native checksums exactly match calibration21639.
+Independent raw collector replay passed; report SHA256
+`26612a0155515cab4884c06a5caa3bd6330ecf6c9f9ae3a69aa7a6bac2f4d439`,
+verification SHA256
+`af6da8d163349d7919c7752ca7fc1f840e6ee2b464a6f8ec6db6d1b639da092e`.
+Raw `benchmarks/work/dgx_verified_collector_smoke_v1`; committed audit
+`dgx_verified_collector_smoke_audit_20260917.json`.
+
+Froze a separate six-task repeat protocol, preserving the original21640 panel.
+Same counterbalanced ordering, native workload and5%median/10%per-pair budgets;
+adds GNU time in both modes and before/after runtime/system/recipe verification.
+Protocol `DGX_VERIFIED_OVERHEAD_PROTOCOL_20260917.md`, SHA256
+`d04f2c114fdf4934cb3cff20d511f0678f1abb3f2873adb436a636e1ca0cda87`.
+Remote recipe directory `verified_collector_recipe_v2`; manifest outside it at
+`runtime_inventory_v1/recipe_trees_v2.json`, SHA256
+`ee0f6b5befb41acb4627e5d9a3c00b1c9490879c7bb2075997bd1c933960fbb8`.
+Local committed copy `dgx_verified_collector_recipe_20260917.json`.
+These identities are recorded before submission. No repeat-panel outcomes yet.
+Scientific scaling remains0/27; scientific input-check and output-admission
+integration still required alongside broader publication work.
+
 ## Actual DGX Input Order Captured (2026-09-17)
 
 Previous turn made progress with runtime inventory, pushed cd48cb7. Re-read
