@@ -460,6 +460,35 @@ constraints should be removed; the unconstrained control showed a precision
 cost without established F1 improvement.
 [Full reconciliation trace and limitations](OB_RECONCILIATION_TRACE_20260916.md).
 
+### Limited Parameter Sensitivity
+
+The prespecified OrthoBench neighborhood changed CPM resolution, candidate
+minimum normalized score, or candidate minimum margin by20% one at a time,
+retaining all other settings and the full inferred-tree pipeline. CPM variants
+recomputed their own HMM-refined seeds and candidates; threshold variants reused
+the verified baseline seeds. Exact-input raw-tree reuse was allowed, but supplied
+species trees were not substituted. All seven configurations retained251,378
+input genes, passed native admission, and matched the official OrthoBench scorer.
+
+Control F1 was74.106074%. F1 values were74.586147% and71.463468% for CPM0.08
+and0.12,74.008570% and74.110826% for minimum normalized scores0.024 and0.036,
+and74.973144% and73.274559% for minimum margins1.2 and1.8. Each of the six
+F1 contrasts had a Bonferroni-adjusted interval including zero, using20,000
+paired RefOG draws and all18 planned F1/precision/recall endpoints. The only
+adjusted interval excluding zero was the recall decrease at CPM0.12:
+-2.010 percentage points, adjusted interval[-6.291,-0.148]. Minimum normalized
+score changes affected only one or three families' F1 values and left aggregate
+recall unchanged; this is a local observation, not general invariance.
+
+The largest observed F1 increase,0.867 points at minimum margin1.2, had an
+adjusted interval[-1.362,4.316]. It does not justify default promotion or
+an OrthoFinder superiority claim. This post-development panel is not independent
+confirmation, and intervals including zero do not establish equivalence.
+Shared-node phylogeny timings are incremental and omit upstream replay/candidate
+costs. The corresponding QfO panel awaits a reproducible native baseline.
+[Complete scores and paired intervals](OB_PARAMETER_NEIGHBORHOOD_RESULTS_20260916.md).
+[Parameter sensitivity figure](figures_ob_parameter_neighborhood_20260916/parameter_neighborhood.pdf).
+
 ## Limitations And Unfinished Analyses
 
 ### Remaining Requirements
@@ -473,7 +502,8 @@ sequence-search control; QfO extension remains outstanding. The interaction
 between broader candidates and reconciliation has descriptive OrthoBench
 evidence but awaits QfO evaluation and additional controls. Corrected multi-seed simulations are complete
 but do not establish an OrthoHMM advantage or profile-expansion benefit.
-QfO and independently annotated error strata, mechanistic tracing, broader tree-error and parameter robustness, matched resource scaling,
+QfO and independently annotated error strata, mechanistic tracing, broader tree-error
+robustness and the QfO parameter panel, matched resource scaling,
 and a prespecified biological application remain required.
 
 QfO historical replay equivalence remains unresolved. A bounded capture
@@ -502,6 +532,22 @@ to pre-optimizer graph handling in that instrumented run, but does not yet
 distinguish conversion, construction or observation effects, or establish the
 cause of all historical partition differences. The failed partial panel is
 preserved and not presented as a completed reproducibility experiment.
+
+A second boundary diagnostic recorded six incorrect native edges despite an
+intact original constructor array. A completed construction-only follow-up
+alternated three original-int32 workers with three explicit-int64-copy workers.
+Five graphs matched the saved endpoint stream; one explicit-int64 worker had
+the same six endpoint mismatches. Both its original and converted arrays were
+intact. Native tuple and source/target access agreed on the observed endpoints,
+and edge lookup did not find the expected pairs. Independent admission checked
+257 file records and reconstructed each worker's full reported native endpoint
+hash from the saved arrays plus its complete bounded mismatch witnesses.
+Explicit conversion alone is therefore not a sufficient fix in this experiment.
+The audit validates preserved observations, not an independent inspection of
+the historical live object; it does not establish a specific library defect,
+hardware cause, or the cause of all historical variability. No optimizer was
+invoked and no partition or accuracy score was produced in this follow-up.
+[Construction evidence and limitations](QFO_CONSTRUCTION_DIAGNOSTIC_20260916.md).
 
 Historical timing and memory records differ in scope and accounting.
 Cached replays are incremental computations, not end-to-end timings;
