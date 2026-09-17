@@ -55,6 +55,10 @@ def main():
     for item in admission["provenance_checked"]:
         check(item)
     validate_payload(manifest, payload, admission["native_report"]["graph_inputs"][0])
+    if manifest["index"] == 0:
+        for actual, expected in zip(manifest["inputs"][:4], admission["native_report"]["graph_inputs"]):
+            if any(actual[key] != expected[key] for key in ("bytes", "sha256")):
+                raise ValueError("Regenerated initial graph differs from admitted input")
     launcher = root / "benchmarks/work/publication_qfo_replay_native_v1"
     if Path.cwd() != launcher:
         raise ValueError("Wrong frozen worker working directory")

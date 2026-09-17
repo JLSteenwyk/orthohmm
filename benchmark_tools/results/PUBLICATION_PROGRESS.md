@@ -3871,3 +3871,33 @@ native full-replay success. Full suite: 1,387 passed in 34.93s. The parent launc
 per-stage post-worker validator and independent completed-replay admission still
 need integration before submitting a full cached replay. No new inference or
 accuracy evaluation was launched in this continuation.
+
+### Complete checked QfO replay launcher prepared (2026-09-17)
+
+Previous continuation made progress by committing/pushing payload components
+80a0166. Re-read objective and inspected current sources. Added
+validate_checked_replay_payload.py to verify actual worker modules/environment/
+metadata, admission/helper manifests, original oriented constructor bytes and
+complete native endpoint/weight hashes before/after unchanged optimization.
+It validates unique complete partition coverage before the replay consumes it.
+Initial-worker preflight now also requires exact previously admitted graph bytes;
+later graphs remain bound to their own generated payloads.
+
+Added run_qfo_checked_full_replay.py. Parent verifies prior308 provenance records,
+frozen7f/49ab native runtime and input audit before running; a fresh worker imports
+the frozen replay first, then intercepts only its isolated clustering calls.
+Exactly four successful checked calls, four full-coverage final stage partitions
+and nonzero constructed HMM profiles are required. Input/runtime/source checks
+repeat after execution. Initial partition comparison is recorded without rejecting
+disagreement or selecting by accuracy. Original payloads, failures and returned
+partitions remain preserved; no retries or scientific/default changes.
+
+Prepared no-requeue batch:32CPUs for profile work, one CPU per native graph
+worker,192GiB,24-hour limit. Disk inspection shows approximately12TiB available.
+This is a shared-machine cached replay with observation overhead, not controlled
+end-to-end efficiency evidence. Nine new validator/parent tests plus ten existing
+interceptor tests pass; validator fixtures use actual igraph/Leiden observations
+and test changed graph hashes, constructor hashes, metadata, scientific module
+records, provenance and incomplete/duplicate output membership. Full suite:
+1,396 passed in35.04s. Freeze/push executor before submitting; independent
+completed-replay admission remains required before QfO ablation inputs are used.
