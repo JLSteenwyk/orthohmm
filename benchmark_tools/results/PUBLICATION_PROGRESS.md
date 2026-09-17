@@ -3746,3 +3746,13 @@ stopped. Full unit suite: 1,349 passed in 36.12s; focused constructor/runner tes
 29 passed, including the real optimizer's recorded arguments and full graph gate.
 Next freeze this executor, submit the three-repeat diagnostic, and independently
 admit its outputs before deciding how to resume the QfO ablation work.
+
+Executor f6ad87c committed and pushed, then frozen in detached worktree
+benchmarks/work/publication_qfo_checked_repeats_v1. Submitted Slurm job 21328;
+squeue confirmed RUNNING with one CPU (00:07 at first check). Allocation is
+64 GiB, three-hour limit, no requeue. Output:
+benchmarks/results/qfo_checked_repeats_v1; scheduler log:
+benchmarks/work/qfo_checked_repeats_21328.log. No result is admitted yet.
+The remote still reports 21 dependency alerts (1 critical, 7 high, 11 moderate,
+2 low); release/security review remains outstanding and the frozen scientific
+environment was not changed.
