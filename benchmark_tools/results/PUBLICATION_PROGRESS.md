@@ -3592,3 +3592,7 @@ graph,import isolation,no clustering execution). Full1,283 unit tests passed
 33.13s; batch syntax passed. Bounded one-CPU64GiB/two-hour batch ready for a
 frozen/pushed executor before submission. No current OrthoHMM Slurm jobs remain
 running; unrelated workload20915 left untouched.
+
+Executorab364e4 pushed and frozen at publication_qfo_direct_graph_v1. Submitted
+no-requeue job21326, confirmed RUNNING; output benchmarks/results/qfo_direct_graph_v1.
+First worker observations pending. No scientific default or frozen runtime changed.
