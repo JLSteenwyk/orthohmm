@@ -3295,3 +3295,25 @@ Fourteen focused validator tests passed; full unit suite1,187 passed34.43s.
 Manuscript limitation updated with partial QfO pre-optimizer discrepancy, without
 claiming a proven cause. Margin-variant admission, CPM replay/candidate/phylogeny,
 six-variant scoring and QfO21321 diagnostic conclusions remain pending.
+
+### Fixed parameter-panel statistics and control replay (2026-09-16)
+
+Previous turn made progress by admitting both normalized-support phylogeny
+variants. Objective reread, remaining jobs confirmed RUNNING. Added the fixed
+statistical component for the six-variant parameter panel: exact complete arm
+accounting, successful baseline required,20,000 paired RefOG draws/seed20260918,
+18 planned endpoints even with terminal failures. Missing/extra/duplicate arms,
+undocumented failures and mismatched reference families rejected. Failed variants
+receive explicit missing intervals, never zero accuracy. If all variants fail,
+retain baseline statistics and failure reasons without fabricated bootstrap CIs.
+Native admission and official-score verification remain caller requirements;
+this helper does not replace those gates or constitute the final assembler.
+Nine focused tests; full unit suite1,196 passed33.64s. No panel scores calculated.
+
+CPM21319 unchanged control completed its four stages and passed byte/partition
+equivalence (51,181multipass;63,245refined;50,894profiles;62,885profile-refined).
+All four retained stage hashes independently rechecked after gate observation.
+CPM0.08 is now running;CPM0.12 remains planned after it. This control success is
+not completion of the whole CPM panel or evidence of universal repeatability.
+Margin-variant21316_2/3 and detailed QfO21321 remain running. Next finish/admit
+these outputs and CPM downstream candidate/phylogeny before six-variant scoring.
