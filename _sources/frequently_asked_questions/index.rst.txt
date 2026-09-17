@@ -27,5 +27,3 @@ main software developer via email_, Bluesky_, or Twitter_.
 .. _twitter: https://twitter.com/jlsteenwyk
 
 |
-
-^^^^^

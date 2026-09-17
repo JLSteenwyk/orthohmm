@@ -4,35 +4,59 @@
 Performance Assessment
 ======================
 
-In brief, performance assessment and comparison of multiple trimming alignment software
-revealed that OrthoHMM is a top-performing software.
+OrthoHMM is evaluated against other orthology-inference tools using OrthoBench
+and Quest for Orthologs (QfO) as primary benchmarks. Three Kingdoms is a
+supplementary conserved-family benchmark. Results depend on the dataset,
+configuration, reference universe and type of prediction being evaluated.
+The current publication analyses do not establish general superiority over
+full OrthoFinder or the other comparators.
 
-.. image:: ../_static/img/Performance_summary.png
+Current evidence
+----------------
 
-**OrthoHMM outperforms other algorithms across two benchmarking datasets.**
-(a) Examination of various algorithms across the three-performance metrics (precision
-[x-axis], recall [y-axis], and Fowlkes-Mallows Index [FMI] score [data point size]) using
-the OrthoBench dataset revealed four variants of OrthoHMM outperformed other algorithms.
-(b) Desirability-based ranking, which aggregates precision, recall, and FMI score,
-revealed OrthoHMM using the BLOSUM90, BLOSUM62, PAM70, and PAM120 substitution matrices
-outperformed all other approaches. (c) Examination of the same performance metrics in the
-Three Kingdoms dataset revealed that one variant of OrthoHMM surpassed the pareto
-frontier of previous tools. (d) Desirability-based ranking corroborated OrthoHMM is a
-top-performing algorithm. (e) The average desirability scores in the OrthoBench and
-Three Kingdoms datasets revealed OrthoHMM with the BLOSUM62 and BLOSUM90 substitution
-matrices outperformed all other approaches. In panels a and c, the pareto frontier of
-previous tools is represented as a dashed line.
+* On OrthoBench, phylogenetic OrthoHMM has a higher observed aggregate F1 than
+  full OrthoFinder, but the paired difference interval includes zero. The
+  results show a precision-recall trade-off, not established F1 superiority.
+* QfO challenges measure different properties. Their individual endpoints
+  must remain visible; the project's six-metric mean is a secondary summary,
+  not an official overall accuracy score.
+* Three Kingdoms scoring is restricted to the available BUSCO reference
+  universe. It does not establish proteome-wide orthology accuracy.
+* Frozen YGOB evaluation provides bounded transfer evidence on novel taxa,
+  but substantial family overlap prevents a family-disjoint validation claim.
+* The prespecified biological application shows improved homolog-supported
+  paralog separation with phylogenetic OrthoHMM relative to high sensitivity,
+  alongside lower homolog coverage. Full OrthoFinder and SonicParanoid perform
+  better on supported separation and coverage in this application.
+* Matched-resource timing runs are underway on a dedicated machine. Historical
+  resource measurements should not be pooled with this new timing panel.
 
-In panels b, d, and e, the abbreviations
-in the paratheses provide additional information about orthology inference parameters and
-are as follows: B45, BLOSUM45; B62, BLOSUM62; B90, BLOSUM90; P70, PAM70; P120, PAM120;
-P240, PAM240; B, BLAST; D, DIAMOND; D-MCL, DIAMOND and Markov clustering; and B-MCL,
-BLAST and Markov clustering. OrthoHMM is depicted in blue; other algorithms are depicted
-in gold.
+OrthoBench and QfO were inspected during development. Their scores are not
+independent confirmation of settings selected using those datasets. The
+repository retains neutral and negative results, native failures, exclusions,
+paired uncertainty and output-conversion audits.
 
-For additional details about performance assessment, please see *OrthoHMM: Improved
-Inference of Ortholog Groups using Hidden Markov Models*. Steenwyk et al. bioRxiv.
-doi: |doiLink|_.
+Prediction semantics
+--------------------
 
-.. _doiLink: https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001007
-.. |doiLink| replace:: COMING SOON
+Orthogroups, root hierarchical orthogroups and native pairwise orthologs are
+different outputs. Pre-clustering graph edges are not final ortholog predictions.
+The retained OrthoFinder MCL checkpoint is a diagnostic comparison, not a
+separately executed sequence-only OrthoFinder pipeline. Comparisons must use
+the output and scoring protocol specified for each benchmark.
+
+Reports and reproducibility
+---------------------------
+
+The `eight-method comparison <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/PUBLICATION_COMPARISON_ORTHOMCL_COMPLETE_20260916.md>`_
+contains the consolidated observed scores. The
+`claim-to-evidence checklist <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/PUBLICATION_CLAIMS_20260916.md>`_
+links uncertainty, ablations, simulations, transfer evaluation and the
+biological application. The
+`progress ledger <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/PUBLICATION_PROGRESS.md>`_
+records completed analyses, running jobs and unresolved requirements.
+
+The new publication package remains in preparation; its release and archival
+deposition are not complete. Earlier desirability rankings and the historical
+performance illustration remain in the repository and its history, and are
+not substituted for the current audited endpoints.

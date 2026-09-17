@@ -83,28 +83,29 @@
              
   <section id="about">
 <h1>About<a class="headerlink" href="#about" title="Link to this heading"></a></h1>
-<hr class="docutils" />
 <p><strong>Ortho</strong>logy inference using <strong>H</strong>idden <strong>M</strong>arkov <strong>M</strong>odels (<strong>OrthoHMM</strong>) was developed as
 part of <a class="reference external" href="https://jlsteenwyk.github.io/">Jacob L. Steenwyk</a>’s post-doctoral work.</p>
-<p>Inferring orthology (that is, genes that have shared ancestry) is a major challenge in bioinformatics.
+<p>Inferring orthology (shared ancestry through speciation rather than duplication) is a major challenge in bioinformatics.
 This challenge is exacerbated when sequence divergence is high – for example, among organisms that
 began diverging dozens of millions of years ago – which makes remote homology difficult to detect.</p>
 <p>A popular approach to identify orthology utilizes graph theory. Specifically, an all-to-all comparison
 of sequence similarity is conducted using BLAST or DIAMOND and the resulting similarity scores are used
 to cluster groups of highly similar sequences together. The resulting groups of sequences are putative
 orthologs; thus, these genes are termed orthologous groups of genes (or orthogroups).</p>
-<p>Here, we introduce OrthoHMM, which implements Hidden Markov Models to infer orthology. Hidden Markov Models
-have a distinct advantage over BLAST and DIAMOND because HMMs incoporate position-specific information
-and patterns that enable more sensitivity and specificity for remote homolog detection. Benchmarking
-reveals that OrthoHMM outperforms other software for orthology inference.</p>
+<p>OrthoHMM uses profile Hidden Markov Models for protein similarity search and
+family refinement. Its phylogenetic mode additionally reconciles inferred gene
+trees. Benchmark results depend on the dataset, output semantics and configuration;
+the publication analyses do not establish general superiority over other tools.
+In particular, gains in paralog separation can accompany losses in homolog
+coverage. The repository’s publication results retain these trade-offs, failures
+and uncertainty estimates.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <section id="the-developers">
 <h2>The Developers<a class="headerlink" href="#the-developers" title="Link to this heading"></a></h2>
-<hr class="docutils" />
 <p>OrthoHMM is developed and maintained by <a class="reference external" href="https://jlsteenwyk.github.io/">Jacob L. Steenwyk</a>
-and <a class="reference external" href="www.tjbiii.com">Thomas J. Buida III</a>.</p>
+and <a class="reference external" href="http://tjbiii.com/">Thomas J. Buida III</a>.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -128,8 +129,7 @@ Find out more information at his
 </section>
 <section id="more-team-members">
 <h2>More Team Members<a class="headerlink" href="#more-team-members" title="Link to this heading"></a></h2>
-<hr class="docutils" />
-<p><a class="reference internal" href="../_images/NKing.jpg"><img alt="NKing" src="../_images/NKing.jpg" style="width: 35%;" /></a></p>
+<p><a class="reference internal" href="../_images/Nking.jpg"><img alt="NKing" src="../_images/Nking.jpg" style="width: 35%;" /></a></p>
 <p><a class="reference external" href="https://scholar.google.com/citations?hl=en&amp;user=PDOSGdIAAAAJ"><img alt="GoogleScholarKing" src="../_images/GoogleScholar.png" style="width: 4.5%;" /></a></p>
 <p><a class="reference external" href="https://kinglab.berkeley.edu/">Nicole King</a> is a Howard Hughes Medical Institute Investigator
 and Professor of Molecular and Cell Biology at the University of California, Berkeley.
