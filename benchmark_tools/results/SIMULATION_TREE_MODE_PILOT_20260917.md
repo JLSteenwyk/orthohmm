@@ -32,5 +32,14 @@ Raw outputs: benchmarks/results/simulation_mode_control_baseline_seed1_v1.
 No score against evolutionary truth was calculated. Shared-host wall time is not
 a matched performance result. These comparisons do not establish equivalence
 across the other69datasets or validate use of postprocessed output as a restart
-checkpoint. Complete independent admission remains required before this pilot
-can be used to authorize the broader controlled inference panel.
+checkpoint.
+
+Independent admission completed in admit_simulation_mode_pilot.py: rechecked
+the fixed scheduler job/executor, all native output inventories, original inputs
+and baseline artifacts, reconstructed both commands independently, and recomputed
+native-pair/topology/retained-artifact comparisons. The only permitted byte
+exceptions are one MCL command comment per changed MCL file and the omitted
+species-tree alignment; changed MCL matrix content is rejected.
+Snapshot simulation_mode_pilot_verified_20260917.json SHA256
+4a4630c8c036a4ae85045045ebf848ab9eefa730de9dcc8295570a50deeddd0c.
+This authorizes expanding the controls, not assuming the remaining cells pass.

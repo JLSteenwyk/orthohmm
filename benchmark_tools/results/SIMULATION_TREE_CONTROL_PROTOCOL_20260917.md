@@ -92,6 +92,20 @@ No supplied-tree inference or scoring has been launched. CLI/output semantics,
 mode-equivalence checks and native execution still precede scientific admission.
 # Native Input Compatibility Audit (2026-09-17)
 
+The independently admitted unchanged-tree pilot now supports expansion to the
+full mode-control panel. Frozen inventory
+simulation_mode_panel_prepared_20260917.json SHA256
+03f0d115d0f2a1f5354ca6a8a369e419dbd9e10945e450dfd2534d61212bb747
+contains all70datasets/140method slots:130new method runs,2reused pilot runs,
+and8unavailable inferred-baseline controls (3OrthoHMM,5OrthoFinder). Availability
+uses original completion status only, not scores. The other method still runs
+when one baseline is unavailable. These8failures remain in the420oracle/topology
+run inventory; missing mode controls do not authorize a tree-only causal claim.
+The array executes at most2four-CPU16GiB tasks at once on the shared host. These
+are scientific controls, not matched scaling measurements. Every task keeps
+unavailable-method records and records new failures; the whole panel needs
+independent native validation before the main tree-effect contrasts are scored.
+
 Before execution, direct checks with the installed native parsers found that
 OrthoFinder 3.1.5 reads the original leading `[&R]` serialization as a `NoName`
 tree, rejecting the expected taxa. Frozen OrthoHMM accepts all 210 originals.

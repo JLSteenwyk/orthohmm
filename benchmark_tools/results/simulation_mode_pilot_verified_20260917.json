@@ -1,0 +1,88 @@
+{
+  "accounting": "JobIDRaw|State|ExitCode|Elapsed\n21332|COMPLETED|0:0|00:00:35\n21332.batch|COMPLETED|0:0|00:00:35\n",
+  "accuracy_evaluated": false,
+  "executor_sources": [
+    {
+      "bytes": 11211,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_simulation_mode_control_v1/benchmark_tools/run_simulation_tree_mode_control.py",
+      "sha256": "4c7f4f2c5b74ae41c3aa1048b92845b61fc3931d25c878f6d65150104e39f64d"
+    },
+    {
+      "bytes": 3424,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_simulation_mode_control_v1/benchmark_tools/simulation_supplied_commands.py",
+      "sha256": "f45f2c2c947f15336bd01c55f068497f0209149cc7ff881576bf000f20a084e6"
+    },
+    {
+      "bytes": 12030,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_simulation_mode_control_v1/benchmark_tools/run_simulation_methods.py",
+      "sha256": "cccf579c221c51e8d03d512264efc3d0a61f4c0a598863d2423bdbd90f7921be"
+    },
+    {
+      "bytes": 16818,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_simulation_mode_control_v1/benchmark_tools/assemble_simulation_results.py",
+      "sha256": "432016402451c73b6c29a06c75626bc82c1e7e2cefc4973dfbf80b5d06bdf9d2"
+    },
+    {
+      "bytes": 6097,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_simulation_mode_control_v1/benchmark_tools/validate_simulation_outputs.py",
+      "sha256": "c494c69202eca087699609d128f0c41feb94d580e0e64519f8f3afc824ecb434"
+    },
+    {
+      "bytes": 4524,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_simulation_mode_control_v1/benchmark_tools/simulation_method_outputs.py",
+      "sha256": "1f776b65a49c699d7e006bd7224a88361c6b7d926fdbadb3a36150e7c973b2b8"
+    }
+  ],
+  "methods": {
+    "orthofinder_full": {
+      "byte_comparison": {
+        "after_files": 201,
+        "before_files": 202,
+        "changed": [
+          "clusters_OrthoFinder_I1.2.txt",
+          "clusters_OrthoFinder_I1.2.txt_id_pairs.txt"
+        ],
+        "extra": [],
+        "identical": false,
+        "missing": [
+          "Alignments_ids/SpeciesTreeAlignment.fa"
+        ]
+      },
+      "pairs": 2884,
+      "retained_artifacts_equivalent": true,
+      "rooted_tree_identical": true
+    },
+    "orthohmm_satellite_v2": {
+      "byte_comparison": {
+        "after_files": 27,
+        "before_files": 27,
+        "changed": [],
+        "extra": [],
+        "identical": true,
+        "missing": []
+      },
+      "pairs": 2881,
+      "retained_artifacts_equivalent": true,
+      "rooted_tree_identical": true
+    }
+  },
+  "pilot_report": {
+    "bytes": 200208,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/simulation_mode_control_baseline_seed1_20260917.json",
+    "sha256": "446a3c19cebf87fe562cc9e88cf183986e4e644b71116eaa5ba2839c9083f561"
+  },
+  "publication_ready": false,
+  "scheduler": {
+    "Elapsed": "00:00:35",
+    "ExitCode": "0:0",
+    "JobIDRaw": "21332",
+    "State": "COMPLETED"
+  },
+  "scope": "Only baseline_20261101 and the retained native artifacts; not all-dataset equivalence",
+  "source": {
+    "bytes": 9358,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/admit_simulation_mode_pilot.py",
+    "sha256": "f5f7fe6d08d230035b484877ac7ee687ebc10bc7d5d15a922eaeeb4d78c4c27a"
+  },
+  "status": "pilot_equivalence_verified"
+}

@@ -67,9 +67,9 @@ def compare_pairs(before, after):
             "removed": [list(p) for p in sorted(a - b)], "added": [list(p) for p in sorted(b - a)]}
 
 
-def baseline_records(dataset, evidence, manifest, verified):
+def baseline_records(dataset, evidence, manifest, verified, methods=METHODS):
     baseline = {}
-    for method in METHODS:
+    for method in methods:
         rows = [r for r in evidence["records"] if r["condition"] == dataset["condition"]
                 and r["seed"] == dataset["seed"] and r["method"] == method]
         if len(rows) != 1 or rows[0]["status"] != "complete":
@@ -93,14 +93,15 @@ def baseline_records(dataset, evidence, manifest, verified):
 def parser_checks(manifest, baseline, species, env):
     python = manifest["tool_entrypoints"]["orthohmm_python"]["absolute_path"]
     of_python = str(Path(manifest["tool_entrypoints"]["orthofinder"]["absolute_path"]).parent / "python")
-    commands = [
-        [python, "-c", "import json,sys; from orthohmm.phylogeny import parse_species_tree; "
+    commands = []
+    if "orthohmm_satellite_v2" in baseline:
+        commands.append([python, "-c", "import json,sys; from orthohmm.phylogeny import parse_species_tree; "
          "parse_species_tree(sys.argv[1],json.loads(sys.argv[2])); print('accepted')",
-         baseline["orthohmm_satellite_v2"]["tree"]["path"], json.dumps([s + ".fasta" for s in species])],
-        [of_python, "-c", "import json,sys; from orthofinder.run.species_info import CheckUserSpeciesTree; "
+         baseline["orthohmm_satellite_v2"]["tree"]["path"], json.dumps([s + ".fasta" for s in species])])
+    if "orthofinder_full" in baseline:
+        commands.append([of_python, "-c", "import json,sys; from orthofinder.run.species_info import CheckUserSpeciesTree; "
          "CheckUserSpeciesTree(sys.argv[1],json.loads(sys.argv[2])); print('accepted')",
-         baseline["orthofinder_full"]["tree"]["path"], json.dumps(species)],
-    ]
+         baseline["orthofinder_full"]["tree"]["path"], json.dumps(species)])
     evidence = []
     for argv in commands:
         result = subprocess.run(argv, cwd=manifest["core_root"], env=env, text=True, capture_output=True, check=True)
@@ -111,11 +112,13 @@ def parser_checks(manifest, baseline, species, env):
     return evidence
 
 
-def run(root, label, output):
+def run(root, label, output, methods=METHODS):
     if Path.cwd().resolve() != root:
         raise ValueError("Verify environment from original repository directory")
     if output.exists():
         raise FileExistsError(output)
+    if not methods or tuple(methods) != tuple(m for m in METHODS if m in methods):
+        raise ValueError("Require a unique nonempty canonical subset of methods")
     results = root / "benchmark_tools/results"
     manifest_path = results / "publication_variable_native_methods_20260916.json"
     evidence_path = results / "simulation_variable_native_results_20260916.json"
@@ -132,11 +135,11 @@ def run(root, label, output):
                              generation_record["sha256"])
     if verified["status"] != "ready":
         raise ValueError("Dataset is not applicable")
-    baseline = baseline_records(dataset, evidence, manifest, verified)
+    baseline = baseline_records(dataset, evidence, manifest, verified, methods)
     owners, species = input_universe(verified["inputs"], json.loads(Path(dataset["truth"]).read_text()))
     configured = deepcopy(dataset)
     configured["methods"] = {m: fresh_supplied_method(m, dataset["methods"][m], baseline[m]["tree"]["path"],
-                                                     output / m) for m in METHODS}
+                                                     output / m) for m in methods}
     env, resolved = execution_environment(manifest)
     parser_evidence = parser_checks(manifest, baseline, species, env)
     sources = [record(Path(__file__).with_name(name)) for name in
@@ -153,9 +156,9 @@ def run(root, label, output):
     (output / "preflight.json").write_text(json.dumps(provenance, indent=2, sort_keys=True) + "\n")
     report = {"status": "running", "provenance": provenance, "accuracy_evaluated": False, "methods": {}}
     try:
-        execution = execute(configured, list(METHODS), env, output / "execution", verified, provenance, manifest)
+        execution = execute(configured, list(methods), env, output / "execution", verified, provenance, manifest)
         report["execution"] = record(output / "execution/status.json")
-        for method in METHODS:
+        for method in methods:
             admission = admit_method(method, configured, execution, verified, manifest)
             row = {"admission": admission}
             report["methods"][method] = row
@@ -173,7 +176,7 @@ def run(root, label, output):
             row["retained_artifacts"] = artifact_inventory(method, after)
             row["artifact_comparison"] = compare_inventory(baseline[method]["retained_artifacts"], row["retained_artifacts"])
         verify_environment(manifest)
-        if baseline_records(dataset, evidence, manifest, verified) != baseline:
+        if baseline_records(dataset, evidence, manifest, verified, methods) != baseline:
             raise ValueError("Original baseline changed during execution")
         for source in sources:
             check(source)
@@ -195,5 +198,6 @@ if __name__ == "__main__":
     parser.add_argument("--root", type=Path, required=True)
     parser.add_argument("--dataset", required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--method", action="append", choices=METHODS)
     args = parser.parse_args()
-    run(args.root.resolve(), args.dataset, args.output.resolve())
+    run(args.root.resolve(), args.dataset, args.output.resolve(), args.method or METHODS)

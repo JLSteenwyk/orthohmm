@@ -1,0 +1,908 @@
+{
+  "accuracy_evaluated": false,
+  "baseline_results": {
+    "bytes": 2217675,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/simulation_variable_native_results_20260916.json",
+    "sha256": "cc99fc31c3433809098212d3c8dc12f4ad829b4cfeb66dabcb13aede4e95258f"
+  },
+  "method_manifest": {
+    "bytes": 488540,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_variable_native_methods_20260916.json",
+    "sha256": "bf677728cf9312edd9755d9ac1ceefbce3abb8c3848d43413631dc00ca00eb2f"
+  },
+  "new_method_runs": 130,
+  "pilot_admission": {
+    "bytes": 3605,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_mode_pilot_admission_v1/results.json",
+    "sha256": "4a4630c8c036a4ae85045045ebf848ab9eefa730de9dcc8295570a50deeddd0c"
+  },
+  "reused_method_runs": 2,
+  "rows": [
+    {
+      "condition": "baseline",
+      "index": 0,
+      "label": "baseline_20261101",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": true,
+      "seed": 20261101,
+      "unavailable": {}
+    },
+    {
+      "condition": "divergent",
+      "index": 1,
+      "label": "divergent_20261101",
+      "methods": [
+        "orthohmm_satellite_v2"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261101,
+      "unavailable": {
+        "orthofinder_full": {
+          "failure_stage": "native_output",
+          "reason": "Nonfinite OrthoFinder graph weight",
+          "status": "failed"
+        }
+      }
+    },
+    {
+      "condition": "turnover",
+      "index": 2,
+      "label": "turnover_20261101",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261101,
+      "unavailable": {}
+    },
+    {
+      "condition": "divergent_turnover",
+      "index": 3,
+      "label": "divergent_turnover_20261101",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261101,
+      "unavailable": {}
+    },
+    {
+      "condition": "missing20",
+      "index": 4,
+      "label": "missing20_20261101",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261101,
+      "unavailable": {}
+    },
+    {
+      "condition": "uneven_taxa",
+      "index": 5,
+      "label": "uneven_taxa_20261101",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261101,
+      "unavailable": {}
+    },
+    {
+      "condition": "taxon_count_control",
+      "index": 6,
+      "label": "taxon_count_control_20261101",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261101,
+      "unavailable": {}
+    },
+    {
+      "condition": "baseline",
+      "index": 7,
+      "label": "baseline_20261102",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261102,
+      "unavailable": {}
+    },
+    {
+      "condition": "divergent",
+      "index": 8,
+      "label": "divergent_20261102",
+      "methods": [
+        "orthohmm_satellite_v2"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261102,
+      "unavailable": {
+        "orthofinder_full": {
+          "failure_stage": "native_output",
+          "reason": "Nonfinite OrthoFinder graph weight",
+          "status": "failed"
+        }
+      }
+    },
+    {
+      "condition": "turnover",
+      "index": 9,
+      "label": "turnover_20261102",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261102,
+      "unavailable": {}
+    },
+    {
+      "condition": "divergent_turnover",
+      "index": 10,
+      "label": "divergent_turnover_20261102",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261102,
+      "unavailable": {}
+    },
+    {
+      "condition": "missing20",
+      "index": 11,
+      "label": "missing20_20261102",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261102,
+      "unavailable": {}
+    },
+    {
+      "condition": "uneven_taxa",
+      "index": 12,
+      "label": "uneven_taxa_20261102",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261102,
+      "unavailable": {}
+    },
+    {
+      "condition": "taxon_count_control",
+      "index": 13,
+      "label": "taxon_count_control_20261102",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261102,
+      "unavailable": {}
+    },
+    {
+      "condition": "baseline",
+      "index": 14,
+      "label": "baseline_20261103",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261103,
+      "unavailable": {}
+    },
+    {
+      "condition": "divergent",
+      "index": 15,
+      "label": "divergent_20261103",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261103,
+      "unavailable": {}
+    },
+    {
+      "condition": "turnover",
+      "index": 16,
+      "label": "turnover_20261103",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261103,
+      "unavailable": {}
+    },
+    {
+      "condition": "divergent_turnover",
+      "index": 17,
+      "label": "divergent_turnover_20261103",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261103,
+      "unavailable": {}
+    },
+    {
+      "condition": "missing20",
+      "index": 18,
+      "label": "missing20_20261103",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261103,
+      "unavailable": {}
+    },
+    {
+      "condition": "uneven_taxa",
+      "index": 19,
+      "label": "uneven_taxa_20261103",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261103,
+      "unavailable": {}
+    },
+    {
+      "condition": "taxon_count_control",
+      "index": 20,
+      "label": "taxon_count_control_20261103",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261103,
+      "unavailable": {}
+    },
+    {
+      "condition": "baseline",
+      "index": 21,
+      "label": "baseline_20261104",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261104,
+      "unavailable": {}
+    },
+    {
+      "condition": "divergent",
+      "index": 22,
+      "label": "divergent_20261104",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261104,
+      "unavailable": {}
+    },
+    {
+      "condition": "turnover",
+      "index": 23,
+      "label": "turnover_20261104",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261104,
+      "unavailable": {}
+    },
+    {
+      "condition": "divergent_turnover",
+      "index": 24,
+      "label": "divergent_turnover_20261104",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261104,
+      "unavailable": {}
+    },
+    {
+      "condition": "missing20",
+      "index": 25,
+      "label": "missing20_20261104",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261104,
+      "unavailable": {}
+    },
+    {
+      "condition": "uneven_taxa",
+      "index": 26,
+      "label": "uneven_taxa_20261104",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261104,
+      "unavailable": {}
+    },
+    {
+      "condition": "taxon_count_control",
+      "index": 27,
+      "label": "taxon_count_control_20261104",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261104,
+      "unavailable": {}
+    },
+    {
+      "condition": "baseline",
+      "index": 28,
+      "label": "baseline_20261105",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261105,
+      "unavailable": {}
+    },
+    {
+      "condition": "divergent",
+      "index": 29,
+      "label": "divergent_20261105",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261105,
+      "unavailable": {}
+    },
+    {
+      "condition": "turnover",
+      "index": 30,
+      "label": "turnover_20261105",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261105,
+      "unavailable": {}
+    },
+    {
+      "condition": "divergent_turnover",
+      "index": 31,
+      "label": "divergent_turnover_20261105",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261105,
+      "unavailable": {}
+    },
+    {
+      "condition": "missing20",
+      "index": 32,
+      "label": "missing20_20261105",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261105,
+      "unavailable": {}
+    },
+    {
+      "condition": "uneven_taxa",
+      "index": 33,
+      "label": "uneven_taxa_20261105",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261105,
+      "unavailable": {}
+    },
+    {
+      "condition": "taxon_count_control",
+      "index": 34,
+      "label": "taxon_count_control_20261105",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261105,
+      "unavailable": {}
+    },
+    {
+      "condition": "baseline",
+      "index": 35,
+      "label": "baseline_20261106",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261106,
+      "unavailable": {}
+    },
+    {
+      "condition": "divergent",
+      "index": 36,
+      "label": "divergent_20261106",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261106,
+      "unavailable": {}
+    },
+    {
+      "condition": "turnover",
+      "index": 37,
+      "label": "turnover_20261106",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261106,
+      "unavailable": {}
+    },
+    {
+      "condition": "divergent_turnover",
+      "index": 38,
+      "label": "divergent_turnover_20261106",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261106,
+      "unavailable": {}
+    },
+    {
+      "condition": "missing20",
+      "index": 39,
+      "label": "missing20_20261106",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261106,
+      "unavailable": {}
+    },
+    {
+      "condition": "uneven_taxa",
+      "index": 40,
+      "label": "uneven_taxa_20261106",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261106,
+      "unavailable": {}
+    },
+    {
+      "condition": "taxon_count_control",
+      "index": 41,
+      "label": "taxon_count_control_20261106",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261106,
+      "unavailable": {}
+    },
+    {
+      "condition": "baseline",
+      "index": 42,
+      "label": "baseline_20261107",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261107,
+      "unavailable": {}
+    },
+    {
+      "condition": "divergent",
+      "index": 43,
+      "label": "divergent_20261107",
+      "methods": [
+        "orthohmm_satellite_v2"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261107,
+      "unavailable": {
+        "orthofinder_full": {
+          "failure_stage": "native_output",
+          "reason": "Nonfinite OrthoFinder graph weight",
+          "status": "failed"
+        }
+      }
+    },
+    {
+      "condition": "turnover",
+      "index": 44,
+      "label": "turnover_20261107",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261107,
+      "unavailable": {}
+    },
+    {
+      "condition": "divergent_turnover",
+      "index": 45,
+      "label": "divergent_turnover_20261107",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261107,
+      "unavailable": {}
+    },
+    {
+      "condition": "missing20",
+      "index": 46,
+      "label": "missing20_20261107",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261107,
+      "unavailable": {}
+    },
+    {
+      "condition": "uneven_taxa",
+      "index": 47,
+      "label": "uneven_taxa_20261107",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261107,
+      "unavailable": {}
+    },
+    {
+      "condition": "taxon_count_control",
+      "index": 48,
+      "label": "taxon_count_control_20261107",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261107,
+      "unavailable": {}
+    },
+    {
+      "condition": "baseline",
+      "index": 49,
+      "label": "baseline_20261108",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261108,
+      "unavailable": {}
+    },
+    {
+      "condition": "divergent",
+      "index": 50,
+      "label": "divergent_20261108",
+      "methods": [
+        "orthohmm_satellite_v2"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261108,
+      "unavailable": {
+        "orthofinder_full": {
+          "failure_stage": "native_output",
+          "reason": "Nonfinite OrthoFinder graph weight",
+          "status": "failed"
+        }
+      }
+    },
+    {
+      "condition": "turnover",
+      "index": 51,
+      "label": "turnover_20261108",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261108,
+      "unavailable": {}
+    },
+    {
+      "condition": "divergent_turnover",
+      "index": 52,
+      "label": "divergent_turnover_20261108",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261108,
+      "unavailable": {}
+    },
+    {
+      "condition": "missing20",
+      "index": 53,
+      "label": "missing20_20261108",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261108,
+      "unavailable": {}
+    },
+    {
+      "condition": "uneven_taxa",
+      "index": 54,
+      "label": "uneven_taxa_20261108",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261108,
+      "unavailable": {}
+    },
+    {
+      "condition": "taxon_count_control",
+      "index": 55,
+      "label": "taxon_count_control_20261108",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261108,
+      "unavailable": {}
+    },
+    {
+      "condition": "baseline",
+      "index": 56,
+      "label": "baseline_20261109",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261109,
+      "unavailable": {}
+    },
+    {
+      "condition": "divergent",
+      "index": 57,
+      "label": "divergent_20261109",
+      "methods": [],
+      "reuse_pilot": false,
+      "seed": 20261109,
+      "unavailable": {
+        "orthofinder_full": {
+          "failure_stage": "native_output",
+          "reason": "Nonfinite OrthoFinder graph weight",
+          "status": "failed"
+        },
+        "orthohmm_satellite_v2": {
+          "failure_stage": "execution",
+          "reason": "Method process exit code 1",
+          "status": "failed"
+        }
+      }
+    },
+    {
+      "condition": "turnover",
+      "index": 58,
+      "label": "turnover_20261109",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261109,
+      "unavailable": {}
+    },
+    {
+      "condition": "divergent_turnover",
+      "index": 59,
+      "label": "divergent_turnover_20261109",
+      "methods": [
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261109,
+      "unavailable": {
+        "orthohmm_satellite_v2": {
+          "failure_stage": "execution",
+          "reason": "Method process exit code 1",
+          "status": "failed"
+        }
+      }
+    },
+    {
+      "condition": "missing20",
+      "index": 60,
+      "label": "missing20_20261109",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261109,
+      "unavailable": {}
+    },
+    {
+      "condition": "uneven_taxa",
+      "index": 61,
+      "label": "uneven_taxa_20261109",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261109,
+      "unavailable": {}
+    },
+    {
+      "condition": "taxon_count_control",
+      "index": 62,
+      "label": "taxon_count_control_20261109",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261109,
+      "unavailable": {}
+    },
+    {
+      "condition": "baseline",
+      "index": 63,
+      "label": "baseline_20261110",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261110,
+      "unavailable": {}
+    },
+    {
+      "condition": "divergent",
+      "index": 64,
+      "label": "divergent_20261110",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261110,
+      "unavailable": {}
+    },
+    {
+      "condition": "turnover",
+      "index": 65,
+      "label": "turnover_20261110",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261110,
+      "unavailable": {}
+    },
+    {
+      "condition": "divergent_turnover",
+      "index": 66,
+      "label": "divergent_turnover_20261110",
+      "methods": [
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261110,
+      "unavailable": {
+        "orthohmm_satellite_v2": {
+          "failure_stage": "execution",
+          "reason": "Method process exit code 1",
+          "status": "failed"
+        }
+      }
+    },
+    {
+      "condition": "missing20",
+      "index": 67,
+      "label": "missing20_20261110",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261110,
+      "unavailable": {}
+    },
+    {
+      "condition": "uneven_taxa",
+      "index": 68,
+      "label": "uneven_taxa_20261110",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261110,
+      "unavailable": {}
+    },
+    {
+      "condition": "taxon_count_control",
+      "index": 69,
+      "label": "taxon_count_control_20261110",
+      "methods": [
+        "orthohmm_satellite_v2",
+        "orthofinder_full"
+      ],
+      "reuse_pilot": false,
+      "seed": 20261110,
+      "unavailable": {}
+    }
+  ],
+  "scope": "All70datasets; absent inferred baselines are unavailable controls, not removed from the future oracle panel",
+  "source": {
+    "bytes": 4342,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_simulation_mode_panel.py",
+    "sha256": "1329bcfc4ec529df0c400640d712105b25b7ba58ea3cc9852cb9ba7551e7c38f"
+  },
+  "status": "mode_panel_frozen_not_executed",
+  "unavailable_method_controls": 8
+}

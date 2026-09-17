@@ -4194,3 +4194,31 @@ observed MCL byte differences do not change this pilot partition. Added bounded
 pilot summary with snapshotSHA446a3c19cebf87fe562cc9e88cf183986e4e644b71116eaa5ba2839c9083f561.
 Complete independent pilot admission and the remaining dataset controls are
 still outstanding; no general equivalence or accuracy advantage claimed.
+
+### Pilot independently admitted; all-dataset mode controls prepared (2026-09-17)
+
+Previous continuation made progress via0e797ba/c93eb2c/3c853f4: pilotexecution,
+QfOdiagnosis/correction and live retry. Re-read fullobjective and confirmed
+21333RUNNING00:03:11; no duplicate replay. Added fixed pilotadmission script
+rechecking21332scheduler,0e797baexecutor/sources, input/output inventories,
+native baselineadmissions, independently reconstructed commands and all pairs,
+rootedtopologies and retainedartifacts. Both methods passed. Exact exceptions
+allow the absent OFspecies-tree alignment and one command-comment line per MCL
+file, not any matrix change. Nine focused tests cover these gates.
+
+Independent snapshot simulation_mode_pilot_verified_20260917.json SHA256
+4a4630c8c036a4ae85045045ebf848ab9eefa730de9dcc8295570a50deeddd0c.
+No accuracy scoring; one-cell equivalence does not imply general equivalence.
+
+Prepared simulation_mode_panel_prepared_20260917.json SHA256
+03f0d115d0f2a1f5354ca6a8a369e419dbd9e10945e450dfd2534d61212bb747:
+all70datasets/140methodslots,130newruns,2pilot reused,8unavailable original
+baselines (3OH/5OF). The runner now accepts a canonical subset of methods so one
+original failure cannot suppress the other tool. Panel selection uses pinned
+completion states only and preserves every failure reason; all8remain in future
+420oracle/NNI run inventory. Added per-task evidence/failure retention and
+4CPU16GiB array with max2concurrenttasks. Thirteen panel/subset tests plus9pilot
+and9existingrunner tests pass(31total). Freeze/submit after full tests/commit;
+no all-dataset mode equivalence or completed oracle experiment claimed.
+
+Fullunit suite1,519passed35.95s before executor freeze.
