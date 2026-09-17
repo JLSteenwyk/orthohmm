@@ -1,5 +1,52 @@
 # Publication Progress
 
+## Biological Rescore, Figure and Prospective Cases (2026-09-17)
+
+Previous continuation made progress: assembled frozen application scores and
+pushed3993931. Re-read the full objective. Added `audit_wgd_results.py` with
+separate scoring arithmetic: reload checksum-pinned native groups, reconstruct
+every anchor assignment, support count, coverage fraction, foreign/unmapped
+member set and pillar fragmentation count. All1,200 method/pair rows, summaries,
+experimental strata and six examples match. Direct resampling of the231distinct
+pillars reproduces all12 point differences, nominal/adjusted intervals and
+wins/losses/ties. Native-format readers and identity helpers are shared; this
+is not independent parser validation or proof of biological reference truth.
+Audit: `biological_wgd_rescore_audit_20260917.json`, SHA256
+`1b8159c30f8ef0073223900164bdc847d089bcf578dd649dacf652336701175e`.
+
+Generated PDF/SVG/PNG figure and all-six-case supplement in
+`figures_wgd_application_20260917`; visually inspected the PNG for legibility,
+overlap and correct framing. Tests verify plotted values/intervals and retention
+of the excluded and unsupported examples. Manifest binds audit, source report,
+plotter and all outputs. Figure consistently uses231shared-pillar pairs; the
+separate descriptive239input-eligible population remains in the full table.
+
+Case review: YDR122W/YLR096W improves from merged to supported separation;
+YER059W/YIL050W is successful for all four methods. Two phylogenetic OrthoHMM
+cases retain5/6homologs across anchor groups, with the pillar intersecting three
+groups. YCL048W/YDR522C retains3/6, all in one anchor group. OrthoFinder/Sonic
+retain6/6with support for both anchors in these five evaluable cases. The sixth,
+YLR284C/YOR180C, stays reference-excluded. No replacements or post-hoc tests.
+These are final-membership observations, not a demonstrated causal search/tree
+mechanism. Configurations differ beyond reconciliation; no pure phylogeny claim.
+
+Full unit suite:2,115passed49.08s. Output/source/plotter identities rechecked.
+DGX21656_0..3COMPLETED0:0;21656_4verifiedRUNNING2:42,22queued. Scheduler elapsed
+is not admitted inference timing; resource/output admission remains necessary.
+Next: stage-level case tracing, remaining QfO/error analyses, timing admission,
+portable reproduction, security/licenses/release/archive and completion audit.
+The broad publication goal remains active, not publication-ready.
+
+Reproduce with fresh output paths (commands refuse overwrite):
+
+```sh
+python benchmark_tools/audit_wgd_results.py --repo . --report benchmark_tools/results/biological_wgd_results_20260917.json --output /tmp/wgd_rescore_audit.json
+python benchmark_tools/plot_wgd_application.py --audit benchmark_tools/results/biological_wgd_rescore_audit_20260917.json --sha256 1b8159c30f8ef0073223900164bdc847d089bcf578dd649dacf652336701175e --output /tmp/wgd_application_figure
+```
+
+Native artifacts must remain available at manifest paths. Portable relocation
+and archival packaging remain outstanding, not implied by these local commands.
+
 ## Biological Application Scores Assembled (2026-09-17)
 
 Previous user-facing turn verified live DGX job21656_3 (a verified wait).

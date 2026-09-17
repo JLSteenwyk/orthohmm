@@ -610,7 +610,7 @@ establish an OrthoHMM advantage or profile-expansion benefit. Tree perturbations
 show bounded sensitivity, not arbitrary-error robustness. QfO and independently
 annotated error strata, mechanistic tracing, more realistic evolutionary
 conditions and the QfO parameter panel, matched resource scaling,
-and final biological application case inspection and figures remain required.
+and deeper biological application mechanism tracing remain required.
 
 ### Prespecified Whole-Genome-Duplicate Application
 
@@ -645,9 +645,36 @@ These endpoints measure homolog-supported paralog separation, not correct
 cross-species assignment to ancestral duplicate copies. All exclusions,
 experimental strata, six prospectively selected examples and the diagnostic
 OrthoFinder MCL checkpoint remain in the [machine-readable report](biological_wgd_results_20260917.json)
-and [complete pair table](biological_wgd_pairs_20260917.tsv). Individual example
-mechanisms and publication figures remain to be inspected; no examples have
-been replaced based on their outcomes.
+and [complete pair table](biological_wgd_pairs_20260917.tsv). The
+[application figure](figures_wgd_application_20260917/wgd_application.pdf)
+uses the same 231-pair population for all panels. Native-membership recalculation
+with separate scoring arithmetic reproduced all 1,200 method/pair records,
+class summaries and six selected examples. A direct pair-resampling calculation
+reproduced all 12 intervals; this simplification is valid here because the
+231 pairs occupy 231 distinct pillars. Native-format readers are shared, so
+this does not constitute an independently implemented parser validation.
+
+The [six prespecified cases](figures_wgd_application_20260917/PRESPECIFIED_EXAMPLES.md)
+include success, partial recovery, a support failure and a reference exclusion.
+YDR122W/YLR096W was merged by high sensitivity but separated with all six
+non-S. cerevisiae homologs retained by phylogenetic OrthoHMM, full OrthoFinder
+and SonicParanoid. For YER059W/YIL050W, all four methods separated the anchors
+and retained all six homologs. In contrast, phylogenetic OrthoHMM retained
+five of six homologs for each of YER132C/YGL197W and YBR147W/YOL092W, whereas
+OrthoFinder and SonicParanoid retained all six. In both cases the reference
+pillar intersected three OrthoHMM root HOGs rather than the two anchor groups.
+For YCL048W/YDR522C, phylogenetic OrthoHMM separated the anchors but retained
+only three of six homologs, all in one anchor group; the other anchor group
+had no reference-homolog support. Full OrthoFinder and SonicParanoid retained
+all six with support for both anchors. The sixth example, YLR284C/YOR180C,
+remains reference-excluded because its anchors map to different pillars.
+None was replaced after inspecting outcomes.
+
+These observations locate final membership differences, not causal inference
+errors. The two OrthoHMM configurations differ in more than reconciliation,
+so their contrast is not an isolated phylogeny effect. Native search and tree
+decision traces remain necessary before attributing these losses to a specific
+algorithmic mechanism or asserting that every extra group is erroneous.
 
 QfO historical replay equivalence remains unresolved. A bounded capture
 verified identical initial RBNH graph arrays and gene order but a different
