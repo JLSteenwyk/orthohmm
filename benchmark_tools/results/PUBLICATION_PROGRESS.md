@@ -1,5 +1,42 @@
 # Publication Progress
 
+## Biological Runtime Resolution Captured (2026-09-17)
+
+Previous turn progressed the command plan, pushedbb8c48c. Re-read objective.
+Read installed SonicParanoid startup and worker resolvers rather than assuming
+outerPATH determines its dependencies. Added read-only inspector; no installation
+helpers, downloads or inference called. Native detection reportsPython mode
+despite the interpreter residing in anaconda3, because its prefix detector
+looks for an interior directory segment. Actual resolver selects bundled
+DIAMOND2.1.9, MMseqs13(45111b...), BLAST2.15.0+ and MCL14-137.
+Default mode isDIAMOND very-sensitive; historical QfO log also records later
+MMseqs profile searches. Do not describe SonicParanoid as purely DIAMOND-only.
+Package-tree identity before/after the probe matches.
+
+Explicit-environment OrthoFinder probe resolves DIAMOND2.0.13, FastTree2.1.11,
+FAMSA2.2.3-1669fc1, FastME2.1.4, MCL14-137 and MAFFT7.525. Probe emitted existing
+Python invalid-escape SyntaxWarnings; no source was edited. These are current
+resolutions, not proof of historical child exec paths. Both runtime reports
+are recorded under `biological_wgd_*_runtime_20260917.json`.
+
+Local checksum inventory completed:132,274entries covering conda bin/lib,
+OrthoFinder environment, selected external prefixes and frozen OrthoHMM source.
+Raw `benchmarks/work/biological_wgd_runtime_trees_v1.json`, SHA256
+`70eda6198d28d6c36c697d2862911a0853d9482c9e15f504f17574ca73f99071`.
+Not committed because of size; retain for archival workflow. Five external
+symlinks: mysql.server, conda terminfo, three OrthoFinder interpreter links.
+File-link target bytes are hashed; external terminfo directory is not traversed.
+System interpreter stdlib, system shared libraries and external-directory
+coverage still require supplemental inventory before execution authorization.
+
+Captured actual frozen OrthoHMM enumeration twice:Scerevisiae,Suvarum,
+Skudriavzevii,Smikatae. It differs from sorted metadata order; preserve it.
+`biological_wgd_input_order_20260917.json` pins inputs/runtime/source and must
+be rechecked at execution.21focused runtime/order/command tests pass.
+No biological inference launched yet; launcher/environment and admission still
+need wiring. DGX21656_2verifiedRUNNING9:08; first two tasksCOMPLETE0:0,
+24queued. Timing output admission and broader publication work remain open.
+
 ## Biological Native Commands Prepared (2026-09-17)
 
 Previous continuation froze chronology/contrasts and pushedba02435. Re-read

@@ -1,0 +1,825 @@
+{
+  "declared_dependency_versions": {
+    "blastp": [
+      [
+        "2.15.0+"
+      ],
+      "https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html"
+    ],
+    "diamond": [
+      [
+        "2.1.9"
+      ],
+      "https://github.com/bbuchfink/diamond"
+    ],
+    "makeblastdb": [
+      [
+        "2.15.0+"
+      ],
+      "https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html"
+    ],
+    "mcl": [
+      [
+        ""
+      ],
+      "https://micans.org/mcl/index.html"
+    ],
+    "mmseqs": [
+      [
+        "13.45111",
+        "45111b641859ed0ddd875b94d6fd1aef1a675b7e"
+      ],
+      "https://github.com/soedinglab/MMseqs2"
+    ]
+  },
+  "default_mode": [
+    "default",
+    "diamond",
+    "very-sensitive",
+    0.0
+  ],
+  "execution_authorized": false,
+  "limitations": [
+    "Current resolver inspection, not historical child execution proof.",
+    "No installer, download or inference entrypoint is called.",
+    "Interpreter/transitive/system libraries require a separate inventory.",
+    "Default DIAMOND mode does not imply absence of later MMseqs profile searches."
+  ],
+  "package_inventory": {
+    "exclusions": [
+      "__pycache__",
+      ".git",
+      "*.pyc",
+      "*.pyo"
+    ],
+    "external_symlinks": [],
+    "limitations": [
+      "Explicit tree identity, not a hermetic operating-system or loader snapshot.",
+      "Directory symlinks are recorded but not traversed; external targets require separate review.",
+      "Python bytecode caches are excluded; execution must isolate cache lookup to a fresh prefix and disable writes.",
+      "Before/after equality cannot rule out a temporary change during execution."
+    ],
+    "records": [
+      {
+        "kind": "directory",
+        "mode": 509,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid"
+      },
+      {
+        "bytes": 1,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/__init__.py",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      {
+        "bytes": 34920,
+        "kind": "file",
+        "mode": 509,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/archiver.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "41d27d891f588904546e3fea54e8a6ba0b003c666f6543dc379d7986e12d9168"
+      },
+      {
+        "bytes": 3484,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/archiver.pyx",
+        "sha256": "aa13fa1cd390a93cc534bb3d99a20611c6bda0d2c79b30878066e2cf306cd3e3"
+      },
+      {
+        "bytes": 15573,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/archortho.py",
+        "sha256": "6945c2fde8e508a78943c62ffc0a93fa9caaca933e16a1cf33757115118d1628"
+      },
+      {
+        "kind": "directory",
+        "mode": 509,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin"
+      },
+      {
+        "bytes": 268,
+        "kind": "file",
+        "mode": 509,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/README.md",
+        "sha256": "faa9b12438a63bffcd4ffe9c58d1c7d90ce1d8d5438e92db1d7fe8fc5be2d66e"
+      },
+      {
+        "bytes": 32739864,
+        "kind": "file",
+        "mode": 489,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/blastp",
+        "sha256": "55bd09868af75ab23d086e25f6029fbf47a1312201036dd7d54f50c8759b11c7"
+      },
+      {
+        "bytes": 104734800,
+        "kind": "file",
+        "mode": 489,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/diamond",
+        "sha256": "7910a083a9067d0856280d2b4450ff979f11ffb22b8467d404cc373f5a0e6e73"
+      },
+      {
+        "bytes": 22905616,
+        "kind": "file",
+        "mode": 489,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/makeblastdb",
+        "sha256": "3f2e60e7e2d36bedab221609d212abf257e8afc84239aa458f53f3ada96c8168"
+      },
+      {
+        "bytes": 284104,
+        "kind": "file",
+        "mode": 489,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/mcl",
+        "sha256": "3a8790a79e3709393255c1c2337318b16db07efdfaf50f5b24cb4a2f9d2a6b03"
+      },
+      {
+        "bytes": 67022424,
+        "kind": "file",
+        "mode": 489,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/mmseqs",
+        "sha256": "1364aa48664559c5dc5929a6a61cc27315377f0d0e8d6d420b39e4d25d8e898a"
+      },
+      {
+        "bytes": 47064,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/pfam_unknown.pckl",
+        "sha256": "88e83abd0e1f553a2edead1dc197083741eb2438fba6a437c55c503f48472803"
+      },
+      {
+        "bytes": 147659,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/profile2clan.pckl",
+        "sha256": "4a3bbf31c6396a6bc8838162c714d6f1ec4a33a2868cffe26037004aeb4e12f4"
+      },
+      {
+        "bytes": 235665,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/profile2type.pckl",
+        "sha256": "8a9e0d3004adc420d4f4627f44ac97bcfd4321369160a61b30761992104442d4"
+      },
+      {
+        "bytes": 486584,
+        "kind": "file",
+        "mode": 509,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/d2v.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "8159b025119527e8988e6decb8959e785fa2904eb91943dd974d4488599a1497"
+      },
+      {
+        "bytes": 75244,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/d2v.pyx",
+        "sha256": "9eab866cadad34295818d613f634f4e5eb773cbc0710985f6d3788ac9cd8463e"
+      },
+      {
+        "bytes": 20117,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/dev-sonic_infer_ortho_table.py",
+        "sha256": "2f4494119b773dd7cde0acfd7faff276e77381c0c5ff346cf8f41cf2b4f1c0e0"
+      },
+      {
+        "bytes": 636952,
+        "kind": "file",
+        "mode": 509,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/domortho.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "0ec4b044904120a59c66a49859231d8fda1eda6090a1b2d49e0634c3d073c1df"
+      },
+      {
+        "bytes": 63910,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/domortho.pyx",
+        "sha256": "9b54f65f5da34baa5224a9cd4e5a56042b4b75b2fc05e377b12e85f4ebe737d6"
+      },
+      {
+        "bytes": 176952,
+        "kind": "file",
+        "mode": 509,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/essentials_c.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "a22aab81d9ec0101bae4452666b2374acb1c666a450b119097927d69249eddbc"
+      },
+      {
+        "bytes": 19181,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/essentials_c.pyx",
+        "sha256": "b2a41556168e74bc6d4b1984d53c9675d18e1096648f3eff1cdfaeb409037e0b"
+      },
+      {
+        "kind": "directory",
+        "mode": 509,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/example"
+      },
+      {
+        "kind": "directory",
+        "mode": 509,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/example/test_input"
+      },
+      {
+        "bytes": 330050,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/example/test_input/chlamydia_trachomatis",
+        "sha256": "aefdc6e98c92e4c6181720c5576f034a14ebf062446d56bbdb073b319b394d91"
+      },
+      {
+        "bytes": 992498,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/example/test_input/deinococcus_radiodurans",
+        "sha256": "4e0ce86c3c2264023a90c4716c4acbf55c43ffcd7f08d071aed7d0f5e8e9a82b"
+      },
+      {
+        "bytes": 1443738,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/example/test_input/gloeobacter_violaceus",
+        "sha256": "9473109ee5726902f9c6525800de45d58fd97b5736c93e4d828ceec4533252b2"
+      },
+      {
+        "bytes": 608729,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/example/test_input/thermotoga_maritima",
+        "sha256": "9a409a5456331d3e0cf331031d7827e82a8b68fdb677969432819eb7b836f828"
+      },
+      {
+        "kind": "directory",
+        "mode": 509,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/example/test_output"
+      },
+      {
+        "bytes": 72,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/example/test_output/README.txt",
+        "sha256": "d59108899e668d83b6a422021ca394601ea85698bfe20a9e61423dcd11f55aad"
+      },
+      {
+        "bytes": 1910,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/extract_results.py",
+        "sha256": "8b4073f2a976d2866847aba01b2fe05e5a1ff055198ec0c4b20c74ea33ad11d4"
+      },
+      {
+        "bytes": 4804,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/get_pfam_profiles.py",
+        "sha256": "4a1969576f5727e3cf5c51f644000d1292db599282387076858852442d500b15"
+      },
+      {
+        "bytes": 2586,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/get_test_data.py",
+        "sha256": "fc993df4c779b8457b4d2aca393e777aa7bdf7e453db936e494cbd6916fb17bb"
+      },
+      {
+        "bytes": 432008,
+        "kind": "file",
+        "mode": 509,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/graph_c.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "9046d278a0e7b32262295b40e8e795d4c951e4d9442855c6cf3b5a7b46f4e0bf"
+      },
+      {
+        "bytes": 45820,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/graph_c.pyx",
+        "sha256": "514596ebb79b38188a5cc3b9316916894017d4234636114fb000a385e2276995"
+      },
+      {
+        "bytes": 44259,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/hdr_mapping.py",
+        "sha256": "1f165874916bd647807584dc3981d5b7d95e5f9d45956b2e2f33f4b26a122285"
+      },
+      {
+        "bytes": 39605,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/inpyranoid.py",
+        "sha256": "bed90a68e387865beaa811bd4b46cf3d7db168a6ff934027d5df945fa8741cf1"
+      },
+      {
+        "bytes": 289784,
+        "kind": "file",
+        "mode": 509,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/inpyranoid_c.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "1d0630b9bd55c73181c1fad1d3f87967fcbc0e12791e61f0c2b629154852cf0c"
+      },
+      {
+        "bytes": 42949,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/inpyranoid_c.pyx",
+        "sha256": "85a24b4dd07f73e92c4835b77ee2fcc31769c6641dbb0e09ff6207513379a092"
+      },
+      {
+        "bytes": 242032,
+        "kind": "file",
+        "mode": 509,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/mcl_c.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "d2da7d19727592d4ff72e7f11f4f0794e33584f0faf9488447744fd5169424ae"
+      },
+      {
+        "bytes": 13083,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/mcl_c.pyx",
+        "sha256": "c3f126a3ae39b619ccdddbc122e49de3a26ecd60f832d6e66cdaef081f744b20"
+      },
+      {
+        "bytes": 214176,
+        "kind": "file",
+        "mode": 509,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/mmseqs_parser_c.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "d6faf39e695d12ecbbbffff12c934126979074e37fb1be4613ed93dd655362ea"
+      },
+      {
+        "bytes": 23331,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/mmseqs_parser_c.pyx",
+        "sha256": "05a9b2537842fb1ea9bc1f895f7bd3ff4cef6b4ec812d35d8ffe6339c1425072"
+      },
+      {
+        "bytes": 746664,
+        "kind": "file",
+        "mode": 509,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/ortho_merger.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "60cde3475f408782bb37ee2a2dfa98414203f9a90c8380833295d7f0d3f76ba6"
+      },
+      {
+        "bytes": 170932,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/ortho_merger.pyx",
+        "sha256": "a87e88898e8b58113fb4487d5fb68cb4b8e652a839ba898f1f2ff422e501e671"
+      },
+      {
+        "bytes": 47020,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/orthogroups.py",
+        "sha256": "869caa592ce43eb9fd3d909dfeb48530996dd525d8be45e74fb924ca87ad3906"
+      },
+      {
+        "bytes": 37664,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/ortholog_detection.py",
+        "sha256": "853f304cfa64624b3ba8c421f31a7ecc3a4d5270783207b400421e662ad70e0b"
+      },
+      {
+        "kind": "directory",
+        "mode": 509,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/pfam_files"
+      },
+      {
+        "bytes": 514890,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/pfam_files/Pfam-A.hmm.dat.gz",
+        "sha256": "b37f6341e9fa50942c6b66303dc59cd63267393629d6a1625357b4a12c4bd1f4"
+      },
+      {
+        "bytes": 1314895,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/pfam_files/Pfam-A.hmm.metadata.tsv",
+        "sha256": "aaae62cf900f9224332f51cad5e81e11e6f3c41992027e3e02b27f005071cff1"
+      },
+      {
+        "bytes": 162,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/pfam_files/pfam.seed.stats.tsv",
+        "sha256": "95613ead537a92ed72ff0203c915a997625f8bc9879d4c8ed27eafd95dbbad1c"
+      },
+      {
+        "bytes": 1956,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/pfam_files/pfam_db.info.md",
+        "sha256": "1e0970a5844859369a4e6c570e048b131237a17bc4461e04bd0505b7fa44f49a"
+      },
+      {
+        "bytes": 34226684,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/pfam_files/pfama-mmseqs.tar.gz",
+        "sha256": "fe0de27f300de7058a29bfe02bc649e27a7b567c2c866e09d840983f6d44ffd3"
+      },
+      {
+        "kind": "directory",
+        "mode": 509,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/pfam_files/profile_db"
+      },
+      {
+        "bytes": 4372,
+        "kind": "file",
+        "mode": 420,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/pfam_files/profile_db/log.create_mmseqs_pfam_profile_db.txt",
+        "sha256": "2bbe8c6146013ae2ad3786a3928955662615b1460719734be235ea58e070734e"
+      },
+      {
+        "bytes": 4800,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/pfam_files/profile_db/log.obtain_precomputed_profiles.txt",
+        "sha256": "9a3ee93a84d69d80a180968506ef7cee28dc889b3fab39f1c6ed035a1cf441d8"
+      },
+      {
+        "bytes": 76810859,
+        "kind": "file",
+        "mode": 420,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/pfam_files/profile_db/pfama.mmseqs",
+        "sha256": "5ae40f476b315f1919662b1625397c97a4a35441f516f2a580d5c31acf297bef"
+      },
+      {
+        "bytes": 4,
+        "kind": "file",
+        "mode": 420,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/pfam_files/profile_db/pfama.mmseqs.dbtype",
+        "sha256": "26b25d457597a7b0463f9620f666dd10aa2c4373a505967c7c8d70922a2d6ece"
+      },
+      {
+        "bytes": 8323268608,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/pfam_files/profile_db/pfama.mmseqs.idx",
+        "sha256": "dc9309b3add15f505edeb6d2f676b8776dff7c73021a6f9cd80ee81fc253ea64"
+      },
+      {
+        "bytes": 4,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/pfam_files/profile_db/pfama.mmseqs.idx.dbtype",
+        "sha256": "9f076b7eb7fdc0311cd3208cdbbebbf8014dd3a05e35191c96947b358a362b40"
+      },
+      {
+        "bytes": 329,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/pfam_files/profile_db/pfama.mmseqs.idx.index",
+        "sha256": "9109b2b5c34d316e8fb26d687719b2917479b5b0f0c377f53d87400817dfc31e"
+      },
+      {
+        "bytes": 378525,
+        "kind": "file",
+        "mode": 420,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/pfam_files/profile_db/pfama.mmseqs.index",
+        "sha256": "d6d78ec18c6dcd89b1a0cb82301d524411c76d63976b41a84bb401e296548d40"
+      },
+      {
+        "bytes": 114,
+        "kind": "file",
+        "mode": 420,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/pfam_files/profile_db/pfama.mmseqs.version",
+        "sha256": "0049fe0d7da2a89c76b2f0191d8e5482c791bae402bec9ad07f1f757280115c9"
+      },
+      {
+        "bytes": 621313,
+        "kind": "file",
+        "mode": 420,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/pfam_files/profile_db/pfama.mmseqs_h",
+        "sha256": "da19a55b26888bdd294fd22e9d286464230ad5cc703b0ce9ccdf58b418fd3b9f"
+      },
+      {
+        "bytes": 4,
+        "kind": "file",
+        "mode": 420,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/pfam_files/profile_db/pfama.mmseqs_h.dbtype",
+        "sha256": "42f4aeb81c1ef81f771f3de8abca9dcf66901c575530e7672e4b1146474ae650"
+      },
+      {
+        "bytes": 299492,
+        "kind": "file",
+        "mode": 420,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/pfam_files/profile_db/pfama.mmseqs_h.index",
+        "sha256": "3ac67a519e49c94280d5f1462e34140151927936283be807d5029079a0ff270d"
+      },
+      {
+        "bytes": 23036,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/process_output.py",
+        "sha256": "0de861967ffc054f9055a645d0d7d8f21dcc5d1861ba5b2c46dcdd4f8620881c"
+      },
+      {
+        "bytes": 719904,
+        "kind": "file",
+        "mode": 509,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/profile_search.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "3a817b6624266993985de49dd41ed3e4315654d2ee55c64ea3b6b98baf912ff5"
+      },
+      {
+        "bytes": 82312,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/profile_search.pyx",
+        "sha256": "5f7caf3023279e67020abf80e22276448326d1e294ed28f959b2b92634a609b9"
+      },
+      {
+        "bytes": 181352,
+        "kind": "file",
+        "mode": 509,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/remap_tables_c.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "6ea2f84949132a2cb99ab3697ac435288f46e6201064e664fecc0879e42393b4"
+      },
+      {
+        "bytes": 12387,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/remap_tables_c.pyx",
+        "sha256": "b3b0710c138d2ea539ce33e3dc5f4856bf0e2cbd9ac1942fe255a7cbb1dc0679"
+      },
+      {
+        "bytes": 4616,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/seq_tools.py",
+        "sha256": "c395991cd6cd5c1f18f6b31f937d2471a1eddf87be3b3ebb87e94770cb1271e1"
+      },
+      {
+        "kind": "directory",
+        "mode": 509,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/software_packages"
+      },
+      {
+        "bytes": 278,
+        "kind": "file",
+        "mode": 509,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/software_packages/README.md",
+        "sha256": "5995934d1a215c27cba4acc28e0fab248f7d296f28b0cc1645288acf39a0f7b6"
+      },
+      {
+        "bytes": 8949740,
+        "kind": "file",
+        "mode": 509,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/software_packages/blastp.xz",
+        "sha256": "0ff7da16a73d20aefa9784f7555d0d13ddd1f75bb5bdf5b77e9bcd600e27fe7c"
+      },
+      {
+        "bytes": 19565752,
+        "kind": "file",
+        "mode": 509,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/software_packages/diamond.xz",
+        "sha256": "bd04ab532bc35a6588c07de4221ab0754890a86a90023e842736639c9e2df316"
+      },
+      {
+        "bytes": 6218380,
+        "kind": "file",
+        "mode": 509,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/software_packages/makeblastdb.xz",
+        "sha256": "d48ec98eb7ae7a51c079e910e0df5284640c7af2b20a4e61f610c083082640ef"
+      },
+      {
+        "bytes": 284104,
+        "kind": "file",
+        "mode": 489,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/software_packages/mcl_linux",
+        "sha256": "3a8790a79e3709393255c1c2337318b16db07efdfaf50f5b24cb4a2f9d2a6b03"
+      },
+      {
+        "bytes": 13029260,
+        "kind": "file",
+        "mode": 509,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/software_packages/mmseqs_linux_avx2.xz",
+        "sha256": "75192a422a99b70645f1e90e786d4e1e9334ef0aa559cfd198e9b06dd124eca8"
+      },
+      {
+        "bytes": 13019056,
+        "kind": "file",
+        "mode": 509,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/software_packages/mmseqs_linux_sse41.xz",
+        "sha256": "220f76bd17cbc7ae1830f2e9b4698598eecea1b0cf1d938b9f200d268f1af106"
+      },
+      {
+        "bytes": 99639,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/sonic_paranoid.py",
+        "sha256": "6e48f808c5267ac74b85b613648b23c323a34147fa52d324cb51753a4904d1d8"
+      },
+      {
+        "bytes": 9643,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/sonic_paranoid_extract.py",
+        "sha256": "e659a84229a43d73e187363fae288b124490a34c3ba82323df286369796c2e9d"
+      },
+      {
+        "bytes": 30032,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/sys_tools.py",
+        "sha256": "fe9bd07259a2101efa6ac3d05fb035e0fd76ca933dc34173ce9825a15c145536"
+      },
+      {
+        "bytes": 12902,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/test-dev-compare-and-merge-predicted-pairs.py",
+        "sha256": "07ad3e68b1b5df3ba8f573facc34e224ccc13b325d3d76815b93e4c4049fb146"
+      },
+      {
+        "bytes": 15310,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/test-dev-create-corpus-from-raw-profile-searches.py",
+        "sha256": "c9e25194e1da4497a39934fa40ac786890b9142327e6e89c0db935c180fc1b36"
+      },
+      {
+        "bytes": 8437,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/test-dev-create-corpus.py",
+        "sha256": "31b6afd0773f304656c430e55536cbf6426ab61f1d2b5dd9bab0e64a08807fad"
+      },
+      {
+        "bytes": 6998,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/test-dev-create_pfam_profile_db.py",
+        "sha256": "bf6e065c6f786da4d13b79e3dfa17e61c37f11b204df0cd878fcc0a196c0dccf"
+      },
+      {
+        "bytes": 11749,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/test-dev-extract-archs-from-raw-profile-searches.py",
+        "sha256": "ce2f347c9f1227959f1f670dc38c9114f157391b9a5b544f78425eac3a2ee28a"
+      },
+      {
+        "bytes": 9850,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/test-dev-extract-documents-from-raw-archs.py",
+        "sha256": "27ee5c5252362faf5b33c329d52caadceecc0d6948fca63e08199a96fb42ce2a"
+      },
+      {
+        "bytes": 13705,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/test-dev-grid-search.py",
+        "sha256": "55ad238732c79b58aa19e8b12a60e7ad598d84a69d8b7d1122a0b125b8fb78d5"
+      },
+      {
+        "bytes": 12216,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/test-dev-infer-domain-orthologs.py",
+        "sha256": "34500e58a6dde56a672ddafed3bbe4a008d54d8e33c1b8de4aabf6625ac6f298"
+      },
+      {
+        "bytes": 20039,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/test-dev-infer-ortholog-archs-from-profile-searches.py",
+        "sha256": "70aa3ea5b82811f026cb16ce20c0c468018005b2c307dbf5cc7c21f21f7cf958"
+      },
+      {
+        "bytes": 21819,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/test-dev-merge-arch-and-graph-based-orthologs.py",
+        "sha256": "a4fa0650553d401c424525faa0d70b057ba3b7bc4afa5a8c45ccc3bbeec06565"
+      },
+      {
+        "bytes": 13494,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/test-dev-profile_search.py",
+        "sha256": "034da938f93ecdf6607d80dc1f0638e62fb0f20d3b566ff0bdcb5be33d8f0109"
+      },
+      {
+        "bytes": 12509,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/test-dev-remap-ortholog-pairs.py",
+        "sha256": "6d2d82c94fb565567feb091f3a3ee89b5f119caaa8a8494cc2cfa0554c256310"
+      },
+      {
+        "bytes": 118905,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/workers.py",
+        "sha256": "0083a65fc98c70c0ee69c5710b355b1a7ec0e83ef9d5004e1092556b289ed59f"
+      }
+    ],
+    "roots": [
+      "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid"
+    ],
+    "schema": 1,
+    "scientific_execution_authorized": false
+  },
+  "path": "/usr/local/cuda/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/NPM_DOWNLOADS//bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/NPM_DOWNLOADS/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/bizon/.codex/tmp/arg0/codex-arg034RIDq:/home/bizon/.grok/bin:/usr/local/cuda/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/NPM_DOWNLOADS/bin:/home/bizon/.grok/bin:/home/bizon/.cargo/bin:/home/bizon/anaconda3/bin:/home/bizon/anaconda3/condabin:/usr/local/cuda/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/NPM_DOWNLOADS/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/VSEARCH/vsearch-2.30.5-linux-x86_64/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/clustalo:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/iqtree-3.0.1-Linux-intel/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/diamond-linux64:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/eggnog-mapper:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/eggnog-mapper/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/foldseek/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mmseqs/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/hmmer-3.4/src:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/NPM_DOWNLOADS:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ncbi-blast-2.17.0+/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mcl-02-063/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/raxml-ng_v1.2.2_linux_x86_64:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/TREE-QMC/build:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/minimap2-2.30_x64-linux:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/muscle_v5.3:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/indelible:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mmseqs/bin:/usr/local/cuda/bin:/home/bizon/.pyenv/plugins/pyenv-virtualenv/shims:/home/bizon/.pyenv/shims:/home/bizon/.pyenv/bin:/home/bizon/.vscode-server/cli/servers/Stable-258e40fedc6cb8edf399a463ce3a9d32e7e1f6f3/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/bizon/.cache/lm-studio/bin:/home/bizon/.cache/lm-studio/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/VSEARCH/vsearch-2.30.5-linux-x86_64/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/clustalo:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/iqtree-3.0.1-Linux-intel/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/diamond-linux64:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/eggnog-mapper:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/eggnog-mapper/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/foldseek/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mmseqs/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/hmmer-3.4/src:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/NPM_DOWNLOADS:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ncbi-blast-2.17.0+/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mcl-02-063/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/raxml-ng_v1.2.2_linux_x86_64:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/TREE-QMC/build:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/minimap2-2.30_x64-linux:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/muscle_v5.3:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/indelible:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mmseqs/bin:/usr/local/cuda/bin:/home/bizon/.pyenv/plugins/pyenv-virtualenv/shims:/home/bizon/.pyenv/shims:/home/bizon/.pyenv/bin:/home/bizon/.vscode-server/cli/servers/Stable-258e40fedc6cb8edf399a463ce3a9d32e7e1f6f3/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/bizon/.cache/lm-studio/bin:/home/bizon/.cache/lm-studio/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/VSEARCH/vsearch-2.30.5-linux-x86_64/bin/:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/clustalo:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/iqtree-3.0.1-Linux-intel/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/diamond-linux64:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/eggnog-mapper:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/eggnog-mapper/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/foldseek/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mmseqs/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/hmmer-3.4/src:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/NPM_DOWNLOADS/:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ncbi-blast-2.17.0+/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mcl-02-063/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/raxml-ng_v1.2.2_linux_x86_64/:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin/:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220/:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/TREE-QMC/build/:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/minimap2-2.30_x64-linux/:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/muscle_v5.3/:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/indelible/:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mmseqs/bin/:/usr/local/cuda/bin:/home/bizon/.pyenv/plugins/pyenv-virtualenv/shims:/home/bizon/.pyenv/shims:/home/bizon/.pyenv/bin:/home/bizon/.vscode-server/cli/servers/Stable-258e40fedc6cb8edf399a463ce3a9d32e7e1f6f3/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/bizon/.cache/lm-studio/bin",
+  "python": {
+    "bytes": 17157264,
+    "path": "/home/bizon/anaconda3/bin/python3.10",
+    "sha256": "ddd8126d3a409c6ad46c718225d853214d0c9dba3657123514172951fa79058b"
+  },
+  "source": {
+    "bytes": 3317,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/inspect_sonicparanoid_runtime.py",
+    "sha256": "1f259a663b304f2800674feaca274510a8e2b2070ffbe267cf3d7ae2f25a174f"
+  },
+  "status": "read_only_current_resolution_observed",
+  "system": {
+    "architecture": "x86_64",
+    "conda_type": "",
+    "cpu": "192",
+    "install_type": "Python",
+    "is_conda": false,
+    "is_darwin": false,
+    "is_mamba": false,
+    "mamba_type": "",
+    "mem": "1006.96",
+    "os": "Linux",
+    "py_path": "/home/bizon/anaconda3/bin/python",
+    "py_ver": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]"
+  },
+  "tools": {
+    "blastp": {
+      "argv": [
+        "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/blastp",
+        "-version"
+      ],
+      "exit_code": 0,
+      "file": {
+        "bytes": 32739864,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/blastp",
+        "sha256": "55bd09868af75ab23d086e25f6029fbf47a1312201036dd7d54f50c8759b11c7"
+      },
+      "stderr": "",
+      "stdout": "blastp: 2.15.0+\n Package: blast 2.15.0, build Oct 19 2023 13:35:57\n"
+    },
+    "diamond": {
+      "argv": [
+        "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/diamond",
+        "version"
+      ],
+      "exit_code": 0,
+      "file": {
+        "bytes": 104734800,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/diamond",
+        "sha256": "7910a083a9067d0856280d2b4450ff979f11ffb22b8467d404cc373f5a0e6e73"
+      },
+      "stderr": "",
+      "stdout": "diamond version 2.1.9\n"
+    },
+    "makeblastdb": {
+      "argv": [
+        "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/makeblastdb",
+        "-version"
+      ],
+      "exit_code": 0,
+      "file": {
+        "bytes": 22905616,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/makeblastdb",
+        "sha256": "3f2e60e7e2d36bedab221609d212abf257e8afc84239aa458f53f3ada96c8168"
+      },
+      "stderr": "",
+      "stdout": "makeblastdb: 2.15.0+\n Package: blast 2.15.0, build Oct 19 2023 13:35:57\n"
+    },
+    "mcl": {
+      "argv": [
+        "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/mcl",
+        "--version"
+      ],
+      "exit_code": 0,
+      "file": {
+        "bytes": 284104,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/mcl",
+        "sha256": "3a8790a79e3709393255c1c2337318b16db07efdfaf50f5b24cb4a2f9d2a6b03"
+      },
+      "stderr": "",
+      "stdout": "mcl 14-137\nCopyright (c) 1999-2014, Stijn van Dongen. mcl comes with NO WARRANTY\nto the extent permitted by law. You may redistribute copies of mcl under\nthe terms of the GNU General Public License.\n"
+    },
+    "mmseqs": {
+      "argv": [
+        "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/mmseqs",
+        "version"
+      ],
+      "exit_code": 0,
+      "file": {
+        "bytes": 67022424,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/mmseqs",
+        "sha256": "1364aa48664559c5dc5929a6a61cc27315377f0d0e8d6d420b39e4d25d8e898a"
+      },
+      "stderr": "",
+      "stdout": "45111b641859ed0ddd875b94d6fd1aef1a675b7e\n"
+    }
+  },
+  "version": "2.0.9"
+}

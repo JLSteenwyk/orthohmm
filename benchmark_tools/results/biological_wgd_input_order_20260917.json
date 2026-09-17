@@ -1,0 +1,64 @@
+{
+  "datasets": [
+    {
+      "input_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/biological_wgd_application_v1/input",
+      "inputs_in_native_order": [
+        {
+          "bytes": 2899433,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/biological_wgd_application_v1/input/Scerevisiae.fasta",
+          "sha256": "3b0cbffd59b8d1e483c991d48b078794d4cfc9ce7e95addc35dff18aa8ece026"
+        },
+        {
+          "bytes": 2907121,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/biological_wgd_application_v1/input/Suvarum.fasta",
+          "sha256": "93e98600f6349c46ea9925105e7451bcefabab0d66cb5c5fec2a49fd9376c15e"
+        },
+        {
+          "bytes": 2894981,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/biological_wgd_application_v1/input/Skudriavzevii.fasta",
+          "sha256": "90445b18f7830da29f6f200f3d157da95a3d6e30e76716131bef8d94c303820e"
+        },
+        {
+          "bytes": 2940388,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/biological_wgd_application_v1/input/Smikatae.fasta",
+          "sha256": "0b9d9859944252c423de93855712396bf0955ca146efe87ab9ea72998232f6a6"
+        }
+      ],
+      "native_order": [
+        "Scerevisiae.fasta",
+        "Suvarum.fasta",
+        "Skudriavzevii.fasta",
+        "Smikatae.fasta"
+      ],
+      "proteomes": 4
+    }
+  ],
+  "input_manifest": {
+    "bytes": 399212,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/biological_wgd_inputs_20260917.json",
+    "sha256": "fe32a36d3e310c1589e48c1860410bcba277929422fcf6a39e0856d79b902042"
+  },
+  "interpreter": {
+    "bytes": 17157264,
+    "path": "/home/bizon/anaconda3/bin/python3.10",
+    "sha256": "ddd8126d3a409c6ad46c718225d853214d0c9dba3657123514172951fa79058b"
+  },
+  "limitations": [
+    "Actual frozen OrthoHMM enumerator, not a sorted metadata listing.",
+    "Must recheck immediately before every run and after inference.",
+    "OrthoFinder separately sorts accepted basenames; its fresh copies need independent validation."
+  ],
+  "python_version": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+  "runtime_manifest": {
+    "bytes": 37039196,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/biological_wgd_runtime_trees_v1.json",
+    "sha256": "70eda6198d28d6c36c697d2862911a0853d9482c9e15f504f17574ca73f99071"
+  },
+  "scientific_execution_authorized": false,
+  "source": {
+    "bytes": 2977,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/files.py",
+    "sha256": "f1ec2acaea2566615b06b0a37e17b77f76bbd87fe6f2c76560a318343f6871a1"
+  },
+  "status": "orthohmm_native_enumeration_captured"
+}
