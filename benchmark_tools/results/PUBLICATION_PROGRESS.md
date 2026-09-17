@@ -4432,3 +4432,16 @@ full admission pending. Prepared four-CPU64GiB2hour audit batch; bash syntax and
 diff whitespace checks pass. Fullunit suite in progress before freeze/submission.
 
 Fullunit suite1,609passed37.85s. No scientific admission claimed from unit tests.
+
+### QfO Retrospective Native Admission Running (2026-09-17)
+
+Committed/pushedb38f3f5; froze publication_qfo_label_recovery_v1 at
+b38f3f5435dd9da7920884a10be741b9beabf8bb. Submitted audit-only21480,
+4CPU64GiB2hours,norequeue; confirmedRUNNING00:13. Output destination
+benchmarks/results/qfo_checked_full_replay_v2_recovered_admission_v1;
+logbenchmarks/work/qfo_label_recovery_21480.log. No inference rerun and no
+scientific admission claimed until this auditor completes successfully.
+
+Latest treepoll21406_70/71RUNNING,72-209pending;21435pendingdependency.
+Preserve all running jobs and review audit results before scoring or changing
+publication claims. QfOv2 original21333FAILED1:0 remains explicitly retained.
