@@ -16,6 +16,7 @@ class HostMonitor:
     def __init__(self, handle, scope, sample_fn=None):
         self.handle = handle
         self.scope = scope
+        self.observer_pid = os.getpid()
         self.sample_fn = sample_fn or snapshot
         self.previous = None
         self.first_finished = None
@@ -31,11 +32,12 @@ class HostMonitor:
             sample = self.sample_fn()
             interval = None
             if self.previous is not None:
-                interval = analyze(self.previous, sample, self.scope, os.getpid())
+                interval = analyze(self.previous, sample, self.scope, self.observer_pid)
                 self.intervals[interval["status"]] += 1
                 self.maximum_cores = max(self.maximum_cores, interval["sum_observed_foreign_average_cores"])
                 self.maximum_gap = max(self.maximum_gap, sample["started_monotonic_s"] - self.previous["finished_monotonic_s"])
-            self.handle.write(json.dumps({"index": self.count, "snapshot": sample, "interval": interval}, sort_keys=True) + "\n")
+            self.handle.write(json.dumps({"index": self.count, "observer_pid": self.observer_pid,
+                                          "snapshot": sample, "interval": interval}, sort_keys=True) + "\n")
             self.handle.flush()
             if self.first_finished is None:
                 self.first_finished = sample["finished_monotonic_s"]
@@ -58,6 +60,8 @@ class HostMonitor:
                  "inconclusive" if self.errors or self.intervals["inconclusive"] or not bracketed or not self.intervals else
                  "no_large_persistent_competitor_observed")
         return {"status": state, "controlled_workload_verified": False, "command_bracketed_by_samples": bracketed,
+                "observer_pid": self.observer_pid, "command_launch_started_monotonic_s": launch,
+                "command_wait_finished_monotonic_s": end,
                 "successful_snapshots": self.count, "observation_errors": self.errors,
                 "interval_counts": dict(self.intervals), "maximum_observed_foreign_average_cores": self.maximum_cores,
                 "maximum_between_snapshot_gap_s": self.maximum_gap, "threshold_average_cores": .25,

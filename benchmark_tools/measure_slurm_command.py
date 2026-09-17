@@ -6,6 +6,7 @@ import json
 import math
 import os
 from pathlib import Path
+import platform
 import signal
 import subprocess
 import sys
@@ -64,6 +65,10 @@ def measure(command, output, job_id, cpu_count, memory_bytes, timeout_s, interva
     anchor = psutil.Process(pid).create_time()
     started = time.monotonic()
     report = {"status": "preflight", "command": command, "cwd": str(Path.cwd()), "job_id": job_id,
+              "wrapper_pid": pid, "wrapper_started_monotonic_s": started,
+              "clock_domain": {"hostname": platform.node(),
+                               "boot_id": Path("/proc/sys/kernel/random/boot_id").read_text().strip(),
+                               "clock": "time.monotonic", "unit": "seconds"},
               "requested_cpus": cpu_count, "requested_memory_bytes": memory_bytes, "timeout_s": timeout_s,
               "interval_s": interval_s, "source": source_record(__file__),
               "host_interval_s": host_interval_s if monitor_host else None,
@@ -80,8 +85,12 @@ def measure(command, output, job_id, cpu_count, memory_bytes, timeout_s, interva
             series = stack.enter_context((output / "samples.jsonl").open("x"))
             log = stack.enter_context((output / "command.log").open("x"))
             def observe():
+                observation_started = time.monotonic()
                 snapshot = snapshot_fn(pid, job_id)
-                row = {"index": len(samples), "elapsed_s": time.monotonic() - started, "anchor_created": anchor,
+                observation_finished = time.monotonic()
+                row = {"index": len(samples), "elapsed_s": observation_finished - started, "anchor_created": anchor,
+                       "started_monotonic_s": observation_started,
+                       "finished_monotonic_s": observation_finished,
                        "snapshot": snapshot, "host": {"load_average": list(os.getloadavg())}}
                 samples.append(row)
                 series.write(json.dumps(row, sort_keys=True) + "\n")
@@ -98,6 +107,7 @@ def measure(command, output, job_id, cpu_count, memory_bytes, timeout_s, interva
                 host.observe()
                 next_host = time.monotonic() + host_interval_s
             launch = time.monotonic()
+            report["command_launch_started_monotonic_s"] = launch
             process = subprocess.Popen(command, stdout=log, stderr=subprocess.STDOUT, start_new_session=True)
             report.update(status="running", child_pid=process.pid)
             while True:
@@ -118,8 +128,9 @@ def measure(command, output, job_id, cpu_count, memory_bytes, timeout_s, interva
                             observe()
                         except Exception as error:
                             report["measurement_error"] = {"type": type(error).__name__, "message": str(error)}
-            report.update(exit_code=process.returncode, command_wall_s=time.monotonic() - launch, timed_out=timed_out)
             end = time.monotonic()
+            report.update(exit_code=process.returncode, command_wall_s=end - launch, timed_out=timed_out,
+                          command_wait_finished_monotonic_s=end)
             if host is not None:
                 host.observe()
                 report["host_workload"] = host.summary(launch, end)
@@ -142,7 +153,9 @@ def measure(command, output, job_id, cpu_count, memory_bytes, timeout_s, interva
             report["exit_code"] = process.returncode
         raise
     finally:
-        report["wrapper_wall_s"] = time.monotonic() - started
+        wrapper_end = time.monotonic()
+        report["wrapper_finished_monotonic_s"] = wrapper_end
+        report["wrapper_wall_s"] = wrapper_end - started
         for name in ("samples.jsonl", "command.log", "host_samples.jsonl"):
             if (output / name).exists():
                 report[name] = source_record(output / name)

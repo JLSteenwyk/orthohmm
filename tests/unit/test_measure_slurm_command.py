@@ -46,6 +46,14 @@ def test_real_command_exit_and_retained_logs(tmp_path, code, expected):
     assert result["status"] == expected and result["exit_code"] == code
     assert result["summary"]["observations"] >= 2
     assert "fixture" in (tmp_path / "run/command.log").read_text()
+    rows = [json.loads(line) for line in (tmp_path / "run/samples.jsonl").read_text().splitlines()]
+    start, end = result["command_launch_started_monotonic_s"], result["command_wait_finished_monotonic_s"]
+    assert result["wrapper_started_monotonic_s"] <= rows[0]["started_monotonic_s"]
+    assert rows[0]["finished_monotonic_s"] <= start <= end <= rows[-1]["started_monotonic_s"]
+    assert rows[-1]["finished_monotonic_s"] <= result["wrapper_finished_monotonic_s"]
+    assert all(row["started_monotonic_s"] <= row["finished_monotonic_s"] for row in rows)
+    assert result["command_wall_s"] == end - start
+    assert result["clock_domain"]["boot_id"]
 
 
 def test_timeout_stops_owned_command(tmp_path):
@@ -94,6 +102,9 @@ def test_host_monitor_does_not_change_native_completion(tmp_path, failure):
     assert result["controlled_workload_verified"] is False
     assert result["host_workload"]["command_bracketed_by_samples"] is not failure
     assert "host_samples.jsonl" in result
+    assert result["host_workload"]["observer_pid"] == result["wrapper_pid"] == os.getpid()
+    for key in ("command_launch_started_monotonic_s", "command_wait_finished_monotonic_s"):
+        assert result["host_workload"][key] == result[key]
 
 
 def test_timeout_cleanup_reaches_child_that_ignores_term():

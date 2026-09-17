@@ -1,5 +1,19 @@
 # Publication Progress
 
+## DGX Collector Boundaries and Replay (2026-09-17)
+
+Added absolute monotonic command/resource-observation boundaries, clock
+domain and retained observer PID to the prospective measurement workflow.
+Slurm21625 completed a1CPU/1GiB DGX smoke, with six resource snapshots and
+four host snapshots around a5s sleep. All three saved host intervals replay
+exactly using the original observer PID. Report and limitations are recorded
+in DGX_SCALING_MIGRATION_20260917.md and
+dgx_timing_collector_smoke_20260917.json. This is collector evidence only,
+not scientific timing, host exclusivity or full20CPU/96GiB admission.
+FastME source recovery and complete pipeline checks remain outstanding;
+0/27 scientific timing runs launched. QfO21548_2 verified running at30:49;
+no assessment restart or partial endpoint inspection.
+
 ## FAMSA Portability Fixtures (2026-09-17)
 
 Completed24 FAMSA smoke runs: three toy fixture classes, two thread counts,

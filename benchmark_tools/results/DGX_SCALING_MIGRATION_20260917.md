@@ -367,3 +367,34 @@ Additional FastME source recovery checks found that the Bioconda initial
 recipe and Galaxy depot begin at2.1.5, and examined GitHub mirrors retain
 the same upstream2.1.5-onward history. Wayback endpoints returned503/429;
 these failures do not prove that an archived2.1.4 source cannot be recovered.
+
+## DGX Timing Collector Smoke
+
+The prospective collector now retains absolute monotonic wrapper and
+command launch/wait boundaries, plus start/finish times for each resource
+observation. The recorded clock domain includes hostname and Linux boot ID;
+these numbers must not be compared across hosts or boots. Host observations
+retain the original observer PID and command boundaries, allowing later
+interval replay without accidentally substituting the auditor's PID.
+These changes do not alter old frozen measurements or their source hashes.
+
+Slurm21625 and step21625.0 completed0:0 on spark-7ff0 with1CPU and1GiB.
+The native command `/bin/sleep 5` had measured wall time5.040278321s;
+six resource snapshots and four host snapshots were retained. Allocation
+gates passed, all observations bracketed the command as expected, and all
+three saved host intervals reproduced exactly using the recorded observer
+PID. Maximum observed foreign average CPU use was0.009381cores; no large
+persistent competitor was observed in this short smoke. This is not
+certification of an exclusive host,20CPU/96GiB validation, a scientific
+timing run, or complete resource-admission logic.
+
+Retained report: dgx_timing_collector_smoke_20260917.json, SHA256
+8e6c482aaf432169b9fd69092d85d3d8033a321abd60905ff8b82d92407222df.
+Raw samples and logs are retained locally under
+benchmarks/work/dgx_timing_collector_smoke_v1/timing_collector_smoke_v1
+and remotely in timing_collector_smoke_v1. The report hashes those files
+and collector/observer sources. Full end-to-end tool validation, prospective
+DGX method/command manifests and independent timing admission remain open.
+All79 focused collector, host-monitor, cgroup snapshot and resource-summary
+tests pass, including native exit/failure, timeout cleanup and sampling error
+retention. Existing measurements were not regenerated.
