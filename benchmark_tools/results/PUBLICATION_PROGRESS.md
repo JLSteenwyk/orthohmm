@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Narrow-Band Boundary Tests (2026-09-17)
+
+Extended the isolated rescue to495 pairs around the50-residue cutoff,
+including empty targets, three batch orders and1/4 threads. The patch
+matches scalar/JIT throughout; all30 order/thread checks match scalar
+(14850 comparisons). The original library has42 band1 and31 band8
+discrepancies on this fixture. Default64 remains unchanged here. All11
+probe-integrity tests pass; evidence and limits are retained in
+DGX_SCALING_MIGRATION_20260917.md. No production or frozen runtime changed.
+FastME21627 and QfO21548_3 verified RUNNING at26:01 and13:47; auditor21584
+pending. FastME archive remains incomplete at1012244/1235934 bytes.
+
 ## Narrow-Band Mechanism Rescue (2026-09-17)
 
 An isolated per-pair band-selection patch removes all8 band1 and3 band8

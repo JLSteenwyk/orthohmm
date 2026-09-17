@@ -1,6 +1,6 @@
 import pytest
 
-from benchmark_tools.probe_narrow_band_rescue import BANDS, summarize
+from benchmark_tools.probe_narrow_band_rescue import BANDS, summarize, boundary_fixtures, orderings
 
 
 def fixture():
@@ -32,3 +32,33 @@ def test_corrupt_diagnostic_rejected(change):
         row["changed_indices"] = []
     with pytest.raises(ValueError):
         summarize(report)
+
+
+def test_boundary_fixture_contains_cutoff_neighbors_and_empty_targets():
+    queries, targets, pairs = boundary_fixtures()
+    assert {49, 50, 51} <= {len(q) for q in queries}
+    assert {0, 49, 50, 51} <= {len(t) for t in targets}
+    assert pairs.shape == (495, 2)
+    assert len(set(map(tuple, pairs))) == 495
+    assert all(sorted(order.tolist()) == list(range(495)) for order in orderings(495).values())
+
+
+@pytest.mark.parametrize("change", [None, "missing", "false_score", "false_indices"])
+def test_order_summary_recomputes_scores(change):
+    report = fixture()
+    report["fixture_kind"] = "boundary_lengths"
+    report["order_checks"] = [
+        {"band": band, "order": name, "threads": threads, "mismatches": 0,
+         "mismatched_original_indices": [], "scores": [[1, 2][i] for i in order]}
+        for band in BANDS for name, order in orderings(2).items() for threads in (1, 4)]
+    if change == "missing":
+        report["order_checks"].pop()
+    elif change == "false_score":
+        report["order_checks"][0]["scores"][0] = 99
+    elif change == "false_indices":
+        report["order_checks"][0]["mismatched_original_indices"] = [0]
+    if change:
+        with pytest.raises(ValueError):
+            summarize(report)
+    else:
+        assert len(summarize(report)["order_checks"]) == 30

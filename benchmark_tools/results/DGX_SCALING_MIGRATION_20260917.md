@@ -567,3 +567,25 @@ Artifacts:
 Six summary-integrity tests pass; git apply --check passes without applying
 the patch. Release integration, boundary-length/batch-order regression
 coverage and an explicitly versioned method change remain outstanding.
+
+### Boundary and Batch-Order Extension
+
+The same isolated library was tested on495 additional pairs with query
+lengths1/7/8/9/31/49/50/51/52/64/129, targets including length0 and cutoff
+neighbors, duplicate/truncated targets and ambiguous-residue insertions.
+PCG64 seeds20260918 (fixtures) and20260919 (ordering) are fixed in the probe.
+Original SIMD differs from scalar at42 pairs for band1 and31 for band8;
+the patch agrees exactly with scalar and JIT at all5 tested widths.
+Original/reversed/shuffled pair orders at1/4 threads yield zero patched
+vs scalar discrepancies in all30 checks (14850 pair-score comparisons).
+Bands0/64/128 remain unchanged on this additional fixture. Both initial
+and final diagnostic runs reproduce these results.
+
+Summary narrow_band_boundary_20260917.json SHA256
+52c116d7e6fc3f0c2a1afe7551efccf2aff10e1a54edf96c0b5fe4b5ce211032;
+raw benchmarks/work/narrow_band_rescue_v1/boundary_report_v2.json SHA256
+1ab367297d94fd587ca6608469ed952f31d8bc736419de5fe7653d2160f84485.
+The summarizer checks the complete order/thread inventory and recomputes
+all mismatch counts/indices from raw scores. All11 probe-integrity tests
+pass. These checks strengthen finite-fixture evidence only: no frozen
+runtime was modified and no new accuracy or performance claim is admitted.

@@ -1,0 +1,348 @@
+{
+  "fixture_kind": "boundary_lengths",
+  "fixture_sha256": "f52112abc32186f4926942ef5516529f50915947d1ba7c946228ad5668c8755d",
+  "limitations": [
+    "Single isolated patch and finite fixtures; not general backend equivalence.",
+    "No publication baseline, historical scores or runtime manifests were changed.",
+    "Release integration requires broader tests and an explicitly versioned method change."
+  ],
+  "raw_report": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/narrow_band_rescue_v1/boundary_report_v2.json",
+    "sha256": "1ab367297d94fd587ca6608469ed952f31d8bc736419de5fe7653d2160f84485"
+  },
+  "source": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_narrow_band_rescue.py",
+    "sha256": "40abd610f2df1e8af9eefdd2e0a9d4d09a83c4bbfa4111381c08742582eb06b4"
+  },
+  "summary": {
+    "bands": [
+      {
+        "band": 0,
+        "baseline_scalar_mismatches": 0,
+        "changed_indices": [],
+        "variant_jit_mismatches": 0,
+        "variant_scalar_mismatches": 0
+      },
+      {
+        "band": 1,
+        "baseline_scalar_mismatches": 42,
+        "changed_indices": [
+          2,
+          40,
+          112,
+          118,
+          138,
+          153,
+          155,
+          160,
+          162,
+          167,
+          182,
+          196,
+          209,
+          217,
+          227,
+          231,
+          236,
+          248,
+          262,
+          267,
+          271,
+          288,
+          289,
+          301,
+          324,
+          326,
+          337,
+          349,
+          372,
+          379,
+          380,
+          394,
+          400,
+          408,
+          428,
+          446,
+          449,
+          473,
+          475,
+          482,
+          483,
+          494
+        ],
+        "variant_jit_mismatches": 0,
+        "variant_scalar_mismatches": 0
+      },
+      {
+        "band": 8,
+        "baseline_scalar_mismatches": 31,
+        "changed_indices": [
+          2,
+          40,
+          112,
+          118,
+          138,
+          153,
+          155,
+          160,
+          167,
+          209,
+          227,
+          231,
+          248,
+          262,
+          267,
+          288,
+          289,
+          301,
+          326,
+          337,
+          349,
+          372,
+          380,
+          400,
+          408,
+          428,
+          446,
+          449,
+          473,
+          482,
+          494
+        ],
+        "variant_jit_mismatches": 0,
+        "variant_scalar_mismatches": 0
+      },
+      {
+        "band": 64,
+        "baseline_scalar_mismatches": 0,
+        "changed_indices": [],
+        "variant_jit_mismatches": 0,
+        "variant_scalar_mismatches": 0
+      },
+      {
+        "band": 128,
+        "baseline_scalar_mismatches": 0,
+        "changed_indices": [],
+        "variant_jit_mismatches": 0,
+        "variant_scalar_mismatches": 0
+      }
+    ],
+    "baseline_discrepancy_observed": true,
+    "benchmark_admitted": false,
+    "frozen_runtime_modified": false,
+    "order_checks": [
+      {
+        "band": 0,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "original",
+        "threads": 1
+      },
+      {
+        "band": 0,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "original",
+        "threads": 4
+      },
+      {
+        "band": 0,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "reversed",
+        "threads": 1
+      },
+      {
+        "band": 0,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "reversed",
+        "threads": 4
+      },
+      {
+        "band": 0,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "shuffled",
+        "threads": 1
+      },
+      {
+        "band": 0,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "shuffled",
+        "threads": 4
+      },
+      {
+        "band": 1,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "original",
+        "threads": 1
+      },
+      {
+        "band": 1,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "original",
+        "threads": 4
+      },
+      {
+        "band": 1,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "reversed",
+        "threads": 1
+      },
+      {
+        "band": 1,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "reversed",
+        "threads": 4
+      },
+      {
+        "band": 1,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "shuffled",
+        "threads": 1
+      },
+      {
+        "band": 1,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "shuffled",
+        "threads": 4
+      },
+      {
+        "band": 8,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "original",
+        "threads": 1
+      },
+      {
+        "band": 8,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "original",
+        "threads": 4
+      },
+      {
+        "band": 8,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "reversed",
+        "threads": 1
+      },
+      {
+        "band": 8,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "reversed",
+        "threads": 4
+      },
+      {
+        "band": 8,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "shuffled",
+        "threads": 1
+      },
+      {
+        "band": 8,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "shuffled",
+        "threads": 4
+      },
+      {
+        "band": 64,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "original",
+        "threads": 1
+      },
+      {
+        "band": 64,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "original",
+        "threads": 4
+      },
+      {
+        "band": 64,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "reversed",
+        "threads": 1
+      },
+      {
+        "band": 64,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "reversed",
+        "threads": 4
+      },
+      {
+        "band": 64,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "shuffled",
+        "threads": 1
+      },
+      {
+        "band": 64,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "shuffled",
+        "threads": 4
+      },
+      {
+        "band": 128,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "original",
+        "threads": 1
+      },
+      {
+        "band": 128,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "original",
+        "threads": 4
+      },
+      {
+        "band": 128,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "reversed",
+        "threads": 1
+      },
+      {
+        "band": 128,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "reversed",
+        "threads": 4
+      },
+      {
+        "band": 128,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "shuffled",
+        "threads": 1
+      },
+      {
+        "band": 128,
+        "mismatched_original_indices": [],
+        "mismatches": 0,
+        "order": "shuffled",
+        "threads": 4
+      }
+    ],
+    "pairs_per_band": 495,
+    "variant_matches_scalar_and_jit": true
+  }
+}
