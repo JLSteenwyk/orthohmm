@@ -171,3 +171,29 @@ No main experiment inference has started. The batch uses at most2concurrent
 4CPU16GiB tasks, writing `simulation_tree_experiments_v1/cell_<index>`. Input
 preparation and native-run validation are not independent scientific admission;
 the latter and paired126-endpoint analysis remain separate required steps.
+
+## Complete-Panel Admission (17 September Update)
+
+The earlier preparation-only status above has been superseded: all available
+unchanged-tree controls passed independent pair and downstream partition checks;
+see SIMULATION_MODE_PANEL_VERIFIED_20260917.md. Main cell0 ran as21405_0 and
+cells1-209 are executing as21406. Neither array is a matched timing experiment.
+
+`admit_simulation_tree_panel.py` requires all210 scheduler tasks uniquely terminal
+across those exact two arrays before it creates an admission report. Missing,
+duplicated, nonterminal or contradictory completion records reject. Unsuccessful
+terminal tasks remain in the420-method inventory rather than being dropped.
+
+For completed cells the auditor reconstructs non-tree commands independently of
+the execution command builder, checks source/helper revisions, frozen manifests,
+mode-control evidence, tree identity and lengths, and reruns input, environment,
+native-parser and native-output validation. Native prediction adapters verify
+their inputs against the recorded output inventory. Root topology and retained
+upstream artifact inventories are independently recomputed and compared to the
+runner's observations. Metadata disagreement rejects admission rather than
+silently reclassifying a cell. A genuinely unretained requested topology remains
+an explicit outcome, not a tree-accuracy estimate.
+
+This admission does not score evolutionary truth. Cross-arm upstream artifact
+comparisons and the prespecified126-endpoint analysis remain separate steps;
+valid native execution alone does not establish a tree-only causal effect.

@@ -4341,3 +4341,26 @@ runs remain unstarted pending whole-run workload checks and controlled execution
 Verification: fullunit suite1,562passed36.50s. Array21406 cells1-4COMPLETED0:0,
 cells5-6RUNNING at the next authoritative poll; remaining cells pending. Scheduler
 success alone is not scientific admission. No accuracy endpoints inspected.
+
+### Main Tree Panel Independent Auditor Prepared (2026-09-17)
+
+Previous continuation made progress: b3983be pushed complete unchanged-tree
+control evidence and launched remaining tree cells. Re-read the objective and
+confirmed liveQfO21333 at44:09 and tree21406 with6completed/2running tasks.
+Later pollQfO47:44; treecells1-20completed,21running,remainingpending. No restart.
+
+Added admit_simulation_tree_panel.py: exact210terminal-task gate across21405_0
+and21406_1-209, all420method outcomes retained, independent command reconstruction,
+native input/runtime/parser/output/source checks, unchanged-tree partition gate,
+prediction inventory checks, and independent supplied-topology/artifact audit.
+No accuracy scoring. Cross-arm upstream equivalence and126-endpoint analyses
+remain subsequent requirements, not implied by native admission.
+
+Twenty-one focused tests pass for exact split-array inventory, partial/missing/
+duplicate/wrong-task rejection, nonzero-success contradiction, changed source,
+command, tree, scheduler identity, and retention of unsuccessful terminal tasks.
+Read-only real-cell0 validation independently admitted both methods and confirmed
+supplied topology retention. This smoke is not full-panel admission. Prepared
+four-CPU16GiB dependent audit batch to freeze and submit after validation/commit.
+
+Fullunit suite1,583passed34.46s; audit batch passes bash syntax validation.
