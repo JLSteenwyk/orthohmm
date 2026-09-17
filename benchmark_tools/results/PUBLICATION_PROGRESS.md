@@ -1,5 +1,16 @@
 # Publication Progress
 
+## Development Banding Fix Integrated (2026-09-17)
+
+Applied the isolated per-pair SIMD banding correction to development C
+source, without changing the frozen publication checkout or native binaries.
+A fresh-source compile regression fails on the original source (16/78
+band1 scores) and passes all30 width/order/thread cases after the fix.
+All1865 unit tests pass. NATIVE_BANDING_FIX_20260917.md records scope,
+baseline preservation and the outstanding release rebuild requirement.
+FastME21627 and QfO21548_3 remain live (30:50 and18:36 last observed);
+timing runs remain0/27 and publication readiness is not established.
+
 ## Narrow-Band Boundary Tests (2026-09-17)
 
 Extended the isolated rescue to495 pairs around the50-residue cutoff,

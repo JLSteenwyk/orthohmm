@@ -962,10 +962,12 @@ static void hmm_viterbi_batch8_avx2(
      * The j-loop runs over the UNION of all lane bands; a per-j SIMD
      * mask (in_band) marks which lanes are active at that j.
      */
-    int32_t bw = band_width;
-    int32_t max_dim = L > max_T ? L : max_T;
-    if (bw <= 0 || max_dim <= 50) bw = max_dim;
-    const __m256i v_bw = _mm256_set1_epi32(bw);
+    /* Match scalar semantics even when short and long targets share a batch. */
+    int32_t lane_bw[8];
+    for (int l = 0; l < 8; l++) {
+        int32_t max_dim = L > target_lens[l] ? L : target_lens[l];
+        lane_bw[l] = (band_width <= 0 || max_dim <= 50) ? max_dim : band_width;
+    }
     const __m256i v_one_i = _mm256_set1_epi32(1);
 
     for (int32_t i = 1; i <= L; i++) {
@@ -983,6 +985,7 @@ static void hmm_viterbi_batch8_avx2(
             int32_t tl = target_lens[l];
             if (tl == 0) { jlo_arr[l] = max_T + 1; jhi_arr[l] = 0; continue; }
             int32_t jc = (int32_t)(((int64_t)i * tl) / L);
+            int32_t bw = lane_bw[l];
             int32_t jl = jc - bw; if (jl < 1) jl = 1;
             int32_t jh = jc + bw; if (jh > tl) jh = tl;
             jlo_arr[l] = jl; jhi_arr[l] = jh;
@@ -1070,8 +1073,7 @@ static void hmm_viterbi_batch8_avx2(
 /* Batch driver. Pairs are sorted by query_idx so consecutive pairs
  * share a profile and can be grouped into 8-wide SIMD batches. Any
  * trailing group of <8 pairs falls back to the scalar kernel.
- * band_width is currently ignored (full DP) — banding integration is
- * left for a future pass.
+ * Each lane uses the scalar kernel's band-width and short-pair rules.
  */
 void batch_hmm_viterbi_multipair_avx2_c(
     const int8_t*   flat_match_emit,
