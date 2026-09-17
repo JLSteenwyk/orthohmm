@@ -494,3 +494,32 @@ c35b1f4228d6ff1af7d7459d2500a765604bf267f82fed54cdfe92d539eadf94.
 Five focused audit tests pass. Gene/species tree and intermediate-score
 equivalence are not established by this output comparison. Larger-data
 portability, OrthoFinder end-to-end checks and all27 timing runs remain open.
+
+## Saved Measurement Evidence Audit
+
+`audit_slurm_measurement.py` requires an externally supplied report hash,
+checks hashes of all raw measurement files and known collector/observer
+revisions, and reconstructs resource and host summaries. It checks monotonic
+command/wrapper bounds, observation order, exact relative times, stable
+job/PID/scope/cpuset/memory limits, no resource sampling errors, and dedicated
+subtree contents before/after execution. Host intervals are replayed with
+the recorded observer PID. Both resource and host observations must bracket
+the command. Retained files are rehashed after auditing to detect changes.
+
+The two actual DGX collector smokes pass this audit:
+
+-21625 (1CPU/1GiB): dgx_collector_replay_1cpu_20260917.json, SHA256
+  f737a717e991c7620ae77dcee868d5ff86116588ff5387b6779494c2085aeab8.
+-21626 (20CPU/96GiB): dgx_collector_replay_20cpu_20260917.json, SHA256
+  97176fbd0fd101513f9ecc39802c57eed6cb38755ad20a8009bd648bc22a2e06.
+
+Each retains6 resource and4 host observations. The audit explicitly leaves
+benchmark_admitted=false and controlled_workload_verified=false: internally
+consistent evidence is not independent authentication of the host, proof
+of exclusive workload, native output validation, or scheduler admission.
+It does not remove sampling gaps or overhead. Failed/timed-out measurements
+remain retained but are not accepted by this completed-record audit.
+Ten new tests cover valid replay and rejection of altered report/raw hashes,
+durations, summaries, cpuset, memory cap, relative times, observer PID and
+interval values, including cases with recalculated file/report hashes.
+All89 focused measurement, replay, host-observation and cgroup tests pass.

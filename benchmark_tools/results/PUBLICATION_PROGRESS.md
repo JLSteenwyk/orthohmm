@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Collector Replay and QfO Fourth Stage (2026-09-17)
+
+Both DGX smoke records pass the new saved-evidence audit, which rechecks
+hashes, source revisions, command/observation bounds and allocation identity,
+then reconstructs resource and host summaries using the original observer
+PID. This does not admit scientific timings or certify exclusive workload.
+Reports and scope are recorded in DGX_SCALING_MIGRATION_20260917.md.
+
+QfO21548_0/1/2 are now scheduler COMPLETED0:0 (59:53,30:53,58:29 elapsed);
+21548_3 is RUNNING, verified at1:32 elapsed. Independent auditor21584 remains
+pending. No partial score endpoint was inspected or admitted. FastME download
+21627 remains RUNNING (13:32 observed,901652 bytes of advertised1235934);
+no partial archive was built. Scientific scaling remains0/27 launched.
+
 ## OrthoHMM DGX Pipeline Fixture (2026-09-17)
 
 Slurm21631 completed both native OrthoHMM modes on the first frozen

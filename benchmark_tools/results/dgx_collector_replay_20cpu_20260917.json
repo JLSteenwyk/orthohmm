@@ -1,0 +1,35 @@
+{
+  "benchmark_admitted": false,
+  "controlled_workload_verified": false,
+  "host_observations": 4,
+  "host_status": "no_large_persistent_competitor_observed",
+  "limitations": [
+    "Does not certify source/input/native output correctness, scheduler accounting or host exclusivity.",
+    "Observed resource span includes collector overhead; sampling gaps remain.",
+    "Clock domain is retained provenance, not independent authentication of the originating host."
+  ],
+  "raw_evidence": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_timing_allocation_smoke_v1/timing_allocation_smoke_v1/samples.jsonl",
+      "sha256": "a25d9f3b8f0289fe24c5cca03748a257285de581c9afc97e7dabd7c95f271547"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_timing_allocation_smoke_v1/timing_allocation_smoke_v1/host_samples.jsonl",
+      "sha256": "6d14f821addaa8bd32bd0ca1b16d3f5e1d0d8ccf2fb91302d9338b10195e89ad"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_timing_allocation_smoke_v1/timing_allocation_smoke_v1/command.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "report": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_timing_allocation_smoke_v1/timing_allocation_smoke_v1/results.json",
+    "sha256": "de5d60bfd8cb42133b6f6f1c119bcd782794f18b53145e84cd788a0aad3e7a10"
+  },
+  "resource_observations": 6,
+  "source": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_slurm_measurement.py",
+    "sha256": "7684fe1865616640c479356dadf18ba9faebafd476114bc6029e00c46c4bee86"
+  },
+  "status": "collector_evidence_replayed"
+}
