@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Collector Load Calibration and Frozen Panel (2026-09-17)
+
+Previous turn completed comparator smoke evidence and pushed32dd3e7.
+Re-read the full objective; DGX had no competing Slurm jobs. Added a native
+deterministic load fixture and checksum-pinned collector runner. First
+calibration21638 completed but averaged10.14 cores, so it was insufficient
+as a full-load check. Revised scheduling uses fixed independent chunks to
+balance heterogeneous cores. Second calibration21639 completed at19.58
+observed average cores. Both raw collector records pass independent replay.
+
+Eight fixture tests cover deterministic schedules, partial chunks and invalid
+arguments. DGX_COLLECTOR_OVERHEAD_PROTOCOL_20260917.md freezes six sequential
+20CPU96GiB tasks (three counterbalanced sparse/sampled pairs),8billion logical
+iterations per worker, explicit load/competition checks and5%median/10%pair
+wall-inflation engineering budgets. No paired outcomes inspected yet. The
+diagnostic is not scientific inference and cannot certify general overhead.
+Scientific timing remains0/27; environment/command freeze and launch/output
+admission workflow remain required alongside the rest of the publication goal.
+
 ## FastME and Full DGX Comparator Smoke (2026-09-17)
 
 Previous turn progressed SwissTrees intervals and pushed1c0788f. Re-read
