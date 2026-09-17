@@ -3207,3 +3207,27 @@ tasks2(margin_low)/3(margin_high) PENDING for JobArrayTaskLimit. Output root
 benchmarks/results/ob_candidate_neighborhood_phylogeny_v1. QfO21315 remains
 RUNNING. Next validate terminal native outputs/coverage/checkpoint semantics,
 prepare both CPM variants, and complete prespecified scoring without selection.
+
+### CPM neighborhood replay executor (2026-09-16)
+
+Previous turn made progress: frozen candidate-phylogeny array21316 submitted.
+Reread objective;21316_0/1 and QfO21315 confirmed RUNNING,21316_2/3 queued.
+Prepared control0.1 followed by prespecified CPM0.08/0.12, sequentially in one
+32CPU/64GiB/four-hour job. Uses the exact hash-verified successful OrthoBench
+replay command/source/runtime from21138, changing only resolution/destinations.
+All four unchanged-control stage partitions must match baseline bytes before
+either variant starts. RBNH grouping, singleton assignment, profile construction,
+profile search/reclustering and refinement rebuilt from fixed cached search hits.
+No reused baseline profile-expanded groups and no reference scores.
+
+Output captures stage partitions, profile metrics, commands, input/core/runtime
+provenance and per-arm time logs. Candidate expansion and inferred phylogeny for
+these two CPM variants remain subsequent requirements; do not call replay alone
+the complete robustness experiment. Shared-node incremental timing excludes the
+original all-to-all search. Thirteen focused command/gate tests passed, batch
+syntax passed, full unit suite1,171 passed30.31s. Freeze/push before submission.
+
+QfO21315 first instrumented optimizer call has returned with recorded976,504
+vertices/24,148,515 edges and expectedCPM0.1/seed4/default2 iterations. This is a
+partial live observation only; full repeat comparison and independent admission
+still pending. No determinism or root-cause claim from one worker.
