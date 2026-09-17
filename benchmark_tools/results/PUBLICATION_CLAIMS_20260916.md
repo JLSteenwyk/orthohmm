@@ -34,7 +34,7 @@ evidence that an experiment completed or a biological hypothesis is true.
 | 2. Independent generalization | Completed frozen YGOB evaluation with native, command/conversion, independent-reference and overlap gates; pair enumeration and paired uncertainty | Bounded novel-taxon claim only; stronger family independence unproven; any outcome-driven method changes require new independent confirmation |
 | 3. HMM and phylogeny contributions | Corrected-runtime OrthoBench replay equivalence, completed eight-cell factorial, sequence-search replacement and unconstrained-membership controls, native coverage and incremental cost records | QfO reproducible baseline and corresponding ablations; better-matched search sensitivity/calibration; controlled resource evidence |
 | 4. Uncertainty and error explanation | Paired OrthoBench intervals, individual QfO endpoints, completed feature strata, full-family stage trace and reference-incident reconciliation reconstruction | QfO strata/appropriate uncertainty; independent duplication/domain/fragment annotations; additional initial-search and rejected-edge tracing; causal explanations remain unproven |
-| 5. Robustness and practical efficiency | Corrected fixed/variable-length multi-seed simulations, six OrthoBench tree perturbations and six parameter variants, explicit failures and resource caveats | QfO robustness, simulation-truth tree-error controls, matched scaling and repeated timings; broader evolutionary realism remains limited |
+| 5. Robustness and practical efficiency | Corrected fixed/variable-length multi-seed simulations, complete generating-tree/NNI simulation controls, six OrthoBench tree perturbations and six parameter variants, explicit failures and resource caveats | QfO robustness, matched scaling and repeated timings; broader evolutionary realism remains limited |
 | 6. Biological usefulness | No completed prespecified application | Independently supported family selection, difficult positives and negatives, relevant comparators, successes and failures without outcome-based selection |
 | 7. Publication package | Comparison, uncertainty, ablation, simulation, strata, tree/parameter figures; [method diagram](figures_publication_method_20260916/publication_method.pdf); evolving [manuscript](PUBLICATION_MANUSCRIPT_DRAFT_20260916.md) | Scaling/application figures, completed Methods/Results and claim audit, verified bibliography, portable workflows/dependencies, versioned release and archival bundle |
 
@@ -177,8 +177,9 @@ evidence that an experiment completed or a biological hypothesis is true.
   [complete results](SIMULATION_TREE_ROBUSTNESS_RESULTS_20260917.md) retain405
   admitted supplied outputs and15 native failures. Cross-arm audit and all126
   exploratory endpoints are complete. Two upstream-different comparisons remain
-  explicit, and no failed accuracy is imputed. Figure/manuscript integration
-  remains pending; earlier preparation-only descriptions are historical.
+  explicit, and no failed accuracy is imputed. All126 endpoints are now shown
+  in a source-validated figure and integrated into manuscript Methods/Results;
+  earlier preparation-only descriptions are historical.
 
 - All four recovered QfO stage pair files were prepared under a frozen
   conversion/mapping protocol, with removed unmapped pairs recorded separately.

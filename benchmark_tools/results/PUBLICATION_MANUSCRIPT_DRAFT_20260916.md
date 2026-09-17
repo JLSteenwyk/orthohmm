@@ -172,6 +172,32 @@ be subtracted when they summarize different seeds. The two panels are not
 pooled. [Fixed results](SIMULATION_FIXED_NATIVE_RESULTS_20260916.md),
 [variable results](SIMULATION_VARIABLE_NATIVE_RESULTS_20260916.md).
 
+### Simulation Species-Tree Controls
+
+For each of the70 variable-length datasets, the frozen satellite_v2 and full
+OrthoFinder pipelines were rerun with three prespecified supplied trees: the
+induced generating topology and deterministic rooted NNI perturbations at
+clade distances2 and4. Branch lengths travel with subtrees; these are topology
+stress tests, not sampled posterior uncertainty. Generating trees are oracle
+diagnostics, not independently inferred predictions or guaranteed accuracy
+upper bounds. Non-tree settings and input sequences remain frozen. All132
+available unchanged-inferred-tree mode controls reproduced native pairs and
+retained upstream files;199 downstream partition checks also agreed. Eight
+unavailable original controls were retained, not excluded from subsequent runs.
+
+Independent admission checked all420 supplied runs, requested topology
+retention, native output validity and source/input provenance. Cross-arm
+retained-artifact comparisons preceded truth scoring. All successful original
+inferred scores were recomputed exactly. For each condition and method we
+compared generating minus inferred, NNI1 minus generating, and NNI2 minus
+generating for F1, precision and recall. All126 endpoints are exploratory,
+with20,000 paired-seed resamples and Bonferroni tail adjustment at family
+alpha0.05. The statistic is the mean paired per-seed difference, not a pooled
+pair-count ratio. Failed arms remain explicit without accuracy imputation.
+Small seed counts and bootstrap-tail resolution limit interval calibration.
+[Protocol](SIMULATION_TREE_CONTROL_PROTOCOL_20260917.md),
+[complete results](SIMULATION_TREE_ROBUSTNESS_RESULTS_20260917.md).
+
 ## Results
 
 ### OrthoBench Shows A Precision-Recall Tradeoff
@@ -289,6 +315,46 @@ intervals. The [fixed-length figure](figures_simulation_fixed_native_v2_20260916
 explicitly shows the absence of admitted comparator contrasts. Both are
 generated from the corrected machine-readable results without imputing failures;
 PDF/SVG versions and source-hash manifests accompany the PNGs.
+
+### Stronger Tree Perturbations Reduce Simulation Accuracy
+
+All210 supplied-tree OrthoHMM runs passed native admission, compared with195
+of210 OrthoFinder runs. The15 OrthoFinder failures were the same five divergent
+datasets under each supplied tree, rejected for nonfinite upstream graph
+weights. Supplying a tree did not repair that problem. The three original
+OrthoHMM inferred-tree failures completed under all supplied topologies;
+their missing inferred accuracy cannot be recovered from this observation.
+The complete analysis contains537 scores and23 failures across560 arms.
+
+Generating-minus-inferred mean F1 changes ranged0.000 to0.217 percentage
+points for OrthoHMM and-0.005 to0.160 for OrthoFinder. Every adjusted interval
+for these comparisons included zero. NNI2-minus-generating F1 and recall
+intervals excluded zero below it in four OrthoHMM conditions (turnover,
+divergent turnover, uneven taxa and taxon-count control) and two OrthoFinder
+conditions (uneven taxa and taxon-count control). These12 endpoints were the
+only adjusted intervals excluding zero; no precision interval did. This
+establishes a bounded sensitivity observation, not comparative superiority,
+biological equivalence, or robustness to arbitrary species-tree errors.
+
+Of420 upstream-artifact contrasts,400 were equivalent,18 unavailable and two
+different. Both differences involved OrthoFinder divergent seed20261106,
+with changed OG0000004 alignments and raw gene trees. They remain in the
+analysis and preclude strict tree-only causal attribution for the affected
+comparisons. The comparison requires joint success: OrthoFinder uses five
+divergent seeds and ten elsewhere; OrthoHMM generating-minus-inferred uses
+nine divergent and eight divergent-turnover seeds, with ten for other
+comparisons. Failure-conditioned estimates may be biased.
+[Full records and limitations](SIMULATION_TREE_ROBUSTNESS_RESULTS_20260917.md).
+
+![All simulation species-tree effects](figures_simulation_tree_robustness_20260917/simulation_tree_robustness.png)
+
+Figure: all126 exploratory F1, precision and recall endpoints across seven
+conditions, two methods and three tree contrasts. Points are paired-seed mean
+differences; thick intervals are nominal95% and thin intervals use Bonferroni
+adjustment over126 endpoints. Axes share scales down each contrast column.
+No best-tree selection or failed-score imputation was performed. The figure
+is generated from the complete verified summary with source/output hashes;
+PDF and SVG versions accompany the PNG.
 
 ### Controlled Components Show A Candidate-Precision Tradeoff
 
@@ -507,10 +573,12 @@ overlap remains substantial even after taxon exclusions. The proposed HMM
 contribution is not established by the completed exploratory OrthoBench
 sequence-search control; QfO extension remains outstanding. The interaction
 between broader candidates and reconciliation has descriptive OrthoBench
-evidence but awaits QfO evaluation and additional controls. Corrected multi-seed simulations are complete
-but do not establish an OrthoHMM advantage or profile-expansion benefit.
-QfO and independently annotated error strata, mechanistic tracing, broader tree-error
-robustness and the QfO parameter panel, matched resource scaling,
+evidence but awaits QfO evaluation and additional controls. Corrected multi-seed
+simulations and their generating-tree/NNI controls are complete but do not
+establish an OrthoHMM advantage or profile-expansion benefit. Tree perturbations
+show bounded sensitivity, not arbitrary-error robustness. QfO and independently
+annotated error strata, mechanistic tracing, more realistic evolutionary
+conditions and the QfO parameter panel, matched resource scaling,
 and a prespecified biological application remain required.
 
 QfO historical replay equivalence remains unresolved. A bounded capture

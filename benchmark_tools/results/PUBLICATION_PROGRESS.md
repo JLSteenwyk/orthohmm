@@ -4631,3 +4631,22 @@ summary and artifact snapshots retained. Raw24MB native admission remains local
 for archive, not duplicated into Git. Figure/manuscript integration remains due.
 QfO21548_0 confirmedRUNNING26:57;later stages and21584remainpending. No QfO
 accuracy conclusions follow from this separate simulation milestone.
+
+### Simulation Tree Figure and Manuscript Integration (2026-09-17)
+
+Previous turn progressed complete native/artifact/scoring gates and pushed75e3d72.
+Re-read objective and confirmed QfO21548_0live,21584pending;latest35:13running.
+Added plot_simulation_tree_robustness.py, which recomputes the fixed summary and
+rejects changed endpoints/bootstrap specifications. Nine panels show all126
+F1/precision/recall effects without outcome-based selection. Failure-only
+contrasts are explicitly unavailable; a single-pair effect has no interval and
+remains inside the plotting bounds. Nine focused tests pass, including all126
+rendered endpoints, tamper rejection and unavailable/single-pair behavior.
+
+Generated PNG/PDF/SVG plus source/output-hash manifest, inspected PNG visually
+for clipping/overlap, and independently rechecked all figure manifest hashes.
+Integrated protocol, completion/failure counts, actual F1 effects,12adjusted
+nonzero endpoints, seed-count caveats and upstream differences into manuscript
+Methods/Results. Claims and protocol now point to completed bounded evidence;
+no superiority or arbitrary-tree robustness asserted. Fullunit suite passed
+1,710 before the added single-pair test; final fullsuite1,711passed43.50s.

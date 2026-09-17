@@ -86,4 +86,16 @@ adjustment. Percentile intervals have approximate, not guaranteed simultaneous
 coverage. The perturbations are deterministic rooted NNI choices with branch
 lengths carried along subtrees, not sampled empirical tree uncertainty. No
 claim of arbitrary-tree robustness, comparative superiority, real-domain or
-fragment behavior follows. Figures and manuscript integration remain due.
+fragment behavior follows.
+
+## Figure and Manuscript
+
+The [complete nine-panel figure](figures_simulation_tree_robustness_20260917/simulation_tree_robustness.png)
+shows all126 endpoints, with nominal and adjusted intervals, method-specific
+symbols and shared scales down contrast columns. PDF/SVG versions and a
+source/output hash manifest accompany the PNG. The plotter recomputes the
+fixed summary from all560 records and rejects altered contrasts or bootstrap
+settings before rendering. It distinguishes unavailable effects and single-pair
+descriptive effects from estimated intervals. The caption and manuscript retain
+exact paired-seed counts, upstream differences and failure-conditioning caveats.
+Methods and Results are integrated into the publication manuscript draft.

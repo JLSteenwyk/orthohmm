@@ -1,5 +1,12 @@
 # Simulation Generating-Tree Controls
 
+Completion update: the full native admission, cross-arm artifact audit and
+126-endpoint analysis are complete; see
+[results and figure](SIMULATION_TREE_ROBUSTNESS_RESULTS_20260917.md).
+Preparation-only and running-job descriptions below preserve the prospective
+history and do not describe the latest execution state. The fixed analysis
+specification has not changed.
+
 This follow-up addresses the outstanding simulation-truth species-tree-error
 requirement. Previous variable-length outcomes have been inspected; this is
 development-exposed mechanism/robustness analysis, not independent confirmation
