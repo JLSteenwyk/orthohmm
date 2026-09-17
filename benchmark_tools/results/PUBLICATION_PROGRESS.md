@@ -3901,3 +3901,11 @@ and test changed graph hashes, constructor hashes, metadata, scientific module
 records, provenance and incomplete/duplicate output membership. Full suite:
 1,396 passed in35.04s. Freeze/push executor before submitting; independent
 completed-replay admission remains required before QfO ablation inputs are used.
+
+Executor96333fd committed/pushed and frozen in detached worktree
+benchmarks/work/publication_qfo_checked_full_replay_v1. Submitted job21329;
+squeue confirmed RUNNING with32CPUs at00:07. Output directory:
+benchmarks/results/qfo_checked_full_replay_v1; scheduler log:
+benchmarks/work/qfo_checked_full_replay_21329.log. No replay output admitted yet.
+The existing21 remote dependency alerts remain outstanding for release review;
+this submission did not change the frozen dependency environment.
