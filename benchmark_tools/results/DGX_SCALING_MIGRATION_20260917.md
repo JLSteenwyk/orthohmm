@@ -448,3 +448,49 @@ job and must be independently checked before building. All1809 unit tests
 pass after the input-materialization and CPU-configuration changes; the
 download shell script passes bash syntax validation. No scientific scaling
 run has been launched.
+
+## OrthoHMM End-to-End Fixture
+
+The first dataset in the frozen simulation execution order,
+missing20_20261101 (8species/645proteins), was selected before running ARM
+inference. Inputs were copied unchanged, with retained SHA256 lists checked
+against local source files. Both methods retain4CPUs/4threads per worker,
+the frozen core7f3a9e40, original scientific settings and native ARM libraries.
+Phylogeny uses native MAFFT7.525/FastTree2.2.0 with inferred species tree.
+This fixture is development-exposed and is not independent accuracy evidence.
+
+Preserved setup attempts:
+
+-21628 failed before inference: wrapper expected .fa instead of .fasta.
+-21629 returned scheduler0:0, but native CLI only printed that output
+  directories did not exist; neither method ran. This is a failed smoke,
+  not successful inference. Fresh native directories and nonempty metrics/
+  predictions are now explicit launch requirements.
+-21630 completed high-sensitivity inference but phylogeny failed at the
+  missing optional DendroPy dependency. High-sensitivity's group file was
+  byte-identical to its x86 counterpart. Failed phylogeny metrics/log remain.
+-Installed DendroPy5.0.8, matching the frozen x86 inventory, with --no-deps;
+  pip check passed. Install report benchmarks/work/dgx_dendropy_install_v1.json
+  SHA256 e366f34f7a1b4c5fba172c76710ffa3d2da87d15a2587119836ee500a57b0af6.
+-21631 completed both fresh runs in orthohmm_pipeline_smoke_v4, scheduler
+  0:0/23s. This elapsed time is not a matched performance measurement.
+  Inputs, tracked core sources and all3 native libraries passed after-run
+  checksum checks. Source code was not changed to repair the environment.
+
+The retained runner's SHA256 is
+b85cfe899870ddfc1ed2c18f6bbe5edded420564986a093123978ac95133e71f.
+Earlier remote timing_recipe_v1/v2/v3 scripts and output directories remain
+unchanged; the completed attempt used timing_recipe_v4. The final job log
+is copied to benchmarks/work/dgx_orthohmm_pipeline_smoke_21631.log.
+
+`audit_dgx_orthohmm_smoke.py` independently checks complete native metrics,
+full unique input membership, declared counts, canonical unique sorted
+cross-species pairs and transferred input hashes. Compared with retained
+x86 predictions, all98 orthogroups agree for both methods; all98 satellite
+root HOGs and1835 native ortholog pairs agree. Group labels/order do not
+affect these canonical comparisons. No differences were discarded.
+Report dgx_orthohmm_pipeline_smoke_20260917.json SHA256
+c35b1f4228d6ff1af7d7459d2500a765604bf267f82fed54cdfe92d539eadf94.
+Five focused audit tests pass. Gene/species tree and intermediate-score
+equivalence are not established by this output comparison. Larger-data
+portability, OrthoFinder end-to-end checks and all27 timing runs remain open.

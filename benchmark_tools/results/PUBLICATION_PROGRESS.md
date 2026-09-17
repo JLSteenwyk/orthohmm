@@ -1,5 +1,18 @@
 # Publication Progress
 
+## OrthoHMM DGX Pipeline Fixture (2026-09-17)
+
+Slurm21631 completed both native OrthoHMM modes on the first frozen
+simulation fixture (missing20_20261101,645proteins/8species). Canonical
+predictions match x86:98 orthogroups for each mode,98 root HOGs and1835
+phylogenetic ortholog pairs. Inputs/source/native libraries remain unchanged.
+The audit and its five tests are retained; this is one-fixture portability
+evidence, not broad equivalence or matched timing. DendroPy5.0.8 was added
+to the ARM environment to match the x86 baseline. Earlier failed wrapper
+and dependency attempts21628/21629/21630 are documented, including zero CLI
+exit without inference when output directories were absent. Details and
+checksums: DGX_SCALING_MIGRATION_20260917.md. Scientific timings remain0/27.
+
 ## DGX Nested Inputs and Allocation (2026-09-17)
 
 Materialized and hash-verified all4/8/12-proteome input directories on DGX.

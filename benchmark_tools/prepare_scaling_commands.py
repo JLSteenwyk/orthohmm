@@ -91,6 +91,7 @@ def prepare(root, output, destination):
               "measurement_plan": {"resource_interval_s": 1., "host_interval_s": 30., "monitor_host": True},
               "remaining_gates": ["Dedicated task allocation, controlled host window and collector overhead assessment",
                   "Fresh per-run input copies for OrthoFinder outside inference timer; no search reuse",
+                  "Create fresh OrthoHMM output directories before launch, outside inference timer; zero exit alone is insufficient",
                   "Native process/output validation independent of the reporting harness, including original .fa inputs",
                   "Before/after source/runtime/input checks; provenance hashing outside inference timer",
                   "No accuracy, comparative timings, or completed scaling runs are established by this manifest"]}
