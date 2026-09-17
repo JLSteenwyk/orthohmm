@@ -338,3 +338,32 @@ https://gite.lirmm.fr/atgc/FastME.git listed tags starting at v2.1.5, not
 v2.1.4. This does not prove that older source is unavailable elsewhere or
 in repository history. Exact-source recovery remains pending; no newer
 FastME was substituted. Scientific scaling runs remain 0/27 launched.
+
+## FAMSA Cross-Architecture Fixture Validation
+
+`probe_famsa_portability.py` (SHA256
+da62208d6bb6c3b534a228d32e867c953d3a6ab254f1b0f029020a23166c16a4)
+was executed against bundled x86 FAMSA and the native ARM build. Three
+hash-derived toy fixtures cover duplicated sequences, insertions/deletions
+and truncation, and ambiguous residues. Each was run at1 and4 threads,
+twice, yielding12 runs per host. All24 runs exited successfully, preserved
+every input identifier and ungapped residue string, and produced equal
+alignment lengths within each run. Canonical identifier-to-aligned-sequence
+maps were identical across both hosts, both thread counts and both repeats
+for each fixture. Both binary hashes remained unchanged; fixture contents
+and probe script hashes matched. No accuracy or runtime endpoint is inferred
+from these small fixtures; complete-pipeline portability remains unproven.
+
+Full reports (including inputs, outputs, commands, versions and hashes):
+
+- famsa_portability_x86_20260917.json SHA256
+  4bcd6b87d94c21106e67828322e448e7c359317f60bb6119f78ef00c9647d19d.
+- famsa_portability_arm_20260917.json SHA256
+  dbeba47a5c432d5bba6f42519ad66f009c68ce019c076cd42f52af7086922d82.
+
+Six focused fixture/parser tests pass, including duplicate/missing IDs,
+unequal alignment lengths, changed residues and harmless record reordering.
+Additional FastME source recovery checks found that the Bioconda initial
+recipe and Galaxy depot begin at2.1.5, and examined GitHub mirrors retain
+the same upstream2.1.5-onward history. Wayback endpoints returned503/429;
+these failures do not prove that an archived2.1.4 source cannot be recovered.

@@ -1,5 +1,17 @@
 # Publication Progress
 
+## FAMSA Portability Fixtures (2026-09-17)
+
+Completed24 FAMSA smoke runs: three toy fixture classes, two thread counts,
+two repeats, on x86 and ARM. All preserve input IDs/residues and rectangular
+alignments; all paired alignment maps match exactly. Complete raw reports
+and provenance are retained in famsa_portability_{x86,arm}_20260917.json;
+six focused tests pass. This is finite-fixture evidence, not benchmark
+accuracy, general equivalence, or end-to-end admission. FastME2.1.4 source
+recovery remains pending; 0/27 timing runs launched. QfO21548_2 verified
+RUNNING at29:36 elapsed; stage3 and21584 remain pending. No live assessment
+was restarted and no partial accuracy endpoints were inspected.
+
 ## DGX FAMSA Build Verified (2026-09-17)
 
 Exact bundled FAMSA revision 2.2.3-1669fc1 now compiles and reports its
