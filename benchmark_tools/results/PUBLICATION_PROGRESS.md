@@ -1,5 +1,31 @@
 # Publication Progress
 
+## TreeFam-A Native Count Audit (2026-09-17)
+
+Previous turn progressed strict docs/claim corrections, pushedf9fb8ba. Re-read
+objective; returned to primary QfO statistical requirements. TreeFam-A is one
+pooled native case, unlike18SwissTrees cases. Inspected generator merges all
+source trees' relation tables and retains no original family label in raw rows;
+the serialized tree field is only the last loop tree. Local qfo_benchmark file
+inventory found no source.nhx or treefam2reference mapping. Family resampling
+requires recovery/validation, not invented independent pair observations.
+
+Implemented pinned native/container/reference count audit. Initial mapped/raw
+member equality failed: Darwin verifies11,140mapped proteins but11,130relation
+endpoints, with10isolated reference members. A first endpoint-set algorithm
+timed out60s; table-based collection completes. Final audit covers79,320relations
+per stage with identical reference truth and represented member sets. P/R and
+harmonic F1 reconstructed using raw/2+1 match all four admitted native endpoints
+within5e-8. No new scores, intervals, reruns or method changes introduced.
+
+`QFO_TREEFAM_COUNT_AUDIT_20260917.md` documents counts, failures, scoring semantics
+and the unresolved resampling unit; `qfo_treefam_counts_20260917.json` pins raw
+artifacts, reference, scorer and independent Darwin inventory.13focusedtests
+pass. Family-level uncertainty and the other QfO challenges remain open.
+DGX21656_4verifiedRUNNING23:12at initial poll;fourcomplete,22queued. No restart.
+Continue original scope: source-family recovery, remaining QfO/error evidence,
+matched timing admission, portability/licenses and release/archive package.
+
 ## Strict Documentation Build and Alert Closure (2026-09-17)
 
 Previous continuation remediated docs dependencies and pushed6ba1c6d; this

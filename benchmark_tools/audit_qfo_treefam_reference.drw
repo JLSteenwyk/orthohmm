@@ -1,0 +1,18 @@
+ReadProgram('/benchmark/lib/darwinit'):
+ReadProgram(reference):
+for name in Indices(ReconciledTrees) do
+    rels := ReconciledTrees[name,'Relations']:
+    forward := reverse := 0:
+    incident := table():
+    for rel in Indices(rels) do
+        incident[rel[1]] := true:
+        incident[rel[2]] := true:
+        if rel[1]<rel[2] then forward := forward+1:
+        else reverse := reverse+1: fi:
+    od:
+    incident := {op(Indices(incident))}:
+    printf('TREEFAM_REFERENCE\t%s\t%d\t%d\t%d\t%d\t%d\n',name,
+           length(ReconciledTrees[name,'MappedProts']),forward,reverse,
+           length(incident),length(minus(incident,ReconciledTrees[name,'MappedProts']))):
+od:
+exit(0):

@@ -44,6 +44,11 @@ evidence that an experiment completed or a biological hypothesis is true.
 
 ## Current Execution Status
 
+- [TreeFam-A pooled count audit](QFO_TREEFAM_COUNT_AUDIT_20260917.md) reproduces
+  all four recovered-stage native endpoints. Its79,320relations carry one
+  pooled case label; family-level uncertainty still requires validated original
+  family mapping. Ten mapped proteins have no reference relations, not missing
+  predictions. Do not transfer SwissTrees resampling assumptions.
 - Recovered QfO scoring21548_0..3 and admission21584 are all COMPLETED0:0.
   [Stage results](qfo_recovered_stage_summary_20260917.json) and the SwissTrees
   interval audit are complete; uncertainty for the other challenges remains open.

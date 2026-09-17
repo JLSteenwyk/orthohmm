@@ -1,0 +1,170 @@
+{
+  "checked_inputs": [
+    {
+      "bytes": 150840,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_recovered_assessment_admitted_20260917.json",
+      "sha256": "89b683d0fc7fe9964ce5b6182832bb8eb28758fad3f6bbb4d706926143805956"
+    },
+    {
+      "bytes": 53297152,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/container_cache/qfobenchmark-darwin-2022.1.img",
+      "sha256": "abed2b0ff8bb033a2372d0cd5282fd1d6c8ab5fa07496afc48c82f54ed65ea21"
+    },
+    {
+      "bytes": 1998195,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/ReconciledTrees_TreeFam-A.drw",
+      "sha256": "6f419f96886e5cf14ac889a1437cdb2655140cb8fd281f6bb5f8e0baa69d23b3"
+    },
+    {
+      "bytes": 7629,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/RefPhyloTest.drw",
+      "sha256": "262c8d1f06527461e11391682ccaccc637675f84a5064c1658b80bf1b956bd51"
+    },
+    {
+      "bytes": 15312,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/generateData/AddReconciledTree.drw",
+      "sha256": "83892182292bd5cf0cfe6c1bf366ee0ba3a2e7b8c68a20dfea0a669c743d07cf"
+    },
+    {
+      "bytes": 683,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_qfo_treefam_reference.drw",
+      "sha256": "3d06a2ec6e16068f449d7cc01e94dd0c3b0cb108473423d84cce1d06ff934aec"
+    },
+    {
+      "bytes": 398558,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_0/results/TreeFam-A/RefPhylo-TreeFam-A_ohmm-checked-v2-0_eba6e1dd9766_raw.txt.gz",
+      "sha256": "686d644fc081f77eb33f05cdc5db5b7369169d11c25f8f910026f11569751291"
+    },
+    {
+      "bytes": 396378,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_1/results/TreeFam-A/RefPhylo-TreeFam-A_ohmm-checked-v2-1_93ae887d1945_raw.txt.gz",
+      "sha256": "02d7339525b7235f237080fbe44a6f43b103662afea48d86e7d16cc2ec4f2959"
+    },
+    {
+      "bytes": 398583,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_2/results/TreeFam-A/RefPhylo-TreeFam-A_ohmm-checked-v2-2_2f387fc87c24_raw.txt.gz",
+      "sha256": "d78dbf3939c7c85e52cd552f1f5c69ff9d613a3801ab728842f31e01ae3d4808"
+    },
+    {
+      "bytes": 396377,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_3/results/TreeFam-A/RefPhylo-TreeFam-A_ohmm-checked-v2-3_2ca243ba5bb3_raw.txt.gz",
+      "sha256": "67524b71f8f0e987cc92e1f767e3fe80d66c4c34e9d654f3c03cc6fd75c2bb3c"
+    }
+  ],
+  "count_conversion": "raw one-direction count / 2 + 1, one prior for the entire pooled case",
+  "family_level_uncertainty": "not_identifiable_from_retained_case_labels",
+  "limitations": [
+    "TreeFam-A has one pooled native case, not one case per original family.",
+    "Original source-family mapping must be recovered and validated before family resampling.",
+    "A single-case bootstrap is degenerate; independent-pair resampling ignores dependence.",
+    "Reference-graph components have not been established as original independent families.",
+    "These are count and reference-consistency checks, not significance or superiority evidence.",
+    "Current raw hashes and generator source are retrospective provenance, not execution-time attestations."
+  ],
+  "orientation_evidence": {
+    "command": [
+      "singularity",
+      "exec",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/container_cache/qfobenchmark-darwin-2022.1.img",
+      "darwin",
+      "-E"
+    ],
+    "stderr": "",
+    "stdout": "Darwin: Sequence Searching Facility\nVersion 4.0, 2019-02-06\n  (c) E.T.H. Zurich\n> reference := '/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/ReconciledTrees_TreeFam-A.drw':\n> ReadProgram('/benchmark/lib/darwinit'):\n> ReadProgram(reference):\n> for name in Indices(ReconciledTrees) do\n>     rels := ReconciledTrees[name,'Relations']:\n>     forward := reverse := 0:\n>     incident := table():\n>     for rel in Indices(rels) do\n>         incident[rel[1]] := true:\n>         incident[rel[2]] := true:\n>         if rel[1]<rel[2] then forward := forward+1:\n>         else reverse := reverse+1: fi:\n>     od:\n>     incident := {op(Indices(incident))}:\n>     printf('TREEFAM_REFERENCE\\t%s\\t%d\\t%d\\t%d\\t%d\\t%d\\n',name,\n>            length(ReconciledTrees[name,'MappedProts']),forward,reverse,\n>            length(incident),length(minus(incident,ReconciledTrees[name,'MappedProts']))):\n> od:\nTREEFAM_REFERENCE\tTreeFamA\t11140\t79320\t0\t11130\t0\n> exit(0):\n    0.54 secs of cpu used\n"
+  },
+  "reference_case": "TreeFamA",
+  "reference_cases": 1,
+  "reference_members": 11140,
+  "reference_members_without_relations": 10,
+  "reference_relations": 79320,
+  "relation_incident_members": 11130,
+  "shared_count_reader": {
+    "bytes": 9904,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_qfo_swiss_counts.py",
+    "sha256": "ff8e5314c98bdffce54732df94611e9d340d854e70392358c495b636b67452ae"
+  },
+  "source": {
+    "bytes": 6694,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_qfo_treefam_counts.py",
+    "sha256": "f2496b8804d85037aea50169551856f981166d3fd0c095798a870d3c4820a8ae"
+  },
+  "stages": [
+    {
+      "counts_without_prior": {
+        "FN": 14701,
+        "FP": 12552,
+        "TN": 23226,
+        "TP": 28841
+      },
+      "native_statistics_with_prior": {
+        "F1": 0.6791142295421635,
+        "PPV": 0.6967413097567456,
+        "TPR": 0.6623570477196528
+      },
+      "raw": {
+        "bytes": 398558,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_0/results/TreeFam-A/RefPhylo-TreeFam-A_ohmm-checked-v2-0_eba6e1dd9766_raw.txt.gz",
+        "sha256": "686d644fc081f77eb33f05cdc5db5b7369169d11c25f8f910026f11569751291"
+      },
+      "stage": "multipass"
+    },
+    {
+      "counts_without_prior": {
+        "FN": 24039,
+        "FP": 4584,
+        "TN": 31194,
+        "TP": 19503
+      },
+      "native_statistics_with_prior": {
+        "F1": 0.5767553262267695,
+        "PPV": 0.8096384541945125,
+        "TPR": 0.447917145087953
+      },
+      "raw": {
+        "bytes": 396378,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_1/results/TreeFam-A/RefPhylo-TreeFam-A_ohmm-checked-v2-1_93ae887d1945_raw.txt.gz",
+        "sha256": "02d7339525b7235f237080fbe44a6f43b103662afea48d86e7d16cc2ec4f2959"
+      },
+      "stage": "multipass_refined"
+    },
+    {
+      "counts_without_prior": {
+        "FN": 14683,
+        "FP": 12614,
+        "TN": 23164,
+        "TP": 28859
+      },
+      "native_statistics_with_prior": {
+        "F1": 0.6788986509532715,
+        "PPV": 0.6958314246449839,
+        "TPR": 0.6627704037110183
+      },
+      "raw": {
+        "bytes": 398583,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_2/results/TreeFam-A/RefPhylo-TreeFam-A_ohmm-checked-v2-2_2f387fc87c24_raw.txt.gz",
+        "sha256": "d78dbf3939c7c85e52cd552f1f5c69ff9d613a3801ab728842f31e01ae3d4808"
+      },
+      "stage": "strict_profiles"
+    },
+    {
+      "counts_without_prior": {
+        "FN": 24034,
+        "FP": 4643,
+        "TN": 31135,
+        "TP": 19508
+      },
+      "native_statistics_with_prior": {
+        "F1": 0.5763578085995775,
+        "PPV": 0.8077002690954254,
+        "TPR": 0.4480319661966656
+      },
+      "raw": {
+        "bytes": 396377,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_3/results/TreeFam-A/RefPhylo-TreeFam-A_ohmm-checked-v2-3_2ca243ba5bb3_raw.txt.gz",
+        "sha256": "67524b71f8f0e987cc92e1f767e3fe80d66c4c34e9d654f3c03cc6fd75c2bb3c"
+      },
+      "stage": "strict_profiles_refined"
+    }
+  ],
+  "status": "pooled_treefam_counts_verified"
+}

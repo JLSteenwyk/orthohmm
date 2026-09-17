@@ -612,6 +612,18 @@ annotated error strata, mechanistic tracing, more realistic evolutionary
 conditions and the QfO parameter panel, matched resource scaling,
 and deeper biological application mechanism tracing remain required.
 
+### TreeFam-A Pooled Count Audit
+
+The separate [TreeFam-A count audit](QFO_TREEFAM_COUNT_AUDIT_20260917.md)
+reproduced all four recovered-stage native endpoints from79,320raw reference
+relations. This challenge stores one pooled case, not separately labeled
+families. Of11,140mapped reference proteins,11,130occur in relations; ten are
+isolated reference members and do not represent failed predictions. Native
+confusion counts equal raw one-direction counts divided by two plus one prior
+per pooled category. Appropriate family-level uncertainty remains unresolved
+until original source-family mappings are recovered and validated. No
+independent-pair bootstrap or degenerate single-case interval is substituted.
+
 ### Prespecified Whole-Genome-Duplicate Application
 
 The frozen application retained all 240 experimental duplicate pairs, of which
