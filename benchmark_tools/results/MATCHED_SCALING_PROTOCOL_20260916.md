@@ -65,3 +65,24 @@ Results cannot alone establish general scalability or extrapolation to QfO-sized
 inputs. Broader dataset coverage and existing resource limitations remain part of
 the publication completion audit. Prepared inputs or passing collector tests are
 not evidence that the scaling experiments have completed.
+
+## Accounting Feasibility Check (17 September)
+
+The read-only `slurm_resource_snapshot.py` now verifies a process's requested
+Slurm job/step subtree, reads cgroup-v2 CPU/memory counters and inherited job
+memory limits, and samples RSS for its descendant processes. It neither changes
+limits nor resets peaks nor moves a process out of Slurm. The
+[QfO live snapshot](qfo_checked_full_resource_snapshot_20260917.json) confirms
+these interfaces are readable on this machine; this is not a scaling result.
+
+The kernel's `cpu.stat` counters include descendants. Its memory accounting
+includes charged file-cache and kernel allocations; `memory.peak` reflects the
+peak since creation or reset, not necessarily the inference interval. These
+quantities must remain distinct from sampled summed process RSS, which is
+non-atomic and can count shared pages repeatedly.
+[Linux cgroup-v2 documentation](https://www.kernel.org/doc/html/latest/admin-guide/cgroup-v2.html).
+
+A time-series collector, interval/stage boundaries, host-workload monitoring,
+timeout/failure accounting and end-to-end tests are still required before the
+27 timing runs. An anchor's task subtree does not necessarily contain every
+Slurm step in a job; record the scope rather than labeling it whole-job memory.

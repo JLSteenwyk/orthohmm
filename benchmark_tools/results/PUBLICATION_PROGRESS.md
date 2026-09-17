@@ -3937,3 +3937,37 @@ an existing admission directory is never reused. Fifteen inventory tests pass,
 covering incomplete/failed/wrong-job/wrong-order/changed-parameter/scored runs,
 absent HMM profiles and existing-output rejection. Full suite:1,411 passed in35.75s.
 No output has yet been admitted, and no benchmark score/default has changed.
+
+### Read-only Slurm resource-accounting feasibility (2026-09-17)
+
+Previous continuation progressed independent full-replay admission7418845.
+Re-read objective and confirmed21329 still RUNNING at00:06:11, same initial
+clustering stage. Advanced the separate practical-efficiency requirement while
+it runs. scontrol listpids identified anchor3587494 and two descendants inside
+/system.slice/slurmstepd.scope/job_21329/step_batch/user/task_0. No process moved,
+limit changed, cgroup peak reset, or unrelated workload stopped.
+
+Added slurm_resource_snapshot.py: validates exact requested job/step scope and
+unified cgroup, retains raw/keyed cpu.stat, memory.current/peak/stat/events,
+effective cpuset and memory limits through job ancestry, and samples descendant
+RSS with process identity/membership checks and explicit race/error records.
+CPU is cumulative microseconds; cgroup peak is since creation or last reset, not
+an inference-only measurement. Summed RSS is non-atomic and may double-count
+shared pages; cache/kernel cgroup charges are not RSS. Host isolation is not
+established by this collector. Updated matched-scaling protocol accordingly.
+
+Live snapshot at2026-09-17T14:39:33.689029+00:00 retained three processes, no
+sampling errors,32 effective cgroup CPUs and192GiB inherited memory limits.
+Reported cgroup peak6,886,125,568 bytes; summed sampled RSS6,456,483,840 bytes;
+cumulative CPU575,346,781 microseconds. These are partial-run diagnostic values,
+not final costs or speedup evidence. Snapshot:
+benchmark_tools/results/qfo_checked_full_resource_snapshot_20260917.json.
+Original observation preserved separately; v2 corrects peak terminology to
+allow creation-or-reset rather than asserting an unverified reset history.
+
+Nineteen focused tests pass for scope/path guards, malformed counters/cpusets,
+raw preservation and distinct memory quantities. Full1,430 tests passed36.64s;
+nineteen focused tests rerun after the peak-field terminology correction.
+Time-series monitoring, controlled workload gates, stage timing, failure/timeout
+accounting and actual27-run scaling execution remain outstanding. No new
+scientific inference was launched and no accuracy/default changed.

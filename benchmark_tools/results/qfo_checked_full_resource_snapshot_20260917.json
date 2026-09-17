@@ -1,0 +1,190 @@
+{
+  "ancestor_limits": [
+    {
+      "memory_max": "max",
+      "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_21329/step_batch/user/task_0"
+    },
+    {
+      "memory_max": "206158430208",
+      "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_21329/step_batch/user"
+    },
+    {
+      "memory_max": "max",
+      "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_21329/step_batch"
+    },
+    {
+      "memory_max": "206158430208",
+      "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_21329"
+    }
+  ],
+  "collection_seconds": 0.0030230720003601164,
+  "job_id": 21329,
+  "limitations": [
+    "Read-only snapshot, not a completed timing run or historical peak-RSS reconstruction.",
+    "Cgroup memory includes charged file cache and kernel memory; it is not process RSS.",
+    "Cgroup peak is since creation or its last reset; this collector never resets it. CPU values are cumulative microseconds.",
+    "Process RSS is a non-atomic sample and shared pages may be counted more than once; short-lived processes may be missed.",
+    "Sampling errors make the RSS sum incomplete. This does not verify host quietness or exclusivity.",
+    "Scope is the anchor process subtree, not necessarily the entire job. Ancestor limits shown only through the job root."
+  ],
+  "metrics": {
+    "cpu": {
+      "burst_usec": 0,
+      "core_sched.force_idle_usec": 0,
+      "nr_bursts": 0,
+      "nr_periods": 0,
+      "nr_throttled": 0,
+      "system_usec": 12767554,
+      "throttled_usec": 0,
+      "usage_usec": 575346781,
+      "user_usec": 562579227
+    },
+    "effective_cpus": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119
+    ],
+    "memory_current_bytes": 5399519232,
+    "memory_events": {
+      "high": 0,
+      "low": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_group_kill": 0,
+      "oom_kill": 0
+    },
+    "memory_max_bytes": null,
+    "memory_peak_since_creation_or_reset_bytes": 6886125568,
+    "memory_stat": {
+      "active_anon": 4539375616,
+      "active_file": 0,
+      "anon": 4539375616,
+      "anon_thp": 811597824,
+      "file": 820510720,
+      "file_dirty": 0,
+      "file_mapped": 386383872,
+      "file_thp": 0,
+      "file_writeback": 0,
+      "inactive_anon": 0,
+      "inactive_file": 820510720,
+      "kernel": 39456768,
+      "kernel_stack": 540672,
+      "pagetables": 13496320,
+      "percpu": 9312,
+      "pgactivate": 0,
+      "pgdeactivate": 0,
+      "pgfault": 2784872,
+      "pglazyfree": 0,
+      "pglazyfreed": 0,
+      "pgmajfault": 0,
+      "pgrefill": 0,
+      "pgscan": 0,
+      "pgscan_direct": 0,
+      "pgscan_khugepaged": 0,
+      "pgscan_kswapd": 0,
+      "pgsteal": 0,
+      "pgsteal_direct": 0,
+      "pgsteal_khugepaged": 0,
+      "pgsteal_kswapd": 0,
+      "sec_pagetables": 0,
+      "shmem": 0,
+      "shmem_thp": 0,
+      "slab": 25307624,
+      "slab_reclaimable": 24438392,
+      "slab_unreclaimable": 869232,
+      "sock": 0,
+      "swapcached": 0,
+      "thp_collapse_alloc": 15,
+      "thp_fault_alloc": 6651,
+      "thp_swpout": 0,
+      "thp_swpout_fallback": 0,
+      "unevictable": 0,
+      "vmalloc": 0,
+      "workingset_activate_anon": 0,
+      "workingset_activate_file": 0,
+      "workingset_nodereclaim": 0,
+      "workingset_refault_anon": 0,
+      "workingset_refault_file": 0,
+      "workingset_restore_anon": 0,
+      "workingset_restore_file": 0,
+      "zswap": 0,
+      "zswapped": 0,
+      "zswpin": 0,
+      "zswpout": 0,
+      "zswpwb": 0
+    },
+    "raw": {
+      "cpu.stat": "usage_usec 575346781\nuser_usec 562579227\nsystem_usec 12767554\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+      "cpuset.cpus.effective": "8-23,104-119\n",
+      "memory.current": "5399519232\n",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+      "memory.max": "max\n",
+      "memory.peak": "6886125568\n",
+      "memory.stat": "anon 4539375616\nfile 820510720\nkernel 39456768\nkernel_stack 540672\npagetables 13496320\nsec_pagetables 0\npercpu 9312\nsock 0\nvmalloc 0\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 386383872\nfile_dirty 0\nfile_writeback 0\nswapcached 0\nanon_thp 811597824\nfile_thp 0\nshmem_thp 0\ninactive_anon 0\nactive_anon 4539375616\ninactive_file 820510720\nactive_file 0\nunevictable 0\nslab_reclaimable 24438392\nslab_unreclaimable 869232\nslab 25307624\nworkingset_refault_anon 0\nworkingset_refault_file 0\nworkingset_activate_anon 0\nworkingset_activate_file 0\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgscan 0\npgsteal 0\npgscan_kswapd 0\npgscan_direct 0\npgscan_khugepaged 0\npgsteal_kswapd 0\npgsteal_direct 0\npgsteal_khugepaged 0\npgfault 2784872\npgmajfault 0\npgrefill 0\npgactivate 0\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 6651\nthp_collapse_alloc 15\nthp_swpout 0\nthp_swpout_fallback 0\n"
+    }
+  },
+  "pid": 3587494,
+  "proc_cgroup": "0::/system.slice/slurmstepd.scope/job_21329/step_batch/user/task_0\n",
+  "processes": [
+    {
+      "cgroup": "/system.slice/slurmstepd.scope/job_21329/step_batch/user/task_0",
+      "created": 1789655402.92,
+      "name": "python",
+      "pid": 3587494,
+      "rss_bytes": 43728896
+    },
+    {
+      "cgroup": "/system.slice/slurmstepd.scope/job_21329/step_batch/user/task_0",
+      "created": 1789655413.81,
+      "name": "python",
+      "pid": 3587814,
+      "rss_bytes": 2050912256
+    },
+    {
+      "cgroup": "/system.slice/slurmstepd.scope/job_21329/step_batch/user/task_0",
+      "created": 1789655433.09,
+      "name": "python",
+      "pid": 3588337,
+      "rss_bytes": 4361842688
+    }
+  ],
+  "psutil_version": "7.2.2",
+  "sampled_sum_process_rss_bytes": 6456483840,
+  "sampling_errors": [],
+  "scope": "/system.slice/slurmstepd.scope/job_21329/step_batch/user/task_0",
+  "source": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+    "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+  },
+  "status": "resource_snapshot",
+  "timestamp_utc": "2026-09-17T14:39:33.689029+00:00"
+}
