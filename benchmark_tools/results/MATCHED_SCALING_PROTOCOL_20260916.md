@@ -217,3 +217,38 @@ does not establish acceptable overhead for every command or a controlled timing
 window. None of the27 scientific scaling runs has started. Raw process
 inventories remain local. Snapshot SHA256:
 130d2d4ea52f3731baa6ac4b835251c03d6533a3e7ca8ea642dd82ae89eb6e47.
+
+## Native Command Boundaries Prepared
+
+The [27-command manifest](publication_scaling_commands_20260917.json) is now
+prepared, SHA256
+25345e7a5d49e7474b09188498dc4760b298512266cd21510fba56ad6401e53d.
+Its source, frozen inputs, baseline environment, native profile smoke,
+tool-resolution and source hashes passed preflight. All27 unique inference
+destinations are still absent; no scaling inference has run.
+
+The baseline OrthoHMM harness executes native inference and then hashes inputs,
+outputs and source files and counts output lines. Timing the entire harness
+would mix inference with external reporting. The manifest therefore records
+both the reference harness configuration and its equivalent direct native CLI
+command. Tests intercept the actual harness subprocess launch and require exact
+argument equality for high-sensitivity and satellite_v2. The tested harness
+bytes match the frozen core harness SHA256
+47afa3439fea5e0c6c9ac9d62a1c1f819394ba56ec65a55f7192ac9407f918dc.
+
+Only total CPU allocation changes from the admitted simulation configuration:
+OrthoHMM `-c32` retains `--threads_per_worker4`, and OrthoFinder uses `-t32 -a32`.
+OrthoHMM uses the frozen core working directory/PYTHONPATH, native metrics output,
+and unchanged scientific settings, including inferred satellite_v2 phylogeny.
+The timer must encompass native CLI startup through exit and native file writing,
+while input copying, source/output hashing, conversion and scoring remain
+separate. OrthoFinder gets fresh per-run input copies and no restart flags.
+
+Independent native validation remains required: the existing simulation
+OrthoHMM validator expects harness-added provenance, while its OrthoFinder
+input-copy check assumes `.fasta` basenames. Scaling retains real `.fa` inputs
+and bypasses the external harness. Do not waive these checks, rename inputs
+silently, or alter old frozen validators. Prepare a scaling-specific validator
+for direct native outputs and caller-recorded before/after provenance before
+authorizing runs. Controlled scheduling and overhead assessment also remain
+outstanding. This manifest is preparation evidence, not timing results.

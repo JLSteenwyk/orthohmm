@@ -4684,3 +4684,27 @@ resource_host_cadence_smoke_20260917.json SHA130d2d4ea52f3731baa6ac4b835251c03d6
 No scientific timing or quiet-window claim; monitor overhead remains included
 in4.5153s cgroupCPU. Native scaling command freeze and controlled scheduling
 remain due. QfO21548_0 confirmedrunning42:24 during smoke;21584pendingdependency.
+
+### Native Scaling Commands Prepared (2026-09-17)
+
+Previous continuation progressed lower-overhead observer and actual cadence
+smoke, pushed65b8b04/8b1c601. Re-read objective, confirmed21548_0live44:22,
+later48:21;21584pending. No restart or partial scoring inspection.
+
+Identified asymmetric timing boundary: frozen OrthoHMM reporting harness hashes
+and counts outputs after native inference. Added prepare_scaling_commands.py
+to translate its scientific settings into exact native CLI commands, retaining
+reference configurations separately and excluding reporting from inference time.
+Seven focused tests pass; direct commands match actual harness subprocess argv
+for both modes. Current/frozen harness source hashes are identical. All27run
+identities/order/fresh destinations preserved;32CPU and baseline4workerthreads
+explicitly recorded, with OrthoFinder32search/32analysis threads.
+
+Prepared publication_scaling_commands_20260917.json after baseline source,
+native runtime/profile smoke, package inventory, tool-resolution and fullinput
+checks. SHA25345e7a5d49e7474b09188498dc4760b298512266cd21510fba56ad6401e53d.
+All linked provenance hashes independently reread; all27outputpaths still absent.
+No inference launched. Scaling-native admission must replace harness-dependent
+provenance expectations and handle real.fa inputs; frozen simulation validators
+remain unchanged. Controlled scheduling and overhead assessment remain due.
+Fullunit1,729tests passed43.30s; no scientific defaults or frozen environments changed.
