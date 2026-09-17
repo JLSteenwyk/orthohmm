@@ -698,3 +698,43 @@ historical child attribution and controlled performance remain unestablished.
 All36 focused probe/output/runtime tests pass, including6 new probe tests.
 The prospective20CPU96GiB freeze and27-run executor still need finalization;
 zero scientific timing runs have started.
+
+## DGX Command Records Prepared
+
+prepare_dgx_scaling_plan.py translated all27 frozen native commands to the
+dedicated project paths and20CPU allocation. It compares each generated
+command against the original frozen command with only declared absolute-path
+mappings and32-to20 CPU flags allowed. Run identities, repeats, nested dataset
+membership, original basenames, input bytes/hashes and protein/sequence counts
+must match. Threads per OrthoHMM worker remain4; all scientific options are
+unchanged. Source revision remains7f3a9e40dd7e79f842cc2c11fb8b548f9a802806.
+
+Prepared manifest dgx_scaling_commands_20260917.json SHA256
+7096348236f8372ef7f6ad12a3e829eae3dfee812b17c3b0bdd582480538ff1b.
+It records27 unique native output and measurement destinations beneath
+/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1,20CPU96GiB,
+exclusive spark allocation, concurrency1, CPU-only execution and24hours per
+native run. OrthoFinder gets fresh per-run input copies; OrthoHMM output
+directories must be created empty before launch. No search reuse is allowed.
+
+The planned environments preserve MKL/OMP/OPENBLAS threads1, PYTHONHASHSEED0,
+PYTHONUNBUFFERED1 and a translated frozen-core PYTHONPATH. Method-specific PATHs
+separate OrthoHMM FastTree2.2.0 from OrthoFinder FastTree2.1.11 and its exact
+DIAMOND/MCL/FAMSA/FastME versions. Python/package/native/source identity must
+still be frozen and checked at the destination; a list of paths is not that
+verification. Inherited conda/affinity overrides must be cleared explicitly.
+
+The original per-dataset manifest lists files alphabetically, while the
+transfer lists them in subset-selection order. The sets and bytes match;
+metadata order is not native enumeration. Frozen OrthoHMM fetch_fasta_files
+uses unsorted glob, so its actual DGX file enumeration must be recorded and
+checked before every run. Do not silently change the frozen core to sort,
+or claim metadata listing order proves identical execution order across hosts.
+
+All23 plan/command tests pass, including changed bytes, duplicated members,
+changed counts/options/CPU flags, unknown paths, method-specific tool paths
+and component-safe path mapping. This manifest explicitly sets
+execution_authorized=false and inference_started=false. Remaining gates
+include the complete overhead panel, remote environment/enumeration freeze,
+tested launch/admission workflow and GNU-time/scheduler companion accounting.
+Preparing these records starts no scientific timing jobs.

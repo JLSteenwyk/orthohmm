@@ -1,0 +1,3283 @@
+{
+  "baseline": {
+    "bytes": 488540,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_variable_native_methods_20260916.json",
+    "sha256": "bf677728cf9312edd9755d9ac1ceefbce3abb8c3848d43413631dc00ca00eb2f"
+  },
+  "core_commit": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+  "core_root": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+  "environment_overrides": {
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONHASHSEED": "0",
+    "PYTHONPATH": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+    "PYTHONUNBUFFERED": "1"
+  },
+  "environment_paths": {
+    "orthofinder": [
+      "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/bin",
+      "/home/jlsteenwyk/projects/orthohmm-publication/diamond-2.0.13-build-v2",
+      "/home/jlsteenwyk/projects/orthohmm-publication/mcl-prefix-v3/bin",
+      "/home/jlsteenwyk/projects/orthohmm-publication/external-prefix-v1/fasttree-2.1.11",
+      "/home/jlsteenwyk/projects/orthohmm-publication/external-prefix-v1/mafft-7.525/bin",
+      "/home/jlsteenwyk/projects/orthohmm-publication/famsa-source-v1",
+      "/home/jlsteenwyk/projects/orthohmm-publication/fastme-prefix-v1/bin",
+      "/usr/bin",
+      "/bin"
+    ],
+    "orthohmm": [
+      "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin",
+      "/home/jlsteenwyk/projects/orthohmm-publication/external-prefix-v1/mafft-7.525/bin",
+      "/home/jlsteenwyk/projects/orthohmm-publication/external-prefix-v1/fasttree-2.2.0",
+      "/usr/bin",
+      "/bin"
+    ]
+  },
+  "execution_authorized": false,
+  "helper_sources": [
+    {
+      "bytes": 6742,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_scaling_commands.py",
+      "sha256": "1b8b82402067c4a18eb37a82b29eb63e6813e6a085276eaa0001c42afcaa6389"
+    },
+    {
+      "bytes": 12607,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_simulation_methods.py",
+      "sha256": "ab3ecbdd1a35fd3e3c08774c48d7f633ed2e2a2fafcfc49b48f658d6ed11db63"
+    },
+    {
+      "bytes": 7954,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/benchmark_production.py",
+      "sha256": "47afa3439fea5e0c6c9ac9d62a1c1f819394ba56ec65a55f7192ac9407f918dc"
+    }
+  ],
+  "inference_started": false,
+  "inputs": {
+    "bytes": 10644,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/dgx_scaling_inputs_20260917.json",
+    "sha256": "fa95fa60494c12d55f3bc277629c842ddbd2646a691c973882059708714e815e"
+  },
+  "limitations": [
+    "Paths and settings are prepared locally; this does not inspect remote state or authorize execution.",
+    "Manifest listing order differs from native file enumeration: frozen OrthoHMM fetch_fasta_files uses unsorted glob.",
+    "ARM timings must not be pooled with historical x86 timings.",
+    "Nested taxon composition co-varies with dataset size; no general scaling law is implied."
+  ],
+  "measurement_plan": {
+    "boundary": "Native startup through exit; preparation, hashing, conversion and scoring separate",
+    "host_interval_s": 30,
+    "resource_interval_s": 1
+  },
+  "original_commands": {
+    "bytes": 151859,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_scaling_commands_20260917.json",
+    "sha256": "25345e7a5d49e7474b09188498dc4760b298512266cd21510fba56ad6401e53d"
+  },
+  "output_root": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1",
+  "remaining_gates": [
+    "Completed overhead-panel admission, not calibration alone",
+    "Remote interpreter/package/native/core/companion-file identity freeze and before/after verification",
+    "Actual frozen-tool FASTA enumeration snapshot on DGX, checked unchanged before every run",
+    "Remote input hashes and absent output directories before every run",
+    "Tested execution wrapper with separate preparation/native/conversion/scoring boundaries",
+    "GNU time and scheduler companion accounting with validated measurement boundary",
+    "Independent resource/host/native-output admission and preserved failure inventory"
+  ],
+  "resource_plan": {
+    "concurrency": 1,
+    "cpus": 20,
+    "exclusive": true,
+    "fresh_output_each_run": true,
+    "gpu": false,
+    "host": "spark-7ff0",
+    "memory_gib": 96,
+    "partition": "spark",
+    "shared_search_cache": false,
+    "wall_limit_hours_per_run": 24
+  },
+  "root": "/home/jlsteenwyk/projects/orthohmm-publication",
+  "runs": [
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+          "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2/benchmark_tools/benchmark_production.py",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_00/orthohmm_high_sensitivity",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_00/orthohmm_high_sensitivity.json",
+          "--cpu",
+          "20",
+          "--threads-per-worker",
+          "4",
+          "--matrix",
+          "BLOSUM62",
+          "--evalue",
+          "0.0001",
+          "--clustering",
+          "leiden",
+          "--cpm-resolution",
+          "0.1",
+          "--refinement-profile",
+          "default",
+          "--accuracy-profile",
+          "high_sensitivity"
+        ],
+        "metrics": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_00/orthohmm_high_sensitivity.json",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_00/orthohmm_high_sensitivity",
+        "semantics": "group-derived cross-species pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4",
+        "inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          }
+        ],
+        "proteins": 73266,
+        "proteomes": 4,
+        "sequence_characters": 36474860
+      },
+      "environment_role": "orthohmm",
+      "index": 0,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_00/measurement",
+      "method": "orthohmm_high_sensitivity",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+        "-m",
+        "orthohmm",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4",
+        "-o",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_00/orthohmm_high_sensitivity",
+        "-c",
+        "20",
+        "--threads_per_worker",
+        "4",
+        "-x",
+        "BLOSUM62",
+        "-e",
+        "0.0001",
+        "--clustering",
+        "leiden",
+        "--cpm_resolution",
+        "0.1",
+        "--refinement_profile",
+        "default",
+        "--accuracy_profile",
+        "high_sensitivity",
+        "--metrics_json",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_00/orthohmm_high_sensitivity.json",
+        "--stop",
+        "infer"
+      ],
+      "native_method": "orthohmm_high_sensitivity",
+      "preparation": "create fresh empty native output directory before inference",
+      "proteomes": 4,
+      "repeat": 0
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+          "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2/benchmark_tools/benchmark_production.py",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_01/orthohmm_satellite_v2",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_01/orthohmm_satellite_v2.json",
+          "--cpu",
+          "20",
+          "--threads-per-worker",
+          "4",
+          "--matrix",
+          "BLOSUM62",
+          "--evalue",
+          "0.0001",
+          "--clustering",
+          "leiden",
+          "--cpm-resolution",
+          "0.1",
+          "--refinement-profile",
+          "default",
+          "--accuracy-profile",
+          "high_sensitivity",
+          "--phylogeny",
+          "reconcile",
+          "--species-tree-mode",
+          "infer",
+          "--aligner",
+          "mafft",
+          "--tree-builder",
+          "FastTree",
+          "--phylogeny-candidates",
+          "satellite_v2",
+          "--phylogeny-root-rule",
+          "species_overlap",
+          "--phylogeny-pair-rule",
+          "positive_paralogy",
+          "--species-tree-rooting",
+          "min_variance"
+        ],
+        "metrics": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_01/orthohmm_satellite_v2.json",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_01/orthohmm_satellite_v2",
+        "semantics": "native phylogenetic ortholog pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4",
+        "inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          }
+        ],
+        "proteins": 73266,
+        "proteomes": 4,
+        "sequence_characters": 36474860
+      },
+      "environment_role": "orthohmm",
+      "index": 1,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_01/measurement",
+      "method": "orthohmm_satellite_v2",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+        "-m",
+        "orthohmm",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4",
+        "-o",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_01/orthohmm_satellite_v2",
+        "-c",
+        "20",
+        "--threads_per_worker",
+        "4",
+        "-x",
+        "BLOSUM62",
+        "-e",
+        "0.0001",
+        "--clustering",
+        "leiden",
+        "--cpm_resolution",
+        "0.1",
+        "--refinement_profile",
+        "default",
+        "--accuracy_profile",
+        "high_sensitivity",
+        "--metrics_json",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_01/orthohmm_satellite_v2.json",
+        "--stop",
+        "infer",
+        "--phylogeny",
+        "reconcile",
+        "--species_tree_mode",
+        "infer",
+        "--aligner",
+        "mafft",
+        "--tree_builder",
+        "FastTree",
+        "--phylogeny_candidates",
+        "satellite_v2",
+        "--phylogeny_root_rule",
+        "species_overlap",
+        "--phylogeny_pair_rule",
+        "positive_paralogy",
+        "--species_tree_rooting",
+        "min_variance"
+      ],
+      "native_method": "orthohmm_satellite_v2",
+      "preparation": "create fresh empty native output directory before inference",
+      "proteomes": 4,
+      "repeat": 0
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/bin/orthofinder",
+          "-f",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_02/orthofinder_full/input",
+          "-t",
+          "20",
+          "-a",
+          "20",
+          "-S",
+          "diamond"
+        ],
+        "copy_inputs_from": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4",
+        "copy_inputs_to": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_02/orthofinder_full/input",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_02/orthofinder_full",
+        "semantics": "native phylogenetic ortholog pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4",
+        "inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          }
+        ],
+        "proteins": 73266,
+        "proteomes": 4,
+        "sequence_characters": 36474860
+      },
+      "environment_role": "orthofinder",
+      "index": 2,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_02/measurement",
+      "method": "orthofinder_3_1_5_full",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/bin/orthofinder",
+        "-f",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_02/orthofinder_full/input",
+        "-t",
+        "20",
+        "-a",
+        "20",
+        "-S",
+        "diamond"
+      ],
+      "native_method": "orthofinder_full",
+      "preparation": "fresh original-basename input copies; native outputs must not exist",
+      "proteomes": 4,
+      "repeat": 0
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+          "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2/benchmark_tools/benchmark_production.py",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_03/orthohmm_satellite_v2",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_03/orthohmm_satellite_v2.json",
+          "--cpu",
+          "20",
+          "--threads-per-worker",
+          "4",
+          "--matrix",
+          "BLOSUM62",
+          "--evalue",
+          "0.0001",
+          "--clustering",
+          "leiden",
+          "--cpm-resolution",
+          "0.1",
+          "--refinement-profile",
+          "default",
+          "--accuracy-profile",
+          "high_sensitivity",
+          "--phylogeny",
+          "reconcile",
+          "--species-tree-mode",
+          "infer",
+          "--aligner",
+          "mafft",
+          "--tree-builder",
+          "FastTree",
+          "--phylogeny-candidates",
+          "satellite_v2",
+          "--phylogeny-root-rule",
+          "species_overlap",
+          "--phylogeny-pair-rule",
+          "positive_paralogy",
+          "--species-tree-rooting",
+          "min_variance"
+        ],
+        "metrics": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_03/orthohmm_satellite_v2.json",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_03/orthohmm_satellite_v2",
+        "semantics": "native phylogenetic ortholog pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8",
+        "inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          },
+          {
+            "bytes": 17020497,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Danio_rerio.GRCz11.pep.all.fa",
+            "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+          },
+          {
+            "bytes": 11930628,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Monodelphis_domestica.ASM229v1.pep.all.fa",
+            "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+          },
+          {
+            "bytes": 5797677,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Ciona_intestinalis.KH.pep.all.fa",
+            "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+          },
+          {
+            "bytes": 12782304,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+            "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+          }
+        ],
+        "proteins": 165168,
+        "proteomes": 8,
+        "sequence_characters": 81374087
+      },
+      "environment_role": "orthohmm",
+      "index": 3,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_03/measurement",
+      "method": "orthohmm_satellite_v2",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+        "-m",
+        "orthohmm",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8",
+        "-o",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_03/orthohmm_satellite_v2",
+        "-c",
+        "20",
+        "--threads_per_worker",
+        "4",
+        "-x",
+        "BLOSUM62",
+        "-e",
+        "0.0001",
+        "--clustering",
+        "leiden",
+        "--cpm_resolution",
+        "0.1",
+        "--refinement_profile",
+        "default",
+        "--accuracy_profile",
+        "high_sensitivity",
+        "--metrics_json",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_03/orthohmm_satellite_v2.json",
+        "--stop",
+        "infer",
+        "--phylogeny",
+        "reconcile",
+        "--species_tree_mode",
+        "infer",
+        "--aligner",
+        "mafft",
+        "--tree_builder",
+        "FastTree",
+        "--phylogeny_candidates",
+        "satellite_v2",
+        "--phylogeny_root_rule",
+        "species_overlap",
+        "--phylogeny_pair_rule",
+        "positive_paralogy",
+        "--species_tree_rooting",
+        "min_variance"
+      ],
+      "native_method": "orthohmm_satellite_v2",
+      "preparation": "create fresh empty native output directory before inference",
+      "proteomes": 8,
+      "repeat": 0
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/bin/orthofinder",
+          "-f",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_04/orthofinder_full/input",
+          "-t",
+          "20",
+          "-a",
+          "20",
+          "-S",
+          "diamond"
+        ],
+        "copy_inputs_from": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8",
+        "copy_inputs_to": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_04/orthofinder_full/input",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_04/orthofinder_full",
+        "semantics": "native phylogenetic ortholog pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8",
+        "inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          },
+          {
+            "bytes": 17020497,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Danio_rerio.GRCz11.pep.all.fa",
+            "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+          },
+          {
+            "bytes": 11930628,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Monodelphis_domestica.ASM229v1.pep.all.fa",
+            "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+          },
+          {
+            "bytes": 5797677,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Ciona_intestinalis.KH.pep.all.fa",
+            "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+          },
+          {
+            "bytes": 12782304,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+            "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+          }
+        ],
+        "proteins": 165168,
+        "proteomes": 8,
+        "sequence_characters": 81374087
+      },
+      "environment_role": "orthofinder",
+      "index": 4,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_04/measurement",
+      "method": "orthofinder_3_1_5_full",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/bin/orthofinder",
+        "-f",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_04/orthofinder_full/input",
+        "-t",
+        "20",
+        "-a",
+        "20",
+        "-S",
+        "diamond"
+      ],
+      "native_method": "orthofinder_full",
+      "preparation": "fresh original-basename input copies; native outputs must not exist",
+      "proteomes": 8,
+      "repeat": 0
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+          "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2/benchmark_tools/benchmark_production.py",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_05/orthohmm_high_sensitivity",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_05/orthohmm_high_sensitivity.json",
+          "--cpu",
+          "20",
+          "--threads-per-worker",
+          "4",
+          "--matrix",
+          "BLOSUM62",
+          "--evalue",
+          "0.0001",
+          "--clustering",
+          "leiden",
+          "--cpm-resolution",
+          "0.1",
+          "--refinement-profile",
+          "default",
+          "--accuracy-profile",
+          "high_sensitivity"
+        ],
+        "metrics": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_05/orthohmm_high_sensitivity.json",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_05/orthohmm_high_sensitivity",
+        "semantics": "group-derived cross-species pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8",
+        "inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          },
+          {
+            "bytes": 17020497,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Danio_rerio.GRCz11.pep.all.fa",
+            "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+          },
+          {
+            "bytes": 11930628,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Monodelphis_domestica.ASM229v1.pep.all.fa",
+            "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+          },
+          {
+            "bytes": 5797677,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Ciona_intestinalis.KH.pep.all.fa",
+            "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+          },
+          {
+            "bytes": 12782304,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+            "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+          }
+        ],
+        "proteins": 165168,
+        "proteomes": 8,
+        "sequence_characters": 81374087
+      },
+      "environment_role": "orthohmm",
+      "index": 5,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_05/measurement",
+      "method": "orthohmm_high_sensitivity",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+        "-m",
+        "orthohmm",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8",
+        "-o",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_05/orthohmm_high_sensitivity",
+        "-c",
+        "20",
+        "--threads_per_worker",
+        "4",
+        "-x",
+        "BLOSUM62",
+        "-e",
+        "0.0001",
+        "--clustering",
+        "leiden",
+        "--cpm_resolution",
+        "0.1",
+        "--refinement_profile",
+        "default",
+        "--accuracy_profile",
+        "high_sensitivity",
+        "--metrics_json",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_05/orthohmm_high_sensitivity.json",
+        "--stop",
+        "infer"
+      ],
+      "native_method": "orthohmm_high_sensitivity",
+      "preparation": "create fresh empty native output directory before inference",
+      "proteomes": 8,
+      "repeat": 0
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/bin/orthofinder",
+          "-f",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_06/orthofinder_full/input",
+          "-t",
+          "20",
+          "-a",
+          "20",
+          "-S",
+          "diamond"
+        ],
+        "copy_inputs_from": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12",
+        "copy_inputs_to": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_06/orthofinder_full/input",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_06/orthofinder_full",
+        "semantics": "native phylogenetic ortholog pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12",
+        "inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          },
+          {
+            "bytes": 17020497,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Danio_rerio.GRCz11.pep.all.fa",
+            "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+          },
+          {
+            "bytes": 11930628,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Monodelphis_domestica.ASM229v1.pep.all.fa",
+            "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+          },
+          {
+            "bytes": 5797677,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Ciona_intestinalis.KH.pep.all.fa",
+            "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+          },
+          {
+            "bytes": 12782304,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+            "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+          },
+          {
+            "bytes": 11973324,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Canis_familiaris.CanFam3.1.pep.all.fa",
+            "sha256": "0d87161a9990b9d8b0d56b4e71dfbe74c6016b0dda3352247b35d85501c33b33"
+          },
+          {
+            "bytes": 12880578,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Mus_musculus.GRCm38.pep.all.fa",
+            "sha256": "3b6e0a68688294135324824e1879de86c1715a9f3c655406f6ec8fcfdd75db1a"
+          },
+          {
+            "bytes": 10463972,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+            "sha256": "1f6ebacc342da127e4ab9c1a9cf7b627e8169df3cbc0d971d57655d974c8d9b2"
+          },
+          {
+            "bytes": 13576811,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Homo_sapiens.GRCh38.pep.all.fa",
+            "sha256": "bff5d1f0f259c801dc607045e4c13bfc759098f17d536b307c13a89a523569ac"
+          }
+        ],
+        "proteins": 251378,
+        "proteomes": 12,
+        "sequence_characters": 127798408
+      },
+      "environment_role": "orthofinder",
+      "index": 6,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_06/measurement",
+      "method": "orthofinder_3_1_5_full",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/bin/orthofinder",
+        "-f",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_06/orthofinder_full/input",
+        "-t",
+        "20",
+        "-a",
+        "20",
+        "-S",
+        "diamond"
+      ],
+      "native_method": "orthofinder_full",
+      "preparation": "fresh original-basename input copies; native outputs must not exist",
+      "proteomes": 12,
+      "repeat": 0
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+          "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2/benchmark_tools/benchmark_production.py",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_07/orthohmm_high_sensitivity",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_07/orthohmm_high_sensitivity.json",
+          "--cpu",
+          "20",
+          "--threads-per-worker",
+          "4",
+          "--matrix",
+          "BLOSUM62",
+          "--evalue",
+          "0.0001",
+          "--clustering",
+          "leiden",
+          "--cpm-resolution",
+          "0.1",
+          "--refinement-profile",
+          "default",
+          "--accuracy-profile",
+          "high_sensitivity"
+        ],
+        "metrics": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_07/orthohmm_high_sensitivity.json",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_07/orthohmm_high_sensitivity",
+        "semantics": "group-derived cross-species pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12",
+        "inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          },
+          {
+            "bytes": 17020497,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Danio_rerio.GRCz11.pep.all.fa",
+            "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+          },
+          {
+            "bytes": 11930628,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Monodelphis_domestica.ASM229v1.pep.all.fa",
+            "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+          },
+          {
+            "bytes": 5797677,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Ciona_intestinalis.KH.pep.all.fa",
+            "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+          },
+          {
+            "bytes": 12782304,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+            "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+          },
+          {
+            "bytes": 11973324,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Canis_familiaris.CanFam3.1.pep.all.fa",
+            "sha256": "0d87161a9990b9d8b0d56b4e71dfbe74c6016b0dda3352247b35d85501c33b33"
+          },
+          {
+            "bytes": 12880578,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Mus_musculus.GRCm38.pep.all.fa",
+            "sha256": "3b6e0a68688294135324824e1879de86c1715a9f3c655406f6ec8fcfdd75db1a"
+          },
+          {
+            "bytes": 10463972,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+            "sha256": "1f6ebacc342da127e4ab9c1a9cf7b627e8169df3cbc0d971d57655d974c8d9b2"
+          },
+          {
+            "bytes": 13576811,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Homo_sapiens.GRCh38.pep.all.fa",
+            "sha256": "bff5d1f0f259c801dc607045e4c13bfc759098f17d536b307c13a89a523569ac"
+          }
+        ],
+        "proteins": 251378,
+        "proteomes": 12,
+        "sequence_characters": 127798408
+      },
+      "environment_role": "orthohmm",
+      "index": 7,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_07/measurement",
+      "method": "orthohmm_high_sensitivity",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+        "-m",
+        "orthohmm",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12",
+        "-o",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_07/orthohmm_high_sensitivity",
+        "-c",
+        "20",
+        "--threads_per_worker",
+        "4",
+        "-x",
+        "BLOSUM62",
+        "-e",
+        "0.0001",
+        "--clustering",
+        "leiden",
+        "--cpm_resolution",
+        "0.1",
+        "--refinement_profile",
+        "default",
+        "--accuracy_profile",
+        "high_sensitivity",
+        "--metrics_json",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_07/orthohmm_high_sensitivity.json",
+        "--stop",
+        "infer"
+      ],
+      "native_method": "orthohmm_high_sensitivity",
+      "preparation": "create fresh empty native output directory before inference",
+      "proteomes": 12,
+      "repeat": 0
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+          "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2/benchmark_tools/benchmark_production.py",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_08/orthohmm_satellite_v2",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_08/orthohmm_satellite_v2.json",
+          "--cpu",
+          "20",
+          "--threads-per-worker",
+          "4",
+          "--matrix",
+          "BLOSUM62",
+          "--evalue",
+          "0.0001",
+          "--clustering",
+          "leiden",
+          "--cpm-resolution",
+          "0.1",
+          "--refinement-profile",
+          "default",
+          "--accuracy-profile",
+          "high_sensitivity",
+          "--phylogeny",
+          "reconcile",
+          "--species-tree-mode",
+          "infer",
+          "--aligner",
+          "mafft",
+          "--tree-builder",
+          "FastTree",
+          "--phylogeny-candidates",
+          "satellite_v2",
+          "--phylogeny-root-rule",
+          "species_overlap",
+          "--phylogeny-pair-rule",
+          "positive_paralogy",
+          "--species-tree-rooting",
+          "min_variance"
+        ],
+        "metrics": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_08/orthohmm_satellite_v2.json",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_08/orthohmm_satellite_v2",
+        "semantics": "native phylogenetic ortholog pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12",
+        "inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          },
+          {
+            "bytes": 17020497,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Danio_rerio.GRCz11.pep.all.fa",
+            "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+          },
+          {
+            "bytes": 11930628,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Monodelphis_domestica.ASM229v1.pep.all.fa",
+            "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+          },
+          {
+            "bytes": 5797677,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Ciona_intestinalis.KH.pep.all.fa",
+            "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+          },
+          {
+            "bytes": 12782304,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+            "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+          },
+          {
+            "bytes": 11973324,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Canis_familiaris.CanFam3.1.pep.all.fa",
+            "sha256": "0d87161a9990b9d8b0d56b4e71dfbe74c6016b0dda3352247b35d85501c33b33"
+          },
+          {
+            "bytes": 12880578,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Mus_musculus.GRCm38.pep.all.fa",
+            "sha256": "3b6e0a68688294135324824e1879de86c1715a9f3c655406f6ec8fcfdd75db1a"
+          },
+          {
+            "bytes": 10463972,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+            "sha256": "1f6ebacc342da127e4ab9c1a9cf7b627e8169df3cbc0d971d57655d974c8d9b2"
+          },
+          {
+            "bytes": 13576811,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Homo_sapiens.GRCh38.pep.all.fa",
+            "sha256": "bff5d1f0f259c801dc607045e4c13bfc759098f17d536b307c13a89a523569ac"
+          }
+        ],
+        "proteins": 251378,
+        "proteomes": 12,
+        "sequence_characters": 127798408
+      },
+      "environment_role": "orthohmm",
+      "index": 8,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_08/measurement",
+      "method": "orthohmm_satellite_v2",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+        "-m",
+        "orthohmm",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12",
+        "-o",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_08/orthohmm_satellite_v2",
+        "-c",
+        "20",
+        "--threads_per_worker",
+        "4",
+        "-x",
+        "BLOSUM62",
+        "-e",
+        "0.0001",
+        "--clustering",
+        "leiden",
+        "--cpm_resolution",
+        "0.1",
+        "--refinement_profile",
+        "default",
+        "--accuracy_profile",
+        "high_sensitivity",
+        "--metrics_json",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_08/orthohmm_satellite_v2.json",
+        "--stop",
+        "infer",
+        "--phylogeny",
+        "reconcile",
+        "--species_tree_mode",
+        "infer",
+        "--aligner",
+        "mafft",
+        "--tree_builder",
+        "FastTree",
+        "--phylogeny_candidates",
+        "satellite_v2",
+        "--phylogeny_root_rule",
+        "species_overlap",
+        "--phylogeny_pair_rule",
+        "positive_paralogy",
+        "--species_tree_rooting",
+        "min_variance"
+      ],
+      "native_method": "orthohmm_satellite_v2",
+      "preparation": "create fresh empty native output directory before inference",
+      "proteomes": 12,
+      "repeat": 0
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+          "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2/benchmark_tools/benchmark_production.py",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_09/orthohmm_satellite_v2",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_09/orthohmm_satellite_v2.json",
+          "--cpu",
+          "20",
+          "--threads-per-worker",
+          "4",
+          "--matrix",
+          "BLOSUM62",
+          "--evalue",
+          "0.0001",
+          "--clustering",
+          "leiden",
+          "--cpm-resolution",
+          "0.1",
+          "--refinement-profile",
+          "default",
+          "--accuracy-profile",
+          "high_sensitivity",
+          "--phylogeny",
+          "reconcile",
+          "--species-tree-mode",
+          "infer",
+          "--aligner",
+          "mafft",
+          "--tree-builder",
+          "FastTree",
+          "--phylogeny-candidates",
+          "satellite_v2",
+          "--phylogeny-root-rule",
+          "species_overlap",
+          "--phylogeny-pair-rule",
+          "positive_paralogy",
+          "--species-tree-rooting",
+          "min_variance"
+        ],
+        "metrics": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_09/orthohmm_satellite_v2.json",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_09/orthohmm_satellite_v2",
+        "semantics": "native phylogenetic ortholog pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4",
+        "inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          }
+        ],
+        "proteins": 73266,
+        "proteomes": 4,
+        "sequence_characters": 36474860
+      },
+      "environment_role": "orthohmm",
+      "index": 9,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_09/measurement",
+      "method": "orthohmm_satellite_v2",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+        "-m",
+        "orthohmm",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4",
+        "-o",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_09/orthohmm_satellite_v2",
+        "-c",
+        "20",
+        "--threads_per_worker",
+        "4",
+        "-x",
+        "BLOSUM62",
+        "-e",
+        "0.0001",
+        "--clustering",
+        "leiden",
+        "--cpm_resolution",
+        "0.1",
+        "--refinement_profile",
+        "default",
+        "--accuracy_profile",
+        "high_sensitivity",
+        "--metrics_json",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_09/orthohmm_satellite_v2.json",
+        "--stop",
+        "infer",
+        "--phylogeny",
+        "reconcile",
+        "--species_tree_mode",
+        "infer",
+        "--aligner",
+        "mafft",
+        "--tree_builder",
+        "FastTree",
+        "--phylogeny_candidates",
+        "satellite_v2",
+        "--phylogeny_root_rule",
+        "species_overlap",
+        "--phylogeny_pair_rule",
+        "positive_paralogy",
+        "--species_tree_rooting",
+        "min_variance"
+      ],
+      "native_method": "orthohmm_satellite_v2",
+      "preparation": "create fresh empty native output directory before inference",
+      "proteomes": 4,
+      "repeat": 1
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/bin/orthofinder",
+          "-f",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_10/orthofinder_full/input",
+          "-t",
+          "20",
+          "-a",
+          "20",
+          "-S",
+          "diamond"
+        ],
+        "copy_inputs_from": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4",
+        "copy_inputs_to": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_10/orthofinder_full/input",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_10/orthofinder_full",
+        "semantics": "native phylogenetic ortholog pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4",
+        "inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          }
+        ],
+        "proteins": 73266,
+        "proteomes": 4,
+        "sequence_characters": 36474860
+      },
+      "environment_role": "orthofinder",
+      "index": 10,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_10/measurement",
+      "method": "orthofinder_3_1_5_full",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/bin/orthofinder",
+        "-f",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_10/orthofinder_full/input",
+        "-t",
+        "20",
+        "-a",
+        "20",
+        "-S",
+        "diamond"
+      ],
+      "native_method": "orthofinder_full",
+      "preparation": "fresh original-basename input copies; native outputs must not exist",
+      "proteomes": 4,
+      "repeat": 1
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+          "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2/benchmark_tools/benchmark_production.py",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_11/orthohmm_high_sensitivity",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_11/orthohmm_high_sensitivity.json",
+          "--cpu",
+          "20",
+          "--threads-per-worker",
+          "4",
+          "--matrix",
+          "BLOSUM62",
+          "--evalue",
+          "0.0001",
+          "--clustering",
+          "leiden",
+          "--cpm-resolution",
+          "0.1",
+          "--refinement-profile",
+          "default",
+          "--accuracy-profile",
+          "high_sensitivity"
+        ],
+        "metrics": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_11/orthohmm_high_sensitivity.json",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_11/orthohmm_high_sensitivity",
+        "semantics": "group-derived cross-species pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4",
+        "inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          }
+        ],
+        "proteins": 73266,
+        "proteomes": 4,
+        "sequence_characters": 36474860
+      },
+      "environment_role": "orthohmm",
+      "index": 11,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_11/measurement",
+      "method": "orthohmm_high_sensitivity",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+        "-m",
+        "orthohmm",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4",
+        "-o",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_11/orthohmm_high_sensitivity",
+        "-c",
+        "20",
+        "--threads_per_worker",
+        "4",
+        "-x",
+        "BLOSUM62",
+        "-e",
+        "0.0001",
+        "--clustering",
+        "leiden",
+        "--cpm_resolution",
+        "0.1",
+        "--refinement_profile",
+        "default",
+        "--accuracy_profile",
+        "high_sensitivity",
+        "--metrics_json",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_11/orthohmm_high_sensitivity.json",
+        "--stop",
+        "infer"
+      ],
+      "native_method": "orthohmm_high_sensitivity",
+      "preparation": "create fresh empty native output directory before inference",
+      "proteomes": 4,
+      "repeat": 1
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/bin/orthofinder",
+          "-f",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_12/orthofinder_full/input",
+          "-t",
+          "20",
+          "-a",
+          "20",
+          "-S",
+          "diamond"
+        ],
+        "copy_inputs_from": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8",
+        "copy_inputs_to": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_12/orthofinder_full/input",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_12/orthofinder_full",
+        "semantics": "native phylogenetic ortholog pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8",
+        "inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          },
+          {
+            "bytes": 17020497,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Danio_rerio.GRCz11.pep.all.fa",
+            "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+          },
+          {
+            "bytes": 11930628,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Monodelphis_domestica.ASM229v1.pep.all.fa",
+            "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+          },
+          {
+            "bytes": 5797677,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Ciona_intestinalis.KH.pep.all.fa",
+            "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+          },
+          {
+            "bytes": 12782304,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+            "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+          }
+        ],
+        "proteins": 165168,
+        "proteomes": 8,
+        "sequence_characters": 81374087
+      },
+      "environment_role": "orthofinder",
+      "index": 12,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_12/measurement",
+      "method": "orthofinder_3_1_5_full",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/bin/orthofinder",
+        "-f",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_12/orthofinder_full/input",
+        "-t",
+        "20",
+        "-a",
+        "20",
+        "-S",
+        "diamond"
+      ],
+      "native_method": "orthofinder_full",
+      "preparation": "fresh original-basename input copies; native outputs must not exist",
+      "proteomes": 8,
+      "repeat": 1
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+          "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2/benchmark_tools/benchmark_production.py",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_13/orthohmm_high_sensitivity",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_13/orthohmm_high_sensitivity.json",
+          "--cpu",
+          "20",
+          "--threads-per-worker",
+          "4",
+          "--matrix",
+          "BLOSUM62",
+          "--evalue",
+          "0.0001",
+          "--clustering",
+          "leiden",
+          "--cpm-resolution",
+          "0.1",
+          "--refinement-profile",
+          "default",
+          "--accuracy-profile",
+          "high_sensitivity"
+        ],
+        "metrics": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_13/orthohmm_high_sensitivity.json",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_13/orthohmm_high_sensitivity",
+        "semantics": "group-derived cross-species pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8",
+        "inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          },
+          {
+            "bytes": 17020497,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Danio_rerio.GRCz11.pep.all.fa",
+            "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+          },
+          {
+            "bytes": 11930628,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Monodelphis_domestica.ASM229v1.pep.all.fa",
+            "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+          },
+          {
+            "bytes": 5797677,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Ciona_intestinalis.KH.pep.all.fa",
+            "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+          },
+          {
+            "bytes": 12782304,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+            "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+          }
+        ],
+        "proteins": 165168,
+        "proteomes": 8,
+        "sequence_characters": 81374087
+      },
+      "environment_role": "orthohmm",
+      "index": 13,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_13/measurement",
+      "method": "orthohmm_high_sensitivity",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+        "-m",
+        "orthohmm",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8",
+        "-o",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_13/orthohmm_high_sensitivity",
+        "-c",
+        "20",
+        "--threads_per_worker",
+        "4",
+        "-x",
+        "BLOSUM62",
+        "-e",
+        "0.0001",
+        "--clustering",
+        "leiden",
+        "--cpm_resolution",
+        "0.1",
+        "--refinement_profile",
+        "default",
+        "--accuracy_profile",
+        "high_sensitivity",
+        "--metrics_json",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_13/orthohmm_high_sensitivity.json",
+        "--stop",
+        "infer"
+      ],
+      "native_method": "orthohmm_high_sensitivity",
+      "preparation": "create fresh empty native output directory before inference",
+      "proteomes": 8,
+      "repeat": 1
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+          "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2/benchmark_tools/benchmark_production.py",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_14/orthohmm_satellite_v2",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_14/orthohmm_satellite_v2.json",
+          "--cpu",
+          "20",
+          "--threads-per-worker",
+          "4",
+          "--matrix",
+          "BLOSUM62",
+          "--evalue",
+          "0.0001",
+          "--clustering",
+          "leiden",
+          "--cpm-resolution",
+          "0.1",
+          "--refinement-profile",
+          "default",
+          "--accuracy-profile",
+          "high_sensitivity",
+          "--phylogeny",
+          "reconcile",
+          "--species-tree-mode",
+          "infer",
+          "--aligner",
+          "mafft",
+          "--tree-builder",
+          "FastTree",
+          "--phylogeny-candidates",
+          "satellite_v2",
+          "--phylogeny-root-rule",
+          "species_overlap",
+          "--phylogeny-pair-rule",
+          "positive_paralogy",
+          "--species-tree-rooting",
+          "min_variance"
+        ],
+        "metrics": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_14/orthohmm_satellite_v2.json",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_14/orthohmm_satellite_v2",
+        "semantics": "native phylogenetic ortholog pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8",
+        "inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          },
+          {
+            "bytes": 17020497,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Danio_rerio.GRCz11.pep.all.fa",
+            "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+          },
+          {
+            "bytes": 11930628,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Monodelphis_domestica.ASM229v1.pep.all.fa",
+            "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+          },
+          {
+            "bytes": 5797677,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Ciona_intestinalis.KH.pep.all.fa",
+            "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+          },
+          {
+            "bytes": 12782304,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+            "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+          }
+        ],
+        "proteins": 165168,
+        "proteomes": 8,
+        "sequence_characters": 81374087
+      },
+      "environment_role": "orthohmm",
+      "index": 14,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_14/measurement",
+      "method": "orthohmm_satellite_v2",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+        "-m",
+        "orthohmm",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8",
+        "-o",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_14/orthohmm_satellite_v2",
+        "-c",
+        "20",
+        "--threads_per_worker",
+        "4",
+        "-x",
+        "BLOSUM62",
+        "-e",
+        "0.0001",
+        "--clustering",
+        "leiden",
+        "--cpm_resolution",
+        "0.1",
+        "--refinement_profile",
+        "default",
+        "--accuracy_profile",
+        "high_sensitivity",
+        "--metrics_json",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_14/orthohmm_satellite_v2.json",
+        "--stop",
+        "infer",
+        "--phylogeny",
+        "reconcile",
+        "--species_tree_mode",
+        "infer",
+        "--aligner",
+        "mafft",
+        "--tree_builder",
+        "FastTree",
+        "--phylogeny_candidates",
+        "satellite_v2",
+        "--phylogeny_root_rule",
+        "species_overlap",
+        "--phylogeny_pair_rule",
+        "positive_paralogy",
+        "--species_tree_rooting",
+        "min_variance"
+      ],
+      "native_method": "orthohmm_satellite_v2",
+      "preparation": "create fresh empty native output directory before inference",
+      "proteomes": 8,
+      "repeat": 1
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+          "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2/benchmark_tools/benchmark_production.py",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_15/orthohmm_high_sensitivity",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_15/orthohmm_high_sensitivity.json",
+          "--cpu",
+          "20",
+          "--threads-per-worker",
+          "4",
+          "--matrix",
+          "BLOSUM62",
+          "--evalue",
+          "0.0001",
+          "--clustering",
+          "leiden",
+          "--cpm-resolution",
+          "0.1",
+          "--refinement-profile",
+          "default",
+          "--accuracy-profile",
+          "high_sensitivity"
+        ],
+        "metrics": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_15/orthohmm_high_sensitivity.json",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_15/orthohmm_high_sensitivity",
+        "semantics": "group-derived cross-species pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12",
+        "inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          },
+          {
+            "bytes": 17020497,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Danio_rerio.GRCz11.pep.all.fa",
+            "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+          },
+          {
+            "bytes": 11930628,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Monodelphis_domestica.ASM229v1.pep.all.fa",
+            "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+          },
+          {
+            "bytes": 5797677,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Ciona_intestinalis.KH.pep.all.fa",
+            "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+          },
+          {
+            "bytes": 12782304,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+            "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+          },
+          {
+            "bytes": 11973324,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Canis_familiaris.CanFam3.1.pep.all.fa",
+            "sha256": "0d87161a9990b9d8b0d56b4e71dfbe74c6016b0dda3352247b35d85501c33b33"
+          },
+          {
+            "bytes": 12880578,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Mus_musculus.GRCm38.pep.all.fa",
+            "sha256": "3b6e0a68688294135324824e1879de86c1715a9f3c655406f6ec8fcfdd75db1a"
+          },
+          {
+            "bytes": 10463972,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+            "sha256": "1f6ebacc342da127e4ab9c1a9cf7b627e8169df3cbc0d971d57655d974c8d9b2"
+          },
+          {
+            "bytes": 13576811,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Homo_sapiens.GRCh38.pep.all.fa",
+            "sha256": "bff5d1f0f259c801dc607045e4c13bfc759098f17d536b307c13a89a523569ac"
+          }
+        ],
+        "proteins": 251378,
+        "proteomes": 12,
+        "sequence_characters": 127798408
+      },
+      "environment_role": "orthohmm",
+      "index": 15,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_15/measurement",
+      "method": "orthohmm_high_sensitivity",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+        "-m",
+        "orthohmm",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12",
+        "-o",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_15/orthohmm_high_sensitivity",
+        "-c",
+        "20",
+        "--threads_per_worker",
+        "4",
+        "-x",
+        "BLOSUM62",
+        "-e",
+        "0.0001",
+        "--clustering",
+        "leiden",
+        "--cpm_resolution",
+        "0.1",
+        "--refinement_profile",
+        "default",
+        "--accuracy_profile",
+        "high_sensitivity",
+        "--metrics_json",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_15/orthohmm_high_sensitivity.json",
+        "--stop",
+        "infer"
+      ],
+      "native_method": "orthohmm_high_sensitivity",
+      "preparation": "create fresh empty native output directory before inference",
+      "proteomes": 12,
+      "repeat": 1
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+          "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2/benchmark_tools/benchmark_production.py",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_16/orthohmm_satellite_v2",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_16/orthohmm_satellite_v2.json",
+          "--cpu",
+          "20",
+          "--threads-per-worker",
+          "4",
+          "--matrix",
+          "BLOSUM62",
+          "--evalue",
+          "0.0001",
+          "--clustering",
+          "leiden",
+          "--cpm-resolution",
+          "0.1",
+          "--refinement-profile",
+          "default",
+          "--accuracy-profile",
+          "high_sensitivity",
+          "--phylogeny",
+          "reconcile",
+          "--species-tree-mode",
+          "infer",
+          "--aligner",
+          "mafft",
+          "--tree-builder",
+          "FastTree",
+          "--phylogeny-candidates",
+          "satellite_v2",
+          "--phylogeny-root-rule",
+          "species_overlap",
+          "--phylogeny-pair-rule",
+          "positive_paralogy",
+          "--species-tree-rooting",
+          "min_variance"
+        ],
+        "metrics": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_16/orthohmm_satellite_v2.json",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_16/orthohmm_satellite_v2",
+        "semantics": "native phylogenetic ortholog pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12",
+        "inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          },
+          {
+            "bytes": 17020497,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Danio_rerio.GRCz11.pep.all.fa",
+            "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+          },
+          {
+            "bytes": 11930628,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Monodelphis_domestica.ASM229v1.pep.all.fa",
+            "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+          },
+          {
+            "bytes": 5797677,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Ciona_intestinalis.KH.pep.all.fa",
+            "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+          },
+          {
+            "bytes": 12782304,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+            "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+          },
+          {
+            "bytes": 11973324,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Canis_familiaris.CanFam3.1.pep.all.fa",
+            "sha256": "0d87161a9990b9d8b0d56b4e71dfbe74c6016b0dda3352247b35d85501c33b33"
+          },
+          {
+            "bytes": 12880578,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Mus_musculus.GRCm38.pep.all.fa",
+            "sha256": "3b6e0a68688294135324824e1879de86c1715a9f3c655406f6ec8fcfdd75db1a"
+          },
+          {
+            "bytes": 10463972,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+            "sha256": "1f6ebacc342da127e4ab9c1a9cf7b627e8169df3cbc0d971d57655d974c8d9b2"
+          },
+          {
+            "bytes": 13576811,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Homo_sapiens.GRCh38.pep.all.fa",
+            "sha256": "bff5d1f0f259c801dc607045e4c13bfc759098f17d536b307c13a89a523569ac"
+          }
+        ],
+        "proteins": 251378,
+        "proteomes": 12,
+        "sequence_characters": 127798408
+      },
+      "environment_role": "orthohmm",
+      "index": 16,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_16/measurement",
+      "method": "orthohmm_satellite_v2",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+        "-m",
+        "orthohmm",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12",
+        "-o",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_16/orthohmm_satellite_v2",
+        "-c",
+        "20",
+        "--threads_per_worker",
+        "4",
+        "-x",
+        "BLOSUM62",
+        "-e",
+        "0.0001",
+        "--clustering",
+        "leiden",
+        "--cpm_resolution",
+        "0.1",
+        "--refinement_profile",
+        "default",
+        "--accuracy_profile",
+        "high_sensitivity",
+        "--metrics_json",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_16/orthohmm_satellite_v2.json",
+        "--stop",
+        "infer",
+        "--phylogeny",
+        "reconcile",
+        "--species_tree_mode",
+        "infer",
+        "--aligner",
+        "mafft",
+        "--tree_builder",
+        "FastTree",
+        "--phylogeny_candidates",
+        "satellite_v2",
+        "--phylogeny_root_rule",
+        "species_overlap",
+        "--phylogeny_pair_rule",
+        "positive_paralogy",
+        "--species_tree_rooting",
+        "min_variance"
+      ],
+      "native_method": "orthohmm_satellite_v2",
+      "preparation": "create fresh empty native output directory before inference",
+      "proteomes": 12,
+      "repeat": 1
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/bin/orthofinder",
+          "-f",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_17/orthofinder_full/input",
+          "-t",
+          "20",
+          "-a",
+          "20",
+          "-S",
+          "diamond"
+        ],
+        "copy_inputs_from": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12",
+        "copy_inputs_to": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_17/orthofinder_full/input",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_17/orthofinder_full",
+        "semantics": "native phylogenetic ortholog pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12",
+        "inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          },
+          {
+            "bytes": 17020497,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Danio_rerio.GRCz11.pep.all.fa",
+            "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+          },
+          {
+            "bytes": 11930628,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Monodelphis_domestica.ASM229v1.pep.all.fa",
+            "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+          },
+          {
+            "bytes": 5797677,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Ciona_intestinalis.KH.pep.all.fa",
+            "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+          },
+          {
+            "bytes": 12782304,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+            "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+          },
+          {
+            "bytes": 11973324,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Canis_familiaris.CanFam3.1.pep.all.fa",
+            "sha256": "0d87161a9990b9d8b0d56b4e71dfbe74c6016b0dda3352247b35d85501c33b33"
+          },
+          {
+            "bytes": 12880578,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Mus_musculus.GRCm38.pep.all.fa",
+            "sha256": "3b6e0a68688294135324824e1879de86c1715a9f3c655406f6ec8fcfdd75db1a"
+          },
+          {
+            "bytes": 10463972,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+            "sha256": "1f6ebacc342da127e4ab9c1a9cf7b627e8169df3cbc0d971d57655d974c8d9b2"
+          },
+          {
+            "bytes": 13576811,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Homo_sapiens.GRCh38.pep.all.fa",
+            "sha256": "bff5d1f0f259c801dc607045e4c13bfc759098f17d536b307c13a89a523569ac"
+          }
+        ],
+        "proteins": 251378,
+        "proteomes": 12,
+        "sequence_characters": 127798408
+      },
+      "environment_role": "orthofinder",
+      "index": 17,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_17/measurement",
+      "method": "orthofinder_3_1_5_full",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/bin/orthofinder",
+        "-f",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_17/orthofinder_full/input",
+        "-t",
+        "20",
+        "-a",
+        "20",
+        "-S",
+        "diamond"
+      ],
+      "native_method": "orthofinder_full",
+      "preparation": "fresh original-basename input copies; native outputs must not exist",
+      "proteomes": 12,
+      "repeat": 1
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/bin/orthofinder",
+          "-f",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_18/orthofinder_full/input",
+          "-t",
+          "20",
+          "-a",
+          "20",
+          "-S",
+          "diamond"
+        ],
+        "copy_inputs_from": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4",
+        "copy_inputs_to": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_18/orthofinder_full/input",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_18/orthofinder_full",
+        "semantics": "native phylogenetic ortholog pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4",
+        "inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          }
+        ],
+        "proteins": 73266,
+        "proteomes": 4,
+        "sequence_characters": 36474860
+      },
+      "environment_role": "orthofinder",
+      "index": 18,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_18/measurement",
+      "method": "orthofinder_3_1_5_full",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/bin/orthofinder",
+        "-f",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_18/orthofinder_full/input",
+        "-t",
+        "20",
+        "-a",
+        "20",
+        "-S",
+        "diamond"
+      ],
+      "native_method": "orthofinder_full",
+      "preparation": "fresh original-basename input copies; native outputs must not exist",
+      "proteomes": 4,
+      "repeat": 2
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+          "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2/benchmark_tools/benchmark_production.py",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_19/orthohmm_high_sensitivity",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_19/orthohmm_high_sensitivity.json",
+          "--cpu",
+          "20",
+          "--threads-per-worker",
+          "4",
+          "--matrix",
+          "BLOSUM62",
+          "--evalue",
+          "0.0001",
+          "--clustering",
+          "leiden",
+          "--cpm-resolution",
+          "0.1",
+          "--refinement-profile",
+          "default",
+          "--accuracy-profile",
+          "high_sensitivity"
+        ],
+        "metrics": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_19/orthohmm_high_sensitivity.json",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_19/orthohmm_high_sensitivity",
+        "semantics": "group-derived cross-species pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4",
+        "inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          }
+        ],
+        "proteins": 73266,
+        "proteomes": 4,
+        "sequence_characters": 36474860
+      },
+      "environment_role": "orthohmm",
+      "index": 19,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_19/measurement",
+      "method": "orthohmm_high_sensitivity",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+        "-m",
+        "orthohmm",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4",
+        "-o",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_19/orthohmm_high_sensitivity",
+        "-c",
+        "20",
+        "--threads_per_worker",
+        "4",
+        "-x",
+        "BLOSUM62",
+        "-e",
+        "0.0001",
+        "--clustering",
+        "leiden",
+        "--cpm_resolution",
+        "0.1",
+        "--refinement_profile",
+        "default",
+        "--accuracy_profile",
+        "high_sensitivity",
+        "--metrics_json",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_19/orthohmm_high_sensitivity.json",
+        "--stop",
+        "infer"
+      ],
+      "native_method": "orthohmm_high_sensitivity",
+      "preparation": "create fresh empty native output directory before inference",
+      "proteomes": 4,
+      "repeat": 2
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+          "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2/benchmark_tools/benchmark_production.py",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_20/orthohmm_satellite_v2",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_20/orthohmm_satellite_v2.json",
+          "--cpu",
+          "20",
+          "--threads-per-worker",
+          "4",
+          "--matrix",
+          "BLOSUM62",
+          "--evalue",
+          "0.0001",
+          "--clustering",
+          "leiden",
+          "--cpm-resolution",
+          "0.1",
+          "--refinement-profile",
+          "default",
+          "--accuracy-profile",
+          "high_sensitivity",
+          "--phylogeny",
+          "reconcile",
+          "--species-tree-mode",
+          "infer",
+          "--aligner",
+          "mafft",
+          "--tree-builder",
+          "FastTree",
+          "--phylogeny-candidates",
+          "satellite_v2",
+          "--phylogeny-root-rule",
+          "species_overlap",
+          "--phylogeny-pair-rule",
+          "positive_paralogy",
+          "--species-tree-rooting",
+          "min_variance"
+        ],
+        "metrics": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_20/orthohmm_satellite_v2.json",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_20/orthohmm_satellite_v2",
+        "semantics": "native phylogenetic ortholog pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4",
+        "inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          }
+        ],
+        "proteins": 73266,
+        "proteomes": 4,
+        "sequence_characters": 36474860
+      },
+      "environment_role": "orthohmm",
+      "index": 20,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_20/measurement",
+      "method": "orthohmm_satellite_v2",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+        "-m",
+        "orthohmm",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4",
+        "-o",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_20/orthohmm_satellite_v2",
+        "-c",
+        "20",
+        "--threads_per_worker",
+        "4",
+        "-x",
+        "BLOSUM62",
+        "-e",
+        "0.0001",
+        "--clustering",
+        "leiden",
+        "--cpm_resolution",
+        "0.1",
+        "--refinement_profile",
+        "default",
+        "--accuracy_profile",
+        "high_sensitivity",
+        "--metrics_json",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_20/orthohmm_satellite_v2.json",
+        "--stop",
+        "infer",
+        "--phylogeny",
+        "reconcile",
+        "--species_tree_mode",
+        "infer",
+        "--aligner",
+        "mafft",
+        "--tree_builder",
+        "FastTree",
+        "--phylogeny_candidates",
+        "satellite_v2",
+        "--phylogeny_root_rule",
+        "species_overlap",
+        "--phylogeny_pair_rule",
+        "positive_paralogy",
+        "--species_tree_rooting",
+        "min_variance"
+      ],
+      "native_method": "orthohmm_satellite_v2",
+      "preparation": "create fresh empty native output directory before inference",
+      "proteomes": 4,
+      "repeat": 2
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+          "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2/benchmark_tools/benchmark_production.py",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_21/orthohmm_high_sensitivity",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_21/orthohmm_high_sensitivity.json",
+          "--cpu",
+          "20",
+          "--threads-per-worker",
+          "4",
+          "--matrix",
+          "BLOSUM62",
+          "--evalue",
+          "0.0001",
+          "--clustering",
+          "leiden",
+          "--cpm-resolution",
+          "0.1",
+          "--refinement-profile",
+          "default",
+          "--accuracy-profile",
+          "high_sensitivity"
+        ],
+        "metrics": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_21/orthohmm_high_sensitivity.json",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_21/orthohmm_high_sensitivity",
+        "semantics": "group-derived cross-species pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8",
+        "inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          },
+          {
+            "bytes": 17020497,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Danio_rerio.GRCz11.pep.all.fa",
+            "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+          },
+          {
+            "bytes": 11930628,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Monodelphis_domestica.ASM229v1.pep.all.fa",
+            "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+          },
+          {
+            "bytes": 5797677,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Ciona_intestinalis.KH.pep.all.fa",
+            "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+          },
+          {
+            "bytes": 12782304,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+            "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+          }
+        ],
+        "proteins": 165168,
+        "proteomes": 8,
+        "sequence_characters": 81374087
+      },
+      "environment_role": "orthohmm",
+      "index": 21,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_21/measurement",
+      "method": "orthohmm_high_sensitivity",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+        "-m",
+        "orthohmm",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8",
+        "-o",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_21/orthohmm_high_sensitivity",
+        "-c",
+        "20",
+        "--threads_per_worker",
+        "4",
+        "-x",
+        "BLOSUM62",
+        "-e",
+        "0.0001",
+        "--clustering",
+        "leiden",
+        "--cpm_resolution",
+        "0.1",
+        "--refinement_profile",
+        "default",
+        "--accuracy_profile",
+        "high_sensitivity",
+        "--metrics_json",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_21/orthohmm_high_sensitivity.json",
+        "--stop",
+        "infer"
+      ],
+      "native_method": "orthohmm_high_sensitivity",
+      "preparation": "create fresh empty native output directory before inference",
+      "proteomes": 8,
+      "repeat": 2
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+          "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2/benchmark_tools/benchmark_production.py",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_22/orthohmm_satellite_v2",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_22/orthohmm_satellite_v2.json",
+          "--cpu",
+          "20",
+          "--threads-per-worker",
+          "4",
+          "--matrix",
+          "BLOSUM62",
+          "--evalue",
+          "0.0001",
+          "--clustering",
+          "leiden",
+          "--cpm-resolution",
+          "0.1",
+          "--refinement-profile",
+          "default",
+          "--accuracy-profile",
+          "high_sensitivity",
+          "--phylogeny",
+          "reconcile",
+          "--species-tree-mode",
+          "infer",
+          "--aligner",
+          "mafft",
+          "--tree-builder",
+          "FastTree",
+          "--phylogeny-candidates",
+          "satellite_v2",
+          "--phylogeny-root-rule",
+          "species_overlap",
+          "--phylogeny-pair-rule",
+          "positive_paralogy",
+          "--species-tree-rooting",
+          "min_variance"
+        ],
+        "metrics": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_22/orthohmm_satellite_v2.json",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_22/orthohmm_satellite_v2",
+        "semantics": "native phylogenetic ortholog pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8",
+        "inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          },
+          {
+            "bytes": 17020497,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Danio_rerio.GRCz11.pep.all.fa",
+            "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+          },
+          {
+            "bytes": 11930628,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Monodelphis_domestica.ASM229v1.pep.all.fa",
+            "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+          },
+          {
+            "bytes": 5797677,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Ciona_intestinalis.KH.pep.all.fa",
+            "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+          },
+          {
+            "bytes": 12782304,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+            "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+          }
+        ],
+        "proteins": 165168,
+        "proteomes": 8,
+        "sequence_characters": 81374087
+      },
+      "environment_role": "orthohmm",
+      "index": 22,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_22/measurement",
+      "method": "orthohmm_satellite_v2",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+        "-m",
+        "orthohmm",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8",
+        "-o",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_22/orthohmm_satellite_v2",
+        "-c",
+        "20",
+        "--threads_per_worker",
+        "4",
+        "-x",
+        "BLOSUM62",
+        "-e",
+        "0.0001",
+        "--clustering",
+        "leiden",
+        "--cpm_resolution",
+        "0.1",
+        "--refinement_profile",
+        "default",
+        "--accuracy_profile",
+        "high_sensitivity",
+        "--metrics_json",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_22/orthohmm_satellite_v2.json",
+        "--stop",
+        "infer",
+        "--phylogeny",
+        "reconcile",
+        "--species_tree_mode",
+        "infer",
+        "--aligner",
+        "mafft",
+        "--tree_builder",
+        "FastTree",
+        "--phylogeny_candidates",
+        "satellite_v2",
+        "--phylogeny_root_rule",
+        "species_overlap",
+        "--phylogeny_pair_rule",
+        "positive_paralogy",
+        "--species_tree_rooting",
+        "min_variance"
+      ],
+      "native_method": "orthohmm_satellite_v2",
+      "preparation": "create fresh empty native output directory before inference",
+      "proteomes": 8,
+      "repeat": 2
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/bin/orthofinder",
+          "-f",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_23/orthofinder_full/input",
+          "-t",
+          "20",
+          "-a",
+          "20",
+          "-S",
+          "diamond"
+        ],
+        "copy_inputs_from": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8",
+        "copy_inputs_to": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_23/orthofinder_full/input",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_23/orthofinder_full",
+        "semantics": "native phylogenetic ortholog pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8",
+        "inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          },
+          {
+            "bytes": 17020497,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Danio_rerio.GRCz11.pep.all.fa",
+            "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+          },
+          {
+            "bytes": 11930628,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Monodelphis_domestica.ASM229v1.pep.all.fa",
+            "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+          },
+          {
+            "bytes": 5797677,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Ciona_intestinalis.KH.pep.all.fa",
+            "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+          },
+          {
+            "bytes": 12782304,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/8/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+            "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+          }
+        ],
+        "proteins": 165168,
+        "proteomes": 8,
+        "sequence_characters": 81374087
+      },
+      "environment_role": "orthofinder",
+      "index": 23,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_23/measurement",
+      "method": "orthofinder_3_1_5_full",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/bin/orthofinder",
+        "-f",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_23/orthofinder_full/input",
+        "-t",
+        "20",
+        "-a",
+        "20",
+        "-S",
+        "diamond"
+      ],
+      "native_method": "orthofinder_full",
+      "preparation": "fresh original-basename input copies; native outputs must not exist",
+      "proteomes": 8,
+      "repeat": 2
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+          "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2/benchmark_tools/benchmark_production.py",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_24/orthohmm_satellite_v2",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_24/orthohmm_satellite_v2.json",
+          "--cpu",
+          "20",
+          "--threads-per-worker",
+          "4",
+          "--matrix",
+          "BLOSUM62",
+          "--evalue",
+          "0.0001",
+          "--clustering",
+          "leiden",
+          "--cpm-resolution",
+          "0.1",
+          "--refinement-profile",
+          "default",
+          "--accuracy-profile",
+          "high_sensitivity",
+          "--phylogeny",
+          "reconcile",
+          "--species-tree-mode",
+          "infer",
+          "--aligner",
+          "mafft",
+          "--tree-builder",
+          "FastTree",
+          "--phylogeny-candidates",
+          "satellite_v2",
+          "--phylogeny-root-rule",
+          "species_overlap",
+          "--phylogeny-pair-rule",
+          "positive_paralogy",
+          "--species-tree-rooting",
+          "min_variance"
+        ],
+        "metrics": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_24/orthohmm_satellite_v2.json",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_24/orthohmm_satellite_v2",
+        "semantics": "native phylogenetic ortholog pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12",
+        "inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          },
+          {
+            "bytes": 17020497,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Danio_rerio.GRCz11.pep.all.fa",
+            "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+          },
+          {
+            "bytes": 11930628,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Monodelphis_domestica.ASM229v1.pep.all.fa",
+            "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+          },
+          {
+            "bytes": 5797677,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Ciona_intestinalis.KH.pep.all.fa",
+            "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+          },
+          {
+            "bytes": 12782304,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+            "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+          },
+          {
+            "bytes": 11973324,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Canis_familiaris.CanFam3.1.pep.all.fa",
+            "sha256": "0d87161a9990b9d8b0d56b4e71dfbe74c6016b0dda3352247b35d85501c33b33"
+          },
+          {
+            "bytes": 12880578,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Mus_musculus.GRCm38.pep.all.fa",
+            "sha256": "3b6e0a68688294135324824e1879de86c1715a9f3c655406f6ec8fcfdd75db1a"
+          },
+          {
+            "bytes": 10463972,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+            "sha256": "1f6ebacc342da127e4ab9c1a9cf7b627e8169df3cbc0d971d57655d974c8d9b2"
+          },
+          {
+            "bytes": 13576811,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Homo_sapiens.GRCh38.pep.all.fa",
+            "sha256": "bff5d1f0f259c801dc607045e4c13bfc759098f17d536b307c13a89a523569ac"
+          }
+        ],
+        "proteins": 251378,
+        "proteomes": 12,
+        "sequence_characters": 127798408
+      },
+      "environment_role": "orthohmm",
+      "index": 24,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_24/measurement",
+      "method": "orthohmm_satellite_v2",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+        "-m",
+        "orthohmm",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12",
+        "-o",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_24/orthohmm_satellite_v2",
+        "-c",
+        "20",
+        "--threads_per_worker",
+        "4",
+        "-x",
+        "BLOSUM62",
+        "-e",
+        "0.0001",
+        "--clustering",
+        "leiden",
+        "--cpm_resolution",
+        "0.1",
+        "--refinement_profile",
+        "default",
+        "--accuracy_profile",
+        "high_sensitivity",
+        "--metrics_json",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_24/orthohmm_satellite_v2.json",
+        "--stop",
+        "infer",
+        "--phylogeny",
+        "reconcile",
+        "--species_tree_mode",
+        "infer",
+        "--aligner",
+        "mafft",
+        "--tree_builder",
+        "FastTree",
+        "--phylogeny_candidates",
+        "satellite_v2",
+        "--phylogeny_root_rule",
+        "species_overlap",
+        "--phylogeny_pair_rule",
+        "positive_paralogy",
+        "--species_tree_rooting",
+        "min_variance"
+      ],
+      "native_method": "orthohmm_satellite_v2",
+      "preparation": "create fresh empty native output directory before inference",
+      "proteomes": 12,
+      "repeat": 2
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/bin/orthofinder",
+          "-f",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_25/orthofinder_full/input",
+          "-t",
+          "20",
+          "-a",
+          "20",
+          "-S",
+          "diamond"
+        ],
+        "copy_inputs_from": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12",
+        "copy_inputs_to": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_25/orthofinder_full/input",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_25/orthofinder_full",
+        "semantics": "native phylogenetic ortholog pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12",
+        "inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          },
+          {
+            "bytes": 17020497,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Danio_rerio.GRCz11.pep.all.fa",
+            "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+          },
+          {
+            "bytes": 11930628,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Monodelphis_domestica.ASM229v1.pep.all.fa",
+            "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+          },
+          {
+            "bytes": 5797677,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Ciona_intestinalis.KH.pep.all.fa",
+            "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+          },
+          {
+            "bytes": 12782304,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+            "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+          },
+          {
+            "bytes": 11973324,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Canis_familiaris.CanFam3.1.pep.all.fa",
+            "sha256": "0d87161a9990b9d8b0d56b4e71dfbe74c6016b0dda3352247b35d85501c33b33"
+          },
+          {
+            "bytes": 12880578,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Mus_musculus.GRCm38.pep.all.fa",
+            "sha256": "3b6e0a68688294135324824e1879de86c1715a9f3c655406f6ec8fcfdd75db1a"
+          },
+          {
+            "bytes": 10463972,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+            "sha256": "1f6ebacc342da127e4ab9c1a9cf7b627e8169df3cbc0d971d57655d974c8d9b2"
+          },
+          {
+            "bytes": 13576811,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Homo_sapiens.GRCh38.pep.all.fa",
+            "sha256": "bff5d1f0f259c801dc607045e4c13bfc759098f17d536b307c13a89a523569ac"
+          }
+        ],
+        "proteins": 251378,
+        "proteomes": 12,
+        "sequence_characters": 127798408
+      },
+      "environment_role": "orthofinder",
+      "index": 25,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_25/measurement",
+      "method": "orthofinder_3_1_5_full",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/bin/orthofinder",
+        "-f",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_25/orthofinder_full/input",
+        "-t",
+        "20",
+        "-a",
+        "20",
+        "-S",
+        "diamond"
+      ],
+      "native_method": "orthofinder_full",
+      "preparation": "fresh original-basename input copies; native outputs must not exist",
+      "proteomes": 12,
+      "repeat": 2
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "configuration": {
+        "argv": [
+          "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+          "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2/benchmark_tools/benchmark_production.py",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_26/orthohmm_high_sensitivity",
+          "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_26/orthohmm_high_sensitivity.json",
+          "--cpu",
+          "20",
+          "--threads-per-worker",
+          "4",
+          "--matrix",
+          "BLOSUM62",
+          "--evalue",
+          "0.0001",
+          "--clustering",
+          "leiden",
+          "--cpm-resolution",
+          "0.1",
+          "--refinement-profile",
+          "default",
+          "--accuracy-profile",
+          "high_sensitivity"
+        ],
+        "metrics": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_26/orthohmm_high_sensitivity.json",
+        "output": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_26/orthohmm_high_sensitivity",
+        "semantics": "group-derived cross-species pairs"
+      },
+      "cwd": "/home/jlsteenwyk/projects/orthohmm-publication/core_arm_v2",
+      "dataset": {
+        "input_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12",
+        "inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          },
+          {
+            "bytes": 17020497,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Danio_rerio.GRCz11.pep.all.fa",
+            "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+          },
+          {
+            "bytes": 11930628,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Monodelphis_domestica.ASM229v1.pep.all.fa",
+            "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+          },
+          {
+            "bytes": 5797677,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Ciona_intestinalis.KH.pep.all.fa",
+            "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+          },
+          {
+            "bytes": 12782304,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+            "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+          },
+          {
+            "bytes": 11973324,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Canis_familiaris.CanFam3.1.pep.all.fa",
+            "sha256": "0d87161a9990b9d8b0d56b4e71dfbe74c6016b0dda3352247b35d85501c33b33"
+          },
+          {
+            "bytes": 12880578,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Mus_musculus.GRCm38.pep.all.fa",
+            "sha256": "3b6e0a68688294135324824e1879de86c1715a9f3c655406f6ec8fcfdd75db1a"
+          },
+          {
+            "bytes": 10463972,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+            "sha256": "1f6ebacc342da127e4ab9c1a9cf7b627e8169df3cbc0d971d57655d974c8d9b2"
+          },
+          {
+            "bytes": 13576811,
+            "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12/Homo_sapiens.GRCh38.pep.all.fa",
+            "sha256": "bff5d1f0f259c801dc607045e4c13bfc759098f17d536b307c13a89a523569ac"
+          }
+        ],
+        "proteins": 251378,
+        "proteomes": 12,
+        "sequence_characters": 127798408
+      },
+      "environment_role": "orthohmm",
+      "index": 26,
+      "measurement_directory": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_26/measurement",
+      "method": "orthohmm_high_sensitivity",
+      "native_argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+        "-m",
+        "orthohmm",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/12",
+        "-o",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_26/orthohmm_high_sensitivity",
+        "-c",
+        "20",
+        "--threads_per_worker",
+        "4",
+        "-x",
+        "BLOSUM62",
+        "-e",
+        "0.0001",
+        "--clustering",
+        "leiden",
+        "--cpm_resolution",
+        "0.1",
+        "--refinement_profile",
+        "default",
+        "--accuracy_profile",
+        "high_sensitivity",
+        "--metrics_json",
+        "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_26/orthohmm_high_sensitivity.json",
+        "--stop",
+        "infer"
+      ],
+      "native_method": "orthohmm_high_sensitivity",
+      "preparation": "create fresh empty native output directory before inference",
+      "proteomes": 12,
+      "repeat": 2
+    }
+  ],
+  "source": {
+    "bytes": 8431,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_dgx_scaling_plan.py",
+    "sha256": "6602bce56a1cb44e118b61e1bcdf94211c76643f31dcf74b95543038d6a84441"
+  },
+  "status": "dgx_commands_prepared_not_authorized",
+  "unset_environment": [
+    "CONDA_PREFIX",
+    "GOMP_CPU_AFFINITY",
+    "OMP_PROC_BIND",
+    "OMP_PLACES",
+    "OMP_DYNAMIC"
+  ]
+}

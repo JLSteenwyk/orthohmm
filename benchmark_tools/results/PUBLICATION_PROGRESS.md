@@ -1,5 +1,28 @@
 # Publication Progress
 
+## DGX Native Commands Prepared (2026-09-17)
+
+Previous turn progressed load calibration and launched the overhead panel,
+pushed8990603. Re-read the full objective;21640_0 was verifiedRUNNING at49s,
+and later21640_3 at1:05 with4-5pending. No partial paired outcomes inspected
+and no running job restarted. Work in this continuation was local, avoiding
+heavy remote environment hashing during the overhead panel.
+
+Generated all27 DGX native command records from the original frozen plan,
+validating that only path mappings and32-to20 CPU flags change. Dataset
+membership, byte hashes/counts and run/repeat order match. Planned PATHs
+separate the correct FastTree versions and retain frozen thread/hash settings.
+All23 command/planning tests pass. The manifest is explicitly not execution
+authorization; see DGX_SCALING_MIGRATION_20260917.md for its hash and gates.
+
+Detected that original versus transferred metadata lists use different order,
+although their input sets match. Frozen OrthoHMM uses unsorted glob, so actual
+DGX native enumeration must be captured and checked, not inferred from either
+manifest ordering. No frozen core change was made. Remaining immediate work:
+overhead admission, remote environment/enumeration freeze, GNU-time companion
+accounting and tested execution/admission workflow. Scientific timing0/27;
+broader publication requirements remain active.
+
 ## Collector Load Calibration and Frozen Panel (2026-09-17)
 
 Previous turn completed comparator smoke evidence and pushed32dd3e7.
