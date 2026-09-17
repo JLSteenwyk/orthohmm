@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Main-Comparator SwissTrees Count Validation (2026-09-17)
+
+Previous turn progressed exact VGNC database rescoring and pushed58b3e02.
+Re-read the full objective; DGX21656_5 verified RUNNING at25:44, five completed
+and21pending. Continued primary QfO statistical work locally.
+
+Added `audit_qfo_swiss_comparators.py` to recover sufficient statistics for all
+eight retained comparison methods, not just four recovered ablation stages.
+Pinned comparison/reference audits and checked all aggregate/raw identities.
+All eight raw files match the same18families,10,765reference truth labels and
+represented member sets. Native raw/2+1 count reconstruction reproduces all
+precision, recall and harmonic macro-F1 endpoints within5e-8. No existing
+scores changed and historical results were not replaced by recovered runs.
+13focused comparator/Swiss audit tests pass.
+
+`qfo_swiss_comparator_counts_20260917.json` records family-level counts, genes,
+statistics and provenance. Froze `QFO_SWISS_COMPARATOR_UNCERTAINTY_PROTOCOL_20260917.md`
+before interval computation:100,000shared18-family draws, seed20260920, seven
+comparators versus full OrthoFinder plus phylogenetic versus sensitive OrthoHMM,
+24metric endpoints with Bonferroni percentile adjustment. This is retrospective
+development-exposed approximate family resampling, not independent confirmation.
+No intervals have been computed under this protocol yet.
+
+Next: implement/verify the fixed comparator bootstrap and generated report;
+continue other QfO uncertainty/strata/ablations, matched timing admission and
+the remaining publication work. The full goal remains active.
+
 ## Complete VGNC Prediction-Database Rescore (2026-09-17)
 
 Previous turn made progress, pushed26e1607: reference mapping audit and evidence
