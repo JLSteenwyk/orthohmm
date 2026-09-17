@@ -3200,3 +3200,10 @@ Shared-machine incremental times are not controlled end-to-end scaling evidence.
 Eleven focused executor tests passed, bash syntax passed, full unit suite1,158
 passed29.27s. Freeze/push executor before submitting; CPM variants and complete
 six-variant18-endpoint analysis remain pending.
+
+Executor e8e86d8 pushed and frozen at publication_ob_candidate_phylogeny_v1.
+Submitted no-requeue array21316: tasks0(norm_low)/1(norm_high) confirmed RUNNING;
+tasks2(margin_low)/3(margin_high) PENDING for JobArrayTaskLimit. Output root
+benchmarks/results/ob_candidate_neighborhood_phylogeny_v1. QfO21315 remains
+RUNNING. Next validate terminal native outputs/coverage/checkpoint semantics,
+prepare both CPM variants, and complete prespecified scoring without selection.
