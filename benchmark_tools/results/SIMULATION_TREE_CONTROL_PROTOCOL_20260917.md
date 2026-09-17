@@ -208,3 +208,25 @@ differences are not normalized away. Hash drift rejects the audit. Artifact
 differences qualify causal interpretation but never remove a prespecified
 accuracy contrast. Even equality covers only retained artifacts, not every
 internal computation. This script does not score truth or select parameters.
+
+## Scoring and Fixed Statistical Summary
+
+`score_simulation_tree_panel.py` requires exact reviewed hashes of the complete
+native admission and cross-arm artifact audit. It retains560rows:70datasets by
+two methods by inferred/generating/NNI1/NNI2 arms. Every successful arm is scored
+from checksum-verified native prediction files against its original frozen
+simulation truth. Inferred-baseline scores are recomputed and must match the
+previously admitted results. Failures retain explicit reasons without accuracy
+imputation. Retained upstream differences do not exclude successful arms.
+
+`summarize_simulation_tree_panel.py` enforces the fixed seven-condition,
+ten-seed, two-method, four-arm inventory and matching truth/input universes.
+Its42contrasts always retain all126exploratory metric slots, including contrasts
+with no complete pairs. Effects are arithmetic means of per-seed metric
+differences in percentage points, not pooled-pair statistics. Use20,000PCG64
+multinomial seed-resampling replicates, seed20260918 reset per contrast, with
+nominal95percent and Bonferroni126 intervals. Zero complete pairs yield no
+estimate; one pair yields a descriptive difference but no confidence interval.
+Undefined ratios follow the frozen scorer's zero convention and remain flagged.
+Native/scoring completion and these scripts' unit tests do not by themselves
+establish a scientific effect or publication readiness.

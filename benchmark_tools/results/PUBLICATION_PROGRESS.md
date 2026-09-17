@@ -4563,3 +4563,30 @@ dependencyafterany:21548,4CPU16GiB2hours,norequeue; confirmedpendingdependency.
 Outputbenchmarks/results/qfo_recovered_assessment_admission_v1;
 logbenchmarks/work/qfo_assessment_admission_21584.log. Own allfourterminal gate
 still required. Tree21406_170/171running,172-209pending;21435pendingdependency.
+
+### Tree-Panel Scoring and126-Endpoint Summary Prepared (2026-09-17)
+
+Previous continuation progressed native QfO auditor4c2fc81 and queued21584.
+Re-read objective; confirmed botharrayslive and bothauditorspending. Latest
+tree189/190running,191-209pending;QfO21548_0RUNNING14:36. No partialscore inspection.
+
+Added score_simulation_tree_panel.py gated on reviewed complete native/admission
+and artifact audit hashes. Revalidates frozen generation/inputs/truth and native
+prediction files; recomputes inferred baseline scores and requires agreement.
+All560method/dataset/arm outcomes retained; upstream artifact differences are
+interpretive caveats, not accuracy exclusions.
+
+Added summarize_simulation_tree_panel.py implementing the fixed126exploratory
+endpoints with20,000paired-seedPCG64replicates, seed20260918 and Bonferroni126.
+No pooling dependent pairs, failure-score imputation or single-pair intervals.
+Explicit complete-case counts, excluded reasons and undefined-ratio flags.
+Twenty-two focused tests pass, including all-failed126-slot retention, seed-mean
+versus pooled-count distinction, deterministic sign symmetry, truth mismatch,
+artifact-gate completeness and preservation of upstream differences. Fullunit
+suite in progress. Scripts prepared only; scoring waits for complete-panel gates.
+
+Full unit verification repeated after context recovery: 1,702 passed in 32.44s.
+The intervening user-requested goal-prompt response did not change scientific
+state. Revalidated active jobs: final tree task21406_209 completed0:0 in25s;
+independent auditor21435 RUNNING. QfO21548_0 remains running, later stages and
+auditor21584 pending. No partial scores inspected and no duplicate jobs started.
