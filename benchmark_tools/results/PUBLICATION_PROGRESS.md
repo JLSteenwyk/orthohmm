@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Biological Application Submitted (2026-09-17)
+
+After0f762b0 was pushed, submitted sequential Slurm array21661(0-3%1),
+partitiongpu/nodebizon,32CPUs128GiB,24h/task, using frozen launcher0c6fc7e and
+specSHA c43704020c56ead316678461f5be3e8d4efc43a56ff5ced4f0e3cfd3c189025c.
+21661_0 verifiedRUNNING at12seconds; tasks1-3queued on the array limit.
+Scheduler confirms requested allocation and exact frozen batchscript path.
+At this observation the first task is performing runtime checks; native
+inference completion is not yet established. No DGX resources are used.
+
+Method order:high_sensitivity,satellite_v2,fullOrthoFinder3.1.5,SonicParanoid2.0.9.
+Logs `benchmarks/work/wgd_application_21661_INDEX.log`; output root
+`benchmarks/results/biological_wgd_application_v1`. Preserve all native logs,
+preparation/execution receipts and failures. Output admission and biological
+scoring remain separate pending tasks; submission is not a result.
+
 ## Biological Application Launcher Passed Preflight (2026-09-17)
 
 Previous continuation progressed runtime inspection, pushed83630b3. Re-read
