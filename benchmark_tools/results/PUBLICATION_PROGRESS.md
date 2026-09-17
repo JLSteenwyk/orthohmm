@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Native Smokes Admitted and Scientific Execution Authorized (2026-09-17)
+
+After f4bee65 was pushed, launched the three sequential native launcher smokes
+as21653_0..2, exclusive20CPU96GiB Spark. All completed0:0 (13/17/19seconds).
+Independent admission checks exact prepared commands, before/after runtime,
+system and recipe identity, original input bytes/order, raw collector replay,
+GNU-time accounting and native biological outputs. All cover645genes.
+High-sensitivity has98groups; satellite_v2 has98groups/98rootHOGs/1835native
+pairs; full OrthoFinder has99checkpoint groups and1834nativepairs.
+These are engineering fixtures, not accuracy estimates or comparative timings.
+
+Added explicit evidence-root relocation for independent local validation of
+downloaded artifacts; original remote native argv/cwd and measured GNU-time
+commands are still checked unchanged. Three regression tests verify that
+relocation cannot conceal a command mismatch. Admitted smoke report:
+`dgx_native_launcher_smokes_admitted_20260917.json`, SHA256
+`85f05ed52652076d904fc0870fbc087c60d22be58f1a6316226d1fe72c1a393e`.
+Raw `benchmarks/work/dgx_native_launcher_smoke_v1`; all remote runs retained.
+
+Generated separate scientific authorization only after the pinned overhead and
+native-smoke gates passed. All27run records equal the original DGX plan exactly;
+environment settings match the tested smokes; all three native-order/input
+inventories match. Native timeout23h50m leaves10minutes for checks/preparation
+inside the24h task allocation. No cold-cache claim, overhead correction, x86
+pooling, default change or discarded failure is authorized.
+Specification `dgx_scientific_execution_20260917.json`, SHA256
+`fe96893489935124b675e3fb06317870cc7c155d9765e08067ad5b38b83df362`.
+Scientific recipe `native_launcher_recipe_v2/benchmark_tools`; external manifest
+`runtime_inventory_v1/native_launcher_recipe_v2.json`, SHA256
+`1de0ec6320defadef9bd22fda16ca7cc2f6f0ef78ffdf14b82d095fc8793fcc2`.
+Identities recorded before submission. Full suite before five authorization
+tests:1,996passed47.25s;44focused authorization/admission/launcher/validator
+tests pass. Scientific scaling0/27completed; post-run independent admission
+remains required. Broader publication requirements remain active.
+
 ## Native Launcher Smoke Prepared (2026-09-17)
 
 Previous turn completed verified overhead audit, pushed91de6ed. Re-read the

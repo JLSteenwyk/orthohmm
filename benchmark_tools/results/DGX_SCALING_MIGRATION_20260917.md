@@ -1,5 +1,24 @@
 # Dedicated DGX Scaling Migration
 
+## Scientific Launch Authorization
+
+The tested native entry point now has separate scientific authorization after
+all three launcher smokes21653 passed independent runtime/input/collector/native
+output admission. The new specification preserves every run record from the
+original27-command DGX plan and the tested environment. See
+`dgx_native_launcher_smokes_admitted_20260917.json` and
+`dgx_scientific_execution_20260917.json`; exact hashes and recipe identity are
+recorded in PUBLICATION_PROGRESS.md before submission.
+
+Each scientific task remains exclusive20CPU96GiB on spark-7ff0, concurrency1,
+24h scheduler limit. The native timeout is23h50m to reserve10minutes for
+preparation and verification. Input copying/hashing warms caches and remains
+outside the native command timer; GNU time and periodic collector overhead are
+retained. Before/after runtime/recipe/input checks and native-order checks are
+mandatory. Every attempted run, including failure, must remain in the inventory;
+successful process exit alone does not admit biological outputs or resource
+comparisons. No scientific results are established by this authorization.
+
 ## Verified Repeat Completed
 
 The separate prospective verified-wrapper repeat21647 completed all six tasks

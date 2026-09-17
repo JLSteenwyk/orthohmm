@@ -1,0 +1,116 @@
+{
+  "exclusions": [
+    "__pycache__",
+    ".git",
+    "*.pyc",
+    "*.pyo"
+  ],
+  "external_symlinks": [],
+  "limitations": [
+    "Explicit tree identity, not a hermetic operating-system or loader snapshot.",
+    "Directory symlinks are recorded but not traversed; external targets require separate review.",
+    "Python bytecode caches are excluded; execution must isolate cache lookup to a fresh prefix and disable writes.",
+    "Before/after equality cannot rule out a temporary change during execution."
+  ],
+  "records": [
+    {
+      "kind": "directory",
+      "mode": 509,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/native_launcher_recipe_v2"
+    },
+    {
+      "kind": "directory",
+      "mode": 509,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/native_launcher_recipe_v2/benchmark_tools"
+    },
+    {
+      "bytes": 42247,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/native_launcher_recipe_v2/benchmark_tools/dgx_native_launcher_smokes_admitted_20260917.json",
+      "sha256": "85f05ed52652076d904fc0870fbc087c60d22be58f1a6316226d1fe72c1a393e"
+    },
+    {
+      "bytes": 142809,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/native_launcher_recipe_v2/benchmark_tools/dgx_scaling_commands_20260917.json",
+      "sha256": "7096348236f8372ef7f6ad12a3e829eae3dfee812b17c3b0bdd582480538ff1b"
+    },
+    {
+      "bytes": 149605,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/native_launcher_recipe_v2/benchmark_tools/dgx_scientific_execution_20260917.json",
+      "sha256": "fe96893489935124b675e3fb06317870cc7c155d9765e08067ad5b38b83df362"
+    },
+    {
+      "bytes": 29111,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/native_launcher_recipe_v2/benchmark_tools/dgx_verified_overhead_20260917.json",
+      "sha256": "0184d54be2f55720aff35f27b6db0123de28ca7dfcdabd50cbf1d8d79d60b437"
+    },
+    {
+      "bytes": 2020,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/native_launcher_recipe_v2/benchmark_tools/gnu_time_companion.py",
+      "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+    },
+    {
+      "bytes": 5291,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/native_launcher_recipe_v2/benchmark_tools/launch_dgx_native_run.py",
+      "sha256": "4aa5110c256a0eaca616c6826645db55aa6f7855fb5f04ef6b10bb67bf31a0b2"
+    },
+    {
+      "bytes": 2516,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/native_launcher_recipe_v2/benchmark_tools/measure_native_scaling_run.py",
+      "sha256": "51a6acf016856eb095f321674c38531b612a043ba006d28bb3668b1f9a3aeeef"
+    },
+    {
+      "bytes": 4756,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/native_launcher_recipe_v2/benchmark_tools/prepare_native_scaling_run.py",
+      "sha256": "75c347d34f1a259a7039af1065b70aef6100175e08d36ed1441a86dd5f9214d1"
+    },
+    {
+      "bytes": 1078,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/native_launcher_recipe_v2/benchmark_tools/run_dgx_scientific_scaling.sh",
+      "sha256": "a22ffd4e6e42a44a27cca20f5ed05632ec505cc3887e8f3e48fb9517e6c5bf06"
+    },
+    {
+      "bytes": 5070,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/native_launcher_recipe_v2/benchmark_tools/run_verified_slurm_measurement.py",
+      "sha256": "36243fcdfe6f49e73dbe1dd1b627bf4a330f19f3cd52dcf94a9618ddf0415cf8"
+    },
+    {
+      "bytes": 3883,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/native_launcher_recipe_v2/benchmark_tools/snapshot_orthohmm_input_order.py",
+      "sha256": "730609276dbaba4671cce8e3caea6bb2dc535a263110febf08a3f4d0afd7d9c8"
+    },
+    {
+      "bytes": 4083,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/native_launcher_recipe_v2/benchmark_tools/snapshot_runtime_trees.py",
+      "sha256": "ab0008651e75ebadc1be3c87503f09bffd9e5be87f2e6b0c3eec49e552d9bd4c"
+    }
+  ],
+  "roots": [
+    "/home/jlsteenwyk/projects/orthohmm-publication/native_launcher_recipe_v2"
+  ],
+  "schema": 1,
+  "scientific_execution_authorized": false
+}

@@ -1,6 +1,7 @@
 """Validate direct native scaling outputs separately from timing and accuracy."""
 
 import json
+from copy import deepcopy
 from pathlib import Path
 import shlex
 
@@ -109,7 +110,23 @@ def validate_orthofinder(run, owners, species):
             "checked_files": [record(p) for p in files]}
 
 
-def validate(run, measurement):
+def relocate_evidence(run, roots):
+    mapped = deepcopy(run)
+    def path(value):
+        original = Path(value)
+        for source, target in sorted(roots.items(), key=lambda item: len(Path(item[0]).parts), reverse=True):
+            if original.is_relative_to(Path(source)):
+                return str(Path(target) / original.relative_to(Path(source)))
+        raise ValueError("Evidence path has no declared relocation: " + str(value))
+    for key in ("output", "metrics", "copy_inputs_to"):
+        if key in mapped["configuration"]:
+            mapped["configuration"][key] = path(mapped["configuration"][key])
+    for row in mapped["dataset"]["inputs"]:
+        row["path"] = path(row["path"])
+    return mapped, path
+
+
+def validate(run, measurement, evidence_roots=None):
     companion = run.get("gnu_time")
     expected = run["native_argv"]
     if companion is not None:
@@ -120,21 +137,23 @@ def validate(run, measurement):
         raise ValueError("Measured command differs from frozen native command")
     if measurement["exit_code"] != 0 or measurement["timed_out"]:
         raise NativeOutputFailure("Native process did not finish successfully")
-    owners, species = input_universe(run["dataset"])
+    accessible, access_path = relocate_evidence(run, evidence_roots) if evidence_roots else (run, str)
+    owners, species = input_universe(accessible["dataset"])
     if run["native_method"] in {"orthohmm_high_sensitivity", "orthohmm_satellite_v2"}:
-        result = validate_orthohmm(run, owners, species)
+        result = validate_orthohmm(accessible, owners, species)
     elif run["native_method"] == "orthofinder_full":
-        result = validate_orthofinder(run, owners, species)
+        result = validate_orthofinder(accessible, owners, species)
     else:
         raise ValueError("Unknown native scaling method")
     if companion is not None:
-        path = Path(companion["output"])
+        path = Path(access_path(companion["output"]))
         timing = parse_time(path.read_text())
         if timing["exit_status"] != measurement["exit_code"]:
             raise NativeOutputFailure("GNU-time and measured exit statuses disagree")
         result["gnu_time_companion"] = {"source": record(path), "accounting": timing,
                                         "wrapper_in_collector_wall_time": True}
     return {"status": "native_scaling_outputs_checked", "accuracy_evaluated": False,
+            "evidence_relocation": {str(k): str(v) for k, v in (evidence_roots or {}).items()},
             "resource_measurements_admitted": False, "source": record(__file__), **result,
             "limitations": ["Caller must independently verify frozen manifest/source/runtime before and after inference.",
                             "Native validity does not establish a quiet host, valid timing, or prediction accuracy.",

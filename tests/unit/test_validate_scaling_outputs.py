@@ -82,6 +82,27 @@ def test_gnu_time_exit_disagreement(tmp_path):
         validate(run, measurement)
 
 
+@pytest.mark.parametrize("method", ["orthohmm_high_sensitivity", "orthohmm_satellite_v2", "orthofinder_full"])
+def test_relocation_preserves_original_command_checks(tmp_path, method):
+    remote = tmp_path / "remote"
+    remote.mkdir()
+    run, measurement = fixture(remote, method)
+    timing = remote / "time.tsv"
+    run["gnu_time"] = {"executable": "/usr/bin/time", "output": str(timing)}
+    measurement["command"] = time_command(run["native_argv"], timing)
+    timing.write_text("elapsed_seconds\t1\nuser_seconds\t0\nsystem_seconds\t0\nmax_process_rss_kib\t1\nexit_status\t0\n")
+    local = tmp_path / "local"
+    remote.rename(local)
+    original = json.dumps(run, sort_keys=True)
+    result = validate(run, measurement, {remote: local})
+    assert result["input_genes"] == 2
+    assert result["evidence_relocation"] == {str(remote): str(local)}
+    assert json.dumps(run, sort_keys=True) == original
+    measurement["command"][-1] = "wrong"
+    with pytest.raises(ValueError, match="Measured command"):
+        validate(run, measurement, {remote: local})
+
+
 @pytest.mark.parametrize("problem", ["command", "exit", "timeout", "missing_gene", "duplicate_gene", "pair_species", "duplicate_pair", "metrics_command", "metrics_count"])
 def test_orthohmm_failure_and_corruption_rejected(tmp_path, problem):
     run, measurement = fixture(tmp_path)
