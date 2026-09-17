@@ -3391,3 +3391,7 @@ of every historical partition. Preserved qfo_native_constructor_mismatch_2026091
 SHA25650bd555569203a477567f8bbca1e29718b82c42746c62bace953f9e39764c5c6;
 full failed run remains benchmarks/results/qfo_native_boundary_v2. No retries or
 default fixes yet. Independent witness checks and constructor-only experiments next.
+
+CPM candidate executor070051d pushed/frozen at publication_ob_cpm_candidates_v1;
+no-requeue job21322 submitted and confirmed RUNNING (one CPU,32GiB,one hour).
+Output benchmarks/results/ob_cpm_candidates_v1; no phylogeny or scoring yet.
