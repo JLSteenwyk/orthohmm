@@ -1,5 +1,25 @@
 # Dedicated DGX Scaling Migration
 
+## Verified Repeat Completed
+
+The separate prospective verified-wrapper repeat21647 completed all six tasks
+successfully. Its frozen protocol checks pass, including complete before/after
+runtime, system and recipe identity, exact workload checksums, independent
+collector replay, GNU-time accounting and the numerical overhead budgets.
+Median sampled/sparse wall difference-0.6719%, range-0.9396% to+0.9670%.
+Negative differences are ordinary finite-run variation, not sampling speedup.
+No correction is subtracted. See `dgx_verified_overhead_20260917.json`, SHA256
+`0184d54be2f55720aff35f27b6db0123de28ca7dfcdabd50cbf1d8d79d60b437`.
+
+This repeat resolves prospective identity verification for the bounded
+engineering panel; it does not retroactively establish the original panel's
+runtime identity. Full-file checks warm caches, and the workload remains one
+small compute process with20threads. No general overhead bound is claimed.
+Scientific preparation/measurement composition is implemented and unit-tested;
+the authorized launcher and independent native-output admission still need an
+end-to-end check before the27 scientific timing runs. Historical sections below
+retain the original observations and limitations.
+
 ## Latest Status: Overhead Panel
 
 All six tasks21640_0 through21640_5 completed successfully and passed independent

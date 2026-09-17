@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Verified Overhead Panel Completed (2026-09-17)
+
+Previous turn progressed native preparation/measurement composition, pushed
+cffbd71. Re-read the objective. Verified21647_4 live at24seconds and21647_5
+at1:06; no partial outcomes inspected. Subsequently all six tasks completed0:0
+under the specified20CPU96GiB Spark allocations. Retrieved all raw artifacts
+and audited the entire fixed panel without exclusions or retries.
+
+All prespecified checks pass: exact native workload/checksums, before/after
+runtime/system/recipe identities, GNU-time/collector/native success, sampling
+cadence, duration/load, observed foreign CPU and independent raw-record replay.
+Median sampled/sparse wall difference-0.6719%, range-0.9396% to+0.9670%, within
+5%median/10%per-pair budgets. These small negative differences are not evidence
+that sampling accelerates execution; retain all measurements with no correction.
+Mean observed CPU19.9270-19.9384cores; maximum observed foreign CPU0.004386cores.
+This closes the prospective verified-panel identity gate, not the historical
+identity gap in the original21640 panel and not general observer overhead.
+
+Report `dgx_verified_overhead_20260917.json`, SHA256
+`0184d54be2f55720aff35f27b6db0123de28ca7dfcdabd50cbf1d8d79d60b437`.
+Raw local `benchmarks/work/dgx_verified_overhead_v2`; original remote directories
+remain preserved. Reporter refuses incomplete/failed scheduler inventories and
+checks pinned verification identities plus equality with the separate collector
+record. Eleven new tests;24focused audit tests; full suite1,979passed47.19s.
+
+No scientific scaling runs launched. Next is end-to-end validation of the
+authorized scientific launcher and independent native-output admission, followed
+by the unchanged27-run plan. The full publication objective remains active.
+
 ## Scientific Preparation and Measurement Composition (2026-09-17)
 
 Previous turn progressed verified-wrapper smoke/protocol and launched21647,
