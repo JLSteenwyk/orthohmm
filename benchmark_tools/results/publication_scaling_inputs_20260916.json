@@ -1,0 +1,450 @@
+{
+  "accuracy_evaluated": false,
+  "accuracy_reference_files_read": [],
+  "datasets": [
+    {
+      "input_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_scaling_inputs_v1/proteomes_4/input",
+      "inputs": [
+        {
+          "bytes": 8784620,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+          "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+        },
+        {
+          "bytes": 7778910,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+          "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+        },
+        {
+          "bytes": 9883133,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Gallus_gallus.GRCg6a.pep.all.fa",
+          "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+        },
+        {
+          "bytes": 12000073,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+          "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+        }
+      ],
+      "proteins": 73266,
+      "proteomes": 4,
+      "sequence_characters": 36474860
+    },
+    {
+      "input_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_scaling_inputs_v1/proteomes_8/input",
+      "inputs": [
+        {
+          "bytes": 8784620,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+          "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+        },
+        {
+          "bytes": 5797677,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Ciona_intestinalis.KH.pep.all.fa",
+          "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+        },
+        {
+          "bytes": 17020497,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Danio_rerio.GRCz11.pep.all.fa",
+          "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+        },
+        {
+          "bytes": 7778910,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+          "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+        },
+        {
+          "bytes": 9883133,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Gallus_gallus.GRCg6a.pep.all.fa",
+          "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+        },
+        {
+          "bytes": 11930628,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Monodelphis_domestica.ASM229v1.pep.all.fa",
+          "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+        },
+        {
+          "bytes": 12782304,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+          "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+        },
+        {
+          "bytes": 12000073,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+          "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+        }
+      ],
+      "proteins": 165168,
+      "proteomes": 8,
+      "sequence_characters": 81374087
+    },
+    {
+      "input_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_scaling_inputs_v1/proteomes_12/input",
+      "inputs": [
+        {
+          "bytes": 8784620,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+          "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+        },
+        {
+          "bytes": 11973324,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Canis_familiaris.CanFam3.1.pep.all.fa",
+          "sha256": "0d87161a9990b9d8b0d56b4e71dfbe74c6016b0dda3352247b35d85501c33b33"
+        },
+        {
+          "bytes": 5797677,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Ciona_intestinalis.KH.pep.all.fa",
+          "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+        },
+        {
+          "bytes": 17020497,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Danio_rerio.GRCz11.pep.all.fa",
+          "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+        },
+        {
+          "bytes": 7778910,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+          "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+        },
+        {
+          "bytes": 9883133,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Gallus_gallus.GRCg6a.pep.all.fa",
+          "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+        },
+        {
+          "bytes": 13576811,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Homo_sapiens.GRCh38.pep.all.fa",
+          "sha256": "bff5d1f0f259c801dc607045e4c13bfc759098f17d536b307c13a89a523569ac"
+        },
+        {
+          "bytes": 11930628,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Monodelphis_domestica.ASM229v1.pep.all.fa",
+          "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+        },
+        {
+          "bytes": 12880578,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Mus_musculus.GRCm38.pep.all.fa",
+          "sha256": "3b6e0a68688294135324824e1879de86c1715a9f3c655406f6ec8fcfdd75db1a"
+        },
+        {
+          "bytes": 12782304,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+          "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+        },
+        {
+          "bytes": 12000073,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+          "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+        },
+        {
+          "bytes": 10463972,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+          "sha256": "1f6ebacc342da127e4ab9c1a9cf7b627e8169df3cbc0d971d57655d974c8d9b2"
+        }
+      ],
+      "proteins": 251378,
+      "proteomes": 12,
+      "sequence_characters": 127798408
+    }
+  ],
+  "input_manifest": {
+    "bytes": 63452,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/orthobench_factorial_prepared_20260916.json",
+    "sha256": "5c325f4d77865e0c7571fe4bb4df0be0959977a49e1d22169f192518700f9382"
+  },
+  "limitations": [
+    "One nested OrthoBench taxon series; input size and taxon composition co-vary.",
+    "No subsampling of proteins within a selected proteome; no added or rewritten sequences.",
+    "Preparation is not timing evidence. Native runtime, exact commands, output semantics and workload gates are required before execution.",
+    "No universal scaling law or resource advantage is established by this panel."
+  ],
+  "order_salt": "orthohmm-publication-scaling-20260916-v1",
+  "ordered_proteomes": [
+    {
+      "input": {
+        "bytes": 8784620,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+        "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+      },
+      "proteins": 20191,
+      "sequence_characters": 8273192
+    },
+    {
+      "input": {
+        "bytes": 12000073,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+        "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+      },
+      "proteins": 22250,
+      "sequence_characters": 11354525
+    },
+    {
+      "input": {
+        "bytes": 9883133,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Gallus_gallus.GRCg6a.pep.all.fa",
+        "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+      },
+      "proteins": 16878,
+      "sequence_characters": 9380885
+    },
+    {
+      "input": {
+        "bytes": 7778910,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+        "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+      },
+      "proteins": 13947,
+      "sequence_characters": 7466258
+    },
+    {
+      "input": {
+        "bytes": 17020497,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Danio_rerio.GRCz11.pep.all.fa",
+        "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+      },
+      "proteins": 30313,
+      "sequence_characters": 16130458
+    },
+    {
+      "input": {
+        "bytes": 11930628,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Monodelphis_domestica.ASM229v1.pep.all.fa",
+        "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+      },
+      "proteins": 21384,
+      "sequence_characters": 11303744
+    },
+    {
+      "input": {
+        "bytes": 5797677,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Ciona_intestinalis.KH.pep.all.fa",
+        "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+      },
+      "proteins": 16671,
+      "sequence_characters": 5366629
+    },
+    {
+      "input": {
+        "bytes": 12782304,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+        "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+      },
+      "proteins": 23534,
+      "sequence_characters": 12098396
+    },
+    {
+      "input": {
+        "bytes": 11973324,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Canis_familiaris.CanFam3.1.pep.all.fa",
+        "sha256": "0d87161a9990b9d8b0d56b4e71dfbe74c6016b0dda3352247b35d85501c33b33"
+      },
+      "proteins": 20257,
+      "sequence_characters": 11368599
+    },
+    {
+      "input": {
+        "bytes": 12880578,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Mus_musculus.GRCm38.pep.all.fa",
+        "sha256": "3b6e0a68688294135324824e1879de86c1715a9f3c655406f6ec8fcfdd75db1a"
+      },
+      "proteins": 22866,
+      "sequence_characters": 12208254
+    },
+    {
+      "input": {
+        "bytes": 10463972,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+        "sha256": "1f6ebacc342da127e4ab9c1a9cf7b627e8169df3cbc0d971d57655d974c8d9b2"
+      },
+      "proteins": 19602,
+      "sequence_characters": 9897274
+    },
+    {
+      "input": {
+        "bytes": 13576811,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Homo_sapiens.GRCh38.pep.all.fa",
+        "sha256": "bff5d1f0f259c801dc607045e4c13bfc759098f17d536b307c13a89a523569ac"
+      },
+      "proteins": 23485,
+      "sequence_characters": 12950194
+    }
+  ],
+  "planned_runs": [
+    {
+      "index": 0,
+      "method": "orthohmm_high_sensitivity",
+      "proteomes": 4,
+      "repeat": 0
+    },
+    {
+      "index": 1,
+      "method": "orthohmm_satellite_v2",
+      "proteomes": 4,
+      "repeat": 0
+    },
+    {
+      "index": 2,
+      "method": "orthofinder_3_1_5_full",
+      "proteomes": 4,
+      "repeat": 0
+    },
+    {
+      "index": 3,
+      "method": "orthohmm_satellite_v2",
+      "proteomes": 8,
+      "repeat": 0
+    },
+    {
+      "index": 4,
+      "method": "orthofinder_3_1_5_full",
+      "proteomes": 8,
+      "repeat": 0
+    },
+    {
+      "index": 5,
+      "method": "orthohmm_high_sensitivity",
+      "proteomes": 8,
+      "repeat": 0
+    },
+    {
+      "index": 6,
+      "method": "orthofinder_3_1_5_full",
+      "proteomes": 12,
+      "repeat": 0
+    },
+    {
+      "index": 7,
+      "method": "orthohmm_high_sensitivity",
+      "proteomes": 12,
+      "repeat": 0
+    },
+    {
+      "index": 8,
+      "method": "orthohmm_satellite_v2",
+      "proteomes": 12,
+      "repeat": 0
+    },
+    {
+      "index": 9,
+      "method": "orthohmm_satellite_v2",
+      "proteomes": 4,
+      "repeat": 1
+    },
+    {
+      "index": 10,
+      "method": "orthofinder_3_1_5_full",
+      "proteomes": 4,
+      "repeat": 1
+    },
+    {
+      "index": 11,
+      "method": "orthohmm_high_sensitivity",
+      "proteomes": 4,
+      "repeat": 1
+    },
+    {
+      "index": 12,
+      "method": "orthofinder_3_1_5_full",
+      "proteomes": 8,
+      "repeat": 1
+    },
+    {
+      "index": 13,
+      "method": "orthohmm_high_sensitivity",
+      "proteomes": 8,
+      "repeat": 1
+    },
+    {
+      "index": 14,
+      "method": "orthohmm_satellite_v2",
+      "proteomes": 8,
+      "repeat": 1
+    },
+    {
+      "index": 15,
+      "method": "orthohmm_high_sensitivity",
+      "proteomes": 12,
+      "repeat": 1
+    },
+    {
+      "index": 16,
+      "method": "orthohmm_satellite_v2",
+      "proteomes": 12,
+      "repeat": 1
+    },
+    {
+      "index": 17,
+      "method": "orthofinder_3_1_5_full",
+      "proteomes": 12,
+      "repeat": 1
+    },
+    {
+      "index": 18,
+      "method": "orthofinder_3_1_5_full",
+      "proteomes": 4,
+      "repeat": 2
+    },
+    {
+      "index": 19,
+      "method": "orthohmm_high_sensitivity",
+      "proteomes": 4,
+      "repeat": 2
+    },
+    {
+      "index": 20,
+      "method": "orthohmm_satellite_v2",
+      "proteomes": 4,
+      "repeat": 2
+    },
+    {
+      "index": 21,
+      "method": "orthohmm_high_sensitivity",
+      "proteomes": 8,
+      "repeat": 2
+    },
+    {
+      "index": 22,
+      "method": "orthohmm_satellite_v2",
+      "proteomes": 8,
+      "repeat": 2
+    },
+    {
+      "index": 23,
+      "method": "orthofinder_3_1_5_full",
+      "proteomes": 8,
+      "repeat": 2
+    },
+    {
+      "index": 24,
+      "method": "orthohmm_satellite_v2",
+      "proteomes": 12,
+      "repeat": 2
+    },
+    {
+      "index": 25,
+      "method": "orthofinder_3_1_5_full",
+      "proteomes": 12,
+      "repeat": 2
+    },
+    {
+      "index": 26,
+      "method": "orthohmm_high_sensitivity",
+      "proteomes": 12,
+      "repeat": 2
+    }
+  ],
+  "prediction_files_read": [],
+  "resource_plan": {
+    "cpus": 32,
+    "fresh_output_each_run": true,
+    "memory_gib": 128,
+    "shared_search_cache": false,
+    "wall_limit_hours_per_run": 24
+  },
+  "source": {
+    "bytes": 4925,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_scaling_inputs.py",
+    "sha256": "db8b826efdc24de7116dc4b41353e221f4949634d8b37a803f65f66a12ec38b4"
+  },
+  "status": "scaling_inputs_prepared_unrun"
+}

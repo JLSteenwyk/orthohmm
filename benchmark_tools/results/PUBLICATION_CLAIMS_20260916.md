@@ -130,6 +130,13 @@ evidence that an experiment completed or a biological hypothesis is true.
   intervals include zero. Only the CPM0.12 recall deficit excludes zero across
   the18 planned endpoints. No new default, equivalence or superiority claim.
 
+- The [first matched scaling protocol](MATCHED_SCALING_PROTOCOL_20260916.md)
+  and [input manifest](publication_scaling_inputs_20260916.json) are frozen:
+  nested4/8/12 complete proteomes contain73,266/165,168/251,378 proteins, with27
+  planned runs across three principal methods. No timing run has started;
+  command/native-runtime, resource-accounting and host-workload gates remain
+  required. This preparation does not establish practical efficiency.
+
 The manuscript must retain negative and neutral findings. Missing evidence
 cannot be replaced with a claim that the method is generally applicable,
 that a competitor failed, or that a custom mean proves superiority.

@@ -3778,3 +3778,32 @@ initial-graph diagnostic, not full HMM replay or historical equivalence.
 Focused tests: 22 passed, including real igraph/Leiden observations, independent
 multi-chunk hash reconstruction, invalid arrays, altered native records, exact
 panel guards, and refusal to reuse output. Full suite: 1,371 passed in 35.37s.
+
+### First matched scaling input panel prepared (2026-09-16)
+
+Previous continuation made progress by committing/pushing independent QfO
+admission2593833. This continuation confirmed job21328 remains RUNNING, including
+at00:09:21, without restarting it. While that diagnostic runs, advanced the separate
+practical-efficiency requirement. No completed matched scaling protocol existed.
+
+Added MATCHED_SCALING_PROTOCOL_20260916.md and prepare_scaling_inputs.py. Basename
+hash ordering with fixed salt selects nested4/8/12 complete OrthoBench proteomes;
+no predictions, accuracy labels or new timing outcomes inform selection. Three
+repeats each of frozen high-sensitivity, satellite_v2 and full OrthoFinder3.1.5
+give27 planned runs, rotating method positions within size/repeat blocks. Planned
+limits32CPUs/128GiB/24hours per run; exact command/native-runtime, simultaneous
+memory/CPU accounting and throughout-run host-workload gates precede execution.
+Exclusive Slurm allocation alone is not assumed to isolate non-Slurm activity.
+No global cache flushing, user-process termination or timing run was performed.
+
+Prepared benchmarks/results/publication_scaling_inputs_v1 with only symlinks to
+checksum-pinned intact source FASTAs. Frozen snapshot:
+publication_scaling_inputs_20260916.json SHA256
+1957b050d33dd89e933ff33f96500a4fbaa6b2155d85d067d7d7d956c3d139af.
+Sizes contain73,266/165,168/251,378 proteins and36,474,860/81,374,087/127,798,408
+sequence characters. Independent reread checks full file inventory, input hashes,
+unique coverage, strict nesting and counts. Six focused tests pass for ordering,
+location independence, ambiguous input rejection, balanced27-run plan and refusal
+to reuse output. Full suite: 1,377 passed in 35.00s. This is input preparation only:
+taxon composition and size co-vary, no universal scaling claim, and historical
+shared-node times remain descriptive rather than controlled comparison evidence.
