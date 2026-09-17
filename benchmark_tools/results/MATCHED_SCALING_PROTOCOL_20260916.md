@@ -154,3 +154,17 @@ Prepared a dedicated two-CPU, one-GiB parent/child Slurm smoke test of the compl
 collector lifecycle. This is not one of the 27 scientific scaling runs. A
 controlled execution window, frozen scientific commands and native-output
 admission remain required before those comparisons.
+
+The [lifecycle smoke report](resource_host_command_smoke_20260917.json) completed
+as job21458, exit0, scheduler elapsed11seconds, using frozen9629903 executor.
+Four host observations bracketed the native command and allthree intervals
+detected competing CPU work (maximum43.690 observed foreign average cores).
+No workload observation exceptions occurred. The native command exited0, but
+neither this smoke nor its resource measurements establish isolated efficiency.
+
+Importantly, each whole-host snapshot took2.081-2.177seconds; total observed
+cgroup CPU was8.937seconds over9.667seconds. Thus a requested0.5-second wait is
+not a0.5-second sampling cadence, and the monitor itself materially burdens this
+short smoke. Before scientific timing, reduce or amortize collection cost with
+a prespecified cadence and retain the resulting missed-work limitations. Do not
+treat functional monitoring success as acceptable measurement overhead.

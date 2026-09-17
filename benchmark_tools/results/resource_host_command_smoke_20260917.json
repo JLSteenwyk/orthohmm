@@ -1,0 +1,88 @@
+{
+  "accuracy_evaluated": false,
+  "baseline_scope": "/system.slice/slurmstepd.scope/job_21458/step_batch/user/task_0",
+  "child_pid": 2854366,
+  "command": [
+    "/home/bizon/anaconda3/bin/python",
+    "-c",
+    "import subprocess,sys; a=bytearray(16*1024*1024); subprocess.run([sys.executable,\"-c\",\"import time; a=bytearray(32*1024*1024); sum(i*i for i in range(2000000)); time.sleep(3)\"],check=True)"
+  ],
+  "command.log": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/resource_host_command_smoke_v1/command.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "command_wall_s": 5.321764148990042,
+  "controlled_workload_verified": false,
+  "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+  "exit_code": 0,
+  "host_samples.jsonl": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/resource_host_command_smoke_v1/host_samples.jsonl",
+    "sha256": "6afb18af3891fa5fd3f532d7dae6ec488042151ddbbc22668a14f4b5e9187f83"
+  },
+  "host_workload": {
+    "command_bracketed_by_samples": true,
+    "controlled_workload_verified": false,
+    "interval_counts": {
+      "competing_cpu_observed": 3
+    },
+    "limitations": [
+      "Snapshots miss short-lived processes and non-CPU contention.",
+      "Per-process CPU intervals are not simultaneous; no exclusivity or quiet-host certification.",
+      "Sampling overhead is included in measured resources; raw process inventory is local evidence."
+    ],
+    "maximum_between_snapshot_gap_s": 0.5553938110097079,
+    "maximum_observed_foreign_average_cores": 43.68966421079211,
+    "observation_errors": 0,
+    "observer_source": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_resource_host_command_v1/benchmark_tools/observe_host_competition.py",
+      "sha256": "8b0f20b50aaa0efee5fb3f7a4b924323d771e39b791be5aaac15caac6c132113"
+    },
+    "source": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_resource_host_command_v1/benchmark_tools/command_host_monitor.py",
+      "sha256": "b75129eacae6d6516c286775865079187879885a0e66d8295de73385ad0d9f75"
+    },
+    "status": "competing_cpu_observed",
+    "successful_snapshots": 4,
+    "threshold_average_cores": 0.25
+  },
+  "interval_s": 0.5,
+  "job_id": 21458,
+  "limitations": [
+    "Caller must independently verify source/runtime, inputs, host workload and native output correctness.",
+    "Cgroup CPU and memory include this wrapper; sampling and accounting overhead are retained.",
+    "Cgroup peak may include preflight and predate command launch; sampled RSS misses transient peaks and may double-count shared pages.",
+    "Command wall time includes spawn/wait scheduling overhead; separate conversion/scoring must use separate measurements.",
+    "A command exit does not certify biological output success. Measurement failure does not silently terminate a still-running command."
+  ],
+  "requested_cpus": 2,
+  "requested_memory_bytes": 1073741824,
+  "samples.jsonl": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/resource_host_command_smoke_v1/samples.jsonl",
+    "sha256": "5390239778eb6597edbf1871dbc8d8d06617e742921d098e3ad324f808b9d3ce"
+  },
+  "snapshot_source": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_resource_host_command_v1/benchmark_tools/slurm_resource_snapshot.py",
+    "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+  },
+  "source": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_resource_host_command_v1/benchmark_tools/measure_slurm_command.py",
+    "sha256": "4ee589f9b0d3f4a9bf1fca8e2509ff22d668b58333064d56a0f59849c7bffc2e"
+  },
+  "status": "command_exited_zero",
+  "summary": {
+    "cpu_delta_usec": {
+      "system_usec": 6932397,
+      "usage_usec": 8937253,
+      "user_usec": 2004855
+    },
+    "maximum_reported_cgroup_peak_bytes": 78016512,
+    "maximum_sampled_sum_rss_bytes": 90951680,
+    "mean_cpu_cores_over_observed_span": 0.9245044725803089,
+    "observation_span_s": 9.667073838005308,
+    "observations": 4,
+    "samples_with_process_errors": 0
+  },
+  "timed_out": false,
+  "timeout_s": 30.0,
+  "wrapper_wall_s": 9.66982800400001
+}

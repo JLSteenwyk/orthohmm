@@ -4401,3 +4401,14 @@ the parent rejected labelsstrict_profiles/strict_profiles_refined because its
 guard expectedprofiles/profiles_refined. Frozen scientific replay source emits
 the strict labels. No new inference submitted; preserve raw outputs and recover
 postflight/admission checks transparently rather than changing failed records.
+
+Committed/pushed9629903 and froze publication_resource_host_command_v1 at
+962990396445b5fcf2430a949ed0c43ae939982d. Slurm smoke21458COMPLETED0:0 in11s.
+Four snapshots bracketed the native command; three intervals detected contention,
+max43.690foreign average cores, no observation exceptions. Report snapshotSHA
+bf4e127a13ecc34b5a045acf201e270664f9fddb4ab129d7f8315587f57e2ae4.
+Raw host inventory remains local. Each whole-host snapshot took2.081-2.177s,
+which is substantial observer overhead; optimize/amortize before scientific
+scaling. No controlled runtime claim or actual scaling experiment completed.
+Next priority: strict postflight recovery and independent admission of preserved
+QfOv2 outputs after diagnosing the wrapper-label mismatch; do not rerun inference.
