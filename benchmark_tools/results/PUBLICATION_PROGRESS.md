@@ -1,5 +1,30 @@
 # Publication Progress
 
+## SwissTrees Comparator Uncertainty Figure (2026-09-17)
+
+Previous turn progressed the frozen paired comparator analysis, pushed671d3c1.
+Re-read full objective; DGX21656_5 verified RUNNING34:07, five complete and21queued.
+Added a pinned-result publication plotter, PDF/SVG/PNG outputs and provenance
+manifest. Three aligned panels retain all24F1/precision/recall contrasts with
+nominal and multiplicity-adjusted intervals, consistent percentage-point axes
+and explicit zero lines. Diagnostic outputs and retrospective limitations are
+visible in the figure rather than hidden in external notes.
+
+Five figure tests check every point and interval against the result JSON,
+contrast order, finite values, interval nesting, axis bounds and text extents.
+PNG visually inspected: all panels, rows, labels and caveats visible, no clipping
+or incoherent overlap. No new statistics, score changes or method tuning.
+All49focused QfO figure/statistical/scoring tests pass. Git whitespace checks
+flag Matplotlib-generated SVG path-line trailing spaces only; the renderer
+output is retained byte-for-byte with its manifest hash, not manually reformatted.
+Reproduction/caption: `QFO_SWISS_COMPARATOR_FIGURE_20260917.md`; artifacts in
+`figures_qfo_swiss_comparators_20260917`. Manuscript/claim links updated.
+
+Remaining original work includes other QfO uncertainty/strata/ablations,
+independent error annotations, matched timing admission and scaling figures,
+portable workflows, licensing and release/archive. This figure does not resolve
+dependence between curated families or establish publication readiness.
+
 ## Main-Comparator SwissTrees Paired Intervals (2026-09-17)
 
 Previous turn progressed all-eight-method sufficient-statistic validation and

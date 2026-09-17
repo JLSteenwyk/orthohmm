@@ -1,0 +1,38 @@
+{
+  "contrasts": 8,
+  "display_conversion": "raw difference and interval bounds multiplied by 100",
+  "matplotlib": "3.10.8",
+  "metric_panels": [
+    "F1",
+    "PPV",
+    "TPR"
+  ],
+  "numpy": "2.2.6",
+  "outputs": [
+    {
+      "bytes": 219948,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_qfo_swiss_comparators_20260917/swiss_comparator_intervals.png",
+      "sha256": "4cf8eb77c5dfcadb4fd74e6d6f20b16a8069bf9418f3e4b421ceb42226e2a4f9"
+    },
+    {
+      "bytes": 26118,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_qfo_swiss_comparators_20260917/swiss_comparator_intervals.pdf",
+      "sha256": "54f2c4937bd7b99aaee9f76294236ac82457c477aa49e6759d62fa3cbfdf2a71"
+    },
+    {
+      "bytes": 130271,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_qfo_swiss_comparators_20260917/swiss_comparator_intervals.svg",
+      "sha256": "79fd3684f0862bebfd12bf56878f8dc05b0c17df63a3f3b771c13052a984975b"
+    }
+  ],
+  "plotter": {
+    "bytes": 5833,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_qfo_swiss_comparators.py",
+    "sha256": "ab0f0acfebfab8c35655e6c7ccecfbf0bb42781febda397fc3a76b95e8824a6f"
+  },
+  "results": {
+    "bytes": 37104,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_swiss_comparator_intervals_20260917.json",
+    "sha256": "6317d0274142354dbc0745dc3c75a2532d0d39dedeba8f30b9aca8c6fee21005"
+  }
+}

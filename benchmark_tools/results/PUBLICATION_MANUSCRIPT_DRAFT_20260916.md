@@ -815,6 +815,10 @@ used a supplied tree, and the OrthoHMM configuration contrast is not a pure
 reconciliation ablation. The results do not quantify uncertainty for other
 QfO challenges or the six-metric secondary mean.
 [Full results and family contrasts](QFO_SWISS_COMPARATOR_INTERVALS_20260917.md).
+[The uncertainty figure](figures_qfo_swiss_comparators_20260917/swiss_comparator_intervals.pdf)
+shows every prespecified contrast in percentage points, with nominal and
+adjusted intervals; the [figure note](QFO_SWISS_COMPARATOR_FIGURE_20260917.md)
+provides its caption, validation scope and reproduction command.
 
 ### VGNC Prediction-Database Audit
 

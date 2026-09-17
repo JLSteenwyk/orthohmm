@@ -45,6 +45,7 @@ evidence that an experiment completed or a biological hypothesis is true.
 ## Current Execution Status
 
 - [Eight-method SwissTrees paired intervals](QFO_SWISS_COMPARATOR_INTERVALS_20260917.md)
+  and their [three-panel figure](QFO_SWISS_COMPARATOR_FIGURE_20260917.md)
   implement the committed24-endpoint protocol. All seven comparator-minus-full-
   OrthoFinder adjusted F1 intervals are negative. Phylogenetic OrthoHMM versus
   high sensitivity has a positive point F1 difference but its adjusted interval
