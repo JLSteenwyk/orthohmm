@@ -3150,3 +3150,10 @@ Full unit suite1133 passed25.67s before adding two additional real-worker probe
 combinations; updated worker suite21 passed3.10s. Six boundary tests cover native
 defaults, graph equality, ordering/weights, failures and restoration. Actual QfO
 execution and independent result admission remain pending at this milestone.
+
+Executor b277e5b committed/pushed and frozen at
+benchmarks/work/publication_qfo_native_boundary_v1. Submitted no-requeue Slurm
+job21315 (one CPU,64GiB,two-hour limit); scheduler confirmed RUNNING. Output is
+benchmarks/results/qfo_native_boundary_v1. Next inspect terminal accounting,
+independently compare native boundary records and all partitions, then use the
+evidence to narrow graph-conversion versus optimizer-state explanations.
