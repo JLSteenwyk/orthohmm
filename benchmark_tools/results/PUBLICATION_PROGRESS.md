@@ -1,5 +1,37 @@
 # Publication Progress
 
+## Scientific Preparation and Measurement Composition (2026-09-17)
+
+Previous turn progressed verified-wrapper smoke/protocol and launched21647,
+pushedc0df478. Re-read the full objective. Confirmed21647_0 live at49seconds,
+later21647_3 at12seconds with4-5queued. No partial paired outcomes inspected,
+no job restarted and no heavy remote preparation during the overhead panel.
+
+Added fresh native-run preparation with exact basename/byte/hash checks,
+explicit empty OrthoHMM output directories, fresh OrthoFinder input copies,
+and refusal of reused, symlink-traversing, escaping or collector-overlapping
+output paths. Original files are rechecked after copying. GNU-time wrapping
+leaves native argv unchanged and supplies the existing native validator's
+companion specification. Failed partial preparation is preserved, not erased.
+
+Added composition with the unchanged verified collector: runtime and original
+inputs checked before/after, actual frozen OrthoHMM enumeration checked at
+both boundaries and again after preparation, OrthoFinder copies checked after
+inference. Preparation wall time and its full manifest are separate from the
+collector's native-command timer. Even zero native exit is invalidated by a
+post-run input mismatch. A failed command retains its exit status and evidence.
+
+These are library components, not an execution authorization or submitted
+scientific run. Caller must pin the recipe, enforce the frozen environment,
+select the authorized command and perform independent native-output/resource
+admission. Existing validator remains responsible for complete biological
+outputs; resource checks alone cannot establish that result. Thirty-six focused
+preparation/composition/native-output tests pass.
+Full unit suite:1,968passed47.50s. No inference defaults or
+frozen command manifests changed. Scientific scaling0/27; finish full-panel
+audit and test the authorized scientific launcher next. Broader publication
+requirements remain active.
+
 ## Verified Collector Smoke and Frozen Repeat (2026-09-17)
 
 Previous turn progressed actual input-order checks, pushed3c64ca5. Re-read the
