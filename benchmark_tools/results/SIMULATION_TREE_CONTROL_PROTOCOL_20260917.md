@@ -147,3 +147,27 @@ The `-ft` restart route has not been validated for this panel; do not assume
 postprocessed result directories recover the original upstream inference state.
 Fresh-run candidate and gene-tree identity must also be checked before treating
 differences as tree-only effects. No equivalence gate has been waived.
+
+## Main Experiment Runner
+
+`run_simulation_tree_experiment.py` and the prepared210task batch implement the
+420method runs (two tools per supplied-tree cell). They are not submitted until
+mode-panel admission21367 finishes and its exact result hash is reviewed and
+supplied. The runner requires all132available controls to be independently
+equivalent and all8unavailable controls to match their original failure records.
+Any new failed/non-equivalent mode control stops authorization for review; it
+does not drop that dataset, select a different seed, or relax validation.
+
+Every cell rechecks the frozen original/portable tree identity, exact taxa,
+topology and branch lengths, generation and sequence inputs, both native tree
+parsers, tool environments and native outputs. Both methods execute even when
+one had no original inferred-tree baseline. Fresh outputs retain method failures
+and whether the requested rooted topology reached native results. No truth
+scoring or parameter selection occurs inside this runner. Retained candidate,
+graph, gene-tree and alignment records support the later cross-arm audit.
+
+Dry construction checked all210portable tree cells and420unique fresh commands.
+No main experiment inference has started. The batch uses at most2concurrent
+4CPU16GiB tasks, writing `simulation_tree_experiments_v1/cell_<index>`. Input
+preparation and native-run validation are not independent scientific admission;
+the latter and paired126-endpoint analysis remain separate required steps.

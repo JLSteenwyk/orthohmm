@@ -4284,3 +4284,29 @@ tasks,remainingpending, no nonzero terminal tasks. QfO21333RUNNING00:19:57.
 Do not duplicate or restart these jobs because an observation ends. Next review
 the complete mode-panel admission, retaining non-equivalence if found; only then
 authorize the main generating/NNI comparisons with explicit scope limitations.
+
+### Generating/NNI inference runner prepared behind mode gate (2026-09-17)
+
+Previous continuation progressed complete-panel auditor63b1e90 and dependent
+job21367. Re-read objective; confirmed21333RUNNING00:20:59 and modearray21334
+tasks35/36running,37-69pending,21367pendingdependency. Later pollQfO00:25:32,
+mode51/52running,53-69pending. None restarted or treated as complete.
+
+Added run_simulation_tree_experiment.py and210task/two-method batch for the
+prespecified420generating/NNI combinations. No main inference submitted. Runner
+requires exact completed21367admission hash and all140mode outcomes:132equivalent
+available controls and8unaltered unavailable-baseline reasons. Any new control
+failure/non-equivalence stops authorization for review, not dataset exclusion.
+Both methods remain configured for all main cells, including original failures.
+
+Per-cell checks cover original/portable hashes and exact topology/branch lengths,
+taxa, generation/FASTA inputs, both native parsers, frozen runtime/environment,
+commands, sourcefiles and native completion. Records supplied-topology retention
+and upstream artifact inventories; never scores truth or changes defaults.
+Drychecked all210trees and420unique freshcommands against pinned manifests,
+without bypassing the mode gate for execution. Seventeen focused tests pass,
+including changed content/topology/lengths, missing/duplicate inventories,
+failed/non-equivalent mode controls and preservation of unavailable originals.
+Main array remains unsubmitted pending full mode validation/review.
+
+Fullunit suite1,546passed31.47s; bash syntax check passed for the new batch.
