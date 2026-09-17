@@ -82,3 +82,23 @@ before/after each command, refuses existing result/work/launch directories and
 never invokes deletion or automatic resume. A four-task array runs at most one
 stage at a time with eightCPUs64GiB24hours per stage. Scoring exit0 remains
 pending independent validation of allsix native endpoints and their semantics.
+
+## Native Result Admission
+
+`admit_qfo_recovered_assessment.py` requires allfour21548array tasks terminal
+before creating a result report. Failed tasks remain explicit, without historical
+or zero-score substitution. Successful tasks require frozen command/source/input/
+runtime identity, exact output inventory, matching preflight and successful
+native task trace. All15expected Nextflow tasks must appear exactly once, with
+successful fresh execution; six scheduling-only tasks use their native dash exit
+marker. Cached or failed task records reject this fresh-run assessment.
+
+`validate_qfo_native_assessment.py` validates the six challenge metric pairs and
+both TPR/PPV records for each SwissTrees family declared in the pinned reference.
+Duplicate identities, missing metrics/families, wrong participants, non-finite
+values and native/aggregate disagreement reject. Exact metric axes and standard
+errors must match native assessment records and reference templates. Preserve
+all48native records, including18SwissTrees families, rather than reducing the
+evidence to six scalars. Relation counts remain challenge-specific counts; native
+standard errors are not paired difference intervals. These checks do not resolve
+the still-open challenge-specific uncertainty analysis by themselves.

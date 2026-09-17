@@ -4532,3 +4532,27 @@ qfo_benchmark/scoring/checked_v2_<index>, short workqfo_benchmark/w/qrv2_<index>
 First task running; remaining tasks pendingarraylimit. No historical overwrite.
 Tree21406_136/137running,138-209pending,21435pendingdependency. Independent
 scoring admission and complete tree-panel analysis remain due.
+
+### Independent Native QfO Assessment Auditor Prepared (2026-09-17)
+
+Previous continuation progressed scoring runtime freeze and active21548array.
+Re-read objective, confirmed21548_0RUNNING00:51 and tree140running,141-209pending.
+Later confirmed21548_0RUNNING5:49, tree157/158running. No restart or partial scores.
+
+Added validate_qfo_native_assessment.py: six exact challenge axes, native value/
+stderr agreement, correct participant/community, duplicate/missing/non-finite
+rejection, relation-count semantics and allSwissTrees-family metric records.
+Family inventory comes from pinned reference declaration identities, not
+prediction-selected families. Historical OrthoMCL smoke validatedsixendpoints,
+18referencefamilies and48native records without changing historical results.
+
+Added admit_qfo_recovered_assessment.py with allfourterminal gate, frozen scorer
+revision/command/preflight/input/runtime/output verification and15-task native
+trace completeness. Failed tasks retained; successful output not assumed from
+scheduler exit alone. Prepared dependent4CPU16GiB2hour audit batch. Thirty-two
+focused tests pass. Native standard errors remain distinct from paired uncertainty;
+no new stage scores inspected. Fullunit verification precedes freeze/submission.
+
+Fullunit suite1,680passed36.37s; all15historical OrthoMCL trace tasks also pass
+the fresh-task validation contract. Audit batch syntax and whitespace checks pass.
+Latest21548_0RUNNING8:02 with allsix benchmark processes submitted; no score read.
