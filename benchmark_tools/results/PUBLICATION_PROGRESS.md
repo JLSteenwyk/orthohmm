@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Biological Chronology and Contrasts Frozen (2026-09-17)
+
+Previous continuation made progress: input preparation and19focused tests,
+committed/pushed4b13a42. Re-read objective; DGX21656_1 verifiedRUNNING13:21,
+tasks2-26pending. No timing-host bulk I/O or competing analysis was started.
+
+Inspected Scannell2011 primary full article, DOI10.1534/g3.111.000273,
+author-hosted PDF after PMC browser-check response. Its species definitions
+and ancestral-WGD discussion support a post-WGD common ancestor for the four
+application species. Rechecked source README: homology columns are not A/B
+tracks. No copy-specific reference labels or individual duplication assignments
+are inferred from that chronology.
+
+Added `BIOLOGICAL_WGD_AUDIT_AND_CONTRASTS_20260917.md` before application
+outcomes: four method contrasts times three endpoints, paired pillar bootstrap,
+20,000PCG64 draws/seed20260920 and fixed12-comparison correction. Separation,
+supported separation and homolog coverage remain distinct endpoints with
+explicit missing-assignment handling. Foreign-pillar/unmapped counts and
+fragmentation remain mandatory descriptive guards. Checked input-only
+population:231reference-eligible pairs in231pillars, no zero non-S.cerevisiae
+coverage denominators. Full240rows and239input-eligible descriptive population
+remain, as does the prospective example with conflicting pillars.
+
+Next: freeze native commands/runtime/admission and run four biological methods
+on the original host. Application results, scoring, intervals and figures are
+not complete. Broader publication requirements remain active.
+
 ## Biological Application Inputs Mapped (2026-09-17)
 
 Previous continuation verified live DGX job21656_1; no restart was needed.
