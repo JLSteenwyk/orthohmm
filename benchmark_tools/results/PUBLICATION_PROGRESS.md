@@ -3420,3 +3420,7 @@ CPM candidate21322 completed0:0 in1:23. Preparation reports control54,445groups/
 8,440merges;CPM0.08 55,349/7,546;CPM0.12 53,548/9,185, each with full coverage
 and merge reconstruction. These are unscored executor observations, not yet
 independently admitted. Next admit them and run two inferred-tree variants.
+
+Construction executor f2827a6 pushed/frozen at publication_qfo_construction_v1;
+job21323 submitted no-requeue and confirmed RUNNING. Separate output
+benchmarks/results/qfo_construction_v1. Previous failed boundary runs preserved.
