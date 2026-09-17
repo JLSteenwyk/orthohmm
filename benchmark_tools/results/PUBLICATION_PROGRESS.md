@@ -4268,3 +4268,19 @@ three relocation tests were added; all10focused tests passed after that addition
 Prepared4CPU16GiB admission batch for afterany:21334 dependency, to freeze and
 submit after this commit. Complete control/oracle/scaling/application/publication
 requirements remain unfinished.
+
+### Mode-panel validation queued behind inference (2026-09-17)
+
+Committed/pushed63b1e90; froze publication_simulation_mode_admission_v1 at
+63b1e908a5356c68f32f0484552b3973d398c848. Submitted21367 with
+dependencyafterany:21334,4CPU16GiB1hour, no requeue. ConfirmedPENDING(Dependency).
+Its own all70terminal gate independently enforces readiness and retains failed
+tasks rather than requiring the array to be allsuccessful.
+Output benchmarks/results/simulation_mode_panel_admission_v1;
+log benchmarks/work/simulation_mode_admission_21367.log.
+
+Latest authoritative poll:21334has31COMPLETED and2RUNNING individually visible
+tasks,remainingpending, no nonzero terminal tasks. QfO21333RUNNING00:19:57.
+Do not duplicate or restart these jobs because an observation ends. Next review
+the complete mode-panel admission, retaining non-equivalence if found; only then
+authorize the main generating/NNI comparisons with explicit scope limitations.
