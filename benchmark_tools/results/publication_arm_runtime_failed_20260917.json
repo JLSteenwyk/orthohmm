@@ -1,0 +1,76 @@
+{
+  "binaries": [
+    {
+      "bytes": 71000,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/core/orthohmm/search/csrc/hmm_viterbi.so",
+      "sha256": "857a3832f9fb3a073257a499c700fcb16436db5d4917b20d67e4ad0cbc60c29f"
+    }
+  ],
+  "builder": {
+    "bytes": 5095,
+    "path": "/home/jlsteenwyk/projects/orthohmm-publication/arm_recipe_v1/build_publication_arm_runtime.py",
+    "sha256": "c88a8f1cf4826aa4d2ade517bd90ab29d6a29cb4cc4c2b5e4267a1e0e6cec9df"
+  },
+  "commands": [
+    {
+      "argv": [
+        "/usr/bin/aarch64-linux-gnu-gcc-13",
+        "-O3",
+        "-fopenmp",
+        "-shared",
+        "-fPIC",
+        "-march=armv8-a",
+        "-o",
+        "/home/jlsteenwyk/projects/orthohmm-publication/core/orthohmm/search/csrc/hmm_viterbi.so",
+        "/home/jlsteenwyk/projects/orthohmm-publication/core/orthohmm/search/csrc/hmm_viterbi.c"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    }
+  ],
+  "commit": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+  "compiler": {
+    "bytes": 990040,
+    "path": "/usr/bin/aarch64-linux-gnu-gcc-13",
+    "sha256": "dc21472a2f0865001620971accab1bc5838774c668d7d7443bffdaa6929f3450"
+  },
+  "compiler_version": "aarch64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "cuda_enabled": false,
+  "error": "/home/jlsteenwyk/projects/orthohmm-publication/core/orthohmm/search/csrc/hmm_viterbi.so: undefined symbol: batch_hmm_viterbi_multipair_avx2_c",
+  "finished_at": "2026-09-17T18:04:55.365359+00:00",
+  "hmm_backend": "scalar_fallback_no_AVX2",
+  "library_probes": {},
+  "limitations": [
+    "Build and profile smoke only; numerical and end-to-end output checks remain required.",
+    "ARM timings cannot be pooled with x86 AVX2 results."
+  ],
+  "machine": "aarch64",
+  "numerical_equivalence_verified": false,
+  "platform": "Linux-6.11.0-1016-nvidia-aarch64-with-glibc2.39",
+  "root": "/home/jlsteenwyk/projects/orthohmm-publication/core",
+  "sources": [
+    {
+      "bytes": 46012,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/core/orthohmm/search/csrc/hmm_viterbi.c",
+      "sha256": "b668f86de525776e939f1c3196b41f3c870dd22cc56e35a93dff6a957d01f67c"
+    },
+    {
+      "bytes": 10657,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/core/orthohmm/search/csrc/kmer_prefilter.c",
+      "sha256": "8124e2652cb382549f2a282c3122aaa9f5c393da2b304b5d4f6cb92fae243f01"
+    },
+    {
+      "bytes": 9098,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/core/orthohmm/search/csrc/pair_align.c",
+      "sha256": "c5a3c2bc869ec59ca8261c976d6e77e5938faf5bfd8571566315b81cf5b08e9a"
+    },
+    {
+      "bytes": 7795,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/core/setup.py",
+      "sha256": "c0e7b8cd54593eb3d7f28d5490b77999157140f9f03cdff4af283ff6713b8bf1"
+    }
+  ],
+  "started_at": "2026-09-17T18:04:55.278021+00:00",
+  "status": "failed"
+}

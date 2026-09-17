@@ -38,8 +38,8 @@ ARM timings with historical x86 measurements or label them32-CPU results.
 This is a prospective infrastructure change before any scientific scaling
 inference, not outcome-based tuning. New resource/command/runtime manifests
 must be frozen and checked on the destination before execution. No scientific
-run or package installation has started there. The verified transfer below
-supersedes the original pre-transfer status.
+scaling run has started there. The verified transfer and isolated installation
+below supersede the original pre-transfer status.
 
 ## Architecture Gate
 
@@ -93,3 +93,44 @@ status and no `.so` files under the native kernel directory. No compiled x86
 runtime or predictions were transferred. This establishes source/input
 availability only; ARM dependencies, native builds, numerical equivalence,
 target commands, resource accounting and isolation are still pending.
+
+## ARM Build and Initial Tests
+
+Created an isolated environment under `envs/orthohmm` using conda-forge
+Python3.10.13 and pip26.0.1. Installed AArch64 wheels with exact core numerical
+versions matching the original OrthoHMM environment: numpy2.2.6, numba0.65.0,
+llvmlite0.47.0, igraph1.0.0, leidenalg0.11.0 and texttable1.7.0, plus
+psutil7.2.2 and pytest9.0.2. `pip check` passed. Other original environments
+were not changed. Transitive/system libraries are not claimed identical to
+x86; a full destination lock remains required. The pip artifact report is
+retained on both hosts (local benchmarks/work/dgx_orthohmm_pip_install_v1.json,
+SHA b5537ed1861835eb91c524a943130c1ab369f6adccabb383800d9e3883a6d79a).
+
+Separate builder `build_publication_arm_runtime.py` uses GCC13.3.0,
+`-O3 -fopenmp -shared -fPIC -march=armv8-a` on unchanged frozen sources.
+The baseline ARM ISA avoids assuming either heterogeneous core type. No CUDA
+library is built. Its first attempt compiled HMM but failed an overly strict
+symbol check: the multipair AVX2 entry point is correctly omitted by the C
+source on ARM. The failed manifest remains
+`publication_arm_runtime_failed_20260917.json` (SHA
+9a65297bbb74ec50cee96b7f67334543d70a95bd799ac1e513e077bf9b8c3a2f).
+The frozen engine already catches missing multipair and dispatches scalar C;
+no inference source changes were needed.
+
+Corrected builder e35157d records that symbol as optional, requires scalar HMM,
+prefilter and pair-alignment entry points, and verifies `hmm_have_avx2()==0`.
+A fresh frozen worktree `core_arm_v2` preserved the failed first build.
+Allthree libraries compiled/loaded and the profile-construction probe passed.
+Successful build manifest `publication_arm_runtime_20260917.json` has SHA
+be945107f121e1a01367430ff94080bcd43922d8ef3ab9480cbc7851733778d8;
+builder SHA45ad97fbf0115294935eaab6c9c3373cef1cf5785f25c5f3154ba1f0cee01b76
+matches locally/remotely. Source diff remained empty after build.
+
+On Spark, frozen test_profile.py/test_prefilter.py/test_profile_expansion.py
+passed29tests in0.69s with OMP/OpenBLAS/MKL threads1. JUnit evidence retained
+as benchmarks/work/dgx_arm_profile_tests_v1.xml, SHA
+38d466e674cf7166ad0f98280034ebbbbd8b7ba30d00543a62e5bf597d3fa73e.
+These tests and profile smoke are **not** cross-architecture score equivalence
+or full pipeline validation. Numerical/decision/output comparisons, native
+OrthoFinder dependencies, complete environment provenance and controlled
+timing admission remain outstanding.0/27scientific scaling runs started.

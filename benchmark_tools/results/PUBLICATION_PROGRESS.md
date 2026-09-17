@@ -4771,3 +4771,25 @@ ARM gates. No inference or package installation yet;0/27scaling runs started.
 Transfer is not runtime validation or a timing result. Next establish an
 isolated, version-recorded ARM environment and unchanged-source native build,
 then numerical/output checks before target manifests and controlled runs.
+
+### ARM Runtime Compiled, Initial Tests Passed (2026-09-17)
+
+Previous continuation transferred verified inputs/source and pushed2a4ddc7.
+Re-read objective; QfO21548_1confirmed running14:06,21584pending.
+Created isolated Spark Python3.10.13 environment and installed exact baseline
+core numerical package versions using native ARM wheels; pip check passed.
+Added separate frozen-source ARM builder and10newfocusedtests; combined with
+original runtime tests19passed. Original frozen builder and inference unchanged.
+
+First native attempt compiled but failed the builder's incorrect requirement
+for an AVX2-only multipair symbol. Preserved failed manifest and checkout;
+fixed validation to require scalar symbols and record optional multipair.
+Fresh core_arm_v2 built allthree libraries and passed profile smoke with
+hmm_have_avx2=0. Frozen engine already falls back from missing multipair to
+scalar C. Build/runtime manifests and exact hashes recorded in migration doc.
+On Spark29frozen profile/prefilter/expansion tests passed0.69s. These are initial
+compatibility checks, not numerical equivalence or accepted timings.
+Next compare actual native scores/decisions and end-to-end outputs across
+architectures, establish comparator toolchain and freeze target resource plan.
+No scientific scaling inference started; original x86 environment unchanged.
+Full local unit suite1,766passed43.54s; allmanualdiffwhitespace checks passed.
