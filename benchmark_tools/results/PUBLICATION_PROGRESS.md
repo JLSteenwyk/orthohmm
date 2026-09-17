@@ -4239,3 +4239,32 @@ a partial panel. All terminal native records require independent admission.
 QfO21333confirmedRUNNING00:11:33 in the same poll. Updated claim checklist for
 its failed predecessor/current retry and bounded simulation pilot/panel status.
 The wider publication requirements remain active and incomplete.
+
+### Full mode-panel admission prepared (2026-09-17)
+
+Previous continuation progressed pilotadmission and submitted21334. Re-read
+objective; confirmed21333RUNNING00:12:48 and21334tasks0-5complete,6/7running.
+Later poll21333RUNNING00:17:13 and mode tasks0-20complete,21/22running.
+No restart or partial-panel score. Added admit_simulation_mode_panel.py with
+strict all70terminal scheduler gate and exact21334/2d95369/manifest03f0 pins.
+
+The auditor preserves140methodslots and distinguishes unavailable originals,
+new native/execution failures, verified-equivalent results and valid-but-not-
+equivalent results. It reconstructs commands independently, rechecks source and
+task identity, FASTAs/generation, baseline/native-output inventories, ortholog
+pairs, rooted species-tree clades and retained upstream artifacts. Claimed
+comparisons must match independent rereading. Scientific non-equivalence is
+reported, not retried/filtered. Corrupt or inconsistent evidence aborts admission.
+The reused pilot is freshly re-admitted, not accepted solely from its prior
+report. Only byte-identical auditor-source relocation to a frozen worktree is
+allowed during that recheck; other evidence changes are rejected.
+
+Integration-tested the validator on terminal task2(turnover_20261101): both
+methods independently returned equivalent, without computing truth scores or
+admitting the partial panel. Ten focused tests pass, including changed-pair
+retention, native-failure handling, exact command reconstruction and refusal of
+partial scheduler inventories. Full1,526unit tests passed30.99s before the final
+three relocation tests were added; all10focused tests passed after that addition.
+Prepared4CPU16GiB admission batch for afterany:21334 dependency, to freeze and
+submit after this commit. Complete control/oracle/scaling/application/publication
+requirements remain unfinished.
