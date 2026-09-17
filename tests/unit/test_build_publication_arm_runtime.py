@@ -45,4 +45,6 @@ def test_hmm_backend_checked(monkeypatch, avx2):
         with pytest.raises(ValueError, match="AVX2"):
             arm.inspect_library("/library.so", "hmm_viterbi")
     else:
-        assert arm.inspect_library("/library.so", "hmm_viterbi")["hmm_have_avx2"] == 0
+        result = arm.inspect_library("/library.so", "hmm_viterbi")
+        assert result["hmm_have_avx2"] == 0
+        assert result["multipair_avx2_symbol"] is False

@@ -16,7 +16,7 @@ from benchmark_tools.validate_profile_runtime import require_profile_runtime
 
 SYMBOLS = {
     "hmm_viterbi": ("batch_hmm_viterbi_c", "batch_hmm_viterbi_xdrop_c",
-                    "batch_hmm_viterbi_multipair_avx2_c", "hmm_set_num_threads", "hmm_have_avx2"),
+                    "hmm_set_num_threads", "hmm_have_avx2"),
     "kmer_prefilter": ("batch_prefilter_c", "prefilter_set_num_threads"),
     "pair_align": ("batch_pair_align_c", "pair_align_set_num_threads"),
 }
@@ -36,6 +36,7 @@ def inspect_library(path, name):
         getattr(lib, symbol)
     result = {"symbols": list(SYMBOLS[name])}
     if name == "hmm_viterbi":
+        result["multipair_avx2_symbol"] = hasattr(lib, "batch_hmm_viterbi_multipair_avx2_c")
         lib.hmm_have_avx2.restype = ctypes.c_int32
         lib.hmm_have_avx2.argtypes = []
         result["hmm_have_avx2"] = lib.hmm_have_avx2()
