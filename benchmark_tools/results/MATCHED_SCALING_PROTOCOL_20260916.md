@@ -1,5 +1,12 @@
 # Matched Scaling Protocol
 
+Destination update: the user requested the Ethernet-connected DGX for timing.
+Read-only inspection identified an ARM DGX Spark that cannot satisfy the
+original32CPU128GiB plan. Preserve the unexecuted specification below; see
+[prospective migration](DGX_SCALING_MIGRATION_20260917.md) for a separate
+20CPU96GiB destination panel and mandatory ARM validation. No scientific scaling
+run has started on either machine.
+
 Prospective first panel, frozen before new timing outcomes. This addresses the
 practical-efficiency requirement, not accuracy tuning or independent validation.
 Existing shared-node timings remain descriptive and are not substituted here.

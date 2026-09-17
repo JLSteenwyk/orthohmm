@@ -4726,3 +4726,27 @@ inference or truth score computed. These4-CPU retained outputs are native-format
 compatibility evidence only. Whole scaling execution/provenance/resource gates
 remain due; validator success alone does not authorize timing claims.
 Fullunit1,747tests passed42.96s. Existing frozen methods/environments unchanged.
+
+### Dedicated DGX Destination Verified (2026-09-17)
+
+Previous continuation progressed native scaling validation and pusheddf37667.
+Re-read objective and revalidated QfO live. Asked about a controlled timing
+window; user selected another dedicated machine, then identified the Ethernet
+DGX. Located existing spark SSH alias and known-host entry; batch-mode strict
+SSH succeeded. Read-only host/resource/scheduler checks identifiedspark-7ff0,
+aarch64,20heterogeneous ARMcores,119GiBphysicalmemory,Slurm106188MiBconfigured,
+GB10GPU,IDLEwith0allocatedCPU/memory at observation. No remote state changed.
+
+Original32CPU128GiB plan is not executable there. Documented prospective
+20CPU96GiB CPU-only destination panel, retaining inputs/order/method settings,
+with new target manifests required before any timing. Frozen HMM C source has
+scalar fallback, but oldbuild script requiresAVX2 and setup skips HMM library
+withoutAVX2. ARM build/runtime and comparator dependencies must be validated;
+no copiedx86 binaries or silent substitutions. SeeDGX_SCALING_MIGRATION_20260917.md.
+
+Added portable input/workflow transfer preparer and9focused passing tests for
+exact nested membership, counts, changed-source rejection and no-overwrite.
+No bundle/transfer/remote installation or scientific timing executed yet.
+Remote scheduler confirms QfO21548_1running onbizon (secondstage);21584pending.
+RemoteGCC13.3.0/git/cmake/make available;diamond/mafft/FastTree/orthofinder not
+on defaultPATH (not proof no installations elsewhere). Fullunit1,756passed42.74s.
