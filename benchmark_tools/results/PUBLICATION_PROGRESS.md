@@ -3704,3 +3704,28 @@ Scoped diff check passes. No scientific/runtime or running-executor changes.
 weight mismatches; Python-pairs0,NumPy1,Python-pairs1 match. Remaining two workers
 are pending. These observations are not a completed/admitted panel or a proven
 format fix. Next admit terminal results with the report hash and retain all arms.
+
+### Format panel admitted; checked worker prepared (2026-09-16)
+
+Previous turn progressed by tested format-panel admission support and successful
+recheck of the original panel. Objective reread;21327 completed0:0 in13:53.
+All three Python-pair workers match before/after weights; NumPy0 has six unchanged
+mismatches,NumPy1/2 match. Raw report SHA256
+d83de7fbf130642b3f4ccc5cb76618de5640a289624ab7055f38d5cd51479526.
+Independent format admission passed exact plan/format/source/runtime/native
+file consistency,278 file records and post-weight graph hash reconstruction.
+Snapshot qfo_constructor_formats_verified_20260916.json SHA256
+bfb9f49e1eb32afb31ab898d0101cc785da1b54110c70d7ea06ad0259fb87631.
+Dedicated results, manuscript and claim checklist updated. Not a general fix or
+causal diagnosis; no optimizer/accuracy selection or historical substitution.
+
+Added checked_python_pair_worker.py for a subsequent bounded frozen initial-graph
+replay. Requires complete admitted format panel and intact payload; records one
+Python-integer-pair constructor conversion and unchanged constructor input hash.
+Reuses existing full native endpoint/weight gate before optimizer and after its
+return. Mismatch fails without retry. Frozen worker seed/resolution/arguments
+unchanged; no scientific/default/environment edits.12 focused tests pass, including
+real optimizer intact-graph execution, corrupt-graph rejection before optimization,
+admission guards and restoration after constructor failure. Full1,332 unit tests
+passed34.65s. Large-graph checked replays have not yet been launched; next prepare
+their bounded fresh-worker orchestration and retain every partition comparison.

@@ -568,6 +568,15 @@ cause remains unresolved. This is preserved-observation evidence, not independen
 live-object inspection or proof that every historical result is affected.
 [Direct-stage results](QFO_DIRECT_GRAPH_RESULTS_20260916.md).
 
+A six-worker input-format comparison subsequently completed: all three streamed
+Python-integer-pair constructors matched the saved graph, while one of three
+NumPy constructors had the same six pre-weight endpoint mismatches. Independent
+admission checked278 file records and the full post-weight graph fingerprints.
+This bounded result motivates integrity-gated follow-up, not a proven fix or
+general repeatability claim; input format also changes allocation behavior.
+No optimizer or accuracy score was produced in this comparison.
+[Input-format results](QFO_CONSTRUCTOR_FORMAT_RESULTS_20260916.md).
+
 Historical timing and memory records differ in scope and accounting.
 Cached replays are incremental computations, not end-to-end timings;
 supplied trees have upstream costs. Unscheduled competing workloads were

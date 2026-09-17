@@ -21,7 +21,7 @@ evidence that an experiment completed or a biological hypothesis is true.
 | Three Kingdoms demonstrates proteome-wide accuracy | [Supplementary score record](three_kingdoms_parity_20260907.json) | Unsupported; restricted BUSCO-reference universe |
 | OrthoHMM is faster or more memory efficient under matched conditions | [Progress ledger](PUBLICATION_PROGRESS.md) | Not established; historical resource-accounting and workload differences remain |
 | A nearby parameter choice improves frozen-method OrthoBench F1 | [Six-variant panel](OB_PARAMETER_NEIGHBORHOOD_RESULTS_20260916.md) | Not established: all six adjusted F1 intervals include zero; no default promotion |
-| The QfO native graph is reproducibly constructed | [Direct-stage diagnostic](QFO_DIRECT_GRAPH_RESULTS_20260916.md) | Not established: pre-weight mismatches occur with intact constructor arrays in both import modes; constructor-format comparison pending |
+| The QfO native graph is reproducibly constructed | [Constructor-format diagnostic](QFO_CONSTRUCTOR_FORMAT_RESULTS_20260916.md) | Not established generally: all three Python-pair workers match, one NumPy worker mismatches; checked optimizer replays remain pending |
 | The package is publication-ready | All sections below | Not achieved |
 
 ## Completion Requirements
@@ -120,8 +120,10 @@ evidence that an experiment completed or a biological hypothesis is true.
   [Direct-stage21326](QFO_DIRECT_GRAPH_RESULTS_20260916.md) completed and was
   independently admitted: four workers had pre-weight mismatches, including
   minimal-import workers; two matched. Differences were unchanged after weights.
-  No library/hardware cause is established. Constructor-format21327 remains
-  running; no accuracy scores or partition selection are involved.
+  No library/hardware cause is established. [Constructor-format21327](QFO_CONSTRUCTOR_FORMAT_RESULTS_20260916.md)
+  completed and passed independent admission: all three Python-pair workers match,
+  one NumPy worker mismatches. This is not a proven production fix. Integrity-gated
+  optimizer replays remain pending; no accuracy selection has occurred.
 - All six [OrthoBench parameter variants](OB_PARAMETER_NEIGHBORHOOD_RESULTS_20260916.md)
   passed native admission and official-score checks with251,378 genes retained.
   F1 ranges71.463468-74.973144% versus control74.106074%; all six adjusted F1
