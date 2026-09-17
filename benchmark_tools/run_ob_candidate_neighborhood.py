@@ -15,10 +15,25 @@ from benchmark_tools.validate_factorial_native import validate
 
 ADMISSION_SHA = "38a4cc8c16e8e45800c88af618f9b5a9b3d77ab6b3d0e5b79fa555b88e849514"
 VARIANTS = ("norm_low", "norm_high", "margin_low", "margin_high")
+CPM_VARIANTS = ("cpm_low", "cpm_high")
+CPM_ADMISSION_SHA = "5acd1c56fe72e6267913a1170efca7f5f189960785422b7194f6a5fcc545a5fd"
+
+
+def select_variant_arm(admission, index, cpm=False):
+    labels = CPM_VARIANTS if cpm else VARIANTS
+    status = "cpm_candidates_verified_unscored" if cpm else "candidate_neighborhood_preparation_verified_unscored"
+    if (type(index) is not int or not 0 <= index < len(labels) or admission["status"] != status
+            or admission["accuracy_evaluated"] is not False
+            or [row["label"] for row in admission["arms"]] != ["control", *labels]):
+        raise ValueError("Invalid or unadmitted candidate panel")
+    arm = admission["arms"][index + 1]
+    if cpm:
+        arm = {**arm, "partition": arm["candidate_partition"], "constraints": arm["membership_constraints"]}
+    return arm
 
 
 def variant_cell(original, arm, output):
-    if original["label"] != "p1_c1_r1" or arm["label"] not in VARIANTS:
+    if original["label"] != "p1_c1_r1" or arm["label"] not in (*VARIANTS, *CPM_VARIANTS):
         raise ValueError("Unexpected baseline or candidate variant")
     argv = list(original["argv"])
     flags = ("--candidate-clusters", "--membership-constraints", "--output-directory", "--json", "--species-tree-mode")
@@ -43,20 +58,19 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", required=True, type=Path)
     parser.add_argument("--index", required=True, type=int, choices=range(4))
+    parser.add_argument("--cpm", action="store_true", help="Use the separately admitted CPM-specific candidate panel")
     args = parser.parse_args()
     root = args.root.resolve()
     if Path.cwd().resolve() != root:
         raise ValueError("Start from original repository for environment verification")
     results = root / "benchmark_tools/results"
     admission_path = results / "ob_candidate_neighborhood_verified_20260916.json"
-    admission = read_frozen(admission_path, ADMISSION_SHA)
-    if admission["status"] != "candidate_neighborhood_preparation_verified_unscored" or admission["accuracy_evaluated"] is not False:
-        raise ValueError("Candidate preparation is not admitted")
+    if args.cpm:
+        admission_path = results / "ob_cpm_candidates_verified_20260916.json"
+    admission = read_frozen(admission_path, CPM_ADMISSION_SHA if args.cpm else ADMISSION_SHA)
+    arm = select_variant_arm(admission, args.index, args.cpm)
     for item in admission["provenance_checked"]:
         check(item)
-    arm = admission["arms"][args.index + 1]
-    if arm["label"] != VARIANTS[args.index]:
-        raise ValueError("Changed variant order")
     prepared_path = results / "orthobench_factorial_prepared_20260916.json"
     environment_path = results / "publication_variable_native_methods_20260916.json"
     prepared = read_frozen(prepared_path, PREPARED_HASH)
@@ -66,6 +80,8 @@ def main():
     verify_environment(environment)
     baseline = validate(root, 3)
     output = root / "benchmarks/results/ob_candidate_neighborhood_phylogeny_v1" / arm["label"]
+    if args.cpm:
+        output = root / "benchmarks/results/ob_cpm_phylogeny_v1" / arm["label"]
     if output.exists():
         raise FileExistsError(output)
     cell = variant_cell(original, arm, output)
@@ -81,6 +97,8 @@ def main():
         "job_id": os.environ.get("SLURM_JOB_ID"), "array_job_id": os.environ.get("SLURM_ARRAY_JOB_ID"),
         "array_task_id": os.environ.get("SLURM_ARRAY_TASK_ID"),
         "scope": "Unscored fixed candidate-threshold variant; inferred species tree; validated raw-tree reuse; incremental shared-node timing"}
+    if args.cpm:
+        provenance["scope"] = "Unscored prespecified CPM variant with its own HMM seeds/candidates; inferred species tree; validated raw-tree reuse; incremental shared-node timing"
     output.mkdir(parents=True)
     (output / "preflight.json").write_text(json.dumps(provenance, indent=2, sort_keys=True) + "\n")
     method = {"argv": cell["argv"], "output": str(output / "output"), "metrics": str(output / "metrics.json")}

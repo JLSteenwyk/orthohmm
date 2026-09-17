@@ -3424,3 +3424,25 @@ independently admitted. Next admit them and run two inferred-tree variants.
 Construction executor f2827a6 pushed/frozen at publication_qfo_construction_v1;
 job21323 submitted no-requeue and confirmed RUNNING. Separate output
 benchmarks/results/qfo_construction_v1. Previous failed boundary runs preserved.
+
+### CPM candidates independently admitted; phylogeny ready (2026-09-16)
+
+Previous turn made progress by launching bounded construction-only diagnostic.
+Objective reread,21323 confirmed RUNNING. Independently admitted completed21322:
+hash-pinned preparation/replay, own CPM HMM seeds, unchanged satellite parameters,
+complete input coverage, logged merge reconstruction, count consistency and
+control candidate/trace byte equivalence all pass. Candidate groups control54,445,
+CPM0.08 55,349 andCPM0.12 53,548; all251,378genes. Snapshot
+ob_cpm_candidates_verified_20260916.json SHA256
+5acd1c56fe72e6267913a1170efca7f5f189960785422b7194f6a5fcc545a5fd.
+
+Existing candidate phylogeny executor extended with explicit --cpm panel selection,
+separately pinned admission and output directory. Commands retain inferred species
+trees, native exact-input raw-tree reuse and frozen reconciliation/constraints.
+No baseline threshold-panel behavior changed. Two32CPU/64GiB/four-hour tasks,
+max two concurrent. Full unit suite1,236 passed30.04s;21 focused admission/runner
+tests passed; batch syntax passed. No accuracy scores or default promotion.
+
+Next freeze/push/submit both CPM phylogeny arms, then independent native admission
+and complete six-variant scoring. QfO construction diagnostic first int32 worker
+matched saved arrays; remaining workers running, no dtype conclusion yet.
