@@ -3729,3 +3729,20 @@ real optimizer intact-graph execution, corrupt-graph rejection before optimizati
 admission guards and restoration after constructor failure. Full1,332 unit tests
 passed34.65s. Large-graph checked replays have not yet been launched; next prepare
 their bounded fresh-worker orchestration and retain every partition comparison.
+
+### Checked QfO replay executor prepared (2026-09-16)
+
+Added run_qfo_checked_repeats.py and a no-requeue Slurm batch for exactly three
+fresh sequential one-CPU initial-graph workers. Each uses the admitted Python-pair
+constructor, verifies its oriented input-byte hash against saved arrays, checks
+all native endpoints/weights before and after unchanged CPM optimization, checks
+worker/source/runtime provenance, and validates complete unique gene coverage.
+Partitions are compared without accuracy labels; disagreement is retained, not
+used to retry or choose an output. Any execution/integrity failure stops the panel.
+The saved graph has 976,504 vertices; this is not a full HMM replay, historical
+equivalence claim, general determinism test, or controlled resource benchmark.
+Unrelated GPU job 20915 was running during preparation. No existing analysis was
+stopped. Full unit suite: 1,349 passed in 36.12s; focused constructor/runner tests:
+29 passed, including the real optimizer's recorded arguments and full graph gate.
+Next freeze this executor, submit the three-repeat diagnostic, and independently
+admit its outputs before deciding how to resume the QfO ablation work.

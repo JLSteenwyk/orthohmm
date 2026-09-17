@@ -68,6 +68,10 @@ def test_checked_constructor_and_optimizer(tmp_path, corrupt):
     else:
         assert boundary[0]["before"] == boundary[0]["after"] == boundary[0]["saved"]
         assert boundary[0]["arguments"]["seed"] == 4
+        from benchmark_tools.run_qfo_checked_repeats import check_gate, constructor_digest
+        check_gate(json.loads((tmp_path / "native_boundary.json").read_text()),
+                   json.loads((tmp_path / "constructor_adapter.json").read_text()),
+                   boundary[0]["saved"], constructor_digest(tmp_path))
 
 
 def test_constructor_restores_on_failure_and_rejects_second_array(tmp_path):
