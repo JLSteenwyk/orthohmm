@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Biological Application Inputs Mapped (2026-09-17)
+
+Previous continuation verified live DGX job21656_1; no restart was needed.
+Prepared complete available ON protein sets for the four frozen Saccharomyces
+species, independently of experimental cohort membership:23,870 proteins
+(Scerevisiae5,603; Skudriavzevii5,968; Smikatae6,384; Suvarum5,915).
+The input preparation verifies frozen source, cohort and protocol hashes.
+One terminal stop is removed; three selected-species internal-stop proteins
+are excluded. The OFF inventory covers the entire source, not just these
+four species, and must not be described as a four-species exclusion count.
+
+All240 experimental pairs remain in `biological_wgd_inputs_20260917.json`.
+239 have both anchor proteins in the inputs; YDR134C is OFF in this snapshot.
+231 also have a shared unambiguous reference pillar. Eight pairs have anchors
+in different pillars and remain eligible for descriptive separation but not
+the shared-pillar homolog-support endpoint. No pillars were manually merged.
+7,076 reference groups cover23,861 input proteins; nine ambiguous-reference
+proteins remain in inference inputs but not the reference. No column-order
+copy-specific orthology is inferred, and no tool outcomes have been read.
+
+Inference remains unauthorized pending the chronology/source audit and exact
+contrast freeze. Native runs, scoring and case figures remain outstanding.
+This mapping is input eligibility evidence, not biological performance evidence.
+Validation:19 focused cohort/preparation tests pass. Independently rechecked
+all recorded source/input hashes, unique protein/reference IDs, reference
+membership as an input subset, and byte identity of local/summary manifests.
+
 ## Experimental Biological-Application Cohort Frozen (2026-09-17)
 
 Previous turn completed launcher admission and started scientific DGX timing,
