@@ -3496,3 +3496,39 @@ int64 worker with six native mismatches despite intact source/converted arrays.
 Final worker/report still pending; no optimizer or accuracy evaluation in probe.
 Next: admit terminal CPM runs and execute complete-panel scorer; independently
 inspect final construction probe and continue diagnosing native endpoint failure.
+
+### Construction evidence admitted; CPM low admitted (2026-09-16)
+
+Previous turn progressed via the tested/pushed six-variant scoring assembler.
+Objective reread. Construction-only21323 completed0:0 in18:44. All six workers
+preserved: five match; explicit_int64 repeat1 has six native endpoint mismatches
+despite intact original and converted arrays. New independent admission checks
+terminal state, frozen executor/runtime, exact worker inventory/software/inputs,
+257 file records, native-file/report agreement and complete reconstruction of
+each ordered native endpoint hash from saved arrays plus bounded witnesses.
+Snapshot qfo_construction_verified_20260916.json SHA256
+499f90e06b6da311356c80f435149ba0cf132f75b13e2eacf720e02ea8f2382e.
+Documented evidence and limitations in QFO_CONSTRUCTION_DIAGNOSTIC_20260916.md.
+Explicit int64 conversion alone is not a sufficient fix; cause remains unresolved.
+No optimizer execution, partition selection or accuracy evaluation in this probe.
+
+Initial admission implementation had a syntax typo caught at import, corrected
+before any output was written.14 focused tests then passed, including native
+hash reconstruction and corrupt evidence rejection; full1,273 unit tests passed
+29.44s. Native scientific code and frozen runtime unchanged.
+
+CPM low21324_0 completed0:0 in16:42 and independently passed native admission:
+55,349 candidate families,60,635 root HOGs,251,378 genes fully preserved,
+zero cross-source merges,1,944 split families;7,546 constraints with5,178
+supported and2,368 detached. Snapshot ob_cpm_low_native_verified_20260916.json
+SHA2568f786c286894fc6dab757427048d3e1182b425a9dfaf1090dc71271bc63f071e.
+CPM high21324_1 completed0:0 in17:44; native validation now running. No accuracy
+scores yet. Next complete its admission and execute all six parameter contrasts.
+
+CPM high admission now passed:53,548 candidate families,58,815 root HOGs,
+251,378 genes preserved,zero cross-source merges,2,042 split families;
+9,185 constraints with6,525 supported and2,660 detached. Snapshot
+ob_cpm_high_native_verified_20260916.json SHA256
+f6749ff370ebfb6f83318ec376f96db839958e0cd00da053e8d66b3449d21a16.
+Both CPM and all four threshold variants are now natively admitted, still
+unscored. Complete-panel accuracy/uncertainty assembly is the next action.
