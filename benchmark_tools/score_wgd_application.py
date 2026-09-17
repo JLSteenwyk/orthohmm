@@ -6,9 +6,11 @@ from collections import Counter
 def membership(groups, universe):
     result = {}
     for name, genes in groups.items():
-        if not isinstance(name, str) or not name or not genes:
+        if not isinstance(name, str) or not name or isinstance(genes, str) or not genes:
             raise ValueError("Empty group ID or membership")
         for gene in genes:
+            if not isinstance(gene, str) or not gene or gene.strip() != gene:
+                raise ValueError("Invalid group member identifier")
             if gene not in universe or gene in result:
                 raise ValueError("Foreign or repeated group member: " + gene)
             result[gene] = name

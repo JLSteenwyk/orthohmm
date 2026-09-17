@@ -1,5 +1,34 @@
 # Publication Progress
 
+## OrthoHMM Application Outputs Admitted (2026-09-17)
+
+Previous turn implemented endpoints/bootstrap, pushed8b4c26a. Re-read objective.
+Added strict native species-table readers for OrthoFinder N0 rootHOGs and
+SonicParanoid, reusing the existing OrthoHMM native readers. Require exact
+explicit species-header mapping, row width, known genes in correct columns,
+unique nonempty groups/members and consistent Sonic counts. Missing genes stay
+unassigned; no synthetic singleton completion. Verified installed OrthoFinder
+source places N0.tsv in Phylogenetic_Hierarchical_Orthogroups; retain explicit
+root output semantics, not an arbitrary similarly named file. Existing QfO
+Sonic header confirms species filenames include.fasta; mappings stay explicit.
+
+Added OrthoHMM application admission: pinned spec/plan, exact executed command,
+GNU-time command/zeroexit, scheduler job/task success, before/after runtime
+identity receipts, frozen source commit, harness inputs/source/output hashes,
+native completion/counts/exact partitions and canonical phylogenetic pairs.
+No application cohort endpoint scores computed.69focused reader/admission/
+scoring/bootstrap/shared-native-validator tests pass.
+
+Actual admission reports `biological_wgd_high_admission_20260917.json` and
+`biological_wgd_satellite_admission_20260917.json` both pass.23,870input proteins
+covered by each native partition; high6,057OGs; satellite7,805rootHOGs and31,051
+native cross-species pair rows. These are integrity counts, not performance
+endpoints. No correct-copy orthology claim follows from group counts.
+
+21661_0and1COMPLETED0:0;21661_2(OrthoFinder)verifiedRUNNING2:44, Sonicqueued.
+DGX21656_3RUNNING18:49; first3complete and23queued. Comparator completion/
+admission, full240-row scoring, paired intervals and case figures remain open.
+
 ## Biological Endpoint and Bootstrap Arithmetic Implemented (2026-09-17)
 
 Previous continuation launched21661and pushed5386583. Re-read objective.
