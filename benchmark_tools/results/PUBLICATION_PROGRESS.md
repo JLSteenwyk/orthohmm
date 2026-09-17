@@ -4171,3 +4171,26 @@ Twenty focused clustering-wrapper/validator tests pass; full1,491unit tests
 passed35.90s. Prepared fresh v2 batch; freeze/submit after committing. Existing
 independent full-replay admission remains pinned to v1 and needs an explicit
 v2 provenance update before any completed retry can be used.
+
+### Corrected replay submitted and admission pinned (2026-09-17)
+
+Committed/pushedc93eb2c and froze publication_qfo_checked_full_replay_v2 at
+c93eb2c8cf5671b9e99b3e534f68d11fac6282d7. Submitted21333 using the commit read
+directly from git; confirmedRUNNING00:00:12. Original input audit passed
+976,504genes78FASTAs, with the same7documented historical source differences.
+Output benchmarks/results/qfo_checked_full_replay_v2; scheduler log
+benchmarks/work/qfo_checked_full_replay_v2_21333.log. Do not restart while live.
+
+Extended independent full-replay admission with explicit v1/v2 choice and fixed
+job/revision/output mappings. V2 requires recorded inheritedOMP1/1/32/32 and
+childOMP/OPENBLAS/MKL1 for all four stages, alongside unchanged native-worker
+environment/graph/source/coverage gates. Six additional tests cover version/job
+and inherited/override mismatches; all21focused admission tests pass. No v2
+result is admitted yet.
+
+Independent OrthoFinder checkpoint reread for pilot21332 recovered98groups and
+806genes on each side with identical canonical memberships, confirming the
+observed MCL byte differences do not change this pilot partition. Added bounded
+pilot summary with snapshotSHA446a3c19cebf87fe562cc9e88cf183986e4e644b71116eaa5ba2839c9083f561.
+Complete independent pilot admission and the remaining dataset controls are
+still outstanding; no general equivalence or accuracy advantage claimed.

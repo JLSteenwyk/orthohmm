@@ -40,3 +40,10 @@ This retry is driven by a diagnosed execution defect, not accuracy selection.
 The current independent admission script pins v1/job21329/executor96333fd and
 must be explicitly updated for v2 provenance before any completed v2 result is
 admitted. No native scientific library or frozen core is patched.
+
+Follow-up: v2 submitted as job21333 with executorc93eb2c8cf5671b9e99b3e534f68d11fac6282d7.
+The independent admission script now has an explicit `--run-version v2` path
+pinning that job, revision and output directory, while retaining the v1 route.
+It additionally checks all four recorded inherited/child thread environments;
+all prior native-graph, coverage, source and historical-comparison checks remain.
+Preparation of this gate does not admit the running job or replace v1 evidence.

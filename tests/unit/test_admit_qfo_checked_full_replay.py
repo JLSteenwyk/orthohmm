@@ -54,3 +54,31 @@ def test_exact_unscored_inventory(problem):
 def test_refuse_reusing_admission(tmp_path):
     with pytest.raises(FileExistsError):
         admit(tmp_path, tmp_path, "unused")
+
+
+@pytest.mark.parametrize("problem", [None, "old_job", "missing_environment", "wrong_inherited", "wrong_override"])
+def test_v2_requires_pinned_job_and_child_thread_isolation(problem):
+    parent, worker, replay = fixture()
+    parent["job_id"] = "21333"
+    for row in worker["calls"]:
+        overrides = {k: "1" for k in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS")}
+        row["thread_environment"] = {"child_overrides": overrides,
+            "inherited": {**overrides, "OMP_NUM_THREADS": "32" if row["index"] >= 2 else "1"}}
+    if problem == "old_job":
+        parent["job_id"] = "21329"
+    elif problem == "missing_environment":
+        del worker["calls"][2]["thread_environment"]
+    elif problem == "wrong_inherited":
+        worker["calls"][2]["thread_environment"]["inherited"]["OMP_NUM_THREADS"] = "1"
+    elif problem == "wrong_override":
+        worker["calls"][2]["thread_environment"]["child_overrides"]["OMP_NUM_THREADS"] = "32"
+    if problem:
+        with pytest.raises(ValueError):
+            check_inventory(parent, worker, replay, "v2")
+    else:
+        check_inventory(parent, worker, replay, "v2")
+
+
+def test_unknown_run_version_rejected():
+    with pytest.raises(ValueError, match="Unknown"):
+        check_inventory(*fixture(), version="v3")

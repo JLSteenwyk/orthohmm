@@ -17,10 +17,13 @@ from benchmark_tools.verify_ygob_validation import require_completed_job
 ADMISSION_SHA = "78f51f5ce703caf39307c5e518ad737acdf655dbe0926a34f2c20bbdec6d03f1"
 CALLS = ("initial", "multipass", "profile_base", "profile_expanded")
 STAGES = ("multipass", "multipass_refined", "profiles", "profiles_refined")
+RUNS = {"v1": (21329, "96333fd"), "v2": (21333, "c93eb2c8cf5671b9e99b3e534f68d11fac6282d7")}
 
 
-def check_inventory(parent, worker, replay):
-    if (parent["status"] != "full_checked_replay_complete_unscored" or parent["job_id"] != "21329"
+def check_inventory(parent, worker, replay, version="v1"):
+    if version not in RUNS:
+        raise ValueError("Unknown fixed replay version")
+    if (parent["status"] != "full_checked_replay_complete_unscored" or parent["job_id"] != str(RUNS[version][0])
             or parent["exit_code"] != 0 or parent["accuracy_evaluated"] is not False
             or worker["status"] != "checked_full_replay_returned" or worker["accuracy_evaluated"] is not False
             or [(r["index"], r["stage"]) for r in worker["calls"]] != list(enumerate(CALLS))
@@ -33,22 +36,31 @@ def check_inventory(parent, worker, replay):
                 "jackknife_single_copy_profiles": False, "profile_min_species": 1, "matrix": "BLOSUM62", "leiden_seed": 4}
     if replay["parameters"] != expected or any("official_orthobench" in r for r in replay["stages"]):
         raise ValueError("Replay settings or scoring scope changed")
+    if version == "v2":
+        for row in worker["calls"]:
+            overrides = {k: "1" for k in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS")}
+            inherited = {**overrides, "OMP_NUM_THREADS": "32" if row["index"] >= 2 else "1"}
+            if row.get("thread_environment") != {"inherited": inherited, "child_overrides": overrides}:
+                raise ValueError("Explicit clustering child thread isolation differs")
 
 
-def admit(root, output, digest):
+def admit(root, output, digest, version="v1"):
     if output.exists():
         raise FileExistsError(output)
-    directory = root / "benchmarks/results/qfo_checked_full_replay_v1"
+    if version not in RUNS:
+        raise ValueError("Unknown fixed replay version")
+    job_id, revision_pin = RUNS[version]
+    directory = root / f"benchmarks/results/qfo_checked_full_replay_{version}"
     path = directory / "results.json"
     report = read_frozen(path, digest)
     worker = json.loads((directory / "checked_worker.json").read_text())
     replay = json.loads((directory / "replay.json").read_text())
-    check_inventory(report, worker, replay)
-    accounting = subprocess.check_output(["sacct", "-j", "21329", "--parsable2", "--format=JobIDRaw,State,ExitCode,Elapsed,MaxRSS"], text=True)
-    scheduler = require_completed_job(accounting, 21329)
-    executor = root / "benchmarks/work/publication_qfo_checked_full_replay_v1"
+    check_inventory(report, worker, replay, version)
+    accounting = subprocess.check_output(["sacct", "-j", str(job_id), "--parsable2", "--format=JobIDRaw,State,ExitCode,Elapsed,MaxRSS"], text=True)
+    scheduler = require_completed_job(accounting, job_id)
+    executor = root / f"benchmarks/work/publication_qfo_checked_full_replay_{version}"
     revision = subprocess.check_output(["git", "-C", str(executor), "rev-parse", "HEAD"], text=True).strip()
-    expected_revision = subprocess.check_output(["git", "-C", str(root), "rev-parse", "96333fd^{commit}"], text=True).strip()
+    expected_revision = subprocess.check_output(["git", "-C", str(root), "rev-parse", revision_pin + "^{commit}"], text=True).strip()
     if revision != expected_revision or report["executor_commit"] != revision:
         raise ValueError("Frozen executor revision changed")
     subprocess.run(["git", "-C", str(executor), "diff", "--exit-code", "HEAD", "--", "benchmark_tools"], check=True)
@@ -192,6 +204,7 @@ def admit(root, output, digest):
     if verify(core, launcher, runtime) != report["runtime"]:
         raise ValueError("Native runtime changed during admission")
     result = {"status": "checked_full_replay_verified", "publication_ready": False, "accuracy_evaluated": False,
+              "run_version": version,
               "source": record(__file__), "source_report": record(path), "scheduler": scheduler, "scheduler_accounting": accounting,
               "native_report": report, "native_replay": replay, "clustering": summaries, "coverage": coverage,
               "initial_versus_checked_repeat": initial, "final_versus_historical": historical,
@@ -208,5 +221,6 @@ if __name__ == "__main__":
     parser.add_argument("--root", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--report-sha256", required=True)
+    parser.add_argument("--run-version", choices=tuple(RUNS), default="v1")
     args = parser.parse_args()
-    admit(args.root.resolve(), args.output.resolve(), args.report_sha256)
+    admit(args.root.resolve(), args.output.resolve(), args.report_sha256, args.run_version)
