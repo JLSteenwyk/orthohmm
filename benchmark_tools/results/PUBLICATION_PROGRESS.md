@@ -1,5 +1,31 @@
 # Publication Progress
 
+## DGX Host-Evidence Admission Review (2026-09-17)
+
+Previous turn made progress with the SwissTrees figure, pushed8006042. Re-read
+full objective. Six DGX21656 tasks are complete; task6 verified RUNNING2:01.
+Started reviewing scientific timing admission without bulk remote I/O. The
+run00 summary is inconclusive despite very low persistent foreign CPU usage.
+
+Inspected deployed monitor semantics and downloaded only the completed2.8MB
+host log plus5.5KBmeasurement record, while later inference continued. Added
+a diagnostic replay that checks source/raw identities and reproduces all20
+snapshots/19intervals. Twelve inconclusive intervals arise from22unmatched
+identity events, all named kworker/ in root cgroup; zero snapshot errors or
+uncertain CPU-counter/cgroup reasons. Seven other intervals report no large
+persistent competitor. Maximum observed persistent foreign load is0.007534cores.
+
+Names alone do not authenticate kernel workers or reconstruct their unobserved
+CPU use. Original classification and controlled_workload_verified=false retained.
+No native timing admitted, no monitor relaxation, deployed changes or reruns.
+All39focused host-review, monitor, competition and collector-audit tests pass.
+See `DGX_RUN00_HOST_REVIEW_20260917.md` and compact hashed JSON evidence.
+
+Continue full original scope. Timing admission still needs all frozen-command,
+scheduler, native-output and resource checks plus transparent host limitations;
+QfO uncertainty/strata/ablations and release/package work remain open. The host
+review is progress on a real admission issue, not a publication-completion claim.
+
 ## SwissTrees Comparator Uncertainty Figure (2026-09-17)
 
 Previous turn progressed the frozen paired comparator analysis, pushed671d3c1.

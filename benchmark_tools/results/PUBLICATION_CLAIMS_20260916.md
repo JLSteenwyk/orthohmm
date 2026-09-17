@@ -65,9 +65,12 @@ evidence that an experiment completed or a biological hypothesis is true.
 - Recovered QfO scoring21548_0..3 and admission21584 are all COMPLETED0:0.
   [Stage results](qfo_recovered_stage_summary_20260917.json) and the SwissTrees
   interval audit are complete; uncertainty for the other challenges remains open.
-- DGX matched timing21656 has five completed tasks and task5 running at the
+- DGX matched timing21656 has six completed tasks and task6 running at the
   2026-09-17 accounting check. No scientific timings have yet passed output and
   resource admission. The original32CPU plan remains distinct from the DGX plan.
+  [Run00 host review](DGX_RUN00_HOST_REVIEW_20260917.md) reproduces inconclusive
+  observations caused by unmatched kworker-named identities. Low observed
+  persistent CPU use does not certify absent contention; no monitor rule changed.
 - Biological application scores, independent arithmetic, figure and all six
   prospective cases are complete. The [stage trace](BIOLOGICAL_WGD_CASE_TRACE_20260917.md)
   localizes five focal homolog separations to root-lineage grouping. Tree

@@ -1,0 +1,210 @@
+{
+  "clock_domain": {
+    "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+    "clock": "time.monotonic",
+    "hostname": "spark-7ff0",
+    "unit": "seconds"
+  },
+  "controlled_workload_verified": false,
+  "diagnostics": {
+    "interval_counts": {
+      "inconclusive": 12,
+      "no_large_persistent_competitor_observed": 7
+    },
+    "kworker_named_identity_events": 22,
+    "snapshot_error_types": {},
+    "uncertain_reasons": {},
+    "unmatched_events": [
+      {
+        "cgroup": "/",
+        "count": 1,
+        "direction": "disappeared",
+        "name": "kworker/0:0-events"
+      },
+      {
+        "cgroup": "/",
+        "count": 1,
+        "direction": "appeared",
+        "name": "kworker/15:0-events"
+      },
+      {
+        "cgroup": "/",
+        "count": 1,
+        "direction": "disappeared",
+        "name": "kworker/16:0-cgroup_destroy"
+      },
+      {
+        "cgroup": "/",
+        "count": 1,
+        "direction": "appeared",
+        "name": "kworker/16:2"
+      },
+      {
+        "cgroup": "/",
+        "count": 1,
+        "direction": "disappeared",
+        "name": "kworker/16:2"
+      },
+      {
+        "cgroup": "/",
+        "count": 1,
+        "direction": "appeared",
+        "name": "kworker/16:3-events"
+      },
+      {
+        "cgroup": "/",
+        "count": 1,
+        "direction": "appeared",
+        "name": "kworker/19:0-mm_percpu_wq"
+      },
+      {
+        "cgroup": "/",
+        "count": 1,
+        "direction": "appeared",
+        "name": "kworker/1:2"
+      },
+      {
+        "cgroup": "/",
+        "count": 1,
+        "direction": "disappeared",
+        "name": "kworker/1:2-events"
+      },
+      {
+        "cgroup": "/",
+        "count": 1,
+        "direction": "disappeared",
+        "name": "kworker/2:0-events"
+      },
+      {
+        "cgroup": "/",
+        "count": 1,
+        "direction": "disappeared",
+        "name": "kworker/3:0-events"
+      },
+      {
+        "cgroup": "/",
+        "count": 1,
+        "direction": "disappeared",
+        "name": "kworker/5:0-events"
+      },
+      {
+        "cgroup": "/",
+        "count": 1,
+        "direction": "appeared",
+        "name": "kworker/5:2"
+      },
+      {
+        "cgroup": "/",
+        "count": 1,
+        "direction": "disappeared",
+        "name": "kworker/5:2-events"
+      },
+      {
+        "cgroup": "/",
+        "count": 1,
+        "direction": "appeared",
+        "name": "kworker/6:1-mm_percpu_wq"
+      },
+      {
+        "cgroup": "/",
+        "count": 1,
+        "direction": "disappeared",
+        "name": "kworker/7:0-events"
+      },
+      {
+        "cgroup": "/",
+        "count": 1,
+        "direction": "appeared",
+        "name": "kworker/9:1-mm_percpu_wq"
+      },
+      {
+        "cgroup": "/",
+        "count": 1,
+        "direction": "appeared",
+        "name": "kworker/u80:0"
+      },
+      {
+        "cgroup": "/",
+        "count": 1,
+        "direction": "appeared",
+        "name": "kworker/u81:2"
+      },
+      {
+        "cgroup": "/",
+        "count": 1,
+        "direction": "disappeared",
+        "name": "kworker/u81:2-events_power_efficient"
+      },
+      {
+        "cgroup": "/",
+        "count": 1,
+        "direction": "appeared",
+        "name": "kworker/u82:0"
+      },
+      {
+        "cgroup": "/",
+        "count": 1,
+        "direction": "disappeared",
+        "name": "kworker/u82:3-events_power_efficient"
+      }
+    ],
+    "unmatched_identity_events": 22
+  },
+  "evidence": [
+    {
+      "bytes": 5511,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_host_review_run00_20260917/results.json",
+      "sha256": "8a6eee3129bba89d9a780d279c0b4388077235d2e54ec37b8b42c8446e3502a5"
+    },
+    {
+      "bytes": 2794463,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_host_review_run00_20260917/host_samples.jsonl",
+      "sha256": "147aed48b667253ce3eaede4dee717b4aa8f272a941dff53a37e09d03a672916"
+    }
+  ],
+  "job_id": 21657,
+  "limitations": [
+    "Process names are descriptive, not independently authenticated kernel-thread classifications.",
+    "Unmatched process CPU use and short-lived unsampled work remain unmeasured.",
+    "No monitor threshold, classification or deployed recipe was changed.",
+    "This host-only replay does not validate native output, resource samples or complete timing admission."
+  ],
+  "native_host_evidence_path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_native_v1/run_00/measurement/host_samples.jsonl",
+  "retained_host_summary": {
+    "command_bracketed_by_samples": true,
+    "command_launch_started_monotonic_s": 2165692.108246577,
+    "command_wait_finished_monotonic_s": 2166250.625763442,
+    "controlled_workload_verified": false,
+    "interval_counts": {
+      "inconclusive": 12,
+      "no_large_persistent_competitor_observed": 7
+    },
+    "limitations": [
+      "Snapshots miss short-lived processes and non-CPU contention.",
+      "Per-process CPU intervals are not simultaneous; no exclusivity or quiet-host certification.",
+      "Sampling overhead is included in measured resources; raw process inventory is local evidence."
+    ],
+    "maximum_between_snapshot_gap_s": 30.418922639917582,
+    "maximum_observed_foreign_average_cores": 0.007533971768562335,
+    "observation_errors": 0,
+    "observer_pid": 351935,
+    "observer_source": {
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/collector_load_recipe_v2/observe_host_competition.py",
+      "sha256": "d8b66001bdabf4c436aab8185f218dac019dd45b3075c71521513235a1c07e0a"
+    },
+    "source": {
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/collector_load_recipe_v2/command_host_monitor.py",
+      "sha256": "3ef0f82132bad825509f8fade0e11c1b17d12be11d578327a7c593cbe3db30c9"
+    },
+    "status": "inconclusive",
+    "successful_snapshots": 20,
+    "threshold_average_cores": 0.25
+  },
+  "scientific_timing_admitted": false,
+  "source": {
+    "bytes": 5397,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_dgx_host_intervals.py",
+    "sha256": "c75e3702401ff766f28bd9dc48446ddc5aec455850ab8c2a18e912700b2d11f3"
+  },
+  "status": "host_interval_causes_reviewed_not_admitted"
+}
