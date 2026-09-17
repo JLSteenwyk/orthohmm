@@ -309,3 +309,32 @@ Build/regression logs copied under benchmarks/work, with SHA256:
 
 Both shell recipes pass bash syntax checks and runtime inspector tests3/3.
 No benchmark inference or scientific timing was launched.
+
+## FAMSA Native Build and FastME Source Gap
+
+FAMSA now builds successfully from official refresh-bio/FAMSA commit
+1669fc1444c8bc4000d71121ec2a7aa62d848b57, using GCC13.3 and
+`make -j8 PLATFORM=arm8`. Its help reports 2.2.3-1669fc1 (2024-09-17),
+matching the bundled x86 version. The build uses ARMv8 NEON and unchanged
+algorithm sources. Generated objects/binary remain untracked in the source
+checkout; this is not a claim of a clean post-build working directory.
+Pinned submodules are atomic_wait 4d3bafcd562b4a47f0d5bac09fe642ec07e4eb3c,
+libdeflate ced051e1c260c7008f312400a0471aecf37aa1e0, and
+mimalloc 2765ec93026f445cad8f38e6b196dd226a1f6e61.
+
+Remote binary: `famsa-source-v1/famsa`, SHA256
+0a3988e9f7bae4dce39c730c0ceb3212d3ec9462ee585fe660f3861cbd38a7bb.
+Build log copied to local `benchmarks/work/famsa-build-v1.log`, SHA256
+108862a7a6ae41e8d9412399600506ccb561000366b003fe242409ea409540de.
+Upstream compiler warnings remain in the log. Build/version success does
+not establish alignment equivalence or complete-pipeline correctness.
+
+OrthoFinder's bundled FastME reports 2.1.4. Its STAG code invokes FastME
+with `-w O -s -n`; therefore FastME is now included in the runtime inspector
+using `-V`. The old official download path
+https://www.atgc-montpellier.fr/download/sources/fastme/fastme-2.1.4.tar.gz
+returned HTTP404 on 2026-09-17. `git ls-remote --tags` of official
+https://gite.lirmm.fr/atgc/FastME.git listed tags starting at v2.1.5, not
+v2.1.4. This does not prove that older source is unavailable elsewhere or
+in repository history. Exact-source recovery remains pending; no newer
+FastME was substituted. Scientific scaling runs remain 0/27 launched.

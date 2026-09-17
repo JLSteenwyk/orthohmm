@@ -12,7 +12,7 @@ import subprocess
 import sys
 
 FLAGS = {"diamond": ["version"], "FastTree": ["-help"], "mafft": ["--version"],
-         "mcl": ["--version"], "famsa": ["-h"]}
+         "mcl": ["--version"], "famsa": ["-h"], "fastme": ["-V"]}
 
 
 def file_record(path):

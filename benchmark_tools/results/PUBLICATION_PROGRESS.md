@@ -1,5 +1,18 @@
 # Publication Progress
 
+## DGX FAMSA Build Verified (2026-09-17)
+
+Exact bundled FAMSA revision 2.2.3-1669fc1 now compiles and reports its
+version on ARM; binary and retained build-log hashes are recorded in
+DGX_SCALING_MIGRATION_20260917.md. Alignment and complete-pipeline validation
+remain outstanding. Runtime inspection now includes FastME (-V), with all
+three focused tests passing. Exact FastME2.1.4 source recovery remains open:
+the old official archive returns404, and the cloned official repository's
+history begins at release2.1.5 (b24531789b90eee9752d51fcf4db722d02bb2c21).
+No newer version substituted and 0/27 scientific timing runs launched.
+QfO21548_2 was verified RUNNING at22:28 elapsed; stage3 and auditor21584
+remain pending. The full publication goal remains incomplete.
+
 Objective: complete the seven-part publication goal, with QfO and OrthoBench
 primary and Three Kingdoms supplementary. This ledger is not a claim of
 publication readiness. Existing benchmark outcomes are development-exposed.

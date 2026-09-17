@@ -23,6 +23,8 @@ def test_child_path_used_and_version_exit_retained(monkeypatch, tmp_path):
     assert all(call["env"]["PATH"] == "/child/path" for call in calls)
     assert result["FastTree"]["exit_code"] == 1
     assert result["FastTree"]["stderr"] == "version on stderr"
+    assert result["fastme"]["argv"] == [str(executable), "-V"]
+    assert result["famsa"]["argv"] == [str(executable), "-h"]
 
 
 def test_binary_change_rejected(monkeypatch, tmp_path):
