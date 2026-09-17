@@ -3837,3 +3837,37 @@ change, historical-output replacement or claim of general determinism. Next
 extend checked construction/native-boundary observation to every payload in a
 complete cached QfO replay, including multipass/profile stages, then independently
 admit it before resuming QfO ablations. Scaling/application/release work remains.
+
+### Checked full-replay payload components (2026-09-17)
+
+Previous continuation made progress by independently admitting all three initial
+graph repeats and pushing9d256a2. Re-read objective and current repository; no
+OrthoHMM Slurm job remains running. Job20915 is unrelated and was left untouched.
+Inspected frozen49ab replay and native isolation: exactly four clustering calls
+are expected for one profile iteration, ordered initial/multipass/profile_base/
+profile_expanded. All include isolates, seed4 and CPM0.1.
+
+Added checked_replay_payload_worker.py. It requires the admitted repeat snapshot,
+checks its308 prior provenance records, validates a separately hashed per-stage
+payload manifest, identical QfO gene order, metadata, array types/shapes/endpoints
+and finite weights, and refuses already observed payloads. It uses the existing
+Python-pair adapter plus frozen worker/native before-after graph observer with
+one-CPU affinity, recording helper/source/admission provenance before execution.
+It does not require later-stage edges to equal the initial graph: those edges
+must match their own freshly preserved payloads.
+
+Added checked_replay_interceptor.py to intercept only the exact frozen isolated
+worker invocation. Original graph generation and serialization remain unchanged.
+Copies all five payload files before the temporary directory disappears, checks
+original/copied bytes, records commands/manifests/logs/failures, requires a caller-
+provided result validator before continuing, and preserves each returned partition.
+It rejects a fifth call or any continuation after a failed call; unrelated
+subprocess calls pass through unchanged. No existing frozen files were edited.
+
+Ten focused tests pass for stage/input/settings guards, duplicate-observation
+rejection, preservation, failure/no-retry behavior, ordinary subprocess forwarding,
+and exact four-stage inventory. Synthetic interceptor tests do not establish
+native full-replay success. Full suite: 1,387 passed in 34.93s. The parent launcher,
+per-stage post-worker validator and independent completed-replay admission still
+need integration before submitting a full cached replay. No new inference or
+accuracy evaluation was launched in this continuation.
