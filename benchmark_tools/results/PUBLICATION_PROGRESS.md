@@ -1,5 +1,33 @@
 # Publication Progress
 
+## VGNC Reference Mapping and TreeFam Source Recovery (2026-09-17)
+
+Previous goal turn was a verified wait: DGX21656_5 was live, with five completed
+tasks and 21 pending. Re-read the full objective and continued QfO validation
+locally without disturbing timing jobs. No method or native score changed.
+
+Recorded TreeFam source-recovery evidence: official archive and repository
+metadata retrieved, but original family trees/mapping not found in those
+inventories; queried historical FTP paths returned 403/404. Recovery remains
+open, not proven impossible. VGNC inventories verify 23,934 asserted pairs,
+36,986 proteins and 11 proteins with multiple family labels. All four recovered
+stages reproduce admitted P/R/F1 from raw counts within 5e-8.
+
+Added executable mapping audit and focused tests. Initial strict bijection
+checks failed because native databases retain accession aliases, not because
+truth pairs changed. Last-row alias reconstruction matches all saved raw
+annotations; each stage has 79 extra reference alias rows. Exact mapped truth
+partitions and emitted-FP eligibility pass across all four stages, with no
+category overlap. No omitted-FP or full-prediction rescore claim is made.
+All 23 focused VGNC/TreeFam/Swiss audit tests pass. Final scheduler check:
+DGX21656_5 RUNNING at 20:38, five complete, 21 pending; no timing admitted yet.
+
+See `QFO_REFERENCE_MAPPING_AUDIT_20260917.md` and five JSON evidence files.
+Family independence/paired uncertainty is still unresolved; do not treat gene
+pairs as independent or label these checks publication completion. Next work:
+remaining QfO statistical/scoring requirements, live matched-timing admission,
+and the existing error-analysis, portability, licensing and release tasks.
+
 ## TreeFam-A Native Count Audit (2026-09-17)
 
 Previous turn progressed strict docs/claim corrections, pushedf9fb8ba. Re-read

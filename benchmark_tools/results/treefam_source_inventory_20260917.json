@@ -1,0 +1,217 @@
+{
+  "limitations": [
+    "No original tree collection or treefam2reference mapping recovered from these probes.",
+    "HTTP403/404 observations do not establish permanent unavailability or absence from other archives.",
+    "The GitHub TreeFam-A.json is an aggregation-display stub, not family membership data.",
+    "Original family mappings must reconcile with the exact frozen 2020 relation reference before statistical use."
+  ],
+  "local_treefam_json": {
+    "content": {
+      "_id": "QfO:TreeFam-A_agg",
+      "challenge_ids": [
+        "TreeFam-A"
+      ],
+      "datalink": {
+        "inline_data": {
+          "challenge_participants": [],
+          "visualization": {
+            "type": "2D-plot",
+            "x_axis": "TPR",
+            "y_axis": "PPV"
+          }
+        }
+      },
+      "type": "aggregation"
+    },
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/TreeFam-A.json",
+    "sha256": "42bdfa2f53ac7c8921a41ec0f91936f7431097dcc54322b2eaef987d4799e595"
+  },
+  "next_actions": [
+    "Locate preserved original TreeFam-A family trees and QfO mapping via archive or maintainers.",
+    "Do not replace native labels with predicted groups or unvalidated graph components.",
+    "Continue other QfO challenges while TreeFam provenance remains unresolved."
+  ],
+  "sources": [
+    {
+      "bytes": 10303,
+      "files": [
+        {
+          "bytes": 40019520,
+          "checksum": "md5:a67806dc75ba50a7429d86e02d0e6f4d",
+          "name": "mapping.json.gz"
+        },
+        {
+          "bytes": 834612400,
+          "checksum": "md5:701eb2213c92c8d3b5ca959e7be745cd",
+          "name": "ServerIndexed.db"
+        },
+        {
+          "bytes": 1760987736,
+          "checksum": "md5:fad6a18e44a03ce595af3644713a3c30",
+          "name": "ServerIndexed.db.tree"
+        },
+        {
+          "bytes": 430,
+          "checksum": "md5:de9482464a79048dd7932838a53b0628",
+          "name": "TreeCat_Euk.drw"
+        },
+        {
+          "bytes": 311,
+          "checksum": "md5:61a44cfb96a01475aad0c59eea558c97",
+          "name": "TreeCat_Bac.drw"
+        },
+        {
+          "bytes": 508,
+          "checksum": "md5:ad782919d6bce29fd90f86d1627616b3",
+          "name": "speciestree_Euk_conf81.drw"
+        },
+        {
+          "bytes": 754,
+          "checksum": "md5:8e34d7e7bc0c02ab5692aff6750988bb",
+          "name": "speciestree_Luca_conf81.drw"
+        },
+        {
+          "bytes": 194,
+          "checksum": "md5:e2a727fc701c6aa27136c9ed14ec0e8e",
+          "name": "speciestree_Ver_conf81.drw"
+        },
+        {
+          "bytes": 7750000,
+          "checksum": "md5:d1f2aa18764fc65e35fac2eee5a059aa",
+          "name": "species_tree_samples_Ver.nwk"
+        },
+        {
+          "bytes": 5350000,
+          "checksum": "md5:4ae701fcde531b1b2ff05759fe8d474e",
+          "name": "species_tree_samples_Fun.nwk"
+        },
+        {
+          "bytes": 825571,
+          "checksum": "md5:2a261d088cc036f4cf0919e93901e933",
+          "name": "swissprot.txt.gz"
+        },
+        {
+          "bytes": 334,
+          "checksum": "md5:750e7c1fe6c4c18052103cb8cd7e311f",
+          "name": "TreeCat_Fun.drw"
+        },
+        {
+          "bytes": 1998195,
+          "checksum": "md5:87202bc69e46966012cbeea456934639",
+          "name": "ReconciledTrees_TreeFam-A.drw"
+        },
+        {
+          "bytes": 183364,
+          "checksum": "md5:8854a7f3ba7ecadc55488a2eedbbd859",
+          "name": "vgnc-orthologs.txt.gz"
+        },
+        {
+          "bytes": 3936560,
+          "checksum": "md5:3bdccd7d8e9594ac06f79e7e454471c1",
+          "name": "ServerIndexed.db.map"
+        },
+        {
+          "bytes": 3897036,
+          "checksum": "md5:3a2f0acf5c55ccae85886ac44c7ec9a5",
+          "name": "Summaries.drw.gz"
+        },
+        {
+          "bytes": 140842,
+          "checksum": "md5:3902ecc6174c10f111bc1bb19967ad49",
+          "name": "enzymes.drw.gz"
+        },
+        {
+          "bytes": 3608478,
+          "checksum": "md5:5a04feae01a98a9d1837ad1c5fe1cf4f",
+          "name": "GOdata.drw.gz"
+        },
+        {
+          "bytes": 318907,
+          "checksum": "md5:b6e8fe39ae44fad110f566266c67737f",
+          "name": "ReconciledTrees_SwissTrees.drw"
+        },
+        {
+          "bytes": 102206057,
+          "checksum": "md5:c0ad95fba14e9f320dde884225e4c045",
+          "name": "fas_annotations.tgz"
+        },
+        {
+          "bytes": 590454327,
+          "checksum": "md5:3063d35ebfff6bae1dd5145dae6c40d2",
+          "name": "fas_precomputed.json.gz"
+        },
+        {
+          "bytes": 174,
+          "checksum": "md5:63f318f21f50d0f52c5300b0015bbdba",
+          "name": "speciestree_Fun_conf81.drw"
+        },
+        {
+          "bytes": 18579,
+          "checksum": "md5:c20f4814045d533700fe1324cb0a77d1",
+          "name": "lineage_tree.phyloxml"
+        },
+        {
+          "bytes": 7750000,
+          "checksum": "md5:c2cb3b533a887681f7478358c98beaee",
+          "name": "species_tree_samples_Euk.nwk"
+        },
+        {
+          "bytes": 7750000,
+          "checksum": "md5:834d1ede87d27d19a99dde66d3ea6d08",
+          "name": "species_tree_samples_Luca.nwk"
+        }
+      ],
+      "final_url": "https://zenodo.org/api/records/15087752",
+      "http_status": 200,
+      "label": "qfo_2020_zenodo",
+      "raw_path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_source_inventory_v1/qfo_2020_zenodo.json",
+      "retrieved_utc": "2026-09-17T23:19:07.698161+00:00",
+      "sha256": "9b3d3faf64fcec9a46fd33d8bd5713ee04fc750525b55fec50d78ac261bb5bea",
+      "url": "https://zenodo.org/api/records/15087752"
+    },
+    {
+      "bytes": 33027,
+      "final_url": "https://api.github.com/repos/qfo/benchmark-webservice/git/trees/master?recursive=1",
+      "http_status": 200,
+      "label": "qfo_github_tree",
+      "raw_path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_source_inventory_v1/qfo_github_tree.json",
+      "retrieved_utc": "2026-09-17T23:19:10.518050+00:00",
+      "sha256": "d8413d9a81a05574950594c5b8519549b1611bcca4ee72642e7dcdb0a75eb2b2",
+      "tree_sha": "c0854a96c1a0fd7f2a891d971af0863002fabc90",
+      "treefam_entries": [
+        {
+          "mode": "100644",
+          "path": "reference_data/data/TreeFam-A.json",
+          "sha": "27849bc6a3e36d5403f70d53dfff5cd70ecf1257",
+          "size": 284,
+          "type": "blob",
+          "url": "https://api.github.com/repos/qfo/benchmark-webservice/git/blobs/27849bc6a3e36d5403f70d53dfff5cd70ecf1257"
+        }
+      ],
+      "truncated": false,
+      "url": "https://api.github.com/repos/qfo/benchmark-webservice/git/trees/master?recursive=1"
+    },
+    {
+      "error": "HTTP Error 404: Not Found",
+      "http_status": 404,
+      "label": "ebi_treefam",
+      "retrieved_utc": "2026-09-17T23:19:10.838087+00:00",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/treefam/"
+    },
+    {
+      "error": "HTTP Error 404: Not Found",
+      "http_status": 404,
+      "label": "ebi_treefam_releases",
+      "retrieved_utc": "2026-09-17T23:19:11.311849+00:00",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/treefam/releases/"
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "http_status": 403,
+      "label": "sanger_release7",
+      "retrieved_utc": "2026-09-17T23:19:11.770441+00:00",
+      "url": "https://ftp.sanger.ac.uk/pub/treefam/release-7.0/"
+    }
+  ],
+  "status": "source_recovery_inventory_incomplete"
+}

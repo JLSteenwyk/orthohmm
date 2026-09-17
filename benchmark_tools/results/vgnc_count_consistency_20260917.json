@@ -1,0 +1,71 @@
+{
+  "admission": {
+    "bytes": 150840,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_recovered_assessment_admitted_20260917.json",
+    "sha256": "89b683d0fc7fe9964ce5b6182832bb8eb28758fad3f6bbb4d706926143805956"
+  },
+  "limitations": [
+    "Count reconstruction and cross-stage label consistency are verified; integer-reference to accession mapping still requires an independent audit.",
+    "No independent-family resampling model or paired confidence intervals established."
+  ],
+  "raw_inventory": {
+    "bytes": 3033,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/vgnc_raw_label_inventory_20260917.json",
+    "sha256": "436daaa78988eb70f1ad6aa99fc71ba87155bd360d66c689f583ce8903be2472"
+  },
+  "stages": [
+    {
+      "F1": 0.2762070361813115,
+      "PPV": 0.16105779246933985,
+      "TPR": 0.9689980780479652,
+      "counts": {
+        "FN": 742,
+        "FP": 120806,
+        "TP": 23192
+      },
+      "raw_protein_annotations": 36986,
+      "reference_pairs": 23934,
+      "stage": "multipass"
+    },
+    {
+      "F1": 0.6682088676556869,
+      "PPV": 0.5579631029366479,
+      "TPR": 0.83274839140971,
+      "counts": {
+        "FN": 4003,
+        "FP": 15790,
+        "TP": 19931
+      },
+      "raw_protein_annotations": 36986,
+      "reference_pairs": 23934,
+      "stage": "multipass_refined"
+    },
+    {
+      "F1": 0.27505783261166145,
+      "PPV": 0.16028370755447408,
+      "TPR": 0.9687473886521267,
+      "counts": {
+        "FN": 748,
+        "FP": 121470,
+        "TP": 23186
+      },
+      "raw_protein_annotations": 36986,
+      "reference_pairs": 23934,
+      "stage": "strict_profiles"
+    },
+    {
+      "F1": 0.6676947834249698,
+      "PPV": 0.5575275740440065,
+      "TPR": 0.8321216679201137,
+      "counts": {
+        "FN": 4018,
+        "FP": 15806,
+        "TP": 19916
+      },
+      "raw_protein_annotations": 36986,
+      "reference_pairs": 23934,
+      "stage": "strict_profiles_refined"
+    }
+  ],
+  "status": "vgnc_raw_count_metrics_and_cross_stage_truth_consistent"
+}

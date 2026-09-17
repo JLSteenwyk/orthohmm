@@ -1,0 +1,77 @@
+{
+  "asserted_pairs": 23934,
+  "duplicate_rows": 0,
+  "families": 16863,
+  "family_size_distribution": {
+    "2": 14094,
+    "3": 2261,
+    "4": 507,
+    "6": 1
+  },
+  "limitations": [
+    "Reference labels are available, but native false positives can connect two different families.",
+    "A family-bootstrap design must account for cross-family predicted edges and preserve the actual pooled statistic.",
+    "This input-only inventory does not establish independent resampling units or uncertainty estimates."
+  ],
+  "multi_family_proteins": {
+    "145682": [
+      "C2orf80",
+      "CRYGC"
+    ],
+    "153573": [
+      "CCL2",
+      "CCL7"
+    ],
+    "159223": [
+      "RHBG",
+      "TSACC"
+    ],
+    "334447": [
+      "OCM",
+      "OCM2"
+    ],
+    "340098": [
+      "HSPE1",
+      "MOB4"
+    ],
+    "342739": [
+      "CYP11B1",
+      "CYP11B2"
+    ],
+    "900730": [
+      "H2AC4",
+      "H2AC8"
+    ],
+    "901077": [
+      "H2AC11",
+      "H2AC13",
+      "H2AC16",
+      "H2AC17"
+    ],
+    "904140": [
+      "H4-16",
+      "H4C11",
+      "H4C12",
+      "H4C13",
+      "H4C14",
+      "H4C2",
+      "H4C8",
+      "H4C9"
+    ],
+    "904141": [
+      "H2BC10",
+      "H2BC8"
+    ],
+    "907459": [
+      "H2AC18",
+      "H2AC19"
+    ]
+  },
+  "proteins": 36986,
+  "reference": {
+    "bytes": 183364,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/vgnc-orthologs.txt.gz",
+    "sha256": "3f9898487b1b3dab866eaf93255bb25ab7b7699f32753828ba7d2851eafce5dc"
+  },
+  "statistics_evaluated": false
+}
