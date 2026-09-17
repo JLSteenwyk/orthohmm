@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Biological Application Scores Assembled (2026-09-17)
+
+Previous user-facing turn verified live DGX job21656_3 (a verified wait).
+Re-read the full objective. Fixed report artifact selection to accept repeated
+identical checked-file records while rejecting conflicting paths or identities.
+No admission, input, native output, frozen method or endpoint changed.
+
+Generated `biological_wgd_results_20260917.json`, the complete 240-row/76-column
+`biological_wgd_pairs_20260917.tsv`, and `BIOLOGICAL_WGD_RESULTS_20260917.md`.
+All six prospectively selected examples, including the reference-excluded pair,
+and all three experimental strata remain in the JSON. The MCL checkpoint is
+diagnostic only and excluded from the 12 planned paired contrasts.
+
+Supported separation /231: high sensitivity56, phylogeny193, OrthoFinder227,
+Sonic223; mean homolog coverage99.149%,82.338%,98.413%,98.773%, respectively.
+Phylogeny improves supported separation versus high sensitivity by59.307pp
+(Bonferroni12 interval49.784 to68.398), but loses14.719pp versus OrthoFinder
+(-21.645 to-8.225) and16.075pp homolog coverage (-19.755 to-12.496).
+These are homolog-support diagnostics, not copy-specific orthology accuracy.
+No retuning or superiority claim. Preserve these negative findings.
+
+72 focused tests pass (the initial added export fixture lacked required species
+counts; fixed the fixture, not production scoring). Separately checked all
+1,200 method/pair TSV records against JSON, source hashes, eligibility counts,
+support/coverage arithmetic, summary means and all12 contrast point estimates.
+That consistency check is not an independent native-membership rescore.
+Case inspection/figures, independent membership rescore, scaling admission,
+and the broader publication requirements remain open. DGX timing undisturbed.
+
 ## All Biological Native Outputs Admitted (2026-09-17)
 
 Previous continuation admitted OrthoHMM outputs and pushed9d77096. Re-read

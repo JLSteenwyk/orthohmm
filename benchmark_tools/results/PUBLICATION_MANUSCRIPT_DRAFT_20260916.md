@@ -610,7 +610,44 @@ establish an OrthoHMM advantage or profile-expansion benefit. Tree perturbations
 show bounded sensitivity, not arbitrary-error robustness. QfO and independently
 annotated error strata, mechanistic tracing, more realistic evolutionary
 conditions and the QfO parameter panel, matched resource scaling,
-and a prespecified biological application remain required.
+and final biological application case inspection and figures remain required.
+
+### Prespecified Whole-Genome-Duplicate Application
+
+The frozen application retained all 240 experimental duplicate pairs, of which
+239 had both anchors in the prepared inputs and 231 shared an unambiguous YGOB
+reference pillar. These Saccharomyces data are development-exposed, not an
+independent generalization test. Full native runs and their output identities
+were admitted before scoring. OrthoFinder was evaluated using its retained
+root HOG table with bijective restoration of original sequence identifiers;
+unassigned proteins were not supplemented with synthetic singleton groups.
+
+High-sensitivity OrthoHMM separated 58/239 pairs, phylogenetic OrthoHMM 238/239,
+full OrthoFinder 236/239 and SonicParanoid 229/239. Requiring each separated
+anchor group to retain at least one non-S. cerevisiae reference homolog yielded
+56/231, 193/231, 227/231 and 223/231 supported separations, respectively.
+Mean reference-homolog coverage was 99.149%, 82.338%, 98.413% and 98.773%.
+High coverage alone is insufficient: merged paralog groups can retain every
+reference homolog. Conversely, splitting without homolog support can inflate
+the unqualified separation rate.
+
+Under the prespecified paired pillar bootstrap (20,000 replicates; seed
+20260920; Bonferroni adjustment across 12 contrasts), phylogenetic OrthoHMM
+improved supported separation over high sensitivity by 59.307 percentage
+points (adjusted interval 49.784 to 68.398). However, it trailed full
+OrthoFinder by 14.719 points (difference interval -21.645 to -8.225) and
+lost 16.075 points of homolog coverage (-19.755 to -12.496). Against
+SonicParanoid, the corresponding deficits were 12.987 points (-19.913 to
+-6.494) and 16.436 points (-20.101 to -12.973). Thus, the results do not
+support superior biological recovery by phylogenetic OrthoHMM.
+
+These endpoints measure homolog-supported paralog separation, not correct
+cross-species assignment to ancestral duplicate copies. All exclusions,
+experimental strata, six prospectively selected examples and the diagnostic
+OrthoFinder MCL checkpoint remain in the [machine-readable report](biological_wgd_results_20260917.json)
+and [complete pair table](biological_wgd_pairs_20260917.tsv). Individual example
+mechanisms and publication figures remain to be inspected; no examples have
+been replaced based on their outcomes.
 
 QfO historical replay equivalence remains unresolved. A bounded capture
 verified identical initial RBNH graph arrays and gene order but a different
