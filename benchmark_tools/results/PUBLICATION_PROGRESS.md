@@ -3446,3 +3446,7 @@ tests passed; batch syntax passed. No accuracy scores or default promotion.
 Next freeze/push/submit both CPM phylogeny arms, then independent native admission
 and complete six-variant scoring. QfO construction diagnostic first int32 worker
 matched saved arrays; remaining workers running, no dtype conclusion yet.
+
+Executor7e8c3e1 pushed/frozen at publication_ob_cpm_phylogeny_v1. Submitted
+no-requeue array21324; tasks0(CPM0.08)/1(CPM0.12) both confirmed RUNNING.
+Output benchmarks/results/ob_cpm_phylogeny_v1. QfO21323 remains RUNNING.
