@@ -1,0 +1,5111 @@
+{
+  "accuracy_evaluated": false,
+  "reason": "OrthoFinder 3.1.5 native parser reads the leading [&R] tree as NoName; plain Newick keeps the binary root without that annotation.",
+  "source": {
+    "bytes": 3003,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_portable_simulation_trees.py",
+    "sha256": "b99a6b2deaa32637d0607543802747af5d90d3a351217d47efd199e052f06c44"
+  },
+  "source_manifest": {
+    "bytes": 618490,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/simulation_tree_controls_prepared_20260917.json",
+    "sha256": "0caffab16f73019fabafe1fcfaac8c2de90960c5f1317803bf83308a6d2bf914"
+  },
+  "status": "portable_trees_prepared_pending_native_parser_checks",
+  "trees": [
+    {
+      "condition": "baseline",
+      "seed": 20261101,
+      "source_tree": {
+        "bytes": 339,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261101/generating.nwk",
+        "sha256": "39613a8bb8101b17d8f14eeb09798c7254484037c5c882d3c49de986f95101ca"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 334,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261101_generating.nwk",
+        "sha256": "cc102f017c1525b85fb53bd1b5da046ef8211fff98f6ef7d3c22c90c27e1838c"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261101,
+      "source_tree": {
+        "bytes": 339,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261101/nni1.nwk",
+        "sha256": "47b4173762f523c783c59460168d76e578527c81be6e4d7802c6aa9f880e1023"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 334,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261101_nni1.nwk",
+        "sha256": "ef6f30119f44c2367d2f2c64d938f42307e7d52d04889c9bb4d585b5455d7bce"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261101,
+      "source_tree": {
+        "bytes": 339,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261101/nni2.nwk",
+        "sha256": "837099c5131ccf071b08f74e2c027203b959da1175f1beaac837ba6275eeb1cd"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 334,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261101_nni2.nwk",
+        "sha256": "ae158a3fb8ae8398c606f026ba3508e7c0b718bd5a56d189a2ad3976b9438e72"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261101,
+      "source_tree": {
+        "bytes": 339,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261101/generating.nwk",
+        "sha256": "39613a8bb8101b17d8f14eeb09798c7254484037c5c882d3c49de986f95101ca"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 334,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261101_generating.nwk",
+        "sha256": "cc102f017c1525b85fb53bd1b5da046ef8211fff98f6ef7d3c22c90c27e1838c"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261101,
+      "source_tree": {
+        "bytes": 339,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261101/nni1.nwk",
+        "sha256": "47b4173762f523c783c59460168d76e578527c81be6e4d7802c6aa9f880e1023"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 334,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261101_nni1.nwk",
+        "sha256": "ef6f30119f44c2367d2f2c64d938f42307e7d52d04889c9bb4d585b5455d7bce"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261101,
+      "source_tree": {
+        "bytes": 339,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261101/nni2.nwk",
+        "sha256": "837099c5131ccf071b08f74e2c027203b959da1175f1beaac837ba6275eeb1cd"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 334,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261101_nni2.nwk",
+        "sha256": "ae158a3fb8ae8398c606f026ba3508e7c0b718bd5a56d189a2ad3976b9438e72"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261101,
+      "source_tree": {
+        "bytes": 339,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261101/generating.nwk",
+        "sha256": "39613a8bb8101b17d8f14eeb09798c7254484037c5c882d3c49de986f95101ca"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 334,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261101_generating.nwk",
+        "sha256": "cc102f017c1525b85fb53bd1b5da046ef8211fff98f6ef7d3c22c90c27e1838c"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261101,
+      "source_tree": {
+        "bytes": 339,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261101/nni1.nwk",
+        "sha256": "47b4173762f523c783c59460168d76e578527c81be6e4d7802c6aa9f880e1023"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 334,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261101_nni1.nwk",
+        "sha256": "ef6f30119f44c2367d2f2c64d938f42307e7d52d04889c9bb4d585b5455d7bce"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261101,
+      "source_tree": {
+        "bytes": 339,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261101/nni2.nwk",
+        "sha256": "837099c5131ccf071b08f74e2c027203b959da1175f1beaac837ba6275eeb1cd"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 334,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261101_nni2.nwk",
+        "sha256": "ae158a3fb8ae8398c606f026ba3508e7c0b718bd5a56d189a2ad3976b9438e72"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261101,
+      "source_tree": {
+        "bytes": 339,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261101/generating.nwk",
+        "sha256": "39613a8bb8101b17d8f14eeb09798c7254484037c5c882d3c49de986f95101ca"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 334,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261101_generating.nwk",
+        "sha256": "cc102f017c1525b85fb53bd1b5da046ef8211fff98f6ef7d3c22c90c27e1838c"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261101,
+      "source_tree": {
+        "bytes": 339,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261101/nni1.nwk",
+        "sha256": "47b4173762f523c783c59460168d76e578527c81be6e4d7802c6aa9f880e1023"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 334,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261101_nni1.nwk",
+        "sha256": "ef6f30119f44c2367d2f2c64d938f42307e7d52d04889c9bb4d585b5455d7bce"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261101,
+      "source_tree": {
+        "bytes": 339,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261101/nni2.nwk",
+        "sha256": "837099c5131ccf071b08f74e2c027203b959da1175f1beaac837ba6275eeb1cd"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 334,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261101_nni2.nwk",
+        "sha256": "ae158a3fb8ae8398c606f026ba3508e7c0b718bd5a56d189a2ad3976b9438e72"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261101,
+      "source_tree": {
+        "bytes": 339,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261101/generating.nwk",
+        "sha256": "39613a8bb8101b17d8f14eeb09798c7254484037c5c882d3c49de986f95101ca"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 334,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261101_generating.nwk",
+        "sha256": "cc102f017c1525b85fb53bd1b5da046ef8211fff98f6ef7d3c22c90c27e1838c"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261101,
+      "source_tree": {
+        "bytes": 339,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261101/nni1.nwk",
+        "sha256": "47b4173762f523c783c59460168d76e578527c81be6e4d7802c6aa9f880e1023"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 334,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261101_nni1.nwk",
+        "sha256": "ef6f30119f44c2367d2f2c64d938f42307e7d52d04889c9bb4d585b5455d7bce"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261101,
+      "source_tree": {
+        "bytes": 339,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261101/nni2.nwk",
+        "sha256": "837099c5131ccf071b08f74e2c027203b959da1175f1beaac837ba6275eeb1cd"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 334,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261101_nni2.nwk",
+        "sha256": "ae158a3fb8ae8398c606f026ba3508e7c0b718bd5a56d189a2ad3976b9438e72"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261101,
+      "source_tree": {
+        "bytes": 248,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261101/generating.nwk",
+        "sha256": "bae0f222403539db33eb8419f93d741e9a5b2ee590347f447acd1b5dd95b38a9"
+      },
+      "taxa": [
+        "n11",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 243,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261101_generating.nwk",
+        "sha256": "13b8a061641e9375ab69bc14919f89ec5b60f55fa2e690601f96bdfe2a2153a4"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261101,
+      "source_tree": {
+        "bytes": 248,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261101/nni1.nwk",
+        "sha256": "85ae86fcef02b9a2ecd53f34271bb1b9e3b1e2adb5cc71a88afd54d84867e0fa"
+      },
+      "taxa": [
+        "n11",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 243,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261101_nni1.nwk",
+        "sha256": "51e5205337e7c703c0817de00dcfdb49b2c8ab5922ca45244cb3b78dadd8e0f3"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261101,
+      "source_tree": {
+        "bytes": 248,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261101/nni2.nwk",
+        "sha256": "b83b30bed918246241e72fdce1ade188acf095e706863ea6c1050fa624a0473e"
+      },
+      "taxa": [
+        "n11",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 243,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261101_nni2.nwk",
+        "sha256": "c921c92680a35b906c23bf334b64872e393be3f9825a80fc742a023c3f720f47"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261101,
+      "source_tree": {
+        "bytes": 246,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261101/generating.nwk",
+        "sha256": "76511236a841948bfe4a5a1e3015f9ffca26df7a6386142c5a2c29ceab424f35"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n14",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 241,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261101_generating.nwk",
+        "sha256": "a4f0a450c9205f0c41be5609dda4e9d4e767b2a566176fd3ce46b4c59993ead4"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261101,
+      "source_tree": {
+        "bytes": 246,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261101/nni1.nwk",
+        "sha256": "0820b909587710e9a45e2d79fba364f5296196245ff7355c5ef2079fe102b00d"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n14",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 241,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261101_nni1.nwk",
+        "sha256": "f9da23965c44c7ddd7583df63cd724328a44951216d788814415d9b905c81f33"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261101,
+      "source_tree": {
+        "bytes": 246,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261101/nni2.nwk",
+        "sha256": "81727a0ede7a910743fb573baff5c7dd241b5308988aec6dd1ecef156d4f7ddc"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n14",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 241,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261101_nni2.nwk",
+        "sha256": "a160be0bd0d493f354f2fc44987c2e8c615c4a6d42ae7264363886d3e7be5676"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261102,
+      "source_tree": {
+        "bytes": 324,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261102/generating.nwk",
+        "sha256": "74f65365446da0f6e95d9cd85bf8a9b3927848ab88ef94e98c0af922aa251517"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 319,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261102_generating.nwk",
+        "sha256": "cd56a1e66df16e371b9f5186a608f136c5cd6d6a2eebb0f91654afd46132bffe"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261102,
+      "source_tree": {
+        "bytes": 324,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261102/nni1.nwk",
+        "sha256": "23183a523ff9ca6efe73715b4f69ea987606a5653344df91be86b99a3e4783a8"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 319,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261102_nni1.nwk",
+        "sha256": "d1f6ad784ccdb8d8aa85fb44ee0484802c77399a0a2eb961aae9239b88d471aa"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261102,
+      "source_tree": {
+        "bytes": 324,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261102/nni2.nwk",
+        "sha256": "04c6556a4e9c4ba82961f3e2eb5eee407f13f9f58a8c8b0b7331b8c96287d551"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 319,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261102_nni2.nwk",
+        "sha256": "3e52e04b5342648a7b55c213d855eee6608a1e0c0f10686e544c1c456ebc72e8"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261102,
+      "source_tree": {
+        "bytes": 324,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261102/generating.nwk",
+        "sha256": "74f65365446da0f6e95d9cd85bf8a9b3927848ab88ef94e98c0af922aa251517"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 319,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261102_generating.nwk",
+        "sha256": "cd56a1e66df16e371b9f5186a608f136c5cd6d6a2eebb0f91654afd46132bffe"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261102,
+      "source_tree": {
+        "bytes": 324,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261102/nni1.nwk",
+        "sha256": "23183a523ff9ca6efe73715b4f69ea987606a5653344df91be86b99a3e4783a8"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 319,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261102_nni1.nwk",
+        "sha256": "d1f6ad784ccdb8d8aa85fb44ee0484802c77399a0a2eb961aae9239b88d471aa"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261102,
+      "source_tree": {
+        "bytes": 324,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261102/nni2.nwk",
+        "sha256": "04c6556a4e9c4ba82961f3e2eb5eee407f13f9f58a8c8b0b7331b8c96287d551"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 319,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261102_nni2.nwk",
+        "sha256": "3e52e04b5342648a7b55c213d855eee6608a1e0c0f10686e544c1c456ebc72e8"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261102,
+      "source_tree": {
+        "bytes": 324,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261102/generating.nwk",
+        "sha256": "74f65365446da0f6e95d9cd85bf8a9b3927848ab88ef94e98c0af922aa251517"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 319,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261102_generating.nwk",
+        "sha256": "cd56a1e66df16e371b9f5186a608f136c5cd6d6a2eebb0f91654afd46132bffe"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261102,
+      "source_tree": {
+        "bytes": 324,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261102/nni1.nwk",
+        "sha256": "23183a523ff9ca6efe73715b4f69ea987606a5653344df91be86b99a3e4783a8"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 319,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261102_nni1.nwk",
+        "sha256": "d1f6ad784ccdb8d8aa85fb44ee0484802c77399a0a2eb961aae9239b88d471aa"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261102,
+      "source_tree": {
+        "bytes": 324,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261102/nni2.nwk",
+        "sha256": "04c6556a4e9c4ba82961f3e2eb5eee407f13f9f58a8c8b0b7331b8c96287d551"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 319,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261102_nni2.nwk",
+        "sha256": "3e52e04b5342648a7b55c213d855eee6608a1e0c0f10686e544c1c456ebc72e8"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261102,
+      "source_tree": {
+        "bytes": 324,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261102/generating.nwk",
+        "sha256": "74f65365446da0f6e95d9cd85bf8a9b3927848ab88ef94e98c0af922aa251517"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 319,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261102_generating.nwk",
+        "sha256": "cd56a1e66df16e371b9f5186a608f136c5cd6d6a2eebb0f91654afd46132bffe"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261102,
+      "source_tree": {
+        "bytes": 324,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261102/nni1.nwk",
+        "sha256": "23183a523ff9ca6efe73715b4f69ea987606a5653344df91be86b99a3e4783a8"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 319,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261102_nni1.nwk",
+        "sha256": "d1f6ad784ccdb8d8aa85fb44ee0484802c77399a0a2eb961aae9239b88d471aa"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261102,
+      "source_tree": {
+        "bytes": 324,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261102/nni2.nwk",
+        "sha256": "04c6556a4e9c4ba82961f3e2eb5eee407f13f9f58a8c8b0b7331b8c96287d551"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 319,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261102_nni2.nwk",
+        "sha256": "3e52e04b5342648a7b55c213d855eee6608a1e0c0f10686e544c1c456ebc72e8"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261102,
+      "source_tree": {
+        "bytes": 324,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261102/generating.nwk",
+        "sha256": "74f65365446da0f6e95d9cd85bf8a9b3927848ab88ef94e98c0af922aa251517"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 319,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261102_generating.nwk",
+        "sha256": "cd56a1e66df16e371b9f5186a608f136c5cd6d6a2eebb0f91654afd46132bffe"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261102,
+      "source_tree": {
+        "bytes": 324,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261102/nni1.nwk",
+        "sha256": "23183a523ff9ca6efe73715b4f69ea987606a5653344df91be86b99a3e4783a8"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 319,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261102_nni1.nwk",
+        "sha256": "d1f6ad784ccdb8d8aa85fb44ee0484802c77399a0a2eb961aae9239b88d471aa"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261102,
+      "source_tree": {
+        "bytes": 324,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261102/nni2.nwk",
+        "sha256": "04c6556a4e9c4ba82961f3e2eb5eee407f13f9f58a8c8b0b7331b8c96287d551"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 319,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261102_nni2.nwk",
+        "sha256": "3e52e04b5342648a7b55c213d855eee6608a1e0c0f10686e544c1c456ebc72e8"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261102,
+      "source_tree": {
+        "bytes": 257,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261102/generating.nwk",
+        "sha256": "cbf6f8a3335daf6fd4d9ca101b9c1aa29942c9d16de6ae06b64b3c1b4cf3f963"
+      },
+      "taxa": [
+        "n11",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 252,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261102_generating.nwk",
+        "sha256": "d5b3c730cf98a0441b6dbc45e8bf7491fef4df62303f611f6c1b87739690d603"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261102,
+      "source_tree": {
+        "bytes": 257,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261102/nni1.nwk",
+        "sha256": "3aa94934500f0ad308e93bb2943ec1a999a76c597d8c4b8b0104f8228c4913ba"
+      },
+      "taxa": [
+        "n11",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 252,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261102_nni1.nwk",
+        "sha256": "b51979a3385f7a90c42d3a9fad8a49e2f651c5666ba6385d1a6e9f0ef1f232a6"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261102,
+      "source_tree": {
+        "bytes": 257,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261102/nni2.nwk",
+        "sha256": "c8357436286935673a79717c928c8f0ebbc75ffed40e6c07da9bbf275cfe6285"
+      },
+      "taxa": [
+        "n11",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 252,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261102_nni2.nwk",
+        "sha256": "a7e03f0211d31d983fb73c3cf6168eaa1eb2d7c1cdbb9ef5bdb4af9b13a13c46"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261102,
+      "source_tree": {
+        "bytes": 254,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261102/generating.nwk",
+        "sha256": "97690588415e7661c82cdf011b25b6c26d1932319a701c365d2346c7e3c686d3"
+      },
+      "taxa": [
+        "n11",
+        "n13",
+        "n5",
+        "n6",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 249,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261102_generating.nwk",
+        "sha256": "e9a47edfd8f88f88a51045f18d4e31e601bbe7ded55b1980a32169c57a13ab3d"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261102,
+      "source_tree": {
+        "bytes": 254,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261102/nni1.nwk",
+        "sha256": "2de6f8b4c59d57886680e5da45cb5410d6b4c3ecba76c565b832ac11027bc0a1"
+      },
+      "taxa": [
+        "n11",
+        "n13",
+        "n5",
+        "n6",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 249,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261102_nni1.nwk",
+        "sha256": "6bb8d13d56d7340d83975e522763db2b8e5177a7c2507fb2c2a66184510bc657"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261102,
+      "source_tree": {
+        "bytes": 254,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261102/nni2.nwk",
+        "sha256": "8b17c6c44267a6e5ae91c11e3e4d9e088e80b5c6f36e3dee0dbdf4b4a4008ac5"
+      },
+      "taxa": [
+        "n11",
+        "n13",
+        "n5",
+        "n6",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 249,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261102_nni2.nwk",
+        "sha256": "1df7aeaabbefcd72f28676e6ef8b58fb5bbde3ea42648333980e5c3fa565f735"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261103,
+      "source_tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261103/generating.nwk",
+        "sha256": "4d9979e429fe167b3f9c435d93ac898a63a1893a293dfca6c35a6c13ed7c2717"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 336,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261103_generating.nwk",
+        "sha256": "9c3f7639dec735f6be89b9a2b709f5534e95f376ac63106b8f41c5e1553679be"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261103,
+      "source_tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261103/nni1.nwk",
+        "sha256": "874d714b0e143f751c39ddee16587b9428bed2c7c415c69b86a3d3e1ceda247c"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 336,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261103_nni1.nwk",
+        "sha256": "2977ed123a73fc97e01863f6d1291e701ff8704f5c443d0f4b14239ecabf2e46"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261103,
+      "source_tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261103/nni2.nwk",
+        "sha256": "10d776ca47483983b09aa292a2e3c9f9c77d1925234ea63b0bbbc4c9b80d3f22"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 336,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261103_nni2.nwk",
+        "sha256": "5c8e1f4682cfa7a47d89c102a460ca9824dc8ed93f4906696f9c9db18c76c1c8"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261103,
+      "source_tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261103/generating.nwk",
+        "sha256": "4d9979e429fe167b3f9c435d93ac898a63a1893a293dfca6c35a6c13ed7c2717"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 336,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261103_generating.nwk",
+        "sha256": "9c3f7639dec735f6be89b9a2b709f5534e95f376ac63106b8f41c5e1553679be"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261103,
+      "source_tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261103/nni1.nwk",
+        "sha256": "874d714b0e143f751c39ddee16587b9428bed2c7c415c69b86a3d3e1ceda247c"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 336,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261103_nni1.nwk",
+        "sha256": "2977ed123a73fc97e01863f6d1291e701ff8704f5c443d0f4b14239ecabf2e46"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261103,
+      "source_tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261103/nni2.nwk",
+        "sha256": "10d776ca47483983b09aa292a2e3c9f9c77d1925234ea63b0bbbc4c9b80d3f22"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 336,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261103_nni2.nwk",
+        "sha256": "5c8e1f4682cfa7a47d89c102a460ca9824dc8ed93f4906696f9c9db18c76c1c8"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261103,
+      "source_tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261103/generating.nwk",
+        "sha256": "4d9979e429fe167b3f9c435d93ac898a63a1893a293dfca6c35a6c13ed7c2717"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 336,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261103_generating.nwk",
+        "sha256": "9c3f7639dec735f6be89b9a2b709f5534e95f376ac63106b8f41c5e1553679be"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261103,
+      "source_tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261103/nni1.nwk",
+        "sha256": "874d714b0e143f751c39ddee16587b9428bed2c7c415c69b86a3d3e1ceda247c"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 336,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261103_nni1.nwk",
+        "sha256": "2977ed123a73fc97e01863f6d1291e701ff8704f5c443d0f4b14239ecabf2e46"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261103,
+      "source_tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261103/nni2.nwk",
+        "sha256": "10d776ca47483983b09aa292a2e3c9f9c77d1925234ea63b0bbbc4c9b80d3f22"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 336,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261103_nni2.nwk",
+        "sha256": "5c8e1f4682cfa7a47d89c102a460ca9824dc8ed93f4906696f9c9db18c76c1c8"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261103,
+      "source_tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261103/generating.nwk",
+        "sha256": "4d9979e429fe167b3f9c435d93ac898a63a1893a293dfca6c35a6c13ed7c2717"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 336,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261103_generating.nwk",
+        "sha256": "9c3f7639dec735f6be89b9a2b709f5534e95f376ac63106b8f41c5e1553679be"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261103,
+      "source_tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261103/nni1.nwk",
+        "sha256": "874d714b0e143f751c39ddee16587b9428bed2c7c415c69b86a3d3e1ceda247c"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 336,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261103_nni1.nwk",
+        "sha256": "2977ed123a73fc97e01863f6d1291e701ff8704f5c443d0f4b14239ecabf2e46"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261103,
+      "source_tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261103/nni2.nwk",
+        "sha256": "10d776ca47483983b09aa292a2e3c9f9c77d1925234ea63b0bbbc4c9b80d3f22"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 336,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261103_nni2.nwk",
+        "sha256": "5c8e1f4682cfa7a47d89c102a460ca9824dc8ed93f4906696f9c9db18c76c1c8"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261103,
+      "source_tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261103/generating.nwk",
+        "sha256": "4d9979e429fe167b3f9c435d93ac898a63a1893a293dfca6c35a6c13ed7c2717"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 336,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261103_generating.nwk",
+        "sha256": "9c3f7639dec735f6be89b9a2b709f5534e95f376ac63106b8f41c5e1553679be"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261103,
+      "source_tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261103/nni1.nwk",
+        "sha256": "874d714b0e143f751c39ddee16587b9428bed2c7c415c69b86a3d3e1ceda247c"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 336,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261103_nni1.nwk",
+        "sha256": "2977ed123a73fc97e01863f6d1291e701ff8704f5c443d0f4b14239ecabf2e46"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261103,
+      "source_tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261103/nni2.nwk",
+        "sha256": "10d776ca47483983b09aa292a2e3c9f9c77d1925234ea63b0bbbc4c9b80d3f22"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 336,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261103_nni2.nwk",
+        "sha256": "5c8e1f4682cfa7a47d89c102a460ca9824dc8ed93f4906696f9c9db18c76c1c8"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261103,
+      "source_tree": {
+        "bytes": 213,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261103/generating.nwk",
+        "sha256": "d30a7388e59f9a8a72b52a9d4bcc103e1a0bddc8c560779a9cf42d7f1062daa5"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n3",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 208,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261103_generating.nwk",
+        "sha256": "aa0cc867a6663808db740422d211dee22705d54a3882c2f35c7f1a1238bd4af2"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261103,
+      "source_tree": {
+        "bytes": 213,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261103/nni1.nwk",
+        "sha256": "ded7fd188bf86cba6ea2b8b0d3da1ca73eede512091c72624cc6c5ce34fcdda6"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n3",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 208,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261103_nni1.nwk",
+        "sha256": "70bc657e5d57d326a69d729fbfa9a608f9ee591b3dec13a451ce4727fc8b6cb3"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261103,
+      "source_tree": {
+        "bytes": 213,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261103/nni2.nwk",
+        "sha256": "55bb2ba17661adf56f977f7a698910a6ef7d804e70c2b1cd9c2004e28e89f34b"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n3",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 208,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261103_nni2.nwk",
+        "sha256": "9740c6cf69641f5ec906a975523b831ccccc10e2483c5561defe25dfac85c99e"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261103,
+      "source_tree": {
+        "bytes": 202,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261103/generating.nwk",
+        "sha256": "1237b193ce0a3bf9267990ef84f5c528aa2628a3aae806ada211bae116a6988b"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n13",
+        "n3",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 197,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261103_generating.nwk",
+        "sha256": "cab6b5ceb53815a2ea0728d38b10cbe7cd593e2dd0f406088bf1fd355fcaea27"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261103,
+      "source_tree": {
+        "bytes": 202,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261103/nni1.nwk",
+        "sha256": "ef36725176ea067e52cc69626525928473f3e8416488887ccf55fa9a6bda3816"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n13",
+        "n3",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 197,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261103_nni1.nwk",
+        "sha256": "41eebc74b9f4e83a2aa1d04f99e8aa214b66aeb1dc3859f137f18456f274b522"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261103,
+      "source_tree": {
+        "bytes": 202,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261103/nni2.nwk",
+        "sha256": "27fa7dbebf4fffa4e2fa9909ce6fec548886ef5b97c6cb0cfddaccad10669adc"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n13",
+        "n3",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 197,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261103_nni2.nwk",
+        "sha256": "6e55de72b077e710d65f9f2c79c5f5236d15bf3f1928c69141c246d0e1f6bd73"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261104,
+      "source_tree": {
+        "bytes": 305,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261104/generating.nwk",
+        "sha256": "7aed6391c7c9c7301c21b41296943d3cddf91b0a290f9e58ff2284aec18199d6"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n4",
+        "n5",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 300,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261104_generating.nwk",
+        "sha256": "06032666215a72b57d471ccdd31f317dd2368759604c1e515d9f625e7777a3f0"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261104,
+      "source_tree": {
+        "bytes": 305,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261104/nni1.nwk",
+        "sha256": "58bef070dc8913af7e6633f1c92f3d3d9db496099680e1cafe1dca01d1a379ac"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n4",
+        "n5",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 300,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261104_nni1.nwk",
+        "sha256": "5387cffe4c24fff67ecd427639d789292c2d99faa04a530d08b7eb115c1358ec"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261104,
+      "source_tree": {
+        "bytes": 305,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261104/nni2.nwk",
+        "sha256": "16957d420eb86df4909e15b80fe2cd457c91ae578a93c7d75215626be5a65622"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n4",
+        "n5",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 300,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261104_nni2.nwk",
+        "sha256": "a4e73dfa38b111a015686a7b894e3c1a5d3592de127e648f7c1d65f921f63c6d"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261104,
+      "source_tree": {
+        "bytes": 305,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261104/generating.nwk",
+        "sha256": "7aed6391c7c9c7301c21b41296943d3cddf91b0a290f9e58ff2284aec18199d6"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n4",
+        "n5",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 300,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261104_generating.nwk",
+        "sha256": "06032666215a72b57d471ccdd31f317dd2368759604c1e515d9f625e7777a3f0"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261104,
+      "source_tree": {
+        "bytes": 305,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261104/nni1.nwk",
+        "sha256": "58bef070dc8913af7e6633f1c92f3d3d9db496099680e1cafe1dca01d1a379ac"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n4",
+        "n5",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 300,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261104_nni1.nwk",
+        "sha256": "5387cffe4c24fff67ecd427639d789292c2d99faa04a530d08b7eb115c1358ec"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261104,
+      "source_tree": {
+        "bytes": 305,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261104/nni2.nwk",
+        "sha256": "16957d420eb86df4909e15b80fe2cd457c91ae578a93c7d75215626be5a65622"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n4",
+        "n5",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 300,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261104_nni2.nwk",
+        "sha256": "a4e73dfa38b111a015686a7b894e3c1a5d3592de127e648f7c1d65f921f63c6d"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261104,
+      "source_tree": {
+        "bytes": 305,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261104/generating.nwk",
+        "sha256": "7aed6391c7c9c7301c21b41296943d3cddf91b0a290f9e58ff2284aec18199d6"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n4",
+        "n5",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 300,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261104_generating.nwk",
+        "sha256": "06032666215a72b57d471ccdd31f317dd2368759604c1e515d9f625e7777a3f0"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261104,
+      "source_tree": {
+        "bytes": 305,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261104/nni1.nwk",
+        "sha256": "58bef070dc8913af7e6633f1c92f3d3d9db496099680e1cafe1dca01d1a379ac"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n4",
+        "n5",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 300,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261104_nni1.nwk",
+        "sha256": "5387cffe4c24fff67ecd427639d789292c2d99faa04a530d08b7eb115c1358ec"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261104,
+      "source_tree": {
+        "bytes": 305,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261104/nni2.nwk",
+        "sha256": "16957d420eb86df4909e15b80fe2cd457c91ae578a93c7d75215626be5a65622"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n4",
+        "n5",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 300,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261104_nni2.nwk",
+        "sha256": "a4e73dfa38b111a015686a7b894e3c1a5d3592de127e648f7c1d65f921f63c6d"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261104,
+      "source_tree": {
+        "bytes": 305,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261104/generating.nwk",
+        "sha256": "7aed6391c7c9c7301c21b41296943d3cddf91b0a290f9e58ff2284aec18199d6"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n4",
+        "n5",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 300,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261104_generating.nwk",
+        "sha256": "06032666215a72b57d471ccdd31f317dd2368759604c1e515d9f625e7777a3f0"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261104,
+      "source_tree": {
+        "bytes": 305,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261104/nni1.nwk",
+        "sha256": "58bef070dc8913af7e6633f1c92f3d3d9db496099680e1cafe1dca01d1a379ac"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n4",
+        "n5",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 300,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261104_nni1.nwk",
+        "sha256": "5387cffe4c24fff67ecd427639d789292c2d99faa04a530d08b7eb115c1358ec"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261104,
+      "source_tree": {
+        "bytes": 305,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261104/nni2.nwk",
+        "sha256": "16957d420eb86df4909e15b80fe2cd457c91ae578a93c7d75215626be5a65622"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n4",
+        "n5",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 300,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261104_nni2.nwk",
+        "sha256": "a4e73dfa38b111a015686a7b894e3c1a5d3592de127e648f7c1d65f921f63c6d"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261104,
+      "source_tree": {
+        "bytes": 305,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261104/generating.nwk",
+        "sha256": "7aed6391c7c9c7301c21b41296943d3cddf91b0a290f9e58ff2284aec18199d6"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n4",
+        "n5",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 300,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261104_generating.nwk",
+        "sha256": "06032666215a72b57d471ccdd31f317dd2368759604c1e515d9f625e7777a3f0"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261104,
+      "source_tree": {
+        "bytes": 305,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261104/nni1.nwk",
+        "sha256": "58bef070dc8913af7e6633f1c92f3d3d9db496099680e1cafe1dca01d1a379ac"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n4",
+        "n5",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 300,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261104_nni1.nwk",
+        "sha256": "5387cffe4c24fff67ecd427639d789292c2d99faa04a530d08b7eb115c1358ec"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261104,
+      "source_tree": {
+        "bytes": 305,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261104/nni2.nwk",
+        "sha256": "16957d420eb86df4909e15b80fe2cd457c91ae578a93c7d75215626be5a65622"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n4",
+        "n5",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 300,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261104_nni2.nwk",
+        "sha256": "a4e73dfa38b111a015686a7b894e3c1a5d3592de127e648f7c1d65f921f63c6d"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261104,
+      "source_tree": {
+        "bytes": 193,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261104/generating.nwk",
+        "sha256": "3519a9d8ea0cd161382cf4b08b94a99fbef260aa6310a3cd8e90075bdf799750"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n4"
+      ],
+      "tree": {
+        "bytes": 188,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261104_generating.nwk",
+        "sha256": "09affe35a31c9b7922c35565b7b5f275da5bed2d630d178a5aaed3f6aacdb375"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261104,
+      "source_tree": {
+        "bytes": 193,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261104/nni1.nwk",
+        "sha256": "d56f8bce533af1307af421e6abd6309998a3a681c57a54a53abd2eafb35f6d5f"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n4"
+      ],
+      "tree": {
+        "bytes": 188,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261104_nni1.nwk",
+        "sha256": "b96d1f5c6163a89c3eefb925099a4ca169dd26154cf65fc70b19ce9fe10a6636"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261104,
+      "source_tree": {
+        "bytes": 193,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261104/nni2.nwk",
+        "sha256": "4801d70d9d55c69605aee733ad158dfe39afff16536883ebf5c76b1a97449997"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n4"
+      ],
+      "tree": {
+        "bytes": 188,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261104_nni2.nwk",
+        "sha256": "5a5043a4c3b770ac52b51ed23a84d0208df144a507e52438374c129d6ff54399"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261104,
+      "source_tree": {
+        "bytes": 199,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261104/generating.nwk",
+        "sha256": "62d10be02070db2ad65e3e22c7bd2cee70b59f7d261ceb040e5372bb73310b2b"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n4",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 194,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261104_generating.nwk",
+        "sha256": "992295a9451a4d70c44c283aa87d24c6a64379cf88f346684afc6f449d7b4cfa"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261104,
+      "source_tree": {
+        "bytes": 199,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261104/nni1.nwk",
+        "sha256": "b2b349178d59ac1f9360d76925a97a615ea1001492d6ab1e0e853a1c18f53ced"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n4",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 194,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261104_nni1.nwk",
+        "sha256": "2d83fa291208aa57f944b3a53599c44ffaa66fe9ed4d1abc319e1168b4eba7ce"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261104,
+      "source_tree": {
+        "bytes": 199,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261104/nni2.nwk",
+        "sha256": "00f63ee3f430f90ee113ca84d56cdc1cb8a808eb2554ef9c35c2905fe2615a49"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n4",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 194,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261104_nni2.nwk",
+        "sha256": "2002298accdfbf5e64bc22089d3b3dc99da8406f30f621d8ff8542ce20e635fe"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261105,
+      "source_tree": {
+        "bytes": 343,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261105/generating.nwk",
+        "sha256": "52e0fd81731ea8085b51da25d9b0cca2a74085725bb4377c4c44f393672a29e8"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n5",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 338,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261105_generating.nwk",
+        "sha256": "52b75e279fc6a1e02af2345afe1ad3445c4a2c95e6abf980e3250d2e57bf2c58"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261105,
+      "source_tree": {
+        "bytes": 343,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261105/nni1.nwk",
+        "sha256": "bb0426d7087986c08ca229c37d23a5f5fa792620e69667cc49301a54cb3b23c7"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n5",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 338,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261105_nni1.nwk",
+        "sha256": "c4a552bde55b5b05cd219343bcb4653ef29093735ca91a8cf22e2cdd0eda6bbe"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261105,
+      "source_tree": {
+        "bytes": 343,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261105/nni2.nwk",
+        "sha256": "46214bf3959fbb299fd8bdddcaa13e55ab1e370b777a8010b261b7a8b6fd46a4"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n5",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 338,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261105_nni2.nwk",
+        "sha256": "5e0609c62c4795159a985283117ffae5bef54518c7d67a24d6f81171e53e4bc6"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261105,
+      "source_tree": {
+        "bytes": 343,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261105/generating.nwk",
+        "sha256": "52e0fd81731ea8085b51da25d9b0cca2a74085725bb4377c4c44f393672a29e8"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n5",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 338,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261105_generating.nwk",
+        "sha256": "52b75e279fc6a1e02af2345afe1ad3445c4a2c95e6abf980e3250d2e57bf2c58"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261105,
+      "source_tree": {
+        "bytes": 343,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261105/nni1.nwk",
+        "sha256": "bb0426d7087986c08ca229c37d23a5f5fa792620e69667cc49301a54cb3b23c7"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n5",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 338,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261105_nni1.nwk",
+        "sha256": "c4a552bde55b5b05cd219343bcb4653ef29093735ca91a8cf22e2cdd0eda6bbe"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261105,
+      "source_tree": {
+        "bytes": 343,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261105/nni2.nwk",
+        "sha256": "46214bf3959fbb299fd8bdddcaa13e55ab1e370b777a8010b261b7a8b6fd46a4"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n5",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 338,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261105_nni2.nwk",
+        "sha256": "5e0609c62c4795159a985283117ffae5bef54518c7d67a24d6f81171e53e4bc6"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261105,
+      "source_tree": {
+        "bytes": 343,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261105/generating.nwk",
+        "sha256": "52e0fd81731ea8085b51da25d9b0cca2a74085725bb4377c4c44f393672a29e8"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n5",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 338,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261105_generating.nwk",
+        "sha256": "52b75e279fc6a1e02af2345afe1ad3445c4a2c95e6abf980e3250d2e57bf2c58"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261105,
+      "source_tree": {
+        "bytes": 343,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261105/nni1.nwk",
+        "sha256": "bb0426d7087986c08ca229c37d23a5f5fa792620e69667cc49301a54cb3b23c7"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n5",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 338,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261105_nni1.nwk",
+        "sha256": "c4a552bde55b5b05cd219343bcb4653ef29093735ca91a8cf22e2cdd0eda6bbe"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261105,
+      "source_tree": {
+        "bytes": 343,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261105/nni2.nwk",
+        "sha256": "46214bf3959fbb299fd8bdddcaa13e55ab1e370b777a8010b261b7a8b6fd46a4"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n5",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 338,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261105_nni2.nwk",
+        "sha256": "5e0609c62c4795159a985283117ffae5bef54518c7d67a24d6f81171e53e4bc6"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261105,
+      "source_tree": {
+        "bytes": 343,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261105/generating.nwk",
+        "sha256": "52e0fd81731ea8085b51da25d9b0cca2a74085725bb4377c4c44f393672a29e8"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n5",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 338,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261105_generating.nwk",
+        "sha256": "52b75e279fc6a1e02af2345afe1ad3445c4a2c95e6abf980e3250d2e57bf2c58"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261105,
+      "source_tree": {
+        "bytes": 343,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261105/nni1.nwk",
+        "sha256": "bb0426d7087986c08ca229c37d23a5f5fa792620e69667cc49301a54cb3b23c7"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n5",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 338,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261105_nni1.nwk",
+        "sha256": "c4a552bde55b5b05cd219343bcb4653ef29093735ca91a8cf22e2cdd0eda6bbe"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261105,
+      "source_tree": {
+        "bytes": 343,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261105/nni2.nwk",
+        "sha256": "46214bf3959fbb299fd8bdddcaa13e55ab1e370b777a8010b261b7a8b6fd46a4"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n5",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 338,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261105_nni2.nwk",
+        "sha256": "5e0609c62c4795159a985283117ffae5bef54518c7d67a24d6f81171e53e4bc6"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261105,
+      "source_tree": {
+        "bytes": 343,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261105/generating.nwk",
+        "sha256": "52e0fd81731ea8085b51da25d9b0cca2a74085725bb4377c4c44f393672a29e8"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n5",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 338,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261105_generating.nwk",
+        "sha256": "52b75e279fc6a1e02af2345afe1ad3445c4a2c95e6abf980e3250d2e57bf2c58"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261105,
+      "source_tree": {
+        "bytes": 343,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261105/nni1.nwk",
+        "sha256": "bb0426d7087986c08ca229c37d23a5f5fa792620e69667cc49301a54cb3b23c7"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n5",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 338,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261105_nni1.nwk",
+        "sha256": "c4a552bde55b5b05cd219343bcb4653ef29093735ca91a8cf22e2cdd0eda6bbe"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261105,
+      "source_tree": {
+        "bytes": 343,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261105/nni2.nwk",
+        "sha256": "46214bf3959fbb299fd8bdddcaa13e55ab1e370b777a8010b261b7a8b6fd46a4"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n5",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 338,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261105_nni2.nwk",
+        "sha256": "5e0609c62c4795159a985283117ffae5bef54518c7d67a24d6f81171e53e4bc6"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261105,
+      "source_tree": {
+        "bytes": 204,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261105/generating.nwk",
+        "sha256": "525922f2de6d6b6808247835042764d8ed4deca73651dcd9d45ee0e7de09ebad"
+      },
+      "taxa": [
+        "n10",
+        "n13",
+        "n14",
+        "n3",
+        "n5"
+      ],
+      "tree": {
+        "bytes": 199,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261105_generating.nwk",
+        "sha256": "07caf2c6653d7eebff56dbec0d2e387a1b925dc44ca269a2174f4e2bb035ced7"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261105,
+      "source_tree": {
+        "bytes": 204,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261105/nni1.nwk",
+        "sha256": "60e13444738c299d2fd24a8212d4b1f52288d60d5a1c9c1cf3706e6f48d3ae3a"
+      },
+      "taxa": [
+        "n10",
+        "n13",
+        "n14",
+        "n3",
+        "n5"
+      ],
+      "tree": {
+        "bytes": 199,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261105_nni1.nwk",
+        "sha256": "a3b2f1fed538a2a1b9d3d84b0e05b0b9b56b8ffabd12ea7a4f0be1c5f4a23f75"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261105,
+      "source_tree": {
+        "bytes": 204,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261105/nni2.nwk",
+        "sha256": "aa12813b151496a5c865d38f9ffdf61a47c4d396cb280ec7569ee342728ec6b9"
+      },
+      "taxa": [
+        "n10",
+        "n13",
+        "n14",
+        "n3",
+        "n5"
+      ],
+      "tree": {
+        "bytes": 199,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261105_nni2.nwk",
+        "sha256": "96d0822e60fc4cf99b94d64de90c8ba8e183ef86641fe70b2c832d214d9aa4fb"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261105,
+      "source_tree": {
+        "bytes": 201,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261105/generating.nwk",
+        "sha256": "986a61ab0ec8d086fc33a86c4612cb4d69fa6b5e1f96631aaa94a7d21bde3700"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n14",
+        "n5",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 196,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261105_generating.nwk",
+        "sha256": "34ecfd72d04483b36a686d0a7efbbb3a22e0ba6cb6e98dc04a8864c92b61c75c"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261105,
+      "source_tree": {
+        "bytes": 201,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261105/nni1.nwk",
+        "sha256": "277edd5f7027f188608583147e4dde61cc3b70bf02b586acc066cfc23b0bbee8"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n14",
+        "n5",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 196,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261105_nni1.nwk",
+        "sha256": "1b275e379971b48586cb4d98e3730d7b321b47c359b35e3fc5e28cf2555c40c6"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261105,
+      "source_tree": {
+        "bytes": 201,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261105/nni2.nwk",
+        "sha256": "2fcd0c4df6626cd4e108f3b463ccdb8dba3e0de6f845006a757a7dca0191f895"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n14",
+        "n5",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 196,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261105_nni2.nwk",
+        "sha256": "af1aad58af05100aed1e9dd7598c9b435832f3f549c819d5cda2641c63de0590"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261106,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261106/generating.nwk",
+        "sha256": "1a7820303004b34da8096135a25a9ec2a55ba36858ec64fe3b1fb083b02edf5d"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261106_generating.nwk",
+        "sha256": "4b2b4f7621b691da0fb08bf17551e86673fbaac429d6d7929639994db09cc379"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261106,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261106/nni1.nwk",
+        "sha256": "86f70f03ce86e76b5899aff4cc2fd3d0279347f9399f0848db0f922bff8d7515"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261106_nni1.nwk",
+        "sha256": "86d268aa447d017d42b54e5690051be37a4a067c01bf981143d2ce67ecea1763"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261106,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261106/nni2.nwk",
+        "sha256": "aaa3a699d469a96be31777d920721a52ea91595440fc6f612ede35ba96dfa8fe"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261106_nni2.nwk",
+        "sha256": "546521761f7cafe91913ae3eac0517d89a6d1bb3101712330e2862fcaa9ea4e0"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261106,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261106/generating.nwk",
+        "sha256": "1a7820303004b34da8096135a25a9ec2a55ba36858ec64fe3b1fb083b02edf5d"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261106_generating.nwk",
+        "sha256": "4b2b4f7621b691da0fb08bf17551e86673fbaac429d6d7929639994db09cc379"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261106,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261106/nni1.nwk",
+        "sha256": "86f70f03ce86e76b5899aff4cc2fd3d0279347f9399f0848db0f922bff8d7515"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261106_nni1.nwk",
+        "sha256": "86d268aa447d017d42b54e5690051be37a4a067c01bf981143d2ce67ecea1763"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261106,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261106/nni2.nwk",
+        "sha256": "aaa3a699d469a96be31777d920721a52ea91595440fc6f612ede35ba96dfa8fe"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261106_nni2.nwk",
+        "sha256": "546521761f7cafe91913ae3eac0517d89a6d1bb3101712330e2862fcaa9ea4e0"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261106,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261106/generating.nwk",
+        "sha256": "1a7820303004b34da8096135a25a9ec2a55ba36858ec64fe3b1fb083b02edf5d"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261106_generating.nwk",
+        "sha256": "4b2b4f7621b691da0fb08bf17551e86673fbaac429d6d7929639994db09cc379"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261106,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261106/nni1.nwk",
+        "sha256": "86f70f03ce86e76b5899aff4cc2fd3d0279347f9399f0848db0f922bff8d7515"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261106_nni1.nwk",
+        "sha256": "86d268aa447d017d42b54e5690051be37a4a067c01bf981143d2ce67ecea1763"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261106,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261106/nni2.nwk",
+        "sha256": "aaa3a699d469a96be31777d920721a52ea91595440fc6f612ede35ba96dfa8fe"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261106_nni2.nwk",
+        "sha256": "546521761f7cafe91913ae3eac0517d89a6d1bb3101712330e2862fcaa9ea4e0"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261106,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261106/generating.nwk",
+        "sha256": "1a7820303004b34da8096135a25a9ec2a55ba36858ec64fe3b1fb083b02edf5d"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261106_generating.nwk",
+        "sha256": "4b2b4f7621b691da0fb08bf17551e86673fbaac429d6d7929639994db09cc379"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261106,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261106/nni1.nwk",
+        "sha256": "86f70f03ce86e76b5899aff4cc2fd3d0279347f9399f0848db0f922bff8d7515"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261106_nni1.nwk",
+        "sha256": "86d268aa447d017d42b54e5690051be37a4a067c01bf981143d2ce67ecea1763"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261106,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261106/nni2.nwk",
+        "sha256": "aaa3a699d469a96be31777d920721a52ea91595440fc6f612ede35ba96dfa8fe"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261106_nni2.nwk",
+        "sha256": "546521761f7cafe91913ae3eac0517d89a6d1bb3101712330e2862fcaa9ea4e0"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261106,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261106/generating.nwk",
+        "sha256": "1a7820303004b34da8096135a25a9ec2a55ba36858ec64fe3b1fb083b02edf5d"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261106_generating.nwk",
+        "sha256": "4b2b4f7621b691da0fb08bf17551e86673fbaac429d6d7929639994db09cc379"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261106,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261106/nni1.nwk",
+        "sha256": "86f70f03ce86e76b5899aff4cc2fd3d0279347f9399f0848db0f922bff8d7515"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261106_nni1.nwk",
+        "sha256": "86d268aa447d017d42b54e5690051be37a4a067c01bf981143d2ce67ecea1763"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261106,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261106/nni2.nwk",
+        "sha256": "aaa3a699d469a96be31777d920721a52ea91595440fc6f612ede35ba96dfa8fe"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261106_nni2.nwk",
+        "sha256": "546521761f7cafe91913ae3eac0517d89a6d1bb3101712330e2862fcaa9ea4e0"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261106,
+      "source_tree": {
+        "bytes": 235,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261106/generating.nwk",
+        "sha256": "73854258c30262ad40ce0d6c5099308f14beb63f609e5e19064fb5e67f521545"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 230,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261106_generating.nwk",
+        "sha256": "9d1201733f53be205e2a989d3f6a4a704b55d6bbcffe29444adc36f820c11027"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261106,
+      "source_tree": {
+        "bytes": 235,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261106/nni1.nwk",
+        "sha256": "76e18f5b9709a0aa9e09cf11f8cdbe9694c6d773f05c4cca83af96e5d311fbb7"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 230,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261106_nni1.nwk",
+        "sha256": "46398e54e4edb2a220ceaebfa22ca660f7d22d8c742fab2b21120934e69fef46"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261106,
+      "source_tree": {
+        "bytes": 235,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261106/nni2.nwk",
+        "sha256": "152399d66c5d68f154d32700c74dead48523556f810443bc45e3fbb19e0be0c7"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 230,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261106_nni2.nwk",
+        "sha256": "aa0bcdbf9073b93567912d2d02bc8813e43bbc2ffd41d500308920f4a617cadb"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261106,
+      "source_tree": {
+        "bytes": 237,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261106/generating.nwk",
+        "sha256": "8fabe113def755171d58fd1674ff9508bd0538fd3c0ebad7b38582b0fdc68f0e"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 232,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261106_generating.nwk",
+        "sha256": "464034348b8ec1d7985582d16c00aaa08566312d9fa447a5075f7eca35b154c1"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261106,
+      "source_tree": {
+        "bytes": 237,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261106/nni1.nwk",
+        "sha256": "3626288ed3284d3cd70bfe8ccb5dccde446ddb39925c7e658fc18128feb11ac5"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 232,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261106_nni1.nwk",
+        "sha256": "db79ec46f7ba1c9e8eefac4ddfc20e375d6fea816ce7144a485f0b4796ecfe97"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261106,
+      "source_tree": {
+        "bytes": 237,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261106/nni2.nwk",
+        "sha256": "9455cef2913aff0c0918546e887d23bfc0566a68074c112ad442a723fcf64a63"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n5",
+        "n7"
+      ],
+      "tree": {
+        "bytes": 232,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261106_nni2.nwk",
+        "sha256": "752e498132042f83d2c6a67e86363cca1966554323c1163d2d3464c608565a1c"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261107,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261107/generating.nwk",
+        "sha256": "f51bf30916d875613c013965ff80ec9e3381fd527c41d131dc38155a6a1b5df9"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261107_generating.nwk",
+        "sha256": "ebe932d5b887e677fcdc3b6d34f002ac35171a4169a2593716b0795d0ffac2ed"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261107,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261107/nni1.nwk",
+        "sha256": "ab092fd7562302a83379ecd7b67b27f844642eb08bdf25b29c0c32bb25db3dba"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261107_nni1.nwk",
+        "sha256": "0d0a6492362648c6e6d90419d5abed92d4dd8d4ef6a683d6d0d9708cb103214c"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261107,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261107/nni2.nwk",
+        "sha256": "2828c8a242c94c117ed1297f80f8c6f076e6d41c047d8c64f8138dd2cd62449d"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261107_nni2.nwk",
+        "sha256": "64377147b9c0a0b9a627206044a184e16b682019ad72a5e866dc511f513f324f"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261107,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261107/generating.nwk",
+        "sha256": "f51bf30916d875613c013965ff80ec9e3381fd527c41d131dc38155a6a1b5df9"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261107_generating.nwk",
+        "sha256": "ebe932d5b887e677fcdc3b6d34f002ac35171a4169a2593716b0795d0ffac2ed"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261107,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261107/nni1.nwk",
+        "sha256": "ab092fd7562302a83379ecd7b67b27f844642eb08bdf25b29c0c32bb25db3dba"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261107_nni1.nwk",
+        "sha256": "0d0a6492362648c6e6d90419d5abed92d4dd8d4ef6a683d6d0d9708cb103214c"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261107,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261107/nni2.nwk",
+        "sha256": "2828c8a242c94c117ed1297f80f8c6f076e6d41c047d8c64f8138dd2cd62449d"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261107_nni2.nwk",
+        "sha256": "64377147b9c0a0b9a627206044a184e16b682019ad72a5e866dc511f513f324f"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261107,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261107/generating.nwk",
+        "sha256": "f51bf30916d875613c013965ff80ec9e3381fd527c41d131dc38155a6a1b5df9"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261107_generating.nwk",
+        "sha256": "ebe932d5b887e677fcdc3b6d34f002ac35171a4169a2593716b0795d0ffac2ed"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261107,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261107/nni1.nwk",
+        "sha256": "ab092fd7562302a83379ecd7b67b27f844642eb08bdf25b29c0c32bb25db3dba"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261107_nni1.nwk",
+        "sha256": "0d0a6492362648c6e6d90419d5abed92d4dd8d4ef6a683d6d0d9708cb103214c"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261107,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261107/nni2.nwk",
+        "sha256": "2828c8a242c94c117ed1297f80f8c6f076e6d41c047d8c64f8138dd2cd62449d"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261107_nni2.nwk",
+        "sha256": "64377147b9c0a0b9a627206044a184e16b682019ad72a5e866dc511f513f324f"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261107,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261107/generating.nwk",
+        "sha256": "f51bf30916d875613c013965ff80ec9e3381fd527c41d131dc38155a6a1b5df9"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261107_generating.nwk",
+        "sha256": "ebe932d5b887e677fcdc3b6d34f002ac35171a4169a2593716b0795d0ffac2ed"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261107,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261107/nni1.nwk",
+        "sha256": "ab092fd7562302a83379ecd7b67b27f844642eb08bdf25b29c0c32bb25db3dba"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261107_nni1.nwk",
+        "sha256": "0d0a6492362648c6e6d90419d5abed92d4dd8d4ef6a683d6d0d9708cb103214c"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261107,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261107/nni2.nwk",
+        "sha256": "2828c8a242c94c117ed1297f80f8c6f076e6d41c047d8c64f8138dd2cd62449d"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261107_nni2.nwk",
+        "sha256": "64377147b9c0a0b9a627206044a184e16b682019ad72a5e866dc511f513f324f"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261107,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261107/generating.nwk",
+        "sha256": "f51bf30916d875613c013965ff80ec9e3381fd527c41d131dc38155a6a1b5df9"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261107_generating.nwk",
+        "sha256": "ebe932d5b887e677fcdc3b6d34f002ac35171a4169a2593716b0795d0ffac2ed"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261107,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261107/nni1.nwk",
+        "sha256": "ab092fd7562302a83379ecd7b67b27f844642eb08bdf25b29c0c32bb25db3dba"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261107_nni1.nwk",
+        "sha256": "0d0a6492362648c6e6d90419d5abed92d4dd8d4ef6a683d6d0d9708cb103214c"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261107,
+      "source_tree": {
+        "bytes": 328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261107/nni2.nwk",
+        "sha256": "2828c8a242c94c117ed1297f80f8c6f076e6d41c047d8c64f8138dd2cd62449d"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261107_nni2.nwk",
+        "sha256": "64377147b9c0a0b9a627206044a184e16b682019ad72a5e866dc511f513f324f"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261107,
+      "source_tree": {
+        "bytes": 203,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261107/generating.nwk",
+        "sha256": "abd2bf85bf7ea3f17785ac452e5d480c75377f78d34821ff422439509cab4439"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n6"
+      ],
+      "tree": {
+        "bytes": 198,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261107_generating.nwk",
+        "sha256": "25853683a49a03d3b1588ee76498591e21c424eb48f1802ed6ba117537382926"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261107,
+      "source_tree": {
+        "bytes": 203,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261107/nni1.nwk",
+        "sha256": "597496c98b0edb39aa1188ee0734d3f6cea79c24aab11afcf66cd299c9485c58"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n6"
+      ],
+      "tree": {
+        "bytes": 198,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261107_nni1.nwk",
+        "sha256": "34e70b7e9ec0e53dc244b89989b2a24e16d805fd3a7b96fc7360f0b52ae97ce9"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261107,
+      "source_tree": {
+        "bytes": 203,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261107/nni2.nwk",
+        "sha256": "ae22f9ccf0b51b2ddb6e65e2dd051802b8819895d260c639c53d878c4150b272"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n6"
+      ],
+      "tree": {
+        "bytes": 198,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261107_nni2.nwk",
+        "sha256": "9df77e38eab0213bc1164997f467fc24c47e6c0580767118cb3236076e5997b6"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261107,
+      "source_tree": {
+        "bytes": 212,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261107/generating.nwk",
+        "sha256": "bfd30b6a0b27560c5cb3be27365ae5cf9e9cb96c165cdfb4be0dba2f045688a5"
+      },
+      "taxa": [
+        "n13",
+        "n14",
+        "n3",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 207,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261107_generating.nwk",
+        "sha256": "4e40fd688c60f90de35391589db4fc82b33006d620df1a35a94829f37a7e1d45"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261107,
+      "source_tree": {
+        "bytes": 212,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261107/nni1.nwk",
+        "sha256": "638bc7c4b98809ca0eb325257dc2f700e4c22f26686fb4b90f54c6527afff19a"
+      },
+      "taxa": [
+        "n13",
+        "n14",
+        "n3",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 207,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261107_nni1.nwk",
+        "sha256": "4492559099ea1ecdaa881258576ec7438c95d28cad77d0fea720ae3121d249a2"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261107,
+      "source_tree": {
+        "bytes": 212,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261107/nni2.nwk",
+        "sha256": "621c32aa7b80fec429890f7958c230fc84a58a79a93771139090555d7baf79f0"
+      },
+      "taxa": [
+        "n13",
+        "n14",
+        "n3",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 207,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261107_nni2.nwk",
+        "sha256": "c3cf1228593214e1faae477170a06f9e9368812c0e9c3fa0feda5eeca7b1019b"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261108,
+      "source_tree": {
+        "bytes": 288,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261108/generating.nwk",
+        "sha256": "9821d17e49ff39c79af96fe1df6d970e99667fc169d9ec9728ae9028fdb3d93d"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n4",
+        "n6",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 283,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261108_generating.nwk",
+        "sha256": "d8dfb750aff17da511e25965e6493b463d4e8f64afae4dd6696b701a6a525416"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261108,
+      "source_tree": {
+        "bytes": 288,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261108/nni1.nwk",
+        "sha256": "8180298e10232cc3b640f8a8da2b91f251f2c4babf1157ae14fd486673992a88"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n4",
+        "n6",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 283,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261108_nni1.nwk",
+        "sha256": "068c344c2df254c4ee9989b7abcdb23d1b40ee76d0976b6549158bfdde8a8300"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261108,
+      "source_tree": {
+        "bytes": 288,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261108/nni2.nwk",
+        "sha256": "b7096acc77a59af9a938ce5e42dc9b54a1701c4f71e1093c28197b88143db2d8"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n4",
+        "n6",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 283,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261108_nni2.nwk",
+        "sha256": "4efcd891a43ea46800760b7b95a8b3a60e53e6e85e4d3f49dd97bc9b1361c3e8"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261108,
+      "source_tree": {
+        "bytes": 288,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261108/generating.nwk",
+        "sha256": "9821d17e49ff39c79af96fe1df6d970e99667fc169d9ec9728ae9028fdb3d93d"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n4",
+        "n6",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 283,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261108_generating.nwk",
+        "sha256": "d8dfb750aff17da511e25965e6493b463d4e8f64afae4dd6696b701a6a525416"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261108,
+      "source_tree": {
+        "bytes": 288,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261108/nni1.nwk",
+        "sha256": "8180298e10232cc3b640f8a8da2b91f251f2c4babf1157ae14fd486673992a88"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n4",
+        "n6",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 283,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261108_nni1.nwk",
+        "sha256": "068c344c2df254c4ee9989b7abcdb23d1b40ee76d0976b6549158bfdde8a8300"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261108,
+      "source_tree": {
+        "bytes": 288,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261108/nni2.nwk",
+        "sha256": "b7096acc77a59af9a938ce5e42dc9b54a1701c4f71e1093c28197b88143db2d8"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n4",
+        "n6",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 283,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261108_nni2.nwk",
+        "sha256": "4efcd891a43ea46800760b7b95a8b3a60e53e6e85e4d3f49dd97bc9b1361c3e8"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261108,
+      "source_tree": {
+        "bytes": 288,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261108/generating.nwk",
+        "sha256": "9821d17e49ff39c79af96fe1df6d970e99667fc169d9ec9728ae9028fdb3d93d"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n4",
+        "n6",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 283,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261108_generating.nwk",
+        "sha256": "d8dfb750aff17da511e25965e6493b463d4e8f64afae4dd6696b701a6a525416"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261108,
+      "source_tree": {
+        "bytes": 288,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261108/nni1.nwk",
+        "sha256": "8180298e10232cc3b640f8a8da2b91f251f2c4babf1157ae14fd486673992a88"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n4",
+        "n6",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 283,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261108_nni1.nwk",
+        "sha256": "068c344c2df254c4ee9989b7abcdb23d1b40ee76d0976b6549158bfdde8a8300"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261108,
+      "source_tree": {
+        "bytes": 288,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261108/nni2.nwk",
+        "sha256": "b7096acc77a59af9a938ce5e42dc9b54a1701c4f71e1093c28197b88143db2d8"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n4",
+        "n6",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 283,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261108_nni2.nwk",
+        "sha256": "4efcd891a43ea46800760b7b95a8b3a60e53e6e85e4d3f49dd97bc9b1361c3e8"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261108,
+      "source_tree": {
+        "bytes": 288,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261108/generating.nwk",
+        "sha256": "9821d17e49ff39c79af96fe1df6d970e99667fc169d9ec9728ae9028fdb3d93d"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n4",
+        "n6",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 283,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261108_generating.nwk",
+        "sha256": "d8dfb750aff17da511e25965e6493b463d4e8f64afae4dd6696b701a6a525416"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261108,
+      "source_tree": {
+        "bytes": 288,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261108/nni1.nwk",
+        "sha256": "8180298e10232cc3b640f8a8da2b91f251f2c4babf1157ae14fd486673992a88"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n4",
+        "n6",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 283,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261108_nni1.nwk",
+        "sha256": "068c344c2df254c4ee9989b7abcdb23d1b40ee76d0976b6549158bfdde8a8300"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261108,
+      "source_tree": {
+        "bytes": 288,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261108/nni2.nwk",
+        "sha256": "b7096acc77a59af9a938ce5e42dc9b54a1701c4f71e1093c28197b88143db2d8"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n4",
+        "n6",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 283,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261108_nni2.nwk",
+        "sha256": "4efcd891a43ea46800760b7b95a8b3a60e53e6e85e4d3f49dd97bc9b1361c3e8"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261108,
+      "source_tree": {
+        "bytes": 288,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261108/generating.nwk",
+        "sha256": "9821d17e49ff39c79af96fe1df6d970e99667fc169d9ec9728ae9028fdb3d93d"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n4",
+        "n6",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 283,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261108_generating.nwk",
+        "sha256": "d8dfb750aff17da511e25965e6493b463d4e8f64afae4dd6696b701a6a525416"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261108,
+      "source_tree": {
+        "bytes": 288,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261108/nni1.nwk",
+        "sha256": "8180298e10232cc3b640f8a8da2b91f251f2c4babf1157ae14fd486673992a88"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n4",
+        "n6",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 283,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261108_nni1.nwk",
+        "sha256": "068c344c2df254c4ee9989b7abcdb23d1b40ee76d0976b6549158bfdde8a8300"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261108,
+      "source_tree": {
+        "bytes": 288,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261108/nni2.nwk",
+        "sha256": "b7096acc77a59af9a938ce5e42dc9b54a1701c4f71e1093c28197b88143db2d8"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n3",
+        "n4",
+        "n6",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 283,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261108_nni2.nwk",
+        "sha256": "4efcd891a43ea46800760b7b95a8b3a60e53e6e85e4d3f49dd97bc9b1361c3e8"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261108,
+      "source_tree": {
+        "bytes": 208,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261108/generating.nwk",
+        "sha256": "f0d83f634b7e34b18c5fe7995cea28843dc955b217d7f8cebef9702954a9978a"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n3",
+        "n4",
+        "n6"
+      ],
+      "tree": {
+        "bytes": 203,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261108_generating.nwk",
+        "sha256": "6257e901ae0337e0a4a3fec24656748cb82bc85dc91eca8468fa9ff0f6758174"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261108,
+      "source_tree": {
+        "bytes": 208,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261108/nni1.nwk",
+        "sha256": "785ca6460983505901f844019bf36f6361d718639ba865dd218bb4eecd227d91"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n3",
+        "n4",
+        "n6"
+      ],
+      "tree": {
+        "bytes": 203,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261108_nni1.nwk",
+        "sha256": "bd9851f1d27407f7ba55eaf9f88b851cf47682a615c0a6098d4fbee6be7923e2"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261108,
+      "source_tree": {
+        "bytes": 208,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261108/nni2.nwk",
+        "sha256": "0e4de01d1f58d98f118797975c20c2c646bda014cc8af890a0e6d9afa7f797a1"
+      },
+      "taxa": [
+        "n11",
+        "n12",
+        "n13",
+        "n3",
+        "n4",
+        "n6"
+      ],
+      "tree": {
+        "bytes": 203,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261108_nni2.nwk",
+        "sha256": "f11cb7219f305790cb83eab759c9a06f14246fad11177b2d9172f823236f45de"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261108,
+      "source_tree": {
+        "bytes": 185,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261108/generating.nwk",
+        "sha256": "52dba925122b9718ca6c4e93d38ea6128538bdfa9e89937cb5e067a7b08876ee"
+      },
+      "taxa": [
+        "n13",
+        "n14",
+        "n3",
+        "n4",
+        "n6",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 180,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261108_generating.nwk",
+        "sha256": "08ce779bd33a24d3f9d25efcdde3fdfa58cff09aac9bfc10fed821d3bba22e44"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261108,
+      "source_tree": {
+        "bytes": 185,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261108/nni1.nwk",
+        "sha256": "da26e1f4015f04972bc028b9786ae9bbef51616cf6a598a7fb46905bc79cfcc0"
+      },
+      "taxa": [
+        "n13",
+        "n14",
+        "n3",
+        "n4",
+        "n6",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 180,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261108_nni1.nwk",
+        "sha256": "6f69e8ba6407e5623378049c29f5f1b35dc625b8223094cbc643fd9d966ad4c0"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261108,
+      "source_tree": {
+        "bytes": 185,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261108/nni2.nwk",
+        "sha256": "030446fbce895f06fff9acb6b7922884898294d6e660e6a6323c69206e6d6d5c"
+      },
+      "taxa": [
+        "n13",
+        "n14",
+        "n3",
+        "n4",
+        "n6",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 180,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261108_nni2.nwk",
+        "sha256": "fe4b3d152f6a770d015e6b71837b59481dd5a0c164dd07864fea604907c36b0b"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261109,
+      "source_tree": {
+        "bytes": 314,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261109/generating.nwk",
+        "sha256": "684b034483a5666ef86293df888a34e82532add33b91fa6eb79e3ad5825c2cde"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 309,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261109_generating.nwk",
+        "sha256": "b2e952c1e2b14422b9cbb7d00d17629d41037738ba3d804f7ec342dd78acfba9"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261109,
+      "source_tree": {
+        "bytes": 314,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261109/nni1.nwk",
+        "sha256": "60d276985b5c357f08a0a2f60ff4777a0d5342d96a29fb0b78dfbcc5e6693ce8"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 309,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261109_nni1.nwk",
+        "sha256": "338082b1d90cfc88fb6dd6719ad114647278e4c7ca315f51b7bce9665cd26070"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261109,
+      "source_tree": {
+        "bytes": 314,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261109/nni2.nwk",
+        "sha256": "0bbe5a4bd22bac14be19e3938096b65486397a3f4300392145b2d7d4a6bf799f"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 309,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261109_nni2.nwk",
+        "sha256": "62724e972024f9e92deb1195052f41b53eda7e44ec419c2dfffd486cc3130cfc"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261109,
+      "source_tree": {
+        "bytes": 314,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261109/generating.nwk",
+        "sha256": "684b034483a5666ef86293df888a34e82532add33b91fa6eb79e3ad5825c2cde"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 309,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261109_generating.nwk",
+        "sha256": "b2e952c1e2b14422b9cbb7d00d17629d41037738ba3d804f7ec342dd78acfba9"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261109,
+      "source_tree": {
+        "bytes": 314,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261109/nni1.nwk",
+        "sha256": "60d276985b5c357f08a0a2f60ff4777a0d5342d96a29fb0b78dfbcc5e6693ce8"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 309,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261109_nni1.nwk",
+        "sha256": "338082b1d90cfc88fb6dd6719ad114647278e4c7ca315f51b7bce9665cd26070"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261109,
+      "source_tree": {
+        "bytes": 314,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261109/nni2.nwk",
+        "sha256": "0bbe5a4bd22bac14be19e3938096b65486397a3f4300392145b2d7d4a6bf799f"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 309,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261109_nni2.nwk",
+        "sha256": "62724e972024f9e92deb1195052f41b53eda7e44ec419c2dfffd486cc3130cfc"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261109,
+      "source_tree": {
+        "bytes": 314,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261109/generating.nwk",
+        "sha256": "684b034483a5666ef86293df888a34e82532add33b91fa6eb79e3ad5825c2cde"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 309,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261109_generating.nwk",
+        "sha256": "b2e952c1e2b14422b9cbb7d00d17629d41037738ba3d804f7ec342dd78acfba9"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261109,
+      "source_tree": {
+        "bytes": 314,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261109/nni1.nwk",
+        "sha256": "60d276985b5c357f08a0a2f60ff4777a0d5342d96a29fb0b78dfbcc5e6693ce8"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 309,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261109_nni1.nwk",
+        "sha256": "338082b1d90cfc88fb6dd6719ad114647278e4c7ca315f51b7bce9665cd26070"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261109,
+      "source_tree": {
+        "bytes": 314,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261109/nni2.nwk",
+        "sha256": "0bbe5a4bd22bac14be19e3938096b65486397a3f4300392145b2d7d4a6bf799f"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 309,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261109_nni2.nwk",
+        "sha256": "62724e972024f9e92deb1195052f41b53eda7e44ec419c2dfffd486cc3130cfc"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261109,
+      "source_tree": {
+        "bytes": 314,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261109/generating.nwk",
+        "sha256": "684b034483a5666ef86293df888a34e82532add33b91fa6eb79e3ad5825c2cde"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 309,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261109_generating.nwk",
+        "sha256": "b2e952c1e2b14422b9cbb7d00d17629d41037738ba3d804f7ec342dd78acfba9"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261109,
+      "source_tree": {
+        "bytes": 314,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261109/nni1.nwk",
+        "sha256": "60d276985b5c357f08a0a2f60ff4777a0d5342d96a29fb0b78dfbcc5e6693ce8"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 309,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261109_nni1.nwk",
+        "sha256": "338082b1d90cfc88fb6dd6719ad114647278e4c7ca315f51b7bce9665cd26070"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261109,
+      "source_tree": {
+        "bytes": 314,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261109/nni2.nwk",
+        "sha256": "0bbe5a4bd22bac14be19e3938096b65486397a3f4300392145b2d7d4a6bf799f"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 309,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261109_nni2.nwk",
+        "sha256": "62724e972024f9e92deb1195052f41b53eda7e44ec419c2dfffd486cc3130cfc"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261109,
+      "source_tree": {
+        "bytes": 314,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261109/generating.nwk",
+        "sha256": "684b034483a5666ef86293df888a34e82532add33b91fa6eb79e3ad5825c2cde"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 309,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261109_generating.nwk",
+        "sha256": "b2e952c1e2b14422b9cbb7d00d17629d41037738ba3d804f7ec342dd78acfba9"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261109,
+      "source_tree": {
+        "bytes": 314,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261109/nni1.nwk",
+        "sha256": "60d276985b5c357f08a0a2f60ff4777a0d5342d96a29fb0b78dfbcc5e6693ce8"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 309,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261109_nni1.nwk",
+        "sha256": "338082b1d90cfc88fb6dd6719ad114647278e4c7ca315f51b7bce9665cd26070"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261109,
+      "source_tree": {
+        "bytes": 314,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261109/nni2.nwk",
+        "sha256": "0bbe5a4bd22bac14be19e3938096b65486397a3f4300392145b2d7d4a6bf799f"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n6",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 309,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261109_nni2.nwk",
+        "sha256": "62724e972024f9e92deb1195052f41b53eda7e44ec419c2dfffd486cc3130cfc"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261109,
+      "source_tree": {
+        "bytes": 179,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261109/generating.nwk",
+        "sha256": "1f9aa4780a33f5035775131eda71f946071279250d93988a2db8705da9f4f502"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14"
+      ],
+      "tree": {
+        "bytes": 174,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261109_generating.nwk",
+        "sha256": "b4f3b65b6c1264fed4b42ff6d86856cb251b76df83cce3c870cb1f9c4335ec6a"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261109,
+      "source_tree": {
+        "bytes": 179,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261109/nni1.nwk",
+        "sha256": "19814798e07d45749d6dd116b0bd310420d4e33ee249fb79b14413a661352dc2"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14"
+      ],
+      "tree": {
+        "bytes": 174,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261109_nni1.nwk",
+        "sha256": "7b60b530c35d57071da0ed278fa39f4e7749e9468098face79a5ad71ed8817ef"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261109,
+      "source_tree": {
+        "bytes": 179,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261109/nni2.nwk",
+        "sha256": "118270ab9db856920372915ce6013e2d22586141e91305f03f8bce27ab62bdc5"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14"
+      ],
+      "tree": {
+        "bytes": 174,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261109_nni2.nwk",
+        "sha256": "5e92a44905e2f4c90834a0c90c33f604a4e004859cb216094a18100c5c608bb3"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261109,
+      "source_tree": {
+        "bytes": 208,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261109/generating.nwk",
+        "sha256": "607a3a71c2de4410a53c8a2d1163af84d584ef087c21bf83fce18f60cb1dbf46"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n13",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 203,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261109_generating.nwk",
+        "sha256": "546620b4ebd675787bb6775e6c9675f91699438629ec0d14d81a686831a3c584"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261109,
+      "source_tree": {
+        "bytes": 208,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261109/nni1.nwk",
+        "sha256": "32038996ec69ccc8295e7602cda3fdcb3e0584f397ac1b9f56587c0b7885125b"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n13",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 203,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261109_nni1.nwk",
+        "sha256": "5328d04a2475c2f0733ef1bfcea1e9f97bb0ddd8f1b6cd629e2abea0c009c5d3"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261109,
+      "source_tree": {
+        "bytes": 208,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261109/nni2.nwk",
+        "sha256": "5f3fd26ed1fb0b52d41fdff53c00efd6f464215c9b5ec0e36c3183195fa20a2e"
+      },
+      "taxa": [
+        "n10",
+        "n11",
+        "n13",
+        "n7",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 203,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261109_nni2.nwk",
+        "sha256": "19a2a114436da8a2c3eefc9eb905698b974925ca7bccb05943364ab29fe323d8"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261110,
+      "source_tree": {
+        "bytes": 346,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261110/generating.nwk",
+        "sha256": "b396b3069181be9160f955d2929ebec23e5c5855197853f70828fb49b219ec24"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n2",
+        "n7",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261110_generating.nwk",
+        "sha256": "0111ecd3d07af78f72ea3d4bec0c58cf498880ece26642a8675158df2f8f182c"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261110,
+      "source_tree": {
+        "bytes": 346,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261110/nni1.nwk",
+        "sha256": "55b2e2d5b85b3d2dbc27b21be89a5e925f04ecf3c85dded72a321dd7df1b5a82"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n2",
+        "n7",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261110_nni1.nwk",
+        "sha256": "fa47cb4060b267310e630995b8ab0cf2539f2ca47de11b326d1e3bf5a4606985"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20261110,
+      "source_tree": {
+        "bytes": 346,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/baseline_20261110/nni2.nwk",
+        "sha256": "f2c89635c06bc06dd832a00c429f7c8beeaf0be5c31e22de0c7bf6b8b6f1361f"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n2",
+        "n7",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/baseline_20261110_nni2.nwk",
+        "sha256": "8567e8c68e32bab7c1121faf9ffe8320728ddb73dd734970868c8b9f7be84f93"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261110,
+      "source_tree": {
+        "bytes": 346,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261110/generating.nwk",
+        "sha256": "b396b3069181be9160f955d2929ebec23e5c5855197853f70828fb49b219ec24"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n2",
+        "n7",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261110_generating.nwk",
+        "sha256": "0111ecd3d07af78f72ea3d4bec0c58cf498880ece26642a8675158df2f8f182c"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261110,
+      "source_tree": {
+        "bytes": 346,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261110/nni1.nwk",
+        "sha256": "55b2e2d5b85b3d2dbc27b21be89a5e925f04ecf3c85dded72a321dd7df1b5a82"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n2",
+        "n7",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261110_nni1.nwk",
+        "sha256": "fa47cb4060b267310e630995b8ab0cf2539f2ca47de11b326d1e3bf5a4606985"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "divergent",
+      "seed": 20261110,
+      "source_tree": {
+        "bytes": 346,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_20261110/nni2.nwk",
+        "sha256": "f2c89635c06bc06dd832a00c429f7c8beeaf0be5c31e22de0c7bf6b8b6f1361f"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n2",
+        "n7",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_20261110_nni2.nwk",
+        "sha256": "8567e8c68e32bab7c1121faf9ffe8320728ddb73dd734970868c8b9f7be84f93"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261110,
+      "source_tree": {
+        "bytes": 346,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261110/generating.nwk",
+        "sha256": "b396b3069181be9160f955d2929ebec23e5c5855197853f70828fb49b219ec24"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n2",
+        "n7",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261110_generating.nwk",
+        "sha256": "0111ecd3d07af78f72ea3d4bec0c58cf498880ece26642a8675158df2f8f182c"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261110,
+      "source_tree": {
+        "bytes": 346,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261110/nni1.nwk",
+        "sha256": "55b2e2d5b85b3d2dbc27b21be89a5e925f04ecf3c85dded72a321dd7df1b5a82"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n2",
+        "n7",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261110_nni1.nwk",
+        "sha256": "fa47cb4060b267310e630995b8ab0cf2539f2ca47de11b326d1e3bf5a4606985"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "turnover",
+      "seed": 20261110,
+      "source_tree": {
+        "bytes": 346,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/turnover_20261110/nni2.nwk",
+        "sha256": "f2c89635c06bc06dd832a00c429f7c8beeaf0be5c31e22de0c7bf6b8b6f1361f"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n2",
+        "n7",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/turnover_20261110_nni2.nwk",
+        "sha256": "8567e8c68e32bab7c1121faf9ffe8320728ddb73dd734970868c8b9f7be84f93"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261110,
+      "source_tree": {
+        "bytes": 346,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261110/generating.nwk",
+        "sha256": "b396b3069181be9160f955d2929ebec23e5c5855197853f70828fb49b219ec24"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n2",
+        "n7",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261110_generating.nwk",
+        "sha256": "0111ecd3d07af78f72ea3d4bec0c58cf498880ece26642a8675158df2f8f182c"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261110,
+      "source_tree": {
+        "bytes": 346,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261110/nni1.nwk",
+        "sha256": "55b2e2d5b85b3d2dbc27b21be89a5e925f04ecf3c85dded72a321dd7df1b5a82"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n2",
+        "n7",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261110_nni1.nwk",
+        "sha256": "fa47cb4060b267310e630995b8ab0cf2539f2ca47de11b326d1e3bf5a4606985"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "divergent_turnover",
+      "seed": 20261110,
+      "source_tree": {
+        "bytes": 346,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/divergent_turnover_20261110/nni2.nwk",
+        "sha256": "f2c89635c06bc06dd832a00c429f7c8beeaf0be5c31e22de0c7bf6b8b6f1361f"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n2",
+        "n7",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/divergent_turnover_20261110_nni2.nwk",
+        "sha256": "8567e8c68e32bab7c1121faf9ffe8320728ddb73dd734970868c8b9f7be84f93"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261110,
+      "source_tree": {
+        "bytes": 346,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261110/generating.nwk",
+        "sha256": "b396b3069181be9160f955d2929ebec23e5c5855197853f70828fb49b219ec24"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n2",
+        "n7",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261110_generating.nwk",
+        "sha256": "0111ecd3d07af78f72ea3d4bec0c58cf498880ece26642a8675158df2f8f182c"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261110,
+      "source_tree": {
+        "bytes": 346,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261110/nni1.nwk",
+        "sha256": "55b2e2d5b85b3d2dbc27b21be89a5e925f04ecf3c85dded72a321dd7df1b5a82"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n2",
+        "n7",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261110_nni1.nwk",
+        "sha256": "fa47cb4060b267310e630995b8ab0cf2539f2ca47de11b326d1e3bf5a4606985"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "missing20",
+      "seed": 20261110,
+      "source_tree": {
+        "bytes": 346,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/missing20_20261110/nni2.nwk",
+        "sha256": "f2c89635c06bc06dd832a00c429f7c8beeaf0be5c31e22de0c7bf6b8b6f1361f"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n2",
+        "n7",
+        "n8",
+        "n9"
+      ],
+      "tree": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/missing20_20261110_nni2.nwk",
+        "sha256": "8567e8c68e32bab7c1121faf9ffe8320728ddb73dd734970868c8b9f7be84f93"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261110,
+      "source_tree": {
+        "bytes": 201,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261110/generating.nwk",
+        "sha256": "6965a221eefedf6504bfad718912a85b41c9991af2d41836b14cc5171697f6be"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n2"
+      ],
+      "tree": {
+        "bytes": 196,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261110_generating.nwk",
+        "sha256": "8ad91163232c8426bf8bb3ab486f407910832ec40c9c854522a2e6cf5eda4782"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261110,
+      "source_tree": {
+        "bytes": 201,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261110/nni1.nwk",
+        "sha256": "2f4037d19ecdebb47156c39b5b059acf8372d8bfbe80bcb1ffaec650670c0bac"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n2"
+      ],
+      "tree": {
+        "bytes": 196,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261110_nni1.nwk",
+        "sha256": "8474973a059558296ca77d8da1d9469117be02ab400f1c19e70a5f5c224d561f"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "uneven_taxa",
+      "seed": 20261110,
+      "source_tree": {
+        "bytes": 201,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/uneven_taxa_20261110/nni2.nwk",
+        "sha256": "29b97316a243c2b862eeda1afd1676608f37b7213f75a82eb9e9ac5ee2f254c5"
+      },
+      "taxa": [
+        "n10",
+        "n12",
+        "n13",
+        "n14",
+        "n2"
+      ],
+      "tree": {
+        "bytes": 196,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/uneven_taxa_20261110_nni2.nwk",
+        "sha256": "3e70d1d2b7d2fba26d2465b6dd05fff215ee5ef11e0e79a3fdd971cc4f9a66c8"
+      },
+      "variant": "nni2"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261110,
+      "source_tree": {
+        "bytes": 207,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261110/generating.nwk",
+        "sha256": "ec5d93410a4242273f79a8e223f1784b0813203fe6387c674f1fee11ce2bc63b"
+      },
+      "taxa": [
+        "n13",
+        "n14",
+        "n2",
+        "n7",
+        "n8"
+      ],
+      "tree": {
+        "bytes": 202,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261110_generating.nwk",
+        "sha256": "7a1ccc6da761e23510b61243eaf1ad0cd0c68ba6a963b9ff0c1eee191e0415bc"
+      },
+      "variant": "generating"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261110,
+      "source_tree": {
+        "bytes": 207,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261110/nni1.nwk",
+        "sha256": "090717d3d242d598e7fe03fc5347df58abf1c0b087dc52094a073adb7390db2f"
+      },
+      "taxa": [
+        "n13",
+        "n14",
+        "n2",
+        "n7",
+        "n8"
+      ],
+      "tree": {
+        "bytes": 202,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261110_nni1.nwk",
+        "sha256": "998fc8eb58881cfb5a4ee64aad55ae73134394737acc2b022b2ac00058257dbd"
+      },
+      "variant": "nni1"
+    },
+    {
+      "condition": "taxon_count_control",
+      "seed": 20261110,
+      "source_tree": {
+        "bytes": 207,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_controls_prepared_v1/taxon_count_control_20261110/nni2.nwk",
+        "sha256": "a91fef2c52eefdeb23f31ae7d3931a636c866298ff36c6e63b5bfc475a262012"
+      },
+      "taxa": [
+        "n13",
+        "n14",
+        "n2",
+        "n7",
+        "n8"
+      ],
+      "tree": {
+        "bytes": 202,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_portable_trees_v1/taxon_count_control_20261110_nni2.nwk",
+        "sha256": "0f5f22d3dbbc89a8f3252cb346901ca6e79c03453c80e6a9e0824642df60f23e"
+      },
+      "variant": "nni2"
+    }
+  ]
+}

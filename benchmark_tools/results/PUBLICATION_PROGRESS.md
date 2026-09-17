@@ -4082,3 +4082,40 @@ distances against original generating-tree clades projected onto retained taxa,
 plus420 distinct condition/seed/tree/method combinations. Six focused tests pass;
 full1,463 unit tests passed37.60s. Claims updated to distinguish preparation from
 execution. No supplied-tree method run or score has yet been produced.
+
+### Simulation native tree-format compatibility (2026-09-17)
+
+Re-read the objective. The immediately preceding prompt-only response was not
+scientific progress; revalidated repository/scheduler state before continuing.
+Confirmed73514f0 local and remote. QfO21329 remains RUNNING at00:35:45 and00:42:02;
+no restart or duplicate replay was submitted.
+
+Audited installed OrthoFinder3.1.5 supplied-tree validation/rooting and frozen
+OrthoHMM supplied-tree parsing. Native parser testing exposed a real blocker:
+the prepared `[&R]` prefix makes OrthoFinder see a NoName tree and reject all
+expected taxa on the first input. OrthoHMM accepted all210 original files.
+Preserved the frozen original manifest/files. Added a structured plain-Newick
+adapter requiring exact descendant-clade/branch-length identity after reread.
+Generated210 derivative trees; both native parsers then accepted all210.
+These are input-compatibility checks, not reconciled method results.
+
+Derivative snapshot simulation_portable_trees_prepared_20260917.json SHA256
+b9ed4fb8dc27da28dd56c674d1ece2edbb3a04697dec14ea3d4538bf6d9dbc0b.
+Original generated output benchmarks/results/simulation_portable_trees_v1.
+Preparation status remains pending native checks because direct terminal checks
+are documented evidence rather than a standalone machine-readable admission.
+Execution preflight must repeat them and verify all tree/source hashes.
+
+Added fresh_supplied_method command builder preserving frozen non-tree arguments
+and refusing existing outputs, overlapping paths and restart/pre-supplied flags.
+Dry-constructed420 unique fresh-run destinations from pinned source manifests;
+no inference launched. Actual commands must reference the derivative trees.
+Local source shows supplied OrthoFinder trees bypass STRIDE/multiple-root
+handling, reinforcing the unchanged-tree mode-control requirement. Cached -ft
+reuse and fresh-run upstream identity are not yet validated. Do not attribute
+prediction changes to topology before those gates pass.
+
+Eighteen new focused tests passed; full unit suite1,481 passed36.52s. Updated
+simulation protocol with parser incompatibility, derivative provenance and
+execution semantics. Next: freeze and execute unchanged-tree mode controls with
+native source/input/output admission before the420 main method/tree runs.

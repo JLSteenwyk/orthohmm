@@ -90,3 +90,46 @@ from the pruning implementation. The
 0caffab16f73019fabafe1fcfaac8c2de90960c5f1317803bf83308a6d2bf914.
 No supplied-tree inference or scoring has been launched. CLI/output semantics,
 mode-equivalence checks and native execution still precede scientific admission.
+# Native Input Compatibility Audit (2026-09-17)
+
+Before execution, direct checks with the installed native parsers found that
+OrthoFinder 3.1.5 reads the original leading `[&R]` serialization as a `NoName`
+tree, rejecting the expected taxa. Frozen OrthoHMM accepts all 210 originals.
+Do not pass these original files directly to OrthoFinder, and do not overwrite
+them or change the frozen preparation manifest.
+
+`prepare_portable_simulation_trees.py` creates derivative plain-Newick files
+using Bio.Phylo, without the leading annotation. The binary root is retained;
+every descendant clade and its branch length must match exactly after rereading.
+Both OrthoFinder's `CheckUserSpeciesTree` and frozen OrthoHMM's
+`parse_species_tree` accepted all 210 derivative files in direct local checks.
+This is parser acceptance, not reconciliation or prediction equivalence.
+
+Derivative manifest: `simulation_portable_trees_prepared_20260917.json`, SHA256
+`b9ed4fb8dc27da28dd56c674d1ece2edbb3a04697dec14ea3d4538bf6d9dbc0b`.
+Files remain at `benchmarks/results/simulation_portable_trees_v1`.
+The machine-readable preparation status intentionally does not claim native
+inference validation. Recheck parsers and all source/tree hashes in execution
+preflight; the direct parser checks above are recorded here, not an independent
+admission artifact.
+
+The tested `simulation_supplied_commands.fresh_supplied_method` constructs
+isolated fresh runs from the frozen method command dictionaries. OrthoHMM changes
+only the output locations, tree mode to `supplied`, and `--species-tree` path.
+OrthoFinder changes the copied FASTA location and adds `-s`; all other baseline
+arguments remain unchanged. Existing outputs, overlapping input/output paths,
+preexisting supplied trees and restart flags are rejected. The full 420-row
+inventory was dry-constructed with unique destinations; none was executed.
+Use the portable derivative tree paths when materializing actual commands.
+
+Local source audit used the installed OrthoFinder 3.1.5 package:
+`run/species_info.py:282` checks unique exact taxa and a binary root;
+`comparative_genomics/orthologues.py:697` (`RootSpeciesTree`) bypasses STRIDE
+and its multiple-root handling for supplied trees. Frozen OrthoHMM
+`orthohmm/phylogeny_pipeline.py:1050` parses and writes a supplied tree instead
+of calling its tree-inference branch. Consequently, unchanged supplied-tree
+controls remain mandatory: mode changes can affect more than serialization.
+The `-ft` restart route has not been validated for this panel; do not assume
+postprocessed result directories recover the original upstream inference state.
+Fresh-run candidate and gene-tree identity must also be checked before treating
+differences as tree-only effects. No equivalence gate has been waived.
