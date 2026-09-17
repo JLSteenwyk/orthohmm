@@ -3909,3 +3909,31 @@ benchmarks/results/qfo_checked_full_replay_v1; scheduler log:
 benchmarks/work/qfo_checked_full_replay_21329.log. No replay output admitted yet.
 The existing21 remote dependency alerts remain outstanding for release review;
 this submission did not change the frozen dependency environment.
+
+### Full checked-replay independent admission prepared (2026-09-17)
+
+Previous continuation made progress: connected/tested/froze executor96333fd,
+submitted21329 and pushed its ledger recordc69b81e. Re-read objective and polled
+the same handle: RUNNING at00:04:17. The preserved initial-stage native record
+shows the admitted complete endpoint hash before optimization; no completed
+stage or full replay result is inferred from that observation. No restart.
+
+Added admit_qfo_checked_full_replay.py. Requires exact completed job21329 and
+executor96333fd, the complete four-call/four-stage inventory, unchanged full
+replay parameters, nonzero built profiles, source and command inventories,
+preserved-stage execution/provenance, all-stage gene order, original/copied
+payload hash agreement, independent graph reconstruction and native before/after
+integrity. Recounts every retained partition and final-stage coverage, verifies
+that multipass/profiles outputs came from their corresponding checked workers,
+and crosschecks recorded initial/multipass edge counts. Re-runs the frozen input
+auditor and native-runtime verification before producing admitted results.
+
+The historical final partition is compared against profiles_refined and reported
+without treating disagreement as a failed experiment or selecting by accuracy.
+Temporary original payload paths are retained as provenance but not incorrectly
+required to still exist. Every permanent retained payload and reported provenance
+record is rechecked. Exact raw-report SHA256 must be supplied after completion;
+an existing admission directory is never reused. Fifteen inventory tests pass,
+covering incomplete/failed/wrong-job/wrong-order/changed-parameter/scored runs,
+absent HMM profiles and existing-output rejection. Full suite:1,411 passed in35.75s.
+No output has yet been admitted, and no benchmark score/default has changed.
