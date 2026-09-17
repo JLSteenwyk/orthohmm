@@ -1,6 +1,6 @@
 # Publication Claim-To-Evidence Checklist
 
-Status on 16 September 2026. This is a completion audit, not a replacement
+Status updated 17 September 2026. This is a completion audit, not a replacement
 for the original publication goal. A linked plan or passing unit test is not
 evidence that an experiment completed or a biological hypothesis is true.
 
@@ -21,7 +21,7 @@ evidence that an experiment completed or a biological hypothesis is true.
 | Three Kingdoms demonstrates proteome-wide accuracy | [Supplementary score record](three_kingdoms_parity_20260907.json) | Unsupported; restricted BUSCO-reference universe |
 | OrthoHMM is faster or more memory efficient under matched conditions | [Progress ledger](PUBLICATION_PROGRESS.md) | Not established; historical resource-accounting and workload differences remain |
 | A nearby parameter choice improves frozen-method OrthoBench F1 | [Six-variant panel](OB_PARAMETER_NEIGHBORHOOD_RESULTS_20260916.md) | Not established: all six adjusted F1 intervals include zero; no default promotion |
-| The QfO native graph is reproducibly constructed | [Constructor-format diagnostic](QFO_CONSTRUCTOR_FORMAT_RESULTS_20260916.md) | Not established generally: all three Python-pair workers match, one NumPy worker mismatches; checked optimizer replays remain pending |
+| The QfO native graph is reproducibly constructed | [Checked initial-graph repeats](QFO_CHECKED_REPEAT_RESULTS_20260917.md) | Three checked Python-pair runs preserve the full graph and yield identical partitions; not general determinism or complete historical replay equivalence |
 | The package is publication-ready | All sections below | Not achieved |
 
 ## Completion Requirements
@@ -123,7 +123,11 @@ evidence that an experiment completed or a biological hypothesis is true.
   No library/hardware cause is established. [Constructor-format21327](QFO_CONSTRUCTOR_FORMAT_RESULTS_20260916.md)
   completed and passed independent admission: all three Python-pair workers match,
   one NumPy worker mismatches. This is not a proven production fix. Integrity-gated
-  optimizer replays remain pending; no accuracy selection has occurred.
+  optimizer repeats21328 subsequently completed: all three preserve the complete
+  graph before/after optimization and yield byte-identical349,898-group partitions
+  covering976,504 genes. Independent admission checked308 provenance records and
+  every pairwise partition comparison. This is initial-graph evidence, not a full
+  cached replay or general repeatability proof. No accuracy selection has occurred.
 - All six [OrthoBench parameter variants](OB_PARAMETER_NEIGHBORHOOD_RESULTS_20260916.md)
   passed native admission and official-score checks with251,378 genes retained.
   F1 ranges71.463468-74.973144% versus control74.106074%; all six adjusted F1

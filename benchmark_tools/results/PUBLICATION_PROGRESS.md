@@ -3807,3 +3807,33 @@ location independence, ambiguous input rejection, balanced27-run plan and refusa
 to reuse output. Full suite: 1,377 passed in 35.00s. This is input preparation only:
 taxon composition and size co-vary, no universal scaling claim, and historical
 shared-node times remain descriptive rather than controlled comparison evidence.
+
+### Checked QfO initial-graph repeats independently admitted (2026-09-17)
+
+The interrupted prior continuation was a verified wait on live21328 and collected
+resource-environment evidence: Slurm uses task/cgroup,task/affinity and cgroupv2
+with ConstrainCores/ConstrainRAMSpace enabled; unrelated substantial IQ-TREE
+workloads were present. No resource collector or timing run was launched. User
+systemd service access exists but must not be used to move scientific jobs outside
+their Slurm cgroup limits. Matched resource execution remains outstanding.
+
+Re-read the objective and checked authoritative state: job21328 COMPLETED0:0
+in38:14. Raw report SHA256
+26e3bee1cc869be5df02f6160aba6fb2bb024b98a98eb348b8a5d29af12dbad5.
+Independent admit_qfo_checked_repeats.py passed exact job/executor/plan/source,
+runtime/command and preserved-file checks, fresh graph hash reconstruction,
+before/after optimizer integrity, unique complete coverage and all three pairwise
+partition comparisons.308 provenance records checked. Every output has349,898
+groups and976,504 genes, byte-identical SHA256
+8c162782bba955078a8f7e4e6088df5b34c9f15b055803224e513fdea8b33cdd.
+Worker wall seconds1044.452333/751.549762/463.853209 are diagnostic shared-node
+costs, not speedup evidence. Scheduler MaxRSS missing; no value fabricated.
+
+Admitted output benchmarks/results/qfo_checked_repeats_admitted_v1/results.json;
+snapshot qfo_checked_repeats_verified_20260917.json SHA256
+78f51f5ce703caf39307c5e518ad737acdf655dbe0926a34f2c20bbdec6d03f1.
+Results note, manuscript and claims updated. No accuracy evaluation, default
+change, historical-output replacement or claim of general determinism. Next
+extend checked construction/native-boundary observation to every payload in a
+complete cached QfO replay, including multipass/profile stages, then independently
+admit it before resuming QfO ablations. Scaling/application/release work remains.

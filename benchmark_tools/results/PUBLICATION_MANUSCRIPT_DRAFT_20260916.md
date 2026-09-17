@@ -577,6 +577,17 @@ general repeatability claim; input format also changes allocation behavior.
 No optimizer or accuracy score was produced in this comparison.
 [Input-format results](QFO_CONSTRUCTOR_FORMAT_RESULTS_20260916.md).
 
+Three subsequent integrity-gated initial-graph optimizer runs completed with
+byte-identical partitions of349,898 groups covering all976,504 genes. Each used
+Python-integer-pair construction and preserved all24,148,515 ordered undirected
+edge endpoints and weights before and after unchanged CPM optimization.
+Independent admission reconstructed saved hashes, checked308 provenance records,
+and recomputed complete-coverage partition comparisons for every pair of runs.
+This supports bounded repeatability of the checked initial-graph path, not general
+determinism, a causal library diagnosis, or historical complete-pipeline equivalence.
+No accuracy score was used to select an output; full cached-stage validation
+remains required. [Checked-repeat results](QFO_CHECKED_REPEAT_RESULTS_20260917.md).
+
 Historical timing and memory records differ in scope and accounting.
 Cached replays are incremental computations, not end-to-end timings;
 supplied trees have upstream costs. Unscheduled competing workloads were
