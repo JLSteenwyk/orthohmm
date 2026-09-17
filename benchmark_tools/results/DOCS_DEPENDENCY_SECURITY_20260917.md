@@ -1,5 +1,11 @@
 # Documentation Dependency Security
 
+Update: the subsequent [GitHub recheck](dependency_alerts_recheck_20260917.json)
+reports zero open repository alerts. The [strict docs build validation](docs_strict_build_validation_20260917.json)
+records a fresh warnings-as-errors build with no diagnostics after source
+formatting and image-path corrections. The earlier warning and alert snapshots
+below remain historical evidence; neither change upgrades frozen benchmarks.
+
 The authenticated, read-only GitHub alert snapshot contains 21 open alerts:
 one critical, seven high, eleven medium and two low. All target `docs/uv.lock`.
 No claim that the inference runtime or installed host environments are free of
@@ -60,7 +66,7 @@ reachable from OrthoHMM's inference CLI.
 
 The immediate [post-push snapshot](dependency_alerts_after_20260917.json) after
 commitd29cdd8 still reports21open alerts. Local range checks do not establish
-server-side closure; recheck after GitHub dependency processing. No alerts
+server-side closure; the subsequent recheck above supplies that observation. No alerts
 were manually dismissed. Future advisories, existing documentation
 errors, action-version hardening and historical environment exposure remain
 separate release considerations. Do not silently update frozen environments

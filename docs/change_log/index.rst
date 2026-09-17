@@ -4,9 +4,11 @@
 Change log
 ==========
 
-^^^^^
-
 Major changes to OrthoHMM are summarized here.
+
+Benchmark numbers and comparative wording below record historical release
+decisions. They are not current publication conclusions or independent
+validation; see :ref:`performance` for the audited evidence and limitations.
 
 **0.5.0**
 Sets Leiden CPM at resolution 0.1 as the default clustering path after

@@ -9,7 +9,7 @@ From this directory:
 ```sh
 uv python install
 uv sync --locked --all-extras --dev
-uv run --locked python -m sphinx.cmd.build -b html . ./_build/html
+uv run --locked python -m sphinx.cmd.build -W --keep-going -b html . ./_build/html
 ```
 
 The constraints in `pyproject.toml` prevent the vulnerable versions identified

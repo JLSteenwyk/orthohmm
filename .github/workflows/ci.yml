@@ -108,7 +108,7 @@ jobs:
           cd docs
           uv python install
           uv sync --locked --all-extras --dev
-          uv run --locked python -m sphinx.cmd.build -b html . ./_build/html
+          uv run --locked python -m sphinx.cmd.build -W --keep-going -b html . ./_build/html
           cd ..
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3

@@ -1,8 +1,6 @@
 Advanced Usage
 ==============
 
-^^^^^
-
 OrthoHMM output
 ---------------
 All OrthoHMM outputs have the prefix *orthohmm* so that they are easy to find.

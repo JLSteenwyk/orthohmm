@@ -1,12 +1,10 @@
 About
 =====
 
-^^^^^
-
 **Ortho**\logy inference using **H**\idden **M**\arkov **M**\odels (**OrthoHMM**) was developed as
 part of `Jacob L. Steenwyk <https://jlsteenwyk.github.io/>`_'s post-doctoral work. 
 
-Inferring orthology (that is, genes that have shared ancestry) is a major challenge in bioinformatics.
+Inferring orthology (shared ancestry through speciation rather than duplication) is a major challenge in bioinformatics.
 This challenge is exacerbated when sequence divergence is high -- for example, among organisms that
 began diverging dozens of millions of years ago -- which makes remote homology difficult to detect.
 
@@ -15,20 +13,21 @@ of sequence similarity is conducted using BLAST or DIAMOND and the resulting sim
 to cluster groups of highly similar sequences together. The resulting groups of sequences are putative
 orthologs; thus, these genes are termed orthologous groups of genes (or orthogroups).
 
-Here, we introduce OrthoHMM, which implements Hidden Markov Models to infer orthology. Hidden Markov Models
-have a distinct advantage over BLAST and DIAMOND because HMMs incoporate position-specific information
-and patterns that enable more sensitivity and specificity for remote homolog detection. Benchmarking
-reveals that OrthoHMM outperforms other software for orthology inference.
+OrthoHMM uses profile Hidden Markov Models for protein similarity search and
+family refinement. Its phylogenetic mode additionally reconciles inferred gene
+trees. Benchmark results depend on the dataset, output semantics and configuration;
+the publication analyses do not establish general superiority over other tools.
+In particular, gains in paralog separation can accompany losses in homolog
+coverage. The repository's publication results retain these trade-offs, failures
+and uncertainty estimates.
 
 |
 
 The Developers
 --------------
 
-^^^^^
-
 OrthoHMM is developed and maintained by `Jacob L. Steenwyk <https://jlsteenwyk.github.io/>`_
-and `Thomas J. Buida III <www.tjbiii.com>`_.
+and `Thomas J. Buida III <http://tjbiii.com/>`__.
 
 |
 
@@ -38,7 +37,7 @@ and `Thomas J. Buida III <www.tjbiii.com>`_.
 
 `Jacob L. Steenwyk <https://jlsteenwyk.github.io/>`_ is a Howard Hughes Medical Institute
 awardee of the Life Science Research Foundation at the University of California, Berkeley.
-Find out more information at his `personal website <http://jlsteenwyk.github.io/>`_.
+Find out more information at his `personal website <http://jlsteenwyk.github.io/>`__.
 
 .. |JLSteenwyk| image:: ../_static/img/Steenwyk.jpg 
    :width: 35%
@@ -68,7 +67,7 @@ Find out more information at his `personal website <http://jlsteenwyk.github.io/
 `Thomas J. Buida III <http://tjbiii.com/>`_ is a senior software and data engineer at
 `Initial State <https://www.initialstate.com/>`_. 
 Find out more information at his
-`personal website <http://tjbiii.com/>`_.
+`personal website <http://tjbiii.com/>`__.
 
 
 .. |TJBuida| image:: ../_static/img/Buida.jpeg  
@@ -95,17 +94,15 @@ Find out more information at his
 More Team Members
 -----------------
 
-^^^^^
-
 |NKing|
 
 |GoogleScholarKing|
 
 `Nicole King <https://kinglab.berkeley.edu/>`_ is a Howard Hughes Medical Institute Investigator
 and Professor of Molecular and Cell Biology at the University of California, Berkeley.
-Find out more information at her `laboratory’s website <https://kinglab.berkeley.edu/>`_.
+Find out more information at her `laboratory’s website <https://kinglab.berkeley.edu/>`__.
 
-.. |NKing| image:: ../_static/img/NKing.jpg
+.. |NKing| image:: ../_static/img/Nking.jpg
    :width: 35%
 
 .. |GoogleScholarKing| image:: ../_static/img/GoogleScholar.png
@@ -125,7 +122,7 @@ Research in his laboratory focuses on the study of the DNA record to gain insigh
 processes of evolution. Using a combination of computational and experimental approaches, his lab’s current
 research aims to understand the molecular foundations of the fungal lifestyle, the reconstruction of the
 tree of life, and the evolution of human pregnancy. Find out more information at his 
-`laboratory’s website <https://as.vanderbilt.edu/rokaslab/>`_.
+`laboratory’s website <https://as.vanderbilt.edu/rokaslab/>`__.
 
 .. |ARokas| image:: ../_static/img/Rokas.jpeg
    :width: 35%

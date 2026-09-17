@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Strict Documentation Build and Alert Closure (2026-09-17)
+
+Previous continuation remediated docs dependencies and pushed6ba1c6d; this
+was progress, not completion of the publication goal. Re-read full objective.
+Fresh GitHub API snapshot `dependency_alerts_recheck_20260917.json` now returns
+zero open alerts. Earlier21-alert snapshots remain unchanged. This establishes
+repository alert closure at retrieval time, not host/runtime security.
+
+Fixed all14diagnostics from the previous docs build: invalid top/bottom
+transitions, repeated named links, unset language and NKing/Nking image case.
+CI and local instructions now use Sphinx warnings-as-errors. Updated the stale
+performance page and About wording to retain measured precision/recall/coverage
+trade-offs and avoid unsupported superiority claims, an alignment-trimming
+copy-paste error and a placeholder citation. Historical scaling/changelog
+claims are explicitly marked historical; original images/results remain.
+
+Clean build from scratch with Sphinx7.4.7/Python3.12.3: all7source pages,
+9HTMLpages, exit0, empty warning log. All262local links/assets checked against
+existing files, including the corrected portrait. Source/output identities and
+command in `docs_strict_build_validation_20260917.json`. External URLs and
+every fragment target were not checked; no exhaustive scientific-docs audit
+is implied. No inference code or frozen environment changed.
+
+DGX21656_4verifiedRUNNING18:11at initial poll;fourcomplete,22queued. Controlled
+timings remain unadmitted. Publication work still needs remaining statistical
+and error evidence, timing validation, portable workflows, licensing and
+release/archive. This documentation milestone does not establish readiness.
+
 ## Docs Dependency Security Remediation (2026-09-17)
 
 Post-push check afterd29cdd8stillreturns21open GitHub alerts; retained in

@@ -31,7 +31,10 @@ proteomes     wall time     peak RAM    orthogroups
 100           77 min        4.67 GB     27,328
 ============  ============  ==========  =============
 
-Numbers from the bacterial scaling benchmark (RefSeq, 32 threads).
+These are historical bacterial scaling measurements (RefSeq, 32 threads),
+not the dedicated-machine matched-resource publication panel. They do not
+establish comparative speed or memory advantages. See :ref:`performance`
+for current benchmark scope and limitations.
 The legacy ``phmmer`` path is still available via
 ``--search_mode phmmer`` but is no longer the default.
 
@@ -188,5 +191,3 @@ To use OrthoHMM in its simpliest form, execute the following command:
 	change_log/index
 	other_software/index
 	frequently_asked_questions/index
-
-^^^^

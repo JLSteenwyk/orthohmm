@@ -1,0 +1,123 @@
+{
+  "command": "python -m sphinx.cmd.build -E -a -W --keep-going -b html . ../benchmarks/work/docs_strict_build_v2 -w ../benchmarks/work/docs_strict_build_warnings_v2.log",
+  "cwd": "docs",
+  "html_outputs": [
+    {
+      "bytes": 12200,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/docs_strict_build_v2/about/index.html",
+      "sha256": "d38b23d91ec8d378054c101d12a7f6194547a8d85e99ad88eb9ba8c0cb369e60"
+    },
+    {
+      "bytes": 25614,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/docs_strict_build_v2/advanced/index.html",
+      "sha256": "23824233b78e49a977fe5b9150af53ddad5a85e12cb6133058e014f5528be515"
+    },
+    {
+      "bytes": 9706,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/docs_strict_build_v2/change_log/index.html",
+      "sha256": "e38b791073d4638badd6d835eb26abd38d0f1645804a84125c837d29bb6fae63"
+    },
+    {
+      "bytes": 5933,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/docs_strict_build_v2/frequently_asked_questions/index.html",
+      "sha256": "33a6bf8ffa1c6051cb0377e23153338bb5e6758371b146f356e3ed578233f9e8"
+    },
+    {
+      "bytes": 4362,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/docs_strict_build_v2/genindex.html",
+      "sha256": "400db86d5a4615c5c38465b1f754157aeb4f71b6a75c514c4b1a5c6d3179636c"
+    },
+    {
+      "bytes": 16392,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/docs_strict_build_v2/index.html",
+      "sha256": "b4e0829a46fd0cbb4bbf187adc0778a58d2f53ed72c0c007e7c5e86809e8bb5a"
+    },
+    {
+      "bytes": 5569,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/docs_strict_build_v2/other_software/index.html",
+      "sha256": "4e0b330aaaf6d7597d8faeffa662eff4fff06588d1cf3c5b8e7ddc0456d17de7"
+    },
+    {
+      "bytes": 9543,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/docs_strict_build_v2/performance_assessment/index.html",
+      "sha256": "259349b59698132c732e553f477213bfca1abdef696977a247606e4044e6a673"
+    },
+    {
+      "bytes": 4761,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/docs_strict_build_v2/search.html",
+      "sha256": "f3ee5c5e4170e3d7cca4ea063ca3410dc8615905f129bae11968f65d8f80a395"
+    }
+  ],
+  "html_pages": 9,
+  "limitations": [
+    "Local file existence checks do not test external URL availability or every fragment target.",
+    "A warning-free build does not validate every scientific claim or rendered layout."
+  ],
+  "local_links_and_assets_checked": 262,
+  "python_version": "3.12.3",
+  "source_pages": 7,
+  "sources": [
+    {
+      "bytes": 5097,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/docs/about/index.rst",
+      "sha256": "f851154572ca9c8440fdcc7d982187c2003db1df53f893497eababe1679558f0"
+    },
+    {
+      "bytes": 11615,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/docs/advanced/index.rst",
+      "sha256": "0b1aa0bedb4704de9131aea8e7aebdf07500d2f795a2b2c1cfefabfbc91aa40b"
+    },
+    {
+      "bytes": 2981,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/docs/change_log/index.rst",
+      "sha256": "bc6163811e24981a1c64be3826ceaaff21381b26d4106a54c3e73f90b0d11cb7"
+    },
+    {
+      "bytes": 671,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/docs/frequently_asked_questions/index.rst",
+      "sha256": "2f1d750cfe03f2f9517a7d689db09daa891881abca0d93573f6c3c0a3dd1d322"
+    },
+    {
+      "bytes": 5240,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/docs/index.rst",
+      "sha256": "32c98c6b8c4af7fdae455c81f200f8b7991001888aa3b802ad801232c51d3eae"
+    },
+    {
+      "bytes": 295,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/docs/other_software/index.rst",
+      "sha256": "c4d15ad9dee9a17cc17f3704b7ac3514f153738f3accc32f7c96773e44233693"
+    },
+    {
+      "bytes": 3347,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/docs/performance_assessment/index.rst",
+      "sha256": "f6b6a933e1d5a5dd564744355b64872bdeaf9173817e7d8aceebc832b8d4c44c"
+    },
+    {
+      "bytes": 5955,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/docs/conf.py",
+      "sha256": "7cd2eb3469b2506b1eb1f908c4dbf5f657bce6a8f82eec51f9690311a06c615e"
+    },
+    {
+      "bytes": 474,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/docs/pyproject.toml",
+      "sha256": "586c458930dff9af39549a0d0882fe75f51c4a4a241e3af684d2721bfd51ac30"
+    },
+    {
+      "bytes": 107182,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/docs/uv.lock",
+      "sha256": "5b57557fc3b4a5dc1c8cf2d28cda0db2d67214d7da0abffb9cea7d7442cd5b31"
+    },
+    {
+      "bytes": 3454,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/.github/workflows/ci.yml",
+      "sha256": "a57579b823545eccd29abcef489d5d76c7d7f42a87cd1460dc95955ddcff0942"
+    }
+  ],
+  "sphinx_version": "7.4.7",
+  "status": "strict_docs_build_and_local_link_checks_passed",
+  "warnings": {
+    "bytes": 0,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/docs_strict_build_warnings_v2.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}
