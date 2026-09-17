@@ -4364,3 +4364,15 @@ supplied topology retention. This smoke is not full-panel admission. Prepared
 four-CPU16GiB dependent audit batch to freeze and submit after validation/commit.
 
 Fullunit suite1,583passed34.46s; audit batch passes bash syntax validation.
+
+### Main Tree Admission Queued (2026-09-17)
+
+Committed/pushedc13b170; froze publication_simulation_tree_admission_v1 at
+c13b17002b22e5918d2e26883da2b3ab03efb5d8. Submitted21435 with dependency
+afterany:21405:21406,4CPU16GiB1hour,no requeue. Output destination
+benchmarks/results/simulation_tree_panel_admission_v1; log
+benchmarks/work/simulation_tree_admission_21435.log. Confirmed pending dependency.
+Own exact all210terminal gate remains mandatory even after scheduler dependency.
+
+Latest pollQfO21333RUNNING49:38; tree21406cells1-26COMPLETED0:0,27-28RUNNING,
+remainingpending. Existing cell21405_0 remains complete. No truth scores inspected.
