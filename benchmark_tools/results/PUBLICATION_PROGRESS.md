@@ -3258,3 +3258,7 @@ batch/output to investigate mechanism without replacing failed21315. Two added
 tests cover constructor/native separation and caller-array capture;29 focused
 probe/worker tests passed. Full unit suite1,173 passed29.84s. Candidate array21316
 and CPM21319 remain running; no scores or default changes.
+
+Enhanced observer executor984355c pushed/frozen at publication_qfo_native_boundary_v2.
+Submitted no-requeue job21321, separate output qfo_native_boundary_v2; scheduler
+confirmed RUNNING. Original21315 remains terminal failed with all artifacts.
