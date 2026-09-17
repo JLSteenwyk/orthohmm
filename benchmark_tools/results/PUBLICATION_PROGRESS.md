@@ -4673,3 +4673,14 @@ smoke; native benchmark commands and scientific data unchanged. Forty-six
 focused tests and fullunit1,722tests passed42.56s. Tests cover uncached identity,
 PID reuse/disappearance, membership/permission errors, cadence separation,
 invalid intervals, native completion and owned-process timeout cleanup.
+
+Committed/pushed65b8b04 and frozepublication_resource_host_cadence_v1 at
+65b8b04d8683392bfed948e5d343a7a06f862ef0. Submitted21622, then confirmed
+COMPLETED0:0 in39s. Native command35.2966s;35cgroup observations;3host scans
+bracketed command, maximumgap30.1346s, zero observation exceptions. Scans took
+1.2480-1.3719s. Both intervals detected competing CPU work,maximum46.1897cores.
+All linked sources/evidence rehashed successfully. Snapshot
+resource_host_cadence_smoke_20260917.json SHA130d2d4ea52f3731baa6ac4b835251c03d6533a3e7ca8ea642dd82ae89eb6e47.
+No scientific timing or quiet-window claim; monitor overhead remains included
+in4.5153s cgroupCPU. Native scaling command freeze and controlled scheduling
+remain due. QfO21548_0 confirmedrunning42:24 during smoke;21584pendingdependency.

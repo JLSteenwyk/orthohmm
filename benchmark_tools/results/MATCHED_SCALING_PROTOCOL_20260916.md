@@ -201,3 +201,19 @@ A prepared35-second parent/child Slurm smoke uses2CPU/1GiB,1-second cgroup
 waits,30-second host intervals and a90-second command timeout. It exercises
 the independent cadence rather than changing or repeating inference. Frozen
 execution and recorded output verification precede any use in scaling runs.
+
+The [cadence smoke report](resource_host_cadence_smoke_20260917.json) completed
+as21622, exit0, scheduler elapsed39seconds, frozen executor65b8b04. All linked
+source/evidence hashes were reread and verified. Three successful host scans
+bracketed the35.2966-second native command;35 resource observations spanned
+37.9928seconds. Largest gap between host scans was30.1346seconds. Host scans
+took1.2480,1.3390 and1.3719seconds. Cgroup CPU use was4.5153seconds, including
+wrapper/observer cost; this must not be labeled inference-only CPU cost.
+
+Both host intervals detected competing CPU work, with maximum46.1897 observed
+foreign average cores, zero observation exceptions and no resource sampling
+errors. The collector operates at its prescribed separate cadence, but this
+does not establish acceptable overhead for every command or a controlled timing
+window. None of the27 scientific scaling runs has started. Raw process
+inventories remain local. Snapshot SHA256:
+130d2d4ea52f3731baa6ac4b835251c03d6533a3e7ca8ea642dd82ae89eb6e47.
