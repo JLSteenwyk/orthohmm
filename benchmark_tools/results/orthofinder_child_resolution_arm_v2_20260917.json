@@ -1,0 +1,434 @@
+{
+  "baseline": null,
+  "child_tools": {
+    "FastTree": {
+      "argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/external-prefix-v1/fasttree-2.1.11/FastTree",
+        "-help"
+      ],
+      "exit_code": 0,
+      "file": {
+        "bytes": 298888,
+        "path": "/home/jlsteenwyk/projects/orthohmm-publication/external-prefix-v1/fasttree-2.1.11/FastTree",
+        "sha256": "8f9db34012ade374407809c275b909092b2ca1309726d5beaa52a0ad4294e3db"
+      },
+      "status": "resolved",
+      "stderr": "FastTree 2.1.11 No SSE3:\n  FastTree protein_alignment > tree\n  FastTree < protein_alignment > tree\n  FastTree -out tree protein_alignment\n  FastTree -nt nucleotide_alignment > tree\n  FastTree -nt -gtr < nucleotide_alignment > tree\n  FastTree < nucleotide_alignment > tree\nFastTree accepts alignments in fasta or phylip interleaved formats\n\nCommon options (must be before the alignment file):\n  -quiet to suppress reporting information\n  -nopr to suppress progress indicator\n  -log logfile -- save intermediate trees, settings, and model details\n  -fastest -- speed up the neighbor joining phase & reduce memory usage\n        (recommended for >50,000 sequences)\n  -n <number> to analyze multiple alignments (phylip format only)\n        (use for global bootstrap, with seqboot and CompareToBootstrap.pl)\n  -nosupport to not compute support values\n  -intree newick_file to set the starting tree(s)\n  -intree1 newick_file to use this starting tree for all the alignments\n        (for faster global bootstrap on huge alignments)\n  -pseudo to use pseudocounts (recommended for highly gapped sequences)\n  -gtr -- generalized time-reversible model (nucleotide alignments only)\n  -lg -- Le-Gascuel 2008 model (amino acid alignments only)\n  -wag -- Whelan-And-Goldman 2001 model (amino acid alignments only)\n  -quote -- allow spaces and other restricted characters (but not ' ) in\n           sequence names and quote names in the output tree (fasta input only;\n           FastTree will not be able to read these trees back in)\n  -noml to turn off maximum-likelihood\n  -nome to turn off minimum-evolution NNIs and SPRs\n        (recommended if running additional ML NNIs with -intree)\n  -nome -mllen with -intree to optimize branch lengths for a fixed topology\n  -cat # to specify the number of rate categories of sites (default 20)\n      or -nocat to use constant rates\n  -gamma -- after optimizing the tree under the CAT approximation,\n      rescale the lengths to optimize the Gamma20 likelihood\n  -constraints constraintAlignment to constrain the topology search\n       constraintAlignment should have 1s or 0s to indicates splits\n  -expert -- see more options\nFor more information, see http://www.microbesonline.org/fasttree/\n",
+      "stdout": ""
+    },
+    "diamond": {
+      "argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/diamond-2.0.13-build-v2/diamond",
+        "version"
+      ],
+      "exit_code": 0,
+      "file": {
+        "bytes": 4495096,
+        "path": "/home/jlsteenwyk/projects/orthohmm-publication/diamond-2.0.13-build-v2/diamond",
+        "sha256": "b79dfffa2878abcfa613f629e1b5da8e2994d2c76b6747f74b72ed6237758373"
+      },
+      "status": "resolved",
+      "stderr": "",
+      "stdout": "diamond version 2.0.13\n"
+    },
+    "famsa": {
+      "status": "missing"
+    },
+    "mafft": {
+      "argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/external-prefix-v1/mafft-7.525/bin/mafft",
+        "--version"
+      ],
+      "exit_code": 0,
+      "file": {
+        "bytes": 109856,
+        "path": "/home/jlsteenwyk/projects/orthohmm-publication/external-prefix-v1/mafft-7.525/bin/mafft",
+        "sha256": "1135cf24175156080a8bd8fb7922b84bf6c3a125a0da392e96e7e090e488ee1d"
+      },
+      "status": "resolved",
+      "stderr": "v7.525 (2024/Mar/13)\n",
+      "stdout": ""
+    },
+    "mcl": {
+      "argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/mcl-prefix-v3/bin/mcl",
+        "--version"
+      ],
+      "exit_code": 0,
+      "file": {
+        "bytes": 1125112,
+        "path": "/home/jlsteenwyk/projects/orthohmm-publication/mcl-prefix-v3/bin/mcl",
+        "sha256": "795ec1e8c45ae497a0596e4dd2e5646b1e4e6fc9b6d82579e3a08d7e9446834a"
+      },
+      "status": "resolved",
+      "stderr": "",
+      "stdout": "mcl 14-137\nCopyright (c) 1999-2014, Stijn van Dongen. mcl comes with NO WARRANTY\nto the extent permitted by law. You may redistribute copies of mcl under\nthe terms of the GNU General Public License.\n"
+    }
+  },
+  "conda_prefix": null,
+  "historical_execution_proven": false,
+  "limitations": [
+    "Current resolution/version probes, not historical execution tracing.",
+    "No inference, accuracy or timing admission."
+  ],
+  "machine": "aarch64",
+  "outer_tools": {
+    "FastTree": {
+      "argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/external-prefix-v1/fasttree-2.1.11/FastTree",
+        "-help"
+      ],
+      "exit_code": 0,
+      "file": {
+        "bytes": 298888,
+        "path": "/home/jlsteenwyk/projects/orthohmm-publication/external-prefix-v1/fasttree-2.1.11/FastTree",
+        "sha256": "8f9db34012ade374407809c275b909092b2ca1309726d5beaa52a0ad4294e3db"
+      },
+      "status": "resolved",
+      "stderr": "FastTree 2.1.11 No SSE3:\n  FastTree protein_alignment > tree\n  FastTree < protein_alignment > tree\n  FastTree -out tree protein_alignment\n  FastTree -nt nucleotide_alignment > tree\n  FastTree -nt -gtr < nucleotide_alignment > tree\n  FastTree < nucleotide_alignment > tree\nFastTree accepts alignments in fasta or phylip interleaved formats\n\nCommon options (must be before the alignment file):\n  -quiet to suppress reporting information\n  -nopr to suppress progress indicator\n  -log logfile -- save intermediate trees, settings, and model details\n  -fastest -- speed up the neighbor joining phase & reduce memory usage\n        (recommended for >50,000 sequences)\n  -n <number> to analyze multiple alignments (phylip format only)\n        (use for global bootstrap, with seqboot and CompareToBootstrap.pl)\n  -nosupport to not compute support values\n  -intree newick_file to set the starting tree(s)\n  -intree1 newick_file to use this starting tree for all the alignments\n        (for faster global bootstrap on huge alignments)\n  -pseudo to use pseudocounts (recommended for highly gapped sequences)\n  -gtr -- generalized time-reversible model (nucleotide alignments only)\n  -lg -- Le-Gascuel 2008 model (amino acid alignments only)\n  -wag -- Whelan-And-Goldman 2001 model (amino acid alignments only)\n  -quote -- allow spaces and other restricted characters (but not ' ) in\n           sequence names and quote names in the output tree (fasta input only;\n           FastTree will not be able to read these trees back in)\n  -noml to turn off maximum-likelihood\n  -nome to turn off minimum-evolution NNIs and SPRs\n        (recommended if running additional ML NNIs with -intree)\n  -nome -mllen with -intree to optimize branch lengths for a fixed topology\n  -cat # to specify the number of rate categories of sites (default 20)\n      or -nocat to use constant rates\n  -gamma -- after optimizing the tree under the CAT approximation,\n      rescale the lengths to optimize the Gamma20 likelihood\n  -constraints constraintAlignment to constrain the topology search\n       constraintAlignment should have 1s or 0s to indicates splits\n  -expert -- see more options\nFor more information, see http://www.microbesonline.org/fasttree/\n",
+      "stdout": ""
+    },
+    "diamond": {
+      "argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/diamond-2.0.13-build-v2/diamond",
+        "version"
+      ],
+      "exit_code": 0,
+      "file": {
+        "bytes": 4495096,
+        "path": "/home/jlsteenwyk/projects/orthohmm-publication/diamond-2.0.13-build-v2/diamond",
+        "sha256": "b79dfffa2878abcfa613f629e1b5da8e2994d2c76b6747f74b72ed6237758373"
+      },
+      "status": "resolved",
+      "stderr": "",
+      "stdout": "diamond version 2.0.13\n"
+    },
+    "famsa": {
+      "status": "missing"
+    },
+    "mafft": {
+      "argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/external-prefix-v1/mafft-7.525/bin/mafft",
+        "--version"
+      ],
+      "exit_code": 0,
+      "file": {
+        "bytes": 109856,
+        "path": "/home/jlsteenwyk/projects/orthohmm-publication/external-prefix-v1/mafft-7.525/bin/mafft",
+        "sha256": "1135cf24175156080a8bd8fb7922b84bf6c3a125a0da392e96e7e090e488ee1d"
+      },
+      "status": "resolved",
+      "stderr": "v7.525 (2024/Mar/13)\n",
+      "stdout": ""
+    },
+    "mcl": {
+      "argv": [
+        "/home/jlsteenwyk/projects/orthohmm-publication/mcl-prefix-v3/bin/mcl",
+        "--version"
+      ],
+      "exit_code": 0,
+      "file": {
+        "bytes": 1125112,
+        "path": "/home/jlsteenwyk/projects/orthohmm-publication/mcl-prefix-v3/bin/mcl",
+        "sha256": "795ec1e8c45ae497a0596e4dd2e5646b1e4e6fc9b6d82579e3a08d7e9446834a"
+      },
+      "status": "resolved",
+      "stderr": "",
+      "stdout": "mcl 14-137\nCopyright (c) 1999-2014, Stijn van Dongen. mcl comes with NO WARRANTY\nto the extent permitted by law. You may redistribute copies of mcl under\nthe terms of the GNU General Public License.\n"
+    }
+  },
+  "package_sources": [
+    {
+      "bytes": 851,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/__init__.py",
+      "sha256": "fdf01b248f3a691292802e94b6a39758bce6e8f8d04330e93b41f7446476d06d"
+    },
+    {
+      "bytes": 65,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/__main__.py",
+      "sha256": "23f930bf8581e17b1e7ed0e1f5b234b993d59d8377a6c33e5a9255bcf9407791"
+    },
+    {
+      "bytes": 520,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/_version.py",
+      "sha256": "a872cc0baf1ac1e5319805e63022a7d406d257df6b99f6a0ba5a557142bacb7f"
+    },
+    {
+      "bytes": 3164,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/citation.py",
+      "sha256": "a33fdf4f5501421a342e3a25aa5720e820804439bd4f2a858e3c118b5fc0453c"
+    },
+    {
+      "bytes": 0,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/comparative_genomics/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 45209,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/comparative_genomics/orthologues.py",
+      "sha256": "64a4a11a0a184572c14bfbc71eef977f5cd7ade7ed41adaf1f85ae93e3354f65"
+    },
+    {
+      "bytes": 19164,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/comparative_genomics/stats.py",
+      "sha256": "d6fd249da7e9595fc71f31529a399498087c93a155f4ac13a3d570c52d7abd70"
+    },
+    {
+      "bytes": 0,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/file_updates/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 9670,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/file_updates/file_updates.py",
+      "sha256": "2e493b0b3cae8d9af7bb7a5e6ee92443db70e6b41226c53dc7a5bfc5a820d882"
+    },
+    {
+      "bytes": 23048,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/file_updates/ogs.py",
+      "sha256": "e45c16079aa1188f0784323075eaeac09e8fd3c677d8e4884dc83f58720e3911"
+    },
+    {
+      "bytes": 13403,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/file_updates/trees.py",
+      "sha256": "ba94f0265f1c2b97b6e772a6d8d30d263ac576d16257dccd54c5344f3c4d9436"
+    },
+    {
+      "bytes": 0,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/gene_tree_inference/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 6412,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/gene_tree_inference/infer_trees.py",
+      "sha256": "176745c415b6c2650062a9969f5b81944beda13bb04723146f7c039c0e2457d1"
+    },
+    {
+      "bytes": 20086,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/gene_tree_inference/resolve.py",
+      "sha256": "4da1486afab8dbd2402bd934f89e746f9abfdd812e013def4b3afee91980b6e4"
+    },
+    {
+      "bytes": 113199,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/gene_tree_inference/trees2ologs_of.py",
+      "sha256": "e1e570832d85d807d16579718648b735e792909c07a5a69012125b49ea600d50"
+    },
+    {
+      "bytes": 0,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/orthogroups/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 16305,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/orthogroups/accelerate.py",
+      "sha256": "0501304748d8e983381f13d137d3831059c55a4972f040da302779c58997f0be"
+    },
+    {
+      "bytes": 15060,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/orthogroups/gathering.py",
+      "sha256": "d942df722f3d9c94271e357683e080603ee3f958e6f805869d7d6d6cb5a40e3f"
+    },
+    {
+      "bytes": 8055,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/orthogroups/orthogroups_set.py",
+      "sha256": "d2e59743428e04c1fee5e4c77c000d327c809d4b9403351ff55ff70579adfa2e"
+    },
+    {
+      "bytes": 11460,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/orthogroups/sample_genes.py",
+      "sha256": "4458fa603a6f2a90b7f4eee018169697f78dac5c2164134440c2fe886cb98e21"
+    },
+    {
+      "bytes": 0,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/run/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 10056,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/run/check_dependencies.py",
+      "sha256": "0aeb1b7a3562801a02c2497841fe7f139848259d1dbef28979e6e1ef35b4dcf9"
+    },
+    {
+      "bytes": 5438,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/run/config.json",
+      "sha256": "10a10a93262c9676865f03ba05b2b77d48285c312dca435d2458939894a474b3"
+    },
+    {
+      "bytes": 12052,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/run/helpinfo.py",
+      "sha256": "3fdefea21aac370330372221d4bc00dece427a46e660ec16e46493eb9123a626"
+    },
+    {
+      "bytes": 33886,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/run/main.py",
+      "sha256": "a4b5222890d987bdef7fa0c1ff6031e55c5a0a27fcbbc45c9b7be02dfd252588"
+    },
+    {
+      "bytes": 46945,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/run/process_args.py",
+      "sha256": "ba9f81896bfc1313bb50a0cda5acef8027c7bb38b33ca999aa78041c0ff81f82"
+    },
+    {
+      "bytes": 8763,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/run/run_commands.py",
+      "sha256": "10aeb00c3affb31175a337478957807b79b153b9b91597b29e4dccb782d8d387"
+    },
+    {
+      "bytes": 8484,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/run/run_info.py",
+      "sha256": "f436e2677a3714cfcb7aa9c78f8c9a37063a84afa815e74a82f4eee2848b46bb"
+    },
+    {
+      "bytes": 16579,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/run/species_info.py",
+      "sha256": "06beee8f0b1ad8f258b01aa76d8818fc6fc31beca54b6a3bfc65a97fa2dd78bd"
+    },
+    {
+      "bytes": 0,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/tools/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 814,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/tools/astral.py",
+      "sha256": "566a0ac12955ed2cc8bc7034d7a092f358b7b6a740c6a6a29414042e06fa9a39"
+    },
+    {
+      "bytes": 10030,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/tools/consensus_tree.py",
+      "sha256": "b504bd66028a808d14f85fa3974fed69d65d9e06225a67110c790dd4fa1c06a8"
+    },
+    {
+      "bytes": 16504,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/tools/dendroblast.py",
+      "sha256": "ee2313ba8af51371a54e1b39a4d33802dc25266ee302d4c28ccf3b71ede04846"
+    },
+    {
+      "bytes": 15771,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/tools/mcl.py",
+      "sha256": "f51f5fac8377a40c27e66edffcd147430d6c5990a563bd26684a35fbd121d590"
+    },
+    {
+      "bytes": 16777,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/tools/newick.py",
+      "sha256": "52e7f9c29046dfb1bcf9d12f7fbc4c4f4b98511238967070b8fbf9495b2b05f7"
+    },
+    {
+      "bytes": 12352,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/tools/stag.py",
+      "sha256": "f8a2a4952e90b8b8306d5bf6b87b7cf36c1ece0ab9918ba0066c19c1ce257212"
+    },
+    {
+      "bytes": 36335,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/tools/stride.py",
+      "sha256": "69e45673035a5b112d620eb2724e207f2ee03580f92a0a72c3eb63f89e6f7fa2"
+    },
+    {
+      "bytes": 65469,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/tools/tree.py",
+      "sha256": "6581d8f8329cb330d5c76322dc6456fd8e76046629aa391531269230e3082c59"
+    },
+    {
+      "bytes": 30409,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/tools/trees_msa.py",
+      "sha256": "780cf0691ae41eae1278f10216fa34a0ecac708f5ed945c94fda22ea6d2d2745"
+    },
+    {
+      "bytes": 9571,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/tools/trim.py",
+      "sha256": "1794574ca2a4c8a6fc62b5e808614119113bc6123d505a08725e55991105eeca"
+    },
+    {
+      "bytes": 23627,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/tools/waterfall.py",
+      "sha256": "304324b1967f917dd523c9d98a7d0c7cffba7cd730ac8b31176ef4f0f80918c8"
+    },
+    {
+      "bytes": 0,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/utils/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 5251,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/utils/blast_file_processor.py",
+      "sha256": "c7a0aed3a773b2fb377a953c17dfde581a74b299b678f3b174659a2615f73e0c"
+    },
+    {
+      "bytes": 10450,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/utils/fasta_processor.py",
+      "sha256": "cc9880875cf298192e7194c5c1134005dcfbe7e79215351ff5855486849b4055"
+    },
+    {
+      "bytes": 60376,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/utils/files.py",
+      "sha256": "eb26ae6f62eb02aa1311414e0f3cc297aa8b20e8dd441e0b307ffc4e3dd69a66"
+    },
+    {
+      "bytes": 2859,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/utils/matrices.py",
+      "sha256": "0d7452e0c935e6364a3833b1e31393a53344d46f4fa4fdd225c3dcf05ac5520b"
+    },
+    {
+      "bytes": 19382,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/utils/parallel_task_manager.py",
+      "sha256": "834a1e9fb28d0cc458f13b4b4532390d76b999db686593fe1593895a63c00a7a"
+    },
+    {
+      "bytes": 41860,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/utils/program_caller.py",
+      "sha256": "10576ebdf0f39c40726ec952d443e241b46c4bc6f57856be52072ff5f19563e4"
+    },
+    {
+      "bytes": 2208,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/utils/split_ortholog_files.py",
+      "sha256": "612aab4ba5177ed017ad480411f1009d3010c9eb6d6bac8637883568be4662c0"
+    },
+    {
+      "bytes": 29851,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/lib/python3.12/site-packages/orthofinder/utils/util.py",
+      "sha256": "673156c3c58d3d633e027a58b1f9e8d5afb73e660bbcf3ae4f520d2ebe491912"
+    }
+  ],
+  "packages": {
+    "Pygments": "2.20.0",
+    "biopython": "1.87",
+    "bottle": "0.13.4",
+    "brotli": "1.2.0",
+    "certifi": "2026.6.17",
+    "charset-normalizer": "3.4.9",
+    "cheroot": "11.1.2",
+    "cloudpickle": "3.1.2",
+    "ete4": "4.4.0",
+    "idna": "3.18",
+    "jaraco.functools": "4.6.0",
+    "joblib": "1.5.3",
+    "markdown-it-py": "4.2.0",
+    "mdurl": "0.1.2",
+    "more-itertools": "11.1.0",
+    "narwhals": "2.24.0",
+    "numpy": "2.5.1",
+    "orthofinder": "3.1.5",
+    "packaging": "26.3",
+    "pip": "24.0",
+    "requests": "2.34.2",
+    "rich": "15.0.0",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.0",
+    "setuptools": "84.0.0",
+    "threadpoolctl": "3.6.0",
+    "urllib3": "2.7.0",
+    "wheel": "0.48.0"
+  },
+  "python": "3.12.3 | packaged by conda-forge | (main, Apr 15 2024, 18:17:49) [GCC 12.3.0]",
+  "python_executable": {
+    "bytes": 7802112,
+    "path": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthofinder/bin/python3.12",
+    "sha256": "cd17cec425b9903b2012fd056b8373c249f94e7e9aa0b48f604121ad502c0a6f"
+  },
+  "source": {
+    "bytes": 3259,
+    "path": "/home/jlsteenwyk/projects/orthohmm-publication/arm_recipe_v3/inspect_orthofinder_runtime.py",
+    "sha256": "148fc81c1dc8ef72a4dee3a03cb475d4f281d963a3fd2e575538453baf84a8f7"
+  },
+  "status": "current_resolution_observed"
+}

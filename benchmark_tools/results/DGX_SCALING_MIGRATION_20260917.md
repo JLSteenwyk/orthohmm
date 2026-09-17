@@ -243,3 +243,69 @@ pip-pin-transitives-v1 SHA
 (both prefixed orthofinder), and dgx_diamond_2111_cmake_v1.txt SHA
 42f3d395eaed8cffcb8dad0f097317da6a03798aab611ae28dee343800e867e9.
 Three focused inspection tests pass; no benchmark inference launched.
+
+## Companion Builds and Preserved Failures
+
+DIAMOND2.0.13 source tag is commit2c66a0cc1d22cfd790141a94e22cb1359c40cdba.
+GCC13.3/CMakeRelease/X86=OFF initially failed because upstream MemoryPool.tcc
+uses uintptr_t without its standard header. Fresh build-v2 uses
+`-DCMAKE_CXX_FLAGS=-include cstdint`, without modifying algorithm source.
+Compilation and version checks pass. Built-in `diamond test --threads 4`
+passes19/20 on ARM (twice) and on the bundled x86 baseline: XML format fails
+on both; all other cases pass. Retain this common failure, not a20/20 claim.
+This is not complete cross-architecture output equivalence.
+
+Verified source downloads before building:
+
+- MAFFT: https://mafft.cbrc.jp/alignment/software/mafft-7.525-with-extensions-src.tgz,
+  SHA2876f4adc1a2de4ed206bc40896763bf208bf1a02bda52f8bfdd91cf52d73e4a.
+- MCL: https://micans.org/mcl/src/mcl-14-137.tar.gz,
+  SHAb5786897a8a8ca119eb355a5630806a4da72ea84243dba85b19a86f14757b497.
+- FastTree2.1.11: upstream morgannprice/fasttree commit
+  f76eebba0d594df96723696a1167b332e567b1cd, FastTree.c
+  SHA04d14aa81962765b4d2e47a5a2ca6b97bed09ba0fac3f695c23df278616941e0.
+- FastTree2.2.0: upstream tagv2.2.0 commit
+  29c5e62fbcd93230ee325f9c6a17b81f00e3c72a, FastTree.c
+  SHA975202a6b74c9996af871404ff043bb2152edcbda539035662514bc12d1f3431.
+
+`build_dgx_external_tools.sh` records exact compilation/install commands and
+rejects existing build/prefix directories. FastTree2.1.11 is single-precision
+NoSSE3 on ARM;2.2.0 retains default double precision and is compiled with
+OpenMP SIMD directives (not the multithreaded OPENMP variant). Compiler
+warnings are retained. MAFFT core7.525 builds with its default multithread
+support; unused RNA structural extensions are not installed. Initial script
+completed both FastTree builds and MAFFT installation but failed at MCL's
+2004system-detection scripts, which do not recognize aarch64.
+
+Fresh MCLbuild-v2 with pinned system config.guess/config.sub passed configure
+but failed at link time under GCC13's default no-common semantics. The final
+`build_dgx_mcl.sh` builds in freshv3 directories using the same detection
+scripts and `CFLAGS=-g -O2 -fcommon`, restoring the legacy common-symbol
+behavior without algorithm source edits. Both failures remain on disk.
+MCL14-137 installation/version check now pass. A6-node/7-edge graph smoke
+atI1.2/4threads returns identical two clusters {a,b,c},{x,y,z} on x86 andARM;
+this is only a small functional check.
+
+Updated child-resolution snapshot
+orthofinder_child_resolution_arm_v2_20260917.json (SHA
+5f57fdcf6e81311f1c6c2ae5b8f1f4b435393c2c91a488442bf164cd5925161a)
+confirms2.0.13/2.1.11/7.525/14-137 with explicit tool directories onPATH.
+Inspector now includes FAMSA: **missing on ARM**. Frozen OrthoFinder defaults
+to FAMSA, not MAFFT (process_args.py msa_program); bundled version reports
+2.2.3-1669fc1. This exact companion and any remaining STAG/FastME dependency
+checks are still required before end-to-end validation. Do not silently
+replace its default alignment method with MAFFT.
+
+Build/regression logs copied under benchmarks/work, with SHA256:
+
+| File | SHA256 |
+| --- | --- |
+| diamond-2.0.13-build.log | de05768a62c02a0ecaaf456e05d4100b2820cccd2128c8e2ee1db55aa2abbc95 |
+| diamond-2.0.13-build-v2.log | 3347fe3eb588d571899b13f866650d0580fad16e221b93b70d233129ab64494b |
+| diamond-regression-v2.log | 1b19dfbe1c3bc2f8ee7b4cd9a051a96bcea7b51bc81b8c88d9b4f8bb8fc12e39 |
+| external-tools-build-v1.log | f9e3fc7484cc81da8f913fc68f26b0b433c70146a04d35f46bd81077e2fccd6c |
+| mcl-build-v2.log | cbb0459078ce7b43bacc8d2db8a613b96241c1be548c732bdb622bcdc50168e3 |
+| mcl-build-v3.log | 546ab414c4d60764b8e9ac64dfd35f239709536692988abfcb56194f9a6502dc |
+
+Both shell recipes pass bash syntax checks and runtime inspector tests3/3.
+No benchmark inference or scientific timing was launched.

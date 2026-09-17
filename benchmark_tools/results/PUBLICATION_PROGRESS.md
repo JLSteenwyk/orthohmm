@@ -4840,3 +4840,23 @@ admittedasbaseline-matched. Obtain correct child-version toolchain and explicitl
 pin resolution for timing; no frozen method changes or runsstarted.
 Full local unit suite1,791passed44.24s. Claim ledger now explicitly flags
 child-PATH historical attribution and unproven general ARM/x86 equivalence.
+
+### Native Companion Versions Built on Spark (2026-09-17)
+
+Previous continuation installed OrthoFinder and audited childPATH, pushed8ac586f.
+Re-read objective; QfO21548_2confirmedlive7:03and9:54,21584pending.
+Built upstreamDIAMOND2.0.13 with compiler-only cstdint inclusion after preserving
+the original missing-header failure. Native test19/20 onARM(twoattempts) and
+bundledx86: sameXMLformatfailure, other19pass. No blanket equivalence claim.
+
+Checksum-pinned recipes built FastTree2.1.11NoSSE3/FastTree2.2.0double and
+MAFFT7.525core. MCL14-137required updated system-detection scripts and legacy
+-fcommon behavior; twofailed builds preserved, freshv3installed successfully.
+Simple6-nodegraph smoke yields same two clusters atI1.2/4threads onbothhosts.
+Warnings/buildlogs/sourceURLs/hashes recorded in DGXmigration document.
+
+Updated effective-childPATH snapshot confirms desired fourversions. Expanded
+inspector to includeFAMSA: missing onARM, but this is OrthoFinder3.1.5's
+defaultMSAprogram (bundled2.2.3-1669fc1). ExactFAMSA and remainingdependency
+checks are next; no silentMAFFTsubstitution. Bothbashrecipes syntaxcheckpass,
+3inspectorunitpass; no frozen inference change or scientific timing started.

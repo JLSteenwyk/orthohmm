@@ -11,7 +11,8 @@ import shutil
 import subprocess
 import sys
 
-FLAGS = {"diamond": ["version"], "FastTree": ["-help"], "mafft": ["--version"], "mcl": ["--version"]}
+FLAGS = {"diamond": ["version"], "FastTree": ["-help"], "mafft": ["--version"],
+         "mcl": ["--version"], "famsa": ["-h"]}
 
 
 def file_record(path):
