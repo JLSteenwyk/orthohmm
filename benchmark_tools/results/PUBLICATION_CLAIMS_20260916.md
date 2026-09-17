@@ -56,7 +56,8 @@ evidence that an experiment completed or a biological hypothesis is true.
   correctness and upstream search effects remain unresolved.
 - [Docs dependency remediation](DOCS_DEPENDENCY_SECURITY_20260917.md) checks
   all21 retained alerts against the updated lock with zero affected versions.
-  Post-push GitHub closure is pending; this is not a host or inference-runtime
+  The immediate post-push API check still reports21open alerts; closure remains
+  unverified. This is not a host or inference-runtime
   security audit. The docs build still reports14 diagnostics.
 
 ## Historical Execution Gates

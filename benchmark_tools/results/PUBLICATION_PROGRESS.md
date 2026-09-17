@@ -2,6 +2,10 @@
 
 ## Docs Dependency Security Remediation (2026-09-17)
 
+Post-push check afterd29cdd8stillreturns21open GitHub alerts; retained in
+`dependency_alerts_after_20260917.json`. No server-side closure claim or manual
+dismissal. Local version-range audit remains zero affected locked versions.
+
 Previous turn made progress with case stage tracing, pushed22b1ed6. Re-read
 objective. Read-only GitHub API snapshot identifies all21open dependency alerts
 in docs/uv.lock (1critical/7high/11medium/2low), not inference requirements.

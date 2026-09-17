@@ -58,8 +58,10 @@ reachable from OrthoHMM's inference CLI.
 - The updated lock SHA256 is
   `5b57557fc3b4a5dc1c8cf2d28cda0db2d67214d7da0abffb9cea7d7442cd5b31`.
 
-GitHub alert closure must be checked separately after push; local range checks
-do not establish server-side closure. Future advisories, existing documentation
+The immediate [post-push snapshot](dependency_alerts_after_20260917.json) after
+commitd29cdd8 still reports21open alerts. Local range checks do not establish
+server-side closure; recheck after GitHub dependency processing. No alerts
+were manually dismissed. Future advisories, existing documentation
 errors, action-version hardening and historical environment exposure remain
 separate release considerations. Do not silently update frozen environments
 or call them safe because the current docs lock has been remediated.
