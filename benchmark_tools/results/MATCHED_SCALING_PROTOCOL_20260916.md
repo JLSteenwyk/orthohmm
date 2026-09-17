@@ -130,3 +130,27 @@ Twelve focused tests cover identity, scope, counter and uncertainty handling.
 The probe does not observe short-lived work between snapshots, I/O, GPU or
 memory-bandwidth contention. Whole-run integration and a controlled execution
 window remain required. None of the 27 scientific scaling runs has begun.
+
+## Command-Lifetime Workload Collection
+
+The command wrapper now supports `--monitor-host`, using
+`command_host_monitor.py` to stream local raw process snapshots before command
+launch, during timeout-controlled waits, and after command exit. Only the last
+host snapshot is held for interval comparisons. The report records whether
+samples bracket the entire command, interval classifications, observation errors,
+maximum observed competing CPU use and the largest between-snapshot gap.
+
+Missing workload observations never become quiet evidence. Detected competition
+takes precedence in classification; otherwise sampling errors, process churn or
+incomplete coverage yield an inconclusive result. Workload errors do not change
+the native command exit status or stop its execution. The workload result is
+separate from the cgroup resource-measurement result. Every classification retains
+`controlled_workload_verified: false`: visibility between samples, storage/GPU
+contention and host exclusivity remain unproven. Collection overhead is included
+in measured resources. Raw whole-host process inventories remain local rather
+than entering published result tables.
+
+Prepared a dedicated two-CPU, one-GiB parent/child Slurm smoke test of the complete
+collector lifecycle. This is not one of the 27 scientific scaling runs. A
+controlled execution window, frozen scientific commands and native-output
+admission remain required before those comparisons.

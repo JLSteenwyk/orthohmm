@@ -4376,3 +4376,28 @@ Own exact all210terminal gate remains mandatory even after scheduler dependency.
 
 Latest pollQfO21333RUNNING49:38; tree21406cells1-26COMPLETED0:0,27-28RUNNING,
 remainingpending. Existing cell21405_0 remains complete. No truth scores inspected.
+
+### Whole-Command Workload Monitoring Prepared (2026-09-17)
+
+Previous turn progressed independent tree-panel admission code and dependent
+job21435. Re-read objective and revalidatedQfO21333RUNNING50:23, tree21406cells1-28
+complete,29-30running,21435pending. No live analysis restarted.
+
+Added streaming command_host_monitor.py and opt-in --monitor-host to the measured
+command wrapper. Samples before launch, during execution and after exit preserve
+raw host evidence locally. Aggregate records bracket coverage, observation
+errors, contention and inconclusive intervals. Sampling errors never certify a
+quiet host and do not kill or alter native process completion. No exclusivity
+claim, no unrelated process modification, no scientific scaling run launched.
+
+Focused lifecycle/host tests23passed0.92s, including native execution despite
+workload failures, missing coverage, churn, detected contention and explicitly
+uncertified negative observations. Prepared two-CPUone-GiB Slurm smoke batch with
+three-second parent/child workload. Batch syntax validated; full suite in progress.
+
+Fullunit suite1,593passed36.62s. During verification, QfO21333 becameFAILED1:0
+after51:17. Native worker returned0 and allfour clustering records reportchecked;
+the parent rejected labelsstrict_profiles/strict_profiles_refined because its
+guard expectedprofiles/profiles_refined. Frozen scientific replay source emits
+the strict labels. No new inference submitted; preserve raw outputs and recover
+postflight/admission checks transparently rather than changing failed records.

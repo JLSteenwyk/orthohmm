@@ -77,6 +77,24 @@ def test_refuse_existing_output(tmp_path):
         measure(["unused"], tmp_path, 123, 1, 1024, 5., snapshot_fn=snapshot)
 
 
+@pytest.mark.parametrize("failure", [False, True])
+def test_host_monitor_does_not_change_native_completion(tmp_path, failure):
+    def host_snapshot():
+        if failure:
+            raise OSError("host fixture failure")
+        now = time.monotonic()
+        return {"started_monotonic_s": now, "finished_monotonic_s": now,
+                "processes": [], "errors": []}
+    result = measure([sys.executable, "-c", "import time; time.sleep(.1); print('finished')"],
+                     tmp_path / "run", 123, 1, 1024, 5., .02, snapshot,
+                     monitor_host=True, host_snapshot_fn=host_snapshot)
+    assert result["status"] == "command_exited_zero" and result["exit_code"] == 0
+    assert result["host_workload"]["status"] == ("inconclusive" if failure else "no_large_persistent_competitor_observed")
+    assert result["controlled_workload_verified"] is False
+    assert result["host_workload"]["command_bracketed_by_samples"] is not failure
+    assert "host_samples.jsonl" in result
+
+
 def test_timeout_cleanup_reaches_child_that_ignores_term():
     child_code = "import signal,time; signal.signal(signal.SIGTERM,signal.SIG_IGN); print('ready',flush=True); time.sleep(30)"
     parent_code = ("import subprocess,sys,time; "

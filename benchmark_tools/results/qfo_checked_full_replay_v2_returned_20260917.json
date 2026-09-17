@@ -1,0 +1,150 @@
+{
+  "command": [
+    "/home/bizon/anaconda3/bin/python",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_replay_native_v1/benchmark_tools/replay_high_sensitivity.py",
+    "--accuracy-checkpoint",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthohmm_high_sensitivity_isolated/output/orthohmm_working_res/high_sensitivity_checkpoint",
+    "--checkpoint-sha256",
+    "b90c787f050a087adeeb81b1cace18c9cbb30e1724926a40a1df6d7e49bd549c",
+    "--fasta-directory",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input",
+    "--output-directory",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_checked_full_replay_v2/replay",
+    "--json",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_checked_full_replay_v2/replay.json",
+    "--cpu",
+    "32",
+    "--matrix",
+    "BLOSUM62",
+    "--cpm-resolution",
+    "0.1",
+    "--leiden-seed",
+    "4",
+    "--profile-iterations",
+    "1",
+    "--profile-min-species",
+    "1"
+  ],
+  "counts": {
+    "calibrated_profiles": 0,
+    "final_singleton_assignment_edges": 1250874,
+    "genes": 976504,
+    "multipass_edges": 25195078,
+    "profile_candidates": 19519955,
+    "profile_multipass_edges": 25168957,
+    "profiles_built": 57883,
+    "rbnh_edges": 24148515,
+    "refinement_directed_hits": 0,
+    "significant_hits": 88729858,
+    "significant_profile_hits": 1966961,
+    "singleton_assignment_edges": 1361622,
+    "species": 78,
+    "strict_profile_edges": 98085
+  },
+  "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_replay_native_v1",
+  "generated_at": "2026-09-17T16:18:58.199795+00:00",
+  "git": {
+    "commit": "49ab110358c0b4c73806a640de9068494a311f63",
+    "dirty": false
+  },
+  "input": {
+    "accuracy_evaluated": false,
+    "auditor": {
+      "bytes": 4044,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_replay_native_v1/benchmark_tools/audit_accuracy_checkpoint.py",
+      "sha256": "b71fa9cf1d2cb954206e61179535d7e22fc39946c4de97af6fa45533f7eb9643"
+    },
+    "limitations": "Checks hashes and numeric integrity, not FASTA/source equivalence, hit completeness or duplicate ordered pairs.",
+    "manifest": {
+      "bytes": 806,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthohmm_high_sensitivity_isolated/output/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json",
+      "sha256": "b90c787f050a087adeeb81b1cace18c9cbb30e1724926a40a1df6d7e49bd549c"
+    },
+    "schema_version": 1,
+    "status": "numeric_checkpoint_verified",
+    "summary": {
+      "gene_names_lexically_sorted": true,
+      "genes": 976504,
+      "hits": 88729858,
+      "maximum_score": 7.4837209302325585,
+      "minimum_score": 0.0047840368172403286,
+      "nonpositive_scores": 0,
+      "self_hits": 976195,
+      "species": 78
+    }
+  },
+  "parameters": {
+    "accuracy_profile": "high_sensitivity",
+    "cpm_resolution": 0.1,
+    "jackknife_profile_thresholds": false,
+    "jackknife_single_copy_profiles": false,
+    "leiden_seed": 4,
+    "matrix": "BLOSUM62",
+    "profile_expansion": true,
+    "profile_iterations": 1,
+    "profile_min_species": 1
+  },
+  "peak_process_rss_gib": 7.756489,
+  "profile_iterations": [
+    {
+      "calibrated_profiles": 0,
+      "iteration": 1,
+      "profile_candidates": 19519955,
+      "profiles_built": 57883,
+      "significant_profile_hits": 1966961,
+      "strict_profile_edges": 98085
+    }
+  ],
+  "schema_version": 1,
+  "source": {
+    "bytes": 16533,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_replay_native_v1/benchmark_tools/replay_high_sensitivity.py",
+    "sha256": "1e220981be64cc75ba772968b9d53fbaea9638da4fff9c48071fec48d33bd6eb"
+  },
+  "stages": [
+    {
+      "clusters": 308190,
+      "label": "multipass",
+      "output": {
+        "bytes": 23667336,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_checked_full_replay_v2/replay/orthogroups_multipass.txt",
+        "sha256": "28e8d61e5377759f9bd5f2f9db992d6e28895365a2ddb1fc42b2b57d9f030026"
+      }
+    },
+    {
+      "clusters": 393231,
+      "label": "multipass_refined",
+      "output": {
+        "bytes": 23667336,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_checked_full_replay_v2/replay/orthogroups_multipass_refined.txt",
+        "sha256": "dc6952565562562b8856d8dc24b159abf02184c3bd1f9cf322f222be7510f2df"
+      }
+    },
+    {
+      "clusters": 305656,
+      "label": "strict_profiles",
+      "output": {
+        "bytes": 23667336,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_checked_full_replay_v2/replay/orthogroups_profiles.txt",
+        "sha256": "b3cfa6e570bdb7795016022b2c7b52d73bd07f09995150e2b4f5f10f5ca187b9"
+      }
+    },
+    {
+      "clusters": 390980,
+      "label": "strict_profiles_refined",
+      "output": {
+        "bytes": 23667336,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_checked_full_replay_v2/replay/orthogroups_profiles_refined.txt",
+        "sha256": "b145839d6d7ef4654134652a6ecf3d51ffe3657fd2968ef0281b46bdc87ce8fd"
+      }
+    }
+  ],
+  "timings": {
+    "load_and_index_hits_s": 2.293749,
+    "production_refinement_s": 15.013783,
+    "rbnh_edges_s": 12.922252,
+    "singleton_reassignment_s": 865.556057,
+    "strict_profile_expansion_and_refinement_s": 2168.57033
+  },
+  "wall_s": 3064.714025
+}
