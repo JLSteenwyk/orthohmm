@@ -4590,3 +4590,17 @@ The intervening user-requested goal-prompt response did not change scientific
 state. Revalidated active jobs: final tree task21406_209 completed0:0 in25s;
 independent auditor21435 RUNNING. QfO21548_0 remains running, later stages and
 auditor21584 pending. No partial scores inspected and no duplicate jobs started.
+
+Committed/pushed04055a5; frozen scoring worktree
+benchmarks/work/publication_simulation_tree_scoring_v1 at that revision.
+Staged whitespace validation passed; whole-worktree whitespace warnings belong
+to unrelated pre-existing sample outputs, which were not staged or changed.
+Independent tree auditor remains live, with68/210cells validated at latest poll.
+
+Read-only cProfile diagnosis of one host snapshot: 1,954processes, zero sampling
+errors, 2.090359s elapsed. psutil Linux boot_time accounted for1.496s cumulative
+across3,908calls (1.344s own time); repeated process create_time calls dominate.
+This identifies an optimization target, not a measured improvement or proof of
+quiet hardware. No monitor implementation or frozen experiment was changed.
+Any replacement must retain fresh PID-identity/cgroup checks and be validated
+against process turnover before use in the outstanding matched scaling runs.
