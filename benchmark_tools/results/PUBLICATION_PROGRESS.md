@@ -4310,3 +4310,34 @@ failed/non-equivalent mode controls and preservation of unavailable originals.
 Main array remains unsubmitted pending full mode validation/review.
 
 Fullunit suite1,546passed31.47s; bash syntax check passed for the new batch.
+
+### Mode Controls Admitted and Main Tree Panel Launched (2026-09-17)
+
+Re-read the objective. The previous conversational turn supplied a goal prompt
+but did not advance analyses. Revalidated live scheduler state: QfO21333 remained
+RUNNING at40:53, all70 mode tasks completed, independent admission21367 completed,
+and first main cell21405_0 completed. No existing job was restarted.
+
+Full mode admission contains132 equivalent outcomes and8 unavailable original
+baselines, with all140 slots retained. Added downstream partition audit; verified
+all199 partitions match, including explicit missing-gene sets, and rechecked all
+referenced output hashes. Preserved both machine-readable reports and documented
+scope in SIMULATION_MODE_PANEL_VERIFIED_20260917.md. Four partition unit tests
+and12 host-competition tests pass together.
+
+Reviewed first main cell's source/helper/execution hashes and two native admitted
+outputs retaining the supplied topology. Submitted remaining cells1-209%2 as
+21406 using unchanged frozenf30eb87 executor and admitted5f3e54e6 report. Initial
+cell21405_0 is retained, not repeated. Total planned420 method runs; complete-panel
+independent admission and accuracy scoring are still pending.
+
+Added read-only host-competition observer and recorded three-second QfO probe:
+40.406 observed foreign average cores, one sampling error, two unmatched foreign
+processes. This is positive contention evidence, not an isolated runtime result.
+No unrelated processes modified. Raw host inventory retained locally, checksum
+and limitations recorded in the matched-scaling protocol. All27 actual scaling
+runs remain unstarted pending whole-run workload checks and controlled execution.
+
+Verification: fullunit suite1,562passed36.50s. Array21406 cells1-4COMPLETED0:0,
+cells5-6RUNNING at the next authoritative poll; remaining cells pending. Scheduler
+success alone is not scientific admission. No accuracy endpoints inspected.

@@ -106,3 +106,27 @@ Scientific inference/stage command boundaries, unrelated-workload attribution,
 whole-run workload checks and native-output validation are still required before the
 27 timing runs. An anchor's task subtree does not necessarily contain every
 Slurm step in a job; record the scope rather than labeling it whole-job memory.
+
+## Host Competition Probe (17 September)
+
+`observe_host_competition.py` supplies read-only CPU competition evidence from
+two process snapshots. It matches PID plus creation time, verifies cgroup
+membership, excludes the measured task subtree and monitor, and retains sampling
+errors, unmatched processes and moved memberships. A fixed 0.25 average-core
+threshold detects persistent foreign CPU work; a negative result is not proof of
+host exclusivity. No unrelated processes are signaled or modified.
+
+A three-second probe anchored to QfO job 21333 observed approximately 40.406
+foreign average cores, one sampling error and two unmatched foreign processes.
+These observations include any work outside the measured task subtree, not only
+other projects. The raw local report is
+`benchmarks/results/host_competition_qfo_21333_v1.json`, SHA256
+5cc9ea4a693735e57fc82bbb5a69d9b1e9a35c9c8baa820068c2b64c2216ce3b.
+The whole-host process inventory is not copied into the publication repository.
+Observer source SHA256:
+8b0f20b50aaa0efee5fb3f7a4b924323d771e39b791be5aaac15caac6c132113.
+
+Twelve focused tests cover identity, scope, counter and uncertainty handling.
+The probe does not observe short-lived work between snapshots, I/O, GPU or
+memory-bandwidth contention. Whole-run integration and a controlled execution
+window remain required. None of the 27 scientific scaling runs has begun.
