@@ -3395,3 +3395,28 @@ default fixes yet. Independent witness checks and constructor-only experiments n
 CPM candidate executor070051d pushed/frozen at publication_ob_cpm_candidates_v1;
 no-requeue job21322 submitted and confirmed RUNNING (one CPU,32GiB,one hour).
 Output benchmarks/results/ob_cpm_candidates_v1; no phylogeny or scoring yet.
+
+### Construction-only QfO diagnostic prepared (2026-09-16)
+
+Previous turn made progress with CPM replay admission, candidate executor and
+submission21322. Objective reread. Installed igraph Python wrapper inspected:
+NumPy arrays are converted through numpy_to_contiguous_memoryview, which calls
+numpy.require at native igraph integer width. This identifies a concrete input
+conversion to test, not a proven defect. Added six-worker alternating diagnostic:
+three original int32 inputs and three explicit int64 copies, identical frozen
+graph handling, no optimizer invocation or partition/scoring. Records native
+fingerprints, saved/original/converted array differences and bounded mismatch
+witnesses via tuple/source/target/get_eid. Explicit copy changes allocation as
+well as dtype; a clean panel cannot establish universal correctness.
+
+First fresh-worker tests exposed a missed hook (function-local igraph import);
+corrected to instrument Graph.__init__ while preserving the Graph class. Both
+fresh-worker modes now prove observation occurs and no partition is generated.
+Full unit suite1,226 passed31.12s; focused three tests passed again after adding
+converted-array verification. Batch syntax passed. Scientific core unchanged.
+Freeze/push before submitting bounded one-CPU64GiB/one-hour diagnostic.
+
+CPM candidate21322 completed0:0 in1:23. Preparation reports control54,445groups/
+8,440merges;CPM0.08 55,349/7,546;CPM0.12 53,548/9,185, each with full coverage
+and merge reconstruction. These are unscored executor observations, not yet
+independently admitted. Next admit them and run two inferred-tree variants.
