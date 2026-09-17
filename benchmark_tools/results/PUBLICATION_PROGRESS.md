@@ -44,6 +44,13 @@ These identities are recorded before submission. No repeat-panel outcomes yet.
 Scientific scaling remains0/27; scientific input-check and output-admission
 integration still required alongside broader publication work.
 
+After protocol/recipe commit efc16f2 was pushed, submitted array21647 with
+indices0-5%1, exclusive spark-7ff0,20CPU96GiB and12minutes per task.
+21647_0 confirmedRUNNING at7seconds;1-5 pending on the array task limit.
+Outputs are `verified_collector_panel_v2_INDEX_MODE` under the DGX project
+root, logs `verified_overhead_21647_INDEX.log`. No partial timing outcomes
+inspected. Preserve live jobs and evaluate only the complete frozen panel.
+
 ## Actual DGX Input Order Captured (2026-09-17)
 
 Previous turn made progress with runtime inventory, pushed cd48cb7. Re-read
