@@ -3473,3 +3473,26 @@ admitted completed panel or proof of a particular library defect. No optimizer
 or accuracy scoring invoked by this probe. Preserve all workers and await terminal
 report before full admission. Next: admit CPM phylogeny after terminal success,
 then assemble all six prespecified parameter contrasts with fixed multiplicity.
+
+### Six-variant scoring assembler prepared (2026-09-16)
+
+Previous turn made progress via tested/pushed CPM native admission support.
+Objective reread;21323 and both21324 tasks remain scheduler-confirmed RUNNING.
+Added assemble_ob_parameter_neighborhood.py: fresh baseline and all six native
+admissions must succeed before reference access; pending/invalid runs abort the
+complete-panel assembler. Exact arm identities, complete FASTA coverage, native
+root-HOG provenance, official OrthoBench score agreement and post-score input
+integrity are required. Existing statistics helper retains20,000 paired RefOG
+bootstrap replicates/seed20260918/fixed18 endpoints; no best-arm selection.
+JSON includes native admission, conversions, scoring helper hashes, coverage and
+incremental phylogeny resource measurements. Reports explicitly exclude upstream
+costs and do not interpret cached shared-node timings as end-to-end comparisons.
+
+20 focused assembler/statistics tests passed; full1,259 unit tests passed38.53s.
+After adding helper-hash tracking, all11 assembler tests passed again. No actual
+parameter scores calculated while CPM native jobs remain pending. QfO progress
+now contains five construction-only observations: four matching, one explicit
+int64 worker with six native mismatches despite intact source/converted arrays.
+Final worker/report still pending; no optimizer or accuracy evaluation in probe.
+Next: admit terminal CPM runs and execute complete-panel scorer; independently
+inspect final construction probe and continue diagnosing native endpoint failure.
