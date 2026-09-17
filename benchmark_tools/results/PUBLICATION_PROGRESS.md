@@ -1,5 +1,39 @@
 # Publication Progress
 
+## Main-Comparator SwissTrees Paired Intervals (2026-09-17)
+
+Previous turn progressed all-eight-method sufficient-statistic validation and
+froze the uncertainty protocol, pushed345a394. Re-read full objective. DGX21656_5
+verified RUNNING29:47; five completed and21pending. No timing result admitted.
+
+Implemented the pinned protocol:100,000 shared18-family multinomial draws,
+seed20260920, harmonic mean of resampled macro precision/recall, eight fixed
+contrasts and24Bonferroni-adjusted metric endpoints. Tests compare all interval
+endpoints to explicit repeated-family enumeration and reject corrupted counts,
+inventories, overlapping genes, truth totals and stored statistics. Identical
+method fixtures produce exactly zero paired intervals. All results and all
+family differences are retained, including negative and neutral findings.
+All44focused Swiss comparator/bootstrap, Swiss/TreeFam count and VGNC audits
+pass in the combined test run.
+
+All seven comparator-minus-full-OrthoFinder adjusted F1 intervals are negative.
+For phylogenetic OrthoHMM the F1 difference is-0.067184, adjusted interval
+[-0.127608,-0.021232]; recall is lower and the precision interval includes zero.
+High-sensitivity F1 difference is-0.185310[-0.285081,-0.091574]. Phylogenetic
+versus high-sensitivity OrthoHMM has F1+0.118125[-0.007676,0.241518], while its
+precision difference+0.304810[0.150217,0.455082] remains positive after adjustment.
+Do not turn inclusion of zero into equivalence or infer a pure phylogeny effect.
+
+Artifacts: `qfo_swiss_comparator_intervals_20260917.json` and generated
+`QFO_SWISS_COMPARATOR_INTERVALS_20260917.md`. Manuscript/claim ledger updated.
+This is an approximate conditional bootstrap over18curated, development-exposed
+families; shared history and merged predictions can violate exchangeability.
+It does not establish independent confirmation, other QfO uncertainty or a
+joint interval on the project-defined six-metric summary.
+
+Continue full scope: comparator uncertainty figures, remaining QfO challenges,
+strata/ablations/robustness, matched timing admission and reproducible release.
+
 ## Main-Comparator SwissTrees Count Validation (2026-09-17)
 
 Previous turn progressed exact VGNC database rescoring and pushed58b3e02.

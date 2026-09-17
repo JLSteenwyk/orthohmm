@@ -785,6 +785,37 @@ observed, so exclusive Slurm allocation alone cannot establish controlled
 CPU conditions. GNU-time maximum RSS and simultaneous process-tree RSS
 must not be pooled as if they were the same measurement.
 
+### SwissTrees Comparator Uncertainty
+
+For all eight retained historical comparison outputs, raw SwissTrees counts
+covered the same 18 reference families and 10,765 labeled relations. Reconstructed
+native per-family precision and recall, with confusion counts raw/2+1, reproduced
+the retained macro statistics. A committed follow-up protocol specified 100,000
+shared family-bootstrap draws (PCG64 seed 20260920), seven contrasts against full
+OrthoFinder and one contrast between OrthoHMM configurations. Every replicate
+recomputed macro precision/recall and their harmonic mean. Percentile intervals
+were adjusted across all 24 contrast/metric endpoints.
+
+All seven comparator-minus-full-OrthoFinder adjusted F1 intervals were negative.
+For phylogenetic OrthoHMM, the difference was -0.067184 (adjusted interval
+[-0.127608, -0.021232]); for high sensitivity it was -0.185310
+[-0.285081, -0.091574]. Phylogenetic OrthoHMM had lower recall than full
+OrthoFinder; its precision difference interval included zero. Against high
+sensitivity, phylogenetic OrthoHMM had a positive F1 point difference of 0.118125,
+but its adjusted interval [-0.007676, 0.241518] included zero. Its precision
+increase of 0.304810 [0.150217, 0.455082] remained positive under this adjustment.
+All differences are in raw 0-to-1 units.
+
+These are approximate conditional sensitivity estimates for 18 curated,
+development-exposed families, not independent or model-selection-adjusted
+confirmation. Disjoint represented genes do not remove shared evolutionary
+history or dependence from merged predictions. Inclusion of zero does not
+establish equivalence. The OrthoFinder checkpoint remains a diagnostic, FastOMA
+used a supplied tree, and the OrthoHMM configuration contrast is not a pure
+reconciliation ablation. The results do not quantify uncertainty for other
+QfO challenges or the six-metric secondary mean.
+[Full results and family contrasts](QFO_SWISS_COMPARATOR_INTERVALS_20260917.md).
+
 ### VGNC Prediction-Database Audit
 
 For the four recovered sequence-refinement stages, a separate audit reconstructed

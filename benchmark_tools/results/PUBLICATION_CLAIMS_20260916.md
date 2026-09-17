@@ -44,6 +44,13 @@ evidence that an experiment completed or a biological hypothesis is true.
 
 ## Current Execution Status
 
+- [Eight-method SwissTrees paired intervals](QFO_SWISS_COMPARATOR_INTERVALS_20260917.md)
+  implement the committed24-endpoint protocol. All seven comparator-minus-full-
+  OrthoFinder adjusted F1 intervals are negative. Phylogenetic OrthoHMM versus
+  high sensitivity has a positive point F1 difference but its adjusted interval
+  includes zero; precision is positive after adjustment. These are approximate
+  conditional intervals over18development-exposed families, not independent
+  confirmation or evidence about the other QfO metrics.
 - [VGNC reference and prediction audit](QFO_REFERENCE_MAPPING_AUDIT_20260917.md)
   reproduces exact TP/FP/FN pairs and native endpoints for all four recovered
   stages directly from prediction databases. Unscored pairs remain excluded
