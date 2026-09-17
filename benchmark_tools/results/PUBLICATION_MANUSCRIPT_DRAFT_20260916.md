@@ -556,6 +556,18 @@ hardware cause, or the cause of all historical variability. No optimizer was
 invoked and no partition or accuracy score was produced in this follow-up.
 [Construction evidence and limitations](QFO_CONSTRUCTION_DIAGNOSTIC_20260916.md).
 
+A direct-construction follow-up completed six workers alternating minimal and
+frozen-worker imports. Four had the same six endpoint mismatches before weight
+assignment, two matched, and each worker's recorded differences were unchanged
+after assigning weights. Both modes contained mismatching workers with intact
+constructor arrays. Independent admission checked278 file records and reconstructed
+all post-weight endpoint hashes. Pre-weight hashes are implied by bounded complete
+witnesses, not separately recorded full hashes. Neither weight assignment nor
+OrthoHMM/Leiden imports is necessary for this observed failure; its underlying
+cause remains unresolved. This is preserved-observation evidence, not independent
+live-object inspection or proof that every historical result is affected.
+[Direct-stage results](QFO_DIRECT_GRAPH_RESULTS_20260916.md).
+
 Historical timing and memory records differ in scope and accounting.
 Cached replays are incremental computations, not end-to-end timings;
 supplied trees have upstream costs. Unscheduled competing workloads were

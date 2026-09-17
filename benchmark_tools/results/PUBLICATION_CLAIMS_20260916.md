@@ -21,7 +21,7 @@ evidence that an experiment completed or a biological hypothesis is true.
 | Three Kingdoms demonstrates proteome-wide accuracy | [Supplementary score record](three_kingdoms_parity_20260907.json) | Unsupported; restricted BUSCO-reference universe |
 | OrthoHMM is faster or more memory efficient under matched conditions | [Progress ledger](PUBLICATION_PROGRESS.md) | Not established; historical resource-accounting and workload differences remain |
 | A nearby parameter choice improves frozen-method OrthoBench F1 | [Six-variant panel](OB_PARAMETER_NEIGHBORHOOD_RESULTS_20260916.md) | Not established: all six adjusted F1 intervals include zero; no default promotion |
-| The QfO native graph is reproducibly constructed | [Construction diagnostic](QFO_CONSTRUCTION_DIAGNOSTIC_20260916.md) | Not established: one explicit-int64 worker has six native endpoint mismatches despite intact input arrays; direct-stage diagnostic pending |
+| The QfO native graph is reproducibly constructed | [Direct-stage diagnostic](QFO_DIRECT_GRAPH_RESULTS_20260916.md) | Not established: pre-weight mismatches occur with intact constructor arrays in both import modes; constructor-format comparison pending |
 | The package is publication-ready | All sections below | Not achieved |
 
 ## Completion Requirements
@@ -117,8 +117,11 @@ evidence that an experiment completed or a biological hypothesis is true.
   five workers matched; one explicit-int64 worker had six endpoint mismatches
   with intact original/converted arrays. Full witness/hash consistency and257
   file records were checked. This does not establish a library or hardware cause.
-  Direct construction before/after weights with minimal/frozen imports is running
-  as21326; no accuracy scores or partition selection are involved.
+  [Direct-stage21326](QFO_DIRECT_GRAPH_RESULTS_20260916.md) completed and was
+  independently admitted: four workers had pre-weight mismatches, including
+  minimal-import workers; two matched. Differences were unchanged after weights.
+  No library/hardware cause is established. Constructor-format21327 remains
+  running; no accuracy scores or partition selection are involved.
 - All six [OrthoBench parameter variants](OB_PARAMETER_NEIGHBORHOOD_RESULTS_20260916.md)
   passed native admission and official-score checks with251,378 genes retained.
   F1 ranges71.463468-74.973144% versus control74.106074%; all six adjusted F1

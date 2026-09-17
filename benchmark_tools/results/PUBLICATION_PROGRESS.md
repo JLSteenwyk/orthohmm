@@ -3656,3 +3656,29 @@ Executore919834 pushed/frozen at publication_qfo_constructor_formats_v1.
 Submitted no-requeue21327 and confirmed RUNNING (one CPU);21326 remains
 RUNNING. Outputs are separate at benchmarks/results/qfo_constructor_formats_v1.
 No frozen scientific/runtime files changed and no existing job restarted.
+
+### Direct-stage panel independently admitted (2026-09-16)
+
+Previous turn progressed by freezing/submitting constructor-format21327. Objective
+reread;21326 completed0:0 in13:27. Raw report SHA256
+7b20a5e4aa440718f34d989c41ccf6e8bb427229935b6d4e1d8e051441063f8c.
+Independent admission checks exact six-worker inventory, frozen ab364e4 executor,
+runtime, common context, same-mode modules/libraries, import isolation,278 file
+records, native observation consistency and full post-weight endpoint hashes.
+All pass. Snapshot qfo_direct_graph_verified_20260916.json SHA256
+08352ac4af718e5b3a9e59d1cec2d81c3a333785aeeab8f22c1ed5975cfe7ff3.
+
+Six-edge mismatches: minimal0/frozen1/minimal2/frozen2. Clean:minimal1/frozen0.
+Every stage pair has identical difference reports before/after weight assignment;
+all original constructor arrays match saved inputs. Pre-weight hashes are implied
+by complete bounded witnesses, not separately recorded full native hashes. Thus
+weight assignment and OrthoHMM/Leiden imports are not necessary for this recorded
+failure; no underlying library/hardware cause or universal historical impact is
+established. No optimizer or accuracy evaluation. Manuscript, claims and dedicated
+QFO_DIRECT_GRAPH_RESULTS_20260916.md updated with these limits.
+
+18 focused admission tests passed, including incomplete/wrong-panel and corrupt
+stage/hash rejection; full1,306 unit tests passed34.57s. Scientific core unchanged.
+Constructor-format21327 remains RUNNING; first NumPy worker records six unchanged
+pre/post-weight mismatches, other workers pending. Next admit complete format
+panel and decide the next integrity-gated diagnostic from all observed outcomes.
