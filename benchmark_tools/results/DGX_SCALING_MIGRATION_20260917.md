@@ -179,3 +179,67 @@ ed3c20a9e8abc894f97944cc537aaf227205b2a047c8108d0161cc15ae08c62b
 (both under benchmarks). Summary generated from raw records, not hand-entered
 scores.22probe/summary unit tests pass. Broader default-band tests, complete
 pipeline comparisons, comparator installation and timing gates remain due.
+
+## Comparator Installation and Child-PATH Correction
+
+Installed OrthoFinder3.1.5 in isolated `envs/orthofinder`, Python3.12.3/pip24.0,
+from its official source-only release archive:
+https://github.com/OrthoFinder/OrthoFinder/releases/download/v3.1.5/orthofinder-3.1.5.tar.gz
+with verified upstream SHA
+d292dc7ca650de6940996c980917f183366c873fe834cef81515f159e2a41bc5.
+Version invocation and pip check pass. All original OrthoFinder environment
+package versions match after pinning transitive dependencies, except the
+irrelevant original installed orthohmm distribution is deliberately absent.
+The minimal ARM environment additionally has its own packaging/build tools
+and cloudpickle; inventories are retained, not claimed wholly identical.
+ETE4.4.0 was built natively. A recursive comparison of installed OrthoFinder
+package files excluding __pycache__ and bin found no differences between
+source-only ARM installation and baseline Intel installation. This is package
+source equivalence, not complete pipeline equivalence.
+
+Built DIAMOND2.1.11 from unchanged upstream tag commit
+add7f3bcb120704b8162b99d996fe9f5c110cec6 using systemGCC13.3.0 and CMakeRelease,
+X86=OFF/AARCH64=ON,8parallel build workers. Build and version checks pass;
+compiler emitted array-bounds warnings. Source checkout remains clean.
+No search or performance claim is made from compilation alone.
+
+**Important correction:** outer workflow PATH is not OrthoFinder's final
+subprocess PATH. Newly added inspect_orthofinder_runtime.py observes the
+imported, installed package's `parallel_task_manager.my_env`, executable hashes
+and version commands. With the original manifest's environment overrides and
+prepend paths applied, current x86 resolution is:
+
+| Tool | Outer Workflow | OrthoFinder Child Environment |
+| --- | --- | --- |
+| DIAMOND | 2.1.11 | bundled2.0.13 |
+| FastTree | 2.2.0 double precision | bundled2.1.11 SSE3 |
+| MAFFT | 7.525 | 7.525 |
+| MCL | 2.0 (old02-063installation) | bundled14-137 |
+
+This **does not prove historical process execution**. Frozen manifests hash
+both the outer entry points and bundled distribution, but their resolution
+scope explicitly excludes execution tracing. Do not turn the outer-path
+metadata into an unsupported claim that OrthoFinder historically used
+DIAMOND2.1.11/FastTree2.2.0. Audit retained runtime evidence before assigning
+historical child versions, and explicitly freeze actual child resolution for
+future runs. Existing scores are not rescored or changed by this observation.
+
+The source-only ARM installation currently resolves the newDIAMOND2.1.11 when
+its build directory is supplied on PATH; MAFFT/FastTree/MCL are still missing.
+That partial toolchain is **not admitted as baseline-matched**. Retain the
+2.1.11build separately; obtain native2.0.13/FastTree2.1.11/MCL14-137 and verify
+the full OrthoFinder dependency set before baseline-preserving timing. Shared
+MAFFT7.525 and OrthoHMMFastTree2.2.0 builds also remain due. No silent upgrade
+or algorithm substitution is authorized by these installations.
+
+Evidence snapshots: orthofinder_child_resolution_x86_20260917.json SHA
+f6e51c412a20d7775a1f532d91f9d430ae10971991ab19341512801efa2c5b11;
+orthofinder_child_resolution_arm_20260917.json SHA
+4d9e27134bb9cfb62cfb7f9421bca5c767b9e6ef499d1a039d332e55fa6cbf4e.
+Local benchmarks/work retains pip-install-v1 SHA
+72a80ca978ad207195394029fda6305add0c848a08cf64c0a234d60f2ae17fd6,
+pip-pin-transitives-v1 SHA
+1a190c830159c76e9fe3bc838df6da13596c4910f919d18fb10baa1e89afc22e
+(both prefixed orthofinder), and dgx_diamond_2111_cmake_v1.txt SHA
+42f3d395eaed8cffcb8dad0f097317da6a03798aab611ae28dee343800e867e9.
+Three focused inspection tests pass; no benchmark inference launched.

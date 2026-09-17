@@ -4818,3 +4818,25 @@ sixsummarytests1,782passed42.72s. No inference source or defaults changed.
 Next broader default-band and end-to-end checks, comparator dependencies,
 target manifests and controlled timing. QfO and other publication requirements
 remain active;0/27scientific scaling runs launched.
+
+### OrthoFinder ARM Installation and Effective-Tool Audit (2026-09-17)
+
+Previous turn progressed cross-architecture score checks and pushed3e6af9c.
+Re-read objective, QfO21548_1confirmedlive27:52;21584stilldependent.
+Installed official source-only OrthoFinder3.1.5 on isolated SparkPython3.12.3;
+pinned original numerical/transitive package versions. Version and pipcheckpass.
+Package files excludingbin/__pycache__ match original installation exactly.
+Built clean upstreamDIAMOND2.1.11 onARM (GCC13.3,Release,AARCH64,8buildworkers),
+versioncheckpasses; compilerwarningsretainedaslimitation, no search tested.
+
+Discovered OrthoFinder's own PATH rewriting makes outer-path versions an
+insufficient provenance claim. Added inspector and3passingtests. Current
+original-manifest replay resolves bundledDIAMOND2.0.13/FastTree2.1.11/MCL14-137,
+not outer2.1.11/2.2.0/2.0; MAFFT7.525same. This is current reconstruction, not
+proof of historical exec paths. Preserve original manifests/scores; audit
+historical evidence and correct any overbroad version claims. Snapshots and
+hashes in DGX migration document. Native ARM build of2.1.11isretained but NOT
+admittedasbaseline-matched. Obtain correct child-version toolchain and explicitly
+pin resolution for timing; no frozen method changes or runsstarted.
+Full local unit suite1,791passed44.24s. Claim ledger now explicitly flags
+child-PATH historical attribution and unproven general ARM/x86 equivalence.
