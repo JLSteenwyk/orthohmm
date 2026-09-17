@@ -1,0 +1,168 @@
+{
+  "admitted": false,
+  "backends": [
+    "multipair_AVX2",
+    "scalar_C"
+  ],
+  "bands": [
+    {
+      "band": 0,
+      "decisions_exact": true,
+      "evalues_exact": true,
+      "jit_scores_exact": true,
+      "native_score_differences": [],
+      "normalized_exact": true,
+      "scalar_scores_exact": true
+    },
+    {
+      "band": 1,
+      "decisions_exact": false,
+      "evalues_exact": false,
+      "jit_scores_exact": true,
+      "native_score_differences": [
+        {
+          "left_score": 10,
+          "pair_index": 30,
+          "query_index": 4,
+          "query_length": 31,
+          "right_score": 16,
+          "target_index": 24,
+          "target_length": 34
+        },
+        {
+          "left_score": 7,
+          "pair_index": 38,
+          "query_index": 2,
+          "query_length": 8,
+          "right_score": 23,
+          "target_index": 23,
+          "target_length": 42
+        },
+        {
+          "left_score": 6,
+          "pair_index": 61,
+          "query_index": 3,
+          "query_length": 9,
+          "right_score": 11,
+          "target_index": 24,
+          "target_length": 34
+        },
+        {
+          "left_score": 0,
+          "pair_index": 67,
+          "query_index": 0,
+          "query_length": 1,
+          "right_score": 4,
+          "target_index": 24,
+          "target_length": 34
+        },
+        {
+          "left_score": 37,
+          "pair_index": 96,
+          "query_index": 4,
+          "query_length": 31,
+          "right_score": 131,
+          "target_index": 23,
+          "target_length": 42
+        },
+        {
+          "left_score": 8,
+          "pair_index": 133,
+          "query_index": 3,
+          "query_length": 9,
+          "right_score": 11,
+          "target_index": 23,
+          "target_length": 42
+        },
+        {
+          "left_score": 0,
+          "pair_index": 138,
+          "query_index": 2,
+          "query_length": 8,
+          "right_score": 13,
+          "target_index": 24,
+          "target_length": 34
+        },
+        {
+          "left_score": 0,
+          "pair_index": 278,
+          "query_index": 0,
+          "query_length": 1,
+          "right_score": 4,
+          "target_index": 23,
+          "target_length": 42
+        }
+      ],
+      "normalized_exact": false,
+      "scalar_scores_exact": true
+    },
+    {
+      "band": 8,
+      "decisions_exact": true,
+      "evalues_exact": false,
+      "jit_scores_exact": true,
+      "native_score_differences": [
+        {
+          "left_score": 8,
+          "pair_index": 38,
+          "query_index": 2,
+          "query_length": 8,
+          "right_score": 23,
+          "target_index": 23,
+          "target_length": 42
+        },
+        {
+          "left_score": 10,
+          "pair_index": 133,
+          "query_index": 3,
+          "query_length": 9,
+          "right_score": 11,
+          "target_index": 23,
+          "target_length": 42
+        },
+        {
+          "left_score": 11,
+          "pair_index": 138,
+          "query_index": 2,
+          "query_length": 8,
+          "right_score": 13,
+          "target_index": 24,
+          "target_length": 34
+        }
+      ],
+      "normalized_exact": false,
+      "scalar_scores_exact": true
+    },
+    {
+      "band": 64,
+      "decisions_exact": true,
+      "evalues_exact": true,
+      "jit_scores_exact": true,
+      "native_score_differences": [],
+      "normalized_exact": true,
+      "scalar_scores_exact": true
+    },
+    {
+      "band": 128,
+      "decisions_exact": true,
+      "evalues_exact": true,
+      "jit_scores_exact": true,
+      "native_score_differences": [],
+      "normalized_exact": true,
+      "scalar_scores_exact": true
+    }
+  ],
+  "gate_error": "Local backend discrepancy",
+  "inputs": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_scoring_x86_v1.json",
+      "sha256": "2ccab64a6f59cfba6e331a847deaabcecdd445d927e27aaa06dad1c9ef506e3d"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_scoring_arm_v1.json",
+      "sha256": "ed3c20a9e8abc894f97944cc537aaf227205b2a047c8108d0161cc15ae08c62b"
+    }
+  ],
+  "pairs_per_band": 405,
+  "status": "diagnostic_only"
+}

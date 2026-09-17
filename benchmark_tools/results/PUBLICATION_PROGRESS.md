@@ -4793,3 +4793,28 @@ Next compare actual native scores/decisions and end-to-end outputs across
 architectures, establish comparator toolchain and freeze target resource plan.
 No scientific scaling inference started; original x86 environment unchanged.
 Full local unit suite1,766passed43.54s; allmanualdiffwhitespace checks passed.
+
+### Cross-Architecture Scoring Probe Found Narrow-Band Discrepancy (2026-09-17)
+
+Previous continuation compiled ARM runtime and pushed7ec5eeb. Re-read objective,
+confirmed QfO21548_1live20:30 and later26:30;21584pending, no partial scores read.
+Added deterministic native scoring probe97f9e33 and fail-closed comparison.
+405pairs x5band widths compare actual x86multipair/ARMscalar scores, scalar
+and Numba references, normalized values, E-values and decisions. Source/library
+hashes checked before/after; unchanged frozen source and same numerical packages.
+
+ARM scalar matches its JIT reference throughout. x86multipair differs from
+scalar/JIT on8pairs atband1 and3atband8; oneband1pair changes allthree threshold
+decisions. Default64,128andunbanded0match exactly on these fixtures, including
+allfloatingvalues. Scalar/JIT agree across hosts at allwidths. Entire all-band
+gate remains FAILED, not narrowed after inspecting results. No timing admitted.
+
+Added machine-generated diagnostic preserving pair IDs, lengths and differences;
+see migration document and native_scoring_portability_20260917.json for hashes.
+Source inspection points to per-batch versus per-pair short-sequence band-disable
+logic. Isolated cause/rescue experiment and release fix remain due, separate
+from frozen baseline.22focusedprobe/summarytests pass; fullsuite before adding
+sixsummarytests1,782passed42.72s. No inference source or defaults changed.
+Next broader default-band and end-to-end checks, comparator dependencies,
+target manifests and controlled timing. QfO and other publication requirements
+remain active;0/27scientific scaling runs launched.

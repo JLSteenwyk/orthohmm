@@ -134,3 +134,48 @@ These tests and profile smoke are **not** cross-architecture score equivalence
 or full pipeline validation. Numerical/decision/output comparisons, native
 OrthoFinder dependencies, complete environment provenance and controlled
 timing admission remain outstanding.0/27scientific scaling runs started.
+
+## Native Score Portability Diagnostic
+
+Probe97f9e33 ran on unchanged frozen x86/ARM runtimes with identical numerical
+package versions and deterministic PCG64seed20260917. Nine queries of lengths
+1/7/8/9/31/64/129/257/512 and45targets include identity, ambiguity, truncation,
+insertion and random controls.405shuffled pairs were evaluated at band widths
+0/1/8/64/128 using scalar C at1thread, selected native backend at4threads and
+the frozen Numba reference at1thread. Native selection was multipairAVX2 on
+x86 and scalarC on ARM. No benchmark labels or new method tuning were used.
+
+| Band Width | x86 Native vs ARM Raw-Score Differences | Threshold Decisions Differ |
+| --- | ---: | --- |
+| 0 (unbanded) | 0/405 | No |
+| 1 | 8/405 | One pair, at allthree tested thresholds |
+| 8 | 3/405 | No |
+| 64 (production default) | 0/405 | No |
+| 128 | 0/405 | No |
+
+Scalar C and Numba integer scores match exactly across both hosts at allfive
+widths. At widths0/64/128, selected-native scores, normalized scores, E-values
+and decisions also match exactly on this finite panel. Thresholds were
+1e-3/1e-4/1e-5. The all-band admission gate correctly **failed**, retaining the
+x86 discrepancy rather than relabeling the panel successful. This does not
+establish arbitrary-sequence or end-to-end equivalence at64.
+
+All differing pairs have both lengths<=50. Source inspection suggests a
+short-pair banding inconsistency: scalar uses max(query_length,target_length)
+to disable banding for short pairs, whereas multipair uses max(query_length,
+maximum_target_length_in_batch). A short pair in a batch containing longer
+targets can therefore remain banded. Pair96(query31,target42) scores37vs131
+at width1 and changes allthree threshold decisions. This is a source-supported
+mechanistic explanation, not yet an isolated patch/rescue experiment. No
+frozen code or benchmark defaults were changed; preserve this as an open
+correctness/release issue and test an isolated fix separately.
+
+Machine-readable diagnostic: native_scoring_portability_20260917.json,
+SHA f1cf901d14b82032955175e4b33821308f53597358f82af2c4cb677bcc9c1d18.
+Raw work/native_scoring_x86_v1.json SHA
+2ccab64a6f59cfba6e331a847deaabcecdd445d927e27aaa06dad1c9ef506e3d;
+raw work/native_scoring_arm_v1.json SHA
+ed3c20a9e8abc894f97944cc537aaf227205b2a047c8108d0161cc15ae08c62b
+(both under benchmarks). Summary generated from raw records, not hand-entered
+scores.22probe/summary unit tests pass. Broader default-band tests, complete
+pipeline comparisons, comparator installation and timing gates remain due.
