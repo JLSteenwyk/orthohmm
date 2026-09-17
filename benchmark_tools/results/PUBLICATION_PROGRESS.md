@@ -3363,3 +3363,31 @@ accounting checked on real completed output; full panel admission deliberately
 awaits still-running CPM0.12. Candidate expansion and inferred phylogeny for both
 CPM variants remain pending. Detailed QfO21321 still running, with no new completed
 panel or root-cause conclusion. No default promotion or accuracy selection.
+
+### CPM replay admitted and candidate preparation ready (2026-09-16)
+
+Previous turn made progress by admitting all candidate-threshold phylogeny arms
+and implementing CPM admission. Objective reread;21319 COMPLETED0:0 in24:45.
+Independent full-panel admission passed77 provenance records, all12 stage
+partitions, control equivalence, exact native command/parameters/runtime and HMM
+profile-build accounting. Refined seed groups control62,885/CPM0.08 62,895/
+CPM0.12 62,733. Snapshot ob_cpm_replay_verified_20260916.json SHA256
+ceb8f9fe7c12b35317cde99c3d027d4d1080d398403afc04e57fb029ce1b460a.
+
+Prepared frozen-core candidate executor using each arm's own admitted HMM-refined
+seed with unchanged satellite_v2 parameters; same cached hits, complete coverage,
+merge reconstruction and control candidate/trace byte-equivalence gates. Six
+focused tests, bash syntax, full unit suite1,223 passed27.64s. No reference scores.
+Next freeze/push/submit candidate preparation, independently admit it, then run
+the two CPM inferred-tree variants before complete six-variant scoring.
+
+During this continuation21321 terminatedFAILED1:0 in22:26. First two workers
+completed; third stopped before optimization on a native endpoint mismatch.
+Detailed observer reports constructor int32 C-contiguous array identical to saved
+endpoints, but six native edges differ at indices23,493,880..23,493,885. This
+narrows observed divergence past the Python constructor-input array to native
+graph construction/storage/access, not yet a proven library defect or explanation
+of every historical partition. Preserved qfo_native_constructor_mismatch_20260916.json
+SHA25650bd555569203a477567f8bbca1e29718b82c42746c62bace953f9e39764c5c6;
+full failed run remains benchmarks/results/qfo_native_boundary_v2. No retries or
+default fixes yet. Independent witness checks and constructor-only experiments next.

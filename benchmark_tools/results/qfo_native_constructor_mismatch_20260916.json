@@ -1,0 +1,187 @@
+{
+  "accuracy_evaluated": false,
+  "calls": [
+    {
+      "arguments": {
+        "initial_membership": null,
+        "kwargs": {
+          "resolution_parameter": 0.1
+        },
+        "max_comm_size": 0,
+        "n_iterations": 2,
+        "partition_type": "leidenalg.VertexPartition.CPMVertexPartition",
+        "seed": 4,
+        "weights": "weight"
+      },
+      "before": {
+        "directed": false,
+        "edges": 24148515,
+        "ordered_endpoints_sha256": "cb8777a158f88ca46ac597e7620a728ca4774aff5baef78a2a3b625658df3f3e",
+        "ordered_weights_sha256": "d398011be5171a8b6d8f41eab6972a081de5e9419f69536ec69494c746b4ecbf",
+        "vertices": 976504
+      },
+      "caller": {
+        "file": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_replay_native_v1/orthohmm/externals.py",
+        "function": "_execute_leiden_in_process"
+      },
+      "endpoint_differences": {
+        "constructor_c_contiguous": true,
+        "constructor_dtype": "int32",
+        "constructor_vs_saved": {
+          "different_edges": 0,
+          "examples": []
+        },
+        "native_vs_constructor": {
+          "different_edges": 6,
+          "examples": [
+            {
+              "edge_index": 23493880,
+              "left": [
+                65163,
+                828439
+              ],
+              "right": [
+                828439,
+                851595
+              ]
+            },
+            {
+              "edge_index": 23493881,
+              "left": [
+                0,
+                828439
+              ],
+              "right": [
+                828439,
+                855360
+              ]
+            },
+            {
+              "edge_index": 23493882,
+              "left": [
+                0,
+                828439
+              ],
+              "right": [
+                828439,
+                885964
+              ]
+            },
+            {
+              "edge_index": 23493883,
+              "left": [
+                0,
+                828439
+              ],
+              "right": [
+                828439,
+                922655
+              ]
+            },
+            {
+              "edge_index": 23493884,
+              "left": [
+                0,
+                828439
+              ],
+              "right": [
+                828439,
+                924806
+              ]
+            },
+            {
+              "edge_index": 23493885,
+              "left": [
+                828439,
+                917504
+              ],
+              "right": [
+                828439,
+                931685
+              ]
+            }
+          ]
+        },
+        "native_vs_saved": {
+          "different_edges": 6,
+          "examples": [
+            {
+              "edge_index": 23493880,
+              "left": [
+                65163,
+                828439
+              ],
+              "right": [
+                828439,
+                851595
+              ]
+            },
+            {
+              "edge_index": 23493881,
+              "left": [
+                0,
+                828439
+              ],
+              "right": [
+                828439,
+                855360
+              ]
+            },
+            {
+              "edge_index": 23493882,
+              "left": [
+                0,
+                828439
+              ],
+              "right": [
+                828439,
+                885964
+              ]
+            },
+            {
+              "edge_index": 23493883,
+              "left": [
+                0,
+                828439
+              ],
+              "right": [
+                828439,
+                922655
+              ]
+            },
+            {
+              "edge_index": 23493884,
+              "left": [
+                0,
+                828439
+              ],
+              "right": [
+                828439,
+                924806
+              ]
+            },
+            {
+              "edge_index": 23493885,
+              "left": [
+                828439,
+                917504
+              ],
+              "right": [
+                828439,
+                931685
+              ]
+            }
+          ]
+        }
+      },
+      "saved": {
+        "directed": false,
+        "edges": 24148515,
+        "ordered_endpoints_sha256": "dd9c0c07cc9d9891d0ce3b50425a9b9c867caf0fe4d0400025425e0b925d4cd5",
+        "ordered_weights_sha256": "d398011be5171a8b6d8f41eab6972a081de5e9419f69536ec69494c746b4ecbf",
+        "vertices": 976504
+      },
+      "status": "native_graph_mismatch_before_optimizer"
+    }
+  ]
+}
