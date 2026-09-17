@@ -11,9 +11,24 @@ import sys
 
 ADMISSION_SHA = "499f90e06b6da311356c80f435149ba0cf132f75b13e2eacf720e02ea8f2382e"
 MODES = ("minimal_imports", "frozen_imports")
+FORMATS = ("numpy", "python_pairs")
 
 
-def worker(root, payload, mode):
+def edge_argument(edges, edge_format):
+    if edge_format == "numpy":
+        return edges
+    if edge_format == "python_pairs":
+        return ((int(a), int(b)) for a, b in edges)
+    raise ValueError("Unknown edge input format")
+
+
+def planned_workers(compare_formats=False):
+    return [(index, mode, edge_format) for index in range(3)
+            for mode, edge_format in ([("minimal_imports", fmt) for fmt in FORMATS]
+                                     if compare_formats else [(mode, "numpy") for mode in MODES])]
+
+
+def worker(root, payload, mode, edge_format="numpy"):
     from repeat_qfo_saved_graph import record, mapped_libraries, ENV_KEYS, set_worker_affinity
     from probe_leiden_boundary import endpoint_differences, graph_fingerprint, saved_fingerprint
     if mode not in MODES:
@@ -47,7 +62,7 @@ def worker(root, payload, mode):
     local_targets = np.searchsorted(used_ids, arrays[1]).astype(np.int32)
     edges = np.column_stack((local_sources, local_targets))
     weights = np.asarray(arrays[2], dtype=np.float64)
-    snapshot = {"mode": mode, "source": record(__file__), "inputs": inputs,
+    snapshot = {"mode": mode, "edge_format": edge_format, "source": record(__file__), "inputs": inputs,
         "inherited_cpu_affinity": inherited, "cpu_affinity": sorted(os.sched_getaffinity(0)),
         "cwd": str(Path.cwd()), "host": platform.node(), "platform": platform.platform(),
         "python": record(sys.executable), "environment": {key: os.environ.get(key) for key in ENV_KEYS},
@@ -57,7 +72,7 @@ def worker(root, payload, mode):
         "native_libraries": [record(path) for path in mapped_libraries(Path("/proc/self/maps").read_text())],
         "accuracy_evaluated": False, "optimizer_called": False}
     (payload / "worker_before.json").write_text(json.dumps(snapshot, indent=2, sort_keys=True) + "\n")
-    graph = igraph.Graph(n=len(names), edges=edges, directed=False)
+    graph = igraph.Graph(n=len(names), edges=edge_argument(edges, edge_format), directed=False)
     before = {"vertices": graph.vcount(), "edges": graph.ecount(), "directed": graph.is_directed(),
               "differences": endpoint_differences(graph, payload, edges)}
     (payload / "before_weights.json").write_text(json.dumps(before, indent=2, sort_keys=True) + "\n")
@@ -66,7 +81,7 @@ def worker(root, payload, mode):
     saved = saved_fingerprint(payload)
     if [record(payload / name) for name in ("gene_names.txt", "sources.npy", "targets.npy", "weights.npy")] != inputs:
         raise ValueError("Saved inputs changed during direct construction")
-    result = {"status": "direct_construction_observed", "mode": mode, "before_weights": before,
+    result = {"status": "direct_construction_observed", "mode": mode, "edge_format": edge_format, "before_weights": before,
               "after_weights": after, "saved": saved, "snapshot": record(payload / "worker_before.json"),
               "accuracy_evaluated": False, "optimizer_called": False}
     (payload / "result.json").write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
@@ -79,10 +94,12 @@ def main():
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--worker-payload", type=Path)
     parser.add_argument("--mode", choices=MODES)
+    parser.add_argument("--edge-format", choices=FORMATS, default="numpy")
+    parser.add_argument("--compare-formats", action="store_true", help="Compare NumPy and Python-pair input using minimal imports")
     args = parser.parse_args()
     root, output = args.root.resolve(), args.output.resolve()
     if args.worker_payload:
-        worker(root, args.worker_payload.resolve(), args.mode)
+        worker(root, args.worker_payload.resolve(), args.mode, args.edge_format)
         return
     if output.exists():
         raise FileExistsError(output)
@@ -104,30 +121,32 @@ def main():
     report = {"status": "running", "job_id": os.environ.get("SLURM_JOB_ID"), "source": record(__file__),
         "admission": record(admission_path), "runtime": runtime,
         "graph_inputs": admission["native_report"]["graph_inputs"], "workers": [],
+        "planned_workers": planned_workers(args.compare_formats), "compare_formats": args.compare_formats,
         "accuracy_evaluated": False, "optimizer_called": False,
         "limitations": ["Direct construction omits frozen worker bookkeeping; before-weight observation changes allocation/timing.",
-            "Three fresh workers per import mode, original int32 edges only; not proof of general correctness.",
+            "Three fresh workers per selected arm; original int32 array retained for comparisons; not proof of general correctness.",
+            "Python-pair input changes conversion and allocation, not a proven fix or isolated causal mechanism.",
             "No optimizer, partitions, accuracy scores or default changes."]}
     env = os.environ.copy()
     env.update(PYTHONPATH=str(launcher), PYTHONHASHSEED="0", OMP_NUM_THREADS="1", OPENBLAS_NUM_THREADS="1", MKL_NUM_THREADS="1")
     try:
-        for index in range(3):
-            for mode in MODES:
-                payload = output / f"{mode}_{index}" / "payload"
-                payload.mkdir(parents=True)
-                for item in report["graph_inputs"]:
-                    source = Path(item["path"])
-                    (payload / source.name.removeprefix("rbnh_")).symlink_to(source)
-                command = [sys.executable, str(Path(__file__).resolve()), "--root", str(root), "--output", str(output),
-                           "--worker-payload", str(payload), "--mode", mode]
-                with (payload.parent / "worker.log").open("x") as log:
-                    completed = subprocess.run(command, cwd=launcher, env=env, stdout=log, stderr=subprocess.STDOUT)
-                if completed.returncode:
-                    raise RuntimeError("Direct-construction worker failed: " + str(payload))
-                result = json.loads((payload / "result.json").read_text())
-                report["workers"].append({"index": index, "mode": mode, "exit_code": completed.returncode,
-                    "result": result, "observation": record(payload / "result.json")})
-                (output / "progress.json").write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
+        for index, mode, edge_format in planned_workers(args.compare_formats):
+            label = f"{edge_format}_{index}" if args.compare_formats else f"{mode}_{index}"
+            payload = output / label / "payload"
+            payload.mkdir(parents=True)
+            for item in report["graph_inputs"]:
+                source = Path(item["path"])
+                (payload / source.name.removeprefix("rbnh_")).symlink_to(source)
+            command = [sys.executable, str(Path(__file__).resolve()), "--root", str(root), "--output", str(output),
+                       "--worker-payload", str(payload), "--mode", mode, "--edge-format", edge_format]
+            with (payload.parent / "worker.log").open("x") as log:
+                completed = subprocess.run(command, cwd=launcher, env=env, stdout=log, stderr=subprocess.STDOUT)
+            if completed.returncode:
+                raise RuntimeError("Direct-construction worker failed: " + str(payload))
+            result = json.loads((payload / "result.json").read_text())
+            report["workers"].append({"index": index, "mode": mode, "edge_format": edge_format, "exit_code": completed.returncode,
+                "result": result, "observation": record(payload / "result.json")})
+            (output / "progress.json").write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
         if verify(frozen, launcher, runtime_path) != runtime:
             raise ValueError("Frozen runtime changed")
         for item in admission["provenance_checked"]:

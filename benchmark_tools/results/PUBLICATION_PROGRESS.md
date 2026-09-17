@@ -3625,3 +3625,29 @@ and replacements match earlier construction witnesses. frozen_imports_0 matches
 at both stages. This observation does not require the optimizer or OrthoHMM imports
 and precedes weight assignment, but is not an independently admitted complete
 panel or a proven library/hardware cause. Remaining workers still running.
+
+### Constructor-format diagnostic ready (2026-09-16)
+
+Previous turn progressed with method figure and current claim checklist.
+Objective reread;21326 remains RUNNING. Its first four observations now show
+six pre-weight mismatches in minimal_imports_0 and frozen_imports_1, while the
+other two match. Both import modes therefore have recorded failures; complete
+panel admission remains pending. Constructor inputs remain intact in these rows.
+
+Inspected installed igraph1.0.0/Python+C,64-bit IDs/abi3 extension and primary
+upstream1.0.0 constructor/conversion source. NumPy enters a memoryview path;
+general iterables enter a separate conversion branch. The limited-API branch
+unfolds the memoryview to a list; do not assume zero-copy behavior or attribute
+the failure to an unverified conditional code path. Targeted issue searches did
+not establish a matching upstream explanation. Sources and caveats recorded in
+QFO_CONSTRUCTOR_FORMAT_PROTOCOL_20260916.md; no installed library changed.
+
+Extended direct-stage helper with optional Python integer-pair generator input
+and fixed --compare-formats panel: three alternating minimal-import workers per
+format, identical saved edge order/multiplicity/weights and vertex count. No
+optimizer, partition or score. Original NumPy/default import-panel semantics
+retained; running21326 uses its unchanged ab364e4 worktree. Six focused tests
+pass (four fresh-worker combinations plus input-order/type and panel tests).
+Full1,288 unit tests passed34.93s; batch syntax passed. One-CPU64GiB/two-hour
+format batch ready to freeze/push/submit; allocations differ so clean observations
+alone will not establish a fix or causal mechanism.
