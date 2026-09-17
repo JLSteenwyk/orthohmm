@@ -1,5 +1,42 @@
 # Publication Progress
 
+## Experimental Biological-Application Cohort Frozen (2026-09-17)
+
+Previous turn completed launcher admission and started scientific DGX timing,
+pushed9c11fa4. Re-read the full objective;21656_0 verifiedRUNNING at1:43.
+Worked locally on the biological-application requirement without competing on
+the timing host. Identified the complete experimental WGD cohort of Kuzmin2020,
+PMID32586993, deposited DOI10.5061/dryad.g79cnp5m9. Public Zenodo API retrieval
+succeeded after web-viewer/Dryad download errors; retained source responses and
+checked deposited byte size/MD5 plus independent SHA256. Deposit declaresCC0;
+article and YGOB redistribution permissions remain separate.
+
+Protocol committed/pushed092b891 before mapping any cohort to tool outputs.
+All240source pairs and480unique ORFs retained:47High,114Low,79Sparse. Parser
+reproduces source fractions from interaction counts and the degree criterion;
+sparse NaN fractions remain missing, never zero. Six examples selected solely
+by canonical-ORF-pair SHA256 rank, two per source stratum. Nine parser tests pass.
+Frozen cohort `biological_wgd_cohort_20260917.json`, SHA256
+`46f0bdf5bae23c8d30660aac59ca1a71a26deec5753a8d24ba09e04f86919ac5`;
+protocol SHA256
+`8126f75eaf30c34d4988c73ea233127a1f7f069fcb8487abaafaa1cf5200569d`.
+Raw source `benchmarks/work/biological_wgd_source_v1`.
+
+Important scope: YGOB copy columns are arbitrary, not A/B orthology tracks.
+The proposed four-Saccharomyces application tests ancestral-paralog separation
+at the corresponding root, with homolog support/coverage/contamination guards
+against trivial singleton splitting. It cannot establish copy-specific
+cross-species orthology from column order or experimental functional similarity.
+Development overlap is disclosed; this is not independent generalization.
+Chronology, input/reference mapping, native runs, outcomes and uncertainty remain
+unevaluated. No biological performance advantage is claimed.
+
+At a later scheduler check21656_1 wasRUNNING at34seconds with2-26queued;
+run0isCOMPLETED0:0 (scheduler elapsed9:28, not the native inference statistic).
+Its independent resource/native-output admission remains
+pending. Avoid bulk transfers/hash scans on the DGX during subsequent timings.
+Full local unit suite:2,010passed47.82s.
+
 ## Scientific DGX Scaling Started (2026-09-17)
 
 After admission/authorization commit b92bb22 was pushed and Spark was observed

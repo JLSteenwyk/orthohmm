@@ -1,0 +1,4650 @@
+{
+  "class_counts": {
+    "High": 47,
+    "Low": 114,
+    "Sparse": 79
+  },
+  "deposit_license": "CC0-1.0",
+  "download_url": "https://zenodo.org/api/records/3975054/files/TableS7.xlsx/content",
+  "limitations": [
+    "Functional interaction measurements define strata, not orthology truth.",
+    "Sparse source fractions remain missing, not zero.",
+    "No prediction files read; reference/input mapping and biological outcomes remain unevaluated."
+  ],
+  "metadata": {
+    "bytes": 8675,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/biological_wgd_source_v1/zenodo_3975054.json",
+    "sha256": "a113657e4a5b914fb2c06ddaa3fc35c941b995c7e3fc1c3db00d7d6a4c3222e8"
+  },
+  "openpyxl_version": "3.1.5",
+  "pair_count": 240,
+  "pairs": [
+    {
+      "digenic_counts_by_orf": {
+        "YAL015C": 0,
+        "YOL043C": 2
+      },
+      "example_rank_sha256": "8add87929f6e9d8ec49b81c94272a62d30f40b7dafcb5481ba9e61cd8d322dee",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "NTG1",
+        "NTG2"
+      ],
+      "orf_pair": [
+        "YAL015C",
+        "YOL043C"
+      ],
+      "source_row": 233,
+      "trigenic_count": 0,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YAL028W": 4,
+        "YOR324C": 27
+      },
+      "example_rank_sha256": "beeafe1b51103f8b5fe81a3027a74abd4a77830a45666c7080ae7d8abde84984",
+      "experimental_class": "Low",
+      "gene_names": [
+        "FRT2",
+        "FRT1"
+      ],
+      "orf_pair": [
+        "YAL028W",
+        "YOR324C"
+      ],
+      "source_row": 101,
+      "trigenic_count": 7,
+      "trigenic_fraction": 0.18421052631578946
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YAL034C": 1,
+        "YOR338W": 2
+      },
+      "example_rank_sha256": "5ab7b6d7f84dec4ec3f84508d9ee30e1263564becb60020b0133cd25e95f545b",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "FUN19",
+        "YOR338W"
+      ],
+      "orf_pair": [
+        "YAL034C",
+        "YOR338W"
+      ],
+      "source_row": 196,
+      "trigenic_count": 1,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YAL051W": 5,
+        "YOR363C": 5
+      },
+      "example_rank_sha256": "dc78af204198ab342b36f3b89cf2a65ba7d8594d7933b3bdc4977a554c03e1ff",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "OAF1",
+        "PIP2"
+      ],
+      "orf_pair": [
+        "YAL051W",
+        "YOR363C"
+      ],
+      "source_row": 237,
+      "trigenic_count": 0,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YAL056W": 29,
+        "YOR371C": 15
+      },
+      "example_rank_sha256": "fb7c072fab85050414c54b1f95eac96356f30c28df569826c48ae6c7fb7c3765",
+      "experimental_class": "Low",
+      "gene_names": [
+        "GPB2",
+        "GPB1"
+      ],
+      "orf_pair": [
+        "YAL056W",
+        "YOR371C"
+      ],
+      "source_row": 53,
+      "trigenic_count": 25,
+      "trigenic_fraction": 0.36231884057971014
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YAL062W": 0,
+        "YOR375C": 16
+      },
+      "example_rank_sha256": "310154a3a87068b440a50ab1b029e9a42ca69bf4638f24428884b815194d130e",
+      "experimental_class": "Low",
+      "gene_names": [
+        "GDH3",
+        "GDH1"
+      ],
+      "orf_pair": [
+        "YAL062W",
+        "YOR375C"
+      ],
+      "source_row": 150,
+      "trigenic_count": 1,
+      "trigenic_fraction": 0.058823529411764705
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YAR002C-A": 10,
+        "YGL002W": 4
+      },
+      "example_rank_sha256": "e7fd78c82d1b8667a8ae48ab5fc0f466ed5088061963578cf5ca988828575bb3",
+      "experimental_class": "Low",
+      "gene_names": [
+        "ERP1",
+        "ERP6"
+      ],
+      "orf_pair": [
+        "YAR002C-A",
+        "YGL002W"
+      ],
+      "source_row": 62,
+      "trigenic_count": 6,
+      "trigenic_fraction": 0.3
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBL005W": 0,
+        "YGL013C": 6
+      },
+      "example_rank_sha256": "1bf9927c40463abf6fcd1aea33bd574349ca83acf17a70e1f28fa3fb8cbc3a80",
+      "experimental_class": "Low",
+      "gene_names": [
+        "PDR3",
+        "PDR1"
+      ],
+      "orf_pair": [
+        "YBL005W",
+        "YGL013C"
+      ],
+      "source_row": 57,
+      "trigenic_count": 3,
+      "trigenic_fraction": 0.3333333333333333
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBL009W": 3,
+        "YGL021W": 1
+      },
+      "example_rank_sha256": "feb72af579273f9570c82fc62ab899660cf72f9914f2b1908e61f60295733946",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "ALK2",
+        "ALK1"
+      ],
+      "orf_pair": [
+        "YBL009W",
+        "YGL021W"
+      ],
+      "source_row": 176,
+      "trigenic_count": 3,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBL043W": 5,
+        "YJR115W": 7
+      },
+      "example_rank_sha256": "f7ab2b6aa9cf66a07e71c77bd8d69827b90efbe9d97cf31378398a046dc021ea",
+      "experimental_class": "High",
+      "gene_names": [
+        "ECM13",
+        "YJR115W"
+      ],
+      "orf_pair": [
+        "YBL043W",
+        "YJR115W"
+      ],
+      "source_row": 12,
+      "trigenic_count": 40,
+      "trigenic_fraction": 0.7692307692307693
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBL054W": 7,
+        "YER088C": 5
+      },
+      "example_rank_sha256": "9cc19d57e282a2351b723ac6f4625d214311375bbb59c27b683a0926be8de6d7",
+      "experimental_class": "High",
+      "gene_names": [
+        "TOD6",
+        "DOT6"
+      ],
+      "orf_pair": [
+        "YBL054W",
+        "YER088C"
+      ],
+      "source_row": 31,
+      "trigenic_count": 20,
+      "trigenic_fraction": 0.625
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBL056W": 4,
+        "YER089C": 8
+      },
+      "example_rank_sha256": "d97c5e149bd1c6f3d1613444d156da60b5f160cc0f897156f782069fa1295903",
+      "experimental_class": "High",
+      "gene_names": [
+        "PTC3",
+        "PTC2"
+      ],
+      "orf_pair": [
+        "YBL056W",
+        "YER089C"
+      ],
+      "source_row": 46,
+      "trigenic_count": 12,
+      "trigenic_fraction": 0.5
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBL059W": 14,
+        "YER093C-A": 14
+      },
+      "example_rank_sha256": "f09052f0245abf578a7f3156b03aaa255fee3ac509e3119744375eddf3d2058f",
+      "experimental_class": "Low",
+      "gene_names": [
+        "YBL059W",
+        "AIM11"
+      ],
+      "orf_pair": [
+        "YBL059W",
+        "YER093C-A"
+      ],
+      "source_row": 52,
+      "trigenic_count": 17,
+      "trigenic_fraction": 0.37777777777777777
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBL061C": 25,
+        "YER096W": 1
+      },
+      "example_rank_sha256": "d2ec5358f85f31558aed10efb2676670ac362e670098312685dac1e68205ff60",
+      "experimental_class": "Low",
+      "gene_names": [
+        "SKT5",
+        "SHC1"
+      ],
+      "orf_pair": [
+        "YBL061C",
+        "YER096W"
+      ],
+      "source_row": 114,
+      "trigenic_count": 4,
+      "trigenic_fraction": 0.13333333333333333
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBL069W": 13,
+        "YER101C": 1
+      },
+      "example_rank_sha256": "b8b76c72abc998377e53f06fd41db7339c5ad8ca4ccff6e72ad58c6e1cdc6d2b",
+      "experimental_class": "Low",
+      "gene_names": [
+        "AST1",
+        "AST2"
+      ],
+      "orf_pair": [
+        "YBL069W",
+        "YER101C"
+      ],
+      "source_row": 145,
+      "trigenic_count": 1,
+      "trigenic_fraction": 0.06666666666666667
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBL075C": 6,
+        "YER103W": 2
+      },
+      "example_rank_sha256": "7c469e5dff2b872006749159f81e00d765f432b5289b6d7b8870129e1b7ffe74",
+      "experimental_class": "Low",
+      "gene_names": [
+        "SSA3",
+        "SSA4"
+      ],
+      "orf_pair": [
+        "YBL075C",
+        "YER103W"
+      ],
+      "source_row": 64,
+      "trigenic_count": 3,
+      "trigenic_fraction": 0.2727272727272727
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBL089W": 3,
+        "YER119C": 3
+      },
+      "example_rank_sha256": "3a6aa7b6868ee92fab1f40712ae86f705e1f68d18e6dfe555da812ae43c61fc9",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "AVT5",
+        "AVT6"
+      ],
+      "orf_pair": [
+        "YBL089W",
+        "YER119C"
+      ],
+      "source_row": 210,
+      "trigenic_count": 1,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBL091C-A": 1,
+        "YER120W": 65
+      },
+      "example_rank_sha256": "4a2f613bc2de4b56f3b628a21b46e9e1b6b84420f69c7ab73a5c08e6a4997be4",
+      "experimental_class": "Low",
+      "gene_names": [
+        "SCS22",
+        "SCS2"
+      ],
+      "orf_pair": [
+        "YBL091C-A",
+        "YER120W"
+      ],
+      "source_row": 107,
+      "trigenic_count": 12,
+      "trigenic_fraction": 0.15384615384615385
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBR001C": 38,
+        "YDR001C": 10
+      },
+      "example_rank_sha256": "89f431adad43ae397906a8c4639d19dd0e45467c0a362a3a9be85bc974b101fc",
+      "experimental_class": "Low",
+      "gene_names": [
+        "NTH2",
+        "NTH1"
+      ],
+      "orf_pair": [
+        "YBR001C",
+        "YDR001C"
+      ],
+      "source_row": 151,
+      "trigenic_count": 2,
+      "trigenic_fraction": 0.04
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBR005W": 0,
+        "YDR003W": 3
+      },
+      "example_rank_sha256": "dbe4fcfa252ee1e9b303b347e235818c25c4097fea75418d46e8fd9c8806780c",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "RCR1",
+        "RCR2"
+      ],
+      "orf_pair": [
+        "YBR005W",
+        "YDR003W"
+      ],
+      "source_row": 198,
+      "trigenic_count": 1,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBR014C": 1,
+        "YDL010W": 8
+      },
+      "example_rank_sha256": "9edb0e9e58f14945fe833f634512c046ce78c068e7ecf3bbddaaf554fc37ec7a",
+      "experimental_class": "High",
+      "gene_names": [
+        "GRX7",
+        "GRX6"
+      ],
+      "orf_pair": [
+        "YBR014C",
+        "YDL010W"
+      ],
+      "source_row": 4,
+      "trigenic_count": 118,
+      "trigenic_fraction": 0.9291338582677166
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBR020W": 4,
+        "YDR009W": 1
+      },
+      "example_rank_sha256": "dfda495212af9dd563d0a83798cd252e8077669e2f81b9670e74986134a0154e",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "GAL1",
+        "GAL3"
+      ],
+      "orf_pair": [
+        "YBR020W",
+        "YDR009W"
+      ],
+      "source_row": 242,
+      "trigenic_count": 0,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBR024W": 6,
+        "YBR037C": 25
+      },
+      "example_rank_sha256": "735a11c0012b36164357baa73e45ea5c2f9242dd5e176bc6a96526b21d5637b6",
+      "experimental_class": "High",
+      "gene_names": [
+        "SCO2",
+        "SCO1"
+      ],
+      "orf_pair": [
+        "YBR024W",
+        "YBR037C"
+      ],
+      "source_row": 30,
+      "trigenic_count": 52,
+      "trigenic_fraction": 0.6265060240963856
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBR054W": 2,
+        "YDR033W": 3
+      },
+      "example_rank_sha256": "f277c5f959f764c983e39afcf55f99787edcc9a00100a3b65d251c88e663b632",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "YRO2",
+        "MRH1"
+      ],
+      "orf_pair": [
+        "YBR054W",
+        "YDR033W"
+      ],
+      "source_row": 207,
+      "trigenic_count": 1,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBR066C": 6,
+        "YDR043C": 6
+      },
+      "example_rank_sha256": "e1f2cf2131ec960f2b9b44068d6a2f3c23ca27f1861cfb9e1e1b1167a1539325",
+      "experimental_class": "Low",
+      "gene_names": [
+        "NRG2",
+        "NRG1"
+      ],
+      "orf_pair": [
+        "YBR066C",
+        "YDR043C"
+      ],
+      "source_row": 141,
+      "trigenic_count": 1,
+      "trigenic_fraction": 0.07692307692307693
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBR078W": 39,
+        "YDR055W": 0
+      },
+      "example_rank_sha256": "4bf9460a499e5ce6c5c0f0d8a95d2f8e32ddec5cb72eae5fa66c393bcf13d9a6",
+      "experimental_class": "Low",
+      "gene_names": [
+        "ECM33",
+        "PST1"
+      ],
+      "orf_pair": [
+        "YBR078W",
+        "YDR055W"
+      ],
+      "source_row": 72,
+      "trigenic_count": 12,
+      "trigenic_fraction": 0.23529411764705882
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBR104W": 15,
+        "YPR058W": 5
+      },
+      "example_rank_sha256": "e853f177f303011889053ba63dfa0934a77629bcd298ccdd9e336c14dae5c62b",
+      "experimental_class": "Low",
+      "gene_names": [
+        "YMC2",
+        "YMC1"
+      ],
+      "orf_pair": [
+        "YBR104W",
+        "YPR058W"
+      ],
+      "source_row": 136,
+      "trigenic_count": 2,
+      "trigenic_fraction": 0.09090909090909091
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBR147W": 2,
+        "YOL092W": 4
+      },
+      "example_rank_sha256": "033028eecad777890ba67b8cd2305dfdcf9d4690d85dbe360e7fbb102d1de47f",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "RTC2",
+        "YPQ1"
+      ],
+      "orf_pair": [
+        "YBR147W",
+        "YOL092W"
+      ],
+      "source_row": 215,
+      "trigenic_count": 1,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBR148W": 4,
+        "YOL091W": 1
+      },
+      "example_rank_sha256": "cd7b3c4e541a0cf1d834694de241392d02d1604578fea20dc04ffcbf195754c3",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "YSW1",
+        "SPO21"
+      ],
+      "orf_pair": [
+        "YBR148W",
+        "YOL091W"
+      ],
+      "source_row": 180,
+      "trigenic_count": 3,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBR172C": 7,
+        "YPL105C": 4
+      },
+      "example_rank_sha256": "388c8040b1394f153d72aa4f0893a6373044c2d5a8d2a8ed8178878a19924bdd",
+      "experimental_class": "Low",
+      "gene_names": [
+        "SMY2",
+        "SYH1"
+      ],
+      "orf_pair": [
+        "YBR172C",
+        "YPL105C"
+      ],
+      "source_row": 108,
+      "trigenic_count": 2,
+      "trigenic_fraction": 0.15384615384615385
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBR177C": 2,
+        "YPL095C": 3
+      },
+      "example_rank_sha256": "4cd0486ea079e7c8f025b7f015770ff4289c74f6255e629b94961a4c605c18a4",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "EHT1",
+        "EEB1"
+      ],
+      "orf_pair": [
+        "YBR177C",
+        "YPL095C"
+      ],
+      "source_row": 206,
+      "trigenic_count": 1,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBR182C": 26,
+        "YPL089C": 14
+      },
+      "example_rank_sha256": "eca106acc6d415fabaf1d0e52c21a6f3ac8ac301be47fed5f5fa5e70b889f07e",
+      "experimental_class": "Low",
+      "gene_names": [
+        "SMP1",
+        "RLM1"
+      ],
+      "orf_pair": [
+        "YBR182C",
+        "YPL089C"
+      ],
+      "source_row": 125,
+      "trigenic_count": 5,
+      "trigenic_fraction": 0.1111111111111111
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBR183W": 2,
+        "YPL087W": 6
+      },
+      "example_rank_sha256": "05c2488358163d8327afe2ba970700d35252c3ae5c6fed7dd7b8dc277c056ce5",
+      "experimental_class": "Low",
+      "gene_names": [
+        "YPC1",
+        "YDC1"
+      ],
+      "orf_pair": [
+        "YBR183W",
+        "YPL087W"
+      ],
+      "source_row": 92,
+      "trigenic_count": 2,
+      "trigenic_fraction": 0.2
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBR197C": 4,
+        "YPL077C": 9
+      },
+      "example_rank_sha256": "bad77340033b93b33277895c6e79f76d9d2ac5cafcaa16725fdd5c5074f88c83",
+      "experimental_class": "Low",
+      "gene_names": [
+        "YBR197C",
+        "YPL077C"
+      ],
+      "orf_pair": [
+        "YBR197C",
+        "YPL077C"
+      ],
+      "source_row": 96,
+      "trigenic_count": 3,
+      "trigenic_fraction": 0.1875
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBR214W": 5,
+        "YGL056C": 4
+      },
+      "example_rank_sha256": "2d0c21fb0c8e2beed520a474d4138a577d49f79c18364a7a93ce08eaa59dcba4",
+      "experimental_class": "High",
+      "gene_names": [
+        "SDS24",
+        "SDS23"
+      ],
+      "orf_pair": [
+        "YBR214W",
+        "YGL056C"
+      ],
+      "source_row": 28,
+      "trigenic_count": 16,
+      "trigenic_fraction": 0.64
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBR216C": 9,
+        "YGL060W": 1
+      },
+      "example_rank_sha256": "84b76fdfa5593ba15926127f54bd5e06248b9e853cc9e09e435cbe88247b3c13",
+      "experimental_class": "Low",
+      "gene_names": [
+        "YBP1",
+        "YBP2"
+      ],
+      "orf_pair": [
+        "YBR216C",
+        "YGL060W"
+      ],
+      "source_row": 155,
+      "trigenic_count": 0,
+      "trigenic_fraction": 0
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBR241C": 1,
+        "YGL104C": 12
+      },
+      "example_rank_sha256": "ef50e773fd6fd4fd95f9962a2ed3b3ce2ce10a70196a35ac2d416a430d5dd38d",
+      "experimental_class": "Low",
+      "gene_names": [
+        "YBR241C",
+        "VPS73"
+      ],
+      "orf_pair": [
+        "YBR241C",
+        "YGL104C"
+      ],
+      "source_row": 142,
+      "trigenic_count": 1,
+      "trigenic_fraction": 0.07142857142857142
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBR259W": 1,
+        "YJL047C": 40
+      },
+      "example_rank_sha256": "06e3f5f99d9cacc58c6440c103fc822411d332feb650b45acf8dee110d2dcba1",
+      "experimental_class": "Low",
+      "gene_names": [
+        "YBR259W",
+        "RTT101"
+      ],
+      "orf_pair": [
+        "YBR259W",
+        "YJL047C"
+      ],
+      "source_row": 138,
+      "trigenic_count": 4,
+      "trigenic_fraction": 0.08888888888888889
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBR270C": 1,
+        "YJL058C": 2
+      },
+      "example_rank_sha256": "b7f4c5776ba3f7222927e4ee9ff917448af8bd5427136a664ce14ebfddf741e9",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "BIT2",
+        "BIT61"
+      ],
+      "orf_pair": [
+        "YBR270C",
+        "YJL058C"
+      ],
+      "source_row": 168,
+      "trigenic_count": 5,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBR273C": 5,
+        "YJL048C": 1
+      },
+      "example_rank_sha256": "c4abe72129d54ce3d99bd082c4d0273c9e76d8356c03b7f0d1b1efbf6d657f63",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "UBX7",
+        "UBX6"
+      ],
+      "orf_pair": [
+        "YBR273C",
+        "YJL048C"
+      ],
+      "source_row": 213,
+      "trigenic_count": 1,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YBR278W": 16,
+        "YJL065C": 6
+      },
+      "example_rank_sha256": "a303763cfcecd3fd1e346e63395d2335e4ee9b7f19e44909df75d19a957e3a66",
+      "experimental_class": "Low",
+      "gene_names": [
+        "DPB3",
+        "DLS1"
+      ],
+      "orf_pair": [
+        "YBR278W",
+        "YJL065C"
+      ],
+      "source_row": 63,
+      "trigenic_count": 9,
+      "trigenic_fraction": 0.2903225806451613
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YCL011C": 15,
+        "YNL004W": 7
+      },
+      "example_rank_sha256": "a6043ff08561b68ea0e76e0f2f47ae68b52cfc928c2a4420336d4b040f9c6d08",
+      "experimental_class": "Low",
+      "gene_names": [
+        "GBP2",
+        "HRB1"
+      ],
+      "orf_pair": [
+        "YCL011C",
+        "YNL004W"
+      ],
+      "source_row": 83,
+      "trigenic_count": 6,
+      "trigenic_fraction": 0.21428571428571427
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YCL024W": 11,
+        "YDR507C": 60
+      },
+      "example_rank_sha256": "6a9b6b1a7585303b2926aa40d4f7ae0f2945d091fb70eaa0d175f720f2dde1fd",
+      "experimental_class": "Low",
+      "gene_names": [
+        "KCC4",
+        "GIN4"
+      ],
+      "orf_pair": [
+        "YCL024W",
+        "YDR507C"
+      ],
+      "source_row": 55,
+      "trigenic_count": 39,
+      "trigenic_fraction": 0.35454545454545455
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YCL035C": 2,
+        "YDR513W": 0
+      },
+      "example_rank_sha256": "a93478f009fe80e99673e52a695de0b9393ea44e26c2f4ded6020c0561e37744",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "GRX1",
+        "GRX2"
+      ],
+      "orf_pair": [
+        "YCL035C",
+        "YDR513W"
+      ],
+      "source_row": 171,
+      "trigenic_count": 3,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YCL036W": 11,
+        "YDR514C": 2
+      },
+      "example_rank_sha256": "3c13ba807140a8cfaf89e97b992f189dc0d58afa09c3da9f505ef86e825fcf66",
+      "experimental_class": "Low",
+      "gene_names": [
+        "GFD2",
+        "YDR514C"
+      ],
+      "orf_pair": [
+        "YCL036W",
+        "YDR514C"
+      ],
+      "source_row": 113,
+      "trigenic_count": 2,
+      "trigenic_fraction": 0.13333333333333333
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YCL040W": 0,
+        "YDR516C": 0
+      },
+      "example_rank_sha256": "3759c56e74a18bd7d3580bfb78e102886c332bb2818f8edc14891116a26cbcc5",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "GLK1",
+        "EMI2"
+      ],
+      "orf_pair": [
+        "YCL040W",
+        "YDR516C"
+      ],
+      "source_row": 164,
+      "trigenic_count": 0,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YCL048W": 3,
+        "YDR522C": 0
+      },
+      "example_rank_sha256": "042210b89b2ffc7ae7b48467436d264246fe0c17c534ae35c58039fd58bddb71",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "SPS22",
+        "SPS2"
+      ],
+      "orf_pair": [
+        "YCL048W",
+        "YDR522C"
+      ],
+      "source_row": 221,
+      "trigenic_count": 0,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YCL050C": 4,
+        "YDR530C": 4
+      },
+      "example_rank_sha256": "cc8ad790bd6a1816012f70202e988174f38a70f780985d25a3b377b6029dfef7",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "APA1",
+        "APA2"
+      ],
+      "orf_pair": [
+        "YCL050C",
+        "YDR530C"
+      ],
+      "source_row": 187,
+      "trigenic_count": 3,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YCR010C": 1,
+        "YNR002C": 4
+      },
+      "example_rank_sha256": "1dcde95bf5794f86ea9d90cac8d0c6dd8c9ddbe4295c28640e8694b89536e258",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "ADY2",
+        "ATO2"
+      ],
+      "orf_pair": [
+        "YCR010C",
+        "YNR002C"
+      ],
+      "source_row": 232,
+      "trigenic_count": 0,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YCR026C": 7,
+        "YEL016C": 13
+      },
+      "example_rank_sha256": "29c880adef7a026d61cecc1789985e70d18aa5ef68a9a1914ac2da0a72f84804",
+      "experimental_class": "Low",
+      "gene_names": [
+        "NPP1",
+        "NPP2"
+      ],
+      "orf_pair": [
+        "YCR026C",
+        "YEL016C"
+      ],
+      "source_row": 87,
+      "trigenic_count": 5,
+      "trigenic_fraction": 0.2
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YCR048W": 6,
+        "YNR019W": 47
+      },
+      "example_rank_sha256": "b804a91181d6897850dd58eef9d0614c845df489e0435eba46235d9db87fd70a",
+      "experimental_class": "Low",
+      "gene_names": [
+        "ARE1",
+        "ARE2"
+      ],
+      "orf_pair": [
+        "YCR048W",
+        "YNR019W"
+      ],
+      "source_row": 104,
+      "trigenic_count": 11,
+      "trigenic_fraction": 0.171875
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YCR069W": 10,
+        "YNR028W": 4
+      },
+      "example_rank_sha256": "f559848739fcfabf78cff22ecd728d057132927131fcb8db64c0cd92f6c60312",
+      "experimental_class": "High",
+      "gene_names": [
+        "CPR4",
+        "CPR8"
+      ],
+      "orf_pair": [
+        "YCR069W",
+        "YNR028W"
+      ],
+      "source_row": 13,
+      "trigenic_count": 44,
+      "trigenic_fraction": 0.7586206896551724
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YCR073W-A": 0,
+        "YNR034W": 13
+      },
+      "example_rank_sha256": "6e17fafa9d8bbaafc828b880f37f6e33d985162d44028b5bb91c0b8f636cffc6",
+      "experimental_class": "Low",
+      "gene_names": [
+        "SOL2",
+        "SOL1"
+      ],
+      "orf_pair": [
+        "YCR073W-A",
+        "YNR034W"
+      ],
+      "source_row": 97,
+      "trigenic_count": 3,
+      "trigenic_fraction": 0.1875
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YCR075W-A": 14,
+        "YNR034W-A": 0
+      },
+      "example_rank_sha256": "115fffdadb85a75013dcb64017b7d67151fdec461d4a7427160702ca4957720a",
+      "experimental_class": "Low",
+      "gene_names": [
+        "YCR075W-A",
+        "YNR034W-A"
+      ],
+      "orf_pair": [
+        "YCR075W-A",
+        "YNR034W-A"
+      ],
+      "source_row": 147,
+      "trigenic_count": 1,
+      "trigenic_fraction": 0.06666666666666667
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YCR089W": 3,
+        "YNR044W": 2
+      },
+      "example_rank_sha256": "3979f2219faf52b44fd1c802cc0ae449e8bfed6214ffbd15bc42095f849575ff",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "FIG2",
+        "AGA1"
+      ],
+      "orf_pair": [
+        "YCR089W",
+        "YNR044W"
+      ],
+      "source_row": 208,
+      "trigenic_count": 1,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDL021W": 3,
+        "YOL056W": 7
+      },
+      "example_rank_sha256": "d81259a44a6a00927118ebf4c3a4560501363e28393b51000b8327221395cb02",
+      "experimental_class": "Low",
+      "gene_names": [
+        "GPM2",
+        "GPM3"
+      ],
+      "orf_pair": [
+        "YDL021W",
+        "YOL056W"
+      ],
+      "source_row": 159,
+      "trigenic_count": 0,
+      "trigenic_fraction": 0
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDL079C": 0,
+        "YMR139W": 3
+      },
+      "example_rank_sha256": "8e584ccf139c4604b12f9851b1cf9fc3ffa2c3330c36bb82a2db1eeb1ba0f3c9",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "MRK1",
+        "RIM11"
+      ],
+      "orf_pair": [
+        "YDL079C",
+        "YMR139W"
+      ],
+      "source_row": 230,
+      "trigenic_count": 0,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDL082W": 17,
+        "YMR142C": 5
+      },
+      "example_rank_sha256": "0781a9b49353a6999b72f6f8c9acf9709704c58fe4c9af7fd61c5acf32d321c2",
+      "experimental_class": "Low",
+      "gene_names": [
+        "RPL13A",
+        "RPL13B"
+      ],
+      "orf_pair": [
+        "YDL082W",
+        "YMR142C"
+      ],
+      "source_row": 99,
+      "trigenic_count": 5,
+      "trigenic_fraction": 0.18518518518518517
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDL088C": 19,
+        "YMR153W": 23
+      },
+      "example_rank_sha256": "f3f07891b654f7beecf54d71d40f11ce5425099f9c602910793cee4c7bc0d7f7",
+      "experimental_class": "High",
+      "gene_names": [
+        "ASM4",
+        "NUP53"
+      ],
+      "orf_pair": [
+        "YDL088C",
+        "YMR153W"
+      ],
+      "source_row": 47,
+      "trigenic_count": 40,
+      "trigenic_fraction": 0.4878048780487805
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDL127W": 2,
+        "YDL179W": 0
+      },
+      "example_rank_sha256": "7ddd0d91d95d74e78236c2ea2063c171813b2d71842ab972ae0148221924b593",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "PCL2",
+        "PCL9"
+      ],
+      "orf_pair": [
+        "YDL127W",
+        "YDL179W"
+      ],
+      "source_row": 241,
+      "trigenic_count": 0,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDL130W-A": 0,
+        "YDL181W": 6
+      },
+      "example_rank_sha256": "ca79e46fd7771341d8eff99a237e1b65c2a0a0fcbea94da90152d1293d1cc990",
+      "experimental_class": "Low",
+      "gene_names": [
+        "STF1",
+        "INH1"
+      ],
+      "orf_pair": [
+        "YDL130W-A",
+        "YDL181W"
+      ],
+      "source_row": 111,
+      "trigenic_count": 1,
+      "trigenic_fraction": 0.14285714285714285
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDL155W": 14,
+        "YLR210W": 12
+      },
+      "example_rank_sha256": "32c8a3e61418ebf15aef613af5d5a5be21f7a5cede12c22121dc40e309f7cb6a",
+      "experimental_class": "High",
+      "gene_names": [
+        "CLB3",
+        "CLB4"
+      ],
+      "orf_pair": [
+        "YDL155W",
+        "YLR210W"
+      ],
+      "source_row": 37,
+      "trigenic_count": 36,
+      "trigenic_fraction": 0.5806451612903226
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDL204W": 17,
+        "YDR233C": 9
+      },
+      "example_rank_sha256": "e47e481fc45a9c9ce99b5793adcc2bd459df889d5cef4f0ca0bf6ef27c7f78ee",
+      "experimental_class": "Low",
+      "gene_names": [
+        "RTN2",
+        "RTN1"
+      ],
+      "orf_pair": [
+        "YDL204W",
+        "YDR233C"
+      ],
+      "source_row": 128,
+      "trigenic_count": 3,
+      "trigenic_fraction": 0.10344827586206896
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDL223C": 5,
+        "YNL195C": 0
+      },
+      "example_rank_sha256": "b87918778207963ab4c533cfa5224f9c2fdf4ac465d5494c6d49d7811af1985f",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "HBT1",
+        "YNL195C"
+      ],
+      "orf_pair": [
+        "YDL223C",
+        "YNL195C"
+      ],
+      "source_row": 209,
+      "trigenic_count": 1,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR077W": 4,
+        "YER150W": 7
+      },
+      "example_rank_sha256": "0de5f40613d859264d47d1713241aeb7bbd1e10ebfdba4b70c563f6607818346",
+      "experimental_class": "High",
+      "gene_names": [
+        "SED1",
+        "SPI1"
+      ],
+      "orf_pair": [
+        "YDR077W",
+        "YER150W"
+      ],
+      "source_row": 20,
+      "trigenic_count": 25,
+      "trigenic_fraction": 0.6944444444444444
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR085C": 4,
+        "YER158C": 16
+      },
+      "example_rank_sha256": "2be710d2aab3d0fe78a2f89c0d956fc465a9ac6b9c1ede20561005ddf53cdeea",
+      "experimental_class": "Low",
+      "gene_names": [
+        "AFR1",
+        "YER158C"
+      ],
+      "orf_pair": [
+        "YDR085C",
+        "YER158C"
+      ],
+      "source_row": 115,
+      "trigenic_count": 3,
+      "trigenic_fraction": 0.13043478260869565
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR093W": 2,
+        "YER166W": 4
+      },
+      "example_rank_sha256": "4c62f3d41cc5d1e6f2d873e879ee2696c510a5c077fbaa70e2a231193b88d150",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "DNF2",
+        "DNF1"
+      ],
+      "orf_pair": [
+        "YDR093W",
+        "YER166W"
+      ],
+      "source_row": 188,
+      "trigenic_count": 2,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR096W": 12,
+        "YER169W": 64
+      },
+      "example_rank_sha256": "fe2b39c4f64765cc01f088634b9b4ec286ceb19d437572b6f337fc7332f477c2",
+      "experimental_class": "Low",
+      "gene_names": [
+        "GIS1",
+        "RPH1"
+      ],
+      "orf_pair": [
+        "YDR096W",
+        "YER169W"
+      ],
+      "source_row": 121,
+      "trigenic_count": 10,
+      "trigenic_fraction": 0.11627906976744186
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR122W": 10,
+        "YLR096W": 3
+      },
+      "example_rank_sha256": "0c2e0887f32764456e6eabbe02bbd7304a7ae8ef76a736b483558e7dc55edf47",
+      "experimental_class": "High",
+      "gene_names": [
+        "KIN1",
+        "KIN2"
+      ],
+      "orf_pair": [
+        "YDR122W",
+        "YLR096W"
+      ],
+      "source_row": 39,
+      "trigenic_count": 17,
+      "trigenic_fraction": 0.5666666666666667
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR125C": 2,
+        "YLR099C": 1
+      },
+      "example_rank_sha256": "76c6796cc64ebefa8e9ecf8881380c46e63d28b2c3ba2ecd5682ecb176bde60c",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "ECM18",
+        "ICT1"
+      ],
+      "orf_pair": [
+        "YDR125C",
+        "YLR099C"
+      ],
+      "source_row": 229,
+      "trigenic_count": 0,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR132C": 2,
+        "YLR108C": 2
+      },
+      "example_rank_sha256": "f590f163d5b2f46dd3c06b758481670323c76563d0cbe18cdfe75d1ab918795a",
+      "experimental_class": "High",
+      "gene_names": [
+        "YDR132C",
+        "YLR108C"
+      ],
+      "orf_pair": [
+        "YDR132C",
+        "YLR108C"
+      ],
+      "source_row": 35,
+      "trigenic_count": 6,
+      "trigenic_fraction": 0.6
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR134C": 7,
+        "YLR110C": 74
+      },
+      "example_rank_sha256": "9df05af10924c01d0a17babc290b9b5bad88509a462be42ac2cf99fb3fe14dd4",
+      "experimental_class": "Low",
+      "gene_names": [
+        "#N/A",
+        "CCW12"
+      ],
+      "orf_pair": [
+        "YDR134C",
+        "YLR110C"
+      ],
+      "source_row": 154,
+      "trigenic_count": 2,
+      "trigenic_fraction": 0.024096385542168676
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR146C": 83,
+        "YLR131C": 61
+      },
+      "example_rank_sha256": "8c28a8392fdaae82d2cce4dd9eadabc0af01d1118d2d2636c5687e948e8c2329",
+      "experimental_class": "Low",
+      "gene_names": [
+        "SWI5",
+        "ACE2"
+      ],
+      "orf_pair": [
+        "YDR146C",
+        "YLR131C"
+      ],
+      "source_row": 61,
+      "trigenic_count": 63,
+      "trigenic_fraction": 0.30434782608695654
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR147W": 8,
+        "YLR133W": 3
+      },
+      "example_rank_sha256": "5f1b40ce8ca6a4d051a13dfbccf0757e7a80063f5cedbef674360b71b8435db4",
+      "experimental_class": "Low",
+      "gene_names": [
+        "EKI1",
+        "CKI1"
+      ],
+      "orf_pair": [
+        "YDR147W",
+        "YLR133W"
+      ],
+      "source_row": 65,
+      "trigenic_count": 4,
+      "trigenic_fraction": 0.26666666666666666
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR151C": 3,
+        "YLR136C": 2
+      },
+      "example_rank_sha256": "89b89fb862d78c8056c0469cf9703a15b9e791182e3fab86d26890b784d3b02d",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "CTH1",
+        "TIS11"
+      ],
+      "orf_pair": [
+        "YDR151C",
+        "YLR136C"
+      ],
+      "source_row": 181,
+      "trigenic_count": 3,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR178W": 12,
+        "YLR164W": 2
+      },
+      "example_rank_sha256": "e4def90fe69e27f7fbf978026b0caad2d925484a0b271674af44962249076db1",
+      "experimental_class": "Low",
+      "gene_names": [
+        "SDH4",
+        "SHH4"
+      ],
+      "orf_pair": [
+        "YDR178W",
+        "YLR164W"
+      ],
+      "source_row": 79,
+      "trigenic_count": 4,
+      "trigenic_fraction": 0.2222222222222222
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR185C": 1,
+        "YLR168C": 20
+      },
+      "example_rank_sha256": "f9e8a516889a4669a0fb21f18e25e94f45203977bb983a2830f56180fb008a06",
+      "experimental_class": "High",
+      "gene_names": [
+        "UPS3",
+        "UPS2"
+      ],
+      "orf_pair": [
+        "YDR185C",
+        "YLR168C"
+      ],
+      "source_row": 44,
+      "trigenic_count": 22,
+      "trigenic_fraction": 0.5116279069767442
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR200C": 42,
+        "YLR238W": 24
+      },
+      "example_rank_sha256": "6c7ac0a9862b58bb940d6e04dc597a2b65e5c992e56acdaf22c6b3c9e64e42a6",
+      "experimental_class": "Low",
+      "gene_names": [
+        "VPS64",
+        "FAR10"
+      ],
+      "orf_pair": [
+        "YDR200C",
+        "YLR238W"
+      ],
+      "source_row": 143,
+      "trigenic_count": 5,
+      "trigenic_fraction": 0.07042253521126761
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR222W": 4,
+        "YLR225C": 2
+      },
+      "example_rank_sha256": "9049731a1de61fed20101b6eba1dc93e1b206ca60fae319f7da408a7f9ba06f3",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "YDR222W",
+        "YLR225C"
+      ],
+      "orf_pair": [
+        "YDR222W",
+        "YLR225C"
+      ],
+      "source_row": 190,
+      "trigenic_count": 2,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR251W": 2,
+        "YPL032C": 4
+      },
+      "example_rank_sha256": "c36b40df74c2cb37d79afd7a398c3dab61fc549b06c4c2bc4777c69c88312396",
+      "experimental_class": "High",
+      "gene_names": [
+        "PAM1",
+        "SVL3"
+      ],
+      "orf_pair": [
+        "YDR251W",
+        "YPL032C"
+      ],
+      "source_row": 32,
+      "trigenic_count": 10,
+      "trigenic_fraction": 0.625
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR252W": 0,
+        "YPL037C": 4
+      },
+      "example_rank_sha256": "4865987bb40ac2d040d5dd97c89a7a348c2661576704e13f6c12e51a83eaa42f",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "BTT1",
+        "EGD1"
+      ],
+      "orf_pair": [
+        "YDR252W",
+        "YPL037C"
+      ],
+      "source_row": 185,
+      "trigenic_count": 2,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR259C": 0,
+        "YOR028C": 3
+      },
+      "example_rank_sha256": "8de4a1a38a204d791842d3fbf8bf2895a8a0e1106ed83f0be5a651a7dba8fcba",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "YAP6",
+        "CIN5"
+      ],
+      "orf_pair": [
+        "YDR259C",
+        "YOR028C"
+      ],
+      "source_row": 195,
+      "trigenic_count": 1,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR263C": 1,
+        "YOR033C": 8
+      },
+      "example_rank_sha256": "2b008bc5d0d665f2d3fc4064625983111e18e1453ca72f64eed323837969f934",
+      "experimental_class": "Low",
+      "gene_names": [
+        "DIN7",
+        "EXO1"
+      ],
+      "orf_pair": [
+        "YDR263C",
+        "YOR033C"
+      ],
+      "source_row": 54,
+      "trigenic_count": 5,
+      "trigenic_fraction": 0.35714285714285715
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR272W": 2,
+        "YOR040W": 3
+      },
+      "example_rank_sha256": "27e1a2050e14cb20a25903428eb3874cbc9fd745357874f4e45f977c29186c10",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "GLO2",
+        "GLO4"
+      ],
+      "orf_pair": [
+        "YDR272W",
+        "YOR040W"
+      ],
+      "source_row": 182,
+      "trigenic_count": 3,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR273W": 0,
+        "YOR042W": 17
+      },
+      "example_rank_sha256": "aa062f44d57038960a8fb8a7bab09c2f1dc34c4a2937eb376c0fbe5c6cfe3f36",
+      "experimental_class": "Low",
+      "gene_names": [
+        "DON1",
+        "CUE5"
+      ],
+      "orf_pair": [
+        "YDR273W",
+        "YOR042W"
+      ],
+      "source_row": 109,
+      "trigenic_count": 3,
+      "trigenic_fraction": 0.15
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR277C": 1,
+        "YOR047C": 2
+      },
+      "example_rank_sha256": "fd25a48199a3afe902876a0342d4608cf9691bbd9b9b15488b59461886d75733",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "MTH1",
+        "STD1"
+      ],
+      "orf_pair": [
+        "YDR277C",
+        "YOR047C"
+      ],
+      "source_row": 170,
+      "trigenic_count": 5,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR304C": 1,
+        "YHR057C": 29
+      },
+      "example_rank_sha256": "2c3428630dd5aa5ae94d398b64fb11faf7f167e0107409fbc28237abf191d63c",
+      "experimental_class": "Low",
+      "gene_names": [
+        "CPR5",
+        "CPR2"
+      ],
+      "orf_pair": [
+        "YDR304C",
+        "YHR057C"
+      ],
+      "source_row": 132,
+      "trigenic_count": 3,
+      "trigenic_fraction": 0.09090909090909091
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR309C": 5,
+        "YHR061C": 4
+      },
+      "example_rank_sha256": "aa1bad7d156c86789e20c2e7f4a958e558f1a30ffed79a7e00176e273f1886f9",
+      "experimental_class": "High",
+      "gene_names": [
+        "GIC2",
+        "GIC1"
+      ],
+      "orf_pair": [
+        "YDR309C",
+        "YHR061C"
+      ],
+      "source_row": 8,
+      "trigenic_count": 37,
+      "trigenic_fraction": 0.8043478260869565
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR343C": 2,
+        "YHR094C": 1
+      },
+      "example_rank_sha256": "67bba27ae83c000e2e3d8d98a4fb0e983f474433610066a07811284c7351820c",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "HXT6",
+        "HXT1"
+      ],
+      "orf_pair": [
+        "YDR343C",
+        "YHR094C"
+      ],
+      "source_row": 224,
+      "trigenic_count": 0,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR345C": 2,
+        "YHR096C": 0
+      },
+      "example_rank_sha256": "5cda9963d2a2ac25e6c197a2dddf85aa16bb69c25ded5991ea9aa16c595bb313",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "HXT3",
+        "HXT5"
+      ],
+      "orf_pair": [
+        "YDR345C",
+        "YHR096C"
+      ],
+      "source_row": 219,
+      "trigenic_count": 0,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR351W": 16,
+        "YHR103W": 7
+      },
+      "example_rank_sha256": "c4721d682abd32bd9dd2148d69ee8f8ee7b3133ca859edf25786ce0cc9be16d6",
+      "experimental_class": "High",
+      "gene_names": [
+        "SBE2",
+        "SBE22"
+      ],
+      "orf_pair": [
+        "YDR351W",
+        "YHR103W"
+      ],
+      "source_row": 22,
+      "trigenic_count": 51,
+      "trigenic_fraction": 0.6891891891891891
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR358W": 4,
+        "YHR108W": 18
+      },
+      "example_rank_sha256": "e5e04e685396ef99b6c72dd2b7fce9ce3409d276703febc8be3cd2f4b2520891",
+      "experimental_class": "High",
+      "gene_names": [
+        "GGA1",
+        "GGA2"
+      ],
+      "orf_pair": [
+        "YDR358W",
+        "YHR108W"
+      ],
+      "source_row": 24,
+      "trigenic_count": 46,
+      "trigenic_fraction": 0.6764705882352942
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR368W": 0,
+        "YOR120W": 2
+      },
+      "example_rank_sha256": "203fc849f1db38e032fd37d782b59b35cac7b1aac41feef9964a99611a20a044",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "YPR1",
+        "GCY1"
+      ],
+      "orf_pair": [
+        "YDR368W",
+        "YOR120W"
+      ],
+      "source_row": 234,
+      "trigenic_count": 0,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR379W": 6,
+        "YOR127W": 25
+      },
+      "example_rank_sha256": "b661efc0c24343c6fcb1dd97da13e95acc4f9e02bdb2bf9dbfcb78adc45b8a1f",
+      "experimental_class": "High",
+      "gene_names": [
+        "RGA2",
+        "RGA1"
+      ],
+      "orf_pair": [
+        "YDR379W",
+        "YOR127W"
+      ],
+      "source_row": 43,
+      "trigenic_count": 33,
+      "trigenic_fraction": 0.515625
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR406W": 4,
+        "YOR153W": 5
+      },
+      "example_rank_sha256": "69c5405b4c3327156de0b9e91600143baecc74d0ac7cecb1895d0739f8b5a04e",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "PDR15",
+        "PDR5"
+      ],
+      "orf_pair": [
+        "YDR406W",
+        "YOR153W"
+      ],
+      "source_row": 220,
+      "trigenic_count": 0,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR423C": 6,
+        "YML007W": 30
+      },
+      "example_rank_sha256": "bb8f6f03f61b0220e28e1732cf628879a778808c8d9c38ce00e2a0c63704c190",
+      "experimental_class": "Low",
+      "gene_names": [
+        "CAD1",
+        "YAP1"
+      ],
+      "orf_pair": [
+        "YDR423C",
+        "YML007W"
+      ],
+      "source_row": 152,
+      "trigenic_count": 1,
+      "trigenic_fraction": 0.02702702702702703
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR438W": 5,
+        "YML018C": 2
+      },
+      "example_rank_sha256": "7576f8955e7b02bcf1897447efe0623eef19407ac007b0772933e8ae495a76b1",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "THI74",
+        "YML018C"
+      ],
+      "orf_pair": [
+        "YDR438W",
+        "YML018C"
+      ],
+      "source_row": 199,
+      "trigenic_count": 2,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR453C": 0,
+        "YML028W": 10
+      },
+      "example_rank_sha256": "698ad1d6cab8c79d79126280cae7859fbd54e5a7e35ef7f8fe71902e0b9de38a",
+      "experimental_class": "Low",
+      "gene_names": [
+        "TSA2",
+        "TSA1"
+      ],
+      "orf_pair": [
+        "YDR453C",
+        "YML028W"
+      ],
+      "source_row": 133,
+      "trigenic_count": 1,
+      "trigenic_fraction": 0.09090909090909091
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR458C": 2,
+        "YML034W": 57
+      },
+      "example_rank_sha256": "40ce5e06c872528bbc356deee60fdb1c55235e1b358ee0a31d1b7d419a4211d4",
+      "experimental_class": "Low",
+      "gene_names": [
+        "HEH2",
+        "SRC1"
+      ],
+      "orf_pair": [
+        "YDR458C",
+        "YML034W"
+      ],
+      "source_row": 78,
+      "trigenic_count": 17,
+      "trigenic_fraction": 0.2236842105263158
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR475C": 0,
+        "YOR019W": 1
+      },
+      "example_rank_sha256": "336b831fcf6059ef6f4b2b6f3893d15d73727f9d54c0abf068c191ef07b84139",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "JIP4",
+        "YOR019W"
+      ],
+      "orf_pair": [
+        "YDR475C",
+        "YOR019W"
+      ],
+      "source_row": 175,
+      "trigenic_count": 1,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR483W": 41,
+        "YPL053C": 3
+      },
+      "example_rank_sha256": "e63eb36b8eb87fb81ba88d42f825eaa130eff12eb36369cab0493219613a9d67",
+      "experimental_class": "Low",
+      "gene_names": [
+        "KRE2",
+        "KTR6"
+      ],
+      "orf_pair": [
+        "YDR483W",
+        "YPL053C"
+      ],
+      "source_row": 129,
+      "trigenic_count": 5,
+      "trigenic_fraction": 0.10204081632653061
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR492W": 7,
+        "YOL101C": 0
+      },
+      "example_rank_sha256": "655742a7fec513c042a0f69039d05cc0bf11e3bc9efd05bdd9dfb8110c8bdf70",
+      "experimental_class": "Low",
+      "gene_names": [
+        "IZH1",
+        "IZH4"
+      ],
+      "orf_pair": [
+        "YDR492W",
+        "YOL101C"
+      ],
+      "source_row": 160,
+      "trigenic_count": 0,
+      "trigenic_fraction": 0
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YDR505C": 24,
+        "YLR177W": 1
+      },
+      "example_rank_sha256": "5cb1a8cee036ce1af87316daae80b41af0b46ee6ba0adde57a8b296052665007",
+      "experimental_class": "Low",
+      "gene_names": [
+        "PSP1",
+        "YLR177W"
+      ],
+      "orf_pair": [
+        "YDR505C",
+        "YLR177W"
+      ],
+      "source_row": 60,
+      "trigenic_count": 11,
+      "trigenic_fraction": 0.3055555555555556
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YEL006W": 4,
+        "YIL006W": 12
+      },
+      "example_rank_sha256": "5848480bc6d18d6a959a765a0483c306e4938272585e63a1804c87f4bccd237b",
+      "experimental_class": "High",
+      "gene_names": [
+        "YEA6",
+        "YIA6"
+      ],
+      "orf_pair": [
+        "YEL006W",
+        "YIL006W"
+      ],
+      "source_row": 42,
+      "trigenic_count": 18,
+      "trigenic_fraction": 0.5294117647058824
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YEL025C": 4,
+        "YJR039W": 1
+      },
+      "example_rank_sha256": "551728dec5761c1dd026c4c3a4302471500ab9850cd3dd0913f348e203d82f31",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "YEL025C",
+        "YJR039W"
+      ],
+      "orf_pair": [
+        "YEL025C",
+        "YJR039W"
+      ],
+      "source_row": 222,
+      "trigenic_count": 0,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YEL039C": 1,
+        "YJR048W": 1
+      },
+      "example_rank_sha256": "82d7ac83826bd216a4c5514df848a8d114730006dd9fbe517b64e24aa0126389",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "CYC7",
+        "CYC1"
+      ],
+      "orf_pair": [
+        "YEL039C",
+        "YJR048W"
+      ],
+      "source_row": 227,
+      "trigenic_count": 0,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YEL047C": 0,
+        "YJR051W": 0
+      },
+      "example_rank_sha256": "ba0148301461b75564a79ef9565e088fa47e2bcc1a5c9b57d283e11657fe7703",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "FRD1",
+        "OSM1"
+      ],
+      "orf_pair": [
+        "YEL047C",
+        "YJR051W"
+      ],
+      "source_row": 165,
+      "trigenic_count": 2,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YEL060C": 9,
+        "YOR003W": 11
+      },
+      "example_rank_sha256": "fc14eca262c8d263a2f86ba1e2389ed425f6b0cf12f7ad0fa6e0d5c15b22c09d",
+      "experimental_class": "Low",
+      "gene_names": [
+        "PRB1",
+        "YSP3"
+      ],
+      "orf_pair": [
+        "YEL060C",
+        "YOR003W"
+      ],
+      "source_row": 134,
+      "trigenic_count": 2,
+      "trigenic_fraction": 0.09090909090909091
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YER045C": 1,
+        "YIL036W": 11
+      },
+      "example_rank_sha256": "b870592934b0c214f22cf75c535b23c3f288c95d2965c65edf4f12755abc4c08",
+      "experimental_class": "Low",
+      "gene_names": [
+        "ACA1",
+        "CST6"
+      ],
+      "orf_pair": [
+        "YER045C",
+        "YIL036W"
+      ],
+      "source_row": 88,
+      "trigenic_count": 3,
+      "trigenic_fraction": 0.2
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YER054C": 1,
+        "YIL045W": 2
+      },
+      "example_rank_sha256": "9550651ecf3fd0baa74bd07b0d19c4e17b48b10f24ea9138aaa7678016935cef",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "GIP2",
+        "PIG2"
+      ],
+      "orf_pair": [
+        "YER054C",
+        "YIL045W"
+      ],
+      "source_row": 225,
+      "trigenic_count": 0,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YER056C-A": 36,
+        "YIL052C": 1
+      },
+      "example_rank_sha256": "346254d1e3286b3aae1926f024e96fbc9f6cba1cecc1084012c2d3db318a38f1",
+      "experimental_class": "High",
+      "gene_names": [
+        "RPL34A",
+        "RPL34B"
+      ],
+      "orf_pair": [
+        "YER056C-A",
+        "YIL052C"
+      ],
+      "source_row": 49,
+      "trigenic_count": 28,
+      "trigenic_fraction": 0.4307692307692308
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YER059W": 44,
+        "YIL050W": 1
+      },
+      "example_rank_sha256": "02a0f2fb96f2b9dae979063b0ed3c893270258fc49bb2c77630001d5bf1fe74e",
+      "experimental_class": "Low",
+      "gene_names": [
+        "PCL6",
+        "PCL7"
+      ],
+      "orf_pair": [
+        "YER059W",
+        "YIL050W"
+      ],
+      "source_row": 58,
+      "trigenic_count": 20,
+      "trigenic_fraction": 0.3076923076923077
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YER064C": 2,
+        "YIL056W": 4
+      },
+      "example_rank_sha256": "6748801d0195560cb304769678d61ff40fdf99ca250b29bff9b73b576d174135",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "VHR2",
+        "VHR1"
+      ],
+      "orf_pair": [
+        "YER064C",
+        "YIL056W"
+      ],
+      "source_row": 212,
+      "trigenic_count": 1,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YER067W": 4,
+        "YIL057C": 2
+      },
+      "example_rank_sha256": "b228749393e6966c91c29d7aec8e5d4a4927496cf336948b3dc18fbdf91625c7",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "RGI1",
+        "RGI2"
+      ],
+      "orf_pair": [
+        "YER067W",
+        "YIL057C"
+      ],
+      "source_row": 211,
+      "trigenic_count": 1,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YER129W": 7,
+        "YGL179C": 19
+      },
+      "example_rank_sha256": "2c611d21c2af1b0f104b20ddd9e7c6fd9baee7cfe1101bdf50052325e08227f9",
+      "experimental_class": "Low",
+      "gene_names": [
+        "SAK1",
+        "TOS3"
+      ],
+      "orf_pair": [
+        "YER129W",
+        "YGL179C"
+      ],
+      "source_row": 127,
+      "trigenic_count": 3,
+      "trigenic_fraction": 0.10344827586206896
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YER132C": 1,
+        "YGL197W": 8
+      },
+      "example_rank_sha256": "0a2bb0377b342913390c5004945729b70880909d5b2d8a10bada3c438839b147",
+      "experimental_class": "High",
+      "gene_names": [
+        "PMD1",
+        "MDS3"
+      ],
+      "orf_pair": [
+        "YER132C",
+        "YGL197W"
+      ],
+      "source_row": 10,
+      "trigenic_count": 30,
+      "trigenic_fraction": 0.7692307692307693
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YFL042C": 2,
+        "YLR072W": 2
+      },
+      "example_rank_sha256": "b3e4baae183016f0106771f30ab51f6fa919c08e92d1d916f7f7717e5fa59817",
+      "experimental_class": "High",
+      "gene_names": [
+        "YFL042C",
+        "YLR072W"
+      ],
+      "orf_pair": [
+        "YFL042C",
+        "YLR072W"
+      ],
+      "source_row": 34,
+      "trigenic_count": 6,
+      "trigenic_fraction": 0.6
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YFL048C": 4,
+        "YLR080W": 1
+      },
+      "example_rank_sha256": "fd94a108040f791df8a81d96d8a1bb782dbd0a17de35368858e327a5a6b65be7",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "EMP47",
+        "EMP46"
+      ],
+      "orf_pair": [
+        "YFL048C",
+        "YLR080W"
+      ],
+      "source_row": 173,
+      "trigenic_count": 5,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YFR012W": 2,
+        "YOL019W": 20
+      },
+      "example_rank_sha256": "d469ea8957d5881e6a8e721c564e31277202bd093af034d397cf15602c3978c2",
+      "experimental_class": "Low",
+      "gene_names": [
+        "DCV1",
+        "YOL019W"
+      ],
+      "orf_pair": [
+        "YFR012W",
+        "YOL019W"
+      ],
+      "source_row": 100,
+      "trigenic_count": 5,
+      "trigenic_fraction": 0.18518518518518517
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YFR013W": 7,
+        "YOL017W": 0
+      },
+      "example_rank_sha256": "92e1682226851e9be544089e6d5da99f9952e8f0e25bb62ad47e47debf63fc67",
+      "experimental_class": "Low",
+      "gene_names": [
+        "IOC3",
+        "ESC8"
+      ],
+      "orf_pair": [
+        "YFR013W",
+        "YOL017W"
+      ],
+      "source_row": 80,
+      "trigenic_count": 2,
+      "trigenic_fraction": 0.2222222222222222
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YFR015C": 5,
+        "YLR258W": 1
+      },
+      "example_rank_sha256": "688cb00e95fb5796fb1f1c3048068d6e05933e778c0afa01f4a54b65ff9231d7",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "GSY1",
+        "GSY2"
+      ],
+      "orf_pair": [
+        "YFR015C",
+        "YLR258W"
+      ],
+      "source_row": 191,
+      "trigenic_count": 2,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YFR017C": 8,
+        "YOL024W": 29
+      },
+      "example_rank_sha256": "dcde8af44e1b2b112f469d942191da6ba495867b11836e009126177f49e25ca7",
+      "experimental_class": "Low",
+      "gene_names": [
+        "IGD1",
+        "YOL024W"
+      ],
+      "orf_pair": [
+        "YFR017C",
+        "YOL024W"
+      ],
+      "source_row": 76,
+      "trigenic_count": 11,
+      "trigenic_fraction": 0.22916666666666666
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YFR022W": 1,
+        "YOR018W": 8
+      },
+      "example_rank_sha256": "8657a5bfd7b2d4d6f9648fbf9a1f6427ffd1ce2a784b3c8881666933a85b9cd9",
+      "experimental_class": "Low",
+      "gene_names": [
+        "ROG3",
+        "ROD1"
+      ],
+      "orf_pair": [
+        "YFR022W",
+        "YOR018W"
+      ],
+      "source_row": 161,
+      "trigenic_count": 0,
+      "trigenic_fraction": 0
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YFR023W": 5,
+        "YHR015W": 3
+      },
+      "example_rank_sha256": "0a2055e0a4b2ebd73cf2d6083edf52cd56f13c796cc12099dcd1eb59ae4ec031",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "PES4",
+        "MIP6"
+      ],
+      "orf_pair": [
+        "YFR023W",
+        "YHR015W"
+      ],
+      "source_row": 223,
+      "trigenic_count": 0,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YGL082W": 1,
+        "YPL191C": 3
+      },
+      "example_rank_sha256": "125228467771a15dc1f007b4035cc4cd9ee9b6ce3a9bd2ed2ab8f4fa96251bfc",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "YGL082W",
+        "YPL191C"
+      ],
+      "orf_pair": [
+        "YGL082W",
+        "YPL191C"
+      ],
+      "source_row": 238,
+      "trigenic_count": 0,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YGL096W": 4,
+        "YPL177C": 19
+      },
+      "example_rank_sha256": "a35a9687cc97496a200c423bde627891acd8cc79c2afee6a54ffff6bfb42ca47",
+      "experimental_class": "High",
+      "gene_names": [
+        "TOS8",
+        "CUP9"
+      ],
+      "orf_pair": [
+        "YGL096W",
+        "YPL177C"
+      ],
+      "source_row": 25,
+      "trigenic_count": 46,
+      "trigenic_fraction": 0.6666666666666666
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YGL134W": 1,
+        "YPL219W": 5
+      },
+      "example_rank_sha256": "f4632fc3a3325681ce006defc49083fbc9a5e7f950057d77e5acc101952234d4",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "PCL10",
+        "PCL8"
+      ],
+      "orf_pair": [
+        "YGL134W",
+        "YPL219W"
+      ],
+      "source_row": 216,
+      "trigenic_count": 1,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YGL166W": 7,
+        "YPR008W": 1
+      },
+      "example_rank_sha256": "9c02f7aaf2075574cb7a027abac1a538a4fbea97d741108ccc805512a3be1f5b",
+      "experimental_class": "Low",
+      "gene_names": [
+        "CUP2",
+        "HAA1"
+      ],
+      "orf_pair": [
+        "YGL166W",
+        "YPR008W"
+      ],
+      "source_row": 156,
+      "trigenic_count": 0,
+      "trigenic_fraction": 0
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YGR004W": 10,
+        "YLR324W": 20
+      },
+      "example_rank_sha256": "9ae714a04e80f2811cfa1596a0feae4498b0697eb762e9889f2ff33851982ebe",
+      "experimental_class": "Low",
+      "gene_names": [
+        "PEX31",
+        "PEX30"
+      ],
+      "orf_pair": [
+        "YGR004W",
+        "YLR324W"
+      ],
+      "source_row": 95,
+      "trigenic_count": 7,
+      "trigenic_fraction": 0.1891891891891892
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YGR008C": 2,
+        "YLR327C": 1
+      },
+      "example_rank_sha256": "0df2decb2c58310817fca8dd12b0c837ce3b22aa36a209a29a40bc825be25976",
+      "experimental_class": "High",
+      "gene_names": [
+        "STF2",
+        "TMA10"
+      ],
+      "orf_pair": [
+        "YGR008C",
+        "YLR327C"
+      ],
+      "source_row": 26,
+      "trigenic_count": 6,
+      "trigenic_fraction": 0.6666666666666666
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YGR023W": 4,
+        "YLR332W": 16
+      },
+      "example_rank_sha256": "139adb056519436dbd0dc0114cac6da2bd9e65513aa8d37d574e15ded1914e52",
+      "experimental_class": "High",
+      "gene_names": [
+        "MTL1",
+        "MID2"
+      ],
+      "orf_pair": [
+        "YGR023W",
+        "YLR332W"
+      ],
+      "source_row": 45,
+      "trigenic_count": 20,
+      "trigenic_fraction": 0.5
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YGR027C": 32,
+        "YLR333C": 4
+      },
+      "example_rank_sha256": "dde4ef1f55321581c0a8eb886032e08ea3af7a51f0b69ae244d530a67b12c410",
+      "experimental_class": "Low",
+      "gene_names": [
+        "RPS25A",
+        "RPS25B"
+      ],
+      "orf_pair": [
+        "YGR027C",
+        "YLR333C"
+      ],
+      "source_row": 86,
+      "trigenic_count": 9,
+      "trigenic_fraction": 0.2
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YGR035C": 0,
+        "YLR346C": 0
+      },
+      "example_rank_sha256": "bb861bd88cd78cbc2621f1cec66a4bacf349fef7989de53befbf034fb76645ee",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "YGR035C",
+        "YLR346C"
+      ],
+      "orf_pair": [
+        "YGR035C",
+        "YLR346C"
+      ],
+      "source_row": 166,
+      "trigenic_count": 1,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YGR041W": 1,
+        "YLR353W": 2
+      },
+      "example_rank_sha256": "379aa75eb15d6d53953aa3d896fbedc515ddfbdafeb2a36e383e636fbcb426a2",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "BUD9",
+        "BUD8"
+      ],
+      "orf_pair": [
+        "YGR041W",
+        "YLR353W"
+      ],
+      "source_row": 192,
+      "trigenic_count": 1,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YGR049W": 3,
+        "YLR356W": 1
+      },
+      "example_rank_sha256": "118d5fb4a33564312639bcfb0c0aa9b3fa94daedf966a02acbd38135e54b4a40",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "SCM4",
+        "ATG33"
+      ],
+      "orf_pair": [
+        "YGR049W",
+        "YLR356W"
+      ],
+      "source_row": 200,
+      "trigenic_count": 1,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YGR071C": 16,
+        "YLR373C": 57
+      },
+      "example_rank_sha256": "53a53dd0c82afd43e59d42776a2243be2c72967ce37188a8159494ff2bb834f3",
+      "experimental_class": "Low",
+      "gene_names": [
+        "ENV11",
+        "VID22"
+      ],
+      "orf_pair": [
+        "YGR071C",
+        "YLR373C"
+      ],
+      "source_row": 73,
+      "trigenic_count": 22,
+      "trigenic_fraction": 0.23157894736842105
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YGR097W": 6,
+        "YPR115W": 0
+      },
+      "example_rank_sha256": "916a35a81edbfa6428abd246ba24efd3b5f56b9ed2ca55fda2c70e8cb2c4b6e2",
+      "experimental_class": "High",
+      "gene_names": [
+        "ASK10",
+        "RGC1"
+      ],
+      "orf_pair": [
+        "YGR097W",
+        "YPR115W"
+      ],
+      "source_row": 11,
+      "trigenic_count": 20,
+      "trigenic_fraction": 0.7692307692307693
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YGR121C": 11,
+        "YPR138C": 4
+      },
+      "example_rank_sha256": "e60d1c82c1e013b8d0ae5af1cb3f8c77e2d1ae46f16f6650a45b3d214cade9e6",
+      "experimental_class": "Low",
+      "gene_names": [
+        "MEP1",
+        "MEP3"
+      ],
+      "orf_pair": [
+        "YGR121C",
+        "YPR138C"
+      ],
+      "source_row": 120,
+      "trigenic_count": 2,
+      "trigenic_fraction": 0.11764705882352941
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YGR136W": 3,
+        "YPR154W": 11
+      },
+      "example_rank_sha256": "2ed8294b01ba214ad6bbfac67a820ee27253227886eb591a4541091a1d7f0ffe",
+      "experimental_class": "Low",
+      "gene_names": [
+        "LSB1",
+        "PIN3"
+      ],
+      "orf_pair": [
+        "YGR136W",
+        "YPR154W"
+      ],
+      "source_row": 81,
+      "trigenic_count": 4,
+      "trigenic_fraction": 0.2222222222222222
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YGR138C": 1,
+        "YPR156C": 19
+      },
+      "example_rank_sha256": "9c49a83affb1c8e27b1e5470eb9be382d48c4155ddb3d46ca21c271f896d4029",
+      "experimental_class": "Low",
+      "gene_names": [
+        "TPO2",
+        "TPO3"
+      ],
+      "orf_pair": [
+        "YGR138C",
+        "YPR156C"
+      ],
+      "source_row": 94,
+      "trigenic_count": 5,
+      "trigenic_fraction": 0.2
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YGR141W": 19,
+        "YPR157W": 3
+      },
+      "example_rank_sha256": "b4db0ee2332a18ebe2fd9e5a4295c271b66d8ff6ed1ddb95c715964d2ec36beb",
+      "experimental_class": "Low",
+      "gene_names": [
+        "VPS62",
+        "TDA6"
+      ],
+      "orf_pair": [
+        "YGR141W",
+        "YPR157W"
+      ],
+      "source_row": 84,
+      "trigenic_count": 6,
+      "trigenic_fraction": 0.21428571428571427
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YGR169C-A": 5,
+        "YJR005C-A": 0
+      },
+      "example_rank_sha256": "d703055cf4367d062831a9ac42082341ff4e112494562e5049c892bf02adcdbe",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "LSO2",
+        "LSO1"
+      ],
+      "orf_pair": [
+        "YGR169C-A",
+        "YJR005C-A"
+      ],
+      "source_row": 186,
+      "trigenic_count": 2,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YGR197C": 4,
+        "YJR015W": 0
+      },
+      "example_rank_sha256": "5d55a5bf4470752e19a962a67f08b272906a306dd57a89fb2f06f758be4ae147",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "SNG1",
+        "YJR015W"
+      ],
+      "orf_pair": [
+        "YGR197C",
+        "YJR015W"
+      ],
+      "source_row": 226,
+      "trigenic_count": 0,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YGR213C": 0,
+        "YLR046C": 5
+      },
+      "example_rank_sha256": "d176bb2872990a37ef53571cd896b294962f067576b7dfa31a3d0b1506445842",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "RTA1",
+        "YLR046C"
+      ],
+      "orf_pair": [
+        "YGR213C",
+        "YLR046C"
+      ],
+      "source_row": 204,
+      "trigenic_count": 1,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YGR230W": 0,
+        "YHR152W": 15
+      },
+      "example_rank_sha256": "ee29d24050fbeb93f6bbfb363a7c30e30e347d8d2cd9dd15c50f12546046606e",
+      "experimental_class": "High",
+      "gene_names": [
+        "BNS1",
+        "SPO12"
+      ],
+      "orf_pair": [
+        "YGR230W",
+        "YHR152W"
+      ],
+      "source_row": 40,
+      "trigenic_count": 19,
+      "trigenic_fraction": 0.5588235294117647
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YGR238C": 1,
+        "YHR158C": 20
+      },
+      "example_rank_sha256": "49f744f5c8bb25146d3a9acd3b1ee33091f7b8f49ad3a94f08dc37ac00ed7e47",
+      "experimental_class": "Low",
+      "gene_names": [
+        "KEL2",
+        "KEL1"
+      ],
+      "orf_pair": [
+        "YGR238C",
+        "YHR158C"
+      ],
+      "source_row": 106,
+      "trigenic_count": 4,
+      "trigenic_fraction": 0.16
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YGR239C": 6,
+        "YHR160C": 8
+      },
+      "example_rank_sha256": "38d2f29475ef3304e5b4c27dec96431f420288dd733b01cb4ba6cb6b40bdd36e",
+      "experimental_class": "Low",
+      "gene_names": [
+        "PEX21",
+        "PEX18"
+      ],
+      "orf_pair": [
+        "YGR239C",
+        "YHR160C"
+      ],
+      "source_row": 102,
+      "trigenic_count": 3,
+      "trigenic_fraction": 0.17647058823529413
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YGR243W": 3,
+        "YHR162W": 5
+      },
+      "example_rank_sha256": "22aab73e81bf7dc3ce8341ff49bf94b640d018a07383680a111d3b7b483863f8",
+      "experimental_class": "High",
+      "gene_names": [
+        "MPC3",
+        "MPC2"
+      ],
+      "orf_pair": [
+        "YGR243W",
+        "YHR162W"
+      ],
+      "source_row": 15,
+      "trigenic_count": 22,
+      "trigenic_fraction": 0.7333333333333333
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YGR248W": 2,
+        "YHR163W": 7
+      },
+      "example_rank_sha256": "5f143c60567047eba3dd2617cf7a8a153ec3054cc8015dd79d9cba2ffc7254a7",
+      "experimental_class": "High",
+      "gene_names": [
+        "SOL4",
+        "SOL3"
+      ],
+      "orf_pair": [
+        "YGR248W",
+        "YHR163W"
+      ],
+      "source_row": 38,
+      "trigenic_count": 12,
+      "trigenic_fraction": 0.5714285714285714
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YGR273C": 14,
+        "YMR295C": 15
+      },
+      "example_rank_sha256": "fa9d945d1ede3cb120a1513449122bbb79ab9b1e8178a589cc477a105d5f771d",
+      "experimental_class": "Low",
+      "gene_names": [
+        "YGR273C",
+        "YMR295C"
+      ],
+      "orf_pair": [
+        "YGR273C",
+        "YMR295C"
+      ],
+      "source_row": 157,
+      "trigenic_count": 0,
+      "trigenic_fraction": 0
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YGR283C": 4,
+        "YMR310C": 5
+      },
+      "example_rank_sha256": "05aad07850d539a0a55fd78a76de925dde95fabb269983ed8bef90856b70ef8f",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "YGR283C",
+        "YMR310C"
+      ],
+      "orf_pair": [
+        "YGR283C",
+        "YMR310C"
+      ],
+      "source_row": 201,
+      "trigenic_count": 2,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YHR001W": 8,
+        "YKR003W": 2
+      },
+      "example_rank_sha256": "338bad35fd3a948ee4c96a7d4c8a6e31e01834c7890b37547613a5940fda3a4a",
+      "experimental_class": "High",
+      "gene_names": [
+        "OSH7",
+        "OSH6"
+      ],
+      "orf_pair": [
+        "YHR001W",
+        "YKR003W"
+      ],
+      "source_row": 9,
+      "trigenic_count": 41,
+      "trigenic_fraction": 0.803921568627451
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YHR003C": 21,
+        "YKL027W": 22
+      },
+      "example_rank_sha256": "466163296658d1ab3706273342709a60deb936086d92db3c5df3cf9ed6d65c47",
+      "experimental_class": "Low",
+      "gene_names": [
+        "TCD1",
+        "TCD2"
+      ],
+      "orf_pair": [
+        "YHR003C",
+        "YKL027W"
+      ],
+      "source_row": 148,
+      "trigenic_count": 3,
+      "trigenic_fraction": 0.06521739130434782
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YHR030C": 142,
+        "YKL161C": 6
+      },
+      "example_rank_sha256": "9f62e5e46dfae8358769e8c55a6d511ac8dc238b81d38e635d3eb8cf31453c6b",
+      "experimental_class": "Low",
+      "gene_names": [
+        "SLT2",
+        "KDX1"
+      ],
+      "orf_pair": [
+        "YHR030C",
+        "YKL161C"
+      ],
+      "source_row": 153,
+      "trigenic_count": 4,
+      "trigenic_fraction": 0.02631578947368421
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YHR047C": 1,
+        "YKL157W": 2
+      },
+      "example_rank_sha256": "839ae9656fcc8d522a79597441b66bea6286ea7e2019cb9efb9b2c51f3bcae15",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "AAP1",
+        "APE2"
+      ],
+      "orf_pair": [
+        "YHR047C",
+        "YKL157W"
+      ],
+      "source_row": 179,
+      "trigenic_count": 2,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YHR131C": 14,
+        "YNL144C": 2
+      },
+      "example_rank_sha256": "c713b8fd0a95ba93ab542d20569df5dc3ae02c984998ae9305f4cf7c9834ef52",
+      "experimental_class": "Low",
+      "gene_names": [
+        "YHR131C",
+        "YNL144C"
+      ],
+      "orf_pair": [
+        "YHR131C",
+        "YNL144C"
+      ],
+      "source_row": 158,
+      "trigenic_count": 0,
+      "trigenic_fraction": 0
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YHR132W-A": 2,
+        "YNL157W": 5
+      },
+      "example_rank_sha256": "0d8f676f1e848c0d19ce9be2b7ae81af9ef76171693ead9f979a8223d0c10eb2",
+      "experimental_class": "High",
+      "gene_names": [
+        "IGO2",
+        "IGO1"
+      ],
+      "orf_pair": [
+        "YHR132W-A",
+        "YNL157W"
+      ],
+      "source_row": 36,
+      "trigenic_count": 10,
+      "trigenic_fraction": 0.5882352941176471
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YHR139C": 1,
+        "YNL160W": 2
+      },
+      "example_rank_sha256": "f49855de1deccb19556859fe4649d066b734b65b5955f0313d422d4f62881c3a",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "SPS100",
+        "YGP1"
+      ],
+      "orf_pair": [
+        "YHR139C",
+        "YNL160W"
+      ],
+      "source_row": 218,
+      "trigenic_count": 0,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YHR146W": 0,
+        "YNL173C": 1
+      },
+      "example_rank_sha256": "a05b7cb40fd37c45bab2e88cbf1dae184a6f4a6c2c2b15e85c3d1f5fb7b8d60a",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "CRP1",
+        "MDG1"
+      ],
+      "orf_pair": [
+        "YHR146W",
+        "YNL173C"
+      ],
+      "source_row": 231,
+      "trigenic_count": 0,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YHR155W": 2,
+        "YNL257C": 9
+      },
+      "example_rank_sha256": "785d3436ff66d80dc233891742b7f01aa4c1ac4ece1b30a241dd7c5e77a61157",
+      "experimental_class": "Low",
+      "gene_names": [
+        "YSP1",
+        "SIP3"
+      ],
+      "orf_pair": [
+        "YHR155W",
+        "YNL257C"
+      ],
+      "source_row": 85,
+      "trigenic_count": 3,
+      "trigenic_fraction": 0.21428571428571427
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YHR206W": 40,
+        "YJR147W": 56
+      },
+      "example_rank_sha256": "3f847f8a6dea83f8a4f64b088670de6fbe40746696c81bb02f4173a44d95904a",
+      "experimental_class": "Low",
+      "gene_names": [
+        "SKN7",
+        "HMS2"
+      ],
+      "orf_pair": [
+        "YHR206W",
+        "YJR147W"
+      ],
+      "source_row": 116,
+      "trigenic_count": 14,
+      "trigenic_fraction": 0.12727272727272726
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YIL085C": 0,
+        "YNL029C": 2
+      },
+      "example_rank_sha256": "6188e72aaf061e00462e2940b3e796fba6fca16a0b2d8a8a3d803c16d7b2ec36",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "KTR7",
+        "KTR5"
+      ],
+      "orf_pair": [
+        "YIL085C",
+        "YNL029C"
+      ],
+      "source_row": 172,
+      "trigenic_count": 3,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YIL111W": 10,
+        "YNL052W": 26
+      },
+      "example_rank_sha256": "48f95e64fc57d8069d8828835b9e2602eab98628c273b2db3d438f46beef5ae5",
+      "experimental_class": "Low",
+      "gene_names": [
+        "COX5B",
+        "COX5A"
+      ],
+      "orf_pair": [
+        "YIL111W",
+        "YNL052W"
+      ],
+      "source_row": 118,
+      "trigenic_count": 5,
+      "trigenic_fraction": 0.12195121951219512
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YIL113W": 1,
+        "YNL053W": 38
+      },
+      "example_rank_sha256": "7f5faf623b7ee4cf4ed71ee0827e69a4cb35cd28a2c59988baddeba56c51d395",
+      "experimental_class": "Low",
+      "gene_names": [
+        "SDP1",
+        "MSG5"
+      ],
+      "orf_pair": [
+        "YIL113W",
+        "YNL053W"
+      ],
+      "source_row": 122,
+      "trigenic_count": 5,
+      "trigenic_fraction": 0.11363636363636363
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YIL117C": 1,
+        "YNL058C": 1
+      },
+      "example_rank_sha256": "b594521de2cbbba877b69c497ce9316e05add1079915b85a5f8afbab06d43ff0",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "PRM5",
+        "YNL058C"
+      ],
+      "orf_pair": [
+        "YIL117C",
+        "YNL058C"
+      ],
+      "source_row": 174,
+      "trigenic_count": 2,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YIL149C": 28,
+        "YKR095W": 17
+      },
+      "example_rank_sha256": "3a1d37d8e48363a740179e4abdd69263a22f41239cd472c1bbdcb4245f735327",
+      "experimental_class": "High",
+      "gene_names": [
+        "MLP2",
+        "MLP1"
+      ],
+      "orf_pair": [
+        "YIL149C",
+        "YKR095W"
+      ],
+      "source_row": 16,
+      "trigenic_count": 121,
+      "trigenic_fraction": 0.7289156626506024
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YIL151C": 2,
+        "YKR096W": 16
+      },
+      "example_rank_sha256": "87a9d8c0316048cce7bb6e34be8a59567f331f3ec3fed96dd80a054a08a219c8",
+      "experimental_class": "Low",
+      "gene_names": [
+        "ESL1",
+        "ESL2"
+      ],
+      "orf_pair": [
+        "YIL151C",
+        "YKR096W"
+      ],
+      "source_row": 56,
+      "trigenic_count": 9,
+      "trigenic_fraction": 0.3333333333333333
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YIL156W": 4,
+        "YKR098C": 1
+      },
+      "example_rank_sha256": "3db9351d8fe52c036c4c2eb71d340e83f238a0c76c6792357d181b8fed48686f",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "UBP7",
+        "UBP11"
+      ],
+      "orf_pair": [
+        "YIL156W",
+        "YKR098C"
+      ],
+      "source_row": 203,
+      "trigenic_count": 1,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YIR018W": 2,
+        "YOL028C": 1
+      },
+      "example_rank_sha256": "67d43ed13e0ff41519a9e6dccd7472a8b09296cd3dff655d60edcf03b9e6298b",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "YAP5",
+        "YAP7"
+      ],
+      "orf_pair": [
+        "YIR018W",
+        "YOL028C"
+      ],
+      "source_row": 169,
+      "trigenic_count": 5,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YIR037W": 24,
+        "YKL026C": 3
+      },
+      "example_rank_sha256": "56cff3f2f296e8dbe9a4ecf363805607d4ef39dab2ff35e6cfed25eee10d2f07",
+      "experimental_class": "Low",
+      "gene_names": [
+        "HYR1",
+        "GPX1"
+      ],
+      "orf_pair": [
+        "YIR037W",
+        "YKL026C"
+      ],
+      "source_row": 144,
+      "trigenic_count": 2,
+      "trigenic_fraction": 0.06896551724137931
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YJL045W": 10,
+        "YKL148C": 15
+      },
+      "example_rank_sha256": "437cb6e7042812395923f4b59758fb0895a207c220ed1d22d1c44e269d9ee34b",
+      "experimental_class": "Low",
+      "gene_names": [
+        "YJL045W",
+        "SDH1"
+      ],
+      "orf_pair": [
+        "YJL045W",
+        "YKL148C"
+      ],
+      "source_row": 126,
+      "trigenic_count": 3,
+      "trigenic_fraction": 0.10714285714285714
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YJL079C": 1,
+        "YKR013W": 4
+      },
+      "example_rank_sha256": "3ec65813faae63ed87f1d7a3f1455d3dd6fef461872a16b7d785126993aa5ae8",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "PRY1",
+        "PRY2"
+      ],
+      "orf_pair": [
+        "YJL079C",
+        "YKR013W"
+      ],
+      "source_row": 202,
+      "trigenic_count": 1,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YJL084C": 5,
+        "YKR021W": 1
+      },
+      "example_rank_sha256": "41e86dd3dd1a3b433eb06049df1b763f690e67e8aafc15ec6629b03410552271",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "ALY2",
+        "ALY1"
+      ],
+      "orf_pair": [
+        "YJL084C",
+        "YKR021W"
+      ],
+      "source_row": 189,
+      "trigenic_count": 2,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YJL098W": 18,
+        "YKR028W": 9
+      },
+      "example_rank_sha256": "e9ace3ba4190cc8bbf4e7ac4f63d662ace01b52e33903d1258fb8231dae9d38f",
+      "experimental_class": "High",
+      "gene_names": [
+        "SAP185",
+        "SAP190"
+      ],
+      "orf_pair": [
+        "YJL098W",
+        "YKR028W"
+      ],
+      "source_row": 33,
+      "trigenic_count": 44,
+      "trigenic_fraction": 0.6197183098591549
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YJL099W": 28,
+        "YKR027W": 19
+      },
+      "example_rank_sha256": "3defd8be3f88fc7588f47382bae4a5319762c6b64dcc5fd00cfc8d417de5e1a3",
+      "experimental_class": "Low",
+      "gene_names": [
+        "CHS6",
+        "BCH2"
+      ],
+      "orf_pair": [
+        "YJL099W",
+        "YKR027W"
+      ],
+      "source_row": 71,
+      "trigenic_count": 15,
+      "trigenic_fraction": 0.24193548387096775
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YJL105W": 0,
+        "YKR029C": 40
+      },
+      "example_rank_sha256": "d60678c1b13d0768719ac49b58bc5fb149a663246be8ac3a50d726e8eb2d4139",
+      "experimental_class": "Low",
+      "gene_names": [
+        "SET4",
+        "SET3"
+      ],
+      "orf_pair": [
+        "YJL105W",
+        "YKR029C"
+      ],
+      "source_row": 74,
+      "trigenic_count": 12,
+      "trigenic_fraction": 0.23076923076923078
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YJL110C": 2,
+        "YKR034W": 4
+      },
+      "example_rank_sha256": "1a95b3e0de27628aa6b78a0f4d10b636b775eeda2791edec7edab20c28f3e121",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "GZF3",
+        "DAL80"
+      ],
+      "orf_pair": [
+        "YJL110C",
+        "YKR034W"
+      ],
+      "source_row": 214,
+      "trigenic_count": 1,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YJL112W": 12,
+        "YKR036C": 2
+      },
+      "example_rank_sha256": "a539ec7e55291bc44e7767976123d0121a80e8b1be858cece41e005660a2f6c7",
+      "experimental_class": "High",
+      "gene_names": [
+        "MDV1",
+        "CAF4"
+      ],
+      "orf_pair": [
+        "YJL112W",
+        "YKR036C"
+      ],
+      "source_row": 7,
+      "trigenic_count": 69,
+      "trigenic_fraction": 0.8313253012048193
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YJL116C": 3,
+        "YKR042W": 31
+      },
+      "example_rank_sha256": "910c1f6f242f086acbfe08bee401d260908af59f22c6567d0966ca9bc3d1c095",
+      "experimental_class": "Low",
+      "gene_names": [
+        "NCA3",
+        "UTH1"
+      ],
+      "orf_pair": [
+        "YJL116C",
+        "YKR042W"
+      ],
+      "source_row": 77,
+      "trigenic_count": 10,
+      "trigenic_fraction": 0.22727272727272727
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YJL133W": 0,
+        "YKR052C": 9
+      },
+      "example_rank_sha256": "67bddb6c9cba7a2e757aad60dc1f324d46e746759f6874827daf8725e3356c2e",
+      "experimental_class": "High",
+      "gene_names": [
+        "MRS3",
+        "MRS4"
+      ],
+      "orf_pair": [
+        "YJL133W",
+        "YKR052C"
+      ],
+      "source_row": 6,
+      "trigenic_count": 47,
+      "trigenic_fraction": 0.8392857142857143
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YJL134W": 8,
+        "YKR053C": 0
+      },
+      "example_rank_sha256": "8a3e2fc0abbd448ea8f110bd0ee5b48897bde5da0a64831743efc6c6ff0d0e3c",
+      "experimental_class": "Low",
+      "gene_names": [
+        "LCB3",
+        "YSR3"
+      ],
+      "orf_pair": [
+        "YJL134W",
+        "YKR053C"
+      ],
+      "source_row": 51,
+      "trigenic_count": 5,
+      "trigenic_fraction": 0.38461538461538464
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YJL137C": 2,
+        "YKR058W": 7
+      },
+      "example_rank_sha256": "54d12028d298541a459224410e7bd1d51ec8c8aac0a8e339849a2848ae62313f",
+      "experimental_class": "Low",
+      "gene_names": [
+        "GLG2",
+        "GLG1"
+      ],
+      "orf_pair": [
+        "YJL137C",
+        "YKR058W"
+      ],
+      "source_row": 70,
+      "trigenic_count": 3,
+      "trigenic_fraction": 0.25
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YJL139C": 28,
+        "YKR061W": 4
+      },
+      "example_rank_sha256": "3f986b9aecf853ceddffe693f53c815db7c7a2b8d009b27b1cfc542bc6c32548",
+      "experimental_class": "High",
+      "gene_names": [
+        "YUR1",
+        "KTR2"
+      ],
+      "orf_pair": [
+        "YJL139C",
+        "YKR061W"
+      ],
+      "source_row": 27,
+      "trigenic_count": 58,
+      "trigenic_fraction": 0.6444444444444445
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YJL164C": 10,
+        "YKL166C": 16
+      },
+      "example_rank_sha256": "43480c5ef263f985b133d4ed08e309a66b6dad3eb169f07e962728c6944640e3",
+      "experimental_class": "Low",
+      "gene_names": [
+        "TPK1",
+        "TPK3"
+      ],
+      "orf_pair": [
+        "YJL164C",
+        "YKL166C"
+      ],
+      "source_row": 67,
+      "trigenic_count": 9,
+      "trigenic_fraction": 0.2571428571428571
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YJL165C": 10,
+        "YKL168C": 1
+      },
+      "example_rank_sha256": "e788422a3cbba44b4a0436ced1e4f1e7c4d13135f7bc63a3753ce9e8a429170e",
+      "experimental_class": "Low",
+      "gene_names": [
+        "HAL5",
+        "KKQ8"
+      ],
+      "orf_pair": [
+        "YJL165C",
+        "YKL168C"
+      ],
+      "source_row": 139,
+      "trigenic_count": 1,
+      "trigenic_fraction": 0.08333333333333333
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YJL181W": 2,
+        "YJR030C": 2
+      },
+      "example_rank_sha256": "0e788ae73073dc36ec8d1a0976f3c4b9f1a91cd6378a229832cc2e99d55b1ae9",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "YJL181W",
+        "YJR030C"
+      ],
+      "orf_pair": [
+        "YJL181W",
+        "YJR030C"
+      ],
+      "source_row": 177,
+      "trigenic_count": 3,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YJR054W": 1,
+        "YML047C": 3
+      },
+      "example_rank_sha256": "ba5b1a7b91cde45ee0e7fb1e4744b3a4a7bcfbbb178e9080f917802dbc5ef93d",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "KCH1",
+        "PRM6"
+      ],
+      "orf_pair": [
+        "YJR054W",
+        "YML047C"
+      ],
+      "source_row": 178,
+      "trigenic_count": 3,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YJR091C": 4,
+        "YPR042C": 1
+      },
+      "example_rank_sha256": "bf99870356ef7fd70ca60e293778303d35b1dfbaf5449a6ffb81043484378cc2",
+      "experimental_class": "High",
+      "gene_names": [
+        "JSN1",
+        "PUF2"
+      ],
+      "orf_pair": [
+        "YJR091C",
+        "YPR042C"
+      ],
+      "source_row": 19,
+      "trigenic_count": 12,
+      "trigenic_fraction": 0.7058823529411765
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YJR127C": 8,
+        "YML081W": 11
+      },
+      "example_rank_sha256": "7815c059916fc6d4d00a26b3ccf021e6b44760380b0ecb4316d34318e229c03e",
+      "experimental_class": "High",
+      "gene_names": [
+        "RSF2",
+        "TDA9"
+      ],
+      "orf_pair": [
+        "YJR127C",
+        "YML081W"
+      ],
+      "source_row": 21,
+      "trigenic_count": 43,
+      "trigenic_fraction": 0.6935483870967742
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YJR130C": 14,
+        "YML082W": 14
+      },
+      "example_rank_sha256": "5cca1ef21c425a76b9715bfc9029893028be334675d3024fe609daa6df4682d4",
+      "experimental_class": "Low",
+      "gene_names": [
+        "STR2",
+        "YML082W"
+      ],
+      "orf_pair": [
+        "YJR130C",
+        "YML082W"
+      ],
+      "source_row": 163,
+      "trigenic_count": 0,
+      "trigenic_fraction": 0
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YKL050C": 0,
+        "YMR031C": 4
+      },
+      "example_rank_sha256": "0cfb39e8f3b58f430b95cea055f788fdf7167fe366232b0b930eb2055578855b",
+      "experimental_class": "High",
+      "gene_names": [
+        "YKL050C",
+        "EIS1"
+      ],
+      "orf_pair": [
+        "YKL050C",
+        "YMR031C"
+      ],
+      "source_row": 18,
+      "trigenic_count": 10,
+      "trigenic_fraction": 0.7142857142857143
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YKL062W": 17,
+        "YMR037C": 7
+      },
+      "example_rank_sha256": "52af484b0e42bf8ae2aace14d81ebb5e913f7567f68250b58d4b11688e562b58",
+      "experimental_class": "Low",
+      "gene_names": [
+        "MSN4",
+        "MSN2"
+      ],
+      "orf_pair": [
+        "YKL062W",
+        "YMR037C"
+      ],
+      "source_row": 123,
+      "trigenic_count": 3,
+      "trigenic_fraction": 0.1111111111111111
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YKL065C": 10,
+        "YMR040W": 1
+      },
+      "example_rank_sha256": "8447b76610f70b99fa82623fa6bf4376d146fb0544dac2c7bbd1fb26555c652b",
+      "experimental_class": "Low",
+      "gene_names": [
+        "YET1",
+        "YET2"
+      ],
+      "orf_pair": [
+        "YKL065C",
+        "YMR040W"
+      ],
+      "source_row": 66,
+      "trigenic_count": 4,
+      "trigenic_fraction": 0.26666666666666666
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YKL072W": 1,
+        "YMR053C": 1
+      },
+      "example_rank_sha256": "4dfaa93cbe5f5d6f0095711bf91def9abf2d824b4aeb5e5b92a1c25264954a3b",
+      "experimental_class": "High",
+      "gene_names": [
+        "STB6",
+        "STB2"
+      ],
+      "orf_pair": [
+        "YKL072W",
+        "YMR053C"
+      ],
+      "source_row": 3,
+      "trigenic_count": 41,
+      "trigenic_fraction": 0.9534883720930233
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YKL093W": 1,
+        "YMR081C": 3
+      },
+      "example_rank_sha256": "f20761bacdcf73d67e28fc649a3a010c69d1afecb39ddacbf2723afe9ca38ae4",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "MBR1",
+        "ISF1"
+      ],
+      "orf_pair": [
+        "YKL093W",
+        "YMR081C"
+      ],
+      "source_row": 217,
+      "trigenic_count": 0,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YKL105C": 3,
+        "YMR086W": 13
+      },
+      "example_rank_sha256": "135ee96ce9f4a5e2aef739139c9f1742ab9c93728818b4de2d9b6f46e0e2de46",
+      "experimental_class": "Low",
+      "gene_names": [
+        "SEG2",
+        "SEG1"
+      ],
+      "orf_pair": [
+        "YKL105C",
+        "YMR086W"
+      ],
+      "source_row": 89,
+      "trigenic_count": 4,
+      "trigenic_fraction": 0.2
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YKL121W": 28,
+        "YMR102C": 1
+      },
+      "example_rank_sha256": "8703e3b3ce5f447d413d8fa338f8d0b27aeb67fa9d0dde303ed1415b6bb4e230",
+      "experimental_class": "Low",
+      "gene_names": [
+        "DGR2",
+        "YMR102C"
+      ],
+      "orf_pair": [
+        "YKL121W",
+        "YMR102C"
+      ],
+      "source_row": 105,
+      "trigenic_count": 6,
+      "trigenic_fraction": 0.17142857142857143
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YKL133C": 2,
+        "YMR115W": 21
+      },
+      "example_rank_sha256": "c9ae5c6a01ab193432516cb9d8bc639ec72ef18c8f45de22babcb65546ca7c74",
+      "experimental_class": "Low",
+      "gene_names": [
+        "YKL133C",
+        "MGR3"
+      ],
+      "orf_pair": [
+        "YKL133C",
+        "YMR115W"
+      ],
+      "source_row": 140,
+      "trigenic_count": 2,
+      "trigenic_fraction": 0.08
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YKL187C": 9,
+        "YLR413W": 15
+      },
+      "example_rank_sha256": "777d6b33c29dfddb802ed8902427f84b1cf50c1c58ae84ec23e272ed6cba0583",
+      "experimental_class": "Low",
+      "gene_names": [
+        "FAT3",
+        "INA1"
+      ],
+      "orf_pair": [
+        "YKL187C",
+        "YLR413W"
+      ],
+      "source_row": 124,
+      "trigenic_count": 3,
+      "trigenic_fraction": 0.1111111111111111
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YKL220C": 3,
+        "YLL051C": 11
+      },
+      "example_rank_sha256": "98a8c020e36bfcbd640249dbc0c074eaaa5784b95a5cb913dfb84f0deb8223c0",
+      "experimental_class": "Low",
+      "gene_names": [
+        "FRE2",
+        "FRE6"
+      ],
+      "orf_pair": [
+        "YKL220C",
+        "YLL051C"
+      ],
+      "source_row": 117,
+      "trigenic_count": 2,
+      "trigenic_fraction": 0.125
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YKR077W": 7,
+        "YOR066W": 22
+      },
+      "example_rank_sha256": "3aa56a32d3b2417403d8cc81c2d61223b0a0341ed5a439f664c495d2b8846248",
+      "experimental_class": "Low",
+      "gene_names": [
+        "MSA2",
+        "MSA1"
+      ],
+      "orf_pair": [
+        "YKR077W",
+        "YOR066W"
+      ],
+      "source_row": 82,
+      "trigenic_count": 8,
+      "trigenic_fraction": 0.21621621621621623
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YKR078W": 2,
+        "YOR069W": 113
+      },
+      "example_rank_sha256": "768399896cc0f296ee65edc78761db6995b4f3834df5536a7494c2248e463c14",
+      "experimental_class": "Low",
+      "gene_names": [
+        "YKR078W",
+        "VPS5"
+      ],
+      "orf_pair": [
+        "YKR078W",
+        "YOR069W"
+      ],
+      "source_row": 131,
+      "trigenic_count": 12,
+      "trigenic_fraction": 0.09448818897637795
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YKR084C": 53,
+        "YOR076C": 26
+      },
+      "example_rank_sha256": "e83b771eb36decd920a5b8aac25deedeaea7a4c3a28c04df6eac468e37bb2e79",
+      "experimental_class": "Low",
+      "gene_names": [
+        "HBS1",
+        "SKI7"
+      ],
+      "orf_pair": [
+        "YKR084C",
+        "YOR076C"
+      ],
+      "source_row": 112,
+      "trigenic_count": 13,
+      "trigenic_fraction": 0.14130434782608695
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YKR091W": 1,
+        "YOR083W": 4
+      },
+      "example_rank_sha256": "a4bd35e09c1d7c1f73c5c54375b7f13f6701b531b197badde1d9474fad93e0ed",
+      "experimental_class": "High",
+      "gene_names": [
+        "SRL3",
+        "WHI5"
+      ],
+      "orf_pair": [
+        "YKR091W",
+        "YOR083W"
+      ],
+      "source_row": 14,
+      "trigenic_count": 14,
+      "trigenic_fraction": 0.7368421052631579
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YLL012W": 4,
+        "YLR020C": 8
+      },
+      "example_rank_sha256": "bf5547b560722c9ed5f83a21748ddeca404f5a5385f57c994108b325e6c09427",
+      "experimental_class": "High",
+      "gene_names": [
+        "YEH1",
+        "YEH2"
+      ],
+      "orf_pair": [
+        "YLL012W",
+        "YLR020C"
+      ],
+      "source_row": 5,
+      "trigenic_count": 94,
+      "trigenic_fraction": 0.8867924528301887
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YLL061W": 3,
+        "YPL274W": 2
+      },
+      "example_rank_sha256": "afa13c103d2ccab0a3b0209b8acb37f096726570b9fbedd9290f5e48af92df68",
+      "experimental_class": "High",
+      "gene_names": [
+        "MMP1",
+        "SAM3"
+      ],
+      "orf_pair": [
+        "YLL061W",
+        "YPL274W"
+      ],
+      "source_row": 23,
+      "trigenic_count": 11,
+      "trigenic_fraction": 0.6875
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YLL062C": 2,
+        "YPL273W": 2
+      },
+      "example_rank_sha256": "4f0dd34b7cad134db243c67ca44cb2f07bffefa8d0e9a4e8706f31dd4bb1b580",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "MHT1",
+        "SAM4"
+      ],
+      "orf_pair": [
+        "YLL062C",
+        "YPL273W"
+      ],
+      "source_row": 228,
+      "trigenic_count": 0,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YLR031W": 2,
+        "YMR124W": 8
+      },
+      "example_rank_sha256": "f5575482d0bdc88c2f6bbde9f7dd8031b60be90ab31742f371b9f24466ec2131",
+      "experimental_class": "Low",
+      "gene_names": [
+        "YLR031W",
+        "EPO1"
+      ],
+      "orf_pair": [
+        "YLR031W",
+        "YMR124W"
+      ],
+      "source_row": 75,
+      "trigenic_count": 3,
+      "trigenic_fraction": 0.23076923076923078
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YLR174W": 6,
+        "YNL009W": 3
+      },
+      "example_rank_sha256": "396e9eef936ca802e43525f6383b965dca801886eebd5ba4ce3df2fd775da10d",
+      "experimental_class": "Low",
+      "gene_names": [
+        "IDP2",
+        "IDP3"
+      ],
+      "orf_pair": [
+        "YLR174W",
+        "YNL009W"
+      ],
+      "source_row": 130,
+      "trigenic_count": 1,
+      "trigenic_fraction": 0.1
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YLR187W": 2,
+        "YNL278W": 21
+      },
+      "example_rank_sha256": "63afe936985bee205f29363d34fc48f6f20cbd8b9c7d31009970f61a823d772f",
+      "experimental_class": "Low",
+      "gene_names": [
+        "SKG3",
+        "CAF120"
+      ],
+      "orf_pair": [
+        "YLR187W",
+        "YNL278W"
+      ],
+      "source_row": 50,
+      "trigenic_count": 15,
+      "trigenic_fraction": 0.39473684210526316
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YLR266C": 8,
+        "YOR172W": 4
+      },
+      "example_rank_sha256": "a190de179db8e2554710496eaac7bcc216a7d20c8f06f9fd9b4b9192b7915472",
+      "experimental_class": "Low",
+      "gene_names": [
+        "PDR8",
+        "YRM1"
+      ],
+      "orf_pair": [
+        "YLR266C",
+        "YOR172W"
+      ],
+      "source_row": 110,
+      "trigenic_count": 2,
+      "trigenic_fraction": 0.14285714285714285
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YLR270W": 11,
+        "YOR173W": 5
+      },
+      "example_rank_sha256": "d57ad85832afc4dc39828676436decdd652fa7643986b2c28cbd82097afa5a50",
+      "experimental_class": "Low",
+      "gene_names": [
+        "DCS1",
+        "DCS2"
+      ],
+      "orf_pair": [
+        "YLR270W",
+        "YOR173W"
+      ],
+      "source_row": 149,
+      "trigenic_count": 1,
+      "trigenic_fraction": 0.058823529411764705
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YLR284C": 1,
+        "YOR180C": 11
+      },
+      "example_rank_sha256": "039034548ff57fa8b564b27a11c12ff20ad3a7e98e0d43868af468762c8c39d9",
+      "experimental_class": "Low",
+      "gene_names": [
+        "ECI1",
+        "DCI1"
+      ],
+      "orf_pair": [
+        "YLR284C",
+        "YOR180C"
+      ],
+      "source_row": 162,
+      "trigenic_count": 0,
+      "trigenic_fraction": 0
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YLR432W": 1,
+        "YML056C": 18
+      },
+      "example_rank_sha256": "6e7421ac359b6045feeca98d953d0e6f3b5336bf71cd07b4c83f3a9fc51c5342",
+      "experimental_class": "High",
+      "gene_names": [
+        "IMD3",
+        "IMD4"
+      ],
+      "orf_pair": [
+        "YLR432W",
+        "YML056C"
+      ],
+      "source_row": 41,
+      "trigenic_count": 24,
+      "trigenic_fraction": 0.5581395348837209
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YLR456W": 1,
+        "YPR172W": 0
+      },
+      "example_rank_sha256": "3214fab2e00d972fe8a65ee8cc4b9c5a6fe99bfa2e16bc4765b32b2cb89f147d",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "YLR456W",
+        "YPR172W"
+      ],
+      "orf_pair": [
+        "YLR456W",
+        "YPR172W"
+      ],
+      "source_row": 240,
+      "trigenic_count": 0,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YML100W": 2,
+        "YMR261C": 10
+      },
+      "example_rank_sha256": "4d22242c985d7dc9322c0ebe1e79d86e2159b7cbcef6a64b4f2f6803da1dcfa2",
+      "experimental_class": "Low",
+      "gene_names": [
+        "TSL1",
+        "TPS3"
+      ],
+      "orf_pair": [
+        "YML100W",
+        "YMR261C"
+      ],
+      "source_row": 91,
+      "trigenic_count": 3,
+      "trigenic_fraction": 0.2
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YML111W": 3,
+        "YMR275C": 8
+      },
+      "example_rank_sha256": "2e263105f59de286443e195f061cea46282c9cee1627748b452be73909800bb0",
+      "experimental_class": "High",
+      "gene_names": [
+        "BUL2",
+        "BUL1"
+      ],
+      "orf_pair": [
+        "YML111W",
+        "YMR275C"
+      ],
+      "source_row": 29,
+      "trigenic_count": 19,
+      "trigenic_fraction": 0.6333333333333333
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YML116W": 0,
+        "YMR279C": 3
+      },
+      "example_rank_sha256": "77c540495dac3c68ec719ba43e18a607d8bd474fbb0d478f06e2e96c68cc4123",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "ATR1",
+        "YMR279C"
+      ],
+      "orf_pair": [
+        "YML116W",
+        "YMR279C"
+      ],
+      "source_row": 193,
+      "trigenic_count": 1,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YML118W": 5,
+        "YMR285C": 1
+      },
+      "example_rank_sha256": "bb427a1d829ae23358dbf736898163a4efa00bcb151bd22f48108fd59671d36d",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "NGL3",
+        "NGL2"
+      ],
+      "orf_pair": [
+        "YML118W",
+        "YMR285C"
+      ],
+      "source_row": 194,
+      "trigenic_count": 2,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YMR119W": 5,
+        "YNL008C": 1
+      },
+      "example_rank_sha256": "4eed0c2876167e5047e4de1e14134108617e305003f103069315527fbfcd51ff",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "ASI1",
+        "ASI3"
+      ],
+      "orf_pair": [
+        "YMR119W",
+        "YNL008C"
+      ],
+      "source_row": 183,
+      "trigenic_count": 3,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YMR175W": 4,
+        "YPL223C": 4
+      },
+      "example_rank_sha256": "b5a16601adb0f492c89c72d43f2d59c5282280791dcb4ccb14bd5e88f75fef06",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "SIP18",
+        "GRE1"
+      ],
+      "orf_pair": [
+        "YMR175W",
+        "YPL223C"
+      ],
+      "source_row": 239,
+      "trigenic_count": 0,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YMR177W": 0,
+        "YPL224C": 0
+      },
+      "example_rank_sha256": "8fd97eba4e56d0a508c6b4a6e503969eea4893839cafa3d0bd6e32e7ba4f5d61",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "MMT1",
+        "MMT2"
+      ],
+      "orf_pair": [
+        "YMR177W",
+        "YPL224C"
+      ],
+      "source_row": 167,
+      "trigenic_count": 1,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YMR182C": 4,
+        "YPL230W": 6
+      },
+      "example_rank_sha256": "a67f607f2b9615ecaeac2b502c8ac01c8408cf2eaef3356f7597319bd5635798",
+      "experimental_class": "Low",
+      "gene_names": [
+        "RGM1",
+        "USV1"
+      ],
+      "orf_pair": [
+        "YMR182C",
+        "YPL230W"
+      ],
+      "source_row": 135,
+      "trigenic_count": 1,
+      "trigenic_fraction": 0.09090909090909091
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YMR192W": 7,
+        "YPL249C": 1
+      },
+      "example_rank_sha256": "2257cd1b03a319834a00f6f7fb68d85be3e7d9168502abd377b16857068b1092",
+      "experimental_class": "Low",
+      "gene_names": [
+        "GYL1",
+        "GYP5"
+      ],
+      "orf_pair": [
+        "YMR192W",
+        "YPL249C"
+      ],
+      "source_row": 93,
+      "trigenic_count": 2,
+      "trigenic_fraction": 0.2
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YMR195W": 3,
+        "YPL250C": 13
+      },
+      "example_rank_sha256": "e4175fb0174546a7bf0ef7bf1a398146bcf72e68fdc56f752b8f3d7b79c6a223",
+      "experimental_class": "Low",
+      "gene_names": [
+        "ICY1",
+        "ICY2"
+      ],
+      "orf_pair": [
+        "YMR195W",
+        "YPL250C"
+      ],
+      "source_row": 90,
+      "trigenic_count": 4,
+      "trigenic_fraction": 0.2
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YMR198W": 136,
+        "YPL253C": 26
+      },
+      "example_rank_sha256": "a422d44fb06d901a5165afd88809169a8a50a16751e11bf1ac38367b434215ac",
+      "experimental_class": "Low",
+      "gene_names": [
+        "CIK1",
+        "VIK1"
+      ],
+      "orf_pair": [
+        "YMR198W",
+        "YPL253C"
+      ],
+      "source_row": 119,
+      "trigenic_count": 22,
+      "trigenic_fraction": 0.11956521739130435
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YMR199W": 7,
+        "YPL256C": 29
+      },
+      "example_rank_sha256": "65f6d21f8a0d590975f98cf1f5f630da4df11f8b57e95a9d7d5c7b641f90a8fb",
+      "experimental_class": "High",
+      "gene_names": [
+        "CLN1",
+        "CLN2"
+      ],
+      "orf_pair": [
+        "YMR199W",
+        "YPL256C"
+      ],
+      "source_row": 17,
+      "trigenic_count": 93,
+      "trigenic_fraction": 0.7209302325581395
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YMR222C": 0,
+        "YOR280C": 3
+      },
+      "example_rank_sha256": "275eb4364cebb5ec4ba5c51d7090ba1ae87fd64ae6d7d6acfe279b5335b1cf9b",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "FSH2",
+        "FSH3"
+      ],
+      "orf_pair": [
+        "YMR222C",
+        "YOR280C"
+      ],
+      "source_row": 236,
+      "trigenic_count": 0,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YMR237W": 33,
+        "YOR299W": 3
+      },
+      "example_rank_sha256": "80f0bb35e779e67e4ae936f375c63d4a2569e7339872bc0f7d13b84390c5838d",
+      "experimental_class": "Low",
+      "gene_names": [
+        "BCH1",
+        "BUD7"
+      ],
+      "orf_pair": [
+        "YMR237W",
+        "YOR299W"
+      ],
+      "source_row": 59,
+      "trigenic_count": 16,
+      "trigenic_fraction": 0.3076923076923077
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YNL283C": 1,
+        "YOL105C": 4
+      },
+      "example_rank_sha256": "ce88d4dac5529a7dbab118dd6537384d62725e0a286c4c5c5abf1c194e0bf220",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "WSC2",
+        "WSC3"
+      ],
+      "orf_pair": [
+        "YNL283C",
+        "YOL105C"
+      ],
+      "source_row": 205,
+      "trigenic_count": 1,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YNL298W": 151,
+        "YOL113W": 1
+      },
+      "example_rank_sha256": "f5fdc1ebcc9cd4bcf430523998c85ed99f1d9086db5aadfa0f72c41e91813d8f",
+      "experimental_class": "Low",
+      "gene_names": [
+        "CLA4",
+        "SKM1"
+      ],
+      "orf_pair": [
+        "YNL298W",
+        "YOL113W"
+      ],
+      "source_row": 69,
+      "trigenic_count": 52,
+      "trigenic_fraction": 0.2549019607843137
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YNL307C": 81,
+        "YOL128C": 1
+      },
+      "example_rank_sha256": "fb7bb038cf19c978b6dbb795fce77be19d1e50d6c0f37be8595782782a3017be",
+      "experimental_class": "Low",
+      "gene_names": [
+        "MCK1",
+        "YGK3"
+      ],
+      "orf_pair": [
+        "YNL307C",
+        "YOL128C"
+      ],
+      "source_row": 137,
+      "trigenic_count": 8,
+      "trigenic_fraction": 0.08888888888888889
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YNL309W": 6,
+        "YOL131W": 8
+      },
+      "example_rank_sha256": "5da554664d8130d81400cb77345b8a079d4e79da0b4886daf8216a0aebf31074",
+      "experimental_class": "Low",
+      "gene_names": [
+        "STB1",
+        "YOL131W"
+      ],
+      "orf_pair": [
+        "YNL309W",
+        "YOL131W"
+      ],
+      "source_row": 103,
+      "trigenic_count": 3,
+      "trigenic_fraction": 0.17647058823529413
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YOR193W": 7,
+        "YPL112C": 6
+      },
+      "example_rank_sha256": "e3cbafcd59b3603fea5e1d92dd953f31bd9aa205af2fb2b224f16a61f832219e",
+      "experimental_class": "Low",
+      "gene_names": [
+        "PEX27",
+        "PEX25"
+      ],
+      "orf_pair": [
+        "YOR193W",
+        "YPL112C"
+      ],
+      "source_row": 98,
+      "trigenic_count": 3,
+      "trigenic_fraction": 0.1875
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YOR214C": 3,
+        "YPL130W": 2
+      },
+      "example_rank_sha256": "c89490a5bbe36d8e1dda8d44e47ffb129970ed910b6ef51e5764669af5b6d6aa",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "SPR2",
+        "SPO19"
+      ],
+      "orf_pair": [
+        "YOR214C",
+        "YPL130W"
+      ],
+      "source_row": 235,
+      "trigenic_count": 0,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YOR222W": 3,
+        "YPL134C": 3
+      },
+      "example_rank_sha256": "7b3306f3a072d6028d31b098fdf85dd2ded32a5916c7a424e866f8940e130ec4",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "ODC2",
+        "ODC1"
+      ],
+      "orf_pair": [
+        "YOR222W",
+        "YPL134C"
+      ],
+      "source_row": 197,
+      "trigenic_count": 2,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YOR227W": 4,
+        "YPL137C": 2
+      },
+      "example_rank_sha256": "ceec4a18dfebae632fc03eb58f9c8237f5c7f027a28b3b6cb8b109a9e5f099fb",
+      "experimental_class": "Sparse",
+      "gene_names": [
+        "HER1",
+        "GIP3"
+      ],
+      "orf_pair": [
+        "YOR227W",
+        "YPL137C"
+      ],
+      "source_row": 184,
+      "trigenic_count": 3,
+      "trigenic_fraction": null
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YOR233W": 12,
+        "YPL141C": 23
+      },
+      "example_rank_sha256": "c3d2f7225b37665966e1bcc3af89a21500980c05c6c9de75e2676ac86ab211ed",
+      "experimental_class": "Low",
+      "gene_names": [
+        "KIN4",
+        "FRK1"
+      ],
+      "orf_pair": [
+        "YOR233W",
+        "YPL141C"
+      ],
+      "source_row": 68,
+      "trigenic_count": 12,
+      "trigenic_fraction": 0.2553191489361702
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YOR237W": 4,
+        "YPL145C": 24
+      },
+      "example_rank_sha256": "90468c8ed951496ffbac6c06f16e9398f81d203352d33eb7bd8266c975a2aaea",
+      "experimental_class": "Low",
+      "gene_names": [
+        "HES1",
+        "KES1"
+      ],
+      "orf_pair": [
+        "YOR237W",
+        "YPL145C"
+      ],
+      "source_row": 146,
+      "trigenic_count": 2,
+      "trigenic_fraction": 0.06666666666666667
+    },
+    {
+      "digenic_counts_by_orf": {
+        "YOR247W": 5,
+        "YPL163C": 4
+      },
+      "example_rank_sha256": "0c5c4b0ef1c9b73525cee77ddf75fe9859625bdcf2c023d50ae36790a89af921",
+      "experimental_class": "High",
+      "gene_names": [
+        "SRL1",
+        "SVS1"
+      ],
+      "orf_pair": [
+        "YOR247W",
+        "YPL163C"
+      ],
+      "source_row": 48,
+      "trigenic_count": 7,
+      "trigenic_fraction": 0.4375
+    }
+  ],
+  "prespecified_examples": [
+    {
+      "experimental_class": "High",
+      "orf_pair": [
+        "YER132C",
+        "YGL197W"
+      ],
+      "rank_sha256": "0a2bb0377b342913390c5004945729b70880909d5b2d8a10bada3c438839b147"
+    },
+    {
+      "experimental_class": "High",
+      "orf_pair": [
+        "YDR122W",
+        "YLR096W"
+      ],
+      "rank_sha256": "0c2e0887f32764456e6eabbe02bbd7304a7ae8ef76a736b483558e7dc55edf47"
+    },
+    {
+      "experimental_class": "Low",
+      "orf_pair": [
+        "YER059W",
+        "YIL050W"
+      ],
+      "rank_sha256": "02a0f2fb96f2b9dae979063b0ed3c893270258fc49bb2c77630001d5bf1fe74e"
+    },
+    {
+      "experimental_class": "Low",
+      "orf_pair": [
+        "YLR284C",
+        "YOR180C"
+      ],
+      "rank_sha256": "039034548ff57fa8b564b27a11c12ff20ad3a7e98e0d43868af468762c8c39d9"
+    },
+    {
+      "experimental_class": "Sparse",
+      "orf_pair": [
+        "YBR147W",
+        "YOL092W"
+      ],
+      "rank_sha256": "033028eecad777890ba67b8cd2305dfdcf9d4690d85dbe360e7fbb102d1de47f"
+    },
+    {
+      "experimental_class": "Sparse",
+      "orf_pair": [
+        "YCL048W",
+        "YDR522C"
+      ],
+      "rank_sha256": "042210b89b2ffc7ae7b48467436d264246fe0c17c534ae35c58039fd58bddb71"
+    }
+  ],
+  "protocol": {
+    "bytes": 6444,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/BIOLOGICAL_WGD_APPLICATION_PROTOCOL_20260917.md",
+    "sha256": "8126f75eaf30c34d4988c73ea233127a1f7f069fcb8487abaafaa1cf5200569d"
+  },
+  "source": {
+    "bytes": 6751,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/freeze_wgd_application_cohort.py",
+    "sha256": "7bc445d0d5d4f3e23abf7b43f2968fa70ceaa238a9b44323a7062689696cab76"
+  },
+  "status": "experimental_wgd_cohort_frozen_no_predictions_read",
+  "table": {
+    "bytes": 39665,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/biological_wgd_source_v1/TableS7.xlsx",
+    "sha256": "bf502168d9c87956edf6c764650e45a8c60a8605e08ea93fd7ef57a49313f7fe"
+  },
+  "unique_orfs": 480
+}
