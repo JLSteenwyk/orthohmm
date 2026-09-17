@@ -3231,3 +3231,8 @@ QfO21315 first instrumented optimizer call has returned with recorded976,504
 vertices/24,148,515 edges and expectedCPM0.1/seed4/default2 iterations. This is a
 partial live observation only; full repeat comparison and independent admission
 still pending. No determinism or root-cause claim from one worker.
+
+Executor1bae2d2 pushed/frozen at publication_ob_cpm_neighborhood_v1; no-requeue
+job21319 submitted and confirmed RUNNING. Output benchmarks/results/
+ob_cpm_neighborhood_v1. Existing21316_0/1 and21315 remain RUNNING;21316_2/3
+remain queued under the array concurrency limit. No job restarted or superseded.
