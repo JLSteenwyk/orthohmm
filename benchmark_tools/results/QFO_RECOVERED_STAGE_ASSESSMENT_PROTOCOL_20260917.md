@@ -52,3 +52,33 @@ until a validated challenge-specific analysis exists. Dependent predicted pairs
 must not be treated as independent bootstrap observations. Coverage and mapping
 exclusions accompany every result. No retuning, retry selection, universal
 superiority claim or controlled timing claim is authorized by this panel.
+
+## Frozen Assessment Inputs
+
+Conversion job21522 completed0:0 in2:45. The
+[four-stage preparation report](qfo_recovered_stage_pairs_20260917.json) has SHA256
+ce6f19cd005b886a91dc3aee63cb7b41e7f448d8cad5e65ff7cb10d92a636100.
+
+| Stage | Raw pairs | Retained pairs | Mapping exclusions |
+| --- | ---: | ---: | ---: |
+| Multipass | 32102853 | 32012674 | 90179 |
+| Multipass refined | 8741224 | 8710340 | 30884 |
+| Strict profiles | 31768877 | 31682321 | 86556 |
+| Strict profiles refined | 8741773 | 8710722 | 31051 |
+
+These counts are preparation evidence, not accuracy. The
+[scoring environment](qfo_assessment_environment_20260917.json) has SHA256
+e86545fd04cb644ed642cf2a31b4993fb2225ca4c05743cd03e661db129e82bc.
+It records124tracked pipeline files atc0854a96c1a0fd7f2a891d971af0863002fabc90,
+103reference files,466Java runtime files, three local2022.1container images,
+Nextflow22.10.8build5860, SingularityCE4.3.2 and local configuration/support
+executables. This is a present-day identity snapshot, not retrospective proof
+of every historical dependency or a hermetic host image.
+
+`qfo_recovered_assessment.config` selects the checksum-pinned local container
+paths and a local eight-CPU64GB executor budget. The actual Nextflow effective
+configuration was evaluated offline and retained. The new runner checks hashes
+before/after each command, refuses existing result/work/launch directories and
+never invokes deletion or automatic resume. A four-task array runs at most one
+stage at a time with eightCPUs64GiB24hours per stage. Scoring exit0 remains
+pending independent validation of allsix native endpoints and their semantics.

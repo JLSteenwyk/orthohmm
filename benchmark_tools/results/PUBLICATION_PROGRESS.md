@@ -4499,3 +4499,27 @@ logbenchmarks/work/qfo_recovered_pairs_21522.log. No assessment/inference submit
 by this job. Next review allfour conversion counts and freeze actual QfO scoring
 pipeline/reference/container provenance before assessment in isolated namespaces.
 Tree21406_111/112running,113-209pending;21435pendingdependency.
+
+### QfO Assessment Environment and Runner Prepared (2026-09-17)
+
+Previous continuation progressed frozen stage-pair protocol/conversion21522.
+Re-read objective and confirmed21522live, thenCOMPLETED0:0 in2:45 withallfour
+outputs. Counts retained32012674/8710340/31682321/8710722; mapping exclusions
+90179/30884/86556/31051. ReportSHAce6f19cd005b886a91dc3aee63cb7b41e7f448d8cad5e65ff7cb10d92a636100.
+No scores inspected or historical row replaced.
+
+Added freeze_qfo_assessment_environment.py. Evaluated installed Nextflow offline:
+22.10.8build5860 matches historical log. Frozen124pipeline files,103reference
+files,466Javafiles, three local images, Singularity config/support binaries and
+effective Nextflow config. SnapshotSHAe86545fd04cb644ed642cf2a31b4993fb2225ca4c05743cd03e661db129e82bc.
+Host kernel/shared libraries not fully captured; do not claim hermetic execution.
+
+Added run_qfo_recovered_assessment.py and sequential four-task8CPU64GiB24hour
+batch. Exact reviewed environment and pair-report hashes, completed21522 gate,
+source/input/runtime checks before/after, six2020challenges, local image paths,
+fresh namespaces and Darwinpath limit enforced. No deletion, overwrite or resume.
+Process success explicitly remains pending independent endpoint admission.
+Sixteen focused tests pass; fullunit suite and real environment recheck running.
+
+Fullunit suite1,648passed36.76s. Rechecked704environment records and dryconstructed
+allfour commands within the Darwin limit. Batch passes bash syntax validation.
