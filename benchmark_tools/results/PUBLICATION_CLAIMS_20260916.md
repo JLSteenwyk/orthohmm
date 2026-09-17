@@ -22,6 +22,8 @@ evidence that an experiment completed or a biological hypothesis is true.
 | OrthoHMM is faster or more memory efficient under matched conditions | [Progress ledger](PUBLICATION_PROGRESS.md) | Not established; historical resource-accounting and workload differences remain |
 | A nearby parameter choice improves frozen-method OrthoBench F1 | [Six-variant panel](OB_PARAMETER_NEIGHBORHOOD_RESULTS_20260916.md) | Not established: all six adjusted F1 intervals include zero; no default promotion |
 | The QfO native graph is reproducibly constructed | [Checked initial-graph repeats](QFO_CHECKED_REPEAT_RESULTS_20260917.md) | Three checked Python-pair runs preserve the full graph and yield identical partitions; not general determinism or complete historical replay equivalence |
+| Supplying the generating tree improves simulation F1 | [Complete tree panel](SIMULATION_TREE_ROBUSTNESS_RESULTS_20260917.md) | Not established: all adjusted generating-versus-inferred intervals include zero; supplied-tree completion rescues three OrthoHMM baselines but does not supply their missing inferred accuracy |
+| OrthoHMM is insensitive to species-tree error | [Complete tree panel](SIMULATION_TREE_ROBUSTNESS_RESULTS_20260917.md) | Unsupported: NNI2 F1 and recall deficits have adjusted intervals below zero in four conditions; bounded exploratory result, not arbitrary-tree robustness |
 | The package is publication-ready | All sections below | Not achieved |
 
 ## Completion Requirements
@@ -170,9 +172,23 @@ evidence that an experiment completed or a biological hypothesis is true.
 
 - Superseding the earlier simulation preparation status: all132available
   unchanged-tree controls and199downstream partition comparisons passed, with
-  eight unavailable originals retained. Main420method runs are in progress as
-  cells21405_0 and21406_1-209; independent validator21435 is queued. Cross-arm
-  retained-artifact comparison and accuracy/uncertainty analysis remain pending.
+  eight unavailable originals retained. Main420method runs have finished as
+  cells21405_0 and21406_1-209; independent validator21435 completed0:0. The
+  [complete results](SIMULATION_TREE_ROBUSTNESS_RESULTS_20260917.md) retain405
+  admitted supplied outputs and15 native failures. Cross-arm audit and all126
+  exploratory endpoints are complete. Two upstream-different comparisons remain
+  explicit, and no failed accuracy is imputed. Figure/manuscript integration
+  remains pending; earlier preparation-only descriptions are historical.
+
+- All four recovered QfO stage pair files were prepared under a frozen
+  conversion/mapping protocol, with removed unmapped pairs recorded separately.
+  The native assessment environment is pinned, including reference data,
+  workflow, Java runtime and local container images. Scoring array21548 is
+  active; independent auditor21584 waits for all four terminal stages. Neither
+  successful pair conversion nor submitted native assessments establishes
+  accuracy. The [stage assessment protocol](QFO_RECOVERED_STAGE_ASSESSMENT_PROTOCOL_20260917.md)
+  fixes four contrasts and six endpoints; this is not the full candidate-by-
+  phylogeny factorial. Appropriate paired uncertainty remains outstanding.
 
 The manuscript must retain negative and neutral findings. Missing evidence
 cannot be replaced with a claim that the method is generally applicable,

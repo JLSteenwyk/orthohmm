@@ -4604,3 +4604,30 @@ This identifies an optimization target, not a measured improvement or proof of
 quiet hardware. No monitor implementation or frozen experiment was changed.
 Any replacement must retain fresh PID-identity/cgroup checks and be validated
 against process turnover before use in the outstanding matched scaling runs.
+
+### Complete Simulation Tree Analysis (2026-09-17)
+
+Previous continuation made progress:04055a5/ea7aba7 pushed, scoring frozen and
+resource-monitor overhead localized. Re-read objective and revalidated live
+21435/21548; no retries or partial accuracy analysis.21435 completed0:0 in4:29,
+admitting405/420 supplied outputs:OrthoHMM210/210,OrthoFinder195/210. Fifteen
+OrthoFinder nonfinite-graph failures are the same five divergent seeds under
+three trees. All admitted outputs retain supplied topology. Reviewed full
+admission SHA17a1be71823b9fb7fb13082d05001d7667bb89c3366da2e3138a124e90907820.
+
+Frozen04055a5 artifact auditor completed:400 upstream-equivalent,2different,
+18unavailable contrasts. Both differences are OrthoFinder divergent20261106,
+generating-inferred andNNI1-generating, involving OG0000004 alignment/gene tree.
+Retained all contrasts. Artifact SHA047dd998752dd30ab62e042e6b3e5f3442ec4f4dffcff030984f3e01e4fff65c.
+
+Frozen04055a5 scorer completed with both reviewed gate hashes. Recomputed all
+successful inferred scores exactly;537scored/23failed of560total arm rows.
+All126 exploratory endpoints evaluated without selecting seeds or tuning.
+Generating-inferred adjusted intervals all include zero. NNI2 F1/recall
+deficits exclude zero in fourOrthoHMM andtwoOrthoFinder conditions (12endpoints).
+No precision interval excludes zero. Complete-case and finite-bootstrap caveats
+remain explicit. Full result/hash/table in SIMULATION_TREE_ROBUSTNESS_RESULTS_20260917.md;
+summary and artifact snapshots retained. Raw24MB native admission remains local
+for archive, not duplicated into Git. Figure/manuscript integration remains due.
+QfO21548_0 confirmedRUNNING26:57;later stages and21584remainpending. No QfO
+accuracy conclusions follow from this separate simulation milestone.
