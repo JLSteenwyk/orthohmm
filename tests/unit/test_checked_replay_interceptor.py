@@ -1,4 +1,5 @@
 import json
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -105,3 +106,28 @@ def test_exact_four_stage_inventory(tmp_path):
     with pytest.raises(ValueError):
         proxy.run(command, check=True)
     assert len(proxy.calls) == 4
+
+
+def test_profile_parent_threads_do_not_leak_into_clustering(tmp_path, monkeypatch):
+    payload, output, _ = payload_fixture(tmp_path)
+    for key, value in (("OMP_NUM_THREADS", "32"), ("OPENBLAS_NUM_THREADS", "8"), ("MKL_NUM_THREADS", "4"),
+                       ("PYTHONPATH", "/unchanged/launcher"), ("PRESERVE_TEST_VARIABLE", "yes")):
+        monkeypatch.setenv(key, value)
+    parent = dict(os.environ)
+    children = []
+    def run(command, **kwargs):
+        children.append(kwargs["env"])
+        assert kwargs["env"] is not os.environ
+        for key in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS"):
+            assert kwargs["env"][key] == "1"
+        assert kwargs["env"]["PYTHONPATH"] == "/unchanged/launcher"
+        assert kwargs["env"]["PRESERVE_TEST_VARIABLE"] == "yes"
+        (output / "orthohmm_working_res/orthohmm_edges_clustered.txt").write_text("a b\nc\n")
+        return SimpleNamespace(returncode=0)
+    proxy = CheckedReplaySubprocess(SimpleNamespace(run=run, STDOUT=subprocess.STDOUT), tmp_path,
+        tmp_path / "observations", tmp_path / "worker.py", lambda p, m: {})
+    for _ in range(4):
+        proxy.run([sys.executable, "-m", "orthohmm.leiden_worker", str(payload)], check=True)
+    assert dict(os.environ) == parent
+    assert len(children) == 4
+    assert all(row["thread_environment"]["inherited"]["OMP_NUM_THREADS"] == "32" for row in proxy.calls)

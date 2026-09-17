@@ -22,8 +22,10 @@ def validate(payload, manifest, root, executor):
         raise ValueError("Native worker identity differs")
     overrides = {"PYTHONPATH": str(launcher), "PYTHONHASHSEED": "0", "OMP_NUM_THREADS": "1",
                  "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"}
-    if any(observed["environment"][key] != value for key, value in overrides.items()):
-        raise ValueError("Worker environment differs")
+    differences = {key: {"expected": value, "observed": observed["environment"].get(key)}
+                   for key, value in overrides.items() if observed["environment"].get(key) != value}
+    if differences:
+        raise ValueError("Worker environment differs: " + json.dumps(differences, sort_keys=True))
     for name in ("orthohmm.leiden_worker", "orthohmm.externals", "orthohmm.helpers"):
         if observed["modules"][name] != record(launcher / (name.replace(".", "/") + ".py")):
             raise ValueError("Wrong scientific worker module")

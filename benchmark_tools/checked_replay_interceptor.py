@@ -1,6 +1,7 @@
 """Preserve and check each frozen isolated-clustering payload without changing graph generation."""
 
 import json
+import os
 from pathlib import Path
 import shutil
 import sys
@@ -49,11 +50,16 @@ class CheckedReplaySubprocess:
                    "--manifest", str(manifest_path), "--manifest-sha256", record(manifest_path)["sha256"]]
         row = {"index": index, "stage": STAGES[index], "status": "running", "command": adapted,
                "manifest": record(manifest_path), "accuracy_evaluated": False}
+        # Profile expansion changes the parent's OMP setting; isolate only the clustering child.
+        thread_overrides = {name: "1" for name in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS")}
+        child_env = {**os.environ, **thread_overrides}
+        row["thread_environment"] = {"inherited": {name: os.environ.get(name) for name in thread_overrides},
+                                     "child_overrides": thread_overrides}
         self.calls.append(row)
         started = time.monotonic()
         try:
             with (directory / "worker.log").open("x") as log:
-                result = self.original.run(adapted, stdout=log, stderr=self.original.STDOUT, check=True)
+                result = self.original.run(adapted, stdout=log, stderr=self.original.STDOUT, check=True, env=child_env)
             for item in [*inputs, *original_records]:
                 check(item)
             # Validate the worker before allowing the frozen replay to use its output.

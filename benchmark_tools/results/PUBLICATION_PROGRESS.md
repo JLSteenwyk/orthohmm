@@ -4143,3 +4143,31 @@ and passed both native tree parsers. Retained inventories contain27OH and202OF
 artifacts. New runner preserves failures and refuses existing destinations.
 Nine focused tests pass; full1,490unit tests passed36.49s. Executor will be
 committed/frozen before scheduler submission; no pilot results claimed yet.
+
+### Mode pilot complete; QfO child-environment correction (2026-09-17)
+
+Committed/pushed0e797ba and froze publication_simulation_mode_control_v1.
+Initial submission21331 failed its exact-commit shell guard after1s because the
+submitted commit argument was mistyped; no inference output was created.
+Confirmed terminal failure, corrected the argument, and submitted21332.
+Job21332 COMPLETED0:0 in35s. Both fresh native runs admitted by the existing
+validators and retained identical rooted topologies and native ortholog pairs:
+OrthoHMM2,881pairs; OrthoFinder2,884pairs. No accuracy calculation performed.
+OrthoHMM's27retained artifacts matched byte-for-byte. OF retained201versus202:
+the species-tree alignment is absent in supplied mode and the two MCL files
+differ in command-comment paths (inspected diff); independent semantic reread
+remains required. Pilot is not all-dataset equivalence or publication admission.
+Snapshot simulation_mode_control_baseline_seed1_20260917.json retains pending
+independent-admission status and all comparisons, including mismatches.
+
+Preserved QfO21329 failed parent/worker snapshots and documented the exact
+environment mismatch in QFO_CHECKED_REPLAY_ENVIRONMENT_FAILURE_20260917.md.
+All three observed native boundaries report intact graphs; profile_base is
+still rejected, not silently admitted. Explicit child-only OMP/OPENBLAS/MKL=1
+overrides now prevent profile-stage parent settings from leaking into clustering.
+All other environment values are inherited; parent/profile settings unchanged.
+New four-call regression confirms this isolation and records inherited values.
+Twenty focused clustering-wrapper/validator tests pass; full1,491unit tests
+passed35.90s. Prepared fresh v2 batch; freeze/submit after committing. Existing
+independent full-replay admission remains pinned to v1 and needs an explicit
+v2 provenance update before any completed retry can be used.
