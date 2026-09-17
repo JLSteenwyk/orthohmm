@@ -159,6 +159,21 @@ evidence that an experiment completed or a biological hypothesis is true.
   topology-stress inputs, not completed robustness results; full-panel mode
   admission, main supplied-tree inference and scoring remain outstanding.
 
+- The [full checked QfO replay](QFO_CHECKED_FULL_REPLAY_RESULTS_20260917.md) now
+  passed independent retrospective admission after an exact wrapper-label-failure
+  recovery. Allfour clustering stages and complete976504-gene coverage passed;
+  the initial partition matches checked repeats. The final390980groups differ
+  from historical390817groups (4652historical-only,4815replay-only). Historical
+  scores must not be transferred to this output. No full-pipeline determinism,
+  accuracy benefit, or isolated runtime claim follows. Original21333FAILED1:0
+  remains preserved; audit21480completed without rerunning inference.
+
+- Superseding the earlier simulation preparation status: all132available
+  unchanged-tree controls and199downstream partition comparisons passed, with
+  eight unavailable originals retained. Main420method runs are in progress as
+  cells21405_0 and21406_1-209; independent validator21435 is queued. Cross-arm
+  retained-artifact comparison and accuracy/uncertainty analysis remain pending.
+
 The manuscript must retain negative and neutral findings. Missing evidence
 cannot be replaced with a claim that the method is generally applicable,
 that a competitor failed, or that a custom mean proves superiority.

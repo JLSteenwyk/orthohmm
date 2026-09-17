@@ -4445,3 +4445,25 @@ scientific admission claimed until this auditor completes successfully.
 Latest treepoll21406_70/71RUNNING,72-209pending;21435pendingdependency.
 Preserve all running jobs and review audit results before scoring or changing
 publication claims. QfOv2 original21333FAILED1:0 remains explicitly retained.
+
+### QfO Full Replay Admitted; Cross-Arm Tree Audit Prepared (2026-09-17)
+
+Previous turn progressed exact QfO recovery implementation and audit21480.
+Re-read objective; first confirmed21480RUNNING00:56, laterCOMPLETED0:0 in1:23.
+Distinct recovered admission905c8acc... validates allfour stages and976504genes,
+379provenance records, exact initial checked-repeat agreement. Final390980groups
+differs from historical390817:4652historical-only/4815replay-only groups. Preserve
+this negative reproducibility finding; do not transfer historical scores or
+silently replace the original benchmark. No inference rerun or accuracy selection.
+Snapshot and interpretation added; original failed21333 remains preserved.
+
+Prepared audit_simulation_tree_artifacts.py to run only after completed21435
+admission and reviewed exact report hash. Complete420contrasts retain failed or
+unavailable arms; compare candidate/graph, alignment and raw gene-tree evidence
+with only established representation exceptions. Differences are not an accuracy
+exclusion rule. Thirteen focused tests pass, including membership/tree changes,
+hash drift, incomplete/duplicate inventories and unavailable outcomes. Fullunit
+suite in progress. Main tree inference/admission/accuracy analysis still pending.
+
+Fullunit suite1,622passed31.77s. Independently rehashed all379QfO provenance
+records plus auditor source and failed-parent source report; all passed.

@@ -197,3 +197,14 @@ an explicit outcome, not a tree-accuracy estimate.
 This admission does not score evolutionary truth. Cross-arm upstream artifact
 comparisons and the prespecified126-endpoint analysis remain separate steps;
 valid native execution alone does not establish a tree-only causal effect.
+
+`audit_simulation_tree_artifacts.py` subsequently requires the completed21435
+admission and an explicit reviewed report hash. It compares420fixed upstream
+artifact contrasts: generating versus inferred and each NNI versus generating,
+for every dataset and both methods. Unavailable arms remain explicit. The
+existing narrowly defined MCL command-comment and absent species-alignment
+exceptions are retained; raw gene-tree, candidate-membership or other content
+differences are not normalized away. Hash drift rejects the audit. Artifact
+differences qualify causal interpretation but never remove a prespecified
+accuracy contrast. Even equality covers only retained artifacts, not every
+internal computation. This script does not score truth or select parameters.
