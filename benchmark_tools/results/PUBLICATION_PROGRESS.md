@@ -4005,3 +4005,28 @@ existing-output refusal. Full1,444 tests passed37.13s. Updated matched-scaling
 protocol; stage-boundary timing, whole-run monitoring, unrelated-workload gates,
 timeout/failure accounting and actual27-run scaling execution remain outstanding.
 No new inference, benchmark score or default change in this continuation.
+
+### Measured command lifecycle wrapper (2026-09-17)
+
+Previous continuation progressed telemetry78cc9e1. Re-read objective;21329 remains
+RUNNING at00:15:24. Added measure_slurm_command.py to measure one fresh command
+inside its existing dedicated Slurm task subtree. Requires only the wrapper in
+that subtree before launch, exact effective CPU count and inherited task/job
+memory cap. Retains command/log/exit status and samples across launch-to-exit,
+distinguishes zero/nonzero exit, timeout, spawn failure and measurement failure.
+Sampling failure does not terminate a still-running scientific command: native
+execution continues to exit or the declared timeout, with invalid measurement
+flagged. Only its newly created process group is targeted for timeout cleanup;
+TERM-resistant children receive KILL after a grace period. No Slurm job/cgroup
+is moved or reconfigured, and no unrelated process group is signaled.
+
+Twelve initial tests with real subprocesses passed; full1,456 tests passed36.91s.
+Then added a real parent/child TERM-resistance test: all13 focused tests pass.
+The wrapper includes its own cgroup accounting overhead and cannot establish
+host quietness, complete biological output or inference-only cgroup memory peak.
+Prepared a two-CPU/one-GiB no-requeue Slurm smoke test with small parent/child
+memory allocations and a brief child calculation/sleep. Bash syntax passes.
+Freeze/push before execution. This smoke is instrumentation validation, not one
+of the planned27 scientific scaling runs, and does not count as timing evidence
+for any orthology tool. Controlled workload gates and exact scientific command/
+output validation remain outstanding.
