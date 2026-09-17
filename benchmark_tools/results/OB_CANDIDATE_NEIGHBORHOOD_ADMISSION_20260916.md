@@ -34,3 +34,23 @@ evaluate all six variants under the existing18-endpoint uncertainty protocol.
 Machine-readable snapshot:ob_candidate_neighborhood_verified_20260916.json
 SHA256:38a4cc8c16e8e45800c88af618f9b5a9b3d77ab6b3d0e5b79fa555b88e849514.
 Twelve focused tests passed; full unit suite1,147 passed in27.64s.
+
+## Downstream Native Admission
+
+All four changed candidate arms completed the frozen inferred-tree pipeline and
+passed independent native-output validation. All retain251,378 proteins, with
+zero cross-candidate merges. The table reports group integrity, not accuracy.
+
+| Arm | Job | Elapsed | Root HOGs | Supported constraints | Detached constraints |
+| --- | --- | --- | ---: | ---: | ---: |
+| norm_low | 21316_0 | 7:35 | 59,729 | 5,903 | 2,612 |
+| norm_high | 21316_1 | 6:05 | 59,822 | 5,782 | 2,563 |
+| margin_low | 21316_2 | 19:33 | 59,329 | 6,527 | 3,446 |
+| margin_high | 21316_3 | 11:37 | 60,156 | 5,361 | 2,090 |
+
+Per-arm ob_candidate_*_native_verified_20260916.json snapshots preserve scheduler,
+command, native source/tool/input/tree/output and partition checks. Times are
+Slurm task elapsed with input verification and reused checkpoints on a shared
+machine, not end-to-end inference benchmarks. No parameter scores have been
+calculated; the two CPM variants still require candidate/phylogeny execution
+before the complete six-variant analysis.

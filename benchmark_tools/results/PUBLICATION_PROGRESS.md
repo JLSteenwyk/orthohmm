@@ -3341,3 +3341,25 @@ ob_candidate_margin_high_native_verified_20260916.json SHA256
 Only margin_low remains running in21316. CPM21319 and QfO21321 still running;
 first v2 QfO worker matches8c162782... partition, not a completed repeat panel.
 No parameter accuracy results or new defaults inferred from these observations.
+
+### All candidate-threshold native variants admitted (2026-09-16)
+
+Previous turn made progress with sequence-control figure and high-margin native
+admission. Objective reread. Last candidate task21316_2 completed0:0 in19:33;
+fresh native validation passed75,065 execution artifacts, all251,378genes,
+52,912candidates/59,329rootHOGs and zero cross-candidate merges. Constraints9,973=
+6,527supported+3,446detached. Snapshot
+ob_candidate_margin_low_native_verified_20260916.json SHA256
+94cfce4a7b101a561eb023c5c0cec51f76add0be7f841fad0d282081aaa762e2.
+All four threshold variants now independently admitted, still unscored.
+
+Added complete-panel CPM replay admission code for21319: require terminal success,
+exact three-arm plan/executor/commands/input records, frozen source/runtime,
+complete stage partitions, native profile-build/iteration accounting and fresh
+four-stage control equivalence. Positive profile-build evidence is mandatory for
+this panel; it is not independent validation of every profile score. Eleven
+focused tests passed; full unit suite1,217 passed28.83s. CPM0.08 metadata/profile
+accounting checked on real completed output; full panel admission deliberately
+awaits still-running CPM0.12. Candidate expansion and inferred phylogeny for both
+CPM variants remain pending. Detailed QfO21321 still running, with no new completed
+panel or root-cause conclusion. No default promotion or accuracy selection.
