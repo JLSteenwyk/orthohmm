@@ -44,6 +44,11 @@ evidence that an experiment completed or a biological hypothesis is true.
 
 ## Current Execution Status
 
+- [VGNC reference and prediction audit](QFO_REFERENCE_MAPPING_AUDIT_20260917.md)
+  reproduces exact TP/FP/FN pairs and native endpoints for all four recovered
+  stages directly from prediction databases. Unscored pairs remain excluded
+  under native rules; family-level uncertainty and other competitors' complete
+  prediction rescoring are not established by this audit.
 - [TreeFam-A pooled count audit](QFO_TREEFAM_COUNT_AUDIT_20260917.md) reproduces
   all four recovered-stage native endpoints. Its79,320relations carry one
   pooled case label; family-level uncertainty still requires validated original
@@ -52,8 +57,8 @@ evidence that an experiment completed or a biological hypothesis is true.
 - Recovered QfO scoring21548_0..3 and admission21584 are all COMPLETED0:0.
   [Stage results](qfo_recovered_stage_summary_20260917.json) and the SwissTrees
   interval audit are complete; uncertainty for the other challenges remains open.
-- DGX matched timing21656 has four completed tasks and task4 running at the
-  latest accounting check. No scientific timings have yet passed output and
+- DGX matched timing21656 has five completed tasks and task5 running at the
+  2026-09-17 accounting check. No scientific timings have yet passed output and
   resource admission. The original32CPU plan remains distinct from the DGX plan.
 - Biological application scores, independent arithmetic, figure and all six
   prospective cases are complete. The [stage trace](BIOLOGICAL_WGD_CASE_TRACE_20260917.md)

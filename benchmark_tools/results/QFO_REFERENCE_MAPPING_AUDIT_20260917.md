@@ -78,5 +78,37 @@ as independent biological families.
 - `vgnc_mapping_audit_20260917.json`: executable reference/database mapping audit.
 - `treefam_source_inventory_20260917.json`: source recovery attempts and limits.
 
-Remaining work includes complete prediction rescoring, defensible dependent-unit
-uncertainty, other QfO challenges, and the broader publication requirements.
+## Subsequent Prediction-Database Rescore
+
+`audit_qfo_vgnc_predictions.py` now reconstructs complete native TP, FP and FN
+sets from each of the four mapped prediction databases. Every category matches
+the saved raw pairs exactly, not merely in count. Native P/R and harmonic F1
+match admitted endpoints within 5e-8. Full databases, references and raw outputs
+are checksummed before and after the audit; no input changed.
+
+| Stage | Predictions among reference proteins | Unscored predictions |
+| --- | ---: | ---: |
+| multipass | 232314 | 88316 |
+| multipass_refined | 40460 | 4739 |
+| strict_profiles | 232521 | 87865 |
+| strict_profiles_refined | 40520 | 4798 |
+
+Unscored means neither an asserted TP nor an eligible native FP. These pairs
+must not silently be added to the precision denominator as false positives.
+FP classification is evaluated independently of asserted truth, matching the
+native scorer; category overlap is possible in synthetic fixtures but absent
+in all four retained stages. The rescore preserves native one-direction query
+semantics, subset restrictions, duplicate elimination and final accession aliases.
+
+```bash
+python benchmark_tools/audit_qfo_vgnc_predictions.py --output benchmark_tools/results/vgnc_prediction_rescore_20260917.json
+python -m pytest tests/unit/test_audit_qfo_vgnc_predictions.py -q
+```
+
+`vgnc_prediction_rescore_20260917.json` records exact-set digests, source identity,
+full database hashes and reconstructed metrics. This supersedes the earlier
+mapping-only audit's omitted-FP limitation for these four stages. It does not
+audit every publication competitor, establish completeness of upstream pair
+conversion, or infer independent resampling units. Remaining work includes
+defensible dependent-unit uncertainty, other QfO challenges and the broader
+publication requirements.

@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Complete VGNC Prediction-Database Rescore (2026-09-17)
+
+Previous turn made progress, pushed26e1607: reference mapping audit and evidence
+inventory. Re-read the full objective. DGX21656_5 remains RUNNING at initial
+poll (21:13); five completed and 21 queued. No restart or timing admission.
+
+Implemented an independent category reconstruction directly from all four
+recovered-stage prediction databases. Every TP/FP/FN pair matches the retained
+raw output exactly, including all eligible FPs; admitted P/R and harmonic F1
+agree within5e-8. Full database checksums are stable before/after the audit.
+The test suite covers native directional/subset query behavior, aliases,
+duplicates, eligible/unscored pairs, potential TP/FP overlap and wrong-pair
+errors that equal counts would hide. No score or method change was needed.
+All31focused prediction/mapping/TreeFam/Swiss audit tests pass.
+
+Native VGNC leaves 88,316/4,739/87,865/4,798 predictions unscored across the four
+stages. Recorded these alongside the scored categories and updated the manuscript
+and claim ledger to avoid equating precision with a denominator containing every
+prediction. New evidence: `vgnc_prediction_rescore_20260917.json` and the subsequent
+rescore section of `QFO_REFERENCE_MAPPING_AUDIT_20260917.md`.
+
+This closes the omitted-FP question for these four mapped databases, not for
+all publication competitors or upstream pair conversion. Appropriate QfO
+uncertainty, remaining challenges/ablations/strata, timing admission and the
+broader publication package remain open. No completion claim.
+
 ## VGNC Reference Mapping and TreeFam Source Recovery (2026-09-17)
 
 Previous goal turn was a verified wait: DGX21656_5 was live, with five completed

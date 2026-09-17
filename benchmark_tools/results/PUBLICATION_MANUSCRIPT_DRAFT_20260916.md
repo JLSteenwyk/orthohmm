@@ -785,6 +785,26 @@ observed, so exclusive Slurm allocation alone cannot establish controlled
 CPU conditions. GNU-time maximum RSS and simultaneous process-tree RSS
 must not be pooled as if they were the same measurement.
 
+### VGNC Prediction-Database Audit
+
+For the four recovered sequence-refinement stages, a separate audit reconstructed
+native true-positive, false-positive and false-negative pair sets from the mapped
+prediction databases. Every category matched the retained raw output exactly,
+and precision, recall and harmonic F1 matched the admitted endpoints within
+5e-8. The native reference contains 23,934 asserted pairs and 36,986 proteins;
+11 proteins have multiple family labels. Native final-label and accession-alias
+behavior was retained and verified against raw annotations.
+
+The multipass, multipass-refined, strict-profile and strict-profile-refined stages
+respectively predicted 232,314, 40,460, 232,521 and 40,520 pairs among reference
+proteins. Of these, 88,316, 4,739, 87,865 and 4,798 were neither asserted true
+positives nor eligible native false positives. Thus the precision denominator
+does not include every predicted pair even within this reference subset. This
+is native benchmark scope, not a newly imposed exclusion. These checks validate
+scoring of these databases, not upstream conversion completeness, independent
+family resampling, or every publication competitor.
+[Reference and prediction audit](QFO_REFERENCE_MAPPING_AUDIT_20260917.md).
+
 ## Data And Code Availability
 
 Code and analysis milestones are tracked in the authorized repository.

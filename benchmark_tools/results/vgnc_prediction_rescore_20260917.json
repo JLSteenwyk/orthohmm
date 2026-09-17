@@ -1,0 +1,201 @@
+{
+  "checked_inputs": [
+    {
+      "bytes": 5199,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/vgnc_mapping_audit_20260917.json",
+      "sha256": "af1d53c32c01eaa3cca0190b371c7d64c388b5480a09bdd48bbe414b9de5dfc2"
+    },
+    {
+      "bytes": 3033,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/vgnc_raw_label_inventory_20260917.json",
+      "sha256": "436daaa78988eb70f1ad6aa99fc71ba87155bd360d66c689f583ce8903be2472"
+    },
+    {
+      "bytes": 1578,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/vgnc_reference_inventory_20260917.json",
+      "sha256": "a97a9a9e74eed6185672100dd8b4613a5885cdc5cb83ae2c6c4621cf0e1ef68c"
+    },
+    {
+      "bytes": 183364,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/vgnc-orthologs.txt.gz",
+      "sha256": "3f9898487b1b3dab866eaf93255bb25ab7b7699f32753828ba7d2851eafce5dc"
+    },
+    {
+      "bytes": 150840,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_recovered_assessment_admitted_20260917.json",
+      "sha256": "89b683d0fc7fe9964ce5b6182832bb8eb28758fad3f6bbb4d706926143805956"
+    },
+    {
+      "bytes": 6907,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/vgnc_benchmark.py",
+      "sha256": "a9596078850cf0799958f3e1794278b7abd0053a5aad4f1af1e6b24cad369635"
+    },
+    {
+      "bytes": 2164178944,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_0/other/ohmm_checked_v2_0.db",
+      "sha256": "f45c5ba01e52dfa2c5ef65e569777044da396210beb103601ecd88add13ed001"
+    },
+    {
+      "bytes": 1870642,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_0/results/VGNC/VGNC_ohmm-checked-v2-0_raw.txt.gz",
+      "sha256": "db4a8a3ec8e87f6571b9bbc4b513086ec07767c6b2d8882233289c2775511ae1"
+    },
+    {
+      "bytes": 606580736,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_1/other/ohmm_checked_v2_1.db",
+      "sha256": "5954c0aa810e59b5d2f6f7f1ba21bb0f2cb762849986806aa42db43eec449303"
+    },
+    {
+      "bytes": 561686,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_1/results/VGNC/VGNC_ohmm-checked-v2-1_raw.txt.gz",
+      "sha256": "b9675d597526f6e0dc0448493c196f622ab42e220c7fdc44c76be11807347544"
+    },
+    {
+      "bytes": 2178863104,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_2/other/ohmm_checked_v2_2.db",
+      "sha256": "c129fa0a2f01b607a47f12ac102cc6e877311f9f9a3dd4727f59b7b4c8610657"
+    },
+    {
+      "bytes": 1877190,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_2/results/VGNC/VGNC_ohmm-checked-v2-2_raw.txt.gz",
+      "sha256": "f8769ccee9cdb4957738ebb975f5e1744aabc7ff9c2ddcb0d0b199e73aaefc79"
+    },
+    {
+      "bytes": 607457280,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_3/other/ohmm_checked_v2_3.db",
+      "sha256": "f9afde1ae554096619394c0d5f8fd6777727cd490e5054899be42b9b6ae61062"
+    },
+    {
+      "bytes": 561842,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_3/results/VGNC/VGNC_ohmm-checked-v2-3_raw.txt.gz",
+      "sha256": "14b872a20b180453a4a8b14f6ce54850af055e14c9845890b86188bab66bd15b"
+    }
+  ],
+  "limitations": [
+    "Four recovered stages only, not all publication competitors.",
+    "Validates scoring of mapped prediction databases, not upstream pair conversion completeness.",
+    "No independent-family uncertainty or new biological truth established.",
+    "Retains native one-direction query and last-row alias behavior."
+  ],
+  "reference_reader": {
+    "bytes": 7060,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_qfo_vgnc_mapping.py",
+    "sha256": "6c11df1bce76bcecde91632af10c147b50326186064289686ebea72fa2d6486a"
+  },
+  "source": {
+    "bytes": 7322,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_qfo_vgnc_predictions.py",
+    "sha256": "a4ed1e222cec6d896a890b761efd5aec7d39ee2aea194faf09b5d9ddd7862ffa"
+  },
+  "stages": [
+    {
+      "category_pairs_sha256": {
+        "FN": "01fc5ab45672b798f92c30bd80321efe3f4bb971250c3c057f22b574ddcffbf5",
+        "FP": "093ba0789c66a434d951e37da411dd833ce3481b606dd76707824ef27579facf",
+        "TP": "cc8280d775e4cd101a2a544bfc00b814ac47cbffcca6e2adde291eb8374162c2"
+      },
+      "counts": {
+        "FN": 742,
+        "FP": 120806,
+        "TP": 23192
+      },
+      "database": {
+        "bytes": 2164178944,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_0/other/ohmm_checked_v2_0.db",
+        "sha256": "f45c5ba01e52dfa2c5ef65e569777044da396210beb103601ecd88add13ed001"
+      },
+      "prediction_pairs_sha256": "98449bb481bfce40a4113bedb2c27cdc173d217d4a05e495998e70c28ac32756",
+      "predictions_among_reference_proteins": 232314,
+      "scores": {
+        "F1": 0.2762070361813115,
+        "PPV": 0.16105779246933985,
+        "TPR": 0.9689980780479652
+      },
+      "stage": "multipass",
+      "tp_fp_overlap": 0,
+      "unscored_predictions": 88316
+    },
+    {
+      "category_pairs_sha256": {
+        "FN": "ad4ede90fd931e6a880bd8049fe2bbb297bd8ec0a85cc4f40e5d58bfc39676aa",
+        "FP": "7b89825552260a251d70baebb683bdc124381b9756952a069291e2c2a24e29a5",
+        "TP": "58fc8dde12ae04350034e4ab6ce5693d3b8e1f9149e8555efdb9bdaf3f0b2468"
+      },
+      "counts": {
+        "FN": 4003,
+        "FP": 15790,
+        "TP": 19931
+      },
+      "database": {
+        "bytes": 606580736,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_1/other/ohmm_checked_v2_1.db",
+        "sha256": "5954c0aa810e59b5d2f6f7f1ba21bb0f2cb762849986806aa42db43eec449303"
+      },
+      "prediction_pairs_sha256": "bc12517428d728798a351bdf3d663387360ec73d766135428c5e19a5bb7f5a21",
+      "predictions_among_reference_proteins": 40460,
+      "scores": {
+        "F1": 0.6682088676556869,
+        "PPV": 0.5579631029366479,
+        "TPR": 0.83274839140971
+      },
+      "stage": "multipass_refined",
+      "tp_fp_overlap": 0,
+      "unscored_predictions": 4739
+    },
+    {
+      "category_pairs_sha256": {
+        "FN": "63edf113a6c9836652c45bc0e57d09c5d3136427134ab05be534c6b8dc720aca",
+        "FP": "5dca576d3dd91539a61574cd875b66ea0c54915225a6626673b09aace01f3df7",
+        "TP": "6675cb58ad8b1d056dd4e1b42ed92fdf4f87c010a11b5a56aabea2aa098829d0"
+      },
+      "counts": {
+        "FN": 748,
+        "FP": 121470,
+        "TP": 23186
+      },
+      "database": {
+        "bytes": 2178863104,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_2/other/ohmm_checked_v2_2.db",
+        "sha256": "c129fa0a2f01b607a47f12ac102cc6e877311f9f9a3dd4727f59b7b4c8610657"
+      },
+      "prediction_pairs_sha256": "fca8451dd44a07fd997808f9e7470ab4b5df1998e24ec0c462dcc27a039138b5",
+      "predictions_among_reference_proteins": 232521,
+      "scores": {
+        "F1": 0.27505783261166145,
+        "PPV": 0.16028370755447408,
+        "TPR": 0.9687473886521267
+      },
+      "stage": "strict_profiles",
+      "tp_fp_overlap": 0,
+      "unscored_predictions": 87865
+    },
+    {
+      "category_pairs_sha256": {
+        "FN": "4a02e76143099c0bd6583c5df0a4850e1cc682c52197fe55aac7a45235cc0e48",
+        "FP": "714c689b4bdba1186abe30acfb81be521cd244c80aceeefd358cdee09c8cd643",
+        "TP": "a3f34122eaed21b77efdfd52d8d8c87f24ff4a5c6e5dc8d0b8dc3b09112a9d53"
+      },
+      "counts": {
+        "FN": 4018,
+        "FP": 15806,
+        "TP": 19916
+      },
+      "database": {
+        "bytes": 607457280,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_3/other/ohmm_checked_v2_3.db",
+        "sha256": "f9afde1ae554096619394c0d5f8fd6777727cd490e5054899be42b9b6ae61062"
+      },
+      "prediction_pairs_sha256": "ee3d41cf801843437e9899004bd4d57fff18dde54568bd92f21bd968909a1452",
+      "predictions_among_reference_proteins": 40520,
+      "scores": {
+        "F1": 0.6676947834249698,
+        "PPV": 0.5575275740440065,
+        "TPR": 0.8321216679201137
+      },
+      "stage": "strict_profiles_refined",
+      "tp_fp_overlap": 0,
+      "unscored_predictions": 4798
+    }
+  ],
+  "status": "exact_vgnc_prediction_categories_and_scores_verified"
+}
