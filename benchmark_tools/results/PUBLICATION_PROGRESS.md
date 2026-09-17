@@ -1,5 +1,26 @@
 # Publication Progress
 
+## SwissTrees Raw Count Audit (2026-09-17)
+
+Previous turn made progress and pushedbfb93fb. Re-read objective; FastME21632
+confirmedlive8:40 and14:25, no restart. Added a raw SwissTrees count audit with
+9passing unit tests and a successful full four-stage audit. All10765 reference
+relations and18 family gene inventories match across stages; no represented
+genes overlap between families. Native family and aggregate metrics reproduce
+within5e-8 rounding tolerance. Frozen container/scorer/reference hashes and
+Darwin orientation inspection are retained in qfo_swiss_counts_20260917.json.
+
+The initial raw_count+1 interpretation failed. Native reference relations are
+stored once; the scorer halves relation counts then adds1, equivalent to
+raw_count+2 for ratios. Verified this with the native Darwin runtime rather
+than changing benchmark scores. Mean precision/recall are aggregated before
+forming project F1, not by averaging family F1 values.
+
+QFO_SWISS_UNCERTAINTY_PROTOCOL_20260917.md freezes100000 shared family draws,
+PCG64seed20260919 and all12 endpoints before interval calculation. The already
+observed point estimates are disclosed. Paired intervals are not yet calculated;
+other QfO challenge uncertainty and the broader publication gates remain open.
+
 ## QfO Admission and DGX Orthogroup Probe (2026-09-17)
 
 Re-read the full objective. The previous access-confirmation turn established

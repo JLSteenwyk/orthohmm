@@ -1,0 +1,13 @@
+ReadProgram('/benchmark/lib/darwinit'):
+ReadProgram(reference):
+for name in Indices(ReconciledTrees) do
+    rels := ReconciledTrees[name,'Relations']:
+    forward := reverse := 0:
+    for rel in Indices(rels) do
+        if rel[1]<rel[2] then forward := forward+1:
+        else reverse := reverse+1: fi:
+    od:
+    printf('SWISS_REFERENCE\t%s\t%d\t%d\t%d\n',name,
+           length(ReconciledTrees[name,'MappedProts']),forward,reverse):
+od:
+exit(0):
