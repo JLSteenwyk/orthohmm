@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Prospective DGX Runtime Tree Inventory (2026-09-17)
+
+Pushed overhead/accounting milestone e641905. Added explicit runtime-tree
+inventory and before/after equality verification with mutation tests. Captured
+26,673 entries on idle Spark, then independently re-read all entries with no
+changes. Both Python environments, frozen ARM core, installed native companion
+prefixes, DIAMOND/FAMSA executables, collector recipe and GNU time are included.
+No external symlink targets were detected. Remote snapshot:
+`/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/trees.json`;
+local raw copy `benchmarks/work/dgx_runtime_trees_v1.json`; SHA256
+`2f38fc57683e51a7b6768b4709db16293590983640c41cfe12a56ed6036750ae`.
+Inventory source SHA256
+`ab0008651e75ebadc1be3c87503f09bffd9e5be87f2e6b0c3eec49e552d9bd4c`.
+
+This is a prospective component inventory, not an OS/loader snapshot or proof
+of earlier job environment identity. Python bytecode and git metadata are
+excluded. The execution workflow must isolate bytecode lookup in a fresh prefix
+as well as disable writes; -B alone does not prevent cached-bytecode reads.
+Dynamic system libraries, actual input enumeration and per-task integration
+remain to be completed. Six inventory tests and40 combined focused tests pass.
+No scientific timing runs launched and no broad publication completion claimed.
+
 ## DGX Overhead Panel Evaluated (2026-09-17)
 
 Re-read the publication objective. The preceding status turn confirmed the full
