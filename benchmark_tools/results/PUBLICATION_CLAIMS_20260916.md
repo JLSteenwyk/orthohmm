@@ -141,6 +141,13 @@ evidence that an experiment completed or a biological hypothesis is true.
   command/native-runtime, resource-accounting and host-workload gates remain
   required. This preparation does not establish practical efficiency.
 
+- The [simulation generating-tree protocol](SIMULATION_TREE_CONTROL_PROTOCOL_20260917.md)
+  and [prepared inputs](simulation_tree_controls_prepared_20260917.json) cover
+  all70 variable-length datasets:210 trees and420 planned supplied-tree runs.
+  Taxa/hashes/projected generating clades/distances passed independent rereading.
+  These are oracle and topology-stress inputs, not completed robustness results;
+  supplied-mode validation, inference and scoring remain outstanding.
+
 The manuscript must retain negative and neutral findings. Missing evidence
 cannot be replaced with a claim that the method is generally applicable,
 that a competitor failed, or that a custom mean proves superiority.

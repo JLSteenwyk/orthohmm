@@ -4048,3 +4048,37 @@ resource_command_smoke_samples_20260917.jsonl under benchmark_tools/results;
 originals remain at benchmarks/results/resource_command_smoke_v1. No quiet-host
 claim: controlled_workload_verified staysfalse. Updated matched-scaling protocol.
 QfO21329 remains on multipass clustering; its final replay admission is pending.
+
+### Simulation generating-tree controls prepared (2026-09-17)
+
+Previous continuation progressed measured-command wrapper8c54f87 and successful
+Slurm smoke4c22d15. Re-read objective and confirmed21329 still RUNNING at00:22:53
+and00:28:56. Advanced the separate simulation-truth tree-error requirement while
+the replay runs, rather than selecting cases by already inspected accuracy.
+
+Added SIMULATION_TREE_CONTROL_PROTOCOL_20260917.md and
+prepare_simulation_tree_controls.py. All70 fixed variable-length condition/seed
+cells undergo fresh generation/history/input checks using manifest806aa1e5...
+The parent generating ExtantTree is pruned to each dataset's retained taxa,
+checking unique names/binary topology/nonnegative lengths and preserved pairwise
+patristic distances. Existing tested rooted-NNI helper supplies a deterministic
+generating/one-NNI/two-NNI panel at rooted clade distances0/2/4. Perturbed lengths
+travel with subtrees; these are oracle/stress diagnostics, not empirical tree
+uncertainty or achievable end-to-end information.
+
+All70 cells prepared successfully with210 trees and420 unique planned runs for
+satellite_v2/fullOrthoFinder3.1.5, without filtering originally failed methods.
+Protocol requires exact CLI/root/name/output semantics, unchanged supplied-tree
+mode controls and upstream identity before inference/scoring attribution. Paired
+seed-level mean differences use20,000 resamples, seed20260918 and126 exploratory
+F1/P/R endpoints, retaining failures and multiplicity slots. No new defaults or
+held-out-validation claim; original variable-length outcomes are development-exposed.
+
+Prepared benchmarks/results/simulation_tree_controls_prepared_v1; snapshot
+simulation_tree_controls_prepared_20260917.json SHA256
+0caffab16f73019fabafe1fcfaac8c2de90960c5f1317803bf83308a6d2bf914.
+Independent reread checked all210 tree hashes, unique exact taxa and clade
+distances against original generating-tree clades projected onto retained taxa,
+plus420 distinct condition/seed/tree/method combinations. Six focused tests pass;
+full1,463 unit tests passed37.60s. Claims updated to distinguish preparation from
+execution. No supplied-tree method run or score has yet been produced.
