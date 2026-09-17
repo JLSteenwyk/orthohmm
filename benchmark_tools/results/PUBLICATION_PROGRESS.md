@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Actual DGX Input Order Captured (2026-09-17)
+
+Previous turn made progress with runtime inventory, pushed cd48cb7. Re-read
+the full objective. Added a probe that verifies the frozen files.py identity,
+calls its actual fetch_fasta_files function, checks all input paths/bytes/hashes,
+and re-enumerates to detect an order change during the snapshot. A second
+complete DGX invocation matched the first exactly. All24 copies across the
+4/8/12-proteome datasets match the materialized input manifest. Actual order
+differs from both alphabetic and transfer metadata order; no core sorting or
+other scientific change was made.
+
+Committed snapshot `dgx_native_input_order_20260917.json`, SHA256
+`7972eb5e1224c0f14dc09a36b26d38f777fddfad3b6075cb5d20999a55a5a451`.
+The runtime-manifest reference points to the separately preserved26,673-entry
+inventory. Source compilation bypasses the enumerator's bytecode; imports used
+an absent cache prefix with bytecode writes disabled. Prefix remained absent
+after both calls. Six focused tests pass, including native rather than sorted
+order, changed bytes/source and mismatched membership.
+Full unit suite after these changes:1,944passed in47.52s.
+
+OrthoFinder3.1.5 ProcessesNewFasta in utils/fasta_processor.py explicitly sorts
+accepted basenames before assigning species IDs. Source SHA256
+`cc9880875cf298192e7194c5c1134005dcfbe7e79215351ff5855486849b4055`.
+This is source inspection, not a new full preprocessing invocation. Preserve
+that comparator behavior and validate each fresh copied input directory.
+Per-run checks still need integration; loader/system-library snapshot, overhead
+identity follow-up and validated launch/admission workflow remain next.
+Scientific scaling0/27. The full publication objective remains active.
+
 ## Prospective DGX Runtime Tree Inventory (2026-09-17)
 
 Pushed overhead/accounting milestone e641905. Added explicit runtime-tree
