@@ -252,3 +252,35 @@ silently, or alter old frozen validators. Prepare a scaling-specific validator
 for direct native outputs and caller-recorded before/after provenance before
 authorizing runs. Controlled scheduling and overhead assessment also remain
 outstanding. This manifest is preparation evidence, not timing results.
+
+## Direct Native Output Validator
+
+`validate_scaling_outputs.py` now handles the direct-command boundary without
+editing frozen simulation validators. It requires measured command/cwd identity
+and native exit0 without timeout; checks frozen FASTA hashes, unique gene IDs,
+species and protein counts; and validates native completion independently of
+resource-measurement admission. Caller-side pinned-manifest/runtime/source
+checks before and after execution remain mandatory and are explicitly outside
+this module's certificate.
+
+OrthoHMM validation checks the native metrics command, working directory and
+counts against actual outputs, complete exact-universe orthogroup membership,
+and, for satellite_v2, full root-HOG membership and canonical sorted unique
+cross-species native pairs. It checks root-HOG/pair counts without requiring
+the external reporting harness. OrthoFinder validation checks native3.1.5
+version/command/completion, byte-identical input copies with original basenames
+(including `.fa`), finite graph weights, exact-universe MCL mapping/coverage,
+and complete mutually consistent species-pair table orientations. Pair-table
+validation expands relations outside inference timing; its memory is not a
+scientific inference resource estimate.
+
+Eighteen focused tests cover successful three-method output, changed commands,
+process failure/timeout, incomplete/duplicate membership, malformed/duplicate
+pairs, metric disagreements, wrong comparator version, altered input copies,
+nonfinite graph entries, incomplete MCL coverage and inconsistent orientations.
+A read-only compatibility pass accepted all202 previously admitted variable-
+simulation outputs (70high-sensitivity,67satellite_v2,65OrthoFinder). The eight
+original failures were left unchanged. These retained4-CPU runs test native
+format compatibility, not new32-CPU scaling completion, resource comparability
+or independent accuracy. The scaling execution wrapper and its full provenance
+and measurement admission checks are still required before authorizing runs.

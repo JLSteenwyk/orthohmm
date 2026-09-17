@@ -4708,3 +4708,21 @@ No inference launched. Scaling-native admission must replace harness-dependent
 provenance expectations and handle real.fa inputs; frozen simulation validators
 remain unchanged. Controlled scheduling and overhead assessment remain due.
 Fullunit1,729tests passed43.30s; no scientific defaults or frozen environments changed.
+
+### Direct Scaling Output Validation Prepared (2026-09-17)
+
+Previous turn prepared native27-run command manifest and pushed81840f6.
+Re-read objective; QfO21548_0confirmedlive50:22, later56:09;21584pending.
+Added validate_scaling_outputs.py without changing pinned simulation adapters.
+Native command/working-directory, FASTA identities/counts, complete gene
+coverage, native completion, OrthoHMM root-HOG/pair consistency, and OrthoFinder
+version/input-copy/finite-graph/MCL/table-orientation checks are separate from
+timing/quiet-host and accuracy admission. No reporting harness required.
+
+Eighteen focused tests passed. A read-only real-output compatibility check
+accepted all202previously admitted variable-panel results:70high-sensitivity,
+67satellite_v2,65OrthoFinder; eightoriginalfailures not reclassified. No new
+inference or truth score computed. These4-CPU retained outputs are native-format
+compatibility evidence only. Whole scaling execution/provenance/resource gates
+remain due; validator success alone does not authorize timing claims.
+Fullunit1,747tests passed42.96s. Existing frozen methods/environments unchanged.
