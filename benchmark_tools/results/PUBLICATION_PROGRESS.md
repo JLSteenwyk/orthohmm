@@ -1,5 +1,18 @@
 # Publication Progress
 
+## Narrow-Band Mechanism Rescue (2026-09-17)
+
+An isolated per-pair band-selection patch removes all8 band1 and3 band8
+SIMD discrepancies on the original405-pair fixture; scalar C and JIT agree
+with the patched SIMD at all5 tested widths. Bands0/64/128 are unchanged.
+Original scores and fixture hashes reproduce exactly. Production and frozen
+benchmark source/binaries are untouched; the patch is retained as diagnostic
+evidence, not a new benchmark method or a claim of general equivalence.
+Raw scores, patch, hashes and limitations are in DGX_SCALING_MIGRATION_20260917.md.
+Six summary-integrity tests pass; broader regression testing and release
+integration remain pending. FastME21627 and QfO21548_3 were verified live
+at15:14 and3:00 respectively at the start of this work; no job was restarted.
+
 ## Collector Replay and QfO Fourth Stage (2026-09-17)
 
 Both DGX smoke records pass the new saved-evidence audit, which rechecks

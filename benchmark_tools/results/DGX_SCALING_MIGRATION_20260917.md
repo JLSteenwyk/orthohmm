@@ -523,3 +523,47 @@ Ten new tests cover valid replay and rejection of altered report/raw hashes,
 durations, summaries, cpuset, memory cap, relative times, observer PID and
 interval values, including cases with recalculated file/report hashes.
 All89 focused measurement, replay, host-observation and cgroup tests pass.
+
+## Isolated Narrow-Band Rescue
+
+The previous mechanism hypothesis is now supported by an isolated patch
+experiment. A copy of the frozen hmm_viterbi.c was changed only so that the
+multipair AVX2 short-sequence exception uses each pair's max(L,T), rather
+than max(L,max_T_in_batch). The copied source was compiled outside every
+benchmark runtime with `gcc -O3 -fopenmp -shared -fPIC -march=native` to
+benchmarks/work/narrow_band_rescue_v1/hmm_viterbi.so. No production source,
+frozen source, installed native library or method manifest was changed.
+
+`probe_narrow_band_rescue.py` loads that separate library for diagnostic
+calls only and restores its in-process binding afterward. It verifies the
+frozen commit/clean source, AVX2 availability, imported module location,
+and before/after source/binary hashes. Both initial and final diagnostic
+runs give the same result on the original405 pairs at bands0/1/8/64/128:
+
+| Band | Original vs scalar mismatches | Patched vs scalar | Patched vs JIT |
+| --- | ---: | ---: | ---: |
+| 0 | 0 | 0 | 0 |
+| 1 | 8 | 0 | 0 |
+| 8 | 3 | 0 | 0 |
+| 64 | 0 | 0 | 0 |
+| 128 | 0 | 0 | 0 |
+
+The fixture digest, original SIMD scores and scalar scores exactly reproduce
+the earlier x86 diagnostic. Only the previously discrepant indices change;
+bands0/64/128 are unchanged for these fixtures. This isolates per-pair band
+selection as sufficient to rescue these observed discrepancies, not proof
+that all other SIMD cases are correct. Frozen narrow-band results remain
+failed; this experiment does not retroactively pass them or change accuracy.
+
+Artifacts:
+
+- Raw score report narrow_band_rescue_20260917.json, SHA256
+  b260087c32c5bc956cd9fa09b723519d5b45badb317a7b00a2c6aff45e604f02.
+- Unapplied source patch narrow_band_rescue_20260917.patch, SHA256
+  d0d7dca25d201b9c2b0be320720df3f5f918cd467921f430c909950591c97b3a.
+- Isolated library SHA256
+  de7fcfe563992ba47f4b0df98dbc1be3623257c7b14bc268efc53184a81af72e.
+
+Six summary-integrity tests pass; git apply --check passes without applying
+the patch. Release integration, boundary-length/batch-order regression
+coverage and an explicitly versioned method change remain outstanding.
