@@ -82,7 +82,16 @@ quantities must remain distinct from sampled summed process RSS, which is
 non-atomic and can count shared pages repeatedly.
 [Linux cgroup-v2 documentation](https://www.kernel.org/doc/html/latest/admin-guide/cgroup-v2.html).
 
-A time-series collector, interval/stage boundaries, host-workload monitoring,
+A bounded time-series collector is now implemented in `monitor_slurm_resources.py`.
+Its [five-sample live smoke test](qfo_resource_series_smoke_20260917.json) retained
+[raw observations](qfo_resource_series_samples_20260917.jsonl), verified stable
+anchor identity/scope and nondecreasing cumulative CPU counters, and measured an
+8.003-second observation span. The CPU difference was8,000,914 microseconds;
+the maximum sampled summed RSS was6,861,684,736 bytes. These measurements only
+describe that window, which was not isolated from other workloads or unit tests.
+Sampling failures are retained and do not imply that the Slurm job terminated.
+
+Inference/stage boundaries, unrelated-workload attribution, whole-run monitoring,
 timeout/failure accounting and end-to-end tests are still required before the
 27 timing runs. An anchor's task subtree does not necessarily contain every
 Slurm step in a job; record the scope rather than labeling it whole-job memory.

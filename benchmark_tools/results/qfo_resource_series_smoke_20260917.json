@@ -1,0 +1,42 @@
+{
+  "accuracy_evaluated": false,
+  "collector_wall_s": 8.009330180997495,
+  "interval_s": 2.0,
+  "job_id": 21329,
+  "limitations": [
+    "Bounded observation window, not evidence that the job or inference completed.",
+    "A sampling failure does not establish job termination; recheck authoritative scheduler state.",
+    "CPU deltas cover only the recorded span and cgroup subtree, including any launcher or validation activity there.",
+    "Reported cgroup peak may precede this window; sampled RSS misses between-sample peaks and can double-count shared pages.",
+    "Host load/CPU counters include the target job and do not isolate unrelated workloads or certify quiet-host conditions."
+  ],
+  "pid": 3587494,
+  "psutil_version": "7.2.2",
+  "requested_samples": 5,
+  "samples": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_resource_series_smoke_20260917/samples.jsonl",
+    "sha256": "70710123387b959f4c9bcc5ed37f091a07425c1ce04eff3af35d87942a8b0aa6"
+  },
+  "snapshot_source": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+    "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+  },
+  "source": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+    "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+  },
+  "status": "bounded_observations_complete",
+  "summary": {
+    "cpu_delta_usec": {
+      "system_usec": 10,
+      "usage_usec": 8000914,
+      "user_usec": 8000904
+    },
+    "maximum_reported_cgroup_peak_bytes": 6886125568,
+    "maximum_sampled_sum_rss_bytes": 6861684736,
+    "mean_cpu_cores_over_observed_span": 0.9997069595133456,
+    "observation_span_s": 8.003259278993937,
+    "observations": 5,
+    "samples_with_process_errors": 0
+  }
+}

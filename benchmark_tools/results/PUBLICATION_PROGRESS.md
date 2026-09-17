@@ -3971,3 +3971,37 @@ nineteen focused tests rerun after the peak-field terminology correction.
 Time-series monitoring, controlled workload gates, stage timing, failure/timeout
 accounting and actual27-run scaling execution remain outstanding. No new
 scientific inference was launched and no accuracy/default changed.
+
+### Bounded resource time series and replay stage progress (2026-09-17)
+
+Previous continuation progressed read-only cgroup/RSS accounting860cb0e.
+Re-read objective and confirmed21329 RUNNING at00:10:55. Later inspection found
+cluster_0_initial/execution.json statuschecked,349,898 groups/976,504 genes and
+partitionSHA8c162782bba955078a8f7e4e6088df5b34c9f15b055803224e513fdea8b33cdd,
+matching admitted initial repeats. cluster_1_multipass is now present and running.
+This is stage-level progress, not completed replay or independent full admission.
+
+Added monitor_slurm_resources.py for bounded read-only JSONL telemetry. It
+checks stable anchor PID creation time/job/scope and nondecreasing CPU counters,
+retains each observation before proceeding, summarizes CPU deltas over actual
+sample span, keeps reported cgroup lifetime/reset peak separate from sampled RSS
+maximum, and retains failures without asserting that the scientific job stopped.
+Host load and per-CPU counters are recorded but do not attribute unrelated load
+or certify exclusive execution. Existing output is refused; nothing is restarted.
+
+Live smoke used confirmed anchor3587494/job21329, five samples at2-second target
+interval. All five retained, span8.003259279s, CPUdelta8,000,914microseconds,
+sampledRSSmaximum6,861,684,736bytes, reportedcgrouppeak6,886,125,568bytes, no sampled
+process errors. These are partial-run diagnostic values, not final inference costs.
+Unit tests and unrelated jobs were running; no matched-speed claim is made.
+Reports qfo_resource_series_smoke_20260917.json and
+qfo_resource_series_samples_20260917.jsonl copied to benchmark_tools/results.
+Independent reread verified sample hash/count, CPU delta, RSS maximum and stable
+anchor scope. Raw outputs preserved in benchmarks/results/qfo_resource_series_smoke_20260917.
+
+Fourteen focused tests pass for exact deltas, incomparable identity/counter/time
+rejection, retained partial failures, successful collection, invalid plans and
+existing-output refusal. Full1,444 tests passed37.13s. Updated matched-scaling
+protocol; stage-boundary timing, whole-run monitoring, unrelated-workload gates,
+timeout/failure accounting and actual27-run scaling execution remain outstanding.
+No new inference, benchmark score or default change in this continuation.
