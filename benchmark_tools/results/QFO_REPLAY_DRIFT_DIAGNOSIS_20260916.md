@@ -189,3 +189,36 @@ separate variability before the optimizer call from variability during native
 optimization, but instrumentation itself must be documented. Do not substitute
 a preferred partition, restart full QfO profiles, or declare the publication
 baseline reproducible before stronger evidence is obtained.
+# Native Graph Boundary Update (2026-09-16)
+
+Job21315 terminated FAILED1:0 in11:49, intentionally stopped by the graph
+identity gate during the second worker, before its optimizer call. This is not
+a completed repeat panel. First worker completed with349,898 groups and the
+previously observed8c162782... partition hash. Its native graph matched saved
+ordered endpoints/weights before and after optimization.
+
+Second worker recorded the same976,504 vertices and24,148,515 edges, unchanged
+ordered weight hash d398011b..., but endpoint hash cb8777a1... rather than the
+saved dd9c0c07... . Endpoints are canonicalized within each undirected edge while
+preserving edge order. Thus this is not merely endpoint orientation. No second
+partition was generated, and third worker was not started.
+
+Fresh hashing of saved arrays independently reproduced dd9c0c07...; all four
+worker input file records rechecked. Recorded modules, libraries, interpreter,
+versions, environment, platform, host and affinity agree between the two workers.
+The first and second effective calls both specifyCPM0.1,seed4,default2 iterations,
+no initial membership and weight attribute. This evidence locates a discrepancy
+before optimization in this instrumented run, not an optimizer nondeterminism
+diagnosis. It does not yet distinguish endpoint conversion, graph construction,
+or a defect in the observation itself, and does not retroactively establish the
+cause of all historical partition differences.
+
+Preserved partial report qfo_native_boundary_partial_20260916.json SHA256
+2903486cfab063a55663672e1cf3bd50b15a8488b0bf966d48ba9e077d80685c;
+second-worker boundary qfo_native_boundary_mismatch_20260916.json SHA256
+52fcf7466810e575418c3a59df3bbf56a47b94c2a9361676418a98899fdc38ff.
+
+Next diagnostic captures differing-edge counts/examples and compares actual
+caller constructor arrays with saved and native endpoints. New output directory,
+frozen executor and bounded workers; retain all failed/partial evidence. No
+scientific default changes or accuracy-based output selection.

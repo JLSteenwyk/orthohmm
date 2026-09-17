@@ -1,0 +1,33 @@
+{
+  "accuracy_evaluated": false,
+  "calls": [
+    {
+      "arguments": {
+        "initial_membership": null,
+        "kwargs": {
+          "resolution_parameter": 0.1
+        },
+        "max_comm_size": 0,
+        "n_iterations": 2,
+        "partition_type": "leidenalg.VertexPartition.CPMVertexPartition",
+        "seed": 4,
+        "weights": "weight"
+      },
+      "before": {
+        "directed": false,
+        "edges": 24148515,
+        "ordered_endpoints_sha256": "cb8777a158f88ca46ac597e7620a728ca4774aff5baef78a2a3b625658df3f3e",
+        "ordered_weights_sha256": "d398011be5171a8b6d8f41eab6972a081de5e9419f69536ec69494c746b4ecbf",
+        "vertices": 976504
+      },
+      "saved": {
+        "directed": false,
+        "edges": 24148515,
+        "ordered_endpoints_sha256": "dd9c0c07cc9d9891d0ce3b50425a9b9c867caf0fe4d0400025425e0b925d4cd5",
+        "ordered_weights_sha256": "d398011be5171a8b6d8f41eab6972a081de5e9419f69536ec69494c746b4ecbf",
+        "vertices": 976504
+      },
+      "status": "before_optimizer"
+    }
+  ]
+}

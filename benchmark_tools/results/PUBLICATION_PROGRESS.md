@@ -3236,3 +3236,25 @@ Executor1bae2d2 pushed/frozen at publication_ob_cpm_neighborhood_v1; no-requeue
 job21319 submitted and confirmed RUNNING. Output benchmarks/results/
 ob_cpm_neighborhood_v1. Existing21316_0/1 and21315 remain RUNNING;21316_2/3
 remain queued under the array concurrency limit. No job restarted or superseded.
+
+### QfO pre-optimizer endpoint mismatch (2026-09-16)
+
+Previous turn made progress: CPM executor/tests/push/submission21319. Objective
+reread. Scheduler now confirms21315 FAILED1:0 in11:49. First worker completed;
+second failed the explicit native graph equivalence gate before optimization.
+Same edge/vertex counts and ordered weights, different ordered endpoint hash:
+native cb8777a1... versus saved dd9c0c07... . Third worker never launched. Full
+failure and partial results preserved, not admitted as a successful repeat panel.
+Fresh saved-array fingerprint and four input file hashes verified; recorded
+software/environment/affinity identical between workers. See updated drift
+diagnosis and two committed partial-evidence snapshots. This narrows this run's
+discrepancy to before optimization but does not prove which conversion step or
+whether instrumentation caused it, nor explain all historical variation.
+
+Enhanced optional probe records differing-edge counts/examples and compares the
+actual frozen caller's graph_edges array against both native and saved endpoints
+when a mismatch occurs. Observer only; no scientific core changes. Separate v2
+batch/output to investigate mechanism without replacing failed21315. Two added
+tests cover constructor/native separation and caller-array capture;29 focused
+probe/worker tests passed. Full unit suite1,173 passed29.84s. Candidate array21316
+and CPM21319 remain running; no scores or default changes.

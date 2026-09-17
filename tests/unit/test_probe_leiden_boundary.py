@@ -6,7 +6,7 @@ import leidenalg
 import numpy as np
 import pytest
 
-from benchmark_tools.probe_leiden_boundary import graph_fingerprint, saved_fingerprint, observe_partition
+from benchmark_tools.probe_leiden_boundary import graph_fingerprint, saved_fingerprint, observe_partition, endpoint_differences
 
 
 @pytest.fixture
@@ -85,3 +85,34 @@ def test_nonfinite_and_invalid_chunks(native):
     graph.es[0]["weight"] = float("nan")
     with pytest.raises(ValueError, match="Nonfinite"):
         graph_fingerprint(graph)
+
+
+def test_constructor_and_native_differences_are_separated(native):
+    graph, payload = native
+    constructor = np.array([(2, 0), (1, 1), (0, 2)], dtype=np.int32)
+    original = constructor.copy()
+    matching = endpoint_differences(graph, payload, constructor, 1)
+    assert all(matching[key]["different_edges"] == 0 for key in
+               ("native_vs_saved", "constructor_vs_saved", "native_vs_constructor"))
+    constructor[0] = [3, 0]
+    result = endpoint_differences(graph, payload, constructor, 2)
+    assert result["constructor_vs_saved"]["different_edges"] == 1
+    assert result["native_vs_constructor"]["different_edges"] == 1
+    assert result["native_vs_saved"]["different_edges"] == 0
+    assert result["constructor_vs_saved"]["examples"] == [{"edge_index": 0, "left": [0, 3], "right": [0, 2]}]
+    assert np.array_equal(constructor[1:], original[1:])
+
+
+def test_mismatch_captures_callers_constructor_input(native):
+    _, payload = native
+    graph_edges = np.array([(3, 0), (1, 1), (0, 2)], dtype=np.int32)
+    graph = igraph.Graph(n=4, edges=graph_edges)
+    graph.es["weight"] = [1., 2., 3.]
+    with pytest.raises(ValueError, match="differs"):
+        with observe_partition(leidenalg, payload):
+            leidenalg.find_partition(graph, leidenalg.CPMVertexPartition, weights="weight")
+    row = json.loads((payload / "native_boundary.json").read_text())["calls"][0]
+    assert row["status"] == "native_graph_mismatch_before_optimizer"
+    assert row["endpoint_differences"]["native_vs_saved"]["different_edges"] == 1
+    assert row["endpoint_differences"]["constructor_vs_saved"]["different_edges"] == 1
+    assert row["endpoint_differences"]["native_vs_constructor"]["different_edges"] == 0
