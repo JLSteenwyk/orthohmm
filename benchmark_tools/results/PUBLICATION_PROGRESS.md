@@ -3129,3 +3129,24 @@ Next record actual igraph edges/weights and effective optimizer arguments in
 bounded fresh workers; preserve every partition, with no accuracy selection.
 Candidate-neighborhood21314 independent admission/downstream inferred-tree
 execution, CPM variants and broader publication requirements remain active.
+
+### Native optimizer-boundary probe preparation (2026-09-16)
+
+Previous response supplied a goal prompt but did not advance experimental state;
+this continuation reread the objective and resumed the available diagnostic work.
+Added optional observation of the actual igraph object passed to find_partition:
+ordered canonical undirected endpoints, ordered float64 weights, vertex/edge
+counts, partition class and bound effective arguments including library defaults.
+Chunked hashing preserves edge order, parallel edges, loops and isolates. Compare
+against the saved arrays before optimization and recheck graph contents afterward.
+The original call receives unchanged arguments. No scientific core edits.
+
+Prespecified three fresh one-CPU workers using the same saved QfO graph, CPM0.1,
+seed4 and one-thread native settings; all partitions retained, no accuracy scoring.
+Instrumentation can change native memory/runtime context, so this is a boundary
+diagnostic, not proof about uninstrumented execution or controlled timing.
+Batch qfo_native_boundary_batch_20260916.sh targets a frozen executor worktree.
+Full unit suite1133 passed25.67s before adding two additional real-worker probe
+combinations; updated worker suite21 passed3.10s. Six boundary tests cover native
+defaults, graph equality, ordering/weights, failures and restoration. Actual QfO
+execution and independent result admission remain pending at this milestone.

@@ -66,7 +66,8 @@ def test_worker_identity_guards(problem):
 
 @pytest.mark.skipif(not Path("/proc/self/maps").exists(), reason="Linux loaded-library diagnostic")
 @pytest.mark.parametrize("explicit_affinity", [False, True])
-def test_instrumented_real_worker_exits_and_preserves_isolate(tmp_path, explicit_affinity):
+@pytest.mark.parametrize("native_boundary", [False, True])
+def test_instrumented_real_worker_exits_and_preserves_isolate(tmp_path, explicit_affinity, native_boundary):
     root = tmp_path
     launcher = root / "benchmarks/work/publication_qfo_replay_native_v1"
     package = launcher / "orthohmm"
@@ -92,9 +93,16 @@ def test_instrumented_real_worker_exits_and_preserves_isolate(tmp_path, explicit
                "--worker-payload", str(payload)]
     if explicit_affinity:
         command += ["--cpu-affinity", str(inherited[0])]
+    if native_boundary:
+        command += ["--native-boundary"]
     run = subprocess.run(command, cwd=launcher, env={**os.environ, **overrides},
                          capture_output=True, text=True, timeout=30)
     assert run.returncode == 0, run.stderr
+    if native_boundary:
+        calls = json.loads((payload / "native_boundary.json").read_text())["calls"]
+        assert len(calls) == 1
+        assert calls[0]["status"] == "optimizer_returned"
+        assert calls[0]["before"] == calls[0]["saved"] == calls[0]["after"]
     snapshot = json.loads((payload / "worker_before.json").read_text())
     check_worker(snapshot, launcher, payload, overrides)
     assert snapshot["inherited_cpu_affinity"] == inherited

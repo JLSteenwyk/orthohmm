@@ -59,8 +59,10 @@ def set_worker_affinity(requested):
     return inherited
 
 
-def worker(launcher, payload, requested_affinity=None):
+def worker(launcher, payload, requested_affinity=None, native_boundary=False):
     inherited_affinity = set_worker_affinity(requested_affinity)
+    if native_boundary:
+        from probe_leiden_boundary import observe_partition
     # Import in the frozen worker namespace; do not load the development core.
     sys.path[0] = str(launcher)
     from orthohmm import leiden_worker
@@ -88,7 +90,11 @@ def worker(launcher, payload, requested_affinity=None):
                 "observer": record(__file__)}
     (payload / "worker_before.json").write_text(json.dumps(snapshot, indent=2, sort_keys=True) + "\n")
     # The original worker flushes and calls os._exit(0); the parent verifies its result.
-    leiden_worker.main([str(payload)])
+    if native_boundary:
+        with observe_partition(leidenalg, payload):
+            leiden_worker.main([str(payload)])
+    else:
+        leiden_worker.main([str(payload)])
     raise RuntimeError("Frozen worker unexpectedly returned instead of exiting")
 
 
@@ -114,6 +120,7 @@ def main():
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--worker-payload", type=Path)
     parser.add_argument("--affinity-panel", action="store_true")
+    parser.add_argument("--native-boundary", action="store_true")
     parser.add_argument("--cpu-affinity", type=int, nargs="+")
     args = parser.parse_args()
     if args.cpu_affinity is not None and args.worker_payload is None:
@@ -123,7 +130,7 @@ def main():
     root, output = args.root.resolve(), args.output.resolve()
     launcher = root / "benchmarks/work/publication_qfo_replay_native_v1"
     if args.worker_payload is not None:
-        worker(launcher, args.worker_payload.resolve(), args.cpu_affinity)
+        worker(launcher, args.worker_payload.resolve(), args.cpu_affinity, args.native_boundary)
         return
     inherited_affinity = sorted(os.sched_getaffinity(0))
     arms = affinity_arms(inherited_affinity) if args.affinity_panel else [(f"repeat_{i}", None) for i in range(3)]
@@ -171,6 +178,7 @@ def main():
     report = {"status": "running", "accuracy_evaluated": False, "job_id": os.environ.get("SLURM_JOB_ID"),
               "capture_scheduler": scheduler, "source": record(__file__), "runtime": before,
               "affinity_panel": args.affinity_panel, "parent_cpu_affinity": inherited_affinity,
+              "native_boundary": args.native_boundary,
               "planned_arms": [{"name": name, "cpu_affinity": cpus} for name, cpus in arms],
               "graph_inputs": source_records, "repeats": [], "limitations": [
                   "Instrumentation imports native modules before the frozen worker and records their loaded libraries.",
@@ -193,6 +201,8 @@ def main():
                        "--worker-payload", str(payload)]
             if affinity is not None:
                 command += ["--cpu-affinity", *map(str, affinity)]
+            if args.native_boundary:
+                command += ["--native-boundary"]
             started = time.monotonic()
             with (directory / "worker.log").open("x") as log:
                 run = subprocess.run(command, cwd=launcher, env=env, stdout=log, stderr=subprocess.STDOUT)
@@ -214,6 +224,13 @@ def main():
             row = {"index": index, "arm": arm, "execution": execution, "worker": snapshot, "partition": record(partition),
                    "versus_capture": compare_partition(saved / "initial_partition.txt", partition, universe),
                    "versus_diagnostic": compare_partition(Path(comparison["initial_partition_comparison"]["expected"]["path"]), partition, universe)}
+            if args.native_boundary:
+                boundary = json.loads((payload / "native_boundary.json").read_text())
+                if len(boundary["calls"]) != 1 or boundary["calls"][0]["status"] != "optimizer_returned":
+                    raise ValueError("Missing successful single optimizer call")
+                row["native_boundary"] = boundary
+                row["native_boundary_record"] = record(payload / "native_boundary.json")
+                row["boundary_observer"] = record(Path(__file__).with_name("probe_leiden_boundary.py"))
             if report["repeats"]:
                 first = report["repeats"][0]
                 row["versus_first_repeat"] = compare_partition(Path(first["partition"]["path"]), partition, universe)
