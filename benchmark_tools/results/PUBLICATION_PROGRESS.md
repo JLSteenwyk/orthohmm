@@ -4222,3 +4222,20 @@ and9existingrunner tests pass(31total). Freeze/submit after full tests/commit;
 no all-dataset mode equivalence or completed oracle experiment claimed.
 
 Fullunit suite1,519passed35.95s before executor freeze.
+
+### Simulation mode-control array launched (2026-09-17)
+
+Committed/pushed2d95369 and froze publication_simulation_mode_panel_v1 at
+2d9536966c905868b5b3e168d17b9b9f46d5eae5. Submitted array21334 with70tasks/max2
+concurrent,4CPU16GiB1hour per task. Outputs:
+benchmarks/results/simulation_mode_panel_v1, with per-task status undertasks/;
+logs benchmarks/work/simulation_mode_panel_21334_<index>.log.
+Initial poll: task0reused admittedpilot(COMPLETED1s); task1COMPLETED18s,
+tasks2/3RUNNING, restpending. Task1's divergent_20261101 status explicitly
+retains unavailable OFnonfinite-graph failure while running OrthoHMM, confirming
+the partial-method route in real execution. Do not restart these tasks or score
+a partial panel. All terminal native records require independent admission.
+
+QfO21333confirmedRUNNING00:11:33 in the same poll. Updated claim checklist for
+its failed predecessor/current retry and bounded simulation pilot/panel status.
+The wider publication requirements remain active and incomplete.

@@ -128,6 +128,11 @@ evidence that an experiment completed or a biological hypothesis is true.
   covering976,504 genes. Independent admission checked308 provenance records and
   every pairwise partition comparison. This is initial-graph evidence, not a full
   cached replay or general repeatability proof. No accuracy selection has occurred.
+  Full checked replay21329 later failed the profile_base worker-environment gate:
+  OMP32 was inherited from profile expansion where1 was required. Its failed
+  evidence is [preserved](QFO_CHECKED_REPLAY_ENVIRONMENT_FAILURE_20260917.md).
+  Corrected child-only environment isolation is running as21333; no completed
+  full-replay admission or QfO ablation conclusion follows yet.
 - All six [OrthoBench parameter variants](OB_PARAMETER_NEIGHBORHOOD_RESULTS_20260916.md)
   passed native admission and official-score checks with251,378 genes retained.
   F1 ranges71.463468-74.973144% versus control74.106074%; all six adjusted F1
@@ -145,8 +150,14 @@ evidence that an experiment completed or a biological hypothesis is true.
   and [prepared inputs](simulation_tree_controls_prepared_20260917.json) cover
   all70 variable-length datasets:210 trees and420 planned supplied-tree runs.
   Taxa/hashes/projected generating clades/distances passed independent rereading.
-  These are oracle and topology-stress inputs, not completed robustness results;
-  supplied-mode validation, inference and scoring remain outstanding.
+  Native parser testing required [plain-Newick derivatives](simulation_portable_trees_prepared_20260917.json)
+  for OrthoFinder. The [unchanged-tree pilot](SIMULATION_TREE_MODE_PILOT_20260917.md)
+  passed independent native/pair/topology/artifact admission for baseline_seed1
+  only. Array21334 now covers all70 mode-control dataset slots:130new runs,
+  2pilot runs reused and8unavailable controls from original failures. Missing
+  controls remain in the future420-run oracle inventory. These are oracle and
+  topology-stress inputs, not completed robustness results; full-panel mode
+  admission, main supplied-tree inference and scoring remain outstanding.
 
 The manuscript must retain negative and neutral findings. Missing evidence
 cannot be replaced with a claim that the method is generally applicable,
