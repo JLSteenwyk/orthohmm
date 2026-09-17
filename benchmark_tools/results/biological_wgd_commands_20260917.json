@@ -1,0 +1,145 @@
+{
+  "command_sources": [
+    {
+      "bytes": 5699,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_ygob_validation.slurm",
+      "sha256": "179aff0ea6fd1738772ccde858b2ee48a9b043f43cc22b44018b1ba48cdbfb66"
+    },
+    {
+      "bytes": 5879,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/run_tool.slurm",
+      "sha256": "fc7eb173bbe9f18c9a73288b902f3ea094791e1488ad9c8ba434d6fea91bc66e"
+    }
+  ],
+  "contrast_protocol": {
+    "bytes": 7592,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/BIOLOGICAL_WGD_AUDIT_AND_CONTRASTS_20260917.md",
+    "sha256": "85ee0066d659285b1d89fb2ccd93cfbd726af74c902be20f7e039aaf444e58cc"
+  },
+  "core_commit": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+  "core_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2",
+  "entrypoints": [
+    {
+      "bytes": 17157264,
+      "path": "/home/bizon/anaconda3/bin/python3.10",
+      "sha256": "ddd8126d3a409c6ad46c718225d853214d0c9dba3657123514172951fa79058b"
+    },
+    {
+      "bytes": 191,
+      "path": "/home/bizon/anaconda3/bin/sonicparanoid",
+      "sha256": "456f411c815b61fb2b2e60cc4b644e793d7bd0dbab60aa404dbb6f81b2b996a0"
+    },
+    {
+      "bytes": 282,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/bin/orthofinder",
+      "sha256": "7af00c17c2c1e182722f12a3842856118e380b9eb38e55b2a60b47350f743bac"
+    }
+  ],
+  "execution_authorized": false,
+  "inputs": {
+    "bytes": 399212,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/biological_wgd_inputs_20260917.json",
+    "sha256": "fe32a36d3e310c1589e48c1860410bcba277929422fcf6a39e0856d79b902042"
+  },
+  "output_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1",
+  "requirements": [
+    "Fresh output paths and fresh comparator input copies preserving basenames/bytes.",
+    "Verify full runtime/dependencies and effective child PATH before and after each run.",
+    "Record actual OrthoHMM native input enumeration without changing frozen ordering.",
+    "Pin launcher and execution environment before authorization.",
+    "Native completion/IDs/group semantics must pass separate output admission.",
+    "Keep command failures; do not erase/restart or silently change configurations.",
+    "No controlled timing claim; run on original host, not dedicated DGX."
+  ],
+  "resources": {
+    "cpus": 32,
+    "host": "bizon",
+    "memory_gib": 128,
+    "sequential": true
+  },
+  "runs": [
+    {
+      "argv": [
+        "/home/bizon/anaconda3/bin/python",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/benchmark_tools/benchmark_production.py",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/biological_wgd_application_v1/input",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/high_sensitivity/output",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/high_sensitivity/metrics.json",
+        "--cpu",
+        "32",
+        "--threads-per-worker",
+        "8",
+        "--accuracy-profile",
+        "high_sensitivity"
+      ],
+      "method": "orthohmm_high_sensitivity",
+      "output_semantics": "native_orthogroups"
+    },
+    {
+      "argv": [
+        "/home/bizon/anaconda3/bin/python",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/benchmark_tools/benchmark_production.py",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/biological_wgd_application_v1/input",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/metrics.json",
+        "--cpu",
+        "32",
+        "--threads-per-worker",
+        "8",
+        "--accuracy-profile",
+        "high_sensitivity",
+        "--phylogeny",
+        "reconcile",
+        "--species-tree-mode",
+        "infer",
+        "--phylogeny-candidates",
+        "satellite_v2",
+        "--phylogeny-root-rule",
+        "species_overlap",
+        "--phylogeny-pair-rule",
+        "positive_paralogy",
+        "--species-tree-rooting",
+        "min_variance"
+      ],
+      "method": "orthohmm_satellite_v2",
+      "output_semantics": "root_hogs"
+    },
+    {
+      "argv": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/bin/orthofinder",
+        "-f",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/orthofinder/input",
+        "-t",
+        "32",
+        "-a",
+        "8",
+        "-S",
+        "diamond"
+      ],
+      "copy_inputs_to": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/orthofinder/input",
+      "diagnostic_output": "MCL checkpoint, not a separate sequence-only run",
+      "method": "orthofinder_full",
+      "output_semantics": "N0_root_hogs"
+    },
+    {
+      "argv": [
+        "/home/bizon/anaconda3/bin/sonicparanoid",
+        "-i",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/sonicparanoid/input",
+        "-o",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/sonicparanoid/output",
+        "-t",
+        "32"
+      ],
+      "copy_inputs_to": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/sonicparanoid/input",
+      "method": "sonicparanoid",
+      "output_semantics": "native_ortholog_groups"
+    }
+  ],
+  "source": {
+    "bytes": 6171,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_wgd_commands.py",
+    "sha256": "10443fee45ea1c2c5561cf5ece564a1a755e3b4e919bb6bb49500841c8eb6dc1"
+  },
+  "status": "commands_frozen_not_execution_authorized"
+}
