@@ -64,12 +64,18 @@ def test_inconsistent_stages_rejected(problem):
         check_stages(*args)
 
 
+@pytest.mark.parametrize("formats", [False, True])
 @pytest.mark.parametrize("problem", [None, "missing", "duplicate", "running", "exit", "job", "scored"])
-def test_exact_terminal_panel(problem):
+def test_exact_terminal_panel(problem, formats):
     report = {"status": "six_direct_workers_complete_unscored", "job_id": "21326",
               "accuracy_evaluated": False, "optimizer_called": False,
               "workers": [{"index": i, "mode": mode, "exit_code": 0} for i in range(3)
                           for mode in ("minimal_imports", "frozen_imports")]}
+    if formats:
+        report.update(job_id="21327", compare_formats=True,
+                      planned_workers=[[i, "minimal_imports", fmt] for i in range(3) for fmt in ("numpy", "python_pairs")],
+                      workers=[{"index": i, "mode": "minimal_imports", "edge_format": fmt, "exit_code": 0}
+                               for i in range(3) for fmt in ("numpy", "python_pairs")])
     if problem == "missing":
         report["workers"].pop()
     elif problem == "duplicate":
@@ -79,11 +85,42 @@ def test_exact_terminal_panel(problem):
     elif problem == "exit":
         report["workers"][0]["exit_code"] = 1
     elif problem == "job":
-        report["job_id"] = "21327"
+        report["job_id"] = "21326" if formats else "21327"
     elif problem == "scored":
         report["accuracy_evaluated"] = True
     if problem:
         with pytest.raises(ValueError):
-            check_panel(report)
+            check_panel(report, formats)
     else:
-        check_panel(report)
+        check_panel(report, formats)
+
+
+@pytest.mark.parametrize("observed", [None, "numpy", "python_pairs"])
+def test_observed_format_identity(observed):
+    args = fixture(False)
+    if observed is not None:
+        args[0]["edge_format"] = observed
+    if observed == "python_pairs":
+        check_stages(*args, edge_format="python_pairs")
+    else:
+        with pytest.raises(ValueError, match="constructor format"):
+            check_stages(*args, edge_format="python_pairs")
+
+
+@pytest.mark.parametrize("problem", ["flag", "planned", "mode", "format"])
+def test_format_plan_cannot_be_substituted(problem):
+    report = {"status": "six_direct_workers_complete_unscored", "job_id": "21327",
+              "accuracy_evaluated": False, "optimizer_called": False, "compare_formats": True,
+              "planned_workers": [[i, "minimal_imports", fmt] for i in range(3) for fmt in ("numpy", "python_pairs")],
+              "workers": [{"index": i, "mode": "minimal_imports", "edge_format": fmt, "exit_code": 0}
+                          for i in range(3) for fmt in ("numpy", "python_pairs")]}
+    if problem == "flag":
+        report["compare_formats"] = False
+    elif problem == "planned":
+        report["planned_workers"].reverse()
+    elif problem == "mode":
+        report["workers"][0]["mode"] = "frozen_imports"
+    else:
+        report["workers"][1]["edge_format"] = "numpy"
+    with pytest.raises(ValueError):
+        check_panel(report, True)

@@ -3682,3 +3682,25 @@ stage/hash rejection; full1,306 unit tests passed34.57s. Scientific core unchang
 Constructor-format21327 remains RUNNING; first NumPy worker records six unchanged
 pre/post-weight mismatches, other workers pending. Next admit complete format
 panel and decide the next integrity-gated diagnostic from all observed outcomes.
+
+### Constructor-format admission prepared (2026-09-16)
+
+Previous turn progressed through independent direct-stage admission and reporting.
+Objective reread;21327 remains scheduler-confirmed RUNNING. Extended the direct
+audit with explicit --formats selection for job21327/executore919834/output
+qfo_constructor_formats_v1. Require its exact six-worker ordered plan, minimal
+imports, format agreement across plan/parent/snapshot/native result, frozen source,
+runtime, preserved records and complete endpoint/hash consistency. Original21326
+defaults remain intact; no partial format panel can pass.
+
+32 focused tests passed, including cross-panel identity and constructor-format
+substitution rejection; full1,320 unit tests passed35.50s. Re-admitted the actual
+completed21326 report to qfo_direct_graph_admitted_recheck_v1. Its original native
+report and278 checked provenance records exactly match prior admission; all six
+worker summaries match after removing the newly explicit edge_format=numpy field.
+Scoped diff check passes. No scientific/runtime or running-executor changes.
+
+21327 has four worker reports so far: NumPy repeat0 has six unchanged pre/post
+weight mismatches; Python-pairs0,NumPy1,Python-pairs1 match. Remaining two workers
+are pending. These observations are not a completed/admitted panel or a proven
+format fix. Next admit terminal results with the report hash and retain all arms.

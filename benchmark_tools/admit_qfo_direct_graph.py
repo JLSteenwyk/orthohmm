@@ -50,11 +50,13 @@ def reconstructed_hash(differences, saved, sources, targets):
     return digest.hexdigest()
 
 
-def check_stages(result, mode, saved, sources, targets):
+def check_stages(result, mode, saved, sources, targets, edge_format=None):
     if (result["status"] != "direct_construction_observed" or result["mode"] != mode
             or result["accuracy_evaluated"] is not False or result["optimizer_called"] is not False
             or result["saved"] != saved):
         raise ValueError("Invalid direct observation")
+    if edge_format is not None and result.get("edge_format") != edge_format:
+        raise ValueError("Changed observed constructor format")
     before, after = result["before_weights"], result["after_weights"]
     if any(before[key] != saved[key] for key in ("vertices", "edges", "directed")):
         raise ValueError("Pre-weight graph shape differs")
@@ -68,31 +70,37 @@ def check_stages(result, mode, saved, sources, targets):
             "stage_witnesses_equal": before["differences"] == after["differences"]}
 
 
-def check_panel(report):
-    if (report["status"] != "six_direct_workers_complete_unscored" or report["job_id"] != "21326"
+def check_panel(report, formats=False):
+    planned = [(i, "minimal_imports", fmt) for i in range(3) for fmt in ("numpy", "python_pairs")]
+    if (report["status"] != "six_direct_workers_complete_unscored" or report["job_id"] != ("21327" if formats else "21326")
             or report["optimizer_called"] is not False or report["accuracy_evaluated"] is not False
-            or [(row["index"], row["mode"]) for row in report["workers"]] !=
-            [(i, mode) for i in range(3) for mode in MODES]
+            or [(row["index"], row["mode"], row.get("edge_format", "numpy")) for row in report["workers"]] !=
+            (planned if formats else [(i, mode, "numpy") for i in range(3) for mode in MODES])
             or any(row["exit_code"] != 0 for row in report["workers"])):
         raise ValueError("Incomplete or wrong direct-stage panel")
+    if formats and (report.get("compare_formats") is not True or report.get("planned_workers") != [list(row) for row in planned]):
+        raise ValueError("Changed prespecified format panel")
 
 
-def admit(root, output, report_sha256):
+def admit(root, output, report_sha256, formats=False):
     if output.exists():
         raise FileExistsError(output)
-    path = root / "benchmarks/results/qfo_direct_graph_v1/results.json"
+    job = 21327 if formats else 21326
+    directory = "qfo_constructor_formats_v1" if formats else "qfo_direct_graph_v1"
+    path = root / "benchmarks/results" / directory / "results.json"
     report = read_frozen(path, report_sha256)
-    check_panel(report)
-    accounting = subprocess.check_output(["sacct", "-j", "21326", "--parsable2",
+    check_panel(report, formats)
+    accounting = subprocess.check_output(["sacct", "-j", str(job), "--parsable2",
         "--format=JobIDRaw,State,ExitCode,Elapsed"], text=True)
-    scheduler = require_completed_job(accounting, 21326)
+    scheduler = require_completed_job(accounting, job)
     admission_path = root / "benchmark_tools/results/qfo_construction_verified_20260916.json"
     prior = read_frozen(admission_path, ADMISSION_SHA)
     if report["admission"] != record(admission_path) or report["graph_inputs"] != prior["native_report"]["graph_inputs"]:
         raise ValueError("Changed admitted graph")
-    executor = root / "benchmarks/work/publication_qfo_direct_graph_v1"
+    executor = root / "benchmarks/work" / ("publication_" + directory)
     revision = subprocess.check_output(["git", "-C", str(executor), "rev-parse", "HEAD"], text=True).strip()
-    expected = subprocess.check_output(["git", "-C", str(root), "rev-parse", "ab364e4^{commit}"], text=True).strip()
+    expected = subprocess.check_output(["git", "-C", str(root), "rev-parse",
+        "e919834^{commit}" if formats else "ab364e4^{commit}"], text=True).strip()
     if revision != expected or report["source"] != record(executor / "benchmark_tools/probe_qfo_direct_graph.py"):
         raise ValueError("Changed executor")
     subprocess.run(["git", "-C", str(executor), "diff", "--exit-code", "HEAD", "--", "benchmark_tools"], check=True)
@@ -107,7 +115,9 @@ def admit(root, output, report_sha256):
                  "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"}
     for row in report["workers"]:
         mode = row["mode"]
-        payload = path.parent / f"{mode}_{row['index']}" / "payload"
+        edge_format = row["edge_format"] if formats else None
+        label = edge_format if formats else mode
+        payload = path.parent / f"{label}_{row['index']}" / "payload"
         result = json.loads((payload / "result.json").read_text())
         worker = json.loads((payload / "worker_before.json").read_text())
         if (row["observation"] != record(payload / "result.json") or row["result"] != result
@@ -119,6 +129,8 @@ def admit(root, output, report_sha256):
                 or len(worker["cpu_affinity"]) != 1 or worker["cwd"] != str(launcher)
                 or any(worker["environment"][key] != value for key, value in overrides.items())):
             raise ValueError("Worker execution identity differs")
+        if formats and worker.get("edge_format") != edge_format:
+            raise ValueError("Worker constructor format differs")
         scientific = [name for name in worker["modules"] if name.split(".")[0] in {"orthohmm", "leidenalg"}]
         if mode == "minimal_imports" and scientific:
             raise ValueError("Minimal worker imported scientific modules")
@@ -131,8 +143,8 @@ def admit(root, output, report_sha256):
         first.setdefault(mode, worker)
         saved = saved_fingerprint(payload)
         summary = check_stages(result, mode, saved, np.load(payload / "sources.npy", mmap_mode="r"),
-                               np.load(payload / "targets.npy", mmap_mode="r"))
-        summaries.append({"index": row["index"], "mode": mode, **summary})
+                               np.load(payload / "targets.npy", mmap_mode="r"), edge_format)
+        summaries.append({"index": row["index"], "mode": mode, "edge_format": edge_format or "numpy", **summary})
         records.extend([row["observation"], result["snapshot"], record(payload / "before_weights.json"),
                         *worker["modules"].values(), *worker["native_libraries"], worker["python"]])
     unique = {}
@@ -141,13 +153,13 @@ def admit(root, output, report_sha256):
             raise ValueError("Conflicting file provenance")
         unique[item["path"]] = item
         check(item)
-    result = {"status": "direct_stage_observations_verified", "publication_ready": False,
+    result = {"status": "constructor_format_observations_verified" if formats else "direct_stage_observations_verified", "publication_ready": False,
               "accuracy_evaluated": False, "optimizer_called": False, "scheduler": scheduler,
               "source_report": record(path), "source": record(__file__), "workers": summaries,
               "provenance_checked": list(unique.values()), "native_report": report,
               "limitations": ["Preserved observation audit, not an independent historical live-graph inspection.",
                   "Before-weight hashes are implied by complete bounded witnesses; only post-weight native hashes were recorded directly.",
-                  "Direct setup and observation change allocation/timing; this does not isolate a library defect or hardware cause."]}
+                  "Direct setup, input format and observation change allocation/timing; this does not isolate a library defect or hardware cause."]}
     output.mkdir(parents=True)
     (output / "results.json").write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
     return result
@@ -158,5 +170,6 @@ if __name__ == "__main__":
     parser.add_argument("--root", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--report-sha256", required=True)
+    parser.add_argument("--formats", action="store_true", help="Admit frozen NumPy/Python-pair panel21327")
     args = parser.parse_args()
-    admit(args.root.resolve(), args.output.resolve(), args.report_sha256)
+    admit(args.root.resolve(), args.output.resolve(), args.report_sha256, args.formats)
