@@ -1,6 +1,6 @@
 import pytest
 
-from benchmark_tools.read_wgd_native_groups import read_orthohmm, read_species_table
+from benchmark_tools.read_wgd_native_groups import read_orthohmm, read_species_table, read_orthofinder_root_ids
 
 OWNERS = {"a": "Scerevisiae", "b": "Smikatae", "c": "Scerevisiae"}
 COLUMNS = {"Scerevisiae": "Scerevisiae", "Smikatae": "Smikatae"}
@@ -58,3 +58,13 @@ def test_duplicate_species_header_rejected(tmp_path):
     path.write_text(OF_HEADER.replace("Smikatae", "Scerevisiae") + "h\tOG0\tn0\ta\tc\n")
     with pytest.raises(ValueError, match="columns"):
         read_species_table(path, "orthofinder_root_hogs", OWNERS, COLUMNS)
+
+
+def test_internal_root_ids_restore_without_adding_missing_genes(tmp_path):
+    path, ids = tmp_path / "N0.ids.tsv", tmp_path / "SequenceIDs.txt"
+    path.write_text(OF_HEADER + "h\tOG0\tn0\t0_0\t1_0\n")
+    ids.write_text("0_0: a\n0_1: c\n1_0: b\n")
+    assert read_orthofinder_root_ids(path, ids, OWNERS, COLUMNS) == {"h": ["a", "b"]}
+    ids.write_text("0_0: a\n0_1: a\n1_0: b\n")
+    with pytest.raises(ValueError, match="one-to-one"):
+        read_orthofinder_root_ids(path, ids, OWNERS, COLUMNS)

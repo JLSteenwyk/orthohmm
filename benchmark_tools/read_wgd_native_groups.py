@@ -4,6 +4,7 @@ import csv
 
 from benchmark_tools.score_wgd_application import membership
 from benchmark_tools.score_ygob_groups import read_predictions
+from benchmark_tools.orthofinder_mcl_to_orthogroups import load_sequence_ids
 
 HEADERS = {
     "orthofinder_root_hogs": ("HOG", "OG", "Gene Tree Parent Clade"),
@@ -61,3 +62,14 @@ def read_orthohmm(path, format, owners):
     if not groups:
         raise ValueError("Empty native group table")
     return groups
+
+
+def read_orthofinder_root_ids(path, sequence_ids, owners, column_species):
+    mapping = load_sequence_ids(sequence_ids)
+    if len(set(mapping.values())) != len(mapping) or set(mapping.values()) != set(owners):
+        raise ValueError("SequenceIDs is not a one-to-one complete input mapping")
+    internal_owners = {gene: owners[original] for gene, original in mapping.items()}
+    groups = read_species_table(path, "orthofinder_root_hogs", internal_owners, column_species)
+    restored = {name: [mapping[g] for g in genes] for name, genes in groups.items()}
+    membership(restored, owners)
+    return restored

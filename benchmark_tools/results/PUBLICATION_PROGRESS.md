@@ -1,5 +1,30 @@
 # Publication Progress
 
+## All Biological Native Outputs Admitted (2026-09-17)
+
+Previous continuation admitted OrthoHMM outputs and pushed9d77096. Re-read
+objective. Added comparator admission and report assembly with synthetic tests.
+All21661tasksCOMPLETED0:0: high3:47,satellite5:14,OrthoFinder6:30,Sonic2:30
+scheduler elapsed, not controlled cross-method inference timing.
+
+Initial OrthoFinder admission failed because publicN0.tsv was absent. Source
+audit shows3.1.5deletes it during postprocessing but retains the exact parallel
+N0.ids root table. Added tested bijective SequenceIDs restoration, species/
+root scope validation and non-singleton equality against final nativeOGs.
+No singleton supplementation or endpoint change. Initial Sonic log validation
+rejected a repeated identical output-directory line; corrected only this log
+parsing assumption and tested rejection of conflicting repetitions. Both
+attempts preserved in `BIOLOGICAL_WGD_NATIVE_FORMAT_AUDIT_20260917.md`.
+
+Final comparator admissions pass:OrthoFinder5,581rootHOGs/23,233assigned/
+637unassigned;Sonic5,467groups/22,347assigned/1,523unassigned. Counts are not
+accuracy outcomes. UseOrthoFinderadmission_v2; retain superseded initial report.
+Latest36focused comparator/parser/report tests pass. Report assembler retains
+every method/failure, all cohort rows, all source strata and prespecified
+examples, with12fixed paired comparisons. Biological endpoints have not yet
+been computed; next wire admitted artifacts into reproducible full report and
+case figures. DGX21656_3verifiedRUNNING26:05;3complete,23queued.
+
 ## OrthoHMM Application Outputs Admitted (2026-09-17)
 
 Previous turn implemented endpoints/bootstrap, pushed8b4c26a. Re-read objective.
