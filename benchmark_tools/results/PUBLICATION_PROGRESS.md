@@ -4556,3 +4556,10 @@ no new stage scores inspected. Fullunit verification precedes freeze/submission.
 Fullunit suite1,680passed36.37s; all15historical OrthoMCL trace tasks also pass
 the fresh-task validation contract. Audit batch syntax and whitespace checks pass.
 Latest21548_0RUNNING8:02 with allsix benchmark processes submitted; no score read.
+
+Committed/pushed4c2fc81; froze publication_qfo_assessment_admission_v1 at
+4c2fc81d387c845897f015e7dfbba6e33b5bddd1. Submitted21584 with
+dependencyafterany:21548,4CPU16GiB2hours,norequeue; confirmedpendingdependency.
+Outputbenchmarks/results/qfo_recovered_assessment_admission_v1;
+logbenchmarks/work/qfo_assessment_admission_21584.log. Own allfourterminal gate
+still required. Tree21406_170/171running,172-209pending;21435pendingdependency.
