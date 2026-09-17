@@ -19,6 +19,13 @@ diagnostic is not scientific inference and cannot certify general overhead.
 Scientific timing remains0/27; environment/command freeze and launch/output
 admission workflow remain required alongside the rest of the publication goal.
 
+After protocol/recipe commit2ac91e0 was pushed, submitted Slurm array21640,
+indices0-5 with concurrency1, exclusive spark-7ff0,20CPUs96GiB and12minutes
+per task. Task21640_0 confirmedRUNNING at7s; remaining tasks pending on the
+array concurrency limit. Outputs are collector_load_panel_v1_INDEX_MODE under
+the DGX project root; logs collector_overhead_21640_INDEX.log. Do not restart
+live tasks or treat individual partial measurements as the paired result.
+
 ## FastME and Full DGX Comparator Smoke (2026-09-17)
 
 Previous turn progressed SwissTrees intervals and pushed1c0788f. Re-read
