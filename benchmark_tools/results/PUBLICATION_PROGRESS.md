@@ -3157,3 +3157,22 @@ job21315 (one CPU,64GiB,two-hour limit); scheduler confirmed RUNNING. Output is
 benchmarks/results/qfo_native_boundary_v1. Next inspect terminal accounting,
 independently compare native boundary records and all partitions, then use the
 evidence to narrow graph-conversion versus optimizer-state explanations.
+
+### Candidate neighborhood independently admitted (2026-09-16)
+
+Previous turn made progress: native-boundary probe implemented/tested/pushed and
+job21315 launched; scheduler reconfirmed RUNNING during this continuation.
+Independently admitted completed21314 while that diagnostic runs. Exact five-arm
+plan, nominal/applied parameter separation, one engine call, all70 provenance
+records, full251,378-gene coverage, control byte equivalence and complete merge
+reconstruction passed. Candidate counts control/norm_low/norm_high/margin_low/
+margin_high:54,445/54,370/54,540/52,912/55,434; corresponding reconstructed merges
+8,440/8,515/8,345/9,973/7,451 from62,885 fixed HMM seed groups.
+
+Snapshot ob_candidate_neighborhood_verified_20260916.json SHA256
+38a4cc8c16e8e45800c88af618f9b5a9b3d77ab6b3d0e5b79fa555b88e849514.
+Admission verifies retained memberships and provenance, not independent search
+or threshold-decision recomputation. No reference scores evaluated. Twelve new
+tests; full unit suite1,147 passed27.64s. Four downstream inferred-tree variant
+runs and two CPM variants remain pending, followed by prespecified18-endpoint
+scoring. QfO21315 remains running; no native-boundary conclusion yet.
