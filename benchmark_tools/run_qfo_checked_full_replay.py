@@ -97,7 +97,7 @@ def run(root, output):
         replay = json.loads((output / "replay.json").read_text())
         if (checked["status"] != "checked_full_replay_returned" or len(checked["calls"]) != 4
                 or replay["counts"]["genes"] != 976504 or replay["counts"].get("profiles_built", 0) <= 0
-                or [s["label"] for s in replay["stages"]] != ["multipass", "multipass_refined", "profiles", "profiles_refined"]):
+                or [s["label"] for s in replay["stages"]] != ["multipass", "multipass_refined", "strict_profiles", "strict_profiles_refined"]):
             raise ValueError("Incomplete full replay or missing profile construction")
         names = Path(admission["native_report"]["graph_inputs"][0]["path"]).read_text().splitlines()
         universe = set(names)

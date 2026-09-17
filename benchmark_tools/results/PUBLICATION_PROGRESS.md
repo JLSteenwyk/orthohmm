@@ -4412,3 +4412,23 @@ which is substantial observer overhead; optimize/amortize before scientific
 scaling. No controlled runtime claim or actual scaling experiment completed.
 Next priority: strict postflight recovery and independent admission of preserved
 QfOv2 outputs after diagnosing the wrapper-label mismatch; do not rerun inference.
+
+### QfO Label-Failure Recovery Gate Implemented (2026-09-17)
+
+Previous turn progressed workload monitoring and diagnosed/preserved QfOv2
+wrapper-label failure. Re-read objective; confirmed21333FAILED1:0 at51:17 and
+treeadmission21435pending. Treearray later has65-66running,67-209pending.
+
+Corrected frozen replay stage labels in current wrapper/auditor; frozen inference
+sources and outputs untouched. Added explicit exact-hashv2 label-failure recovery
+to the existing independent auditor so all saved-graph/native-provenance checks
+remain in use. Original scheduler failure and parent record remain unmodified;
+missing postflight coverage/input/initial comparisons are independently recomputed,
+and the input audit is explicitly retrospective. No inference rerun or truth
+scoring. Success has a distinct recovered status, not successful original job.
+
+Focused37tests pass. Pinned real reports pass corrected inventory checks only;
+full admission pending. Prepared four-CPU64GiB2hour audit batch; bash syntax and
+diff whitespace checks pass. Fullunit suite in progress before freeze/submission.
+
+Fullunit suite1,609passed37.85s. No scientific admission claimed from unit tests.

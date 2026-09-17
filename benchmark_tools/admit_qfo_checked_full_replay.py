@@ -1,6 +1,8 @@
 """Independently admit the fixed checked QfO cached replay, retaining historical disagreement."""
 
 import argparse
+import csv
+import io
 import json
 from pathlib import Path
 import subprocess
@@ -16,14 +18,36 @@ from benchmark_tools.verify_ygob_validation import require_completed_job
 
 ADMISSION_SHA = "78f51f5ce703caf39307c5e518ad737acdf655dbe0926a34f2c20bbdec6d03f1"
 CALLS = ("initial", "multipass", "profile_base", "profile_expanded")
-STAGES = ("multipass", "multipass_refined", "profiles", "profiles_refined")
+STAGES = ("multipass", "multipass_refined", "strict_profiles", "strict_profiles_refined")
 RUNS = {"v1": (21329, "96333fd"), "v2": (21333, "c93eb2c8cf5671b9e99b3e534f68d11fac6282d7")}
+RECOVERY_HASHES = {
+    "results.json": "6a6b682e2e86566e59ddf8748f6eeb475eab976ee35c988df73bf1b75d4c100a",
+    "checked_worker.json": "bed6806a82cadd6abcd828c0adca232040052580b31db9b0b997ba57010dca73",
+    "replay.json": "ac0e69463a63fd6a4431ad6118bdc6a5835187d2b34c4f691ddfbdd3519d9885",
+}
 
 
-def check_inventory(parent, worker, replay, version="v1"):
+def recovery_parent(parent, version):
+    if (version != "v2" or parent["status"] != "failed" or parent.get("error_type") != "ValueError"
+            or parent.get("error") != "Incomplete full replay or missing profile construction"
+            or any(k in parent for k in ("coverage", "worker", "replay", "inputs_after", "initial_versus_checked_repeat"))):
+        raise ValueError("Not the pinned wrapper label failure before postflight")
+
+
+def recovery_scheduler(accounting):
+    rows = [r for r in csv.DictReader(io.StringIO(accounting), delimiter="|") if r.get("JobIDRaw") == "21333"]
+    if len(rows) != 1 or rows[0]["State"] != "FAILED" or rows[0]["ExitCode"] != "1:0":
+        raise ValueError("Recovery requires the original failed scheduler record")
+    return rows[0]
+
+
+def check_inventory(parent, worker, replay, version="v1", recover_label_failure=False):
     if version not in RUNS:
         raise ValueError("Unknown fixed replay version")
-    if (parent["status"] != "full_checked_replay_complete_unscored" or parent["job_id"] != str(RUNS[version][0])
+    if recover_label_failure:
+        recovery_parent(parent, version)
+    expected_status = "failed" if recover_label_failure else "full_checked_replay_complete_unscored"
+    if (parent["status"] != expected_status or parent["job_id"] != str(RUNS[version][0])
             or parent["exit_code"] != 0 or parent["accuracy_evaluated"] is not False
             or worker["status"] != "checked_full_replay_returned" or worker["accuracy_evaluated"] is not False
             or [(r["index"], r["stage"]) for r in worker["calls"]] != list(enumerate(CALLS))
@@ -44,20 +68,25 @@ def check_inventory(parent, worker, replay, version="v1"):
                 raise ValueError("Explicit clustering child thread isolation differs")
 
 
-def admit(root, output, digest, version="v1"):
+def admit(root, output, digest, version="v1", recover_label_failure=False):
     if output.exists():
         raise FileExistsError(output)
     if version not in RUNS:
         raise ValueError("Unknown fixed replay version")
     job_id, revision_pin = RUNS[version]
     directory = root / f"benchmarks/results/qfo_checked_full_replay_{version}"
+    if recover_label_failure:
+        if version != "v2" or digest != RECOVERY_HASHES["results.json"]:
+            raise ValueError("Recovery is restricted to the exact preserved v2 failure")
+        for name, expected in RECOVERY_HASHES.items():
+            read_frozen(directory / name, expected)
     path = directory / "results.json"
     report = read_frozen(path, digest)
     worker = json.loads((directory / "checked_worker.json").read_text())
     replay = json.loads((directory / "replay.json").read_text())
-    check_inventory(report, worker, replay, version)
+    check_inventory(report, worker, replay, version, recover_label_failure)
     accounting = subprocess.check_output(["sacct", "-j", str(job_id), "--parsable2", "--format=JobIDRaw,State,ExitCode,Elapsed,MaxRSS"], text=True)
-    scheduler = require_completed_job(accounting, job_id)
+    scheduler = recovery_scheduler(accounting) if recover_label_failure else require_completed_job(accounting, job_id)
     executor = root / f"benchmarks/work/publication_qfo_checked_full_replay_{version}"
     revision = subprocess.check_output(["git", "-C", str(executor), "rev-parse", "HEAD"], text=True).strip()
     expected_revision = subprocess.check_output(["git", "-C", str(root), "rev-parse", revision_pin + "^{commit}"], text=True).strip()
@@ -85,13 +114,14 @@ def admit(root, output, digest, version="v1"):
         raise ValueError("Replay command differs")
     if worker["replay_source"] != record(launcher / "benchmark_tools/replay_high_sensitivity.py") or replay["source"] != worker["replay_source"]:
         raise ValueError("Wrong replay scientific source")
-    if report["worker"] != record(directory / "checked_worker.json") or report["replay"] != record(directory / "replay.json"):
+    worker_record, replay_record = record(directory / "checked_worker.json"), record(directory / "replay.json")
+    if not recover_label_failure and (report["worker"] != worker_record or report["replay"] != replay_record):
         raise ValueError("Changed parent-linked outputs")
     admission_path = root / "benchmark_tools/results/qfo_checked_repeats_verified_20260917.json"
     prior = read_frozen(admission_path, ADMISSION_SHA)
     if report["admission"] != record(admission_path):
         raise ValueError("Changed initial-repeat admission")
-    records = [record(path), report["worker"], report["replay"], report["admission"], *report["executor_sources"],
+    records = [record(path), worker_record, replay_record, report["admission"], *report["executor_sources"],
                *worker["helpers"], *prior["provenance_checked"], record(directory / "replay_command.json")]
     summaries = []
     for row in worker["calls"]:
@@ -171,17 +201,19 @@ def admit(root, output, digest, version="v1"):
         p = Path(stage["output"]["path"])
         coverage.append({"stage": stage["label"], **compare_partition(p, p, universe)})
         records.append(stage["output"])
-    if coverage != report["coverage"]:
+    if not recover_label_failure and coverage != report["coverage"]:
         raise ValueError("Final stage coverage comparisons differ")
     by_label = {r["label"]: Path(r["output"]["path"]) for r in replay["stages"]}
-    for index, label in ((1, "multipass"), (3, "profiles")):
+    for index, label in ((1, "multipass"), (3, "strict_profiles")):
         if not compare_partition(Path(worker["calls"][index]["partition"]["path"]), by_label[label], universe)["byte_equal"]:
             raise ValueError("Frozen replay stage not copied from corresponding checked partition")
     before = json.loads((directory / "inputs_before.json").read_text())
-    after = json.loads((directory / "inputs_after.json").read_text())
-    if before != after:
+    if recover_label_failure:
+        if (directory / "inputs_after.json").exists():
+            raise ValueError("Unexpected after-input audit in failed original run")
+    elif before != json.loads((directory / "inputs_after.json").read_text()):
         raise ValueError("Original input audits disagree")
-    for key in ("inputs_before", "inputs_after"):
+    for key in (("inputs_before",) if recover_label_failure else ("inputs_before", "inputs_after")):
         if report[key] != record(directory / (key + ".json")):
             raise ValueError("Input audit file changed")
         records.append(report[key])
@@ -190,9 +222,9 @@ def admit(root, output, digest, version="v1"):
     subprocess.run([sys.executable, str(executor / "benchmark_tools/audit_qfo_replay_inputs.py"), "--root", str(root), "--output", str(fresh)], check=True)
     if json.loads(fresh.read_text()) != before:
         raise ValueError("Fresh independent input audit differs")
-    historical = compare_partition(Path(before["target_partition"]["path"]), by_label["profiles_refined"], universe)
+    historical = compare_partition(Path(before["target_partition"]["path"]), by_label["strict_profiles_refined"], universe)
     initial = compare_partition(Path(prior["native_report"]["repeats"][0]["partition"]["path"]), Path(worker["calls"][0]["partition"]["path"]), universe)
-    if initial != report["initial_versus_checked_repeat"]:
+    if not recover_label_failure and initial != report["initial_versus_checked_repeat"]:
         raise ValueError("Initial partition comparison differs")
     records.extend([record(fresh), before["target_partition"]])
     unique = {}
@@ -212,6 +244,12 @@ def admit(root, output, digest, version="v1"):
               "limitations": ["One cached replay, not general determinism or a controlled end-to-end resource measurement.",
                   "Historical disagreement is retained, not a reason for retry or accuracy-based selection.",
                   "Native hashes validate preserved observations, not retrospective live-memory inspection."]}
+    if recover_label_failure:
+        result.update(status="checked_full_replay_recovered_verified", recovery={
+            "type": "pinned_wrapper_stage_label_failure", "original_scheduler_failure_preserved": True,
+            "inference_rerun": False, "input_recheck": record(fresh), "original_after_input_audit_exists": False,
+            "scope": "Retrospective postflight and independent native validation; original failed report unchanged"})
+        result["limitations"].append("Post-run input check is retrospective, not a contemporaneous successful wrapper postflight.")
     (output / "results.json").write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
     return result
 
@@ -222,5 +260,6 @@ if __name__ == "__main__":
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--report-sha256", required=True)
     parser.add_argument("--run-version", choices=tuple(RUNS), default="v1")
+    parser.add_argument("--recover-label-failure", action="store_true")
     args = parser.parse_args()
-    admit(args.root.resolve(), args.output.resolve(), args.report_sha256, args.run_version)
+    admit(args.root.resolve(), args.output.resolve(), args.report_sha256, args.run_version, args.recover_label_failure)

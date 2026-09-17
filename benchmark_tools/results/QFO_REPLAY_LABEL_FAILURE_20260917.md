@@ -36,3 +36,29 @@ agreement and historical partition disagreement. Do not overwrite the failed
 report, weaken unrelated checks, choose partitions by accuracy, or rerun the
 51-minute inference merely to repair bookkeeping. The original parent failed
 before its after-input audit; a fresh audit must be labeled retrospective.
+
+## Recovery Implementation
+
+The corrected auditor recognizes the frozen `strict_profiles` labels, including
+their partition-copy and historical-reference checks. An explicit
+`--recover-label-failure` path accepts only versionv2 and the three exact SHA256
+records above. It requires the original schedulerFAILED1:0 record, native
+workerexit0, allfour checked clustering calls, the precise wrapper error and
+absence of the postflight fields that the failed parent never produced.
+Other failures are not recoverable through this path.
+
+The auditor independently reconstructs the saved graphs, verifies all native
+observations and sources, checks final partition coverage and copy identity,
+performs a fresh retrospective input audit, and retains initial/historical
+partition comparisons. It does not fabricate parent completion or modify old
+outputs. On success its distinct status is
+`checked_full_replay_recovered_verified`, with original failure and retrospective
+limitations explicit. Normal admission still requires a successful parent and
+completed scheduler record. The unexecuted current runner's label guard is also
+corrected; frozen inference executors are unchanged.
+
+Thirty-seven focused auditor tests pass, including exact recovery failure gates,
+rejection of old labels, failed child calls and nonmatching scheduler states.
+The pinned real reports pass the corrected inventory check only; full native
+admission has not yet completed. Prepared four-CPU64GiB audit-only batch to
+validate existing outputs without running clustering or profile construction.

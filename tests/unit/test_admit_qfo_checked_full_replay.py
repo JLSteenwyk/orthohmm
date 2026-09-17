@@ -1,6 +1,6 @@
 import pytest
 
-from benchmark_tools.admit_qfo_checked_full_replay import CALLS, STAGES, check_inventory, admit
+from benchmark_tools.admit_qfo_checked_full_replay import CALLS, STAGES, check_inventory, admit, recovery_scheduler
 
 
 def fixture():
@@ -82,3 +82,58 @@ def test_v2_requires_pinned_job_and_child_thread_isolation(problem):
 def test_unknown_run_version_rejected():
     with pytest.raises(ValueError, match="Unknown"):
         check_inventory(*fixture(), version="v3")
+
+
+def recovered_fixture():
+    parent, worker, replay = fixture()
+    parent.update(status="failed", job_id="21333", error_type="ValueError",
+                  error="Incomplete full replay or missing profile construction")
+    for row in worker["calls"]:
+        overrides = {k: "1" for k in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS")}
+        row["thread_environment"] = {"child_overrides": overrides,
+            "inherited": {**overrides, "OMP_NUM_THREADS": "32" if row["index"] >= 2 else "1"}}
+    return parent, worker, replay
+
+
+@pytest.mark.parametrize("problem", [None, "error", "error_type", "exit", "coverage", "worker_failure", "label", "v1"])
+def test_recovery_only_accepts_exact_failure_contract(problem):
+    parent, worker, replay = recovered_fixture()
+    assert STAGES == ("multipass", "multipass_refined", "strict_profiles", "strict_profiles_refined")
+    if problem == "error":
+        parent["error"] = "different failure"
+    elif problem == "error_type":
+        parent["error_type"] = "RuntimeError"
+    elif problem == "exit":
+        parent["exit_code"] = 1
+    elif problem == "coverage":
+        parent["coverage"] = []
+    elif problem == "worker_failure":
+        worker["calls"][2]["exit_code"] = 1
+    elif problem == "label":
+        replay["stages"][2]["label"] = "profiles"
+    version = "v1" if problem == "v1" else "v2"
+    if problem:
+        with pytest.raises(ValueError):
+            check_inventory(parent, worker, replay, version, True)
+    else:
+        check_inventory(parent, worker, replay, version, True)
+        with pytest.raises(ValueError):
+            check_inventory(parent, worker, replay, version)
+
+
+@pytest.mark.parametrize("rows,valid", [(["21333|FAILED|1:0"], True),
+    (["21333|COMPLETED|0:0"], False), (["21333|RUNNING|0:0"], False),
+    (["21333|FAILED|2:0"], False), (["21329|FAILED|1:0"], False),
+    (["21333|FAILED|1:0", "21333|FAILED|1:0"], False), ([], False)])
+def test_recovery_preserves_exact_scheduler_failure(rows, valid):
+    accounting = "JobIDRaw|State|ExitCode\n" + "\n".join(rows)
+    if valid:
+        assert recovery_scheduler(accounting)["State"] == "FAILED"
+    else:
+        with pytest.raises(ValueError):
+            recovery_scheduler(accounting)
+
+
+def test_recovery_rejects_unpinned_parent_before_loading(tmp_path):
+    with pytest.raises(ValueError, match="exact preserved"):
+        admit(tmp_path, tmp_path / "new", "wrong", "v2", True)
