@@ -3176,3 +3176,27 @@ or threshold-decision recomputation. No reference scores evaluated. Twelve new
 tests; full unit suite1,147 passed27.64s. Four downstream inferred-tree variant
 runs and two CPM variants remain pending, followed by prespecified18-endpoint
 scoring. QfO21315 remains running; no native-boundary conclusion yet.
+
+### Candidate neighborhood inferred-tree executor (2026-09-16)
+
+Previous turn made progress by independently admitting the five candidate arms.
+This continuation reread the objective and confirmed21315 still RUNNING. Added
+four-arm downstream executor using admitted snapshot38a4cc8c, frozen factorial
+scientific launcher and environment. Changes only candidate/constraint paths and
+destinations, plus baseline checkpoint-source reuse. Keeps species-tree-mode infer
+and all other frozen settings. Baseline native artifacts checked before/after;
+all preparation provenance and environment rechecked. No reference scoring.
+
+Native checkpoint code checks exact gene membership, sequence/config input hashes
+and raw-tree checksums; species-tree cache checks selected marker inputs/config
+and tree checksum. Therefore a genuinely unchanged inference input may reuse its
+tree, but no baseline tree is supplied to a changed marker input. Reused source
+artifacts remain protected by native atomic replacement and postflight identity
+checks. Failures preserved without retries; successful execution still requires
+independent native admission before scoring.
+
+Batch defines four tasks,32CPUs/64GiB/four-hour limit each,max two concurrently.
+Shared-machine incremental times are not controlled end-to-end scaling evidence.
+Eleven focused executor tests passed, bash syntax passed, full unit suite1,158
+passed29.27s. Freeze/push executor before submitting; CPM variants and complete
+six-variant18-endpoint analysis remain pending.
