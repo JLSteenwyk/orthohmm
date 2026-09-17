@@ -1,0 +1,395 @@
+{
+  "comparisons": {
+    "mcl_checkpoint": {
+      "arm_count": 99,
+      "arm_only": 0,
+      "equal": true,
+      "x86_count": 99,
+      "x86_only": 0
+    },
+    "native_pairs": {
+      "arm_count": 1834,
+      "arm_only": 0,
+      "equal": true,
+      "x86_count": 1834,
+      "x86_only": 0
+    }
+  },
+  "inputs": [
+    {
+      "bytes": 25419,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261101/missing20/input/n11.fasta",
+      "sha256": "c9e7e01d18b0bd4d133b1588b417c2598b120901c38f3e12ebdeba2a8f97369f"
+    },
+    {
+      "bytes": 26367,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261101/missing20/input/n12.fasta",
+      "sha256": "3c5356bfbd29f872755fcf8cb83d092bc63b83bf1117f87546580baf503598b1"
+    },
+    {
+      "bytes": 25992,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261101/missing20/input/n13.fasta",
+      "sha256": "460b6ba93725298cb9e415b19ca38ec2679d622e0309bb69a683b0c4d428d75b"
+    },
+    {
+      "bytes": 25773,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261101/missing20/input/n14.fasta",
+      "sha256": "fa639b0dd9da1c40743221a5e85a48a2d1183e2583782cbc28743077b92cc095"
+    },
+    {
+      "bytes": 22575,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261101/missing20/input/n5.fasta",
+      "sha256": "fe32ef88650cabe1e0239385a8f646020a0c8c01b02abb1487eab91dd3f014f7"
+    },
+    {
+      "bytes": 24465,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261101/missing20/input/n6.fasta",
+      "sha256": "9c12b7f6233a2fa1161fe5bdb904d8416935f43f1d66832db643723db2b98e5c"
+    },
+    {
+      "bytes": 25804,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261101/missing20/input/n7.fasta",
+      "sha256": "bd5a375e99f12fc22bece6a6553a1636104321b1b5ddf2f7a398e909a6477a57"
+    },
+    {
+      "bytes": 26353,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261101/missing20/input/n9.fasta",
+      "sha256": "8b92d25187584bbc38daff6dec0d671294e30d3484a77a31cc7dcc5b3483867f"
+    }
+  ],
+  "limitations": [
+    "One development-exposed fixture, not general equivalence or independent accuracy.",
+    "strace overhead present; not a scientific timing result.",
+    "Intermediate/final tree and HOG equality are not established by this comparison.",
+    "This fixture did not execute FastME; separate direct command probes cover finite matrices only."
+  ],
+  "native_validation": {
+    "checked_files": [
+      {
+        "bytes": 1066,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Log.txt",
+        "sha256": "f2a68ce52d298217b9d00e523678ab5fec36931b9e5be975e80f5722e9f2a0a5"
+      },
+      {
+        "bytes": 41492,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/WorkingDirectory/OrthoFinder_graph.txt",
+        "sha256": "9c921e40a5dfedc44287b613ccd7f1ee90dc0235f8f9f3dbdf8aecb465ef6c91"
+      },
+      {
+        "bytes": 10940,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/WorkingDirectory/SequenceIDs.txt",
+        "sha256": "1a6bd1bdb9566ec45ccfd05d913bc1eaf7d634567bda266cb87b96821fe0df0f"
+      },
+      {
+        "bytes": 4518,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/WorkingDirectory/clusters_OrthoFinder_I1.2.txt_id_pairs.txt",
+        "sha256": "952f4f7e726b77c68b26b1e16d122c5ec96e13cbca24adaecd1e2a0a7abac415"
+      },
+      {
+        "bytes": 2296,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n11/n11__v__n12.tsv",
+        "sha256": "a89c52ecf6bb2ad87618b30529e139da3b631dcca77f4a7c80d101ac12bb9c4c"
+      },
+      {
+        "bytes": 2345,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n11/n11__v__n13.tsv",
+        "sha256": "38065e20281b2ca75f9251536df6174496b6f0c8d8a9014aca633753ed288012"
+      },
+      {
+        "bytes": 2219,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n11/n11__v__n14.tsv",
+        "sha256": "8510e50c3f996be62d62970c7c9c0179143239dab78646c63a9685ad8fe632db"
+      },
+      {
+        "bytes": 1944,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n11/n11__v__n5.tsv",
+        "sha256": "f775fdd694400ff878d1782dab588d1829a0d2077913f9df5ff0bbd7b5f4c07d"
+      },
+      {
+        "bytes": 1988,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n11/n11__v__n6.tsv",
+        "sha256": "e5234fd1742f31418178d6bd8fc2345579a5f5f93e5f44630ac258247c96d7f2"
+      },
+      {
+        "bytes": 2066,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n11/n11__v__n7.tsv",
+        "sha256": "54ad9323206436d6a9d96f06f0230b2d7e80b473fe9f089b8b8269453495bf4f"
+      },
+      {
+        "bytes": 2190,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n11/n11__v__n9.tsv",
+        "sha256": "765e5809fb82be4c552c04532ca5bc29b301d050bcc8794f9dffd5e64037014c"
+      },
+      {
+        "bytes": 2296,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n12/n12__v__n11.tsv",
+        "sha256": "5c975222860a07c0899a55d0c3f03155fd3c2035d5f0a20dc37b0d42dc8d7239"
+      },
+      {
+        "bytes": 2326,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n12/n12__v__n13.tsv",
+        "sha256": "dbd0989bb566720904b38018c67334060d18d797b6606d705432885ef08f8cb1"
+      },
+      {
+        "bytes": 2370,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n12/n12__v__n14.tsv",
+        "sha256": "1ac2581cff96aa54a6973dc104a13b241ec6b3ce09bb3edf0d0f45f1688f311e"
+      },
+      {
+        "bytes": 1943,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n12/n12__v__n5.tsv",
+        "sha256": "1d4b2e6a52df8810579553566f66fd17be02d1d3482560b7bb56740e0df66399"
+      },
+      {
+        "bytes": 2118,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n12/n12__v__n6.tsv",
+        "sha256": "614d6697f5b8f667b22bdc4e9b16418a01c676dfd440b5d0b607734544b10b0f"
+      },
+      {
+        "bytes": 2291,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n12/n12__v__n7.tsv",
+        "sha256": "30aff5e090197f4f28acee27605915d83b6ca43fdfa5be0d77c8b19954fe0475"
+      },
+      {
+        "bytes": 2309,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n12/n12__v__n9.tsv",
+        "sha256": "a131e25a9cb4414fbf884011cb4b0047ca373077c85957e7a605ee8faab2d488"
+      },
+      {
+        "bytes": 2345,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n13/n13__v__n11.tsv",
+        "sha256": "d063c2159e9d851cc2a391b29f01626f096e50e9bd39a06f76f89bb7f1cc3e12"
+      },
+      {
+        "bytes": 2326,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n13/n13__v__n12.tsv",
+        "sha256": "0da78fd0b44a7ad59b9e705284446b548c0cf83285a4fb041d470d6126448ce5"
+      },
+      {
+        "bytes": 2431,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n13/n13__v__n14.tsv",
+        "sha256": "174c115569085ce329e9f71508c9c77a34158be60f331347905bfad669ff5790"
+      },
+      {
+        "bytes": 1966,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n13/n13__v__n5.tsv",
+        "sha256": "304105c67418c01ec9aced5ff92da939824ff4bb86b622ed3a91ec4bf9bfb5af"
+      },
+      {
+        "bytes": 2053,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n13/n13__v__n6.tsv",
+        "sha256": "308ef7463ffb59e90de98a5ab339e481f3d6134fd832ba0a30277720dc4fc44c"
+      },
+      {
+        "bytes": 2212,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n13/n13__v__n7.tsv",
+        "sha256": "d426e64e7a2c85109057e5ddd90e78b23303cefe01a313655d7d00350db542e9"
+      },
+      {
+        "bytes": 2278,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n13/n13__v__n9.tsv",
+        "sha256": "400002ee245b7adc58c4c6231b1d4402c5165ac33c112a76ef92584caf4f4681"
+      },
+      {
+        "bytes": 2219,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n14/n14__v__n11.tsv",
+        "sha256": "b54ee7a6eb0a1e971ec3861d98f6ad8061a43a36f119d265a5313c1e48ff6f13"
+      },
+      {
+        "bytes": 2370,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n14/n14__v__n12.tsv",
+        "sha256": "771fe64fa7c34e5f77c6a055f7620a6ac5bd16b999d3957d5b52a1c453faa6d3"
+      },
+      {
+        "bytes": 2431,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n14/n14__v__n13.tsv",
+        "sha256": "ea21867818c35aa8cc762ccac134c14b0812ded59425a8718d8e3fb730a8f269"
+      },
+      {
+        "bytes": 1907,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n14/n14__v__n5.tsv",
+        "sha256": "4fdc184bd0247944a69d8060fce23bb05c2ea3485c9372fc2bb63abbc9e4efc7"
+      },
+      {
+        "bytes": 2093,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n14/n14__v__n6.tsv",
+        "sha256": "6fae171fed42756fe6465bf70d0e43d643ecbd8b4a5e451b97da9e102593d926"
+      },
+      {
+        "bytes": 2145,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n14/n14__v__n7.tsv",
+        "sha256": "178ea6ad4e5512c2b7ac5fecc10f0c0054154d916d923877eeac85f4c1f45526"
+      },
+      {
+        "bytes": 2240,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n14/n14__v__n9.tsv",
+        "sha256": "18e30319c0cc9b0ed407e4ab24f52afb0a9e2f1113096eef296d6d7fbf06c85c"
+      },
+      {
+        "bytes": 1944,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n5/n5__v__n11.tsv",
+        "sha256": "c639434a3fbf1d1052028b7c94b314782e9867675fd3c1dd7bfbddc9d2e67320"
+      },
+      {
+        "bytes": 1943,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n5/n5__v__n12.tsv",
+        "sha256": "1800aac7c04c1f8dab36ff125b659c45ef6ddf78f279e205dee1bf9e16a3b882"
+      },
+      {
+        "bytes": 1966,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n5/n5__v__n13.tsv",
+        "sha256": "644d52c190dcc847d650f65546d80430c1185052d9ddaff56d14bab01e507a7b"
+      },
+      {
+        "bytes": 1907,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n5/n5__v__n14.tsv",
+        "sha256": "78e83f9c926e6c02a9bb45f44e36f413582d7d31491453b3d1695690a92cf18d"
+      },
+      {
+        "bytes": 1951,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n5/n5__v__n6.tsv",
+        "sha256": "8039fc70848298cc6a793c3f3b7f8f74b9886161ca884603b228c89b6d3f9066"
+      },
+      {
+        "bytes": 1846,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n5/n5__v__n7.tsv",
+        "sha256": "93832d509b29c755948b60ec70ba7e4afecb4f77e050cae2716e9b322098f394"
+      },
+      {
+        "bytes": 1847,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n5/n5__v__n9.tsv",
+        "sha256": "fa90936da2c5740c3b443c46273b9108e19071530472ae3a0db4d739c32ff4b0"
+      },
+      {
+        "bytes": 1988,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n6/n6__v__n11.tsv",
+        "sha256": "888f847bcd5fe9a394d958767343c6fa7739e1787107c4642c840a60306ca7bc"
+      },
+      {
+        "bytes": 2118,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n6/n6__v__n12.tsv",
+        "sha256": "fe5352380a2d5997d72c70baee5ea8df6940356cd975745d8bf14e26c548da2e"
+      },
+      {
+        "bytes": 2053,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n6/n6__v__n13.tsv",
+        "sha256": "a22304250eaf1ce6036fb69e353948c63c80576464cf29bbd833a50995be0cd2"
+      },
+      {
+        "bytes": 2093,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n6/n6__v__n14.tsv",
+        "sha256": "3dbaa0fed118549cd9f03590b2d9d8baa37327bbc0bf926aeac760fca5bea1ae"
+      },
+      {
+        "bytes": 1951,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n6/n6__v__n5.tsv",
+        "sha256": "ac20fa8a96d35437f5ece25022d53172cad323f8259c9483e91e543fc7d21ab8"
+      },
+      {
+        "bytes": 2002,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n6/n6__v__n7.tsv",
+        "sha256": "8fd64c1fa07d3b50b69a68e2aa007772fe253b62b14119cf7c59b177dedb27b6"
+      },
+      {
+        "bytes": 1993,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n6/n6__v__n9.tsv",
+        "sha256": "cb8ab06551139f06cfb9e071035161475dc711e50ab0b4f94c9c46d82e7f288d"
+      },
+      {
+        "bytes": 2066,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n7/n7__v__n11.tsv",
+        "sha256": "9d50dd7d2a916793c449575d35d37d30b674b00a0fbb2976c6591e21d9c1d593"
+      },
+      {
+        "bytes": 2291,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n7/n7__v__n12.tsv",
+        "sha256": "556c5b12a226a750aa000e5c25732bfc86a3e8cb8876c571bb3be843da14892d"
+      },
+      {
+        "bytes": 2212,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n7/n7__v__n13.tsv",
+        "sha256": "6fb21b84b17940c9c7be0cbaea856064d87c2850e3824ab9cbb75e7657b74bcd"
+      },
+      {
+        "bytes": 2145,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n7/n7__v__n14.tsv",
+        "sha256": "bd4b25d9b7c56b4fb64af00d5429c42fd6cac312f9c29a4fc1048b5e1ebdeb3d"
+      },
+      {
+        "bytes": 1846,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n7/n7__v__n5.tsv",
+        "sha256": "f038e6b402b7907dbe04f8e6f52f727629da7eb29e55f8839134cf22bbc6d76c"
+      },
+      {
+        "bytes": 2002,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n7/n7__v__n6.tsv",
+        "sha256": "55788c16fbd9bc9f6cb045bb48f90c696052c96f7db03230e33379b9919eed57"
+      },
+      {
+        "bytes": 2153,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n7/n7__v__n9.tsv",
+        "sha256": "5de566076eb17a6326b3f4e21e1444f8fae589193379b2fefee184ed61485e7e"
+      },
+      {
+        "bytes": 2190,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n9/n9__v__n11.tsv",
+        "sha256": "03f8a44e7e9c7ca41077551ecc5cf2f1c7865c2be7d806cb3d26ea9b18d2be5e"
+      },
+      {
+        "bytes": 2309,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n9/n9__v__n12.tsv",
+        "sha256": "a9f88a16e9b7beadbbc63152d4ffaeec70498410e99d2a766cf0ae4772692c21"
+      },
+      {
+        "bytes": 2278,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n9/n9__v__n13.tsv",
+        "sha256": "f80eab69663f430772a841ae0e0083fa66524856641d937aad70d248b492ae7a"
+      },
+      {
+        "bytes": 2240,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n9/n9__v__n14.tsv",
+        "sha256": "95258025ad95b7612aaf89758ad9ec1f1468e34b7d933fecba5756d7b0b6f35f"
+      },
+      {
+        "bytes": 1847,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n9/n9__v__n5.tsv",
+        "sha256": "e5d8d160ac53858f66877df467b147adc058236ef87026a9441299cb65049b0b"
+      },
+      {
+        "bytes": 1993,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n9/n9__v__n6.tsv",
+        "sha256": "8f4727dc564555d369edf14f8ae1f90b081ba8b52f5317c7e71f1a1a1b4d723f"
+      },
+      {
+        "bytes": 2153,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/results/Results_Sep17/Orthologues/Orthologues_n9/n9__v__n7.tsv",
+        "sha256": "ae251c8cabfc1c12fe87b05249816d508867ffa53a7ecfa8184d72c7ecbcfe0d"
+      }
+    ],
+    "checkpoint_groups": 99,
+    "input_genes": 645,
+    "native_pair_rows": 1834
+  },
+  "publication_ready": false,
+  "reference_admission": {
+    "bytes": 2217675,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/simulation_variable_native_results_20260916.json",
+    "sha256": "cc99fc31c3433809098212d3c8dc12f4ad829b4cfeb66dabcb13aede4e95258f"
+  },
+  "runtime": {
+    "bytes": 29932,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/runtime.before.json",
+    "sha256": "70df04e518ba9c4791d9e8089c00e18715b319d9abb529b5f40d8bf1be6ea5b0"
+  },
+  "source": {
+    "bytes": 5184,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_dgx_orthofinder_smoke.py",
+    "sha256": "5c3f59d52000b810a4a6238f3646783d0b639ab054376c517e45cdfaa7170b00"
+  },
+  "status": "full_pipeline_fixture_audited",
+  "trace": {
+    "bytes": 1047108,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1/execve.log",
+    "sha256": "43cbfe24f4d81f6c5ee10c773665ae49191df25f606591dadc7707c254a06725"
+  }
+}

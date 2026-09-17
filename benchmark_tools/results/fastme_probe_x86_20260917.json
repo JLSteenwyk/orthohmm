@@ -1,0 +1,1267 @@
+{
+  "binary": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/lib/python3.12/site-packages/orthofinder/bin/fastme",
+    "sha256": "119f6b507ab735e64f3e58d339f8d4ca0ae419a9d97e37379b72d363a50320d6"
+  },
+  "example": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_source_audit_v1/fastme-2.1.4/examples/distances.input.mat",
+    "sha256": "31cd96775c7a6b320eb5cdf8b8f3a23afc5eb44171dab595f82c7a98c0583a52"
+  },
+  "limitations": [
+    "Finite example/synthetic matrices and two repeats, not general cross-platform equivalence.",
+    "This tests the STAG command shape, not end-to-end STAG species-tree inference.",
+    "Not a scientific timing result; no inference accuracy is evaluated."
+  ],
+  "machine": "x86_64",
+  "runs": [
+    {
+      "argv": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/lib/python3.12/site-packages/orthofinder/bin/fastme",
+        "-i",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_0_0/input.mat",
+        "-o",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_0_0/tree.nwk",
+        "-I",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_0_0/info.txt",
+        "-w",
+        "O",
+        "-s",
+        "-n"
+      ],
+      "canonical_tree": [
+        {
+          "length": -0.027143,
+          "split": [
+            "Aurora"
+          ]
+        },
+        {
+          "length": 0.085983,
+          "split": [
+            "Aurora",
+            "Boylii"
+          ]
+        },
+        {
+          "length": 0.13329,
+          "split": [
+            "Aurora",
+            "Boylii",
+            "Muscosa"
+          ]
+        },
+        {
+          "length": 0.036248,
+          "split": [
+            "Aurora",
+            "Boylii",
+            "Muscosa",
+            "Pretiosa"
+          ]
+        },
+        {
+          "length": 0.127143,
+          "split": [
+            "Boylii"
+          ]
+        },
+        {
+          "length": 0.07855,
+          "split": [
+            "Cascadae"
+          ]
+        },
+        {
+          "length": 0.027753,
+          "split": [
+            "Cascadae",
+            "Temporaria"
+          ]
+        },
+        {
+          "length": 0.23895,
+          "split": [
+            "Catesbaiana"
+          ]
+        },
+        {
+          "length": 0.244503,
+          "split": [
+            "Catesbaiana",
+            "Pipiens",
+            "Tarahumarae"
+          ]
+        },
+        {
+          "length": 0.061159,
+          "split": [
+            "Muscosa"
+          ]
+        },
+        {
+          "length": 0.179167,
+          "split": [
+            "Pipiens"
+          ]
+        },
+        {
+          "length": 0.095133,
+          "split": [
+            "Pipiens",
+            "Tarahumarae"
+          ]
+        },
+        {
+          "length": -0.007592,
+          "split": [
+            "Pretiosa"
+          ]
+        },
+        {
+          "length": 0.300833,
+          "split": [
+            "Tarahumarae"
+          ]
+        },
+        {
+          "length": 0.32145,
+          "split": [
+            "Temporaria"
+          ]
+        }
+      ],
+      "exit_code": 0,
+      "fixture": "archive_0",
+      "input": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_0_0/input.mat",
+        "sha256": "5da598c9da12eb87a8d6b4682eeb1378077660e4608a6d74ae213d04dd0e98bc"
+      },
+      "repeat": 0,
+      "stderr": "",
+      "stdout": "\n\n#  Analysing dataset 1\n\n . Computing tree...\n\n . Performing NNI...\n\n . Performing SPR...\n\n . Time used 0h00m00s\n",
+      "tree": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_0_0/tree.nwk",
+        "sha256": "f24973db72e199119d638a945774c48b271a2d2ea87c8b0393b747a06ff4a329"
+      }
+    },
+    {
+      "argv": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/lib/python3.12/site-packages/orthofinder/bin/fastme",
+        "-i",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_0_1/input.mat",
+        "-o",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_0_1/tree.nwk",
+        "-I",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_0_1/info.txt",
+        "-w",
+        "O",
+        "-s",
+        "-n"
+      ],
+      "canonical_tree": [
+        {
+          "length": -0.027143,
+          "split": [
+            "Aurora"
+          ]
+        },
+        {
+          "length": 0.085983,
+          "split": [
+            "Aurora",
+            "Boylii"
+          ]
+        },
+        {
+          "length": 0.13329,
+          "split": [
+            "Aurora",
+            "Boylii",
+            "Muscosa"
+          ]
+        },
+        {
+          "length": 0.036248,
+          "split": [
+            "Aurora",
+            "Boylii",
+            "Muscosa",
+            "Pretiosa"
+          ]
+        },
+        {
+          "length": 0.127143,
+          "split": [
+            "Boylii"
+          ]
+        },
+        {
+          "length": 0.07855,
+          "split": [
+            "Cascadae"
+          ]
+        },
+        {
+          "length": 0.027753,
+          "split": [
+            "Cascadae",
+            "Temporaria"
+          ]
+        },
+        {
+          "length": 0.23895,
+          "split": [
+            "Catesbaiana"
+          ]
+        },
+        {
+          "length": 0.244503,
+          "split": [
+            "Catesbaiana",
+            "Pipiens",
+            "Tarahumarae"
+          ]
+        },
+        {
+          "length": 0.061159,
+          "split": [
+            "Muscosa"
+          ]
+        },
+        {
+          "length": 0.179167,
+          "split": [
+            "Pipiens"
+          ]
+        },
+        {
+          "length": 0.095133,
+          "split": [
+            "Pipiens",
+            "Tarahumarae"
+          ]
+        },
+        {
+          "length": -0.007592,
+          "split": [
+            "Pretiosa"
+          ]
+        },
+        {
+          "length": 0.300833,
+          "split": [
+            "Tarahumarae"
+          ]
+        },
+        {
+          "length": 0.32145,
+          "split": [
+            "Temporaria"
+          ]
+        }
+      ],
+      "exit_code": 0,
+      "fixture": "archive_0",
+      "input": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_0_1/input.mat",
+        "sha256": "5da598c9da12eb87a8d6b4682eeb1378077660e4608a6d74ae213d04dd0e98bc"
+      },
+      "repeat": 1,
+      "stderr": "",
+      "stdout": "\n\n#  Analysing dataset 1\n\n . Computing tree...\n\n . Performing NNI...\n\n . Performing SPR...\n\n . Time used 0h00m00s\n",
+      "tree": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_0_1/tree.nwk",
+        "sha256": "f24973db72e199119d638a945774c48b271a2d2ea87c8b0393b747a06ff4a329"
+      }
+    },
+    {
+      "argv": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/lib/python3.12/site-packages/orthofinder/bin/fastme",
+        "-i",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_1_0/input.mat",
+        "-o",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_1_0/tree.nwk",
+        "-I",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_1_0/info.txt",
+        "-w",
+        "O",
+        "-s",
+        "-n"
+      ],
+      "canonical_tree": [
+        {
+          "length": -0.017143,
+          "split": [
+            "Aurora"
+          ]
+        },
+        {
+          "length": 0.067797,
+          "split": [
+            "Aurora",
+            "Boylii"
+          ]
+        },
+        {
+          "length": 0.146894,
+          "split": [
+            "Aurora",
+            "Boylii",
+            "Muscosa"
+          ]
+        },
+        {
+          "length": 0.030273,
+          "split": [
+            "Aurora",
+            "Boylii",
+            "Muscosa",
+            "Pretiosa"
+          ]
+        },
+        {
+          "length": 0.127143,
+          "split": [
+            "Boylii"
+          ]
+        },
+        {
+          "length": 0.09389,
+          "split": [
+            "Cascadae"
+          ]
+        },
+        {
+          "length": 0.008297,
+          "split": [
+            "Cascadae",
+            "Temporaria"
+          ]
+        },
+        {
+          "length": 0.225447,
+          "split": [
+            "Catesbaiana"
+          ]
+        },
+        {
+          "length": 0.258054,
+          "split": [
+            "Catesbaiana",
+            "Pipiens",
+            "Tarahumarae"
+          ]
+        },
+        {
+          "length": 0.049346,
+          "split": [
+            "Muscosa"
+          ]
+        },
+        {
+          "length": 0.180833,
+          "split": [
+            "Pipiens"
+          ]
+        },
+        {
+          "length": 0.091132,
+          "split": [
+            "Pipiens",
+            "Tarahumarae"
+          ]
+        },
+        {
+          "length": 0.00246,
+          "split": [
+            "Pretiosa"
+          ]
+        },
+        {
+          "length": 0.279167,
+          "split": [
+            "Tarahumarae"
+          ]
+        },
+        {
+          "length": 0.32611,
+          "split": [
+            "Temporaria"
+          ]
+        }
+      ],
+      "exit_code": 0,
+      "fixture": "archive_1",
+      "input": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_1_0/input.mat",
+        "sha256": "7a64909fff14c0796da9ab0f740ae47ad768985d0192d28fdaf10ef38322810f"
+      },
+      "repeat": 0,
+      "stderr": "",
+      "stdout": "\n\n#  Analysing dataset 1\n\n . Computing tree...\n\n . Performing NNI...\n\n . Performing SPR...\n\n . Time used 0h00m00s\n",
+      "tree": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_1_0/tree.nwk",
+        "sha256": "4c84dc01d99659521bc871290d31feb1e36c410b022db2003cfe73234519e9dd"
+      }
+    },
+    {
+      "argv": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/lib/python3.12/site-packages/orthofinder/bin/fastme",
+        "-i",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_1_1/input.mat",
+        "-o",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_1_1/tree.nwk",
+        "-I",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_1_1/info.txt",
+        "-w",
+        "O",
+        "-s",
+        "-n"
+      ],
+      "canonical_tree": [
+        {
+          "length": -0.017143,
+          "split": [
+            "Aurora"
+          ]
+        },
+        {
+          "length": 0.067797,
+          "split": [
+            "Aurora",
+            "Boylii"
+          ]
+        },
+        {
+          "length": 0.146894,
+          "split": [
+            "Aurora",
+            "Boylii",
+            "Muscosa"
+          ]
+        },
+        {
+          "length": 0.030273,
+          "split": [
+            "Aurora",
+            "Boylii",
+            "Muscosa",
+            "Pretiosa"
+          ]
+        },
+        {
+          "length": 0.127143,
+          "split": [
+            "Boylii"
+          ]
+        },
+        {
+          "length": 0.09389,
+          "split": [
+            "Cascadae"
+          ]
+        },
+        {
+          "length": 0.008297,
+          "split": [
+            "Cascadae",
+            "Temporaria"
+          ]
+        },
+        {
+          "length": 0.225447,
+          "split": [
+            "Catesbaiana"
+          ]
+        },
+        {
+          "length": 0.258054,
+          "split": [
+            "Catesbaiana",
+            "Pipiens",
+            "Tarahumarae"
+          ]
+        },
+        {
+          "length": 0.049346,
+          "split": [
+            "Muscosa"
+          ]
+        },
+        {
+          "length": 0.180833,
+          "split": [
+            "Pipiens"
+          ]
+        },
+        {
+          "length": 0.091132,
+          "split": [
+            "Pipiens",
+            "Tarahumarae"
+          ]
+        },
+        {
+          "length": 0.00246,
+          "split": [
+            "Pretiosa"
+          ]
+        },
+        {
+          "length": 0.279167,
+          "split": [
+            "Tarahumarae"
+          ]
+        },
+        {
+          "length": 0.32611,
+          "split": [
+            "Temporaria"
+          ]
+        }
+      ],
+      "exit_code": 0,
+      "fixture": "archive_1",
+      "input": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_1_1/input.mat",
+        "sha256": "7a64909fff14c0796da9ab0f740ae47ad768985d0192d28fdaf10ef38322810f"
+      },
+      "repeat": 1,
+      "stderr": "",
+      "stdout": "\n\n#  Analysing dataset 1\n\n . Computing tree...\n\n . Performing NNI...\n\n . Performing SPR...\n\n . Time used 0h00m00s\n",
+      "tree": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_1_1/tree.nwk",
+        "sha256": "4c84dc01d99659521bc871290d31feb1e36c410b022db2003cfe73234519e9dd"
+      }
+    },
+    {
+      "argv": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/lib/python3.12/site-packages/orthofinder/bin/fastme",
+        "-i",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_2_0/input.mat",
+        "-o",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_2_0/tree.nwk",
+        "-I",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_2_0/info.txt",
+        "-w",
+        "O",
+        "-s",
+        "-n"
+      ],
+      "canonical_tree": [
+        {
+          "length": -0.016429,
+          "split": [
+            "Aurora"
+          ]
+        },
+        {
+          "length": 0.08192,
+          "split": [
+            "Aurora",
+            "Boylii"
+          ]
+        },
+        {
+          "length": 0.132826,
+          "split": [
+            "Aurora",
+            "Boylii",
+            "Muscosa"
+          ]
+        },
+        {
+          "length": 0.039858,
+          "split": [
+            "Aurora",
+            "Boylii",
+            "Muscosa",
+            "Pretiosa"
+          ]
+        },
+        {
+          "length": 0.116429,
+          "split": [
+            "Boylii"
+          ]
+        },
+        {
+          "length": 0.088016,
+          "split": [
+            "Cascadae"
+          ]
+        },
+        {
+          "length": 0.022585,
+          "split": [
+            "Cascadae",
+            "Temporaria"
+          ]
+        },
+        {
+          "length": 0.241554,
+          "split": [
+            "Catesbaiana"
+          ]
+        },
+        {
+          "length": 0.243725,
+          "split": [
+            "Catesbaiana",
+            "Pipiens",
+            "Tarahumarae"
+          ]
+        },
+        {
+          "length": 0.054509,
+          "split": [
+            "Muscosa"
+          ]
+        },
+        {
+          "length": 0.180833,
+          "split": [
+            "Pipiens"
+          ]
+        },
+        {
+          "length": 0.091869,
+          "split": [
+            "Pipiens",
+            "Tarahumarae"
+          ]
+        },
+        {
+          "length": -0.010526,
+          "split": [
+            "Pretiosa"
+          ]
+        },
+        {
+          "length": 0.299167,
+          "split": [
+            "Tarahumarae"
+          ]
+        },
+        {
+          "length": 0.311984,
+          "split": [
+            "Temporaria"
+          ]
+        }
+      ],
+      "exit_code": 0,
+      "fixture": "archive_2",
+      "input": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_2_0/input.mat",
+        "sha256": "47aaf98afabe74c800e5b985ee8cdcd28d1390fd50f56b4e81fb3cc45d20ddb3"
+      },
+      "repeat": 0,
+      "stderr": "",
+      "stdout": "\n\n#  Analysing dataset 1\n\n . Computing tree...\n\n . Performing NNI...\n\n . Performing SPR...\n\n . Time used 0h00m00s\n",
+      "tree": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_2_0/tree.nwk",
+        "sha256": "693136fdd5b1ef7300d4a20e4ce5153b025462ebee489705aa14c9c405894ba6"
+      }
+    },
+    {
+      "argv": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/lib/python3.12/site-packages/orthofinder/bin/fastme",
+        "-i",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_2_1/input.mat",
+        "-o",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_2_1/tree.nwk",
+        "-I",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_2_1/info.txt",
+        "-w",
+        "O",
+        "-s",
+        "-n"
+      ],
+      "canonical_tree": [
+        {
+          "length": -0.016429,
+          "split": [
+            "Aurora"
+          ]
+        },
+        {
+          "length": 0.08192,
+          "split": [
+            "Aurora",
+            "Boylii"
+          ]
+        },
+        {
+          "length": 0.132826,
+          "split": [
+            "Aurora",
+            "Boylii",
+            "Muscosa"
+          ]
+        },
+        {
+          "length": 0.039858,
+          "split": [
+            "Aurora",
+            "Boylii",
+            "Muscosa",
+            "Pretiosa"
+          ]
+        },
+        {
+          "length": 0.116429,
+          "split": [
+            "Boylii"
+          ]
+        },
+        {
+          "length": 0.088016,
+          "split": [
+            "Cascadae"
+          ]
+        },
+        {
+          "length": 0.022585,
+          "split": [
+            "Cascadae",
+            "Temporaria"
+          ]
+        },
+        {
+          "length": 0.241554,
+          "split": [
+            "Catesbaiana"
+          ]
+        },
+        {
+          "length": 0.243725,
+          "split": [
+            "Catesbaiana",
+            "Pipiens",
+            "Tarahumarae"
+          ]
+        },
+        {
+          "length": 0.054509,
+          "split": [
+            "Muscosa"
+          ]
+        },
+        {
+          "length": 0.180833,
+          "split": [
+            "Pipiens"
+          ]
+        },
+        {
+          "length": 0.091869,
+          "split": [
+            "Pipiens",
+            "Tarahumarae"
+          ]
+        },
+        {
+          "length": -0.010526,
+          "split": [
+            "Pretiosa"
+          ]
+        },
+        {
+          "length": 0.299167,
+          "split": [
+            "Tarahumarae"
+          ]
+        },
+        {
+          "length": 0.311984,
+          "split": [
+            "Temporaria"
+          ]
+        }
+      ],
+      "exit_code": 0,
+      "fixture": "archive_2",
+      "input": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_2_1/input.mat",
+        "sha256": "47aaf98afabe74c800e5b985ee8cdcd28d1390fd50f56b4e81fb3cc45d20ddb3"
+      },
+      "repeat": 1,
+      "stderr": "",
+      "stdout": "\n\n#  Analysing dataset 1\n\n . Computing tree...\n\n . Performing NNI...\n\n . Performing SPR...\n\n . Time used 0h00m00s\n",
+      "tree": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/archive_2_1/tree.nwk",
+        "sha256": "693136fdd5b1ef7300d4a20e4ce5153b025462ebee489705aa14c9c405894ba6"
+      }
+    },
+    {
+      "argv": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/lib/python3.12/site-packages/orthofinder/bin/fastme",
+        "-i",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/additive_0/input.mat",
+        "-o",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/additive_0/tree.nwk",
+        "-I",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/additive_0/info.txt",
+        "-w",
+        "O",
+        "-s",
+        "-n"
+      ],
+      "canonical_tree": [
+        {
+          "length": 1.0,
+          "split": [
+            "s0"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s0",
+            "s1"
+          ]
+        },
+        {
+          "length": 2.0,
+          "split": [
+            "s0",
+            "s1",
+            "s2",
+            "s3"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s1"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s2"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s2",
+            "s3"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s3"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s4"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s4",
+            "s5"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s5"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s6"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s6",
+            "s7"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s7"
+          ]
+        }
+      ],
+      "exit_code": 0,
+      "fixture": "additive",
+      "input": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/additive_0/input.mat",
+        "sha256": "b882816d9be0a1ff9f93ab022b29930758fff680eb398ade377b9c63ee2dfd6c"
+      },
+      "repeat": 0,
+      "stderr": "",
+      "stdout": "\n\n#  Analysing dataset 1\n\n . Computing tree...\n\n . Performing NNI...\n\n . Performing SPR...\n\n . Time used 0h00m00s\n",
+      "tree": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/additive_0/tree.nwk",
+        "sha256": "f69eee542359a055244df55e8d199114bcb5f611a46a0912c1210c9cd13250d1"
+      }
+    },
+    {
+      "argv": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/lib/python3.12/site-packages/orthofinder/bin/fastme",
+        "-i",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/additive_1/input.mat",
+        "-o",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/additive_1/tree.nwk",
+        "-I",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/additive_1/info.txt",
+        "-w",
+        "O",
+        "-s",
+        "-n"
+      ],
+      "canonical_tree": [
+        {
+          "length": 1.0,
+          "split": [
+            "s0"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s0",
+            "s1"
+          ]
+        },
+        {
+          "length": 2.0,
+          "split": [
+            "s0",
+            "s1",
+            "s2",
+            "s3"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s1"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s2"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s2",
+            "s3"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s3"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s4"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s4",
+            "s5"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s5"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s6"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s6",
+            "s7"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s7"
+          ]
+        }
+      ],
+      "exit_code": 0,
+      "fixture": "additive",
+      "input": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/additive_1/input.mat",
+        "sha256": "b882816d9be0a1ff9f93ab022b29930758fff680eb398ade377b9c63ee2dfd6c"
+      },
+      "repeat": 1,
+      "stderr": "",
+      "stdout": "\n\n#  Analysing dataset 1\n\n . Computing tree...\n\n . Performing NNI...\n\n . Performing SPR...\n\n . Time used 0h00m00s\n",
+      "tree": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/additive_1/tree.nwk",
+        "sha256": "f69eee542359a055244df55e8d199114bcb5f611a46a0912c1210c9cd13250d1"
+      }
+    },
+    {
+      "argv": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/lib/python3.12/site-packages/orthofinder/bin/fastme",
+        "-i",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/tied_0/input.mat",
+        "-o",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/tied_0/tree.nwk",
+        "-I",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/tied_0/info.txt",
+        "-w",
+        "O",
+        "-s",
+        "-n"
+      ],
+      "canonical_tree": [
+        {
+          "length": 1.0,
+          "split": [
+            "s0"
+          ]
+        },
+        {
+          "length": 0.0,
+          "split": [
+            "s0",
+            "s1"
+          ]
+        },
+        {
+          "length": 0.0,
+          "split": [
+            "s0",
+            "s1",
+            "s2"
+          ]
+        },
+        {
+          "length": 0.0,
+          "split": [
+            "s0",
+            "s1",
+            "s2",
+            "s3"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s1"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s2"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s3"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s4"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s5"
+          ]
+        },
+        {
+          "length": 0.0,
+          "split": [
+            "s5",
+            "s6",
+            "s7"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s6"
+          ]
+        },
+        {
+          "length": 0.0,
+          "split": [
+            "s6",
+            "s7"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s7"
+          ]
+        }
+      ],
+      "exit_code": 0,
+      "fixture": "tied",
+      "input": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/tied_0/input.mat",
+        "sha256": "0a5b99035b33b8862a071233423f145a90669e4bf15e7680336728e0fa29cc9f"
+      },
+      "repeat": 0,
+      "stderr": "",
+      "stdout": "\n\n#  Analysing dataset 1\n\n . Computing tree...\n\n . Performing NNI...\n\n . Performing SPR...\n\n . Time used 0h00m00s\n",
+      "tree": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/tied_0/tree.nwk",
+        "sha256": "07fdac56a6d1d8881a7ae71abc2b4f1c58adf1738b1ceb43bc13a2099fb51792"
+      }
+    },
+    {
+      "argv": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/lib/python3.12/site-packages/orthofinder/bin/fastme",
+        "-i",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/tied_1/input.mat",
+        "-o",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/tied_1/tree.nwk",
+        "-I",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/tied_1/info.txt",
+        "-w",
+        "O",
+        "-s",
+        "-n"
+      ],
+      "canonical_tree": [
+        {
+          "length": 1.0,
+          "split": [
+            "s0"
+          ]
+        },
+        {
+          "length": 0.0,
+          "split": [
+            "s0",
+            "s1"
+          ]
+        },
+        {
+          "length": 0.0,
+          "split": [
+            "s0",
+            "s1",
+            "s2"
+          ]
+        },
+        {
+          "length": 0.0,
+          "split": [
+            "s0",
+            "s1",
+            "s2",
+            "s3"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s1"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s2"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s3"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s4"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s5"
+          ]
+        },
+        {
+          "length": 0.0,
+          "split": [
+            "s5",
+            "s6",
+            "s7"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s6"
+          ]
+        },
+        {
+          "length": 0.0,
+          "split": [
+            "s6",
+            "s7"
+          ]
+        },
+        {
+          "length": 1.0,
+          "split": [
+            "s7"
+          ]
+        }
+      ],
+      "exit_code": 0,
+      "fixture": "tied",
+      "input": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/tied_1/input.mat",
+        "sha256": "0a5b99035b33b8862a071233423f145a90669e4bf15e7680336728e0fa29cc9f"
+      },
+      "repeat": 1,
+      "stderr": "",
+      "stdout": "\n\n#  Analysing dataset 1\n\n . Computing tree...\n\n . Performing NNI...\n\n . Performing SPR...\n\n . Time used 0h00m00s\n",
+      "tree": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastme_probe_x86_v1/tied_1/tree.nwk",
+        "sha256": "07fdac56a6d1d8881a7ae71abc2b4f1c58adf1738b1ceb43bc13a2099fb51792"
+      }
+    }
+  ],
+  "source": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_fastme_distance.py",
+    "sha256": "ef100cdef0d70414a480a4f9f41285f284f02ab19cd29438da059aaeb87cef1a"
+  },
+  "status": "finite_distance_probe"
+}

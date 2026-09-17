@@ -1,5 +1,28 @@
 # Publication Progress
 
+## FastME and Full DGX Comparator Smoke (2026-09-17)
+
+Previous turn progressed SwissTrees intervals and pushed1c0788f. Re-read
+the full objective. FastME21635 is now COMPLETED0:0; archive size/gzip/hash
+validated and member paths inspected. Its Linux64 binary is byte-identical
+to the bundled OrthoFinder binary, but HTTP source provenance remains a
+limitation. Native ARM build21636 completed with no source changes and
+--disable-OpenMP. Five matrices, two repeats and two hosts yield20 successful
+calls and byte-identical paired trees using STAG's distance-tree flags.
+
+Fresh full OrthoFinder smoke21637 completed0:0. Independent output audit
+finds exactly matching99 MCL groups and1834 native pairs versus the admitted
+x86 fixture, with input/runtime/command/completion/graph/table checks.
+The fixture itself does not execute FastME; finite direct probes are not
+general STAG or cross-platform equivalence. See DGX_SCALING_MIGRATION_20260917.md
+for commands, hashes, logs and limits. All36 focused tests pass.
+
+No scientific timing launched. Remaining immediate tasks are the prospective
+20CPU96GiB tool/environment/command freeze, launch/admission workflow and
+full-load collector-overhead assessment before the27 sequential runs.
+Other QfO uncertainty, full ablations, biological application and broader
+publication/release gates remain open.
+
 ## SwissTrees Paired Intervals Completed (2026-09-17)
 
 Previous turn progressed the count audit and froze the protocol in9214a81.

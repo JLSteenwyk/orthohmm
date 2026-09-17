@@ -637,3 +637,64 @@ SHA256:
 FastME retrieval21627 terminatedFAILED18:0 after33:17, with1064907 bytes
 (171027 bytes remaining). Resumed only after terminal confirmation as21632,
 same pinned fetch recipe and partial file; no source extraction/build yet.
+
+## FastME Build and Full OrthoFinder Fixture
+
+Retrieval21635 completed0:0 in3:56, after retaining the prior incomplete
+transfers. Archive1235934 bytes; gzip validation passed; SHA256
+c47ae24b699c869db2d726adbe38e053179dc0c7042ccacc7a7314082ba3297c.
+All86 tar members are regular files/directories beneath fastme-2.1.4,
+without links, absolute paths or parent traversal. Source/configure metadata
+declares2.1.4. The bundled archive Linux64 non-OpenMP binary exactly matches
+the independently retained OrthoFinder package binary, SHA256
+119f6b507ab735e64f3e58d339f8d4ca0ae419a9d97e37379b72d363a50320d6.
+This corroborates the version; it does not authenticate the source archive
+retrieved by HTTP. No independent historical source digest was recovered.
+
+build_dgx_fastme.sh extracts without precompiled binaries and configures
+--disable-OpenMP, matching the bundled variant. No source/build-system patches
+were needed. Slurm21636 completed0:0 in3s with4CPUs4GiB, GCC13.3. Source
+checksums pass after installation. Version reports FastME2.1.4; ARM binary
+fastme-prefix-v1/bin/fastme SHA256
+2ea7efd4b791cc9fd8b90fd6f5575815d41804268c98444b867c6bf698cf1be9.
+Build log benchmarks/work/fastme_build_21636.log SHA256
+60227e6a9a3886e5256eda4c05c8131c81104bd465d0cac2d9f2912bf5dd380c.
+
+probe_fastme_distance.py tests all three supplied archive matrices plus
+an additive8-taxon and a tied8-taxon matrix, twice each on each architecture.
+Commands use -w O -s -n as in STAG, with explicit input/output/info paths.
+All20 native calls succeed; the ten paired output trees are byte-identical
+across hosts. Canonical split/branch-length maps also agree, with complete
+unique leaf sets and finite branches. Initial preflight rejected the archive
+example because it contains three matrices rather than one; the parser now
+retains and tests all three. No failed native run was omitted.
+
+Reports:
+- fastme_probe_x86_20260917.json SHA256
+  612f73b4fc18d47a103d368cd43f0350affddc48a376f1470f6a93fbe835b549.
+- fastme_probe_arm_20260917.json SHA256
+  ede63caea00f8fb295faa95f0766237f6a02902329b0bbce78476c6280f442cf.
+
+Fresh full OrthoFinder3.1.5 smoke21637 completed0:0 in27s with4CPUs8GiB.
+run_dgx_orthofinder_full_smoke.sh uses -f INPUT -t4 -a4 -Sdiamond -o OUTPUT,
+without -og, against the same missing20_20261101 fixture. Runtime and source
+snapshots are unchanged before/after; inputs and isolated copies rehash
+correctly. Trace is retained, not counted as scientific timing evidence.
+
+audit_dgx_orthofinder_smoke.py validates native version, command, completion,
+finite graph weights, complete MCL membership, both orientations of all
+species-pair tables, and input identity. It rechecks retained x86 prediction
+artifact hashes against the frozen simulation admission before comparing.
+All99 checkpoint groups and1834 unique native ortholog pairs match exactly.
+Report dgx_orthofinder_full_smoke_20260917.json SHA256
+f44a71b05662ea9e737f3bff66f742cc671d998a2f55174ab3ea7f2142d3c0f3.
+Raw local root benchmarks/work/dgx_orthofinder_full_smoke_v1/orthofinder_full_smoke_v1;
+remote recipe/output remain in the dedicated project directory.
+
+This one fixture did not execute FastME inside the pipeline. Direct distance
+probes verify finite inputs and the command form, not full STAG behavior on
+larger datasets. HOG/tree identity, general cross-architecture equivalence,
+historical child attribution and controlled performance remain unestablished.
+All36 focused probe/output/runtime tests pass, including6 new probe tests.
+The prospective20CPU96GiB freeze and27-run executor still need finalization;
+zero scientific timing runs have started.
