@@ -1,5 +1,37 @@
 # Publication Progress
 
+## Biological Endpoint and Bootstrap Arithmetic Implemented (2026-09-17)
+
+Previous continuation launched21661and pushed5386583. Re-read objective.
+Implemented outcome-blind scoring functions using the frozen protocol, tested
+only on synthetic groups. All cohort rows remain; input exclusions have no
+invented endpoint, incomplete assignments do not count as separation, explicit
+singletons can split but cannot by themselves provide homolog support. Each
+anchor group requires its own non-S.cerevisiae homolog support. Coverage can
+be high in merged groups and is not called correct orthology. Known foreign
+pillar members, unmapped members, fragmentation and unassigned reference genes
+are retained separately. Duplicate/foreign prediction IDs are rejected.
+
+Implemented four oriented contrasts times three endpoints with20,000shared
+PCG64seed20260920pillar draws, pair-weighted recomputed means, fixed12-endpoint
+Bonferroni percentile bounds, and wins/losses/ties. Missing method runs remain
+unavailable, not zeros, without shrinking multiplicity. Outcome-dependent
+missing endpoints/denominators or incomplete row inventories reject. Undefined
+coverage replicates are reported with unavailable intervals, never dropped.
+No native application prediction memberships or accuracy outcomes read yet.
+
+21new scoring/bootstrap tests pass. Full local unit suite2,053passed49.06s.
+Whole-worktree whitespace check encounters existing unrelated sample-output
+whitespace; those files remain untouched. Exact staged changes checked separately.
+
+21661_0COMPLETED0:0(scheduler3:47); execution receipt reports native exit0,
+no timeout, and all three runtime/system/recipe identities match before/after.
+Its143.21s recorded command elapsed is uncontrolled original-host evidence,
+not a controlled timing comparison. Native output admission is still pending.
+21661_1verifiedRUNNING2:07; OrthoFinder/Sonic tasksqueued. DGX21656_3RUNNING12:58,
+first3complete,23queued. Next native-format/admission adapters, then score only
+admitted outputs and retain failure statuses, complete table and case figures.
+
 ## Biological Application Submitted (2026-09-17)
 
 After0f762b0 was pushed, submitted sequential Slurm array21661(0-3%1),
