@@ -4750,3 +4750,24 @@ No bundle/transfer/remote installation or scientific timing executed yet.
 Remote scheduler confirms QfO21548_1running onbizon (secondstage);21584pending.
 RemoteGCC13.3.0/git/cmake/make available;diamond/mafft/FastTree/orthofinder not
 on defaultPATH (not proof no installations elsewhere). Fullunit1,756passed42.74s.
+
+### Frozen Scaling Inputs Transferred to DGX (2026-09-17)
+
+Previous user-facing turn rechecked access/capacity but did not advance runtime
+preparation. Re-read the full objective and confirmed QfO21548_1live11:35;
+stages2/3 remain queued and21584awaits the array. No partial accuracy inspection.
+
+Created the previously absent remote orthohmm-publication project directory,
+transferred the131MiB prepared bundle, and independently verified every one of
+12input and169workflow SHA256 hashes on both hosts. Manifest SHA
+fcff891fc3d787df52585eb3788a3dbe6d400e8699c4f0f80ca2b66a4e6b0eb0
+also matches; remote bundle has no symlinks. Cloned the authorized repository
+into a fresh core directory, detached at frozen7f3a9e4, verified clean status,
+tree8138751a69846925d55f879fd5ea413b16907a3d and absence of native libraries.
+Existing remote projects and conda environments remain untouched.
+
+See DGX_SCALING_MIGRATION_20260917.md for destination/provenance and remaining
+ARM gates. No inference or package installation yet;0/27scaling runs started.
+Transfer is not runtime validation or a timing result. Next establish an
+isolated, version-recorded ARM environment and unchanged-source native build,
+then numerical/output checks before target manifests and controlled runs.

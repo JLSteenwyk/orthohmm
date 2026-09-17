@@ -38,7 +38,8 @@ ARM timings with historical x86 measurements or label them32-CPU results.
 This is a prospective infrastructure change before any scientific scaling
 inference, not outcome-based tuning. New resource/command/runtime manifests
 must be frozen and checked on the destination before execution. No scientific
-run, transfer or package installation has started there.
+run or package installation has started there. The verified transfer below
+supersedes the original pre-transfer status.
 
 ## Architecture Gate
 
@@ -64,3 +65,31 @@ It does not package machine-specific binaries, predictions or private keys;
 nor does it claim a dependency lock or completed transfer. Native build,
 destination-specific manifests, execution-wrapper integration and dedicated
 workload admission remain outstanding.
+
+## Verified Transfer
+
+Created a new, previously absent project directory at
+`/home/jlsteenwyk/projects/orthohmm-publication` on Spark. Approximately3.2TiB
+was available on its filesystem. Copied the131MiB local
+`benchmarks/work/scaling_transfer_v1` bundle using rsync with checksums,
+strict known-host SSH verification, no deletion and no replacement of existing
+files. No unrelated project or environment was modified.
+
+All12 FASTA inputs and169 workflow files passed independent SHA256 checks both
+locally and remotely. The remote bundle contains no symlinks. Its manifest SHA256
+matches on both hosts:
+`fcff891fc3d787df52585eb3788a3dbe6d400e8699c4f0f80ca2b66a4e6b0eb0`.
+The workflow revision is2ad97c21e381a34c3df233efb8a023b27def4f0a.
+Nested4/8/12-proteome inputs retain73266/165168/251378 proteins respectively.
+The immutable manifest's original `prepared_not_sent` status describes its
+creation; this transfer record documents the subsequent copy, not runtime
+admission. Its32CPU128GiB reference plan remains unexecuted and superseded for
+the prospective Spark panel.
+
+Cloned the authorized public repository into the fresh `core` subdirectory
+and checked out detached revision7f3a9e40dd7e79f842cc2c11fb8b548f9a802806.
+Verified HEAD tree8138751a69846925d55f879fd5ea413b16907a3d, empty git porcelain
+status and no `.so` files under the native kernel directory. No compiled x86
+runtime or predictions were transferred. This establishes source/input
+availability only; ARM dependencies, native builds, numerical equivalence,
+target commands, resource accounting and isolation are still pending.
