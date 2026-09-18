@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Sequence-Control SwissTrees Source Binding Added (2026-09-18 UTC)
+
+Previous turn progressed throughacbb7f8 with a frozen uncertainty protocol
+and tested numerical engine. Reread the full objective. Scheduler confirms
+21706_0 HMM RUNNING14:00:47 and21791 conversion RUNNING1:32:54;
+21792/21798 remain dependency-pending. No live work was restarted.
+
+Added audit_qfo_sequence_swiss.py to bind the three corrected predictions to
+their completed assessment/conversion records and exact raw SwissTrees output.
+It rejects historical or wrong-cell admissions, missing/reordered variants,
+reference pair-label/membership changes, incomplete coverage, native score
+disagreements and changed files. All18 families/10765 relations are required;
+historical data supply reference identities only. Conflicting path identities
+fail and all checked files are rehashed after assembly.
+
+74 focused tests pass in3.52s, including23 new audit cases; a full file-bound
+synthetic integration exercises conversion/execution binding and changed-raw
+rejection. CLI help passes. This is implementation evidence, not an actual
+production audit or new accuracy/uncertainty result. Upstream admissions remain
+trusted prerequisites rather than re-executed inference/scoring workflows.
+
+Next: freeze this auditor in the source-bound bootstrap runner, then apply the
+workflow only after all three real assessments are admitted. Corrected graph
+planning awaits21798; other QfO uncertainty, controlled timing and the final
+publication package remain incomplete.
+
 ## Sequence-Control SwissTrees Uncertainty Prespecified (2026-09-18 UTC)
 
 Previous turn produced additional archive-search evidence and recorded that

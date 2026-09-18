@@ -128,3 +128,28 @@ histograms; it does not estimate biological sensitivity or match calibration.
 Future report: benchmarks/work/qfo_corrected_hit_coverage_20260918/report.json.
 83 focused tests pass; actual pending-admission preflight refuses without
 output. No production diagnostic or graph-feasibility result exists yet.
+
+## SwissTrees Source-Bound Count Audit
+
+`audit_qfo_sequence_swiss.py` accepts `--inventory`, `--inventory-sha256`,
+`--baseline` and a fresh `--output`. The inventory contains a `variants` list
+in exact order `p0_c0_r0`, `all_hits`, `top100`; each entry contains `variant`
+and an `admission` record with absolute `path`, `bytes` and `sha256`.
+The baseline is the pinned original SwissTrees count audit with SHA-256
+`546bb5bd6957c8ea990324b79fa31f22b0ed721bc7d6b94b609ab15258f97183`.
+Only its reference identities/labels/membership are reused, never predictions.
+
+The auditor checks corrected admission identities, completed scorer/converter
+accounting, embedded conversion equality, inventoried raw output and file
+hashes before and after reconstruction. It compares exact pair labels and
+members to the audited reference, verifies all native family scores and macro
+statistics, and requires18 families/10765 relations. Output status is
+`corrected_qfo_sequence_swiss_counts_verified`; uncertainty remains unadmitted.
+It relies on upstream inference/scoring admissions rather than rerunning those
+entire workflows.74 focused tests pass, including23 new audit tests and an
+integrated synthetic file-bound audit with a post-admission tampering check.
+
+No production count audit has run: all three corrected assessments are still
+required. The numerical protocol is frozen in
+`QFO_SEQUENCE_UNCERTAINTY_PROTOCOL_20260918.md`; its production bootstrap
+runner, binding exact protocol/auditor/helper sources, remains to be added.
