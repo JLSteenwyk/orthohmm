@@ -40,3 +40,7 @@ Evidence:
 Use the current hash-pinned requirements when following the relocated workflow.
 Do not install the historical 12.2.0 environment for routine reproduction.
 Remote closure requires a separate API check after the fix is pushed.
+
+The immediate API check after pushea8d8f5 still returns13open alerts, retained
+in `dependency_alerts_analysis_env_after_20260917.json`. Local version-range
+remediation is verified; server-side alert closure is not yet established.

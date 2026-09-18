@@ -19,6 +19,9 @@ reproduction, figure and bootstrap tests pass. Preserved original reproduction
 evidence and documented the superseding secure pin; no scientific results,
 frozen runtime or DGX recipe changed. See `SWISS_ANALYSIS_SECURITY_20260917.md`.
 Remote alert closure still needs a separate post-push check.
+Immediate API recheck after pushea8d8f5 still returns13open alerts; retained in
+`dependency_alerts_analysis_env_after_20260917.json`. No closure claim. Final
+DGX poll: task6 RUNNING25:09, six completed,20queued.
 
 The domain-strata protocol remains frozen and unexecuted. Continue it after this
 scoped remediation, along with remaining QfO/scaling/publication requirements.
