@@ -1,5 +1,21 @@
 # Publication Progress
 
+## QfO Factorial Preparation Submitted (2026-09-17)
+
+Committed/pushed the protocol and executor as bd5229d, then created detached
+worktree `benchmarks/work/publication_qfo_factorial_v1` at full revision
+`bd5229db0b9e37396a8dd54f463c2ccd743c2527`. Initial job 21669 received a
+mistyped expected commit argument and failed the shell commit-equality gate
+in one second, before Python preparation. Its scheduler failure and log are
+retained; it was not an inference failure or observation timeout. After
+confirming terminal FAILED/1:0, submitted corrected job 21670 with the exact
+revision above. Accounting confirms RUNNING on bizon, 32 CPUs/192 GiB.
+Output target: `benchmarks/results/qfo_factorial_v1`; log:
+`benchmarks/work/qfo_factorial_prepare_21670.log`. No accuracy result yet.
+Next: verify successful preparation and all four complete candidate arms,
+then implement/admit the four frozen reconciliation runs before scoring.
+DGX 21656_7 remains independently RUNNING; tasks 0-6 completed, 8-26 pending.
+
 ## QfO Factorial Preparation (2026-09-17)
 
 Previous turn progressed GO/EC arithmetic and interval interpretation, pushed
