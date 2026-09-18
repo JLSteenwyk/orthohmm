@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Frozen Initial RBNH Edge Reconstruction (2026-09-18 UTC)
+
+Previous turn progressed through303bcb7 with joint search/grouping counts.
+Live scheduler confirms HMM21706_0 RUNNING12:53:42 and numeric21791
+RUNNING25:49; downstream21792/21795/21796 remain pending.
+
+Added trace_ob_initial_edges.py to reconstruct the complete frozen initial
+graph from the pinned retained hit pickle, capture native thresholds without
+rewriting the algorithm, and compare every admitted reference pair against
+the returned edge set. Reference labels are used only after graph construction.
+29focused tests pass, including randomized tied-score native cases. No
+clustering/search rerun, parameter change or current graph implementation
+substitution is used.
+
+Committed executor b84b69e5a66dcac34536d318cf4b1058e7e3d325 and submitted21797,
+1CPU64GiB1h,bizon,no requeue. Scheduler confirms RUNNING0:01. Protocol
+OB_INITIAL_EDGE_TRACE_20260918.md records scope/pins and required post-run
+checks. No result has yet been admitted. Singleton/profile-added edges,
+prefilter-vs-scoring rejection and causal final-group effects remain outside
+this bounded diagnostic; the full publication objective remains active.
+
 ## Joint OrthoBench Search And Stage Outcomes (2026-09-18 UTC)
 
 Previous turn progressed through0bc4fc2 with integrated assessment tests.
