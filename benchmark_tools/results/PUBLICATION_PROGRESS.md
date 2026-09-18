@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Corrected Reconciliation Native Gate (2026-09-18 UTC)
+
+Previous turn was progress: pushed2bf70fb (all-endpoint factorial table and
+Sonic export identity fix), launched corrected Sonic assessment21727 and
+dependent admission21728. Revalidated21727 live; no completed score yet.
+
+Implemented `admit_qfo_corrected_factorial_cell.py` and a2CPU/64GiB batch
+launcher. The checker joins successful raw scheduler identity, corrected
+candidate admission, exact command/source/runtime provenance, full output
+inventory, native tree/group/membership integrity and native pair checks.
+Requires984137 genes and78 distinct taxa, then rechecks artifacts and inputs.
+Successful admission explicitly does not establish accuracy or publication
+readiness. Reuses the existing scientific/native validators instead of
+changing scoring or reconciliation semantics.
+
+Created detached reconciliation executor
+`benchmarks/work/publication_qfo_corrected_reconcile_v1` at exact revision
+`2bf70fb27cc63edc7c49d38d3c7f7d09ddccca9b`; no reconciliation submitted yet.
+Focused tests:56pass. Full-universe test covers984137 synthetic identifiers;
+this is not a biological validation run. A real scheduler check against
+running job21707 rejected admission before any missing/partial output read.
+Batch syntax validation passed. See
+[scope and execution](QFO_CORRECTED_RECONCILIATION_ADMISSION_20260918.md).
+Full unit suite passed:3123 tests,1 optional test skipped,63.05seconds.
+
+Latest scheduler check: HMM21706_0 RUNNING3:52:39, Sonic assessment21727
+RUNNING8:14, DGX21656_16 RUNNING1:31:13. Their dependent jobs are preserved.
+Remaining: corrected upstream completion and actual native admission,
+corrected R-on/off pair conversion/assessment, remaining comparators and
+the other publication/generalization/resource gates. No methods retuned.
+
 ## Corrected Sonic Scoring; Original Factorial Endpoint Export (2026-09-18 UTC)
 
 Previous turn was progress: pushed bf16837 (validated factorial figure) and
