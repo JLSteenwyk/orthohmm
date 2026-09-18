@@ -150,9 +150,13 @@ Comparator method metadata and the cited OrthoHMM preprint lineage are now
 covered above. The [eight-dependency supplement](PUBLICATION_DEPENDENCY_REFERENCES_20260918.md)
 adds simulator, sequence search, alignment, MCL and tree-method references.
 The [CSL export](PUBLICATION_CITATION_EXPORT_20260918.md) now preserves complete
-deposited author lists for these original 14 references. HMM/profile libraries,
-Leiden, QfO service updates, individual reference/functional resources and
-journal-specific citation rendering remain incomplete.
+deposited author lists for these original 14 references. The
+[numeric supplement](PUBLICATION_NUMERIC_REFERENCES_20260918.md) covers
+Leiden/CPM and selected analysis dependencies; the
+[service supplement](PUBLICATION_SERVICE_REFERENCES_20260918.md) covers
+QfO2020/2022 and igraph, with explicit consortium-byline review flags.
+HMM/profile implementation attribution, individual reference/functional
+resources and journal-specific citation rendering remain incomplete.
 Full-text review of the OrthoHMM preprint remains incomplete; its metadata
 check is narrower than a review of its scientific claims or version history.
 

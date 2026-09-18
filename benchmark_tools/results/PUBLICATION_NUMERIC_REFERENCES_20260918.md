@@ -38,6 +38,7 @@ date, not a claim that its print issue appeared in March.
 
 This is a bibliographic supplement, not full-text review, version provenance,
 license clearance or proof of numerical correctness. No HMMER citation is
-used here to imply that the built-in search kernel executes HMMER. igraph,
-additional reference resources, remaining dependencies and journal-specific
+used here to imply that the built-in search kernel executes HMMER. igraph is
+now covered by the [service/library supplement](PUBLICATION_SERVICE_REFERENCES_20260918.md).
+Additional reference resources, remaining dependencies and journal-specific
 rendering still need their own coverage in the final bibliography.

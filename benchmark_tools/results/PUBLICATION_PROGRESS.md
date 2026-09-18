@@ -1,5 +1,25 @@
 # Publication Progress
 
+## QfO Service And Graph-Library Citations (2026-09-18 UTC)
+
+Previous turn progressed through0fa78fa with full regression/claim updates.
+Live scheduler confirms HMM21706_0 RUNNING12:42:05 and numeric21791
+RUNNING14:12; downstream21792/21795/21796 still depend on completion.
+
+Verified primary QfO2020/2022 service papers and official Python-igraph
+citation guidance. Added service CSL selection/export/provenance and
+PUBLICATION_SERVICE_REFERENCES_20260918.md; integrated references into
+manuscript and existing bibliography supplements. Cached network-free export
+matches committed CSL bytes exactly;16 exporter tests pass. Raw metadata and
+igraph HTML are local evidence, not newly redistributed source assets.
+
+Detected Crossref consortium byline problems:2020 collective author split
+as given/family,2022 combined collectives plus expanded/repeated individual
+members. Preserved deposited metadata and documented final-rendering review,
+without silent deduplication or falsely declaring complete bibliography.
+No run-version identity, HMMER implementation attribution, full data-rights
+clearance or publication readiness follows from these citations.
+
 ## Full Regression And Claim Reconciliation (2026-09-18 UTC)
 
 Previous turn progressed through5c7c19d with queued matched-Sonic assessment.

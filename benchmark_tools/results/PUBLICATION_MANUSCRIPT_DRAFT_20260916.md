@@ -8,7 +8,9 @@ covers benchmarks, biological evidence and retained comparator methods;
 An [eight-dependency supplement](PUBLICATION_DEPENDENCY_REFERENCES_20260918.md)
 covers the simulator and selected search, alignment, clustering and tree
 methods. A [clustering and analysis supplement](PUBLICATION_NUMERIC_REFERENCES_20260918.md)
-adds Leiden, CPM, NumPy, Biopython and Matplotlib. Remaining dependency/resource citations and journal-specific
+adds Leiden, CPM, NumPy, Biopython and Matplotlib. A
+[service and graph-library supplement](PUBLICATION_SERVICE_REFERENCES_20260918.md)
+adds the QfO2020/2022 updates and igraph. Remaining dependency/resource citations and journal-specific
 formatting are incomplete.
 
 ## Study Objective
@@ -33,6 +35,9 @@ is pinned to source revision `7f3a9e4`, with BLOSUM62, E-value threshold
 The Leiden optimizer is described by [Traag et al. (2019)](https://doi.org/10.1038/s41598-019-41695-z)
 and the CPM objective by [Traag et al. (2011)](https://doi.org/10.1103/PhysRevE.84.016114).
 These clustering references do not imply biological orthology guarantees.
+The graph library is cited separately as
+[Csardi and Nepusz (2006), igraph](https://python.igraph.org/en/0.11.6/);
+runtime manifests, not this citation, identify executed library versions.
 The phylogenetic configuration uses satellite_v2 candidate expansion,
 an internally inferred species tree, minimum-variance species-tree rooting,
 the species-overlap root rule, and positive-paralogy pair inference.
@@ -111,6 +116,11 @@ with its low-certainty exclusions and audited weighted pair statistic.
 The benchmark frameworks are described by
 [Altenhoff et al. (2016)](https://doi.org/10.1038/nmeth.3830) and
 [Emms and Kelly (2020)](https://doi.org/10.1093/gbe/evaa211), respectively.
+QfO service updates are described by
+[Altenhoff et al. (2020)](https://doi.org/10.1093/nar/gkaa308) and
+[Nevers et al. (2022)](https://doi.org/10.1093/nar/gkac330), including the
+2020 reference-proteome update and VGNC benchmark in the latter. These
+papers do not replace retained release, input and scoring provenance.
 Weighted counts divide each reference-family contribution by reference size
 minus one; aggregate precision, recall, and F1 are computed from those
 counts, not by averaging family F1 values.

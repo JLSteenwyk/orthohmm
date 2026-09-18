@@ -1,0 +1,51 @@
+{
+  "article_identifier_mapping": "Crossref article-number is CSL number, not page.",
+  "limitations": [
+    "Crossref bibliographic metadata, not full-text scientific review or software-version provenance.",
+    "Author names reflect deposited metadata; known suffix/name omissions need explicit review, not silent invention.",
+    "Only selected references exported; dependency/resource bibliography and journal-specific style remain separate.",
+    "Raw responses retained locally; abstracts and cited-reference lists are omitted from committed CSL-JSON."
+  ],
+  "output": {
+    "bytes": 7891,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_service_references_20260918.csl.json",
+    "sha256": "8c844fbef9a2694da284a2e98e22baf78a5b865465bcabd7768b321e877fc53a"
+  },
+  "records": [
+    {
+      "authors": 23,
+      "doi": "10.1093/nar/gkaa308",
+      "id": "qfo2020",
+      "response": {
+        "bytes": 26224,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_service_crossref_20260918/qfo2020.json",
+        "sha256": "f18d087f64c370adb102e77d9033f2b14a69ac9831c67b7ec3d47a27a392175e"
+      },
+      "retrieved_utc": "2026-09-18T17:29:02.381109+00:00",
+      "url": "https://api.crossref.org/works/10.1093%2Fnar%2Fgkaa308/transform/application/vnd.citationstyles.csl+json"
+    },
+    {
+      "authors": 69,
+      "doi": "10.1093/nar/gkac330",
+      "id": "qfo2022",
+      "response": {
+        "bytes": 32858,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_service_crossref_20260918/qfo2022.json",
+        "sha256": "9fd28f9fb9ea5a7a81c8029b8941d8b0a33370a02a5172d3f049c7a4f9cf3ff2"
+      },
+      "retrieved_utc": "2026-09-18T17:29:06.794460+00:00",
+      "url": "https://api.crossref.org/works/10.1093%2Fnar%2Fgkac330/transform/application/vnd.citationstyles.csl+json"
+    }
+  ],
+  "selection": {
+    "bytes": 133,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_service_citation_selection_20260918.json",
+    "sha256": "5eb7d40fe242155b1333f720e3becd5b870436e4f597d0ba1dc5750d781a0f44"
+  },
+  "source": {
+    "bytes": 6538,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_publication_citations.py",
+    "sha256": "e690c964058b09a2c8e4acae988506ab0e9c35141605b8b94934bdfcc116ede9"
+  },
+  "status": "selected_citation_metadata_exported"
+}
