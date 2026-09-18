@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Corrected BPO Preparation Queued (2026-09-18 UTC)
+
+Previous turn progressed by pushing4814109: dedicated Python environment,
+runtime inventory and actual native fixture parity. Revalidated scheduler
+handles: HMM21706_0 RUNNING7:58:59, DGX21656_24 RUNNING56:36; BLAST21713 and
+admission21746 remained pending. No existing jobs were restarted or modified.
+
+Enforced pinned Python identity, clean startup, mapped-library hashes and
+full runtime inventory before/after preparation.63focused tests passed.
+Frozen executor826e963cf06ed414609f0609b96c6bfd283fc2d8 at
+publication_qfo_corrected_bpo_v1 passed clean-environment runtime checks
+before/after an actual native checkpoint fixture; BPO bytes match native
+BioPerl exactly. Batch syntax and clean worktree checks passed.
+
+Submitted21748 afterok:21746 with2CPUs/64GiB/24h onbizon, no requeue.
+Authoritative scontrol state confirms PENDING/Dependency and requested
+resources. Retained fixture and detailed provenance in
+QFO_CORRECTED_BPO_SUBMISSION_20260918.md. Full corrected preparation is not
+complete. Next: independent terminal/checkpoint admission and guarded native
+inference, then final-group conversion and scoring. Publication goal active.
+
 ## Dedicated BPO Python Environment (2026-09-18 UTC)
 
 Previous turn progressed by pushingb12effa: corrected BLAST admission binding
