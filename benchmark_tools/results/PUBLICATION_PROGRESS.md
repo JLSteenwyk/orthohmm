@@ -14,7 +14,12 @@ preflight_passed_no_inference; 36 focused tests pass. The fresh run binds
 unchanged normalization and BUSCO scorer. Historical raw-input outputs are
 not overwritten. Protocol THREE_KINGDOMS_MATCHED_SONIC_20260918.md specifies
 independent terminal/native and scoring gates before any table update.
-Submission will follow the committed launcher; no new accuracy result yet.
+Committed launcher at7c3d0784d1a22da0a0e37db6860977c6649fd2ca and created a
+detached frozen executor. Submitted21795; controller confirms PENDING with
+afterany:21792 dependency,32CPU192GiB72h,bizon,no requeue,zero restarts.
+This defers supplementary compute until QfO numeric validation terminates;
+it is not a scientific dependency. No new accuracy result yet. Independent
+native admission and conversion/scoring still need implementation/execution.
 
 ## Historical Three Kingdoms Input Mismatch (2026-09-18 UTC)
 

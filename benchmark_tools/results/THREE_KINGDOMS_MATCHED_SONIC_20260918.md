@@ -23,6 +23,14 @@ The 36 focused launcher/runtime tests passed.
 
 ## Admission Requirements
 
+Submitted as Slurm job **21795** from frozen executor revision
+`7c3d0784d1a22da0a0e37db6860977c6649fd2ca` in
+`benchmarks/work/publication_three_kingdoms_sonic_matched_v1`.
+Controller inspection confirms PENDING, `afterany:21792` unfulfilled,
+32 CPUs, 192 GiB, three days, bizon, no requeue and zero restarts.
+Controller SubmitTime is `2026-09-18T13:10:52` (timezone not inferred).
+No native output or accuracy result exists at submission.
+
 Native success is not accuracy admission. Before updating comparative tables:
 
 1. Verify terminal scheduler state, actual resource allocation, native input
