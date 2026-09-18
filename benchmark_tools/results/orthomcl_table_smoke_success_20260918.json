@@ -1,0 +1,62 @@
+{
+  "accuracy_admitted": false,
+  "checked_records": [
+    {
+      "bytes": 204,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_table_smoke_20260918/test_installed_legacy_engine_s0/all.blast.partial",
+      "sha256": "a7133dde4c259a4302b140ff567e95f3a69a7d801c54c1c4f3bbd32790d54b6e"
+    },
+    {
+      "bytes": 214,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_table_smoke_20260918/test_installed_legacy_engine_s0/all.fa",
+      "sha256": "4cba43277bcc5f18762a3a9c71a30c48288af46941c35eba8b40a54e565bf816"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_table_smoke_20260918/test_installed_legacy_engine_s0/blast.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 6944,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_orthomcl_search_table.py",
+      "sha256": "4fbf0d3ce30023ecbc618cf3b05385842e86209a8078f6553230ed4c9c72d6cf"
+    },
+    {
+      "bytes": 6699,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_orthomcl_blast.py",
+      "sha256": "863ed4a2b1e933d2b68e665aae4ee132125de99ab26bbf3d168afcf6c85bb20e"
+    },
+    {
+      "bytes": 6347,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/convert_orthomcl_blast.py",
+      "sha256": "fbd7bcffa07c354fc72a052c87cbd7d2238530348a6d497be250fc7422244931"
+    }
+  ],
+  "content": {
+    "diagnostic_lines_by_category": {},
+    "diagnostics": [],
+    "distinct_directed_pairs": 4,
+    "failed_queries": 0,
+    "failed_queries_with_query_hits": 0,
+    "failed_queries_with_subject_hits": 0,
+    "hsp_rows": 4,
+    "hsp_rows_above_1e_minus_5": 0,
+    "input_proteins": 2,
+    "proteins_with_self_hits": 2,
+    "queries_with_hits": 2,
+    "queries_without_hits": 0,
+    "queries_without_hits_and_without_logged_failure": 0,
+    "query_ids_without_hits": [],
+    "subjects_with_hits": 2
+  },
+  "limitations": [
+    "This checks a hit table and diagnostic log, not terminal execution or database identity.",
+    "No-hit queries are not automatically failed searches; masking or statistical thresholds can suppress hits.",
+    "Incoming subject hits are distinguished from successful outgoing query searches.",
+    "HSPs above the cutoff are counted, not silently removed or interpreted as native failure.",
+    "BPO/index validation, final clustering, failure impact and reference scoring remain separate checks."
+  ],
+  "publication_ready": false,
+  "search_admitted": false,
+  "status": "blast_table_structure_and_query_coverage_verified"
+}

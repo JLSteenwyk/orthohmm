@@ -104,15 +104,26 @@ def test_environment_excludes_search_and_loader_overrides(monkeypatch):
 
 
 @pytest.mark.skipif(os.environ.get("ORTHOHMM_LEGACY_BLAST_SMOKE") != "1", reason="Opt-in installed legacy engine smoke")
-def test_installed_legacy_engine_smoke(tmp_path):
+@pytest.mark.parametrize("short_query", [False, True])
+def test_installed_legacy_engine_smoke(tmp_path, short_query):
     from benchmark_tools.prepare_qfo_corrected_orthomcl import SOFTWARE, commands
+    from benchmark_tools.audit_orthomcl_search_table import audit
     sequence = "MKWVTFISLLLLFSSAYSRGVFRRDTHKSEIAHRFKDLGEQHFKGLVLIAFSQYLQQCPFDEHVKLVNEVTEFAKTCVADESAENCDKSLHTLFGDK"
-    (tmp_path / "all.fa").write_text(">smoke_a\n" + sequence + "\n>smoke_b\n" + sequence + "\n")
+    (tmp_path / "all.fa").write_text(">smoke_a\n" + sequence + "\n>smoke_b\n" + sequence + "\n"
+                                    + (">smoke_short\nMA\n" if short_query else ""))
     argv = commands(tmp_path, SOFTWARE / "blast-2.2.13/bin/blastall", SOFTWARE / "blast-2.2.13/bin/formatdb", 1)
     for stage in ("formatdb", "blast"):
-        subprocess.run(argv[stage], cwd=tmp_path, env=runner.environment(), check=True,
-                       capture_output=True, text=True, timeout=30)
+        done = subprocess.run(argv[stage], cwd=tmp_path, env=runner.environment(), check=True,
+                              capture_output=True, text=True, timeout=30)
+        (tmp_path / (stage + ".log")).write_text(done.stdout + done.stderr)
     lines = (tmp_path / "all.blast.partial").read_text().splitlines()
     pairs = {tuple(line.split("\t")[:2]) for line in lines}
     assert pairs == {(a, b) for a in ("smoke_a", "smoke_b") for b in ("smoke_a", "smoke_b")}
     assert all(len(line.split("\t")) == 12 for line in lines)
+    content = audit(tmp_path / "all.blast.partial", tmp_path / "all.fa", tmp_path / "blast.log",
+                    tmp_path / "table_audit.json")["content"]
+    assert content["input_proteins"] == 2 + short_query
+    assert content["queries_with_hits"] == content["subjects_with_hits"] == 2
+    assert content["distinct_directed_pairs"] == 4
+    assert content["failed_queries"] == int(short_query)
+    assert content["queries_without_hits_and_without_logged_failure"] == 0

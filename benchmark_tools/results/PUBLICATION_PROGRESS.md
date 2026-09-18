@@ -8347,3 +8347,25 @@ live check found corrected HMM 21706_0 RUNNING at 6:36:46 and DGX timing
 21656_22 RUNNING at 43:53. Corrected all-method comparisons, remaining
 uncertainty, dedicated timing admission and final publication packaging remain
 unfinished. No unrelated jobs or working-tree changes were modified.
+
+### OrthoMCL BLAST Table And Query Coverage Auditor Added (2026-09-18)
+
+Previous turn made progress by completing and queueing corrected FastOMA
+scoring/validation. This turn adds streaming protein BLAST m8 validation before
+BPO conversion: IDs, numeric fields, alignment consistency, block contiguity,
+query/subject/self-hit coverage and explicit diagnostic failure accounting.
+No-hit queries are not automatically labeled failed, and incoming hits do not
+imply successful outgoing searches. No frozen search or converter was changed.
+
+All 49 focused tests passed with installed BLAST 2.2.13 smoke tests enabled.
+Retained native positive and short-query fixtures both exited zero; the latter
+correctly reports one failed query from two diagnostic lines. Saved reports and
+limitations are described in `ORTHOMCL_SEARCH_TABLE_AUDIT_20260918.md`. This is
+component validation, not production search admission. Terminal provenance,
+formatted-database parity and BPO/index validation are still required.
+
+At the live check, job 21713 was resource-pending, corrected HMM 21706_0 was
+RUNNING at 6:38:56, and DGX timing 21656_23 was RUNNING at 2:08 (24th of 27
+runs). No production search output was inspected while incomplete. Corrected
+comparisons, appropriate uncertainty, admitted timing and publication packaging
+remain unfinished. No unrelated jobs or dirty sample outputs were altered.

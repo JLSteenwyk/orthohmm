@@ -1,0 +1,90 @@
+{
+  "accuracy_admitted": false,
+  "checked_records": [
+    {
+      "bytes": 204,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_table_smoke_20260918/test_installed_legacy_engine_s1/all.blast.partial",
+      "sha256": "a7133dde4c259a4302b140ff567e95f3a69a7d801c54c1c4f3bbd32790d54b6e"
+    },
+    {
+      "bytes": 230,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_table_smoke_20260918/test_installed_legacy_engine_s1/all.fa",
+      "sha256": "ecd939dd08e31d5a845a52573f305314e2ee89f9e597995c0e13fff780bad28b"
+    },
+    {
+      "bytes": 175,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_table_smoke_20260918/test_installed_legacy_engine_s1/blast.log",
+      "sha256": "220d6ed20045f62f9ed96d955741d405ae67e9ef0c4fa4284f942d584fcf632f"
+    },
+    {
+      "bytes": 6944,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_orthomcl_search_table.py",
+      "sha256": "4fbf0d3ce30023ecbc618cf3b05385842e86209a8078f6553230ed4c9c72d6cf"
+    },
+    {
+      "bytes": 6699,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_orthomcl_blast.py",
+      "sha256": "863ed4a2b1e933d2b68e665aae4ee132125de99ab26bbf3d168afcf6c85bb20e"
+    },
+    {
+      "bytes": 6347,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/convert_orthomcl_blast.py",
+      "sha256": "fbd7bcffa07c354fc72a052c87cbd7d2238530348a6d497be250fc7422244931"
+    }
+  ],
+  "content": {
+    "diagnostic_lines_by_category": {
+      "setup_failure": 1,
+      "short_query_failure": 1
+    },
+    "diagnostics": [
+      {
+        "gene": "smoke_short",
+        "has_query_hits": false,
+        "has_self_hit": false,
+        "has_subject_hits": false,
+        "length": 2,
+        "messages": [
+          {
+            "category": "setup_failure",
+            "level": "WARNING",
+            "line": 1,
+            "message": "SetUpBlastSearch failed."
+          },
+          {
+            "category": "short_query_failure",
+            "level": "ERROR",
+            "line": 2,
+            "message": "Blast: Query must be at least twice wordsize for two hit mode"
+          }
+        ],
+        "query_failed": true
+      }
+    ],
+    "distinct_directed_pairs": 4,
+    "failed_queries": 1,
+    "failed_queries_with_query_hits": 0,
+    "failed_queries_with_subject_hits": 0,
+    "hsp_rows": 4,
+    "hsp_rows_above_1e_minus_5": 0,
+    "input_proteins": 3,
+    "proteins_with_self_hits": 2,
+    "queries_with_hits": 2,
+    "queries_without_hits": 1,
+    "queries_without_hits_and_without_logged_failure": 0,
+    "query_ids_without_hits": [
+      "smoke_short"
+    ],
+    "subjects_with_hits": 2
+  },
+  "limitations": [
+    "This checks a hit table and diagnostic log, not terminal execution or database identity.",
+    "No-hit queries are not automatically failed searches; masking or statistical thresholds can suppress hits.",
+    "Incoming subject hits are distinguished from successful outgoing query searches.",
+    "HSPs above the cutoff are counted, not silently removed or interpreted as native failure.",
+    "BPO/index validation, final clustering, failure impact and reference scoring remain separate checks."
+  ],
+  "publication_ready": false,
+  "search_admitted": false,
+  "status": "blast_table_structure_and_query_coverage_verified"
+}
