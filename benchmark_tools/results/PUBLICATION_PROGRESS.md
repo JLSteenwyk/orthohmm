@@ -1,5 +1,42 @@
 # Publication Progress
 
+## Corrected R-Off Pair Conversion (2026-09-18 UTC)
+
+Previous turn progressed by pushing5a9d18d and freezing corrected native
+reconciliation admission. This turn revalidated running HMM21706_0,
+Sonic assessment21727 and DGX21656_16; dependent jobs remain unchanged.
+
+Implemented `prepare_qfo_corrected_group_pairs.py` for precisely the four
+R-off cells (indices0,2,4,6). It requires successful independently admitted
+corrected candidates via the existing full provenance/runtime verifier,
+exact FASTA inventory, frozen QfO mapping, and scheduled2CPU allocation.
+Uses the existing group converter, with an independent combinatorial count
+from family species counts and complete canonical gene coverage. It rejects
+R-on cells rather than substituting group cliques for native predictions.
+All pairs must survive corrected reference mapping. Failed runs retain
+partial outputs and failure manifests; existing outputs are never resumed
+or overwritten. Inputs/admission/runtime are rechecked after conversion.
+
+Sixteen focused tests pass, including an actual converter subprocess and
+reference filter on a three-gene fixture (only two cross-species pairs),
+mapping-loss failure preservation, duplicate/missing/unknown identifiers,
+R-on refusal, output hash checks and refusal to overwrite a completed run.
+Candidate admission is mocked only in this small integration fixture; no
+full corrected-data conversion is claimed. Added2CPU/32GiB/4h batch launcher.
+Combined new conversion, original conversion and corrected runner tests:
+48pass. Batch syntax and whitespace checks pass.
+
+Latest live check: DGX21656_0 through21656_16 are COMPLETED0:0 (17/27);
+21656_17 is RUNNING1:27 and18-26 remain pending. Scheduler completion is not
+resource/isolation admission. HMM21706_0 remains RUNNING3:58:24 and Sonic
+assessment21727 RUNNING13:59. No DGX I/O scan or unrelated-job change.
+
+No conversion submitted before actual corrected candidate admission.
+Next: complete the corrected native-pair conversion and all-cell scoring
+adapters, then execute them only against reviewed completed native reports.
+The four sequence-only cells and four phylogenetic cells remain separate
+scientific output semantics; none are replaced with historical scores.
+
 ## Corrected Reconciliation Native Gate (2026-09-18 UTC)
 
 Previous turn was progress: pushed2bf70fb (all-endpoint factorial table and
