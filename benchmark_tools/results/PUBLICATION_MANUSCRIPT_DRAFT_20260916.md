@@ -4,8 +4,8 @@ Working manuscript, 16 September 2026. Not submission-ready. Sections below
 distinguish completed development-exposed analyses from prospective work.
 Internal evidence links are supplied for audit. An initial
 [verified literature bibliography](PUBLICATION_REFERENCES_20260917.md)
-covers benchmarks, biological evidence and OrthoFinder v3; remaining method
-and dependency citations and journal-specific formatting are incomplete.
+covers benchmarks, biological evidence and retained comparator methods;
+dependency/resource citations and journal-specific formatting are incomplete.
 
 ## Study Objective
 
@@ -32,6 +32,10 @@ the species-overlap root rule, and positive-paralogy pair inference.
 Historical runs retain their actual source and configuration records; the
 prospective pin must not be retroactively attributed to them.
 See the [frozen validation protocol](YGOB_VALIDATION_PROTOCOL_20260916.md).
+The original OrthoHMM lineage is cited as the
+[Steenwyk et al. (2024) preprint](https://doi.org/10.1101/2024.12.07.627370);
+the implementation examined here includes later changes that require
+the source/runtime description rather than attribution to that preprint alone.
 
 The [method diagram](figures_publication_method_20260916/publication_method.pdf)
 distinguishes initial HMM search, cluster-profile expansion, high-sensitivity
@@ -54,6 +58,16 @@ The v3 method is described by
 [Emms et al. (2026)](https://doi.org/10.1038/s41592-026-03126-6), with a
 [published Figure2 correction](https://doi.org/10.1038/s41592-026-03238-z).
 This citation does not replace executable/version provenance for our runs.
+The earlier orthogroup and phylogenetic methods are described by
+[Emms and Kelly (2015)](https://doi.org/10.1186/s13059-015-0721-2) and
+[Emms and Kelly (2019)](https://doi.org/10.1186/s13059-019-1832-y).
+Other comparator references are
+[Li et al. (2003), OrthoMCL](https://doi.org/10.1101/gr.1224503),
+[Cosentino et al. (2024), SonicParanoid2](https://doi.org/10.1186/s13059-024-03298-4),
+[Klemm et al. (2023), Proteinortho6](https://doi.org/10.3389/fbinf.2023.1322477),
+and [Majidian et al. (2025), FastOMA](https://doi.org/10.1038/s41592-024-02552-8).
+These method citations do not establish which optional modules or settings
+ran in our experiments; retained execution records govern that attribution.
 
 For QfO, OrthoHMM high sensitivity and the OrthoFinder checkpoint contribute
 group-derived cross-species pairs; OrthoHMM satellite_v2 and full OrthoFinder

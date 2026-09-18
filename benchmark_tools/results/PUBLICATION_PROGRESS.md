@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Comparator Literature Coverage Added (2026-09-17)
+
+Previous turn added and pushed initial references09d535e. Re-read objective
+and confirmed21671_0,21681 and21656_7 live via Slurm. Checked primary
+OrthoMCL, SonicParanoid2, Proteinortho6, FastOMA and2015/2019OrthoFinder
+papers and added their metadata, links and attribution boundaries to
+`PUBLICATION_REFERENCES_20260917.md` and the manuscript. FastOMA's publication
+year is2025 despite2024 in its DOI. No literature performance estimate was
+imported into the local benchmark results.
+
+Verified the cited2024OrthoHMMpreprint metadata against the author's
+publication page and repository citations. Direct bioRxiv retrieval failed;
+the note explicitly does not claim full-text verification or attribute
+later built-in search/phylogeny changes to that original preprint.
+All retained comparator method families now have checked citations; dependency,
+resource and complete citation-export work remains. Actual versions/settings
+still require local run provenance, not assumptions from paper descriptions.
+
+Documentation-only change; whitespace validation passed. Empirical QfO
+factorial, controlled DGX timing admission, remaining uncertainty/error
+analysis and final release/archive requirements are still incomplete.
+
 ## Initial Literature References Verified (2026-09-17)
 
 Previous turn reproduced and pushed the relocated domain workflowfb688ac.
