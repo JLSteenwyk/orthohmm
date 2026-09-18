@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Current Claim Summaries Reconciled (2026-09-18 UTC)
+
+The preceding retrieval-status turn made no new analysis progress: it
+reconfirmed retained TreeFam downloads and the unresolved original inputs.
+Reread the full objective and polled live jobs locally. HMM21706_0 is running
+19:09:40. Overhead21838 tasks0/1 completed0:0 in09:20/10:05; task2 is
+running11:20 and tasks3-17 remain pending. No DGX remote access or partial
+native-output inspection occurred.
+
+Corrected two stale current claim-table entries against retained evidence:
+matched Three Kingdoms Sonic inference/assessment are complete and admitted,
+not queued; the counter-control summary now distinguishes frontier21831
+from earlier interval/hierarchy arrays and the still-active21838 panel.
+Historical input limitations, every earlier flag, and the lack of admitted
+controlled timings remain explicit. Historical progress entries are intact.
+Validated the new evidence links and checked the two-file diff; no scientific
+result, endpoint, method parameter, or active executor changed.
+
+Next: await the complete overhead panel before archive retrieval/audit and
+continue corrected QfO dependencies. Publication readiness remains unproven.
+
 ## Archive-Level Overhead Auditor Integrated (2026-09-18 UTC)
 
 Previous turn made progress through51ceaea with frozen provenance binding.
