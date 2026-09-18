@@ -56,6 +56,35 @@ change after numeric audit.
 
 ## Corrected QfO Next Step
 
+### Queued Admission-Gated Calculation
+
+Job21798 is queued after successful numeric admission21792; the scheduler
+confirms PENDING(Dependency). The frozen executor is
+`928eba0430f2348647d30819d5a6fa23873cb19d` at
+`benchmarks/work/publication_qfo_graph_payload_v1`. It requests2CPUs,64GiB,
+4hours onbizon with no requeue. No graph inference is launched.
+
+`plan_qfo_sequence_graph_memory.py` requires completed numeric-admission and
+conversion accounting, exact frozen converter/admitter revisions, successful
+source-equivalence status, both prespecified variant identities and the
+recorded evidence file hashes. It runs the existing estimator against each
+admitted checkpoint manifest hash and compares genes/hits/self-hit counts
+with the numeric audit. It rechecks evidence before writing the report.
+The estimator verifies the frozen native graph source and checkpoint contents.
+
+Future output: `benchmarks/work/qfo_graph_payload_20260918.json`. An existing
+output is refused. The report records both variant estimates and explicitly
+sets graph feasibility, graph launch, accuracy evaluation and publication
+readiness to false. A resource decision still requires review of actual
+counts and costs beyond the modeled snapshot; top100 cannot replace all-hit
+failure. No completed QfO payload calculation is claimed at submission.
+
+42 focused tests pass, including8 new tests for both variants/exact hashes,
+missing variant, path/count disagreements, false feasibility admission and
+failed scheduler rejection before output creation. Batch shell syntax passes.
+
+### Earlier Planning Observation
+
 As of the recorded live check, DIAMOND job21789 remained running; its
 incremental execution log recorded56 completed target searches out of78,
 27,688,723,204 bytes of completed hit tables, and active zero-based target56.

@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Corrected QfO Graph Payload Job Queued (2026-09-18 UTC)
+
+Previous turn made progress through dad4d2f: completed initial graph trace,
+independent pair arithmetic, tests and manuscript reporting. Reread the full
+publication objective. Live scheduler confirms HMM21706_0 RUNNING13:09:33,
+numeric conversion21791 RUNNING41:40; no restart is needed.
+
+Added admission-gated memory planning for both corrected sequence-search
+checkpoints. It requires successful numeric source equivalence, terminal
+accounting and frozen source identities, and binds each estimate to its exact
+checkpoint manifest hash. No hit truncation, graph inference or automatic
+memory-feasibility admission occurs.42 focused tests and batch syntax pass.
+
+Committed executor928eba0430f2348647d30819d5a6fa23873cb19d and submitted
+job21798 afterok21792,2CPU64GiB4h,bizon,no requeue. Scheduler confirms
+PENDING(Dependency). Future report:
+`benchmarks/work/qfo_graph_payload_20260918.json`.
+Protocol: `QFO_GRAPH_MEMORY_PLANNING_20260918.md`.
+
+Next: inspect completed estimates and available resources before freezing
+and launching graph/clustering inference for both sequence-control variants.
+This queues a required workflow step; it does not complete the ablation,
+accuracy analysis, controlled timing or publication package.
+
 ## Initial Graph Trace Completed And Audited (2026-09-18 UTC)
 
 The preceding archive follow-up did not recover the missing TreeFam source
