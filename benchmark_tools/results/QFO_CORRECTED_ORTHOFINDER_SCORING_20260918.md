@@ -56,3 +56,20 @@ Corrected inference and conversion remain upstream dependencies. Paired
 uncertainty still requires the complete prespecified eight-method panel;
 the six-metric mean remains a project-defined secondary summary. No matched
 dedicated timing claim follows from this shared-host scoring workflow.
+
+## Frozen Queue And Validation
+
+Scoring array 21735 is scheduler-confirmed pending on successful conversion
+array 21733. Its executor is the detached `5c34f8b` revision above.
+Independent score admission array 21736 waits for scoring array 21735 to
+terminate and runs detached executor
+`a1d269676a1a523385175c212db3785f4458f931` under
+`benchmarks/work/publication_qfo_corrected_of_score_admission_v1`.
+Both arrays have task 0 full/native and task 1 sequence-only, concurrency one.
+The admission dependency permits failure inspection but does not relax the
+validator's requirement for successful terminal scoring.
+
+The complete unit suite passed 3,301 tests with one opt-in legacy-engine smoke
+test skipped. Both production OrthoFinder command constructions passed the
+Darwin work-path length check and selected the same six frozen endpoints.
+No corrected OrthoFinder score or score admission is available yet.

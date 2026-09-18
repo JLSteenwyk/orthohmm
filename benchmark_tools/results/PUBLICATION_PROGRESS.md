@@ -8090,3 +8090,29 @@ and task 21656_19 is running at 5:34. HMM 21706_0 remains active at 5:00:11.
 These elapsed times are not native timing measurements. Other dependencies
 remain pending. No running job was restarted or interrupted, and no DGX
 filesystem scan was performed. The full publication goal remains unfinished.
+
+### Corrected OrthoFinder Scoring Chain Queued (2026-09-18)
+
+Previous turn made progress by implementing and queueing separate full/native
+and MCL pair conversions. This turn extends the existing corrected-comparator
+scorer, independent score admission and score exporter to those two methods,
+without rewriting the completed Proteinortho/SonicParanoid results. Full and
+MCL semantics, participants and work directories remain distinct.
+
+Scoring executor `5c34f8baad47a9895659b43696e6887aa29dbaaf` is frozen;
+array 21735 waits on successful conversion array 21733. Independent validator
+executor `a1d269676a1a523385175c212db3785f4458f931` is frozen; array 21736
+waits for scoring 21735 to terminate. Scheduler inspection confirms both
+dependencies, task concurrency one, and 8-CPU scoring / 2-CPU admission with
+64 GiB each on bizon. See `QFO_CORRECTED_ORTHOFINDER_SCORING_20260918.md`.
+
+All 3,301 unit tests pass, with one opt-in test skipped. Native endpoint
+execution was not simulated as actual accuracy evidence: orchestration tests
+explicitly mock those external steps. Both real command constructions retain
+the six frozen endpoints and satisfy the Darwin path constraint.
+
+DGX task 21656_19 completed successfully, bringing the total to 20/27;
+21656_20 is running at 5:39. Corrected HMM 21706_0 is running at 5:09:41.
+No DGX filesystem scan or unrelated job changes occurred. Corrected HMM
+replay/factorial execution, remaining comparator work, full paired uncertainty,
+timing admission and the final publication bundle remain unfinished.
