@@ -147,6 +147,15 @@ input identity are not established by that observation. The Xenopus download
 URL uses a moving UniProt current_release path, so retained hashes are needed
 and the URL alone is not a reproducible release identifier.
 
+A subsequent [method-input audit](THREE_KINGDOMS_METHOD_INPUTS_20260918.md)
+found that SonicParanoid's native snapshot matches the raw zebrafish FASTA,
+not the stop-marker-stripped staged version. Five other retained checksum
+manifests match all12 staged inputs; the older high-sensitivity metrics lack
+per-file hashes. The historical supplementary table is therefore not presented
+as a fully established identical-input cohort. A matched-staged-input Sonic
+rerun is required before replacing that historical comparison; it has not yet
+been performed. No effect on scores is inferred from the mismatch alone.
+
 For the separately recovered four-stage QfO replay, SwissTrees raw counts
 were reconstructed using the frozen native scorer and reference. Each
 one-direction reference relation contributes half a count before a prior

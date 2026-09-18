@@ -1,0 +1,628 @@
+{
+  "input_source_audit": {
+    "bytes": 26195,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/three_kingdoms_sources_20260918.json",
+    "sha256": "a79bf83e1ea28a9790e4597ea50a44d6409f4f36404a35e660d56a0b754fc1f3"
+  },
+  "limitations": [
+    "Saved hash manifests and current copies are evidence, not immutable execution attestation.",
+    "The high-sensitivity record identifies an input directory but does not retain per-file input hashes.",
+    "Sequence-only OrthoFinder is a checkpoint diagnostic from the full run, not an independent native run.",
+    "SonicParanoid snapshot verifies input file hashes; downstream effective sequence handling is not traced here.",
+    "Input differences do not establish their impact on final predictions or reference scores.",
+    "No old result is overwritten, rerun, rescored or admitted by this audit."
+  ],
+  "methods": [
+    {
+      "copies": [],
+      "evidence": [
+        {
+          "bytes": 13162,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/orthohmm_high_sensitivity/metrics.json",
+          "sha256": "73342f751abc0e96e039832dbbbedb049c1596392db5b176a7b2a5d6e880afd2"
+        }
+      ],
+      "historical_consumption_of_staged_bytes_proven": false,
+      "input_hash_manifest": "not_retained",
+      "method": "orthohmm_high_sensitivity",
+      "native_snapshot": null
+    },
+    {
+      "copies": [],
+      "evidence": [
+        {
+          "bytes": 1896,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthohmm_phylogeny_satellite_v2/input.sha256",
+          "sha256": "1bd6d64a488a0fb5c29ad8b3a80d24ec42da8dc03f9bf2b89eb4fe8700bbdcbe"
+        }
+      ],
+      "historical_consumption_of_staged_bytes_proven": false,
+      "input_hash_manifest": "all_12_staged_hashes_match",
+      "method": "orthohmm_phylogeny_satellite_v2",
+      "native_snapshot": null
+    },
+    {
+      "copies": [
+        {
+          "classification": "matches_staged",
+          "code": "Amph",
+          "file": {
+            "bytes": 22455028,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/run/input/Amph.fasta",
+            "sha256": "ef309054ffc2b6a96e9c523569bc84a9286dd48c2caa4b0eb6a0adad6a48b61f"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Anol",
+          "file": {
+            "bytes": 15376532,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/run/input/Anol.fasta",
+            "sha256": "3572dfe704fbd7da7e7a59085f06252964d0a5f8426858cbb55353bbc9455e05"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Arab",
+          "file": {
+            "bytes": 33366601,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/run/input/Arab.fasta",
+            "sha256": "d7c319fa8c6d3b5569ae43cfe0cad2a1331b5c0db9b97b49ceadcf9fef62b3b4"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Asfu",
+          "file": {
+            "bytes": 6750862,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/run/input/Asfu.fasta",
+            "sha256": "64472bec6c765b88656f884ef6edfc5180a14859c1a0e2170ea441e16ee049a5"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Dani",
+          "file": {
+            "bytes": 42222249,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/run/input/Dani.fasta",
+            "sha256": "c0a902d57898468f0df1a77a0773f935ef80d53abc4c3831381736f8d13d4e73"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Oryz",
+          "file": {
+            "bytes": 21984251,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/run/input/Oryz.fasta",
+            "sha256": "613aa313a07ff90ed70fb599f1b3d71cbfe24d0970111431466297c01da970d4"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Scer",
+          "file": {
+            "bytes": 5875882,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/run/input/Scer.fasta",
+            "sha256": "b4d38c9f505484f0dd7218e769b97f79ad1c3bf94619b989d4bc05b5fae22e42"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Scom",
+          "file": {
+            "bytes": 8582364,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/run/input/Scom.fasta",
+            "sha256": "f078d61dc29427086de601369fe6ed541fa5d937c7a58c717fbdd28a2a397f8a"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Sela",
+          "file": {
+            "bytes": 20561355,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/run/input/Sela.fasta",
+            "sha256": "63d77c81ef9e1e437a7ed210f274d325dfb87983faf74fc0bec2dd37347a173e"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Spom",
+          "file": {
+            "bytes": 3805824,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/run/input/Spom.fasta",
+            "sha256": "643f960eb5531a2a642dc0c39d9db04e85fe7f0e6940fb5c880bc1369f7e7dc5"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Xeno",
+          "file": {
+            "bytes": 25382533,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/run/input/Xeno.fasta",
+            "sha256": "8eb459d5da98a95f6e228b8bda9d7136456b511abbf33356acd5bb69d063e398"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Zeam",
+          "file": {
+            "bytes": 95382422,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/run/input/Zeam.fasta",
+            "sha256": "1b0b9e82cfaee672f9ceaa6156f3a1ab3812b3f2dbac9af9dce4c0232222700c"
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "bytes": 1896,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/input.sha256",
+          "sha256": "1bd6d64a488a0fb5c29ad8b3a80d24ec42da8dc03f9bf2b89eb4fe8700bbdcbe"
+        }
+      ],
+      "historical_consumption_of_staged_bytes_proven": false,
+      "input_hash_manifest": "all_12_staged_hashes_match",
+      "method": "orthofinder_3_1_5_full",
+      "native_snapshot": null
+    },
+    {
+      "copies": [],
+      "evidence": [
+        {
+          "bytes": 1896,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_sequence_only/input.sha256",
+          "sha256": "1bd6d64a488a0fb5c29ad8b3a80d24ec42da8dc03f9bf2b89eb4fe8700bbdcbe"
+        }
+      ],
+      "historical_consumption_of_staged_bytes_proven": false,
+      "input_hash_manifest": "all_12_staged_hashes_match",
+      "method": "orthofinder_3_1_5_sequence_only",
+      "native_snapshot": null
+    },
+    {
+      "copies": [
+        {
+          "classification": "matches_staged",
+          "code": "Amph",
+          "file": {
+            "bytes": 22455028,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/proteinortho/run/input/Amph.fasta",
+            "sha256": "ef309054ffc2b6a96e9c523569bc84a9286dd48c2caa4b0eb6a0adad6a48b61f"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Anol",
+          "file": {
+            "bytes": 15376532,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/proteinortho/run/input/Anol.fasta",
+            "sha256": "3572dfe704fbd7da7e7a59085f06252964d0a5f8426858cbb55353bbc9455e05"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Arab",
+          "file": {
+            "bytes": 33366601,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/proteinortho/run/input/Arab.fasta",
+            "sha256": "d7c319fa8c6d3b5569ae43cfe0cad2a1331b5c0db9b97b49ceadcf9fef62b3b4"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Asfu",
+          "file": {
+            "bytes": 6750862,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/proteinortho/run/input/Asfu.fasta",
+            "sha256": "64472bec6c765b88656f884ef6edfc5180a14859c1a0e2170ea441e16ee049a5"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Dani",
+          "file": {
+            "bytes": 42222249,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/proteinortho/run/input/Dani.fasta",
+            "sha256": "c0a902d57898468f0df1a77a0773f935ef80d53abc4c3831381736f8d13d4e73"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Oryz",
+          "file": {
+            "bytes": 21984251,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/proteinortho/run/input/Oryz.fasta",
+            "sha256": "613aa313a07ff90ed70fb599f1b3d71cbfe24d0970111431466297c01da970d4"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Scer",
+          "file": {
+            "bytes": 5875882,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/proteinortho/run/input/Scer.fasta",
+            "sha256": "b4d38c9f505484f0dd7218e769b97f79ad1c3bf94619b989d4bc05b5fae22e42"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Scom",
+          "file": {
+            "bytes": 8582364,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/proteinortho/run/input/Scom.fasta",
+            "sha256": "f078d61dc29427086de601369fe6ed541fa5d937c7a58c717fbdd28a2a397f8a"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Sela",
+          "file": {
+            "bytes": 20561355,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/proteinortho/run/input/Sela.fasta",
+            "sha256": "63d77c81ef9e1e437a7ed210f274d325dfb87983faf74fc0bec2dd37347a173e"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Spom",
+          "file": {
+            "bytes": 3805824,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/proteinortho/run/input/Spom.fasta",
+            "sha256": "643f960eb5531a2a642dc0c39d9db04e85fe7f0e6940fb5c880bc1369f7e7dc5"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Xeno",
+          "file": {
+            "bytes": 25382533,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/proteinortho/run/input/Xeno.fasta",
+            "sha256": "8eb459d5da98a95f6e228b8bda9d7136456b511abbf33356acd5bb69d063e398"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Zeam",
+          "file": {
+            "bytes": 95382422,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/proteinortho/run/input/Zeam.fasta",
+            "sha256": "1b0b9e82cfaee672f9ceaa6156f3a1ab3812b3f2dbac9af9dce4c0232222700c"
+          }
+        }
+      ],
+      "evidence": [],
+      "historical_consumption_of_staged_bytes_proven": false,
+      "input_hash_manifest": "not_retained",
+      "method": "proteinortho_6_3_6",
+      "native_snapshot": null
+    },
+    {
+      "copies": [
+        {
+          "classification": "matches_staged",
+          "code": "Amph",
+          "file": {
+            "bytes": 22455028,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/sonicparanoid/run/input/Amph.fasta",
+            "sha256": "ef309054ffc2b6a96e9c523569bc84a9286dd48c2caa4b0eb6a0adad6a48b61f"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Anol",
+          "file": {
+            "bytes": 15376532,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/sonicparanoid/run/input/Anol.fasta",
+            "sha256": "3572dfe704fbd7da7e7a59085f06252964d0a5f8426858cbb55353bbc9455e05"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Arab",
+          "file": {
+            "bytes": 33366601,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/sonicparanoid/run/input/Arab.fasta",
+            "sha256": "d7c319fa8c6d3b5569ae43cfe0cad2a1331b5c0db9b97b49ceadcf9fef62b3b4"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Asfu",
+          "file": {
+            "bytes": 6750862,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/sonicparanoid/run/input/Asfu.fasta",
+            "sha256": "64472bec6c765b88656f884ef6edfc5180a14859c1a0e2170ea441e16ee049a5"
+          }
+        },
+        {
+          "classification": "matches_raw_not_staged",
+          "code": "Dani",
+          "file": {
+            "bytes": 42222278,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/sonicparanoid/run/input/Dani.fasta",
+            "sha256": "3f43bb141494a64a31bfe8d236fbf6ae54f7112aec4cab83e170a6344c897f7c"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Oryz",
+          "file": {
+            "bytes": 21984251,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/sonicparanoid/run/input/Oryz.fasta",
+            "sha256": "613aa313a07ff90ed70fb599f1b3d71cbfe24d0970111431466297c01da970d4"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Scer",
+          "file": {
+            "bytes": 5875882,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/sonicparanoid/run/input/Scer.fasta",
+            "sha256": "b4d38c9f505484f0dd7218e769b97f79ad1c3bf94619b989d4bc05b5fae22e42"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Scom",
+          "file": {
+            "bytes": 8582364,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/sonicparanoid/run/input/Scom.fasta",
+            "sha256": "f078d61dc29427086de601369fe6ed541fa5d937c7a58c717fbdd28a2a397f8a"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Sela",
+          "file": {
+            "bytes": 20561355,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/sonicparanoid/run/input/Sela.fasta",
+            "sha256": "63d77c81ef9e1e437a7ed210f274d325dfb87983faf74fc0bec2dd37347a173e"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Spom",
+          "file": {
+            "bytes": 3805824,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/sonicparanoid/run/input/Spom.fasta",
+            "sha256": "643f960eb5531a2a642dc0c39d9db04e85fe7f0e6940fb5c880bc1369f7e7dc5"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Xeno",
+          "file": {
+            "bytes": 25382533,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/sonicparanoid/run/input/Xeno.fasta",
+            "sha256": "8eb459d5da98a95f6e228b8bda9d7136456b511abbf33356acd5bb69d063e398"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Zeam",
+          "file": {
+            "bytes": 95382422,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/sonicparanoid/run/input/Zeam.fasta",
+            "sha256": "1b0b9e82cfaee672f9ceaa6156f3a1ab3812b3f2dbac9af9dce4c0232222700c"
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "bytes": 1113,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/sonicparanoid/run/sp_out/snapshot.tsv",
+          "sha256": "fddd5adeccb75d70157be44f101a6025165a75a47a9b711c481484b92f9ce696"
+        }
+      ],
+      "historical_consumption_of_staged_bytes_proven": false,
+      "input_hash_manifest": "not_retained",
+      "method": "sonicparanoid_2_0_9",
+      "native_snapshot": {
+        "Amph.fasta": {
+          "proteins": 43615,
+          "reported_residues": 14734819,
+          "sha256": "ef309054ffc2b6a96e9c523569bc84a9286dd48c2caa4b0eb6a0adad6a48b61f"
+        },
+        "Anol.fasta": {
+          "proteins": 19176,
+          "reported_residues": 10143153,
+          "sha256": "3572dfe704fbd7da7e7a59085f06252964d0a5f8426858cbb55353bbc9455e05"
+        },
+        "Arab.fasta": {
+          "proteins": 48321,
+          "reported_residues": 20833192,
+          "sha256": "d7c319fa8c6d3b5569ae43cfe0cad2a1331b5c0db9b97b49ceadcf9fef62b3b4"
+        },
+        "Asfu.fasta": {
+          "proteins": 9623,
+          "reported_residues": 4735220,
+          "sha256": "64472bec6c765b88656f884ef6edfc5180a14859c1a0e2170ea441e16ee049a5"
+        },
+        "Dani.fasta": {
+          "proteins": 52089,
+          "reported_residues": 26804937,
+          "sha256": "3f43bb141494a64a31bfe8d236fbf6ae54f7112aec4cab83e170a6344c897f7c"
+        },
+        "Oryz.fasta": {
+          "proteins": 42582,
+          "reported_residues": 14197868,
+          "sha256": "613aa313a07ff90ed70fb599f1b3d71cbfe24d0970111431466297c01da970d4"
+        },
+        "Scer.fasta": {
+          "proteins": 6600,
+          "reported_residues": 2914067,
+          "sha256": "b4d38c9f505484f0dd7218e769b97f79ad1c3bf94619b989d4bc05b5fae22e42"
+        },
+        "Scom.fasta": {
+          "proteins": 13194,
+          "reported_residues": 5897161,
+          "sha256": "f078d61dc29427086de601369fe6ed541fa5d937c7a58c717fbdd28a2a397f8a"
+        },
+        "Sela.fasta": {
+          "proteins": 34825,
+          "reported_residues": 13696828,
+          "sha256": "63d77c81ef9e1e437a7ed210f274d325dfb87983faf74fc0bec2dd37347a173e"
+        },
+        "Spom.fasta": {
+          "proteins": 5146,
+          "reported_residues": 2387764,
+          "sha256": "643f960eb5531a2a642dc0c39d9db04e85fe7f0e6940fb5c880bc1369f7e7dc5"
+        },
+        "Xeno.fasta": {
+          "proteins": 36461,
+          "reported_residues": 20870969,
+          "sha256": "8eb459d5da98a95f6e228b8bda9d7136456b511abbf33356acd5bb69d063e398"
+        },
+        "Zeam.fasta": {
+          "proteins": 131585,
+          "reported_residues": 63333188,
+          "sha256": "1b0b9e82cfaee672f9ceaa6156f3a1ab3812b3f2dbac9af9dce4c0232222700c"
+        }
+      }
+    },
+    {
+      "copies": [
+        {
+          "classification": "matches_staged",
+          "code": "Amph",
+          "file": {
+            "bytes": 22455028,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/run/input/proteome/Amph.fa",
+            "sha256": "ef309054ffc2b6a96e9c523569bc84a9286dd48c2caa4b0eb6a0adad6a48b61f"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Anol",
+          "file": {
+            "bytes": 15376532,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/run/input/proteome/Anol.fa",
+            "sha256": "3572dfe704fbd7da7e7a59085f06252964d0a5f8426858cbb55353bbc9455e05"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Arab",
+          "file": {
+            "bytes": 33366601,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/run/input/proteome/Arab.fa",
+            "sha256": "d7c319fa8c6d3b5569ae43cfe0cad2a1331b5c0db9b97b49ceadcf9fef62b3b4"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Asfu",
+          "file": {
+            "bytes": 6750862,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/run/input/proteome/Asfu.fa",
+            "sha256": "64472bec6c765b88656f884ef6edfc5180a14859c1a0e2170ea441e16ee049a5"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Dani",
+          "file": {
+            "bytes": 42222249,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/run/input/proteome/Dani.fa",
+            "sha256": "c0a902d57898468f0df1a77a0773f935ef80d53abc4c3831381736f8d13d4e73"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Oryz",
+          "file": {
+            "bytes": 21984251,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/run/input/proteome/Oryz.fa",
+            "sha256": "613aa313a07ff90ed70fb599f1b3d71cbfe24d0970111431466297c01da970d4"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Scer",
+          "file": {
+            "bytes": 5875882,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/run/input/proteome/Scer.fa",
+            "sha256": "b4d38c9f505484f0dd7218e769b97f79ad1c3bf94619b989d4bc05b5fae22e42"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Scom",
+          "file": {
+            "bytes": 8582364,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/run/input/proteome/Scom.fa",
+            "sha256": "f078d61dc29427086de601369fe6ed541fa5d937c7a58c717fbdd28a2a397f8a"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Sela",
+          "file": {
+            "bytes": 20561355,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/run/input/proteome/Sela.fa",
+            "sha256": "63d77c81ef9e1e437a7ed210f274d325dfb87983faf74fc0bec2dd37347a173e"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Spom",
+          "file": {
+            "bytes": 3805824,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/run/input/proteome/Spom.fa",
+            "sha256": "643f960eb5531a2a642dc0c39d9db04e85fe7f0e6940fb5c880bc1369f7e7dc5"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Xeno",
+          "file": {
+            "bytes": 25382533,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/run/input/proteome/Xeno.fa",
+            "sha256": "8eb459d5da98a95f6e228b8bda9d7136456b511abbf33356acd5bb69d063e398"
+          }
+        },
+        {
+          "classification": "matches_staged",
+          "code": "Zeam",
+          "file": {
+            "bytes": 95382422,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/run/input/proteome/Zeam.fa",
+            "sha256": "1b0b9e82cfaee672f9ceaa6156f3a1ab3812b3f2dbac9af9dce4c0232222700c"
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "bytes": 1896,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/input.sha256",
+          "sha256": "1bd6d64a488a0fb5c29ad8b3a80d24ec42da8dc03f9bf2b89eb4fe8700bbdcbe"
+        }
+      ],
+      "historical_consumption_of_staged_bytes_proven": false,
+      "input_hash_manifest": "all_12_staged_hashes_match",
+      "method": "fastoma_0_3_5",
+      "native_snapshot": null
+    },
+    {
+      "copies": [],
+      "evidence": [
+        {
+          "bytes": 1896,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/input.sha256",
+          "sha256": "1bd6d64a488a0fb5c29ad8b3a80d24ec42da8dc03f9bf2b89eb4fe8700bbdcbe"
+        }
+      ],
+      "historical_consumption_of_staged_bytes_proven": false,
+      "input_hash_manifest": "all_12_staged_hashes_match",
+      "method": "orthomcl_1_4",
+      "native_snapshot": null
+    }
+  ],
+  "publication_ready": false,
+  "source": {
+    "bytes": 7264,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_three_kingdoms_method_inputs.py",
+    "sha256": "39b09ab4a76f0f789e695edb6ac92b0d7306537bb6fe7e301390109bda32db9a"
+  },
+  "status": "retained_method_input_evidence_reviewed",
+  "uniform_historical_input_equivalence_established": false
+}

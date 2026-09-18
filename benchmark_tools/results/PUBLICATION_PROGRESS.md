@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Historical Three Kingdoms Input Mismatch (2026-09-18 UTC)
+
+Previous turn progressed through4e2e93c with retained-source/reference audit.
+Live jobs confirmed21706_0 RUNNING12:01:58,21789 RUNNING1:50:20;21713 waiting
+resources and21790/21791 dependencies. Full tests/unit completed at4e2e93c:
+4621passed,9skipped in86.62s. No inference job was changed.
+
+Added audit_three_kingdoms_method_inputs.py; actual audit verifies five saved
+input.sha256 manifests against all12 canonical inputs and hashes48 retained
+FASTA copies across OrthoFinder full,ProteinOrtho,SonicParanoid,FastOMA.
+Only Sonic Danio differs: native snapshot and copy match raw hash3f43bb...
+rather than stagedc0a902.... All12 Sonic snapshot hashes and protein counts
+match its retained copies. The previous source audit ties this to seven
+sequences/29removed stop markers outside the reference, not proof of no
+indirect effect. Older high-sensitivity metrics record only the input path,
+not retained input hashes. Uniform historical byte identity is not established.
+
+Reportthree_kingdoms_method_inputs_20260918.json retains per-method evidence,
+copy classifications and explicit consumption-proof limitations.26 focused
+tests pass in0.19s, including11 new tests after the full-suite run. Updated
+claims/manuscript to retain the historical score panel with the mismatch
+caveat. THREE_KINGDOMS_METHOD_INPUTS_20260918.md records prospective selective
+Sonic matched-input rerun requirements; none submitted yet. Preserve old run,
+freeze fresh copies/runtime/default settings, independently validate outputs
+and unchanged scorer before table replacement. No result or input overwritten.
+Full publication objective and corrected QfO pipelines remain active.
+
 ## Three Kingdoms Retained Inputs And Reference (2026-09-18 UTC)
 
 Previous turn progressed throughbed4fd3 with data-rights review. Live scheduler
