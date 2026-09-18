@@ -644,6 +644,20 @@ costs. The corresponding QfO panel awaits a reproducible native baseline.
 
 ## Limitations And Unfinished Analyses
 
+### SwissTrees Input Coverage
+
+A [frozen numeric-identity audit](SWISS_SEQUENCE_ALIAS_AUDIT_20260917.md)
+found14SwissTrees reference proteins without mapped accessions in the frozen
+factorial FASTAs. All belong to the retained Xenopus tropicalis annotation
+resource. Their577incident reference relations have identical native labels
+across all eight retained tools:181false negatives and396true negatives,
+with no true or false positives. [The relation audit](SWISS_MISSING_INPUT_RELATIONS_20260917.md)
+preserves the full reference denominator and original scores. This common
+component does not establish ranking invariance under removal, historical
+input parity, or the cause of the input/reference resource mismatch. Those
+provenance questions and any separately declared sensitivity analysis remain
+outstanding; missing proteins are not relabeled as algorithmic fragment errors.
+
 ### Remaining Requirements
 
 No universal superiority, arbitrary-dataset generalization, or controlled

@@ -1,0 +1,1207 @@
+{
+  "families": [
+    "APP",
+    "ASTER",
+    "BAMBI",
+    "BAR",
+    "CASP",
+    "CITE",
+    "Clusterin",
+    "GH14",
+    "HOX",
+    "MAPT",
+    "NOX",
+    "POP",
+    "PSEN",
+    "RPS",
+    "SERC",
+    "SUMF",
+    "TRFE",
+    "VATB"
+  ],
+  "inputs": [
+    {
+      "bytes": 171197,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_swiss_comparator_counts_20260917.json",
+      "sha256": "2995868b0407ceda2e7422db6c3fc3b99523716e4bec8b1b43e15f296e40769b"
+    },
+    {
+      "bytes": 514247,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_sequence_alias_audit_20260917.json",
+      "sha256": "b69f74e35aa3fa3af99a33b3b27f830d79df2abd3935b84e911f981186ac33ec"
+    }
+  ],
+  "limitations": [
+    "Missing identities are established for frozen factorial inputs, not independently reconstructed historical inputs.",
+    "Incident raw labels measure retained scoring behavior; they do not establish why input records are missing.",
+    "Counts are native raw relations before the half-count plus-one prior, not independent observations.",
+    "No benchmark denominator changes, available-input sensitivity scores or confidence intervals computed."
+  ],
+  "methods": [
+    {
+      "affected_counts": {
+        "APP": {
+          "FN": 22,
+          "FP": 0,
+          "TN": 29,
+          "TP": 0
+        },
+        "ASTER": {
+          "FN": 31,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "BAMBI": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "BAR": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "CASP": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "CITE": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "Clusterin": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "GH14": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "HOX": {
+          "FN": 24,
+          "FP": 0,
+          "TN": 241,
+          "TP": 0
+        },
+        "MAPT": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "NOX": {
+          "FN": 48,
+          "FP": 0,
+          "TN": 96,
+          "TP": 0
+        },
+        "POP": {
+          "FN": 10,
+          "FP": 0,
+          "TN": 23,
+          "TP": 0
+        },
+        "PSEN": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "RPS": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "SERC": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "SUMF": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "TRFE": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "VATB": {
+          "FN": 46,
+          "FP": 0,
+          "TN": 7,
+          "TP": 0
+        }
+      },
+      "affected_relations": 577,
+      "affected_totals": {
+        "FN": 181,
+        "FP": 0,
+        "TN": 396,
+        "TP": 0
+      },
+      "both_endpoints_missing": 15,
+      "method": "orthohmm_high_sensitivity",
+      "missing_genes_incident": [
+        "A0A6I8Q068",
+        "B1H1F6",
+        "F6PXE7",
+        "F6QLB4",
+        "F6SX31",
+        "F6YNC0",
+        "F7AMC8",
+        "F7BEI0",
+        "F7CLH6",
+        "F7D5A4",
+        "F7D5I9",
+        "F7DF67",
+        "Q0VGW2",
+        "Q505H9"
+      ],
+      "raw_file": {
+        "bytes": 39685,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthohmm_high_sensitivity/results/SwissTrees/RefPhylo-SwissTrees_orthohmm-high-sensitivity_335addbab5f0_raw.txt.gz",
+        "sha256": "b97a79752d248f99c6ddfda7d011ccae4c8a6ecff3f20c833742634e62a6c529"
+      }
+    },
+    {
+      "affected_counts": {
+        "APP": {
+          "FN": 22,
+          "FP": 0,
+          "TN": 29,
+          "TP": 0
+        },
+        "ASTER": {
+          "FN": 31,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "BAMBI": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "BAR": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "CASP": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "CITE": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "Clusterin": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "GH14": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "HOX": {
+          "FN": 24,
+          "FP": 0,
+          "TN": 241,
+          "TP": 0
+        },
+        "MAPT": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "NOX": {
+          "FN": 48,
+          "FP": 0,
+          "TN": 96,
+          "TP": 0
+        },
+        "POP": {
+          "FN": 10,
+          "FP": 0,
+          "TN": 23,
+          "TP": 0
+        },
+        "PSEN": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "RPS": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "SERC": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "SUMF": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "TRFE": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "VATB": {
+          "FN": 46,
+          "FP": 0,
+          "TN": 7,
+          "TP": 0
+        }
+      },
+      "affected_relations": 577,
+      "affected_totals": {
+        "FN": 181,
+        "FP": 0,
+        "TN": 396,
+        "TP": 0
+      },
+      "both_endpoints_missing": 15,
+      "method": "orthohmm_phylogeny_satellite_v2",
+      "missing_genes_incident": [
+        "A0A6I8Q068",
+        "B1H1F6",
+        "F6PXE7",
+        "F6QLB4",
+        "F6SX31",
+        "F6YNC0",
+        "F7AMC8",
+        "F7BEI0",
+        "F7CLH6",
+        "F7D5A4",
+        "F7D5I9",
+        "F7DF67",
+        "Q0VGW2",
+        "Q505H9"
+      ],
+      "raw_file": {
+        "bytes": 39282,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthohmm_phylogeny_satellite_v2/results/SwissTrees/RefPhylo-SwissTrees_orthohmm-phylogeny-satellite-v2_2aabb43f7d3d_raw.txt.gz",
+        "sha256": "03a65ff866a80b1a454500d58721c0101520746dd2698ad6fb5e37eba2cdb94d"
+      }
+    },
+    {
+      "affected_counts": {
+        "APP": {
+          "FN": 22,
+          "FP": 0,
+          "TN": 29,
+          "TP": 0
+        },
+        "ASTER": {
+          "FN": 31,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "BAMBI": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "BAR": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "CASP": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "CITE": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "Clusterin": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "GH14": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "HOX": {
+          "FN": 24,
+          "FP": 0,
+          "TN": 241,
+          "TP": 0
+        },
+        "MAPT": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "NOX": {
+          "FN": 48,
+          "FP": 0,
+          "TN": 96,
+          "TP": 0
+        },
+        "POP": {
+          "FN": 10,
+          "FP": 0,
+          "TN": 23,
+          "TP": 0
+        },
+        "PSEN": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "RPS": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "SERC": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "SUMF": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "TRFE": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "VATB": {
+          "FN": 46,
+          "FP": 0,
+          "TN": 7,
+          "TP": 0
+        }
+      },
+      "affected_relations": 577,
+      "affected_totals": {
+        "FN": 181,
+        "FP": 0,
+        "TN": 396,
+        "TP": 0
+      },
+      "both_endpoints_missing": 15,
+      "method": "orthofinder_3_1_5_full",
+      "missing_genes_incident": [
+        "A0A6I8Q068",
+        "B1H1F6",
+        "F6PXE7",
+        "F6QLB4",
+        "F6SX31",
+        "F6YNC0",
+        "F7AMC8",
+        "F7BEI0",
+        "F7CLH6",
+        "F7D5A4",
+        "F7D5I9",
+        "F7DF67",
+        "Q0VGW2",
+        "Q505H9"
+      ],
+      "raw_file": {
+        "bytes": 39267,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthofinder_v3_diamond/results/SwissTrees/RefPhylo-SwissTrees_orthofinder-v3-diamond_10d02b8c3c62_raw.txt.gz",
+        "sha256": "177cb1153d1fe900874da379020bedd20929e1fc7a9895ad3050124fdb580eac"
+      }
+    },
+    {
+      "affected_counts": {
+        "APP": {
+          "FN": 22,
+          "FP": 0,
+          "TN": 29,
+          "TP": 0
+        },
+        "ASTER": {
+          "FN": 31,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "BAMBI": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "BAR": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "CASP": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "CITE": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "Clusterin": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "GH14": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "HOX": {
+          "FN": 24,
+          "FP": 0,
+          "TN": 241,
+          "TP": 0
+        },
+        "MAPT": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "NOX": {
+          "FN": 48,
+          "FP": 0,
+          "TN": 96,
+          "TP": 0
+        },
+        "POP": {
+          "FN": 10,
+          "FP": 0,
+          "TN": 23,
+          "TP": 0
+        },
+        "PSEN": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "RPS": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "SERC": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "SUMF": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "TRFE": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "VATB": {
+          "FN": 46,
+          "FP": 0,
+          "TN": 7,
+          "TP": 0
+        }
+      },
+      "affected_relations": 577,
+      "affected_totals": {
+        "FN": 181,
+        "FP": 0,
+        "TN": 396,
+        "TP": 0
+      },
+      "both_endpoints_missing": 15,
+      "method": "orthofinder_3_1_5_sequence_only",
+      "missing_genes_incident": [
+        "A0A6I8Q068",
+        "B1H1F6",
+        "F6PXE7",
+        "F6QLB4",
+        "F6SX31",
+        "F6YNC0",
+        "F7AMC8",
+        "F7BEI0",
+        "F7CLH6",
+        "F7D5A4",
+        "F7D5I9",
+        "F7DF67",
+        "Q0VGW2",
+        "Q505H9"
+      ],
+      "raw_file": {
+        "bytes": 39430,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthofinder_v3_sequence_only/results/SwissTrees/RefPhylo-SwissTrees_orthofinder-v3-sequence-only_2d36e2f51c91_raw.txt.gz",
+        "sha256": "a6ec00550482bf4fcf4eb02c2350340ac92304cc5ef5e10e2728ea92dee768c0"
+      }
+    },
+    {
+      "affected_counts": {
+        "APP": {
+          "FN": 22,
+          "FP": 0,
+          "TN": 29,
+          "TP": 0
+        },
+        "ASTER": {
+          "FN": 31,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "BAMBI": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "BAR": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "CASP": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "CITE": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "Clusterin": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "GH14": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "HOX": {
+          "FN": 24,
+          "FP": 0,
+          "TN": 241,
+          "TP": 0
+        },
+        "MAPT": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "NOX": {
+          "FN": 48,
+          "FP": 0,
+          "TN": 96,
+          "TP": 0
+        },
+        "POP": {
+          "FN": 10,
+          "FP": 0,
+          "TN": 23,
+          "TP": 0
+        },
+        "PSEN": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "RPS": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "SERC": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "SUMF": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "TRFE": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "VATB": {
+          "FN": 46,
+          "FP": 0,
+          "TN": 7,
+          "TP": 0
+        }
+      },
+      "affected_relations": 577,
+      "affected_totals": {
+        "FN": 181,
+        "FP": 0,
+        "TN": 396,
+        "TP": 0
+      },
+      "both_endpoints_missing": 15,
+      "method": "sonicparanoid_2_0_9",
+      "missing_genes_incident": [
+        "A0A6I8Q068",
+        "B1H1F6",
+        "F6PXE7",
+        "F6QLB4",
+        "F6SX31",
+        "F6YNC0",
+        "F7AMC8",
+        "F7BEI0",
+        "F7CLH6",
+        "F7D5A4",
+        "F7D5I9",
+        "F7DF67",
+        "Q0VGW2",
+        "Q505H9"
+      ],
+      "raw_file": {
+        "bytes": 39424,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/sonicparanoid_native/results/SwissTrees/RefPhylo-SwissTrees_sonicparanoid-native_67b10a1e9699_raw.txt.gz",
+        "sha256": "ddbbc46888f00c1591eee59fef82447533156f5d36bb6c78faf280c5e89884b2"
+      }
+    },
+    {
+      "affected_counts": {
+        "APP": {
+          "FN": 22,
+          "FP": 0,
+          "TN": 29,
+          "TP": 0
+        },
+        "ASTER": {
+          "FN": 31,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "BAMBI": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "BAR": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "CASP": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "CITE": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "Clusterin": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "GH14": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "HOX": {
+          "FN": 24,
+          "FP": 0,
+          "TN": 241,
+          "TP": 0
+        },
+        "MAPT": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "NOX": {
+          "FN": 48,
+          "FP": 0,
+          "TN": 96,
+          "TP": 0
+        },
+        "POP": {
+          "FN": 10,
+          "FP": 0,
+          "TN": 23,
+          "TP": 0
+        },
+        "PSEN": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "RPS": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "SERC": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "SUMF": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "TRFE": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "VATB": {
+          "FN": 46,
+          "FP": 0,
+          "TN": 7,
+          "TP": 0
+        }
+      },
+      "affected_relations": 577,
+      "affected_totals": {
+        "FN": 181,
+        "FP": 0,
+        "TN": 396,
+        "TP": 0
+      },
+      "both_endpoints_missing": 15,
+      "method": "proteinortho_6_3_6",
+      "missing_genes_incident": [
+        "A0A6I8Q068",
+        "B1H1F6",
+        "F6PXE7",
+        "F6QLB4",
+        "F6SX31",
+        "F6YNC0",
+        "F7AMC8",
+        "F7BEI0",
+        "F7CLH6",
+        "F7D5A4",
+        "F7D5I9",
+        "F7DF67",
+        "Q0VGW2",
+        "Q505H9"
+      ],
+      "raw_file": {
+        "bytes": 39413,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/proteinortho_native/results/SwissTrees/RefPhylo-SwissTrees_proteinortho-native_2d81c5f66244_raw.txt.gz",
+        "sha256": "2545806a3fc5180db3627a9e5f08b45f12e4bbd3b3e7619c9acea23c0cb67475"
+      }
+    },
+    {
+      "affected_counts": {
+        "APP": {
+          "FN": 22,
+          "FP": 0,
+          "TN": 29,
+          "TP": 0
+        },
+        "ASTER": {
+          "FN": 31,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "BAMBI": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "BAR": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "CASP": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "CITE": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "Clusterin": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "GH14": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "HOX": {
+          "FN": 24,
+          "FP": 0,
+          "TN": 241,
+          "TP": 0
+        },
+        "MAPT": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "NOX": {
+          "FN": 48,
+          "FP": 0,
+          "TN": 96,
+          "TP": 0
+        },
+        "POP": {
+          "FN": 10,
+          "FP": 0,
+          "TN": 23,
+          "TP": 0
+        },
+        "PSEN": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "RPS": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "SERC": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "SUMF": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "TRFE": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "VATB": {
+          "FN": 46,
+          "FP": 0,
+          "TN": 7,
+          "TP": 0
+        }
+      },
+      "affected_relations": 577,
+      "affected_totals": {
+        "FN": 181,
+        "FP": 0,
+        "TN": 396,
+        "TP": 0
+      },
+      "both_endpoints_missing": 15,
+      "method": "fastoma_0_3_5",
+      "missing_genes_incident": [
+        "A0A6I8Q068",
+        "B1H1F6",
+        "F6PXE7",
+        "F6QLB4",
+        "F6SX31",
+        "F6YNC0",
+        "F7AMC8",
+        "F7BEI0",
+        "F7CLH6",
+        "F7D5A4",
+        "F7D5I9",
+        "F7DF67",
+        "Q0VGW2",
+        "Q505H9"
+      ],
+      "raw_file": {
+        "bytes": 39331,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/fastoma/results/SwissTrees/RefPhylo-SwissTrees_fastoma_1d5a0e0164c9_raw.txt.gz",
+        "sha256": "465c47230b353f894bf2f5861c4f3e029eeaf103a3b78c0f77f79943b1a542e1"
+      }
+    },
+    {
+      "affected_counts": {
+        "APP": {
+          "FN": 22,
+          "FP": 0,
+          "TN": 29,
+          "TP": 0
+        },
+        "ASTER": {
+          "FN": 31,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "BAMBI": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "BAR": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "CASP": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "CITE": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "Clusterin": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "GH14": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "HOX": {
+          "FN": 24,
+          "FP": 0,
+          "TN": 241,
+          "TP": 0
+        },
+        "MAPT": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "NOX": {
+          "FN": 48,
+          "FP": 0,
+          "TN": 96,
+          "TP": 0
+        },
+        "POP": {
+          "FN": 10,
+          "FP": 0,
+          "TN": 23,
+          "TP": 0
+        },
+        "PSEN": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "RPS": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "SERC": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "SUMF": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "TRFE": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 0
+        },
+        "VATB": {
+          "FN": 46,
+          "FP": 0,
+          "TN": 7,
+          "TP": 0
+        }
+      },
+      "affected_relations": 577,
+      "affected_totals": {
+        "FN": 181,
+        "FP": 0,
+        "TN": 396,
+        "TP": 0
+      },
+      "both_endpoints_missing": 15,
+      "method": "orthomcl_1_4",
+      "missing_genes_incident": [
+        "A0A6I8Q068",
+        "B1H1F6",
+        "F6PXE7",
+        "F6QLB4",
+        "F6SX31",
+        "F6YNC0",
+        "F7AMC8",
+        "F7BEI0",
+        "F7CLH6",
+        "F7D5A4",
+        "F7D5I9",
+        "F7DF67",
+        "Q0VGW2",
+        "Q505H9"
+      ],
+      "raw_file": {
+        "bytes": 39419,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthomcl_1_4_final_groups/results/SwissTrees/RefPhylo-SwissTrees_orthomcl-1-4-final-groups_08066622deae_raw.txt.gz",
+        "sha256": "ca802be05c7bca1cb6335daa7bdae5c8823f5835115e42fb676d62994834e54e"
+      }
+    }
+  ],
+  "missing_genes": [
+    "A0A6I8Q068",
+    "B1H1F6",
+    "F6PXE7",
+    "F6QLB4",
+    "F6SX31",
+    "F6YNC0",
+    "F7AMC8",
+    "F7BEI0",
+    "F7CLH6",
+    "F7D5A4",
+    "F7D5I9",
+    "F7DF67",
+    "Q0VGW2",
+    "Q505H9"
+  ],
+  "reader": {
+    "bytes": 9904,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_qfo_swiss_counts.py",
+    "sha256": "ff8e5314c98bdffce54732df94611e9d340d854e70392358c495b636b67452ae"
+  },
+  "reference_relation_count": 10765,
+  "scores_recomputed": false,
+  "source": {
+    "bytes": 5231,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_swiss_missing_input_relations.py",
+    "sha256": "629580c4c83e4c52ff92548efe280b7bbc91ecf3aaf4b2154b4ae32e9c0db1bd"
+  },
+  "status": "missing_input_reference_relations_counted"
+}

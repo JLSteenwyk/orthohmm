@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Shared SwissTrees Missing-Input Relations Quantified (2026-09-17)
+
+Previous turn made progress by auditing/pushing frozen aliases1cc024f.
+Re-read full objective and confirmed21671_1,21682,DGX21656_8 live. Added
+and executed `audit_swiss_missing_input_relations.py` against all eight
+hash-pinned retained native raw outputs. The14missing reference identities
+touch577relations in six families; every method has181FN/396TN and zeroTP/FP.
+Fifteen double-missing relations are counted once. Full reference identities,
+truth, membership and admitted confusion counts agree.14tests pass.
+
+Report `swiss_missing_input_relations_20260917.json`, interpretation note
+`SWISS_MISSING_INPUT_RELATIONS_20260917.md`, and manuscript limitation retain
+the result without changing scores or denominators. Identical affected labels
+do not prove historical input parity, resource-mismatch cause or ranking
+invariance under exclusion. Those follow-ups and the larger publication
+requirements remain active; no scientific runs restarted.
+
 ## SwissTrees Missing Inputs Not Resolved By Frozen Aliases (2026-09-17)
 
 Previous turn made progress by adding/pushing sequence inventoryc82a7fa.
