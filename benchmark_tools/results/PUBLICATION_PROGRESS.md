@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Sonic Native Conversion And QfO Search Completion (2026-09-18 UTC)
+
+Previous turn progressed through0321e60 with independent pair arithmetic.
+Slurm now confirms DIAMOND21789 COMPLETED0:0 in02:14:43 on32CPUs and native
+search admission21790 COMPLETED0:0 in00:01:30 on2CPUs. Admission report
+benchmarks/work/qfo_sequence_search_admission_20260918.json has SHA-256
+6b2e4672353acabc8bab452f9d0513eb496154b051e7158b2af5ac5d64470260 and status
+corrected_qfo_search_panel_admitted_pending_numeric_validation. It verifies
+execution/file identity, not hit semantics or accuracy. Numeric conversion
+21791 is live RUNNING2:03; HMM21706_0 RUNNING12:29:56; Sonic21795 pending.
+
+Added validate_sonicparanoid_groups.py. Actual historical validation verifies
+12 input snapshot hashes/counts, full identifier ownership in native species
+columns, group IDs/counts/seed bounds, no duplicate membership, and exact
+normalized partition equivalence. All19853 groups/288562 members match;
+154655 input proteins lie outside this table. Evidence retained in
+three_kingdoms_sonic_native_groups_20260918.json; inputs/output rehashed.
+19 focused tests pass, including malformed counts/columns, identifier
+stripping, ownership swaps, duplicate membership and changed partitions.
+
+Historical input mismatch remains explicit. This helper is available for
+the matched run but terminal/runtime admission and scoring automation still
+need completion. No historical score replaced or new accuracy admitted.
+
 ## Independent Three Kingdoms Pair Arithmetic (2026-09-18 UTC)
 
 Previous turn progressed through179d11d by submitting matched Sonic21795.

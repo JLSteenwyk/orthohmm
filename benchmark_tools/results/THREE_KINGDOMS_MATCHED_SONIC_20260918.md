@@ -47,3 +47,23 @@ Shared-host time and memory are descriptive, not dedicated scaling evidence.
 Scheduling after QfO numeric admission is a resource-priority decision, not
 a scientific dependency. A failed QfO admission does not invalidate this
 independently frozen Three Kingdoms input panel.
+
+## Native Group Validator
+
+`benchmark_tools/validate_sonicparanoid_groups.py` now validates exact full
+FASTA identifiers, species ownership, snapshot input hashes/protein counts,
+unique native group IDs and membership, declared group/species counts and
+seed-count bounds, and bijective membership equivalence with normalized
+groups. It rejects unexpected columns and truncated/extra-field rows.
+Files are hashed before and after validation. The validator does not by
+itself validate scheduler state, runtime identity, or score arithmetic.
+
+The historical retained input copies, snapshot, native table and normalized
+groups pass this validation: 12 species, 443217 input proteins, 19853 groups,
+288562 grouped proteins, and 154655 proteins outside the selected group
+table. Report: `three_kingdoms_sonic_native_groups_20260918.json`.
+Full pipe-delimited Xenopus identifiers are preserved without accession
+stripping. This uses historical input copies, including raw Danio; it does
+not establish equivalence to staged inputs or admit a matched-input score.
+Nineteen focused validator/normalizer tests pass. The new job still requires
+its own terminal, provenance, conversion and scoring validation.
