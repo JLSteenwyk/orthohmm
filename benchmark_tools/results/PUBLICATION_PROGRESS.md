@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Reference-Resource Attribution Added (2026-09-18 UTC)
+
+Previous turn made progress throughbedeea3, reconciling current claim rows.
+Reread the objective and polled local scheduler state: HMM21706_0 running
+19:11:09; overhead21838 tasks0/1 complete, task2 running12:49, remainder
+pending. No DGX access or partial native-output inspection occurred.
+
+Added a resource-citation supplement and manuscript attribution for TreeFam,
+SwissTree and FAS. Checked primary resource/publisher descriptions and
+bibliographic metadata; explicitly recorded the failed direct FAS full-text
+retrieval rather than claiming full review. Distinguished TreeFam release1.1
+description from missing release7 inputs, the SwissTree resource goal from
+our18-family subset, and the2023 FAS paper from QfO2020 implementation identity.
+No scientific endpoint or inference changed. Documentation diff and local
+evidence links checked; machine-readable export and remaining resource
+citations are still unfinished.
+
 ## Current Claim Summaries Reconciled (2026-09-18 UTC)
 
 The preceding retrieval-status turn made no new analysis progress: it

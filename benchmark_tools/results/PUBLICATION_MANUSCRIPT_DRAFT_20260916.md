@@ -12,7 +12,9 @@ adds Leiden, CPM, NumPy, Biopython and Matplotlib. A
 [service and graph-library supplement](PUBLICATION_SERVICE_REFERENCES_20260918.md)
 adds the QfO2020/2022 updates and igraph. The service papers use a separate
 [reviewed byline export](publication_service_bylines_20260918.csl.json),
-with raw Crossref metadata retained as provenance. Remaining dependency/resource citations and journal-specific
+with raw Crossref metadata retained as provenance. A
+[reference-resource supplement](PUBLICATION_RESOURCE_REFERENCES_20260918.md)
+adds bounded attribution for TreeFam, SwissTree and FAS. Remaining dependency/resource citations and journal-specific
 formatting are incomplete.
 
 ## Study Objective
@@ -135,6 +137,13 @@ recorded after historical aggregate results were known, before this
 bootstrap; it is not preregistration of method selection. Family
 exchangeability and residual cross-family dependence limit inference.
 [Protocol](ORTHOBENCH_UNCERTAINTY_PROTOCOL_20260916.md).
+
+The [SwissTree resource](https://www.expasy.org/resources/swisstree) and
+[TreeFam resource paper](https://doi.org/10.1093/nar/gkj118) describe curated
+gene-tree references; they do not authenticate our exact retained snapshots.
+[FAS](https://doi.org/10.1093/bioinformatics/btad226) measures feature-architecture
+similarity, not pairwise orthology F1. Its later method paper is resource
+attribution, not proof of the implementation used for the QfO2020 archive.
 
 For QfO we retain individual VGNC, SwissTrees, TreeFam-A, EC, GO, and FAS
 endpoints, their native axes, and source provenance. The unweighted mean of
