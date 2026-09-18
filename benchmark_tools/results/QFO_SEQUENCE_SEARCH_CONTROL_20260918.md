@@ -153,3 +153,26 @@ No production count audit has run: all three corrected assessments are still
 required. The numerical protocol is frozen in
 `QFO_SEQUENCE_UNCERTAINTY_PROTOCOL_20260918.md`; its production bootstrap
 runner, binding exact protocol/auditor/helper sources, remains to be added.
+
+### Production Uncertainty Runner Added
+
+`run_qfo_sequence_uncertainty.py` now accepts `--counts`, `--counts-sha256`,
+`--protocol`, `--output` and `--markdown`. Supply the count auditor's JSON and
+its independently recorded SHA-256, the unchanged uncertainty protocol above,
+and two distinct fresh output paths. Run from the frozen source checkout used
+for count assembly: source record paths must match as well as content hashes.
+
+The runner pins the protocol and twelve source/helper files, checks all count
+evidence records, calls the source-bound auditor again, and requires exact
+equality with the saved counts before resampling. All recorded inputs are
+rechecked afterward. Production controls are fixed at100000 replicates,
+PCG64 seed20260923 and six adjusted endpoints; CLI overrides are not exposed.
+Successful output admits only these conditional SwissTrees intervals and
+keeps publication_ready=False. The runner does not rerun upstream inference
+or native scoring and is not a hermetic software-environment installer.
+
+55 focused tests pass, including a synthetic100000-draw invocation and
+rejection of changed protocols, helpers, counts, evidence and output collisions.
+No real corrected sequence-control intervals have been produced. The frozen
+protocol's outstanding-work paragraph records its original freeze-time state;
+this operational update does not alter its endpoints or statistical controls.

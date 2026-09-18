@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Source-Pinned Sequence Uncertainty Runner Added (2026-09-18 UTC)
+
+Previous turn progressed through63260a5 with source-bound count assembly.
+Reread the full objective. Latest scheduler check confirms21706_0 HMM
+RUNNING14:09:26 and21791 conversion RUNNING1:41:33;21792/21798 remain
+dependency-pending. No live work was restarted.
+
+Added run_qfo_sequence_uncertainty.py. It pins the unchanged protocol and
+twelve source/helper identities, rechecks the saved count evidence, rebuilds
+the entire count audit from admitted raw sources, and requires exact agreement
+before the fixed100000-draw PCG64/seed20260923 bootstrap. Source records are
+rechecked afterward. JSON and Markdown preserve both contrasts, all six
+endpoints, nominal/adjusted intervals, descriptive family counts and limitations.
+The runner does not expose endpoint/seed/replicate tuning and refuses existing
+or colliding output paths. Publication readiness remains false.
+
+55 focused tests pass, including10 new runner tests and an actual synthetic
+100000-replicate calculation. Full unit regression:4955 passed,9 skipped in
+87.02s. CLI help and scoped whitespace checks pass. These are software tests,
+not real benchmark intervals or proof of biological validity. Upstream
+inference/scoring admissions are prerequisites, not rerun by this runner.
+
+Next computational action remains review21798 memory evidence and prepare
+both graph variants when numeric validation completes. Then perform graph,
+pair and score admission before applying the count/uncertainty workflow.
+Other QfO uncertainty, controlled timing, independent-validation limitations
+and the final reproducible publication package remain unresolved.
+
 ## Sequence-Control SwissTrees Source Binding Added (2026-09-18 UTC)
 
 Previous turn progressed throughacbb7f8 with a frozen uncertainty protocol
