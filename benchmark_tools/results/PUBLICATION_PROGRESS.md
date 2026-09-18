@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Corrected OrthoMCL Pair Conversion Queued (2026-09-18 UTC)
+
+Previous turn progressed through fe08c7d/1899f19: independent native output
+admission queued as21752. Revalidated handles: HMM21706_0 RUNNING9:03:54,
+DGX21656_25 RUNNING26:02; correctedBLAST21713 pending resources, native21750
+and admission21752 pending dependencies. No existing job was restarted.
+
+Implemented conversion of admitted native OrthoMCL groups to canonical
+cross-species cliques, with repeated partition audit, injective accessions,
+complete group/coverage/pair-count checks and zero accepted mapping loss.
+Ungrouped inputs and BLAST query-failure diagnostics remain explicit.
+39 new tests include10 randomized brute-force comparisons and the actual
+retained native fixture (30 pairs,12 groups,41/42 grouped proteins).
+205 focused tests pass with legacy native runtime tests enabled. The
+dedicated-runtime pending-job preflight correctly rejects21752 and creates
+no conversion directory. No production conversion or score is claimed.
+
+Frozen converter b213c3c1087510e7e965afa14ffca35d14b8ca1a at
+publication_qfo_corrected_orthomcl_pairs_v1 is queued as21753 afterok:21752,
+2CPUs/64GiB/24h/bizon, no requeue; scontrol confirms dependency. See
+QFO_CORRECTED_ORTHOMCL_PAIRS_20260918.md. Next: verify completed conversion
+before QfO assessment, then independently admit scores. The broader
+publication goal remains active and incomplete.
+
 ## Corrected Native Output Admission Queued (2026-09-18 UTC)
 
 Previous turn progressed through ecd96ca: independent native final-group

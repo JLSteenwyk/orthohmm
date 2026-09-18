@@ -64,3 +64,12 @@ after dependency satisfaction. Submit only with `afterok:21752` and a frozen
 converter executor. Conversion completion still requires terminal and
 artifact verification before assessment. No corrected OrthoMCL score exists
 at this milestone.
+
+Submitted **21753** with `afterok:21752` at scheduler time
+`2026-09-18T09:49:36`. `scontrol` confirms pending dependency,2CPUs/64GiB/
+24h/bizon and no requeue. Frozen converter
+`b213c3c1087510e7e965afa14ffca35d14b8ca1a` lives at
+`benchmarks/work/publication_qfo_corrected_orthomcl_pairs_v1`; its scientific
+and benchmark source diff is clean. The production conversion directory
+remains absent. Next: terminal conversion verification, QfO assessment and
+independent score admission.
