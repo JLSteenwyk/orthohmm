@@ -1140,6 +1140,19 @@ scoring of these databases, not upstream conversion completeness, independent
 family resampling, or every publication competitor.
 [Reference and prediction audit](QFO_REFERENCE_MAPPING_AUDIT_20260917.md).
 
+A [dependency-structure audit](VGNC_DEPENDENCY_STRUCTURE_20260918.md) collapsed
+overlaps among 16,863 family labels, yielding 16,844 reference blocks.
+All scored true positives and false negatives lay within these blocks,
+whereas 120,804, 15,788, 121,468 and 15,804 false positives crossed blocks in
+the four stages, respectively; each stage had only two within-block false
+positives. Thus merging overlapping reference labels alone does not justify
+ordinary independent-family resampling of the native precision denominator.
+Connected components of prediction links also vary with the method and are
+not used as outcome-defined resampling units. These observations explain an
+unresolved dependence problem; they provide neither confidence intervals nor
+proof that valid paired inference is impossible. VGNC remains a point-estimate
+endpoint with an explicit uncertainty limitation.
+
 ## Data And Code Availability
 
 A [primary-source data-rights register](PUBLICATION_DATA_RIGHTS_20260918.md)

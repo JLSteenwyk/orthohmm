@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Claim Checklist And VGNC Manuscript Integration (2026-09-18 UTC)
+
+Previous turn progressed through4f664d8 with the full5066-test regression
+and direct confirmation of live QfO validator progress. Reread the full
+objective. Current scheduler check confirms21792 RUNNING52:16 and21706_0
+RUNNING15:16:12;21798 remains dependency-pending.
+
+Reconciled the current claim checklist with retained machine-readable
+evidence: numeric conversion is complete but source admission is still live;
+OrthoBench initial-edge tracing and factorial statistical relocation are
+complete; native counter smokes and bracketed controls remain engineering
+evidence, not controlled timing. Rehashed the actual conversion manifest and
+checked the reported status/false-admission fields for the added analyses.
+Historical execution notes remain clearly labeled rather than erased.
+
+Integrated the VGNC cross-reference-block false-positive counts into the
+manuscript and claim boundaries. The text explains why shared-protein label
+merging does not supply independent-family uncertainty, without claiming
+paired inference is impossible or replacing missing intervals with nominal
+ones. No benchmark score, endpoint, parameter or current run was changed.
+
+Parsed both edited documents with MarkdownIt and checked all217local link
+occurrences: none missing. Sixteen focused VGNC/reproduction tests pass.
+This improves evidence traceability but does not close corrected-QfO scoring,
+other endpoint uncertainty, controlled timing or final release requirements.
+
 ## Full Unit Regression And Live QfO Validation Check (2026-09-18 UTC)
 
 Previous turn progressed throughaf6a8e7 with completed bracketed CPU controls.
