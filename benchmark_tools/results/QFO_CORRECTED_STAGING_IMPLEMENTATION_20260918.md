@@ -1,5 +1,38 @@
 # Corrected QfO Staging Prepared
 
+## Independent Post-Extraction Inventory
+
+`audit_qfo_corrected_staging.py` is now available for the next gate, but has
+not been executed on production inputs. It requires the explicitly reviewed
+staging-manifest SHA-256 and pinned QfO mapping, checks all staged file hashes
+before and after parsing, and rejects extra directory entries, nonregular
+files, symlinks and nonlocal manifest paths. Its report must be written
+outside the staged input directory.
+
+Direct FASTA parsing verifies unique accessions, unique numeric identities,
+nonempty sequences, complete reference coverage, and exactly one reference
+species per proteome. Species assignment uses the reference Goff intervals,
+including their boundary cases; counts must cover each interval completely
+and each species must occur in exactly one proteome. Sequence residues are
+not normalized. This is independent of the extraction operation, not an
+independent parser implementation: archive audits also use Biopython.
+
+```sh
+python benchmark_tools/audit_qfo_corrected_staging.py \
+  --manifest "${NEW_CORRECTED_INPUT_DIRECTORY:?}/staging_manifest.json" \
+  --manifest-sha256 "${REVIEWED_STAGING_SHA256:?}" \
+  --mapping "${PINNED_QFO_MAPPING_PATH:?}" \
+  --output "${NEW_EXTERNAL_INVENTORY_REPORT:?}"
+```
+
+Success is `corrected_staged_inventory_verified_pending_execution_freeze`,
+with `inference_authorized: false`. It does not replace prior scheduler,
+archive/native-sequence compatibility or staging-source review. No production
+invocation is queued. Seventeen inventory tests pass; combined with staging
+and both archive audits, 53 tests pass. The actual archive remains in transit.
+
+## Original Staging Milestone
+
 `stage_qfo_corrected_inputs.py` implements the separately named canonical
 staging step in `QFO_CORRECTED_RELEASE_PROTOCOL_20260917.md`. It has not been
 executed against the production archive. Acquisition 21687 remains live;

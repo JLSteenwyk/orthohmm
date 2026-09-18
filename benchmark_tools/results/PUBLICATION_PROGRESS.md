@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Corrected Input Inventory Gate Prepared (2026-09-18 UTC)
+
+Previous turn progressed via ffdd694, committed/pushed dependency citations.
+Re-read the complete objective and verified live handles. Implemented direct
+post-extraction FASTA inventory for the corrected QfO inputs, binding an
+explicit staging-manifest hash and frozen reference mapping. Checks include
+file identities before/after parsing, complete unique accession/numeric
+coverage, exact one-to-one proteome/reference-species ownership, full Goff
+interval coverage, no symlinks or unexpected directory entries. No sequence
+normalization. This adds a species-ownership check to existing archive gates.
+
+Seventeen new tests and36 existing staging/archive tests pass (53 total).
+CLI help passes. Production inventory was not executed and no inference is
+authorized: corrected archive21687 remains running at1:29:46 and reached
+2,236,731,392/2,648,666,198 bytes at the preceding file-size check. Audits
+21688/21689 remain dependent. See the updated staging implementation note.
+
+QfO reconciliation advanced: cell2/21671_2 and cell1's native validator
+21673_1 are now running; pair21675_3 remains dependent. First R-on score21697
+is running22:18, validator21698 pending. DGX21656_11 running8:09. Next:
+review cell1 native admission/pairs and submit its frozen score workflow;
+review corrected archive audits before extraction/inventory/execution freeze.
+No scientific result or publication-readiness claim is added by fixture tests.
+
 ## Simulator And Selected Dependency Citations (2026-09-18 UTC)
 
 Previous turn made progress: committed/pushed 3d19301 with reproducible
