@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Conditional Corrected-Release Protocol Prepared (2026-09-17)
+
+Previous turn progressed with staging-parity commit 861ed52. Re-read the
+objective and confirmed acquisition 21687, reconciliation 21671_1 and DGX
+21656_8 live. Wrote `QFO_CORRECTED_RELEASE_PROTOCOL_20260917.md` before
+corrected predictions or scores: strict archive/mapping/sequence acceptance,
+separate input freeze, unchanged eight-method and factorial designs, no
+score-only repair or unsupported checkpoint reuse, explicit uncertainty and
+failure rules. It does not authorize inference before empirical admission.
+Full unit regression suite passes: 2,498 tests in 51.45 seconds.
+
+User then requested external retrieval of original TreeFam-A NHX trees and
+`treefam2reference.txt`; that acquisition investigation takes immediate
+priority. No frozen input, prediction or score has changed. Full goal active.
+
 ## Remaining Comparator Staging Copies Match Originals (2026-09-17)
 
 Previous turn progressed with OrthoMCL parity commit 8fd8dc7. Re-read the
