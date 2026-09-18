@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Corrected Sequence Checkpoint Self-Hit Review (2026-09-18 UTC)
+
+Previous turn progressed throughb5d4ca4 with the completed DGX positive
+control and observed successful completion of21791. Reread the full objective.
+Conversion21791 completed0:0 in1:56:01;21792 independent validation is now
+RUNNING4:27. HMM21706_0 is RUNNING14:28:23;21798 remains dependency-pending.
+
+Inspected the completed conversion manifest:593510904 all-hit rows and
+321164891 top100 rows across984137 genes/78species. Reported self-hit counts
+are980829 and980803. This motivated a semantic review rather than silently
+forcing self-hit retention or changing the cap. The frozen ranking has no
+self exception; direct self rows are excluded from RBNH, singleton assignment
+and cross-cluster refinement, while occupancy of a cap slot can change the
+non-self subset. Tested graph/refinement bytes match the frozen7f3a9e4 core.
+
+Added seven regression cases;18 focused tests pass. Full evidence, manifest
+identity and limitations are in QFO_SEQUENCE_SELF_HIT_REVIEW_20260918.md.
+This is not production source-equivalence admission or an explanation of the
+specific26 rows;21792 remains responsible for exact source/checkpoint equality.
+No scientific parameters, checkpoint contents or running jobs changed.
+
+Next: review independent numeric admission and21798 memory output when ready,
+then launch the frozen graph controls with justified allocations. Controlled
+timing validation, other QfO uncertainty and publication packaging remain open.
+
 ## DGX Native-Step And Exited-Burst Probe Completed (2026-09-18 UTC)
 
 Previous turn progressed throughbc5c8e3 with scheduled counter availability.
