@@ -1,5 +1,33 @@
 # Publication Progress
 
+## High-Sensitivity Output Content Checks (2026-09-18 UTC)
+
+Previous turn progressed by extending the TreeFam archive/history search
+and committing its negative retrieval evidence (858da68). The original
+family trees and mapping remain unavailable; no family bootstrap was enabled.
+
+Added `validate_high_sensitivity_outputs.py` to cross-check complete gene
+membership, per-FASTA species ownership, numeric checkpoint integrity,
+native completion/settings/counts, and exact raw-cluster-to-final-group
+equivalence with native singleton completion. Counts reject noninteger or
+nonfinite profile evidence. Input/output hashes are rechecked after validation,
+and checkpoint file membership must stay unchanged.
+
+The focused validator/checkpoint/ownership suite passes 41 tests. A separate
+partition-only check of the retained historical QfO high-sensitivity output
+passed: 976,504 genes, 390,817 final groups, 390,817 raw clusters and zero
+added singletons. This is not an admission of corrected inference, a full
+historical provenance audit, or proof of search/scoring accuracy.
+
+Latest scheduler check: corrected high-sensitivity 21706_0, SonicParanoid
+21710, Proteinortho scoring 21718, original final factorial reconciliation
+21671_3 and dedicated DGX timing task 21656_15 are running. Their queued
+dependent jobs remain pending; corrected legacy BLAST 21713 waits for
+resources. No running job was restarted or modified. Next: bind the content
+checker to terminal scheduler/source/runtime/command evidence before using
+the corrected checkpoint for the eight-cell factorial and satellite pipeline.
+All remaining publication gates remain open.
+
 ## Corrected Comparator Execution and FastOMA Assets (2026-09-18 UTC)
 
 The previous continuation submitted corrected legacy BLAST; this turn
