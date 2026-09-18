@@ -1,0 +1,1037 @@
+{
+  "controlled_workload_verified": false,
+  "helpers": [
+    {
+      "bytes": 7461,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_native_interval_step.py",
+      "sha256": "0503cee2c49e1f77086232dd99076041f33ff8dc697097d01909d9315af0990e"
+    },
+    {
+      "bytes": 5845,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_host_counters.py",
+      "sha256": "3d3c193305085e17aa10e05be842d814f66d020d7dde285c8d9288ead2ce3f3c"
+    },
+    {
+      "bytes": 10645,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_interval_cpu.py",
+      "sha256": "b535124efb386265555e1ea946e4edc16ad6d8ff1c3d467955576875d944e366"
+    },
+    {
+      "bytes": 6808,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/screen_bracketed_cpu.py",
+      "sha256": "9175b0033b079d50cb086d64397a4996850d4f79dac317cd15ea83d96f4b8075"
+    },
+    {
+      "bytes": 6706,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_dgx_step_separation.py",
+      "sha256": "c00eae1c44c86f0ee02c72e4634cf4e5cc70e2656a8ebfc0f9070769f6f7f97b"
+    }
+  ],
+  "limitations": [
+    "Retrospective diagnostic on all three retained smokes; no threshold or inclusion rule changes.",
+    "Inner/outer counter differences describe reported accounting, not actual CPU-time bounds or accounting delay.",
+    "Observer leaf excludes other batch-step/system work; it is not a complete observer-overhead measurement.",
+    "Residual arithmetic is not attribution to unrelated work and must not correct native wall time.",
+    "Overlapping host windows must not be summed; negative residuals are preserved.",
+    "User/system splits differ in accounting scope and granularity; non-CPU interference is unmeasured."
+  ],
+  "publication_ready": false,
+  "runs": [
+    {
+      "evidence": {
+        "bytes": 55611,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_interval_native_21810/interval_native_smoke_v2/run_00/measurement/interval_report.json",
+        "sha256": "6e76afc4379ca894fecbec61bc2fb1c44de408fce6e4c2feefe21a8e94f13a46"
+      },
+      "intervals": [
+        {
+          "controlled_workload_verified": false,
+          "host_inner_busy_cpu_s": 3.86,
+          "host_outer_busy_cpu_s": 3.87,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 16.16,
+            "iowait": 0.01,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.18,
+            "user": 3.69
+          },
+          "index": 0,
+          "inner_host_minus_native_cpu_s": 0.010837999999999681,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.167638,
+            "usage_usec": 3.849162,
+            "user_usec": 3.681524
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.002004,
+            "usage_usec": 0.002016,
+            "user_usec": 1.3e-05
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 3.87,
+            "native_cpu_s": 3.849162,
+            "outer_read_overhang_s": 0.000826706,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.020785896865335246,
+            "signed_unassigned_cpu_s": 0.020837999999999912,
+            "wall_s": 1.002506658
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": 0.01882199999999991,
+          "read_window_busy_cpu_s": 0.010000000000000231,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "host_inner_busy_cpu_s": 15.36,
+          "host_outer_busy_cpu_s": 15.39,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 4.6,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.72,
+            "user": 14.67
+          },
+          "index": 1,
+          "inner_host_minus_native_cpu_s": -0.027470000000000994,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.718258,
+            "usage_usec": 15.38747,
+            "user_usec": 14.669211
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.003002,
+            "usage_usec": 0.003033,
+            "user_usec": 3e-05
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 15.39,
+            "native_cpu_s": 15.38747,
+            "outer_read_overhang_s": 0.001123859,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.0025298907049268542,
+            "signed_unassigned_cpu_s": 0.0025300000000001432,
+            "wall_s": 1.0000432015
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": -0.0005029999999998569,
+          "read_window_busy_cpu_s": 0.030000000000001137,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "host_inner_busy_cpu_s": 11.8,
+          "host_outer_busy_cpu_s": 11.82,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 8.17,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.34,
+            "user": 11.48
+          },
+          "index": 2,
+          "inner_host_minus_native_cpu_s": -0.023541999999999064,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.335988,
+            "usage_usec": 11.823542,
+            "user_usec": 11.487555
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.001009,
+            "usage_usec": 0.003052,
+            "user_usec": 0.002043
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 11.82,
+            "native_cpu_s": 11.823542,
+            "outer_read_overhang_s": 0.001108723,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": -0.0035410531719560533,
+            "signed_unassigned_cpu_s": -0.00354199999999949,
+            "wall_s": 1.000267386
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": -0.00659399999999949,
+          "read_window_busy_cpu_s": 0.019999999999999574,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "host_inner_busy_cpu_s": 0.1,
+          "host_outer_busy_cpu_s": 0.1,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 19.91,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.02,
+            "user": 0.08
+          },
+          "index": 3,
+          "inner_host_minus_native_cpu_s": 0.009697000000000011,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.019906,
+            "usage_usec": 0.090303,
+            "user_usec": 0.070396
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.00194,
+            "usage_usec": 0.002702,
+            "user_usec": 0.000761
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 0.1,
+            "native_cpu_s": 0.090303,
+            "outer_read_overhang_s": 0.001086051,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.009691567261135622,
+            "signed_unassigned_cpu_s": 0.009697000000000011,
+            "wall_s": 1.0005605635
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": 0.006995000000000012,
+          "read_window_busy_cpu_s": 0.0,
+          "scientific_timings_admitted": false
+        }
+      ],
+      "job_id": 21811,
+      "method": "orthohmm_high_sensitivity",
+      "original_flagged_intervals": [],
+      "original_whole_command_screen": {
+        "controlled_workload_verified": false,
+        "host_busy_cpu_s": 31.15,
+        "limitations": [
+          "Operational thresholds, not calibrated probabilistic or deterministic interference bounds.",
+          "Unassigned CPU includes observer, kernel and launch/exit work; it is not identified foreign CPU.",
+          "Counter accounting granularity/delay and non-CPU interference remain unresolved.",
+          "A run-wide average can hide concentrated bursts; interval-level monitoring remains necessary.",
+          "No subtraction from native wall time or correction of performance results is permitted."
+        ],
+        "maximum_residual_cores": 0.25,
+        "native_cpu_s": 31.142794,
+        "negative_tolerance_cpu_s": 0.5,
+        "reasons": [],
+        "scientific_timings_admitted": false,
+        "screen_passed": true,
+        "signed_unassigned_average_cores": 0.002331804052468553,
+        "signed_unassigned_cpu_s": 0.007206000000000046,
+        "status": "bracketed_cpu_operational_screen",
+        "work_wall_s": 3.090311123
+      }
+    },
+    {
+      "evidence": {
+        "bytes": 82655,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_interval_native_21810/interval_native_smoke_v2/run_01/measurement/interval_report.json",
+        "sha256": "2d63f27662ec8aadd7a313e0ba42617f52f4d8caa81a4a3e3c87fb67a56560e3"
+      },
+      "intervals": [
+        {
+          "controlled_workload_verified": false,
+          "host_inner_busy_cpu_s": 4.01,
+          "host_outer_busy_cpu_s": 4.02,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 16.03,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.2,
+            "user": 3.82
+          },
+          "index": 0,
+          "inner_host_minus_native_cpu_s": 0.00986999999999938,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.197353,
+            "usage_usec": 4.00013,
+            "user_usec": 3.802777
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.001999,
+            "usage_usec": 0.002166,
+            "user_usec": 0.000167
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 4.02,
+            "native_cpu_s": 4.00013,
+            "outer_read_overhang_s": 0.000826786,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.019823522542164188,
+            "signed_unassigned_cpu_s": 0.019869999999999166,
+            "wall_s": 1.002344561
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": 0.017703999999999165,
+          "read_window_busy_cpu_s": 0.009999999999999787,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "host_inner_busy_cpu_s": 15.85,
+          "host_outer_busy_cpu_s": 15.87,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 4.13,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.73,
+            "user": 15.14
+          },
+          "index": 1,
+          "inner_host_minus_native_cpu_s": -0.005283999999999622,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.726246,
+            "usage_usec": 15.855284,
+            "user_usec": 15.129039
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.002002,
+            "usage_usec": 0.003015,
+            "user_usec": 0.001013
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 15.87,
+            "native_cpu_s": 15.855284,
+            "outer_read_overhang_s": 0.001102564,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.014716130782254214,
+            "signed_unassigned_cpu_s": 0.014715999999999951,
+            "wall_s": 0.999991113
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": 0.011700999999999951,
+          "read_window_busy_cpu_s": 0.019999999999999574,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "host_inner_busy_cpu_s": 11.19,
+          "host_outer_busy_cpu_s": 11.2,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 8.8,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.36,
+            "user": 10.84
+          },
+          "index": 2,
+          "inner_host_minus_native_cpu_s": -0.015766000000001057,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.352097,
+            "usage_usec": 11.205766,
+            "user_usec": 10.853669
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.001002,
+            "usage_usec": 0.002723,
+            "user_usec": 0.001721
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 11.2,
+            "native_cpu_s": 11.205766,
+            "outer_read_overhang_s": 0.001087108,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": -0.00576243128596885,
+            "signed_unassigned_cpu_s": -0.00576600000000127,
+            "wall_s": 1.000619307
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": -0.00848900000000127,
+          "read_window_busy_cpu_s": 0.009999999999999787,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "host_inner_busy_cpu_s": 14.73,
+          "host_outer_busy_cpu_s": 14.74,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 5.16,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.02,
+            "steal": 0.0,
+            "system": 11.16,
+            "user": 3.56
+          },
+          "index": 3,
+          "inner_host_minus_native_cpu_s": 0.31469700000000067,
+          "native_step_delta_cpu_s": {
+            "system_usec": 11.075764,
+            "usage_usec": 14.415303,
+            "user_usec": 3.339539
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.0,
+            "usage_usec": 0.002877,
+            "user_usec": 0.002876
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 14.74,
+            "native_cpu_s": 14.415303,
+            "outer_read_overhang_s": 0.001070899,
+            "reasons": [
+              "excess_unassigned_cpu"
+            ],
+            "screen_passed": false,
+            "signed_unassigned_average_cores": 0.3245693420092481,
+            "signed_unassigned_cpu_s": 0.32469700000000046,
+            "wall_s": 1.000393315
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": 0.32182000000000044,
+          "read_window_busy_cpu_s": 0.009999999999999787,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "host_inner_busy_cpu_s": 1.01,
+          "host_outer_busy_cpu_s": 1.02,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 18.97,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.13,
+            "user": 0.89
+          },
+          "index": 4,
+          "inner_host_minus_native_cpu_s": -0.0010580000000000034,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.122679,
+            "usage_usec": 1.011058,
+            "user_usec": 0.888378
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.002442,
+            "usage_usec": 0.003435,
+            "user_usec": 0.000993
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 1.02,
+            "native_cpu_s": 1.011058,
+            "outer_read_overhang_s": 0.001077731,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.00894347366534495,
+            "signed_unassigned_cpu_s": 0.008942000000000005,
+            "wall_s": 0.9998352245
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": 0.005507000000000005,
+          "read_window_busy_cpu_s": 0.010000000000000009,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "host_inner_busy_cpu_s": 1.02,
+          "host_outer_busy_cpu_s": 1.02,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 18.95,
+            "iowait": 0.02,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.06,
+            "user": 0.96
+          },
+          "index": 5,
+          "inner_host_minus_native_cpu_s": 0.007449000000000039,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.05843,
+            "usage_usec": 1.012551,
+            "user_usec": 0.954122
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.001476,
+            "usage_usec": 0.003506,
+            "user_usec": 0.002031
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 1.02,
+            "native_cpu_s": 1.012551,
+            "outer_read_overhang_s": 0.001069491,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.00744954434565492,
+            "signed_unassigned_cpu_s": 0.007449000000000039,
+            "wall_s": 0.999926929
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": 0.0039430000000000385,
+          "read_window_busy_cpu_s": 0.0,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "host_inner_busy_cpu_s": 3.41,
+          "host_outer_busy_cpu_s": 3.41,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 16.53,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 1.86,
+            "user": 1.55
+          },
+          "index": 6,
+          "inner_host_minus_native_cpu_s": 0.049574999999999925,
+          "native_step_delta_cpu_s": {
+            "system_usec": 1.830499,
+            "usage_usec": 3.360425,
+            "user_usec": 1.529926
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.001033,
+            "usage_usec": 0.003221,
+            "user_usec": 0.002187
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 3.41,
+            "native_cpu_s": 3.360425,
+            "outer_read_overhang_s": 0.001059123,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.04957385144822264,
+            "signed_unassigned_cpu_s": 0.049574999999999925,
+            "wall_s": 1.0000231685
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": 0.04635399999999992,
+          "read_window_busy_cpu_s": 0.0,
+          "scientific_timings_admitted": false
+        }
+      ],
+      "job_id": 21812,
+      "method": "orthohmm_satellite_v2",
+      "original_flagged_intervals": [
+        3
+      ],
+      "original_whole_command_screen": {
+        "controlled_workload_verified": false,
+        "host_busy_cpu_s": 51.25,
+        "limitations": [
+          "Operational thresholds, not calibrated probabilistic or deterministic interference bounds.",
+          "Unassigned CPU includes observer, kernel and launch/exit work; it is not identified foreign CPU.",
+          "Counter accounting granularity/delay and non-CPU interference remain unresolved.",
+          "A run-wide average can hide concentrated bursts; interval-level monitoring remains necessary.",
+          "No subtraction from native wall time or correction of performance results is permitted."
+        ],
+        "maximum_residual_cores": 0.25,
+        "native_cpu_s": 50.857146,
+        "negative_tolerance_cpu_s": 0.5,
+        "reasons": [],
+        "scientific_timings_admitted": false,
+        "screen_passed": true,
+        "signed_unassigned_average_cores": 0.05815229450161709,
+        "signed_unassigned_cpu_s": 0.3928539999999998,
+        "status": "bracketed_cpu_operational_screen",
+        "work_wall_s": 6.755606178
+      }
+    },
+    {
+      "evidence": {
+        "bytes": 109630,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_interval_native_21810/interval_native_smoke_v2/run_02/measurement/interval_report.json",
+        "sha256": "30daef66f09b6f5c07c12fdac6caa3ce5d176cbd4a6e234accb3a5a74113099d"
+      },
+      "intervals": [
+        {
+          "controlled_workload_verified": false,
+          "host_inner_busy_cpu_s": 1.01,
+          "host_outer_busy_cpu_s": 1.01,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 19.03,
+            "iowait": 0.01,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.04,
+            "user": 0.97
+          },
+          "index": 0,
+          "inner_host_minus_native_cpu_s": 0.007328000000000001,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.034947,
+            "usage_usec": 1.002672,
+            "user_usec": 0.967726
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.000939,
+            "usage_usec": 0.001665,
+            "user_usec": 0.000727
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 1.01,
+            "native_cpu_s": 1.002672,
+            "outer_read_overhang_s": 0.000584146,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.007307349823994284,
+            "signed_unassigned_cpu_s": 0.007328000000000001,
+            "wall_s": 1.002825946
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": 0.005663000000000001,
+          "read_window_busy_cpu_s": 0.0,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "host_inner_busy_cpu_s": 1.01,
+          "host_outer_busy_cpu_s": 1.01,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 18.98,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.04,
+            "user": 0.97
+          },
+          "index": 1,
+          "inner_host_minus_native_cpu_s": 0.009416000000000091,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.029893,
+            "usage_usec": 1.000584,
+            "user_usec": 0.97069
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.001081,
+            "usage_usec": 0.001445,
+            "user_usec": 0.000364
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 1.01,
+            "native_cpu_s": 1.000584,
+            "outer_read_overhang_s": 0.000598434,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.009417020343571336,
+            "signed_unassigned_cpu_s": 0.009416000000000091,
+            "wall_s": 0.999891649
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": 0.00797100000000009,
+          "read_window_busy_cpu_s": 0.0,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "host_inner_busy_cpu_s": 10.51,
+          "host_outer_busy_cpu_s": 10.52,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 9.17,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 1.81,
+            "user": 8.71
+          },
+          "index": 2,
+          "inner_host_minus_native_cpu_s": -0.044940000000000424,
+          "native_step_delta_cpu_s": {
+            "system_usec": 1.816726,
+            "usage_usec": 10.55494,
+            "user_usec": 8.738215
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.000155,
+            "usage_usec": 0.001843,
+            "user_usec": 0.001688
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 10.52,
+            "native_cpu_s": 10.55494,
+            "outer_read_overhang_s": 0.00088941,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": -0.034945015011522466,
+            "signed_unassigned_cpu_s": -0.03494000000000064,
+            "wall_s": 0.9998564885
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": -0.036783000000000635,
+          "read_window_busy_cpu_s": 0.009999999999999787,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "host_inner_busy_cpu_s": 8.74,
+          "host_outer_busy_cpu_s": 8.75,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 11.11,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 1.19,
+            "user": 7.56
+          },
+          "index": 3,
+          "inner_host_minus_native_cpu_s": 0.2599090000000004,
+          "native_step_delta_cpu_s": {
+            "system_usec": 1.052812,
+            "usage_usec": 8.480091,
+            "user_usec": 7.427278
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.000936,
+            "usage_usec": 0.003075,
+            "user_usec": 0.002138
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 8.75,
+            "native_cpu_s": 8.480091,
+            "outer_read_overhang_s": 0.001131412,
+            "reasons": [
+              "excess_unassigned_cpu"
+            ],
+            "screen_passed": false,
+            "signed_unassigned_average_cores": 0.2698809298194301,
+            "signed_unassigned_cpu_s": 0.2699090000000002,
+            "wall_s": 1.0001040095
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": 0.2668340000000002,
+          "read_window_busy_cpu_s": 0.009999999999999787,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "host_inner_busy_cpu_s": 1.25,
+          "host_outer_busy_cpu_s": 1.25,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 18.68,
+            "iowait": 0.02,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.15,
+            "user": 1.1
+          },
+          "index": 4,
+          "inner_host_minus_native_cpu_s": 0.24535700000000005,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.020352,
+            "usage_usec": 1.004643,
+            "user_usec": 0.984292
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.00193,
+            "usage_usec": 0.003058,
+            "user_usec": 0.001127
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 1.25,
+            "native_cpu_s": 1.004643,
+            "outer_read_overhang_s": 0.001135348,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.24535768871903227,
+            "signed_unassigned_cpu_s": 0.24535700000000005,
+            "wall_s": 0.999997193
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": 0.24229900000000004,
+          "read_window_busy_cpu_s": 0.0,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "host_inner_busy_cpu_s": 1.01,
+          "host_outer_busy_cpu_s": 1.02,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 18.91,
+            "iowait": 0.07,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.02,
+            "user": 1.0
+          },
+          "index": 5,
+          "inner_host_minus_native_cpu_s": 0.004837999999999898,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.008416,
+            "usage_usec": 1.005162,
+            "user_usec": 0.996746
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.001956,
+            "usage_usec": 0.003152,
+            "user_usec": 0.001196
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 1.02,
+            "native_cpu_s": 1.005162,
+            "outer_read_overhang_s": 0.001126516,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.01483861727163979,
+            "signed_unassigned_cpu_s": 0.014837999999999907,
+            "wall_s": 0.999958401
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": 0.011685999999999907,
+          "read_window_busy_cpu_s": 0.010000000000000009,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "host_inner_busy_cpu_s": 1.0,
+          "host_outer_busy_cpu_s": 1.01,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 18.98,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.01,
+            "user": 1.0
+          },
+          "index": 6,
+          "inner_host_minus_native_cpu_s": -0.005181000000000102,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.003445,
+            "usage_usec": 1.005181,
+            "user_usec": 1.001736
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.001016,
+            "usage_usec": 0.002995,
+            "user_usec": 0.00198
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 1.01,
+            "native_cpu_s": 1.005181,
+            "outer_read_overhang_s": 0.001097507,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.004818270272967066,
+            "signed_unassigned_cpu_s": 0.004818999999999907,
+            "wall_s": 1.00015145
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": 0.0018239999999999069,
+          "read_window_busy_cpu_s": 0.010000000000000009,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "host_inner_busy_cpu_s": 1.01,
+          "host_outer_busy_cpu_s": 1.01,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 18.98,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.08,
+            "user": 0.93
+          },
+          "index": 7,
+          "inner_host_minus_native_cpu_s": 0.002737999999999907,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.076822,
+            "usage_usec": 1.007262,
+            "user_usec": 0.93044
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.00103,
+            "usage_usec": 0.003164,
+            "user_usec": 0.002134
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 1.01,
+            "native_cpu_s": 1.007262,
+            "outer_read_overhang_s": 0.001281733,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.002738602273411876,
+            "signed_unassigned_cpu_s": 0.002737999999999907,
+            "wall_s": 0.99978008
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": -0.00042600000000009297,
+          "read_window_busy_cpu_s": 0.0,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "host_inner_busy_cpu_s": 4.52,
+          "host_outer_busy_cpu_s": 4.53,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 15.22,
+            "iowait": 0.18,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 3.11,
+            "user": 1.42
+          },
+          "index": 8,
+          "inner_host_minus_native_cpu_s": -0.03439600000000009,
+          "native_step_delta_cpu_s": {
+            "system_usec": 3.107394,
+            "usage_usec": 4.554396,
+            "user_usec": 1.447002
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 3.1e-05,
+            "usage_usec": 0.002992,
+            "user_usec": 0.00296
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 4.53,
+            "native_cpu_s": 4.554396,
+            "outer_read_overhang_s": 0.001356517,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": -0.024391664698690866,
+            "signed_unassigned_cpu_s": -0.024395999999999418,
+            "wall_s": 1.000177737
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": -0.02738799999999942,
+          "read_window_busy_cpu_s": 0.010000000000000675,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "host_inner_busy_cpu_s": 0.2,
+          "host_outer_busy_cpu_s": 0.21,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 19.8,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.11,
+            "user": 0.1
+          },
+          "index": 9,
+          "inner_host_minus_native_cpu_s": 0.005683000000000021,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.097416,
+            "usage_usec": 0.194317,
+            "user_usec": 0.096901
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.000977,
+            "usage_usec": 0.003873,
+            "user_usec": 0.002896
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 0.21,
+            "native_cpu_s": 0.194317,
+            "outer_read_overhang_s": 0.001102163,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.015674358616374284,
+            "signed_unassigned_cpu_s": 0.015683000000000002,
+            "wall_s": 1.000551307
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": 0.011810000000000003,
+          "read_window_busy_cpu_s": 0.009999999999999981,
+          "scientific_timings_admitted": false
+        }
+      ],
+      "job_id": 21810,
+      "method": "orthofinder_full",
+      "original_flagged_intervals": [
+        3
+      ],
+      "original_whole_command_screen": {
+        "controlled_workload_verified": false,
+        "host_busy_cpu_s": 30.29,
+        "limitations": [
+          "Operational thresholds, not calibrated probabilistic or deterministic interference bounds.",
+          "Unassigned CPU includes observer, kernel and launch/exit work; it is not identified foreign CPU.",
+          "Counter accounting granularity/delay and non-CPU interference remain unresolved.",
+          "A run-wide average can hide concentrated bursts; interval-level monitoring remains necessary.",
+          "No subtraction from native wall time or correction of performance results is permitted."
+        ],
+        "maximum_residual_cores": 0.25,
+        "native_cpu_s": 29.80719,
+        "negative_tolerance_cpu_s": 0.5,
+        "reasons": [],
+        "scientific_timings_admitted": false,
+        "screen_passed": true,
+        "signed_unassigned_average_cores": 0.04855522776820585,
+        "signed_unassigned_cpu_s": 0.4828100000000006,
+        "status": "bracketed_cpu_operational_screen",
+        "work_wall_s": 9.943522504
+      }
+    }
+  ],
+  "scientific_timings_admitted": false,
+  "source": {
+    "bytes": 5869,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/diagnose_dgx_interval_residuals.py",
+    "sha256": "724dff358836bd014b0bb1899a8770f82f9fcc7aa0c393d9cda3749f287f85ec"
+  },
+  "status": "retrospective_native_interval_counter_decomposition"
+}

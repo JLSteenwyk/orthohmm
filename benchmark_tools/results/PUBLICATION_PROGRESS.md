@@ -1,5 +1,26 @@
 # Publication Progress
 
+## DGX Counter Residual Decomposition (2026-09-18 UTC)
+
+Previous turn progressed through220278b with the corrected-strata evidence
+runner. Reread the full objective and returned to the unresolved dedicated
+timing gate. Confirmed21813 RUNNING10:54,21814 dependency-pending,
+21706_0 RUNNING16:33:52 and21795 RUNNING26:59; no restart was performed.
+
+Replayed all original counters/screens for the three retained21810native
+smokes and decomposed host outer/inner read windows, native step CPU and
+observer leaf CPU. Both flagged intervals contain only0.01CPU-second of
+endpoint-window counter increments and roughly0.003observer-leaf CPU-seconds,
+versus original residuals0.324697 and0.269909. Those observations do not
+explain away the flags or identify unrelated work. Report all intervals,
+including negative discrepancies, without changing inclusion or thresholds.
+
+See DGX_INTERVAL_RESIDUAL_DIAGNOSIS_20260918.md and its machine-readable
+result.58focused tests pass,13new diagnostic tests. Frozen observer code was
+not modified. Broader hierarchical counter coverage and accounting/overhead
+controls are the next timing-development step; none is falsely marked done.
+No scientific timing, corrected score or publication-ready claim was added.
+
 ## Source-Bound Corrected Strata Runner (2026-09-18 UTC)
 
 Previous turn progressed through2a663af with the stratified numerical kernel.
