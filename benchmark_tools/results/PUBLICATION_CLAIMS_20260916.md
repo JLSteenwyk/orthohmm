@@ -1,6 +1,6 @@
 # Publication Claim-To-Evidence Checklist
 
-Status updated 17 September 2026. This is a completion audit, not a replacement
+Status updated 18 September 2026. This is a completion audit, not a replacement
 for the original publication goal. A linked plan or passing unit test is not
 evidence that an experiment completed or a biological hypothesis is true.
 
@@ -16,7 +16,7 @@ evidence that an experiment completed or a biological hypothesis is true.
 | Broad candidates improve reconciliation | [Completed OrthoBench factorial](ORTHOBENCH_FACTORIAL_INTERPRETATION_20260916.md) | Recall rises and precision falls; candidate-expansion F1 intervals include zero; QfO and additional controls pending |
 | The frozen method was evaluated on novel taxa | [YGOB evaluation](YGOB_FROZEN_INTERPRETATION_20260916.md) | Complete bounded transfer evaluation; satellite F1 difference interval includes zero, precision higher and recall lower; not family-disjoint or superiority evidence |
 | Validation is family-disjoint | [Homology screen](ygob_homology_screen_20260916.json) | Not established; substantial detected overlap |
-| OrthoMCL final-group QfO scoring is complete | [Verified result snapshot](publication_comparison_orthomcl_complete_20260916.json) | Supported by terminal success, six native results, metadata and pair-file hashes |
+| Original-release OrthoMCL final-group QfO scoring is complete | [Verified result snapshot](publication_comparison_orthomcl_complete_20260916.json) | Supported for the original inputs only; corrected-release BLAST is queued and no corrected OrthoMCL score is available |
 | OrthoMCL BLAST failures have negligible impact | [Failure-impact audit](ORTHOMCL_FAILURE_IMPACT_20260916.md) | Not established; direct exposure is measured, indirect and counterfactual effects are not |
 | Three Kingdoms demonstrates proteome-wide accuracy | [Supplementary score record](three_kingdoms_parity_20260907.json) | Unsupported; restricted BUSCO-reference universe |
 | OrthoHMM is faster or more memory efficient under matched conditions | [Progress ledger](PUBLICATION_PROGRESS.md) | Not established; historical resource-accounting and workload differences remain |
@@ -34,7 +34,10 @@ evidence that an experiment completed or a biological hypothesis is true.
 | Supplying the generating tree improves simulation F1 | [Complete tree panel](SIMULATION_TREE_ROBUSTNESS_RESULTS_20260917.md) | Not established: all adjusted generating-versus-inferred intervals include zero; supplied-tree completion rescues three OrthoHMM baselines but does not supply their missing inferred accuracy |
 | OrthoHMM is insensitive to species-tree error | [Complete tree panel](SIMULATION_TREE_ROBUSTNESS_RESULTS_20260917.md) | Unsupported: NNI2 F1 and recall deficits have adjusted intervals below zero in four conditions; bounded exploratory result, not arbitrary-tree robustness |
 | The package is publication-ready | All sections below | Not achieved |
-| Original QfO inputs match the intended corrected2020benchmark release | [Archive and release audit](QFO_XENOPUS_ARCHIVE_AUDIT_20260917.md) | Unresolved: original local archive verified, but EBI provides a separate UP000008143 correction. Corrected sequences and compatibility with retained scorer resources require priority investigation; no silent input replacement |
+| Original QfO inputs match the corrected2020benchmark release | [Corrected archive comparison](QFO_CORRECTED_ARCHIVE_ACQUIRED_20260918.md) | Contradicted for the Xenopus proteome; preserve original results as release-limited |
+| Corrected QfO inputs cover the retained reference identities and sequence content | [Native sequence and staging audits](QFO_CORRECTED_INPUTS_STAGED_20260918.md) | Supported: all 984,137 identities, 983,959 exact sequences and 178 representation-only differences; no unexplained differences. This is input compatibility, not biological annotation validation |
+| Corrected QfO accuracy or rankings are established | [Frozen rerun protocol](QFO_CORRECTED_RELEASE_PROTOCOL_20260917.md), [primary launch](QFO_CORRECTED_PRIMARY_SUBMITTED_20260918.md) | Not established; inference is active/queued and all eight rows plus factorial remain required. No original predictions or intervals may be relabeled |
+| Original TreeFam family-level uncertainty can be recovered from pooled pairs | [Source retrieval investigation](TREEFAM_SOURCE_RETRIEVAL_20260918.md) | Unsupported: original trees and mapping remain missing; downloaded pooled reference is not an independent-family inventory |
 
 ## Completion Requirements
 

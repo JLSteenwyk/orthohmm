@@ -1,6 +1,6 @@
 # OrthoHMM: HMM-Centered Orthogroup Inference And Phylogenetic Refinement
 
-Working manuscript, 16 September 2026. Not submission-ready. Sections below
+Working manuscript, updated 18 September 2026. Not submission-ready. Sections below
 distinguish completed development-exposed analyses from prospective work.
 Internal evidence links are supplied for audit. An initial
 [verified literature bibliography](PUBLICATION_REFERENCES_20260917.md)
@@ -671,11 +671,30 @@ The subsequent [whole-input mapping audit](QFO_ORIGINAL_MAPPING_COVERAGE_2026091
 localizes a larger original-release mismatch to Xenopus:990input accessions
 are unmapped and8,623reference numeric identities lack an original input
 accession. All78canonical inputs match the original archive. EBI provides a
-separate corrected2020release for this proteome; its compatibility with the
-retained scorer is under investigation. Original-input QfO comparisons must
-remain explicitly release-limited, not claimed as resolved official-release
-comparisons. Corrected inference and any reruns require a separate input
-freeze; changing only scores or accession labels is not a validated remedy.
+separate corrected2020release for this proteome. Subsequent
+[archive comparison](QFO_CORRECTED_ARCHIVE_ACQUIRED_20260918.md) and
+[native sequence/staging audits](QFO_CORRECTED_INPUTS_STAGED_20260918.md)
+establish compatibility with the retained scorer: all 984,137 reference
+identities are uniquely represented, including the 14 previously missing
+SwissTrees proteins. Only the Xenopus canonical proteome differs from the
+original archive. Of the corrected sequences, 983,959 match the native
+reference exactly and 178 differ only by B/O/U/Z-to-X representation;
+no unexplained difference remains. The 78 canonical FASTAs were staged
+without residue normalization, with all identifiers, species ownership,
+sequence counts and hashes checked independently.
+
+This resolves the observed input/reference mismatch, not its effects on
+method rankings. Original-input QfO scores and uncertainty estimates remain
+explicitly release-limited. The separately frozen
+[corrected-release protocol](QFO_CORRECTED_RELEASE_PROTOCOL_20260917.md)
+requires fresh affected inference for all eight comparator rows and eight
+factorial cells, with separate prediction identifiers and fresh scoring.
+Corrected inference is in progress; no corrected-release accuracy comparison
+is reported here. Old groups, trees, scores and confidence intervals cannot
+be relabeled as corrected results. The previously measured 53 legacy BLAST
+query failures also belong to the original run; failures in the corrected
+OrthoMCL search must be measured independently. Recovery of missing inputs
+does not turn this development-exposed benchmark into independent validation.
 
 A [sequence-content follow-up](QFO_SEQUENCE_DIFFERENCE_CLASSES_20260917.md)
 found974,363exact byte matches among975,514mapped original inputs.

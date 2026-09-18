@@ -7221,3 +7221,33 @@ will be relabeled as corrected-input results.
 Original TreeFam-A family trees and treefam2reference.txt remain missing.
 The downloaded pooled reference is verified but cannot support assumed
 family-level resampling. Publication readiness is not established.
+
+### Input-Release Claims Reconciled (2026-09-18)
+
+Previous turn made progress: pinned Proteinortho admission job 21715 was
+queued behind 21708 and the full unit suite passed (2,712 passed, one opt-in
+legacy-engine smoke skipped), pushed as 38932ac. The current turn updates
+the manuscript and claim checklist to distinguish completed corrected-input
+compatibility from still-unavailable corrected accuracy results. Rechecked
+the archive-comparison, native-sequence and staged-inventory report hashes
+against their recorded values. All 176 local links in the manuscript and
+claim checklist resolve. No scores, endpoints or method settings changed.
+
+Superseding earlier preparation-only snapshots: corrected Proteinortho
+21708 and SonicParanoid 21710 are running, as is OrthoHMM 21706_0.
+Corrected OrthoFinder 21706_1 and BLAST 21713 are queued. Proteinortho's
+automatic graph admission waits as 21715. Historical FastOMA and
+Proteinortho conversion/ownership audits passed, but they do not admit
+corrected predictions. FastOMA corrected assets are frozen pending an
+admitted corrected OrthoFinder tree.
+
+Original factorial assessment 21711 remains scheduler-confirmed running
+at 37:04; admission 21712 waits. Final reconciliation 21671_3 remains
+active with dependent admission/conversion queued. The eight-cell
+uncertainty analysis must wait for complete endpoint validation.
+
+Dedicated timing has 15 scheduler-completed tasks; DGX task 21656_15 is
+active. Final native/resource/host admission remains required before
+efficiency claims. TreeFam original source files, remaining uncertainty,
+completed corrected comparisons and the final archival package remain
+open requirements, not grounds for declaring publication readiness.
