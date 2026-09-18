@@ -21,7 +21,7 @@ from benchmark_tools.verify_ygob_validation import require_completed_job
 EXECUTOR = "74afad5376b7ee11fdabfba386851fd8d3c02857"
 OF_EXECUTOR = "5c34f8baad47a9895659b43696e6887aa29dbaaf"
 FASTOMA_EXECUTOR = "9258bcfd3f90d63ec7f2cfb02122cd20bd7e1214"
-ORTHOMCL_EXECUTOR = "e1b49442eed5730d676d8cd8ebde00e82e5d60e5"
+ORTHOMCL_EXECUTOR = "5efb206b23a44f85386d8cb7e90f3e815a3d162a"
 
 
 def executor_identity(root, method):
