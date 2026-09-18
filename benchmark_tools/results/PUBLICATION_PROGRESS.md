@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Corrected BPO Admission Binding (2026-09-18 UTC)
+
+Previous turn progressed by pushing3319e7b and validating the BPO checkpoint
+with3,726unit tests. Revalidated live jobs this turn: correctedHMM21706_0
+RUNNING7:47:11; DGX21656_24 RUNNING44:48; BLAST21713 pending resources.
+
+Implemented the corrected-search wrapper: exact admitted BLAST/FASTA records,
+fixed admission executor/source, completed scheduler evidence, corrected
+input scope, preserved query-failure diagnostics and complete checkpoint
+audits are bound together. Result remains pending independent admission;
+no production job was submitted.79focused tests passed with legacy-runtime
+tests enabled. See QFO_CORRECTED_BPO_BINDING_20260918.md.
+
+Runtime preflight identified a remaining portability problem: system Python
+lacks Bio, while isolated Anaconda startup loads unrelated editable-package
+hooks. Do not treat an interpreter hash/version as a dependency freeze.
+Next: create a dedicated pinned Python environment, verify clean startup and
+runtime identity, freeze executor/batch, then submit behind21746. Existing
+environments and running jobs were left untouched.
+
 ## Audited BPO Checkpoint Workflow (2026-09-18 UTC)
 
 Previous turn progressed by pushing cb58c74: isolated native sources and
