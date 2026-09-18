@@ -14,6 +14,10 @@ MODULES = ("bootstrap_qfo_swiss_comparators.py", "audit_qfo_swiss_comparators.py
            "qfo_summarize_scores.py", "bootstrap_qfo_swiss_stages.py", "plot_qfo_swiss_comparators.py")
 DATA = ("qfo_swiss_comparator_counts_20260917.json", "QFO_SWISS_COMPARATOR_UNCERTAINTY_PROTOCOL_20260917.md",
         "qfo_swiss_comparator_intervals_20260917.json", "QFO_SWISS_COMPARATOR_INTERVALS_20260917.md")
+DOMAIN_MODULES = ("analyze_swiss_domain_strata.py", "inventory_swiss_annotations.py",
+                  "snapshot_orthohmm_input_order.py", "plot_swiss_domain_strata.py")
+DOMAIN_DATA = ("swiss_domain_annotation_inventory_20260917.json", "SWISS_DOMAIN_STRATA_PROTOCOL_20260917.md",
+               "swiss_domain_strata_results_20260917.json", "SWISS_DOMAIN_STRATA_RESULTS_20260917.md")
 
 
 def identity(path):
@@ -34,14 +38,29 @@ def compare_results(expected, observed):
         raise ValueError("Relocated helper bytes differ")
 
 
-def reproduce(repo, revision, python, output):
+def compare_domain_results(expected, observed):
+    provenance = {"inputs", "source", "helpers"}
+    if {k: v for k, v in expected.items() if k not in provenance} != {
+            k: v for k, v in observed.items() if k not in provenance}:
+        raise ValueError("Relocated domain-stratified scientific results differ")
+    for key in ("inputs", "helpers"):
+        if [(r["bytes"], r["sha256"]) for r in expected[key]] != [
+                (r["bytes"], r["sha256"]) for r in observed[key]]:
+            raise ValueError("Relocated domain input or helper bytes differ")
+    if any(expected["source"][k] != observed["source"][k] for k in ("bytes", "sha256")):
+        raise ValueError("Relocated domain source differs")
+
+
+def reproduce(repo, revision, python, output, include_domain_strata=False):
     if output.exists():
         raise FileExistsError(output)
     commit = subprocess.check_output(["git", "rev-parse", "--verify", revision + "^{commit}"], cwd=repo, text=True).strip()
     output.mkdir(parents=True)
     export = output / "source"
-    paths = ["LICENSE.md", *["benchmark_tools/" + p for p in MODULES],
-             *["benchmark_tools/results/" + p for p in DATA]]
+    modules = MODULES + (DOMAIN_MODULES if include_domain_strata else ())
+    data = DATA + (DOMAIN_DATA if include_domain_strata else ())
+    paths = ["LICENSE.md", *["benchmark_tools/" + p for p in modules],
+             *["benchmark_tools/results/" + p for p in data]]
     exported = []
     for name in paths:
         content = subprocess.check_output(["git", "show", commit + ":" + name], cwd=repo)
@@ -76,12 +95,31 @@ def reproduce(repo, revision, python, output):
                "--results", str(results / DATA[2]), "--output", str(generated / "figures")]
     run = subprocess.run(command, cwd=export, env=env, capture_output=True, text=True, check=True)
     logs.append({"command": command, "stdout": run.stdout, "stderr": run.stderr, "returncode": run.returncode})
+    if include_domain_strata:
+        command = [str(python), "-I", str(export / "benchmark_tools/analyze_swiss_domain_strata.py"),
+                   "--counts", str(results / DATA[0]), "--annotations", str(results / DOMAIN_DATA[0]),
+                   "--protocol", str(results / DOMAIN_DATA[1]), "--output", str(generated / "domain_strata.json"),
+                   "--markdown", str(generated / "domain_strata.md")]
+        run = subprocess.run(command, cwd=export, env=env, capture_output=True, text=True, check=True)
+        logs.append({"command": command, "stdout": run.stdout, "stderr": run.stderr, "returncode": run.returncode})
+        compare_domain_results(json.loads((results / DOMAIN_DATA[2]).read_text()),
+                               json.loads((generated / "domain_strata.json").read_text()))
+        if (results / DOMAIN_DATA[3]).read_bytes() != (generated / "domain_strata.md").read_bytes():
+            raise ValueError("Generated domain-stratified table differs")
+        command = [str(python), "-I", str(export / "benchmark_tools/plot_swiss_domain_strata.py"),
+                   "--results", str(results / DOMAIN_DATA[2]), "--output", str(generated / "domain_figures")]
+        run = subprocess.run(command, cwd=export, env=env, capture_output=True, text=True, check=True)
+        logs.append({"command": command, "stdout": run.stdout, "stderr": run.stderr, "returncode": run.returncode})
     for item in exported:
         if identity(Path(item["path"])) != item:
             raise ValueError("Export changed during reproduction")
     return {"status": "relocated_swiss_statistics_and_plot_workflow_reproduced", "source_commit": commit,
             "runner": identity(Path(__file__)), "exported": exported, "environment": environment, "execution": logs,
             "scientific_results_exact_match": True, "markdown_byte_match": True,
+            "domain_strata": {"included": include_domain_strata,
+                "scientific_results_exact_match": True if include_domain_strata else None,
+                "markdown_byte_match": True if include_domain_strata else None,
+                "annotation_regeneration": False},
             "generated": [identity(p) for p in sorted(generated.rglob("*")) if p.is_file()],
             "limitations": ["Statistical/figure workflow only; native inference and raw-QfO scoring are not reproduced.",
                             "Historical absolute paths inside reports remain provenance, not accessed inputs.",
@@ -97,8 +135,9 @@ if __name__ == "__main__":
     parser.add_argument("--python", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--report", type=Path, required=True)
+    parser.add_argument("--include-domain-strata", action="store_true")
     args = parser.parse_args()
     if args.report.exists():
         raise FileExistsError(args.report)
-    result = reproduce(args.repo.resolve(), args.revision, args.python.absolute(), args.output.resolve())
+    result = reproduce(args.repo.resolve(), args.revision, args.python.absolute(), args.output.resolve(), args.include_domain_strata)
     args.report.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")

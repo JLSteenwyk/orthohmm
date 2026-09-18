@@ -95,6 +95,10 @@ evidence that an experiment completed or a biological hypothesis is true.
   export in a fresh hash-pinned environment; figure generation succeeds.
   This is a bounded statistical workflow, not complete native inference,
   raw-data scoring reproduction, license clearance or the archival release.
+  The [extended relocated workflow](SWISS_DOMAIN_RELOCATED_REPRODUCTION_20260917.md)
+  also reproduces the domain-stratified scientific JSON and Markdown exactly
+  and generates its figure from a22-file committed export; it does not
+  regenerate domain annotations or establish cross-platform equivalence.
 - [Eight-method SwissTrees paired intervals](QFO_SWISS_COMPARATOR_INTERVALS_20260917.md)
   and their [three-panel figure](QFO_SWISS_COMPARATOR_FIGURE_20260917.md)
   implement the committed24-endpoint protocol. All seven comparator-minus-full-

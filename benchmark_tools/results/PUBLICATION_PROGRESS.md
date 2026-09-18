@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Domain Statistics Reproduced Outside Checkout (2026-09-17)
+
+Previous turn completed broad regression and claims reconciliation, pushed
+87a9a84. Re-read full objective; confirmed QfO21671_0/21681 and DGX21656_7
+still RUNNING, with dependencies pending. Extended the existing relocated
+SwissTrees runner with optional domain-stratified analysis and figure export.
+No inference settings, statistical endpoints or reference inputs changed.
+
+Executed the combined workflow from a22-file committed analysis export of
+87a9a843035d987343915b98a3490a50a446c519 under/tmp in the existing patched
+isolated environment. Both scientific JSON reports match exactly, both
+Markdown tables match byte-for-byte, and both figure sets generate. Visually
+checked the domain PNG. Eight new mutation tests;27combined tests pass.
+Report: `swiss_domain_relocated_reproduction_20260917.json`; detailed scope and
+command: `SWISS_DOMAIN_RELOCATED_REPRODUCTION_20260917.md`.
+
+This is actual statistical-workflow relocation evidence, not regeneration of
+annotations, native inference/raw scoring, cross-platform validation, external
+license clearance or the complete archive. The full publication goal remains
+active, including pending factorial results and controlled timing admission.
+
 ## Broad Regression and Claims Reconciliation (2026-09-17)
 
 Previous turn implemented and pushed the count collector4007bf8. Re-read the
