@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Outside-Job Counter Collector Verified (2026-09-18 UTC)
+
+Previous turn progressed through77a81c7 with completed all-hit pairs and the
+scoring/admission chain. Reread the full objective and verified21825running,
+21826dependency-pending,21814running,21795running and21706_0running.
+
+Implemented a disjoint cgroup-frontier collector to investigate the
+remaining outside-job timing residual without changing thresholds. It reads
+the target plus ancestor siblings, root brackets, device/inode identities
+and ancestor-direct process counts; rejects changed hierarchies/counters;
+and preserves signed unassigned residuals. Committed/pushed1ebd457 before
+the single prespecified read-only DGX observation. No native benchmark or
+unrelated service was started, stopped or reconfigured.
+
+The probe observed0target CPU-seconds and0.014109outside-frontier CPU-seconds
+under the Slurm service-scope target; root accounting increased0.02seconds.
+Raw evidence and source hashes are retained and replayed in tests.35focused
+tests pass. SSH/observer activity was present, so this is capability evidence,
+not quiet-host attribution or a correction to prior scientific timings.
+SeeDGX_CGROUP_FRONTIER_RESULT_20260918.md. Native integration and overhead
+validation remain necessary; the publication goal is not complete.
+
 ## All-Hit Pairs Complete; Native Scoring Running (2026-09-18 UTC)
 
 Previous turn progressed throughd33dcda: independent graph admission,

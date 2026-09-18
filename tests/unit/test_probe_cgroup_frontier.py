@@ -86,3 +86,18 @@ def test_ancestor_direct_processes_not_claimed_as_frontier(tmp_path):
     value = module.inventory(tmp_path, "/system.slice/slurm/job_1")
     assert value["ancestor_direct_process_counts"]["/system.slice"] == 2
     assert "/system.slice" not in value["identities"]
+
+
+def test_retained_dgx_probe_replays_with_source_identity():
+    import hashlib
+    import json
+    from pathlib import Path
+
+    base = Path(__file__).resolve().parents[2] / "benchmark_tools"
+    report = json.loads((base / "results/dgx_cgroup_frontier_observation_20260918.json").read_text())
+    assert report["host"] == "spark-7ff0"
+    for name, sha in report["sources"].items():
+        assert hashlib.sha256((base / name).read_bytes()).hexdigest() == sha
+    assert module.compare(*report["points"]) == report["result"]
+    assert report["result"]["target_cpu_s"] == 0
+    assert report["result"]["outside_target_frontier_cpu_s"] == pytest.approx(.014109)
