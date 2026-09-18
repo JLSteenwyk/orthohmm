@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="5" skipped="0" tests="8" time="65.756" timestamp="2026-09-18T18:24:54.026630-04:00" hostname="bizon"><testcase classname="tests.integration.test_long_names.TestLongNames" name="test_simple_case" time="30.086"><failure message="AssertionError: assert 'files: Clusi...18: 1 0 1 1\n' == 'files: Calbi...18: 0 2 1 0\n'&#10;  &#10;  - files: Calbicans_GCF_000182965.3_ASM18296v3_protein.small.faa Cduobushaemulonii_GCF_002926085.2_CanDuoHae_v1.0_protein.small.faa Clusitaniae_GCF_014636115.1_ASM1463611v1_protein.small.faa Chaemulonii_GCF_002926055.2_CanHae_1.0_protein.small.faa&#10;  + files: Clusitaniae_GCF_014636115.1_ASM1463611v1_protein.small.faa Calbicans_GCF_000182965.3_ASM18296v3_protein.small.faa Cduobushaemulonii_GCF_002926085.2_CanDuoHae_v1.0_protein.small.faa Chaemulonii_GCF_002926055.2_CanHae_1.0_protein.small.faa&#10;  - OG000: 4 5 5 5&#10;  ?           --&#10;  + OG000: 5 4 5 5&#10;  ?        ++...&#10;  &#10;  ...Full output truncated (58 lines hidden), use '-vv' to show">tests/integration/test_long_names.py:110: in test_simple_case
+    assert expected_orthohmm_gene_count == output_orthohmm_gene_count
+E   AssertionError: assert 'files: Clusi...18: 1 0 1 1\n' == 'files: Calbi...18: 0 2 1 0\n'
+E     
+E     - files: Calbicans_GCF_000182965.3_ASM18296v3_protein.small.faa Cduobushaemulonii_GCF_002926085.2_CanDuoHae_v1.0_protein.small.faa Clusitaniae_GCF_014636115.1_ASM1463611v1_protein.small.faa Chaemulonii_GCF_002926055.2_CanHae_1.0_protein.small.faa
+E     + files: Clusitaniae_GCF_014636115.1_ASM1463611v1_protein.small.faa Calbicans_GCF_000182965.3_ASM18296v3_protein.small.faa Cduobushaemulonii_GCF_002926085.2_CanDuoHae_v1.0_protein.small.faa Chaemulonii_GCF_002926055.2_CanHae_1.0_protein.small.faa
+E     - OG000: 4 5 5 5
+E     ?           --
+E     + OG000: 5 4 5 5
+E     ?        ++...
+E     
+E     ...Full output truncated (58 lines hidden), use '-vv' to show</failure></testcase><testcase classname="tests.integration.test_simple_case.TestSimpleCase" name="test_simple_case" time="5.072"><failure message="AssertionError: assert 'files: Mus_m...0 0 1 0 0 0\n' == 'files: Pan_t...0 0 0 0 0 0\n'&#10;  &#10;  - files: Pan_troglodytes.Pan_tro_3.0.pep.all.fa Monodelphis_domestica.ASM229v1.pep.all.fa Ciona_intestinalis.KH.pep.all.fa Rattus_norvegicus.Rnor_6.0.pep.all.fa Caenorhabditis_elegans.WBcel235.pep.all.fa Mus_musculus.GRCm38.pep.all.fa Danio_rerio.GRCz11.pep.all.fa Canis_familiaris.CanFam3.1.pep.all.fa Tetraodon_nigroviridis.TETRAODON8.pep.all.fa Gallus_gallus.GRCg6a.pep.all.fa Homo_sapiens.GRCh38.pep.all.fa&#10;  + files: Mus_musculus.GRCm38.pep.all.fa Canis_familiaris.CanFam3.1.pep.all.fa Tetraodon_nigroviridis.TETRAODON8.pep.all.fa Pan_troglodytes.Pan_tro_3.0.pep.all.fa Dani...&#10;  &#10;  ...Full output truncated (17 lines hidden), use '-vv' to show">tests/integration/test_simple_case.py:104: in test_simple_case
+    assert expected_orthohmm_gene_count == output_orthohmm_gene_count
+E   AssertionError: assert 'files: Mus_m...0 0 1 0 0 0\n' == 'files: Pan_t...0 0 0 0 0 0\n'
+E     
+E     - files: Pan_troglodytes.Pan_tro_3.0.pep.all.fa Monodelphis_domestica.ASM229v1.pep.all.fa Ciona_intestinalis.KH.pep.all.fa Rattus_norvegicus.Rnor_6.0.pep.all.fa Caenorhabditis_elegans.WBcel235.pep.all.fa Mus_musculus.GRCm38.pep.all.fa Danio_rerio.GRCz11.pep.all.fa Canis_familiaris.CanFam3.1.pep.all.fa Tetraodon_nigroviridis.TETRAODON8.pep.all.fa Gallus_gallus.GRCg6a.pep.all.fa Homo_sapiens.GRCh38.pep.all.fa
+E     + files: Mus_musculus.GRCm38.pep.all.fa Canis_familiaris.CanFam3.1.pep.all.fa Tetraodon_nigroviridis.TETRAODON8.pep.all.fa Pan_troglodytes.Pan_tro_3.0.pep.all.fa Dani...
+E     
+E     ...Full output truncated (17 lines hidden), use '-vv' to show</failure></testcase><testcase classname="tests.integration.test_simple_case.TestSimpleCase" name="test_simple_case_check_orthohmm_gene_count_only" time="5.065"><failure message="AssertionError: assert 'files: Mus_m...0 0 1 0 0 0\n' == 'files: Pan_t...0 0 0 0 0 0\n'&#10;  &#10;  - files: Pan_troglodytes.Pan_tro_3.0.pep.all.fa Monodelphis_domestica.ASM229v1.pep.all.fa Ciona_intestinalis.KH.pep.all.fa Rattus_norvegicus.Rnor_6.0.pep.all.fa Caenorhabditis_elegans.WBcel235.pep.all.fa Mus_musculus.GRCm38.pep.all.fa Danio_rerio.GRCz11.pep.all.fa Canis_familiaris.CanFam3.1.pep.all.fa Tetraodon_nigroviridis.TETRAODON8.pep.all.fa Gallus_gallus.GRCg6a.pep.all.fa Homo_sapiens.GRCh38.pep.all.fa&#10;  + files: Mus_musculus.GRCm38.pep.all.fa Canis_familiaris.CanFam3.1.pep.all.fa Tetraodon_nigroviridis.TETRAODON8.pep.all.fa Pan_troglodytes.Pan_tro_3.0.pep.all.fa Dani...&#10;  &#10;  ...Full output truncated (17 lines hidden), use '-vv' to show">tests/integration/test_simple_case.py:151: in test_simple_case_check_orthohmm_gene_count_only
+    assert expected_orthohmm_gene_count == output_orthohmm_gene_count
+E   AssertionError: assert 'files: Mus_m...0 0 1 0 0 0\n' == 'files: Pan_t...0 0 0 0 0 0\n'
+E     
+E     - files: Pan_troglodytes.Pan_tro_3.0.pep.all.fa Monodelphis_domestica.ASM229v1.pep.all.fa Ciona_intestinalis.KH.pep.all.fa Rattus_norvegicus.Rnor_6.0.pep.all.fa Caenorhabditis_elegans.WBcel235.pep.all.fa Mus_musculus.GRCm38.pep.all.fa Danio_rerio.GRCz11.pep.all.fa Canis_familiaris.CanFam3.1.pep.all.fa Tetraodon_nigroviridis.TETRAODON8.pep.all.fa Gallus_gallus.GRCg6a.pep.all.fa Homo_sapiens.GRCh38.pep.all.fa
+E     + files: Mus_musculus.GRCm38.pep.all.fa Canis_familiaris.CanFam3.1.pep.all.fa Tetraodon_nigroviridis.TETRAODON8.pep.all.fa Pan_troglodytes.Pan_tro_3.0.pep.all.fa Dani...
+E     
+E     ...Full output truncated (17 lines hidden), use '-vv' to show</failure></testcase><testcase classname="tests.integration.test_simple_case.TestSimpleCase" name="test_simple_case_orthohmm_orthogroups_only" time="5.069" /><testcase classname="tests.integration.test_simple_case.TestSimpleCase" name="test_simple_case_orthohmm_single_copy_orthogroup_only" time="5.049" /><testcase classname="tests.integration.test_simple_case.TestSimpleCase" name="test_simple_case_check_number_of_files_made_in_sc_and_all_ogs_dirs_only" time="5.054" /><testcase classname="tests.integration.test_simple_case.TestSimpleCase" name="test_simple_case_check_individual_og_files_only" time="5.074"><failure message="AssertionError: assert '&gt;ENSMUSP0000...SAVTEGQQNEQ\n' == '&gt;ENSPTRP0000...ASVTEGQQNEQ\n'&#10;  &#10;  + &gt;ENSMUSP00000032440&#10;  + MVSVMNTVDTSHEDMIHDAQMDYYGTRLATCSSDRSVKIFDVRNGGQILIADLRGHEGPVWQVAWAHPMY&#10;  + GNILASCSYDRKVIIWKEENGTWEKTHEHSGHDSSVNSVCWAPHDYGLILACGSSDGAISLLTYTGEGQW&#10;  + EVKKINNAHTIGCNAVSWAPAVVPGSLIDQPSGQKPNYIKKFASGGCDNLIKLWREEEDGQWKEEQKLEA&#10;  + HSDWVRDVAWAPSIGLPTSTIASCSQDGRVFIWTCDDASGNMWSPKLLHKFNDVVWHVSWSITANILAVS&#10;  + GGDNKVTLWKESVDGQWVCISDVNKGQGSVSASITEGQQNEQ...&#10;  &#10;  ...Full output truncated (139 lines hidden), use '-vv' to show">tests/integration/test_simple_case.py:309: in test_simple_case_check_individual_og_files_only
+    assert expected_OG0 == output_OG0
+E   AssertionError: assert '&gt;ENSMUSP0000...SAVTEGQQNEQ\n' == '&gt;ENSPTRP0000...ASVTEGQQNEQ\n'
+E     
+E     + &gt;ENSMUSP00000032440
+E     + MVSVMNTVDTSHEDMIHDAQMDYYGTRLATCSSDRSVKIFDVRNGGQILIADLRGHEGPVWQVAWAHPMY
+E     + GNILASCSYDRKVIIWKEENGTWEKTHEHSGHDSSVNSVCWAPHDYGLILACGSSDGAISLLTYTGEGQW
+E     + EVKKINNAHTIGCNAVSWAPAVVPGSLIDQPSGQKPNYIKKFASGGCDNLIKLWREEEDGQWKEEQKLEA
+E     + HSDWVRDVAWAPSIGLPTSTIASCSQDGRVFIWTCDDASGNMWSPKLLHKFNDVVWHVSWSITANILAVS
+E     + GGDNKVTLWKESVDGQWVCISDVNKGQGSVSASITEGQQNEQ...
+E     
+E     ...Full output truncated (139 lines hidden), use '-vv' to show</failure></testcase><testcase classname="tests.integration.test_simple_case.TestSimpleCase" name="test_simple_case_check_individual_scog_files_only" time="5.153"><failure message="AssertionError: assert '&gt;Mus_musculu...GFSDDVPMVIA\n' == '&gt;Pan_troglod...GFSDDVPMVIA\n'&#10;  &#10;  - &gt;Pan_troglodytes.Pan_tro_3.0.pep.all|ENSPTRP00000007532&#10;  - MATRSSRRESRLPFLFTLVALLPPGALCEVWTQRLHGGSAPLPQDRGFLVVQGDPRELRLWERGDARGAS&#10;  - RADEKPLRRKRSAALQPEPIKVYGQVSLNDSHNQMVVHWAGEKSNVIVALARDSLALARPKSSDVYVSYD&#10;  - YGKSFKKISDKLNFGVGNRSEAVIAQFYHSPADNKRYIFADAYAQYLWITFDFCNTLQGFSIPFRAADLL&#10;  - LHSKASNLLLGFDRSHPNKQLWKSDDFGQTWIMIQEHVKSFSWGIDPYDKPNTIYIERHEPSGYSTVFRS&#10;  - TDFFQSRENQEVILEEVRDFQLRDKYMFATKVVHLLGSEQQSSVQLWVSFGRKPMRAAQFVTRHPINEYY...&#10;  &#10;  ...Full output truncated (490 lines hidden), use '-vv' to show">tests/integration/test_simple_case.py:345: in test_simple_case_check_individual_scog_files_only
+    assert expected_OG2_sc == output_OG2_sc
+E   AssertionError: assert '&gt;Mus_musculu...GFSDDVPMVIA\n' == '&gt;Pan_troglod...GFSDDVPMVIA\n'
+E     
+E     - &gt;Pan_troglodytes.Pan_tro_3.0.pep.all|ENSPTRP00000007532
+E     - MATRSSRRESRLPFLFTLVALLPPGALCEVWTQRLHGGSAPLPQDRGFLVVQGDPRELRLWERGDARGAS
+E     - RADEKPLRRKRSAALQPEPIKVYGQVSLNDSHNQMVVHWAGEKSNVIVALARDSLALARPKSSDVYVSYD
+E     - YGKSFKKISDKLNFGVGNRSEAVIAQFYHSPADNKRYIFADAYAQYLWITFDFCNTLQGFSIPFRAADLL
+E     - LHSKASNLLLGFDRSHPNKQLWKSDDFGQTWIMIQEHVKSFSWGIDPYDKPNTIYIERHEPSGYSTVFRS
+E     - TDFFQSRENQEVILEEVRDFQLRDKYMFATKVVHLLGSEQQSSVQLWVSFGRKPMRAAQFVTRHPINEYY...
+E     
+E     ...Full output truncated (490 lines hidden), use '-vv' to show</failure></testcase></testsuite></testsuites>

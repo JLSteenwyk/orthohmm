@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Top100 Complete; Regression Limit Identified (2026-09-18 UTC)
+
+Previous turn progressed through970b496 with a regenerated comparison and
+manuscript update. Reread the objective and verified all live jobs. Top100
+graph21814 completed0:0 in35:24; retained its execution reportSHA
+ff401cf6936c3a4eafdb953f421b9008a931c127b0c022a7112439f680d32ba9.
+Verified frozen admission code and launched21827(2CPUs/192GiB), now running.
+SeeQFO_SEQUENCE_TOP100_EXECUTION_20260918.md. All-hit scoring21825 is still
+running and21826waits for it. No benchmark was restarted.
+
+Full unit suite at970b496:5259passed,9skipped in92.13seconds. Unrestricted
+test discovery first traversed retained worktrees and was interrupted.
+The initial integration invocation encountered the shell's legacy MCL and
+regenerated already-dirty main sample outputs; these were not committed or
+reverted. A dependency-scoped detached-worktree integration run completed
+5failed/3passed in65.75seconds, with retained JUnit evidence. Expected and
+observed normalized partitions match for38simple and1155long-name genes,
+but byte-level gene-count/FASTA assertions fail. Full-suite success is NOT
+claimed. SeeREGRESSION_AUDIT_970b496_20260918.md for all attempts and limits.
+
+Next: finish independent top100validation and scoring, and investigate
+order-sensitive legacy integration assertions with sequence/count-aware
+checks and temporary output isolation. Publication remains incomplete.
+
 ## Matched Three Kingdoms Comparison Exported (2026-09-18 UTC)
 
 Previous turn progressed throughac522bc with the admitted contemporary Sonic

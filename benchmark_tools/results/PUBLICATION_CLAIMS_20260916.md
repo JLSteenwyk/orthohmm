@@ -82,8 +82,8 @@ evidence that an experiment completed or a biological hypothesis is true.
   [Frozen pair conversion21824](QFO_SEQUENCE_ALL_HITS_PAIRS_20260918.md)
   completed0:0 in2:34 with11,300,151expected/emitted/retained clique pairs
   and zero mapping losses. Six-endpoint scoring21825 is running;
-  independent score admission21826 is queued. Top100graph21814 is running
-  separately and has not passed independent graph validation.
+  independent score admission21826 is queued. [Top100graph21814](QFO_SEQUENCE_TOP100_EXECUTION_20260918.md)
+  completed0:0 in35:24; independent graph validation21827 is running.
   [Self-hit semantics](QFO_SEQUENCE_SELF_HIT_REVIEW_20260918.md) retain the
   frozen cap with no self exception. Conversion completion does not establish
   matched biological sensitivity or an accuracy result. The all-hit graph
