@@ -1,5 +1,35 @@
 # Publication Progress
 
+## DGX Full Metadata And Host Review (2026-09-18 UTC)
+
+Previous turn progressed through87bf876: queued QfO coverage and confirmed
+the final DGX task terminal. Transferred207 metadata/measurement files,
+815,526,081bytes, from scaling_native_v1 to
+benchmarks/work/dgx_completed_evidence_20260918. Transfer includes all27
+preparation/verification records, raw host/resource samples, command logs,
+GNU-time companions and available native metrics. A second rsync checksum
+dry-run returned no changes and exit0. Native output trees remain on DGX;
+this is not a full native-output archive or native-output validation.
+
+Added audit_dgx_retained_panel.py. It reuses the frozen-contract checks,
+verifies every measured raw-payload hash/path, retains GNU-time scope,
+replays all27 host-monitor streams and rechecks the complete local inventory.
+Scheduler evidence explicitly distinguishes retained sacct rows0-25 from
+the transcribed final controller fields; no fresh final sacct or timezone
+conversion is invented. The resulting machine-readable report is
+benchmark_tools/results/dgx_completed_panel_review_20260918.json.
+
+All27 metadata/payload/host replays pass, with zero review failures. All27
+host statuses remain inconclusive:1,078 inconclusive intervals and1,055
+intervals with no large persistent competitor observed. There are1,908
+unmatched identity events,1,710 kworker-named; names do not establish kernel
+identity, and unmatched/unsampled process CPU remains unmeasured. No status
+was upgraded. Scientific timings admitted:0. Tests:28 focused pass in0.19s.
+
+Next: validate native outputs and independently replay resource accounting,
+then assess scientific reuse or justified reruns using all retained evidence.
+The full publication objective remains active and no timing rank is claimed.
+
 ## Dedicated Timing Sequence Terminal (2026-09-18 UTC)
 
 After queued coverage work, DGX final task21656_26 disappeared from squeue.

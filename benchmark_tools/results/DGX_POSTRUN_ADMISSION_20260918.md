@@ -34,6 +34,16 @@ does not establish the status of the other26 runs.
 
 ## Required Validation
 
+Post-run progress:207 files (815,526,081bytes) of metadata and measurement
+evidence were transferred and checked with a checksum-mode rsync dry-run.
+dgx_completed_panel_review_20260918.json records successful metadata,
+payload-hash and host-replay checks for all27 runs. All27 host summaries
+remain inconclusive:1,908 unmatched identity events across1,078 inconclusive
+intervals. The other1,055 intervals report no large persistent competitor,
+not proof of no competition.1,710 unmatched events are kworker-named, not
+authenticated kernel threads. Native outputs and resource-accounting replay
+remain unvalidated; no scientific timings have been admitted.
+
 After the final task is authoritatively terminal:
 
 1. Preserve all27 original outputs, metadata, raw host/resource samples and
