@@ -8306,3 +8306,23 @@ Latest queue check: HMM 21706_0 RUNNING at 6:16:49, DGX 21656_22 RUNNING at
 23:56, FastOMA 21740 and admission 21741 pending dependencies. Corrected
 comparisons, uncertainty, dedicated timing admission and publication packaging
 remain unfinished. No unrelated jobs or historical scores were modified.
+
+### Corrected FastOMA Pair Preparation Queued (2026-09-18)
+
+Previous turn made progress by queueing independent corrected FastOMA native
+admission. This turn freezes the native pair preparation executor at
+`6616e3a7ec4c46962ded0d34ce9b4150073a2210` and queues job 21742 `afterok:21741`
+with 2 CPUs/64 GiB/four hours. It binds admission accounting/source, rechecks
+native artifacts and corrected accession ownership, counts/removes duplicates,
+and fails on any unexpected mapping loss. Native pairs remain distinct from
+HOG-derived clique predictions; supplied-tree semantics are explicit.
+
+All 45 focused tests and Bash syntax validation pass. Conversion has not yet
+executed. See `QFO_CORRECTED_FASTOMA_PAIRS_20260918.md` for manifest paths and
+limitations. Next is integration with the frozen six-endpoint scorer and
+independent score admission; no corrected accuracy result is asserted yet.
+
+Latest live check: HMM 21706_0 RUNNING at 6:21:39, DGX 21656_22 RUNNING at
+28:46. FastOMA inference/admission/conversion remain pending their dependencies.
+Corrected comparisons, remaining uncertainty, dedicated timing admission and
+final publication packaging remain unfinished. No unrelated work was changed.
