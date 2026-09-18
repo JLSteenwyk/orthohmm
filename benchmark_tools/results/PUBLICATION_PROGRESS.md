@@ -1,5 +1,46 @@
 # Publication Progress
 
+## Corrected Candidate Preparation Implemented (2026-09-18 UTC)
+
+Previous turn progressed by implementing and pushing independent corrected
+replay admission (09dec90). Created its detached executor at
+`benchmarks/work/publication_qfo_corrected_replay_admission_v1`, exact revision
+`09dec90118e9280990295f8aa9c1aa1a9171714e`. No admission was launched.
+
+Added `prepare_qfo_corrected_factorial.py` and its 2-CPU/64-GiB/four-hour
+no-requeue batch. Preparation requires a checksum-bound corrected replay
+admission from the frozen admission source, successful admission-job
+accounting, all four admitted stages and the corrected 984,137-gene
+universe. It accepts either observed native/replay equivalence outcome,
+checks every admitted record, and validates 78 FASTAs against the numeric
+checkpoint's species ownership. It imports the candidate engine from the
+verified frozen launcher, not the current development package.
+
+The two refined profile seeds each produce expansion-off/on arms with the
+unchanged satellite_v2 algorithm and eight prospective P/C/R cells. Arm
+partitions, merge constraints, seed sidecars and other generated arm files
+are inventoried and rehashed. Inputs, checkpoint, helpers and runtime are
+rechecked after preparation; failures retain partial evidence. All accuracy
+scoring and reconciliation remain separate. Original-release candidates or
+scores are never substituted for corrected outputs.
+
+Validation: 69 focused tests pass (new admission-binding/early-refusal tests
+plus existing seed/arm/cell and replay-admission tests); batch syntax passes.
+A separate native-engine smoke imported the actual frozen launcher, kept
+`a b / c` unchanged without expansion, and produced `a b c` with expansion:
+two seed families, one candidate family, one merge, two directed relations,
+one iteration. The membership constraint parser accepted the generated
+trace and the original seed remained unchanged. Temporary smoke artifacts
+were removed automatically. This is a three-gene execution smoke, not a
+completed corrected factorial or biological accuracy evaluation.
+
+Latest live check: HMM 21706_0 running 3:02:31, SonicParanoid 21710 running
+2:39:19, original final-cell assessment 21723 running 21:35 and its admission
+21724 pending. No corrected candidate preparation was submitted. Next:
+admit completed outputs, launch the checksum-bound corrected replay, admit
+it, then freeze/execute candidate preparation and independently validate
+its products before reconciliation. The publication goal remains active.
+
 ## Corrected Replay Parent Admission Implemented (2026-09-18 UTC)
 
 Previous turn progressed by pushing the retained-stage audit (154cf46).
