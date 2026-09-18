@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Chunked Search Coverage Diagnostics (2026-09-18 UTC)
+
+Previous turn progressed through3cc034a: independent numeric admission21792
+was frozen and queued. This turn revalidated DIAMOND21789 RUNNING25:16,
+HMM21706_0 RUNNING10:36:54, and final DGX21656_26 RUNNING1:14:11.
+Search admission21790, conversion21791 and independent equivalence21792
+remain dependency-pending. Existing jobs were not disturbed.
+
+Added summarize_sorted_search_hits.py at eac610b. The existing OrthoBench
+diagnostic uses whole-hit encoded arrays, intersections and repeated
+species-pair masks; the new helper instead validates and scans canonical
+q/t/score blocks. Exact directed overlap merges two encoded chunks, counts
+self and nonself overlap separately, and validates remaining input tails.
+Coverage includes missing queries/targets, cross-species hits and each
+species direction. Working arrays scale with genes times species plus chunk
+size, not total hits; this is an algorithmic bound, not measured production
+peak RSS. Score summaries use fixed descriptive bins and extrema, not
+cross-engine calibrated thresholds, fitted normalization or sample quantiles.
+Reciprocity and exact score quantiles are explicitly not computed here.
+
+90 focused tests pass in1.11s, including equivalence to existing counts
+across five random fixtures and three chunk sizes, empty/disjoint/self-hit
+cases, invalid input tails, histogram boundaries and real read-only numeric
+checkpoint arrays. No reference labels or accuracy scores were used.
+
+Next: bind the helper to independently admitted corrected HMM/DIAMOND
+checkpoints and record provenance before running the production comparison.
+Then assess actual checkpoint/graph resource requirements and run the frozen
+graph/scoring workflow. No production overlap result is claimed, and the
+full publication goal remains active.
+
 ## Independent Numeric Admission Queued (2026-09-18 UTC)
 
 Previous goal turn: no new publication progress; archive retrieval and
