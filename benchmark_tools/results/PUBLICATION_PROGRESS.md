@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Corrected Archive Acquisition Running; Fourth QfO Cell Admitted (2026-09-17)
+
+Previous turn progressed with original-archive verification56585af. Re-read
+full objective. Began corrected-release acquisition into a separate work
+directory, then deliberately transferred the slow download to Slurm21687
+using retained79,556,608bytes, HTTP Range resume and a server ETag guard.
+Confirmed job RUNNING on bizon; DGX is untouched. Prepared corrected archive
+comparison code with seven passing tests; empirical comparison is pending.
+Reproduction and provenance: `QFO_CORRECTED_ARCHIVE_ACQUISITION_20260917.md`.
+
+Scoring21682 and independent admission21684 are now COMPLETED0:0. Repeated
+the frozen validator; report byte-identical. Preserved admittedp1_c1_r0
+snapshot and `QFO_FACTORIAL_SECOND_EXPANDED_ASSESSMENT_20260917.md`. All four
+R-off cells are admitted; four R-on cells still pending. This is original-input
+evidence, not corrected-release equivalence. Continue download verification,
+full78-proteome/mapping comparison, native R-on pipeline and controlled DGX
+timings while preserving all frozen artifacts and full publication scope.
+
 ## Original Archive Verified; Corrected Xenopus Release Identified (2026-09-17)
 
 Previous turn progressed with additional-FASTA tracebaa4338. Re-read objective
