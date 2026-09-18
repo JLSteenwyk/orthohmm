@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Independent Search Checkpoint Equivalence (2026-09-18 UTC)
+
+Previous turn progressed through1de763d: numeric conversion21791 queued.
+Revalidated search21789 RUNNING9:30, HMM21706_0 RUNNING10:21:08 and final
+DGX21656_26 RUNNING56:03. Admission21790 and conversion21791 remain
+dependency-pending. No active run was restarted or disturbed.
+
+Added verify_sequence_checkpoint_equivalence.py, an independent source
+table reconstruction and checkpoint comparison helper. It uses a separate
+CSV parser and scratch SQLite table with duplicate ordered-pair rejection,
+validates IDs/lengths/target ownership/significance and reconstructs raw
+score normalization. Checks exact sorted q/t/score tuples against hashed
+numeric checkpoint arrays in bounded chunks, including gene/species maps.
+For top100, streaming query/species ranks replace the producer SQL window
+expression; only up to100 selected rows per species for one query are
+buffered before restoring canonical order. All-hit rows are never capped.
+
+Tests compare both real producer checkpoints against fresh reconstruction,
+exercise source and array corruption, and compare streaming ranks with
+independent grouped sorting across five seeds/multiple queries/species.
+45 focused tests pass in0.37s. Implementation3bc4ae4. This tests algorithms
+and fixtures only; no production checkpoint equivalence has been claimed.
+Additional audit SQLite storage is required and must remain separate from
+the producer database. It verifies emitted search records, not whether
+DIAMOND found every biologically relevant hit or matched HMM sensitivity.
+
+Next: wrap the helper in terminal-job/frozen-source admission after21791,
+with raw-hit and checkpoint hashes checked before/after reconstruction,
+then authorize frozen downstream graph replay. Full goal remains active.
+
 ## Corrected Search Numeric Conversion Queued (2026-09-18 UTC)
 
 Previous turn progressed throughf02c85c: full-panel search admission21790
