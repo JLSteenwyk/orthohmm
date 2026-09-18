@@ -1,5 +1,23 @@
 # Publication Progress
 
+## QfO Reconciliation Array Running (2026-09-17)
+
+Committed and pushed the preparation snapshot and runner as de3202f, created
+detached executor `benchmarks/work/publication_qfo_factorial_reconcile_v1`
+at de3202f1c4b9a7b57ccdd903f5a362194cdd5371, then submitted array21671,
+tasks0-3%1 on bizon. Task0 is confirmed RUNNING, tasks1-3 pending. Its
+execution status records the actual frozen `publication_qfo_replay_native_v1`
+launcher and cwd. Prepared manifest SHA remains
+706b07c91e9a130dae229837641a7ad62d7d36a09679e5e0daa0959e182b7d64.
+
+Cells run in order p0_c0_r1, p0_c1_r1, p1_c0_r1, p1_c1_r1; each has32CPUs,
+192GiB and48h limit with no requeue. Evidence lives under
+`benchmarks/results/qfo_factorial_v1/execution/LABEL`, Slurm logs under
+`benchmarks/work/qfo_factorial_reconcile_21671_INDEX.log`. No accuracy scored.
+Next: independently validate completed native outputs and perform the frozen
+QfO conversions/scoring, retaining failures. DGX21656_7 remains RUNNING with
+seven earlier completed runs; this new array does not share its node.
+
 ## QfO Candidates Prepared; Reconciliation Gate Ready (2026-09-17)
 
 Previous turn progressed the frozen QfO factorial and launched preparation;
