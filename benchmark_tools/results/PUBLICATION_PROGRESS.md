@@ -7162,3 +7162,33 @@ inspector to includeFAMSA: missing onARM, but this is OrthoFinder3.1.5's
 defaultMSAprogram (bundled2.2.3-1669fc1). ExactFAMSA and remainingdependency
 checks are next; no silentMAFFTsubstitution. Bothbashrecipes syntaxcheckpass,
 3inspectorunitpass; no frozen inference change or scientific timing started.
+
+### Corrected QfO Reruns and Comparator Preparation (2026-09-18)
+
+Recent milestones are detailed in the dated reports rather than implied
+by the older job snapshots above. Corrected archive acquisition, mapping,
+native sequence audit and 78-proteome staging passed. Corrected inference
+array 21706 now runs OrthoHMM high-sensitivity first and OrthoFinder 3.1.5
+full second, from pinned executor 9d8b608. Task 0 was confirmed live;
+task 1 remains sequentially queued. These shared-host accuracy runs are
+not dedicated timing evidence. See QFO_CORRECTED_PRIMARY_SUBMITTED_20260918.md.
+
+Original-release factorial cell p0_c1_r1 completed scoring and independent
+readmission; its six endpoints and negative TreeFam-A change are retained
+in QFO_SECOND_R_ON_ASSESSMENT_20260918.md. Two remaining reconciliation-on
+cells and the complete eight-cell SwissTrees uncertainty analysis remain
+open. DGX array 21656 remains active, with task 13 confirmed live in this
+continuation. No timing admission or quiet-host claim is implied.
+
+Corrected Proteinortho 6.3.6 commands and container checksums are now
+prepared, with matching DIAMOND 2.1.12 version probe and all 78 corrected
+inputs verified. Nine new command tests and 27 combined tests passed.
+See QFO_CORRECTED_PROTEINORTHO_PREPARED_20260918.md. Execution is not yet
+authorized: runtime configuration/environment pinning, guarded launcher,
+conversion and native admission remain to do. All other corrected rows
+and factorial cells remain in scope; no old-release predictions or scores
+will be relabeled as corrected-input results.
+
+Original TreeFam-A family trees and treefam2reference.txt remain missing.
+The downloaded pooled reference is verified but cannot support assumed
+family-level resampling. Publication readiness is not established.
