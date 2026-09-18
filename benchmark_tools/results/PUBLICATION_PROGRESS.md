@@ -1,5 +1,27 @@
 # Publication Progress
 
+## DGX Interval Burst Control Completed (2026-09-18 UTC)
+
+Previous turn progressed throughd150182 with validated VGNC influence
+evidence. Reread the full objective. QfO21792 and21706_0 remain live;
+latest check shows1:19:03 and15:42:59 respectively. Their dependent jobs
+remain pending; no unrelated workload was interrupted.
+
+Implemented raw host/native-step interval observation and fixed quiet/burst
+controls. Committed/pushedf572260 and its protocol before execution. DGX
+job21806 completed0:0 in21seconds, no restarts, with both control expectations
+met. The completed0.750059CPU-second sibling burst was detected in the third
+one-second interval at0.779855unassigned cores, but its whole-window average
+of0.080175passed the coarse screen. Quiet had no flagged intervals.
+
+Retained the full208702-byte raw report and scheduler evidence; copied the
+complete remote recipe/point records/logs to work storage. Seventy focused
+tests pass, including exact local replay, burst boundaries/scope and source
+checks. See DGX_INTERVAL_CONTROLS_RESULT_20260918.md. Updated the claims
+checklist without promoting any timing: complete native command boundaries,
+observer overhead/accounting, non-CPU interference and prospective scientific
+inclusion/repeat rules remain pending. No new27-run scientific panel launched.
+
 ## VGNC Single-Block Influence Executed (2026-09-18 UTC)
 
 The preceding archive-search turn yielded no new original TreeFam assets:

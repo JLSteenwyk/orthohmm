@@ -81,3 +81,40 @@ def test_negative_accounting_preserved():
     result = interval(point(0), right, 123)
     assert result["signed_unassigned_cpu_s"] == -1
     assert result["reasons"] == ["negative_accounting_discrepancy"]
+
+
+def test_actual_dgx_control_replay_and_burst_boundaries():
+    import hashlib
+    import json
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[2]
+    evidence = root / "benchmark_tools/results/dgx_interval_controls_21806.json"
+    report = json.loads(evidence.read_text())
+    assert report["job_id"] == 21806
+    assert report["all_control_expectations_met"] is True
+    assert report["scientific_timings_admitted"] is False
+    assert report["controlled_workload_verified"] is False
+    for name, expected in report["sources"].items():
+        assert hashlib.sha256((root / "benchmark_tools" / name).read_bytes()).hexdigest() == expected
+    assert [t["mode"] for t in report["trials"]] == ["quiet", "completed_burst"]
+    for trial in report["trials"]:
+        points = trial["points"]
+        assert evaluate(points, 21806) == trial["result"]
+        assert trial["native"]["started_ns"] > points[0]["host"][1]["finished_monotonic_ns"]
+        assert trial["native"]["finished_ns"] > points[-1]["host"][1]["finished_monotonic_ns"]
+        assert trial["native"]["cpu_s"] > 9
+        assert trial["result"]["whole_window"]["screen_passed"] is True
+    quiet, burst = report["trials"]
+    assert quiet["result"]["flagged_intervals"] == []
+    assert burst["result"]["flagged_intervals"] == [2]
+    assert burst["result"]["intervals"][2]["reasons"] == ["excess_unassigned_cpu"]
+    load = burst["sibling"]
+    assert .75 <= load["cpu_seconds"] < .85
+    assert burst["points"][2]["host"][1]["finished_monotonic_ns"] < load["started_ns"]
+    assert load["started_ns"] < load["finished_ns"] < burst["points"][3]["host"][0]["started_monotonic_ns"]
+    assert load["cgroup"] == burst["points"][0]["host"][0]["raw"]["cgroup_membership"]
+    scheduler = (root / "benchmark_tools/results/dgx_interval_controls_21806_scheduler.txt").read_text().split()
+    for field in ("JobId=21806", "JobState=COMPLETED", "ExitCode=0:0", "Restarts=0",
+                  "NodeList=spark-7ff0", "NumCPUs=20", "CPUs/Task=2", "OverSubscribe=NO"):
+        assert field in scheduler
