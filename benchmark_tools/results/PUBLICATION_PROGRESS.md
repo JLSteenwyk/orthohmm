@@ -1,5 +1,37 @@
 # Publication Progress
 
+## Corrected Factorial Export Prepared (2026-09-18 UTC)
+
+Previous turn progressed through1aba2c6: all eight corrected factorial
+assessments/admissions queued. Revalidated HMM21706_0 RUNNING9:48:51 and
+final DGX21656_26 RUNNING23:46. No active job was restarted or supplemented
+with heavy DGX I/O.
+
+The original factorial exporter accepts original-release admissions only.
+Added a separate corrected adapter, export_qfo_corrected_factorial.py,
+requiring corrected admission status, ordered cell identity, matching
+embedded/file conversion, successful conversion accounting, native/group
+pair semantics, zero mapping loss and exact six-endpoint participant
+identity. It recomputes native F1 values and the secondary mean, preserves
+precision/recall details, and binds report/manifest hashes. Duplicate
+admissions, altered files, nonfinite/boolean metrics and historical status
+are rejected. Missing cells have null scores, never zeros or old scores.
+This is report-level export validation, not a fresh full inference audit.
+
+25 new tests plus original-export/scoring/admission tests:92 passed in0.45s.
+Implementation2eac70c. Initial real CLI export (no supplied admissions) is
+benchmarks/results/qfo_corrected_factorial_table_20260918_v1, with JSON,
+TSV and Markdown outputs. All eight cells are explicitly not_admitted;
+the status does not purport to describe scheduler state. Manifest SHA-256:
+2d9348ef7c112ad18c4e3d8695fe47843acd08c75fcd608155732ce580b74d90.
+No score, ranking or confidence interval was synthesized.
+
+Regenerate into a fresh destination with repeated --assessment PATH SHA256
+arguments as validated reports become available. Next: paired corrected
+SwissTrees factorial count extraction, dedicated timing validation after
+the final task, and remaining primary-method/matched-search/publication
+requirements. Full goal remains active and incomplete.
+
 ## Corrected Factorial Scoring Chain Queued (2026-09-18 UTC)
 
 Previous turn progressed through25452cd: all eight pair conversions queued.
