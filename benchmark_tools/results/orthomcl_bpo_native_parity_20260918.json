@@ -1,0 +1,753 @@
+{
+  "accuracy_admitted": false,
+  "checked_records": [
+    {
+      "bytes": 2212152,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/bin/perl",
+      "sha256": "0831f05140647686cd2260eea4fc59b5aa68f4e8a2d4ec28d1b865dbc3aeffef"
+    },
+    {
+      "bytes": 30312,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/orthomcl_module.pm",
+      "sha256": "84be557ff07bdf02aaa6f536a017f950faeb1fe88712dd12dde35ab6d6b6e78d"
+    },
+    {
+      "bytes": 1402,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_orthomcl_native_bpo.pl",
+      "sha256": "c09d6323c1be2f2de786bdd3f6d9497ee0cfe4be657a3f5252b24b89513d46f8"
+    },
+    {
+      "bytes": 7260,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_orthomcl_bpo_parity.py",
+      "sha256": "e7b374b79d88f3699eea535ecb1453a70e2cd4716e3fe85684ec2dd29dc86397"
+    },
+    {
+      "bytes": 1982,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_orthomcl_bpo_indexes.pl",
+      "sha256": "8b6ee3e1e42720a25616f2ddfdbe3475d644ea23edc3309108edcf3820d41007"
+    },
+    {
+      "bytes": 6347,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/convert_orthomcl_blast.py",
+      "sha256": "fbd7bcffa07c354fc72a052c87cbd7d2238530348a6d497be250fc7422244931"
+    },
+    {
+      "bytes": 346,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_bpo_parity_probe_v2_20260918/all.fa",
+      "sha256": "ff2227d944cc687fb2405042b8c3b294062fbd2ae3140dcb3a6c64fa2f3493bc"
+    },
+    {
+      "bytes": 290,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_bpo_parity_probe_v2_20260918/all.blast",
+      "sha256": "f46b5b1c8bf50f493207b0bda0cc61606b7cb15300b8142a75401e2cc335a02e"
+    }
+  ],
+  "command": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/bin/perl",
+    "-I/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_orthomcl_native_bpo.pl",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_bpo_parity_probe_v2_20260918/all.fa",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_bpo_parity_probe_v2_20260918/all.blast",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_bpo_parity_probe_v2_20260918/native"
+  ],
+  "content": {
+    "bpo_byte_identical": true,
+    "indexes_verified": true,
+    "native_pair_records": 6,
+    "native_queries": 3,
+    "offset_entries_including_eof": 7,
+    "streaming_pair_records": 6
+  },
+  "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_bpo_parity_probe_v2_20260918",
+  "environment": {
+    "HOME": "/home/bizon",
+    "LANG": "C",
+    "LC_ALL": "C",
+    "LOGNAME": "bizon",
+    "PATH": "/usr/bin:/bin",
+    "USER": "bizon"
+  },
+  "exit_code": 0,
+  "index_checker_command": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/bin/perl",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_orthomcl_bpo_indexes.pl",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_bpo_parity_probe_v2_20260918/native/native.bpo",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_bpo_parity_probe_v2_20260918/native/native.idx",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_bpo_parity_probe_v2_20260918/native/native.se"
+  ],
+  "limitations": [
+    "Small synthetic conversion fixtures, not complete production BPO or biological validation.",
+    "Loaded Perl modules are recorded after this probe, not a hermetic production runtime freeze.",
+    "Byte parity on these HSP/gap/cutoff cases does not prove parity for all possible inputs.",
+    "Independent offsets include the native EOF sentinel; query ranges use inclusive one-based similarity IDs."
+  ],
+  "loaded_modules": [
+    {
+      "bytes": 30312,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/orthomcl_module.pm",
+      "sha256": "84be557ff07bdf02aaa6f536a017f950faeb1fe88712dd12dde35ab6d6b6e78d"
+    },
+    {
+      "bytes": 15797,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/5.26.2/AutoLoader.pm",
+      "sha256": "9a3bd486186b8a4a910b88bd8a503ee4f077b3c36fdc8e450fda74f899bacbc8"
+    },
+    {
+      "bytes": 11194,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/5.26.2/File/Basename.pm",
+      "sha256": "43b664feca2c9d14cfc90d3527fc0bf6931c75000cf941d1f8c914e83dfb21ba"
+    },
+    {
+      "bytes": 16156,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/5.26.2/File/Copy.pm",
+      "sha256": "2971002221d7020a6c43f41efba9b68c497e04bef8b7cb1b9cef63e520635a20"
+    },
+    {
+      "bytes": 81922,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/5.26.2/JSON/PP.pm",
+      "sha256": "44a9e8ba8749b4809970602c956b37e61126df9d500869f2215169879a9cde1e"
+    },
+    {
+      "bytes": 1076,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/5.26.2/SelectSaver.pm",
+      "sha256": "b951b99c894f701eac08b79265ff2ccbede0954f97a537d03fb78801ed645861"
+    },
+    {
+      "bytes": 4799,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/5.26.2/Symbol.pm",
+      "sha256": "219ec21cc059ecfeb3bc7c6e349734dd0344a06a724781a54c17811d69ed77da"
+    },
+    {
+      "bytes": 3754,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/5.26.2/bytes.pm",
+      "sha256": "d9441b0b498077ddde2c225adda4bd975ed4a4d4be1f5d59c29473aeba3209c6"
+    },
+    {
+      "bytes": 3254,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/5.26.2/integer.pm",
+      "sha256": "eb62cc3ee22a592bc673e07158927d1a6536075d33258fc67ff91e3f720cf463"
+    },
+    {
+      "bytes": 53314,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/5.26.2/overload.pm",
+      "sha256": "880bfcd7863132c67fb05b6cfae8f85eb3caa09ec455e2997e8b7c2036561b31"
+    },
+    {
+      "bytes": 1808,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/5.26.2/overloading.pm",
+      "sha256": "5bba56c0acdcc449ca3b73500862a5750c907d97d652978038dbc7809c4fcd07"
+    },
+    {
+      "bytes": 4738,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/5.26.2/strict.pm",
+      "sha256": "89a96f0a1a1ed78e0e9c525434b5779b2e2baa8f976dfa2f78771282fa08d88d"
+    },
+    {
+      "bytes": 2414,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/5.26.2/vars.pm",
+      "sha256": "bb5eddd798b89c8a1c90710961c1e65dc8a3b3e5364c51ff2b0082840a1efa7a"
+    },
+    {
+      "bytes": 44756,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/5.26.2/warnings.pm",
+      "sha256": "de7cd087850c1bb5870c6074a6922203361207454caa020b2c0e8ee061504328"
+    },
+    {
+      "bytes": 759,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/5.26.2/warnings/register.pm",
+      "sha256": "ce25ec34358642703ff05b546b2ac42b4f2081ab7610d8373dd94c6b78040cf4"
+    },
+    {
+      "bytes": 31457,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/5.26.2/x86_64-linux-thread-multi/B.pm",
+      "sha256": "24ade0e65ef1b3ac9a43fb272b3ae5b1c8668ddd1f0eddb30fb2a5fc4f4289c0"
+    },
+    {
+      "bytes": 4514,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/5.26.2/x86_64-linux-thread-multi/Config.pm",
+      "sha256": "3353575d0c61db5ec61293d2f2c3bf7c5d04cb49f2da8bc7c1e97240db3b176f"
+    },
+    {
+      "bytes": 25222,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/5.26.2/x86_64-linux-thread-multi/DynaLoader.pm",
+      "sha256": "af3d93fd39ac15dc187be68af9eef36fe60def865f628999da8bd894cc1211c1"
+    },
+    {
+      "bytes": 6843,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/5.26.2/x86_64-linux-thread-multi/Errno.pm",
+      "sha256": "bf1efd81535548f235f1dec20ee908416d29bf4935ee2bf538d217534523f149"
+    },
+    {
+      "bytes": 4044,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/5.26.2/x86_64-linux-thread-multi/Fcntl.pm",
+      "sha256": "02cce578326ffb0393234fd16f4d4d2ce62deec827a6e62454df27e5a2d3d22a"
+    },
+    {
+      "bytes": 1453,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/5.26.2/x86_64-linux-thread-multi/IO.pm",
+      "sha256": "d17916f808d9a6baacc87c5b16a0256e3dffccf96734532984c9b0dcd12c57eb"
+    },
+    {
+      "bytes": 17176,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/5.26.2/x86_64-linux-thread-multi/IO/Handle.pm",
+      "sha256": "c6a9c16c2266b5bbe47480ffccf21ae3b9e09d5b587770eb151865c1f388e3d9"
+    },
+    {
+      "bytes": 2935,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/5.26.2/x86_64-linux-thread-multi/IO/Seekable.pm",
+      "sha256": "e569b22d0eac4e2af63314fa8b5274aeee42a034d3cf7022d2b6928f6aa29e52"
+    },
+    {
+      "bytes": 5062,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/AnalysisParserI.pm",
+      "sha256": "e0c0f6f1b732ff6538f819c02c3edd3fe1506f3941254e5118aa57f8fbae0957"
+    },
+    {
+      "bytes": 6499,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/AnalysisResultI.pm",
+      "sha256": "e5430597f41495c429f14ccce634ef7faca8b853b70ef9e20b038b782d0e8597"
+    },
+    {
+      "bytes": 2849,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/AnnotatableI.pm",
+      "sha256": "d8d2eed221bcb03c409a2b00d2ca6aee907801d3fb3869943fff61eb3bb043a0"
+    },
+    {
+      "bytes": 18822,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Annotation/Collection.pm",
+      "sha256": "09e6a22227617b9cb2fa99051fa47e753550e908238b4192c35b8896b73f7ca0"
+    },
+    {
+      "bytes": 6383,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Annotation/SimpleValue.pm",
+      "sha256": "60596c6ee8e31eebfaf7c7f7f573cd90838523dcad6d458c8b3e7cac4edd9ab6"
+    },
+    {
+      "bytes": 3361,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Annotation/TypeManager.pm",
+      "sha256": "fd74994265729f21ca5f9cdb5efb5d256f13ce750c7b9f5f97027a14682fba84"
+    },
+    {
+      "bytes": 6523,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/AnnotationCollectionI.pm",
+      "sha256": "48e7f5f5095866c2b26cfc0543a029a8bd35db12e4d7afe19c3eb6fd0ccacfe5"
+    },
+    {
+      "bytes": 5526,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/AnnotationI.pm",
+      "sha256": "89fb3da1adf813110f8f5f521145a039a6dc333acc7d05cf3881504f6a5beec2"
+    },
+    {
+      "bytes": 6379,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/DB/InMemoryCache.pm",
+      "sha256": "9bf0d058d8d0bbbb53418b336f98cb8b58aa8ceb560c06c8d2618828d6494c32"
+    },
+    {
+      "bytes": 3053,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/DB/RandomAccessI.pm",
+      "sha256": "7f1bf5a4eb3fa0f312b3aa2e0587bbfee28c22e30a4f248dda3cc9842122b73f"
+    },
+    {
+      "bytes": 4717,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/DB/SeqI.pm",
+      "sha256": "d03354fa75f7d29962b01ea5a98078cd00df58378c7a6d18d6e0cf0e949ea76b"
+    },
+    {
+      "bytes": 3002,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/DescribableI.pm",
+      "sha256": "a83f489975102fefbf4f4dfbec25c662c6220126e72907e43041036a999fa723"
+    },
+    {
+      "bytes": 2264,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Event/EventGeneratorI.pm",
+      "sha256": "7bc163ac70ab7e6e690c28924ec4e1cc3d3358568b9d7212d957e0315ff9a9c9"
+    },
+    {
+      "bytes": 9068,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Event/EventHandlerI.pm",
+      "sha256": "24500ef4dae99bf44077bfe92cbe2baaad5165a52602b13932eede2e5b30c33e"
+    },
+    {
+      "bytes": 13052,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Factory/FTLocationFactory.pm",
+      "sha256": "98906324faf6c27e6c88d90a6918e89f0fad498e9744336dcb21ece94da1165f"
+    },
+    {
+      "bytes": 3336,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Factory/LocationFactoryI.pm",
+      "sha256": "96f2d30e2d4ec6143f411f7f950dd03ee785ed9b0b78e45a43f678310056f41b"
+    },
+    {
+      "bytes": 5696,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Factory/ObjectBuilderI.pm",
+      "sha256": "710b0d3ababdae0b6b41b41a7e6bb89e65e12fd97df0ffc4c555870bac7602ae"
+    },
+    {
+      "bytes": 7266,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Factory/ObjectFactory.pm",
+      "sha256": "27eb79947cf88a6627522b3ca57cfcb34c3a55c8da31256b2b6a8f8880080c41"
+    },
+    {
+      "bytes": 2682,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Factory/ObjectFactoryI.pm",
+      "sha256": "794860d471aadb5366ad898280fb1bee4a5141782dea9db2adde6b5536fa72a0"
+    },
+    {
+      "bytes": 2841,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Factory/SequenceFactoryI.pm",
+      "sha256": "7df8b6314017702c67b00784c1acedd91ebca2bc5cfc24a78b93151da0eadd6f"
+    },
+    {
+      "bytes": 3513,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Factory/SequenceStreamI.pm",
+      "sha256": "95d446aad40154d8bab8a4c972008179cfe8ecd7e40c306d0523001c0529a46f"
+    },
+    {
+      "bytes": 7266,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/FeatureHolderI.pm",
+      "sha256": "364f2af76ec9b831aac06dbd59110cfb73daa40180755ab39e3d72a1f6ed3b7a"
+    },
+    {
+      "bytes": 5159,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/IdentifiableI.pm",
+      "sha256": "6bd085b143dd27b14b2cc6ec055f7322a7f499fa4e365099866a57faa4b348ed"
+    },
+    {
+      "bytes": 21619,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/LocatableSeq.pm",
+      "sha256": "47da7da5597b5f58aae791490af4f509ea99725b898392268f2579059002dafb"
+    },
+    {
+      "bytes": 14316,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Location/Atomic.pm",
+      "sha256": "9ca9fedd46adf18a44dbd0f48efa9f9be3de8163e0fd22f084d7f50459bb2bed"
+    },
+    {
+      "bytes": 3635,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Location/CoordinatePolicyI.pm",
+      "sha256": "d59df173d95a5b342d794fa19873714a55143bf2256aaca26bfc7149bc023f21"
+    },
+    {
+      "bytes": 19454,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Location/Fuzzy.pm",
+      "sha256": "749ec23096336cb0e1b2350c4e957cdab42a8d9371020ae1d2fbc02ac09f15b5"
+    },
+    {
+      "bytes": 5961,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Location/FuzzyLocationI.pm",
+      "sha256": "a4c769f2074020313a55bd8f45516c5dd73311bdc4756f07771c65ecdbd03087"
+    },
+    {
+      "bytes": 11335,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Location/Simple.pm",
+      "sha256": "5eb06a952c2c8522258c3e34cbbf3efc31a5040904f01f9be522613cd441974b"
+    },
+    {
+      "bytes": 27777,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Location/Split.pm",
+      "sha256": "1674bb99396e9d413c98f31f459e966a74f21add8d681370beef190d30d24a77"
+    },
+    {
+      "bytes": 6724,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Location/SplitLocationI.pm",
+      "sha256": "648ae901e6a93277176767b0f358e89335740fbcbceb1701c9da41167d4ba130"
+    },
+    {
+      "bytes": 3744,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Location/WidestCoordPolicy.pm",
+      "sha256": "5ce3dcfd914cf9c31ed04d923e5b23b1cd28b92ac029f4e7a78e4dab93453043"
+    },
+    {
+      "bytes": 12320,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/LocationI.pm",
+      "sha256": "98effd457e86a7dedd5e83c42844d8b31cd240450c51bd8f6ba466e28a539fa3"
+    },
+    {
+      "bytes": 31144,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/PrimarySeq.pm",
+      "sha256": "8c80f16654d53fc87123403827904844099036d4a6372ccf6f88a37543758835"
+    },
+    {
+      "bytes": 32304,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/PrimarySeqI.pm",
+      "sha256": "186432fe15280206d173fd789bad26be2d0ebf0ead3230451c4040c59bf07b09"
+    },
+    {
+      "bytes": 8844,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Range.pm",
+      "sha256": "622b49633ee4af10b9b854e35883f21a86692f854f9fe74e60a71c9e16bcad32"
+    },
+    {
+      "bytes": 19872,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/RangeI.pm",
+      "sha256": "51350dada0a8a7db67455de89bcd02ef1682973896c48472ffbc0e61d9f40912"
+    },
+    {
+      "bytes": 13264,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Root/Exception.pm",
+      "sha256": "c0c0271b150c88563f2b93cc88a55de24492a02922d7ac400ddaed1a351c3a2a"
+    },
+    {
+      "bytes": 36737,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Root/IO.pm",
+      "sha256": "9f21b8d33e7742646930eee406a2a5cd7bc9498559e5b3be35f64154049e1305"
+    },
+    {
+      "bytes": 16943,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Root/Root.pm",
+      "sha256": "5379b39baab6e28e15f8d03f90424c5ba05d31735ea6e6c7c75352dee4130ca0"
+    },
+    {
+      "bytes": 27466,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Root/RootI.pm",
+      "sha256": "1544735729142e0e0240177d34522422a8d8c16c9deb5574f56994d98ed04329"
+    },
+    {
+      "bytes": 1276,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Root/Version.pm",
+      "sha256": "163e20d443767e85744b455d75f00e796d79563240e46e8e7abe377677943cb6"
+    },
+    {
+      "bytes": 3177,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Search/GenericStatistics.pm",
+      "sha256": "57887bf21e89a42f8c2b219d46af7e7d8ec830f7eb233377302c115f86719c97"
+    },
+    {
+      "bytes": 57514,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Search/HSP/GenericHSP.pm",
+      "sha256": "c9d6316ed89bc6a63a0273952fccded66576a1ec4482ad7d2cf138f5352e128c"
+    },
+    {
+      "bytes": 3637,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Search/HSP/HSPFactory.pm",
+      "sha256": "888ffbee430278ea3bbe1b80a8113e24d0833ccf25965a288c704a744890fe1b"
+    },
+    {
+      "bytes": 22366,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Search/HSP/HSPI.pm",
+      "sha256": "9dde3e1b47db891e4ad52c2694db58d52e79829c638ffe9cf809b5335eea7f44"
+    },
+    {
+      "bytes": 60379,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Search/Hit/GenericHit.pm",
+      "sha256": "e61010043feae8068196c418b9e06dd4d19a0150118b12029adadcfc38e0a359"
+    },
+    {
+      "bytes": 3668,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Search/Hit/HitFactory.pm",
+      "sha256": "658d36325616bc70cfbc9db6a3592ad9bdc4e78825605d7fd4ef3568811503c8"
+    },
+    {
+      "bytes": 22146,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Search/Hit/HitI.pm",
+      "sha256": "f8f57e02a6c61f1726bf5a55cfef317b2088538815d6652a8bcddb4e39513f88"
+    },
+    {
+      "bytes": 22864,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Search/Result/GenericResult.pm",
+      "sha256": "b0bb7dfe717f39d37084a0e23d1613949b112cd6955155ee8554055582b4a8df"
+    },
+    {
+      "bytes": 3753,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Search/Result/ResultFactory.pm",
+      "sha256": "3a2833b5f28ed265e84d667176b147c271f39f40784bea593aceb44aa9afc1bc"
+    },
+    {
+      "bytes": 12833,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Search/Result/ResultI.pm",
+      "sha256": "229a8e7520ffb0e7aa535cba73648093e7964b9bc115ae7b858f744e93ae9370"
+    },
+    {
+      "bytes": 31238,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Search/SearchUtils.pm",
+      "sha256": "3743504665a55b2fcfbe92009e5e2f2a636edf119a942992ebbc295c36e40b04"
+    },
+    {
+      "bytes": 2807,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Search/StatisticsI.pm",
+      "sha256": "59a357e99a1dce7e7742c7e82f34a9ff688913e6395d304a71fd35a8e8c5d3a2"
+    },
+    {
+      "bytes": 22344,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/SearchIO.pm",
+      "sha256": "9d96cf7d68d5256315ccab82fd12716ed65c089478ce234bb553ea0207208b3c"
+    },
+    {
+      "bytes": 5571,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/SearchIO/EventHandlerI.pm",
+      "sha256": "6a20840d020e5e9b4abd96910f940596c15a49e397f3eedb90bd7d55d09c7b40"
+    },
+    {
+      "bytes": 21763,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/SearchIO/SearchResultEventBuilder.pm",
+      "sha256": "83de0561ae1779b6c569808cbace34f6168ca1630de237f0e294a8c2dbb9b318"
+    },
+    {
+      "bytes": 18050,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/SearchIO/blasttable.pm",
+      "sha256": "5db38b5539783f93f1700c049e6389381652fd13b4f19e46c8ec1f56b3094e4a"
+    },
+    {
+      "bytes": 41163,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Seq.pm",
+      "sha256": "667b75bbddbcddbd51a4a147bc4cb0d615063e4e91cb94a4f5f8363de0c39a80"
+    },
+    {
+      "bytes": 17655,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Seq/SeqBuilder.pm",
+      "sha256": "0781ac0f8c2d0a146d89df7591b579d0c8bf4b6d3684e02d752e8f090f00f1d0"
+    },
+    {
+      "bytes": 4019,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Seq/SeqFactory.pm",
+      "sha256": "db43c7cfe106d4662c42a4636e8e36fd4f56bbac2e10a8fbd2e0dba5342f55ed"
+    },
+    {
+      "bytes": 3958,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Seq/SeqFastaSpeedFactory.pm",
+      "sha256": "d30a6bcd4352b70740444604dd9bced9960ab09badee07d11ef81a602500c821"
+    },
+    {
+      "bytes": 3514,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/SeqAnalysisParserI.pm",
+      "sha256": "0b6a1ffd0e49de8ff39ec425c3a8590839b53b41f92b271633a931947975f16a"
+    },
+    {
+      "bytes": 13270,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/SeqFeature/FeaturePair.pm",
+      "sha256": "c91ab3f743acf36386c6609d5aa0ba4ad732e7601dd3a0e752c65b734cecd07f"
+    },
+    {
+      "bytes": 31769,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/SeqFeature/Generic.pm",
+      "sha256": "36164f33094247657627efc29e8a4d419e54a65a84c6f25bbf22ebe9290de6dd"
+    },
+    {
+      "bytes": 4621,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/SeqFeature/Similarity.pm",
+      "sha256": "dc29bd01609ef9c5c5f37a71a109d5e943e4775e1962695bb8f8e5e86e716463"
+    },
+    {
+      "bytes": 7509,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/SeqFeature/SimilarityPair.pm",
+      "sha256": "58014918e6d335f9d65f76f997aede6f2f315d0d3f661ea1890ac58e571d19e8"
+    },
+    {
+      "bytes": 25291,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/SeqFeatureI.pm",
+      "sha256": "b3007997afcc26b997ad860fee847e40fafde6a6ba7f395060b501ed811c83f9"
+    },
+    {
+      "bytes": 6545,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/SeqI.pm",
+      "sha256": "53eb603d24a09bac5120c4ba027eed207177a170027d7a53592c42b6b138901e"
+    },
+    {
+      "bytes": 25256,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/SeqIO.pm",
+      "sha256": "b242df4ba5ac170137e132f8556e2c65b51236b930a6413d0e67e4380a70ea10"
+    },
+    {
+      "bytes": 10484,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/SeqIO/fasta.pm",
+      "sha256": "ed259ca0c38504fe98a0e6c894bcdd4e182d29a9eb65cc7c286b35aefe897353"
+    },
+    {
+      "bytes": 58300,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/SeqUtils.pm",
+      "sha256": "72e256bb5a580d3231ee8fcbc70a35ce92b5bae73d3f4a7fb0c5563ec4cfccc2"
+    },
+    {
+      "bytes": 27955,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Tools/CodonTable.pm",
+      "sha256": "bbbbf9e0772caad500e99fc6994004a287966baf97b33942b22e41e39e51e50f"
+    },
+    {
+      "bytes": 38178,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Tools/GFF.pm",
+      "sha256": "82bca7fea1fe40a2511947d7ba57f1837a1f16b60808c22867bd815def907045"
+    },
+    {
+      "bytes": 22590,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Tools/GuessSeqFormat.pm",
+      "sha256": "c53c20d00026a10a3016f3b94cf7438e117e3f9672315a32ef8b46787bf1bcf0"
+    },
+    {
+      "bytes": 14261,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Tools/IUPAC.pm",
+      "sha256": "35f733d0c2ba5843d951305c6fd273f3b6492335c33598a4f82d4b2ffebc572e"
+    },
+    {
+      "bytes": 3306,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Tools/Run/GenericParameters.pm",
+      "sha256": "ed7473b8b7718c34d29141ffbaf220b37c706d319e2b62ee95b3070a6da233b4"
+    },
+    {
+      "bytes": 2810,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Bio/Tools/Run/ParametersI.pm",
+      "sha256": "7c62015025955a602951810c9be7727e43cb6c8de0d732e7eff5b5477f90a43c"
+    },
+    {
+      "bytes": 30436,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Carp.pm",
+      "sha256": "d343a981e86111332a0ba08858356c8afb1dea5056312211d0e1bb27805ff60e"
+    },
+    {
+      "bytes": 773,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Carp/Heavy.pm",
+      "sha256": "8a022a1a7f7982d1fa3f892bf4ba1db352b5503d2778d22138f27e85cbc27f67"
+    },
+    {
+      "bytes": 30349,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Error.pm",
+      "sha256": "6bf525a7d7d68d9623397fd16afcf69228361add253558c598eb250282442820"
+    },
+    {
+      "bytes": 18746,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Exporter.pm",
+      "sha256": "f88583b4667c081f4ff7f4c6088a05f3254f2092716075178012ca29653ca747"
+    },
+    {
+      "bytes": 6551,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/Exporter/Heavy.pm",
+      "sha256": "9dea195bce84d982904d874ccdedbac7a9abd302a1594cd64257b2764bf936d3"
+    },
+    {
+      "bytes": 43253,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/File/Path.pm",
+      "sha256": "68cec85b973454409e6cd7ef14666c8d8f90cf59da67587d12af45f15903fad1"
+    },
+    {
+      "bytes": 78940,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/File/Temp.pm",
+      "sha256": "89091673442dc32bbafce76f6a081dd97123c9fab0ebca6afdd8a5af16a2d8d7"
+    },
+    {
+      "bytes": 7390,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/base.pm",
+      "sha256": "c5a10495d42c9d84b8246596fb810e0d6d2db6022e3738139d3f2f64f5e5e92b"
+    },
+    {
+      "bytes": 14724,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/constant.pm",
+      "sha256": "e67cdfa533d42cbe5265bcf3c270f055620cba38a9295b5d584b7efc37a0c156"
+    },
+    {
+      "bytes": 2591,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/parent.pm",
+      "sha256": "c9cc8bde36f5a6193ab97be2b5503082ed917ba425746523a9a08dc4d3a5b78c"
+    },
+    {
+      "bytes": 2347,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/x86_64-linux-thread-multi/Clone.pm",
+      "sha256": "7625b9481724dad85df7415e0ec39e0b1211c099addff71f86c1e14eabfdfd5a"
+    },
+    {
+      "bytes": 21799,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/x86_64-linux-thread-multi/Cwd.pm",
+      "sha256": "6c9b33ffb74620ec48d44be52ead95e813208f9372753c500a25e9e018106164"
+    },
+    {
+      "bytes": 10571,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/x86_64-linux-thread-multi/File/Spec.pm",
+      "sha256": "982290da0038fbbe38b8ce344ef3aeab8c035a8cd0706429880e2032b14c6c57"
+    },
+    {
+      "bytes": 15889,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/x86_64-linux-thread-multi/File/Spec/Unix.pm",
+      "sha256": "b6b4dd2433b0205abbdbb51823fcb1b6370423160431892ed18de5961fe19fc8"
+    },
+    {
+      "bytes": 21296,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/x86_64-linux-thread-multi/List/Util.pm",
+      "sha256": "a592912e856817819330e40411754ba061acafddc6638f0a18de2a4137e9fd61"
+    },
+    {
+      "bytes": 9935,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/x86_64-linux-thread-multi/Scalar/Util.pm",
+      "sha256": "b56bfd287b2477d76f4c8314ed250adb4eb90b927ff62af75c20bd31d917d369"
+    },
+    {
+      "bytes": 49780,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/x86_64-linux-thread-multi/Storable.pm",
+      "sha256": "a3153bc2bccb0df6e4602f87c84e7e0f5dc69263912c969b7f98737fbf049499"
+    },
+    {
+      "bytes": 11247,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/lib/site_perl/5.26.2/x86_64-linux-thread-multi/XSLoader.pm",
+      "sha256": "0e400f31499617298069abf7e03b4be8a15404ab628efdd32243ac820fec57ab"
+    }
+  ],
+  "native_versions": {
+    "bioperl_searchio_version": "1.007002",
+    "orthomcl_version": "1.4",
+    "perl_version": "v5.26.2",
+    "storable_version": "3.15"
+  },
+  "outputs": [
+    {
+      "bytes": 290,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_bpo_parity_probe_v2_20260918/all.blast",
+      "sha256": "f46b5b1c8bf50f493207b0bda0cc61606b7cb15300b8142a75401e2cc335a02e"
+    },
+    {
+      "bytes": 346,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_bpo_parity_probe_v2_20260918/all.fa",
+      "sha256": "ff2227d944cc687fb2405042b8c3b294062fbd2ae3140dcb3a6c64fa2f3493bc"
+    },
+    {
+      "bytes": 114,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_bpo_parity_probe_v2_20260918/index_validation.json",
+      "sha256": "1a7b4921402625e586eee9a2ab9e10e482bb5fa8efb4f32f6c24425edd0b4402"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_bpo_parity_probe_v2_20260918/index_validation.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 225,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_bpo_parity_probe_v2_20260918/native/native.bpo",
+      "sha256": "5eaa82a001703f20eaa66c4213427e1c29973836e515ab00615c5496030279cc"
+    },
+    {
+      "bytes": 59,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_bpo_parity_probe_v2_20260918/native/native.idx",
+      "sha256": "b76a415998b8cdf9ae16733159b572f8ca312bffbad81a4f7e6f8340d3c70ce0"
+    },
+    {
+      "bytes": 18698,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_bpo_parity_probe_v2_20260918/native/native.json",
+      "sha256": "4242d091f97e1b269e31199e3cd0afb3c18b52875c1b2f82dc54208176e1938d"
+    },
+    {
+      "bytes": 51,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_bpo_parity_probe_v2_20260918/native/native.log",
+      "sha256": "3399572b3510fc283dbdfedb597b6da82ebcc35bb4343452eb121a07fa506283"
+    },
+    {
+      "bytes": 54,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_bpo_parity_probe_v2_20260918/native/native.se",
+      "sha256": "69bf6994ec47c61d818ff98409eab6ff1f9dc528ed8c4c446f579a3b0d62c6b3"
+    },
+    {
+      "bytes": 51,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_bpo_parity_probe_v2_20260918/process.log",
+      "sha256": "3399572b3510fc283dbdfedb597b6da82ebcc35bb4343452eb121a07fa506283"
+    },
+    {
+      "bytes": 225,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_bpo_parity_probe_v2_20260918/streaming.bpo",
+      "sha256": "5eaa82a001703f20eaa66c4213427e1c29973836e515ab00615c5496030279cc"
+    }
+  ],
+  "publication_ready": false,
+  "status": "native_bpo_fixture_parity_verified",
+  "streaming_index_validation": {
+    "bpo_bytes": 225,
+    "offset_entries_including_eof": 7,
+    "queries": 3,
+    "records": 6,
+    "status": "native_bpo_indexes_verified"
+  }
+}

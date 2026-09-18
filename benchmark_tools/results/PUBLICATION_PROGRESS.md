@@ -8415,3 +8415,24 @@ at 6:50:32, DGX 21656_23 RUNNING at 13:44. DGX task 22 (raw job 21739)
 completed with exit 0:0 and scheduler elapsed 43:55; resource/isolation timing
 admission remains pending. Next is BPO/index and final-group workflow
 validation, alongside the remaining corrected comparisons and publication work.
+
+### Native OrthoMCL BPO Parity And Index Validation (2026-09-18)
+
+Previous turn made progress by queuing combined corrected search validation.
+This turn compares the existing Python BPO converter against native OrthoMCL
+1.4/BioPerl on HSP/gap/cutoff fixtures and adds a complete streaming BPO index
+validator. Native and Python output matched byte-for-byte (225 bytes, six
+directed records, three query blocks); native offsets/ranges matched independent
+calculations, including the EOF sentinel.
+
+All 24 focused tests passed with the installed native parity probe enabled.
+The legacy Perl syntax check passed. Artifacts and limitations are recorded
+in `ORTHOMCL_BPO_NATIVE_PARITY_20260918.md` and the saved JSON report. This
+does not establish full production conversion parity; native Storable indexes
+still occupy memory, and loaded-module capture is not a runtime freeze.
+
+Latest live check: BLAST 21713 resource-pending, search validator 21746
+dependency-pending, HMM 21706_0 RUNNING at 6:57:30, DGX 21656_23 RUNNING at
+20:42. Next is complete BPO/source-table validation and frozen downstream
+runtime integration. Corrected results, timing admission, uncertainty and
+publication packaging remain unfinished. No unrelated work was changed.
