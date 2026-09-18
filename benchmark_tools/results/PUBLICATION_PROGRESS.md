@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Native Hit Ordering Prerequisite (2026-09-18 UTC)
+
+Previous turn progressed through754a76d with chunked hit diagnostics. This
+turn revalidated DIAMOND21789 RUNNING29:05, HMM21706_0 RUNNING10:40:43,
+and final DGX21656_26 RUNNING1:18:23. Dependencies21790/21791/21792 remain
+pending; no existing jobs were changed.
+
+Inspection of the actual frozen native core revealed that
+_collect_search_hit_arrays concatenates species-pair result batches without
+global q/t sorting. The native checkpoint audit intentionally does not
+promise ordered pairs or duplicate rejection. Consequently the sorted
+overlap helper must not be applied directly to native HMM output, even
+after its existing evidence admission succeeds.
+
+Added canonicalize_search_checkpoint.py: hash-check native arrays, require
+lexical gene IDs, preserve IDs/species/scores exactly, ingest unsorted tuples
+into a disk-backed SQLite primary-key table, and write a separate sorted
+numeric checkpoint in bounded batches. Duplicate pairs fail, rather than
+being silently collapsed. The native checkpoint is never overwritten.
+Scratch database and sorted arrays are retained and add disk cost. This is
+a diagnostic representation change, not an inference-method change or a
+new scientific admission. Upstream terminal/provenance checks remain needed.
+
+102 focused tests pass in1.26s. Five randomized native checkpoint fixtures
+match independently sorted tuples exactly; source hashes remain unchanged.
+Duplicate, invalid-score/index, empty-input and wrong-hash cases are covered.
+No production canonicalization or HMM/DIAMOND comparison has run yet.
+Next: bind this prerequisite and coverage diagnostics to admitted corrected
+inputs, assess graph feasibility, then execute frozen graph/scoring stages.
+Full publication objective remains active.
+
 ## Chunked Search Coverage Diagnostics (2026-09-18 UTC)
 
 Previous turn progressed through3cc034a: independent numeric admission21792
