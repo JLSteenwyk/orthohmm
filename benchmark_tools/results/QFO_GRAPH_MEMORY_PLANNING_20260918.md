@@ -186,8 +186,38 @@ phylogenetic ortholog predictions. Future outputs are separate directories in
 point `qfo_sequence_pairs_batch_20260918.sh` requests2CPUs/64GiB/24hours;
 it has not been submitted.33 focused tests pass, including actual converter
 subprocesses and corruption controls; CLI smoke and batch syntax checks pass.
-QfO assessment and score admission still need this new participant/status
-connected to their existing frozen workflows before these runs are scored.
+QfO assessment and score admission are connected below, but have not executed
+on actual sequence-control results.
+
+### Endpoint Assessment And Admission
+
+`run_qfo_sequence_assessment.py` validates the terminal2CPU/64GiB conversion,
+the frozen converter, variant identity, pair semantics/counts, zero mapping
+loss, mapping identity and frozen assessment environment. It uses the existing
+six-endpoint command builder, with separate work/result directories for each
+variant. Zero-pair conversions are not rejected on score grounds; a resulting
+native scoring failure is retained without retry or imputed scores.
+
+The converter is frozen at4f0c30e5cdf287a35c9600886aec0a41bcc0b720 in
+`benchmarks/work/publication_qfo_sequence_pairs_v1`. The scoring runner is
+frozen at425f0a7f5d5dc9e1438ab0a1766c45b13596dc14 in
+`benchmarks/work/publication_qfo_sequence_assessment_v1`. Its batch entry
+point `qfo_sequence_assessment_batch_20260918.sh` requests8CPUs/64GiB/24hours.
+Neither variant is submitted while its graph and conversion results are absent.
+
+`admit_qfo_sequence_assessment.py` independently requires terminal scoring
+success with the requested resources, reconstructs expected execution records
+using helpers identical to the frozen runner, and checks preflight consistency,
+complete output inventory, native task trace, and all six endpoint files using
+the existing native-assessment validator. Process success alone never admits
+accuracy. Existing outputs cannot be overwritten. The endpoint mean remains a
+project-defined secondary summary, not official QfO F1, matched sensitivity,
+paired uncertainty or independent biological validation.
+
+56 runner-related tests and74 admission/native-validator tests pass (overlapping
+coverage, not130 distinct tests). CLI and batch syntax checks pass. Actual
+QfO sequence-control graph execution, conversion, six scores and paired
+uncertainty remain pending; implementation is not evidence of those results.
 
 ### Earlier Search Progress
 

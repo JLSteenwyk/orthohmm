@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Sequence-Control Endpoint Workflow Connected (2026-09-18 UTC)
+
+Previous turn progressed through4f0c30e with pair conversion and a full unit
+regression (4,877 passed,9 skipped). Reread the full objective. Live scheduler
+confirms21706_0 HMM RUNNING13:42:21 and21791 conversion RUNNING1:14:28;
+21792/21798 remain pending dependencies.
+
+Added run_qfo_sequence_assessment.py, batch entry point and
+admit_qfo_sequence_assessment.py. The runner verifies successful conversion,
+variant/pair semantics, exact frozen sources and reference mapping before
+using the existing six-endpoint command. Zero-pair conversions are retained;
+native scoring failures are not imputed or silently retried. Post-run admission
+checks scheduler resources, reconstructed provenance/preflight, complete native
+inventory, task trace and endpoint files. The custom mean remains secondary.
+
+56 runner-focused tests and74 admission/native-validator tests pass; these
+sets overlap. CLI and batch syntax pass. Frozen converter worktree
+publication_qfo_sequence_pairs_v1 uses4f0c30e5cdf287a35c9600886aec0a41bcc0b720;
+scorer worktree publication_qfo_sequence_assessment_v1 uses
+425f0a7f5d5dc9e1438ab0a1766c45b13596dc14. The latter is the exact source
+required by post-run score admission. No actual assessment job or result exists.
+
+Next: review21798 when complete, freeze/submit graph plans and both variants,
+then run the implemented admission/conversion/assessment chain on terminal
+outputs. Paired uncertainty/export linkage and actual biological results remain,
+as do the broader controlled-timing, rights and publication-release requirements.
+The full goal remains active; workflow code is not substituted for results.
+
 ## Sequence Pair Conversion And Unit Regression (2026-09-18 UTC)
 
 Previous turn progressed throughf1e21b0 with terminal graph admission.
