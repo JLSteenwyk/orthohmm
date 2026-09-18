@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Corrected QfO Sequence Graphs Submitted (2026-09-18 UTC)
+
+The preceding archive-search turn produced no new original TreeFam inputs;
+rechecking retained downloads did not resolve family-level uncertainty.
+Reread the full publication objective and resumed the prepared sequence
+control workflow. Existing HMM21706_0 and matched Three Kingdoms Sonic21795
+were confirmed RUNNING; neither was restarted or stopped.
+
+Payload review21798 completed successfully. The frozen graph preparer
+finished with exit0, and85 focused graph/payload/admission tests passed.
+Committed and pushed b687758 before submission, retaining the payload,
+command plan and prospective resource review. Plan SHA-256:
+`0e20d71936b92d7d2f02f3f35e7b7f380553803d9e482fde4d4b6c549b6e96d0`.
+Executor69adea4d5a1dc634783b20ff7bbe9fbe1c6464db was checked clean and
+the output root did not exist before submission.
+
+Submitted all_hits21813 and top10021814 with32CPUs/384GiB each, seven-day
+limits, no requeue, and top100 afterany:21813. Slurm confirmed21813 RUNNING
+with the requested allocation. The top100 arm remains a separate diagnostic
+even if all_hits fails; no missing outcome will be replaced or imputed.
+Both preserve the frozen scientific settings and complete corrected input.
+
+Next: inspect terminal execution and bind each actual report hash in the
+independent graph admission batch, then complete pair conversion, six QfO
+endpoints and paired SwissTrees uncertainty. No graph output or new accuracy
+score has yet been admitted. Shared-host graph-only elapsed measurements
+are not controlled end-to-end timing evidence or matched-sensitivity proof.
+TreeFam source recovery, corrected downstream analyses, dedicated timing
+validation and final publication packaging remain incomplete.
+
 ## Corrected SwissTrees Features And Numeric Admission (2026-09-18 UTC)
 
 Previous turn progressed throughc76b11c with complete native-command interval
