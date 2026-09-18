@@ -55,3 +55,31 @@ guest/steal handling, iowait decreases, changed identity/topology, malformed
 records, counter rollback and a local read-only smoke. These tests and the
 DGX probe establish availability and arithmetic only, not complete observer
 validation or publication-ready controlled timing.
+
+## Scheduled Availability Check
+
+Job21799 ran the same pinned probe under an exclusive spark allocation on
+spark-7ff0 with1CPU/task,1GiB and a2-minute limit, no requeue. The controller
+reported COMPLETED0:0 after3seconds with zero restarts. Exclusivity allocated
+all20 CPUs; requested task CPUs and total allocated CPUs are not conflated.
+Node state was IDLE with CPUAlloc0 before submission. No load was generated.
+
+The retained report is dgx_slurm_host_counter_probe_21799.json, with batch log
+dgx_slurm_host_counter_probe_21799.log. Both snapshots identify
+`/system.slice/spark-7ff0_slurmstepd.scope/job_21799/step_batch/user/task_0`.
+All requested optional counters were read successfully. The observed interval
+was3.000861632seconds with0.01 accounted host busy CPU seconds. This small
+value does not certify exclusivity or predict workload during later inference.
+
+audit_dgx_host_counter_probe.py checked terminal scheduler fields, node,
+allocation, source identity, raw replay and scoped membership. Its report
+dgx_slurm_host_counter_audit_21799.json preserves the full controller response.
+The JSON controller query failed with missing serializer/json plugin and
+exit139; the successful text query was used instead. No benchmark was
+restarted in response to this observation-tool failure.28 focused tests pass.
+
+This completes batch-step counter availability, not the full first validation
+step above: an actual native-process/observer split still needs testing.
+Short-lived external-load detection, observer overhead and new scientific
+inclusion rules also remain unvalidated. None of the original27 timings is
+upgraded by this engineering run.

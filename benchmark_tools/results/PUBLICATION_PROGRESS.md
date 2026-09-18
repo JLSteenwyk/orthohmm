@@ -1,5 +1,26 @@
 # Publication Progress
 
+## DGX Slurm-Scoped Counter Availability Verified (2026-09-18 UTC)
+
+Previous turn progressed through4a5ad06 with a read-only SSH-session probe.
+Reread the full objective. Initial scheduler check:21706_0 RUNNING14:15:21,
+21791 RUNNING1:47:28,21792/21798 dependency-pending. No live work restarted.
+
+Submitted engineering job21799 to idle spark-7ff0: exclusive,1CPU/task,1GiB,
+2minutes,no-requeue. It completed0:0 in3seconds, zero restarts. Exclusive
+allocation reserved20 CPUs; only one requested task ran the unchanged pinned
+read-only probe. Actual batch-step cgroup identity and all requested counters
+were captured without errors. Added a scheduler/scope/raw-replay audit;
+28 focused tests and shell syntax pass. Raw report, log and terminal controller
+response are retained in the three dgx_slurm_host_counter_*21799 artifacts.
+
+Controller JSON query failed because serializer/json was unavailable (exit139);
+successful text output is retained instead. No inference restart or destructive
+action followed. Original27 timings remain descriptive-only. Native/observer
+separation, short-lived competing-load detection and overhead calibration remain
+required before a new controlled timing plan. Corrected QfO analyses and final
+publication deliverables remain incomplete.
+
 ## Prospective DGX Counter Probe Completed (2026-09-18 UTC)
 
 Previous turn progressed throughca2bd7b with the source-pinned uncertainty

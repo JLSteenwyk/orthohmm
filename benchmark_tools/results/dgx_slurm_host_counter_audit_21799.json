@@ -1,0 +1,63 @@
+{
+  "controlled_workload_verified": false,
+  "job_id": 21799,
+  "limitations": [
+    "Read-only batch-step availability check; not native-process measurement or overhead calibration.",
+    "Exclusive allocation reserves 20 CPUs; requested CPUs per task is 1. No load was generated.",
+    "Does not validate foreign-CPU estimation, short-lived-load detection or past timing admission.",
+    "Scheduler times are retained unqualified; no timezone inference is made."
+  ],
+  "probe": {
+    "bytes": 9364,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/dgx_slurm_host_counter_probe_21799.json",
+    "sha256": "74302874e2db9a49678a7a6729d5c1a19c112a35e39f3d948291f468f30e2943"
+  },
+  "publication_ready": false,
+  "scheduler_command": [
+    "scontrol",
+    "show",
+    "job",
+    "21799"
+  ],
+  "scheduler_fields": {
+    "CPUs/Task": "1",
+    "ExitCode": "0:0",
+    "JobId": "21799",
+    "JobState": "COMPLETED",
+    "MinMemoryNode": "1G",
+    "NodeList": "spark-7ff0",
+    "NumCPUs": "20",
+    "OverSubscribe": "NO",
+    "Partition": "spark",
+    "Restarts": "0"
+  },
+  "scheduler_raw": "JobId=21799 JobName=dgx_counter_probe\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=COMPLETED Reason=None Dependency=(null)\n   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:03 TimeLimit=00:02:00 TimeMin=N/A\n   SubmitTime=2026-09-18T15:02:13 EligibleTime=2026-09-18T15:02:13\n   AccrueTime=2026-09-18T15:02:13\n   StartTime=2026-09-18T15:02:13 EndTime=2026-09-18T15:02:16 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-18T15:02:13 Scheduler=Backfill\n   Partition=spark AllocNode:Sid=spark:793487\n   ReqNodeList=spark-7ff0 ExcNodeList=(null)\n   NodeList=spark-7ff0\n   BatchHost=spark-7ff0\n   NumNodes=1 NumCPUs=20 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=1,mem=1G,node=1,billing=1\n   AllocTRES=cpu=20,mem=1G,node=1,billing=20\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=1 MinMemoryNode=1G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=NO Contiguous=0 Licenses=(null) Network=(null)\n   Command=/tmp/orthohmm-host-probe.jVK6Hv1y/run_dgx_host_counter_probe.sh\n   WorkDir=/home/jlsteenwyk\n   StdErr=/tmp/orthohmm-host-probe.jVK6Hv1y/slurm-21799.out\n   StdIn=/dev/null\n   StdOut=/tmp/orthohmm-host-probe.jVK6Hv1y/slurm-21799.out\n   TresPerTask=cpu:1\n   \n\n",
+  "scheduler_stderr": "",
+  "scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_21799/step_batch/user/task_0",
+  "source": {
+    "bytes": 3982,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_dgx_host_counter_probe.py",
+    "sha256": "8a1584e6d0fdbde971dcf9a8a428adbacebf54258bd19dbc6b255f4c30f1337e"
+  },
+  "status": "scheduled_host_counter_availability_verified",
+  "summary": {
+    "accounted_host_busy_average_cores": 0.003332376239332051,
+    "accounted_host_busy_cpu_s": 0.01,
+    "controlled_workload_verified": false,
+    "cpu_delta_ticks": {
+      "guest": 0,
+      "guest_nice": 0,
+      "idle": 5998,
+      "iowait": 0,
+      "irq": 0,
+      "nice": 0,
+      "softirq": 0,
+      "steal": 0,
+      "system": 1,
+      "user": 0
+    },
+    "iowait_decreased": false,
+    "midpoint_span_s": 3.000861632,
+    "status": "host_counter_diagnostic_only"
+  }
+}
