@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Corrected SwissTrees Stratified Bootstrap Kernel (2026-09-18 UTC)
+
+Previous turn made progress by freezing and submitting sequence graph
+controls21813/21814. Reread the full objective;21813 was confirmed RUNNING
+at4:09,21814 pending its dependency, HMM21706_0 running16:27:07 and matched
+Three Kingdoms Sonic21795 running20:14. No job was restarted.
+
+Implemented bootstrap_corrected_swiss_strata.py against the already frozen
+sequence-strata protocol: native half-count-plus-one family P/R, macro P/R
+and harmonic F1,100000 PCG64 paired multinomial draws by default, seed20260924,
+lower then higher bins, three contrasts and higher-minus-lower interactions.
+The Bonferroni family remains27endpoints even with nonestimable results.
+Bins with fewer than5families and the missing-entropy bin are descriptive;
+empty bins retain null estimates. Comparisons validate identical family
+membership, disjoint genes and truth totals and reject malformed counts.
+
+This is explicitly a numerical kernel, not a scientific-input admission
+workflow. It has no CLI that can bypass provenance checks. Corrected count
+admission, frozen stratum/source hashes and a source-bound execution wrapper
+remain required before evaluating real data; historical outcomes are not
+substituted. Secondary descriptive strata and all-method displays also remain
+to be connected. No new benchmark score or interval is reported here.
+
+Validation:65 focused tests passed, including18 new tests with independent
+repeated-family enumeration of all27endpoints, identical-method contrasts,
+empty/small/missing bins, invalid counts and resampling controls. An initial
+test expectation incorrectly suppressed intervals when both bins had5families;
+corrected it to the prespecified eligibility rule, without changing the kernel.
+The whole-worktree whitespace check found pre-existing generated sample-log
+whitespace; those unrelated files were left untouched.
+
 ## Corrected QfO Sequence Graphs Submitted (2026-09-18 UTC)
 
 The preceding archive-search turn produced no new original TreeFam inputs;
