@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Source-Bound Corrected Strata Runner (2026-09-18 UTC)
+
+Previous turn progressed through2a663af with the stratified numerical kernel.
+Reread the full publication objective and connected that kernel to the
+existing raw corrected-count auditors, without inspecting corrected outcomes.
+The runner pins17dependencies, reconstructs all eight corrected factorial
+cells plus full OrthoFinder counts, checks the frozen563-protein memberships
+and recomputes the input-only bins. It selects p1c0r0 and p1c1r1 explicitly;
+historical or sequence-only comparator evidence is rejected.
+
+Ninety-four focused tests passed, including18new driver tests. Synthetic
+prediction counts and mocked expensive audit orchestration are distinguished
+from real-input descriptor checks; raw-auditor tests were included separately.
+CLI help succeeds. See CORRECTED_SWISS_STRATA_EXECUTION_20260918.md for the
+command contract, exact scope and still-pending real execution. Secondary
+strata and all-method displays are not represented as completed.
+
+Live check:21813 RUNNING9:27,21814 dependency-pending, HMM21706_0
+RUNNING16:32:25 and matched Three Kingdoms Sonic21795 RUNNING25:32. No jobs
+were restarted and no scoring threshold or endpoint was changed. Actual
+corrected strata intervals await admitted source predictions. Dedicated
+timing validation and final publication packaging also remain incomplete.
+
 ## Corrected SwissTrees Stratified Bootstrap Kernel (2026-09-18 UTC)
 
 Previous turn made progress by freezing and submitting sequence graph
