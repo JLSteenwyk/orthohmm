@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Native Frontier Launcher And Replay Audit (2026-09-18 UTC)
+
+The previous retrieval-only turn was no progress toward recovering the
+missing TreeFam originals: it rechecked existing downloads but found no new
+source. Reread the full publication objective and independently verified
+HMM job21706_0 running at18:11:06 and top100 scoring21829 running at16:41;
+21830 remains pending. No job restart or duplicate submission was made.
+
+Added separate frontier native Python/shell launchers and a local replay
+audit. They preserve the existing frozen three-method commands,20CPU/96GiB
+resource checks, runtime identity checks, original input checks, and native
+output validation. Only the collector, isolated recipe/output paths, and
+report labels differ from the quiet hierarchy workflow. The audit replays
+frontier validation as well as the unchanged native threshold calculations;
+it cannot admit scientific timings.
+
+47 focused tests pass, including13 new launcher tests for all three methods,
+recipe binding, path-boundary relocation, invalid resource/loader settings,
+and mechanical equivalence to the prior launcher/audit. Shell syntax passes.
+This is implementation evidence, not an executed DGX integration result.
+Next: freeze and verify transferred recipe, then submit the single complete
+engineering array under the existing no-remote-call quiet-window protocol.
+No scientific scaling rerun is authorized by this milestone.
+
 ## Native Frontier Collector Implemented (2026-09-18 UTC)
 
 Previous turn progressed through8a7ba9e with independently admitted all-hit
