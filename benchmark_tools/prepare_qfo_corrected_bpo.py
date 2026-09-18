@@ -13,6 +13,7 @@ from benchmark_tools.prepare_ob_candidate_neighborhood import record, check
 from benchmark_tools.prepare_orthomcl_bpo_checkpoint import prepare as checkpoint
 from benchmark_tools.run_simulation_methods import read_frozen
 from benchmark_tools.verify_ygob_validation import require_completed_job
+from benchmark_tools.verify_orthomcl_python_runtime import verify_runtime
 
 ADMITTER = "ae7de310cf7fbcba59107f2b054fc186f206eec4"
 
@@ -67,19 +68,21 @@ def prepare(root, admission_path, admission_sha, admission_job):
     if (not os.environ.get("SLURM_JOB_ID") or os.environ.get("SLURM_CPUS_PER_TASK") != "2"
             or os.environ.get("SLURM_MEM_PER_NODE") != "65536" or os.uname().nodename != "bizon"):
         raise ValueError("Require scheduled two-CPU 64-GiB allocation on bizon")
+    runtime_before = verify_runtime(root)
     admission, inputs, checked, scheduler, accounting = verify_admission(
         root, admission_path, admission_sha, admission_job)
     output = root / "benchmarks/results/qfo_corrected_orthomcl_v1/bpo_preparation"
     output.mkdir(parents=True, exist_ok=False)
     helpers = Path(__file__).resolve().parent
     checked.extend(record(p) for p in (Path(__file__), Path(sys.executable),
-        helpers / "prepare_orthomcl_bpo_checkpoint.py", helpers / "build_orthomcl_bpo_indexes.pl"))
+        helpers / "prepare_orthomcl_bpo_checkpoint.py", helpers / "build_orthomcl_bpo_indexes.pl",
+        helpers / "verify_orthomcl_python_runtime.py", helpers / "freeze_orthomcl_python_runtime.py"))
     report = {"status": "preparing", "source": record(__file__), "checked_records": checked,
               "admission_scheduler": scheduler, "admission_accounting": accounting,
               "admitted_search_scheduler": admission["scheduler"],
               "query_coverage": admission["query_coverage"], "job_id": os.environ["SLURM_JOB_ID"],
               "started_epoch": time.time(), "python_version": sys.version,
-              "accuracy_admitted": False, "publication_ready": False}
+              "accuracy_admitted": False, "publication_ready": False, "runtime_before": runtime_before}
     try:
         result = checkpoint(root, Path(inputs[0]["path"]), Path(inputs[1]["path"]), output / "checkpoint")
         if (result["status"] != "bpo_checkpoint_content_and_indexes_verified"
@@ -91,13 +94,14 @@ def prepare(root, admission_path, admission_sha, admission_job):
                 raise ValueError("BPO source counts differ from admitted search")
         for item in [*checked, *result["checked_records"], *result["outputs"]]:
             check(item)
+        report["runtime_after"] = verify_runtime(root)
         report.update(status="corrected_bpo_checkpoint_prepared_pending_admission",
                       checkpoint=record(output / "checkpoint/report.json"),
                       content=result["content"], index_validation=result["index_validation"])
         report["limitations"] = [
             "Retains source query failures; BPO conversion does not repair absent outgoing hits.",
             "No final orthogroup inference, scoring or matched-resource timing is performed.",
-            "Recorded Python binary/version is not a complete frozen Python runtime; an execution freeze is required before production launch.",
+            "Dedicated Python runtime is verified before and after; helper sources require the separately frozen executor.",
             "Terminal scheduler and independent checkpoint admission remain required before inference."]
     except BaseException as error:
         report.update(status="failed", error_type=type(error).__name__, error=str(error))

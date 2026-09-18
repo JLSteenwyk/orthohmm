@@ -72,6 +72,7 @@ def test_wrong_input_universe_and_records(tmp_path, problem):
 
 @pytest.mark.parametrize("problem", [None, "failure", "wrong_scope", "mutation", "counts", "status"])
 def test_preparation_preserves_success_or_failure(tmp_path, monkeypatch, problem):
+    monkeypatch.setattr(module, "verify_runtime", lambda root: {"status": "mock_verified"})
     for key, value in {"SLURM_JOB_ID": "123", "SLURM_CPUS_PER_TASK": "2", "SLURM_MEM_PER_NODE": "65536"}.items():
         monkeypatch.setenv(key, value)
     monkeypatch.setattr(module.os, "uname", lambda: SimpleNamespace(nodename="bizon"))
