@@ -15,3 +15,19 @@ def test_only_output_recipe_and_reporting_names_differ(old, new):
     expected = expected.replace("run_dgx_hierarchy_native_smoke", "run_dgx_hierarchy_quiet_smoke")
     expected = expected.replace("three_hierarchy_native_smokes_validated", "three_hierarchy_quiet_smokes_validated")
     assert (root / new).read_text() == expected
+
+
+def test_quiet_recipe_matches_transferred_source_inventory():
+    import hashlib
+    import json
+
+    root = Path(__file__).resolve().parents[2] / "benchmark_tools"
+    manifest = json.loads((root / "results/dgx_hierarchy_quiet_recipe_v1_20260918.json").read_text())
+    files = [r for r in manifest["records"] if r["kind"] == "file"]
+    assert len(files) == 27
+    for row in files:
+        path = root / Path(row["path"]).name
+        if not path.exists():
+            path = root / "results" / path.name
+        assert len(path.read_bytes()) == row["bytes"]
+        assert hashlib.sha256(path.read_bytes()).hexdigest() == row["sha256"]
