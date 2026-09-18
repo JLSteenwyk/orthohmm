@@ -36,6 +36,30 @@ runtime dependency or make the full method portable.
 
 ## Scope and Reproduction
 
+### Recovery Command Added 2026-09-18
+
+The detached helper can now be exported without the temporary worktree:
+
+```bash
+python benchmark_tools/export_frozen_figure_helper.py --repo . --output /tmp/orthohmm-frozen-figure-helper
+```
+
+Use a new output directory and a clone containing commit
+`7f3a9e40dd7e79f842cc2c11fb8b548f9a802806` (a shallow clone may lack it).
+The command reads the pinned Git blob, checks its Git identity, byte count
+and SHA-256, exports the file and checks the bytes read back. Its manifest
+maps the historical repository-relative location to the exported relative
+path. It never executes the recovered helper, substitutes current code,
+overwrites an existing destination or rewrites the figure manifests.
+
+The actual export succeeded; its manifest is retained as
+`frozen_figure_helper_export_20260918.json`. Eight recovery tests and ten
+figure-audit tests passed. This recovers the one direct detached dependency,
+not its imports, compiled environment or transitive input data. Full archive
+portability remains unfinished. The later figure inventory
+`publication_figure_integrity_20260918_v2.json` covers 16 panels and 55 outputs;
+the counts above describe the original September 17 audit.
+
 Nine tests check matching files, tracked-versus-local classification, changed
 or missing artifacts, duplicate outputs, absent formats, output paths outside
 their figure directory, conflicting hashes and unsupported record schemas.

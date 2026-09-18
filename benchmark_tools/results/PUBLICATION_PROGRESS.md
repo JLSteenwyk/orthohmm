@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Frozen Figure Helper Recovery (2026-09-18 UTC)
+
+Previous goal turn made no new progress: it reconfirmed the TreeFam source
+retrieval limitation and existing download hashes. Revalidated live work:
+21706_0 RUNNING11:27:38;21789 RUNNING1:16:00;21790-21793 pending dependencies.
+No jobs were stopped or restarted.
+
+Added export_frozen_figure_helper.py to recover the method-diagram dependency
+directly from commit7f3a9e40dd7e79f842cc2c11fb8b548f9a802806. Checks pinned Git
+blob55dc223310a7ba764bff0955c6ef7f23185c1951,14723bytes and SHA-256
+852c3e4fc1a53de7e6046aa78324da587376c0df6a0db1cd8265af65c75bea0f before
+creating output. Refuses existing destinations, reads exported bytes back
+and emits an explicit relative relocation mapping. Does not execute the
+helper or change historical figure manifests. This hash identifies the
+helper file, not a complete core archive.
+
+Actual export completed in benchmarks/work/frozen_figure_helper_export_20260918;
+manifest retained as frozen_figure_helper_export_20260918.json.18 focused
+tests pass in0.33s, including dirty-checkout independence, missing commit,
+three identity failures and directory/file/dangling-symlink refusal.
+Recovery instructions updated. Full reproducible archive, corrected QfO
+results and publication completion remain outstanding; goal stays active.
+
 ## Descriptive DGX Resource Figure (2026-09-18 UTC)
 
 Previous turn progressed througha794d56: native validation and descriptive

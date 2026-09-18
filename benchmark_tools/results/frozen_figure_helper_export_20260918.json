@@ -1,0 +1,20 @@
+{
+  "export": {
+    "bytes": 14723,
+    "path": "benchmark_tools/replay_high_sensitivity.py",
+    "sha256": "852c3e4fc1a53de7e6046aa78324da587376c0df6a0db1cd8265af65c75bea0f"
+  },
+  "historical_repository_relative_path": "benchmarks/work/publication_method_native_v2/benchmark_tools/replay_high_sensitivity.py",
+  "limitations": [
+    "Source recovery only; the exported helper is not executed.",
+    "Historical figure manifests are unchanged; relocation is explicit in this manifest.",
+    "Imported modules, runtimes and raw data are not bundled or validated.",
+    "This is not the complete publication archive or a runnable method distribution."
+  ],
+  "publication_ready": false,
+  "schema_version": 1,
+  "source_commit": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+  "source_git_blob": "55dc223310a7ba764bff0955c6ef7f23185c1951",
+  "source_git_path": "benchmark_tools/replay_high_sensitivity.py",
+  "status": "frozen_figure_helper_exported"
+}
