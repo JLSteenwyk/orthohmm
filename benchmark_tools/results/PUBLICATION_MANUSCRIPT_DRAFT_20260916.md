@@ -482,6 +482,16 @@ for other QfO endpoints and corrected-release reruns remains unfinished.
 [Full results and limitations](QFO_FACTORIAL_SWISS_RESULTS_20260918.md),
 [generated 42-endpoint table](qfo_factorial_swiss_bootstrap_20260918.md).
 
+![Original-release QfO SwissTrees factorial](qfo_factorial_swiss_figure_20260918/qfo_factorial_swiss.png)
+
+Figure: original-release SwissTrees cell scores and all 42 prespecified
+conditional-effect and interaction endpoints. Thick intervals are nominal
+95% paired family intervals; thin intervals retain Bonferroni adjustment.
+Effects are shown in percentage points, including C-by-R differences of
+differences. This is not the corrected-input rerun or a comparison against
+OrthoFinder. The [figure manifest](qfo_factorial_swiss_figure_20260918/manifest.json)
+binds the generated PNG/PDF/SVG files to their exact source result and plotter.
+
 ![OrthoBench factorial scores and paired conditional effects](figures_orthobench_factorial_20260916/orthobench_factorial.png)
 
 Figure: all eight cell scores and 36 conditional-effect endpoints. Thick

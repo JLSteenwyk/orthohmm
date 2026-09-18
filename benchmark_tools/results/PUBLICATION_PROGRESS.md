@@ -1,5 +1,36 @@
 # Publication Progress
 
+## QfO Factorial Figure; Corrected Sonic Conversion (2026-09-18 UTC)
+
+The preceding retrieval reply was a status-only/no-progress goal turn:
+rechecking available files did not recover the missing TreeFam source inputs.
+Revalidated live scheduler state before continuing; no jobs were restarted.
+
+Generated the original-release SwissTrees factorial PNG/PDF/SVG directly
+from the independently validated bootstrap result (SHA-256 097eb458...).
+The plot includes all eight cells and 42 endpoints, converts raw scores and
+effects to percent/percentage points, and distinguishes simple effects from
+C-by-R interactions. Validates protocol, contrast identities, harmonic macro
+F1, effects, interval nesting and family counts. Fourteen tests pass, with
+panel inventory/unit checks and text bounds checks; visually inspected PNG
+has no overlapping or clipped labels. Added figure and provenance-manifest
+links to the manuscript. No corrected-input or independent-validation claim.
+
+Corrected SonicParanoid inference21710 completed 0:0 in3:12:40; independent
+native admission21716 completed 0:0 in3:00. Its report
+`benchmarks/work/qfo_corrected_sonic_admission_20260918.json` has SHA-256
+`71af83337db5e26f8eec89f3e38550d49e4358c99f86b00e173959290d44f5fa`.
+All78 species,984137 accessions and3003 species-pair tables passed. There
+are5104201 native rows,15254354 raw relations,5615 duplicates and15248739
+distinct pairs. This admits predictions for conversion, not accuracy.
+
+Submitted conversion21726 (2CPUs,32GiB,4h,no-requeue), binding the above
+report hash to frozen executor01104e032c0b5ffc704eedfc69dd820d96cd6d11.
+Next: inspect its actual completed manifest/hash, launch frozen corrected
+assessment74afad5, then independent admissionf7e80d3. Corrected HMM21706_0
+and dedicated DGX21656_16 remained running at the start of this work;
+their existing dependent jobs were preserved. No DGX file scans were made.
+
 ## Original Factorial Paired Results Validated (2026-09-18 UTC)
 
 Previous turn progressed by admitting the eighth original-release cell,
