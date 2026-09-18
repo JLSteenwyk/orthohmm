@@ -8390,3 +8390,28 @@ RUNNING at 6:44:45 and DGX 21656_23 RUNNING at 7:57. Next is integration of
 terminal execution provenance, database extraction and complete hit-table
 auditing before BPO conversion. Corrected comparisons, admitted timing,
 remaining uncertainty and final publication packaging remain unfinished.
+
+### Corrected OrthoMCL Search Admission Queued (2026-09-18)
+
+Previous turn made progress with exact formatted-database extraction auditing.
+This turn binds terminal BLAST provenance, frozen commands/runtime/inputs,
+database parity and complete table/query auditing in one independent driver.
+Database differences stop admission for review; logged query failures are
+retained, not silently repaired or interpreted as universal search success.
+
+Executor `ae7de310cf7fbcba59107f2b054fc186f206eec4` is frozen in
+`publication_qfo_corrected_blast_admission_v1`. Job 21746 is queued
+afterany:21713 with 2 CPUs/64 GiB/24 hours. It rejects unsuccessful native
+execution before reading unfinished artifacts. See
+`QFO_CORRECTED_BLAST_ADMISSION_20260918.md` for gates and report locations.
+
+All 3,628 unit tests passed with installed legacy-engine smoke tests enabled;
+the 33 new driver tests and Bash syntax validation also passed. No complete
+corrected search has yet been admitted. Search evidence does not authorize
+BPO/clustering automatically, and no accuracy or publication claim follows.
+
+Latest checks: corrected BLAST 21713 resource-pending, HMM 21706_0 RUNNING
+at 6:50:32, DGX 21656_23 RUNNING at 13:44. DGX task 22 (raw job 21739)
+completed with exit 0:0 and scheduler elapsed 43:55; resource/isolation timing
+admission remains pending. Next is BPO/index and final-group workflow
+validation, alongside the remaining corrected comparisons and publication work.
