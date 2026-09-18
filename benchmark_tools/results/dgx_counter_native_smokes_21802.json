@@ -1,0 +1,1409 @@
+{
+  "archive_bytes": 3820668,
+  "archived_files": 1063,
+  "controlled_workload_verified": false,
+  "limitations": [
+    "One small development-exposed fixture per method, not independent accuracy or scaling.",
+    "Native outputs checked using existing group/pair/graph validators, not a new correctness oracle.",
+    "No general observer overhead, workload isolation or exact tree equivalence is established.",
+    "Input/runtime checks were outside the timed native command; raw archives remain local."
+  ],
+  "publication_ready": false,
+  "runs": [
+    {
+      "index": 0,
+      "method": "orthohmm_high_sensitivity",
+      "output_validation": {
+        "accuracy_evaluated": false,
+        "checked_files": [
+          {
+            "bytes": 4441,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_00/orthohmm_high_sensitivity.json",
+            "sha256": "533eebeb058e343912262a21da656cffc911c674c96bc075adb25665e4425ef0"
+          },
+          {
+            "bytes": 7738,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_00/orthohmm_high_sensitivity/orthohmm_orthogroups.txt",
+            "sha256": "c47a0fc9801d64b323905ebd3d1dca4b2bd2160d145f5124278a5cbd2f2b383a"
+          }
+        ],
+        "evidence_relocation": {
+          "/home/jlsteenwyk/projects/orthohmm-publication": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802"
+        },
+        "gnu_time_companion": {
+          "accounting": {
+            "elapsed_seconds": 3.05,
+            "exit_status": 0,
+            "max_process_rss_kib": 158728,
+            "semantics": {
+              "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+              "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+              "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+              "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+            },
+            "system_seconds": 1.24,
+            "user_seconds": 29.66
+          },
+          "source": {
+            "bytes": 101,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_00/native.time.tsv",
+            "sha256": "290384f54049a3545d539d3865b39090fa0a819223c8e0d9963ba73b25677191"
+          },
+          "wrapper_in_collector_wall_time": true
+        },
+        "input_genes": 645,
+        "limitations": [
+          "Caller must independently verify frozen manifest/source/runtime before and after inference.",
+          "Native validity does not establish a quiet host, valid timing, or prediction accuracy.",
+          "OrthoFinder validation expands native relation rows outside the inference timer."
+        ],
+        "orthogroups": 98,
+        "resource_measurements_admitted": false,
+        "source": {
+          "bytes": 8784,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_scaling_outputs.py",
+          "sha256": "d76d8c65eaba0ece8ac98688033784b974f6859ff5b2ded807a2cf4d4847f172"
+        },
+        "status": "native_scaling_outputs_checked"
+      },
+      "scheduler": "JobId=21803 ArrayJobId=21802 ArrayTaskId=0 ArrayTaskThrottle=1 JobName=counter-native-smoke\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=COMPLETED Reason=None Dependency=(null)\n   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:14 TimeLimit=01:00:00 TimeMin=N/A\n   SubmitTime=2026-09-18T15:44:10 EligibleTime=2026-09-18T15:44:10\n   AccrueTime=Unknown\n   StartTime=2026-09-18T15:44:10 EndTime=2026-09-18T15:44:24 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-18T15:44:10 Scheduler=Backfill\n   Partition=spark AllocNode:Sid=spark:798431\n   ReqNodeList=spark-7ff0 ExcNodeList=(null)\n   NodeList=spark-7ff0\n   BatchHost=spark-7ff0\n   NumNodes=1 NumCPUs=20 NumTasks=1 CPUs/Task=20 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=20,mem=96G,node=1,billing=20\n   AllocTRES=cpu=20,mem=96G,node=1,billing=20\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=20 MinMemoryNode=96G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=NO Contiguous=0 Licenses=(null) Network=(null)\n   Command=/home/jlsteenwyk/projects/orthohmm-publication/counter_native_recipe_v1/benchmark_tools/run_dgx_counter_native_smoke.sh\n   WorkDir=/home/jlsteenwyk\n   StdErr=/home/jlsteenwyk/projects/orthohmm-publication/counter-native-21802_0.log\n   StdIn=/dev/null\n   StdOut=/home/jlsteenwyk/projects/orthohmm-publication/counter-native-21802_0.log\n   TresPerTask=cpu:20\n   \n\n",
+      "verification": {
+        "after": {
+          "native_order": [
+            "n14.fasta",
+            "n11.fasta",
+            "n5.fasta",
+            "n13.fasta",
+            "n6.fasta",
+            "n7.fasta",
+            "n12.fasta",
+            "n9.fasta"
+          ],
+          "original_inputs": [
+            {
+              "bytes": 25773,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n14.fasta",
+              "sha256": "fa639b0dd9da1c40743221a5e85a48a2d1183e2583782cbc28743077b92cc095"
+            },
+            {
+              "bytes": 25419,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n11.fasta",
+              "sha256": "c9e7e01d18b0bd4d133b1588b417c2598b120901c38f3e12ebdeba2a8f97369f"
+            },
+            {
+              "bytes": 22575,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n5.fasta",
+              "sha256": "fe32ef88650cabe1e0239385a8f646020a0c8c01b02abb1487eab91dd3f014f7"
+            },
+            {
+              "bytes": 25992,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n13.fasta",
+              "sha256": "460b6ba93725298cb9e415b19ca38ec2679d622e0309bb69a683b0c4d428d75b"
+            },
+            {
+              "bytes": 24465,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n6.fasta",
+              "sha256": "9c12b7f6233a2fa1161fe5bdb904d8416935f43f1d66832db643723db2b98e5c"
+            },
+            {
+              "bytes": 25804,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n7.fasta",
+              "sha256": "bd5a375e99f12fc22bece6a6553a1636104321b1b5ddf2f7a398e909a6477a57"
+            },
+            {
+              "bytes": 26367,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n12.fasta",
+              "sha256": "3c5356bfbd29f872755fcf8cb83d092bc63b83bf1117f87546580baf503598b1"
+            },
+            {
+              "bytes": 26353,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n9.fasta",
+              "sha256": "8b92d25187584bbc38daff6dec0d671294e30d3484a77a31cc7dcc5b3483867f"
+            }
+          ],
+          "runtime": [
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/trees.json",
+              "records": 26673,
+              "scientific_execution_authorized": false,
+              "sha256": "2f38fc57683e51a7b6768b4709db16293590983640c41cfe12a56ed6036750ae",
+              "status": "runtime_tree_identity_matches"
+            },
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/system_trees.json",
+              "records": 10066,
+              "scientific_execution_authorized": false,
+              "sha256": "4083d15c0ffc40013756c4588763aa8af24ca39165622665ee5074662e4b46ce",
+              "status": "runtime_tree_identity_matches"
+            },
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/counter_native_recipe_v1.json",
+              "records": 16,
+              "scientific_execution_authorized": false,
+              "sha256": "9b4475bf95f0cdbf54f2c2cb56238d194c5db59a0da92a9ef7b63739c63ecaab",
+              "status": "runtime_tree_identity_matches"
+            }
+          ]
+        },
+        "after_check_wall_s": 4.442863428033888,
+        "before": {
+          "native_order": [
+            "n14.fasta",
+            "n11.fasta",
+            "n5.fasta",
+            "n13.fasta",
+            "n6.fasta",
+            "n7.fasta",
+            "n12.fasta",
+            "n9.fasta"
+          ],
+          "original_inputs": [
+            {
+              "bytes": 25773,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n14.fasta",
+              "sha256": "fa639b0dd9da1c40743221a5e85a48a2d1183e2583782cbc28743077b92cc095"
+            },
+            {
+              "bytes": 25419,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n11.fasta",
+              "sha256": "c9e7e01d18b0bd4d133b1588b417c2598b120901c38f3e12ebdeba2a8f97369f"
+            },
+            {
+              "bytes": 22575,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n5.fasta",
+              "sha256": "fe32ef88650cabe1e0239385a8f646020a0c8c01b02abb1487eab91dd3f014f7"
+            },
+            {
+              "bytes": 25992,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n13.fasta",
+              "sha256": "460b6ba93725298cb9e415b19ca38ec2679d622e0309bb69a683b0c4d428d75b"
+            },
+            {
+              "bytes": 24465,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n6.fasta",
+              "sha256": "9c12b7f6233a2fa1161fe5bdb904d8416935f43f1d66832db643723db2b98e5c"
+            },
+            {
+              "bytes": 25804,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n7.fasta",
+              "sha256": "bd5a375e99f12fc22bece6a6553a1636104321b1b5ddf2f7a398e909a6477a57"
+            },
+            {
+              "bytes": 26367,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n12.fasta",
+              "sha256": "3c5356bfbd29f872755fcf8cb83d092bc63b83bf1117f87546580baf503598b1"
+            },
+            {
+              "bytes": 26353,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n9.fasta",
+              "sha256": "8b92d25187584bbc38daff6dec0d671294e30d3484a77a31cc7dcc5b3483867f"
+            }
+          ],
+          "runtime": [
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/trees.json",
+              "records": 26673,
+              "scientific_execution_authorized": false,
+              "sha256": "2f38fc57683e51a7b6768b4709db16293590983640c41cfe12a56ed6036750ae",
+              "status": "runtime_tree_identity_matches"
+            },
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/system_trees.json",
+              "records": 10066,
+              "scientific_execution_authorized": false,
+              "sha256": "4083d15c0ffc40013756c4588763aa8af24ca39165622665ee5074662e4b46ce",
+              "status": "runtime_tree_identity_matches"
+            },
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/counter_native_recipe_v1.json",
+              "records": 16,
+              "scientific_execution_authorized": false,
+              "sha256": "9b4475bf95f0cdbf54f2c2cb56238d194c5db59a0da92a9ef7b63739c63ecaab",
+              "status": "runtime_tree_identity_matches"
+            }
+          ]
+        },
+        "before_check_wall_s": 4.559365211986005,
+        "limitations": [
+          "Identity checks are outside the native command timer.",
+          "Hashing warms file caches; this is not cold-cache timing.",
+          "Cgroup memory peak may retain preparation and verification allocations.",
+          "Native outputs and collector records still require independent admission."
+        ],
+        "measurement": {
+          "controlled_workload_verified": false,
+          "counter_read_errors": 0,
+          "host_summary": {
+            "accounted_host_busy_average_cores": 9.981854754003514,
+            "accounted_host_busy_cpu_s": 31.06,
+            "controlled_workload_verified": false,
+            "cpu_delta_ticks": {
+              "guest": 0,
+              "guest_nice": 0,
+              "idle": 3109,
+              "iowait": 1,
+              "irq": 0,
+              "nice": 0,
+              "softirq": 0,
+              "steal": 0,
+              "system": 126,
+              "user": 2980
+            },
+            "iowait_decreased": false,
+            "midpoint_span_s": 3.1116461585,
+            "status": "host_counter_diagnostic_only"
+          },
+          "job_id": 21803,
+          "launched": [
+            "srun",
+            "--exclusive",
+            "--exact",
+            "--nodes=1",
+            "--ntasks=1",
+            "--cpus-per-task=20",
+            "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+            "-B",
+            "/home/jlsteenwyk/projects/orthohmm-publication/counter_native_recipe_v1/benchmark_tools/measure_native_counter_step.py",
+            "--worker",
+            "/home/jlsteenwyk/projects/orthohmm-publication/counter_native_smoke_v1/run_00/measurement"
+          ],
+          "limitations": [
+            "Engineering smoke; no exclusivity or calibrated overhead claim.",
+            "Observer shares allocation CPUs with the native step; cgroup scopes differ.",
+            "Cgroup memory is not RSS and includes the native wrapper.",
+            "Host and native counters have different read windows; no foreign-CPU subtraction.",
+            "Native outputs require separate validation; nonzero/read-error runs are retained."
+          ],
+          "native": {
+            "exit_code": 0,
+            "finished_ns": 2245921022129007,
+            "started_ns": 2245917931752713
+          },
+          "native_snapshots": [
+            {
+              "cpu_ticks": {
+                "guest": 0,
+                "guest_nice": 0,
+                "idle": 4368800428,
+                "iowait": 278272,
+                "irq": 0,
+                "nice": 638,
+                "softirq": 16789,
+                "steal": 0,
+                "system": 2126348,
+                "user": 118496052
+              },
+              "errors": [],
+              "finished_monotonic_ns": 2245917911036457,
+              "optional": {
+                "cgroup_cpu.stat": "usage_usec 106807\nuser_usec 96825\nsystem_usec 9982\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+                "cgroup_memory.current": "10330112\n",
+                "cgroup_memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+                "cgroup_memory.peak": "10870784\n",
+                "host_cpu_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=1308531152\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0\n",
+                "host_io_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=1533055262\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=1517016357\n",
+                "host_memory_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=2795\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=950\n"
+              },
+              "raw": {
+                "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9\n",
+                "cgroup_membership": "0::/system.slice/spark-7ff0_slurmstepd.scope/job_21803/step_0/user/task_0\n",
+                "online_cpus": "0-19\n",
+                "proc_stat": "cpu  118496052 638 2126348 4368800428 278272 0 16789 0 0 0\ncpu0 5539368 10 145296 218665480 13808 0 7015 0 0 0\ncpu1 5619638 5 151745 218692538 21583 0 485 0 0 0\ncpu2 5651824 3 153635 218644424 22480 0 195 0 0 0\ncpu3 5718426 5 137028 218619489 17625 0 141 0 0 0\ncpu4 5709460 8 137287 218629519 14227 0 144 0 0 0\ncpu5 6065996 62 76227 218346353 17913 0 292 0 0 0\ncpu6 6114460 0 71888 218306380 15283 0 134 0 0 0\ncpu7 6109612 12 68596 218320026 12644 0 186 0 0 0\ncpu8 6085523 42 80119 218333901 13640 0 174 0 0 0\ncpu9 6106945 0 64720 218333020 13292 0 175 0 0 0\ncpu10 5726776 6 139781 218586010 10731 0 152 0 0 0\ncpu11 5716791 0 139466 218614913 15789 0 112 0 0 0\ncpu12 5734404 6 132960 218593580 16024 0 90 0 0 0\ncpu13 5780583 6 144486 218502419 12337 0 3656 0 0 0\ncpu14 5794019 5 145577 218525659 12855 0 1855 0 0 0\ncpu15 6218450 24 68785 218193531 11843 0 993 0 0 0\ncpu16 6157232 16 72638 218264427 9677 0 431 0 0 0\ncpu17 6207948 14 56935 218225288 7507 0 329 0 0 0\ncpu18 6175611 4 67521 218256373 11332 0 107 0 0 0\ncpu19 6262978 402 71650 218147087 7674 0 114 0 0 0\nintr 1912649047 0 6514076 110538222 0 0 327319603 6508 0 0 0 0 0 1344298808 0 108840423 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5818 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2982 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 365041 0 0 0 0 0 0 0 483243 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7 0 0 16389 237138 225189 210687 188803 179611 74688 88860 102731 73425 73534 71456 54695 51707 93285 78803 33739 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 34075 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 34014 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 33301 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 12296949 0 3185 0 17879 0 0 0 0 0\nctxt 592518168\nbtime 1787514737\nprocesses 9185774\nprocs_running 1\nprocs_blocked 0\nsoftirq 965740605 561 382143469 162 1887703 139786 0 29170579 339293968 1097 213103280\n"
+              },
+              "started_monotonic_ns": 2245917910698057
+            },
+            {
+              "cpu_ticks": {
+                "guest": 0,
+                "guest_nice": 0,
+                "idle": 4368803537,
+                "iowait": 278273,
+                "irq": 0,
+                "nice": 638,
+                "softirq": 16789,
+                "steal": 0,
+                "system": 2126474,
+                "user": 118499032
+              },
+              "errors": [],
+              "finished_monotonic_ns": 2245921022867872,
+              "optional": {
+                "cgroup_cpu.stat": "usage_usec 31182900\nuser_usec 29911966\nsystem_usec 1270933\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+                "cgroup_memory.current": "12828672\n",
+                "cgroup_memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+                "cgroup_memory.peak": "1013960704\n",
+                "host_cpu_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=1308551889\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0\n",
+                "host_io_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=1533055560\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=1517016653\n",
+                "host_memory_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=2795\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=950\n"
+              },
+              "raw": {
+                "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9\n",
+                "cgroup_membership": "0::/system.slice/spark-7ff0_slurmstepd.scope/job_21803/step_0/user/task_0\n",
+                "online_cpus": "0-19\n",
+                "proc_stat": "cpu  118499032 638 2126474 4368803537 278273 0 16789 0 0 0\ncpu0 5539502 10 145302 218665650 13808 0 7015 0 0 0\ncpu1 5619757 5 151750 218692725 21583 0 485 0 0 0\ncpu2 5651954 3 153639 218644600 22480 0 195 0 0 0\ncpu3 5718557 5 137034 218619662 17625 0 141 0 0 0\ncpu4 5709589 8 137291 218629697 14227 0 144 0 0 0\ncpu5 6066152 62 76233 218346503 17913 0 292 0 0 0\ncpu6 6114662 0 71898 218306480 15283 0 134 0 0 0\ncpu7 6109788 12 68605 218320154 12644 0 186 0 0 0\ncpu8 6085664 42 80126 218334063 13640 0 174 0 0 0\ncpu9 6107083 0 64728 218333185 13292 0 175 0 0 0\ncpu10 5726908 6 139785 218586185 10731 0 152 0 0 0\ncpu11 5716917 0 139470 218615094 15789 0 112 0 0 0\ncpu12 5734529 6 132966 218593761 16024 0 90 0 0 0\ncpu13 5780709 6 144491 218502599 12337 0 3656 0 0 0\ncpu14 5794151 5 145582 218525832 12855 0 1855 0 0 0\ncpu15 6218631 24 68792 218193654 11843 0 993 0 0 0\ncpu16 6157405 16 72646 218264558 9677 0 431 0 0 0\ncpu17 6208098 14 56941 218225444 7507 0 329 0 0 0\ncpu18 6175762 4 67527 218256528 11332 0 107 0 0 0\ncpu19 6263207 402 71663 218147156 7674 0 114 0 0 0\nintr 1912686154 0 6514682 110541475 0 0 327319605 6508 0 0 0 0 0 1344331867 0 108840575 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5818 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2982 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 365041 0 0 0 0 0 0 0 483243 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7 0 0 16389 237138 225189 210689 188803 179612 74688 88865 102731 73425 73534 71457 54695 51707 93285 78806 33739 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 34075 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 34014 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 33301 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 12296972 0 3185 0 17879 0 0 0 0 0\nctxt 592526674\nbtime 1787514737\nprocesses 9185844\nprocs_running 1\nprocs_blocked 0\nsoftirq 965759646 561 382144342 162 1887703 139786 0 29170629 339295266 1097 213120100\n"
+              },
+              "started_monotonic_ns": 2245921022158959
+            }
+          ],
+          "native_wall_s": 3.090376294,
+          "observer_snapshots": 5,
+          "publication_ready": false,
+          "scientific_results_admitted": false,
+          "status": "command_exited_zero"
+        },
+        "scientific_results_admitted": false,
+        "source_sha256": "36243fcdfe6f49e73dbe1dd1b627bf4a330f19f3cd52dcf94a9618ddf0415cf8",
+        "status": "command_exited_zero"
+      }
+    },
+    {
+      "index": 1,
+      "method": "orthohmm_satellite_v2",
+      "output_validation": {
+        "accuracy_evaluated": false,
+        "checked_files": [
+          {
+            "bytes": 7476,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_01/orthohmm_satellite_v2.json",
+            "sha256": "c79516b9e1d17f3436efbc4e8a73ec471d66d8fe8ccfef9d998a27189c5d55e7"
+          },
+          {
+            "bytes": 7738,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_01/orthohmm_satellite_v2/orthohmm_orthogroups.txt",
+            "sha256": "c47a0fc9801d64b323905ebd3d1dca4b2bd2160d145f5124278a5cbd2f2b383a"
+          },
+          {
+            "bytes": 10021,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_01/orthohmm_satellite_v2/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+            "sha256": "ef6af0f529c93446d05a45f7bbb929669c5d4b80b4bcf4feb31d4874f3353c17"
+          },
+          {
+            "bytes": 53593,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_01/orthohmm_satellite_v2/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+            "sha256": "96b07a762f3d0b1684f3b04a647cc0b8534442a2dfba530c74b2b37acc10f023"
+          }
+        ],
+        "evidence_relocation": {
+          "/home/jlsteenwyk/projects/orthohmm-publication": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802"
+        },
+        "gnu_time_companion": {
+          "accounting": {
+            "elapsed_seconds": 6.88,
+            "exit_status": 0,
+            "max_process_rss_kib": 165236,
+            "semantics": {
+              "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+              "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+              "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+              "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+            },
+            "system_seconds": 13.29,
+            "user_seconds": 37.77
+          },
+          "source": {
+            "bytes": 102,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_01/native.time.tsv",
+            "sha256": "2a2e8791b568032797eaedfdfb33167956b13f87ff59bddc8aca1e2a704756c0"
+          },
+          "wrapper_in_collector_wall_time": true
+        },
+        "input_genes": 645,
+        "limitations": [
+          "Caller must independently verify frozen manifest/source/runtime before and after inference.",
+          "Native validity does not establish a quiet host, valid timing, or prediction accuracy.",
+          "OrthoFinder validation expands native relation rows outside the inference timer."
+        ],
+        "native_pair_rows": 1835,
+        "orthogroups": 98,
+        "resource_measurements_admitted": false,
+        "root_hogs": 98,
+        "source": {
+          "bytes": 8784,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_scaling_outputs.py",
+          "sha256": "d76d8c65eaba0ece8ac98688033784b974f6859ff5b2ded807a2cf4d4847f172"
+        },
+        "status": "native_scaling_outputs_checked"
+      },
+      "scheduler": "JobId=21804 ArrayJobId=21802 ArrayTaskId=1 ArrayTaskThrottle=1 JobName=counter-native-smoke\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=COMPLETED Reason=None Dependency=(null)\n   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:17 TimeLimit=01:00:00 TimeMin=N/A\n   SubmitTime=2026-09-18T15:44:10 EligibleTime=2026-09-18T15:44:24\n   AccrueTime=2026-09-18T15:44:24\n   StartTime=2026-09-18T15:44:24 EndTime=2026-09-18T15:44:41 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-18T15:44:24 Scheduler=Main\n   Partition=spark AllocNode:Sid=spark:798431\n   ReqNodeList=spark-7ff0 ExcNodeList=(null)\n   NodeList=spark-7ff0\n   BatchHost=spark-7ff0\n   NumNodes=1 NumCPUs=20 NumTasks=1 CPUs/Task=20 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=20,mem=96G,node=1,billing=20\n   AllocTRES=cpu=20,mem=96G,node=1,billing=20\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=20 MinMemoryNode=96G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=NO Contiguous=0 Licenses=(null) Network=(null)\n   Command=/home/jlsteenwyk/projects/orthohmm-publication/counter_native_recipe_v1/benchmark_tools/run_dgx_counter_native_smoke.sh\n   WorkDir=/home/jlsteenwyk\n   StdErr=/home/jlsteenwyk/projects/orthohmm-publication/counter-native-21802_1.log\n   StdIn=/dev/null\n   StdOut=/home/jlsteenwyk/projects/orthohmm-publication/counter-native-21802_1.log\n   TresPerTask=cpu:20\n   \n\n",
+      "verification": {
+        "after": {
+          "native_order": [
+            "n14.fasta",
+            "n11.fasta",
+            "n5.fasta",
+            "n13.fasta",
+            "n6.fasta",
+            "n7.fasta",
+            "n12.fasta",
+            "n9.fasta"
+          ],
+          "original_inputs": [
+            {
+              "bytes": 25773,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n14.fasta",
+              "sha256": "fa639b0dd9da1c40743221a5e85a48a2d1183e2583782cbc28743077b92cc095"
+            },
+            {
+              "bytes": 25419,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n11.fasta",
+              "sha256": "c9e7e01d18b0bd4d133b1588b417c2598b120901c38f3e12ebdeba2a8f97369f"
+            },
+            {
+              "bytes": 22575,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n5.fasta",
+              "sha256": "fe32ef88650cabe1e0239385a8f646020a0c8c01b02abb1487eab91dd3f014f7"
+            },
+            {
+              "bytes": 25992,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n13.fasta",
+              "sha256": "460b6ba93725298cb9e415b19ca38ec2679d622e0309bb69a683b0c4d428d75b"
+            },
+            {
+              "bytes": 24465,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n6.fasta",
+              "sha256": "9c12b7f6233a2fa1161fe5bdb904d8416935f43f1d66832db643723db2b98e5c"
+            },
+            {
+              "bytes": 25804,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n7.fasta",
+              "sha256": "bd5a375e99f12fc22bece6a6553a1636104321b1b5ddf2f7a398e909a6477a57"
+            },
+            {
+              "bytes": 26367,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n12.fasta",
+              "sha256": "3c5356bfbd29f872755fcf8cb83d092bc63b83bf1117f87546580baf503598b1"
+            },
+            {
+              "bytes": 26353,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n9.fasta",
+              "sha256": "8b92d25187584bbc38daff6dec0d671294e30d3484a77a31cc7dcc5b3483867f"
+            }
+          ],
+          "runtime": [
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/trees.json",
+              "records": 26673,
+              "scientific_execution_authorized": false,
+              "sha256": "2f38fc57683e51a7b6768b4709db16293590983640c41cfe12a56ed6036750ae",
+              "status": "runtime_tree_identity_matches"
+            },
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/system_trees.json",
+              "records": 10066,
+              "scientific_execution_authorized": false,
+              "sha256": "4083d15c0ffc40013756c4588763aa8af24ca39165622665ee5074662e4b46ce",
+              "status": "runtime_tree_identity_matches"
+            },
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/counter_native_recipe_v1.json",
+              "records": 16,
+              "scientific_execution_authorized": false,
+              "sha256": "9b4475bf95f0cdbf54f2c2cb56238d194c5db59a0da92a9ef7b63739c63ecaab",
+              "status": "runtime_tree_identity_matches"
+            }
+          ]
+        },
+        "after_check_wall_s": 4.357013074681163,
+        "before": {
+          "native_order": [
+            "n14.fasta",
+            "n11.fasta",
+            "n5.fasta",
+            "n13.fasta",
+            "n6.fasta",
+            "n7.fasta",
+            "n12.fasta",
+            "n9.fasta"
+          ],
+          "original_inputs": [
+            {
+              "bytes": 25773,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n14.fasta",
+              "sha256": "fa639b0dd9da1c40743221a5e85a48a2d1183e2583782cbc28743077b92cc095"
+            },
+            {
+              "bytes": 25419,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n11.fasta",
+              "sha256": "c9e7e01d18b0bd4d133b1588b417c2598b120901c38f3e12ebdeba2a8f97369f"
+            },
+            {
+              "bytes": 22575,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n5.fasta",
+              "sha256": "fe32ef88650cabe1e0239385a8f646020a0c8c01b02abb1487eab91dd3f014f7"
+            },
+            {
+              "bytes": 25992,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n13.fasta",
+              "sha256": "460b6ba93725298cb9e415b19ca38ec2679d622e0309bb69a683b0c4d428d75b"
+            },
+            {
+              "bytes": 24465,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n6.fasta",
+              "sha256": "9c12b7f6233a2fa1161fe5bdb904d8416935f43f1d66832db643723db2b98e5c"
+            },
+            {
+              "bytes": 25804,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n7.fasta",
+              "sha256": "bd5a375e99f12fc22bece6a6553a1636104321b1b5ddf2f7a398e909a6477a57"
+            },
+            {
+              "bytes": 26367,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n12.fasta",
+              "sha256": "3c5356bfbd29f872755fcf8cb83d092bc63b83bf1117f87546580baf503598b1"
+            },
+            {
+              "bytes": 26353,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n9.fasta",
+              "sha256": "8b92d25187584bbc38daff6dec0d671294e30d3484a77a31cc7dcc5b3483867f"
+            }
+          ],
+          "runtime": [
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/trees.json",
+              "records": 26673,
+              "scientific_execution_authorized": false,
+              "sha256": "2f38fc57683e51a7b6768b4709db16293590983640c41cfe12a56ed6036750ae",
+              "status": "runtime_tree_identity_matches"
+            },
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/system_trees.json",
+              "records": 10066,
+              "scientific_execution_authorized": false,
+              "sha256": "4083d15c0ffc40013756c4588763aa8af24ca39165622665ee5074662e4b46ce",
+              "status": "runtime_tree_identity_matches"
+            },
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/counter_native_recipe_v1.json",
+              "records": 16,
+              "scientific_execution_authorized": false,
+              "sha256": "9b4475bf95f0cdbf54f2c2cb56238d194c5db59a0da92a9ef7b63739c63ecaab",
+              "status": "runtime_tree_identity_matches"
+            }
+          ]
+        },
+        "before_check_wall_s": 4.5326059348881245,
+        "limitations": [
+          "Identity checks are outside the native command timer.",
+          "Hashing warms file caches; this is not cold-cache timing.",
+          "Cgroup memory peak may retain preparation and verification allocations.",
+          "Native outputs and collector records still require independent admission."
+        ],
+        "measurement": {
+          "controlled_workload_verified": false,
+          "counter_read_errors": 0,
+          "host_summary": {
+            "accounted_host_busy_average_cores": 7.445280002852941,
+            "accounted_host_busy_cpu_s": 51.72,
+            "controlled_workload_verified": false,
+            "cpu_delta_ticks": {
+              "guest": 0,
+              "guest_nice": 0,
+              "idle": 8682,
+              "iowait": 2,
+              "irq": 0,
+              "nice": 0,
+              "softirq": 1,
+              "steal": 0,
+              "system": 1491,
+              "user": 3680
+            },
+            "iowait_decreased": false,
+            "midpoint_span_s": 6.9466829965,
+            "status": "host_counter_diagnostic_only"
+          },
+          "job_id": 21804,
+          "launched": [
+            "srun",
+            "--exclusive",
+            "--exact",
+            "--nodes=1",
+            "--ntasks=1",
+            "--cpus-per-task=20",
+            "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+            "-B",
+            "/home/jlsteenwyk/projects/orthohmm-publication/counter_native_recipe_v1/benchmark_tools/measure_native_counter_step.py",
+            "--worker",
+            "/home/jlsteenwyk/projects/orthohmm-publication/counter_native_smoke_v1/run_01/measurement"
+          ],
+          "limitations": [
+            "Engineering smoke; no exclusivity or calibrated overhead claim.",
+            "Observer shares allocation CPUs with the native step; cgroup scopes differ.",
+            "Cgroup memory is not RSS and includes the native wrapper.",
+            "Host and native counters have different read windows; no foreign-CPU subtraction.",
+            "Native outputs require separate validation; nonzero/read-error runs are retained."
+          ],
+          "native": {
+            "exit_code": 0,
+            "finished_ns": 2245939118479463,
+            "started_ns": 2245932192799788
+          },
+          "native_snapshots": [
+            {
+              "cpu_ticks": {
+                "guest": 0,
+                "guest_nice": 0,
+                "idle": 4368824815,
+                "iowait": 278281,
+                "irq": 0,
+                "nice": 638,
+                "softirq": 16789,
+                "steal": 0,
+                "system": 2126669,
+                "user": 118499829
+              },
+              "errors": [],
+              "finished_monotonic_ns": 2245932172438187,
+              "optional": {
+                "cgroup_cpu.stat": "usage_usec 108424\nuser_usec 98477\nsystem_usec 9947\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+                "cgroup_memory.current": "9973760\n",
+                "cgroup_memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+                "cgroup_memory.peak": "10514432\n",
+                "host_cpu_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=1308566732\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0\n",
+                "host_io_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=1533057653\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=1517018738\n",
+                "host_memory_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=2795\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=950\n"
+              },
+              "raw": {
+                "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9\n",
+                "cgroup_membership": "0::/system.slice/spark-7ff0_slurmstepd.scope/job_21804/step_0/user/task_0\n",
+                "online_cpus": "0-19\n",
+                "proc_stat": "cpu  118499829 638 2126669 4368824815 278281 0 16789 0 0 0\ncpu0 5539504 10 145302 218666753 13808 0 7015 0 0 0\ncpu1 5619764 5 151753 218693829 21583 0 485 0 0 0\ncpu2 5651954 3 153641 218645713 22480 0 195 0 0 0\ncpu3 5718557 5 137035 218620776 17625 0 141 0 0 0\ncpu4 5709589 8 137291 218630811 14227 0 144 0 0 0\ncpu5 6066900 62 76387 218346715 17913 0 292 0 0 0\ncpu6 6114664 0 71899 218307589 15283 0 134 0 0 0\ncpu7 6109796 12 68608 218321255 12646 0 186 0 0 0\ncpu8 6085665 42 80127 218335173 13642 0 174 0 0 0\ncpu9 6107084 0 64728 218334298 13292 0 175 0 0 0\ncpu10 5726908 6 139787 218587296 10731 0 152 0 0 0\ncpu11 5716917 0 139473 218616204 15790 0 112 0 0 0\ncpu12 5734534 6 132968 218594866 16026 0 90 0 0 0\ncpu13 5780711 6 144492 218503708 12337 0 3656 0 0 0\ncpu14 5794152 5 145587 218526939 12855 0 1855 0 0 0\ncpu15 6218638 24 68794 218194758 11843 0 993 0 0 0\ncpu16 6157405 16 72648 218265670 9677 0 431 0 0 0\ncpu17 6208104 14 56944 218226548 7507 0 329 0 0 0\ncpu18 6175763 4 67529 218257639 11332 0 107 0 0 0\ncpu19 6263210 402 71665 218148264 7674 0 114 0 0 0\nintr 1912713055 0 6515296 110550407 0 0 327319729 6508 0 0 0 0 0 1344348277 0 108841066 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5818 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3056 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 365089 0 0 0 0 0 0 0 483283 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7 0 0 16392 237138 225190 210689 188818 179647 74688 88868 102740 73425 73534 71458 54695 51707 93285 78806 33740 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 34076 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 34015 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 33302 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 12297069 0 3185 0 17879 0 0 0 0 0\nctxt 592535836\nbtime 1787514737\nprocesses 9186087\nprocs_running 1\nprocs_blocked 0\nsoftirq 965770177 561 382145472 162 1887888 139789 0 29170874 339300431 1097 213123903\n"
+              },
+              "started_monotonic_ns": 2245932172109371
+            },
+            {
+              "cpu_ticks": {
+                "guest": 0,
+                "guest_nice": 0,
+                "idle": 4368833497,
+                "iowait": 278283,
+                "irq": 0,
+                "nice": 638,
+                "softirq": 16790,
+                "steal": 0,
+                "system": 2128160,
+                "user": 118503509
+              },
+              "errors": [],
+              "finished_monotonic_ns": 2245939119376744,
+              "optional": {
+                "cgroup_cpu.stat": "usage_usec 51355948\nuser_usec 36664055\nsystem_usec 14691893\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+                "cgroup_memory.current": "13987840\n",
+                "cgroup_memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+                "cgroup_memory.peak": "1009418240\n",
+                "host_cpu_pressure": "some avg10=2.25 avg60=0.42 avg300=0.08 total=1308875976\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0\n",
+                "host_io_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=1533059109\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=1517019282\n",
+                "host_memory_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=2801\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=953\n"
+              },
+              "raw": {
+                "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9\n",
+                "cgroup_membership": "0::/system.slice/spark-7ff0_slurmstepd.scope/job_21804/step_0/user/task_0\n",
+                "online_cpus": "0-19\n",
+                "proc_stat": "cpu  118503509 638 2128160 4368833497 278283 0 16790 0 0 0\ncpu0 5539656 10 145375 218667218 13808 0 7015 0 0 0\ncpu1 5619917 5 151825 218694297 21583 0 485 0 0 0\ncpu2 5652121 3 153713 218646168 22480 0 195 0 0 0\ncpu3 5718701 5 137108 218621251 17625 0 141 0 0 0\ncpu4 5709739 8 137365 218631279 14227 0 144 0 0 0\ncpu5 6067300 62 76485 218346911 17913 0 293 0 0 0\ncpu6 6114848 0 71970 218308028 15283 0 134 0 0 0\ncpu7 6109962 12 68679 218321710 12646 0 186 0 0 0\ncpu8 6085845 42 80202 218335613 13642 0 174 0 0 0\ncpu9 6107279 0 64807 218334716 13293 0 175 0 0 0\ncpu10 5727066 6 139857 218587762 10731 0 152 0 0 0\ncpu11 5717068 0 139546 218616673 15790 0 112 0 0 0\ncpu12 5734690 6 133041 218595328 16027 0 90 0 0 0\ncpu13 5780863 6 144563 218504178 12337 0 3656 0 0 0\ncpu14 5794301 5 145659 218527411 12855 0 1855 0 0 0\ncpu15 6218830 24 68871 218195183 11843 0 993 0 0 0\ncpu16 6157599 16 72723 218266095 9677 0 431 0 0 0\ncpu17 6208304 14 57017 218226969 7507 0 329 0 0 0\ncpu18 6175926 4 67602 218258095 11332 0 107 0 0 0\ncpu19 6263485 402 71744 218148603 7675 0 114 0 0 0\nintr 1912798457 0 6521279 110568349 0 0 327319731 6508 0 0 0 0 0 1344408789 0 108841410 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5818 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3056 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 365110 0 0 0 0 0 0 0 483304 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7 0 0 16392 237169 225230 210752 188857 179696 74704 88894 102761 73439 73551 71498 54759 51746 93325 78844 33740 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 34076 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 34015 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 33302 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 12297109 0 3185 0 17879 0 0 0 0 0\nctxt 592618315\nbtime 1787514737\nprocesses 9198439\nprocs_running 1\nprocs_blocked 0\nsoftirq 965898735 561 382147277 162 1887952 139829 0 29170968 339308580 1097 213242309\n"
+              },
+              "started_monotonic_ns": 2245939118536807
+            }
+          ],
+          "native_wall_s": 6.925679675,
+          "observer_snapshots": 8,
+          "publication_ready": false,
+          "scientific_results_admitted": false,
+          "status": "command_exited_zero"
+        },
+        "scientific_results_admitted": false,
+        "source_sha256": "36243fcdfe6f49e73dbe1dd1b627bf4a330f19f3cd52dcf94a9618ddf0415cf8",
+        "status": "command_exited_zero"
+      }
+    },
+    {
+      "index": 2,
+      "method": "orthofinder_full",
+      "output_validation": {
+        "accuracy_evaluated": false,
+        "checked_files": [
+          {
+            "bytes": 1102,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Log.txt",
+            "sha256": "407b7f4dcdd79d67587507dded828c2345f22e156a2b4f61ce63fb5b0bd12353"
+          },
+          {
+            "bytes": 41492,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/WorkingDirectory/OrthoFinder_graph.txt",
+            "sha256": "9c921e40a5dfedc44287b613ccd7f1ee90dc0235f8f9f3dbdf8aecb465ef6c91"
+          },
+          {
+            "bytes": 10940,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/WorkingDirectory/SequenceIDs.txt",
+            "sha256": "1a6bd1bdb9566ec45ccfd05d913bc1eaf7d634567bda266cb87b96821fe0df0f"
+          },
+          {
+            "bytes": 4583,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/WorkingDirectory/clusters_OrthoFinder_I1.2.txt_id_pairs.txt",
+            "sha256": "b4dfc5f769b326a26a8974bf65540c6b71f0b903d76083823776659fcff922b5"
+          },
+          {
+            "bytes": 2296,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n11/n11__v__n12.tsv",
+            "sha256": "a89c52ecf6bb2ad87618b30529e139da3b631dcca77f4a7c80d101ac12bb9c4c"
+          },
+          {
+            "bytes": 2345,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n11/n11__v__n13.tsv",
+            "sha256": "38065e20281b2ca75f9251536df6174496b6f0c8d8a9014aca633753ed288012"
+          },
+          {
+            "bytes": 2219,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n11/n11__v__n14.tsv",
+            "sha256": "8510e50c3f996be62d62970c7c9c0179143239dab78646c63a9685ad8fe632db"
+          },
+          {
+            "bytes": 1944,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n11/n11__v__n5.tsv",
+            "sha256": "f775fdd694400ff878d1782dab588d1829a0d2077913f9df5ff0bbd7b5f4c07d"
+          },
+          {
+            "bytes": 1988,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n11/n11__v__n6.tsv",
+            "sha256": "e5234fd1742f31418178d6bd8fc2345579a5f5f93e5f44630ac258247c96d7f2"
+          },
+          {
+            "bytes": 2066,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n11/n11__v__n7.tsv",
+            "sha256": "54ad9323206436d6a9d96f06f0230b2d7e80b473fe9f089b8b8269453495bf4f"
+          },
+          {
+            "bytes": 2190,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n11/n11__v__n9.tsv",
+            "sha256": "765e5809fb82be4c552c04532ca5bc29b301d050bcc8794f9dffd5e64037014c"
+          },
+          {
+            "bytes": 2296,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n12/n12__v__n11.tsv",
+            "sha256": "5c975222860a07c0899a55d0c3f03155fd3c2035d5f0a20dc37b0d42dc8d7239"
+          },
+          {
+            "bytes": 2326,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n12/n12__v__n13.tsv",
+            "sha256": "dbd0989bb566720904b38018c67334060d18d797b6606d705432885ef08f8cb1"
+          },
+          {
+            "bytes": 2370,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n12/n12__v__n14.tsv",
+            "sha256": "1ac2581cff96aa54a6973dc104a13b241ec6b3ce09bb3edf0d0f45f1688f311e"
+          },
+          {
+            "bytes": 1943,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n12/n12__v__n5.tsv",
+            "sha256": "1d4b2e6a52df8810579553566f66fd17be02d1d3482560b7bb56740e0df66399"
+          },
+          {
+            "bytes": 2118,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n12/n12__v__n6.tsv",
+            "sha256": "614d6697f5b8f667b22bdc4e9b16418a01c676dfd440b5d0b607734544b10b0f"
+          },
+          {
+            "bytes": 2291,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n12/n12__v__n7.tsv",
+            "sha256": "30aff5e090197f4f28acee27605915d83b6ca43fdfa5be0d77c8b19954fe0475"
+          },
+          {
+            "bytes": 2309,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n12/n12__v__n9.tsv",
+            "sha256": "a131e25a9cb4414fbf884011cb4b0047ca373077c85957e7a605ee8faab2d488"
+          },
+          {
+            "bytes": 2345,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n13/n13__v__n11.tsv",
+            "sha256": "d063c2159e9d851cc2a391b29f01626f096e50e9bd39a06f76f89bb7f1cc3e12"
+          },
+          {
+            "bytes": 2326,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n13/n13__v__n12.tsv",
+            "sha256": "0da78fd0b44a7ad59b9e705284446b548c0cf83285a4fb041d470d6126448ce5"
+          },
+          {
+            "bytes": 2431,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n13/n13__v__n14.tsv",
+            "sha256": "174c115569085ce329e9f71508c9c77a34158be60f331347905bfad669ff5790"
+          },
+          {
+            "bytes": 1966,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n13/n13__v__n5.tsv",
+            "sha256": "304105c67418c01ec9aced5ff92da939824ff4bb86b622ed3a91ec4bf9bfb5af"
+          },
+          {
+            "bytes": 2053,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n13/n13__v__n6.tsv",
+            "sha256": "308ef7463ffb59e90de98a5ab339e481f3d6134fd832ba0a30277720dc4fc44c"
+          },
+          {
+            "bytes": 2212,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n13/n13__v__n7.tsv",
+            "sha256": "d426e64e7a2c85109057e5ddd90e78b23303cefe01a313655d7d00350db542e9"
+          },
+          {
+            "bytes": 2278,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n13/n13__v__n9.tsv",
+            "sha256": "400002ee245b7adc58c4c6231b1d4402c5165ac33c112a76ef92584caf4f4681"
+          },
+          {
+            "bytes": 2219,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n14/n14__v__n11.tsv",
+            "sha256": "b54ee7a6eb0a1e971ec3861d98f6ad8061a43a36f119d265a5313c1e48ff6f13"
+          },
+          {
+            "bytes": 2370,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n14/n14__v__n12.tsv",
+            "sha256": "771fe64fa7c34e5f77c6a055f7620a6ac5bd16b999d3957d5b52a1c453faa6d3"
+          },
+          {
+            "bytes": 2431,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n14/n14__v__n13.tsv",
+            "sha256": "ea21867818c35aa8cc762ccac134c14b0812ded59425a8718d8e3fb730a8f269"
+          },
+          {
+            "bytes": 1907,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n14/n14__v__n5.tsv",
+            "sha256": "4fdc184bd0247944a69d8060fce23bb05c2ea3485c9372fc2bb63abbc9e4efc7"
+          },
+          {
+            "bytes": 2093,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n14/n14__v__n6.tsv",
+            "sha256": "6fae171fed42756fe6465bf70d0e43d643ecbd8b4a5e451b97da9e102593d926"
+          },
+          {
+            "bytes": 2145,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n14/n14__v__n7.tsv",
+            "sha256": "178ea6ad4e5512c2b7ac5fecc10f0c0054154d916d923877eeac85f4c1f45526"
+          },
+          {
+            "bytes": 2240,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n14/n14__v__n9.tsv",
+            "sha256": "18e30319c0cc9b0ed407e4ab24f52afb0a9e2f1113096eef296d6d7fbf06c85c"
+          },
+          {
+            "bytes": 1944,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n5/n5__v__n11.tsv",
+            "sha256": "c639434a3fbf1d1052028b7c94b314782e9867675fd3c1dd7bfbddc9d2e67320"
+          },
+          {
+            "bytes": 1943,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n5/n5__v__n12.tsv",
+            "sha256": "1800aac7c04c1f8dab36ff125b659c45ef6ddf78f279e205dee1bf9e16a3b882"
+          },
+          {
+            "bytes": 1966,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n5/n5__v__n13.tsv",
+            "sha256": "644d52c190dcc847d650f65546d80430c1185052d9ddaff56d14bab01e507a7b"
+          },
+          {
+            "bytes": 1907,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n5/n5__v__n14.tsv",
+            "sha256": "78e83f9c926e6c02a9bb45f44e36f413582d7d31491453b3d1695690a92cf18d"
+          },
+          {
+            "bytes": 1951,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n5/n5__v__n6.tsv",
+            "sha256": "8039fc70848298cc6a793c3f3b7f8f74b9886161ca884603b228c89b6d3f9066"
+          },
+          {
+            "bytes": 1846,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n5/n5__v__n7.tsv",
+            "sha256": "93832d509b29c755948b60ec70ba7e4afecb4f77e050cae2716e9b322098f394"
+          },
+          {
+            "bytes": 1847,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n5/n5__v__n9.tsv",
+            "sha256": "fa90936da2c5740c3b443c46273b9108e19071530472ae3a0db4d739c32ff4b0"
+          },
+          {
+            "bytes": 1988,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n6/n6__v__n11.tsv",
+            "sha256": "888f847bcd5fe9a394d958767343c6fa7739e1787107c4642c840a60306ca7bc"
+          },
+          {
+            "bytes": 2118,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n6/n6__v__n12.tsv",
+            "sha256": "fe5352380a2d5997d72c70baee5ea8df6940356cd975745d8bf14e26c548da2e"
+          },
+          {
+            "bytes": 2053,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n6/n6__v__n13.tsv",
+            "sha256": "a22304250eaf1ce6036fb69e353948c63c80576464cf29bbd833a50995be0cd2"
+          },
+          {
+            "bytes": 2093,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n6/n6__v__n14.tsv",
+            "sha256": "3dbaa0fed118549cd9f03590b2d9d8baa37327bbc0bf926aeac760fca5bea1ae"
+          },
+          {
+            "bytes": 1951,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n6/n6__v__n5.tsv",
+            "sha256": "ac20fa8a96d35437f5ece25022d53172cad323f8259c9483e91e543fc7d21ab8"
+          },
+          {
+            "bytes": 2002,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n6/n6__v__n7.tsv",
+            "sha256": "8fd64c1fa07d3b50b69a68e2aa007772fe253b62b14119cf7c59b177dedb27b6"
+          },
+          {
+            "bytes": 1993,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n6/n6__v__n9.tsv",
+            "sha256": "cb8ab06551139f06cfb9e071035161475dc711e50ab0b4f94c9c46d82e7f288d"
+          },
+          {
+            "bytes": 2066,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n7/n7__v__n11.tsv",
+            "sha256": "9d50dd7d2a916793c449575d35d37d30b674b00a0fbb2976c6591e21d9c1d593"
+          },
+          {
+            "bytes": 2291,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n7/n7__v__n12.tsv",
+            "sha256": "556c5b12a226a750aa000e5c25732bfc86a3e8cb8876c571bb3be843da14892d"
+          },
+          {
+            "bytes": 2212,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n7/n7__v__n13.tsv",
+            "sha256": "6fb21b84b17940c9c7be0cbaea856064d87c2850e3824ab9cbb75e7657b74bcd"
+          },
+          {
+            "bytes": 2145,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n7/n7__v__n14.tsv",
+            "sha256": "bd4b25d9b7c56b4fb64af00d5429c42fd6cac312f9c29a4fc1048b5e1ebdeb3d"
+          },
+          {
+            "bytes": 1846,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n7/n7__v__n5.tsv",
+            "sha256": "f038e6b402b7907dbe04f8e6f52f727629da7eb29e55f8839134cf22bbc6d76c"
+          },
+          {
+            "bytes": 2002,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n7/n7__v__n6.tsv",
+            "sha256": "55788c16fbd9bc9f6cb045bb48f90c696052c96f7db03230e33379b9919eed57"
+          },
+          {
+            "bytes": 2153,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n7/n7__v__n9.tsv",
+            "sha256": "5de566076eb17a6326b3f4e21e1444f8fae589193379b2fefee184ed61485e7e"
+          },
+          {
+            "bytes": 2190,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n9/n9__v__n11.tsv",
+            "sha256": "03f8a44e7e9c7ca41077551ecc5cf2f1c7865c2be7d806cb3d26ea9b18d2be5e"
+          },
+          {
+            "bytes": 2309,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n9/n9__v__n12.tsv",
+            "sha256": "a9f88a16e9b7beadbbc63152d4ffaeec70498410e99d2a766cf0ae4772692c21"
+          },
+          {
+            "bytes": 2278,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n9/n9__v__n13.tsv",
+            "sha256": "f80eab69663f430772a841ae0e0083fa66524856641d937aad70d248b492ae7a"
+          },
+          {
+            "bytes": 2240,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n9/n9__v__n14.tsv",
+            "sha256": "95258025ad95b7612aaf89758ad9ec1f1468e34b7d933fecba5756d7b0b6f35f"
+          },
+          {
+            "bytes": 1847,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n9/n9__v__n5.tsv",
+            "sha256": "e5d8d160ac53858f66877df467b147adc058236ef87026a9441299cb65049b0b"
+          },
+          {
+            "bytes": 1993,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n9/n9__v__n6.tsv",
+            "sha256": "8f4727dc564555d369edf14f8ae1f90b081ba8b52f5317c7e71f1a1a1b4d723f"
+          },
+          {
+            "bytes": 2153,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthologues/Orthologues_n9/n9__v__n7.tsv",
+            "sha256": "ae251c8cabfc1c12fe87b05249816d508867ffa53a7ecfa8184d72c7ecbcfe0d"
+          }
+        ],
+        "checkpoint_groups": 99,
+        "evidence_relocation": {
+          "/home/jlsteenwyk/projects/orthohmm-publication": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802"
+        },
+        "gnu_time_companion": {
+          "accounting": {
+            "elapsed_seconds": 9.78,
+            "exit_status": 0,
+            "max_process_rss_kib": 169660,
+            "semantics": {
+              "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+              "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+              "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+              "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+            },
+            "system_seconds": 6.66,
+            "user_seconds": 23.44
+          },
+          "source": {
+            "bytes": 101,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_counter_native_smoke_21802/counter_native_smoke_v1/run_02/native.time.tsv",
+            "sha256": "f36d3a500790327f1171b46eeb7d46d2ff02f724b3ecd429c0d2c1013e1fceab"
+          },
+          "wrapper_in_collector_wall_time": true
+        },
+        "input_genes": 645,
+        "limitations": [
+          "Caller must independently verify frozen manifest/source/runtime before and after inference.",
+          "Native validity does not establish a quiet host, valid timing, or prediction accuracy.",
+          "OrthoFinder validation expands native relation rows outside the inference timer."
+        ],
+        "native_pair_rows": 1834,
+        "resource_measurements_admitted": false,
+        "source": {
+          "bytes": 8784,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_scaling_outputs.py",
+          "sha256": "d76d8c65eaba0ece8ac98688033784b974f6859ff5b2ded807a2cf4d4847f172"
+        },
+        "status": "native_scaling_outputs_checked"
+      },
+      "scheduler": "JobId=21802 ArrayJobId=21802 ArrayTaskId=2 ArrayTaskThrottle=1 JobName=counter-native-smoke\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=COMPLETED Reason=None Dependency=(null)\n   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:20 TimeLimit=01:00:00 TimeMin=N/A\n   SubmitTime=2026-09-18T15:44:10 EligibleTime=2026-09-18T15:44:41\n   AccrueTime=2026-09-18T15:44:24\n   StartTime=2026-09-18T15:44:41 EndTime=2026-09-18T15:45:01 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-18T15:44:41 Scheduler=Main\n   Partition=spark AllocNode:Sid=spark:798431\n   ReqNodeList=spark-7ff0 ExcNodeList=(null)\n   NodeList=spark-7ff0\n   BatchHost=spark-7ff0\n   NumNodes=1 NumCPUs=20 NumTasks=1 CPUs/Task=20 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=20,mem=96G,node=1,billing=20\n   AllocTRES=cpu=20,mem=96G,node=1,billing=20\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=20 MinMemoryNode=96G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=NO Contiguous=0 Licenses=(null) Network=(null)\n   Command=/home/jlsteenwyk/projects/orthohmm-publication/counter_native_recipe_v1/benchmark_tools/run_dgx_counter_native_smoke.sh\n   WorkDir=/home/jlsteenwyk\n   StdErr=/home/jlsteenwyk/projects/orthohmm-publication/counter-native-21802_2.log\n   StdIn=/dev/null\n   StdOut=/home/jlsteenwyk/projects/orthohmm-publication/counter-native-21802_2.log\n   TresPerTask=cpu:20\n   \n\n",
+      "verification": {
+        "after": {
+          "copied_inputs": [
+            {
+              "bytes": 25419,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/counter_native_smoke_v1/run_02/orthofinder_full/input/n11.fasta",
+              "sha256": "c9e7e01d18b0bd4d133b1588b417c2598b120901c38f3e12ebdeba2a8f97369f"
+            },
+            {
+              "bytes": 26367,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/counter_native_smoke_v1/run_02/orthofinder_full/input/n12.fasta",
+              "sha256": "3c5356bfbd29f872755fcf8cb83d092bc63b83bf1117f87546580baf503598b1"
+            },
+            {
+              "bytes": 25992,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/counter_native_smoke_v1/run_02/orthofinder_full/input/n13.fasta",
+              "sha256": "460b6ba93725298cb9e415b19ca38ec2679d622e0309bb69a683b0c4d428d75b"
+            },
+            {
+              "bytes": 25773,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/counter_native_smoke_v1/run_02/orthofinder_full/input/n14.fasta",
+              "sha256": "fa639b0dd9da1c40743221a5e85a48a2d1183e2583782cbc28743077b92cc095"
+            },
+            {
+              "bytes": 22575,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/counter_native_smoke_v1/run_02/orthofinder_full/input/n5.fasta",
+              "sha256": "fe32ef88650cabe1e0239385a8f646020a0c8c01b02abb1487eab91dd3f014f7"
+            },
+            {
+              "bytes": 24465,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/counter_native_smoke_v1/run_02/orthofinder_full/input/n6.fasta",
+              "sha256": "9c12b7f6233a2fa1161fe5bdb904d8416935f43f1d66832db643723db2b98e5c"
+            },
+            {
+              "bytes": 25804,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/counter_native_smoke_v1/run_02/orthofinder_full/input/n7.fasta",
+              "sha256": "bd5a375e99f12fc22bece6a6553a1636104321b1b5ddf2f7a398e909a6477a57"
+            },
+            {
+              "bytes": 26353,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/counter_native_smoke_v1/run_02/orthofinder_full/input/n9.fasta",
+              "sha256": "8b92d25187584bbc38daff6dec0d671294e30d3484a77a31cc7dcc5b3483867f"
+            }
+          ],
+          "native_order": [
+            "n14.fasta",
+            "n11.fasta",
+            "n5.fasta",
+            "n13.fasta",
+            "n6.fasta",
+            "n7.fasta",
+            "n12.fasta",
+            "n9.fasta"
+          ],
+          "original_inputs": [
+            {
+              "bytes": 25773,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n14.fasta",
+              "sha256": "fa639b0dd9da1c40743221a5e85a48a2d1183e2583782cbc28743077b92cc095"
+            },
+            {
+              "bytes": 25419,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n11.fasta",
+              "sha256": "c9e7e01d18b0bd4d133b1588b417c2598b120901c38f3e12ebdeba2a8f97369f"
+            },
+            {
+              "bytes": 22575,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n5.fasta",
+              "sha256": "fe32ef88650cabe1e0239385a8f646020a0c8c01b02abb1487eab91dd3f014f7"
+            },
+            {
+              "bytes": 25992,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n13.fasta",
+              "sha256": "460b6ba93725298cb9e415b19ca38ec2679d622e0309bb69a683b0c4d428d75b"
+            },
+            {
+              "bytes": 24465,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n6.fasta",
+              "sha256": "9c12b7f6233a2fa1161fe5bdb904d8416935f43f1d66832db643723db2b98e5c"
+            },
+            {
+              "bytes": 25804,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n7.fasta",
+              "sha256": "bd5a375e99f12fc22bece6a6553a1636104321b1b5ddf2f7a398e909a6477a57"
+            },
+            {
+              "bytes": 26367,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n12.fasta",
+              "sha256": "3c5356bfbd29f872755fcf8cb83d092bc63b83bf1117f87546580baf503598b1"
+            },
+            {
+              "bytes": 26353,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n9.fasta",
+              "sha256": "8b92d25187584bbc38daff6dec0d671294e30d3484a77a31cc7dcc5b3483867f"
+            }
+          ],
+          "runtime": [
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/trees.json",
+              "records": 26673,
+              "scientific_execution_authorized": false,
+              "sha256": "2f38fc57683e51a7b6768b4709db16293590983640c41cfe12a56ed6036750ae",
+              "status": "runtime_tree_identity_matches"
+            },
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/system_trees.json",
+              "records": 10066,
+              "scientific_execution_authorized": false,
+              "sha256": "4083d15c0ffc40013756c4588763aa8af24ca39165622665ee5074662e4b46ce",
+              "status": "runtime_tree_identity_matches"
+            },
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/counter_native_recipe_v1.json",
+              "records": 16,
+              "scientific_execution_authorized": false,
+              "sha256": "9b4475bf95f0cdbf54f2c2cb56238d194c5db59a0da92a9ef7b63739c63ecaab",
+              "status": "runtime_tree_identity_matches"
+            }
+          ]
+        },
+        "after_check_wall_s": 4.446736573707312,
+        "before": {
+          "native_order": [
+            "n14.fasta",
+            "n11.fasta",
+            "n5.fasta",
+            "n13.fasta",
+            "n6.fasta",
+            "n7.fasta",
+            "n12.fasta",
+            "n9.fasta"
+          ],
+          "original_inputs": [
+            {
+              "bytes": 25773,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n14.fasta",
+              "sha256": "fa639b0dd9da1c40743221a5e85a48a2d1183e2583782cbc28743077b92cc095"
+            },
+            {
+              "bytes": 25419,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n11.fasta",
+              "sha256": "c9e7e01d18b0bd4d133b1588b417c2598b120901c38f3e12ebdeba2a8f97369f"
+            },
+            {
+              "bytes": 22575,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n5.fasta",
+              "sha256": "fe32ef88650cabe1e0239385a8f646020a0c8c01b02abb1487eab91dd3f014f7"
+            },
+            {
+              "bytes": 25992,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n13.fasta",
+              "sha256": "460b6ba93725298cb9e415b19ca38ec2679d622e0309bb69a683b0c4d428d75b"
+            },
+            {
+              "bytes": 24465,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n6.fasta",
+              "sha256": "9c12b7f6233a2fa1161fe5bdb904d8416935f43f1d66832db643723db2b98e5c"
+            },
+            {
+              "bytes": 25804,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n7.fasta",
+              "sha256": "bd5a375e99f12fc22bece6a6553a1636104321b1b5ddf2f7a398e909a6477a57"
+            },
+            {
+              "bytes": 26367,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n12.fasta",
+              "sha256": "3c5356bfbd29f872755fcf8cb83d092bc63b83bf1117f87546580baf503598b1"
+            },
+            {
+              "bytes": 26353,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n9.fasta",
+              "sha256": "8b92d25187584bbc38daff6dec0d671294e30d3484a77a31cc7dcc5b3483867f"
+            }
+          ],
+          "runtime": [
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/trees.json",
+              "records": 26673,
+              "scientific_execution_authorized": false,
+              "sha256": "2f38fc57683e51a7b6768b4709db16293590983640c41cfe12a56ed6036750ae",
+              "status": "runtime_tree_identity_matches"
+            },
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/system_trees.json",
+              "records": 10066,
+              "scientific_execution_authorized": false,
+              "sha256": "4083d15c0ffc40013756c4588763aa8af24ca39165622665ee5074662e4b46ce",
+              "status": "runtime_tree_identity_matches"
+            },
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/counter_native_recipe_v1.json",
+              "records": 16,
+              "scientific_execution_authorized": false,
+              "sha256": "9b4475bf95f0cdbf54f2c2cb56238d194c5db59a0da92a9ef7b63739c63ecaab",
+              "status": "runtime_tree_identity_matches"
+            }
+          ]
+        },
+        "before_check_wall_s": 4.44574027787894,
+        "limitations": [
+          "Identity checks are outside the native command timer.",
+          "Hashing warms file caches; this is not cold-cache timing.",
+          "Cgroup memory peak may retain preparation and verification allocations.",
+          "Native outputs and collector records still require independent admission."
+        ],
+        "measurement": {
+          "controlled_workload_verified": false,
+          "counter_read_errors": 0,
+          "host_summary": {
+            "accounted_host_busy_average_cores": 3.0859109396022664,
+            "accounted_host_busy_cpu_s": 30.28,
+            "controlled_workload_verified": false,
+            "cpu_delta_ticks": {
+              "guest": 0,
+              "guest_nice": 0,
+              "idle": 16515,
+              "iowait": 21,
+              "irq": 0,
+              "nice": 0,
+              "softirq": 1,
+              "steal": 0,
+              "system": 684,
+              "user": 2343
+            },
+            "iowait_decreased": false,
+            "midpoint_span_s": 9.8123376185,
+            "status": "host_counter_diagnostic_only"
+          },
+          "job_id": 21802,
+          "launched": [
+            "srun",
+            "--exclusive",
+            "--exact",
+            "--nodes=1",
+            "--ntasks=1",
+            "--cpus-per-task=20",
+            "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+            "-B",
+            "/home/jlsteenwyk/projects/orthohmm-publication/counter_native_recipe_v1/benchmark_tools/measure_native_counter_step.py",
+            "--worker",
+            "/home/jlsteenwyk/projects/orthohmm-publication/counter_native_smoke_v1/run_02/measurement"
+          ],
+          "limitations": [
+            "Engineering smoke; no exclusivity or calibrated overhead claim.",
+            "Observer shares allocation CPUs with the native step; cgroup scopes differ.",
+            "Cgroup memory is not RSS and includes the native wrapper.",
+            "Host and native counters have different read windows; no foreign-CPU subtraction.",
+            "Native outputs require separate validation; nonzero/read-error runs are retained."
+          ],
+          "native": {
+            "exit_code": 0,
+            "finished_ns": 2245958856330826,
+            "started_ns": 2245949065444595
+          },
+          "native_snapshots": [
+            {
+              "cpu_ticks": {
+                "guest": 0,
+                "guest_nice": 0,
+                "idle": 4368852407,
+                "iowait": 278288,
+                "irq": 0,
+                "nice": 638,
+                "softirq": 16790,
+                "steal": 0,
+                "system": 2128328,
+                "user": 118504259
+              },
+              "errors": [],
+              "finished_monotonic_ns": 2245949044572864,
+              "optional": {
+                "cgroup_cpu.stat": "usage_usec 91253\nuser_usec 81335\nsystem_usec 9918\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+                "cgroup_memory.current": "9744384\n",
+                "cgroup_memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+                "cgroup_memory.peak": "10489856\n",
+                "host_cpu_pressure": "some avg10=0.82 avg60=0.35 avg300=0.08 total=1308886162\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0\n",
+                "host_io_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=1533059574\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=1517019720\n",
+                "host_memory_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=2801\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=953\n"
+              },
+              "raw": {
+                "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9\n",
+                "cgroup_membership": "0::/system.slice/spark-7ff0_slurmstepd.scope/job_21802/step_0/user/task_0\n",
+                "online_cpus": "0-19\n",
+                "proc_stat": "cpu  118504259 638 2128328 4368852407 278288 0 16790 0 0 0\ncpu0 5539657 10 145376 218668199 13808 0 7015 0 0 0\ncpu1 5619918 5 151826 218695287 21583 0 485 0 0 0\ncpu2 5652122 3 153713 218647159 22480 0 195 0 0 0\ncpu3 5718701 5 137108 218622243 17625 0 141 0 0 0\ncpu4 5709740 8 137366 218632269 14227 0 144 0 0 0\ncpu5 6067300 62 76485 218347902 17913 0 293 0 0 0\ncpu6 6114849 0 71970 218309020 15283 0 134 0 0 0\ncpu7 6109971 12 68681 218322690 12647 0 186 0 0 0\ncpu8 6085845 42 80203 218336604 13642 0 174 0 0 0\ncpu9 6107279 0 64807 218335707 13294 0 175 0 0 0\ncpu10 5727070 6 139859 218588748 10731 0 152 0 0 0\ncpu11 5717068 0 139547 218617662 15793 0 112 0 0 0\ncpu12 5734690 6 133041 218596319 16029 0 90 0 0 0\ncpu13 5780863 6 144563 218505170 12337 0 3656 0 0 0\ncpu14 5794301 5 145659 218528403 12855 0 1855 0 0 0\ncpu15 6219186 24 68946 218195744 11843 0 993 0 0 0\ncpu16 6157600 16 72725 218267084 9677 0 431 0 0 0\ncpu17 6208680 14 57096 218227506 7507 0 329 0 0 0\ncpu18 6175926 4 67603 218259086 11332 0 107 0 0 0\ncpu19 6263485 402 71745 218149594 7675 0 114 0 0 0\nintr 1912817208 0 6521344 110573703 0 0 327319880 6508 0 0 0 0 0 1344421477 0 108841764 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5818 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3056 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 365140 0 0 0 0 0 0 0 483334 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7 0 0 16392 237169 225230 210752 188857 179696 74704 88920 102765 73439 73555 71499 54760 51746 93325 78844 33740 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 34076 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 34015 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 33302 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 12297154 0 3185 0 17879 0 0 0 0 0\nctxt 592622920\nbtime 1787514737\nprocesses 9198484\nprocs_running 1\nprocs_blocked 0\nsoftirq 965905265 561 382148120 162 1888085 139829 0 29171091 339312290 1097 213244030\n"
+              },
+              "started_monotonic_ns": 2245949044238880
+            },
+            {
+              "cpu_ticks": {
+                "guest": 0,
+                "guest_nice": 0,
+                "idle": 4368868922,
+                "iowait": 278309,
+                "irq": 0,
+                "nice": 638,
+                "softirq": 16791,
+                "steal": 0,
+                "system": 2129012,
+                "user": 118506602
+              },
+              "errors": [],
+              "finished_monotonic_ns": 2245958857123563,
+              "optional": {
+                "cgroup_cpu.stat": "usage_usec 30413678\nuser_usec 23569497\nsystem_usec 6844180\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+                "cgroup_memory.current": "17928192\n",
+                "cgroup_memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+                "cgroup_memory.peak": "1090670592\n",
+                "host_cpu_pressure": "some avg10=0.76 avg60=0.42 avg300=0.10 total=1308985445\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0\n",
+                "host_io_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=1533070021\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=1517029465\n",
+                "host_memory_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=2801\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=953\n"
+              },
+              "raw": {
+                "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9\n",
+                "cgroup_membership": "0::/system.slice/spark-7ff0_slurmstepd.scope/job_21802/step_0/user/task_0\n",
+                "online_cpus": "0-19\n",
+                "proc_stat": "cpu  118506602 638 2129012 4368868922 278309 0 16791 0 0 0\ncpu0 5539749 10 145405 218669038 13815 0 7015 0 0 0\ncpu1 5620010 5 151859 218696138 21583 0 485 0 0 0\ncpu2 5652212 3 153750 218648010 22480 0 195 0 0 0\ncpu3 5718782 5 137144 218623103 17625 0 141 0 0 0\ncpu4 5709832 8 137399 218633125 14227 0 144 0 0 0\ncpu5 6067391 62 76514 218348760 17913 0 293 0 0 0\ncpu6 6114934 0 72004 218309878 15284 0 134 0 0 0\ncpu7 6110060 12 68724 218323538 12647 0 186 0 0 0\ncpu8 6085930 42 80235 218337465 13642 0 175 0 0 0\ncpu9 6107358 0 64836 218336580 13294 0 175 0 0 0\ncpu10 5727154 6 139890 218589611 10731 0 152 0 0 0\ncpu11 5717155 0 139583 218618515 15796 0 112 0 0 0\ncpu12 5734777 6 133075 218597175 16030 0 90 0 0 0\ncpu13 5780950 6 144592 218506034 12338 0 3656 0 0 0\ncpu14 5794389 5 145691 218529263 12856 0 1855 0 0 0\ncpu15 6219680 24 68984 218196189 11845 0 993 0 0 0\ncpu16 6157680 16 72750 218267956 9679 0 431 0 0 0\ncpu17 6208757 14 57135 218228369 7507 0 329 0 0 0\ncpu18 6176019 4 67632 218259942 11332 0 107 0 0 0\ncpu19 6263774 402 71802 218150226 7675 0 114 0 0 0\nintr 1912919246 0 6541105 110610018 0 0 327320041 6508 0 0 0 0 0 1344466384 0 108842323 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5818 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3056 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 365141 0 0 0 0 0 0 0 483336 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7 0 0 16392 237254 225247 210763 188865 179705 74708 88959 102768 73445 73574 71525 54769 51752 93329 78859 33740 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 34076 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 34015 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 33302 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 12297225 0 3185 0 17879 0 0 0 0 0\nctxt 592751553\nbtime 1787514737\nprocesses 9224798\nprocs_running 1\nprocs_blocked 0\nsoftirq 965949640 561 382149937 162 1888090 139835 0 29171248 339322791 1097 213275919\n"
+              },
+              "started_monotonic_ns": 2245958856363418
+            }
+          ],
+          "native_wall_s": 9.790886231,
+          "observer_snapshots": 11,
+          "publication_ready": false,
+          "scientific_results_admitted": false,
+          "status": "command_exited_zero"
+        },
+        "scientific_results_admitted": false,
+        "source_sha256": "36243fcdfe6f49e73dbe1dd1b627bf4a330f19f3cd52dcf94a9618ddf0415cf8",
+        "status": "command_exited_zero"
+      }
+    }
+  ],
+  "scientific_timings_admitted": 0,
+  "source": {
+    "bytes": 5097,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_counter_native_smokes.py",
+    "sha256": "6335ac905a802a28e4e916c14bffc5a2b1c1fde9029321f30cf6273bc05e0d8b"
+  },
+  "specification": {
+    "bytes": 20177,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/dgx_launcher_smoke_spec_20260917.json",
+    "sha256": "8af8a049c69b7e479e8443e1e0e14b74c78d67b345c03d7f557768488d057fa2"
+  },
+  "status": "three_counter_native_smokes_validated_not_timing_admission"
+}

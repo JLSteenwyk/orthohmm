@@ -36,3 +36,26 @@ def test_frozen_limits(command, cpus, timeout, interval):
 def test_non_output_prefix_is_unchanged():
     other = str(ROOT / "launcher_smoke_v10/input")
     assert relocate(other) == other
+
+
+def test_retained_three_native_smokes():
+    from benchmark_tools.probe_host_counters import summarize
+    root = Path(__file__).resolve().parents[2]
+    report = json.loads((root / "benchmark_tools/results/dgx_counter_native_smokes_21802.json").read_text())
+    assert report["scientific_timings_admitted"] == 0
+    assert report["publication_ready"] is False
+    assert report["controlled_workload_verified"] is False
+    assert [r["index"] for r in report["runs"]] == [0, 1, 2]
+    for row in report["runs"]:
+        proof = row["verification"]
+        assert proof["status"] == "command_exited_zero"
+        assert proof["before"] == {k: v for k, v in proof["after"].items() if k != "copied_inputs"}
+        m = proof["measurement"]
+        assert m["native"]["exit_code"] == 0
+        assert m["counter_read_errors"] == 0
+        assert summarize(*m["native_snapshots"], 100) == m["host_summary"]
+        assert row["output_validation"]["input_genes"] == 645
+        assert row["output_validation"]["status"] == "native_scaling_outputs_checked"
+        assert row["output_validation"]["resource_measurements_admitted"] is False
+        assert "JobState=COMPLETED " in row["scheduler"]
+        assert "ExitCode=0:0" in row["scheduler"]

@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Counter-Native Pipeline Smokes Validated (2026-09-18 UTC)
+
+Previous turn progressed through9b08fa0 with the completed fixed-work DGX
+probe. Reread the full objective. Initial scheduler check confirmed21792
+RUNNING29:33 and HMM21706_0 RUNNING14:53:29;21798 remained dependency-pending.
+
+Added a counter-only separate-step collector while preserving existing fresh
+native input preparation, runtime verification and frozen scientific commands.
+Committed/pushed f2904ea and bdd9735 before submission. Array21802 ran all
+three methods sequentially at20CPU/96GiB on the DGX; all exited0:0 without
+restarts. Downloaded1063files/3820668bytes and audited exact command identity,
+runtime/input checks, scheduler status, counters and native output validity.
+All645input proteins are covered, and no counter reads failed. Seventy-eight
+focused tests pass. The audit's OrthoFinder before/after key handling was
+corrected for post-preparation copied-input evidence; no inference was rerun.
+
+Evidence and limits: DGX_COUNTER_NATIVE_SMOKE_RESULT_20260918.md and
+dgx_counter_native_smokes_21802.json. This completes functional monitoring
+smokes, not controlled timing admission. A prospective inclusion/execution
+plan is still required; no new scaling panel was launched. Corrected QfO
+results, remaining endpoint uncertainty and final publication packaging are
+also incomplete.
+
 ## DGX Compute-Counter Probe Completed (2026-09-18 UTC)
 
 Previous goal turn progressed through4591b7a with verified OrthoBench
