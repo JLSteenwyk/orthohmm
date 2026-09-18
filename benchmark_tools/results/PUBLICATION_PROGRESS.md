@@ -1,5 +1,22 @@
 # Publication Progress
 
+## First R-On QfO Factorial Cell Now Scoring (2026-09-18 UTC)
+
+After the task-level scheduling change in 830525e, conversion 21675_1
+completed 0:0 in 2:25. Its pinned report retains 4,950,789/4,966,346 native
+pairs (15,557 mapping-filter exclusions), saved as
+`qfo_factorial_pairs_p0_c0_r1_20260918.json`. Submitted existing frozen
+assessment wrapper as job21697 for index1/p0_c0_r1, with exact pair-report
+SHA-256 `1dd84c1a7bb1a4a97012e8f53fba551fddf03d870e6edf1b7db7ffcc2a19f327`.
+Verified running on bizon and correct preflight; score validation job21698
+is queued afterany21697 with the same immutable evidence binding.
+
+No new accuracy result is admitted yet. Remaining original reconciliation
+cells, corrected-input download/audits and DGX timings continue. Original
+QfO release caveats and all scientific settings remain unchanged. Full goal
+active; see `QFO_FACTORIAL_TASK_DEPENDENCIES_20260918.md` for reproducible
+scheduler/provenance details. Do not relaunch these jobs while handles live.
+
 ## QfO Pipeline Advances Per Completed Reconciliation Cell (2026-09-18 UTC)
 
 Previous turn progressed with corrected staging commit bfff2f4. Re-read the

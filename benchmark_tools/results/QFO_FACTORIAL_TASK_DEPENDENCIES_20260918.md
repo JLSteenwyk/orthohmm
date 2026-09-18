@@ -75,3 +75,28 @@ Pair conversion 21675_1 subsequently started on bizon under its existing
 frozen converter. It remains subject to its own terminal completion and
 pair-manifest checks before scoring. The full unit suite, including the new
 corrected-input staging implementation, passes 2,518 tests in 52.31 seconds.
+
+## First R-On Assessment Submitted
+
+Conversion 21675_1 completed 0:0 on bizon in 2:25. The frozen report snapshot
+`qfo_factorial_pairs_p0_c0_r1_20260918.json` has SHA-256
+`1dd84c1a7bb1a4a97012e8f53fba551fddf03d870e6edf1b7db7ffcc2a19f327`.
+It retains 4,950,789 of 4,966,346 native phylogenetically inferred pairs;
+15,557 pairs are excluded by the existing reference-mapping filter. This is
+prediction coverage, not an accuracy score or a completeness claim about the
+original release.
+
+Submitted assessment 21697 for cell index 1 (`p0_c0_r1`) using the unchanged
+8-CPU/64-GiB/24-hour batch wrapper, exact executor revision above, and that
+pair-report hash. It is running on bizon; its actual preflight identifies
+job21697, cell1 and `accuracy_admitted: false` after source/reference checks.
+Submitted score admission 21698 with `afterany:21697`, unchanged pinned
+score-admission executor, index1, job21697 and the same pair-report hash.
+It requires successful terminal scoring and full native metric/task checks;
+the dependency alone does not admit a result.
+
+Results are under `benchmarks/results/qfo_factorial_assessment_v1/p0_c0_r1/`;
+scorer work/output uses the existing per-cell paths. The score-admission
+report will be `benchmarks/results/qfo_factorial_assessment_v1/admission_1.json`.
+Inspect the existing job handles; do not submit duplicate assessments or
+replace missing terminal results with intermediate metric files.
