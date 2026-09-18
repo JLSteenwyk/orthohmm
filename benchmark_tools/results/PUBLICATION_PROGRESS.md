@@ -1,5 +1,21 @@
 # Publication Progress
 
+## QfO Admission Array Queued (2026-09-17)
+
+Admission code and protocol clarification were committed/pushed as adec7e1.
+Created detached executor `benchmarks/work/publication_qfo_factorial_admission_v1`
+at adec7e1010d1ab87424064db181600d0e44b7dfc. Submitted array21673, tasks0-3%1,
+2CPUs/64GiB per validation task on bizon, with afterany:21671. Slurm confirms
+PENDING(Dependency), dependency `afterany:21671_*(unfulfilled)`. Validation will
+inspect each terminal cell separately; a failed inference cannot pass the
+success gate and does not prevent other completed cells being checked.
+
+Admission reports, only on success, will be written to
+`benchmarks/results/qfo_factorial_v1/native_admission_INDEX.json`; logs to
+`benchmarks/work/qfo_factorial_admit_21673_INDEX.log`. No report or scoring
+completion is asserted. Reconciliation21671_0 remains RUNNING at7:12;
+DGX21656_7 remains RUNNING at21:55. Neither live process was restarted.
+
 ## QfO Native Admission and Conversion Clarification (2026-09-17)
 
 Previous turn progressed preparation admission and launched reconciliation21671;

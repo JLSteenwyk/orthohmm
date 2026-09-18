@@ -53,6 +53,11 @@ evidence that an experiment completed or a biological hypothesis is true.
   core launcher. No reconciliation completion or new accuracy is claimed.
   Initial submission21669 failed a mistyped commit-argument check before
   preparation and is retained. The DGX timing node is not used.
+  Admission array21673 waits for reconciliation termination and requires
+  native pair integrity as well as complete group coverage. A pre-scoring
+  protocol clarification corrects the inherited RootHOG conversion wording:
+  R-on QfO evaluates native pairwise predictions, not RootHOG clique pairs.
+  No new accuracy score or inference configuration changed in that correction.
 - [GO/EC arithmetic](QFO_GO_EC_ARITHMETIC_AUDIT_20260917.md) verifies all24
   retained count/mean/interval rows within serialization bounds; Darwin's
   stderr is a Student-t95% confidence half-width. [FAS arithmetic](QFO_FAS_SAMPLE_AUDIT_20260917.md)
