@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Corrected Search Panel Validation Queued (2026-09-18 UTC)
+
+Previous turn progressed through8d7941e: corrected search21789 submitted.
+Live revalidation finds21789 RUNNING1:00, HMM21706_0 RUNNING10:12:38 and
+final DGX21656_26 RUNNING47:33. No existing jobs restarted or stopped.
+
+Added independent full-panel execution admission, requiring terminal
+32CPU/192GiB/bizon success, frozen executor, exact input/search preparation,
+all78 ordered target records, successful database and search phases,
+unchanged commands/environment, finite phase durations and all retained
+hit/database/log/timing hashes. This does not inspect hit rows or establish
+biological completeness, matched sensitivity, or resource comparability.
+Its status explicitly remains pending_numeric_validation.
+
+55 focused tests pass in0.44s. Actual CLI preflight against live21789
+correctly rejects terminal-state absence before reading partial evidence;
+no preflight admission artifact was created. Frozen validator revision
+6cf2e92074733cab036c1dd1674467bd37ce2313 at
+benchmarks/work/publication_qfo_sequence_search_admission_v1 submitted as
+21790 afterany:21789 at2026-09-18T11:01:31. scontrol confirms pending
+dependency,2CPU/64GiB/24h/bizon/no-requeue. Its future output is
+benchmarks/work/qfo_sequence_search_admission_20260918.json.
+
+Next: corrected-only numeric conversion with exact ID/length/ownership,
+duplicate-pair and finite-score checks, retaining all-hit and post-search
+top100 diagnostics. No partial panel may proceed to graph inference.
+DGX validation awaits terminal final task; full publication goal active.
+
 ## Corrected QfO Sequence Search Submitted (2026-09-18 UTC)
 
 Previous turn progressed through2e7b6ea: corrected78-target inputs prepared.

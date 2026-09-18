@@ -76,3 +76,12 @@ panel complete_pending_numeric_validation. That status is not accuracy
 admission. The preparation manifest remains unchanged; its false execution
 authorization is a preparation-state field, not a completed-run claim.
 Numeric conversion, graph replay, hit diagnostics and scoring remain open.
+
+Independent panel admission21790 follows afterany:21789, using frozen
+6cf2e92074733cab036c1dd1674467bd37ce2313 at
+publication_qfo_sequence_search_admission_v1. It requires successful
+terminal accounting and verifies all78 target commands, phase outcomes and
+retained file identities.2CPU/64GiB/24h/bizon/no-requeue; submitted
+2026-09-18T11:01:31.55 focused tests and actual live-job rejection pass.
+Future output: benchmarks/work/qfo_sequence_search_admission_20260918.json.
+This is execution admission only; numeric hit validation is still required.
