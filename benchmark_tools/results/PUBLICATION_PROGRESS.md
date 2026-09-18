@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Corrected Proteinortho Scored; Replay Worker Integration (2026-09-18 UTC)
+
+Previous turn progressed with the corrected replay manifest builder and
+2,859 passing unit tests. Corrected Proteinortho scoring 21718 now completed
+0:0 in 36:06; independent admission 21719 completed 0:0 in 17 seconds.
+Reran the unchanged frozen validator and compared the entire parsed report:
+exact agreement. Preserved `qfo_corrected_proteinortho_assessment_20260918.json`
+SHA-256 `00acc10285b955cf0b33c8b3d95044e4f797ab77ba6ae4e768b62615e61f1552`.
+Six endpoints, precision/recall, coverage and limitations are reported in
+QFO_CORRECTED_PROTEINORTHO_ASSESSMENT_20260918.md. Corrected results remain
+separate from original-release results; no paired intervals or ranking yet.
+
+Implemented explicit corrected-plan handling in the checked clustering worker,
+interceptor and postflight validator, while preserving the original-release
+default. The corrected parent driver now checks all four native boundaries,
+stage coverage, HMM profile evidence and comparison with fresh native groups.
+It retains nonequivalence and failures without retry or score transfer.
+No corrected replay was launched; real native admission and a frozen execution
+manifest remain prerequisites. Synthetic orchestration tests are not evidence
+that a full corrected biological replay has completed.
+Full unit suite after fixing a subprocess-mock collision: **2,895 passed,
+one skipped in 62.31 seconds**. The skip is the opt-in installed legacy
+BLAST smoke; no inference source or running frozen executor was changed.
+
 ## Corrected Replay Manifest Builder (2026-09-18 UTC)
 
 Previous turn progressed by queuing corrected native HMM admission 21720
