@@ -62,3 +62,58 @@ def test_run_preserves_native_status(monkeypatch, tmp_path, exit_code):
     assert final["accuracy_admitted"] is False
     assert (output / "preflight.json").exists()
     assert final["status"] == ("failed" if exit_code else "process_succeeded_pending_independent_admission")
+
+
+def orthofinder_fixture(method):
+    from benchmark_tools.run_qfo_corrected_comparator_assessment import OF_SEMANTICS
+    stage, scheduler = fixture()
+    stage.update(method=method, participant="qfo_corrected_" + method,
+        status="corrected_orthofinder_pairs_prepared_unscored", publication_ready=False,
+        semantics=OF_SEMANTICS[method])
+    return stage, scheduler
+
+
+@pytest.mark.parametrize("method", ["orthofinder_full", "orthofinder_sequence_only"])
+def test_orthofinder_semantics(method):
+    stage, scheduler = orthofinder_fixture(method)
+    validate_stage(stage, method, scheduler)
+
+
+@pytest.mark.parametrize("key,value", [("status", "corrected_comparator_pairs_prepared_unscored"),
+    ("semantics", "root HOG cliques"), ("publication_ready", True),
+    ("method", "orthofinder_sequence_only"), ("participant", "historical_of"),
+    ("retained_pairs", True), ("removed_mapping_pairs", False)])
+def test_wrong_orthofinder_stage_refused(key, value):
+    stage, scheduler = orthofinder_fixture("orthofinder_full")
+    stage[key] = value
+    with pytest.raises(ValueError):
+        validate_stage(stage, "orthofinder_full", scheduler)
+
+
+def test_pending_conversion_rejected_before_reading_partial_output(tmp_path, monkeypatch):
+    from benchmark_tools import run_qfo_corrected_comparator_assessment as module
+    monkeypatch.setattr(module.subprocess, "check_output", lambda *a, **k:
+        "JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS\n123|PENDING|0:0|0:00|bizon|2\n")
+    monkeypatch.setattr(module, "read_frozen", lambda *a: pytest.fail("Partial conversion read"))
+    with pytest.raises(ValueError, match="COMPLETED"):
+        module.prepare(tmp_path, "orthofinder_full", "sha", 123)
+
+
+def test_all_workspaces_are_distinct():
+    from benchmark_tools.run_qfo_corrected_comparator_assessment import METHODS, WORK_NAMES
+    assert len(set(WORK_NAMES.values())) == len(METHODS) == 4
+    assert WORK_NAMES["proteinortho"] == "qc_p"
+    assert WORK_NAMES["sonic"] == "qc_s"
+
+
+def test_unknown_method_rejected(tmp_path):
+    from benchmark_tools import run_qfo_corrected_comparator_assessment as module
+    with pytest.raises(ValueError, match="Unknown"):
+        module.prepare(tmp_path, "unknown", "sha", 123)
+
+
+def test_converter_revision_pinned(tmp_path, monkeypatch):
+    from benchmark_tools import run_qfo_corrected_comparator_assessment as module
+    monkeypatch.setattr(module.subprocess, "check_output", lambda *a, **k: "wrong\n")
+    with pytest.raises(ValueError, match="executor changed"):
+        module.converter_source(tmp_path, "orthofinder_full")
