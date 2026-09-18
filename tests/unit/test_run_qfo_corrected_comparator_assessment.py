@@ -90,18 +90,19 @@ def test_wrong_orthofinder_stage_refused(key, value):
         validate_stage(stage, "orthofinder_full", scheduler)
 
 
-def test_pending_conversion_rejected_before_reading_partial_output(tmp_path, monkeypatch):
+@pytest.mark.parametrize("method", ["orthofinder_full", "fastoma"])
+def test_pending_conversion_rejected_before_reading_partial_output(tmp_path, monkeypatch, method):
     from benchmark_tools import run_qfo_corrected_comparator_assessment as module
     monkeypatch.setattr(module.subprocess, "check_output", lambda *a, **k:
         "JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS\n123|PENDING|0:0|0:00|bizon|2\n")
     monkeypatch.setattr(module, "read_frozen", lambda *a: pytest.fail("Partial conversion read"))
     with pytest.raises(ValueError, match="COMPLETED"):
-        module.prepare(tmp_path, "orthofinder_full", "sha", 123)
+        module.prepare(tmp_path, method, "sha", 123)
 
 
 def test_all_workspaces_are_distinct():
     from benchmark_tools.run_qfo_corrected_comparator_assessment import METHODS, WORK_NAMES
-    assert len(set(WORK_NAMES.values())) == len(METHODS) == 4
+    assert len(set(WORK_NAMES.values())) == len(METHODS) == 5
     assert WORK_NAMES["proteinortho"] == "qc_p"
     assert WORK_NAMES["sonic"] == "qc_s"
 
@@ -117,3 +118,50 @@ def test_converter_revision_pinned(tmp_path, monkeypatch):
     monkeypatch.setattr(module.subprocess, "check_output", lambda *a, **k: "wrong\n")
     with pytest.raises(ValueError, match="executor changed"):
         module.converter_source(tmp_path, "orthofinder_full")
+
+
+def fastoma_fixture():
+    from benchmark_tools.run_qfo_corrected_comparator_assessment import FASTOMA_SEMANTICS
+    stage, scheduler = fixture()
+    stage.update(status="corrected_fastoma_pairs_prepared_unscored", method="fastoma",
+                 participant="qfo_corrected_fastoma", publication_ready=False,
+                 semantics=FASTOMA_SEMANTICS, native_pair_rows=3, native_duplicate_relations=1)
+    return stage, scheduler
+
+
+def test_fastoma_stage():
+    stage, scheduler = fastoma_fixture()
+    validate_stage(stage, "fastoma", scheduler)
+
+
+@pytest.mark.parametrize("key,value", [("status", "corrected_comparator_pairs_prepared_unscored"),
+    ("semantics", "HOG cliques"), ("publication_ready", True), ("native_pair_rows", 2),
+    ("native_duplicate_relations", -1), ("native_duplicate_relations", True),
+    ("participant", "old_fastoma"), ("removed_mapping_pairs", 1)])
+def test_bad_fastoma_stage(key, value):
+    stage, scheduler = fastoma_fixture()
+    stage[key] = value
+    with pytest.raises(ValueError):
+        validate_stage(stage, "fastoma", scheduler)
+
+
+def test_fastoma_converter_revision_pinned(tmp_path, monkeypatch):
+    from benchmark_tools import run_qfo_corrected_comparator_assessment as module
+    monkeypatch.setattr(module.subprocess, "check_output", lambda *a, **k: "wrong\n")
+    with pytest.raises(ValueError, match="executor changed"):
+        module.converter_source(tmp_path, "fastoma")
+
+
+def test_fastoma_converter_source_is_frozen_worktree(tmp_path, monkeypatch):
+    from benchmark_tools import run_qfo_corrected_comparator_assessment as module
+    executor = tmp_path / "benchmarks/work/publication_qfo_corrected_fastoma_pairs_v1"
+    source = executor / "benchmark_tools/prepare_qfo_corrected_fastoma_pairs.py"
+    source.parent.mkdir(parents=True)
+    source.write_text("fixture")
+    calls = []
+    monkeypatch.setattr(module.subprocess, "check_output",
+                        lambda *a, **k: module.FASTOMA_CONVERTER + "\n")
+    monkeypatch.setattr(module.subprocess, "run", lambda args, **k: calls.append((args, k)))
+    assert module.converter_source(tmp_path, "fastoma") == module.record(source)
+    assert calls == [(["git", "-C", str(executor), "diff", "--exit-code", "HEAD", "--",
+                      "benchmark_tools"], {"check": True})]

@@ -13,37 +13,47 @@ from benchmark_tools.run_simulation_methods import read_frozen
 from benchmark_tools.run_qfo_recovered_assessment import command_for, environment_records
 from benchmark_tools.prepare_qfo_corrected_comparator_pairs import ENV_SHA
 from benchmark_tools.prepare_qfo_corrected_orthofinder_pairs import SEMANTICS as OF_SEMANTICS
+from benchmark_tools.prepare_qfo_corrected_fastoma_pairs import SEMANTICS as FASTOMA_SEMANTICS
 from benchmark_tools.verify_ygob_validation import require_completed_job
 
 WORK_NAMES = {"proteinortho": "qc_p", "sonic": "qc_s",
-              "orthofinder_full": "qc_of", "orthofinder_sequence_only": "qc_om"}
+              "orthofinder_full": "qc_of", "orthofinder_sequence_only": "qc_om", "fastoma": "qc_f"}
 METHODS = tuple(WORK_NAMES)
 OF_CONVERTER = "aa8da7800c4801684726151ad249da7c82a3b88d"
+FASTOMA_CONVERTER = "6616e3a7ec4c46962ded0d34ce9b4150073a2210"
+BOUND_SEMANTICS = {**OF_SEMANTICS, "fastoma": FASTOMA_SEMANTICS}
 
 
 def converter_source(root, method):
     if method not in METHODS:
         raise ValueError("Unknown corrected comparator")
-    if method not in OF_SEMANTICS:
+    if method not in BOUND_SEMANTICS:
         return None
-    executor = root / "benchmarks/work/publication_qfo_corrected_orthofinder_pairs_v1"
-    if subprocess.check_output(["git", "-C", str(executor), "rev-parse", "HEAD"], text=True).strip() != OF_CONVERTER:
-        raise ValueError("OrthoFinder converter executor changed")
+    kind = "fastoma" if method == "fastoma" else "orthofinder"
+    commit = FASTOMA_CONVERTER if method == "fastoma" else OF_CONVERTER
+    executor = root / f"benchmarks/work/publication_qfo_corrected_{kind}_pairs_v1"
+    if subprocess.check_output(["git", "-C", str(executor), "rev-parse", "HEAD"], text=True).strip() != commit:
+        raise ValueError("Comparator converter executor changed")
     subprocess.run(["git", "-C", str(executor), "diff", "--exit-code", "HEAD", "--", "benchmark_tools"], check=True)
-    return record(executor / "benchmark_tools/prepare_qfo_corrected_orthofinder_pairs.py")
+    return record(executor / f"benchmark_tools/prepare_qfo_corrected_{kind}_pairs.py")
 
 
 def validate_stage(stage, method, scheduler):
     if method not in METHODS:
         raise ValueError("Unknown corrected comparator")
-    status = ("corrected_orthofinder_pairs_prepared_unscored" if method in OF_SEMANTICS
+    status = ("corrected_fastoma_pairs_prepared_unscored" if method == "fastoma" else
+              "corrected_orthofinder_pairs_prepared_unscored" if method in OF_SEMANTICS
               else "corrected_comparator_pairs_prepared_unscored")
     if (stage["status"] != status or stage["accuracy_evaluated"] is not False
             or stage["method"] != method or stage["participant"] != "qfo_corrected_" + method):
         raise ValueError("Wrong corrected conversion identity/status")
-    if method in OF_SEMANTICS and (stage["semantics"] != OF_SEMANTICS[method]
+    if method in BOUND_SEMANTICS and (stage["semantics"] != BOUND_SEMANTICS[method]
                                    or stage["publication_ready"] is not False):
-        raise ValueError("Wrong OrthoFinder prediction semantics")
+        raise ValueError("Wrong comparator prediction semantics")
+    if method == "fastoma" and (any(type(stage[k]) is not int or stage[k] < 0 for k in
+            ("native_pair_rows", "native_duplicate_relations"))
+            or stage["native_pair_rows"] != stage["total_pairs"] + stage["native_duplicate_relations"]):
+        raise ValueError("Invalid FastOMA native duplicate accounting")
     if (scheduler["State"] != "COMPLETED" or scheduler["ExitCode"] != "0:0"
             or scheduler["NodeList"] != "bizon" or scheduler["AllocCPUS"] != "2"
             or stage["job_id"] != scheduler["JobIDRaw"]):
@@ -67,10 +77,10 @@ def prepare(root, method, pairs_sha, conversion_job):
     validate_stage(stage, method, scheduler)
     converter = converter_source(root, method)
     if converter is not None and (stage["source"] != converter or converter not in stage["checked_records"]):
-        raise ValueError("Wrong frozen OrthoFinder conversion source")
+        raise ValueError("Wrong frozen comparator conversion source")
     env_path = root / "benchmark_tools/results/qfo_assessment_environment_20260917.json"
     manifest = read_frozen(env_path, ENV_SHA)
-    if method in OF_SEMANTICS and [r for r in manifest["reference_files"]
+    if method in BOUND_SEMANTICS and [r for r in manifest["reference_files"]
             if Path(r["path"]).name == "mapping.json.gz"] != [stage["mapping"]]:
         raise ValueError("Conversion and assessment reference mappings differ")
     records = [record(pairs_path), record(env_path), *environment_records(manifest),
