@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Generated Corrected-Release Comparison (2026-09-18 UTC)
+
+Previous turn progressed by independently readmitting corrected Proteinortho
+and implementing the corrected checked replay driver. Added
+`export_qfo_corrected_comparison.py` and generated the first corrected-only
+eight-method table in `qfo_corrected_comparison_20260918_v1/` (Markdown, TSV,
+JSON manifest). Proteinortho is the sole admitted row; the remaining seven
+are explicitly missing, not zero and not populated from old-release scores.
+
+The exporter requires an explicit assessment checksum and admitted corrected
+participant, verifies conversion provenance/count arithmetic, recomputes
+three F1s from native recall/precision, and checks the secondary mean. Native
+precision/recall and challenge coverage remain in the machine-readable table.
+It currently supports the reviewed Proteinortho/SonicParanoid admission
+schema; other methods require their own reviewed adapters before inclusion.
+Fourteen tests pass, including wrong release/participant, nonfinite values,
+missing endpoints, incorrect F1/mean/counts, duplicate methods and changed
+conversion files. It does not replace independent full workflow admission.
+
+The active inference jobs remain running: final original factorial 21671_3,
+corrected SonicParanoid 21710 and corrected high-sensitivity 21706_0. Their
+dependent validations remain queued. DGX has advanced to task 21656_16
+(17th of 27); scheduler progress is not final timing/host admission. No job
+was modified. Corrected factorial/satellite, remaining comparators, uncertainty,
+resource admission and final manuscript/archive requirements remain open.
+
 ## Corrected Proteinortho Scored; Replay Worker Integration (2026-09-18 UTC)
 
 Previous turn progressed with the corrected replay manifest builder and
