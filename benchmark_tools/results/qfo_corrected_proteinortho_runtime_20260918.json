@@ -1,0 +1,267 @@
+{
+  "accuracy_admitted": false,
+  "environment_policy": "Explicit allowlist, fixed C locale; inherited container overrides and language startup hooks excluded.",
+  "plan": {
+    "bytes": 56013,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_proteinortho_commands_20260918.json",
+    "sha256": "65f9baedeb6f6cbb66198e2a6a24ae8531b48eea9a04809c2c2443d570d4f93a"
+  },
+  "snapshot": {
+    "container": {
+      "environment": {
+        "LANG": "C.UTF-8",
+        "LC_ALL": "C",
+        "LD_LIBRARY_PATH": "/.singularity.d/libs",
+        "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      },
+      "files": [
+        {
+          "bytes": 812456,
+          "path": "/usr/bin/mkdir",
+          "resolved": "/usr/bin/mkdir",
+          "sha256": "4c2a471c064dbcb09cd517b3edb4cfb88a156e7d4cb9419e568346434de52abf"
+        },
+        {
+          "bytes": 812456,
+          "path": "/usr/bin/rm",
+          "resolved": "/usr/bin/rm",
+          "sha256": "4c2a471c064dbcb09cd517b3edb4cfb88a156e7d4cb9419e568346434de52abf"
+        },
+        {
+          "bytes": 812456,
+          "path": "/usr/bin/sort",
+          "resolved": "/usr/bin/sort",
+          "sha256": "4c2a471c064dbcb09cd517b3edb4cfb88a156e7d4cb9419e568346434de52abf"
+        },
+        {
+          "bytes": 86066088,
+          "path": "/usr/local/bin/diamond",
+          "resolved": "/usr/local/bin/diamond",
+          "sha256": "ac1c3121e9ee788d4d197d7c3aed231a38d3fbfc600d88230bef2061fe750914"
+        },
+        {
+          "bytes": 21016,
+          "path": "/usr/local/bin/perl",
+          "resolved": "/usr/local/bin/perl",
+          "sha256": "8a4026d518c42a83631a0b3ee41c7eda1b6d6aaec13435d366f6e5aedc689117"
+        },
+        {
+          "bytes": 271647,
+          "path": "/usr/local/bin/proteinortho",
+          "resolved": "/usr/local/bin/proteinortho",
+          "sha256": "b948dcb6d94059580cd16da0426bc3c1b533ffb88d86560bdfe591ef9abb8ec9"
+        },
+        {
+          "bytes": 38804,
+          "path": "/usr/local/bin/proteinortho2html.pl",
+          "resolved": "/usr/local/bin/proteinortho2html.pl",
+          "sha256": "de676a8317042c2c4d22d6d30201c1dfebcd518d64f1f39e62f869d9c3407a95"
+        },
+        {
+          "bytes": 5001,
+          "path": "/usr/local/bin/proteinortho2tree.pl",
+          "resolved": "/usr/local/bin/proteinortho2tree.pl",
+          "sha256": "211b3eda3c85b415392e7cf08a8ab698f82a559f24360766fb84281f182c1dd5"
+        },
+        {
+          "bytes": 8443,
+          "path": "/usr/local/bin/proteinortho2xml.pl",
+          "resolved": "/usr/local/bin/proteinortho2xml.pl",
+          "sha256": "be232b6970d6b8e0f1af6f49410a6eb23c6e16a8871c2a676f11254323df1486"
+        },
+        {
+          "bytes": 271647,
+          "path": "/usr/local/bin/proteinortho6.pl",
+          "resolved": "/usr/local/bin/proteinortho6.pl",
+          "sha256": "b948dcb6d94059580cd16da0426bc3c1b533ffb88d86560bdfe591ef9abb8ec9"
+        },
+        {
+          "bytes": 53256,
+          "path": "/usr/local/bin/proteinortho_cleanupblastgraph",
+          "resolved": "/usr/local/bin/proteinortho_cleanupblastgraph",
+          "sha256": "d717f155d20924128f35e4af1484a547286b900f5f0559757381e62f2c0c0227"
+        },
+        {
+          "bytes": 537024,
+          "path": "/usr/local/bin/proteinortho_clustering",
+          "resolved": "/usr/local/bin/proteinortho_clustering",
+          "sha256": "4ee4b90c2822e383d3546153fb8e6c853baf954d039323021f8b0a254e507320"
+        },
+        {
+          "bytes": 1239,
+          "path": "/usr/local/bin/proteinortho_compareProteinorthoGraphs.pl",
+          "resolved": "/usr/local/bin/proteinortho_compareProteinorthoGraphs.pl",
+          "sha256": "5bbb557d6ed52623ba104facf3a3d617d9ccd088aaefb9c6c4d308cfe42875b6"
+        },
+        {
+          "bytes": 9156,
+          "path": "/usr/local/bin/proteinortho_do_mcl.pl",
+          "resolved": "/usr/local/bin/proteinortho_do_mcl.pl",
+          "sha256": "74652d7c7643a8c8869d0c8d4e1044d9012c20e5723afce4a056ff0f314e4f72"
+        },
+        {
+          "bytes": 1170,
+          "path": "/usr/local/bin/proteinortho_extract_from_graph.pl",
+          "resolved": "/usr/local/bin/proteinortho_extract_from_graph.pl",
+          "sha256": "dd06fb4ff2df46f5b31ce81633cfe26af8ab4e871984edbb777bf4195d628399"
+        },
+        {
+          "bytes": 32942,
+          "path": "/usr/local/bin/proteinortho_ffadj_mcs.py",
+          "resolved": "/usr/local/bin/proteinortho_ffadj_mcs.py",
+          "sha256": "4c728112a14ea9f4c34f7a834454061df8eed8d9ca9abce21b2392aa75677c63"
+        },
+        {
+          "bytes": 483,
+          "path": "/usr/local/bin/proteinortho_formatUsearch.pl",
+          "resolved": "/usr/local/bin/proteinortho_formatUsearch.pl",
+          "sha256": "b2ee08cab57eadc81e3899e40e250a39b7e50eb9c47aa636fc947d0eb6fc630b"
+        },
+        {
+          "bytes": 17976,
+          "path": "/usr/local/bin/proteinortho_grab_proteins.pl",
+          "resolved": "/usr/local/bin/proteinortho_grab_proteins.pl",
+          "sha256": "277c992c093d0f25a0c7dda4fb357e2e3e2fb9b9d27d999e45e81833c8697c4f"
+        },
+        {
+          "bytes": 40392,
+          "path": "/usr/local/bin/proteinortho_graphMinusRemovegraph",
+          "resolved": "/usr/local/bin/proteinortho_graphMinusRemovegraph",
+          "sha256": "1385bca5d47b077fed6326ee595a396a8260e8bfb0f16d068529d69ef35a900c"
+        },
+        {
+          "bytes": 30712,
+          "path": "/usr/local/bin/proteinortho_history.pl",
+          "resolved": "/usr/local/bin/proteinortho_history.pl",
+          "sha256": "62e61d8e1a73b2b87f98f932c5cb9fc1f4149412351eb7123ae08ca0b73fa187"
+        },
+        {
+          "bytes": 2387,
+          "path": "/usr/local/bin/proteinortho_singletons.pl",
+          "resolved": "/usr/local/bin/proteinortho_singletons.pl",
+          "sha256": "1ab5db14721b94e7e8e5e4c890b77e942b27d6d08e324af7d11db06ab262ae76"
+        },
+        {
+          "bytes": 14770,
+          "path": "/usr/local/bin/proteinortho_summary.pl",
+          "resolved": "/usr/local/bin/proteinortho_summary.pl",
+          "sha256": "cb93cecd4418360183471cf11b91917f4a6513d334f9cc9cd258be0ae73e77d0"
+        },
+        {
+          "bytes": 32569752,
+          "path": "/usr/local/bin/python3",
+          "resolved": "/usr/local/bin/python3.13",
+          "sha256": "dd88074444a27e991a59c9c56ed52148ff7f0bc9c5482b3d529e0f15bddab70b"
+        }
+      ]
+    },
+    "environment": {
+      "HOME": "/home/bizon",
+      "LANG": "C",
+      "LC_ALL": "C",
+      "LD_LIBRARY_PATH": "/usr/local/cuda/lib64:/usr/local/cuda/lib64:/usr/local/cuda/lib64:",
+      "LOGNAME": "bizon",
+      "PATH": "/usr/local/cuda/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/NPM_DOWNLOADS//bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/NPM_DOWNLOADS/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/bizon/.codex/tmp/arg0/codex-arg034RIDq:/home/bizon/.grok/bin:/usr/local/cuda/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/NPM_DOWNLOADS/bin:/home/bizon/.grok/bin:/home/bizon/.cargo/bin:/home/bizon/anaconda3/bin:/home/bizon/anaconda3/condabin:/usr/local/cuda/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/NPM_DOWNLOADS/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/VSEARCH/vsearch-2.30.5-linux-x86_64/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/clustalo:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/iqtree-3.0.1-Linux-intel/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/diamond-linux64:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/eggnog-mapper:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/eggnog-mapper/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/foldseek/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mmseqs/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/hmmer-3.4/src:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/NPM_DOWNLOADS:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ncbi-blast-2.17.0+/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mcl-02-063/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/raxml-ng_v1.2.2_linux_x86_64:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/TREE-QMC/build:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/minimap2-2.30_x64-linux:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/muscle_v5.3:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/indelible:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mmseqs/bin:/usr/local/cuda/bin:/home/bizon/.pyenv/plugins/pyenv-virtualenv/shims:/home/bizon/.pyenv/shims:/home/bizon/.pyenv/bin:/home/bizon/.vscode-server/cli/servers/Stable-258e40fedc6cb8edf399a463ce3a9d32e7e1f6f3/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/bizon/.cache/lm-studio/bin:/home/bizon/.cache/lm-studio/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/VSEARCH/vsearch-2.30.5-linux-x86_64/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/clustalo:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/iqtree-3.0.1-Linux-intel/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/diamond-linux64:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/eggnog-mapper:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/eggnog-mapper/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/foldseek/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mmseqs/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/hmmer-3.4/src:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/NPM_DOWNLOADS:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ncbi-blast-2.17.0+/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mcl-02-063/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/raxml-ng_v1.2.2_linux_x86_64:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/TREE-QMC/build:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/minimap2-2.30_x64-linux:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/muscle_v5.3:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/indelible:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mmseqs/bin:/usr/local/cuda/bin:/home/bizon/.pyenv/plugins/pyenv-virtualenv/shims:/home/bizon/.pyenv/shims:/home/bizon/.pyenv/bin:/home/bizon/.vscode-server/cli/servers/Stable-258e40fedc6cb8edf399a463ce3a9d32e7e1f6f3/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/bizon/.cache/lm-studio/bin:/home/bizon/.cache/lm-studio/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/VSEARCH/vsearch-2.30.5-linux-x86_64/bin/:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/clustalo:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/iqtree-3.0.1-Linux-intel/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/diamond-linux64:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/eggnog-mapper:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/eggnog-mapper/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/foldseek/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mmseqs/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/hmmer-3.4/src:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/NPM_DOWNLOADS/:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ncbi-blast-2.17.0+/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mcl-02-063/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/raxml-ng_v1.2.2_linux_x86_64/:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin/:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220/:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/TREE-QMC/build/:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/minimap2-2.30_x64-linux/:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/muscle_v5.3/:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/indelible/:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mmseqs/bin/:/usr/local/cuda/bin:/home/bizon/.pyenv/plugins/pyenv-virtualenv/shims:/home/bizon/.pyenv/shims:/home/bizon/.pyenv/bin:/home/bizon/.vscode-server/cli/servers/Stable-258e40fedc6cb8edf399a463ce3a9d32e7e1f6f3/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/bizon/.cache/lm-studio/bin",
+      "USER": "bizon"
+    },
+    "host_files": [
+      {
+        "bytes": 0,
+        "path": "/usr/local/etc/singularity/capability.json",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 3709,
+        "path": "/usr/local/etc/singularity/cgroups/cgroups.toml",
+        "sha256": "628df6b1100755183fafe1ce6280df8dcb0bb4c08b44e9d98af8a0fc24aa1836"
+      },
+      {
+        "bytes": 1990,
+        "path": "/usr/local/etc/singularity/ecl.toml",
+        "sha256": "7401da19741e72e36ab76fbb97b4f41191cf755c49b78537774d0ed56097706d"
+      },
+      {
+        "bytes": 0,
+        "path": "/usr/local/etc/singularity/global-pgp-public",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 601,
+        "path": "/usr/local/etc/singularity/network/00_bridge.conflist",
+        "sha256": "d8fc0b69e71a779d49a66495535b19992cfb5f7863e630c02efa7af1ee502551"
+      },
+      {
+        "bytes": 534,
+        "path": "/usr/local/etc/singularity/network/10_ptp.conflist",
+        "sha256": "9a3ea07e02b85e87c9a35851e27898ef2b7d75c5fc6b8daefc04396e3b3d3941"
+      },
+      {
+        "bytes": 513,
+        "path": "/usr/local/etc/singularity/network/20_ipvlan.conflist",
+        "sha256": "d0545b9c3e4c466c64a4b8e07a791971717a47f187c5efcc6ef614fdc67e0df7"
+      },
+      {
+        "bytes": 515,
+        "path": "/usr/local/etc/singularity/network/30_macvlan.conflist",
+        "sha256": "57e1fa8537a0dd7974d02c68e84e517f2150261b473dea93eada4c573006ae47"
+      },
+      {
+        "bytes": 539,
+        "path": "/usr/local/etc/singularity/network/40_fakeroot.conflist",
+        "sha256": "15ce24fd9d042b80567e9c4b423de568c77b933b313bc80e776dcdf6ed05987c"
+      },
+      {
+        "bytes": 1383,
+        "path": "/usr/local/etc/singularity/nvliblist.conf",
+        "sha256": "371b054beb4a7f60355cab85917e73f073cfb90fa77d7d9472024a14310e871d"
+      },
+      {
+        "bytes": 107,
+        "path": "/usr/local/etc/singularity/remote.yaml",
+        "sha256": "d62e2345b348ce70abd0378eaaae0e855fcc6ddb86598fe85d6f6c6071a914bb"
+      },
+      {
+        "bytes": 954,
+        "path": "/usr/local/etc/singularity/rocmliblist.conf",
+        "sha256": "a8a4804812c664d10e446a3071b3e6c80ad51cf5738cf7e36c743f0062f54064"
+      },
+      {
+        "bytes": 15940,
+        "path": "/usr/local/etc/singularity/seccomp-profiles/default.json",
+        "sha256": "27e6dbb7d478e222144af8ac0dd4ea2423f1d01f8d8adde053f8831371106740"
+      },
+      {
+        "bytes": 17715,
+        "path": "/usr/local/etc/singularity/singularity.conf",
+        "sha256": "11baf74f3c12f0a898f1103ec44b8f9a457be94be37df3c814f4acc53d5d520e"
+      },
+      {
+        "bytes": 59073688,
+        "path": "/usr/local/libexec/singularity/bin/singularity-buildkitd",
+        "sha256": "1b0b54d127d01208df599cc6fd0228c32c63d1ed708a661c52ca7b132262f06a"
+      },
+      {
+        "bytes": 59320,
+        "path": "/usr/local/libexec/singularity/bin/squashfuse_ll",
+        "sha256": "ab2f538f6a0ca3d74f41e3fa08d97ee1bee5655ba8ee29153e878f9dfe56037f"
+      },
+      {
+        "bytes": 32469608,
+        "path": "/usr/local/libexec/singularity/bin/starter",
+        "sha256": "165767c8cae64668e4e8996df38e591614c840235534652f9a40984904575b52"
+      },
+      {
+        "bytes": 32469608,
+        "path": "/usr/local/libexec/singularity/bin/starter-suid",
+        "sha256": "165767c8cae64668e4e8996df38e591614c840235534652f9a40984904575b52"
+      }
+    ],
+    "limitation": "Effective dependency/configuration snapshot, not a complete system-library inventory or execution trace."
+  },
+  "source": {
+    "bytes": 8415,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_qfo_corrected_proteinortho.py",
+    "sha256": "0ca80666d13b4dee98f1ca33047d76113631539e4a1a00f1c050ad398f4c8604"
+  },
+  "status": "proteinortho_runtime_frozen_unrun"
+}
