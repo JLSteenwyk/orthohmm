@@ -35,7 +35,7 @@ def missing_by_species(numbers, species, offsets):
     return dict(counts)
 
 
-def compare(archive, expected, mapping, missing):
+def compare(archive, expected, mapping, missing, *, sequence_records=None):
     observed, accession_owners, numeric_owners, recovered = {}, {}, {}, {}
     with gzip.open(archive, "rb") as compressed:
         with tarfile.open(fileobj=compressed, mode="r|") as stream:
@@ -67,6 +67,14 @@ def compare(archive, expected, mapping, missing):
                             raise ValueError("Invalid or nonunique mapped numeric identity")
                         numeric_owners[number] = accession
                         mapped += 1
+                        if sequence_records is not None:
+                            sequence = str(entry.seq)
+                            represented = sequence.translate(str.maketrans({c: "X" for c in "BOUZ"}))
+                            sequence_records[number] = {
+                                "accession": accession, "source_file": name,
+                                "sequence": {"length": len(sequence), "sha256": hashlib.sha256(sequence.encode("ascii")).hexdigest()},
+                                "BOUZ_to_X_sequence": {"length": len(represented), "sha256": hashlib.sha256(represented.encode("ascii")).hexdigest()},
+                            }
                     genes += 1
                     if accession in missing:
                         recovered[accession] = {"file": name, "numeric_protein_id": number,
