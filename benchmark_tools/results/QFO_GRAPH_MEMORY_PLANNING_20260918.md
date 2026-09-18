@@ -166,6 +166,31 @@ and dedicated timing remain separate requirements.
 
 ### Group-To-Pair Conversion
 
+The graph-admission batch entrypoint is now
+`qfo_sequence_graph_admit_batch_20260918.sh`. It pins the existing
+f1e21b09c28f270dc3ef2243bdcad86f212b58a0 executor, requires a scheduled
+2CPU/192GiB task, and accepts exactly five arguments: absolute plan path,
+plan SHA256, variant, terminal graph job ID, and graph results.json SHA256.
+It refuses unsupported variants, malformed identities, wrong resources,
+modified executor files and an existing admission output. Reports are written
+separately as `benchmarks/work/qfo_sequence_graph_admission_all_hits_20260918.json`
+and `benchmarks/work/qfo_sequence_graph_admission_top100_20260918.json`.
+Its1-day limit concerns validation, not a scientific runtime comparison.
+
+After reviewed graph allocation, successful graph execution and recording
+the actual plan/report hashes, submit the independent admission with:
+
+```bash
+sbatch benchmark_tools/results/qfo_sequence_graph_admit_batch_20260918.sh \
+  ABSOLUTE_PLAN_PATH PLAN_SHA256 all_hits GRAPH_JOB_ID GRAPH_REPORT_SHA256
+```
+
+Use `top100` with its own graph job/report for the other arm. The native
+Python auditor still checks terminal scheduler status and all source/output
+evidence; this shell entrypoint does not grant admission. Neither variant
+has been submitted by this addition.14 new shell contract/rejection tests
+and42 existing graph-admission/pair-conversion tests pass (56total).
+
 `prepare_qfo_sequence_pairs.py` accepts only a successful, source-pinned
 sequence graph admission for the selected variant and the final
 `multipass_refined` partition. It requires the admission job to have completed

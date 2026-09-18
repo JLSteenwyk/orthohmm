@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Sequence Graph Admission Batch Connected (2026-09-18 UTC)
+
+Previous turn progressed through1369d64 with updated claims and VGNC
+manuscript integration. Reread the full objective. Scheduler inspection
+confirmed21792 RUNNING56:12 and21706_0 RUNNING15:20:08;21798 still waits for
+numeric admission.
+
+Found and filled a concrete downstream execution gap: graph admission had
+a frozen Python auditor but no batch entrypoint with the2CPU/192GiB resources
+required by pair conversion. Added qfo_sequence_graph_admit_batch_20260918.sh,
+pinned to the existing f1e21b09c28f270dc3ef2243bdcad86f212b58a0 worktree
+(HEAD verified directly). It requires explicit plan/report hashes and graph
+job ID, rejects malformed variants/identities or wrong allocations, checks
+executor cleanliness and refuses existing outputs. No scientific code,
+parameters or current jobs were changed.
+
+56focused tests pass, including14new shell syntax/contract/rejection cases.
+The graph-memory workflow note documents the exact invocation and separate
+variant report paths. No admission job was submitted: actual numeric
+equivalence, payload review, memory allocation and graph completion still
+precede it. This implementation closes a scheduling gap, not a scientific
+result or publication-readiness requirement by itself.
+
 ## Claim Checklist And VGNC Manuscript Integration (2026-09-18 UTC)
 
 Previous turn progressed through4f664d8 with the full5066-test regression
