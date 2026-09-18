@@ -104,13 +104,39 @@ unchanged: its admission paths, scheduler IDs and count validation are specific
 to OrthoBench, and it predates the checked QfO clustering constructor path.
 Only its pure `graph_command` helper is reused. The new plan explicitly
 requires a separately frozen checked-clustering executor and prohibits direct
-execution of its native command. That executor and independent output
-admission are still to be implemented for the corrected sequence control.
+execution of its native command. The checked executor is now implemented
+below; independent post-run output admission remains to be implemented.
 
 44 focused tests pass (16 new plan-validation/command tests,8 payload-wrapper
 tests and20 existing estimator tests); the CLI help smoke check passes.
 No actual command plan, allocation decision, graph submission or accuracy
 result has been produced while the prerequisite payload report is pending.
+
+### Checked Sequence Executor
+
+`run_qfo_sequence_graph.py` uses the frozen profile-off replay with the
+existing checked Python-pair constructor and native optimizer observations.
+`sequence_graph_evidence.py` validates the exact plan, variant, payload
+estimate, checkpoint and gene-order records. Sequence provenance is a distinct,
+mutually exclusive worker mode, never fabricated corrected-HMM admission.
+Only `initial` and `multipass` clustering stages are accepted. Historical and
+corrected-HMM worker modes remain supported.
+
+The driver requires a scheduled32CPU allocation with memory matching the
+reviewed variant plan, unchanged frozen runtime, and a fresh output directory.
+It retains payloads, native observations, GNU-time/log output and failure
+reports. Both checked calls, profile-off metrics, planned command/paths,
+complete gene coverage and postflight runtime/source identities are required
+before reporting completion pending admission. The batch entry point
+`qfo_sequence_graph_batch_20260918.sh` requires explicit `--mem` at submission.
+No graph job is submitted yet and no actual QfO result is claimed.
+
+98 focused tests pass, including real small igraph/Leiden fixtures under
+historical, corrected-HMM and sequence provenance, corrupted boundaries,
+constructor inputs, modules, partition coverage, retained outputs, wrong stage
+counts and mixed/incomplete provenance. A fresh-process smoke check against
+the actual frozen launcher confirms correct scientific-module/helper paths.
+Full-scale execution and independent post-run admission remain unverified.
 
 ### Historical Search Progress
 

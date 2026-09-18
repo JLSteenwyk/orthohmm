@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Checked Sequence-Control Executor Implemented (2026-09-18 UTC)
+
+Previous turn progressed throughe9a84aa with the QfO-specific graph plan
+builder. Reread the full goal. Live scheduler confirms21706_0 HMM
+RUNNING13:22:25 and21791 conversion RUNNING54:32;21792/21798 remain pending.
+
+Implemented sequence_graph_evidence.py and run_qfo_sequence_graph.py plus
+an explicit sequence-provenance mode in the checked payload worker and native
+validator. HMM and sequence provenance cannot be mixed. The sequence path
+requires both profile-off clustering stages, unchanged scientific settings,
+plan-bound checkpoint/gene order, runtime identity and complete output gene
+coverage. Scheduled CPU/memory must match the reviewed plan; no overwrite or
+implicit retry. Batch entry point requires explicit memory at submission.
+
+98 focused tests pass, including real small native clustering and corruption
+checks across all three provenance modes. A fresh-process smoke check against
+the actual frozen launcher confirms correct replay/core/helper module paths.
+This caught and avoided importing new helpers from the frozen benchmark_tools
+package. Existing frozen queued jobs are unchanged by these worktree edits.
+
+No sequence graph run is submitted while21798 is pending. Next: implement
+independent terminal/native-output admission, review actual resource evidence,
+freeze a command plan/executor, then run both variants and score admitted
+outputs. These changes implement the executor, not biological validation,
+the QfO ablation or the broader publication objective.
+
 ## Corrected Sequence Graph Plan Builder (2026-09-18 UTC)
 
 Previous turn progressed throughf091d6e with verified QfO service bylines.

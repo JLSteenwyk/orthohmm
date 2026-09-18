@@ -66,16 +66,31 @@ def main():
     parser.add_argument("--manifest-sha256", required=True)
     parser.add_argument("--corrected-plan", type=Path)
     parser.add_argument("--corrected-plan-sha256")
+    parser.add_argument("--sequence-plan", type=Path)
+    parser.add_argument("--sequence-plan-sha256")
+    parser.add_argument("--sequence-variant", choices=("all_hits", "top100"))
     args = parser.parse_args()
     if (args.corrected_plan is None) != (args.corrected_plan_sha256 is None):
         parser.error("Corrected plan and hash must be supplied together")
+    sequence_flags = (args.sequence_plan, args.sequence_plan_sha256, args.sequence_variant)
+    if any(value is not None for value in sequence_flags) and not all(value is not None for value in sequence_flags):
+        parser.error("Sequence plan, hash and variant must be supplied together")
+    if args.corrected_plan is not None and args.sequence_plan is not None:
+        parser.error("HMM and sequence provenance are mutually exclusive")
     root, payload = args.root.resolve(), args.payload.resolve()
     manifest_record = record(args.manifest)
     if manifest_record["sha256"] != args.manifest_sha256:
         raise ValueError("Changed parent payload manifest")
     manifest = json.loads(args.manifest.read_text())
     corrected_plan_record = None
-    if args.corrected_plan is not None:
+    sequence_plan_record = None
+    if args.sequence_plan is not None:
+        from sequence_graph_evidence import sequence_evidence, sequence_settings
+        plan, sequence_plan_record, admission_record, names_record = sequence_evidence(
+            args.sequence_plan.resolve(), args.sequence_plan_sha256, args.sequence_variant)
+        metadata = validate_payload(manifest, payload, names_record)
+        sequence_settings(manifest, metadata, plan["variants"][args.sequence_variant])
+    elif args.corrected_plan is not None:
         plan, corrected_plan_record, admission_record, names_record = corrected_evidence(
             args.corrected_plan.resolve(), args.corrected_plan_sha256)
         if manifest["output_directory"] != str(Path(plan["output_root"]) / "replay"):
@@ -119,6 +134,9 @@ def main():
                               ("repeat_qfo_saved_graph.py", "checked_python_pair_worker.py", "probe_leiden_boundary.py")]}
     if corrected_plan_record is not None:
         provenance["corrected_plan"] = corrected_plan_record
+    if sequence_plan_record is not None:
+        provenance.update(sequence_plan=sequence_plan_record, sequence_variant=args.sequence_variant)
+        provenance["helpers"].append(record(Path(__file__).with_name("sequence_graph_evidence.py")))
     (payload / "checked_payload_provenance.json").write_text(json.dumps(provenance, indent=2, sort_keys=True) + "\n")
     with python_pair_constructor(igraph, payload / "constructor_adapter.json"):
         worker(launcher, payload, native_boundary=True)

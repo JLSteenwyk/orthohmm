@@ -20,7 +20,7 @@ def write_json(path, value):
 
 @pytest.mark.parametrize("problem", [None, "boundary", "input_hash", "metadata", "module", "coverage", "duplicate", "provenance",
                                      "retained", "retained_hash", "retained_path", "retained_coverage"])
-@pytest.mark.parametrize("corrected", [False, True])
+@pytest.mark.parametrize("corrected", [False, True, "sequence"])
 def test_native_result_gate(tmp_path, problem, corrected):
     root = tmp_path
     executor = root / "executor"
@@ -34,7 +34,7 @@ def test_native_result_gate(tmp_path, problem, corrected):
     output = root / ("replay" if corrected else "output")
     metadata = {"cpm_resolution": .1, "seed": 4, "include_isolates": True, "output_directory": str(output)}
     write_json(payload / "metadata.json", metadata)
-    manifest = {"stage": "initial", "inputs": [record(payload / name) for name in
+    manifest = {"stage": "initial", "index": 0, "output_directory": str(output), "inputs": [record(payload / name) for name in
                 ("gene_names.txt", "sources.npy", "targets.npy", "weights.npy", "metadata.json")]}
     write_json(payload.parent / "payload_manifest.json", manifest)
     with python_pair_constructor(igraph, payload / "constructor_adapter.json"):
@@ -58,7 +58,7 @@ def test_native_result_gate(tmp_path, problem, corrected):
     write_json(admission, {})
     provenance = {"source": helpers[-1], "helpers": helpers[:3], "manifest": record(payload.parent / "payload_manifest.json"),
                   "inputs": manifest["inputs"], "stage": "initial", "accuracy_evaluated": False, "admission": record(admission)}
-    corrected_plan = None
+    corrected_plan = sequence_plan = None
     if corrected:
         checkpoint = root / "corrected_checkpoint"
         checkpoint.mkdir()
@@ -77,6 +77,29 @@ def test_native_result_gate(tmp_path, problem, corrected):
             "output_root": str(root), "checked_records": [names_record, checkpoint_record, record(admission)]})
         corrected_plan = record(plan)
         provenance.update(admission=record(admission), corrected_plan=corrected_plan)
+        if corrected == "sequence":
+            from benchmark_tools.run_sequence_graph_control import graph_command
+            variant = dict(checkpoint_manifest=checkpoint_record, gene_names=names_record,
+                output_root=str(root), expected_genes=984137, expected_species=78, cpu=32,
+                requested_memory_gib=64, cap=None, expected_clustering_calls=["initial", "multipass"],
+                expected_stages=["multipass", "multipass_refined"],
+                native_command=graph_command(launcher, checkpoint, checkpoint_record["sha256"], root))
+            estimated = dict(checkpoint_audit=dict(manifest=checkpoint_record), checkpoint_files=[names_record],
+                             estimate=dict(genes=984137, species_slot_extent=78))
+            write_json(admission, dict(status="admitted_qfo_graph_payload_estimated", accuracy_evaluated=False,
+                graph_launched=False, variants=dict(all_hits=estimated, top100=estimated)))
+            source = executor / "benchmark_tools/sequence_graph_evidence.py"
+            source.write_text("# fixture\n")
+            write_json(plan, dict(status="corrected_sequence_graph_commands_frozen_unrun",
+                execution_authorized=False, accuracy_evaluated=False, graph_feasibility_admitted=False,
+                variants=dict(all_hits=variant, top100=dict(variant, cap=100)), cwd=str(launcher),
+                payload_report=record(admission), source=record(source), helpers=[],
+                python=record(__import__("sys").executable),
+                checked_records=[names_record, checkpoint_record, record(admission)]))
+            sequence_plan, corrected_plan = record(plan), None
+            provenance.pop("corrected_plan")
+            provenance.update(admission=record(admission), sequence_plan=sequence_plan, sequence_variant="all_hits")
+            provenance["helpers"].append(record(source))
     worker = {"status": "before_native_clustering", "accuracy_evaluated": False, "metadata": dict(metadata),
               "cwd": str(launcher), "inputs": manifest["inputs"][:4], "cpu_affinity": [0], "modules": modules,
               "native_libraries": [record(igraph._igraph.__file__)], "python": record(__import__("sys").executable), "observer": helpers[0],
@@ -121,9 +144,11 @@ def test_native_result_gate(tmp_path, problem, corrected):
     write_json(payload / "worker_before.json", worker)
     if problem and problem != "retained":
         with pytest.raises(ValueError):
-            validate(payload, manifest, root, executor, corrected_plan=corrected_plan, retained_partition=retained_partition)
+            validate(payload, manifest, root, executor, corrected_plan=corrected_plan, retained_partition=retained_partition,
+                     sequence_plan=sequence_plan, sequence_variant="all_hits" if sequence_plan else None)
     else:
-        result = validate(payload, manifest, root, executor, corrected_plan=corrected_plan, retained_partition=retained_partition)
+        result = validate(payload, manifest, root, executor, corrected_plan=corrected_plan, retained_partition=retained_partition,
+                          sequence_plan=sequence_plan, sequence_variant="all_hits" if sequence_plan else None)
         assert result["genes"] == 4 and result["groups"] == 3
         if retained_partition is not None:
             assert retained_partition in result["provenance_checked"]

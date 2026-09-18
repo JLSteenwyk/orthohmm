@@ -10,7 +10,11 @@ from prepare_ob_candidate_neighborhood import check, record
 from probe_leiden_boundary import saved_fingerprint
 
 
-def validate(payload, manifest, root, executor, corrected_plan=None, retained_partition=None):
+def validate(payload, manifest, root, executor, corrected_plan=None, retained_partition=None,
+             sequence_plan=None, sequence_variant=None):
+    if ((sequence_plan is None) != (sequence_variant is None)
+            or (sequence_plan is not None and corrected_plan is not None)):
+        raise ValueError("Require exactly one complete provenance mode")
     import numpy as np
     launcher = root / "benchmarks/work/publication_qfo_replay_native_v1"
     observed = json.loads((payload / "worker_before.json").read_text())
@@ -30,11 +34,23 @@ def validate(payload, manifest, root, executor, corrected_plan=None, retained_pa
         if observed["modules"][name] != record(launcher / (name.replace(".", "/") + ".py")):
             raise ValueError("Wrong scientific worker module")
     provenance = json.loads((payload / "checked_payload_provenance.json").read_text())
-    if corrected_plan is None:
+    if sequence_plan is not None:
+        from sequence_graph_evidence import sequence_evidence, sequence_settings
+        plan, plan_record, admission_record, names_record = sequence_evidence(
+            Path(sequence_plan["path"]), sequence_plan["sha256"], sequence_variant)
+        if (plan_record != sequence_plan or provenance.get("sequence_plan") != plan_record
+                or provenance.get("sequence_variant") != sequence_variant or "corrected_plan" in provenance):
+            raise ValueError("Sequence plan provenance differs")
+        sequence_settings(manifest, metadata, plan["variants"][sequence_variant])
+        if any(manifest["inputs"][0][key] != names_record[key] for key in ("bytes", "sha256")):
+            raise ValueError("Sequence gene order differs after clustering")
+    elif corrected_plan is None:
         admission_record = record(root / "benchmark_tools/results/qfo_checked_repeats_verified_20260917.json")
-        if "corrected_plan" in provenance:
+        if "corrected_plan" in provenance or "sequence_plan" in provenance or "sequence_variant" in provenance:
             raise ValueError("Unexpected corrected-release provenance")
     else:
+        if "sequence_plan" in provenance or "sequence_variant" in provenance:
+            raise ValueError("Unexpected sequence provenance on HMM payload")
         from checked_replay_payload_worker import corrected_evidence
         plan, plan_record, admission_record, names_record = corrected_evidence(
             Path(corrected_plan["path"]), corrected_plan["sha256"])
@@ -49,6 +65,8 @@ def validate(payload, manifest, root, executor, corrected_plan=None, retained_pa
             raise ValueError("Corrected output/settings differ")
     helpers = [record(executor / "benchmark_tools" / name) for name in
                ("repeat_qfo_saved_graph.py", "checked_python_pair_worker.py", "probe_leiden_boundary.py")]
+    if sequence_plan is not None:
+        helpers.append(record(executor / "benchmark_tools/sequence_graph_evidence.py"))
     if (provenance["source"] != record(executor / "benchmark_tools/checked_replay_payload_worker.py")
             or provenance["helpers"] != helpers or observed["observer"] != helpers[0]
             or provenance["manifest"] != record(payload.parent / "payload_manifest.json")
