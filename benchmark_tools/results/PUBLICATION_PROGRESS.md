@@ -8200,6 +8200,28 @@ and fresh native command before inference. Latest live check: corrected HMM
 were interrupted. Corrected all-method scoring, uncertainty, timing admission
 and the final publication package remain unfinished.
 
+### Corrected OrthoMCL Perl Runtime Inventoried (2026-09-18)
+
+Previous turn made progress with complete BPO/source-HSP consistency checks.
+This turn inventories 30,081 runtime entries and binds a real native probe's
+100 loaded Perl modules and 15 mapped binary/library files to that inventory.
+The snapshot SHA is
+`9cc29e84777f47064c23096ce36e32d5465616979b05febe510219d58b6b3239`.
+All 17 inspector/inventory tests and the real before/after probe passed.
+
+The first probe exposed legacy `.` module lookup and failed. A reviewed v2
+probe permits that default only in its isolated directory containing its two
+ordinary output files; all loaded code remains snapshot-bound. This is not
+blanket approval of current-directory lookup in production. The failed probe
+is retained. See `QFO_CORRECTED_ORTHOMCL_PERL_RUNTIME_20260918.md` for versions,
+artifacts, external symlinks and limitations.
+
+Latest live check: HMM 21706_0 RUNNING at 7:09:53; DGX 21656_24 RUNNING at
+7:30; BLAST 21713 resource-pending. No native benchmark job was changed.
+Configured sources, a production working-directory policy and downstream
+execution/validation integration remain next. Corrected comparisons, admitted
+timing, uncertainty and publication packaging are unfinished.
+
 ### Corrected FastOMA Runtime Identity Recorded (2026-09-18)
 
 Previous turn made progress by queuing corrected FastOMA input staging. This
