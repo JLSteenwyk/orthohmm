@@ -1,5 +1,49 @@
 # Publication Progress
 
+## Corrected Factorial Scoring Chain Queued (2026-09-18 UTC)
+
+Previous turn progressed through25452cd: all eight pair conversions queued.
+Live HMM21706_0 RUNNING9:45:54 and final DGX21656_26 RUNNING20:49 were
+revalidated. No jobs were restarted and no heavy DGX I/O was introduced.
+
+Batch-only changes calculate per-cell pair-manifest checksums after the
+dependency completes, validate exact index/job/revision arguments, and
+write score admission to fixed per-cell paths. Frozen scorer97bc99be and
+independent auditor2f310e658d6c772b23194bd167fa2a41443af7f0 worktrees were
+verified clean. Six QfO endpoints, reference mapping and semantic checks
+are unchanged.98 new wrapper tests exercise all eight CELLS mappings and
+rejection paths; combined scoring/admission suite142 passed in3.30s.
+Implementation0dcfcee.
+
+| Cell | Conversion | Assessment afterok | Admission afterany |
+| --- | --- | --- | --- |
+| p0_c0_r0 | 21765 | 21773 | 21774 |
+| p0_c0_r1 | 21766 | 21775 | 21776 |
+| p0_c1_r0 | 21767 | 21777 | 21778 |
+| p0_c1_r1 | 21768 | 21779 | 21780 |
+| p1_c0_r0 | 21769 | 21781 | 21782 |
+| p1_c0_r1 | 21770 | 21783 | 21784 |
+| p1_c1_r0 | 21771 | 21785 | 21786 |
+| p1_c1_r1 | 21772 | 21787 | 21788 |
+
+Scheduler confirms pending dependencies. Assessments request8CPU/64GiB/24h
+and admissions2CPU/64GiB/4h, allbizon/no-requeue. Executor worktrees are
+publication_qfo_corrected_factorial_assessment_v1 at
+97bc99beafeb93a212aad191c589f8a7746bcbe3 and
+publication_qfo_corrected_factorial_score_admission_v1 at the auditor
+revision above. Outputs use separate qcf0-qcf7 scoring workspaces and
+benchmarks/work/qfo_corrected_factorial_score_admission_INDEX_20260918.json.
+
+The corrected factorial chain is queued through independent score admission,
+not finished. Retain failed cells rather than imputing scores or changing
+endpoints. Next: monitor terminal jobs, validate dedicated timing after its
+final run, and prepare result aggregation/paired uncertainty from admitted
+outputs. Native primary HMM results remain distinct from replay factorial
+results unless partition identity is established. Original TreeFam family
+inputs, independent-family generalization limitations, matched-search
+control and publication packaging requirements remain unresolved. Goal
+remains active; no publication-readiness or superiority claim is made.
+
 ## Corrected Factorial Pair Conversions Queued (2026-09-18 UTC)
 
 Previous turn progressed throughbf255a1: independent native admission jobs
