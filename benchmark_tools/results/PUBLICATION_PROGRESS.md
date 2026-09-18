@@ -1,5 +1,39 @@
 # Publication Progress
 
+## Corrected Sonic Scoring; Original Factorial Endpoint Export (2026-09-18 UTC)
+
+Previous turn was progress: pushed bf16837 (validated factorial figure) and
+launched corrected Sonic conversion21726. Revalidated its live state, then
+observed COMPLETED0:0 in1:20. Its manifest SHA-256 is
+`314074543e745854cc2e994f7b296c2de48e6da97940c68924a37824afd1fef2`.
+All15248739 distinct pairs survived reference mapping; removed pairs0,
+native duplicate relations5615. The input admission remains pinned to
+71af8333...; no historical scores were substituted.
+
+Submitted assessment21727 using frozen74afad5376b7ee11fdabfba386851fd8d3c02857
+(8CPUs,64GiB,24h,no-requeue), confirmed RUNNING. Submitted independent
+admission21728 afterany21727 using frozenf7e80d3a94cc805f7a09c646c50a6c5c4a656343
+(2CPUs,64GiB,4h). Both bind conversion21726 and its exact manifest hash.
+Accuracy remains pending until assessment and independent admission succeed.
+
+Found and fixed the corrected comparison export's method identifier mismatch:
+pipeline reports use `sonic`, while the exporter wrongly accepted only
+`sonicparanoid`. Added pipeline-key agreement, complete Sonic export and
+participant-alias rejection tests. No inference/scoring code or frozen
+executor changed. Existing Proteinortho export remains valid historical output.
+
+Generated original-release eight-cell/six-endpoint Markdown, full-precision
+TSV and JSON provenance table at qfo_factorial_endpoint_table_20260918/.
+The exporter checks independent admission status and reuse binding, ordered
+cells, external conversion hashes/content, endpoint participants, F1/mean
+arithmetic, prediction semantics and submitted/retained/removed counts.
+Precision/recall and challenge-assessed relation counts are retained in JSON.
+The table explicitly distinguishes original/corrected inputs, F1 versus
+similarity, prediction volume versus protein coverage, and secondary mean.
+Added manuscript link; focused export/admission tests cover all eight real
+reports plus corrupt/misbound inputs and output provenance. Corrected HMM,
+DGX timings and pending BLAST remain under their existing jobs, unchanged.
+
 ## QfO Factorial Figure; Corrected Sonic Conversion (2026-09-18 UTC)
 
 The preceding retrieval reply was a status-only/no-progress goal turn:

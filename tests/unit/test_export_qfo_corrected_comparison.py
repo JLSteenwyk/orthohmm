@@ -7,18 +7,46 @@ from benchmark_tools.export_qfo_corrected_comparison import ENDPOINTS, export, e
 from benchmark_tools.prepare_ob_candidate_neighborhood import record
 
 
-def fixture():
-    participant = "qfo_corrected_proteinortho"
+def fixture(method="proteinortho"):
+    participant = "qfo_corrected_" + method
     endpoints = {e: {"score": .5, "score_semantics": "fixture",
         "native_participant": {"participant_id": participant, "metric_x": .5 if e in ("VGNC", "SwissTrees", "TreeFam-A") else 10,
                                "metric_y": .5}} for e in ENDPOINTS}
     report = {"status": "corrected_comparator_assessment_admitted", "accuracy_admitted": True,
-        "publication_ready": False, "method": "proteinortho", "assessment": {
+        "publication_ready": False, "method": method, "assessment": {
             "participant": participant, "endpoints": endpoints, "secondary_six_metric_mean": .5}}
-    conversion = {"status": "corrected_comparator_pairs_prepared_unscored", "method": "proteinortho",
+    conversion = {"status": "corrected_comparator_pairs_prepared_unscored", "method": method,
         "participant": participant, "total_pairs": 12, "retained_pairs": 10, "removed_mapping_pairs": 2,
         "semantics": "native post-clustering pairs"}
     return report, conversion
+
+
+def test_pipeline_methods_match_export_adapters():
+    from benchmark_tools.prepare_qfo_corrected_comparator_pairs import METHODS
+    from benchmark_tools.export_qfo_corrected_comparison import METHOD_KEYS
+    assert set(METHODS) == set(METHOD_KEYS)
+
+
+def test_sonic_pipeline_identity_is_exported(tmp_path):
+    report, conversion = fixture("sonic")
+    pairs = tmp_path / "pairs.json"
+    pairs.write_text(json.dumps(conversion))
+    report["pairs_manifest"] = record(pairs)
+    source = tmp_path / "admission.json"
+    source.write_text(json.dumps(report))
+    result = export([(source, record(source)["sha256"])], tmp_path / "table")
+    admitted = [r for r in result["methods"] if r["status"] == "admitted"]
+    assert len(admitted) == 1
+    assert admitted[0]["key"] == "sonicparanoid_2_0_9"
+    assert admitted[0]["scores"] == dict.fromkeys(ENDPOINTS, .5)
+    assert len([r for r in result["methods"] if r["status"] == "not_admitted"]) == 7
+
+
+def test_reject_wrong_sonic_participant_alias():
+    report, conversion = fixture("sonic")
+    report["assessment"]["participant"] = "qfo_corrected_sonicparanoid"
+    with pytest.raises(ValueError, match="participant"):
+        extract(report, conversion)
 
 
 def test_native_arithmetic():

@@ -480,7 +480,8 @@ inference versus group-derived prediction semantics, not only group
 splitting. Only 18 development-exposed families were resampled; inference
 for other QfO endpoints and corrected-release reruns remains unfinished.
 [Full results and limitations](QFO_FACTORIAL_SWISS_RESULTS_20260918.md),
-[generated 42-endpoint table](qfo_factorial_swiss_bootstrap_20260918.md).
+[generated 42-endpoint table](qfo_factorial_swiss_bootstrap_20260918.md),
+[six-endpoint cell scores and prediction counts](qfo_factorial_endpoint_table_20260918/scores.md).
 
 ![Original-release QfO SwissTrees factorial](qfo_factorial_swiss_figure_20260918/qfo_factorial_swiss.png)
 

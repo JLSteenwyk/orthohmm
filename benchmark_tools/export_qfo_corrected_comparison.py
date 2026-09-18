@@ -13,7 +13,7 @@ from benchmark_tools.prepare_ob_candidate_neighborhood import record, check
 from benchmark_tools.run_simulation_methods import read_frozen
 
 ENDPOINTS = ("GO", "EC", "VGNC", "SwissTrees", "TreeFam-A", "FAS")
-METHOD_KEYS = {"proteinortho": "proteinortho_6_3_6", "sonicparanoid": "sonicparanoid_2_0_9"}
+METHOD_KEYS = {"proteinortho": "proteinortho_6_3_6", "sonic": "sonicparanoid_2_0_9"}
 
 
 def extract(report, conversion):
