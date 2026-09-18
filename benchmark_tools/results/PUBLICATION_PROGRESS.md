@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Independent BPO Admission Queued (2026-09-18 UTC)
+
+Previous turn progressed through c688180: frozen preparation executor and
+dependent21748. Revalidated live jobs: HMM21706_0 RUNNING8:04:38,
+DGX21656_24 RUNNING1:02:15; BLAST21713 pending resources and21748 waiting
+on its existing admission dependency. No jobs were restarted.
+
+Implemented independent terminal/provenance/content/index admission for
+corrected BPO preparation.86focused tests passed, including real native
+fixture checks and admission failure paths. Dedicated-environment recheck
+reproduced all6fixture records/3queries/7offsets; runtime inventories passed
+before and after. Frozen validator914c3fe6f8618c3d90452e7a5b6d7f03f939ccd2
+correctly rejected still-pending21748 without creating admission output.
+
+Submitted21749 afterany:21748 with2CPUs/64GiB/24h onbizon, no requeue;
+scontrol confirms PENDING/Dependency and requested resources. See
+QFO_CORRECTED_BPO_ADMISSION_20260918.md for retained evidence and scope.
+No production BPO is admitted yet. Next: stage admitted BPO/indexes and
+original GG for guarded native OrthoMCL inference, then validate final
+groups and complete conversion/scoring. Publication goal remains active.
+
 ## Corrected BPO Preparation Queued (2026-09-18 UTC)
 
 Previous turn progressed by pushing4814109: dedicated Python environment,
