@@ -8326,3 +8326,24 @@ Latest live check: HMM 21706_0 RUNNING at 6:21:39, DGX 21656_22 RUNNING at
 28:46. FastOMA inference/admission/conversion remain pending their dependencies.
 Corrected comparisons, remaining uncertainty, dedicated timing admission and
 final publication packaging remain unfinished. No unrelated work was changed.
+
+### Corrected FastOMA Scoring And Validation Queued (2026-09-18)
+
+The preceding user-facing turn rechecked the TreeFam retrieval limitation but
+made no new implementation progress. This turn completes corrected FastOMA
+scorer integration, independent score validation and the comparison export
+adapter. Native pairs and supplied-OrthoFinder-tree semantics remain explicit;
+no historical output or corrected endpoint is changed.
+
+Assessment executor `9258bcfd3f90d63ec7f2cfb02122cd20bd7e1214` runs as job
+21744 afterok:21742 (8 CPUs/64 GiB/24 hours). Validation executor
+`a076a36e09f5ea98b6433d53641301011be85843` runs as job 21745 afterany:21744
+(2 CPUs/64 GiB/four hours), rejecting unsuccessful scoring. The complete unit
+suite passed with 3,541 passed and one skipped; 86 focused tests and both Bash
+syntax checks passed. See `QFO_CORRECTED_FASTOMA_SCORING_20260918.md`.
+
+Both new jobs are dependency-pending, not completed accuracy results. The last
+live check found corrected HMM 21706_0 RUNNING at 6:36:46 and DGX timing
+21656_22 RUNNING at 43:53. Corrected all-method comparisons, remaining
+uncertainty, dedicated timing admission and final publication packaging remain
+unfinished. No unrelated jobs or working-tree changes were modified.
