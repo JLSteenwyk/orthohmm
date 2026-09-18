@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Corrected Replay Parent Admission Implemented (2026-09-18 UTC)
+
+Previous turn progressed by pushing the retained-stage audit (154cf46).
+Implemented `admit_qfo_corrected_replay.py`, connecting that audit to the
+parent scheduler, frozen executor 188fde2, source/helper inventory, explicit
+plan and output report hashes, corrected native admission, frozen primary
+input plan, reconstructed scientific command/environment and runtime checks.
+It checks producer schema/settings, native checkpoint summaries, stage
+coverage and counts, all four exact output paths, and independently
+recomputes final native/replay partition equivalence. Genuine nonequivalence
+is retained, not rejected or used to transfer scores. All checked records
+are rehashed before writing a fresh admission report.
+
+The gate requires terminal COMPLETED/0:0 accounting before reading output.
+A live negative check against running raw HMM job 21707 (21706_0) rejected
+before plan/output access and created no report. This tests early rejection,
+not admission of HMM inference as replay. Corrected replay has not run yet;
+no corrected replay output or accuracy result has been admitted.
+
+Validation: 129 focused tests pass, including parent identity/settings,
+finite timestamps, incomplete/duplicate/foreign genes, changed output
+hashes, exact output paths, valid nonequivalence and real-file orchestration
+with mocked scheduler/runtime/stage components. Full unit suite:
+**2,980 passed, 1 skipped in 58.31 seconds**. The opt-in installed legacy
+BLAST smoke test remains skipped in the default suite. No scientific
+inference settings or frozen executor files were changed.
+
+Latest pre-commit live check: corrected HMM 21706_0 running 2:55:24,
+SonicParanoid 21710 running 2:32:12, original final-cell assessment 21723
+running 14:28; dependent admissions and preparation remain pending.
+Next: after native admission/preparation, review and freeze the actual
+corrected replay plan, launch with the existing batch, and use this gate
+after successful completion. Corrected candidate-arm preparation remains
+unfinished. Full publication requirements remain active.
+
 ## Corrected Retained-Stage Audit Implemented (2026-09-18 UTC)
 
 Previous turn progressed by publishing the checksum-gated replay launcher
