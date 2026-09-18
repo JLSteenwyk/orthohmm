@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Native Counter Window Audit And Prospective Screen (2026-09-18 UTC)
+
+Previous turn progressed through72ae5d4 with all three native counter smokes
+completed and validated. Reread the full objective. Scheduler inspection
+confirmed21792 RUNNING38:50 and21706_0 RUNNING15:02:46;21798 was dependency
+pending. No scientific job was restarted.
+
+Audited the actual recorded host/native windows. All three have observer
+pre-reads after native pre-reads (7.534166,7.471046,16.295519ms overlapping
+brackets). They cannot support host-minus-native CPU subtraction, despite
+valid native outputs. Added an operational screen that requires enclosing
+host windows, stable identity/scope and error-free cumulative counters. It
+retains signed residuals and rejects malformed evidence rather than correcting
+timings. Engineering thresholds are explicitly not calibrated interference
+bounds and never grant scientific timing admission.
+
+DGX_BRACKETED_SCREEN_PROTOCOL_20260918.md freezes the intended handshake and
+arithmetic. dgx_native_window_rejections_20260918.json retains actual rejected
+snapshots and hashes. The next timing work is implementing/testing the new
+handshake and interval-level observations; no replacement panel was launched.
+Corrected QfO results, other endpoint uncertainty and publication packaging
+remain incomplete.
+
 ## Counter-Native Pipeline Smokes Validated (2026-09-18 UTC)
 
 Previous turn progressed through9b08fa0 with the completed fixed-work DGX
