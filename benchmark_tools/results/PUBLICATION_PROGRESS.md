@@ -8068,3 +8068,25 @@ at 47:02, bringing the completed count to 18/27. Task 21656_18 is running
 at 7:55. These are scheduler elapsed times, not validated inference timings.
 No concurrent DGX filesystem scan was performed. Corrected native conversion,
 scoring and the full prespecified uncertainty comparison remain unfinished.
+
+### Corrected OrthoFinder Conversions Queued (2026-09-18)
+
+Previous turn made progress by implementing and queueing native admission
+21731. This turn implements separate corrected full/native and sequence-only
+MCL conversions, frozen at `aa8da7800c4801684726151ad249da7c82a3b88d`.
+Array 21733 (tasks 0/1, concurrency one) is scheduler-confirmed pending on
+successful admission 21731. Each task uses two CPUs/64 GiB on bizon. See
+`QFO_CORRECTED_ORTHOFINDER_PAIRS_20260918.md` for semantics and validation.
+
+All 62 focused tests pass, including converter equivalence, failure-evidence
+retention and no overwrite. Actual retained WGD outputs reproduce 38,572
+distinct native pairs and 54,288 distinct MCL pairs. This validates conversion
+behavior, not corrected-QfO accuracy. No scoring job for these two new
+submissions has been launched; the scoring adapter and independent score
+admission remain required.
+
+Scheduler confirms DGX task 21656_18 completed successfully (19/27 complete),
+and task 21656_19 is running at 5:34. HMM 21706_0 remains active at 5:00:11.
+These elapsed times are not native timing measurements. Other dependencies
+remain pending. No running job was restarted or interrupted, and no DGX
+filesystem scan was performed. The full publication goal remains unfinished.

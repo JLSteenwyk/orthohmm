@@ -56,3 +56,12 @@ task, with a twelve-hour ceiling on bizon. It must depend on successful native
 admission job 21731. Corrected six-endpoint scoring needs its own subsequently
 frozen adapter and independent score admission; original-release scores must
 not be transferred to these outputs.
+
+## Frozen Queue
+
+Converter executor `benchmarks/work/publication_qfo_corrected_orthofinder_pairs_v1`
+is detached at `aa8da7800c4801684726151ad249da7c82a3b88d`. Array 21733
+contains task 0 (full native) and task 1 (MCL diagnostic), with concurrency
+one. Scheduler inspection confirms the `afterok:21731` dependency, two CPUs,
+64 GiB and twelve-hour ceiling. Both tasks remain pending; no corrected pair
+output is claimed by this queue record.
