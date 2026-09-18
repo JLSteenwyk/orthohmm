@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Corrected Inputs Ready For Execution Freeze; First R-On Score Admitted (2026-09-18 UTC)
+
+Previous turn progressed via1096ccewith archive acquisition/comparison and
+schema fix. Re-read goal. Native sequence21689completed0:0in3:14;983,959exact
+matches and178BOUZ-to-X representation-only differences, none unexplained,
+complete984,137coverage. Reviewed pins/logs/reports, then extracted78canonical
+FASTAs unchanged into `benchmarks/work/qfo_corrected_inputs_20260918` using
+detached1096ccea2cdd5f7cbbab7dec5ed69282cca00166. Direct inventory passed:
+78distinct species,984,137unique sequences,440,246,934residues; all source
+hashes rechecked. See `QFO_CORRECTED_INPUTS_STAGED_20260918.md` for all pins.
+No inference authorization yet: freeze exact corrected-run execution first.
+
+Original p0_c0_r1assessment21697completed0:0in37:38, independent validator
+21698completed0:0in15s. Re-ran the frozen validator; entire assessment object
+agrees exactly, including all48native records/six endpoints. Preserved
+`qfo_factorial_assessment_p0_c0_r1_20260918.json` SHA
+d86179980eed61c0dd0eaac5a862498bd9280dd6489ac2b461844c878673a37d.
+GO.49014807,EC.96825133,VGNC.8969314412,Swiss.7815386567,
+TreeFam.5622100385,FAS.7835976007; project-secondarymean.7471128562.
+See `QFO_FIRST_R_ON_ASSESSMENT_20260918.md` for full endpoint tradeoffs and
+scope. No interim paired inference or tuning; still original-release-limited.
+
+Fifty-eight targeted tests pass. Remaining original score21703wasconfirmed
+running20:20, reconciliation21671_2running25:15 andDGX21656_12running22:48;
+their dependent jobs stay queued. No required local exec session remains.
+Next: freeze/launch corrected workflows, admit remaining original factorial
+cells, then complete prespecified uncertainty and resource evidence. Full
+publication goal remains active, not complete or blocked.
+
 ## Corrected Archive Acquired And Canonical Mapping Verified (2026-09-18 UTC)
 
 Previous turn progressed through86fa3b3unexpanded pair audit. Re-read full
