@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Corrected QfO Sequence-Search Preparation (2026-09-18 UTC)
+
+Previous turn progressed through5a75d7a: full scheduler snapshot and timing
+accounting limitation recorded. Live HMM21706_0 RUNNING10:03:05 and final
+DGX21656_26 RUNNING38:00 revalidated. No restarts or new DGX workload.
+
+Reviewed the completed OrthoBench sequence control and SQLite/memmap
+converter. Its command-line interfaces are pinned to12 species and cannot
+be reused as a corrected78-species runner. Added separate corrected input
+preparation, preserving search_command and pinned DIAMOND2.1.11 from the
+original plan while reading only corrected FASTAs.24 focused tests pass.
+Committed implementation3cbe3a3 and executed actual preparation successfully:
+984,137 genes,78 targets, fresh queries584,039,577bytes and metadata80,596,465
+bytes. Rehashed outputs/binary/source and confirmed78 empty target dirs.
+
+Manifest at benchmarks/work/qfo_sequence_search_control_v1/manifest.json:
+fcef19d9c745c5806197aa219dec1c89bd5d90082a35f24dadafa3422f461436.
+QFO_SEQUENCE_SEARCH_CONTROL_20260918.md documents exact scientific scope,
+provenance, memory limitations and remaining gates. Execution_authorized is
+false. No search, graph replay or scoring has been launched. All-hit and
+post-search top100 remain diagnostics, not demonstrated equal sensitivity
+or compute; no superiority or independent-generalization claim is enabled.
+
+Next: frozen corrected-only search runner and full-target validation, then
+numeric conversion and downstream controls. Continue native QfO admissions
+and complete DGX validation after its final task. Full goal remains active.
+
 ## Dedicated Timing Accounting Check (2026-09-18 UTC)
 
 Previous turn progressed through796308b: corrected bootstrap adapter and
