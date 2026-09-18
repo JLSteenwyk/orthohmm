@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Simulator And Selected Dependency Citations (2026-09-18 UTC)
+
+Previous turn made progress: committed/pushed 3d19301 with reproducible
+selected citations. Re-read the goal and verified live jobs. Added eight
+primary-literature dependency records: Zombi, Pyvolve, MAFFT, FastTree,
+DIAMOND, FAMSA, FastME and MCL. Connected simulator citations and exact
+protocol-pinned versions to manuscript Methods, without changing experiments.
+The source audit explicitly separates installed/resolved binaries from
+actual invocation, and records Zombi's online-2019/issue-2020 distinction.
+
+Dependency CSL SHA-256 is
+`3cbd2b1bdc502b2aa50c5b540886a75311ccc80646ec9fb8a778bd51afbc3e03`;
+offline replay is byte-identical and all16 exporter tests pass. Raw source
+responses remain local with per-response hashes in the committed provenance.
+See `PUBLICATION_DEPENDENCY_REFERENCES_20260918.md`. This does not close
+HMM/profile/Leiden citations, functional-resource licenses, final rendering,
+the missing TreeFam sources, or the remaining scientific evidence gates.
+
+Last poll: scoring21697 running18:29; corrected acquisition21687 running
+1:25:57; reconciliation21671_1 running1:55:24; DGX21656_11 running4:20.
+Dependent validators/conversions remain queued. Next scientific actions
+remain inspection/admission of these outputs, advancing remaining QfO
+factorial cells, corrected-input validation and matched-resource analysis.
+
 ## Selected Machine-Readable Bibliography (2026-09-18 UTC)
 
 The preceding source-search follow-up was no progress: it confirmed retained

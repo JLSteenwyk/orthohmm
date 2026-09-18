@@ -5,7 +5,10 @@ distinguish completed development-exposed analyses from prospective work.
 Internal evidence links are supplied for audit. An initial
 [verified literature bibliography](PUBLICATION_REFERENCES_20260917.md)
 covers benchmarks, biological evidence and retained comparator methods;
-dependency/resource citations and journal-specific formatting are incomplete.
+An [eight-dependency supplement](PUBLICATION_DEPENDENCY_REFERENCES_20260918.md)
+covers the simulator and selected search, alignment, clustering and tree
+methods. Remaining dependency/resource citations and journal-specific
+formatting are incomplete.
 
 ## Study Objective
 
@@ -184,6 +187,12 @@ matched-search and membership-filter controls remain unfinished.
 [Ablation protocol](PUBLICATION_ABLATION_PROTOCOL_20260916.md).
 
 ### Evolutionary Simulations And Runtime Admission
+
+We used [Zombi](https://doi.org/10.1093/bioinformatics/btz710) at revision
+`8db13ee4ba007f46c17f38586d31e5aa617c1647` and
+[Pyvolve](https://doi.org/10.1371/journal.pone.0139047) 1.1.0 with the recorded
+per-family seed adapter. These published simulator methods do not substitute
+for local checks of event-derived truth and deterministic sequence generation.
 
 Two separate panels each contain ten independent simulation seeds and seven
 conditions: baseline, increased divergence, increased duplication/loss,

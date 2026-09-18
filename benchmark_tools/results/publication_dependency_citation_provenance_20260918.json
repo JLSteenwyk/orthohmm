@@ -1,0 +1,123 @@
+{
+  "article_identifier_mapping": "Crossref article-number is CSL number, not page.",
+  "limitations": [
+    "Crossref bibliographic metadata, not full-text scientific review or software-version provenance.",
+    "Author names reflect deposited metadata; known suffix/name omissions need explicit review, not silent invention.",
+    "Only selected references exported; dependency/resource bibliography and journal-specific style remain separate.",
+    "Raw responses retained locally; abstracts and cited-reference lists are omitted from committed CSL-JSON."
+  ],
+  "output": {
+    "bytes": 6045,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_dependency_references_20260918.csl.json",
+    "sha256": "3cbd2b1bdc502b2aa50c5b540886a75311ccc80646ec9fb8a778bd51afbc3e03"
+  },
+  "records": [
+    {
+      "authors": 5,
+      "doi": "10.1093/bioinformatics/btz710",
+      "id": "zombi2019online",
+      "response": {
+        "bytes": 13366,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_dependency_citations_20260918/zombi2019online.json",
+        "sha256": "aadab0eca658925b84cf37402dd82d2ca950e3575fe4004b2973972e4d545d82"
+      },
+      "retrieved_utc": "2026-09-18T03:56:26.106434+00:00",
+      "url": "https://api.crossref.org/works/10.1093%2Fbioinformatics%2Fbtz710/transform/application/vnd.citationstyles.csl+json"
+    },
+    {
+      "authors": 2,
+      "doi": "10.1371/journal.pone.0139047",
+      "id": "pyvolve2015",
+      "response": {
+        "bytes": 15065,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_dependency_citations_20260918/pyvolve2015.json",
+        "sha256": "881708958ba4d2bed4f2fbe5f64bf18ca8c28c2d3bc7bdb4462f3a2c2589c984"
+      },
+      "retrieved_utc": "2026-09-18T03:56:26.482791+00:00",
+      "url": "https://api.crossref.org/works/10.1371%2Fjournal.pone.0139047/transform/application/vnd.citationstyles.csl+json"
+    },
+    {
+      "authors": 2,
+      "doi": "10.1093/molbev/mst010",
+      "id": "mafft2013",
+      "response": {
+        "bytes": 14000,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_dependency_citations_20260918/mafft2013.json",
+        "sha256": "877f37e6d5ba5f885916adccc3893e6b57ee6444e88fb364a196966c1f4ec501"
+      },
+      "retrieved_utc": "2026-09-18T03:56:26.930814+00:00",
+      "url": "https://api.crossref.org/works/10.1093%2Fmolbev%2Fmst010/transform/application/vnd.citationstyles.csl+json"
+    },
+    {
+      "authors": 3,
+      "doi": "10.1371/journal.pone.0009490",
+      "id": "fasttree2010",
+      "response": {
+        "bytes": 2135,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_dependency_citations_20260918/fasttree2010.json",
+        "sha256": "999251580585c8c684ed6ca63830ea7be4d59ec114448572f469d69884b7b02e"
+      },
+      "retrieved_utc": "2026-09-18T03:56:27.227596+00:00",
+      "url": "https://api.crossref.org/works/10.1371%2Fjournal.pone.0009490/transform/application/vnd.citationstyles.csl+json"
+    },
+    {
+      "authors": 3,
+      "doi": "10.1038/s41592-021-01101-x",
+      "id": "diamond2021",
+      "response": {
+        "bytes": 15137,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_dependency_citations_20260918/diamond2021.json",
+        "sha256": "3d95ae48d3b2997977144004fff658db29b6ac22a6b05740fed9c7b15e25a742"
+      },
+      "retrieved_utc": "2026-09-18T03:56:27.954694+00:00",
+      "url": "https://api.crossref.org/works/10.1038%2Fs41592-021-01101-x/transform/application/vnd.citationstyles.csl+json"
+    },
+    {
+      "authors": 3,
+      "doi": "10.1038/srep33964",
+      "id": "famsa2016",
+      "response": {
+        "bytes": 20311,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_dependency_citations_20260918/famsa2016.json",
+        "sha256": "a6076060afd2f67cc415b6a7a2c6c5dab6b2b83982b7ec7b270b3407509a4d96"
+      },
+      "retrieved_utc": "2026-09-18T03:56:28.342592+00:00",
+      "url": "https://api.crossref.org/works/10.1038%2Fsrep33964/transform/application/vnd.citationstyles.csl+json"
+    },
+    {
+      "authors": 3,
+      "doi": "10.1093/molbev/msv150",
+      "id": "fastme2015",
+      "response": {
+        "bytes": 3965,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_dependency_citations_20260918/fastme2015.json",
+        "sha256": "28246a99a9afba2581fb9d65ba97fed4f46106d472a118d4cd755dee8012091c"
+      },
+      "retrieved_utc": "2026-09-18T03:56:28.634948+00:00",
+      "url": "https://api.crossref.org/works/10.1093%2Fmolbev%2Fmsv150/transform/application/vnd.citationstyles.csl+json"
+    },
+    {
+      "authors": 1,
+      "doi": "10.1093/nar/30.7.1575",
+      "id": "mcl2002",
+      "response": {
+        "bytes": 1618,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_dependency_citations_20260918/mcl2002.json",
+        "sha256": "f4e26214f6c2f2ba3d430baa0a0437b86334fec4ee858ba1fc2de597eabbeaf1"
+      },
+      "retrieved_utc": "2026-09-18T03:56:28.941364+00:00",
+      "url": "https://api.crossref.org/works/10.1093%2Fnar%2F30.7.1575/transform/application/vnd.citationstyles.csl+json"
+    }
+  ],
+  "selection": {
+    "bytes": 590,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_dependency_citation_selection_20260918.json",
+    "sha256": "d41fb57f7945dd8c2f89c604ce477b358ee28dc9a83a31a6bc0891ccde32952e"
+  },
+  "source": {
+    "bytes": 6538,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_publication_citations.py",
+    "sha256": "e690c964058b09a2c8e4acae988506ab0e9c35141605b8b94934bdfcc116ede9"
+  },
+  "status": "selected_citation_metadata_exported"
+}

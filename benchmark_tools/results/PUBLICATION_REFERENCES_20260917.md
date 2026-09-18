@@ -147,10 +147,12 @@ No published benchmark numbers are substituted for the project's results.
 ## Outstanding Review
 
 Comparator method metadata and the cited OrthoHMM preprint lineage are now
-covered above. Still verify simulator, HMM/search, clustering and phylogeny
-dependencies; QfO service updates and
-individual reference/functional resources. Complete author lists and a
-journal-formatted citation export remain to be produced.
+covered above. The [eight-dependency supplement](PUBLICATION_DEPENDENCY_REFERENCES_20260918.md)
+adds simulator, sequence search, alignment, MCL and tree-method references.
+The [CSL export](PUBLICATION_CITATION_EXPORT_20260918.md) now preserves complete
+deposited author lists for these original 14 references. HMM/profile libraries,
+Leiden, QfO service updates, individual reference/functional resources and
+journal-specific citation rendering remain incomplete.
 Full-text review of the OrthoHMM preprint remains incomplete; its metadata
 check is narrower than a review of its scientific claims or version history.
 
