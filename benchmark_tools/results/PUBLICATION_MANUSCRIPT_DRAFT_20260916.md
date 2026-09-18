@@ -842,6 +842,13 @@ family resampling, or every publication competitor.
 
 ## Data And Code Availability
 
+A [relocated reproduction workflow](SWISS_RELOCATED_REPRODUCTION_20260917.md)
+exports the SwissTrees comparator analysis from a fixed commit and reruns it in
+a fresh hash-pinned Python environment. Its numerical results and Markdown
+table reproduce exactly, and the figure workflow completes. This validates a
+bounded statistical workflow, not native inference or raw benchmark acquisition
+and scoring, and does not resolve third-party redistribution permissions.
+
 Code and analysis milestones are tracked in the authorized repository.
 Machine-readable reports retain input, source, and output hashes where
 audited; large raw datasets and working outputs are not included in normal

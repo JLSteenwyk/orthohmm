@@ -44,6 +44,11 @@ evidence that an experiment completed or a biological hypothesis is true.
 
 ## Current Execution Status
 
+- [Relocated SwissTrees reproduction](SWISS_RELOCATED_REPRODUCTION_20260917.md)
+  exactly reproduces statistical JSON and Markdown from a committed-source
+  export in a fresh hash-pinned environment; figure generation succeeds.
+  This is a bounded statistical workflow, not complete native inference,
+  raw-data scoring reproduction, license clearance or the archival release.
 - [Eight-method SwissTrees paired intervals](QFO_SWISS_COMPARATOR_INTERVALS_20260917.md)
   and their [three-panel figure](QFO_SWISS_COMPARATOR_FIGURE_20260917.md)
   implement the committed24-endpoint protocol. All seven comparator-minus-full-

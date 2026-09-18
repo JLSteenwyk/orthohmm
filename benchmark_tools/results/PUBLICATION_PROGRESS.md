@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Relocated Statistical Workflow Reproduction (2026-09-17)
+
+Previous turn progressed first-six DGX metadata validation, pushedfd5f1ac.
+Re-read the full objective; moved to publication workflow portability while
+timing continues. Added a clean committed-source exporter and reproduction
+runner for the completed SwissTrees comparison, plus an11-package version/
+distribution-hash-pinned analysis environment separate from inference.
+
+FreshPython3.10.13virtualenv installed with uv0.12.15 hash enforcement; all11
+packages pass compatibility checks. Exported nine committed modules, four
+data/protocol/result files and license to a new/tmpdirectory, with no dirty
+worktree files or raw benchmark dependency. Isolated Python executions reproduce
+all numerical/scientific JSON content exactly and the Markdown table byte-for-byte.
+Only provenance paths relocate; source/input/helper hashes must match. Plot
+workflow completes and relocated PNG was visually checked without clipping.
+All21focused reproduction/figure/bootstrap tests pass.
+
+Evidence and limitations: `SWISS_RELOCATED_REPRODUCTION_20260917.md` and
+`swiss_relocated_reproduction_20260917.json`. This is not end-to-end inference,
+raw-QfO rescoring, cross-platform validation, complete archive or external-data
+license clearance. Original objective remains active: extend executable workflows
+and remaining scientific analyses, finish timing admission and package/release.
+
 ## Completed DGX Metadata Contracts (2026-09-17)
 
 Previous turn progressed run00 host diagnostics, pushedde48f7f. Re-read full
