@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Dedicated Timing Accounting Check (2026-09-18 UTC)
+
+Previous turn progressed through796308b: corrected bootstrap adapter and
+full unit regression completed. Revalidated HMM21706_0 RUNNING10:00:24
+and DGX21656_26 RUNNING35:19, then queried the entire timing array.
+All26 prior tasks are COMPLETED0:0. Saved timestamped scheduler evidence
+as dgx_scheduler_progress_20260918.json and independently checked all27
+unique task IDs,20CPU/96GiB/spark-7ff0 allocations and no adjacent
+scheduler-interval overlap. No inference or native-output success is
+inferred from this check alone.
+
+The complete snapshot reports TotalCPU00:00:00 for every task, so this
+field is unusable for CPU-efficiency evidence. Retained collector and
+GNU-time evidence require independent reconciliation. Earlier run00 host
+replay remains inconclusive; kworker process names cannot retrospectively
+authenticate kernel threads or establish missing process CPU consumption.
+No global classification is inferred from that one-run diagnostic.
+
+DGX_POSTRUN_ADMISSION_20260918.md records concrete post-terminal gates:
+preserve all27 outputs, full metadata/native-output validation, resource
+replay and accounting, all-run host-interval review, then evidence-based
+reuse/selective reruns. No remote bulk transfer, collector change, restart
+or new timing workload was initiated. Next: finish this full admission
+after task26 terminates while corrected QfO runs continue. Goal active.
+
 ## Corrected Factorial Paired Bootstrap Adapter (2026-09-18 UTC)
 
 Previous turn progressed througha3300e1: corrected raw family-count audit
