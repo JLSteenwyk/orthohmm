@@ -36,7 +36,7 @@ evidence that an experiment completed or a biological hypothesis is true.
 | The package is publication-ready | All sections below | Not achieved |
 | Original QfO inputs match the corrected2020benchmark release | [Corrected archive comparison](QFO_CORRECTED_ARCHIVE_ACQUIRED_20260918.md) | Contradicted for the Xenopus proteome; preserve original results as release-limited |
 | Corrected QfO inputs cover the retained reference identities and sequence content | [Native sequence and staging audits](QFO_CORRECTED_INPUTS_STAGED_20260918.md) | Supported: all 984,137 identities, 983,959 exact sequences and 178 representation-only differences; no unexplained differences. This is input compatibility, not biological annotation validation |
-| Corrected QfO accuracy or rankings are established | [Admitted partial table](qfo_corrected_comparison_20260918_v1/scores.md), [frozen rerun protocol](QFO_CORRECTED_RELEASE_PROTOCOL_20260917.md) | Only Proteinortho point estimates are admitted so far; no corrected cross-method ranking or paired difference is established. Remaining methods and factorial are unfinished. No original predictions or intervals may be relabeled |
+| Corrected QfO accuracy or rankings are established | [Admitted partial table](qfo_corrected_comparison_20260918_v2/scores.md), [frozen rerun protocol](QFO_CORRECTED_RELEASE_PROTOCOL_20260917.md) | Proteinortho and SonicParanoid point estimates are admitted; the eight-method comparison and paired differences remain incomplete. Remaining methods and factorial are unfinished. No original predictions or intervals may be relabeled |
 | Original TreeFam family-level uncertainty can be recovered from pooled pairs | [Source retrieval investigation](TREEFAM_SOURCE_RETRIEVAL_20260918.md) | Unsupported: original trees and mapping remain missing; downloaded pooled reference is not an independent-family inventory |
 
 ## Completion Requirements
@@ -54,11 +54,12 @@ evidence that an experiment completed or a biological hypothesis is true.
 ## Current Execution Status
 
 - Corrected Proteinortho has independently admitted six-endpoint scores and
-  4,695,385 mapped native pairs in the [partial corrected table](qfo_corrected_comparison_20260918_v1/scores.md).
+  4,695,385 mapped native pairs in the [partial corrected table](qfo_corrected_comparison_20260918_v2/scores.md).
   Corrected Sonic inference21710 and conversion21726 completed successfully;
-  15,248,739 distinct pairs survived reference mapping. Assessment21727 is
-  running and its independent admission21728 is pending at this snapshot.
-  No Sonic score is admitted yet. Corrected HMM21706_0 is running; its native
+  15,248,739 distinct pairs survived reference mapping. Assessment21727 and
+  independent admission21728 completed successfully; a fresh frozen admission
+  reproduces the Sonic report byte-for-byte. Its six endpoints are admitted,
+  but paired uncertainty and the remaining methods are not. Corrected HMM21706_0 is running; its native
   admission21720 and replay preparation21722 are pending. The corrected
   replay/candidate/reconciliation/conversion/scoring/admission workflows are
   implemented and tested, not completed experiments. [Progress ledger](PUBLICATION_PROGRESS.md).

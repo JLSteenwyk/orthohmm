@@ -1,5 +1,37 @@
 # Publication Progress
 
+## Corrected Sonic Scores Admitted; Citation Supplement (2026-09-18 UTC)
+
+Previous turn progressed by pushing7f53017 (claim refresh and expanded figure
+audit). Revalidated live processes before continuing. Sonic scoring21727
+then completed0:0 in33:58; independent admission21728 completed0:0 in27s.
+A new execution of frozenf7e80d3 reproduced the entire admission file
+byte-for-byte. Retained the unmodified report at
+`qfo_corrected_sonic_assessment_20260918.json`, SHA-256
+`7c17b242b591c78cfeb5366399556178c9ab5b3b3c4c85bdf322f200c732bf3e`.
+
+Corrected Sonic endpoints: GO0.454384530, EC0.872760970,
+VGNC F1 0.982794335, SwissTrees F1 0.798459422,
+TreeFam-A F1 0.771955875, FAS0.736680187. Project-defined secondary mean
+0.769505887;15,248,739mapped native pairs,zero mapping losses. Generated
+`qfo_corrected_comparison_20260918_v2/` directly from the admitted Proteinortho
+and Sonic reports, retaining six pending rows. Previous one-row table remains
+historical. Updated manuscript/checklist; no paired uncertainty, full ranking
+or OrthoHMM superiority inferred from the two completed rows.
+
+Added five clustering/analysis references (Leiden, CPM, NumPy, Biopython,
+Matplotlib) after checking frozen/source use and publisher/project sources.
+Downloaded Crossref CSL metadata with complete response provenance; cached
+network-free replay reproduced the CSL byte-for-byte. Article identifiers
+and online publication dates are preserved correctly.16citation-export tests
+pass. This does not certify runtime versions, licenses, HMMER use or complete
+dependency/reference-resource coverage. See PUBLICATION_NUMERIC_REFERENCES_20260918.md.
+
+Latest other-job snapshot: HMM21706_0 RUNNING4:20:38 and DGX21656_17
+RUNNING23:32. Their dependent jobs are preserved. Remaining corrected
+comparators/factorial, appropriate uncertainty, matched timing admission and
+the final portable publication/archive package remain required.
+
 ## Claim Refresh And Figure Inventory (2026-09-18 UTC)
 
 Previous turn progressed by pushing2f310e6 and freezing independent

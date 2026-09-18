@@ -7,7 +7,8 @@ Internal evidence links are supplied for audit. An initial
 covers benchmarks, biological evidence and retained comparator methods;
 An [eight-dependency supplement](PUBLICATION_DEPENDENCY_REFERENCES_20260918.md)
 covers the simulator and selected search, alignment, clustering and tree
-methods. Remaining dependency/resource citations and journal-specific
+methods. A [clustering and analysis supplement](PUBLICATION_NUMERIC_REFERENCES_20260918.md)
+adds Leiden, CPM, NumPy, Biopython and Matplotlib. Remaining dependency/resource citations and journal-specific
 formatting are incomplete.
 
 ## Study Objective
@@ -29,6 +30,9 @@ The retained OrthoHMM configurations are high sensitivity and the
 satellite_v2 phylogenetic pipeline. The prospective validation configuration
 is pinned to source revision `7f3a9e4`, with BLOSUM62, E-value threshold
 1e-4, Leiden CPM resolution 0.1, seed 4, and the default refinement profile.
+The Leiden optimizer is described by [Traag et al. (2019)](https://doi.org/10.1038/s41598-019-41695-z)
+and the CPM objective by [Traag et al. (2011)](https://doi.org/10.1103/PhysRevE.84.016114).
+These clustering references do not imply biological orthology guarantees.
 The phylogenetic configuration uses satellite_v2 candidate expansion,
 an internally inferred species tree, minimum-variance species-tree rooting,
 the species-overlap root rule, and positive-paralogy pair inference.
@@ -720,9 +724,14 @@ factorial cells, with separate prediction identifiers and fresh scoring.
 Corrected inference is in progress. Proteinortho is the first independently
 admitted corrected row: GO 0.486336, EC 0.963168, VGNC F1 0.954896, SwissTrees
 F1 0.718111, TreeFam-A F1 0.643187 and FAS 0.813595, with 4,695,385 mapped native
-pairs. Its project-defined secondary mean is 0.763216. The
-[partial corrected table](qfo_corrected_comparison_20260918_v1/scores.md)
-does not yet establish a cross-method comparison or paired uncertainty.
+pairs. Its project-defined secondary mean is 0.763216. SonicParanoid was
+subsequently admitted with GO 0.454385, EC 0.872761, VGNC F1 0.982794,
+SwissTrees F1 0.798459, TreeFam-A F1 0.771956 and FAS 0.736680, with
+15,248,739 mapped native pairs and secondary mean 0.769506. A fresh frozen
+admission reproduced its complete report byte-for-byte. These two rows
+show different point-estimate trade-offs, not a uniform advantage. The
+[partial corrected table](qfo_corrected_comparison_20260918_v2/scores.md)
+does not yet complete the eight-method comparison or establish paired uncertainty.
 Old groups, trees, scores and confidence intervals cannot
 be relabeled as corrected results. The previously measured 53 legacy BLAST
 query failures also belong to the original run; failures in the corrected

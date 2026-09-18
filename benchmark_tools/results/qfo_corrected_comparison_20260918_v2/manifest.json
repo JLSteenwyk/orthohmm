@@ -1,0 +1,278 @@
+{
+  "checked_records": [
+    {
+      "bytes": 300518,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_proteinortho_assessment_20260918.json",
+      "sha256": "00acc10285b955cf0b33c8b3d95044e4f797ab77ba6ae4e768b62615e61f1552"
+    },
+    {
+      "bytes": 96560,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_comparator_pairs_v1/proteinortho/results.json",
+      "sha256": "c0620eb8772a983956d2f3b5cb98636bbaca2ba0c2adbcd9ee0ff0805d02342b"
+    },
+    {
+      "bytes": 5641618,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_sonic_assessment_20260918.json",
+      "sha256": "7c17b242b591c78cfeb5366399556178c9ab5b3b3c4c85bdf322f200c732bf3e"
+    },
+    {
+      "bytes": 5438474,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_comparator_pairs_v1/sonic/results.json",
+      "sha256": "314074543e745854cc2e994f7b296c2de48e6da97940c68924a37824afd1fef2"
+    }
+  ],
+  "limitations": [
+    "Only admitted corrected-release reports are included; pending is not zero and does not describe scheduler state.",
+    "GO/EC similarity and FAS are not F1; the six-metric mean is a project-defined secondary summary.",
+    "No paired uncertainty or corrected-release ranking is established by this point-estimate table.",
+    "This exporter checks admitted report hashes and native score arithmetic, not the complete inference/scorer workflow again."
+  ],
+  "method_registry_source": {
+    "bytes": 11441,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/publication_comparison.py",
+    "sha256": "99f55e93ab60b2220663b631980076c79fe99cb9569d8a6596f7afe12fcabb5b"
+  },
+  "methods": [
+    {
+      "key": "orthohmm_high_sensitivity",
+      "label": "OrthoHMM high sensitivity",
+      "prediction_semantics": "group-derived pairs",
+      "removed_mapping_pairs": null,
+      "retained_pairs": null,
+      "scores": {
+        "EC": null,
+        "FAS": null,
+        "GO": null,
+        "SwissTrees": null,
+        "TreeFam-A": null,
+        "VGNC": null
+      },
+      "secondary_mean": null,
+      "status": "not_admitted",
+      "submitted_pairs": null
+    },
+    {
+      "key": "orthohmm_phylogeny_satellite_v2",
+      "label": "OrthoHMM phylogeny satellite_v2",
+      "prediction_semantics": "phylogenetically inferred pairs",
+      "removed_mapping_pairs": null,
+      "retained_pairs": null,
+      "scores": {
+        "EC": null,
+        "FAS": null,
+        "GO": null,
+        "SwissTrees": null,
+        "TreeFam-A": null,
+        "VGNC": null
+      },
+      "secondary_mean": null,
+      "status": "not_admitted",
+      "submitted_pairs": null
+    },
+    {
+      "key": "orthofinder_3_1_5_full",
+      "label": "OrthoFinder 3.1.5 full",
+      "prediction_semantics": "phylogenetically inferred pairs",
+      "removed_mapping_pairs": null,
+      "retained_pairs": null,
+      "scores": {
+        "EC": null,
+        "FAS": null,
+        "GO": null,
+        "SwissTrees": null,
+        "TreeFam-A": null,
+        "VGNC": null
+      },
+      "secondary_mean": null,
+      "status": "not_admitted",
+      "submitted_pairs": null
+    },
+    {
+      "key": "orthofinder_3_1_5_sequence_only",
+      "label": "OrthoFinder 3.1.5 sequence-only checkpoint",
+      "prediction_semantics": "MCL checkpoint group-derived pairs",
+      "removed_mapping_pairs": null,
+      "retained_pairs": null,
+      "scores": {
+        "EC": null,
+        "FAS": null,
+        "GO": null,
+        "SwissTrees": null,
+        "TreeFam-A": null,
+        "VGNC": null
+      },
+      "secondary_mean": null,
+      "status": "not_admitted",
+      "submitted_pairs": null
+    },
+    {
+      "admission": {
+        "bytes": 5641618,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_sonic_assessment_20260918.json",
+        "sha256": "7c17b242b591c78cfeb5366399556178c9ab5b3b3c4c85bdf322f200c732bf3e"
+      },
+      "conversion": {
+        "bytes": 5438474,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_comparator_pairs_v1/sonic/results.json",
+        "sha256": "314074543e745854cc2e994f7b296c2de48e6da97940c68924a37824afd1fef2"
+      },
+      "details": {
+        "EC": {
+          "assessed_relations": 244356,
+          "statistic": "avg Schlicker"
+        },
+        "FAS": {
+          "assessed_relations": 15248739.0,
+          "statistic": "FAS"
+        },
+        "GO": {
+          "assessed_relations": 197930,
+          "statistic": "avg Schlicker"
+        },
+        "SwissTrees": {
+          "precision": 0.87227877,
+          "recall": 0.73615959,
+          "statistic": "F1"
+        },
+        "TreeFam-A": {
+          "precision": 0.9132317,
+          "recall": 0.66853442,
+          "statistic": "F1"
+        },
+        "VGNC": {
+          "precision": 0.9945242984257358,
+          "recall": 0.9713378457424584,
+          "statistic": "F1"
+        }
+      },
+      "key": "sonicparanoid_2_0_9",
+      "label": "SonicParanoid 2.0.9",
+      "prediction_semantics": "native species-pair relations",
+      "removed_mapping_pairs": 0,
+      "retained_pairs": 15248739,
+      "scores": {
+        "EC": 0.87276097,
+        "FAS": 0.736680187140205,
+        "GO": 0.45438453,
+        "SwissTrees": 0.798459422080563,
+        "TreeFam-A": 0.7719558753542073,
+        "VGNC": 0.9827943352356794
+      },
+      "secondary_mean": 0.7695058866351091,
+      "status": "admitted",
+      "submitted_pairs": 15248739
+    },
+    {
+      "admission": {
+        "bytes": 300518,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_proteinortho_assessment_20260918.json",
+        "sha256": "00acc10285b955cf0b33c8b3d95044e4f797ab77ba6ae4e768b62615e61f1552"
+      },
+      "conversion": {
+        "bytes": 96560,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_comparator_pairs_v1/proteinortho/results.json",
+        "sha256": "c0620eb8772a983956d2f3b5cb98636bbaca2ba0c2adbcd9ee0ff0805d02342b"
+      },
+      "details": {
+        "EC": {
+          "assessed_relations": 143135,
+          "statistic": "avg Schlicker"
+        },
+        "FAS": {
+          "assessed_relations": 4695385.0,
+          "statistic": "FAS"
+        },
+        "GO": {
+          "assessed_relations": 89609,
+          "statistic": "avg Schlicker"
+        },
+        "SwissTrees": {
+          "precision": 0.95217994,
+          "recall": 0.57641436,
+          "statistic": "F1"
+        },
+        "TreeFam-A": {
+          "precision": 0.94641503,
+          "recall": 0.48711707,
+          "statistic": "F1"
+        },
+        "VGNC": {
+          "precision": 0.980540635731267,
+          "recall": 0.9305590373527199,
+          "statistic": "F1"
+        }
+      },
+      "key": "proteinortho_6_3_6",
+      "label": "ProteinOrtho 6.3.6",
+      "prediction_semantics": "native post-clustering graph",
+      "removed_mapping_pairs": 0,
+      "retained_pairs": 4695385,
+      "scores": {
+        "EC": 0.96316811,
+        "FAS": 0.8135948641193668,
+        "GO": 0.4863364,
+        "SwissTrees": 0.7181110000474794,
+        "TreeFam-A": 0.6431874339159368,
+        "VGNC": 0.9548962442119706
+      },
+      "secondary_mean": 0.7632156753824589,
+      "status": "admitted",
+      "submitted_pairs": 4695385
+    },
+    {
+      "key": "fastoma_0_3_5",
+      "label": "FastOMA 0.3.5 final orthologous groups",
+      "prediction_semantics": "native pairs; supplied OrthoFinder species tree",
+      "removed_mapping_pairs": null,
+      "retained_pairs": null,
+      "scores": {
+        "EC": null,
+        "FAS": null,
+        "GO": null,
+        "SwissTrees": null,
+        "TreeFam-A": null,
+        "VGNC": null
+      },
+      "secondary_mean": null,
+      "status": "not_admitted",
+      "submitted_pairs": null
+    },
+    {
+      "key": "orthomcl_1_4",
+      "label": "OrthoMCL 1.4",
+      "prediction_semantics": "final MCL group-derived pairs",
+      "removed_mapping_pairs": null,
+      "retained_pairs": null,
+      "scores": {
+        "EC": null,
+        "FAS": null,
+        "GO": null,
+        "SwissTrees": null,
+        "TreeFam-A": null,
+        "VGNC": null
+      },
+      "secondary_mean": null,
+      "status": "not_admitted",
+      "submitted_pairs": null
+    }
+  ],
+  "outputs": [
+    {
+      "bytes": 757,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_comparison_20260918_v2/scores.tsv",
+      "sha256": "6004e66eec8008f902a6bc62975fd2c60e9eb1a46eee124a83bead2952aa93ed"
+    },
+    {
+      "bytes": 1779,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_comparison_20260918_v2/scores.md",
+      "sha256": "72ef037bff421e309307d1be96178830e2d0d04d862a8b9aabf346a207f74a6c"
+    }
+  ],
+  "publication_ready": false,
+  "source": {
+    "bytes": 6920,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_qfo_corrected_comparison.py",
+    "sha256": "2bee091a12bc1132eb97aa92c61a7412dae23fe92d30e3a00b4ac77cb828613f"
+  },
+  "status": "corrected_qfo_partial_comparison"
+}
