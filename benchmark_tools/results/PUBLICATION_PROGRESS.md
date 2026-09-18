@@ -8180,3 +8180,22 @@ Latest live check: corrected HMM 21706_0 RUNNING at 5:37:44; dedicated DGX
 interrupted. Full corrected FastOMA execution remains pending the corrected
 OrthoFinder tree and launch preparation. Corrected comparisons, remaining
 uncertainty, resource admission and final publication packaging remain open.
+
+### Corrected FastOMA Staging Queued (2026-09-18)
+
+Previous turn made progress with the complete historical FastOMA pair audit.
+This turn freezes tree-bound corrected input staging at
+`82ef08e8a7d9511360ab52b62504871ba62753fc`, with 37 focused tests and Bash
+syntax validation passing. Preparation job 21738 is pending `afterok:21731`
+with 2 CPUs, 64 GiB and a four-hour limit. It requires the admitted corrected
+OrthoFinder tree and cannot substitute the original-release tree. Exact
+corrected FASTAs and tree will be copied into a fresh directory and their
+checksums bound in a staging manifest. See
+`QFO_CORRECTED_FASTOMA_STAGING_20260918.md` for paths and remaining gates.
+
+Actual staging has not executed, and full FastOMA inference is not launched.
+The next step is to inspect its completed manifest and freeze the full runtime
+and fresh native command before inference. Latest live check: corrected HMM
+21706_0 RUNNING at 5:43:53; DGX 21656_21 RUNNING at 26:14. No unrelated jobs
+were interrupted. Corrected all-method scoring, uncertainty, timing admission
+and the final publication package remain unfinished.
