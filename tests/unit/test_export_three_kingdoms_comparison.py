@@ -55,3 +55,5 @@ def test_retained_export_exact_rows_and_limits():
     assert result["publication_ready"] is False
     assert result["uniform_historical_input_consumption_proven"] is False
     assert any("not penalized" in value for value in result["limitations"])
+    assert b"\r" not in (BASE / "three_kingdoms_comparison_matched_20260918/scores.tsv").read_bytes()
+    module.check(result["source"])

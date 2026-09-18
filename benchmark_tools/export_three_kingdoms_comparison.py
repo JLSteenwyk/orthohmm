@@ -88,7 +88,7 @@ def export(root, output):
     (output / "comparison.json").write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
     fields = ["method", "run", "use", "precision", "recall", "f_score", "reference_gene_coverage", "input_status"]
     with (output / "scores.tsv").open("x") as stream:
-        writer = csv.DictWriter(stream, fieldnames=fields, delimiter="\t")
+        writer = csv.DictWriter(stream, fieldnames=fields, delimiter="\t", lineterminator="\n")
         writer.writeheader()
         for row in rows:
             flat = {**row, **row["counts"]}
