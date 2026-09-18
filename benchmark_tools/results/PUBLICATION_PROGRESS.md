@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Direct Corrected-Archive Sequence Audit Prepared And Queued (2026-09-17)
+
+Previous turn progressed with exact residue classification7d08956. Re-read
+objective and confirmed21687,21671_1,DGX21656_8live,21688dependent. Added
+archive-to-native sequence audit using existing parsers;23tests pass. It
+separates exact matches, explicit B/O/U/Z-to-X representation, unexplained
+differences and complete mapping coverage without extracting or replacing
+inputs. Code committed/pushed25394c3 and detached executor pinned there.
+
+Submitted21689 afterok21688, with independent checks on successful21687/21688,
+archive size and executor sources. Its result is not yet available. Details:
+`QFO_CORRECTED_SEQUENCE_AUDIT_PLAN_20260917.md`. After completion compare
+archive hashes across both independent reports before admitting any corrected
+input freeze. No inference restart, score replacement or publication-readiness
+claim. Full publication requirements and ongoing original/DGX jobs remain.
+
 ## Same-Length Native Differences Explained By Symbol Representation (2026-09-17)
 
 Previous turn progressed with full native sequence audit2cc3e15. Re-read
