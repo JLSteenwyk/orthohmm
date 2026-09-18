@@ -1,5 +1,39 @@
 # Publication Progress
 
+## Corrected SwissTrees Features And Numeric Admission (2026-09-18 UTC)
+
+Previous turn progressed throughc76b11c with complete native-command interval
+smokes and retained adverse screens. Reread the full objective and returned
+to QfO error-analysis preparation without retuning timing thresholds.
+
+Froze composition/relative-length/fragment-description definitions and the
+future corrected SwissTrees27-endpoint contrast protocol in a52feb8 before
+extraction. The initial all549-old-descriptors-unchanged gate rejected four
+legitimate corrected-release updates. Documented/validated three changed
+sequence hashes against native reference identities and one PE header-only
+change; f26c9e8 froze the explicit update before successful extraction.
+No score-stratification outcome or threshold was changed.
+
+All563reference proteins are now covered, including14recovered accessions;
+545old descriptors remain identical. The input-only entropy split yields9/9
+families, no missingness. No explicit fragment or entropy<0.8 concentrated
+labels occur; seven families contain short-relative sequences. These do not
+prove completeness, fragmentation or low complexity. Result and all source
+identities: CORRECTED_SWISS_SEQUENCE_STRATA_RESULT_20260918.md. Corrected
+stratified accuracy/uncertainty awaits the relevant admitted predictions.
+
+During this work21792 completed0:0 in01:42:57, independently admitting both
+corrected numeric checkpoints:593510904all-hit and321164891top100rows over
+984137genes. Retained its source-bound report and scheduler record; see
+QFO_SEQUENCE_NUMERIC_ADMISSION_20260918.md. This released graph-payload review
+21798 and matched Three Kingdoms Sonic21795, both confirmed live. HMM21706_0
+also remains running. No graph feasibility or sequence-control score is
+inferred from numeric admission.
+
+Full regression after the code/results additions:5134passed,9skipped in
+93.70seconds, exit0. This covers the complete unit suite, not all external
+scientific runs or publication gates. Updated the claims execution status.
+
 ## Complete-Command DGX Interval Integration (2026-09-18 UTC)
 
 Previous turn progressed through9995783 with actual interval-burst controls.

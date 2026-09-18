@@ -59,19 +59,27 @@ evidence that an experiment completed or a biological hypothesis is true.
 
 ## Current Execution Status
 
+- [Corrected SwissTrees sequence descriptors](CORRECTED_SWISS_SEQUENCE_STRATA_RESULT_20260918.md)
+  cover all563proteins and freeze9/9entropy bins. The14recovered accessions
+  and four changed old records are explicit. This is input-only preparation,
+  not a corrected stratified accuracy result or validated fragment annotation.
+
 - Corrected DIAMOND sequence search21789 completed0:0 in02:14:43 and native
   execution admission21790 completed0:0 in00:01:30. Numeric conversion21791
   completed0:0 in01:56:01, reporting593,510,904 all-hit and321,164,891 top100
   directed rows over984,137genes/78species. Independent tuple validation21792
-  is running; hit-coverage21793 and graph-memory review21798 remain pending.
+  completed0:0 in01:42:57 and [admitted both checkpoints](QFO_SEQUENCE_NUMERIC_ADMISSION_20260918.md);
+  hit-coverage21793 still waits for HMM admission, while graph-memory
+  review21798 is running.
   [Self-hit semantics](QFO_SEQUENCE_SELF_HIT_REVIEW_20260918.md) retain the
   frozen cap with no self exception. Conversion completion does not establish
-  source equivalence, matched biological sensitivity, graph feasibility or
+  matched biological sensitivity, graph feasibility or
   an accuracy result. No sequence graph/scoring result is available yet.
 - Three Kingdoms historical normalized-group pair counts independently
   reproduce for all eight methods. Historical Sonic native conversion matches
   all19853 groups/288562 proteins against its retained input copies. The raw
-  Danio mismatch remains; matched inference21795 and assessment21796 are queued.
+  Danio mismatch remains; matched inference21795 is running and assessment21796
+  remains dependency-pending.
 
 - Corrected Proteinortho has independently admitted six-endpoint scores and
   4,695,385 mapped native pairs in the [partial corrected table](qfo_corrected_comparison_20260918_v2/scores.md).

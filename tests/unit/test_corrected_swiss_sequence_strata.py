@@ -85,3 +85,26 @@ def test_unexpected_release_change_rejected(updates, fault):
         new["F6PXR2"]["source_file"] = "other.fasta"
     with pytest.raises(ValueError):
         descriptor_updates(old, new)
+
+
+def test_retained_corrected_inventory_replays_without_outcomes():
+    import json
+    from pathlib import Path
+    from benchmark_tools.prepare_ob_candidate_neighborhood import check
+
+    root = Path(__file__).resolve().parents[2]
+    report = json.loads((root / "benchmark_tools/results/corrected_swiss_sequence_strata_20260918.json").read_text())
+    assert report["prediction_statistics_evaluated"] is False
+    assert report["publication_ready"] is False
+    assert len(report["genes"]) == report["summary"]["matched_genes"] == 563
+    assert report["summary"]["missing_genes"] == []
+    assert len(report["recovered_accessions"]) == 14
+    assert report["unchanged_original_descriptors"] == 545
+    assert set(report["changed_original_descriptors"]) == CHANGED_SEQUENCES | {"A0A6I8Q293"}
+    replay = define_strata(report["family_memberships"], report["genes"])
+    assert replay == {k: report[k] for k in replay}
+    assert [len(report["primary_strata"][k]) for k in ("lower_entropy", "higher_entropy", "missing_entropy")] == [9, 9, 0]
+    assert report["secondary_strata"]["explicit_fragment"] == []
+    assert report["secondary_strata"]["concentrated"] == []
+    for key in ("protocol", "descriptor_update_protocol", "native_sequence_audit", "helper"):
+        check(report[key])
