@@ -58,6 +58,10 @@ evidence that an experiment completed or a biological hypothesis is true.
   protocol clarification corrects the inherited RootHOG conversion wording:
   R-on QfO evaluates native pairwise predictions, not RootHOG clique pairs.
   No new accuracy score or inference configuration changed in that correction.
+  Conversion arrays21674(R-off) and21675(R-on, waiting on admission) are
+  submitted. The first R-off cell completed exact validated pair-file reuse;
+  expanded cells require fresh group conversion and R-on independently
+  revalidates native inferred pairs. No factorial scoring result exists yet.
 - [GO/EC arithmetic](QFO_GO_EC_ARITHMETIC_AUDIT_20260917.md) verifies all24
   retained count/mean/interval rows within serialization bounds; Darwin's
   stderr is a Student-t95% confidence half-width. [FAS arithmetic](QFO_FAS_SAMPLE_AUDIT_20260917.md)

@@ -1,5 +1,23 @@
 # Publication Progress
 
+## QfO Conversion Arrays Submitted; First Cell Complete (2026-09-17)
+
+Committed/pushed converter d786352 and created detached executor
+`benchmarks/work/publication_qfo_factorial_pairs_v1` at
+d786352dc57f3560bf245c86453044de32630190. Submitted workstation array21674,
+indices0,2,4,6%1 for R-off, and21675, indices1,3,5,7%1 with afterany:21673
+for R-on. Each conversion task requests2CPUs/64GiB. Slurm confirms21675 is
+waiting on the native-admission array. R-on conversion independently reruns
+terminal native validation; dependency completion alone cannot authorize it.
+
+Task21674_0 completed0:0 in6seconds; p0_c0_r0 reused the exact admitted
+multipass_refined pair files:8,741,224raw,8,710,340retained,30,884mapping losses.
+Snapshot: `qfo_factorial_pairs_p0_c0_r0_20260917.json`. This is conversion
+evidence only, not a new score or independent biological validation.
+Task21674_2 is running fresh expanded-arm conversion;4/6 remain queued.
+Per-cell outputs live in `benchmarks/results/qfo_factorial_pairs_v1/LABEL`.
+No scoring array is submitted yet. Reconciliation and DGX timing remain live.
+
 ## QfO Factorial Conversion Implemented (2026-09-17)
 
 Previous turn progressed native admission and queued21673; re-read objective.
