@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Complete-Command Hierarchy Collector (2026-09-18 UTC)
+
+Previous turn progressed through0ad236f with full regression and refreshed
+claims. Reread the objective and confirmed main-host21813/21795/21706_0
+remain running,21814 dependency-pending. No existing job was restarted.
+
+Implemented a separate complete-command hierarchy collector without changing
+frozen interval or control sources. It reuses the original native worker,
+timeout handling and memory reader, captures hierarchy observations around
+the whole command, and derives the original interval screen from the same
+host/native-step reads. Additional parent/batch diagnostics never remove a
+flag or establish scientific timing admission.
+
+41focused tests pass, including10new adapter/collector tests. These use
+retained control counters and mocked process orchestration: same native reads,
+original-screen equivalence, complete bounds/gap rejection, native exit7 and
+timeout124 preservation, fresh artifacts and cleanup on observation failure.
+This is implementation evidence, not actual native hierarchy integration.
+
+DGX_HIERARCHY_NATIVE_PROTOCOL_20260918.md freezes the next three-method
+engineering integration scope: same645-protein fixture, unchanged20CPU/96GiB
+commands and thresholds, fresh outputs, all three methods and independent
+native/counter audits. Launcher/recipe assembly and real execution remain
+unfinished. The scientific timing gate and broader publication goal remain
+active and incomplete.
+
 ## Full Regression And Evidence Checklist Refresh (2026-09-18 UTC)
 
 Previous turn progressed througha3982c0 with completed DGX hierarchy controls.
