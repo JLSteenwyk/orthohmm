@@ -58,10 +58,13 @@ evidence that an experiment completed or a biological hypothesis is true.
   protocol clarification corrects the inherited RootHOG conversion wording:
   R-on QfO evaluates native pairwise predictions, not RootHOG clique pairs.
   No new accuracy score or inference configuration changed in that correction.
-  Conversion arrays21674(R-off) and21675(R-on, waiting on admission) are
-  submitted. The first R-off cell completed exact validated pair-file reuse;
-  expanded cells require fresh group conversion and R-on independently
-  revalidates native inferred pairs. No factorial scoring result exists yet.
+  Conversion array21674(R-off) completed all four cells;21675(R-on) waits on
+  admission and independently revalidates native inferred pairs. Baseline
+  assessment jobs21679/21680 completed exact independently revalidated reuse
+  of recovered stages1/3, retaining original FAS samples and participant IDs.
+  Expanded R-off scoring21681 is running and21682 queued. These reused scores
+  are not independent new observations; fresh outcomes and the complete
+  eight-cell comparison remain pending.
 - [GO/EC arithmetic](QFO_GO_EC_ARITHMETIC_AUDIT_20260917.md) verifies all24
   retained count/mean/interval rows within serialization bounds; Darwin's
   stderr is a Student-t95% confidence half-width. [FAS arithmetic](QFO_FAS_SAMPLE_AUDIT_20260917.md)

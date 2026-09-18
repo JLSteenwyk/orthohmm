@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Two QfO Baselines Revalidated; Expanded Scoring Running (2026-09-17)
+
+Committed/pushed assessment runner25f328d and created detached executor
+`benchmarks/work/publication_qfo_factorial_assessment_v1` at
+25f328d994765369cfae0382a21c3e7fdb3b7dab. Submitted sequential workstation
+jobs21679(index0),21680(index4),21681(index2),21682(index6), each8CPUs/64GiB.
+Dependencies use afterany so a failed predecessor remains visible without
+preventing independently gated later cells. Exact per-cell conversion report
+hashes are supplied as arguments; no mutable unpinned prediction selection.
+
+Jobs21679 and21680 both completed0:0 in19seconds and independently reproduce
+the originally admitted assessment records for checked_v2_1 and checked_v2_3.
+Their scores are reused without rerunning FAS or transferring historical
+high-sensitivity/satellite rows. Snapshots:
+`qfo_factorial_assessment_p0_c0_r0_20260917.json` and
+`qfo_factorial_assessment_p1_c0_r0_20260917.json`. This is validated reuse,
+not new independent validation or an additional score replicate.
+
+Fresh six-challenge assessment21681 is RUNNING for expanded p0_c1_r0;
+21682 waits on it for p1_c1_r0. Namespaces are `factorial_v1_2` and
+`factorial_v1_6`. Fresh assessment completion and native admission are pending.
+Reconciliation21671_0 and DGX21656_7 remain live; R-on admission/conversion
+dependencies remain queued. Full eight-cell scoring and paired analysis
+are not complete.
+
 ## R-Off Conversions Complete; Assessment Runner Ready (2026-09-17)
 
 Previous turn progressed conversion implementation/arrays, pushed0da35db;
