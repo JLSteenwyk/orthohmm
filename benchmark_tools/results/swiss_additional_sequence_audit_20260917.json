@@ -1,0 +1,269 @@
+{
+  "additional_sequences": 36072,
+  "canonical_sequences": 9639,
+  "canonical_staged_byte_identical": true,
+  "found_in_additional": 11,
+  "genes": {
+    "A0A6I8Q068": {
+      "additional_record": null,
+      "found_in_additional": false,
+      "header_target_in_canonical": null,
+      "header_target_numeric_id": null,
+      "header_target_record": null,
+      "numeric_protein_id": 766443
+    },
+    "B1H1F6": {
+      "additional_record": null,
+      "found_in_additional": false,
+      "header_target_in_canonical": null,
+      "header_target_numeric_id": null,
+      "header_target_record": null,
+      "numeric_protein_id": 775603
+    },
+    "F6PXE7": {
+      "additional_record": {
+        "description": "tr|F6PXE7|F6PXE7_XENTR Isoform of A0JM23, Receptor protein-tyrosine kinase OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=hoxd10 PE=4 SV=2",
+        "header_isoform_of": "A0JM23",
+        "length": 1361,
+        "sequence_sha256": "fedec04bea6d37537631a8080692dce230474323c86c28b4c521627c7025d12d"
+      },
+      "found_in_additional": true,
+      "header_target_in_canonical": true,
+      "header_target_numeric_id": 775076,
+      "header_target_record": {
+        "description": "sp|A0JM23|NPHP3_XENTR Nephrocystin-3 OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=nphp3 PE=2 SV=2",
+        "header_isoform_of": null,
+        "length": 1311,
+        "sequence_sha256": "1052d2d1a86721238523acd99d1ad0f6d90819cec8821b452940b34ab39775c4"
+      },
+      "numeric_protein_id": 775931
+    },
+    "F6QLB4": {
+      "additional_record": {
+        "description": "tr|F6QLB4|F6QLB4_XENTR Isoform of A0A6I8RCX7, Nrf1_DNA-bind domain-containing protein OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=wdr83os PE=4 SV=1",
+        "header_isoform_of": "A0A6I8RCX7",
+        "length": 509,
+        "sequence_sha256": "018968a7d26635513c45303fc010e8cbe951ff44ff6b91eb09beabca83a3261f"
+      },
+      "found_in_additional": true,
+      "header_target_in_canonical": true,
+      "header_target_numeric_id": 770229,
+      "header_target_record": {
+        "description": "tr|A0A6I8RCX7|A0A6I8RCX7_XENTR Nuclear respiratory factor 1 OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=nrf1 PE=4 SV=1",
+        "header_isoform_of": null,
+        "length": 556,
+        "sequence_sha256": "2ecb0fd1ea32f509f27a726509ff9147f6c4d6de84e794a4d504ac495faf6b25"
+      },
+      "numeric_protein_id": 776081
+    },
+    "F6SX31": {
+      "additional_record": {
+        "description": "tr|F6SX31|F6SX31_XENTR Isoform of Q0IIS3, LRRcap domain-containing protein OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=atp6v1b1 PE=4 SV=2",
+        "header_isoform_of": "Q0IIS3",
+        "length": 519,
+        "sequence_sha256": "37db6e6b531590a2c8c783b088b2176406c9b64240c7760d10f6f96809fe74a1"
+      },
+      "found_in_additional": true,
+      "header_target_in_canonical": true,
+      "header_target_numeric_id": 780461,
+      "header_target_record": {
+        "description": "sp|Q0IIS3|EPHX3_XENTR Epoxide hydrolase 3 OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=ephx3 PE=2 SV=1",
+        "header_isoform_of": null,
+        "length": 367,
+        "sequence_sha256": "d4cafbf8e8d5358772061026dbbccbee6a9cba80da0dfb1695e7dea29c786c30"
+      },
+      "numeric_protein_id": 776619
+    },
+    "F6YNC0": {
+      "additional_record": {
+        "description": "tr|F6YNC0|F6YNC0_XENTR Isoform of A0A6I8Q122, Protein-tyrosine-phosphatase OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=aplp1 PE=3 SV=2",
+        "header_isoform_of": "A0A6I8Q122",
+        "length": 544,
+        "sequence_sha256": "255acdd17ad750c8348cf2f7c8b82452e451be9e16fa38c1d3aea5e36a89fa6f"
+      },
+      "found_in_additional": true,
+      "header_target_in_canonical": true,
+      "header_target_numeric_id": 766528,
+      "header_target_record": {
+        "description": "tr|A0A6I8Q122|A0A6I8Q122_XENTR Family with sequence similarity 193 member A OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=fam193a PE=4 SV=1",
+        "header_isoform_of": null,
+        "length": 1570,
+        "sequence_sha256": "f85d40ea1f2a99d965d431d171e7bca4bd66a157ff77bcd5a72279ce22d74d67"
+      },
+      "numeric_protein_id": 778019
+    },
+    "F7AMC8": {
+      "additional_record": {
+        "description": "tr|F7AMC8|F7AMC8_XENTR Isoform of A0A6I8QW21, Tetraspanin OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=nox1 PE=3 SV=2",
+        "header_isoform_of": "A0A6I8QW21",
+        "length": 260,
+        "sequence_sha256": "94f92302de51a0e95928c27c1b51f8ed2ea769dfeca440015d8e4d9a01dd4232"
+      },
+      "found_in_additional": true,
+      "header_target_in_canonical": true,
+      "header_target_numeric_id": 768938,
+      "header_target_record": {
+        "description": "tr|A0A6I8QW21|A0A6I8QW21_XENTR Pleckstrin homology and RhoGEF domain-containing G7 OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=plekhg7 PE=4 SV=1",
+        "header_isoform_of": null,
+        "length": 759,
+        "sequence_sha256": "b5425f5a7c1cd69f9ef64ad652c5a7c24513489168eb8885e9cdc197033bf33c"
+      },
+      "numeric_protein_id": 778582
+    },
+    "F7BEI0": {
+      "additional_record": {
+        "description": "tr|F7BEI0|F7BEI0_XENTR Isoform of F6QJZ3, Homeobox C12 OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=hoxc12 PE=3 SV=2",
+        "header_isoform_of": "F6QJZ3",
+        "length": 528,
+        "sequence_sha256": "52ec41ad47b3ace2567529ddf0b94f2c04bf6547335ffaad2d4f1a0780fd3a80"
+      },
+      "found_in_additional": true,
+      "header_target_in_canonical": true,
+      "header_target_numeric_id": 776068,
+      "header_target_record": {
+        "description": "tr|F6QJZ3|F6QJZ3_XENTR BTB domain-containing protein OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=LOC100497714 PE=4 SV=2",
+        "header_isoform_of": null,
+        "length": 611,
+        "sequence_sha256": "abad7f19b67b04315600ff69efea5a5dd54c743702d37b3d9236f9647ecde1dd"
+      },
+      "numeric_protein_id": 778801
+    },
+    "F7CLH6": {
+      "additional_record": {
+        "description": "tr|F7CLH6|F7CLH6_XENTR Isoform of Q0IJ12, Calsequestrin OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=nox4 PE=3 SV=2",
+        "header_isoform_of": "Q0IJ12",
+        "length": 427,
+        "sequence_sha256": "611677aba212f683dfc1a0e0272aa6390e423de7acb90925410f4672f2c5c44d"
+      },
+      "found_in_additional": true,
+      "header_target_in_canonical": true,
+      "header_target_numeric_id": 780479,
+      "header_target_record": {
+        "description": "sp|Q0IJ12|VTM2B_XENTR V-set and transmembrane domain-containing protein 2B OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=vstm2b PE=2 SV=1",
+        "header_isoform_of": null,
+        "length": 251,
+        "sequence_sha256": "af7fa98656703787adb230b9e805af0b3e8c097617743826f406cbb565328a47"
+      },
+      "numeric_protein_id": 779228
+    },
+    "F7D5A4": {
+      "additional_record": {
+        "description": "tr|F7D5A4|F7D5A4_XENTR Isoform of A0A6I8SZP6, Homeobox A11 OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=nfkb1 PE=4 SV=2",
+        "header_isoform_of": "A0A6I8SZP6",
+        "length": 836,
+        "sequence_sha256": "0361bf691ef458bf35c69051af15380ac083b8ddc2975ff19620d352b842d60c"
+      },
+      "found_in_additional": true,
+      "header_target_in_canonical": true,
+      "header_target_numeric_id": null,
+      "header_target_record": {
+        "description": "tr|A0A6I8SZP6|A0A6I8SZP6_XENTR Nuclear factor of kappa light polypeptide gene enhancer in B-cells 1 OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=nfkb1 PE=4 SV=1",
+        "header_isoform_of": null,
+        "length": 869,
+        "sequence_sha256": "68c49a13b54b03a3c7c35468c3e368f6070aeb18010f8279cfb4b02a4cf5dd29"
+      },
+      "numeric_protein_id": 779401
+    },
+    "F7D5I9": {
+      "additional_record": {
+        "description": "tr|F7D5I9|F7D5I9_XENTR Isoform of B0BM40, Homeobox A9 OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=hoxa9 PE=4 SV=2",
+        "header_isoform_of": "B0BM40",
+        "length": 709,
+        "sequence_sha256": "3471a99c09d41deed1e4afdaf8005e39ec5bda445bebb476c16579ec732acbb1"
+      },
+      "found_in_additional": true,
+      "header_target_in_canonical": true,
+      "header_target_numeric_id": 775528,
+      "header_target_record": {
+        "description": "sp|B0BM40|TPIS_XENTR Triosephosphate isomerase OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=tpi1 PE=2 SV=1",
+        "header_isoform_of": null,
+        "length": 248,
+        "sequence_sha256": "f7077824e25c64094da06db50f62f6fd7502928a038df1e54f30a44bd24f0401"
+      },
+      "numeric_protein_id": 779405
+    },
+    "F7DF67": {
+      "additional_record": {
+        "description": "tr|F7DF67|F7DF67_XENTR Isoform of A0A6I8Q6R4, Sulfotransferase OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=aplp2 PE=3 SV=2",
+        "header_isoform_of": "A0A6I8Q6R4",
+        "length": 199,
+        "sequence_sha256": "9ac2c3e2b174341a4b53d6ec390238addb8a6386ed27bbf175c11829aca82fab"
+      },
+      "found_in_additional": true,
+      "header_target_in_canonical": true,
+      "header_target_numeric_id": 767059,
+      "header_target_record": {
+        "description": "tr|A0A6I8Q6R4|A0A6I8Q6R4_XENTR Eukaryotic translation initiation factor 5B OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=eif5b PE=4 SV=1",
+        "header_isoform_of": null,
+        "length": 1209,
+        "sequence_sha256": "f135fc874e82fa61d0949b4297edfccb3cb44b72f0d0cfb82befd2a4b449afa4"
+      },
+      "numeric_protein_id": 779500
+    },
+    "Q0VGW2": {
+      "additional_record": null,
+      "found_in_additional": false,
+      "header_target_in_canonical": null,
+      "header_target_numeric_id": null,
+      "header_target_record": null,
+      "numeric_protein_id": 780686
+    },
+    "Q505H9": {
+      "additional_record": {
+        "description": "tr|Q505H9|Q505H9_XENTR Isoform of F7BAU5, FAD-binding FR-type domain-containing protein OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=cybb PE=2 SV=1",
+        "header_isoform_of": "F7BAU5",
+        "length": 570,
+        "sequence_sha256": "345cf5c2215405554c067a1ada7597d10593464e3d338947f19e45e16acc8cdf"
+      },
+      "found_in_additional": true,
+      "header_target_in_canonical": true,
+      "header_target_numeric_id": null,
+      "header_target_record": {
+        "description": "tr|F7BAU5|F7BAU5_XENTR Protein MON2 homolog OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=cybb PE=3 SV=2",
+        "header_isoform_of": null,
+        "length": 1635,
+        "sequence_sha256": "83bc04da2fc70973f53e5c55feb0c9a153219a09f68ab916e5cacc5f8610ee8e"
+      },
+      "numeric_protein_id": 781274
+    }
+  },
+  "inputs": [
+    {
+      "bytes": 514247,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_sequence_alias_audit_20260917.json",
+      "sha256": "b69f74e35aa3fa3af99a33b3b27f830d79df2abd3935b84e911f981186ac33ec"
+    },
+    {
+      "bytes": 6502463,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/proteomes/extracted/Eukaryota/UP000008143_8364.fasta",
+      "sha256": "924f7d0ab9f197d8e1108394ae82d8c947c08172890f6ddf91d17513711ad6e3"
+    },
+    {
+      "bytes": 34455242,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/proteomes/extracted/Eukaryota/UP000008143_8364_additional.fasta",
+      "sha256": "b6f722282ee660e665b5baa2485cf2b7ec97a2792ff084a1ec28febdd3847c4d"
+    },
+    {
+      "bytes": 6502463,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000008143_8364.fasta",
+      "sha256": "924f7d0ab9f197d8e1108394ae82d8c947c08172890f6ddf91d17513711ad6e3"
+    },
+    {
+      "bytes": 40019520,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/mapping.json.gz",
+      "sha256": "1c10f6ce5e53ebc3148dde02d16268b225c3c8817c952d1274daa41acbf9eb4d"
+    }
+  ],
+  "limitations": [
+    "Retained extracted files checked; archive-member authentication is not performed here.",
+    "Isoform-of text is source annotation, not proven orthology or authorization to remap reference truth.",
+    "No sequence-similarity search, scoring, input changes or historical comparator input reconstruction performed."
+  ],
+  "missing_reference_genes": 14,
+  "source": {
+    "bytes": 4542,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_swiss_additional_sequences.py",
+    "sha256": "a6022a54e0f1c145603d2a4ca4fd2ab0f0b8c3bbb9c92042185c68bfbc848bce"
+  },
+  "status": "retained_additional_sequence_inventory"
+}

@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Eleven Missing SwissTrees Accessions Located In Additional FASTA (2026-09-17)
+
+Previous turn progressed by quantifying/pushing shared missing-input
+relations4964039. Re-read objective and confirmed current QfO/DGX jobs live.
+Compared retained Xenopus canonical and staged FASTAs: byte-identical9,639
+records. Additional FASTA has36,072records and11of14missing accessions;
+all11have header-named canonical targets, nine with different numeric IDs
+and two unmapped. Three remain absent from both retained FASTAs.
+
+Added/executed `audit_swiss_additional_sequences.py`; structured evidence
+`swiss_additional_sequence_audit_20260917.json` and interpretation
+`SWISS_ADDITIONAL_SEQUENCE_AUDIT_20260917.md`. Staging script explicitly
+excludes additional files; it was not rerun. Header isoform annotation is
+not permission to remap truth. No scores, inputs or denominators changed.
+Archive-member authentication, intended resource representation and broader
+historical input parity need follow-up. Full publication goal remains active.
+
 ## Shared SwissTrees Missing-Input Relations Quantified (2026-09-17)
 
 Previous turn made progress by auditing/pushing frozen aliases1cc024f.
