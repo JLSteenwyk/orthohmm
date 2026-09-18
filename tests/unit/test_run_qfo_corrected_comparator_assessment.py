@@ -90,7 +90,7 @@ def test_wrong_orthofinder_stage_refused(key, value):
         validate_stage(stage, "orthofinder_full", scheduler)
 
 
-@pytest.mark.parametrize("method", ["orthofinder_full", "fastoma"])
+@pytest.mark.parametrize("method", ["orthofinder_full", "fastoma", "orthomcl"])
 def test_pending_conversion_rejected_before_reading_partial_output(tmp_path, monkeypatch, method):
     from benchmark_tools import run_qfo_corrected_comparator_assessment as module
     monkeypatch.setattr(module.subprocess, "check_output", lambda *a, **k:
@@ -102,9 +102,133 @@ def test_pending_conversion_rejected_before_reading_partial_output(tmp_path, mon
 
 def test_all_workspaces_are_distinct():
     from benchmark_tools.run_qfo_corrected_comparator_assessment import METHODS, WORK_NAMES
-    assert len(set(WORK_NAMES.values())) == len(METHODS) == 5
+    assert len(set(WORK_NAMES.values())) == len(METHODS) == 6
     assert WORK_NAMES["proteinortho"] == "qc_p"
     assert WORK_NAMES["sonic"] == "qc_s"
+    assert WORK_NAMES["orthomcl"] == "qc_mc"
+
+
+def orthomcl_fixture():
+    from benchmark_tools.run_qfo_corrected_comparator_assessment import ORTHOMCL_SEMANTICS
+    stage, scheduler = fixture()
+    stage.update(status="corrected_orthomcl_pairs_prepared_unscored", method="orthomcl",
+                 participant="qfo_corrected_orthomcl", publication_ready=False,
+                 semantics=ORTHOMCL_SEMANTICS, native_duplicate_relations=0,
+                 content={"total_pairs": 2, "final_groups": 1, "grouped_proteins": 3,
+                          "ungrouped_input_proteins": 984134})
+    scheduler["ReqMem"] = "64G"
+    return stage, scheduler
+
+
+def test_orthomcl_stage():
+    stage, scheduler = orthomcl_fixture()
+    validate_stage(stage, "orthomcl", scheduler)
+
+
+@pytest.mark.parametrize("key,value", [("status", "corrected_comparator_pairs_prepared_unscored"),
+    ("semantics", "pre-clustering graph edges"), ("publication_ready", True),
+    ("native_duplicate_relations", 1), ("native_duplicate_relations", False), ("content", {}),
+    ("participant", "historical_orthomcl"), ("removed_mapping_pairs", 1)])
+def test_bad_orthomcl_stage(key, value):
+    stage, scheduler = orthomcl_fixture()
+    stage[key] = value
+    with pytest.raises(ValueError):
+        validate_stage(stage, "orthomcl", scheduler)
+
+
+@pytest.mark.parametrize("key,value", [("total_pairs", 3), ("total_pairs", True),
+    ("final_groups", 0), ("grouped_proteins", 984138), ("ungrouped_input_proteins", -1)])
+def test_bad_orthomcl_counts(key, value):
+    stage, scheduler = orthomcl_fixture()
+    stage["content"][key] = value
+    with pytest.raises(ValueError):
+        validate_stage(stage, "orthomcl", scheduler)
+
+
+def test_orthomcl_conversion_memory_bound():
+    stage, scheduler = orthomcl_fixture()
+    scheduler["ReqMem"] = "32G"
+    with pytest.raises(ValueError):
+        validate_stage(stage, "orthomcl", scheduler)
+
+
+def test_orthomcl_converter_revision_pinned(tmp_path, monkeypatch):
+    from benchmark_tools import run_qfo_corrected_comparator_assessment as module
+    monkeypatch.setattr(module.subprocess, "check_output", lambda *a, **k: "wrong\n")
+    with pytest.raises(ValueError, match="executor changed"):
+        module.converter_source(tmp_path, "orthomcl")
+
+
+def test_orthomcl_converter_source(tmp_path, monkeypatch):
+    from benchmark_tools import run_qfo_corrected_comparator_assessment as module
+    executor = tmp_path / "benchmarks/work/publication_qfo_corrected_orthomcl_pairs_v1"
+    source = executor / "benchmark_tools/prepare_qfo_corrected_orthomcl_pairs.py"
+    source.parent.mkdir(parents=True)
+    source.write_text("fixture")
+    monkeypatch.setattr(module.subprocess, "check_output", lambda *a, **k: module.ORTHOMCL_CONVERTER + "\n")
+    monkeypatch.setattr(module.subprocess, "run", lambda *a, **k: None)
+    assert module.converter_source(tmp_path, "orthomcl") == module.record(source)
+
+
+def orthomcl_evidence(tmp_path):
+    import json
+    from benchmark_tools import run_qfo_corrected_comparator_assessment as module
+    stage, scheduler = orthomcl_fixture()
+    directory = tmp_path / "benchmarks/results/qfo_corrected_comparator_pairs_v1/orthomcl"
+    directory.mkdir(parents=True)
+    content = {"input_proteins": 984137, "input_species": 78, "cross_species_clique_pairs": 2,
+               **{k: v for k, v in stage["content"].items() if k != "total_pairs"}}
+    native = {"status": "corrected_orthomcl_native_outputs_admitted", "accuracy_admitted": False,
+              "publication_ready": False, "pair_semantics": module.ORTHOMCL_SEMANTICS,
+              "content": content, "query_coverage": {"failures": ["retained"]},
+              "scheduler": {"State": "COMPLETED", "ExitCode": "0:0", "NodeList": "bizon", "AllocCPUS": "180", "ReqMem": "900G"}}
+    path = tmp_path / "benchmarks/work/qfo_corrected_orthomcl_admission_20260918/report.json"
+    path.parent.mkdir(parents=True)
+    path.write_text(json.dumps(native))
+    groups = {"status": "native_final_groups_match_mcl_partition", "content": content,
+              "accuracy_admitted": False, "publication_ready": False, "checked_records": []}
+    (directory / "groups.json").write_text(json.dumps(groups))
+    for name in ("pairs.tsv", "pairs.qfo.tsv"):
+        (directory / name).write_text("A\tB\nA\tC\n")
+    for key, path in (("admission", path), ("group_audit", directory / "groups.json"),
+                      ("pairs", directory / "pairs.tsv"), ("filtered_pairs", directory / "pairs.qfo.tsv")):
+        stage[key] = module.record(path)
+    stage["checked_records"] = [stage["admission"]]
+    stage["query_coverage"] = native["query_coverage"]
+    return stage
+
+
+def test_orthomcl_additional_evidence(tmp_path):
+    from benchmark_tools import run_qfo_corrected_comparator_assessment as module
+    stage = orthomcl_evidence(tmp_path)
+    assert module.extra_stage_records(tmp_path, "orthomcl", stage) == [stage["group_audit"], stage["admission"]]
+    assert module.extra_stage_records(tmp_path, "fastoma", {}) == []
+
+
+@pytest.mark.parametrize("change", ["path", "unbound", "diagnostics", "count", "audit", "source_hash"])
+def test_orthomcl_extra_evidence_rejects_changes(tmp_path, change):
+    import json
+    from pathlib import Path
+    from benchmark_tools import run_qfo_corrected_comparator_assessment as module
+    stage = orthomcl_evidence(tmp_path)
+    if change == "path":
+        stage["pairs"]["path"] = str(tmp_path / "unbound.tsv")
+    elif change == "unbound":
+        stage["checked_records"] = []
+    elif change == "diagnostics":
+        stage["query_coverage"] = {}
+    elif change == "count":
+        stage["content"]["final_groups"] += 1
+    elif change == "source_hash":
+        Path(stage["admission"]["path"]).write_text("{}")
+    else:
+        path = Path(stage["group_audit"]["path"])
+        data = json.loads(path.read_text())
+        data["content"]["cross_species_clique_pairs"] += 1
+        path.write_text(json.dumps(data))
+        stage["group_audit"] = module.record(path)
+    with pytest.raises(ValueError):
+        module.extra_stage_records(tmp_path, "orthomcl", stage)
 
 
 def test_unknown_method_rejected(tmp_path):

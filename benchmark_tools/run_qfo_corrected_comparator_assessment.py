@@ -14,14 +14,18 @@ from benchmark_tools.run_qfo_recovered_assessment import command_for, environmen
 from benchmark_tools.prepare_qfo_corrected_comparator_pairs import ENV_SHA
 from benchmark_tools.prepare_qfo_corrected_orthofinder_pairs import SEMANTICS as OF_SEMANTICS
 from benchmark_tools.prepare_qfo_corrected_fastoma_pairs import SEMANTICS as FASTOMA_SEMANTICS
+from benchmark_tools.prepare_qfo_corrected_orthomcl_pairs import SEMANTICS as ORTHOMCL_SEMANTICS
+from benchmark_tools.prepare_qfo_corrected_orthomcl_pairs import validate_admission as validate_orthomcl_admission
 from benchmark_tools.verify_ygob_validation import require_completed_job
 
 WORK_NAMES = {"proteinortho": "qc_p", "sonic": "qc_s",
-              "orthofinder_full": "qc_of", "orthofinder_sequence_only": "qc_om", "fastoma": "qc_f"}
+              "orthofinder_full": "qc_of", "orthofinder_sequence_only": "qc_om", "fastoma": "qc_f",
+              "orthomcl": "qc_mc"}
 METHODS = tuple(WORK_NAMES)
 OF_CONVERTER = "aa8da7800c4801684726151ad249da7c82a3b88d"
 FASTOMA_CONVERTER = "6616e3a7ec4c46962ded0d34ce9b4150073a2210"
-BOUND_SEMANTICS = {**OF_SEMANTICS, "fastoma": FASTOMA_SEMANTICS}
+ORTHOMCL_CONVERTER = "b213c3c1087510e7e965afa14ffca35d14b8ca1a"
+BOUND_SEMANTICS = {**OF_SEMANTICS, "fastoma": FASTOMA_SEMANTICS, "orthomcl": ORTHOMCL_SEMANTICS}
 
 
 def converter_source(root, method):
@@ -29,8 +33,8 @@ def converter_source(root, method):
         raise ValueError("Unknown corrected comparator")
     if method not in BOUND_SEMANTICS:
         return None
-    kind = "fastoma" if method == "fastoma" else "orthofinder"
-    commit = FASTOMA_CONVERTER if method == "fastoma" else OF_CONVERTER
+    kind = method if method in ("fastoma", "orthomcl") else "orthofinder"
+    commit = {"fastoma": FASTOMA_CONVERTER, "orthofinder": OF_CONVERTER, "orthomcl": ORTHOMCL_CONVERTER}[kind]
     executor = root / f"benchmarks/work/publication_qfo_corrected_{kind}_pairs_v1"
     if subprocess.check_output(["git", "-C", str(executor), "rev-parse", "HEAD"], text=True).strip() != commit:
         raise ValueError("Comparator converter executor changed")
@@ -41,7 +45,8 @@ def converter_source(root, method):
 def validate_stage(stage, method, scheduler):
     if method not in METHODS:
         raise ValueError("Unknown corrected comparator")
-    status = ("corrected_fastoma_pairs_prepared_unscored" if method == "fastoma" else
+    status = ("corrected_orthomcl_pairs_prepared_unscored" if method == "orthomcl" else
+              "corrected_fastoma_pairs_prepared_unscored" if method == "fastoma" else
               "corrected_orthofinder_pairs_prepared_unscored" if method in OF_SEMANTICS
               else "corrected_comparator_pairs_prepared_unscored")
     if (stage["status"] != status or stage["accuracy_evaluated"] is not False
@@ -64,13 +69,48 @@ def validate_stage(stage, method, scheduler):
         raise ValueError("Invalid corrected pair counts")
     if any(stage["pairs"][k] != stage["filtered_pairs"][k] for k in ("bytes", "sha256")):
         raise ValueError("Unexpected corrected reference-filter change")
+    if method == "orthomcl":
+        content = stage["content"]
+        if (scheduler.get("ReqMem") != "64G" or any(type(v) is not int or v < 0 for v in content.values())
+                or set(content) != {"total_pairs", "final_groups", "grouped_proteins", "ungrouped_input_proteins"}
+                or content["total_pairs"] != stage["total_pairs"] or content["final_groups"] <= 0
+                or content["grouped_proteins"] + content["ungrouped_input_proteins"] != 984137
+                or type(stage["native_duplicate_relations"]) is not int or stage["native_duplicate_relations"] != 0):
+            raise ValueError("Invalid OrthoMCL clique/coverage accounting")
+
+
+def extra_stage_records(root, method, stage):
+    """Bind OrthoMCL conversion to its independent native partition audit."""
+    if method != "orthomcl":
+        return []
+    directory = root / "benchmarks/results/qfo_corrected_comparator_pairs_v1/orthomcl"
+    for key, path in (("pairs", directory / "pairs.tsv"), ("filtered_pairs", directory / "pairs.qfo.tsv"),
+                      ("group_audit", directory / "groups.json"),
+                      ("admission", root / "benchmarks/work/qfo_corrected_orthomcl_admission_20260918/report.json")):
+        if stage[key]["path"] != str(path):
+            raise ValueError("Unexpected OrthoMCL artifact path")
+        check(stage[key])
+    if stage["admission"] not in stage["checked_records"]:
+        raise ValueError("Unbound OrthoMCL native admission")
+    native = json.loads(Path(stage["admission"]["path"]).read_text())
+    content = validate_orthomcl_admission(native)
+    groups = json.loads(Path(stage["group_audit"]["path"]).read_text())
+    if (groups["status"] != "native_final_groups_match_mcl_partition"
+            or groups["accuracy_admitted"] is not False or groups["publication_ready"] is not False
+            or groups["content"] != content or native["query_coverage"] != stage["query_coverage"]):
+        raise ValueError("Changed OrthoMCL audit or source query diagnostics")
+    expected = {key: content[key] for key in ("final_groups", "grouped_proteins", "ungrouped_input_proteins")}
+    expected["total_pairs"] = content["cross_species_clique_pairs"]
+    if stage["content"] != expected:
+        raise ValueError("OrthoMCL conversion differs from native audit")
+    return [stage["group_audit"], stage["admission"], *groups["checked_records"]]
 
 
 def prepare(root, method, pairs_sha, conversion_job):
     if method not in METHODS:
         raise ValueError("Unknown corrected comparator")
     accounting = subprocess.check_output(["sacct", "-j", str(conversion_job), "--parsable2",
-        "--format=JobIDRaw,State,ExitCode,Elapsed,NodeList,AllocCPUS"], text=True)
+        "--format=JobIDRaw,State,ExitCode,Elapsed,NodeList,AllocCPUS" + (",ReqMem" if method == "orthomcl" else "")], text=True)
     scheduler = require_completed_job(accounting, conversion_job)
     pairs_path = root / "benchmarks/results/qfo_corrected_comparator_pairs_v1" / method / "results.json"
     stage = read_frozen(pairs_path, pairs_sha)
@@ -89,6 +129,7 @@ def prepare(root, method, pairs_sha, conversion_job):
                record(Path(__file__).with_name("prepare_qfo_corrected_comparator_pairs.py"))]
     if converter is not None:
         records.append(converter)
+    records.extend(extra_stage_records(root, method, stage))
     for item in records:
         check(item)
     output = root / "benchmarks/results/qfo_corrected_assessment_v1" / method
