@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Corrected Native Output Admission Queued (2026-09-18 UTC)
+
+Previous turn progressed through ecd96ca: independent native final-group
+audit and four verified fixtures. Current live handles: HMM21706_0
+RUNNING8:56:16, DGX21656_25 RUNNING18:24; correctedBLAST21713 pending
+resources, native21750 pending dependency. No existing job was restarted.
+
+Implemented independent native-output admission with terminal scheduler,
+frozen executor/runtime, source BPO admission, staged input/hash/mtime,
+complete output/cache inventory, native index and final-partition checks.
+Source failed-query diagnostics remain unchanged. This admits conversion
+only, not biological accuracy or publication readiness. Full unit suite:
+3,967 passed in86.37s, including legacy runtime checks.57 new tests include
+mocked orchestration failures; they do not claim a production result.
+
+Frozen validator fe08c7d99f266f2705e32c85294adfec676c008f at
+publication_qfo_corrected_orthomcl_admission_v1 passed batch syntax and a
+real dedicated-runtime pending-job rejection. Queued21752 afterany:21750,
+2CPUs/64GiB/24h/bizon, no requeue; scontrol confirms dependency. No admission
+directory or corrected native score exists yet.
+
+See QFO_CORRECTED_ORTHOMCL_ADMISSION_20260918.md. Next: final-group clique
+conversion and QfO scoring behind successful21752, retaining exact coverage
+and failed-query evidence. Broader publication requirements remain incomplete.
+
 ## Native Final-Group Structure Verified (2026-09-18 UTC)
 
 Previous turn did not recover the missing TreeFam source inputs; its further

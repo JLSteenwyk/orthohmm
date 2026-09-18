@@ -75,3 +75,15 @@ Expected output:
 The submission identity and frozen validator revision are recorded below
 after validation and submission. No corrected production admission or score
 exists yet.
+
+Submitted job **21752**, `afterany:21750`, at scheduler time
+`2026-09-18T09:41:59`. `scontrol` confirms pending dependency, 2 CPUs,
+64 GiB, 24 hours, bizon and no requeue. Frozen validator:
+`fe08c7d99f266f2705e32c85294adfec676c008f`, worktree
+`benchmarks/work/publication_qfo_corrected_orthomcl_admission_v1`.
+
+Before submission, the actual batch wrapper was exercised with a clearly
+named preflight cache prefix against pending21750. The frozen validator
+passed runtime checks and failed at the terminal-accounting gate as intended;
+the production admission directory remains absent. This was not an executed
+Slurm admission or a completed production validation.
