@@ -329,6 +329,20 @@ and 39 losses. These descriptive counts need not rank methods identically
 to the weighted aggregate statistic and do not substitute for it.
 [Per-family analysis](orthobench_paired_uncertainty_20260916.json).
 
+### OrthoBench Direct Hits And Grouping Outcomes
+
+The [joint search/stage trace](OB_SEARCH_STAGE_JOINT_COUNTS_20260918.md)
+covers all70 retained reference families. Of40733 descriptive pair
+memberships,24333 lack a direct cached hit in either direction. Final root
+HOGs nevertheless group8465 of these together, while1971 pairs with at least
+one retained hit remain separated. Candidate-to-root processing separates
+1575 previously grouped reference pairs and gains none. These observations
+show why direct-hit presence alone cannot explain final membership. They do
+not identify rejected RBNH edges, prefilter-versus-scoring rejection, or the
+individual effects of tree inference, reconciliation and constraints.
+Counts include low-certainty and within-species pairs and are not the
+official weighted recall statistic or independent biological validation.
+
 ### QfO Results Vary Across Endpoints
 
 The secondary QfO means were 0.782071 for full OrthoFinder, 0.748243 for

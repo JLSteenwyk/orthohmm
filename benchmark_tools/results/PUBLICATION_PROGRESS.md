@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Joint OrthoBench Search And Stage Outcomes (2026-09-18 UTC)
+
+Previous turn progressed through0bc4fc2 with integrated assessment tests.
+Live scheduler confirms HMM21706_0 RUNNING12:49:13 and numeric21791
+RUNNING21:20;21792/21795/21796 remain dependency-pending.
+
+Added summarize_ob_search_stage_trace.py and11passing tests. Actual summary
+of the pinned admitted trace validates complete pair universes, direct-hit
+and stage marginals for all70families, and unchanged input hashes. Retains
+per-family/all/cross-species/within-species joint counts in
+ob_search_stage_joint_counts_20260918.json; descriptive interpretation in
+OB_SEARCH_STAGE_JOINT_COUNTS_20260918.md and manuscript.
+
+Of40733raw pair memberships,24333have no direct retained hit;8465of those
+are together in rootHOGs.1971pairs with direct evidence remain separated.
+Candidate-to-root loses1575co-memberships and gains0. This adds joint error
+localization evidence without claiming causal edge/filter failure or official
+weighted recall. Rejected-hit logs and RBNH/profile-edge tracing remain open;
+no new tuning, confidence intervals or biological validation claimed.
+
 ## Integrated Assessment Success And Failure Paths (2026-09-18 UTC)
 
 Previous turn progressed through1dba83e with service/library citations.
