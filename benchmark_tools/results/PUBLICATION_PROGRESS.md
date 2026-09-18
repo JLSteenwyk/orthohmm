@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Raw Overhead Measurement Replay Implemented (2026-09-18 UTC)
+
+Previous turn made progress through633dfa9 with canonical native-output
+fingerprints. Reread the full objective and observed only the local scheduler.
+Task21838_0 completed0:0 in09:20;21838_1 is running03:15, tasks2..17pending.
+HMM21706_0 is running18:51:30. No DGX remote calls or partial overhead
+native-output reads were made; no success or budget conclusion follows
+from the first task's scheduler exit.
+
+Added a raw-measurement replay module for both observation modes. It checks
+expected command/resources/cadence, job identity, embedded/raw agreement,
+complete point inventory, native status/wall arithmetic, original CPU
+screen replay, and final memory scope/timestamps/counters. Source files are
+hashed before reads and rechecked afterward; changed point inventories are
+rejected. Boundary interval flags remain unavailable/null, not passed.
+
+150 focused tests pass, including34 new replay cases run against both a
+completed historical raw archive and portable fixtures derived from retained
+evidence. Corrupt commands, job IDs, native status, points, wall durations,
+flags and memory observations are rejected. Synthetic boundary views are
+tests only and are never treated as observer-off measurements.
+
+This module is a measurement verifier, not a complete archive/task auditor:
+scheduler, authorization, runtime identity and canonical native-output gates
+still need integration before any paired panel result is reported. Scientific
+timing admission remains false. Frozen running collectors were not modified.
+
 ## Canonical Native Output Comparisons Prepared (2026-09-18 UTC)
 
 Previous turn made progress through4d8a0ac with failure-preserving paired
