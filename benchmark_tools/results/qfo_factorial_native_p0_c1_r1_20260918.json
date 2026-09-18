@@ -1,0 +1,124 @@
+{
+  "accuracy_evaluated": false,
+  "cell": "p0_c1_r1",
+  "environment": {
+    "bytes": 488540,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_variable_native_methods_20260916.json",
+    "sha256": "bf677728cf9312edd9755d9ac1ceefbce3abb8c3848d43413631dc00ca00eb2f"
+  },
+  "helpers": [
+    {
+      "bytes": 9251,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_factorial_admission_v1/benchmark_tools/validate_factorial_native.py",
+      "sha256": "cc4d1e982350ca070e77e665fb71df87e4b58a55cc918f4a0a37f5f9af22ae77"
+    },
+    {
+      "bytes": 4873,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_factorial_admission_v1/benchmark_tools/validate_factorial_partition.py",
+      "sha256": "c32dca984e840889ed251b601eba86e62603abf9309aeefa17b2f5f184658957"
+    },
+    {
+      "bytes": 4524,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_factorial_admission_v1/benchmark_tools/simulation_method_outputs.py",
+      "sha256": "1f776b65a49c699d7e006bd7224a88361c6b7d926fdbadb3a36150e7c973b2b8"
+    },
+    {
+      "bytes": 8398,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_factorial_admission_v1/benchmark_tools/run_qfo_factorial_cell.py",
+      "sha256": "0285082c865e7eccca8ba2238e72ffb80da4d273968089fad19fc111036b2cf2"
+    }
+  ],
+  "limitations": [
+    "Native pair integrity and complete group coverage; not independent gene-tree correctness or pair-event reconstruction.",
+    "RootHOGs validate grouping only; QfO R-on uses native pairs, not RootHOG clique conversion.",
+    "Reference-mapping conversion and native assessment admission remain required."
+  ],
+  "native_group_integrity": {
+    "accuracy_evaluated": false,
+    "cell": "p0_c1_r1",
+    "integrity": {
+      "accounting": "JobID|JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS\n21671_0|21672|COMPLETED|0:0|01:14:06|bizon|32\n21671_0.batch|21672.batch|COMPLETED|0:0|01:14:06|bizon|32\n21671_1|21686|COMPLETED|0:0|01:57:57|bizon|32\n21671_1.batch|21686.batch|COMPLETED|0:0|01:57:57|bizon|32\n21671_[2-3%1]|21671|PENDING|0:0|00:00:00|None assigned|0\n",
+      "artifact_count": 145979,
+      "execution_status": {
+        "bytes": 53977629,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_factorial_v1/execution/p0_c1_r1/status.json",
+        "sha256": "177bd567e3721eae5c0013bc75b694c2e45013dd0b5e0bed2f77e17e23ed201b"
+      },
+      "executor_commit": "de3202f1c4b9a7b57ccdd903f5a362194cdd5371",
+      "postflight": {
+        "bytes": 144,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_factorial_v1/execution/p0_c1_r1/postflight.json",
+        "sha256": "6ceb10317f9c8c650595f47b195be86ab3149f5d78d89fc9c0a830f77da3aa06"
+      },
+      "scheduler": {
+        "AllocCPUS": "32",
+        "Elapsed": "01:57:57",
+        "ExitCode": "0:0",
+        "JobID": "21671_1",
+        "JobIDRaw": "21686",
+        "NodeList": "bizon",
+        "State": "COMPLETED"
+      }
+    },
+    "membership": {
+      "constraints": 40482,
+      "detached_constraints": 12588,
+      "detached_genes": 28707,
+      "ortholog_pairs_removed": 390403,
+      "policy": "high_confidence_pair",
+      "root_hogs_added": 12080,
+      "supported_constraints": 27894
+    },
+    "native_manifest": {
+      "bytes": 18584,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_factorial_v1/cells/p0_c1_r1/orthohmm_phylogeny/provenance_manifest.json",
+      "sha256": "99c801adb25111bae0a6e43f01603f6995a55182cdca8915fda92846543d864c"
+    },
+    "native_metrics": {
+      "bytes": 8424,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_factorial_v1/cells/p0_c1_r1.json",
+      "sha256": "b055ac2318f81dc32512d15c07a08bcf97694c6bc2094cba95f79dbbae225517"
+    },
+    "native_outputs_validated": true,
+    "partition": {
+      "all_candidate_genes_preserved": true,
+      "candidate_families": 352749,
+      "candidate_genes": 976504,
+      "cross_source_merges": 0,
+      "root_hog_genes": 976504,
+      "root_hogs": 373302,
+      "split_source_families": 8210
+    },
+    "schema_version": 1,
+    "scope": "Root-HOG group benchmark admission only; no pairwise-truth evaluation or independent tree reconstruction.",
+    "species_tree": {
+      "bytes": 3585,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_factorial_v1/cells/p0_c1_r1/orthohmm_phylogeny/species_tree.rooted.nwk",
+      "sha256": "23f099a6cb4b48030daf32679c8bf7c3aa8b0eddacf9367545804875f782bc40"
+    },
+    "status": "native_group_output_verified",
+    "verifier": {
+      "bytes": 9251,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_factorial_admission_v1/benchmark_tools/validate_factorial_native.py",
+      "sha256": "cc4d1e982350ca070e77e665fb71df87e4b58a55cc918f4a0a37f5f9af22ae77"
+    }
+  },
+  "native_pair_count": 5598408,
+  "native_pairs": {
+    "bytes": 465449930,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_factorial_v1/cells/p0_c1_r1/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+    "sha256": "292af904f22da71cd444578c45af774d18144977a992fe75402cb0930de0af2e"
+  },
+  "prepared": {
+    "bytes": 109234,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_factorial_prepared_20260917.json",
+    "sha256": "706b07c91e9a130dae229837641a7ad62d7d36a09679e5e0daa0959e182b7d64"
+  },
+  "scoring_admitted": false,
+  "source": {
+    "bytes": 9200,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_factorial_admission_v1/benchmark_tools/admit_qfo_factorial_cell.py",
+    "sha256": "af6da953a8857383ae203eb1981bf36e794b939dfc12012e4af38f33f49cc3fa"
+  },
+  "status": "qfo_native_pair_output_verified"
+}

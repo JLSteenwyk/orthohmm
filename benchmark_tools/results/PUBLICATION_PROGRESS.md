@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Expanded R-On QfO Cell Scoring (2026-09-18 UTC)
+
+Previous turn progressed with corrected-input inventory implementation,
+committed/pushed7f40313. Re-read goal and confirmed existing job handles.
+Reconciliation21671_1 completed0:0 in1:57:57; native validator21673_1
+completed0:0 in1:35. Its preserved report
+`qfo_factorial_native_p0_c1_r1_20260918.json` has SHA-256
+`a87eef1ae64a2d9eb8a39469761f08ee805e13ea8ae1332d1999ad72a3209ba9`.
+All976,504genes are retained across373,302rootHOGs; native inferred pairs
+number5,598,408. This is output integrity, not accuracy or tree correctness.
+
+Pair conversion21675_3 completed0:0 in2:40. Preserved report
+`qfo_factorial_pairs_p0_c1_r1_20260918.json` has SHA-256
+`4429a328e6ce786f01cc1ced5ddf2c6ba7af6ebca38551aed4ec0d4791c76559`.
+Retained5,580,807nativepairs;17,601excluded by frozen reference mapping.
+No RootHOG clique substitution. Existing assessment namespace was absent.
+
+Submitted frozen assessment wrapper as21703, index3/p0_c1_r1, executor
+`publication_qfo_factorial_assessment_v1` at
+`25f328d994765369cfae0382a21c3e7fdb3b7dab`, exact pair-report SHA above.
+Verified running preflight records job21703, index3 and matching checksum;
+accuracy_admitted remains false. Submitted validator21704 afterany21703,
+executor `publication_qfo_factorial_score_admission_v1` at
+`9680ccced0e351fa62e0e76c1f393a232d04d00e`, index3, job21703, same checksum.
+Both executor benchmark_tools trees were clean and revisions verified.
+Existing batch files preserve8CPU/64GiB/24h assessment and2CPU/64GiB/4h
+validation. afterany permits failure inspection, not admission of failure.
+
+All74 focused native/pair/scoring tests pass; full unit suite2,551passed
+in53.12s. No algorithm, endpoint, input release or defaults changed.
+Original-release limitations still apply. First R-on score21697 remains
+running; corrected acquisition21687 running1:33:38; reconciliation21671_2
+running5:08; DGX timing advanced to21656_12. Next: inspect completed score
+admissions, advance remaining factorial cells, and review corrected archive
+audits before any corrected-release inference. Full goal remains unfinished.
+
 ## Corrected Input Inventory Gate Prepared (2026-09-18 UTC)
 
 Previous turn progressed via ffdd694, committed/pushed dependency citations.
