@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Corrected Reconciliation Array Queued (2026-09-18 UTC)
+
+Previous turn made progress through207405f: candidate preparation21758 and
+admission21759 were queued and pushed. Live revalidation found HMM21706_0
+RUNNING9:37:07 and final DGX timing task21656_26 RUNNING12:02. No jobs were
+restarted, and no additional DGX workload was launched.
+
+Updated only the reconciliation batch interface to accept executor, exact
+revision and candidate-admission job. It calculates the fixed admission
+file checksum after the dependency completes, then calls the unchanged
+frozen2bf70fb runner. That runner independently requires terminal admission,
+validates source/input/runtime identities and retains failed native output.
+Added25 wrapper tests covering all four indices, exact arguments and
+environment, resource limits, and rejection of missing input, altered
+source/revision, invalid job and invalid array index. Combined runner,
+admitter and wrapper suite:64 passed in9.10s. Implementation182e6f7.
+
+Submitted21760 at2026-09-18T10:24:42, array0-3%1 afterok:21759, using
+benchmarks/work/publication_qfo_corrected_reconcile_v1 at
+2bf70fb27cc63edc7c49d38d3c7f7d09ddccca9b (verified clean). scontrol confirms
+32CPUs/192GiB/48h/bizon and no requeue. Indices select the four R-on cells
+from the admitted eight-cell plan; P/C settings are unchanged. This is
+incremental shared-host reconciliation, not dedicated end-to-end timing.
+
+Next: independent per-cell native validation, R-off clique conversion,
+R-on native-pair conversion, and frozen scoring/admission. These downstream
+steps are not yet queued for21760. No corrected factorial output or score
+is claimed, and the publication goal remains active and incomplete.
+
 ## Corrected Candidate Preparation And Admission Queued (2026-09-18 UTC)
 
 The preceding archive-search response was no progress toward analysis:
