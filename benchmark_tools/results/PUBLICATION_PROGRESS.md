@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Corrected QfO Staging Implemented, Not Yet Executed (2026-09-18 UTC)
+
+Previous turn progressed through public TreeFam source retrieval investigation
+and commit 3d356ce; original trees/mapping remain missing. Re-read the full
+goal and verified live jobs. Added `stage_qfo_corrected_inputs.py`, requiring
+explicit reviewed report hashes, source/reference identity checks, agreement
+between archive and sequence audits, complete mapping and no unexplained
+sequence differences. Streams only approved canonical regular members into a
+fresh directory; no normalization, unsafe path extraction or overwrites.
+Success remains pending independent inventory and inference-manifest freeze.
+36 focused tests pass; see `QFO_CORRECTED_STAGING_IMPLEMENTATION_20260918.md`.
+
+No empirical staging executed or queued: acquisition 21687 remains live at
+1,444,024,320/2,648,666,198 bytes; audits 21688/21689 pending. Original QfO
+21671_1 remains live. DGX task21656_8 completed 0:0 in 1:36:10 and task21656_9
+is running. Nine timing tasks are scheduler-complete, not yet fully admitted
+resource measurements. Existing inputs and scores unchanged; full goal active.
+
 ## TreeFam Source Search And Public Downloads (2026-09-18 UTC)
 
 User requested external retrieval of missing original NHX trees and
