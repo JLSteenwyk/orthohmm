@@ -1085,6 +1085,14 @@ family resampling, or every publication competitor.
 
 ## Data And Code Availability
 
+A [relocatable figure-evidence bundle](PUBLICATION_FIGURE_BUNDLE_20260918.md)
+preserves all 16 retained panels, their 55 outputs, original manifests and
+directly recorded dependencies from committed source revisions. Its standalone
+verifier passed after archive extraction outside the repository. This is a
+byte-identity and relocation check, not regeneration of all scientific results,
+native inference, or clearance of redistribution rights. The archive remains
+local and is not the complete publication deposit.
+
 A [relocated reproduction workflow](SWISS_RELOCATED_REPRODUCTION_20260917.md)
 exports the SwissTrees comparator analysis from a fixed commit and reruns it in
 a fresh hash-pinned Python environment. Its numerical results and Markdown

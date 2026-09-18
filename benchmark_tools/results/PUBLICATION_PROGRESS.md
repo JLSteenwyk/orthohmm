@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Relocatable Direct Figure Evidence (2026-09-18 UTC)
+
+Previous turn progressed throughca17160 with frozen-helper recovery.
+Live jobs revalidated:21706_0 RUNNING11:30:28;21789 RUNNING1:18:50;
+21713 pending resources. No job was changed.
+
+Added bundle_publication_figures.py and tests, committed as
+fcb41ed094d3bc24329175c59b14c92c722e1d25. Exports committed bytes for all
+16 retained panels,55 outputs,91 unique direct dependencies plus manifests,
+license,audit and standalone verifier:110files22,068,376bytes excluding the
+66,233-byte bundle manifest. Detached helper is read from its original frozen
+commit, not replaced with current code. Original manifests remain unchanged;
+explicit relative relocation maps preserve historical absolute provenance.
+35 focused tests pass in0.89s.
+
+Actual bundle and normalized tar.gz completed. Archive5,452,374bytes SHA-256
+aa8518c9ce0e46200ef891336bd3b91d78b6f09dbee157e366ad43c51bbc7943.
+Extracted outside repository to /tmp/orthohmm-figure-relocation.u9etV9 and
+verified with /usr/bin/python3 -I using only bundled standard-library code.
+All110files and all panel mappings pass. Retained machine-readable manifest
+publication_figure_bundle_20260918.json SHA-256
+e168560edaa842a9a157cf6259e291d7c903d7cde1930e4f5c69bccbc3fa1289.
+Added reproduction instructions and manuscript availability link.
+
+This preserves direct figure evidence only. Full executable workflows,
+transitive dependencies/data, redistribution clearance, corrected QfO results,
+versioned scientific release and external archival deposition remain
+unfinished. No new accuracy or controlled-resource admission; goal stays active.
+
 ## Frozen Figure Helper Recovery (2026-09-18 UTC)
 
 Previous goal turn made no new progress: it reconfirmed the TreeFam source
