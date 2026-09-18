@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Unexpanded Recorded-Event Audit (2026-09-18 UTC)
+
+Previous turn progressed with 9d8ed0f, the expanded-cell sample audit.
+Re-read full objective and confirmed long-running handles. Applied unchanged
+verifier to unexpanded p0_c0_r1 with original native admission SHA
+87aaf2236c7fbbff0aaa18f0d1f2e222b6d56a36d7402c630959b3172a3f024f.
+Sample64/26,171reconciled families:1,016genes/1,957nodes; all12,294pairs
+match exactly, without membership filtering. Original artifact hashes bind
+the source node/group tables. Added six file-level integration tests;
+all21audit tests pass. Report and scope in
+`QFO_RECORDED_EVENT_PAIR_AUDIT_20260918.md`. Samples across cells are not
+paired biological families; no expansion effect or accuracy conclusion.
+
+Corrected archive reached2,544,377,856/2,648,666,198bytes before latest poll.
+Acquisition21687confirmedrunning1:43:35, audits21688/21689pending;
+scores21697/21703running36:07/10:10 and validators21698/21704pending.
+No required local audit process remains live. Next: inspect archive audit
+results once terminal, progress remaining factorial admissions and later
+DGX timing validation. Source recovery, matched sensitivity and other
+publication-evidence requirements are still unresolved.
+
 ## Sampled Native Event-To-Pair Reconstruction (2026-09-18 UTC)
 
 Previous turn progressed by launching second R-on assessment and pushing

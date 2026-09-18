@@ -1,6 +1,9 @@
+import csv
+import json
+
 import pytest
 
-from benchmark_tools.audit_reconciled_pair_events import reconstruct
+from benchmark_tools.audit_reconciled_pair_events import audit, reconstruct, record
 
 
 def rows():
@@ -72,3 +75,57 @@ def test_disconnected_cycle():
     data.extend([dict(node_id="x", parent_node_id="y"), dict(node_id="y", parent_node_id="x")])
     with pytest.raises(ValueError, match="Disconnected"):
         reconstruct(data, {"a": "g", "b": "g"}, False)
+
+
+def write_table(path, fields, entries):
+    with path.open("w") as stream:
+        writer = csv.DictWriter(stream, fieldnames=fields, delimiter="\t")
+        writer.writeheader()
+        writer.writerows(entries)
+
+
+@pytest.mark.parametrize("case", ["unexpanded", "expanded", "missing_pair", "table_changed", "wrong_admission", "duplicate_pair"])
+def test_file_audit(tmp_path, case):
+    cell = "p0_c1_r1" if case == "expanded" else "p0_c0_r1"
+    nodes = tmp_path / "orthohmm_reconciliation_nodes.tsv"
+    groups = tmp_path / "orthohmm_root_hogs.tsv"
+    pairs = tmp_path / "orthohmm_pairwise_orthologs.tsv"
+    data = rows()
+    for row in data:
+        row["source_family"] = "Family1"
+    fields = sorted(set().union(*(set(row) for row in data)))
+    write_table(nodes, fields, data)
+    group_rows = ([dict(root_hog="g", source_family="Family1", genes="a,b")]
+                  if case != "expanded" else
+                  [dict(root_hog=g, source_family="Family1", genes=g) for g in "ab"])
+    write_table(groups, ["root_hog", "source_family", "genes"], group_rows)
+    pair = dict(gene_a="a", species_a="A", gene_b="b", species_b="B")
+    pair_rows = [] if case in {"expanded", "missing_pair"} else [pair]
+    if case == "duplicate_pair":
+        pair_rows.append(pair)
+    write_table(pairs, list(pair), pair_rows)
+    artifacts = [{"absolute_path": str(path), **{k: record(path)[k] for k in ("bytes", "sha256")}}
+                 for path in (nodes, groups)]
+    artifacts.append({"absolute_path": str(tmp_path / "gene_trees/Family1.reconciled.nwk")})
+    execution = tmp_path / "execution.json"
+    execution.write_text(json.dumps({"methods": {cell: {"outputs": artifacts}}}))
+    native_manifest = tmp_path / "manifest.json"
+    native_manifest.write_text("{}")
+    admission = tmp_path / "admission.json"
+    admission.write_text(json.dumps({"status": "qfo_native_pair_output_verified", "cell": cell,
+        "native_pairs": record(pairs), "native_group_integrity": {
+            "native_manifest": record(native_manifest), "integrity": {"execution_status": record(execution)}}}))
+    expected_sha = record(admission)["sha256"]
+    if case == "table_changed":
+        with groups.open("a") as stream:
+            stream.write("\n")
+    if case == "wrong_admission":
+        expected_sha = "wrong"
+    if case in {"unexpanded", "expanded"}:
+        result = audit(admission, expected_sha, 1)
+        assert result["selected_families"] == ["Family1"]
+        assert result["families"]["Family1"]["retained_pairs"] == (case == "unexpanded")
+        assert result["accuracy_evaluated"] is False
+    else:
+        with pytest.raises(ValueError):
+            audit(admission, expected_sha, 1)

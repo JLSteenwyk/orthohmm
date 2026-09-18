@@ -1,0 +1,561 @@
+{
+  "accuracy_evaluated": false,
+  "admission": {
+    "bytes": 5913,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_factorial_v1/native_admission_0.json",
+    "sha256": "87aaf2236c7fbbff0aaa18f0d1f2e222b6d56a36d7402c630959b3172a3f024f"
+  },
+  "cell": "p0_c0_r1",
+  "eligible_reconciled_families": 26171,
+  "execution_status": {
+    "bytes": 58060931,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_factorial_v1/execution/p0_c0_r1/status.json",
+    "sha256": "b1ad3c0f4a251fe2a4064e465d070a107fc3cddf17322ebb03fd7c154fc4797d"
+  },
+  "families": {
+    "Family0027181": {
+      "event_pairs": 144,
+      "genes": 24,
+      "group_filtered_pairs": 0,
+      "nodes": 47,
+      "retained_pairs": 144
+    },
+    "Family0049616": {
+      "event_pairs": 15,
+      "genes": 9,
+      "group_filtered_pairs": 0,
+      "nodes": 17,
+      "retained_pairs": 15
+    },
+    "Family0051444": {
+      "event_pairs": 526,
+      "genes": 49,
+      "group_filtered_pairs": 0,
+      "nodes": 97,
+      "retained_pairs": 526
+    },
+    "Family0054266": {
+      "event_pairs": 559,
+      "genes": 34,
+      "group_filtered_pairs": 0,
+      "nodes": 67,
+      "retained_pairs": 559
+    },
+    "Family0055291": {
+      "event_pairs": 102,
+      "genes": 15,
+      "group_filtered_pairs": 0,
+      "nodes": 29,
+      "retained_pairs": 102
+    },
+    "Family0064372": {
+      "event_pairs": 493,
+      "genes": 53,
+      "group_filtered_pairs": 0,
+      "nodes": 105,
+      "retained_pairs": 493
+    },
+    "Family0069199": {
+      "event_pairs": 35,
+      "genes": 9,
+      "group_filtered_pairs": 0,
+      "nodes": 17,
+      "retained_pairs": 35
+    },
+    "Family0074619": {
+      "event_pairs": 1247,
+      "genes": 54,
+      "group_filtered_pairs": 0,
+      "nodes": 107,
+      "retained_pairs": 1247
+    },
+    "Family0080692": {
+      "event_pairs": 23,
+      "genes": 10,
+      "group_filtered_pairs": 0,
+      "nodes": 19,
+      "retained_pairs": 23
+    },
+    "Family0082376": {
+      "event_pairs": 235,
+      "genes": 51,
+      "group_filtered_pairs": 0,
+      "nodes": 101,
+      "retained_pairs": 235
+    },
+    "Family0082843": {
+      "event_pairs": 57,
+      "genes": 16,
+      "group_filtered_pairs": 0,
+      "nodes": 31,
+      "retained_pairs": 57
+    },
+    "Family0083081": {
+      "event_pairs": 848,
+      "genes": 67,
+      "group_filtered_pairs": 0,
+      "nodes": 133,
+      "retained_pairs": 848
+    },
+    "Family0085958": {
+      "event_pairs": 207,
+      "genes": 30,
+      "group_filtered_pairs": 0,
+      "nodes": 59,
+      "retained_pairs": 207
+    },
+    "Family0086090": {
+      "event_pairs": 3380,
+      "genes": 90,
+      "group_filtered_pairs": 0,
+      "nodes": 175,
+      "retained_pairs": 3380
+    },
+    "Family0089265": {
+      "event_pairs": 6,
+      "genes": 5,
+      "group_filtered_pairs": 0,
+      "nodes": 9,
+      "retained_pairs": 6
+    },
+    "Family0091771": {
+      "event_pairs": 2718,
+      "genes": 78,
+      "group_filtered_pairs": 0,
+      "nodes": 155,
+      "retained_pairs": 2718
+    },
+    "Family0092029": {
+      "event_pairs": 9,
+      "genes": 10,
+      "group_filtered_pairs": 0,
+      "nodes": 19,
+      "retained_pairs": 9
+    },
+    "Family0094418": {
+      "event_pairs": 323,
+      "genes": 26,
+      "group_filtered_pairs": 0,
+      "nodes": 44,
+      "retained_pairs": 323
+    },
+    "Family0096113": {
+      "event_pairs": 226,
+      "genes": 23,
+      "group_filtered_pairs": 0,
+      "nodes": 45,
+      "retained_pairs": 226
+    },
+    "Family0098490": {
+      "event_pairs": 9,
+      "genes": 6,
+      "group_filtered_pairs": 0,
+      "nodes": 11,
+      "retained_pairs": 9
+    },
+    "Family0099206": {
+      "event_pairs": 74,
+      "genes": 13,
+      "group_filtered_pairs": 0,
+      "nodes": 25,
+      "retained_pairs": 74
+    },
+    "Family0100060": {
+      "event_pairs": 2,
+      "genes": 3,
+      "group_filtered_pairs": 0,
+      "nodes": 5,
+      "retained_pairs": 2
+    },
+    "Family0100957": {
+      "event_pairs": 20,
+      "genes": 7,
+      "group_filtered_pairs": 0,
+      "nodes": 13,
+      "retained_pairs": 20
+    },
+    "Family0103243": {
+      "event_pairs": 133,
+      "genes": 20,
+      "group_filtered_pairs": 0,
+      "nodes": 39,
+      "retained_pairs": 133
+    },
+    "Family0106375": {
+      "event_pairs": 21,
+      "genes": 9,
+      "group_filtered_pairs": 0,
+      "nodes": 17,
+      "retained_pairs": 21
+    },
+    "Family0106698": {
+      "event_pairs": 5,
+      "genes": 4,
+      "group_filtered_pairs": 0,
+      "nodes": 7,
+      "retained_pairs": 5
+    },
+    "Family0107459": {
+      "event_pairs": 9,
+      "genes": 8,
+      "group_filtered_pairs": 0,
+      "nodes": 15,
+      "retained_pairs": 9
+    },
+    "Family0107940": {
+      "event_pairs": 71,
+      "genes": 13,
+      "group_filtered_pairs": 0,
+      "nodes": 25,
+      "retained_pairs": 71
+    },
+    "Family0110622": {
+      "event_pairs": 3,
+      "genes": 4,
+      "group_filtered_pairs": 0,
+      "nodes": 7,
+      "retained_pairs": 3
+    },
+    "Family0110664": {
+      "event_pairs": 275,
+      "genes": 24,
+      "group_filtered_pairs": 0,
+      "nodes": 47,
+      "retained_pairs": 275
+    },
+    "Family0113678": {
+      "event_pairs": 111,
+      "genes": 16,
+      "group_filtered_pairs": 0,
+      "nodes": 31,
+      "retained_pairs": 111
+    },
+    "Family0114112": {
+      "event_pairs": 20,
+      "genes": 8,
+      "group_filtered_pairs": 0,
+      "nodes": 15,
+      "retained_pairs": 20
+    },
+    "Family0122101": {
+      "event_pairs": 2,
+      "genes": 4,
+      "group_filtered_pairs": 0,
+      "nodes": 7,
+      "retained_pairs": 2
+    },
+    "Family0124470": {
+      "event_pairs": 19,
+      "genes": 20,
+      "group_filtered_pairs": 0,
+      "nodes": 39,
+      "retained_pairs": 19
+    },
+    "Family0125211": {
+      "event_pairs": 3,
+      "genes": 4,
+      "group_filtered_pairs": 0,
+      "nodes": 7,
+      "retained_pairs": 3
+    },
+    "Family0132933": {
+      "event_pairs": 2,
+      "genes": 3,
+      "group_filtered_pairs": 0,
+      "nodes": 5,
+      "retained_pairs": 2
+    },
+    "Family0134615": {
+      "event_pairs": 2,
+      "genes": 3,
+      "group_filtered_pairs": 0,
+      "nodes": 5,
+      "retained_pairs": 2
+    },
+    "Family0138782": {
+      "event_pairs": 7,
+      "genes": 7,
+      "group_filtered_pairs": 0,
+      "nodes": 13,
+      "retained_pairs": 7
+    },
+    "Family0141089": {
+      "event_pairs": 7,
+      "genes": 5,
+      "group_filtered_pairs": 0,
+      "nodes": 9,
+      "retained_pairs": 7
+    },
+    "Family0142645": {
+      "event_pairs": 61,
+      "genes": 20,
+      "group_filtered_pairs": 0,
+      "nodes": 39,
+      "retained_pairs": 61
+    },
+    "Family0146560": {
+      "event_pairs": 34,
+      "genes": 9,
+      "group_filtered_pairs": 0,
+      "nodes": 17,
+      "retained_pairs": 34
+    },
+    "Family0149495": {
+      "event_pairs": 12,
+      "genes": 6,
+      "group_filtered_pairs": 0,
+      "nodes": 11,
+      "retained_pairs": 12
+    },
+    "Family0150736": {
+      "event_pairs": 3,
+      "genes": 5,
+      "group_filtered_pairs": 0,
+      "nodes": 9,
+      "retained_pairs": 3
+    },
+    "Family0153615": {
+      "event_pairs": 44,
+      "genes": 45,
+      "group_filtered_pairs": 0,
+      "nodes": 89,
+      "retained_pairs": 44
+    },
+    "Family0178024": {
+      "event_pairs": 2,
+      "genes": 3,
+      "group_filtered_pairs": 0,
+      "nodes": 5,
+      "retained_pairs": 2
+    },
+    "Family0182894": {
+      "event_pairs": 5,
+      "genes": 6,
+      "group_filtered_pairs": 0,
+      "nodes": 11,
+      "retained_pairs": 5
+    },
+    "Family0198552": {
+      "event_pairs": 2,
+      "genes": 3,
+      "group_filtered_pairs": 0,
+      "nodes": 5,
+      "retained_pairs": 2
+    },
+    "Family0208404": {
+      "event_pairs": 2,
+      "genes": 3,
+      "group_filtered_pairs": 0,
+      "nodes": 5,
+      "retained_pairs": 2
+    },
+    "Family0213930": {
+      "event_pairs": 2,
+      "genes": 3,
+      "group_filtered_pairs": 0,
+      "nodes": 5,
+      "retained_pairs": 2
+    },
+    "Family0218108": {
+      "event_pairs": 9,
+      "genes": 6,
+      "group_filtered_pairs": 0,
+      "nodes": 11,
+      "retained_pairs": 9
+    },
+    "Family0224025": {
+      "event_pairs": 5,
+      "genes": 4,
+      "group_filtered_pairs": 0,
+      "nodes": 7,
+      "retained_pairs": 5
+    },
+    "Family0230877": {
+      "event_pairs": 9,
+      "genes": 5,
+      "group_filtered_pairs": 0,
+      "nodes": 9,
+      "retained_pairs": 9
+    },
+    "Family0242820": {
+      "event_pairs": 3,
+      "genes": 4,
+      "group_filtered_pairs": 0,
+      "nodes": 7,
+      "retained_pairs": 3
+    },
+    "Family0244283": {
+      "event_pairs": 81,
+      "genes": 16,
+      "group_filtered_pairs": 0,
+      "nodes": 31,
+      "retained_pairs": 81
+    },
+    "Family0250793": {
+      "event_pairs": 44,
+      "genes": 10,
+      "group_filtered_pairs": 0,
+      "nodes": 19,
+      "retained_pairs": 44
+    },
+    "Family0278692": {
+      "event_pairs": 2,
+      "genes": 3,
+      "group_filtered_pairs": 0,
+      "nodes": 5,
+      "retained_pairs": 2
+    },
+    "Family0292478": {
+      "event_pairs": 2,
+      "genes": 3,
+      "group_filtered_pairs": 0,
+      "nodes": 5,
+      "retained_pairs": 2
+    },
+    "Family0293799": {
+      "event_pairs": 2,
+      "genes": 3,
+      "group_filtered_pairs": 0,
+      "nodes": 5,
+      "retained_pairs": 2
+    },
+    "Family0307911": {
+      "event_pairs": 2,
+      "genes": 3,
+      "group_filtered_pairs": 0,
+      "nodes": 5,
+      "retained_pairs": 2
+    },
+    "Family0332706": {
+      "event_pairs": 2,
+      "genes": 3,
+      "group_filtered_pairs": 0,
+      "nodes": 5,
+      "retained_pairs": 2
+    },
+    "Family0349869": {
+      "event_pairs": 4,
+      "genes": 4,
+      "group_filtered_pairs": 0,
+      "nodes": 7,
+      "retained_pairs": 4
+    },
+    "Family0356942": {
+      "event_pairs": 2,
+      "genes": 3,
+      "group_filtered_pairs": 0,
+      "nodes": 5,
+      "retained_pairs": 2
+    },
+    "Family0360709": {
+      "event_pairs": 6,
+      "genes": 5,
+      "group_filtered_pairs": 0,
+      "nodes": 9,
+      "retained_pairs": 6
+    },
+    "Family0365350": {
+      "event_pairs": 6,
+      "genes": 7,
+      "group_filtered_pairs": 0,
+      "nodes": 13,
+      "retained_pairs": 6
+    }
+  },
+  "inputs": [
+    {
+      "bytes": 212027827,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_factorial_v1/cells/p0_c0_r1/orthohmm_phylogeny/orthohmm_reconciliation_nodes.tsv",
+      "sha256": "5961069fd07286b1843cc18dbea7b5e2c55ede1ebee8836991a8fc81668bbc22"
+    },
+    {
+      "bytes": 35249588,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_factorial_v1/cells/p0_c0_r1/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "sha256": "a7880914f2bb519843a3989394daa71da0059d357728cb0c7fd20cd201f80a4f"
+    }
+  ],
+  "limitations": [
+    "Sampled reconciled families only; bypass families and unsampled pairs not reconstructed.",
+    "Validates recorded node-event to pair conversion, not independent tree inference or biological orthology truth.",
+    "Mapping-conflict labels and final root-HOG membership are conditioned on, not independently reconciled or regenerated.",
+    "Confidence labels and correctness of membership-constraint selection are not tested."
+  ],
+  "native_pairs": {
+    "bytes": 412214095,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_factorial_v1/cells/p0_c0_r1/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+    "sha256": "fdb0d07cd0924405b44f3aa326850f5050615232b4652ca1e0ddfca6aa5fd90f"
+  },
+  "selected_families": [
+    "Family0150736",
+    "Family0230877",
+    "Family0064372",
+    "Family0138782",
+    "Family0134615",
+    "Family0098490",
+    "Family0054266",
+    "Family0103243",
+    "Family0146560",
+    "Family0049616",
+    "Family0142645",
+    "Family0069199",
+    "Family0293799",
+    "Family0096113",
+    "Family0099206",
+    "Family0149495",
+    "Family0100060",
+    "Family0083081",
+    "Family0107459",
+    "Family0094418",
+    "Family0106698",
+    "Family0107940",
+    "Family0113678",
+    "Family0091771",
+    "Family0178024",
+    "Family0124470",
+    "Family0080692",
+    "Family0082376",
+    "Family0125211",
+    "Family0051444",
+    "Family0089265",
+    "Family0356942",
+    "Family0332706",
+    "Family0082843",
+    "Family0122101",
+    "Family0278692",
+    "Family0153615",
+    "Family0074619",
+    "Family0244283",
+    "Family0182894",
+    "Family0349869",
+    "Family0292478",
+    "Family0132933",
+    "Family0027181",
+    "Family0106375",
+    "Family0092029",
+    "Family0213930",
+    "Family0100957",
+    "Family0198552",
+    "Family0307911",
+    "Family0360709",
+    "Family0224025",
+    "Family0250793",
+    "Family0110622",
+    "Family0242820",
+    "Family0218108",
+    "Family0141089",
+    "Family0110664",
+    "Family0365350",
+    "Family0208404",
+    "Family0086090",
+    "Family0085958",
+    "Family0114112",
+    "Family0055291"
+  ],
+  "selection_seed": 20260923,
+  "source": {
+    "bytes": 9455,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_reconciled_pair_events.py",
+    "sha256": "94e52ce74cb2a87cdec6954e36a9752b7460ac2bd653ab1e2d13a850cc42ae37"
+  },
+  "status": "sampled_recorded_event_pair_conversion_verified"
+}

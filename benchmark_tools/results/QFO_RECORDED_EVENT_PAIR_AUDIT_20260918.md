@@ -55,3 +55,25 @@ interval or whole-output guarantee. Native scoring remains separately gated.
 The sequence-search control review remains unchanged: equal E-value cutoffs,
 hit caps, or matched hit counts are not proof of matched sensitivity. This
 pair-conversion audit does not resolve that separate HMM-contribution question.
+
+## Unexpanded Configuration
+
+The same verifier and selection rule were run separately on `p0_c0_r1`,
+bound to native admission SHA-256
+`87aaf2236c7fbbff0aaa18f0d1f2e222b6d56a36d7402c630959b3172a3f024f`.
+Its sample comprises 64 of 26,171 reconciled families, 1,016 genes and
+1,957 nodes. All 12,294 reconstructed pairs match native output exactly;
+there is no membership filtering in this unexpanded cell. Report
+`qfo_event_pairs_p0_c0_r1_20260918.json` has SHA-256
+`a334b3bab4652deff834b95c4e4a885ccf43f1c7f03bff0ea99a61d67d7afece`.
+
+Family IDs and their membership need not correspond between expanded and
+unexpanded cells. The two deterministic samples must not be treated as a
+paired expansion experiment or used to compare filtering/error rates.
+Their purpose is to check both conversion branches independently.
+
+The audit test suite now has 21 passing tests, including six file-level
+integration cases: both conversion branches, missing predictions, duplicate
+predictions, modified execution-bound tables, and an incorrect admission
+checksum. No production converter, inference setting or accuracy score was
+changed. The original scope limits apply to both samples.
