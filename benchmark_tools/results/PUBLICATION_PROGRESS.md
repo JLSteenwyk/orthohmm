@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Corrected Factorial Paired Bootstrap Adapter (2026-09-18 UTC)
+
+Previous turn progressed througha3300e1: corrected raw family-count audit
+implemented. Live HMM21706_0 RUNNING9:56:03 and final DGX21656_26
+RUNNING30:58 were revalidated. No active run was restarted or disturbed
+with heavy DGX I/O.
+
+Added bootstrap_qfo_corrected_factorial.py with a corrected-only input gate
+and reuse of the unchanged numerical engine. It changes only the in-memory
+schema tag for engine compatibility, not counts, then labels results as
+paired_corrected_qfo_factorial_swiss_intervals. Production CLI fixes100,000
+PCG64 draws, seed20260922,18 shared family units and42 adjusted endpoints.
+It verifies both frozen protocols, count-auditor and numerical-engine hashes,
+source binding, admission inventory, baseline audit and all recorded count
+inputs/helpers before and after computation. Existing historical commands
+remain unchanged. Output paths must be fresh and distinct.
+
+Numerical equivalence tests compare every contrast/interval with the
+established engine, check no input mutation, reject historical/incomplete/
+overlapping/inconsistent counts, verify frozen hashes and exercise a
+file-backed run plus post-audit tampering.35 focused tests pass in0.41s.
+Full tests/unit suite:4,344 passed,9 skipped in77.55s; skipped tests are
+not claimed as validated by this run. No native benchmark confidence
+intervals were computed because corrected admissions remain pending.
+
+Next: form the exact eight-admission inventory once all scoring gates
+succeed, run corrected family-count audit and paired bootstrap, then render
+figures without mixing original-release evidence. Dedicated timing audit,
+primary-method completion, matched-search evidence and manuscript/release
+requirements remain open. The full publication goal remains active.
+
 ## Corrected Factorial SwissTrees Count Adapter (2026-09-18 UTC)
 
 Previous turn progressed throughd289197: corrected-only factorial table
