@@ -36,7 +36,7 @@ evidence that an experiment completed or a biological hypothesis is true.
 | The package is publication-ready | All sections below | Not achieved |
 | Original QfO inputs match the corrected2020benchmark release | [Corrected archive comparison](QFO_CORRECTED_ARCHIVE_ACQUIRED_20260918.md) | Contradicted for the Xenopus proteome; preserve original results as release-limited |
 | Corrected QfO inputs cover the retained reference identities and sequence content | [Native sequence and staging audits](QFO_CORRECTED_INPUTS_STAGED_20260918.md) | Supported: all 984,137 identities, 983,959 exact sequences and 178 representation-only differences; no unexplained differences. This is input compatibility, not biological annotation validation |
-| Corrected QfO accuracy or rankings are established | [Frozen rerun protocol](QFO_CORRECTED_RELEASE_PROTOCOL_20260917.md), [primary launch](QFO_CORRECTED_PRIMARY_SUBMITTED_20260918.md) | Not established; inference is active/queued and all eight rows plus factorial remain required. No original predictions or intervals may be relabeled |
+| Corrected QfO accuracy or rankings are established | [Admitted partial table](qfo_corrected_comparison_20260918_v1/scores.md), [frozen rerun protocol](QFO_CORRECTED_RELEASE_PROTOCOL_20260917.md) | Only Proteinortho point estimates are admitted so far; no corrected cross-method ranking or paired difference is established. Remaining methods and factorial are unfinished. No original predictions or intervals may be relabeled |
 | Original TreeFam family-level uncertainty can be recovered from pooled pairs | [Source retrieval investigation](TREEFAM_SOURCE_RETRIEVAL_20260918.md) | Unsupported: original trees and mapping remain missing; downloaded pooled reference is not an independent-family inventory |
 
 ## Completion Requirements
@@ -53,6 +53,15 @@ evidence that an experiment completed or a biological hypothesis is true.
 
 ## Current Execution Status
 
+- Corrected Proteinortho has independently admitted six-endpoint scores and
+  4,695,385 mapped native pairs in the [partial corrected table](qfo_corrected_comparison_20260918_v1/scores.md).
+  Corrected Sonic inference21710 and conversion21726 completed successfully;
+  15,248,739 distinct pairs survived reference mapping. Assessment21727 is
+  running and its independent admission21728 is pending at this snapshot.
+  No Sonic score is admitted yet. Corrected HMM21706_0 is running; its native
+  admission21720 and replay preparation21722 are pending. The corrected
+  replay/candidate/reconciliation/conversion/scoring/admission workflows are
+  implemented and tested, not completed experiments. [Progress ledger](PUBLICATION_PROGRESS.md).
 - The [recovered QfO factorial protocol](QFO_FACTORIAL_PROTOCOL_20260917.md)
   freezes eight P/C/R cells and 42 SwissTrees comparison endpoints without
   retuning. Original-release preparation, all four reconciliations, native
@@ -112,8 +121,8 @@ evidence that an experiment completed or a biological hypothesis is true.
 - Recovered QfO scoring21548_0..3 and admission21584 are all COMPLETED0:0.
   [Stage results](qfo_recovered_stage_summary_20260917.json) and the SwissTrees
   interval audit are complete; uncertainty for the other challenges remains open.
-- DGX matched timing21656 has eight completed tasks and task8 running at the
-  2026-09-17 accounting check. No scientific timings have yet passed output and
+- DGX matched timing21656 has 17 completed tasks (0-16) and task17 running at
+  the 2026-09-18 accounting check. No scientific timings have yet passed output and
   resource admission. The original32CPU plan remains distinct from the DGX plan.
   [Run00 host review](DGX_RUN00_HOST_REVIEW_20260917.md) reproduces inconclusive
   observations caused by unmatched kworker-named identities. Low observed
@@ -135,11 +144,11 @@ evidence that an experiment completed or a biological hypothesis is true.
   remain historical. This is not a host or inference-runtime security audit.
   The [strict docs rebuild](docs_strict_build_validation_20260917.json)
   passes with no diagnostics; earlier14-diagnostic output remains historical.
-- The full current unit suite passes:2381tests in51.53seconds at source
-  revision4007bf8. This is regression evidence, not admission of pending
+- The latest complete unit-suite run passed:3205tests,1optional skipped,
+  in61.77seconds for the code committed at2f310e6. This is regression evidence, not admission of pending
   experiments, biological validation or proof of publication readiness.
-- [Retained figure integrity](PUBLICATION_FIGURE_INTEGRITY_20260917.md)
-  checks14manifests,49outputs and83recorded file references with no byte/hash
+- [Retained figure integrity](PUBLICATION_FIGURE_INTEGRITY_20260918.md)
+  checks15manifests,52outputs and88recorded file references with no byte/hash
   mismatch. A detached launcher dependency is recoverable from its frozen
   Git revision but must be exported for packaging. This check does not
   certify scientific correctness, transitive raw data, licenses or the archive.

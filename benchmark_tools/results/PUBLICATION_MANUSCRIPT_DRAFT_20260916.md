@@ -717,8 +717,13 @@ explicitly release-limited. The separately frozen
 [corrected-release protocol](QFO_CORRECTED_RELEASE_PROTOCOL_20260917.md)
 requires fresh affected inference for all eight comparator rows and eight
 factorial cells, with separate prediction identifiers and fresh scoring.
-Corrected inference is in progress; no corrected-release accuracy comparison
-is reported here. Old groups, trees, scores and confidence intervals cannot
+Corrected inference is in progress. Proteinortho is the first independently
+admitted corrected row: GO 0.486336, EC 0.963168, VGNC F1 0.954896, SwissTrees
+F1 0.718111, TreeFam-A F1 0.643187 and FAS 0.813595, with 4,695,385 mapped native
+pairs. Its project-defined secondary mean is 0.763216. The
+[partial corrected table](qfo_corrected_comparison_20260918_v1/scores.md)
+does not yet establish a cross-method comparison or paired uncertainty.
+Old groups, trees, scores and confidence intervals cannot
 be relabeled as corrected results. The previously measured 53 legacy BLAST
 query failures also belong to the original run; failures in the corrected
 OrthoMCL search must be measured independently. Recovery of missing inputs
@@ -740,8 +745,10 @@ novel-taxon transfer, not family-disjoint confirmation. Homolog-family
 overlap remains substantial even after taxon exclusions. The proposed HMM
 contribution is not established by the completed exploratory OrthoBench
 sequence-search control; QfO extension remains outstanding. The interaction
-between broader candidates and reconciliation has descriptive OrthoBench
-evidence but awaits QfO evaluation and additional controls. Corrected multi-seed
+between broader candidates and reconciliation has completed OrthoBench and
+original-release QfO factorial evidence, with no adjusted F1 benefit or
+QfO C-by-R interaction established. Corrected-input QfO evaluation and
+additional controls remain outstanding. Corrected multi-seed
 simulations and their generating-tree/NNI controls are complete but do not
 establish an OrthoHMM advantage or profile-expansion benefit. Tree perturbations
 show bounded sensitivity, not arbitrary-error robustness. QfO and independently

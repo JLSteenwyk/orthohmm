@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pytest
 
-from benchmark_tools.audit_publication_figures import inspect_manifest, records
+from benchmark_tools.audit_publication_figures import inspect_manifest, records, PANELS
 from benchmark_tools.prepare_ob_candidate_neighborhood import record
 
 
@@ -66,3 +66,9 @@ def test_rejects_invalid_inventory(tmp_path, mutation):
 def test_nested_record_inventory():
     item = {"path": "/tmp/a", "bytes": 1, "sha256": "a"}
     assert list(records({"nested": [item, {"deeper": item}], "text": "ignored"})) == [item, item]
+
+
+def test_original_qfo_factorial_is_explicitly_retained():
+    assert "qfo_factorial_swiss_figure_20260918" in PANELS
+    assert len(set(PANELS)) == len(PANELS)
+    assert not any("corrected_factorial" in panel for panel in PANELS)

@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Claim Refresh And Figure Inventory (2026-09-18 UTC)
+
+Previous turn progressed by pushing2f310e6 and freezing independent
+corrected factorial score admission. Revalidated live jobs before this
+audit; none were inferred complete from a stale file or log.
+
+Reviewed the claim checklist and manuscript against retained evidence.
+Corrected stale claims that QfO candidate-by-reconciliation evaluation was
+wholly pending: original-release factorial/SwissTrees inference is complete,
+whereas corrected-input runs remain unfinished. Added the independently
+admitted Proteinortho corrected endpoint row and linked partial table, with
+no cross-method ranking or paired-uncertainty claim. Updated the timing
+snapshot from8completed DGX tasks to17 and the latest full-suite snapshot
+from2381tests to3205passed/1optional skipped. Implemented workflows remain
+explicitly separate from completed biological analyses.
+
+Extended the retained figure inventory to include original-release QfO
+SwissTrees factorial only. Actual fresh audit verified15manifests,
+52output records and88file-reference occurrences with no mismatch. The
+same detached method-diagram source remains a portable-bundle requirement.
+Preserved the earlier audit unchanged; wrote a new dated result and scope
+note. No DGX filesystem scan, raw-result edits or altered statistical claims.
+
+41focused figure/export/plot tests passed. Remaining corrected analyses,
+resource/isolation admission, stronger uncertainty/generalization evidence,
+portable workflows/licenses and archival release are not marked complete.
+
 ## Corrected Factorial Score Admission (2026-09-18 UTC)
 
 Previous turn progressed by pushing97bc99b and freezing the corrected
