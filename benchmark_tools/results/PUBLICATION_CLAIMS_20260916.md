@@ -26,6 +26,11 @@ evidence that an experiment completed or a biological hypothesis is true.
 | The QfO native graph is reproducibly constructed | [Checked initial-graph repeats](QFO_CHECKED_REPEAT_RESULTS_20260917.md) | Three checked Python-pair runs preserve the full graph and yield identical partitions; not general determinism or complete historical replay equivalence |
 | Profile-branch processing improves recovered-stage SwissTrees accuracy | [Paired SwissTrees intervals](QFO_SWISS_INTERVALS_20260917.md) | Not established: both profile contrasts have negative observed F1 differences and adjusted intervals including zero; effects occur in CASP and GH14 only. No superiority or equivalence claim |
 | Recovered-stage QfO uncertainty is fully characterized | [Count audit](qfo_swiss_counts_20260917.json), [paired intervals](qfo_swiss_intervals_20260917.json) | Only SwissTrees completed: 18-family paired resampling, all12 adjusted intervals include zero. Other challenges and secondary mean require separate methods |
+| OrthoHMM phylogeny exceeds full OrthoFinder on SwissTrees F1 | [Eight-method paired intervals](QFO_SWISS_COMPARATOR_INTERVALS_20260917.md) | Unsupported: its adjusted F1 difference interval is negative; conditional evidence from 18 development-exposed families, not all QfO endpoints |
+| Domain architecture explains the OrthoHMM configuration effect | [Stratified results](SWISS_DOMAIN_STRATA_RESULTS_20260917.md), [all27 endpoints plotted](SWISS_DOMAIN_STRATA_FIGURE_20260917.md) | Not established: all nine adjusted interaction intervals include zero; annotation-defined association does not establish causality |
+| Satellite constraints explain the five focal WGD homolog-coverage losses | [Prespecified case trace](BIOLOGICAL_WGD_CASE_TRACE_20260917.md) | Contradicted for these five homologs: all were in anchor candidates and separated during root-lineage reconstruction before constraints; topology correctness and upstream effects remain unresolved |
+| The complete QfO factorial has paired uncertainty estimates | [Count collector](QFO_FACTORIAL_COUNT_AUDIT_IMPLEMENTATION_20260917.md), [frozen bootstrap implementation](QFO_FACTORIAL_STATISTICS_IMPLEMENTATION_20260917.md) | Not yet: tested code exists, but complete empirical eight-cell admissions, counts and intervals remain pending |
+| Native GO/EC/FAS error bars establish paired method differences | [GO/EC audit](QFO_GO_EC_ARITHMETIC_AUDIT_20260917.md), [FAS sample audit](QFO_FAS_SAMPLE_AUDIT_20260917.md) | Unsupported: GO/EC use Student-t95% half-widths, FAS uses sample SEM, and none supplies dependency-aware paired method intervals |
 | Supplying the generating tree improves simulation F1 | [Complete tree panel](SIMULATION_TREE_ROBUSTNESS_RESULTS_20260917.md) | Not established: all adjusted generating-versus-inferred intervals include zero; supplied-tree completion rescues three OrthoHMM baselines but does not supply their missing inferred accuracy |
 | OrthoHMM is insensitive to species-tree error | [Complete tree panel](SIMULATION_TREE_ROBUSTNESS_RESULTS_20260917.md) | Unsupported: NNI2 F1 and recall deficits have adjusted intervals below zero in four conditions; bounded exploratory result, not arbitrary-tree robustness |
 | The package is publication-ready | All sections below | Not achieved |
@@ -36,10 +41,10 @@ evidence that an experiment completed or a biological hypothesis is true.
 | --- | --- | --- |
 | 1. Frozen publication baseline | Comparator table, scoring corrections, OrthoMCL final-group completion and failure audit, prospective method pin | Consolidated raw-output provenance for every retained row; exact commands/versions/resources and complete claim/endpoints freeze |
 | 2. Independent generalization | Completed frozen YGOB evaluation with native, command/conversion, independent-reference and overlap gates; pair enumeration and paired uncertainty | Bounded novel-taxon claim only; stronger family independence unproven; any outcome-driven method changes require new independent confirmation |
-| 3. HMM and phylogeny contributions | Corrected-runtime OrthoBench replay equivalence, completed eight-cell factorial, sequence-search replacement and unconstrained-membership controls, native coverage and incremental cost records | QfO reproducible baseline and corresponding ablations; better-matched search sensitivity/calibration; controlled resource evidence |
-| 4. Uncertainty and error explanation | Paired OrthoBench intervals, individual QfO endpoints, completed feature strata, full-family stage trace and reference-incident reconciliation reconstruction | QfO strata/appropriate uncertainty; independent duplication/domain/fragment annotations; additional initial-search and rejected-edge tracing; causal explanations remain unproven |
+| 3. HMM and phylogeny contributions | Corrected-runtime OrthoBench replay equivalence, completed eight-cell OrthoBench factorial, sequence-search replacement and unconstrained-membership controls; checked full QfO replay and admitted recovered-stage scores; QfO factorial inference/scoring active | Complete QfO eight-cell ablations and interactions; better-matched search sensitivity/calibration; controlled resource evidence. Current checked QfO replay differs from historical final groups; do not transfer historical scores |
+| 4. Uncertainty and error explanation | Paired OrthoBench intervals and feature strata; recovered-stage and eight-method SwissTrees intervals; annotation-defined SwissTrees domain strata and figure; native GO/EC/FAS arithmetic audits; VGNC prediction rescore and TreeFam pooled count audit; stage traces | Appropriate uncertainty for other QfO endpoints/secondary mean; independent duplication and fragment annotations and remaining divergence/composition analyses; initial-search and rejected-edge tracing. Domain inventory is complete but does not prove causal mechanisms or independent FAS validation |
 | 5. Robustness and practical efficiency | Corrected fixed/variable-length multi-seed simulations, complete generating-tree/NNI simulation controls, six OrthoBench tree perturbations and six parameter variants, explicit failures and resource caveats | QfO robustness, matched scaling and repeated timings; broader evolutionary realism remains limited |
-| 6. Biological usefulness | [Prospective WGD protocol](BIOLOGICAL_WGD_APPLICATION_PROTOCOL_20260917.md), admitted runs, [results](BIOLOGICAL_WGD_RESULTS_20260917.md), [separate native-membership rescore](biological_wgd_rescore_audit_20260917.json), [figure](figures_wgd_application_20260917/wgd_application.pdf) and [all six examples](figures_wgd_application_20260917/PRESPECIFIED_EXAMPLES.md): phylogenetic OrthoHMM improves supported separation over high sensitivity but trails full OrthoFinder and SonicParanoid in supported separation and homolog coverage | Stage-level mechanism tracing remains; development-exposed application, not independent validation or copy-specific orthology truth; YGOB column order does not identify ancestral copies; configurations differ beyond reconciliation |
+| 6. Biological usefulness | [Prospective WGD protocol](BIOLOGICAL_WGD_APPLICATION_PROTOCOL_20260917.md), admitted runs, [results](BIOLOGICAL_WGD_RESULTS_20260917.md), [separate rescore](biological_wgd_rescore_audit_20260917.json), [figure](figures_wgd_application_20260917/wgd_application.pdf), [all six examples](figures_wgd_application_20260917/PRESPECIFIED_EXAMPLES.md), and [completed case trace](BIOLOGICAL_WGD_CASE_TRACE_20260917.md): phylogenetic OrthoHMM improves supported separation over high sensitivity but trails full OrthoFinder and SonicParanoid in separation and coverage | Bounded application and stage localization complete; tree correctness and upstream effects unresolved. Development-exposed, not independent validation or copy-specific orthology truth; YGOB column order does not identify ancestral copies; configurations differ beyond reconciliation |
 | 7. Publication package | Comparison, uncertainty, ablation, simulation, strata, tree/parameter and biological application figures; [method diagram](figures_publication_method_20260916/publication_method.pdf); evolving [manuscript](PUBLICATION_MANUSCRIPT_DRAFT_20260916.md) | Scaling figures, completed Methods/Results and claim audit, verified bibliography, portable workflows/dependencies, versioned release and archival bundle |
 
 ## Current Execution Status
@@ -68,6 +73,10 @@ evidence that an experiment completed or a biological hypothesis is true.
   Independent fresh-score admission21683/21684 waits on the corresponding
   scoring jobs and requires all native tasks, metrics and provenance to pass;
   queued validators are not evidence of completed scoring or valid intervals.
+  The [count collector](QFO_FACTORIAL_COUNT_AUDIT_IMPLEMENTATION_20260917.md)
+  and [42-endpoint bootstrap](QFO_FACTORIAL_STATISTICS_IMPLEMENTATION_20260917.md)
+  are implemented and tested, but no complete empirical eight-cell count or
+  interval report exists yet.
 - [GO/EC arithmetic](QFO_GO_EC_ARITHMETIC_AUDIT_20260917.md) verifies all24
   retained count/mean/interval rows within serialization bounds; Darwin's
   stderr is a Student-t95% confidence half-width. [FAS arithmetic](QFO_FAS_SAMPLE_AUDIT_20260917.md)
@@ -107,7 +116,7 @@ evidence that an experiment completed or a biological hypothesis is true.
 - Recovered QfO scoring21548_0..3 and admission21584 are all COMPLETED0:0.
   [Stage results](qfo_recovered_stage_summary_20260917.json) and the SwissTrees
   interval audit are complete; uncertainty for the other challenges remains open.
-- DGX matched timing21656 has six completed tasks and task6 running at the
+- DGX matched timing21656 has seven completed tasks and task7 running at the
   2026-09-17 accounting check. No scientific timings have yet passed output and
   resource admission. The original32CPU plan remains distinct from the DGX plan.
   [Run00 host review](DGX_RUN00_HOST_REVIEW_20260917.md) reproduces inconclusive
@@ -122,10 +131,17 @@ evidence that an experiment completed or a biological hypothesis is true.
   correctness and upstream search effects remain unresolved.
 - [Docs dependency remediation](DOCS_DEPENDENCY_SECURITY_20260917.md) checks
   all21 retained alerts against the updated lock with zero affected versions.
-  The [subsequent API recheck](dependency_alerts_recheck_20260917.json) reports
-  zero open repository alerts. This is not a host or inference-runtime security
-  audit. The [strict docs rebuild](docs_strict_build_validation_20260917.json)
+  Later analysis-environment alerts were separately addressed by the
+  [Pillow patch and reproduction audit](SWISS_ANALYSIS_SECURITY_20260917.md).
+  The [latest read-only API snapshot](dependency_alerts_claim_audit_20260917.json),
+  retrieved2026-09-18T01:38:40Z (17September local), reports zero open repository
+  alerts. Earlier snapshots, including13open alerts immediately after the patch,
+  remain historical. This is not a host or inference-runtime security audit.
+  The [strict docs rebuild](docs_strict_build_validation_20260917.json)
   passes with no diagnostics; earlier14-diagnostic output remains historical.
+- The full current unit suite passes:2381tests in51.53seconds at source
+  revision4007bf8. This is regression evidence, not admission of pending
+  experiments, biological validation or proof of publication readiness.
 
 ## Historical Execution Gates
 

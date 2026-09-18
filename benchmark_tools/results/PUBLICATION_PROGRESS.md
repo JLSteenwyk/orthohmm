@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Broad Regression and Claims Reconciliation (2026-09-17)
+
+Previous turn implemented and pushed the count collector4007bf8. Re-read the
+full objective. Ran `python -m pytest -q tests/unit` at that revision:
+2381passed in51.53seconds. This covers the accumulated unit suite, not pending
+empirical admissions or every end-to-end reproduction workflow.
+
+Reviewed the current claims ledger against completed WGD case-trace evidence,
+SwissTrees strata/intervals and current workflow state. Corrected the stale
+claim that stage tracing was still pending, distinguished completed domain
+inventory from unresolved mechanisms, and added explicit boundaries for
+factorial implementation versus empirical results and native versus paired
+error bars. Updated DGX status from six to seven completed tasks; task7 remains
+RUNNING. No controlled scientific timing is admitted by scheduler success.
+
+A fresh read-only dependency API query reports zero open alerts at
+2026-09-18T01:38:40Z (17September local), saved without credentials in
+`dependency_alerts_claim_audit_20260917.json`. This supersedes the immediately
+post-patch13-alert status without deleting it or claiming whole-environment
+security. Updated the security note and claim-to-evidence checklist.
+
+QfO21671_0 and21681 remain RUNNING; downstream validation/conversion/scoring
+tasks remain queued. Publication goal remains active: complete factorial
+evidence, resource admission, remaining uncertainty/error analyses and the
+full portable release/archive package are not yet available.
+
 ## Eight-Cell SwissTrees Count Collector Implemented (2026-09-17)
 
 Previous turn made concrete progress with the domain-stratified figure,

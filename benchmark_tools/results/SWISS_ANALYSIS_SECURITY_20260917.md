@@ -44,3 +44,10 @@ Remote closure requires a separate API check after the fix is pushed.
 The immediate API check after pushea8d8f5 still returns13open alerts, retained
 in `dependency_alerts_analysis_env_after_20260917.json`. Local version-range
 remediation is verified; server-side alert closure is not yet established.
+
+Superseding that immediate post-push status, the read-only GitHub API snapshot
+`dependency_alerts_claim_audit_20260917.json` retrieved2026-09-18T01:38:40Z
+(17September local) reports zero open repository alerts. Earlier13-alert
+snapshots remain preserved. This establishes the reported repository-alert
+state at that instant, not complete security of installed environments or
+permanent absence of vulnerabilities.
