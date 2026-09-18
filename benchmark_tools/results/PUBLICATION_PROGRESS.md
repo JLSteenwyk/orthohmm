@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Corrected Factorial SwissTrees Count Adapter (2026-09-18 UTC)
+
+Previous turn progressed throughd289197: corrected-only factorial table
+exporter implemented and tested. Live HMM21706_0 RUNNING9:52:45 and final
+DGX21656_26 RUNNING27:40 were revalidated; no restarts or heavy DGX I/O.
+
+Added audit_qfo_corrected_factorial_swiss.py to require all eight ordered
+corrected admissions, bound conversions, successful matching eight-CPU
+execution provenance and one inventoried SwissTrees raw file per cell.
+Reuses established raw-count reconstruction and verifies exact reference
+relation identities, truth labels, membership, per-family native metrics
+and actual aggregate F1. Historical evidence anchors reference identity
+only; corrected prediction counts are always read from fresh raw files.
+Hashes are checked before and after extraction. Report-level admission
+validation is inherited from the corrected exporter, without rerunning
+the full native scoring pipeline.
+
+11 new tests include complete synthetic eight-cell file-backed extraction,
+different prediction counts against shared truth, and post-admission raw
+tampering;53 focused count/bootstrap tests passed in0.69s. Synthetic fixture
+reference hashes are confined to temporary tests, not production inputs.
+The distinct corrected_qfo_factorial_swiss_counts_verified status is not
+accepted by the historical bootstrap; an explicit corrected bootstrap
+adapter remains necessary. No corrected counts or intervals are available
+yet, and uncertainty_admitted remains false.
+
+Next: connect corrected count evidence to the frozen paired-resampling
+protocol without modifying endpoints, seeds, family units or multiplicity;
+run only after all required score admissions succeed. Dedicated timing
+validation and other publication requirements remain open. Goal active.
+
 ## Corrected Factorial Export Prepared (2026-09-18 UTC)
 
 Previous turn progressed through1aba2c6: all eight corrected factorial
