@@ -27,6 +27,19 @@ def test_pipeline_methods_match_export_adapters():
     assert set(METHODS) == set(METHOD_KEYS)
 
 
+def test_fastoma_export_preserves_supplied_tree_semantics():
+    from benchmark_tools.export_qfo_corrected_comparison import FASTOMA_SEMANTICS
+    report, conversion = fixture("fastoma")
+    conversion.update(status="corrected_fastoma_pairs_prepared_unscored",
+                      semantics=FASTOMA_SEMANTICS)
+    row = extract(report, conversion)
+    assert row["key"] == "fastoma_0_3_5"
+    assert row["prediction_semantics"] == FASTOMA_SEMANTICS
+    conversion["semantics"] = "root HOG cliques"
+    with pytest.raises(ValueError, match="semantics"):
+        extract(report, conversion)
+
+
 @pytest.mark.parametrize("method", ["orthofinder_full", "orthofinder_sequence_only"])
 def test_orthofinder_exports_keep_semantics(method):
     from benchmark_tools.export_qfo_corrected_comparison import METHOD_KEYS, OF_SEMANTICS

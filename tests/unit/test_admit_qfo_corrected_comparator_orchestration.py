@@ -9,6 +9,10 @@ from benchmark_tools.prepare_ob_candidate_neighborhood import record
 @pytest.mark.parametrize("method", module.METHODS)
 def test_method_executor_identity(tmp_path, method):
     executor, commit = module.executor_identity(tmp_path, method)
+    if method == "fastoma":
+        assert commit == module.FASTOMA_EXECUTOR
+        assert executor.name == "publication_qfo_corrected_fastoma_assessment_v1"
+        return
     is_of = method.startswith("orthofinder_")
     assert commit == (module.OF_EXECUTOR if is_of else module.EXECUTOR)
     assert executor.name == ("publication_qfo_corrected_of_assessment_v1" if is_of
@@ -31,6 +35,7 @@ def test_orchestration_with_mocked_native_metric_validation(tmp_path, monkeypatc
         return record(path)
 
     is_of = method in module.OF_SEMANTICS
+    is_bound = method in module.BOUND_SEMANTICS
     executor, commit = module.executor_identity(tmp_path, method)
     source = write(executor / "benchmark_tools/run_qfo_corrected_comparator_assessment.py", "# runner\n")
     helper = write(executor / "benchmark_tools/run_qfo_recovered_assessment.py", "# command\n")
@@ -48,6 +53,10 @@ def test_orchestration_with_mocked_native_metric_validation(tmp_path, monkeypatc
              "source": converter, "checked_records": [converter], "pairs": pairs,
              "filtered_pairs": filtered, "mapping": mapping, "job_id": "122",
              "total_pairs": 1, "retained_pairs": 1, "removed_mapping_pairs": 0}
+    if method == "fastoma":
+        stage.update(status="corrected_fastoma_pairs_prepared_unscored",
+                     semantics=module.BOUND_SEMANTICS[method], native_pair_rows=2,
+                     native_duplicate_relations=1)
     pairs_path = tmp_path / "benchmarks/results/qfo_corrected_comparator_pairs_v1" / method / "results.json"
     pairs_record = write(pairs_path, json.dumps(stage))
     environment = {"reference_files": [mapping], "pipeline": "/pipeline", "environment_overrides": {"OMP_NUM_THREADS": "1"}}
@@ -55,7 +64,7 @@ def test_orchestration_with_mocked_native_metric_validation(tmp_path, monkeypatc
     env_record = write(env_path, json.dumps(environment))
     monkeypatch.setattr(module, "ENV_SHA", env_record["sha256"])
     monkeypatch.setattr(module, "environment_records", lambda m: [])
-    monkeypatch.setattr(module, "converter_source", lambda root, method: converter if is_of else None)
+    monkeypatch.setattr(module, "converter_source", lambda root, method: converter if is_bound else None)
     monkeypatch.setattr(module, "accounting", lambda job:
         ("score", scheduler) if job == "123" else ("conversion", conversion_scheduler))
     monkeypatch.setattr(module.subprocess, "check_output", lambda *a, **k: commit + "\n")
@@ -68,7 +77,7 @@ def test_orchestration_with_mocked_native_metric_validation(tmp_path, monkeypatc
     log = write(directory / "scoring.log", "completed")
     monkeypatch.setattr(module, "command_for", lambda *a: ["nextflow", stage["participant"]])
     checked = [pairs_record, env_record, converter, converter, pairs, filtered, helper, pair_helper]
-    if is_of:
+    if is_bound:
         checked.append(converter)
     preflight = {"status": "running", "job_id": "123", "accuracy_admitted": False,
         "method": method, "stage": stage, "source": source, "pairs_manifest": pairs_record,
@@ -95,3 +104,11 @@ def test_orchestration_with_mocked_native_metric_validation(tmp_path, monkeypatc
     with pytest.raises(ValueError, match="output"):
         module.admit(tmp_path, method, "123", "122", pairs_record["sha256"], tmp_path / "changed.json")
     assert not (tmp_path / "changed.json").exists()
+    if is_bound:
+        environment["reference_files"] = []
+        changed_env = write(env_path, json.dumps(environment))
+        monkeypatch.setattr(module, "ENV_SHA", changed_env["sha256"])
+        with pytest.raises(ValueError, match="reference mappings differ"):
+            module.admit(tmp_path, method, "123", "122", pairs_record["sha256"],
+                         tmp_path / "wrong_mapping.json")
+        assert not (tmp_path / "wrong_mapping.json").exists()

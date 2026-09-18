@@ -10,7 +10,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from benchmark_tools.prepare_ob_candidate_neighborhood import record, check
 from benchmark_tools.run_simulation_methods import read_frozen
 from benchmark_tools.run_qfo_corrected_comparator_assessment import (
-    validate_stage, ENV_SHA, METHODS, WORK_NAMES, OF_SEMANTICS, converter_source,
+    validate_stage, ENV_SHA, METHODS, WORK_NAMES, OF_SEMANTICS, BOUND_SEMANTICS, converter_source,
 )
 from benchmark_tools.run_qfo_recovered_assessment import command_for, environment_records
 from benchmark_tools.admit_qfo_recovered_assessment import validate_trace
@@ -19,11 +19,14 @@ from benchmark_tools.verify_ygob_validation import require_completed_job
 
 EXECUTOR = "74afad5376b7ee11fdabfba386851fd8d3c02857"
 OF_EXECUTOR = "5c34f8baad47a9895659b43696e6887aa29dbaaf"
+FASTOMA_EXECUTOR = "9258bcfd3f90d63ec7f2cfb02122cd20bd7e1214"
 
 
 def executor_identity(root, method):
     if method not in METHODS:
         raise ValueError("Unknown corrected comparator")
+    if method == "fastoma":
+        return root / "benchmarks/work/publication_qfo_corrected_fastoma_assessment_v1", FASTOMA_EXECUTOR
     if method in OF_SEMANTICS:
         return root / "benchmarks/work/publication_qfo_corrected_of_assessment_v1", OF_EXECUTOR
     return root / "benchmarks/work/publication_qfo_corrected_assessment_v1", EXECUTOR
@@ -63,10 +66,10 @@ def admit(root, method, job, conversion_job, pairs_sha, output):
     validate_stage(stage, method, conversion_scheduler)
     converter = converter_source(root, method)
     if converter is not None and (stage["source"] != converter or converter not in stage["checked_records"]):
-        raise ValueError("Wrong frozen OrthoFinder conversion source")
+        raise ValueError("Wrong frozen comparator conversion source")
     env_path = root / "benchmark_tools/results/qfo_assessment_environment_20260917.json"
     manifest = read_frozen(env_path, ENV_SHA)
-    if method in OF_SEMANTICS and [r for r in manifest["reference_files"]
+    if method in BOUND_SEMANTICS and [r for r in manifest["reference_files"]
             if Path(r["path"]).name == "mapping.json.gz"] != [stage["mapping"]]:
         raise ValueError("Conversion and assessment reference mappings differ")
     if subprocess.check_output(["git", "-C", str(executor), "rev-parse", "HEAD"], text=True).strip() != executor_commit:
