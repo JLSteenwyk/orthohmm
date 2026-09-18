@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Dedicated Timing Sequence Terminal (2026-09-18 UTC)
+
+After queued coverage work, DGX final task21656_26 disappeared from squeue.
+Two sacct retries failed with accounting-database connection refused.
+Controller scontrol confirmed COMPLETED0:0, elapsed01:18:31,20CPUs/96GiB,
+spark-7ff0, zero restarts. A subsequent controller query no longer found
+the job; no task was restarted. The successful response's selected fields
+and later raw failure are retained in dgx_final_task_controller_20260918.json.
+The earlier scheduler snapshot already confirms tasks0-25 completed.
+
+This enables post-run evidence transfer and validation under the existing
+DGX_POSTRUN_ADMISSION_20260918.md protocol. It does not establish native
+output validity, resource-accounting correctness or controlled-host timing.
+Those checks, including all27 host-interval reviews, remain open. The
+accounting service was not modified, and no scientific timing rank is claimed.
+
 ## Corrected Search Coverage Queued (2026-09-18 UTC)
 
 Previous turn progressed through8e9f3d6, adding the native checkpoint sorting

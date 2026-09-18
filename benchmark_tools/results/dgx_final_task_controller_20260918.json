@@ -1,0 +1,24 @@
+{
+  "observed_at_utc": "2026-09-18 15:34:59 UTC",
+  "command": "ssh -o BatchMode=yes -o ConnectTimeout=10 spark scontrol show job 21656_26",
+  "exit_code": 1,
+  "stdout": "slurm_load_jobs error: Invalid job id specified\n",
+  "interpretation": "This later controller retry no longer finds the handle. The immediately preceding successful controller query confirmed final task completion; scientific output/resource admission remains pending.",
+  "preceding_successful_controller_observation": {
+    "exit_code": 0,
+    "JobId": "21656",
+    "ArrayJobId": "21656",
+    "ArrayTaskId": "26",
+    "JobState": "COMPLETED",
+    "ExitCode": "0:0",
+    "RunTime": "01:18:31",
+    "StartTime": "2026-09-18T07:10:53",
+    "EndTime": "2026-09-18T08:29:24",
+    "NodeList": "spark-7ff0",
+    "NumCPUs": 20,
+    "AllocTRES": "cpu=20,mem=96G,node=1,billing=20",
+    "Restarts": 0,
+    "note": "Fields transcribed from the successful tool response before the handle disappeared; scheduler timezone not inferred. Elapsed includes launcher overhead, not solely native inference."
+  },
+  "accounting_limitation": "Two sacct retries failed with localhost:6819 connection refused. Earlier task accounting remains in dgx_scheduler_progress_20260918.json."
+}

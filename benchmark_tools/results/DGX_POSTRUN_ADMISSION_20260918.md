@@ -2,6 +2,17 @@
 
 ## Current Evidence
 
+Final-task update: the controller subsequently reported21656_26 COMPLETED,
+exit0:0, elapsed01:18:31,20CPUs/96GiB on spark-7ff0 with zero restarts.
+Two sacct retries failed because localhost:6819 refused the accounting
+connection. A later controller query no longer found the handle. The
+successful response fields and later raw failure are retained separately in
+dgx_final_task_controller_20260918.json; this is not a fresh all27 sacct
+snapshot. Do not infer scheduler timezone from its unqualified timestamps.
+Combined with the earlier completed0-25 snapshot, this establishes terminal
+scheduler status for the timing sequence, not scientific resource admission.
+Post-run evidence transfer and validation can now proceed; no rerun started.
+
 `dgx_scheduler_progress_20260918.json` retains a timestamped `sacct`
 snapshot for all 27 tasks in array21656. Tasks0-25 are COMPLETED with
 exit0:0; task26 remains RUNNING. An independent parse verified unique
