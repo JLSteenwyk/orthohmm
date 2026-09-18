@@ -1,0 +1,224 @@
+{
+  "accuracy_evaluated": false,
+  "checked_records": [
+    {
+      "bytes": 66354,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_fastoma_assets_20260918.json",
+      "sha256": "bdb6878dbab9396c6cb5360d35625ebe44149cf422b1d18dbf9b0e693a2b7975"
+    },
+    {
+      "bytes": 1063,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/fastoma_corrected_execution.config",
+      "sha256": "e16e87d5687bc6e88fc793626418effc34a34271261b67a36721c32cfc605a95"
+    },
+    {
+      "bytes": 389,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/fastoma_resource_probe.nf",
+      "sha256": "7241a87812c6075e7def6718258b14447943bcccdd5d8f5cbb5e5bdda09eaebc"
+    },
+    {
+      "bytes": 9375445304,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/fastoma_run/work/stage-e96d8deb-126f-4ec4-a60d-5a7d7c4025c7/a2/b8c246b5b7471c4b8afed6b5647ea3/LUCA.h5",
+      "sha256": "53adf8307e244c3901e8e432e015f16f895efb777ea1f693e739169e0defb242"
+    },
+    {
+      "bytes": 3877,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastOMA/nextflow.config",
+      "sha256": "3df0c7cae4286a36f5e36415a05f0021f61a611b05fa9474698ab69cd8b2dce2"
+    },
+    {
+      "bytes": 2252,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastOMA/conf/base.config",
+      "sha256": "5767ed637f8cef22cb79a316e8ad18e1103ee6b83e47220706f719a4954f3887"
+    },
+    {
+      "bytes": 90,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/fastoma_qfo.config",
+      "sha256": "810184b4b3c094982a9f8141f01f813898fddee08efa77aceefedfd4913f8b60"
+    },
+    {
+      "bytes": 91559938,
+      "path": "/home/bizon/bin/nextflow",
+      "sha256": "56c8979edada822a5f8a75721dbb8079a4dd8c94b9688337fc3cc95a15e3e7b1"
+    },
+    {
+      "bytes": 16192,
+      "path": "/home/bizon/anaconda3/pkgs/openjdk-17.0.18-ha668962_0/lib/jvm/bin/java",
+      "sha256": "e5b841252467eb9fd06a988cbc7ea6e8724509a9626ec65873a6e494513938d8"
+    },
+    {
+      "bytes": 219,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastoma_clean_launch_probe_20260918/trace.txt",
+      "sha256": "26350cbab9b30168f714365b515b4e10686683724bf2cf90a22990735d04f4bd"
+    },
+    {
+      "bytes": 7318,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastoma_clean_launch_probe_20260918/.nextflow.log",
+      "sha256": "13da105e78c31fd74ebc2f8a12d0244f5a088737f75aca38f1a1aafe6272a7d7"
+    },
+    {
+      "bytes": 11196,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastoma_clean_launch_probe_20260918/work/31/f6edec780ccfe90be62aeae41ac389/.command.run",
+      "sha256": "78b9a373c3b0f0e1b6182ab40d5b912f3e253ce303c7065ec90c50a03d4eac69"
+    },
+    {
+      "bytes": 219,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastoma_clean_launch_probe_20260918/work/31/f6edec780ccfe90be62aeae41ac389/.command.sh",
+      "sha256": "75a3473ce2d92d19c12227e6bf3bb339e53de6f61fde8a208546a2670f2bd55d"
+    },
+    {
+      "bytes": 56,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastoma_clean_launch_probe_20260918/work/31/f6edec780ccfe90be62aeae41ac389/.command.out",
+      "sha256": "b55d17ed46e86918abc5ee4e661b5e6e442f2d5f7b8c25b8af25876e832fdb47"
+    },
+    {
+      "bytes": 1,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastoma_clean_launch_probe_20260918/work/31/f6edec780ccfe90be62aeae41ac389/.exitcode",
+      "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    }
+  ],
+  "configuration_command": [
+    "/home/bizon/bin/nextflow",
+    "-C",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/fastoma_corrected_execution.config",
+    "config",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastOMA",
+    "-flat"
+  ],
+  "configuration_stderr": "",
+  "effective_configuration": "manifest.name = 'dessimozlab/FastOMA'\nmanifest.description = 'FastOMA computes Hierarchical Orthologous Groups from proteomes.'\nmanifest.author = 'Sina Majidian, Adrian Altenhoff'\nmanifest.homePage = 'https://omabrowser.org'\nmanifest.mainScript = 'FastOMA.nf'\nmanifest.nextflowVersion = '>=22.10.4'\nmanifest.defaultBranch = 'main'\nmanifest.doi = '10.1101/2024.01.29.577392'\nmanifest.version = '0.3.5'\nparams.container_name = 'dessimozlab/fastoma'\nparams.container_version = '0.3.5'\nparams.omamer_db = '/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/data/LUCA.h5'\nparams.debug_enabled = false\nparams.help = false\nparams.report = false\nparams.write_msas = false\nparams.write_genetrees = false\nparams.filter_method = 'col-row-threshold'\nparams.filter_gap_ratio_row = 0.3\nparams.filter_gap_ratio_col = 0.5\nparams.nr_repr_per_hog = 5\nparams.min_sequence_length = 40\nparams.force_pairwise_ortholog_generation = true\nparams.output_folder = 'Output'\nparams.statsdir = 'Output/stats'\nparams.max_memory = '700.GB'\nparams.max_cpus = 180\nparams.max_time = '120.h'\nparams.fasta_header_id_transformer = 'UniProt'\ntimeline.enabled = false\ntimeline.file = 'Output/stats/timeline_2026-09-18_06-40-08.html'\nreport.enabled = false\nreport.file = 'Output/stats/report_2026-09-18_06-40-08.html'\ntrace.enabled = true\ntrace.file = '/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/trace.txt'\ndag.enabled = false\ndag.file = 'Output/stats/pipeline_dag_2026-09-18_06-40-08.html'\nprocess.cpus = Script5DECA703BE1F1B7EC3EB36347036981A$_run_closure1$_closure2@2b4d4327\nprocess.memory = Script5DECA703BE1F1B7EC3EB36347036981A$_run_closure1$_closure3@16da1abc\nprocess.time = Script5DECA703BE1F1B7EC3EB36347036981A$_run_closure1$_closure4@671ea6ff\nprocess.shell = ['/bin/bash', '-euo', 'pipefail']\nprocess.errorStrategy = 'retry'\nprocess.maxRetries = 3\nprocess.'withLabel:process_single'.cpus = Script5DECA703BE1F1B7EC3EB36347036981A$_run_closure1$_closure5$_closure13@1c52552f\nprocess.'withLabel:process_single'.memory = Script5DECA703BE1F1B7EC3EB36347036981A$_run_closure1$_closure5$_closure14@5dc769f9\nprocess.'withLabel:process_single'.time = Script5DECA703BE1F1B7EC3EB36347036981A$_run_closure1$_closure5$_closure15@1b0e9707\nprocess.'withLabel:process_low'.cpus = Script5DECA703BE1F1B7EC3EB36347036981A$_run_closure1$_closure6$_closure16@9b5f3c7\nprocess.'withLabel:process_low'.memory = Script5DECA703BE1F1B7EC3EB36347036981A$_run_closure1$_closure6$_closure17@74024f3\nprocess.'withLabel:process_low'.time = Script5DECA703BE1F1B7EC3EB36347036981A$_run_closure1$_closure6$_closure18@61ae0d43\nprocess.'withLabel:process_medium'.cpus = Script5DECA703BE1F1B7EC3EB36347036981A$_run_closure1$_closure7$_closure19@ef718de\nprocess.'withLabel:process_medium'.memory = Script5DECA703BE1F1B7EC3EB36347036981A$_run_closure1$_closure7$_closure20@287ae90c\nprocess.'withLabel:process_medium'.time = Script5DECA703BE1F1B7EC3EB36347036981A$_run_closure1$_closure7$_closure21@2e1b374c\nprocess.'withLabel:process_high'.cpus = Script5DECA703BE1F1B7EC3EB36347036981A$_run_closure1$_closure8$_closure22@3fcee3d9\nprocess.'withLabel:process_high'.memory = Script5DECA703BE1F1B7EC3EB36347036981A$_run_closure1$_closure8$_closure23@9c93d16\nprocess.'withLabel:process_high'.time = Script5DECA703BE1F1B7EC3EB36347036981A$_run_closure1$_closure8$_closure24@760487aa\nprocess.'withLabel:process_long'.time = Script5DECA703BE1F1B7EC3EB36347036981A$_run_closure1$_closure9$_closure25@1526f71\nprocess.'withLabel:process_high_memory'.memory = Script5DECA703BE1F1B7EC3EB36347036981A$_run_closure1$_closure10$_closure26@49ca94a9\nprocess.'withLabel:error_ignore'.errorStrategy = 'ignore'\nprocess.'withLabel:error_retry'.errorStrategy = 'retry'\nprocess.'withLabel:error_retry'.maxRetries = 2\nprocess.'withName:omamer_run'.memory = '24 GB'\nprocess.'withName:omamer_run'.maxForks = 28\nprocess.executor = 'local'\nprocess.container = 'dessimozlab/fastoma@sha256:67c802a71c2d150ba8825a8c5dbc5a8a68e1dd42554e6695038043d666ac358b'\nprocess.'withName:collect_subhogs'.cpus = 16\nprocess.'withName:collect_subhogs'.memory = '280 GB'\nprocess.'withName:extract_pairwise_ortholog_relations'.cpus = 16\nprocess.'withName:extract_pairwise_ortholog_relations'.memory = '280 GB'\nexecutor.name = 'local'\nexecutor.cpus = 180\nexecutor.memory = '700 GB'\ndocker.enabled = true\ndocker.runOptions = '--network none'\n",
+  "helper": {
+    "bytes": 6255,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_qfo_corrected_fastoma_assets.py",
+    "sha256": "0c115acc9704321705455909d3f9ac9fe0096735149514711ccca50206b26160"
+  },
+  "image": {
+    "Architecture": "amd64",
+    "Config": {
+      "ArgsEscaped": true,
+      "Cmd": [
+        "python3"
+      ],
+      "Env": [
+        "PATH=/app/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "LANG=C.UTF-8",
+        "GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D",
+        "PYTHON_VERSION=3.11.10",
+        "PYTHON_SHA256=07a4356e912900e61a15cb0949a06c4a05012e213ecd6b4e84d0f67aabbee372",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "PYTHONUNBUFFERED=1"
+      ],
+      "Labels": {
+        "org.opencontainers.image.created": "2024-11-18T07:46:53.063Z",
+        "org.opencontainers.image.description": "FastOMA is a scalable software package to infer orthology relationship.",
+        "org.opencontainers.image.licenses": "MPL-2.0",
+        "org.opencontainers.image.revision": "b54f6fce5335a9e7014fc35f1aa7de93e6212eb7",
+        "org.opencontainers.image.source": "https://github.com/DessimozLab/FastOMA",
+        "org.opencontainers.image.title": "FastOMA",
+        "org.opencontainers.image.url": "https://github.com/DessimozLab/FastOMA",
+        "org.opencontainers.image.version": "0.3.5"
+      },
+      "WorkingDir": "/"
+    },
+    "Id": "sha256:dd9c319b85e65a38f45f033d85663211eedccd0bfcc9c25df8048924bb4862dd",
+    "Os": "linux",
+    "RepoDigests": [
+      "dessimozlab/fastoma@sha256:67c802a71c2d150ba8825a8c5dbc5a8a68e1dd42554e6695038043d666ac358b"
+    ],
+    "RootFS": {
+      "Layers": [
+        "sha256:c3548211b8264f8bfa47a6727043a64f1791b82ac965a284a7ea187e971a95e2",
+        "sha256:2440dc0bfce0be50901996dd0de04d2830062f2b2e63a73217fd9237e18c9b7c",
+        "sha256:25b72b8029f800d4047ffbfc4017258ab87699d0e84084290fc35b89aef1391e",
+        "sha256:bb4412c1f640a563d7a796fb752395399c529bfd06fa9c451b980b5ee5807d40",
+        "sha256:bec818be3b04b024eaf48a9a954f35e3254ee76a5ea45d3e200140ba9165832a",
+        "sha256:5fd7a8afbb2895b467b61f1641b62847f3fe287bc4365dcfc0b69cd26b0ff387"
+      ],
+      "Type": "layers"
+    }
+  },
+  "inference_authorized": false,
+  "limitations": [
+    "A one-task cgroup-v2 probe on bizon, not biological inference or aggregate resource validation.",
+    "Flat configuration validates selected settings, not evaluation of all dynamic task-resource closures.",
+    "Production must reserve 20 GiB beyond the 700 GiB task pool for the controller and overhead.",
+    "Corrected admitted tree, full runtime freeze, fresh input copies and native-output admission remain required."
+  ],
+  "probe": {
+    "docker_argv": [
+      "docker",
+      "run",
+      "-i",
+      "--cpus",
+      "1.0",
+      "--memory",
+      "256m",
+      "-e",
+      "NXF_DEBUG=${NXF_DEBUG:=0}",
+      "-v",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastoma_clean_launch_probe_20260918/work/31/f6edec780ccfe90be62aeae41ac389:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastoma_clean_launch_probe_20260918/work/31/f6edec780ccfe90be62aeae41ac389",
+      "-w",
+      "$PWD",
+      "--network",
+      "none",
+      "--name",
+      "$NXF_BOXID",
+      "dessimozlab/fastoma@sha256:67c802a71c2d150ba8825a8c5dbc5a8a68e1dd42554e6695038043d666ac358b",
+      "/bin/bash",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastoma_clean_launch_probe_20260918/work/31/f6edec780ccfe90be62aeae41ac389/.command.run",
+      "nxf_trace"
+    ],
+    "observed_limits": {
+      "cpu_max": "100000 100000",
+      "memory_max": "268435456"
+    },
+    "trace": {
+      "%cpu": "59.5%",
+      "duration": "474ms",
+      "exit": "0",
+      "hash": "31/f6edec",
+      "name": "resource_probe",
+      "native_id": "2503408",
+      "peak_rss": "12 MB",
+      "peak_vmem": "20.4 MB",
+      "rchar": "646.9 KB",
+      "realtime": "191ms",
+      "status": "COMPLETED",
+      "submit": "2026-09-18 06:39:32.245",
+      "task_id": "1",
+      "wchar": "271 B"
+    }
+  },
+  "publication_ready": false,
+  "source": {
+    "bytes": 7388,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_fastoma_resource_probe.py",
+    "sha256": "8a3b9f7289ad9ebb5eb45dac55399767706cca81547967eae46ae1304f3f535b"
+  },
+  "status": "fastoma_corrected_resource_probe_verified",
+  "validated_settings": {
+    "docker.enabled": "true",
+    "docker.runOptions": "'--network none'",
+    "executor.cpus": "180",
+    "executor.memory": "'700 GB'",
+    "manifest.version": "'0.3.5'",
+    "params.fasta_header_id_transformer": "'UniProt'",
+    "params.filter_gap_ratio_col": "0.5",
+    "params.filter_gap_ratio_row": "0.3",
+    "params.filter_method": "'col-row-threshold'",
+    "params.force_pairwise_ortholog_generation": "true",
+    "params.max_cpus": "180",
+    "params.max_memory": "'700.GB'",
+    "params.min_sequence_length": "40",
+    "params.nr_repr_per_hog": "5",
+    "process.'withName:collect_subhogs'.cpus": "16",
+    "process.'withName:collect_subhogs'.memory": "'280 GB'",
+    "process.'withName:extract_pairwise_ortholog_relations'.cpus": "16",
+    "process.'withName:extract_pairwise_ortholog_relations'.memory": "'280 GB'",
+    "process.'withName:omamer_run'.maxForks": "28",
+    "process.'withName:omamer_run'.memory": "'24 GB'",
+    "process.container": "'dessimozlab/fastoma@sha256:67c802a71c2d150ba8825a8c5dbc5a8a68e1dd42554e6695038043d666ac358b'",
+    "process.executor": "'local'",
+    "trace.enabled": "true"
+  }
+}

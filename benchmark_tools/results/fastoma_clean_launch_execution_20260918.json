@@ -1,0 +1,36 @@
+{
+  "argv": [
+    "/home/bizon/bin/nextflow",
+    "-C",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/fastoma_corrected_execution.config",
+    "run",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/fastoma_resource_probe.nf",
+    "-ansi-log",
+    "false",
+    "-work-dir",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastoma_clean_launch_probe_20260918/work"
+  ],
+  "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastoma_clean_launch_probe_20260918",
+  "environment": {
+    "HOME": "/home/bizon",
+    "JAVA_CMD": "/home/bizon/anaconda3/pkgs/openjdk-17.0.18-ha668962_0/lib/jvm/bin/java",
+    "JAVA_HOME": "/home/bizon/anaconda3/pkgs/openjdk-17.0.18-ha668962_0/lib/jvm",
+    "LANG": "C",
+    "LC_ALL": "C",
+    "LOGNAME": "bizon",
+    "NXF_HOME": "/home/bizon/.nextflow",
+    "NXF_OFFLINE": "true",
+    "NXF_OPTS": "-Xmx1g",
+    "NXF_VER": "22.10.8",
+    "PATH": "/usr/bin:/bin:/usr/sbin:/sbin:/home/bizon/bin",
+    "USER": "bizon"
+  },
+  "exit_code": 0,
+  "runner": {
+    "bytes": 9444,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_qfo_corrected_fastoma.py",
+    "sha256": "058d108a8720e40b86a6cd8a6c9b1ac32b4a9886113185e6c8eeea9a7cba5e07"
+  },
+  "stderr": "",
+  "stdout": "N E X T F L O W  ~  version 22.10.8\nLaunching `/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/fastoma_resource_probe.nf` [marvelous_galileo] DSL2 - revision: 70c6a386df\nWARN: There's no process matching config selector: omamer_run\nWARN: There's no process matching config selector: collect_subhogs\nWARN: There's no process matching config selector: extract_pairwise_ortholog_relations\n[31/f6edec] Submitted process > resource_probe\n{\"cpu_max\": \"100000 100000\", \"memory_max\": \"268435456\"}\n\n"
+}
