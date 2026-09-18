@@ -76,3 +76,33 @@ def test_bad_interval_rejected(fault):
 def test_malformed_raw_counter_rejected(text):
     with pytest.raises(ValueError):
         usage(text)
+
+
+def test_actual_dgx_control_replay_and_source_identity():
+    import hashlib
+    import json
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[2]
+    report = json.loads((root / "benchmark_tools/results/dgx_cpu_hierarchy_controls_21816.json").read_text())
+    assert report["job_id"] == 21816
+    assert report["scientific_timings_admitted"] is False
+    assert report["controlled_workload_verified"] is False
+    assert [t["mode"] for t in report["trials"]] == ["quiet", "completed_burst", "sustained_batch"]
+    for name, sha in report["sources"].items():
+        assert hashlib.sha256((root / "benchmark_tools" / name).read_bytes()).hexdigest() == sha
+    for trial, repeats in zip(report["trials"], (0, 1, 4)):
+        assert compare(*trial["points"], 21816) == trial["result"]
+        assert len(trial["loads"]) == repeats
+        if repeats:
+            assert trial["load_localization_expectation_met"] is True
+            assert trial["result"]["step_cpu_s"]["step_batch"] >= .5 * repeats
+        else:
+            assert trial["load_localization_expectation_met"] is None
+        for load in trial["loads"]:
+            assert .75 <= load["cpu_seconds"] < .85
+            assert load["cgroup"] == trial["points"][0]["host"][0]["raw"]["cgroup_membership"]
+    scheduler = (root / "benchmark_tools/results/dgx_cpu_hierarchy_controls_21816_scheduler.txt").read_text().split()
+    for token in ("JobState=COMPLETED", "ExitCode=0:0", "Restarts=0", "NodeList=spark-7ff0",
+                  "NumCPUs=20", "CPUs/Task=2", "OverSubscribe=NO", "MinMemoryNode=2G"):
+        assert token in scheduler

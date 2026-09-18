@@ -1,5 +1,31 @@
 # Publication Progress
 
+## DGX Hierarchical CPU Controls Executed (2026-09-18 UTC)
+
+Previous turn progressed through816a0f8 with a retained residual diagnosis.
+Reread the full objective; confirmed main-host21813/21795/21706_0 running
+and21814 pending. DGX node spark-7ff0 was idle. No unrelated workload was
+stopped or service configuration changed.
+
+Committed/pushed967fb44 before the new quiet/completed-burst/sustained-batch
+controls. The first submission was rejected before job creation because its
+partition was omitted; explicit partition=spark admitted21816. It completed
+0:0 in6seconds with exclusive20CPU allocation,2CPUs per task,2GiB and no
+restart. Native and batch step counters were read inside job-parent and
+host brackets with stable, disjoint immediate-child scope validation.
+
+Both loaded controls localized CPU to the batch step as expected; native
+sleeping-step CPU stayed low. Job-parent minus summed step CPU was at most
+one microsecond in these observations. This does not explain earlier native
+flags or establish general accounting precision. Negative host-minus-job
+residuals are retained. No threshold changed or scientific timing admitted.
+
+Raw report and scheduler evidence retained;47focused tests pass, including
+exact local replay of all three controls and source-hash checks. See
+DGX_CPU_HIERARCHY_RESULT_20260918.md. Native-command integration, overhead,
+non-CPU isolation and scientific inclusion policy remain incomplete, as do
+the pending corrected benchmark results and final publication package.
+
 ## DGX Counter Residual Decomposition (2026-09-18 UTC)
 
 Previous turn progressed through220278b with the corrected-strata evidence
