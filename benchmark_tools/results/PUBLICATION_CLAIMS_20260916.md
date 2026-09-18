@@ -77,7 +77,9 @@ evidence that an experiment completed or a biological hypothesis is true.
   hit-coverage21793 still waits for HMM admission. Graph-memory review21798
   completed; its [resource decision](QFO_SEQUENCE_GRAPH_RESOURCE_REVIEW_20260918.md)
   allocated32CPUs/384GiB per arm. [All-hit graph21813](QFO_SEQUENCE_ALL_HITS_EXECUTION_20260918.md)
-  completed0:0 in37:34 and independent admission21823 is running; top100
+  completed0:0 in37:34; independent admission21823 completed0:0 in10:44,
+  with[retained validation](qfo_sequence_graph_admission_all_hits_21823.json).
+  Frozen pair conversion21824 is running; top100
   graph21814 is running after it. Execution-reported partitions are not yet
   independently admitted or scored.
   [Self-hit semantics](QFO_SEQUENCE_SELF_HIT_REVIEW_20260918.md) retain the

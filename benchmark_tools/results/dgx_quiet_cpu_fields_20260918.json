@@ -1,0 +1,1892 @@
+{
+  "controlled_workload_verified": false,
+  "helpers": [
+    {
+      "bytes": 5869,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/diagnose_dgx_interval_residuals.py",
+      "sha256": "724dff358836bd014b0bb1899a8770f82f9fcc7aa0c393d9cda3749f287f85ec"
+    },
+    {
+      "bytes": 5862,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_native_hierarchy_step.py",
+      "sha256": "d2e3647ac80ce4bc2b28a11a8edb9336c02df2519ac055740e4d70aa61459b54"
+    },
+    {
+      "bytes": 7461,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_native_interval_step.py",
+      "sha256": "0503cee2c49e1f77086232dd99076041f33ff8dc697097d01909d9315af0990e"
+    },
+    {
+      "bytes": 9059,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_dgx_cpu_hierarchy.py",
+      "sha256": "e2ae95faad1630f0c055d0b5a152b87991e0c8a529ec58d7a43e072b25ee55e1"
+    },
+    {
+      "bytes": 5845,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_host_counters.py",
+      "sha256": "3d3c193305085e17aa10e05be842d814f66d020d7dde285c8d9288ead2ce3f3c"
+    },
+    {
+      "bytes": 10645,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_interval_cpu.py",
+      "sha256": "b535124efb386265555e1ea946e4edc16ad6d8ff1c3d467955576875d944e366"
+    },
+    {
+      "bytes": 6808,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/screen_bracketed_cpu.py",
+      "sha256": "9175b0033b079d50cb086d64397a4996850d4f79dac317cd15ea83d96f4b8075"
+    },
+    {
+      "bytes": 6706,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_dgx_step_separation.py",
+      "sha256": "c00eae1c44c86f0ee02c72e4634cf4e5cc70e2656a8ebfc0f9070769f6f7f97b"
+    },
+    {
+      "bytes": 7448,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_ob_candidate_neighborhood.py",
+      "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+    }
+  ],
+  "input": {
+    "bytes": 388688,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/dgx_hierarchy_quiet_smokes_21820.json",
+    "sha256": "29d0268a44d77c23e4822a2a062cc9d1aa4fffe88279885e82aab0a32835441d"
+  },
+  "limitations": [
+    "Retrospective accounting diagnostic across all three methods, not a timing correction.",
+    "Host and cgroup counters differ in scope, quantization and update latency.",
+    "Interrupt time cannot automatically be assigned to unrelated work.",
+    "User/system residuals do not identify a process or prove external interference.",
+    "Signed residuals retained; overlapping outer windows must not be summed.",
+    "No threshold changes, new benchmark executions or scientific timing admission."
+  ],
+  "runs": [
+    {
+      "intervals": [
+        {
+          "controlled_workload_verified": false,
+          "diagnostic_field_residual_cpu_s": {
+            "irq_and_softirq": 0.0,
+            "system": 0.0035620000000000096,
+            "user_and_nice": 0.006931999999999938
+          },
+          "host_inner_busy_cpu_s": 3.46,
+          "host_outer_busy_cpu_s": 3.48,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 16.51,
+            "iowait": 0.07,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.22,
+            "user": 3.26
+          },
+          "host_outer_minus_job_outer_cpu_s": 0.010494000000000003,
+          "index": 0,
+          "inner_host_minus_native_cpu_s": -0.007372999999999852,
+          "job_outer_delta_cpu_s": {
+            "system_usec": 0.216438,
+            "usage_usec": 3.469506,
+            "user_usec": 3.253068
+          },
+          "job_usage_minus_user_system_cpu_s": 1.3877787807814457e-16,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.217198,
+            "usage_usec": 3.467373,
+            "user_usec": 3.250175
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.0,
+            "usage_usec": 0.003855,
+            "user_usec": 0.003855
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 3.48,
+            "native_cpu_s": 3.467373,
+            "outer_read_overhang_s": 0.001369474,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.012586436056284891,
+            "signed_unassigned_cpu_s": 0.012627000000000166,
+            "wall_s": 1.00322283
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": 0.008772000000000165,
+          "read_window_busy_cpu_s": 0.020000000000000018,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "diagnostic_field_residual_cpu_s": {
+            "irq_and_softirq": 0.0,
+            "system": 0.005054000000000003,
+            "user_and_nice": 0.015331000000001538
+          },
+          "host_inner_busy_cpu_s": 15.38,
+          "host_outer_busy_cpu_s": 15.42,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 4.58,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.71,
+            "user": 14.71
+          },
+          "host_outer_minus_job_outer_cpu_s": 0.020386000000000237,
+          "index": 1,
+          "inner_host_minus_native_cpu_s": -0.01637999999999984,
+          "job_outer_delta_cpu_s": {
+            "system_usec": 0.704946,
+            "usage_usec": 15.399614,
+            "user_usec": 14.694669
+          },
+          "job_usage_minus_user_system_cpu_s": -9.999999995846665e-07,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.704459,
+            "usage_usec": 15.39638,
+            "user_usec": 14.69192
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.00101,
+            "usage_usec": 0.005131,
+            "user_usec": 0.004122
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 15.42,
+            "native_cpu_s": 15.39638,
+            "outer_read_overhang_s": 0.001975027,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.023618328377380905,
+            "signed_unassigned_cpu_s": 0.023619999999999308,
+            "wall_s": 1.0000707765
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": 0.018488999999999308,
+          "read_window_busy_cpu_s": 0.03999999999999915,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "diagnostic_field_residual_cpu_s": {
+            "irq_and_softirq": 0.01,
+            "system": -0.0013150000000000106,
+            "user_and_nice": -0.00923699999999883
+          },
+          "host_inner_busy_cpu_s": 12.09,
+          "host_outer_busy_cpu_s": 12.12,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 7.89,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.01,
+            "steal": 0.0,
+            "system": 0.39,
+            "user": 11.72
+          },
+          "host_outer_minus_job_outer_cpu_s": -0.0005520000000007741,
+          "index": 2,
+          "inner_host_minus_native_cpu_s": -0.02692700000000059,
+          "job_outer_delta_cpu_s": {
+            "system_usec": 0.391315,
+            "usage_usec": 12.120552,
+            "user_usec": 11.729237
+          },
+          "job_usage_minus_user_system_cpu_s": 4.996003610813204e-16,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.389623,
+            "usage_usec": 12.116927,
+            "user_usec": 11.727304
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.001133,
+            "usage_usec": 0.005587,
+            "user_usec": 0.004455
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 12.12,
+            "native_cpu_s": 12.116927,
+            "outer_read_overhang_s": 0.001948115,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.003073096518277669,
+            "signed_unassigned_cpu_s": 0.003072999999998771,
+            "wall_s": 0.9999685925
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": -0.002514000000001229,
+          "read_window_busy_cpu_s": 0.02999999999999936,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "diagnostic_field_residual_cpu_s": {
+            "irq_and_softirq": 0.0,
+            "system": 0.0006080000000000009,
+            "user_and_nice": 0.0011089999999999989
+          },
+          "host_inner_busy_cpu_s": 0.09,
+          "host_outer_busy_cpu_s": 0.1,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 19.91,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.02,
+            "user": 0.08
+          },
+          "host_outer_minus_job_outer_cpu_s": 0.0017160000000000092,
+          "index": 3,
+          "inner_host_minus_native_cpu_s": -0.004501000000000005,
+          "job_outer_delta_cpu_s": {
+            "system_usec": 0.019392,
+            "usage_usec": 0.098284,
+            "user_usec": 0.078891
+          },
+          "job_usage_minus_user_system_cpu_s": 9.999999999940612e-07,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.018296,
+            "usage_usec": 0.094501,
+            "user_usec": 0.076206
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.00092,
+            "usage_usec": 0.004539,
+            "user_usec": 0.003619
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 0.1,
+            "native_cpu_s": 0.094501,
+            "outer_read_overhang_s": 0.001774067,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.005496143049881246,
+            "signed_unassigned_cpu_s": 0.005499000000000004,
+            "wall_s": 1.00051981
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": 0.0009600000000000043,
+          "read_window_busy_cpu_s": 0.010000000000000009,
+          "scientific_timings_admitted": false
+        }
+      ],
+      "job_id": 21821,
+      "run_index": 0,
+      "screening": {
+        "controlled_workload_verified": false,
+        "hierarchy_intervals": [
+          {
+            "controlled_workload_verified": false,
+            "host_busy_cpu_s": 3.48,
+            "host_minus_job_outer_cpu_s": 0.010494000000000003,
+            "job_inner_cpu_s": 3.469506,
+            "job_outer_cpu_s": 3.469506,
+            "job_outer_minus_step_sum_cpu_s": 0.0,
+            "scientific_timings_admitted": false,
+            "step_cpu_s": {
+              "step_0": 3.467373,
+              "step_batch": 0.002133
+            }
+          },
+          {
+            "controlled_workload_verified": false,
+            "host_busy_cpu_s": 15.42,
+            "host_minus_job_outer_cpu_s": 0.020386000000000237,
+            "job_inner_cpu_s": 15.399614,
+            "job_outer_cpu_s": 15.399614,
+            "job_outer_minus_step_sum_cpu_s": -1.0000000010279564e-06,
+            "scientific_timings_admitted": false,
+            "step_cpu_s": {
+              "step_0": 15.39638,
+              "step_batch": 0.003235
+            }
+          },
+          {
+            "controlled_workload_verified": false,
+            "host_busy_cpu_s": 12.12,
+            "host_minus_job_outer_cpu_s": -0.0005520000000007741,
+            "job_inner_cpu_s": 12.120552,
+            "job_outer_cpu_s": 12.120552,
+            "job_outer_minus_step_sum_cpu_s": 0.0,
+            "scientific_timings_admitted": false,
+            "step_cpu_s": {
+              "step_0": 12.116927,
+              "step_batch": 0.003625
+            }
+          },
+          {
+            "controlled_workload_verified": false,
+            "host_busy_cpu_s": 0.1,
+            "host_minus_job_outer_cpu_s": 0.0017160000000000092,
+            "job_inner_cpu_s": 0.098284,
+            "job_outer_cpu_s": 0.098284,
+            "job_outer_minus_step_sum_cpu_s": 1.000000000001e-06,
+            "scientific_timings_admitted": false,
+            "step_cpu_s": {
+              "step_0": 0.094501,
+              "step_batch": 0.003782
+            }
+          }
+        ],
+        "original_threshold_screen": {
+          "controlled_workload_verified": false,
+          "flagged_intervals": [],
+          "intervals": [
+            {
+              "host_busy_cpu_s": 3.48,
+              "native_cpu_s": 3.467373,
+              "outer_read_overhang_s": 0.001369474,
+              "reasons": [],
+              "screen_passed": true,
+              "signed_unassigned_average_cores": 0.012586436056284891,
+              "signed_unassigned_cpu_s": 0.012627000000000166,
+              "wall_s": 1.00322283
+            },
+            {
+              "host_busy_cpu_s": 15.42,
+              "native_cpu_s": 15.39638,
+              "outer_read_overhang_s": 0.001975027,
+              "reasons": [],
+              "screen_passed": true,
+              "signed_unassigned_average_cores": 0.023618328377380905,
+              "signed_unassigned_cpu_s": 0.023619999999999308,
+              "wall_s": 1.0000707765
+            },
+            {
+              "host_busy_cpu_s": 12.12,
+              "native_cpu_s": 12.116927,
+              "outer_read_overhang_s": 0.001948115,
+              "reasons": [],
+              "screen_passed": true,
+              "signed_unassigned_average_cores": 0.003073096518277669,
+              "signed_unassigned_cpu_s": 0.003072999999998771,
+              "wall_s": 0.9999685925
+            },
+            {
+              "host_busy_cpu_s": 0.1,
+              "native_cpu_s": 0.094501,
+              "outer_read_overhang_s": 0.001774067,
+              "reasons": [],
+              "screen_passed": true,
+              "signed_unassigned_average_cores": 0.005496143049881246,
+              "signed_unassigned_cpu_s": 0.005499000000000004,
+              "wall_s": 1.00051981
+            }
+          ],
+          "scientific_timings_admitted": false,
+          "whole_command_screen": {
+            "controlled_workload_verified": false,
+            "host_busy_cpu_s": 31.07,
+            "limitations": [
+              "Operational thresholds, not calibrated probabilistic or deterministic interference bounds.",
+              "Unassigned CPU includes observer, kernel and launch/exit work; it is not identified foreign CPU.",
+              "Counter accounting granularity/delay and non-CPU interference remain unresolved.",
+              "A run-wide average can hide concentrated bursts; interval-level monitoring remains necessary.",
+              "No subtraction from native wall time or correction of performance results is permitted."
+            ],
+            "maximum_residual_cores": 0.25,
+            "native_cpu_s": 31.068344,
+            "negative_tolerance_cpu_s": 0.5,
+            "reasons": [],
+            "scientific_timings_admitted": false,
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.0005363887471927684,
+            "signed_unassigned_cpu_s": 0.001656000000000546,
+            "status": "bracketed_cpu_operational_screen",
+            "work_wall_s": 3.087313089
+          }
+        },
+        "scientific_timings_admitted": false
+      }
+    },
+    {
+      "intervals": [
+        {
+          "controlled_workload_verified": false,
+          "diagnostic_field_residual_cpu_s": {
+            "irq_and_softirq": 0.0,
+            "system": -0.004642000000000007,
+            "user_and_nice": 0.0016050000000000786
+          },
+          "host_inner_busy_cpu_s": 3.51,
+          "host_outer_busy_cpu_s": 3.52,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 16.49,
+            "iowait": 0.04,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.18,
+            "user": 3.34
+          },
+          "host_outer_minus_job_outer_cpu_s": -0.0030369999999999564,
+          "index": 0,
+          "inner_host_minus_native_cpu_s": -0.010165000000000202,
+          "job_outer_delta_cpu_s": {
+            "system_usec": 0.184642,
+            "usage_usec": 3.523037,
+            "user_usec": 3.338395
+          },
+          "job_usage_minus_user_system_cpu_s": 1.942890293094024e-16,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.184757,
+            "usage_usec": 3.520165,
+            "user_usec": 3.335408
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.000144,
+            "usage_usec": 0.00379,
+            "user_usec": 0.003645
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 3.52,
+            "native_cpu_s": 3.520165,
+            "outer_read_overhang_s": 0.001502979,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": -0.00016454413606550186,
+            "signed_unassigned_cpu_s": -0.00016499999999997073,
+            "wall_s": 1.002770466
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": -0.003954999999999971,
+          "read_window_busy_cpu_s": 0.010000000000000231,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "diagnostic_field_residual_cpu_s": {
+            "irq_and_softirq": 0.0,
+            "system": 0.009202999999999961,
+            "user_and_nice": 0.014666000000000068
+          },
+          "host_inner_busy_cpu_s": 15.39,
+          "host_outer_busy_cpu_s": 15.42,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 4.59,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.7,
+            "user": 14.72
+          },
+          "host_outer_minus_job_outer_cpu_s": 0.023868999999999474,
+          "index": 1,
+          "inner_host_minus_native_cpu_s": -0.002397999999999456,
+          "job_outer_delta_cpu_s": {
+            "system_usec": 0.690797,
+            "usage_usec": 15.396131,
+            "user_usec": 14.705334
+          },
+          "job_usage_minus_user_system_cpu_s": -1.1102230246251565e-16,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.690849,
+            "usage_usec": 15.392398,
+            "user_usec": 14.701548
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 2.4e-05,
+            "usage_usec": 0.005133,
+            "user_usec": 0.005109
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 15.42,
+            "native_cpu_s": 15.392398,
+            "outer_read_overhang_s": 0.00194522,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.027603150802960028,
+            "signed_unassigned_cpu_s": 0.027601999999999904,
+            "wall_s": 0.999958309
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": 0.022468999999999906,
+          "read_window_busy_cpu_s": 0.02999999999999936,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "diagnostic_field_residual_cpu_s": {
+            "irq_and_softirq": 0.0,
+            "system": -0.005983999999999989,
+            "user_and_nice": -0.010336000000000567
+          },
+          "host_inner_busy_cpu_s": 12.01,
+          "host_outer_busy_cpu_s": 12.04,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 7.96,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.34,
+            "user": 11.7
+          },
+          "host_outer_minus_job_outer_cpu_s": -0.016319000000001083,
+          "index": 2,
+          "inner_host_minus_native_cpu_s": -0.042581999999999454,
+          "job_outer_delta_cpu_s": {
+            "system_usec": 0.345984,
+            "usage_usec": 12.056319,
+            "user_usec": 11.710336
+          },
+          "job_usage_minus_user_system_cpu_s": -9.999999996401776e-07,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.344418,
+            "usage_usec": 12.052582,
+            "user_usec": 11.708164
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.000951,
+            "usage_usec": 0.004706,
+            "user_usec": 0.003755
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 12.04,
+            "native_cpu_s": 12.052582,
+            "outer_read_overhang_s": 0.001818451,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": -0.012571318502665296,
+            "signed_unassigned_cpu_s": -0.012582000000000093,
+            "wall_s": 1.000849672
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": -0.017288000000000095,
+          "read_window_busy_cpu_s": 0.02999999999999936,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "diagnostic_field_residual_cpu_s": {
+            "irq_and_softirq": 0.02,
+            "system": 0.09542099999999998,
+            "user_and_nice": 0.25199599999999966
+          },
+          "host_inner_busy_cpu_s": 14.9,
+          "host_outer_busy_cpu_s": 14.91,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 5.03,
+            "iowait": 0.01,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.02,
+            "steal": 0.0,
+            "system": 11.36,
+            "user": 3.53
+          },
+          "host_outer_minus_job_outer_cpu_s": 0.36741699999999966,
+          "index": 3,
+          "inner_host_minus_native_cpu_s": 0.36016700000000057,
+          "job_outer_delta_cpu_s": {
+            "system_usec": 11.264579,
+            "usage_usec": 14.542583,
+            "user_usec": 3.278004
+          },
+          "job_usage_minus_user_system_cpu_s": 1.7763568394002505e-15,
+          "native_step_delta_cpu_s": {
+            "system_usec": 11.260494,
+            "usage_usec": 14.539833,
+            "user_usec": 3.27934
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.002124,
+            "usage_usec": 0.004737,
+            "user_usec": 0.002612
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 14.91,
+            "native_cpu_s": 14.539833,
+            "outer_read_overhang_s": 0.001828741,
+            "reasons": [
+              "excess_unassigned_cpu"
+            ],
+            "screen_passed": false,
+            "signed_unassigned_average_cores": 0.37003366724881526,
+            "signed_unassigned_cpu_s": 0.37016700000000036,
+            "wall_s": 1.000360326
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": 0.36543000000000037,
+          "read_window_busy_cpu_s": 0.009999999999999787,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "diagnostic_field_residual_cpu_s": {
+            "irq_and_softirq": 0.0,
+            "system": 0.000249000000000027,
+            "user_and_nice": -0.0013619999999999743
+          },
+          "host_inner_busy_cpu_s": 1.01,
+          "host_outer_busy_cpu_s": 1.01,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 18.97,
+            "iowait": 0.02,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.14,
+            "user": 0.87
+          },
+          "host_outer_minus_job_outer_cpu_s": -0.0011129999999999196,
+          "index": 4,
+          "inner_host_minus_native_cpu_s": 0.0024200000000000887,
+          "job_outer_delta_cpu_s": {
+            "system_usec": 0.139751,
+            "usage_usec": 1.011113,
+            "user_usec": 0.871362
+          },
+          "job_usage_minus_user_system_cpu_s": -2.7755575615628914e-17,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.137031,
+            "usage_usec": 1.00758,
+            "user_usec": 0.870548
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.003882,
+            "usage_usec": 0.005297,
+            "user_usec": 0.001414
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 1.01,
+            "native_cpu_s": 1.00758,
+            "outer_read_overhang_s": 0.001952595,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.0024207280424313983,
+            "signed_unassigned_cpu_s": 0.0024200000000000887,
+            "wall_s": 0.9996992465
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": -0.002876999999999911,
+          "read_window_busy_cpu_s": 0.0,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "diagnostic_field_residual_cpu_s": {
+            "irq_and_softirq": 0.0,
+            "system": 0.009321999999999997,
+            "user_and_nice": 0.009437000000000029
+          },
+          "host_inner_busy_cpu_s": 1.03,
+          "host_outer_busy_cpu_s": 1.03,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 19.0,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.11,
+            "user": 0.92
+          },
+          "host_outer_minus_job_outer_cpu_s": 0.01875899999999997,
+          "index": 5,
+          "inner_host_minus_native_cpu_s": 0.02215300000000009,
+          "job_outer_delta_cpu_s": {
+            "system_usec": 0.100678,
+            "usage_usec": 1.011241,
+            "user_usec": 0.910563
+          },
+          "job_usage_minus_user_system_cpu_s": 4.163336342344337e-17,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.099954,
+            "usage_usec": 1.007847,
+            "user_usec": 0.907893
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.001999,
+            "usage_usec": 0.004361,
+            "user_usec": 0.002362
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 1.03,
+            "native_cpu_s": 1.007847,
+            "outer_read_overhang_s": 0.001849523,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.02215431156847641,
+            "signed_unassigned_cpu_s": 0.02215300000000009,
+            "wall_s": 0.9999407985
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": 0.01779200000000009,
+          "read_window_busy_cpu_s": 0.0,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "diagnostic_field_residual_cpu_s": {
+            "irq_and_softirq": 0.0,
+            "system": 0.018710999999999922,
+            "user_and_nice": 0.007776999999999923
+          },
+          "host_inner_busy_cpu_s": 3.63,
+          "host_outer_busy_cpu_s": 3.63,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 16.32,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 1.88,
+            "user": 1.75
+          },
+          "host_outer_minus_job_outer_cpu_s": 0.026488000000000067,
+          "index": 6,
+          "inner_host_minus_native_cpu_s": 0.029581999999999997,
+          "job_outer_delta_cpu_s": {
+            "system_usec": 1.861289,
+            "usage_usec": 3.603512,
+            "user_usec": 1.742223
+          },
+          "job_usage_minus_user_system_cpu_s": -2.220446049250313e-16,
+          "native_step_delta_cpu_s": {
+            "system_usec": 1.858089,
+            "usage_usec": 3.600418,
+            "user_usec": 1.74233
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.003743,
+            "usage_usec": 0.005097,
+            "user_usec": 0.001354
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 3.63,
+            "native_cpu_s": 3.600418,
+            "outer_read_overhang_s": 0.001979427,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.029579691837486533,
+            "signed_unassigned_cpu_s": 0.029581999999999997,
+            "wall_s": 1.000078032
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": 0.024484999999999996,
+          "read_window_busy_cpu_s": 0.0,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "diagnostic_field_residual_cpu_s": {
+            "irq_and_softirq": 0.0,
+            "system": 0.004733,
+            "user_and_nice": -0.00575
+          },
+          "host_inner_busy_cpu_s": 0.01,
+          "host_outer_busy_cpu_s": 0.01,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 20.0,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.01,
+            "user": 0.0
+          },
+          "host_outer_minus_job_outer_cpu_s": -0.0010179999999999998,
+          "index": 7,
+          "inner_host_minus_native_cpu_s": 0.0019570000000000004,
+          "job_outer_delta_cpu_s": {
+            "system_usec": 0.005267,
+            "usage_usec": 0.011018,
+            "user_usec": 0.00575
+          },
+          "job_usage_minus_user_system_cpu_s": 1.0000000000001327e-06,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.003291,
+            "usage_usec": 0.008043,
+            "user_usec": 0.004752
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.003992,
+            "usage_usec": 0.004958,
+            "user_usec": 0.000966
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 0.01,
+            "native_cpu_s": 0.008043,
+            "outer_read_overhang_s": 0.001788836,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.001956462332847537,
+            "signed_unassigned_cpu_s": 0.0019570000000000004,
+            "wall_s": 1.000274816
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": -0.0030009999999999993,
+          "read_window_busy_cpu_s": 0.0,
+          "scientific_timings_admitted": false
+        }
+      ],
+      "job_id": 21822,
+      "run_index": 1,
+      "screening": {
+        "controlled_workload_verified": false,
+        "hierarchy_intervals": [
+          {
+            "controlled_workload_verified": false,
+            "host_busy_cpu_s": 3.52,
+            "host_minus_job_outer_cpu_s": -0.0030369999999999564,
+            "job_inner_cpu_s": 3.522481,
+            "job_outer_cpu_s": 3.523037,
+            "job_outer_minus_step_sum_cpu_s": 4.399999999993298e-05,
+            "scientific_timings_admitted": false,
+            "step_cpu_s": {
+              "step_0": 3.520165,
+              "step_batch": 0.002828
+            }
+          },
+          {
+            "controlled_workload_verified": false,
+            "host_busy_cpu_s": 15.42,
+            "host_minus_job_outer_cpu_s": 0.023868999999999474,
+            "job_inner_cpu_s": 15.395575,
+            "job_outer_cpu_s": 15.396131,
+            "job_outer_minus_step_sum_cpu_s": 0.0005110000000012604,
+            "scientific_timings_admitted": false,
+            "step_cpu_s": {
+              "step_0": 15.392398,
+              "step_batch": 0.003222
+            }
+          },
+          {
+            "controlled_workload_verified": false,
+            "host_busy_cpu_s": 12.04,
+            "host_minus_job_outer_cpu_s": -0.016319000000001083,
+            "job_inner_cpu_s": 12.056319,
+            "job_outer_cpu_s": 12.056319,
+            "job_outer_minus_step_sum_cpu_s": 1.7763568394002505e-15,
+            "scientific_timings_admitted": false,
+            "step_cpu_s": {
+              "step_0": 12.052582,
+              "step_batch": 0.003737
+            }
+          },
+          {
+            "controlled_workload_verified": false,
+            "host_busy_cpu_s": 14.91,
+            "host_minus_job_outer_cpu_s": 0.36741699999999966,
+            "job_inner_cpu_s": 14.542583,
+            "job_outer_cpu_s": 14.542583,
+            "job_outer_minus_step_sum_cpu_s": 1.0000000010279564e-06,
+            "scientific_timings_admitted": false,
+            "step_cpu_s": {
+              "step_0": 14.539833,
+              "step_batch": 0.002749
+            }
+          },
+          {
+            "controlled_workload_verified": false,
+            "host_busy_cpu_s": 1.01,
+            "host_minus_job_outer_cpu_s": -0.0011129999999999196,
+            "job_inner_cpu_s": 1.011113,
+            "job_outer_cpu_s": 1.011113,
+            "job_outer_minus_step_sum_cpu_s": 0.0,
+            "scientific_timings_admitted": false,
+            "step_cpu_s": {
+              "step_0": 1.00758,
+              "step_batch": 0.003533
+            }
+          },
+          {
+            "controlled_workload_verified": false,
+            "host_busy_cpu_s": 1.03,
+            "host_minus_job_outer_cpu_s": 0.01875899999999997,
+            "job_inner_cpu_s": 1.011241,
+            "job_outer_cpu_s": 1.011241,
+            "job_outer_minus_step_sum_cpu_s": -9.999999999177334e-07,
+            "scientific_timings_admitted": false,
+            "step_cpu_s": {
+              "step_0": 1.007847,
+              "step_batch": 0.003395
+            }
+          },
+          {
+            "controlled_workload_verified": false,
+            "host_busy_cpu_s": 3.63,
+            "host_minus_job_outer_cpu_s": 0.026488000000000067,
+            "job_inner_cpu_s": 3.603512,
+            "job_outer_cpu_s": 3.603512,
+            "job_outer_minus_step_sum_cpu_s": 1.000000000139778e-06,
+            "scientific_timings_admitted": false,
+            "step_cpu_s": {
+              "step_0": 3.600418,
+              "step_batch": 0.003093
+            }
+          },
+          {
+            "controlled_workload_verified": false,
+            "host_busy_cpu_s": 0.01,
+            "host_minus_job_outer_cpu_s": -0.0010179999999999998,
+            "job_inner_cpu_s": 0.011018,
+            "job_outer_cpu_s": 0.011018,
+            "job_outer_minus_step_sum_cpu_s": -9.999999999992654e-07,
+            "scientific_timings_admitted": false,
+            "step_cpu_s": {
+              "step_0": 0.008043,
+              "step_batch": 0.002976
+            }
+          }
+        ],
+        "original_threshold_screen": {
+          "controlled_workload_verified": false,
+          "flagged_intervals": [
+            3
+          ],
+          "intervals": [
+            {
+              "host_busy_cpu_s": 3.52,
+              "native_cpu_s": 3.520165,
+              "outer_read_overhang_s": 0.001502979,
+              "reasons": [],
+              "screen_passed": true,
+              "signed_unassigned_average_cores": -0.00016454413606550186,
+              "signed_unassigned_cpu_s": -0.00016499999999997073,
+              "wall_s": 1.002770466
+            },
+            {
+              "host_busy_cpu_s": 15.42,
+              "native_cpu_s": 15.392398,
+              "outer_read_overhang_s": 0.00194522,
+              "reasons": [],
+              "screen_passed": true,
+              "signed_unassigned_average_cores": 0.027603150802960028,
+              "signed_unassigned_cpu_s": 0.027601999999999904,
+              "wall_s": 0.999958309
+            },
+            {
+              "host_busy_cpu_s": 12.04,
+              "native_cpu_s": 12.052582,
+              "outer_read_overhang_s": 0.001818451,
+              "reasons": [],
+              "screen_passed": true,
+              "signed_unassigned_average_cores": -0.012571318502665296,
+              "signed_unassigned_cpu_s": -0.012582000000000093,
+              "wall_s": 1.000849672
+            },
+            {
+              "host_busy_cpu_s": 14.91,
+              "native_cpu_s": 14.539833,
+              "outer_read_overhang_s": 0.001828741,
+              "reasons": [
+                "excess_unassigned_cpu"
+              ],
+              "screen_passed": false,
+              "signed_unassigned_average_cores": 0.37003366724881526,
+              "signed_unassigned_cpu_s": 0.37016700000000036,
+              "wall_s": 1.000360326
+            },
+            {
+              "host_busy_cpu_s": 1.01,
+              "native_cpu_s": 1.00758,
+              "outer_read_overhang_s": 0.001952595,
+              "reasons": [],
+              "screen_passed": true,
+              "signed_unassigned_average_cores": 0.0024207280424313983,
+              "signed_unassigned_cpu_s": 0.0024200000000000887,
+              "wall_s": 0.9996992465
+            },
+            {
+              "host_busy_cpu_s": 1.03,
+              "native_cpu_s": 1.007847,
+              "outer_read_overhang_s": 0.001849523,
+              "reasons": [],
+              "screen_passed": true,
+              "signed_unassigned_average_cores": 0.02215431156847641,
+              "signed_unassigned_cpu_s": 0.02215300000000009,
+              "wall_s": 0.9999407985
+            },
+            {
+              "host_busy_cpu_s": 3.63,
+              "native_cpu_s": 3.600418,
+              "outer_read_overhang_s": 0.001979427,
+              "reasons": [],
+              "screen_passed": true,
+              "signed_unassigned_average_cores": 0.029579691837486533,
+              "signed_unassigned_cpu_s": 0.029581999999999997,
+              "wall_s": 1.000078032
+            },
+            {
+              "host_busy_cpu_s": 0.01,
+              "native_cpu_s": 0.008043,
+              "outer_read_overhang_s": 0.001788836,
+              "reasons": [],
+              "screen_passed": true,
+              "signed_unassigned_average_cores": 0.001956462332847537,
+              "signed_unassigned_cpu_s": 0.0019570000000000004,
+              "wall_s": 1.000274816
+            }
+          ],
+          "scientific_timings_admitted": false,
+          "whole_command_screen": {
+            "controlled_workload_verified": false,
+            "host_busy_cpu_s": 51.53,
+            "limitations": [
+              "Operational thresholds, not calibrated probabilistic or deterministic interference bounds.",
+              "Unassigned CPU includes observer, kernel and launch/exit work; it is not identified foreign CPU.",
+              "Counter accounting granularity/delay and non-CPU interference remain unresolved.",
+              "A run-wide average can hide concentrated bursts; interval-level monitoring remains necessary.",
+              "No subtraction from native wall time or correction of performance results is permitted."
+            ],
+            "maximum_residual_cores": 0.25,
+            "native_cpu_s": 51.120835,
+            "negative_tolerance_cpu_s": 0.5,
+            "reasons": [],
+            "scientific_timings_admitted": false,
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.05843396282419526,
+            "signed_unassigned_cpu_s": 0.40916500000000156,
+            "status": "bracketed_cpu_operational_screen",
+            "work_wall_s": 7.002177847
+          }
+        },
+        "scientific_timings_admitted": false
+      }
+    },
+    {
+      "intervals": [
+        {
+          "controlled_workload_verified": false,
+          "diagnostic_field_residual_cpu_s": {
+            "irq_and_softirq": 0.0,
+            "system": 0.0041080000000000005,
+            "user_and_nice": 0.004436999999999913
+          },
+          "host_inner_busy_cpu_s": 1.01,
+          "host_outer_busy_cpu_s": 1.01,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 19.04,
+            "iowait": 0.02,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.05,
+            "user": 0.96
+          },
+          "host_outer_minus_job_outer_cpu_s": 0.008545999999999943,
+          "index": 0,
+          "inner_host_minus_native_cpu_s": 0.010297,
+          "job_outer_delta_cpu_s": {
+            "system_usec": 0.045892,
+            "usage_usec": 1.001454,
+            "user_usec": 0.955563
+          },
+          "job_usage_minus_user_system_cpu_s": -9.999999999871223e-07,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.044797,
+            "usage_usec": 0.999703,
+            "user_usec": 0.954907
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.000884,
+            "usage_usec": 0.002631,
+            "user_usec": 0.001746
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 1.01,
+            "native_cpu_s": 0.999703,
+            "outer_read_overhang_s": 0.001012546,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.01026616142636055,
+            "signed_unassigned_cpu_s": 0.010297,
+            "wall_s": 1.003003905
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": 0.007666000000000001,
+          "read_window_busy_cpu_s": 0.0,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "diagnostic_field_residual_cpu_s": {
+            "irq_and_softirq": 0.0,
+            "system": -0.007796999999999998,
+            "user_and_nice": -0.004777000000000031
+          },
+          "host_inner_busy_cpu_s": 0.99,
+          "host_outer_busy_cpu_s": 0.99,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 19.0,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.03,
+            "user": 0.96
+          },
+          "host_outer_minus_job_outer_cpu_s": -0.012574000000000085,
+          "index": 1,
+          "inner_host_minus_native_cpu_s": -0.010712000000000055,
+          "job_outer_delta_cpu_s": {
+            "system_usec": 0.037797,
+            "usage_usec": 1.002574,
+            "user_usec": 0.964777
+          },
+          "job_usage_minus_user_system_cpu_s": 8.326672684688674e-17,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.036984,
+            "usage_usec": 1.000712,
+            "user_usec": 0.963728
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.000917,
+            "usage_usec": 0.002519,
+            "user_usec": 0.001603
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 0.99,
+            "native_cpu_s": 1.000712,
+            "outer_read_overhang_s": 0.000909746,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": -0.010709432948922197,
+            "signed_unassigned_cpu_s": -0.010712000000000055,
+            "wall_s": 1.0002397
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": -0.013231000000000055,
+          "read_window_busy_cpu_s": 0.0,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "diagnostic_field_residual_cpu_s": {
+            "irq_and_softirq": 0.0,
+            "system": 0.004132999999999942,
+            "user_and_nice": -0.007533000000000456
+          },
+          "host_inner_busy_cpu_s": 10.49,
+          "host_outer_busy_cpu_s": 10.49,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 9.21,
+            "iowait": 0.01,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 1.8,
+            "user": 8.69
+          },
+          "host_outer_minus_job_outer_cpu_s": -0.0034010000000002094,
+          "index": 2,
+          "inner_host_minus_native_cpu_s": -0.0022050000000000125,
+          "job_outer_delta_cpu_s": {
+            "system_usec": 1.795867,
+            "usage_usec": 10.493401,
+            "user_usec": 8.697533
+          },
+          "job_usage_minus_user_system_cpu_s": 1.0000000003618226e-06,
+          "native_step_delta_cpu_s": {
+            "system_usec": 1.794727,
+            "usage_usec": 10.492205,
+            "user_usec": 8.697477
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.002032,
+            "usage_usec": 0.002183,
+            "user_usec": 0.000151
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 10.49,
+            "native_cpu_s": 10.492205,
+            "outer_read_overhang_s": 0.001006274,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": -0.002208476953235447,
+            "signed_unassigned_cpu_s": -0.0022050000000000125,
+            "wall_s": 0.998425633
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": -0.0043880000000000126,
+          "read_window_busy_cpu_s": 0.0,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "diagnostic_field_residual_cpu_s": {
+            "irq_and_softirq": 0.0,
+            "system": -0.003956000000000071,
+            "user_and_nice": -0.02662500000000012
+          },
+          "host_inner_busy_cpu_s": 8.61,
+          "host_outer_busy_cpu_s": 8.61,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 11.31,
+            "iowait": 0.01,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 1.14,
+            "user": 7.47
+          },
+          "host_outer_minus_job_outer_cpu_s": -0.030580000000000496,
+          "index": 3,
+          "inner_host_minus_native_cpu_s": -0.026996999999999716,
+          "job_outer_delta_cpu_s": {
+            "system_usec": 1.143956,
+            "usage_usec": 8.64058,
+            "user_usec": 7.496625
+          },
+          "job_usage_minus_user_system_cpu_s": -9.999999999177334e-07,
+          "native_step_delta_cpu_s": {
+            "system_usec": 1.141724,
+            "usage_usec": 8.636997,
+            "user_usec": 7.495273
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.002056,
+            "usage_usec": 0.00257,
+            "user_usec": 0.000513
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 8.61,
+            "native_cpu_s": 8.636997,
+            "outer_read_overhang_s": 0.000921121,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": -0.026967248464033512,
+            "signed_unassigned_cpu_s": -0.026996999999999716,
+            "wall_s": 1.001103247
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": -0.029566999999999715,
+          "read_window_busy_cpu_s": 0.0,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "diagnostic_field_residual_cpu_s": {
+            "irq_and_softirq": 0.0,
+            "system": 0.0024020000000000014,
+            "user_and_nice": 0.009897999999999962
+          },
+          "host_inner_busy_cpu_s": 1.01,
+          "host_outer_busy_cpu_s": 1.02,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 18.97,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.02,
+            "user": 1.0
+          },
+          "host_outer_minus_job_outer_cpu_s": 0.01229900000000006,
+          "index": 4,
+          "inner_host_minus_native_cpu_s": 0.005973999999999924,
+          "job_outer_delta_cpu_s": {
+            "system_usec": 0.017598,
+            "usage_usec": 1.007701,
+            "user_usec": 0.990102
+          },
+          "job_usage_minus_user_system_cpu_s": 9.999999999212028e-07,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.016472,
+            "usage_usec": 1.004026,
+            "user_usec": 0.987554
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.001119,
+            "usage_usec": 0.002639,
+            "user_usec": 0.00152
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 1.02,
+            "native_cpu_s": 1.004026,
+            "outer_read_overhang_s": 0.000914945,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.01597421359120986,
+            "signed_unassigned_cpu_s": 0.015973999999999933,
+            "wall_s": 0.999986629
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": 0.013334999999999934,
+          "read_window_busy_cpu_s": 0.010000000000000009,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "diagnostic_field_residual_cpu_s": {
+            "irq_and_softirq": 0.0,
+            "system": 0.0051140000000000005,
+            "user_and_nice": 0.0071710000000000385
+          },
+          "host_inner_busy_cpu_s": 1.01,
+          "host_outer_busy_cpu_s": 1.02,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 18.96,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.01,
+            "user": 1.01
+          },
+          "host_outer_minus_job_outer_cpu_s": 0.012283999999999962,
+          "index": 5,
+          "inner_host_minus_native_cpu_s": 0.005921000000000065,
+          "job_outer_delta_cpu_s": {
+            "system_usec": 0.004886,
+            "usage_usec": 1.007716,
+            "user_usec": 1.002829
+          },
+          "job_usage_minus_user_system_cpu_s": 1.0000000000860015e-06,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.004764,
+            "usage_usec": 1.004079,
+            "user_usec": 0.999316
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.000115,
+            "usage_usec": 0.002611,
+            "user_usec": 0.002496
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 1.02,
+            "native_cpu_s": 1.004079,
+            "outer_read_overhang_s": 0.000913938,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.015921019407722732,
+            "signed_unassigned_cpu_s": 0.015921000000000074,
+            "wall_s": 0.999998781
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": 0.013310000000000074,
+          "read_window_busy_cpu_s": 0.010000000000000009,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "diagnostic_field_residual_cpu_s": {
+            "irq_and_softirq": 0.0,
+            "system": 0.00309,
+            "user_and_nice": -0.0008999999999999009
+          },
+          "host_inner_busy_cpu_s": 1.01,
+          "host_outer_busy_cpu_s": 1.01,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 18.99,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.01,
+            "user": 1.0
+          },
+          "host_outer_minus_job_outer_cpu_s": 0.0021889999999999965,
+          "index": 6,
+          "inner_host_minus_native_cpu_s": 0.005819000000000019,
+          "job_outer_delta_cpu_s": {
+            "system_usec": 0.00691,
+            "usage_usec": 1.007811,
+            "user_usec": 1.0009
+          },
+          "job_usage_minus_user_system_cpu_s": 1.000000000111155e-06,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.0068,
+            "usage_usec": 1.004181,
+            "user_usec": 0.997381
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.000113,
+            "usage_usec": 0.002603,
+            "user_usec": 0.00249
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 1.01,
+            "native_cpu_s": 1.004181,
+            "outer_read_overhang_s": 0.000903569,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.0058190089030836405,
+            "signed_unassigned_cpu_s": 0.005819000000000019,
+            "wall_s": 0.99999847
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": 0.0032160000000000188,
+          "read_window_busy_cpu_s": 0.0,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "diagnostic_field_residual_cpu_s": {
+            "irq_and_softirq": 0.0,
+            "system": 0.006630999999999998,
+            "user_and_nice": -0.00665300000000002
+          },
+          "host_inner_busy_cpu_s": 1.22,
+          "host_outer_busy_cpu_s": 1.22,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 18.75,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.32,
+            "user": 0.9
+          },
+          "host_outer_minus_job_outer_cpu_s": -2.1000000000048757e-05,
+          "index": 7,
+          "inner_host_minus_native_cpu_s": 0.001670999999999978,
+          "job_outer_delta_cpu_s": {
+            "system_usec": 0.313369,
+            "usage_usec": 1.220021,
+            "user_usec": 0.906653
+          },
+          "job_usage_minus_user_system_cpu_s": -1.0000000000287557e-06,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.313315,
+            "usage_usec": 1.218329,
+            "user_usec": 0.905013
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.001115,
+            "usage_usec": 0.002663,
+            "user_usec": 0.001548
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 1.22,
+            "native_cpu_s": 1.218329,
+            "outer_read_overhang_s": 0.000919169,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.0016727660461719487,
+            "signed_unassigned_cpu_s": 0.001670999999999978,
+            "wall_s": 0.998944236
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": -0.000992000000000022,
+          "read_window_busy_cpu_s": 0.0,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "diagnostic_field_residual_cpu_s": {
+            "irq_and_softirq": 0.0,
+            "system": -0.006134000000000306,
+            "user_and_nice": -0.020580000000000043
+          },
+          "host_inner_busy_cpu_s": 4.81,
+          "host_outer_busy_cpu_s": 4.81,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 14.95,
+            "iowait": 0.16,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 3.26,
+            "user": 1.55
+          },
+          "host_outer_minus_job_outer_cpu_s": -0.026714000000000127,
+          "index": 8,
+          "inner_host_minus_native_cpu_s": -0.025014000000000536,
+          "job_outer_delta_cpu_s": {
+            "system_usec": 3.266134,
+            "usage_usec": 4.836714,
+            "user_usec": 1.57058
+          },
+          "job_usage_minus_user_system_cpu_s": -4.440892098500626e-16,
+          "native_step_delta_cpu_s": {
+            "system_usec": 3.265554,
+            "usage_usec": 4.835014,
+            "user_usec": 1.56946
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.002107,
+            "usage_usec": 0.002635,
+            "user_usec": 0.000528
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 4.81,
+            "native_cpu_s": 4.835014,
+            "outer_read_overhang_s": 0.000910193,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": -0.025014949842661012,
+            "signed_unassigned_cpu_s": -0.025014000000000536,
+            "wall_s": 0.999962029
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": -0.027649000000000534,
+          "read_window_busy_cpu_s": 0.0,
+          "scientific_timings_admitted": false
+        },
+        {
+          "controlled_workload_verified": false,
+          "diagnostic_field_residual_cpu_s": {
+            "irq_and_softirq": 0.0,
+            "system": 0.007729,
+            "user_and_nice": -0.0018149999999999972
+          },
+          "host_inner_busy_cpu_s": 0.13,
+          "host_outer_busy_cpu_s": 0.13,
+          "host_outer_field_cpu_s": {
+            "guest": 0.0,
+            "guest_nice": 0.0,
+            "idle": 19.9,
+            "iowait": 0.0,
+            "irq": 0.0,
+            "nice": 0.0,
+            "softirq": 0.0,
+            "steal": 0.0,
+            "system": 0.05,
+            "user": 0.08
+          },
+          "host_outer_minus_job_outer_cpu_s": 0.005913000000000002,
+          "index": 9,
+          "inner_host_minus_native_cpu_s": 0.008184999999999998,
+          "job_outer_delta_cpu_s": {
+            "system_usec": 0.042271,
+            "usage_usec": 0.124087,
+            "user_usec": 0.081815
+          },
+          "job_usage_minus_user_system_cpu_s": 1.000000000001e-06,
+          "native_step_delta_cpu_s": {
+            "system_usec": 0.041219,
+            "usage_usec": 0.121815,
+            "user_usec": 0.080596
+          },
+          "observer_leaf_delta_cpu_s": {
+            "system_usec": 0.001035,
+            "usage_usec": 0.002195,
+            "user_usec": 0.001161
+          },
+          "original_screen": {
+            "host_busy_cpu_s": 0.13,
+            "native_cpu_s": 0.121815,
+            "outer_read_overhang_s": 0.00105029,
+            "reasons": [],
+            "screen_passed": true,
+            "signed_unassigned_average_cores": 0.008171803697424783,
+            "signed_unassigned_cpu_s": 0.008184999999999998,
+            "wall_s": 1.001614858
+          },
+          "outer_host_minus_native_minus_observer_cpu_s": 0.005989999999999998,
+          "read_window_busy_cpu_s": 0.0,
+          "scientific_timings_admitted": false
+        }
+      ],
+      "job_id": 21820,
+      "run_index": 2,
+      "screening": {
+        "controlled_workload_verified": false,
+        "hierarchy_intervals": [
+          {
+            "controlled_workload_verified": false,
+            "host_busy_cpu_s": 1.01,
+            "host_minus_job_outer_cpu_s": 0.008545999999999943,
+            "job_inner_cpu_s": 1.001454,
+            "job_outer_cpu_s": 1.001454,
+            "job_outer_minus_step_sum_cpu_s": 0.0,
+            "scientific_timings_admitted": false,
+            "step_cpu_s": {
+              "step_0": 0.999703,
+              "step_batch": 0.001751
+            }
+          },
+          {
+            "controlled_workload_verified": false,
+            "host_busy_cpu_s": 0.99,
+            "host_minus_job_outer_cpu_s": -0.012574000000000085,
+            "job_inner_cpu_s": 1.002574,
+            "job_outer_cpu_s": 1.002574,
+            "job_outer_minus_step_sum_cpu_s": -9.999999999177334e-07,
+            "scientific_timings_admitted": false,
+            "step_cpu_s": {
+              "step_0": 1.000712,
+              "step_batch": 0.001863
+            }
+          },
+          {
+            "controlled_workload_verified": false,
+            "host_busy_cpu_s": 10.49,
+            "host_minus_job_outer_cpu_s": -0.0034010000000002094,
+            "job_inner_cpu_s": 10.493401,
+            "job_outer_cpu_s": 10.493401,
+            "job_outer_minus_step_sum_cpu_s": 1.0000000010279564e-06,
+            "scientific_timings_admitted": false,
+            "step_cpu_s": {
+              "step_0": 10.492205,
+              "step_batch": 0.001195
+            }
+          },
+          {
+            "controlled_workload_verified": false,
+            "host_busy_cpu_s": 8.61,
+            "host_minus_job_outer_cpu_s": -0.030580000000000496,
+            "job_inner_cpu_s": 8.638631,
+            "job_outer_cpu_s": 8.64058,
+            "job_outer_minus_step_sum_cpu_s": 0.0019480000000005049,
+            "scientific_timings_admitted": false,
+            "step_cpu_s": {
+              "step_0": 8.636997,
+              "step_batch": 0.001635
+            }
+          },
+          {
+            "controlled_workload_verified": false,
+            "host_busy_cpu_s": 1.02,
+            "host_minus_job_outer_cpu_s": 0.01229900000000006,
+            "job_inner_cpu_s": 1.003795,
+            "job_outer_cpu_s": 1.007701,
+            "job_outer_minus_step_sum_cpu_s": 0.0019569999999997645,
+            "scientific_timings_admitted": false,
+            "step_cpu_s": {
+              "step_0": 1.004026,
+              "step_batch": 0.001718
+            }
+          },
+          {
+            "controlled_workload_verified": false,
+            "host_busy_cpu_s": 1.02,
+            "host_minus_job_outer_cpu_s": 0.012283999999999962,
+            "job_inner_cpu_s": 1.003809,
+            "job_outer_cpu_s": 1.007716,
+            "job_outer_minus_step_sum_cpu_s": 0.001951000000000036,
+            "scientific_timings_admitted": false,
+            "step_cpu_s": {
+              "step_0": 1.004079,
+              "step_batch": 0.001686
+            }
+          },
+          {
+            "controlled_workload_verified": false,
+            "host_busy_cpu_s": 1.01,
+            "host_minus_job_outer_cpu_s": 0.0021889999999999965,
+            "job_inner_cpu_s": 1.003909,
+            "job_outer_cpu_s": 1.007811,
+            "job_outer_minus_step_sum_cpu_s": 0.0019519999999999538,
+            "scientific_timings_admitted": false,
+            "step_cpu_s": {
+              "step_0": 1.004181,
+              "step_batch": 0.001678
+            }
+          },
+          {
+            "controlled_workload_verified": false,
+            "host_busy_cpu_s": 1.22,
+            "host_minus_job_outer_cpu_s": -2.1000000000048757e-05,
+            "job_inner_cpu_s": 1.218069,
+            "job_outer_cpu_s": 1.220021,
+            "job_outer_minus_step_sum_cpu_s": -9.999999999177334e-07,
+            "scientific_timings_admitted": false,
+            "step_cpu_s": {
+              "step_0": 1.218329,
+              "step_batch": 0.001693
+            }
+          },
+          {
+            "controlled_workload_verified": false,
+            "host_busy_cpu_s": 4.81,
+            "host_minus_job_outer_cpu_s": -0.026714000000000127,
+            "job_inner_cpu_s": 4.836714,
+            "job_outer_cpu_s": 4.836714,
+            "job_outer_minus_step_sum_cpu_s": 0.0,
+            "scientific_timings_admitted": false,
+            "step_cpu_s": {
+              "step_0": 4.835014,
+              "step_batch": 0.0017
+            }
+          },
+          {
+            "controlled_workload_verified": false,
+            "host_busy_cpu_s": 0.13,
+            "host_minus_job_outer_cpu_s": 0.005913000000000002,
+            "job_inner_cpu_s": 0.124087,
+            "job_outer_cpu_s": 0.124087,
+            "job_outer_minus_step_sum_cpu_s": 1.000000000001e-06,
+            "scientific_timings_admitted": false,
+            "step_cpu_s": {
+              "step_0": 0.121815,
+              "step_batch": 0.002271
+            }
+          }
+        ],
+        "original_threshold_screen": {
+          "controlled_workload_verified": false,
+          "flagged_intervals": [],
+          "intervals": [
+            {
+              "host_busy_cpu_s": 1.01,
+              "native_cpu_s": 0.999703,
+              "outer_read_overhang_s": 0.001012546,
+              "reasons": [],
+              "screen_passed": true,
+              "signed_unassigned_average_cores": 0.01026616142636055,
+              "signed_unassigned_cpu_s": 0.010297,
+              "wall_s": 1.003003905
+            },
+            {
+              "host_busy_cpu_s": 0.99,
+              "native_cpu_s": 1.000712,
+              "outer_read_overhang_s": 0.000909746,
+              "reasons": [],
+              "screen_passed": true,
+              "signed_unassigned_average_cores": -0.010709432948922197,
+              "signed_unassigned_cpu_s": -0.010712000000000055,
+              "wall_s": 1.0002397
+            },
+            {
+              "host_busy_cpu_s": 10.49,
+              "native_cpu_s": 10.492205,
+              "outer_read_overhang_s": 0.001006274,
+              "reasons": [],
+              "screen_passed": true,
+              "signed_unassigned_average_cores": -0.002208476953235447,
+              "signed_unassigned_cpu_s": -0.0022050000000000125,
+              "wall_s": 0.998425633
+            },
+            {
+              "host_busy_cpu_s": 8.61,
+              "native_cpu_s": 8.636997,
+              "outer_read_overhang_s": 0.000921121,
+              "reasons": [],
+              "screen_passed": true,
+              "signed_unassigned_average_cores": -0.026967248464033512,
+              "signed_unassigned_cpu_s": -0.026996999999999716,
+              "wall_s": 1.001103247
+            },
+            {
+              "host_busy_cpu_s": 1.02,
+              "native_cpu_s": 1.004026,
+              "outer_read_overhang_s": 0.000914945,
+              "reasons": [],
+              "screen_passed": true,
+              "signed_unassigned_average_cores": 0.01597421359120986,
+              "signed_unassigned_cpu_s": 0.015973999999999933,
+              "wall_s": 0.999986629
+            },
+            {
+              "host_busy_cpu_s": 1.02,
+              "native_cpu_s": 1.004079,
+              "outer_read_overhang_s": 0.000913938,
+              "reasons": [],
+              "screen_passed": true,
+              "signed_unassigned_average_cores": 0.015921019407722732,
+              "signed_unassigned_cpu_s": 0.015921000000000074,
+              "wall_s": 0.999998781
+            },
+            {
+              "host_busy_cpu_s": 1.01,
+              "native_cpu_s": 1.004181,
+              "outer_read_overhang_s": 0.000903569,
+              "reasons": [],
+              "screen_passed": true,
+              "signed_unassigned_average_cores": 0.0058190089030836405,
+              "signed_unassigned_cpu_s": 0.005819000000000019,
+              "wall_s": 0.99999847
+            },
+            {
+              "host_busy_cpu_s": 1.22,
+              "native_cpu_s": 1.218329,
+              "outer_read_overhang_s": 0.000919169,
+              "reasons": [],
+              "screen_passed": true,
+              "signed_unassigned_average_cores": 0.0016727660461719487,
+              "signed_unassigned_cpu_s": 0.001670999999999978,
+              "wall_s": 0.998944236
+            },
+            {
+              "host_busy_cpu_s": 4.81,
+              "native_cpu_s": 4.835014,
+              "outer_read_overhang_s": 0.000910193,
+              "reasons": [],
+              "screen_passed": true,
+              "signed_unassigned_average_cores": -0.025014949842661012,
+              "signed_unassigned_cpu_s": -0.025014000000000536,
+              "wall_s": 0.999962029
+            },
+            {
+              "host_busy_cpu_s": 0.13,
+              "native_cpu_s": 0.121815,
+              "outer_read_overhang_s": 0.00105029,
+              "reasons": [],
+              "screen_passed": true,
+              "signed_unassigned_average_cores": 0.008171803697424783,
+              "signed_unassigned_cpu_s": 0.008184999999999998,
+              "wall_s": 1.001614858
+            }
+          ],
+          "scientific_timings_admitted": false,
+          "whole_command_screen": {
+            "controlled_workload_verified": false,
+            "host_busy_cpu_s": 30.3,
+            "limitations": [
+              "Operational thresholds, not calibrated probabilistic or deterministic interference bounds.",
+              "Unassigned CPU includes observer, kernel and launch/exit work; it is not identified foreign CPU.",
+              "Counter accounting granularity/delay and non-CPU interference remain unresolved.",
+              "A run-wide average can hide concentrated bursts; interval-level monitoring remains necessary.",
+              "No subtraction from native wall time or correction of performance results is permitted."
+            ],
+            "maximum_residual_cores": 0.25,
+            "native_cpu_s": 30.316073,
+            "negative_tolerance_cpu_s": 0.5,
+            "reasons": [],
+            "scientific_timings_admitted": false,
+            "screen_passed": true,
+            "signed_unassigned_average_cores": -0.0016160765412908747,
+            "signed_unassigned_cpu_s": -0.01607299999999867,
+            "status": "bracketed_cpu_operational_screen",
+            "work_wall_s": 9.945692292
+          }
+        },
+        "scientific_timings_admitted": false
+      }
+    }
+  ],
+  "scientific_timings_admitted": false,
+  "source": {
+    "bytes": 4298,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/diagnose_dgx_quiet_cpu_fields.py",
+    "sha256": "d1693c8f75ced32057f9071f41ce32637ec78f1ce857b04a542c45efb1ae4b7c"
+  },
+  "status": "retrospective_quiet_cpu_field_decomposition"
+}

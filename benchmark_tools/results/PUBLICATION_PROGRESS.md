@@ -1,5 +1,34 @@
 # Publication Progress
 
+## All-Hit Graph Admitted; Pair Conversion Running (2026-09-18 UTC)
+
+Previous user-request turn reverified retained TreeFam downloads but found no
+new original source; it was no progress on retrieval. Reread the complete
+goal and verified running jobs rather than restarting them. Independent
+all-hit admission21823 then completed0:0 in10:44. Its report has status
+`corrected_sequence_graph_admitted` and SHA-256
+`ebd78f0602f1c57c1d3378b01f9179b9a83d677037d83ea0cc3035eafb766b30`.
+Retained it as`qfo_sequence_graph_admission_all_hits_21823.json`.
+
+Verified clean frozen converter4f0c30e5cdf287a35c9600886aec0a41bcc0b720,
+ran17conversion tests, and submitted21824 with the exact admission hash and
+job21823. Scheduler confirms RUNNING2CPUs/64GiB. This uses the prespecified
+multipass_refined partition, not the initial graph or alternative groups.
+QfO scoring and uncertainty remain pending. Top100graph21814, HMM21706_0
+and matched Three Kingdoms21795 were also confirmed running.
+
+Added a retrospective CPU-field decomposition of every interval in all
+three quiet DGX controls.50focused tests pass. The remaining satellite_v2
+flag has0.251996user,0.095421system and0.020000interrupt diagnostic residual
+components, totaling0.367417CPU-seconds. Interrupts/read-window increments
+alone do not explain it; no process attribution or accounting correction is
+justified. SeeDGX_QUIET_CPU_FIELDS_20260918.md. No remote benchmark was
+repeated, no services changed, and no timing was admitted.
+
+Next: finish source-bound pair conversion and six-endpoint QfO scoring;
+continue independent timing-accounting investigation. Publication remains
+incomplete, including missing original TreeFam family inputs.
+
 ## All-Hit Sequence Graph Completed; Admission Running (2026-09-18 UTC)
 
 Previous turn progressed throughd7d217d with a completed all-method quiet
