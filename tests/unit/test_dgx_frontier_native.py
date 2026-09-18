@@ -12,6 +12,22 @@ from benchmark_tools.measure_native_frontier_step import measure
 ROOT = Path(__file__).resolve().parents[2] / "benchmark_tools"
 
 
+def test_transferred_recipe_matches_local_sources():
+    import hashlib
+
+    manifest = json.loads((ROOT / "results/dgx_frontier_native_recipe_v1_20260918.json").read_text())
+    assert manifest["external_symlinks"] == []
+    files = [row for row in manifest["records"] if row["kind"] == "file"]
+    assert len(files) == 33
+    for row in files:
+        path = ROOT / Path(row["path"]).name
+        if not path.exists():
+            path = ROOT / "results" / path.name
+        data = path.read_bytes()
+        assert len(data) == row["bytes"]
+        assert hashlib.sha256(data).hexdigest() == row["sha256"]
+
+
 @pytest.mark.parametrize("old,new", [
     ("run_dgx_hierarchy_quiet_smoke.py", "run_dgx_frontier_native_smoke.py"),
     ("run_dgx_hierarchy_quiet_smoke.sh", "run_dgx_frontier_native_smoke.sh"),
