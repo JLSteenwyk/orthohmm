@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Corrected Replay Manifest Builder (2026-09-18 UTC)
+
+Previous turn progressed by queuing corrected native HMM admission 21720
+and fixing its native metrics schema. Re-read the full objective and polled
+the live jobs; inference and scoring are still running, not failed or lost.
+
+Added `prepare_qfo_corrected_replay.py`. Unlike the original replay wrapper,
+it binds an explicitly hashed corrected-native admission, all 78 corrected
+FASTAs and the admitted checkpoint manifest, with exact 984,137-gene coverage.
+It verifies the existing frozen core/launcher/runtime and produces a fresh
+command manifest. A regression test compares every command argument with
+the original replay, permitting only corrected FASTA/checkpoint/hash changes.
+Old-release evidence, missing input hashes, wrong checkpoints and incomplete
+scheduler states are rejected. No corrected replay was launched or manifest
+produced using fabricated admission evidence.
+
+The focused replay-builder/admission/content tests pass (75 tests). The
+builder's filesystem test exercises actual file hashes but mocks runtime
+verification and uses synthetic admission data; it is not production evidence.
+The complete unit suite also passes: 2,859 passed, one skipped in 61.25 seconds.
+Execution remains explicitly unauthorized until the corrected checked-worker
+and driver are frozen. The four native graph boundaries, complete coverage,
+comparison with fresh native groups, candidate arms, reconciliation and scoring
+are still required. Original-release and corrected results remain separate.
+
 ## Corrected HMM Completion Gate Queued (2026-09-18 UTC)
 
 Previous turn made progress with the content checker and real historical
