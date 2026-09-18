@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Paired Native Overhead Panel Submitted (2026-09-18 UTC)
+
+Previous turn made progress througha2ebb57: both QfO sequence-control scores
+were independently admitted and the native overhead plan frozen. Reread
+the full objective and checked21706_0still running before this work.
+
+Implemented exact-scope authorization and an18-task launcher retaining
+frozen commands, input/runtime checks and resource limits. Both collectors,
+the launcher and plan must be present with matching hashes in the recipe.
+Each task retains authorization/mode provenance, including native failures.
+Launcher committed/pushed75b7723.39 transferred files match local sources;
+DGX preflight selected all18 tasks without native execution. Recipe and
+authorization committed/pushed9c13e3a;58 focused tests and shell syntax pass.
+
+Submitted array21838, exclusive20CPU/96GiB, concurrency1, delay60seconds,
+no requeue. Submission SSH ended before2026-09-18T23:23:30Z. No DGX remote
+calls are permitted until the local scheduler confirms all18 tasks terminal.
+Only local scheduler polling and main-host work may continue meanwhile.
+SeeDGX_FRONTIER_OVERHEAD_SUBMISSION_21838.md for exact pins and restrictions.
+
+This measures incremental periodic collection on the smallest real scaling
+input, not comparative scientific tool speed. Do not admit timings, change
+thresholds, subtract overhead, or selectively repeat failures. Independent
+native-output/replay and paired-budget analysis remain pending completion.
+
 ## Both QfO Sequence Controls Admitted (2026-09-18 UTC)
 
 Previous turn made progress through2c8ef85, implementing the boundary-only
