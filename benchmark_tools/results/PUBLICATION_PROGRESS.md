@@ -1,5 +1,23 @@
 # Publication Progress
 
+## GO/EC Arithmetic and Interval Semantics (2026-09-17)
+
+Previous turn made progress: FAS sample audit committed and pushed as d1e05bf.
+Re-read the full objective. All 24 GO/EC raw counts, means and native interval
+fields pass a new audit against the pinned Darwin image, allowing for raw
+six-decimal serialization. Maximum mean discrepancy 1.264e-8; maximum interval
+discrepancy 1.360e-10. Every result has repeated protein participation.
+
+Important clarification: Darwin `Stat['StdErr']` is a Student-t 95% confidence
+half-width, not one SEM; FAS uses one SEM. Stored native values remain unchanged.
+Fifteen focused tests pass. Sources, critical-value execution, input hashes,
+all 24 results and bounds are recorded in `qfo_go_ec_arithmetic_audit_20260917.json`;
+interpretation and limits are in `QFO_GO_EC_ARITHMETIC_AUDIT_20260917.md`.
+Underlying annotation-score validation, dependence-aware paired uncertainty,
+timing admission and the broader publication requirements remain unfinished.
+DGX array 21656 was rechecked live with task 6 running and tasks 7-26 pending;
+no restart or workload change was made.
+
 ## FAS Sample Arithmetic and Coverage (2026-09-17)
 
 Previous turn was a verified wait: DGX array 21656 had six completed tasks,

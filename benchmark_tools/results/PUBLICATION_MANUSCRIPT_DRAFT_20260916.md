@@ -258,6 +258,15 @@ dependence-aware uncertainty for method contrasts. The audit validates
 saved-sample arithmetic, not sampling representativeness or underlying
 feature-score correctness. [FAS sample audit](QFO_FAS_SAMPLE_AUDIT_20260917.md).
 
+For GO and EC, all 24 historical-comparator/recovered-stage raw counts,
+means and native uncertainty values were consistent with the retained
+scorers within six-decimal raw serialization bounds. Inspection and execution
+of the pinned Darwin statistics implementation established that GO/EC
+`stderr` values are Student-t 95% confidence half-widths, whereas FAS reports
+one SEM. These native quantities are not interchangeable and neither supplies
+family-aware paired method uncertainty. Every audited GO/EC result reuses
+proteins across scored pairs. [GO/EC audit](QFO_GO_EC_ARITHMETIC_AUDIT_20260917.md).
+
 The independently admitted recovered replay is reported separately from
 these historical method rows. Its profile branch had SwissTrees F1
 differences of-0.003706 before and-0.003716 after sequence-based refinement

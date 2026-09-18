@@ -1,0 +1,835 @@
+{
+  "comparison": {
+    "bytes": 67483,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_comparison_orthomcl_complete_20260916.json",
+    "sha256": "094f842ad8211450519d4238c0b3a5020a7969049d4b7306f5465d5acbf914a3"
+  },
+  "container": {
+    "bytes": 53297152,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/container_cache/qfobenchmark-darwin-2022.1.img",
+    "sha256": "abed2b0ff8bb033a2372d0cd5282fd1d6c8ab5fa07496afc48c82f54ed65ea21"
+  },
+  "critical_value_program": "s := Stat('audit'):\nprintf('CRITICAL\\t0\\t%.15g\\n', InverseStudent_t(0.95,144561)):\nprintf('CRITICAL\\t1\\t%.15g\\n', InverseStudent_t(0.95,81000)):\nprintf('CRITICAL\\t2\\t%.15g\\n', InverseStudent_t(0.95,166263)):\nprintf('CRITICAL\\t3\\t%.15g\\n', InverseStudent_t(0.95,2022805)):\nprintf('CRITICAL\\t4\\t%.15g\\n', InverseStudent_t(0.95,198242)):\nprintf('CRITICAL\\t5\\t%.15g\\n', InverseStudent_t(0.95,89309)):\nprintf('CRITICAL\\t6\\t%.15g\\n', InverseStudent_t(0.95,181534)):\nprintf('CRITICAL\\t7\\t%.15g\\n', InverseStudent_t(0.95,176710)):\nprintf('CRITICAL\\t8\\t%.15g\\n', InverseStudent_t(0.95,353316)):\nprintf('CRITICAL\\t9\\t%.15g\\n', InverseStudent_t(0.95,144240)):\nprintf('CRITICAL\\t10\\t%.15g\\n', InverseStudent_t(0.95,351530)):\nprintf('CRITICAL\\t11\\t%.15g\\n', InverseStudent_t(0.95,144346)):\nprintf('CRITICAL\\t12\\t%.15g\\n', InverseStudent_t(0.95,187523)):\nprintf('CRITICAL\\t13\\t%.15g\\n', InverseStudent_t(0.95,97158)):\nprintf('CRITICAL\\t14\\t%.15g\\n', InverseStudent_t(0.95,160579)):\nprintf('CRITICAL\\t15\\t%.15g\\n', InverseStudent_t(0.95,1671561)):\nprintf('CRITICAL\\t16\\t%.15g\\n', InverseStudent_t(0.95,245611)):\nprintf('CRITICAL\\t17\\t%.15g\\n', InverseStudent_t(0.95,143173)):\nprintf('CRITICAL\\t18\\t%.15g\\n', InverseStudent_t(0.95,176820)):\nprintf('CRITICAL\\t19\\t%.15g\\n', InverseStudent_t(0.95,221298)):\nprintf('CRITICAL\\t20\\t%.15g\\n', InverseStudent_t(0.95,313326)):\nprintf('CRITICAL\\t21\\t%.15g\\n', InverseStudent_t(0.95,188161)):\nprintf('CRITICAL\\t22\\t%.15g\\n', InverseStudent_t(0.95,313911)):\nprintf('CRITICAL\\t23\\t%.15g\\n', InverseStudent_t(0.95,187771)):\ndone;\n",
+  "limitations": [
+    "Native stderr field is a Student-t 95% mean half-width, not one SEM.",
+    "Pair independence is not established; these intervals do not provide family-aware method-comparison uncertainty.",
+    "Raw scores have six-decimal precision; exact full-precision means cannot be reconstructed.",
+    "No underlying ontology/annotation score recomputation or prediction completeness validation is claimed."
+  ],
+  "native_sources": {
+    "/benchmark/EcTest.drw": {
+      "bytes": 6902,
+      "sha256": "8790e09172a8201e36f366d831c5dd2ef6b5f81a4da02dfa70f6ed3f061d3a25"
+    },
+    "/benchmark/GoTest.drw": {
+      "bytes": 8501,
+      "sha256": "7113707dc53bb59aa5dc6de92f58630c72396a1d4596b3d368cecceab7470f55"
+    },
+    "/darwin/lib/Stat": {
+      "bytes": 24556,
+      "sha256": "5c79f54a11483832837a8eb0473a4136d20a10ab46856e71ed384ad2dedd6572"
+    }
+  },
+  "native_stderr": "",
+  "native_stdout": "Darwin: Sequence Searching Facility\nVersion 4.0, 2019-02-06\n  (c) E.T.H. Zurich\n> s := Stat('audit'):\n> printf('CRITICAL\\t0\\t%.15g\\n', InverseStudent_t(0.95,144561)):\nCRITICAL\t0\t1.95998039484962\n> printf('CRITICAL\\t1\\t%.15g\\n', InverseStudent_t(0.95,81000)):\nCRITICAL\t1\t1.95999327226944\n> printf('CRITICAL\\t2\\t%.15g\\n', InverseStudent_t(0.95,166263)):\nCRITICAL\t2\t1.95997825282713\n> printf('CRITICAL\\t3\\t%.15g\\n', InverseStudent_t(0.95,2022805)):\nCRITICAL\t3\t1.95996515730397\n> printf('CRITICAL\\t4\\t%.15g\\n', InverseStudent_t(0.95,198242)):\nCRITICAL\t4\t1.95997595115398\n> printf('CRITICAL\\t5\\t%.15g\\n', InverseStudent_t(0.95,89309)):\nCRITICAL\t5\t1.95999054740425\n> printf('CRITICAL\\t6\\t%.15g\\n', InverseStudent_t(0.95,181534)):\nCRITICAL\t6\t1.95997705254267\n> printf('CRITICAL\\t7\\t%.15g\\n', InverseStudent_t(0.95,176710)):\nCRITICAL\t7\t1.95997740928801\n> printf('CRITICAL\\t8\\t%.15g\\n', InverseStudent_t(0.95,353316)):\nCRITICAL\t8\t1.95997069886727\n> printf('CRITICAL\\t9\\t%.15g\\n', InverseStudent_t(0.95,144240)):\nCRITICAL\t9\t1.95998043137037\n> printf('CRITICAL\\t10\\t%.15g\\n', InverseStudent_t(0.95,351530)):\nCRITICAL\t10\t1.95997073298052\n> printf('CRITICAL\\t11\\t%.15g\\n', InverseStudent_t(0.95,144346)):\nCRITICAL\t11\t1.9599804192926\n> printf('CRITICAL\\t12\\t%.15g\\n', InverseStudent_t(0.95,187523)):\nCRITICAL\t12\t1.95997663518179\n> printf('CRITICAL\\t13\\t%.15g\\n', InverseStudent_t(0.95,97158)):\nCRITICAL\t13\t1.95998840147212\n> printf('CRITICAL\\t14\\t%.15g\\n', InverseStudent_t(0.95,160579)):\nCRITICAL\t14\t1.95997875788411\n> printf('CRITICAL\\t15\\t%.15g\\n', InverseStudent_t(0.95,1671561)):\nCRITICAL\t15\t1.95996540373624\n> printf('CRITICAL\\t16\\t%.15g\\n', InverseStudent_t(0.95,245611)):\nCRITICAL\t16\t1.95997364323911\n> printf('CRITICAL\\t17\\t%.15g\\n', InverseStudent_t(0.95,143173)):\nCRITICAL\t17\t1.95998055394176\n> printf('CRITICAL\\t18\\t%.15g\\n', InverseStudent_t(0.95,176820)):\nCRITICAL\t18\t1.9599774009364\n> printf('CRITICAL\\t19\\t%.15g\\n', InverseStudent_t(0.95,221298)):\nCRITICAL\t19\t1.95997470440194\n> printf('CRITICAL\\t20\\t%.15g\\n', InverseStudent_t(0.95,313326)):\nCRITICAL\t20\t1.95997155582444\n> printf('CRITICAL\\t21\\t%.15g\\n', InverseStudent_t(0.95,188161)):\nCRITICAL\t21\t1.95997659228682\n> printf('CRITICAL\\t22\\t%.15g\\n', InverseStudent_t(0.95,313911)):\nCRITICAL\t22\t1.95997154171466\n> printf('CRITICAL\\t23\\t%.15g\\n', InverseStudent_t(0.95,187771)):\nCRITICAL\t23\t1.95997661847325\n> done;\n    0.02 secs of cpu used\n",
+  "results": [
+    {
+      "aggregate": {
+        "bytes": 643,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthohmm_high_sensitivity/results/GO/GO.json",
+        "sha256": "6828e49f152050855831ea9764331c9af31b2a804c14a59ceac187500b0aca25"
+      },
+      "half_width_absolute_tolerance": 2.6274850780846364e-09,
+      "maximum_protein_degree": 44,
+      "mean_absolute_tolerance": 5.050099999999999e-07,
+      "mean_from_rounded_raw": 0.47228231113293845,
+      "method": "orthohmm_high_sensitivity",
+      "metric": "GO",
+      "native_95_half_width_from_rounded_raw": 0.0012040653660597104,
+      "native_t_critical": 1.95998039484962,
+      "pair_iid_sem_from_rounded_raw": 0.0006143252091825606,
+      "pairs": 144562,
+      "participant": {
+        "metric_x": 144562,
+        "metric_y": 0.47228231,
+        "participant_id": "orthohmm_high_sensitivity",
+        "stderr_x": 0,
+        "stderr_y": 0.0012040654
+      },
+      "proteins": 47387,
+      "proteins_in_multiple_pairs": 39562,
+      "raw": {
+        "bytes": 1285170,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthohmm_high_sensitivity/results/GO/GO_orthohmm-high-sensitivity_9f3d08d49d7e_raw.txt.gz",
+        "sha256": "43eac38fbce39f2c56d3c42cc30ade23a4067e6f12dc41cf103e87de7d6760eb"
+      },
+      "reported_mean": 0.47228231,
+      "reported_stderr_field": 0.0012040654
+    },
+    {
+      "aggregate": {
+        "bytes": 648,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthohmm_phylogeny_satellite_v2/results/GO/GO.json",
+        "sha256": "21ee5743e2af93454e3091aa909b8864599e360379a678cf96f6ec0de67e2eb4"
+      },
+      "half_width_absolute_tolerance": 3.4933571883210944e-09,
+      "maximum_protein_degree": 32,
+      "mean_absolute_tolerance": 5.050099999999999e-07,
+      "mean_from_rounded_raw": 0.49012048185825013,
+      "method": "orthohmm_phylogeny_satellite_v2",
+      "metric": "GO",
+      "native_95_half_width_from_rounded_raw": 0.0016337954943490478,
+      "native_t_critical": 1.95999327226944,
+      "pair_iid_sem_from_rounded_raw": 0.0008335719910187784,
+      "pairs": 81001,
+      "participant": {
+        "metric_x": 81001,
+        "metric_y": 0.49012048,
+        "participant_id": "orthohmm_phylogeny_satellite_v2",
+        "stderr_x": 0,
+        "stderr_y": 0.0016337955
+      },
+      "proteins": 45009,
+      "proteins_in_multiple_pairs": 34022,
+      "raw": {
+        "bytes": 761811,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthohmm_phylogeny_satellite_v2/results/GO/GO_orthohmm-phylogeny-satellite-v2_d7b051d7a013_raw.txt.gz",
+        "sha256": "61446cf77e9da08b32b5933e9b78677049230e015e425df8997a0a8b3431896b"
+      },
+      "reported_mean": 0.49012048,
+      "reported_stderr_field": 0.0016337955
+    },
+    {
+      "aggregate": {
+        "bytes": 640,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthofinder_v3_diamond/results/GO/GO.json",
+        "sha256": "042f125034267520f598244d42fcb95c7a0108e04239495b59f0514fc4f3f1f6"
+      },
+      "half_width_absolute_tolerance": 2.453385577568611e-09,
+      "maximum_protein_degree": 345,
+      "mean_absolute_tolerance": 5.050099999999999e-07,
+      "mean_from_rounded_raw": 0.468165569828701,
+      "method": "orthofinder_3_1_5_full",
+      "metric": "GO",
+      "native_95_half_width_from_rounded_raw": 0.001126195401008846,
+      "native_t_critical": 1.95997825282713,
+      "pair_iid_sem_from_rounded_raw": 0.0005745958657369738,
+      "pairs": 166264,
+      "participant": {
+        "metric_x": 166264,
+        "metric_y": 0.46816557,
+        "participant_id": "orthofinder_v3_diamond",
+        "stderr_x": 0,
+        "stderr_y": 0.0011261954
+      },
+      "proteins": 61490,
+      "proteins_in_multiple_pairs": 51237,
+      "raw": {
+        "bytes": 1490553,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthofinder_v3_diamond/results/GO/GO_orthofinder-v3-diamond_c1abc7e92726_raw.txt.gz",
+        "sha256": "8aa417a47bf1bd967bc73e6aea6adafd5fe19aecd5a8e3460c2b70ff5c2637fa"
+      },
+      "reported_mean": 0.46816557,
+      "reported_stderr_field": 0.0011261954
+    },
+    {
+      "aggregate": {
+        "bytes": 647,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthofinder_v3_sequence_only/results/GO/GO.json",
+        "sha256": "030804374fdc3774fdb4ca706f8ccce423887b3557c49542496ea6ab69d9f720"
+      },
+      "half_width_absolute_tolerance": 7.390351003359915e-10,
+      "maximum_protein_degree": 1098,
+      "mean_absolute_tolerance": 5.050099999999999e-07,
+      "mean_from_rounded_raw": 0.40760019918767554,
+      "method": "orthofinder_3_1_5_sequence_only",
+      "metric": "GO",
+      "native_95_half_width_from_rounded_raw": 0.0002867118488632587,
+      "native_t_critical": 1.95996515730397,
+      "pair_iid_sem_from_rounded_raw": 0.00014628415601920452,
+      "pairs": 2022806,
+      "participant": {
+        "metric_x": 2022806,
+        "metric_y": 0.4076002,
+        "participant_id": "orthofinder_v3_sequence_only",
+        "stderr_x": 0,
+        "stderr_y": 0.00028671185
+      },
+      "proteins": 69037,
+      "proteins_in_multiple_pairs": 64849,
+      "raw": {
+        "bytes": 15872259,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthofinder_v3_sequence_only/results/GO/GO_orthofinder-v3-sequence-only_1a92e5c1da79_raw.txt.gz",
+        "sha256": "52f02b17478e868a762d64ef0279181ee9590dde4895559209f01b2910887240"
+      },
+      "reported_mean": 0.4076002,
+      "reported_stderr_field": 0.00028671185
+    },
+    {
+      "aggregate": {
+        "bytes": 638,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/sonicparanoid_native/results/GO/GO.json",
+        "sha256": "a7ea78aee9a8eaf932fc21089670c4a12a0c495572425b8244827aee2670ee83"
+      },
+      "half_width_absolute_tolerance": 2.2510145407981363e-09,
+      "maximum_protein_degree": 295,
+      "mean_absolute_tolerance": 5.050099999999999e-07,
+      "mean_from_rounded_raw": 0.4544131136332737,
+      "method": "sonicparanoid_2_0_9",
+      "metric": "GO",
+      "native_95_half_width_from_rounded_raw": 0.001017628415382836,
+      "native_t_critical": 1.95997595115398,
+      "pair_iid_sem_from_rounded_raw": 0.0005192045416596486,
+      "pairs": 198243,
+      "participant": {
+        "metric_x": 198243,
+        "metric_y": 0.45441311,
+        "participant_id": "sonicparanoid_native",
+        "stderr_x": 0,
+        "stderr_y": 0.0010176284
+      },
+      "proteins": 60772,
+      "proteins_in_multiple_pairs": 50712,
+      "raw": {
+        "bytes": 1740894,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/sonicparanoid_native/results/GO/GO_sonicparanoid-native_6cd5072df0ba_raw.txt.gz",
+        "sha256": "a662146ec7f380130a96edfe02cd3b15eed64709301c438f41257b441a9c9d45"
+      },
+      "reported_mean": 0.45441311,
+      "reported_stderr_field": 0.0010176284
+    },
+    {
+      "aggregate": {
+        "bytes": 635,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/proteinortho_native/results/GO/GO.json",
+        "sha256": "8d0defa00e949b07f09e2a687cf6820573ccf52932586abffdd4d0d85b389dc9"
+      },
+      "half_width_absolute_tolerance": 3.329263898660098e-09,
+      "maximum_protein_degree": 53,
+      "mean_absolute_tolerance": 5.050099999999999e-07,
+      "mean_from_rounded_raw": 0.4859624044451939,
+      "method": "proteinortho_6_3_6",
+      "metric": "GO",
+      "native_95_half_width_from_rounded_raw": 0.0015283462808303688,
+      "native_t_critical": 1.95999054740425,
+      "pair_iid_sem_from_rounded_raw": 0.0007797722712767481,
+      "pairs": 89310,
+      "participant": {
+        "metric_x": 89310,
+        "metric_y": 0.4859624,
+        "participant_id": "proteinortho_native",
+        "stderr_x": 0,
+        "stderr_y": 0.0015283463
+      },
+      "proteins": 48886,
+      "proteins_in_multiple_pairs": 36151,
+      "raw": {
+        "bytes": 838343,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/proteinortho_native/results/GO/GO_proteinortho-native_61810a8fd518_raw.txt.gz",
+        "sha256": "add891e17ff45aa564bfe476699e5a373aa4ccedee769bad8a41b83bdb53827f"
+      },
+      "reported_mean": 0.4859624,
+      "reported_stderr_field": 0.0015283463
+    },
+    {
+      "aggregate": {
+        "bytes": 623,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/fastoma/results/GO/GO.json",
+        "sha256": "bdd25402f31fa0fcc5c77547d19c8f10e3ab6a86c059c97d36afc5f58c9098c4"
+      },
+      "half_width_absolute_tolerance": 2.350075025593046e-09,
+      "maximum_protein_degree": 240,
+      "mean_absolute_tolerance": 5.050099999999999e-07,
+      "mean_from_rounded_raw": 0.4344803429806941,
+      "method": "fastoma_0_3_5",
+      "metric": "GO",
+      "native_95_half_width_from_rounded_raw": 0.0010340399752471877,
+      "native_t_critical": 1.95997705254267,
+      "pair_iid_sem_from_rounded_raw": 0.0005275775927609622,
+      "pairs": 181535,
+      "participant": {
+        "metric_x": 181535,
+        "metric_y": 0.43448034,
+        "participant_id": "fastoma",
+        "stderr_x": 0,
+        "stderr_y": 0.00103404
+      },
+      "proteins": 49163,
+      "proteins_in_multiple_pairs": 38518,
+      "raw": {
+        "bytes": 1542809,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/fastoma/results/GO/GO_fastoma_a0c9af1ad44b_raw.txt.gz",
+        "sha256": "b5008438631288e6c87b39795043641a9b338944ad35f9ab0141d294a2546b05"
+      },
+      "reported_mean": 0.43448034,
+      "reported_stderr_field": 0.00103404
+    },
+    {
+      "aggregate": {
+        "bytes": 642,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthomcl_1_4_final_groups/results/GO/GO.json",
+        "sha256": "529df37d15f00d898755cccd87dc2dd9d911ea467b8f71b94bf1a45c92114df3"
+      },
+      "half_width_absolute_tolerance": 2.3812588970313933e-09,
+      "maximum_protein_degree": 89,
+      "mean_absolute_tolerance": 5.050099999999999e-07,
+      "mean_from_rounded_raw": 0.46301880385488037,
+      "method": "orthomcl_1_4",
+      "metric": "GO",
+      "native_95_half_width_from_rounded_raw": 0.0010784316909981037,
+      "native_t_critical": 1.95997740928801,
+      "pair_iid_sem_from_rounded_raw": 0.0005502265923513167,
+      "pairs": 176711,
+      "participant": {
+        "metric_x": 176711,
+        "metric_y": 0.4630188,
+        "participant_id": "orthomcl_1_4_final_groups",
+        "stderr_x": 0,
+        "stderr_y": 0.0010784317
+      },
+      "proteins": 58033,
+      "proteins_in_multiple_pairs": 48170,
+      "raw": {
+        "bytes": 1584883,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthomcl_1_4_final_groups/results/GO/GO_orthomcl-1-4-final-groups_69ab452a82cf_raw.txt.gz",
+        "sha256": "fd6d1a12eb8d92cf2cf041ccf02a10ea628255300b317de3f279f4c0ca77ab31"
+      },
+      "reported_mean": 0.4630188,
+      "reported_stderr_field": 0.0010784317
+    },
+    {
+      "aggregate": {
+        "bytes": 636,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_0/results/GO/GO.json",
+        "sha256": "83b26b1e1bd650c33366ff5addcc51069ef0b67f2460247173d6b2d8814f37c5"
+      },
+      "half_width_absolute_tolerance": 1.6986859261037125e-09,
+      "maximum_protein_degree": 224,
+      "mean_absolute_tolerance": 5.050099999999999e-07,
+      "mean_from_rounded_raw": 0.4448032097634744,
+      "method": "checked_v2_0",
+      "metric": "GO",
+      "native_95_half_width_from_rounded_raw": 0.0007510045887778162,
+      "native_t_critical": 1.95997069886727,
+      "pair_iid_sem_from_rounded_raw": 0.0003831713347612012,
+      "pairs": 353317,
+      "participant": {
+        "metric_x": 353317,
+        "metric_y": 0.44480321,
+        "participant_id": "ohmm_checked_v2_0",
+        "stderr_x": 0,
+        "stderr_y": 0.00075100459
+      },
+      "proteins": 57376,
+      "proteins_in_multiple_pairs": 49478,
+      "raw": {
+        "bytes": 2915967,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_0/results/GO/GO_ohmm-checked-v2-0_3021a3a1e36d_raw.txt.gz",
+        "sha256": "2fe3c0fe24751f4e58784c7b51913699ba1ffe0e24dfcee1377b42374964119e"
+      },
+      "reported_mean": 0.44480321,
+      "reported_stderr_field": 0.00075100459
+    },
+    {
+      "aggregate": {
+        "bytes": 635,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_1/results/GO/GO.json",
+        "sha256": "6e9470cc010c90a0d7e5433a2400f136772fb7a4a2071128e7bdf408cc535e4f"
+      },
+      "half_width_absolute_tolerance": 2.6303515741018467e-09,
+      "maximum_protein_degree": 44,
+      "mean_absolute_tolerance": 5.050099999999999e-07,
+      "mean_from_rounded_raw": 0.4725367132992737,
+      "method": "checked_v2_1",
+      "metric": "GO",
+      "native_95_half_width_from_rounded_raw": 0.0012060120845652916,
+      "native_t_critical": 1.95998043137037,
+      "pair_iid_sem_from_rounded_raw": 0.0006153184313794796,
+      "pairs": 144241,
+      "participant": {
+        "metric_x": 144241,
+        "metric_y": 0.47253671,
+        "participant_id": "ohmm_checked_v2_1",
+        "stderr_x": 0,
+        "stderr_y": 0.0012060121
+      },
+      "proteins": 47368,
+      "proteins_in_multiple_pairs": 39520,
+      "raw": {
+        "bytes": 1282375,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_1/results/GO/GO_ohmm-checked-v2-1_737919254908_raw.txt.gz",
+        "sha256": "ba14d3467cbd9b9a8d0c99b084d4636c91adf434baceb80c49001ed310d334a9"
+      },
+      "reported_mean": 0.47253671,
+      "reported_stderr_field": 0.0012060121
+    },
+    {
+      "aggregate": {
+        "bytes": 635,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_2/results/GO/GO.json",
+        "sha256": "b96ba0bc259192c1b39c5895b02da108ce014a62ed0adaa2c8071c660b120bac"
+      },
+      "half_width_absolute_tolerance": 1.7028688446336323e-09,
+      "maximum_protein_degree": 218,
+      "mean_absolute_tolerance": 5.050099999999999e-07,
+      "mean_from_rounded_raw": 0.44400634033697683,
+      "method": "checked_v2_2",
+      "metric": "GO",
+      "native_95_half_width_from_rounded_raw": 0.0007515811999706062,
+      "native_t_critical": 1.95997073298052,
+      "pair_iid_sem_from_rounded_raw": 0.000383465521869135,
+      "pairs": 351531,
+      "participant": {
+        "metric_x": 351531,
+        "metric_y": 0.44400634,
+        "participant_id": "ohmm_checked_v2_2",
+        "stderr_x": 0,
+        "stderr_y": 0.0007515812
+      },
+      "proteins": 57394,
+      "proteins_in_multiple_pairs": 49520,
+      "raw": {
+        "bytes": 2904249,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_2/results/GO/GO_ohmm-checked-v2-2_462d6d8853e0_raw.txt.gz",
+        "sha256": "857211dd4579dbf2d4d7b9bab4dae5b158fe2e871f6b038443225fdc4b246e32"
+      },
+      "reported_mean": 0.44400634,
+      "reported_stderr_field": 0.0007515812
+    },
+    {
+      "aggregate": {
+        "bytes": 635,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_3/results/GO/GO.json",
+        "sha256": "5c8e399ba629ac29c181823c2d4302824ae11471779fff1b4b60c39e7c9dcca5"
+      },
+      "half_width_absolute_tolerance": 2.6294039479531615e-09,
+      "maximum_protein_degree": 44,
+      "mean_absolute_tolerance": 5.050099999999999e-07,
+      "mean_from_rounded_raw": 0.472350281938663,
+      "method": "checked_v2_3",
+      "metric": "GO",
+      "native_95_half_width_from_rounded_raw": 0.001205949311484893,
+      "native_t_critical": 1.9599804192926,
+      "pair_iid_sem_from_rounded_raw": 0.0006152864077693932,
+      "pairs": 144347,
+      "participant": {
+        "metric_x": 144347,
+        "metric_y": 0.47235028,
+        "participant_id": "ohmm_checked_v2_3",
+        "stderr_x": 0,
+        "stderr_y": 0.0012059493
+      },
+      "proteins": 47357,
+      "proteins_in_multiple_pairs": 39531,
+      "raw": {
+        "bytes": 1283312,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_3/results/GO/GO_ohmm-checked-v2-3_fdc7b0caf9a9_raw.txt.gz",
+        "sha256": "d08b78dbfa4ac2302ebcce3ce0a1d0e4c35a92226943a4eb32e8fd4b73eab887"
+      },
+      "reported_mean": 0.47235028,
+      "reported_stderr_field": 0.0012059493
+    },
+    {
+      "aggregate": {
+        "bytes": 644,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthohmm_high_sensitivity/results/EC/EC.json",
+        "sha256": "4df2e5ab66fc6873f3c3e84caba20e06f48ba875ae285f5c613f2624cd2f9ccb"
+      },
+      "half_width_absolute_tolerance": 2.3130472798782802e-09,
+      "maximum_protein_degree": 63,
+      "mean_absolute_tolerance": 5.050099999999999e-07,
+      "mean_from_rounded_raw": 0.9310448992715608,
+      "method": "orthohmm_high_sensitivity",
+      "metric": "EC",
+      "native_95_half_width_from_rounded_raw": 0.000835943209927306,
+      "native_t_critical": 1.95997663518179,
+      "pair_iid_sem_from_rounded_raw": 0.00042650672203027124,
+      "pairs": 187524,
+      "participant": {
+        "metric_x": 187524,
+        "metric_y": 0.93104489,
+        "participant_id": "orthohmm_high_sensitivity",
+        "stderr_x": 0,
+        "stderr_y": 0.00083594327
+      },
+      "proteins": 26662,
+      "proteins_in_multiple_pairs": 25070,
+      "raw": {
+        "bytes": 998396,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthohmm_high_sensitivity/results/EC/EC_orthohmm-high-sensitivity_08f7a3d19ce9_raw.txt.gz",
+        "sha256": "0c9c92c071988b7ab537d9f2a664b9e00dc97793a9aaef409d9ef7917354a401"
+      },
+      "reported_mean": 0.93104489,
+      "reported_stderr_field": 0.00083594327
+    },
+    {
+      "aggregate": {
+        "bytes": 648,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthohmm_phylogeny_satellite_v2/results/EC/EC.json",
+        "sha256": "9f8f2a753b741f3c6fbb03dbe7a300b1b117a535799eee99bd46bf9e83c3a813"
+      },
+      "half_width_absolute_tolerance": 3.194012199728119e-09,
+      "maximum_protein_degree": 52,
+      "mean_absolute_tolerance": 5.050099999999999e-07,
+      "mean_from_rounded_raw": 0.969195421175609,
+      "method": "orthohmm_phylogeny_satellite_v2",
+      "metric": "EC",
+      "native_95_half_width_from_rounded_raw": 0.0007546864640614127,
+      "native_t_critical": 1.95998840147212,
+      "pair_iid_sem_from_rounded_raw": 0.0003850463928738447,
+      "pairs": 97159,
+      "participant": {
+        "metric_x": 97159,
+        "metric_y": 0.96919541,
+        "participant_id": "orthohmm_phylogeny_satellite_v2",
+        "stderr_x": 0,
+        "stderr_y": 0.0007546866
+      },
+      "proteins": 25465,
+      "proteins_in_multiple_pairs": 22398,
+      "raw": {
+        "bytes": 535587,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthohmm_phylogeny_satellite_v2/results/EC/EC_orthohmm-phylogeny-satellite-v2_ed5c93c2c4de_raw.txt.gz",
+        "sha256": "975c66be48ffd731b1da91c319eb9d090d25d2d072141d3790c83ccb0140efc3"
+      },
+      "reported_mean": 0.96919541,
+      "reported_stderr_field": 0.0007546866
+    },
+    {
+      "aggregate": {
+        "bytes": 641,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthofinder_v3_diamond/results/EC/EC.json",
+        "sha256": "2738765e131156c0b240db8a393b861833cadf4d3f0b645cd27534c48f4853cd"
+      },
+      "half_width_absolute_tolerance": 2.4955525217055337e-09,
+      "maximum_protein_degree": 215,
+      "mean_absolute_tolerance": 5.050099999999999e-07,
+      "mean_from_rounded_raw": 0.9419823479325103,
+      "method": "orthofinder_3_1_5_full",
+      "metric": "EC",
+      "native_95_half_width_from_rounded_raw": 0.0008341147165296625,
+      "native_t_critical": 1.95997875788411,
+      "pair_iid_sem_from_rounded_raw": 0.0004255733452081536,
+      "pairs": 160580,
+      "participant": {
+        "metric_x": 160580,
+        "metric_y": 0.94198234,
+        "participant_id": "orthofinder_v3_diamond",
+        "stderr_x": 0,
+        "stderr_y": 0.00083411477
+      },
+      "proteins": 31419,
+      "proteins_in_multiple_pairs": 29234,
+      "raw": {
+        "bytes": 873054,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthofinder_v3_diamond/results/EC/EC_orthofinder-v3-diamond_3d4f9633db51_raw.txt.gz",
+        "sha256": "cacff2b77fd45d4882d0d654af618504fa834e3bccc991beb158b309992af10f"
+      },
+      "reported_mean": 0.94198234,
+      "reported_stderr_field": 0.00083411477
+    },
+    {
+      "aggregate": {
+        "bytes": 648,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthofinder_v3_sequence_only/results/EC/EC.json",
+        "sha256": "2319def5d14d95a9b317da8af00bb3a9554adee10fbd2b4632008a4ed42b3597"
+      },
+      "half_width_absolute_tolerance": 8.079792117727142e-10,
+      "maximum_protein_degree": 1216,
+      "mean_absolute_tolerance": 5.050099999999999e-07,
+      "mean_from_rounded_raw": 0.7533944596012923,
+      "method": "orthofinder_3_1_5_sequence_only",
+      "metric": "EC",
+      "native_95_half_width_from_rounded_raw": 0.0004624857242196432,
+      "native_t_critical": 1.95996540373624,
+      "pair_iid_sem_from_rounded_raw": 0.00023596626927088437,
+      "pairs": 1671562,
+      "participant": {
+        "metric_x": 1671562,
+        "metric_y": 0.75339446,
+        "participant_id": "orthofinder_v3_sequence_only",
+        "stderr_x": 0,
+        "stderr_y": 0.00046248571
+      },
+      "proteins": 33834,
+      "proteins_in_multiple_pairs": 33249,
+      "raw": {
+        "bytes": 7640354,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthofinder_v3_sequence_only/results/EC/EC_orthofinder-v3-sequence-only_fa4e091f9cfc_raw.txt.gz",
+        "sha256": "276f62fb907c256e528c63010ecb60ded32aff7a754e008f06f75d93807eb80b"
+      },
+      "reported_mean": 0.75339446,
+      "reported_stderr_field": 0.00046248571
+    },
+    {
+      "aggregate": {
+        "bytes": 639,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/sonicparanoid_native/results/EC/EC.json",
+        "sha256": "2fa78935bec4cd108868260fbc8d1e712436c1794737cb0caf17f4725b48d661"
+      },
+      "half_width_absolute_tolerance": 2.027408191403256e-09,
+      "maximum_protein_degree": 343,
+      "mean_absolute_tolerance": 5.050099999999999e-07,
+      "mean_from_rounded_raw": 0.8716664326335705,
+      "method": "sonicparanoid_2_0_9",
+      "metric": "EC",
+      "native_95_half_width_from_rounded_raw": 0.000963965221305497,
+      "native_t_critical": 1.95997364323911,
+      "pair_iid_sem_from_rounded_raw": 0.0004918256042017074,
+      "pairs": 245612,
+      "participant": {
+        "metric_x": 245612,
+        "metric_y": 0.87166642,
+        "participant_id": "sonicparanoid_native",
+        "stderr_x": 0,
+        "stderr_y": 0.00096396528
+      },
+      "proteins": 32529,
+      "proteins_in_multiple_pairs": 30771,
+      "raw": {
+        "bytes": 1340307,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/sonicparanoid_native/results/EC/EC_sonicparanoid-native_2c40fb62100f_raw.txt.gz",
+        "sha256": "d70f434d71ff1282fb03272bfb9b8cd58b2fb942ebefa7434f7787d08671dd9d"
+      },
+      "reported_mean": 0.87166642,
+      "reported_stderr_field": 0.00096396528
+    },
+    {
+      "aggregate": {
+        "bytes": 638,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/proteinortho_native/results/EC/EC.json",
+        "sha256": "1019637c0bcc785b12bcd193d0633c88b71bcda86e78d6a39dce2551f1a2a3e7"
+      },
+      "half_width_absolute_tolerance": 2.6399489524396346e-09,
+      "maximum_protein_degree": 54,
+      "mean_absolute_tolerance": 5.050099999999999e-07,
+      "mean_from_rounded_raw": 0.9628379315727685,
+      "method": "proteinortho_6_3_6",
+      "metric": "EC",
+      "native_95_half_width_from_rounded_raw": 0.0006651169335386802,
+      "native_t_critical": 1.95998055394176,
+      "pair_iid_sem_from_rounded_raw": 0.0003393487410888077,
+      "pairs": 143174,
+      "participant": {
+        "metric_x": 143174,
+        "metric_y": 0.96283793,
+        "participant_id": "proteinortho_native",
+        "stderr_x": 0,
+        "stderr_y": 0.00066511702
+      },
+      "proteins": 28934,
+      "proteins_in_multiple_pairs": 25904,
+      "raw": {
+        "bytes": 787816,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/proteinortho_native/results/EC/EC_proteinortho-native_fb4945e3f0af_raw.txt.gz",
+        "sha256": "b39b8fe3510b7cf1a0cb4cf70a5d202e996fcaff593abad620eff885e884ea33"
+      },
+      "reported_mean": 0.96283793,
+      "reported_stderr_field": 0.00066511702
+    },
+    {
+      "aggregate": {
+        "bytes": 626,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/fastoma/results/EC/EC.json",
+        "sha256": "e55336ec91fb5f0c837c1f6cd91eee6dc2d83e42364e1dabbd25c501dc3cebd6"
+      },
+      "half_width_absolute_tolerance": 2.380533634375505e-09,
+      "maximum_protein_degree": 141,
+      "mean_absolute_tolerance": 5.050099999999999e-07,
+      "mean_from_rounded_raw": 0.9166916595370327,
+      "method": "fastoma_0_3_5",
+      "metric": "EC",
+      "native_95_half_width_from_rounded_raw": 0.0009877913007078495,
+      "native_t_critical": 1.9599774009364,
+      "pair_iid_sem_from_rounded_raw": 0.0005039809643906719,
+      "pairs": 176821,
+      "participant": {
+        "metric_x": 176821,
+        "metric_y": 0.91669166,
+        "participant_id": "fastoma",
+        "stderr_x": 0,
+        "stderr_y": 0.00098779132
+      },
+      "proteins": 28066,
+      "proteins_in_multiple_pairs": 25511,
+      "raw": {
+        "bytes": 938977,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/fastoma/results/EC/EC_fastoma_86a3cff7d0f2_raw.txt.gz",
+        "sha256": "b3d7205edf563e57db04ba91b33c7398271a3c2cda885e332c0bdca2427c3ec3"
+      },
+      "reported_mean": 0.91669166,
+      "reported_stderr_field": 0.00098779132
+    },
+    {
+      "aggregate": {
+        "bytes": 644,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthomcl_1_4_final_groups/results/EC/EC.json",
+        "sha256": "11f15ec9d4e04f9a21689f9ba51262a66dc61277a5d92cef20fe83fcb253086f"
+      },
+      "half_width_absolute_tolerance": 2.1332036422398948e-09,
+      "maximum_protein_degree": 63,
+      "mean_absolute_tolerance": 5.050099999999999e-07,
+      "mean_from_rounded_raw": 0.9221400289653547,
+      "method": "orthomcl_1_4",
+      "metric": "EC",
+      "native_95_half_width_from_rounded_raw": 0.0008205322535753412,
+      "native_t_critical": 1.95997470440194,
+      "pair_iid_sem_from_rounded_raw": 0.00041864430787422614,
+      "pairs": 221299,
+      "participant": {
+        "metric_x": 221299,
+        "metric_y": 0.92214002,
+        "participant_id": "orthomcl_1_4_final_groups",
+        "stderr_x": 0,
+        "stderr_y": 0.00082053231
+      },
+      "proteins": 31266,
+      "proteins_in_multiple_pairs": 29502,
+      "raw": {
+        "bytes": 1184734,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthomcl_1_4_final_groups/results/EC/EC_orthomcl-1-4-final-groups_382f00ced20e_raw.txt.gz",
+        "sha256": "3943f9b25216cb576aca3fc360cdd6b72e9e54a66a6c8941f16a289f2f82d580"
+      },
+      "reported_mean": 0.92214002,
+      "reported_stderr_field": 0.00082053231
+    },
+    {
+      "aggregate": {
+        "bytes": 636,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_0/results/EC/EC.json",
+        "sha256": "6a9530ee71709a511108a04e4b5790dcf8247121185439877cdcc409060c7a27"
+      },
+      "half_width_absolute_tolerance": 1.8007396025838378e-09,
+      "maximum_protein_degree": 134,
+      "mean_absolute_tolerance": 5.050099999999999e-07,
+      "mean_from_rounded_raw": 0.8841100811995141,
+      "method": "checked_v2_0",
+      "metric": "EC",
+      "native_95_half_width_from_rounded_raw": 0.0007862504507588066,
+      "native_t_critical": 1.95997155582444,
+      "pair_iid_sem_from_rounded_raw": 0.00040115401084383557,
+      "pairs": 313327,
+      "participant": {
+        "metric_x": 313327,
+        "metric_y": 0.88411008,
+        "participant_id": "ohmm_checked_v2_0",
+        "stderr_x": 0,
+        "stderr_y": 0.00078625048
+      },
+      "proteins": 31251,
+      "proteins_in_multiple_pairs": 29611,
+      "raw": {
+        "bytes": 1610685,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_0/results/EC/EC_ohmm-checked-v2-0_86962a649d29_raw.txt.gz",
+        "sha256": "8b3f0816268ca1e9cad48100718de6c3a91a8cfde834082107ab25155ebe05ae"
+      },
+      "reported_mean": 0.88411008,
+      "reported_stderr_field": 0.00078625048
+    },
+    {
+      "aggregate": {
+        "bytes": 636,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_1/results/EC/EC.json",
+        "sha256": "f9891e809e4e77ecd29fe241d8488df4e2278bd52b882ceffbbb9a99fc1b9824"
+      },
+      "half_width_absolute_tolerance": 2.3092073004215074e-09,
+      "maximum_protein_degree": 63,
+      "mean_absolute_tolerance": 5.050099999999999e-07,
+      "mean_from_rounded_raw": 0.9311745211626212,
+      "method": "checked_v2_1",
+      "metric": "EC",
+      "native_95_half_width_from_rounded_raw": 0.000834138483989237,
+      "native_t_critical": 1.95997659228682,
+      "pair_iid_sem_from_rounded_raw": 0.00042558594182800857,
+      "pairs": 188162,
+      "participant": {
+        "metric_x": 188162,
+        "metric_y": 0.93117452,
+        "participant_id": "ohmm_checked_v2_1",
+        "stderr_x": 0,
+        "stderr_y": 0.00083413854
+      },
+      "proteins": 26729,
+      "proteins_in_multiple_pairs": 25122,
+      "raw": {
+        "bytes": 1001360,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_1/results/EC/EC_ohmm-checked-v2-1_9879903a7cfd_raw.txt.gz",
+        "sha256": "bc6fc9322bd16b29076c556abfa990d393d8a6dc8fb817cbf81a9f748dae39f1"
+      },
+      "reported_mean": 0.93117452,
+      "reported_stderr_field": 0.00083413854
+    },
+    {
+      "aggregate": {
+        "bytes": 636,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_2/results/EC/EC.json",
+        "sha256": "f6b1a877e0aae0c1910ba2d2f85cd56cfdff2602a844bbb59e7b28049699d07f"
+      },
+      "half_width_absolute_tolerance": 1.7991075027513326e-09,
+      "maximum_protein_degree": 134,
+      "mean_absolute_tolerance": 5.050099999999999e-07,
+      "mean_from_rounded_raw": 0.8844195413937556,
+      "method": "checked_v2_2",
+      "metric": "EC",
+      "native_95_half_width_from_rounded_raw": 0.000784590729601658,
+      "native_t_critical": 1.95997154171466,
+      "pair_iid_sem_from_rounded_raw": 0.00040030720492771404,
+      "pairs": 313912,
+      "participant": {
+        "metric_x": 313912,
+        "metric_y": 0.88441954,
+        "participant_id": "ohmm_checked_v2_2",
+        "stderr_x": 0,
+        "stderr_y": 0.00078459076
+      },
+      "proteins": 31251,
+      "proteins_in_multiple_pairs": 29621,
+      "raw": {
+        "bytes": 1613426,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_2/results/EC/EC_ohmm-checked-v2-2_87e69d128687_raw.txt.gz",
+        "sha256": "677775d32ec567407b004d785736272ede99ad6deac9c91e956cee80ba27aa9c"
+      },
+      "reported_mean": 0.88441954,
+      "reported_stderr_field": 0.00078459076
+    },
+    {
+      "aggregate": {
+        "bytes": 636,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_3/results/EC/EC.json",
+        "sha256": "e894d9bb53d1dc0dde158cede89e657552e3e9ca4777e05cb9834f4637991716"
+      },
+      "half_width_absolute_tolerance": 2.3115522982191557e-09,
+      "maximum_protein_degree": 63,
+      "mean_absolute_tolerance": 5.050099999999999e-07,
+      "mean_from_rounded_raw": 0.9313472874656503,
+      "method": "checked_v2_3",
+      "metric": "EC",
+      "native_95_half_width_from_rounded_raw": 0.0008340531121436386,
+      "native_t_critical": 1.95997661847325,
+      "pair_iid_sem_from_rounded_raw": 0.0004255423785582378,
+      "pairs": 187772,
+      "participant": {
+        "metric_x": 187772,
+        "metric_y": 0.93134728,
+        "participant_id": "ohmm_checked_v2_3",
+        "stderr_x": 0,
+        "stderr_y": 0.00083405317
+      },
+      "proteins": 26667,
+      "proteins_in_multiple_pairs": 25067,
+      "raw": {
+        "bytes": 999688,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_3/results/EC/EC_ohmm-checked-v2-3_9b956720ed3b_raw.txt.gz",
+        "sha256": "8a213e36a46308c0448281222dd7a3cbc09a6648a61d6f9d40419e1959fb89f9"
+      },
+      "reported_mean": 0.93134728,
+      "reported_stderr_field": 0.00083405317
+    }
+  ],
+  "source": {
+    "bytes": 7444,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_qfo_go_ec.py",
+    "sha256": "dd52e3bbcdf20e2d570716683e6a6b00b97045978cda7fe21b14c9d816ea5f9e"
+  },
+  "status": "all_retained_go_ec_arithmetic_verified_with_serialization_bounds"
+}
