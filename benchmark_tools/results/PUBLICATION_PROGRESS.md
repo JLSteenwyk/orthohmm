@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Same-Length Native Differences Explained By Symbol Representation (2026-09-17)
+
+Previous turn progressed with full native sequence audit2cc3e15. Re-read
+objective and confirmed21687,21671_1,DGX21656_8 live;21688still dependent.
+Added/executed exact difference classification:178same-length sequences
+differ only by noncanonical-to-X symbols, comprising315positions
+(B46,O7,U212,Z50). This covers all173non-XENTR differences and five XENTR.
+The other973pairs differ in length and are all XENTR, left unaligned.
+
+`qfo_sequence_difference_classes_20260917.json` and
+`QFO_SEQUENCE_DIFFERENCE_CLASSES_20260917.md` preserve per-accession proof.
+Fourteen combined tests pass. No input normalization, score change or claim
+about historical preprocessing code. Updated manuscript distinguishes this
+observed representation effect from the Xenopus release mismatch. Corrected
+download/comparison and full publication requirements remain outstanding.
+
 ## Native Scorer Sequence-Byte Audit Completed (2026-09-17)
 
 Previous turn progressed by queueing pinned corrected archive audite10afd3.

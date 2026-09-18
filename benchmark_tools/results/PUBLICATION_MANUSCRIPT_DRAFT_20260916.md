@@ -668,6 +668,14 @@ remain explicitly release-limited, not claimed as resolved official-release
 comparisons. Corrected inference and any reruns require a separate input
 freeze; changing only scores or accession labels is not a validated remedy.
 
+A [sequence-content follow-up](QFO_SEQUENCE_DIFFERENCE_CLASSES_20260917.md)
+found974,363exact byte matches among975,514mapped original inputs.
+All178same-length differences are solely B/O/U/Z-to-X representation changes,
+accounting for every non-Xenopus discrepancy. The remaining973length-different
+pairs are all Xenopus. This separates observed residue representation from
+the input-release issue without normalizing the frozen inputs or assuming
+all inference methods treat nonstandard residues equivalently.
+
 ### Remaining Requirements
 
 No universal superiority, arbitrary-dataset generalization, or controlled
