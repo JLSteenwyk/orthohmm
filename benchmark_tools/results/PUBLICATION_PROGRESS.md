@@ -1,5 +1,37 @@
 # Publication Progress
 
+## Corrected Eight-Cell Assessment Runner (2026-09-18 UTC)
+
+Previous turn progressed by pushing1e67abb and freezing native-pair
+conversion. This turn revalidated HMM21706_0 RUNNING4:04:10, Sonic scoring
+21727 RUNNING19:45 and DGX21656_17 RUNNING7:04. No new score admitted.
+
+Implemented `run_qfo_corrected_factorial_assessment.py` for all eight cells.
+Reuses the frozen six-endpoint Nextflow command/environment, retaining the
+2020 reference and separate short Darwin-compatible work paths `qcf0`-`qcf7`.
+Corrected participant IDs/output directories cannot reuse original-release
+results. Requires successful terminal2CPU conversion, reviewed manifest
+hash, exact R-off/R-on semantics and status, positive matched pair counts,
+zero corrected mapping loss, and byte-identical filtered/unfiltered pairs.
+
+R-off converter is pinned cb6489d6b3d06fb5c140f3c2ac297016abca0a1b;
+R-on converter is pinned1e67abba484ae22ac28639e90cd84df83e969b9f.
+The corresponding source must be in the conversion's checked inventory,
+its detached checkout must remain clean, and mapping identity must equal
+the frozen scorer mapping. Input/source/runtime records are checked before
+and after scoring. All output/work directories must be fresh; no resume.
+Native exit status, logs, outputs and failures are retained. Exit-zero
+status remains `process_succeeded_pending_independent_admission` with
+`accuracy_admitted=false`.
+
+29focused tests pass: eight cells, wrong participants/semantics/scheduler,
+changed counts/filter output, missing native recheck, early nonterminal
+refusal and successful/failed scoring lifecycle with preserved artifacts.
+Added8CPU/64GiB/24h/no-requeue batch. Native Nextflow execution is mocked in
+lifecycle tests; no new corrected-cell scoring was run before real upstream
+completion. Next: independent corrected all-cell score admission and actual
+conversion/scoring when the corrected candidates/reconciliation are admitted.
+
 ## Corrected Native-Pair Conversion (2026-09-18 UTC)
 
 Previous turn progressed by pushingcb6489d and freezing corrected R-off
