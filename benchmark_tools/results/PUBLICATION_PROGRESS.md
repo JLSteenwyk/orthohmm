@@ -1,5 +1,31 @@
 # Publication Progress
 
+## All-Hit Sequence Graph Completed; Admission Running (2026-09-18 UTC)
+
+Previous turn progressed throughd7d217d with a completed all-method quiet
+DGX control retaining a satellite_v2 flag. Reread the full objective and
+returned to the primary QfO sequence ablation when21813 became terminal.
+Scheduler confirms COMPLETED0:0 in37:34 with32CPUs/384GiB. The checked
+execution report covers both full984137-gene partitions, with217059multipass
+and417273multipass_refined groups. These are not reference-family accuracy.
+
+Verified the plan/result hashes and clean frozen admission executor, ran39
+focused admission/batch tests successfully, and submitted independent
+admission21823 (confirmed RUNNING2CPUs/192GiB). Top100graph21814 is running
+separately after the completed all-hit arm; neither its allocation nor any
+scientific setting was changed. HMM21706_0 and matched Three Kingdoms
+Sonic21795 also remain running. No native job was restarted.
+
+Retained terminal scheduler, complete execution report and worker GNU-time
+evidence. QFO_SEQUENCE_ALL_HITS_EXECUTION_20260918.md distinguishes37:34job
+elapsed from32:50.27checked-worker elapsed,99%observed worker CPU and maximum
+process RSS, without claiming controlled or end-to-end timing. Earlier live
+sstat malformed accounting is not used. Updated the claims execution status.
+
+Next: await actual independent graph admission, then source-bound pair
+conversion, all six QfO endpoints and paired uncertainty. All-hit execution
+alone does not pass these gates or complete the publication objective.
+
 ## All-Method Quiet DGX Control Completed (2026-09-18 UTC)
 
 Previous turn progressed throughed2f4de with native hierarchy integration and
