@@ -47,3 +47,31 @@ infer missing-protein recovery, one-proteome-only change, scorer compatibility
 or improved accuracy from the publisher filename or passing synthetic tests.
 Those require the completed empirical audit. Preserve original-input scores
 and ongoing factorial runs while this correctness investigation proceeds.
+
+## Pinned Dependent Comparison Queued
+
+Submitted comparison job21688 with `--dependency=afterok:21687` on bizon,
+2CPUs/16GiB/2hours. Its script is
+`qfo_corrected_archive_compare_20260917.sh`. The script separately requires
+the exact successful acquisition scheduler record and final archive byte
+count, so dependency submission itself is not evidence of a valid download.
+
+The executor is detached worktree
+`benchmarks/work/publication_qfo_corrected_archive_audit_v1`, pinned to
+`a1fbffcc8cb5b4fdabca18843d79d94b0baadaef`. It checks HEAD and tracked analysis
+source cleanliness before execution, records Python/Biopython versions in
+its log and uses the extended all-numeric-ID/species-interval comparison.
+The combined comparison/archive tests pass20cases; shell syntax passes.
+
+Output remains `qfo_corrected_archive_comparison_20260917.json`, written
+only to a fresh path after the complete audit returns. The frozen-input
+manifests, archive and mapping are checked before/after reading. No input
+extraction, replacement or inference is automatically scheduled. Independently
+inspect terminal status, changed-file inventory, missing IDs, sequence
+compatibility and input/scorer versions before declaring the release suitable.
+
+The retained `reference_data/2020/ServerIndexed.db` contains sequence entries
+as well as mapping identifiers. Investigate direct sequence-content comparison
+with that resource: accession coverage alone is insufficient to establish
+sequence-byte compatibility. This stronger check is not yet implemented or
+claimed complete by job21688.

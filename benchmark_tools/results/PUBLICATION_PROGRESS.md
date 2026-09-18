@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Corrected-Archive Comparison Queued From Pinned Code (2026-09-17)
+
+Previous turn progressed by auditing original whole-input mappinga1fbffc.
+Re-read full objective and confirmed21687,21671_1,DGX21656_8 live.
+Created detached executor at a1fbffcc8cb5b4fdabca18843d79d94b0baadaef and
+submitted21688 afterok21687. Scheduler confirms dependency pending. Script
+also checks acquisition terminal success, exact final size, executor revision
+and source cleanliness; comparison uses a fresh report path and does not
+replace inputs or start corrected inference.20combined tests and shell syntax
+pass. Acquisition/comparison details are in
+`QFO_CORRECTED_ARCHIVE_ACQUISITION_20260917.md`.
+
+Located retained scorer sequence database `ServerIndexed.db`; numeric ID
+coverage alone does not prove sequence-byte compatibility. A direct sequence
+audit is the next stronger check while corrected download continues. Queued
+comparison is not a completed empirical result. Full publication goal remains
+active, including input-release correctness, complete factorial and DGX timing
+admissions, uncertainty, generalization and final reproducibility package.
+
 ## Whole-Input Mapping Mismatch Localized To Xenopus (2026-09-17)
 
 Previous turn progressed by starting durable corrected-source acquisition
