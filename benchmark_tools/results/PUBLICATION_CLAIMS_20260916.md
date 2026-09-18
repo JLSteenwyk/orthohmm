@@ -44,6 +44,12 @@ evidence that an experiment completed or a biological hypothesis is true.
 
 ## Current Execution Status
 
+- [Annotation-defined SwissTrees strata](SWISS_DOMAIN_STRATA_RESULTS_20260917.md)
+  retain all eight methods and the frozen27-endpoint analysis. Both OrthoHMM
+  modes trail full OrthoFinder in F1 in both primary bins. The phylogenetic-minus-
+  sensitive F1 interval is positive in the higher-type bin, but all nine
+  between-bin interaction intervals include zero. Domain causality and different
+  effects between strata are not established; the repeat subset is descriptive.
 - [Relocated SwissTrees reproduction](SWISS_RELOCATED_REPRODUCTION_20260917.md)
   exactly reproduces statistical JSON and Markdown from a committed-source
   export in a fresh hash-pinned environment; figure generation succeeds.

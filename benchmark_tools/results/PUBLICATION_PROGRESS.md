@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Frozen SwissTrees Domain-Stratum Results (2026-09-17)
+
+Previous turn progressed Pillow remediation/exact reproduction, pushedea8d8f5
+and15e6192. Re-read full objective. Fresh alert API snapshot still13open in
+`dependency_alerts_analysis_env_recheck_20260917.json`; no server-closure claim.
+Executed the previously committed domain-strata protocol without changing bins,
+contrasts, endpoints, seed or method settings.
+
+Implemented100,000shared family draws within12/6-family primary bins, seed20260921,
+three contrasts and27adjusted endpoints including nine interaction metrics.
+All eight methods have point estimates in all four primary/descriptive bins;
+the3-family repeated-type bin remains descriptive only. Full family differences
+and wins/ties/losses retained. Direct repeated-family resampling from raw/2+1
+counts independently reproduces test intervals and interactions; corrupted
+annotation coverage/summary/family inventories are rejected.
+All26focused domain/inventory/bootstrap/comparator tests pass.
+
+Both OrthoHMM modes have negative adjusted F1 differences versus full OrthoFinder
+in both primary bins. Phylogenetic-minus-sensitive F1 is+0.185688 in the higher-
+type bin, adjusted[0.024605,0.413865], versus+0.085765[-0.074822,0.222339] in the
+lower bin. All nine adjusted interaction intervals include zero. Do not infer
+different effects between bins merely because one within-bin interval excludes
+zero. No causal explanation, equivalence, or generalization claim follows.
+
+Results: `swiss_domain_strata_results_20260917.json` and generated
+`SWISS_DOMAIN_STRATA_RESULTS_20260917.md`. Manuscript/claim ledger updated.
+Remaining work includes independent fragments/duplication labels, other QfO
+uncertainty/ablations/robustness, matched timing admission and full release package.
+
 ## Analysis-Environment Pillow Remediation (2026-09-17)
 
 Previous turn progressed domain annotation inventory/protocol, pushed55413b8;

@@ -1,0 +1,1096 @@
+{
+  "contrasts": [
+    {
+      "candidate": "orthohmm_high_sensitivity",
+      "family_differences": [
+        {
+          "F1": -0.22937327126762463,
+          "PPV": -0.406180312201338,
+          "TPR": 0.0,
+          "family": "APP"
+        },
+        {
+          "F1": -0.26919275853663943,
+          "PPV": -0.009033221351250509,
+          "TPR": -0.24200000000000002,
+          "family": "ASTER"
+        },
+        {
+          "F1": -0.168074902945878,
+          "PPV": -0.014687100893997385,
+          "TPR": -0.24731182795698925,
+          "family": "BAMBI"
+        },
+        {
+          "F1": -0.24150198202384232,
+          "PPV": -0.2341081593927894,
+          "TPR": -0.2441860465116279,
+          "family": "BAR"
+        },
+        {
+          "F1": -0.14562500000000012,
+          "PPV": -0.3213866039952997,
+          "TPR": 0.05555555555555558,
+          "family": "CASP"
+        },
+        {
+          "F1": -0.22405372405372403,
+          "PPV": -0.3925581738392889,
+          "TPR": -0.04458598726114649,
+          "family": "CITE"
+        },
+        {
+          "F1": -0.3168829220730519,
+          "PPV": -0.4777250113071009,
+          "TPR": 0.0,
+          "family": "Clusterin"
+        },
+        {
+          "F1": -0.29696969696969694,
+          "PPV": -0.5119047619047619,
+          "TPR": -0.08333333333333331,
+          "family": "GH14"
+        },
+        {
+          "F1": -0.2671592455765117,
+          "PPV": -0.36813624064937134,
+          "TPR": -0.20512820512820515,
+          "family": "HOX"
+        },
+        {
+          "F1": -0.13457556935817805,
+          "PPV": -0.33766233766233766,
+          "TPR": 0.0,
+          "family": "MAPT"
+        },
+        {
+          "F1": -0.4118220489188231,
+          "PPV": -0.5520385814740533,
+          "TPR": -0.20206185567010315,
+          "family": "NOX"
+        },
+        {
+          "F1": -0.24290857782318898,
+          "PPV": -0.3554841407849266,
+          "TPR": -0.10471204188481675,
+          "family": "POP"
+        },
+        {
+          "F1": -0.1517643378519291,
+          "PPV": -0.11900952945242682,
+          "TPR": -0.17391304347826086,
+          "family": "PSEN"
+        },
+        {
+          "F1": 0.1325942350332595,
+          "PPV": 0.010797342192691017,
+          "TPR": 0.19402985074626866,
+          "family": "RPS"
+        },
+        {
+          "F1": -0.1288791343405471,
+          "PPV": -0.1719316794663539,
+          "TPR": -0.08731241473397,
+          "family": "SERC"
+        },
+        {
+          "F1": -0.29579831932773115,
+          "PPV": -0.45031982942430704,
+          "TPR": 0.0,
+          "family": "SUMF"
+        },
+        {
+          "F1": -0.5153448340945982,
+          "PPV": -0.6658303036509806,
+          "TPR": -0.09322033898305093,
+          "family": "TRFE"
+        },
+        {
+          "F1": -0.008080297960987304,
+          "PPV": -0.020130475302889028,
+          "TPR": 0.0,
+          "family": "VATB"
+        }
+      ],
+      "interaction_higher_minus_lower": {
+        "F1": {
+          "bonferroni27": [
+            -0.32171068435612254,
+            0.10759348597344634
+          ],
+          "difference": -0.0982786211498009,
+          "nominal95": [
+            -0.24002372268280647,
+            0.03425770890121344
+          ]
+        },
+        "PPV": {
+          "bonferroni27": [
+            -0.40688589956035154,
+            0.20219433202676565
+          ],
+          "difference": -0.1118285914544569,
+          "nominal95": [
+            -0.30632639413464036,
+            0.08819921208184871
+          ]
+        },
+        "TPR": {
+          "bonferroni27": [
+            -0.22236138288661775,
+            0.09846516562383471
+          ],
+          "difference": -0.06296747085327359,
+          "nominal95": [
+            -0.1662267288270885,
+            0.041614532249188124
+          ]
+        }
+      },
+      "primary_strata": [
+        {
+          "family_wins_ties_losses": {
+            "F1": [
+              1,
+              0,
+              11
+            ],
+            "PPV": [
+              1,
+              0,
+              11
+            ],
+            "TPR": [
+              2,
+              3,
+              7
+            ]
+          },
+          "metrics": {
+            "F1": {
+              "bonferroni27": [
+                -0.24979966394168043,
+                -0.046553016274583865
+              ],
+              "difference": -0.15336391196952603,
+              "nominal95": [
+                -0.21496974038748307,
+                -0.09141010767560513
+              ]
+            },
+            "PPV": {
+              "bonferroni27": [
+                -0.41580459582743273,
+                -0.09972437572028517
+              ],
+              "difference": -0.26257542065744677,
+              "nominal95": [
+                -0.3640571281816972,
+                -0.15645619679462858
+              ]
+            },
+            "TPR": {
+              "bonferroni27": [
+                -0.16542200450683325,
+                0.04815543079722937
+              ],
+              "difference": -0.06113193686222429,
+              "nominal95": [
+                -0.12824702484014905,
+                0.007245397839788865
+              ]
+            }
+          },
+          "stratum": "median_pfam_types_below_two"
+        },
+        {
+          "family_wins_ties_losses": {
+            "F1": [
+              0,
+              0,
+              6
+            ],
+            "PPV": [
+              0,
+              0,
+              6
+            ],
+            "TPR": [
+              0,
+              2,
+              4
+            ]
+          },
+          "metrics": {
+            "F1": {
+              "bonferroni27": [
+                -0.45694921760622187,
+                -0.06677866253108666
+              ],
+              "difference": -0.25164253311932694,
+              "nominal95": [
+                -0.3792240289243526,
+                -0.13562724660227643
+              ]
+            },
+            "PPV": {
+              "bonferroni27": [
+                -0.6089344425625169,
+                -0.1137943835422861
+              ],
+              "difference": -0.37440401211190366,
+              "nominal95": [
+                -0.5350090538501295,
+                -0.2024457345708135
+              ]
+            },
+            "TPR": {
+              "bonferroni27": [
+                -0.23065570780747002,
+                0.0
+              ],
+              "difference": -0.12409940771549788,
+              "nominal95": [
+                -0.19898511632213667,
+                -0.04661016949152552
+              ]
+            }
+          },
+          "stratum": "median_pfam_types_at_least_two"
+        }
+      ],
+      "reference": "orthofinder_3_1_5_full",
+      "secondary_descriptive_differences": {
+        "repeated_type_fraction_at_least_quarter": {
+          "F1": -0.23346201883305684,
+          "PPV": -0.37416739025524837,
+          "TPR": -0.08904446082043727
+        },
+        "repeated_type_fraction_below_quarter": {
+          "F1": -0.1762665642702902,
+          "PPV": -0.2849884633196691,
+          "TPR": -0.08073642041189122
+        }
+      }
+    },
+    {
+      "candidate": "orthohmm_phylogeny_satellite_v2",
+      "family_differences": [
+        {
+          "F1": 0.0,
+          "PPV": 0.0,
+          "TPR": 0.0,
+          "family": "APP"
+        },
+        {
+          "F1": -0.26919275853663943,
+          "PPV": -0.009033221351250509,
+          "TPR": -0.24200000000000002,
+          "family": "ASTER"
+        },
+        {
+          "F1": -0.16321839080459766,
+          "PPV": 0.0019493177387914784,
+          "TPR": -0.24731182795698925,
+          "family": "BAMBI"
+        },
+        {
+          "F1": -0.1332138231837927,
+          "PPV": -0.001180057964447201,
+          "TPR": -0.207641196013289,
+          "family": "BAR"
+        },
+        {
+          "F1": -0.13000000000000012,
+          "PPV": -0.09937888198757772,
+          "TPR": -0.14814814814814814,
+          "family": "CASP"
+        },
+        {
+          "F1": -0.0007770007770008247,
+          "PPV": 0.0073968873897863885,
+          "TPR": -0.006369426751592355,
+          "family": "CITE"
+        },
+        {
+          "F1": 0.0,
+          "PPV": 0.0,
+          "TPR": 0.0,
+          "family": "Clusterin"
+        },
+        {
+          "F1": -0.0736842105263158,
+          "PPV": -0.0357142857142857,
+          "TPR": -0.08333333333333331,
+          "family": "GH14"
+        },
+        {
+          "F1": -0.1694065199219837,
+          "PPV": 0.2677567705671946,
+          "TPR": -0.21794871794871795,
+          "family": "HOX"
+        },
+        {
+          "F1": 0.0,
+          "PPV": 0.0,
+          "TPR": 0.0,
+          "family": "MAPT"
+        },
+        {
+          "F1": -0.17575583620359736,
+          "PPV": -0.014680021408364552,
+          "TPR": -0.2721649484536083,
+          "family": "NOX"
+        },
+        {
+          "F1": -0.058956500488758556,
+          "PPV": -0.0013726364915411793,
+          "TPR": -0.10471204188481675,
+          "family": "POP"
+        },
+        {
+          "F1": -0.07140448239060837,
+          "PPV": -0.0006556762832521379,
+          "TPR": -0.11909262759924388,
+          "family": "PSEN"
+        },
+        {
+          "F1": -0.19808612440191375,
+          "PPV": -0.02491694352159468,
+          "TPR": -0.22388059701492535,
+          "family": "RPS"
+        },
+        {
+          "F1": 0.0,
+          "PPV": 0.0,
+          "TPR": 0.0,
+          "family": "SERC"
+        },
+        {
+          "F1": 0.0,
+          "PPV": 0.0,
+          "TPR": 0.0,
+          "family": "SUMF"
+        },
+        {
+          "F1": -0.008691873098652825,
+          "PPV": -0.00029222676797202585,
+          "TPR": -0.016949152542372947,
+          "family": "TRFE"
+        },
+        {
+          "F1": -0.04268736357021585,
+          "PPV": -0.0006222452683433133,
+          "TPR": -0.06648199445983383,
+          "family": "VATB"
+        }
+      ],
+      "interaction_higher_minus_lower": {
+        "F1": {
+          "bonferroni27": [
+            -0.11070214911730049,
+            0.10629155802054545
+          ],
+          "difference": 0.0016436493846542222,
+          "nominal95": [
+            -0.07252204411529796,
+            0.06845659067183003
+          ]
+        },
+        "PPV": {
+          "bonferroni27": [
+            -0.007524625954163532,
+            0.20829733940863288
+          ],
+          "difference": 0.0553074898780882,
+          "nominal95": [
+            -0.0012031143080547975,
+            0.14959750027095123
+          ]
+        },
+        "TPR": {
+          "bonferroni27": [
+            -0.18317574275091048,
+            0.12157245904290394
+          ],
+          "difference": -0.032293668012216226,
+          "nominal95": [
+            -0.13218764951884557,
+            0.06818267196635042
+          ]
+        }
+      },
+      "primary_strata": [
+        {
+          "family_wins_ties_losses": {
+            "F1": [
+              0,
+              4,
+              8
+            ],
+            "PPV": [
+              2,
+              4,
+              6
+            ],
+            "TPR": [
+              0,
+              4,
+              8
+            ]
+          },
+          "metrics": {
+            "F1": {
+              "bonferroni27": [
+                -0.14426375115878506,
+                -0.012218217557451755
+              ],
+              "difference": -0.06759849025399434,
+              "nominal95": [
+                -0.11389470664862707,
+                -0.029349605271081578
+              ]
+            },
+            "PPV": {
+              "bonferroni27": [
+                -0.045261938713646636,
+                0.0019525277381906223
+              ],
+              "difference": -0.013477120018410282,
+              "nominal95": [
+                -0.03185530858191246,
+                -0.0007474207400505869
+              ]
+            },
+            "TPR": {
+              "bonferroni27": [
+                -0.18362092087819282,
+                -0.020697452229299373
+              ],
+              "difference": -0.0979040002240874,
+              "nominal95": [
+                -0.15281373176863544,
+                -0.04576150023478276
+              ]
+            }
+          },
+          "stratum": "median_pfam_types_below_two"
+        },
+        {
+          "family_wins_ties_losses": {
+            "F1": [
+              0,
+              1,
+              5
+            ],
+            "PPV": [
+              1,
+              1,
+              4
+            ],
+            "TPR": [
+              0,
+              1,
+              5
+            ]
+          },
+          "metrics": {
+            "F1": {
+              "bonferroni27": [
+                -0.15601353674699758,
+                -0.004577022640536943
+              ],
+              "difference": -0.06595484086934011,
+              "nominal95": [
+                -0.12986829037100078,
+                -0.014582209019683356
+              ]
+            },
+            "PPV": {
+              "bonferroni27": [
+                -0.01008706481104149,
+                0.17850451371146292
+              ],
+              "difference": 0.04183036985967792,
+              "nominal95": [
+                -0.00753668703159005,
+                0.13358430003353217
+              ]
+            },
+            "TPR": {
+              "bonferroni27": [
+                -0.25237495129607346,
+                -0.00847457627118664
+              ],
+              "difference": -0.13019766823630363,
+              "nominal95": [
+                -0.21155690563343899,
+                -0.0476242213530349
+              ]
+            }
+          },
+          "stratum": "median_pfam_types_at_least_two"
+        }
+      ],
+      "reference": "orthofinder_3_1_5_full",
+      "secondary_descriptive_differences": {
+        "repeated_type_fraction_at_least_quarter": {
+          "F1": -0.02728494689352179,
+          "PPV": -0.0003159676837413139,
+          "TPR": -0.04534726004720557
+        },
+        "repeated_type_fraction_below_quarter": {
+          "F1": -0.07583755107069412,
+          "PPV": 0.006013645465891226,
+          "TPR": -0.12133281546435037
+        }
+      }
+    },
+    {
+      "candidate": "orthohmm_phylogeny_satellite_v2",
+      "family_differences": [
+        {
+          "F1": 0.22937327126762463,
+          "PPV": 0.406180312201338,
+          "TPR": 0.0,
+          "family": "APP"
+        },
+        {
+          "F1": 0.0,
+          "PPV": 0.0,
+          "TPR": 0.0,
+          "family": "ASTER"
+        },
+        {
+          "F1": 0.004856512141280356,
+          "PPV": 0.016636418632788863,
+          "TPR": 0.0,
+          "family": "BAMBI"
+        },
+        {
+          "F1": 0.10828815884004961,
+          "PPV": 0.2329281014283422,
+          "TPR": 0.03654485049833889,
+          "family": "BAR"
+        },
+        {
+          "F1": 0.015625,
+          "PPV": 0.222007722007722,
+          "TPR": -0.20370370370370372,
+          "family": "CASP"
+        },
+        {
+          "F1": 0.2232767232767232,
+          "PPV": 0.3999550612290753,
+          "TPR": 0.03821656050955413,
+          "family": "CITE"
+        },
+        {
+          "F1": 0.3168829220730519,
+          "PPV": 0.4777250113071009,
+          "TPR": 0.0,
+          "family": "Clusterin"
+        },
+        {
+          "F1": 0.22328548644338114,
+          "PPV": 0.4761904761904762,
+          "TPR": 0.0,
+          "family": "GH14"
+        },
+        {
+          "F1": 0.09775272565452803,
+          "PPV": 0.6358930112165659,
+          "TPR": -0.012820512820512803,
+          "family": "HOX"
+        },
+        {
+          "F1": 0.13457556935817805,
+          "PPV": 0.33766233766233766,
+          "TPR": 0.0,
+          "family": "MAPT"
+        },
+        {
+          "F1": 0.23606621271522576,
+          "PPV": 0.5373585600656887,
+          "TPR": -0.07010309278350513,
+          "family": "NOX"
+        },
+        {
+          "F1": 0.18395207733443042,
+          "PPV": 0.35411150429338545,
+          "TPR": 0.0,
+          "family": "POP"
+        },
+        {
+          "F1": 0.08035985546132074,
+          "PPV": 0.11835385316917468,
+          "TPR": 0.05482041587901698,
+          "family": "PSEN"
+        },
+        {
+          "F1": -0.33068035943517327,
+          "PPV": -0.0357142857142857,
+          "TPR": -0.417910447761194,
+          "family": "RPS"
+        },
+        {
+          "F1": 0.1288791343405471,
+          "PPV": 0.1719316794663539,
+          "TPR": 0.08731241473397,
+          "family": "SERC"
+        },
+        {
+          "F1": 0.29579831932773115,
+          "PPV": 0.45031982942430704,
+          "TPR": 0.0,
+          "family": "SUMF"
+        },
+        {
+          "F1": 0.5066529609959454,
+          "PPV": 0.6655380768830086,
+          "TPR": 0.07627118644067798,
+          "family": "TRFE"
+        },
+        {
+          "F1": -0.03460706560922855,
+          "PPV": 0.019508230034545715,
+          "TPR": -0.06648199445983383,
+          "family": "VATB"
+        }
+      ],
+      "interaction_higher_minus_lower": {
+        "F1": {
+          "bonferroni27": [
+            -0.12189355623131748,
+            0.37976540371836565
+          ],
+          "difference": 0.09992227053445513,
+          "nominal95": [
+            -0.04907776996747279,
+            0.2691578631069661
+          ]
+        },
+        "PPV": {
+          "bonferroni27": [
+            -0.17431069677374322,
+            0.46791447400808134
+          ],
+          "difference": 0.1671360813325451,
+          "nominal95": [
+            -0.05041973091825988,
+            0.3693836449944615
+          ]
+        },
+        "TPR": {
+          "bonferroni27": [
+            -0.07862961457031335,
+            0.18975647283107508
+          ],
+          "difference": 0.030673802841057363,
+          "nominal95": [
+            -0.04589197320302211,
+            0.12342617962996356
+          ]
+        }
+      },
+      "primary_strata": [
+        {
+          "family_wins_ties_losses": {
+            "F1": [
+              10,
+              1,
+              1
+            ],
+            "PPV": [
+              10,
+              1,
+              1
+            ],
+            "TPR": [
+              3,
+              7,
+              2
+            ]
+          },
+          "metrics": {
+            "F1": {
+              "bonferroni27": [
+                -0.07482240686249236,
+                0.2223389279163023
+              ],
+              "difference": 0.0857654217155317,
+              "nominal95": [
+                -0.009827767740616618,
+                0.17675291746864036
+              ]
+            },
+            "PPV": {
+              "bonferroni27": [
+                0.08578806074814063,
+                0.4036079684886368
+              ],
+              "difference": 0.24909830063903649,
+              "nominal95": [
+                0.14361006631170634,
+                0.3505790199454211
+              ]
+            },
+            "TPR": {
+              "bonferroni27": [
+                -0.18335158051009187,
+                0.04057862244771493
+              ],
+              "difference": -0.036772063361863117,
+              "nominal95": [
+                -0.12057766721945828,
+                0.024642898711264682
+              ]
+            }
+          },
+          "stratum": "median_pfam_types_below_two"
+        },
+        {
+          "family_wins_ties_losses": {
+            "F1": [
+              5,
+              0,
+              1
+            ],
+            "PPV": [
+              6,
+              0,
+              0
+            ],
+            "TPR": [
+              2,
+              1,
+              3
+            ]
+          },
+          "metrics": {
+            "F1": {
+              "bonferroni27": [
+                0.024605060208403806,
+                0.4138653606050776
+              ],
+              "difference": 0.18568769224998682,
+              "nominal95": [
+                0.06993268415477638,
+                0.3227113103281275
+              ]
+            },
+            "PPV": {
+              "bonferroni27": [
+                0.11952355562797712,
+                0.6507155440497873
+              ],
+              "difference": 0.4162343819715816,
+              "nominal95": [
+                0.22225435249164727,
+                0.5910668414110292
+              ]
+            },
+            "TPR": {
+              "bonferroni27": [
+                -0.06768902723439096,
+                0.05693826604350849
+              ],
+              "difference": -0.006098260520805754,
+              "nominal95": [
+                -0.047665114551198484,
+                0.035998841083586974
+              ]
+            }
+          },
+          "stratum": "median_pfam_types_at_least_two"
+        }
+      ],
+      "reference": "orthohmm_high_sensitivity",
+      "secondary_descriptive_differences": {
+        "repeated_type_fraction_at_least_quarter": {
+          "F1": 0.20617707193953505,
+          "PPV": 0.37385142257150705,
+          "TPR": 0.04369720077323169
+        },
+        "repeated_type_fraction_below_quarter": {
+          "F1": 0.10042901319959607,
+          "PPV": 0.2910021087855603,
+          "TPR": -0.040596395052459155
+        }
+      }
+    }
+  ],
+  "helpers": [
+    {
+      "bytes": 8579,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bootstrap_qfo_swiss_comparators.py",
+      "sha256": "c7b418c92a8b12dc06bb1a51880f7ef82c3451a8af4a876cd3c2cbd1802f9122"
+    },
+    {
+      "bytes": 8531,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bootstrap_qfo_swiss_stages.py",
+      "sha256": "0598773a8bd04846f24e4cb27ab7b3529410c11451cbb399b9148a320fd06435"
+    },
+    {
+      "bytes": 5804,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/inventory_swiss_annotations.py",
+      "sha256": "6fea168f170bed4b66ef0040ff88da724ae33c45a2bfa838581cc0cfe871b1a9"
+    }
+  ],
+  "inputs": [
+    {
+      "bytes": 171197,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_swiss_comparator_counts_20260917.json",
+      "sha256": "2995868b0407ceda2e7422db6c3fc3b99523716e4bec8b1b43e15f296e40769b"
+    },
+    {
+      "bytes": 334879,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_domain_annotation_inventory_20260917.json",
+      "sha256": "d5e269158c2fb603acc0805a1c140a88758342d7b8e32b3094750ade22fbc06c"
+    },
+    {
+      "bytes": 5020,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/SWISS_DOMAIN_STRATA_PROTOCOL_20260917.md",
+      "sha256": "8316866d11f988cef6a3e88f07e2802d1557a7ae581b100b85884f704b0afee8"
+    }
+  ],
+  "limitations": [
+    "Retrospective development-exposed explanatory analysis; no method retuning.",
+    "Six/twelve curated-family primary bins; approximate conditional bootstrap with possible family dependence.",
+    "Domain annotations do not establish causality, fragments, domain loss or ancestral duplication.",
+    "The repeated-type split is descriptive only; its higher bin contains three families.",
+    "Interactions are differences of method contrasts, not causal domain effects.",
+    "Adjustment covers these 27 endpoints, not prior tuning or all publication analyses.",
+    "MCL checkpoint and supplied-tree FastOMA remain diagnostics; OrthoHMM contrast is not a pure reconciliation ablation.",
+    "FAS annotations are not independent FAS validation; intervals do not cover other QfO metrics or the secondary mean."
+  ],
+  "multiplicity_endpoints": 27,
+  "numpy_version": "2.2.6",
+  "point_estimates": {
+    "median_pfam_types_at_least_two": {
+      "fastoma_0_3_5": {
+        "F1": 0.7201635623149135,
+        "PPV": 0.9030109028981395,
+        "TPR": 0.5988954382805592
+      },
+      "orthofinder_3_1_5_full": {
+        "F1": 0.8690711499053775,
+        "PPV": 0.9341443757374953,
+        "TPR": 0.8124736048730092
+      },
+      "orthofinder_3_1_5_sequence_only": {
+        "F1": 0.6097681179696712,
+        "PPV": 0.468021972008549,
+        "TPR": 0.87467367870099
+      },
+      "orthohmm_high_sensitivity": {
+        "F1": 0.6174286167860505,
+        "PPV": 0.5597403636255917,
+        "TPR": 0.6883741971575114
+      },
+      "orthohmm_phylogeny_satellite_v2": {
+        "F1": 0.8031163090360374,
+        "PPV": 0.9759747455971732,
+        "TPR": 0.6822759366367056
+      },
+      "orthomcl_1_4": {
+        "F1": 0.7458473707282891,
+        "PPV": 0.8691104986036299,
+        "TPR": 0.6532053683810853
+      },
+      "proteinortho_6_3_6": {
+        "F1": 0.6882777787966022,
+        "PPV": 0.9719566368186583,
+        "TPR": 0.5327789456613171
+      },
+      "sonicparanoid_2_0_9": {
+        "F1": 0.8001260447830053,
+        "PPV": 0.9166569160733852,
+        "TPR": 0.7098816707388691
+      }
+    },
+    "median_pfam_types_below_two": {
+      "fastoma_0_3_5": {
+        "F1": 0.7829702972482248,
+        "PPV": 0.9090329621304317,
+        "TPR": 0.6876135788746867
+      },
+      "orthofinder_3_1_5_full": {
+        "F1": 0.8539244370899363,
+        "PPV": 0.9496216843609551,
+        "TPR": 0.7757490443613447
+      },
+      "orthofinder_3_1_5_sequence_only": {
+        "F1": 0.7354081265733862,
+        "PPV": 0.6649612140957685,
+        "TPR": 0.8225502386925311
+      },
+      "orthohmm_high_sensitivity": {
+        "F1": 0.7005605251204102,
+        "PPV": 0.6870462637035083,
+        "TPR": 0.7146171074991204
+      },
+      "orthohmm_phylogeny_satellite_v2": {
+        "F1": 0.7863259468359419,
+        "PPV": 0.9361445643425448,
+        "TPR": 0.6778450441372573
+      },
+      "orthomcl_1_4": {
+        "F1": 0.7644679967823161,
+        "PPV": 0.9162320358469551,
+        "TPR": 0.6558358082820528
+      },
+      "proteinortho_6_3_6": {
+        "F1": 0.7022309403161168,
+        "PPV": 0.9397685446102292,
+        "TPR": 0.5605462516061068
+      },
+      "sonicparanoid_2_0_9": {
+        "F1": 0.765248442089703,
+        "PPV": 0.8418198725089147,
+        "TPR": 0.7014453903294582
+      }
+    },
+    "repeated_type_fraction_at_least_quarter": {
+      "fastoma_0_3_5": {
+        "F1": 0.7983070859518684,
+        "PPV": 0.8082391147419695,
+        "TPR": 0.7886161930088752
+      },
+      "orthofinder_3_1_5_full": {
+        "F1": 0.8851944893761077,
+        "PPV": 0.9626318240158249,
+        "TPR": 0.819288197160252
+      },
+      "orthofinder_3_1_5_sequence_only": {
+        "F1": 0.6778413504554099,
+        "PPV": 0.578044302142959,
+        "TPR": 0.819288197160252
+      },
+      "orthohmm_high_sensitivity": {
+        "F1": 0.6517324705430508,
+        "PPV": 0.5884644337605766,
+        "TPR": 0.7302437363398148
+      },
+      "orthohmm_phylogeny_satellite_v2": {
+        "F1": 0.8579095424825859,
+        "PPV": 0.9623158563320836,
+        "TPR": 0.7739409371130465
+      },
+      "orthomcl_1_4": {
+        "F1": 0.8279822902223491,
+        "PPV": 0.8368628816904679,
+        "TPR": 0.819288197160252
+      },
+      "proteinortho_6_3_6": {
+        "F1": 0.8018586228716937,
+        "PPV": 0.9584202682563339,
+        "TPR": 0.6892645943706374
+      },
+      "sonicparanoid_2_0_9": {
+        "F1": 0.840751717088209,
+        "PPV": 0.9201872742018727,
+        "TPR": 0.7739409371130465
+      }
+    },
+    "repeated_type_fraction_below_quarter": {
+      "fastoma_0_3_5": {
+        "F1": 0.7514656554262512,
+        "PPV": 0.9267829079152072,
+        "TPR": 0.6319257998101979
+      },
+      "orthofinder_3_1_5_full": {
+        "F1": 0.8539326581366358,
+        "PPV": 0.9408287329805971,
+        "TPR": 0.7817310380062292
+      },
+      "orthofinder_3_1_5_sequence_only": {
+        "F1": 0.7038355729733319,
+        "PPV": 0.6035688996514427,
+        "TPR": 0.8440520230023704
+      },
+      "orthohmm_high_sensitivity": {
+        "F1": 0.6776660938663456,
+        "PPV": 0.655840269660928,
+        "TPR": 0.700994617594338
+      },
+      "orthohmm_phylogeny_satellite_v2": {
+        "F1": 0.7780951070659416,
+        "PPV": 0.9468423784464883,
+        "TPR": 0.6603982225418789
+      },
+      "orthomcl_1_4": {
+        "F1": 0.7400670001209437,
+        "PPV": 0.9132572517809225,
+        "TPR": 0.6220931545460259
+      },
+      "proteinortho_6_3_6": {
+        "F1": 0.6749134580982549,
+        "PPV": 0.9489134367643799,
+        "TPR": 0.5236956606752848
+      },
+      "sonicparanoid_2_0_9": {
+        "F1": 0.7643169868551044,
+        "PPV": 0.8560812095961111,
+        "TPR": 0.690320793136505
+      }
+    }
+  },
+  "publication_ready": false,
+  "replicates": 100000,
+  "rng": "NumPy PCG64, independent primary-bin multinomial draws; paired across methods",
+  "seed": 20260921,
+  "source": {
+    "bytes": 9100,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/analyze_swiss_domain_strata.py",
+    "sha256": "57564ae45648aaaef22b33cdd2954a7513aa41aa1bfe1161c608e4869a5c4457"
+  },
+  "status": "frozen_swiss_domain_strata_evaluated",
+  "strata": {
+    "median_pfam_types_at_least_two": [
+      "APP",
+      "BAR",
+      "HOX",
+      "NOX",
+      "TRFE",
+      "VATB"
+    ],
+    "median_pfam_types_below_two": [
+      "ASTER",
+      "BAMBI",
+      "CASP",
+      "CITE",
+      "Clusterin",
+      "GH14",
+      "MAPT",
+      "POP",
+      "PSEN",
+      "RPS",
+      "SERC",
+      "SUMF"
+    ],
+    "repeated_type_fraction_at_least_quarter": [
+      "MAPT",
+      "PSEN",
+      "TRFE"
+    ],
+    "repeated_type_fraction_below_quarter": [
+      "APP",
+      "ASTER",
+      "BAMBI",
+      "BAR",
+      "CASP",
+      "CITE",
+      "Clusterin",
+      "GH14",
+      "HOX",
+      "NOX",
+      "POP",
+      "RPS",
+      "SERC",
+      "SUMF",
+      "VATB"
+    ]
+  },
+  "units": "raw 0-to-1 differences"
+}

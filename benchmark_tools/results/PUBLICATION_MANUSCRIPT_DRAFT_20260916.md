@@ -820,6 +820,35 @@ shows every prespecified contrast in percentage points, with nominal and
 adjusted intervals; the [figure note](QFO_SWISS_COMPARATOR_FIGURE_20260917.md)
 provides its caption, validation scope and reproduction command.
 
+### Annotation-Defined SwissTrees Error Strata
+
+An annotation-only inventory found exact accession matches for all 563 represented
+SwissTrees proteins in the retained QfO FAS resource. Five records had no Pfam
+hits, distinct from absent annotation. A committed follow-up protocol split the
+18 families by median distinct Pfam types: 12 below two and six at least two.
+The secondary repeated-type split contained 15 and three families and was
+reported descriptively without inferential intervals. These annotations are
+external to predictions but are not independent validation of the FAS endpoint.
+
+The planned within-bin family bootstrap used 100,000 draws (PCG64 seed20260921),
+recomputed macro precision/recall and harmonic F1, and adjusted 27 endpoints
+covering three method contrasts, two primary bins and their interaction.
+Both OrthoHMM configurations had negative adjusted F1 differences versus full
+OrthoFinder in both primary strata. Phylogenetic-minus-sensitive OrthoHMM F1
+was +0.185688 in the higher-type bin (adjusted interval [0.024605, 0.413865])
+and +0.085765 in the lower-type bin [-0.074822, 0.222339]. All nine adjusted
+interaction intervals included zero; the F1 interaction for that configuration
+contrast was +0.099922 [-0.121894, 0.379765]. A within-bin interval excluding
+zero in only one bin does not establish that the effects differ between bins.
+
+This retrospective comparison is not a causal domain-effect analysis. Few
+curated families, shared history, merged predictions and correlated differences
+in taxon sampling, divergence or family size limit interpretation. Pfam types
+and repeated hit instances are annotation features, not independent fragment,
+domain-loss or ancestral duplication labels. No bin or threshold was changed
+after observing stratified outcomes, and no method was retuned.
+[All strata and contrasts](SWISS_DOMAIN_STRATA_RESULTS_20260917.md).
+
 ### VGNC Prediction-Database Audit
 
 For the four recovered sequence-refinement stages, a separate audit reconstructed
