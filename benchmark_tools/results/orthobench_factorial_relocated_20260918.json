@@ -1,0 +1,106 @@
+{
+  "command": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/swiss_analysis_env_20260917/bin/python",
+    "-I",
+    "-B",
+    "/tmp/orthohmm-ob-factorial-reproduction-20260918/source/benchmark_tools/reproduce_orthobench_factorial.py",
+    "--worker",
+    "/tmp/orthohmm-ob-factorial-reproduction-20260918/source",
+    "--output",
+    "/tmp/orthohmm-ob-factorial-reproduction-20260918/reproduced"
+  ],
+  "environment": {
+    "base_prefix": "/home/bizon/anaconda3",
+    "packages": {
+      "contourpy": "1.3.2",
+      "cycler": "0.12.1",
+      "fonttools": "4.61.1",
+      "kiwisolver": "1.4.9",
+      "matplotlib": "3.10.8",
+      "numpy": "2.2.6",
+      "packaging": "26.0",
+      "pillow": "12.3.0",
+      "pyparsing": "3.2.1",
+      "python-dateutil": "2.8.2",
+      "six": "1.16.0"
+    },
+    "prefix": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/swiss_analysis_env_20260917",
+    "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]"
+  },
+  "exit_code": 0,
+  "exported": [
+    {
+      "bytes": 1078,
+      "path": "/tmp/orthohmm-ob-factorial-reproduction-20260918/source/LICENSE.md",
+      "sha256": "4b9b0c3ffc73fce4c47734d7ef12bd70b9d2cdc4a3bf76ac0f3a35edbe2c3d9e"
+    },
+    {
+      "bytes": 199307,
+      "path": "/tmp/orthohmm-ob-factorial-reproduction-20260918/source/benchmark_tools/results/orthobench_factorial_results_20260916.json",
+      "sha256": "6a0d588b5cb47c60fc6bc8bae8aa0c83e5f2aadb11de970919d8c6527c387141"
+    },
+    {
+      "bytes": 250,
+      "path": "/tmp/orthohmm-ob-factorial-reproduction-20260918/source/benchmark_tools/swiss_analysis_requirements.txt",
+      "sha256": "7e7e9d05af92c24fd4c351f96365ebb9f8121150e1c3027101bd2f471043071f"
+    },
+    {
+      "bytes": 36623,
+      "path": "/tmp/orthohmm-ob-factorial-reproduction-20260918/source/benchmark_tools/swiss_analysis_requirements.lock",
+      "sha256": "dc4b01ae88bd0d5b961d1a2027c2149e98c365a15b5e2b112f3184c986fe8863"
+    },
+    {
+      "bytes": 6118,
+      "path": "/tmp/orthohmm-ob-factorial-reproduction-20260918/source/benchmark_tools/reproduce_orthobench_factorial.py",
+      "sha256": "65365dcb3a0bedf5fe638a8c77f8da8fd226d29a44b4433d807066cb52f4bafb"
+    },
+    {
+      "bytes": 9828,
+      "path": "/tmp/orthohmm-ob-factorial-reproduction-20260918/source/benchmark_tools/bootstrap_orthobench_factorial.py",
+      "sha256": "3378e78b8ff5bb1ffdb361b90d0fa8d35ee85e1f40ca6d3b36694fab7ae47a93"
+    },
+    {
+      "bytes": 10002,
+      "path": "/tmp/orthohmm-ob-factorial-reproduction-20260918/source/benchmark_tools/bootstrap_orthobench.py",
+      "sha256": "b93022b0d05ee13edeca8ae4b083b338cc947df79ef5386fdf9103432c764d11"
+    },
+    {
+      "bytes": 13747,
+      "path": "/tmp/orthohmm-ob-factorial-reproduction-20260918/source/benchmark_tools/orthobench_stage_diagnostics.py",
+      "sha256": "1ea4a651fef6765104b082d3b0d17d5c8a6263b8da61afbdab006cd85159b72e"
+    },
+    {
+      "bytes": 6229,
+      "path": "/tmp/orthohmm-ob-factorial-reproduction-20260918/source/benchmark_tools/score_orthobench_partition.py",
+      "sha256": "0e24c302a9d12ce8c82a4111ff0321c87303469b3c866c317dc2629ad66f9746"
+    }
+  ],
+  "generated": [
+    {
+      "bytes": 22675,
+      "path": "/tmp/orthohmm-ob-factorial-reproduction-20260918/reproduced/statistics.json",
+      "sha256": "71044699ffe61f4a4e756f1accfe70eca4228e40d93c44ad66b71aa1accc47e1"
+    },
+    {
+      "bytes": 6677,
+      "path": "/tmp/orthohmm-ob-factorial-reproduction-20260918/reproduced/statistics.md",
+      "sha256": "08750871e5596218999872aceffbc682ec049538385c6f04ce285e5090fb39c2"
+    }
+  ],
+  "limitations": [
+    "Statistics-only reproduction from retained family sufficient statistics.",
+    "Native inference, conversion, reference construction and official scoring were not rerun.",
+    "Historical absolute paths are provenance only and are not accessed as analysis inputs.",
+    "Isolated execution on the same host is not cross-platform or hermetic OS validation.",
+    "Export includes installation locks but does not install or prove completeness of all inference environments."
+  ],
+  "publication_ready": false,
+  "runner": {
+    "bytes": 6118,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/reproduce_orthobench_factorial.py",
+    "sha256": "65365dcb3a0bedf5fe638a8c77f8da8fd226d29a44b4433d807066cb52f4bafb"
+  },
+  "scientific_results_exact_match": true,
+  "source_commit": "a8a9f57734902715df7e9220cba2b3e0106fd5f3",
+  "status": "relocated_orthobench_factorial_statistics_reproduced"
+}

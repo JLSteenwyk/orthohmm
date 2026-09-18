@@ -1,5 +1,27 @@
 # Publication Progress
 
+## OrthoBench Factorial Relocation Verified (2026-09-18 UTC)
+
+Reread the full objective. The immediately preceding archive-search turn
+revalidated existing downloads but found no new source data or route forward
+(no progress on original TreeFam recovery). Current scheduler inspection
+confirms HMM21706_0 RUNNING14:43:51 and independent numeric validation21792
+RUNNING19:55;21798 remains dependency-pending. Neither live job was restarted.
+
+Resumed the unfinished reproduction milestone from a8a9f57. Its actual
+exported run completed successfully: all eight OrthoBench factorial cells
+and the full 70-family, 20,000-draw paired statistics match exactly. Rehashed
+all nine exports and both outputs and independently compared scientific
+fields with the retained result. Nineteen focused tests pass. Added the
+machine-readable execution record and an executable rerun command in
+ORTHOBENCH_FACTORIAL_REPRODUCTION_20260918.md. This is statistical relocation,
+not native inference/scoring reproduction or cross-platform validation.
+
+Corrected QfO execution/admission, matched Three Kingdoms SonicParanoid,
+remaining endpoint uncertainty, controlled timing and the final publication
+package remain incomplete. Missing original TreeFam files are not replaced
+by newer trees or inferred family labels.
+
 ## VGNC Reference-Block Dependency Audit Executed (2026-09-18 UTC)
 
 Previous turn progressed throughf756ff6 with self-hit semantics and tests.
