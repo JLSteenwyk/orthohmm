@@ -18,7 +18,8 @@ def write_json(path, value):
     path.write_text(json.dumps(value))
 
 
-@pytest.mark.parametrize("problem", [None, "boundary", "input_hash", "metadata", "module", "coverage", "duplicate", "provenance"])
+@pytest.mark.parametrize("problem", [None, "boundary", "input_hash", "metadata", "module", "coverage", "duplicate", "provenance",
+                                     "retained", "retained_hash", "retained_path", "retained_coverage"])
 @pytest.mark.parametrize("corrected", [False, True])
 def test_native_result_gate(tmp_path, problem, corrected):
     root = tmp_path
@@ -84,6 +85,20 @@ def test_native_result_gate(tmp_path, problem, corrected):
     partition = output / "orthohmm_working_res/orthohmm_edges_clustered.txt"
     partition.parent.mkdir(parents=True)
     partition.write_text("a c\nb\nd\n")
+    retained_partition = None
+    if problem and problem.startswith("retained"):
+        retained = payload.parent / "partition.txt"
+        retained.write_bytes(partition.read_bytes())
+        if problem == "retained_coverage":
+            retained.write_text("a c\nb\n")
+        retained_partition = record(retained)
+        # A later stage has replaced the live output. Retrospective admission
+        # must use this stage's retained artifact, not the last stage's output.
+        partition.write_text("later_stage_gene\n")
+        if problem == "retained_hash":
+            retained.write_text("a b c d\n")
+        elif problem == "retained_path":
+            retained_partition = record(partition)
     if problem == "boundary":
         boundary = json.loads((payload / "native_boundary.json").read_text())
         boundary["calls"][0]["after"]["ordered_endpoints_sha256"] = "changed"
@@ -104,12 +119,14 @@ def test_native_result_gate(tmp_path, problem, corrected):
         provenance["stage"] = "multipass"
     write_json(payload / "checked_payload_provenance.json", provenance)
     write_json(payload / "worker_before.json", worker)
-    if problem:
+    if problem and problem != "retained":
         with pytest.raises(ValueError):
-            validate(payload, manifest, root, executor, corrected_plan=corrected_plan)
+            validate(payload, manifest, root, executor, corrected_plan=corrected_plan, retained_partition=retained_partition)
     else:
-        result = validate(payload, manifest, root, executor, corrected_plan=corrected_plan)
+        result = validate(payload, manifest, root, executor, corrected_plan=corrected_plan, retained_partition=retained_partition)
         assert result["genes"] == 4 and result["groups"] == 3
+        if retained_partition is not None:
+            assert retained_partition in result["provenance_checked"]
 
 
 def test_parent_refuses_existing_output(tmp_path):

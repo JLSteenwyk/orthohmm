@@ -1,5 +1,47 @@
 # Publication Progress
 
+## Final Original Factorial Scoring Submitted (2026-09-18 UTC)
+
+Previous turn was no progress toward recovering the original TreeFam inputs:
+download checksums were rechecked, but no missing source was recovered.
+Revalidated live scheduler state and advanced the available factorial work.
+Final reconciliation 21671_3, native admission 21673_3 and pair conversion
+21675_7 completed successfully. Cell p1_c1_r1 has 5,663,861 native pairs,
+5,646,139 retained pairs and 17,722 pairs removed by the reference mapping.
+These are original-release predictions, not corrected-release results.
+
+Submitted assessment **21723** with executor
+`25f328d994765369cfae0382a21c3e7fdb3b7dab`, index 7, and pair-report SHA-256
+`932255df0b376b54a4eb8890ec61225951c1c8e9bbadadec14e2901ed521dd70`.
+Independent admission **21724** uses executor
+`9680ccced0e351fa62e0e76c1f393a232d04d00e`, afterany:21723, and the same
+index/hash. Assessment is scheduler-confirmed running; admission is pending.
+No final-cell scores or eight-cell uncertainty estimates are admitted yet.
+Native admission report SHA-256:
+`67b48ba1eaa1bcf23d07b4394cc876d8ba5be1cf91dbb994bb391219eca6cb1b`.
+
+The prespecified 64-family recorded-event audit passed for p1_c1_r1
+(24,256 eligible reconciled families). Reconstructed pairs exactly match
+native pairs within the sample, conditional on recorded events, mapping
+conflicts and final group membership. This does not independently validate
+tree inference or biological truth. Report:
+`qfo_event_pairs_p1_c1_r1_20260918.json`, SHA-256
+`e352fbbabe8481dd98bb7e352d5cd3e4a33cd521c480c886cdbdea3d312f312a`.
+
+Added optional checksum-bound retained-stage partition validation. The
+default live callback is unchanged; retrospective checks can select only
+the stage's own partition.txt, verify it before/after reading and require
+complete, unique gene coverage. Tests reject changed hashes, wrong paths
+and incomplete partitions, including when a later stage overwrote the live
+file. All 54 focused replay/validator/interceptor tests pass. Frozen replay
+executor 188fde2 is unchanged; independent admission still needs completion.
+
+Corrected HMM 21706_0 and SonicParanoid 21710 remain running. Their admission
+and replay preparation jobs remain dependent. BLAST 21713 waits for resources.
+DGX timing has 16 scheduler-completed tasks with 21656_16 running; final
+resource and host-isolation admission remains outstanding. The original
+TreeFam sources and other publication requirements remain open.
+
 ## Corrected Replay Preparation Scheduled (2026-09-18 UTC)
 
 Previous turn progressed by publishing the checksum-bound corrected QfO

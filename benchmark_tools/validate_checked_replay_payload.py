@@ -10,7 +10,7 @@ from prepare_ob_candidate_neighborhood import check, record
 from probe_leiden_boundary import saved_fingerprint
 
 
-def validate(payload, manifest, root, executor, corrected_plan=None):
+def validate(payload, manifest, root, executor, corrected_plan=None, retained_partition=None):
     import numpy as np
     launcher = root / "benchmarks/work/publication_qfo_replay_native_v1"
     observed = json.loads((payload / "worker_before.json").read_text())
@@ -81,6 +81,12 @@ def validate(payload, manifest, root, executor, corrected_plan=None):
         check(item)
     universe = set((payload / "gene_names.txt").read_text().splitlines())
     partition = Path(metadata["output_directory"]) / "orthohmm_working_res/orthohmm_edges_clustered.txt"
+    if retained_partition is not None:
+        partition = payload.parent / "partition.txt"
+        if retained_partition["path"] != str(partition.resolve()):
+            raise ValueError("Retained partition is outside this checked stage")
+        check(retained_partition)
+        records.append(retained_partition)
     seen, groups = set(), 0
     for line in partition.read_text().splitlines():
         members = line.split()
@@ -93,5 +99,7 @@ def validate(payload, manifest, root, executor, corrected_plan=None):
         groups += 1
     if seen != universe or len(universe) != saved["vertices"]:
         raise ValueError("Incomplete partition or duplicate gene universe")
+    if retained_partition is not None:
+        check(retained_partition)
     return {"status": "payload_checked", "accuracy_evaluated": False, "groups": groups, "genes": len(seen),
             "saved_graph": saved, "worker": observed, "provenance_checked": records}
