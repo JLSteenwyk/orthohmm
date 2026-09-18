@@ -1,5 +1,38 @@
 # Publication Progress
 
+## Corrected Native-Pair Conversion (2026-09-18 UTC)
+
+Previous turn progressed by pushingcb6489d and freezing corrected R-off
+pair conversion. This turn confirmed existing HMM, Sonic scoring and DGX
+jobs remained live; no restarts or parameter changes.
+
+Implemented `prepare_qfo_corrected_native_pairs.py` for R-on indices1,3,5,7.
+It verifies the corrected candidate admission, binds the supplied native
+admission to its cell/candidate/preparation and exact frozen independent
+admitter5a9d18d8fa5cf26bd94c2e1e5f83089c3e7fa3e6, then reruns that checker
+against the original raw reconciliation job. The complete fresh admission
+must equal the supplied report before any pair conversion. This rechecks
+native files, scheduler completion, provenance, trees, groups and pairs.
+
+Conversion uses the existing native-pair writer, checks injective accession
+normalization and preserves only native inferred pairs. Counts must match
+the admitted count; all corrected pairs must survive reference mapping.
+Rechecks bound artifacts and corrected candidates/runtime before publishing
+final filenames. Errors retain failure manifests and partial evidence.
+Separate participant IDs prevent replacing original-release results.
+The2CPU/64GiB/4h/no-requeue batch takes both actual admission hashes.
+
+61 focused tests pass across the new adapter, existing pair writer and
+corrected admission gate. The small integration test mocks upstream native
+admission but runs the real pair writer/filter, proving A-B/A-C native
+predictions do not become A-B/A-C/B-C group cliques. Changed fresh admission
+is rejected before final pairs exist. Full corrected-data conversion is
+still pending actual upstream completion; no accuracy or readiness claim.
+
+Next: freeze this converter and implement corrected all-cell assessment and
+independent score admission. Both R-off and R-on conversion paths are now
+implemented but remain unexecuted on corrected biological results.
+
 ## Corrected R-Off Pair Conversion (2026-09-18 UTC)
 
 Previous turn progressed by pushing5a9d18d and freezing corrected native
