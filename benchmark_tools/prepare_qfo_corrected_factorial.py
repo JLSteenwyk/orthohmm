@@ -76,6 +76,7 @@ def prepare(root, admission_path, admission_sha, admission_job, output):
     from benchmark_tools.verify_qfo_replay_launcher import verify
     from benchmark_tools.audit_qfo_replay_inputs import verify_species_partition
     from benchmark_tools.audit_accuracy_checkpoint import audit
+    from benchmark_tools.audit_candidate_arm import audit as audit_arm
     parents = {Path(r["path"]).parent for r in plan["input_fastas"]}
     if len(parents) != 1:
         raise ValueError("Ambiguous corrected FASTA directory")
@@ -97,7 +98,8 @@ def prepare(root, admission_path, admission_sha, admission_job, output):
     helpers = [record(executor / "benchmark_tools" / name) for name in
         ("prepare_orthobench_factorial.py", "prepare_qfo_factorial.py", "replay_phylogeny.py",
          "audit_historical_profile_ablation.py", "audit_qfo_replay_inputs.py", "audit_accuracy_checkpoint.py",
-         "verify_qfo_replay_launcher.py", "prepare_ob_candidate_neighborhood.py", "checked_replay_payload_worker.py")]
+         "verify_qfo_replay_launcher.py", "prepare_ob_candidate_neighborhood.py", "checked_replay_payload_worker.py",
+         "audit_candidate_arm.py")]
     cells = plan_cells(output, fasta, executor / "benchmark_tools/replay_phylogeny.py", 32)
     output.mkdir(parents=True, exist_ok=False)
     manifest = output / "manifest.json"
@@ -121,6 +123,7 @@ def prepare(root, admission_path, admission_sha, admission_job, output):
                     (queries, targets, scores), expand, _expand_phylogeny_candidates, load_membership_constraints)
                 arm["incremental_preparation_seconds"] = time.perf_counter() - started
                 arm["output_files"] = [record(p) for p in sorted((output / "candidates" / label).rglob("*")) if p.is_file()]
+                arm["content_audit"] = audit_arm(arm, seed, output / "candidates" / label, set(names), expand)
                 report["candidate_arms"][label] = arm
                 manifest.write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
             check(seed)

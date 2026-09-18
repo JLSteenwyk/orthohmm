@@ -1,5 +1,44 @@
 # Publication Progress
 
+## Candidate Merge Consistency Audit Added (2026-09-18 UTC)
+
+Previous turn progressed by pushing corrected candidate preparation
+(0819605). Added `audit_candidate_arm.py` and connected it to preparation
+before each arm is recorded as constructed. The helper verifies complete,
+unique membership against the supplied admitted universe, exact seed copies
+for expansion-off, no splitting of seed families in expansion-on, exact
+superfamily checkpoint copies, canonical seed-family sidecars, and full
+generated file inventories. It independently reconstructs components from
+the ordered merge trace, rejecting partial-seed, redundant, disconnected
+or cross-candidate merges and mismatched summary counts. Every checked
+artifact is rehashed at completion.
+
+Validation: 92 focused tests pass. Tests include multiple attachments in
+one iteration and merged components from a prior iteration, as well as
+reordered trace rejection. A full-scale read-only check also passed for
+all four retained original-QfO arms, using each previously recorded seed
+universe (976,504 genes):
+
+| Arm | Seed families | Candidate families | Trace merges |
+| --- | ---: | ---: | ---: |
+| p0_c0 | 393231 | 393231 | 0 |
+| p0_c1 | 393231 | 352749 | 40482 |
+| p1_c0 | 390980 | 390980 | 0 |
+| p1_c1 | 390980 | 350907 | 40073 |
+
+For the historical test, the old manifest lacked `output_files`; its arm
+inventories were computed in memory without modifying retained reports.
+These checks validate recorded partition/seed/merge consistency, not
+independently recomputed search support or biological truth. They do not
+admit corrected candidates, which have not been generated yet, and do not
+replace scheduler/source/runtime checks or independent parent admission.
+
+Last live check: corrected HMM 21706_0 running 3:07:56, SonicParanoid 21710
+running 2:44:44, original final-cell scoring 21723 running 27:00 and score
+admission 21724 pending. Continue corrected replay/candidate execution and
+admission after their prerequisites finish, then reconciliation/scoring.
+All unfinished publication requirements remain in scope.
+
 ## Corrected Candidate Preparation Implemented (2026-09-18 UTC)
 
 Previous turn progressed by implementing and pushing independent corrected
