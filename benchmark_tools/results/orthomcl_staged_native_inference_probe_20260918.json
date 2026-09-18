@@ -1,0 +1,930 @@
+{
+  "accuracy_admitted": false,
+  "checked_records": [
+    {
+      "bytes": 29068,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/orthomcl_native_inference_probe_20260918.json",
+      "sha256": "838eb833fe0b18b429db1c9bb1ad759313638dbbd2dcbcde7eb1c8270f21dc4e"
+    },
+    {
+      "bytes": 24168,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_native_inference_probe_v3_20260918/native_serial/data/all.bpo",
+      "sha256": "f77b50e20cef1aa4f5be997da047890624b37fd3e973c062713afee9a375abe1"
+    },
+    {
+      "bytes": 3423,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_native_inference_probe_v3_20260918/native_serial/data/all_bpo.idx",
+      "sha256": "189702c902816d16fecd4c13434c081001e28c42804d515eed5fe8237f70a492"
+    },
+    {
+      "bytes": 905,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_native_inference_probe_v3_20260918/native_serial/data/all_bpo.se",
+      "sha256": "a57e1a1c6002de59d67ee7527aa0c18117fc8e907eb764281291fdcd10019627"
+    },
+    {
+      "bytes": 424,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_native_inference_probe_v3_20260918/native_serial/data/all.gg",
+      "sha256": "f242ce883cc978c109491a8d36df8f030a46f562bb6c0ee74b2fb1663256aacc"
+    },
+    {
+      "bytes": 5874,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_orthomcl_staged_inference.py",
+      "sha256": "253790ce468a27018556c39faa20d9cd927a81f83bc53430d92f9bb4179f9d49"
+    },
+    {
+      "bytes": 4080,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/stage_orthomcl_native_inputs.py",
+      "sha256": "50e8e60b68242ea43410e63d789e2163222edaa568d958d383bc994e1eb1448e"
+    }
+  ],
+  "command": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/bin/perl",
+    "-I/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/tool",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_orthomcl_perl_script.pl",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/tool/orthomcl.pl",
+    "--mode",
+    "4",
+    "--bpo_file",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/inputs/all.bpo",
+    "--gg_file",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/inputs/all.gg"
+  ],
+  "configured_sources": {
+    "configured_sources": [
+      {
+        "bytes": 25093,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/tool/orthomcl.pl",
+        "sha256": "20f31672b87d7a0354f64f37c1513ba137895a131aa0162575aa3ead7e4dbd63"
+      },
+      {
+        "bytes": 30335,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/tool/orthomcl_module.pm",
+        "sha256": "f0c4c988ac2075212d28b0e8603fe60eb6627fada1c5558c5ce331065f54b0f7"
+      }
+    ],
+    "data_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/inputs",
+    "originals": [
+      {
+        "bytes": 22048,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/orthomcl.pl",
+        "sha256": "a47d46066c0f0b6e7f65673ea8eef236f181e05f896cc775b4c89ed217b4dbf4"
+      },
+      {
+        "bytes": 30312,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/orthomcl_module.pm",
+        "sha256": "84be557ff07bdf02aaa6f536a017f950faeb1fe88712dd12dde35ab6d6b6e78d"
+      }
+    ],
+    "pair_parallel_patch": true,
+    "threads": 2,
+    "tool_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/tool"
+  },
+  "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918",
+  "environment": {
+    "HOME": "/home/bizon",
+    "LANG": "C",
+    "LC_ALL": "C",
+    "LOGNAME": "bizon",
+    "ORTHOMCL_PAIR_WORKERS": "2",
+    "PATH": "/usr/bin:/bin",
+    "USER": "bizon"
+  },
+  "exit_code": 0,
+  "grouped_proteins": 41,
+  "groups": 12,
+  "input_mtimes_ns": {
+    "bpo": 1789736609787395317,
+    "offsets": 1789736609788395338,
+    "ranges": 1789736609788395338,
+    "species": 1789736609789395359
+  },
+  "limitations": [
+    "Small fixture only, not corrected production inference or 64-worker schedule validation.",
+    "Baseline itself differs from the bundled historical example; that discrepancy remains retained."
+  ],
+  "outputs": [
+    {
+      "bytes": 24168,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/inputs/all.bpo",
+      "sha256": "f77b50e20cef1aa4f5be997da047890624b37fd3e973c062713afee9a375abe1"
+    },
+    {
+      "bytes": 424,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/inputs/all.gg",
+      "sha256": "f242ce883cc978c109491a8d36df8f030a46f562bb6c0ee74b2fb1663256aacc"
+    },
+    {
+      "bytes": 3423,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/inputs/all_bpo.idx",
+      "sha256": "189702c902816d16fecd4c13434c081001e28c42804d515eed5fe8237f70a492"
+    },
+    {
+      "bytes": 905,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/inputs/all_bpo.se",
+      "sha256": "a57e1a1c6002de59d67ee7527aa0c18117fc8e907eb764281291fdcd10019627"
+    },
+    {
+      "bytes": 1375,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/inputs/pair_0.storable",
+      "sha256": "684251db5ba3a7a45fa6f3ca4478401fcc953c0b6d9e8a1c5079dbc9f1041b03"
+    },
+    {
+      "bytes": 835,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/inputs/pair_1.storable",
+      "sha256": "4fe303280947ccdc174b8d28013e7e552d9cab43e8278abd17cecbdf97887fd4"
+    },
+    {
+      "bytes": 915,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/inputs/pair_2.storable",
+      "sha256": "95d38bbea6e9163b98544d33a870abcd0767e64210e93d24487c2aebaa22c45d"
+    },
+    {
+      "bytes": 3784,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/inputs/staging.json",
+      "sha256": "1296a8fd4b96c454ceee23d7650320b859eaf57efde023d9d1721e52d4f0d329"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/inputs/validation/indexes.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 121,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/inputs/validation/indexes.stdout",
+      "sha256": "6204ad99db5b395dede24591816f0909b2fb1f123d3f2a97d253e13dd16cfa4f"
+    },
+    {
+      "bytes": 4292,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/native.log",
+      "sha256": "25c1afdf70d9e84d267fc5abe34f390ffd101052dc52e6881488f001f79247ee"
+    },
+    {
+      "bytes": 1350,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/tool/Sep_18/all_blast.bbh",
+      "sha256": "19ee5ca4a8d4cb20d72bf4c5a0c58471d11e5dd9d1bf09ce45fd9417e37afd4f"
+    },
+    {
+      "bytes": 939,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/tool/Sep_18/all_orthomcl.out",
+      "sha256": "d04a18db751466b8e4e045bbfcce6645b499032f7b2fed1a5de66b88097d807c"
+    },
+    {
+      "bytes": 3070,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/tool/Sep_18/orthomcl.log",
+      "sha256": "d96a2be8fc252aa390c24330d063ce91d944d2726032771b7856aa6a3c3d4ee6"
+    },
+    {
+      "bytes": 2837,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/tool/Sep_18/parameter.log",
+      "sha256": "147f20327cbd837e2b4c54f1e0e78f5dba2d050edcf76387f4c6e1075bd58ea9"
+    },
+    {
+      "bytes": 509,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/tool/Sep_18/tmp/all_ortho.idx",
+      "sha256": "2e9e1969b6b3653426af20332dd034e9850635ef62d9e4cf7086710c6badd760"
+    },
+    {
+      "bytes": 259,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/tool/Sep_18/tmp/all_ortho.mcl",
+      "sha256": "7ef44174a3af1012e106b81ca2a2b2e4a252b6384b6c32943393ee6cbc90f3e6"
+    },
+    {
+      "bytes": 1367,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/tool/Sep_18/tmp/all_ortho.mtx",
+      "sha256": "d5ba5cea9caef2ef16472736a3aaa918e12618fd5062aabcf883d524ce7a945e"
+    },
+    {
+      "bytes": 25093,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/tool/orthomcl.pl",
+      "sha256": "20f31672b87d7a0354f64f37c1513ba137895a131aa0162575aa3ead7e4dbd63"
+    },
+    {
+      "bytes": 30335,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/tool/orthomcl_module.pm",
+      "sha256": "f0c4c988ac2075212d28b0e8603fe60eb6627fada1c5558c5ce331065f54b0f7"
+    }
+  ],
+  "publication_ready": false,
+  "runtime_after": {
+    "limitations": [
+      "Explicit runtime identity, not an OS-wide hermetic execution claim.",
+      "Helper source identity is bound separately by the frozen executor."
+    ],
+    "manifest": {
+      "bytes": 1082091,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/orthomcl_python_runtime_20260918.json",
+      "sha256": "3519dbf43a376c935cc76ab00559af045c3e94ce47bf421319b970e660c8cddc"
+    },
+    "mapped_files": [
+      {
+        "bytes": 17157264,
+        "path": "/home/bizon/anaconda3/bin/python3.10",
+        "sha256": "ddd8126d3a409c6ad46c718225d853214d0c9dba3657123514172951fa79058b"
+      },
+      {
+        "bytes": 83576,
+        "path": "/home/bizon/anaconda3/lib/libbz2.so.1.0.8",
+        "sha256": "2aa4427cfdbae9ef95a402de9291102dd293e58d29409df9812c3c8fa9216ccd"
+      },
+      {
+        "bytes": 5172040,
+        "path": "/home/bizon/anaconda3/lib/libcrypto.so.3",
+        "sha256": "e51457dff39af720f0a88552a93457879db1538a1f87494022ad42e27767aaec"
+      },
+      {
+        "bytes": 72144,
+        "path": "/home/bizon/anaconda3/lib/libffi.so.8.1.2",
+        "sha256": "a5d54aeb8ed2fd5e0ccf9d38b28cad6dec76517f69224a5d9687c1970b57b194"
+      },
+      {
+        "bytes": 475272,
+        "path": "/home/bizon/anaconda3/lib/libgcc_s.so.1",
+        "sha256": "d912bad5e511194c15b506fe7eafe4454bc2dc4073a0fdebc60e86af59a0f2bc"
+      },
+      {
+        "bytes": 218304,
+        "path": "/home/bizon/anaconda3/lib/liblzma.so.5.6.4",
+        "sha256": "6b126e186cc43702dcacb626e0455f8aecf030d969d6d4a407ce4cc35293c503"
+      },
+      {
+        "bytes": 1469144,
+        "path": "/home/bizon/anaconda3/lib/libsqlite3.so.0.8.6",
+        "sha256": "6fea60dd09de040809ad67663e18f7c1f247535950e89a81290f567f2fe41565"
+      },
+      {
+        "bytes": 775712,
+        "path": "/home/bizon/anaconda3/lib/libssl.so.3",
+        "sha256": "3480c91df4e0c1a33514955568641405e37924f680e8ba42f494a209640516c6"
+      },
+      {
+        "bytes": 13799640,
+        "path": "/home/bizon/anaconda3/lib/libstdc++.so.6.0.32",
+        "sha256": "31cbe74fef348ed0f1bcaaf0e8b941259bb9232bd635615b157ec4315ba102a8"
+      },
+      {
+        "bytes": 124744,
+        "path": "/home/bizon/anaconda3/lib/libz.so.1.2.13",
+        "sha256": "0b0e682a9dc7fd4895a6783288f851b793dc89633f28714027974fa4d66f3914"
+      },
+      {
+        "bytes": 62472,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_bisect.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "ea887752eba075d2474bd853e3a5e503bcf032305e5c51cd14028b4e77034b4d"
+      },
+      {
+        "bytes": 251704,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_blake2.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "f421e8df1b7ea5d31515dee9a2684bd36aa67ec685928570988d353a59fdce80"
+      },
+      {
+        "bytes": 88896,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_bz2.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "b19678449d12d9beb6cbbbd33fb555ebfc853871cce5a2a519726e35ab5d7bad"
+      },
+      {
+        "bytes": 27008,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_contextvars.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "6ed0d89ae1638f7b8c0ffcc509636d6915b1c63b72f5152256d0ea08c71ba2c7"
+      },
+      {
+        "bytes": 142696,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_csv.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "df056cebe877d3018dcdfde2e872a00fbffa7fc108179fa7eec15421a3f7bcf6"
+      },
+      {
+        "bytes": 548912,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_ctypes.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "a30a8aed3d972d7bb87069b0936065dd4b6c763e9f6f7f149f12c920bdfbc2b9"
+      },
+      {
+        "bytes": 580080,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_datetime.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "2fc84a2c46a4df59e1a577e3e90697bc70e8823c3c96377ae37fb01f3849d7b8"
+      },
+      {
+        "bytes": 1442104,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_decimal.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "812f13a0c79bf7f1079128f18c58ce3626570eb7fba42fedbf28ff16771c5766"
+      },
+      {
+        "bytes": 334776,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_elementtree.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "b467840fac2c89017c168f4d8f581c0cc3691c95fd8163d9fc6b7f210442b0ad"
+      },
+      {
+        "bytes": 211136,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_hashlib.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "fc629b71bf317522fb415d5d2d922f7a4b5d46b87cd6fa8c57525496e0e3a72a"
+      },
+      {
+        "bytes": 104128,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_heapq.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "786b8377efa7f3c3fa22964dc1a2356313ba5165d31a17632020d6570f50d2d6"
+      },
+      {
+        "bytes": 163064,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_json.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "96e880f7dc1ea92de1274e0c48e68a14ca774e8dc2acc8dfa4298316f1e8a1af"
+      },
+      {
+        "bytes": 145376,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_lzma.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "c290899c3d2ba97ad1c1eca27392dada5d0baf2930e271b8680c60afcc4e335d"
+      },
+      {
+        "bytes": 29720,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_opcode.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "6509bb6108534aa66f5ffa927309997192266c383692034ab55003f0dcf57af9"
+      },
+      {
+        "bytes": 532464,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_pickle.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "e02187f9da864f3b18012db3f8532639e38636e07d4476f945315d1fd4f7b626"
+      },
+      {
+        "bytes": 76248,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_posixsubprocess.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "6504b0340b5b8dab668aeccca4342499d658c79aa04c600cb5677860f1ff5ae2"
+      },
+      {
+        "bytes": 55448,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_queue.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "4947caa8236f98db027ec195ba21f8d46c090234a37f297060461c5d309d15e2"
+      },
+      {
+        "bytes": 67328,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_random.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "ac1ccbb60ce2006a9c11ee60ec2fc5c05e24c39da941e55f94204d92bb3c1369"
+      },
+      {
+        "bytes": 98040,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_sha512.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "b45b862451f4704e44689acb20375ea6adb7074927cbfcaf0758b3818df9000f"
+      },
+      {
+        "bytes": 283512,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_socket.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "7c91726d7fa1955364a2d7f789800748406d311957d66be94d21862f8e19304c"
+      },
+      {
+        "bytes": 489832,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_sqlite3.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "bb84c7f8f160ff9bbfed3ee91132e83c9286839285b6d69711463ac0d2f5895e"
+      },
+      {
+        "bytes": 497264,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_ssl.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "b46e130b37a2a795f7506b2d773aa4f4f3ac7aaa46efabea08da59f7a0eac6ac"
+      },
+      {
+        "bytes": 31920,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_statistics.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "9789f0220315cc2ec34970907498739847608a9dd1d1fb4475d5fd288c9ca875"
+      },
+      {
+        "bytes": 219400,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_struct.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "af2b5503de6cb31de79ec9ce4269ff3bb501fc85fb6b8153bcbbe7515d86f4f4"
+      },
+      {
+        "bytes": 231120,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/array.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "11002ce4700ab79912a0bb087c5fe23780cc5c30698674cfa0a16974899771ef"
+      },
+      {
+        "bytes": 122768,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/binascii.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "e1e71d3c1634ee3c2b305a574b01a4375b7dd5bf8f1cf91930d03ee2e40ac238"
+      },
+      {
+        "bytes": 57440,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/fcntl.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "9ddc8f3f5e9dc8f9853a84388d334b63a50c7ac837770a9fc7c6044a4258690d"
+      },
+      {
+        "bytes": 259288,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/math.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "81fac6b419fc71268e60e10ccec0410b602db8f71ea94ab4d3efc739aa62d733"
+      },
+      {
+        "bytes": 955296,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/pyexpat.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "4e5afe86b38c9c78b6de98ec503af8fda22628844e061658b88fc86113496208"
+      },
+      {
+        "bytes": 50280,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/resource.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "2652d574c4b386e3d2d8db4883aee9b6468342e102b45fce0ada79ff1c44c59b"
+      },
+      {
+        "bytes": 113568,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/select.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "bef537130c58a31fa345ba20523179ed2df7c30eadc6014b61e2d672d0ac6e6b"
+      },
+      {
+        "bytes": 138024,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/zlib.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "12cd038d0c1875763042aa7ca3fa6b6ded4646770b6c2f8f18ed5fa87ad4f46c"
+      },
+      {
+        "bytes": 45840,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_python_env_20260918/lib/python3.10/site-packages/Bio/Align/_aligncore.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "0cb0dc434a81cdfd917c33fc0d5e55617c292be309899ec37d2f9f491f222168"
+      },
+      {
+        "bytes": 182384,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_python_env_20260918/lib/python3.10/site-packages/Bio/Align/_alignmentcounts.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "dbced64399b4a942a1f220c166c2b975d31ff9b21834a0b1bdb955e2a9cd2f0c"
+      },
+      {
+        "bytes": 94472,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_python_env_20260918/lib/python3.10/site-packages/Bio/Align/_codonaligner.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "52fd7ff1e98dec15efeea313e6b5ddf6c09289a7e0c64a1c81925a7291fb2514"
+      },
+      {
+        "bytes": 918488,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_python_env_20260918/lib/python3.10/site-packages/Bio/Align/_pairwisealigner.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "4f1da93248763797c7afba26158d007f663f8be193b1ee6f6d052dc0b38625bc"
+      },
+      {
+        "bytes": 37400,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_python_env_20260918/lib/python3.10/site-packages/Bio/Align/substitution_matrices/_arraycore.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "de22b4d48ba69934730ffac4efb21a2ede18e1a1d2644d378c6d85657f405f16"
+      },
+      {
+        "bytes": 27248,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_python_env_20260918/lib/python3.10/site-packages/Bio/Nexus/cnexus.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "de04b9d145360804a128c6d5f30a1f3b052cb4db70e15e55701abd24a3553500"
+      },
+      {
+        "bytes": 38952,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_python_env_20260918/lib/python3.10/site-packages/Bio/SeqIO/_twoBitIO.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "dd11db89060d93afcb2b5a80982c035d01c857618b1a15067e69376c774152f1"
+      },
+      {
+        "bytes": 10449209,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_python_env_20260918/lib/python3.10/site-packages/numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "c634eaf05367af02b815cf3d2020fbeee9b47426af1fe26cf3189e4798932dc5"
+      },
+      {
+        "bytes": 227657,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_python_env_20260918/lib/python3.10/site-packages/numpy/linalg/_umath_linalg.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "c6bc9d5c4db6cea333d46d905e15fbcd8f541ec5b23704ca3c44547ee2ee5187"
+      },
+      {
+        "bytes": 2833617,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_python_env_20260918/lib/python3.10/site-packages/numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0",
+        "sha256": "c6090048eccc763522c12ef016f81da6b627cb3a044f55cf0479a839c41c0980"
+      },
+      {
+        "bytes": 250985,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_python_env_20260918/lib/python3.10/site-packages/numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0",
+        "sha256": "6ed5137f412781ad7863439fb543613f620b43c32b63292a0029246162f5bbc6"
+      },
+      {
+        "bytes": 25021457,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_python_env_20260918/lib/python3.10/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+        "sha256": "0bd815d04b6b54990e3cccc7528fbb696456d09569f533d0390c13f0cdc4dd4a"
+      },
+      {
+        "bytes": 236616,
+        "path": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+        "sha256": "6c5e1b4528b704dc7081aa45b5037bda4ea9cad78ca562b4fb6b0dbdbfc7e7e7"
+      },
+      {
+        "bytes": 2125328,
+        "path": "/usr/lib/x86_64-linux-gnu/libc.so.6",
+        "sha256": "e7a914a33fd4f6d25057b8d48c7c5f3d55ab870ec4ee27693d6c5f3a532e6226"
+      },
+      {
+        "bytes": 14408,
+        "path": "/usr/lib/x86_64-linux-gnu/libdl.so.2",
+        "sha256": "efb09ce48f6ecdf4803547ef500bc371f9485e8c34b80913313c4a7cdb109664"
+      },
+      {
+        "bytes": 952616,
+        "path": "/usr/lib/x86_64-linux-gnu/libm.so.6",
+        "sha256": "c09178edd7fbc58aa8415f4bbe54dd76c5ff6c6398ba3e56e5a4743fd7e9adfc"
+      },
+      {
+        "bytes": 14408,
+        "path": "/usr/lib/x86_64-linux-gnu/libpthread.so.0",
+        "sha256": "8886af025eed1782e4b4675918250bf902206dab45151b6bc7f22b9c7249f6ae"
+      },
+      {
+        "bytes": 14624,
+        "path": "/usr/lib/x86_64-linux-gnu/librt.so.1",
+        "sha256": "5c070d1a8ff908c799bce07f86dadef98512a8aa0643fed917598f96fc1256e1"
+      },
+      {
+        "bytes": 14408,
+        "path": "/usr/lib/x86_64-linux-gnu/libutil.so.1",
+        "sha256": "17a4fca0e7fece307d2bfda63efd3be2051a6d83981be0c3481d63ac6f2a0e96"
+      }
+    ],
+    "packages": {
+      "biopython": "1.86",
+      "numpy": "2.2.6"
+    },
+    "python_version": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+    "runtime_records": 2928,
+    "status": "dedicated_bpo_python_runtime_verified"
+  },
+  "runtime_before": {
+    "limitations": [
+      "Explicit runtime identity, not an OS-wide hermetic execution claim.",
+      "Helper source identity is bound separately by the frozen executor."
+    ],
+    "manifest": {
+      "bytes": 1082091,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/orthomcl_python_runtime_20260918.json",
+      "sha256": "3519dbf43a376c935cc76ab00559af045c3e94ce47bf421319b970e660c8cddc"
+    },
+    "mapped_files": [
+      {
+        "bytes": 17157264,
+        "path": "/home/bizon/anaconda3/bin/python3.10",
+        "sha256": "ddd8126d3a409c6ad46c718225d853214d0c9dba3657123514172951fa79058b"
+      },
+      {
+        "bytes": 83576,
+        "path": "/home/bizon/anaconda3/lib/libbz2.so.1.0.8",
+        "sha256": "2aa4427cfdbae9ef95a402de9291102dd293e58d29409df9812c3c8fa9216ccd"
+      },
+      {
+        "bytes": 5172040,
+        "path": "/home/bizon/anaconda3/lib/libcrypto.so.3",
+        "sha256": "e51457dff39af720f0a88552a93457879db1538a1f87494022ad42e27767aaec"
+      },
+      {
+        "bytes": 72144,
+        "path": "/home/bizon/anaconda3/lib/libffi.so.8.1.2",
+        "sha256": "a5d54aeb8ed2fd5e0ccf9d38b28cad6dec76517f69224a5d9687c1970b57b194"
+      },
+      {
+        "bytes": 475272,
+        "path": "/home/bizon/anaconda3/lib/libgcc_s.so.1",
+        "sha256": "d912bad5e511194c15b506fe7eafe4454bc2dc4073a0fdebc60e86af59a0f2bc"
+      },
+      {
+        "bytes": 218304,
+        "path": "/home/bizon/anaconda3/lib/liblzma.so.5.6.4",
+        "sha256": "6b126e186cc43702dcacb626e0455f8aecf030d969d6d4a407ce4cc35293c503"
+      },
+      {
+        "bytes": 1469144,
+        "path": "/home/bizon/anaconda3/lib/libsqlite3.so.0.8.6",
+        "sha256": "6fea60dd09de040809ad67663e18f7c1f247535950e89a81290f567f2fe41565"
+      },
+      {
+        "bytes": 775712,
+        "path": "/home/bizon/anaconda3/lib/libssl.so.3",
+        "sha256": "3480c91df4e0c1a33514955568641405e37924f680e8ba42f494a209640516c6"
+      },
+      {
+        "bytes": 13799640,
+        "path": "/home/bizon/anaconda3/lib/libstdc++.so.6.0.32",
+        "sha256": "31cbe74fef348ed0f1bcaaf0e8b941259bb9232bd635615b157ec4315ba102a8"
+      },
+      {
+        "bytes": 124744,
+        "path": "/home/bizon/anaconda3/lib/libz.so.1.2.13",
+        "sha256": "0b0e682a9dc7fd4895a6783288f851b793dc89633f28714027974fa4d66f3914"
+      },
+      {
+        "bytes": 62472,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_bisect.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "ea887752eba075d2474bd853e3a5e503bcf032305e5c51cd14028b4e77034b4d"
+      },
+      {
+        "bytes": 251704,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_blake2.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "f421e8df1b7ea5d31515dee9a2684bd36aa67ec685928570988d353a59fdce80"
+      },
+      {
+        "bytes": 88896,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_bz2.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "b19678449d12d9beb6cbbbd33fb555ebfc853871cce5a2a519726e35ab5d7bad"
+      },
+      {
+        "bytes": 27008,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_contextvars.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "6ed0d89ae1638f7b8c0ffcc509636d6915b1c63b72f5152256d0ea08c71ba2c7"
+      },
+      {
+        "bytes": 142696,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_csv.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "df056cebe877d3018dcdfde2e872a00fbffa7fc108179fa7eec15421a3f7bcf6"
+      },
+      {
+        "bytes": 548912,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_ctypes.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "a30a8aed3d972d7bb87069b0936065dd4b6c763e9f6f7f149f12c920bdfbc2b9"
+      },
+      {
+        "bytes": 580080,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_datetime.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "2fc84a2c46a4df59e1a577e3e90697bc70e8823c3c96377ae37fb01f3849d7b8"
+      },
+      {
+        "bytes": 1442104,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_decimal.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "812f13a0c79bf7f1079128f18c58ce3626570eb7fba42fedbf28ff16771c5766"
+      },
+      {
+        "bytes": 334776,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_elementtree.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "b467840fac2c89017c168f4d8f581c0cc3691c95fd8163d9fc6b7f210442b0ad"
+      },
+      {
+        "bytes": 211136,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_hashlib.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "fc629b71bf317522fb415d5d2d922f7a4b5d46b87cd6fa8c57525496e0e3a72a"
+      },
+      {
+        "bytes": 104128,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_heapq.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "786b8377efa7f3c3fa22964dc1a2356313ba5165d31a17632020d6570f50d2d6"
+      },
+      {
+        "bytes": 163064,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_json.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "96e880f7dc1ea92de1274e0c48e68a14ca774e8dc2acc8dfa4298316f1e8a1af"
+      },
+      {
+        "bytes": 145376,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_lzma.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "c290899c3d2ba97ad1c1eca27392dada5d0baf2930e271b8680c60afcc4e335d"
+      },
+      {
+        "bytes": 29720,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_opcode.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "6509bb6108534aa66f5ffa927309997192266c383692034ab55003f0dcf57af9"
+      },
+      {
+        "bytes": 532464,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_pickle.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "e02187f9da864f3b18012db3f8532639e38636e07d4476f945315d1fd4f7b626"
+      },
+      {
+        "bytes": 76248,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_posixsubprocess.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "6504b0340b5b8dab668aeccca4342499d658c79aa04c600cb5677860f1ff5ae2"
+      },
+      {
+        "bytes": 55448,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_queue.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "4947caa8236f98db027ec195ba21f8d46c090234a37f297060461c5d309d15e2"
+      },
+      {
+        "bytes": 67328,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_random.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "ac1ccbb60ce2006a9c11ee60ec2fc5c05e24c39da941e55f94204d92bb3c1369"
+      },
+      {
+        "bytes": 98040,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_sha512.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "b45b862451f4704e44689acb20375ea6adb7074927cbfcaf0758b3818df9000f"
+      },
+      {
+        "bytes": 283512,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_socket.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "7c91726d7fa1955364a2d7f789800748406d311957d66be94d21862f8e19304c"
+      },
+      {
+        "bytes": 489832,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_sqlite3.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "bb84c7f8f160ff9bbfed3ee91132e83c9286839285b6d69711463ac0d2f5895e"
+      },
+      {
+        "bytes": 497264,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_ssl.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "b46e130b37a2a795f7506b2d773aa4f4f3ac7aaa46efabea08da59f7a0eac6ac"
+      },
+      {
+        "bytes": 31920,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_statistics.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "9789f0220315cc2ec34970907498739847608a9dd1d1fb4475d5fd288c9ca875"
+      },
+      {
+        "bytes": 219400,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_struct.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "af2b5503de6cb31de79ec9ce4269ff3bb501fc85fb6b8153bcbbe7515d86f4f4"
+      },
+      {
+        "bytes": 231120,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/array.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "11002ce4700ab79912a0bb087c5fe23780cc5c30698674cfa0a16974899771ef"
+      },
+      {
+        "bytes": 122768,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/binascii.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "e1e71d3c1634ee3c2b305a574b01a4375b7dd5bf8f1cf91930d03ee2e40ac238"
+      },
+      {
+        "bytes": 57440,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/fcntl.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "9ddc8f3f5e9dc8f9853a84388d334b63a50c7ac837770a9fc7c6044a4258690d"
+      },
+      {
+        "bytes": 259288,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/math.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "81fac6b419fc71268e60e10ccec0410b602db8f71ea94ab4d3efc739aa62d733"
+      },
+      {
+        "bytes": 955296,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/pyexpat.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "4e5afe86b38c9c78b6de98ec503af8fda22628844e061658b88fc86113496208"
+      },
+      {
+        "bytes": 50280,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/resource.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "2652d574c4b386e3d2d8db4883aee9b6468342e102b45fce0ada79ff1c44c59b"
+      },
+      {
+        "bytes": 113568,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/select.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "bef537130c58a31fa345ba20523179ed2df7c30eadc6014b61e2d672d0ac6e6b"
+      },
+      {
+        "bytes": 138024,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/zlib.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "12cd038d0c1875763042aa7ca3fa6b6ded4646770b6c2f8f18ed5fa87ad4f46c"
+      },
+      {
+        "bytes": 45840,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_python_env_20260918/lib/python3.10/site-packages/Bio/Align/_aligncore.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "0cb0dc434a81cdfd917c33fc0d5e55617c292be309899ec37d2f9f491f222168"
+      },
+      {
+        "bytes": 182384,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_python_env_20260918/lib/python3.10/site-packages/Bio/Align/_alignmentcounts.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "dbced64399b4a942a1f220c166c2b975d31ff9b21834a0b1bdb955e2a9cd2f0c"
+      },
+      {
+        "bytes": 94472,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_python_env_20260918/lib/python3.10/site-packages/Bio/Align/_codonaligner.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "52fd7ff1e98dec15efeea313e6b5ddf6c09289a7e0c64a1c81925a7291fb2514"
+      },
+      {
+        "bytes": 918488,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_python_env_20260918/lib/python3.10/site-packages/Bio/Align/_pairwisealigner.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "4f1da93248763797c7afba26158d007f663f8be193b1ee6f6d052dc0b38625bc"
+      },
+      {
+        "bytes": 37400,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_python_env_20260918/lib/python3.10/site-packages/Bio/Align/substitution_matrices/_arraycore.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "de22b4d48ba69934730ffac4efb21a2ede18e1a1d2644d378c6d85657f405f16"
+      },
+      {
+        "bytes": 27248,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_python_env_20260918/lib/python3.10/site-packages/Bio/Nexus/cnexus.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "de04b9d145360804a128c6d5f30a1f3b052cb4db70e15e55701abd24a3553500"
+      },
+      {
+        "bytes": 38952,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_python_env_20260918/lib/python3.10/site-packages/Bio/SeqIO/_twoBitIO.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "dd11db89060d93afcb2b5a80982c035d01c857618b1a15067e69376c774152f1"
+      },
+      {
+        "bytes": 10449209,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_python_env_20260918/lib/python3.10/site-packages/numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "c634eaf05367af02b815cf3d2020fbeee9b47426af1fe26cf3189e4798932dc5"
+      },
+      {
+        "bytes": 227657,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_python_env_20260918/lib/python3.10/site-packages/numpy/linalg/_umath_linalg.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "c6bc9d5c4db6cea333d46d905e15fbcd8f541ec5b23704ca3c44547ee2ee5187"
+      },
+      {
+        "bytes": 2833617,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_python_env_20260918/lib/python3.10/site-packages/numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0",
+        "sha256": "c6090048eccc763522c12ef016f81da6b627cb3a044f55cf0479a839c41c0980"
+      },
+      {
+        "bytes": 250985,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_python_env_20260918/lib/python3.10/site-packages/numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0",
+        "sha256": "6ed5137f412781ad7863439fb543613f620b43c32b63292a0029246162f5bbc6"
+      },
+      {
+        "bytes": 25021457,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_python_env_20260918/lib/python3.10/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+        "sha256": "0bd815d04b6b54990e3cccc7528fbb696456d09569f533d0390c13f0cdc4dd4a"
+      },
+      {
+        "bytes": 236616,
+        "path": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+        "sha256": "6c5e1b4528b704dc7081aa45b5037bda4ea9cad78ca562b4fb6b0dbdbfc7e7e7"
+      },
+      {
+        "bytes": 2125328,
+        "path": "/usr/lib/x86_64-linux-gnu/libc.so.6",
+        "sha256": "e7a914a33fd4f6d25057b8d48c7c5f3d55ab870ec4ee27693d6c5f3a532e6226"
+      },
+      {
+        "bytes": 14408,
+        "path": "/usr/lib/x86_64-linux-gnu/libdl.so.2",
+        "sha256": "efb09ce48f6ecdf4803547ef500bc371f9485e8c34b80913313c4a7cdb109664"
+      },
+      {
+        "bytes": 952616,
+        "path": "/usr/lib/x86_64-linux-gnu/libm.so.6",
+        "sha256": "c09178edd7fbc58aa8415f4bbe54dd76c5ff6c6398ba3e56e5a4743fd7e9adfc"
+      },
+      {
+        "bytes": 14408,
+        "path": "/usr/lib/x86_64-linux-gnu/libpthread.so.0",
+        "sha256": "8886af025eed1782e4b4675918250bf902206dab45151b6bc7f22b9c7249f6ae"
+      },
+      {
+        "bytes": 14624,
+        "path": "/usr/lib/x86_64-linux-gnu/librt.so.1",
+        "sha256": "5c070d1a8ff908c799bce07f86dadef98512a8aa0643fed917598f96fc1256e1"
+      },
+      {
+        "bytes": 14408,
+        "path": "/usr/lib/x86_64-linux-gnu/libutil.so.1",
+        "sha256": "17a4fca0e7fece307d2bfda63efd3be2051a6d83981be0c3481d63ac6f2a0e96"
+      }
+    ],
+    "packages": {
+      "biopython": "1.86",
+      "numpy": "2.2.6"
+    },
+    "python_version": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+    "runtime_records": 2928,
+    "status": "dedicated_bpo_python_runtime_verified"
+  },
+  "staging": {
+    "accuracy_admitted": false,
+    "index_validation": {
+      "bpo_bytes": 24168,
+      "offset_entries_including_eof": 380,
+      "queries": 42,
+      "records": 379,
+      "status": "native_bpo_indexes_verified"
+    },
+    "index_validation_command": [
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/bin/perl",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_orthomcl_perl_script.pl",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_orthomcl_bpo_indexes.pl",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/inputs/all.bpo",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/inputs/all_bpo.idx",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/inputs/all_bpo.se"
+    ],
+    "input_proteins": 42,
+    "limitations": [
+      "Requires independently admitted input records and runtime checks from the caller.",
+      "Copies are separate files, not shared writable links; no cache resume is permitted.",
+      "Native execution and final-group admission remain separate requirements."
+    ],
+    "publication_ready": false,
+    "sources": {
+      "bpo": {
+        "bytes": 24168,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_native_inference_probe_v3_20260918/native_serial/data/all.bpo",
+        "sha256": "f77b50e20cef1aa4f5be997da047890624b37fd3e973c062713afee9a375abe1"
+      },
+      "offsets": {
+        "bytes": 3423,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_native_inference_probe_v3_20260918/native_serial/data/all_bpo.idx",
+        "sha256": "189702c902816d16fecd4c13434c081001e28c42804d515eed5fe8237f70a492"
+      },
+      "ranges": {
+        "bytes": 905,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_native_inference_probe_v3_20260918/native_serial/data/all_bpo.se",
+        "sha256": "a57e1a1c6002de59d67ee7527aa0c18117fc8e907eb764281291fdcd10019627"
+      },
+      "species": {
+        "bytes": 424,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_native_inference_probe_v3_20260918/native_serial/data/all.gg",
+        "sha256": "f242ce883cc978c109491a8d36df8f030a46f562bb6c0ee74b2fb1663256aacc"
+      }
+    },
+    "species": 3,
+    "staged": {
+      "bpo": {
+        "bytes": 24168,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/inputs/all.bpo",
+        "sha256": "f77b50e20cef1aa4f5be997da047890624b37fd3e973c062713afee9a375abe1"
+      },
+      "offsets": {
+        "bytes": 3423,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/inputs/all_bpo.idx",
+        "sha256": "189702c902816d16fecd4c13434c081001e28c42804d515eed5fe8237f70a492"
+      },
+      "ranges": {
+        "bytes": 905,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/inputs/all_bpo.se",
+        "sha256": "a57e1a1c6002de59d67ee7527aa0c18117fc8e907eb764281291fdcd10019627"
+      },
+      "species": {
+        "bytes": 424,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_staged_native_inference_probe_v2_20260918/inputs/all.gg",
+        "sha256": "f242ce883cc978c109491a8d36df8f030a46f562bb6c0ee74b2fb1663256aacc"
+      }
+    },
+    "status": "native_inputs_staged_and_indexes_verified"
+  },
+  "status": "staged_native_fixture_partition_and_input_preservation_verified"
+}

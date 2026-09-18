@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Native Input Staging Verified (2026-09-18 UTC)
+
+Previous turn progressed through91a8fd7 with independent BPO admission
+queued as21749. Revalidated handles: HMM21706_0 RUNNING8:12:48,
+DGX21656_24 RUNNING1:10:25; correctedBLAST21713 pending resources and
+downstream dependencies unchanged. No running job was restarted.
+
+Reviewed native mode4 index lookup and pair-cache placement. Implemented
+fresh-directory BPO/index/GG staging with separate copies, exact hash
+checks, GGscope checks and complete copied-index validation. The actual
+two-worker native fixture reproduced the serial partition12groups/41genes
+from42input proteins; all379BPO records and380offsets validated. Staged
+input/index hashes and modification times were unchanged by inference.
+61focused tests passed with installed legacy-runtime checks enabled.
+
+See ORTHOMCL_STAGED_NATIVE_INPUTS_20260918.md and its retained report. This
+is small-fixture evidence, not corrected production inference or64-worker
+equivalence. Next: connect staged admitted inputs, frozen native sources,
+runtime checks and resources in the production inference wrapper; then
+final-group admission and scoring. Publication goal remains unfinished.
+
 ## Independent BPO Admission Queued (2026-09-18 UTC)
 
 Previous turn progressed through c688180: frozen preparation executor and
