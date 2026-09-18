@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Corrected Native OrthoMCL Queued (2026-09-18 UTC)
+
+Previous turn progressed by pushingdb1e3cf: input staging and native
+index-preservation evidence. Revalidated handles: HMM21706_0 RUNNING8:19:17,
+DGX21656_24 RUNNING1:16:54, correctedBLAST21713 pending resources, with
+admission/preparation dependencies intact. No existing job was restarted.
+
+Implemented production native inference from admitted BPO/index/GG records,
+with frozen source/runtime checks, fresh staging,64pair workers, native-stage
+resource logging, complete3,003pair-cache inventory and retained failures.
+Final groups remain pending independent admission, not automatically scored.
+Full unit suite passed3,859tests in85.70s with legacy runtime tests enabled.
+
+Frozen runner22f4eec4314304a0cda71e02595adfb20827c34b at
+publication_qfo_corrected_orthomcl_v1 passed batch syntax and clean-worktree
+checks. Its check-only invocation correctly rejected pending21749 and
+created no inference output. Submitted21750 afterok:21749 with180CPUs/900GiB/
+7days onbizon and no requeue; scontrol confirms PENDING/Dependency.
+
+See QFO_CORRECTED_ORTHOMCL_INFERENCE_20260918.md. Next: independent native
+final-output admission and pair conversion/scoring, while preserving source
+query-failure diagnostics. No corrected native result or new score exists
+yet. Publication goal remains active and incomplete.
+
 ## Native Input Staging Verified (2026-09-18 UTC)
 
 Previous turn progressed through91a8fd7 with independent BPO admission
