@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Eight-Cell SwissTrees Count Collector Implemented (2026-09-17)
+
+Previous turn made concrete progress with the domain-stratified figure,
+committed/pushed78e273f. Re-read the full objective and added
+`audit_qfo_factorial_swiss.py`, connecting complete admitted QfO factorial
+assessments to the frozen bootstrap input format. Requires all eight cells,
+preserves baseline reuse versus fresh assessment semantics, verifies nested
+file hashes, and checks exact reference pair identities/truth/membership
+against the pinned prior native reference audit. Reconstructs raw/2+1 counts
+and validates family and macro statistics against native metrics.
+
+Eighteen new tests include a full synthetic file audit and post-admission
+tampering;42combined count/bootstrap tests pass. Details and future commands:
+`QFO_FACTORIAL_COUNT_AUDIT_IMPLEMENTATION_20260917.md`. No empirical eight-cell
+report or intervals were generated; only two baseline cells have admitted
+assessments. This collector consumes existing independent admissions rather
+than replacing their scheduler and provenance verification.
+
+Fresh Slurm poll:21671_0 reconciliation RUNNING47:52;21681 scoring
+RUNNING26:20;21656_7 DGX timing RUNNING1:02:35. QfO scoring has submitted
+all six challenge tasks; downstream jobs remain queued. No restarts,
+unrelated job changes, heavy DGX reads or method retuning. The complete
+publication objective remains active and incomplete.
+
 ## Domain-Stratified Figure Completed (2026-09-17)
 
 Previous turn was a verified wait: DGX task21656_7 was confirmed RUNNING
