@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Fresh Factorial Assessment Admission Implemented (2026-09-17)
+
+Previous turn progressed baseline assessment revalidation and expanded scoring,
+pushedc12a730; re-read full objective. Scoring21681 remains live,21682 queued;
+reconciliation21671_0 and DGX21656_7 also live. Added
+`admit_qfo_factorial_assessment.py`: terminal job identity/allocation, exact
+conversion hash/identity, frozen assessment executor and environment,
+preflight consistency, complete output inventory,15fresh Nextflow tasks,
+48native assessments and six matching aggregates are required.
+Baseline reuse is explicitly rejected by this fresh-score gate.
+
+73focused fresh/recovered admission, assessment and native-metric tests pass.
+The validation batch is ready; at this commit no fresh-score admission task
+has been submitted or passed. Native scoring success is not a paired CI,
+independent biological validation, or evidence of publication readiness.
+Full eight-cell completion and the frozen SwissTrees contrasts remain pending.
+
 ## Two QfO Baselines Revalidated; Expanded Scoring Running (2026-09-17)
 
 Committed/pushed assessment runner25f328d and created detached executor
