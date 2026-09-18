@@ -1,5 +1,27 @@
 # Publication Progress
 
+## VGNC Reference-Block Dependency Audit Executed (2026-09-18 UTC)
+
+Previous turn progressed throughf756ff6 with self-hit semantics and tests.
+Reread the full objective. Initial scheduler check:21792 validation RUNNING
+5:50,HMM21706_0 RUNNING14:29:46;21795/21798 pending dependencies.
+
+Executed audit_vgnc_family_dependencies.py on four existing audited historical
+stage outputs. Eleven shared proteins link16863 family labels into16844
+reference-defined blocks. All TP/FN stay within blocks, but almost every FP
+crosses them:120804,15788,121468,15804 across the four stages. These findings
+show why alias merging alone cannot establish an ordinary independent-family
+bootstrap. Largest prediction-link components vary371,13,374,11 blocks and
+are explicitly not used as outcome-dependent sampling units.
+
+Raw/reference identities were checked before/after; all category totals match
+the retained native inventory. Eight focused tests pass. Results, limitations
+and relevant statistical literature are documented in
+VGNC_DEPENDENCY_STRUCTURE_20260918.md and vgnc_family_dependencies_20260918.json.
+No CIs, new scores or independence claims were manufactured. Corrected-release
+admission, other QfO uncertainty, controlled timing and publication packaging
+remain incomplete.
+
 ## Corrected Sequence Checkpoint Self-Hit Review (2026-09-18 UTC)
 
 Previous turn progressed throughb5d4ca4 with the completed DGX positive

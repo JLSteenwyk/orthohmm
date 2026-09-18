@@ -1,0 +1,279 @@
+{
+  "checked_inputs": [
+    {
+      "bytes": 3033,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/vgnc_raw_label_inventory_20260917.json",
+      "sha256": "436daaa78988eb70f1ad6aa99fc71ba87155bd360d66c689f583ce8903be2472"
+    },
+    {
+      "bytes": 1578,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/vgnc_reference_inventory_20260917.json",
+      "sha256": "a97a9a9e74eed6185672100dd8b4613a5885cdc5cb83ae2c6c4621cf0e1ef68c"
+    },
+    {
+      "bytes": 183364,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/vgnc-orthologs.txt.gz",
+      "sha256": "3f9898487b1b3dab866eaf93255bb25ab7b7699f32753828ba7d2851eafce5dc"
+    },
+    {
+      "bytes": 6907,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/vgnc_benchmark.py",
+      "sha256": "a9596078850cf0799958f3e1794278b7abd0053a5aad4f1af1e6b24cad369635"
+    },
+    {
+      "bytes": 1870642,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_0/results/VGNC/VGNC_ohmm-checked-v2-0_raw.txt.gz",
+      "sha256": "db4a8a3ec8e87f6571b9bbc4b513086ec07767c6b2d8882233289c2775511ae1"
+    },
+    {
+      "bytes": 561686,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_1/results/VGNC/VGNC_ohmm-checked-v2-1_raw.txt.gz",
+      "sha256": "b9675d597526f6e0dc0448493c196f622ab42e220c7fdc44c76be11807347544"
+    },
+    {
+      "bytes": 1877190,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_2/results/VGNC/VGNC_ohmm-checked-v2-2_raw.txt.gz",
+      "sha256": "f8769ccee9cdb4957738ebb975f5e1744aabc7ff9c2ddcb0d0b199e73aaefc79"
+    },
+    {
+      "bytes": 561842,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_3/results/VGNC/VGNC_ohmm-checked-v2-3_raw.txt.gz",
+      "sha256": "14b872a20b180453a4a8b14f6ce54850af055e14c9845890b86188bab66bd15b"
+    }
+  ],
+  "igraph_version": "1.0.0",
+  "limitations": [
+    "Historical development-exposed stages; no corrected-release or competitor substitution.",
+    "Reference overlap blocks use labels/proteins only; prediction-link components depend on each method.",
+    "Neither kind of component is established as an independent biological sampling unit.",
+    "No bootstrap, confidence interval or independence claim is produced.",
+    "Uses previously audited raw categories; does not independently requery prediction databases."
+  ],
+  "publication_ready": false,
+  "reference": {
+    "family_labels": 16863,
+    "merged_label_groups": [
+      [
+        "C2orf80",
+        "CRYGC"
+      ],
+      [
+        "CCL2",
+        "CCL7"
+      ],
+      [
+        "CYP11B1",
+        "CYP11B2"
+      ],
+      [
+        "H2AC11",
+        "H2AC13",
+        "H2AC16",
+        "H2AC17"
+      ],
+      [
+        "H2AC18",
+        "H2AC19"
+      ],
+      [
+        "H2AC4",
+        "H2AC8"
+      ],
+      [
+        "H2BC10",
+        "H2BC8"
+      ],
+      [
+        "H4-16",
+        "H4C11",
+        "H4C12",
+        "H4C13",
+        "H4C14",
+        "H4C2",
+        "H4C8",
+        "H4C9"
+      ],
+      [
+        "HSPE1",
+        "MOB4"
+      ],
+      [
+        "OCM",
+        "OCM2"
+      ],
+      [
+        "RHBG",
+        "TSACC"
+      ]
+    ],
+    "reference_blocks": 16844,
+    "reference_proteins": 36986,
+    "shared_proteins": 11
+  },
+  "reference_pairs": 23934,
+  "source": {
+    "bytes": 6285,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_vgnc_family_dependencies.py",
+    "sha256": "29dd44df91e484ebb982f88ee609ab0502ef686d6f7dc7c21f57c4fb9db9e481"
+  },
+  "stages": [
+    {
+      "between_reference_blocks": {
+        "FN": 0,
+        "FP": 120804,
+        "TP": 0
+      },
+      "blocks_incident_to_cross_links": 9445,
+      "counts": {
+        "FN": 742,
+        "FP": 120806,
+        "TP": 23192
+      },
+      "distinct_cross_block_links": 56418,
+      "largest_prediction_link_component_blocks": 371,
+      "prediction_link_components": 10250,
+      "raw": {
+        "bytes": 1870642,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_0/results/VGNC/VGNC_ohmm-checked-v2-0_raw.txt.gz",
+        "sha256": "db4a8a3ec8e87f6571b9bbc4b513086ec07767c6b2d8882233289c2775511ae1"
+      },
+      "stage_index": 0,
+      "ten_largest_prediction_link_components": [
+        371,
+        228,
+        49,
+        41,
+        37,
+        32,
+        32,
+        27,
+        26,
+        26
+      ],
+      "within_reference_block": {
+        "FN": 742,
+        "FP": 2,
+        "TP": 23192
+      }
+    },
+    {
+      "between_reference_blocks": {
+        "FN": 0,
+        "FP": 15788,
+        "TP": 0
+      },
+      "blocks_incident_to_cross_links": 7215,
+      "counts": {
+        "FN": 4003,
+        "FP": 15790,
+        "TP": 19931
+      },
+      "distinct_cross_block_links": 7614,
+      "largest_prediction_link_component_blocks": 13,
+      "prediction_link_components": 12345,
+      "raw": {
+        "bytes": 561686,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_1/results/VGNC/VGNC_ohmm-checked-v2-1_raw.txt.gz",
+        "sha256": "b9675d597526f6e0dc0448493c196f622ab42e220c7fdc44c76be11807347544"
+      },
+      "stage_index": 1,
+      "ten_largest_prediction_link_components": [
+        13,
+        12,
+        11,
+        10,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "within_reference_block": {
+        "FN": 4003,
+        "FP": 2,
+        "TP": 19931
+      }
+    },
+    {
+      "between_reference_blocks": {
+        "FN": 0,
+        "FP": 121468,
+        "TP": 0
+      },
+      "blocks_incident_to_cross_links": 9470,
+      "counts": {
+        "FN": 748,
+        "FP": 121470,
+        "TP": 23186
+      },
+      "distinct_cross_block_links": 56855,
+      "largest_prediction_link_component_blocks": 374,
+      "prediction_link_components": 10227,
+      "raw": {
+        "bytes": 1877190,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_2/results/VGNC/VGNC_ohmm-checked-v2-2_raw.txt.gz",
+        "sha256": "f8769ccee9cdb4957738ebb975f5e1744aabc7ff9c2ddcb0d0b199e73aaefc79"
+      },
+      "stage_index": 2,
+      "ten_largest_prediction_link_components": [
+        374,
+        233,
+        49,
+        41,
+        36,
+        32,
+        32,
+        27,
+        26,
+        25
+      ],
+      "within_reference_block": {
+        "FN": 748,
+        "FP": 2,
+        "TP": 23186
+      }
+    },
+    {
+      "between_reference_blocks": {
+        "FN": 0,
+        "FP": 15804,
+        "TP": 0
+      },
+      "blocks_incident_to_cross_links": 7235,
+      "counts": {
+        "FN": 4018,
+        "FP": 15806,
+        "TP": 19916
+      },
+      "distinct_cross_block_links": 7615,
+      "largest_prediction_link_component_blocks": 11,
+      "prediction_link_components": 12333,
+      "raw": {
+        "bytes": 561842,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_3/results/VGNC/VGNC_ohmm-checked-v2-3_raw.txt.gz",
+        "sha256": "14b872a20b180453a4a8b14f6ce54850af055e14c9845890b86188bab66bd15b"
+      },
+      "stage_index": 3,
+      "ten_largest_prediction_link_components": [
+        11,
+        11,
+        10,
+        10,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "within_reference_block": {
+        "FN": 4018,
+        "FP": 2,
+        "TP": 19916
+      }
+    }
+  ],
+  "status": "vgnc_dependency_structure_described",
+  "uncertainty_admitted": false
+}
