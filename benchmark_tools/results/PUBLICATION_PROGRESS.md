@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Top100 Graph Admitted; Downstream Chain Submitted (2026-09-18 UTC)
+
+After committing/pushing the validated output repair280ccf0, scheduler
+confirmed top100admission21827completed0:0 in10:49. Retained its admitted
+reportSHA5477d4ac8288d0362619b3ce7613b8f12de722b0ba5cf767a3c7ab60b2bb9905
+as`qfo_sequence_graph_admission_top100_21827.json`. Verified clean original
+frozen converter and submitted21828(2CPU/64GiB), confirmed RUNNING. Queued
+21829native six-endpoint scoring after21828 and21830independent score
+admission after21829, using exactly the frozen all-hit workflow executors.
+The new single-copy list fix is not substituted into any frozen execution.
+
+All-hit scoring21825 remains running;21826awaits it. Both sequence graph
+arms are now independently admitted; pair conversion/scoring and paired
+uncertainty still must finish before any HMM-versus-sequence accuracy claim.
+
 ## Single-Copy Output Bug Fixed; Native Regression Passes (2026-09-18 UTC)
 
 Previous turn progressed through4e8f072, retaining completed top100execution
