@@ -86,3 +86,11 @@ no assessment directory. Existing destinations are never overwritten.
 The live pending-job check rejected execution without creating outputs;
 65 focused tests passed. The workflow has not yet exercised the successful
 end-to-end path on job21795, because native inference remains pending.
+
+Assessment submitted as job21796, `afterany:21795`, from frozen revision
+`729af62e5d6cf9e449eafe16190b2a01062201ec` in
+`benchmarks/work/publication_three_kingdoms_sonic_assessment_v1`.
+Controller confirms PENDING dependency,2CPUs32G4h,bizon,no requeue,zero
+restarts; SubmitTime2026-09-18T13:23:40 (timezone not inferred).
+The afterany dependency permits explicit rejection of failed inference;
+it does not allow scoring a failed or partial native run.

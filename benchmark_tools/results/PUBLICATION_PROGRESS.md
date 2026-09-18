@@ -14,7 +14,10 @@ conversion and fixed255group/2035gene/7352pair reference scope, and preserves
 failure evidence without admitting a score.65 focused tests pass; actual
 pending-job invocation fails before creating an output directory. Successful
 end-to-end execution remains untested until native results exist. Batch
-requests2CPUs32GiB4h onbizon; submission follows committed frozen executor.
+requests2CPUs32GiB4h onbizon. Frozen executor729af62e5d6cf9e449eafe16190b2a01062201ec
+submitted as21796 afterany:21795; controller confirms PENDING dependency,
+exact requested resources,no requeue,zero restarts. Failed native inference
+will be rejected by terminal validation rather than scored.
 
 ## Sonic Native Conversion And QfO Search Completion (2026-09-18 UTC)
 
