@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Retained Figure Files Audited (2026-09-17)
+
+Previous turn admitted and pushed first expanded QfO cell71bc852. Re-read
+objective. Added/executed `audit_publication_figures.py`:14retained manifests,
+49output records and83file references all match saved bytes/hashes. Nine
+tests pass. Missing/changed files are reported without rewriting history;
+the explicit panel inventory excludes superseded/defective-runtime results.
+
+One method-diagram dependency resides in a detached worktree rather than the
+main tracked tree. Verified that its bytes match `git show` from the exact
+7f3a9e40dd7e79f842cc2c11fb8b548f9a802806 revision. Final packaging must
+export it explicitly. Report: `publication_figure_integrity_20260917.json`;
+scope/reproduction: `PUBLICATION_FIGURE_INTEGRITY_20260917.md`. Byte checks
+are not scientific validation, rendering review or archive/license completion.
+
+DGX task21656_7 is now COMPLETED0:0 (scheduler elapsed1:19:18); task8 is
+RUNNING and9-26pending. Eight of27timing tasks have finished; no new native
+or resource admission is implied. QfO21671_0 and21682 remain active with
+dependent tasks queued. No heavy DGX reads, restarts or unrelated job changes.
+Complete factorial/timing evidence and remaining publication work stay active.
+
 ## First Expanded QfO Cell Admitted (2026-09-17)
 
 Previous turn verified and pushed comparator referencesd8613c5. Re-read

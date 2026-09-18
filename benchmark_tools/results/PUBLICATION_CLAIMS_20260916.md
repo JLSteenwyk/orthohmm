@@ -122,7 +122,7 @@ evidence that an experiment completed or a biological hypothesis is true.
 - Recovered QfO scoring21548_0..3 and admission21584 are all COMPLETED0:0.
   [Stage results](qfo_recovered_stage_summary_20260917.json) and the SwissTrees
   interval audit are complete; uncertainty for the other challenges remains open.
-- DGX matched timing21656 has seven completed tasks and task7 running at the
+- DGX matched timing21656 has eight completed tasks and task8 running at the
   2026-09-17 accounting check. No scientific timings have yet passed output and
   resource admission. The original32CPU plan remains distinct from the DGX plan.
   [Run00 host review](DGX_RUN00_HOST_REVIEW_20260917.md) reproduces inconclusive
@@ -148,6 +148,11 @@ evidence that an experiment completed or a biological hypothesis is true.
 - The full current unit suite passes:2381tests in51.53seconds at source
   revision4007bf8. This is regression evidence, not admission of pending
   experiments, biological validation or proof of publication readiness.
+- [Retained figure integrity](PUBLICATION_FIGURE_INTEGRITY_20260917.md)
+  checks14manifests,49outputs and83recorded file references with no byte/hash
+  mismatch. A detached launcher dependency is recoverable from its frozen
+  Git revision but must be exported for packaging. This check does not
+  certify scientific correctness, transitive raw data, licenses or the archive.
 
 ## Historical Execution Gates
 
