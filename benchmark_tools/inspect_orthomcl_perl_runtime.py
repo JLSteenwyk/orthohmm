@@ -17,7 +17,7 @@ VERSIONS = {"perl": "v5.26.2", "bioperl_searchio": "1.007002", "storable": "3.15
 EXTERNAL = ["/bin/sh", "/lib/x86_64-linux-gnu/libcrypt.so.1", "/lib64/ld-linux-x86-64.so.2"]
 
 
-def validate(runtime, observed, cwd):
+def validate(runtime, observed, cwd, helper_records=()):
     if observed["versions"] != VERSIONS:
         raise ValueError("Unexpected native Perl/module versions")
     if runtime["external_symlinks"] != EXTERNAL:
@@ -28,6 +28,9 @@ def validate(runtime, observed, cwd):
             files[str(Path(item["path"]).resolve())] = (item["bytes"], item["sha256"])
         elif item["kind"] == "symlink" and "target_sha256" in item:
             files[item["resolved"]] = (item["target_bytes"], item["target_sha256"])
+    for item in helper_records:
+        check(item)
+        files[str(Path(item["path"]).resolve())] = (item["bytes"], item["sha256"])
     if not observed["search_path"] or any(not isinstance(p, str) or (p != "." and not Path(p).is_absolute())
                                            for p in observed["search_path"]):
         raise ValueError("Relative or executable-hook Perl search path")
@@ -49,28 +52,36 @@ def validate(runtime, observed, cwd):
     return checked
 
 
-def inspect(runtime_path, runtime_sha, output):
+def inspect(runtime_path, runtime_sha, output, guarded=False):
     if output.exists():
         raise FileExistsError(output)
     runtime = read_frozen(runtime_path, runtime_sha)
     verify(runtime)
     driver = Path(__file__).with_suffix(".pl")
-    checked = [record(runtime_path), record(__file__), record(driver),
+    driver_record = record(driver)
+    checked = [record(runtime_path), record(__file__), driver_record,
                record(Path(__file__).with_name("snapshot_runtime_trees.py")),
                record(Path(__file__).with_name("run_qfo_corrected_blast.py"))]
+    wrapper = Path(__file__).with_name("run_orthomcl_perl_script.pl")
+    if guarded:
+        checked.append(record(wrapper))
     output.mkdir(parents=True, exist_ok=False)
-    argv = [str(TOOL / "venv_orthomcl/bin/perl"), "-I" + str(TOOL), str(driver)]
+    argv = [str(TOOL / "venv_orthomcl/bin/perl"), "-I" + str(TOOL),
+            *([str(wrapper)] if guarded else []), str(driver)]
     done = subprocess.run(argv, cwd=output, env=environment(), capture_output=True, timeout=60)
     (output / "probe.json").write_bytes(done.stdout)
     (output / "probe.log").write_bytes(done.stderr)
     if done.returncode or done.stderr:
         raise ValueError("Native runtime probe failed or emitted diagnostics")
     observed = json.loads(done.stdout)
-    loaded = validate(runtime, observed, output)
+    if guarded and any(not isinstance(p, str) or not Path(p).is_absolute() for p in observed["search_path"]):
+        raise ValueError("Guarded Perl retained relative/hook module lookup")
+    loaded = validate(runtime, observed, output, [driver_record] if guarded else [])
     verify(runtime)
     for item in [*checked, *loaded]:
         check(item)
     report = {"status": "native_orthomcl_perl_runtime_observed_and_bound", "runtime": record(runtime_path),
+              "launch_policy": "absolute_module_paths_only" if guarded else "isolated_probe_directory",
               "checked_records": checked, "loaded_records": loaded, "observed": observed,
               "command": argv, "cwd": str(output), "environment": environment(),
               "outputs": [record(output / "probe.json"), record(output / "probe.log")],
@@ -79,8 +90,9 @@ def inspect(runtime_path, runtime_sha, output):
                   "Observed imports/maps for a module-load probe, not every future process or syscall.",
                   "Snapshot includes native sources, complete environment, MCL, selected system libraries, shell and date.",
                   "Shell/date/MCL are inventoried but not executed by this Perl probe.",
-                  "Legacy Perl includes dot in its search path; this probe uses a fresh directory restricted to its two output files.",
-                  "Production working-directory module lookup requires an explicit policy; this probe does not authorize it.",
+                  ("Guarded launch removes relative and executable-hook module paths before script compilation."
+                   if guarded else "Legacy Perl includes dot in its search path; this probe uses a fresh directory restricted to its two output files."),
+                  "This module-load probe does not authorize production execution.",
                   "Before/after hashes cannot detect all temporary changes; this is not a hermetic operating-system image.",
                   "Configured native module and pair-parallel script still require separate source freezing and validation."]}
     with (output / "report.json").open("x") as stream:
@@ -94,6 +106,7 @@ if __name__ == "__main__":
     parser.add_argument("--runtime", type=Path, required=True)
     parser.add_argument("--runtime-sha256", required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--guarded", action="store_true")
     args = parser.parse_args()
-    report = inspect(args.runtime.resolve(), args.runtime_sha256, args.output.resolve())
+    report = inspect(args.runtime.resolve(), args.runtime_sha256, args.output.resolve(), args.guarded)
     print(json.dumps({"status": report["status"], "loaded_records": len(report["loaded_records"])}))

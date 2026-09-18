@@ -8222,6 +8222,27 @@ Configured sources, a production working-directory policy and downstream
 execution/validation integration remain next. Corrected comparisons, admitted
 timing, uncertainty and publication packaging are unfinished.
 
+### Guarded OrthoMCL Perl Launch Validated (2026-09-18)
+
+Previous turn made progress by inventorying the native runtime and exposing
+implicit current-directory module lookup. This turn adds an absolute-script
+launcher that removes relative/hook module paths before native compilation.
+Native sources and scientific settings remain unchanged.
+
+All 68 focused tests passed with native probes enabled. The guarded runtime
+probe bound 116 loaded files, including the explicitly hashed script added
+to `%INC` by `do`, with no relative search paths. The guarded BPO probe retained
+byte parity (225 bytes, six records) and passed native index validation.
+The initial rejected guarded probe is retained; arbitrary external module
+paths remain rejected. See `ORTHOMCL_GUARDED_PERL_20260918.md` and its two
+saved reports. No production job or accuracy admission follows from a probe.
+
+At the live check HMM 21706_0 was RUNNING at 7:16:51, DGX 21656_24 at
+14:28, and corrected BLAST 21713 resource-pending. Next is configured native
+source freezing and guarded conversion/index orchestration, followed by
+final-group validation. Corrected comparisons, timing admission, uncertainty
+and final publication packaging remain unfinished.
+
 ### Corrected FastOMA Runtime Identity Recorded (2026-09-18)
 
 Previous turn made progress by queuing corrected FastOMA input staging. This

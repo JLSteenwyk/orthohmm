@@ -21,6 +21,20 @@ def test_loaded_records_bound(tmp_path):
     assert len(module.validate(runtime, observed, cwd)) == 1
 
 
+def test_guarded_do_script_requires_explicit_helper_binding(tmp_path):
+    runtime, observed, cwd = fixture(tmp_path)
+    driver = tmp_path / "driver.pl"
+    driver.write_text("1;")
+    observed["loaded_modules"][str(driver)] = str(driver)
+    with pytest.raises(ValueError, match="outside snapshot"):
+        module.validate(runtime, observed, cwd)
+    helper = module.record(driver)
+    assert len(module.validate(runtime, observed, cwd, [helper])) == 2
+    driver.write_text("changed")
+    with pytest.raises(ValueError):
+        module.validate(runtime, observed, cwd, [helper])
+
+
 @pytest.mark.parametrize("problem", ["version", "external", "relative", "hook", "missing", "changed", "empty", "invalid_path"])
 def test_reject_runtime_drift(tmp_path, problem):
     runtime, observed, cwd = fixture(tmp_path)

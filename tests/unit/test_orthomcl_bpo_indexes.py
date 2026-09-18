@@ -50,9 +50,10 @@ def test_byte_difference_and_index_difference_are_distinct(tmp_path):
 
 @pytest.mark.skipif(os.environ.get("ORTHOHMM_LEGACY_BLAST_SMOKE") != "1",
                     reason="Opt-in installed OrthoMCL/BioPerl parity probe")
-def test_installed_native_bpo_parity(tmp_path):
+@pytest.mark.parametrize("guarded", [False, True])
+def test_installed_native_bpo_parity(tmp_path, guarded):
     from benchmark_tools.probe_orthomcl_bpo_parity import run
-    result = run(tmp_path / "probe")
+    result = run(tmp_path / "probe", guarded)
     assert result["status"] == "native_bpo_fixture_parity_verified"
     assert result["content"]["native_pair_records"] == result["content"]["streaming_pair_records"] == 6
     assert result["streaming_index_validation"]["records"] == 6

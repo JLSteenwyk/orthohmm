@@ -65,7 +65,7 @@ def fixture(output):
     return fasta, blast
 
 
-def run(output):
+def run(output, guarded=False):
     if output.exists():
         raise FileExistsError(output)
     perl = TOOL / "venv_orthomcl/bin/perl"
@@ -73,12 +73,17 @@ def run(output):
     index_checker = Path(__file__).with_name("validate_orthomcl_bpo_indexes.pl")
     checked = [record(p) for p in (perl, TOOL / "orthomcl_module.pm", driver, Path(__file__),
                                    index_checker, Path(__file__).with_name("convert_orthomcl_blast.py"))]
+    wrapper = Path(__file__).with_name("run_orthomcl_perl_script.pl")
+    if guarded:
+        checked.append(record(wrapper))
     output.mkdir(parents=True, exist_ok=False)
     fasta, blast = fixture(output)
     checked.extend([record(fasta), record(blast)])
-    argv = [str(perl), "-I" + str(TOOL), str(driver), str(fasta), str(blast), str(output / "native")]
+    argv = [str(perl), "-I" + str(TOOL), *([str(wrapper)] if guarded else []),
+            str(driver), str(fasta), str(blast), str(output / "native")]
     report = {"status": "running", "command": argv, "cwd": str(output), "environment": environment(),
-              "checked_records": checked, "accuracy_admitted": False, "publication_ready": False}
+              "checked_records": checked, "accuracy_admitted": False, "publication_ready": False,
+              "launch_policy": "absolute_module_paths_only" if guarded else "legacy_default"}
     try:
         with (output / "process.log").open("xb") as log:
             done = subprocess.run(argv, cwd=output, env=report["environment"], stdout=log,
@@ -93,7 +98,7 @@ def run(output):
         count = convert_blast(blast, fasta, output / "streaming.bpo", progress_every=0)
         content = compare(output / "native/native.bpo", output / "streaming.bpo", native)
         content["streaming_pair_records"] = count
-        report["index_checker_command"] = [str(perl), str(index_checker),
+        report["index_checker_command"] = [str(perl), *([str(wrapper)] if guarded else []), str(index_checker),
             *[str(output / "native" / name) for name in ("native.bpo", "native.idx", "native.se")]]
         index_result = subprocess.run(report["index_checker_command"], cwd=output,
             env=report["environment"], capture_output=True, timeout=60)
@@ -130,6 +135,7 @@ def run(output):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--guarded", action="store_true")
     args = parser.parse_args()
-    report = run(args.output.resolve())
+    report = run(args.output.resolve(), args.guarded)
     print(json.dumps({"status": report["status"], "content": report.get("content")}))
