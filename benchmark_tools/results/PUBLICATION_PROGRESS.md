@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Native Scorer Sequence-Byte Audit Completed (2026-09-17)
+
+Previous turn progressed by queueing pinned corrected archive audite10afd3.
+Re-read full objective;21687,21671_1,DGX21656_8 live and21688dependency
+pending. Added/executed `audit_qfo_input_sequences.py` against pinned native
+database:984,137entries,975,514mapped inputs,974,363exact sequence matches,
+1,151differences. Of those978are XENTR;173non-XENTR differences all preserve
+length and need residue-normalization investigation, not presumed release
+error.973length differences are all XENTR. Missing8,623native IDs again all
+XENTR. Seven tests pass; no input or scoring changes.
+
+Machine evidence `qfo_original_input_sequence_audit_20260917.json` and
+`QFO_ORIGINAL_SEQUENCE_AUDIT_20260917.md` bound the findings. Next: classify
+exact residue transformations, compare corrected sequences after download,
+and determine necessary separately frozen corrected-input evaluation. Full
+publication goal and active original-input/DGX jobs remain intact.
+
 ## Corrected-Archive Comparison Queued From Pinned Code (2026-09-17)
 
 Previous turn progressed by auditing original whole-input mappinga1fbffc.
