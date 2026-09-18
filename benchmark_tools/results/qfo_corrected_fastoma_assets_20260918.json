@@ -1,0 +1,1528 @@
+{
+  "accuracy_admitted": false,
+  "container_package_version": "0.3.5",
+  "diagnostic": "Supplied species tree from corrected full OrthoFinder; not independent tree inference.",
+  "execution_authorized": false,
+  "image": {
+    "Architecture": "amd64",
+    "Config": {
+      "ArgsEscaped": true,
+      "Cmd": [
+        "python3"
+      ],
+      "Env": [
+        "PATH=/app/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "LANG=C.UTF-8",
+        "GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D",
+        "PYTHON_VERSION=3.11.10",
+        "PYTHON_SHA256=07a4356e912900e61a15cb0949a06c4a05012e213ecd6b4e84d0f67aabbee372",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "PYTHONUNBUFFERED=1"
+      ],
+      "Labels": {
+        "org.opencontainers.image.created": "2024-11-18T07:46:53.063Z",
+        "org.opencontainers.image.description": "FastOMA is a scalable software package to infer orthology relationship.",
+        "org.opencontainers.image.licenses": "MPL-2.0",
+        "org.opencontainers.image.revision": "b54f6fce5335a9e7014fc35f1aa7de93e6212eb7",
+        "org.opencontainers.image.source": "https://github.com/DessimozLab/FastOMA",
+        "org.opencontainers.image.title": "FastOMA",
+        "org.opencontainers.image.url": "https://github.com/DessimozLab/FastOMA",
+        "org.opencontainers.image.version": "0.3.5"
+      },
+      "WorkingDir": "/"
+    },
+    "Id": "sha256:dd9c319b85e65a38f45f033d85663211eedccd0bfcc9c25df8048924bb4862dd",
+    "Os": "linux",
+    "RepoDigests": [
+      "dessimozlab/fastoma@sha256:67c802a71c2d150ba8825a8c5dbc5a8a68e1dd42554e6695038043d666ac358b"
+    ],
+    "RootFS": {
+      "Layers": [
+        "sha256:c3548211b8264f8bfa47a6727043a64f1791b82ac965a284a7ea187e971a95e2",
+        "sha256:2440dc0bfce0be50901996dd0de04d2830062f2b2e63a73217fd9237e18c9b7c",
+        "sha256:25b72b8029f800d4047ffbfc4017258ab87699d0e84084290fc35b89aef1391e",
+        "sha256:bb4412c1f640a563d7a796fb752395399c529bfd06fa9c451b980b5ee5807d40",
+        "sha256:bec818be3b04b024eaf48a9a954f35e3254ee76a5ea45d3e200140ba9165832a",
+        "sha256:5fd7a8afbb2895b467b61f1641b62847f3fe287bc4365dcfc0b69cd26b0ff387"
+      ],
+      "Type": "layers"
+    }
+  },
+  "input_fastas": [
+    {
+      "bytes": 866515,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000425_122586.fasta",
+      "sha256": "44e65ab28a7953f479bcb76200fab2c8387cff6e858db2e5722aa8df1707bd17"
+    },
+    {
+      "bytes": 747971,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000429_85962.fasta",
+      "sha256": "0ec2729c2f8bf8d30a19dd57ba1475b9d18d500a5ec76a132bcf8ae236c66707"
+    },
+    {
+      "bytes": 431542,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000431_272561.fasta",
+      "sha256": "aca397ad48dccf87b3abb81be206624f188a5138e3b05e63d8dc00e6c137df4c"
+    },
+    {
+      "bytes": 17560041,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000437_7955.fasta",
+      "sha256": "bb03b87acd02d80cf7a314c574403aa44f55eaec5f001378c55a7ecd933e9824"
+    },
+    {
+      "bytes": 1103434,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000536_69014.fasta",
+      "sha256": "b26340fef2e61ac14d10dd1052211179f90d349c499ded050917771e2d810ba8"
+    },
+    {
+      "bytes": 12363309,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000539_9031.fasta",
+      "sha256": "ed643bb510ba24ec152766ff3aaea8caf9e55046d78c4482f0a0d66c8bbb959b"
+    },
+    {
+      "bytes": 6097084,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000542_5664.fasta",
+      "sha256": "beaf76923a8f070d4d8fc682a5fd036375e8ece4452c279a95c562497c8d67e3"
+    },
+    {
+      "bytes": 1120386,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000554_64091.fasta",
+      "sha256": "46f30b935c0501b9a9f3780ddf0dfdf3719a649ad9a77899b26f4b896a2287d2"
+    },
+    {
+      "bytes": 2010766,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000557_251221.fasta",
+      "sha256": "c647be279e92435bf7d4dbfd66217c2979e128e56da3a3835adf91eb49df0a1b"
+    },
+    {
+      "bytes": 3954181,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000559_237561.fasta",
+      "sha256": "29903baf6bcd940665d4245b28d2518f4257419ef12169c6875317e5bc3ead1d"
+    },
+    {
+      "bytes": 5172817,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000561_237631.fasta",
+      "sha256": "f23613a13bc78e1c7d673b96d65fbdd73bbd47c9153e4ea2323ef6d7f0b9fa8c"
+    },
+    {
+      "bytes": 1691650,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000577_243231.fasta",
+      "sha256": "a7c5f82fe20d610984457ad01800538bafd2f96ff26a76c1d36bb8178512d22c"
+    },
+    {
+      "bytes": 14325720,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000589_10090.fasta",
+      "sha256": "f6e080958003abfa54718f9465127a8225661fab1ad0738cc9301ad0d0a5c49f"
+    },
+    {
+      "bytes": 22935217,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000600_5888.fasta",
+      "sha256": "2c6e376eaef0557f11773edbe0638976100072cf8f4cbb42abc162e4b99bf6ad"
+    },
+    {
+      "bytes": 1888168,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000625_83333.fasta",
+      "sha256": "d2703103c23f29528dd676f99fc4877918893440bb20f1d99af9f076998719cb"
+    },
+    {
+      "bytes": 947254,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000718_289376.fasta",
+      "sha256": "1cfa8c64373a2bac386b33370a77b5302fb9a4088395d1ddcbe740c6d4b7455d"
+    },
+    {
+      "bytes": 735425,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000792_436308.fasta",
+      "sha256": "71bc4301d1e1cfac3f22ccebaa1d42ab37bcb5f70251581483ba2192f5be19ae"
+    },
+    {
+      "bytes": 681404,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000798_224324.fasta",
+      "sha256": "f675127545b691945a425c5ca99cbcff0530c11e9ac59acc5053ed58d962bebd"
+    },
+    {
+      "bytes": 9194699,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000803_7227.fasta",
+      "sha256": "d1fb760ceb1448993f0fc6b4db10dd700b9d85a0ad7927cee82c2c3034b702e0"
+    },
+    {
+      "bytes": 893349,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000805_243232.fasta",
+      "sha256": "03fb0b065db8f55c54253a097ad17053985029e1fe2416da493f7989e90376a9"
+    },
+    {
+      "bytes": 251571,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000807_243273.fasta",
+      "sha256": "43f6d3e78d43964a2f82bc3b26687a2828fa0305b17bdaa40e29eff5e472b44a"
+    },
+    {
+      "bytes": 3408710,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001025_243090.fasta",
+      "sha256": "33f51ff55213e0cb89758f6992c6f1117d7fdf19ae583623441c730b775f767a"
+    },
+    {
+      "bytes": 16930435,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001038_8090.fasta",
+      "sha256": "f00b596e5e4f8fbbaa635ddea50d380c1c4e2a08646ab502c682bfe05a352fe0"
+    },
+    {
+      "bytes": 9426972,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001055_321614.fasta",
+      "sha256": "270150ee0b6379b82f11e30268c2387851532e8929a2f3d36c48555729e9d7a3"
+    },
+    {
+      "bytes": 4227407,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001300_284591.fasta",
+      "sha256": "af6ab878a823813f1c289e7bed5473ec1e04eb671843e74bc7c339e0895dd667"
+    },
+    {
+      "bytes": 8046794,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001312_665079.fasta",
+      "sha256": "4f6ad7ab273f0ddb20fe0b8fa1a5bd38cd1d634fa8b2dd0362f59554e1005581"
+    },
+    {
+      "bytes": 6818528,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001357_81824.fasta",
+      "sha256": "b97cb3eb5edb17a2e6c75d10b07532d19d699d2c4724d79c1171a9f5cbcce7d8"
+    },
+    {
+      "bytes": 1796739,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001408_189518.fasta",
+      "sha256": "2fb96698804ba40fa25be324b14097ddf2612ce3bdf9c4bec6af090820348a2d"
+    },
+    {
+      "bytes": 2754487,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001414_226186.fasta",
+      "sha256": "785e96ffb85082a7705a9b75a2f53590e1d1ebfd57bdfdf010702580d8d2a7fd"
+    },
+    {
+      "bytes": 1605070,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001425_1111708.fasta",
+      "sha256": "654bdc865925d6fc2c3f2929db5e64945705b013645ea2e869e2c6eb827899fe"
+    },
+    {
+      "bytes": 7707976,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001449_35128.fasta",
+      "sha256": "d434bcb16231f6f18289897fb2395d787ba17ea4f3c33251953ca011c97675f6"
+    },
+    {
+      "bytes": 4900628,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001450_36329.fasta",
+      "sha256": "32e3b2ca68ffaa00151033a887a630f06d367b04979c1bafef95a9fee2f83ad8"
+    },
+    {
+      "bytes": 14493737,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001519_9595.fasta",
+      "sha256": "43f3f3a5282aaa0fc88761995bcf495420988692eb487a996f9273611475a7c3"
+    },
+    {
+      "bytes": 22894987,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001542_5722.fasta",
+      "sha256": "9107d40ff24d6739a43906e3d1d5e9b7dda58e13b8255598c13ef5417b538d27"
+    },
+    {
+      "bytes": 5159827,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001548_184922.fasta",
+      "sha256": "3fee04dc24bcd0b388e54f0452afcc32ba0c8507fc64535072d4eaf518f5a9b6"
+    },
+    {
+      "bytes": 17711164,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001554_7739.fasta",
+      "sha256": "a5e0d52fa4c13e6adb86f520e28154e90a63ffbc8491d083441cb3cf077c437f"
+    },
+    {
+      "bytes": 8736835,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001555_6945.fasta",
+      "sha256": "c4a2dee9e41b11d5c83e599b6985ddfceb77e58d649230d9dfed42817cd88f3d"
+    },
+    {
+      "bytes": 1765604,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001570_224308.fasta",
+      "sha256": "69b7b24b9a37ce6057ca6c6e12fd4a74ebb525c0fdb46f3eafe4e711a3fa2350"
+    },
+    {
+      "bytes": 1938145,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001584_83332.fasta",
+      "sha256": "1dcacf3edfced65336343ee5214fbdb5f34a43ced3bed962a511a215fa679b7c"
+    },
+    {
+      "bytes": 11832587,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001593_45351.fasta",
+      "sha256": "d89487a9192abd3dfaa70b9b3957d181dd4f9b7a2985af68ca4867c46d9498a2"
+    },
+    {
+      "bytes": 691112,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001686_374847.fasta",
+      "sha256": "b2a9d42b66367a40ed37bc119c782e8f036e5beef35c5bd30f2cb1ec3dde9371"
+    },
+    {
+      "bytes": 6747907,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001805_367110.fasta",
+      "sha256": "4a314661cc7f55cebea98b3875538142c93f182464f2636bd4a5c03ec8b94983"
+    },
+    {
+      "bytes": 10589689,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001940_6239.fasta",
+      "sha256": "679b2b181f22999dca02862c5cf62119a0b33ca35bd77996d271d91a7e725231"
+    },
+    {
+      "bytes": 3885862,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001973_100226.fasta",
+      "sha256": "5c3ed14a93dac866cae612c46765d6e96117faf366994a53a902c4dafc65f2bc"
+    },
+    {
+      "bytes": 1403822,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001974_273057.fasta",
+      "sha256": "36d83a02febc6c60e6b34ecde9ba04f87d0c3fb34b519ad6f766a02a7f97e68d"
+    },
+    {
+      "bytes": 2035360,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002008_324602.fasta",
+      "sha256": "efc93b616d84a056880930738b33bba444274b6ce74f11ee62dd58b24c518cca"
+    },
+    {
+      "bytes": 4943601,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002149_214684.fasta",
+      "sha256": "87f832dd796637bc504e3368cc948c029bd32541f53bd2296ee6a66db91d540a"
+    },
+    {
+      "bytes": 8696553,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002195_44689.fasta",
+      "sha256": "27127a8da8f620f4f0ba7ed29f2b58cb3fb6f8792d4e9b2144215567d3a409ac"
+    },
+    {
+      "bytes": 14659832,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002254_9615.fasta",
+      "sha256": "d8488bf283de653efcff2e5de6d413b116e1ba4a2eb89298bd31205e72fef682"
+    },
+    {
+      "bytes": 14937257,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002277_9598.fasta",
+      "sha256": "62a7143e309037360c8ddef25c16d7006e802b555a5ffca1f97b96036871e973"
+    },
+    {
+      "bytes": 14515060,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002280_13616.fasta",
+      "sha256": "36dfce6fdfaf16605430d6029c1e60c76318268b4ef02dcbb8dcb7bf87b03413"
+    },
+    {
+      "bytes": 3951698,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002311_559292.fasta",
+      "sha256": "9ff39b833b1bf5b90224e720a728a6e66bd9bf8afce0b6f60c7d725cf85660e3"
+    },
+    {
+      "bytes": 3017721,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002438_208964.fasta",
+      "sha256": "0b16b29c4bafd2e02cdf2a80c1e2eac350088d7182886a2d08a5a0dba4e22694"
+    },
+    {
+      "bytes": 3267394,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002485_284812.fasta",
+      "sha256": "d81a6419e51b3d082eb1a445ab6b62148082cc91226c9709149159606dc1ed34"
+    },
+    {
+      "bytes": 2151697,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002487_188937.fasta",
+      "sha256": "7b1edc42faf925b5bf6da8c20fcf499e7f2ed911745b7db1972a0dfccc05c73f"
+    },
+    {
+      "bytes": 13689269,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002494_10116.fasta",
+      "sha256": "cb66110798a35c366c1ed98a10754f7cd1caea00a6716a361803c0fbef468828"
+    },
+    {
+      "bytes": 1032140,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002521_190304.fasta",
+      "sha256": "7bf98ba1b998df6cb176cce4620ba53d196463c86b31836c1a695773e33b8681"
+    },
+    {
+      "bytes": 1621284,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002524_243230.fasta",
+      "sha256": "9890cd413fbd3d939be31da532152aa4fd13d4a0711c953d943be90ee0ee5cd7"
+    },
+    {
+      "bytes": 4076786,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002526_224911.fasta",
+      "sha256": "0ad121003ad2c94fae40263d56f8afb103dca9f9420da6e1b0aff43646136b2c"
+    },
+    {
+      "bytes": 6731535,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002530_330879.fasta",
+      "sha256": "449cb49b9e78e085d21e2d84c0fd5dc4ce9a7684fda774b173e732b76eedee81"
+    },
+    {
+      "bytes": 9603190,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000005238_164328.fasta",
+      "sha256": "afc8998d21f105bef3c0b32f3b88900009d84c2a0743d6669542588a5adab882"
+    },
+    {
+      "bytes": 13831073,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000005640_9606.fasta",
+      "sha256": "3793b9bfcc956a278494734bb775a010513f5764d8047fcdb283d2aeaa7fefb8"
+    },
+    {
+      "bytes": 14992908,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000006548_3702.fasta",
+      "sha256": "7bd8ea7a2bc7610ba8b126af20b908bc5e2b26ec7a3ee4f2c307cdbe47ae4f69"
+    },
+    {
+      "bytes": 15834974,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000006727_3218.fasta",
+      "sha256": "1e033648a1b892a50ab36b368650adb3deda9dfd7cd11021222415f2cda6c666"
+    },
+    {
+      "bytes": 15884352,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000006906_3055.fasta",
+      "sha256": "ff283d887791065dc5e57304329b206eec528b77b9e34f99bd6d57d5e45deeb3"
+    },
+    {
+      "bytes": 8249868,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000007062_7165.fasta",
+      "sha256": "666f1a0fd6072d3c135a3c5aab4ab429faf18e5dc36bdca629c03039d0d40e95"
+    },
+    {
+      "bytes": 5476187,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000007241_684364.fasta",
+      "sha256": "7f2e663ee8619918a7a23691e98746ae75468d99b198a91c90c40c820dc5344b"
+    },
+    {
+      "bytes": 9783004,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000007266_7070.fasta",
+      "sha256": "beeb87f418e54e060f0fb666e25dfc70290913ac330c24dc733f0c6082db2cbc"
+    },
+    {
+      "bytes": 20264591,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000007305_4577.fasta",
+      "sha256": "50dc9b32d342d62df8d1f12e2313b1e31fdc3d5df2579e30c6ce67a205a08f69"
+    },
+    {
+      "bytes": 828608,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000007719_515635.fasta",
+      "sha256": "2dedcacc25ecc95085bc08aa3deb6045f5c2e0d2f8b377e6ae79d9ccb95f84ab"
+    },
+    {
+      "bytes": 12267534,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000008143_8364.fasta",
+      "sha256": "72c13750f727da24cacca375a87ff4a8214b5d2046eeb632a4f8c129b5b0452c"
+    },
+    {
+      "bytes": 8137668,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000008144_7719.fasta",
+      "sha256": "8ae1739170a42861452f20ae445fa36b8778b2caa2308c64072b78fa1038714f"
+    },
+    {
+      "bytes": 888794,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000008183_243274.fasta",
+      "sha256": "663bb2a7f2ec5f8f8095a49ac65238ba49bdda1971b4b0e783451f7d6f57dccc"
+    },
+    {
+      "bytes": 9169683,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000008783_418459.fasta",
+      "sha256": "a70399a1a601ce3922264d46faa1664f645b4926c85b6ffa45d67042368140ee"
+    },
+    {
+      "bytes": 15134839,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000009136_9913.fasta",
+      "sha256": "f3f42d4a7aaf83f078cac49ab79247fb0e4227e20895fe57a57160cf67662fc6"
+    },
+    {
+      "bytes": 11829084,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000015101_6412.fasta",
+      "sha256": "b525ceb0b3973c17bdb9f100e23908faa897730a360c54d57ccba7767b2997a5"
+    },
+    {
+      "bytes": 12920167,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000018468_7918.fasta",
+      "sha256": "6e1072b578631bdda17632ac5cf2cfe9efaecb47373a39d4032923349310e875"
+    },
+    {
+      "bytes": 19168339,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000059680_39947.fasta",
+      "sha256": "1bbd0d5781a1b9c56db31a57860d2cb0efa715a34af1f3bffe651055ee7ecff7"
+    }
+  ],
+  "limitations": [
+    "No input tree substituted from the original release.",
+    "Current image identity does not alone prove historical container identity.",
+    "Asset identity is not a complete runtime or executable command freeze.",
+    "The retained workflow omits min-sequence-length in infer-roothogs, matching the historical native task."
+  ],
+  "nextflow_capsule_inventory": {
+    "exclusions": [
+      "__pycache__",
+      ".git",
+      "*.pyc",
+      "*.pyo"
+    ],
+    "external_symlinks": [],
+    "limitations": [
+      "Explicit tree identity, not a hermetic operating-system or loader snapshot.",
+      "Directory symlinks are recorded but not traversed; external targets require separate review.",
+      "Python bytecode caches are excluded; execution must isolate cache lookup to a fresh prefix and disable writes.",
+      "Before/after equality cannot rule out a temporary change during execution."
+    ],
+    "records": [
+      {
+        "kind": "directory",
+        "mode": 509,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8"
+      },
+      {
+        "bytes": 0,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/.extracted",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 0,
+        "kind": "file",
+        "mode": 509,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/.lock",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 166895,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/JavaEWAH-1.1.13.jar",
+        "sha256": "4c0fda2b1d317750d7ea324e36c70b2bc48310c0aaae67b98df0915d696d7111"
+      },
+      {
+        "bytes": 69409,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/activation-1.1.1.jar",
+        "sha256": "ae475120e9fcd99b4b00b38329bd61cdc5eb754eee03fe66c01f50e137724f99"
+      },
+      {
+        "bytes": 3350,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/animal-sniffer-annotations-1.22.jar",
+        "sha256": "f25b7a8e160b1305ea71fc61a83f9750403dd23ac4ddc6dcb04902f04a93f107"
+      },
+      {
+        "bytes": 3120,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/annotations-4.1.1.4.jar",
+        "sha256": "ba734e1e84c09d615af6a09d33034b4f0442f8772dec120efb376d86a565ae15"
+      },
+      {
+        "bytes": 48653,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/api-common-2.2.1.jar",
+        "sha256": "197b23f2d22324a923e5d643d1c71c51442ae7b9b166fe6ecd5ad9b6916689b5"
+      },
+      {
+        "bytes": 7491,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/auto-value-annotations-1.10.jar",
+        "sha256": "e8c56e716557d3f289682362d19a37ef82382f45ad09fae44dca83c54d001e60"
+      },
+      {
+        "bytes": 703438,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/aws-java-sdk-batch-1.12.429.jar",
+        "sha256": "a60f12e40eb92872aaf5854e108412e568a81443c15d78f00e47cfb5009865cd"
+      },
+      {
+        "bytes": 1499135,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/aws-java-sdk-codecommit-1.12.429.jar",
+        "sha256": "e31ff7c4260813e14defc00567b22e8ef240e8409219d3702da5d05913834892"
+      },
+      {
+        "bytes": 1051967,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/aws-java-sdk-core-1.12.429.jar",
+        "sha256": "c32ff81c6f636933cfd2a63d2af037d73275b4d661f199beb445660991e7ae33"
+      },
+      {
+        "bytes": 8598836,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/aws-java-sdk-ec2-1.12.429.jar",
+        "sha256": "6a1f22f12210ae95f7292d7c0ffb5976871303a1eec60c3c12c7ed4719007d10"
+      },
+      {
+        "bytes": 1283347,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/aws-java-sdk-ecs-1.12.429.jar",
+        "sha256": "0485689b6c35e469ed5d443514b1de363eabbbe868fd1ee9a429f33a0e3c4dd8"
+      },
+      {
+        "bytes": 1547293,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/aws-java-sdk-iam-1.12.429.jar",
+        "sha256": "36a4932ea180eddb6b9e1e5077c7219dc1be5435f04985bbc5f044779611446b"
+      },
+      {
+        "bytes": 702188,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/aws-java-sdk-kms-1.12.429.jar",
+        "sha256": "e167a02532d85e7142ec4c83ebb215000922762ddd6ccfc9352acb8d68ea7c1b"
+      },
+      {
+        "bytes": 631124,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/aws-java-sdk-logs-1.12.429.jar",
+        "sha256": "ccb6dda26a5240037b76a5817ffffa9657122227187ab103b8f2521205df1af9"
+      },
+      {
+        "bytes": 1261044,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/aws-java-sdk-s3-1.12.429.jar",
+        "sha256": "08620b039496c9e7e33106dd9bb25c7e814154c93a2cb189976ee5614543f77e"
+      },
+      {
+        "bytes": 150760,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/aws-java-sdk-sts-1.12.429.jar",
+        "sha256": "cea0efbda38acf1acc9529995a12749168728d736115a76131829867a18c766d"
+      },
+      {
+        "bytes": 887810,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/bcpkix-jdk15on-1.67.jar",
+        "sha256": "efbca754880ce3922ca47a43c1f0b72c45731450a0ef193b9db33bf4bb38ce5f"
+      },
+      {
+        "bytes": 5961136,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/bcprov-jdk15on-1.67.jar",
+        "sha256": "fa0041a36f9f20af3c6b8dbf6eb49a969e2c9cc029049d61acc526ba3247b3ef"
+      },
+      {
+        "bytes": 208835,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/checker-qual-3.12.0.jar",
+        "sha256": "ff10785ac2a357ec5de9c293cb982a2cbb605c0309ea4cc1cb9b9bc6dbe7f3cb"
+      },
+      {
+        "bytes": 222284,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/checker-qual-3.26.0.jar",
+        "sha256": "13071d3b67326eeec0180d07fcbb1c79b0c27b173f04fea0982203c151160986"
+      },
+      {
+        "bytes": 353793,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/commons-codec-1.15.jar",
+        "sha256": "b3e9f6d63a790109bf0d056611fbed1cf69055826defeb9894a71369d246ed63"
+      },
+      {
+        "bytes": 327135,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/commons-io-2.11.0.jar",
+        "sha256": "961b2f6d87dbacc5d54abf45ab7a6e2495f89b75598962d8c723cea9bc210908"
+      },
+      {
+        "bytes": 284220,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/commons-lang-2.6.jar",
+        "sha256": "50f11b09f877c294d56f24463f47d28f929cf5044f648661c0f0cfbae9a2f49c"
+      },
+      {
+        "bytes": 4534256,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/conscrypt-openjdk-uber-2.5.2.jar",
+        "sha256": "eaf537d98e033d0f0451cd1b8cc74e02d7b55ec882da63c88060d806ba89c348"
+      },
+      {
+        "bytes": 15979,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/error_prone_annotations-2.11.0.jar",
+        "sha256": "721cb91842b46fa056847d104d5225c8b8e1e8b62263b993051e1e5a0137b7ec"
+      },
+      {
+        "bytes": 16016,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/error_prone_annotations-2.16.jar",
+        "sha256": "2668536a354cda63d19885fcabdecd8d6298aec4260cdfdf34b722e964d60396"
+      },
+      {
+        "bytes": 128707,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/failsafe-3.1.0.jar",
+        "sha256": "fe6265a683b866ec7506eab694c6759d6d23a264172621262c74ef5a3d2b2160"
+      },
+      {
+        "bytes": 4617,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/failureaccess-1.0.1.jar",
+        "sha256": "a171ee4c734dd2da837e4b16be9df4661afab72a41adaf31eb84dfdaf936ca26"
+      },
+      {
+        "bytes": 123475,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/fastdoubleparser-0.8.0.jar",
+        "sha256": "10fe288fd7a2cdaf5175332b73529f9abf8fd54dcfff317d6967c0c35ffb133b"
+      },
+      {
+        "bytes": 371767,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/gax-2.19.4.jar",
+        "sha256": "d0a09656da9f4ddac4fb2815fe255d0bcbe31b46cd5af85c115ddf95c4f1025a"
+      },
+      {
+        "bytes": 139473,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/gax-grpc-2.19.4.jar",
+        "sha256": "53e8f562e2ac2ec2489abd0fc51267b4573a5236c04c117cbc17fd1fe590570e"
+      },
+      {
+        "bytes": 150271,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/gax-httpjson-0.104.4.jar",
+        "sha256": "24639da7408dd223e2e3418433212ba8ee55ecab643348cc9ff1d1ad53c42ca3"
+      },
+      {
+        "bytes": 297911,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/google-api-client-1.35.1.jar",
+        "sha256": "24714add0c0248730a0e705448bbc91a5c68dbc0dc9f7fa0c97366bc7b275e23"
+      },
+      {
+        "bytes": 80131,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/google-api-services-lifesciences-v2beta-rev20210527-1.31.5.jar",
+        "sha256": "d3b24cfeeaa5a2eb05bf4cddce85411f2929b4080964fb40634b59413fb68a73"
+      },
+      {
+        "bytes": 189584,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/google-api-services-storage-v1-rev20220705-1.32.1.jar",
+        "sha256": "51446cf0373f19afc1b07b9dd75f254dfca917a4833dfb3bac61b2cad54c3400"
+      },
+      {
+        "bytes": 5950,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/google-auth-library-credentials-1.12.1.jar",
+        "sha256": "a6c942dd582479650957f4685c41ed6f58ee0016be70668f99f1c4013085292f"
+      },
+      {
+        "bytes": 218958,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/google-auth-library-oauth2-http-1.12.1.jar",
+        "sha256": "d91b3004b0b989afdf9a1f1e3df2121a23a4ef6e0264159fa2efd23dccca55e6"
+      },
+      {
+        "bytes": 115679,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/google-cloud-batch-0.5.0.jar",
+        "sha256": "bdf4bf09fe34ee0160566a3c4dc18f144f1161d07ac3f878bedd290f5cb88055"
+      },
+      {
+        "bytes": 131442,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/google-cloud-core-2.8.0.jar",
+        "sha256": "3986b22b49d9162102e7f2e4f299df108bf6f28ea1ce063e35f33ab60863cdb4"
+      },
+      {
+        "bytes": 10119,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/google-cloud-core-grpc-2.6.0.jar",
+        "sha256": "93d92cee6130a52833142adaf930a309fef1984bf274e44bdea0c7977fe2e82c"
+      },
+      {
+        "bytes": 14817,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/google-cloud-core-http-2.8.0.jar",
+        "sha256": "e082df5da7efa360e0c389ea3f1d7e29dbb5077c9d1279c184ad05ace7134fba"
+      },
+      {
+        "bytes": 309146,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/google-cloud-logging-3.8.0.jar",
+        "sha256": "79ab925b1b8acd397db8640f1e813c08d4538fc953293444416558ef23beb2db"
+      },
+      {
+        "bytes": 103588,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/google-cloud-nio-0.124.8.jar",
+        "sha256": "bb1b6c85c1627f97d44861d947c35121f03c63d490f4fc0c2ce1baf0af500c76"
+      },
+      {
+        "bytes": 353063,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/google-cloud-storage-2.9.3.jar",
+        "sha256": "d44b5368b1f59af3b602d2d70c3e209905b4768bc4ad31067652f33f19368403"
+      },
+      {
+        "bytes": 292703,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/google-http-client-1.42.2.jar",
+        "sha256": "97544ad0b0ae39b6ac14b1bcacc0f6c20c46c07ca05b9362ceb38f216c51e049"
+      },
+      {
+        "bytes": 10660,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/google-http-client-apache-v2-1.42.0.jar",
+        "sha256": "1fc4964236b67cf3c5651d7ac1dff668f73b7810c7f1dc0862a0e5bc01608785"
+      },
+      {
+        "bytes": 18703,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/google-http-client-appengine-1.42.0.jar",
+        "sha256": "76591c08c2eb024432dcabf81d33f440fbf5c8b0b6e5a13767c7034d0b5c8a8b"
+      },
+      {
+        "bytes": 10580,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/google-http-client-gson-1.42.2.jar",
+        "sha256": "4fbeaf39f4fc12c10f45f1d4b8e45db6a0de4452d75da81f94926985b98f9637"
+      },
+      {
+        "bytes": 8711,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/google-http-client-jackson2-1.42.0.jar",
+        "sha256": "306d2c56c475013534e64ed3bad032013a07820aea1f23fede868552bdb18071"
+      },
+      {
+        "bytes": 81086,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/google-oauth-client-1.34.1.jar",
+        "sha256": "193edf97aefa28b93c5892bdc598bac34fa4c396588030084f290b1440e8b98a"
+      },
+      {
+        "bytes": 1384400,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/gpars-1.2.1.jar",
+        "sha256": "f9e08bf964f34d129344404c01666276ec43c6704dd74e8d4ca32dcd1d2fb4a8"
+      },
+      {
+        "bytes": 99762,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/grengine-1.3.0.jar",
+        "sha256": "669b555975336fa720af878901f9afd4e57c38d69beebb2f11e95f2aedff4a39"
+      },
+      {
+        "bytes": 8033413,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/groovy-3.0.13.jar",
+        "sha256": "044569c20b1438263470585627da1b2c9722f1fb8d89f94e78c0ff219abd0146"
+      },
+      {
+        "bytes": 128877,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/groovy-json-3.0.13.jar",
+        "sha256": "921972defd8a89a5ab442f5ae57b1760755d7fe339dce46fe140e79a6e63e066"
+      },
+      {
+        "bytes": 29427,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/groovy-nio-3.0.13.jar",
+        "sha256": "87a8f0ad8022b5295e3292f2ffc65e6eb2f108da9f3648bc5eae873a0d54c9ad"
+      },
+      {
+        "bytes": 94159,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/groovy-templates-3.0.13.jar",
+        "sha256": "abfb7190631a35fc96e023bfcd4658f3f7d4ae76c488ef1b972a54b29809ddc2"
+      },
+      {
+        "bytes": 291831,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/groovy-xml-3.0.13.jar",
+        "sha256": "8faea983f0d871bd2d2f28150747edf9047dd4d716700a0276eaa905a5cd0816"
+      },
+      {
+        "bytes": 5866,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/groovy-yaml-3.0.13.jar",
+        "sha256": "dd20c0e27fefcd3048738dc5671816dba6b1833fb5052246fe392d64524290ff"
+      },
+      {
+        "bytes": 312330,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/grpc-alts-1.50.1.jar",
+        "sha256": "1670b639b5f0faf1f933a62ad782a2da14c179f2aeb4c0a5e69b37d1bc83c677"
+      },
+      {
+        "bytes": 260911,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/grpc-api-1.50.1.jar",
+        "sha256": "a67370ed18855f501c4611475ee9e22ddf475f2a0ac08bf00b6d37ab2536b6df"
+      },
+      {
+        "bytes": 14836,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/grpc-auth-1.50.1.jar",
+        "sha256": "530c42912b1fcdef09d80d480a60a0be4c0e688d980751b0930948df33eb0c86"
+      },
+      {
+        "bytes": 30586,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/grpc-context-1.50.1.jar",
+        "sha256": "3df55f0d7728d794286ee66b7347edc273629e89109cf6757684772f4564dd4b"
+      },
+      {
+        "bytes": 730554,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/grpc-core-1.50.1.jar",
+        "sha256": "6050f21be89cf4cc79642e4e489c3c59b2178a4d915876b86b081b40cbfd97be"
+      },
+      {
+        "bytes": 15665,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/grpc-google-iam-v1-1.6.4.jar",
+        "sha256": "98c7a96d8f5bd59f22d8c0a73a4d261218bdaccf6e6458f2fc0a03657efb0ff8"
+      },
+      {
+        "bytes": 14382,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/grpc-googleapis-1.50.1.jar",
+        "sha256": "479cdbfccaf8f11e71e132e070e62b6b239819977241a97a85abf4c9f5c9594c"
+      },
+      {
+        "bytes": 174807,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/grpc-grpclb-1.50.1.jar",
+        "sha256": "00cdcd2ead90dbed8b229d630b5377123b2b6ab4158c286197437928964d4975"
+      },
+      {
+        "bytes": 9339212,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/grpc-netty-shaded-1.50.1.jar",
+        "sha256": "a1f1e7b67ef83b717862fef408aa7de44906b3423f21fe8c6059c9c1c42134dc"
+      },
+      {
+        "bytes": 5107,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/grpc-protobuf-1.50.1.jar",
+        "sha256": "4eb3c239a97ea2dc2fccfc59d26fba2ec315a46c40a3f227ed7d5d314162e0e6"
+      },
+      {
+        "bytes": 7557,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/grpc-protobuf-lite-1.50.1.jar",
+        "sha256": "4b6c95245a80b3d606688cc554428993afbfe7e5f0f2f4664aa0aebbf2105ae9"
+      },
+      {
+        "bytes": 808445,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/grpc-services-1.50.1.jar",
+        "sha256": "2aee7998aa91d940bf0f554eb7dddcf795696bcd5461a876233d8d7dc806bfad"
+      },
+      {
+        "bytes": 50911,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/grpc-stub-1.50.1.jar",
+        "sha256": "7144b5016394413289bc02db927bf55647e210aedba573f7ae8e3ad56cc31557"
+      },
+      {
+        "bytes": 11899376,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/grpc-xds-1.50.1.jar",
+        "sha256": "fe841f2948e904623b0e82950afa85f07c87cc2202f7ed1b26f0501fc8fd0da2"
+      },
+      {
+        "bytes": 283367,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/gson-2.10.1.jar",
+        "sha256": "4241c14a7727c34feea6507ec801318a3d4a90f070e4525681079fb94ee4c593"
+      },
+      {
+        "bytes": 2959479,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/guava-31.1-jre.jar",
+        "sha256": "a42edc9cab792e39fe39bb94f3fca655ed157ff87a8af78e1d6ba5b07c4a00ab"
+      },
+      {
+        "bytes": 780321,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/httpclient-4.5.13.jar",
+        "sha256": "6fe9026a566c6a5001608cf3fc32196641f6c1e5e1986d1037ccdbd5f31ef743"
+      },
+      {
+        "bytes": 328593,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/httpcore-4.4.13.jar",
+        "sha256": "e06e89d40943245fcfa39ec537cdbfce3762aecde8f9c597780d2b00c2b43424"
+      },
+      {
+        "bytes": 328324,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/httpcore-4.4.15.jar",
+        "sha256": "3cbaed088c499a10f96dde58f39dc0e7985171abd88138ca1655a872011bb142"
+      },
+      {
+        "bytes": 565410,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/ion-java-1.0.2.jar",
+        "sha256": "0d127b205a1fce0abc2a3757a041748651bc66c15cf4c059bac5833b27d471a5"
+      },
+      {
+        "bytes": 1398591,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/ivy-2.5.1.jar",
+        "sha256": "793120f8c9058aede475b093651aa5307603c1518180772c104562a0ed2e9feb"
+      },
+      {
+        "bytes": 8781,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/j2objc-annotations-1.3.jar",
+        "sha256": "21af30c92267bd6122c0e0b4d20cccb6641a37eaf956c6540ec471d584e64a7b"
+      },
+      {
+        "bytes": 75705,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/jackson-annotations-2.12.7.jar",
+        "sha256": "3cacef714a89f3d68b69fa11263afa55a6aa2fdef1fff93ded22caa16b54687c"
+      },
+      {
+        "bytes": 75551,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/jackson-annotations-2.15.0-rc2.jar",
+        "sha256": "9931d72fbe65045cf7fb31e82784ac75130003e04012aac2d1874982093377a8"
+      },
+      {
+        "bytes": 365538,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/jackson-core-2.12.7.jar",
+        "sha256": "3987a6a335046e226e56b81d69668fb5a91b155ea7fd96b0851adbb7d4ac1ca6"
+      },
+      {
+        "bytes": 374895,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/jackson-core-2.13.3.jar",
+        "sha256": "ab119a8ea3cc69472ebc0e870b849bfbbe536ad57d613dc38453ccd592ca6a3d"
+      },
+      {
+        "bytes": 542243,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/jackson-core-2.15.0-rc2.jar",
+        "sha256": "e296f1a7a7d82ad08ba80071fe9895344b5b277a1d4bbb3af8660c9fd18895d1"
+      },
+      {
+        "bytes": 1512418,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/jackson-databind-2.12.7.1.jar",
+        "sha256": "3f504cac405ce066d5665ff69541484d5322f35ac7a7ec6104cf86a01008e02d"
+      },
+      {
+        "bytes": 1618840,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/jackson-databind-2.15.0-rc2.jar",
+        "sha256": "2ab3610f67774f6ca767205a89f1e69e287cb9da4df8b9fa06a0649da60e07c1"
+      },
+      {
+        "bytes": 61501,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/jackson-dataformat-cbor-2.12.7.jar",
+        "sha256": "14d16629c73ac15309db296153948ac5082b2735b81f85cdbffbd718a38bb9cc"
+      },
+      {
+        "bytes": 54485,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/jackson-dataformat-yaml-2.15.0-rc2.jar",
+        "sha256": "3141b72e698ab8d0109aabc8695c38341c5637d02fbf55aa49b47f7b75430b97"
+      },
+      {
+        "bytes": 46843,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/java-semver-0.9.0.jar",
+        "sha256": "2218c73b40f9af98b570d084420c1b4a81332297bd7fc27ddd552e903be8e93c"
+      },
+      {
+        "bytes": 56674,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/javax.activation-api-1.2.0.jar",
+        "sha256": "43fdef0b5b6ceb31b0424b208b930c74ab58fac2ceeb7b3f6fd3aeb8b5ca4393"
+      },
+      {
+        "bytes": 26586,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/javax.annotation-api-1.3.2.jar",
+        "sha256": "e04ba5195bcd555dc95650f7cc614d151e4bcd52d29a10b8aa2197f3ab89ab9b"
+      },
+      {
+        "bytes": 2497,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/javax.inject-1.jar",
+        "sha256": "91c77044a50c481636c32d916fd89c9118a72195390452c81065080f957de7ff"
+      },
+      {
+        "bytes": 128076,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/jaxb-api-2.3.1.jar",
+        "sha256": "88b955a0df57880a26a74708bc34f74dcaf8ebf4e78843a28b50eae945732b06"
+      },
+      {
+        "bytes": 16555,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/jcl-over-slf4j-1.7.36.jar",
+        "sha256": "ab57ca8fd223772c17365d121f59e94ecbf0ae59d08c03a3cb5b81071c019195"
+      },
+      {
+        "bytes": 60550,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/jcommander-1.35.jar",
+        "sha256": "019c12fec1ce5c02cbabb150f6ac8a86d92a0ecc9c89a549e5537283e863000c"
+      },
+      {
+        "bytes": 204750,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/jline-2.9.jar",
+        "sha256": "1943d84aea1e826da724ea1f306363e02691db1cf04165d339d97bfc8fdd10db"
+      },
+      {
+        "bytes": 27590,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/jmespath-java-1.12.429.jar",
+        "sha256": "77b2b72f51f456862822bd52dba9bea0c02c8cbbf53cb27a80a0738410dddd18"
+      },
+      {
+        "bytes": 621931,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/joda-time-2.8.1.jar",
+        "sha256": "b4670b95f75957c974284c5f3ada966040be2578f643c5c6083d262162061fa2"
+      },
+      {
+        "bytes": 440209,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/jsoup-1.15.4.jar",
+        "sha256": "006830d0797710408de5589c18d864343c0ef1a3a0c603c9cb138c943b67d9a4"
+      },
+      {
+        "bytes": 59716,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/jsr166y-1.7.0.jar",
+        "sha256": "4d4e74532e81bc6a54e4cbda865999f4ab29885e850f0b835ea374800b84d0b2"
+      },
+      {
+        "bytes": 19936,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/jsr305-3.0.2.jar",
+        "sha256": "766ad2a0783f2687962c8ad74ceecc38a28b9f72a2d085ee438b7813e928d0c7"
+      },
+      {
+        "bytes": 4519,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/jul-to-slf4j-1.7.36.jar",
+        "sha256": "9e641fb142c5f0b0623d6222c09ea87523a41bf6bed48ac79940724010b989de"
+      },
+      {
+        "bytes": 339283,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/kryo-2.24.0.jar",
+        "sha256": "7e56b32c635058f9aa2820f88919ab702d029cbcd15285da9992e36cc0ae52f2"
+      },
+      {
+        "bytes": 228975,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/leveldb-0.12.jar",
+        "sha256": "3c12eafb8bff359f97aec4d7574480cfc06e83f44704de020a1c0627651ba4b6"
+      },
+      {
+        "bytes": 9938,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/leveldb-api-0.12.jar",
+        "sha256": "3af7f350ab81cba9a35cbf874e64c9086fdbc5464643fdac00a908bbf6f5bfed"
+      },
+      {
+        "bytes": 2199,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar",
+        "sha256": "b372a037d4230aa57fbeffdef30fd6123f9c0c2db85d0aced00c91b974f33f99"
+      },
+      {
+        "bytes": 23715,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/log4j-over-slf4j-1.7.36.jar",
+        "sha256": "0a7e032bf5bcdd5b2bf8bf2e5cf02c5646f2aa6fee66933b8150dbe84e651e8a"
+      },
+      {
+        "bytes": 231851,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/logback-classic-1.2.11.jar",
+        "sha256": "4d8e899621a3006c2f66e19feab002b11e6cfc5cb1854fc41f01532c00deb2aa"
+      },
+      {
+        "bytes": 448764,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/logback-core-1.2.11.jar",
+        "sha256": "6ce1e9397be8298a2e99029f55f955c6fa3cef255171c554d0b9c201cffd0159"
+      },
+      {
+        "bytes": 521157,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/mail-1.4.7.jar",
+        "sha256": "78c33b4f7c7b60f4b680f2d2405b1f063d71929cf1a4fbc328888379f365fcfb"
+      },
+      {
+        "bytes": 246777,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/multiverse-core-0.7.0.jar",
+        "sha256": "c54398f0228054b7fae65227433ae9da87e5b2a96eba824e66a924912d10fc50"
+      },
+      {
+        "bytes": 3889644,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/nextflow-22.10.8.jar",
+        "sha256": "59c839ea4ade3be3ff7d7a0846fc5b9fbc59cdc49cac47619e1bb7b06ca163dd"
+      },
+      {
+        "bytes": 286445,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/nf-amazon-1.11.5.jar",
+        "sha256": "ecb76d03f316af78a3871f8bc4cac3673fded8d768d0d0470565e157b6ecf450"
+      },
+      {
+        "bytes": 384565,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/nf-commons-22.10.8.jar",
+        "sha256": "e19315f3d85085d25e60ab31c3d6e02c7eb10cb6f24d7053081a8942f1bec294"
+      },
+      {
+        "bytes": 134806,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/nf-google-1.4.6.jar",
+        "sha256": "a98729d9d7fd496227862909d5e6ad4c80c674a319c91d0a56e87b9e5a571277"
+      },
+      {
+        "bytes": 33362,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/nf-httpfs-22.10.8.jar",
+        "sha256": "65d60d15e8919a08936ecbbcbcc56b1e993626129dd6770565d0861c6be71720"
+      },
+      {
+        "bytes": 105452,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/nf-tower-1.5.7-patch0.jar",
+        "sha256": "39440403c9615e562aaf352b5cb0f346cc5f93cc6086ffc0fd7ee4dbca95ca59"
+      },
+      {
+        "bytes": 41755,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/objenesis-2.1.jar",
+        "sha256": "c74330cc6b806c804fd37e74487b4fe5d7c2750c5e15fbc6efa13bdee1bdef80"
+      },
+      {
+        "bytes": 355405,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/opencensus-api-0.31.1.jar",
+        "sha256": "f1474d47f4b6b001558ad27b952e35eda5cc7146788877fc52938c6eba24b382"
+      },
+      {
+        "bytes": 23415,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/opencensus-contrib-http-util-0.31.1.jar",
+        "sha256": "3ea995b55a4068be22989b70cc29a4d788c2d328d1d50613a7a9afd13fdd2d0a"
+      },
+      {
+        "bytes": 749538,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/opencensus-proto-0.2.0.jar",
+        "sha256": "0c192d451e9dd74e98721b27d02f0e2b6bca44b51563b5dabf2e211f7a3ebf13"
+      },
+      {
+        "bytes": 2982162,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/org.eclipse.jgit-6.2.0.202206071550-r.jar",
+        "sha256": "6df0a860d3c9ab6e67c32b0947277270ae1139e9c0dd2ddf3442ab917453d61a"
+      },
+      {
+        "bytes": 6730,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/perfmark-api-0.25.0.jar",
+        "sha256": "2044542933fcdf40ad18441bec37646d150c491871157f288847e29cb81de4cb"
+      },
+      {
+        "bytes": 121671,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/pf4j-3.4.1.jar",
+        "sha256": "20f8bc8d63c9352dd01ade03d00e8469a80e8109d7640a64c3ddd1ec472a4080"
+      },
+      {
+        "bytes": 25736,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/pf4j-update-2.3.0.jar",
+        "sha256": "79c9d6240cda82c3d31ee7a5722b635a3d37ad58c124a4db0ddea40145c30f45"
+      },
+      {
+        "bytes": 600059,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/proto-google-cloud-batch-v1-0.5.0.jar",
+        "sha256": "4b73b5db4b9f73c2e70766176f7ca4dc2b025848356d4a24396d2647ef7f2231"
+      },
+      {
+        "bytes": 678176,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/proto-google-cloud-batch-v1alpha-0.5.0.jar",
+        "sha256": "02d689a25b027e34abbd27c25f89b5f08a15719a56f7cbdd66355b36c379155d"
+      },
+      {
+        "bytes": 904554,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/proto-google-cloud-logging-v2-0.97.0.jar",
+        "sha256": "b713c6e84ab8b65b7eaf835a17d0b983632944e46b4a950185195838a9856002"
+      },
+      {
+        "bytes": 1766844,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/proto-google-common-protos-2.9.6.jar",
+        "sha256": "84e715d92500fd0d44408f58713d5d70ae857d022de3d66d500fbf27fae88103"
+      },
+      {
+        "bytes": 167952,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/proto-google-iam-v1-1.6.4.jar",
+        "sha256": "8442b8cc58228d3b637183a3bc164c1678a54cae3530ae30c658e9993a335ad4"
+      },
+      {
+        "bytes": 1671407,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/protobuf-java-3.21.8.jar",
+        "sha256": "0b8581ad810d2dfaefd0dcfbf1569b1450448650238d7e2fd6b176c932d08c95"
+      },
+      {
+        "bytes": 73687,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/protobuf-java-util-3.21.8.jar",
+        "sha256": "e3e062c4cdf22ee5633e6e114aba4c01ebaf4eb27b0c2ad4abc73c63145dc9d7"
+      },
+      {
+        "bytes": 113189,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/re2j-1.6.jar",
+        "sha256": "c8b5c3472d4db594a865b2e47f835d07fb8b1415eeba559dccfb0a6945f033cd"
+      },
+      {
+        "bytes": 41125,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/slf4j-api-1.7.36.jar",
+        "sha256": "d3ef575e3e4979678dc01bf1dcce51021493b4d11fb7f1be8ad982877c16a1c0"
+      },
+      {
+        "bytes": 334803,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/snakeyaml-2.0.jar",
+        "sha256": "880c9d896e4b74a06c549c15ca496450165d6909fa15d7e662bee8f6a66d7afa"
+      },
+      {
+        "bytes": 514310,
+        "kind": "file",
+        "mode": 436,
+        "path": "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8/threetenbp-1.6.3.jar",
+        "sha256": "e60d74b79b29e21959c69a066922f0d4ee648b75fa03010e13e1fe3ff4537c36"
+      }
+    ],
+    "roots": [
+      "/home/bizon/.nextflow/capsule/apps/nextflow-all_22.10.8"
+    ],
+    "schema": 1,
+    "scientific_execution_authorized": false
+  },
+  "nextflow_probe": {
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "\n      N E X T F L O W\n      version 22.10.8 build 5860\n      created 15-04-2023 10:08 UTC (06:08 EDT)\n      cite doi:10.1038/nbt.3820\n      http://nextflow.io\n\n"
+  },
+  "omamer_database": {
+    "bytes": 9375445304,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/fastoma_run/work/stage-e96d8deb-126f-4ec4-a60d-5a7d7c4025c7/a2/b8c246b5b7471c4b8afed6b5647ea3/LUCA.h5",
+    "sha256": "53adf8307e244c3901e8e432e015f16f895efb777ea1f693e739169e0defb242"
+  },
+  "remaining_gates": [
+    "Admit corrected full OrthoFinder output and bind its rooted species tree with exact 78-species scope.",
+    "Freeze fresh proteome/tree copies, exact Nextflow commands, immutable container digest selection and effective configuration.",
+    "Pin Java/Docker/Nextflow runtime and resource enforcement; isolate cache, logs and working directories.",
+    "Validate native completion, IDs and pair-generation semantics; never silently discard malformed pair rows.",
+    "Native output admission, conversion and corrected QfO scoring remain separate."
+  ],
+  "required_tree_origin": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_primary_v1/orthofinder_full",
+  "source": {
+    "bytes": 6255,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_qfo_corrected_fastoma_assets.py",
+    "sha256": "0c115acc9704321705455909d3f9ac9fe0096735149514711ccca50206b26160"
+  },
+  "sources": [
+    {
+      "bytes": 21779,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastOMA/FastOMA.nf",
+      "sha256": "9b797f6891ff7fbfeddef68ebf4de84fb83d04c6efa43ce472f15d8a1375c2bb"
+    },
+    {
+      "bytes": 3877,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastOMA/nextflow.config",
+      "sha256": "3df0c7cae4286a36f5e36415a05f0021f61a611b05fa9474698ab69cd8b2dce2"
+    },
+    {
+      "bytes": 2252,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastOMA/conf/base.config",
+      "sha256": "5767ed637f8cef22cb79a316e8ad18e1103ee6b83e47220706f719a4954f3887"
+    },
+    {
+      "bytes": 90,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/fastoma_qfo.config",
+      "sha256": "810184b4b3c094982a9f8141f01f813898fddee08efa77aceefedfd4913f8b60"
+    },
+    {
+      "bytes": 4723,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_fastoma_qfo.slurm",
+      "sha256": "fb26f4f11812e99ba4048ed655cb25cbee744361e600ca20324571799d3099ed"
+    },
+    {
+      "bytes": 3947,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/recover_fastoma_qfo_collection.slurm",
+      "sha256": "0284c92ae69099d83caa52c838556fc4e26b184f220725eaa552cdefcaa794d7"
+    },
+    {
+      "bytes": 265,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/fastoma/work/06/276078d39a60b51341cb350ebb63ad/.command.sh",
+      "sha256": "a6003b014879b87744ea46dfdb673dc9769a5fe425b64d2330b1baae6f410e05"
+    },
+    {
+      "bytes": 91559938,
+      "path": "/home/bizon/bin/nextflow",
+      "sha256": "56c8979edada822a5f8a75721dbb8079a4dd8c94b9688337fc3cc95a15e3e7b1"
+    },
+    {
+      "bytes": 16192,
+      "path": "/home/bizon/anaconda3/pkgs/openjdk-17.0.18-ha668962_0/lib/jvm/bin/java",
+      "sha256": "e5b841252467eb9fd06a988cbc7ea6e8724509a9626ec65873a6e494513938d8"
+    },
+    {
+      "bytes": 30626,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_primary_commands_20260918.json",
+      "sha256": "dbebd3a6915fddeb2b89e0e591a2ac5c798ee6bccec9925fef485260f41baa5a"
+    }
+  ],
+  "species_tree": null,
+  "status": "corrected_fastoma_assets_pinned_waiting_for_corrected_tree",
+  "workflow_commit": "bf6dcbaa8cf516ab6f6e074dba37eceb59a9b80e",
+  "workflow_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastOMA"
+}

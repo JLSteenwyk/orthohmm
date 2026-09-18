@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Corrected Comparator Execution and FastOMA Assets (2026-09-18 UTC)
+
+The previous continuation submitted corrected legacy BLAST; this turn
+verified it remains queued for resources as 21713 (180 CPUs/900 GiB).
+Corrected OrthoHMM task 21706_0, Proteinortho 21708 and SonicParanoid 21710
+are running; full OrthoFinder task 21706_1 is sequentially queued. These
+are shared-host accuracy runs, not dedicated timing evidence. See their
+dated submission ledgers for exact executor and manifest identities.
+
+Original-release p1_c0_r1 passed native and sampled event-to-pair audits;
+its scoring job 21711 is running with admission 21712 queued. Final cell
+p1_c1_r1 is running as 21671_3. The full eight-cell paired uncertainty
+analysis still waits for all native assessments. DGX task 21656_14 remains
+active; all timing/resource/host admission gates remain separate.
+
+FastOMA corrected-input assets are now pinned and verified, including
+9,375,445,304-byte LUCA.h5, immutable image identity, retained workflow
+and offline Nextflow 22.10.8. Eight tests and real asset probes passed.
+See QFO_CORRECTED_FASTOMA_ASSETS_20260918.md for the host/container workflow
+difference and historical task evidence. The species tree remains null:
+do not substitute the old-release OrthoFinder tree. No FastOMA inference
+is authorized until the corrected tree and executable workflow are bound.
+
+Remaining work still includes corrected satellite/factorial preparation,
+all native admissions/conversions/scores, OrthoMCL downstream inference,
+complete timing analysis, uncertainty/error-analysis gaps and final
+publication/release artifacts. TreeFam source families remain unavailable.
+The full goal remains active; these milestones do not prove readiness.
+
 ## Corrected Inputs Ready For Execution Freeze; First R-On Score Admitted (2026-09-18 UTC)
 
 Previous turn progressed via1096ccewith archive acquisition/comparison and
