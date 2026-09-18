@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Independent Three Kingdoms Pair Arithmetic (2026-09-18 UTC)
+
+Previous turn progressed through179d11d by submitting matched Sonic21795.
+Live scheduler confirms21706_0 RUNNING12:25:53,21789 RUNNING2:14:15,
+and21795 waiting on its dependency. No job was restarted or changed.
+
+Added audit_three_kingdoms_pair_counts.py and independently reconstructed all
+eight historical results from normalized partitions using choose-two
+intersection counts, without importing the scorer or summary implementation.
+All TP/FP/FN, group counts and coverage match; metrics agree within1e-12.
+Reference/group/score identities agree with retained panel hashes and remain
+unchanged after the audit.19 focused tests pass, including100 seeded random
+partitions against explicit-pair truth and source/count corruption tests.
+
+Reportthree_kingdoms_pair_counts_audit_20260918.json and
+THREE_KINGDOMS_PAIR_COUNT_AUDIT_20260918.md retain exact counts and limitations.
+OF full has72fewerFP but83moreFN than the sequence-only diagnostic. This
+explains the F1 trade-off on the restricted reference, not general superiority.
+Historical Sonic input mismatch and native conversion/runtime admission are
+not resolved by this arithmetic audit. Matched-run admission/scoring and the
+full publication requirements remain unfinished.
+
 ## Matched Three Kingdoms Sonic Launcher (2026-09-18 UTC)
 
 Previous turn made progress with additional TreeFam archive evidence in
