@@ -1,0 +1,29 @@
+JobId=21801 JobName=counter-compute-probe
+   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A
+   Priority=1 Nice=0 Account=(null) QOS=normal
+   JobState=COMPLETED Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:00:52 TimeLimit=00:10:00 TimeMin=N/A
+   SubmitTime=2026-09-18T15:35:25 EligibleTime=2026-09-18T15:35:25
+   AccrueTime=2026-09-18T15:35:25
+   StartTime=2026-09-18T15:35:25 EndTime=2026-09-18T15:36:17 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-18T15:35:25 Scheduler=Main
+   Partition=spark AllocNode:Sid=spark:796164
+   ReqNodeList=spark-7ff0 ExcNodeList=(null)
+   NodeList=spark-7ff0
+   BatchHost=spark-7ff0
+   NumNodes=1 NumCPUs=20 NumTasks=1 CPUs/Task=2 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=2,mem=2G,node=1,billing=2
+   AllocTRES=cpu=20,mem=2G,node=1,billing=20
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=2 MinMemoryNode=2G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=NO Contiguous=0 Licenses=(null) Network=(null)
+   Command=/tmp/orthohmm-compute-probe.eC4ElCVa/run_dgx_compute_counters.sh
+   WorkDir=/home/jlsteenwyk
+   StdErr=/tmp/orthohmm-compute-probe.eC4ElCVa/slurm-21801.log
+   StdIn=/dev/null
+   StdOut=/tmp/orthohmm-compute-probe.eC4ElCVa/slurm-21801.log
+   TresPerTask=cpu:2
+   
+

@@ -1,6 +1,7 @@
 import copy
 import hashlib
 import json
+import math
 from pathlib import Path
 
 import pytest
@@ -63,3 +64,28 @@ def test_unscheduled_rejected(tmp_path, monkeypatch):
     with pytest.raises(KeyError):
         module.run(tmp_path / "out")
     assert not (tmp_path / "out").exists()
+
+
+def test_retained_compute_probe_replay():
+    root = Path(__file__).resolve().parents[2]
+    report = json.loads((root / "benchmark_tools/results/dgx_compute_counter_probe_21801.json").read_text())
+    assert report["job_id"] == 21801
+    assert report["status"] == "fixed_work_counter_engineering_complete"
+    assert [t["monitor"] for t in report["trials"]] == list(module.MODES)
+    assert report["publication_ready"] is False
+    assert report["controlled_workload_verified"] is False
+    for name, digest in report["sources"].items():
+        assert hashlib.sha256((root / "benchmark_tools" / name).read_bytes()).hexdigest() == digest
+    for trial in report["trials"]:
+        replay = module.validate_trial(trial, report["job_id"])
+        retained = trial["summary"]
+        assert replay.keys() == retained.keys()
+        for key in replay:
+            if key == "child_cpu_s":
+                # Preserve the original sum; interpreter summation can differ by one ULP.
+                assert math.isclose(replay[key], retained[key], rel_tol=0, abs_tol=1e-12)
+            else:
+                assert replay[key] == retained[key]
+    scheduler = (root / "benchmark_tools/results/dgx_compute_scheduler_21801.txt").read_text()
+    for field in ("JobId=21801 ", "JobState=COMPLETED ", "ExitCode=0:0", "Restarts=0", "NodeList=spark-7ff0", "CPUs/Task=2", "MinMemoryNode=2G"):
+        assert field in scheduler

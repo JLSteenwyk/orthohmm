@@ -1,5 +1,28 @@
 # Publication Progress
 
+## DGX Compute-Counter Probe Completed (2026-09-18 UTC)
+
+Previous goal turn progressed through4591b7a with verified OrthoBench
+relocation evidence. Reread the full objective. Initial scheduler inspection
+confirmed21792 RUNNING21:47 and21706_0 RUNNING14:45:43, with21798 still
+dependency-pending; no live scientific jobs were restarted.
+
+Froze and pushed071989e before the DGX experiment. Engineering job21801
+completed0:0 in52seconds, zero restarts, exclusive spark allocation,
+two CPUs/task/2GiB. Six fixed-order monitoring off/on trials each launched
+four compute-heavy children; all checksums and coarse CPU/memory accounting
+checks passed. Raw observations and terminal scheduler text are retained.
+Median fixed-work wall times were8.322864s off and8.321992s on; this descriptive
+difference is not evidence of a speedup, negligible general overhead or
+controlled scientific timing. Local replay found a one-ULP discrepancy in
+one child-CPU sum, retained and documented without rewriting the raw result.
+
+See DGX_COMPUTE_COUNTER_RESULT_20260918.md. Added actual-evidence replay
+coverage and linked the completed OrthoBench statistical relocation in the
+manuscript. Native pipeline observer smoke, prospective timing admission,
+corrected QfO results, remaining uncertainty and final packaging are still
+incomplete. The historical27timings were not upgraded or selectively rerun.
+
 ## OrthoBench Factorial Relocation Verified (2026-09-18 UTC)
 
 Reread the full objective. The immediately preceding archive-search turn

@@ -1164,6 +1164,13 @@ table reproduce exactly, and the figure workflow completes. This validates a
 bounded statistical workflow, not native inference or raw benchmark acquisition
 and scoring, and does not resolve third-party redistribution permissions.
 
+The [OrthoBench factorial relocation check](ORTHOBENCH_FACTORIAL_REPRODUCTION_20260918.md)
+also exported committed analysis inputs and code outside the checkout. All
+eight cells and the 20,000-draw paired analysis reproduced exactly from the
+70-family sufficient statistics in an isolated Python invocation. This used
+the existing analysis virtual environment on the same host, not a fresh
+installation or independent native-inference/scoring reproduction.
+
 Code and analysis milestones are tracked in the authorized repository.
 Machine-readable reports retain input, source, and output hashes where
 audited; large raw datasets and working outputs are not included in normal
