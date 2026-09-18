@@ -70,6 +70,22 @@ These are observations from this search, not proof that no copy exists:
 
 ## Required Next Step
 
+### Additional Repository-History Check
+
+A bare clone of `https://github.com/qfo/benchmark-webservice.git` is retained
+at `benchmarks/work/treefam_source_search_20260918/qfo-history.git`, with HEAD
+`c0854a96c1a0fd7f2a891d971af0863002fabc90`. A filename-history search across
+all fetched refs for `*treefam*`, `*TreeFam*` and `*.nhx` found the TreeFam-A
+benchmark metadata and several SwissTree/example NHX files, but not the
+requested TreeFam collection or mapping. This searches reachable fetched
+history, not deleted upstream refs or private archives. The GitHub commits
+API query for `data/treefam` also returned an empty list.
+
+The pooled reference and supplementary-software ZIP were rehashed and still
+match the SHA-256 values above. No newly recovered original TreeFam input
+has been admitted for analysis. The [Sanger archive page](https://www.sanger.ac.uk/tool/treefam/)
+explicitly states that the resource is no longer available at Sanger.
+
 Request the QfO 2020/2020.2 reference-generation source bundle from the QfO
 maintainers, and the release-7 archive from TreeFam/EBI if necessary. A draft
 request follows; **no email, issue or support submission has been sent**.
