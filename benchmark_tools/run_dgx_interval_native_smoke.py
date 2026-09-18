@@ -17,7 +17,7 @@ ROOT = Path("/home/jlsteenwyk/projects/orthohmm-publication")
 
 
 def relocate(value):
-    old, new = str(ROOT / "launcher_smoke_v1"), str(ROOT / "interval_native_smoke_v1")
+    old, new = str(ROOT / "launcher_smoke_v1"), str(ROOT / "interval_native_smoke_v2")
     if isinstance(value, str):
         return new + value[len(old):] if value.startswith(old + "/") else value
     if isinstance(value, dict):
@@ -43,7 +43,7 @@ def launch(spec_path, index, recipe, recipe_sha):
     os.environ.update(spec["environment_overrides"])
     os.environ["PATH"] = os.pathsep.join(spec["environment_paths"][run["environment_role"]])
     os.environ["PYTHONDONTWRITEBYTECODE"] = "1"
-    os.environ["PYTHONPYCACHEPREFIX"] = str(ROOT / "interval_native_smoke_v1" / f"cache_{index}")
+    os.environ["PYTHONPYCACHEPREFIX"] = str(ROOT / "interval_native_smoke_v2" / f"cache_{index}")
     if Path(os.environ["PYTHONPYCACHEPREFIX"]).exists():
         raise ValueError("Cache path exists")
     runtime = [(row["path"], row["sha256"]) for row in spec["runtime_manifests"]]

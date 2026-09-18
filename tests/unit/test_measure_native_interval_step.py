@@ -67,6 +67,26 @@ def test_only_output_prefix_is_relocated():
                  command=[str(ROOT / "envs/orthohmm/bin/python"), "--cpu", "20"],
                  other=str(ROOT / "launcher_smoke_v1_other"))
     result = relocate(value)
-    assert result["path"] == str(ROOT / "interval_native_smoke_v1/run_00/output")
+    assert result["path"] == str(ROOT / "interval_native_smoke_v2/run_00/output")
     assert result["command"] == value["command"]
     assert result["other"] == value["other"]
+
+
+def test_packaged_worker_imports_recipe_not_working_checkout(tmp_path):
+    import shutil
+    import subprocess
+
+    root = Path(__file__).resolve().parents[2]
+    package = tmp_path / "benchmark_tools"
+    package.mkdir()
+    for name in ("__init__.py", "measure_native_interval_step.py", "measure_native_counter_step.py",
+                 "probe_host_counters.py", "probe_dgx_step_separation.py", "probe_interval_cpu.py",
+                 "screen_bracketed_cpu.py"):
+        shutil.copyfile(root / "benchmark_tools" / name, package / name)
+    code = ("import runpy, pathlib; "
+            f"runpy.run_path({str(package / 'measure_native_interval_step.py')!r}, run_name='import_probe'); "
+            "import benchmark_tools, benchmark_tools.measure_native_counter_step as dependency; "
+            f"assert pathlib.Path(benchmark_tools.__file__).parent == pathlib.Path({str(package)!r}); "
+            f"assert pathlib.Path(dependency.__file__).parent == pathlib.Path({str(package)!r})")
+    completed = subprocess.run([sys.executable, "-B", "-c", code], cwd=root, capture_output=True, text=True)
+    assert completed.returncode == 0, completed.stderr
