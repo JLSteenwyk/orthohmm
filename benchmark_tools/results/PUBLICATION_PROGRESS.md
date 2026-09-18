@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Frozen Overhead Task Provenance Binding Added (2026-09-18 UTC)
+
+Previous turn made progress through4ceef47 with raw measurement replay.
+Reread the full objective and polled only the local scheduler. Latest:
+21706_0running18:56:19;21838_0completed0:0 in09:20;21838_1running08:04;
+remaining overhead tasks and21706_1pending. No native panel outputs or
+DGX remote services were accessed. Retained task0's terminal local scheduler
+record now, before controller records can expire; raw whitespace is preserved.
+
+Added record binding to the checksum-pinned plan, recipe and authorization.
+Verify exact task receipt, original/fresh-copy identities and basename order,
+GNU-time/native command, wrapper source, expected before/after runtime checks,
+positive verification durations, and exact boundary/periodic worker launch.
+Scheduler checks require matching array/task/native job, completed exit0:0,
+zero restarts/no requeue, exclusive20CPU/96GiB on spark-7ff0 and the frozen
+batch command. Failed tasks remain the responsibility of the outer failure
+inventory; this successful-task verifier does not discard or admit them.
+
+188 focused tests pass, including38 new cases spanning all18 task bindings,
+authorization type fidelity, command/input/runtime/source mismatches,
+copied-input proof, scheduler corruption, and the retained real task0 record.
+The other provenance fixtures are synthetic and do not represent completed
+native overhead outcomes. No scientific timing claim follows from binding.
+
+Next: combine the complete-terminal scheduler gate, record binding, raw
+measurement replay and canonical output identity into the archive-level
+failure-preserving report. Keep the no-DGX-remote-call window until every
+task is terminal; do not inspect partial native results or change the plan.
+
 ## Raw Overhead Measurement Replay Implemented (2026-09-18 UTC)
 
 Previous turn made progress through633dfa9 with canonical native-output
