@@ -1,0 +1,10 @@
+method	run	use	precision	recall	f_score	reference_gene_coverage	input_status
+OrthoHMM high sensitivity	historical	comparison	1.0	0.7040261153427638	0.8263090676883781	1.0	not_retained; historical consumption not proven
+OrthoHMM phylogeny satellite_v2	historical	comparison	1.0	0.7732589771490751	0.872133159469203	1.0	all_12_staged_hashes_match; historical consumption not proven
+OrthoFinder 3.1.5 full	historical	comparison	1.0	0.9774211099020674	0.9885816480946485	1.0	all_12_staged_hashes_match; historical consumption not proven
+OrthoFinder 3.1.5 sequence-only checkpoint	historical	comparison	0.9901920719248059	0.9887105549510338	0.9894507588647655	1.0	all_12_staged_hashes_match; historical consumption not proven
+SonicParanoid 2.0.9	contemporary matched input	comparison	0.9934426229508196	0.9891186071817193	0.9912758996728462	0.9980343980343981	matched input verified
+ProteinOrtho 6.3.6	historical	comparison	1.0	0.8699673558215452	0.9304626127436718	0.9597051597051597	not_retained; historical consumption not proven
+FastOMA 0.3.5 final orthologous groups	historical	comparison	1.0	0.7569368879216539	0.8616551830920492	0.8943488943488943	all_12_staged_hashes_match; historical consumption not proven
+OrthoMCL 1.4	historical	comparison	1.0	0.97810119695321	0.9889293818331844	0.9965601965601966	all_12_staged_hashes_match; historical consumption not proven
+SonicParanoid 2.0.9 (historical)	historical	historical diagnostic only	0.9934363462327362	0.9881664853101197	0.9907944084555063	0.9980343980343981	known Danio input mismatch

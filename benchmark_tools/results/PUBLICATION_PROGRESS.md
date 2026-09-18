@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Matched Three Kingdoms Comparison Exported (2026-09-18 UTC)
+
+Previous turn progressed throughac522bc with the admitted contemporary Sonic
+result and the read-only DGX probe. Reread the objective and confirmed QfO
+scoring21825, top100graph21814 and HMM21706_0 remain running;21826waits for
+scoring. Implemented a source-pinned supplementary table exporter that
+recounts all eight comparison partitions plus the retained historical Sonic
+diagnostic against the exact same255-family/2035-gene/7352-pair reference.
+
+Exported JSON, TSV and Markdown to`three_kingdoms_comparison_matched_20260918/`.
+No historical score overwritten. Explicit run/input labels retain the lack
+of proven uniform historical input consumption; only contemporary Sonic is
+labeled matched input. Rechecked source records and raw normalized groups
+before/after counting.23focused tests pass, including malformed panels,
+reference-universe mismatch, duplicate methods and retained export rows.
+
+Updated manuscript Methods/Results to remove the stale assertion that the
+matched run had not occurred and link the generated table. This is a
+descriptive supplementary comparison, not a superiority test or genome-wide
+accuracy result. The previously archived figure bundle is unchanged; a final
+publication package will require refreshed manifests/figures after pending
+primary QfO analyses and resource validation finish.
+
 ## Matched Three Kingdoms Sonic Completed (2026-09-18 UTC)
 
 During the same continuation, terminal scheduler evidence confirmed21795

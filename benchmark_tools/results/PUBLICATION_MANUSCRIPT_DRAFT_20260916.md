@@ -164,9 +164,13 @@ found that SonicParanoid's native snapshot matches the raw zebrafish FASTA,
 not the stop-marker-stripped staged version. Five other retained checksum
 manifests match all12 staged inputs; the older high-sensitivity metrics lack
 per-file hashes. The historical supplementary table is therefore not presented
-as a fully established identical-input cohort. A matched-staged-input Sonic
-rerun is required before replacing that historical comparison; it has not yet
-been performed. No effect on scores is inferred from the mismatch alone.
+as a fully established identical-input cohort. A contemporary matched-staged-
+input Sonic run has now completed with independently verified conversion
+and scoring. The[updated supplementary table](three_kingdoms_comparison_matched_20260918/scores.md)
+uses this new run and retains the historical Sonic result as a separate
+diagnostic row. No causal effect of the input mismatch is inferred from
+the difference between runs; other historical input-consumption limitations
+remain unresolved.
 
 For the separately recovered four-stage QfO replay, SwissTrees raw counts
 were reconstructed using the frozen native scorer and reference. Each
@@ -420,11 +424,15 @@ impact. The unmodified baseline is retained with failures disclosed.
 
 Three Kingdoms BUSCO-reference F1 was 0.872133 for satellite_v2 and
 0.826309 for high sensitivity, compared with 0.988582 for full OrthoFinder,
-0.989451 for its sequence checkpoint, and 0.990794 for SonicParanoid.
+0.989451 for its sequence checkpoint, and 0.991276 for the contemporary
+matched-input SonicParanoid run (precision0.993443, recall0.989119;
+7272TP,48FP,80FN). Historical Sonic F1=0.990794 remains a diagnostic result
+with a known input mismatch. All values measure reference-gene group
+co-membership, not genome-wide orthology or native pair prediction accuracy.
 The checkpoint's small advantage over full OrthoFinder on this restricted
 target does not establish that phylogenetic inference is generally harmful.
 Mechanistic explanations require error tracing and controlled ablations.
-[Comparison](PUBLICATION_COMPARISON_ORTHOMCL_COMPLETE_20260916.md).
+[Recounted comparison with run/input labels](three_kingdoms_comparison_matched_20260918/scores.md).
 
 ### Historical Components Provide Preliminary Evidence
 
