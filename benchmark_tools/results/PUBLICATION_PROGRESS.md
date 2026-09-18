@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Full Unit Regression And Live QfO Validation Check (2026-09-18 UTC)
+
+Previous turn progressed throughaf6a8e7 with completed bracketed CPU controls.
+Reread the full objective. Ran `pytest -q tests/unit` against af6a8e7 with no
+tracked code/test changes:5066passed,9skipped in89.12seconds, exit0. This
+broader regression covers the accumulated engineering changes; it is not
+native benchmark rerunning, independent scientific validation or proof of
+publication readiness. Skipped tests remain unexecuted coverage.
+
+Confirmed corrected numeric validator21792 live in Slurm and directly as
+PID3755905, running the frozen publication_qfo_sequence_numeric_admission_v1
+executor. Direct process CPU time increased from49:58 to50:30; the independent
+expected.sqlite grew from26394636288bytes at16:00:18 local time to26651787264
+at16:00:48. Process write counters also increased. These observations confirm
+forward progress without querying/locking the live SQLite database. The
+validator log is empty because its source writes the final report only after
+reconstruction/verification (or failure), not because the job is stopped.
+
+The live `sstat` AveCPU value was nonsensical
+(`213503982334-14:25:51`) with empty memory fields. It was not used as a CPU,
+memory or timing result. Direct process observations are only liveness checks,
+not scientifically comparable resource measurements. Available filesystem
+space was approximately12TiB; no storage intervention was needed.
+
+HMM21706_0 remains live, and21798 graph-memory planning awaits21792. No
+scientific job was restarted, retuned or interfered with. Next primary
+benchmark action remains inspecting numeric admission and memory-planning
+results before allocating sequence graph inference. Interval-level timing
+observation, remaining endpoint uncertainty and final packaging are still open.
+
 ## Bracketed CPU Positive Controls Executed (2026-09-18 UTC)
 
 Previous turn progressed through09c2d61 with the native-window audit and
