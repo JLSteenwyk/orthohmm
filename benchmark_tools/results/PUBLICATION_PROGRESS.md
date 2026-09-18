@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Retained OrthoMCL Inputs Match Frozen Originals (2026-09-17)
+
+Previous goal turn was a verified wait on DGX array 21656. Re-read the full
+objective and confirmed live jobs 21687, 21671_1 and 21656_8. Added and ran
+the OrthoMCL retained-input audit: all 976,504 sequences across 78 proteomes
+match the frozen original input sequence hashes; the genome map is complete
+and assigns every gene to the correct species. Twelve focused tests and
+21 combined OrthoMCL/OrthoFinder tests pass. Evidence and limitations are in
+`qfo_orthomcl_input_parity_20260917.json` and
+`QFO_ORTHOMCL_INPUT_PARITY_20260917.md`.
+
+No inputs or scores changed. Retained FASTA parity does not authenticate the
+historical binary BLAST database, resolve its 53 failed queries, or remove
+the original QfO Xenopus release limitation. Corrected archive job 21687
+advanced to 954,531,840 bytes; dependent checks 21688/21689 remain queued.
+Continue other comparator input audits, corrected-release compatibility,
+full factorial assessments and dedicated timing admission. Full goal active.
+
 ## Retained Full OrthoFinder Inputs Match Frozen Originals (2026-09-17)
 
 Previous turn progressed with queued corrected sequence auditb156cc3.
