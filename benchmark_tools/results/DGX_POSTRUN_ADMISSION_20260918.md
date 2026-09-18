@@ -34,6 +34,14 @@ does not establish the status of the other26 runs.
 
 ## Required Validation
 
+Complete archive update: the full native output tree (1,273,674 files,
+17,759,031,853bytes) and frozen input tree (25 files,259,307,749bytes) are
+preserved at benchmarks/work/dgx_native_archive_20260918. Checksum-mode
+rsync dry-runs found no remote/local differences. Original DGX copies remain.
+Native validation job21794 uses frozen99983f9c258dce13814315558223c1bfda5a5547,
+2CPU/64GiB/24h onbizon, no requeue. It is submitted, not yet validated.
+Large archive/inventory artifacts are not committed as source code.
+
 Post-run progress:207 files (815,526,081bytes) of metadata and measurement
 evidence were transferred and checked with a checksum-mode rsync dry-run.
 dgx_completed_panel_review_20260918.json records successful metadata,

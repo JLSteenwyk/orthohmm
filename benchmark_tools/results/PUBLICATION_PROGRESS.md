@@ -1,5 +1,35 @@
 # Publication Progress
 
+## DGX Native Archive And Validation Submitted (2026-09-18 UTC)
+
+Previous turn progressed throughf1b3b1e with all27 resource-accounting
+replays. Preserved the complete native output tree, not just evaluator
+inputs, at benchmarks/work/dgx_native_archive_20260918/scaling_native_v1:
+1,273,674 files and17,759,031,853bytes. Copied scaling_inputs_v1 alongside it:
+25 files and259,307,749bytes. Remote originals remain unchanged. Both
+checksum-mode rsync dry-runs returned no differences and exit0. The earlier
+metadata-only evidence directory remains separate and untouched.
+
+Added validate_dgx_native_panel.py, binding all27 runs to the reviewed
+metadata and frozen specification. Inventories/hashes the archive before
+validation, checks exact native input membership and output semantics with
+the existing validate_scaling_outputs helper, retains per-run failures and
+rehashes afterward. Original command paths are preserved through explicit
+evidence relocation; no native files or measurements are rewritten. The
+large complete inventory remains outside Git, with a hash in the summary.
+
+Frozen executor99983f9c258dce13814315558223c1bfda5a5547 at
+benchmarks/work/publication_dgx_native_validation_v1. Submitted21794 at
+2026-09-18T11:50:52, confirmed pending2CPU/64GiB/24h/bizon/no-requeue.
+Future outputs: benchmarks/work/dgx_native_archive_inventory_20260918.json
+and benchmarks/work/dgx_native_output_validation_20260918.json.
+
+34 focused tests pass; full tests/unit:4,538 passed,9 skipped in82.15s.
+Batch syntax passes. No production native-validation result exists yet.
+Host isolation remains inconclusive and sampled RSS limitations remain;
+successful native validation will not itself admit timing comparisons.
+Full publication objective remains active.
+
 ## DGX Resource Accounting Reproduced (2026-09-18 UTC)
 
 Previous turn progressed throughfa8daeb: all27 metadata/payload/host replays
