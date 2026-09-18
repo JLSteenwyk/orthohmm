@@ -85,3 +85,13 @@ retained file identities.2CPU/64GiB/24h/bizon/no-requeue; submitted
 2026-09-18T11:01:31.55 focused tests and actual live-job rejection pass.
 Future output: benchmarks/work/qfo_sequence_search_admission_20260918.json.
 This is execution admission only; numeric hit validation is still required.
+
+Numeric conversion21791 follows afterok:21790 with frozen
+f5c23b81e3cf72573fafd5d1bb087fd2e61392d2 at
+publication_qfo_sequence_numeric_v1. Submitted2026-09-18T11:05:46,
+2CPU/192GiB/7days/bizon/no-requeue. It checks metadata directly against
+corrected FASTAs, ingests all78 outputs with duplicate-pair rejection and
+writes both all-hit and post-search top100 audited numeric checkpoints to
+benchmarks/results/qfo_sequence_numeric_v1.46 focused tests pass. No
+production checkpoint is available yet, and frozen graph replay plus
+independent checkpoint equivalence/scoring checks remain required.

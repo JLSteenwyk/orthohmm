@@ -1,5 +1,38 @@
 # Publication Progress
 
+## Corrected Search Numeric Conversion Queued (2026-09-18 UTC)
+
+Previous turn progressed throughf02c85c: full-panel search admission21790
+queued. Live21789 RUNNING5:11, HMM21706_0 RUNNING10:16:49 and final
+DGX21656_26 RUNNING51:44 revalidated; no existing runs restarted/stopped.
+
+Added corrected-only conversion requiring terminal admission, frozen
+search/admitter revisions, matching complete execution records and intact
+input files. Reconstructs exact FASTA IDs/lengths/species ownership before
+parsing hits. Reuses tested SQL ingestion and numeric checkpoint helpers;
+duplicates fail via ordered-pair primary key. SQLite temp storage is file
+backed with128MiB cache; checkpoint writing/auditing uses chunked arrays.
+Self hits and direction are retained, raw scores normalized once, all-hit
+and deterministic per-query/target-species post-search top100 variants both
+written. No endpoint-driven scale fitting or hidden all-hit truncation.
+
+46 focused tests pass in0.39s; native SQLite/checkpoint fixture verifies
+102 all-hit rows versus101 diagnostic rows including the self hit, exact
+normalization and stable tie handling. Invalid metadata, duplicate rows,
+wrong lengths, empty panels and pending-admission reads are rejected.
+Batch syntax checked. These tests do not establish QfO-scale peak memory.
+
+Frozen converterf5c23b81e3cf72573fafd5d1bb087fd2e61392d2 at
+benchmarks/work/publication_qfo_sequence_numeric_v1 submitted21791
+afterok:21790 at2026-09-18T11:05:46; scontrol confirms2CPU/192GiB/7days,
+bizon/no-requeue. Output benchmarks/results/qfo_sequence_numeric_v1.
+SQLite and incomplete artifacts are retained on failure; no partial graph
+inference is allowed. The long limit is an allowance, not predicted cost.
+
+Next: independent numeric checkpoint/source equivalence checks and frozen
+graph replay for both variants, then hit diagnostics and scoring. No
+corrected control checkpoint or accuracy result exists yet. Goal active.
+
 ## Corrected Search Panel Validation Queued (2026-09-18 UTC)
 
 Previous turn progressed through8d7941e: corrected search21789 submitted.
