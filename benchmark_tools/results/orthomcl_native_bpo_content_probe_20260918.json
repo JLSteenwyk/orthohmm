@@ -1,0 +1,46 @@
+{
+  "accuracy_admitted": false,
+  "checked_records": [
+    {
+      "bytes": 290,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_bpo_parity_probe_v2_20260918/all.blast",
+      "sha256": "f46b5b1c8bf50f493207b0bda0cc61606b7cb15300b8142a75401e2cc335a02e"
+    },
+    {
+      "bytes": 346,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_bpo_parity_probe_v2_20260918/all.fa",
+      "sha256": "ff2227d944cc687fb2405042b8c3b294062fbd2ae3140dcb3a6c64fa2f3493bc"
+    },
+    {
+      "bytes": 225,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_bpo_parity_probe_v2_20260918/native/native.bpo",
+      "sha256": "5eaa82a001703f20eaa66c4213427e1c29973836e515ab00615c5496030279cc"
+    },
+    {
+      "bytes": 6313,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_orthomcl_bpo_content.py",
+      "sha256": "4102a644b273fd1d55c6282b521f2683465455fea10de7a2d3b1ff594a315f41"
+    },
+    {
+      "bytes": 6347,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/convert_orthomcl_blast.py",
+      "sha256": "fbd7bcffa07c354fc72a052c87cbd7d2238530348a6d497be250fc7422244931"
+    }
+  ],
+  "content": {
+    "bpo_pair_records": 6,
+    "cutoff_excluded_pair_blocks": 1,
+    "input_proteins": 4,
+    "source_hsp_rows": 8,
+    "source_pair_blocks": 7
+  },
+  "limitations": [
+    "Complete source-to-BPO field verification, not terminal execution or biological validation.",
+    "Recomputes the reviewed legacy first-HSP E-value and subject-span-weighted identity semantics.",
+    "Uses the same binary floating arithmetic convention as the native-compatible converter; not a proof against shared algorithmic errors.",
+    "The independent native BioPerl fixture comparison is complementary, not a full native parse of production inputs.",
+    "Search provenance/query diagnostics, native index validation and final groups remain separate gates."
+  ],
+  "publication_ready": false,
+  "status": "bpo_content_matches_source_hsps"
+}

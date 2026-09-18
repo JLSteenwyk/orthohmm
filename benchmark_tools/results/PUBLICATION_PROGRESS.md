@@ -8436,3 +8436,24 @@ dependency-pending, HMM 21706_0 RUNNING at 6:57:30, DGX 21656_23 RUNNING at
 20:42. Next is complete BPO/source-table validation and frozen downstream
 runtime integration. Corrected results, timing admission, uncertainty and
 publication packaging remain unfinished. No unrelated work was changed.
+
+### Complete OrthoMCL BPO Content Check Added (2026-09-18)
+
+Previous turn made progress with native BPO fixture parity and index validation.
+This turn adds full source-m8/BPO record comparison, covering IDs, lengths,
+E-values, weighted identity, HSP spans, cutoff exclusions and record order.
+The retained BioPerl source confirms first-HSP significance semantics; no
+threshold or conversion behavior was changed.
+
+Both retained native and streaming fixture outputs passed the checker, each
+with eight source HSPs, seven pair blocks, one excluded block and six BPO
+records. Reports and limitations are recorded in
+`ORTHOMCL_BPO_CONTENT_AUDIT_20260918.md`. All 48 focused tests passed with the
+native parity probe enabled. This is complete-field consistency checking, not
+independent proof against shared arithmetic errors or production admission.
+
+Latest live check: HMM 21706_0 RUNNING at 7:04:46, DGX 21656_24 RUNNING at
+2:23 (25th of 27 runs), BLAST 21713 resource-pending and search validator
+21746 dependency-pending. Frozen downstream runtime and conversion/index
+orchestration remain next; corrected results, admitted timing, uncertainty
+and the final publication package remain unfinished.
