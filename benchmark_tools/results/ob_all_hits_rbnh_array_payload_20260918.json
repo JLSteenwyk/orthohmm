@@ -1,0 +1,102 @@
+{
+  "checkpoint_audit": {
+    "accuracy_evaluated": false,
+    "auditor": {
+      "bytes": 4044,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_accuracy_checkpoint.py",
+      "sha256": "b71fa9cf1d2cb954206e61179535d7e22fc39946c4de97af6fa45533f7eb9643"
+    },
+    "limitations": "Checks hashes and numeric integrity, not FASTA/source equivalence, hit completeness or duplicate ordered pairs.",
+    "manifest": {
+      "bytes": 806,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_sequence_numeric_v1/all_hits/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json",
+      "sha256": "d15f4e28d6a43c01c7178272b8849e40ca4e9c2415c1aa2ad126db69b149b2a7"
+    },
+    "schema_version": 1,
+    "status": "numeric_checkpoint_verified",
+    "summary": {
+      "gene_names_lexically_sorted": true,
+      "genes": 251378,
+      "hits": 100099147,
+      "maximum_score": 6.833333333333333,
+      "minimum_score": 0.00790138159352242,
+      "nonpositive_scores": 0,
+      "self_hits": 250980,
+      "species": 12
+    }
+  },
+  "checkpoint_files": [
+    {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_sequence_numeric_v1/all_hits/orthohmm_working_res/high_sensitivity_checkpoint/gene_names.txt",
+      "sha256": "7d00e70589c72c747464e5b6c9840c2744be93ba7752c8fabcd2222bffdca090"
+    },
+    {
+      "bytes": 1005640,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_sequence_numeric_v1/all_hits/orthohmm_working_res/high_sensitivity_checkpoint/gene_to_species.npy",
+      "sha256": "7e93ca041ba6979e4c5c3aa3d099b531f4c37dc68046ef9fe29f673af4c00d6f"
+    },
+    {
+      "bytes": 400396716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_sequence_numeric_v1/all_hits/orthohmm_working_res/high_sensitivity_checkpoint/hit_queries.npy",
+      "sha256": "496b1af82c51de023c61cacccc34b8502ffc9d15fd63a398695d5a77973ffe7e"
+    },
+    {
+      "bytes": 800793304,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_sequence_numeric_v1/all_hits/orthohmm_working_res/high_sensitivity_checkpoint/hit_scores.npy",
+      "sha256": "10d622d21e803a3f2dc4ce6581bbc71b7e01e84b095584efc6d2b768e7aa8f83"
+    },
+    {
+      "bytes": 400396716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_sequence_numeric_v1/all_hits/orthohmm_working_res/high_sensitivity_checkpoint/hit_targets.npy",
+      "sha256": "5eab3ab55fd676461b91be711aa37543a37bd09dc49c3cb7d835b5e5e1d738ba"
+    }
+  ],
+  "core": {
+    "bytes": 14046,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/accuracy.py",
+    "sha256": "1a35944ab7fea859143f599b1262aa111272787f6f735b9acc37d299427f2ad6"
+  },
+  "estimate": {
+    "eligible_nonself_finite_hits": 99848167,
+    "fixed_named_array_bytes": {
+      "best_input_scores": 798785336,
+      "best_queries": 399392668,
+      "best_scores": 24132288,
+      "best_targets": 12066144,
+      "best_targets_input": 399392668,
+      "eligible": 100099147,
+      "keys": 798785336
+    },
+    "gene_species_slots": 3016536,
+    "genes": 251378,
+    "graph_feasibility_admitted": false,
+    "hits": 100099147,
+    "input_array_logical_bytes_separate": 1602591864,
+    "named_array_payload_lower_bytes": 2532653619,
+    "named_array_payload_upper_bytes_at_this_snapshot_only": 3403835787,
+    "self_hits": 250980,
+    "snapshot_reached": true,
+    "species_slot_extent": 12,
+    "total_peak_ram_bound_available": false,
+    "winner_array_expression_bytes": "8*W + 24*K"
+  },
+  "limitations": [
+    "Array payload calculation, not measured RSS, cgroup memory, runtime or an allocation recommendation.",
+    "The upper bound covers only the named arrays at this snapshot, not the complete algorithm.",
+    "Excludes sorting temporaries, allocator overhead, gene strings, input page residency and shared libraries.",
+    "Excludes later deduplication, graph-library construction, clustering, refinement and singleton assignment.",
+    "Input logical bytes are reported separately; memory mapping does not guarantee resident memory savings.",
+    "Numerical integrity is checked, not source-search equivalence or scientific admission.",
+    "No hits are truncated and no inference settings are changed."
+  ],
+  "numpy": "2.2.6",
+  "publication_ready": false,
+  "snapshot": "build_rbnh_edges: after best_targets allocation, before best_targets[winning_keys] assignment",
+  "source": {
+    "bytes": 5086,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/estimate_rbnh_array_payload.py",
+    "sha256": "3513c7560f7392f6e75982b358b53cf4be3b16e34f5f6b1bcb8507ca1a8f1d91"
+  },
+  "status": "frozen_rbnh_named_array_payload_bound"
+}

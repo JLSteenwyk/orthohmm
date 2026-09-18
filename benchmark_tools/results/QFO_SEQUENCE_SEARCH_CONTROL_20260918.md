@@ -44,6 +44,13 @@ all78 target directories are empty. Large derived files remain untracked.
 
 ## Remaining Gates
 
+The [graph memory planning review](QFO_GRAPH_MEMORY_PLANNING_20260918.md)
+documents full-length allocations in the frozen reciprocal-hit implementation
+and a tested, checkpoint-bound array-payload diagnostic. Its completed
+OrthoBench calculations are not QfO peak-RAM predictions. Apply it only to
+admitted corrected checkpoints before selecting graph-replay resources;
+downstream graph/clustering costs remain outside its one-snapshot bounds.
+
 - Freeze a corrected-only runner with pre/post checks and full-panel
   success accounting; retain failure logs and forbid partial inference.
 - Measure database and search phases separately. Shared-workstation cost

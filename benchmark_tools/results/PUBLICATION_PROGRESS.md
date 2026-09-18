@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Sequence-Control Graph Allocation Review (2026-09-18 UTC)
+
+Previous turn progressed through074483a with the relocated figure bundle.
+Live corrected searches revalidated:21706_0 RUNNING11:36:55 and21789
+RUNNING1:25:17;21713 pending resources;21790-21793 dependency-pending.
+Later DIAMOND execution log:56/78targets complete_pending_numeric_validation,
+27,688,723,204 recorded hit-table bytes, target56 active. Not final admission.
+
+Reviewed frozen reciprocal-hit and singleton graph implementations. Checkpoint
+memory mapping does not avoid full-length copies, masks and integer-key
+arrays. Added estimate_rbnh_array_payload.py with exact frozen-core SHA and
+checkpoint hashes, numeric validation, post-audit identity comparison and
+final input rechecks. Bounds one specified named-array snapshot only; reports
+input logical bytes separately, with no total-RAM or feasibility claim.
+27 focused tests pass in0.15s, including traced native allocations in eight
+randomized tied-score cases and corruption/invalid-input rejection.
+
+Applied to both complete OrthoBench sequence-control checkpoints. All-hit
+snapshot payload2,532,653,619-3,403,835,787bytes; top100
+1,254,966,519-1,717,288,815bytes. Separate input logical payloads
+1,602,591,864 and784,872,120bytes. Reports retained with exact provenance.
+No graph was rerun. Added QFO_GRAPH_MEMORY_PLANNING_20260918.md and linked
+from the corrected sequence-control protocol. QfO counts must be admitted
+before this diagnostic is applied; later graph costs still require review.
+No defaults, hit caps, queued jobs or scientific endpoints were changed.
+Full publication goal remains active.
+
 ## Relocatable Direct Figure Evidence (2026-09-18 UTC)
 
 Previous turn progressed throughca17160 with frozen-helper recovery.
