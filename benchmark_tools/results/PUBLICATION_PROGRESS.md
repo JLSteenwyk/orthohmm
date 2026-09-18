@@ -8369,3 +8369,24 @@ RUNNING at 6:38:56, and DGX timing 21656_23 was RUNNING at 2:08 (24th of 27
 runs). No production search output was inspected while incomplete. Corrected
 comparisons, appropriate uncertainty, admitted timing and publication packaging
 remain unfinished. No unrelated jobs or dirty sample outputs were altered.
+
+### OrthoMCL Formatted Database Audit Added (2026-09-18)
+
+Previous turn made progress by adding the streaming BLAST table/query auditor.
+This turn adds frozen-runtime database extraction and exact ordinal/header/
+sequence comparison, preserving differences and failed extraction evidence.
+It does not change the queued search or its native formatting options.
+
+Two retained native probes verified the component. Three control records
+matched exactly (196 residues); a separate alphabet probe exposed native
+uppercasing and terminal-stop removal (37 input versus 36 extracted residues,
+two changed records). These are fixture observations, not claims about the
+corrected production data. See `ORTHOMCL_DATABASE_AUDIT_20260918.md` and the
+two saved JSON reports. All 61 focused tests passed with native smoke tests
+enabled. Database/search/accuracy admission remains false in these reports.
+
+The live check found corrected BLAST 21713 resource-pending, HMM 21706_0
+RUNNING at 6:44:45 and DGX 21656_23 RUNNING at 7:57. Next is integration of
+terminal execution provenance, database extraction and complete hit-table
+auditing before BPO conversion. Corrected comparisons, admitted timing,
+remaining uncertainty and final publication packaging remain unfinished.

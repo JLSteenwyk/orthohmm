@@ -1,0 +1,108 @@
+{
+  "accuracy_admitted": false,
+  "checked_records": [
+    {
+      "bytes": 230,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_table_smoke_20260918/test_installed_legacy_engine_s1/all.fa",
+      "sha256": "ecd939dd08e31d5a845a52573f305314e2ee89f9e597995c0e13fff780bad28b"
+    },
+    {
+      "bytes": 17518,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_legacy_blast_runtime_20260918.json",
+      "sha256": "9ce46b5329f34384b03980b62fbfe9522f244dc227ce6506071ce7000b154e42"
+    },
+    {
+      "bytes": 3991083,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/bin/fastacmd",
+      "sha256": "2f3e1ab0a54b2d9472fa4ffcb9ac4943b69705766870e729766466422b9cfd3e"
+    },
+    {
+      "bytes": 214,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_table_smoke_20260918/test_installed_legacy_engine_s1/all.fa.phr",
+      "sha256": "feec6cfe32da0827fa15cd1249117e8a0e4bab0b61a595def9f2286df3ba300a"
+    },
+    {
+      "bytes": 232,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_table_smoke_20260918/test_installed_legacy_engine_s1/all.fa.pin",
+      "sha256": "d63ce7083dc8c677d717c14f9b6b924cba89ecb0e42469e329410771ea11f3ab"
+    },
+    {
+      "bytes": 200,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_table_smoke_20260918/test_installed_legacy_engine_s1/all.fa.psq",
+      "sha256": "24c526eff21796b4ea1c1c1d54d9edef2aeb62e36022bb7da8361f565b4a4663"
+    },
+    {
+      "bytes": 6706,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_orthomcl_database.py",
+      "sha256": "d29ccf7491f1fe24e8ee1477fbece11bef4af1eea3ade347bcfcc9ad609ce0b4"
+    },
+    {
+      "bytes": 5777,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_qfo_input_sequences.py",
+      "sha256": "f3c4be2b29a323ea8262a3892d5aa2c87ae1295e6f5172bd684ff9281c239588"
+    },
+    {
+      "bytes": 6288,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_qfo_corrected_blast.py",
+      "sha256": "760eb972977d020592eb528b04bee3de997e14fd7a52ef5d4d4bce6f67d6c93e"
+    },
+    {
+      "bytes": 4083,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/snapshot_runtime_trees.py",
+      "sha256": "ab0008651e75ebadc1be3c87503f09bffd9e5be87f2e6b0c3eec49e552d9bd4c"
+    }
+  ],
+  "command": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/bin/fastacmd",
+    "-d",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_table_smoke_20260918/test_installed_legacy_engine_s1/all.fa",
+    "-p",
+    "T",
+    "-D",
+    "1"
+  ],
+  "content": {
+    "database_residues": 196,
+    "database_sequences": 3,
+    "differences": [],
+    "exact_sequence_matches": 3,
+    "exact_sequence_parity": true,
+    "header_order_verified": true,
+    "input_residues": 196,
+    "input_sequences": 3,
+    "sequence_difference_count": 0
+  },
+  "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_database_smoke_20260918",
+  "database_admitted": false,
+  "environment": {
+    "HOME": "/home/bizon",
+    "LANG": "C",
+    "LC_ALL": "C",
+    "LOGNAME": "bizon",
+    "PATH": "/usr/bin:/bin",
+    "USER": "bizon"
+  },
+  "exit_code": 0,
+  "limitations": [
+    "Extraction checks current database bytes, not their use by a particular BLAST job.",
+    "Terminal search provenance and before/after database identity must be bound separately.",
+    "Sequence differences are retained without case conversion or residue normalization.",
+    "Only the frozen default, unsplit, unparsed-ID protein database layout is supported.",
+    "Extraction success does not admit search completeness, downstream BPO/clustering or accuracy."
+  ],
+  "outputs": [
+    {
+      "bytes": 280,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_database_smoke_20260918/database.fasta",
+      "sha256": "389ac28d407d9725b10b281a320c5d6b6298c7e86a9a584506fb4cc2daada197"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_database_smoke_20260918/fastacmd.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "publication_ready": false,
+  "search_admitted": false,
+  "status": "database_exact_sequence_parity_verified"
+}
