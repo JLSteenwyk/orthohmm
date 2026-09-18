@@ -1,0 +1,38 @@
+{
+  "display_conversion": "raw differences and bounds multiplied by 100",
+  "endpoints": 27,
+  "matplotlib": "3.10.8",
+  "metric_panels": [
+    "F1",
+    "PPV",
+    "TPR"
+  ],
+  "numpy": "2.2.6",
+  "outputs": [
+    {
+      "bytes": 277223,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures/swiss_domain_strata_20260917/swiss_domain_strata.png",
+      "sha256": "752443cc1c280c0b08a18b5d1e84f883486539eeb2b8410511c10da677adcb67"
+    },
+    {
+      "bytes": 34761,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures/swiss_domain_strata_20260917/swiss_domain_strata.pdf",
+      "sha256": "7bce48ffe81c893166ad1a3dec5e79ffbd385f9bb5bcffcffe712238f9095ec2"
+    },
+    {
+      "bytes": 161388,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures/swiss_domain_strata_20260917/swiss_domain_strata.svg",
+      "sha256": "2cd18ed1cb9f3a9f8f6a98cdc0a41697da25b38a8c8280be4193954101988d8c"
+    }
+  ],
+  "plotter": {
+    "bytes": 6245,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_swiss_domain_strata.py",
+    "sha256": "28f5648bab56fd7b694084846320b112ecdf744c1bea0245f160d7bf056e4213"
+  },
+  "results": {
+    "bytes": 29682,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_domain_strata_results_20260917.json",
+    "sha256": "229269f3db0bfb0e99893de00a1c2467285a07d7ca148c4854b7661ca13a5891"
+  }
+}

@@ -867,6 +867,10 @@ and repeated hit instances are annotation features, not independent fragment,
 domain-loss or ancestral duplication labels. No bin or threshold was changed
 after observing stratified outcomes, and no method was retuned.
 [All strata and contrasts](SWISS_DOMAIN_STRATA_RESULTS_20260917.md).
+The [domain-stratified figure](figures/swiss_domain_strata_20260917/swiss_domain_strata.pdf)
+shows all 27 endpoints, including the nine neutral adjusted interactions;
+its [caption and reproduction note](SWISS_DOMAIN_STRATA_FIGURE_20260917.md)
+documents the fixed source and validation.
 
 ### VGNC Prediction-Database Audit
 

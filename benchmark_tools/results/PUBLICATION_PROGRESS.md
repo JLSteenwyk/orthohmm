@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Domain-Stratified Figure Completed (2026-09-17)
+
+Previous turn was a verified wait: DGX task21656_7 was confirmed RUNNING
+via Slurm and SSH connectivity was verified. Re-read the full publication
+objective and verified previous milestone41929ed is on remote main.
+Added a source-hash-pinned figure for all27 domain-stratified SwissTrees
+endpoints, including all nine interactions. Generated PDF/PNG/SVG and a
+hash manifest in the patched Swiss-analysis environment; visually inspected
+the PNG. Seven new tests verify27points/54intervals, layout bounds and invalid
+input rejection;17combined tests pass. Linked the figure into the manuscript.
+See `SWISS_DOMAIN_STRATA_FIGURE_20260917.md` for caption and reproduction.
+
+All nine adjusted interaction intervals include zero; the figure retains this
+limitation and does not claim a causal domain effect or pure reconciliation
+effect. No method or analysis was retuned. Fresh scheduler checks confirmed
+QfO reconciliation21671_0, scoring21681 and DGX21656_7 still running;
+dependent tasks remain queued. No restarts or heavy DGX reads were performed.
+Eight-cell empirical counts/intervals, full timing admission, remaining error
+analyses and the broader publication package are still incomplete.
+
 ## Frozen SwissTrees Factorial Statistics Implemented (2026-09-17)
 
 Previous turn progressed independent fresh-score admission and queued21683/4,
