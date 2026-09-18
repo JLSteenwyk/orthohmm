@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Corrected Sequence Graph Plan Builder (2026-09-18 UTC)
+
+Previous turn progressed throughf091d6e with verified QfO service bylines.
+Reread the full objective; scheduler confirms21706_0 RUNNING13:18:00 and
+21791 RUNNING50:07, with21792/21798 pending dependencies.
+
+Inspected the existing graph runner and identified OrthoBench-specific
+admission paths/counts and absence of the newer checked QfO clustering path.
+Added prepare_qfo_sequence_graph.py: both prespecified variants, exact payload
+hash, terminal prerequisite accounting, frozen runtime/source, checkpoint and
+gene-order identities, explicit per-variant memory allocations and unchanged
+P0C0R0 scientific settings. No actual plan is generated before prerequisites.
+44 focused tests and CLI smoke check pass. Code reuses the pure native-command
+helper only, not the old OrthoBench-specific execution entry point.
+
+Next required implementation: corrected sequence-specific checked clustering
+executor and independent native-output admission; the existing corrected-HMM
+worker requires HMM provenance and must not be given fabricated HMM evidence.
+After21798 completes, review actual memory needs, freeze plans/executors and
+submit both variants. No graph job or new score is claimed here. The full
+publication objective remains incomplete and active.
+
 ## QfO Service Byline Correction Completed (2026-09-18 UTC)
 
 Previous turn made progress through7fc371f by queuing the source-admitted

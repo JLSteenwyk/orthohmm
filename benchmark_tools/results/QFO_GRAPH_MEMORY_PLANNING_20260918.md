@@ -83,7 +83,36 @@ failure. No completed QfO payload calculation is claimed at submission.
 missing variant, path/count disagreements, false feasibility admission and
 failed scheduler rejection before output creation. Batch shell syntax passes.
 
-### Earlier Planning Observation
+### QfO-Specific Graph Plan Builder
+
+`prepare_qfo_sequence_graph.py` prepares both graph commands after the payload
+job completes and its results are reviewed. It requires an explicitly supplied
+payload-report SHA-256, successful payload/admission accounting, the frozen
+planner revision, unchanged recorded source evidence, and separate integer
+memory allocations for all-hit and top100. It refuses an allocation that
+cannot hold even the modeled lower snapshot bound; passing this necessary
+condition is not proof that the complete graph fits.
+
+Each variant binds the admitted checkpoint manifest and gene-order file,
+984,137 genes/78 species,32CPUs,BLOSUM62,CPM0.1,Leiden seed4, profile-off
+replay, and two expected clustering calls (`initial`, `multipass`). The
+runtime is checked against the frozen core/launcher. Candidate expansion
+and reconciliation remain off. It writes only a command plan, not predictions.
+
+The old `run_sequence_graph_control.py` entry point must not be repurposed
+unchanged: its admission paths, scheduler IDs and count validation are specific
+to OrthoBench, and it predates the checked QfO clustering constructor path.
+Only its pure `graph_command` helper is reused. The new plan explicitly
+requires a separately frozen checked-clustering executor and prohibits direct
+execution of its native command. That executor and independent output
+admission are still to be implemented for the corrected sequence control.
+
+44 focused tests pass (16 new plan-validation/command tests,8 payload-wrapper
+tests and20 existing estimator tests); the CLI help smoke check passes.
+No actual command plan, allocation decision, graph submission or accuracy
+result has been produced while the prerequisite payload report is pending.
+
+### Historical Search Progress
 
 As of the recorded live check, DIAMOND job21789 remained running; its
 incremental execution log recorded56 completed target searches out of78,
