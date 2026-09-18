@@ -1085,6 +1085,13 @@ family resampling, or every publication competitor.
 
 ## Data And Code Availability
 
+A [primary-source data-rights register](PUBLICATION_DATA_RIGHTS_20260918.md)
+distinguishes QfO deposit, UniProt, WGD, BUSCO, OrthoBench and YGOB terms.
+In particular, BUSCO software and dataset licenses differ. OrthoBench/YGOB
+redistribution and exact Three Kingdoms input notices remain unresolved.
+No repository-wide license or local archive is treated as blanket clearance
+for acquired material; final file-level and software-notice review is pending.
+
 A [relocatable figure-evidence bundle](PUBLICATION_FIGURE_BUNDLE_20260918.md)
 preserves all 16 retained panels, their 55 outputs, original manifests and
 directly recorded dependencies from committed source revisions. Its standalone

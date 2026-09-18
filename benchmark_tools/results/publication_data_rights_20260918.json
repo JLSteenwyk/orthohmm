@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-09-18",
+  "status": "partial_primary_source_rights_review",
+  "publication_ready": false,
+  "blanket_redistribution_clearance": false,
+  "evidence_root": "benchmarks/work/publication_rights_evidence_20260918",
+  "sources": {
+    "qfo_deposit": {
+      "url": "https://zenodo.org/api/records/15087752",
+      "file": "qfo_zenodo.json",
+      "bytes": 10303,
+      "sha256": "6eee9d887cbb5508e703e21420cd26964b5bb4284ae3eec2b0efa9f3d7e8ce33"
+    },
+    "wgd_deposit": {
+      "url": "https://zenodo.org/api/records/3975054",
+      "file": "wgd_zenodo.json",
+      "bytes": 8675,
+      "sha256": "9cce5cae0b0b335eae0ed913919eabc794231379bdc7f81b87b1d155c596d73d"
+    },
+    "uniprot_policy": {
+      "url": "https://rest.uniprot.org/help/license",
+      "file": "uniprot_license.json",
+      "bytes": 914,
+      "sha256": "5960c22bf17f22286504b927dbb3ca41713c571ed91a10fe7a88ddd964b416ce"
+    },
+    "busco_policy": {
+      "url": "https://busco.ezlab.org/",
+      "file": "busco.html",
+      "bytes": 25229,
+      "sha256": "e6472dff9fad0e9386bb2d773d5deb25e4015a6a41591d39528265ac6e8dadfa"
+    },
+    "orthobench_tree": {
+      "url": "https://api.github.com/repos/davidemms/Open_Orthobench/git/trees/master?recursive=1",
+      "file": "orthobench_tree.json",
+      "bytes": 755630,
+      "sha256": "83a5e7aeb311a5a794e1d0161c866f2556d77b94414302fa92c66d3970b165ba",
+      "git_tree_sha": "872d6f30592ab5ff837224db16a514b3f2bb916a",
+      "truncated": false,
+      "entries": 2133,
+      "license_named_paths": []
+    },
+    "orthobench_readme": {
+      "url": "https://raw.githubusercontent.com/davidemms/Open_Orthobench/master/README.md",
+      "file": "orthobench_README.md",
+      "bytes": 3770,
+      "sha256": "ecbee0dd5a4851103a45b6eeba534d3241ef44e1f9d3c9b180b8decb26e3c798",
+      "git_blob_sha": "39e9dee8c6cfac3d40e1f970439d53d1f99df5d4"
+    },
+    "orthobench_scorer": {
+      "url": "https://raw.githubusercontent.com/davidemms/Open_Orthobench/master/BENCHMARKS/benchmark.py",
+      "file": "orthobench_benchmark.py",
+      "bytes": 10917,
+      "sha256": "81eb1e660c17819549b07eea8a54b4fb42a89180cafeb4569d92195d282f5e6f",
+      "git_blob_sha": "92d7cfa97c30389bf8e9b5431fe8a684733fe422"
+    },
+    "ygob_info": {
+      "url": "http://ygob.ucd.ie/browser/info.html",
+      "file": "ygob_info.html",
+      "bytes": 13030,
+      "sha256": "5462d5994c0f8b8b477a81588b13d58429e1e21b5f874a4219f04437b50a2db2"
+    },
+    "ygob_readme": {
+      "url": "http://ygob.ucd.ie/data/v7-Aug2012/README",
+      "file": "ygob_README",
+      "bytes": 4958,
+      "sha256": "162fb37cf0f7a50b44fae47f0d2c2f9b126b728660b65d9bee8d3175af8317f6"
+    }
+  },
+  "datasets": [
+    {
+      "id": "qfo_reference_2020_2",
+      "declared_license": "CC-BY-4.0",
+      "sources": ["qfo_deposit"],
+      "license_scope": "Publisher declaration for the 25 files in Zenodo record 15087752.",
+      "review_status": "declared_license_identified",
+      "archive_action": "Review exact selected deposit files and preserve attribution, license link and transformation notices.",
+      "unresolved": ["Not a blanket license for separately acquired proteomes or tools.", "Original TreeFam family trees and mapping remain missing; their licensing and identity are not established by the pooled-reference deposit."]
+    },
+    {
+      "id": "uniprot_qfo_proteomes",
+      "declared_license": "CC-BY-4.0",
+      "sources": ["uniprot_policy"],
+      "license_scope": "Current UniProt policy for copyrightable database content; policy last modified 2024-12-18.",
+      "review_status": "current_policy_identified_historical_file_review_pending",
+      "archive_action": "Retain release-specific acquisition manifest; verify each selected original/corrected archive against its upstream source and notices before bundling.",
+      "unresolved": ["Current policy observation alone does not authenticate all historical file-level terms.", "Provider notes possible other rights; no unrestricted-rights claim."]
+    },
+    {
+      "id": "orthobench_revisited",
+      "declared_license": null,
+      "sources": ["orthobench_tree", "orthobench_readme", "orthobench_scorer"],
+      "license_scope": "No explicit redistribution license found in the reviewed README/scorer or license-named tree paths.",
+      "review_status": "unresolved",
+      "archive_action": "Do not newly redistribute raw inputs, reference files or the upstream scorer in the publication bundle until terms are clarified. Preserve acquisition links and hashes.",
+      "unresolved": ["Check release-specific notices and obtain maintainer clarification for data and scorer separately.", "Public download instructions and article citation are not treated as a blanket redistribution grant."]
+    },
+    {
+      "id": "ygob_v7",
+      "declared_license": null,
+      "sources": ["ygob_info", "ygob_readme"],
+      "license_scope": "Reviewed maintainer information page and v7 README; citation request and copyright notice, no explicit redistribution grant found.",
+      "review_status": "unresolved",
+      "archive_action": "Keep raw YGOB snapshot out of a new public bundle pending permission; retain acquisition URLs, checksums and local transformations.",
+      "unresolved": ["Clarify terms for sequences, pillars and redistributed derived reference material.", "Evidence was retrieved over HTTP; transport was not authenticated by TLS."]
+    },
+    {
+      "id": "wgd_kuzmin_2020",
+      "declared_license": "CC0-1.0",
+      "sources": ["wgd_deposit"],
+      "license_scope": "Dataset declaration cc-zero in Zenodo record 3975054, DOI 10.5061/dryad.g79cnp5m9.",
+      "review_status": "declared_license_identified",
+      "archive_action": "Retain TableS7 identity, dataset DOI and study citation when packaging the prespecified WGD reference.",
+      "unresolved": ["Does not license separately acquired YGOB sequences, the article PDF or other resources."]
+    },
+    {
+      "id": "busco_lineage_data",
+      "declared_license": "CC-BY-ND-4.0",
+      "sources": ["busco_policy"],
+      "license_scope": "Current BUSCO site distinguishes dataset CC BY-ND 4.0 from software MIT.",
+      "review_status": "current_policy_identified_exact_lineage_review_pending",
+      "archive_action": "Prefer upstream acquisition plus exact checksums; preserve attribution. Review modified or extracted reference-material redistribution before adding it to a public archive.",
+      "unresolved": ["Bind terms to the exact retained lineage release and corresponding citation.", "This register does not classify every numerical analysis output as adapted licensed material."]
+    },
+    {
+      "id": "three_kingdoms_input_proteomes",
+      "declared_license": null,
+      "sources": [],
+      "license_scope": "BUSCO dataset terms do not establish rights for input proteomes.",
+      "review_status": "file_level_source_and_terms_review_pending",
+      "archive_action": "Trace every retained proteome to its release-specific provider and notices before raw-file redistribution.",
+      "unresolved": ["This partial review has not cleared the Three Kingdoms input proteomes."]
+    }
+  ],
+  "limitations": [
+    "Source-policy inventory and conservative packaging decisions, not a legal opinion or completed clearance.",
+    "Current pages are not proof of every historical release's terms.",
+    "Unreviewed inference binaries, containers, scoring installations and transitive dependencies require a separate software-notice inventory.",
+    "No permissions request, support submission or external archive deposit was sent.",
+    "No existing user files or scientific results were removed or changed."
+  ]
+}

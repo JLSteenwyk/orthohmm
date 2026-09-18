@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Primary-Source Data Rights Register (2026-09-18 UTC)
+
+Previous turn progressed through38720cb with frozen graph array diagnostics.
+Live scheduler revalidated21706_0 RUNNING11:44:30 and21789 RUNNING1:32:52;
+21713 pending resources and21790-21793 dependency-pending. No job changed.
+
+Retrieved nine primary-source metadata/page/code snapshots for archive-rights
+review:833,426bytes, all SHA-256/size checks pass. QfO deposit declares
+CC-BY-4.0; WGD deposit declares cc-zero; current UniProt policy declares
+CC-BY-4.0 for copyrightable database content. BUSCO explicitly distinguishes
+software MIT from dataset CC-BY-ND-4.0. These observations are not blanket
+clearance or proof of every historical release's notices.
+
+OrthoBench recursive tree872d6f30592ab5ff837224db16a514b3f2bb916a is complete
+with2133entries and no license/licence/copying/copyright-named paths. Downloaded
+README and scorer match tree-recorded blob identities; no explicit grant found
+in those reviewed contents. YGOB information page and v7README likewise yielded
+no explicit redistribution grant; HTTP transport limitation retained. Neither
+bounded search proves permission unavailable elsewhere.
+
+Added publication_data_rights_20260918.json:seven material categories with
+source provenance, declared scope, packaging actions and unresolved questions.
+Added PUBLICATION_DATA_RIGHTS_20260918.md and manuscript availability note.
+Verified every snapshot hash/size, parsed deposit license fields, complete tree
+inventory, unique category IDs and valid source references. No inference code
+changed; no scientific tests were required for this documentation/data review.
+No raw dataset/webpage/upstream scorer newly committed, no permissions request
+sent, no public deposition. File-level clearance, software notices, corrected
+QfO results and full publication package remain incomplete; goal stays active.
+
 ## Sequence-Control Graph Allocation Review (2026-09-18 UTC)
 
 Previous turn progressed through074483a with the relocated figure bundle.
