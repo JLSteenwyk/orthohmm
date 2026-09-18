@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Selected Machine-Readable Bibliography (2026-09-18 UTC)
+
+The preceding source-search follow-up was no progress: it confirmed retained
+downloads without recovering original TreeFam inputs. Re-read the full goal
+and verified scheduler handles before continuing. Added a 14-reference
+Crossref CSL export with checksummed source snapshots, exact DOI/year
+selection, complete deposited author lists, distinct correction/preprint
+records, and article identifiers separate from pagination. Sixteen focused
+tests pass; offline replay yields byte-identical CSL output. See
+`PUBLICATION_CITATION_EXPORT_20260918.md` for reproduction and limitations.
+Dependency/resource bibliography, author-metadata discrepancies, journal
+rendering, raw-data licensing and the final archive remain unfinished.
+
+Scheduler checks: DGX 21656_9 completed 0:0 in 13:56; task10 was running.
+QfO score21697 remained running at14:00, validator21698 pending;
+corrected archive21687 running at1:21:28, audits21688/21689 dependent.
+Reconciliation21671_1 was confirmed running at1:49:04, with the remaining
+native-admission/pair-conversion dependencies preserved. No scientific
+jobs restarted, accuracy claims changed or timing results admitted here.
+Next: inspect original/corrected QfO job outputs as they finish, advance
+remaining factorial assessments, complete DGX resource admission, and
+finish unresolved publication evidence and archival requirements.
+
 ## First R-On QfO Factorial Cell Now Scoring (2026-09-18 UTC)
 
 After the task-level scheduling change in 830525e, conversion 21675_1
