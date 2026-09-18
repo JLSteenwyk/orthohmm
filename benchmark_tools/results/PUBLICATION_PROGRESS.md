@@ -8241,3 +8241,24 @@ check). These are scheduler observations, not admitted performance measurements.
 Corrected HMM 21706_0 remains RUNNING at 5:55:29. FastOMA 21740 is pending its
 dependency. No unrelated jobs were altered. Corrected comparisons, uncertainty,
 timing admission and the final publication package remain unfinished.
+
+### Historical FastOMA XML And Native Pair Scope Verified (2026-09-18)
+
+Previous turn made progress by freezing and queueing corrected FastOMA inference.
+This turn adds streaming native OrthoXML identifier/membership validation and
+checks the complete historical outputs. All 78 species match input ownership
+and taxonomy; 967,184 proteins are declared, 588,873 referenced in 55,486 root
+HOGs, and 584,445 represented in native pairs. The root table matches exactly,
+and every one of 15,320,615 native pair rows is within its XML root-HOG scope.
+The 9,320 inputs not declared and 378,311 declared proteins not referenced in
+HOGs are reported, not silently counted as assigned or attributed to an untested
+cause. All 68 focused tests and the full historical-data audit passed.
+
+Evidence and limitations are in `FASTOMA_ORTHOXML_AUDIT_20260918.md`; the
+manuscript now includes native coverage separately from reference-relative
+recall. No historical predictions or scores changed. Native task-chain
+admission for the corrected FastOMA run and subsequent scoring remain open.
+Latest queue check: corrected HMM 21706_0 RUNNING at 6:02:15; DGX 21656_22
+RUNNING at 9:22. Corrected FastOMA remains dependency-pending. Corrected
+all-method results, uncertainty, timing admission and final packaging remain
+unfinished; no unrelated jobs were altered.

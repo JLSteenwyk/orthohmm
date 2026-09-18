@@ -94,6 +94,15 @@ integrity, not biological correctness or freedom from mapping-related bias,
 and does not substitute for the corrected-release rerun.
 [Conversion audit](FASTOMA_DISTINCT_PAIR_AUDIT_20260918.md).
 
+The historical FastOMA OrthoXML declared 967,184 of the 976,504 input
+proteins. Its 55,486 root HOGs referenced 588,873 proteins, of which 584,445
+appeared in native pairs. The root-HOG table exactly matched XML membership,
+and all native pairs joined known cross-species proteins within one root HOG.
+These are native-output coverage counts, not reference-relative recall.
+Identifier consistency does not establish why proteins were omitted or whether
+each predicted relation is biologically correct.
+[OrthoXML audit](FASTOMA_ORTHOXML_AUDIT_20260918.md).
+
 ### Development-Exposed Benchmarks
 
 QfO and OrthoBench influenced development and are therefore not independent
