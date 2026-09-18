@@ -1,5 +1,22 @@
 # Publication Progress
 
+## SwissTrees Missing Inputs Not Resolved By Frozen Aliases (2026-09-17)
+
+Previous turn made progress by adding/pushing sequence inventoryc82a7fa.
+Re-read full objective; confirmed21671_1,21682 and DGX21656_8 live.
+Added/executed `resolve_swiss_sequence_aliases.py`:549exact unique matches,
+zero aliases, zero ambiguous matches and14numeric reference IDs absent from
+all frozen input accessions. All549original descriptors remain unchanged.
+All14missing identities occur in the retained Xenopus tropicalis annotation
+file; source/resource mismatch cause is not yet established.
+
+Report `swiss_sequence_alias_audit_20260917.json` and scope note
+`SWISS_SEQUENCE_ALIAS_AUDIT_20260917.md` preserve the result. No reference
+genes, denominators or frozen inputs were changed. Next: quantify affected
+reference relations and verify historical comparator input parity before
+claiming a shared ceiling or impact on tool differences. Complete sequence
+stratification and independent fragment annotations remain outstanding.
+
 ## SwissTrees Sequence Descriptor Coverage Inventoried (2026-09-17)
 
 Previous turn made progress: validated and pushed first QfO native
