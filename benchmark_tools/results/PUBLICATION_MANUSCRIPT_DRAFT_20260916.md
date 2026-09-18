@@ -977,8 +977,16 @@ its recorded aggregate-RSS maximum. Error-free sampled maxima in other
 runs do not exclude missed between-sample peaks. Consequently, sampled
 aggregate RSS does not support an unqualified cross-method memory ranking.
 Cgroup memory and GNU-time maximum process RSS retain their distinct scopes.
-Native-output validation is still running; this panel does not yet support
-a controlled-workload speed claim.
+All 27 native outputs subsequently passed input-universe, completion and
+method-specific output checks. The complete archived inventory comprises
+1,273,699 files and 18,018,339,602 bytes, including frozen inputs. Per-run
+observations and three-repeat medians/ranges are retained as descriptive
+results, not controlled-workload speed comparisons. No fastest-repeat
+selection, speedup ratios, timing-based exclusions or automatic replacements
+were applied. These limitations remain despite successful output validation.
+[Native validation](dgx_native_output_validation_20260918.json),
+[descriptive resource observations](dgx_descriptive_resources_20260918.json),
+[all 27 runs](dgx_descriptive_resource_runs_20260918.csv).
 [DGX observation-gap audit](dgx_observation_gaps_20260918.json),
 [post-run validation status](DGX_POSTRUN_ADMISSION_20260918.md).
 

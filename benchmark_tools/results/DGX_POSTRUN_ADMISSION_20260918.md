@@ -1,5 +1,27 @@
 # DGX Post-Run Admission
 
+## Current Disposition
+
+Job21794 completed0:0 in8:57 with2CPUs/64GiB onbizon. All27 native output
+validations passed against the frozen inputs and reviewed metadata. The full
+archive inventory contains1,273,699 files and18,018,339,602bytes and was
+hashed before/after validation. See dgx_native_output_validation_20260918.json.
+
+Retain every run as descriptive resource evidence, with individual values
+and three-repeat medians/ranges in dgx_descriptive_resources_20260918.json
+and dgx_descriptive_resource_runs_20260918.csv. These are not controlled
+comparison admissions. Do not report speedup ratios, a universal scaling law,
+or an unqualified sampled-RSS ranking. Host uncertainty and memory-sampling
+asymmetry remain visible. Native validity is not accuracy validation.
+
+No native-output failure requires a replacement. No run is discarded or
+replaced based on its relative speed. A repeat using the identical observer
+would not by itself resolve its missing short-lived-process evidence.
+Therefore do not automatically rerun this full panel. Any future primary
+controlled-speed experiment requires a separately frozen execution/observation
+plan and inclusion rules before comparing new timings. Existing expensive
+results and all uncertainty flags remain preserved, not upgraded or hidden.
+
 ## Current Evidence
 
 Final-task update: the controller subsequently reported21656_26 COMPLETED,

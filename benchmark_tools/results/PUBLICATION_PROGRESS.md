@@ -1,5 +1,31 @@
 # Publication Progress
 
+## DGX Native Outputs Validated And Descriptive Export (2026-09-18 UTC)
+
+Previous turn progressed througha576921 with observation-gap taxonomy.
+Revalidated21794 first RUNNING6:11 and later authoritatively COMPLETED0:0,
+elapsed8:57,2CPU/64GiB/bizon. All27 native validations passed, with no
+per-run failures. Complete pre/post archive inventory:1,273,699 files,
+18,018,339,602bytes. Native report retained in
+benchmark_tools/results/dgx_native_output_validation_20260918.json.
+
+Added export_dgx_descriptive_resources.py requiring completed validation,
+bound native/host/resource identities, frozen plan and current evidence
+hashes. Retains every run and exports nine three-repeat medians/ranges.
+Failed native cells would retain observations but have null aggregate metrics,
+avoiding survivor-only averages. No speedup ratios, fastest-repeat selection
+or fitted scaling laws.43 focused tests pass in0.34s. Actual export succeeded:
+dgx_descriptive_resources_20260918.json and
+dgx_descriptive_resource_runs_20260918.csv.
+
+Updated manuscript and post-run disposition: all27 runs retained as
+descriptive resource evidence, scientific controlled-comparison admissions0.
+No native failure requires replacement, and no timing-based exclusions or
+automatic reruns were chosen. Repeating the same observer would not itself
+resolve missing transient process evidence. Any future primary controlled
+speed experiment needs a separate prospectively frozen plan. Existing host
+and sampled-RSS limitations remain explicit; publication goal stays active.
+
 ## DGX Observation Gaps Characterized (2026-09-18 UTC)
 
 Previous turn progressed through084c974: complete archive and native audit
