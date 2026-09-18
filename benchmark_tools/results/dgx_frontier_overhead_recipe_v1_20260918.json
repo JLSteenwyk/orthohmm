@@ -1,0 +1,305 @@
+{
+  "exclusions": [
+    "__pycache__",
+    ".git",
+    "*.pyc",
+    "*.pyo"
+  ],
+  "external_symlinks": [],
+  "limitations": [
+    "Explicit tree identity, not a hermetic operating-system or loader snapshot.",
+    "Directory symlinks are recorded but not traversed; external targets require separate review.",
+    "Python bytecode caches are excluded; execution must isolate cache lookup to a fresh prefix and disable writes.",
+    "Before/after equality cannot rule out a temporary change during execution."
+  ],
+  "records": [
+    {
+      "kind": "directory",
+      "mode": 509,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1"
+    },
+    {
+      "kind": "directory",
+      "mode": 509,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools"
+    },
+    {
+      "bytes": 2489,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/DGX_HIERARCHY_NATIVE_PROTOCOL_20260918.md",
+      "sha256": "317eb1b4c13b6a35539471cad7cf55ee39242428c76401a433fffd5cd3791173"
+    },
+    {
+      "bytes": 1807,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/DGX_HIERARCHY_QUIET_PROTOCOL_20260918.md",
+      "sha256": "e7094103caeb06b4c3adc1ec6268e15687fcc2b810f649eafee9257babe61166"
+    },
+    {
+      "bytes": 3282,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/DGX_INTERVAL_NATIVE_PROTOCOL_20260918.md",
+      "sha256": "7cba96519a49f2ff77239cd795e2a2b0a52702a7ac4e54d6f179678ba972ff85"
+    },
+    {
+      "bytes": 1364,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/DGX_INTERVAL_NATIVE_RECIPE_FIX_20260918.md",
+      "sha256": "bcf1a98708fb6ce400b7fbff43561117cc3f6762c816b79d18471824eefe9f5f"
+    },
+    {
+      "bytes": 3848,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/DGX_NATIVE_FRONTIER_OVERHEAD_PROTOCOL_20260918.md",
+      "sha256": "05ca0906f9b09c205143bf191eabe9db05f6572ded053c140d33289218242c91"
+    },
+    {
+      "bytes": 2609,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/DGX_NATIVE_FRONTIER_PROTOCOL_20260918.md",
+      "sha256": "0a38557c391c17d03f8a570ce0ae9a98c236fdf673725a2253bc44e66b0be69b"
+    },
+    {
+      "bytes": 59,
+      "kind": "file",
+      "mode": 420,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/__init__.py",
+      "sha256": "f379db82028a8af2ba14a89ec9ef6381346807470523fa1836554ba6f26a2746"
+    },
+    {
+      "bytes": 5350,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/audit_frontier_native_smokes.py",
+      "sha256": "556076d6cff03fc7b85d3780b264c40b9d674b7ac28b036d8fc8d045ceaca819"
+    },
+    {
+      "bytes": 84186,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/dgx_frontier_overhead_plan_20260918.json",
+      "sha256": "58e482e6f123bc82de5e98df3c93f4bf0ca3a47d2302ffcaa47290c7d1e20685"
+    },
+    {
+      "bytes": 20177,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/dgx_launcher_smoke_spec_20260917.json",
+      "sha256": "8af8a049c69b7e479e8443e1e0e14b74c78d67b345c03d7f557768488d057fa2"
+    },
+    {
+      "bytes": 2020,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/gnu_time_companion.py",
+      "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+    },
+    {
+      "bytes": 5291,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/launch_dgx_native_run.py",
+      "sha256": "4aa5110c256a0eaca616c6826645db55aa6f7855fb5f04ef6b10bb67bf31a0b2"
+    },
+    {
+      "bytes": 6217,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/measure_frontier_boundary_step.py",
+      "sha256": "197b547644487df67cc210c860e3a378611a99acb5837f98f4f249c2dca74353"
+    },
+    {
+      "bytes": 5820,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/measure_native_counter_step.py",
+      "sha256": "6c8ce070a90b2410f01e274cbf97c9d4b80023f0cc1e49207420f3cf2cf2fc34"
+    },
+    {
+      "bytes": 7256,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/measure_native_frontier_step.py",
+      "sha256": "bbb507c2e6cba4bd678933433aac6056e26fee7514677595713b248537dd23e5"
+    },
+    {
+      "bytes": 5862,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/measure_native_hierarchy_step.py",
+      "sha256": "d2e3647ac80ce4bc2b28a11a8edb9336c02df2519ac055740e4d70aa61459b54"
+    },
+    {
+      "bytes": 7461,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/measure_native_interval_step.py",
+      "sha256": "0503cee2c49e1f77086232dd99076041f33ff8dc697097d01909d9315af0990e"
+    },
+    {
+      "bytes": 2516,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/measure_native_scaling_run.py",
+      "sha256": "51a6acf016856eb095f321674c38531b612a043ba006d28bb3668b1f9a3aeeef"
+    },
+    {
+      "bytes": 4689,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/prepare_frontier_overhead_panel.py",
+      "sha256": "839cec07a967fda05e55e799805c8999baa683d7e4b1a7a1011999f2b794fba9"
+    },
+    {
+      "bytes": 4756,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/prepare_native_scaling_run.py",
+      "sha256": "75c347d34f1a259a7039af1065b70aef6100175e08d36ed1441a86dd5f9214d1"
+    },
+    {
+      "bytes": 6269,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/probe_cgroup_frontier.py",
+      "sha256": "4ce76668cd32779e5ac870f2e2745bdb4e4917dd6cee9d6ea023e4905ca44337"
+    },
+    {
+      "bytes": 9059,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/probe_dgx_cpu_hierarchy.py",
+      "sha256": "e2ae95faad1630f0c055d0b5a152b87991e0c8a529ec58d7a43e072b25ee55e1"
+    },
+    {
+      "bytes": 6706,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/probe_dgx_step_separation.py",
+      "sha256": "c00eae1c44c86f0ee02c72e4634cf4e5cc70e2656a8ebfc0f9070769f6f7f97b"
+    },
+    {
+      "bytes": 5845,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/probe_host_counters.py",
+      "sha256": "3d3c193305085e17aa10e05be842d814f66d020d7dde285c8d9288ead2ce3f3c"
+    },
+    {
+      "bytes": 10645,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/probe_interval_cpu.py",
+      "sha256": "b535124efb386265555e1ea946e4edc16ad6d8ff1c3d467955576875d944e366"
+    },
+    {
+      "bytes": 3090,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/run_dgx_frontier_native_smoke.py",
+      "sha256": "e611da4ce5efa33afb28ef27215ea0d96e0a7828fada7193199dfdc7baa3b941"
+    },
+    {
+      "bytes": 758,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/run_dgx_frontier_native_smoke.sh",
+      "sha256": "50de1f9c188f6b0d5543bbd9ad8925945b10667ccf00f627ab75e22098e3b967"
+    },
+    {
+      "bytes": 5320,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/run_dgx_frontier_overhead.py",
+      "sha256": "9b2381839ca1458c32d9a6dd38193e23051253d99248ef8828d1546211082fcf"
+    },
+    {
+      "bytes": 931,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/run_dgx_frontier_overhead.sh",
+      "sha256": "39e74efb6f4dcaea25ae6cc0c84f6a1af0440237847254f98f9a0fa28d1333de"
+    },
+    {
+      "bytes": 3094,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/run_dgx_hierarchy_native_smoke.py",
+      "sha256": "43e15f09093f185e69fbb636d14506a8ef931e53f82a304e21822707603bf440"
+    },
+    {
+      "bytes": 762,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/run_dgx_hierarchy_native_smoke.sh",
+      "sha256": "5b89c373140c4c7b770093571f218d10f4a21f26729886196f9a20244c6e81f0"
+    },
+    {
+      "bytes": 3092,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/run_dgx_hierarchy_quiet_smoke.py",
+      "sha256": "df13d0b52116445841a147d0727007b0eb643af733a03ed549653bb15cd23592"
+    },
+    {
+      "bytes": 758,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/run_dgx_hierarchy_quiet_smoke.sh",
+      "sha256": "1c23bed5638615296a296a14f94c3c8a09476965881dad26bde029f837fdc0ae"
+    },
+    {
+      "bytes": 3090,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/run_dgx_interval_native_smoke.py",
+      "sha256": "c399adb54f37a8481ccf7ee3bd3cd13d316de0c34fb62b1b47895b5e39ccc832"
+    },
+    {
+      "bytes": 758,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/run_dgx_interval_native_smoke.sh",
+      "sha256": "d6813dabd06d71e85ba922d6fba52e01fb19d71668a92bd87077e67883e0bc8e"
+    },
+    {
+      "bytes": 5070,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/run_verified_slurm_measurement.py",
+      "sha256": "36243fcdfe6f49e73dbe1dd1b627bf4a330f19f3cd52dcf94a9618ddf0415cf8"
+    },
+    {
+      "bytes": 6808,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/screen_bracketed_cpu.py",
+      "sha256": "9175b0033b079d50cb086d64397a4996850d4f79dac317cd15ea83d96f4b8075"
+    },
+    {
+      "bytes": 3883,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/snapshot_orthohmm_input_order.py",
+      "sha256": "730609276dbaba4671cce8e3caea6bb2dc535a263110febf08a3f4d0afd7d9c8"
+    },
+    {
+      "bytes": 4083,
+      "kind": "file",
+      "mode": 436,
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1/benchmark_tools/snapshot_runtime_trees.py",
+      "sha256": "ab0008651e75ebadc1be3c87503f09bffd9e5be87f2e6b0c3eec49e552d9bd4c"
+    }
+  ],
+  "roots": [
+    "/home/jlsteenwyk/projects/orthohmm-publication/frontier_overhead_recipe_v1"
+  ],
+  "schema": 1,
+  "scientific_execution_authorized": false
+}

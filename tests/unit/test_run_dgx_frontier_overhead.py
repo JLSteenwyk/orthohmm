@@ -12,6 +12,26 @@ ROOT = Path(__file__).resolve().parents[2] / "benchmark_tools"
 PLAN = ROOT / "results/dgx_frontier_overhead_plan_20260918.json"
 
 
+def test_transferred_recipe_and_authorization_match_frozen_sources():
+    manifest_path = ROOT / "results/dgx_frontier_overhead_recipe_v1_20260918.json"
+    manifest = json.loads(manifest_path.read_text())
+    assert manifest["external_symlinks"] == []
+    rows = [row for row in manifest["records"] if row["kind"] == "file"]
+    assert len(rows) == 39
+    for row in rows:
+        path = ROOT / Path(row["path"]).name
+        if not path.exists():
+            path = ROOT / "results" / path.name
+        data = path.read_bytes()
+        assert len(data) == row["bytes"]
+        assert hashlib.sha256(data).hexdigest() == row["sha256"]
+    auth = json.loads((ROOT / "results/dgx_frontier_overhead_authorization_20260918.json").read_text())
+    assert auth["recipe_sha256"] == hashlib.sha256(manifest_path.read_bytes()).hexdigest()
+    assert auth["plan_sha256"] == module.PLAN_SHA
+    assert auth["scientific_execution_authorized"] is False
+    assert auth["allowed_indices"] == list(range(18))
+
+
 def save(path, value):
     path.write_text(json.dumps(value))
     return hashlib.sha256(path.read_bytes()).hexdigest()
