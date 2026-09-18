@@ -1,5 +1,21 @@
 # Publication Progress
 
+## QfO Pipeline Advances Per Completed Reconciliation Cell (2026-09-18 UTC)
+
+Previous turn progressed with corrected staging commit bfff2f4. Re-read the
+goal, verified live handles and inspected actual admission/conversion gates.
+Replaced whole-array barriers with matching-task dependencies on existing
+21673/21675 arrays; kept throttles, resource limits, commands and scientific
+parameters unchanged. No jobs were cancelled or duplicated. See
+`QFO_FACTORIAL_TASK_DEPENDENCIES_20260918.md` for all eight dependency updates.
+
+Admission 21673_0 now completed 0:0 in 1:38; its 4,966,346-pair native report
+matches the earlier independent review except for captured whole-array
+scheduler accounting. Pair conversion 21675_1 is running. It must finish and
+its report hash be frozen before the first R-on scoring submission. Original
+QfO release limitations remain explicit. Focused gate/conversion tests: 33
+passed; full regression suite: 2,518 passed in 52.31 seconds. Full goal active.
+
 ## Corrected QfO Staging Implemented, Not Yet Executed (2026-09-18 UTC)
 
 Previous turn progressed through public TreeFam source retrieval investigation
