@@ -1,5 +1,22 @@
 # Publication Progress
 
+## QfO Candidates Prepared; Reconciliation Gate Ready (2026-09-17)
+
+Previous turn progressed the frozen QfO factorial and launched preparation;
+re-read the full objective. Job21670 completed0:0 in00:03:04. All four arms
+retain976,504genes/78proteomes and frozen runtime/input checks. Expanded P-off
+has352,749families (40,482merges); expanded P-on has350,907 (40,073merges).
+Pinned manifest and interpretation: `qfo_factorial_prepared_20260917.json` and
+`QFO_FACTORIAL_PREPARATION_20260917.md`. This is not accuracy evidence.
+
+Added a reconciliation runner that checks complete preparation, all planned
+commands and immutable inputs, and executes the byte-identical launcher from
+the verified frozen-core checkout instead of importing the development core.
+All four actual cells pass check-only validation;23focused preparation/runner
+tests pass. The sequential workstation batch script is ready. At this commit
+the reconciliation array has not yet been submitted; native validation and
+all downstream QfO scoring remain pending.
+
 ## QfO Factorial Preparation Submitted (2026-09-17)
 
 Committed/pushed the protocol and executor as bd5229d, then created detached
