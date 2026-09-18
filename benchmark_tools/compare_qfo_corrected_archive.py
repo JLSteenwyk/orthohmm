@@ -1,6 +1,8 @@
 """Compare corrected-release canonical FASTAs with the frozen original inputs."""
 
 import argparse
+from bisect import bisect_right
+from collections import Counter
 import gzip
 import hashlib
 import io
@@ -17,6 +19,20 @@ from benchmark_tools.resolve_swiss_sequence_aliases import MAPPING_SHA
 from benchmark_tools.audit_swiss_missing_input_relations import ALIASES_SHA
 from benchmark_tools.qfo_filter_pairs import load_mapping
 from benchmark_tools.prepare_ob_candidate_neighborhood import record, check
+
+
+def missing_by_species(numbers, species, offsets):
+    if (len(offsets) != len(species) + 1 or len(set(species)) != len(species)
+            or not offsets or offsets[0] != 0
+            or any(type(x) is not int for x in offsets)
+            or any(a >= b for a, b in zip(offsets, offsets[1:]))):
+        raise ValueError("Invalid native species offsets")
+    counts = Counter({name: 0 for name in species})
+    for number in numbers:
+        if type(number) is not int or not 1 <= number <= offsets[-1]:
+            raise ValueError("Numeric identity outside species intervals")
+        counts[species[bisect_right(offsets, number - 1) - 1]] += 1
+    return dict(counts)
 
 
 def compare(archive, expected, mapping, missing):
@@ -63,10 +79,13 @@ def compare(archive, expected, mapping, missing):
             pass
     if set(observed) != set(expected):
         raise ValueError("Missing canonical proteomes")
+    mapped_universe = {number for number in mapping.values() if type(number) is int and number > 0}
     return {"canonical_files": observed, "canonical_proteomes": len(observed),
             "changed_canonical_files": sorted(name for name, value in observed.items() if not value["identical_to_original"]),
             "sequences": len(accession_owners), "unique_mapped_numeric_ids": len(numeric_owners),
             "unmapped_accessions": sum(len(value["unmapped_accessions"]) for value in observed.values()),
+            "mapping_numeric_identity_count": len(mapped_universe),
+            "mapping_numeric_ids_without_canonical_accession": sorted(mapped_universe - numeric_owners.keys()),
             "recovered_missing_reference_accessions": recovered, "remaining_missing_accessions": sorted(missing - recovered.keys()),
             "gzip_read_to_eof": True}
 
@@ -80,10 +99,14 @@ def audit(archive, prepared_path, mapping_path, alias_path):
     if len(expected) != 78 or aliases["fasta_inputs"] != prepared["input_fastas"]:
         raise ValueError("Unexpected original input inventory")
     missing = set(aliases["summary"]["missing_genes"])
-    result = compare(archive, expected, load_mapping(mapping_path), missing)
+    with gzip.open(mapping_path, "rt") as stream:
+        mapping_data = json.load(stream)
+    result = compare(archive, expected, mapping_data["mapping"], missing)
+    result["missing_numeric_ids_by_species"] = missing_by_species(
+        result["mapping_numeric_ids_without_canonical_accession"], mapping_data["species"], mapping_data["Goff"])
     for identity in sources:
         check(identity)
-    return {"status": "corrected_qfo_canonical_archive_compared", **result, "inputs": sources,
+    return {"status": "qfo_canonical_archive_compared", **result, "inputs": sources,
             "source": record(__file__), "limitations": [
                 "Comparison is to frozen original file hashes; no original input or active run changed.",
                 "Numeric identity coverage does not independently verify all scorer sequence bytes or annotation versions.",

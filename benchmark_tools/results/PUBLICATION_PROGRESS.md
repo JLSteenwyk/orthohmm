@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Whole-Input Mapping Mismatch Localized To Xenopus (2026-09-17)
+
+Previous turn progressed by starting durable corrected-source acquisition
+and preserving fourth QfO admission3f30d5e. Re-read full objective and confirmed
+21687,21671_1,DGX21656_8 live. Extended archive comparison with complete
+numeric mapping coverage and native one-based species intervals;13tests pass.
+Ran against original archive: all78FASTA hashes equal frozen originals,
+976,504accessions,975,514mapped numeric IDs,990unmapped input accessions.
+The mapping has984,137IDs; all8,623missing input identities are XENTR,
+and all990unmapped accessions are in its original canonical FASTA.
+
+Report `qfo_original_archive_mapping_verified_20260917.json` and
+`QFO_ORIGINAL_MAPPING_COVERAGE_20260917.md` establish the broader mismatch.
+Updated manuscript to bound original-release claims, without changing any
+score, input or denominator. Corrected download21687 remains RUNNING with
+220,209,152bytes observed; do not compare or extract the partial archive.
+Its completed78-proteome comparison remains the next priority correctness
+gate. All four R-off cells retain initial HMM search; they are not HMM-free
+sequence-search controls. Full publication scope and original jobs stay active.
+
 ## Corrected Archive Acquisition Running; Fourth QfO Cell Admitted (2026-09-17)
 
 Previous turn progressed with original-archive verification56585af. Re-read

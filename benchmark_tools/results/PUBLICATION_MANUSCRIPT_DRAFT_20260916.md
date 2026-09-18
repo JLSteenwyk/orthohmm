@@ -658,6 +658,16 @@ input parity, or the cause of the input/reference resource mismatch. Those
 provenance questions and any separately declared sensitivity analysis remain
 outstanding; missing proteins are not relabeled as algorithmic fragment errors.
 
+The subsequent [whole-input mapping audit](QFO_ORIGINAL_MAPPING_COVERAGE_20260917.md)
+localizes a larger original-release mismatch to Xenopus:990input accessions
+are unmapped and8,623reference numeric identities lack an original input
+accession. All78canonical inputs match the original archive. EBI provides a
+separate corrected2020release for this proteome; its compatibility with the
+retained scorer is under investigation. Original-input QfO comparisons must
+remain explicitly release-limited, not claimed as resolved official-release
+comparisons. Corrected inference and any reruns require a separate input
+freeze; changing only scores or accession labels is not a validated remedy.
+
 ### Remaining Requirements
 
 No universal superiority, arbitrary-dataset generalization, or controlled

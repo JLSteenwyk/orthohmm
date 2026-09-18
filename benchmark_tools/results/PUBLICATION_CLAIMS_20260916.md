@@ -73,8 +73,9 @@ evidence that an experiment completed or a biological hypothesis is true.
   Expanded R-off scoring21681 and independent admission21683 are now
   COMPLETED0:0. [The first expanded cell](QFO_FACTORIAL_FIRST_EXPANDED_ASSESSMENT_20260917.md)
   passed all native task, metric and provenance checks; a repeated frozen
-  validation produced an identical admission report.21682 is running and
-  validator21684 queued. Three of eight cells have admitted scores, including
+  validation produced an identical admission report.21682 and validator21684
+  now completed; [the second expanded cell](QFO_FACTORIAL_SECOND_EXPANDED_ASSESSMENT_20260917.md)
+  also passed repeated byte-identical admission. Four of eight cells have admitted scores, including
   the two reused baselines, which are not independent new observations.
   The full factorial remains incomplete; queued validators do not establish
   valid scores or intervals for the other cells.
