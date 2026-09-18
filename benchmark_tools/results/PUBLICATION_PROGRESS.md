@@ -8116,3 +8116,24 @@ DGX task 21656_19 completed successfully, bringing the total to 20/27;
 No DGX filesystem scan or unrelated job changes occurred. Corrected HMM
 replay/factorial execution, remaining comparator work, full paired uncertainty,
 timing admission and the final publication bundle remain unfinished.
+
+### Corrected FastOMA Resource Configuration Probed (2026-09-18)
+
+Previous turn made progress by freezing and queueing corrected OrthoFinder
+scoring and independent admission. This turn adds a fixed FastOMA execution
+configuration, a tiny Nextflow/Docker resource probe and its audit. The final
+actual probe confirms one CPU and 256 MiB cgroup limits with the pinned image
+digest under Nextflow 22.10.8. The effective configuration preserves historical
+scientific settings and explicitly carries forward successful collection
+recovery resources. The LUCA database checksum was reverified. All 41 focused
+tests pass. See `QFO_CORRECTED_FASTOMA_RESOURCES_20260918.md` for all attempts,
+resource adjustments and limitations. No full corrected FastOMA inference or
+accuracy result is implied; the admitted corrected tree and launch freeze
+remain prerequisites.
+
+Latest scheduler check: DGX task 21656_20 completed at 13:37, bringing the
+completed count to 21/27; task 21656_21 is active at 2:59. Corrected HMM
+21706_0 remains active at 5:20:38. These are scheduler elapsed times, not
+admitted native timing measurements. Original TreeFam sources, corrected
+all-method results, remaining uncertainty/resource admission and final
+publication packaging remain open. No unrelated jobs were interrupted.
