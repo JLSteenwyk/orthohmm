@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Bracketed CPU Positive Controls Executed (2026-09-18 UTC)
+
+Previous turn progressed through09c2d61 with the native-window audit and
+prospective screen. Reread the full objective. Scheduler inspection confirmed
+21792 RUNNING44:22 and21706_0 RUNNING15:08:18;21798 remained dependency-pending.
+
+Implemented the enclosing-window handshake and froze/pushed2dac972 before
+the dedicated DGX experiment. Job21805 completed0:0 in8seconds, zero restarts.
+All three fixed-order controls met their frozen expectations: quiet passed;
+the completed one-CPU-second burst and sustained three-CPU-second sibling
+load were flagged as excess unassigned CPU. Native work used a separate
+one-CPU step and every counter read succeeded. Local replay matched exactly.
+
+Raw counters, source hashes and terminal scheduler evidence are retained in
+dgx_bracketed_controls_21805.json and dgx_bracketed_scheduler_21805.txt, with
+interpretation in DGX_BRACKETED_CONTROLS_RESULT_20260918.md. No threshold
+changed, no retry occurred, and no scientific timing was admitted. Next is
+interval-level observation and the remaining prospective timing controls;
+corrected QfO execution, endpoint uncertainty and final packaging remain open.
+
 ## Native Counter Window Audit And Prospective Screen (2026-09-18 UTC)
 
 Previous turn progressed through72ae5d4 with all three native counter smokes
