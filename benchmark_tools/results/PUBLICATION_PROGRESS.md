@@ -1,5 +1,23 @@
 # Publication Progress
 
+## QfO Factorial Preparation (2026-09-17)
+
+Previous turn progressed GO/EC arithmetic and interval interpretation, pushed
+a07d14e. Re-read the full objective and inspected the recovered checkpoints,
+frozen runtime, and existing OrthoBench candidate/reconciliation helpers.
+Added `prepare_qfo_factorial.py` and the separate frozen
+`QFO_FACTORIAL_PROTOCOL_20260917.md`: eight P/C/R cells, all native endpoints,
+42 prespecified SwissTrees interval endpoints and no outcome-driven tuning.
+The profile contrast retains initial HMM search in both arms and includes
+downstream sequence refinement. Historical score equivalence is not asserted.
+
+Preparation validates the exact recovered admission, numeric hits, FASTA
+ownership, frozen source/runtime and membership constraints, and reuses the
+existing candidate engine. Ten focused new/existing preparation tests pass.
+The batch script pins the workstation node `bizon`, separate from DGX timing.
+At this commit, preparation is ready but not yet submitted; successful
+preparation, reconciliation, admission, conversion and scoring remain pending.
+
 ## GO/EC Arithmetic and Interval Semantics (2026-09-17)
 
 Previous turn made progress: FAS sample audit committed and pushed as d1e05bf.
