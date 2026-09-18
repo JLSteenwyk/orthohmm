@@ -8199,3 +8199,22 @@ and fresh native command before inference. Latest live check: corrected HMM
 21706_0 RUNNING at 5:43:53; DGX 21656_21 RUNNING at 26:14. No unrelated jobs
 were interrupted. Corrected all-method scoring, uncertainty, timing admission
 and the final publication package remain unfinished.
+
+### Corrected FastOMA Runtime Identity Recorded (2026-09-18)
+
+Previous turn made progress by queuing corrected FastOMA input staging. This
+turn records the installed Java/Nextflow trees (696 entries), seven launcher
+and container-runtime binaries, Docker configuration/version metadata and the
+pinned image identity. Two real read-only inspections are byte-identical.
+The first attempted probe rejected an abbreviated Java version assumption;
+the exact installed Conda `17.0.18-internal` build is now recorded and tested,
+without changing the runtime. All 22 focused tests pass. See
+`QFO_CORRECTED_FASTOMA_RUNTIME_20260918.md` for checksums and limitations.
+
+This is a selected installed-file snapshot, not a fully hermetic host runtime
+or completed inference launcher. The remaining launch must bind the staged
+corrected inputs/tree, isolate caches/logs/tasks and recheck runtime identity.
+No native inference or scores were fabricated from the probe. Latest live
+check: staging 21738 pending dependency, corrected HMM 21706_0 RUNNING at
+5:48:16, DGX 21656_21 RUNNING at 30:37. Remaining corrected inference/scoring,
+uncertainty, resource admission and publication packaging are still open.
