@@ -67,3 +67,22 @@ stripping. This uses historical input copies, including raw Danio; it does
 not establish equivalence to staged inputs or admit a matched-input score.
 Nineteen focused validator/normalizer tests pass. The new job still requires
 its own terminal, provenance, conversion and scoring validation.
+
+## Post-run Assessment
+
+`assess_three_kingdoms_matched_sonic.py` requires native job21795 to be
+COMPLETED0:0 with32CPUs/192G onbizon, the frozen inference executor, exact
+plan/command/input/output identities, unchanged runtime inventories and
+environment. It converts the unique native `ortholog_groups.tsv` using the
+plan-bound existing normalizer, independently checks native/normalized
+membership, runs the plan-bound BUSCO scorer, and compares all score counts
+against partition-intersection arithmetic. Reference scope must remain
+255groups,2035genes,7352pairs. Outputs go to the fresh directory
+`benchmarks/work/three_kingdoms_sonic_matched_assessment_20260918`.
+
+Any post-creation exception retains an `assessment_failed` report with
+accuracy admission false. Terminal/provenance failures before creation leave
+no assessment directory. Existing destinations are never overwritten.
+The live pending-job check rejected execution without creating outputs;
+65 focused tests passed. The workflow has not yet exercised the successful
+end-to-end path on job21795, because native inference remains pending.

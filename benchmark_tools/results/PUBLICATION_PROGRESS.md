@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Matched Sonic Post-run Workflow (2026-09-18 UTC)
+
+Previous turn progressed through2889a4d with native group validation.
+Scheduler confirms HMM21706_0 RUNNING12:34:07, numeric conversion21791
+RUNNING6:14, and matched Sonic21795 awaiting dependency21792.
+
+Added terminal/provenance admission, unchanged normalization/scoring and
+independent arithmetic workflow assess_three_kingdoms_matched_sonic.py.
+It binds inferencejob21795 and executor7c3d0784d1a22da0a0e37db6860977c6649fd2ca,
+rechecks runtime trees and source/output hashes, validates native group
+conversion and fixed255group/2035gene/7352pair reference scope, and preserves
+failure evidence without admitting a score.65 focused tests pass; actual
+pending-job invocation fails before creating an output directory. Successful
+end-to-end execution remains untested until native results exist. Batch
+requests2CPUs32GiB4h onbizon; submission follows committed frozen executor.
+
 ## Sonic Native Conversion And QfO Search Completion (2026-09-18 UTC)
 
 Previous turn progressed through0321e60 with independent pair arithmetic.
