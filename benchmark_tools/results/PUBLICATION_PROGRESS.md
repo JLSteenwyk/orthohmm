@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Full Regression And Claim Reconciliation (2026-09-18 UTC)
+
+Previous turn progressed through5c7c19d with queued matched-Sonic assessment.
+Live scheduler confirms HMM21706_0 RUNNING12:38:40 and numeric21791
+RUNNING10:47, with21792/21795/21796 awaiting dependencies. No job changed.
+
+Full tests/unit run at5c7c19d completed4693passed,9skipped in81.68s.
+Fresh retained-figure audit returned retained_figure_bytes_verified for
+all16panels/55outputs. Read current DGX validation and descriptive-resource
+records:27retained runs,9summary cells,zero controlled scientific timing
+admissions. Corrected stale current claims that timing was still partly
+running, figures were incomplete, and the frozen helper still lacked export.
+
+PUBLICATION_CLAIMS_20260916.md now separates completed descriptive DGX
+measurement/figure work from unproven controlled efficiency; links independent
+Three Kingdoms arithmetic and queued matched-input correction; includes the
+110file relocated direct-evidence bundle without claiming full reproduction.
+DGX_POSTRUN_ADMISSION_20260918.md explicitly labels old pending observations
+as history. Completed tests/artifact integrity do not establish biological
+validity, corrected-QfO completion, rights clearance or publication readiness.
+Those full-goal requirements remain open; no goal-completion claim is made.
+
 ## Matched Sonic Post-run Workflow (2026-09-18 UTC)
 
 Previous turn progressed through2889a4d with native group validation.

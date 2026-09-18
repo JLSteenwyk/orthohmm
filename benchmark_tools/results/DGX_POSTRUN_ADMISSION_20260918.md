@@ -22,7 +22,14 @@ controlled-speed experiment requires a separately frozen execution/observation
 plan and inclusion rules before comparing new timings. Existing expensive
 results and all uncertainty flags remain preserved, not upgraded or hidden.
 
-## Current Evidence
+## Retained Observation History
+
+The entries below preserve observations made while transfer, validation and
+review were progressing. Their statements about running tasks or pending
+native validation are historical, superseded by Current Disposition above.
+All27 native outputs are now validated; none is admitted as a controlled
+timing comparison. This history is retained to distinguish direct scheduler
+observations from later reconstruction and to preserve the original gates.
 
 Final-task update: the controller subsequently reported21656_26 COMPLETED,
 exit0:0, elapsed01:18:31,20CPUs/96GiB on spark-7ff0 with zero restarts.
@@ -54,7 +61,7 @@ foreign load of0.007534 cores does not measure disappeared or unsampled
 processes and cannot establish a controlled workload. This diagnostic
 does not establish the status of the other26 runs.
 
-## Required Validation
+## Validation History And Gates
 
 Complete archive update: the full native output tree (1,273,674 files,
 17,759,031,853bytes) and frozen input tree (25 files,259,307,749bytes) are

@@ -19,8 +19,9 @@ evidence that an experiment completed or a biological hypothesis is true.
 | Original-release OrthoMCL final-group QfO scoring is complete | [Verified result snapshot](publication_comparison_orthomcl_complete_20260916.json) | Supported for the original inputs only; corrected-release BLAST is queued and no corrected OrthoMCL score is available |
 | OrthoMCL BLAST failures have negligible impact | [Failure-impact audit](ORTHOMCL_FAILURE_IMPACT_20260916.md) | Not established; direct exposure is measured, indirect and counterfactual effects are not |
 | Three Kingdoms demonstrates proteome-wide accuracy | [Supplementary score record](three_kingdoms_parity_20260907.json) | Unsupported; restricted BUSCO-reference universe |
-| Every historical Three Kingdoms method used identical input bytes | [Method-input audit](THREE_KINGDOMS_METHOD_INPUTS_20260918.md) | Not established: SonicParanoid native snapshot matches raw Danio rather than the staged stop-marker-stripped version; older high-sensitivity record lacks per-file hashes. Matched-input Sonic rerun remains required |
-| OrthoHMM is faster or more memory efficient under matched conditions | [Progress ledger](PUBLICATION_PROGRESS.md) | Not established; historical resource-accounting and workload differences remain |
+| Every historical Three Kingdoms method used identical input bytes | [Method-input audit](THREE_KINGDOMS_METHOD_INPUTS_20260918.md), [matched rerun](THREE_KINGDOMS_MATCHED_SONIC_20260918.md) | Not established: SonicParanoid native snapshot matches raw Danio rather than the staged stop-marker-stripped version; older high-sensitivity record lacks per-file hashes. Matched inference21795 and assessment21796 are queued, not completed |
+| Historical Three Kingdoms scores reproduce from normalized groups | [Independent arithmetic audit](THREE_KINGDOMS_PAIR_COUNT_AUDIT_20260918.md) | Supported for all eight retained methods; native Sonic group conversion also verified. This does not establish matched historical inputs or proteome-wide accuracy |
+| OrthoHMM is faster or more memory efficient under matched conditions | [DGX disposition](DGX_POSTRUN_ADMISSION_20260918.md), [descriptive observations](dgx_descriptive_resources_20260918.json) | Not established; all27 native-valid runs retained as descriptive evidence, with host-isolation uncertainty and asymmetric process-sampling gaps. No controlled comparison admitted |
 | Outer PATH records prove OrthoFinder's historical companion-tool versions | [Child-PATH audit](DGX_SCALING_MIGRATION_20260917.md) | Unsupported: installed OrthoFinder rewrites its subprocess PATH; current reconstruction resolves bundled DIAMOND2.0.13/FastTree2.1.11/MCL14-137 instead of outer versions. Historical exec-path evidence still requires audit |
 | ARM and x86 scoring are generally equivalent | [Portability diagnostic](native_scoring_portability_20260917.json), [development fix](NATIVE_BANDING_FIX_20260917.md), [one pipeline fixture](dgx_orthohmm_pipeline_smoke_20260917.json) | Not established: frozen narrow-band discrepancies remain; tested correction is in development source only, not the baseline; default64 matches tested synthetic fixtures and both OH modes match one simulation fixture only |
 | A nearby parameter choice improves frozen-method OrthoBench F1 | [Six-variant panel](OB_PARAMETER_NEIGHBORHOOD_RESULTS_20260916.md) | Not established: all six adjusted F1 intervals include zero; no default promotion |
@@ -48,11 +49,21 @@ evidence that an experiment completed or a biological hypothesis is true.
 | 2. Independent generalization | Completed frozen YGOB evaluation with native, command/conversion, independent-reference and overlap gates; pair enumeration and paired uncertainty | Bounded novel-taxon claim only; stronger family independence unproven; any outcome-driven method changes require new independent confirmation |
 | 3. HMM and phylogeny contributions | Completed OrthoBench and original-release QfO eight-cell factorials; paired SwissTrees simple effects/interactions; sequence-search replacement and unconstrained-membership controls | Corrected-release QfO factorial; better-matched search sensitivity/calibration; controlled resource evidence. Checked QfO replay differs from historical final groups; do not transfer historical scores |
 | 4. Uncertainty and error explanation | Paired OrthoBench intervals and feature strata; recovered-stage and eight-method SwissTrees intervals; annotation-defined SwissTrees domain strata and figure; native GO/EC/FAS arithmetic audits; VGNC prediction rescore and TreeFam pooled count audit; stage traces | Appropriate uncertainty for other QfO endpoints/secondary mean; independent duplication and fragment annotations and remaining divergence/composition analyses; initial-search and rejected-edge tracing. Domain inventory is complete but does not prove causal mechanisms or independent FAS validation |
-| 5. Robustness and practical efficiency | Corrected fixed/variable-length multi-seed simulations, complete generating-tree/NNI simulation controls, six OrthoBench tree perturbations and six parameter variants, explicit failures and resource caveats | QfO robustness, matched scaling and repeated timings; broader evolutionary realism remains limited |
+| 5. Robustness and practical efficiency | Corrected fixed/variable-length multi-seed simulations, complete generating-tree/NNI simulation controls, six OrthoBench tree perturbations and six parameter variants; all27 DGX repeated runs with native validation, resource replay, descriptive summaries and figure | Controlled resource comparison remains unproven despite completed repeated timing; a new prospective observation/inclusion plan is required before any controlled-speed experiment. QfO robustness and broader evolutionary realism remain limited |
 | 6. Biological usefulness | [Prospective WGD protocol](BIOLOGICAL_WGD_APPLICATION_PROTOCOL_20260917.md), admitted runs, [results](BIOLOGICAL_WGD_RESULTS_20260917.md), [separate rescore](biological_wgd_rescore_audit_20260917.json), [figure](figures_wgd_application_20260917/wgd_application.pdf), [all six examples](figures_wgd_application_20260917/PRESPECIFIED_EXAMPLES.md), and [completed case trace](BIOLOGICAL_WGD_CASE_TRACE_20260917.md): phylogenetic OrthoHMM improves supported separation over high sensitivity but trails full OrthoFinder and SonicParanoid in separation and coverage | Bounded application and stage localization complete; tree correctness and upstream effects unresolved. Development-exposed, not independent validation or copy-specific orthology truth; YGOB column order does not identify ancestral copies; configurations differ beyond reconciliation |
-| 7. Publication package | Comparison, uncertainty, ablation, simulation, strata, tree/parameter and biological application figures; [method diagram](figures_publication_method_20260916/publication_method.pdf); evolving [manuscript](PUBLICATION_MANUSCRIPT_DRAFT_20260916.md) | Scaling figures, completed Methods/Results and claim audit, verified bibliography, portable workflows/dependencies, versioned release and archival bundle |
+| 7. Publication package | Sixteen retained figure panels including descriptive DGX resources; [method diagram](figures_publication_method_20260916/publication_method.pdf); evolving [manuscript](PUBLICATION_MANUSCRIPT_DRAFT_20260916.md); [relocated direct-evidence bundle](PUBLICATION_FIGURE_BUNDLE_20260918.md) | Completed corrected-QfO results and manuscript integration, verified bibliography, portable executable workflows/dependencies, transitive raw-data provenance and rights clearance, versioned release and external archive. The local figure bundle is not full scientific reproduction |
 
 ## Current Execution Status
+
+- Corrected DIAMOND sequence search21789 completed0:0 in02:14:43 and native
+  execution admission21790 completed0:0 in00:01:30. Numeric conversion21791
+  is running; independent tuple validation21792 and hit-coverage comparison
+  remain pending. Search completion does not establish matched biological
+  sensitivity, graph feasibility or an accuracy result.
+- Three Kingdoms historical normalized-group pair counts independently
+  reproduce for all eight methods. Historical Sonic native conversion matches
+  all19853 groups/288562 proteins against its retained input copies. The raw
+  Danio mismatch remains; matched inference21795 and assessment21796 are queued.
 
 - Corrected Proteinortho has independently admitted six-endpoint scores and
   4,695,385 mapped native pairs in the [partial corrected table](qfo_corrected_comparison_20260918_v2/scores.md).
@@ -123,15 +134,16 @@ evidence that an experiment completed or a biological hypothesis is true.
 - Recovered QfO scoring21548_0..3 and admission21584 are all COMPLETED0:0.
   [Stage results](qfo_recovered_stage_summary_20260917.json) and the SwissTrees
   interval audit are complete; uncertainty for the other challenges remains open.
-- DGX matched timing21656 has 17 completed tasks (0-16) and task17 running at
-  the 2026-09-18 accounting check. No scientific timings have yet passed output and
-  resource admission. The original32CPU plan remains distinct from the DGX plan.
-  [Run00 host review](DGX_RUN00_HOST_REVIEW_20260917.md) reproduces inconclusive
-  observations caused by unmatched kworker-named identities. Low observed
-  persistent CPU use does not certify absent contention; no monitor rule changed.
-  [First-six metadata checks](DGX_FIRST_SIX_METADATA_20260917.md) match frozen
-  commands, inputs and recorded runtime/resource settings, but all six retained
-  host summaries are inconclusive and no native/resource admission is implied.
+- DGX timing21656 is terminal for all27 tasks. Native validation21794 completed
+  successfully for all27 runs; resource replay reproduces63445 observations.
+  [Post-run disposition](DGX_POSTRUN_ADMISSION_20260918.md) retains all runs as
+  descriptive evidence with all27 host classifications inconclusive. Process
+  read errors affect4706 resource samples across18 runs. The
+  [resource figure](figures_dgx_descriptive_20260918/dgx_descriptive_resources.pdf)
+  shows individual values and three-repeat medians/ranges, not confidence
+  intervals or controlled speedup ratios. No automatic reruns or retrospective
+  monitor-rule changes are authorized by this evidence. The original32CPU
+  plan remains distinct from the executed20CPU DGX plan.
 - Biological application scores, independent arithmetic, figure and all six
   prospective cases are complete. The [stage trace](BIOLOGICAL_WGD_CASE_TRACE_20260917.md)
   localizes five focal homolog separations to root-lineage grouping. Tree
@@ -146,14 +158,16 @@ evidence that an experiment completed or a biological hypothesis is true.
   remain historical. This is not a host or inference-runtime security audit.
   The [strict docs rebuild](docs_strict_build_validation_20260917.json)
   passes with no diagnostics; earlier14-diagnostic output remains historical.
-- The latest complete unit-suite run passed:3205tests,1optional skipped,
-  in61.77seconds for the code committed at2f310e6. This is regression evidence, not admission of pending
-  experiments, biological validation or proof of publication readiness.
+- The latest full unit-suite run at5c7c19d passed4693tests with9skipped in81.68s.
+  Regression tests do not admit pending experiments or establish biological
+  validity. The prior4e2e93c run remains historical evidence.
 - [Retained figure integrity](PUBLICATION_FIGURE_INTEGRITY_20260918.md)
-  checks15manifests,52outputs and88recorded file references with no byte/hash
-  mismatch. A detached launcher dependency is recoverable from its frozen
-  Git revision but must be exported for packaging. This check does not
-  certify scientific correctness, transitive raw data, licenses or the archive.
+  now checks16manifests and55outputs with no byte/hash mismatch. The detached
+  helper has been exported from its frozen Git revision into the
+  [relocatable direct-evidence bundle](PUBLICATION_FIGURE_BUNDLE_20260918.md):
+  110files,91distinct direct dependencies, verified after archive extraction.
+  This does not certify scientific correctness, transitive raw data, licensing,
+  full executable reproduction or external archival publication.
 
 ## Historical Execution Gates
 
