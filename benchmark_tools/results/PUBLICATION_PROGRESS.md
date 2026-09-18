@@ -1,5 +1,24 @@
 # Publication Progress
 
+## SwissTrees Sequence Descriptor Coverage Inventoried (2026-09-17)
+
+Previous turn made progress: validated and pushed first QfO native
+reconciliation5a99b02. Re-read full objective and confirmed21671_1,
+21682 and DGX21656_8 live. Added/executed prediction-independent sequence
+inventory against frozen membership and78input FASTAs;12unit tests pass.
+
+Exact matching resolves549of563reference proteins;14accessions require
+frozen alias-mapping investigation before complete sequence strata can be
+claimed. None of the549matched descriptions contains an explicit fragment
+label; absence of a label is not evidence of biological completeness.
+Per-protein entropy, length, noncanonical symbols and description evidence
+are retained in `swiss_sequence_inventory_20260917.json` with source hashes.
+Scope and unresolved identities: `SWISS_SEQUENCE_INVENTORY_20260917.md`.
+
+No accuracy statistics or score-stratification thresholds were evaluated.
+Independent fragment annotation and subsequent prespecified composition
+analysis remain incomplete; full publication and active job goals unchanged.
+
 ## First QfO Factorial Native Reconciliation Validated (2026-09-17)
 
 Previous turn was a verified wait: Slurm confirmed DGX21656_8 live and SSH
