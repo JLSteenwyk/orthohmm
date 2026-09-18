@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Retained Full OrthoFinder Inputs Match Frozen Originals (2026-09-17)
+
+Previous turn progressed with queued corrected sequence auditb156cc3.
+Re-read objective;21687,21671_1,DGX21656_8live,21688/21689dependent.
+Added/executed `audit_orthofinder_input_parity.py` on retained full QfO
+OrthoFinder3.1.5WorkingDirectory. All78proteomes and976,504internal sequences
+map one-to-one to the frozen original inputs with exact sequence-byte
+identity, complete coverage and no differences. Nine tests pass.
+
+Evidence `qfo_orthofinder_internal_input_parity_20260917.json` and
+`QFO_ORTHOFINDER_INPUT_PARITY_20260917.md` supports retained input parity
+with original OrthoHMM inputs, including the Xenopus limitation. It does not
+authenticate every historical execution step, other tools or the MCL
+checkpoint conversion. Continue remaining comparator provenance and corrected
+release compatibility checks; no input or score changes. Full goal active.
+
 ## Direct Corrected-Archive Sequence Audit Prepared And Queued (2026-09-17)
 
 Previous turn progressed with exact residue classification7d08956. Re-read

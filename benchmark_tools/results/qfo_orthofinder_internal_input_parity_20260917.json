@@ -1,0 +1,2064 @@
+{
+  "checked_inputs": [
+    {
+      "bytes": 109234,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_factorial_prepared_20260917.json",
+      "sha256": "706b07c91e9a130dae229837641a7ad62d7d36a09679e5e0daa0959e182b7d64"
+    },
+    {
+      "bytes": 2189,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/SpeciesIDs.txt",
+      "sha256": "0b12fa1d951718589c650245bdd1c03f15c7c0a9510d3484883f4c1015697b28"
+    },
+    {
+      "bytes": 142851568,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/SequenceIDs.txt",
+      "sha256": "fdbf38c40fda24a7a27c1e5167c9f02d8c7078fa3f435fedfc34fa35dabd2145"
+    },
+    {
+      "bytes": 866515,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000425_122586.fasta",
+      "sha256": "44e65ab28a7953f479bcb76200fab2c8387cff6e858db2e5722aa8df1707bd17"
+    },
+    {
+      "bytes": 608835,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species0.fa",
+      "sha256": "fc8c8c21f42bd09b87dac64f5f8db028f3f003d510e5362fe6738366023ced95"
+    },
+    {
+      "bytes": 747971,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000429_85962.fasta",
+      "sha256": "0ec2729c2f8bf8d30a19dd57ba1475b9d18d500a5ec76a132bcf8ae236c66707"
+    },
+    {
+      "bytes": 512098,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species1.fa",
+      "sha256": "810577ca85ba65b56c5ecc77c64a8877ce830593b35c665c0d404079ebb7cd0e"
+    },
+    {
+      "bytes": 431542,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000431_272561.fasta",
+      "sha256": "aca397ad48dccf87b3abb81be206624f188a5138e3b05e63d8dc00e6c137df4c"
+    },
+    {
+      "bytes": 323962,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species2.fa",
+      "sha256": "6b88012d2074e6b4dc62c968f9ceb09cd661e7c50090f68a76dd463a1fc5af8d"
+    },
+    {
+      "bytes": 17560041,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000437_7955.fasta",
+      "sha256": "bb03b87acd02d80cf7a314c574403aa44f55eaec5f001378c55a7ecd933e9824"
+    },
+    {
+      "bytes": 14293347,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species3.fa",
+      "sha256": "c89a5ee9bf2f5866d6d11e5a28aa6e6eb5640972409f166080f29a8fc697350d"
+    },
+    {
+      "bytes": 1103434,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000536_69014.fasta",
+      "sha256": "b26340fef2e61ac14d10dd1052211179f90d349c499ded050917771e2d810ba8"
+    },
+    {
+      "bytes": 666760,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species4.fa",
+      "sha256": "888d3aee3e082b5fa06e3e7df00cfcaba4edcba84f68dccac2e0d9ac969f6aad"
+    },
+    {
+      "bytes": 12363309,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000539_9031.fasta",
+      "sha256": "ed643bb510ba24ec152766ff3aaea8caf9e55046d78c4482f0a0d66c8bbb959b"
+    },
+    {
+      "bytes": 10445355,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species5.fa",
+      "sha256": "346cb16ca04b505cae42e7f2ef2e8564a62615c1e936114fe5709f430560c5e1"
+    },
+    {
+      "bytes": 6097084,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000542_5664.fasta",
+      "sha256": "beaf76923a8f070d4d8fc682a5fd036375e8ece4452c279a95c562497c8d67e3"
+    },
+    {
+      "bytes": 5295962,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species6.fa",
+      "sha256": "2a20e813eaa894cc3c96d6309f2e8a3012f0cb14457671487bef8724a0132eae"
+    },
+    {
+      "bytes": 1120386,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000554_64091.fasta",
+      "sha256": "46f30b935c0501b9a9f3780ddf0dfdf3719a649ad9a77899b26f4b896a2287d2"
+    },
+    {
+      "bytes": 710668,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species7.fa",
+      "sha256": "d249fea678986e477fc974971e72cf36d796f1c3e69b6319fa45d4a91a6161e0"
+    },
+    {
+      "bytes": 2010766,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000557_251221.fasta",
+      "sha256": "c647be279e92435bf7d4dbfd66217c2979e128e56da3a3835adf91eb49df0a1b"
+    },
+    {
+      "bytes": 1436956,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species8.fa",
+      "sha256": "06987ab1730edee875e6e74623684788139b7d99a74cc08d35de21c449926185"
+    },
+    {
+      "bytes": 3954181,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000559_237561.fasta",
+      "sha256": "29903baf6bcd940665d4245b28d2518f4257419ef12169c6875317e5bc3ead1d"
+    },
+    {
+      "bytes": 3081877,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species9.fa",
+      "sha256": "1d870585bfb5eb5e0f4f3b44ad5d4564ef67caf26127b4049aac5cc563c51019"
+    },
+    {
+      "bytes": 5172817,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000561_237631.fasta",
+      "sha256": "f23613a13bc78e1c7d673b96d65fbdd73bbd47c9153e4ea2323ef6d7f0b9fa8c"
+    },
+    {
+      "bytes": 4128264,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species10.fa",
+      "sha256": "6be0d5d29336749aeaa688accdf6fc4ad8c10278be15178d8499672a5385944a"
+    },
+    {
+      "bytes": 1691650,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000577_243231.fasta",
+      "sha256": "a7c5f82fe20d610984457ad01800538bafd2f96ff26a76c1d36bb8178512d22c"
+    },
+    {
+      "bytes": 1194544,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species11.fa",
+      "sha256": "6399ad5c7726f9bd38eecf26342cf18651cb300f359834d7dd1ceecb581d92d3"
+    },
+    {
+      "bytes": 14325720,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000589_10090.fasta",
+      "sha256": "f6e080958003abfa54718f9465127a8225661fab1ad0738cc9301ad0d0a5c49f"
+    },
+    {
+      "bytes": 12134694,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species12.fa",
+      "sha256": "37c0c11fea7b4f5484c7e225536542a6923f7e8000871a34229efa1132b77469"
+    },
+    {
+      "bytes": 22935217,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000600_5888.fasta",
+      "sha256": "2c6e376eaef0557f11773edbe0638976100072cf8f4cbb42abc162e4b99bf6ad"
+    },
+    {
+      "bytes": 18712521,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species13.fa",
+      "sha256": "ffb753bb6b3c2425fa4b9b28cc35b9e5ed9c6386ebb7703fa5e2fd921cdbbda7"
+    },
+    {
+      "bytes": 1888168,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000625_83333.fasta",
+      "sha256": "d2703103c23f29528dd676f99fc4877918893440bb20f1d99af9f076998719cb"
+    },
+    {
+      "bytes": 1417332,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species14.fa",
+      "sha256": "1b48bcbcde195b68497a232df23bb7d117af4522f2160c0a11eca592f156d916"
+    },
+    {
+      "bytes": 947254,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000718_289376.fasta",
+      "sha256": "1cfa8c64373a2bac386b33370a77b5302fb9a4088395d1ddcbe740c6d4b7455d"
+    },
+    {
+      "bytes": 636744,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species15.fa",
+      "sha256": "139c76fc0bda3c8d3a4ec41902f29bdac7570f10e60ae2a29cabb3be4dc381e5"
+    },
+    {
+      "bytes": 735425,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000792_436308.fasta",
+      "sha256": "71bc4301d1e1cfac3f22ccebaa1d42ab37bcb5f70251581483ba2192f5be19ae"
+    },
+    {
+      "bytes": 517801,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species16.fa",
+      "sha256": "2373b9d160d80979d87a4f57f20e10ee678479178db2334948259b85b0ed40a9"
+    },
+    {
+      "bytes": 681404,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000798_224324.fasta",
+      "sha256": "f675127545b691945a425c5ca99cbcff0530c11e9ac59acc5053ed58d962bebd"
+    },
+    {
+      "bytes": 510773,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species17.fa",
+      "sha256": "e46f15edd58fc49c6e956c0c80bfafa154c115bb073bc386294d6e7ba67d2801"
+    },
+    {
+      "bytes": 9194699,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000803_7227.fasta",
+      "sha256": "d1fb760ceb1448993f0fc6b4db10dd700b9d85a0ad7927cee82c2c3034b702e0"
+    },
+    {
+      "bytes": 7659608,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species18.fa",
+      "sha256": "a206864b751cb63bfea1dc014c6ee469cac821190edb02c3044b15d79a51c488"
+    },
+    {
+      "bytes": 893349,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000805_243232.fasta",
+      "sha256": "03fb0b065db8f55c54253a097ad17053985029e1fe2416da493f7989e90376a9"
+    },
+    {
+      "bytes": 529445,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species19.fa",
+      "sha256": "aaa648ce18566565c8f6c71163fdd0f0ec3e03228000ed5a217bad62d27d55b6"
+    },
+    {
+      "bytes": 251571,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000807_243273.fasta",
+      "sha256": "43f6d3e78d43964a2f82bc3b26687a2828fa0305b17bdaa40e29eff5e472b44a"
+    },
+    {
+      "bytes": 184007,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species20.fa",
+      "sha256": "4786b7256eb9c15096b2af14408137b3aee73d64326f89937b27b9997e740f3e"
+    },
+    {
+      "bytes": 3408710,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001025_243090.fasta",
+      "sha256": "33f51ff55213e0cb89758f6992c6f1117d7fdf19ae583623441c730b775f767a"
+    },
+    {
+      "bytes": 2396118,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species21.fa",
+      "sha256": "2bff82173ba659a5703b86e46d744e8dca11c9257004726c52cf2a4d8d8f0167"
+    },
+    {
+      "bytes": 16930435,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001038_8090.fasta",
+      "sha256": "f00b596e5e4f8fbbaa635ddea50d380c1c4e2a08646ab502c682bfe05a352fe0"
+    },
+    {
+      "bytes": 13581877,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species22.fa",
+      "sha256": "5d592d838bd97f4d285656cf75620b53f750f8d3c70eba15637a519674c952b1"
+    },
+    {
+      "bytes": 9426972,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001055_321614.fasta",
+      "sha256": "270150ee0b6379b82f11e30268c2387851532e8929a2f3d36c48555729e9d7a3"
+    },
+    {
+      "bytes": 6335182,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species23.fa",
+      "sha256": "b74063fbfe3d2feee8cee8a3db8de11779f2d22c67437681767e164d5533838b"
+    },
+    {
+      "bytes": 4227407,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001300_284591.fasta",
+      "sha256": "af6ab878a823813f1c289e7bed5473ec1e04eb671843e74bc7c339e0895dd667"
+    },
+    {
+      "bytes": 3233734,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species24.fa",
+      "sha256": "17209780767d22f2b7c26481d3fd8b5bb24e1bea440c67f5987b6788bed87f71"
+    },
+    {
+      "bytes": 8046794,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001312_665079.fasta",
+      "sha256": "4f6ad7ab273f0ddb20fe0b8fa1a5bd38cd1d634fa8b2dd0362f59554e1005581"
+    },
+    {
+      "bytes": 5470753,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species25.fa",
+      "sha256": "9af8b28695f1029940f0d31c67e173f849880932975847823ea60f817300bdb0"
+    },
+    {
+      "bytes": 6818528,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001357_81824.fasta",
+      "sha256": "b97cb3eb5edb17a2e6c75d10b07532d19d699d2c4724d79c1171a9f5cbcce7d8"
+    },
+    {
+      "bytes": 5689939,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species26.fa",
+      "sha256": "c45660a7d46bc432da85522f46e2e2c271407946fdc3871b04de29b35a025e3b"
+    },
+    {
+      "bytes": 1796739,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001408_189518.fasta",
+      "sha256": "2fb96698804ba40fa25be324b14097ddf2612ce3bdf9c4bec6af090820348a2d"
+    },
+    {
+      "bytes": 1212906,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species27.fa",
+      "sha256": "43e8cc45f19618309452b5331905dddb3f17b3d30b821579055717018457d375"
+    },
+    {
+      "bytes": 2754487,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001414_226186.fasta",
+      "sha256": "785e96ffb85082a7705a9b75a2f53590e1d1ebfd57bdfdf010702580d8d2a7fd"
+    },
+    {
+      "bytes": 1939847,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species28.fa",
+      "sha256": "5c45506a0db7cf93709596ae186aa1a5ec5fe156043f8f2ab20b6ac378a306fd"
+    },
+    {
+      "bytes": 1605070,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001425_1111708.fasta",
+      "sha256": "654bdc865925d6fc2c3f2929db5e64945705b013645ea2e869e2c6eb827899fe"
+    },
+    {
+      "bytes": 1173646,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species29.fa",
+      "sha256": "c4b69c7f1fef55b16b91731ddf1f194f7c373ae762e484120da85386aa6127c6"
+    },
+    {
+      "bytes": 7707976,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001449_35128.fasta",
+      "sha256": "d434bcb16231f6f18289897fb2395d787ba17ea4f3c33251953ca011c97675f6"
+    },
+    {
+      "bytes": 6032619,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species30.fa",
+      "sha256": "b5fefd52c96401222569264ec1abd74de0d82403198b521de8cef20dae451a8a"
+    },
+    {
+      "bytes": 4900628,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001450_36329.fasta",
+      "sha256": "32e3b2ca68ffaa00151033a887a630f06d367b04979c1bafef95a9fee2f83ad8"
+    },
+    {
+      "bytes": 4241980,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species31.fa",
+      "sha256": "fc281cee0c8cd34614fdd51b9fce047f634f12f1e47316ccf6257398b2af8b8d"
+    },
+    {
+      "bytes": 14493737,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001519_9595.fasta",
+      "sha256": "43f3f3a5282aaa0fc88761995bcf495420988692eb487a996f9273611475a7c3"
+    },
+    {
+      "bytes": 11593235,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species32.fa",
+      "sha256": "87d4c77ac1bb12fee735ac158ed2a6c537abaac14b3164196146ea45cf9ed565"
+    },
+    {
+      "bytes": 22894987,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001542_5722.fasta",
+      "sha256": "9107d40ff24d6739a43906e3d1d5e9b7dda58e13b8255598c13ef5417b538d27"
+    },
+    {
+      "bytes": 17855286,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species33.fa",
+      "sha256": "f13bf6501da239b58f29cdea515ed5bc360087bea0f31fe0cb71583d95df9ffb"
+    },
+    {
+      "bytes": 5159827,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001548_184922.fasta",
+      "sha256": "3fee04dc24bcd0b388e54f0452afcc32ba0c8507fc64535072d4eaf518f5a9b6"
+    },
+    {
+      "bytes": 3918611,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species34.fa",
+      "sha256": "1d5b543b39427ae27b9f7fd45944268ecddafe8a171600f73a7ef8d828d6827f"
+    },
+    {
+      "bytes": 17711164,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001554_7739.fasta",
+      "sha256": "a5e0d52fa4c13e6adb86f520e28154e90a63ffbc8491d083441cb3cf077c437f"
+    },
+    {
+      "bytes": 13757147,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species35.fa",
+      "sha256": "0e980c96886d4ea113cb83638544d28baef89c67c8cecb6387228b6d6c04153c"
+    },
+    {
+      "bytes": 8736835,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001555_6945.fasta",
+      "sha256": "c4a2dee9e41b11d5c83e599b6985ddfceb77e58d649230d9dfed42817cd88f3d"
+    },
+    {
+      "bytes": 6116013,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species36.fa",
+      "sha256": "d8c412e2fabcdb038ad9d56c52e3372c3a12ff92b64f511f48089edfdc9d1bfc"
+    },
+    {
+      "bytes": 1765604,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001570_224308.fasta",
+      "sha256": "69b7b24b9a37ce6057ca6c6e12fd4a74ebb525c0fdb46f3eafe4e711a3fa2350"
+    },
+    {
+      "bytes": 1294270,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species37.fa",
+      "sha256": "dcb8f1592ef2504a3fad1ab58c9f25e76ef2b81c27afa8ba7f644c357e5ccc57"
+    },
+    {
+      "bytes": 1938145,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001584_83332.fasta",
+      "sha256": "1dcacf3edfced65336343ee5214fbdb5f34a43ced3bed962a511a215fa679b7c"
+    },
+    {
+      "bytes": 1390654,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species38.fa",
+      "sha256": "fd7f647a698e98a37ea4cb699c9c9010cc764e2c018a905e176d835f31c5d3cc"
+    },
+    {
+      "bytes": 11832587,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001593_45351.fasta",
+      "sha256": "d89487a9192abd3dfaa70b9b3957d181dd4f9b7a2985af68ca4867c46d9498a2"
+    },
+    {
+      "bytes": 8641304,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species39.fa",
+      "sha256": "c13bd581a5ff91eadfb79bb7d04eca2e667d427ee226d3b946dc10eb34dc4394"
+    },
+    {
+      "bytes": 691112,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001686_374847.fasta",
+      "sha256": "b2a9d42b66367a40ed37bc119c782e8f036e5beef35c5bd30f2cb1ec3dde9371"
+    },
+    {
+      "bytes": 497047,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species40.fa",
+      "sha256": "5fae088508cc93efbb749c62d8c1b19517767aaea824f5a4461e003eb6e42ab5"
+    },
+    {
+      "bytes": 6747907,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001805_367110.fasta",
+      "sha256": "4a314661cc7f55cebea98b3875538142c93f182464f2636bd4a5c03ec8b94983"
+    },
+    {
+      "bytes": 5136348,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species41.fa",
+      "sha256": "3916b9b17bb1d6ad534d7fede32b2bcdc02b54bdf791453404da88716ae4b371"
+    },
+    {
+      "bytes": 10589689,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001940_6239.fasta",
+      "sha256": "679b2b181f22999dca02862c5cf62119a0b33ca35bd77996d271d91a7e725231"
+    },
+    {
+      "bytes": 8461622,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species42.fa",
+      "sha256": "7ed657f787bba4ec6589be22ce809d5602c4e9f74624c5553fa163446270e70d"
+    },
+    {
+      "bytes": 3885862,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001973_100226.fasta",
+      "sha256": "5c3ed14a93dac866cae612c46765d6e96117faf366994a53a902c4dafc65f2bc"
+    },
+    {
+      "bytes": 2748343,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species43.fa",
+      "sha256": "3b2e02bf9360fd5c1910895a2f6c510371776ec8984cfc1949ad15ad771446cd"
+    },
+    {
+      "bytes": 1403822,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001974_273057.fasta",
+      "sha256": "36d83a02febc6c60e6b34ecde9ba04f87d0c3fb34b519ad6f766a02a7f97e68d"
+    },
+    {
+      "bytes": 868469,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species44.fa",
+      "sha256": "939a89b3f84b8d2fe1bc9c46780e58c58b39757fb827eda29f1ccbc86da66afd"
+    },
+    {
+      "bytes": 2035360,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002008_324602.fasta",
+      "sha256": "efc93b616d84a056880930738b33bba444274b6ce74f11ee62dd58b24c518cca"
+    },
+    {
+      "bytes": 1464585,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species45.fa",
+      "sha256": "e6a44e6dbd3eaf522c1f55133e54ead4418bcda1be02bc2e3157917950d017a4"
+    },
+    {
+      "bytes": 4943601,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002149_214684.fasta",
+      "sha256": "87f832dd796637bc504e3368cc948c029bd32541f53bd2296ee6a66db91d540a"
+    },
+    {
+      "bytes": 3684172,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species46.fa",
+      "sha256": "ea91a9032aaa8a1c1cc6933982bfe0753cefd728600c0096f305755d14cf526f"
+    },
+    {
+      "bytes": 8696553,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002195_44689.fasta",
+      "sha256": "27127a8da8f620f4f0ba7ed29f2b58cb3fb6f8792d4e9b2144215567d3a409ac"
+    },
+    {
+      "bytes": 7093752,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species47.fa",
+      "sha256": "543d91946d5ba74a6f276125b20803c8f0235aff2e92da4dba830669366d29f7"
+    },
+    {
+      "bytes": 14659832,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002254_9615.fasta",
+      "sha256": "d8488bf283de653efcff2e5de6d413b116e1ba4a2eb89298bd31205e72fef682"
+    },
+    {
+      "bytes": 11982379,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species48.fa",
+      "sha256": "822be5cfa3f1333e5b04d9beb2fe4641086521fa56d44a36b8a6766f58d48d94"
+    },
+    {
+      "bytes": 14937257,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002277_9598.fasta",
+      "sha256": "62a7143e309037360c8ddef25c16d7006e802b555a5ffca1f97b96036871e973"
+    },
+    {
+      "bytes": 12383660,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species49.fa",
+      "sha256": "b8f62f34c9dc9e71d61f6119f8c27c7f0e8fb9dba3fcc19353232d5b7629e0a3"
+    },
+    {
+      "bytes": 14515060,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002280_13616.fasta",
+      "sha256": "36dfce6fdfaf16605430d6029c1e60c76318268b4ef02dcbb8dcb7bf87b03413"
+    },
+    {
+      "bytes": 11684363,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species50.fa",
+      "sha256": "8b5291a65837ca01673d9dbb34c403b7186f75bf894569315c0345148baaf881"
+    },
+    {
+      "bytes": 3951698,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002311_559292.fasta",
+      "sha256": "9ff39b833b1bf5b90224e720a728a6e66bd9bf8afce0b6f60c7d725cf85660e3"
+    },
+    {
+      "bytes": 3041619,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species51.fa",
+      "sha256": "e6aa55b9cf1bc98db75278c4f8ff02bd99a38339fc21cd48cccc7a86d5c78902"
+    },
+    {
+      "bytes": 3017721,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002438_208964.fasta",
+      "sha256": "0b16b29c4bafd2e02cdf2a80c1e2eac350088d7182886a2d08a5a0dba4e22694"
+    },
+    {
+      "bytes": 1940046,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species52.fa",
+      "sha256": "ba84a661a526345bf29666f644deb1a90c47f927a5ca459d0afe8227cea572fc"
+    },
+    {
+      "bytes": 3267394,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002485_284812.fasta",
+      "sha256": "d81a6419e51b3d082eb1a445ab6b62148082cc91226c9709149159606dc1ed34"
+    },
+    {
+      "bytes": 2471424,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species53.fa",
+      "sha256": "d196e530780a8c63c3fa7a78458a6ab4dd2da20d47193669a76a45ad597464b3"
+    },
+    {
+      "bytes": 2151697,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002487_188937.fasta",
+      "sha256": "7b1edc42faf925b5bf6da8c20fcf499e7f2ed911745b7db1972a0dfccc05c73f"
+    },
+    {
+      "bytes": 1456891,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species54.fa",
+      "sha256": "8f8947d284fe6966a54074a0cbe47e0a7f71392332122d7632e80e9e2e1a45e0"
+    },
+    {
+      "bytes": 13689269,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002494_10116.fasta",
+      "sha256": "cb66110798a35c366c1ed98a10754f7cd1caea00a6716a361803c0fbef468828"
+    },
+    {
+      "bytes": 11480561,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species55.fa",
+      "sha256": "9aacc8861eec0582c92b5298ce7d3cb11aa952053869c93e845110c921a32fe3"
+    },
+    {
+      "bytes": 1032140,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002521_190304.fasta",
+      "sha256": "7bf98ba1b998df6cb176cce4620ba53d196463c86b31836c1a695773e33b8681"
+    },
+    {
+      "bytes": 670082,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species56.fa",
+      "sha256": "bbf91c7da4e99ef8ecb94a0337f481effe5f0cb8a8a0b6106aa6d6d36dde8359"
+    },
+    {
+      "bytes": 1621284,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002524_243230.fasta",
+      "sha256": "9890cd413fbd3d939be31da532152aa4fd13d4a0711c953d943be90ee0ee5cd7"
+    },
+    {
+      "bytes": 993298,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species57.fa",
+      "sha256": "efe41c1357a05b4385df53589fce5194ed84baa6f23ca5d0fe6edd81182be4bf"
+    },
+    {
+      "bytes": 4076786,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002526_224911.fasta",
+      "sha256": "0ad121003ad2c94fae40263d56f8afb103dca9f9420da6e1b0aff43646136b2c"
+    },
+    {
+      "bytes": 2737353,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species58.fa",
+      "sha256": "989833ff54abfdcf6daf80732cf4b1eae19a0586de71c8d013fbbd43a31821e3"
+    },
+    {
+      "bytes": 6731535,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002530_330879.fasta",
+      "sha256": "449cb49b9e78e085d21e2d84c0fd5dc4ce9a7684fda774b173e732b76eedee81"
+    },
+    {
+      "bytes": 4912428,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species59.fa",
+      "sha256": "54d97f16e0ac4c15234f76835440f4a68cdebe2f35267760d412878e1857ee30"
+    },
+    {
+      "bytes": 9603190,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000005238_164328.fasta",
+      "sha256": "afc8998d21f105bef3c0b32f3b88900009d84c2a0743d6669542588a5adab882"
+    },
+    {
+      "bytes": 7654625,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species60.fa",
+      "sha256": "94e5bb62748c272041763daeeccb7005d07901f2e634effb004866fd0e4c3013"
+    },
+    {
+      "bytes": 13831073,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000005640_9606.fasta",
+      "sha256": "3793b9bfcc956a278494734bb775a010513f5764d8047fcdb283d2aeaa7fefb8"
+    },
+    {
+      "bytes": 11790213,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species61.fa",
+      "sha256": "7bff411b32ccc823b5ad6231bf7fbfa6d3cd5679f99758f362d99a998525d13d"
+    },
+    {
+      "bytes": 14992908,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000006548_3702.fasta",
+      "sha256": "7bd8ea7a2bc7610ba8b126af20b908bc5e2b26ec7a3ee4f2c307cdbe47ae4f69"
+    },
+    {
+      "bytes": 11611956,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species62.fa",
+      "sha256": "2e5cf238dbf89ffa129426100ed2f8ec0fa6b09768cdbbcbdaf192b6ecd604e9"
+    },
+    {
+      "bytes": 15834974,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000006727_3218.fasta",
+      "sha256": "1e033648a1b892a50ab36b368650adb3deda9dfd7cd11021222415f2cda6c666"
+    },
+    {
+      "bytes": 11848442,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species63.fa",
+      "sha256": "878e15056b7c4c2234d2ca961258532f4c25bc4a8a159577e8eab18b4dfd3529"
+    },
+    {
+      "bytes": 15884352,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000006906_3055.fasta",
+      "sha256": "ff283d887791065dc5e57304329b206eec528b77b9e34f99bd6d57d5e45deeb3"
+    },
+    {
+      "bytes": 13406481,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species64.fa",
+      "sha256": "8294f0bcf754fe5515e54aac33bf6ae408f49c18a328a04020c1652351cc2c7f"
+    },
+    {
+      "bytes": 8249868,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000007062_7165.fasta",
+      "sha256": "666f1a0fd6072d3c135a3c5aab4ab429faf18e5dc36bdca629c03039d0d40e95"
+    },
+    {
+      "bytes": 6758282,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species65.fa",
+      "sha256": "26ad296fccd48f3fab354ea227b519180c006e1ca62a5c9479ebbe5b87f3f522"
+    },
+    {
+      "bytes": 5476187,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000007241_684364.fasta",
+      "sha256": "7f2e663ee8619918a7a23691e98746ae75468d99b198a91c90c40c820dc5344b"
+    },
+    {
+      "bytes": 4033319,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species66.fa",
+      "sha256": "db3a82fbc81ee0758f85f94da2cd24ac0e33bc20dca9bd46bff07de78118943f"
+    },
+    {
+      "bytes": 9783004,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000007266_7070.fasta",
+      "sha256": "beeb87f418e54e060f0fb666e25dfc70290913ac330c24dc733f0c6082db2cbc"
+    },
+    {
+      "bytes": 7786945,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species67.fa",
+      "sha256": "09592cb5161c7be827f2526e3d6d95b796e4a8376c4d84a6d968d7e03b773ba9"
+    },
+    {
+      "bytes": 20264591,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000007305_4577.fasta",
+      "sha256": "50dc9b32d342d62df8d1f12e2313b1e31fdc3d5df2579e30c6ce67a205a08f69"
+    },
+    {
+      "bytes": 16098051,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species68.fa",
+      "sha256": "bcff68795a875d29a2d90771d6f089b9f635de8f41c2caba7a23e0a6d1bd6ebe"
+    },
+    {
+      "bytes": 828608,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000007719_515635.fasta",
+      "sha256": "2dedcacc25ecc95085bc08aa3deb6045f5c2e0d2f8b377e6ae79d9ccb95f84ab"
+    },
+    {
+      "bytes": 596648,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species69.fa",
+      "sha256": "a7018ac2b3525a5cdbf28bffda9101df4ac753a4a84c80ee35ed833f3b2ee605"
+    },
+    {
+      "bytes": 6502463,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000008143_8364.fasta",
+      "sha256": "924f7d0ab9f197d8e1108394ae82d8c947c08172890f6ddf91d17513711ad6e3"
+    },
+    {
+      "bytes": 5090478,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species70.fa",
+      "sha256": "586b8e58978d093ea67dc89735bc201bb7700039435822c3efe05e69a2d24469"
+    },
+    {
+      "bytes": 8137668,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000008144_7719.fasta",
+      "sha256": "8ae1739170a42861452f20ae445fa36b8778b2caa2308c64072b78fa1038714f"
+    },
+    {
+      "bytes": 5623885,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species71.fa",
+      "sha256": "1fdc30355692f03b24f078791ebcbf8f130400d8161944a12a3ab8e17e697370"
+    },
+    {
+      "bytes": 888794,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000008183_243274.fasta",
+      "sha256": "663bb2a7f2ec5f8f8095a49ac65238ba49bdda1971b4b0e783451f7d6f57dccc"
+    },
+    {
+      "bytes": 608991,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species72.fa",
+      "sha256": "988b111357ecc7953a4064fadde1b33a29b045f4d317d6824755b67a30dd8763"
+    },
+    {
+      "bytes": 9169683,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000008783_418459.fasta",
+      "sha256": "a70399a1a601ce3922264d46faa1664f645b4926c85b6ffa45d67042368140ee"
+    },
+    {
+      "bytes": 6441464,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species73.fa",
+      "sha256": "0aedd1f0abf94539ee0ccf47f18ed357a78e0bb076d64e7fa012287ef088f95d"
+    },
+    {
+      "bytes": 15134839,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000009136_9913.fasta",
+      "sha256": "f3f42d4a7aaf83f078cac49ab79247fb0e4227e20895fe57a57160cf67662fc6"
+    },
+    {
+      "bytes": 12732701,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species74.fa",
+      "sha256": "3b3fc33a72594dc2d7680516d3862c4a2e3c6c5099aec6a24a8a45b475bd0e68"
+    },
+    {
+      "bytes": 11829084,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000015101_6412.fasta",
+      "sha256": "b525ceb0b3973c17bdb9f100e23908faa897730a360c54d57ccba7767b2997a5"
+    },
+    {
+      "bytes": 9148346,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species75.fa",
+      "sha256": "0aa250b05b3202ff8a11e4640811dadea25b04439cfeb4b09d287565f587f4ac"
+    },
+    {
+      "bytes": 12920167,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000018468_7918.fasta",
+      "sha256": "6e1072b578631bdda17632ac5cf2cfe9efaecb47373a39d4032923349310e875"
+    },
+    {
+      "bytes": 10688304,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species76.fa",
+      "sha256": "184575e48239051e6240e29627e9205ebbd14bf25a535572b38a57369cb3356c"
+    },
+    {
+      "bytes": 19168339,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000059680_39947.fasta",
+      "sha256": "1bbd0d5781a1b9c56db31a57860d2cb0efa715a34af1f3bffe651055ee7ecff7"
+    },
+    {
+      "bytes": 14067089,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species77.fa",
+      "sha256": "82d685c29b54059fd944eca184d73c056a128f6d47c68b5f59d80af29939f769"
+    }
+  ],
+  "identical_sequences": 976504,
+  "limitations": [
+    "Retained internal inputs checked, not an independently authenticated historical execution trace.",
+    "No inference, orthology scoring or proof that all other comparator inputs match.",
+    "This verifies parity with original frozen inputs, not corrected-release compatibility."
+  ],
+  "proteomes": [
+    {
+      "differences": [],
+      "identical_sequences": 2001,
+      "internal": {
+        "bytes": 608835,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species0.fa",
+        "sha256": "fc8c8c21f42bd09b87dac64f5f8db028f3f003d510e5362fe6738366023ced95"
+      },
+      "original": {
+        "bytes": 866515,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000425_122586.fasta",
+        "sha256": "44e65ab28a7953f479bcb76200fab2c8387cff6e858db2e5722aa8df1707bd17"
+      },
+      "sequences": 2001,
+      "species_index": "0"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 1552,
+      "internal": {
+        "bytes": 512098,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species1.fa",
+        "sha256": "810577ca85ba65b56c5ecc77c64a8877ce830593b35c665c0d404079ebb7cd0e"
+      },
+      "original": {
+        "bytes": 747971,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000429_85962.fasta",
+        "sha256": "0ec2729c2f8bf8d30a19dd57ba1475b9d18d500a5ec76a132bcf8ae236c66707"
+      },
+      "sequences": 1552,
+      "species_index": "1"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 895,
+      "internal": {
+        "bytes": 323962,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species2.fa",
+        "sha256": "6b88012d2074e6b4dc62c968f9ceb09cd661e7c50090f68a76dd463a1fc5af8d"
+      },
+      "original": {
+        "bytes": 431542,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000431_272561.fasta",
+        "sha256": "aca397ad48dccf87b3abb81be206624f188a5138e3b05e63d8dc00e6c137df4c"
+      },
+      "sequences": 895,
+      "species_index": "2"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 25698,
+      "internal": {
+        "bytes": 14293347,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species3.fa",
+        "sha256": "c89a5ee9bf2f5866d6d11e5a28aa6e6eb5640972409f166080f29a8fc697350d"
+      },
+      "original": {
+        "bytes": 17560041,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000437_7955.fasta",
+        "sha256": "bb03b87acd02d80cf7a314c574403aa44f55eaec5f001378c55a7ecd933e9824"
+      },
+      "sequences": 25698,
+      "species_index": "3"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 2301,
+      "internal": {
+        "bytes": 666760,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species4.fa",
+        "sha256": "888d3aee3e082b5fa06e3e7df00cfcaba4edcba84f68dccac2e0d9ac969f6aad"
+      },
+      "original": {
+        "bytes": 1103434,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000536_69014.fasta",
+        "sha256": "b26340fef2e61ac14d10dd1052211179f90d349c499ded050917771e2d810ba8"
+      },
+      "sequences": 2301,
+      "species_index": "4"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 18116,
+      "internal": {
+        "bytes": 10445355,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species5.fa",
+        "sha256": "346cb16ca04b505cae42e7f2ef2e8564a62615c1e936114fe5709f430560c5e1"
+      },
+      "original": {
+        "bytes": 12363309,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000539_9031.fasta",
+        "sha256": "ed643bb510ba24ec152766ff3aaea8caf9e55046d78c4482f0a0d66c8bbb959b"
+      },
+      "sequences": 18116,
+      "species_index": "5"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 8038,
+      "internal": {
+        "bytes": 5295962,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species6.fa",
+        "sha256": "2a20e813eaa894cc3c96d6309f2e8a3012f0cb14457671487bef8724a0132eae"
+      },
+      "original": {
+        "bytes": 6097084,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000542_5664.fasta",
+        "sha256": "beaf76923a8f070d4d8fc682a5fd036375e8ece4452c279a95c562497c8d67e3"
+      },
+      "sequences": 8038,
+      "species_index": "6"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 2423,
+      "internal": {
+        "bytes": 710668,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species7.fa",
+        "sha256": "d249fea678986e477fc974971e72cf36d796f1c3e69b6319fa45d4a91a6161e0"
+      },
+      "original": {
+        "bytes": 1120386,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000554_64091.fasta",
+        "sha256": "46f30b935c0501b9a9f3780ddf0dfdf3719a649ad9a77899b26f4b896a2287d2"
+      },
+      "sequences": 2423,
+      "species_index": "7"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 4406,
+      "internal": {
+        "bytes": 1436956,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species8.fa",
+        "sha256": "06987ab1730edee875e6e74623684788139b7d99a74cc08d35de21c449926185"
+      },
+      "original": {
+        "bytes": 2010766,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000557_251221.fasta",
+        "sha256": "c647be279e92435bf7d4dbfd66217c2979e128e56da3a3835adf91eb49df0a1b"
+      },
+      "sequences": 4406,
+      "species_index": "8"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 6035,
+      "internal": {
+        "bytes": 3081877,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species9.fa",
+        "sha256": "1d870585bfb5eb5e0f4f3b44ad5d4564ef67caf26127b4049aac5cc563c51019"
+      },
+      "original": {
+        "bytes": 3954181,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000559_237561.fasta",
+        "sha256": "29903baf6bcd940665d4245b28d2518f4257419ef12169c6875317e5bc3ead1d"
+      },
+      "sequences": 6035,
+      "species_index": "9"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 6788,
+      "internal": {
+        "bytes": 4128264,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species10.fa",
+        "sha256": "6be0d5d29336749aeaa688accdf6fc4ad8c10278be15178d8499672a5385944a"
+      },
+      "original": {
+        "bytes": 5172817,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000561_237631.fasta",
+        "sha256": "f23613a13bc78e1c7d673b96d65fbdd73bbd47c9153e4ea2323ef6d7f0b9fa8c"
+      },
+      "sequences": 6788,
+      "species_index": "10"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 3402,
+      "internal": {
+        "bytes": 1194544,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species11.fa",
+        "sha256": "6399ad5c7726f9bd38eecf26342cf18651cb300f359834d7dd1ceecb581d92d3"
+      },
+      "original": {
+        "bytes": 1691650,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000577_243231.fasta",
+        "sha256": "a7c5f82fe20d610984457ad01800538bafd2f96ff26a76c1d36bb8178512d22c"
+      },
+      "sequences": 3402,
+      "species_index": "11"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 21989,
+      "internal": {
+        "bytes": 12134694,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species12.fa",
+        "sha256": "37c0c11fea7b4f5484c7e225536542a6923f7e8000871a34229efa1132b77469"
+      },
+      "original": {
+        "bytes": 14325720,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000589_10090.fasta",
+        "sha256": "f6e080958003abfa54718f9465127a8225661fab1ad0738cc9301ad0d0a5c49f"
+      },
+      "sequences": 21989,
+      "species_index": "12"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 39461,
+      "internal": {
+        "bytes": 18712521,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species13.fa",
+        "sha256": "ffb753bb6b3c2425fa4b9b28cc35b9e5ed9c6386ebb7703fa5e2fd921cdbbda7"
+      },
+      "original": {
+        "bytes": 22935217,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000600_5888.fasta",
+        "sha256": "2c6e376eaef0557f11773edbe0638976100072cf8f4cbb42abc162e4b99bf6ad"
+      },
+      "sequences": 39461,
+      "species_index": "13"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 4391,
+      "internal": {
+        "bytes": 1417332,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species14.fa",
+        "sha256": "1b48bcbcde195b68497a232df23bb7d117af4522f2160c0a11eca592f156d916"
+      },
+      "original": {
+        "bytes": 1888168,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000625_83333.fasta",
+        "sha256": "d2703103c23f29528dd676f99fc4877918893440bb20f1d99af9f076998719cb"
+      },
+      "sequences": 4391,
+      "species_index": "14"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 1982,
+      "internal": {
+        "bytes": 636744,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species15.fa",
+        "sha256": "139c76fc0bda3c8d3a4ec41902f29bdac7570f10e60ae2a29cabb3be4dc381e5"
+      },
+      "original": {
+        "bytes": 947254,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000718_289376.fasta",
+        "sha256": "1cfa8c64373a2bac386b33370a77b5302fb9a4088395d1ddcbe740c6d4b7455d"
+      },
+      "sequences": 1982,
+      "species_index": "15"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 1795,
+      "internal": {
+        "bytes": 517801,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species16.fa",
+        "sha256": "2373b9d160d80979d87a4f57f20e10ee678479178db2334948259b85b0ed40a9"
+      },
+      "original": {
+        "bytes": 735425,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000792_436308.fasta",
+        "sha256": "71bc4301d1e1cfac3f22ccebaa1d42ab37bcb5f70251581483ba2192f5be19ae"
+      },
+      "sequences": 1795,
+      "species_index": "16"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 1553,
+      "internal": {
+        "bytes": 510773,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species17.fa",
+        "sha256": "e46f15edd58fc49c6e956c0c80bfafa154c115bb073bc386294d6e7ba67d2801"
+      },
+      "original": {
+        "bytes": 681404,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000798_224324.fasta",
+        "sha256": "f675127545b691945a425c5ca99cbcff0530c11e9ac59acc5053ed58d962bebd"
+      },
+      "sequences": 1553,
+      "species_index": "17"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 13811,
+      "internal": {
+        "bytes": 7659608,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species18.fa",
+        "sha256": "a206864b751cb63bfea1dc014c6ee469cac821190edb02c3044b15d79a51c488"
+      },
+      "original": {
+        "bytes": 9194699,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000803_7227.fasta",
+        "sha256": "d1fb760ceb1448993f0fc6b4db10dd700b9d85a0ad7927cee82c2c3034b702e0"
+      },
+      "sequences": 13811,
+      "species_index": "18"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 1787,
+      "internal": {
+        "bytes": 529445,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species19.fa",
+        "sha256": "aaa648ce18566565c8f6c71163fdd0f0ec3e03228000ed5a217bad62d27d55b6"
+      },
+      "original": {
+        "bytes": 893349,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000805_243232.fasta",
+        "sha256": "03fb0b065db8f55c54253a097ad17053985029e1fe2416da493f7989e90376a9"
+      },
+      "sequences": 1787,
+      "species_index": "19"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 483,
+      "internal": {
+        "bytes": 184007,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species20.fa",
+        "sha256": "4786b7256eb9c15096b2af14408137b3aee73d64326f89937b27b9997e740f3e"
+      },
+      "original": {
+        "bytes": 251571,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000000807_243273.fasta",
+        "sha256": "43f6d3e78d43964a2f82bc3b26687a2828fa0305b17bdaa40e29eff5e472b44a"
+      },
+      "sequences": 483,
+      "species_index": "20"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 7271,
+      "internal": {
+        "bytes": 2396118,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species21.fa",
+        "sha256": "2bff82173ba659a5703b86e46d744e8dca11c9257004726c52cf2a4d8d8f0167"
+      },
+      "original": {
+        "bytes": 3408710,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001025_243090.fasta",
+        "sha256": "33f51ff55213e0cb89758f6992c6f1117d7fdf19ae583623441c730b775f767a"
+      },
+      "sequences": 7271,
+      "species_index": "21"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 23617,
+      "internal": {
+        "bytes": 13581877,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species22.fa",
+        "sha256": "5d592d838bd97f4d285656cf75620b53f750f8d3c70eba15637a519674c952b1"
+      },
+      "original": {
+        "bytes": 16930435,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001038_8090.fasta",
+        "sha256": "f00b596e5e4f8fbbaa635ddea50d380c1c4e2a08646ab502c682bfe05a352fe0"
+      },
+      "sequences": 23617,
+      "species_index": "22"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 15998,
+      "internal": {
+        "bytes": 6335182,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species23.fa",
+        "sha256": "b74063fbfe3d2feee8cee8a3db8de11779f2d22c67437681767e164d5533838b"
+      },
+      "original": {
+        "bytes": 9426972,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001055_321614.fasta",
+        "sha256": "270150ee0b6379b82f11e30268c2387851532e8929a2f3d36c48555729e9d7a3"
+      },
+      "sequences": 15998,
+      "species_index": "23"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 6449,
+      "internal": {
+        "bytes": 3233734,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species24.fa",
+        "sha256": "17209780767d22f2b7c26481d3fd8b5bb24e1bea440c67f5987b6788bed87f71"
+      },
+      "original": {
+        "bytes": 4227407,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001300_284591.fasta",
+        "sha256": "af6ab878a823813f1c289e7bed5473ec1e04eb671843e74bc7c339e0895dd667"
+      },
+      "sequences": 6449,
+      "species_index": "24"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 14445,
+      "internal": {
+        "bytes": 5470753,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species25.fa",
+        "sha256": "9af8b28695f1029940f0d31c67e173f849880932975847823ea60f817300bdb0"
+      },
+      "original": {
+        "bytes": 8046794,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001312_665079.fasta",
+        "sha256": "4f6ad7ab273f0ddb20fe0b8fa1a5bd38cd1d634fa8b2dd0362f59554e1005581"
+      },
+      "sequences": 14445,
+      "species_index": "25"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 9188,
+      "internal": {
+        "bytes": 5689939,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species26.fa",
+        "sha256": "c45660a7d46bc432da85522f46e2e2c271407946fdc3871b04de29b35a025e3b"
+      },
+      "original": {
+        "bytes": 6818528,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001357_81824.fasta",
+        "sha256": "b97cb3eb5edb17a2e6c75d10b07532d19d699d2c4724d79c1171a9f5cbcce7d8"
+      },
+      "sequences": 9188,
+      "species_index": "26"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 3676,
+      "internal": {
+        "bytes": 1212906,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species27.fa",
+        "sha256": "43e8cc45f19618309452b5331905dddb3f17b3d30b821579055717018457d375"
+      },
+      "original": {
+        "bytes": 1796739,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001408_189518.fasta",
+        "sha256": "2fb96698804ba40fa25be324b14097ddf2612ce3bdf9c4bec6af090820348a2d"
+      },
+      "sequences": 3676,
+      "species_index": "27"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 4782,
+      "internal": {
+        "bytes": 1939847,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species28.fa",
+        "sha256": "5c45506a0db7cf93709596ae186aa1a5ec5fe156043f8f2ab20b6ac378a306fd"
+      },
+      "original": {
+        "bytes": 2754487,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001414_226186.fasta",
+        "sha256": "785e96ffb85082a7705a9b75a2f53590e1d1ebfd57bdfdf010702580d8d2a7fd"
+      },
+      "sequences": 4782,
+      "species_index": "28"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 3507,
+      "internal": {
+        "bytes": 1173646,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species29.fa",
+        "sha256": "c4b69c7f1fef55b16b91731ddf1f194f7c373ae762e484120da85386aa6127c6"
+      },
+      "original": {
+        "bytes": 1605070,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001425_1111708.fasta",
+        "sha256": "654bdc865925d6fc2c3f2929db5e64945705b013645ea2e869e2c6eb827899fe"
+      },
+      "sequences": 3507,
+      "species_index": "29"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 11717,
+      "internal": {
+        "bytes": 6032619,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species30.fa",
+        "sha256": "b5fefd52c96401222569264ec1abd74de0d82403198b521de8cef20dae451a8a"
+      },
+      "original": {
+        "bytes": 7707976,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001449_35128.fasta",
+        "sha256": "d434bcb16231f6f18289897fb2395d787ba17ea4f3c33251953ca011c97675f6"
+      },
+      "sequences": 11717,
+      "species_index": "30"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 5388,
+      "internal": {
+        "bytes": 4241980,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species31.fa",
+        "sha256": "fc281cee0c8cd34614fdd51b9fce047f634f12f1e47316ccf6257398b2af8b8d"
+      },
+      "original": {
+        "bytes": 4900628,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001450_36329.fasta",
+        "sha256": "32e3b2ca68ffaa00151033a887a630f06d367b04979c1bafef95a9fee2f83ad8"
+      },
+      "sequences": 5388,
+      "species_index": "31"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 21792,
+      "internal": {
+        "bytes": 11593235,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species32.fa",
+        "sha256": "87d4c77ac1bb12fee735ac158ed2a6c537abaac14b3164196146ea45cf9ed565"
+      },
+      "original": {
+        "bytes": 14493737,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001519_9595.fasta",
+        "sha256": "43f3f3a5282aaa0fc88761995bcf495420988692eb487a996f9273611475a7c3"
+      },
+      "sequences": 21792,
+      "species_index": "32"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 50190,
+      "internal": {
+        "bytes": 17855286,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species33.fa",
+        "sha256": "f13bf6501da239b58f29cdea515ed5bc360087bea0f31fe0cb71583d95df9ffb"
+      },
+      "original": {
+        "bytes": 22894987,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001542_5722.fasta",
+        "sha256": "9107d40ff24d6739a43906e3d1d5e9b7dda58e13b8255598c13ef5417b538d27"
+      },
+      "sequences": 50190,
+      "species_index": "33"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 7971,
+      "internal": {
+        "bytes": 3918611,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species34.fa",
+        "sha256": "1d5b543b39427ae27b9f7fd45944268ecddafe8a171600f73a7ef8d828d6827f"
+      },
+      "original": {
+        "bytes": 5159827,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001548_184922.fasta",
+        "sha256": "3fee04dc24bcd0b388e54f0452afcc32ba0c8507fc64535072d4eaf518f5a9b6"
+      },
+      "sequences": 7971,
+      "species_index": "34"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 28542,
+      "internal": {
+        "bytes": 13757147,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species35.fa",
+        "sha256": "0e980c96886d4ea113cb83638544d28baef89c67c8cecb6387228b6d6c04153c"
+      },
+      "original": {
+        "bytes": 17711164,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001554_7739.fasta",
+        "sha256": "a5e0d52fa4c13e6adb86f520e28154e90a63ffbc8491d083441cb3cf077c437f"
+      },
+      "sequences": 28542,
+      "species_index": "35"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 20473,
+      "internal": {
+        "bytes": 6116013,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species36.fa",
+        "sha256": "d8c412e2fabcdb038ad9d56c52e3372c3a12ff92b64f511f48089edfdc9d1bfc"
+      },
+      "original": {
+        "bytes": 8736835,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001555_6945.fasta",
+        "sha256": "c4a2dee9e41b11d5c83e599b6985ddfceb77e58d649230d9dfed42817cd88f3d"
+      },
+      "sequences": 20473,
+      "species_index": "36"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 4260,
+      "internal": {
+        "bytes": 1294270,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species37.fa",
+        "sha256": "dcb8f1592ef2504a3fad1ab58c9f25e76ef2b81c27afa8ba7f644c357e5ccc57"
+      },
+      "original": {
+        "bytes": 1765604,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001570_224308.fasta",
+        "sha256": "69b7b24b9a37ce6057ca6c6e12fd4a74ebb525c0fdb46f3eafe4e711a3fa2350"
+      },
+      "sequences": 4260,
+      "species_index": "37"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 3993,
+      "internal": {
+        "bytes": 1390654,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species38.fa",
+        "sha256": "fd7f647a698e98a37ea4cb699c9c9010cc764e2c018a905e176d835f31c5d3cc"
+      },
+      "original": {
+        "bytes": 1938145,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001584_83332.fasta",
+        "sha256": "1dcacf3edfced65336343ee5214fbdb5f34a43ced3bed962a511a215fa679b7c"
+      },
+      "sequences": 3993,
+      "species_index": "38"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 24428,
+      "internal": {
+        "bytes": 8641304,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species39.fa",
+        "sha256": "c13bd581a5ff91eadfb79bb7d04eca2e667d427ee226d3b946dc10eb34dc4394"
+      },
+      "original": {
+        "bytes": 11832587,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001593_45351.fasta",
+        "sha256": "d89487a9192abd3dfaa70b9b3957d181dd4f9b7a2985af68ca4867c46d9498a2"
+      },
+      "sequences": 24428,
+      "species_index": "39"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 1602,
+      "internal": {
+        "bytes": 497047,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species40.fa",
+        "sha256": "5fae088508cc93efbb749c62d8c1b19517767aaea824f5a4461e003eb6e42ab5"
+      },
+      "original": {
+        "bytes": 691112,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001686_374847.fasta",
+        "sha256": "b2a9d42b66367a40ed37bc119c782e8f036e5beef35c5bd30f2cb1ec3dde9371"
+      },
+      "sequences": 1602,
+      "species_index": "40"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 9759,
+      "internal": {
+        "bytes": 5136348,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species41.fa",
+        "sha256": "3916b9b17bb1d6ad534d7fede32b2bcdc02b54bdf791453404da88716ae4b371"
+      },
+      "original": {
+        "bytes": 6747907,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001805_367110.fasta",
+        "sha256": "4a314661cc7f55cebea98b3875538142c93f182464f2636bd4a5c03ec8b94983"
+      },
+      "sequences": 9759,
+      "species_index": "41"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 19819,
+      "internal": {
+        "bytes": 8461622,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species42.fa",
+        "sha256": "7ed657f787bba4ec6589be22ce809d5602c4e9f74624c5553fa163446270e70d"
+      },
+      "original": {
+        "bytes": 10589689,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001940_6239.fasta",
+        "sha256": "679b2b181f22999dca02862c5cf62119a0b33ca35bd77996d271d91a7e725231"
+      },
+      "sequences": 19819,
+      "species_index": "42"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 8038,
+      "internal": {
+        "bytes": 2748343,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species43.fa",
+        "sha256": "3b2e02bf9360fd5c1910895a2f6c510371776ec8984cfc1949ad15ad771446cd"
+      },
+      "original": {
+        "bytes": 3885862,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001973_100226.fasta",
+        "sha256": "5c3ed14a93dac866cae612c46765d6e96117faf366994a53a902c4dafc65f2bc"
+      },
+      "sequences": 8038,
+      "species_index": "43"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 2938,
+      "internal": {
+        "bytes": 868469,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species44.fa",
+        "sha256": "939a89b3f84b8d2fe1bc9c46780e58c58b39757fb827eda29f1ccbc86da66afd"
+      },
+      "original": {
+        "bytes": 1403822,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000001974_273057.fasta",
+        "sha256": "36d83a02febc6c60e6b34ecde9ba04f87d0c3fb34b519ad6f766a02a7f97e68d"
+      },
+      "sequences": 2938,
+      "species_index": "44"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 3850,
+      "internal": {
+        "bytes": 1464585,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species45.fa",
+        "sha256": "e6a44e6dbd3eaf522c1f55133e54ead4418bcda1be02bc2e3157917950d017a4"
+      },
+      "original": {
+        "bytes": 2035360,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002008_324602.fasta",
+        "sha256": "efc93b616d84a056880930738b33bba444274b6ce74f11ee62dd58b24c518cca"
+      },
+      "sequences": 3850,
+      "species_index": "45"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 6604,
+      "internal": {
+        "bytes": 3684172,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species46.fa",
+        "sha256": "ea91a9032aaa8a1c1cc6933982bfe0753cefd728600c0096f305755d14cf526f"
+      },
+      "original": {
+        "bytes": 4943601,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002149_214684.fasta",
+        "sha256": "87f832dd796637bc504e3368cc948c029bd32541f53bd2296ee6a66db91d540a"
+      },
+      "sequences": 6604,
+      "species_index": "46"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 12739,
+      "internal": {
+        "bytes": 7093752,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species47.fa",
+        "sha256": "543d91946d5ba74a6f276125b20803c8f0235aff2e92da4dba830669366d29f7"
+      },
+      "original": {
+        "bytes": 8696553,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002195_44689.fasta",
+        "sha256": "27127a8da8f620f4f0ba7ed29f2b58cb3fb6f8792d4e9b2144215567d3a409ac"
+      },
+      "sequences": 12739,
+      "species_index": "47"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 20649,
+      "internal": {
+        "bytes": 11982379,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species48.fa",
+        "sha256": "822be5cfa3f1333e5b04d9beb2fe4641086521fa56d44a36b8a6766f58d48d94"
+      },
+      "original": {
+        "bytes": 14659832,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002254_9615.fasta",
+        "sha256": "d8488bf283de653efcff2e5de6d413b116e1ba4a2eb89298bd31205e72fef682"
+      },
+      "sequences": 20649,
+      "species_index": "48"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 23053,
+      "internal": {
+        "bytes": 12383660,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species49.fa",
+        "sha256": "b8f62f34c9dc9e71d61f6119f8c27c7f0e8fb9dba3fcc19353232d5b7629e0a3"
+      },
+      "original": {
+        "bytes": 14937257,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002277_9598.fasta",
+        "sha256": "62a7143e309037360c8ddef25c16d7006e802b555a5ffca1f97b96036871e973"
+      },
+      "sequences": 23053,
+      "species_index": "49"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 21225,
+      "internal": {
+        "bytes": 11684363,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species50.fa",
+        "sha256": "8b5291a65837ca01673d9dbb34c403b7186f75bf894569315c0345148baaf881"
+      },
+      "original": {
+        "bytes": 14515060,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002280_13616.fasta",
+        "sha256": "36dfce6fdfaf16605430d6029c1e60c76318268b4ef02dcbb8dcb7bf87b03413"
+      },
+      "sequences": 21225,
+      "species_index": "50"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 6049,
+      "internal": {
+        "bytes": 3041619,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species51.fa",
+        "sha256": "e6aa55b9cf1bc98db75278c4f8ff02bd99a38339fc21cd48cccc7a86d5c78902"
+      },
+      "original": {
+        "bytes": 3951698,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002311_559292.fasta",
+        "sha256": "9ff39b833b1bf5b90224e720a728a6e66bd9bf8afce0b6f60c7d725cf85660e3"
+      },
+      "sequences": 6049,
+      "species_index": "51"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 5564,
+      "internal": {
+        "bytes": 1940046,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species52.fa",
+        "sha256": "ba84a661a526345bf29666f644deb1a90c47f927a5ca459d0afe8227cea572fc"
+      },
+      "original": {
+        "bytes": 3017721,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002438_208964.fasta",
+        "sha256": "0b16b29c4bafd2e02cdf2a80c1e2eac350088d7182886a2d08a5a0dba4e22694"
+      },
+      "sequences": 5564,
+      "species_index": "52"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 5141,
+      "internal": {
+        "bytes": 2471424,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species53.fa",
+        "sha256": "d196e530780a8c63c3fa7a78458a6ab4dd2da20d47193669a76a45ad597464b3"
+      },
+      "original": {
+        "bytes": 3267394,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002485_284812.fasta",
+        "sha256": "d81a6419e51b3d082eb1a445ab6b62148082cc91226c9709149159606dc1ed34"
+      },
+      "sequences": 5141,
+      "species_index": "53"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 4468,
+      "internal": {
+        "bytes": 1456891,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species54.fa",
+        "sha256": "8f8947d284fe6966a54074a0cbe47e0a7f71392332122d7632e80e9e2e1a45e0"
+      },
+      "original": {
+        "bytes": 2151697,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002487_188937.fasta",
+        "sha256": "7b1edc42faf925b5bf6da8c20fcf499e7f2ed911745b7db1972a0dfccc05c73f"
+      },
+      "sequences": 4468,
+      "species_index": "54"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 21587,
+      "internal": {
+        "bytes": 11480561,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species55.fa",
+        "sha256": "9aacc8861eec0582c92b5298ce7d3cb11aa952053869c93e845110c921a32fe3"
+      },
+      "original": {
+        "bytes": 13689269,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002494_10116.fasta",
+        "sha256": "cb66110798a35c366c1ed98a10754f7cd1caea00a6716a361803c0fbef468828"
+      },
+      "sequences": 21587,
+      "species_index": "55"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 2046,
+      "internal": {
+        "bytes": 670082,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species56.fa",
+        "sha256": "bbf91c7da4e99ef8ecb94a0337f481effe5f0cb8a8a0b6106aa6d6d36dde8359"
+      },
+      "original": {
+        "bytes": 1032140,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002521_190304.fasta",
+        "sha256": "7bf98ba1b998df6cb176cce4620ba53d196463c86b31836c1a695773e33b8681"
+      },
+      "sequences": 2046,
+      "species_index": "56"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 3085,
+      "internal": {
+        "bytes": 993298,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species57.fa",
+        "sha256": "efe41c1357a05b4385df53589fce5194ed84baa6f23ca5d0fe6edd81182be4bf"
+      },
+      "original": {
+        "bytes": 1621284,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002524_243230.fasta",
+        "sha256": "9890cd413fbd3d939be31da532152aa4fd13d4a0711c953d943be90ee0ee5cd7"
+      },
+      "sequences": 3085,
+      "species_index": "57"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 8253,
+      "internal": {
+        "bytes": 2737353,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species58.fa",
+        "sha256": "989833ff54abfdcf6daf80732cf4b1eae19a0586de71c8d013fbbd43a31821e3"
+      },
+      "original": {
+        "bytes": 4076786,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002526_224911.fasta",
+        "sha256": "0ad121003ad2c94fae40263d56f8afb103dca9f9420da6e1b0aff43646136b2c"
+      },
+      "sequences": 8253,
+      "species_index": "58"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 9647,
+      "internal": {
+        "bytes": 4912428,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species59.fa",
+        "sha256": "54d97f16e0ac4c15234f76835440f4a68cdebe2f35267760d412878e1857ee30"
+      },
+      "original": {
+        "bytes": 6731535,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000002530_330879.fasta",
+        "sha256": "449cb49b9e78e085d21e2d84c0fd5dc4ce9a7684fda774b173e732b76eedee81"
+      },
+      "sequences": 9647,
+      "species_index": "59"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 15349,
+      "internal": {
+        "bytes": 7654625,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species60.fa",
+        "sha256": "94e5bb62748c272041763daeeccb7005d07901f2e634effb004866fd0e4c3013"
+      },
+      "original": {
+        "bytes": 9603190,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000005238_164328.fasta",
+        "sha256": "afc8998d21f105bef3c0b32f3b88900009d84c2a0743d6669542588a5adab882"
+      },
+      "sequences": 15349,
+      "species_index": "60"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 20600,
+      "internal": {
+        "bytes": 11790213,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species61.fa",
+        "sha256": "7bff411b32ccc823b5ad6231bf7fbfa6d3cd5679f99758f362d99a998525d13d"
+      },
+      "original": {
+        "bytes": 13831073,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000005640_9606.fasta",
+        "sha256": "3793b9bfcc956a278494734bb775a010513f5764d8047fcdb283d2aeaa7fefb8"
+      },
+      "sequences": 20600,
+      "species_index": "61"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 27500,
+      "internal": {
+        "bytes": 11611956,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species62.fa",
+        "sha256": "2e5cf238dbf89ffa129426100ed2f8ec0fa6b09768cdbbcbdaf192b6ecd604e9"
+      },
+      "original": {
+        "bytes": 14992908,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000006548_3702.fasta",
+        "sha256": "7bd8ea7a2bc7610ba8b126af20b908bc5e2b26ec7a3ee4f2c307cdbe47ae4f69"
+      },
+      "sequences": 27500,
+      "species_index": "62"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 30857,
+      "internal": {
+        "bytes": 11848442,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species63.fa",
+        "sha256": "878e15056b7c4c2234d2ca961258532f4c25bc4a8a159577e8eab18b4dfd3529"
+      },
+      "original": {
+        "bytes": 15834974,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000006727_3218.fasta",
+        "sha256": "1e033648a1b892a50ab36b368650adb3deda9dfd7cd11021222415f2cda6c666"
+      },
+      "sequences": 30857,
+      "species_index": "63"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 17614,
+      "internal": {
+        "bytes": 13406481,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species64.fa",
+        "sha256": "8294f0bcf754fe5515e54aac33bf6ae408f49c18a328a04020c1652351cc2c7f"
+      },
+      "original": {
+        "bytes": 15884352,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000006906_3055.fasta",
+        "sha256": "ff283d887791065dc5e57304329b206eec528b77b9e34f99bd6d57d5e45deeb3"
+      },
+      "sequences": 17614,
+      "species_index": "64"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 12533,
+      "internal": {
+        "bytes": 6758282,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species65.fa",
+        "sha256": "26ad296fccd48f3fab354ea227b519180c006e1ca62a5c9479ebbe5b87f3f522"
+      },
+      "original": {
+        "bytes": 8249868,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000007062_7165.fasta",
+        "sha256": "666f1a0fd6072d3c135a3c5aab4ab429faf18e5dc36bdca629c03039d0d40e95"
+      },
+      "sequences": 12533,
+      "species_index": "65"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 8610,
+      "internal": {
+        "bytes": 4033319,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species66.fa",
+        "sha256": "db3a82fbc81ee0758f85f94da2cd24ac0e33bc20dca9bd46bff07de78118943f"
+      },
+      "original": {
+        "bytes": 5476187,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000007241_684364.fasta",
+        "sha256": "7f2e663ee8619918a7a23691e98746ae75468d99b198a91c90c40c820dc5344b"
+      },
+      "sequences": 8610,
+      "species_index": "66"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 16568,
+      "internal": {
+        "bytes": 7786945,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species67.fa",
+        "sha256": "09592cb5161c7be827f2526e3d6d95b796e4a8376c4d84a6d968d7e03b773ba9"
+      },
+      "original": {
+        "bytes": 9783004,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000007266_7070.fasta",
+        "sha256": "beeb87f418e54e060f0fb666e25dfc70290913ac330c24dc733f0c6082db2cbc"
+      },
+      "sequences": 16568,
+      "species_index": "67"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 39400,
+      "internal": {
+        "bytes": 16098051,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species68.fa",
+        "sha256": "bcff68795a875d29a2d90771d6f089b9f635de8f41c2caba7a23e0a6d1bd6ebe"
+      },
+      "original": {
+        "bytes": 20264591,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000007305_4577.fasta",
+        "sha256": "50dc9b32d342d62df8d1f12e2313b1e31fdc3d5df2579e30c6ce67a205a08f69"
+      },
+      "sequences": 39400,
+      "species_index": "68"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 1743,
+      "internal": {
+        "bytes": 596648,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species69.fa",
+        "sha256": "a7018ac2b3525a5cdbf28bffda9101df4ac753a4a84c80ee35ed833f3b2ee605"
+      },
+      "original": {
+        "bytes": 828608,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000007719_515635.fasta",
+        "sha256": "2dedcacc25ecc95085bc08aa3deb6045f5c2e0d2f8b377e6ae79d9ccb95f84ab"
+      },
+      "sequences": 1743,
+      "species_index": "69"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 9639,
+      "internal": {
+        "bytes": 5090478,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species70.fa",
+        "sha256": "586b8e58978d093ea67dc89735bc201bb7700039435822c3efe05e69a2d24469"
+      },
+      "original": {
+        "bytes": 6502463,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000008143_8364.fasta",
+        "sha256": "924f7d0ab9f197d8e1108394ae82d8c947c08172890f6ddf91d17513711ad6e3"
+      },
+      "sequences": 9639,
+      "species_index": "70"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 16678,
+      "internal": {
+        "bytes": 5623885,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species71.fa",
+        "sha256": "1fdc30355692f03b24f078791ebcbf8f130400d8161944a12a3ab8e17e697370"
+      },
+      "original": {
+        "bytes": 8137668,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000008144_7719.fasta",
+        "sha256": "8ae1739170a42861452f20ae445fa36b8778b2caa2308c64072b78fa1038714f"
+      },
+      "sequences": 16678,
+      "species_index": "71"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 1852,
+      "internal": {
+        "bytes": 608991,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species72.fa",
+        "sha256": "988b111357ecc7953a4064fadde1b33a29b045f4d317d6824755b67a30dd8763"
+      },
+      "original": {
+        "bytes": 888794,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000008183_243274.fasta",
+        "sha256": "663bb2a7f2ec5f8f8095a49ac65238ba49bdda1971b4b0e783451f7d6f57dccc"
+      },
+      "sequences": 1852,
+      "species_index": "72"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 15688,
+      "internal": {
+        "bytes": 6441464,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species73.fa",
+        "sha256": "0aedd1f0abf94539ee0ccf47f18ed357a78e0bb076d64e7fa012287ef088f95d"
+      },
+      "original": {
+        "bytes": 9169683,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000008783_418459.fasta",
+        "sha256": "a70399a1a601ce3922264d46faa1664f645b4926c85b6ffa45d67042368140ee"
+      },
+      "sequences": 15688,
+      "species_index": "73"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 23845,
+      "internal": {
+        "bytes": 12732701,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species74.fa",
+        "sha256": "3b3fc33a72594dc2d7680516d3862c4a2e3c6c5099aec6a24a8a45b475bd0e68"
+      },
+      "original": {
+        "bytes": 15134839,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000009136_9913.fasta",
+        "sha256": "f3f42d4a7aaf83f078cac49ab79247fb0e4227e20895fe57a57160cf67662fc6"
+      },
+      "sequences": 23845,
+      "species_index": "74"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 23328,
+      "internal": {
+        "bytes": 9148346,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species75.fa",
+        "sha256": "0aa250b05b3202ff8a11e4640811dadea25b04439cfeb4b09d287565f587f4ac"
+      },
+      "original": {
+        "bytes": 11829084,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000015101_6412.fasta",
+        "sha256": "b525ceb0b3973c17bdb9f100e23908faa897730a360c54d57ccba7767b2997a5"
+      },
+      "sequences": 23328,
+      "species_index": "75"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 18318,
+      "internal": {
+        "bytes": 10688304,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species76.fa",
+        "sha256": "184575e48239051e6240e29627e9205ebbd14bf25a535572b38a57369cb3356c"
+      },
+      "original": {
+        "bytes": 12920167,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000018468_7918.fasta",
+        "sha256": "6e1072b578631bdda17632ac5cf2cfe9efaecb47373a39d4032923349310e875"
+      },
+      "sequences": 18318,
+      "species_index": "76"
+    },
+    {
+      "differences": [],
+      "identical_sequences": 43672,
+      "internal": {
+        "bytes": 14067089,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species77.fa",
+        "sha256": "82d685c29b54059fd944eca184d73c056a128f6d47c68b5f59d80af29939f769"
+      },
+      "original": {
+        "bytes": 19168339,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/input/UP000059680_39947.fasta",
+        "sha256": "1bbd0d5781a1b9c56db31a57860d2cb0efa715a34af1f3bffe651055ee7ecff7"
+      },
+      "sequences": 43672,
+      "species_index": "77"
+    }
+  ],
+  "sequence_difference_count": 0,
+  "source": {
+    "bytes": 5598,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_orthofinder_input_parity.py",
+    "sha256": "2a67d9bcbce6b9a81c64e647989a3a47322a97c58b93b5c5b4cfd7c51b158d6d"
+  },
+  "status": "retained_orthofinder_input_sequences_compared",
+  "total_sequences": 976504,
+  "working_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/results/orthofinder_v3_diamond/run/input/OrthoFinder/Results_Jul15/WorkingDirectory"
+}
