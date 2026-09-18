@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Canonical Native Output Comparisons Prepared (2026-09-18 UTC)
+
+Previous turn made progress through4d8a0ac with failure-preserving paired
+arithmetic. Reread the full objective and verified live jobs using only the
+local scheduler. Latest:21706_0running18:46:17;21838_0running07:22;
+remaining overhead tasks and21706_1pending. No DGX remote calls or partial
+overhead output inspection occurred.
+
+Added canonical native-output fingerprints using the existing strict
+group, checkpoint and pair adapters. Compare complete OrthoHMM partitions,
+satellite root-HOGs/native pair sets, and OrthoFinder checkpoint/native pair
+sets. Digests ignore group labels, member/row order and pair orientation,
+but detect changed memberships. Frozen input species mappings are included.
+Source/helper identities and input/output hashes remain separate evidence;
+files are rechecked after parsing to reject changes during fingerprinting.
+
+These are output-equivalence identities, not proof of identical internal
+computational work or biological correctness. Pair fingerprints deduplicate
+sets; native-format duplicate validation remains a separate admission gate.
+Command completion/runtime/scheduler validation is still required. No active
+panel result is inferred from this helper or from older smoke outputs.
+
+116 focused tests pass, including24 new tests for invalid/missing/duplicate
+memberships, pair endpoints, canonical encoding, portable OrthoFinder table
+completeness/orientation agreement, source mutation, and all three retained
+completed645-protein native outputs. None skipped in this environment.
+Next: integrate task-level native/provenance/replay audit with these identities
+and the paired kernel, preserving all failure outcomes after full terminal
+scheduler confirmation. No scientific timing claim is enabled yet.
+
 ## Failure-Preserving Overhead Arithmetic Prepared (2026-09-18 UTC)
 
 Previous turn made progress throughee46776 with the authorized paired array
