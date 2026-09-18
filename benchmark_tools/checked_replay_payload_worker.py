@@ -14,6 +14,31 @@ STAGES = ("initial", "multipass", "profile_base", "profile_expanded")
 FILES = ("gene_names.txt", "sources.npy", "targets.npy", "weights.npy", "metadata.json")
 
 
+def corrected_evidence(plan_path, expected_sha):
+    plan_record = record(plan_path)
+    if plan_record["sha256"] != expected_sha:
+        raise ValueError("Corrected replay plan hash differs")
+    plan = json.loads(plan_path.read_text())
+    if (plan.get("status") != "corrected_replay_command_frozen_unrun"
+            or plan.get("accuracy_evaluated") is not False or plan.get("execution_authorized") is not False):
+        raise ValueError("Unexpected corrected replay plan state")
+    check(plan["admission"])
+    admission = json.loads(Path(plan["admission"]["path"]).read_text())
+    if (admission.get("status") != "corrected_high_sensitivity_native_evidence_admitted"
+            or admission.get("accuracy_evaluated") is not False
+            or admission["content"]["genes"] != 984137
+            or len(admission["content"]["species_ownership"]) != 78
+            or admission["checkpoint_manifest"] != plan["checkpoint_manifest"]):
+        raise ValueError("Corrected HMM admission differs")
+    names_path = Path(plan["checkpoint_manifest"]["path"]).parent / "gene_names.txt"
+    matches = [r for r in admission["content"]["checked_records"] if r["path"] == str(names_path)]
+    if len(matches) != 1:
+        raise ValueError("Require uniquely admitted corrected gene-name record")
+    for item in [plan_record, plan["admission"], plan["checkpoint_manifest"], *plan["checked_records"], matches[0]]:
+        check(item)
+    return plan, plan_record, plan["admission"], matches[0]
+
+
 def validate_payload(manifest, payload, admitted_names):
     if (manifest["stage"] not in STAGES or manifest["index"] != STAGES.index(manifest["stage"])
             or manifest["accuracy_evaluated"] is not False
@@ -39,26 +64,38 @@ def main():
     parser.add_argument("--payload", required=True, type=Path)
     parser.add_argument("--manifest", required=True, type=Path)
     parser.add_argument("--manifest-sha256", required=True)
+    parser.add_argument("--corrected-plan", type=Path)
+    parser.add_argument("--corrected-plan-sha256")
     args = parser.parse_args()
+    if (args.corrected_plan is None) != (args.corrected_plan_sha256 is None):
+        parser.error("Corrected plan and hash must be supplied together")
     root, payload = args.root.resolve(), args.payload.resolve()
     manifest_record = record(args.manifest)
     if manifest_record["sha256"] != args.manifest_sha256:
         raise ValueError("Changed parent payload manifest")
     manifest = json.loads(args.manifest.read_text())
-    admission_path = root / "benchmark_tools/results/qfo_checked_repeats_verified_20260917.json"
-    admission_record = record(admission_path)
-    if admission_record["sha256"] != ADMISSION_SHA:
-        raise ValueError("Changed checked-repeat admission")
-    admission = json.loads(admission_path.read_text())
-    if admission["status"] != "checked_repeats_verified" or admission["all_three_partitions_equal"] is not True:
-        raise ValueError("Checked initial-graph repeats were not admitted")
-    for item in admission["provenance_checked"]:
-        check(item)
-    validate_payload(manifest, payload, admission["native_report"]["graph_inputs"][0])
-    if manifest["index"] == 0:
-        for actual, expected in zip(manifest["inputs"][:4], admission["native_report"]["graph_inputs"]):
-            if any(actual[key] != expected[key] for key in ("bytes", "sha256")):
-                raise ValueError("Regenerated initial graph differs from admitted input")
+    corrected_plan_record = None
+    if args.corrected_plan is not None:
+        plan, corrected_plan_record, admission_record, names_record = corrected_evidence(
+            args.corrected_plan.resolve(), args.corrected_plan_sha256)
+        if manifest["output_directory"] != str(Path(plan["output_root"]) / "replay"):
+            raise ValueError("Corrected clustering output outside frozen replay")
+        validate_payload(manifest, payload, names_record)
+    else:
+        admission_path = root / "benchmark_tools/results/qfo_checked_repeats_verified_20260917.json"
+        admission_record = record(admission_path)
+        if admission_record["sha256"] != ADMISSION_SHA:
+            raise ValueError("Changed checked-repeat admission")
+        admission = json.loads(admission_path.read_text())
+        if admission["status"] != "checked_repeats_verified" or admission["all_three_partitions_equal"] is not True:
+            raise ValueError("Checked initial-graph repeats were not admitted")
+        for item in admission["provenance_checked"]:
+            check(item)
+        validate_payload(manifest, payload, admission["native_report"]["graph_inputs"][0])
+        if manifest["index"] == 0:
+            for actual, expected in zip(manifest["inputs"][:4], admission["native_report"]["graph_inputs"]):
+                if any(actual[key] != expected[key] for key in ("bytes", "sha256")):
+                    raise ValueError("Regenerated initial graph differs from admitted input")
     launcher = root / "benchmarks/work/publication_qfo_replay_native_v1"
     if Path.cwd() != launcher:
         raise ValueError("Wrong frozen worker working directory")
@@ -80,6 +117,8 @@ def main():
                   "inputs": manifest["inputs"], "stage": manifest["stage"], "accuracy_evaluated": False,
                   "helpers": [record(Path(__file__).with_name(name)) for name in
                               ("repeat_qfo_saved_graph.py", "checked_python_pair_worker.py", "probe_leiden_boundary.py")]}
+    if corrected_plan_record is not None:
+        provenance["corrected_plan"] = corrected_plan_record
     (payload / "checked_payload_provenance.json").write_text(json.dumps(provenance, indent=2, sort_keys=True) + "\n")
     with python_pair_constructor(igraph, payload / "constructor_adapter.json"):
         worker(launcher, payload, native_boundary=True)

@@ -19,7 +19,8 @@ def write_json(path, value):
 
 
 @pytest.mark.parametrize("problem", [None, "boundary", "input_hash", "metadata", "module", "coverage", "duplicate", "provenance"])
-def test_native_result_gate(tmp_path, problem):
+@pytest.mark.parametrize("corrected", [False, True])
+def test_native_result_gate(tmp_path, problem, corrected):
     root = tmp_path
     executor = root / "executor"
     launcher = root / "benchmarks/work/publication_qfo_replay_native_v1"
@@ -29,7 +30,8 @@ def test_native_result_gate(tmp_path, problem):
     for name, data in (("sources", pairs[:, 0]), ("targets", pairs[:, 1]), ("weights", np.ones(2))):
         np.save(payload / (name + ".npy"), data)
     (payload / "gene_names.txt").write_text("a\nb\nc\nd\n")
-    metadata = {"cpm_resolution": .1, "seed": 4, "include_isolates": True, "output_directory": str(root / "output")}
+    output = root / ("replay" if corrected else "output")
+    metadata = {"cpm_resolution": .1, "seed": 4, "include_isolates": True, "output_directory": str(output)}
     write_json(payload / "metadata.json", metadata)
     manifest = {"stage": "initial", "inputs": [record(payload / name) for name in
                 ("gene_names.txt", "sources.npy", "targets.npy", "weights.npy", "metadata.json")]}
@@ -55,12 +57,31 @@ def test_native_result_gate(tmp_path, problem):
     write_json(admission, {})
     provenance = {"source": helpers[-1], "helpers": helpers[:3], "manifest": record(payload.parent / "payload_manifest.json"),
                   "inputs": manifest["inputs"], "stage": "initial", "accuracy_evaluated": False, "admission": record(admission)}
+    corrected_plan = None
+    if corrected:
+        checkpoint = root / "corrected_checkpoint"
+        checkpoint.mkdir()
+        (checkpoint / "gene_names.txt").write_bytes((payload / "gene_names.txt").read_bytes())
+        write_json(checkpoint / "manifest.json", {})
+        checkpoint_record = record(checkpoint / "manifest.json")
+        names_record = record(checkpoint / "gene_names.txt")
+        admission = root / "corrected_admission.json"
+        write_json(admission, {"status": "corrected_high_sensitivity_native_evidence_admitted",
+            "accuracy_evaluated": False, "checkpoint_manifest": checkpoint_record,
+            "content": {"genes": 984137, "species_ownership": {str(i): i for i in range(78)},
+                        "checked_records": [names_record]}})
+        plan = root / "corrected_plan.json"
+        write_json(plan, {"status": "corrected_replay_command_frozen_unrun", "accuracy_evaluated": False,
+            "execution_authorized": False, "admission": record(admission), "checkpoint_manifest": checkpoint_record,
+            "output_root": str(root), "checked_records": [names_record, checkpoint_record, record(admission)]})
+        corrected_plan = record(plan)
+        provenance.update(admission=record(admission), corrected_plan=corrected_plan)
     worker = {"status": "before_native_clustering", "accuracy_evaluated": False, "metadata": dict(metadata),
               "cwd": str(launcher), "inputs": manifest["inputs"][:4], "cpu_affinity": [0], "modules": modules,
               "native_libraries": [record(igraph._igraph.__file__)], "python": record(__import__("sys").executable), "observer": helpers[0],
               "environment": {"PYTHONPATH": str(launcher), "PYTHONHASHSEED": "0", "OMP_NUM_THREADS": "1",
                               "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"}}
-    partition = root / "output/orthohmm_working_res/orthohmm_edges_clustered.txt"
+    partition = output / "orthohmm_working_res/orthohmm_edges_clustered.txt"
     partition.parent.mkdir(parents=True)
     partition.write_text("a c\nb\nd\n")
     if problem == "boundary":
@@ -85,9 +106,9 @@ def test_native_result_gate(tmp_path, problem):
     write_json(payload / "worker_before.json", worker)
     if problem:
         with pytest.raises(ValueError):
-            validate(payload, manifest, root, executor)
+            validate(payload, manifest, root, executor, corrected_plan=corrected_plan)
     else:
-        result = validate(payload, manifest, root, executor)
+        result = validate(payload, manifest, root, executor, corrected_plan=corrected_plan)
         assert result["genes"] == 4 and result["groups"] == 3
 
 

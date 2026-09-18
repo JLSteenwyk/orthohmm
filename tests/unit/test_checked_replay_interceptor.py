@@ -131,3 +131,18 @@ def test_profile_parent_threads_do_not_leak_into_clustering(tmp_path, monkeypatc
     assert dict(os.environ) == parent
     assert len(children) == 4
     assert all(row["thread_environment"]["inherited"]["OMP_NUM_THREADS"] == "32" for row in proxy.calls)
+
+
+def test_corrected_plan_arguments_forwarded_unchanged(tmp_path):
+    payload, output, _ = payload_fixture(tmp_path)
+    extra = ["--corrected-plan", "/plan.json", "--corrected-plan-sha256", "frozen"]
+    calls = []
+    def run(command, **kwargs):
+        calls.append(command)
+        (output / "orthohmm_working_res/orthohmm_edges_clustered.txt").write_text("a b\nc\n")
+        return SimpleNamespace(returncode=0)
+    proxy = CheckedReplaySubprocess(SimpleNamespace(run=run, STDOUT=subprocess.STDOUT), tmp_path,
+        tmp_path / "observations", tmp_path / "worker.py", lambda p, m: {}, worker_args=extra)
+    proxy.run([sys.executable, "-m", "orthohmm.leiden_worker", str(payload)], check=True)
+    assert calls[0][-4:] == extra
+    assert proxy.calls[0]["command"] == calls[0]

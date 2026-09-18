@@ -10,7 +10,7 @@ from prepare_ob_candidate_neighborhood import check, record
 from probe_leiden_boundary import saved_fingerprint
 
 
-def validate(payload, manifest, root, executor):
+def validate(payload, manifest, root, executor, corrected_plan=None):
     import numpy as np
     launcher = root / "benchmarks/work/publication_qfo_replay_native_v1"
     observed = json.loads((payload / "worker_before.json").read_text())
@@ -30,6 +30,23 @@ def validate(payload, manifest, root, executor):
         if observed["modules"][name] != record(launcher / (name.replace(".", "/") + ".py")):
             raise ValueError("Wrong scientific worker module")
     provenance = json.loads((payload / "checked_payload_provenance.json").read_text())
+    if corrected_plan is None:
+        admission_record = record(root / "benchmark_tools/results/qfo_checked_repeats_verified_20260917.json")
+        if "corrected_plan" in provenance:
+            raise ValueError("Unexpected corrected-release provenance")
+    else:
+        from checked_replay_payload_worker import corrected_evidence
+        plan, plan_record, admission_record, names_record = corrected_evidence(
+            Path(corrected_plan["path"]), corrected_plan["sha256"])
+        if plan_record != corrected_plan or provenance.get("corrected_plan") != plan_record:
+            raise ValueError("Corrected plan provenance differs")
+        # The preflight payload validator also rejects observation files; here
+        # only check the preserved names/settings after native execution.
+        if any(manifest["inputs"][0][key] != names_record[key] for key in ("bytes", "sha256")):
+            raise ValueError("Corrected gene order differs after clustering")
+        if metadata != {"cpm_resolution": .1, "seed": 4, "include_isolates": True,
+                        "output_directory": str(Path(plan["output_root"]) / "replay")}:
+            raise ValueError("Corrected output/settings differ")
     helpers = [record(executor / "benchmark_tools" / name) for name in
                ("repeat_qfo_saved_graph.py", "checked_python_pair_worker.py", "probe_leiden_boundary.py")]
     if (provenance["source"] != record(executor / "benchmark_tools/checked_replay_payload_worker.py")
@@ -37,7 +54,7 @@ def validate(payload, manifest, root, executor):
             or provenance["manifest"] != record(payload.parent / "payload_manifest.json")
             or provenance["inputs"] != manifest["inputs"] or provenance["stage"] != manifest["stage"]
             or provenance["accuracy_evaluated"] is not False
-            or provenance["admission"] != record(root / "benchmark_tools/results/qfo_checked_repeats_verified_20260917.json")):
+            or provenance["admission"] != admission_record):
         raise ValueError("Checked payload provenance differs")
     saved = saved_fingerprint(payload)
     boundary = json.loads((payload / "native_boundary.json").read_text())

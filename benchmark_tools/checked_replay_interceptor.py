@@ -13,10 +13,11 @@ from checked_replay_payload_worker import FILES, STAGES
 
 
 class CheckedReplaySubprocess:
-    def __init__(self, original, root, output, worker_path, validate_result):
+    def __init__(self, original, root, output, worker_path, validate_result, worker_args=()):
         self.original, self.root, self.output = original, root, output
         self.worker_path, self.validate_result = worker_path, validate_result
         self.calls = []
+        self.worker_args = list(worker_args)
 
     def __getattr__(self, name):
         return getattr(self.original, name)
@@ -47,7 +48,7 @@ class CheckedReplaySubprocess:
         manifest_path = directory / "payload_manifest.json"
         manifest_path.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n")
         adapted = [sys.executable, str(self.worker_path), "--root", str(self.root), "--payload", str(payload),
-                   "--manifest", str(manifest_path), "--manifest-sha256", record(manifest_path)["sha256"]]
+                   "--manifest", str(manifest_path), "--manifest-sha256", record(manifest_path)["sha256"], *self.worker_args]
         row = {"index": index, "stage": STAGES[index], "status": "running", "command": adapted,
                "manifest": record(manifest_path), "accuracy_evaluated": False}
         # Profile expansion changes the parent's OMP setting; isolate only the clustering child.
