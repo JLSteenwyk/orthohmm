@@ -1,5 +1,57 @@
 # Publication Progress
 
+## Original Factorial Complete; Paired Analysis Running (2026-09-18 UTC)
+
+Previous turn progressed by pushing corrected candidate admission (9082cce).
+Original final-cell assessment 21723 completed 0:0 in 34:06; independent
+admission 21724 completed 0:0 in 13 seconds. A new execution of the frozen
+9680ccce admission checker reproduced the entire parsed admission report
+exactly. Preserved `qfo_factorial_assessment_p1_c1_r1_20260918.json`, SHA-256
+`19f34a2a4c4a97c57a2c018f374b45e5a79fb1001419f4c287a137dbfcec761e`.
+
+Final p1_c1_r1 endpoints: GO 0.489440380, EC 0.967762170,
+VGNC F1 0.900128629, SwissTrees F1 0.796750966, TreeFam-A F1 0.574250084,
+FAS 0.761099547; project-defined secondary mean 0.748238629.
+SwissTrees recall/precision: 0.685626020 / 0.950865400; TreeFam-A:
+0.409291320 / 0.961949480. Retained prediction count: 5,646,139.
+All eight original-release factorial cells are now independently admitted.
+These are development-exposed original-release results, not corrected-release
+comparators or independent generalization evidence.
+
+Created eight-cell admission inventory, rechecked every file hash and cell
+binding, SHA-256
+`4bf00bb5eba75335793c546a57daa0cbc378d8afd379b6dd306fd87006b019c1`.
+Submitted **21725**, confirmed RUNNING with 2 CPUs, 64 GiB, four hours,
+no requeue. Detached analysis executor
+`benchmarks/work/publication_qfo_factorial_uncertainty_v1` is pinned to
+`9082ccee291176b8883884d80e80ff4817053b86`. The batch first audits all eight
+SwissTrees family-count/reference identities, then runs the already frozen
+100,000-resample, seed-20260922 protocol with 42-comparison adjustment.
+Outputs remain in benchmarks/work until inspected and validated. No paired
+intervals or interaction conclusions are admitted yet.
+
+## Corrected Reconciliation Launcher Implemented (2026-09-18 UTC)
+
+Added `run_qfo_corrected_factorial_cell.py` and sequential four-task Slurm
+batch (32 CPUs, 192 GiB, 48 hours each, no requeue). Created clean detached
+candidate-admission executor at 9082ccee291176b8883884d80e80ff4817053b86.
+The runner requires successful independent candidate admission, checks
+frozen source/manifest/arm bindings, matches the four reconciliation cells,
+verifies runtime and native launcher equivalence, and preserves the existing
+inferred-tree settings and expanded-arm constraints. Existing native output
+or failure artifacts are never automatically retried. Postflight rechecks
+admitted inputs/runtime/sources but explicitly leaves native-output admission
+and accuracy scoring pending. No corrected reconciliation was submitted.
+
+Validation: 84 focused runner/candidate/SwissTrees/bootstrap tests pass;
+both new batch scripts pass bash syntax checks. Runner orchestration tests
+mock inference, exercise success/failure/preflight and verify cwd restoration
+and rechecks; they are not an end-to-end corrected biological execution.
+HMM 21706_0 and SonicParanoid 21710 remain running. Next: inspect 21725,
+publish validated paired results, and advance corrected replay/candidate/
+reconciliation jobs only after their actual prerequisites pass. Full
+publication completion remains unproven.
+
 ## Corrected Candidate Parent Admission Implemented (2026-09-18 UTC)
 
 Previous turn progressed by pushing the candidate-content audit and checking
