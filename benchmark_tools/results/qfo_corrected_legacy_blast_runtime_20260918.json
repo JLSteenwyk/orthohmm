@@ -1,0 +1,492 @@
+{
+  "exclusions": [
+    "__pycache__",
+    ".git",
+    "*.pyc",
+    "*.pyo"
+  ],
+  "external_symlinks": [
+    "/lib64/ld-linux-x86-64.so.2"
+  ],
+  "limitations": [
+    "Explicit tree identity, not a hermetic operating-system or loader snapshot.",
+    "Directory symlinks are recorded but not traversed; external targets require separate review.",
+    "Python bytecode caches are excluded; execution must isolate cache lookup to a fresh prefix and disable writes.",
+    "Before/after equality cannot rule out a temporary change during execution."
+  ],
+  "records": [
+    {
+      "bytes": 2125328,
+      "kind": "file",
+      "mode": 493,
+      "path": "/lib/x86_64-linux-gnu/libc.so.6",
+      "sha256": "e7a914a33fd4f6d25057b8d48c7c5f3d55ab870ec4ee27693d6c5f3a532e6226"
+    },
+    {
+      "bytes": 952616,
+      "kind": "file",
+      "mode": 420,
+      "path": "/lib/x86_64-linux-gnu/libm.so.6",
+      "sha256": "c09178edd7fbc58aa8415f4bbe54dd76c5ff6c6398ba3e56e5a4743fd7e9adfc"
+    },
+    {
+      "bytes": 14408,
+      "kind": "file",
+      "mode": 420,
+      "path": "/lib/x86_64-linux-gnu/libpthread.so.0",
+      "sha256": "8886af025eed1782e4b4675918250bf902206dab45151b6bc7f22b9c7249f6ae"
+    },
+    {
+      "kind": "symlink",
+      "link": "../lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+      "mode": 511,
+      "path": "/lib64/ld-linux-x86-64.so.2",
+      "resolved": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+      "target_bytes": 236616,
+      "target_exists": true,
+      "target_sha256": "6c5e1b4528b704dc7081aa45b5037bda4ea9cad78ca562b4fb6b0dbdbfc7e7e7"
+    },
+    {
+      "kind": "directory",
+      "mode": 493,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13"
+    },
+    {
+      "bytes": 283,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/VERSION",
+      "sha256": "511112bed71e73c2cd9b62ac9bd241d307867e6b53461132e80269c487d20954"
+    },
+    {
+      "kind": "directory",
+      "mode": 493,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/bin"
+    },
+    {
+      "bytes": 4755381,
+      "kind": "file",
+      "mode": 493,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/bin/bl2seq",
+      "sha256": "3753c7602d6bea2c9ffbd7e63a8054df5a8f12877f14077631d84596ef2d329f"
+    },
+    {
+      "bytes": 4591820,
+      "kind": "file",
+      "mode": 493,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/bin/blastall",
+      "sha256": "34b91fedd2e7858a3478e83758e3f5339c09f96f543d9338488ea4b84628fb75"
+    },
+    {
+      "bytes": 4013224,
+      "kind": "file",
+      "mode": 493,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/bin/blastclust",
+      "sha256": "f345959cd85199713519367b3399c8534162705e4547a271e92d7611e2e53901"
+    },
+    {
+      "bytes": 4259212,
+      "kind": "file",
+      "mode": 493,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/bin/blastpgp",
+      "sha256": "cc6ba1d1598465138efa581f7df878e6977048cacbc30e0dc09426c58b6f23a8"
+    },
+    {
+      "bytes": 4295560,
+      "kind": "file",
+      "mode": 493,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/bin/copymat",
+      "sha256": "11fa1618aae47c3f864f72797f2e7a60d566b1c1d06434b520cea1a7aec92c37"
+    },
+    {
+      "bytes": 3991083,
+      "kind": "file",
+      "mode": 493,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/bin/fastacmd",
+      "sha256": "2f3e1ab0a54b2d9472fa4ffcb9ac4943b69705766870e729766466422b9cfd3e"
+    },
+    {
+      "bytes": 3997540,
+      "kind": "file",
+      "mode": 493,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/bin/formatdb",
+      "sha256": "169b006ef95a8ef9cdd3d516b2de570ff0cea7de55a99974a8e1f443dd90c204"
+    },
+    {
+      "bytes": 4281108,
+      "kind": "file",
+      "mode": 493,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/bin/formatrpsdb",
+      "sha256": "a31bd298fa244fcdf0794e4f4415f426d476daeaccc658496dc19b65b71c1c96"
+    },
+    {
+      "bytes": 4005702,
+      "kind": "file",
+      "mode": 493,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/bin/impala",
+      "sha256": "ecf3a7124479cff82522526d71721a72e2caa0b4372df7589ef287daf0650ce8"
+    },
+    {
+      "bytes": 3996167,
+      "kind": "file",
+      "mode": 493,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/bin/makemat",
+      "sha256": "b7add6e890717774286ee9792e1896f2018f9e7385c862bc209b6c1ac66a4f42"
+    },
+    {
+      "bytes": 4587655,
+      "kind": "file",
+      "mode": 493,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/bin/megablast",
+      "sha256": "6b8c2b8ade41b73730c215a8fcac9a06443e470c842b5df536857c8bc7f84b98"
+    },
+    {
+      "bytes": 4574139,
+      "kind": "file",
+      "mode": 493,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/bin/rpsblast",
+      "sha256": "727246855b84cd30f9800d276905c53588dea52ac94292b40d7fe3cc303acbb4"
+    },
+    {
+      "bytes": 4039238,
+      "kind": "file",
+      "mode": 493,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/bin/seedtop",
+      "sha256": "c915f7f56dc8bc73954bfcaff9388a686ea54d0e6aadf8e99579f95b5783887b"
+    },
+    {
+      "kind": "directory",
+      "mode": 493,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/data"
+    },
+    {
+      "bytes": 2122,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/data/BLOSUM45",
+      "sha256": "da453b3513d441660fe5ec2b18ad2218c3ffd3a496752aa1173eaf725e1a14a9"
+    },
+    {
+      "bytes": 2122,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/data/BLOSUM62",
+      "sha256": "9cdb2a576c9836d1269fdcc974b14db710d79334a426ae7f9a57831008299123"
+    },
+    {
+      "bytes": 2124,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/data/BLOSUM80",
+      "sha256": "3c1233c2282bb7ebead09a2cf8fb93da2710ba9140cc5b789648aab0ec7c501e"
+    },
+    {
+      "bytes": 1521,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/data/KSat.flt",
+      "sha256": "1ab2d684848d6e3970118cf082c189f43bdc87e273870edf9edf588fd69d48bc"
+    },
+    {
+      "bytes": 736,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/data/KSchoth.flt",
+      "sha256": "88cca9076fd588dd67c747453e81d67afd37d5ed035b46614dc45ef3c2208c42"
+    },
+    {
+      "bytes": 1521,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/data/KSgc.flt",
+      "sha256": "aee20da23af692b9629ac17b046a61fde2a807b3ec931dbbed0f542ba9512d06"
+    },
+    {
+      "bytes": 852,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/data/KShopp.flt",
+      "sha256": "9017242c52a77f289504e5bc4bc32f6502e00cc248f0f22b4fee74490330aa9d"
+    },
+    {
+      "bytes": 940,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/data/KSkyte.flt",
+      "sha256": "0e3283774a7177134f4dac0101039d3468df54381606750ac9523bcddba0f77c"
+    },
+    {
+      "bytes": 1320,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/data/KSpcc.mat",
+      "sha256": "ffa6cf88e2f0ffd9918e90d3d25f77f29f6435095c2676a1af3ec1e5c8c51d60"
+    },
+    {
+      "bytes": 1521,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/data/KSpur.flt",
+      "sha256": "674fb1f9f77f28adf6e729f7f1089e222cedd8e4e59c207342aeb7ec4182774e"
+    },
+    {
+      "bytes": 1521,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/data/KSpyr.flt",
+      "sha256": "54205fc916b958fc67ec34ad711043c3e08eb7518780ec1ca200e1c38537b287"
+    },
+    {
+      "bytes": 2666,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/data/PAM30",
+      "sha256": "8fc5688d1798e2326eab3719b9ee9299952a20c9434e4c5528bf4532e4586e63"
+    },
+    {
+      "bytes": 2666,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/data/PAM70",
+      "sha256": "d180e22d80f25ada412d6eb63070fe7227c9547c6673727291fd9b2d452946e5"
+    },
+    {
+      "bytes": 72720,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/data/asn2ff.prt",
+      "sha256": "a4b96fce3a05de19ed1e9fc6d3026dd54f3eeca0d19f81c4fc90098c500fcc7f"
+    },
+    {
+      "bytes": 148763,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/data/bstdt.val",
+      "sha256": "4a04a79764bd5825a62611fc524be1085217b06e1bc78435b82785754a0ee5c6"
+    },
+    {
+      "bytes": 7708,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/data/featdef.val",
+      "sha256": "c2316d68a02a70b4d48a1685e8af58eaa0a567f5f87f758fab2640275e6b39f4"
+    },
+    {
+      "bytes": 3292,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/data/gc.val",
+      "sha256": "5744d7dbf498c9c91bc3ed27738490dc3247e651608848bcc4cc1d8bf9f4241e"
+    },
+    {
+      "bytes": 50078,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/data/humrep.fsa",
+      "sha256": "5ad576b0ba9eb9907e94f30ef8046c108abf7f127dc17b07fad50da9089d9965"
+    },
+    {
+      "bytes": 109993,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/data/lineages.txt",
+      "sha256": "e89c1308f580fa54a45d3c1b74c7f153b63885cb96894e8d2b577303e9078c31"
+    },
+    {
+      "bytes": 64663,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/data/makerpt.prt",
+      "sha256": "1d2d15a6bbf8057a35ed4d3f0d285dd74e96ff87bed95b908cda410f751ce864"
+    },
+    {
+      "bytes": 49810,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/data/objprt.prt",
+      "sha256": "bf84730f1385de601f4c95090ef698197ee288df711ddec73a82f897ee03890d"
+    },
+    {
+      "bytes": 1112,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/data/pubkey.enc",
+      "sha256": "777a89653e6c2cb2b04c45b9e9eb50ccb473ddb10fd18d5348d7b212b8211a16"
+    },
+    {
+      "bytes": 6034,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/data/seqcode.val",
+      "sha256": "f4b5c86e13df5fa05e479f2bdbf7ad8a5dd30b726d4d780aa293df5ec2bc2af9"
+    },
+    {
+      "bytes": 153846,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/data/sequin.hlp",
+      "sha256": "25f2495cdefa276e501b9f277ea790c2d8c49cc1c5b46d937e6eb22b1c5b5057"
+    },
+    {
+      "bytes": 480,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/data/sgmlbb.ent",
+      "sha256": "9fe52cc52a3aae5d2431ecd1b0fda10392cf32e8692dd62d3a4022be9e38a381"
+    },
+    {
+      "bytes": 33461,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/data/taxlist.txt",
+      "sha256": "ca5160afdaf241209756241420cc5e17b6a1f172ed5e399cb3f7af1f6f98b52f"
+    },
+    {
+      "kind": "directory",
+      "mode": 493,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/doc"
+    },
+    {
+      "bytes": 1829,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/doc/bl2seq.html",
+      "sha256": "50f5b7af660ab3848a145e962bbf89b4117b61d4e2c43086f0b6e03b4d1b071c"
+    },
+    {
+      "bytes": 12957,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/doc/blast.html",
+      "sha256": "86d90500c720fb4917a780a48f7ce55793d71d24c403691ede22442c61bc9589"
+    },
+    {
+      "bytes": 4874,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/doc/blastall.html",
+      "sha256": "791573cfbd42ca45e6cbdedfc2b9fd4355c793252715074ab73e9de54062fd4a"
+    },
+    {
+      "bytes": 8338,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/doc/blastclust.html",
+      "sha256": "a93112fbed806d62f41f75f9168115c80b2c960dae2d2f4d075b8a2d83749cf8"
+    },
+    {
+      "bytes": 16232,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/doc/blastdb.html",
+      "sha256": "1764f174cc0998cafb106744e338880615ead0240d2a294defcc410fdba1b7d6"
+    },
+    {
+      "bytes": 209588,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/doc/blastftp.html",
+      "sha256": "540b0438b468b71742b998b349323cec66f5bc3e900697749c99b0d241e781fe"
+    },
+    {
+      "bytes": 23272,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/doc/blastpgp.html",
+      "sha256": "e1ad08239b092d91d88bc36e5fb2560652858b05f2ec49871ba6fba61ea63309"
+    },
+    {
+      "bytes": 5816,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/doc/fastacmd.html",
+      "sha256": "3097f274efd55e57a5dca6173049145c6431000a058e7f0214bb0e4f53faa69e"
+    },
+    {
+      "bytes": 2379,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/doc/filter.html",
+      "sha256": "bad0ea20081459a411aaea96910e431061726b7d1736cdfe5ef2a28127edcb50"
+    },
+    {
+      "bytes": 30277,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/doc/formatdb.html",
+      "sha256": "21d8399c7c115dc13e1a1f70563049cc1456565d2973ecfa4c3aaae0119045ca"
+    },
+    {
+      "bytes": 9267,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/doc/formatrpsdb.html",
+      "sha256": "cd5ac1e2c9cee06062bf08ecd595f2d5c8075c7b5784f5a47388c13ef76a2433"
+    },
+    {
+      "bytes": 30073,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/doc/history.html",
+      "sha256": "a3e661c4404c67767801974fb73dc92043de0ef9a75ff312df8c3f5b0dc0cc20"
+    },
+    {
+      "bytes": 7065,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/doc/impala.html",
+      "sha256": "d2d93a44566a674f2e19eca0dc64e66174ab153543cd0d232adaaeee73df430f"
+    },
+    {
+      "bytes": 4065,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/doc/index.html",
+      "sha256": "bff18961c9782416d46c7522e86bb57ae55bbc8656082e95e08642dbe15d3456"
+    },
+    {
+      "bytes": 11256,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/doc/megablast.html",
+      "sha256": "f8376a63a7a077f8c4743df62c557db885b836e86a24c4142066cb92c3cc3f3c"
+    },
+    {
+      "bytes": 56058,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/doc/netblast.html",
+      "sha256": "dd84c6d183be5959a634472a414290a4931d2e591c89988ed5da3e7e7bb3fd1f"
+    },
+    {
+      "bytes": 9739,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/doc/rpsblast.html",
+      "sha256": "abd73610ee5c1e8bdaed66dacf00dfe8f779528654f29b5ec599a0c0cd3bcad1"
+    },
+    {
+      "bytes": 341209,
+      "kind": "file",
+      "mode": 420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/doc/scoring.pdf",
+      "sha256": "3b8f2dba73383a7eb435badd6c765eb5b100a49ef7e1020f4797ee850650414e"
+    },
+    {
+      "bytes": 4934,
+      "kind": "file",
+      "mode": 493,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/doc/web_blast.pl",
+      "sha256": "bd2ba4c4beb10407405b13e14a678f38289d8ee0b3381c55faa8fcb57e6e472b"
+    }
+  ],
+  "roots": [
+    "/lib/x86_64-linux-gnu/libc.so.6",
+    "/lib/x86_64-linux-gnu/libm.so.6",
+    "/lib/x86_64-linux-gnu/libpthread.so.0",
+    "/lib64/ld-linux-x86-64.so.2",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13"
+  ],
+  "schema": 1,
+  "scientific_execution_authorized": false
+}
