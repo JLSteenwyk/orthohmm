@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Sampled Native Event-To-Pair Reconstruction (2026-09-18 UTC)
+
+Previous turn progressed by launching second R-on assessment and pushing
+3c6db7c. Re-read full goal and verified jobs. Reviewed matched-search control:
+its documented sensitivity mismatch remains unresolved; no new HMM advantage
+claim or endpoint-guided calibration. Addressed a separate native-output
+validation gap with an independent saved-node-table to pair reconstruction.
+
+Deterministically sampled64/24,320reconciled families in p0_c1_r1, using
+hash20260923:family_id from original execution artifacts, not scores or
+observed errors. Admitted original hashes bind node/group tables and pairs.
+All1,437genes/2,808nodes validate;13,863pre-filter pairs become13,138after
+725group-boundary exclusions, matching native output exactly. Fifteen tests
+pass. See `QFO_RECORDED_EVENT_PAIR_AUDIT_20260918.md` and its machine report.
+Mapping conflicts/group membership are conditioned on; no independent tree,
+confidence-label or biological-truth validation claimed. Unsampled/bypass
+families remain outside scope. A preliminary unbound draft is retained only
+in work; committed report is the rerun with original execution provenance.
+
+Latest confirmed handles: score21697running33:26, score21703running7:29;
+validators21698/21704pending; reconciliation21671_2running12:24; corrected
+archive21687running1:40:54 with audits21688/21689pending; DGX21656_12running
+9:57. No restarts or scoring changes. Continue admissions/corrected-input
+review as jobs finish; generalization, matched sensitivity, resource and
+archival requirements remain open.
+
 ## Expanded R-On QfO Cell Scoring (2026-09-18 UTC)
 
 Previous turn progressed with corrected-input inventory implementation,
