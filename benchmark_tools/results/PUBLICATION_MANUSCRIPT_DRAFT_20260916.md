@@ -85,6 +85,15 @@ its final MCL groups. Pre-MCL graph edges are retained only as a diagnostic.
 These output differences are part of the practical pipeline comparison and
 must not be interpreted as a matched search-engine ablation.
 
+A complete historical FastOMA conversion audit validated 15,320,615 native
+cross-species pairs against the 976,504-protein input universe and found no
+duplicates. Independent sorting reproduced both the retained raw prediction
+set and the 15,277,489-pair QfO-filtered set exactly; 43,126 pairs contained
+identifiers absent from the historical mapping. This establishes conversion
+integrity, not biological correctness or freedom from mapping-related bias,
+and does not substitute for the corrected-release rerun.
+[Conversion audit](FASTOMA_DISTINCT_PAIR_AUDIT_20260918.md).
+
 ### Development-Exposed Benchmarks
 
 QfO and OrthoBench influenced development and are therefore not independent

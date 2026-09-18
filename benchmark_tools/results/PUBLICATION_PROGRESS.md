@@ -8161,3 +8161,22 @@ and output failures. This is a conversion building block, not a corrected
 FastOMA inference result or completed launch/admission workflow. The admitted
 corrected OrthoFinder tree, fresh FastOMA launch, native-output audit and scoring
 remain outstanding. No historical scores or benchmark endpoints changed.
+
+### Full Historical FastOMA Distinct-Pair Audit (2026-09-18)
+
+Previous turn made progress by implementing the disk-backed native-pair
+converter. This turn tested it on the complete historical FastOMA QfO output,
+with checksummed native output, 78 input proteomes, reference mapping and retained
+predictions. All 15,320,615 native rows are distinct valid cross-species pairs.
+Independent external sorting exactly matches both retained raw predictions and
+15,277,489 mapped pairs; 43,126 pairs are excluded by the historical mapping.
+The audit closes the former global-uniqueness limitation without changing any
+historical scores. See `FASTOMA_DISTINCT_PAIR_AUDIT_20260918.md` and its JSON
+evidence. All 41 focused tests and the complete real-data audit passed. Large
+intermediate files remain uncommitted. The manuscript now cites this evidence.
+
+Latest live check: corrected HMM 21706_0 RUNNING at 5:37:44; dedicated DGX
+21656_21 RUNNING at 20:05, tasks 22-26 pending. No jobs were restarted or
+interrupted. Full corrected FastOMA execution remains pending the corrected
+OrthoFinder tree and launch preparation. Corrected comparisons, remaining
+uncertainty, resource admission and final publication packaging remain open.
