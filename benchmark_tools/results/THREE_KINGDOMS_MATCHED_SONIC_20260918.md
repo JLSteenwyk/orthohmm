@@ -94,3 +94,20 @@ Controller confirms PENDING dependency,2CPUs32G4h,bizon,no requeue,zero
 restarts; SubmitTime2026-09-18T13:23:40 (timezone not inferred).
 The afterany dependency permits explicit rejection of failed inference;
 it does not allow scoring a failed or partial native run.
+
+### Integrated Assessment Tests
+
+Four additional tests now exercise actual normalizer/scorer subprocesses,
+native-group validation, independent count reconstruction, and persisted
+reports together. Synthetic FASTAs use the retained reference identifiers
+with artificial four-residue sequences; these are software fixtures, not
+new biological predictions. Scheduler, executor revision and installed-runtime
+gates are mocked for these tests; their real execution remains required.
+
+The perfect fixture reconstructs255groups/2035genes/7352positive pairs. A
+valid split-group fixture produces nonzero false negatives and lower F1 but
+is still admitted, demonstrating that the gate does not select favorable
+accuracy. Corrupted conversion and corrupted scorer output each raise an
+error and retain an assessment_failed report with accuracy_admitted false.
+The combined focused suite passes69tests. No queued executor or inference
+configuration was changed; actual native-run success remains unobserved.

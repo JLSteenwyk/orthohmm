@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Integrated Assessment Success And Failure Paths (2026-09-18 UTC)
+
+Previous turn progressed through1dba83e with service/library citations.
+Live scheduler confirms HMM21706_0 RUNNING12:48:13 and numeric21791
+RUNNING20:20;21792/21795/21796 retain their dependencies. No job restarted.
+
+Added four integrated matched-Sonic assessment tests using real normalizer
+and scorer subprocesses, native conversion validator and independent pair
+counter. Only scheduler/executor/runtime gates are mocked. Perfect synthetic
+predictions reconstruct all7352reference pairs; a valid split-group case
+with nonzeroFN and lowerF1 is also admitted. Corrupted normalized groups and
+scorer output both produce preserved failed reports, never accepted scores.
+Fixtures use reference identifiers with artificial four-residue sequences;
+these are software tests, not biological inference or new benchmark results.
+
+69combined focused tests pass in0.87s. No production source or queued frozen
+executor changed. Actual end-to-end run21795/assessment21796 remains pending,
+and the complete publication objective remains active.
+
 ## QfO Service And Graph-Library Citations (2026-09-18 UTC)
 
 Previous turn progressed through0fa78fa with full regression/claim updates.
