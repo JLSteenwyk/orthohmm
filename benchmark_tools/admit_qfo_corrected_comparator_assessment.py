@@ -11,6 +11,7 @@ from benchmark_tools.prepare_ob_candidate_neighborhood import record, check
 from benchmark_tools.run_simulation_methods import read_frozen
 from benchmark_tools.run_qfo_corrected_comparator_assessment import (
     validate_stage, ENV_SHA, METHODS, WORK_NAMES, OF_SEMANTICS, BOUND_SEMANTICS, converter_source,
+    extra_stage_records,
 )
 from benchmark_tools.run_qfo_recovered_assessment import command_for, environment_records
 from benchmark_tools.admit_qfo_recovered_assessment import validate_trace
@@ -20,11 +21,14 @@ from benchmark_tools.verify_ygob_validation import require_completed_job
 EXECUTOR = "74afad5376b7ee11fdabfba386851fd8d3c02857"
 OF_EXECUTOR = "5c34f8baad47a9895659b43696e6887aa29dbaaf"
 FASTOMA_EXECUTOR = "9258bcfd3f90d63ec7f2cfb02122cd20bd7e1214"
+ORTHOMCL_EXECUTOR = "e1b49442eed5730d676d8cd8ebde00e82e5d60e5"
 
 
 def executor_identity(root, method):
     if method not in METHODS:
         raise ValueError("Unknown corrected comparator")
+    if method == "orthomcl":
+        return root / "benchmarks/work/publication_qfo_corrected_orthomcl_assessment_v1", ORTHOMCL_EXECUTOR
     if method == "fastoma":
         return root / "benchmarks/work/publication_qfo_corrected_fastoma_assessment_v1", FASTOMA_EXECUTOR
     if method in OF_SEMANTICS:
@@ -44,9 +48,9 @@ def validate_completion(report, preflight, scheduler):
         raise ValueError("Changed assessment preflight")
 
 
-def accounting(job):
+def accounting(job, include_memory=False):
     text = subprocess.check_output(["sacct", "-j", str(job), "--parsable2",
-        "--format=JobIDRaw,State,ExitCode,Elapsed,NodeList,AllocCPUS"], text=True)
+        "--format=JobIDRaw,State,ExitCode,Elapsed,NodeList,AllocCPUS" + (",ReqMem" if include_memory else "")], text=True)
     return text, require_completed_job(text, job)
 
 
@@ -62,7 +66,7 @@ def admit(root, method, job, conversion_job, pairs_sha, output):
     validate_completion(report, preflight, scheduler)
     pairs_path = root / "benchmarks/results/qfo_corrected_comparator_pairs_v1" / method / "results.json"
     stage = read_frozen(pairs_path, pairs_sha)
-    conversion_text, conversion_scheduler = accounting(conversion_job)
+    conversion_text, conversion_scheduler = accounting(conversion_job, include_memory=True) if method == "orthomcl" else accounting(conversion_job)
     validate_stage(stage, method, conversion_scheduler)
     converter = converter_source(root, method)
     if converter is not None and (stage["source"] != converter or converter not in stage["checked_records"]):
@@ -83,6 +87,7 @@ def admit(root, method, job, conversion_job, pairs_sha, output):
                record(executor / "benchmark_tools/prepare_qfo_corrected_comparator_pairs.py")]
     if converter is not None:
         records.append(converter)
+    records.extend(extra_stage_records(root, method, stage))
     expected = {"method": method, "stage": stage, "source": record(executor / "benchmark_tools/run_qfo_corrected_comparator_assessment.py"),
                 "pairs_manifest": record(pairs_path), "environment_manifest": record(env_path),
                 "conversion_scheduler": conversion_scheduler, "conversion_accounting": conversion_text,
@@ -121,6 +126,10 @@ def admit(root, method, job, conversion_job, pairs_sha, output):
               "limitations": ["Native score/provenance validation, not independent biological validation or paired uncertainty.",
                               "The six-endpoint mean is a project-defined secondary summary, not official QfO F1.",
                               "Native error fields retain endpoint-specific semantics; original-release scores are not reused."]}
+    if method == "orthomcl":
+        result.update(query_coverage=stage["query_coverage"], group_coverage=stage["content"],
+                      pair_semantics=stage["semantics"], group_audit=stage["group_audit"])
+        result["limitations"].append("OrthoMCL final-group cliques retain ungrouped inputs and source query-failure diagnostics; no repaired search hits are implied.")
     with output.open("x") as stream:
         json.dump(result, stream, indent=2, sort_keys=True)
         stream.write("\n")

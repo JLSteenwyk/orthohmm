@@ -27,6 +27,46 @@ def test_pipeline_methods_match_export_adapters():
     assert set(METHODS) == set(METHOD_KEYS)
 
 
+def orthomcl_fixture():
+    from benchmark_tools.export_qfo_corrected_comparison import ORTHOMCL_SEMANTICS
+    report, conversion = fixture("orthomcl")
+    content = {"total_pairs": 12, "final_groups": 1, "grouped_proteins": 8, "ungrouped_input_proteins": 984129}
+    diagnostics = {"failed_queries": ["retained"]}
+    audit = {"path": "groups.json", "bytes": 4, "sha256": "fixture"}
+    conversion.update(status="corrected_orthomcl_pairs_prepared_unscored", semantics=ORTHOMCL_SEMANTICS,
+                      retained_pairs=12, removed_mapping_pairs=0, content=content,
+                      query_coverage=diagnostics, group_audit=audit)
+    report.update(pair_semantics=ORTHOMCL_SEMANTICS, group_coverage=content,
+                  query_coverage=diagnostics, group_audit=audit)
+    return report, conversion
+
+
+def test_orthomcl_export_retains_coverage_and_query_failures():
+    report, conversion = orthomcl_fixture()
+    row = extract(report, conversion)
+    assert row["key"] == "orthomcl_1_4"
+    assert row["prediction_semantics"] == "cross_species_final_group_cliques"
+    assert row["query_coverage"] == report["query_coverage"]
+    assert row["group_coverage"] == report["group_coverage"]
+    assert row["group_audit"] == report["group_audit"]
+
+
+@pytest.mark.parametrize("key,value", [("pair_semantics", "pre-clustering graph edges"),
+    ("query_coverage", {}), ("group_coverage", {}), ("group_audit", {})])
+def test_orthomcl_export_refuses_changed_binding(key, value):
+    report, conversion = orthomcl_fixture()
+    report[key] = value
+    with pytest.raises(ValueError, match="OrthoMCL"):
+        extract(report, conversion)
+
+
+def test_orthomcl_export_refuses_mapping_loss():
+    report, conversion = orthomcl_fixture()
+    conversion.update(removed_mapping_pairs=1, retained_pairs=11)
+    with pytest.raises(ValueError, match="OrthoMCL"):
+        extract(report, conversion)
+
+
 def test_fastoma_export_preserves_supplied_tree_semantics():
     from benchmark_tools.export_qfo_corrected_comparison import FASTOMA_SEMANTICS
     report, conversion = fixture("fastoma")
