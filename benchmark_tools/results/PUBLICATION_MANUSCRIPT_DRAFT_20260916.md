@@ -2,8 +2,10 @@
 
 Working manuscript, 16 September 2026. Not submission-ready. Sections below
 distinguish completed development-exposed analyses from prospective work.
-Internal evidence links are supplied for audit; a verified literature
-bibliography and journal-specific formatting remain to be added.
+Internal evidence links are supplied for audit. An initial
+[verified literature bibliography](PUBLICATION_REFERENCES_20260917.md)
+covers benchmarks, biological evidence and OrthoFinder v3; remaining method
+and dependency citations and journal-specific formatting are incomplete.
 
 ## Study Objective
 
@@ -48,6 +50,10 @@ FastOMA's supplied OrthoFinder tree is disclosed rather than treated as
 independent tree inference. Native-output semantics and source records are
 retained in the [comparison](PUBLICATION_COMPARISON_ORTHOMCL_COMPLETE_20260916.md)
 and [OrthoBench protocol](ORTHOBENCH_UNCERTAINTY_PROTOCOL_20260916.md).
+The v3 method is described by
+[Emms et al. (2026)](https://doi.org/10.1038/s41592-026-03126-6), with a
+[published Figure2 correction](https://doi.org/10.1038/s41592-026-03238-z).
+This citation does not replace executable/version provenance for our runs.
 
 For QfO, OrthoHMM high sensitivity and the OrthoFinder checkpoint contribute
 group-derived cross-species pairs; OrthoHMM satellite_v2 and full OrthoFinder
@@ -63,6 +69,9 @@ must not be interpreted as a matched search-engine ablation.
 QfO and OrthoBench influenced development and are therefore not independent
 confirmation sets. OrthoBench evaluates the complete retained 70-RefOG panel
 with its low-certainty exclusions and audited weighted pair statistic.
+The benchmark frameworks are described by
+[Altenhoff et al. (2016)](https://doi.org/10.1038/nmeth.3830) and
+[Emms and Kelly (2020)](https://doi.org/10.1093/gbe/evaa211), respectively.
 Weighted counts divide each reference-family contribution by reference size
 minus one; aggregate precision, recall, and F1 are computed from those
 counts, not by averaging family F1 values.
@@ -83,6 +92,9 @@ score. Relation counts assessed by functional endpoints do not necessarily
 equal total prediction coverage. Three Kingdoms is supplementary: its
 BUSCO-reference pair statistic ignores false positives involving
 non-reference genes and cannot establish proteome-wide orthology accuracy.
+BUSCO's conserved-gene completeness framework
+([Manni et al., 2021](https://doi.org/10.1093/molbev/msab199)) is distinct
+from this project's BUSCO-reference pair statistic.
 [Machine-readable comparison](publication_comparison_orthomcl_complete_20260916.json).
 
 For the separately recovered four-stage QfO replay, SwissTrees raw counts
@@ -101,6 +113,10 @@ analyses; these intervals do not cover the secondary six-metric mean.
 [Protocol](QFO_SWISS_UNCERTAINTY_PROTOCOL_20260917.md).
 
 ### Prospective Validation And Ablations
+
+YGOB combines curated homology with syntenic context
+([Byrne and Wolfe, 2005](https://doi.org/10.1101/gr.3672305)); that original
+resource description does not establish independence of our retained subset.
 
 The frozen YGOB experiment retains 16 non-Saccharomyces species, 83,404
 inference proteins, and 83,391 reference genes in 10,250 curated pillars.
@@ -644,6 +660,10 @@ until original source-family mappings are recovered and validated. No
 independent-pair bootstrap or degenerate single-case interval is substituted.
 
 ### Prespecified Whole-Genome-Duplicate Application
+
+Experimental duplicate-pair evidence comes from
+[Kuzmin et al. (2020)](https://doi.org/10.1126/science.aaz5667), with the
+exact retained table recorded in the prospective application protocol.
 
 The frozen application retained all 240 experimental duplicate pairs, of which
 239 had both anchors in the prepared inputs and 231 shared an unambiguous YGOB

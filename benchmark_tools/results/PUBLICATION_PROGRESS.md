@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Initial Literature References Verified (2026-09-17)
+
+Previous turn reproduced and pushed the relocated domain workflowfb688ac.
+Re-read full objective; QfO21671_0/21681 and DGX21656_7 remain RUNNING.
+Checked primary literature and author/publisher records for QfO, revised
+OrthoBench, YGOB, BUSCO, the experimental WGD study and the2026OrthoFinderv3
+paper. The latter has a26August2026author correction replacing Figure2;
+read and retained that correction rather than citing the original unqualified.
+
+Added `PUBLICATION_REFERENCES_20260917.md` with seven citations, claim boundaries,
+source links and explicit outstanding citation/licensing work. Integrated
+the references at relevant manuscript passages. Exact executed3.1.5identity
+still comes from run manifests, not the paper. Neither published performance
+claims nor corrected external figure values were imported into our results.
+
+This is partial bibliography progress, not complete reference coverage or
+resource redistribution clearance. Remaining comparator/dependency citations,
+full author metadata, citation export, raw acquisition/rights review and the
+broader empirical/release requirements remain active. No raw datasets or
+external illustrations were copied in this step; running jobs were unchanged.
+
 ## Domain Statistics Reproduced Outside Checkout (2026-09-17)
 
 Previous turn completed broad regression and claims reconciliation, pushed
