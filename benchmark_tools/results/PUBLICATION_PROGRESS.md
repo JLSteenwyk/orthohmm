@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Sequence Pair Conversion And Unit Regression (2026-09-18 UTC)
+
+Previous turn progressed throughf1e21b0 with terminal graph admission.
+Reread the full objective; live scheduler confirms21706_0 HMM RUNNING13:36:40
+and21791 numeric conversion RUNNING1:08:47;21792/21798 remain dependent.
+
+Added prepare_qfo_sequence_pairs.py and batch entry point. Successful frozen
+graph admission, refined partition identity, corrected FASTA inventory and
+QfO mapping are required before cross-species clique conversion. Existing
+converter output is compared with independent per-group species-count pair
+arithmetic. Unexpected mapping loss or invalid/incomplete memberships fail;
+valid zero-pair predictions remain valid conversion outcomes. Separate variant
+directories retain partial/failure evidence. No new native-orthology claim is
+attached to these group-derived pairs.
+
+33 focused tests pass, including actual converter subprocesses, mapping loss,
+duplicate/missing/foreign genes and zero pairs. CLI and batch syntax pass.
+Full `pytest -q tests/unit`:4,877 passed,9 skipped in83.66s. This covers the
+recent shared-worker changes as well as the converter; it is not a claim
+that integration/biological benchmarks completed. Created frozen graph
+admission worktree publication_qfo_sequence_graph_admission_v1 at
+f1e21b09c28f270dc3ef2243bdcad86f212b58a0.
+
+No graph/pair job was launched and no new scores are claimed. Next: finish
+assessment/score-admission linkage for the new sequence participants, inspect
+21798 when available, then execute and admit both graph arms before scoring.
+Corrected QfO biological results, uncertainty, controlled timing, rights and
+release/package requirements remain incomplete; the full goal stays active.
+
 ## Sequence Graph Post-Run Admission Implemented (2026-09-18 UTC)
 
 Previous turn progressed through69adea4 with the checked sequence executor.

@@ -152,7 +152,8 @@ Altered commands, stage order, counts, file identities or memberships fail.
 The executor is pinned to69adea4d5a1dc634783b20ff7bbe9fbe1c6464db in
 `benchmarks/work/publication_qfo_sequence_graph_v1`. Generate the eventual
 command plan with that frozen executor's preparer so its source record agrees.
-The admission script itself will be frozen separately before use. All-hit and
+The admission script is frozen atf1e21b09c28f270dc3ef2243bdcad86f212b58a0 in
+`benchmarks/work/publication_qfo_sequence_graph_admission_v1`. All-hit and
 top100 have separate admission reports; neither substitutes for a failed arm.
 
 154 focused tests pass, including25 new parent/partition/gating tests and
@@ -163,7 +164,32 @@ native observations are checked, not an independent historical memory trace
 or a new graph inference. Pair conversion, accuracy scoring, paired uncertainty
 and dedicated timing remain separate requirements.
 
-### Historical Search Progress
+### Group-To-Pair Conversion
+
+`prepare_qfo_sequence_pairs.py` accepts only a successful, source-pinned
+sequence graph admission for the selected variant and the final
+`multipass_refined` partition. It requires the admission job to have completed
+under2CPUs/192GiB and requires its source to match the frozen admission
+worktree above. The corrected search input plan, complete FASTA inventory,
+prediction, QfO mapping and transitive recorded evidence are checked.
+
+The existing orthogroup converter emits cross-species clique pairs with bare
+accessions. An independent per-group species-count formula checks the expected
+pair count. Unexpected mapping loss, count disagreement, duplicate identifiers,
+unknown genes or incomplete input coverage fail. A valid zero-pair prediction
+is retained, not discarded based on accuracy. Partial output and failures are
+preserved; final pair files appear only after successful checks.
+
+The report labels these as group-derived clique pairs, never native
+phylogenetic ortholog predictions. Future outputs are separate directories in
+`benchmarks/results/qfo_sequence_pairs_v1/{all_hits,top100}`. The batch entry
+point `qfo_sequence_pairs_batch_20260918.sh` requests2CPUs/64GiB/24hours;
+it has not been submitted.33 focused tests pass, including actual converter
+subprocesses and corruption controls; CLI smoke and batch syntax checks pass.
+QfO assessment and score admission still need this new participant/status
+connected to their existing frozen workflows before these runs are scored.
+
+### Earlier Search Progress
 
 As of the recorded live check, DIAMOND job21789 remained running; its
 incremental execution log recorded56 completed target searches out of78,
