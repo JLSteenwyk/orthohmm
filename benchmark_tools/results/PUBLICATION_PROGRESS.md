@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Corrected Candidate Parent Admission Implemented (2026-09-18 UTC)
+
+Previous turn progressed by pushing the candidate-content audit and checking
+all four original-QfO arms (0a028a7). Created clean detached preparation
+executor `benchmarks/work/publication_qfo_corrected_candidates_v1` at
+`0a028a743fca7626b86376475f4c7fd438093717`; no preparation was launched.
+
+Added `admit_qfo_corrected_candidates.py`. It requires terminal successful
+preparation accounting and an explicit manifest checksum, frozen preparation
+and replay-admission sources, complete helper inventories, the admitted
+corrected plan and native evidence, matching FASTA inventories/species
+ownership/checkpoint summaries, and matching before/after runtime checks.
+It reconstructs the eight-cell design, requires all four candidate arms,
+checks exact satellite_v2 parameters, and independently reruns each arm's
+content audit. Fresh results must match those recorded during preparation;
+provenance is rehashed before writing a new admission report. Accuracy and
+publication readiness remain false.
+
+Validation: 68 focused tests pass, including wrong-release, incomplete-arm,
+changed-command/threshold, scheduler/allocation, output-path, membership and
+environment failures. Full unit suite: **3,044 passed, 1 skipped in 57.41
+seconds**; the opt-in installed legacy BLAST smoke remains skipped. Also
+confirmed the gate's complete parameter dictionary matches both original
+expanded QfO arms. These are gate tests, not a completed corrected candidate
+admission or a full positive end-to-end corrected preparation run.
+
+Latest scheduler observations: HMM 21706_0 running 3:12:17 and SonicParanoid
+21710 running 2:49:05; final original-cell assessment 21723 subsequently
+confirmed running at 32:43 with admission 21724 pending. No live job was
+restarted or interrupted. Next: implement corrected reconciliation launch
+wiring against this admission, and advance actual corrected replay and
+candidate jobs as their prerequisites complete. Final comparisons,
+uncertainty, matched resource admission and publication packaging remain
+unfinished; the full goal remains active.
+
 ## Candidate Merge Consistency Audit Added (2026-09-18 UTC)
 
 Previous turn progressed by pushing corrected candidate preparation
