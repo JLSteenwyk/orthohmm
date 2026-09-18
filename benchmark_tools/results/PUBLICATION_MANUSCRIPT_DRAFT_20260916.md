@@ -829,6 +829,18 @@ pairs are all Xenopus. This separates observed residue representation from
 the input-release issue without normalizing the frozen inputs or assuming
 all inference methods treat nonstandard residues equivalently.
 
+### Corrected QfO Sequence-Search Control
+
+Independent validation admitted the DIAMOND all-hit control with frozen
+OrthoHMM downstream grouping:11,300,151cross-species clique pairs survived
+reference mapping without loss. Endpoint scores were GO similarity0.479327,
+EC similarity0.874662, VGNC F1=0.602031, SwissTrees F1=0.628092, TreeFam-A
+F1=0.576306 and FAS0.715448. The project-defined secondary mean was0.645978.
+The top100diagnostic and matched corrected HMM control are not yet available
+as a complete admitted comparison. No HMM benefit follows from these point
+estimates; equal cutoffs do not establish matched sensitivity or effort.
+[Admitted scores and provenance](QFO_SEQUENCE_ALL_HITS_SCORE_20260918.md).
+
 ### Remaining Requirements
 
 No universal superiority, arbitrary-dataset generalization, or controlled
@@ -836,7 +848,8 @@ speedup is established. Frozen YGOB evaluation is complete and supports
 novel-taxon transfer, not family-disjoint confirmation. Homolog-family
 overlap remains substantial even after taxon exclusions. The proposed HMM
 contribution is not established by the completed exploratory OrthoBench
-sequence-search control; QfO extension remains outstanding. The interaction
+sequence-search control; the QfO all-hit arm is now admitted, but its matched
+HMM comparison and paired uncertainty remain outstanding. The interaction
 between broader candidates and reconciliation has completed OrthoBench and
 original-release QfO factorial evidence, with no adjusted F1 benefit or
 QfO C-by-R interaction established. Corrected-input QfO evaluation and

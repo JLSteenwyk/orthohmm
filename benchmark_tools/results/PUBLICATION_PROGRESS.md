@@ -1,5 +1,26 @@
 # Publication Progress
 
+## All-Hit QfO Scores Admitted And Exported (2026-09-18 UTC)
+
+Previous turn progressed through08bfb3f with the output fix and admitted
+top100graph. Reread the full objective and verified jobs. All-hit scoring
+21825completed0:0 in31:09 and independent admission21826completed0:0 in3:15.
+Retained admitted reportSHAdc29e5410a274b5e633674bdf42c6578893bbc47912adc7b23ca6893ed917cd2.
+GO/EC/VGNC/SwissTrees/TreeFam-A/FAS scores are0.47932664/0.87466218/
+0.6020310955333872/0.6280916644372869/0.5763063958696845/0.7154481088979685;
+secondary six-metric mean0.6459776807897212. No HMM benefit claimed.
+
+Added/tested an admitted sequence-control exporter, replayed native metric
+validation, and generated JSON/TSV/Markdown with all six endpoints and
+explicit pending top100values.45focused tests pass. Retained source hashes,
+prediction semantics, coverage, native axis details and limitations. Updated
+manuscript and claims; paired uncertainty awaits the corrected HMM baseline.
+
+Top100conversion21828completed0:0 in2:36 with11,285,357expected/emitted/
+retained pairs, zero mapping losses. Retained reportSHA955f6d151f5a276c6c4f2c4586aaffe9bfb82bb084c7bbbcb676b434fdfbd5ae.
+Scoring21829 is running; admission21830dependency-pending. HMM21706_0
+continues. No scientific setting, native job or admission rule changed.
+
 ## Top100 Graph Admitted; Downstream Chain Submitted (2026-09-18 UTC)
 
 After committing/pushing the validated output repair280ccf0, scheduler
