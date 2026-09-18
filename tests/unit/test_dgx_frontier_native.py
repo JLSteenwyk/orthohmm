@@ -28,6 +28,30 @@ def test_transferred_recipe_matches_local_sources():
         assert hashlib.sha256(data).hexdigest() == row["sha256"]
 
 
+def test_retained_native_results_replay_without_relaxing_flags():
+    from benchmark_tools.measure_native_frontier_step import evaluate
+
+    report = json.loads((ROOT / "results/dgx_frontier_native_smokes_21831.json").read_text())
+    assert report["scientific_timings_admitted"] == 0
+    assert report["publication_ready"] is False
+    flags = []
+    for row in report["runs"]:
+        measured = row["verification"]["measurement"]
+        assert evaluate(measured["points"], measured["native"], measured["job_id"]) == measured["screening"]
+        assert measured["native"]["exit_code"] == 0
+        assert row["output_validation"]["input_genes"] == 645
+        screen = measured["screening"]["original_threshold_screen"]
+        flags.append(screen["flagged_intervals"])
+        assert screen["whole_command_screen"]["screen_passed"] is True
+        for token in ("JobState=COMPLETED", "Restarts=0", "CPUs/Task=20", "MinMemoryNode=96G", "OverSubscribe=NO"):
+            assert token in row["scheduler"].split()
+    assert flags == [[1], [1, 3], []]
+    satellite = report["runs"][1]["verification"]["measurement"]["screening"]
+    assert satellite["frontier_intervals"][3]["outside_target_frontier_cpu_s"] == pytest.approx(.001811)
+    assert satellite["frontier_intervals"][3]["root_minus_frontier_cpu_s"] == pytest.approx(.377656)
+    assert any(row["root_minus_frontier_cpu_s"] < 0 for row in satellite["frontier_intervals"])
+
+
 @pytest.mark.parametrize("old,new", [
     ("run_dgx_hierarchy_quiet_smoke.py", "run_dgx_frontier_native_smoke.py"),
     ("run_dgx_hierarchy_quiet_smoke.sh", "run_dgx_frontier_native_smoke.sh"),

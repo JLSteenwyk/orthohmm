@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Native Frontier Integration Executed (2026-09-18 UTC)
+
+Previous turn made progress viafd47088. Read the full objective, verified
+the ongoing QfO jobs, transferred the33-file DGX recipe, checked every hash,
+and committed/pushed the inventory as9ea9afb before submission. Array21831
+ran all three methods sequentially after the60-second eligibility delay.
+No DGX remote call occurred until local scheduler evidence showed all tasks
+completed0:0. No unrelated process was stopped.
+
+Archived1117 files/8551104 bytes and independently replayed native output
+and CPU checks. Retained reportSHA2f6d33f9dad301bbe3d51d3135ca61ee883373e556b0cc852e7c66fa631c1fca.
+High/satellite/OrthoFinder flagged intervals are[1]/[1,3]/[] with unchanged
+thresholds; all whole-command screens pass. Outside-target cgroup activity
+is small but residual accounting remains unresolved, not a proven external
+workload. No scientific timings are admitted or retroactively corrected.
+SeeDGX_FRONTIER_NATIVE_RESULT_20260918.md for native output counts and scope.
+
+The58-test focused suite passed before native results were inspected; the
+suite including retained-result replay now passes59 tests, preserving every
+flag and signed residual. Latest scheduler check:21706_0running18:20:26,
+21829running26:01,21830pending.
+Next requirements are native observer-overhead validation, non-CPU resource
+isolation and a prospective inclusion policy, not selective fixture repeats.
+Corrected QfO inference/scoring continue independently.
+
 ## Native Frontier Launcher And Replay Audit (2026-09-18 UTC)
 
 The previous retrieval-only turn was no progress toward recovering the
