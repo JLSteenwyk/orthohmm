@@ -1,5 +1,44 @@
 # Publication Progress
 
+## Corrected Reconciliation Validation Queued (2026-09-18 UTC)
+
+Previous turn progressed through3cdef26: four reconciliation tasks queued
+as21760. Revalidated live HMM21706_0 RUNNING9:39:46 and final DGX21656_26
+RUNNING14:41. Reconciliation remains pending candidate admission21759.
+No scientific parameters, frozen executor or unrelated jobs were changed.
+
+Updated the admission batch wrapper to resolve exact array-task identity
+through structured sacct records. A live check confirms21706_0 has raw
+job21707, so array labels cannot stand in for raw execution provenance.
+The wrapper requires one exact successful parent row, rejects batch-step
+substitution, duplicate/missing records and nonnumeric raw IDs, computes
+the fixed candidate-admission digest after dependency completion, then
+calls unchanged frozen5a9d18d8fa5cf26bd94c2e1e5f83089c3e7fa3e6 validator.
+Its source worktree publication_qfo_corrected_reconcile_admission_v1 was
+verified clean.41 new wrapper tests plus runner/admitter tests give105
+passes in13.05s. Implementation commit63593b8.
+
+Confirmed per-task submissions (afterany, not a collective success gate):
+
+| Reconciliation task | Independent validation job |
+| --- | --- |
+| 21760_0 | 21761 |
+| 21760_1 | 21762 |
+| 21760_2 | 21763 |
+| 21760_3 | 21764 |
+
+Submitted2026-09-18T10:27:51-52; individual scontrol queries confirm all
+four dependencies and2CPU/64GiB/4h/bizon/no-requeue allocations. Each output
+is benchmarks/work/qfo_corrected_factorial_native_admission_INDEX_20260918.json
+for its index0-3. Failed reconciliation is rejected before reading partial
+outputs; no successful admission artifact is synthesized for it. The
+unchanged validator checks native integrity, not independent correctness
+of every inferred tree/event. Mapping and scoring remain separate gates.
+
+Next: queue R-off clique conversion and R-on native-pair conversion, then
+the eight frozen assessment cells and independent scoring admission.
+There are no new corrected factorial results yet. Goal remains active.
+
 ## Corrected Reconciliation Array Queued (2026-09-18 UTC)
 
 Previous turn made progress through207405f: candidate preparation21758 and
