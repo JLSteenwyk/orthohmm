@@ -1,5 +1,38 @@
 # Publication Progress
 
+## Corrected Search Coverage Queued (2026-09-18 UTC)
+
+Previous turn progressed through8e9f3d6, adding the native checkpoint sorting
+prerequisite. This turn revalidated DIAMOND21789 RUNNING32:38 and
+HMM21706_0 RUNNING10:44:16; upstream validation dependencies remained
+pending. No active inference or timing run was changed.
+
+Implemented compare_qfo_search_coverage.py and frozen executor
+3a83f9db2981c7bad3d984738c599cf0d1bb4585 at
+benchmarks/work/publication_qfo_hit_coverage_v1. Job21793 was submitted
+2026-09-18T11:33:34 afterok:21720:21792 and confirmed dependency-pending,
+2CPU/192GiB/7days/bizon/no-requeue. Output will be
+benchmarks/work/qfo_corrected_hit_coverage_20260918/report.json, with a
+separate disk-backed sorted HMM diagnostic checkpoint retained below it.
+Filesystem currently has about12TB free; this is available space, not a
+measured final scratch requirement.
+
+Requires completed native-HMM and independent numeric validation jobs,
+frozen source revisions, unchanged accounting, corrected primary/search
+plans and identical gene/species universes. Binds conversion and independent
+source-equivalence counts before loading search hits. Reports exact directed
+and nonself overlap for HMM/all-hit/top100, species-direction coverage and
+fixed descriptive score histograms. Rejects a top100 set containing any hit
+absent from all-hit output. Input/source hashes are rechecked afterward.
+No benchmark reference labels, score fitting or inferential accuracy claims.
+
+83 focused tests pass in1.20s; bash syntax check passes. Tests include real
+three-checkpoint comparisons, incompatible genes/species/subsets, admission
+identity failures and pending-job refusal. Actual live CLI preflight also
+refuses before creating output. There is no production comparison result.
+Graph feasibility, frozen replay, native output validation and scientific
+scoring remain separate requirements; full publication goal stays active.
+
 ## Native Hit Ordering Prerequisite (2026-09-18 UTC)
 
 Previous turn progressed through754a76d with chunked hit diagnostics. This

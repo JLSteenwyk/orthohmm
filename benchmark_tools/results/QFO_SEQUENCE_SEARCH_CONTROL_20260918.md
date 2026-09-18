@@ -108,3 +108,16 @@ pass, and actual pending-conversion preflight refuses without output.
 Future report: benchmarks/work/qfo_sequence_numeric_admission_20260918/report.json.
 No production equivalence result exists yet. This gate does not authorize a
 claim of matched search sensitivity, scientific accuracy or graph feasibility.
+
+Label-free comparison21793 follows afterok:21720:21792, requiring both the
+native corrected HMM admission and independent DIAMOND numeric admission.
+Executor3a83f9db2981c7bad3d984738c599cf0d1bb4585 is frozen at
+publication_qfo_hit_coverage_v1. Submitted2026-09-18T11:33:34 with
+2CPU/192GiB/7days/bizon/no-requeue. A separate disk-backed HMM copy sorts
+native species-pair batches without changing gene IDs or score values;
+duplicates fail rather than being collapsed. All-hit/top100 remain unchanged.
+The comparison reports exact directed overlap and coverage plus fixed score
+histograms; it does not estimate biological sensitivity or match calibration.
+Future report: benchmarks/work/qfo_corrected_hit_coverage_20260918/report.json.
+83 focused tests pass; actual pending-admission preflight refuses without
+output. No production diagnostic or graph-feasibility result exists yet.
