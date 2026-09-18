@@ -33,3 +33,19 @@ result and complete pair manifest must pass before scoring is submitted.
 The final reconciliation cell p1_c1_r1 is now running as 21671_3. All of
 these are original-release experiments, not corrected-input results.
 No interim parameter selection or uncertainty contrast is authorized.
+
+## Pair Conversion and Scoring Submission
+
+Task 21675_5 subsequently completed with exit 0:0 in 2:58. It retained
+4,959,440 of 4,975,326 native pairs, excluding 15,886 pairs outside the
+original-release mapping. The committed pair manifest
+`qfo_factorial_pairs_p1_c0_r1_20260918.json` has SHA-256
+`7dbdb5d226cc0993509b935e62426ea71852cea8cf750d9555ad0a393a41df27`.
+
+Submitted scoring job **21711**, index 5, from frozen executor
+`25f328d994765369cfae0382a21c3e7fdb3b7dab`, binding that exact pair-manifest
+checksum. Independent admission job **21712** uses executor
+`9680ccced0e351fa62e0e76c1f393a232d04d00e` with dependency afterany:21711,
+index 5, and the same checksum. Both use the existing frozen wrappers;
+submission is not score admission. Complete eight-cell paired uncertainty
+still waits for all endpoints and validations.
