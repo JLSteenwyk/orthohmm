@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Descriptive DGX Resource Figure (2026-09-18 UTC)
+
+Previous turn progressed througha794d56: native validation and descriptive
+resource tables completed. Live corrected searches revalidated at HMM21706_0
+RUNNING11:16:30 and DIAMOND21789 RUNNING1:04:52;21790-21793 dependency-pending.
+No running job was changed.
+
+Added plot_dgx_descriptive_resources.py, binding the source report checksum
+4943285a3b21af0e3784e3cf4350aba90f273ffcfb176b239557064ea174a1e3.
+Validates all27 native-valid runs, exact method/size/repeat and protein-count
+inventories, descriptive-only flags and recomputed medians/ranges. Renders
+all27 repeats in each of three panels: native elapsed, native CPU and cgroup
+memory peak. No connecting scaling fits, speedup ratios or sampled-RSS panel.
+Open repeat symbols, median ticks and observed ranges are explicitly not CIs;
+host-isolation uncertainty and memory-scope caveats are printed in the figure.
+
+PNG/PDF/SVG and manifest retained in figures_dgx_descriptive_20260918.
+PNG visually inspected: labels/legend/caveats readable without overlap.
+29 focused tests pass in0.69s. Extended figure inventory audit passes for
+16 panels,55 outputs and93 recorded dependency occurrences; report
+publication_figure_integrity_20260918_v2.json. One older figure retains a
+frozen-worktree replay helper outside main-repository tracked files; byte
+identity passes but portability remains unresolved. Linked the figure from
+the manuscript. This adds no controlled-timing admission or superiority claim.
+Full publication objective remains active.
+
 ## DGX Native Outputs Validated And Descriptive Export (2026-09-18 UTC)
 
 Previous turn progressed througha576921 with observation-gap taxonomy.

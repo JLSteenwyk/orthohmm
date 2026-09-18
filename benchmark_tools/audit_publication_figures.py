@@ -17,7 +17,7 @@ PANELS = (
     "figures_simulation_variable_native_v2_20260916", "figures_simulation_fixed_native_v2_20260916",
     "figures_simulation_tree_robustness_20260917", "figures_wgd_application_20260917",
     "figures_qfo_swiss_comparators_20260917", "figures/swiss_domain_strata_20260917",
-    "qfo_factorial_swiss_figure_20260918",
+    "qfo_factorial_swiss_figure_20260918", "figures_dgx_descriptive_20260918",
 )
 
 
@@ -90,7 +90,8 @@ def audit(repo):
                 "Manifest source inputs are checked, but their transitive raw-data dependencies are not traversed.",
                 "Fixed-length simulation panel remains a failure diagnostic, not an admitted OrthoFinder accuracy comparison.",
                 "The QfO factorial figure uses original-release SwissTrees results, not corrected-input reruns.",
-                "Pending corrected-QfO factorial and matched scaling figures are not certified by this inventory."]}
+                "The DGX resource figure is descriptive; its inclusion does not admit controlled timing comparisons.",
+                "Pending corrected-QfO factorial figures are not certified by this inventory."]}
 
 
 if __name__ == "__main__":

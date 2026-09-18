@@ -987,6 +987,11 @@ were applied. These limitations remain despite successful output validation.
 [Native validation](dgx_native_output_validation_20260918.json),
 [descriptive resource observations](dgx_descriptive_resources_20260918.json),
 [all 27 runs](dgx_descriptive_resource_runs_20260918.csv).
+The [descriptive resource figure](figures_dgx_descriptive_20260918/dgx_descriptive_resources.pdf)
+shows all repeats, median ticks and observed ranges for elapsed time, CPU
+use and cgroup peak memory. Ranges are not confidence intervals. Sampled
+aggregate RSS is deliberately not plotted; no speedup or complexity fit is
+implied. Host uncertainty is stated within the figure itself.
 [DGX observation-gap audit](dgx_observation_gaps_20260918.json),
 [post-run validation status](DGX_POSTRUN_ADMISSION_20260918.md).
 

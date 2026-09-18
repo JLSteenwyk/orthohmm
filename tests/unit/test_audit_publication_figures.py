@@ -70,5 +70,6 @@ def test_nested_record_inventory():
 
 def test_original_qfo_factorial_is_explicitly_retained():
     assert "qfo_factorial_swiss_figure_20260918" in PANELS
+    assert "figures_dgx_descriptive_20260918" in PANELS
     assert len(set(PANELS)) == len(PANELS)
     assert not any("corrected_factorial" in panel for panel in PANELS)
