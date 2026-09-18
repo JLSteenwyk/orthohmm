@@ -248,6 +248,16 @@ relation counts or precision-recall axes.
 [Comparison](PUBLICATION_COMPARISON_ORTHOMCL_COMPLETE_20260916.md),
 [endpoint figure](figures_accuracy_orthomcl_complete_20260916/qfo_endpoints.png).
 
+An audit of saved FAS samples reproduced all eight comparator means and
+native standard errors, as well as four recovered-stage results, within
+1e-12. The scored fraction of reported eligible pairs ranged from 0.0067%
+to 31.3477%; the eligible count is not the total prediction count. Native
+code subsamples without setting a shuffle seed, and its pair-based SEM
+does not account for shared proteins or families. These SEMs are not
+dependence-aware uncertainty for method contrasts. The audit validates
+saved-sample arithmetic, not sampling representativeness or underlying
+feature-score correctness. [FAS sample audit](QFO_FAS_SAMPLE_AUDIT_20260917.md).
+
 The independently admitted recovered replay is reported separately from
 these historical method rows. Its profile branch had SwissTrees F1
 differences of-0.003706 before and-0.003716 after sequence-based refinement

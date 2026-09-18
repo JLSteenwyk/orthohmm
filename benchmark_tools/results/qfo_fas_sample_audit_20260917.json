@@ -1,0 +1,611 @@
+{
+  "comparison": {
+    "bytes": 67483,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_comparison_orthomcl_complete_20260916.json",
+    "sha256": "094f842ad8211450519d4238c0b3a5020a7969049d4b7306f5465d5acbf914a3"
+  },
+  "limitations": [
+    "NR_ORTHOLOGS counts precomputed plus annotation-eligible missing pairs, not the scored sample or all predictions.",
+    "Native scorer shuffles without setting a seed and caps newly computed pairs at 9000; historical RNG state is not recovered.",
+    "Native SEM assumes independent pair values; independence cannot be assumed for repeated proteins and homologous families.",
+    "Pair overlap is descriptive, not an independent unit definition or a paired comparison confidence interval.",
+    "This verifies saved-sample arithmetic, not prediction membership, annotation completeness, FAS score correctness, or sampling representativeness."
+  ],
+  "methods": [
+    {
+      "aggregate": {
+        "bytes": 655,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthohmm_high_sensitivity/results/FAS/FAS.json",
+        "sha256": "32bded13129090d6899587020264eccd59c761862487fa3aad78936a96900224"
+      },
+      "maximum_sample_protein_degree": 5,
+      "mean": 0.7747943345202204,
+      "method": "orthohmm_high_sensitivity",
+      "native_pair_iid_sem": 0.0008593329119049942,
+      "proteins_in_multiple_sample_pairs": 8685,
+      "raw": {
+        "bytes": 444337,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthohmm_high_sensitivity/results/FAS/FAS_orthohmm-high-sensitivity_raw.txt.gz",
+        "sha256": "47adc3b55416690599ad6c3625517ebbac5655d6713ffa1f44a7d85b70276d6f"
+      },
+      "reported_eligible_pairs": 8720518,
+      "sample_fraction": 0.004412123224790087,
+      "sample_pairs": 38476,
+      "sample_proteins": 67096
+    },
+    {
+      "aggregate": {
+        "bytes": 661,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthohmm_phylogeny_satellite_v2/results/FAS/FAS.json",
+        "sha256": "960ea73766a16366ba00b6da3258b314580d9ef6ce12bbabebfbb5f320aaeed3"
+      },
+      "maximum_sample_protein_degree": 13,
+      "mean": 0.7619389407434497,
+      "method": "orthohmm_phylogeny_satellite_v2",
+      "native_pair_iid_sem": 0.0004522730270862247,
+      "proteins_in_multiple_sample_pairs": 80965,
+      "raw": {
+        "bytes": 1953320,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthohmm_phylogeny_satellite_v2/results/FAS/FAS_orthohmm-phylogeny-satellite-v2_raw.txt.gz",
+        "sha256": "947796b16ae1cf50bf76d1b8ce977931cf07e88be28a419c75f71d1bd0f42feb"
+      },
+      "reported_eligible_pairs": 5483453,
+      "sample_fraction": 0.030917379979367016,
+      "sample_pairs": 169534,
+      "sample_proteins": 210823
+    },
+    {
+      "aggregate": {
+        "bytes": 653,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthofinder_v3_diamond/results/FAS/FAS.json",
+        "sha256": "96476034af7313f607f38723725b7f13116fc2c9d342ce692f90bc548066a489"
+      },
+      "maximum_sample_protein_degree": 32,
+      "mean": 0.6920006330234186,
+      "method": "orthofinder_3_1_5_full",
+      "native_pair_iid_sem": 0.0010071121831223024,
+      "proteins_in_multiple_sample_pairs": 10961,
+      "raw": {
+        "bytes": 594339,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthofinder_v3_diamond/results/FAS/FAS_orthofinder-v3-diamond_raw.txt.gz",
+        "sha256": "b62e7352065ac85e440c38b30685335eae0b8ef8447145e36b13df0888492b8f"
+      },
+      "reported_eligible_pairs": 13403651,
+      "sample_fraction": 0.0038356713405922013,
+      "sample_pairs": 51412,
+      "sample_proteins": 88642
+    },
+    {
+      "aggregate": {
+        "bytes": 659,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthofinder_v3_sequence_only/results/FAS/FAS.json",
+        "sha256": "9d9d0a3ec9aa33993ffc95bd4d4a847ff9fa24147508d3446a5fa18f160f593e"
+      },
+      "maximum_sample_protein_degree": 5,
+      "mean": 0.5579413821474536,
+      "method": "orthofinder_3_1_5_sequence_only",
+      "native_pair_iid_sem": 0.002370917586935097,
+      "proteins_in_multiple_sample_pairs": 1450,
+      "raw": {
+        "bytes": 126744,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthofinder_v3_sequence_only/results/FAS/FAS_orthofinder-v3-sequence-only_raw.txt.gz",
+        "sha256": "11fe531a4b10d17c55e443d9cce12a8549920cc0e041c35db351dbb0e9079680"
+      },
+      "reported_eligible_pairs": 162991772,
+      "sample_fraction": 6.673956523400458e-05,
+      "sample_pairs": 10878,
+      "sample_proteins": 20137
+    },
+    {
+      "aggregate": {
+        "bytes": 651,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/sonicparanoid_native/results/FAS/FAS.json",
+        "sha256": "d199cf7a5db857a5a803071d9e30451434c883278300cc65b0e7db9ea8513742"
+      },
+      "maximum_sample_protein_degree": 15,
+      "mean": 0.7338243932523303,
+      "method": "sonicparanoid_2_0_9",
+      "native_pair_iid_sem": 0.0008246073200876994,
+      "proteins_in_multiple_sample_pairs": 13499,
+      "raw": {
+        "bytes": 596109,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/sonicparanoid_native/results/FAS/FAS_sonicparanoid-native_raw.txt.gz",
+        "sha256": "56cf83622d124899b11391bced30d1e13c8bee7c2b34605347d0954edd72a368"
+      },
+      "reported_eligible_pairs": 14975235,
+      "sample_fraction": 0.0034458891630081263,
+      "sample_pairs": 51603,
+      "sample_proteins": 83903
+    },
+    {
+      "aggregate": {
+        "bytes": 650,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/proteinortho_native/results/FAS/FAS.json",
+        "sha256": "8d857e991d222377ec0ae93b6223ff53ad0193ef78d5292cfb41b325af13c753"
+      },
+      "maximum_sample_protein_degree": 89,
+      "mean": 0.811331914095429,
+      "method": "proteinortho_6_3_6",
+      "native_pair_iid_sem": 0.0001276373059061463,
+      "proteins_in_multiple_sample_pairs": 361116,
+      "raw": {
+        "bytes": 16318804,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/proteinortho_native/results/FAS/FAS_proteinortho-native_raw.txt.gz",
+        "sha256": "5b77b39d620da3a02bfb1fb12b68325ffd37fdb53aefadaebb60b7ff66eb20c3"
+      },
+      "reported_eligible_pairs": 4563756,
+      "sample_fraction": 0.3134773199969499,
+      "sample_pairs": 1430634,
+      "sample_proteins": 447383
+    },
+    {
+      "aggregate": {
+        "bytes": 637,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/fastoma/results/FAS/FAS.json",
+        "sha256": "c9930705c71105c3cde1628d38ed6cbc315b7a2d00932b61826208eca1e1761b"
+      },
+      "maximum_sample_protein_degree": 8,
+      "mean": 0.651282904642409,
+      "method": "fastoma_0_3_5",
+      "native_pair_iid_sem": 0.0020405677595458603,
+      "proteins_in_multiple_sample_pairs": 4379,
+      "raw": {
+        "bytes": 199845,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/fastoma/results/FAS/FAS_fastoma_raw.txt.gz",
+        "sha256": "19f1cafd67e6079bfa698f5635f85da3e9f4857e13d00007359ab64d4a1fa5eb"
+      },
+      "reported_eligible_pairs": 15277489,
+      "sample_fraction": 0.0011477016936487403,
+      "sample_pairs": 17534,
+      "sample_proteins": 29142
+    },
+    {
+      "aggregate": {
+        "bytes": 655,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthomcl_1_4_final_groups/results/FAS/FAS.json",
+        "sha256": "c4dae9d92a7874b29436a1e042ded86e880cd00fac149e435634a16876372bb4"
+      },
+      "maximum_sample_protein_degree": 26,
+      "mean": 0.7292984477333277,
+      "method": "orthomcl_1_4",
+      "native_pair_iid_sem": 0.000675102948956482,
+      "proteins_in_multiple_sample_pairs": 31029,
+      "raw": {
+        "bytes": 1097091,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/orthomcl_1_4_final_groups/results/FAS/FAS_orthomcl-1-4-final-groups_raw.txt.gz",
+        "sha256": "73aba19db147ed3ec014cdc07ee06e82e4216d93a319a397dbc86e1aa49f605d"
+      },
+      "reported_eligible_pairs": 14095133,
+      "sample_fraction": 0.006763895026744338,
+      "sample_pairs": 95338,
+      "sample_proteins": 127032
+    },
+    {
+      "aggregate": {
+        "bytes": 648,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_0/results/FAS/FAS.json",
+        "sha256": "bc80c923353754b23bb08cb09bb4aa23bdbe46b009e5cf3284f9ba80fdf019cc"
+      },
+      "maximum_sample_protein_degree": 8,
+      "mean": 0.7737068425899688,
+      "method": "checked_v2_0",
+      "native_pair_iid_sem": 0.0013474936475682143,
+      "proteins_in_multiple_sample_pairs": 3449,
+      "raw": {
+        "bytes": 162262,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_0/results/FAS/FAS_ohmm-checked-v2-0_raw.txt.gz",
+        "sha256": "b0bf956fc427d3359390a2f2dfef67881c2bd1954eb1a7bed46cd5dced9f94e4"
+      },
+      "reported_eligible_pairs": 32012674,
+      "sample_fraction": 0.00044095035609958733,
+      "sample_pairs": 14116,
+      "sample_proteins": 23560
+    },
+    {
+      "aggregate": {
+        "bytes": 647,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_1/results/FAS/FAS.json",
+        "sha256": "ba208ef7322766c4ed444ca6629311b61bc6877c06cab2e6c32ad8a27ebff65f"
+      },
+      "maximum_sample_protein_degree": 6,
+      "mean": 0.7752526000932909,
+      "method": "checked_v2_1",
+      "native_pair_iid_sem": 0.0008527552799573004,
+      "proteins_in_multiple_sample_pairs": 8821,
+      "raw": {
+        "bytes": 445881,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_1/results/FAS/FAS_ohmm-checked-v2-1_raw.txt.gz",
+        "sha256": "21ea57f649e054faf0950ea3af6c8c90a8ff824d8e224c1ffdb79548238d03fd"
+      },
+      "reported_eligible_pairs": 8710340,
+      "sample_fraction": 0.004430251861580604,
+      "sample_pairs": 38589,
+      "sample_proteins": 67161
+    },
+    {
+      "aggregate": {
+        "bytes": 648,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_2/results/FAS/FAS.json",
+        "sha256": "358e5084873bb7006521a7d4744ab14b1b881c8ac0f4e1c1edefe77ce33b0e79"
+      },
+      "maximum_sample_protein_degree": 7,
+      "mean": 0.7715748893898831,
+      "method": "checked_v2_2",
+      "native_pair_iid_sem": 0.0013800172155955244,
+      "proteins_in_multiple_sample_pairs": 3321,
+      "raw": {
+        "bytes": 163738,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_2/results/FAS/FAS_ohmm-checked-v2-2_raw.txt.gz",
+        "sha256": "b97cd13849994cee8330b2dbb6a77f55e5b7d9cb7c8576d95c4a411345b3c26f"
+      },
+      "reported_eligible_pairs": 31682321,
+      "sample_fraction": 0.000448010106330278,
+      "sample_pairs": 14194,
+      "sample_proteins": 23934
+    },
+    {
+      "aggregate": {
+        "bytes": 647,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_3/results/FAS/FAS.json",
+        "sha256": "1b30afbec5575c446671165d2b2951b3930d49f99ab3c9eefbff4261b8975cb3"
+      },
+      "maximum_sample_protein_degree": 6,
+      "mean": 0.7746333592919895,
+      "method": "checked_v2_3",
+      "native_pair_iid_sem": 0.0008634903942024991,
+      "proteins_in_multiple_sample_pairs": 8740,
+      "raw": {
+        "bytes": 446249,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_3/results/FAS/FAS_ohmm-checked-v2-3_raw.txt.gz",
+        "sha256": "aa8048d9654352eca68efc1f27e9c8f40379e57a6d240b14ba2151089005be96"
+      },
+      "reported_eligible_pairs": 8710722,
+      "sample_fraction": 0.0044298279752240976,
+      "sample_pairs": 38587,
+      "sample_proteins": 67218
+    }
+  ],
+  "native_scorer": {
+    "bytes": 9930,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/fas_benchmark.py",
+    "sha256": "1045c57f4d0f4787bec3d1f0690799df63c68dcc67ccfd5a925c338e3d33661d"
+  },
+  "sample_overlaps": [
+    {
+      "a": "orthohmm_high_sensitivity",
+      "b": "orthohmm_phylogeny_satellite_v2",
+      "shared_sample_pairs": 626
+    },
+    {
+      "a": "orthohmm_high_sensitivity",
+      "b": "orthofinder_3_1_5_full",
+      "shared_sample_pairs": 76
+    },
+    {
+      "a": "orthohmm_high_sensitivity",
+      "b": "orthofinder_3_1_5_sequence_only",
+      "shared_sample_pairs": 2
+    },
+    {
+      "a": "orthohmm_high_sensitivity",
+      "b": "sonicparanoid_2_0_9",
+      "shared_sample_pairs": 78
+    },
+    {
+      "a": "orthohmm_high_sensitivity",
+      "b": "proteinortho_6_3_6",
+      "shared_sample_pairs": 4428
+    },
+    {
+      "a": "orthohmm_high_sensitivity",
+      "b": "fastoma_0_3_5",
+      "shared_sample_pairs": 17
+    },
+    {
+      "a": "orthohmm_high_sensitivity",
+      "b": "orthomcl_1_4",
+      "shared_sample_pairs": 148
+    },
+    {
+      "a": "orthohmm_high_sensitivity",
+      "b": "checked_v2_0",
+      "shared_sample_pairs": 14
+    },
+    {
+      "a": "orthohmm_high_sensitivity",
+      "b": "checked_v2_1",
+      "shared_sample_pairs": 154
+    },
+    {
+      "a": "orthohmm_high_sensitivity",
+      "b": "checked_v2_2",
+      "shared_sample_pairs": 19
+    },
+    {
+      "a": "orthohmm_high_sensitivity",
+      "b": "checked_v2_3",
+      "shared_sample_pairs": 153
+    },
+    {
+      "a": "orthohmm_phylogeny_satellite_v2",
+      "b": "orthofinder_3_1_5_full",
+      "shared_sample_pairs": 562
+    },
+    {
+      "a": "orthohmm_phylogeny_satellite_v2",
+      "b": "orthofinder_3_1_5_sequence_only",
+      "shared_sample_pairs": 11
+    },
+    {
+      "a": "orthohmm_phylogeny_satellite_v2",
+      "b": "sonicparanoid_2_0_9",
+      "shared_sample_pairs": 448
+    },
+    {
+      "a": "orthohmm_phylogeny_satellite_v2",
+      "b": "proteinortho_6_3_6",
+      "shared_sample_pairs": 27982
+    },
+    {
+      "a": "orthohmm_phylogeny_satellite_v2",
+      "b": "fastoma_0_3_5",
+      "shared_sample_pairs": 134
+    },
+    {
+      "a": "orthohmm_phylogeny_satellite_v2",
+      "b": "orthomcl_1_4",
+      "shared_sample_pairs": 852
+    },
+    {
+      "a": "orthohmm_phylogeny_satellite_v2",
+      "b": "checked_v2_0",
+      "shared_sample_pairs": 61
+    },
+    {
+      "a": "orthohmm_phylogeny_satellite_v2",
+      "b": "checked_v2_1",
+      "shared_sample_pairs": 622
+    },
+    {
+      "a": "orthohmm_phylogeny_satellite_v2",
+      "b": "checked_v2_2",
+      "shared_sample_pairs": 68
+    },
+    {
+      "a": "orthohmm_phylogeny_satellite_v2",
+      "b": "checked_v2_3",
+      "shared_sample_pairs": 599
+    },
+    {
+      "a": "orthofinder_3_1_5_full",
+      "b": "orthofinder_3_1_5_sequence_only",
+      "shared_sample_pairs": 3
+    },
+    {
+      "a": "orthofinder_3_1_5_full",
+      "b": "sonicparanoid_2_0_9",
+      "shared_sample_pairs": 108
+    },
+    {
+      "a": "orthofinder_3_1_5_full",
+      "b": "proteinortho_6_3_6",
+      "shared_sample_pairs": 4595
+    },
+    {
+      "a": "orthofinder_3_1_5_full",
+      "b": "fastoma_0_3_5",
+      "shared_sample_pairs": 27
+    },
+    {
+      "a": "orthofinder_3_1_5_full",
+      "b": "orthomcl_1_4",
+      "shared_sample_pairs": 168
+    },
+    {
+      "a": "orthofinder_3_1_5_full",
+      "b": "checked_v2_0",
+      "shared_sample_pairs": 13
+    },
+    {
+      "a": "orthofinder_3_1_5_full",
+      "b": "checked_v2_1",
+      "shared_sample_pairs": 86
+    },
+    {
+      "a": "orthofinder_3_1_5_full",
+      "b": "checked_v2_2",
+      "shared_sample_pairs": 11
+    },
+    {
+      "a": "orthofinder_3_1_5_full",
+      "b": "checked_v2_3",
+      "shared_sample_pairs": 84
+    },
+    {
+      "a": "orthofinder_3_1_5_sequence_only",
+      "b": "sonicparanoid_2_0_9",
+      "shared_sample_pairs": 2
+    },
+    {
+      "a": "orthofinder_3_1_5_sequence_only",
+      "b": "proteinortho_6_3_6",
+      "shared_sample_pairs": 100
+    },
+    {
+      "a": "orthofinder_3_1_5_sequence_only",
+      "b": "fastoma_0_3_5",
+      "shared_sample_pairs": 2
+    },
+    {
+      "a": "orthofinder_3_1_5_sequence_only",
+      "b": "orthomcl_1_4",
+      "shared_sample_pairs": 7
+    },
+    {
+      "a": "orthofinder_3_1_5_sequence_only",
+      "b": "checked_v2_0",
+      "shared_sample_pairs": 1
+    },
+    {
+      "a": "orthofinder_3_1_5_sequence_only",
+      "b": "checked_v2_1",
+      "shared_sample_pairs": 2
+    },
+    {
+      "a": "orthofinder_3_1_5_sequence_only",
+      "b": "checked_v2_2",
+      "shared_sample_pairs": 0
+    },
+    {
+      "a": "orthofinder_3_1_5_sequence_only",
+      "b": "checked_v2_3",
+      "shared_sample_pairs": 1
+    },
+    {
+      "a": "sonicparanoid_2_0_9",
+      "b": "proteinortho_6_3_6",
+      "shared_sample_pairs": 4616
+    },
+    {
+      "a": "sonicparanoid_2_0_9",
+      "b": "fastoma_0_3_5",
+      "shared_sample_pairs": 24
+    },
+    {
+      "a": "sonicparanoid_2_0_9",
+      "b": "orthomcl_1_4",
+      "shared_sample_pairs": 171
+    },
+    {
+      "a": "sonicparanoid_2_0_9",
+      "b": "checked_v2_0",
+      "shared_sample_pairs": 13
+    },
+    {
+      "a": "sonicparanoid_2_0_9",
+      "b": "checked_v2_1",
+      "shared_sample_pairs": 74
+    },
+    {
+      "a": "sonicparanoid_2_0_9",
+      "b": "checked_v2_2",
+      "shared_sample_pairs": 13
+    },
+    {
+      "a": "sonicparanoid_2_0_9",
+      "b": "checked_v2_3",
+      "shared_sample_pairs": 76
+    },
+    {
+      "a": "proteinortho_6_3_6",
+      "b": "fastoma_0_3_5",
+      "shared_sample_pairs": 1221
+    },
+    {
+      "a": "proteinortho_6_3_6",
+      "b": "orthomcl_1_4",
+      "shared_sample_pairs": 9470
+    },
+    {
+      "a": "proteinortho_6_3_6",
+      "b": "checked_v2_0",
+      "shared_sample_pairs": 556
+    },
+    {
+      "a": "proteinortho_6_3_6",
+      "b": "checked_v2_1",
+      "shared_sample_pairs": 4528
+    },
+    {
+      "a": "proteinortho_6_3_6",
+      "b": "checked_v2_2",
+      "shared_sample_pairs": 571
+    },
+    {
+      "a": "proteinortho_6_3_6",
+      "b": "checked_v2_3",
+      "shared_sample_pairs": 4490
+    },
+    {
+      "a": "fastoma_0_3_5",
+      "b": "orthomcl_1_4",
+      "shared_sample_pairs": 44
+    },
+    {
+      "a": "fastoma_0_3_5",
+      "b": "checked_v2_0",
+      "shared_sample_pairs": 3
+    },
+    {
+      "a": "fastoma_0_3_5",
+      "b": "checked_v2_1",
+      "shared_sample_pairs": 9
+    },
+    {
+      "a": "fastoma_0_3_5",
+      "b": "checked_v2_2",
+      "shared_sample_pairs": 4
+    },
+    {
+      "a": "fastoma_0_3_5",
+      "b": "checked_v2_3",
+      "shared_sample_pairs": 19
+    },
+    {
+      "a": "orthomcl_1_4",
+      "b": "checked_v2_0",
+      "shared_sample_pairs": 22
+    },
+    {
+      "a": "orthomcl_1_4",
+      "b": "checked_v2_1",
+      "shared_sample_pairs": 158
+    },
+    {
+      "a": "orthomcl_1_4",
+      "b": "checked_v2_2",
+      "shared_sample_pairs": 28
+    },
+    {
+      "a": "orthomcl_1_4",
+      "b": "checked_v2_3",
+      "shared_sample_pairs": 150
+    },
+    {
+      "a": "checked_v2_0",
+      "b": "checked_v2_1",
+      "shared_sample_pairs": 16
+    },
+    {
+      "a": "checked_v2_0",
+      "b": "checked_v2_2",
+      "shared_sample_pairs": 7
+    },
+    {
+      "a": "checked_v2_0",
+      "b": "checked_v2_3",
+      "shared_sample_pairs": 20
+    },
+    {
+      "a": "checked_v2_1",
+      "b": "checked_v2_2",
+      "shared_sample_pairs": 15
+    },
+    {
+      "a": "checked_v2_1",
+      "b": "checked_v2_3",
+      "shared_sample_pairs": 174
+    },
+    {
+      "a": "checked_v2_2",
+      "b": "checked_v2_3",
+      "shared_sample_pairs": 20
+    }
+  ],
+  "source": {
+    "bytes": 6229,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_qfo_fas_samples.py",
+    "sha256": "e21f6865062685651fed6e16e30dc9935c53de08aca5cd96baf6dce7331deac2"
+  },
+  "status": "saved_sample_means_and_native_sem_verified"
+}

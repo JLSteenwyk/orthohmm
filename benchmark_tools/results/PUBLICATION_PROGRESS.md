@@ -1,5 +1,22 @@
 # Publication Progress
 
+## FAS Sample Arithmetic and Coverage (2026-09-17)
+
+Previous turn was a verified wait: DGX array 21656 had six completed tasks,
+one live task and twenty pending. Re-read the full objective. Audited native
+FAS sampling code and all twelve retained raw samples (eight comparators,
+four recovered stages). Means and native SEMs reproduce within 1e-12.
+Sample coverage spans 0.0067% to 31.3477% of reported eligible pairs; those
+denominators are not all predictions and were not independently recounted.
+All samples reuse proteins across pairs. The scorer does not set a shuffle
+seed; native SEM is not family-aware comparison uncertainty. No score change,
+IID bootstrap, new endpoint, or publication-readiness claim.
+
+Added `audit_qfo_fas_samples.py`, eighteen passing validation/mutation tests,
+`qfo_fas_sample_audit_20260917.json` and `QFO_FAS_SAMPLE_AUDIT_20260917.md`.
+Underlying score/prediction membership validation and dependence-aware QfO
+uncertainty remain open alongside timing admission and the broader goal.
+
 ## Frozen SwissTrees Domain-Stratum Results (2026-09-17)
 
 Previous turn progressed Pillow remediation/exact reproduction, pushedea8d8f5
