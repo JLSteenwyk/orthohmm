@@ -1,0 +1,2787 @@
+{
+  "accounting": "JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS|ReqMem\n21795|COMPLETED|0:0|01:17:55|bizon|32|192G\n21795.batch|COMPLETED|0:0|01:17:55|bizon|32|\n",
+  "accuracy_admitted": true,
+  "checked_records": [
+    {
+      "bytes": 153059,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/execution.json",
+      "sha256": "555fb601115235eb05b8b81cb753d845df98cc983dda9b1cbefb411e6e369619"
+    },
+    {
+      "bytes": 12936,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/three_kingdoms_sonic_matched_commands_20260918.json",
+      "sha256": "5c3ce4608b54e8e550f0ea855754879211b842f0175b2e8e864cf4b5c2998283"
+    },
+    {
+      "bytes": 9909,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_three_kingdoms_sonic_matched_v1/benchmark_tools/run_three_kingdoms_matched_sonic.py",
+      "sha256": "240224d3afec281e271ad704aada873a0bebfc37e3430f8c7f320def48069249"
+    },
+    {
+      "bytes": 7969,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/native.log",
+      "sha256": "4327e4a4c69ec08f01a1a5cac82954f50133dd35ccc913cae6590ad9c4ac9e89"
+    },
+    {
+      "bytes": 1032,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/time.txt",
+      "sha256": "53f1b953ed9f4aeeb90545160f3d0858bad4d55f898c91c73dc7efe129d890e9"
+    },
+    {
+      "bytes": 26195,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/three_kingdoms_sources_20260918.json",
+      "sha256": "a79bf83e1ea28a9790e4597ea50a44d6409f4f36404a35e660d56a0b754fc1f3"
+    },
+    {
+      "bytes": 37759,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_sonic_runtime_20260918.json",
+      "sha256": "b4ed57defaba417f6627b671df958a2d533f4438bb8ff35a0b95cb820fd61bc9"
+    },
+    {
+      "bytes": 191,
+      "path": "/home/bizon/anaconda3/bin/sonicparanoid",
+      "sha256": "456f411c815b61fb2b2e60cc4b644e793d7bd0dbab60aa404dbb6f81b2b996a0"
+    },
+    {
+      "bytes": 17157264,
+      "path": "/home/bizon/anaconda3/bin/python3.10",
+      "sha256": "ddd8126d3a409c6ad46c718225d853214d0c9dba3657123514172951fa79058b"
+    },
+    {
+      "bytes": 32739864,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/blastp",
+      "sha256": "55bd09868af75ab23d086e25f6029fbf47a1312201036dd7d54f50c8759b11c7"
+    },
+    {
+      "bytes": 104734800,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/diamond",
+      "sha256": "7910a083a9067d0856280d2b4450ff979f11ffb22b8467d404cc373f5a0e6e73"
+    },
+    {
+      "bytes": 22905616,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/makeblastdb",
+      "sha256": "3f2e60e7e2d36bedab221609d212abf257e8afc84239aa458f53f3ada96c8168"
+    },
+    {
+      "bytes": 284104,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/mcl",
+      "sha256": "3a8790a79e3709393255c1c2337318b16db07efdfaf50f5b24cb4a2f9d2a6b03"
+    },
+    {
+      "bytes": 67022424,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/mmseqs",
+      "sha256": "1364aa48664559c5dc5929a6a61cc27315377f0d0e8d6d420b39e4d25d8e898a"
+    },
+    {
+      "bytes": 22455028,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Amph.fasta",
+      "sha256": "ef309054ffc2b6a96e9c523569bc84a9286dd48c2caa4b0eb6a0adad6a48b61f"
+    },
+    {
+      "bytes": 15376532,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Anol.fasta",
+      "sha256": "3572dfe704fbd7da7e7a59085f06252964d0a5f8426858cbb55353bbc9455e05"
+    },
+    {
+      "bytes": 33366601,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Arab.fasta",
+      "sha256": "d7c319fa8c6d3b5569ae43cfe0cad2a1331b5c0db9b97b49ceadcf9fef62b3b4"
+    },
+    {
+      "bytes": 6750862,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Asfu.fasta",
+      "sha256": "64472bec6c765b88656f884ef6edfc5180a14859c1a0e2170ea441e16ee049a5"
+    },
+    {
+      "bytes": 42222249,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Dani.fasta",
+      "sha256": "c0a902d57898468f0df1a77a0773f935ef80d53abc4c3831381736f8d13d4e73"
+    },
+    {
+      "bytes": 21984251,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Oryz.fasta",
+      "sha256": "613aa313a07ff90ed70fb599f1b3d71cbfe24d0970111431466297c01da970d4"
+    },
+    {
+      "bytes": 5875882,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Scer.fasta",
+      "sha256": "b4d38c9f505484f0dd7218e769b97f79ad1c3bf94619b989d4bc05b5fae22e42"
+    },
+    {
+      "bytes": 8582364,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Scom.fasta",
+      "sha256": "f078d61dc29427086de601369fe6ed541fa5d937c7a58c717fbdd28a2a397f8a"
+    },
+    {
+      "bytes": 20561355,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Sela.fasta",
+      "sha256": "63d77c81ef9e1e437a7ed210f274d325dfb87983faf74fc0bec2dd37347a173e"
+    },
+    {
+      "bytes": 3805824,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Spom.fasta",
+      "sha256": "643f960eb5531a2a642dc0c39d9db04e85fe7f0e6940fb5c880bc1369f7e7dc5"
+    },
+    {
+      "bytes": 25382533,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Xeno.fasta",
+      "sha256": "8eb459d5da98a95f6e228b8bda9d7136456b511abbf33356acd5bb69d063e398"
+    },
+    {
+      "bytes": 95382422,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Zeam.fasta",
+      "sha256": "1b0b9e82cfaee672f9ceaa6156f3a1ab3812b3f2dbac9af9dce4c0232222700c"
+    },
+    {
+      "bytes": 6739,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/normalize_three_kingdoms_orthogroups.py",
+      "sha256": "baf46e5cca5e938269c5cafcd7cd18466c776e3ce175f88cf513df11729cce1d"
+    },
+    {
+      "bytes": 4943,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/score_against_busco.py",
+      "sha256": "842e199e184ba631dc902b3410eb7b81c4f8dd15aa0868f2311a47faeaf5e37d"
+    },
+    {
+      "bytes": 30699,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/busco/reference_orthogroups.txt",
+      "sha256": "a5f3447056ecfa305442caff0d898d524eed350f13587d3247d3e1ba4c19757d"
+    },
+    {
+      "bytes": 3317,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/inspect_sonicparanoid_runtime.py",
+      "sha256": "1f259a663b304f2800674feaca274510a8e2b2070ffbe267cf3d7ae2f25a174f"
+    },
+    {
+      "bytes": 5243,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_qfo_corrected_sonic.py",
+      "sha256": "4a33db2c4e12caa38b8bdebfc2e08d50ffe36bbc19936c9dbab7418e3453ac0b"
+    },
+    {
+      "bytes": 7956,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_qfo_corrected_sonic.py",
+      "sha256": "ced23d408cb07ad3744d6062e39f5272392fb943b8816cf174311961b16a0ea5"
+    },
+    {
+      "bytes": 4083,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/snapshot_runtime_trees.py",
+      "sha256": "ab0008651e75ebadc1be3c87503f09bffd9e5be87f2e6b0c3eec49e552d9bd4c"
+    },
+    {
+      "bytes": 7264,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_three_kingdoms_method_inputs.py",
+      "sha256": "39b09ab4a76f0f789e695edb6ac92b0d7306537bb6fe7e301390109bda32db9a"
+    },
+    {
+      "bytes": 26690,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/three_kingdoms_method_inputs_20260918.json",
+      "sha256": "5dfd585193a6a576f2685388827bd6f8e3f5bad2ffcc715aaf665247cd2345dc"
+    },
+    {
+      "bytes": 37039196,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/biological_wgd_runtime_trees_v1.json",
+      "sha256": "70eda6198d28d6c36c697d2862911a0853d9482c9e15f504f17574ca73f99071"
+    },
+    {
+      "bytes": 3581976,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/biological_wgd_system_trees_v1.json",
+      "sha256": "5a19ac94e14aff479c7bd7a09a757a8471056d23a9b51fbbc8c51a2d8aee0e27"
+    },
+    {
+      "bytes": 22455028,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/input/Amph.fasta",
+      "sha256": "ef309054ffc2b6a96e9c523569bc84a9286dd48c2caa4b0eb6a0adad6a48b61f"
+    },
+    {
+      "bytes": 15376532,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/input/Anol.fasta",
+      "sha256": "3572dfe704fbd7da7e7a59085f06252964d0a5f8426858cbb55353bbc9455e05"
+    },
+    {
+      "bytes": 33366601,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/input/Arab.fasta",
+      "sha256": "d7c319fa8c6d3b5569ae43cfe0cad2a1331b5c0db9b97b49ceadcf9fef62b3b4"
+    },
+    {
+      "bytes": 6750862,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/input/Asfu.fasta",
+      "sha256": "64472bec6c765b88656f884ef6edfc5180a14859c1a0e2170ea441e16ee049a5"
+    },
+    {
+      "bytes": 42222249,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/input/Dani.fasta",
+      "sha256": "c0a902d57898468f0df1a77a0773f935ef80d53abc4c3831381736f8d13d4e73"
+    },
+    {
+      "bytes": 21984251,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/input/Oryz.fasta",
+      "sha256": "613aa313a07ff90ed70fb599f1b3d71cbfe24d0970111431466297c01da970d4"
+    },
+    {
+      "bytes": 5875882,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/input/Scer.fasta",
+      "sha256": "b4d38c9f505484f0dd7218e769b97f79ad1c3bf94619b989d4bc05b5fae22e42"
+    },
+    {
+      "bytes": 8582364,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/input/Scom.fasta",
+      "sha256": "f078d61dc29427086de601369fe6ed541fa5d937c7a58c717fbdd28a2a397f8a"
+    },
+    {
+      "bytes": 20561355,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/input/Sela.fasta",
+      "sha256": "63d77c81ef9e1e437a7ed210f274d325dfb87983faf74fc0bec2dd37347a173e"
+    },
+    {
+      "bytes": 3805824,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/input/Spom.fasta",
+      "sha256": "643f960eb5531a2a642dc0c39d9db04e85fe7f0e6940fb5c880bc1369f7e7dc5"
+    },
+    {
+      "bytes": 25382533,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/input/Xeno.fasta",
+      "sha256": "8eb459d5da98a95f6e228b8bda9d7136456b511abbf33356acd5bb69d063e398"
+    },
+    {
+      "bytes": 95382422,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/input/Zeam.fasta",
+      "sha256": "1b0b9e82cfaee672f9ceaa6156f3a1ab3812b3f2dbac9af9dce4c0232222700c"
+    },
+    {
+      "bytes": 7767811,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/1/1-1",
+      "sha256": "a95df41073f494fbb24b18c10a9e34b461c952d2c6523a595dddf172329160b0"
+    },
+    {
+      "bytes": 395606,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/1/1-10",
+      "sha256": "8ddede2afb1edf3c85f5b9a82f24e5911f87d129ff6476e493c3ddde72073b16"
+    },
+    {
+      "bytes": 2630874,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/1/1-11",
+      "sha256": "50f512c92e2c560ed73d316baa747ba4cb7714353a511844099789bb8bdde60c"
+    },
+    {
+      "bytes": 1509256,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/1/1-12",
+      "sha256": "d123934d51e4459673c8713f584f823ed8a186a3236867dff9a15c3e723ce503"
+    },
+    {
+      "bytes": 1712428,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/1/1-2",
+      "sha256": "c5c10874223ae901cad936c2a929480b4802962365579df3a432f092499f703b"
+    },
+    {
+      "bytes": 1165652,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/1/1-3",
+      "sha256": "ad4c69b5dc7d3f3c6ac5d80bfc45a63faf9d5b90f4a4e8cc0d6b1e75b4f16746"
+    },
+    {
+      "bytes": 520809,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/1/1-4",
+      "sha256": "a986a4c00cbd3a933085dda40d5f0bff72f1dda70e3d01191fd56b044309ec5f"
+    },
+    {
+      "bytes": 2464284,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/1/1-5",
+      "sha256": "f0ee7610a5f37c85b357a006483d760d8e95cfb7c15125cac41c553ef664a7b9"
+    },
+    {
+      "bytes": 1051588,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/1/1-6",
+      "sha256": "2a39e48078eb24a3652c00545d9592120b55ddb5c30794b8591b0b5fc3772c4a"
+    },
+    {
+      "bytes": 386599,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/1/1-7",
+      "sha256": "2855c717b7801fb285afe0cf1a1e139a7c8cb1ab60bcc458b10d945256e1da62"
+    },
+    {
+      "bytes": 561327,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/1/1-8",
+      "sha256": "93d1d435d9c8e58b31f5dcd6a12e58a1edfeb29c572ba5a851141454ee16df4d"
+    },
+    {
+      "bytes": 1006366,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/1/1-9",
+      "sha256": "0d6ee20d86adfe3f4f572f1bddaefebc6f2844d8f1e99ecfd3c523b3cff938e7"
+    },
+    {
+      "bytes": 297585,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/10/10-1",
+      "sha256": "1b9d6c9f56bd48a057ab00edf7250df74fe3fbf73d3dc0271ef36239403f106e"
+    },
+    {
+      "bytes": 242142,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/10/10-10",
+      "sha256": "4b1a77e84b05dc2189d6dbb445a53e3c0341c2cf3326b2283cad5837cd29a15f"
+    },
+    {
+      "bytes": 369929,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/10/10-11",
+      "sha256": "3fb1e609b83591e5b706f8851f98c2bae90a8553f7505b48837519edbd4c8262"
+    },
+    {
+      "bytes": 467984,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/10/10-12",
+      "sha256": "7c14dec91507e22bc359d97dcf2c5ea8768b5413ff4a605736cad8c52993c5ce"
+    },
+    {
+      "bytes": 302335,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/10/10-2",
+      "sha256": "016ac4c530530adeef107cf82ac78377360055181b27b97a55cc59350ac06fe5"
+    },
+    {
+      "bytes": 363871,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/10/10-3",
+      "sha256": "e01586ed47bdd5e28c4c0481490445b6d627d88a8bea35a914b8cac458fa00ee"
+    },
+    {
+      "bytes": 271993,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/10/10-4",
+      "sha256": "8a6ac7882a88d710e91bca923143b5e83acbc9cc450a857f5bd3f4d48099b3e0"
+    },
+    {
+      "bytes": 364887,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/10/10-5",
+      "sha256": "eb859ea47c0b1af55bc464e43c4071e87b45e06bc9c25ae6664beedfeb646038"
+    },
+    {
+      "bytes": 344225,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/10/10-6",
+      "sha256": "74925e31c95385e6eecbaad1f6ae59e0cd23ce8a09374edb0ef5c682066fe8cf"
+    },
+    {
+      "bytes": 218548,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/10/10-7",
+      "sha256": "02f7fded0d2dfa84c5bf3cd3b16ec74a94a2d35d342dad3022e6700a6cff264e"
+    },
+    {
+      "bytes": 259559,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/10/10-8",
+      "sha256": "54a35e7d8f7123aa06b6e77aec6f5e7fd86fca8c78eabd3f9cd92cdf566f7ca9"
+    },
+    {
+      "bytes": 346428,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/10/10-9",
+      "sha256": "58f38cebfb3328d9777699a38e53e172a8ed896894da34e50f1c54efbfe76313"
+    },
+    {
+      "bytes": 3074432,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/11/11-1",
+      "sha256": "fb61d80eab98ff8775df6b98c9aebf8cc844f49367ab680c1543df9cd83e8846"
+    },
+    {
+      "bytes": 816113,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/11/11-10",
+      "sha256": "b6922cee243e0547ac4f6e27528c3581c963adf13cfbba2562078b84c8e39766"
+    },
+    {
+      "bytes": 6457590,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/11/11-11",
+      "sha256": "2090a23770a059e9dc3d26f8bb35f1129f4670d7df54ab030d4370b9a4717184"
+    },
+    {
+      "bytes": 2581763,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/11/11-12",
+      "sha256": "65581addfbf54cf4eaedf7d9a754aad069fdd13a946cc6e31825fb9186d00398"
+    },
+    {
+      "bytes": 4676324,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/11/11-2",
+      "sha256": "328732b64c3f2e9d0525fbd408e68eb1fed1134966fec1d22abeafe904531913"
+    },
+    {
+      "bytes": 2008792,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/11/11-3",
+      "sha256": "bee63568ab8a9bdb453e05e784208be18c361a2d5157540911a8e078cd77680a"
+    },
+    {
+      "bytes": 1057200,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/11/11-4",
+      "sha256": "31aa9b284d636444c34dd1cbcdff719808ad6c212129a431f4b6cb2c00b68c96"
+    },
+    {
+      "bytes": 5766923,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/11/11-5",
+      "sha256": "8663197ed2552965a9b0a50bd4f53ccf926be21e09ece56d5316bb4abfce6bba"
+    },
+    {
+      "bytes": 2030042,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/11/11-6",
+      "sha256": "124eb5695ae442cb62f883e233fe9e88f7b8e6c17a245f02862de7feebfa7c71"
+    },
+    {
+      "bytes": 800360,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/11/11-7",
+      "sha256": "f79b7ef870209114c28025e8d73143f1a97736a14f4bcc1b7a7773d8ae035a38"
+    },
+    {
+      "bytes": 1141187,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/11/11-8",
+      "sha256": "dbd56bd3f77578485f79f34c88a52c1b8e46e660e325a84820154e6e25435f3f"
+    },
+    {
+      "bytes": 1855994,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/11/11-9",
+      "sha256": "e8f9e3108257df37e6b3f4af5f7b729b70961cbf5f852c61680cc77edbec7ae4"
+    },
+    {
+      "bytes": 3605369,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/12/12-1",
+      "sha256": "3a7b3eadc034c9d45638dc63b911d1b690ae77bffd852eaeb157748aa8a80cbe"
+    },
+    {
+      "bytes": 1358094,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/12/12-10",
+      "sha256": "d1fbea4260bab9c4cec91c4d223a2cdcd7024367f919e617f8247cba6c15e9a3"
+    },
+    {
+      "bytes": 4238117,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/12/12-11",
+      "sha256": "fc90fe6cb3e61b8c25486e21a7920025d03684d51a041944ff08dccc5d095429"
+    },
+    {
+      "bytes": 20587823,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/12/12-12",
+      "sha256": "4d422ebab7f9f06de8f72efeee4d4b7ddefb911506e48f70cf5f3bc5929ff98b"
+    },
+    {
+      "bytes": 3430524,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/12/12-2",
+      "sha256": "48f797463259846b32f96158a335f3883b62d76bd7d27515d2d6d37bcc3c3e77"
+    },
+    {
+      "bytes": 10033987,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/12/12-3",
+      "sha256": "6064d5190531c96add5d510c1ad5557ebfc078974d607ed0eea53bc474fd6025"
+    },
+    {
+      "bytes": 2018877,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/12/12-4",
+      "sha256": "38af9dd76e67f5e5f8578d8ea8276d9c68adc8d395e60ed5959ee96055539064"
+    },
+    {
+      "bytes": 4617347,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/12/12-5",
+      "sha256": "c28adfecd2043a25274c594cc0c3279c131584028b2c99c65515d04260a5d82c"
+    },
+    {
+      "bytes": 11144827,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/12/12-6",
+      "sha256": "86753dd5d7658f437606d1818ef8f7c30816069efa1c0b6926a061a0a5c65b92"
+    },
+    {
+      "bytes": 1297207,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/12/12-7",
+      "sha256": "587e1b75510dbd681e6be7c9293c8490cd53c295de535831900b65d98688b807"
+    },
+    {
+      "bytes": 1987450,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/12/12-8",
+      "sha256": "6fe9a673b3084bbbc7ffee9fd9196d590f99902bb43ba90533c120e45517b2b2"
+    },
+    {
+      "bytes": 7725729,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/12/12-9",
+      "sha256": "ce6fae65dbc8ca604e154e4590c9c2a4cd597888b759271a0ac2a4315a325b1a"
+    },
+    {
+      "bytes": 1623945,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/2/2-1",
+      "sha256": "b9ecd1829c703052ca2e60cdb68b078d22f822e8aafa5963dbf1519e2364b866"
+    },
+    {
+      "bytes": 442341,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/2/2-10",
+      "sha256": "49ac1ce19fd0a133ab6d6f7327ff55132ef8991b78a14d1530e37326661f21dc"
+    },
+    {
+      "bytes": 2856947,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/2/2-11",
+      "sha256": "824502a6ff41744e11b8d87091cd874ae2e190bb4ab2396e745defce0372d344"
+    },
+    {
+      "bytes": 1327004,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/2/2-12",
+      "sha256": "1d8991ad84e0bcf04b122ddbd558862b3c1d7c675b0b72929531b3c1f85d49aa"
+    },
+    {
+      "bytes": 2622331,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/2/2-2",
+      "sha256": "acb8062e7ad05d8b9508c4356c031e2fe713ea010bd316e51a00382b62082741"
+    },
+    {
+      "bytes": 1090333,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/2/2-3",
+      "sha256": "b6d6ca5b5eda96abeea8ae124908888eaf96474e23306e8d85cd4a714f05aeb4"
+    },
+    {
+      "bytes": 590158,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/2/2-4",
+      "sha256": "b99f28e2770aa77c98569a97296e3ab08692e1a715b11d56dfced75b67dde26b"
+    },
+    {
+      "bytes": 2783911,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/2/2-5",
+      "sha256": "75689a846ce3800d37c715d7448a98b8adccefe1e60b892ceb848ac7144d4dab"
+    },
+    {
+      "bytes": 1083973,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/2/2-6",
+      "sha256": "5698687eb4db4664ec978b7317bbc2adda4514f53e1265a41e1d2cd31ae448d3"
+    },
+    {
+      "bytes": 437977,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/2/2-7",
+      "sha256": "e4e7f756a867a23bb2d548455b00d972c72be98090a196acae55c34b33db28b9"
+    },
+    {
+      "bytes": 622450,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/2/2-8",
+      "sha256": "0342047b39c29f79960bdadce8c529e8b0010a8437a2f4b3319abad34760b4ed"
+    },
+    {
+      "bytes": 1019739,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/2/2-9",
+      "sha256": "b3b7df32491edb7c87fae686b0d6be67365f316165e9972c2f134169ddbcda61"
+    },
+    {
+      "bytes": 1800992,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/3/3-1",
+      "sha256": "042e156c050c8d0537d5e3d8a1c6fb68abfcfa2e14b8340814cd0eb6861fd929"
+    },
+    {
+      "bytes": 781579,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/3/3-10",
+      "sha256": "a31aa609c0bc6e91ceb01def19f0e3b78ca00efa8a7620ea18348c872c2f30a3"
+    },
+    {
+      "bytes": 2639125,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/3/3-11",
+      "sha256": "dc4c7bfffd146354c02f1009093ca9598bd4d3765048391533f6c172e52c23c3"
+    },
+    {
+      "bytes": 6811313,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/3/3-12",
+      "sha256": "22c99e51d83857547fe0a615de24fa68ad7d42e1881128f73ae68a5dbba7990c"
+    },
+    {
+      "bytes": 1787521,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/3/3-2",
+      "sha256": "b383539626942734ea1600c8e31ebdc802a8b25847f025555ca913bc997ad891"
+    },
+    {
+      "bytes": 6697925,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/3/3-3",
+      "sha256": "4cbf76a60dc1e4bb0b01db69b7dd834e3bc471c3e2d261471568b17b8d3a75cd"
+    },
+    {
+      "bytes": 1204790,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/3/3-4",
+      "sha256": "3143fcfbb90539a93aa818a3c27c75e31544a2b1e129c7cc53c5f83db28c9415"
+    },
+    {
+      "bytes": 2617152,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/3/3-5",
+      "sha256": "6bdf6e677d7cec60e6ae3cd3c4fa7960e748039844877c6ea51669190047ebdf"
+    },
+    {
+      "bytes": 5459233,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/3/3-6",
+      "sha256": "a4cc34467e7415c76779a0e17de98e635a0935d593a14fcaa3e16e092c7a482f"
+    },
+    {
+      "bytes": 781475,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/3/3-7",
+      "sha256": "94cf068efb23612a0c322bf849f01fb4e45768cd64ff56c943f785d8bfe081f6"
+    },
+    {
+      "bytes": 1176175,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/3/3-8",
+      "sha256": "44e7b452ff7a3db65c3008f4e18d609201d3a40acfd3c79fe03f2ce75d9417e2"
+    },
+    {
+      "bytes": 4248861,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/3/3-9",
+      "sha256": "a4d52520f82b472b6d0d685141cad63d711bec2623d4f6db91ef70f1549dab97"
+    },
+    {
+      "bytes": 431629,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/4/4-1",
+      "sha256": "36618d65bb7308afa34552398f053253924e4fe7376096b06dda832281999d55"
+    },
+    {
+      "bytes": 300167,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/4/4-10",
+      "sha256": "8b8b8512ef9739b003e06b6dbf1e98c590a4e35f9293eed81da82f1761789d27"
+    },
+    {
+      "bytes": 543972,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/4/4-11",
+      "sha256": "2ae5996a4da40691b2a6f1ff53fd9922b621f4837927b55674c7c3e5e1b15bd6"
+    },
+    {
+      "bytes": 732070,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/4/4-12",
+      "sha256": "845aa8f1f54fa4590ce2676f2991a79dbb0ff7c274fcf60d2d2690b745f93269"
+    },
+    {
+      "bytes": 446203,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/4/4-2",
+      "sha256": "33db3d1e6e07344207c286d49f5f522d778ea7dd732b4d66f6812c09f12a288e"
+    },
+    {
+      "bytes": 593424,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/4/4-3",
+      "sha256": "90183aba059dd577c379dc3fe89b9aef63bbfec87ad17b6f4ee216dde200927d"
+    },
+    {
+      "bytes": 686967,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/4/4-4",
+      "sha256": "09758e81139a24f9dc1c6fbe838c41b46bf24f5c076ebffe41ff154ea291680a"
+    },
+    {
+      "bytes": 537864,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/4/4-5",
+      "sha256": "b8b665e1cc1dedaf32ad64ca358d9dd3bbd3bc3e70268ccda79661e94adf5814"
+    },
+    {
+      "bytes": 585274,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/4/4-6",
+      "sha256": "ed01be05d751673d4094e146dbc22b4d4c6b703de3c8e1e15d776b4bb1cac2ce"
+    },
+    {
+      "bytes": 306281,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/4/4-7",
+      "sha256": "d25c2f9f9f31103f4a2d3802d643146ecf137e234906affc67723cb0ab201c85"
+    },
+    {
+      "bytes": 535925,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/4/4-8",
+      "sha256": "d6d6bb028a6dc76f7e86069737994a0c513e51ca14fe1c6bdd6e454f3ebb7e3f"
+    },
+    {
+      "bytes": 581073,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/4/4-9",
+      "sha256": "710902dbdb40ce58cceb0ac42097f0e40ca784bbd5ed36b19296b86a8709334f"
+    },
+    {
+      "bytes": 3423248,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/5/5-1",
+      "sha256": "3fb4527d7819b4cf06e1ba1e3bdcc44d235b80bff047e5030c92f3fe516639fb"
+    },
+    {
+      "bytes": 837743,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/5/5-10",
+      "sha256": "8c00874485c189baf66f51f63655446142223de2dbffde8c341d58765a5928ac"
+    },
+    {
+      "bytes": 6697920,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/5/5-11",
+      "sha256": "736364b0600e4379a896aa2e17c10c89ed13d3a4b13a782667fe07f82c2a5eae"
+    },
+    {
+      "bytes": 3109744,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/5/5-12",
+      "sha256": "12397598457293baf7313e45c386eb8108330b8c5f3c4f6efadbdcb1e1bd784d"
+    },
+    {
+      "bytes": 5396719,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/5/5-2",
+      "sha256": "5bb8257fba87b548740647099b51a72fd00852673f65afd8cb1968decbec78e0"
+    },
+    {
+      "bytes": 2232728,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/5/5-3",
+      "sha256": "12486afd952896fd2cd0c91f51ae8f844f0d2c6bf3adb8f161d647efb10e3c2f"
+    },
+    {
+      "bytes": 1108200,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/5/5-4",
+      "sha256": "daca277ccef1e6730b356ec31fb8fccb9e9e32d4518a7a078d187d6b4b7de272"
+    },
+    {
+      "bytes": 8027221,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/5/5-5",
+      "sha256": "a61093cc66ba9dadc0285f7ad4850a6897d2456ac52ce8e3e5d60d09ef654703"
+    },
+    {
+      "bytes": 2188280,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/5/5-6",
+      "sha256": "8755ad6745d33d944de7900b37be00f0df89709a15fff222f5ae26ef71b8d363"
+    },
+    {
+      "bytes": 814395,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/5/5-7",
+      "sha256": "0b7ac1190c94bd2968f2c1d87d8dd6699a0b30136fd972eeb0583f840d7a3928"
+    },
+    {
+      "bytes": 1182490,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/5/5-8",
+      "sha256": "c9cbfd5f40cf83d7509179e0a4b8390e8904d14c567875a89a2226edec0d2759"
+    },
+    {
+      "bytes": 2042879,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/5/5-9",
+      "sha256": "1d057b514401aae7b7c7c574aba7b08aa090b5914291957ad9fdcddac19bad6b"
+    },
+    {
+      "bytes": 1601827,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/6/6-1",
+      "sha256": "c55daa188baaefd3761c444bf8f1bf2239523164f5ef59e356197bf91f7c27f8"
+    },
+    {
+      "bytes": 581424,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/6/6-10",
+      "sha256": "2eb49422a75589de201c64a9cb729a37d056f3c4f09602d0d37a48809b65ab56"
+    },
+    {
+      "bytes": 1987004,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/6/6-11",
+      "sha256": "25f93805c3a886fad9ee23416f795681a9061fa0309c197eb6b36e5ff7856623"
+    },
+    {
+      "bytes": 5760682,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/6/6-12",
+      "sha256": "5202fff099b7c61e520c9b3c2703d3077f0e782260fcc86b111b1089ada4b12e"
+    },
+    {
+      "bytes": 1389059,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/6/6-2",
+      "sha256": "3ffd2561eb81c72d613ff956225a9a7a6f318135905530d79d13bb857d4d8e57"
+    },
+    {
+      "bytes": 4532587,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/6/6-3",
+      "sha256": "775451b4e0bebd3dd2a67efab9beb317b109015f11f9da745cc585f34a356b7b"
+    },
+    {
+      "bytes": 955536,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/6/6-4",
+      "sha256": "c301bfda266bfda81e92bad5efa62f64044dec309a83a9f55db4d8b9777cc9b5"
+    },
+    {
+      "bytes": 1946857,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/6/6-5",
+      "sha256": "37288f689705145f4dcab67a1299a3ac81a2413d53bc76b509d69e126ce7de40"
+    },
+    {
+      "bytes": 5352550,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/6/6-6",
+      "sha256": "f6e2b19afa8025e55533716724ace406db1f71f61b88e6221775f0a40d73c964"
+    },
+    {
+      "bytes": 584750,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/6/6-7",
+      "sha256": "0cb88cb4ff18a2133a7567b3f2e69a71c724182fd6e01ca0a9a350429a598b98"
+    },
+    {
+      "bytes": 919293,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/6/6-8",
+      "sha256": "3ea8cfcd1c344ae940115d7350b420a9104935d82d0310e41d0f7120538d36e2"
+    },
+    {
+      "bytes": 3424398,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/6/6-9",
+      "sha256": "42d3e418a6163d8bd778f1918ff54766aa55e80362b5da32b6f06d934f088ea1"
+    },
+    {
+      "bytes": 292646,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/7/7-1",
+      "sha256": "30dc4d3758efae01ef05f87bdac4c4e759c85940505395e4de721451ff18b007"
+    },
+    {
+      "bytes": 222860,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/7/7-10",
+      "sha256": "23cace5d0b9529a2182a8b11d45fa66f4439180945af6483a594a847c045e61f"
+    },
+    {
+      "bytes": 369234,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/7/7-11",
+      "sha256": "d3dc46faf35e407f38c39b54ac236dacdd25df2a7e6d845f573d3370a8b93a83"
+    },
+    {
+      "bytes": 464716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/7/7-12",
+      "sha256": "109035cd8387d72ff7f4c4737a1c40289a9f466211ec61a45141b53f40a73204"
+    },
+    {
+      "bytes": 300379,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/7/7-2",
+      "sha256": "d81a2d87d08247cd633eb0d69267e12435304dba7021c3426f75265d3e0b2400"
+    },
+    {
+      "bytes": 367515,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/7/7-3",
+      "sha256": "fdfc73978e9464314ee5e5f19187c206380d3a10112d7811d21cc309939098fb"
+    },
+    {
+      "bytes": 282819,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/7/7-4",
+      "sha256": "06662ef68b8f4f4837a7adaf57cf5dab64d1737194ad62da455531963b0e92f0"
+    },
+    {
+      "bytes": 364229,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/7/7-5",
+      "sha256": "3502751645d66cba601d23bb00c780680bd95533e0170e787135f84bf9c9bb98"
+    },
+    {
+      "bytes": 347580,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/7/7-6",
+      "sha256": "8353ee97143dbb230ba3c737160e07f679f167480b7ae980a45dd84fecdbe4ec"
+    },
+    {
+      "bytes": 295356,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/7/7-7",
+      "sha256": "da958ce509aa4304104922fd0a6418338a760b604ea331a4a5ad9a2d633def2c"
+    },
+    {
+      "bytes": 263340,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/7/7-8",
+      "sha256": "f66f846184a02f1855305ccd52590b86deabe72b9f743351f15f9e1c503cbf3b"
+    },
+    {
+      "bytes": 349337,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/7/7-9",
+      "sha256": "afe8d8442abd3a2b69386bf3ad79d76e330344a97765a97bfd3a7cdb8be73453"
+    },
+    {
+      "bytes": 463312,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/8/8-1",
+      "sha256": "b0569bfdf5dc46f5b140e0a0a80290fdab037b44d63e4e56a2e703a3563d4e90"
+    },
+    {
+      "bytes": 291590,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/8/8-10",
+      "sha256": "3561e56e042e2643e9a707452ac69ca3e39e9498eb40b5cfe7950439dfba90ca"
+    },
+    {
+      "bytes": 575524,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/8/8-11",
+      "sha256": "361aff8381e3a6307bc1d7cefdc46fc89b61fa0c80395b110d436bedc0970770"
+    },
+    {
+      "bytes": 735246,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/8/8-12",
+      "sha256": "e545df645ff159f41abb65738588246cdcf9ec9d71ef0b90bf19bbb33eb3c3f8"
+    },
+    {
+      "bytes": 471504,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/8/8-2",
+      "sha256": "fbc6a5bdd79511e58308c842932818779f1f397f07fb30b78ab642743e5fb5ba"
+    },
+    {
+      "bytes": 598326,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/8/8-3",
+      "sha256": "f80c6531d7f7673200ea8f87df701ad87e8f3a0c9cb12853373cc3b754c4440f"
+    },
+    {
+      "bytes": 534928,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/8/8-4",
+      "sha256": "8a9bb605067793106b05ec5a7549423529371b34c9c23d8b3e62d85beb4eebe0"
+    },
+    {
+      "bytes": 566939,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/8/8-5",
+      "sha256": "30fdf0023f74155a89cc672e8d8bcdf68175dd4a5420302ef12d46045a443d3b"
+    },
+    {
+      "bytes": 584630,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/8/8-6",
+      "sha256": "da03ada2c841bd89436cba4a8e888dcae9aa9256e87a469301114025e636c55b"
+    },
+    {
+      "bytes": 285609,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/8/8-7",
+      "sha256": "bd586d93845acfcd830dffac777842bd3a223552c8cfa5bbf0e29255d5381f3f"
+    },
+    {
+      "bytes": 1164781,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/8/8-8",
+      "sha256": "96f3a3fdbb3beb4a6851ede89d3251b8b3e8c27482dc7c772c60eccf28289a16"
+    },
+    {
+      "bytes": 585597,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/8/8-9",
+      "sha256": "1bc655807d9465812031fbfdf8588b39779e736a12e9a1ed015a6ccd8ca4cebb"
+    },
+    {
+      "bytes": 1721545,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/9/9-1",
+      "sha256": "be0f199017337e64d5a871b3117d12a493548fe86c3d101a9742b8c2d543acc0"
+    },
+    {
+      "bytes": 673365,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/9/9-10",
+      "sha256": "f1f1a6789e0f87c85c0f166c5e0bb437c68f25d6dda462938f22745c37a9621a"
+    },
+    {
+      "bytes": 2099603,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/9/9-11",
+      "sha256": "1dd0c6adce5d24c9d21672feafad27034dc652d3c4973dfdeb00ea4208825005"
+    },
+    {
+      "bytes": 5018063,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/9/9-12",
+      "sha256": "4a1f076fef626b7d316cefcd379d3809ae545d59196cf2e8800c0751dc1b7916"
+    },
+    {
+      "bytes": 1497702,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/9/9-2",
+      "sha256": "5f9f1db502d1a03520ae77f47f8e72260a22e30540bda126f7cf85316e11ac1d"
+    },
+    {
+      "bytes": 4263048,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/9/9-3",
+      "sha256": "5d91f5fb6ef2403f7d5ec912aa64ebad4dfcb746645d67b487f495307bde29fa"
+    },
+    {
+      "bytes": 1116277,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/9/9-4",
+      "sha256": "fda9a6f72bd2a48f263e2fdedca2e84889500964782d9ffa1332e7d887220100"
+    },
+    {
+      "bytes": 2080166,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/9/9-5",
+      "sha256": "d92258ad80cff4fa694649a439f6b925046cfdd32336d07c71972f6f2b70c737"
+    },
+    {
+      "bytes": 4263618,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/9/9-6",
+      "sha256": "d66097ebd469808754bc342f9f914f2feaf53c6e7b78ca542c9b3d4bef7cc5bd"
+    },
+    {
+      "bytes": 685225,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/9/9-7",
+      "sha256": "69e7cc45026102a7c2556137288b14324a43dfb5fa3492326d2e2b4e2967b972"
+    },
+    {
+      "bytes": 1089120,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/9/9-8",
+      "sha256": "4d14403440ad4d28b72cacea98785169e9b1a23873e07664ab376569625b90fe"
+    },
+    {
+      "bytes": 5327829,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/9/9-9",
+      "sha256": "38efd5df69fbc7dc66d52e50595b21dc8ce84bba2ef03adce4dd02a9e03b94f3"
+    },
+    {
+      "bytes": 7088,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/aln_ex_times_diamond_ra_sp2_18926165356_default_32cpus_ml075.tsv",
+      "sha256": "82539752152f5a8eb7b893e36ea0c4ec7b6c954a076cb3124363e88fe6a8a8c6"
+    },
+    {
+      "bytes": 620,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/alignments/orthology_ex_time_orthologs_db.tsv",
+      "sha256": "6cbff9470a64aa1dad412e893285c08edfe2d39b07348162f2dac67807e60bfb"
+    },
+    {
+      "bytes": 798,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_analysis.info.txt",
+      "sha256": "f96e8471d81732eec6ecb7f20c8d7a62029673e8efaf4878ac66ac500a80a0d8"
+    },
+    {
+      "bytes": 108564,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/1/1-10.arch.ortho.pckl",
+      "sha256": "a1e08d3cbb1af6ea102b70dffbe7ca71b272983d127eb6a6c617ff31696e871c"
+    },
+    {
+      "bytes": 250983,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/1/1-11.arch.ortho.pckl",
+      "sha256": "cec131518ee890a9d9f2f9ffb84beda91b83c7524f3c1a0268ede991caae18cf"
+    },
+    {
+      "bytes": 228621,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/1/1-12.arch.ortho.pckl",
+      "sha256": "ee78343f6d28b51f9311b74fe1c3b1837a13601102717221755530838150690c"
+    },
+    {
+      "bytes": 207698,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/1/1-2.arch.ortho.pckl",
+      "sha256": "853d1869b932ab7a36133501d01fca1d8a307df70def716b3357bd66f634b3d2"
+    },
+    {
+      "bytes": 197155,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/1/1-3.arch.ortho.pckl",
+      "sha256": "df6aea693e6b5472833dbee6b94ed4635fa60045d520399c6042350da21bef0a"
+    },
+    {
+      "bytes": 120286,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/1/1-4.arch.ortho.pckl",
+      "sha256": "56ed50a656e6fb5256687801fa03771a8054033e73e22a0b6604cd46f9978b7d"
+    },
+    {
+      "bytes": 268101,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/1/1-5.arch.ortho.pckl",
+      "sha256": "d36acc7b25155e5da172efcc1c67789a047e3dfdefe81e4c251f99f318d8363b"
+    },
+    {
+      "bytes": 173534,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/1/1-6.arch.ortho.pckl",
+      "sha256": "53a6fc549edcc10f799099a7da3be3a8d41d3aad78d9857d7952e8c2e62cfe2a"
+    },
+    {
+      "bytes": 102602,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/1/1-7.arch.ortho.pckl",
+      "sha256": "94b7e206cf0a26e686466923eff206224faab24ea471ee6308aeb81f6efe873f"
+    },
+    {
+      "bytes": 133036,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/1/1-8.arch.ortho.pckl",
+      "sha256": "88df6465d0c8d228c84e6e0716b9699574dcb701af33f5835efe18b68ca4d577"
+    },
+    {
+      "bytes": 190995,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/1/1-9.arch.ortho.pckl",
+      "sha256": "f52b749c173df17d1f82a5d4795d636e328ff97816e7448e11c98bfd2689bd79"
+    },
+    {
+      "bytes": 132904,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/10/10-11.arch.ortho.pckl",
+      "sha256": "7f2d2916159cc6a993f72aba5ad94efb71ad524b581a7d061c5aabb558cfea46"
+    },
+    {
+      "bytes": 178085,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/10/10-12.arch.ortho.pckl",
+      "sha256": "98a6e1e31af3d505fbe53ba843bc99fc91cad5458cb787661a86d228c7f4c291"
+    },
+    {
+      "bytes": 410905,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/11/11-12.arch.ortho.pckl",
+      "sha256": "3f1b6e88060bdf469571a17ffd25b4c9e521641cf83a0a6fb82b2ac24ebee78a"
+    },
+    {
+      "bytes": 123579,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/2/2-10.arch.ortho.pckl",
+      "sha256": "97d66eaed537f1109ee7c1a2b2424fe1250ea3f89ddf99d33ee270b8b216f486"
+    },
+    {
+      "bytes": 468763,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/2/2-11.arch.ortho.pckl",
+      "sha256": "49401617613c0716b1bbd9c7fc9d1c4be8549b44eba02e68164873a347a90957"
+    },
+    {
+      "bytes": 282113,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/2/2-12.arch.ortho.pckl",
+      "sha256": "71eb8eed15202a70e7923524d7e06646f80b549e01e2780890c93358ce698ec7"
+    },
+    {
+      "bytes": 242487,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/2/2-3.arch.ortho.pckl",
+      "sha256": "f7494ae925551886e45520534541cf34b4af6ac28d32557ba07fde3ebb375541"
+    },
+    {
+      "bytes": 142069,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/2/2-4.arch.ortho.pckl",
+      "sha256": "5f590c2fa7bb90bda99c86d8c882e97ab06dfadbb9d1a01e26bec3d71c551cbb"
+    },
+    {
+      "bytes": 488367,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/2/2-5.arch.ortho.pckl",
+      "sha256": "3dcb6b72c3e966f2e3f7000fc4e3ab7230aff1b2064b10c1285fff1fb3d9d02d"
+    },
+    {
+      "bytes": 212388,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/2/2-6.arch.ortho.pckl",
+      "sha256": "a1238d29a48a32bb31684481d08fd4fe2d69ff5325902f86e81660ce34f01b32"
+    },
+    {
+      "bytes": 120674,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/2/2-7.arch.ortho.pckl",
+      "sha256": "124cc2f519614c56e422949c91715c1740bfebb7baffae0fdcb04630643165b6"
+    },
+    {
+      "bytes": 153648,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/2/2-8.arch.ortho.pckl",
+      "sha256": "a19dc795370f25ce2ee3c0f0d664e2c3ade847c88ce1c4878aa3b22a6b6ad11d"
+    },
+    {
+      "bytes": 226367,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/2/2-9.arch.ortho.pckl",
+      "sha256": "a0f1474016ee7edcb7f60ecc2c0bfbc32b604aac8140403616cddc3ed34f5feb"
+    },
+    {
+      "bytes": 236205,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/3/3-10.arch.ortho.pckl",
+      "sha256": "2ebce30087b7f06925b98967c6f91a31ca039e3bb5a4219d3fe35461d2ab9ec0"
+    },
+    {
+      "bytes": 399168,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/3/3-11.arch.ortho.pckl",
+      "sha256": "63f9a7cee89e577612a7f046785c943cd703b07ce840d66c5df048cb5acc7fdb"
+    },
+    {
+      "bytes": 860283,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/3/3-12.arch.ortho.pckl",
+      "sha256": "566af71110e9756110538214289f1c173f8fa4ae1ad7cb002807bfaaac280887"
+    },
+    {
+      "bytes": 275241,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/3/3-4.arch.ortho.pckl",
+      "sha256": "2b768112248acca8065a526573c283141fd3957ab58786f5ccbc1e9b20d8e799"
+    },
+    {
+      "bytes": 435850,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/3/3-5.arch.ortho.pckl",
+      "sha256": "06d41e2c7c8a5e53817535abc04232e5bd0c4d0a7f5c62b53e2c97dde3806bd2"
+    },
+    {
+      "bytes": 673710,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/3/3-6.arch.ortho.pckl",
+      "sha256": "fe9eea8fd7cd17370e52a31254b1dde48cdc62e5e9c0c3070deb421630f1b4b9"
+    },
+    {
+      "bytes": 224497,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/3/3-7.arch.ortho.pckl",
+      "sha256": "cfaf5031f7346779f380df99ab5177d73b81053a75fb85d8cab6eba42c3dd206"
+    },
+    {
+      "bytes": 300957,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/3/3-8.arch.ortho.pckl",
+      "sha256": "cab1730d7ebdb4abe05724e2bcc8f2321069225c02a2993ecc1a5e7112f2dc40"
+    },
+    {
+      "bytes": 647996,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/3/3-9.arch.ortho.pckl",
+      "sha256": "db7871429215213aa061f48693c2012eb972f262e3b93c5b03b75524dfe85444"
+    },
+    {
+      "bytes": 129727,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/4/4-10.arch.ortho.pckl",
+      "sha256": "8a48be67b651554ed72154a60fd626ea6135d361a7798e60438fe5e4ad0041eb"
+    },
+    {
+      "bytes": 161485,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/4/4-11.arch.ortho.pckl",
+      "sha256": "2ce471ce9a77e087e67eb693edd32d85e6cb54af9a92a53d6598814792f1791d"
+    },
+    {
+      "bytes": 218125,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/4/4-12.arch.ortho.pckl",
+      "sha256": "e08d5d37f13c08cde8aedd1f944bd80287d9b0de403b13563d90a0a7cebe9ef6"
+    },
+    {
+      "bytes": 172471,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/4/4-5.arch.ortho.pckl",
+      "sha256": "9950241147b50e92ec0624644f47c951aa62da5f65959e48fb3592373e6f3ac8"
+    },
+    {
+      "bytes": 163175,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/4/4-6.arch.ortho.pckl",
+      "sha256": "e263e9426c9014cf6420b7d245e91d4da283c47a6a215a190d28fc46d9268c82"
+    },
+    {
+      "bytes": 128162,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/4/4-7.arch.ortho.pckl",
+      "sha256": "76facc2733c0a4565d63ecbf22ab21e348b5503736303237fb2c8784f9a7ccda"
+    },
+    {
+      "bytes": 176816,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/4/4-8.arch.ortho.pckl",
+      "sha256": "d82fdc40594fd7ecd862202ae8b9471932c7aa9ebd122bb7d3527a7e4e16e7ff"
+    },
+    {
+      "bytes": 180980,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/4/4-9.arch.ortho.pckl",
+      "sha256": "285f21fee187fe49c8c0ac5823aa17fc45002d6f87cf98b0802103022ed4cb15"
+    },
+    {
+      "bytes": 210501,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/5/5-10.arch.ortho.pckl",
+      "sha256": "c4e2513318cb60fa75d4b63c94d8a7a9ea605a82027ba537a43e70490cd48c35"
+    },
+    {
+      "bytes": 800757,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/5/5-11.arch.ortho.pckl",
+      "sha256": "4cfe9486cfc3c7dea8ef5783dec2d3c91585dae81e00bb90287ed92870b9ab36"
+    },
+    {
+      "bytes": 476360,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/5/5-12.arch.ortho.pckl",
+      "sha256": "d81a5684dfc2a30763891061de4f37b189b80a124b7d1926306c35e5caa51a02"
+    },
+    {
+      "bytes": 349714,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/5/5-6.arch.ortho.pckl",
+      "sha256": "15e1408d933f869dc54970b02a213234a86fcc9ddddfb94c3dea5f06d46fb1ec"
+    },
+    {
+      "bytes": 202024,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/5/5-7.arch.ortho.pckl",
+      "sha256": "c2c89b1e5c2bbf41467455ae4e4f482a25b3f549cc98aed7c9fca4c533ea84a5"
+    },
+    {
+      "bytes": 254442,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/5/5-8.arch.ortho.pckl",
+      "sha256": "e6928e2ebfcefb19a610a61049ad6b96cf6a63f2f5498aa22d052ccb99cd152e"
+    },
+    {
+      "bytes": 379245,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/5/5-9.arch.ortho.pckl",
+      "sha256": "7819c9fe2c89cc4091641b147eb5341f34314fb0439393aabbc19781032d3d52"
+    },
+    {
+      "bytes": 171139,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/6/6-10.arch.ortho.pckl",
+      "sha256": "b21310619b927d095fde9e2a972d44c56cc20f77c10bafa9b86d638d1bc08557"
+    },
+    {
+      "bytes": 293610,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/6/6-11.arch.ortho.pckl",
+      "sha256": "3f0c29ddf89f2af8b4ea9f0a474b9606317ae7e10173bfd998e8635bcdc7049c"
+    },
+    {
+      "bytes": 672690,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/6/6-12.arch.ortho.pckl",
+      "sha256": "a91b3ad7799409d885915f4730c764ce461e506897bfbedf3c2fa55f40123131"
+    },
+    {
+      "bytes": 163141,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/6/6-7.arch.ortho.pckl",
+      "sha256": "e0bdab58cf48e01211fdf867e0bc29bf0827e2eb18c923e28f6dc0f61bd2fbee"
+    },
+    {
+      "bytes": 224285,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/6/6-8.arch.ortho.pckl",
+      "sha256": "634e68f8ac147645de1281c8d7cd1c9c6dd09ba84dc4fefefef7611ef9a3503e"
+    },
+    {
+      "bytes": 498041,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/6/6-9.arch.ortho.pckl",
+      "sha256": "135f3eb8a7473db7d1ac8ebfa918fb4c9d682eccef8f7c62a1da9619fef034be"
+    },
+    {
+      "bytes": 124583,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/7/7-10.arch.ortho.pckl",
+      "sha256": "551d9061a5923d322f09420e29e3f5f7cb0fbc7af67f247ea0551b1834352815"
+    },
+    {
+      "bytes": 132491,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/7/7-11.arch.ortho.pckl",
+      "sha256": "12e41e770e330debe57020972535e47425d4bc8569d6697f2a4e65554517c139"
+    },
+    {
+      "bytes": 172718,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/7/7-12.arch.ortho.pckl",
+      "sha256": "294413120d48e26c093cbc695e0cc20f9d8fa2818352b033530b619b005cb9a6"
+    },
+    {
+      "bytes": 123629,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/7/7-8.arch.ortho.pckl",
+      "sha256": "c3f749a144315489631e8d1b922466b959684003fde5554f782371b20328130f"
+    },
+    {
+      "bytes": 138206,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/7/7-9.arch.ortho.pckl",
+      "sha256": "c9662b458e53559f244867dff8ac017d71a484ffd91e6ca48c2807861710344d"
+    },
+    {
+      "bytes": 135123,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/8/8-10.arch.ortho.pckl",
+      "sha256": "8290c158211e52544e74276352342c667611e997c73e41f916f1154b580645e9"
+    },
+    {
+      "bytes": 177376,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/8/8-11.arch.ortho.pckl",
+      "sha256": "535c4109ebc93d8a910c7f71dabb3c43ca993b2dd005425258a979cc683cdf1a"
+    },
+    {
+      "bytes": 238766,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/8/8-12.arch.ortho.pckl",
+      "sha256": "67953e2412a9185e43a1b5cec16df6e1db171f9842835b43f7ea8feb77e5d5f1"
+    },
+    {
+      "bytes": 201818,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/8/8-9.arch.ortho.pckl",
+      "sha256": "3f6cea91e06090ce5c989f5e8d00aeb767dcc228897ab3c99dee6d1721f620a2"
+    },
+    {
+      "bytes": 216470,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/9/9-10.arch.ortho.pckl",
+      "sha256": "c7adb813e82cfa5fb6c8b324f53c0adcbbe99a560f461e93d289a242cd059f49"
+    },
+    {
+      "bytes": 354610,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/9/9-11.arch.ortho.pckl",
+      "sha256": "99395359aca6c88e831febb410c35b219b0fe8b505368164e0b5ea2b701d0109"
+    },
+    {
+      "bytes": 714696,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/arch_orthologs/9/9-12.arch.ortho.pckl",
+      "sha256": "11c8b015a8e0c469a64139bf05454ccb2125520b6d52aea7d5623a75f873f0c6"
+    },
+    {
+      "bytes": 221382,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/architectures/1-pfama.mmseqs.archs.tsv",
+      "sha256": "4aff4282ce381df91a412f7a3d1b5e85994b3ac3669b92dfafe525205c1a8b8e"
+    },
+    {
+      "bytes": 110612,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/architectures/10-pfama.mmseqs.archs.tsv",
+      "sha256": "611adfab1105f1089ff2d2a760a8ffb42c10d765c882f6f8e1da41afb85ed255"
+    },
+    {
+      "bytes": 740171,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/architectures/11-pfama.mmseqs.archs.tsv",
+      "sha256": "11d288e18b1470ff95511f1bfffa8b31817faa416e5038dad41b33ef79d01d7a"
+    },
+    {
+      "bytes": 1251071,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/architectures/12-pfama.mmseqs.archs.tsv",
+      "sha256": "6fd2920b99ff12f0f9ceb22081a3f64e11e04ebba2c6ace0f0564d98ffcc2cd5"
+    },
+    {
+      "bytes": 378571,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/architectures/2-pfama.mmseqs.archs.tsv",
+      "sha256": "dbe827cfc5ab1af0149fa0b06779831e6aadbb8740e2e97de64a4b04db72ba51"
+    },
+    {
+      "bytes": 729023,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/architectures/3-pfama.mmseqs.archs.tsv",
+      "sha256": "73686546d7f142469a0dfcde2ad2b632d627e2a29126ddee20b2caf107527e00"
+    },
+    {
+      "bytes": 158564,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/architectures/4-pfama.mmseqs.archs.tsv",
+      "sha256": "c79e7018ad9549d65f6ee83fa3769b19c3eedddc1cb7e608072ce5e942ad7fd6"
+    },
+    {
+      "bytes": 935358,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/architectures/5-pfama.mmseqs.archs.tsv",
+      "sha256": "2f03a686038847ef8d37c75afbeb7eed517934aea12f3a9058ad3ce4dbeb3d67"
+    },
+    {
+      "bytes": 450641,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/architectures/6-pfama.mmseqs.archs.tsv",
+      "sha256": "d4164d9def156117e2866c2415428be89ffbb7c2a903e36df246729e73cfbc4a"
+    },
+    {
+      "bytes": 117462,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/architectures/7-pfama.mmseqs.archs.tsv",
+      "sha256": "095153e73590fefb445e4cb0c6717c1876f1c6ea2d3e63d47b5ef03b6aae62b3"
+    },
+    {
+      "bytes": 160897,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/architectures/8-pfama.mmseqs.archs.tsv",
+      "sha256": "f064f57413f7a7e3fec7c030e74d02fa200938dc8b20bd86fb5ad334c4dad9b3"
+    },
+    {
+      "bytes": 608165,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/architectures/9-pfama.mmseqs.archs.tsv",
+      "sha256": "7a13b58dcacfc755e7c71713ab1c5718b0badb3a7edad65cbb2d64acab29f7f1"
+    },
+    {
+      "bytes": 572,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/archs2embeddings.info.txt",
+      "sha256": "5fed2f8f285cc7fe5c7c56dc12a9f20b8ac3e778a2ee8154f463b1c76a7073e6"
+    },
+    {
+      "bytes": 939056,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/documents/1-pfama.mmseqs.archs.mbsize1.pckl",
+      "sha256": "c480ea0f12adb469684ef17edfeae0056ed9803996ec6b98f4cb865432825cff"
+    },
+    {
+      "bytes": 470764,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/documents/10-pfama.mmseqs.archs.mbsize1.pckl",
+      "sha256": "086b1f6a2e36ea2398759b5a2922939fad00104c016f2746a5b8cba19178bc67"
+    },
+    {
+      "bytes": 3100688,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/documents/11-pfama.mmseqs.archs.mbsize1.pckl",
+      "sha256": "8050bf57244512072ba649ec08b1b6173c3bc707d118f3bd46d8b3846b0c9d90"
+    },
+    {
+      "bytes": 5251818,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/documents/12-pfama.mmseqs.archs.mbsize1.pckl",
+      "sha256": "b752d6881aa14f8d52ea54659cfd2ae67e1a6290f6e9e54ca3ece886b0eb4d5a"
+    },
+    {
+      "bytes": 1598458,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/documents/2-pfama.mmseqs.archs.mbsize1.pckl",
+      "sha256": "37d4d250084bb3d04b195a34e83eedb88c19273f7b053b17345c14ff2895d624"
+    },
+    {
+      "bytes": 3134201,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/documents/3-pfama.mmseqs.archs.mbsize1.pckl",
+      "sha256": "29519c758ed888ec6396648be4322dbc347af8dc3b9c51b5b8d94e2f2ac07d23"
+    },
+    {
+      "bytes": 690689,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/documents/4-pfama.mmseqs.archs.mbsize1.pckl",
+      "sha256": "6cf6a8063686c2ec4fbb2f5f93e91a7ffde43d87018db2ec5ed13dabd6e44c75"
+    },
+    {
+      "bytes": 3948659,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/documents/5-pfama.mmseqs.archs.mbsize1.pckl",
+      "sha256": "568658e72e1c7a124c5642b6d8fc8eedc4c5b214a522a7a409181537cdbe8e58"
+    },
+    {
+      "bytes": 1946018,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/documents/6-pfama.mmseqs.archs.mbsize1.pckl",
+      "sha256": "8600886ca3d33891d7c39abde30421c8e60330ce9b4893f21d11a359248eaa48"
+    },
+    {
+      "bytes": 504554,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/documents/7-pfama.mmseqs.archs.mbsize1.pckl",
+      "sha256": "1ce4bfdb122753ba1b38b79d0f812faa0a44dbebb3e34815702a2ed0d10e8cd1"
+    },
+    {
+      "bytes": 699032,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/documents/8-pfama.mmseqs.archs.mbsize1.pckl",
+      "sha256": "3d3e4e83f8f9bf4e7f53024066d0ab96ada30b50896b2f208ca1592ab09b5b7a"
+    },
+    {
+      "bytes": 2616214,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/documents/9-pfama.mmseqs.archs.mbsize1.pckl",
+      "sha256": "074cf6fb9b5229aae2e7809fd1c8fe15e4a712e8e7a7ae0f410eb3b3b209bc3f"
+    },
+    {
+      "bytes": 2493999,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/documents/documents.raw.txt",
+      "sha256": "0cd8ea8d6cc282e89d16aeeaa1d34a23d2467368b75128090c108584f5c00510"
+    },
+    {
+      "bytes": 8034,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/ex_time.arch_analysis.tsv",
+      "sha256": "d4afa401af67b827fab1a7ddeb57dc00fb20b343fb54cb44fb9ad2c32021bcf5"
+    },
+    {
+      "bytes": 1238654,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/models/corpus.txt",
+      "sha256": "5d40628e67ed7e054a3429475491dec89998ef41c9cd9a697980875fe839e6b6"
+    },
+    {
+      "bytes": 1480787,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/models/doc2vecidx.mapping.pckl",
+      "sha256": "2dee9a56a98e0ada909e31608a98995342e935694312c1319db550d339000dad"
+    },
+    {
+      "bytes": 86341,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/models/domain2wv_idx.mapping.pckl",
+      "sha256": "f106f52d2c4bca4b36c4d0d1802e915abe2d6b3342fc31cdce8b0aa405d0e442"
+    },
+    {
+      "bytes": 50577470,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/models/master.archs.dict.pckl",
+      "sha256": "f4ee289a4d445386835f0acecb20b2ec95b8599d3af092cbb6adf09bc7cfbdce"
+    },
+    {
+      "bytes": 24153923,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/models/sp2_18926165356_default_32cpus_ml075.pv-dbow_sg.vecsize100.win2.mincnt1.ep200.thr1.dboww1.allw",
+      "sha256": "05d1d52fccb3d7465d2e45fc102cea91b95f9fd0a3e84f27e6de491af17aaeed"
+    },
+    {
+      "bytes": 94,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/models/stats.sp2_18926165356_default_32cpus_ml075.tsv",
+      "sha256": "088f7d8ea9b397906fa6767a2a5748f65e24d358e5a7f2ca10996a40fef346cf"
+    },
+    {
+      "bytes": 388542,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/models/tags.corpus.txt",
+      "sha256": "00a62a754bb1827eef89d13e1ca358ad2919e4b877078f569b3017062f9237e9"
+    },
+    {
+      "bytes": 2123340,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/profile_search/1-pfama.mmseqs.blast.tsv",
+      "sha256": "0ee851c6a4f1baab81363d6f5d83b381256d800edf4eb0137c70eb5a40c4daf7"
+    },
+    {
+      "bytes": 417666,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/profile_search/10-pfama.mmseqs.blast.tsv",
+      "sha256": "c23c2a4e133ef6833c10821c9fd6858f2e9e1386a044be4c452ed4e8ad5a1057"
+    },
+    {
+      "bytes": 4269262,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/profile_search/11-pfama.mmseqs.blast.tsv",
+      "sha256": "db8efe47bee31246d1c227be89dbde259a8767f7838c1762a32d1a9c7a3a6cb0"
+    },
+    {
+      "bytes": 9725253,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/profile_search/12-pfama.mmseqs.blast.tsv",
+      "sha256": "f6d4e30567c63ea592172aa3a8431345b564ef83355264acbbd2d7223794cfce"
+    },
+    {
+      "bytes": 2271148,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/profile_search/2-pfama.mmseqs.blast.tsv",
+      "sha256": "6ed5a7619846e2c920906be11a2457a93be1fc9e43b7cb3948a31a7c22f27059"
+    },
+    {
+      "bytes": 3933902,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/profile_search/3-pfama.mmseqs.blast.tsv",
+      "sha256": "884e57f575bc199b58f3420d8f9074ed36c9c7085f8f70ee07dac79ca919ba33"
+    },
+    {
+      "bytes": 649641,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/profile_search/4-pfama.mmseqs.blast.tsv",
+      "sha256": "103634c784d279e7ff3ca585137f59f77477e1f5df28f7e83c2834d9240bec49"
+    },
+    {
+      "bytes": 6079420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/profile_search/5-pfama.mmseqs.blast.tsv",
+      "sha256": "5d0862e5ccf2e456026abe45a8d3f33dff6a202be49a62de855d815ce230d560"
+    },
+    {
+      "bytes": 2482785,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/profile_search/6-pfama.mmseqs.blast.tsv",
+      "sha256": "c654da0cdedea8fbf8e6d45c5c6002bed957bd83b80f63a56ec82453092c1946"
+    },
+    {
+      "bytes": 435256,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/profile_search/7-pfama.mmseqs.blast.tsv",
+      "sha256": "8dcee96e451b309048fa415b0b9217910b3040328b9e8bdc4730a392f12a14ab"
+    },
+    {
+      "bytes": 621979,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/profile_search/8-pfama.mmseqs.blast.tsv",
+      "sha256": "dea077bacb886c11437e57e095e17959d46a871b40dee96dd2acd44dcd577ba7"
+    },
+    {
+      "bytes": 2461302,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/profile_search/9-pfama.mmseqs.blast.tsv",
+      "sha256": "171db4f7d416e27aabd3d22ad96e94a6c72c5532db8a523aab8921724b3359f1"
+    },
+    {
+      "bytes": 1062,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/profile_search/prof_search_ex_times_30bits_tcov0.75_totqcov0.7.sp2_18926165356_default_32cpus_ml075.tsv",
+      "sha256": "795789250b3bd332c6342497f71acd24f2663d4709af9bf950b72ea7aca36a2f"
+    },
+    {
+      "bytes": 1171,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/arch_orthology/profile_search/profile_search.info.txt",
+      "sha256": "287d04d13da4e4a8da726618dca2ac25787cb4bc72bfa9d7e15a36e9fb97ba53"
+    },
+    {
+      "bytes": 2327,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/last_run_info.txt",
+      "sha256": "389222501e37d1eb9e96690a038d384ccd1edb274dad09055156e656f452e3ed"
+    },
+    {
+      "bytes": 76134,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/1/mtable.1-10",
+      "sha256": "ea1a45db89bdc4fa0eb94f51bf5d20caeb3728c0d0cbdb3407ffa36dfa5c6d27"
+    },
+    {
+      "bytes": 328973,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/1/mtable.1-11",
+      "sha256": "a0c2973e19021b9178601474d290d101cf797b2ce4ce7502a89989db21c1e436"
+    },
+    {
+      "bytes": 497313,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/1/mtable.1-12",
+      "sha256": "d8b5611857d92141dc65f0d4a2c4f4999757e82e5a038b3806be0a66dbe7a386"
+    },
+    {
+      "bytes": 205195,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/1/mtable.1-2",
+      "sha256": "ffa8701c7acec42efdf5b19096adffbb1942de9b9555742437fe1d8a4e2d601d"
+    },
+    {
+      "bytes": 245437,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/1/mtable.1-3",
+      "sha256": "37493c998bce81dd977cc7cb3e837cc122efdba85423bd0cc20a240b5861aabf"
+    },
+    {
+      "bytes": 89084,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/1/mtable.1-4",
+      "sha256": "797c2ce03449b75e8107032c28de651c906aef875652bf0427caee7519aef796"
+    },
+    {
+      "bytes": 386080,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/1/mtable.1-5",
+      "sha256": "05994a1c60786a232f25e8b2ca282d29bf73c5d58c43dbf3738984f64a539fcf"
+    },
+    {
+      "bytes": 171448,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/1/mtable.1-6",
+      "sha256": "5548b0c24baaf54fe217ba98ed0112844c9c1f286fd3a74ff952e0f2bb4367f2"
+    },
+    {
+      "bytes": 68408,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/1/mtable.1-7",
+      "sha256": "7acebe2a92097e5fb9f9993d49f1f8b5c1e501db2f92544f120de789dd364518"
+    },
+    {
+      "bytes": 98398,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/1/mtable.1-8",
+      "sha256": "e75cf72d11dd02c8ddb6f16449679ee21e1d5957b8d0acb84ddff226262e3ab7"
+    },
+    {
+      "bytes": 192911,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/1/mtable.1-9",
+      "sha256": "0081ffacb2ee9ef6eaf58feeffb37607033f8facdc0d75ab32dffd7a98f5f096"
+    },
+    {
+      "bytes": 133412,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/10/mtable.10-11",
+      "sha256": "973dac31ac77c30b7f64ead99985a5e0fc3633ced18a6726508c53de6b50fb32"
+    },
+    {
+      "bytes": 376193,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/10/mtable.10-12",
+      "sha256": "04523e26a8985f2a55a951c443cb55f08a8ad454a085b50f55b96a5d39f150cb"
+    },
+    {
+      "bytes": 594434,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/11/mtable.11-12",
+      "sha256": "7ee27335a9cd904ca5548110fe61644b9970244337fd5897bf29b97db03a5749"
+    },
+    {
+      "bytes": 80111,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/2/mtable.2-10",
+      "sha256": "e12bf5cd6985efe6852ddd8fdefc6d857036f4f04372279214a0ee6c76aa766b"
+    },
+    {
+      "bytes": 503419,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/2/mtable.2-11",
+      "sha256": "5d5406cd4bfd4e4a3b53a58c87b2c4133853a792a9ddc612e681815b752c81d6"
+    },
+    {
+      "bytes": 511552,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/2/mtable.2-12",
+      "sha256": "5cc0db1dd89f0481dc662fb843db464b1059654a0250d75c5b172bc5163810e8"
+    },
+    {
+      "bytes": 244361,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/2/mtable.2-3",
+      "sha256": "e9451c35648882164e424207bc431529e01f06074f7c7d8af1b3fb848ba02298"
+    },
+    {
+      "bytes": 91065,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/2/mtable.2-4",
+      "sha256": "5c60acee362ce5769ee6e6fe8ef6230f0d3ad4eb3c014ced0fee19f5893981ac"
+    },
+    {
+      "bytes": 498759,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/2/mtable.2-5",
+      "sha256": "816ae349dfb52712876256fbc1aa7002976738ca24e234b18a1748bc1626c092"
+    },
+    {
+      "bytes": 171831,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/2/mtable.2-6",
+      "sha256": "7076fd610f10f77062159b0e7f34828adcd25d2874b22d01cf98dfb24e1e11e9"
+    },
+    {
+      "bytes": 74019,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/2/mtable.2-7",
+      "sha256": "d1d9c8354f85e61f65509911ff32512b6d2416480c74b0da5a6f108a8223da0b"
+    },
+    {
+      "bytes": 94561,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/2/mtable.2-8",
+      "sha256": "6868dc5cf5e66878cd2da267426ae7470205d1e6416623d697f0c375dbc05a7b"
+    },
+    {
+      "bytes": 188215,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/2/mtable.2-9",
+      "sha256": "a204c4c7ed1a45a87c8734983b62ce878aae225b6d7463161dc3c8fd77f95891"
+    },
+    {
+      "bytes": 180807,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/3/mtable.3-10",
+      "sha256": "690ddfbc6da5802eecf3f6a158329ebe239055f847b6ea412ce2832a2326ebcd"
+    },
+    {
+      "bytes": 327100,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/3/mtable.3-11",
+      "sha256": "ce2ff13fcada197765623ab445f5dd549c6730bef8143214a7efd8abf3dabb25"
+    },
+    {
+      "bytes": 1148593,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/3/mtable.3-12",
+      "sha256": "59769ffc118a3ccc07e2232ee8b1c745802e358ca57dc674487471e5db4f657e"
+    },
+    {
+      "bytes": 212574,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/3/mtable.3-4",
+      "sha256": "7069c8a8d16a9717ddd9940d7631916ddddd512e75da0b764a3d0bf5952ecb8c"
+    },
+    {
+      "bytes": 357010,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/3/mtable.3-5",
+      "sha256": "74daf6f2ad7825c448a8a7e388bc8bdcaac2534a1227c330b8dc698560a00042"
+    },
+    {
+      "bytes": 586591,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/3/mtable.3-6",
+      "sha256": "1e52566e5b33963de0af6b0adbee1e182224fcc47863390d72bbecf0c1e29b31"
+    },
+    {
+      "bytes": 170803,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/3/mtable.3-7",
+      "sha256": "69791ec16b46759e01354bcbd34219193e3776e81c3f5938be12e241862f9adc"
+    },
+    {
+      "bytes": 217150,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/3/mtable.3-8",
+      "sha256": "e41e48417b16e7fdec4920fe6fe84f1057f7ac08cb2179a8eb2c524484acd476"
+    },
+    {
+      "bytes": 512817,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/3/mtable.3-9",
+      "sha256": "dde7fddb0aaffc7b393eb3da75d0a06ae756f4600071fa4b41f4784c1df8e63b"
+    },
+    {
+      "bytes": 86272,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/4/mtable.4-10",
+      "sha256": "e66676b1aa13ecc812ee47bb512dc28c913e09bb5e288086a721aa26a28f9d31"
+    },
+    {
+      "bytes": 150660,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/4/mtable.4-11",
+      "sha256": "a4fe7d29957132fc811b36bbdfc740835fb25809c6137de67a30f8b73ec8e6d6"
+    },
+    {
+      "bytes": 429154,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/4/mtable.4-12",
+      "sha256": "bf55d2b2eb3d4f7fe6be89095446cca0e6ea9698ad6607f164041d2e6d320571"
+    },
+    {
+      "bytes": 174820,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/4/mtable.4-5",
+      "sha256": "45ca22cd1f6688de09bd151255230734c93ff13febd06fe118824e2ebb972317"
+    },
+    {
+      "bytes": 146083,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/4/mtable.4-6",
+      "sha256": "4e9e621b3791183e618227be1c0e83eb586fbc6452615616cfd18783063eb866"
+    },
+    {
+      "bytes": 81954,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/4/mtable.4-7",
+      "sha256": "f47b634afb2a6aaf568bd7e542514ab2e6b49bcca967c20d9fe77f8150084ff5"
+    },
+    {
+      "bytes": 111553,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/4/mtable.4-8",
+      "sha256": "c32d36fd27acdcc530d5c57844a7b401cffce400e47016ecefa0574c59bf8c8e"
+    },
+    {
+      "bytes": 164155,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/4/mtable.4-9",
+      "sha256": "c1c7c28eca1132c64bb1e0f7712e4a28c083445d6497565687e3a27ff9d1d22f"
+    },
+    {
+      "bytes": 152594,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/5/mtable.5-10",
+      "sha256": "b374b169ed88c2442dd371e0856be96d6306cb10a91cf579d79d18969922bb6f"
+    },
+    {
+      "bytes": 731657,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/5/mtable.5-11",
+      "sha256": "406c8dca5b79b52e8109f4147fe348629c6d29a7e1d158ab59c791332a1c6759"
+    },
+    {
+      "bytes": 637789,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/5/mtable.5-12",
+      "sha256": "df3a20b77ca5fbe03a089878eaca14236f47694996efce0f215c9f881e53cea0"
+    },
+    {
+      "bytes": 276137,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/5/mtable.5-6",
+      "sha256": "1a1cd1d4e46a795d75b89742d64e18c89aa7d2876421b67b575c5ab7e0c86775"
+    },
+    {
+      "bytes": 142201,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/5/mtable.5-7",
+      "sha256": "4713c6366e18fae351bd1490f26d4faeaba9e263e0eb138bf0643536cdfbd441"
+    },
+    {
+      "bytes": 179792,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/5/mtable.5-8",
+      "sha256": "80230a70f0795cb5bbfcdae3b0f0c7edd9ea28e5b834d07ba02b1ce1e30d9fdc"
+    },
+    {
+      "bytes": 298068,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/5/mtable.5-9",
+      "sha256": "c896f282edb17b7d85be8e3bc257153eea6a2ffe2198a604ff4437be50ed66cf"
+    },
+    {
+      "bytes": 120403,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/6/mtable.6-10",
+      "sha256": "8d00bf3e55ad5b995447cebb2bea8d63b4ff3bfab3c44b6a0194e74a98f7b424"
+    },
+    {
+      "bytes": 245849,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/6/mtable.6-11",
+      "sha256": "78871f38632c39c0907de5cd5c1127c05f9d2dbcd8d2a820eb3ac09b8336419c"
+    },
+    {
+      "bytes": 1046699,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/6/mtable.6-12",
+      "sha256": "df03b1a7785c86580109cf319408279de9b3f0f27e32f8864e6810eac6b4d510"
+    },
+    {
+      "bytes": 112953,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/6/mtable.6-7",
+      "sha256": "109e9c1573b83a7887b4e8d814bb1682b5740a38ee9a4cd89dc18cae0b719727"
+    },
+    {
+      "bytes": 147829,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/6/mtable.6-8",
+      "sha256": "c91f98f2bcd483e27fc29bd90d45cc4fe2a859c3246ea0bd72a99dcc78af6179"
+    },
+    {
+      "bytes": 385737,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/6/mtable.6-9",
+      "sha256": "fb5481a2aaeaf47256a62d0b4f93f7e2b53e5b4ec770c121a74f11e4c219d8c6"
+    },
+    {
+      "bytes": 77271,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/7/mtable.7-10",
+      "sha256": "d90d5a9c74e0f21431ac123555471127046f06a95e7c28a6c90229258e0b8ffa"
+    },
+    {
+      "bytes": 122995,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/7/mtable.7-11",
+      "sha256": "ceb950d0e07fa571c911c0cda742e27e1c9383cef6c6a95369baa696e7c469fd"
+    },
+    {
+      "bytes": 348142,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/7/mtable.7-12",
+      "sha256": "4e1d87a749c21a755c216f452d7ef807b7a21f376ae29356bf271cfb26fe6dfb"
+    },
+    {
+      "bytes": 76725,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/7/mtable.7-8",
+      "sha256": "b8cc22cc02201620b3b00488eec27aa1b5c23bce44764e1799f15c97cb62dca4"
+    },
+    {
+      "bytes": 127492,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/7/mtable.7-9",
+      "sha256": "ff64cad66779c5fd36099439a2a026463dde1bff1d0141bfef723629a7a2ed35"
+    },
+    {
+      "bytes": 82571,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/8/mtable.8-10",
+      "sha256": "e010dd3ae4652a1c7ea4cdd8672889eadfbf1b68e89b7bb478f44c62f10ebf67"
+    },
+    {
+      "bytes": 155589,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/8/mtable.8-11",
+      "sha256": "48732513825cc52b13d0f00ab83716a6841a2a4850178ed0a6b6ffb1f46486b7"
+    },
+    {
+      "bytes": 432635,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/8/mtable.8-12",
+      "sha256": "d7225c5b535901663aadf436d05691499f5d8af32eafc0c548f950e23961706e"
+    },
+    {
+      "bytes": 167835,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/8/mtable.8-9",
+      "sha256": "33b603cf03fbcb74a7f42f981deac28b4178c1ab6cb9a48a0d1945ab05f5704a"
+    },
+    {
+      "bytes": 136506,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/9/mtable.9-10",
+      "sha256": "e2f748c52e5dadc337542793b7b492b0f06c919196b6dfea456c4a4e039a44b2"
+    },
+    {
+      "bytes": 266734,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/9/mtable.9-11",
+      "sha256": "2fe93309cf58c02c82338e63c49310f450ba06bde0b75bb20e0efde12bd74896"
+    },
+    {
+      "bytes": 874498,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/9/mtable.9-12",
+      "sha256": "683b75b9b211dedb2c68cd7a12b662b1b89655017a77a6c584280f1898f2b272"
+    },
+    {
+      "bytes": 653,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/ortholog_tables_merging.info.txt",
+      "sha256": "1cbeb04fb620cd836cd5114d152ca276e7d648db98394877eac018d3973a4bec"
+    },
+    {
+      "bytes": 2111,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/merged_tables/stats.ortho_tbls_merging.tsv",
+      "sha256": "7c0f59400cacc23f2d4ed4f06014a94db1e3c9bd84eeddddeb99f6fb56941c89"
+    },
+    {
+      "bytes": 89043,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/1/table.1-10",
+      "sha256": "084499658e283f3d8d211d5ae0849a0ee91504294ca99d443479118a2bdad342"
+    },
+    {
+      "bytes": 360156,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/1/table.1-11",
+      "sha256": "c5aa79e661103488f98c4ec07cdbf83f7b4f9950ca07a9faed361360b2b80f7e"
+    },
+    {
+      "bytes": 489448,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/1/table.1-12",
+      "sha256": "dad3b5ea63af1924d2dc844c6de0b1b29dbcc473f3f30dd62b18c2da9e58990c"
+    },
+    {
+      "bytes": 238739,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/1/table.1-2",
+      "sha256": "44e04b661383c6f295747331434a612bee21f874b5a4dc70f8dcca19cc269839"
+    },
+    {
+      "bytes": 251049,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/1/table.1-3",
+      "sha256": "47caf0b3445c5d5df4efd2de4c8f8cdd0f14e4a269a8d38714ef23a4083ff1af"
+    },
+    {
+      "bytes": 101580,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/1/table.1-4",
+      "sha256": "0b400f0e400fe162be6adc70a4ff6ce64b1c0fb40ecee8e2f534d41b37855691"
+    },
+    {
+      "bytes": 411443,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/1/table.1-5",
+      "sha256": "d7a2ebd500d91755f49c1cecc12d24e5ddb89fa73bb5780dc7bb4d1ddc49e5ef"
+    },
+    {
+      "bytes": 181028,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/1/table.1-6",
+      "sha256": "70c1dffb2b814bb4050c0ace94144b93848c646c89ffaafa84900b12fbe18d8c"
+    },
+    {
+      "bytes": 78700,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/1/table.1-7",
+      "sha256": "5dd9659211e66b9f68ec581714e490dc6656d383bc7e095ff315a77c1c9c526a"
+    },
+    {
+      "bytes": 111824,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/1/table.1-8",
+      "sha256": "f52ef17414442c5ec8a0f3ce13080f746ed277d9c74916d1c934bf6652fb8ee8"
+    },
+    {
+      "bytes": 199396,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/1/table.1-9",
+      "sha256": "4d64b5b31eb2cda2e824376eec16bf7e4b08cc048df483adf1ff2fe4a308c984"
+    },
+    {
+      "bytes": 141799,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/10/table.10-11",
+      "sha256": "89194f56ba7189c476e96d1e8cf951302a9fafe5050016eea2cbb33adfeffef5"
+    },
+    {
+      "bytes": 359671,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/10/table.10-12",
+      "sha256": "87c74633cdabe1e9726b3d5d52e37ae463bd206ce93234c0dbf957440e2e0e9c"
+    },
+    {
+      "bytes": 585532,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/11/table.11-12",
+      "sha256": "cb731affc9c00513de6d2d9cf14544002dd42a44f947a16694db1a7e8ab8eefd"
+    },
+    {
+      "bytes": 91682,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/2/table.2-10",
+      "sha256": "9674ed6572792ea76a26181a74c0f892b5fddcbbc23d842030dbabdabd6f88db"
+    },
+    {
+      "bytes": 595550,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/2/table.2-11",
+      "sha256": "3dddb3bec4583f4a979a9fe6979899d93c94cce8beea3b16469f63af1447d5d8"
+    },
+    {
+      "bytes": 502631,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/2/table.2-12",
+      "sha256": "70786f5aba6fb06659d7ab14ef8ac9cb2b6755b34b03111fe5e7d1e70becbdb5"
+    },
+    {
+      "bytes": 250146,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/2/table.2-3",
+      "sha256": "755733e7cf41edc90a47863b1f4273f288357347fafc5927e47315bbcbafeb0e"
+    },
+    {
+      "bytes": 103184,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/2/table.2-4",
+      "sha256": "9dcbc6c716f08f247520de811405d1ae3b920f135f10c7c4a50756d6bc01d8d3"
+    },
+    {
+      "bytes": 574501,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/2/table.2-5",
+      "sha256": "0e331056ae77d921ad37d1f59bbefb87f34e7d19463c746eb6a589b21f0444d2"
+    },
+    {
+      "bytes": 182146,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/2/table.2-6",
+      "sha256": "9fc2026dc3be4b9aef564e1576502eafd61db68fd6ef1051c47b99b4cddbfdc7"
+    },
+    {
+      "bytes": 82825,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/2/table.2-7",
+      "sha256": "fc198d52c4382cffd029e94f2356259b90efc901f64a19ca9d0890e5f3315432"
+    },
+    {
+      "bytes": 107758,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/2/table.2-8",
+      "sha256": "8fd7147df3e7b1983e2f4c93d8a176d7e891b0cc760cf91e5971d47bfc481497"
+    },
+    {
+      "bytes": 194962,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/2/table.2-9",
+      "sha256": "9e4c10260a7cb57b9ca1eb530fcb9d4991d53ea16c0b1f4e3554fdffc1854a60"
+    },
+    {
+      "bytes": 180061,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/3/table.3-10",
+      "sha256": "67da0f14ed98a467c1992e261c785c61c15ad49d532d45b7eb3f998487d7806e"
+    },
+    {
+      "bytes": 328242,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/3/table.3-11",
+      "sha256": "3aa9c3e43e4c93f8227552afcfa017f5e6137db91c178fafc6739f46770013be"
+    },
+    {
+      "bytes": 1190389,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/3/table.3-12",
+      "sha256": "14d022900fd97aa0957102e84588b894fbda62df2b5a662dbdad7a0af5e8848d"
+    },
+    {
+      "bytes": 212908,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/3/table.3-4",
+      "sha256": "607c8cdf884cf00a48dd114826098c7d98f07a190bb3be37ca781e74b817a3da"
+    },
+    {
+      "bytes": 353519,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/3/table.3-5",
+      "sha256": "e69918426e930d73be9e2f79601456508896598cf8c6a01253e87637b4e492ce"
+    },
+    {
+      "bytes": 644539,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/3/table.3-6",
+      "sha256": "6ac87ae5d849406aa3431bb59621895a59581ac865adb3c6f05720bb6aae0921"
+    },
+    {
+      "bytes": 168641,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/3/table.3-7",
+      "sha256": "380f6ca836241bd8eb45c7744fc8b303ff8ab3302d54b5babce074ddf53bb6ea"
+    },
+    {
+      "bytes": 217713,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/3/table.3-8",
+      "sha256": "19a6ff041819f54c65b44b158fc635eadd81e3752e54be72811f86fd7d43f246"
+    },
+    {
+      "bytes": 525623,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/3/table.3-9",
+      "sha256": "3240f3034482bf63e3f6d2ea71a6f7cec76b411ab4128dc13707ecd99a082973"
+    },
+    {
+      "bytes": 106976,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/4/table.4-10",
+      "sha256": "c93bcfb29e45434d1aa52242dd220e282f09acb1333a8bb5885e0828b6863461"
+    },
+    {
+      "bytes": 160155,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/4/table.4-11",
+      "sha256": "e9c500cba88cdcbd82ae7d9ec0718dbc1eb3007d24ddcde806065aa03a9875c7"
+    },
+    {
+      "bytes": 415957,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/4/table.4-12",
+      "sha256": "c8df1ab6eee95badf01fe56dbe499ae38d4595e0e6d9ff0ffcc50741784cfe3f"
+    },
+    {
+      "bytes": 183125,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/4/table.4-5",
+      "sha256": "96e22ad74187777472de032cda7ac07296b2c2b6522fc143fd3dcd893e6c5656"
+    },
+    {
+      "bytes": 152475,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/4/table.4-6",
+      "sha256": "3a333b300f33bfebd3accaf232de2b8f597d0b00626b04c9306361466d4b0787"
+    },
+    {
+      "bytes": 101348,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/4/table.4-7",
+      "sha256": "6ac55ed62c383f7ff058e7bb4096bcc143602066741321ce9e007c6c698cd1f2"
+    },
+    {
+      "bytes": 138225,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/4/table.4-8",
+      "sha256": "223e7cf8b468e7b117a6af15709a201507bbd4294c84b393775ba7f8619f672b"
+    },
+    {
+      "bytes": 164869,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/4/table.4-9",
+      "sha256": "2cbbe5b7e3a44f13fe3687963bf98825ceda5fe50460005edc6555758cf16aca"
+    },
+    {
+      "bytes": 158012,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/5/table.5-10",
+      "sha256": "af75fdcffc19b93fc6c65e8feb792c8b8bcb5e3b6d1b2e2e228feb4d6fbeca81"
+    },
+    {
+      "bytes": 815855,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/5/table.5-11",
+      "sha256": "06508b0637e93936ba8977f70c823c9ccc506633d9b0c59ca0c4408688ba084a"
+    },
+    {
+      "bytes": 623100,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/5/table.5-12",
+      "sha256": "049682c42fafecea51b4c468dd19cf776eb9d8a088d8e396759131755ecce2b6"
+    },
+    {
+      "bytes": 277810,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/5/table.5-6",
+      "sha256": "480c76f671641e177201a2686c54694764e6aa3a746f0d026c8d769a41752433"
+    },
+    {
+      "bytes": 143667,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/5/table.5-7",
+      "sha256": "c5b1a9f1bea859b14a45ca76779f1bb5bb9fb0dd5aef0a6dc7b493c25a3b42ca"
+    },
+    {
+      "bytes": 185159,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/5/table.5-8",
+      "sha256": "9e719817bb6d5be9dc1cd1de686a2818a45b0a40d1b3812b21bb2528a22c486f"
+    },
+    {
+      "bytes": 295322,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/5/table.5-9",
+      "sha256": "37b01d703debee1a0a9b262ad4ee3abfd8175c5bc97780e5b155b09608afc633"
+    },
+    {
+      "bytes": 124699,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/6/table.6-10",
+      "sha256": "f1c01974bbc4cebd698846bdd0532c1df83a219f75f85e9fc0b21317e61c8cda"
+    },
+    {
+      "bytes": 252923,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/6/table.6-11",
+      "sha256": "0fda3840d0d9fbafafcf5c024c7ffe88e3d6341d920e377f49f7d79c8d111591"
+    },
+    {
+      "bytes": 1164039,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/6/table.6-12",
+      "sha256": "b988305c2e9f9dfd24f6656cb2d430ba4a681c7bf693f5bec8f179b954d68f53"
+    },
+    {
+      "bytes": 116431,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/6/table.6-7",
+      "sha256": "dfd3edcbf3b9095ae387d644574decb0b0e88a88b806c55ba3e34f8c52087bca"
+    },
+    {
+      "bytes": 154503,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/6/table.6-8",
+      "sha256": "f8320fddd676adbcd880091c25bdec71b114f35656afc8e0db2e1f63159ccc37"
+    },
+    {
+      "bytes": 408401,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/6/table.6-9",
+      "sha256": "43d9420f0f76825b55fa28469c7daf140eec917bb9f64d20210902e7fff0e800"
+    },
+    {
+      "bytes": 97248,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/7/table.7-10",
+      "sha256": "9e20ee24adc8da0a371b8dcee699433186a176245b80d050ef756cf8fac593a0"
+    },
+    {
+      "bytes": 128781,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/7/table.7-11",
+      "sha256": "ca0abff155372e194dd282f879fe2735a0aa5653142752014c1dc2d96faae012"
+    },
+    {
+      "bytes": 333887,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/7/table.7-12",
+      "sha256": "c51f0a6a3953f37dd3b78b644a931b610b6e131ad1e7f679cde3ec9d7d77c754"
+    },
+    {
+      "bytes": 93142,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/7/table.7-8",
+      "sha256": "effbaa01647b3e3c8743fbb06eb72e98e17fa3bee90d7ede021b1b982a797296"
+    },
+    {
+      "bytes": 126318,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/7/table.7-9",
+      "sha256": "6c58e2d6149e34e10505b8c17ce2eccb81b4047eca3067abb98422487b879970"
+    },
+    {
+      "bytes": 100779,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/8/table.8-10",
+      "sha256": "a34fc9e65e9296ef58d61e7efd0a85477049ae015da9a04698d08d35dd912dce"
+    },
+    {
+      "bytes": 165171,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/8/table.8-11",
+      "sha256": "5f01510b5b611532e5905aa1b9ac6f0b5c3467c10969a8632b5039c485b3a7fd"
+    },
+    {
+      "bytes": 417869,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/8/table.8-12",
+      "sha256": "84f7d12d8ecfff57174116a01937618f2e41cf5a9beb9b441a1a5026eb6f059f"
+    },
+    {
+      "bytes": 169432,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/8/table.8-9",
+      "sha256": "067b4c9196e4baaae71723c31d71afad25bfa162c09dddd99fb324bcfa19e1bb"
+    },
+    {
+      "bytes": 134612,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/9/table.9-10",
+      "sha256": "10bdb8ba5f43d15b23d7466e8dfa62acf85e2caed601ccfbae74c2262d28dcc2"
+    },
+    {
+      "bytes": 267210,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/9/table.9-11",
+      "sha256": "c027aedc4190fe71e0bf7fe51232ecfd14e35bac85cf9c9670ff90f1e5aae65d"
+    },
+    {
+      "bytes": 869003,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/orthologs_db/9/table.9-12",
+      "sha256": "eae952423bdb20808d6399a8258641eb1160f1d05c4c2e7fa63b7fe206dc75a9"
+    },
+    {
+      "bytes": 5613409,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/ortholog_groups/flat.ortholog_groups.tsv",
+      "sha256": "2dc2d2d30443a32e0f5be7ff7c03947673d643e8fca7b9cedbc7bd574aef0677"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/ortholog_groups/mcl.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/ortholog_groups/mcl.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 2644306,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/ortholog_groups/not_assigned_genes.ortholog_groups.tsv",
+      "sha256": "00504d0a3779778a29e232b82ecb752c32171e56cc60ae37ca45be39a9de51a4"
+    },
+    {
+      "bytes": 637601,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/ortholog_groups/ortholog_counts_per_species.stats.tsv",
+      "sha256": "0406ea66f26759fa858cf6271137e64cf1baf5d1caccc9181f801c09b676f473"
+    },
+    {
+      "bytes": 5750276,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/ortholog_groups/ortholog_groups.tsv",
+      "sha256": "a6e84a626d098f64824c5b5de779712917a7bdb13fdc9ae36ac8f79d377b93d6"
+    },
+    {
+      "bytes": 838,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/ortholog_groups/overall.stats.tsv",
+      "sha256": "da7edbd01c0ad58b5b8104d02dd3acadbbfd667d4465aa6ce52a1ccc4ba28051"
+    },
+    {
+      "bytes": 4773466,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/ortholog_groups/raw_mcl_ortholog_groups.tsv",
+      "sha256": "b000a8eb1309d7618bf9acdc15f91c8650e129363cb1ae7b08bdc8808efe1923"
+    },
+    {
+      "bytes": 245424,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/ortholog_groups/single-copy_groups.tsv",
+      "sha256": "cc95e65dcfc642e5196b611b46f26eda3b43f664a1f208b0115c8aa06cb3a75d"
+    },
+    {
+      "bytes": 1524,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/ortholog_groups/species_coverages_in_groups.stats.tsv",
+      "sha256": "a030cd0770e7afaf849bf28ab7a66dfec1612c04bdc9dcd4812d2464fb0c9253"
+    },
+    {
+      "bytes": 2327,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/run_info.txt",
+      "sha256": "389222501e37d1eb9e96690a038d384ccd1edb274dad09055156e656f452e3ed"
+    },
+    {
+      "bytes": 397045,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Amph.fasta/Amph.fasta-Anol.fasta",
+      "sha256": "64a75178876f3c48d66f4fb277f2c737c3acffcb4d97a92de88bcbe9954db8d4"
+    },
+    {
+      "bytes": 351578,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Amph.fasta/Amph.fasta-Arab.fasta",
+      "sha256": "31c9b8e53a78afd60123f66301b63c8a33b29de51320b83485444025966bea30"
+    },
+    {
+      "bytes": 134342,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Amph.fasta/Amph.fasta-Asfu.fasta",
+      "sha256": "82dd0e437ef8058e54a063dcd37a2490ed4997b899694af29947b30d92a3eb6e"
+    },
+    {
+      "bytes": 749806,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Amph.fasta/Amph.fasta-Dani.fasta",
+      "sha256": "b547147e188555c5be7b7fba25fe7137e7b6f066efc971a61dce93a73d8ff31a"
+    },
+    {
+      "bytes": 287319,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Amph.fasta/Amph.fasta-Oryz.fasta",
+      "sha256": "01a4249c30ea959be57d3d667c60aabc3679969b056fa2275ff11c4914cf6cad"
+    },
+    {
+      "bytes": 100926,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Amph.fasta/Amph.fasta-Scer.fasta",
+      "sha256": "2faf2cf0eed642cd040e755ee9d3cdcf51d8e177a519ecd53a6510eeb99d3140"
+    },
+    {
+      "bytes": 147637,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Amph.fasta/Amph.fasta-Scom.fasta",
+      "sha256": "4e5381c953b1f668b9995d1678389ce38a853da35f3ce97d66a9641f339cbe52"
+    },
+    {
+      "bytes": 254012,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Amph.fasta/Amph.fasta-Sela.fasta",
+      "sha256": "614312c76c13f804421e09595f272d0934d293324e9f99747767c3deda39c973"
+    },
+    {
+      "bytes": 136316,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Amph.fasta/Amph.fasta-Spom.fasta",
+      "sha256": "4406163172bbbb1a4bd8c87efbc94953d6c256ad536aeec734276e85fdac7d90"
+    },
+    {
+      "bytes": 722156,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Amph.fasta/Amph.fasta-Xeno.fasta",
+      "sha256": "9241664ba95e433e716751267612cbd2d255a1364624b179d031c51029f33d26"
+    },
+    {
+      "bytes": 861953,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Amph.fasta/Amph.fasta-Zeam.fasta",
+      "sha256": "861f08282d20bb506824a61bdc266a2cccbfa6d12f7c1b55a83a86ad12fdc49e"
+    },
+    {
+      "bytes": 373963,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Anol.fasta/Anol.fasta-Arab.fasta",
+      "sha256": "bafff672383195df978a1b18a3c862c3f1a281ecbe77a18fd553c9be030cc535"
+    },
+    {
+      "bytes": 157740,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Anol.fasta/Anol.fasta-Asfu.fasta",
+      "sha256": "7fcca2284ec91a09853eb3c21c45c726443b29e5a7c0036f5a9746021c9e0871"
+    },
+    {
+      "bytes": 1041799,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Anol.fasta/Anol.fasta-Dani.fasta",
+      "sha256": "8a5787c6c227858afcd9f599bb147faa415a4afe09a4615adf5a6d4299992f26"
+    },
+    {
+      "bytes": 311107,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Anol.fasta/Anol.fasta-Oryz.fasta",
+      "sha256": "89af752cd7013c60c6453e48c954c9389e0224264e336bc7181eff965238af1e"
+    },
+    {
+      "bytes": 126581,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Anol.fasta/Anol.fasta-Scer.fasta",
+      "sha256": "20719dd64d996a66a1cd663956032ff498b073e274cb2550d54577b00b6804f5"
+    },
+    {
+      "bytes": 162263,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Anol.fasta/Anol.fasta-Scom.fasta",
+      "sha256": "6dae33bb80d66a689c5b87d48175777f0e59f7b90ef63d20e85c60e3cdada06d"
+    },
+    {
+      "bytes": 271079,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Anol.fasta/Anol.fasta-Sela.fasta",
+      "sha256": "0dfa239362f95643ef2f8ec433c3552ab51a269bb5ef59686a4f7836e4b8f58c"
+    },
+    {
+      "bytes": 160559,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Anol.fasta/Anol.fasta-Spom.fasta",
+      "sha256": "f4422e4f8a49753d9a41f24bdcfb4bc2832190ef4a900eda41e67439982c5c67"
+    },
+    {
+      "bytes": 1187294,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Anol.fasta/Anol.fasta-Xeno.fasta",
+      "sha256": "be23552081b9690037502b6687061fbee3ce776674480d85c284092445e2c0c1"
+    },
+    {
+      "bytes": 910806,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Anol.fasta/Anol.fasta-Zeam.fasta",
+      "sha256": "3a4ae99a617ed71da40dda8d571ed2e282fca4c1854a04dd58af10eeac2b5885"
+    },
+    {
+      "bytes": 275616,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Arab.fasta/Arab.fasta-Asfu.fasta",
+      "sha256": "d3ea4662341457198ba166e979838a31fa585d7a6d79326144b1a9bebc94cc64"
+    },
+    {
+      "bytes": 583513,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Arab.fasta/Arab.fasta-Dani.fasta",
+      "sha256": "04f96d899fc8cc26c78f40d74ee3fcc7c9eb01e032a5675c056f22f7d97fddf3"
+    },
+    {
+      "bytes": 855179,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Arab.fasta/Arab.fasta-Oryz.fasta",
+      "sha256": "4e92e5c0e703edbac07264d85165166dfb80cd6c1ff6f042fbab92b9332092e4"
+    },
+    {
+      "bytes": 219341,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Arab.fasta/Arab.fasta-Scer.fasta",
+      "sha256": "139b90ad46d09e33e72aaa06b8672cda88fd8cdb283623bbc3555e86708e4dcf"
+    },
+    {
+      "bytes": 280426,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Arab.fasta/Arab.fasta-Scom.fasta",
+      "sha256": "49300ed59e3c1e4d4c0c6e27e05d40ae3678ea751d1df0d509d5bacb3d5a53d7"
+    },
+    {
+      "bytes": 633710,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Arab.fasta/Arab.fasta-Sela.fasta",
+      "sha256": "194b529eccc3228dc3d2e429eb2fc7fc5bd053f7c4e470c2777f7ee84119506c"
+    },
+    {
+      "bytes": 257048,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Arab.fasta/Arab.fasta-Spom.fasta",
+      "sha256": "7aa64ffea0ba2ac91fabfc030d804a38f06b762440ecca0757c36a60bbe7b073"
+    },
+    {
+      "bytes": 569437,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Arab.fasta/Arab.fasta-Xeno.fasta",
+      "sha256": "a8edb7f2c581b08bba06352d2817ab15c9120d5c583b483118a569842918f49a"
+    },
+    {
+      "bytes": 1852343,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Arab.fasta/Arab.fasta-Zeam.fasta",
+      "sha256": "2bd0a7dd3d8f8999ddb5bd0a4a5c188fe593a7da87c84ccbf422d3205ca2e27b"
+    },
+    {
+      "bytes": 318636,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Asfu.fasta/Asfu.fasta-Dani.fasta",
+      "sha256": "9658a913ab09f0fcc114ac4a04694db4fa6f95c34d7e3a2be6317a051a910557"
+    },
+    {
+      "bytes": 221608,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Asfu.fasta/Asfu.fasta-Oryz.fasta",
+      "sha256": "8a472d6b754b99fd5b897ebb108844ae749f48c48258540c4d66c4d6dbd25fb3"
+    },
+    {
+      "bytes": 94045,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Asfu.fasta/Asfu.fasta-Scer.fasta",
+      "sha256": "57b0ef831309182e9e0a18248b6a61d97d111d25353c164c8e98b19772f9425a"
+    },
+    {
+      "bytes": 131284,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Asfu.fasta/Asfu.fasta-Scom.fasta",
+      "sha256": "3d7fb24293f16ae3669c01a2049f319fb9581a8e968f7513e36516c125bcbbbc"
+    },
+    {
+      "bytes": 184037,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Asfu.fasta/Asfu.fasta-Sela.fasta",
+      "sha256": "a921188c5db3f2f4812039cca83635d0c35e93ccda641ce5cbe7951c5a4dd908"
+    },
+    {
+      "bytes": 131602,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Asfu.fasta/Asfu.fasta-Spom.fasta",
+      "sha256": "f703ae184288bec6969241ed70bb83aae4a35b537c8a2f8528dd6aeef1156586"
+    },
+    {
+      "bytes": 308107,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Asfu.fasta/Asfu.fasta-Xeno.fasta",
+      "sha256": "5ea124b72f25637eba1c15a5d692053f1873d4a965ad2f74a07cf6eabc65c310"
+    },
+    {
+      "bytes": 721851,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Asfu.fasta/Asfu.fasta-Zeam.fasta",
+      "sha256": "70312b0e9401193d2c05eac14531a6c00bb505bde5660e87af6a1d1fd7c287df"
+    },
+    {
+      "bytes": 513687,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Dani.fasta/Dani.fasta-Oryz.fasta",
+      "sha256": "9fba875b6985998f5d8ea0ec4596cd448d2556aea256e194d21098c676988dae"
+    },
+    {
+      "bytes": 258708,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Dani.fasta/Dani.fasta-Scer.fasta",
+      "sha256": "d32ef27b8def8a65a9a8c496857812860c77ac7637689bcbc94d632e9b3c822e"
+    },
+    {
+      "bytes": 326951,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Dani.fasta/Dani.fasta-Scom.fasta",
+      "sha256": "22da9bd1871eabed39c4bb7110a818a9bcc90ed5271c6c4ea1fb027123acc167"
+    },
+    {
+      "bytes": 477101,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Dani.fasta/Dani.fasta-Sela.fasta",
+      "sha256": "caa16f88750ce9c8264b5c9e97f450df4da6d551af3b0e0f31e4e38109bdffc1"
+    },
+    {
+      "bytes": 302855,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Dani.fasta/Dani.fasta-Spom.fasta",
+      "sha256": "acfc674657ec1a6ae246519305afb0f2dcd2ff750befd18cbd40c69d32f7adc3"
+    },
+    {
+      "bytes": 1646771,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Dani.fasta/Dani.fasta-Xeno.fasta",
+      "sha256": "b7f42e2f5cd3f1849b91ab605b2c3ca07f209a5927795ab7c23eff40ddbc396b"
+    },
+    {
+      "bytes": 1153472,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Dani.fasta/Dani.fasta-Zeam.fasta",
+      "sha256": "c8bd91ead4f0f8763b69a80e9102a91b3cf2f441bc3177dfa56f62c50bb03e38"
+    },
+    {
+      "bytes": 169392,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Oryz.fasta/Oryz.fasta-Scer.fasta",
+      "sha256": "7085e87a16fc42b325df312216bb347d4edc77c2f4f2424238b7828fdc969428"
+    },
+    {
+      "bytes": 222474,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Oryz.fasta/Oryz.fasta-Scom.fasta",
+      "sha256": "3de0f130e8d4fc7b999b2d942d19045098073b531c88e7e9819d6d16fc1995f7"
+    },
+    {
+      "bytes": 523026,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Oryz.fasta/Oryz.fasta-Sela.fasta",
+      "sha256": "b4b0091971261d5d5f2ea61d7be595a60fe9f8e56b02b5895e6768a26e47ec6e"
+    },
+    {
+      "bytes": 204387,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Oryz.fasta/Oryz.fasta-Spom.fasta",
+      "sha256": "7035f5a01c518667f18b030444540467455bc0ed0cedf71e3528168612bbc298"
+    },
+    {
+      "bytes": 497248,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Oryz.fasta/Oryz.fasta-Xeno.fasta",
+      "sha256": "84c58b4c7d601f1393d14eee816c0ca965cddf3dc5bf50b48230f817ff092e71"
+    },
+    {
+      "bytes": 1830327,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Oryz.fasta/Oryz.fasta-Zeam.fasta",
+      "sha256": "3eb689558fcb73ed9b97cc49111aa10c26a498dc4e8b8a67e7c8ab98c2575fad"
+    },
+    {
+      "bytes": 87339,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Scer.fasta/Scer.fasta-Scom.fasta",
+      "sha256": "59428f29fdc7fec269f58ad6a8739190b287cc87bacbd415b2cefcbeb9d9a7ef"
+    },
+    {
+      "bytes": 140645,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Scer.fasta/Scer.fasta-Sela.fasta",
+      "sha256": "4a59bd1f32d08d8485b71b1355a43c1e142e8d3792be1034148e590123fa6936"
+    },
+    {
+      "bytes": 114883,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Scer.fasta/Scer.fasta-Spom.fasta",
+      "sha256": "d8820b6c9f1b7d134a25b1c2ddf1318442a179a48ac680058df25239138e8000"
+    },
+    {
+      "bytes": 250984,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Scer.fasta/Scer.fasta-Xeno.fasta",
+      "sha256": "e8b493f9e119bf83c7ac1cc421a39d9946c27ad771b0fab139183cf64b74da15"
+    },
+    {
+      "bytes": 584626,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Scer.fasta/Scer.fasta-Zeam.fasta",
+      "sha256": "b305c8fa60edd968c2185370ad70d6a79ba471acde632c58963fe203302005fb"
+    },
+    {
+      "bytes": 187568,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Scom.fasta/Scom.fasta-Sela.fasta",
+      "sha256": "9aeeefbd1ef49d923942f7279a9e47e382045f5c816ded46f16c3491895289f8"
+    },
+    {
+      "bytes": 124030,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Scom.fasta/Scom.fasta-Spom.fasta",
+      "sha256": "460ace473a5d9c8d5943deb10c8e96cc227b45d34c4083f5f6785709e2abcf9d"
+    },
+    {
+      "bytes": 316045,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Scom.fasta/Scom.fasta-Xeno.fasta",
+      "sha256": "fd0d4865eb3b0cd146a1456f8e7e256fe372e9036bd73b8a8d2e00440dbb7530"
+    },
+    {
+      "bytes": 725421,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Scom.fasta/Scom.fasta-Zeam.fasta",
+      "sha256": "e050ee09d0d15c3478fd5e97781d07a909a7726d880a8c2cf3059340bb78555b"
+    },
+    {
+      "bytes": 175004,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Sela.fasta/Sela.fasta-Spom.fasta",
+      "sha256": "c5a0a3f61ff0ffb709e36d63363189d76add1674f0ddc3e380a7ba727e203395"
+    },
+    {
+      "bytes": 458414,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Sela.fasta/Sela.fasta-Xeno.fasta",
+      "sha256": "3609a7142fc17f2ce800899a72585a92f43b31c27dc8432e6f57558a0e2dc592"
+    },
+    {
+      "bytes": 1378761,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Sela.fasta/Sela.fasta-Zeam.fasta",
+      "sha256": "ffb16829ec79813417c1a92fcd756da8caf6a5ddada5db4b407eb6191fc03f39"
+    },
+    {
+      "bytes": 297138,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Spom.fasta/Spom.fasta-Xeno.fasta",
+      "sha256": "898dd2dbac4c37fb7515c79d5e31a111b303b33b66c54b2edf68ff4edceb3377"
+    },
+    {
+      "bytes": 656189,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Spom.fasta/Spom.fasta-Zeam.fasta",
+      "sha256": "b530b5b606db26ef4dbaf1c50b150e7e28a55adb943a2a45aaf9ef0c9323a5b6"
+    },
+    {
+      "bytes": 1115725,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/species_to_species_orthologs/Xeno.fasta/Xeno.fasta-Zeam.fasta",
+      "sha256": "d3c2274d596616881a2a678ed591c5af54e04627514aa47d6c4d6aaef084262b"
+    },
+    {
+      "bytes": 1113,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/snapshot.tsv",
+      "sha256": "9b7dd5d482168e3a39917cb1347f3dc770e03da866b8ae283d6affc47525f02c"
+    }
+  ],
+  "conversion_argv": [
+    "/home/bizon/anaconda3/bin/python3.10",
+    "-B",
+    "-s",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/normalize_three_kingdoms_orthogroups.py",
+    "sonicparanoid",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/ortholog_groups/ortholog_groups.tsv",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/three_kingdoms_sonic_matched_assessment_20260918/orthogroups.txt"
+  ],
+  "conversion_log": {
+    "bytes": 43,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/three_kingdoms_sonic_matched_assessment_20260918/conversion.log",
+    "sha256": "a2890fe0a9320afccbaa5c2c77f7342e3f6577be513826b40c085868117dbe8f"
+  },
+  "counts": {
+    "f_score": 0.9912758996728462,
+    "false_negative_gene_pairs": 80,
+    "false_positive_gene_pairs": 48,
+    "precision": 0.9934426229508196,
+    "predicted_orthogroups": 19870,
+    "recall": 0.9891186071817193,
+    "reference_gene_coverage": 0.9980343980343981,
+    "reference_genes": 2035,
+    "reference_genes_in_prediction": 2031,
+    "reference_orthogroups": 255,
+    "true_positive_gene_pairs": 7272
+  },
+  "limitations": [
+    "Contemporary matched-input run, not an isolated stop-marker causal test.",
+    "BUSCO reference-gene co-membership only; no penalty outside reference.",
+    "Shared-host timing is descriptive, not dedicated scaling."
+  ],
+  "native_validation": {
+    "accuracy_admitted": false,
+    "evidence": [
+      {
+        "bytes": 5750276,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/runs/sp2_18926165356_default_32cpus_ml075/ortholog_groups/ortholog_groups.tsv",
+        "sha256": "a6e84a626d098f64824c5b5de779712917a7bdb13fdc9ae36ac8f79d377b93d6"
+      },
+      {
+        "bytes": 1113,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output/snapshot.tsv",
+        "sha256": "9b7dd5d482168e3a39917cb1347f3dc770e03da866b8ae283d6affc47525f02c"
+      },
+      {
+        "bytes": 5204624,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/three_kingdoms_sonic_matched_assessment_20260918/orthogroups.txt",
+        "sha256": "c966c07437aa190439fd7885daf40ec152d9b61e50db3a7de904bbac26c28f5a"
+      },
+      {
+        "bytes": 22455028,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/input/Amph.fasta",
+        "sha256": "ef309054ffc2b6a96e9c523569bc84a9286dd48c2caa4b0eb6a0adad6a48b61f"
+      },
+      {
+        "bytes": 15376532,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/input/Anol.fasta",
+        "sha256": "3572dfe704fbd7da7e7a59085f06252964d0a5f8426858cbb55353bbc9455e05"
+      },
+      {
+        "bytes": 33366601,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/input/Arab.fasta",
+        "sha256": "d7c319fa8c6d3b5569ae43cfe0cad2a1331b5c0db9b97b49ceadcf9fef62b3b4"
+      },
+      {
+        "bytes": 6750862,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/input/Asfu.fasta",
+        "sha256": "64472bec6c765b88656f884ef6edfc5180a14859c1a0e2170ea441e16ee049a5"
+      },
+      {
+        "bytes": 42222249,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/input/Dani.fasta",
+        "sha256": "c0a902d57898468f0df1a77a0773f935ef80d53abc4c3831381736f8d13d4e73"
+      },
+      {
+        "bytes": 21984251,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/input/Oryz.fasta",
+        "sha256": "613aa313a07ff90ed70fb599f1b3d71cbfe24d0970111431466297c01da970d4"
+      },
+      {
+        "bytes": 5875882,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/input/Scer.fasta",
+        "sha256": "b4d38c9f505484f0dd7218e769b97f79ad1c3bf94619b989d4bc05b5fae22e42"
+      },
+      {
+        "bytes": 8582364,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/input/Scom.fasta",
+        "sha256": "f078d61dc29427086de601369fe6ed541fa5d937c7a58c717fbdd28a2a397f8a"
+      },
+      {
+        "bytes": 20561355,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/input/Sela.fasta",
+        "sha256": "63d77c81ef9e1e437a7ed210f274d325dfb87983faf74fc0bec2dd37347a173e"
+      },
+      {
+        "bytes": 3805824,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/input/Spom.fasta",
+        "sha256": "643f960eb5531a2a642dc0c39d9db04e85fe7f0e6940fb5c880bc1369f7e7dc5"
+      },
+      {
+        "bytes": 25382533,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/input/Xeno.fasta",
+        "sha256": "8eb459d5da98a95f6e228b8bda9d7136456b511abbf33356acd5bb69d063e398"
+      },
+      {
+        "bytes": 95382422,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/input/Zeam.fasta",
+        "sha256": "1b0b9e82cfaee672f9ceaa6156f3a1ab3812b3f2dbac9af9dce4c0232222700c"
+      }
+    ],
+    "grouped_genes": 288634,
+    "groups": 19870,
+    "input_genes": 443217,
+    "input_species": 12,
+    "limitations": [
+      "Does not establish terminal execution or runtime provenance.",
+      "Snapshot residue totals retained by source, not independently validated here.",
+      "Unassigned input genes are counted, not assumed to be missing output errors.",
+      "Group co-membership is not native pair-table orthology."
+    ],
+    "source": {
+      "bytes": 5480,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_three_kingdoms_sonic_assessment_v1/benchmark_tools/validate_sonicparanoid_groups.py",
+      "sha256": "3f9ede66a4b11df6ac698ba99898560cc35d44d8ed91add836c9d65aab3cd19e"
+    },
+    "status": "sonic_native_group_conversion_verified",
+    "unassigned_input_genes": 154583
+  },
+  "normalized": {
+    "bytes": 5204624,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/three_kingdoms_sonic_matched_assessment_20260918/orthogroups.txt",
+    "sha256": "c966c07437aa190439fd7885daf40ec152d9b61e50db3a7de904bbac26c28f5a"
+  },
+  "scheduler": {
+    "AllocCPUS": "32",
+    "Elapsed": "01:17:55",
+    "ExitCode": "0:0",
+    "JobIDRaw": "21795",
+    "NodeList": "bizon",
+    "ReqMem": "192G",
+    "State": "COMPLETED"
+  },
+  "score": {
+    "bytes": 459,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/three_kingdoms_sonic_matched_assessment_20260918/score.txt",
+    "sha256": "0c9122cae236cf201cd073108761548f0464fa5d1ea4b7184b9445b0c745c248"
+  },
+  "scoring_argv": [
+    "/home/bizon/anaconda3/bin/python3.10",
+    "-B",
+    "-s",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/score_against_busco.py",
+    "--predictions",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/three_kingdoms_sonic_matched_assessment_20260918/orthogroups.txt",
+    "--reference",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/busco/reference_orthogroups.txt",
+    "--label",
+    "SonicParanoid matched-input Three Kingdoms"
+  ],
+  "source": {
+    "bytes": 8154,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_three_kingdoms_sonic_assessment_v1/benchmark_tools/assess_three_kingdoms_matched_sonic.py",
+    "sha256": "ac0e758cbeca6ec1db1dffbde17de69f8108cf8a1f18b1e5e40d6d74846cc64d"
+  },
+  "status": "matched_three_kingdoms_sonic_score_verified"
+}

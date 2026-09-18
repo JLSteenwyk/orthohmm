@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Matched Three Kingdoms Sonic Completed (2026-09-18 UTC)
+
+During the same continuation, terminal scheduler evidence confirmed21795
+completed0:0 in1:17:55 and independent assessment21796 completed0:0 in1:24.
+The assessment admits7272TP/48FP/80FN, pairF1=0.9912758996728462,
+precision0.9934426229508196, recall0.9891186071817193 and2031/2035reference
+gene coverage over255BUSCO reference families.19870groups predicted.
+Rehashed all checked records and result/source artifacts and independently
+recomputed F1 from counts.36focused tests pass.
+
+Retained`three_kingdoms_sonic_matched_assessment_21796.json`, SHA-256
+aeddd422a5c733ac40bef0c4953a6bda12ab2a751baeeae9e9c28cac472e9653,
+and documented semantics inTHREE_KINGDOMS_SONIC_MATCHED_RESULT_20260918.md.
+The historical mismatched-input run is preserved. Aggregate publication
+tables/figures still need explicit contemporary-result incorporation; the
+new score is not a stop-marker causal result or a genome-wide endpoint.
+QfO scoring21825, top100graph21814 and HMM21706_0 remain running.
+
 ## Outside-Job Counter Collector Verified (2026-09-18 UTC)
 
 Previous turn progressed through77a81c7 with completed all-hit pairs and the

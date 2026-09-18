@@ -92,8 +92,11 @@ evidence that an experiment completed or a biological hypothesis is true.
 - Three Kingdoms historical normalized-group pair counts independently
   reproduce for all eight methods. Historical Sonic native conversion matches
   all19853 groups/288562 proteins against its retained input copies. The raw
-  Danio mismatch remains; matched inference21795 is running and assessment21796
-  remains dependency-pending.
+  Danio mismatch remains in that historical run. Matched inference21795 and
+  assessment21796 completed0:0; the[matched-input result](THREE_KINGDOMS_SONIC_MATCHED_RESULT_20260918.md)
+  validates7272TP/48FP/80FN, F1=0.9912758996728462 and2031/2035reference
+  gene coverage. This is a contemporary matched-input result, not a causal
+  test of the historical mismatch or genome-wide orthology accuracy.
 
 - Corrected Proteinortho has independently admitted six-endpoint scores and
   4,695,385 mapped native pairs in the [partial corrected table](qfo_corrected_comparison_20260918_v2/scores.md).
