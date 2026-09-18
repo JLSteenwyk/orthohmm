@@ -1,0 +1,58 @@
+{
+  "exclusions": [
+    "__pycache__",
+    ".git",
+    "*.pyc",
+    "*.pyo"
+  ],
+  "external_symlinks": [
+    "/lib/x86_64-linux-gnu/libpcre2-8.so.0"
+  ],
+  "limitations": [
+    "Explicit tree identity, not a hermetic operating-system or loader snapshot.",
+    "Directory symlinks are recorded but not traversed; external targets require separate review.",
+    "Python bytecode caches are excluded; execution must isolate cache lookup to a fresh prefix and disable writes.",
+    "Before/after equality cannot rule out a temporary change during execution."
+  ],
+  "records": [
+    {
+      "kind": "symlink",
+      "link": "libpcre2-8.so.0.11.2",
+      "mode": 511,
+      "path": "/lib/x86_64-linux-gnu/libpcre2-8.so.0",
+      "resolved": "/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.11.2",
+      "target_bytes": 625344,
+      "target_exists": true,
+      "target_sha256": "e00576d71d81d3ba0cfa4903c835a44a8723aac96f72f79ff75200b4cff9071b"
+    },
+    {
+      "bytes": 174472,
+      "kind": "file",
+      "mode": 420,
+      "path": "/lib/x86_64-linux-gnu/libselinux.so.1",
+      "sha256": "0ec0843463f90e227b0e138e1f379774f50b5514bd7f5dbd4c8a87aca0aa6670"
+    },
+    {
+      "bytes": 76296,
+      "kind": "file",
+      "mode": 493,
+      "path": "/usr/bin/mkdir",
+      "sha256": "27f01f0f33fe6cee575f8f4f570b0695ba6f3eb33359b282c5a1152174f31e76"
+    },
+    {
+      "bytes": 27160,
+      "kind": "file",
+      "mode": 493,
+      "path": "/usr/bin/time",
+      "sha256": "3b11dec50514a8473e9f6efa7a34d584d0657538c09988f61b72d38ad4991a10"
+    }
+  ],
+  "roots": [
+    "/lib/x86_64-linux-gnu/libpcre2-8.so.0",
+    "/lib/x86_64-linux-gnu/libselinux.so.1",
+    "/usr/bin/mkdir",
+    "/usr/bin/time"
+  ],
+  "schema": 1,
+  "scientific_execution_authorized": false
+}

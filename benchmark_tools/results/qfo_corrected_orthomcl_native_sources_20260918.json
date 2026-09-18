@@ -1,0 +1,73 @@
+{
+  "accuracy_admitted": false,
+  "checked_records": [
+    {
+      "bytes": 8981638,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_orthomcl_perl_runtime_20260918.json",
+      "sha256": "9cc29e84777f47064c23096ce36e32d5465616979b05febe510219d58b6b3239"
+    },
+    {
+      "bytes": 1753,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_orthomcl_system_helpers_20260918.json",
+      "sha256": "79ef5d6297914cf43e318858de4de42e58f31d601159a9e27bb8515734efaa2c"
+    },
+    {
+      "bytes": 4242,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_qfo_corrected_orthomcl_native.py",
+      "sha256": "2987864c1fc3b76550bb1f83dafa100d62828267e44bd1c8e6e11a8ff2704ba2"
+    },
+    {
+      "bytes": 1549,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/configure_orthomcl_1_4.py",
+      "sha256": "c67420387bbda1ba0db2b0c818f491f47f78a9e8d5b91c38c5743b4bcc492ffc"
+    },
+    {
+      "bytes": 6141,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/parallelize_orthomcl_pairs.py",
+      "sha256": "8d76993333849385c86fdb7d2f5ed04eb6f149466f0728f2a5e40353464904ee"
+    },
+    {
+      "bytes": 352,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_orthomcl_perl_script.pl",
+      "sha256": "73e78d3d70c7105291b519a689d8f958915ab570bd6fc18b30bd8512a9be66be"
+    }
+  ],
+  "configured_sources": [
+    {
+      "bytes": 25093,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_orthomcl_v1/native_tool/orthomcl.pl",
+      "sha256": "20f31672b87d7a0354f64f37c1513ba137895a131aa0162575aa3ead7e4dbd63"
+    },
+    {
+      "bytes": 30298,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_orthomcl_v1/native_tool/orthomcl_module.pm",
+      "sha256": "bfa2cd72b05faecd3a92800e9a620dc7b93f8001595eb011d213f613bdb0fc70"
+    }
+  ],
+  "data_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_orthomcl_v1/work",
+  "execution_authorized": false,
+  "limitations": [
+    "Configured paths/thread count and existing opt-in pair-parallel patch; no scientific default changes.",
+    "Source preparation is not syntax, native parity or production-output validation.",
+    "Guarded runtime, search admission, conversion/index evidence and scheduler binding remain required.",
+    "No existing pair caches or inference outputs may be reused implicitly."
+  ],
+  "originals": [
+    {
+      "bytes": 22048,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/orthomcl.pl",
+      "sha256": "a47d46066c0f0b6e7f65673ea8eef236f181e05f896cc775b4c89ed217b4dbf4"
+    },
+    {
+      "bytes": 30312,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/orthomcl_module.pm",
+      "sha256": "84be557ff07bdf02aaa6f536a017f950faeb1fe88712dd12dde35ab6d6b6e78d"
+    }
+  ],
+  "pair_parallel_patch": true,
+  "pair_workers_planned": 64,
+  "publication_ready": false,
+  "status": "corrected_orthomcl_native_sources_prepared_unrun",
+  "threads": 180,
+  "tool_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_orthomcl_v1/native_tool"
+}

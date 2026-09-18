@@ -1,5 +1,27 @@
 # Publication Progress
 
+## OrthoMCL Native Inference Fixture (2026-09-18 UTC)
+
+The previous user-facing turn repeated the TreeFam search without recovering
+new source inputs: no progress toward that missing archive. Revalidated
+live scheduler state before continuing: corrected HMM21706_0 RUNNING7:38:00,
+DGX21656_24 RUNNING35:37, corrected BLAST21713 pending resources, and the
+existing dependent admission/scoring chains preserved.
+
+Completed review of prepared OrthoMCL sources and native mode-4 fixture
+results. Untouched serial, patched one-worker and patched two-worker arms
+have identical12-group/41-protein partitions and112 directed weighted edges.
+Raw matrix order differs; full canonical graph and index checks pass.
+All three split the bundled example's11-member group into6+5; this retained
+discrepancy is not specific to the parallel patch and remains unexplained.
+No accuracy claim is made from this fixture.25focused tests pass.
+
+Prepared corrected production sources remain unrun, with unchanged scientific
+defaults and original files preserved. Added the missing native mkdir/system
+helper inventory. See ORTHOMCL_NATIVE_INFERENCE_PROBE_20260918.md for hashes,
+scope, limitations and remaining production admission steps. No raw datasets
+or unrelated worktree changes are included in this milestone.
+
 ## Corrected Sonic Scores Admitted; Citation Supplement (2026-09-18 UTC)
 
 Previous turn progressed by pushing7f53017 (claim refresh and expanded figure
