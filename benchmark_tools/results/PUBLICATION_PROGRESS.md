@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Frozen SwissTrees Factorial Statistics Implemented (2026-09-17)
+
+Previous turn progressed independent fresh-score admission and queued21683/4,
+pushed183a6df. Re-read full objective. Implemented
+`bootstrap_qfo_factorial.py` against the frozen protocol: eight cells,
+18families,100,000shared draws, seed20260922, twelve simple effects and two
+C-by-R interactions, all42 endpoints adjusted together. Raw/2+1 family
+precision/recall and aggregate harmonic F1 are recomputed within each draw.
+No empirical intervals generated; eight-cell admitted count assembly remains
+pending on the running experiments.
+
+Fifteen new tests explicitly repeat sampled families and independently
+reaggregate raw counts to reproduce all42 intervals, verify contrast orientation,
+and reject altered/incomplete inputs.36combined SwissTrees tests pass.
+Details: `QFO_FACTORIAL_STATISTICS_IMPLEMENTATION_20260917.md`.
+Scoring21681, reconciliation21671_0 and DGX21656_7 were freshly confirmed live;
+no observation timeout or job restart. Complete empirical results, uncertainty
+for other endpoints, timing admission and the broader publication goal remain.
+
 ## Fresh Assessment Admission Jobs Queued (2026-09-17)
 
 Committed/pushed9680ccc and created detached executor
