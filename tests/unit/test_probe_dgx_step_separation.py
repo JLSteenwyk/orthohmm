@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 
 import pytest
 
@@ -42,3 +43,24 @@ def test_unscheduled_rejected(tmp_path, monkeypatch):
     with pytest.raises(KeyError):
         module.run(tmp_path / "out")
     assert not (tmp_path / "out").exists()
+
+
+def test_retained_dgx_trials_replay_and_bracket():
+    path = Path(__file__).resolve().parents[2] / "benchmark_tools/results/dgx_step_separation_probe_21800.json"
+    report = json.loads(path.read_text())
+    assert report["job_id"] == 21800
+    assert [t["mode"] for t in report["trials"]] == ["quiet", "burst"]
+    for trial in report["trials"]:
+        before, after = trial["snapshots"]
+        native_before, native_after = trial["native_snapshots"]
+        assert native_before["finished_monotonic_ns"] < before["started_monotonic_ns"]
+        assert after["finished_monotonic_ns"] < native_after["started_monotonic_ns"]
+        assert module.validate_scopes(before, native_before, 21800) == trial["scopes"]
+        assert module.validate_scopes(after, native_after, 21800) == trial["scopes"]
+        assert all(not s["errors"] for s in (before, after, native_before, native_after))
+        assert module.summarize(before, after, 100) == trial["summary"]
+        assert trial["native_exit_code"] == 0
+    burst = report["trials"][1]
+    assert .75 <= burst["burst"]["cpu_seconds"] < 5
+    assert burst["summary"]["accounted_host_busy_cpu_s"] >= .5
+    assert report["controlled_workload_verified"] is False

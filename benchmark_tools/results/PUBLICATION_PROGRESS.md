@@ -1,5 +1,31 @@
 # Publication Progress
 
+## DGX Native-Step And Exited-Burst Probe Completed (2026-09-18 UTC)
+
+Previous turn progressed throughbc5c8e3 with scheduled counter availability.
+Reread the full objective. Initial scheduler check confirms21706_0 RUNNING
+14:19:26 and21791 RUNNING1:51:33;21792/21798 pending. No live work restarted.
+
+Prespecified and pushed5461a20 before submitting job21800: one quiet trial,
+then a0.75 CPU-second child in the batch cgroup outside a separate waiting
+srun native step. Job completed0:0 in3seconds,zero restarts. Host counters
+retained0.80 CPU-seconds during the burst versus0.750070944 measured child
+CPU-seconds; sleeping native step added0.005981 CPU-seconds. This passed the
+frozen0.5-second positive control. Quiet values and all raw snapshots are
+retained, not selected away. Native/observer cgroups differ and raw monotonic
+read intervals verify the intended bracketing.
+
+DGX_STEP_SEPARATION_RESULT_20260918.md records results and limitations.
+The28 pre-execution focused tests passed; an added retained-result regression
+checks actual scopes, raw replay, read errors, brackets and exits. This is
+not a scientific timing run or a general contention/overhead calibration.
+Both success flags for publication and controlled workload remain false.
+Original27 timings are unchanged; no unrelated work was modified.
+
+Next timing work: prospective compute/process-heavy observer validation and
+overhead controls. Corrected QfO execution, other uncertainty, independent
+validation limits and final publication packaging remain incomplete.
+
 ## DGX Slurm-Scoped Counter Availability Verified (2026-09-18 UTC)
 
 Previous turn progressed through4a5ad06 with a read-only SSH-session probe.
