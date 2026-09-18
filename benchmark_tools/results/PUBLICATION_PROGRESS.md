@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Corrected Retained-Stage Audit Implemented (2026-09-18 UTC)
+
+Previous turn progressed by publishing the checksum-gated replay launcher
+(52d30b6). Re-read the full publication objective and revalidated running
+jobs. Implemented `audit_corrected_replay_stages.py` as a component of the
+pending independent corrected replay admission, not an admission shortcut.
+
+The audit requires all four ordered checked calls, matching preserved
+execution reports, exact payload inventories and original/copied content,
+original and adapted command identity, expected parent/child thread
+settings, and unchanged retained partitions. It independently invokes the
+native payload validator on each stage's retained partition and compares
+the fresh result against the in-run validation. It requires the corrected
+984,137-gene universe, reconciles recorded edge counts, and verifies byte
+identity between checked partitions and the multipass/strict-profile
+replay outputs. Checked records are deduplicated with conflict rejection
+and rehashed at completion.
+
+All 89 focused tests pass: 14 new file-backed orchestration cases, actual
+igraph/Leiden boundary tests in the existing payload suite, interceptor,
+replay parent, preparation and batch tests. The new orchestration fixture
+mocks native validation; it is not a full biological replay. No corrected
+output has been admitted or scored by this new component.
+
+Next: connect this stage audit to successful scheduler/parent/source/plan
+and runtime gates, validate all refined output partitions, independently
+recompute native/replay equivalence, then prepare corrected candidate arms.
+Do not transfer native scores on assumed equivalence. The inference
+executor and frozen scientific settings remain unchanged.
+
+Last live check: corrected HMM 21706_0 running 2:49:05, SonicParanoid 21710
+running 2:25:53, original final-cell assessment 21723 running 8:09 and DGX
+21656_16 running 27:39. Dependent admissions remain pending; no restart or
+unrelated job cancellation. Full publication completion remains unproven.
+
 ## Corrected Replay Launch Gate Prepared (2026-09-18 UTC)
 
 Previous turn progressed by submitting final factorial scoring/admission,
