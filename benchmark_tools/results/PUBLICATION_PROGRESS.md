@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Failure-Preserving Overhead Arithmetic Prepared (2026-09-18 UTC)
+
+Previous turn made progress throughee46776 with the authorized paired array
+submission. Reread the full objective and polled only the local controller.
+Array21838_0 is running03:17; tasks1..17 remain pending. HMM21706_0 is
+running18:42:12 and OrthoFinder21706_1 remains pending. No DGX remote calls
+or partial native-output inspection occurred.
+
+Added pure paired-summary arithmetic for the frozen18-task design. Missing,
+failed and invalid arms remain explicit in all nine pair records; affected
+method medians and complete-panel budget results are null rather than
+computed from survivors. Descriptive ratios remain visible when duration
+or equivalent-output gates fail. Whole-command/periodic flags are retained
+separately and cannot be overridden by a passing numerical overhead budget.
+Boundary interval screening remains unavailable, not an empty passing list.
+
+Added a complete-terminal scheduler inventory gate retaining failed states
+instead of filtering for successful jobs. It rejects missing, duplicate,
+nonterminal and malformed task records before any native outcome review.
+The summary kernel does not independently audit source/native provenance;
+raw_evidence_audited and scientific_timings_admitted remain false. Native
+replay, canonical group/pair fingerprints and archive integration are next.
+
+92 focused tests pass, including34 new failure/flag/completeness/arithmetic
+cases. Exact5%median and10%pair boundary tests exposed floating-point
+cancellation in ratio-minus-one; use equivalent(time_difference/boundary)
+arithmetic with the same frozen thresholds and no added tolerance. No actual
+panel results have been read or used to change any protocol gate.
+
 ## Paired Native Overhead Panel Submitted (2026-09-18 UTC)
 
 Previous turn made progress througha2ebb57: both QfO sequence-control scores
