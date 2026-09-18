@@ -8218,3 +8218,26 @@ No native inference or scores were fabricated from the probe. Latest live
 check: staging 21738 pending dependency, corrected HMM 21706_0 RUNNING at
 5:48:16, DGX 21656_21 RUNNING at 30:37. Remaining corrected inference/scoring,
 uncertainty, resource admission and publication packaging are still open.
+
+### Corrected FastOMA Full Inference Queued (2026-09-18)
+
+Previous turn made progress by recording the selected FastOMA runtime identity.
+This turn freezes the full fresh launcher at
+`7aa174c3f6bf244144c1940bfa32db2e3ca80d7b` and queues job 21740 after successful
+staging 21738. It reserves 180 CPUs/720 GiB for seven days, without requeue or
+implicit resume. Exact input/tree, source/configuration, installed-runtime and
+container identity are checked before and after inference. Native exit success
+does not admit outputs or scores. See `QFO_CORRECTED_FASTOMA_LAUNCH_20260918.md`.
+
+All 83 focused tests and Bash syntax validation passed. A real one-task probe
+under the launcher's restricted environment passed independent resource checks
+and retained runtime identity afterward. Both the execution record and resource
+audit are committed. No full biological run or corrected score is claimed from
+this smoke probe. Native FastOMA output admission and scoring remain to build.
+
+DGX task 21656_21 (raw job 21737) completed 0:0 at scheduler elapsed 35:14;
+22/27 tasks have completed, and 21656_22 is RUNNING (2:36 at the latest queue
+check). These are scheduler observations, not admitted performance measurements.
+Corrected HMM 21706_0 remains RUNNING at 5:55:29. FastOMA 21740 is pending its
+dependency. No unrelated jobs were altered. Corrected comparisons, uncertainty,
+timing admission and the final publication package remain unfinished.
