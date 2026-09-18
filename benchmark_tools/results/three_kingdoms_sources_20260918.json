@@ -1,0 +1,617 @@
+{
+  "counts": {
+    "proteins": 443217,
+    "proteomes": 12,
+    "reference_genes": 2035,
+    "reference_groups": 255,
+    "reference_pairs": 7352
+  },
+  "inputs": [
+    {
+      "added_ids": [],
+      "changed_sequence_ids": [],
+      "code": "Amph",
+      "complete_busco_families": 226,
+      "decompressed": {
+        "bytes": 22455028,
+        "sha256": "ef309054ffc2b6a96e9c523569bc84a9286dd48c2caa4b0eb6a0adad6a48b61f"
+      },
+      "files": {
+        "busco_table": {
+          "bytes": 34474,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/busco/Amph/run_eukaryota_odb10/full_table.tsv",
+          "sha256": "8ed140322a6023cd4dc5e5322c7f3f38c3618d629f0e4f40b45c612629714e60"
+        },
+        "compressed": {
+          "bytes": 10330567,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/proteomes/Amph.fa.gz",
+          "sha256": "0d88409bfc83d828b2c6205bd4b8ffc0d193bf46a3fe28a3fe74c27e48f4050d"
+        },
+        "raw": {
+          "bytes": 22455028,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input.raw/Amph.fasta",
+          "sha256": "ef309054ffc2b6a96e9c523569bc84a9286dd48c2caa4b0eb6a0adad6a48b61f"
+        },
+        "staged": {
+          "bytes": 22455028,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Amph.fasta",
+          "sha256": "ef309054ffc2b6a96e9c523569bc84a9286dd48c2caa4b0eb6a0adad6a48b61f"
+        }
+      },
+      "moving_release_url": false,
+      "raw_proteins": 43615,
+      "raw_staged_byte_match": true,
+      "removed_ids": [],
+      "sequence_changes": [],
+      "source_url": "https://ftp.ebi.ac.uk/ensemblgenomes/pub/metazoa/release-47/fasta/amphimedon_queenslandica/pep/Amphimedon_queenslandica.Aqu1.pep.all.fa.gz",
+      "species": "amphimedon_queenslandica",
+      "staged_proteins": 43615
+    },
+    {
+      "added_ids": [],
+      "changed_sequence_ids": [],
+      "code": "Anol",
+      "complete_busco_families": 221,
+      "decompressed": {
+        "bytes": 15376532,
+        "sha256": "3572dfe704fbd7da7e7a59085f06252964d0a5f8426858cbb55353bbc9455e05"
+      },
+      "files": {
+        "busco_table": {
+          "bytes": 34233,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/busco/Anol/run_eukaryota_odb10/full_table.tsv",
+          "sha256": "c1e1aa28e1803e7ed54d629db27472020497ac4580e664f9a9c99f2c7c75239b"
+        },
+        "compressed": {
+          "bytes": 7133586,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/proteomes/Anol.fa.gz",
+          "sha256": "f62e21a11d982e33419a1e7845e00344db278231f622f8808cfbc92405094018"
+        },
+        "raw": {
+          "bytes": 15376532,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input.raw/Anol.fasta",
+          "sha256": "3572dfe704fbd7da7e7a59085f06252964d0a5f8426858cbb55353bbc9455e05"
+        },
+        "staged": {
+          "bytes": 15376532,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Anol.fasta",
+          "sha256": "3572dfe704fbd7da7e7a59085f06252964d0a5f8426858cbb55353bbc9455e05"
+        }
+      },
+      "moving_release_url": false,
+      "raw_proteins": 19176,
+      "raw_staged_byte_match": true,
+      "removed_ids": [],
+      "sequence_changes": [],
+      "source_url": "https://ftp.ensembl.org/pub/release-100/fasta/anolis_carolinensis/pep/Anolis_carolinensis.AnoCar2.0.pep.all.fa.gz",
+      "species": "anolis_carolinensis",
+      "staged_proteins": 19176
+    },
+    {
+      "added_ids": [],
+      "changed_sequence_ids": [],
+      "code": "Arab",
+      "complete_busco_families": 108,
+      "decompressed": {
+        "bytes": 33366601,
+        "sha256": "d7c319fa8c6d3b5569ae43cfe0cad2a1331b5c0db9b97b49ceadcf9fef62b3b4"
+      },
+      "files": {
+        "busco_table": {
+          "bytes": 69276,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/busco/Arab/run_eukaryota_odb10/full_table.tsv",
+          "sha256": "6f3d2b71c971c46da75b6b20493b3e31c29c7adfafb12b220433fa8775e50578"
+        },
+        "compressed": {
+          "bytes": 9690822,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/proteomes/Arab.fa.gz",
+          "sha256": "52564c300e42f77fedb4b2a37fca3ca64f969e4448265c661b91303426d8a5ac"
+        },
+        "raw": {
+          "bytes": 33366601,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input.raw/Arab.fasta",
+          "sha256": "d7c319fa8c6d3b5569ae43cfe0cad2a1331b5c0db9b97b49ceadcf9fef62b3b4"
+        },
+        "staged": {
+          "bytes": 33366601,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Arab.fasta",
+          "sha256": "d7c319fa8c6d3b5569ae43cfe0cad2a1331b5c0db9b97b49ceadcf9fef62b3b4"
+        }
+      },
+      "moving_release_url": false,
+      "raw_proteins": 48321,
+      "raw_staged_byte_match": true,
+      "removed_ids": [],
+      "sequence_changes": [],
+      "source_url": "https://ftp.ebi.ac.uk/ensemblgenomes/pub/plants/release-47/fasta/arabidopsis_thaliana/pep/Arabidopsis_thaliana.TAIR10.pep.all.fa.gz",
+      "species": "arabidopsis_thaliana",
+      "staged_proteins": 48321
+    },
+    {
+      "added_ids": [],
+      "changed_sequence_ids": [],
+      "code": "Asfu",
+      "complete_busco_families": 244,
+      "decompressed": {
+        "bytes": 6750862,
+        "sha256": "64472bec6c765b88656f884ef6edfc5180a14859c1a0e2170ea441e16ee049a5"
+      },
+      "files": {
+        "busco_table": {
+          "bytes": 30653,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/busco/Asfu/run_eukaryota_odb10/full_table.tsv",
+          "sha256": "9ccd68c5f29c92a783414d93e3145106b09e2dc607041c8b9a0b4c95d6b03fab"
+        },
+        "compressed": {
+          "bytes": 3344967,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/proteomes/Asfu.fa.gz",
+          "sha256": "456ca7bbee4355e1cc73f6b48762b59e28d9674cb9b68c1d55421b2c5ed2b63f"
+        },
+        "raw": {
+          "bytes": 6750862,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input.raw/Asfu.fasta",
+          "sha256": "64472bec6c765b88656f884ef6edfc5180a14859c1a0e2170ea441e16ee049a5"
+        },
+        "staged": {
+          "bytes": 6750862,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Asfu.fasta",
+          "sha256": "64472bec6c765b88656f884ef6edfc5180a14859c1a0e2170ea441e16ee049a5"
+        }
+      },
+      "moving_release_url": false,
+      "raw_proteins": 9623,
+      "raw_staged_byte_match": true,
+      "removed_ids": [],
+      "sequence_changes": [],
+      "source_url": "https://ftp.ebi.ac.uk/ensemblgenomes/pub/fungi/release-47/fasta/aspergillus_fumigatus/pep/Aspergillus_fumigatus.ASM265v1.pep.all.fa.gz",
+      "species": "aspergillus_fumigatus",
+      "staged_proteins": 9623
+    },
+    {
+      "added_ids": [],
+      "changed_sequence_ids": [
+        "ENSDARP00000131275.1",
+        "ENSDARP00000133086.1",
+        "ENSDARP00000133409.1",
+        "ENSDARP00000134140.2",
+        "ENSDARP00000136350.1",
+        "ENSDARP00000138273.1",
+        "ENSDARP00000141840.1"
+      ],
+      "code": "Dani",
+      "complete_busco_families": 153,
+      "decompressed": {
+        "bytes": 42222278,
+        "sha256": "3f43bb141494a64a31bfe8d236fbf6ae54f7112aec4cab83e170a6344c897f7c"
+      },
+      "files": {
+        "busco_table": {
+          "bytes": 53652,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/busco/Dani/run_eukaryota_odb10/full_table.tsv",
+          "sha256": "761d1eb6e7063db4174657bd9f2f14733387d1b653e760aa1601d2ed23266b6a"
+        },
+        "compressed": {
+          "bytes": 13797309,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/proteomes/Dani.fa.gz",
+          "sha256": "612df605b4200e30fd43f4deece3417470d3691bd3181bc720051ef5015ac982"
+        },
+        "raw": {
+          "bytes": 42222278,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input.raw/Dani.fasta",
+          "sha256": "3f43bb141494a64a31bfe8d236fbf6ae54f7112aec4cab83e170a6344c897f7c"
+        },
+        "staged": {
+          "bytes": 42222249,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Dani.fasta",
+          "sha256": "c0a902d57898468f0df1a77a0773f935ef80d53abc4c3831381736f8d13d4e73"
+        }
+      },
+      "moving_release_url": false,
+      "raw_proteins": 52089,
+      "raw_staged_byte_match": false,
+      "removed_ids": [],
+      "sequence_changes": [
+        {
+          "exactly_explained_by_removing_stop_markers": true,
+          "gene": "ENSDARP00000131275.1",
+          "in_scored_reference": false,
+          "raw_length": 888,
+          "raw_stop_markers": 8,
+          "staged_length": 880,
+          "staged_stop_markers": 0
+        },
+        {
+          "exactly_explained_by_removing_stop_markers": true,
+          "gene": "ENSDARP00000133086.1",
+          "in_scored_reference": false,
+          "raw_length": 361,
+          "raw_stop_markers": 1,
+          "staged_length": 360,
+          "staged_stop_markers": 0
+        },
+        {
+          "exactly_explained_by_removing_stop_markers": true,
+          "gene": "ENSDARP00000133409.1",
+          "in_scored_reference": false,
+          "raw_length": 813,
+          "raw_stop_markers": 8,
+          "staged_length": 805,
+          "staged_stop_markers": 0
+        },
+        {
+          "exactly_explained_by_removing_stop_markers": true,
+          "gene": "ENSDARP00000134140.2",
+          "in_scored_reference": false,
+          "raw_length": 888,
+          "raw_stop_markers": 1,
+          "staged_length": 887,
+          "staged_stop_markers": 0
+        },
+        {
+          "exactly_explained_by_removing_stop_markers": true,
+          "gene": "ENSDARP00000136350.1",
+          "in_scored_reference": false,
+          "raw_length": 456,
+          "raw_stop_markers": 1,
+          "staged_length": 455,
+          "staged_stop_markers": 0
+        },
+        {
+          "exactly_explained_by_removing_stop_markers": true,
+          "gene": "ENSDARP00000138273.1",
+          "in_scored_reference": false,
+          "raw_length": 330,
+          "raw_stop_markers": 1,
+          "staged_length": 329,
+          "staged_stop_markers": 0
+        },
+        {
+          "exactly_explained_by_removing_stop_markers": true,
+          "gene": "ENSDARP00000141840.1",
+          "in_scored_reference": false,
+          "raw_length": 242,
+          "raw_stop_markers": 9,
+          "staged_length": 233,
+          "staged_stop_markers": 0
+        }
+      ],
+      "source_url": "https://ftp.ensembl.org/pub/release-100/fasta/danio_rerio/pep/Danio_rerio.GRCz11.pep.all.fa.gz",
+      "species": "danio_rerio",
+      "staged_proteins": 52089
+    },
+    {
+      "added_ids": [],
+      "changed_sequence_ids": [],
+      "code": "Oryz",
+      "complete_busco_families": 162,
+      "decompressed": {
+        "bytes": 21984251,
+        "sha256": "613aa313a07ff90ed70fb599f1b3d71cbfe24d0970111431466297c01da970d4"
+      },
+      "files": {
+        "busco_table": {
+          "bytes": 42293,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/busco/Oryz/run_eukaryota_odb10/full_table.tsv",
+          "sha256": "aee260f7b643a5579c51c5ca43d29b0164e5abf70f6971da5bb440e75a8fdc1b"
+        },
+        "compressed": {
+          "bytes": 9044140,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/proteomes/Oryz.fa.gz",
+          "sha256": "6b2d480c10ceefe3a2fa3fb6305eef40c4283d8c5ab1ea17805dc62d8c2cca1e"
+        },
+        "raw": {
+          "bytes": 21984251,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input.raw/Oryz.fasta",
+          "sha256": "613aa313a07ff90ed70fb599f1b3d71cbfe24d0970111431466297c01da970d4"
+        },
+        "staged": {
+          "bytes": 21984251,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Oryz.fasta",
+          "sha256": "613aa313a07ff90ed70fb599f1b3d71cbfe24d0970111431466297c01da970d4"
+        }
+      },
+      "moving_release_url": false,
+      "raw_proteins": 42582,
+      "raw_staged_byte_match": true,
+      "removed_ids": [],
+      "sequence_changes": [],
+      "source_url": "https://ftp.ebi.ac.uk/ensemblgenomes/pub/plants/release-58/fasta/oryza_sativa/pep/Oryza_sativa.IRGSP-1.0.pep.all.fa.gz",
+      "species": "oryza_sativa",
+      "staged_proteins": 42582
+    },
+    {
+      "added_ids": [],
+      "changed_sequence_ids": [],
+      "code": "Scer",
+      "complete_busco_families": 237,
+      "decompressed": {
+        "bytes": 5875882,
+        "sha256": "b4d38c9f505484f0dd7218e769b97f79ad1c3bf94619b989d4bc05b5fae22e42"
+      },
+      "files": {
+        "busco_table": {
+          "bytes": 29452,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/busco/Scer/run_eukaryota_odb10/full_table.tsv",
+          "sha256": "c271b5023e88fb23825c09e7f76c31be3451f61edd33924da81a637d8a32a428"
+        },
+        "compressed": {
+          "bytes": 2700266,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/proteomes/Scer.fa.gz",
+          "sha256": "b6e1638303b3a2a107d499617950be1ae40a9cbabe893ac2e3c60d842459e2cd"
+        },
+        "raw": {
+          "bytes": 5875882,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input.raw/Scer.fasta",
+          "sha256": "b4d38c9f505484f0dd7218e769b97f79ad1c3bf94619b989d4bc05b5fae22e42"
+        },
+        "staged": {
+          "bytes": 5875882,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Scer.fasta",
+          "sha256": "b4d38c9f505484f0dd7218e769b97f79ad1c3bf94619b989d4bc05b5fae22e42"
+        }
+      },
+      "moving_release_url": false,
+      "raw_proteins": 6600,
+      "raw_staged_byte_match": true,
+      "removed_ids": [],
+      "sequence_changes": [],
+      "source_url": "https://ftp.ebi.ac.uk/ensemblgenomes/pub/fungi/release-47/fasta/saccharomyces_cerevisiae/pep/Saccharomyces_cerevisiae.R64-1-1.pep.all.fa.gz",
+      "species": "saccharomyces_cerevisiae",
+      "staged_proteins": 6600
+    },
+    {
+      "added_ids": [],
+      "changed_sequence_ids": [],
+      "code": "Scom",
+      "complete_busco_families": 240,
+      "decompressed": {
+        "bytes": 8582364,
+        "sha256": "f078d61dc29427086de601369fe6ed541fa5d937c7a58c717fbdd28a2a397f8a"
+      },
+      "files": {
+        "busco_table": {
+          "bytes": 30610,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/busco/Scom/run_eukaryota_odb10/full_table.tsv",
+          "sha256": "8e641eec1fbd39ade80106432d33bcfc45023baa675b8dbf2363f531c060fc8f"
+        },
+        "compressed": {
+          "bytes": 3925111,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/proteomes/Scom.fa.gz",
+          "sha256": "cfe1360fb2e451bcfdbd5aca6e515294bf50e689b13b4fd5bb78f6a875733048"
+        },
+        "raw": {
+          "bytes": 8582364,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input.raw/Scom.fasta",
+          "sha256": "f078d61dc29427086de601369fe6ed541fa5d937c7a58c717fbdd28a2a397f8a"
+        },
+        "staged": {
+          "bytes": 8582364,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Scom.fasta",
+          "sha256": "f078d61dc29427086de601369fe6ed541fa5d937c7a58c717fbdd28a2a397f8a"
+        }
+      },
+      "moving_release_url": false,
+      "raw_proteins": 13194,
+      "raw_staged_byte_match": true,
+      "removed_ids": [],
+      "sequence_changes": [],
+      "source_url": "https://ftp.ebi.ac.uk/ensemblgenomes/pub/fungi/release-47/fasta/fungi_basidiomycota1_collection/schizophyllum_commune_h4_8_gca_000143185/pep/Schizophyllum_commune_h4_8_gca_000143185.v1.0.pep.all.fa.gz",
+      "species": "schizophyllum_commune",
+      "staged_proteins": 13194
+    },
+    {
+      "added_ids": [],
+      "changed_sequence_ids": [],
+      "code": "Sela",
+      "complete_busco_families": 27,
+      "decompressed": {
+        "bytes": 20561355,
+        "sha256": "63d77c81ef9e1e437a7ed210f274d325dfb87983faf74fc0bec2dd37347a173e"
+      },
+      "files": {
+        "busco_table": {
+          "bytes": 61738,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/busco/Sela/run_eukaryota_odb10/full_table.tsv",
+          "sha256": "156a2f551ae301cd909b49deba08f7610beb3160d534e54c1b78d02e208b0e0a"
+        },
+        "compressed": {
+          "bytes": 9396734,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/proteomes/Sela.fa.gz",
+          "sha256": "ef5c6ea89c879580b1e3a1e0fa4b74f968e37ec22fe1a71530885237128d7f3b"
+        },
+        "raw": {
+          "bytes": 20561355,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input.raw/Sela.fasta",
+          "sha256": "63d77c81ef9e1e437a7ed210f274d325dfb87983faf74fc0bec2dd37347a173e"
+        },
+        "staged": {
+          "bytes": 20561355,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Sela.fasta",
+          "sha256": "63d77c81ef9e1e437a7ed210f274d325dfb87983faf74fc0bec2dd37347a173e"
+        }
+      },
+      "moving_release_url": false,
+      "raw_proteins": 34825,
+      "raw_staged_byte_match": true,
+      "removed_ids": [],
+      "sequence_changes": [],
+      "source_url": "https://ftp.ebi.ac.uk/ensemblgenomes/pub/plants/release-47/fasta/selaginella_moellendorffii/pep/Selaginella_moellendorffii.v1.0.pep.all.fa.gz",
+      "species": "selaginella_moellendorffii",
+      "staged_proteins": 34825
+    },
+    {
+      "added_ids": [],
+      "changed_sequence_ids": [],
+      "code": "Spom",
+      "complete_busco_families": 243,
+      "decompressed": {
+        "bytes": 3805824,
+        "sha256": "643f960eb5531a2a642dc0c39d9db04e85fe7f0e6940fb5c880bc1369f7e7dc5"
+      },
+      "files": {
+        "busco_table": {
+          "bytes": 33033,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/busco/Spom/run_eukaryota_odb10/full_table.tsv",
+          "sha256": "a61b8987f7d67cf0e5e14438192e8e3f8f3152f90505ddc273803589f5bc1b3f"
+        },
+        "compressed": {
+          "bytes": 1782720,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/proteomes/Spom.fa.gz",
+          "sha256": "2ad62f05eb24a941ff3aea24e4493a5a0db370cd7d2a560f2c6a056e1289f31f"
+        },
+        "raw": {
+          "bytes": 3805824,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input.raw/Spom.fasta",
+          "sha256": "643f960eb5531a2a642dc0c39d9db04e85fe7f0e6940fb5c880bc1369f7e7dc5"
+        },
+        "staged": {
+          "bytes": 3805824,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Spom.fasta",
+          "sha256": "643f960eb5531a2a642dc0c39d9db04e85fe7f0e6940fb5c880bc1369f7e7dc5"
+        }
+      },
+      "moving_release_url": false,
+      "raw_proteins": 5146,
+      "raw_staged_byte_match": true,
+      "removed_ids": [],
+      "sequence_changes": [],
+      "source_url": "https://ftp.ebi.ac.uk/ensemblgenomes/pub/fungi/release-47/fasta/schizosaccharomyces_pombe/pep/Schizosaccharomyces_pombe.ASM294v2.pep.all.fa.gz",
+      "species": "schizosaccharomyces_pombe",
+      "staged_proteins": 5146
+    },
+    {
+      "added_ids": [],
+      "changed_sequence_ids": [],
+      "code": "Xeno",
+      "complete_busco_families": 109,
+      "decompressed": {
+        "bytes": 25382533,
+        "sha256": "8eb459d5da98a95f6e228b8bda9d7136456b511abbf33356acd5bb69d063e398"
+      },
+      "files": {
+        "busco_table": {
+          "bytes": 61348,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/busco/Xeno/run_eukaryota_odb10/full_table.tsv",
+          "sha256": "9bc7ca16e698ea6437d41c8c4c2b34a8569f7afd4937294839911da40dd44667"
+        },
+        "compressed": {
+          "bytes": 14143121,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/proteomes/Xeno.fa.gz",
+          "sha256": "152dca85b613a162a4266efd7e3f2d7cade6b71abdee56dc3ebd6a08eca9b561"
+        },
+        "raw": {
+          "bytes": 25382533,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input.raw/Xeno.fasta",
+          "sha256": "8eb459d5da98a95f6e228b8bda9d7136456b511abbf33356acd5bb69d063e398"
+        },
+        "staged": {
+          "bytes": 25382533,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Xeno.fasta",
+          "sha256": "8eb459d5da98a95f6e228b8bda9d7136456b511abbf33356acd5bb69d063e398"
+        }
+      },
+      "moving_release_url": true,
+      "raw_proteins": 36461,
+      "raw_staged_byte_match": true,
+      "removed_ids": [],
+      "sequence_changes": [],
+      "source_url": "https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/reference_proteomes/Eukaryota/UP000186698/UP000186698_8355.fasta.gz",
+      "species": "xenopus_laevis",
+      "staged_proteins": 36461
+    },
+    {
+      "added_ids": [],
+      "changed_sequence_ids": [],
+      "code": "Zeam",
+      "complete_busco_families": 65,
+      "decompressed": {
+        "bytes": 95382422,
+        "sha256": "1b0b9e82cfaee672f9ceaa6156f3a1ab3812b3f2dbac9af9dce4c0232222700c"
+      },
+      "files": {
+        "busco_table": {
+          "bytes": 143085,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/busco/Zeam/run_eukaryota_odb10/full_table.tsv",
+          "sha256": "5663f68ab99f72ce963e81a9433958eaa099f9251a02302f6c51d6bcc1b851a5"
+        },
+        "compressed": {
+          "bytes": 16374514,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/proteomes/Zeam.fa.gz",
+          "sha256": "7405de311143bcb6d717422a126a31b00ce78457c8a63950ea00fd6d023342cd"
+        },
+        "raw": {
+          "bytes": 95382422,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input.raw/Zeam.fasta",
+          "sha256": "1b0b9e82cfaee672f9ceaa6156f3a1ab3812b3f2dbac9af9dce4c0232222700c"
+        },
+        "staged": {
+          "bytes": 95382422,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Zeam.fasta",
+          "sha256": "1b0b9e82cfaee672f9ceaa6156f3a1ab3812b3f2dbac9af9dce4c0232222700c"
+        }
+      },
+      "moving_release_url": false,
+      "raw_proteins": 131585,
+      "raw_staged_byte_match": true,
+      "removed_ids": [],
+      "sequence_changes": [],
+      "source_url": "https://ftp.ebi.ac.uk/ensemblgenomes/pub/plants/release-47/fasta/zea_mays/pep/Zea_mays.B73_RefGen_v4.pep.all.fa.gz",
+      "species": "zea_mays",
+      "staged_proteins": 131585
+    }
+  ],
+  "limitations": [
+    "URLs are retained download intent, not independently authenticated upstream archive identity.",
+    "No upstream archive was downloaded again, and a moving current_release URL is not reproducible by itself.",
+    "Sequence comparisons preserve case and content; header/line-wrap differences are separate from byte identity.",
+    "Does not prove original BUSCO execution environment/input provenance or validate every BUSCO classification.",
+    "Does not grant redistribution rights; provider, lineage and release-specific terms require separate review.",
+    "Reference evaluates conserved single-copy complete hits, not proteome-wide false positives."
+  ],
+  "lineage": {
+    "creation_date": "2024-01-08",
+    "domain": "eukaryota",
+    "max_intron": "130000",
+    "max_seq_len": "160000",
+    "name": "eukaryota_odb10",
+    "number_of_buscos": "255",
+    "number_of_species": "70",
+    "orthodb_version": "10.1",
+    "species": "fly"
+  },
+  "publication_ready": false,
+  "reference_reconstruction_byte_match": true,
+  "source": {
+    "bytes": 9391,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_three_kingdoms_sources.py",
+    "sha256": "c9e7535489c27aa9a0b5def72ccddd9c4e3e2017761a187aa167ab96b8a995cd"
+  },
+  "status": "retained_three_kingdoms_lineage_and_reference_verified",
+  "supporting_files": [
+    {
+      "bytes": 3246,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/download_proteomes.sh",
+      "sha256": "e27bc332a3709547f9298bbd908c6b376921a40723305d210bd40932b1475b25"
+    },
+    {
+      "bytes": 30699,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/busco/reference_orthogroups.txt",
+      "sha256": "a5f3447056ecfa305442caff0d898d524eed350f13587d3247d3e1ba4c19757d"
+    },
+    {
+      "bytes": 175,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/busco_downloads/lineages/eukaryota_odb10/dataset.cfg",
+      "sha256": "c59a2e1ddcf96e47a98cdf041d5389b2665205fc85ac7470563c9ed3b23b2a67"
+    },
+    {
+      "bytes": 1760,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/run_busco.sh",
+      "sha256": "9ae38fc43147112094a2169e7e167c71bc2c58443919e5944f3138066e61d3f7"
+    },
+    {
+      "bytes": 2816,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/build_busco_reference_ogs.py",
+      "sha256": "91ce8303ea2e347fbc88ecc358153e93fa1da37135ccd7eca40f5abe78400b66"
+    }
+  ]
+}

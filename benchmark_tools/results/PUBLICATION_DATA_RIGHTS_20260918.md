@@ -55,11 +55,19 @@ numerical result to be an adaptation, or prohibit reporting benchmark scores.
 ## Retained Evidence
 
 `publication_data_rights_20260918.json` records seven material categories,
-nine source URLs, snapshot sizes/SHA-256 values, observed scope, archive
-actions and unresolved questions. Snapshots total 833,426 bytes and remain
+ten source URLs, snapshot sizes/SHA-256 values, observed scope, archive
+actions and unresolved questions. Snapshots total 849,936 bytes and remain
 local under `benchmarks/work/publication_rights_evidence_20260918/`; no full
 webpage or upstream program is newly committed. The register separates
 provider declarations from project packaging decisions and unknowns.
+
+A [retained Three Kingdoms source audit](THREE_KINGDOMS_SOURCE_AUDIT_20260918.md)
+now identifies every local compressed/raw/staged file, the exact BUSCO lineage,
+and the reference reconstruction. It adds the official September2025 Ensembl
+policy snapshot. Historical provider checksums and release-specific rights
+remain separate from this local identity validation; the moving UniProt URL
+is explicitly flagged. The failed live Ensembl policy retrieval is not counted
+as valid policy evidence.
 
 The local figure-evidence archive has not been deposited publicly. Its
 existence is not evidence that every embedded reference-derived field is

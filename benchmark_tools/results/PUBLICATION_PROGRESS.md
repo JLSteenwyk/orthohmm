@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Three Kingdoms Retained Inputs And Reference (2026-09-18 UTC)
+
+Previous turn progressed throughbed4fd3 with data-rights review. Live scheduler
+confirmed21706_0 RUNNING11:51:25 and21789 RUNNING1:39:47; DIAMOND execution
+log62/78targets complete with target62 active. No job was changed.
+
+Added audit_three_kingdoms_sources.py and15 passing unit tests (0.14s).
+Actual audit completed with pre/post file hashes. All12 compressed downloads
+decompress byte-for-byte to retained raw FASTAs; no input IDs added/removed or
+cross-species collisions.11staged FASTAs byte-identical. Seven Danio sequences
+differ exactly by removing29stop markers; all seven lie outside the scored
+reference. No untested claim of zero indirect effect or uniform historical
+per-method input consumption follows.
+
+All12BUSCO tables identify5.8.2 and eukaryota_odb10 dated2024-01-08,70genomes,
+255BUSCOs; retained configuration identifies OrthoDB10.1. Independently
+reconstructed255groups/2035genes/7352pairs exactly match scored reference
+SHAa5f3447056ecfa305442caff0d898d524eed350f13587d3247d3e1ba4c19757d.
+Retained input universe443217proteins. Reportthree_kingdoms_sources_20260918.json
+binds files, source-intent URLs, lineage, changes and reference reconstruction.
+
+Download-intent script specifies11Ensembl-family sources and one UniProt
+current_release URL (Xenopus); no unverified historical UniProt date assigned.
+Live Ensembl disclaimer returned service-unavailable HTML, not licensing
+evidence. Official September2025 archived policy retrieved and hashed: notes
+unrestricted project-generated data plus third-party constraints. Extended
+rights register to10verified sources849936bytes and linked source-audit
+documentation/manuscript. File-specific historical rights remain unresolved.
+No input replacement, inference rerun, score change or external deposition.
+Full publication goal remains active.
+
 ## Primary-Source Data Rights Register (2026-09-18 UTC)
 
 Previous turn progressed through38720cb with frozen graph array diagnostics.

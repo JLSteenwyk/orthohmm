@@ -4,8 +4,15 @@
   "status": "partial_primary_source_rights_review",
   "publication_ready": false,
   "blanket_redistribution_clearance": false,
+  "provenance_followup": "three_kingdoms_sources_20260918.json",
   "evidence_root": "benchmarks/work/publication_rights_evidence_20260918",
   "sources": {
+    "ensembl_archived_policy": {
+      "url": "https://sep2025.archive.ensembl.org/info/about/legal/disclaimer.html",
+      "file": "ensembl_sep2025_disclaimer.html",
+      "bytes": 16510,
+      "sha256": "0e3ddd24bfb03692ca2411645e4b4027d70ec7c7a8c951ed8bcbdaed88228890"
+    },
     "qfo_deposit": {
       "url": "https://zenodo.org/api/records/15087752",
       "file": "qfo_zenodo.json",
@@ -118,18 +125,18 @@
       "declared_license": "CC-BY-ND-4.0",
       "sources": ["busco_policy"],
       "license_scope": "Current BUSCO site distinguishes dataset CC BY-ND 4.0 from software MIT.",
-      "review_status": "current_policy_identified_exact_lineage_review_pending",
+      "review_status": "current_policy_and_retained_lineage_identified_release_notice_review_pending",
       "archive_action": "Prefer upstream acquisition plus exact checksums; preserve attribution. Review modified or extracted reference-material redistribution before adding it to a public archive.",
-      "unresolved": ["Bind terms to the exact retained lineage release and corresponding citation.", "This register does not classify every numerical analysis output as adapted licensed material."]
+      "unresolved": ["Retained lineage verified as eukaryota_odb10 dated 2024-01-08, OrthoDB 10.1, BUSCO 5.8.2; release-specific notice review still pending.", "This register does not classify every numerical analysis output as adapted licensed material."]
     },
     {
       "id": "three_kingdoms_input_proteomes",
       "declared_license": null,
-      "sources": [],
+      "sources": ["ensembl_archived_policy", "uniprot_policy"],
       "license_scope": "BUSCO dataset terms do not establish rights for input proteomes.",
-      "review_status": "file_level_source_and_terms_review_pending",
+      "review_status": "retained_file_identity_traced_release_terms_review_pending",
       "archive_action": "Trace every retained proteome to its release-specific provider and notices before raw-file redistribution.",
-      "unresolved": ["This partial review has not cleared the Three Kingdoms input proteomes."]
+      "unresolved": ["Retained-source audit traces 11 Ensembl-family proteomes and one UniProt proteome; source URLs are download intent, not independent upstream checksum verification.", "UniProt URL uses current_release; no historical release date is inferred.", "September 2025 Ensembl policy permits project-generated data use but flags third-party constraints; historical file-level notice review remains pending.", "This partial review has not cleared the Three Kingdoms input proteomes."]
     }
   ],
   "limitations": [

@@ -136,6 +136,17 @@ BUSCO's conserved-gene completeness framework
 from this project's BUSCO-reference pair statistic.
 [Machine-readable comparison](publication_comparison_orthomcl_complete_20260916.json).
 
+The [retained Three Kingdoms source audit](THREE_KINGDOMS_SOURCE_AUDIT_20260918.md)
+identifies BUSCO5.8.2 and eukaryota_odb10 dated2024-01-08 (OrthoDB10.1).
+Its 12 saved full tables reconstruct the scored reference byte-for-byte:
+255groups,2,035genes and7,352pairs. Compressed downloads reproduce retained
+raw FASTAs; eleven staged proteomes are byte-identical, while seven zebrafish
+sequences differ only by removal of29 stop markers. None of those seven
+belongs to the scored reference; indirect effects and historical per-tool
+input identity are not established by that observation. The Xenopus download
+URL uses a moving UniProt current_release path, so retained hashes are needed
+and the URL alone is not a reproducible release identifier.
+
 For the separately recovered four-stage QfO replay, SwissTrees raw counts
 were reconstructed using the frozen native scorer and reference. Each
 one-direction reference relation contributes half a count before a prior
