@@ -692,3 +692,13 @@ class TestGenerateOrthogroupFiles:
         # Copy-number and single-copy-name files written
         assert (tmp_path / "orthohmm_gene_count.txt").exists()
         assert (tmp_path / "orthohmm_single_copy_orthogroups.txt").exists()
+        assert (tmp_path / "orthohmm_single_copy_orthogroups.txt").read_text() == "OG0\n"
+
+    def test_multicopy_group_is_not_listed_as_single_copy(self, tmp_path):
+        gl = np.array([("a.fa", "a1", 3), ("a.fa", "a2", 3)],
+                      dtype=[("spp", object), ("name", object), ("length", int)])
+        generate_orthogroup_files(str(tmp_path), gl,
+            {"files:": ["a.fa"], "OG0:": ["2"]},
+            {"OG0": [">a1", "AAA", ">a2", "BBB"]}, [])
+        assert (tmp_path / "orthohmm_single_copy_orthogroups.txt").read_text() == ""
+        assert list((tmp_path / "orthohmm_single_copy_orthogroups").iterdir()) == []

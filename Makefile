@@ -21,23 +21,20 @@ develop:
 test: test.unit test.integration
 
 test.unit:
-	python3 -m pytest -m "not integration"
+	python3 -m pytest tests/unit
 
 test.integration:
-	rm -rf ./tests/samples/orthohmm_*
-	python3 -m pytest --basetemp=output -m "integration"
+	python3 -m pytest tests/integration
 
 test.fast:
-	python3 -m pytest -m "not (integration or slow)"
-	rm -rf ./tests/samples/orthohmm_*
-	python3 -m pytest --basetemp=output -m "integration and not slow"
+	python3 -m pytest tests/unit -m "not slow"
+	python3 -m pytest tests/integration -m "not slow"
 
 # used by GitHub actions during CI workflow
 test.coverage: coverage.unit coverage.integration
 
 coverage.unit:
-	python3 -m pytest --cov=./ -m "not integration" --cov-report=xml:unit.coverage.xml
+	python3 -m pytest tests/unit --cov=./ --cov-report=xml:unit.coverage.xml
 
 coverage.integration:
-	rm -rf ./tests/samples/orthohmm_*
-	python3 -m pytest --basetemp=output --cov=./ -m "integration" --cov-report=xml:integration.coverage.xml
+	python3 -m pytest tests/integration --cov=./ --cov-report=xml:integration.coverage.xml

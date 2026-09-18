@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Single-Copy Output Bug Fixed; Native Regression Passes (2026-09-18 UTC)
+
+Previous turn progressed through4e8f072, retaining completed top100execution
+and disclosing integration failures. Reread the full objective and verified
+21827validation,21825scoring and21706_0HMM running;21826waits for scoring.
+Investigated the regression instead of overwriting expected fixtures.
+
+Found a real output bug: the single-copy ID file listed all groups while its
+FASTA directory used only selected groups. Fixed the writer/caller to use
+the same selected IDs. Biological selection and inference are unchanged;
+frozen benchmark worktrees are untouched. Reworked integration tests to use
+temporary input/output directories and validate complete memberships,
+per-species counts, full sequences, exact file sets, occupancy and headers
+in both forward/reversed input creation orders. Added corruption tests.
+
+Full unit suite5272passed/9skipped in91.91seconds; all4complete-output native
+integration cases pass in70.41seconds.60focused tests also pass. Added
+test-discovery configuration and removed destructive sample cleanup from
+Makefile test targets. SeeINTEGRATION_OUTPUT_FIX_20260918.md and retained
+JUnit evidence. Old failure evidence and historical fixtures remain intact.
+
+Next: finish corrected QfO validation/scoring and uncertainty, and continue
+DGX accounting/overhead validation. These regression fixes do not complete
+the publication goal or alter existing scientific scores.
+
 ## Top100 Complete; Regression Limit Identified (2026-09-18 UTC)
 
 Previous turn progressed through970b496 with a regenerated comparison and

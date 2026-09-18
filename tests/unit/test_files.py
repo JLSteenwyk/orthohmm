@@ -68,14 +68,17 @@ class TestWriteCopyNumberFile:
 
 
 class TestWriteSingleCopyNames:
-    def test_writes_ids_without_trailing_colon(self, tmp_path):
-        # Input keys come in like "OG3:" (with trailing colon); writer strips it.
+    def test_writes_only_selected_ids(self, tmp_path):
         write_file_of_single_copy_ortholog_names(
             str(tmp_path),
-            {"files:": [], "OG3:": [], "OG7:": []},
+            ["OG3", "OG7"],
         )
         content = (tmp_path / "orthohmm_single_copy_orthogroups.txt").read_text()
         assert content == "OG3\nOG7\n"
+
+    def test_empty_selection_is_empty_file(self, tmp_path):
+        write_file_of_single_copy_ortholog_names(str(tmp_path), [])
+        assert (tmp_path / "orthohmm_single_copy_orthogroups.txt").read_text() == ""
 
 
 class TestWriteFastaFilesForAllOgs:

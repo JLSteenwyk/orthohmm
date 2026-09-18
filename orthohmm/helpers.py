@@ -976,7 +976,7 @@ def generate_orthogroup_files(
 ) -> None:
     extensions = (".fa", ".faa", ".fas", ".fasta", ".pep", ".prot")
     write_copy_number_file(output_directory, og_cn)
-    write_file_of_single_copy_ortholog_names(output_directory, og_cn)
+    write_file_of_single_copy_ortholog_names(output_directory, single_copy_ogs)
     write_fasta_files_for_all_ogs(output_directory, ogs_dat)
     write_fasta_files_for_single_copy_orthologs(
         output_directory, ogs_dat, gene_lengths, single_copy_ogs, extensions

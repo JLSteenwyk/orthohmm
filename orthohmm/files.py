@@ -43,14 +43,13 @@ def write_copy_number_file(
 
 def write_file_of_single_copy_ortholog_names(
     output_directory: str,
-    og_cn: Dict[str, List[str]]
+    single_copy_ogs: List[str],
 ) -> None:
     with open(
         f"{output_directory}/orthohmm_single_copy_orthogroups.txt", 'w'
     ) as file:
-        for key in og_cn.keys():
-            if key != "files:":
-                file.write(f"{key[:-1]}\n")
+        for og_id in single_copy_ogs:
+            file.write(f"{og_id}\n")
 
 
 def write_fasta_files_for_all_ogs(
