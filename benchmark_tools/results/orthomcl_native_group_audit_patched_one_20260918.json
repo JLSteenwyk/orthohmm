@@ -1,0 +1,61 @@
+{
+  "accuracy_admitted": false,
+  "checked_records": [
+    {
+      "bytes": 939,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_native_inference_probe_v3_20260918/patched_one/tool/Sep_18/all_orthomcl.out",
+      "sha256": "d04a18db751466b8e4e045bbfcce6645b499032f7b2fed1a5de66b88097d807c"
+    },
+    {
+      "bytes": 259,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_native_inference_probe_v3_20260918/patched_one/tool/Sep_18/tmp/all_ortho.mcl",
+      "sha256": "7ef44174a3af1012e106b81ca2a2b2e4a252b6384b6c32943393ee6cbc90f3e6"
+    },
+    {
+      "bytes": 509,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_native_inference_probe_v3_20260918/patched_one/tool/Sep_18/tmp/all_ortho.idx",
+      "sha256": "2e9e1969b6b3653426af20332dd034e9850635ef62d9e4cf7086710c6badd760"
+    },
+    {
+      "bytes": 424,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_native_inference_probe_v3_20260918/patched_one/data/all.gg",
+      "sha256": "f242ce883cc978c109491a8d36df8f030a46f562bb6c0ee74b2fb1663256aacc"
+    },
+    {
+      "bytes": 7782,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_orthomcl_native_groups.py",
+      "sha256": "4d1ab9c453b6a242fbc97ea56363192c2011180880ca28c0f27c5d7e00d216da"
+    },
+    {
+      "bytes": 9543,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/orthomcl_matrix_to_pairwise.py",
+      "sha256": "105f7703e4a3ab5b8b80b16fbc47ed32c7e6de2bc4d222c59cb291cd616439dc"
+    },
+    {
+      "bytes": 7448,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_ob_candidate_neighborhood.py",
+      "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+    }
+  ],
+  "content": {
+    "cross_species_clique_pairs": 30,
+    "final_groups": 12,
+    "grouped_proteins": 41,
+    "indexed_proteins": 41,
+    "input_proteins": 42,
+    "input_proteins_absent_from_index": 1,
+    "input_species": 3,
+    "mcl_clusters": 12,
+    "mcl_singleton_clusters": 0,
+    "single_species_final_groups": 6,
+    "ungrouped_input_proteins": 1
+  },
+  "limitations": [
+    "Structural final-output validation, not execution provenance or biological accuracy.",
+    "Singleton clusters are omitted by native OrthoMCL 1.4 mcl_backindex; no singletons are added.",
+    "Pair count describes cross-species final-group cliques, not native pairwise orthologs or graph edges.",
+    "Source search failures and full input coverage require separate audits."
+  ],
+  "publication_ready": false,
+  "status": "native_final_groups_match_mcl_partition"
+}

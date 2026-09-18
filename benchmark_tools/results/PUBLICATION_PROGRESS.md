@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Native Final-Group Structure Verified (2026-09-18 UTC)
+
+Previous turn did not recover the missing TreeFam source inputs; its further
+search did not change the next action (no progress on that requirement).
+Revalidated live jobs: HMM21706_0 RUNNING8:41:17, DGX21656_25 RUNNING3:25;
+corrected BLAST21713 and native inference21750 remain pending with their
+dependency chain intact. No job was restarted and no heavy DGX I/O was added.
+
+Implemented independent final-group validation against native MCL partition,
+raw identifier index and GG taxon ownership. Native singleton omission and
+single-species groups are explicitly preserved. Original serial, patched
+one-worker, patched two-worker and staged-input fixtures all pass: each has
+12 groups,41/42 grouped input proteins and30 cross-species clique pairs.
+The focused suite passes109 tests, including legacy native staging.
+
+See ORTHOMCL_NATIVE_GROUP_AUDIT_20260918.md and four retained JSON reports.
+Next: bind this audit to independent terminal/provenance admission after
+21750, then final-group clique conversion and scoring. The component is not
+yet wired into that scheduler gate. No new biological score or publication
+readiness claim is made. The full goal remains active and unfinished.
+
 ## Corrected Native OrthoMCL Queued (2026-09-18 UTC)
 
 Previous turn progressed by pushingdb1e3cf: input staging and native
