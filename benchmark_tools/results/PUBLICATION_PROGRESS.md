@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Archive-Level Overhead Auditor Integrated (2026-09-18 UTC)
+
+Previous turn made progress through51ceaea with frozen provenance binding.
+Reread the full objective and checked only local scheduler state. Tasks21838_0
+and21838_1 completed0:0 in09:20 and10:05;21838_2 is running03:30, remaining
+tasks pending. HMM21706_0 is running19:01:50. Captured task1's completed local
+scheduler record in the archive staging directory before controller expiry.
+No DGX remote calls or partial native-output inspection occurred.
+
+Integrated the complete-terminal accounting gate, pinned context, archived
+recipe inventory/hash checks, prospective protocol binding, successful-task
+provenance, raw measurement replay, native-output validation, canonical
+fingerprints and paired arithmetic. Every terminal task appears in the
+report; scheduler failure, missing evidence and invalid evidence remain
+distinct. Failed pairs cannot yield a complete-panel numerical budget pass.
+Clock-domain/sequence issues and original CPU flags remain visible separately
+from the numerical ratio budget. The report never admits scientific timings.
+
+202 focused tests pass, including14 new orchestration/inventory cases for
+all-task audit calls, failures/missing evidence, nonterminal read prevention,
+recipe corruption/symlinks, temporal flags and the four required independent
+per-task components. These are controlled synthetic orchestration tests,
+not a completed execution of the active panel's archive auditor. Existing
+raw replay/native-adapter tests continue to pass on retained older evidence.
+
+Next: continue local scheduler-record retention, await all18 terminal tasks,
+then retrieve the complete raw archive and run the integrated auditor.
+No native results have been read, no plan/threshold changed, no failing task
+restarted. Remaining publication requirements and QfO dependencies stay open.
+
 ## Frozen Overhead Task Provenance Binding Added (2026-09-18 UTC)
 
 Previous turn made progress through4ceef47 with raw measurement replay.
