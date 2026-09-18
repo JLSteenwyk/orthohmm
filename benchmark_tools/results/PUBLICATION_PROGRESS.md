@@ -1,5 +1,27 @@
 # Publication Progress
 
+## All-Hit Pairs Complete; Native Scoring Running (2026-09-18 UTC)
+
+Previous turn progressed throughd33dcda: independent graph admission,
+conversion submission and tested CPU-field diagnostics. Reread the full
+objective and verified live jobs. Conversion21824 completed0:0 in2:34,
+yielding11,300,151expected/emitted/retained cross-species clique pairs with
+zero mapping losses. Retained reportSHAafc9b35cdc9f648053015224abcf107d0373924292bac7fef82f14cb608ced33
+in`qfo_sequence_all_hits_pairs_21824.json`; no raw pairs committed.
+
+Verified clean frozen scoring executor425f0a7f5d5dc9e1438ab0a1766c45b13596dc14
+and submitted21825 afterany:21824. It is now RUNNING8CPUs/64GiB with a valid
+unadmitted preflight. Added/tested the missing admission batch launcher,
+committed/pushede798c15 before creating its detached executor, and submitted
+21826 afterany:21825 with2CPUs/64GiB.31focused tests pass. Full validation
+remains required regardless of scheduler exit status; no score is claimed.
+
+Updated the claims ledger to remove stale statements that no sequence graph
+was independently admitted. Top100graph21814, HMM21706_0 and Three Kingdoms
+21795 remain running. No job was restarted or configuration retuned.
+Next: validate native sequence-control endpoints, finish the other graph arm,
+and execute the frozen paired-uncertainty analyses when all inputs exist.
+
 ## All-Hit Graph Admitted; Pair Conversion Running (2026-09-18 UTC)
 
 Previous user-request turn reverified retained TreeFam downloads but found no

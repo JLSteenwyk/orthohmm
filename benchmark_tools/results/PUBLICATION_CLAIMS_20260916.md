@@ -79,14 +79,16 @@ evidence that an experiment completed or a biological hypothesis is true.
   allocated32CPUs/384GiB per arm. [All-hit graph21813](QFO_SEQUENCE_ALL_HITS_EXECUTION_20260918.md)
   completed0:0 in37:34; independent admission21823 completed0:0 in10:44,
   with[retained validation](qfo_sequence_graph_admission_all_hits_21823.json).
-  Frozen pair conversion21824 is running; top100
-  graph21814 is running after it. Execution-reported partitions are not yet
-  independently admitted or scored.
+  [Frozen pair conversion21824](QFO_SEQUENCE_ALL_HITS_PAIRS_20260918.md)
+  completed0:0 in2:34 with11,300,151expected/emitted/retained clique pairs
+  and zero mapping losses. Six-endpoint scoring21825 is running;
+  independent score admission21826 is queued. Top100graph21814 is running
+  separately and has not passed independent graph validation.
   [Self-hit semantics](QFO_SEQUENCE_SELF_HIT_REVIEW_20260918.md) retain the
   frozen cap with no self exception. Conversion completion does not establish
-  matched biological sensitivity, graph feasibility or
-  an accuracy result. No independently admitted sequence graph/scoring result
-  is available yet.
+  matched biological sensitivity or an accuracy result. The all-hit graph
+  is independently admitted, but no sequence-control accuracy result has
+  passed independent validation yet.
 - Three Kingdoms historical normalized-group pair counts independently
   reproduce for all eight methods. Historical Sonic native conversion matches
   all19853 groups/288562 proteins against its retained input copies. The raw
