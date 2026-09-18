@@ -1,5 +1,26 @@
 # Publication Progress
 
+## First Expanded QfO Cell Admitted (2026-09-17)
+
+Previous turn verified and pushed comparator referencesd8613c5. Re-read
+full objective. Scheduler now confirms scoring21681 COMPLETED0:0 (39:15,
+8CPU,bizon) and independent admission21683 COMPLETED0:0 (13seconds).
+Repeated the frozen validator with the same index2/job/pair-manifest hash;
+the new report is byte-identical to the original admission. No scientific
+run was restarted or repeated.
+
+Committed snapshot `qfo_factorial_assessment_p0_c1_r0_20260917.json` preserves
+all six native endpoints and provenance for the expanded, profile-off,
+reconciliation-off cell. Initial HMM search remains present; predictions
+are group-derived pairs. All15tasks/48metric records passed. Details and
+bounded interpretation: `QFO_FACTORIAL_FIRST_EXPANDED_ASSESSMENT_20260917.md`.
+
+Three of eight cells now have admitted scores (two reused baseline assessments,
+one fresh).21682 is RUNNING3:04;21684 awaits it.21671_0 remains RUNNING1:03:51
+and DGX21656_7 RUNNING1:18:34. Five cells still lack admitted scores; complete
+factorial counts/intervals remain pending. No interim tuning, failed-cell
+imputation or superiority claim. Full publication goal remains active.
+
 ## Comparator Literature Coverage Added (2026-09-17)
 
 Previous turn added and pushed initial references09d535e. Re-read objective

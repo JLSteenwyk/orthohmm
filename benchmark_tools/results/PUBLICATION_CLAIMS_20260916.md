@@ -67,12 +67,14 @@ evidence that an experiment completed or a biological hypothesis is true.
   admission and independently revalidates native inferred pairs. Baseline
   assessment jobs21679/21680 completed exact independently revalidated reuse
   of recovered stages1/3, retaining original FAS samples and participant IDs.
-  Expanded R-off scoring21681 is running and21682 queued. These reused scores
-  are not independent new observations; fresh outcomes and the complete
-  eight-cell comparison remain pending.
-  Independent fresh-score admission21683/21684 waits on the corresponding
-  scoring jobs and requires all native tasks, metrics and provenance to pass;
-  queued validators are not evidence of completed scoring or valid intervals.
+  Expanded R-off scoring21681 and independent admission21683 are now
+  COMPLETED0:0. [The first expanded cell](QFO_FACTORIAL_FIRST_EXPANDED_ASSESSMENT_20260917.md)
+  passed all native task, metric and provenance checks; a repeated frozen
+  validation produced an identical admission report.21682 is running and
+  validator21684 queued. Three of eight cells have admitted scores, including
+  the two reused baselines, which are not independent new observations.
+  The full factorial remains incomplete; queued validators do not establish
+  valid scores or intervals for the other cells.
   The [count collector](QFO_FACTORIAL_COUNT_AUDIT_IMPLEMENTATION_20260917.md)
   and [42-endpoint bootstrap](QFO_FACTORIAL_STATISTICS_IMPLEMENTATION_20260917.md)
   are implemented and tested, but no complete empirical eight-cell count or
