@@ -1,0 +1,525 @@
+{
+  "auditor": {
+    "bytes": 5211,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_ob_initial_edge_trace.py",
+    "sha256": "f2116e13256ad59f26c037e25db25d38ee45e4a74f0dc033d6802a2084015cce"
+  },
+  "checked_records": [
+    {
+      "bytes": 17875,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_initial_edge_trace_20260918/report.json",
+      "sha256": "fdf09c55d830861290d2a17e20b60dc778c14f927772915077445dcb1f138d24"
+    },
+    {
+      "bytes": 8728,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_ob_initial_edges_v1/benchmark_tools/trace_ob_initial_edges.py",
+      "sha256": "4c5a49d7dde6b274a91edbbc210e42cb61ec2efd8a7dd466693f0ea8612c9b2a"
+    },
+    {
+      "bytes": 5262231,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_initial_edge_trace_20260918/reference_pair_edges.tsv",
+      "sha256": "3f021b06342f633861e409bd0fc6261342e2584f6f266fae0dfcb6370dd92cd8"
+    },
+    {
+      "bytes": 14046,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/accuracy.py",
+      "sha256": "1a35944ab7fea859143f599b1262aa111272787f6f735b9acc37d299427f2ad6"
+    },
+    {
+      "bytes": 1318480,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ob_family_trace_verified_20260916.json",
+      "sha256": "bda00fb593b357bc8f07e43544feae598150ae891ed82c988fb339a92349de0c"
+    },
+    {
+      "bytes": 952325450,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hits_BLOSUM62_mc100.pkl",
+      "sha256": "78a5af40ea2683a69e1baefefb0966c3549cffe71b24bda03b9ba4a6e29e65e1"
+    },
+    {
+      "bytes": 4390860,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_family_trace_v2/reference_pair_trace.tsv",
+      "sha256": "aabf71d4f79aff06b18890b49996895cd729bd6ac1f6fb0b7f14e79ab5295e4b"
+    }
+  ],
+  "families": {
+    "RefOG001.txt": {
+      "initial_edge/root_False": 14,
+      "initial_edge/root_True": 79,
+      "no_direct_hit/root_True": 12
+    },
+    "RefOG002.txt": {
+      "below_endpoint_threshold/root_False": 8,
+      "initial_edge/root_False": 3,
+      "initial_edge/root_True": 18,
+      "no_direct_hit/root_False": 138,
+      "no_direct_hit/root_True": 3,
+      "no_finite_endpoint_threshold/root_False": 1
+    },
+    "RefOG003.txt": {
+      "below_endpoint_threshold/root_False": 5,
+      "below_endpoint_threshold/root_True": 139,
+      "initial_edge/root_False": 2,
+      "initial_edge/root_True": 323,
+      "no_direct_hit/root_False": 90,
+      "no_direct_hit/root_True": 666
+    },
+    "RefOG004.txt": {
+      "initial_edge/root_True": 49,
+      "no_direct_hit/root_False": 11,
+      "no_direct_hit/root_True": 6
+    },
+    "RefOG005.txt": {
+      "below_endpoint_threshold/root_False": 42,
+      "below_endpoint_threshold/root_True": 98,
+      "initial_edge/root_False": 27,
+      "initial_edge/root_True": 334,
+      "no_direct_hit/root_False": 24,
+      "no_direct_hit/root_True": 30,
+      "no_finite_endpoint_threshold/root_True": 6
+    },
+    "RefOG006.txt": {
+      "below_endpoint_threshold/root_False": 38,
+      "below_endpoint_threshold/root_True": 178,
+      "initial_edge/root_False": 31,
+      "initial_edge/root_True": 501,
+      "no_direct_hit/root_False": 152,
+      "no_direct_hit/root_True": 224,
+      "no_finite_endpoint_threshold/root_False": 3,
+      "no_finite_endpoint_threshold/root_True": 1
+    },
+    "RefOG007.txt": {
+      "below_endpoint_threshold/root_False": 22,
+      "below_endpoint_threshold/root_True": 25,
+      "initial_edge/root_False": 17,
+      "initial_edge/root_True": 219,
+      "no_direct_hit/root_False": 709,
+      "no_direct_hit/root_True": 604
+    },
+    "RefOG008.txt": {
+      "initial_edge/root_False": 11,
+      "initial_edge/root_True": 64,
+      "no_direct_hit/root_False": 14,
+      "no_direct_hit/root_True": 2
+    },
+    "RefOG009.txt": {
+      "below_endpoint_threshold/root_False": 18,
+      "below_endpoint_threshold/root_True": 6,
+      "initial_edge/root_False": 12,
+      "initial_edge/root_True": 134,
+      "no_direct_hit/root_False": 69,
+      "no_direct_hit/root_True": 14
+    },
+    "RefOG010.txt": {
+      "initial_edge/root_True": 3
+    },
+    "RefOG011.txt": {
+      "below_endpoint_threshold/root_False": 62,
+      "below_endpoint_threshold/root_True": 59,
+      "initial_edge/root_False": 61,
+      "initial_edge/root_True": 319,
+      "no_direct_hit/root_False": 3213,
+      "no_direct_hit/root_True": 657
+    },
+    "RefOG012.txt": {
+      "below_endpoint_threshold/root_False": 3,
+      "below_endpoint_threshold/root_True": 55,
+      "initial_edge/root_False": 4,
+      "initial_edge/root_True": 200,
+      "no_direct_hit/root_False": 166,
+      "no_direct_hit/root_True": 607
+    },
+    "RefOG013.txt": {
+      "below_endpoint_threshold/root_False": 8,
+      "below_endpoint_threshold/root_True": 1,
+      "initial_edge/root_True": 3,
+      "no_direct_hit/root_False": 336,
+      "no_direct_hit/root_True": 2,
+      "no_finite_endpoint_threshold/root_False": 1
+    },
+    "RefOG014.txt": {
+      "below_endpoint_threshold/root_False": 79,
+      "below_endpoint_threshold/root_True": 67,
+      "initial_edge/root_False": 2,
+      "initial_edge/root_True": 69,
+      "no_direct_hit/root_False": 652,
+      "no_direct_hit/root_True": 74,
+      "no_finite_endpoint_threshold/root_True": 3
+    },
+    "RefOG015.txt": {
+      "below_endpoint_threshold/root_True": 160,
+      "initial_edge/root_True": 99,
+      "no_direct_hit/root_False": 29,
+      "no_direct_hit/root_True": 132,
+      "no_finite_endpoint_threshold/root_True": 15
+    },
+    "RefOG016.txt": {
+      "below_endpoint_threshold/root_True": 14,
+      "initial_edge/root_False": 1,
+      "initial_edge/root_True": 91,
+      "no_direct_hit/root_False": 46,
+      "no_direct_hit/root_True": 148
+    },
+    "RefOG017.txt": {
+      "below_endpoint_threshold/root_True": 27,
+      "initial_edge/root_True": 231,
+      "no_direct_hit/root_False": 28,
+      "no_direct_hit/root_True": 120
+    },
+    "RefOG018.txt": {
+      "below_endpoint_threshold/root_True": 2,
+      "initial_edge/root_True": 64
+    },
+    "RefOG019.txt": {
+      "below_endpoint_threshold/root_True": 2,
+      "initial_edge/root_True": 76
+    },
+    "RefOG020.txt": {
+      "below_endpoint_threshold/root_False": 65,
+      "below_endpoint_threshold/root_True": 90,
+      "initial_edge/root_False": 9,
+      "initial_edge/root_True": 210,
+      "no_direct_hit/root_False": 4
+    },
+    "RefOG021.txt": {
+      "below_endpoint_threshold/root_False": 162,
+      "below_endpoint_threshold/root_True": 539,
+      "initial_edge/root_False": 40,
+      "initial_edge/root_True": 424,
+      "no_direct_hit/root_False": 5422,
+      "no_direct_hit/root_True": 1161,
+      "no_finite_endpoint_threshold/root_False": 1,
+      "no_finite_endpoint_threshold/root_True": 1
+    },
+    "RefOG022.txt": {
+      "below_endpoint_threshold/root_False": 1,
+      "below_endpoint_threshold/root_True": 56,
+      "initial_edge/root_False": 4,
+      "initial_edge/root_True": 289,
+      "no_direct_hit/root_False": 61,
+      "no_direct_hit/root_True": 184
+    },
+    "RefOG023.txt": {
+      "below_endpoint_threshold/root_False": 675,
+      "below_endpoint_threshold/root_True": 66,
+      "initial_edge/root_False": 174,
+      "initial_edge/root_True": 274,
+      "no_direct_hit/root_False": 1119,
+      "no_direct_hit/root_True": 37,
+      "no_finite_endpoint_threshold/root_True": 1
+    },
+    "RefOG024.txt": {
+      "below_endpoint_threshold/root_True": 48,
+      "initial_edge/root_True": 562,
+      "no_direct_hit/root_True": 665
+    },
+    "RefOG025.txt": {
+      "below_endpoint_threshold/root_True": 1,
+      "initial_edge/root_True": 76,
+      "no_direct_hit/root_True": 1
+    },
+    "RefOG026.txt": {
+      "below_endpoint_threshold/root_False": 1,
+      "below_endpoint_threshold/root_True": 2,
+      "initial_edge/root_False": 7,
+      "initial_edge/root_True": 339,
+      "no_direct_hit/root_False": 75,
+      "no_direct_hit/root_True": 479
+    },
+    "RefOG027.txt": {
+      "below_endpoint_threshold/root_False": 1,
+      "below_endpoint_threshold/root_True": 7,
+      "initial_edge/root_False": 5,
+      "initial_edge/root_True": 79,
+      "no_direct_hit/root_False": 63,
+      "no_direct_hit/root_True": 35
+    },
+    "RefOG028.txt": {
+      "below_endpoint_threshold/root_False": 13,
+      "initial_edge/root_False": 6,
+      "initial_edge/root_True": 69,
+      "no_direct_hit/root_False": 157,
+      "no_direct_hit/root_True": 31
+    },
+    "RefOG029.txt": {
+      "below_endpoint_threshold/root_False": 2,
+      "initial_edge/root_True": 55,
+      "no_direct_hit/root_False": 20,
+      "no_finite_endpoint_threshold/root_False": 1
+    },
+    "RefOG030.txt": {
+      "below_endpoint_threshold/root_True": 1,
+      "initial_edge/root_True": 63,
+      "no_direct_hit/root_True": 14
+    },
+    "RefOG031.txt": {
+      "below_endpoint_threshold/root_True": 2,
+      "initial_edge/root_False": 1,
+      "initial_edge/root_True": 170,
+      "no_direct_hit/root_False": 30,
+      "no_direct_hit/root_True": 293
+    },
+    "RefOG032.txt": {
+      "below_endpoint_threshold/root_True": 6,
+      "initial_edge/root_True": 76,
+      "no_direct_hit/root_True": 9
+    },
+    "RefOG033.txt": {
+      "below_endpoint_threshold/root_True": 11,
+      "initial_edge/root_False": 2,
+      "initial_edge/root_True": 190,
+      "no_direct_hit/root_False": 55,
+      "no_direct_hit/root_True": 176,
+      "no_finite_endpoint_threshold/root_True": 1
+    },
+    "RefOG034.txt": {
+      "below_endpoint_threshold/root_True": 24,
+      "initial_edge/root_True": 180,
+      "no_direct_hit/root_True": 5,
+      "no_finite_endpoint_threshold/root_True": 1
+    },
+    "RefOG035.txt": {
+      "below_endpoint_threshold/root_False": 35,
+      "below_endpoint_threshold/root_True": 49,
+      "initial_edge/root_False": 13,
+      "initial_edge/root_True": 230,
+      "no_direct_hit/root_False": 118,
+      "no_direct_hit/root_True": 45,
+      "no_finite_endpoint_threshold/root_False": 4,
+      "no_finite_endpoint_threshold/root_True": 2
+    },
+    "RefOG036.txt": {
+      "below_endpoint_threshold/root_False": 14,
+      "below_endpoint_threshold/root_True": 139,
+      "initial_edge/root_True": 423,
+      "no_direct_hit/root_False": 31,
+      "no_direct_hit/root_True": 428
+    },
+    "RefOG037.txt": {
+      "below_endpoint_threshold/root_False": 2,
+      "below_endpoint_threshold/root_True": 72,
+      "initial_edge/root_True": 246,
+      "no_direct_hit/root_False": 94,
+      "no_direct_hit/root_True": 147
+    },
+    "RefOG038.txt": {
+      "initial_edge/root_True": 31,
+      "no_direct_hit/root_True": 5
+    },
+    "RefOG039.txt": {
+      "below_endpoint_threshold/root_False": 40,
+      "below_endpoint_threshold/root_True": 2,
+      "initial_edge/root_False": 2,
+      "initial_edge/root_True": 118,
+      "no_direct_hit/root_False": 28
+    },
+    "RefOG040.txt": {
+      "below_endpoint_threshold/root_True": 5,
+      "initial_edge/root_True": 31,
+      "no_direct_hit/root_False": 23,
+      "no_direct_hit/root_True": 19
+    },
+    "RefOG041.txt": {
+      "below_endpoint_threshold/root_True": 6,
+      "initial_edge/root_True": 76,
+      "no_direct_hit/root_True": 54
+    },
+    "RefOG042.txt": {
+      "initial_edge/root_False": 8,
+      "initial_edge/root_True": 15,
+      "no_direct_hit/root_False": 18,
+      "no_direct_hit/root_True": 14
+    },
+    "RefOG043.txt": {
+      "below_endpoint_threshold/root_True": 22,
+      "initial_edge/root_True": 94,
+      "no_direct_hit/root_True": 20
+    },
+    "RefOG044.txt": {
+      "initial_edge/root_True": 35,
+      "no_direct_hit/root_False": 13,
+      "no_direct_hit/root_True": 43
+    },
+    "RefOG045.txt": {
+      "initial_edge/root_True": 42,
+      "no_direct_hit/root_False": 23,
+      "no_direct_hit/root_True": 13
+    },
+    "RefOG046.txt": {
+      "below_endpoint_threshold/root_True": 201,
+      "initial_edge/root_True": 196,
+      "no_direct_hit/root_True": 43,
+      "no_finite_endpoint_threshold/root_True": 56
+    },
+    "RefOG047.txt": {
+      "below_endpoint_threshold/root_True": 130,
+      "initial_edge/root_False": 1,
+      "initial_edge/root_True": 240,
+      "no_direct_hit/root_False": 127,
+      "no_direct_hit/root_True": 130,
+      "no_finite_endpoint_threshold/root_True": 2
+    },
+    "RefOG048.txt": {
+      "below_endpoint_threshold/root_False": 64,
+      "below_endpoint_threshold/root_True": 192,
+      "initial_edge/root_True": 389,
+      "no_direct_hit/root_False": 49,
+      "no_direct_hit/root_True": 10,
+      "no_finite_endpoint_threshold/root_True": 76
+    },
+    "RefOG049.txt": {
+      "below_endpoint_threshold/root_True": 1,
+      "initial_edge/root_True": 28,
+      "no_direct_hit/root_False": 16
+    },
+    "RefOG050.txt": {
+      "below_endpoint_threshold/root_False": 2,
+      "initial_edge/root_True": 66,
+      "no_direct_hit/root_False": 23
+    },
+    "RefOG051.txt": {
+      "below_endpoint_threshold/root_True": 9,
+      "initial_edge/root_True": 43,
+      "no_direct_hit/root_False": 16,
+      "no_direct_hit/root_True": 68
+    },
+    "RefOG052.txt": {
+      "below_endpoint_threshold/root_True": 1,
+      "initial_edge/root_True": 51,
+      "no_direct_hit/root_False": 14,
+      "no_direct_hit/root_True": 39
+    },
+    "RefOG053.txt": {
+      "below_endpoint_threshold/root_False": 9,
+      "initial_edge/root_False": 1,
+      "initial_edge/root_True": 45,
+      "no_direct_hit/root_False": 22,
+      "no_finite_endpoint_threshold/root_False": 1
+    },
+    "RefOG054.txt": {
+      "below_endpoint_threshold/root_False": 6,
+      "below_endpoint_threshold/root_True": 42,
+      "initial_edge/root_True": 176,
+      "no_direct_hit/root_False": 492,
+      "no_direct_hit/root_True": 227,
+      "no_finite_endpoint_threshold/root_True": 3
+    },
+    "RefOG055.txt": {
+      "below_endpoint_threshold/root_True": 27,
+      "initial_edge/root_True": 200,
+      "no_direct_hit/root_False": 55,
+      "no_direct_hit/root_True": 124
+    },
+    "RefOG056.txt": {
+      "below_endpoint_threshold/root_True": 3,
+      "initial_edge/root_True": 27,
+      "no_direct_hit/root_True": 6
+    },
+    "RefOG057.txt": {
+      "below_endpoint_threshold/root_True": 10,
+      "initial_edge/root_True": 61,
+      "no_direct_hit/root_False": 29,
+      "no_direct_hit/root_True": 20
+    },
+    "RefOG058.txt": {
+      "below_endpoint_threshold/root_False": 30,
+      "below_endpoint_threshold/root_True": 5,
+      "initial_edge/root_False": 34,
+      "initial_edge/root_True": 77,
+      "no_direct_hit/root_False": 1032,
+      "no_direct_hit/root_True": 46,
+      "no_finite_endpoint_threshold/root_False": 1
+    },
+    "RefOG059.txt": {
+      "initial_edge/root_True": 34,
+      "no_direct_hit/root_True": 11
+    },
+    "RefOG060.txt": {
+      "below_endpoint_threshold/root_True": 1289,
+      "initial_edge/root_True": 356,
+      "no_direct_hit/root_False": 262,
+      "no_direct_hit/root_True": 369,
+      "no_finite_endpoint_threshold/root_True": 2
+    },
+    "RefOG061.txt": {
+      "below_endpoint_threshold/root_False": 31,
+      "below_endpoint_threshold/root_True": 53,
+      "initial_edge/root_False": 2,
+      "initial_edge/root_True": 136,
+      "no_direct_hit/root_False": 188,
+      "no_direct_hit/root_True": 25
+    },
+    "RefOG062.txt": {
+      "initial_edge/root_True": 44,
+      "no_direct_hit/root_True": 11
+    },
+    "RefOG063.txt": {
+      "below_endpoint_threshold/root_True": 42,
+      "initial_edge/root_True": 110,
+      "no_direct_hit/root_False": 39,
+      "no_direct_hit/root_True": 19
+    },
+    "RefOG064.txt": {
+      "below_endpoint_threshold/root_False": 3,
+      "below_endpoint_threshold/root_True": 1,
+      "initial_edge/root_True": 31,
+      "no_direct_hit/root_False": 57,
+      "no_direct_hit/root_True": 13
+    },
+    "RefOG065.txt": {
+      "below_endpoint_threshold/root_False": 1,
+      "initial_edge/root_False": 1,
+      "initial_edge/root_True": 26,
+      "no_direct_hit/root_False": 15,
+      "no_direct_hit/root_True": 2
+    },
+    "RefOG066.txt": {
+      "below_endpoint_threshold/root_True": 2,
+      "initial_edge/root_True": 56,
+      "no_direct_hit/root_False": 13,
+      "no_direct_hit/root_True": 20
+    },
+    "RefOG067.txt": {
+      "initial_edge/root_True": 63,
+      "no_direct_hit/root_False": 12,
+      "no_direct_hit/root_True": 3
+    },
+    "RefOG068.txt": {
+      "below_endpoint_threshold/root_False": 10,
+      "below_endpoint_threshold/root_True": 16,
+      "initial_edge/root_False": 5,
+      "initial_edge/root_True": 263,
+      "no_direct_hit/root_False": 103,
+      "no_direct_hit/root_True": 99
+    },
+    "RefOG069.txt": {
+      "below_endpoint_threshold/root_False": 1,
+      "below_endpoint_threshold/root_True": 26,
+      "initial_edge/root_True": 171,
+      "no_direct_hit/root_False": 266,
+      "no_direct_hit/root_True": 1
+    },
+    "RefOG070.txt": {
+      "initial_edge/root_False": 5,
+      "initial_edge/root_True": 66,
+      "no_direct_hit/root_False": 7
+    }
+  },
+  "limitations": [
+    "Checks trace arithmetic and source identity, not independent native graph reconstruction.",
+    "Scheduler terminal state is recorded separately in the execution report.",
+    "Raw family pair memberships are not official weighted recall or causal effects."
+  ],
+  "pair_memberships": 40733,
+  "status": "initial_edge_pair_arithmetic_verified",
+  "summary": {
+    "below_endpoint_threshold/root_False": 1453,
+    "below_endpoint_threshold/root_True": 4031,
+    "initial_edge/root_False": 505,
+    "initial_edge/root_True": 10228,
+    "no_direct_hit/root_False": 15868,
+    "no_direct_hit/root_True": 8465,
+    "no_finite_endpoint_threshold/root_False": 13,
+    "no_finite_endpoint_threshold/root_True": 170
+  },
+  "threshold_genes": 1944
+}

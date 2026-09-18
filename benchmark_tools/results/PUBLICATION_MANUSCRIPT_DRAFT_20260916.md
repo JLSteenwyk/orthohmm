@@ -343,6 +343,17 @@ individual effects of tree inference, reconciliation and constraints.
 Counts include low-certainty and within-species pairs and are not the
 official weighted recall statistic or independent biological validation.
 
+A subsequent [frozen initial-graph reconstruction](OB_INITIAL_EDGE_TRACE_20260918.md)
+separates retained hits from accepted graph edges. Among the1,971 hit-supported
+pair memberships separated in final root groups,505 had an initial edge,
+1,453 had hit scores below both endpoint thresholds, and13 had no finite
+endpoint threshold. Conversely,4,201 hit-supported memberships without an
+initial edge were grouped together in final root groups. These descriptive
+counts passed an independent pair-table and arithmetic audit, but the audit
+does not independently reconstruct the native graph. Initial direct edges
+are neither necessary nor sufficient for final co-membership; indirect paths,
+subsequent refinement and partitioning require separate causal investigation.
+
 ### QfO Results Vary Across Endpoints
 
 The secondary QfO means were 0.782071 for full OrthoFinder, 0.748243 for

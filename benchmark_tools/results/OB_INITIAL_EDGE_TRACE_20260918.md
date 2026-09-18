@@ -27,6 +27,46 @@ recorded in the output report. Existing output directories are refused.
 
 ## Execution
 
+### Completed Result And Independent Arithmetic Check
+
+Scheduler accounting subsequently reports job21797 COMPLETED, exit0:0,
+elapsed00:00:24,1CPU,64G requested memory. This is not a matched timing result.
+The frozen reconstruction processed18,235,373 directed hits and returned
+1,803,122 native edges. Its complete reference projection contains40,733
+pair memberships over70 families.
+
+| Initial evidence | Together in final root groups | Separated in final root groups |
+| --- | ---: | ---: |
+| No direct retained hit | 8,465 | 15,868 |
+| Accepted initial edge | 10,228 | 505 |
+| Hit below both endpoint thresholds | 4,031 | 1,453 |
+| Hit with no finite endpoint threshold | 170 | 13 |
+
+`audit_ob_initial_edge_trace.py` independently checks complete pair-key
+equivalence with the admitted source table, hit values, grouping flags,
+positive or infinite thresholds, consistent thresholds for repeated genes,
+threshold classifications, and every family and aggregate count. All source
+and output records are hashed before and after the check. The result is
+`ob_initial_edge_arithmetic_20260918.json`;42 focused tests pass (13 new
+arithmetic tests plus29 existing edge/joint tests).
+
+This verifies reported arithmetic, not a second independent reconstruction
+of the native graph or biological truth. Of1,971 hit-supported memberships
+separated in final groups,505 had an initial edge and1,466 did not. Neither
+this decomposition nor the8,465 grouped pairs lacking direct hits establishes
+a causal mechanism for a particular grouping decision. No method settings or
+benchmark endpoints were changed.
+
+Reproduce the arithmetic check with a fresh output path:
+
+```bash
+python benchmark_tools/audit_ob_initial_edge_trace.py \
+  --report benchmarks/work/ob_initial_edge_trace_20260918/report.json \
+  --output /tmp/ob_initial_edge_arithmetic.json
+```
+
+### Submission Record
+
 Job21797 submitted from frozen executor
 b84b69e5a66dcac34536d318cf4b1058e7e3d325 at
 `benchmarks/work/publication_ob_initial_edges_v1`.

@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Initial Graph Trace Completed And Audited (2026-09-18 UTC)
+
+The preceding archive follow-up did not recover the missing TreeFam source
+inputs and is classified as no progress toward that requirement. Revalidated
+the full goal and live scheduler:21706_0 HMM RUNNING13:06:04 and21791 numeric
+RUNNING38:11; downstream jobs remain pending, not restarted.
+
+Job21797 is now COMPLETED0:0 in00:00:24,1CPU64G. Added an independent
+arithmetic checker and13 corruption/decision tests;42 focused tests pass.
+The actual40,733-row/70-family trace passes pair-universe, score, flag,
+threshold-consistency, classification, family/aggregate count and before/after
+file-identity checks. Retained machine-readable audit:
+`ob_initial_edge_arithmetic_20260918.json`.
+
+Of1,971 hit-supported reference pair memberships separated in final root
+groups,505 had an initial edge,1,453 were below both endpoint thresholds,
+and13 had no finite endpoint threshold. Protocol and manuscript now include
+this descriptive result with explicit noncausal/nonweighted limitations.
+No parameter tuning, independent biological-validation claim, or controlled
+timing claim was added. The native reconstruction itself is not independently
+replicated by this arithmetic audit. Publication goal remains incomplete;
+corrected QfO, uncertainty, controlled timing and release requirements remain.
+
 ## Frozen Initial RBNH Edge Reconstruction (2026-09-18 UTC)
 
 Previous turn progressed through303bcb7 with joint search/grouping counts.
