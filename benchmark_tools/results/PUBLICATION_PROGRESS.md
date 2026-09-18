@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Remaining Comparator Staging Copies Match Originals (2026-09-17)
+
+Previous turn progressed with OrthoMCL parity commit 8fd8dc7. Re-read the
+objective and confirmed live corrected-download 21687, reconciliation
+21671_1 and DGX timing 21656_8. Audited all retained SonicParanoid,
+Proteinortho and FastOMA staged FASTAs against the frozen original manifest:
+78/78 exact complete-file matches per tool, 234 total. Eight new tests and
+29 combined parity tests pass. No source inputs, native predictions or
+scores changed. Machine report: `qfo_comparator_staged_input_parity_20260917.json`.
+
+`QFO_COMPARATOR_INPUT_PARITY_20260917.md` consolidates the retained evidence
+and explicitly distinguishes staged copies from internal transformations,
+binary databases and authenticated historical execution. Original-release
+parity does not remove Xenopus reference incompatibility or establish equal
+accuracy effects across tools. Corrected-release checks, complete original
+factorial scoring, DGX timing admission and remaining publication evidence
+are still pending. Full goal remains active.
+
 ## Retained OrthoMCL Inputs Match Frozen Originals (2026-09-17)
 
 Previous goal turn was a verified wait on DGX array 21656. Re-read the full
