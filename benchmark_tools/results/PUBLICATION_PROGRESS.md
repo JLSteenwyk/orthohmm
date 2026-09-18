@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Corrected Replay Preparation Scheduled (2026-09-18 UTC)
+
+Previous turn progressed by publishing the checksum-bound corrected QfO
+table (cc6615b). Queued preparation job **21722**, `afterok:21720`, using
+detached executor **188fde21860a70da55fee1358177485c970a11a3**. It creates
+only the actual admitted corrected replay command manifest, not replay or
+scoring output. Confirmed its dependency, 2-CPU/64-GiB/four-hour allocation
+and no-requeue state with Slurm. Thirty-nine focused tests and shell syntax
+checks pass. See QFO_CORRECTED_REPLAY_PREPARATION_SUBMITTED_20260918.md.
+
+Last live check: corrected HMM 21706_0, SonicParanoid 21710 and final
+original-release reconciliation 21671_3 remain active. DGX task 21656_16
+is active. Their runtime does not establish failure or justify restart.
+After successful native admission and preparation, review the actual plan
+hash and launch the checked replay, then independently validate retained
+stage partitions before factorial preparation. Remaining publication gates
+and all unfinished experiments stay in scope; goal remains active.
+
 ## Generated Corrected-Release Comparison (2026-09-18 UTC)
 
 Previous turn progressed by independently readmitting corrected Proteinortho
