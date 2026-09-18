@@ -43,7 +43,7 @@ evidence that an experiment completed or a biological hypothesis is true.
 | Merging overlapping VGNC labels makes ordinary family resampling valid | [Dependency audit](VGNC_DEPENDENCY_STRUCTURE_20260918.md) | Not established: 16,863 labels form 16,844 reference blocks, but almost all scored false positives cross blocks. Outcome-defined prediction components are not independent reference units |
 | Missing initial OrthoBench edges explain final grouping errors | [Initial-edge trace](OB_INITIAL_EDGE_TRACE_20260918.md) | Descriptive localization only: 505 hit-supported separated memberships had initial edges and 1,466 did not. Other graph paths and later stages prevent a causal conclusion |
 | OrthoBench factorial statistics reproduce outside the checkout | [Relocated reproduction](ORTHOBENCH_FACTORIAL_REPRODUCTION_20260918.md) | Exact agreement for the eight-cell, 70-family, 20,000-draw statistical analysis; not native inference/scoring or cross-platform reproduction |
-| New counter controls establish controlled comparative timing | [Bracketed controls](DGX_BRACKETED_CONTROLS_RESULT_20260918.md), [interval controls](DGX_INTERVAL_CONTROLS_RESULT_20260918.md), [complete native-command integration](DGX_INTERVAL_NATIVE_RESULT_20260918.md) | Not established: all three native smokes validate, but satellite_v2 and OrthoFinder each flag an interval despite passing whole-command screens. Accounting/overhead treatment, non-CPU isolation and scientific inclusion rules remain incomplete. No historical timing is upgraded |
+| New counter controls establish controlled comparative timing | [Complete native-command integration](DGX_INTERVAL_NATIVE_RESULT_20260918.md), [residual diagnosis](DGX_INTERVAL_RESIDUAL_DIAGNOSIS_20260918.md), [hierarchy controls](DGX_CPU_HIERARCHY_RESULT_20260918.md) | Not established: satellite_v2 and OrthoFinder each retain an interval flag. Read-window increments and observed leaf CPU do not explain them; separate sleeping-step controls localize known batch loads but do not resolve native-run accounting/overhead. Non-CPU isolation and scientific inclusion rules remain incomplete. No historical timing is upgraded |
 
 ## Completion Requirements
 
@@ -63,14 +63,23 @@ evidence that an experiment completed or a biological hypothesis is true.
   cover all563proteins and freeze9/9entropy bins. The14recovered accessions
   and four changed old records are explicit. This is input-only preparation,
   not a corrected stratified accuracy result or validated fragment annotation.
+  The [primary-strata runner](CORRECTED_SWISS_STRATA_EXECUTION_20260918.md)
+  now reconstructs corrected raw counts and applies the frozen27-endpoint
+  bootstrap. It has passed synthetic and input-binding tests, but actual
+  execution awaits admitted corrected predictions. It does not make the
+  all-method or secondary-stratum displays complete.
 
 - Corrected DIAMOND sequence search21789 completed0:0 in02:14:43 and native
   execution admission21790 completed0:0 in00:01:30. Numeric conversion21791
   completed0:0 in01:56:01, reporting593,510,904 all-hit and321,164,891 top100
   directed rows over984,137genes/78species. Independent tuple validation21792
   completed0:0 in01:42:57 and [admitted both checkpoints](QFO_SEQUENCE_NUMERIC_ADMISSION_20260918.md);
-  hit-coverage21793 still waits for HMM admission, while graph-memory
-  review21798 is running.
+  hit-coverage21793 still waits for HMM admission. Graph-memory review21798
+  completed; its [resource decision](QFO_SEQUENCE_GRAPH_RESOURCE_REVIEW_20260918.md)
+  allocated32CPUs/384GiB per arm. All-hit graph21813 is running with initial
+  clustering complete and multipass in progress; top100graph21814 follows
+  afterany. These are in-flight observations, not independent admission of
+  the final graph partitions.
   [Self-hit semantics](QFO_SEQUENCE_SELF_HIT_REVIEW_20260918.md) retain the
   frozen cap with no self exception. Conversion completion does not establish
   matched biological sensitivity, graph feasibility or
@@ -176,9 +185,14 @@ evidence that an experiment completed or a biological hypothesis is true.
   fixture. Their counter windows cannot support host-minus-native subtraction.
   A separate [bracketed positive-control experiment](DGX_BRACKETED_CONTROLS_RESULT_20260918.md)
   passed the quiet expectation and detected both known sibling CPU loads.
-  These engineering results do not establish interval-level monitoring,
-  general overhead or a scientific timing inclusion protocol. No replacement
-  scaling panel is authorized by those controls.
+  Subsequent [complete-command interval integration](DGX_INTERVAL_NATIVE_RESULT_20260918.md)
+  captured all three native commands but retained adverse interval flags.
+  The [residual diagnosis](DGX_INTERVAL_RESIDUAL_DIAGNOSIS_20260918.md)
+  did not explain away either flag. [Hierarchy controls21816](DGX_CPU_HIERARCHY_RESULT_20260918.md)
+  distinguish native sleeping-step CPU from known completed batch work with
+  parent/child counter checks. These controls do not establish native-pipeline
+  accounting precision, general overhead or a scientific timing inclusion
+  protocol. No replacement scaling panel is authorized by those controls.
 - Biological application scores, independent arithmetic, figure and all six
   prospective cases are complete. The [stage trace](BIOLOGICAL_WGD_CASE_TRACE_20260917.md)
   localizes five focal homolog separations to root-lineage grouping. Tree

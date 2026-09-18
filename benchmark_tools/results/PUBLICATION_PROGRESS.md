@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Full Regression And Evidence Checklist Refresh (2026-09-18 UTC)
+
+Previous turn progressed througha3982c0 with completed DGX hierarchy controls.
+Reread the objective. Full unit regression now passes5201tests with9skipped
+in89.36seconds, exit0, covering the recent corrected-strata kernel/runner,
+DGX residual diagnosis and hierarchy controls alongside existing modules.
+This verifies the unit suite, not remaining external scientific experiments.
+
+Confirmed all-hit graph21813 RUNNING23:57, with a checked initial clustering
+execution report/partition and a live multipass worker. The parent process
+is waiting for its active child, not stalled merely because replay.log is
+empty. Neither the initial checkpoint nor active worker admits final graph
+results. Top100job21814 remains dependency-pending. HMM21706_0 is running
+16:46:55 and matched Three Kingdoms Sonic21795 is running40:02.
+
+Slurm sstat returned malformed AveCPU213503982334-14:25:51 and blank memory
+fields for21813.batch. Those values are not used as measurements or evidence
+of resource efficiency. Direct process observations confirm a live worker;
+terminal checked timing/output reports remain necessary. No job was restarted.
+
+Refreshed PUBLICATION_CLAIMS_20260916.md to link the actual graph resource
+review, pending source-bound strata execution, residual diagnosis and
+completed hierarchy controls. It continues to separate tested workflows from
+admitted corrected outcomes and retains the unmet controlled-timing gate.
+The old figure-evidence bundle remains frozen; this documentation update does
+not retroactively change its contents or constitute a final release.
+
 ## DGX Hierarchical CPU Controls Executed (2026-09-18 UTC)
 
 Previous turn progressed through816a0f8 with a retained residual diagnosis.
