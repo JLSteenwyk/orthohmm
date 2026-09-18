@@ -8284,3 +8284,25 @@ Latest live check: corrected HMM 21706_0 RUNNING at 6:10:00; DGX 21656_22
 RUNNING at 17:07; corrected FastOMA 21740 dependency-pending. Corrected all-method
 results, uncertainty, dedicated timing admission and final publication packaging
 remain unfinished. No unrelated jobs were stopped or modified.
+
+### Corrected FastOMA Native Admission Queued (2026-09-18)
+
+Previous turn made progress with the native task-chain validator. This turn
+assembles independent corrected FastOMA admission, binding terminal inference
+accounting and frozen execution provenance to fresh preflight checks, exact
+published output inventory, native tasks, producer/consumer file identities,
+species-tree topology and XML/root-table/native-pair scope. Protein omissions
+are reported, not hidden; native integrity is distinct from accuracy admission.
+
+All 113 focused tests and Bash syntax validation passed. Admission executor
+`857bb5e0d6adad9960ea58d98a3037097ee40d5f` is frozen in
+`publication_qfo_corrected_fastoma_admission_v1`. Job 21741 is queued
+`afterany:21740` with 2 CPUs/64 GiB/four hours, and rejects unsuccessful inference
+before issuing any admission. See `QFO_CORRECTED_FASTOMA_ADMISSION_20260918.md`
+for report paths, checks and limitations. Actual corrected native validation
+remains pending; pair conversion and independent scoring still need integration.
+
+Latest queue check: HMM 21706_0 RUNNING at 6:16:49, DGX 21656_22 RUNNING at
+23:56, FastOMA 21740 and admission 21741 pending dependencies. Corrected
+comparisons, uncertainty, dedicated timing admission and publication packaging
+remain unfinished. No unrelated jobs or historical scores were modified.
