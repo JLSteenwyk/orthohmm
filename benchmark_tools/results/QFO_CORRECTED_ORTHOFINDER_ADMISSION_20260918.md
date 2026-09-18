@@ -50,3 +50,13 @@ run after corrected OrthoFinder terminates. Native pairs, MCL clique pairs,
 and the supplied-tree FastOMA workflow still need separately admitted
 conversion/execution/scoring steps. Shared-host inference durations must not
 be reported as dedicated matched timing.
+
+## Frozen Execution
+
+Executor `benchmarks/work/publication_qfo_corrected_orthofinder_admission_v1`
+is detached at `33e2310d1095f64e77cf068ef2a6fccd4b32a8d4`. Admission job
+21731 is scheduler-confirmed pending on `afterany:21706_1`, with raw inference
+job 21706 passed to the checker. The dependency permits a terminal failure to
+be inspected, but the admission code still requires successful completion.
+The full unit suite passed 3,253 tests, with one opt-in legacy-engine smoke
+test skipped. No corrected OrthoFinder content admission exists yet.

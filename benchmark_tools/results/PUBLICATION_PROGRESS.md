@@ -8049,3 +8049,22 @@ DGX timing has 17 completed tasks, task 21656_17 RUNNING at 40:22, and tasks
 No DGX filesystem scans or unrelated job changes were made. Original TreeFam
 inputs remain missing. Corrected all-tool evaluation, remaining uncertainty,
 resource admission and final publication/archive requirements remain open.
+
+### Corrected OrthoFinder Admission Queued (2026-09-18)
+
+Previous turn made progress with the committed corrected SwissTrees count
+audits (2f9c6c6). This turn adds the corrected OrthoFinder native admission
+gate and bounded species-pair table audit, frozen at
+`33e2310d1095f64e77cf068ef2a6fccd4b32a8d4`. Job 21731 is pending after
+21706_1, using the clean detached executor and 2 CPUs/64 GiB/four hours.
+See `QFO_CORRECTED_ORTHOFINDER_ADMISSION_20260918.md` for scope and tests.
+The full suite passed 3,253 tests, one opt-in test skipped. A retained WGD
+native-format integration check passed for 23,870 genes and 38,572 native
+pairs; this is not corrected-QfO accuracy evidence.
+
+Latest scheduler check: HMM 21706_0 remains active at 4:52:03; OrthoFinder
+21706_1 waits for its array slot. DGX task 21656_17 completed successfully
+at 47:02, bringing the completed count to 18/27. Task 21656_18 is running
+at 7:55. These are scheduler elapsed times, not validated inference timings.
+No concurrent DGX filesystem scan was performed. Corrected native conversion,
+scoring and the full prespecified uncertainty comparison remain unfinished.
