@@ -1,5 +1,22 @@
 # Publication Progress
 
+## TreeFam Source Search And Public Downloads (2026-09-18 UTC)
+
+User requested external retrieval of missing original NHX trees and
+`treefam2reference.txt`. Downloaded QfO 2020.2 publisher metadata and pooled
+TreeFam reference, the 2016 supplementary software ZIP, and current TreeFam
+site/download-page snapshots into a separate work directory. Pooled reference
+matches published MD5 and existing scorer bytes; ZIP CRC validation passes.
+Neither deposit nor ZIP contains the original trees/mapping. Legacy endpoints
+and archive queries have not yielded those files. See
+`TREEFAM_SOURCE_RETRIEVAL_20260918.md` for exact sources, checksums, failed
+retrieval observations and an unsent maintainer-request draft.
+
+Requested original-source acquisition remains incomplete. TreeFam 9 was not
+substituted. Live site announces September 30, 2026 retirement; archival
+contact may be needed. No external message was sent and no TreeFam family
+uncertainty claimed. Other publication work remains available; goal active.
+
 ## Conditional Corrected-Release Protocol Prepared (2026-09-17)
 
 Previous turn progressed with staging-parity commit 861ed52. Re-read the
