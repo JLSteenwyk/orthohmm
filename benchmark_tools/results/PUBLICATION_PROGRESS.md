@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Corrected Candidate Preparation And Admission Queued (2026-09-18 UTC)
+
+The preceding archive-search response was no progress toward analysis:
+the original TreeFam family inputs remain missing. Revalidated live jobs
+show HMM21706_0 RUNNING9:35:24 and DGX21656_26 RUNNING10:19, the final
+scheduled timing replicate. Corrected BLAST21713 is still pending resources.
+No existing job was stopped or restarted and no heavy DGX I/O was added.
+
+Recovered the confirmed preparation submission21758 from scheduler state
+instead of resubmitting it. It follows afterok:21757 using frozen producer
+0a028a7. Submitted independent admission21759 afterany:21758 using frozen
+auditor9082cce after verifying its clean source tree and rerunning all80
+focused candidate and batch tests successfully. Both jobs request2CPUs,
+64GiB and24h onbizon with no requeue; scontrol confirms dependencies.
+Batch implementation a442525 preserves all four candidate arms and the
+eight-cell plan. See QFO_CORRECTED_CANDIDATES_SUBMISSION_20260918.md.
+
+Next: connect the frozen reconciliation, pair conversion and scoring
+executors downstream of21759. Candidate preparation and validation remain
+pending; there is no new corrected HMM accuracy result. Dedicated timing
+admission still requires terminal completion and isolation/resource audit.
+The full publication objective remains active and incomplete.
+
 ## Corrected HMM Replay And Admission Queued (2026-09-18 UTC)
 
 Previous turn progressed through cca5b96: corrected OrthoMCL scoring and

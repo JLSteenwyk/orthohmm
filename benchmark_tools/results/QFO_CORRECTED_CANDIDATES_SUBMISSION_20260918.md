@@ -62,3 +62,16 @@ An actual frozen-producer preflight, with explicitly named preflight
 allocation variables, rejected pending21757 before reading partial replay
 evidence or creating candidate output. This was not a successful scheduled
 candidate run. Submission identities are recorded below after confirmation.
+
+## Confirmed Submissions
+
+- Preparation `21758`, submitted 2026-09-18T10:15:40, follows
+  `afterok:21757` with producer revision `0a028a7`.
+- Independent admission `21759`, submitted 2026-09-18T10:21:55, follows
+  `afterany:21758` with auditor revision `9082cce`.
+
+Both dependencies, 2-CPU/64-GiB allocations, 24-hour limits and disabled
+requeue were confirmed with `scontrol show job`. Both remain pending;
+submission is not evidence of completed preparation or admission. The
+80-test focused suite was rerun successfully before admission submission.
+The batch implementation is committed as `a442525`.
