@@ -9,13 +9,36 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from benchmark_tools.inventory_swiss_sequences import collect
+from benchmark_tools.audit_qfo_input_sequences import sequence_identity
 from benchmark_tools.prepare_ob_candidate_neighborhood import record, check
+from Bio import SeqIO
 
 STAGING_SHA = "07a890eb816944f946d46039559a6046c2a3664f033eaa0f30f35bb25b9c9ab8"
 COUNTS_SHA = "2995868b0407ceda2e7422db6c3fc3b99523716e4bec8b1b43e15f296e40769b"
 ORIGINAL_SHA = "f4a147ff1ecdf0c8df046ab1a5c63069fef106fa627d52eaec008aae250527a5"
 HELPER_SHA = "7f6dd0d3ada54ea2d34c091bc33a667e688518acf9405c8fbffaef7d949d5d0d"
 PROTOCOL_SHA = "2c87ba1df8ee39dfc325eefcdf374e713ba8fab1279a0330c3ea600ab637da54"
+UPDATE_SHA = "69b20dd4b656e9c6f7dbbb84bdc228d1919389a2554d389f790c59df09d8b4cd"
+NATIVE_AUDIT_SHA = "480a09d0c60c95274d93fb49e15ae95b45a99d0cdcd17c72bf9b3af066cc12c4"
+CHANGED_SEQUENCES = {"F6PXR2", "F7BEF0", "F7C949"}
+
+
+def descriptor_updates(old, new):
+    if len(old) != 549 or not set(old) <= set(new):
+        raise ValueError("Old descriptor coverage changed")
+    if any(set(row) != set(new[g]) for g, row in old.items()):
+        raise ValueError("Descriptor schema changed")
+    changed = {g: {k: dict(old=row[k], new=new[g][k]) for k in row if row[k] != new[g][k]}
+               for g, row in old.items() if row != new[g]}
+    if set(changed) != CHANGED_SEQUENCES | {"A0A6I8Q293"}:
+        raise ValueError("Unexpected cross-release descriptor changes")
+    expected = {"canonical_entropy_bits", "canonical_residues", "description", "length", "maximum_canonical_frequency"}
+    if any(set(changed[g]) != expected for g in CHANGED_SEQUENCES):
+        raise ValueError("Unexpected changed descriptor fields")
+    header = changed["A0A6I8Q293"]
+    if set(header) != {"description"} or header["description"]["old"].replace(" PE=4 ", " PE=3 ") != header["description"]["new"]:
+        raise ValueError("Unexpected header-only update")
+    return changed
 
 
 def define_strata(families, genes):
@@ -76,6 +99,10 @@ def prepare(root, output):
     protocol = record(results / "CORRECTED_SWISS_SEQUENCE_STRATA_PROTOCOL_20260918.md")
     if protocol["sha256"] != PROTOCOL_SHA:
         raise ValueError("Feature and outcome protocol changed")
+    update = record(results / "CORRECTED_SWISS_DESCRIPTOR_UPDATE_20260918.md")
+    native_audit = record(results / "qfo_original_input_sequence_audit_20260917.json")
+    if [update["sha256"], native_audit["sha256"]] != [UPDATE_SHA, NATIVE_AUDIT_SHA]:
+        raise ValueError("Descriptor update evidence changed")
     stage, counts, old = [json.loads(p.read_text()) for p in paths]
     if stage["total_sequences"] != 984137 or len(stage["input_fastas"]) != 78 or stage["inputs_normalized"]:
         raise ValueError("Unexpected corrected input inventory")
@@ -86,14 +113,25 @@ def prepare(root, output):
     inventory = collect(families, stage["input_fastas"])
     if inventory["summary"]["matched_genes"] != 563 or inventory["summary"]["missing_genes"]:
         raise ValueError("Corrected release still lacks reference sequences")
-    if len(old["genes"]) != 549 or any(inventory["genes"].get(gene) != value for gene, value in old["genes"].items()):
-        raise ValueError("Previously matched input descriptors changed")
+    changes = descriptor_updates(old["genes"], inventory["genes"])
+    expected = {r["accession"]: r["native_sequence"] for r in json.loads(Path(native_audit["path"]).read_text())["differences"]
+                if r["accession"] in CHANGED_SEQUENCES}
+    xenopus = next(r for r in stage["input_fastas"] if Path(r["path"]).name == "UP000008143_8364.fasta")
+    check(xenopus)
+    observed = {entry.id.split("|")[1]: sequence_identity(str(entry.seq)) for entry in SeqIO.parse(xenopus["path"], "fasta")
+                if entry.id.split("|")[1] in CHANGED_SEQUENCES}
+    check(xenopus)
+    if set(expected) != CHANGED_SEQUENCES or observed != expected:
+        raise ValueError("Corrected changed sequences differ from native database")
     strata = define_strata(families, inventory["genes"])
-    for item in [*identities, helper, protocol]:
+    for item in [*identities, helper, protocol, update, native_audit]:
         check(item)
     result = dict(status="corrected_swiss_sequence_strata_prepared_unscored", **inventory, **strata,
         recovered_accessions=sorted(set(inventory["genes"]) - set(old["genes"])), family_memberships=families,
         source=record(__file__), helper=helper, inputs=identities, fasta_inputs=stage["input_fastas"], protocol=protocol,
+        descriptor_update_protocol=update, native_sequence_audit=native_audit,
+        unchanged_original_descriptors=545, changed_original_descriptors=changes,
+        changed_sequence_native_identities=observed,
         prediction_statistics_evaluated=False, publication_ready=False,
         limitations=["Input-only features on development-exposed curated families, not independent confirmation.",
             "No historical score is relabeled as a corrected-release result.",

@@ -2,7 +2,7 @@ import math
 
 import pytest
 
-from benchmark_tools.prepare_corrected_swiss_sequence_strata import define_strata
+from benchmark_tools.prepare_corrected_swiss_sequence_strata import define_strata, descriptor_updates, CHANGED_SEQUENCES
 
 
 def protein(entropy, length=100, canonical=None, fragment=False):
@@ -48,3 +48,40 @@ def test_invalid_or_ineligible(row):
 def test_complete_reference_coverage_required():
     with pytest.raises(ValueError):
         define_strata({"F": ["a", "b"]}, {"a": protein(.9)})
+
+
+@pytest.fixture
+def updates():
+    from copy import deepcopy
+    names = [f"unchanged_{i}" for i in range(545)] + sorted(CHANGED_SEQUENCES) + ["A0A6I8Q293"]
+    row = dict(canonical_entropy_bits=4., canonical_residues=100, length=100,
+               maximum_canonical_frequency=.1, description="name PE=4 SV=2", source_file="Xenopus.fasta")
+    old = {g: row.copy() for g in names}
+    new = deepcopy(old)
+    for gene in CHANGED_SEQUENCES:
+        new[gene].update(canonical_entropy_bits=3.9, canonical_residues=90, length=90,
+                         maximum_canonical_frequency=.2, description="name PE=4 SV=3")
+    new["A0A6I8Q293"]["description"] = "name PE=3 SV=2"
+    return old, new
+
+
+def test_explicit_release_updates_only(updates):
+    old, new = updates
+    assert set(descriptor_updates(old, new)) == CHANGED_SEQUENCES | {"A0A6I8Q293"}
+
+
+@pytest.mark.parametrize("fault", ["extra", "missing", "schema", "header", "fields"])
+def test_unexpected_release_change_rejected(updates, fault):
+    old, new = updates
+    if fault == "extra":
+        new["unchanged_0"]["length"] += 1
+    elif fault == "missing":
+        del new["unchanged_0"]
+    elif fault == "schema":
+        new["F6PXR2"]["extra"] = True
+    elif fault == "header":
+        new["A0A6I8Q293"]["description"] += " changed"
+    else:
+        new["F6PXR2"]["source_file"] = "other.fasta"
+    with pytest.raises(ValueError):
+        descriptor_updates(old, new)
