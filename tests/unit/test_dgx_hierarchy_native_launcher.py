@@ -39,3 +39,32 @@ def test_transferred_recipe_matches_local_sources():
             path = root / "results" / name
         assert len(path.read_bytes()) == row["bytes"]
         assert hashlib.sha256(path.read_bytes()).hexdigest() == row["sha256"]
+
+
+def test_actual_native_results_and_counter_replay():
+    from benchmark_tools.measure_native_hierarchy_step import evaluate
+
+    root = Path(__file__).resolve().parents[2]
+    result = json.loads((root / "benchmark_tools/results/dgx_hierarchy_native_smokes_21817.json").read_text())
+    assert result["scientific_timings_admitted"] == 0
+    assert result["controlled_workload_verified"] is False
+    flags = []
+    for run in result["runs"]:
+        proof = run["verification"]
+        measured = proof["measurement"]
+        assert proof["before"] == {k: v for k, v in proof["after"].items() if k != "copied_inputs"}
+        assert evaluate(measured["points"], measured["native"], measured["job_id"]) == measured["screening"]
+        assert measured["native"]["exit_code"] == 0
+        assert measured["native"]["timed_out"] is False
+        assert run["output_validation"]["input_genes"] == 645
+        assert run["output_validation"]["resource_measurements_admitted"] is False
+        flags.append(measured["screening"]["original_threshold_screen"]["flagged_intervals"])
+        for index in flags[-1]:
+            hierarchy = measured["screening"]["hierarchy_intervals"][index]
+            assert abs(hierarchy["job_outer_minus_step_sum_cpu_s"]) < .000002
+            assert hierarchy["step_cpu_s"]["step_batch"] < .004
+            assert hierarchy["host_minus_job_outer_cpu_s"] > .25
+    assert flags == [[], [3, 5], [6]]
+    assert result["runs"][0]["output_validation"]["orthogroups"] == 98
+    assert result["runs"][1]["output_validation"]["native_pair_rows"] == 1835
+    assert result["runs"][2]["output_validation"]["native_pair_rows"] == 1834

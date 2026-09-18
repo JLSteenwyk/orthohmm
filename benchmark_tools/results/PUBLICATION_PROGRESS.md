@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Native Hierarchy Integration Executed (2026-09-18 UTC)
+
+Previous turn progressed through76b1977 with the collector and prospective
+protocol. Reread the objective, confirmed active main-host jobs, and completed
+the native launcher/archive auditor. Committed/pushed72fdb2c and the24-file
+verified recipe1ee2db2 before sequential exclusive DGX array21817.
+
+All three tasks completed0:0 with unchanged20CPU/96GiB commands. Native
+outputs and before/after identities passed independent local audit; all
+counter screens replay exactly. High-sensitivity has no interval flag;
+satellite_v2 flags3,5 and OrthoFinder flags6. Parent/step sums closely agree
+but host-minus-job residuals remain, so missing batch-step coverage does not
+explain them. No threshold or scientific timing admission changed.
+
+Documented an operator confound: SSH log reading and recipe/input transfer
+occurred during parts of the array. Their CPU use was not separately measured,
+so no quiet-host claim or quantitative attribution is justified. A future
+all-method quiet control must prohibit DGX SSH/SCP during native work, with
+transfers outside the observation period and local scheduler queries only.
+This array is retained as engineering integration, not a selected timing run.
+
+The first local audit preceded SCP completion and failed on a missing file;
+waiting for that same transfer allowed the unchanged audit to pass. No native
+rerun occurred.79focused tests passed; raw outputs, scheduler records, recipe
+and validated report are retained. See DGX_HIERARCHY_NATIVE_RESULT_20260918.md.
+The scientific timing and broader corrected benchmark/publication work remain
+unfinished; the goal remains active.
+
 ## Complete-Command Hierarchy Collector (2026-09-18 UTC)
 
 Previous turn progressed through0ad236f with full regression and refreshed
