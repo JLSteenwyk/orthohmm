@@ -1,5 +1,43 @@
 # Publication Progress
 
+## Corrected Factorial Score Admission (2026-09-18 UTC)
+
+Previous turn progressed by pushing97bc99b and freezing the corrected
+eight-cell scoring runner. This turn confirmed the same HMM, Sonic scoring
+and DGX jobs remain active; no job restarts or inferred completion.
+
+Implemented `admit_qfo_corrected_factorial_assessment.py`. It requires
+successful terminal8CPU scoring and2CPU conversion, reconstructs the
+complete command/input/environment/provenance contract, and binds the exact
+frozen scorer97bc99beafeb93a212aad191c589f8a7746bcbe3 and appropriate group
+or native converter. Mapping and pair semantics must match the corrected
+cell. It checks the complete output inventory, exactly one native task
+trace, the existing native six-endpoint validator, and repeats artifact
+hash checks before writing a fresh admission file.
+
+Successful status `corrected_factorial_assessment_admitted` carries exact
+cell identity, conversion report, score report, native metrics/tasks/trace,
+source records and limitations. `accuracy_admitted=true` does not imply
+independent biological validation, paired uncertainty or publication
+readiness; `publication_ready` remains false. A2CPU/64GiB/4h/no-requeue batch
+was added, with reviewed conversion hash and explicit completed job IDs.
+
+28focused tests pass across the new orchestration/provenance tests and
+existing completion gate. The orchestration fixtures mock native endpoint
+evaluation but exercise real file hashes, inventory matching and output
+mutation rejection for both R-off and R-on cells. A live attempt against
+still-running assessment21727 was refused before reading nonexistent
+factorial output. Shell syntax and whitespace checks passed. Positive full
+corrected-factorial admission remains pending actual upstream execution.
+Full unit suite:3205passed,1optional skipped,61.77seconds.
+
+Latest check: HMM21706_0 RUNNING4:11:28, Sonic21727 RUNNING27:03,
+DGX21656_17 RUNNING14:22; dependent jobs remain pending. Sonic's native
+log records all six endpoint tasks submitted, not final success. Next:
+freeze this admission executor, finish genuine pending corrected analyses,
+admit completed results, and update paired analyses/comparisons without
+substituting historical scores. All wider publication gates remain active.
+
 ## Corrected Eight-Cell Assessment Runner (2026-09-18 UTC)
 
 Previous turn progressed by pushing1e67abb and freezing native-pair
