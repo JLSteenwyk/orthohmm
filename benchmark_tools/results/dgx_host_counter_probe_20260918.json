@@ -1,0 +1,107 @@
+{
+  "clock_ticks_per_second": 100,
+  "hostname": "spark-7ff0",
+  "kernel": "6.11.0-1016-nvidia",
+  "limitations": [
+    "Read-only availability probe, not a timing run, exclusivity proof or observer calibration.",
+    "Host counters include this observer, SSH and unrelated workloads; no foreign-CPU subtraction is made.",
+    "Guest time is already included in user/nice and is not added again; steal is reported separately.",
+    "Reads are non-atomic; midpoint rates are descriptive, not rigorous contention bounds.",
+    "Optional fields retain read failures. Pressure counters do not prove absence of interference.",
+    "Cannot retroactively supply missing evidence for previous timing runs."
+  ],
+  "publication_ready": false,
+  "python_version": "3.12.3",
+  "requested_interval_s": 3.0,
+  "snapshots": [
+    {
+      "cpu_ticks": {
+        "guest": 0,
+        "guest_nice": 0,
+        "idle": 4363423224,
+        "iowait": 277861,
+        "irq": 0,
+        "nice": 637,
+        "softirq": 16763,
+        "steal": 0,
+        "system": 2124755,
+        "user": 118489809
+      },
+      "errors": [],
+      "finished_monotonic_ns": 2243223718668636,
+      "optional": {
+        "cgroup_cpu.stat": "usage_usec 171738\nuser_usec 52135\nsystem_usec 119603\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "cgroup_memory.current": "10932224\n",
+        "cgroup_memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+        "cgroup_memory.peak": "10932224\n",
+        "host_cpu_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=1307129486\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0\n",
+        "host_io_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=1531100147\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=1515077548\n",
+        "host_memory_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=2795\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=950\n"
+      },
+      "raw": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9\n",
+        "cgroup_membership": "0::/user.slice/user-1000.slice/session-4975.scope\n",
+        "online_cpus": "0-19\n",
+        "proc_stat": "cpu  118489809 637 2124755 4363423224 277861 0 16763 0 0 0\ncpu0 5534331 10 145180 218401553 13786 0 7006 0 0 0\ncpu1 5619604 5 151688 218423338 21573 0 484 0 0 0\ncpu2 5651789 3 153576 218375357 22389 0 195 0 0 0\ncpu3 5718393 5 136974 218350335 17596 0 141 0 0 0\ncpu4 5709429 8 137248 218360262 14220 0 144 0 0 0\ncpu5 6065946 62 76136 218077220 17890 0 292 0 0 0\ncpu6 6114425 0 71850 218037213 15186 0 134 0 0 0\ncpu7 6109202 12 68476 218051221 12633 0 186 0 0 0\ncpu8 6085487 42 80014 218064783 13611 0 174 0 0 0\ncpu9 6106904 0 64578 218063944 13262 0 174 0 0 0\ncpu10 5726736 6 139720 218316837 10723 0 152 0 0 0\ncpu11 5716738 0 139399 218345750 15774 0 112 0 0 0\ncpu12 5734357 6 132891 218324438 16021 0 90 0 0 0\ncpu13 5780550 6 144406 218233337 12329 0 3652 0 0 0\ncpu14 5793969 5 145458 218256649 12851 0 1852 0 0 0\ncpu15 6218312 24 68718 217924499 11838 0 990 0 0 0\ncpu16 6157199 16 72531 217995329 9671 0 429 0 0 0\ncpu17 6207918 14 56866 217956107 7503 0 328 0 0 0\ncpu18 6175576 4 67464 217987121 11328 0 107 0 0 0\ncpu19 6262934 402 71575 217877922 7667 0 113 0 0 0\nintr 1911484697 0 6498182 110341814 0 0 326904234 6497 0 0 0 0 0 1343943898 0 108686066 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5818 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1724 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 363654 0 0 0 0 0 0 0 481823 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7 0 0 16345 236798 224737 210388 188280 178988 74631 88737 102714 73323 73520 71441 54690 51666 93219 78751 33695 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 34031 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 33970 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 33257 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 12276562 0 3185 0 17879 0 0 0 0 0\nctxt 591783028\nbtime 1787514737\nprocesses 9179898\nprocs_running 1\nprocs_blocked 0\nsoftirq 964656679 561 381652680 162 1882537 139496 0 29122300 338861774 1097 212996072\n"
+      },
+      "started_monotonic_ns": 2243223718323597
+    },
+    {
+      "cpu_ticks": {
+        "guest": 0,
+        "guest_nice": 0,
+        "idle": 4363429221,
+        "iowait": 277862,
+        "irq": 0,
+        "nice": 637,
+        "softirq": 16763,
+        "steal": 0,
+        "system": 2124756,
+        "user": 118489809
+      },
+      "errors": [],
+      "finished_monotonic_ns": 2243226719738053,
+      "optional": {
+        "cgroup_cpu.stat": "usage_usec 172418\nuser_usec 52341\nsystem_usec 120077\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "cgroup_memory.current": "10428416\n",
+        "cgroup_memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+        "cgroup_memory.peak": "10932224\n",
+        "host_cpu_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=1307129806\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0\n",
+        "host_io_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=1531106808\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=1515084176\n",
+        "host_memory_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=2795\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=950\n"
+      },
+      "raw": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9\n",
+        "cgroup_membership": "0::/user.slice/user-1000.slice/session-4975.scope\n",
+        "online_cpus": "0-19\n",
+        "proc_stat": "cpu  118489809 637 2124756 4363429221 277862 0 16763 0 0 0\ncpu0 5534331 10 145180 218401853 13786 0 7006 0 0 0\ncpu1 5619604 5 151688 218423638 21573 0 484 0 0 0\ncpu2 5651789 3 153576 218375656 22390 0 195 0 0 0\ncpu3 5718393 5 136974 218350635 17596 0 141 0 0 0\ncpu4 5709429 8 137248 218360562 14220 0 144 0 0 0\ncpu5 6065946 62 76136 218077520 17890 0 292 0 0 0\ncpu6 6114425 0 71850 218037512 15187 0 134 0 0 0\ncpu7 6109202 12 68476 218051521 12633 0 186 0 0 0\ncpu8 6085487 42 80014 218065083 13611 0 174 0 0 0\ncpu9 6106904 0 64578 218064244 13262 0 174 0 0 0\ncpu10 5726736 6 139721 218317137 10723 0 152 0 0 0\ncpu11 5716738 0 139399 218346050 15774 0 112 0 0 0\ncpu12 5734357 6 132891 218324738 16021 0 90 0 0 0\ncpu13 5780550 6 144406 218233637 12329 0 3652 0 0 0\ncpu14 5793969 5 145458 218256949 12851 0 1852 0 0 0\ncpu15 6218312 24 68718 217924799 11838 0 990 0 0 0\ncpu16 6157199 16 72531 217995629 9671 0 429 0 0 0\ncpu17 6207918 14 56866 217956407 7503 0 328 0 0 0\ncpu18 6175576 4 67464 217987421 11328 0 107 0 0 0\ncpu19 6262934 402 71575 217878221 7667 0 113 0 0 0\nintr 1911485674 0 6498183 110341978 0 0 326904504 6497 0 0 0 0 0 1343944254 0 108686225 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5818 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1724 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 363654 0 0 0 0 0 0 0 481824 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7 0 0 16345 236798 224738 210388 188286 178988 74631 88737 102714 73323 73520 71441 54690 51666 93219 78751 33695 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 34031 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 33970 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 33257 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 12276581 0 3185 0 17879 0 0 0 0 0\nctxt 591783833\nbtime 1787514737\nprocesses 9179898\nprocs_running 1\nprocs_blocked 0\nsoftirq 964657533 561 381653059 162 1882541 139496 0 29122342 338862103 1097 212996172\n"
+      },
+      "started_monotonic_ns": 2243226719188454
+    }
+  ],
+  "source": {
+    "path": "/tmp/orthohmm-host-probe.jVK6Hv1y/probe_host_counters.py",
+    "sha256": "3d3c193305085e17aa10e05be842d814f66d020d7dde285c8d9288ead2ce3f3c"
+  },
+  "status": "prospective_host_counter_probe",
+  "summary": {
+    "accounted_host_busy_average_cores": 0.0033322590829824206,
+    "accounted_host_busy_cpu_s": 0.01,
+    "controlled_workload_verified": false,
+    "cpu_delta_ticks": {
+      "guest": 0,
+      "guest_nice": 0,
+      "idle": 5997,
+      "iowait": 1,
+      "irq": 0,
+      "nice": 0,
+      "softirq": 0,
+      "steal": 0,
+      "system": 1,
+      "user": 0
+    },
+    "iowait_decreased": false,
+    "midpoint_span_s": 3.000967137,
+    "status": "host_counter_diagnostic_only"
+  }
+}

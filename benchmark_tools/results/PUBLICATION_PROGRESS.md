@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Prospective DGX Counter Probe Completed (2026-09-18 UTC)
+
+Previous turn progressed throughca2bd7b with the source-pinned uncertainty
+runner and full4955-pass unit regression. Reread the full objective. Scheduler
+confirmed21706_0 HMM RUNNING14:10:51 and21791 conversion RUNNING1:42:58;
+21792/21798 remain pending. No live inference was restarted.
+
+Reviewed the unresolved controlled-timing requirement and original27-run
+disposition. Added a separate read-only host-counter probe without changing
+the deployed collector or original admission criteria. Actual Ethernet SSH
+probe on spark-7ff0 completed: both snapshots captured aggregate CPU,
+CPU/memory/I/O pressure and observer-cgroup CPU/memory counters without errors.
+Raw source-linked report dgx_host_counter_probe_20260918.json is retained;
+its SHA-256 is0ffa771a14b9f8a9639c3cded6e4b8a4069d4458a1f229b3ab5eb6719378a09d.
+Local raw-counter replay matched exactly.18 focused tests passed.
+
+DGX_PROSPECTIVE_COUNTERS_20260918.md records kernel documentation, exact
+scope and remaining validation. This short SSH-session probe is not a Slurm
+native-job observation, observer-overhead calibration or timing admission.
+No foreign-load subtraction, retroactive admission, benchmark rerun or
+interference with unrelated work occurred. Original27 timings remain
+descriptive; controlled resource evidence remains an unmet requirement.
+
+Next timing work is prospective Slurm-scope and short-lived-load validation,
+then a separately frozen execution/inclusion plan if new timings are needed.
+Corrected QfO jobs, other uncertainty and the final publication package
+remain incomplete.
+
 ## Source-Pinned Sequence Uncertainty Runner Added (2026-09-18 UTC)
 
 Previous turn progressed through63260a5 with source-bound count assembly.
