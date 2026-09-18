@@ -1,5 +1,22 @@
 # Publication Progress
 
+## First QfO Factorial Native Reconciliation Validated (2026-09-17)
+
+Previous turn was a verified wait: Slurm confirmed DGX21656_8 live and SSH
+confirmed access. Re-read the full publication objective. QfO21671_0 now
+COMPLETED0:0; task1 is running and2-3 pending. Ran the existing frozen
+native admission script into a separate early-review report without changing
+queued dependencies or restarting inference. All157,073 recorded artifacts,
+complete976,504-gene coverage and4,966,346 native pairs passed the checks.
+
+Committed snapshot `qfo_factorial_native_p0_c0_r1_20260917.json` and scope
+note `QFO_FACTORIAL_FIRST_NATIVE_RECONCILIATION_20260917.md` preserve the
+evidence. Existing admission unit tests:17passed. This is native integrity,
+not scored accuracy or independent phylogenetic truth. Scheduled admission,
+reference conversion and scoring still apply; three of eight cells have
+admitted scores.21682 and DGX21656_8 remain live. The full publication goal
+remains active, including complete factorial and matched timing evidence.
+
 ## Retained Figure Files Audited (2026-09-17)
 
 Previous turn admitted and pushed first expanded QfO cell71bc852. Re-read

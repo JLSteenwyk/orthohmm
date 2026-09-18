@@ -54,8 +54,10 @@ evidence that an experiment completed or a biological hypothesis is true.
   retuning. Candidate preparation job21670 completed successfully on bizon
   from pinned executor bd5229d; [all four arms](QFO_FACTORIAL_PREPARATION_20260917.md)
   preserve the full input universe. Reconciliation array21671 now has task0
-  RUNNING and tasks1-3 pending, using executor de3202f and the verified frozen
-  core launcher. No reconciliation completion or new accuracy is claimed.
+  COMPLETED0:0, task1 RUNNING and tasks2-3 pending, using executor de3202f
+  and the verified frozen core launcher. [Early native validation](QFO_FACTORIAL_FIRST_NATIVE_RECONCILIATION_20260917.md)
+  confirms complete gene coverage and4,966,346 valid-format native pairs for
+  task0; this is not QfO accuracy or independent phylogenetic truth.
   Initial submission21669 failed a mistyped commit-argument check before
   preparation and is retained. The DGX timing node is not used.
   Admission array21673 waits for reconciliation termination and requires
