@@ -1,5 +1,25 @@
 # Publication Progress
 
+## R-Off Conversions Complete; Assessment Runner Ready (2026-09-17)
+
+Previous turn progressed conversion implementation/arrays, pushed0da35db;
+re-read the objective. All four21674 tasks completed0:0. Retained pair counts
+for p0_c0_r0,p0_c1_r0,p1_c0_r0,p1_c1_r0 are respectively8,710,340;
+11,351,618;8,710,722;11,352,105. These are prediction counts, not accuracy.
+
+Added `run_qfo_factorial_assessment.py`: terminal conversion identity, exact
+pair-report hash, frozen converter/scorer/reference environment, and all
+recorded conversion inputs must verify before scoring. Unexpanded baselines
+may reuse only exact pair/partition/reference bindings after independently
+revalidating the original terminal assessment, raw metric files and Nextflow
+trace against pinned admission. The original participant and FAS sample are
+retained; no new scoring replicate or independence claim. Expanded/R-on cells
+run all six native challenges in fresh factorial namespaces, followed by a
+separate admission gate.47focused new/existing assessment tests pass.
+
+At this commit, the assessment batch is ready but not yet submitted. R-on
+conversion still waits for native admission; DGX timing remains separate.
+
 ## QfO Conversion Arrays Submitted; First Cell Complete (2026-09-17)
 
 Committed/pushed converter d786352 and created detached executor
