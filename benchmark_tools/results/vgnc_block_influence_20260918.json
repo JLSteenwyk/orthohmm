@@ -1,0 +1,605 @@
+{
+  "helper": {
+    "bytes": 6285,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_vgnc_family_dependencies.py",
+    "sha256": "29dd44df91e484ebb982f88ee609ab0502ef686d6f7dc7c21f57c4fb9db9e481"
+  },
+  "inputs": [
+    {
+      "bytes": 3033,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/vgnc_raw_label_inventory_20260917.json",
+      "sha256": "436daaa78988eb70f1ad6aa99fc71ba87155bd360d66c689f583ce8903be2472"
+    },
+    {
+      "bytes": 1578,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/vgnc_reference_inventory_20260917.json",
+      "sha256": "a97a9a9e74eed6185672100dd8b4613a5885cdc5cb83ae2c6c4621cf0e1ef68c"
+    },
+    {
+      "bytes": 183364,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/vgnc-orthologs.txt.gz",
+      "sha256": "3f9898487b1b3dab866eaf93255bb25ab7b7699f32753828ba7d2851eafce5dc"
+    },
+    {
+      "bytes": 6907,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/vgnc_benchmark.py",
+      "sha256": "a9596078850cf0799958f3e1794278b7abd0053a5aad4f1af1e6b24cad369635"
+    },
+    {
+      "bytes": 1870642,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_0/results/VGNC/VGNC_ohmm-checked-v2-0_raw.txt.gz",
+      "sha256": "db4a8a3ec8e87f6571b9bbc4b513086ec07767c6b2d8882233289c2775511ae1"
+    },
+    {
+      "bytes": 561686,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_1/results/VGNC/VGNC_ohmm-checked-v2-1_raw.txt.gz",
+      "sha256": "b9675d597526f6e0dc0448493c196f622ab42e220c7fdc44c76be11807347544"
+    },
+    {
+      "bytes": 1877190,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_2/results/VGNC/VGNC_ohmm-checked-v2-2_raw.txt.gz",
+      "sha256": "f8769ccee9cdb4957738ebb975f5e1744aabc7ff9c2ddcb0d0b199e73aaefc79"
+    },
+    {
+      "bytes": 561842,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_3/results/VGNC/VGNC_ohmm-checked-v2-3_raw.txt.gz",
+      "sha256": "14b872a20b180453a4a8b14f6ce54850af055e14c9845890b86188bab66bd15b"
+    }
+  ],
+  "limitations": [
+    "Exploratory influence after prior score inspection; not confirmatory inference.",
+    "Deletes incident scored rows only; does not rerun prediction, reference construction or native eligibility.",
+    "Separate deletions share rows and are dependent; ranges are not confidence intervals.",
+    "Single-block sign stability does not imply robustness to joint deletions or new datasets.",
+    "Historical four-stage evidence only, not corrected-release or competitor results."
+  ],
+  "paired_contrasts": [
+    {
+      "full_f1_difference": 0.3920018314743754,
+      "maximum_deleted_f1_difference": 0.3922736942256449,
+      "minimum_deleted_f1_difference": 0.39049630721780426,
+      "negative": 0,
+      "off": 0,
+      "on": 1,
+      "positive": 16844,
+      "zero": 0
+    },
+    {
+      "full_f1_difference": 0.39263695081330835,
+      "maximum_deleted_f1_difference": 0.39290872393684223,
+      "minimum_deleted_f1_difference": 0.3911410632614816,
+      "negative": 0,
+      "off": 2,
+      "on": 3,
+      "positive": 16844,
+      "zero": 0
+    },
+    {
+      "full_f1_difference": -0.001149203569650037,
+      "maximum_deleted_f1_difference": -0.00056719549811729,
+      "minimum_deleted_f1_difference": -0.0017392930440392473,
+      "negative": 16844,
+      "off": 0,
+      "on": 2,
+      "positive": 0,
+      "zero": 0
+    },
+    {
+      "full_f1_difference": -0.0005140842307170823,
+      "maximum_deleted_f1_difference": -0.0003349771579609362,
+      "minimum_deleted_f1_difference": -0.000738341466669179,
+      "negative": 16844,
+      "off": 1,
+      "on": 3,
+      "positive": 0,
+      "zero": 0
+    }
+  ],
+  "publication_ready": false,
+  "reference": {
+    "family_labels": 16863,
+    "merged_label_groups": [
+      [
+        "C2orf80",
+        "CRYGC"
+      ],
+      [
+        "CCL2",
+        "CCL7"
+      ],
+      [
+        "CYP11B1",
+        "CYP11B2"
+      ],
+      [
+        "H2AC11",
+        "H2AC13",
+        "H2AC16",
+        "H2AC17"
+      ],
+      [
+        "H2AC18",
+        "H2AC19"
+      ],
+      [
+        "H2AC4",
+        "H2AC8"
+      ],
+      [
+        "H2BC10",
+        "H2BC8"
+      ],
+      [
+        "H4-16",
+        "H4C11",
+        "H4C12",
+        "H4C13",
+        "H4C14",
+        "H4C2",
+        "H4C8",
+        "H4C9"
+      ],
+      [
+        "HSPE1",
+        "MOB4"
+      ],
+      [
+        "OCM",
+        "OCM2"
+      ],
+      [
+        "RHBG",
+        "TSACC"
+      ]
+    ],
+    "reference_blocks": 16844,
+    "reference_proteins": 36986,
+    "shared_proteins": 11
+  },
+  "source": {
+    "bytes": 6077,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/diagnose_vgnc_block_influence.py",
+    "sha256": "875bf9487787ba5bc2dee9efa5b95ad165862432447ad09ff5a2bd6954dc9bed"
+  },
+  "stages": [
+    {
+      "blocks": 16844,
+      "full_counts": {
+        "FN": 742,
+        "FP": 120806,
+        "TP": 23192
+      },
+      "full_metrics": {
+        "f1": 0.2762070361813115,
+        "precision": 0.16105779246933985,
+        "recall": 0.9689980780479652
+      },
+      "largest_absolute_f1_changes": [
+        {
+          "block": "OR10A5",
+          "f1_change": 0.0015727383457584398,
+          "removed": {
+            "FN": 0,
+            "FP": 982,
+            "TP": 6
+          }
+        },
+        {
+          "block": "OR10K1",
+          "f1_change": 0.0015727383457584398,
+          "removed": {
+            "FN": 0,
+            "FP": 982,
+            "TP": 6
+          }
+        },
+        {
+          "block": "OR10K2",
+          "f1_change": 0.0015727383457584398,
+          "removed": {
+            "FN": 0,
+            "FP": 982,
+            "TP": 6
+          }
+        },
+        {
+          "block": "OR10Z1",
+          "f1_change": 0.0015727383457584398,
+          "removed": {
+            "FN": 0,
+            "FP": 982,
+            "TP": 6
+          }
+        },
+        {
+          "block": "OR13C2",
+          "f1_change": 0.0015727383457584398,
+          "removed": {
+            "FN": 0,
+            "FP": 982,
+            "TP": 6
+          }
+        },
+        {
+          "block": "OR13C8",
+          "f1_change": 0.0015727383457584398,
+          "removed": {
+            "FN": 0,
+            "FP": 982,
+            "TP": 6
+          }
+        },
+        {
+          "block": "OR13J1",
+          "f1_change": 0.0015727383457584398,
+          "removed": {
+            "FN": 0,
+            "FP": 982,
+            "TP": 6
+          }
+        },
+        {
+          "block": "OR1A1",
+          "f1_change": 0.0015727383457584398,
+          "removed": {
+            "FN": 0,
+            "FP": 982,
+            "TP": 6
+          }
+        },
+        {
+          "block": "OR1L8",
+          "f1_change": 0.0015727383457584398,
+          "removed": {
+            "FN": 0,
+            "FP": 982,
+            "TP": 6
+          }
+        },
+        {
+          "block": "OR2W1",
+          "f1_change": 0.0015727383457584398,
+          "removed": {
+            "FN": 0,
+            "FP": 982,
+            "TP": 6
+          }
+        }
+      ],
+      "maximum_f1_change": 0.0015727383457584398,
+      "minimum_f1_change": -0.00010550076184062673,
+      "stage_index": 0
+    },
+    {
+      "blocks": 16844,
+      "full_counts": {
+        "FN": 4003,
+        "FP": 15790,
+        "TP": 19931
+      },
+      "full_metrics": {
+        "f1": 0.6682088676556869,
+        "precision": 0.5579631029366479,
+        "recall": 0.83274839140971
+      },
+      "largest_absolute_f1_changes": [
+        {
+          "block": "HSPA4",
+          "f1_change": 0.00026948438162044397,
+          "removed": {
+            "FN": 0,
+            "FP": 30,
+            "TP": 6
+          }
+        },
+        {
+          "block": "HSPA4L",
+          "f1_change": 0.00026948438162044397,
+          "removed": {
+            "FN": 0,
+            "FP": 30,
+            "TP": 6
+          }
+        },
+        {
+          "block": "HSPH1",
+          "f1_change": 0.00026948438162044397,
+          "removed": {
+            "FN": 0,
+            "FP": 30,
+            "TP": 6
+          }
+        },
+        {
+          "block": "HSPB2",
+          "f1_change": 0.00022463285591212134,
+          "removed": {
+            "FN": 0,
+            "FP": 26,
+            "TP": 6
+          }
+        },
+        {
+          "block": "HSPB8",
+          "f1_change": 0.00022463285591212134,
+          "removed": {
+            "FN": 0,
+            "FP": 26,
+            "TP": 6
+          }
+        },
+        {
+          "block": "TBX18",
+          "f1_change": 0.00022463285591212134,
+          "removed": {
+            "FN": 0,
+            "FP": 26,
+            "TP": 6
+          }
+        },
+        {
+          "block": "NLRP11",
+          "f1_change": 0.00021297930824248912,
+          "removed": {
+            "FN": 0,
+            "FP": 20,
+            "TP": 1
+          }
+        },
+        {
+          "block": "NLRP13",
+          "f1_change": 0.00021297930824248912,
+          "removed": {
+            "FN": 0,
+            "FP": 20,
+            "TP": 1
+          }
+        },
+        {
+          "block": "NLRP14",
+          "f1_change": 0.00021297930824248912,
+          "removed": {
+            "FN": 0,
+            "FP": 20,
+            "TP": 1
+          }
+        },
+        {
+          "block": "NLRP2",
+          "f1_change": 0.00021297930824248912,
+          "removed": {
+            "FN": 0,
+            "FP": 20,
+            "TP": 1
+          }
+        }
+      ],
+      "maximum_f1_change": 0.00026948438162044397,
+      "minimum_f1_change": -9.985298063441839e-05,
+      "stage_index": 1
+    },
+    {
+      "blocks": 16844,
+      "full_counts": {
+        "FN": 748,
+        "FP": 121470,
+        "TP": 23186
+      },
+      "full_metrics": {
+        "f1": 0.27505783261166145,
+        "precision": 0.16028370755447408,
+        "recall": 0.9687473886521267
+      },
+      "largest_absolute_f1_changes": [
+        {
+          "block": "OR10A5",
+          "f1_change": 0.0015630488041410429,
+          "removed": {
+            "FN": 0,
+            "FP": 984,
+            "TP": 6
+          }
+        },
+        {
+          "block": "OR10K1",
+          "f1_change": 0.0015630488041410429,
+          "removed": {
+            "FN": 0,
+            "FP": 984,
+            "TP": 6
+          }
+        },
+        {
+          "block": "OR10K2",
+          "f1_change": 0.0015630488041410429,
+          "removed": {
+            "FN": 0,
+            "FP": 984,
+            "TP": 6
+          }
+        },
+        {
+          "block": "OR10Z1",
+          "f1_change": 0.0015630488041410429,
+          "removed": {
+            "FN": 0,
+            "FP": 984,
+            "TP": 6
+          }
+        },
+        {
+          "block": "OR13C2",
+          "f1_change": 0.0015630488041410429,
+          "removed": {
+            "FN": 0,
+            "FP": 984,
+            "TP": 6
+          }
+        },
+        {
+          "block": "OR13C8",
+          "f1_change": 0.0015630488041410429,
+          "removed": {
+            "FN": 0,
+            "FP": 984,
+            "TP": 6
+          }
+        },
+        {
+          "block": "OR13J1",
+          "f1_change": 0.0015630488041410429,
+          "removed": {
+            "FN": 0,
+            "FP": 984,
+            "TP": 6
+          }
+        },
+        {
+          "block": "OR1A1",
+          "f1_change": 0.0015630488041410429,
+          "removed": {
+            "FN": 0,
+            "FP": 984,
+            "TP": 6
+          }
+        },
+        {
+          "block": "OR1L8",
+          "f1_change": 0.0015630488041410429,
+          "removed": {
+            "FN": 0,
+            "FP": 984,
+            "TP": 6
+          }
+        },
+        {
+          "block": "OR2W1",
+          "f1_change": 0.0015630488041410429,
+          "removed": {
+            "FN": 0,
+            "FP": 984,
+            "TP": 6
+          }
+        }
+      ],
+      "maximum_f1_change": 0.0015630488041410429,
+      "minimum_f1_change": -0.00010529345646448363,
+      "stage_index": 2
+    },
+    {
+      "blocks": 16844,
+      "full_counts": {
+        "FN": 4018,
+        "FP": 15806,
+        "TP": 19916
+      },
+      "full_metrics": {
+        "f1": 0.6676947834249698,
+        "precision": 0.5575275740440065,
+        "recall": 0.8321216679201137
+      },
+      "largest_absolute_f1_changes": [
+        {
+          "block": "HSPA4",
+          "f1_change": 0.00026911767208792625,
+          "removed": {
+            "FN": 0,
+            "FP": 30,
+            "TP": 6
+          }
+        },
+        {
+          "block": "HSPA4L",
+          "f1_change": 0.00026911767208792625,
+          "removed": {
+            "FN": 0,
+            "FP": 30,
+            "TP": 6
+          }
+        },
+        {
+          "block": "HSPH1",
+          "f1_change": 0.00026911767208792625,
+          "removed": {
+            "FN": 0,
+            "FP": 30,
+            "TP": 6
+          }
+        },
+        {
+          "block": "HSPB2",
+          "f1_change": 0.00022430141517915114,
+          "removed": {
+            "FN": 0,
+            "FP": 26,
+            "TP": 6
+          }
+        },
+        {
+          "block": "HSPB8",
+          "f1_change": 0.00022430141517915114,
+          "removed": {
+            "FN": 0,
+            "FP": 26,
+            "TP": 6
+          }
+        },
+        {
+          "block": "TBX18",
+          "f1_change": 0.00022430141517915114,
+          "removed": {
+            "FN": 0,
+            "FP": 26,
+            "TP": 6
+          }
+        },
+        {
+          "block": "NLRP11",
+          "f1_change": 0.00021278608235819618,
+          "removed": {
+            "FN": 0,
+            "FP": 20,
+            "TP": 1
+          }
+        },
+        {
+          "block": "NLRP13",
+          "f1_change": 0.00021278608235819618,
+          "removed": {
+            "FN": 0,
+            "FP": 20,
+            "TP": 1
+          }
+        },
+        {
+          "block": "NLRP14",
+          "f1_change": 0.00021278608235819618,
+          "removed": {
+            "FN": 0,
+            "FP": 20,
+            "TP": 1
+          }
+        },
+        {
+          "block": "NLRP2",
+          "f1_change": 0.00021278608235819618,
+          "removed": {
+            "FN": 0,
+            "FP": 20,
+            "TP": 1
+          }
+        }
+      ],
+      "maximum_f1_change": 0.00026911767208792625,
+      "minimum_f1_change": -0.00010010996037379538,
+      "stage_index": 3
+    }
+  ],
+  "status": "fixed_scored_table_block_influence_described",
+  "table": {
+    "bytes": 7570440,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/vgnc_block_influence_20260918/all_block_deletions.tsv",
+    "sha256": "341a828244ed3ae7556535adb76a4ce92cf325712f38235fed98fe576eff6301"
+  },
+  "uncertainty_admitted": false
+}

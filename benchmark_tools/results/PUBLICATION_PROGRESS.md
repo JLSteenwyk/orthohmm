@@ -1,5 +1,28 @@
 # Publication Progress
 
+## VGNC Single-Block Influence Executed (2026-09-18 UTC)
+
+The preceding archive-search turn yielded no new original TreeFam assets:
+no progress toward recovery, and the documented maintainer request remains
+the next external lead. Reread the full objective and moved to available
+error-analysis work instead of repeating that search. Scheduler confirmed
+21792 RUNNING1:08:29 and21706_0 RUNNING15:32:25;21798/21795 dependency-pending.
+
+Committed/pushed713b3f7 with the exploratory VGNC deletion implementation,
+tests and scope before inspecting its output. Completed67,376 fixed-table
+deletions across four historical stages and16,844 reference blocks. All
+four comparison signs persist for every single-block deletion: refinement
+positive, strict-profile changes slightly negative. This is not a CI,
+native rescoring of a reduced reference, causal proof or generalization.
+
+Retained the complete7.57MB table in work storage with a hashed committed
+JSON summary. Seventeen focused tests pass, including recomputation of all
+table metrics/contrast ranges and independent direct exclusion of raw rows
+for the ten largest absolute influences per stage. Added the result and
+limits to the manuscript; see VGNC_BLOCK_INFLUENCE_RESULT_20260918.md.
+Corrected QfO evidence, VGNC uncertainty, controlled timing and the other
+remaining publication gates are not marked complete by this diagnostic.
+
 ## Sequence Graph Admission Batch Connected (2026-09-18 UTC)
 
 Previous turn progressed through1369d64 with updated claims and VGNC

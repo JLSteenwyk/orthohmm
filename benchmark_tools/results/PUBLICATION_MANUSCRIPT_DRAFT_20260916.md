@@ -1153,6 +1153,16 @@ unresolved dependence problem; they provide neither confidence intervals nor
 proof that valid paired inference is impossible. VGNC remains a point-estimate
 endpoint with an explicit uncertainty limitation.
 
+An exploratory [fixed-table influence diagnostic](VGNC_BLOCK_INFLUENCE_RESULT_20260918.md)
+then deleted each reference block's incident scored rows separately. Across
+all16,844 deletions, neither refinement's positive F1 difference nor the
+strict-profile stages' small negative F1 differences changed sign. The
+refinement differences ranged from+39.0496 to+39.2274 percentage points
+without strict profiles and+39.1141 to+39.2909 with strict profiles.
+These dependent deletion ranges are not confidence intervals. This checks
+single-block influence on historical scored tables only; it neither reruns
+native eligibility nor establishes generalization or comparator superiority.
+
 ## Data And Code Availability
 
 A [primary-source data-rights register](PUBLICATION_DATA_RIGHTS_20260918.md)
