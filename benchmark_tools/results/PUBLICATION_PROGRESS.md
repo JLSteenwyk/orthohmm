@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Fresh Assessment Admission Jobs Queued (2026-09-17)
+
+Committed/pushed9680ccc and created detached executor
+`benchmarks/work/publication_qfo_factorial_score_admission_v1` at
+9680ccced0e351fa62e0e76c1f393a232d04d00e. Submitted validation21683 for
+cell2 afterany:21681 and21684 for cell6 afterany:21682, each2CPUs/64GiB on
+bizon. Slurm confirms both are PENDING(Dependency) on the intended jobs.
+Afterany only triggers inspection; the validator still requires terminal
+COMPLETED0:0 and complete native scoring evidence. Failed scoring receives
+no admitted score.
+
+Successful outputs will be
+`benchmarks/results/qfo_factorial_assessment_v1/admission_2.json` and
+`admission_6.json`; batch logs use `qfo_factorial_score_admit_JOB.log`.
+No fresh admission exists yet. The earlier two baseline reuse records remain
+distinct; R-on inference/conversion/scoring and full factorial uncertainty
+are unfinished. No scientific process was restarted or timing node altered.
+
 ## Fresh Factorial Assessment Admission Implemented (2026-09-17)
 
 Previous turn progressed baseline assessment revalidation and expanded scoring,

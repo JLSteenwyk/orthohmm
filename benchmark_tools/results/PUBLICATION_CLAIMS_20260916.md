@@ -65,6 +65,9 @@ evidence that an experiment completed or a biological hypothesis is true.
   Expanded R-off scoring21681 is running and21682 queued. These reused scores
   are not independent new observations; fresh outcomes and the complete
   eight-cell comparison remain pending.
+  Independent fresh-score admission21683/21684 waits on the corresponding
+  scoring jobs and requires all native tasks, metrics and provenance to pass;
+  queued validators are not evidence of completed scoring or valid intervals.
 - [GO/EC arithmetic](QFO_GO_EC_ARITHMETIC_AUDIT_20260917.md) verifies all24
   retained count/mean/interval rows within serialization bounds; Darwin's
   stderr is a Student-t95% confidence half-width. [FAS arithmetic](QFO_FAS_SAMPLE_AUDIT_20260917.md)
