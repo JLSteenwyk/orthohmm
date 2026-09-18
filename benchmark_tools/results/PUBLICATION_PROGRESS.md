@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Native Frontier Collector Implemented (2026-09-18 UTC)
+
+Previous turn progressed through8a7ba9e with independently admitted all-hit
+scores and a source-checked endpoint export. Reread the full objective and
+verified top100scoring21829 and HMM21706_0running;21830waits for scoring.
+The corrected HMM baseline still gates the frozen paired uncertainty run.
+
+Added`measure_native_frontier_step.py` as a separate collector, leaving
+frozen hierarchy/interval code unchanged. It retains the hierarchy snapshot,
+samples a disjoint outside-job frontier and expands the enclosing host
+bracket. Original native-step threshold evaluation remains authoritative;
+frontier accounting is descriptive, not a timing correction. Boot/target,
+monotonicity, read enclosure and native process membership are validated.
+
+62focused tests pass, including exact worker-lifecycle equivalence, original
+threshold replay, success/nonzero/timeout preservation, cleanup on frontier
+failure and invalid snapshot rejection. Initial synthetic fixtures violated
+the expanded pre-command boundary; corrected fixture timestamps, not the
+acceptance rule. No new native or scientific timing result is claimed.
+
+FrozeDGX_NATIVE_FRONTIER_PROTOCOL_20260918.md for one all-method engineering
+array with unchanged645-protein inputs/native commands and a no-remote-call
+quiet window. Launcher/recipe verification and execution remain next; native
+overhead and non-CPU isolation still require validation. This does not
+authorize or admit the27scientific scaling runs.
+
 ## All-Hit QfO Scores Admitted And Exported (2026-09-18 UTC)
 
 Previous turn progressed through08bfb3f with the output fix and admitted
