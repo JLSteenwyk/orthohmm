@@ -1,5 +1,24 @@
 # Publication Progress
 
+## QfO Factorial Conversion Implemented (2026-09-17)
+
+Previous turn progressed native admission and queued21673; re-read objective.
+Reconciliation21671_0 and DGX21656_7 remain live, without restart. Implemented
+`prepare_qfo_factorial_pairs.py` for all eight cells. R-off uses the established
+cross-species group converter. R-on independently reruns terminal native
+admission, strips only species/composite-ID columns from native inferred pairs,
+rejects ambiguous accession normalization, and applies the unchanged frozen
+QfO mapping. No RootHOG clique substitution is allowed.
+
+The two unexpanded R-off cells may reuse exact recovered pair files only after
+matching their partition bytes/hash, FASTA inventory, mapping and conversion
+provenance. This reuses conversion, not accuracy scores. Expanded arms get new
+pair files; raw and retained counts and mapping losses are recorded separately.
+Every cell uses a fresh output directory and preserves failure evidence.
+37focused conversion/admission/mapping tests pass. Workstation conversion batch
+is ready; at this commit it is not submitted. Assessment execution/admission
+and the frozen42-endpoint SwissTrees factorial analysis remain pending.
+
 ## QfO Admission Array Queued (2026-09-17)
 
 Admission code and protocol clarification were committed/pushed as adec7e1.
