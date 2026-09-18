@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Matched Three Kingdoms Sonic Launcher (2026-09-18 UTC)
+
+Previous turn made progress with additional TreeFam archive evidence in
+eafe71d; original trees/mapping remain unavailable. Scheduler now confirms
+21706_0 RUNNING12:23:33 and21789 RUNNING2:11:55. Other QfO jobs retain their
+dependencies; OrthoMCL21713 waits for resources.
+
+Completed the previously prepared matched-input Sonic launcher, frozen plan
+and batch script. Actual runtime-tree preflight returned
+preflight_passed_no_inference; 36 focused tests pass. The fresh run binds
+12 staged FASTAs/443217 proteins, defaults, current runtime inventories,
+unchanged normalization and BUSCO scorer. Historical raw-input outputs are
+not overwritten. Protocol THREE_KINGDOMS_MATCHED_SONIC_20260918.md specifies
+independent terminal/native and scoring gates before any table update.
+Submission will follow the committed launcher; no new accuracy result yet.
+
 ## Historical Three Kingdoms Input Mismatch (2026-09-18 UTC)
 
 Previous turn progressed through4e2e93c with retained-source/reference audit.

@@ -1,0 +1,284 @@
+{
+  "accuracy_admitted": false,
+  "checked_records": [
+    {
+      "bytes": 26195,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/three_kingdoms_sources_20260918.json",
+      "sha256": "a79bf83e1ea28a9790e4597ea50a44d6409f4f36404a35e660d56a0b754fc1f3"
+    },
+    {
+      "bytes": 37759,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_sonic_runtime_20260918.json",
+      "sha256": "b4ed57defaba417f6627b671df958a2d533f4438bb8ff35a0b95cb820fd61bc9"
+    },
+    {
+      "bytes": 191,
+      "path": "/home/bizon/anaconda3/bin/sonicparanoid",
+      "sha256": "456f411c815b61fb2b2e60cc4b644e793d7bd0dbab60aa404dbb6f81b2b996a0"
+    },
+    {
+      "bytes": 17157264,
+      "path": "/home/bizon/anaconda3/bin/python3.10",
+      "sha256": "ddd8126d3a409c6ad46c718225d853214d0c9dba3657123514172951fa79058b"
+    },
+    {
+      "bytes": 32739864,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/blastp",
+      "sha256": "55bd09868af75ab23d086e25f6029fbf47a1312201036dd7d54f50c8759b11c7"
+    },
+    {
+      "bytes": 104734800,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/diamond",
+      "sha256": "7910a083a9067d0856280d2b4450ff979f11ffb22b8467d404cc373f5a0e6e73"
+    },
+    {
+      "bytes": 22905616,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/makeblastdb",
+      "sha256": "3f2e60e7e2d36bedab221609d212abf257e8afc84239aa458f53f3ada96c8168"
+    },
+    {
+      "bytes": 284104,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/mcl",
+      "sha256": "3a8790a79e3709393255c1c2337318b16db07efdfaf50f5b24cb4a2f9d2a6b03"
+    },
+    {
+      "bytes": 67022424,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid/bin/mmseqs",
+      "sha256": "1364aa48664559c5dc5929a6a61cc27315377f0d0e8d6d420b39e4d25d8e898a"
+    },
+    {
+      "bytes": 22455028,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Amph.fasta",
+      "sha256": "ef309054ffc2b6a96e9c523569bc84a9286dd48c2caa4b0eb6a0adad6a48b61f"
+    },
+    {
+      "bytes": 15376532,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Anol.fasta",
+      "sha256": "3572dfe704fbd7da7e7a59085f06252964d0a5f8426858cbb55353bbc9455e05"
+    },
+    {
+      "bytes": 33366601,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Arab.fasta",
+      "sha256": "d7c319fa8c6d3b5569ae43cfe0cad2a1331b5c0db9b97b49ceadcf9fef62b3b4"
+    },
+    {
+      "bytes": 6750862,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Asfu.fasta",
+      "sha256": "64472bec6c765b88656f884ef6edfc5180a14859c1a0e2170ea441e16ee049a5"
+    },
+    {
+      "bytes": 42222249,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Dani.fasta",
+      "sha256": "c0a902d57898468f0df1a77a0773f935ef80d53abc4c3831381736f8d13d4e73"
+    },
+    {
+      "bytes": 21984251,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Oryz.fasta",
+      "sha256": "613aa313a07ff90ed70fb599f1b3d71cbfe24d0970111431466297c01da970d4"
+    },
+    {
+      "bytes": 5875882,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Scer.fasta",
+      "sha256": "b4d38c9f505484f0dd7218e769b97f79ad1c3bf94619b989d4bc05b5fae22e42"
+    },
+    {
+      "bytes": 8582364,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Scom.fasta",
+      "sha256": "f078d61dc29427086de601369fe6ed541fa5d937c7a58c717fbdd28a2a397f8a"
+    },
+    {
+      "bytes": 20561355,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Sela.fasta",
+      "sha256": "63d77c81ef9e1e437a7ed210f274d325dfb87983faf74fc0bec2dd37347a173e"
+    },
+    {
+      "bytes": 3805824,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Spom.fasta",
+      "sha256": "643f960eb5531a2a642dc0c39d9db04e85fe7f0e6940fb5c880bc1369f7e7dc5"
+    },
+    {
+      "bytes": 25382533,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Xeno.fasta",
+      "sha256": "8eb459d5da98a95f6e228b8bda9d7136456b511abbf33356acd5bb69d063e398"
+    },
+    {
+      "bytes": 95382422,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Zeam.fasta",
+      "sha256": "1b0b9e82cfaee672f9ceaa6156f3a1ab3812b3f2dbac9af9dce4c0232222700c"
+    },
+    {
+      "bytes": 6739,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/normalize_three_kingdoms_orthogroups.py",
+      "sha256": "baf46e5cca5e938269c5cafcd7cd18466c776e3ce175f88cf513df11729cce1d"
+    },
+    {
+      "bytes": 4943,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/score_against_busco.py",
+      "sha256": "842e199e184ba631dc902b3410eb7b81c4f8dd15aa0868f2311a47faeaf5e37d"
+    },
+    {
+      "bytes": 30699,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/busco/reference_orthogroups.txt",
+      "sha256": "a5f3447056ecfa305442caff0d898d524eed350f13587d3247d3e1ba4c19757d"
+    },
+    {
+      "bytes": 3317,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/inspect_sonicparanoid_runtime.py",
+      "sha256": "1f259a663b304f2800674feaca274510a8e2b2070ffbe267cf3d7ae2f25a174f"
+    },
+    {
+      "bytes": 5243,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_qfo_corrected_sonic.py",
+      "sha256": "4a33db2c4e12caa38b8bdebfc2e08d50ffe36bbc19936c9dbab7418e3453ac0b"
+    },
+    {
+      "bytes": 7956,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_qfo_corrected_sonic.py",
+      "sha256": "ced23d408cb07ad3744d6062e39f5272392fb943b8816cf174311961b16a0ea5"
+    },
+    {
+      "bytes": 4083,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/snapshot_runtime_trees.py",
+      "sha256": "ab0008651e75ebadc1be3c87503f09bffd9e5be87f2e6b0c3eec49e552d9bd4c"
+    },
+    {
+      "bytes": 7264,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_three_kingdoms_method_inputs.py",
+      "sha256": "39b09ab4a76f0f789e695edb6ac92b0d7306537bb6fe7e301390109bda32db9a"
+    },
+    {
+      "bytes": 26690,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/three_kingdoms_method_inputs_20260918.json",
+      "sha256": "5dfd585193a6a576f2685388827bd6f8e3f5bad2ffcc715aaf665247cd2345dc"
+    },
+    {
+      "bytes": 37039196,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/biological_wgd_runtime_trees_v1.json",
+      "sha256": "70eda6198d28d6c36c697d2862911a0853d9482c9e15f504f17574ca73f99071"
+    },
+    {
+      "bytes": 3581976,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/biological_wgd_system_trees_v1.json",
+      "sha256": "5a19ac94e14aff479c7bd7a09a757a8471056d23a9b51fbbc8c51a2d8aee0e27"
+    }
+  ],
+  "conversion": "Existing SonicParanoid ortholog_groups.tsv normalizer; group co-membership semantics.",
+  "input_source_audit": {
+    "bytes": 26195,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/three_kingdoms_sources_20260918.json",
+    "sha256": "a79bf83e1ea28a9790e4597ea50a44d6409f4f36404a35e660d56a0b754fc1f3"
+  },
+  "inputs": [
+    {
+      "bytes": 22455028,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Amph.fasta",
+      "sha256": "ef309054ffc2b6a96e9c523569bc84a9286dd48c2caa4b0eb6a0adad6a48b61f"
+    },
+    {
+      "bytes": 15376532,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Anol.fasta",
+      "sha256": "3572dfe704fbd7da7e7a59085f06252964d0a5f8426858cbb55353bbc9455e05"
+    },
+    {
+      "bytes": 33366601,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Arab.fasta",
+      "sha256": "d7c319fa8c6d3b5569ae43cfe0cad2a1331b5c0db9b97b49ceadcf9fef62b3b4"
+    },
+    {
+      "bytes": 6750862,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Asfu.fasta",
+      "sha256": "64472bec6c765b88656f884ef6edfc5180a14859c1a0e2170ea441e16ee049a5"
+    },
+    {
+      "bytes": 42222249,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Dani.fasta",
+      "sha256": "c0a902d57898468f0df1a77a0773f935ef80d53abc4c3831381736f8d13d4e73"
+    },
+    {
+      "bytes": 21984251,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Oryz.fasta",
+      "sha256": "613aa313a07ff90ed70fb599f1b3d71cbfe24d0970111431466297c01da970d4"
+    },
+    {
+      "bytes": 5875882,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Scer.fasta",
+      "sha256": "b4d38c9f505484f0dd7218e769b97f79ad1c3bf94619b989d4bc05b5fae22e42"
+    },
+    {
+      "bytes": 8582364,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Scom.fasta",
+      "sha256": "f078d61dc29427086de601369fe6ed541fa5d937c7a58c717fbdd28a2a397f8a"
+    },
+    {
+      "bytes": 20561355,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Sela.fasta",
+      "sha256": "63d77c81ef9e1e437a7ed210f274d325dfb87983faf74fc0bec2dd37347a173e"
+    },
+    {
+      "bytes": 3805824,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Spom.fasta",
+      "sha256": "643f960eb5531a2a642dc0c39d9db04e85fe7f0e6940fb5c880bc1369f7e7dc5"
+    },
+    {
+      "bytes": 25382533,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Xeno.fasta",
+      "sha256": "8eb459d5da98a95f6e228b8bda9d7136456b511abbf33356acd5bb69d063e398"
+    },
+    {
+      "bytes": 95382422,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Zeam.fasta",
+      "sha256": "1b0b9e82cfaee672f9ceaa6156f3a1ab3812b3f2dbac9af9dce4c0232222700c"
+    }
+  ],
+  "limitations": [
+    "Contemporary matched-input run, not a pure causal test of stop-marker removal.",
+    "Current runtime identity does not prove historical April dependency versions.",
+    "Shared-host resource data are descriptive, not dedicated timing."
+  ],
+  "native_argv": [
+    "/home/bizon/anaconda3/bin/sonicparanoid",
+    "-i",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/input",
+    "-o",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1/output",
+    "-t",
+    "32"
+  ],
+  "output_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/three_kingdoms_sonic_matched_v1",
+  "remaining_gates": [
+    "Independent terminal/native snapshot and output validation.",
+    "Frozen conversion and scoring execution with independent arithmetic audit.",
+    "Retain historical raw-input result; update comparative table only after admission."
+  ],
+  "resources": {
+    "cpus": 32,
+    "hours": 72,
+    "memory_gib": 192,
+    "node": "bizon"
+  },
+  "reuse_search": false,
+  "runtime": {
+    "bytes": 37759,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_sonic_runtime_20260918.json",
+    "sha256": "b4ed57defaba417f6627b671df958a2d533f4438bb8ff35a0b95cb820fd61bc9"
+  },
+  "runtime_inventories": [
+    {
+      "bytes": 37039196,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/biological_wgd_runtime_trees_v1.json",
+      "sha256": "70eda6198d28d6c36c697d2862911a0853d9482c9e15f504f17574ca73f99071"
+    },
+    {
+      "bytes": 3581976,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/biological_wgd_system_trees_v1.json",
+      "sha256": "5a19ac94e14aff479c7bd7a09a757a8471056d23a9b51fbbc8c51a2d8aee0e27"
+    }
+  ],
+  "scoring": "Existing BUSCO-reference gene-pair micro P/R/F1, same 255-group reference; no retuning.",
+  "source": {
+    "bytes": 9909,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_three_kingdoms_matched_sonic.py",
+    "sha256": "240224d3afec281e271ad704aada873a0bebfc37e3430f8c7f320def48069249"
+  },
+  "status": "matched_three_kingdoms_sonic_frozen_unrun"
+}
