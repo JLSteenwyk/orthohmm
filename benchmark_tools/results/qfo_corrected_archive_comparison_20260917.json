@@ -1,0 +1,931 @@
+{
+  "canonical_files": {
+    "UP000000425_122586.fasta": {
+      "archive_member": "Bacteria/UP000000425_122586.fasta",
+      "bytes": 866515,
+      "identical_to_original": true,
+      "mapped_accessions": 2001,
+      "sequences": 2001,
+      "sha256": "44e65ab28a7953f479bcb76200fab2c8387cff6e858db2e5722aa8df1707bd17",
+      "unmapped_accessions": []
+    },
+    "UP000000429_85962.fasta": {
+      "archive_member": "Bacteria/UP000000429_85962.fasta",
+      "bytes": 747971,
+      "identical_to_original": true,
+      "mapped_accessions": 1552,
+      "sequences": 1552,
+      "sha256": "0ec2729c2f8bf8d30a19dd57ba1475b9d18d500a5ec76a132bcf8ae236c66707",
+      "unmapped_accessions": []
+    },
+    "UP000000431_272561.fasta": {
+      "archive_member": "Bacteria/UP000000431_272561.fasta",
+      "bytes": 431542,
+      "identical_to_original": true,
+      "mapped_accessions": 895,
+      "sequences": 895,
+      "sha256": "aca397ad48dccf87b3abb81be206624f188a5138e3b05e63d8dc00e6c137df4c",
+      "unmapped_accessions": []
+    },
+    "UP000000437_7955.fasta": {
+      "archive_member": "Eukaryota/UP000000437_7955.fasta",
+      "bytes": 17560041,
+      "identical_to_original": true,
+      "mapped_accessions": 25698,
+      "sequences": 25698,
+      "sha256": "bb03b87acd02d80cf7a314c574403aa44f55eaec5f001378c55a7ecd933e9824",
+      "unmapped_accessions": []
+    },
+    "UP000000536_69014.fasta": {
+      "archive_member": "Archaea/UP000000536_69014.fasta",
+      "bytes": 1103434,
+      "identical_to_original": true,
+      "mapped_accessions": 2301,
+      "sequences": 2301,
+      "sha256": "b26340fef2e61ac14d10dd1052211179f90d349c499ded050917771e2d810ba8",
+      "unmapped_accessions": []
+    },
+    "UP000000539_9031.fasta": {
+      "archive_member": "Eukaryota/UP000000539_9031.fasta",
+      "bytes": 12363309,
+      "identical_to_original": true,
+      "mapped_accessions": 18116,
+      "sequences": 18116,
+      "sha256": "ed643bb510ba24ec152766ff3aaea8caf9e55046d78c4482f0a0d66c8bbb959b",
+      "unmapped_accessions": []
+    },
+    "UP000000542_5664.fasta": {
+      "archive_member": "Eukaryota/UP000000542_5664.fasta",
+      "bytes": 6097084,
+      "identical_to_original": true,
+      "mapped_accessions": 8038,
+      "sequences": 8038,
+      "sha256": "beaf76923a8f070d4d8fc682a5fd036375e8ece4452c279a95c562497c8d67e3",
+      "unmapped_accessions": []
+    },
+    "UP000000554_64091.fasta": {
+      "archive_member": "Archaea/UP000000554_64091.fasta",
+      "bytes": 1120386,
+      "identical_to_original": true,
+      "mapped_accessions": 2423,
+      "sequences": 2423,
+      "sha256": "46f30b935c0501b9a9f3780ddf0dfdf3719a649ad9a77899b26f4b896a2287d2",
+      "unmapped_accessions": []
+    },
+    "UP000000557_251221.fasta": {
+      "archive_member": "Bacteria/UP000000557_251221.fasta",
+      "bytes": 2010766,
+      "identical_to_original": true,
+      "mapped_accessions": 4406,
+      "sequences": 4406,
+      "sha256": "c647be279e92435bf7d4dbfd66217c2979e128e56da3a3835adf91eb49df0a1b",
+      "unmapped_accessions": []
+    },
+    "UP000000559_237561.fasta": {
+      "archive_member": "Eukaryota/UP000000559_237561.fasta",
+      "bytes": 3954181,
+      "identical_to_original": true,
+      "mapped_accessions": 6035,
+      "sequences": 6035,
+      "sha256": "29903baf6bcd940665d4245b28d2518f4257419ef12169c6875317e5bc3ead1d",
+      "unmapped_accessions": []
+    },
+    "UP000000561_237631.fasta": {
+      "archive_member": "Eukaryota/UP000000561_237631.fasta",
+      "bytes": 5172817,
+      "identical_to_original": true,
+      "mapped_accessions": 6788,
+      "sequences": 6788,
+      "sha256": "f23613a13bc78e1c7d673b96d65fbdd73bbd47c9153e4ea2323ef6d7f0b9fa8c",
+      "unmapped_accessions": []
+    },
+    "UP000000577_243231.fasta": {
+      "archive_member": "Bacteria/UP000000577_243231.fasta",
+      "bytes": 1691650,
+      "identical_to_original": true,
+      "mapped_accessions": 3402,
+      "sequences": 3402,
+      "sha256": "a7c5f82fe20d610984457ad01800538bafd2f96ff26a76c1d36bb8178512d22c",
+      "unmapped_accessions": []
+    },
+    "UP000000589_10090.fasta": {
+      "archive_member": "Eukaryota/UP000000589_10090.fasta",
+      "bytes": 14325720,
+      "identical_to_original": true,
+      "mapped_accessions": 21989,
+      "sequences": 21989,
+      "sha256": "f6e080958003abfa54718f9465127a8225661fab1ad0738cc9301ad0d0a5c49f",
+      "unmapped_accessions": []
+    },
+    "UP000000600_5888.fasta": {
+      "archive_member": "Eukaryota/UP000000600_5888.fasta",
+      "bytes": 22935217,
+      "identical_to_original": true,
+      "mapped_accessions": 39461,
+      "sequences": 39461,
+      "sha256": "2c6e376eaef0557f11773edbe0638976100072cf8f4cbb42abc162e4b99bf6ad",
+      "unmapped_accessions": []
+    },
+    "UP000000625_83333.fasta": {
+      "archive_member": "Bacteria/UP000000625_83333.fasta",
+      "bytes": 1888168,
+      "identical_to_original": true,
+      "mapped_accessions": 4391,
+      "sequences": 4391,
+      "sha256": "d2703103c23f29528dd676f99fc4877918893440bb20f1d99af9f076998719cb",
+      "unmapped_accessions": []
+    },
+    "UP000000718_289376.fasta": {
+      "archive_member": "Bacteria/UP000000718_289376.fasta",
+      "bytes": 947254,
+      "identical_to_original": true,
+      "mapped_accessions": 1982,
+      "sequences": 1982,
+      "sha256": "1cfa8c64373a2bac386b33370a77b5302fb9a4088395d1ddcbe740c6d4b7455d",
+      "unmapped_accessions": []
+    },
+    "UP000000792_436308.fasta": {
+      "archive_member": "Archaea/UP000000792_436308.fasta",
+      "bytes": 735425,
+      "identical_to_original": true,
+      "mapped_accessions": 1795,
+      "sequences": 1795,
+      "sha256": "71bc4301d1e1cfac3f22ccebaa1d42ab37bcb5f70251581483ba2192f5be19ae",
+      "unmapped_accessions": []
+    },
+    "UP000000798_224324.fasta": {
+      "archive_member": "Bacteria/UP000000798_224324.fasta",
+      "bytes": 681404,
+      "identical_to_original": true,
+      "mapped_accessions": 1553,
+      "sequences": 1553,
+      "sha256": "f675127545b691945a425c5ca99cbcff0530c11e9ac59acc5053ed58d962bebd",
+      "unmapped_accessions": []
+    },
+    "UP000000803_7227.fasta": {
+      "archive_member": "Eukaryota/UP000000803_7227.fasta",
+      "bytes": 9194699,
+      "identical_to_original": true,
+      "mapped_accessions": 13811,
+      "sequences": 13811,
+      "sha256": "d1fb760ceb1448993f0fc6b4db10dd700b9d85a0ad7927cee82c2c3034b702e0",
+      "unmapped_accessions": []
+    },
+    "UP000000805_243232.fasta": {
+      "archive_member": "Archaea/UP000000805_243232.fasta",
+      "bytes": 893349,
+      "identical_to_original": true,
+      "mapped_accessions": 1787,
+      "sequences": 1787,
+      "sha256": "03fb0b065db8f55c54253a097ad17053985029e1fe2416da493f7989e90376a9",
+      "unmapped_accessions": []
+    },
+    "UP000000807_243273.fasta": {
+      "archive_member": "Bacteria/UP000000807_243273.fasta",
+      "bytes": 251571,
+      "identical_to_original": true,
+      "mapped_accessions": 483,
+      "sequences": 483,
+      "sha256": "43f6d3e78d43964a2f82bc3b26687a2828fa0305b17bdaa40e29eff5e472b44a",
+      "unmapped_accessions": []
+    },
+    "UP000001025_243090.fasta": {
+      "archive_member": "Bacteria/UP000001025_243090.fasta",
+      "bytes": 3408710,
+      "identical_to_original": true,
+      "mapped_accessions": 7271,
+      "sequences": 7271,
+      "sha256": "33f51ff55213e0cb89758f6992c6f1117d7fdf19ae583623441c730b775f767a",
+      "unmapped_accessions": []
+    },
+    "UP000001038_8090.fasta": {
+      "archive_member": "Eukaryota/UP000001038_8090.fasta",
+      "bytes": 16930435,
+      "identical_to_original": true,
+      "mapped_accessions": 23617,
+      "sequences": 23617,
+      "sha256": "f00b596e5e4f8fbbaa635ddea50d380c1c4e2a08646ab502c682bfe05a352fe0",
+      "unmapped_accessions": []
+    },
+    "UP000001055_321614.fasta": {
+      "archive_member": "Eukaryota/UP000001055_321614.fasta",
+      "bytes": 9426972,
+      "identical_to_original": true,
+      "mapped_accessions": 15998,
+      "sequences": 15998,
+      "sha256": "270150ee0b6379b82f11e30268c2387851532e8929a2f3d36c48555729e9d7a3",
+      "unmapped_accessions": []
+    },
+    "UP000001300_284591.fasta": {
+      "archive_member": "Eukaryota/UP000001300_284591.fasta",
+      "bytes": 4227407,
+      "identical_to_original": true,
+      "mapped_accessions": 6449,
+      "sequences": 6449,
+      "sha256": "af6ab878a823813f1c289e7bed5473ec1e04eb671843e74bc7c339e0895dd667",
+      "unmapped_accessions": []
+    },
+    "UP000001312_665079.fasta": {
+      "archive_member": "Eukaryota/UP000001312_665079.fasta",
+      "bytes": 8046794,
+      "identical_to_original": true,
+      "mapped_accessions": 14445,
+      "sequences": 14445,
+      "sha256": "4f6ad7ab273f0ddb20fe0b8fa1a5bd38cd1d634fa8b2dd0362f59554e1005581",
+      "unmapped_accessions": []
+    },
+    "UP000001357_81824.fasta": {
+      "archive_member": "Eukaryota/UP000001357_81824.fasta",
+      "bytes": 6818528,
+      "identical_to_original": true,
+      "mapped_accessions": 9188,
+      "sequences": 9188,
+      "sha256": "b97cb3eb5edb17a2e6c75d10b07532d19d699d2c4724d79c1171a9f5cbcce7d8",
+      "unmapped_accessions": []
+    },
+    "UP000001408_189518.fasta": {
+      "archive_member": "Bacteria/UP000001408_189518.fasta",
+      "bytes": 1796739,
+      "identical_to_original": true,
+      "mapped_accessions": 3676,
+      "sequences": 3676,
+      "sha256": "2fb96698804ba40fa25be324b14097ddf2612ce3bdf9c4bec6af090820348a2d",
+      "unmapped_accessions": []
+    },
+    "UP000001414_226186.fasta": {
+      "archive_member": "Bacteria/UP000001414_226186.fasta",
+      "bytes": 2754487,
+      "identical_to_original": true,
+      "mapped_accessions": 4782,
+      "sequences": 4782,
+      "sha256": "785e96ffb85082a7705a9b75a2f53590e1d1ebfd57bdfdf010702580d8d2a7fd",
+      "unmapped_accessions": []
+    },
+    "UP000001425_1111708.fasta": {
+      "archive_member": "Bacteria/UP000001425_1111708.fasta",
+      "bytes": 1605070,
+      "identical_to_original": true,
+      "mapped_accessions": 3507,
+      "sequences": 3507,
+      "sha256": "654bdc865925d6fc2c3f2929db5e64945705b013645ea2e869e2c6eb827899fe",
+      "unmapped_accessions": []
+    },
+    "UP000001449_35128.fasta": {
+      "archive_member": "Eukaryota/UP000001449_35128.fasta",
+      "bytes": 7707976,
+      "identical_to_original": true,
+      "mapped_accessions": 11717,
+      "sequences": 11717,
+      "sha256": "d434bcb16231f6f18289897fb2395d787ba17ea4f3c33251953ca011c97675f6",
+      "unmapped_accessions": []
+    },
+    "UP000001450_36329.fasta": {
+      "archive_member": "Eukaryota/UP000001450_36329.fasta",
+      "bytes": 4900628,
+      "identical_to_original": true,
+      "mapped_accessions": 5388,
+      "sequences": 5388,
+      "sha256": "32e3b2ca68ffaa00151033a887a630f06d367b04979c1bafef95a9fee2f83ad8",
+      "unmapped_accessions": []
+    },
+    "UP000001519_9595.fasta": {
+      "archive_member": "Eukaryota/UP000001519_9595.fasta",
+      "bytes": 14493737,
+      "identical_to_original": true,
+      "mapped_accessions": 21792,
+      "sequences": 21792,
+      "sha256": "43f3f3a5282aaa0fc88761995bcf495420988692eb487a996f9273611475a7c3",
+      "unmapped_accessions": []
+    },
+    "UP000001542_5722.fasta": {
+      "archive_member": "Eukaryota/UP000001542_5722.fasta",
+      "bytes": 22894987,
+      "identical_to_original": true,
+      "mapped_accessions": 50190,
+      "sequences": 50190,
+      "sha256": "9107d40ff24d6739a43906e3d1d5e9b7dda58e13b8255598c13ef5417b538d27",
+      "unmapped_accessions": []
+    },
+    "UP000001548_184922.fasta": {
+      "archive_member": "Eukaryota/UP000001548_184922.fasta",
+      "bytes": 5159827,
+      "identical_to_original": true,
+      "mapped_accessions": 7971,
+      "sequences": 7971,
+      "sha256": "3fee04dc24bcd0b388e54f0452afcc32ba0c8507fc64535072d4eaf518f5a9b6",
+      "unmapped_accessions": []
+    },
+    "UP000001554_7739.fasta": {
+      "archive_member": "Eukaryota/UP000001554_7739.fasta",
+      "bytes": 17711164,
+      "identical_to_original": true,
+      "mapped_accessions": 28542,
+      "sequences": 28542,
+      "sha256": "a5e0d52fa4c13e6adb86f520e28154e90a63ffbc8491d083441cb3cf077c437f",
+      "unmapped_accessions": []
+    },
+    "UP000001555_6945.fasta": {
+      "archive_member": "Eukaryota/UP000001555_6945.fasta",
+      "bytes": 8736835,
+      "identical_to_original": true,
+      "mapped_accessions": 20473,
+      "sequences": 20473,
+      "sha256": "c4a2dee9e41b11d5c83e599b6985ddfceb77e58d649230d9dfed42817cd88f3d",
+      "unmapped_accessions": []
+    },
+    "UP000001570_224308.fasta": {
+      "archive_member": "Bacteria/UP000001570_224308.fasta",
+      "bytes": 1765604,
+      "identical_to_original": true,
+      "mapped_accessions": 4260,
+      "sequences": 4260,
+      "sha256": "69b7b24b9a37ce6057ca6c6e12fd4a74ebb525c0fdb46f3eafe4e711a3fa2350",
+      "unmapped_accessions": []
+    },
+    "UP000001584_83332.fasta": {
+      "archive_member": "Bacteria/UP000001584_83332.fasta",
+      "bytes": 1938145,
+      "identical_to_original": true,
+      "mapped_accessions": 3993,
+      "sequences": 3993,
+      "sha256": "1dcacf3edfced65336343ee5214fbdb5f34a43ced3bed962a511a215fa679b7c",
+      "unmapped_accessions": []
+    },
+    "UP000001593_45351.fasta": {
+      "archive_member": "Eukaryota/UP000001593_45351.fasta",
+      "bytes": 11832587,
+      "identical_to_original": true,
+      "mapped_accessions": 24428,
+      "sequences": 24428,
+      "sha256": "d89487a9192abd3dfaa70b9b3957d181dd4f9b7a2985af68ca4867c46d9498a2",
+      "unmapped_accessions": []
+    },
+    "UP000001686_374847.fasta": {
+      "archive_member": "Archaea/UP000001686_374847.fasta",
+      "bytes": 691112,
+      "identical_to_original": true,
+      "mapped_accessions": 1602,
+      "sequences": 1602,
+      "sha256": "b2a9d42b66367a40ed37bc119c782e8f036e5beef35c5bd30f2cb1ec3dde9371",
+      "unmapped_accessions": []
+    },
+    "UP000001805_367110.fasta": {
+      "archive_member": "Eukaryota/UP000001805_367110.fasta",
+      "bytes": 6747907,
+      "identical_to_original": true,
+      "mapped_accessions": 9759,
+      "sequences": 9759,
+      "sha256": "4a314661cc7f55cebea98b3875538142c93f182464f2636bd4a5c03ec8b94983",
+      "unmapped_accessions": []
+    },
+    "UP000001940_6239.fasta": {
+      "archive_member": "Eukaryota/UP000001940_6239.fasta",
+      "bytes": 10589689,
+      "identical_to_original": true,
+      "mapped_accessions": 19819,
+      "sequences": 19819,
+      "sha256": "679b2b181f22999dca02862c5cf62119a0b33ca35bd77996d271d91a7e725231",
+      "unmapped_accessions": []
+    },
+    "UP000001973_100226.fasta": {
+      "archive_member": "Bacteria/UP000001973_100226.fasta",
+      "bytes": 3885862,
+      "identical_to_original": true,
+      "mapped_accessions": 8038,
+      "sequences": 8038,
+      "sha256": "5c3ed14a93dac866cae612c46765d6e96117faf366994a53a902c4dafc65f2bc",
+      "unmapped_accessions": []
+    },
+    "UP000001974_273057.fasta": {
+      "archive_member": "Archaea/UP000001974_273057.fasta",
+      "bytes": 1403822,
+      "identical_to_original": true,
+      "mapped_accessions": 2938,
+      "sequences": 2938,
+      "sha256": "36d83a02febc6c60e6b34ecde9ba04f87d0c3fb34b519ad6f766a02a7f97e68d",
+      "unmapped_accessions": []
+    },
+    "UP000002008_324602.fasta": {
+      "archive_member": "Bacteria/UP000002008_324602.fasta",
+      "bytes": 2035360,
+      "identical_to_original": true,
+      "mapped_accessions": 3850,
+      "sequences": 3850,
+      "sha256": "efc93b616d84a056880930738b33bba444274b6ce74f11ee62dd58b24c518cca",
+      "unmapped_accessions": []
+    },
+    "UP000002149_214684.fasta": {
+      "archive_member": "Eukaryota/UP000002149_214684.fasta",
+      "bytes": 4943601,
+      "identical_to_original": true,
+      "mapped_accessions": 6604,
+      "sequences": 6604,
+      "sha256": "87f832dd796637bc504e3368cc948c029bd32541f53bd2296ee6a66db91d540a",
+      "unmapped_accessions": []
+    },
+    "UP000002195_44689.fasta": {
+      "archive_member": "Eukaryota/UP000002195_44689.fasta",
+      "bytes": 8696553,
+      "identical_to_original": true,
+      "mapped_accessions": 12739,
+      "sequences": 12739,
+      "sha256": "27127a8da8f620f4f0ba7ed29f2b58cb3fb6f8792d4e9b2144215567d3a409ac",
+      "unmapped_accessions": []
+    },
+    "UP000002254_9615.fasta": {
+      "archive_member": "Eukaryota/UP000002254_9615.fasta",
+      "bytes": 14659832,
+      "identical_to_original": true,
+      "mapped_accessions": 20649,
+      "sequences": 20649,
+      "sha256": "d8488bf283de653efcff2e5de6d413b116e1ba4a2eb89298bd31205e72fef682",
+      "unmapped_accessions": []
+    },
+    "UP000002277_9598.fasta": {
+      "archive_member": "Eukaryota/UP000002277_9598.fasta",
+      "bytes": 14937257,
+      "identical_to_original": true,
+      "mapped_accessions": 23053,
+      "sequences": 23053,
+      "sha256": "62a7143e309037360c8ddef25c16d7006e802b555a5ffca1f97b96036871e973",
+      "unmapped_accessions": []
+    },
+    "UP000002280_13616.fasta": {
+      "archive_member": "Eukaryota/UP000002280_13616.fasta",
+      "bytes": 14515060,
+      "identical_to_original": true,
+      "mapped_accessions": 21225,
+      "sequences": 21225,
+      "sha256": "36dfce6fdfaf16605430d6029c1e60c76318268b4ef02dcbb8dcb7bf87b03413",
+      "unmapped_accessions": []
+    },
+    "UP000002311_559292.fasta": {
+      "archive_member": "Eukaryota/UP000002311_559292.fasta",
+      "bytes": 3951698,
+      "identical_to_original": true,
+      "mapped_accessions": 6049,
+      "sequences": 6049,
+      "sha256": "9ff39b833b1bf5b90224e720a728a6e66bd9bf8afce0b6f60c7d725cf85660e3",
+      "unmapped_accessions": []
+    },
+    "UP000002438_208964.fasta": {
+      "archive_member": "Bacteria/UP000002438_208964.fasta",
+      "bytes": 3017721,
+      "identical_to_original": true,
+      "mapped_accessions": 5564,
+      "sequences": 5564,
+      "sha256": "0b16b29c4bafd2e02cdf2a80c1e2eac350088d7182886a2d08a5a0dba4e22694",
+      "unmapped_accessions": []
+    },
+    "UP000002485_284812.fasta": {
+      "archive_member": "Eukaryota/UP000002485_284812.fasta",
+      "bytes": 3267394,
+      "identical_to_original": true,
+      "mapped_accessions": 5141,
+      "sequences": 5141,
+      "sha256": "d81a6419e51b3d082eb1a445ab6b62148082cc91226c9709149159606dc1ed34",
+      "unmapped_accessions": []
+    },
+    "UP000002487_188937.fasta": {
+      "archive_member": "Archaea/UP000002487_188937.fasta",
+      "bytes": 2151697,
+      "identical_to_original": true,
+      "mapped_accessions": 4468,
+      "sequences": 4468,
+      "sha256": "7b1edc42faf925b5bf6da8c20fcf499e7f2ed911745b7db1972a0dfccc05c73f",
+      "unmapped_accessions": []
+    },
+    "UP000002494_10116.fasta": {
+      "archive_member": "Eukaryota/UP000002494_10116.fasta",
+      "bytes": 13689269,
+      "identical_to_original": true,
+      "mapped_accessions": 21587,
+      "sequences": 21587,
+      "sha256": "cb66110798a35c366c1ed98a10754f7cd1caea00a6716a361803c0fbef468828",
+      "unmapped_accessions": []
+    },
+    "UP000002521_190304.fasta": {
+      "archive_member": "Bacteria/UP000002521_190304.fasta",
+      "bytes": 1032140,
+      "identical_to_original": true,
+      "mapped_accessions": 2046,
+      "sequences": 2046,
+      "sha256": "7bf98ba1b998df6cb176cce4620ba53d196463c86b31836c1a695773e33b8681",
+      "unmapped_accessions": []
+    },
+    "UP000002524_243230.fasta": {
+      "archive_member": "Bacteria/UP000002524_243230.fasta",
+      "bytes": 1621284,
+      "identical_to_original": true,
+      "mapped_accessions": 3085,
+      "sequences": 3085,
+      "sha256": "9890cd413fbd3d939be31da532152aa4fd13d4a0711c953d943be90ee0ee5cd7",
+      "unmapped_accessions": []
+    },
+    "UP000002526_224911.fasta": {
+      "archive_member": "Bacteria/UP000002526_224911.fasta",
+      "bytes": 4076786,
+      "identical_to_original": true,
+      "mapped_accessions": 8253,
+      "sequences": 8253,
+      "sha256": "0ad121003ad2c94fae40263d56f8afb103dca9f9420da6e1b0aff43646136b2c",
+      "unmapped_accessions": []
+    },
+    "UP000002530_330879.fasta": {
+      "archive_member": "Eukaryota/UP000002530_330879.fasta",
+      "bytes": 6731535,
+      "identical_to_original": true,
+      "mapped_accessions": 9647,
+      "sequences": 9647,
+      "sha256": "449cb49b9e78e085d21e2d84c0fd5dc4ce9a7684fda774b173e732b76eedee81",
+      "unmapped_accessions": []
+    },
+    "UP000005238_164328.fasta": {
+      "archive_member": "Eukaryota/UP000005238_164328.fasta",
+      "bytes": 9603190,
+      "identical_to_original": true,
+      "mapped_accessions": 15349,
+      "sequences": 15349,
+      "sha256": "afc8998d21f105bef3c0b32f3b88900009d84c2a0743d6669542588a5adab882",
+      "unmapped_accessions": []
+    },
+    "UP000005640_9606.fasta": {
+      "archive_member": "Eukaryota/UP000005640_9606.fasta",
+      "bytes": 13831073,
+      "identical_to_original": true,
+      "mapped_accessions": 20600,
+      "sequences": 20600,
+      "sha256": "3793b9bfcc956a278494734bb775a010513f5764d8047fcdb283d2aeaa7fefb8",
+      "unmapped_accessions": []
+    },
+    "UP000006548_3702.fasta": {
+      "archive_member": "Eukaryota/UP000006548_3702.fasta",
+      "bytes": 14992908,
+      "identical_to_original": true,
+      "mapped_accessions": 27500,
+      "sequences": 27500,
+      "sha256": "7bd8ea7a2bc7610ba8b126af20b908bc5e2b26ec7a3ee4f2c307cdbe47ae4f69",
+      "unmapped_accessions": []
+    },
+    "UP000006727_3218.fasta": {
+      "archive_member": "Eukaryota/UP000006727_3218.fasta",
+      "bytes": 15834974,
+      "identical_to_original": true,
+      "mapped_accessions": 30857,
+      "sequences": 30857,
+      "sha256": "1e033648a1b892a50ab36b368650adb3deda9dfd7cd11021222415f2cda6c666",
+      "unmapped_accessions": []
+    },
+    "UP000006906_3055.fasta": {
+      "archive_member": "Eukaryota/UP000006906_3055.fasta",
+      "bytes": 15884352,
+      "identical_to_original": true,
+      "mapped_accessions": 17614,
+      "sequences": 17614,
+      "sha256": "ff283d887791065dc5e57304329b206eec528b77b9e34f99bd6d57d5e45deeb3",
+      "unmapped_accessions": []
+    },
+    "UP000007062_7165.fasta": {
+      "archive_member": "Eukaryota/UP000007062_7165.fasta",
+      "bytes": 8249868,
+      "identical_to_original": true,
+      "mapped_accessions": 12533,
+      "sequences": 12533,
+      "sha256": "666f1a0fd6072d3c135a3c5aab4ab429faf18e5dc36bdca629c03039d0d40e95",
+      "unmapped_accessions": []
+    },
+    "UP000007241_684364.fasta": {
+      "archive_member": "Eukaryota/UP000007241_684364.fasta",
+      "bytes": 5476187,
+      "identical_to_original": true,
+      "mapped_accessions": 8610,
+      "sequences": 8610,
+      "sha256": "7f2e663ee8619918a7a23691e98746ae75468d99b198a91c90c40c820dc5344b",
+      "unmapped_accessions": []
+    },
+    "UP000007266_7070.fasta": {
+      "archive_member": "Eukaryota/UP000007266_7070.fasta",
+      "bytes": 9783004,
+      "identical_to_original": true,
+      "mapped_accessions": 16568,
+      "sequences": 16568,
+      "sha256": "beeb87f418e54e060f0fb666e25dfc70290913ac330c24dc733f0c6082db2cbc",
+      "unmapped_accessions": []
+    },
+    "UP000007305_4577.fasta": {
+      "archive_member": "Eukaryota/UP000007305_4577.fasta",
+      "bytes": 20264591,
+      "identical_to_original": true,
+      "mapped_accessions": 39400,
+      "sequences": 39400,
+      "sha256": "50dc9b32d342d62df8d1f12e2313b1e31fdc3d5df2579e30c6ce67a205a08f69",
+      "unmapped_accessions": []
+    },
+    "UP000007719_515635.fasta": {
+      "archive_member": "Bacteria/UP000007719_515635.fasta",
+      "bytes": 828608,
+      "identical_to_original": true,
+      "mapped_accessions": 1743,
+      "sequences": 1743,
+      "sha256": "2dedcacc25ecc95085bc08aa3deb6045f5c2e0d2f8b377e6ae79d9ccb95f84ab",
+      "unmapped_accessions": []
+    },
+    "UP000008143_8364.fasta": {
+      "archive_member": "Eukaryota/UP000008143_8364.fasta",
+      "bytes": 12267534,
+      "identical_to_original": false,
+      "mapped_accessions": 17272,
+      "sequences": 17272,
+      "sha256": "72c13750f727da24cacca375a87ff4a8214b5d2046eeb632a4f8c129b5b0452c",
+      "unmapped_accessions": []
+    },
+    "UP000008144_7719.fasta": {
+      "archive_member": "Eukaryota/UP000008144_7719.fasta",
+      "bytes": 8137668,
+      "identical_to_original": true,
+      "mapped_accessions": 16678,
+      "sequences": 16678,
+      "sha256": "8ae1739170a42861452f20ae445fa36b8778b2caa2308c64072b78fa1038714f",
+      "unmapped_accessions": []
+    },
+    "UP000008183_243274.fasta": {
+      "archive_member": "Bacteria/UP000008183_243274.fasta",
+      "bytes": 888794,
+      "identical_to_original": true,
+      "mapped_accessions": 1852,
+      "sequences": 1852,
+      "sha256": "663bb2a7f2ec5f8f8095a49ac65238ba49bdda1971b4b0e783451f7d6f57dccc",
+      "unmapped_accessions": []
+    },
+    "UP000008783_418459.fasta": {
+      "archive_member": "Eukaryota/UP000008783_418459.fasta",
+      "bytes": 9169683,
+      "identical_to_original": true,
+      "mapped_accessions": 15688,
+      "sequences": 15688,
+      "sha256": "a70399a1a601ce3922264d46faa1664f645b4926c85b6ffa45d67042368140ee",
+      "unmapped_accessions": []
+    },
+    "UP000009136_9913.fasta": {
+      "archive_member": "Eukaryota/UP000009136_9913.fasta",
+      "bytes": 15134839,
+      "identical_to_original": true,
+      "mapped_accessions": 23845,
+      "sequences": 23845,
+      "sha256": "f3f42d4a7aaf83f078cac49ab79247fb0e4227e20895fe57a57160cf67662fc6",
+      "unmapped_accessions": []
+    },
+    "UP000015101_6412.fasta": {
+      "archive_member": "Eukaryota/UP000015101_6412.fasta",
+      "bytes": 11829084,
+      "identical_to_original": true,
+      "mapped_accessions": 23328,
+      "sequences": 23328,
+      "sha256": "b525ceb0b3973c17bdb9f100e23908faa897730a360c54d57ccba7767b2997a5",
+      "unmapped_accessions": []
+    },
+    "UP000018468_7918.fasta": {
+      "archive_member": "Eukaryota/UP000018468_7918.fasta",
+      "bytes": 12920167,
+      "identical_to_original": true,
+      "mapped_accessions": 18318,
+      "sequences": 18318,
+      "sha256": "6e1072b578631bdda17632ac5cf2cfe9efaecb47373a39d4032923349310e875",
+      "unmapped_accessions": []
+    },
+    "UP000059680_39947.fasta": {
+      "archive_member": "Eukaryota/UP000059680_39947.fasta",
+      "bytes": 19168339,
+      "identical_to_original": true,
+      "mapped_accessions": 43672,
+      "sequences": 43672,
+      "sha256": "1bbd0d5781a1b9c56db31a57860d2cb0efa715a34af1f3bffe651055ee7ecff7",
+      "unmapped_accessions": []
+    }
+  },
+  "canonical_proteomes": 78,
+  "changed_canonical_files": [
+    "UP000008143_8364.fasta"
+  ],
+  "gzip_read_to_eof": true,
+  "inputs": [
+    {
+      "bytes": 2648666198,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_source_20260917/QfO_release_2020_04_with_updated_UP000008143.tar.gz",
+      "sha256": "29a0f54e4af7d6bdbfe28923efd2f3633e844b0c49b0a9e13d2b08f6a2d66009"
+    },
+    {
+      "bytes": 109234,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_factorial_prepared_20260917.json",
+      "sha256": "706b07c91e9a130dae229837641a7ad62d7d36a09679e5e0daa0959e182b7d64"
+    },
+    {
+      "bytes": 40019520,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/mapping.json.gz",
+      "sha256": "1c10f6ce5e53ebc3148dde02d16268b225c3c8817c952d1274daa41acbf9eb4d"
+    },
+    {
+      "bytes": 514247,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_sequence_alias_audit_20260917.json",
+      "sha256": "b69f74e35aa3fa3af99a33b3b27f830d79df2abd3935b84e911f981186ac33ec"
+    }
+  ],
+  "limitations": [
+    "Comparison is to frozen original file hashes; no original input or active run changed.",
+    "Numeric identity coverage does not independently verify all scorer sequence bytes or annotation versions.",
+    "Only canonical FASTA scope compared across releases, not every sidecar or additional file.",
+    "No orthology inference, corrected accuracy estimate or retrospective score substitution performed."
+  ],
+  "mapping_numeric_identity_count": 984137,
+  "mapping_numeric_ids_without_canonical_accession": [],
+  "missing_numeric_ids_by_species": {
+    "ANOGA": 0,
+    "AQUAE": 0,
+    "ARATH": 0,
+    "ASPFU": 0,
+    "BACSU": 0,
+    "BACTN": 0,
+    "BATDJ": 0,
+    "BOVIN": 0,
+    "BRADU": 0,
+    "BRAFL": 0,
+    "CAEEL": 0,
+    "CANAL": 0,
+    "CANLF": 0,
+    "CHICK": 0,
+    "CHLAA": 0,
+    "CHLRE": 0,
+    "CHLTR": 0,
+    "CIOIN": 0,
+    "CRYNJ": 0,
+    "DANRE": 0,
+    "DEIRA": 0,
+    "DICDI": 0,
+    "DICTD": 0,
+    "DROME": 0,
+    "ECOLI": 0,
+    "FUSNN": 0,
+    "GEOSL": 0,
+    "GIAIC": 0,
+    "GLOVI": 0,
+    "GORGO": 0,
+    "HALSA": 0,
+    "HELPY": 0,
+    "HELRO": 0,
+    "HUMAN": 0,
+    "IXOSC": 0,
+    "KORCO": 0,
+    "LEIMA": 0,
+    "LEPIN": 0,
+    "LEPOC": 0,
+    "MAIZE": 0,
+    "METAC": 0,
+    "METJA": 0,
+    "MONBE": 0,
+    "MONDO": 0,
+    "MOUSE": 0,
+    "MYCGE": 0,
+    "MYCTU": 0,
+    "NEIMB": 0,
+    "NEMVE": 0,
+    "NEUCR": 0,
+    "NITMS": 0,
+    "ORYLA": 0,
+    "ORYSJ": 0,
+    "PANTR": 0,
+    "PARTE": 0,
+    "PHANO": 0,
+    "PHYPA": 0,
+    "PHYRM": 0,
+    "PLAF7": 0,
+    "PSEAE": 0,
+    "PUCGT": 0,
+    "RATNO": 0,
+    "RHOBA": 0,
+    "SACS2": 0,
+    "SCHPO": 0,
+    "SCLS1": 0,
+    "STRCO": 0,
+    "SYNY3": 0,
+    "THAPS": 0,
+    "THEKO": 0,
+    "THEMA": 0,
+    "THEYD": 0,
+    "TRICA": 0,
+    "TRIVA": 0,
+    "USTMA": 0,
+    "XENTR": 0,
+    "YARLI": 0,
+    "YEAST": 0
+  },
+  "recovered_missing_reference_accessions": {
+    "A0A6I8Q068": {
+      "description": "tr|A0A6I8Q068|A0A6I8Q068_XENTR Homeobox C9 OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=hoxc9 PE=4 SV=1",
+      "file": "UP000008143_8364.fasta",
+      "length": 269,
+      "numeric_protein_id": 766443,
+      "sequence_sha256": "ed1cda958b33bb260713a2e95897b3fe311e6f07155006a99f477be31fb01f8c"
+    },
+    "B1H1F6": {
+      "description": "tr|B1H1F6|B1H1F6_XENTR Popeye domain containing 3 OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=popdc3 PE=2 SV=1",
+      "file": "UP000008143_8364.fasta",
+      "length": 289,
+      "numeric_protein_id": 775603,
+      "sequence_sha256": "08f7a491ace68a6318010e5b7a7d76f3195804a98f053ad76a498b7624300998"
+    },
+    "F6PXE7": {
+      "description": "tr|F6PXE7|F6PXE7_XENTR Receptor protein-tyrosine kinase OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=hoxd10 PE=4 SV=3",
+      "file": "UP000008143_8364.fasta",
+      "length": 338,
+      "numeric_protein_id": 775931,
+      "sequence_sha256": "28e8d04c30b0ee8806a254db221b1728afe7092e4e7650586a1805f1246b9bd8"
+    },
+    "F6QLB4": {
+      "description": "tr|F6QLB4|F6QLB4_XENTR Nrf1_DNA-bind domain-containing protein OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=wdr83os PE=2 SV=2",
+      "file": "UP000008143_8364.fasta",
+      "length": 106,
+      "numeric_protein_id": 776081,
+      "sequence_sha256": "a38232fcfeed2df4ccac3c4c52471b5b5ad535096d6faaddc0e4310eab24bb3e"
+    },
+    "F6SX31": {
+      "description": "tr|F6SX31|F6SX31_XENTR LRRcap domain-containing protein OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=atp6v1b1 PE=4 SV=3",
+      "file": "UP000008143_8364.fasta",
+      "length": 492,
+      "numeric_protein_id": 776619,
+      "sequence_sha256": "55d159b85ef25873aaed35332e93bc8aa7424506c242e7993c823f54cd95de1d"
+    },
+    "F6YNC0": {
+      "description": "tr|F6YNC0|F6YNC0_XENTR Protein-tyrosine-phosphatase OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=aplp1 PE=3 SV=3",
+      "file": "UP000008143_8364.fasta",
+      "length": 557,
+      "numeric_protein_id": 778019,
+      "sequence_sha256": "04dbe1ef36fc156648e8d322afba5b0e378215a2e2a3fa2c89f8dcc6b1e4c144"
+    },
+    "F7AMC8": {
+      "description": "tr|F7AMC8|F7AMC8_XENTR Tetraspanin OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=nox1 PE=3 SV=3",
+      "file": "UP000008143_8364.fasta",
+      "length": 571,
+      "numeric_protein_id": 778582,
+      "sequence_sha256": "b2d327b7578a3f5aa248fd3f6f1fe33e6c3b5e51d4d2973a98a7c954a2901dc9"
+    },
+    "F7BEI0": {
+      "description": "tr|F7BEI0|F7BEI0_XENTR Homeobox C12 OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=hoxc12 PE=3 SV=3",
+      "file": "UP000008143_8364.fasta",
+      "length": 263,
+      "numeric_protein_id": 778801,
+      "sequence_sha256": "05978de4449625575b693c0768c00c3dcde49036c19c8e2eb07d1ddae86c0f46"
+    },
+    "F7CLH6": {
+      "description": "tr|F7CLH6|F7CLH6_XENTR Calsequestrin OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=nox4 PE=3 SV=3",
+      "file": "UP000008143_8364.fasta",
+      "length": 583,
+      "numeric_protein_id": 779228,
+      "sequence_sha256": "90d8e790bb21d9850e6225dd167f54c94bac08bd58fd4aa0adbe2b6b1df6cd48"
+    },
+    "F7D5A4": {
+      "description": "tr|F7D5A4|F7D5A4_XENTR Homeobox A11 OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=hoxa11 PE=4 SV=3",
+      "file": "UP000008143_8364.fasta",
+      "length": 299,
+      "numeric_protein_id": 779401,
+      "sequence_sha256": "abef774859931bacc8e0042f04048242604cdc8c63091be6cfcaafb4ebe6cd2d"
+    },
+    "F7D5I9": {
+      "description": "tr|F7D5I9|F7D5I9_XENTR Homeobox A9 OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=hoxa9 PE=4 SV=3",
+      "file": "UP000008143_8364.fasta",
+      "length": 261,
+      "numeric_protein_id": 779405,
+      "sequence_sha256": "4ad96d65d5c952123c54170e6bba43769a844fdc7fe121dc2a89164b679dcd53"
+    },
+    "F7DF67": {
+      "description": "tr|F7DF67|F7DF67_XENTR Sulfotransferase OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=aplp2 PE=3 SV=3",
+      "file": "UP000008143_8364.fasta",
+      "length": 756,
+      "numeric_protein_id": 779500,
+      "sequence_sha256": "a6c8bfd94fc1a17264e14160c5343fa0323f0fb668eea5bfb0cd3d41f65591a8"
+    },
+    "Q0VGW2": {
+      "description": "tr|Q0VGW2|Q0VGW2_XENTR Vacuolar proton pump subunit B OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=atp6v1b2 PE=2 SV=1",
+      "file": "UP000008143_8364.fasta",
+      "length": 505,
+      "numeric_protein_id": 780686,
+      "sequence_sha256": "b8f1e5a56fb492f95cd7386300966841dc4cc4e9586670ada146c14fbddfd53d"
+    },
+    "Q505H9": {
+      "description": "tr|Q505H9|Q505H9_XENTR FAD-binding FR-type domain-containing protein OS=Xenopus tropicalis (Western clawed frog) (Silurana tropicalis) OX=8364 GN=cybb PE=2 SV=1",
+      "file": "UP000008143_8364.fasta",
+      "length": 570,
+      "numeric_protein_id": 781274,
+      "sequence_sha256": "345cf5c2215405554c067a1ada7597d10593464e3d338947f19e45e16acc8cdf"
+    }
+  },
+  "remaining_missing_accessions": [],
+  "sequences": 984137,
+  "source": {
+    "bytes": 7336,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_corrected_archive_audit_v1/benchmark_tools/compare_qfo_corrected_archive.py",
+    "sha256": "4fbe8fce1d5ed7f687df43a57ab40afa585eb34350a2af06a4b2cea24088827b"
+  },
+  "status": "qfo_canonical_archive_compared",
+  "unique_mapped_numeric_ids": 984137,
+  "unmapped_accessions": 0
+}

@@ -23,7 +23,8 @@ def reports():
                   "canonical_files": files, "canonical_proteomes": 78, "changed_canonical_files": [XENOPUS],
                   "sequences": REFERENCE_COUNT, "unique_mapped_numeric_ids": REFERENCE_COUNT,
                   "unmapped_accessions": 0, "mapping_numeric_identity_count": REFERENCE_COUNT,
-                  "mapping_numeric_ids_without_canonical_accession": [], "missing_numeric_ids_by_species": {},
+                  "mapping_numeric_ids_without_canonical_accession": [],
+                  "missing_numeric_ids_by_species": {f"species_{i}": 0 for i in range(78)},
                   "gzip_read_to_eof": True, "remaining_missing_accessions": [],
                   "recovered_missing_reference_accessions": {str(i): {"numeric_protein_id": i + 1} for i in range(14)}}
     native = {"native_entries": REFERENCE_COUNT, "mapped_input_sequences": REFERENCE_COUNT,
@@ -39,6 +40,23 @@ def reports():
 def test_compatible_reports():
     c, s, names, missing = reports()
     assert validate_reports(c, s, names, missing) == c["canonical_files"]
+
+
+@pytest.mark.parametrize("value", [1, -1, False, "0", None])
+def test_invalid_per_species_missing_count(value):
+    c, s, names, missing = reports()
+    c["missing_numeric_ids_by_species"]["species_0"] = value
+    s["archive_comparison"]["missing_numeric_ids_by_species"]["species_0"] = value
+    with pytest.raises(ValueError, match="per-species missing"):
+        validate_reports(c, s, names, missing)
+
+
+def test_empty_missing_count_dictionary_is_not_full_inventory():
+    c, s, names, missing = reports()
+    c["missing_numeric_ids_by_species"] = {}
+    s["archive_comparison"]["missing_numeric_ids_by_species"] = {}
+    with pytest.raises(ValueError, match="per-species missing"):
+        validate_reports(c, s, names, missing)
 
 
 def test_representation_match_is_not_exact():

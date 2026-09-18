@@ -47,11 +47,15 @@ def validate_reports(comparison, sequences, expected_names, missing_accessions):
             "Release changes extend beyond expected Xenopus correction")
     require(comparison["gzip_read_to_eof"] is True and sequences["inputs_modified"] is False,
             "Incomplete archive or modified source")
+    missing_counts = comparison["missing_numeric_ids_by_species"]
+    require(isinstance(missing_counts, dict) and len(missing_counts) == 78 and
+            all(isinstance(name, str) and name and type(count) is int and count == 0
+                for name, count in missing_counts.items()), "Invalid or nonzero per-species missing counts")
     require(all(comparison[k] == REFERENCE_COUNT for k in
                 ("sequences", "unique_mapped_numeric_ids", "mapping_numeric_identity_count")) and
             comparison["unmapped_accessions"] == 0 and
             not comparison["mapping_numeric_ids_without_canonical_accession"] and
-            not comparison["missing_numeric_ids_by_species"] and sequences["complete_mapping_coverage"] is True,
+            sequences["complete_mapping_coverage"] is True,
             "Incomplete reference mapping coverage")
     require(sum(r["sequences"] for r in files.values()) == REFERENCE_COUNT and
             all(r["sequences"] == r["mapped_accessions"] > 0 and not r["unmapped_accessions"]

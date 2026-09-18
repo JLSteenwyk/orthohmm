@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Corrected Archive Acquired And Canonical Mapping Verified (2026-09-18 UTC)
+
+Previous turn progressed through86fa3b3unexpanded pair audit. Re-read full
+objective and polled exact existing handles through acquisition completion;
+no download restart. Job21687completed0:0in1:46:26, full2,648,666,198bytes,
+localSHA29a0f54e4af7d6bdbfe28923efd2f3633e844b0c49b0a9e13d2b08f6a2d66009
+independently rechecked. Comparison21688completed0:0in1:47: all78canonical
+files, onlyXenopus changed,984,137unique mapped IDs, zero missing/unmapped,
+all14SwissTrees accessions recovered, gzipEOF verified. Retained reportSHA
+72cd351a835ee445a64388c2e292919d8d6b70b79afe48e6c2d696dde5f37ba6.
+
+Empirical report exposed a stager fixture/schema bug: zero missing counts
+are represented as a78-species dictionary, not{}. Corrected the predicate to
+require78integer-zero counts; six new rejection tests preserve the no-missing
+criterion. All59staging/archive/inventory tests pass. No method/default or
+score changed. See `QFO_CORRECTED_ARCHIVE_ACQUIRED_20260918.md` for provenance.
+Native sequence compatibility21689confirmedrunning1:03; do not stage or
+authorize corrected inference until that report is reviewed. Original scores
+and jobs remain intact; publication readiness remains unproven.
+
 ## Unexpanded Recorded-Event Audit (2026-09-18 UTC)
 
 Previous turn progressed with 9d8ed0f, the expanded-cell sample audit.
