@@ -8262,3 +8262,25 @@ Latest queue check: corrected HMM 21706_0 RUNNING at 6:02:15; DGX 21656_22
 RUNNING at 9:22. Corrected FastOMA remains dependency-pending. Corrected
 all-method results, uncertainty, timing admission and final packaging remain
 unfinished; no unrelated jobs were altered.
+
+### FastOMA Task-Chain Validation Added (2026-09-18)
+
+Previous turn made progress by auditing complete historical FastOMA XML and
+pair membership. This turn adds strict fresh-run trace validation for fixed
+processes, exact proteome query scope, complete HOG batch scope, zero task exit
+codes and pinned Docker wrappers. Failed/cached/retried traces require explicit
+review rather than automatic acceptance. The native workflow's retry policy is
+unchanged, and no failure evidence is discarded.
+
+All 84 focused tests passed. The task inspector also passed against the actual
+one-CPU/256-MiB clean-environment probe task, with checked artifacts retained in
+`fastoma_task_inspector_probe_20260918.json`. See
+`FASTOMA_TASK_VALIDATION_20260918.md` for the distinction between this probe,
+synthetic full-chain tests and the pending biological run. The complete corrected
+native admission driver still needs to bind execution/scheduler provenance,
+published output inventory and XML/pair content checks before scoring.
+
+Latest live check: corrected HMM 21706_0 RUNNING at 6:10:00; DGX 21656_22
+RUNNING at 17:07; corrected FastOMA 21740 dependency-pending. Corrected all-method
+results, uncertainty, dedicated timing admission and final publication packaging
+remain unfinished. No unrelated jobs were stopped or modified.

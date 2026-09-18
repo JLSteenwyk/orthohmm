@@ -1,0 +1,44 @@
+{
+  "accuracy_evaluated": false,
+  "full_fastoma_trace_validated": false,
+  "script_argv": [
+    "python3",
+    "-c",
+    "import json; from pathlib import Path; p=Path(\"/sys/fs/cgroup\"); print(json.dumps({\"cpu_max\":(p/\"cpu.max\").read_text().strip(),\"memory_max\":(p/\"memory.max\").read_text().strip()}))"
+  ],
+  "source": {
+    "bytes": 6666,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_fastoma_tasks.py",
+    "sha256": "1dff594170506aecddc2a164a003a6e28f375dd7bd359f4514f6e51ff25f11dd"
+  },
+  "status": "real_probe_task_artifacts_verified",
+  "task": {
+    "directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastoma_clean_launch_probe_20260918/work/31/f6edec780ccfe90be62aeae41ac389",
+    "files": [
+      {
+        "bytes": 219,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastoma_clean_launch_probe_20260918/work/31/f6edec780ccfe90be62aeae41ac389/.command.sh",
+        "sha256": "75a3473ce2d92d19c12227e6bf3bb339e53de6f61fde8a208546a2670f2bd55d"
+      },
+      {
+        "bytes": 11196,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastoma_clean_launch_probe_20260918/work/31/f6edec780ccfe90be62aeae41ac389/.command.run",
+        "sha256": "78b9a373c3b0f0e1b6182ab40d5b912f3e253ce303c7065ec90c50a03d4eac69"
+      },
+      {
+        "bytes": 1,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastoma_clean_launch_probe_20260918/work/31/f6edec780ccfe90be62aeae41ac389/.exitcode",
+        "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+      },
+      {
+        "bytes": 56,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/fastoma_clean_launch_probe_20260918/work/31/f6edec780ccfe90be62aeae41ac389/.command.log",
+        "sha256": "b55d17ed46e86918abc5ee4e661b5e6e442f2d5f7b8c25b8af25876e832fdb47"
+      }
+    ],
+    "limits": {
+      "cpus": 1.0,
+      "memory_bytes": 268435456
+    }
+  }
+}
