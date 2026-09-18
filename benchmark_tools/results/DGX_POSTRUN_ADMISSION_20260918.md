@@ -15,7 +15,7 @@ Post-run evidence transfer and validation can now proceed; no rerun started.
 
 `dgx_scheduler_progress_20260918.json` retains a timestamped `sacct`
 snapshot for all 27 tasks in array21656. Tasks0-25 are COMPLETED with
-exit0:0; task26 remains RUNNING. An independent parse verified unique
+exit0:0; task26 was RUNNING at that observation. An independent parse verified unique
 indices0-26,20 allocated CPUs,96GiB requested memory and spark-7ff0 for
 every row, and no overlap between adjacent scheduler start/end intervals.
 This is scheduler evidence, not admission of native output or resource data.
@@ -49,8 +49,8 @@ payload-hash and host-replay checks for all27 runs. All27 host summaries
 remain inconclusive:1,908 unmatched identity events across1,078 inconclusive
 intervals. The other1,055 intervals report no large persistent competitor,
 not proof of no competition.1,710 unmatched events are kworker-named, not
-authenticated kernel threads. Native outputs and resource-accounting replay
-remain unvalidated; no scientific timings have been admitted.
+authenticated kernel threads. Native output validation remains pending;
+resource replay is described below. No scientific timings have been admitted.
 
 After the final task is authoritatively terminal:
 
@@ -62,6 +62,21 @@ Cgroup CPU minus GNU-time native CPU ranges3.971678..90.840824seconds;
 these quantities have different scopes and no fitted correction is applied.
 This completes the arithmetic/clock replay, not resource or scientific timing
 admission. Native output validation and host-isolation disposition remain.
+
+Observation-gap taxonomy: dgx_observation_gaps_20260918.json distinguishes
+4,706 affected resource samples from18,695 process-read error events:
+18,627 NoSuchProcess,44 ValueError,15 FileNotFoundError and9 ProcessLookupError.
+Affected samples by method are high-sensitivity OrthoHMM0/21,858,
+phylogenetic OrthoHMM3,868/26,999, and OrthoFinder838/14,588. Run18 has an
+error at its recorded aggregate-RSS maximum; absence of an error at other
+sampled maxima does not bound missed transient peaks. Do not publish an
+unqualified cross-method sampled-RSS ranking from these observations.
+The198 non-kworker-named unmatched host events include services and shell/
+Python/SSH processes; their names do not establish benign impact. Persistent
+foreign-load maxima are below the original0.25-core threshold (maximum
+0.211151), but this is not an upper bound on unmatched/unsampled activity.
+All original classifications and thresholds remain unchanged. No automatic
+rerun or selective inclusion decision has been made from method rankings.
 
 1. Preserve all27 original outputs, metadata, raw host/resource samples and
    accounting. Transfer evidence only after the timing sequence finishes;

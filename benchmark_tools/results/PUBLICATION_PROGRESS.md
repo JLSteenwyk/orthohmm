@@ -1,5 +1,32 @@
 # Publication Progress
 
+## DGX Observation Gaps Characterized (2026-09-18 UTC)
+
+Previous turn progressed through084c974: complete archive and native audit
+21794 launched. Revalidated21794 RUNNING4:38; no restart or output admission.
+Added summarize_dgx_observation_gaps.py, checking retained raw-file hashes
+and reproduced sample counts while classifying process-read errors separately
+from host identity gaps.23 focused tests pass in0.18s. Generated
+dgx_observation_gaps_20260918.json without changing any timing threshold or
+eligibility classification.
+
+4,706 affected samples contain18,695 error events:18,627 NoSuchProcess,
+44 ValueError,15 FileNotFoundError,9 ProcessLookupError. Method asymmetry:
+high-sensitivity OrthoHMM0/21,858 affected observations, phylogenetic
+OrthoHMM3,868/26,999, full OrthoFinder838/14,588. Run18 has an error at its
+recorded aggregate-RSS maximum. Therefore an unqualified sampled-RSS ranking
+would be unsupported; other error-free sampled maxima do not exclude missed
+between-sample peaks. Cgroup and GNU-time statistics remain separate.
+
+Maximum observed persistent foreign load across the panel is0.211151 cores,
+below the fixed0.25-core threshold, but unmatched/unsampled work is unbounded
+by that value.198 of1,908 unmatched identity events have non-kworker names,
+including user-space services and shell/Python/SSH processes. Their names
+do not prove benign activity. All27 host assessments stay inconclusive.
+Updated manuscript limitations and post-run status with this evidence;
+no reruns or timing inclusion choices were selected from relative performance.
+Native validation and defensible resource disposition remain open.
+
 ## DGX Native Archive And Validation Submitted (2026-09-18 UTC)
 
 Previous turn progressed throughf1b3b1e with all27 resource-accounting

@@ -960,6 +960,28 @@ observed, so exclusive Slurm allocation alone cannot establish controlled
 CPU conditions. GNU-time maximum RSS and simultaneous process-tree RSS
 must not be pooled as if they were the same measurement.
 
+A subsequent dedicated ARM DGX panel completed 27 sequential runs at
+20 CPUs and 96 GiB per allocation. Retained metadata and host-monitor
+streams replayed successfully for all runs, as did the resource summaries
+from 63,445 observations. However, all host assessments remained
+inconclusive. The maximum observed persistent foreign load was 0.2112 CPU
+cores, below the fixed 0.25-core monitor threshold, but this does not bound
+unmatched or entirely unsampled work. Of 1,908 unmatched identity events,
+1,710 were kworker-named; names were not treated as kernel authentication.
+
+Process-read gaps were method-dependent: 838 affected samples for full
+OrthoFinder, 3,868 for phylogenetic OrthoHMM, and none for high-sensitivity
+OrthoHMM. These 4,706 samples contained 18,695 error events, mostly
+NoSuchProcess (18,627). One OrthoFinder run had a process-read error at
+its recorded aggregate-RSS maximum. Error-free sampled maxima in other
+runs do not exclude missed between-sample peaks. Consequently, sampled
+aggregate RSS does not support an unqualified cross-method memory ranking.
+Cgroup memory and GNU-time maximum process RSS retain their distinct scopes.
+Native-output validation is still running; this panel does not yet support
+a controlled-workload speed claim.
+[DGX observation-gap audit](dgx_observation_gaps_20260918.json),
+[post-run validation status](DGX_POSTRUN_ADMISSION_20260918.md).
+
 ### SwissTrees Comparator Uncertainty
 
 For all eight retained historical comparison outputs, raw SwissTrees counts

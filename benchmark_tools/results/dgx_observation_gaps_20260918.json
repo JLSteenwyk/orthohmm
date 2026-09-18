@@ -1,0 +1,1028 @@
+{
+  "inputs": [
+    {
+      "bytes": 512413,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/dgx_completed_panel_review_20260918.json",
+      "sha256": "5a3039c9d8826250fe6afd43835195a5a2a04f668b6ef9c489f606310a14d03d"
+    },
+    {
+      "bytes": 128575,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/dgx_resource_replay_20260918.json",
+      "sha256": "b9470bd02b319fec101f2b56362a959af76aa5ec7e321577e0feef6438f6ace7"
+    }
+  ],
+  "limitations": [
+    "NoSuchProcess records a process-read failure, not its unobserved RSS or CPU consumption.",
+    "No error at the sampled maximum does not rule out missing between-sample peaks.",
+    "Process names neither authenticate kernel threads nor establish benign user-space work.",
+    "Persistent foreign CPU below threshold does not bound unmatched or entirely unsampled work.",
+    "No original status, threshold, value, or timing inclusion rule has been changed."
+  ],
+  "raw_sources": [
+    {
+      "bytes": 3712227,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_00/measurement/samples.jsonl",
+      "sha256": "e6ecdb5f69254658e3f5470890499e15ec9af7d9511016bff8b920a1fd1e904b"
+    },
+    {
+      "bytes": 6296242,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_01/measurement/samples.jsonl",
+      "sha256": "7cacfed0998705927592e8cac37abeeee617a61f725fe7f69a1b30311ecea749"
+    },
+    {
+      "bytes": 5102524,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_02/measurement/samples.jsonl",
+      "sha256": "51755ec27cf89fb5740c912c0d079d59cafc47210f1a80b60a58dff50e29d222"
+    },
+    {
+      "bytes": 19655477,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_03/measurement/samples.jsonl",
+      "sha256": "b35b8aed87ac0fdefdeb841adf671023dc7ee40ab436f956d9c3384887b40f84"
+    },
+    {
+      "bytes": 16183868,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_04/measurement/samples.jsonl",
+      "sha256": "3a59a3cfb0463a1f12ccb639a9a02705a2a91f26d15240dae9d1910996295b24"
+    },
+    {
+      "bytes": 14028452,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_05/measurement/samples.jsonl",
+      "sha256": "e2ce05d16378e9ecdc44dff27a25245fe80de8bf18a45c08c8980c3685d7cf54"
+    },
+    {
+      "bytes": 33587045,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_06/measurement/samples.jsonl",
+      "sha256": "341b323ecc564cec93fbe21b8d00d75dd7f0cad17a1c1596e5106c908891f556"
+    },
+    {
+      "bytes": 30797605,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_07/measurement/samples.jsonl",
+      "sha256": "64b6c822d5c2ab9d422f02b0060b7588d282554278930c6f6b1ac19de1e16410"
+    },
+    {
+      "bytes": 41890329,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_08/measurement/samples.jsonl",
+      "sha256": "27765dc7ab41ee003441299bb5aa833ec85c9be133da5b0121fa989323e13dcf"
+    },
+    {
+      "bytes": 6352206,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_09/measurement/samples.jsonl",
+      "sha256": "7b1c22e6e2bdb8ea7e52cc0282f59c7271187bdc753612158fc62c618f2e562b"
+    },
+    {
+      "bytes": 5118685,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_10/measurement/samples.jsonl",
+      "sha256": "7c9ca2b4955c6018800311c1d68b6674ea98f937fff50c116cfa2d22bc867888"
+    },
+    {
+      "bytes": 3665900,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_11/measurement/samples.jsonl",
+      "sha256": "583ea7e8799bf61ea295be881ee08ce441d64ef10d7f5d1151b61882ec9cbe3b"
+    },
+    {
+      "bytes": 16121755,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_12/measurement/samples.jsonl",
+      "sha256": "919f0096cc851d1861fd0ddf0fe894027bcd8428d3c422be7e6790d675ca22b0"
+    },
+    {
+      "bytes": 13785077,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_13/measurement/samples.jsonl",
+      "sha256": "94ff140ce8a814e631332d18113f02f87c2c1406b08811b965d5d9aa5d4cb3f4"
+    },
+    {
+      "bytes": 19651079,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_14/measurement/samples.jsonl",
+      "sha256": "55f77e1b5f3f15d2ee076a3eb32a07b3dad3d6b7b9eaad174e3a54f06bc1ccde"
+    },
+    {
+      "bytes": 30749929,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_15/measurement/samples.jsonl",
+      "sha256": "d76582ce29835a2324edfe1a975a4a1e2094f3fea401b416b35cf08673cb9f65"
+    },
+    {
+      "bytes": 41645980,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_16/measurement/samples.jsonl",
+      "sha256": "1c6078d147a435226b9d175ebccb89b8e90b458e71b006897e2647bb5d11d759"
+    },
+    {
+      "bytes": 33461646,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_17/measurement/samples.jsonl",
+      "sha256": "b9f33631f64150e1b72e435f893ccf90eeeab9c5c3f9f076ce584553688830ac"
+    },
+    {
+      "bytes": 5118927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_18/measurement/samples.jsonl",
+      "sha256": "d5ad130d861953cdfd37a7ec46f5bf8f936b8a8af699fa629644cc0c528a9e96"
+    },
+    {
+      "bytes": 3693125,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_19/measurement/samples.jsonl",
+      "sha256": "e43570e7fef6a8e4de2ca9ec2ff6f4dab13efb220d069eadf2546eb8d1050711"
+    },
+    {
+      "bytes": 6216638,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_20/measurement/samples.jsonl",
+      "sha256": "8e5ad8ac1fca7231464b4b355e654497d8dae24eacca369432dff6de97d480b0"
+    },
+    {
+      "bytes": 13781551,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_21/measurement/samples.jsonl",
+      "sha256": "53001e6a43caa82d3608d4e3855b6a419a1e0ab5e807c38fbf75b6bc5584ab3c"
+    },
+    {
+      "bytes": 19597799,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_22/measurement/samples.jsonl",
+      "sha256": "5c47163c7629dbcf99eda33741fdbe653cb48e66cdee6cc9f2f0bbf4e1fd63d1"
+    },
+    {
+      "bytes": 16067257,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_23/measurement/samples.jsonl",
+      "sha256": "bcb2d3261e27368be8c74462fee87fcf8ecb460068be5f926c824e91fed8848f"
+    },
+    {
+      "bytes": 41607468,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_24/measurement/samples.jsonl",
+      "sha256": "14fe32a89085301750bd92506441ef3ebb5a0190714a34efcefeab77ffacf6f6"
+    },
+    {
+      "bytes": 33360731,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_25/measurement/samples.jsonl",
+      "sha256": "c1590e902325bbe35982bd63b2ed7763da99898ce9d7300a9cc3fbf4748f6659"
+    },
+    {
+      "bytes": 30456443,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_26/measurement/samples.jsonl",
+      "sha256": "72c92a8383076bb6505644b4eaa87aebbbfe38a9b825edee19ee59aeb1368cd6"
+    }
+  ],
+  "resource_error_event_types": {
+    "FileNotFoundError": 15,
+    "NoSuchProcess": 18627,
+    "ProcessLookupError": 9,
+    "ValueError": 44
+  },
+  "runs": [
+    {
+      "command_bracketed": true,
+      "fixed_monitor_core_threshold": 0.25,
+      "host_observation_errors": 0,
+      "host_snapshot_errors": {},
+      "host_status": "inconclusive",
+      "index": 0,
+      "kworker_named_events": 22,
+      "method": "orthohmm_high_sensitivity",
+      "observed_persistent_foreign_core_maximum": 0.007533971768562335,
+      "proteomes": 4,
+      "repeat": 0,
+      "resource_errors": {
+        "error_events": 0,
+        "error_samples": 0,
+        "error_samples_at_recorded_rss_maximum": 0,
+        "error_types": {},
+        "fraction_of_samples_with_errors": 0.0,
+        "observations": 555
+      },
+      "scientific_timing_admitted": false,
+      "unmatched_identity_events": 22,
+      "unmatched_non_kworker_names": {}
+    },
+    {
+      "command_bracketed": true,
+      "fixed_monitor_core_threshold": 0.25,
+      "host_observation_errors": 0,
+      "host_snapshot_errors": {
+        "NoSuchProcess": 96
+      },
+      "host_status": "inconclusive",
+      "index": 1,
+      "kworker_named_events": 34,
+      "method": "orthohmm_satellite_v2",
+      "observed_persistent_foreign_core_maximum": 0.16442578938457195,
+      "proteomes": 4,
+      "repeat": 0,
+      "resource_errors": {
+        "error_events": 1070,
+        "error_samples": 168,
+        "error_samples_at_recorded_rss_maximum": 0,
+        "error_types": {
+          "NoSuchProcess": 1069,
+          "ValueError": 1
+        },
+        "fraction_of_samples_with_errors": 0.20689655172413793,
+        "observations": 812
+      },
+      "scientific_timing_admitted": false,
+      "unmatched_identity_events": 52,
+      "unmatched_non_kworker_names": {
+        "(sd-pam)": 2,
+        "dbus-daemon": 2,
+        "pipewire": 4,
+        "pipewire-pulse": 2,
+        "sshd": 4,
+        "systemd": 2,
+        "wireplumber": 2
+      }
+    },
+    {
+      "command_bracketed": true,
+      "fixed_monitor_core_threshold": 0.25,
+      "host_observation_errors": 0,
+      "host_snapshot_errors": {
+        "NoSuchProcess": 40
+      },
+      "host_status": "inconclusive",
+      "index": 2,
+      "kworker_named_events": 29,
+      "method": "orthofinder_full",
+      "observed_persistent_foreign_core_maximum": 0.0485636900783815,
+      "proteomes": 4,
+      "repeat": 0,
+      "resource_errors": {
+        "error_events": 175,
+        "error_samples": 45,
+        "error_samples_at_recorded_rss_maximum": 0,
+        "error_types": {
+          "NoSuchProcess": 175
+        },
+        "fraction_of_samples_with_errors": 0.0734094616639478,
+        "observations": 613
+      },
+      "scientific_timing_admitted": false,
+      "unmatched_identity_events": 38,
+      "unmatched_non_kworker_names": {
+        "(sd-pam)": 1,
+        "dbus-daemon": 1,
+        "pipewire": 2,
+        "pipewire-pulse": 1,
+        "sshd": 2,
+        "systemd": 1,
+        "wireplumber": 1
+      }
+    },
+    {
+      "command_bracketed": true,
+      "fixed_monitor_core_threshold": 0.25,
+      "host_observation_errors": 0,
+      "host_snapshot_errors": {
+        "NoSuchProcess": 159
+      },
+      "host_status": "inconclusive",
+      "index": 3,
+      "kworker_named_events": 72,
+      "method": "orthohmm_satellite_v2",
+      "observed_persistent_foreign_core_maximum": 0.17962544805753808,
+      "proteomes": 8,
+      "repeat": 0,
+      "resource_errors": {
+        "error_events": 1883,
+        "error_samples": 426,
+        "error_samples_at_recorded_rss_maximum": 0,
+        "error_types": {
+          "FileNotFoundError": 2,
+          "NoSuchProcess": 1880,
+          "ProcessLookupError": 1
+        },
+        "fraction_of_samples_with_errors": 0.16435185185185186,
+        "observations": 2592
+      },
+      "scientific_timing_admitted": false,
+      "unmatched_identity_events": 81,
+      "unmatched_non_kworker_names": {
+        "(sd-pam)": 1,
+        "dbus-daemon": 1,
+        "pipewire": 2,
+        "pipewire-pulse": 1,
+        "sshd": 2,
+        "systemd": 1,
+        "wireplumber": 1
+      }
+    },
+    {
+      "command_bracketed": true,
+      "fixed_monitor_core_threshold": 0.25,
+      "host_observation_errors": 0,
+      "host_snapshot_errors": {
+        "NoSuchProcess": 111
+      },
+      "host_status": "inconclusive",
+      "index": 4,
+      "kworker_named_events": 45,
+      "method": "orthofinder_full",
+      "observed_persistent_foreign_core_maximum": 0.037408994904508684,
+      "proteomes": 8,
+      "repeat": 0,
+      "resource_errors": {
+        "error_events": 296,
+        "error_samples": 102,
+        "error_samples_at_recorded_rss_maximum": 0,
+        "error_types": {
+          "NoSuchProcess": 293,
+          "ValueError": 3
+        },
+        "fraction_of_samples_with_errors": 0.06750496360026473,
+        "observations": 1511
+      },
+      "scientific_timing_admitted": false,
+      "unmatched_identity_events": 54,
+      "unmatched_non_kworker_names": {
+        "(sd-pam)": 1,
+        "dbus-daemon": 1,
+        "pipewire": 2,
+        "pipewire-pulse": 1,
+        "sshd": 2,
+        "systemd": 1,
+        "wireplumber": 1
+      }
+    },
+    {
+      "command_bracketed": true,
+      "fixed_monitor_core_threshold": 0.25,
+      "host_observation_errors": 0,
+      "host_snapshot_errors": {
+        "NoSuchProcess": 5
+      },
+      "host_status": "inconclusive",
+      "index": 5,
+      "kworker_named_events": 64,
+      "method": "orthohmm_high_sensitivity",
+      "observed_persistent_foreign_core_maximum": 0.01555764392138741,
+      "proteomes": 8,
+      "repeat": 0,
+      "resource_errors": {
+        "error_events": 0,
+        "error_samples": 0,
+        "error_samples_at_recorded_rss_maximum": 0,
+        "error_types": {},
+        "fraction_of_samples_with_errors": 0.0,
+        "observations": 2114
+      },
+      "scientific_timing_admitted": false,
+      "unmatched_identity_events": 86,
+      "unmatched_non_kworker_names": {
+        "(sd-pam)": 2,
+        "apt-helper": 2,
+        "dbus-daemon": 2,
+        "pipewire": 4,
+        "pipewire-pulse": 2,
+        "sshd": 4,
+        "systemd": 2,
+        "systemd-networkd-wait-online": 2,
+        "wireplumber": 2
+      }
+    },
+    {
+      "command_bracketed": true,
+      "fixed_monitor_core_threshold": 0.25,
+      "host_observation_errors": 0,
+      "host_snapshot_errors": {
+        "NoSuchProcess": 177
+      },
+      "host_status": "inconclusive",
+      "index": 6,
+      "kworker_named_events": 102,
+      "method": "orthofinder_full",
+      "observed_persistent_foreign_core_maximum": 0.042404439062832304,
+      "proteomes": 12,
+      "repeat": 0,
+      "resource_errors": {
+        "error_events": 309,
+        "error_samples": 124,
+        "error_samples_at_recorded_rss_maximum": 0,
+        "error_types": {
+          "FileNotFoundError": 1,
+          "NoSuchProcess": 304,
+          "ProcessLookupError": 1,
+          "ValueError": 3
+        },
+        "fraction_of_samples_with_errors": 0.04512372634643377,
+        "observations": 2748
+      },
+      "scientific_timing_admitted": false,
+      "unmatched_identity_events": 140,
+      "unmatched_non_kworker_names": {
+        "(sd-pam)": 4,
+        "dbus-daemon": 4,
+        "nm-dispatcher": 2,
+        "pipewire": 8,
+        "pipewire-pulse": 4,
+        "sshd": 8,
+        "systemd": 4,
+        "wireplumber": 4
+      }
+    },
+    {
+      "command_bracketed": true,
+      "fixed_monitor_core_threshold": 0.25,
+      "host_observation_errors": 0,
+      "host_snapshot_errors": {},
+      "host_status": "inconclusive",
+      "index": 7,
+      "kworker_named_events": 119,
+      "method": "orthohmm_high_sensitivity",
+      "observed_persistent_foreign_core_maximum": 0.010337417133257733,
+      "proteomes": 12,
+      "repeat": 0,
+      "resource_errors": {
+        "error_events": 0,
+        "error_samples": 0,
+        "error_samples_at_recorded_rss_maximum": 0,
+        "error_types": {},
+        "fraction_of_samples_with_errors": 0.0,
+        "observations": 4661
+      },
+      "scientific_timing_admitted": false,
+      "unmatched_identity_events": 137,
+      "unmatched_non_kworker_names": {
+        "(sd-pam)": 2,
+        "dbus-daemon": 2,
+        "pipewire": 4,
+        "pipewire-pulse": 2,
+        "sshd": 4,
+        "systemd": 2,
+        "wireplumber": 2
+      }
+    },
+    {
+      "command_bracketed": true,
+      "fixed_monitor_core_threshold": 0.25,
+      "host_observation_errors": 0,
+      "host_snapshot_errors": {
+        "NoSuchProcess": 197
+      },
+      "host_status": "inconclusive",
+      "index": 8,
+      "kworker_named_events": 154,
+      "method": "orthohmm_satellite_v2",
+      "observed_persistent_foreign_core_maximum": 0.20070493587876712,
+      "proteomes": 12,
+      "repeat": 0,
+      "resource_errors": {
+        "error_events": 2384,
+        "error_samples": 675,
+        "error_samples_at_recorded_rss_maximum": 0,
+        "error_types": {
+          "FileNotFoundError": 1,
+          "NoSuchProcess": 2380,
+          "ProcessLookupError": 2,
+          "ValueError": 1
+        },
+        "fraction_of_samples_with_errors": 0.12004268184243287,
+        "observations": 5623
+      },
+      "scientific_timing_admitted": false,
+      "unmatched_identity_events": 192,
+      "unmatched_non_kworker_names": {
+        "(sd-pam)": 4,
+        "dbus-daemon": 4,
+        "nm-dispatcher": 2,
+        "pipewire": 8,
+        "pipewire-pulse": 4,
+        "sshd": 8,
+        "systemd": 4,
+        "wireplumber": 4
+      }
+    },
+    {
+      "command_bracketed": true,
+      "fixed_monitor_core_threshold": 0.25,
+      "host_observation_errors": 0,
+      "host_snapshot_errors": {
+        "NoSuchProcess": 73
+      },
+      "host_status": "inconclusive",
+      "index": 9,
+      "kworker_named_events": 28,
+      "method": "orthohmm_satellite_v2",
+      "observed_persistent_foreign_core_maximum": 0.1831890791364032,
+      "proteomes": 4,
+      "repeat": 1,
+      "resource_errors": {
+        "error_events": 1097,
+        "error_samples": 169,
+        "error_samples_at_recorded_rss_maximum": 0,
+        "error_types": {
+          "FileNotFoundError": 1,
+          "NoSuchProcess": 1095,
+          "ValueError": 1
+        },
+        "fraction_of_samples_with_errors": 0.20660146699266504,
+        "observations": 818
+      },
+      "scientific_timing_admitted": false,
+      "unmatched_identity_events": 28,
+      "unmatched_non_kworker_names": {}
+    },
+    {
+      "command_bracketed": true,
+      "fixed_monitor_core_threshold": 0.25,
+      "host_observation_errors": 0,
+      "host_snapshot_errors": {
+        "NoSuchProcess": 71
+      },
+      "host_status": "inconclusive",
+      "index": 10,
+      "kworker_named_events": 20,
+      "method": "orthofinder_full",
+      "observed_persistent_foreign_core_maximum": 0.05045958468467883,
+      "proteomes": 4,
+      "repeat": 1,
+      "resource_errors": {
+        "error_events": 168,
+        "error_samples": 44,
+        "error_samples_at_recorded_rss_maximum": 0,
+        "error_types": {
+          "NoSuchProcess": 164,
+          "ValueError": 4
+        },
+        "fraction_of_samples_with_errors": 0.07154471544715447,
+        "observations": 615
+      },
+      "scientific_timing_admitted": false,
+      "unmatched_identity_events": 20,
+      "unmatched_non_kworker_names": {}
+    },
+    {
+      "command_bracketed": true,
+      "fixed_monitor_core_threshold": 0.25,
+      "host_observation_errors": 0,
+      "host_snapshot_errors": {},
+      "host_status": "inconclusive",
+      "index": 11,
+      "kworker_named_events": 15,
+      "method": "orthohmm_high_sensitivity",
+      "observed_persistent_foreign_core_maximum": 0.07171323979708444,
+      "proteomes": 4,
+      "repeat": 1,
+      "resource_errors": {
+        "error_events": 0,
+        "error_samples": 0,
+        "error_samples_at_recorded_rss_maximum": 0,
+        "error_types": {},
+        "fraction_of_samples_with_errors": 0.0,
+        "observations": 547
+      },
+      "scientific_timing_admitted": false,
+      "unmatched_identity_events": 15,
+      "unmatched_non_kworker_names": {}
+    },
+    {
+      "command_bracketed": true,
+      "fixed_monitor_core_threshold": 0.25,
+      "host_observation_errors": 0,
+      "host_snapshot_errors": {
+        "NoSuchProcess": 114
+      },
+      "host_status": "inconclusive",
+      "index": 12,
+      "kworker_named_events": 52,
+      "method": "orthofinder_full",
+      "observed_persistent_foreign_core_maximum": 0.04163448967322775,
+      "proteomes": 8,
+      "repeat": 1,
+      "resource_errors": {
+        "error_events": 275,
+        "error_samples": 103,
+        "error_samples_at_recorded_rss_maximum": 0,
+        "error_types": {
+          "FileNotFoundError": 2,
+          "NoSuchProcess": 269,
+          "ProcessLookupError": 1,
+          "ValueError": 3
+        },
+        "fraction_of_samples_with_errors": 0.06866666666666667,
+        "observations": 1500
+      },
+      "scientific_timing_admitted": false,
+      "unmatched_identity_events": 52,
+      "unmatched_non_kworker_names": {}
+    },
+    {
+      "command_bracketed": true,
+      "fixed_monitor_core_threshold": 0.25,
+      "host_observation_errors": 0,
+      "host_snapshot_errors": {
+        "NoSuchProcess": 5
+      },
+      "host_status": "inconclusive",
+      "index": 13,
+      "kworker_named_events": 44,
+      "method": "orthohmm_high_sensitivity",
+      "observed_persistent_foreign_core_maximum": 0.013309109009308633,
+      "proteomes": 8,
+      "repeat": 1,
+      "resource_errors": {
+        "error_events": 0,
+        "error_samples": 0,
+        "error_samples_at_recorded_rss_maximum": 0,
+        "error_types": {},
+        "fraction_of_samples_with_errors": 0.0,
+        "observations": 2077
+      },
+      "scientific_timing_admitted": false,
+      "unmatched_identity_events": 44,
+      "unmatched_non_kworker_names": {}
+    },
+    {
+      "command_bracketed": true,
+      "fixed_monitor_core_threshold": 0.25,
+      "host_observation_errors": 0,
+      "host_snapshot_errors": {
+        "NoSuchProcess": 158
+      },
+      "host_status": "inconclusive",
+      "index": 14,
+      "kworker_named_events": 74,
+      "method": "orthohmm_satellite_v2",
+      "observed_persistent_foreign_core_maximum": 0.18281521861897926,
+      "proteomes": 8,
+      "repeat": 1,
+      "resource_errors": {
+        "error_events": 1971,
+        "error_samples": 430,
+        "error_samples_at_recorded_rss_maximum": 0,
+        "error_types": {
+          "NoSuchProcess": 1966,
+          "ValueError": 5
+        },
+        "fraction_of_samples_with_errors": 0.16602316602316602,
+        "observations": 2590
+      },
+      "scientific_timing_admitted": false,
+      "unmatched_identity_events": 74,
+      "unmatched_non_kworker_names": {}
+    },
+    {
+      "command_bracketed": true,
+      "fixed_monitor_core_threshold": 0.25,
+      "host_observation_errors": 0,
+      "host_snapshot_errors": {
+        "NoSuchProcess": 1
+      },
+      "host_status": "inconclusive",
+      "index": 15,
+      "kworker_named_events": 122,
+      "method": "orthohmm_high_sensitivity",
+      "observed_persistent_foreign_core_maximum": 0.023840544061087314,
+      "proteomes": 12,
+      "repeat": 1,
+      "resource_errors": {
+        "error_events": 0,
+        "error_samples": 0,
+        "error_samples_at_recorded_rss_maximum": 0,
+        "error_types": {},
+        "fraction_of_samples_with_errors": 0.0,
+        "observations": 4660
+      },
+      "scientific_timing_admitted": false,
+      "unmatched_identity_events": 126,
+      "unmatched_non_kworker_names": {
+        "cups-browsed": 2,
+        "cupsd": 2
+      }
+    },
+    {
+      "command_bracketed": true,
+      "fixed_monitor_core_threshold": 0.25,
+      "host_observation_errors": 0,
+      "host_snapshot_errors": {
+        "NoSuchProcess": 213
+      },
+      "host_status": "inconclusive",
+      "index": 16,
+      "kworker_named_events": 118,
+      "method": "orthohmm_satellite_v2",
+      "observed_persistent_foreign_core_maximum": 0.21115053079510782,
+      "proteomes": 12,
+      "repeat": 1,
+      "resource_errors": {
+        "error_events": 2357,
+        "error_samples": 703,
+        "error_samples_at_recorded_rss_maximum": 0,
+        "error_types": {
+          "FileNotFoundError": 1,
+          "NoSuchProcess": 2352,
+          "ProcessLookupError": 1,
+          "ValueError": 3
+        },
+        "fraction_of_samples_with_errors": 0.12562544674767692,
+        "observations": 5596
+      },
+      "scientific_timing_admitted": false,
+      "unmatched_identity_events": 118,
+      "unmatched_non_kworker_names": {}
+    },
+    {
+      "command_bracketed": true,
+      "fixed_monitor_core_threshold": 0.25,
+      "host_observation_errors": 0,
+      "host_snapshot_errors": {
+        "NoSuchProcess": 128
+      },
+      "host_status": "inconclusive",
+      "index": 17,
+      "kworker_named_events": 64,
+      "method": "orthofinder_full",
+      "observed_persistent_foreign_core_maximum": 0.03883153958225784,
+      "proteomes": 12,
+      "repeat": 1,
+      "resource_errors": {
+        "error_events": 344,
+        "error_samples": 139,
+        "error_samples_at_recorded_rss_maximum": 0,
+        "error_types": {
+          "NoSuchProcess": 338,
+          "ProcessLookupError": 1,
+          "ValueError": 5
+        },
+        "fraction_of_samples_with_errors": 0.05074844833880979,
+        "observations": 2739
+      },
+      "scientific_timing_admitted": false,
+      "unmatched_identity_events": 64,
+      "unmatched_non_kworker_names": {}
+    },
+    {
+      "command_bracketed": true,
+      "fixed_monitor_core_threshold": 0.25,
+      "host_observation_errors": 0,
+      "host_snapshot_errors": {
+        "NoSuchProcess": 70
+      },
+      "host_status": "inconclusive",
+      "index": 18,
+      "kworker_named_events": 26,
+      "method": "orthofinder_full",
+      "observed_persistent_foreign_core_maximum": 0.06736694320719624,
+      "proteomes": 4,
+      "repeat": 2,
+      "resource_errors": {
+        "error_events": 161,
+        "error_samples": 38,
+        "error_samples_at_recorded_rss_maximum": 1,
+        "error_types": {
+          "FileNotFoundError": 2,
+          "NoSuchProcess": 156,
+          "ValueError": 3
+        },
+        "fraction_of_samples_with_errors": 0.061788617886178863,
+        "observations": 615
+      },
+      "scientific_timing_admitted": false,
+      "unmatched_identity_events": 26,
+      "unmatched_non_kworker_names": {}
+    },
+    {
+      "command_bracketed": true,
+      "fixed_monitor_core_threshold": 0.25,
+      "host_observation_errors": 0,
+      "host_snapshot_errors": {},
+      "host_status": "inconclusive",
+      "index": 19,
+      "kworker_named_events": 16,
+      "method": "orthohmm_high_sensitivity",
+      "observed_persistent_foreign_core_maximum": 0.009832630866428892,
+      "proteomes": 4,
+      "repeat": 2,
+      "resource_errors": {
+        "error_events": 0,
+        "error_samples": 0,
+        "error_samples_at_recorded_rss_maximum": 0,
+        "error_types": {},
+        "fraction_of_samples_with_errors": 0.0,
+        "observations": 551
+      },
+      "scientific_timing_admitted": false,
+      "unmatched_identity_events": 16,
+      "unmatched_non_kworker_names": {}
+    },
+    {
+      "command_bracketed": true,
+      "fixed_monitor_core_threshold": 0.25,
+      "host_observation_errors": 0,
+      "host_snapshot_errors": {
+        "NoSuchProcess": 86
+      },
+      "host_status": "inconclusive",
+      "index": 20,
+      "kworker_named_events": 20,
+      "method": "orthohmm_satellite_v2",
+      "observed_persistent_foreign_core_maximum": 0.18372208927240052,
+      "proteomes": 4,
+      "repeat": 2,
+      "resource_errors": {
+        "error_events": 1139,
+        "error_samples": 169,
+        "error_samples_at_recorded_rss_maximum": 0,
+        "error_types": {
+          "FileNotFoundError": 1,
+          "NoSuchProcess": 1136,
+          "ValueError": 2
+        },
+        "fraction_of_samples_with_errors": 0.21177944862155387,
+        "observations": 798
+      },
+      "scientific_timing_admitted": false,
+      "unmatched_identity_events": 20,
+      "unmatched_non_kworker_names": {}
+    },
+    {
+      "command_bracketed": true,
+      "fixed_monitor_core_threshold": 0.25,
+      "host_observation_errors": 0,
+      "host_snapshot_errors": {},
+      "host_status": "inconclusive",
+      "index": 21,
+      "kworker_named_events": 59,
+      "method": "orthohmm_high_sensitivity",
+      "observed_persistent_foreign_core_maximum": 0.013066798945156086,
+      "proteomes": 8,
+      "repeat": 2,
+      "resource_errors": {
+        "error_events": 0,
+        "error_samples": 0,
+        "error_samples_at_recorded_rss_maximum": 0,
+        "error_types": {},
+        "fraction_of_samples_with_errors": 0.0,
+        "observations": 2077
+      },
+      "scientific_timing_admitted": false,
+      "unmatched_identity_events": 65,
+      "unmatched_non_kworker_names": {
+        "apt-helper": 2,
+        "nm-dispatcher": 2,
+        "systemd-networkd-wait-online": 2
+      }
+    },
+    {
+      "command_bracketed": true,
+      "fixed_monitor_core_threshold": 0.25,
+      "host_observation_errors": 0,
+      "host_snapshot_errors": {
+        "NoSuchProcess": 141
+      },
+      "host_status": "inconclusive",
+      "index": 22,
+      "kworker_named_events": 63,
+      "method": "orthohmm_satellite_v2",
+      "observed_persistent_foreign_core_maximum": 0.181168278459541,
+      "proteomes": 8,
+      "repeat": 2,
+      "resource_errors": {
+        "error_events": 2034,
+        "error_samples": 427,
+        "error_samples_at_recorded_rss_maximum": 0,
+        "error_types": {
+          "FileNotFoundError": 1,
+          "NoSuchProcess": 2031,
+          "ProcessLookupError": 1,
+          "ValueError": 1
+        },
+        "fraction_of_samples_with_errors": 0.16531165311653118,
+        "observations": 2583
+      },
+      "scientific_timing_admitted": false,
+      "unmatched_identity_events": 63,
+      "unmatched_non_kworker_names": {}
+    },
+    {
+      "command_bracketed": true,
+      "fixed_monitor_core_threshold": 0.25,
+      "host_observation_errors": 0,
+      "host_snapshot_errors": {
+        "NoSuchProcess": 115
+      },
+      "host_status": "inconclusive",
+      "index": 23,
+      "kworker_named_events": 55,
+      "method": "orthofinder_full",
+      "observed_persistent_foreign_core_maximum": 0.04370265702907005,
+      "proteomes": 8,
+      "repeat": 2,
+      "resource_errors": {
+        "error_events": 327,
+        "error_samples": 109,
+        "error_samples_at_recorded_rss_maximum": 0,
+        "error_types": {
+          "FileNotFoundError": 1,
+          "NoSuchProcess": 324,
+          "ValueError": 2
+        },
+        "fraction_of_samples_with_errors": 0.072812291249165,
+        "observations": 1497
+      },
+      "scientific_timing_admitted": false,
+      "unmatched_identity_events": 55,
+      "unmatched_non_kworker_names": {}
+    },
+    {
+      "command_bracketed": true,
+      "fixed_monitor_core_threshold": 0.25,
+      "host_observation_errors": 0,
+      "host_snapshot_errors": {
+        "NoSuchProcess": 171
+      },
+      "host_status": "inconclusive",
+      "index": 24,
+      "kworker_named_events": 109,
+      "method": "orthohmm_satellite_v2",
+      "observed_persistent_foreign_core_maximum": 0.1538120100860188,
+      "proteomes": 12,
+      "repeat": 2,
+      "resource_errors": {
+        "error_events": 2386,
+        "error_samples": 701,
+        "error_samples_at_recorded_rss_maximum": 0,
+        "error_types": {
+          "FileNotFoundError": 1,
+          "NoSuchProcess": 2380,
+          "ProcessLookupError": 1,
+          "ValueError": 4
+        },
+        "fraction_of_samples_with_errors": 0.12546984070162878,
+        "observations": 5587
+      },
+      "scientific_timing_admitted": false,
+      "unmatched_identity_events": 113,
+      "unmatched_non_kworker_names": {
+        "apt-helper": 2,
+        "systemd-networkd-wait-online": 2
+      }
+    },
+    {
+      "command_bracketed": true,
+      "fixed_monitor_core_threshold": 0.25,
+      "host_observation_errors": 0,
+      "host_snapshot_errors": {
+        "NoSuchProcess": 124
+      },
+      "host_status": "inconclusive",
+      "index": 25,
+      "kworker_named_events": 74,
+      "method": "orthofinder_full",
+      "observed_persistent_foreign_core_maximum": 0.0436799770035453,
+      "proteomes": 12,
+      "repeat": 2,
+      "resource_errors": {
+        "error_events": 319,
+        "error_samples": 134,
+        "error_samples_at_recorded_rss_maximum": 0,
+        "error_types": {
+          "FileNotFoundError": 1,
+          "NoSuchProcess": 315,
+          "ValueError": 3
+        },
+        "fraction_of_samples_with_errors": 0.04872727272727273,
+        "observations": 2750
+      },
+      "scientific_timing_admitted": false,
+      "unmatched_identity_events": 74,
+      "unmatched_non_kworker_names": {}
+    },
+    {
+      "command_bracketed": true,
+      "fixed_monitor_core_threshold": 0.25,
+      "host_observation_errors": 0,
+      "host_snapshot_errors": {},
+      "host_status": "inconclusive",
+      "index": 26,
+      "kworker_named_events": 110,
+      "method": "orthohmm_high_sensitivity",
+      "observed_persistent_foreign_core_maximum": 0.011963642707048585,
+      "proteomes": 12,
+      "repeat": 2,
+      "resource_errors": {
+        "error_events": 0,
+        "error_samples": 0,
+        "error_samples_at_recorded_rss_maximum": 0,
+        "error_types": {},
+        "fraction_of_samples_with_errors": 0.0,
+        "observations": 4616
+      },
+      "scientific_timing_admitted": false,
+      "unmatched_identity_events": 133,
+      "unmatched_non_kworker_names": {
+        "(sd-pam)": 1,
+        "anacron": 2,
+        "cron": 2,
+        "dbus-daemon": 1,
+        "nm-dispatcher": 2,
+        "pipewire": 2,
+        "pipewire-pulse": 1,
+        "python": 2,
+        "run_scheduled.s": 2,
+        "sh": 2,
+        "sleep": 2,
+        "sshd": 2,
+        "systemd": 1,
+        "wireplumber": 1
+      }
+    }
+  ],
+  "scientific_timings_admitted": 0,
+  "source": {
+    "bytes": 5283,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/summarize_dgx_observation_gaps.py",
+    "sha256": "8687d4e700b351de689aea9f26ff96f2483e8b4c143dcd898220cae76ef5736f"
+  },
+  "status": "observation_gaps_described_no_reclassification"
+}
