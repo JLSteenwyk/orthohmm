@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Both QfO Sequence Controls Admitted (2026-09-18 UTC)
+
+Previous turn made progress through2c8ef85, implementing the boundary-only
+control. Reread the full objective and verified scheduler state. Top100
+scoring21829 completed0:0 in30:57 and independent admission21830 completed
+0:0 in3:15. Retained admissionSHA439bfb1499e6c1f5e357ec27dc0fd02279d920a6a1a77f9483d008da4849c911.
+Top100 GO/EC/VGNC/SwissTrees/TreeFam-A/FAS scores are0.47979121/0.87497864/
+0.6041722529093152/0.6291893836042818/0.5739167376813594/0.7167336149647486;
+project-defined secondary mean0.6464636398599508. Pair accounting remains
+11,285,357expected/emitted/mapped, zero loss.
+
+Regenerated a newv2 two-arm JSON/TSV/Markdown table using the existing
+exporter with independent hash/native-metric rechecks; preservedv1.
+Updated manuscript and claims with both admitted controls and explicit
+limitations. No HMM benefit or significance claim: corrected HMM21706_0
+is still running18:30:55, and the matched baseline/paired uncertainty remain
+pending. OrthoFinder21706_1 is pending behind the HMM task.
+
+Also implemented and tested a prospective18-run native overhead plan from
+the pinned four-proteome/73266-protein scaling commands, committed54e6a86.
+Only fresh output paths and run metadata change; three paired replicates
+per method have fixed partially counterbalanced order and5%median/10%each
+numerical budgets. PlanSHA58e482e6f123bc82de5e98df3c93f4bf0ca3a47d2302ffcaa47290c7d1e20685.
+The plan is not yet execution-authorized; verified launcher/recipe are next.
+It is an overhead diagnostic, not scientific timing admission.
+
+66 focused tests pass across native score admission/validation/export,
+boundary control and reproducible overhead plan. No inference defaults,
+scientific endpoints, or frozen benchmark source were changed.
+
 ## Native Boundary Control Implemented (2026-09-18 UTC)
 
 Previous turn made progress through the completed/audited DGX array21831

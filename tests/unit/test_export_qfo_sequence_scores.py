@@ -111,3 +111,28 @@ def test_retained_all_hit_scores_match_admitted_native_metrics():
     module.check(result["source"])
     for item in result["outputs"]:
         module.check(item)
+
+
+def test_both_retained_sequence_arms_match_admitted_endpoints():
+    from pathlib import Path
+
+    base = Path(__file__).resolve().parents[2] / "benchmark_tools/results"
+    result = json.loads((base / "qfo_sequence_scores_20260918_v2/manifest.json").read_text())
+    identities = [
+        ("qfo_sequence_all_hits_assessment_admission_21826.json", "dc29e5410a274b5e633674bdf42c6578893bbc47912adc7b23ca6893ed917cd2", 11300151),
+        ("qfo_sequence_top100_assessment_admission_21830.json", "439bfb1499e6c1f5e357ec27dc0fd02279d920a6a1a77f9483d008da4849c911", 11285357),
+    ]
+    for row, (name, sha, pairs) in zip(result["rows"], identities):
+        admission = module.read_frozen(base / name, sha)
+        assert module.binding(admission)[0] == row["variant"]
+        assert row["status"] == "admitted"
+        assert row["scores"] == {key: admission["assessment"]["endpoints"][key]["score"] for key in module.ENDPOINTS}
+        assert row["secondary_mean"] == admission["assessment"]["secondary_six_metric_mean"]
+        assert row["submitted_pairs"] == pairs
+        assert row["removed_mapping_pairs"] == 0
+        assert row["endpoint_details"] == admission["assessment"]["endpoints"]
+    assert len(result["rows"]) == 2
+    assert result["publication_ready"] is False
+    module.check(result["source"])
+    for item in result["outputs"]:
+        module.check(item)

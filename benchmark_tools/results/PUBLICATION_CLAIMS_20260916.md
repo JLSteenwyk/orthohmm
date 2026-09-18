@@ -87,10 +87,11 @@ evidence that an experiment completed or a biological hypothesis is true.
   [Top100graph21814](QFO_SEQUENCE_TOP100_EXECUTION_20260918.md)
   completed0:0 in35:24; independent graph validation21827 completed0:0 in10:49.
   Top100pair conversion21828 completed0:0 in2:36 with11,285,357mapped pairs
-  and zero losses; scoring21829 is running and admission21830 is queued.
+  and zero losses; scoring21829 completed0:0 in30:57 and admission21830
+  completed0:0 in3:15. [Top100endpoint scores are admitted](QFO_SEQUENCE_TOP100_SCORE_20260918.md).
   [Self-hit semantics](QFO_SEQUENCE_SELF_HIT_REVIEW_20260918.md) retain the
   frozen cap with no self exception. Conversion completion does not establish
-  matched biological sensitivity or a method advantage. The all-hit scores
+  matched biological sensitivity or a method advantage. Both sequence arms
   are independently admitted; the full matched HMM/sequence comparison and
   paired uncertainty remain pending.
 - Three Kingdoms historical normalized-group pair counts independently

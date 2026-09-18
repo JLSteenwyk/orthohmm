@@ -836,10 +836,14 @@ OrthoHMM downstream grouping:11,300,151cross-species clique pairs survived
 reference mapping without loss. Endpoint scores were GO similarity0.479327,
 EC similarity0.874662, VGNC F1=0.602031, SwissTrees F1=0.628092, TreeFam-A
 F1=0.576306 and FAS0.715448. The project-defined secondary mean was0.645978.
-The top100diagnostic and matched corrected HMM control are not yet available
-as a complete admitted comparison. No HMM benefit follows from these point
-estimates; equal cutoffs do not establish matched sensitivity or effort.
-[Admitted scores and provenance](QFO_SEQUENCE_ALL_HITS_SCORE_20260918.md).
+The independently admitted top100diagnostic retained11,285,357mapped pairs
+without loss and scored0.479791/0.874979/0.604172/0.629189/0.573917/0.716734
+on the same six endpoints, with secondary mean0.646464. The matched corrected
+HMM control and paired uncertainty remain pending. No HMM benefit or
+significant difference follows from these point estimates; equal cutoffs do
+not establish matched sensitivity or effort.
+[Both admitted controls](qfo_sequence_scores_20260918_v2/scores.md);
+[top100provenance](QFO_SEQUENCE_TOP100_SCORE_20260918.md).
 
 ### Remaining Requirements
 
@@ -848,7 +852,7 @@ speedup is established. Frozen YGOB evaluation is complete and supports
 novel-taxon transfer, not family-disjoint confirmation. Homolog-family
 overlap remains substantial even after taxon exclusions. The proposed HMM
 contribution is not established by the completed exploratory OrthoBench
-sequence-search control; the QfO all-hit arm is now admitted, but its matched
+sequence-search control; both QfO sequence arms are now admitted, but their matched
 HMM comparison and paired uncertainty remain outstanding. The interaction
 between broader candidates and reconciliation has completed OrthoBench and
 original-release QfO factorial evidence, with no adjusted F1 benefit or
