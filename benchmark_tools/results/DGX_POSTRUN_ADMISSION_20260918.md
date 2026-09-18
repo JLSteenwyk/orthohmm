@@ -46,6 +46,15 @@ remain unvalidated; no scientific timings have been admitted.
 
 After the final task is authoritatively terminal:
 
+Resource replay update: dgx_resource_replay_20260918.json reproduces all27
+resource summaries from63,445 observations, with validated raw-counter
+parsing and monotonic command bracketing.4,706 observations across18 runs
+contain process-read errors, so sampled aggregate RSS is incomplete there.
+Cgroup CPU minus GNU-time native CPU ranges3.971678..90.840824seconds;
+these quantities have different scopes and no fitted correction is applied.
+This completes the arithmetic/clock replay, not resource or scientific timing
+admission. Native output validation and host-isolation disposition remain.
+
 1. Preserve all27 original outputs, metadata, raw host/resource samples and
    accounting. Transfer evidence only after the timing sequence finishes;
    retain source paths, sizes and content hashes.

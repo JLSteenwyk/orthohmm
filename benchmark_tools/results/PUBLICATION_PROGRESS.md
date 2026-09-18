@@ -1,5 +1,33 @@
 # Publication Progress
 
+## DGX Resource Accounting Reproduced (2026-09-18 UTC)
+
+Previous turn progressed throughfa8daeb: all27 metadata/payload/host replays
+completed. Added replay_dgx_resource_samples.py and ran it on the retained
+63,445 resource samples across all27 runs. All27 recorded summaries reproduce
+exactly; zero replay failures. Validates monotonic command/wrapper boundaries,
+sample chronology and bracketing, stable task identity, raw cgroup counter
+parsing, process RSS arithmetic/ownership, baseline allocation, final process
+cleanup and frozen measurement/snapshot source identities. Source evidence
+hashes are checked before/after.59 focused tests pass in1.11s.
+
+The result is benchmark_tools/results/dgx_resource_replay_20260918.json.
+There are4,706 samples with process-read errors across18 runs. Their sampled
+aggregate RSS is incomplete; successful numerical replay does not repair
+missing process observations. Cgroup CPU deltas exceed GNU-time native CPU
+by3.971678..90.840824seconds (0.041569..0.150982percent). Collector command
+wall exceeds GNU-time rounded elapsed by0.005879..0.071895seconds. Maximum
+between-observation gap is1.326814seconds. These differences are descriptive,
+not a fitted correction or a new acceptance threshold. Cgroup CPU includes
+collector/pre-post activity; sampled RSS, cgroup peak and GNU-time maximum
+process RSS remain separate quantities with their respective limitations.
+
+All host assessments remain inconclusive. Scientific timings admitted:0.
+Next: native output validation and evidence-based reuse/rerun decisions.
+Live jobs revalidated: HMM21706_0 RUNNING10:58:20, DIAMOND21789 RUNNING46:42;
+21790/21791/21792/21793 dependency-pending. No existing jobs changed.
+Full publication objective remains active.
+
 ## DGX Full Metadata And Host Review (2026-09-18 UTC)
 
 Previous turn progressed through87bf876: queued QfO coverage and confirmed

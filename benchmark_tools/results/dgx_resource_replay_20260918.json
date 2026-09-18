@@ -1,0 +1,2684 @@
+{
+  "failures": 0,
+  "runs": [
+    {
+      "clock_domain": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+        "clock": "time.monotonic",
+        "hostname": "spark-7ff0",
+        "unit": "seconds"
+      },
+      "controlled_workload_verified": false,
+      "evidence": [
+        {
+          "bytes": 5511,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_00/measurement/results.json",
+          "sha256": "8a6eee3129bba89d9a780d279c0b4388077235d2e54ec37b8b42c8446e3502a5"
+        },
+        {
+          "bytes": 3712227,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_00/measurement/samples.jsonl",
+          "sha256": "e6ecdb5f69254658e3f5470890499e15ec9af7d9511016bff8b920a1fd1e904b"
+        },
+        {
+          "bytes": 105,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_00/native.time.tsv",
+          "sha256": "ee71c6abf7ba7d223db9aaa6358aa3b2bd7188c6490fbc633747d36ea0f8f431"
+        }
+      ],
+      "gnu_time": {
+        "elapsed_seconds": 558.48,
+        "exit_status": 0,
+        "max_process_rss_kib": 561924,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 5.39,
+        "user_seconds": 9525.72
+      },
+      "helpers": [
+        {
+          "bytes": 9712,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_slurm_command.py",
+          "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+        },
+        {
+          "bytes": 6539,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+          "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+        },
+        {
+          "bytes": 5721,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+          "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+        },
+        {
+          "bytes": 2020,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+          "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+        }
+      ],
+      "index": 0,
+      "job_id": 21657,
+      "limitations": [
+        "Cgroup deltas include collector overhead and pre/post command observation margins.",
+        "GNU-time CPU covers native child and waited-for descendants, with its own rounding and scope.",
+        "Differences are reported without a fitted acceptance threshold or correction.",
+        "Sampled aggregate RSS, cgroup memory peak and maximum process RSS are distinct statistics.",
+        "Resource reproduction does not validate host isolation or native biological outputs."
+      ],
+      "reconciliation": {
+        "baseline_cgroup_peak_bytes": 73547776,
+        "cgroup_minus_gnu_cpu_seconds": 4.066641000001255,
+        "cgroup_observed_cpu_seconds": 9535.176641,
+        "collector_command_wall_seconds": 558.5175168649293,
+        "collector_minus_gnu_wall_seconds": 0.03751686492933004,
+        "gnu_time_native_cpu_seconds": 9531.109999999999,
+        "maximum_sample_gap_seconds": 1.2777512539178133
+      },
+      "scientific_timing_admitted": false,
+      "source": {
+        "bytes": 8154,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_dgx_resource_samples.py",
+        "sha256": "649f77f4ad29c1a65f33337f4dd6ead12d1c7797ee728dd8e72f58cd50ea8e59"
+      },
+      "status": "resource_accounting_reproduced_not_timing_admission",
+      "summary": {
+        "cpu_delta_usec": {
+          "system_usec": 6890539,
+          "usage_usec": 9535176641,
+          "user_usec": 9528286101
+        },
+        "maximum_reported_cgroup_peak_bytes": 2334900224,
+        "maximum_sampled_sum_rss_bytes": 3451031552,
+        "mean_cpu_cores_over_observed_span": 17.06906208855777,
+        "observation_span_s": 558.6233497499488,
+        "observations": 555,
+        "samples_with_process_errors": 0
+      }
+    },
+    {
+      "clock_domain": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+        "clock": "time.monotonic",
+        "hostname": "spark-7ff0",
+        "unit": "seconds"
+      },
+      "controlled_workload_verified": false,
+      "evidence": [
+        {
+          "bytes": 5859,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_01/measurement/results.json",
+          "sha256": "68a9c7b653989d55f2dddb1c318126c2d37826a10dd5c25f92db35391a982900"
+        },
+        {
+          "bytes": 6296242,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_01/measurement/samples.jsonl",
+          "sha256": "7cacfed0998705927592e8cac37abeeee617a61f725fe7f69a1b30311ecea749"
+        },
+        {
+          "bytes": 109,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_01/native.time.tsv",
+          "sha256": "dd09d40c163335b007469fa69eb97182a7d5c8ce267b6b15bb845f2428f7460a"
+        }
+      ],
+      "gnu_time": {
+        "elapsed_seconds": 821.33,
+        "exit_status": 0,
+        "max_process_rss_kib": 1283388,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 751.81,
+        "user_seconds": 12470.85
+      },
+      "helpers": [
+        {
+          "bytes": 9712,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_slurm_command.py",
+          "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+        },
+        {
+          "bytes": 6539,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+          "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+        },
+        {
+          "bytes": 5721,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+          "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+        },
+        {
+          "bytes": 2020,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+          "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+        }
+      ],
+      "index": 1,
+      "job_id": 21658,
+      "limitations": [
+        "Cgroup deltas include collector overhead and pre/post command observation margins.",
+        "GNU-time CPU covers native child and waited-for descendants, with its own rounding and scope.",
+        "Differences are reported without a fitted acceptance threshold or correction.",
+        "Sampled aggregate RSS, cgroup memory peak and maximum process RSS are distinct statistics.",
+        "Resource reproduction does not validate host isolation or native biological outputs."
+      ],
+      "reconciliation": {
+        "baseline_cgroup_peak_bytes": 73261056,
+        "cgroup_minus_gnu_cpu_seconds": 8.91100600000027,
+        "cgroup_observed_cpu_seconds": 13231.571006,
+        "collector_command_wall_seconds": 821.386124860961,
+        "collector_minus_gnu_wall_seconds": 0.05612486096094926,
+        "gnu_time_native_cpu_seconds": 13222.66,
+        "maximum_sample_gap_seconds": 1.2807662328705192
+      },
+      "scientific_timing_admitted": false,
+      "source": {
+        "bytes": 8154,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_dgx_resource_samples.py",
+        "sha256": "649f77f4ad29c1a65f33337f4dd6ead12d1c7797ee728dd8e72f58cd50ea8e59"
+      },
+      "status": "resource_accounting_reproduced_not_timing_admission",
+      "summary": {
+        "cpu_delta_usec": {
+          "system_usec": 793348130,
+          "usage_usec": 13231571006,
+          "user_usec": 12438222877
+        },
+        "maximum_reported_cgroup_peak_bytes": 2531328000,
+        "maximum_sampled_sum_rss_bytes": 3232747520,
+        "mean_cpu_cores_over_observed_span": 16.106791807863136,
+        "observation_span_s": 821.4901616559364,
+        "observations": 812,
+        "samples_with_process_errors": 168
+      }
+    },
+    {
+      "clock_domain": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+        "clock": "time.monotonic",
+        "hostname": "spark-7ff0",
+        "unit": "seconds"
+      },
+      "controlled_workload_verified": false,
+      "evidence": [
+        {
+          "bytes": 5051,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_02/measurement/results.json",
+          "sha256": "8205ecfb6b77b64745bdda458aaa93eed7a49fb86290f9dba31300a393db5e5c"
+        },
+        {
+          "bytes": 5102524,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_02/measurement/samples.jsonl",
+          "sha256": "51755ec27cf89fb5740c912c0d079d59cafc47210f1a80b60a58dff50e29d222"
+        },
+        {
+          "bytes": 108,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_02/native.time.tsv",
+          "sha256": "ed890d6135df324961a8775a3801b825e22e0ff92291a3bc9b7b5a9cb2f84d27"
+        }
+      ],
+      "gnu_time": {
+        "elapsed_seconds": 617.6,
+        "exit_status": 0,
+        "max_process_rss_kib": 4643584,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 144.45,
+        "user_seconds": 4384.69
+      },
+      "helpers": [
+        {
+          "bytes": 9712,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_slurm_command.py",
+          "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+        },
+        {
+          "bytes": 6539,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+          "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+        },
+        {
+          "bytes": 5721,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+          "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+        },
+        {
+          "bytes": 2020,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+          "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+        }
+      ],
+      "index": 2,
+      "job_id": 21659,
+      "limitations": [
+        "Cgroup deltas include collector overhead and pre/post command observation margins.",
+        "GNU-time CPU covers native child and waited-for descendants, with its own rounding and scope.",
+        "Differences are reported without a fitted acceptance threshold or correction.",
+        "Sampled aggregate RSS, cgroup memory peak and maximum process RSS are distinct statistics.",
+        "Resource reproduction does not validate host isolation or native biological outputs."
+      ],
+      "reconciliation": {
+        "baseline_cgroup_peak_bytes": 113037312,
+        "cgroup_minus_gnu_cpu_seconds": 6.838205000000926,
+        "cgroup_observed_cpu_seconds": 4535.978205,
+        "collector_command_wall_seconds": 617.60587854404,
+        "collector_minus_gnu_wall_seconds": 0.005878544040001543,
+        "gnu_time_native_cpu_seconds": 4529.139999999999,
+        "maximum_sample_gap_seconds": 1.1561497687362134
+      },
+      "scientific_timing_admitted": false,
+      "source": {
+        "bytes": 8154,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_dgx_resource_samples.py",
+        "sha256": "649f77f4ad29c1a65f33337f4dd6ead12d1c7797ee728dd8e72f58cd50ea8e59"
+      },
+      "status": "resource_accounting_reproduced_not_timing_admission",
+      "summary": {
+        "cpu_delta_usec": {
+          "system_usec": 150124588,
+          "usage_usec": 4535978205,
+          "user_usec": 4385853617
+        },
+        "maximum_reported_cgroup_peak_bytes": 6571520000,
+        "maximum_sampled_sum_rss_bytes": 7081623552,
+        "mean_cpu_cores_over_observed_span": 7.342809869671398,
+        "observation_span_s": 617.7441994971596,
+        "observations": 613,
+        "samples_with_process_errors": 45
+      }
+    },
+    {
+      "clock_domain": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+        "clock": "time.monotonic",
+        "hostname": "spark-7ff0",
+        "unit": "seconds"
+      },
+      "controlled_workload_verified": false,
+      "evidence": [
+        {
+          "bytes": 5861,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_03/measurement/results.json",
+          "sha256": "0acfec4bdb44d093ea6e4ddb147450624e5ef520fd41767e4cacfb699da7c939"
+        },
+        {
+          "bytes": 19655477,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_03/measurement/samples.jsonl",
+          "sha256": "b35b8aed87ac0fdefdeb841adf671023dc7ee40ab436f956d9c3384887b40f84"
+        },
+        {
+          "bytes": 111,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_03/native.time.tsv",
+          "sha256": "5f2211104122f5f20becdbf822bde93d7c5c5e8cc7c54ef7bad4dfa6fa2cde13"
+        }
+      ],
+      "gnu_time": {
+        "elapsed_seconds": 2635.5,
+        "exit_status": 0,
+        "max_process_rss_kib": 4996984,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 1382.02,
+        "user_seconds": 48165.04
+      },
+      "helpers": [
+        {
+          "bytes": 9712,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_slurm_command.py",
+          "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+        },
+        {
+          "bytes": 6539,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+          "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+        },
+        {
+          "bytes": 5721,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+          "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+        },
+        {
+          "bytes": 2020,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+          "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+        }
+      ],
+      "index": 3,
+      "job_id": 21660,
+      "limitations": [
+        "Cgroup deltas include collector overhead and pre/post command observation margins.",
+        "GNU-time CPU covers native child and waited-for descendants, with its own rounding and scope.",
+        "Differences are reported without a fitted acceptance threshold or correction.",
+        "Sampled aggregate RSS, cgroup memory peak and maximum process RSS are distinct statistics.",
+        "Resource reproduction does not validate host isolation or native biological outputs."
+      ],
+      "reconciliation": {
+        "baseline_cgroup_peak_bytes": 73342976,
+        "cgroup_minus_gnu_cpu_seconds": 32.52462500000547,
+        "cgroup_observed_cpu_seconds": 49579.584625,
+        "collector_command_wall_seconds": 2635.511064521037,
+        "collector_minus_gnu_wall_seconds": 0.011064521037042141,
+        "gnu_time_native_cpu_seconds": 49547.06,
+        "maximum_sample_gap_seconds": 1.295941605232656
+      },
+      "scientific_timing_admitted": false,
+      "source": {
+        "bytes": 8154,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_dgx_resource_samples.py",
+        "sha256": "649f77f4ad29c1a65f33337f4dd6ead12d1c7797ee728dd8e72f58cd50ea8e59"
+      },
+      "status": "resource_accounting_reproduced_not_timing_admission",
+      "summary": {
+        "cpu_delta_usec": {
+          "system_usec": 1455720930,
+          "usage_usec": 49579584625,
+          "user_usec": 48123863696
+        },
+        "maximum_reported_cgroup_peak_bytes": 7361904640,
+        "maximum_sampled_sum_rss_bytes": 7959924736,
+        "mean_cpu_cores_over_observed_span": 18.811128816623334,
+        "observation_span_s": 2635.6517521259375,
+        "observations": 2592,
+        "samples_with_process_errors": 426
+      }
+    },
+    {
+      "clock_domain": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+        "clock": "time.monotonic",
+        "hostname": "spark-7ff0",
+        "unit": "seconds"
+      },
+      "controlled_workload_verified": false,
+      "evidence": [
+        {
+          "bytes": 5067,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_04/measurement/results.json",
+          "sha256": "fc55629b221a551442e0f382c934530b7926eb8fbc684b5d9b0388ec92987200"
+        },
+        {
+          "bytes": 16183868,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_04/measurement/samples.jsonl",
+          "sha256": "3a59a3cfb0463a1f12ccb639a9a02705a2a91f26d15240dae9d1910996295b24"
+        },
+        {
+          "bytes": 110,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_04/native.time.tsv",
+          "sha256": "af72da52ea058612d29939ebeb4e311be62d05ecb86f05adceb193146574b9eb"
+        }
+      ],
+      "gnu_time": {
+        "elapsed_seconds": 1537.77,
+        "exit_status": 0,
+        "max_process_rss_kib": 5477108,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 393.91,
+        "user_seconds": 21494.08
+      },
+      "helpers": [
+        {
+          "bytes": 9712,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_slurm_command.py",
+          "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+        },
+        {
+          "bytes": 6539,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+          "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+        },
+        {
+          "bytes": 5721,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+          "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+        },
+        {
+          "bytes": 2020,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+          "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+        }
+      ],
+      "index": 4,
+      "job_id": 21665,
+      "limitations": [
+        "Cgroup deltas include collector overhead and pre/post command observation margins.",
+        "GNU-time CPU covers native child and waited-for descendants, with its own rounding and scope.",
+        "Differences are reported without a fitted acceptance threshold or correction.",
+        "Sampled aggregate RSS, cgroup memory peak and maximum process RSS are distinct statistics.",
+        "Resource reproduction does not validate host isolation or native biological outputs."
+      ],
+      "reconciliation": {
+        "baseline_cgroup_peak_bytes": 162045952,
+        "cgroup_minus_gnu_cpu_seconds": 22.054747999998654,
+        "cgroup_observed_cpu_seconds": 21910.044748,
+        "collector_command_wall_seconds": 1537.7858475018293,
+        "collector_minus_gnu_wall_seconds": 0.015847501829284738,
+        "gnu_time_native_cpu_seconds": 21887.99,
+        "maximum_sample_gap_seconds": 1.2877048286609352
+      },
+      "scientific_timing_admitted": false,
+      "source": {
+        "bytes": 8154,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_dgx_resource_samples.py",
+        "sha256": "649f77f4ad29c1a65f33337f4dd6ead12d1c7797ee728dd8e72f58cd50ea8e59"
+      },
+      "status": "resource_accounting_reproduced_not_timing_admission",
+      "summary": {
+        "cpu_delta_usec": {
+          "system_usec": 405962442,
+          "usage_usec": 21910044748,
+          "user_usec": 21504082306
+        },
+        "maximum_reported_cgroup_peak_bytes": 10770952192,
+        "maximum_sampled_sum_rss_bytes": 12282265600,
+        "mean_cpu_cores_over_observed_span": 14.24652439008252,
+        "observation_span_s": 1537.9221028289758,
+        "observations": 1511,
+        "samples_with_process_errors": 102
+      }
+    },
+    {
+      "clock_domain": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+        "clock": "time.monotonic",
+        "hostname": "spark-7ff0",
+        "unit": "seconds"
+      },
+      "controlled_workload_verified": false,
+      "evidence": [
+        {
+          "bytes": 5518,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_05/measurement/results.json",
+          "sha256": "ee4c05135790b6c5e131466dd5e8c0976f79f000b842650d09423c46d3597ab5"
+        },
+        {
+          "bytes": 14028452,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_05/measurement/samples.jsonl",
+          "sha256": "e2ce05d16378e9ecdc44dff27a25245fe80de8bf18a45c08c8980c3685d7cf54"
+        },
+        {
+          "bytes": 109,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_05/native.time.tsv",
+          "sha256": "d08741afffc72ae344f004d869d2d04b4f0a27c95c0b9149888dcfd1eedff0c8"
+        }
+      ],
+      "gnu_time": {
+        "elapsed_seconds": 2141.58,
+        "exit_status": 0,
+        "max_process_rss_kib": 4992280,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 14.42,
+        "user_seconds": 40177.79
+      },
+      "helpers": [
+        {
+          "bytes": 9712,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_slurm_command.py",
+          "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+        },
+        {
+          "bytes": 6539,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+          "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+        },
+        {
+          "bytes": 5721,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+          "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+        },
+        {
+          "bytes": 2020,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+          "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+        }
+      ],
+      "index": 5,
+      "job_id": 21666,
+      "limitations": [
+        "Cgroup deltas include collector overhead and pre/post command observation margins.",
+        "GNU-time CPU covers native child and waited-for descendants, with its own rounding and scope.",
+        "Differences are reported without a fitted acceptance threshold or correction.",
+        "Sampled aggregate RSS, cgroup memory peak and maximum process RSS are distinct statistics.",
+        "Resource reproduction does not validate host isolation or native biological outputs."
+      ],
+      "reconciliation": {
+        "baseline_cgroup_peak_bytes": 73269248,
+        "cgroup_minus_gnu_cpu_seconds": 18.688516000001982,
+        "cgroup_observed_cpu_seconds": 40210.898516,
+        "collector_command_wall_seconds": 2141.6069326791912,
+        "collector_minus_gnu_wall_seconds": 0.026932679191304487,
+        "gnu_time_native_cpu_seconds": 40192.21,
+        "maximum_sample_gap_seconds": 1.282143744174391
+      },
+      "scientific_timing_admitted": false,
+      "source": {
+        "bytes": 8154,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_dgx_resource_samples.py",
+        "sha256": "649f77f4ad29c1a65f33337f4dd6ead12d1c7797ee728dd8e72f58cd50ea8e59"
+      },
+      "status": "resource_accounting_reproduced_not_timing_admission",
+      "summary": {
+        "cpu_delta_usec": {
+          "system_usec": 20019424,
+          "usage_usec": 40210898516,
+          "user_usec": 40190879091
+        },
+        "maximum_reported_cgroup_peak_bytes": 7383175168,
+        "maximum_sampled_sum_rss_bytes": 7356334080,
+        "mean_cpu_cores_over_observed_span": 18.775161107312332,
+        "observation_span_s": 2141.7072421466,
+        "observations": 2114,
+        "samples_with_process_errors": 0
+      }
+    },
+    {
+      "clock_domain": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+        "clock": "time.monotonic",
+        "hostname": "spark-7ff0",
+        "unit": "seconds"
+      },
+      "controlled_workload_verified": false,
+      "evidence": [
+        {
+          "bytes": 5069,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_06/measurement/results.json",
+          "sha256": "00e0d0c78d076f1de2a7905e9ac6fa7385374c1c110af3e29319b564e5761952"
+        },
+        {
+          "bytes": 33587045,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_06/measurement/samples.jsonl",
+          "sha256": "341b323ecc564cec93fbe21b8d00d75dd7f0cad17a1c1596e5106c908891f556"
+        },
+        {
+          "bytes": 110,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_06/native.time.tsv",
+          "sha256": "5ebb93af23c4917834eb42601db1b58948d657464efd4a9c93effa03052ce6cf"
+        }
+      ],
+      "gnu_time": {
+        "elapsed_seconds": 2822.97,
+        "exit_status": 0,
+        "max_process_rss_kib": 4576976,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 525.17,
+        "user_seconds": 51897.03
+      },
+      "helpers": [
+        {
+          "bytes": 9712,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_slurm_command.py",
+          "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+        },
+        {
+          "bytes": 6539,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+          "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+        },
+        {
+          "bytes": 5721,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+          "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+        },
+        {
+          "bytes": 2020,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+          "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+        }
+      ],
+      "index": 6,
+      "job_id": 21667,
+      "limitations": [
+        "Cgroup deltas include collector overhead and pre/post command observation margins.",
+        "GNU-time CPU covers native child and waited-for descendants, with its own rounding and scope.",
+        "Differences are reported without a fitted acceptance threshold or correction.",
+        "Sampled aggregate RSS, cgroup memory peak and maximum process RSS are distinct statistics.",
+        "Resource reproduction does not validate host isolation or native biological outputs."
+      ],
+      "reconciliation": {
+        "baseline_cgroup_peak_bytes": 212230144,
+        "cgroup_minus_gnu_cpu_seconds": 52.1364539999995,
+        "cgroup_observed_cpu_seconds": 52474.336454,
+        "collector_command_wall_seconds": 2822.9881065911613,
+        "collector_minus_gnu_wall_seconds": 0.018106591161540564,
+        "gnu_time_native_cpu_seconds": 52422.2,
+        "maximum_sample_gap_seconds": 1.306279903743416
+      },
+      "scientific_timing_admitted": false,
+      "source": {
+        "bytes": 8154,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_dgx_resource_samples.py",
+        "sha256": "649f77f4ad29c1a65f33337f4dd6ead12d1c7797ee728dd8e72f58cd50ea8e59"
+      },
+      "status": "resource_accounting_reproduced_not_timing_admission",
+      "summary": {
+        "cpu_delta_usec": {
+          "system_usec": 547800888,
+          "usage_usec": 52474336454,
+          "user_usec": 51926535566
+        },
+        "maximum_reported_cgroup_peak_bytes": 12207628288,
+        "maximum_sampled_sum_rss_bytes": 16221306880,
+        "mean_cpu_cores_over_observed_span": 18.58747444415808,
+        "observation_span_s": 2823.1020094552077,
+        "observations": 2748,
+        "samples_with_process_errors": 124
+      }
+    },
+    {
+      "clock_domain": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+        "clock": "time.monotonic",
+        "hostname": "spark-7ff0",
+        "unit": "seconds"
+      },
+      "controlled_workload_verified": false,
+      "evidence": [
+        {
+          "bytes": 5522,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_07/measurement/results.json",
+          "sha256": "994e3557cfc149035bbaa02a4ea6cc12d787cf3c22541cec591be23398e27795"
+        },
+        {
+          "bytes": 30797605,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_07/measurement/samples.jsonl",
+          "sha256": "64b6c822d5c2ab9d422f02b0060b7588d282554278930c6f6b1ac19de1e16410"
+        },
+        {
+          "bytes": 109,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_07/native.time.tsv",
+          "sha256": "a56b2d562050238807a0052134babd63cc6f5aaacbc4b0ef84a6518b6b307392"
+        }
+      ],
+      "gnu_time": {
+        "elapsed_seconds": 4747.4,
+        "exit_status": 0,
+        "max_process_rss_kib": 6170964,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 23.99,
+        "user_seconds": 91448.8
+      },
+      "helpers": [
+        {
+          "bytes": 9712,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_slurm_command.py",
+          "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+        },
+        {
+          "bytes": 6539,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+          "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+        },
+        {
+          "bytes": 5721,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+          "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+        },
+        {
+          "bytes": 2020,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+          "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+        }
+      ],
+      "index": 7,
+      "job_id": 21668,
+      "limitations": [
+        "Cgroup deltas include collector overhead and pre/post command observation margins.",
+        "GNU-time CPU covers native child and waited-for descendants, with its own rounding and scope.",
+        "Differences are reported without a fitted acceptance threshold or correction.",
+        "Sampled aggregate RSS, cgroup memory peak and maximum process RSS are distinct statistics.",
+        "Resource reproduction does not validate host isolation or native biological outputs."
+      ],
+      "reconciliation": {
+        "baseline_cgroup_peak_bytes": 73265152,
+        "cgroup_minus_gnu_cpu_seconds": 53.57504599999811,
+        "cgroup_observed_cpu_seconds": 91526.365046,
+        "collector_command_wall_seconds": 4747.435905065853,
+        "collector_minus_gnu_wall_seconds": 0.0359050658535125,
+        "gnu_time_native_cpu_seconds": 91472.79000000001,
+        "maximum_sample_gap_seconds": 1.2950078388676047
+      },
+      "scientific_timing_admitted": false,
+      "source": {
+        "bytes": 8154,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_dgx_resource_samples.py",
+        "sha256": "649f77f4ad29c1a65f33337f4dd6ead12d1c7797ee728dd8e72f58cd50ea8e59"
+      },
+      "status": "resource_accounting_reproduced_not_timing_admission",
+      "summary": {
+        "cpu_delta_usec": {
+          "system_usec": 35828471,
+          "usage_usec": 91526365046,
+          "user_usec": 91490536576
+        },
+        "maximum_reported_cgroup_peak_bytes": 10233815040,
+        "maximum_sampled_sum_rss_bytes": 10907754496,
+        "mean_cpu_cores_over_observed_span": 19.278685452871677,
+        "observation_span_s": 4747.541800489649,
+        "observations": 4661,
+        "samples_with_process_errors": 0
+      }
+    },
+    {
+      "clock_domain": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+        "clock": "time.monotonic",
+        "hostname": "spark-7ff0",
+        "unit": "seconds"
+      },
+      "controlled_workload_verified": false,
+      "evidence": [
+        {
+          "bytes": 5868,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_08/measurement/results.json",
+          "sha256": "94c83e77f4f44b45e48a97c891371ba4bcdfc288e108a7c878d695bfb2db86d2"
+        },
+        {
+          "bytes": 41890329,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_08/measurement/samples.jsonl",
+          "sha256": "27765dc7ab41ee003441299bb5aa833ec85c9be133da5b0121fa989323e13dcf"
+        },
+        {
+          "bytes": 112,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_08/native.time.tsv",
+          "sha256": "9e233df770dba5c04d094644fb99ac8e5af58e3b40e4b7fba5b86e5f9c2e3e49"
+        }
+      ],
+      "gnu_time": {
+        "elapsed_seconds": 5760.56,
+        "exit_status": 0,
+        "max_process_rss_kib": 6176764,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 1768.01,
+        "user_seconds": 108748.57
+      },
+      "helpers": [
+        {
+          "bytes": 9712,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_slurm_command.py",
+          "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+        },
+        {
+          "bytes": 6539,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+          "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+        },
+        {
+          "bytes": 5721,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+          "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+        },
+        {
+          "bytes": 2020,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+          "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+        }
+      ],
+      "index": 8,
+      "job_id": 21685,
+      "limitations": [
+        "Cgroup deltas include collector overhead and pre/post command observation margins.",
+        "GNU-time CPU covers native child and waited-for descendants, with its own rounding and scope.",
+        "Differences are reported without a fitted acceptance threshold or correction.",
+        "Sampled aggregate RSS, cgroup memory peak and maximum process RSS are distinct statistics.",
+        "Resource reproduction does not validate host isolation or native biological outputs."
+      ],
+      "reconciliation": {
+        "baseline_cgroup_peak_bytes": 72962048,
+        "cgroup_minus_gnu_cpu_seconds": 90.84082399999897,
+        "cgroup_observed_cpu_seconds": 110607.420824,
+        "collector_command_wall_seconds": 5760.610205733217,
+        "collector_minus_gnu_wall_seconds": 0.05020573321689881,
+        "gnu_time_native_cpu_seconds": 110516.58,
+        "maximum_sample_gap_seconds": 1.2980580609291792
+      },
+      "scientific_timing_admitted": false,
+      "source": {
+        "bytes": 8154,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_dgx_resource_samples.py",
+        "sha256": "649f77f4ad29c1a65f33337f4dd6ead12d1c7797ee728dd8e72f58cd50ea8e59"
+      },
+      "status": "resource_accounting_reproduced_not_timing_admission",
+      "summary": {
+        "cpu_delta_usec": {
+          "system_usec": 1864257167,
+          "usage_usec": 110607420824,
+          "user_usec": 108743163656
+        },
+        "maximum_reported_cgroup_peak_bytes": 10259939328,
+        "maximum_sampled_sum_rss_bytes": 10880806912,
+        "mean_cpu_cores_over_observed_span": 19.20030241726399,
+        "observation_span_s": 5760.712431516033,
+        "observations": 5623,
+        "samples_with_process_errors": 675
+      }
+    },
+    {
+      "clock_domain": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+        "clock": "time.monotonic",
+        "hostname": "spark-7ff0",
+        "unit": "seconds"
+      },
+      "controlled_workload_verified": false,
+      "evidence": [
+        {
+          "bytes": 5862,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_09/measurement/results.json",
+          "sha256": "034f55e41b0f20b4ab94e1b58153da25a57e8d8828505fd3bd53e79472b506b6"
+        },
+        {
+          "bytes": 6352206,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_09/measurement/samples.jsonl",
+          "sha256": "7b1c22e6e2bdb8ea7e52cc0282f59c7271187bdc753612158fc62c618f2e562b"
+        },
+        {
+          "bytes": 109,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_09/native.time.tsv",
+          "sha256": "b8277187e28ad2cf07e71764eb85f60c6030dc63e92975a7b4513b7d1ceb8535"
+        }
+      ],
+      "gnu_time": {
+        "elapsed_seconds": 826.64,
+        "exit_status": 0,
+        "max_process_rss_kib": 1283280,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 760.69,
+        "user_seconds": 12423.23
+      },
+      "helpers": [
+        {
+          "bytes": 9712,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_slurm_command.py",
+          "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+        },
+        {
+          "bytes": 6539,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+          "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+        },
+        {
+          "bytes": 5721,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+          "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+        },
+        {
+          "bytes": 2020,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+          "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+        }
+      ],
+      "index": 9,
+      "job_id": 21690,
+      "limitations": [
+        "Cgroup deltas include collector overhead and pre/post command observation margins.",
+        "GNU-time CPU covers native child and waited-for descendants, with its own rounding and scope.",
+        "Differences are reported without a fitted acceptance threshold or correction.",
+        "Sampled aggregate RSS, cgroup memory peak and maximum process RSS are distinct statistics.",
+        "Resource reproduction does not validate host isolation or native biological outputs."
+      ],
+      "reconciliation": {
+        "baseline_cgroup_peak_bytes": 73269248,
+        "cgroup_minus_gnu_cpu_seconds": 8.393259000000398,
+        "cgroup_observed_cpu_seconds": 13192.313259,
+        "collector_command_wall_seconds": 826.6881257817149,
+        "collector_minus_gnu_wall_seconds": 0.04812578171492987,
+        "gnu_time_native_cpu_seconds": 13183.92,
+        "maximum_sample_gap_seconds": 1.2889583902433515
+      },
+      "scientific_timing_admitted": false,
+      "source": {
+        "bytes": 8154,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_dgx_resource_samples.py",
+        "sha256": "649f77f4ad29c1a65f33337f4dd6ead12d1c7797ee728dd8e72f58cd50ea8e59"
+      },
+      "status": "resource_accounting_reproduced_not_timing_admission",
+      "summary": {
+        "cpu_delta_usec": {
+          "system_usec": 802164439,
+          "usage_usec": 13192313259,
+          "user_usec": 12390148819
+        },
+        "maximum_reported_cgroup_peak_bytes": 2537299968,
+        "maximum_sampled_sum_rss_bytes": 3235450880,
+        "mean_cpu_cores_over_observed_span": 15.956016050555577,
+        "observation_span_s": 826.7924284609035,
+        "observations": 818,
+        "samples_with_process_errors": 169
+      }
+    },
+    {
+      "clock_domain": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+        "clock": "time.monotonic",
+        "hostname": "spark-7ff0",
+        "unit": "seconds"
+      },
+      "controlled_workload_verified": false,
+      "evidence": [
+        {
+          "bytes": 5058,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_10/measurement/results.json",
+          "sha256": "742d00a66d5e8e028c3cfcf5c43aa773404f4591d01668ee4fd36425e480fd3e"
+        },
+        {
+          "bytes": 5118685,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_10/measurement/samples.jsonl",
+          "sha256": "7c9ca2b4955c6018800311c1d68b6674ea98f937fff50c116cfa2d22bc867888"
+        },
+        {
+          "bytes": 108,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_10/native.time.tsv",
+          "sha256": "dbf07199b89b4c3607233c1486c2fec95df499d8c5285db19b1a12e52b5089b4"
+        }
+      ],
+      "gnu_time": {
+        "elapsed_seconds": 619.6,
+        "exit_status": 0,
+        "max_process_rss_kib": 4642964,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 150.51,
+        "user_seconds": 4366.87
+      },
+      "helpers": [
+        {
+          "bytes": 9712,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_slurm_command.py",
+          "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+        },
+        {
+          "bytes": 6539,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+          "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+        },
+        {
+          "bytes": 5721,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+          "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+        },
+        {
+          "bytes": 2020,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+          "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+        }
+      ],
+      "index": 10,
+      "job_id": 21699,
+      "limitations": [
+        "Cgroup deltas include collector overhead and pre/post command observation margins.",
+        "GNU-time CPU covers native child and waited-for descendants, with its own rounding and scope.",
+        "Differences are reported without a fitted acceptance threshold or correction.",
+        "Sampled aggregate RSS, cgroup memory peak and maximum process RSS are distinct statistics.",
+        "Resource reproduction does not validate host isolation or native biological outputs."
+      ],
+      "reconciliation": {
+        "baseline_cgroup_peak_bytes": 113364992,
+        "cgroup_minus_gnu_cpu_seconds": 6.817756999999801,
+        "cgroup_observed_cpu_seconds": 4524.197757,
+        "collector_command_wall_seconds": 619.6109730820172,
+        "collector_minus_gnu_wall_seconds": 0.010973082017130764,
+        "gnu_time_native_cpu_seconds": 4517.38,
+        "maximum_sample_gap_seconds": 1.1705865040421486
+      },
+      "scientific_timing_admitted": false,
+      "source": {
+        "bytes": 8154,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_dgx_resource_samples.py",
+        "sha256": "649f77f4ad29c1a65f33337f4dd6ead12d1c7797ee728dd8e72f58cd50ea8e59"
+      },
+      "status": "resource_accounting_reproduced_not_timing_admission",
+      "summary": {
+        "cpu_delta_usec": {
+          "system_usec": 156346006,
+          "usage_usec": 4524197757,
+          "user_usec": 4367851750
+        },
+        "maximum_reported_cgroup_peak_bytes": 7011778560,
+        "maximum_sampled_sum_rss_bytes": 7052042240,
+        "mean_cpu_cores_over_observed_span": 7.300084779051949,
+        "observation_span_s": 619.7459199354053,
+        "observations": 615,
+        "samples_with_process_errors": 44
+      }
+    },
+    {
+      "clock_domain": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+        "clock": "time.monotonic",
+        "hostname": "spark-7ff0",
+        "unit": "seconds"
+      },
+      "controlled_workload_verified": false,
+      "evidence": [
+        {
+          "bytes": 5512,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_11/measurement/results.json",
+          "sha256": "b19f0bef251eb3a2dc5627d218ddec92619cc2c74aa05641b21bc5e79915e8b7"
+        },
+        {
+          "bytes": 3665900,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_11/measurement/samples.jsonl",
+          "sha256": "583ea7e8799bf61ea295be881ee08ce441d64ef10d7f5d1151b61882ec9cbe3b"
+        },
+        {
+          "bytes": 105,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_11/native.time.tsv",
+          "sha256": "cb7d6786773562752621c91abdfcf86e0db50fd9af9b24702311770be93ac8e0"
+        }
+      ],
+      "gnu_time": {
+        "elapsed_seconds": 550.7,
+        "exit_status": 0,
+        "max_process_rss_kib": 563628,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 5.9,
+        "user_seconds": 9638.31
+      },
+      "helpers": [
+        {
+          "bytes": 9712,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_slurm_command.py",
+          "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+        },
+        {
+          "bytes": 6539,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+          "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+        },
+        {
+          "bytes": 5721,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+          "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+        },
+        {
+          "bytes": 2020,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+          "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+        }
+      ],
+      "index": 11,
+      "job_id": 21700,
+      "limitations": [
+        "Cgroup deltas include collector overhead and pre/post command observation margins.",
+        "GNU-time CPU covers native child and waited-for descendants, with its own rounding and scope.",
+        "Differences are reported without a fitted acceptance threshold or correction.",
+        "Sampled aggregate RSS, cgroup memory peak and maximum process RSS are distinct statistics.",
+        "Resource reproduction does not validate host isolation or native biological outputs."
+      ],
+      "reconciliation": {
+        "baseline_cgroup_peak_bytes": 73289728,
+        "cgroup_minus_gnu_cpu_seconds": 4.12365200000022,
+        "cgroup_observed_cpu_seconds": 9648.333652,
+        "collector_command_wall_seconds": 550.7085235118866,
+        "collector_minus_gnu_wall_seconds": 0.008523511886551205,
+        "gnu_time_native_cpu_seconds": 9644.21,
+        "maximum_sample_gap_seconds": 1.2618153970688581
+      },
+      "scientific_timing_admitted": false,
+      "source": {
+        "bytes": 8154,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_dgx_resource_samples.py",
+        "sha256": "649f77f4ad29c1a65f33337f4dd6ead12d1c7797ee728dd8e72f58cd50ea8e59"
+      },
+      "status": "resource_accounting_reproduced_not_timing_admission",
+      "summary": {
+        "cpu_delta_usec": {
+          "system_usec": 7502545,
+          "usage_usec": 9648333652,
+          "user_usec": 9640831107
+        },
+        "maximum_reported_cgroup_peak_bytes": 2329485312,
+        "maximum_sampled_sum_rss_bytes": 3429851136,
+        "mean_cpu_cores_over_observed_span": 17.51551483683313,
+        "observation_span_s": 550.8449932462536,
+        "observations": 547,
+        "samples_with_process_errors": 0
+      }
+    },
+    {
+      "clock_domain": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+        "clock": "time.monotonic",
+        "hostname": "spark-7ff0",
+        "unit": "seconds"
+      },
+      "controlled_workload_verified": false,
+      "evidence": [
+        {
+          "bytes": 5068,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_12/measurement/results.json",
+          "sha256": "f65d69e27a08869f9392c188a3effadf1dfda769edc993d971fd3bb19699beb8"
+        },
+        {
+          "bytes": 16121755,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_12/measurement/samples.jsonl",
+          "sha256": "919f0096cc851d1861fd0ddf0fe894027bcd8428d3c422be7e6790d675ca22b0"
+        },
+        {
+          "bytes": 110,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_12/native.time.tsv",
+          "sha256": "9f1dc368a51704cf5b72d65fcb49e400d89ffa676e96048e3af9634410fdd040"
+        }
+      ],
+      "gnu_time": {
+        "elapsed_seconds": 1526.85,
+        "exit_status": 0,
+        "max_process_rss_kib": 5477296,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 381.7,
+        "user_seconds": 21465.36
+      },
+      "helpers": [
+        {
+          "bytes": 9712,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_slurm_command.py",
+          "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+        },
+        {
+          "bytes": 6539,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+          "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+        },
+        {
+          "bytes": 5721,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+          "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+        },
+        {
+          "bytes": 2020,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+          "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+        }
+      ],
+      "index": 12,
+      "job_id": 21702,
+      "limitations": [
+        "Cgroup deltas include collector overhead and pre/post command observation margins.",
+        "GNU-time CPU covers native child and waited-for descendants, with its own rounding and scope.",
+        "Differences are reported without a fitted acceptance threshold or correction.",
+        "Sampled aggregate RSS, cgroup memory peak and maximum process RSS are distinct statistics.",
+        "Resource reproduction does not validate host isolation or native biological outputs."
+      ],
+      "reconciliation": {
+        "baseline_cgroup_peak_bytes": 161886208,
+        "cgroup_minus_gnu_cpu_seconds": 21.953099999998813,
+        "cgroup_observed_cpu_seconds": 21869.0131,
+        "collector_command_wall_seconds": 1526.8663824079558,
+        "collector_minus_gnu_wall_seconds": 0.01638240795591628,
+        "gnu_time_native_cpu_seconds": 21847.06,
+        "maximum_sample_gap_seconds": 1.2907997681759298
+      },
+      "scientific_timing_admitted": false,
+      "source": {
+        "bytes": 8154,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_dgx_resource_samples.py",
+        "sha256": "649f77f4ad29c1a65f33337f4dd6ead12d1c7797ee728dd8e72f58cd50ea8e59"
+      },
+      "status": "resource_accounting_reproduced_not_timing_admission",
+      "summary": {
+        "cpu_delta_usec": {
+          "system_usec": 393875800,
+          "usage_usec": 21869013100,
+          "user_usec": 21475137299
+        },
+        "maximum_reported_cgroup_peak_bytes": 9419853824,
+        "maximum_sampled_sum_rss_bytes": 12188241920,
+        "mean_cpu_cores_over_observed_span": 14.320866800384309,
+        "observation_span_s": 1527.0732843778096,
+        "observations": 1500,
+        "samples_with_process_errors": 103
+      }
+    },
+    {
+      "clock_domain": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+        "clock": "time.monotonic",
+        "hostname": "spark-7ff0",
+        "unit": "seconds"
+      },
+      "controlled_workload_verified": false,
+      "evidence": [
+        {
+          "bytes": 5519,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_13/measurement/results.json",
+          "sha256": "8cca56776abab8ff0264afecb54bfa2c268085780a2e742dd69cc6957e70a6e8"
+        },
+        {
+          "bytes": 13785077,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_13/measurement/samples.jsonl",
+          "sha256": "94ff140ce8a814e631332d18113f02f87c2c1406b08811b965d5d9aa5d4cb3f4"
+        },
+        {
+          "bytes": 109,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_13/native.time.tsv",
+          "sha256": "e37102e5c2cf367f65c1c29c6254146cd34b3ca6208902598fe2c42189db6d1b"
+        }
+      ],
+      "gnu_time": {
+        "elapsed_seconds": 2103.27,
+        "exit_status": 0,
+        "max_process_rss_kib": 4996520,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 14.11,
+        "user_seconds": 39492.86
+      },
+      "helpers": [
+        {
+          "bytes": 9712,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_slurm_command.py",
+          "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+        },
+        {
+          "bytes": 6539,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+          "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+        },
+        {
+          "bytes": 5721,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+          "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+        },
+        {
+          "bytes": 2020,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+          "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+        }
+      ],
+      "index": 13,
+      "job_id": 21705,
+      "limitations": [
+        "Cgroup deltas include collector overhead and pre/post command observation margins.",
+        "GNU-time CPU covers native child and waited-for descendants, with its own rounding and scope.",
+        "Differences are reported without a fitted acceptance threshold or correction.",
+        "Sampled aggregate RSS, cgroup memory peak and maximum process RSS are distinct statistics.",
+        "Resource reproduction does not validate host isolation or native biological outputs."
+      ],
+      "reconciliation": {
+        "baseline_cgroup_peak_bytes": 73281536,
+        "cgroup_minus_gnu_cpu_seconds": 17.766883999996935,
+        "cgroup_observed_cpu_seconds": 39524.736884,
+        "collector_command_wall_seconds": 2103.2857516179793,
+        "collector_minus_gnu_wall_seconds": 0.01575161797927649,
+        "gnu_time_native_cpu_seconds": 39506.97,
+        "maximum_sample_gap_seconds": 1.2793052969500422
+      },
+      "scientific_timing_admitted": false,
+      "source": {
+        "bytes": 8154,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_dgx_resource_samples.py",
+        "sha256": "649f77f4ad29c1a65f33337f4dd6ead12d1c7797ee728dd8e72f58cd50ea8e59"
+      },
+      "status": "resource_accounting_reproduced_not_timing_admission",
+      "summary": {
+        "cpu_delta_usec": {
+          "system_usec": 19320533,
+          "usage_usec": 39524736884,
+          "user_usec": 39505416351
+        },
+        "maximum_reported_cgroup_peak_bytes": 7369142272,
+        "maximum_sampled_sum_rss_bytes": 7326126080,
+        "mean_cpu_cores_over_observed_span": 18.79099618799473,
+        "observation_span_s": 2103.38698856486,
+        "observations": 2077,
+        "samples_with_process_errors": 0
+      }
+    },
+    {
+      "clock_domain": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+        "clock": "time.monotonic",
+        "hostname": "spark-7ff0",
+        "unit": "seconds"
+      },
+      "controlled_workload_verified": false,
+      "evidence": [
+        {
+          "bytes": 5866,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_14/measurement/results.json",
+          "sha256": "219e7f3f42bd8013438a4d99a5d53781df0464e667326e1dc369c41115841ce5"
+        },
+        {
+          "bytes": 19651079,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_14/measurement/samples.jsonl",
+          "sha256": "55f77e1b5f3f15d2ee076a3eb32a07b3dad3d6b7b9eaad174e3a54f06bc1ccde"
+        },
+        {
+          "bytes": 111,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_14/native.time.tsv",
+          "sha256": "f557c9b8276dc86f323e4dadd8a57fbba326737b345bbdf0d128bdbeed083f7e"
+        }
+      ],
+      "gnu_time": {
+        "elapsed_seconds": 2633.4,
+        "exit_status": 0,
+        "max_process_rss_kib": 5004512,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 1399.34,
+        "user_seconds": 48155.97
+      },
+      "helpers": [
+        {
+          "bytes": 9712,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_slurm_command.py",
+          "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+        },
+        {
+          "bytes": 6539,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+          "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+        },
+        {
+          "bytes": 5721,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+          "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+        },
+        {
+          "bytes": 2020,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+          "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+        }
+      ],
+      "index": 14,
+      "job_id": 21709,
+      "limitations": [
+        "Cgroup deltas include collector overhead and pre/post command observation margins.",
+        "GNU-time CPU covers native child and waited-for descendants, with its own rounding and scope.",
+        "Differences are reported without a fitted acceptance threshold or correction.",
+        "Sampled aggregate RSS, cgroup memory peak and maximum process RSS are distinct statistics.",
+        "Resource reproduction does not validate host isolation or native biological outputs."
+      ],
+      "reconciliation": {
+        "baseline_cgroup_peak_bytes": 72712192,
+        "cgroup_minus_gnu_cpu_seconds": 31.999965000002703,
+        "cgroup_observed_cpu_seconds": 49587.309965,
+        "collector_command_wall_seconds": 2633.4238604940474,
+        "collector_minus_gnu_wall_seconds": 0.023860494047312386,
+        "gnu_time_native_cpu_seconds": 49555.31,
+        "maximum_sample_gap_seconds": 1.2908555287867785
+      },
+      "scientific_timing_admitted": false,
+      "source": {
+        "bytes": 8154,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_dgx_resource_samples.py",
+        "sha256": "649f77f4ad29c1a65f33337f4dd6ead12d1c7797ee728dd8e72f58cd50ea8e59"
+      },
+      "status": "resource_accounting_reproduced_not_timing_admission",
+      "summary": {
+        "cpu_delta_usec": {
+          "system_usec": 1472386074,
+          "usage_usec": 49587309965,
+          "user_usec": 48114923890
+        },
+        "maximum_reported_cgroup_peak_bytes": 7396794368,
+        "maximum_sampled_sum_rss_bytes": 7335804928,
+        "mean_cpu_cores_over_observed_span": 18.829000172933974,
+        "observation_span_s": 2633.5604391931556,
+        "observations": 2590,
+        "samples_with_process_errors": 430
+      }
+    },
+    {
+      "clock_domain": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+        "clock": "time.monotonic",
+        "hostname": "spark-7ff0",
+        "unit": "seconds"
+      },
+      "controlled_workload_verified": false,
+      "evidence": [
+        {
+          "bytes": 5517,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_15/measurement/results.json",
+          "sha256": "7d4eaa8c73e0c15fb547c6ea47cf3dc539d2d9e4569d1da8f6b9847ab4293c46"
+        },
+        {
+          "bytes": 30749929,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_15/measurement/samples.jsonl",
+          "sha256": "d76582ce29835a2324edfe1a975a4a1e2094f3fea401b416b35cf08673cb9f65"
+        },
+        {
+          "bytes": 109,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_15/native.time.tsv",
+          "sha256": "538b7d570981e59848422e91cc104e86bef61a5e5defbbc8d4d8b7881ce817a9"
+        }
+      ],
+      "gnu_time": {
+        "elapsed_seconds": 4749.87,
+        "exit_status": 0,
+        "max_process_rss_kib": 6163532,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 23.57,
+        "user_seconds": 91297.67
+      },
+      "helpers": [
+        {
+          "bytes": 9712,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_slurm_command.py",
+          "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+        },
+        {
+          "bytes": 6539,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+          "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+        },
+        {
+          "bytes": 5721,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+          "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+        },
+        {
+          "bytes": 2020,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+          "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+        }
+      ],
+      "index": 15,
+      "job_id": 21714,
+      "limitations": [
+        "Cgroup deltas include collector overhead and pre/post command observation margins.",
+        "GNU-time CPU covers native child and waited-for descendants, with its own rounding and scope.",
+        "Differences are reported without a fitted acceptance threshold or correction.",
+        "Sampled aggregate RSS, cgroup memory peak and maximum process RSS are distinct statistics.",
+        "Resource reproduction does not validate host isolation or native biological outputs."
+      ],
+      "reconciliation": {
+        "baseline_cgroup_peak_bytes": 73285632,
+        "cgroup_minus_gnu_cpu_seconds": 54.606466999990516,
+        "cgroup_observed_cpu_seconds": 91375.846467,
+        "collector_command_wall_seconds": 4749.87989260396,
+        "collector_minus_gnu_wall_seconds": 0.00989260395999736,
+        "gnu_time_native_cpu_seconds": 91321.24,
+        "maximum_sample_gap_seconds": 1.295855584088713
+      },
+      "scientific_timing_admitted": false,
+      "source": {
+        "bytes": 8154,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_dgx_resource_samples.py",
+        "sha256": "649f77f4ad29c1a65f33337f4dd6ead12d1c7797ee728dd8e72f58cd50ea8e59"
+      },
+      "status": "resource_accounting_reproduced_not_timing_admission",
+      "summary": {
+        "cpu_delta_usec": {
+          "system_usec": 35789817,
+          "usage_usec": 91375846467,
+          "user_usec": 91340056650
+        },
+        "maximum_reported_cgroup_peak_bytes": 10249003008,
+        "maximum_sampled_sum_rss_bytes": 10839207936,
+        "mean_cpu_cores_over_observed_span": 19.237098534947986,
+        "observation_span_s": 4749.980684509035,
+        "observations": 4660,
+        "samples_with_process_errors": 0
+      }
+    },
+    {
+      "clock_domain": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+        "clock": "time.monotonic",
+        "hostname": "spark-7ff0",
+        "unit": "seconds"
+      },
+      "controlled_workload_verified": false,
+      "evidence": [
+        {
+          "bytes": 5869,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_16/measurement/results.json",
+          "sha256": "28640930bb18b76bc2f5eec5ca69e51930eb52c500d1acc29ef975528ab39092"
+        },
+        {
+          "bytes": 41645980,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_16/measurement/samples.jsonl",
+          "sha256": "1c6078d147a435226b9d175ebccb89b8e90b458e71b006897e2647bb5d11d759"
+        },
+        {
+          "bytes": 112,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_16/native.time.tsv",
+          "sha256": "7f34d02dd8b8a871b8d8dec2d2b3a107317cf1ed3bbe52723ea566310a5ab60d"
+        }
+      ],
+      "gnu_time": {
+        "elapsed_seconds": 5729.9,
+        "exit_status": 0,
+        "max_process_rss_kib": 6175232,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 1774.98,
+        "user_seconds": 108162.17
+      },
+      "helpers": [
+        {
+          "bytes": 9712,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_slurm_command.py",
+          "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+        },
+        {
+          "bytes": 6539,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+          "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+        },
+        {
+          "bytes": 5721,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+          "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+        },
+        {
+          "bytes": 2020,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+          "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+        }
+      ],
+      "index": 16,
+      "job_id": 21721,
+      "limitations": [
+        "Cgroup deltas include collector overhead and pre/post command observation margins.",
+        "GNU-time CPU covers native child and waited-for descendants, with its own rounding and scope.",
+        "Differences are reported without a fitted acceptance threshold or correction.",
+        "Sampled aggregate RSS, cgroup memory peak and maximum process RSS are distinct statistics.",
+        "Resource reproduction does not validate host isolation or native biological outputs."
+      ],
+      "reconciliation": {
+        "baseline_cgroup_peak_bytes": 72794112,
+        "cgroup_minus_gnu_cpu_seconds": 88.64517300001171,
+        "cgroup_observed_cpu_seconds": 110025.795173,
+        "collector_command_wall_seconds": 5729.946343939751,
+        "collector_minus_gnu_wall_seconds": 0.04634393975175044,
+        "gnu_time_native_cpu_seconds": 109937.15,
+        "maximum_sample_gap_seconds": 1.3268141886219382
+      },
+      "scientific_timing_admitted": false,
+      "source": {
+        "bytes": 8154,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_dgx_resource_samples.py",
+        "sha256": "649f77f4ad29c1a65f33337f4dd6ead12d1c7797ee728dd8e72f58cd50ea8e59"
+      },
+      "status": "resource_accounting_reproduced_not_timing_admission",
+      "summary": {
+        "cpu_delta_usec": {
+          "system_usec": 1870041281,
+          "usage_usec": 110025795173,
+          "user_usec": 108155753892
+        },
+        "maximum_reported_cgroup_peak_bytes": 10192789504,
+        "maximum_sampled_sum_rss_bytes": 10902319104,
+        "mean_cpu_cores_over_observed_span": 19.201436164818134,
+        "observation_span_s": 5730.081553722266,
+        "observations": 5596,
+        "samples_with_process_errors": 703
+      }
+    },
+    {
+      "clock_domain": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+        "clock": "time.monotonic",
+        "hostname": "spark-7ff0",
+        "unit": "seconds"
+      },
+      "controlled_workload_verified": false,
+      "evidence": [
+        {
+          "bytes": 5067,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_17/measurement/results.json",
+          "sha256": "aec9c3304cde69d1861a47ca04232fc415cf0971a0d5f29d1f490f66099bfe94"
+        },
+        {
+          "bytes": 33461646,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_17/measurement/samples.jsonl",
+          "sha256": "b9f33631f64150e1b72e435f893ccf90eeeab9c5c3f9f076ce584553688830ac"
+        },
+        {
+          "bytes": 110,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_17/native.time.tsv",
+          "sha256": "9923cde9ac57fbe965e18473f2d0b9e115d4aca223fbb845f85f045215ecd3f5"
+        }
+      ],
+      "gnu_time": {
+        "elapsed_seconds": 2812.09,
+        "exit_status": 0,
+        "max_process_rss_kib": 4576748,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 526.46,
+        "user_seconds": 51656.2
+      },
+      "helpers": [
+        {
+          "bytes": 9712,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_slurm_command.py",
+          "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+        },
+        {
+          "bytes": 6539,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+          "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+        },
+        {
+          "bytes": 5721,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+          "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+        },
+        {
+          "bytes": 2020,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+          "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+        }
+      ],
+      "index": 17,
+      "job_id": 21729,
+      "limitations": [
+        "Cgroup deltas include collector overhead and pre/post command observation margins.",
+        "GNU-time CPU covers native child and waited-for descendants, with its own rounding and scope.",
+        "Differences are reported without a fitted acceptance threshold or correction.",
+        "Sampled aggregate RSS, cgroup memory peak and maximum process RSS are distinct statistics.",
+        "Resource reproduction does not validate host isolation or native biological outputs."
+      ],
+      "reconciliation": {
+        "baseline_cgroup_peak_bytes": 212226048,
+        "cgroup_minus_gnu_cpu_seconds": 50.77939000000333,
+        "cgroup_observed_cpu_seconds": 52233.43939,
+        "collector_command_wall_seconds": 2812.1012506443076,
+        "collector_minus_gnu_wall_seconds": 0.011250644307438051,
+        "gnu_time_native_cpu_seconds": 52182.659999999996,
+        "maximum_sample_gap_seconds": 1.307200436014682
+      },
+      "scientific_timing_admitted": false,
+      "source": {
+        "bytes": 8154,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_dgx_resource_samples.py",
+        "sha256": "649f77f4ad29c1a65f33337f4dd6ead12d1c7797ee728dd8e72f58cd50ea8e59"
+      },
+      "status": "resource_accounting_reproduced_not_timing_admission",
+      "summary": {
+        "cpu_delta_usec": {
+          "system_usec": 548641654,
+          "usage_usec": 52233439390,
+          "user_usec": 51684797736
+        },
+        "maximum_reported_cgroup_peak_bytes": 12599304192,
+        "maximum_sampled_sum_rss_bytes": 16015290368,
+        "mean_cpu_cores_over_observed_span": 18.573839688433154,
+        "observation_span_s": 2812.2047065221705,
+        "observations": 2739,
+        "samples_with_process_errors": 139
+      }
+    },
+    {
+      "clock_domain": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+        "clock": "time.monotonic",
+        "hostname": "spark-7ff0",
+        "unit": "seconds"
+      },
+      "controlled_workload_verified": false,
+      "evidence": [
+        {
+          "bytes": 5059,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_18/measurement/results.json",
+          "sha256": "2c2ffa13511408eacc400b581241a326b41057b11101675186bcb5f2788fd731"
+        },
+        {
+          "bytes": 5118927,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_18/measurement/samples.jsonl",
+          "sha256": "d5ad130d861953cdfd37a7ec46f5bf8f936b8a8af699fa629644cc0c528a9e96"
+        },
+        {
+          "bytes": 108,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_18/native.time.tsv",
+          "sha256": "09f15b060ff6008af63c9e8f6831877fd7320f65c5ddaa82c62ea34bf221b344"
+        }
+      ],
+      "gnu_time": {
+        "elapsed_seconds": 618.52,
+        "exit_status": 0,
+        "max_process_rss_kib": 4643268,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 148.42,
+        "user_seconds": 4368.81
+      },
+      "helpers": [
+        {
+          "bytes": 9712,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_slurm_command.py",
+          "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+        },
+        {
+          "bytes": 6539,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+          "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+        },
+        {
+          "bytes": 5721,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+          "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+        },
+        {
+          "bytes": 2020,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+          "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+        }
+      ],
+      "index": 18,
+      "job_id": 21730,
+      "limitations": [
+        "Cgroup deltas include collector overhead and pre/post command observation margins.",
+        "GNU-time CPU covers native child and waited-for descendants, with its own rounding and scope.",
+        "Differences are reported without a fitted acceptance threshold or correction.",
+        "Sampled aggregate RSS, cgroup memory peak and maximum process RSS are distinct statistics.",
+        "Resource reproduction does not validate host isolation or native biological outputs."
+      ],
+      "reconciliation": {
+        "baseline_cgroup_peak_bytes": 113082368,
+        "cgroup_minus_gnu_cpu_seconds": 6.353029999999308,
+        "cgroup_observed_cpu_seconds": 4523.58303,
+        "collector_command_wall_seconds": 618.5918945628218,
+        "collector_minus_gnu_wall_seconds": 0.07189456282185347,
+        "gnu_time_native_cpu_seconds": 4517.2300000000005,
+        "maximum_sample_gap_seconds": 1.1373663968406618
+      },
+      "scientific_timing_admitted": false,
+      "source": {
+        "bytes": 8154,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_dgx_resource_samples.py",
+        "sha256": "649f77f4ad29c1a65f33337f4dd6ead12d1c7797ee728dd8e72f58cd50ea8e59"
+      },
+      "status": "resource_accounting_reproduced_not_timing_admission",
+      "summary": {
+        "cpu_delta_usec": {
+          "system_usec": 154397084,
+          "usage_usec": 4523583030,
+          "user_usec": 4369185945
+        },
+        "maximum_reported_cgroup_peak_bytes": 7180701696,
+        "maximum_sampled_sum_rss_bytes": 6552342528,
+        "mean_cpu_cores_over_observed_span": 7.311059790295425,
+        "observation_span_s": 618.7315053837374,
+        "observations": 615,
+        "samples_with_process_errors": 38
+      }
+    },
+    {
+      "clock_domain": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+        "clock": "time.monotonic",
+        "hostname": "spark-7ff0",
+        "unit": "seconds"
+      },
+      "controlled_workload_verified": false,
+      "evidence": [
+        {
+          "bytes": 5511,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_19/measurement/results.json",
+          "sha256": "855eb5e8098d41938cfcb95c14135d4db60ceeaa847f027cdef0fbca37b6c687"
+        },
+        {
+          "bytes": 3693125,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_19/measurement/samples.jsonl",
+          "sha256": "e43570e7fef6a8e4de2ca9ec2ff6f4dab13efb220d069eadf2546eb8d1050711"
+        },
+        {
+          "bytes": 105,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_19/native.time.tsv",
+          "sha256": "76a7ab6adf9fe6f55a093130118f205e5411927048eda36e315992ef24988f9f"
+        }
+      ],
+      "gnu_time": {
+        "elapsed_seconds": 554.72,
+        "exit_status": 0,
+        "max_process_rss_kib": 562080,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 5.49,
+        "user_seconds": 9548.88
+      },
+      "helpers": [
+        {
+          "bytes": 9712,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_slurm_command.py",
+          "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+        },
+        {
+          "bytes": 6539,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+          "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+        },
+        {
+          "bytes": 5721,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+          "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+        },
+        {
+          "bytes": 2020,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+          "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+        }
+      ],
+      "index": 19,
+      "job_id": 21732,
+      "limitations": [
+        "Cgroup deltas include collector overhead and pre/post command observation margins.",
+        "GNU-time CPU covers native child and waited-for descendants, with its own rounding and scope.",
+        "Differences are reported without a fitted acceptance threshold or correction.",
+        "Sampled aggregate RSS, cgroup memory peak and maximum process RSS are distinct statistics.",
+        "Resource reproduction does not validate host isolation or native biological outputs."
+      ],
+      "reconciliation": {
+        "baseline_cgroup_peak_bytes": 73527296,
+        "cgroup_minus_gnu_cpu_seconds": 3.9716780000017025,
+        "cgroup_observed_cpu_seconds": 9558.341678,
+        "collector_command_wall_seconds": 554.7301302738488,
+        "collector_minus_gnu_wall_seconds": 0.010130273848744764,
+        "gnu_time_native_cpu_seconds": 9554.369999999999,
+        "maximum_sample_gap_seconds": 1.2594191916286945
+      },
+      "scientific_timing_admitted": false,
+      "source": {
+        "bytes": 8154,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_dgx_resource_samples.py",
+        "sha256": "649f77f4ad29c1a65f33337f4dd6ead12d1c7797ee728dd8e72f58cd50ea8e59"
+      },
+      "status": "resource_accounting_reproduced_not_timing_admission",
+      "summary": {
+        "cpu_delta_usec": {
+          "system_usec": 6929789,
+          "usage_usec": 9558341678,
+          "user_usec": 9551411889
+        },
+        "maximum_reported_cgroup_peak_bytes": 2358816768,
+        "maximum_sampled_sum_rss_bytes": 3242840064,
+        "mean_cpu_cores_over_observed_span": 17.22634352434926,
+        "observation_span_s": 554.8677039030008,
+        "observations": 551,
+        "samples_with_process_errors": 0
+      }
+    },
+    {
+      "clock_domain": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+        "clock": "time.monotonic",
+        "hostname": "spark-7ff0",
+        "unit": "seconds"
+      },
+      "controlled_workload_verified": false,
+      "evidence": [
+        {
+          "bytes": 5863,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_20/measurement/results.json",
+          "sha256": "4ac079d2552dc133928ea30a71940c8dca41a3ab6e1d881b473c42f08200379c"
+        },
+        {
+          "bytes": 6216638,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_20/measurement/samples.jsonl",
+          "sha256": "8e5ad8ac1fca7231464b4b355e654497d8dae24eacca369432dff6de97d480b0"
+        },
+        {
+          "bytes": 109,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_20/native.time.tsv",
+          "sha256": "d783ff5bc48dd387f1c9f34c32612f8d232d6a878f4dd3cf0c2ea656e025146d"
+        }
+      ],
+      "gnu_time": {
+        "elapsed_seconds": 806.79,
+        "exit_status": 0,
+        "max_process_rss_kib": 1283340,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 752.76,
+        "user_seconds": 12355.91
+      },
+      "helpers": [
+        {
+          "bytes": 9712,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_slurm_command.py",
+          "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+        },
+        {
+          "bytes": 6539,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+          "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+        },
+        {
+          "bytes": 5721,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+          "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+        },
+        {
+          "bytes": 2020,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+          "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+        }
+      ],
+      "index": 20,
+      "job_id": 21734,
+      "limitations": [
+        "Cgroup deltas include collector overhead and pre/post command observation margins.",
+        "GNU-time CPU covers native child and waited-for descendants, with its own rounding and scope.",
+        "Differences are reported without a fitted acceptance threshold or correction.",
+        "Sampled aggregate RSS, cgroup memory peak and maximum process RSS are distinct statistics.",
+        "Resource reproduction does not validate host isolation or native biological outputs."
+      ],
+      "reconciliation": {
+        "baseline_cgroup_peak_bytes": 73252864,
+        "cgroup_minus_gnu_cpu_seconds": 8.66260499999953,
+        "cgroup_observed_cpu_seconds": 13117.332605,
+        "collector_command_wall_seconds": 806.8152119028382,
+        "collector_minus_gnu_wall_seconds": 0.02521190283823671,
+        "gnu_time_native_cpu_seconds": 13108.67,
+        "maximum_sample_gap_seconds": 1.2633762690238655
+      },
+      "scientific_timing_admitted": false,
+      "source": {
+        "bytes": 8154,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_dgx_resource_samples.py",
+        "sha256": "649f77f4ad29c1a65f33337f4dd6ead12d1c7797ee728dd8e72f58cd50ea8e59"
+      },
+      "status": "resource_accounting_reproduced_not_timing_admission",
+      "summary": {
+        "cpu_delta_usec": {
+          "system_usec": 794472386,
+          "usage_usec": 13117332605,
+          "user_usec": 12322860220
+        },
+        "maximum_reported_cgroup_peak_bytes": 2515546112,
+        "maximum_sampled_sum_rss_bytes": 3489329152,
+        "mean_cpu_cores_over_observed_span": 16.255371183022536,
+        "observation_span_s": 806.9537420775741,
+        "observations": 798,
+        "samples_with_process_errors": 169
+      }
+    },
+    {
+      "clock_domain": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+        "clock": "time.monotonic",
+        "hostname": "spark-7ff0",
+        "unit": "seconds"
+      },
+      "controlled_workload_verified": false,
+      "evidence": [
+        {
+          "bytes": 5523,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_21/measurement/results.json",
+          "sha256": "811e87fa0259115e2f37b8314b56758dd6c016ef9fe79cfcc4786d58b476df56"
+        },
+        {
+          "bytes": 13781551,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_21/measurement/samples.jsonl",
+          "sha256": "53001e6a43caa82d3608d4e3855b6a419a1e0ab5e807c38fbf75b6bc5584ab3c"
+        },
+        {
+          "bytes": 109,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_21/native.time.tsv",
+          "sha256": "cf9c6297d166da5e8dd57f1063a90775810136c350325720f90c2856ae276c78"
+        }
+      ],
+      "gnu_time": {
+        "elapsed_seconds": 2103.89,
+        "exit_status": 0,
+        "max_process_rss_kib": 4998084,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 14.51,
+        "user_seconds": 39471.58
+      },
+      "helpers": [
+        {
+          "bytes": 9712,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_slurm_command.py",
+          "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+        },
+        {
+          "bytes": 6539,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+          "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+        },
+        {
+          "bytes": 5721,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+          "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+        },
+        {
+          "bytes": 2020,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+          "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+        }
+      ],
+      "index": 21,
+      "job_id": 21737,
+      "limitations": [
+        "Cgroup deltas include collector overhead and pre/post command observation margins.",
+        "GNU-time CPU covers native child and waited-for descendants, with its own rounding and scope.",
+        "Differences are reported without a fitted acceptance threshold or correction.",
+        "Sampled aggregate RSS, cgroup memory peak and maximum process RSS are distinct statistics.",
+        "Resource reproduction does not validate host isolation or native biological outputs."
+      ],
+      "reconciliation": {
+        "baseline_cgroup_peak_bytes": 73371648,
+        "cgroup_minus_gnu_cpu_seconds": 18.039147999996203,
+        "cgroup_observed_cpu_seconds": 39504.129148,
+        "collector_command_wall_seconds": 2103.8988442262635,
+        "collector_minus_gnu_wall_seconds": 0.008844226263590826,
+        "gnu_time_native_cpu_seconds": 39486.090000000004,
+        "maximum_sample_gap_seconds": 1.2880792119540274
+      },
+      "scientific_timing_admitted": false,
+      "source": {
+        "bytes": 8154,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_dgx_resource_samples.py",
+        "sha256": "649f77f4ad29c1a65f33337f4dd6ead12d1c7797ee728dd8e72f58cd50ea8e59"
+      },
+      "status": "resource_accounting_reproduced_not_timing_admission",
+      "summary": {
+        "cpu_delta_usec": {
+          "system_usec": 19948742,
+          "usage_usec": 39504129148,
+          "user_usec": 39484180407
+        },
+        "maximum_reported_cgroup_peak_bytes": 7325691904,
+        "maximum_sampled_sum_rss_bytes": 8290750464,
+        "mean_cpu_cores_over_observed_span": 18.775682559523823,
+        "observation_span_s": 2104.0049554929137,
+        "observations": 2077,
+        "samples_with_process_errors": 0
+      }
+    },
+    {
+      "clock_domain": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+        "clock": "time.monotonic",
+        "hostname": "spark-7ff0",
+        "unit": "seconds"
+      },
+      "controlled_workload_verified": false,
+      "evidence": [
+        {
+          "bytes": 5864,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_22/measurement/results.json",
+          "sha256": "48bca6e9325fc8583ef579e5352d86c243ff6aff534a9ab505ab1040fe8635a9"
+        },
+        {
+          "bytes": 19597799,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_22/measurement/samples.jsonl",
+          "sha256": "5c47163c7629dbcf99eda33741fdbe653cb48e66cdee6cc9f2f0bbf4e1fd63d1"
+        },
+        {
+          "bytes": 111,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_22/native.time.tsv",
+          "sha256": "f568acee17576a09f2129f7beeda637a0c4a83ffecd769fab02ef1852fdf7c23"
+        }
+      ],
+      "gnu_time": {
+        "elapsed_seconds": 2625.91,
+        "exit_status": 0,
+        "max_process_rss_kib": 5008116,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 1385.49,
+        "user_seconds": 47818.94
+      },
+      "helpers": [
+        {
+          "bytes": 9712,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_slurm_command.py",
+          "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+        },
+        {
+          "bytes": 6539,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+          "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+        },
+        {
+          "bytes": 5721,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+          "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+        },
+        {
+          "bytes": 2020,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+          "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+        }
+      ],
+      "index": 22,
+      "job_id": 21739,
+      "limitations": [
+        "Cgroup deltas include collector overhead and pre/post command observation margins.",
+        "GNU-time CPU covers native child and waited-for descendants, with its own rounding and scope.",
+        "Differences are reported without a fitted acceptance threshold or correction.",
+        "Sampled aggregate RSS, cgroup memory peak and maximum process RSS are distinct statistics.",
+        "Resource reproduction does not validate host isolation or native biological outputs."
+      ],
+      "reconciliation": {
+        "baseline_cgroup_peak_bytes": 73781248,
+        "cgroup_minus_gnu_cpu_seconds": 31.89190200000303,
+        "cgroup_observed_cpu_seconds": 49236.321902,
+        "collector_command_wall_seconds": 2625.9171346188523,
+        "collector_minus_gnu_wall_seconds": 0.00713461885243305,
+        "gnu_time_native_cpu_seconds": 49204.43,
+        "maximum_sample_gap_seconds": 1.2846431392244995
+      },
+      "scientific_timing_admitted": false,
+      "source": {
+        "bytes": 8154,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_dgx_resource_samples.py",
+        "sha256": "649f77f4ad29c1a65f33337f4dd6ead12d1c7797ee728dd8e72f58cd50ea8e59"
+      },
+      "status": "resource_accounting_reproduced_not_timing_admission",
+      "summary": {
+        "cpu_delta_usec": {
+          "system_usec": 1460125355,
+          "usage_usec": 49236321902,
+          "user_usec": 47776196547
+        },
+        "maximum_reported_cgroup_peak_bytes": 7381999616,
+        "maximum_sampled_sum_rss_bytes": 7677304832,
+        "mean_cpu_cores_over_observed_span": 18.74939751748204,
+        "observation_span_s": 2626.0215484839864,
+        "observations": 2583,
+        "samples_with_process_errors": 427
+      }
+    },
+    {
+      "clock_domain": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+        "clock": "time.monotonic",
+        "hostname": "spark-7ff0",
+        "unit": "seconds"
+      },
+      "controlled_workload_verified": false,
+      "evidence": [
+        {
+          "bytes": 5069,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_23/measurement/results.json",
+          "sha256": "b32f2713715778d2c646e95483113a29773be449cda05f94a23262cba9c372cf"
+        },
+        {
+          "bytes": 16067257,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_23/measurement/samples.jsonl",
+          "sha256": "bcb2d3261e27368be8c74462fee87fcf8ecb460068be5f926c824e91fed8848f"
+        },
+        {
+          "bytes": 110,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_23/native.time.tsv",
+          "sha256": "cf800e072f5ed332d26067af496f21b821c470cd6c98f0d3c6f4b91a6907c676"
+        }
+      ],
+      "gnu_time": {
+        "elapsed_seconds": 1524.32,
+        "exit_status": 0,
+        "max_process_rss_kib": 5477336,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 391.59,
+        "user_seconds": 21358.84
+      },
+      "helpers": [
+        {
+          "bytes": 9712,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_slurm_command.py",
+          "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+        },
+        {
+          "bytes": 6539,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+          "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+        },
+        {
+          "bytes": 5721,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+          "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+        },
+        {
+          "bytes": 2020,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+          "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+        }
+      ],
+      "index": 23,
+      "job_id": 21743,
+      "limitations": [
+        "Cgroup deltas include collector overhead and pre/post command observation margins.",
+        "GNU-time CPU covers native child and waited-for descendants, with its own rounding and scope.",
+        "Differences are reported without a fitted acceptance threshold or correction.",
+        "Sampled aggregate RSS, cgroup memory peak and maximum process RSS are distinct statistics.",
+        "Resource reproduction does not validate host isolation or native biological outputs."
+      ],
+      "reconciliation": {
+        "baseline_cgroup_peak_bytes": 161869824,
+        "cgroup_minus_gnu_cpu_seconds": 21.792546000000584,
+        "cgroup_observed_cpu_seconds": 21772.222546,
+        "collector_command_wall_seconds": 1524.3559756209143,
+        "collector_minus_gnu_wall_seconds": 0.03597562091431428,
+        "gnu_time_native_cpu_seconds": 21750.43,
+        "maximum_sample_gap_seconds": 1.284784875344485
+      },
+      "scientific_timing_admitted": false,
+      "source": {
+        "bytes": 8154,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_dgx_resource_samples.py",
+        "sha256": "649f77f4ad29c1a65f33337f4dd6ead12d1c7797ee728dd8e72f58cd50ea8e59"
+      },
+      "status": "resource_accounting_reproduced_not_timing_admission",
+      "summary": {
+        "cpu_delta_usec": {
+          "system_usec": 403617690,
+          "usage_usec": 21772222546,
+          "user_usec": 21368604856
+        },
+        "maximum_reported_cgroup_peak_bytes": 10611396608,
+        "maximum_sampled_sum_rss_bytes": 12362698752,
+        "mean_cpu_cores_over_observed_span": 14.281939628954694,
+        "observation_span_s": 1524.4583797189407,
+        "observations": 1497,
+        "samples_with_process_errors": 109
+      }
+    },
+    {
+      "clock_domain": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+        "clock": "time.monotonic",
+        "hostname": "spark-7ff0",
+        "unit": "seconds"
+      },
+      "controlled_workload_verified": false,
+      "evidence": [
+        {
+          "bytes": 5870,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_24/measurement/results.json",
+          "sha256": "b50d5b4806f630b8a47a3b6932e867ac1b3fb0a1e1af7a14bff7d8766c04a24e"
+        },
+        {
+          "bytes": 41607468,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_24/measurement/samples.jsonl",
+          "sha256": "14fe32a89085301750bd92506441ef3ebb5a0190714a34efcefeab77ffacf6f6"
+        },
+        {
+          "bytes": 112,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_24/native.time.tsv",
+          "sha256": "0fef2c20f71f4575215aa742d2cc70ea5aeebd22e958da6a67f707ff4d80cf58"
+        }
+      ],
+      "gnu_time": {
+        "elapsed_seconds": 5718.83,
+        "exit_status": 0,
+        "max_process_rss_kib": 6157644,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 1762.45,
+        "user_seconds": 107457.21
+      },
+      "helpers": [
+        {
+          "bytes": 9712,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_slurm_command.py",
+          "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+        },
+        {
+          "bytes": 6539,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+          "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+        },
+        {
+          "bytes": 5721,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+          "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+        },
+        {
+          "bytes": 2020,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+          "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+        }
+      ],
+      "index": 24,
+      "job_id": 21747,
+      "limitations": [
+        "Cgroup deltas include collector overhead and pre/post command observation margins.",
+        "GNU-time CPU covers native child and waited-for descendants, with its own rounding and scope.",
+        "Differences are reported without a fitted acceptance threshold or correction.",
+        "Sampled aggregate RSS, cgroup memory peak and maximum process RSS are distinct statistics.",
+        "Resource reproduction does not validate host isolation or native biological outputs."
+      ],
+      "reconciliation": {
+        "baseline_cgroup_peak_bytes": 72949760,
+        "cgroup_minus_gnu_cpu_seconds": 88.7137759999896,
+        "cgroup_observed_cpu_seconds": 109308.373776,
+        "collector_command_wall_seconds": 5718.856140751857,
+        "collector_minus_gnu_wall_seconds": 0.026140751857383293,
+        "gnu_time_native_cpu_seconds": 109219.66,
+        "maximum_sample_gap_seconds": 1.2992662363685668
+      },
+      "scientific_timing_admitted": false,
+      "source": {
+        "bytes": 8154,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_dgx_resource_samples.py",
+        "sha256": "649f77f4ad29c1a65f33337f4dd6ead12d1c7797ee728dd8e72f58cd50ea8e59"
+      },
+      "status": "resource_accounting_reproduced_not_timing_admission",
+      "summary": {
+        "cpu_delta_usec": {
+          "system_usec": 1858322270,
+          "usage_usec": 109308373776,
+          "user_usec": 107450051506
+        },
+        "maximum_reported_cgroup_peak_bytes": 10262327296,
+        "maximum_sampled_sum_rss_bytes": 10962919424,
+        "mean_cpu_cores_over_observed_span": 19.113336529693683,
+        "observation_span_s": 5718.958257559221,
+        "observations": 5587,
+        "samples_with_process_errors": 701
+      }
+    },
+    {
+      "clock_domain": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+        "clock": "time.monotonic",
+        "hostname": "spark-7ff0",
+        "unit": "seconds"
+      },
+      "controlled_workload_verified": false,
+      "evidence": [
+        {
+          "bytes": 5061,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_25/measurement/results.json",
+          "sha256": "a79f759ae3860d184841191c653d621b5bf28170103fe4a400311c9ac44e34a0"
+        },
+        {
+          "bytes": 33360731,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_25/measurement/samples.jsonl",
+          "sha256": "c1590e902325bbe35982bd63b2ed7763da99898ce9d7300a9cc3fbf4748f6659"
+        },
+        {
+          "bytes": 110,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_25/native.time.tsv",
+          "sha256": "1cc23e9ad752975d488e9d310d99ba4c25e5b2c6c21222393974cd82c962fb29"
+        }
+      ],
+      "gnu_time": {
+        "elapsed_seconds": 2822.08,
+        "exit_status": 0,
+        "max_process_rss_kib": 4576584,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 524.99,
+        "user_seconds": 51451.44
+      },
+      "helpers": [
+        {
+          "bytes": 9712,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_slurm_command.py",
+          "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+        },
+        {
+          "bytes": 6539,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+          "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+        },
+        {
+          "bytes": 5721,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+          "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+        },
+        {
+          "bytes": 2020,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+          "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+        }
+      ],
+      "index": 25,
+      "job_id": 21751,
+      "limitations": [
+        "Cgroup deltas include collector overhead and pre/post command observation margins.",
+        "GNU-time CPU covers native child and waited-for descendants, with its own rounding and scope.",
+        "Differences are reported without a fitted acceptance threshold or correction.",
+        "Sampled aggregate RSS, cgroup memory peak and maximum process RSS are distinct statistics.",
+        "Resource reproduction does not validate host isolation or native biological outputs."
+      ],
+      "reconciliation": {
+        "baseline_cgroup_peak_bytes": 212262912,
+        "cgroup_minus_gnu_cpu_seconds": 50.819353999999294,
+        "cgroup_observed_cpu_seconds": 52027.249354,
+        "collector_command_wall_seconds": 2822.1164814019576,
+        "collector_minus_gnu_wall_seconds": 0.036481401957644266,
+        "gnu_time_native_cpu_seconds": 51976.43,
+        "maximum_sample_gap_seconds": 1.2927630571648479
+      },
+      "scientific_timing_admitted": false,
+      "source": {
+        "bytes": 8154,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_dgx_resource_samples.py",
+        "sha256": "649f77f4ad29c1a65f33337f4dd6ead12d1c7797ee728dd8e72f58cd50ea8e59"
+      },
+      "status": "resource_accounting_reproduced_not_timing_admission",
+      "summary": {
+        "cpu_delta_usec": {
+          "system_usec": 547183519,
+          "usage_usec": 52027249354,
+          "user_usec": 51480065835
+        },
+        "maximum_reported_cgroup_peak_bytes": 11958616064,
+        "maximum_sampled_sum_rss_bytes": 16193097728,
+        "mean_cpu_cores_over_observed_span": 18.434653040441365,
+        "observation_span_s": 2822.252702009864,
+        "observations": 2750,
+        "samples_with_process_errors": 134
+      }
+    },
+    {
+      "clock_domain": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+        "clock": "time.monotonic",
+        "hostname": "spark-7ff0",
+        "unit": "seconds"
+      },
+      "controlled_workload_verified": false,
+      "evidence": [
+        {
+          "bytes": 5518,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_26/measurement/results.json",
+          "sha256": "227f8a9c4f9a0fc722db6ed4ce559e42f66a037ce8966a108a84c688fe4aac8c"
+        },
+        {
+          "bytes": 30456443,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_26/measurement/samples.jsonl",
+          "sha256": "72c92a8383076bb6505644b4eaa87aebbbfe38a9b825edee19ee59aeb1368cd6"
+        },
+        {
+          "bytes": 109,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_completed_evidence_20260918/run_26/native.time.tsv",
+          "sha256": "13680af776d774694f490b2e921ac17f20bd918791828d625c9f943b27bc90fd"
+        }
+      ],
+      "gnu_time": {
+        "elapsed_seconds": 4700.86,
+        "exit_status": 0,
+        "max_process_rss_kib": 6168484,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 23.06,
+        "user_seconds": 90314.13
+      },
+      "helpers": [
+        {
+          "bytes": 9712,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_slurm_command.py",
+          "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+        },
+        {
+          "bytes": 6539,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+          "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+        },
+        {
+          "bytes": 5721,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+          "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+        },
+        {
+          "bytes": 2020,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+          "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+        }
+      ],
+      "index": 26,
+      "job_id": 21656,
+      "limitations": [
+        "Cgroup deltas include collector overhead and pre/post command observation margins.",
+        "GNU-time CPU covers native child and waited-for descendants, with its own rounding and scope.",
+        "Differences are reported without a fitted acceptance threshold or correction.",
+        "Sampled aggregate RSS, cgroup memory peak and maximum process RSS are distinct statistics.",
+        "Resource reproduction does not validate host isolation or native biological outputs."
+      ],
+      "reconciliation": {
+        "baseline_cgroup_peak_bytes": 72990720,
+        "cgroup_minus_gnu_cpu_seconds": 52.78887799999211,
+        "cgroup_observed_cpu_seconds": 90389.978878,
+        "collector_command_wall_seconds": 4700.870696674101,
+        "collector_minus_gnu_wall_seconds": 0.010696674101382087,
+        "gnu_time_native_cpu_seconds": 90337.19,
+        "maximum_sample_gap_seconds": 1.2873931657522917
+      },
+      "scientific_timing_admitted": false,
+      "source": {
+        "bytes": 8154,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_dgx_resource_samples.py",
+        "sha256": "649f77f4ad29c1a65f33337f4dd6ead12d1c7797ee728dd8e72f58cd50ea8e59"
+      },
+      "status": "resource_accounting_reproduced_not_timing_admission",
+      "summary": {
+        "cpu_delta_usec": {
+          "system_usec": 34954424,
+          "usage_usec": 90389978878,
+          "user_usec": 90355024454
+        },
+        "maximum_reported_cgroup_peak_bytes": 10192945152,
+        "maximum_sampled_sum_rss_bytes": 10912276480,
+        "mean_cpu_cores_over_observed_span": 19.227924033725742,
+        "observation_span_s": 4700.974411977921,
+        "observations": 4616,
+        "samples_with_process_errors": 0
+      }
+    }
+  ],
+  "scientific_timings_admitted": 0,
+  "source": {
+    "bytes": 8154,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_dgx_resource_samples.py",
+    "sha256": "649f77f4ad29c1a65f33337f4dd6ead12d1c7797ee728dd8e72f58cd50ea8e59"
+  }
+}
