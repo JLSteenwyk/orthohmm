@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Corrected OrthoMCL Scoring And Admission Queued (2026-09-18 UTC)
+
+Previous turn progressed through b213c3c/cd11f04: checked clique conversion
+queued as21753. Latest live handles: HMM21706_0 RUNNING9:16:04,
+DGX21656_25 RUNNING38:12. Corrected BLAST21713 remains pending resources;
+native21750, admission21752 and conversion21753 retain their dependencies.
+No existing job was restarted and no heavy DGX I/O was added.
+
+Extended the existing six-endpoint corrected QfO workflow for OrthoMCL with
+frozen converter identity, exact clique semantics, complete group-audit and
+query-diagnostic binding, and independent terminal score admission. Added
+the corrected-table adapter preserving coverage/diagnostics. The first full
+suite caught that missing adapter; after implementation all4,040 tests pass
+in87.10s with legacy runtime checks. After final revision pinning,120 focused
+assessment/admission/export tests pass. No endpoint or reference was changed.
+
+Scoring21754 afterok:21753 uses5efb206b23a44f85386d8cb7e90f3e815a3d162a
+at publication_qfo_corrected_orthomcl_assessment_v1,8CPUs/64GiB/24h/bizon.
+Independent admission21755 afterany:21754 uses
+4af373076beb138a086c159c7950e411762197d1 at
+publication_qfo_corrected_orthomcl_score_admission_v1,2CPUs/64GiB/24h/bizon.
+Both are no-requeue and confirmed pending dependencies. Actual pending-job
+preflights refuse partial conversion/scoring evidence.
+
+See QFO_CORRECTED_ORTHOMCL_ASSESSMENT_20260918.md. OrthoMCL is now queued
+through scoring and independent admission, not completed. Next: continue
+the corrected HMM/factorial downstream workflow and publication evidence
+while queued comparator runs proceed; admit terminal timing results only
+after the dedicated scaling sequence and isolation/resource audit finish.
+The full goal remains active and no publication-readiness claim is made.
+
 ## Corrected OrthoMCL Pair Conversion Queued (2026-09-18 UTC)
 
 Previous turn progressed through fe08c7d/1899f19: independent native output
