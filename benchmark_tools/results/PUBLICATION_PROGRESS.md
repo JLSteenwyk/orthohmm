@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Prediction-Independent SwissTrees Domain Inventory (2026-09-17)
+
+Previous turn progressed relocated statistical reproduction, pusheda2752ef.
+Re-read full objective; returned to independent error-annotation requirements.
+Inspected retained FAS annotation schema and built an input-only Pfam feature
+inventory for all18SwissTrees families, without evaluating prediction outcomes.
+All78annotation files are identity-pinned; all563reference accessions match
+exactly, with no missing annotations. Five records have no Pfam hits,225have
+multiple types and63have repeated instances of a type. Missing is not zero.
+All8focused extraction tests pass; coordinates retained without coverage-width
+interpretation. No fragment, domain-loss or true duplication labels inferred.
+
+Froze `SWISS_DOMAIN_STRATA_PROTOCOL_20260917.md` before stratified outcomes:
+median Pfam types<2 versus>=2 (12/6families), plus descriptive repeated-type
+fraction<25% versus>=25% (15/3families). All eight methods get point summaries;
+three fixed OrthoHMM contrasts receive primary-bin and interaction estimates
+under100,000draws, seed20260921,27endpoint adjustment. The repeat subset gets
+no inferential intervals because it contains only3curated families. No outcomes
+computed yet, no threshold tuning authorized. Inventory JSON records full
+selected features, source identities, coverage and limitations.
+
+Annotations are external to predictions but come from the retained QfO FAS
+resource, so they are not independent confirmation of FAS. Retrospective
+SwissTrees strata remain development-exposed and noncausal. Next: execute fixed
+stratum statistics, continue other QfO scientific gaps and publication package.
+DGX21656_6 verified RUNNING19:20, six complete; no timing admission or restart.
+
 ## Relocated Statistical Workflow Reproduction (2026-09-17)
 
 Previous turn progressed first-six DGX metadata validation, pushedfd5f1ac.
