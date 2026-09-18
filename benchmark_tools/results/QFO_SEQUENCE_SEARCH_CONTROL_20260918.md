@@ -95,3 +95,16 @@ writes both all-hit and post-search top100 audited numeric checkpoints to
 benchmarks/results/qfo_sequence_numeric_v1.46 focused tests pass. No
 production checkpoint is available yet, and frozen graph replay plus
 independent checkpoint equivalence/scoring checks remain required.
+
+Independent numeric admission21792 follows afterany:21791, frozen at
+617588f0f0acef0134b3e5fe18480e00eaa22129 in
+publication_qfo_sequence_numeric_admission_v1. Submitted2026-09-18T11:21:33
+with2CPU/192GiB/7days/bizon/no-requeue. It independently reconstructs source
+hits in a separate SQLite database and compares exact normalized tuples,
+gene/species maps, and streaming per-query/species top100 ranks against both
+hashed checkpoints. Terminal accounting, frozen converter/admitter sources,
+input identities and pre/post file hashes are required.64 focused tests
+pass, and actual pending-conversion preflight refuses without output.
+Future report: benchmarks/work/qfo_sequence_numeric_admission_20260918/report.json.
+No production equivalence result exists yet. This gate does not authorize a
+claim of matched search sensitivity, scientific accuracy or graph feasibility.

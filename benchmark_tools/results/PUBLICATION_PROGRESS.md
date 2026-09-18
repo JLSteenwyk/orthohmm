@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Independent Numeric Admission Queued (2026-09-18 UTC)
+
+Previous goal turn: no new publication progress; archive retrieval and
+existing download checksums were rechecked without recovering the missing
+TreeFam sources. This turn revalidated live jobs: corrected DIAMOND21789
+RUNNING22:52, HMM21706_0 RUNNING10:34:30, final dedicated DGX21656_26
+RUNNING1:09:50. No active jobs were restarted or disturbed.
+
+Completed independent numeric-admission wrapper and batch launcher at
+617588f0f0acef0134b3e5fe18480e00eaa22129, frozen in
+benchmarks/work/publication_qfo_sequence_numeric_admission_v1.
+Job21792 submitted2026-09-18T11:21:33 afterany:21791, confirmed pending
+with2CPU/192GiB/7days/bizon/no-requeue. It requires successful terminal
+conversion and prior search-admission accounting, frozen source/helper
+identities, corrected FASTA metadata and intact search/checkpoint records.
+Then it reconstructs all emitted tuples independently in a separate SQLite
+database and compares both all-hit and post-search top100 checkpoints.
+Source hashes are rechecked after comparison; failure evidence is retained.
+Expected output: benchmarks/work/qfo_sequence_numeric_admission_20260918/.
+
+64 focused tests pass in0.43s; launcher passes bash syntax validation.
+Actual pending21791 CLI preflight rejects before creating its output path.
+This validates fixtures and refusal behavior, not production equivalence.
+Graph replay, hit diagnostics, independent native validation and scoring
+remain required. Matching emitted hits does not prove matched biological
+sensitivity or computational effort. Full publication goal remains active.
+
 ## Independent Search Checkpoint Equivalence (2026-09-18 UTC)
 
 Previous turn progressed through1de763d: numeric conversion21791 queued.
