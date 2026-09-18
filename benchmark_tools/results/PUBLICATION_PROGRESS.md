@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Sequence-Control SwissTrees Uncertainty Prespecified (2026-09-18 UTC)
+
+Previous turn produced additional archive-search evidence and recorded that
+the original TreeFam inputs remain unavailable; no family uncertainty was
+claimed. Reread the full objective. Scheduler confirms21706_0 HMM RUNNING
+13:56:30 and21791 numeric conversion RUNNING1:28:37. Their downstream jobs
+remain dependency-pending; no running work was restarted.
+
+Added QFO_SEQUENCE_UNCERTAINTY_PROTOCOL_20260918.md before corrected
+sequence-control graph results exist: two DIAMOND-minus-initial-HMM contrasts,
+six F1/PPV/TPR endpoints,100000 shared family draws,PCG64 seed20260923,
+Bonferroni adjustment and native macro precision/recall harmonic F1.
+This explicitly remains development-exposed after earlier benchmark inspection.
+
+Added bootstrap_qfo_sequence.py as a numerical engine, not a production
+admission tool. It checks the frozen reference identity,18 disjoint families,
+10765 relations, consistent member/truth universes and reconstructed native
+statistics. Its output keeps uncertainty_admitted=False.46 focused tests pass,
+including22 new tests for explicit resampling, zero predictions, corruption
+and invalid controls. No actual new interval or score has been calculated.
+
+Next: source-bound sequence/HMM count assembly and production provenance
+runner; review21798 payload evidence when ready before graph allocation.
+Corrected runs, other QfO uncertainty, controlled timing and publication
+packaging remain incomplete. TreeFam retrieval follow-up is also retained;
+no maintainer message was sent.
+
 ## Sequence-Control Endpoint Workflow Connected (2026-09-18 UTC)
 
 Previous turn progressed through4f0c30e with pair conversion and a full unit

@@ -70,6 +70,24 @@ These are observations from this search, not proof that no copy exists:
 
 ## Required Next Step
 
+### Additional Public Leads Checked
+
+- Repeated exact searches for `treefam2reference.txt` and
+  `treefam2reference` did not identify a downloadable original mapping.
+- The [TreeSoft SourceForge inventory](https://sourceforge.net/projects/treesoft/files/)
+  lists TreeFam Perl API releases and tree software. Its
+  [OldFiles directory](https://sourceforge.net/projects/treesoft/files/OldFiles/)
+  lists three software archives, not a TreeFam release-7 dataset. These
+  visible inventories do not establish what every software archive contains.
+- An Internet Archive availability request for
+  `ftp.sanger.ac.uk/pub/treefam/release-7.0/` with timestamp `20120101`
+  returned HTTP 429. This is an unsuccessful lookup, not evidence of
+  absence from the archive; no rate-limit bypass was attempted.
+- Rehashed the retained pooled reference and supplementary software ZIP;
+  both still match the SHA-256 values recorded above.
+
+No additional original trees or mapping were downloaded from these leads.
+
 ### Follow-up Public Archive Search
 
 A further exact-filename and release-7 search did not locate a downloadable
