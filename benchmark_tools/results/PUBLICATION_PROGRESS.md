@@ -1,5 +1,31 @@
 # Publication Progress
 
+## All-Method Quiet DGX Control Completed (2026-09-18 UTC)
+
+Previous turn progressed throughed2f4de with native hierarchy integration and
+explicit operator SSH/SCP confounding. Reread the objective and froze one
+all-method quiet control, not a repeat-until-pass rule. Committed/pushedcc3f63d
+protocol/launchers andbb4e8ae verified27-file recipe before array21820.
+
+Submission SSH exited by21:45:58UTC; requested eligibility was21:46:58UTC
+and actual first start21:47:14UTC. Used only local scheduler polls while the
+array ran; no DGX SSH or transfer until all three were terminal at21:48:06UTC.
+All tasks completed0:0 with unchanged20CPU/96GiB settings and no restarts.
+
+Native groups/pairs and runtime/input identities validate; all raw counter
+screens replay. High-sensitivity and full OrthoFinder have no interval flags,
+but satellite_v2 retains interval3:0.370167CPU-second native residual and
+0.367417host-minus-job-parent residual, with only0.002749batch CPU-seconds.
+Thus operator remote calls are not a sufficient sole explanation. No causal
+attribution, threshold relaxation or scientific timing admission follows.
+
+84focused tests pass. Retained all three outcomes, terminal records, recipe
+and validated archive report; see DGX_HIERARCHY_QUIET_RESULT_20260918.md.
+No selective rerun is planned from these outcomes. Further attribution and
+accounting/overhead evidence, non-CPU isolation and inclusion policy remain
+required. Main-host corrected benchmarks continue; the full publication
+objective remains active and incomplete.
+
 ## Native Hierarchy Integration Executed (2026-09-18 UTC)
 
 Previous turn progressed through76b1977 with the collector and prospective

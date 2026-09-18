@@ -31,3 +31,26 @@ def test_quiet_recipe_matches_transferred_source_inventory():
             path = root / "results" / path.name
         assert len(path.read_bytes()) == row["bytes"]
         assert hashlib.sha256(path.read_bytes()).hexdigest() == row["sha256"]
+
+
+def test_actual_quiet_control_preserves_remaining_flag():
+    import json
+    from benchmark_tools.measure_native_hierarchy_step import evaluate
+
+    root = Path(__file__).resolve().parents[2] / "benchmark_tools/results"
+    result = json.loads((root / "dgx_hierarchy_quiet_smokes_21820.json").read_text())
+    assert result["scientific_timings_admitted"] == 0
+    assert result["publication_ready"] is False
+    flags = []
+    for row in result["runs"]:
+        measurement = row["verification"]["measurement"]
+        assert evaluate(measurement["points"], measurement["native"], measurement["job_id"]) == measurement["screening"]
+        assert measurement["native"]["exit_code"] == 0
+        assert row["output_validation"]["input_genes"] == 645
+        flags.append(measurement["screening"]["original_threshold_screen"]["flagged_intervals"])
+        for token in ("JobState=COMPLETED", "Restarts=0", "CPUs/Task=20", "MinMemoryNode=96G", "OverSubscribe=NO"):
+            assert token in row["scheduler"].split()
+    assert flags == [[], [3], []]
+    flagged = result["runs"][1]["verification"]["measurement"]["screening"]["hierarchy_intervals"][3]
+    assert flagged["host_minus_job_outer_cpu_s"] == pytest.approx(.367417)
+    assert flagged["step_cpu_s"]["step_batch"] == pytest.approx(.002749)
