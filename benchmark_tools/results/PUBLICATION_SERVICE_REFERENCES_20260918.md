@@ -44,7 +44,38 @@ Its recommended bibliographic fields were checked directly. The webpage is
 not redistributed in the source repository. The citation above is manually
 transcribed guidance, not a Crossref record or full-text review.
 
-## Byline Review Required
+## Reviewed Byline Export
+
+The source discrepancy is now resolved in a separate CSL export,
+`publication_service_bylines_20260918.csl.json`, with a complete before/after
+author record in `publication_service_byline_provenance_20260918.json`.
+The raw Crossref export above remains unchanged. All non-author CSL fields
+are identical. Use the corrected export for these two publication citations.
+
+The article XML snapshots were downloaded from Europe PMC's fullTextXML
+endpoint for [PMC7319555](https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7319555/fullTextXML)
+and [PMC9252809](https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9252809/fullTextXML)
+into `benchmarks/work/publication_service_crossref_20260918/`.
+SHA-256 values are respectively
+`50162a498e935d807943160e706d3ed3f6f6f5769313277e9de4eea0fe4074ec`
+and `d6b9ae310a6fd7bf617d6011e4649313dbe1992b4df5dd76af1ff57231f50255`.
+They are locally retained evidence, not redistributed article text.
+
+`correct_qfo_service_bylines.py` parses only the top-level article-meta
+contributor group, verifies DOI and snapshot checksums, preserves contributor
+order and personal-name spelling, and does not deduplicate people by name.
+The 2020 list remains23 entries, with the consortium's given/family encoding
+converted to a CSL literal. The 2022 list changes from69 expanded Crossref
+entries to31 top-level byline entries. Its XML combines OpenEBench and QfO
+in one collective label; that label is retained verbatim apart from whitespace,
+not arbitrarily split into two invented contributor records.
+
+26 focused tests pass (10 byline-parser and16 existing citation-export tests).
+Fresh-path offline replay reproduces the corrected CSL byte-for-byte; a direct
+comparison confirms every non-author field remains unchanged. This resolves
+the author-list rendering issue, not full journal-style bibliography formatting.
+
+### Original Discrepancy
 
 Preserve the Crossref export as deposited evidence, not a final journal
 bibliography: the2020 consortium name is split into given/family fields;

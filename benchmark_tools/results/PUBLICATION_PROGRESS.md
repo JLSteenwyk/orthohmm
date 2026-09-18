@@ -1,5 +1,25 @@
 # Publication Progress
 
+## QfO Service Byline Correction Completed (2026-09-18 UTC)
+
+Previous turn made progress through7fc371f by queuing the source-admitted
+memory-planning job. Reread the full goal and confirmed21706_0 HMM
+RUNNING13:13:41,21791 conversion RUNNING45:48;21792/21798 remain dependent.
+
+Resolved the documented service-citation author-list discrepancy using
+checksum-pinned Europe PMC article XML. Separate corrected CSL and provenance
+preserve the raw Crossref export. Top-level author order and spellings are
+retained; 2020 consortium becomes a literal (23 entries unchanged in count),
+while2022 excludes consortium-membership expansion (69 to31 entries).
+The combined collective label in2022 XML is preserved, not split by guesswork.
+
+Added correct_qfo_service_bylines.py and10 parser tests;26 focused tests pass.
+Offline fresh-path replay is byte-identical, and all non-author fields are
+unchanged. Details/source URLs/checksums are recorded in
+PUBLICATION_SERVICE_REFERENCES_20260918.md. This completes one bibliography
+correction, not the remaining analyses, full reference list, rights review,
+controlled timing or archival release. Publication goal remains active.
+
 ## Corrected QfO Graph Payload Job Queued (2026-09-18 UTC)
 
 Previous turn made progress through dad4d2f: completed initial graph trace,

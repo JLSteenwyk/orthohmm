@@ -1,0 +1,642 @@
+{
+  "status": "reviewed_qfo_service_bylines_exported",
+  "raw": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_service_references_20260918.csl.json",
+    "bytes": 7891,
+    "sha256": "8c844fbef9a2694da284a2e98e22baf78a5b865465bcabd7768b321e877fc53a"
+  },
+  "output": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_service_bylines_20260918.csl.json",
+    "bytes": 5059,
+    "sha256": "c8e0b60eeafbecd9e5859a5455a4477ec34600c2243d25303b4ccf0f469d2a52"
+  },
+  "source": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/correct_qfo_service_bylines.py",
+    "bytes": 5039,
+    "sha256": "8a3c2cf1eb98fd7646a34d44cf43c405fc990ed0672faa52fa232b771dc3d915"
+  },
+  "evidence": [
+    {
+      "id": "qfo2020",
+      "source": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_service_crossref_20260918/PMC7319555.xml",
+        "bytes": 97315,
+        "sha256": "50162a498e935d807943160e706d3ed3f6f6f5769313277e9de4eea0fe4074ec"
+      },
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7319555/fullTextXML",
+      "original_author_count": 23,
+      "corrected_author_count": 23,
+      "original_authors": [
+        {
+          "given": "Adrian M",
+          "family": "Altenhoff"
+        },
+        {
+          "given": "Javier",
+          "family": "Garrayo-Ventas"
+        },
+        {
+          "given": "Salvatore",
+          "family": "Cosentino"
+        },
+        {
+          "given": "David",
+          "family": "Emms"
+        },
+        {
+          "given": "Natasha M",
+          "family": "Glover"
+        },
+        {
+          "given": "Ana",
+          "family": "Hern\u00e1ndez-Plaza"
+        },
+        {
+          "given": "Yannis",
+          "family": "Nevers"
+        },
+        {
+          "given": "Vicky",
+          "family": "Sundesha"
+        },
+        {
+          "given": "Damian",
+          "family": "Szklarczyk"
+        },
+        {
+          "given": "Jos\u00e9 M",
+          "family": "Fern\u00e1ndez"
+        },
+        {
+          "given": "Laia",
+          "family": "Cod\u00f3"
+        },
+        {
+          "given": "the Quest",
+          "family": "for\u00a0Orthologs\u00a0Consortium"
+        },
+        {
+          "given": "Josep Ll",
+          "family": "Gelpi"
+        },
+        {
+          "given": "Jaime",
+          "family": "Huerta-Cepas"
+        },
+        {
+          "given": "Wataru",
+          "family": "Iwasaki"
+        },
+        {
+          "given": "Steven",
+          "family": "Kelly"
+        },
+        {
+          "given": "Odile",
+          "family": "Lecompte"
+        },
+        {
+          "given": "Matthieu",
+          "family": "Muffato"
+        },
+        {
+          "given": "Maria J",
+          "family": "Martin"
+        },
+        {
+          "given": "Salvador",
+          "family": "Capella-Gutierrez"
+        },
+        {
+          "given": "Paul D",
+          "family": "Thomas"
+        },
+        {
+          "given": "Erik",
+          "family": "Sonnhammer"
+        },
+        {
+          "given": "Christophe",
+          "family": "Dessimoz"
+        }
+      ],
+      "corrected_authors": [
+        {
+          "given": "Adrian M",
+          "family": "Altenhoff"
+        },
+        {
+          "given": "Javier",
+          "family": "Garrayo-Ventas"
+        },
+        {
+          "given": "Salvatore",
+          "family": "Cosentino"
+        },
+        {
+          "given": "David",
+          "family": "Emms"
+        },
+        {
+          "given": "Natasha M",
+          "family": "Glover"
+        },
+        {
+          "given": "Ana",
+          "family": "Hern\u00e1ndez-Plaza"
+        },
+        {
+          "given": "Yannis",
+          "family": "Nevers"
+        },
+        {
+          "given": "Vicky",
+          "family": "Sundesha"
+        },
+        {
+          "given": "Damian",
+          "family": "Szklarczyk"
+        },
+        {
+          "given": "Jos\u00e9 M",
+          "family": "Fern\u00e1ndez"
+        },
+        {
+          "given": "Laia",
+          "family": "Cod\u00f3"
+        },
+        {
+          "literal": "the Quest for Orthologs Consortium"
+        },
+        {
+          "given": "Josep Ll",
+          "family": "Gelpi"
+        },
+        {
+          "given": "Jaime",
+          "family": "Huerta-Cepas"
+        },
+        {
+          "given": "Wataru",
+          "family": "Iwasaki"
+        },
+        {
+          "given": "Steven",
+          "family": "Kelly"
+        },
+        {
+          "given": "Odile",
+          "family": "Lecompte"
+        },
+        {
+          "given": "Matthieu",
+          "family": "Muffato"
+        },
+        {
+          "given": "Maria J",
+          "family": "Martin"
+        },
+        {
+          "given": "Salvador",
+          "family": "Capella-Gutierrez"
+        },
+        {
+          "given": "Paul D",
+          "family": "Thomas"
+        },
+        {
+          "given": "Erik",
+          "family": "Sonnhammer"
+        },
+        {
+          "given": "Christophe",
+          "family": "Dessimoz"
+        }
+      ]
+    },
+    {
+      "id": "qfo2022",
+      "source": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_service_crossref_20260918/PMC9252809.xml",
+        "bytes": 105178,
+        "sha256": "d6b9ae310a6fd7bf617d6011e4649313dbe1992b4df5dd76af1ff57231f50255"
+      },
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9252809/fullTextXML",
+      "original_author_count": 69,
+      "corrected_author_count": 31,
+      "original_authors": [
+        {
+          "given": "Yannis",
+          "family": "Nevers"
+        },
+        {
+          "given": "Tamsin E M",
+          "family": "Jones"
+        },
+        {
+          "given": "Dushyanth",
+          "family": "Jyothi"
+        },
+        {
+          "given": "Bethan",
+          "family": "Yates"
+        },
+        {
+          "given": "Meritxell",
+          "family": "Ferret"
+        },
+        {
+          "given": "Laura",
+          "family": "Portell-Silva"
+        },
+        {
+          "given": "Laia",
+          "family": "Codo"
+        },
+        {
+          "given": "Salvatore",
+          "family": "Cosentino"
+        },
+        {
+          "given": "Marina",
+          "family": "Marcet-Houben"
+        },
+        {
+          "given": "Anna",
+          "family": "Vlasova"
+        },
+        {
+          "given": "Laetitia",
+          "family": "Poidevin"
+        },
+        {
+          "given": "Arnaud",
+          "family": "Kress"
+        },
+        {
+          "given": "Mark",
+          "family": "Hickman"
+        },
+        {
+          "given": "Emma",
+          "family": "Persson"
+        },
+        {
+          "given": "Ivana",
+          "family": "Pili\u017eota"
+        },
+        {
+          "given": "Cristina",
+          "family": "Guijarro-Clarke"
+        },
+        {
+          "literal": "the OpenEBench team the Quest for Orthologs Consortium"
+        },
+        {
+          "given": "Adrian",
+          "family": "Altenhoff"
+        },
+        {
+          "given": "Elspeth A",
+          "family": "Bruford"
+        },
+        {
+          "given": "Salvatore",
+          "family": "Cosentino"
+        },
+        {
+          "given": "Christophe",
+          "family": "Dessimoz"
+        },
+        {
+          "given": "Ingo",
+          "family": "Ebersberger"
+        },
+        {
+          "given": "David M",
+          "family": "Emms"
+        },
+        {
+          "given": "Toni",
+          "family": "Gabald\u00f3n"
+        },
+        {
+          "given": "Natasha",
+          "family": "Glover"
+        },
+        {
+          "given": "Cristina",
+          "family": "Guijarro-Clarke"
+        },
+        {
+          "given": "Mark",
+          "family": "Hickman"
+        },
+        {
+          "given": "Yanhui",
+          "family": "Hu"
+        },
+        {
+          "given": "Wataru",
+          "family": "Iwasaki"
+        },
+        {
+          "given": "Tamsin E M",
+          "family": "Jones"
+        },
+        {
+          "given": "Dushyanth",
+          "family": "Jyothi"
+        },
+        {
+          "given": "Arnaud",
+          "family": "Kress"
+        },
+        {
+          "given": "Odile",
+          "family": "Lecompte"
+        },
+        {
+          "given": "Benjamin",
+          "family": "Linard"
+        },
+        {
+          "given": "Marina",
+          "family": "Marcet-Houben"
+        },
+        {
+          "given": "Maria J",
+          "family": "Martin"
+        },
+        {
+          "given": "Yannis",
+          "family": "Nevers"
+        },
+        {
+          "given": "Emma",
+          "family": "Persson"
+        },
+        {
+          "given": "Ivana",
+          "family": "Pili\u017eota"
+        },
+        {
+          "given": "Laetitia",
+          "family": "Poidevin"
+        },
+        {
+          "given": "David S",
+          "family": "Roos"
+        },
+        {
+          "given": "Erik",
+          "family": "Sonhammer"
+        },
+        {
+          "given": "Paul D",
+          "family": "Thomas"
+        },
+        {
+          "given": "David",
+          "family": "Thybert"
+        },
+        {
+          "given": "Klaas",
+          "family": "Vandepoele"
+        },
+        {
+          "given": "Anna",
+          "family": "Vlasova"
+        },
+        {
+          "given": "Bethan",
+          "family": "Yates"
+        },
+        {
+          "given": "Salvador",
+          "family": "Capella-Gutierrez"
+        },
+        {
+          "given": "Laia",
+          "family": "Cod\u00f3"
+        },
+        {
+          "given": "Meritxell",
+          "family": "Ferret"
+        },
+        {
+          "given": "Asier",
+          "family": "Gonzalez-Uriarte"
+        },
+        {
+          "given": "Javier",
+          "family": "Garrayo-Ventas"
+        },
+        {
+          "given": "Laura",
+          "family": "Portell-Silva"
+        },
+        {
+          "given": "Dmitry",
+          "family": "Repchevsky"
+        },
+        {
+          "given": "Vicky",
+          "family": "Sundesha"
+        },
+        {
+          "given": "Wataru",
+          "family": "Iwasaki"
+        },
+        {
+          "given": "Odile",
+          "family": "Lecompte"
+        },
+        {
+          "given": "Erik",
+          "family": "Sonnhammer"
+        },
+        {
+          "given": "David S",
+          "family": "Roos"
+        },
+        {
+          "given": "Toni",
+          "family": "Gabald\u00f3n"
+        },
+        {
+          "given": "David",
+          "family": "Thybert"
+        },
+        {
+          "given": "Paul D",
+          "family": "Thomas"
+        },
+        {
+          "given": "Yanhui",
+          "family": "Hu"
+        },
+        {
+          "given": "David M",
+          "family": "Emms"
+        },
+        {
+          "given": "Elspeth",
+          "family": "Bruford"
+        },
+        {
+          "given": "Salvador",
+          "family": "Capella-Gutierrez"
+        },
+        {
+          "given": "Maria J",
+          "family": "Martin"
+        },
+        {
+          "given": "Christophe",
+          "family": "Dessimoz"
+        },
+        {
+          "given": "Adrian",
+          "family": "Altenhoff"
+        }
+      ],
+      "corrected_authors": [
+        {
+          "given": "Yannis",
+          "family": "Nevers"
+        },
+        {
+          "given": "Tamsin E M",
+          "family": "Jones"
+        },
+        {
+          "given": "Dushyanth",
+          "family": "Jyothi"
+        },
+        {
+          "given": "Bethan",
+          "family": "Yates"
+        },
+        {
+          "given": "Meritxell",
+          "family": "Ferret"
+        },
+        {
+          "given": "Laura",
+          "family": "Portell-Silva"
+        },
+        {
+          "given": "Laia",
+          "family": "Codo"
+        },
+        {
+          "given": "Salvatore",
+          "family": "Cosentino"
+        },
+        {
+          "given": "Marina",
+          "family": "Marcet-Houben"
+        },
+        {
+          "given": "Anna",
+          "family": "Vlasova"
+        },
+        {
+          "given": "Laetitia",
+          "family": "Poidevin"
+        },
+        {
+          "given": "Arnaud",
+          "family": "Kress"
+        },
+        {
+          "given": "Mark",
+          "family": "Hickman"
+        },
+        {
+          "given": "Emma",
+          "family": "Persson"
+        },
+        {
+          "given": "Ivana",
+          "family": "Pili\u017eota"
+        },
+        {
+          "given": "Cristina",
+          "family": "Guijarro-Clarke"
+        },
+        {
+          "literal": "the OpenEBench team the Quest for Orthologs Consortium"
+        },
+        {
+          "given": "Wataru",
+          "family": "Iwasaki"
+        },
+        {
+          "given": "Odile",
+          "family": "Lecompte"
+        },
+        {
+          "given": "Erik",
+          "family": "Sonnhammer"
+        },
+        {
+          "given": "David S",
+          "family": "Roos"
+        },
+        {
+          "given": "Toni",
+          "family": "Gabald\u00f3n"
+        },
+        {
+          "given": "David",
+          "family": "Thybert"
+        },
+        {
+          "given": "Paul D",
+          "family": "Thomas"
+        },
+        {
+          "given": "Yanhui",
+          "family": "Hu"
+        },
+        {
+          "given": "David M",
+          "family": "Emms"
+        },
+        {
+          "given": "Elspeth",
+          "family": "Bruford"
+        },
+        {
+          "given": "Salvador",
+          "family": "Capella-Gutierrez"
+        },
+        {
+          "given": "Maria J",
+          "family": "Martin"
+        },
+        {
+          "given": "Christophe",
+          "family": "Dessimoz"
+        },
+        {
+          "given": "Adrian",
+          "family": "Altenhoff"
+        }
+      ]
+    }
+  ],
+  "changes": [
+    "Only author fields change; raw Crossref remains untouched.",
+    "Use top-level article-meta contributor order, not consortium membership expansion.",
+    "2020 collective converted from given/family to CSL literal.",
+    "2022 combined collective label preserved verbatim apart from whitespace.",
+    "Personal names are not deduplicated or spelling-normalized."
+  ],
+  "limitations": [
+    "Not a complete manuscript bibliography or journal-style rendering.",
+    "XML snapshots are retained locally, not redistributed in this export."
+  ]
+}

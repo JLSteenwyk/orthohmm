@@ -10,7 +10,9 @@ covers the simulator and selected search, alignment, clustering and tree
 methods. A [clustering and analysis supplement](PUBLICATION_NUMERIC_REFERENCES_20260918.md)
 adds Leiden, CPM, NumPy, Biopython and Matplotlib. A
 [service and graph-library supplement](PUBLICATION_SERVICE_REFERENCES_20260918.md)
-adds the QfO2020/2022 updates and igraph. Remaining dependency/resource citations and journal-specific
+adds the QfO2020/2022 updates and igraph. The service papers use a separate
+[reviewed byline export](publication_service_bylines_20260918.csl.json),
+with raw Crossref metadata retained as provenance. Remaining dependency/resource citations and journal-specific
 formatting are incomplete.
 
 ## Study Objective
