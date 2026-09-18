@@ -182,8 +182,11 @@ cells retain their own membership constraints; independently inferred trees
 are distinguished from supplied-tree diagnostics. A profile-expansion-off
 arm still uses the HMM-centered initial search. A matched sequence-search
 control is required before attributing an overall advantage to HMMs.
-The OrthoBench factorial is complete; its QfO counterpart and additional
-matched-search and membership-filter controls remain unfinished.
+The OrthoBench and original-release QfO factorials are complete; the latter
+has paired SwissTrees intervals across 18 families and 42 adjusted endpoints.
+Corrected-release QfO reruns and additional matched-search controls remain
+unfinished. Original-release results are retained as development-exposed
+evidence, not relabeled as corrected-release validation.
 [Ablation protocol](PUBLICATION_ABLATION_PROTOCOL_20260916.md).
 
 ### Evolutionary Simulations And Runtime Admission
@@ -464,6 +467,20 @@ discovery were retained and separately recovered; native inference succeeded.
 Shared-node cached reconciliation costs are not end-to-end timings. The
 factorial remains development-exposed and supplies no new direct OrthoFinder
 comparison. [Results and interpretation](ORTHOBENCH_FACTORIAL_INTERPRETATION_20260916.md).
+
+The original-release QfO factorial likewise completed all eight cells. Its
+prespecified SwissTrees family bootstrap used 100,000 shared draws and
+adjusted 42 endpoints. All 14 adjusted F1 intervals included zero. The four
+reconciliation contrasts increased precision by 30.02-34.02 percentage
+points and reduced recall by 4.56-6.81 points, with adjusted intervals
+excluding zero in both directions. Their observed F1 gains of 10.40-13.12
+points did not exclude zero after adjustment. All six adjusted C-by-R
+interaction intervals included zero. This comparison changes native pair
+inference versus group-derived prediction semantics, not only group
+splitting. Only 18 development-exposed families were resampled; inference
+for other QfO endpoints and corrected-release reruns remains unfinished.
+[Full results and limitations](QFO_FACTORIAL_SWISS_RESULTS_20260918.md),
+[generated 42-endpoint table](qfo_factorial_swiss_bootstrap_20260918.md).
 
 ![OrthoBench factorial scores and paired conditional effects](figures_orthobench_factorial_20260916/orthobench_factorial.png)
 

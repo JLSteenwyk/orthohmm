@@ -1,5 +1,42 @@
 # Publication Progress
 
+## Original Factorial Paired Results Validated (2026-09-18 UTC)
+
+Previous turn progressed by admitting the eighth original-release cell,
+submitting paired analysis21725 and pushing corrected reconciliation wiring
+(582c6c3). Job21725 is COMPLETED0:0 in 53 seconds. A fresh execution of its
+frozen count auditor reproduced the entire count report exactly: eight
+cells, 18 disjoint reference families and 10,765 identical labeled relations.
+
+Independently recomputed all 100,000 shared multinomial draws from raw
+TP/FP/FN counts, using (TP+2)/(TP+FP+4) and (TP+2)/(TP+FN+4), separately
+constructed contrast weights, einsum-weighted family means and reciprocal
+harmonic F1. All eight point estimates, 42 nominal/adjusted interval pairs,
+family differences and win/tie/loss counts matched within 3.33e-16.
+Preserved the unmodified generated counts/statistics/Markdown in results;
+their SHA-256 values remain c513f986..., 097eb458... and 4d79c6d8.... Full
+hashes and interpretation are in QFO_FACTORIAL_SWISS_RESULTS_20260918.md.
+
+All 14 adjusted F1 intervals include zero. The four R contrasts show
+precision gains and recall losses with adjusted intervals excluding zero;
+all six C-by-R interaction intervals include zero. P-off retains initial
+HMM search; R compares native inferred pairs to group-derived pairs. These
+results do not establish F1 superiority, equivalence, an HMM-free comparison
+or a corrected-release result. Eleven precision/recall adjusted intervals
+exclude zero; no F1 endpoint does. Original-release input and development
+exposure limitations remain explicit.
+
+Updated the manuscript and claim checklist, replacing stale original-QfO
+factorial pending statements while retaining corrected-release work as
+unfinished. All 33 count/bootstrap tests pass; all 181 local links across
+the edited interpretation/manuscript/checklist resolve. Next: generate the
+factorial publication figure and endpoint comparison export, continue the
+corrected execution/admission chain, and finish remaining publication gates.
+
+Latest live check: HMM21706_0 running 3:28:21, SonicParanoid21710 running
+3:05:09, DGX21656_16 running 1:06:55; their dependent jobs remain pending.
+No inference restart, parameter tuning or publication-ready claim.
+
 ## Original Factorial Complete; Paired Analysis Running (2026-09-18 UTC)
 
 Previous turn progressed by pushing corrected candidate admission (9082cce).

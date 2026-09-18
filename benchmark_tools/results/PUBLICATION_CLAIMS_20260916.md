@@ -13,7 +13,7 @@ evidence that an experiment completed or a biological hypothesis is true.
 | OrthoHMM outperforms full OrthoFinder overall | [Eight-method comparison](PUBLICATION_COMPARISON_ORTHOMCL_COMPLETE_20260916.md) | Not supported; endpoints and benchmark rankings differ |
 | HMM expansion contributes in historical OrthoBench processing | [Historical component audit](HISTORICAL_PROFILE_ABLATION_20260916.md) | Descriptive +0.595610 F1 points; current factorial intervals include zero |
 | Initial HMM search improves F1 over sequence-search replacement | [Completed sequence controls](OB_SEQUENCE_SEARCH_RESULTS_20260916.md) | Not established: observed HMM F1 higher, both adjusted difference intervals include zero; hit sensitivity/calibration unmatched |
-| Broad candidates improve reconciliation | [Completed OrthoBench factorial](ORTHOBENCH_FACTORIAL_INTERPRETATION_20260916.md) | Recall rises and precision falls; candidate-expansion F1 intervals include zero; QfO and additional controls pending |
+| Broad candidates improve reconciliation | [OrthoBench factorial](ORTHOBENCH_FACTORIAL_INTERPRETATION_20260916.md), [original-release QfO factorial](QFO_FACTORIAL_SWISS_RESULTS_20260918.md) | No adjusted candidate-expansion F1 benefit established; original-QfO C-by-R interaction intervals include zero. Corrected-release QfO and additional controls remain pending |
 | The frozen method was evaluated on novel taxa | [YGOB evaluation](YGOB_FROZEN_INTERPRETATION_20260916.md) | Complete bounded transfer evaluation; satellite F1 difference interval includes zero, precision higher and recall lower; not family-disjoint or superiority evidence |
 | Validation is family-disjoint | [Homology screen](ygob_homology_screen_20260916.json) | Not established; substantial detected overlap |
 | Original-release OrthoMCL final-group QfO scoring is complete | [Verified result snapshot](publication_comparison_orthomcl_complete_20260916.json) | Supported for the original inputs only; corrected-release BLAST is queued and no corrected OrthoMCL score is available |
@@ -29,7 +29,7 @@ evidence that an experiment completed or a biological hypothesis is true.
 | OrthoHMM phylogeny exceeds full OrthoFinder on SwissTrees F1 | [Eight-method paired intervals](QFO_SWISS_COMPARATOR_INTERVALS_20260917.md) | Unsupported: its adjusted F1 difference interval is negative; conditional evidence from 18 development-exposed families, not all QfO endpoints |
 | Domain architecture explains the OrthoHMM configuration effect | [Stratified results](SWISS_DOMAIN_STRATA_RESULTS_20260917.md), [all27 endpoints plotted](SWISS_DOMAIN_STRATA_FIGURE_20260917.md) | Not established: all nine adjusted interaction intervals include zero; annotation-defined association does not establish causality |
 | Satellite constraints explain the five focal WGD homolog-coverage losses | [Prespecified case trace](BIOLOGICAL_WGD_CASE_TRACE_20260917.md) | Contradicted for these five homologs: all were in anchor candidates and separated during root-lineage reconstruction before constraints; topology correctness and upstream effects remain unresolved |
-| The complete QfO factorial has paired uncertainty estimates | [Count collector](QFO_FACTORIAL_COUNT_AUDIT_IMPLEMENTATION_20260917.md), [frozen bootstrap implementation](QFO_FACTORIAL_STATISTICS_IMPLEMENTATION_20260917.md) | Not yet: tested code exists, but complete empirical eight-cell admissions, counts and intervals remain pending |
+| The original-release QfO factorial has paired uncertainty estimates | [Validated results](QFO_FACTORIAL_SWISS_RESULTS_20260918.md), [counts](qfo_factorial_swiss_counts_20260918.json), [42 endpoints](qfo_factorial_swiss_bootstrap_20260918.json) | Complete for SwissTrees only: all adjusted F1 intervals include zero; R increases precision and lowers recall. No adjusted C-by-R interaction established. Corrected-release reruns remain separate and unfinished |
 | Native GO/EC/FAS error bars establish paired method differences | [GO/EC audit](QFO_GO_EC_ARITHMETIC_AUDIT_20260917.md), [FAS sample audit](QFO_FAS_SAMPLE_AUDIT_20260917.md) | Unsupported: GO/EC use Student-t95% half-widths, FAS uses sample SEM, and none supplies dependency-aware paired method intervals |
 | Supplying the generating tree improves simulation F1 | [Complete tree panel](SIMULATION_TREE_ROBUSTNESS_RESULTS_20260917.md) | Not established: all adjusted generating-versus-inferred intervals include zero; supplied-tree completion rescues three OrthoHMM baselines but does not supply their missing inferred accuracy |
 | OrthoHMM is insensitive to species-tree error | [Complete tree panel](SIMULATION_TREE_ROBUSTNESS_RESULTS_20260917.md) | Unsupported: NNI2 F1 and recall deficits have adjusted intervals below zero in four conditions; bounded exploratory result, not arbitrary-tree robustness |
@@ -45,7 +45,7 @@ evidence that an experiment completed or a biological hypothesis is true.
 | --- | --- | --- |
 | 1. Frozen publication baseline | Comparator table, scoring corrections, OrthoMCL final-group completion and failure audit, prospective method pin | Consolidated raw-output provenance for every retained row; exact commands/versions/resources and complete claim/endpoints freeze |
 | 2. Independent generalization | Completed frozen YGOB evaluation with native, command/conversion, independent-reference and overlap gates; pair enumeration and paired uncertainty | Bounded novel-taxon claim only; stronger family independence unproven; any outcome-driven method changes require new independent confirmation |
-| 3. HMM and phylogeny contributions | Corrected-runtime OrthoBench replay equivalence, completed eight-cell OrthoBench factorial, sequence-search replacement and unconstrained-membership controls; checked full QfO replay and admitted recovered-stage scores; QfO factorial inference/scoring active | Complete QfO eight-cell ablations and interactions; better-matched search sensitivity/calibration; controlled resource evidence. Current checked QfO replay differs from historical final groups; do not transfer historical scores |
+| 3. HMM and phylogeny contributions | Completed OrthoBench and original-release QfO eight-cell factorials; paired SwissTrees simple effects/interactions; sequence-search replacement and unconstrained-membership controls | Corrected-release QfO factorial; better-matched search sensitivity/calibration; controlled resource evidence. Checked QfO replay differs from historical final groups; do not transfer historical scores |
 | 4. Uncertainty and error explanation | Paired OrthoBench intervals and feature strata; recovered-stage and eight-method SwissTrees intervals; annotation-defined SwissTrees domain strata and figure; native GO/EC/FAS arithmetic audits; VGNC prediction rescore and TreeFam pooled count audit; stage traces | Appropriate uncertainty for other QfO endpoints/secondary mean; independent duplication and fragment annotations and remaining divergence/composition analyses; initial-search and rejected-edge tracing. Domain inventory is complete but does not prove causal mechanisms or independent FAS validation |
 | 5. Robustness and practical efficiency | Corrected fixed/variable-length multi-seed simulations, complete generating-tree/NNI simulation controls, six OrthoBench tree perturbations and six parameter variants, explicit failures and resource caveats | QfO robustness, matched scaling and repeated timings; broader evolutionary realism remains limited |
 | 6. Biological usefulness | [Prospective WGD protocol](BIOLOGICAL_WGD_APPLICATION_PROTOCOL_20260917.md), admitted runs, [results](BIOLOGICAL_WGD_RESULTS_20260917.md), [separate rescore](biological_wgd_rescore_audit_20260917.json), [figure](figures_wgd_application_20260917/wgd_application.pdf), [all six examples](figures_wgd_application_20260917/PRESPECIFIED_EXAMPLES.md), and [completed case trace](BIOLOGICAL_WGD_CASE_TRACE_20260917.md): phylogenetic OrthoHMM improves supported separation over high sensitivity but trails full OrthoFinder and SonicParanoid in separation and coverage | Bounded application and stage localization complete; tree correctness and upstream effects unresolved. Development-exposed, not independent validation or copy-specific orthology truth; YGOB column order does not identify ancestral copies; configurations differ beyond reconciliation |
@@ -55,37 +55,20 @@ evidence that an experiment completed or a biological hypothesis is true.
 
 - The [recovered QfO factorial protocol](QFO_FACTORIAL_PROTOCOL_20260917.md)
   freezes eight P/C/R cells and 42 SwissTrees comparison endpoints without
-  retuning. Candidate preparation job21670 completed successfully on bizon
-  from pinned executor bd5229d; [all four arms](QFO_FACTORIAL_PREPARATION_20260917.md)
-  preserve the full input universe. Reconciliation array21671 now has task0
-  COMPLETED0:0, task1 RUNNING and tasks2-3 pending, using executor de3202f
-  and the verified frozen core launcher. [Early native validation](QFO_FACTORIAL_FIRST_NATIVE_RECONCILIATION_20260917.md)
-  confirms complete gene coverage and4,966,346 valid-format native pairs for
-  task0; this is not QfO accuracy or independent phylogenetic truth.
-  Initial submission21669 failed a mistyped commit-argument check before
-  preparation and is retained. The DGX timing node is not used.
-  Admission array21673 waits for reconciliation termination and requires
-  native pair integrity as well as complete group coverage. A pre-scoring
-  protocol clarification corrects the inherited RootHOG conversion wording:
-  R-on QfO evaluates native pairwise predictions, not RootHOG clique pairs.
-  No new accuracy score or inference configuration changed in that correction.
-  Conversion array21674(R-off) completed all four cells;21675(R-on) waits on
-  admission and independently revalidates native inferred pairs. Baseline
-  assessment jobs21679/21680 completed exact independently revalidated reuse
-  of recovered stages1/3, retaining original FAS samples and participant IDs.
-  Expanded R-off scoring21681 and independent admission21683 are now
-  COMPLETED0:0. [The first expanded cell](QFO_FACTORIAL_FIRST_EXPANDED_ASSESSMENT_20260917.md)
-  passed all native task, metric and provenance checks; a repeated frozen
-  validation produced an identical admission report.21682 and validator21684
-  now completed; [the second expanded cell](QFO_FACTORIAL_SECOND_EXPANDED_ASSESSMENT_20260917.md)
-  also passed repeated byte-identical admission. Four of eight cells have admitted scores, including
-  the two reused baselines, which are not independent new observations.
-  The full factorial remains incomplete; queued validators do not establish
-  valid scores or intervals for the other cells.
-  The [count collector](QFO_FACTORIAL_COUNT_AUDIT_IMPLEMENTATION_20260917.md)
-  and [42-endpoint bootstrap](QFO_FACTORIAL_STATISTICS_IMPLEMENTATION_20260917.md)
-  are implemented and tested, but no complete empirical eight-cell count or
-  interval report exists yet.
+  retuning. Original-release preparation, all four reconciliations, native
+  admissions, conversions and eight assessment admissions are complete.
+  Final assessment/admission jobs21723/21724 completed successfully; repeated
+  frozen admission reproduced the entire final report. The two baseline
+  cells retain validated score reuse, not independent new observations.
+  R-on evaluates native inferred pairs, not RootHOG clique pairs.
+  Job21725 completed the exact shared-reference count audit and paired
+  bootstrap; a fresh count audit and independent arithmetic reproduced
+  the results. [Results](QFO_FACTORIAL_SWISS_RESULTS_20260918.md) show no
+  adjusted F1 or C-by-R interaction interval excluding zero, but consistent
+  reconciliation precision gains and recall losses. Corrected-release
+  inference and its separate factorial remain unfinished. Earlier failed
+  submission21669 remains retained; none of this analysis uses the DGX
+  timing node or establishes controlled end-to-end resource performance.
 - [GO/EC arithmetic](QFO_GO_EC_ARITHMETIC_AUDIT_20260917.md) verifies all24
   retained count/mean/interval rows within serialization bounds; Darwin's
   stderr is a Student-t95% confidence half-width. [FAS arithmetic](QFO_FAS_SAMPLE_AUDIT_20260917.md)
