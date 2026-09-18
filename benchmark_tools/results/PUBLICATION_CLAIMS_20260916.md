@@ -34,6 +34,7 @@ evidence that an experiment completed or a biological hypothesis is true.
 | Supplying the generating tree improves simulation F1 | [Complete tree panel](SIMULATION_TREE_ROBUSTNESS_RESULTS_20260917.md) | Not established: all adjusted generating-versus-inferred intervals include zero; supplied-tree completion rescues three OrthoHMM baselines but does not supply their missing inferred accuracy |
 | OrthoHMM is insensitive to species-tree error | [Complete tree panel](SIMULATION_TREE_ROBUSTNESS_RESULTS_20260917.md) | Unsupported: NNI2 F1 and recall deficits have adjusted intervals below zero in four conditions; bounded exploratory result, not arbitrary-tree robustness |
 | The package is publication-ready | All sections below | Not achieved |
+| Original QfO inputs match the intended corrected2020benchmark release | [Archive and release audit](QFO_XENOPUS_ARCHIVE_AUDIT_20260917.md) | Unresolved: original local archive verified, but EBI provides a separate UP000008143 correction. Corrected sequences and compatibility with retained scorer resources require priority investigation; no silent input replacement |
 
 ## Completion Requirements
 

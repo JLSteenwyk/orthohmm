@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Original Archive Verified; Corrected Xenopus Release Identified (2026-09-17)
+
+Previous turn progressed with additional-FASTA tracebaa4338. Re-read objective
+and confirmed active QfO/DGX handles. Added/executed read-only archive checker:
+canonical and additional Xenopus FASTAs match the local original archive,
+507tar members visited and gzip read through EOF with checksum validation.
+Seven tests pass, including corrupt trailers and duplicate selected members.
+
+Primary EBI directory/NOTES identify a corrected2020archive replacing only
+UP000008143 with2020_06data. This is newly found external evidence, not yet
+a validated corrected input set. Report `qfo_xenopus_archive_audit_20260917.json`
+and `QFO_XENOPUS_ARCHIVE_AUDIT_20260917.md` document exact hashes and next
+steps. Prioritize separate corrected-release acquisition, all-proteome diff,
+scorer mapping compatibility and historical input parity before publication
+comparability claims or any prespecified reruns. Preserve active original-input
+factorial work and all original scores; DGX timings remain untouched.
+
 ## Eleven Missing SwissTrees Accessions Located In Additional FASTA (2026-09-17)
 
 Previous turn progressed by quantifying/pushing shared missing-input

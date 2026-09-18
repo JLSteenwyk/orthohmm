@@ -1,0 +1,43 @@
+{
+  "archive": {
+    "bytes": 2626624913,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/proteomes/QfO_release_2020_04.tar.gz",
+    "sha256": "483902f6aa9531be44ae8cb8b30eb1cb892b1c8d866ad2a1b4f96dc92e0e1978"
+  },
+  "gzip_read_to_eof": true,
+  "limitations": [
+    "Establishes selected retained files match this local archive, not an independently authenticated publisher checksum.",
+    "Gzip EOF/checksum and tar iteration verified; no general validation of all biological records or archive contents.",
+    "No files extracted, overwritten, remapped or used for new benchmark scoring."
+  ],
+  "members": {
+    "Eukaryota/UP000008143_8364.fasta": {
+      "bytes": 6502463,
+      "sha256": "924f7d0ab9f197d8e1108394ae82d8c947c08172890f6ddf91d17513711ad6e3"
+    },
+    "Eukaryota/UP000008143_8364_additional.fasta": {
+      "bytes": 34455242,
+      "sha256": "b6f722282ee660e665b5baa2485cf2b7ec97a2792ff084a1ec28febdd3847c4d"
+    }
+  },
+  "retained_files": {
+    "Eukaryota/UP000008143_8364.fasta": {
+      "bytes": 6502463,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/proteomes/extracted/Eukaryota/UP000008143_8364.fasta",
+      "sha256": "924f7d0ab9f197d8e1108394ae82d8c947c08172890f6ddf91d17513711ad6e3"
+    },
+    "Eukaryota/UP000008143_8364_additional.fasta": {
+      "bytes": 34455242,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/proteomes/extracted/Eukaryota/UP000008143_8364_additional.fasta",
+      "sha256": "b6f722282ee660e665b5baa2485cf2b7ec97a2792ff084a1ec28febdd3847c4d"
+    }
+  },
+  "selected_member_bytes_verified": true,
+  "source": {
+    "bytes": 3316,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_qfo_source_archive.py",
+    "sha256": "1e9b4d856e8882ffe164b9c339ac91397e2d452622ef2ef9bdf0577858ab6f79"
+  },
+  "status": "selected_qfo_archive_members_verified",
+  "tar_members_visited": 507
+}
