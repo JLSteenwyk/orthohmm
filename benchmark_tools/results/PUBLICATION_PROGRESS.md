@@ -8029,3 +8029,23 @@ active. Final native/resource/host admission remains required before
 efficiency claims. TreeFam original source files, remaining uncertainty,
 completed corrected comparisons and the final archival package remain
 open requirements, not grounds for declaring publication readiness.
+
+### Corrected SwissTrees Counts Audited (2026-09-18)
+
+The preceding archive-search turn yielded no new usable inputs, so it is
+classified as no progress toward reference recovery. This turn makes progress:
+added and executed a corrected-comparator raw-count auditor on both admitted
+Proteinortho and SonicParanoid results. All 18 families and 10,765 labeled
+reference relations agree exactly, and family/aggregate metrics reconstruct
+within native rounding tolerance. See `QFO_CORRECTED_SWISS_COUNTS_20260918.md`
+and the two machine-readable count reports. The focused suite passes 35 tests.
+No endpoints, settings or multiplicity families changed; paired uncertainty
+waits for all eight corrected methods.
+
+Live scheduler check: HMM 21706_0 RUNNING at 4:37:28; corrected OrthoFinder
+21706_1, BLAST 21713, HMM admission 21720 and replay preparation 21722 pending.
+DGX timing has 17 completed tasks, task 21656_17 RUNNING at 40:22, and tasks
+18-26 pending. These are scheduler durations, not admitted native timings.
+No DGX filesystem scans or unrelated job changes were made. Original TreeFam
+inputs remain missing. Corrected all-tool evaluation, remaining uncertainty,
+resource admission and final publication/archive requirements remain open.
