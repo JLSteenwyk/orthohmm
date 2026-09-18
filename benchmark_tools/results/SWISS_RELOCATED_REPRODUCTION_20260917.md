@@ -1,5 +1,11 @@
 # Relocated SwissTrees Reproduction
 
+Current reproduction uses the patched Pillow12.3.0 analysis lock; see
+[security remediation and exact rerun](SWISS_ANALYSIS_SECURITY_20260917.md).
+The initial environment and hashes below are retained historical evidence,
+not instructions to reinstall the vulnerable Pillow12.2.0 pin. Commands use
+the current lock at checkout.
+
 The completed SwissTrees comparator statistics and figure workflow were rerun
 from a clean, explicit source export of commit `fd5f1ac`, outside the project
 worktree, in a fresh Python 3.10.13 virtual environment. This is a statistical

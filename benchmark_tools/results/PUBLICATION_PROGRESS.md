@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Analysis-Environment Pillow Remediation (2026-09-17)
+
+Previous turn progressed domain annotation inventory/protocol, pushed55413b8;
+push reported13dependency alerts. Re-read full objective and fetched read-only
+GitHub alert evidence. All13(10high/3medium) target Pillow12.2.0 in the newly
+added Swiss analysis requirements, not the frozen inference environment.
+
+Updated Pillow only to12.3.0, regenerated hashed lock, hash-verified installation
+and checked11-package compatibility. Official upstream release and all advisory
+patched-version fields support this version. Structured audit verifies the
+successful reproduction environment exactly matches requirements and lies
+outside all13reported vulnerable ranges. No broader security claim or dismissal.
+
+Reran the clean fd5f1ac source export in the patched environment: exact scientific
+JSON and Markdown match, figure generation succeeds. All29focused environment,
+reproduction, figure and bootstrap tests pass. Preserved original reproduction
+evidence and documented the superseding secure pin; no scientific results,
+frozen runtime or DGX recipe changed. See `SWISS_ANALYSIS_SECURITY_20260917.md`.
+Remote alert closure still needs a separate post-push check.
+
+The domain-strata protocol remains frozen and unexecuted. Continue it after this
+scoped remediation, along with remaining QfO/scaling/publication requirements.
+
 ## Prediction-Independent SwissTrees Domain Inventory (2026-09-17)
 
 Previous turn progressed relocated statistical reproduction, pusheda2752ef.
