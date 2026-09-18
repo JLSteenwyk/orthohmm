@@ -58,7 +58,15 @@ def validate(root, index):
     return validate_native_cell(prepared, environment, cell, output, launcher, integrity)
 
 
-def validate_native_cell(prepared, environment, cell, output, launcher, integrity):
+def check_native_origin(metrics, prepared, launcher, expected_revision):
+    if metrics["git"] != {"commit": expected_revision, "dirty": False}:
+        raise ValueError("Native replay source revision mismatch")
+    if metrics["source"] != prepared["launcher"] or metrics["cwd"] != str(launcher):
+        raise ValueError("Native launcher provenance mismatch")
+
+
+def validate_native_cell(prepared, environment, cell, output, launcher, integrity,
+                         *, expected_revision="b66225dc5fc355702575aebe34b644916894f236"):
     """Native semantics shared by factorial cells and the isolated diagnostic."""
     target = Path(cell["argv"][cell["argv"].index("--output-directory") + 1])
     native_dir = target / "orthohmm_phylogeny"
@@ -73,10 +81,7 @@ def validate_native_cell(prepared, environment, cell, output, launcher, integrit
     constraint = None if cell.get("omitted_membership_constraints") else arm.get("membership_constraints")
     constraints = load_membership_constraints(Path(constraint["path"]), candidate) if constraint else []
     check_native_metadata(metrics, native, cell, len(constraints))
-    if metrics["git"] != {"commit": "b66225dc5fc355702575aebe34b644916894f236", "dirty": False}:
-        raise ValueError("Native replay source revision mismatch")
-    if metrics["source"] != prepared["launcher"] or metrics["cwd"] != str(launcher):
-        raise ValueError("Native launcher provenance mismatch")
+    check_native_origin(metrics, prepared, launcher, expected_revision)
     if metrics["input"]["candidate_clusters"] != file_provenance(candidate):
         raise ValueError("Native candidate provenance mismatch")
     if metrics["input"]["membership_constraints"] != constraint or metrics["metadata"]["membership_constraints"] != constraint:

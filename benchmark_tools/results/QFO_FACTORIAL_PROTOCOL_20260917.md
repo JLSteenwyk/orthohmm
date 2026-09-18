@@ -1,5 +1,27 @@
 # Recovered QfO Factorial Protocol
 
+## Pre-Scoring Output-Semantics Clarification
+
+Added while reconciliation task21671_0 was still running, before any new
+factorial accuracy result. The original text below's phrase "R-on conversion
+must follow ... RootHOG semantics" was an incorrect carryover from the
+OrthoBench group benchmark. Historical QfO satellite_v2 evaluates native
+phylogenetically inferred pairs. **R-on QfO input will therefore be
+`orthohmm_pairwise_orthologs.tsv`, with native species labels removed and the
+standard reference mapping applied, not clique pairs reconstructed from
+RootHOGs.** RootHOG coverage remains a mandatory integrity check only.
+
+R-off continues to use cross-species clique pairs from complete candidate
+partitions. The R contrast consequently measures the complete native
+phylogenetic prediction strategy, not just splitting group memberships.
+The reused cell plan's `prediction`/`prediction_format` fields describe the
+RootHOG integrity artifact; they are not the QfO scoring artifact. Actual
+inference commands, frozen scientific parameters, candidate arms, contrasts,
+seed and multiplicity plan are unchanged. Conversion must record both the
+native input path and its precise semantics. No score-based selection between
+native pairs and RootHOG cliques is allowed. This explicit clarification
+supersedes the contradictory original sentence retained below.
+
 This development-exposed experiment extends the completed OrthoBench factorial
 to QfO. It is frozen before new candidate expansion or reconciliation results
 are inspected. Historical QfO scores and the four recovered-stage scores are

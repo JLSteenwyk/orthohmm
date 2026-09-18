@@ -1,5 +1,30 @@
 # Publication Progress
 
+## QfO Native Admission and Conversion Clarification (2026-09-17)
+
+Previous turn progressed preparation admission and launched reconciliation21671;
+re-read the full objective. Task0 remains live, tasks1-3 pending. Added
+`admit_qfo_factorial_cell.py` to require terminal scheduler success, matching
+execution identity/command, successful postflight, frozen sources/runtime,
+complete output hashes and native reconciliation metadata/coverage. It reuses
+the OrthoBench native validator with an explicit QfO launcher revision;
+the historical validator's default revision remains unchanged. Native pairs
+must be canonical, unique, sorted, cross-species, within candidate families,
+and count-consistent with native completion.57focused tests pass.
+
+Found and corrected a pre-scoring protocol ambiguity: the OrthoBench plan's
+RootHOG `prediction` field is for group integrity, not QfO R-on conversion.
+The historical QfO phylogenetic row uses native pairs, so R-on will use
+`orthohmm_pairwise_orthologs.tsv`, never RootHOG clique reconstruction.
+The explicit protocol clarification retains the original text and states that
+R measures the complete native prediction strategy, not merely group splitting.
+No new score was inspected and no inference command or contrast changed.
+
+Admission batch is ready to run after the reconciliation array terminates;
+at this commit it has not been submitted. Native admission does not independently
+reconstruct gene-tree truth or pair-event decisions. Reference mapping,
+conversion and all QfO assessments remain separate pending gates.
+
 ## QfO Reconciliation Array Running (2026-09-17)
 
 Committed and pushed the preparation snapshot and runner as de3202f, created
