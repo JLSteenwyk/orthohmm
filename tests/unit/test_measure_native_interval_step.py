@@ -90,3 +90,44 @@ def test_packaged_worker_imports_recipe_not_working_checkout(tmp_path):
             f"assert pathlib.Path(dependency.__file__).parent == pathlib.Path({str(package)!r})")
     completed = subprocess.run([sys.executable, "-B", "-c", code], cwd=root, capture_output=True, text=True)
     assert completed.returncode == 0, completed.stderr
+
+
+def test_retained_complete_native_results_and_adverse_intervals():
+    root = Path(__file__).resolve().parents[2]
+    report = json.loads((root / "benchmark_tools/results/dgx_interval_native_smokes_21810.json").read_text())
+    assert report["scientific_timings_admitted"] == 0
+    assert report["publication_ready"] is False
+    assert report["controlled_workload_verified"] is False
+    assert [r["index"] for r in report["runs"]] == [0, 1, 2]
+    for row in report["runs"]:
+        proof = row["verification"]
+        assert proof["status"] == "command_exited_zero"
+        assert proof["before"] == {k: v for k, v in proof["after"].items() if k != "copied_inputs"}
+        measured = proof["measurement"]
+        assert measured["native"]["exit_code"] == 0
+        assert measured["native"]["timed_out"] is False
+        assert evaluate(measured["points"], measured["native"], measured["job_id"]) == measured["screening"]
+        assert measured["step_memory"]["errors"] == []
+        assert measured["step_memory"]["scope"] == measured["points"][-1]["native_cpu_scope"]
+        assert measured["screening"]["whole_command_screen"]["screen_passed"] is True
+        assert row["output_validation"]["input_genes"] == 645
+        assert row["output_validation"]["resource_measurements_admitted"] is False
+        assert "JobState=COMPLETED " in row["scheduler"]
+        assert "ExitCode=0:0" in row["scheduler"]
+    screens = [r["verification"]["measurement"]["screening"] for r in report["runs"]]
+    assert [s["flagged_intervals"] for s in screens] == [[], [3], [3]]
+    assert [len(s["intervals"]) for s in screens] == [4, 7, 10]
+    for screen in screens[1:]:
+        assert screen["intervals"][3]["reasons"] == ["excess_unassigned_cpu"]
+
+
+def test_packaging_failures_remain_separate_from_native_results():
+    root = Path(__file__).resolve().parents[2]
+    report = json.loads((root / "benchmark_tools/results/dgx_interval_native_failed_21807.json").read_text())
+    assert len(report["runs"]) == 3
+    for row in report["runs"]:
+        assert row["verification"]["status"] == "verified_wrapper_failed"
+        assert "measurement" not in row["verification"]
+        assert "ModuleNotFoundError" in row["step_log"]
+        assert "JobState=FAILED " in row["scheduler"]
+        assert "ExitCode=1:0" in row["scheduler"]

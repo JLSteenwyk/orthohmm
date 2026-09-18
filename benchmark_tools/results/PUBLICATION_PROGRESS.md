@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Complete-Command DGX Interval Integration (2026-09-18 UTC)
+
+Previous turn progressed through9995783 with actual interval-burst controls.
+Reread the full objective. Latest QfO state:21792 RUNNING1:32:55 and21706_0
+RUNNING15:56:51, dependent21798/21795 still pending. No unrelated job was
+stopped or scientific setting changed.
+
+Committed/pushed0808155 before native integration. Attempt21807 failed all
+three workers before inference because the transferred recipe lacked its
+package initializer. Preserved all failures and corrected package resolution
+with a regression test, fresh recipe/output prefix and f391e66 before another
+array. No existing output was modified. The new21810 array completed all
+three native pipelines0:0 with unchanged inputs and commands.
+
+Complete-command boundaries,21one-second intervals, native outputs and
+runtime/input identities validated. Satellite_v2 and OrthoFinder each had
+one excess-CPU interval while whole-command screens passed. Retained these
+adverse observations without retuning or repetition. Ninety-three focused
+tests pass, including exact raw replay and failed-attempt retention. Full
+result, provenance and remaining limits are in DGX_INTERVAL_NATIVE_RESULT_20260918.md.
+Accounting/observer effects, non-CPU isolation and prospective scientific
+timing rules remain pending; no27-run panel was launched or timing admitted.
+
 ## DGX Interval Burst Control Completed (2026-09-18 UTC)
 
 Previous turn progressed throughd150182 with validated VGNC influence

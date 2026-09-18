@@ -1,0 +1,573 @@
+{
+  "status": "packaging_failure_before_native_execution",
+  "array": 21807,
+  "runs": [
+    {
+      "index": 0,
+      "verification": {
+        "after": {
+          "native_order": [
+            "n14.fasta",
+            "n11.fasta",
+            "n5.fasta",
+            "n13.fasta",
+            "n6.fasta",
+            "n7.fasta",
+            "n12.fasta",
+            "n9.fasta"
+          ],
+          "original_inputs": [
+            {
+              "bytes": 25773,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n14.fasta",
+              "sha256": "fa639b0dd9da1c40743221a5e85a48a2d1183e2583782cbc28743077b92cc095"
+            },
+            {
+              "bytes": 25419,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n11.fasta",
+              "sha256": "c9e7e01d18b0bd4d133b1588b417c2598b120901c38f3e12ebdeba2a8f97369f"
+            },
+            {
+              "bytes": 22575,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n5.fasta",
+              "sha256": "fe32ef88650cabe1e0239385a8f646020a0c8c01b02abb1487eab91dd3f014f7"
+            },
+            {
+              "bytes": 25992,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n13.fasta",
+              "sha256": "460b6ba93725298cb9e415b19ca38ec2679d622e0309bb69a683b0c4d428d75b"
+            },
+            {
+              "bytes": 24465,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n6.fasta",
+              "sha256": "9c12b7f6233a2fa1161fe5bdb904d8416935f43f1d66832db643723db2b98e5c"
+            },
+            {
+              "bytes": 25804,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n7.fasta",
+              "sha256": "bd5a375e99f12fc22bece6a6553a1636104321b1b5ddf2f7a398e909a6477a57"
+            },
+            {
+              "bytes": 26367,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n12.fasta",
+              "sha256": "3c5356bfbd29f872755fcf8cb83d092bc63b83bf1117f87546580baf503598b1"
+            },
+            {
+              "bytes": 26353,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n9.fasta",
+              "sha256": "8b92d25187584bbc38daff6dec0d671294e30d3484a77a31cc7dcc5b3483867f"
+            }
+          ],
+          "runtime": [
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/trees.json",
+              "records": 26673,
+              "scientific_execution_authorized": false,
+              "sha256": "2f38fc57683e51a7b6768b4709db16293590983640c41cfe12a56ed6036750ae",
+              "status": "runtime_tree_identity_matches"
+            },
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/system_trees.json",
+              "records": 10066,
+              "scientific_execution_authorized": false,
+              "sha256": "4083d15c0ffc40013756c4588763aa8af24ca39165622665ee5074662e4b46ce",
+              "status": "runtime_tree_identity_matches"
+            },
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/interval_native_recipe_v1.json",
+              "records": 19,
+              "scientific_execution_authorized": false,
+              "sha256": "48af7e358ed32920bbf3a242f4cad99aa6386ad43bd0fc4ca2b38c2ca7c67484",
+              "status": "runtime_tree_identity_matches"
+            }
+          ]
+        },
+        "after_check_wall_s": 4.432703020982444,
+        "before": {
+          "native_order": [
+            "n14.fasta",
+            "n11.fasta",
+            "n5.fasta",
+            "n13.fasta",
+            "n6.fasta",
+            "n7.fasta",
+            "n12.fasta",
+            "n9.fasta"
+          ],
+          "original_inputs": [
+            {
+              "bytes": 25773,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n14.fasta",
+              "sha256": "fa639b0dd9da1c40743221a5e85a48a2d1183e2583782cbc28743077b92cc095"
+            },
+            {
+              "bytes": 25419,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n11.fasta",
+              "sha256": "c9e7e01d18b0bd4d133b1588b417c2598b120901c38f3e12ebdeba2a8f97369f"
+            },
+            {
+              "bytes": 22575,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n5.fasta",
+              "sha256": "fe32ef88650cabe1e0239385a8f646020a0c8c01b02abb1487eab91dd3f014f7"
+            },
+            {
+              "bytes": 25992,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n13.fasta",
+              "sha256": "460b6ba93725298cb9e415b19ca38ec2679d622e0309bb69a683b0c4d428d75b"
+            },
+            {
+              "bytes": 24465,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n6.fasta",
+              "sha256": "9c12b7f6233a2fa1161fe5bdb904d8416935f43f1d66832db643723db2b98e5c"
+            },
+            {
+              "bytes": 25804,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n7.fasta",
+              "sha256": "bd5a375e99f12fc22bece6a6553a1636104321b1b5ddf2f7a398e909a6477a57"
+            },
+            {
+              "bytes": 26367,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n12.fasta",
+              "sha256": "3c5356bfbd29f872755fcf8cb83d092bc63b83bf1117f87546580baf503598b1"
+            },
+            {
+              "bytes": 26353,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n9.fasta",
+              "sha256": "8b92d25187584bbc38daff6dec0d671294e30d3484a77a31cc7dcc5b3483867f"
+            }
+          ],
+          "runtime": [
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/trees.json",
+              "records": 26673,
+              "scientific_execution_authorized": false,
+              "sha256": "2f38fc57683e51a7b6768b4709db16293590983640c41cfe12a56ed6036750ae",
+              "status": "runtime_tree_identity_matches"
+            },
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/system_trees.json",
+              "records": 10066,
+              "scientific_execution_authorized": false,
+              "sha256": "4083d15c0ffc40013756c4588763aa8af24ca39165622665ee5074662e4b46ce",
+              "status": "runtime_tree_identity_matches"
+            },
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/interval_native_recipe_v1.json",
+              "records": 19,
+              "scientific_execution_authorized": false,
+              "sha256": "48af7e358ed32920bbf3a242f4cad99aa6386ad43bd0fc4ca2b38c2ca7c67484",
+              "status": "runtime_tree_identity_matches"
+            }
+          ]
+        },
+        "before_check_wall_s": 4.43165454082191,
+        "error": "/home/jlsteenwyk/projects/orthohmm-publication/interval_native_smoke_v1/run_00/measurement/ready.json",
+        "error_type": "TimeoutError",
+        "limitations": [
+          "Identity checks are outside the native command timer.",
+          "Hashing warms file caches; this is not cold-cache timing.",
+          "Cgroup memory peak may retain preparation and verification allocations.",
+          "Native outputs and collector records still require independent admission."
+        ],
+        "scientific_results_admitted": false,
+        "source_sha256": "36243fcdfe6f49e73dbe1dd1b627bf4a330f19f3cd52dcf94a9618ddf0415cf8",
+        "status": "verified_wrapper_failed"
+      },
+      "step_log": "Traceback (most recent call last):\n  File \"/home/jlsteenwyk/projects/orthohmm-publication/interval_native_recipe_v1/benchmark_tools/measure_native_interval_step.py\", line 13, in <module>\n    from benchmark_tools.measure_native_counter_step import validate\nModuleNotFoundError: No module named 'benchmark_tools.measure_native_counter_step'\nsrun: error: spark-7ff0: task 0: Exited with exit code 1\n",
+      "scheduler": "JobId=21808 ArrayJobId=21807 ArrayTaskId=0 ArrayTaskThrottle=1 JobName=ohmm_interval_native UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=FAILED Reason=NonZeroExitCode Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=1:0 RunTime=00:00:55 TimeLimit=01:00:00 TimeMin=N/A SubmitTime=2026-09-18T16:36:03 EligibleTime=2026-09-18T16:36:03 AccrueTime=Unknown StartTime=2026-09-18T16:36:03 EndTime=2026-09-18T16:36:58 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-18T16:36:03 Scheduler=Backfill Partition=spark AllocNode:Sid=spark:842527 ReqNodeList=spark-7ff0 ExcNodeList=(null) NodeList=spark-7ff0 BatchHost=spark-7ff0 NumNodes=1 NumCPUs=20 NumTasks=1 CPUs/Task=20 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=20,mem=96G,node=1,billing=20 AllocTRES=cpu=20,mem=96G,node=1,billing=20 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=20 MinMemoryNode=96G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=(null) Network=(null) Command=/home/jlsteenwyk/projects/orthohmm-publication/interval_native_recipe_v1/benchmark_tools/run_dgx_interval_native_smoke.sh WorkDir=/home/jlsteenwyk StdErr=/home/jlsteenwyk/projects/orthohmm-publication/interval-native-21807_0.out StdIn=/dev/null StdOut=/home/jlsteenwyk/projects/orthohmm-publication/interval-native-21807_0.out TresPerTask=cpu:20 \n"
+    },
+    {
+      "index": 1,
+      "verification": {
+        "after": {
+          "native_order": [
+            "n14.fasta",
+            "n11.fasta",
+            "n5.fasta",
+            "n13.fasta",
+            "n6.fasta",
+            "n7.fasta",
+            "n12.fasta",
+            "n9.fasta"
+          ],
+          "original_inputs": [
+            {
+              "bytes": 25773,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n14.fasta",
+              "sha256": "fa639b0dd9da1c40743221a5e85a48a2d1183e2583782cbc28743077b92cc095"
+            },
+            {
+              "bytes": 25419,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n11.fasta",
+              "sha256": "c9e7e01d18b0bd4d133b1588b417c2598b120901c38f3e12ebdeba2a8f97369f"
+            },
+            {
+              "bytes": 22575,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n5.fasta",
+              "sha256": "fe32ef88650cabe1e0239385a8f646020a0c8c01b02abb1487eab91dd3f014f7"
+            },
+            {
+              "bytes": 25992,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n13.fasta",
+              "sha256": "460b6ba93725298cb9e415b19ca38ec2679d622e0309bb69a683b0c4d428d75b"
+            },
+            {
+              "bytes": 24465,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n6.fasta",
+              "sha256": "9c12b7f6233a2fa1161fe5bdb904d8416935f43f1d66832db643723db2b98e5c"
+            },
+            {
+              "bytes": 25804,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n7.fasta",
+              "sha256": "bd5a375e99f12fc22bece6a6553a1636104321b1b5ddf2f7a398e909a6477a57"
+            },
+            {
+              "bytes": 26367,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n12.fasta",
+              "sha256": "3c5356bfbd29f872755fcf8cb83d092bc63b83bf1117f87546580baf503598b1"
+            },
+            {
+              "bytes": 26353,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n9.fasta",
+              "sha256": "8b92d25187584bbc38daff6dec0d671294e30d3484a77a31cc7dcc5b3483867f"
+            }
+          ],
+          "runtime": [
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/trees.json",
+              "records": 26673,
+              "scientific_execution_authorized": false,
+              "sha256": "2f38fc57683e51a7b6768b4709db16293590983640c41cfe12a56ed6036750ae",
+              "status": "runtime_tree_identity_matches"
+            },
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/system_trees.json",
+              "records": 10066,
+              "scientific_execution_authorized": false,
+              "sha256": "4083d15c0ffc40013756c4588763aa8af24ca39165622665ee5074662e4b46ce",
+              "status": "runtime_tree_identity_matches"
+            },
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/interval_native_recipe_v1.json",
+              "records": 19,
+              "scientific_execution_authorized": false,
+              "sha256": "48af7e358ed32920bbf3a242f4cad99aa6386ad43bd0fc4ca2b38c2ca7c67484",
+              "status": "runtime_tree_identity_matches"
+            }
+          ]
+        },
+        "after_check_wall_s": 4.432231368031353,
+        "before": {
+          "native_order": [
+            "n14.fasta",
+            "n11.fasta",
+            "n5.fasta",
+            "n13.fasta",
+            "n6.fasta",
+            "n7.fasta",
+            "n12.fasta",
+            "n9.fasta"
+          ],
+          "original_inputs": [
+            {
+              "bytes": 25773,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n14.fasta",
+              "sha256": "fa639b0dd9da1c40743221a5e85a48a2d1183e2583782cbc28743077b92cc095"
+            },
+            {
+              "bytes": 25419,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n11.fasta",
+              "sha256": "c9e7e01d18b0bd4d133b1588b417c2598b120901c38f3e12ebdeba2a8f97369f"
+            },
+            {
+              "bytes": 22575,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n5.fasta",
+              "sha256": "fe32ef88650cabe1e0239385a8f646020a0c8c01b02abb1487eab91dd3f014f7"
+            },
+            {
+              "bytes": 25992,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n13.fasta",
+              "sha256": "460b6ba93725298cb9e415b19ca38ec2679d622e0309bb69a683b0c4d428d75b"
+            },
+            {
+              "bytes": 24465,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n6.fasta",
+              "sha256": "9c12b7f6233a2fa1161fe5bdb904d8416935f43f1d66832db643723db2b98e5c"
+            },
+            {
+              "bytes": 25804,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n7.fasta",
+              "sha256": "bd5a375e99f12fc22bece6a6553a1636104321b1b5ddf2f7a398e909a6477a57"
+            },
+            {
+              "bytes": 26367,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n12.fasta",
+              "sha256": "3c5356bfbd29f872755fcf8cb83d092bc63b83bf1117f87546580baf503598b1"
+            },
+            {
+              "bytes": 26353,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n9.fasta",
+              "sha256": "8b92d25187584bbc38daff6dec0d671294e30d3484a77a31cc7dcc5b3483867f"
+            }
+          ],
+          "runtime": [
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/trees.json",
+              "records": 26673,
+              "scientific_execution_authorized": false,
+              "sha256": "2f38fc57683e51a7b6768b4709db16293590983640c41cfe12a56ed6036750ae",
+              "status": "runtime_tree_identity_matches"
+            },
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/system_trees.json",
+              "records": 10066,
+              "scientific_execution_authorized": false,
+              "sha256": "4083d15c0ffc40013756c4588763aa8af24ca39165622665ee5074662e4b46ce",
+              "status": "runtime_tree_identity_matches"
+            },
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/interval_native_recipe_v1.json",
+              "records": 19,
+              "scientific_execution_authorized": false,
+              "sha256": "48af7e358ed32920bbf3a242f4cad99aa6386ad43bd0fc4ca2b38c2ca7c67484",
+              "status": "runtime_tree_identity_matches"
+            }
+          ]
+        },
+        "before_check_wall_s": 4.44457763293758,
+        "error": "/home/jlsteenwyk/projects/orthohmm-publication/interval_native_smoke_v1/run_01/measurement/ready.json",
+        "error_type": "TimeoutError",
+        "limitations": [
+          "Identity checks are outside the native command timer.",
+          "Hashing warms file caches; this is not cold-cache timing.",
+          "Cgroup memory peak may retain preparation and verification allocations.",
+          "Native outputs and collector records still require independent admission."
+        ],
+        "scientific_results_admitted": false,
+        "source_sha256": "36243fcdfe6f49e73dbe1dd1b627bf4a330f19f3cd52dcf94a9618ddf0415cf8",
+        "status": "verified_wrapper_failed"
+      },
+      "step_log": "Traceback (most recent call last):\n  File \"/home/jlsteenwyk/projects/orthohmm-publication/interval_native_recipe_v1/benchmark_tools/measure_native_interval_step.py\", line 13, in <module>\n    from benchmark_tools.measure_native_counter_step import validate\nModuleNotFoundError: No module named 'benchmark_tools.measure_native_counter_step'\nsrun: error: spark-7ff0: task 0: Exited with exit code 1\n",
+      "scheduler": "JobId=21809 ArrayJobId=21807 ArrayTaskId=1 ArrayTaskThrottle=1 JobName=ohmm_interval_native UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=FAILED Reason=NonZeroExitCode Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=1:0 RunTime=00:00:55 TimeLimit=01:00:00 TimeMin=N/A SubmitTime=2026-09-18T16:36:03 EligibleTime=2026-09-18T16:36:58 AccrueTime=2026-09-18T16:36:58 StartTime=2026-09-18T16:36:58 EndTime=2026-09-18T16:37:53 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-18T16:36:58 Scheduler=Main Partition=spark AllocNode:Sid=spark:842527 ReqNodeList=spark-7ff0 ExcNodeList=(null) NodeList=spark-7ff0 BatchHost=spark-7ff0 NumNodes=1 NumCPUs=20 NumTasks=1 CPUs/Task=20 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=20,mem=96G,node=1,billing=20 AllocTRES=cpu=20,mem=96G,node=1,billing=20 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=20 MinMemoryNode=96G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=(null) Network=(null) Command=/home/jlsteenwyk/projects/orthohmm-publication/interval_native_recipe_v1/benchmark_tools/run_dgx_interval_native_smoke.sh WorkDir=/home/jlsteenwyk StdErr=/home/jlsteenwyk/projects/orthohmm-publication/interval-native-21807_1.out StdIn=/dev/null StdOut=/home/jlsteenwyk/projects/orthohmm-publication/interval-native-21807_1.out TresPerTask=cpu:20 \n"
+    },
+    {
+      "index": 2,
+      "verification": {
+        "after": {
+          "copied_inputs": [
+            {
+              "bytes": 25419,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/interval_native_smoke_v1/run_02/orthofinder_full/input/n11.fasta",
+              "sha256": "c9e7e01d18b0bd4d133b1588b417c2598b120901c38f3e12ebdeba2a8f97369f"
+            },
+            {
+              "bytes": 26367,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/interval_native_smoke_v1/run_02/orthofinder_full/input/n12.fasta",
+              "sha256": "3c5356bfbd29f872755fcf8cb83d092bc63b83bf1117f87546580baf503598b1"
+            },
+            {
+              "bytes": 25992,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/interval_native_smoke_v1/run_02/orthofinder_full/input/n13.fasta",
+              "sha256": "460b6ba93725298cb9e415b19ca38ec2679d622e0309bb69a683b0c4d428d75b"
+            },
+            {
+              "bytes": 25773,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/interval_native_smoke_v1/run_02/orthofinder_full/input/n14.fasta",
+              "sha256": "fa639b0dd9da1c40743221a5e85a48a2d1183e2583782cbc28743077b92cc095"
+            },
+            {
+              "bytes": 22575,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/interval_native_smoke_v1/run_02/orthofinder_full/input/n5.fasta",
+              "sha256": "fe32ef88650cabe1e0239385a8f646020a0c8c01b02abb1487eab91dd3f014f7"
+            },
+            {
+              "bytes": 24465,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/interval_native_smoke_v1/run_02/orthofinder_full/input/n6.fasta",
+              "sha256": "9c12b7f6233a2fa1161fe5bdb904d8416935f43f1d66832db643723db2b98e5c"
+            },
+            {
+              "bytes": 25804,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/interval_native_smoke_v1/run_02/orthofinder_full/input/n7.fasta",
+              "sha256": "bd5a375e99f12fc22bece6a6553a1636104321b1b5ddf2f7a398e909a6477a57"
+            },
+            {
+              "bytes": 26353,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/interval_native_smoke_v1/run_02/orthofinder_full/input/n9.fasta",
+              "sha256": "8b92d25187584bbc38daff6dec0d671294e30d3484a77a31cc7dcc5b3483867f"
+            }
+          ],
+          "native_order": [
+            "n14.fasta",
+            "n11.fasta",
+            "n5.fasta",
+            "n13.fasta",
+            "n6.fasta",
+            "n7.fasta",
+            "n12.fasta",
+            "n9.fasta"
+          ],
+          "original_inputs": [
+            {
+              "bytes": 25773,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n14.fasta",
+              "sha256": "fa639b0dd9da1c40743221a5e85a48a2d1183e2583782cbc28743077b92cc095"
+            },
+            {
+              "bytes": 25419,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n11.fasta",
+              "sha256": "c9e7e01d18b0bd4d133b1588b417c2598b120901c38f3e12ebdeba2a8f97369f"
+            },
+            {
+              "bytes": 22575,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n5.fasta",
+              "sha256": "fe32ef88650cabe1e0239385a8f646020a0c8c01b02abb1487eab91dd3f014f7"
+            },
+            {
+              "bytes": 25992,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n13.fasta",
+              "sha256": "460b6ba93725298cb9e415b19ca38ec2679d622e0309bb69a683b0c4d428d75b"
+            },
+            {
+              "bytes": 24465,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n6.fasta",
+              "sha256": "9c12b7f6233a2fa1161fe5bdb904d8416935f43f1d66832db643723db2b98e5c"
+            },
+            {
+              "bytes": 25804,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n7.fasta",
+              "sha256": "bd5a375e99f12fc22bece6a6553a1636104321b1b5ddf2f7a398e909a6477a57"
+            },
+            {
+              "bytes": 26367,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n12.fasta",
+              "sha256": "3c5356bfbd29f872755fcf8cb83d092bc63b83bf1117f87546580baf503598b1"
+            },
+            {
+              "bytes": 26353,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n9.fasta",
+              "sha256": "8b92d25187584bbc38daff6dec0d671294e30d3484a77a31cc7dcc5b3483867f"
+            }
+          ],
+          "runtime": [
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/trees.json",
+              "records": 26673,
+              "scientific_execution_authorized": false,
+              "sha256": "2f38fc57683e51a7b6768b4709db16293590983640c41cfe12a56ed6036750ae",
+              "status": "runtime_tree_identity_matches"
+            },
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/system_trees.json",
+              "records": 10066,
+              "scientific_execution_authorized": false,
+              "sha256": "4083d15c0ffc40013756c4588763aa8af24ca39165622665ee5074662e4b46ce",
+              "status": "runtime_tree_identity_matches"
+            },
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/interval_native_recipe_v1.json",
+              "records": 19,
+              "scientific_execution_authorized": false,
+              "sha256": "48af7e358ed32920bbf3a242f4cad99aa6386ad43bd0fc4ca2b38c2ca7c67484",
+              "status": "runtime_tree_identity_matches"
+            }
+          ]
+        },
+        "after_check_wall_s": 4.4327889969572425,
+        "before": {
+          "native_order": [
+            "n14.fasta",
+            "n11.fasta",
+            "n5.fasta",
+            "n13.fasta",
+            "n6.fasta",
+            "n7.fasta",
+            "n12.fasta",
+            "n9.fasta"
+          ],
+          "original_inputs": [
+            {
+              "bytes": 25773,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n14.fasta",
+              "sha256": "fa639b0dd9da1c40743221a5e85a48a2d1183e2583782cbc28743077b92cc095"
+            },
+            {
+              "bytes": 25419,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n11.fasta",
+              "sha256": "c9e7e01d18b0bd4d133b1588b417c2598b120901c38f3e12ebdeba2a8f97369f"
+            },
+            {
+              "bytes": 22575,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n5.fasta",
+              "sha256": "fe32ef88650cabe1e0239385a8f646020a0c8c01b02abb1487eab91dd3f014f7"
+            },
+            {
+              "bytes": 25992,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n13.fasta",
+              "sha256": "460b6ba93725298cb9e415b19ca38ec2679d622e0309bb69a683b0c4d428d75b"
+            },
+            {
+              "bytes": 24465,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n6.fasta",
+              "sha256": "9c12b7f6233a2fa1161fe5bdb904d8416935f43f1d66832db643723db2b98e5c"
+            },
+            {
+              "bytes": 25804,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n7.fasta",
+              "sha256": "bd5a375e99f12fc22bece6a6553a1636104321b1b5ddf2f7a398e909a6477a57"
+            },
+            {
+              "bytes": 26367,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n12.fasta",
+              "sha256": "3c5356bfbd29f872755fcf8cb83d092bc63b83bf1117f87546580baf503598b1"
+            },
+            {
+              "bytes": 26353,
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/smoke_missing20_20261101_input/n9.fasta",
+              "sha256": "8b92d25187584bbc38daff6dec0d671294e30d3484a77a31cc7dcc5b3483867f"
+            }
+          ],
+          "runtime": [
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/trees.json",
+              "records": 26673,
+              "scientific_execution_authorized": false,
+              "sha256": "2f38fc57683e51a7b6768b4709db16293590983640c41cfe12a56ed6036750ae",
+              "status": "runtime_tree_identity_matches"
+            },
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/system_trees.json",
+              "records": 10066,
+              "scientific_execution_authorized": false,
+              "sha256": "4083d15c0ffc40013756c4588763aa8af24ca39165622665ee5074662e4b46ce",
+              "status": "runtime_tree_identity_matches"
+            },
+            {
+              "path": "/home/jlsteenwyk/projects/orthohmm-publication/interval_native_recipe_v1.json",
+              "records": 19,
+              "scientific_execution_authorized": false,
+              "sha256": "48af7e358ed32920bbf3a242f4cad99aa6386ad43bd0fc4ca2b38c2ca7c67484",
+              "status": "runtime_tree_identity_matches"
+            }
+          ]
+        },
+        "before_check_wall_s": 4.427542007993907,
+        "error": "/home/jlsteenwyk/projects/orthohmm-publication/interval_native_smoke_v1/run_02/measurement/ready.json",
+        "error_type": "TimeoutError",
+        "limitations": [
+          "Identity checks are outside the native command timer.",
+          "Hashing warms file caches; this is not cold-cache timing.",
+          "Cgroup memory peak may retain preparation and verification allocations.",
+          "Native outputs and collector records still require independent admission."
+        ],
+        "scientific_results_admitted": false,
+        "source_sha256": "36243fcdfe6f49e73dbe1dd1b627bf4a330f19f3cd52dcf94a9618ddf0415cf8",
+        "status": "verified_wrapper_failed"
+      },
+      "step_log": "Traceback (most recent call last):\n  File \"/home/jlsteenwyk/projects/orthohmm-publication/interval_native_recipe_v1/benchmark_tools/measure_native_interval_step.py\", line 13, in <module>\n    from benchmark_tools.measure_native_counter_step import validate\nModuleNotFoundError: No module named 'benchmark_tools.measure_native_counter_step'\nsrun: error: spark-7ff0: task 0: Exited with exit code 1\n",
+      "scheduler": "JobId=21807 ArrayJobId=21807 ArrayTaskId=2 ArrayTaskThrottle=1 JobName=ohmm_interval_native UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=FAILED Reason=NonZeroExitCode Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=1:0 RunTime=00:00:55 TimeLimit=01:00:00 TimeMin=N/A SubmitTime=2026-09-18T16:36:03 EligibleTime=2026-09-18T16:37:53 AccrueTime=2026-09-18T16:36:58 StartTime=2026-09-18T16:37:53 EndTime=2026-09-18T16:38:48 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-18T16:37:53 Scheduler=Main Partition=spark AllocNode:Sid=spark:842527 ReqNodeList=spark-7ff0 ExcNodeList=(null) NodeList=spark-7ff0 BatchHost=spark-7ff0 NumNodes=1 NumCPUs=20 NumTasks=1 CPUs/Task=20 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=20,mem=96G,node=1,billing=20 AllocTRES=cpu=20,mem=96G,node=1,billing=20 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=20 MinMemoryNode=96G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=(null) Network=(null) Command=/home/jlsteenwyk/projects/orthohmm-publication/interval_native_recipe_v1/benchmark_tools/run_dgx_interval_native_smoke.sh WorkDir=/home/jlsteenwyk StdErr=/home/jlsteenwyk/projects/orthohmm-publication/interval-native-21807_2.out StdIn=/dev/null StdOut=/home/jlsteenwyk/projects/orthohmm-publication/interval-native-21807_2.out TresPerTask=cpu:20 \n"
+    }
+  ],
+  "archive": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_interval_native_failed_21807",
+  "publication_ready": false,
+  "scientific_timings_admitted": 0
+}
