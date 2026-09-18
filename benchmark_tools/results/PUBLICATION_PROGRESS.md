@@ -1,5 +1,43 @@
 # Publication Progress
 
+## Corrected Factorial Pair Conversions Queued (2026-09-18 UTC)
+
+Previous turn progressed throughbf255a1: independent native admission jobs
+21761-21764 queued. Revalidated HMM21706_0 RUNNING9:43:08 and final DGX
+timing21656_26 RUNNING18:03. No jobs were restarted or heavy DGX I/O added.
+
+Adjusted batch handoffs only: calculate fixed admission-file checksums
+after dependencies complete, reject wrong R parity, bind odd cell indices
+to native admission index floor(cell/2), and retain frozen source checks.
+Scientific converters are unchanged and verified clean: group converter
+cb6489d6b3d06fb5c140f3c2ac297016abca0a1b and native converter
+1e67abba484ae22ac28639e90cd84df83e969b9f. Native conversion independently
+reruns the frozen native admission and requires exact report equality;
+both conversions require zero reference-mapping loss. R-off uses
+cross-species group cliques, R-on native phylogenetic ortholog pairs.
+58 new wrapper tests plus converter tests give96 passes in2.24s.
+Implementation commit8968116.
+
+| Cell index | Pair semantics | Conversion job | afterok dependency |
+| --- | --- | --- | --- |
+| 0 | Group clique | 21765 | 21759 |
+| 1 | Native phylogenetic | 21766 | 21761 |
+| 2 | Group clique | 21767 | 21759 |
+| 3 | Native phylogenetic | 21768 | 21762 |
+| 4 | Group clique | 21769 | 21759 |
+| 5 | Native phylogenetic | 21770 | 21763 |
+| 6 | Group clique | 21771 | 21759 |
+| 7 | Native phylogenetic | 21772 | 21764 |
+
+All request2CPUs/4h/bizon/no-requeue; group jobs32GiB and native jobs64GiB.
+Scheduler confirms pending dependencies. Jobs use candidate admission21759
+and fixed qfo_corrected_factorial_native_admission_INDEX_20260918.json
+reports where applicable. No partial or failed artifact is admitted.
+
+Next: queue eight frozen QfO assessment cells after their respective
+conversion jobs and independent scoring admission after each. No corrected
+factorial scores are available yet; the publication goal remains active.
+
 ## Corrected Reconciliation Validation Queued (2026-09-18 UTC)
 
 Previous turn progressed through3cdef26: four reconciliation tasks queued
