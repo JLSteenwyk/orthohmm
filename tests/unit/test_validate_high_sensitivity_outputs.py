@@ -9,9 +9,9 @@ from benchmark_tools.validate_high_sensitivity_outputs import validate, validate
 
 
 def metrics():
-    return {"status": "complete", "accuracy_profile": "high_sensitivity", "search_mode": "builtin",
+    return {"status": "complete", "metadata": {"accuracy_profile": "high_sensitivity", "search_mode": "builtin",
             "clustering": "leiden", "cpm_resolution": 0.1, "substitution_matrix": "BLOSUM62",
-            "evalue_threshold": 1e-4, "leiden_seed": 4, "cpu_budget": 32,
+            "evalue_threshold": 1e-4, "leiden_seed": 4, "cpu_budget": 32},
             "counts": {"genes": 2, "species": 2, "orthogroups": 1, "high_sensitivity_profiles": 1}}
 
 
@@ -19,7 +19,7 @@ def metrics():
     ("cpu_budget", 8), ("leiden_seed", 9), ("evalue_threshold", 0.1)])
 def test_reject_metrics(key, value):
     data = metrics()
-    data[key] = value
+    (data if key == "status" else data["metadata"])[key] = value
     with pytest.raises(ValueError):
         validate_metrics(data, 2, 2, 1)
 
@@ -46,7 +46,7 @@ def test_real_checkpoint_and_groups(tmp_path, group):
     (output / "orthohmm_working_res/orthohmm_edges_clustered.txt").write_text("a b\n")
     path = tmp_path / "metrics.json"
     data = metrics()
-    data.update(output_directory=str(output), fasta_directory=str(tmp_path))
+    data["metadata"].update(output_directory=str(output), fasta_directory=str(tmp_path))
     path.write_text(json.dumps(data))
     sha = record(checkpoint / "manifest.json")["sha256"]
     if group == "OG0: a b\n":
@@ -63,6 +63,23 @@ def test_profile_count_requires_positive_integer(value):
     data = metrics()
     data["counts"]["high_sensitivity_profiles"] = value
     with pytest.raises(ValueError):
+        validate_metrics(data, 2, 2, 1)
+
+
+def test_actual_native_metrics_writer(tmp_path):
+    from orthohmm.metrics import PipelineMetrics
+    path = tmp_path / "native.json"
+    fixture = metrics()
+    with PipelineMetrics(str(path)) as writer:
+        writer.add_metadata(**fixture["metadata"])
+        writer.add_counts(**fixture["counts"])
+    validate_metrics(json.loads(path.read_text()), 2, 2, 1)
+
+
+def test_reject_flattened_metadata():
+    data = metrics()
+    data.update(data.pop("metadata"))
+    with pytest.raises(ValueError, match="metadata"):
         validate_metrics(data, 2, 2, 1)
 
 

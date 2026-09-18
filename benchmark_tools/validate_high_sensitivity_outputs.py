@@ -14,11 +14,14 @@ from benchmark_tools.prepare_ob_candidate_neighborhood import record, check
 def validate_metrics(metrics, genes, species, groups):
     if metrics.get("status") != "complete":
         raise ValueError("Native metrics are not complete")
+    metadata = metrics.get("metadata")
+    if not isinstance(metadata, dict):
+        raise ValueError("Missing native metadata")
     expected = {"accuracy_profile": "high_sensitivity", "search_mode": "builtin", "clustering": "leiden",
                 "cpm_resolution": 0.1, "substitution_matrix": "BLOSUM62", "evalue_threshold": 1e-4,
                 "leiden_seed": 4, "cpu_budget": 32}
     for key, value in expected.items():
-        if metrics.get(key) != value:
+        if metadata.get(key) != value:
             raise ValueError("Unexpected native high-sensitivity parameter: " + key)
     counts = metrics.get("counts")
     if not isinstance(counts, dict):
@@ -67,9 +70,9 @@ def validate(output, metrics_path, inputs, checkpoint_sha):
     partition = validate_partition(raw_path, groups, names)
     metrics = json.loads(metrics_path.read_text())
     validate_metrics(metrics, len(names), len(ownership), len(groups))
-    if Path(metrics["output_directory"]).resolve() != output.resolve():
+    if Path(metrics["metadata"]["output_directory"]).resolve() != output.resolve():
         raise ValueError("Metrics output directory differs")
-    if {p.parent.resolve() for p in inputs} != {Path(metrics["fasta_directory"]).resolve()}:
+    if {p.parent.resolve() for p in inputs} != {Path(metrics["metadata"]["fasta_directory"]).resolve()}:
         raise ValueError("Metrics FASTA directory differs")
     for item in records:
         check(item)
