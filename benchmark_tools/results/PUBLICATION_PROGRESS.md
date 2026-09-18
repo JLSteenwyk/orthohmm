@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Dedicated BPO Python Environment (2026-09-18 UTC)
+
+Previous turn progressed by pushingb12effa: corrected BLAST admission binding
+and discovery of unrelated editable startup hooks. Revalidated scheduler
+state: HMM21706_0 RUNNING7:53:31, DGX21656_24 RUNNING51:08; BLAST21713 pending
+resources and existing dependent jobs preserved.
+
+Created a fresh no-seed/no-system-site venv with exactly Biopython1.86 and
+NumPy2.2.6 using hash-verified CPython3.10 Linuxx86_64 wheels. No existing
+environment was changed. Clean isolated startup imports the corrected BPO
+workflow without the unrelated editable hooks. Inventoried2,928runtime
+entries and retained imported-source/mapped-file records; all reverified
+unchanged after native fixture execution. The dedicated interpreter produced
+a BPO byte-identical to the native BioPerl fixture, with all6records/3queries/
+7offsets validated.45focused tests passed; package dependency check passed.
+
+See ORTHOMCL_DEDICATED_PYTHON_20260918.md for hashes, scope and limitations.
+Production runtime enforcement, frozen executor/batch and submission behind
+21746 remain next. No corrected production inference or score is claimed.
+
 ## Corrected BPO Admission Binding (2026-09-18 UTC)
 
 Previous turn progressed by pushing3319e7b and validating the BPO checkpoint
