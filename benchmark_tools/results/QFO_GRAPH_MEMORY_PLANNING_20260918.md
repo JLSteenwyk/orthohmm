@@ -104,8 +104,8 @@ unchanged: its admission paths, scheduler IDs and count validation are specific
 to OrthoBench, and it predates the checked QfO clustering constructor path.
 Only its pure `graph_command` helper is reused. The new plan explicitly
 requires a separately frozen checked-clustering executor and prohibits direct
-execution of its native command. The checked executor is now implemented
-below; independent post-run output admission remains to be implemented.
+execution of its native command. The checked executor and post-run admission
+are now implemented below; actual execution/admission remain pending.
 
 44 focused tests pass (16 new plan-validation/command tests,8 payload-wrapper
 tests and20 existing estimator tests); the CLI help smoke check passes.
@@ -136,7 +136,32 @@ historical, corrected-HMM and sequence provenance, corrupted boundaries,
 constructor inputs, modules, partition coverage, retained outputs, wrong stage
 counts and mixed/incomplete provenance. A fresh-process smoke check against
 the actual frozen launcher confirms correct scientific-module/helper paths.
-Full-scale execution and independent post-run admission remain unverified.
+Full-scale execution and actual post-run admission remain unverified.
+
+### Post-Run Admission
+
+`admit_qfo_sequence_graph.py` requires a terminal successful32CPU job with
+the planned memory allocation before reading run outputs. It binds the plan
+and parent result to supplied hashes, rechecks numeric checkpoint contents,
+scientific settings, source files, runtime observations and exact variant
+identity. Both stage partitions must cover the complete corrected universe.
+It repeats validation of retained native constructor/optimizer observations
+and verifies the multipass output came from the corresponding checked stage.
+Altered commands, stage order, counts, file identities or memberships fail.
+
+The executor is pinned to69adea4d5a1dc634783b20ff7bbe9fbe1c6464db in
+`benchmarks/work/publication_qfo_sequence_graph_v1`. Generate the eventual
+command plan with that frozen executor's preparer so its source record agrees.
+The admission script itself will be frozen separately before use. All-hit and
+top100 have separate admission reports; neither substitutes for a failed arm.
+
+154 focused tests pass, including25 new parent/partition/gating tests and
+expanded stage auditing for both sequence variants. Actual small native
+igraph/Leiden corruption tests remain included. The CLI smoke check passes.
+This is implementation/test evidence, not admission of a QfO run. Preserved
+native observations are checked, not an independent historical memory trace
+or a new graph inference. Pair conversion, accuracy scoring, paired uncertainty
+and dedicated timing remain separate requirements.
 
 ### Historical Search Progress
 

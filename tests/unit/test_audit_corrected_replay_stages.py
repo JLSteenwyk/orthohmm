@@ -16,7 +16,8 @@ def write(path, value):
 
 @pytest.mark.parametrize("problem", [None, "missing", "order", "execution", "manifest", "copy",
     "original_command", "command", "threads", "partition", "validation", "genes", "edges", "output"])
-def test_stage_orchestration(tmp_path, monkeypatch, problem):
+@pytest.mark.parametrize("sequence_variant", [None, "all_hits", "top100"])
+def test_stage_orchestration(tmp_path, monkeypatch, problem, sequence_variant):
     # Real file hashes and stage handoff; native graph validation is mocked here
     # and covered with actual igraph/Leiden in test_validate_checked_replay_payload.
     root, executor, directory = tmp_path, tmp_path / "executor", tmp_path / "output"
@@ -24,7 +25,7 @@ def test_stage_orchestration(tmp_path, monkeypatch, problem):
     write(plan, {})
     plan_record = record(plan)
     worker, observations = {"calls": []}, {}
-    for index, label in enumerate(STAGES):
+    for index, label in enumerate(STAGES if sequence_variant is None else STAGES[:2]):
         stage = directory / "clustering" / f"cluster_{index}_{label}"
         payload = stage / "payload"
         payload.mkdir(parents=True)
@@ -53,14 +54,20 @@ def test_stage_orchestration(tmp_path, monkeypatch, problem):
                    "--root", str(root), "--payload", str(payload), "--manifest", str(manifest_path),
                    "--manifest-sha256", record(manifest_path)["sha256"], "--corrected-plan", str(plan),
                    "--corrected-plan-sha256", plan_record["sha256"]]}
+        if sequence_variant is not None:
+            row["command"] = row["command"][:-4] + ["--sequence-plan", str(plan),
+                "--sequence-plan-sha256", plan_record["sha256"], "--sequence-variant", sequence_variant]
         write(stage / "execution.json", row)
         worker["calls"].append(row)
+    stage_pairs = [("multipass", 1), ("multipass_refined", 1)]
+    if sequence_variant is None:
+        stage_pairs += [("strict_profiles", 3), ("strict_profiles_refined", 3)]
     replay = {"counts": {"rbnh_edges": 10, "multipass_edges": 11}, "stages": [
         {"label": label, "output": worker["calls"][index]["partition"]}
-        for label, index in (("multipass", 1), ("multipass_refined", 1),
-                             ("strict_profiles", 3), ("strict_profiles_refined", 3))]}
-    def validate(payload, manifest, root, executor, corrected_plan, retained_partition):
-        assert corrected_plan == plan_record
+        for label, index in stage_pairs]}
+    def validate(payload, manifest, root, executor, retained_partition, **provenance):
+        assert provenance == (dict(corrected_plan=plan_record) if sequence_variant is None else
+                              dict(sequence_plan=plan_record, sequence_variant=sequence_variant))
         assert retained_partition == record(payload.parent / "partition.txt")
         result = copy.deepcopy(observations[str(payload)])
         result["provenance_checked"].append(retained_partition)
@@ -103,9 +110,9 @@ def test_stage_orchestration(tmp_path, monkeypatch, problem):
         write(stage / "execution.json", row)
     if problem:
         with pytest.raises(ValueError):
-            module.audit(root, executor, directory, worker, replay, plan_record)
+            module.audit(root, executor, directory, worker, replay, plan_record, sequence_variant=sequence_variant)
     else:
-        result = module.audit(root, executor, directory, worker, replay, plan_record)
-        assert result["status"] == "corrected_replay_stages_verified"
-        assert len(result["clustering"]) == 4
+        result = module.audit(root, executor, directory, worker, replay, plan_record, sequence_variant=sequence_variant)
+        assert result["status"] == ("corrected_replay_stages_verified" if sequence_variant is None else "sequence_replay_stages_verified")
+        assert len(result["clustering"]) == (4 if sequence_variant is None else 2)
         assert result["accuracy_evaluated"] is False

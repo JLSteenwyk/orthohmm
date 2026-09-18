@@ -9,14 +9,19 @@ from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
 from benchmark_tools.validate_checked_replay_payload import validate
 
 
-def audit(root, executor, directory, worker, replay, plan_record):
+def audit(root, executor, directory, worker, replay, plan_record, sequence_variant=None):
+    if sequence_variant is not None and sequence_variant not in ("all_hits", "top100"):
+        raise ValueError("Unknown sequence variant")
+    expected_stages = STAGES if sequence_variant is None else STAGES[:2]
     calls = worker["calls"]
-    if (len(calls) != 4 or [(c["index"], c["stage"]) for c in calls] != list(enumerate(STAGES))
+    if (len(calls) != len(expected_stages) or [(c["index"], c["stage"]) for c in calls] != list(enumerate(expected_stages))
             or any(type(c["index"]) is not int or c["status"] != "checked"
                    or type(c["exit_code"]) is not int or c["exit_code"] != 0
                    or c["accuracy_evaluated"] is not False for c in calls)):
         raise ValueError("Incomplete or reordered checked clustering stages")
     labels = ["multipass", "multipass_refined", "strict_profiles", "strict_profiles_refined"]
+    if sequence_variant is not None:
+        labels = labels[:2]
     if [s["label"] for s in replay["stages"]] != labels:
         raise ValueError("Unexpected replay stage inventory")
     records, summaries = [], []
@@ -49,8 +54,12 @@ def audit(root, executor, directory, worker, replay, plan_record):
                 raise ValueError("Original/copied payload content differs")
         expected = [sys.executable, str(executor / "benchmark_tools/checked_replay_payload_worker.py"),
                     "--root", str(root), "--payload", str(payload), "--manifest", manifest_record["path"],
-                    "--manifest-sha256", manifest_record["sha256"], "--corrected-plan", plan_record["path"],
-                    "--corrected-plan-sha256", plan_record["sha256"]]
+                    "--manifest-sha256", manifest_record["sha256"]]
+        if sequence_variant is None:
+            expected += ["--corrected-plan", plan_record["path"], "--corrected-plan-sha256", plan_record["sha256"]]
+        else:
+            expected += ["--sequence-plan", plan_record["path"], "--sequence-plan-sha256", plan_record["sha256"],
+                         "--sequence-variant", sequence_variant]
         if row["command"] != expected:
             raise ValueError("Checked worker command differs")
         overrides = {k: "1" for k in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS")}
@@ -60,8 +69,9 @@ def audit(root, executor, directory, worker, replay, plan_record):
         partition = record(stage / "partition.txt")
         if row["partition"] != partition:
             raise ValueError("Retained partition changed")
-        fresh = validate(payload, manifest, root, executor, corrected_plan=plan_record,
-                         retained_partition=partition)
+        provenance = (dict(corrected_plan=plan_record) if sequence_variant is None else
+                      dict(sequence_plan=plan_record, sequence_variant=sequence_variant))
+        fresh = validate(payload, manifest, root, executor, retained_partition=partition, **provenance)
         # The in-run callback preceded the retained copy. All other evidence
         # must match the fresh retrospective check exactly.
         original_validation = {**fresh, "provenance_checked": fresh["provenance_checked"][:-1]}
@@ -77,7 +87,8 @@ def audit(root, executor, directory, worker, replay, plan_record):
             or replay["counts"]["multipass_edges"] != summaries[1]["saved_graph"]["edges"]):
         raise ValueError("Replay edge counts differ from native payloads")
     stages = {s["label"]: s["output"] for s in replay["stages"]}
-    for index, label in ((1, "multipass"), (3, "strict_profiles")):
+    copies = ((1, "multipass"), (3, "strict_profiles")) if sequence_variant is None else ((1, "multipass"),)
+    for index, label in copies:
         output = stages[label]
         check(output)
         if any(output[k] != summaries[index]["partition"][k] for k in ("bytes", "sha256")):
@@ -90,7 +101,8 @@ def audit(root, executor, directory, worker, replay, plan_record):
         unique[item["path"]] = item
     for item in unique.values():
         check(item)
-    return {"status": "corrected_replay_stages_verified", "accuracy_evaluated": False,
+    return {"status": "corrected_replay_stages_verified" if sequence_variant is None else "sequence_replay_stages_verified",
+            "accuracy_evaluated": False,
             "clustering": summaries, "checked_records": list(unique.values()),
             "limitations": ["Stage evidence only: parent scheduler, plan, runtime and refined outputs require separate admission.",
                             "Recorded native observations are rechecked; this is not retrospective live-memory inspection."]}

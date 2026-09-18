@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Sequence Graph Post-Run Admission Implemented (2026-09-18 UTC)
+
+Previous turn progressed through69adea4 with the checked sequence executor.
+Reread the full objective; live scheduler confirms21706_0 HMM RUNNING13:30:33
+and21791 conversion RUNNING1:02:40.21792/21798 remain pending dependencies.
+
+Added admit_qfo_sequence_graph.py and extended retained-stage auditing with
+an explicit sequence variant. Terminal successful scheduling with the reviewed
+allocation is required before output reads. Exact source/plan/variant/command
+bindings, numeric checkpoint re-audit, native constructor/optimizer evidence,
+retained-stage handoffs, full gene coverage and runtime rechecks gate admission.
+All-hit andtop100 are admitted separately; no failed result is silently replaced.
+
+154 focused tests pass, including25 new parent/partition tests, both sequence
+variants in stage corruption tests, existing HMM admission tests and real small
+native clustering fixtures. CLI smoke check passes. Created frozen executor
+worktree publication_qfo_sequence_graph_v1 at69adea4d5a1dc634783b20ff7bbe9fbe1c6464db.
+No graph run has launched and no QfO graph admission report is claimed.
+
+Next: after21798 completes, review actual memory evidence, generate commands
+using the frozen preparer, submit both variants, independently admit their
+outputs and complete conversion/scoring/uncertainty. The goal remains active;
+implementation of these gates does not satisfy the required biological results
+or the remaining publication-package and controlled-resource requirements.
+
 ## Checked Sequence-Control Executor Implemented (2026-09-18 UTC)
 
 Previous turn progressed throughe9a84aa with the QfO-specific graph plan
