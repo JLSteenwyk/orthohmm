@@ -8137,3 +8137,27 @@ completed count to 21/27; task 21656_21 is active at 2:59. Corrected HMM
 admitted native timing measurements. Original TreeFam sources, corrected
 all-method results, remaining uncertainty/resource admission and final
 publication packaging remain open. No unrelated jobs were interrupted.
+
+### FastOMA Distinct Native Pair Conversion (2026-09-18)
+
+The preceding source-retrieval turn did not recover new TreeFam inputs and
+is classified as no progress toward that missing-data requirement. This turn
+revalidated live jobs: corrected HMM 21706_0 was RUNNING at 5:28:45 and DGX
+21656_21 was RUNNING at 11:06. Neither was restarted or interrupted.
+
+Added `fastoma_distinct_pairs.py`, a disk-backed companion to the existing
+strict `fastoma_to_pairwise.py` parser. The original converter and its
+order/multiplicity contract remain unchanged. The companion validates every
+native row against caller-supplied input accession ownership, checks gzip
+integrity before emitting output, and reports raw, distinct and duplicate
+relation counts. It produces native pairs, never HOG clique expansion.
+SQLite bounds pair-index cache memory to 8 MiB; this is not a total RSS cap.
+Temporary storage is cleaned on success and failure; output publication and
+source/admission provenance remain the caller's responsibility.
+
+Focused tests cover malformed/unknown/self/intraspecies rows, duplicate and
+reverse relations, empty/truncated inputs, line endings, transaction boundaries
+and output failures. This is a conversion building block, not a corrected
+FastOMA inference result or completed launch/admission workflow. The admitted
+corrected OrthoFinder tree, fresh FastOMA launch, native-output audit and scoring
+remain outstanding. No historical scores or benchmark endpoints changed.
