@@ -52,3 +52,21 @@ coverage or native/replay agreement. No replay score is produced by either
 dispatch or admission; candidate preparation and downstream scoring remain.
 
 Submission identities are recorded after freezing and queue confirmation.
+
+## Submitted
+
+- Replay **21756**, submitted scheduler time `2026-09-18T10:10:17`,
+  afterok:21722,32CPUs/192GiB/24h/bizon, no requeue.
+  Dispatch executor7df7aae0a9c69ce88e28fb4fc8ae00d63cfe1a41 at
+  `benchmarks/work/publication_qfo_corrected_replay_dispatch_v1`.
+  The runner remains188fde21860a70da55fee1358177485c970a11a3.
+- Admission **21757**, submitted scheduler time `2026-09-18T10:10:28`,
+  afterany:21756,2CPUs/64GiB/24h/bizon, no requeue, using the unchanged
+ 09dec90118e9280990295f8aa9c1aa1a9171714e auditor.
+
+Both resource requests and dependencies were confirmed by `scontrol`.
+The actual frozen auditor rejects pending21756 at its terminal scheduler
+gate before accessing partial outputs. Its future output is
+`benchmarks/work/qfo_corrected_replay_admission_20260918.json`.
+No corrected replay, partition-equivalence result, candidate arm or score
+has completed at this submission milestone.

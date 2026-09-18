@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Corrected HMM Replay And Admission Queued (2026-09-18 UTC)
+
+Previous turn progressed through cca5b96: corrected OrthoMCL scoring and
+independent admission queued21754/21755. Latest live handles: HMM21706_0
+RUNNING9:24:40, DGX21656_25 RUNNING46:48. Preparation21722 remains afterok
+of native HMM admission21720. No active job was stopped or restarted.
+
+Added a dependency-aware dispatch gate requiring completed preparation and
+admission accounting, frozen source identity, exact scientific command,
+input/checkpoint binding and a fresh replay destination. It execs the
+unchanged188fde checked runner, never the unwrapped native command. The
+original false authorization field is preserved; separate dispatch evidence
+does not imply completed replay or accuracy.30 new tests and the existing
+replay suite give132 passes. Actual pending-job preflights correctly reject
+preparation21722 and replay21756 before reading incomplete output.
+
+Frozen dispatcher7df7aae0a9c69ce88e28fb4fc8ae00d63cfe1a41 is queued as21756
+afterok:21722,32CPUs/192GiB/24h/bizon. Independent admission21757 is queued
+afterany:21756,2CPUs/64GiB/24h/bizon using unchanged09dec901 auditor.
+Both are no-requeue and dependencies are confirmed byscontrol. See
+QFO_CORRECTED_REPLAY_DISPATCH_20260918.md.
+
+Next: candidate-arm preparation and admission after21757, followed by the
+eight-cell reconciliation/pair/scoring workflow. Native high-sensitivity
+and replay scores remain distinct unless partition identity is established.
+No new corrected HMM score or matched timing result is admitted. The full
+publication goal remains active and incomplete.
+
 ## Corrected OrthoMCL Scoring And Admission Queued (2026-09-18 UTC)
 
 Previous turn progressed through b213c3c/cd11f04: checked clique conversion
