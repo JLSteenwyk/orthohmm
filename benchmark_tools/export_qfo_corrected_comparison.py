@@ -11,9 +11,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from benchmark_tools.publication_comparison import METHODS
 from benchmark_tools.prepare_ob_candidate_neighborhood import record, check
 from benchmark_tools.run_simulation_methods import read_frozen
+from benchmark_tools.prepare_qfo_corrected_orthofinder_pairs import SEMANTICS as OF_SEMANTICS
 
 ENDPOINTS = ("GO", "EC", "VGNC", "SwissTrees", "TreeFam-A", "FAS")
-METHOD_KEYS = {"proteinortho": "proteinortho_6_3_6", "sonic": "sonicparanoid_2_0_9"}
+METHOD_KEYS = {"proteinortho": "proteinortho_6_3_6", "sonic": "sonicparanoid_2_0_9",
+               "orthofinder_full": "orthofinder_3_1_5_full",
+               "orthofinder_sequence_only": "orthofinder_3_1_5_sequence_only"}
 
 
 def extract(report, conversion):
@@ -27,9 +30,13 @@ def extract(report, conversion):
     assessment = report["assessment"]
     if assessment["participant"] != participant or set(assessment["endpoints"]) != set(ENDPOINTS):
         raise ValueError("Wrong participant or incomplete endpoint set")
-    if (conversion["status"] != "corrected_comparator_pairs_prepared_unscored"
+    status = ("corrected_orthofinder_pairs_prepared_unscored" if method in OF_SEMANTICS
+              else "corrected_comparator_pairs_prepared_unscored")
+    if (conversion["status"] != status
             or conversion["method"] != method or conversion["participant"] != participant):
         raise ValueError("Wrong corrected conversion binding")
+    if method in OF_SEMANTICS and conversion["semantics"] != OF_SEMANTICS[method]:
+        raise ValueError("Wrong OrthoFinder prediction semantics")
     total, retained, removed = (conversion[k] for k in ("total_pairs", "retained_pairs", "removed_mapping_pairs"))
     if any(type(v) is not int or v < 0 for v in (total, retained, removed)) or total != retained + removed or total == 0:
         raise ValueError("Invalid submitted-pair accounting")

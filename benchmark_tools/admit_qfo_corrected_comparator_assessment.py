@@ -9,13 +9,24 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from benchmark_tools.prepare_ob_candidate_neighborhood import record, check
 from benchmark_tools.run_simulation_methods import read_frozen
-from benchmark_tools.run_qfo_corrected_comparator_assessment import validate_stage, ENV_SHA, METHODS
+from benchmark_tools.run_qfo_corrected_comparator_assessment import (
+    validate_stage, ENV_SHA, METHODS, WORK_NAMES, OF_SEMANTICS, converter_source,
+)
 from benchmark_tools.run_qfo_recovered_assessment import command_for, environment_records
 from benchmark_tools.admit_qfo_recovered_assessment import validate_trace
 from benchmark_tools.validate_qfo_native_assessment import validate_directory
 from benchmark_tools.verify_ygob_validation import require_completed_job
 
 EXECUTOR = "74afad5376b7ee11fdabfba386851fd8d3c02857"
+OF_EXECUTOR = "5c34f8baad47a9895659b43696e6887aa29dbaaf"
+
+
+def executor_identity(root, method):
+    if method not in METHODS:
+        raise ValueError("Unknown corrected comparator")
+    if method in OF_SEMANTICS:
+        return root / "benchmarks/work/publication_qfo_corrected_of_assessment_v1", OF_EXECUTOR
+    return root / "benchmarks/work/publication_qfo_corrected_assessment_v1", EXECUTOR
 
 
 def validate_completion(report, preflight, scheduler):
@@ -37,6 +48,7 @@ def accounting(job):
 
 
 def admit(root, method, job, conversion_job, pairs_sha, output):
+    executor, executor_commit = executor_identity(root, method)
     if output.exists():
         raise FileExistsError(output)
     text, scheduler = accounting(job)
@@ -49,18 +61,25 @@ def admit(root, method, job, conversion_job, pairs_sha, output):
     stage = read_frozen(pairs_path, pairs_sha)
     conversion_text, conversion_scheduler = accounting(conversion_job)
     validate_stage(stage, method, conversion_scheduler)
+    converter = converter_source(root, method)
+    if converter is not None and (stage["source"] != converter or converter not in stage["checked_records"]):
+        raise ValueError("Wrong frozen OrthoFinder conversion source")
     env_path = root / "benchmark_tools/results/qfo_assessment_environment_20260917.json"
     manifest = read_frozen(env_path, ENV_SHA)
-    executor = root / "benchmarks/work/publication_qfo_corrected_assessment_v1"
-    if subprocess.check_output(["git", "-C", str(executor), "rev-parse", "HEAD"], text=True).strip() != EXECUTOR:
+    if method in OF_SEMANTICS and [r for r in manifest["reference_files"]
+            if Path(r["path"]).name == "mapping.json.gz"] != [stage["mapping"]]:
+        raise ValueError("Conversion and assessment reference mappings differ")
+    if subprocess.check_output(["git", "-C", str(executor), "rev-parse", "HEAD"], text=True).strip() != executor_commit:
         raise ValueError("Assessment executor changed")
     subprocess.run(["git", "-C", str(executor), "diff", "--exit-code", "HEAD", "--", "benchmark_tools"], check=True)
-    work = root / "qfo_benchmark/w" / ("qc_p" if method == "proteinortho" else "qc_s")
+    work = root / "qfo_benchmark/w" / WORK_NAMES[method]
     results = root / "qfo_benchmark/scoring" / ("corrected_" + method)
     records = [record(pairs_path), record(env_path), *environment_records(manifest), stage["source"],
                *stage["checked_records"], stage["pairs"], stage["filtered_pairs"],
                record(executor / "benchmark_tools/run_qfo_recovered_assessment.py"),
                record(executor / "benchmark_tools/prepare_qfo_corrected_comparator_pairs.py")]
+    if converter is not None:
+        records.append(converter)
     expected = {"method": method, "stage": stage, "source": record(executor / "benchmark_tools/run_qfo_corrected_comparator_assessment.py"),
                 "pairs_manifest": record(pairs_path), "environment_manifest": record(env_path),
                 "conversion_scheduler": conversion_scheduler, "conversion_accounting": conversion_text,
@@ -89,6 +108,7 @@ def admit(root, method, job, conversion_job, pairs_sha, output):
     result = {"status": "corrected_comparator_assessment_admitted", "method": method,
               "source": record(__file__), "scheduler": scheduler, "accounting": text,
               "conversion_scheduler": conversion_scheduler, "pairs_manifest": record(pairs_path),
+              "execution_report": record(report_path), "preflight": record(preflight_path),
               "assessment": assessment, "metric_files": metric_records, "native_tasks": tasks,
               "native_trace": record(traces[0]), "checked_records": checked,
               "validator_sources": [record(Path(__file__).with_name(name)) for name in (

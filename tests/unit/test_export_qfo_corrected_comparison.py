@@ -22,9 +22,22 @@ def fixture(method="proteinortho"):
 
 
 def test_pipeline_methods_match_export_adapters():
-    from benchmark_tools.prepare_qfo_corrected_comparator_pairs import METHODS
+    from benchmark_tools.run_qfo_corrected_comparator_assessment import METHODS
     from benchmark_tools.export_qfo_corrected_comparison import METHOD_KEYS
     assert set(METHODS) == set(METHOD_KEYS)
+
+
+@pytest.mark.parametrize("method", ["orthofinder_full", "orthofinder_sequence_only"])
+def test_orthofinder_exports_keep_semantics(method):
+    from benchmark_tools.export_qfo_corrected_comparison import METHOD_KEYS, OF_SEMANTICS
+    report, conversion = fixture(method)
+    conversion.update(status="corrected_orthofinder_pairs_prepared_unscored", semantics=OF_SEMANTICS[method])
+    row = extract(report, conversion)
+    assert row["key"] == METHOD_KEYS[method]
+    assert row["prediction_semantics"] == OF_SEMANTICS[method]
+    conversion["semantics"] = "root HOG cliques"
+    with pytest.raises(ValueError, match="semantics"):
+        extract(report, conversion)
 
 
 def test_sonic_pipeline_identity_is_exported(tmp_path):
