@@ -70,6 +70,28 @@ These are observations from this search, not proof that no copy exists:
 
 ## Required Next Step
 
+### Follow-up Public Archive Search
+
+A further exact-filename and release-7 search did not locate a downloadable
+mapping or the original NHX collection. Additional leads checked:
+
+- Downloaded the [EBI archived-database inventory](https://ftp.ebi.ac.uk/pub/databases/archived_databases_200623.txt)
+  to `benchmarks/work/treefam_source_search_20260918/ebi_archived_databases_200623.txt`.
+  The 41,860-byte file has SHA-256
+  `a42dc78361cb8298c70af30e202d063a355b020789f05b02d17eea5711f7e982`.
+  A case-insensitive search for `treefam` or `tree.fam` found no match. This
+  inventory check does not establish absence from all EBI archives.
+- The [Naturalis TreeFam data-mining tutorial](https://naturalis.github.io/mebioda/doc/week1/w1d5/lecture1.html)
+  leads to [a public download script](https://github.com/rvosa/bh15-fossil-paralogy/blob/master/pipeline.sh).
+  Its source is the same `static/download/treefam_family_data.tar.gz` exposed
+  by the release-9 download page, not an independently identified release-7
+  archive. It was not admitted as a replacement.
+- Recomputed both retained pooled-reference and supplementary-ZIP SHA-256
+  checksums; they still match the values above.
+
+No original source file was recovered in this follow-up, no benchmark score
+was changed, and no contact request was sent.
+
 ### Additional Repository-History Check
 
 A bare clone of `https://github.com/qfo/benchmark-webservice.git` is retained
