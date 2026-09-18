@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Corrected HMM Completion Gate Queued (2026-09-18 UTC)
+
+Previous turn made progress with the content checker and real historical
+partition check (0d6bfd2). Source review found that its synthetic metrics
+fixture incorrectly flattened the producer's `metadata` object. Corrected
+the schema and added actual-writer and flattened-schema regression tests;
+real historical settings/counts now pass. No corrected output was admitted
+before this correction.
+
+Added full native provenance admission and queued it as **21720**, dependent
+on **21706_0**, using pinned executor **7b5214a5d2169338c4cbe80293fae491ee5b951f**.
+The live inference job 21707 was correctly rejected by a direct probe, with
+no report written. All 76 focused tests pass. See
+QFO_CORRECTED_HMM_ADMISSION_SUBMITTED_20260918.md for exact scope and the
+sibling-metrics provenance limitation. Downstream corrected replay remains
+unlaunched until this admission actually succeeds. Publication goal active.
+
 ## High-Sensitivity Output Content Checks (2026-09-18 UTC)
 
 Previous turn progressed by extending the TreeFam archive/history search
