@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Corrected Replay Launch Gate Prepared (2026-09-18 UTC)
+
+Previous turn progressed by submitting final factorial scoring/admission,
+validating sampled event-pair conversion and pushing b182175. Rechecked
+the objective and live scheduler before preparing the next corrected step.
+
+Added `qfo_corrected_replay_batch_20260918.sh`: 32 CPUs, 192 GiB, 24 hours,
+bizon, no automatic requeue. It requires an explicit executor commit and
+reviewed plan SHA-256, checks tracked executor sources and the plan hash,
+then invokes the existing corrected replay driver. The driver independently
+checks the admitted plan, frozen scientific settings and runtime, refuses
+existing output and requires all four checked clustering stages. The batch
+does not generate or silently substitute a plan hash.
+
+Thirty-eight focused tests pass, covering batch syntax/resources, argument
+and environment handoff with a stub executor, fail-closed provenance cases,
+the actual driver's mocked completion/failure paths and plan preparation.
+This is launch-gate validation, not evidence of a completed biological run.
+No corrected replay job has been submitted: native HMM 21706_0, admission
+21720 and plan preparation 21722 must finish first. Review the produced
+plan and bind its actual SHA before submission; retain executor 188fde2
+unless an explicitly documented executor change is required. Independent
+corrected replay admission and candidate preparation remain to be built.
+
+Latest scheduler check: HMM 21706_0 running 2:45:01, SonicParanoid 21710
+running 2:21:49, final original factorial scoring 21723 running 4:05,
+and score admission 21724 pending. No score, endpoint, frozen method or
+publication-completion claim changed.
+
 ## Final Original Factorial Scoring Submitted (2026-09-18 UTC)
 
 Previous turn was no progress toward recovering the original TreeFam inputs:
