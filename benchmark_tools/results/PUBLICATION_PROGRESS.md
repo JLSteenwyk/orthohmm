@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Audited BPO Checkpoint Workflow (2026-09-18 UTC)
+
+Previous turn progressed by pushing cb58c74: isolated native sources and
+three-arm inference fixture validation. Revalidated scheduler handles:
+HMM21706_0 RUNNING7:40:55, DGX21656_24 RUNNING38:32, and BLAST21713 still
+pending resources. Existing dependencies were not modified or restarted.
+
+Implemented a fresh-directory BPO preparation component connecting streaming
+conversion, complete HSP-to-BPO verification, guarded native index creation
+and every-offset/query-range verification. Retains stage logs and failures,
+rejects implicit resume, rechecks source/runtime evidence, and leaves source
+search and accuracy admission false.61focused tests passed, including the
+installed native runtime. The retained fixture produced6BPO records from
+8HSP rows, with3queries and7offset entries including EOF. See
+ORTHOMCL_BPO_CHECKPOINT_20260918.md and its hashed machine-readable report.
+The full unit suite also passed:3,726tests in71.05s with the legacy-runtime
+tests enabled. Rechecked all18retained checkpoint file-record occurrences.
+
+Production wrapper binding to admitted BLAST, Python runtime and scheduler
+resources remains required before full corrected BPO preparation. No new
+biological score or timing claim follows from the small fixture.
+
 ## OrthoMCL Native Inference Fixture (2026-09-18 UTC)
 
 The previous user-facing turn repeated the TreeFam search without recovering
