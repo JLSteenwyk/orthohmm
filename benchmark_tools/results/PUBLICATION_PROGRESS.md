@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Native Boundary Control Implemented (2026-09-18 UTC)
+
+Previous turn made progress through the completed/audited DGX array21831
+and pushedea33417. Reread the full objective and existing overhead protocols.
+Those synthetic workload/older collector results do not establish overhead
+of the newly integrated frontier collector on native inference workloads.
+
+Added a separate boundary-only control retaining the identical worker,
+handshake, completion polling, resource checks, failure/timeout cleanup,
+pre/post frontier reads and final memory observation. Only periodic reads
+and point serialization are omitted. Whole-command screening is replayable;
+unavailable interval screening is explicitly false/null, not a passing list.
+All frozen collectors remain unchanged. No native control run was launched.
+
+52 focused tests pass, including15 new tests covering mechanical lifecycle
+equivalence, multiple completion polls without periodic reads, all three
+native exit outcomes, invalid boundaries, cleanup, and arithmetic replay
+on retained native boundaries. The latter is not an observer-off result.
+SeeDGX_BOUNDARY_CONTROL_IMPLEMENTATION_20260918.md for scope and next gates.
+
+Next: freeze a complete paired native overhead panel with representative
+input sizes and prospective budgets before observing its outcomes. Current
+900-second timeout bounds must be respected or revised prospectively.
+Latest scheduler check:21706_0running18:24:57;21829running30:32;21830pending.
+
 ## Native Frontier Integration Executed (2026-09-18 UTC)
 
 Previous turn made progress viafd47088. Read the full objective, verified
