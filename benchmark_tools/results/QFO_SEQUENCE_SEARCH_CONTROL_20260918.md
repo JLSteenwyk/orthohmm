@@ -60,4 +60,19 @@ all78 target directories are empty. Large derived files remain untracked.
   scale factors to benchmark outcomes. Independently validate and score
   both complete diagnostic variants, retaining negative findings.
 
-No search has been launched and no new accuracy or timing result exists.
+## Runner Submission
+
+Runner b66d3f374224b89f782c98a4b29a9c33b6cefdc7 is frozen at
+benchmarks/work/publication_qfo_sequence_search_v1.37 focused tests pass;
+actual full-input preflight succeeds without creating execution output.
+Job21789 was submitted2026-09-18T10:57:20 with32CPUs/192GiB/7days onbizon,
+no requeue. Scheduler confirms the requested allocation and pending state.
+The seven-day limit is an execution allowance, not a runtime prediction.
+
+All78 targets run sequentially, measuring makedb/search separately and
+retaining failed phase evidence. Full postflight rechecks input/source/tool
+identities and every hit/database/log/timing record before marking the
+panel complete_pending_numeric_validation. That status is not accuracy
+admission. The preparation manifest remains unchanged; its false execution
+authorization is a preparation-state field, not a completed-run claim.
+Numeric conversion, graph replay, hit diagnostics and scoring remain open.

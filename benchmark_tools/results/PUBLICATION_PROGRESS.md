@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Corrected QfO Sequence Search Submitted (2026-09-18 UTC)
+
+Previous turn progressed through2e7b6ea: corrected78-target inputs prepared.
+Revalidated HMM21706_0 RUNNING10:08:26 and final DGX21656_26 RUNNING43:21.
+No existing jobs were stopped or restarted; the DGX remains undisturbed.
+
+Added a corrected-only runner requiring exact prepared manifest, verified
+input order/ownership inventory, identical78 DIAMOND commands and a pristine
+destination. It requires scheduled32-CPU workstation execution, measures
+database/search phases separately, retains failure evidence and rechecks
+all output/source/input/tool hashes before complete_pending_numeric_validation.
+No inference or scoring is authorized by that status.37 focused tests pass
+in0.35s, including altered plans, native phase failure, postflight failure,
+reuse rejection and allocation checks. Real full-input check-only succeeds.
+
+Frozen executor b66d3f374224b89f782c98a4b29a9c33b6cefdc7 at
+benchmarks/work/publication_qfo_sequence_search_v1 submitted as21789,
+2026-09-18T10:57:20. scontrol confirms pending32CPU/192GiB/7day/bizon,
+no-requeue allocation. No historical search output is reused. Shared-host
+GNU-time measurements are descriptive, not dedicated matched timings.
+See QFO_SEQUENCE_SEARCH_CONTROL_20260918.md for preserved scientific scope.
+
+Next: full-panel native search validation and corrected numeric conversion
+using chunked SQLite/memmap processing, followed by frozen graph controls
+and independent scoring. Do not infer from incomplete target output or
+silently cap the all-hit variant. Matched sensitivity/cost remains unproven.
+The full publication objective remains active and incomplete.
+
 ## Corrected QfO Sequence-Search Preparation (2026-09-18 UTC)
 
 Previous turn progressed through5a75d7a: full scheduler snapshot and timing
