@@ -1,5 +1,10 @@
 # Hash-Locked CPU Installation
 
+**Historical evidence only:** this lock pins installer versions with known
+security advisories. Do not use it for new installations. The separate
+[patched baseline-wheel installation](PUBLICATION_INSTALLER_SECURITY_20260919.md)
+retains its own hashes and verification; the original lock below is unchanged.
+
 Extended the [CPU-wheel smoke evidence](PUBLICATION_CPU_WHEEL_20260919.md)
 with a locally retained11-wheel installation set, totaling92,916,492bytes.
 The wheelhouse is at `benchmarks/work/publication_cpu_wheel_f9b9ce0/wheelhouse`;

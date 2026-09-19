@@ -1,0 +1,14 @@
+# Baseline CPU development wheel, CPython 3.10 / Linux x86_64.
+# Patched installer tools; not a replacement for frozen benchmark runtimes.
+# Use --no-index --find-links WHEELHOUSE --require-hashes --only-binary=:all:.
+DendroPy==5.1.0 --hash=sha256:4861d27875cb4bfa0e5a18f64f6b14191d29661a2c92e9a70d6510dd27565dc2
+igraph==1.0.0 --hash=sha256:2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522
+leidenalg==0.12.0 --hash=sha256:fcbd89655243cc739d28ba23fe894587d8d7235124a9248ba375819585e70090
+llvmlite==0.49.0 --hash=sha256:854941c2267fd4fc5b2ce02b8af8ecdffa79fb7784591d3a89370322039ea09f
+numba==0.67.0 --hash=sha256:d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861
+numpy==2.2.6 --hash=sha256:fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915
+orthohmm==0.5.0 --hash=sha256:3381a678fea1e85709305555d4211821bf1f75fa1d7268708804295a682b0c19
+pip==26.2.1 --hash=sha256:71138adf1f4ca900cdb7d289c21b7494329f2332b6d85f0e1c42108c0384ed3e
+python-igraph==1.0.0 --hash=sha256:b0bb8d91cce2a1e0550fe45f9ec925bcd04152dfb5be3fa822b9f5f36eb3f380
+setuptools==83.0.0 --hash=sha256:29b23c360f22f414dc7336bb39178cc7bcbf6021ed2733cde173f09dba19abb3
+texttable==1.7.0 --hash=sha256:72227d592c82b3d7f672731ae73e4d1f88cd8e2ef5b075a7a7f01a23a3743917

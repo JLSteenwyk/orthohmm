@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Installer Advisory Follow-Up (2026-09-19)
+
+Previous turn was a verified wait. Reread the objective, revalidated live
+jobs and investigated the GitHub push warning. Authenticated read-only
+snapshot identifies11alerts in the historical installer lock, all pip or
+setuptools; no alerts were dismissed. Added a separate patched baseline
+installation lock and fresh venv, preserving historical bytes/environments.
+
+All11wheels install offline with hashes enforced; package checks and both
+isolated smoke modes pass (4groups/38genes each). Rehashed every local wheel
+against the installation report; all11retained advisory ranges exclude
+the installed patched versions. [Evidence and limits](PUBLICATION_INSTALLER_SECURITY_20260919.md).
+The historical lock remains affected and is explicitly not recommended for
+new installs. No universal security, alert-closure or scientific-runtime
+upgrade claim is made. DGX and other running executors remain unchanged.
+
 ## Baseline Build Regression Refresh (2026-09-19)
 
 Previous turn made progress throughef3ba74 with baseline CPU compilation
