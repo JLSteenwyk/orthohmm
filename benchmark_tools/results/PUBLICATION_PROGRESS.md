@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Corrected QfO Candidate Preparation Implemented (2026-09-19)
+
+Previous turn froze the QfO parameter extension (`fd1a215`). Added scheduled
+candidate preparation using the existing corrected-candidate admission,
+numeric checkpoint audit, scoped engine override and content validator.
+It binds the plan/protocol hashes, checks the unchanged control's candidate
+and merge bytes before variants, records applied versus nominal parameters,
+and preserves partial outputs on failure. Frozen runtime, input and helper
+records are rechecked after preparation. No CPM or phylogenetic result is
+claimed by this candidate-only step.
+
+69 focused tests pass across the new driver, override/restoration, candidate
+content, corrected admission and numeric checkpoint auditing; batch shell
+syntax passes. Synthetic tests include real content validation, both control
+mismatch gates, variant failure/restoration and pinned plan identities.
+Next is a committed frozen-executor deployment and scheduled 2-CPU/64-GiB
+preparation, followed by independent admission. Running primary comparators
+and the quiet DGX panel are unchanged.
+
 ## Corrected QfO Parameter Extension Frozen (2026-09-19)
 
 Previous turn was a verified wait with live gene-tree/capture evidence
