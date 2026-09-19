@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Lineage Overhead Launcher Validated (2026-09-19)
+
+Previous turn froze the complete prospective overhead protocol and plan.
+Added its dedicated launcher and sequential DGX batch script, preserving
+the existing runtime/resource checks while selecting the two lineage arms.
+All 99 targeted tests and batch syntax checks pass; see
+`LINEAGE_OVERHEAD_LAUNCHER_20260919.md` for bindings and limits.
+
+No new timing tasks have been submitted. The next step is exporting committed
+sources, verifying their remote manifest, checking runtime/host state and
+starting controller capture before releasing the complete held panel. No
+scientific admission or unresolved CPU flag has changed. The DGX queue is
+currently empty; BLAST 21713 is RUNNING at 6:01:12. The full goal remains open.
+
 ## Lineage Overhead Protocol Frozen (2026-09-19)
 
 Previous turn made progress by completing and auditing the native diagnostic
