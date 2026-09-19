@@ -30,7 +30,7 @@ class LineageSnapshotError(ValueError):
                              scientific_timings_admitted=False)
 
 
-def snapshot(root, target, boot_path=Path("/proc/sys/kernel/random/boot_id")):
+def snapshot(root, target, boot_path=Path("/proc/sys/kernel/random/boot_id"), *, after_read=None):
     point = dict(status="aggregate_lineage_snapshot", target=target, rows=[],
                  identities_before=None, identities_after=None)
     try:
@@ -39,6 +39,8 @@ def snapshot(root, target, boot_path=Path("/proc/sys/kernel/random/boot_id")):
         point["identities_before"] = identities(root, names)
         for name in names:
             point["rows"].append(read_counter(root, name))
+            if after_read is not None:
+                after_read(name)
         point["identities_after"] = identities(root, names)
         point["boot_after"] = boot_path.read_text().strip()
         validate(point)

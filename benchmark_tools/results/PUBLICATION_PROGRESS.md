@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Read-Crossing Control Prepared (2026-09-19)
+
+Following the complete flag description, checked upstream Linux v6.11
+root-cgroup accounting and the current DGX layout. Root usage is sourced
+from system-wide categories in upstream code; current root membership
+includes kernel threads. This is not exact vendor-source verification or
+attribution of historical flags. The source link and qualifications are
+recorded in `LINEAGE_READ_CROSSING_PROTOCOL_20260919.md`.
+
+Frozen three finite owned-service controls that deliberately complete
+between the root and next ancestor counter read. Added an opt-in reader
+callback, a bounded control runner and an exclusive/two-CPU-step launcher.
+Normal readers do not inject events; no scientific recipe was redeployed.
+All 88 focused reader/lifecycle/crossing/replay tests and batch syntax pass.
+Next: deploy only committed control sources, run all three once, collect and
+independently replay their complete evidence. No native result is claimed
+yet. Root/user-slice specificity and scientific timing inclusion remain open.
+
 ## Remaining Lineage Flags Described (2026-09-19)
 
 Previous turn completed the full overhead audit and pushed `38994ae`.

@@ -96,6 +96,25 @@ def hierarchy(tmp_path):
     return root, boot
 
 
+def test_control_callback_runs_after_each_retained_counter(tmp_path):
+    root, boot = hierarchy(tmp_path)
+    visited = []
+    result = probe.snapshot(root, TARGET, boot, after_read=visited.append)
+    assert visited == [r["scope"] for r in result["rows"]] == probe.scopes(TARGET)
+
+
+def test_failed_control_callback_retains_partial_snapshot(tmp_path):
+    root, boot = hierarchy(tmp_path)
+
+    def fail(scope):
+        raise ValueError("injected failure")
+
+    with pytest.raises(probe.LineageSnapshotError) as error:
+        probe.snapshot(root, TARGET, boot, after_read=fail)
+    assert len(error.value.evidence["rows"]) == 1
+    assert error.value.evidence["rows"][0]["scope"] == "/"
+
+
 def test_sibling_churn_during_read_does_not_invalidate_lineage(tmp_path, monkeypatch):
     root, boot = hierarchy(tmp_path)
     original = probe.read_counter
