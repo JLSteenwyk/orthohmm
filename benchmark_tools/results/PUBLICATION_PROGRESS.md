@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Prospective Dual-Bracket Reader and Protocol (2026-09-19)
+
+Previous turn made progress by isolating the retained bracket effect.
+Full OrthoFinder 21706_1 is confirmed RUNNING (8:37:13); OrthoMCL 21713
+and strata 21896 remain resource/dependency pending.
+
+Added `probe_dual_cpu_brackets.py`, a separate reader/comparator using the
+unchanged frontier collector, original CPU thresholds and native-pressure
+validator. Both bracket results share native counters and timestamps.
+Pressure or frontier identity changes still fail; no historical gate is
+bypassed. Nine new tests and 52 existing tests pass.
+
+Frozen [nine-trial control protocol](DUAL_BRACKET_CONTROL_PROTOCOL_20260919.md)
+SHA-256 `0ded70961fb6b4fd556a899498009b1ca3b511434824089d1c81862cc0729617`.
+Reader SHA-256 `b74c8843b573bd8bfa0c120e5e06f6f4503be6fc8e79feebe667b8b407fc02ec`.
+No new DGX outcomes were collected. Next implement/test the runner, freeze
+its transitive recipe, verify an idle allocation and execute all nine
+controls. This is not a passing control result, full-node calibration,
+overhead admission or authorization of the 27 scientific scaling runs.
+
 ## Retained Host-Bracket Hypothesis Tested (2026-09-19)
 
 Previous turn made progress with the corrected factorial figure. Full
