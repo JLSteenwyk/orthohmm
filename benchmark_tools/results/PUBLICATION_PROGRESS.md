@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Parameter Raw Family-Count Auditor Prepared (2026-09-19)
+
+Previous turn was progress: paired uncertainty numerical engine implemented
+and tested. Confirmed live benchmark handles before adding the raw-count
+audit. New auditor binds score admissions to inventoried native SwissTrees
+raw files, checks exact reference pair identities/truth labels/members,
+reproduces native family and macro metrics, and validates the numerical
+engine's count schema. Control admission is pinned to corrected full pipeline
+21788. The four candidate-arm admissions require the frozen parameter score
+validator. CPM admissions remain explicitly unsupported until that separate
+workflow exists; missing arms remain present without imputed counts.
+
+Added a control-only integration inventory binding the existing corrected
+baseline, with all six variants marked not admitted and explicit reasons.
+It is not a completed parameter panel. Focused raw-count/factorial/numerical
+tests: 80 passed in 1.18 seconds. Tests reject reference truth changes even
+when aggregate count totals are preserved. Real control-only integration
+execution is the next check; no variant counts or intervals are claimed.
+
 ## Parameter Uncertainty Numerical Engine Tested (2026-09-19)
 
 Previous turn was progress: independent score admission tested and queued,

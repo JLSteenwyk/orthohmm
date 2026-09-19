@@ -1,0 +1,21 @@
+{
+  "status": "qfo_parameter_score_admission_inventory",
+  "scope": "Control-only integration audit; no parameter variant result is supplied or inferred",
+  "arms": [
+    {
+      "arm": "control",
+      "status": "admitted",
+      "admission": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_factorial_score_admission_21788.json",
+        "bytes": 248974,
+        "sha256": "49b7d837b2ba2928b0676c9974e2ec16db5211f1086c366c7bc11805a2ee751f"
+      }
+    },
+    {"arm": "cpm_low", "status": "not_admitted", "reason": "CPM execution and admission workflow not yet implemented"},
+    {"arm": "cpm_high", "status": "not_admitted", "reason": "CPM execution and admission workflow not yet implemented"},
+    {"arm": "norm_low", "status": "not_admitted", "reason": "Parameter inference through score admission queued; no completed score supplied"},
+    {"arm": "norm_high", "status": "not_admitted", "reason": "Parameter inference through score admission queued; no completed score supplied"},
+    {"arm": "margin_low", "status": "not_admitted", "reason": "Parameter inference through score admission queued; no completed score supplied"},
+    {"arm": "margin_high", "status": "not_admitted", "reason": "Parameter inference through score admission queued; no completed score supplied"}
+  ]
+}
