@@ -38,12 +38,16 @@ python -m benchmark_tools.audit_frontier_overhead \
   --panel dual_21920 \
   --archive benchmarks/work/dual_overhead_archive_21920 \
   --results benchmark_tools/results \
-  --accounting benchmarks/work/dual_overhead_accounting_21920.txt \
+  --accounting benchmarks/work/dual_overhead_array_accounting_21920.txt \
   --output benchmarks/work/dual_overhead_audit_21920.json
 ```
 
 Accounting rows use the existing seven-column format:
-`JobIDRaw|State|ExitCode|Elapsed|AllocCPUS|ReqMem|NodeList`.
+`JobID|State|ExitCode|Elapsed|AllocCPUS|ReqMem|NodeList`.
+Use `JobID` so rows carry array task identifiers such as `21920_3`;
+`JobIDRaw` alone provides numeric allocation identifiers and cannot match
+the task-index gate. This corrects the earlier preparation-note typo;
+the auditor and original accounting evidence are unchanged.
 Retain the controller capture and raw polls separately and independently
 replay the first-terminal observations before interpreting the final audit.
 

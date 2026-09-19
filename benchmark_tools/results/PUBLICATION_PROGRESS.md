@@ -1,5 +1,33 @@
 # Publication Progress
 
+## DGX Dual-Collector Panel Audited (2026-09-19)
+
+Previous continuation made progress by checking additional public TreeFam
+sources and recording the unresolved source-data limitation; it did not
+recover original family trees or enable family-level TreeFam uncertainty.
+The active DGX post-run audit was polled by its existing handle without a
+restart and has now completed successfully.
+
+Panel 21920 has 16 validated tasks and two retained collector failures.
+Seven complete pairs have equal canonical outputs and meet the individual
+numerical overhead budget. High-sensitivity and full OrthoFinder median
+signed differences are 0.606718% and 1.041131%; satellite has only one of
+three pairs, so no complete-panel budget pass is established. All original
+environment flags remain; three periodic tasks also have 23 total narrow
+`excess_unassigned_cpu` flags. No scientific timing admission results.
+
+`DUAL_OVERHEAD_RESULT_21920.md` links the compressed full audit, all-terminal
+accounting, controller replay and failed-measurement evidence. Raw archive
+and all 18 native outputs remain local and remote. No selective retry,
+service shutdown or overhead subtraction occurred. The next timing work
+must prospectively address transient cgroups and residual resource coverage,
+then freeze a complete new panel; scaling comparability remains unmet.
+
+Current scheduler inspection confirms corrected OrthoMCL BLAST 21713 is
+RUNNING (about 3 hours), FastOMA 21740 resource-pending, and the existing
+norm/margin and CPM chains pending their resources/dependencies. The new
+CPM assessment runner is being validated; no CPM accuracy is admitted.
+
 ## CPM Inferred-Phylogeny Runner Implemented (2026-09-19)
 
 Array 21972 is queued from pushed frozen commit f1a2bb8; both tasks confirmed

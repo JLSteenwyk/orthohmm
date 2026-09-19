@@ -1,0 +1,1314 @@
+{
+  "frontier": {
+    "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+    "error": "Cgroup frontier changed during sampling",
+    "error_type": "ValueError",
+    "inventory_after": {
+      "ancestor_direct_process_counts": {
+        "/": 387,
+        "/system.slice": 0,
+        "/system.slice/spark-7ff0_slurmstepd.scope": 0
+      },
+      "identities": {
+        "/dev-hugepages.mount": [
+          32,
+          395
+        ],
+        "/dev-mqueue.mount": [
+          32,
+          456
+        ],
+        "/init.scope": [
+          32,
+          29
+        ],
+        "/proc-sys-fs-binfmt_misc.mount": [
+          32,
+          4248
+        ],
+        "/sys-fs-fuse-connections.mount": [
+          32,
+          1489
+        ],
+        "/sys-kernel-config.mount": [
+          32,
+          1367
+        ],
+        "/sys-kernel-debug.mount": [
+          32,
+          517
+        ],
+        "/sys-kernel-tracing.mount": [
+          32,
+          578
+        ],
+        "/system.slice/ModemManager.service": [
+          32,
+          6932
+        ],
+        "/system.slice/NetworkManager.service": [
+          32,
+          6627
+        ],
+        "/system.slice/accounts-daemon.service": [
+          32,
+          4919
+        ],
+        "/system.slice/avahi-daemon.service": [
+          32,
+          5041
+        ],
+        "/system.slice/bluetooth.service": [
+          32,
+          5102
+        ],
+        "/system.slice/boot-efi.mount": [
+          32,
+          3638
+        ],
+        "/system.slice/colord.service": [
+          32,
+          9431
+        ],
+        "/system.slice/containerd.service": [
+          32,
+          7420
+        ],
+        "/system.slice/cron.service": [
+          32,
+          7969
+        ],
+        "/system.slice/cups-browsed.service": [
+          32,
+          1177356
+        ],
+        "/system.slice/cups.service": [
+          32,
+          1177260
+        ],
+        "/system.slice/dbus.service": [
+          32,
+          5163
+        ],
+        "/system.slice/dgx-dashboard-admin.service": [
+          32,
+          5224
+        ],
+        "/system.slice/dgx-dashboard.service": [
+          32,
+          5285
+        ],
+        "/system.slice/docker.service": [
+          32,
+          8335
+        ],
+        "/system.slice/docker.socket": [
+          32,
+          4675
+        ],
+        "/system.slice/fwupd.service": [
+          32,
+          191877
+        ],
+        "/system.slice/gnome-remote-desktop.service": [
+          32,
+          163680
+        ],
+        "/system.slice/lxd-installer.socket": [
+          32,
+          4736
+        ],
+        "/system.slice/mariadb.service": [
+          32,
+          164491
+        ],
+        "/system.slice/multipathd.service": [
+          32,
+          1672
+        ],
+        "/system.slice/munge.service": [
+          32,
+          174905
+        ],
+        "/system.slice/nvidia-persistenced.service": [
+          32,
+          8396
+        ],
+        "/system.slice/ollama.service": [
+          32,
+          7542
+        ],
+        "/system.slice/polkit.service": [
+          32,
+          5773
+        ],
+        "/system.slice/rasdaemon.service": [
+          32,
+          5895
+        ],
+        "/system.slice/rdma-ndd.service": [
+          32,
+          3387
+        ],
+        "/system.slice/rsyslog.service": [
+          32,
+          6017
+        ],
+        "/system.slice/rtkit-daemon.service": [
+          32,
+          9309
+        ],
+        "/system.slice/run-rpc_pipefs.mount": [
+          32,
+          4309
+        ],
+        "/system.slice/slurmd.service": [
+          32,
+          175095
+        ],
+        "/system.slice/smartmontools.service": [
+          32,
+          6139
+        ],
+        "/system.slice/snap-bare-5.mount": [
+          32,
+          1995
+        ],
+        "/system.slice/snap-core22-2438.mount": [
+          32,
+          2117
+        ],
+        "/system.slice/snap-core22-2956.mount": [
+          32,
+          728616
+        ],
+        "/system.slice/snap-core24-1644.mount": [
+          32,
+          2239
+        ],
+        "/system.slice/snap-core24-2125.mount": [
+          32,
+          756483
+        ],
+        "/system.slice/snap-firefox-8815.mount": [
+          32,
+          589780
+        ],
+        "/system.slice/snap-firefox-8862.mount": [
+          32,
+          648279
+        ],
+        "/system.slice/snap-gnome\\x2d42\\x2d2204-245.mount": [
+          32,
+          2422
+        ],
+        "/system.slice/snap-gnome\\x2d42\\x2d2204-264.mount": [
+          32,
+          2483
+        ],
+        "/system.slice/snap-gnome\\x2d46\\x2d2404-154.mount": [
+          32,
+          2544
+        ],
+        "/system.slice/snap-gtk\\x2dcommon\\x2dthemes-1535.mount": [
+          32,
+          2605
+        ],
+        "/system.slice/snap-mesa\\x2d2404-1166.mount": [
+          32,
+          2666
+        ],
+        "/system.slice/snap-mesa\\x2d2404-1836.mount": [
+          32,
+          2727
+        ],
+        "/system.slice/snap-snapd-27709.mount": [
+          32,
+          2849
+        ],
+        "/system.slice/snap-snapd-27740.mount": [
+          32,
+          618145
+        ],
+        "/system.slice/snap-thunderbird-1256.mount": [
+          32,
+          723187
+        ],
+        "/system.slice/snap-thunderbird-1261.mount": [
+          32,
+          1063622
+        ],
+        "/system.slice/snapd.service": [
+          32,
+          618206
+        ],
+        "/system.slice/snapd.socket": [
+          32,
+          4797
+        ],
+        "/system.slice/spark-7ff0_slurmstepd.scope/job_21925": [
+          32,
+          1218297
+        ],
+        "/system.slice/spark-7ff0_slurmstepd.scope/system": [
+          32,
+          9291
+        ],
+        "/system.slice/ssh.service": [
+          32,
+          163741
+        ],
+        "/system.slice/ssh.socket": [
+          32,
+          4858
+        ],
+        "/system.slice/swap.img.swap": [
+          32,
+          1611
+        ],
+        "/system.slice/switcheroo-control.service": [
+          32,
+          6322
+        ],
+        "/system.slice/sysstat-collect.service": [
+          32,
+          1218869
+        ],
+        "/system.slice/system-getty.slice": [
+          32,
+          164656
+        ],
+        "/system.slice/system-modprobe.slice": [
+          32,
+          151
+        ],
+        "/system.slice/system-rdma\\x2dload\\x2dmodules.slice": [
+          32,
+          3197
+        ],
+        "/system.slice/system-serial\\x2dgetty.slice": [
+          32,
+          212
+        ],
+        "/system.slice/system-systemd\\x2dfsck.slice": [
+          32,
+          273
+        ],
+        "/system.slice/systemd-journald.service": [
+          32,
+          164107
+        ],
+        "/system.slice/systemd-logind.service": [
+          32,
+          6444
+        ],
+        "/system.slice/systemd-networkd.service": [
+          32,
+          164308
+        ],
+        "/system.slice/systemd-resolved.service": [
+          32,
+          163924
+        ],
+        "/system.slice/systemd-timesyncd.service": [
+          32,
+          164046
+        ],
+        "/system.slice/systemd-udevd.service": [
+          32,
+          164168
+        ],
+        "/system.slice/tailscaled.service": [
+          32,
+          7847
+        ],
+        "/system.slice/udisks2.service": [
+          32,
+          163863
+        ],
+        "/system.slice/upower.service": [
+          32,
+          163985
+        ],
+        "/system.slice/wpa_supplicant.service": [
+          32,
+          6688
+        ],
+        "/user.slice": [
+          32,
+          334
+        ]
+      }
+    },
+    "inventory_before": {
+      "ancestor_direct_process_counts": {
+        "/": 387,
+        "/system.slice": 0,
+        "/system.slice/spark-7ff0_slurmstepd.scope": 0
+      },
+      "identities": {
+        "/dev-hugepages.mount": [
+          32,
+          395
+        ],
+        "/dev-mqueue.mount": [
+          32,
+          456
+        ],
+        "/init.scope": [
+          32,
+          29
+        ],
+        "/proc-sys-fs-binfmt_misc.mount": [
+          32,
+          4248
+        ],
+        "/sys-fs-fuse-connections.mount": [
+          32,
+          1489
+        ],
+        "/sys-kernel-config.mount": [
+          32,
+          1367
+        ],
+        "/sys-kernel-debug.mount": [
+          32,
+          517
+        ],
+        "/sys-kernel-tracing.mount": [
+          32,
+          578
+        ],
+        "/system.slice/ModemManager.service": [
+          32,
+          6932
+        ],
+        "/system.slice/NetworkManager.service": [
+          32,
+          6627
+        ],
+        "/system.slice/accounts-daemon.service": [
+          32,
+          4919
+        ],
+        "/system.slice/avahi-daemon.service": [
+          32,
+          5041
+        ],
+        "/system.slice/bluetooth.service": [
+          32,
+          5102
+        ],
+        "/system.slice/boot-efi.mount": [
+          32,
+          3638
+        ],
+        "/system.slice/colord.service": [
+          32,
+          9431
+        ],
+        "/system.slice/containerd.service": [
+          32,
+          7420
+        ],
+        "/system.slice/cron.service": [
+          32,
+          7969
+        ],
+        "/system.slice/cups-browsed.service": [
+          32,
+          1177356
+        ],
+        "/system.slice/cups.service": [
+          32,
+          1177260
+        ],
+        "/system.slice/dbus.service": [
+          32,
+          5163
+        ],
+        "/system.slice/dgx-dashboard-admin.service": [
+          32,
+          5224
+        ],
+        "/system.slice/dgx-dashboard.service": [
+          32,
+          5285
+        ],
+        "/system.slice/docker.service": [
+          32,
+          8335
+        ],
+        "/system.slice/docker.socket": [
+          32,
+          4675
+        ],
+        "/system.slice/fwupd.service": [
+          32,
+          191877
+        ],
+        "/system.slice/gnome-remote-desktop.service": [
+          32,
+          163680
+        ],
+        "/system.slice/lxd-installer.socket": [
+          32,
+          4736
+        ],
+        "/system.slice/mariadb.service": [
+          32,
+          164491
+        ],
+        "/system.slice/multipathd.service": [
+          32,
+          1672
+        ],
+        "/system.slice/munge.service": [
+          32,
+          174905
+        ],
+        "/system.slice/nvidia-persistenced.service": [
+          32,
+          8396
+        ],
+        "/system.slice/ollama.service": [
+          32,
+          7542
+        ],
+        "/system.slice/polkit.service": [
+          32,
+          5773
+        ],
+        "/system.slice/rasdaemon.service": [
+          32,
+          5895
+        ],
+        "/system.slice/rdma-ndd.service": [
+          32,
+          3387
+        ],
+        "/system.slice/rsyslog.service": [
+          32,
+          6017
+        ],
+        "/system.slice/rtkit-daemon.service": [
+          32,
+          9309
+        ],
+        "/system.slice/run-rpc_pipefs.mount": [
+          32,
+          4309
+        ],
+        "/system.slice/slurmd.service": [
+          32,
+          175095
+        ],
+        "/system.slice/smartmontools.service": [
+          32,
+          6139
+        ],
+        "/system.slice/snap-bare-5.mount": [
+          32,
+          1995
+        ],
+        "/system.slice/snap-core22-2438.mount": [
+          32,
+          2117
+        ],
+        "/system.slice/snap-core22-2956.mount": [
+          32,
+          728616
+        ],
+        "/system.slice/snap-core24-1644.mount": [
+          32,
+          2239
+        ],
+        "/system.slice/snap-core24-2125.mount": [
+          32,
+          756483
+        ],
+        "/system.slice/snap-firefox-8815.mount": [
+          32,
+          589780
+        ],
+        "/system.slice/snap-firefox-8862.mount": [
+          32,
+          648279
+        ],
+        "/system.slice/snap-gnome\\x2d42\\x2d2204-245.mount": [
+          32,
+          2422
+        ],
+        "/system.slice/snap-gnome\\x2d42\\x2d2204-264.mount": [
+          32,
+          2483
+        ],
+        "/system.slice/snap-gnome\\x2d46\\x2d2404-154.mount": [
+          32,
+          2544
+        ],
+        "/system.slice/snap-gtk\\x2dcommon\\x2dthemes-1535.mount": [
+          32,
+          2605
+        ],
+        "/system.slice/snap-mesa\\x2d2404-1166.mount": [
+          32,
+          2666
+        ],
+        "/system.slice/snap-mesa\\x2d2404-1836.mount": [
+          32,
+          2727
+        ],
+        "/system.slice/snap-snapd-27709.mount": [
+          32,
+          2849
+        ],
+        "/system.slice/snap-snapd-27740.mount": [
+          32,
+          618145
+        ],
+        "/system.slice/snap-thunderbird-1256.mount": [
+          32,
+          723187
+        ],
+        "/system.slice/snap-thunderbird-1261.mount": [
+          32,
+          1063622
+        ],
+        "/system.slice/snapd.service": [
+          32,
+          618206
+        ],
+        "/system.slice/snapd.socket": [
+          32,
+          4797
+        ],
+        "/system.slice/spark-7ff0_slurmstepd.scope/job_21925": [
+          32,
+          1218297
+        ],
+        "/system.slice/spark-7ff0_slurmstepd.scope/system": [
+          32,
+          9291
+        ],
+        "/system.slice/ssh.service": [
+          32,
+          163741
+        ],
+        "/system.slice/ssh.socket": [
+          32,
+          4858
+        ],
+        "/system.slice/swap.img.swap": [
+          32,
+          1611
+        ],
+        "/system.slice/switcheroo-control.service": [
+          32,
+          6322
+        ],
+        "/system.slice/system-getty.slice": [
+          32,
+          164656
+        ],
+        "/system.slice/system-modprobe.slice": [
+          32,
+          151
+        ],
+        "/system.slice/system-rdma\\x2dload\\x2dmodules.slice": [
+          32,
+          3197
+        ],
+        "/system.slice/system-serial\\x2dgetty.slice": [
+          32,
+          212
+        ],
+        "/system.slice/system-systemd\\x2dfsck.slice": [
+          32,
+          273
+        ],
+        "/system.slice/systemd-journald.service": [
+          32,
+          164107
+        ],
+        "/system.slice/systemd-logind.service": [
+          32,
+          6444
+        ],
+        "/system.slice/systemd-networkd.service": [
+          32,
+          164308
+        ],
+        "/system.slice/systemd-resolved.service": [
+          32,
+          163924
+        ],
+        "/system.slice/systemd-timesyncd.service": [
+          32,
+          164046
+        ],
+        "/system.slice/systemd-udevd.service": [
+          32,
+          164168
+        ],
+        "/system.slice/tailscaled.service": [
+          32,
+          7847
+        ],
+        "/system.slice/udisks2.service": [
+          32,
+          163863
+        ],
+        "/system.slice/upower.service": [
+          32,
+          163985
+        ],
+        "/system.slice/wpa_supplicant.service": [
+          32,
+          6688
+        ],
+        "/user.slice": [
+          32,
+          334
+        ]
+      }
+    },
+    "root": [
+      {
+        "finished_ns": 2303876281445565,
+        "raw": "usage_usec 1598954805000\nuser_usec 1562564032000\nsystem_usec 36390773000\nnice_usec 6474000\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/",
+        "started_ns": 2303876281430989
+      },
+      {
+        "finished_ns": 2303876282871307,
+        "raw": "usage_usec 1598954825000\nuser_usec 1562564050000\nsystem_usec 36390775000\nnice_usec 6474000\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/",
+        "started_ns": 2303876282859355
+      }
+    ],
+    "rows": [
+      {
+        "finished_ns": 2303876281467501,
+        "raw": "usage_usec 6242\nuser_usec 1783\nsystem_usec 4458\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/dev-hugepages.mount",
+        "started_ns": 2303876281450445
+      },
+      {
+        "finished_ns": 2303876281485501,
+        "raw": "usage_usec 7007\nuser_usec 2002\nsystem_usec 5005\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/dev-mqueue.mount",
+        "started_ns": 2303876281470701
+      },
+      {
+        "finished_ns": 2303876281504701,
+        "raw": "usage_usec 147091574\nuser_usec 69241974\nsystem_usec 77849599\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/init.scope",
+        "started_ns": 2303876281488541
+      },
+      {
+        "finished_ns": 2303876281522798,
+        "raw": "usage_usec 2950\nuser_usec 0\nsystem_usec 2950\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/proc-sys-fs-binfmt_misc.mount",
+        "started_ns": 2303876281507837
+      },
+      {
+        "finished_ns": 2303876281539598,
+        "raw": "usage_usec 10528\nuser_usec 2105\nsystem_usec 8422\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/sys-fs-fuse-connections.mount",
+        "started_ns": 2303876281525758
+      },
+      {
+        "finished_ns": 2303876281556334,
+        "raw": "usage_usec 5813\nuser_usec 0\nsystem_usec 5813\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/sys-kernel-config.mount",
+        "started_ns": 2303876281542542
+      },
+      {
+        "finished_ns": 2303876281572830,
+        "raw": "usage_usec 9139\nuser_usec 1142\nsystem_usec 7997\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/sys-kernel-debug.mount",
+        "started_ns": 2303876281559262
+      },
+      {
+        "finished_ns": 2303876281589182,
+        "raw": "usage_usec 7788\nuser_usec 2920\nsystem_usec 4868\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/sys-kernel-tracing.mount",
+        "started_ns": 2303876281575694
+      },
+      {
+        "finished_ns": 2303876281606430,
+        "raw": "usage_usec 379187\nuser_usec 235397\nsystem_usec 143789\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/ModemManager.service",
+        "started_ns": 2303876281591982
+      },
+      {
+        "finished_ns": 2303876281624735,
+        "raw": "usage_usec 411685313\nuser_usec 291947594\nsystem_usec 119737718\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/NetworkManager.service",
+        "started_ns": 2303876281609390
+      },
+      {
+        "finished_ns": 2303876281641775,
+        "raw": "usage_usec 61906084\nuser_usec 21263977\nsystem_usec 40642106\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/accounts-daemon.service",
+        "started_ns": 2303876281627759
+      },
+      {
+        "finished_ns": 2303876281659823,
+        "raw": "usage_usec 65041933\nuser_usec 25659720\nsystem_usec 39382213\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/avahi-daemon.service",
+        "started_ns": 2303876281644751
+      },
+      {
+        "finished_ns": 2303876281677503,
+        "raw": "usage_usec 59414\nuser_usec 33805\nsystem_usec 25609\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/bluetooth.service",
+        "started_ns": 2303876281663023
+      },
+      {
+        "finished_ns": 2303876281694511,
+        "raw": "usage_usec 1035\nuser_usec 0\nsystem_usec 1035\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/boot-efi.mount",
+        "started_ns": 2303876281680463
+      },
+      {
+        "finished_ns": 2303876281711791,
+        "raw": "usage_usec 250505\nuser_usec 113299\nsystem_usec 137206\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/colord.service",
+        "started_ns": 2303876281697423
+      },
+      {
+        "finished_ns": 2303876281730640,
+        "raw": "usage_usec 1848842602\nuser_usec 799121201\nsystem_usec 1049721400\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/containerd.service",
+        "started_ns": 2303876281714784
+      },
+      {
+        "finished_ns": 2303876281747504,
+        "raw": "usage_usec 94322313\nuser_usec 64470910\nsystem_usec 29851402\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/cron.service",
+        "started_ns": 2303876281733744
+      },
+      {
+        "finished_ns": 2303876281765264,
+        "raw": "usage_usec 45245\nuser_usec 20216\nsystem_usec 25029\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/cups-browsed.service",
+        "started_ns": 2303876281750448
+      },
+      {
+        "finished_ns": 2303876281783088,
+        "raw": "usage_usec 10507\nuser_usec 5837\nsystem_usec 4669\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/cups.service",
+        "started_ns": 2303876281768336
+      },
+      {
+        "finished_ns": 2303876281801392,
+        "raw": "usage_usec 104892184\nuser_usec 80180288\nsystem_usec 24711896\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/dbus.service",
+        "started_ns": 2303876281786128
+      },
+      {
+        "finished_ns": 2303876281818433,
+        "raw": "usage_usec 3386963\nuser_usec 812655\nsystem_usec 2574308\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/dgx-dashboard-admin.service",
+        "started_ns": 2303876281804384
+      },
+      {
+        "finished_ns": 2303876281835377,
+        "raw": "usage_usec 3317358\nuser_usec 880047\nsystem_usec 2437311\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/dgx-dashboard.service",
+        "started_ns": 2303876281821457
+      },
+      {
+        "finished_ns": 2303876281852049,
+        "raw": "usage_usec 273198807\nuser_usec 162244752\nsystem_usec 110954055\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/docker.service",
+        "started_ns": 2303876281838401
+      },
+      {
+        "finished_ns": 2303876281869009,
+        "raw": "usage_usec 480\nuser_usec 480\nsystem_usec 0\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/docker.socket",
+        "started_ns": 2303876281855089
+      },
+      {
+        "finished_ns": 2303876281887825,
+        "raw": "usage_usec 121676977\nuser_usec 44624134\nsystem_usec 77052843\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/fwupd.service",
+        "started_ns": 2303876281872097
+      },
+      {
+        "finished_ns": 2303876281905233,
+        "raw": "usage_usec 261907\nuser_usec 182515\nsystem_usec 79391\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/gnome-remote-desktop.service",
+        "started_ns": 2303876281890897
+      },
+      {
+        "finished_ns": 2303876281922322,
+        "raw": "usage_usec 513\nuser_usec 0\nsystem_usec 513\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/lxd-installer.socket",
+        "started_ns": 2303876281908225
+      },
+      {
+        "finished_ns": 2303876281940130,
+        "raw": "usage_usec 325990213\nuser_usec 113653778\nsystem_usec 212336434\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/mariadb.service",
+        "started_ns": 2303876281925442
+      },
+      {
+        "finished_ns": 2303876281957298,
+        "raw": "usage_usec 222288668\nuser_usec 60856401\nsystem_usec 161432266\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/multipathd.service",
+        "started_ns": 2303876281943170
+      },
+      {
+        "finished_ns": 2303876281974658,
+        "raw": "usage_usec 5284580\nuser_usec 2736892\nsystem_usec 2547688\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/munge.service",
+        "started_ns": 2303876281960274
+      },
+      {
+        "finished_ns": 2303876281991906,
+        "raw": "usage_usec 36468\nuser_usec 985\nsystem_usec 35482\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/nvidia-persistenced.service",
+        "started_ns": 2303876281977698
+      },
+      {
+        "finished_ns": 2303876282014034,
+        "raw": "usage_usec 43967051\nuser_usec 33298356\nsystem_usec 10668694\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/ollama.service",
+        "started_ns": 2303876281994914
+      },
+      {
+        "finished_ns": 2303876282030355,
+        "raw": "usage_usec 64089413\nuser_usec 15381675\nsystem_usec 48707738\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/polkit.service",
+        "started_ns": 2303876282017090
+      },
+      {
+        "finished_ns": 2303876282046771,
+        "raw": "usage_usec 19073\nuser_usec 3178\nsystem_usec 15894\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/rasdaemon.service",
+        "started_ns": 2303876282033267
+      },
+      {
+        "finished_ns": 2303876282063091,
+        "raw": "usage_usec 13015\nuser_usec 3904\nsystem_usec 9110\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/rdma-ndd.service",
+        "started_ns": 2303876282049571
+      },
+      {
+        "finished_ns": 2303876282079203,
+        "raw": "usage_usec 20459537\nuser_usec 6096900\nsystem_usec 14362636\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/rsyslog.service",
+        "started_ns": 2303876282065955
+      },
+      {
+        "finished_ns": 2303876282095843,
+        "raw": "usage_usec 31125888\nuser_usec 4210836\nsystem_usec 26915052\nnice_usec 1012000\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/rtkit-daemon.service",
+        "started_ns": 2303876282082115
+      },
+      {
+        "finished_ns": 2303876282112531,
+        "raw": "usage_usec 5185\nuser_usec 1037\nsystem_usec 4148\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/run-rpc_pipefs.mount",
+        "started_ns": 2303876282098755
+      },
+      {
+        "finished_ns": 2303876282129732,
+        "raw": "usage_usec 5277704\nuser_usec 1126980\nsystem_usec 4150723\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/slurmd.service",
+        "started_ns": 2303876282115427
+      },
+      {
+        "finished_ns": 2303876282145924,
+        "raw": "usage_usec 345372\nuser_usec 64728\nsystem_usec 280643\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/smartmontools.service",
+        "started_ns": 2303876282132596
+      },
+      {
+        "finished_ns": 2303876282162772,
+        "raw": "usage_usec 4405\nuser_usec 1468\nsystem_usec 2936\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/snap-bare-5.mount",
+        "started_ns": 2303876282148900
+      },
+      {
+        "finished_ns": 2303876282179524,
+        "raw": "usage_usec 11718\nuser_usec 4261\nsystem_usec 7457\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/snap-core22-2438.mount",
+        "started_ns": 2303876282165748
+      },
+      {
+        "finished_ns": 2303876282195940,
+        "raw": "usage_usec 2955\nuser_usec 0\nsystem_usec 2955\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/snap-core22-2956.mount",
+        "started_ns": 2303876282182420
+      },
+      {
+        "finished_ns": 2303876282212788,
+        "raw": "usage_usec 7318\nuser_usec 2439\nsystem_usec 4879\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/snap-core24-1644.mount",
+        "started_ns": 2303876282198964
+      },
+      {
+        "finished_ns": 2303876282229765,
+        "raw": "usage_usec 6297\nuser_usec 1049\nsystem_usec 5247\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/snap-core24-2125.mount",
+        "started_ns": 2303876282215844
+      },
+      {
+        "finished_ns": 2303876282247205,
+        "raw": "usage_usec 4038\nuser_usec 0\nsystem_usec 4038\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/snap-firefox-8815.mount",
+        "started_ns": 2303876282232741
+      },
+      {
+        "finished_ns": 2303876282264005,
+        "raw": "usage_usec 3744\nuser_usec 0\nsystem_usec 3744\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/snap-firefox-8862.mount",
+        "started_ns": 2303876282250165
+      },
+      {
+        "finished_ns": 2303876282282069,
+        "raw": "usage_usec 7027\nuser_usec 3011\nsystem_usec 4015\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/snap-gnome\\x2d42\\x2d2204-245.mount",
+        "started_ns": 2303876282266933
+      },
+      {
+        "finished_ns": 2303876282298581,
+        "raw": "usage_usec 8122\nuser_usec 2030\nsystem_usec 6092\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/snap-gnome\\x2d42\\x2d2204-264.mount",
+        "started_ns": 2303876282284981
+      },
+      {
+        "finished_ns": 2303876282315013,
+        "raw": "usage_usec 12406\nuser_usec 3101\nsystem_usec 9304\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/snap-gnome\\x2d46\\x2d2404-154.mount",
+        "started_ns": 2303876282301573
+      },
+      {
+        "finished_ns": 2303876282331894,
+        "raw": "usage_usec 7335\nuser_usec 1047\nsystem_usec 6287\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/snap-gtk\\x2dcommon\\x2dthemes-1535.mount",
+        "started_ns": 2303876282317909
+      },
+      {
+        "finished_ns": 2303876282348134,
+        "raw": "usage_usec 10481\nuser_usec 2096\nsystem_usec 8384\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/snap-mesa\\x2d2404-1166.mount",
+        "started_ns": 2303876282334774
+      },
+      {
+        "finished_ns": 2303876282364358,
+        "raw": "usage_usec 11320\nuser_usec 4116\nsystem_usec 7203\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/snap-mesa\\x2d2404-1836.mount",
+        "started_ns": 2303876282350998
+      },
+      {
+        "finished_ns": 2303876282380854,
+        "raw": "usage_usec 12609\nuser_usec 1939\nsystem_usec 10669\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/snap-snapd-27709.mount",
+        "started_ns": 2303876282367302
+      },
+      {
+        "finished_ns": 2303876282397494,
+        "raw": "usage_usec 3684\nuser_usec 736\nsystem_usec 2947\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/snap-snapd-27740.mount",
+        "started_ns": 2303876282383734
+      },
+      {
+        "finished_ns": 2303876282414006,
+        "raw": "usage_usec 4920\nuser_usec 984\nsystem_usec 3936\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/snap-thunderbird-1256.mount",
+        "started_ns": 2303876282400374
+      },
+      {
+        "finished_ns": 2303876282430775,
+        "raw": "usage_usec 1898\nuser_usec 1898\nsystem_usec 0\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/snap-thunderbird-1261.mount",
+        "started_ns": 2303876282416838
+      },
+      {
+        "finished_ns": 2303876282448471,
+        "raw": "usage_usec 64795527\nuser_usec 53308569\nsystem_usec 11486957\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/snapd.service",
+        "started_ns": 2303876282433655
+      },
+      {
+        "finished_ns": 2303876282465287,
+        "raw": "usage_usec 423\nuser_usec 423\nsystem_usec 0\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/snapd.socket",
+        "started_ns": 2303876282451383
+      },
+      {
+        "finished_ns": 2303876282500087,
+        "raw": "usage_usec 1047270899\nuser_usec 1045759026\nsystem_usec 1511872\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_21925",
+        "started_ns": 2303876282468215
+      },
+      {
+        "finished_ns": 2303876282516919,
+        "raw": "usage_usec 1028718\nuser_usec 482706\nsystem_usec 546012\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/spark-7ff0_slurmstepd.scope/system",
+        "started_ns": 2303876282503031
+      },
+      {
+        "finished_ns": 2303876282533384,
+        "raw": "usage_usec 5105619\nuser_usec 3282403\nsystem_usec 1823215\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/ssh.service",
+        "started_ns": 2303876282519799
+      },
+      {
+        "finished_ns": 2303876282549800,
+        "raw": "usage_usec 922\nuser_usec 922\nsystem_usec 0\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/ssh.socket",
+        "started_ns": 2303876282536184
+      },
+      {
+        "finished_ns": 2303876282565944,
+        "raw": "usage_usec 11357\nuser_usec 1032\nsystem_usec 10325\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/swap.img.swap",
+        "started_ns": 2303876282552680
+      },
+      {
+        "finished_ns": 2303876282582200,
+        "raw": "usage_usec 16154\nuser_usec 5384\nsystem_usec 10769\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/switcheroo-control.service",
+        "started_ns": 2303876282568728
+      },
+      {
+        "finished_ns": 2303876282599112,
+        "raw": "usage_usec 0\nuser_usec 0\nsystem_usec 0\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/system-getty.slice",
+        "started_ns": 2303876282585128
+      },
+      {
+        "finished_ns": 2303876282615672,
+        "raw": "usage_usec 86672\nuser_usec 20636\nsystem_usec 66035\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/system-modprobe.slice",
+        "started_ns": 2303876282602072
+      },
+      {
+        "finished_ns": 2303876282632424,
+        "raw": "usage_usec 93746\nuser_usec 3159\nsystem_usec 90586\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/system-rdma\\x2dload\\x2dmodules.slice",
+        "started_ns": 2303876282618552
+      },
+      {
+        "finished_ns": 2303876282648777,
+        "raw": "usage_usec 4527\nuser_usec 1509\nsystem_usec 3018\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/system-serial\\x2dgetty.slice",
+        "started_ns": 2303876282635321
+      },
+      {
+        "finished_ns": 2303876282665049,
+        "raw": "usage_usec 20442\nuser_usec 7787\nsystem_usec 12654\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/system-systemd\\x2dfsck.slice",
+        "started_ns": 2303876282651657
+      },
+      {
+        "finished_ns": 2303876282681849,
+        "raw": "usage_usec 57592070\nuser_usec 9841223\nsystem_usec 47750847\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/systemd-journald.service",
+        "started_ns": 2303876282667929
+      },
+      {
+        "finished_ns": 2303876282699865,
+        "raw": "usage_usec 5934947\nuser_usec 1024732\nsystem_usec 4910214\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/systemd-logind.service",
+        "started_ns": 2303876282684793
+      },
+      {
+        "finished_ns": 2303876282716697,
+        "raw": "usage_usec 7627369\nuser_usec 3141554\nsystem_usec 4485815\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/systemd-networkd.service",
+        "started_ns": 2303876282702761
+      },
+      {
+        "finished_ns": 2303876282733577,
+        "raw": "usage_usec 15269335\nuser_usec 7001857\nsystem_usec 8267477\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/systemd-resolved.service",
+        "started_ns": 2303876282719609
+      },
+      {
+        "finished_ns": 2303876282751802,
+        "raw": "usage_usec 6831270\nuser_usec 358098\nsystem_usec 6473171\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/systemd-timesyncd.service",
+        "started_ns": 2303876282736425
+      },
+      {
+        "finished_ns": 2303876282768506,
+        "raw": "usage_usec 3419035\nuser_usec 203647\nsystem_usec 3215388\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/systemd-udevd.service",
+        "started_ns": 2303876282754826
+      },
+      {
+        "finished_ns": 2303876282786378,
+        "raw": "usage_usec 1336928115\nuser_usec 503215679\nsystem_usec 833712436\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/tailscaled.service",
+        "started_ns": 2303876282771418
+      },
+      {
+        "finished_ns": 2303876282803050,
+        "raw": "usage_usec 5849439\nuser_usec 2331569\nsystem_usec 3517869\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/udisks2.service",
+        "started_ns": 2303876282789498
+      },
+      {
+        "finished_ns": 2303876282819370,
+        "raw": "usage_usec 196875\nuser_usec 124342\nsystem_usec 72533\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/upower.service",
+        "started_ns": 2303876282805946
+      },
+      {
+        "finished_ns": 2303876282836906,
+        "raw": "usage_usec 50744304\nuser_usec 34392548\nsystem_usec 16351756\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/wpa_supplicant.service",
+        "started_ns": 2303876282822282
+      },
+      {
+        "finished_ns": 2303876282856075,
+        "raw": "usage_usec 1347821366\nuser_usec 1040901348\nsystem_usec 306920017\nnice_usec 3775000\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/user.slice",
+        "started_ns": 2303876282839883
+      }
+    ],
+    "scientific_timings_admitted": false,
+    "status": "invalid_frontier_snapshot",
+    "target": "/system.slice/spark-7ff0_slurmstepd.scope/job_21925"
+  },
+  "hierarchy": {
+    "children": [
+      {
+        "finished_ns": 2303876273751026,
+        "raw": "usage_usec 1039764520\nuser_usec 1039339564\nsystem_usec 424955\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_21925/step_0",
+        "started_ns": 2303876273734177
+      },
+      {
+        "finished_ns": 2303876273773442,
+        "raw": "usage_usec 7331097\nuser_usec 6242965\nsystem_usec 1088131\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_21925/step_batch",
+        "started_ns": 2303876273756402
+      }
+    ],
+    "hierarchy_host_after": {
+      "cpu_ticks": {
+        "guest": 0,
+        "guest_nice": 0,
+        "idle": 4445368813,
+        "iowait": 303854,
+        "irq": 0,
+        "nice": 647,
+        "softirq": 17866,
+        "steal": 0,
+        "system": 3621210,
+        "user": 156255740
+      },
+      "errors": [],
+      "finished_monotonic_ns": 2303876273997764,
+      "optional": {
+        "cgroup_cpu.stat": "usage_usec 7324372\nuser_usec 6241508\nsystem_usec 1082864\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "cgroup_memory.current": "58130432\n",
+        "cgroup_memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+        "cgroup_memory.peak": "59338752\n",
+        "host_cpu_pressure": "some avg10=0.00 avg60=1.57 avg300=3.73 total=1739668374\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0\n",
+        "host_io_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=1591227084\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=1572881323\n",
+        "host_memory_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=5929\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=2061\n"
+      },
+      "raw": {
+        "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9\n",
+        "cgroup_membership": "0::/system.slice/spark-7ff0_slurmstepd.scope/job_21925/step_batch/user/task_0\n",
+        "online_cpus": "0-19\n",
+        "proc_stat": "cpu  156255740 647 3621210 4445368813 303854 0 17866 0 0 0\ncpu0 7126678 10 259052 222744423 15463 0 7168 0 0 0\ncpu1 7204086 5 262542 222787062 23472 0 518 0 0 0\ncpu2 7270340 3 263246 222705572 24874 0 227 0 0 0\ncpu3 7338099 5 246121 222680584 19659 0 172 0 0 0\ncpu4 7343480 8 247964 222675750 15345 0 172 0 0 0\ncpu5 8180527 62 120419 221980292 19015 0 373 0 0 0\ncpu6 8197919 1 112485 221975136 16703 0 160 0 0 0\ncpu7 8199205 12 108199 221983548 14170 0 215 0 0 0\ncpu8 8092231 43 122946 222077962 14435 0 209 0 0 0\ncpu9 8161703 0 105314 222030770 14190 0 209 0 0 0\ncpu10 7387031 6 247287 222608648 12155 0 176 0 0 0\ncpu11 7397610 0 245943 222618275 17308 0 139 0 0 0\ncpu12 7419635 7 237235 222594991 17514 0 118 0 0 0\ncpu13 7477223 6 249988 222490159 13612 0 3886 0 0 0\ncpu14 7508571 6 248336 222499739 13663 0 1908 0 0 0\ncpu15 8410538 25 110642 221751729 13584 0 1038 0 0 0\ncpu16 8321610 16 111449 221854659 10348 0 462 0 0 0\ncpu17 8383302 14 95684 221803702 8258 0 417 0 0 0\ncpu18 8316361 4 107665 221869117 11789 0 133 0 0 0\ncpu19 8519582 404 118685 221636686 8286 0 156 0 0 0\nintr 2350403894 0 11474814 134203347 0 0 331788245 6701 0 0 0 0 0 1745077072 0 111374240 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5818 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10604 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 508675 0 0 0 0 0 0 0 633459 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7 0 0 16972 314628 308590 263741 235275 215043 113834 128265 141575 109192 105396 98727 72413 68017 109089 94863 34481 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 34817 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 34756 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 34043 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 12765958 0 3185 0 17879 0 0 0 0 0\nctxt 695614695\nbtime 1787514737\nprocesses 18532650\nprocs_running 22\nprocs_blocked 0\nsoftirq 1106211443 561 390423329 203 2350101 161908 0 30408253 354387484 1195 328478409\n"
+      },
+      "started_monotonic_ns": 2303876273794450
+    },
+    "host": [
+      {
+        "cpu_ticks": {
+          "guest": 0,
+          "guest_nice": 0,
+          "idle": 4445368813,
+          "iowait": 303854,
+          "irq": 0,
+          "nice": 647,
+          "softirq": 17866,
+          "steal": 0,
+          "system": 3621210,
+          "user": 156255740
+        },
+        "errors": [],
+        "finished_monotonic_ns": 2303876273414158,
+        "optional": {
+          "cgroup_cpu.stat": "usage_usec 7324372\nuser_usec 6241508\nsystem_usec 1082864\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+          "cgroup_memory.current": "58130432\n",
+          "cgroup_memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+          "cgroup_memory.peak": "59338752\n",
+          "host_cpu_pressure": "some avg10=0.00 avg60=1.57 avg300=3.73 total=1739668374\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0\n",
+          "host_io_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=1591227084\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=1572881323\n",
+          "host_memory_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=5929\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=2061\n"
+        },
+        "raw": {
+          "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9\n",
+          "cgroup_membership": "0::/system.slice/spark-7ff0_slurmstepd.scope/job_21925/step_batch/user/task_0\n",
+          "online_cpus": "0-19\n",
+          "proc_stat": "cpu  156255740 647 3621210 4445368813 303854 0 17866 0 0 0\ncpu0 7126678 10 259052 222744423 15463 0 7168 0 0 0\ncpu1 7204086 5 262542 222787062 23472 0 518 0 0 0\ncpu2 7270340 3 263246 222705572 24874 0 227 0 0 0\ncpu3 7338099 5 246121 222680584 19659 0 172 0 0 0\ncpu4 7343480 8 247964 222675750 15345 0 172 0 0 0\ncpu5 8180527 62 120419 221980292 19015 0 373 0 0 0\ncpu6 8197919 1 112485 221975136 16703 0 160 0 0 0\ncpu7 8199205 12 108199 221983548 14170 0 215 0 0 0\ncpu8 8092231 43 122946 222077962 14435 0 209 0 0 0\ncpu9 8161703 0 105314 222030770 14190 0 209 0 0 0\ncpu10 7387031 6 247287 222608648 12155 0 176 0 0 0\ncpu11 7397610 0 245943 222618275 17308 0 139 0 0 0\ncpu12 7419635 7 237235 222594991 17514 0 118 0 0 0\ncpu13 7477223 6 249988 222490159 13612 0 3886 0 0 0\ncpu14 7508571 6 248336 222499739 13663 0 1908 0 0 0\ncpu15 8410538 25 110642 221751729 13584 0 1038 0 0 0\ncpu16 8321610 16 111449 221854659 10348 0 462 0 0 0\ncpu17 8383302 14 95684 221803702 8258 0 417 0 0 0\ncpu18 8316361 4 107665 221869117 11789 0 133 0 0 0\ncpu19 8519582 404 118685 221636686 8286 0 156 0 0 0\nintr 2350403894 0 11474814 134203347 0 0 331788245 6701 0 0 0 0 0 1745077072 0 111374240 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5818 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10604 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 508675 0 0 0 0 0 0 0 633459 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7 0 0 16972 314628 308590 263741 235275 215043 113834 128265 141575 109192 105396 98727 72413 68017 109089 94863 34481 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 34817 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 34756 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 34043 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 12765958 0 3185 0 17879 0 0 0 0 0\nctxt 695614695\nbtime 1787514737\nprocesses 18532650\nprocs_running 22\nprocs_blocked 0\nsoftirq 1106211443 561 390423329 203 2350101 161908 0 30408253 354387484 1195 328478409\n"
+        },
+        "started_monotonic_ns": 2303876273119803
+      },
+      {
+        "cpu_ticks": {
+          "guest": 0,
+          "guest_nice": 0,
+          "idle": 4445368813,
+          "iowait": 303854,
+          "irq": 0,
+          "nice": 647,
+          "softirq": 17866,
+          "steal": 0,
+          "system": 3621210,
+          "user": 156255740
+        },
+        "errors": [],
+        "finished_monotonic_ns": 2303876273997764,
+        "optional": {
+          "cgroup_cpu.stat": "usage_usec 7324372\nuser_usec 6241508\nsystem_usec 1082864\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+          "cgroup_memory.current": "58130432\n",
+          "cgroup_memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+          "cgroup_memory.peak": "59338752\n",
+          "host_cpu_pressure": "some avg10=0.00 avg60=1.57 avg300=3.73 total=1739668374\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0\n",
+          "host_io_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=1591227084\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=1572881323\n",
+          "host_memory_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=5929\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=2061\n"
+        },
+        "raw": {
+          "boot_id": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9\n",
+          "cgroup_membership": "0::/system.slice/spark-7ff0_slurmstepd.scope/job_21925/step_batch/user/task_0\n",
+          "online_cpus": "0-19\n",
+          "proc_stat": "cpu  156255740 647 3621210 4445368813 303854 0 17866 0 0 0\ncpu0 7126678 10 259052 222744423 15463 0 7168 0 0 0\ncpu1 7204086 5 262542 222787062 23472 0 518 0 0 0\ncpu2 7270340 3 263246 222705572 24874 0 227 0 0 0\ncpu3 7338099 5 246121 222680584 19659 0 172 0 0 0\ncpu4 7343480 8 247964 222675750 15345 0 172 0 0 0\ncpu5 8180527 62 120419 221980292 19015 0 373 0 0 0\ncpu6 8197919 1 112485 221975136 16703 0 160 0 0 0\ncpu7 8199205 12 108199 221983548 14170 0 215 0 0 0\ncpu8 8092231 43 122946 222077962 14435 0 209 0 0 0\ncpu9 8161703 0 105314 222030770 14190 0 209 0 0 0\ncpu10 7387031 6 247287 222608648 12155 0 176 0 0 0\ncpu11 7397610 0 245943 222618275 17308 0 139 0 0 0\ncpu12 7419635 7 237235 222594991 17514 0 118 0 0 0\ncpu13 7477223 6 249988 222490159 13612 0 3886 0 0 0\ncpu14 7508571 6 248336 222499739 13663 0 1908 0 0 0\ncpu15 8410538 25 110642 221751729 13584 0 1038 0 0 0\ncpu16 8321610 16 111449 221854659 10348 0 462 0 0 0\ncpu17 8383302 14 95684 221803702 8258 0 417 0 0 0\ncpu18 8316361 4 107665 221869117 11789 0 133 0 0 0\ncpu19 8519582 404 118685 221636686 8286 0 156 0 0 0\nintr 2350403894 0 11474814 134203347 0 0 331788245 6701 0 0 0 0 0 1745077072 0 111374240 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5818 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10604 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 508675 0 0 0 0 0 0 0 633459 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7 0 0 16972 314628 308590 263741 235275 215043 113834 128265 141575 109192 105396 98727 72413 68017 109089 94863 34481 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 34817 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 34756 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 34043 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 12765958 0 3185 0 17879 0 0 0 0 0\nctxt 695614695\nbtime 1787514737\nprocesses 18532650\nprocs_running 22\nprocs_blocked 0\nsoftirq 1106211443 561 390423329 203 2350101 161908 0 30408253 354387484 1195 328478409\n"
+        },
+        "started_monotonic_ns": 2303876273794450
+      }
+    ],
+    "native_membership": "0::/system.slice/spark-7ff0_slurmstepd.scope/job_21925/step_0/user/task_0\n",
+    "parent": [
+      {
+        "finished_ns": 2303876273726705,
+        "raw": "usage_usec 1047095617\nuser_usec 1045585743\nsystem_usec 1509873\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_21925",
+        "started_ns": 2303876273679345
+      },
+      {
+        "finished_ns": 2303876273791426,
+        "raw": "usage_usec 1047095617\nuser_usec 1045585743\nsystem_usec 1509873\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_21925",
+        "started_ns": 2303876273776722
+      }
+    ],
+    "ticks": 100
+  },
+  "scientific_timings_admitted": false,
+  "status": "invalid_frontier_observation"
+}
