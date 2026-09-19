@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Independent CPM Variant Admission Implemented (2026-09-19)
+
+Previous turn was progress: full regression and native runtime refresh were
+completed and committed. Scheduler inspection confirms OrthoFinder scoring
+21735_1 remains running (45:14), with 21736 admission pending; BLAST and DGX
+timing/recorder were confirmed live this turn. No DGX SSH was used.
+
+Added a separate CPM variant replay validator pinned to array 21960 and
+executor 2913d04. It requires successful 32-CPU task accounting, exact
+parent/context/command/source bindings, the control authorization and its
+fresh reproduction, checkpoint/runtime identity, all four checked native
+clustering stages, and complete unique coverage of 984,137 genes. It checks
+stage counts and records membership differences from the control without
+requiring equality or treating differences as accuracy evidence. Hashes are
+checked again before the exclusive-write admission report is produced.
+
+Focused tests: 281 passed in 15.10 seconds, including baseline/control
+regressions, native payload validation, both variant settings, scheduler
+gates, altered evidence, changed partitions and orchestration with real
+artifact hashes. Outputs remain unscored. Candidate preparation, phylogeny,
+conversion and assessment are still required; no defaults or claims changed.
+
+Admission batch requests two serial 2-CPU/64-GiB/4-hour tasks, no requeue,
+with afterany:21960 AND aftercorr:21960. The full-array terminal barrier
+keeps captured accounting stable while requiring corresponding success.
+Failed tasks must remain explicit rather than bypassing the dependency.
+
 ## Full Regression Refresh Completed (2026-09-19)
 
 Previous turn made progress by freezing/queueing CPM array 21960. Verified
