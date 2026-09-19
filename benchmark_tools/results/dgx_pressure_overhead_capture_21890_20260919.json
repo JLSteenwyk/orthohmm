@@ -1,0 +1,107 @@
+{
+  "array_id": 21889,
+  "expected_tasks": 18,
+  "limitations": [
+    "Collection only, not allocation-policy or native-output validation.",
+    "No recovery of records expired before observation; no sacct substitution.",
+    "Run on the controller host; no SSH or compute-node reads are performed.",
+    "Retains the first detailed terminal record; retries/requeues require separate policy validation."
+  ],
+  "missing_tasks": [],
+  "observation_errors": 0,
+  "polls": 2489,
+  "retained": {
+    "0": {
+      "path": "scheduler_0.txt",
+      "poll": 129,
+      "sha256": "df06bbe6cfd3bdc3d9782955ca5707f327d4f5b16f7ca85fdd396faac49adb64"
+    },
+    "1": {
+      "path": "scheduler_1.txt",
+      "poll": 247,
+      "sha256": "5f1b2493b6d98b814c754bf639b799bf0605e1035b9883ea4b0796b2742653ec"
+    },
+    "2": {
+      "path": "scheduler_2.txt",
+      "poll": 411,
+      "sha256": "d764706dbe4889ed269fa14aef8db6bc5970e758774e24e8ef101adfb1a17ae5"
+    },
+    "3": {
+      "path": "scheduler_3.txt",
+      "poll": 586,
+      "sha256": "c7f6785a47c2f0ccd7a426663315669e7d31ee0f4d32c19e2da3a9b00118f2ed"
+    },
+    "4": {
+      "path": "scheduler_4.txt",
+      "poll": 712,
+      "sha256": "863a167a5ea3a0de64b1cea4b853c7ea455c2496963b9eec793518459706048c"
+    },
+    "5": {
+      "path": "scheduler_5.txt",
+      "poll": 844,
+      "sha256": "564c98b8e7c535ec0e714d7b1d5e9449271d0052f1e033da702c8d8c30499e83"
+    },
+    "6": {
+      "path": "scheduler_6.txt",
+      "poll": 1019,
+      "sha256": "2b28d4c70e538f112b10f22003214d74fd7b1e2463940bdf983864521f46110b"
+    },
+    "7": {
+      "path": "scheduler_7.txt",
+      "poll": 1182,
+      "sha256": "71b4e672b62ed83dc7265a7723c04acade2a624f95c01850ac70efbd4e1c7bc8"
+    },
+    "8": {
+      "path": "scheduler_8.txt",
+      "poll": 1315,
+      "sha256": "2b2ca2e31dd5a380462e966bf6270bf7558bf9fa5eb6f2c1a74eb5f2df9c1310"
+    },
+    "9": {
+      "path": "scheduler_9.txt",
+      "poll": 1441,
+      "sha256": "2ad30d75e6d36e0a9df89eba1f47516a20c6535d87edaf5621ddf10643a44102"
+    },
+    "10": {
+      "path": "scheduler_10.txt",
+      "poll": 1559,
+      "sha256": "368b5ded282a03a4cce7ab46cd2494c6765807a5b20474205f7f03b66d04e18b"
+    },
+    "11": {
+      "path": "scheduler_11.txt",
+      "poll": 1670,
+      "sha256": "f545817364f87b3bb7bd0944c50f21b0315ea0031f67958be5629ca8d0767209"
+    },
+    "12": {
+      "path": "scheduler_12.txt",
+      "poll": 1794,
+      "sha256": "6f8dc4ff911dcf3d5efe9471a0a885c7602e3ff6d62dc0be14925d6719b96441"
+    },
+    "13": {
+      "path": "scheduler_13.txt",
+      "poll": 1927,
+      "sha256": "eda3daae12103ee64e2d45c29683c8878b1dbafeb51072d54528aa8c767d5ce2"
+    },
+    "14": {
+      "path": "scheduler_14.txt",
+      "poll": 2039,
+      "sha256": "8a4f8d1228b1db99016b861aeee028e98c552ec8102908d0cb6d9aaaaacb56e8"
+    },
+    "15": {
+      "path": "scheduler_15.txt",
+      "poll": 2157,
+      "sha256": "e6b47477c4dcebba2a22895c5916e4487765ebed35ec7dec8220ec1c13120311"
+    },
+    "16": {
+      "path": "scheduler_16.txt",
+      "poll": 2319,
+      "sha256": "5df7ae6ca544f99753d18c64f13d46d0b7259ece020853a89121ac0cf3dfc5df"
+    },
+    "17": {
+      "path": "scheduler_17.txt",
+      "poll": 2488,
+      "sha256": "00c858f2a96fae964d9d39bfffa266a989e4840a88ef37187802786f6ea1a251"
+    }
+  },
+  "scientific_timings_admitted": false,
+  "status": "complete_controller_capture"
+}

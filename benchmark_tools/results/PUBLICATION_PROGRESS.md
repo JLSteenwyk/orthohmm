@@ -1,5 +1,24 @@
 # Publication Progress
 
+## DGX Pressure Panel Audited (2026-09-19)
+
+Previous turn was a verified wait. Confirmed all 18 array tasks terminal
+and recorder 21890 complete before accessing the DGX. Collected unchanged
+output/recipe evidence, inputs and logs locally; verified all 18 retained
+scheduler hashes (2,489 polls, zero observation errors). The existing
+full-panel auditor validates 16 tasks and retains two wrapper failures.
+[Audit and limits](DGX_PRESSURE_OVERHEAD_AUDIT_21889_20260919.md).
+
+Seven available pairs have equivalent outputs and adequate duration.
+Both OrthoHMM method numerical budgets pass; OrthoFinder has only one of
+three pairs and no complete numerical result. Every validated periodic
+run has interval flags despite passing whole-command screens. Failed
+tasks 5 and 12 have native exit zero but wrapper identity-change errors.
+No flags were relaxed, failures excluded, timings corrected or scientific
+scaling runs authorized. Next investigate exact identity changes and
+interval-residual validity. Corrected QfO scoring and full OrthoFinder
+remain separate unfinished work; publication readiness is not established.
+
 ## Final Corrected Native Pairs Converted (2026-09-19)
 
 Previous turn made progress with committed native admission `5695f5d`.
