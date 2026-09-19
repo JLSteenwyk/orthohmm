@@ -1,5 +1,18 @@
 # Publication Progress
 
+## Parameter Pair Conversion Queued (2026-09-19)
+
+Committed/pushed converter and tests as `0401860`, deployed its detached
+executor, and submitted array 21939 with `aftercorr:21935`. Scheduler
+confirms all tasks pending dependency with 2 CPUs/64G/4 hours, serial
+concurrency and no requeue. Exact source/batch hashes and report locations
+are recorded in `QFO_PARAMETER_PHYLOGENY_SUBMISSION_21932.md`.
+
+Latest controller poll: OrthoFinder score 21735_0 RUNNING (12:02), OrthoMCL
+BLAST 21713 RUNNING (28:28), DGX overhead 21920_6 RUNNING (12:57), recorder
+21922 RUNNING. No task restarted or remote native output inspected.
+No newly converted parameter pairs or accuracy results are claimed.
+
 ## Parameter Pair Conversion Prepared (2026-09-19)
 
 Previous turn was progress: independent native admission implemented, tested,

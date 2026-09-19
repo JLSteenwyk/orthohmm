@@ -73,3 +73,31 @@ admission/runner/native-validator suite: 114 passed in 8.95 seconds; batch
 shell syntax passed. No report or native-output success is claimed before
 these jobs execute. Mapping, scoring and paired uncertainty remain separate
 downstream requirements.
+
+## Native Pair Conversion Array 21939
+
+Submitted 2026-09-19 at 08:37 EDT from detached executor
+`benchmarks/work/publication_qfo_parameter_pairs_v1`, commit
+`0401860cede4b1b73e5f6f9d459e0a0daabb1c6f` (pushed), passing the exact
+executor path and commit to its frozen batch.
+
+- Converter SHA-256:
+  `ef209f6a68e70312cb7cfdfcac17c2f67b02bc2fb5744e4f457b8ad8b57e61b9`.
+- Batch `qfo_parameter_pairs_batch_20260919.sh` SHA-256:
+  `2a92a5891a58ab8769d5cdf5dfaa04a767a74bf145c66e7ef79296af7b8100c8`.
+- Four tasks, concurrency one, 2 CPUs, 64G, 4 hours, bizon, no requeue.
+- Corresponding-task dependency: `aftercorr:21935`.
+- Outputs: `benchmarks/results/qfo_parameter_pairs_v1/<variant>/`.
+- Logs: `benchmarks/work/qfo_parameter_pairs_21939_<index>.log`.
+
+All four tasks confirmed PENDING (Dependency); task 0 has raw job ID 21940.
+The converter reruns the pinned independent admission in a subprocess and
+requires exact report equality before writing normalized native pairs. Any
+unexpected reference-mapping loss fails conversion, preserving the partial
+files and mapping counts. Tests exercise real conversion (not clique
+expansion), mapping losses, mismatched fresh admission, output preservation
+and refusal to retry existing output directories: 92 focused tests passed
+in 0.54 seconds, and batch shell syntax passed.
+
+No pair conversion has executed yet. Official assessment, score admission
+and the frozen paired uncertainty analysis remain required downstream.
