@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Lineage Boundary Arm Prepared (2026-09-19)
+
+Previous turn was a verified wait: high-sensitivity and its recorder were
+confirmed live, with no restart or native-output inspection. This turn added
+the boundary-only lineage collector and raw replay needed for the eventual
+complete overhead comparison. Both arms share the point reader, worker,
+timer, completion polling and memory accounting; boundary evidence explicitly
+has no interval coverage. All 90 targeted tests pass, including 27 new tests.
+See `LINEAGE_BOUNDARY_COLLECTOR_20260919.md` for scope and limitations.
+
+Controller accounting now reports high-sensitivity 21995 COMPLETED, exit 0:0,
+in 9:22 (native Slurm step 9:10). This is execution status, not native output
+or timing admission. Satellite_v2 21996 is RUNNING at 1:40; OrthoFinder 21997
+is dependency-pending and recorder 21998 RUNNING at 11:26. No SSH or native
+output inspection occurred, and no new source was deployed to those jobs.
+
+The boundary arm has not run on the DGX and no new overhead panel is launched.
+Current diagnostics must finish and pass their separate audits first. Keep
+all original failed attempts, flags and missing evidence. The publication
+goal and scientific timing requirements remain incomplete.
+
 ## Lineage Native Provenance Audit Prepared (2026-09-19)
 
 Previous turn made progress by freezing and deploying the native diagnostic
