@@ -62,6 +62,12 @@ evidence that an experiment completed or a biological hypothesis is true.
 
 ## Current Execution Status
 
+- [Retained host pressure audit](DGX_PRESSURE_DIAGNOSTIC_21838.md) summarizes
+  all 18 overhead tasks without changing their admission. Seventeen observed
+  windows enclose native execution; task6 is partial. Small recorded memory
+  stalls and nonzero CPU/I/O stalls do not identify foreign interference or
+  establish isolation. No retrospective threshold or timing promotion.
+
 - A [search routing defect](SEARCH_GPU_ROUTING_FIX_20260918.md) was reproduced
   and fixed in the current tree: CUDA availability with no eligible target
   could bypass every scoring backend.53focused tests pass. The bound native

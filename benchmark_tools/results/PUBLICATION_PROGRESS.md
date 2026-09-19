@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Existing Host Pressure Evidence Audited (2026-09-18 UTC)
+
+Previous turn made progress through e52fa47 with first corrected R-on accuracy
+and full diagnostic regression validation. Reread the full objective and
+confirmed corrected reconciliation/OrthoFinder remain live; OrthoMCL awaits
+resources. Reviewed the actual timing rules and identified already retained
+but unsummarized host CPU, memory and I/O PSI counters. Implemented an
+independent descriptive audit, with no new screen threshold or admission rule.
+All 54 focused pressure and panel-summary tests pass; source committed and
+pushed as 7e4a729.
+
+Audited 5,154 points and 5,173 source records across all 18 terminal tasks.
+Seventeen recorded windows enclose native execution; task6 covers only
+10.038107 seconds and remains partial. Retained memory stall totals are small,
+but host CPU/I/O stalls include each method's own work and cannot identify
+foreign interference. All old failure and evidence-gap classifications remain.
+[Full results, table, checksums and limits](DGX_PRESSURE_DIAGNOSTIC_21838.md).
+No additional DGX jobs, retiming, threshold selection, or timing promotion.
+Prospective native-scope pressure/host attribution and overhead validation
+remain needed alongside unfinished corrected analyses and publication work.
+
 ## Failure Evidence Retained And First R-On Accuracy Admitted (2026-09-18 UTC)
 
 Previous turn made progress through 9e89534 with automated scheduler capture
