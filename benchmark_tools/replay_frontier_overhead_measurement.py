@@ -9,7 +9,9 @@ from benchmark_tools.measure_frontier_boundary_step import evaluate as boundary_
 from benchmark_tools.prepare_ob_candidate_neighborhood import record, check
 
 
-def replay(directory, mode, job_id, expected_command):
+def replay(directory, mode, job_id, expected_command, *, expected_native_pressure=None):
+    if expected_native_pressure is not None and type(expected_native_pressure) is not bool:
+        raise ValueError("Expected native pressure must be boolean or unspecified")
     if mode not in {"boundary", "periodic"}:
         raise ValueError("Unknown overhead observation mode")
     report_name = "boundary_report.json" if mode == "boundary" else "frontier_report.json"
@@ -27,6 +29,9 @@ def replay(directory, mode, job_id, expected_command):
     points = [json.loads(path.read_text()) for path in point_files]
     if points != measured["points"]:
         raise ValueError("Raw point inventory differs from report")
+    if expected_native_pressure is not None and (
+            not points or any(("native_pressure" in point) != expected_native_pressure for point in points)):
+        raise ValueError("Native pressure coverage differs from expected collector")
     if any(measured[key] is not False for key in (
             "scientific_timings_admitted", "controlled_workload_verified", "publication_ready")):
         raise ValueError("Unexpected timing admission")

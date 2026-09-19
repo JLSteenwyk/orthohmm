@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Pressure Replay Coverage Gate (2026-09-19)
+
+Previous turn made progress through0cad101 with integrated validation and
+updated claim status. Reread the full objective; local controller confirms
+21779,21760_2,21706_1,21889and21890remain live. No DGX access was made.
+
+Found that automatic measurement replay cannot distinguish a legacy run from
+a pressure-required run with all pressure evidence absent. Added an explicit
+boolean expectation gate, retaining old callers' behavior and all exact
+counter/screening checks. Synthetic tests cover both collector modes, full
+and partial absence, unexpected pressure and corrupted diagnostics.
+89focused tests pass, including historical replay and complete-panel tests.
+[Scope and remaining complete-panel binding](PRESSURE_REPLAY_REQUIREMENT_20260919.md).
+
+This is a post-run evaluator prerequisite, not admission of the still-running
+panel. The completed auditor still needs21889-specific pinned provenance and
+must enforce this gate. Frozen executors, thresholds and outputs are unchanged;
+scientific timing, corrected-QfO completion and publication requirements remain
+open.
+
 ## Integrated Source Validation and Claim Refresh (2026-09-19)
 
 The preceding source-search reply did not recover the missing original
