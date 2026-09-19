@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Three Native Diagnostics Dispatched (2026-09-19)
+
+Previous turn prepared the full-command collector and frozen protocol.
+Derived/pinned the three-method plan and recipe; 48 focused tests and shell
+syntax checks pass. Verified all 437 transferred files and exact remote
+task selection before submission. Source/plan commit `0e59a3a` pushed.
+
+Submitted sequential jobs 21912 -> 21913 -> 21914 with afterany dependencies;
+21912 is confirmed RUNNING on the DGX. Recorder 21915 is RUNNING on bizon
+and has a successful first poll; six recorder tests pass.
+[Bindings and observation policy](DUAL_NATIVE_SUBMISSION_21912_20260919.md).
+DGX quiet window is active: controller-only polling until all three tasks
+terminate. No partial outcomes, selective repeats or scientific timing
+admission. Corrected full OrthoFinder 21706_1 remains RUNNING at8:50:57,
+with OrthoMCL and strata still pending.
+
 ## Complete-Command Dual Collector Prepared (2026-09-19)
 
 Previous turn made progress with the independently replayed nine DGX
