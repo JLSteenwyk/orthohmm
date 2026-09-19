@@ -1,0 +1,13 @@
+slurmstepd-spark-7ff0: error: couldn't chdir to `/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm': No such file or directory: going to /tmp instead
+slurmstepd-spark-7ff0: error: couldn't chdir to `/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm': No such file or directory: going to /tmp instead
+slurmstepd-spark-7ff0: error: Unable to create TMPDIR [/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp]: No such file or directory
+slurmstepd-spark-7ff0: error: Setting TMPDIR to /tmp
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/jlsteenwyk/projects/orthohmm-publication/lineage_lifecycle_source_v1/benchmark_tools/run_lineage_lifecycle_control.py", line 136, in <module>
+    result = run(args.output.absolute())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jlsteenwyk/projects/orthohmm-publication/lineage_lifecycle_source_v1/benchmark_tools/run_lineage_lifecycle_control.py", line 89, in run
+    raise ValueError("Require DGX two-CPU engineering allocation")
+ValueError: Require DGX two-CPU engineering allocation

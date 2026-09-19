@@ -1,0 +1,26 @@
+{
+  "command": [
+    "systemd-run",
+    "--user",
+    "--quiet",
+    "--wait",
+    "--pipe",
+    "--collect",
+    "--unit=orthohmm-lineage-21989-1.service",
+    "--working-directory=/home/jlsteenwyk/projects/orthohmm-publication/lineage_lifecycle_source_v2",
+    "--property=RuntimeMaxSec=10s",
+    "--property=MemoryMax=256M",
+    "--property=TasksMax=8",
+    "taskset",
+    "-c",
+    "0",
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "benchmark_tools.run_lineage_lifecycle_control",
+    "--burn"
+  ],
+  "cpu": 0,
+  "manager": "/user.slice/user-1000.slice/user@1000.service",
+  "target": "/system.slice/spark-7ff0_slurmstepd.scope/job_21989/step_0/user/task_0"
+}

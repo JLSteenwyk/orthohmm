@@ -1,0 +1,180 @@
+{
+  "manager": {
+    "boot_after": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+    "boot_before": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+    "identities_after": {
+      "/": [
+        32,
+        1
+      ],
+      "/user.slice": [
+        32,
+        334
+      ],
+      "/user.slice/user-1000.slice": [
+        32,
+        1242515
+      ],
+      "/user.slice/user-1000.slice/user@1000.service": [
+        32,
+        1242615
+      ]
+    },
+    "identities_before": {
+      "/": [
+        32,
+        1
+      ],
+      "/user.slice": [
+        32,
+        334
+      ],
+      "/user.slice/user-1000.slice": [
+        32,
+        1242515
+      ],
+      "/user.slice/user-1000.slice/user@1000.service": [
+        32,
+        1242615
+      ]
+    },
+    "rows": [
+      {
+        "finished_ns": 2322924306965921,
+        "raw": "usage_usec 1728896648000\nuser_usec 1687458019000\nsystem_usec 41438629000\nnice_usec 6485000\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/",
+        "started_ns": 2322924306927601
+      },
+      {
+        "finished_ns": 2322924307031586,
+        "raw": "usage_usec 1369236458\nuser_usec 1049769783\nsystem_usec 319466674\nnice_usec 3775000\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/user.slice",
+        "started_ns": 2322924306973185
+      },
+      {
+        "finished_ns": 2322924307077763,
+        "raw": "usage_usec 1359050\nuser_usec 1002148\nsystem_usec 356902\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/user.slice/user-1000.slice",
+        "started_ns": 2322924307038114
+      },
+      {
+        "finished_ns": 2322924307117300,
+        "raw": "usage_usec 1033384\nuser_usec 924712\nsystem_usec 108671\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/user.slice/user-1000.slice/user@1000.service",
+        "started_ns": 2322924307083411
+      }
+    ],
+    "status": "aggregate_lineage_snapshot",
+    "target": "/user.slice/user-1000.slice/user@1000.service"
+  },
+  "target": {
+    "boot_after": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+    "boot_before": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+    "identities_after": {
+      "/": [
+        32,
+        1
+      ],
+      "/system.slice": [
+        32,
+        90
+      ],
+      "/system.slice/spark-7ff0_slurmstepd.scope": [
+        32,
+        9230
+      ],
+      "/system.slice/spark-7ff0_slurmstepd.scope/job_21989": [
+        32,
+        1243259
+      ],
+      "/system.slice/spark-7ff0_slurmstepd.scope/job_21989/step_0": [
+        32,
+        1243571
+      ],
+      "/system.slice/spark-7ff0_slurmstepd.scope/job_21989/step_0/user": [
+        32,
+        1243623
+      ],
+      "/system.slice/spark-7ff0_slurmstepd.scope/job_21989/step_0/user/task_0": [
+        32,
+        1243779
+      ]
+    },
+    "identities_before": {
+      "/": [
+        32,
+        1
+      ],
+      "/system.slice": [
+        32,
+        90
+      ],
+      "/system.slice/spark-7ff0_slurmstepd.scope": [
+        32,
+        9230
+      ],
+      "/system.slice/spark-7ff0_slurmstepd.scope/job_21989": [
+        32,
+        1243259
+      ],
+      "/system.slice/spark-7ff0_slurmstepd.scope/job_21989/step_0": [
+        32,
+        1243571
+      ],
+      "/system.slice/spark-7ff0_slurmstepd.scope/job_21989/step_0/user": [
+        32,
+        1243623
+      ],
+      "/system.slice/spark-7ff0_slurmstepd.scope/job_21989/step_0/user/task_0": [
+        32,
+        1243779
+      ]
+    },
+    "rows": [
+      {
+        "finished_ns": 2322924307445401,
+        "raw": "usage_usec 1728896649000\nuser_usec 1687458019000\nsystem_usec 41438630000\nnice_usec 6485000\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/",
+        "started_ns": 2322924307412024
+      },
+      {
+        "finished_ns": 2322924307489578,
+        "raw": "usage_usec 1725559893263\nuser_usec 1687615233993\nsystem_usec 37944659269\nnice_usec 2710000\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice",
+        "started_ns": 2322924307451545
+      },
+      {
+        "finished_ns": 2322924307531130,
+        "raw": "usage_usec 1719747043644\nuser_usec 1683874488065\nsystem_usec 35872555579\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/spark-7ff0_slurmstepd.scope",
+        "started_ns": 2322924307495274
+      },
+      {
+        "finished_ns": 2322924307569915,
+        "raw": "usage_usec 92736\nuser_usec 55030\nsystem_usec 37706\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_21989",
+        "started_ns": 2322924307536282
+      },
+      {
+        "finished_ns": 2322924307607451,
+        "raw": "usage_usec 79590\nuser_usec 55101\nsystem_usec 24489\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_21989/step_0",
+        "started_ns": 2322924307575227
+      },
+      {
+        "finished_ns": 2322924307645996,
+        "raw": "usage_usec 68659\nuser_usec 52504\nsystem_usec 16155\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_21989/step_0/user",
+        "started_ns": 2322924307612620
+      },
+      {
+        "finished_ns": 2322924307684109,
+        "raw": "usage_usec 68659\nuser_usec 52504\nsystem_usec 16155\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_21989/step_0/user/task_0",
+        "started_ns": 2322924307651244
+      }
+    ],
+    "status": "aggregate_lineage_snapshot",
+    "target": "/system.slice/spark-7ff0_slurmstepd.scope/job_21989/step_0/user/task_0"
+  }
+}

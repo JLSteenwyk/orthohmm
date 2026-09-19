@@ -1,0 +1,45 @@
+{
+  "affinity": [
+    0,
+    1
+  ],
+  "executables": {
+    "/usr/bin/python3": {
+      "path": "/usr/bin/python3.12",
+      "sha256": "fe93e4766200da769b55402a0fb87df68babf9e43f563fd5323bb547556e87cc"
+    },
+    "systemctl": {
+      "path": "/usr/bin/systemctl",
+      "sha256": "78c5dd6eeefd68ea85f5702473b103d37687d7b082073f25ce62bbff79eb5636"
+    },
+    "systemd-run": {
+      "path": "/usr/bin/systemd-run",
+      "sha256": "eecc3a04930543c11d145c2348ee39af6880512df209c66a4bbe4fe600e766fd"
+    },
+    "taskset": {
+      "path": "/usr/bin/taskset",
+      "sha256": "9b3f69ab5d77a0498d3359c018048e4c1f38d9e42276d8f9545c43ef1d411dc1"
+    }
+  },
+  "job": 21989,
+  "manager": "/user.slice/user-1000.slice/user@1000.service",
+  "python": "3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0]",
+  "sources": {
+    "/home/jlsteenwyk/projects/orthohmm-publication/lineage_lifecycle_source_v2/benchmark_tools/__init__.py": "f379db82028a8af2ba14a89ec9ef6381346807470523fa1836554ba6f26a2746",
+    "/home/jlsteenwyk/projects/orthohmm-publication/lineage_lifecycle_source_v2/benchmark_tools/probe_cgroup_frontier.py": "ee8d978878adc889d6d66e50601d67dc915b1dc2645ea9fcc8c11b84dbb63635",
+    "/home/jlsteenwyk/projects/orthohmm-publication/lineage_lifecycle_source_v2/benchmark_tools/probe_cgroup_lineage.py": "347ad1c525243f19dcf047a9bf96ea6bd0242a6b7646df5c606bf3ceb37826c0",
+    "/home/jlsteenwyk/projects/orthohmm-publication/lineage_lifecycle_source_v2/benchmark_tools/probe_dgx_cpu_hierarchy.py": "e2ae95faad1630f0c055d0b5a152b87991e0c8a529ec58d7a43e072b25ee55e1",
+    "/home/jlsteenwyk/projects/orthohmm-publication/lineage_lifecycle_source_v2/benchmark_tools/probe_dgx_step_separation.py": "c00eae1c44c86f0ee02c72e4634cf4e5cc70e2656a8ebfc0f9070769f6f7f97b",
+    "/home/jlsteenwyk/projects/orthohmm-publication/lineage_lifecycle_source_v2/benchmark_tools/probe_host_counters.py": "3d3c193305085e17aa10e05be842d814f66d020d7dde285c8d9288ead2ce3f3c",
+    "/home/jlsteenwyk/projects/orthohmm-publication/lineage_lifecycle_source_v2/benchmark_tools/results/LINEAGE_LIFECYCLE_CONTROL_PROTOCOL_20260919.md": "cc4899f64d16832182bb6df8e78d42fa9bd6e0109bb4a6303bc355a59554e311",
+    "/home/jlsteenwyk/projects/orthohmm-publication/lineage_lifecycle_source_v2/benchmark_tools/run_lineage_lifecycle_control.py": "9f18a1855870a120a09a47494c15042845f048ede00ad4af2ab70220128ad537"
+  },
+  "target": "/system.slice/spark-7ff0_slurmstepd.scope/job_21989/step_0/user/task_0",
+  "uname": [
+    "Linux",
+    "spark-7ff0",
+    "6.11.0-1016-nvidia",
+    "#16-Ubuntu SMP PREEMPT_DYNAMIC Sun Sep 21 16:52:46 UTC 2025",
+    "aarch64"
+  ]
+}

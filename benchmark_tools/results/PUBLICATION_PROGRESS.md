@@ -1,5 +1,30 @@
 # Publication Progress
 
+## DGX Completed-Service Controls Executed (2026-09-19)
+
+Previous turn was progress at 993fed5: a tested aggregate lineage reader was
+added without changing frozen collectors. This turn froze and executed three
+finite owned-service lifecycle controls on the DGX. Initial attempt 21988
+failed before any workload because the exclusive batch process had 20-CPU
+affinity. Preserved that failure and used a bound two-CPU step in fresh v2
+paths; all three controls completed in 21989, exit 0:0.
+
+After each .75-process-CPU-second service exited and its cgroup disappeared,
+the user-manager aggregate retained .813623/.814886/.814222 CPU seconds and
+the signed outside-observer differences were .813403/.815919/.817895 seconds.
+All fixed response checks passed. All eight recorded source/protocol hashes
+match frozen commit 01b9c52; raw replay and independent scalar recomputation
+pass, with 63 tests total. Results, raw snapshots, source identities, both
+attempts' accounting and logs are retained; see `LINEAGE_LIFECYCLE_RESULT_21989.md`.
+
+This closes only the scoped completed-user-service accounting control, not
+specificity, during-read churn, native integration, collector overhead or
+scientific timing admission. No historical failure or threshold was changed,
+and no unrelated service was stopped. The next timing work is distinct-schema
+native integration/replay and remaining prospective controls. Pending scientific
+inference, missing TreeFam originals and full publication requirements remain
+open. The goal is not complete.
+
 ## Transient-Cgroup Collector Development (2026-09-19)
 
 Previous turn was progress: bibliography rendering and 60 passing citation
