@@ -88,6 +88,16 @@ OpenMP support; profile expansion is not silently disabled. Locally built
 wheels may use host-specific instructions and are not validated as portable
 across CPU models merely because the operating system matches.
 
+For a source build using the compiler's default CPU instruction set, run
+`ORTHOHMM_CPU_TARGET=baseline pip install --no-cache-dir --no-binary=orthohmm .`
+from the checkout. This omits `-march=native` and `-mavx2` and builds scalar
+Viterbi plus the native prefilter and alignment kernels. The default target
+is `native`; this option affects compilation, not inference settings. A
+baseline build may be slower and is still platform-specific: compiler
+defaults, OpenMP, system-library versions and dependency wheels must also be
+compatible with the deployment host. It is not a manylinux or cross-platform
+portability guarantee, and does not disable optional CUDA compilation.
+
 **Phylogeny-aware mode (experimental).** OrthoHMM can reconcile ambiguous
 multi-copy families against a validated rooted species tree. This mode is
 opt-in; `--phylogeny off` remains the default and does not load tree libraries

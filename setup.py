@@ -77,6 +77,9 @@ def _gcc_supports(flag, cc="gcc"):
 
 def build_cpu_kernels(csrc_dir: Path) -> list[str]:
     """Compile CPU kernels to .so. Returns list of successfully-built names."""
+    target = os.environ.get("ORTHOHMM_CPU_TARGET", "native")
+    if target not in {"native", "baseline"}:
+        raise ValueError("ORTHOHMM_CPU_TARGET must be 'native' or 'baseline'")
     if not _have_gcc():
         print("[orthohmm] no C compiler found — skipping CPU kernel build. "
               "Standard search can fall back to Numba (slower), but "
@@ -96,21 +99,21 @@ def build_cpu_kernels(csrc_dir: Path) -> list[str]:
         return []
 
     base = [cc, "-O3", "-fopenmp", "-shared", "-fPIC"]
-    # -march=native and -mavx2 aren't universally available; probe.
-    march_native = _gcc_supports("-march=native", cc=cc)
-    mavx2 = _gcc_supports("-mavx2", cc=cc)
+    # Baseline uses the compiler's default ISA and the scalar Viterbi path.
+    march_native = target == "native" and _gcc_supports("-march=native", cc=cc)
+    mavx2 = target == "native" and _gcc_supports("-mavx2", cc=cc)
     if march_native:
         base.append("-march=native")
 
     built = []
     for fname, needs_avx2, needs_math in CPU_KERNELS:
-        if needs_avx2 and not mavx2:
+        if target == "native" and needs_avx2 and not mavx2:
             print(f"[orthohmm] skipping {fname} (no AVX2)", file=sys.stderr)
             continue
         src = csrc_dir / fname
         dst = csrc_dir / fname.replace(".c", ".so")
         cmd = list(base)
-        if needs_avx2:
+        if needs_avx2 and mavx2:
             cmd.append("-mavx2")
         cmd += ["-o", str(dst), str(src)]
         if needs_math:
