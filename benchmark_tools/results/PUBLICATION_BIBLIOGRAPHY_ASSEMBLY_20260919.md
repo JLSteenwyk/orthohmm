@@ -1,6 +1,47 @@
 # Consolidated Selected Bibliography
 
-## Current 37-Record Export
+## Current Author-Reviewed Export
+
+`publication_bibliography_20260919_v3.csl.json` retains all 37 records and
+changes exactly one field from v2: the second OrthoHMM author's CSL suffix
+is `III`. The [author's publication list](https://jlsteenwyk.com/publications.html)
+explicitly includes this suffix for DOI 10.1101/2024.12.07.627370. The
+[bioRxiv API](https://api.biorxiv.org/details/biorxiv/10.1101/2024.12.07.627370)
+omits it in both deposited versions, as does the retained Crossref record.
+This is an author-source-supported rendering correction, not a claim that
+the publisher supplied the suffix. The article page returned HTTP 403;
+no access restriction was bypassed and no full-text byline verification is
+claimed. Article date, author order, title and preprint status are unchanged.
+
+The correction is explicit in
+`publication_orthohmm_suffix_provenance_20260919.json`, including before/after
+author fields and SHA-256-bound source snapshots. Raw Crossref and all
+earlier exports remain unchanged. The locally retained author page and API
+response have SHA-256 values respectively
+`d713be57a6457ba281f9a275f290df253ab095692de61c9aba4c58431b1d5a25`
+and `fbbf4f22c8b2f98bada38e48ffdd7e1eb1efb5864edb6c03ffad4737bcf0d933`.
+These source webpages/API responses are not committed.
+
+```sh
+python benchmark_tools/correct_orthohmm_citation_suffix.py \
+  --raw benchmark_tools/results/publication_references_20260918.csl.json \
+  --author-page benchmarks/work/steenwyk_publications_20260919.html \
+  --api benchmarks/work/orthohmm_biorxiv_metadata_20260919.json \
+  --output NEW_REVIEWED_REFERENCES.csl.json --provenance NEW_SUFFIX_PROVENANCE.json
+python benchmark_tools/assemble_publication_citations.py \
+  --manifest benchmark_tools/results/publication_bibliography_selection_20260919_v3.json \
+  --output NEW_BIBLIOGRAPHY.csl.json --provenance NEW_PROVENANCE.json
+```
+
+The first command reproduces the reviewed 14-record source; the second uses
+the retained, checksum-bound copy selected in v3. Final bibliography SHA-256:
+`353ff5508b647d8b49bdd5ca64b49f5ec870a4000f2dd0de73a942e234f68c4a`.
+Forty-one focused tests pass, including source-change rejection, output
+overwrite refusal, exact one-field correction and relocated v3 assembly.
+The suffix review is now resolved at the stated author-source evidence level;
+journal rendering, full bibliography coverage and rights review remain open.
+
+## igraph Export (v2)
 
 `publication_bibliography_20260919_v2.csl.json` adds the reviewed igraph
 article citation to the original 36-record selection. All original records

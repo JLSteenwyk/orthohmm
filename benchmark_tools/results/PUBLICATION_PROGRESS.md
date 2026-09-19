@@ -1,5 +1,23 @@
 # Publication Progress
 
+## OrthoHMM Citation Suffix Reviewed (2026-09-19)
+
+Previous turn made progress at c5f75a2 by adding the missing igraph CSL
+record. This turn resolved the remaining OrthoHMM suffix issue at an explicit
+evidence level: the author's publication list includes T. J. Buida III for
+the exact DOI, while Crossref and both versions in the bioRxiv API omit it.
+The article page returned 403; no publisher full-text byline is claimed.
+
+Added a source-bound, separately exported one-field correction, preserving
+raw Crossref, both API versions and earlier CSL exports. The new v3
+bibliography still has 37 records; only the suffix differs from v2. No dates,
+titles, author order or preprint status changed. Forty-one tests passed,
+including immutable inputs, wrong-source rejection, exact field preservation
+and relocated assembly. Source hashes, commands and limitations are in
+`PUBLICATION_BIBLIOGRAPHY_ASSEMBLY_20260919.md`. No benchmark, native executor
+or inference default changed. Journal rendering, full coverage, rights,
+controlled timing and pending inference remain incomplete.
+
 ## igraph Added To Selected Bibliography (2026-09-19)
 
 Previous goal turn was progress: stale timing status was corrected and the

@@ -1,0 +1,53 @@
+{
+  "author_page": {
+    "bytes": 107033,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/steenwyk_publications_20260919.html",
+    "sha256": "d713be57a6457ba281f9a275f290df253ab095692de61c9aba4c58431b1d5a25"
+  },
+  "change": {
+    "after": {
+      "family": "Buida",
+      "given": "Thomas J.",
+      "suffix": "III"
+    },
+    "author_index": 1,
+    "before": {
+      "family": "Buida",
+      "given": "Thomas J."
+    }
+  },
+  "citation_id": "orthohmm2024preprint",
+  "doi": "10.1101/2024.12.07.627370",
+  "limitations": [
+    "Manual review of the author publication list supports this suffix; not a parsed publisher byline.",
+    "Crossref and bioRxiv API omit the suffix; both original snapshots remain unchanged.",
+    "Only one suffix field changes. No title, date, author order, other record, or preprint status changes.",
+    "The bioRxiv article page returned HTTP 403 during review; no access restriction was bypassed.",
+    "Not journal rendering, full-text scientific validation or executed-method provenance."
+  ],
+  "output": {
+    "bytes": 14562,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_references_reviewed_20260919.csl.json",
+    "sha256": "d3c73777411956d0bb540207618b2c994d88120724815e2678853a7d46d8d8ca"
+  },
+  "publisher_api": {
+    "bytes": 2991,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthohmm_biorxiv_metadata_20260919.json",
+    "sha256": "fbbf4f22c8b2f98bada38e48ffdd7e1eb1efb5864edb6c03ffad4737bcf0d933"
+  },
+  "raw": {
+    "bytes": 14537,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_references_20260918.csl.json",
+    "sha256": "c44a7eb5b6eec9e4fa5d0c13146d194fe932888931fd8adb62fa66095f45f3e8"
+  },
+  "source": {
+    "bytes": 3674,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/correct_orthohmm_citation_suffix.py",
+    "sha256": "1f79f9ba412e29b1ca406de02fb4961b70469546ca1ffc933d782b2a2f56b301"
+  },
+  "source_urls": [
+    "https://jlsteenwyk.com/publications.html",
+    "https://api.biorxiv.org/details/biorxiv/10.1101/2024.12.07.627370"
+  ],
+  "status": "author_source_supported_orthohmm_suffix_exported"
+}

@@ -18,10 +18,13 @@ adds bounded attribution for TreeFam, SwissTree, FAS, VGNC and GO, including
 a [source-bound annotation citation export](publication_annotation_references_20260918.csl.json).
 Remaining dependency/resource citations and journal-specific
 formatting are incomplete.
-The [consolidated selected bibliography](publication_bibliography_20260919_v2.csl.json)
+The [consolidated selected bibliography](publication_bibliography_20260919_v3.csl.json)
 contains 37 records from nine pinned exports, using the reviewed bylines
 and an explicitly transcribed official igraph article citation. The original
-36-record export is retained unchanged.
+36-record export is retained unchanged. The current export also restores
+the OrthoHMM author's `III` suffix using the author's publication list,
+with the raw Crossref omission preserved and the evidence level documented
+in the [assembly notes](PUBLICATION_BIBLIOGRAPHY_ASSEMBLY_20260919.md).
 [Assembly instructions and limits](PUBLICATION_BIBLIOGRAPHY_ASSEMBLY_20260919.md)
 preserve the distinction between that selection and complete citation coverage.
 
