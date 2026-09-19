@@ -849,8 +849,14 @@ SwissTrees F1 0.798459, TreeFam-A F1 0.771956 and FAS 0.736680, with
 15,248,739 mapped native pairs and secondary mean 0.769506. A fresh frozen
 admission reproduced its complete report byte-for-byte. These two rows
 show different point-estimate trade-offs, not a uniform advantage. The
-[partial corrected table](qfo_corrected_comparison_20260918_v2/scores.md)
+[partial corrected table](qfo_corrected_comparison_20260918_v3/scores.md)
 does not yet complete the eight-method comparison or establish paired uncertainty.
+The admitted high-sensitivity OrthoHMM row now adds GO 0.472271, EC 0.932038,
+VGNC F1 0.665933, SwissTrees F1 0.685498, TreeFam-A F1 0.605008 and FAS
+0.776585 (secondary mean 0.689555), from 9,032,719 mapped group-derived
+pairs. This is p1_c0_r0, not the p0_c0_r0 initial-HMM ablation. The checked
+replay establishes its partition equivalence to the corrected native run.
+[Method identity and export checks](QFO_CORRECTED_MAIN_TABLE_20260918.md).
 Old groups, trees, scores and confidence intervals cannot
 be relabeled as corrected results. The previously measured 53 legacy BLAST
 query failures also belong to the original run; failures in the corrected

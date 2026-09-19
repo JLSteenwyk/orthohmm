@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Corrected Main Comparison Includes High Sensitivity (2026-09-18 UTC)
+
+Previous turn made progress through 4c8170c with corrected sequence-control
+intervals. Reread the full objective and confirmed OrthoFinder, reconciliation
+and DGX task15 are live; OrthoMCL remains pending resources. The main corrected
+table still omitted the newly admitted high-sensitivity result because its
+admission schema differs from comparator tools.
+
+Added a separate exporter preserving all frozen helpers. It accepts only
+p1_c0_r0/p1_c1_r1 as the two publication OrthoHMM methods, requires the pinned
+independent corrected replay admission, and reuses both existing score
+adapters. Generated a new three-admitted/five-missing comparison with explicit
+prediction semantics and mapping losses. No initial-HMM ablation score was
+substituted for high sensitivity and no historical table was overwritten.
+[Evidence and limitations](QFO_CORRECTED_MAIN_TABLE_20260918.md).
+
+The combined adapter and old exporters pass 70 focused tests. Updated the
+manuscript and claim checklist; paired competitor uncertainty, remaining
+corrected inference and the complete DGX timing audit remain unfinished.
+
 ## Corrected Sequence-Control Intervals Complete (2026-09-18 UTC)
 
 Following b3760f4, the frozen runner completed source-bound reconstruction
