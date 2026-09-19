@@ -77,6 +77,11 @@ retained scientific evidence to resolve a packaging question.
 
 ## Remaining Actions
 
+The [retained wheel inventory](PUBLICATION_WHEEL_CONTENTS_20260919.md)
+verifies its embedded project license and all RECORD entries, and identifies
+static CUDA runtime code needing separate release review. It does not clear
+the binary, installed dependencies, competitors or container images.
+
 1. Match intended archive entries to source releases, terms and attribution.
 2. Resolve OrthoBench data/scorer and YGOB redistribution questions with
    maintainers or use approved source-acquisition-only packaging where needed.

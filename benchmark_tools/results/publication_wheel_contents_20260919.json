@@ -1,0 +1,262 @@
+{
+  "wheel": "benchmarks/work/publication_clean_install_4fe2c28/wheels/orthohmm-0.5.0-cp310-cp310-linux_x86_64.whl",
+  "wheel_sha256": "b06264e52edb784a6524a1a3a97c2099dbbd2e3a52cb5cbe57ac32d56b059e5b",
+  "wheel_bytes": 499209,
+  "record_verified": true,
+  "embedded_project_license_matches": true,
+  "requires_dist": [
+    "numpy>=1.23",
+    "numba>=0.58",
+    "python-igraph",
+    "leidenalg",
+    "dendropy>=5.0; extra == \"phylogeny\""
+  ],
+  "entries": [
+    {
+      "path": "orthohmm/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "orthohmm/__main__.py",
+      "bytes": 127,
+      "sha256": "59690e02073880a5ec60087a93d77e3448a3370bb78fb17ee9ce9d5300d0d45a"
+    },
+    {
+      "path": "orthohmm/accuracy.py",
+      "bytes": 14046,
+      "sha256": "1a35944ab7fea859143f599b1262aa111272787f6f735b9acc37d299427f2ad6"
+    },
+    {
+      "path": "orthohmm/args_processing.py",
+      "bytes": 7908,
+      "sha256": "12648aeaa4e8d0b0af60f707e90ec2c95b6983c4498dacd9bccfade1839f4c54"
+    },
+    {
+      "path": "orthohmm/externals.py",
+      "bytes": 10166,
+      "sha256": "5304b4190b01a53c7c4e3235f9d1df9e7eff1f01d09633d07750103487268115"
+    },
+    {
+      "path": "orthohmm/files.py",
+      "bytes": 2943,
+      "sha256": "c54ca3f46a6cef17da3c0623ab7675e8fe4b3e484765b4eaa76642ffba981e5a"
+    },
+    {
+      "path": "orthohmm/helpers.py",
+      "bytes": 32303,
+      "sha256": "ca0f4b572480bfb046399a4e87de605dd22ca7b211aa3e9f14da580567f40bc6"
+    },
+    {
+      "path": "orthohmm/leiden_worker.py",
+      "bytes": 1411,
+      "sha256": "7d6d9fa5827bd99dcce28d2248688bbeb762b4b547bbc4e7491c16f0e2090c41"
+    },
+    {
+      "path": "orthohmm/metrics.py",
+      "bytes": 6812,
+      "sha256": "d19bc9c9777b2dd01943f6421930f9fab02b7153519ab76e6a40272328195a1a"
+    },
+    {
+      "path": "orthohmm/orthohmm.py",
+      "bytes": 30663,
+      "sha256": "2afb89b9dc683e64e58208188f720e07701d4760ff09d1ac3a53c7a8075b84bb"
+    },
+    {
+      "path": "orthohmm/parser.py",
+      "bytes": 15939,
+      "sha256": "9a959b9948d944fc5361a661ac3faad55575674993c746800daf6db7eccceba5"
+    },
+    {
+      "path": "orthohmm/phylogeny.py",
+      "bytes": 29732,
+      "sha256": "216d97608e6dede8960f3b06fe7036bd23da8fae5677df88583ba9369ec3c1bf"
+    },
+    {
+      "path": "orthohmm/phylogeny_pipeline.py",
+      "bytes": 41369,
+      "sha256": "44e00316546b5df78354badd2b1a6bb595b685e98b86f686f1a32543d7f15e4f"
+    },
+    {
+      "path": "orthohmm/refinement.py",
+      "bytes": 61183,
+      "sha256": "991f1eb6a5f73d0442529ed19095a34b7c6ba8bff8dfe43a1127e24ec73fb26d"
+    },
+    {
+      "path": "orthohmm/version.py",
+      "bytes": 22,
+      "sha256": "2c12b8ea17aeb6f9f72a6b02aca218bbc4508a46df9e365a8f6c45ad769e0b34"
+    },
+    {
+      "path": "orthohmm/writer.py",
+      "bytes": 2949,
+      "sha256": "d3dc7a318166272762395dfcb772d8779286bbf60023b2934a7d7bef0e0003fe"
+    },
+    {
+      "path": "orthohmm/search/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "orthohmm/search/engine.py",
+      "bytes": 21146,
+      "sha256": "596e6e56b6dd3c2e72bbfa5bb67087285bd22833e4897443df0f9629a2f18b74"
+    },
+    {
+      "path": "orthohmm/search/evalue.py",
+      "bytes": 1865,
+      "sha256": "b395cd48874d75963512b5d1e249c5251796f869592a52983c8d55b98fe11841"
+    },
+    {
+      "path": "orthohmm/search/matrices.py",
+      "bytes": 27982,
+      "sha256": "36e59a6c649a72f9c3a5d6eca117b7fe84d5ff8e975a1d7561a82ee8d6c29fcb"
+    },
+    {
+      "path": "orthohmm/search/msa_center_star.py",
+      "bytes": 9551,
+      "sha256": "47e0a8fcf49b2a9e01d613695a238dc2cd9d53f3a1680d69b4cf565ab4cc6036"
+    },
+    {
+      "path": "orthohmm/search/msa_profile.py",
+      "bytes": 6728,
+      "sha256": "d4076b61905325f643dca1f7a6b4dbd6f2833398840fad7b79e3f255f2240468"
+    },
+    {
+      "path": "orthohmm/search/prefilter.py",
+      "bytes": 22855,
+      "sha256": "9842b1787d98a89bd819f9adbe340b6e2a170d63d16057645720a6bc9faf6d06"
+    },
+    {
+      "path": "orthohmm/search/profile.py",
+      "bytes": 6143,
+      "sha256": "20dca3dea06a85bdcf99e03e3abfab921fce38b9d7715097b0b4588a7cd7587e"
+    },
+    {
+      "path": "orthohmm/search/profile_expansion.py",
+      "bytes": 25189,
+      "sha256": "cb899e34f3b634a37a10296688141fc65933085ce49a2b6bcafa01125d9a4598"
+    },
+    {
+      "path": "orthohmm/search/sequences.py",
+      "bytes": 4509,
+      "sha256": "e083679cb9ea780664943355d260f398a96d93a2db336bb615af1032766f5980"
+    },
+    {
+      "path": "orthohmm/search/species_prune.py",
+      "bytes": 5324,
+      "sha256": "d729b9aa8ddf311c52e1d46c51d89dc5a6ef5d64ccd979deca90b7d980905b9e"
+    },
+    {
+      "path": "orthohmm/search/viterbi.py",
+      "bytes": 17693,
+      "sha256": "ba8543538d9bcbd55c5eaf5c7c3d5725a62c071b00d925f5fabaa474001948ba"
+    },
+    {
+      "path": "orthohmm/search/viterbi_cuda_ctypes.py",
+      "bytes": 4420,
+      "sha256": "fba688e77941c92c5e4080ef5de3dc23e4dfee6c5c2dad5d7ccdf876f81f9d20"
+    },
+    {
+      "path": "orthohmm/search/csrc/hmm_viterbi.c",
+      "bytes": 46143,
+      "sha256": "109bfbadd8af9b5e19a5f0d496e2b7a78503567ab4a8095fceafbb171b3d6693"
+    },
+    {
+      "path": "orthohmm/search/csrc/hmm_viterbi.so",
+      "bytes": 58856,
+      "sha256": "de7fcfe563992ba47f4b0df98dbc1be3623257c7b14bc268efc53184a81af72e",
+      "readelf_dynamic": "\nDynamic section at offset 0xcdd8 contains 26 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libgomp.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [ld-linux-x86-64.so.2]\n 0x000000000000000c (INIT)               0x1000\n 0x000000000000000d (FINI)               0xb92c\n 0x0000000000000019 (INIT_ARRAY)         0xddc8\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0xddd0\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x328\n 0x0000000000000005 (STRTAB)             0x608\n 0x0000000000000006 (SYMTAB)             0x368\n 0x000000000000000a (STRSZ)              642 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0xdfe8\n 0x0000000000000002 (PLTRELSZ)           384 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0xa38\n 0x0000000000000007 (RELA)               0x978\n 0x0000000000000008 (RELASZ)             192 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x8c8\n 0x000000006fffffff (VERNEEDNUM)         3\n 0x000000006ffffff0 (VERSYM)             0x88a\n 0x000000006ffffff9 (RELACOUNT)          3\n 0x0000000000000000 (NULL)               0x0\n",
+      "cuda_runtime_symbol_witnesses": []
+    },
+    {
+      "path": "orthohmm/search/csrc/hmm_viterbi_cuda.cu",
+      "bytes": 13696,
+      "sha256": "aa0a7a6fa53da025f28607a055364c08c365e561033a48dcf2c4381d350301d2"
+    },
+    {
+      "path": "orthohmm/search/csrc/hmm_viterbi_cuda.so",
+      "bytes": 1062904,
+      "sha256": "1920da8a3c2e156f0c87951c561a730ede7883991cddd86c14da5862a6a6096b",
+      "readelf_dynamic": "\nDynamic section at offset 0xbbb40 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [ld-linux-x86-64.so.2]\n 0x000000000000000c (INIT)               0x8000\n 0x000000000000000d (FINI)               0x88904\n 0x0000000000000019 (INIT_ARRAY)         0xb8000\n 0x000000000000001b (INIT_ARRAYSZ)       32 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0xb8020\n 0x000000000000001c (FINI_ARRAYSZ)       16 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x298\n 0x0000000000000005 (STRTAB)             0x1230\n 0x0000000000000006 (SYMTAB)             0x2d0\n 0x000000000000000a (STRSZ)              2177 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0xbbfe8\n 0x0000000000000002 (PLTRELSZ)           3552 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x66d0\n 0x0000000000000007 (RELA)               0x1cc0\n 0x0000000000000008 (RELASZ)             18960 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x1c00\n 0x000000006fffffff (VERNEEDNUM)         2\n 0x000000006ffffff0 (VERSYM)             0x1ab2\n 0x000000006ffffff9 (RELACOUNT)          776\n 0x0000000000000000 (NULL)               0x0\n",
+      "cuda_runtime_symbol_witnesses": [
+        "000000000001db30 t __cudaRegisterFatBinary",
+        "000000000001db60 t __cudaRegisterFatBinaryEnd",
+        "0000000000055660 t cudaFree",
+        "0000000000055a00 t cudaFreeArray",
+        "000000000007b4e0 t cudaFreeAsync",
+        "000000000005e090 t cudaFreeAsync_ptsz",
+        "0000000000055830 t cudaFreeHost",
+        "0000000000055bd0 t cudaFreeMipmappedArray",
+        "0000000000054dc0 t cudaMalloc",
+        "0000000000056780 t cudaMalloc3D",
+        "0000000000056990 t cudaMalloc3DArray",
+        "00000000000553f0 t cudaMallocArray",
+        "000000000007b2e0 t cudaMallocAsync",
+        "000000000005de90 t cudaMallocAsync_ptsz",
+        "000000000007b6e0 t cudaMallocFromPoolAsync",
+        "000000000005f090 t cudaMallocFromPoolAsync_ptsz",
+        "0000000000054fb0 t cudaMallocHost",
+        "0000000000054bc0 t cudaMallocManaged",
+        "0000000000056bf0 t cudaMallocMipmappedArray",
+        "00000000000551a0 t cudaMallocPitch"
+      ]
+    },
+    {
+      "path": "orthohmm/search/csrc/kmer_prefilter.c",
+      "bytes": 10657,
+      "sha256": "8124e2652cb382549f2a282c3122aaa9f5c393da2b304b5d4f6cb92fae243f01"
+    },
+    {
+      "path": "orthohmm/search/csrc/kmer_prefilter.so",
+      "bytes": 20632,
+      "sha256": "348b1c715e2e305dae7e889bae1d2498e609e48ce5d50cd668db71b548c60b88",
+      "readelf_dynamic": "\nDynamic section at offset 0x3df8 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libgomp.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x1000\n 0x000000000000000d (FINI)               0x2608\n 0x0000000000000019 (INIT_ARRAY)         0x4de8\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x4df0\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x2f0\n 0x0000000000000005 (STRTAB)             0x4b0\n 0x0000000000000006 (SYMTAB)             0x318\n 0x000000000000000a (STRSZ)              371 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x4fe8\n 0x0000000000000002 (PLTRELSZ)           240 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x770\n 0x0000000000000007 (RELA)               0x6c8\n 0x0000000000000008 (RELASZ)             168 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x648\n 0x000000006fffffff (VERNEEDNUM)         2\n 0x000000006ffffff0 (VERSYM)             0x624\n 0x000000006ffffff9 (RELACOUNT)          3\n 0x0000000000000000 (NULL)               0x0\n",
+      "cuda_runtime_symbol_witnesses": []
+    },
+    {
+      "path": "orthohmm/search/csrc/pair_align.c",
+      "bytes": 9098,
+      "sha256": "c5a3c2bc869ec59ca8261c976d6e77e5938faf5bfd8571566315b81cf5b08e9a"
+    },
+    {
+      "path": "orthohmm/search/csrc/pair_align.so",
+      "bytes": 20784,
+      "sha256": "81c26c6ce92b1da37285824ea1b8dcea007a7fc18a11ee5fa3d150628fa800c7",
+      "readelf_dynamic": "\nDynamic section at offset 0x3df8 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libgomp.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x1000\n 0x000000000000000d (FINI)               0x2e38\n 0x0000000000000019 (INIT_ARRAY)         0x4de8\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x4df0\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x2f0\n 0x0000000000000005 (STRTAB)             0x4f8\n 0x0000000000000006 (SYMTAB)             0x318\n 0x000000000000000a (STRSZ)              437 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x4fe8\n 0x0000000000000002 (PLTRELSZ)           312 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x800\n 0x0000000000000007 (RELA)               0x758\n 0x0000000000000008 (RELASZ)             168 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x6d8\n 0x000000006fffffff (VERNEEDNUM)         2\n 0x000000006ffffff0 (VERSYM)             0x6ae\n 0x000000006ffffff9 (RELACOUNT)          3\n 0x0000000000000000 (NULL)               0x0\n",
+      "cuda_runtime_symbol_witnesses": []
+    },
+    {
+      "path": "orthohmm-0.5.0.dist-info/licenses/LICENSE.md",
+      "bytes": 1078,
+      "sha256": "4b9b0c3ffc73fce4c47734d7ef12bd70b9d2cdc4a3bf76ac0f3a35edbe2c3d9e"
+    },
+    {
+      "path": "orthohmm-0.5.0.dist-info/METADATA",
+      "bytes": 12865,
+      "sha256": "d9a31377516dc6b99d3e2d36e1a939294e3eba8621cbf3802381c49c773ab675"
+    },
+    {
+      "path": "orthohmm-0.5.0.dist-info/WHEEL",
+      "bytes": 104,
+      "sha256": "bb2f29fb8aff40c9fc07118cf258ce8541c78c4e81e58078c2c3d5ff21f672c2"
+    },
+    {
+      "path": "orthohmm-0.5.0.dist-info/entry_points.txt",
+      "bytes": 52,
+      "sha256": "fc529f6e2c11e3a70a98adc08bb56089a9590905865f0b4af7ab67f3d3fe4f6c"
+    },
+    {
+      "path": "orthohmm-0.5.0.dist-info/top_level.txt",
+      "bytes": 9,
+      "sha256": "1f55bee29a4dfa2cb6a86ef39d8e491d30df6df5297e147f811dce7fef3b6556"
+    },
+    {
+      "path": "orthohmm-0.5.0.dist-info/RECORD",
+      "bytes": 3631,
+      "sha256": "1aa791d43febc73485f45a29ac32bce38b66c6cb653c1b9bbee408131efdee36"
+    }
+  ],
+  "redistribution_clearance": false,
+  "scope": "Byte inventory and direct ELF linkage only; not a complete static dependency or legal audit"
+}

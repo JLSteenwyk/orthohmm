@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Retained Wheel Inventory and Static Runtime Finding (2026-09-19)
+
+The preceding TreeFam follow-up reverified retained files but recovered no
+new source material, so it did not advance that unresolved requirement.
+Reread the full objective and checked authoritative scheduler state:
+21760_1 and 21706_1 remain RUNNING; 21713 is resource-pending and 21762
+dependency-pending. No analysis was restarted.
+
+Audited the retained 499209-byte clean-install wheel: all43 entries covered,
+all42 recorded hashes/sizes valid, project license identical. Readelf/nm
+inspection identifies static CUDA runtime code inside the CUDA library;
+the sole standalone license document is the project MIT file. Added a
+reproducible inventory tool and four passing focused tests. The initial
+repository-venv test attempt lacked pytest; system Python passed.
+[Evidence and release-review action](PUBLICATION_WHEEL_CONTENTS_20260919.md).
+
+No binary, scientific configuration or frozen runtime changed. CUDA
+redistribution review remains open, as do corrected analyses, controlled
+resource comparisons and the final manuscript/release requirements.
+
 ## Native CPU Pressure Responds To Frozen Injection Controls (2026-09-18 UTC)
 
 Previous turn made progress through af04ac5 with DGX interface verification.
