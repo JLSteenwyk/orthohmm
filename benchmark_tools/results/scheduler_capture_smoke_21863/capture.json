@@ -1,0 +1,27 @@
+{
+  "array_id": 21863,
+  "expected_tasks": 2,
+  "limitations": [
+    "Collection only, not allocation-policy or native-output validation.",
+    "No recovery of records expired before observation; no sacct substitution.",
+    "Run on the controller host; no SSH or compute-node reads are performed.",
+    "Retains the first detailed terminal record; retries/requeues require separate policy validation."
+  ],
+  "missing_tasks": [],
+  "observation_errors": 0,
+  "polls": 51,
+  "retained": {
+    "0": {
+      "path": "scheduler_0.txt",
+      "poll": 20,
+      "sha256": "651452068bea70362a9b2a75414d9319a94ae058265c3157e3b180f7c302ebed"
+    },
+    "1": {
+      "path": "scheduler_1.txt",
+      "poll": 50,
+      "sha256": "9de8df0e48e0103f1175a71f7ce7267ed3eb9b4ae5d7970eededb9fdeff4f637"
+    }
+  },
+  "scientific_timings_admitted": false,
+  "status": "complete_controller_capture"
+}

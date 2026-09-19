@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Scheduler Capture Automated And Smoke-Tested (2026-09-18 UTC)
+
+Previous turn made progress through 013a239 with the completed, incomplete-
+evidence DGX audit. Reread the full objective and verified corrected QfO
+scoring, reconciliation and OrthoFinder still live. Implemented a controller-
+only collector retaining raw observations and exact detailed terminal task
+records before expiry, without accounting substitution or overwriting prior
+captures. Twenty new and 38 existing provenance tests pass. Committed and
+pushed the helper as 25ff712 before live validation.
+
+Local array21863 ran two three-second sleep tasks, both completed 0:0. The
+collector captured both terminal records with zero observation errors and
+exited 0. Retained the unchanged receipt and records; raw polls remain in
+the work archive. [Evidence and future workflow](SCHEDULER_CAPTURE_VALIDATION_20260918.md).
+Expiry handling is unit-tested, not established by waiting for controller
+expiry in the smoke test. No DGX experiment was submitted, no old record was
+fabricated, and no frozen timing admission rule changed. Transient cgroup
+measurement and the remaining publication requirements still need work.
+
 ## DGX Overhead Audit Finished Without Panel Admission (2026-09-18 UTC)
 
 The preceding archive-search turn was no progress: it rechecked already

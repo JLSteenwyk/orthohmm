@@ -78,7 +78,10 @@ that the services changed native runtime. Neither service was stopped.
 ## Required Follow-up
 
 Before another timing panel, make allocation-record collection automatic and
-test it against controller retention expiry. Diagnose observation of transient
+test it against controller retention expiry. This collection follow-up is
+now implemented with simulated-expiry tests and a live local smoke:
+[validation and usage](SCHEDULER_CAPTURE_VALIDATION_20260918.md). It does not
+recover the missing records in this panel. Diagnose observation of transient
 service cgroups without deleting their activity or weakening the current
 panel's checks. Validate any revised measurement design separately and freeze
 its inclusion rules before a new complete experiment. Do not selectively
