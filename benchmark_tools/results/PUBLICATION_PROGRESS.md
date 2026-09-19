@@ -1,5 +1,25 @@
 # Publication Progress
 
+## First Corrected Reconciliation Passed Native Admission (2026-09-18 UTC)
+
+Previous turn made progress through 25def43 with exact isolated statistical
+reproduction. Reread the objective and observed 21760_0 finish 0:0 in 1:14:36.
+Independent admission 21761 finished 0:0 in 2:17. Retained its unchanged
+receipt: 5,113,820 native ortholog pairs, all 984,137 genes preserved in
+397,041 root HOGs, and 157,585 recorded artifacts checked. This is p0_c0_r1,
+not the publication satellite_v2 arm. [Evidence and scope](QFO_CORRECTED_FIRST_RECONCILIATION_20260918.md).
+Conversion 21766 started; accuracy remains pending scoring/admission.
+
+DGX final task17 remains live. Pre-collection review found that local
+scheduler_8 through scheduler_16 files contain sacct accounting rather than
+the detailed scontrol records required by the existing provenance auditor.
+Completed-task scontrol lookups for tasks8 and16 no longer return records.
+This is a retained evidence gap, not grounds to fabricate details or relax
+the audit. Saved task17's live allocation record and started a local-only
+terminal-record watcher. No SSH/SCP or remote log read was made during the
+quiet window. The complete panel will retain all failures and missing
+evidence; no scientific timing admission is claimed.
+
 ## Corrected Sequence Statistics Reproduce In Isolation (2026-09-18 UTC)
 
 Previous turn made progress through 6b9ead9 with the refreshed figure bundle.
