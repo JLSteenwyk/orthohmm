@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Dual-Bracket Controls Executed and Replayed (2026-09-19)
+
+Previous turn made progress with the reader and prespecified protocol.
+Implemented and tested the runner (47 focused tests; batch syntax passes),
+committed/pushed `081437b`, verified the DGX idle and transferred a
+checksum-verified 433-file recipe. Exclusive job 21911 completed0:0 in19s.
+
+All nine controls are valid. All six quiet/native-only narrow screens pass;
+all three contended screens flag positive excess CPU. Native PSI responses
+exceed the frozen minimum in every block. Independently checked 432 source
+hashes, standalone trial evidence and all numerical/workload replays;
+the complete summary reproduces exactly.
+[Evidence and limits](DUAL_BRACKET_CONTROL_RESULT_21911.md).
+
+No scientific timing is admitted. Full-node/native burst behavior,
+collector overhead and identity churn remain unresolved. Corrected
+OrthoFinder was confirmed RUNNING at8:40:40; OrthoMCL and strata remain
+resource/dependency pending. Publication readiness remains unproven.
+
 ## Prospective Dual-Bracket Reader and Protocol (2026-09-19)
 
 Previous turn made progress by isolating the retained bracket effect.
