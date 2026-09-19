@@ -1,5 +1,35 @@
 # Publication Progress
 
+## CPM Inferred-Phylogeny Runner Implemented (2026-09-19)
+
+Previous turn was progress: independent candidate admission was completed,
+tested and queued. Scheduler checks confirm OrthoFinder scoring 21735_1
+remains running (1:10:36), admission pending; BLAST and DGX timing/recorder
+remain live. DGX has 14 completed tasks, one retained failed task, task 15
+running and two pending. No DGX SSH or native-output inspection was used.
+
+Added a CPM phylogeny runner using each admitted variant's own seed,
+candidate partition and membership constraints. It pins candidate admission
+21969/source/executor, checks all records and the independently admitted
+full-pipeline baseline, and freshly reproduces candidate admission before
+native inference. The existing cell builder retains species-tree mode infer
+and only permits baseline raw-tree/alignments cache reuse under frozen
+membership/sequence/tool rules. No supplied tree or default selection occurs.
+
+Extracted the existing baseline-verification portion of the candidate runner
+into a reusable helper without changing its checks or return semantics.
+Already submitted executors are unchanged. Preflight, fresh admission,
+execution and failed/successful postflight evidence are retained; success
+remains pending native validation. Inputs and frozen source equivalence are
+rechecked after inference; no implicit retry or overwrite is allowed.
+
+Tests: 109 focused cases passed in 1.03 seconds, covering both CPM admissions,
+altered sources/seed/context, scheduler/allocation gates, inferred-tree argv,
+variant-specific constraints, unchanged original commands, fresh-admission
+mismatch, failure retention and candidate-runner regression behavior. The
+batch uses two serial 32-CPU/192-GiB tasks, 24 hours/no requeue, afterany and
+aftercorr:21969. Native-output admission, conversion and scoring remain open.
+
 ## Independent CPM Candidate Admission Implemented (2026-09-19)
 
 Array 21969 is queued from pushed frozen commit 348454c; both tasks confirmed

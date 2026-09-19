@@ -54,6 +54,13 @@ def verify_sources(root, index):
         raise ValueError("Candidate admission source differs")
     for item in [*admission["checked_records"], admission["preparation"], arm["partition"], arm["constraints"]]:
         check(item)
+    manifest, original, launcher, prepared_executor, environment, records = verify_baseline(root)
+    return arm, manifest, original, launcher, prepared_executor, environment, [record(path), *records], scheduler
+
+
+def verify_baseline(root):
+    """Verify the reusable full-pipeline baseline without selecting a parameter arm."""
+    results = root / "benchmark_tools/results"
     baseline_path = results / "qfo_corrected_factorial_native_admission_21764.json"
     baseline = read_frozen(baseline_path, BASELINE_SHA)
     if baseline["status"] != "corrected_qfo_native_pair_output_verified" or baseline["cell"] != "p1_c1_r1":
@@ -74,8 +81,8 @@ def verify_sources(root, index):
     environment_path = results / "publication_variable_native_methods_20260916.json"
     environment = read_frozen(environment_path, ENVIRONMENT_SHA)
     verify_environment(environment)
-    records = [record(path), record(baseline_path), record(environment_path), status_record]
-    return arm, manifest, original, launcher, prepared_executor, environment, records, scheduler
+    records = [record(baseline_path), record(environment_path), status_record]
+    return manifest, original, launcher, prepared_executor, environment, records
 
 
 def run(root, index):
