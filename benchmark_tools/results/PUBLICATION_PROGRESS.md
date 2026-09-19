@@ -1,5 +1,31 @@
 # Publication Progress
 
+## DGX Overhead Audit Finished Without Panel Admission (2026-09-18 UTC)
+
+The preceding archive-search turn was no progress: it rechecked already
+retained sources without recovering new TreeFam inputs. Reread the full
+objective and resumed available analysis rather than repeating that search.
+Verified live corrected QfO jobs 21775, 21760_1 and 21706_1; OrthoMCL 21713
+remains resource-pending, not failed.
+
+Reviewed the completed full DGX audit after all 18 tasks became terminal and
+the archive was collected. Six tasks validate, three wrappers fail, and nine
+lack detailed scheduler records because accounting summaries were collected
+instead. Only one of nine planned pairs is available; no complete-panel
+overhead result or scientific timing admission follows. Independently traced
+two identity failures to transient apt-daily and NetworkManager-dispatcher
+service cgroups in retained snapshots. The third remains undiagnosed beyond
+its recorded within-snapshot frontier change. Native exit records are zero
+for all three. [Full outcome and required follow-up](DGX_FRONTIER_OVERHEAD_RESULT_21838.md).
+
+Retained the completed 21766 conversion receipt: all 5,113,820 native
+phylogenetic pairs map without loss. Accuracy still awaits scoring and
+independent admission. Updated claims without upgrading historical timing.
+All 137 focused audit, provenance, replay, frontier and paired-summary tests
+pass in 7.46 seconds. No scientific code or frozen acceptance rule changed.
+Remaining corrected inference, reliable resource measurement, source/rights
+gaps and final publication packaging remain open.
+
 ## First Corrected Reconciliation Passed Native Admission (2026-09-18 UTC)
 
 Previous turn made progress through 25def43 with exact isolated statistical

@@ -19,9 +19,12 @@ is an unchanged copy of
 `benchmarks/work/qfo_corrected_factorial_native_admission_0_20260918.json`.
 SHA-256: `97341e1b9ef6ac36e6b8c329aa3b5161690ccf00e617895f1d4ccb6ea127b16a`.
 
-Pair conversion job 21766 follows this successful admission and uses native
-phylogenetic pairs, not root-HOG cliques. Scoring job 21775 and independent
-assessment 21776 remain downstream gates. No corrected accuracy value is
+Pair conversion job 21766 completed 0:0 in 3:24 and retained all 5,113,820
+native phylogenetic pairs with zero mapping losses, without root-HOG clique
+expansion. Its [retained report](qfo_corrected_factorial_pairs_21766.json) has
+SHA-256 `870cb24737cac4d3655bcc03bf2b5e42a2c1a4163516a61ebc24a3fe84e8987b`.
+Scoring job 21775 has started; independent assessment 21776 remains a
+downstream gate. No corrected accuracy value is
 admitted by this native-output receipt. The other three reconciliation cells
 remain separate serial tasks; no incomplete cell is assigned a zero score.
 

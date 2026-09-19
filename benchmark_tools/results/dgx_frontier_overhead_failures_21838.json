@@ -1,0 +1,64 @@
+{
+  "failures": [
+    {
+      "error": "Boot, target or frontier identity changed",
+      "error_type": "ValueError",
+      "index": 3,
+      "native_done": {
+        "bytes": 7990,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_frontier_overhead_21838/frontier_overhead_v1/run_03/measurement/done.json",
+        "sha256": "e73519433ee343e9cca6ace09e10dd876f7c7a0a8499a8260a50ba021b56bbdd"
+      },
+      "native_exit_code": 0,
+      "native_timed_out": false,
+      "verification": {
+        "bytes": 5236,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_frontier_overhead_21838/frontier_overhead_v1/run_03/verification.json",
+        "sha256": "26dc9945e769aa3e7080f77df3973affacc22f43aab3a48ffe91f0ed7e014ec0"
+      },
+      "wrapper_status": "verified_wrapper_failed"
+    },
+    {
+      "error": "Boot, target or frontier identity changed",
+      "error_type": "ValueError",
+      "index": 5,
+      "native_done": {
+        "bytes": 7989,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_frontier_overhead_21838/frontier_overhead_v1/run_05/measurement/done.json",
+        "sha256": "cd16b55099eb08feb180d763715411222769625f496d2f096279edde8d4781e0"
+      },
+      "native_exit_code": 0,
+      "native_timed_out": false,
+      "verification": {
+        "bytes": 6401,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_frontier_overhead_21838/frontier_overhead_v1/run_05/verification.json",
+        "sha256": "404d08ac3de6c2e464d10f02b57c530951476d5d525d2c03c3266034c9968de9"
+      },
+      "wrapper_status": "verified_wrapper_failed"
+    },
+    {
+      "error": "Cgroup frontier changed during sampling",
+      "error_type": "ValueError",
+      "index": 6,
+      "native_done": {
+        "bytes": 7991,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_frontier_overhead_21838/frontier_overhead_v1/run_06/measurement/done.json",
+        "sha256": "607745ae1f6c0f3a7606f465e16a434c99b5ffaae9635f75e51dbcd40a4e345a"
+      },
+      "native_exit_code": 0,
+      "native_timed_out": false,
+      "verification": {
+        "bytes": 5233,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dgx_frontier_overhead_21838/frontier_overhead_v1/run_06/verification.json",
+        "sha256": "bc518c90b0a5bb5ac1cf43a824a32938b6730f140b5e847c012bd8eb6cffa250"
+      },
+      "wrapper_status": "verified_wrapper_failed"
+    }
+  ],
+  "limitations": [
+    "Reports recorded failure messages and native exits, not an independent causal diagnosis or recovery.",
+    "The full panel admission audit remains separate."
+  ],
+  "scientific_timings_admitted": false,
+  "status": "terminal_wrapper_failure_records_summarized"
+}
