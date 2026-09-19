@@ -1,5 +1,27 @@
 # Publication Progress
 
+## CPU-Only Development Wheel Verified (2026-09-19)
+
+Previous turn was a verified wait on live jobs. Reread the objective and
+confirmed the same scientific/timing processes active. Advanced release
+preparation locally without accessing the DGX or modifying running executors.
+
+Built a fresh CPU-only wheel from clean development sourcef9b9ce0using the
+existing setup with nvcc excluded from PATH; no build-code change was needed.
+Audited all42entries and confirmed three CPU libraries/no CUDA shared library.
+Installed it with explicitly version-pinned dependencies into a new venv with
+no system-site-packages. A reusable verifier checks installed bytes, import
+isolation and native loading, then runs both standard/high-sensitivity modes:
+each yields4groups/38genes with exact coverage and unchanged input bytes.
+Twelve focused tests plus the actual two-mode installed smoke pass.
+[Artifact, provenance, commands and limitations](PUBLICATION_CPU_WHEEL_20260919.md).
+
+This is current-development same-host installation evidence, not the frozen
+benchmark executable, portability proof, rights clearance or public release.
+The earlier CUDA-containing wheel remains retained. Scientific results,
+queued analyses, quiet-window rules and wider publication requirements are
+unchanged and incomplete.
+
 ## Integrated Regression Refresh (2026-09-19)
 
 Previous turn was a verified wait: the local scheduler showed21889advancing

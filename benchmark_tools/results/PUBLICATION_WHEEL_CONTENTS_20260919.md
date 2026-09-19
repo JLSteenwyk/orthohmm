@@ -45,6 +45,10 @@ runtime is CPU-only. Keep the existing wheel as historical installation
 evidence; do not silently replace it with a CPU build or call it cleared for
 release. A future release artifact needs its own inventory and review.
 
+A subsequently built [CPU-only development wheel](PUBLICATION_CPU_WHEEL_20260919.md)
+has its own inventory and isolated installation evidence. It neither replaces
+this historical artifact nor establishes a public release or general portability.
+
 ## Reproduction and Limits
 
 ```bash
