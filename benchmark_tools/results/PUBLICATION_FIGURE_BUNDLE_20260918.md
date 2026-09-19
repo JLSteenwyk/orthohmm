@@ -1,5 +1,49 @@
 # Relocatable Figure Evidence Bundle
 
+## Eighteen-Panel Refresh
+
+The refreshed inventory adds corrected-QfO search coverage and SwissTrees
+sequence-control uncertainty without changing the original 16-panel archive.
+All 18 panels passed the direct-byte audit: 61 output records and 101 distinct
+directly referenced files. The committed export contains 122 files totalling
+23,074,148 bytes, excluding its 73,200-byte manifest.
+
+Source revision: `f2749d78d32b938007c7e7af6da3e2f90038e2fd`.
+The exporter reads committed Git blobs; historical manifests remain unchanged.
+The detached method helper retains the same frozen revision described below.
+
+- [Inventory audit](publication_figure_integrity_20260918_v3.json).
+- [Bundle manifest](publication_figure_bundle_20260918_v2.json), SHA-256
+  `fb60aad87ea93d38d0f9793ed2e36fb1b739b13b1967b716a59d97ce7d8cf1d9`.
+- Local archive `benchmarks/work/publication_figure_evidence_20260918_f2749d7.tar.gz`:
+  5,884,001 bytes, SHA-256
+  `3ea3e6cc6a83260a10e9584a28513e1fc1aa2cbb98932399d80223c6544534bd`.
+- [Relocation verification](publication_figure_bundle_relocation_20260918_v2.json):
+  the archive was extracted to `/tmp/orthohmm-figure-refresh.mPCYCB` and the
+  bundled verifier ran there under `/usr/bin/python3 -I`. All 122 files and
+  dependency mappings passed without project imports or historical-path reads.
+
+Twenty-eight focused inventory/bundler tests pass, including explicit CLI
+selection of a newly committed audit. The old default audit is preserved,
+so earlier reproduction commands retain their meaning. Reproduce this refresh
+using fresh destination paths:
+
+```bash
+python benchmark_tools/bundle_publication_figures.py build \
+  --repo . --revision f2749d78d32b938007c7e7af6da3e2f90038e2fd \
+  --audit benchmark_tools/results/publication_figure_integrity_20260918_v3.json \
+  --output /tmp/orthohmm-figure-evidence-refresh
+python3 -I /tmp/orthohmm-figure-evidence-refresh/benchmark_tools/bundle_publication_figures.py \
+  verify /tmp/orthohmm-figure-evidence-refresh
+```
+
+This verifies retained evidence, not regenerated statistics, plots, native
+inference or scoring. Transitive dependencies, raw datasets, portable native
+execution and redistribution clearance remain incomplete. This archive is
+local, not externally deposited or assigned a DOI. The newer statistical
+workflow still needs its own isolated reproduction check. Earlier limits
+and evidence below remain applicable; no timing or accuracy claim is upgraded.
+
 ## Scope
 
 All 16 explicitly retained figure panels now have a relocatable direct-evidence
