@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Native Root-Context Deployment Frozen (2026-09-19)
+
+Deployed committed source `9821c81` to the fresh DGX directory
+`/home/jlsteenwyk/projects/orthohmm-publication/root_context_native_recipe_v1`.
+Source archive SHA-256:
+`f352bdf175dccfc5d84c2952217a7116837eeae6021df5cca3b8b5138f2235a8`.
+The archive contains the committed Python helpers, native Slurm script and
+three frozen plan/protocol inputs, not unrelated working-tree changes.
+The remote native output directory was confirmed absent before deployment.
+
+Retained recipe `dgx_root_context_native_recipe_20260919.json`, SHA-256
+`2190269735646d5996832f841c4439d38e0b7f05fc5b3402af000f8b2bfe73f4`.
+The deployed executor's `select` independently re-derived the exact plan and
+verified its source/input bindings, returning the prescribed high-sensitivity,
+satellite_v2 and full OrthoFinder tasks. A second remote snapshot verification
+matched all 520 recipe records; retained confirmation is
+`dgx_root_context_native_recipe_verified_20260919.json`.
+
+No native job has been submitted yet. Next invocation is the committed
+`submit_root_context_native_session` with this recipe hash and a fresh receipt
+directory. It must recheck the queue immediately before its single submission.
+While it waits, do not inspect or transfer data over additional DGX sessions.
+After terminal confirmation, retain scheduler/manager journal and raw outputs,
+audit session plus panel, and report every outcome. This deployment validation
+is not a native diagnostic result or scientific timing admission.
+
 ## Native Waiting Session And Receipt Audit Implemented (2026-09-19)
 
 Added a single-attempt native-panel submitter with an empty-DGX-queue guard,
