@@ -1,0 +1,40 @@
+{
+  "accuracy_evaluated": false,
+  "limits": [
+    "Directed search hits are not ortholog predictions or accuracy estimates.",
+    "Equal E-values do not match sensitivity, calibration or computational effort.",
+    "Top100 is a post-search per-query/per-target-species reporting cap, not an HMM prefilter.",
+    "Only report/source/helper/manifest hashes and summary arithmetic are rechecked here; the full hit arrays are not rescored.",
+    "The source job checks full checkpoint integrity; this export is not an independent replication of its hit-set intersections.",
+    "Missing hits do not distinguish prefilter rejection from scoring rejection."
+  ],
+  "matplotlib": "3.10.8",
+  "outputs": [
+    {
+      "bytes": 131455,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_qfo_hit_coverage_20260918/search_coverage.png",
+      "sha256": "979e1fabfeb1e1127cbc2204b4147de8d4da24869befbb337befa3ec6d8d6346"
+    },
+    {
+      "bytes": 20540,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_qfo_hit_coverage_20260918/search_coverage.pdf",
+      "sha256": "b1e1333de6eec041c6c0a196b48d2c4e5731439733bf88ca4a945199c338a6f7"
+    },
+    {
+      "bytes": 76511,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_qfo_hit_coverage_20260918/search_coverage.svg",
+      "sha256": "a262e11bec6d41a6135380984618bb38b8baf47822c284a789c037be72e6f35b"
+    }
+  ],
+  "publication_ready": false,
+  "results": {
+    "bytes": 7231,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_hit_coverage_20260918/summary.json",
+    "sha256": "ba2a963b49146d723038756e723bddd3a6230172e98f4355c824a8b4d1f1038f"
+  },
+  "source": {
+    "bytes": 4174,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_qfo_hit_coverage.py",
+    "sha256": "77754d2ee8800e097db61c5ea02a254015f814196ab2ceb4a35a13d4c9ae1db2"
+  }
+}

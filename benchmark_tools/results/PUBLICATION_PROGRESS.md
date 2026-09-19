@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Corrected Search Diagnostic Integrated Into Manuscript (2026-09-18 UTC)
+
+Previous turn made progress through9aaa2e0 with the completed corrected QfO
+search-coverage summary. Reread the objective and polled locally:
+replay21756 and OrthoFinder21706_1 are running; DGX21838 task7 is running,
+tasks3/5/6failed,8-17pending. No DGX remote access or job changes.
+
+Generated a source-bound PNG/PDF/SVG figure showing directed-hit counts and
+query-level cross-species coverage. Both axes start at zero, counts are
+computed from the retained summary, and the figure explicitly excludes
+accuracy and full-pipeline recovery interpretations.15plot/export tests pass;
+visually inspected the PNG without clipped or overlapping labels. Integrated
+the figure and non-self hit overlap into the manuscript, replacing ambiguous
+"matched" wording with "same-input" where sensitivity matching is unproven.
+
+The [result note](QFO_CORRECTED_SEARCH_COVERAGE_20260918.md) now includes the
+plot command and provenance links. The earlier frozen16-panel archive is
+unchanged; a later versioned bundle must include new figures. Corrected HMM
+accuracy, paired comparisons and controlled resource evidence remain pending.
+
 ## Corrected QfO Search Coverage Completed (2026-09-18 UTC)
 
 Previous turn made progress throughe07c986 with full-unit and installed

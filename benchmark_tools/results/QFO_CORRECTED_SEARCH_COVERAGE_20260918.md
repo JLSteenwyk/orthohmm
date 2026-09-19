@@ -18,6 +18,10 @@ All three searches cover the same984137-protein,78-species input universe.
 The [machine-readable table](qfo_hit_coverage_20260918/coverage.tsv) and
 [source-bound summary](qfo_hit_coverage_20260918/summary.json) retain counts,
 overlap statistics and provenance.
+The [two-panel figure](figures_qfo_hit_coverage_20260918/search_coverage.pdf)
+shows hit counts and query-level cross-species hit coverage, with zero-based
+axes and no accuracy interpretation. PNG/PDF/SVG outputs and their hashes
+are retained in the [figure manifest](figures_qfo_hit_coverage_20260918/manifest.json).
 
 | Search checkpoint | Directed hits | Non-self hits | Cross-species hits | Queries without non-self hits | Queries without cross-species hits |
 | --- | ---: | ---: | ---: | ---: | ---: |
@@ -62,3 +66,16 @@ from score rejection. More hits and broader query coverage are not evidence
 of better precision, recall or F1. Corrected HMM downstream scoring and
 paired comparisons remain pending; no method advantage follows from this
 diagnostic. Shared-host diagnostic elapsed time is not inference timing.
+
+Generate the figure into a new directory:
+
+```sh
+python benchmark_tools/plot_qfo_hit_coverage.py \
+  --results benchmark_tools/results/qfo_hit_coverage_20260918/summary.json \
+  --output benchmark_tools/results/figures_qfo_hit_coverage_20260918
+```
+
+The renderer pins the summary checksum and checks its bound manifest,
+source/helper and table hashes.15plot/export tests pass; the rendered PNG
+was visually inspected for labels, framing and overlap. This figure is new
+and is not silently inserted into the earlier frozen16-panel evidence bundle.

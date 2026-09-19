@@ -847,12 +847,33 @@ EC similarity0.874662, VGNC F1=0.602031, SwissTrees F1=0.628092, TreeFam-A
 F1=0.576306 and FAS0.715448. The project-defined secondary mean was0.645978.
 The independently admitted top100diagnostic retained11,285,357mapped pairs
 without loss and scored0.479791/0.874979/0.604172/0.629189/0.573917/0.716734
-on the same six endpoints, with secondary mean0.646464. The matched corrected
+on the same six endpoints, with secondary mean0.646464. The same-input corrected
 HMM control and paired uncertainty remain pending. No HMM benefit or
 significant difference follows from these point estimates; equal cutoffs do
 not establish matched sensitivity or effort.
 [Both admitted controls](qfo_sequence_scores_20260918_v2/scores.md);
 [top100provenance](QFO_SEQUENCE_TOP100_SCORE_20260918.md).
+
+The completed [label-free search diagnostic](QFO_CORRECTED_SEARCH_COVERAGE_20260918.md)
+compares initial search checkpoints on the same984137proteins and78species.
+HMM search retained90,687,327directed hits, DIAMOND all-hits593,510,904 and
+the top100control321,164,891. Queries with at least one cross-species hit
+comprised74.44%,76.78%and76.78%of the input, respectively. Among non-self
+directed hits,48,603,572were shared between HMM and DIAMOND all-hits,
+representing54.1825%of HMM hits and8.2027%of DIAMOND hits. The HMM hit set
+is therefore not a subset of DIAMOND's. These are output-set differences,
+not calibrated sensitivity or independent orthology accuracy estimates.
+
+[Search diagnostic figure](figures_qfo_hit_coverage_20260918/search_coverage.pdf).
+Panel A shows directed-hit counts including self-hits; panel B shows the
+fraction of all input queries with at least one cross-species hit, not
+reference-relative recall. Both axes start at zero. The HMM checkpoint
+precedes multi-sequence profile expansion and cannot measure full-pipeline
+recovery. Top100 limits reporting per query and target species after search;
+it is not a global100-hit limit or an HMM prefilter emulation. No confidence
+intervals are attached to these complete-set descriptive counts. The figure
+is generated from the [source-bound summary](qfo_hit_coverage_20260918/summary.json),
+with [render provenance](figures_qfo_hit_coverage_20260918/manifest.json).
 
 ### Remaining Requirements
 
@@ -861,7 +882,7 @@ speedup is established. Frozen YGOB evaluation is complete and supports
 novel-taxon transfer, not family-disjoint confirmation. Homolog-family
 overlap remains substantial even after taxon exclusions. The proposed HMM
 contribution is not established by the completed exploratory OrthoBench
-sequence-search control; both QfO sequence arms are now admitted, but their matched
+sequence-search control; both QfO sequence arms are now admitted, but their same-input
 HMM comparison and paired uncertainty remain outstanding. The interaction
 between broader candidates and reconciliation has completed OrthoBench and
 original-release QfO factorial evidence, with no adjusted F1 benefit or
