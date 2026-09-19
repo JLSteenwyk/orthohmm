@@ -1,4 +1,4 @@
-"""Render the original-release SwissTrees factorial with all 42 endpoints."""
+"""Render an explicitly identified SwissTrees factorial with all 42 endpoints."""
 
 import argparse
 import json
@@ -12,14 +12,25 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from benchmark_tools.bootstrap_qfo_factorial import CELLS, PROTOCOL_SHA, contrasts
+from benchmark_tools.bootstrap_qfo_corrected_factorial import CORRECTED_PROTOCOL_SHA
 from benchmark_tools.prepare_ob_candidate_neighborhood import record, check
 from benchmark_tools.run_simulation_methods import read_frozen
 
 METRICS = ("F1", "PPV", "TPR")
 
 
-def validate(report):
-    expected = {"status": "paired_qfo_factorial_swiss_intervals", "replicates": 100000,
+def validate(report, input_release="original"):
+    if input_release not in ("original", "corrected"):
+        raise ValueError("Unknown input release")
+    status = "paired_qfo_factorial_swiss_intervals"
+    if input_release == "corrected":
+        status = "paired_corrected_qfo_factorial_swiss_intervals"
+        if (report.get("input_release") != "QfO 2020_04 corrected UP000008143"
+                or report.get("corrected_protocol", {}).get("sha256") != CORRECTED_PROTOCOL_SHA):
+            raise ValueError("Changed corrected release identity or protocol")
+    elif "corrected_protocol" in report or "input_release" in report:
+        raise ValueError("Unexpected release annotation on historical results")
+    expected = {"status": status, "replicates": 100000,
                 "seed": 20260922, "alpha": .05, "multiplicity_endpoints": 42,
                 "units": "raw 0-to-1 metric units", "quantile_method": "linear"}
     if any(report.get(k) != v for k, v in expected.items()):
@@ -58,12 +69,14 @@ def validate(report):
     return scores * 100
 
 
-def plot(report):
-    scores = validate(report)
+def plot(report, input_release="original"):
+    scores = validate(report, input_release)
     fig, axes = plt.subplots(1, 4, figsize=(19, 9), gridspec_kw={"width_ratios": [1.1, 1, 1, 1]})
     fig.subplots_adjust(left=.055, right=.985, top=.79, bottom=.26, wspace=.7)
     fig.suptitle("QfO SwissTrees: HMM refinement, candidate expansion and reconciliation", x=.025, ha="left", y=.97, fontsize=17)
-    fig.text(.025, .915, "Original-release inputs (976,504 genes) | 18 reference families | development-exposed analysis", fontsize=11)
+    release_label = ("Corrected-release inputs (984,137 genes)" if input_release == "corrected"
+                     else "Original-release inputs (976,504 genes)")
+    fig.text(.025, .915, release_label + " | 18 reference families | development-exposed analysis", fontsize=11)
     fig.text(.025, .865, "P = profile refinement; C = candidate expansion; R = reconciliation. Cells show P C R (0: off, 1: on).", fontsize=10)
     left = axes[0]
     left.imshow(scores, vmin=0, vmax=100, cmap="Greys", aspect="auto")
@@ -95,12 +108,19 @@ def plot(report):
         ax.tick_params(length=0)
         for spine in ax.spines.values():
             spine.set_visible(False)
+    nonzero = sum(not (r["metrics"]["F1"]["bonferroni_percentile_ci"][0] <= 0 <=
+                      r["metrics"]["F1"]["bonferroni_percentile_ci"][1]) for r in report["comparisons"])
+    conclusion = (f"{nonzero}/14 adjusted F1 intervals exclude zero." if nonzero
+                  else "All adjusted F1 intervals include zero.")
+    release_note = ("No independent validation, selection adjustment, or intervals for other QfO endpoints or the secondary mean."
+                    if input_release == "corrected" else
+                    "No independent validation, equivalence claim, other-QfO-endpoint intervals, or corrected-input results are shown.")
     notes = [
         "Rows: P (teal), C (ochre), R (purple): on minus off, holding other factors fixed. Final rows: C x R interactions (gray).",
         "Thick: nominal 95% CI. Thin: Bonferroni CI across 42 endpoints. 100,000 paired family draws; seed 20260922.",
-        "F1 is the harmonic mean of macro precision and recall, recomputed per draw. All adjusted F1 intervals include zero.",
+        "F1 is the harmonic mean of macro precision and recall, recomputed per draw. " + conclusion,
         "Profile-off retains initial HMM search. R changes group-derived pairs to native inferred pairs, not only group splitting.",
-        "No independent validation, equivalence claim, other-QfO-endpoint intervals, or corrected-input results are shown.",
+        release_note,
     ]
     for y, note in zip((.195, .155, .115, .075, .035), notes):
         fig.text(.025, y, note, fontsize=10)
@@ -112,12 +132,13 @@ def main():
     parser.add_argument("--results", type=Path, required=True)
     parser.add_argument("--sha256", required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--input-release", choices=("original", "corrected"), default="original")
     args = parser.parse_args()
     report = read_frozen(args.results, args.sha256)
     source, plotter = record(args.results), record(__file__)
     if args.output.exists():
         raise FileExistsError(args.output)
-    fig = plot(report)
+    fig = plot(report, args.input_release)
     args.output.mkdir(parents=True)
     outputs = []
     for extension in ("png", "pdf", "svg"):
@@ -129,7 +150,9 @@ def main():
     check(plotter)
     manifest = {"source_results": source, "plotter": plotter, "outputs": outputs,
                 "matplotlib": matplotlib.__version__, "endpoints_shown": 42,
-                "input_release": "original", "publication_ready": False}
+                "input_release": args.input_release, "publication_ready": False,
+                "helpers": [record(Path(__file__).with_name(name)) for name in (
+                    "bootstrap_qfo_factorial.py", "bootstrap_qfo_corrected_factorial.py")]}
     (args.output / "manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n")
 
 

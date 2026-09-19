@@ -1005,6 +1005,16 @@ established. Fresh frozen admission, count-audit and bootstrap executions
 reproduced the corresponding JSON outputs byte-for-byte.
 [Complete scores, intervals, family effects and provenance](QFO_CORRECTED_FACTORIAL_COMPLETE_20260919.md).
 
+![Corrected-release SwissTrees factorial scores and conditional effects](qfo_corrected_factorial_figures_20260919/qfo_factorial_swiss.png)
+
+The corrected-release figure shows all eight cells and all 42 effects;
+thick intervals are nominal 95% and thin intervals use the prespecified
+42-endpoint Bonferroni adjustment. Effects are percentage points, whereas
+the numerical differences above are raw 0-to-1 units. Profile-off retains
+the initial HMM search. This figure is separate from the original-release
+factorial figure and does not replace its historical evidence.
+[Figure provenance and reproduction](CORRECTED_QFO_FACTORIAL_FIGURE_20260919.md).
+
 ### Corrected QfO Sequence-Search Control
 
 Independent validation admitted the DIAMOND all-hit control with frozen

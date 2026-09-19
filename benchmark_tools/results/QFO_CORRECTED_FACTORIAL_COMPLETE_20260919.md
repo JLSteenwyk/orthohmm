@@ -15,6 +15,8 @@ configuration, reference, endpoint, seed or multiplicity rule changed.
 - [Machine-readable intervals](qfo_corrected_factorial_complete_20260919/swiss_bootstrap.json)
   and [independently audited counts](qfo_corrected_factorial_complete_20260919/swiss_counts.json).
 - [Final-cell scoring admission](qfo_corrected_factorial_score_admission_21788.json).
+- [All-cell and all-endpoint figure](qfo_corrected_factorial_figures_20260919/qfo_factorial_swiss.png)
+  with [rendering provenance](CORRECTED_QFO_FACTORIAL_FIGURE_20260919.md).
 
 Final `p1_c1_r1` point estimates are GO 0.490349, EC 0.965650,
 VGNC F1 0.901690, SwissTrees F1 0.833513, TreeFam-A F1 0.614864 and

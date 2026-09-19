@@ -1,0 +1,45 @@
+{
+  "endpoints_shown": 42,
+  "helpers": [
+    {
+      "bytes": 9202,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bootstrap_qfo_factorial.py",
+      "sha256": "be09876ae4de31b923818385bd3d40d8d5e7df177215fc45a2101c7d30d1c1fa"
+    },
+    {
+      "bytes": 4005,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bootstrap_qfo_corrected_factorial.py",
+      "sha256": "5561be658ce76703fc7c0b63c7d48994d51c0f6a722750880909fb520a50de69"
+    }
+  ],
+  "input_release": "corrected",
+  "matplotlib": "3.10.8",
+  "outputs": [
+    {
+      "bytes": 305123,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_factorial_figures_20260919/qfo_factorial_swiss.png",
+      "sha256": "21a3dd1aa004b63205e567c60f145c61c2a8c8eaa57ab8fadec13bb6fb9dcc8b"
+    },
+    {
+      "bytes": 33149,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_factorial_figures_20260919/qfo_factorial_swiss.pdf",
+      "sha256": "6a96d0be739725e8ffef78b0a489c19c45a5f99b3bdba4d517bf4e84a6eb7e6d"
+    },
+    {
+      "bytes": 173048,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_factorial_figures_20260919/qfo_factorial_swiss.svg",
+      "sha256": "c483b1db5e5fad2154902a35d1bee0f0845cd712a5137960bc45ce2f89da74d4"
+    }
+  ],
+  "plotter": {
+    "bytes": 9162,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_qfo_factorial.py",
+    "sha256": "3fd88d0fd175036d5203995975177c1a740f69b62c5dfa1c81b01f50760d46af"
+  },
+  "publication_ready": false,
+  "source_results": {
+    "bytes": 73364,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_factorial_complete_20260919/swiss_bootstrap.json",
+    "sha256": "f777dead1294b3810c0479877aade7fb4411c0544696f671226ff198432e9211"
+  }
+}

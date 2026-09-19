@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Corrected Factorial Figure Rendered (2026-09-19)
+
+Previous turn made progress with the four-method corrected comparison.
+Full OrthoFinder 21706_1 is confirmed RUNNING (8:28:37); OrthoMCL 21713
+and strata 21896 remain resource/dependency pending, respectively.
+
+Added explicit corrected-release mode to the existing factorial plotter,
+with status/release/protocol checks and a data-derived F1 caption. Rendered
+all eight cells and all 42 endpoints to PNG/PDF/SVG, rechecked manifest
+hashes and inspected the PNG. Twenty-three plotter tests pass. Linked the
+[figure and reproduction](CORRECTED_QFO_FACTORIAL_FIGURE_20260919.md) in the
+manuscript and completed-factorial report. Historical results and the
+previous complete figure bundle are unchanged; bundle refresh remains due.
+Competitor completion and controlled timing remain unfinished.
+
 ## Four-Method Corrected QfO Table (2026-09-19)
 
 Previous turn made progress with the committed DGX CPU-flag diagnostics.
