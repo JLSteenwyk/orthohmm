@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Corrected OrthoFinder Completed; OrthoMCL Started (2026-09-19)
+
+Fresh scheduler accounting after candidate admission confirms corrected
+OrthoFinder array task 21706_1 (raw job 21706) COMPLETED 0:0 in 11:41:56
+with 32 CPUs. The native log ends with successful completion at
+42017.180651 seconds. These are unvalidated shared-host completion times,
+not controlled comparative timing. Independent native admission 21731 is
+RUNNING; pair conversion 21733, scoring 21735 and score admission 21736
+remain pending. No new OrthoFinder accuracy row is admitted yet.
+
+OrthoMCL corrected BLAST job 21713 is now RUNNING with 180 CPUs, observed
+at 34 seconds. The existing chain started after resources became available;
+no unrelated job was stopped or resource configuration changed. DGX task
+21920_4 and recorder 21922 continue. Candidate parameter outputs were
+validated and retained at `ca41b85`; downstream work remains required.
+
 ## Corrected Candidate Neighborhood Admitted (2026-09-19)
 
 Previous turn prepared/tested independent admission (`6a0258c`). Verified
