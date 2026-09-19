@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Complete-Command Pressure Verified on DGX (2026-09-19)
+
+Previous turn made progress through8ffdc40 with integration code and167
+focused passing tests. Reread the objective and confirmed scientific jobs
+remain live while DGX has no scheduled jobs. Exported422 committed Python
+files to a fresh DGX recipe; local/remote archive hashes match.
+
+Job21868 completed periodic and boundary-only sleep-command checks under
+20CPU/96GiB limits. Job, batch and both native steps completed0:0. Retained
+terminal scheduler records before expiry and collected raw evidence after
+completion. All422 remote source contents match the archive. Raw PSI deltas
+reproduce exactly; complete reports replay exactly on DGX. Local replay
+retains three approximately1e-18-second floating-sum differences explicitly,
+with no changed flags or admitted comparative timings.
+[Results, reproducibility and limitations](NATIVE_PRESSURE_INTEGRATION_RESULT_21868.md).
+
+This verifies the complete-command observation path, not overhead or
+interference limits. A separately specified inference overhead experiment,
+controlled scaling, corrected QfO results and final publication package remain
+required. No unrelated workloads or historical scientific evidence changed.
+
 ## Native Pressure Added to Complete-Command Collectors (2026-09-19)
 
 Previous turn made progress through07e5773 with a verified wheel inventory

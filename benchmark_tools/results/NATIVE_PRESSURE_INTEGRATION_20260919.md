@@ -52,8 +52,10 @@ test integration failures, not successful live runs.
 
 ## Remaining Work
 
-This change has not yet been deployed as a complete-command DGX run.
-Export the new collectors with their transitive source dependencies,
+The subsequent [DGX integration check](NATIVE_PRESSURE_INTEGRATION_RESULT_21868.md)
+completed both monitoring modes around short sleep commands. It does not
+establish inference overhead or isolation. For further deployment, export
+the new collectors with their transitive source dependencies,
 including `probe_native_pressure.py` and `audit_dgx_pressure.py`, to a fresh
 directory. Verify a short complete command before freezing another overhead
 panel and scientific inclusion rules. The old eighteen-run panel remains

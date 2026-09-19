@@ -1,0 +1,248 @@
+{
+  "job_id": 21868,
+  "source_commit": "8ffdc40",
+  "archive_sha256": "d11bd9ddd20c82f8b14eac0a7532d991a742f45200cc74814d45c4e2968b1262",
+  "source_files_verified": 422,
+  "modes": [
+    {
+      "mode": "periodic",
+      "report": "benchmarks/work/native_pressure_integration_21868/pressure_integration_smoke_8ffdc40_periodic/frontier_report.json",
+      "report_sha256": "e9085a621928e35a68e247fe17d5a517a900f042582653d3861a5ee3cac474f3",
+      "points": 4,
+      "native_wall_s": 2.042075876,
+      "native_stall_usec": {
+        "cpu": {
+          "some": 2275,
+          "full": 2275
+        },
+        "memory": {
+          "some": 0,
+          "full": 0
+        },
+        "io": {
+          "some": 0,
+          "full": 0
+        }
+      },
+      "native_scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_21868/step_0",
+      "native_scope_identity": [
+        32,
+        1150292
+      ],
+      "whole_command_cpu_screen": true,
+      "exact_full_replay_equal": false,
+      "replay_differences": [
+        {
+          "path": "/frontier_intervals/0/root_minus_frontier_cpu_s",
+          "local_replay": 0.0027380000000000043,
+          "retained_remote": 0.0027379999999999974
+        }
+      ],
+      "independent_raw_pressure_delta_equal": true,
+      "complete_command_enclosed": true
+    },
+    {
+      "mode": "boundary",
+      "report": "benchmarks/work/native_pressure_integration_21868/pressure_integration_smoke_8ffdc40_boundary/boundary_report.json",
+      "report_sha256": "18b0fb68706948ced57fafc0581896d75c720ce1513f93f6c8d38e4704041fc8",
+      "points": 2,
+      "native_wall_s": 2.033524593,
+      "native_stall_usec": {
+        "cpu": {
+          "some": 1978,
+          "full": 1978
+        },
+        "memory": {
+          "some": 0,
+          "full": 0
+        },
+        "io": {
+          "some": 0,
+          "full": 0
+        }
+      },
+      "native_scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_21868/step_1",
+      "native_scope_identity": [
+        32,
+        1150648
+      ],
+      "whole_command_cpu_screen": true,
+      "exact_full_replay_equal": false,
+      "replay_differences": [
+        {
+          "path": "/frontier_boundary/outside_target_frontier_cpu_s",
+          "local_replay": 0.006429999999999999,
+          "retained_remote": 0.00643
+        },
+        {
+          "path": "/frontier_boundary/root_minus_frontier_cpu_s",
+          "local_replay": 0.004559999999999995,
+          "retained_remote": 0.0045600000000000016
+        }
+      ],
+      "independent_raw_pressure_delta_equal": true,
+      "complete_command_enclosed": true
+    }
+  ],
+  "retained_files": [
+    {
+      "path": "benchmarks/work/native_pressure_integration_21868/accounting.txt",
+      "bytes": 191,
+      "sha256": "af1ec2cdc9fc9225d7b890c7960d8ac8392119d9011cb8c55aca523c75513b78"
+    },
+    {
+      "path": "benchmarks/work/native_pressure_integration_21868/pressure_integration_21868.log",
+      "bytes": 192,
+      "sha256": "4d05c2ca1e9e735fa54346d32eff2e3ee56d210614c4233c704a8ed8ef57248c"
+    },
+    {
+      "path": "benchmarks/work/native_pressure_integration_21868/pressure_integration_smoke_8ffdc40_boundary/boundary_report.json",
+      "bytes": 160469,
+      "sha256": "18b0fb68706948ced57fafc0581896d75c720ce1513f93f6c8d38e4704041fc8"
+    },
+    {
+      "path": "benchmarks/work/native_pressure_integration_21868/pressure_integration_smoke_8ffdc40_boundary/command.json",
+      "bytes": 107,
+      "sha256": "a631fa01207b85c6d3d215687f54c57fca38584ac58aa9a8184ebf0b3edad239"
+    },
+    {
+      "path": "benchmarks/work/native_pressure_integration_21868/pressure_integration_smoke_8ffdc40_boundary/done.json",
+      "bytes": 7976,
+      "sha256": "040cb155e2cb49d594220eafa455ab5e4be4027678511c26caee1a53421e503f"
+    },
+    {
+      "path": "benchmarks/work/native_pressure_integration_21868/pressure_integration_smoke_8ffdc40_boundary/go.json",
+      "bytes": 17,
+      "sha256": "3d200a42d2091765afca8e5407ef635c7009990e071c0ee9d59550ebc663fcd5"
+    },
+    {
+      "path": "benchmarks/work/native_pressure_integration_21868/pressure_integration_smoke_8ffdc40_boundary/native.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "benchmarks/work/native_pressure_integration_21868/pressure_integration_smoke_8ffdc40_boundary/point_0000.json",
+      "bytes": 65983,
+      "sha256": "84e777fe712187b07acd453107bff85ed81ce54c8039b3f5eb5e539d80ca742f"
+    },
+    {
+      "path": "benchmarks/work/native_pressure_integration_21868/pressure_integration_smoke_8ffdc40_boundary/point_0003.json",
+      "bytes": 65993,
+      "sha256": "50c5ccad8645b8733d4eae96aeece1fbcd57c9611ff73d8e9836bf506c493f4e"
+    },
+    {
+      "path": "benchmarks/work/native_pressure_integration_21868/pressure_integration_smoke_8ffdc40_boundary/ready.json",
+      "bytes": 111,
+      "sha256": "ed467992b7377ab4ed9c78dfec6d3a599692558da1872b514d4a3797ae320aa5"
+    },
+    {
+      "path": "benchmarks/work/native_pressure_integration_21868/pressure_integration_smoke_8ffdc40_boundary/release.json",
+      "bytes": 22,
+      "sha256": "97aa4094cf40964d4b06c69bc00faa9fcdf489fbc23874e89b1fe2ef1fead868"
+    },
+    {
+      "path": "benchmarks/work/native_pressure_integration_21868/pressure_integration_smoke_8ffdc40_boundary/step.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "benchmarks/work/native_pressure_integration_21868/pressure_integration_smoke_8ffdc40_boundary/step_memory.json",
+      "bytes": 329,
+      "sha256": "7c85fcc99ffa99b77b73096f80e16f16e28c211986dc3123d252cf68b44a30e3"
+    },
+    {
+      "path": "benchmarks/work/native_pressure_integration_21868/pressure_integration_smoke_8ffdc40_periodic/command.json",
+      "bytes": 107,
+      "sha256": "a631fa01207b85c6d3d215687f54c57fca38584ac58aa9a8184ebf0b3edad239"
+    },
+    {
+      "path": "benchmarks/work/native_pressure_integration_21868/pressure_integration_smoke_8ffdc40_periodic/done.json",
+      "bytes": 7976,
+      "sha256": "da9bbf6dd3f43b1c4a86c9ef76fd95cb45f7064f246eae59efcf5114644f41f5"
+    },
+    {
+      "path": "benchmarks/work/native_pressure_integration_21868/pressure_integration_smoke_8ffdc40_periodic/frontier_report.json",
+      "bytes": 318506,
+      "sha256": "e9085a621928e35a68e247fe17d5a517a900f042582653d3861a5ee3cac474f3"
+    },
+    {
+      "path": "benchmarks/work/native_pressure_integration_21868/pressure_integration_smoke_8ffdc40_periodic/go.json",
+      "bytes": 17,
+      "sha256": "3d200a42d2091765afca8e5407ef635c7009990e071c0ee9d59550ebc663fcd5"
+    },
+    {
+      "path": "benchmarks/work/native_pressure_integration_21868/pressure_integration_smoke_8ffdc40_periodic/native.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "benchmarks/work/native_pressure_integration_21868/pressure_integration_smoke_8ffdc40_periodic/point_0000.json",
+      "bytes": 65971,
+      "sha256": "b5a3faa7bc51718eb003a744d5b8774d9f940de84fe9e31b78fa710ea1faf9eb"
+    },
+    {
+      "path": "benchmarks/work/native_pressure_integration_21868/pressure_integration_smoke_8ffdc40_periodic/point_0001.json",
+      "bytes": 65974,
+      "sha256": "3edda1c6ea231470d33a5cadbf200a20777c4e38a64467dd2270d5e9eda41e14"
+    },
+    {
+      "path": "benchmarks/work/native_pressure_integration_21868/pressure_integration_smoke_8ffdc40_periodic/point_0002.json",
+      "bytes": 65984,
+      "sha256": "68235da10cb20e7b4c923a261d2f8d04b757bb81c82cf85301b9e553c2291a82"
+    },
+    {
+      "path": "benchmarks/work/native_pressure_integration_21868/pressure_integration_smoke_8ffdc40_periodic/point_0003.json",
+      "bytes": 65990,
+      "sha256": "1e1d249f0348eda1e6a741a7fdf8e1d4ee71f6db55baa03351013e6c484e8dfa"
+    },
+    {
+      "path": "benchmarks/work/native_pressure_integration_21868/pressure_integration_smoke_8ffdc40_periodic/ready.json",
+      "bytes": 111,
+      "sha256": "c02b0eba945a77edd2ddf318dfd021c09b17f7220347270aa13dbfd2b5c902dc"
+    },
+    {
+      "path": "benchmarks/work/native_pressure_integration_21868/pressure_integration_smoke_8ffdc40_periodic/release.json",
+      "bytes": 22,
+      "sha256": "97aa4094cf40964d4b06c69bc00faa9fcdf489fbc23874e89b1fe2ef1fead868"
+    },
+    {
+      "path": "benchmarks/work/native_pressure_integration_21868/pressure_integration_smoke_8ffdc40_periodic/step.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "benchmarks/work/native_pressure_integration_21868/pressure_integration_smoke_8ffdc40_periodic/step_memory.json",
+      "bytes": 329,
+      "sha256": "6c2450b064e06f0c0e957882bde42558ca9dee039d9e9a6276164e3d3cd4f388"
+    },
+    {
+      "path": "benchmarks/work/native_pressure_integration_21868/remote_source_verification.json",
+      "bytes": 109224,
+      "sha256": "c6a554cae371bcaba97e995218e00982f0c4a5023bc7b4fe27bcf8ddc3a03474"
+    },
+    {
+      "path": "benchmarks/work/native_pressure_integration_21868/remote_replay.json",
+      "bytes": 229,
+      "sha256": "154aa1b96dea74a3091ec010ebbc6d2ce62419f4da8fe22da3e6d7b12392d24c"
+    }
+  ],
+  "scheduler_sha256": "c76ba44b9ce2150514419ba904e4b6a5f48e405ae722654f9ddd59d06e8312b9",
+  "scientific_timings_admitted": false,
+  "controlled_workload_verified": false,
+  "publication_ready": false,
+  "scope": "Two sleep-command integration checks, not inference timings, overhead estimates or isolation validation",
+  "remote_replay": {
+    "python": "3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0]",
+    "modes": [
+      {
+        "mode": "periodic",
+        "exact_replay_equal": true
+      },
+      {
+        "mode": "boundary",
+        "exact_replay_equal": true
+      }
+    ]
+  },
+  "local_replay_python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]"
+}
