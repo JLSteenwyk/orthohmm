@@ -49,7 +49,27 @@ annotation validation or dependency-aware uncertainty.
 
 ## Remaining Work
 
+The [selected Crossref export](publication_resource_references_20260918.csl.json)
+now contains TreeFam and FAS with
+[source provenance](publication_resource_citation_provenance_20260918.json).
+Checksum-verified cached replay reproduces its bytes exactly. Crossref's
+TreeFam record contains onlyH.Li; this omission is not treated as the true
+article byline. The separate
+[reviewed export](publication_resource_bylines_20260918.csl.json) supplies
+all15authors from DOI-checked article XML, matching the publisher byline.
+[Correction provenance](publication_resource_byline_provenance_20260918.json)
+records the raw/export/XML/parser hashes. Only that author field changed;
+the FAS record is unchanged.26export/parser tests pass.
+
+Reproduce the byline transformation from the retained inputs with the existing
+`benchmark_tools.correct_qfo_service_bylines.byline(xml_bytes, doi)` function:
+read the raw CSL, replace its `Li2006TreeFam` author field with the returned
+list from `PMC1347480.xml`, and serialize using
+`json.dumps(records, indent=2, ensure_ascii=True) + "\n"`. Verify the recorded
+input hashes first; the expected output hash is in the correction provenance.
+This article XML is not the missing TreeFam-A tree/mapping archive.
+
 VGNC, GO/EC and other annotation-resource attribution, complete machine-readable
-exports for this supplement, journal-specific formatting, and exact-version
+export of the SwissTree website citation, journal-specific formatting, and exact-version
 and rights review remain separate requirements. No benchmark inputs, scores,
 confidence intervals or method settings changed during this citation review.

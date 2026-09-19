@@ -1,0 +1,33 @@
+{
+  "status": "reviewed_treefam_byline_exported",
+  "raw_csl": {
+    "path": "benchmark_tools/results/publication_resource_references_20260918.csl.json",
+    "sha256": "96778664b8053bfbcf917d4eb1403edd9f6908bebbfd883df5bf6d7a312c3ad9"
+  },
+  "article_xml": {
+    "path": "benchmarks/work/publication_resource_crossref_20260918/PMC1347480.xml",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC1347480/fullTextXML",
+    "sha256": "ffaaaa26bc4cb06c96f7766af7ed7bf5fc57d03492e29088e0926b9c5d12003f"
+  },
+  "byline_parser": {
+    "path": "benchmark_tools/correct_qfo_service_bylines.py",
+    "function": "byline",
+    "sha256": "8a3c2cf1eb98fd7646a34d44cf43c405fc990ed0672faa52fa232b771dc3d915"
+  },
+  "output": {
+    "path": "benchmark_tools/results/publication_resource_bylines_20260918.csl.json",
+    "sha256": "a54eb04f4592544a202db938f0bcdf12d811df335f6c98d747e9f838f2393dca"
+  },
+  "record": "Li2006TreeFam",
+  "doi": "10.1093/nar/gkj118",
+  "original_author_count": 1,
+  "corrected_author_count": 15,
+  "changes": [
+    "Only the TreeFam author field changes, using top-level article XML contributor order.",
+    "Raw Crossref output is preserved; the complete FAS record is unchanged."
+  ],
+  "limitations": [
+    "Citation metadata only, not recovered TreeFam release-7 benchmark inputs.",
+    "SwissTree website citation and final journal-specific formatting remain separate."
+  ]
+}

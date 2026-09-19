@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Resource Citations Exported And TreeFam Byline Recovered (2026-09-18 UTC)
+
+Previous turn made progress throughc6e22dc with verified native dependency
+limits. Reread the full objective and polled local scheduler state:
+HMM21706_0 running19:35:49; overhead21838 tasks0-2complete,3failed,
+4running10:20,5-17pending. No DGX remote calls or partial output reads.
+
+Exported selected TreeFam/FAS metadata and verified byte-identical offline
+replay against checksum-pinned raw responses. Detected Crossref's incomplete
+one-author TreeFam record, fetched the primary article XML and generated a
+separate15-author correction using the existing DOI-checked parser. Raw CSL
+is preserved; a structural comparison verifies no other field changed.
+26citation/byline tests pass. The
+[resource supplement](PUBLICATION_RESOURCE_REFERENCES_20260918.md) links the
+exports, provenance and remaining bibliography tasks. Article XML does not
+recover the missing release7benchmark trees or change any uncertainty result.
+
 ## Compilerless Runtime Boundary Verified (2026-09-18 UTC)
 
 Previous turn made progress through442f871 with docs dependency remediation.
