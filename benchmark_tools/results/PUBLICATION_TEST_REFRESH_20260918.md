@@ -1,5 +1,32 @@
 # Publication Test Refresh
 
+## Current-Source Refresh At ef3ba74
+
+Tested `ef3ba74379bd251b99578efce0cec60f5cafc51c` on19September2026
+after the opt-in baseline CPU build and installed-wheel verification.
+The full unit suite passed **5,960 tests**, with **9 skips**, in128.83seconds.
+Native module CLI integration passed **1 test** in6.91seconds. Parsed both
+raw JUnit reports and confirmed zero failures/errors. Tracked executable
+sources and tests remained unchanged; unrelated sample outputs were left
+untouched.
+
+```sh
+/home/bizon/anaconda3/bin/python -m pytest tests/unit -q \
+  --junitxml=benchmarks/work/publication_unit_ef3ba74_20260919.xml
+env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  /home/bizon/anaconda3/bin/python -m pytest -q tests/integration/test_module_cli.py \
+  --junitxml=benchmarks/work/publication_module_cli_ef3ba74_20260919.xml
+```
+
+Raw JUnit SHA-256 values:
+
+- Unit: `b2a3a83431aa71dc65ea99fe0999efc7d9ff7b3f215ec6fc60c8df4a34213179`
+- CLI: `f421e4167c6c61dd5277ac10da6f32c01f5cbb574b5c7bbc88d08a375ccebe02`
+
+The nine opt-in skips remain skips in this execution. This validates the
+development checkout, not full scientific reproduction, cross-host wheel
+portability or the ongoing timing/accuracy runs. No DGX access occurred.
+
 ## Current-Source Refresh At a174438
 
 Tested `a17443819695b6467783acf847cb3221a9eb54e9` on19September2026 after

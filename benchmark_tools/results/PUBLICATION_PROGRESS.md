@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Baseline Build Regression Refresh (2026-09-19)
+
+Previous turn made progress throughef3ba74 with baseline CPU compilation
+and installed-wheel verification. Reread the objective and verified the
+same scientific and dedicated timing jobs live. Ran the full unit suite:
+5960passed,9skipped in128.83seconds. CLI integration passed1test in6.91seconds.
+Parsed both retained JUnit reports, confirmed zero failures/errors, and
+recorded hashes in the [test refresh](PUBLICATION_TEST_REFRESH_20260918.md).
+
+Executable sources/tests remained unchanged during validation. No frozen
+scientific executor, job, dataset or endpoint was modified. DGX quiet-window
+restrictions remain intact. Unfinished scientific/timing analyses and the
+wider publication requirements are not admitted by these software tests.
+
 ## Baseline CPU Build Added and Installed (2026-09-19)
 
 Previous turn was a verified wait on live scientific/timing jobs. Reread
