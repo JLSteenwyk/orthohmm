@@ -11,7 +11,15 @@ from tests.unit.test_measure_native_lineage_step import extend_lineage
 
 
 def test_same_worker_reader_and_polling_except_periodic_reads():
-    expected = inspect.getsource(periodic.measure).replace(
+    expected = inspect.getsource(periodic.measure)
+    expected = expected.replace("host_interval_s=30., *, point_reader=None):", "host_interval_s=30.):")
+    expected = expected.replace(
+        "    reader = read_point if point_reader is None else point_reader\n"
+        "    if not callable(reader):\n"
+        "        raise ValueError(\"Point reader must be callable\")\n", "")
+    expected = expected.replace("points = [reader(", "points = [read_point(")
+    expected = expected.replace("points.append(reader(", "points.append(read_point(")
+    expected = expected.replace(
         'points.append(read_point(ready["pid"], ready["cgroup"], job_id, directory / "failed_point.json"))\n'
         '                save(directory / f"point_{index:04d}.json", points[-1])\n'
         '                if completed:\n                    break',

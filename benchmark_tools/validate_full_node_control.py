@@ -31,7 +31,8 @@ def validate_work(row):
 
 
 def validate_witnesses(mode, ready, done, native, native_membership,
-                       observer_membership, competitor_ready=None, competitor=None):
+                       observer_membership, competitor_ready=None, competitor=None, *,
+                       expected_competitor_membership=None):
     require(mode in {"steady", "churn", "contended"}, "Unknown control condition")
     work_mode = "churn" if mode == "churn" else "steady"
     cpus = done["cpus"]
@@ -82,7 +83,8 @@ def validate_witnesses(mode, ready, done, native, native_membership,
                 "Incomplete competitor readiness")
         require(all(competitor[key] == value for key, value in competitor_ready.items()),
                 "Competitor readiness differs")
-        require(competitor["membership"] == observer_membership
+        expected_scope = observer_membership if expected_competitor_membership is None else expected_competitor_membership
+        require(competitor["membership"] == expected_scope
                 and competitor["affinity"] == [min(cpus)], "Wrong competitor scope/affinity")
         require(competitor["pid"] not in pids + [done["pid"]], "Competitor PID reused")
         require(competitor["creations"] == 0 and 5 <= competitor["self_cpu_s"] <= 21,

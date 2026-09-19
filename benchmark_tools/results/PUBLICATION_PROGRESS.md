@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Root Context Trial Coordinator Validated Locally (2026-09-19)
+
+Implemented the frozen condition order and per-trial coordinator, reusing
+the bounded 20-worker workload. The contended condition launches only its
+named finite user service, validates its user-manager membership, retains
+exit/removal observations, and records failed cleanup. Low aggregate user
+CPU response remains a negative control outcome, not a discarded trial.
+Common-work intervals include the supplementary read window. The historical
+competitor-scope default is unchanged and covered by a regression test.
+
+All 409 focused full-node, lineage and root-context tests pass. The broader
+run caught and corrected a stale source-equivalence test for the earlier
+optional-reader hook; no boundary measurement implementation was changed.
+These are local fixture tests, not a DGX experiment or timing admission.
+
+Next: pinned whole-panel launcher/preflight, independent workload/source/
+scheduler replay, and explicit stop-on-unconfirmed-cleanup handling before
+deployment. The 12-trial panel has not been submitted. BLAST job 21713 was
+confirmed RUNNING at 10:16:58; downstream corrected-QfO and robustness jobs
+remain pending. TreeFam originals remain unavailable after the latest
+verification; no replacement reference or new uncertainty estimate was used.
+The full publication goal remains incomplete.
+
 ## Root Context Integrated And Replayed Locally (2026-09-19)
 
 Connected the supplementary root-context probe through an optional reader

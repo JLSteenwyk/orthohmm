@@ -40,6 +40,19 @@ def test_valid_witnesses(mode):
     assert result["scientific_timings_admitted"] is False
 
 
+def test_explicit_competitor_scope_does_not_weaken_historical_default():
+    args = fixture("contended")
+    scope = "0::/user.slice/user-1000.slice/user@1000.service/app.slice/owned.service\n"
+    args["competitor_ready"]["membership"] = scope
+    args["competitor"].update(membership=scope, final_membership=scope)
+    with pytest.raises(ValueError):
+        validate_witnesses(**args)
+    assert validate_witnesses(**args, expected_competitor_membership=scope)["status"] == "workload_witnesses_validated"
+    args["competitor"]["final_membership"] = "batch"
+    with pytest.raises(ValueError):
+        validate_witnesses(**args, expected_competitor_membership=scope)
+
+
 @pytest.mark.parametrize("field,value", [("self_cpu_s", float("nan")), ("self_cpu_s", 0),
     ("parent_pid", 999), ("membership", "batch"), ("final_affinity", [1]),
     ("finished_ns", 21_000_000_000), ("creation_cap_reached", True),
