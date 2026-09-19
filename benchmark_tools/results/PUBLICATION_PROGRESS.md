@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Native-Step Pressure Probe Verified Locally (2026-09-18 UTC)
+
+Previous turn made progress through 6025448 with manuscript integration and
+structured evidence-link/table checks. Reread the full objective and verified
+remaining corrected inference jobs. Added separately scoped native-step PSI
+collection, retaining raw timestamps, scope/device/inode identity and outer
+host observations. Tests reject changed identity, wrong scope, overlapping
+windows, missing fields, raw/parsed disagreement and decreasing counters.
+All 32 focused native/host tests pass. Source committed and pushed as401b20b.
+
+Local Slurm21865 ran a short sleeping-worker interface check and completed
+0:0 in batch and native step. Separate replay matches all resource deltas and
+five source hashes. Native CPU some/full each increased366us; no memory/I/O
+increase was recorded. [Evidence and scope](NATIVE_PRESSURE_PROBE_20260918.md).
+This is not a DGX portability test, interference calibration, or timing
+admission. No inference or frozen timing recipe changed. Dedicated-host
+verification and prospective controls/overhead remain needed; corrected
+reconciliation and OrthoFinder are live, and OrthoMCL remains queued.
+
 ## Manuscript Integrates Corrected R-On And Resource Audits (2026-09-18 UTC)
 
 Previous turn made progress through 580baa9 with the retained-pressure audit.
