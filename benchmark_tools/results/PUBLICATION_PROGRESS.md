@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Full Unit And Installed Legacy Checks Passed (2026-09-18 UTC)
+
+Previous turn made progress throughe13963e with failed native-build output
+cleanup. Reread the objective and verified live QfO replay21756,
+search-coverage21793, OrthoFinder21706_1 and DGX21838 task6. Inspected local
+queue dependencies: downstream admissions/scoring wait on their intended
+parents; no failed-dependency state was listed. OrthoMCL21713 remains
+resource-pending, not running. No DGX remote calls or analysis restarts.
+
+Refreshed the full unit suite:5527passed,9skipped in122.63seconds. Native
+module CLI integration passed in6.80seconds. Inspected all nine opt-in
+legacy tests for temporary-fixture isolation, then ran them explicitly:
+9passed in20.41seconds. Coverage includes installed BLAST failure detection,
+database normalization, BPO/index parity and staged OrthoMCL inference.
+Commands, report hashes and limits are retained in the
+[test refresh](PUBLICATION_TEST_REFRESH_20260918.md).
+
+No runtime source, frozen scientific executor or existing benchmark output
+changed. This is repository/fixture validation, not corrected QfO accuracy
+or complete integration coverage. Main results, controlled resources and
+the final publication release remain incomplete; goal stays active.
+
 ## Failed Native Build Outputs Removed (2026-09-18 UTC)
 
 Previous turn made progress through52a90d1 by retaining corrected HMM native
