@@ -1,5 +1,26 @@
 # Publication Progress
 
+## OrthoBench Routing Impact Bounded By Retained Hits (2026-09-18 UTC)
+
+Previous turn made progress through9f75941 by fixing and testing the
+CUDA-available/all-long routing defect. Reread the objective and verified
+live replay21756, OrthoFinder21706_1 and DGX21838 task8; later tasks pending.
+No DGX access or analysis restarts.
+
+Audited the admitted OrthoBench cache against all12checksum-bound FASTAs.
+All251378gene IDs, lengths and species owners match. Among18,235,373hits,
+every one of144species directions contains an accepted target no longer
+than1998residues; the smallest directional count is18,635such hits. The
+[witness audit](OB_GPU_BATCH_WITNESS_AUDIT_20260918.md) retains deterministic
+examples and provenance.7focused tests pass.
+
+This conditionally excludes the all-long trigger for the retained driver's
+one-batch-per-species-pair execution model. It does not prove the historical
+driver revision or runtime, clear arbitrary sub-batches/other datasets,
+validate numerical scores, or explain prefilter-versus-score rejection.
+No benchmark output, source executor or default changed. Main accuracy,
+uncertainty and controlled-resource analyses remain incomplete.
+
 ## Long-Target Search Routing Defect Fixed (2026-09-18 UTC)
 
 Previous turn made progress through9142b9c with annotation-resource citations.

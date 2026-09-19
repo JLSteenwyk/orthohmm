@@ -69,3 +69,9 @@ needs explicit freezing and applicable independent confirmation.
 
 The planned prefilter-versus-scoring rejection trace remains unfinished;
 this defect is not assumed to explain the retained OrthoBench misses.
+
+A subsequent [OrthoBench cache audit](OB_GPU_BATCH_WITNESS_AUDIT_20260918.md)
+finds eligible accepted targets in all144species directions. This rules out
+the all-long condition under the retained driver's complete-species-pair
+batching model, not under arbitrary historical sub-batching. Broader
+historical runtime and other-dataset impact remain unaudited.

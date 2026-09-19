@@ -65,6 +65,9 @@ evidence that an experiment completed or a biological hypothesis is true.
   publication runtime is CPU-only and was reverified; broader historical
   GPU-run impact remains unaudited. Frozen executors and reported scores
   were not changed. This is not an explanation of existing search misses.
+  The [OrthoBench cache witness audit](OB_GPU_BATCH_WITNESS_AUDIT_20260918.md)
+  finds eligible targets in144/144directions, excluding the all-long condition
+  under complete-species-pair batching, not arbitrary historical sub-batches.
 
 - [Corrected SwissTrees sequence descriptors](CORRECTED_SWISS_SEQUENCE_STRATA_RESULT_20260918.md)
   cover all563proteins and freeze9/9entropy bins. The14recovered accessions

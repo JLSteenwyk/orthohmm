@@ -1,0 +1,1973 @@
+{
+  "accuracy_evaluated": false,
+  "checked_records": [
+    {
+      "bytes": 1318480,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ob_family_trace_verified_20260916.json",
+      "sha256": "bda00fb593b357bc8f07e43544feae598150ae891ed82c988fb339a92349de0c"
+    },
+    {
+      "bytes": 952325450,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hits_BLOSUM62_mc100.pkl",
+      "sha256": "78a5af40ea2683a69e1baefefb0966c3549cffe71b24bda03b9ba4a6e29e65e1"
+    },
+    {
+      "bytes": 8784620,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+    },
+    {
+      "bytes": 11973324,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Canis_familiaris.CanFam3.1.pep.all.fa",
+      "sha256": "0d87161a9990b9d8b0d56b4e71dfbe74c6016b0dda3352247b35d85501c33b33"
+    },
+    {
+      "bytes": 5797677,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Ciona_intestinalis.KH.pep.all.fa",
+      "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+    },
+    {
+      "bytes": 17020497,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Danio_rerio.GRCz11.pep.all.fa",
+      "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+    },
+    {
+      "bytes": 7778910,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+    },
+    {
+      "bytes": 9883133,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Gallus_gallus.GRCg6a.pep.all.fa",
+      "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+    },
+    {
+      "bytes": 13576811,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Homo_sapiens.GRCh38.pep.all.fa",
+      "sha256": "bff5d1f0f259c801dc607045e4c13bfc759098f17d536b307c13a89a523569ac"
+    },
+    {
+      "bytes": 11930628,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+    },
+    {
+      "bytes": 12880578,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Mus_musculus.GRCm38.pep.all.fa",
+      "sha256": "3b6e0a68688294135324824e1879de86c1715a9f3c655406f6ec8fcfdd75db1a"
+    },
+    {
+      "bytes": 12782304,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+    },
+    {
+      "bytes": 12000073,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+    },
+    {
+      "bytes": 10463972,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "sha256": "1f6ebacc342da127e4ab9c1a9cf7b627e8169df3cbc0d971d57655d974c8d9b2"
+    },
+    {
+      "bytes": 31030,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/benchmark_orthobench.py",
+      "sha256": "7552f082e382b382b427d53f3a1c750a15d8122639374930bd36b2c374213809"
+    }
+  ],
+  "directions": [
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 136133,
+      "query_species": "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "retained_hits": 136407,
+      "target_species": "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "witness": {
+        "query": "WBGene00023068.1",
+        "retained_score": 5.136363636363637,
+        "target": "WBGene00023067.1",
+        "target_length": 22
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 34432,
+      "query_species": "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "retained_hits": 34993,
+      "target_species": "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "witness": {
+        "query": "WBGene00023067.1",
+        "retained_score": 3.8376128944009875,
+        "target": "ENSCAFP00000046985",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 23867,
+      "query_species": "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "retained_hits": 23993,
+      "target_species": "Ciona_intestinalis.KH.pep.all.fa",
+      "witness": {
+        "query": "WBGene00010664.1",
+        "retained_score": 0.6525223222437977,
+        "target": "ENSCINP00000029818",
+        "target_length": 50
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 55831,
+      "query_species": "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "retained_hits": 56553,
+      "target_species": "Danio_rerio.GRCz11.pep.all.fa",
+      "witness": {
+        "query": "WBGene00023067.1",
+        "retained_score": 3.8376128944009875,
+        "target": "ENSDARP00000135179",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 32460,
+      "query_species": "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "retained_hits": 33002,
+      "target_species": "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "witness": {
+        "query": "WBGene00023067.1",
+        "retained_score": 3.7949727511298654,
+        "target": "FBpp0099610",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 35165,
+      "query_species": "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "retained_hits": 35696,
+      "target_species": "Gallus_gallus.GRCg6a.pep.all.fa",
+      "witness": {
+        "query": "WBGene00004453.1",
+        "retained_score": 3.980392156862745,
+        "target": "ENSGALP00000038282",
+        "target_length": 51
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 44137,
+      "query_species": "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "retained_hits": 44878,
+      "target_species": "Homo_sapiens.GRCh38.pep.all.fa",
+      "witness": {
+        "query": "WBGene00023067.1",
+        "retained_score": 3.8376128944009875,
+        "target": "ENSP00000449026",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 37029,
+      "query_species": "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "retained_hits": 37471,
+      "target_species": "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "witness": {
+        "query": "WBGene00013532.1",
+        "retained_score": 2.342709746134828,
+        "target": "ENSMODP00000033613",
+        "target_length": 48
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 44131,
+      "query_species": "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "retained_hits": 44729,
+      "target_species": "Mus_musculus.GRCm38.pep.all.fa",
+      "witness": {
+        "query": "WBGene00007356.1",
+        "retained_score": 1.4599927901768628,
+        "target": "ENSMUSP00000100687",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 41004,
+      "query_species": "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "retained_hits": 41640,
+      "target_species": "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "witness": {
+        "query": "WBGene00023067.1",
+        "retained_score": 3.8376128944009875,
+        "target": "ENSPTRP00000059789",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 41885,
+      "query_species": "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "retained_hits": 42370,
+      "target_species": "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "witness": {
+        "query": "WBGene00023067.1",
+        "retained_score": 3.8376128944009875,
+        "target": "ENSRNOP00000062398",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 37017,
+      "query_species": "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "retained_hits": 37438,
+      "target_species": "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "witness": {
+        "query": "WBGene00000390.1",
+        "retained_score": 1.9349399169515258,
+        "target": "ENSTNIP00000008092",
+        "target_length": 39
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 42967,
+      "query_species": "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "retained_hits": 43527,
+      "target_species": "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "witness": {
+        "query": "ENSCAFP00000046985",
+        "retained_score": 3.8376128944009875,
+        "target": "WBGene00023067.1",
+        "target_length": 22
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 195199,
+      "query_species": "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "retained_hits": 197015,
+      "target_species": "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "witness": {
+        "query": "ENSCAFP00000052679",
+        "retained_score": 3.873217214952306,
+        "target": "ENSCAFP00000055125",
+        "target_length": 23
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 39173,
+      "query_species": "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "retained_hits": 39543,
+      "target_species": "Ciona_intestinalis.KH.pep.all.fa",
+      "witness": {
+        "query": "ENSCAFP00000008963",
+        "retained_score": 0.8998615077542932,
+        "target": "ENSCINP00000033013",
+        "target_length": 31
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 172034,
+      "query_species": "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "retained_hits": 174476,
+      "target_species": "Danio_rerio.GRCz11.pep.all.fa",
+      "witness": {
+        "query": "ENSCAFP00000046985",
+        "retained_score": 5.12,
+        "target": "ENSDARP00000135179",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 47987,
+      "query_species": "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "retained_hits": 49097,
+      "target_species": "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "witness": {
+        "query": "ENSCAFP00000046985",
+        "retained_score": 4.88,
+        "target": "FBpp0099610",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 103821,
+      "query_species": "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "retained_hits": 105571,
+      "target_species": "Gallus_gallus.GRCg6a.pep.all.fa",
+      "witness": {
+        "query": "ENSCAFP00000052555",
+        "retained_score": 3.774193548387097,
+        "target": "ENSGALP00000027676",
+        "target_length": 31
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 195442,
+      "query_species": "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "retained_hits": 197954,
+      "target_species": "Homo_sapiens.GRCh38.pep.all.fa",
+      "witness": {
+        "query": "ENSCAFP00000037709",
+        "retained_score": 0.884571649682414,
+        "target": "ENSP00000456586",
+        "target_length": 19
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 201114,
+      "query_species": "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "retained_hits": 202704,
+      "target_species": "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "witness": {
+        "query": "ENSCAFP00000009836",
+        "retained_score": 2.533216828461393,
+        "target": "ENSMODP00000052996",
+        "target_length": 24
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 188158,
+      "query_species": "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "retained_hits": 190327,
+      "target_species": "Mus_musculus.GRCm38.pep.all.fa",
+      "witness": {
+        "query": "ENSCAFP00000058289",
+        "retained_score": 3.7969912901062677,
+        "target": "ENSMUSP00000142544",
+        "target_length": 21
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 185914,
+      "query_species": "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "retained_hits": 188225,
+      "target_species": "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "witness": {
+        "query": "ENSCAFP00000052679",
+        "retained_score": 3.5416666666666665,
+        "target": "ENSPTRP00000060287",
+        "target_length": 24
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 185416,
+      "query_species": "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "retained_hits": 187264,
+      "target_species": "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "witness": {
+        "query": "ENSCAFP00000046985",
+        "retained_score": 5.12,
+        "target": "ENSRNOP00000062398",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 97253,
+      "query_species": "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "retained_hits": 98711,
+      "target_species": "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "witness": {
+        "query": "ENSCAFP00000036202",
+        "retained_score": 2.173023389506196,
+        "target": "ENSTNIP00000012031",
+        "target_length": 36
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 18769,
+      "query_species": "Ciona_intestinalis.KH.pep.all.fa",
+      "retained_hits": 18891,
+      "target_species": "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "witness": {
+        "query": "ENSCINP00000005615",
+        "retained_score": 2.6297530346057028,
+        "target": "WBGene00001947.1",
+        "target_length": 46
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 26607,
+      "query_species": "Ciona_intestinalis.KH.pep.all.fa",
+      "retained_hits": 27030,
+      "target_species": "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "witness": {
+        "query": "ENSCINP00000034883",
+        "retained_score": 3.5080679896426825,
+        "target": "ENSCAFP00000011638",
+        "target_length": 44
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 27633,
+      "query_species": "Ciona_intestinalis.KH.pep.all.fa",
+      "retained_hits": 27787,
+      "target_species": "Ciona_intestinalis.KH.pep.all.fa",
+      "witness": {
+        "query": "ENSCINP00000029989",
+        "retained_score": 3.353229362449076,
+        "target": "ENSCINP00000032886",
+        "target_length": 23
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 43775,
+      "query_species": "Ciona_intestinalis.KH.pep.all.fa",
+      "retained_hits": 44265,
+      "target_species": "Danio_rerio.GRCz11.pep.all.fa",
+      "witness": {
+        "query": "ENSCINP00000010640",
+        "retained_score": 1.161049217166628,
+        "target": "ENSDARP00000117419",
+        "target_length": 43
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 18635,
+      "query_species": "Ciona_intestinalis.KH.pep.all.fa",
+      "retained_hits": 18902,
+      "target_species": "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "witness": {
+        "query": "ENSCINP00000029714",
+        "retained_score": 4.0,
+        "target": "FBpp0072094",
+        "target_length": 51
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 24784,
+      "query_species": "Ciona_intestinalis.KH.pep.all.fa",
+      "retained_hits": 25152,
+      "target_species": "Gallus_gallus.GRCg6a.pep.all.fa",
+      "witness": {
+        "query": "ENSCINP00000008085",
+        "retained_score": 1.2584317454947895,
+        "target": "ENSGALP00000070143",
+        "target_length": 33
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 34032,
+      "query_species": "Ciona_intestinalis.KH.pep.all.fa",
+      "retained_hits": 34568,
+      "target_species": "Homo_sapiens.GRCh38.pep.all.fa",
+      "witness": {
+        "query": "ENSCINP00000034883",
+        "retained_score": 3.5080679896426825,
+        "target": "ENSP00000233143",
+        "target_length": 44
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 30021,
+      "query_species": "Ciona_intestinalis.KH.pep.all.fa",
+      "retained_hits": 30342,
+      "target_species": "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "witness": {
+        "query": "ENSCINP00000034883",
+        "retained_score": 3.5080679896426825,
+        "target": "ENSMODP00000021624",
+        "target_length": 44
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 33815,
+      "query_species": "Ciona_intestinalis.KH.pep.all.fa",
+      "retained_hits": 34229,
+      "target_species": "Mus_musculus.GRCm38.pep.all.fa",
+      "witness": {
+        "query": "ENSCINP00000034883",
+        "retained_score": 3.5080679896426825,
+        "target": "ENSMUSP00000137210",
+        "target_length": 44
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 33021,
+      "query_species": "Ciona_intestinalis.KH.pep.all.fa",
+      "retained_hits": 33473,
+      "target_species": "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "witness": {
+        "query": "ENSCINP00000034883",
+        "retained_score": 3.484523909175282,
+        "target": "ENSPTRP00000047491",
+        "target_length": 44
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 33006,
+      "query_species": "Ciona_intestinalis.KH.pep.all.fa",
+      "retained_hits": 33361,
+      "target_species": "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "witness": {
+        "query": "ENSCINP00000034883",
+        "retained_score": 3.5080679896426825,
+        "target": "ENSRNOP00000022846",
+        "target_length": 44
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 29671,
+      "query_species": "Ciona_intestinalis.KH.pep.all.fa",
+      "retained_hits": 30029,
+      "target_species": "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "witness": {
+        "query": "ENSCINP00000010088",
+        "retained_score": 1.6766170038239634,
+        "target": "ENSTNIP00000022663",
+        "target_length": 36
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 75693,
+      "query_species": "Danio_rerio.GRCz11.pep.all.fa",
+      "retained_hits": 76507,
+      "target_species": "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "witness": {
+        "query": "ENSDARP00000135179",
+        "retained_score": 3.8376128944009875,
+        "target": "WBGene00023067.1",
+        "target_length": 22
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 192505,
+      "query_species": "Danio_rerio.GRCz11.pep.all.fa",
+      "retained_hits": 195707,
+      "target_species": "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "witness": {
+        "query": "ENSDARP00000135179",
+        "retained_score": 5.12,
+        "target": "ENSCAFP00000046985",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 80445,
+      "query_species": "Danio_rerio.GRCz11.pep.all.fa",
+      "retained_hits": 80972,
+      "target_species": "Ciona_intestinalis.KH.pep.all.fa",
+      "witness": {
+        "query": "ENSDARP00000010800",
+        "retained_score": 0.866857698026389,
+        "target": "ENSCINP00000033013",
+        "target_length": 31
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 377930,
+      "query_species": "Danio_rerio.GRCz11.pep.all.fa",
+      "retained_hits": 381550,
+      "target_species": "Danio_rerio.GRCz11.pep.all.fa",
+      "witness": {
+        "query": "ENSDARP00000136116",
+        "retained_score": 2.2901958361370123,
+        "target": "ENSDARP00000151084",
+        "target_length": 17
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 94457,
+      "query_species": "Danio_rerio.GRCz11.pep.all.fa",
+      "retained_hits": 96249,
+      "target_species": "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "witness": {
+        "query": "ENSDARP00000135179",
+        "retained_score": 4.88,
+        "target": "FBpp0099610",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 151718,
+      "query_species": "Danio_rerio.GRCz11.pep.all.fa",
+      "retained_hits": 154307,
+      "target_species": "Gallus_gallus.GRCg6a.pep.all.fa",
+      "witness": {
+        "query": "ENSDARP00000146410",
+        "retained_score": 1.7333116494550875,
+        "target": "ENSGALP00000070143",
+        "target_length": 33
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 237987,
+      "query_species": "Danio_rerio.GRCz11.pep.all.fa",
+      "retained_hits": 241655,
+      "target_species": "Homo_sapiens.GRCh38.pep.all.fa",
+      "witness": {
+        "query": "ENSDARP00000135179",
+        "retained_score": 5.12,
+        "target": "ENSP00000449026",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 214866,
+      "query_species": "Danio_rerio.GRCz11.pep.all.fa",
+      "retained_hits": 217063,
+      "target_species": "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "witness": {
+        "query": "ENSDARP00000142932",
+        "retained_score": 4.08,
+        "target": "ENSMODP00000042753",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 235341,
+      "query_species": "Danio_rerio.GRCz11.pep.all.fa",
+      "retained_hits": 238479,
+      "target_species": "Mus_musculus.GRCm38.pep.all.fa",
+      "witness": {
+        "query": "ENSDARP00000151314",
+        "retained_score": 2.5981889600474575,
+        "target": "ENSMUSP00000143665",
+        "target_length": 29
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 221509,
+      "query_species": "Danio_rerio.GRCz11.pep.all.fa",
+      "retained_hits": 224899,
+      "target_species": "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "witness": {
+        "query": "ENSDARP00000135179",
+        "retained_score": 5.12,
+        "target": "ENSPTRP00000059789",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 223933,
+      "query_species": "Danio_rerio.GRCz11.pep.all.fa",
+      "retained_hits": 226526,
+      "target_species": "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "witness": {
+        "query": "ENSDARP00000135179",
+        "retained_score": 5.12,
+        "target": "ENSRNOP00000062398",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 181941,
+      "query_species": "Danio_rerio.GRCz11.pep.all.fa",
+      "retained_hits": 184247,
+      "target_species": "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "witness": {
+        "query": "ENSDARP00000041941",
+        "retained_score": 1.4573525484248455,
+        "target": "ENSTNIP00000003336",
+        "target_length": 29
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 34090,
+      "query_species": "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "retained_hits": 34703,
+      "target_species": "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "witness": {
+        "query": "FBpp0099610",
+        "retained_score": 3.7949727511298654,
+        "target": "WBGene00023067.1",
+        "target_length": 22
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 38743,
+      "query_species": "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "retained_hits": 39637,
+      "target_species": "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "witness": {
+        "query": "FBpp0099610",
+        "retained_score": 4.88,
+        "target": "ENSCAFP00000046985",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 24595,
+      "query_species": "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "retained_hits": 24778,
+      "target_species": "Ciona_intestinalis.KH.pep.all.fa",
+      "witness": {
+        "query": "FBpp0310070",
+        "retained_score": 1.430034634070696,
+        "target": "ENSCINP00000034883",
+        "target_length": 41
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 59798,
+      "query_species": "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "retained_hits": 61094,
+      "target_species": "Danio_rerio.GRCz11.pep.all.fa",
+      "witness": {
+        "query": "FBpp0099610",
+        "retained_score": 4.88,
+        "target": "ENSDARP00000135179",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 61987,
+      "query_species": "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "retained_hits": 63396,
+      "target_species": "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "witness": {
+        "query": "FBpp0085843",
+        "retained_score": 3.1986464373761336,
+        "target": "FBpp0085846",
+        "target_length": 39
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 33712,
+      "query_species": "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "retained_hits": 34466,
+      "target_species": "Gallus_gallus.GRCg6a.pep.all.fa",
+      "witness": {
+        "query": "FBpp0091036",
+        "retained_score": 3.1972327561967235,
+        "target": "ENSGALP00000057738",
+        "target_length": 37
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 52610,
+      "query_species": "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "retained_hits": 53814,
+      "target_species": "Homo_sapiens.GRCh38.pep.all.fa",
+      "witness": {
+        "query": "FBpp0099610",
+        "retained_score": 4.88,
+        "target": "ENSP00000449026",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 44911,
+      "query_species": "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "retained_hits": 45639,
+      "target_species": "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "witness": {
+        "query": "FBpp0091036",
+        "retained_score": 3.2232265184422255,
+        "target": "ENSMODP00000044011",
+        "target_length": 37
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 53302,
+      "query_species": "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "retained_hits": 54337,
+      "target_species": "Mus_musculus.GRCm38.pep.all.fa",
+      "witness": {
+        "query": "FBpp0091036",
+        "retained_score": 3.2232265184422255,
+        "target": "ENSMUSP00000128352",
+        "target_length": 37
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 49129,
+      "query_species": "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "retained_hits": 50185,
+      "target_species": "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "witness": {
+        "query": "FBpp0099610",
+        "retained_score": 4.88,
+        "target": "ENSPTRP00000059789",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 50440,
+      "query_species": "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "retained_hits": 51276,
+      "target_species": "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "witness": {
+        "query": "FBpp0099610",
+        "retained_score": 4.88,
+        "target": "ENSRNOP00000062398",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 34519,
+      "query_species": "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "retained_hits": 35106,
+      "target_species": "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "witness": {
+        "query": "FBpp0306777",
+        "retained_score": 1.9545090995198309,
+        "target": "ENSTNIP00000022663",
+        "target_length": 36
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 38123,
+      "query_species": "Gallus_gallus.GRCg6a.pep.all.fa",
+      "retained_hits": 38635,
+      "target_species": "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "witness": {
+        "query": "ENSGALP00000003584",
+        "retained_score": 2.7056112952193287,
+        "target": "WBGene00001947.1",
+        "target_length": 46
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 81695,
+      "query_species": "Gallus_gallus.GRCg6a.pep.all.fa",
+      "retained_hits": 83468,
+      "target_species": "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "witness": {
+        "query": "ENSGALP00000027676",
+        "retained_score": 3.774193548387097,
+        "target": "ENSCAFP00000052555",
+        "target_length": 31
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 33205,
+      "query_species": "Gallus_gallus.GRCg6a.pep.all.fa",
+      "retained_hits": 33519,
+      "target_species": "Ciona_intestinalis.KH.pep.all.fa",
+      "witness": {
+        "query": "ENSGALP00000027981",
+        "retained_score": 0.8690495035428093,
+        "target": "ENSCINP00000033013",
+        "target_length": 31
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 111268,
+      "query_species": "Gallus_gallus.GRCg6a.pep.all.fa",
+      "retained_hits": 113250,
+      "target_species": "Danio_rerio.GRCz11.pep.all.fa",
+      "witness": {
+        "query": "ENSGALP00000046565",
+        "retained_score": 1.5425698889258874,
+        "target": "ENSDARP00000076906",
+        "target_length": 34
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 36050,
+      "query_species": "Gallus_gallus.GRCg6a.pep.all.fa",
+      "retained_hits": 37002,
+      "target_species": "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "witness": {
+        "query": "ENSGALP00000057738",
+        "retained_score": 3.1972327561967235,
+        "target": "FBpp0091036",
+        "target_length": 40
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 103296,
+      "query_species": "Gallus_gallus.GRCg6a.pep.all.fa",
+      "retained_hits": 104657,
+      "target_species": "Gallus_gallus.GRCg6a.pep.all.fa",
+      "witness": {
+        "query": "ENSGALP00000033376",
+        "retained_score": 1.7324190939450508,
+        "target": "ENSGALP00000069276",
+        "target_length": 33
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 100944,
+      "query_species": "Gallus_gallus.GRCg6a.pep.all.fa",
+      "retained_hits": 103043,
+      "target_species": "Homo_sapiens.GRCh38.pep.all.fa",
+      "witness": {
+        "query": "ENSGALP00000070838",
+        "retained_score": 0.8873230455949008,
+        "target": "ENSP00000456586",
+        "target_length": 19
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 88771,
+      "query_species": "Gallus_gallus.GRCg6a.pep.all.fa",
+      "retained_hits": 90070,
+      "target_species": "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "witness": {
+        "query": "ENSGALP00000049529",
+        "retained_score": 1.0527608215807795,
+        "target": "ENSMODP00000054276",
+        "target_length": 28
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 96833,
+      "query_species": "Gallus_gallus.GRCg6a.pep.all.fa",
+      "retained_hits": 98600,
+      "target_species": "Mus_musculus.GRCm38.pep.all.fa",
+      "witness": {
+        "query": "ENSGALP00000023102",
+        "retained_score": 2.623787498993981,
+        "target": "ENSMUSP00000143665",
+        "target_length": 29
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 94050,
+      "query_species": "Gallus_gallus.GRCg6a.pep.all.fa",
+      "retained_hits": 95989,
+      "target_species": "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "witness": {
+        "query": "ENSGALP00000027676",
+        "retained_score": 3.6774193548387095,
+        "target": "ENSPTRP00000086129",
+        "target_length": 31
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 94905,
+      "query_species": "Gallus_gallus.GRCg6a.pep.all.fa",
+      "retained_hits": 96400,
+      "target_species": "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "witness": {
+        "query": "ENSGALP00000027676",
+        "retained_score": 4.354838709677419,
+        "target": "ENSRNOP00000011970",
+        "target_length": 31
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 72265,
+      "query_species": "Gallus_gallus.GRCg6a.pep.all.fa",
+      "retained_hits": 73535,
+      "target_species": "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "witness": {
+        "query": "ENSGALP00000067140",
+        "retained_score": 2.315917782932927,
+        "target": "ENSTNIP00000012031",
+        "target_length": 36
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 58902,
+      "query_species": "Homo_sapiens.GRCh38.pep.all.fa",
+      "retained_hits": 59685,
+      "target_species": "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "witness": {
+        "query": "ENSP00000449026",
+        "retained_score": 3.8376128944009875,
+        "target": "WBGene00023067.1",
+        "target_length": 22
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 198764,
+      "query_species": "Homo_sapiens.GRCh38.pep.all.fa",
+      "retained_hits": 201493,
+      "target_species": "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "witness": {
+        "query": "ENSP00000437910",
+        "retained_score": 3.75,
+        "target": "ENSCAFP00000052679",
+        "target_length": 24
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 54234,
+      "query_species": "Homo_sapiens.GRCh38.pep.all.fa",
+      "retained_hits": 54666,
+      "target_species": "Ciona_intestinalis.KH.pep.all.fa",
+      "witness": {
+        "query": "ENSP00000300738",
+        "retained_score": 0.8998615077542932,
+        "target": "ENSCINP00000033013",
+        "target_length": 31
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 216680,
+      "query_species": "Homo_sapiens.GRCh38.pep.all.fa",
+      "retained_hits": 219854,
+      "target_species": "Danio_rerio.GRCz11.pep.all.fa",
+      "witness": {
+        "query": "ENSP00000449026",
+        "retained_score": 5.12,
+        "target": "ENSDARP00000135179",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 70993,
+      "query_species": "Homo_sapiens.GRCh38.pep.all.fa",
+      "retained_hits": 72552,
+      "target_species": "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "witness": {
+        "query": "ENSP00000449026",
+        "retained_score": 4.88,
+        "target": "FBpp0099610",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 132395,
+      "query_species": "Homo_sapiens.GRCh38.pep.all.fa",
+      "retained_hits": 134521,
+      "target_species": "Gallus_gallus.GRCg6a.pep.all.fa",
+      "witness": {
+        "query": "ENSP00000435380",
+        "retained_score": 3.6774193548387095,
+        "target": "ENSGALP00000027676",
+        "target_length": 31
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 311886,
+      "query_species": "Homo_sapiens.GRCh38.pep.all.fa",
+      "retained_hits": 315129,
+      "target_species": "Homo_sapiens.GRCh38.pep.all.fa",
+      "witness": {
+        "query": "ENSP00000487646",
+        "retained_score": 5.422176684690384,
+        "target": "ENSP00000419074",
+        "target_length": 15
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 212205,
+      "query_species": "Homo_sapiens.GRCh38.pep.all.fa",
+      "retained_hits": 214103,
+      "target_species": "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "witness": {
+        "query": "ENSP00000490930",
+        "retained_score": 4.72,
+        "target": "ENSMODP00000042753",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 259156,
+      "query_species": "Homo_sapiens.GRCh38.pep.all.fa",
+      "retained_hits": 262012,
+      "target_species": "Mus_musculus.GRCm38.pep.all.fa",
+      "witness": {
+        "query": "ENSP00000419748",
+        "retained_score": 4.859126579037751,
+        "target": "ENSMUSP00000141217",
+        "target_length": 18
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 238942,
+      "query_species": "Homo_sapiens.GRCh38.pep.all.fa",
+      "retained_hits": 241762,
+      "target_species": "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "witness": {
+        "query": "ENSP00000382856",
+        "retained_score": 3.394673699166022,
+        "target": "ENSPTRP00000059957",
+        "target_length": 24
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 234255,
+      "query_species": "Homo_sapiens.GRCh38.pep.all.fa",
+      "retained_hits": 236559,
+      "target_species": "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "witness": {
+        "query": "ENSP00000449026",
+        "retained_score": 5.12,
+        "target": "ENSRNOP00000062398",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 127766,
+      "query_species": "Homo_sapiens.GRCh38.pep.all.fa",
+      "retained_hits": 129488,
+      "target_species": "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "witness": {
+        "query": "ENSP00000297574",
+        "retained_score": 1.9503481803748164,
+        "target": "ENSTNIP00000012031",
+        "target_length": 36
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 45537,
+      "query_species": "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "retained_hits": 46052,
+      "target_species": "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "witness": {
+        "query": "ENSMODP00000030547",
+        "retained_score": 2.7308973820905376,
+        "target": "WBGene00001947.1",
+        "target_length": 46
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 236959,
+      "query_species": "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "retained_hits": 238860,
+      "target_species": "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "witness": {
+        "query": "ENSMODP00000042753",
+        "retained_score": 4.72,
+        "target": "ENSCAFP00000056746",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 47694,
+      "query_species": "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "retained_hits": 48021,
+      "target_species": "Ciona_intestinalis.KH.pep.all.fa",
+      "witness": {
+        "query": "ENSMODP00000032512",
+        "retained_score": 0.9278123079148808,
+        "target": "ENSCINP00000033013",
+        "target_length": 31
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 219291,
+      "query_species": "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "retained_hits": 221482,
+      "target_species": "Danio_rerio.GRCz11.pep.all.fa",
+      "witness": {
+        "query": "ENSMODP00000042753",
+        "retained_score": 4.08,
+        "target": "ENSDARP00000142932",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 63211,
+      "query_species": "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "retained_hits": 64260,
+      "target_species": "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "witness": {
+        "query": "ENSMODP00000044011",
+        "retained_score": 3.2232265184422255,
+        "target": "FBpp0091036",
+        "target_length": 40
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 124232,
+      "query_species": "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "retained_hits": 125812,
+      "target_species": "Gallus_gallus.GRCg6a.pep.all.fa",
+      "witness": {
+        "query": "ENSMODP00000047664",
+        "retained_score": 1.9994057346474075,
+        "target": "ENSGALP00000070143",
+        "target_length": 33
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 246786,
+      "query_species": "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "retained_hits": 248836,
+      "target_species": "Homo_sapiens.GRCh38.pep.all.fa",
+      "witness": {
+        "query": "ENSMODP00000007760",
+        "retained_score": 0.8003031770536441,
+        "target": "ENSP00000488138",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 315060,
+      "query_species": "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "retained_hits": 316180,
+      "target_species": "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "witness": {
+        "query": "ENSMODP00000037650",
+        "retained_score": 4.601983607036165,
+        "target": "ENSMODP00000021624",
+        "target_length": 44
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 249944,
+      "query_species": "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "retained_hits": 251800,
+      "target_species": "Mus_musculus.GRCm38.pep.all.fa",
+      "witness": {
+        "query": "ENSMODP00000048414",
+        "retained_score": 0.8586325681961657,
+        "target": "ENSMUSP00000083414",
+        "target_length": 23
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 230783,
+      "query_species": "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "retained_hits": 232700,
+      "target_species": "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "witness": {
+        "query": "ENSMODP00000042753",
+        "retained_score": 4.72,
+        "target": "ENSPTRP00000082533",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 242304,
+      "query_species": "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "retained_hits": 243840,
+      "target_species": "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "witness": {
+        "query": "ENSMODP00000044011",
+        "retained_score": 4.945945945945946,
+        "target": "ENSRNOP00000075594",
+        "target_length": 37
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 120578,
+      "query_species": "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "retained_hits": 121855,
+      "target_species": "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "witness": {
+        "query": "ENSMODP00000006973",
+        "retained_score": 3.187276291558383,
+        "target": "ENSTNIP00000012031",
+        "target_length": 36
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 52892,
+      "query_species": "Mus_musculus.GRCm38.pep.all.fa",
+      "retained_hits": 53524,
+      "target_species": "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "witness": {
+        "query": "ENSMUSP00000074994",
+        "retained_score": 2.7688265123973506,
+        "target": "WBGene00001947.1",
+        "target_length": 46
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 245526,
+      "query_species": "Mus_musculus.GRCm38.pep.all.fa",
+      "retained_hits": 247897,
+      "target_species": "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "witness": {
+        "query": "ENSMUSP00000136098",
+        "retained_score": 2.8859710374203047,
+        "target": "ENSCAFP00000052679",
+        "target_length": 24
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 51028,
+      "query_species": "Mus_musculus.GRCm38.pep.all.fa",
+      "retained_hits": 51426,
+      "target_species": "Ciona_intestinalis.KH.pep.all.fa",
+      "witness": {
+        "query": "ENSMUSP00000033283",
+        "retained_score": 0.8998615077542932,
+        "target": "ENSCINP00000033013",
+        "target_length": 31
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 246406,
+      "query_species": "Mus_musculus.GRCm38.pep.all.fa",
+      "retained_hits": 249129,
+      "target_species": "Danio_rerio.GRCz11.pep.all.fa",
+      "witness": {
+        "query": "ENSMUSP00000132711",
+        "retained_score": 1.5887121700611715,
+        "target": "ENSDARP00000076906",
+        "target_length": 34
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 66651,
+      "query_species": "Mus_musculus.GRCm38.pep.all.fa",
+      "retained_hits": 67955,
+      "target_species": "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "witness": {
+        "query": "ENSMUSP00000128352",
+        "retained_score": 3.2232265184422255,
+        "target": "FBpp0091036",
+        "target_length": 40
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 143883,
+      "query_species": "Mus_musculus.GRCm38.pep.all.fa",
+      "retained_hits": 145760,
+      "target_species": "Gallus_gallus.GRCg6a.pep.all.fa",
+      "witness": {
+        "query": "ENSMUSP00000036950",
+        "retained_score": 4.354838709677419,
+        "target": "ENSGALP00000027676",
+        "target_length": 31
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 308301,
+      "query_species": "Mus_musculus.GRCm38.pep.all.fa",
+      "retained_hits": 311065,
+      "target_species": "Homo_sapiens.GRCh38.pep.all.fa",
+      "witness": {
+        "query": "ENSMUSP00000141217",
+        "retained_score": 4.859126579037751,
+        "target": "ENSP00000419748",
+        "target_length": 17
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 266393,
+      "query_species": "Mus_musculus.GRCm38.pep.all.fa",
+      "retained_hits": 268106,
+      "target_species": "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "witness": {
+        "query": "ENSMUSP00000146960",
+        "retained_score": 2.3368085410027435,
+        "target": "ENSMODP00000052996",
+        "target_length": 24
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 346420,
+      "query_species": "Mus_musculus.GRCm38.pep.all.fa",
+      "retained_hits": 348378,
+      "target_species": "Mus_musculus.GRCm38.pep.all.fa",
+      "witness": {
+        "query": "ENSMUSP00000153567",
+        "retained_score": 2.480220473841392,
+        "target": "ENSMUSP00000153109",
+        "target_length": 19
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 268533,
+      "query_species": "Mus_musculus.GRCm38.pep.all.fa",
+      "retained_hits": 271021,
+      "target_species": "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "witness": {
+        "query": "ENSMUSP00000100212",
+        "retained_score": 1.0537713795388022,
+        "target": "ENSPTRP00000087130",
+        "target_length": 26
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 300923,
+      "query_species": "Mus_musculus.GRCm38.pep.all.fa",
+      "retained_hits": 302955,
+      "target_species": "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "witness": {
+        "query": "ENSMUSP00000036950",
+        "retained_score": 4.967741935483871,
+        "target": "ENSRNOP00000011970",
+        "target_length": 31
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 134484,
+      "query_species": "Mus_musculus.GRCm38.pep.all.fa",
+      "retained_hits": 136035,
+      "target_species": "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "witness": {
+        "query": "ENSMUSP00000074903",
+        "retained_score": 2.5171465861222577,
+        "target": "ENSTNIP00000022663",
+        "target_length": 36
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 51382,
+      "query_species": "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "retained_hits": 51996,
+      "target_species": "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "witness": {
+        "query": "ENSPTRP00000059789",
+        "retained_score": 3.8376128944009875,
+        "target": "WBGene00023067.1",
+        "target_length": 22
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 166483,
+      "query_species": "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "retained_hits": 168779,
+      "target_species": "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "witness": {
+        "query": "ENSPTRP00000060287",
+        "retained_score": 3.575277429186744,
+        "target": "ENSCAFP00000055125",
+        "target_length": 23
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 51065,
+      "query_species": "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "retained_hits": 51452,
+      "target_species": "Ciona_intestinalis.KH.pep.all.fa",
+      "witness": {
+        "query": "ENSPTRP00000005668",
+        "retained_score": 0.8998615077542932,
+        "target": "ENSCINP00000033013",
+        "target_length": 31
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 187378,
+      "query_species": "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "retained_hits": 190044,
+      "target_species": "Danio_rerio.GRCz11.pep.all.fa",
+      "witness": {
+        "query": "ENSPTRP00000059789",
+        "retained_score": 5.12,
+        "target": "ENSDARP00000135179",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 65019,
+      "query_species": "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "retained_hits": 66283,
+      "target_species": "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "witness": {
+        "query": "ENSPTRP00000059789",
+        "retained_score": 4.88,
+        "target": "FBpp0099610",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 113508,
+      "query_species": "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "retained_hits": 115386,
+      "target_species": "Gallus_gallus.GRCg6a.pep.all.fa",
+      "witness": {
+        "query": "ENSPTRP00000086129",
+        "retained_score": 3.6774193548387095,
+        "target": "ENSGALP00000027676",
+        "target_length": 31
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 209747,
+      "query_species": "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "retained_hits": 212516,
+      "target_species": "Homo_sapiens.GRCh38.pep.all.fa",
+      "witness": {
+        "query": "ENSPTRP00000081551",
+        "retained_score": 0.885257098564567,
+        "target": "ENSP00000456586",
+        "target_length": 19
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 175158,
+      "query_species": "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "retained_hits": 176847,
+      "target_species": "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "witness": {
+        "query": "ENSPTRP00000082533",
+        "retained_score": 4.72,
+        "target": "ENSMODP00000042753",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 193832,
+      "query_species": "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "retained_hits": 196223,
+      "target_species": "Mus_musculus.GRCm38.pep.all.fa",
+      "witness": {
+        "query": "ENSPTRP00000015595",
+        "retained_score": 1.7321357099393393,
+        "target": "ENSMUSP00000100687",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 181814,
+      "query_species": "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "retained_hits": 183820,
+      "target_species": "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "witness": {
+        "query": "ENSPTRP00000060630",
+        "retained_score": 3.394673699166022,
+        "target": "ENSPTRP00000059957",
+        "target_length": 24
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 186940,
+      "query_species": "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "retained_hits": 188860,
+      "target_species": "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "witness": {
+        "query": "ENSPTRP00000059789",
+        "retained_score": 5.12,
+        "target": "ENSRNOP00000062398",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 114757,
+      "query_species": "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "retained_hits": 116298,
+      "target_species": "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "witness": {
+        "query": "ENSPTRP00000078604",
+        "retained_score": 1.9503481803748164,
+        "target": "ENSTNIP00000012031",
+        "target_length": 36
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 47290,
+      "query_species": "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "retained_hits": 47792,
+      "target_species": "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "witness": {
+        "query": "ENSRNOP00000062398",
+        "retained_score": 3.8376128944009875,
+        "target": "WBGene00023067.1",
+        "target_length": 22
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 250887,
+      "query_species": "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "retained_hits": 252918,
+      "target_species": "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "witness": {
+        "query": "ENSRNOP00000062398",
+        "retained_score": 5.12,
+        "target": "ENSCAFP00000046985",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 46328,
+      "query_species": "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "retained_hits": 46679,
+      "target_species": "Ciona_intestinalis.KH.pep.all.fa",
+      "witness": {
+        "query": "ENSRNOP00000064166",
+        "retained_score": 0.8998615077542932,
+        "target": "ENSCINP00000033013",
+        "target_length": 31
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 237736,
+      "query_species": "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "retained_hits": 240021,
+      "target_species": "Danio_rerio.GRCz11.pep.all.fa",
+      "witness": {
+        "query": "ENSRNOP00000062398",
+        "retained_score": 5.12,
+        "target": "ENSDARP00000135179",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 58034,
+      "query_species": "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "retained_hits": 59090,
+      "target_species": "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "witness": {
+        "query": "ENSRNOP00000062398",
+        "retained_score": 4.88,
+        "target": "FBpp0099610",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 142721,
+      "query_species": "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "retained_hits": 144341,
+      "target_species": "Gallus_gallus.GRCg6a.pep.all.fa",
+      "witness": {
+        "query": "ENSRNOP00000011970",
+        "retained_score": 4.354838709677419,
+        "target": "ENSGALP00000027676",
+        "target_length": 31
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 292569,
+      "query_species": "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "retained_hits": 294915,
+      "target_species": "Homo_sapiens.GRCh38.pep.all.fa",
+      "witness": {
+        "query": "ENSRNOP00000045608",
+        "retained_score": 0.9425255719592219,
+        "target": "ENSP00000456586",
+        "target_length": 19
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 264701,
+      "query_species": "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "retained_hits": 266179,
+      "target_species": "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "witness": {
+        "query": "ENSRNOP00000064672",
+        "retained_score": 2.4647515087732477,
+        "target": "ENSMODP00000052996",
+        "target_length": 24
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 307343,
+      "query_species": "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "retained_hits": 309411,
+      "target_species": "Mus_musculus.GRCm38.pep.all.fa",
+      "witness": {
+        "query": "ENSRNOP00000001633",
+        "retained_score": 1.3858697343671664,
+        "target": "ENSMUSP00000100687",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 268437,
+      "query_species": "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "retained_hits": 270544,
+      "target_species": "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "witness": {
+        "query": "ENSRNOP00000062398",
+        "retained_score": 5.12,
+        "target": "ENSPTRP00000059789",
+        "target_length": 25
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 281672,
+      "query_species": "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "retained_hits": 283032,
+      "target_species": "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "witness": {
+        "query": "ENSRNOP00000068591",
+        "retained_score": 2.4476732081634744,
+        "target": "ENSRNOP00000071752",
+        "target_length": 39
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 127174,
+      "query_species": "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "retained_hits": 128526,
+      "target_species": "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "witness": {
+        "query": "ENSRNOP00000006411",
+        "retained_score": 2.173023389506196,
+        "target": "ENSTNIP00000012031",
+        "target_length": 36
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 37805,
+      "query_species": "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "retained_hits": 38211,
+      "target_species": "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "witness": {
+        "query": "ENSTNIP00000000561",
+        "retained_score": 2.7688265123973506,
+        "target": "WBGene00001947.1",
+        "target_length": 46
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 80575,
+      "query_species": "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "retained_hits": 82403,
+      "target_species": "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "witness": {
+        "query": "ENSTNIP00000002337",
+        "retained_score": 1.789172881847811,
+        "target": "ENSCAFP00000049422",
+        "target_length": 45
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 39527,
+      "query_species": "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "retained_hits": 39867,
+      "target_species": "Ciona_intestinalis.KH.pep.all.fa",
+      "witness": {
+        "query": "ENSTNIP00000014736",
+        "retained_score": 0.7967442077448428,
+        "target": "ENSCINP00000033013",
+        "target_length": 31
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 133981,
+      "query_species": "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "retained_hits": 136124,
+      "target_species": "Danio_rerio.GRCz11.pep.all.fa",
+      "witness": {
+        "query": "ENSTNIP00000017687",
+        "retained_score": 2.029446375059175,
+        "target": "ENSDARP00000076906",
+        "target_length": 34
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 37240,
+      "query_species": "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "retained_hits": 38050,
+      "target_species": "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "witness": {
+        "query": "ENSTNIP00000002826",
+        "retained_score": 4.1568627450980395,
+        "target": "FBpp0072094",
+        "target_length": 51
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 73529,
+      "query_species": "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "retained_hits": 74947,
+      "target_species": "Gallus_gallus.GRCg6a.pep.all.fa",
+      "witness": {
+        "query": "ENSTNIP00000015755",
+        "retained_score": 0.7827484780598144,
+        "target": "ENSGALP00000061842",
+        "target_length": 30
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 100868,
+      "query_species": "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "retained_hits": 102826,
+      "target_species": "Homo_sapiens.GRCh38.pep.all.fa",
+      "witness": {
+        "query": "ENSTNIP00000005526",
+        "retained_score": 2.316755250123642,
+        "target": "ENSP00000392349",
+        "target_length": 34
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 87689,
+      "query_species": "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "retained_hits": 88894,
+      "target_species": "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "witness": {
+        "query": "ENSTNIP00000011372",
+        "retained_score": 0.9706437514089771,
+        "target": "ENSMODP00000054276",
+        "target_length": 28
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 99633,
+      "query_species": "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "retained_hits": 101402,
+      "target_species": "Mus_musculus.GRCm38.pep.all.fa",
+      "witness": {
+        "query": "ENSTNIP00000014613",
+        "retained_score": 2.348880878058814,
+        "target": "ENSMUSP00000133186",
+        "target_length": 30
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 95044,
+      "query_species": "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "retained_hits": 96961,
+      "target_species": "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "witness": {
+        "query": "ENSTNIP00000020994",
+        "retained_score": 1.5098885985638735,
+        "target": "ENSPTRP00000083738",
+        "target_length": 34
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 95856,
+      "query_species": "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "retained_hits": 97367,
+      "target_species": "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "witness": {
+        "query": "ENSTNIP00000005787",
+        "retained_score": 1.013703023071623,
+        "target": "ENSRNOP00000036373",
+        "target_length": 38
+      }
+    },
+    {
+      "assessment": "eligible_target_witness_present",
+      "eligible_target_hits": 83914,
+      "query_species": "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "retained_hits": 85223,
+      "target_species": "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "witness": {
+        "query": "ENSTNIP00000000099",
+        "retained_score": 1.5427928879316477,
+        "target": "ENSTNIP00000003336",
+        "target_length": 29
+      }
+    }
+  ],
+  "genes": 251378,
+  "hits": 18235373,
+  "limitations": [
+    "Conditional on one complete species-pair candidate batch and authentic retained search outputs.",
+    "The retained driver uses this batching, but its current source is not proof of the exact historical executed revision.",
+    "An accepted eligible target rules out the all-long condition for that batch; no witness is unresolved, not proof of failure.",
+    "Does not establish GPU availability, rejected-candidate identity, score correctness or historical runtime integrity.",
+    "No inference rerun, reference-label accuracy evaluation or other-dataset non-impact claim."
+  ],
+  "publication_ready": false,
+  "source": {
+    "bytes": 5006,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_ob_gpu_batch_witnesses.py",
+    "sha256": "658496da6f0df78d522744019cb47a3823b560522a6f3bdae19dce12ec44554c"
+  },
+  "species": 12,
+  "status": "retained_hit_target_length_witnesses_audited",
+  "unresolved_directions": 0,
+  "witnessed_directions": 144
+}
