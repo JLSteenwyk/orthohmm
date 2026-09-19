@@ -1,5 +1,33 @@
 # Publication Progress
 
+## CPM Candidate Preparation Implemented (2026-09-19)
+
+Previous turn was progress: independent CPM replay admission was committed,
+pushed and queued. Current scheduler inspection confirms OrthoFinder scoring
+21735_1 remains running (53:00), with score admission pending; BLAST and DGX
+timing/recorder remain live. No active run was stopped or restarted.
+
+Added fixed-profile candidate construction from each admitted CPM arm's own
+strict_profiles_refined partition. The frozen baseline seed is not reused
+for changed CPM. The original satellite_v2 wrapper and all candidate
+parameters stay fixed, using the existing scoped control interceptor.
+The variant admission scheduler, executor/source, context, seed and hashes
+must validate; its frozen independent validator then freshly reproduces the
+whole admission report before candidate construction. Complete seed/merge
+consistency is checked with the existing candidate content auditor.
+
+Checkpoint and runtime are checked before/after preparation. Failures retain
+manifests and partial outputs without retry or overwrite. Prepared candidates
+remain pending independent admission, phylogenetic inference and scoring.
+No default, reference label or scientific package changes were made.
+
+Validation: 128 focused tests passed in 5.37 seconds, including own-seed
+selection, unchanged candidate parameters, real content/merge checks,
+authorization and import gates, fresh-admission mismatch, checkpoint/runtime
+changes and failure preservation. Batch requests two serial 2-CPU/64-GiB
+tasks, 4 hours/no requeue, afterany:21962 AND aftercorr:21962, with GNU time
+records. These cached shared-host measurements are not controlled timing.
+
 ## Independent CPM Variant Admission Implemented (2026-09-19)
 
 Admission array 21962 is queued from pushed frozen commit cbd5918, with
