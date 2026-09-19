@@ -12,25 +12,36 @@ from benchmark_tools.audit_qfo_swiss_counts import REFERENCE_SHA, read_raw, veri
 from benchmark_tools.bootstrap_qfo_parameter_neighborhood import ARMS, validated_values
 from benchmark_tools.export_qfo_corrected_factorial import extract
 from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
+from benchmark_tools.run_qfo_cpm_assessment import ARMS as CPM_ARMS, validate_stage as validate_cpm_stage
 from benchmark_tools.run_qfo_parameter_assessment import VARIANTS, validate_stage
 from benchmark_tools.run_simulation_methods import read_frozen
 from benchmark_tools.validate_qfo_native_assessment import validate_records
 
 CONTROL_SHA = "49b7d837b2ba2928b0676c9974e2ec16db5211f1086c366c7bc11805a2ee751f"
 PARAMETER_ADMITTER_SHA = "6574b40cc97624c937eb72e2ed27c0822aff0b6ff69156815b0255055d62d81c"
+CPM_ADMITTER_SHA = "907e5abbf7ec5b60781dfd48d95452bb67578662b1aefa44af8be131b7542c66"
 
 
 def validate_admission(arm, report, conversion):
+    if arm not in ARMS:
+        raise ValueError("Unknown parameter arm")
     if arm == "control":
         row = extract(report, conversion)
         if row["cell"] != "p1_c1_r1" or row["index"] != 7:
             raise ValueError("Wrong full-pipeline control")
+    elif arm in CPM_ARMS:
+        index = CPM_ARMS.index(arm)
+        if (report["status"] != "cpm_assessment_admitted"
+                or report["arm"] != arm or type(report["index"]) is not int or report["index"] != index
+                or report["source"]["sha256"] != CPM_ADMITTER_SHA
+                or report["accuracy_admitted"] is not True or report["publication_ready"] is not False
+                or report["conversion"] != conversion or report["context"] != conversion["context"]):
+            raise ValueError("Wrong CPM score admission")
+        validate_cpm_stage(conversion, index, report["conversion_scheduler"])
     else:
-        if arm not in VARIANTS:
-            raise ValueError("CPM admission workflow not yet implemented; cannot admit CPM counts")
         index = VARIANTS.index(arm)
         if (report["status"] != "corrected_parameter_assessment_admitted"
-                or report["variant"] != arm or report["index"] != index
+                or report["variant"] != arm or type(report["index"]) is not int or report["index"] != index
                 or report["source"]["sha256"] != PARAMETER_ADMITTER_SHA
                 or report["accuracy_admitted"] is not True or report["publication_ready"] is not False
                 or report["conversion"] != conversion):
@@ -41,17 +52,22 @@ def validate_admission(arm, report, conversion):
 
 
 def raw_from_execution(arm, report, execution):
+    if arm not in ARMS:
+        raise ValueError("Unknown parameter arm")
     scheduler = report["scheduler"]
     if (tuple(scheduler[k] for k in ("State", "ExitCode", "NodeList", "AllocCPUS")) != ("COMPLETED", "0:0", "bizon", "8")
             or execution["status"] != "process_succeeded_pending_independent_admission"
             or type(execution["exit_code"]) is not int or execution["exit_code"] != 0
             or execution["job_id"] != scheduler["JobIDRaw"]
-            or execution["index"] != report["index"]
+            or type(execution["index"]) is not int or execution["index"] != report["index"]
             or execution["pairs_manifest"] != report["pairs_manifest"]
             or execution["stage"] != report["conversion"]):
         raise ValueError("Execution contradicts score admission")
-    if execution.get("cell" if arm == "control" else "variant") != ("p1_c1_r1" if arm == "control" else arm):
+    key = "cell" if arm == "control" else "arm" if arm in CPM_ARMS else "variant"
+    if execution.get(key) != ("p1_c1_r1" if arm == "control" else arm):
         raise ValueError("Wrong execution arm")
+    if arm in CPM_ARMS and execution["context"] != report["context"]:
+        raise ValueError("CPM execution context differs from admission")
     raw = [r for r in execution["outputs"] if Path(r["path"]).parent.name == "SwissTrees"
            and r["path"].endswith("raw.txt.gz")]
     if len(raw) != 1:

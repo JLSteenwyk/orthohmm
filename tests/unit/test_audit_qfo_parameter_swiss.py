@@ -114,7 +114,64 @@ def test_execution_binding(problem):
         assert module.raw_from_execution("norm_low", report, execution) == execution["outputs"][0]
 
 
-@pytest.mark.parametrize("arm", ["cpm_low", "cpm_high", "unknown"])
-def test_unimplemented_admission_routes_fail_closed(arm):
-    with pytest.raises(ValueError, match="workflow not yet"):
-        module.validate_admission(arm, {}, {})
+def test_unknown_admission_route_fails_closed():
+    with pytest.raises(ValueError, match="Unknown"):
+        module.validate_admission("unknown", {}, {})
+
+
+@pytest.mark.parametrize("index", range(2))
+@pytest.mark.parametrize("problem", [None, "status", "arm", "index", "source", "accuracy", "ready",
+                                   "conversion", "context", "participant", "loss"])
+def test_cpm_admission_binding(index, problem):
+    from tests.unit.test_run_qfo_cpm_assessment import fixture as stage_fixture
+    conversion, scheduler = stage_fixture(index)
+    conversion["context"] = {"arm": module.CPM_ARMS[index], "resolution": .08 if index == 0 else .12}
+    report = {"status": "cpm_assessment_admitted", "arm": module.CPM_ARMS[index], "index": index,
+        "source": {"sha256": module.CPM_ADMITTER_SHA}, "accuracy_admitted": True, "publication_ready": False,
+        "conversion": conversion, "context": dict(conversion["context"]), "conversion_scheduler": scheduler,
+        "assessment": {"participant": conversion["participant"]}}
+    if problem == "status":
+        report["status"] = "corrected_parameter_assessment_admitted"
+    elif problem == "arm":
+        report["arm"] = "norm_low"
+    elif problem == "index":
+        report["index"] = bool(index)
+    elif problem == "source":
+        report["source"]["sha256"] = module.PARAMETER_ADMITTER_SHA
+    elif problem == "accuracy":
+        report["accuracy_admitted"] = False
+    elif problem == "ready":
+        report["publication_ready"] = True
+    elif problem == "conversion":
+        report["conversion"] = {}
+    elif problem == "context":
+        report["context"]["resolution"] = .1
+    elif problem == "participant":
+        report["assessment"]["participant"] = "wrong"
+    elif problem == "loss":
+        conversion["removed_mapping_pairs"] = 1
+    if problem:
+        with pytest.raises(ValueError):
+            module.validate_admission(module.CPM_ARMS[index], report, conversion)
+    else:
+        module.validate_admission(module.CPM_ARMS[index], report, conversion)
+
+
+@pytest.mark.parametrize("arm", module.CPM_ARMS)
+@pytest.mark.parametrize("problem", [None, "context", "arm", "bool_index"])
+def test_cpm_raw_execution_binding(arm, problem):
+    report, execution = execution_fixture()
+    report["context"] = {"arm": arm}
+    execution.update(arm=arm, context={"arm": arm})
+    del execution["variant"]
+    if problem == "context":
+        execution["context"] = {}
+    elif problem == "arm":
+        execution["arm"] = "norm_low"
+    elif problem == "bool_index":
+        execution["index"] = False
+    if problem:
+        with pytest.raises(ValueError):
+            module.raw_from_execution(arm, report, execution)
+    else:
+        assert module.raw_from_execution(arm, report, execution) == execution["outputs"][0]
