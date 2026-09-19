@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Complete Dual Native Audit Driver Prepared (2026-09-19)
+
+Previous turn made progress with execution provenance checks, committed and
+pushed as `0684bff`. Added the complete three-run archive audit driver:
+terminal-job gate, pinned recipe inventory, raw replay, native product
+validation, full regular-file inventory, prior canonical-output comparison
+and retained failures/flags. The pinned prior pressure audit and comparison
+entries 1, 3 and 8 were verified. All 96 focused tests passed in 1.44 seconds.
+Details and command: `DUAL_NATIVE_ARCHIVE_AUDIT_20260919.md`.
+
+Latest controller check: 21913 RUNNING at 10:36, 21914 dependency-pending,
+recorder 21915 RUNNING, corrected full OrthoFinder 21706_1 RUNNING at 9:16:41.
+OrthoMCL 21713 remains resource-pending and strata 21896 dependency-pending.
+No DGX native archives were read while the quiet window remained active.
+Next: collect the terminal three-run archive and run this audit, preserving
+all failed tasks and interval flags. The overhead/scaling and publication
+completion requirements remain open; this driver is not timing admission.
+
 ## Dual Diagnostic Provenance Checks Prepared (2026-09-19)
 
 Previous turn made progress with the raw-evidence replay checker, committed
