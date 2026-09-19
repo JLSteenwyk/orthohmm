@@ -1,0 +1,30 @@
+{
+  "jobs": [
+    21912,
+    21913,
+    21914
+  ],
+  "missing": [],
+  "observation_errors": 0,
+  "polls": 438,
+  "retained": {
+    "21912": {
+      "path": "scheduler_21912.txt",
+      "sha256": "1810a228af3a7f3158fe409822bc99029928549ba7fc75a034b25676f2480311"
+    },
+    "21913": {
+      "path": "scheduler_21913.txt",
+      "sha256": "6edda87c032944637727d3cb10d8f759f33be30c6522b4f054bc13f205b5988f"
+    },
+    "21914": {
+      "path": "scheduler_21914.txt",
+      "sha256": "13061ce8f94c62e6b9ef8b3b5bd15d385ed8b599925bec017a0110cb89a403eb"
+    }
+  },
+  "scientific_timings_admitted": false,
+  "sources": {
+    "capture_array_scheduler.py": "c692cb0fc28084558fb4e4f2d21282a94a6a93ceb32255660bbb3e8d8d279c64",
+    "capture_job_scheduler.py": "acf957ad45198b94a1a528551caefa34d55b1a34ffd722a4f689a9fab280dbd1"
+  },
+  "status": "complete"
+}

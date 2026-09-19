@@ -1,5 +1,26 @@
 # Publication Progress
 
+## All Three Dual Native Diagnostics Audited (2026-09-19)
+
+All three jobs and recorder21915 completed successfully. After the quiet
+window ended, collected the complete native/recipe/input archive. Independent
+replay of 841 controller observations across 438 polls confirms all first
+terminal records and hashes, without errors or gaps.
+
+The complete native audit validates all three runs, 437 recipe files,
+109,169 run-file records, input/runtime bindings, raw observations and native
+output equivalence with prior periodic tasks1,3,8. No temporal issues.
+However, the narrow screen flags21 satellite_v2 intervals and one OrthoFinder
+interval; high sensitivity has zero. All22 are excess-unassigned-CPU flags,
+not identified foreign workloads. Original flags remain327/582/177.
+Full evidence and limits: `DUAL_NATIVE_RESULT_21912_20260919.md`.
+
+No scientific timing admission or repeat timing panel is authorized by this
+result. Next is mechanistic investigation of the remaining flags and a new
+prospective experiment if justified. Corrected full OrthoFinder21706_1
+remains RUNNING at9:42:01 on the latest controller check; OrthoMCL21713 and
+strata21896 remain pending. Publication completion remains unproven.
+
 ## Full Regression Refresh After Diagnostic And Archive Work (2026-09-19)
 
 Previous turn made progress with exact corrected factorial reproduction,

@@ -67,10 +67,12 @@ evidence that an experiment completed or a biological hypothesis is true.
   completed with 16 validated tasks and two retained failures. Seven of nine
   pairs are available; complete-panel overhead and controlled timing remain
   unestablished. The subsequent [dual-bracket diagnostic](DUAL_NATIVE_SUBMISSION_21912_20260919.md)
-  has two scheduler-successful jobs (21912 and 21913), with final job21914
-  RUNNING at4:48 and recorder21915 RUNNING at29:22 on the latest check.
-  Native evidence will be inspected only after all three terminate. This is
-  not the27-run scientific scaling panel or timing admission.
+  is [complete and audited](DUAL_NATIVE_RESULT_21912_20260919.md): all three
+  native outputs match the prescribed prior runs, but narrow CPU flags remain
+  in21 satellite_v2 intervals and one OrthoFinder interval. All original
+  flags are retained. Recorder21915 completed with all three terminal records
+  and no errors. This is not the27-run scientific scaling panel or timing
+  admission; remaining flags require investigation.
   The [failed21869deployment](DGX_PRESSURE_OVERHEAD_FAILURE_21869.md)
   remains retained: all18tasks failed before inference under the wrong
   interpreter. The replacement uses the pinned environment interpreter and
