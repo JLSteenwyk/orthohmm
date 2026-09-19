@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Native Diagnostic 22021 Running; Descriptive Reporter Added (2026-09-19)
+
+Submitted the frozen source/recipe with the bounded waiting-session launcher.
+Slurm 22021 is confirmed RUNNING on spark-7ff0 with 20 CPUs. Local receipt
+directory: `benchmarks/work/root_context_native_submission_v1`; terminal
+recorder: `benchmarks/work/root_context_native_scheduler_22021`. No additional
+DGX SSH inspection or transfers have occurred during the running panel.
+The deployed source remains `9821c81` and recipe SHA remains
+`2190269735646d5996832f841c4439d38e0b7f05fc5b3402af000f8b2bfe73f4`.
+
+Added a local post-run descriptive reporter for all/original-flagged/
+original-unflagged/narrow-flagged/narrow-unflagged intervals. It rechecks
+audited raw lineage evidence and reconstructs root context, preserves signed
+residuals and distinct scope/host windows, reports overlapping guest categories
+separately, retains output mismatches/panel issues, and represents empty
+subsets as missing distributions. No interval-independence or causal claims,
+flag exclusions or timing corrections are made. This local reporting addition
+does not alter the frozen DGX execution recipe.
+
+All 643 focused tests pass, including 14 new reporter tests using retained
+raw control observations. The full unit suite collected before the reporter
+tests were added completed with 7,813 passed and 9 skipped in 186.02 seconds;
+the 14 new tests passed separately. At the last poll, native diagnostic 22021
+was at 3:46 and BLAST 21713 at 11:48:21, both RUNNING. No native results are
+admitted yet. The prior turn was progress (launcher/receipt audit and frozen
+deployment); this turn launched the diagnostic and added reporting. The
+publication goal remains incomplete.
+
 ## Native Root-Context Deployment Frozen (2026-09-19)
 
 Deployed committed source `9821c81` to the fresh DGX directory
