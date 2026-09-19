@@ -1,0 +1,39 @@
+{
+  "article_identifier_mapping": "Crossref article-number is CSL number, not page.",
+  "limitations": [
+    "Crossref bibliographic metadata, not full-text scientific review or software-version provenance.",
+    "Author names reflect deposited metadata; known suffix/name omissions need explicit review, not silent invention.",
+    "Only selected references exported; dependency/resource bibliography and journal-specific style remain separate.",
+    "Raw responses retained locally; abstracts and cited-reference lists are omitted from committed CSL-JSON."
+  ],
+  "output": {
+    "bytes": 567,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_enzyme_references_20260919.csl.json",
+    "sha256": "85d8c79a4a21b6e2b07064e7a9e0d257a6d8b2cdb5c937fdb55ea75c27f8e92f"
+  },
+  "records": [
+    {
+      "authors": 1,
+      "doi": "10.1093/nar/28.1.304",
+      "id": "Bairoch2000ENZYME",
+      "response": {
+        "bytes": 1491,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_enzyme_crossref_20260919/Bairoch2000ENZYME.json",
+        "sha256": "377e72f60327a68cf1b0f3ccc5f1fb9047f92c03e6fb88af509e1fa9ea72276e"
+      },
+      "retrieved_utc": "2026-09-19T11:34:48.655976+00:00",
+      "url": "https://api.crossref.org/works/10.1093%2Fnar%2F28.1.304/transform/application/vnd.citationstyles.csl+json"
+    }
+  ],
+  "selection": {
+    "bytes": 79,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_enzyme_citation_selection_20260919.json",
+    "sha256": "22cf1bbf32f768dee3c4a95b684ff4016475667b171b4f3915a48f8aafbea8bc"
+  },
+  "source": {
+    "bytes": 6538,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_publication_citations.py",
+    "sha256": "e690c964058b09a2c8e4acae988506ab0e9c35141605b8b94934bdfcc116ede9"
+  },
+  "status": "selected_citation_metadata_exported"
+}

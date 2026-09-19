@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Remaining Resource Citations Added (2026-09-19)
+
+Previous turn made progress through committed manuscript diagnostics and
+full regression verification (`d190f46`). Checked official ENZYME guidance
+and the SwissTree resource page, retaining both HTML snapshots with hashes.
+Exported the ENZYME article using the existing Crossref tool and reproduced
+the CSL bytes in an offline replay; all 16 exporter tests pass. Added a
+reviewed SwissTree CSL website record with corporate attribution and access
+date, without inventing an issue date or DOI. Integrated bounded attribution
+into the manuscript; details are in `PUBLICATION_RESOURCE_REFERENCES_20260918.md`.
+
+This closes two identified bibliography omissions, not historical annotation
+provenance, complete journal formatting or rights clearance. No method,
+benchmark input, score or scientific executor changed. Controller polling
+confirmed 21920_1 and recorder 21922 live, alongside corrected QfO OrthoFinder
+21706_1; no SSH access or native inspection of the quiet DGX panel. Full
+corrected comparators, complete timing audit and remaining publication
+deliverables remain pending.
+
 ## Manuscript Diagnostics And Regression Refresh (2026-09-19)
 
 The previous turn completed the outstanding full unit run (progress), while

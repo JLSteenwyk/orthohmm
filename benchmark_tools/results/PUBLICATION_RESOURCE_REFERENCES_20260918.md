@@ -125,7 +125,46 @@ list from `PMC1347480.xml`, and serialize using
 input hashes first; the expected output hash is in the correction provenance.
 This article XML is not the missing TreeFam-A tree/mapping archive.
 
-EC and other annotation-resource attribution, complete machine-readable
-export of the SwissTree website citation, journal-specific formatting, and exact-version
-and rights review remain separate requirements. No benchmark inputs, scores,
+ENZYME attribution and the SwissTree website export were added in the
+September 19 supplement below. Other annotation-resource attribution,
+journal-specific formatting, exact-version and rights review remain separate
+requirements. No benchmark inputs, scores,
 confidence intervals or method settings changed during this citation review.
+
+## ENZYME And SwissTree Supplement (September 19)
+
+Bairoch A (2000). The ENZYME database in 2000. Nucleic Acids Research
+28(1):304-305. [DOI](https://doi.org/10.1093/nar/28.1.304).
+The [official citation guidance](https://enzyme.expasy.org/enzyme_ref.html)
+requests this article. It describes enzyme nomenclature, primarily based on
+IUBMB recommendations, not orthology inference or the QfO EC score formula.
+This is background resource attribution; it does not establish that our
+retained EC annotations were acquired directly from ENZYME, nor identify
+their release. No current ENZYME data replace the historical annotations.
+
+The existing Crossref exporter produced
+`publication_enzyme_references_20260919.csl.json`, with explicit selection
+and provenance in the corresponding `publication_enzyme_citation_selection`
+and `publication_enzyme_citation_provenance` JSON files dated 20260919.
+Author, title, year, volume and pages agree with the official guidance.
+Cached network-free replay reproduced the CSL byte-for-byte, SHA-256
+`85d8c79a4a21b6e2b07064e7a9e0d257a6d8b2cdb5c937fdb55ea75c27f8e92f`.
+All 16 existing exporter tests pass. The raw Crossref response is retained
+under `benchmarks/work/publication_enzyme_crossref_20260919/`.
+
+`publication_website_references_20260919.csl.json` manually transcribes the
+official SwissTree resource entry as a CSL webpage with a corporate author,
+URL and September 19 access date. It deliberately has no `issued` date or
+DOI: an access date is not a publication date. Its SHA-256 is
+`78bf8c6410d90ac1e68f8773681a4de607e08c0368c56fe85c8197e10317a819`.
+Title and corporate attribution were checked against the retained page.
+
+Official HTML snapshots are local evidence, not redistributed in Git:
+`benchmarks/work/publication_resource_web_20260919/` contains
+`swisstree.html` (69,147 bytes; SHA-256
+`c73b4485385920a0a30eefe93e5f6b27b5ebd5cd0d4be04d46159135ba6f1fcb`)
+and `enzyme_ref.html` (7,818 bytes; SHA-256
+`92e6da20944036d861429e7b074f9b97b46f43ae33448ee69ea9e748a7c3915e`).
+The respective URLs are the SwissTree ExPASy resource link above and ENZYME
+citation-guidance link. These checks close two citation omissions, not the
+complete bibliography, annotation provenance, data rights or journal rendering.

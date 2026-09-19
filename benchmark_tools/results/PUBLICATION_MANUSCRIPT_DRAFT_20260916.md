@@ -146,6 +146,11 @@ gene-tree references; they do not authenticate our exact retained snapshots.
 [FAS](https://doi.org/10.1093/bioinformatics/btad226) measures feature-architecture
 similarity, not pairwise orthology F1. Its later method paper is resource
 attribution, not proof of the implementation used for the QfO2020 archive.
+The [ENZYME resource paper](https://doi.org/10.1093/nar/28.1.304) provides
+enzyme-nomenclature background, not a citation for the QfO EC scoring formula
+or evidence of the source release used for our historical annotations.
+Source checks and machine-readable SwissTree/ENZYME citations are retained
+in the [resource supplement](PUBLICATION_RESOURCE_REFERENCES_20260918.md).
 
 For QfO we retain individual VGNC, SwissTrees, TreeFam-A, EC, GO, and FAS
 endpoints, their native axes, and source provenance. The unweighted mean of
