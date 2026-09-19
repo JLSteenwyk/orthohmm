@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Selected Bibliography Consolidated (2026-09-19)
+
+Previous turn made progress by closing ENZYME and SwissTree citation omissions
+(`81bc96a`). Added an offline assembler and explicit eight-export selection,
+choosing reviewed resource/service bylines rather than the raw alternatives.
+The combined 36-record CSL preserves every source field and has a per-ID
+source inventory. A second assembly is byte-identical; 31 assembly/export
+tests pass, including the relocated real selection. See
+`PUBLICATION_BIBLIOGRAPHY_ASSEMBLY_20260919.md` for hashes, reproduction and
+remaining citation/formatting limitations. Linked the combined bibliography
+from the manuscript. This is not complete bibliography or release admission.
+
+Controller polling confirmed 21920_2 RUNNING at 1:42 and recorder 21922 at
+21:03; corrected QfO OrthoFinder 21706_1 remained RUNNING at 11:09:50.
+OrthoMCL 21713 and strata 21896 remain pending. No DGX SSH access, live native
+inspection or change to the scientific executors. Corrected comparators,
+complete timing audit and broader publication deliverables remain unfinished.
+
 ## Remaining Resource Citations Added (2026-09-19)
 
 Previous turn made progress through committed manuscript diagnostics and

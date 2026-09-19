@@ -1,6 +1,6 @@
 # OrthoHMM: HMM-Centered Orthogroup Inference And Phylogenetic Refinement
 
-Working manuscript, updated 18 September 2026. Not submission-ready. Sections below
+Working manuscript, updated 19 September 2026. Not submission-ready. Sections below
 distinguish completed development-exposed analyses from prospective work.
 Internal evidence links are supplied for audit. An initial
 [verified literature bibliography](PUBLICATION_REFERENCES_20260917.md)
@@ -18,6 +18,10 @@ adds bounded attribution for TreeFam, SwissTree, FAS, VGNC and GO, including
 a [source-bound annotation citation export](publication_annotation_references_20260918.csl.json).
 Remaining dependency/resource citations and journal-specific
 formatting are incomplete.
+The [consolidated selected bibliography](publication_bibliography_20260919.csl.json)
+contains 36 records from eight pinned exports, using the reviewed bylines.
+[Assembly instructions and limits](PUBLICATION_BIBLIOGRAPHY_ASSEMBLY_20260919.md)
+preserve the distinction between that selection and complete citation coverage.
 
 ## Study Objective
 

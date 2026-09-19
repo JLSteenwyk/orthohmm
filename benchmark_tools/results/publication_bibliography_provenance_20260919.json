@@ -1,0 +1,220 @@
+{
+  "assembler": {
+    "bytes": 3679,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/assemble_publication_citations.py",
+    "sha256": "ec8cb8c1bec03c294fc62601442c29a385975cc89cf4adb7b1cb8edd02edf26d"
+  },
+  "count": 36,
+  "limitations": [
+    "Explicit selected exports only; not a claim of complete bibliography coverage.",
+    "No CSL fields, bylines, dates or article identifiers were corrected or normalized.",
+    "Not journal-style rendering, scientific source review, version provenance or rights clearance."
+  ],
+  "manifest": {
+    "bytes": 1131,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_bibliography_selection_20260919.json",
+    "sha256": "5679702bf63d9076ce114a0083dd93e79b63070e95fd96f50e50cd8c1fa72bb2"
+  },
+  "output": {
+    "bytes": 48327,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_bibliography_20260919.csl.json",
+    "sha256": "6ca17ec5bcf85b24386db04f3c2abcf62d15cc296b130c5319905392f452a87f"
+  },
+  "records": [
+    {
+      "id": "qfo2016",
+      "source": "publication_references_20260918.csl.json"
+    },
+    {
+      "id": "orthobench2020",
+      "source": "publication_references_20260918.csl.json"
+    },
+    {
+      "id": "ygob2005",
+      "source": "publication_references_20260918.csl.json"
+    },
+    {
+      "id": "busco2021",
+      "source": "publication_references_20260918.csl.json"
+    },
+    {
+      "id": "kuzmin2020",
+      "source": "publication_references_20260918.csl.json"
+    },
+    {
+      "id": "orthofinder2026",
+      "source": "publication_references_20260918.csl.json"
+    },
+    {
+      "id": "orthofinder2026correction",
+      "source": "publication_references_20260918.csl.json"
+    },
+    {
+      "id": "orthomcl2003",
+      "source": "publication_references_20260918.csl.json"
+    },
+    {
+      "id": "sonicparanoid2024",
+      "source": "publication_references_20260918.csl.json"
+    },
+    {
+      "id": "proteinortho2023",
+      "source": "publication_references_20260918.csl.json"
+    },
+    {
+      "id": "fastoma2025",
+      "source": "publication_references_20260918.csl.json"
+    },
+    {
+      "id": "orthofinder2015",
+      "source": "publication_references_20260918.csl.json"
+    },
+    {
+      "id": "orthofinder2019",
+      "source": "publication_references_20260918.csl.json"
+    },
+    {
+      "id": "orthohmm2024preprint",
+      "source": "publication_references_20260918.csl.json"
+    },
+    {
+      "id": "zombi2019online",
+      "source": "publication_dependency_references_20260918.csl.json"
+    },
+    {
+      "id": "pyvolve2015",
+      "source": "publication_dependency_references_20260918.csl.json"
+    },
+    {
+      "id": "mafft2013",
+      "source": "publication_dependency_references_20260918.csl.json"
+    },
+    {
+      "id": "fasttree2010",
+      "source": "publication_dependency_references_20260918.csl.json"
+    },
+    {
+      "id": "diamond2021",
+      "source": "publication_dependency_references_20260918.csl.json"
+    },
+    {
+      "id": "famsa2016",
+      "source": "publication_dependency_references_20260918.csl.json"
+    },
+    {
+      "id": "fastme2015",
+      "source": "publication_dependency_references_20260918.csl.json"
+    },
+    {
+      "id": "mcl2002",
+      "source": "publication_dependency_references_20260918.csl.json"
+    },
+    {
+      "id": "leiden2019",
+      "source": "publication_numeric_references_20260918.csl.json"
+    },
+    {
+      "id": "cpm2011",
+      "source": "publication_numeric_references_20260918.csl.json"
+    },
+    {
+      "id": "numpy2020",
+      "source": "publication_numeric_references_20260918.csl.json"
+    },
+    {
+      "id": "biopython2009",
+      "source": "publication_numeric_references_20260918.csl.json"
+    },
+    {
+      "id": "matplotlib2007",
+      "source": "publication_numeric_references_20260918.csl.json"
+    },
+    {
+      "id": "Li2006TreeFam",
+      "source": "publication_resource_bylines_20260918.csl.json"
+    },
+    {
+      "id": "Dosch2023FAS",
+      "source": "publication_resource_bylines_20260918.csl.json"
+    },
+    {
+      "id": "Jones2023VGNC",
+      "source": "publication_annotation_references_20260918.csl.json"
+    },
+    {
+      "id": "Ashburner2000GO",
+      "source": "publication_annotation_references_20260918.csl.json"
+    },
+    {
+      "id": "GO2026Knowledgebase",
+      "source": "publication_annotation_references_20260918.csl.json"
+    },
+    {
+      "id": "qfo2020",
+      "source": "publication_service_bylines_20260918.csl.json"
+    },
+    {
+      "id": "qfo2022",
+      "source": "publication_service_bylines_20260918.csl.json"
+    },
+    {
+      "id": "Bairoch2000ENZYME",
+      "source": "publication_enzyme_references_20260919.csl.json"
+    },
+    {
+      "id": "SIBSwissTree",
+      "source": "publication_website_references_20260919.csl.json"
+    }
+  ],
+  "sources": [
+    {
+      "bytes": 14537,
+      "file": "publication_references_20260918.csl.json",
+      "records": 14,
+      "sha256": "c44a7eb5b6eec9e4fa5d0c13146d194fe932888931fd8adb62fa66095f45f3e8"
+    },
+    {
+      "bytes": 6045,
+      "file": "publication_dependency_references_20260918.csl.json",
+      "records": 8,
+      "sha256": "3cbd2b1bdc502b2aa50c5b540886a75311ccc80646ec9fb8a778bd51afbc3e03"
+    },
+    {
+      "bytes": 5872,
+      "file": "publication_numeric_references_20260918.csl.json",
+      "records": 5,
+      "sha256": "d9d21dc677fba634463bb4f8b52f6c0323e046a38514a18abf6c2b8caf8c0ee2"
+    },
+    {
+      "bytes": 2457,
+      "file": "publication_resource_bylines_20260918.csl.json",
+      "records": 2,
+      "sha256": "a54eb04f4592544a202db938f0bcdf12d811df335f6c98d747e9f838f2393dca"
+    },
+    {
+      "bytes": 13420,
+      "file": "publication_annotation_references_20260918.csl.json",
+      "records": 3,
+      "sha256": "cde24aa5726574abba186744ea849e4a18b6c4ed4268842be159efd033028624"
+    },
+    {
+      "bytes": 5059,
+      "file": "publication_service_bylines_20260918.csl.json",
+      "records": 2,
+      "sha256": "c8e0b60eeafbecd9e5859a5455a4477ec34600c2243d25303b4ccf0f469d2a52"
+    },
+    {
+      "bytes": 567,
+      "file": "publication_enzyme_references_20260919.csl.json",
+      "records": 1,
+      "sha256": "85d8c79a4a21b6e2b07064e7a9e0d257a6d8b2cdb5c937fdb55ea75c27f8e92f"
+    },
+    {
+      "bytes": 295,
+      "file": "publication_website_references_20260919.csl.json",
+      "records": 1,
+      "sha256": "78bf8c6410d90ac1e68f8773681a4de607e08c0368c56fe85c8197e10317a819"
+    }
+  ],
+  "status": "selected_citations_assembled"
+}
