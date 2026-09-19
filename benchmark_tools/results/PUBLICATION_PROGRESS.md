@@ -1,5 +1,27 @@
 # Publication Progress
 
+## igraph Added To Selected Bibliography (2026-09-19)
+
+Previous goal turn was progress: stale timing status was corrected and the
+compact completed overhead summary was pushed at 8d830f4. This turn checked
+the bibliography's explicit outstanding items and resolved its igraph CSL
+omission without repeating completed source acquisition or native analyses.
+
+Verified official Python citation guidance and downloaded the official
+author/citation page for the 2006 article's BibTeX fields and diacritics.
+Added a manually transcribed CSL record with provenance and no invented or
+software-substituted DOI. A new nine-source selection assembles 37 records;
+the original 36 records and their export remain unchanged. Updated the
+manuscript bibliography link and assembly documentation. Thirty-two focused
+tests pass, including actual-source relocation and original-field equality.
+See `PUBLICATION_BIBLIOGRAPHY_ASSEMBLY_20260919.md` for hashes and commands.
+
+This is citation packaging, not complete bibliography validation, journal
+rendering, executed-version proof or rights clearance. The OrthoHMM preprint
+author suffix remains an explicit source-review issue. Scheduler check:
+BLAST 21713 RUNNING at 4:25:17; FastOMA and parameter inference still pending.
+Publication readiness, controlled timing and the full goal remain incomplete.
+
 ## Reused Completed Full-Node Controls (2026-09-19)
 
 Previous turn changed authoritative state at a017488, but repository review

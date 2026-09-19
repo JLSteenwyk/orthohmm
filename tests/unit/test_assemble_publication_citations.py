@@ -84,3 +84,29 @@ def test_relocated_real_selection(tmp_path, monkeypatch):
     assert by_id["orthohmm2024preprint"]["genre"] == "preprint"
     assert "issued" not in by_id["SIBSwissTree"]
     assert "orthofinder2026correction" in by_id
+
+
+def test_v2_adds_only_reviewed_igraph_and_relocates(tmp_path, monkeypatch):
+    root = Path(__file__).resolve().parents[2] / "benchmark_tools/results"
+    name = "publication_bibliography_selection_20260919_v2.json"
+    selection = json.loads((root / name).read_text())
+    original = json.loads((root / "publication_bibliography_selection_20260919.json").read_text())
+    assert selection[:-1] == original
+    shutil.copyfile(root / name, tmp_path / name)
+    for source in selection:
+        shutil.copyfile(root / source["file"], tmp_path / source["file"])
+    monkeypatch.chdir(tmp_path)
+    output = tmp_path / "bibliography.json"
+    result = assemble(tmp_path / name, output, tmp_path / "provenance.json")
+    actual = json.loads(output.read_text())
+    assert result["count"] == 37
+    assert actual[:-1] == json.loads((root / "publication_bibliography_20260919.csl.json").read_text())
+    item = actual[-1]
+    assert item["id"] == "Csardi2006igraph" and "DOI" not in item
+    assert item["issued"] == {"date-parts": [[2006]]}
+    assert item["volume"] == "Complex Systems" and item["page"] == "1695"
+    assert item["author"] == [{"given": "G\u00e1bor", "family": "Cs\u00e1rdi"},
+                              {"given": "Tam\u00e1s", "family": "Nepusz"}]
+    provenance = json.loads((root / "publication_igraph_reference_provenance_20260919.json").read_text())
+    assert provenance["output"]["sha256"] == selection[-1]["sha256"]
+    assert provenance["status"] == "manually_transcribed_official_citation_guidance"

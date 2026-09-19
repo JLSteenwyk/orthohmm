@@ -1,0 +1,37 @@
+{
+  "status": "manually_transcribed_official_citation_guidance",
+  "citation_id": "Csardi2006igraph",
+  "output": {
+    "file": "publication_igraph_reference_20260919.csl.json",
+    "sha256": "c6c608ea36f8ae8bf81d3b7cd8df0f85587f60fe7eda26bf07d547b480ea3969"
+  },
+  "sources": [
+    {
+      "url": "https://python.igraph.org/en/0.11.6/",
+      "snapshot": "benchmarks/work/igraph_citation_guidance_20260918.html",
+      "bytes": 12143,
+      "sha256": "51683b3ae3f119aea2e2a12fb8200fc87679e5cbc6b076035ad34d8b04f39c7a",
+      "role": "Python-interface recommendation of the 2006 graph-library article"
+    },
+    {
+      "url": "https://r.igraph.org/authors.html",
+      "retrieved_date": "2026-09-19",
+      "snapshot": "benchmarks/work/igraph_authors_guidance_20260919.html",
+      "bytes": 16586,
+      "sha256": "d37a52c9529431105d15f5c508969ef0c9114df9fc1c2280d4f69845cd6ae68a",
+      "role": "Official 2006 article BibTeX fields and author diacritics; not the R-package citation"
+    }
+  ],
+  "field_decisions": {
+    "page": "Retain the official BibTeX pages field 1695; not independently verified pagination.",
+    "DOI": "Omitted: no article DOI established. Software archive DOIs are not substituted.",
+    "issued": "Article year 2006, not documentation or package-release year.",
+    "author": "Preserve the two article authors and their diacritics from the official citation.",
+    "URL": "Retain https://igraph.org as supplied in the article citation."
+  },
+  "limitations": [
+    "Manual citation transcription, not Crossref export or full-text article review.",
+    "Documentation versions do not establish executed igraph versions.",
+    "No claim of journal rendering, complete citation coverage, or rights clearance."
+  ]
+}
