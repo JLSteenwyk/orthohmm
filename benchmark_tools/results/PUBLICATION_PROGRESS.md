@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Independent Parameter Checker Prepared (2026-09-19)
+
+Previous goal turn was progress: the expanded corrected figure bundle was
+verified and pushed at 87bd3c7. This turn added independent arithmetic
+reconstruction for the frozen six-contrast parameter analysis, without
+importing its production score or bootstrap helpers. Controls remain
+100,000 draws, seed 20260925 and 18-endpoint adjustment, including missing
+variants. Point/interval/family differences and missing-arm flags are checked.
+
+63 focused tests passed. Real control-only result 21986 passed file-record
+checks and numerical reconstruction under NumPy 2.2.6, with zero estimable
+endpoints as expected. This does not establish variant robustness or new
+scientific results. See `QFO_PARAMETER_INDEPENDENT_REPRODUCTION_20260919.md`
+for commands, coverage, source identity and limitations.
+
+Scheduler inspection confirmed BLAST 21713 RUNNING at 3:57:12. FastOMA
+21740 remains resource pending, parameter phylogeny array 21932 pending
+node availability and CPM control 21956 priority pending. No restarts or
+protocol changes were made. Next: use a new frozen inventory after actual
+variant admissions, then independently verify the resulting intervals.
+
 ## Corrected Figure Export Verified (2026-09-19)
 
 The preceding TreeFam retrieval turn was no progress: it reconfirmed the
