@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Full Search Decision Diagnostic And Recount Complete (2026-09-18 UTC)
+
+Previous turn was a verified wait at 120/144 directions. Reread the objective
+and polled the same live jobs without restarting. Diagnostic 21856 finished
+0:0 in 6:59; independent audit 21857 finished 0:0 in 6s. All 81,466 directed
+pairs were checked: 31,479 accepted, 48,368 not selected by prefilter and
+1,619 scored but not significant. Historical accepted-hit presence agrees
+on every watched pair. Retained the unmodified audit and integrated the
+[bounded result](OB_SEARCH_DECISION_RESULT_20260918.md) into the manuscript.
+
+This is observed rejection-stage evidence, not historical runtime/score
+equivalence, counterfactual scoring, official recall or causal final-F1
+attribution. No predictions, parameters or frozen executors changed.
+Main QfO scoring/reconciliation and OrthoFinder remain live. DGX task 12
+completed 0:0 in 10:34; saved its terminal scheduler record locally without
+remote access. The full timing panel and publication requirements remain open.
+
 ## Independent Search Decision Recount Queued (2026-09-18 UTC)
 
 Previous turn made progress through 9da030d by freezing and scheduling the

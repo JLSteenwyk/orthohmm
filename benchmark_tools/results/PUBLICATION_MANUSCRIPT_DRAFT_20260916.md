@@ -371,6 +371,19 @@ does not independently reconstruct the native graph. Initial direct edges
 are neither necessary nor sufficient for final co-membership; indirect paths,
 subsequent refinement and partitioning require separate causal investigation.
 
+A separately frozen CPU [search-decision diagnostic](OB_SEARCH_DECISION_RESULT_20260918.md)
+observed all81,466 directed reference-family pairs across144 species
+directions. It accepted31,479 pairs, excluded48,368 at the prefilter and
+scored1,619 without reaching E<1e-4. Accepted-hit presence matched the
+historical trace for every watched pair. Independent reconstruction from
+saved raw candidate arrays verified every decision and table row. This
+localizes rejection in the observed run but does not authenticate historical
+execution or prove numerical score equivalence. The descriptive pair set
+includes within-species and low-certainty members; these counts are not
+official recall, evidence that excluded pairs are true orthologs, or a causal
+explanation of final grouping errors. Excluded pairs were not scored
+counterfactually, and benchmark predictions were not changed.
+
 ### QfO Results Vary Across Endpoints
 
 The secondary QfO means were 0.782071 for full OrthoFinder, 0.748243 for
