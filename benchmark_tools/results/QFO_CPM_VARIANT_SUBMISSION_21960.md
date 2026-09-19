@@ -47,3 +47,41 @@ in a real subprocess. No changed-arm output is yet admitted or scored.
 Separate replay admission, candidates, phylogeny, conversion and benchmark
 assessment are still required. Cached shared-host times are not controlled
 efficiency evidence. Existing 11 Dependabot alerts remain unresolved.
+
+## Independent Replay Admission Array 21962
+
+Submitted September 19 at 09:48:27 local time. Scheduler confirms both
+tasks PENDING Dependency, throttle 1, 2 CPUs/64 GiB/bizon, 4-hour limit,
+Requeue=0. Dependencies are afterany:21960 AND aftercorr:21960: require
+the complete upstream array to be terminal and the corresponding task to
+succeed. Raw task-0 job is 21963; raw task-1 job is 21962.
+
+Frozen executor: `benchmarks/work/publication_qfo_cpm_variant_admission_v1`,
+commit `cbd59182a59b151933faebd9c41d7803a38f0726` (pushed).
+
+```bash
+sbatch --parsable \
+  benchmarks/work/publication_qfo_cpm_variant_admission_v1/benchmark_tools/results/qfo_cpm_variant_admission_batch_20260919.sh \
+  /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_cpm_variant_admission_v1 \
+  cbd59182a59b151933faebd9c41d7803a38f0726
+```
+
+SHA-256 identities:
+
+- `admit_qfo_cpm_variant.py`:
+  `96f4129d7ee948fc077ee67e6e4673c61acbb8f56e17cb17777239daa19593d0`
+- `qfo_cpm_variant_admission_batch_20260919.sh`:
+  `12b9f9f5af69d49e5a6745bd7773c55efdadbf8c5e90a366b2c1037391bb25e1`
+
+Expected reports: `benchmarks/work/qfo_cpm_variant_admission_21962_0.json`
+and `_1.json`; logs `benchmarks/work/qfo_cpm_variant_admit_21962_0.log`
+and `_1.log`. These reports admit only replay artifacts, not accuracy or
+publication readiness. They independently check the frozen commands,
+sources, authorization, checkpoint, runtime, four native clustering stages
+and complete partition coverage. Partition differences from the control
+are retained as descriptive data, not treated as errors or performance gains.
+
+Validation: 281 focused tests passed in 15.10 seconds; batch syntax and
+staged whitespace checks passed. Candidate construction, phylogenetic
+inference, conversion and benchmark scoring are not implemented by this
+admission step and remain required. No variant result has yet been admitted.

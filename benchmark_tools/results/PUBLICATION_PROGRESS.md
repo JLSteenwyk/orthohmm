@@ -2,6 +2,12 @@
 
 ## Independent CPM Variant Admission Implemented (2026-09-19)
 
+Admission array 21962 is queued from pushed frozen commit cbd5918, with
+both tasks confirmed PENDING Dependency and the prescribed full-array plus
+corresponding-success barriers. Exact command/hashes are retained in
+`QFO_CPM_VARIANT_SUBMISSION_21960.md`. Batch syntax and staged whitespace
+checks passed. No CPM variant result has yet been admitted.
+
 Previous turn was progress: full regression and native runtime refresh were
 completed and committed. Scheduler inspection confirms OrthoFinder scoring
 21735_1 remains running (45:14), with 21736 admission pending; BLAST and DGX
