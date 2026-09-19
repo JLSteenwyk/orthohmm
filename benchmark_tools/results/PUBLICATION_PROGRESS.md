@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Independent CPM Candidate Admission Implemented (2026-09-19)
+
+Previous turn was progress: fixed the real candidate import-order defect,
+tested it in a fresh process, and replaced unstarted array 21964 with 21967.
+Current accounting confirms both replacement tasks remain pending and
+OrthoFinder assessment 21735_1 remains running (1:04:09), with score admission
+pending. OrthoMCL BLAST and DGX timing/recorder were confirmed live this turn.
+
+Completed independent CPM candidate admission pinned to corrected executor
+1acc957 and array 21967. It checks terminal scheduler identity/allocation,
+exact preparation/context/source/helper inventory, fixed expansion settings,
+fresh replay admission binding, runtime, independently reloaded numeric
+checkpoint and complete gene universe. It reruns the candidate content audit
+and an additional merge reconstruction, rejecting inconsistent records.
+The local numeric decoder source is recorded alongside validator helpers.
+No scientific algorithm or default changed.
+
+Focused suite: 146 passed in 6.35 seconds before the final decoder-source
+record addition. Tests cover both CPM identities, changed parameters,
+failed/live jobs, real artifact hashes, replay mismatch, numeric/runtime/
+auditor differences, content mismatch and merge failure. The result status
+admits only unscored candidate artifacts; inferred phylogeny, pair validation
+and official assessment remain required. A 2-CPU/64-GiB/4-hour no-requeue
+array batch waits for all of 21967 to terminate and corresponding success.
+
 ## CPM Candidate Import Boundary Corrected (2026-09-19)
 
 Corrected replacement array 21967 is queued from pushed commit 1acc957 in
