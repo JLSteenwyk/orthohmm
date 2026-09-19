@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Independent Search Decision Recount Queued (2026-09-18 UTC)
+
+Previous turn made progress through 9da030d by freezing and scheduling the
+full reference-pair diagnostic. Reread the objective and verified diagnostic
+21856 running, reaching 76/144 directions during this turn. Added an
+independent NPZ-to-TSV recount: checks ordered input universes, integer and
+finite candidate arrays, duplicate candidates, all 144 directions, all
+81,466 watched pairs, strict threshold decisions, historical presence and
+family labels. It compares reconstructed rows and counters with the report
+and rehashes input/output evidence. It does not independently rescore proteins.
+
+36 focused tests passed. Frozen auditor 8ad28082c0e854f2e47d4b59e41854c4044a5a45
+is at `benchmarks/work/publication_ob_search_decision_audit_v1`. Job 21857 is
+queued afterany:21856; the auditor requires successful terminal diagnostic
+accounting before admitting output. Pending execution is not a completed
+rejection explanation. Main QfO scoring and reconciliation, OrthoFinder and
+DGX task 12 remain live. No frozen method or timing rule changed.
+
 ## Full Reference Search Diagnostic Scheduled (2026-09-18 UTC)
 
 Previous turn made progress through d5c7429 with the decision classifier.
