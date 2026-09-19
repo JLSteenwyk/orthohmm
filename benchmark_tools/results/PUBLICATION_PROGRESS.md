@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Transient-Cgroup Collector Development (2026-09-19)
+
+Previous turn was progress: bibliography rendering and 60 passing citation
+tests were committed and pushed at 1a6ec04. This turn returned to the missing
+controlled-timing evidence, inspected both failed overhead observations and
+the current collector, and confirmed the sibling-enumeration dependency.
+
+Added a separate aggregate root-to-target lineage CPU reader and tests. It
+does not enumerate transient siblings; it retains signed differences and
+partial failure evidence, rejects changes to the actual lineage and leaves
+all existing collectors, thresholds and frozen executors untouched. A local
+read-only smoke worked, but is not DGX transient-accounting validation or a
+publication timing result. See `AGGREGATE_LINEAGE_COLLECTOR_20260919.md` for
+design, tests, kernel-documentation basis, limits and required next controls.
+All 26 new tests and all 54 combined lineage/frontier/dual tests pass.
+
+Live scheduler check: BLAST 21713 RUNNING at 4:49:00; FastOMA 21740,
+parameter phylogeny 21932 and CPM control 21956 pending. The Ethernet SSH
+connection to the DGX worked; its scheduler showed the same outstanding
+scientific queue. No new job was submitted and no service was changed.
+Full transient-load controls, collector integration/replay, a complete new
+overhead panel and prospective scientific timing admission remain open.
+The publication goal is incomplete.
+
 ## Selected Bibliography Rendered For Review (2026-09-19)
 
 The preceding retrieval-only turn was no progress toward resolving the
