@@ -20,6 +20,11 @@ def test_transferred_recipe_and_authorization_match_frozen_sources():
     assert len(rows) == 39
     for row in rows:
         path = ROOT / Path(row["path"]).name
+        frozen = {"probe_cgroup_frontier.py": "probe_cgroup_frontier_4ce76668.py.txt",
+                  "measure_native_frontier_step.py": "measure_native_frontier_step_9e89534.py.txt",
+                  "measure_frontier_boundary_step.py": "measure_frontier_boundary_step_9e89534.py.txt"}
+        if path.name in frozen:
+            path = Path(__file__).parent / "fixtures" / frozen[path.name]
         if not path.exists():
             path = ROOT / "results" / path.name
         data = path.read_bytes()

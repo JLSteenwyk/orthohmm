@@ -54,31 +54,17 @@ def read_counter(root, scope):
     return dict(scope=scope, started_ns=start, finished_ns=end, raw=raw)
 
 
-class FrontierSnapshotError(ValueError):
-    """An invalid observation with retained partial evidence, never usable counters."""
-
-    def __init__(self, error, evidence):
-        super().__init__(str(error))
-        self.evidence = dict(evidence, status="invalid_frontier_snapshot",
-                             error_type=type(error).__name__, error=str(error),
-                             scientific_timings_admitted=False)
-
-
 def snapshot(root, target):
-    evidence = dict(target=target, root=[], rows=[], inventory_before=None, inventory_after=None)
-    try:
-        evidence["boot_id"] = Path("/proc/sys/kernel/random/boot_id").read_text().strip()
-        evidence["inventory_before"] = inventory(root, target)
-        evidence["root"].append(read_counter(root, "/"))
-        for scope in evidence["inventory_before"]["identities"]:
-            evidence["rows"].append(read_counter(root, scope))
-        evidence["root"].append(read_counter(root, "/"))
-        evidence["inventory_after"] = inventory(root, target)
-        if evidence["inventory_before"]["identities"] != evidence["inventory_after"]["identities"]:
-            raise ValueError("Cgroup frontier changed during sampling")
-    except (OSError, ValueError) as error:
-        raise FrontierSnapshotError(error, evidence) from error
-    return evidence
+    before = inventory(root, target)
+    root_before = read_counter(root, "/")
+    rows = [read_counter(root, scope) for scope in before["identities"]]
+    root_after = read_counter(root, "/")
+    after = inventory(root, target)
+    if before["identities"] != after["identities"]:
+        raise ValueError("Cgroup frontier changed during sampling")
+    return dict(target=target, boot_id=Path("/proc/sys/kernel/random/boot_id").read_text().strip(),
+                root=[root_before, root_after], rows=rows,
+                inventory_before=before, inventory_after=after)
 
 
 def validate(point):

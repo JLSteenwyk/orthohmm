@@ -16,6 +16,7 @@ from benchmark_tools.probe_dgx_cpu_hierarchy import read_point as read_hierarchy
 from benchmark_tools.probe_dgx_step_separation import save, wait_file
 from benchmark_tools.probe_host_counters import snapshot as host_snapshot, summarize
 from benchmark_tools.probe_cgroup_frontier import snapshot as frontier_snapshot, validate as validate_frontier, compare as compare_frontier
+from benchmark_tools.probe_cgroup_frontier import FrontierSnapshotError
 
 
 def validate_point(point, job):
@@ -37,10 +38,16 @@ def validate_point(point, job):
         raise ValueError("Frontier counters are not enclosed by host brackets")
 
 
-def read_frontier_point(pid, membership, job):
+def read_frontier_point(pid, membership, job, failure_path=None):
     point = read_hierarchy(pid, membership, job)
     point["hierarchy_host_after"] = point["host"][1]
-    point["frontier"] = frontier_snapshot(Path("/sys/fs/cgroup"), point["parent"][0]["scope"])
+    try:
+        point["frontier"] = frontier_snapshot(Path("/sys/fs/cgroup"), point["parent"][0]["scope"])
+    except FrontierSnapshotError as error:
+        if failure_path is not None:
+            save(failure_path, dict(status="invalid_frontier_observation", hierarchy=point,
+                                   frontier=error.evidence, scientific_timings_admitted=False))
+        raise
     point["host"][1] = host_snapshot()
     if Path(f"/proc/{pid}/cgroup").read_text() != membership:
         raise ValueError("Native process disappeared or changed scope")
@@ -79,7 +86,7 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
         process = subprocess.Popen(launched, stdout=log, stderr=subprocess.STDOUT)
         try:
             ready = wait_file(directory / "ready.json")
-            points = [read_frontier_point(ready["pid"], ready["cgroup"], job_id)]
+            points = [read_frontier_point(ready["pid"], ready["cgroup"], job_id, directory / "failed_point.json")]
             save(directory / "point_0000.json", points[0])
             save(directory / "go.json", {"go": True})
             start = time.monotonic()
@@ -90,7 +97,7 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
                 completed = (directory / "done.json").exists()
                 if process.poll() is not None:
                     raise RuntimeError("Worker exited before final frontier observation")
-                points.append(read_frontier_point(ready["pid"], ready["cgroup"], job_id))
+                points.append(read_frontier_point(ready["pid"], ready["cgroup"], job_id, directory / "failed_point.json"))
                 save(directory / f"point_{index:04d}.json", points[-1])
                 if completed:
                     break

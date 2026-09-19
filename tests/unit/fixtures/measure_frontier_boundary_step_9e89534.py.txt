@@ -55,7 +55,7 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
         process = subprocess.Popen(launched, stdout=log, stderr=subprocess.STDOUT)
         try:
             ready = wait_file(directory / "ready.json")
-            points = [read_frontier_point(ready["pid"], ready["cgroup"], job_id, directory / "failed_point.json")]
+            points = [read_frontier_point(ready["pid"], ready["cgroup"], job_id)]
             save(directory / "point_0000.json", points[0])
             save(directory / "go.json", {"go": True})
             start = time.monotonic()
@@ -67,7 +67,7 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
                 if process.poll() is not None:
                     raise RuntimeError("Worker exited before final frontier observation")
                 if completed:
-                    points.append(read_frontier_point(ready["pid"], ready["cgroup"], job_id, directory / "failed_point.json"))
+                    points.append(read_frontier_point(ready["pid"], ready["cgroup"], job_id))
                     save(directory / f"point_{index:04d}.json", points[-1])
                     break
                 if time.monotonic() - start > timeout_s + 30:

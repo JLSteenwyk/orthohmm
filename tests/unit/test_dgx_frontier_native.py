@@ -12,7 +12,7 @@ from benchmark_tools.measure_native_frontier_step import measure
 ROOT = Path(__file__).resolve().parents[2] / "benchmark_tools"
 
 
-def test_transferred_recipe_matches_local_sources():
+def test_transferred_recipe_matches_frozen_sources():
     import hashlib
 
     manifest = json.loads((ROOT / "results/dgx_frontier_native_recipe_v1_20260918.json").read_text())
@@ -21,6 +21,10 @@ def test_transferred_recipe_matches_local_sources():
     assert len(files) == 33
     for row in files:
         path = ROOT / Path(row["path"]).name
+        frozen = {"probe_cgroup_frontier.py": "probe_cgroup_frontier_4ce76668.py.txt",
+                  "measure_native_frontier_step.py": "measure_native_frontier_step_9e89534.py.txt"}
+        if path.name in frozen:
+            path = Path(__file__).parent / "fixtures" / frozen[path.name]
         if not path.exists():
             path = ROOT / "results" / path.name
         data = path.read_bytes()

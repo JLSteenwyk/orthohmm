@@ -38,6 +38,7 @@ def extend(points, done):
 
 def test_collector_body_preserves_worker_lifecycle():
     expected = inspect.getsource(original.measure).replace("read_hierarchy(", "read_frontier_point(")
+    expected = expected.replace('ready["cgroup"], job_id)', 'ready["cgroup"], job_id, directory / "failed_point.json")')
     expected = expected.replace("hierarchy_report.json", "frontier_report.json")
     expected = expected.replace("final hierarchy observation", "final frontier observation")
     expected = expected.replace("Complete-command hierarchy engineering test", "Complete-command frontier engineering test")
@@ -112,6 +113,7 @@ def test_frontier_failure_releases_worker_without_admitting_result(tmp_path, mon
     monkeypatch.setattr(tests, "module", module)
     directory = setup_measure(tmp_path, monkeypatch, evidence)
     def fail(*args):
+        assert args[-1] == directory / "failed_point.json"
         raise ValueError("Frontier topology changed")
     monkeypatch.setattr(module, "read_frontier_point", fail)
     with pytest.raises(ValueError, match="topology changed"):
@@ -119,3 +121,21 @@ def test_frontier_failure_releases_worker_without_admitting_result(tmp_path, mon
     assert (directory / "release.json").exists()
     assert (directory / "go.json").exists()
     assert not (directory / "frontier_report.json").exists()
+
+
+def test_snapshot_failure_saved_before_reraise(tmp_path, monkeypatch, evidence):
+    points, done = evidence
+    monkeypatch.setattr(module, "read_hierarchy", lambda *args: deepcopy(points[0]))
+    failure = module.FrontierSnapshotError(ValueError("changed"), {"inventory_before": {}, "inventory_after": {}})
+    def fail(*args):
+        raise failure
+    monkeypatch.setattr(module, "frontier_snapshot", fail)
+    path = tmp_path / "failed_point.json"
+    with pytest.raises(module.FrontierSnapshotError, match="changed"):
+        module.read_frontier_point(123, "membership", 21816, path)
+    saved = json.loads(path.read_text())
+    assert saved["frontier"] == failure.evidence
+    assert saved["scientific_timings_admitted"] is False
+    assert saved["status"] == "invalid_frontier_observation"
+    with pytest.raises(FileExistsError):
+        module.read_frontier_point(123, "membership", 21816, path)

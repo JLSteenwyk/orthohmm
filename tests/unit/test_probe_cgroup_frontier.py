@@ -97,7 +97,49 @@ def test_retained_dgx_probe_replays_with_source_identity():
     report = json.loads((base / "results/dgx_cgroup_frontier_observation_20260918.json").read_text())
     assert report["host"] == "spark-7ff0"
     for name, sha in report["sources"].items():
-        assert hashlib.sha256((base / name).read_bytes()).hexdigest() == sha
+        source = (Path(__file__).parent / "fixtures/probe_cgroup_frontier_4ce76668.py.txt"
+                  if name == "probe_cgroup_frontier.py" else base / name)
+        assert hashlib.sha256(source.read_bytes()).hexdigest() == sha
     assert module.compare(*report["points"]) == report["result"]
     assert report["result"]["target_cpu_s"] == 0
     assert report["result"]["outside_target_frontier_cpu_s"] == pytest.approx(.014109)
+
+
+def test_within_snapshot_change_preserves_both_inventories(tmp_path, monkeypatch):
+    fixture(tmp_path)
+    original = module.inventory
+    calls = []
+    def changed(root, target):
+        value = original(root, target)
+        calls.append(value)
+        if len(calls) == 2:
+            value["identities"]["/transient.service"] = [32, 123]
+        return value
+    monkeypatch.setattr(module, "inventory", changed)
+    with pytest.raises(module.FrontierSnapshotError, match="changed during sampling") as caught:
+        module.snapshot(tmp_path, "/system.slice/slurm/job_1")
+    evidence = caught.value.evidence
+    assert evidence["inventory_before"] == calls[0]
+    assert evidence["inventory_after"] == calls[1]
+    assert evidence["scientific_timings_admitted"] is False
+    assert len(evidence["root"]) == 2
+    with pytest.raises(ValueError, match="identity changed"):
+        module.validate(evidence)
+
+
+def test_disappearing_counter_preserves_partial_reads(tmp_path, monkeypatch):
+    fixture(tmp_path)
+    read = module.read_counter
+    def missing(root, scope):
+        if scope == "/system.slice/slurm/job_2":
+            raise FileNotFoundError("removed during read")
+        return read(root, scope)
+    monkeypatch.setattr(module, "read_counter", missing)
+    with pytest.raises(module.FrontierSnapshotError) as caught:
+        module.snapshot(tmp_path, "/system.slice/slurm/job_1")
+    evidence = caught.value.evidence
+    assert evidence["error_type"] == "FileNotFoundError"
+    assert evidence["inventory_after"] is None
+    assert len(evidence["root"]) == 1
+    assert len(evidence["rows"]) == 2
+    assert evidence["status"] == "invalid_frontier_snapshot"
