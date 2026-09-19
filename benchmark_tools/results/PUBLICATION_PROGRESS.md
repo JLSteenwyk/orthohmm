@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Manuscript Timing Evidence Updated (2026-09-19)
+
+Previous turn completed and pushed the local lineage-overhead auditor.
+This turn checked its predecessor's retained machine-readable native audit
+and integrated those completed findings into the manuscript and claim
+checklist: all three outputs validated and matched, but original/narrow
+flags remain and controlled timing is not established. Linked the current
+18-task overhead experiment as running, without an invented estimate or
+retrospective timing promotion. No method, endpoint or deployed code changed.
+
+The native overhead panel and controller recorder remain live. Continue
+controller-only monitoring; do not inspect DGX outputs until every assigned
+task is terminal. The full publication goal remains incomplete.
+
 ## Lineage Overhead Audit Prepared (2026-09-19)
 
 Previous turn made progress by deploying and launching the complete overhead

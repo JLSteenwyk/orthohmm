@@ -1475,6 +1475,28 @@ comparative timing remains unestablished.
 [machine-readable summary](dual_overhead_summary_21920_20260919.json),
 [prospective protocol](DUAL_COLLECTOR_OVERHEAD_PROTOCOL_20260919.md).
 
+An aggregate-lineage collector subsequently completed all three native
+diagnostic workloads without the earlier sibling-inventory failure.
+Provenance, raw-measurement replay and native-output validation passed;
+canonical outputs matched the pinned same-method predecessors, with no
+temporal-order or boot-domain discrepancies. Original interval flags numbered
+1, 56 and 0 for high-sensitivity OrthoHMM, satellite_v2 and full OrthoFinder,
+respectively; the corresponding narrow counts were 1, 7 and 0. These flags
+remain retained. Non-atomic ancestor-counter differences do not identify
+their cause or bound interference. Successful output reproduction therefore
+does not establish environmental validity or admit comparative timings.
+[Native lineage audit](LINEAGE_NATIVE_RESULT_21995.md).
+
+A complete new 18-task periodic-versus-boundary lineage overhead experiment
+was frozen with the same workloads, paired order and numerical budgets.
+It is running, with controller recording established before release; no
+overhead estimate is available yet. Boundary-only observations explicitly
+lack interval coverage. Collector overhead, remaining CPU discrepancies,
+during-read lifecycle behavior and prospective scientific timing inclusion
+remain separate unresolved requirements.
+[Protocol](LINEAGE_COLLECTOR_OVERHEAD_PROTOCOL_20260919.md),
+[deployment and submission](LINEAGE_OVERHEAD_SUBMISSION_21999.md).
+
 ### SwissTrees Comparator Uncertainty
 
 For all eight retained historical comparison outputs, raw SwissTrees counts
