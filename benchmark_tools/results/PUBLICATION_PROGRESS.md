@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Complete-Command Dual Collector Prepared (2026-09-19)
+
+Previous turn made progress with the independently replayed nine DGX
+controls. Full OrthoFinder 21706_1 remains RUNNING (8:47:13), in the
+remaining alignment/gene-tree stage; OrthoMCL and strata remain pending.
+
+Added a separate complete-command dual-bracket collector. It preserves the
+original screening exactly, adds narrow intervals and explicitly separates
+observation-window from command boundaries. Native exit/timeout, pressure,
+frontier identity and worker cleanup paths remain checked. Thirty-five
+collector/reader/control tests pass. The original collector is unchanged.
+
+Frozen the [three-method native diagnostic protocol](DUAL_BRACKET_NATIVE_PROTOCOL_20260919.md)
+before outcomes. Next derive/pin the relocated command plan and execution
+recipe, then dispatch three sequential four-proteome native diagnostics.
+No native dual-bracket run has yet been submitted, and no scientific timing
+or overhead result is admitted.
+
 ## Dual-Bracket Controls Executed and Replayed (2026-09-19)
 
 Previous turn made progress with the reader and prespecified protocol.
