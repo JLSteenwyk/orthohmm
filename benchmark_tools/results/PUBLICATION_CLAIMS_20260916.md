@@ -109,8 +109,11 @@ evidence that an experiment completed or a biological hypothesis is true.
   15,248,739 distinct pairs survived reference mapping. Assessment21727 and
   independent admission21728 completed successfully; a fresh frozen admission
   reproduces the Sonic report byte-for-byte. Its six endpoints are admitted,
-  but paired uncertainty and the remaining methods are not. Corrected HMM21706_0 is running; its native
-  admission21720 and replay preparation21722 are pending. The corrected
+  but paired uncertainty and the remaining methods are not. Corrected HMM21706_0,
+  native admission21720 and replay preparation21722 completed successfully.
+  The [native result](QFO_CORRECTED_HMM_NATIVE_RESULT_20260918.md) covers984137genes
+  in391908groups; accuracy is not yet admitted. Checked replay21756 and
+  hit-coverage analysis21793 are running, and OrthoFinder21706_1 has started. The corrected
   replay/candidate/reconciliation/conversion/scoring/admission workflows are
   implemented and tested, not completed experiments. [Progress ledger](PUBLICATION_PROGRESS.md).
 - The [recovered QfO factorial protocol](QFO_FACTORIAL_PROTOCOL_20260917.md)

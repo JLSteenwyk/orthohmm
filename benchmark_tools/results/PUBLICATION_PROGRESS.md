@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Corrected QfO HMM Native Evidence Admitted (2026-09-18 UTC)
+
+Previous turn was no progress toward the publication goal: it rechecked
+unavailable TreeFam inputs without recovering new evidence. Reread the full
+objective and polled the local scheduler. Primary HMM21706_0 completed0:0
+after19:41:39; admission21720 and replay preparation21722 completed0:0.
+Checked replay21756, search-coverage21793 and OrthoFinder21706_1 are running.
+
+Retained the native admission and replay preparation reports, rehashed107
+distinct bound records, and documented the validated partition and resource
+measurement limits in the [native result](QFO_CORRECTED_HMM_NATIVE_RESULT_20260918.md).
+A fresh frozen admission rerun reproduced the full report byte-for-byte.
+All984137proteins are covered in391908groups, including302763one-member
+groups. These counts are not accuracy scores; corrected HMM scoring,
+factorial analyses and paired uncertainty remain unfinished.
+
+DGX overhead21838 tasks0-2/4complete,3/5failed1:0,6running,7-17pending
+at this observation. Retained task5's scheduler record locally; no DGX
+remote access, partial native output reads or retries. Failure causes await
+the complete panel archive. Neither this panel nor shared-host HMM elapsed
+time establishes controlled comparative timing. Goal remains active.
+
 ## Clean Runtime Dependency Installation Passed (2026-09-18 UTC)
 
 Previous turn made progress through4fe2c28 with source-bound bibliography
