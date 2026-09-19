@@ -104,3 +104,43 @@ def test_unknown_audit_scope_rejected(tmp_path):
     from benchmark_tools.audit_publication_figures import audit
     with pytest.raises(ValueError, match="scope"):
         audit(tmp_path, "combined-implicit")
+
+
+def test_current_corrected_scope_does_not_change_old_inventories():
+    from benchmark_tools.audit_publication_figures import CORRECTED_PANELS, CORRECTED_CURRENT_PANELS
+    assert CORRECTED_PANELS == ("qfo_corrected_factorial_figures_20260919",)
+    assert CORRECTED_CURRENT_PANELS == (*CORRECTED_PANELS, "corrected_swiss_strata_figure_21981",
+                                       "corrected_swiss_comparison_figure_21987")
+    assert not set(CORRECTED_CURRENT_PANELS).intersection(PANELS)
+
+
+@pytest.mark.parametrize("kind", ["strata", "comparison"])
+@pytest.mark.parametrize("problem", [None, "status", "admission", "ready", "endpoints", "duplicate"])
+def test_new_corrected_panel_source_binding(tmp_path, kind, problem):
+    from benchmark_tools.audit_publication_figures import validate_corrected_panel
+    source = tmp_path / "qfo_corrected_comparator_uncertainty_21987.json"
+    result = {"status": "corrected_swiss_primary_stratified_intervals" if kind == "strata"
+              else "corrected_swiss_comparison_intervals_audited", "scientific_inputs_admitted": True,
+              "uncertainty_admitted": True, "publication_ready": False}
+    if problem == "status":
+        result["status"] = "paired_swiss_comparator_intervals"
+    elif problem == "admission":
+        result["scientific_inputs_admitted"] = False
+    elif problem == "ready":
+        result["publication_ready"] = True
+    source.write_text(json.dumps(result))
+    data = {"publication_ready": False, "endpoints": 27 if kind == "strata" else 24,
+            "results": record(source), "inputs": [record(source)], "status": "corrected_swiss_comparison_rendered"}
+    if problem == "endpoints":
+        data["endpoints"] = 0
+    elif problem == "duplicate":
+        if kind == "strata":
+            data["publication_ready"] = True
+        else:
+            data["inputs"] *= 2
+    panel = "corrected_swiss_strata_figure_21981" if kind == "strata" else "corrected_swiss_comparison_figure_21987"
+    if problem:
+        with pytest.raises(ValueError):
+            validate_corrected_panel(panel, data)
+    else:
+        validate_corrected_panel(panel, data)
