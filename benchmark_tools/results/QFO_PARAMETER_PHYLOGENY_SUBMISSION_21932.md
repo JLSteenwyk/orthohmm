@@ -155,3 +155,27 @@ An interim whole-array `afterok` setting was superseded before execution.
 No frozen script/source/input changed and no running task was interrupted.
 If an upstream failure leaves a dependent task permanently ineligible,
 retain and audit that failure explicitly; do not bypass the success gate.
+
+## Independent Score Admission Array 21948
+
+Submitted 2026-09-19 at 08:49 EDT from detached executor
+`benchmarks/work/publication_qfo_parameter_score_admission_v1`, commit
+`d7baf35a7aa45814623debb34cdbdbb1581eff17` (pushed), passing the exact
+executor path and commit to the frozen batch.
+
+- Validator SHA-256:
+  `6574b40cc97624c937eb72e2ed27c0822aff0b6ff69156815b0255055d62d81c`.
+- Batch `qfo_parameter_score_admit_batch_20260919.sh` SHA-256:
+  `1b551fa023ed7e1fa5094cb7393726f2962e6180108ad31493e88fa3cbb3334a`.
+- Four tasks, concurrency one, 2 CPUs, 64G, 4 hours, bizon, no requeue.
+- Corresponding-task dependency: `aftercorr:21944`.
+- Reports: `benchmarks/work/qfo_parameter_score_admission_21948_<index>.json`.
+- Logs: `benchmarks/work/qfo_parameter_score_admit_21948_<index>.log`.
+
+Confirmed all tasks PENDING (Dependency); task 0 raw job identity is 21949.
+Focused score-validation/runner/native-endpoint tests: 106 passed in 0.58
+seconds; batch shell syntax passed. The validator checks complete native
+output inventory, a unique successful trace, frozen command/input/helper
+provenance and all six endpoint results before marking accuracy admitted.
+This is not independent biological confirmation or paired uncertainty.
+No parameter score is admitted merely because this array is queued.

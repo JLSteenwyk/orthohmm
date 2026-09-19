@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Parameter Score Admission Queued (2026-09-19)
+
+Committed/pushed independent score admission and tests as `d7baf35`, created
+its detached executor and submitted 21948 with `aftercorr:21944`. Verified
+all four tasks PENDING (Dependency), 2 CPUs/64G/4 hours, no requeue and
+serial concurrency. Exact hashes and output locations are in the parameter
+submission document. Norm/margin inference through score admission is now
+queued, not completed; parameter uncertainty and CPM variants remain open.
+
+Latest controller check: OrthoFinder 21735_0 RUNNING (24:14), OrthoMCL BLAST
+21713 RUNNING (40:40), DGX overhead 21920_7 RUNNING (9:27) and recorder
+21922 RUNNING. No remote native-output inspection or running-job
+interruption occurred. No new accuracy result is claimed.
+
 ## Parameter Score Admission and Stable Accounting (2026-09-19)
 
 Previous turn was progress: scoring runner tested, pushed and queued.
