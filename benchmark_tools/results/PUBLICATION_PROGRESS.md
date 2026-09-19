@@ -2,6 +2,13 @@
 
 ## Independent CPM Candidate Admission Implemented (2026-09-19)
 
+Array 21969 is queued from pushed frozen commit 348454c; both tasks confirmed
+PENDING with 2 CPUs/64 GiB and afterany/aftercorr:21967. Command and hashes
+are retained in `QFO_CPM_CANDIDATE_ADMISSION_SUBMISSION_21969.md`. Final
+decoder-provenance addition passed 55 validator tests in 3.15 seconds;
+batch syntax and staged whitespace checks passed. No real candidates are
+admitted yet, and CPM inferred-phylogeny execution remains to be connected.
+
 Previous turn was progress: fixed the real candidate import-order defect,
 tested it in a fresh process, and replaced unstarted array 21964 with 21967.
 Current accounting confirms both replacement tasks remain pending and
