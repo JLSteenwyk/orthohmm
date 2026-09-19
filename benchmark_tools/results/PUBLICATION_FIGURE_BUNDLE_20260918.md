@@ -40,8 +40,9 @@ python3 -I /tmp/orthohmm-figure-evidence-refresh/benchmark_tools/bundle_publicat
 This verifies retained evidence, not regenerated statistics, plots, native
 inference or scoring. Transitive dependencies, raw datasets, portable native
 execution and redistribution clearance remain incomplete. This archive is
-local, not externally deposited or assigned a DOI. The newer statistical
-workflow still needs its own isolated reproduction check. Earlier limits
+local, not externally deposited or assigned a DOI. The corrected sequence
+bootstrap now has a [separate isolated reproduction check](QFO_SEQUENCE_REPRODUCTION_20260918.md);
+that evidence is not established by this archive verifier. Earlier limits
 and evidence below remain applicable; no timing or accuracy claim is upgraded.
 
 ## Scope

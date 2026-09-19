@@ -1,0 +1,126 @@
+{
+  "command": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/swiss_analysis_env_20260917/bin/python",
+    "-I",
+    "-B",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_sequence_reproduction_20260918/source/benchmark_tools/reproduce_qfo_sequence.py",
+    "--worker",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_sequence_reproduction_20260918/source",
+    "--output",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_sequence_reproduction_20260918/reproduced"
+  ],
+  "environment": {
+    "base_prefix": "/home/bizon/anaconda3",
+    "packages": {
+      "contourpy": "1.3.2",
+      "cycler": "0.12.1",
+      "fonttools": "4.61.1",
+      "kiwisolver": "1.4.9",
+      "matplotlib": "3.10.8",
+      "numpy": "2.2.6",
+      "packaging": "26.0",
+      "pillow": "12.3.0",
+      "pyparsing": "3.2.1",
+      "python-dateutil": "2.8.2",
+      "six": "1.16.0"
+    },
+    "prefix": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/swiss_analysis_env_20260917",
+    "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]"
+  },
+  "exit_code": 0,
+  "exported": [
+    {
+      "bytes": 1078,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_sequence_reproduction_20260918/source/LICENSE.md",
+      "sha256": "4b9b0c3ffc73fce4c47734d7ef12bd70b9d2cdc4a3bf76ac0f3a35edbe2c3d9e"
+    },
+    {
+      "bytes": 250,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_sequence_reproduction_20260918/source/benchmark_tools/swiss_analysis_requirements.txt",
+      "sha256": "7e7e9d05af92c24fd4c351f96365ebb9f8121150e1c3027101bd2f471043071f"
+    },
+    {
+      "bytes": 36623,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_sequence_reproduction_20260918/source/benchmark_tools/swiss_analysis_requirements.lock",
+      "sha256": "dc4b01ae88bd0d5b961d1a2027c2149e98c365a15b5e2b112f3184c986fe8863"
+    },
+    {
+      "bytes": 7105,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_sequence_reproduction_20260918/source/benchmark_tools/reproduce_qfo_sequence.py",
+      "sha256": "27c169aa3a6538a0aa5dc624434dd2dfd37c0cd539fe53ccbf8b5c6662463bfe"
+    },
+    {
+      "bytes": 5878,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_sequence_reproduction_20260918/source/benchmark_tools/bootstrap_qfo_sequence.py",
+      "sha256": "d329964729862ff0d203b9d91542a5472121543d82f66d091d75ca0dd4e34202"
+    },
+    {
+      "bytes": 8531,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_sequence_reproduction_20260918/source/benchmark_tools/bootstrap_qfo_swiss_stages.py",
+      "sha256": "0598773a8bd04846f24e4cb27ab7b3529410c11451cbb399b9148a320fd06435"
+    },
+    {
+      "bytes": 9904,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_sequence_reproduction_20260918/source/benchmark_tools/audit_qfo_swiss_counts.py",
+      "sha256": "ff8e5314c98bdffce54732df94611e9d340d854e70392358c495b636b67452ae"
+    },
+    {
+      "bytes": 7448,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_sequence_reproduction_20260918/source/benchmark_tools/prepare_ob_candidate_neighborhood.py",
+      "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+    },
+    {
+      "bytes": 6224,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_sequence_reproduction_20260918/source/benchmark_tools/report_qfo_recovered_stages.py",
+      "sha256": "c5014afc6c1813584422cde207fce232172e583da3b37d6da18a2b1afc7a617d"
+    },
+    {
+      "bytes": 5577,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_sequence_reproduction_20260918/source/benchmark_tools/validate_qfo_native_assessment.py",
+      "sha256": "4786081a21ce04b8ae25f1f3e83ed8a1766472ff7e4476ae70752fe7f0656da5"
+    },
+    {
+      "bytes": 3214,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_sequence_reproduction_20260918/source/benchmark_tools/qfo_summarize_scores.py",
+      "sha256": "e0b89ddcd99209e8c95b6f8dbd6371be037fea4958fb9ca283b20e940f756688"
+    },
+    {
+      "bytes": 462853,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_sequence_reproduction_20260918/source/benchmark_tools/results/qfo_sequence_swiss_counts_20260918.json",
+      "sha256": "3f04b05435f5967630e6e109e91b9e51d8618d940eb594e07681f5de84d0ae8c"
+    },
+    {
+      "bytes": 416722,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_sequence_reproduction_20260918/source/benchmark_tools/results/qfo_sequence_swiss_bootstrap_20260918.json",
+      "sha256": "e4e4696e6f090d7d83b99e5190bd21606a980fac294c62cdf260582d822d89f3"
+    },
+    {
+      "bytes": 4241,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_sequence_reproduction_20260918/source/benchmark_tools/results/QFO_SEQUENCE_UNCERTAINTY_PROTOCOL_20260918.md",
+      "sha256": "e853c2f9fbfe469e34fc6ebd0d00692c9fd9c91327750931e01131c0adb5e277"
+    }
+  ],
+  "generated": [
+    {
+      "bytes": 9500,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_sequence_reproduction_20260918/reproduced/statistics.json",
+      "sha256": "069a59debdcfe4aaa8461f1d90e9eef1672a8d6a41603cb7bb8ac99b12199ca6"
+    }
+  ],
+  "limitations": [
+    "Statistics-only reproduction from pinned audited family counts, not new source admission.",
+    "Native inference, pair conversion, reference construction and official scoring were not rerun.",
+    "Historical absolute paths are retained provenance, not accessed analysis inputs.",
+    "Isolated execution on the same host is not cross-platform or hermetic OS validation.",
+    "No full publication release, raw-data redistribution clearance or method superiority is established."
+  ],
+  "publication_ready": false,
+  "runner": {
+    "bytes": 7105,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/reproduce_qfo_sequence.py",
+    "sha256": "27c169aa3a6538a0aa5dc624434dd2dfd37c0cd539fe53ccbf8b5c6662463bfe"
+  },
+  "scientific_results_exact_match": true,
+  "source_commit": "5a7e7b6948a75fec794afac7927a53308fb5449f",
+  "status": "relocated_corrected_sequence_statistics_reproduced"
+}

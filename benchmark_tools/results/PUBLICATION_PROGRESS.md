@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Corrected Sequence Statistics Reproduce In Isolation (2026-09-18 UTC)
+
+Previous turn made progress through 6b9ead9 with the refreshed figure bundle.
+Reread the objective and confirmed live inference and DGX jobs. Added a
+separate statistics-only reproduction runner; its 18 focused tests pass.
+Committed and pushed 5a7e7b6 before exporting 14 committed files into the
+existing isolated analysis environment. Every numerical field reproduced
+exactly. A second run outside the repository in a fresh `/tmp` directory
+also matched, including all family differences and uncertainty intervals.
+[Commands, environment and report hashes](QFO_SEQUENCE_REPRODUCTION_20260918.md).
+
+Neither run reopens historical raw-data paths or promotes numerical output
+to source-admitted evidence. Frozen methods, score endpoints and statistical
+settings are unchanged. Updated result documentation and claim boundaries.
+DGX task16 completed 0:0 in 13:38 and its scheduler record is retained;
+final task17 is live. No remote DGX access or timing admission occurred.
+Remaining corrected inference, full timing audit and scientific/release gaps
+remain open.
+
 ## Eighteen-Panel Evidence Bundle Verified (2026-09-18 UTC)
 
 Previous turn made progress through 13776cf with full regression verification.

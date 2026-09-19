@@ -68,6 +68,11 @@ python benchmark_tools/run_qfo_sequence_uncertainty.py \
 Output paths must be fresh; underlying source files are required. This
 command is source-bound reproduction, not a portable raw-data release.
 
+The numerical bootstrap also [reproduces exactly from exported committed
+family counts in an isolated environment](QFO_SEQUENCE_REPRODUCTION_20260918.md),
+including an outside-repository run. That narrower check does not repeat
+the raw-source admission performed by the command above.
+
 ## Figure
 
 [PDF](figures_qfo_sequence_search_20260918/sequence_search_control.pdf),
