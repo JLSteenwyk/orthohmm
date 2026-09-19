@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Documentation AnyIO Alerts Remediated Locally (2026-09-18 UTC)
+
+Previous turn made progress throughe775eaa with isolated native wheel builds.
+Reread the objective and polled locally: HMM21706_0 running19:28:07;
+overhead21838 tasks0-2complete, task3failed1:0, task4running02:38, restpending.
+No DGX remote calls or retries occurred.
+
+Read-only authenticated GitHub alert retrieval identified both new alerts
+as AnyIO in the docs lockfile. Added the upstream patched minimum4.14.2 and
+resolved4.15.1 with the existing pinned uv tool. Locked environment sync,
+warnings-as-errors Sphinx build, preview CLI import and4audit tests pass.
+The retained two-advisory audit finds no affected locked version. Evidence
+and exact scope: [docs security report](DOCS_ANYIO_SECURITY_20260918.md).
+This is docs-only remediation; no inference dependencies, benchmarks or
+frozen historical environments changed. Remote alert closure still requires
+a post-push observation, not a local inference.
+
 ## Native Build Isolation And First Panel Failure Retained (2026-09-18 UTC)
 
 Previous turn made progress through2e5cb3a with platform-specific wheel

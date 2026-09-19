@@ -1,0 +1,45 @@
+{
+  "affected_alerts": 0,
+  "alert_snapshot": {
+    "bytes": 2468,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/docs_anyio_alerts_before_20260918.json",
+    "sha256": "c984f4ed4e3e183e609ff62083697ac0ee0e97ee56d75aee41ca32aff1cdb48b"
+  },
+  "auditor": {
+    "bytes": 2783,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_dependency_lock.py",
+    "sha256": "cd1638d3e0f3f40c3a58748a4c77b761a009e97af29844106b6e748bdc31713c"
+  },
+  "comparisons": [
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-82r6-8w77-94w6",
+      "locked_versions": [
+        "4.15.1"
+      ],
+      "number": 45,
+      "package": "anyio",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-5p39-cfhj-2xmp",
+      "locked_versions": [
+        "4.15.1"
+      ],
+      "number": 44,
+      "package": "anyio",
+      "status": "outside_reported_range"
+    }
+  ],
+  "limitations": [
+    "Tests only the retained advisory ranges, not all vulnerabilities or exploitability.",
+    "Checks every locked branch, even versions not selected on the current interpreter.",
+    "GitHub alert closure requires a separate post-push API check."
+  ],
+  "lock": {
+    "bytes": 106517,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/docs/uv.lock",
+    "sha256": "26780c9f0e30cd2c282e9f89f44b2254691bdd6aba08ebbb4355df396f4c721c"
+  }
+}
