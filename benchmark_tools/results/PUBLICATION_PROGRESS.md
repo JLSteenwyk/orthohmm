@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Corrected Factorial Uncertainty Queued (2026-09-19)
+
+Previous turn made progress throughdef3009 with the pinned pressure-panel
+auditor. Reread the complete objective and revalidated the live scientific
+and dedicated timing chains. DGX quiet window remains intact.
+
+Found the corrected factorial count/bootstrap implementation was prepared
+but not queued. Added and pushed9dbf842batch orchestration using unchanged
+frozen analysis engines/protocols. Syntax validation and45focused tests pass.
+Created a clean detached executor, checked its exact commit and protocol/
+engine hashes, then submitted21894held with afterok dependencies on the
+three remaining independent score admissions21780,21784,21788. Verified the
+scheduler allocation/command/dependencies and released it; it is pending.
+
+The job requires all eight corrected receipts, exports their complete table,
+reconstructs SwissTrees family counts and runs the frozen100000replicate,
+seed20260922,42-endpoint paired analysis. It does not use partial results,
+substitute historical counts, overwrite outputs or bypass failures.
+[Submission, hashes, outputs and remaining validation](QFO_CORRECTED_UNCERTAINTY_SUBMISSION_21894.md).
+
+No new accuracy or uncertainty value is admitted yet. Corrected method
+completion, full scientific validation, controlled timing and publication
+packaging remain active requirements.
+
 ## Frozen Pressure Panel Audit Integration (2026-09-19)
 
 Previous turn made progress through33e738c with required pressure coverage.
