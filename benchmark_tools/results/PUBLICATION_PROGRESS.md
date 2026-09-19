@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Corrected Search-Control Figure Complete (2026-09-18 UTC)
+
+Previous turn made progress through bd20a99 by consolidating the corrected
+main comparison. Reread the objective and confirmed live inference and DGX
+jobs. Added a checksum-bound renderer for the admitted SwissTrees search
+control: all six contrasts, nominal and adjusted intervals, shared symmetric
+axes, explicit units and the three native macro point estimates.
+
+All 15 focused tests pass, including percent conversion, panel completeness,
+changed-source rejection, interval validity and clipping checks. Rendered
+PNG/PDF/SVG and visually inspected the PNG without overlap or clipping.
+Integrated the figure and its bounded caption into the manuscript and
+[result documentation](QFO_SEQUENCE_UNCERTAINTY_RESULT_20260918.md).
+The older 16-panel archive remains unchanged; this figure is additional.
+
+DGX task15 completed 0:0 in 9:53; its scheduler record is saved locally.
+Task16 is running and task17 remains outstanding, so no remote DGX access
+or timing admission was attempted. Remaining corrected inference, other
+uncertainty endpoints, complete timing audit and release packaging remain open.
+
 ## Corrected Main Comparison Includes High Sensitivity (2026-09-18 UTC)
 
 Previous turn made progress through 4c8170c with corrected sequence-control

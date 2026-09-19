@@ -67,3 +67,31 @@ python benchmark_tools/run_qfo_sequence_uncertainty.py \
 
 Output paths must be fresh; underlying source files are required. This
 command is source-bound reproduction, not a portable raw-data release.
+
+## Figure
+
+[PDF](figures_qfo_sequence_search_20260918/sequence_search_control.pdf),
+[PNG](figures_qfo_sequence_search_20260918/sequence_search_control.png) and
+[SVG](figures_qfo_sequence_search_20260918/sequence_search_control.svg) are
+generated directly from the pinned admitted result. All six effects appear
+on the same -30 to +30 percentage-point scale with zero reference lines.
+Thick intervals are nominal paired 95% intervals; thin intervals use the
+prespecified six-endpoint adjustment. The upper table shows percentages,
+whereas the lower panels show percentage-point differences.
+
+The renderer validates the panel, orientation, point-estimate arithmetic,
+interval ordering, family accounting and axis bounds. Its 15 focused tests
+pass, including changed-source rejection and exact raw-to-percent conversion.
+The PNG was visually inspected: text and intervals are not clipped or
+overlapping. The [render manifest](figures_qfo_sequence_search_20260918/manifest.json)
+records source/result/output hashes and Matplotlib version. This new figure
+is not contained in the earlier 16-panel archival bundle, which is unchanged.
+
+```bash
+python benchmark_tools/plot_qfo_sequence_search.py \
+  --results benchmark_tools/results/qfo_sequence_swiss_bootstrap_20260918.json \
+  --output /tmp/qfo_sequence_search_figure
+```
+
+The output directory must not already exist. Rendering does not rerun the
+upstream admission audits or establish new statistical evidence.

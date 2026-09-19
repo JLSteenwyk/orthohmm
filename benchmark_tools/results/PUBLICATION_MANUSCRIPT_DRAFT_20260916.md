@@ -920,6 +920,16 @@ or effort. [Source-bound counts and uncertainty](QFO_SEQUENCE_UNCERTAINTY_RESULT
 [Both admitted controls](qfo_sequence_scores_20260918_v2/scores.md);
 [top100provenance](QFO_SEQUENCE_TOP100_SCORE_20260918.md).
 
+[Sequence-control uncertainty figure](figures_qfo_sequence_search_20260918/sequence_search_control.pdf).
+The score table shows percentages. The three panels show all six DIAMOND
+minus initial-HMM effects in percentage points, with a common symmetric
+axis and zero reference. Thick lines are nominal paired 95% intervals;
+thin lines are Bonferroni-adjusted intervals over the six endpoints.
+Both F1 and recall intervals cross zero. Precision intervals exclude zero
+but remain conditional on these 18 development-exposed families. The
+[render manifest](figures_qfo_sequence_search_20260918/manifest.json)
+binds the figure to the admitted result and renderer.
+
 The completed [label-free search diagnostic](QFO_CORRECTED_SEARCH_COVERAGE_20260918.md)
 compares initial search checkpoints on the same984137proteins and78species.
 HMM search retained90,687,327directed hits, DIAMOND all-hits593,510,904 and

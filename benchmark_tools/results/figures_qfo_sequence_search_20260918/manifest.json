@@ -1,0 +1,35 @@
+{
+  "axis_units": "percentage points",
+  "endpoints": 6,
+  "limitations": "Renders the pinned admitted analysis; does not rerun its upstream source audit.",
+  "matplotlib": "3.10.8",
+  "outputs": [
+    {
+      "bytes": 182343,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_qfo_sequence_search_20260918/sequence_search_control.png",
+      "sha256": "da820ca1b976783fa0958edbf18682b152b511005f6791799cde55eb05b55835"
+    },
+    {
+      "bytes": 31212,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_qfo_sequence_search_20260918/sequence_search_control.pdf",
+      "sha256": "f0acdadc2e3eec3d16231eadbfaaf3d5b452b50d736632e45aa2b848cd69fc13"
+    },
+    {
+      "bytes": 115328,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_qfo_sequence_search_20260918/sequence_search_control.svg",
+      "sha256": "940f06b25ba58acf19a7459066cfe3fc76ff9a0b258b5fb3a387c74f77eb531a"
+    }
+  ],
+  "publication_ready": false,
+  "results": {
+    "bytes": 416722,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_sequence_swiss_bootstrap_20260918.json",
+    "sha256": "e4e4696e6f090d7d83b99e5190bd21606a980fac294c62cdf260582d822d89f3"
+  },
+  "score_units": "percent",
+  "source": {
+    "bytes": 7330,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_qfo_sequence_search.py",
+    "sha256": "b505d40ecefac8f57b4e9228d311d75f51e3e6595a0fb39c75da77384fb2870b"
+  }
+}
