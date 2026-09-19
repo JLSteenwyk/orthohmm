@@ -1,5 +1,27 @@
 # Publication Progress
 
+## All Nine Full-Node Controls Replayed (2026-09-19)
+
+Previous turn made progress through pinned deployment/submission (`acad793`).
+Job21918 completed0:0 in4:13; recorder21919 retained47 observations with no
+errors. Independent controller replay confirms the first terminal observation
+at46 and exact terminal hash. Collected the archive only after termination.
+New panel audit validates447 recipe files, before/after runtime evidence,
+allocation, trial order and all nine raw trial archives. Focused123 tests pass.
+
+Steady/churn narrow flags:0/126 intervals. Contended narrow flags:63/63,
+including57/57 common-work intervals; all three positive controls detected.
+Every workload passes frozen identity/scope/duration/overlap/dose criteria.
+Churn creates roughly192k-199k short-lived children per20-second trial yet
+does not reproduce native-tool residual flags. This narrows the explanation:
+creation alone under this workload is insufficient, not proof of any cause.
+Original flags and historical native flags remain unchanged.
+
+Full report: `FULL_NODE_CONTROL_RESULT_21918_20260919.md`. Next: complete
+prespecified descriptive residual/pressure/frontier comparisons and decide
+the next evidence-supported timing-method step. Monitor overhead, scientific
+inclusion policy and27-run scaling remain unmet; no timing admission.
+
 ## Full-Node Controls Deployed And Running (2026-09-19)
 
 Previous turn made progress with raw replay and batch preparation (`dd912c6`).
