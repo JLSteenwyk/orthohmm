@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Read-Crossing Control Completed And Replayed (2026-09-19)
+
+Deployed ten byte-verified committed files from `6599c6e` to a fresh DGX
+directory and ran all three fixed controls once as job 22018. All completed
+0:0; services disappeared in the intended root-to-next-ancestor read window.
+Full-span root-minus-observer responses were .809154/.814570/.811985 CPU-s;
+negative first partial spans are retained, not clamped or causally attributed.
+
+Added independent replay of all raw snapshots, nested service checks,
+event ordering, source and scheduler identity. All 62 focused tests pass.
+See `LINEAGE_READ_CROSSING_RESULT_22018.md` and the retained raw/replay records.
+This advances during-read lifecycle validation only. Root/user-slice
+specificity, native residual explanation and scientific inclusion remain
+open. No historical timing was promoted and no local scientific job changed.
+
 ## Read-Crossing Control Prepared (2026-09-19)
 
 Following the complete flag description, checked upstream Linux v6.11

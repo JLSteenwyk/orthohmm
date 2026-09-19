@@ -1,0 +1,110 @@
+{
+  "boot_after": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+  "boot_before": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9",
+  "identities_after": {
+    "/": [
+      32,
+      1
+    ],
+    "/system.slice": [
+      32,
+      90
+    ],
+    "/system.slice/spark-7ff0_slurmstepd.scope": [
+      32,
+      9230
+    ],
+    "/system.slice/spark-7ff0_slurmstepd.scope/job_22018": [
+      32,
+      1282969
+    ],
+    "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0": [
+      32,
+      1283281
+    ],
+    "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0/user": [
+      32,
+      1283333
+    ],
+    "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0/user/task_0": [
+      32,
+      1283489
+    ]
+  },
+  "identities_before": {
+    "/": [
+      32,
+      1
+    ],
+    "/system.slice": [
+      32,
+      90
+    ],
+    "/system.slice/spark-7ff0_slurmstepd.scope": [
+      32,
+      9230
+    ],
+    "/system.slice/spark-7ff0_slurmstepd.scope/job_22018": [
+      32,
+      1282969
+    ],
+    "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0": [
+      32,
+      1283281
+    ],
+    "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0/user": [
+      32,
+      1283333
+    ],
+    "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0/user/task_0": [
+      32,
+      1283489
+    ]
+  },
+  "rows": [
+    {
+      "finished_ns": 2340412473422362,
+      "raw": "usage_usec 1918670330000\nuser_usec 1870394701000\nsystem_usec 48275629000\nnice_usec 6564000\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+      "scope": "/",
+      "started_ns": 2340412473372266
+    },
+    {
+      "finished_ns": 2340412473780572,
+      "raw": "usage_usec 1915157040344\nuser_usec 1870442037946\nsystem_usec 44715002397\nnice_usec 2789000\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+      "scope": "/system.slice",
+      "started_ns": 2340412473435178
+    },
+    {
+      "finished_ns": 2340412473844364,
+      "raw": "usage_usec 1909310830494\nuser_usec 1866682257275\nsystem_usec 42628573219\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+      "scope": "/system.slice/spark-7ff0_slurmstepd.scope",
+      "started_ns": 2340412473790028
+    },
+    {
+      "finished_ns": 2340412473898348,
+      "raw": "usage_usec 84991\nuser_usec 48425\nsystem_usec 36565\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+      "scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018",
+      "started_ns": 2340412473850828
+    },
+    {
+      "finished_ns": 2340412473942588,
+      "raw": "usage_usec 67267\nuser_usec 43171\nsystem_usec 24095\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+      "scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0",
+      "started_ns": 2340412473904204
+    },
+    {
+      "finished_ns": 2340412473983821,
+      "raw": "usage_usec 56771\nuser_usec 41831\nsystem_usec 14939\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+      "scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0/user",
+      "started_ns": 2340412473948317
+    },
+    {
+      "finished_ns": 2340412474037885,
+      "raw": "usage_usec 57769\nuser_usec 42829\nsystem_usec 14940\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+      "scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0/user/task_0",
+      "started_ns": 2340412473989629
+    }
+  ],
+  "status": "aggregate_lineage_snapshot",
+  "target": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0/user/task_0"
+}

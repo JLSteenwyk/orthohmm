@@ -1,0 +1,26 @@
+{
+  "command": [
+    "systemd-run",
+    "--user",
+    "--quiet",
+    "--wait",
+    "--pipe",
+    "--collect",
+    "--unit=orthohmm-lineage-22018-1.service",
+    "--working-directory=/home/jlsteenwyk/projects/orthohmm-publication/lineage_read_crossing_source_v1",
+    "--property=RuntimeMaxSec=10s",
+    "--property=MemoryMax=256M",
+    "--property=TasksMax=8",
+    "taskset",
+    "-c",
+    "0",
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "benchmark_tools.run_lineage_lifecycle_control",
+    "--burn"
+  ],
+  "cpu": 0,
+  "manager": "/user.slice/user-1000.slice/user@1000.service",
+  "target": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0/user/task_0"
+}

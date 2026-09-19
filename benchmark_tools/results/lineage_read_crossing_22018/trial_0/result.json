@@ -1,0 +1,262 @@
+{
+  "control_met": true,
+  "environmental_validity_established": false,
+  "event": {
+    "finished_ns": 2340413292975558,
+    "started_ns": 2340412474684112
+  },
+  "full_span_response": true,
+  "scientific_timings_admitted": false,
+  "spans": {
+    "before_to_crossing": {
+      "aggregate_deltas": [
+        {
+          "cpu_usec": 1000,
+          "read_midpoint_elapsed_s": 0.001261446,
+          "scope": "/"
+        },
+        {
+          "cpu_usec": 14911,
+          "read_midpoint_elapsed_s": 0.819518332,
+          "scope": "/system.slice"
+        },
+        {
+          "cpu_usec": 12843,
+          "read_midpoint_elapsed_s": 0.8193694835,
+          "scope": "/system.slice/spark-7ff0_slurmstepd.scope"
+        },
+        {
+          "cpu_usec": 12843,
+          "read_midpoint_elapsed_s": 0.819359524,
+          "scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018"
+        },
+        {
+          "cpu_usec": 12843,
+          "read_midpoint_elapsed_s": 0.819354548,
+          "scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0"
+        },
+        {
+          "cpu_usec": 12844,
+          "read_midpoint_elapsed_s": 0.819354507,
+          "scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0/user"
+        },
+        {
+          "cpu_usec": 11846,
+          "read_midpoint_elapsed_s": 0.8193463395,
+          "scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0/user/task_0"
+        }
+      ],
+      "controlled_workload_verified": false,
+      "limitations": [
+        "Aggregate ancestor counters are inclusive and overlapping; never sum them.",
+        "Signed adjacent differences have non-atomic read windows and accounting delay; they are not bounds.",
+        "No sibling inventory is needed, but no individual transient service is identified.",
+        "Counter stability cannot prove process membership stability or absence of non-CPU interference.",
+        "Kernel transient-descendant accounting, collector overhead and scientific inclusion remain unvalidated.",
+        "No original flags are removed, thresholds changed, or native wall times corrected."
+      ],
+      "root_minus_target_cpu_usec": -10846,
+      "scientific_timings_admitted": false,
+      "signed_complements": [
+        {
+          "ancestor": "/",
+          "excluded_child": "/system.slice",
+          "signed_cpu_usec": -13911
+        },
+        {
+          "ancestor": "/system.slice",
+          "excluded_child": "/system.slice/spark-7ff0_slurmstepd.scope",
+          "signed_cpu_usec": 2068
+        },
+        {
+          "ancestor": "/system.slice/spark-7ff0_slurmstepd.scope",
+          "excluded_child": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018",
+          "signed_cpu_usec": 0
+        },
+        {
+          "ancestor": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018",
+          "excluded_child": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0",
+          "signed_cpu_usec": 0
+        },
+        {
+          "ancestor": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0",
+          "excluded_child": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0/user",
+          "signed_cpu_usec": -1
+        },
+        {
+          "ancestor": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0/user",
+          "excluded_child": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0/user/task_0",
+          "signed_cpu_usec": 998
+        }
+      ],
+      "status": "aggregate_lineage_cpu_diagnostic"
+    },
+    "crossing_to_after": {
+      "aggregate_deltas": [
+        {
+          "cpu_usec": 821000,
+          "read_midpoint_elapsed_s": 0.8193051635,
+          "scope": "/"
+        },
+        {
+          "cpu_usec": 1000,
+          "read_midpoint_elapsed_s": 0.000889661,
+          "scope": "/system.slice"
+        },
+        {
+          "cpu_usec": 1001,
+          "read_midpoint_elapsed_s": 0.0008813645,
+          "scope": "/system.slice/spark-7ff0_slurmstepd.scope"
+        },
+        {
+          "cpu_usec": 1001,
+          "read_midpoint_elapsed_s": 0.000876412,
+          "scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018"
+        },
+        {
+          "cpu_usec": 1001,
+          "read_midpoint_elapsed_s": 0.0008716285,
+          "scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0"
+        },
+        {
+          "cpu_usec": 1000,
+          "read_midpoint_elapsed_s": 0.000866853,
+          "scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0/user"
+        },
+        {
+          "cpu_usec": 1000,
+          "read_midpoint_elapsed_s": 0.0008647645,
+          "scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0/user/task_0"
+        }
+      ],
+      "controlled_workload_verified": false,
+      "limitations": [
+        "Aggregate ancestor counters are inclusive and overlapping; never sum them.",
+        "Signed adjacent differences have non-atomic read windows and accounting delay; they are not bounds.",
+        "No sibling inventory is needed, but no individual transient service is identified.",
+        "Counter stability cannot prove process membership stability or absence of non-CPU interference.",
+        "Kernel transient-descendant accounting, collector overhead and scientific inclusion remain unvalidated.",
+        "No original flags are removed, thresholds changed, or native wall times corrected."
+      ],
+      "root_minus_target_cpu_usec": 820000,
+      "scientific_timings_admitted": false,
+      "signed_complements": [
+        {
+          "ancestor": "/",
+          "excluded_child": "/system.slice",
+          "signed_cpu_usec": 820000
+        },
+        {
+          "ancestor": "/system.slice",
+          "excluded_child": "/system.slice/spark-7ff0_slurmstepd.scope",
+          "signed_cpu_usec": -1
+        },
+        {
+          "ancestor": "/system.slice/spark-7ff0_slurmstepd.scope",
+          "excluded_child": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018",
+          "signed_cpu_usec": 0
+        },
+        {
+          "ancestor": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018",
+          "excluded_child": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0",
+          "signed_cpu_usec": 0
+        },
+        {
+          "ancestor": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0",
+          "excluded_child": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0/user",
+          "signed_cpu_usec": 1
+        },
+        {
+          "ancestor": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0/user",
+          "excluded_child": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0/user/task_0",
+          "signed_cpu_usec": 0
+        }
+      ],
+      "status": "aggregate_lineage_cpu_diagnostic"
+    },
+    "full": {
+      "aggregate_deltas": [
+        {
+          "cpu_usec": 822000,
+          "read_midpoint_elapsed_s": 0.8205666095,
+          "scope": "/"
+        },
+        {
+          "cpu_usec": 15911,
+          "read_midpoint_elapsed_s": 0.820407993,
+          "scope": "/system.slice"
+        },
+        {
+          "cpu_usec": 13844,
+          "read_midpoint_elapsed_s": 0.820250848,
+          "scope": "/system.slice/spark-7ff0_slurmstepd.scope"
+        },
+        {
+          "cpu_usec": 13844,
+          "read_midpoint_elapsed_s": 0.820235936,
+          "scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018"
+        },
+        {
+          "cpu_usec": 13844,
+          "read_midpoint_elapsed_s": 0.8202261765,
+          "scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0"
+        },
+        {
+          "cpu_usec": 13844,
+          "read_midpoint_elapsed_s": 0.82022136,
+          "scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0/user"
+        },
+        {
+          "cpu_usec": 12846,
+          "read_midpoint_elapsed_s": 0.820211104,
+          "scope": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0/user/task_0"
+        }
+      ],
+      "controlled_workload_verified": false,
+      "limitations": [
+        "Aggregate ancestor counters are inclusive and overlapping; never sum them.",
+        "Signed adjacent differences have non-atomic read windows and accounting delay; they are not bounds.",
+        "No sibling inventory is needed, but no individual transient service is identified.",
+        "Counter stability cannot prove process membership stability or absence of non-CPU interference.",
+        "Kernel transient-descendant accounting, collector overhead and scientific inclusion remain unvalidated.",
+        "No original flags are removed, thresholds changed, or native wall times corrected."
+      ],
+      "root_minus_target_cpu_usec": 809154,
+      "scientific_timings_admitted": false,
+      "signed_complements": [
+        {
+          "ancestor": "/",
+          "excluded_child": "/system.slice",
+          "signed_cpu_usec": 806089
+        },
+        {
+          "ancestor": "/system.slice",
+          "excluded_child": "/system.slice/spark-7ff0_slurmstepd.scope",
+          "signed_cpu_usec": 2067
+        },
+        {
+          "ancestor": "/system.slice/spark-7ff0_slurmstepd.scope",
+          "excluded_child": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018",
+          "signed_cpu_usec": 0
+        },
+        {
+          "ancestor": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018",
+          "excluded_child": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0",
+          "signed_cpu_usec": 0
+        },
+        {
+          "ancestor": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0",
+          "excluded_child": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0/user",
+          "signed_cpu_usec": 0
+        },
+        {
+          "ancestor": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0/user",
+          "excluded_child": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0/user/task_0",
+          "signed_cpu_usec": 998
+        }
+      ],
+      "status": "aggregate_lineage_cpu_diagnostic"
+    }
+  },
+  "status": "read_crossing_control_evaluated"
+}

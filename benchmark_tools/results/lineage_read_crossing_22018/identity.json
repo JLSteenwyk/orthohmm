@@ -1,0 +1,45 @@
+{
+  "affinity": [
+    0,
+    1
+  ],
+  "executables": {
+    "/usr/bin/python3": {
+      "path": "/usr/bin/python3.12",
+      "sha256": "fe93e4766200da769b55402a0fb87df68babf9e43f563fd5323bb547556e87cc"
+    },
+    "systemctl": {
+      "path": "/usr/bin/systemctl",
+      "sha256": "78c5dd6eeefd68ea85f5702473b103d37687d7b082073f25ce62bbff79eb5636"
+    },
+    "systemd-run": {
+      "path": "/usr/bin/systemd-run",
+      "sha256": "eecc3a04930543c11d145c2348ee39af6880512df209c66a4bbe4fe600e766fd"
+    },
+    "taskset": {
+      "path": "/usr/bin/taskset",
+      "sha256": "9b3f69ab5d77a0498d3359c018048e4c1f38d9e42276d8f9545c43ef1d411dc1"
+    }
+  },
+  "job": 22018,
+  "manager": "/user.slice/user-1000.slice/user@1000.service",
+  "python": "3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0]",
+  "sources": {
+    "/home/jlsteenwyk/projects/orthohmm-publication/lineage_read_crossing_source_v1/benchmark_tools/probe_cgroup_frontier.py": "ee8d978878adc889d6d66e50601d67dc915b1dc2645ea9fcc8c11b84dbb63635",
+    "/home/jlsteenwyk/projects/orthohmm-publication/lineage_read_crossing_source_v1/benchmark_tools/probe_cgroup_lineage.py": "54753e22ed11bac0c3d9cc231bfa9c12699aceb433dd57a1df488a3c37fadf85",
+    "/home/jlsteenwyk/projects/orthohmm-publication/lineage_read_crossing_source_v1/benchmark_tools/probe_dgx_cpu_hierarchy.py": "e2ae95faad1630f0c055d0b5a152b87991e0c8a529ec58d7a43e072b25ee55e1",
+    "/home/jlsteenwyk/projects/orthohmm-publication/lineage_read_crossing_source_v1/benchmark_tools/probe_dgx_step_separation.py": "c00eae1c44c86f0ee02c72e4634cf4e5cc70e2656a8ebfc0f9070769f6f7f97b",
+    "/home/jlsteenwyk/projects/orthohmm-publication/lineage_read_crossing_source_v1/benchmark_tools/probe_host_counters.py": "3d3c193305085e17aa10e05be842d814f66d020d7dde285c8d9288ead2ce3f3c",
+    "/home/jlsteenwyk/projects/orthohmm-publication/lineage_read_crossing_source_v1/benchmark_tools/results/LINEAGE_READ_CROSSING_PROTOCOL_20260919.md": "a4228ba566f5ffc1cb46ec5fe957d30536abd4f3c5f40337ac84e37b782a0603",
+    "/home/jlsteenwyk/projects/orthohmm-publication/lineage_read_crossing_source_v1/benchmark_tools/run_lineage_lifecycle_control.py": "9f18a1855870a120a09a47494c15042845f048ede00ad4af2ab70220128ad537",
+    "/home/jlsteenwyk/projects/orthohmm-publication/lineage_read_crossing_source_v1/benchmark_tools/run_lineage_read_crossing_control.py": "896aad0b612068896c952de523435fe78d65640f0369358f23b6918799393139"
+  },
+  "target": "/system.slice/spark-7ff0_slurmstepd.scope/job_22018/step_0/user/task_0",
+  "uname": [
+    "Linux",
+    "spark-7ff0",
+    "6.11.0-1016-nvidia",
+    "#16-Ubuntu SMP PREEMPT_DYNAMIC Sun Sep 21 16:52:46 UTC 2025",
+    "aarch64"
+  ]
+}
