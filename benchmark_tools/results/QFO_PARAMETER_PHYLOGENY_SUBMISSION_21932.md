@@ -48,3 +48,28 @@ handoff, working-directory restoration, refusal to overwrite existing
 outputs and inherited command constraints. They are not an end-to-end test
 of this new panel; scheduled execution and independent admission remain
 necessary.
+
+## Independent Admission Array 21935
+
+Submitted 2026-09-19 at 08:29 EDT from detached executor
+`benchmarks/work/publication_qfo_parameter_native_admission_v1`, commit
+`72eb401ab056772f7f5b85585c8f30dc33bc3c78` (pushed).
+The exact executor path and commit were passed to the frozen batch.
+
+- Admission source SHA-256:
+  `9c3ffb3d606be0e2ce11ff1883bf05ce567e3dad789071382d6976fd172dc66f`.
+- Batch `qfo_parameter_phylogeny_admit_batch_20260919.sh` SHA-256:
+  `e9e7adcf3e6bf25d7b10bb7ac1f1a68441853ca60306de2dece282f58b6ef365`.
+- Four tasks, concurrency one, 2 CPUs, 64G, 4 hours, bizon, no requeue.
+- Dependency: `aftercorr:21932`; each admission task requires successful
+  completion of the matching inference-array index.
+- Reports: `benchmarks/work/qfo_parameter_native_admission_21935_<index>.json`.
+- Logs: `benchmarks/work/qfo_parameter_native_admit_21935_<index>.log`.
+
+Confirmed all four admission tasks PENDING (Dependency); task 0 raw job
+identity is 21936, distinct from array identity 21935_0. The admission tool
+checks both array selection and recorded raw execution identity. Focused
+admission/runner/native-validator suite: 114 passed in 8.95 seconds; batch
+shell syntax passed. No report or native-output success is claimed before
+these jobs execute. Mapping, scoring and paired uncertainty remain separate
+downstream requirements.

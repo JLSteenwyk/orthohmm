@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Parameter Admission Queued; OrthoFinder Scoring Started (2026-09-19)
+
+Committed and pushed admission implementation/tests/batch as `72eb401`.
+Created its detached executor and submitted 21935, with four corresponding
+dependencies on 21932. Scheduler confirms all four PENDING (Dependency),
+2 CPUs/64G/4 hours and no requeue. Updated the inference-submission document
+with exact revision, hashes, output paths and observed scheduler identity.
+No parameter-panel native output or accuracy result is admitted yet.
+
+Latest controller poll: corrected OrthoFinder score task 21735_0 RUNNING
+(3:55), second score task pending array throttle, score-admission tasks
+21736 pending. BLAST 21713 RUNNING (20:21); DGX overhead 21920_6 RUNNING
+(4:50) and recorder 21922 RUNNING. No remote native-result inspection or
+job intervention occurred during the timing panel.
+
 ## QfO Parameter Native Admission Prepared (2026-09-19)
 
 Previous turn was progress: committed and pushed the tested runner and
