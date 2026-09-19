@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Corrected Candidates Admitted And Downstream Jobs Started (2026-09-18 UTC)
+
+Previous turn was a verified wait on candidate admission worker 1008174.
+Reread the objective and confirmed admission 21759 completed 0:0 in 44s.
+All four arms preserve 984,137 proteins, with 444 provenance records checked.
+Candidate expansion records 40,690 merges without profile expansion and
+40,169 with profile expansion. Counts and limitations are retained with
+the [admission receipt](QFO_CORRECTED_CANDIDATES_ADMITTED_20260918.md).
+
+Reconciliation 21760_0 and all four non-reconciled pair conversions
+21765/21767/21769/21771 started automatically after the gate passed. No
+duplicate execution, parameter change or retry. Accuracy, paired uncertainty
+and comparative resource results remain pending. OrthoFinder 21706_1 and
+DGX 21838_10 remain live; no DGX access during the timing panel.
+
 ## Corrected Replay Integrated Into Manuscript (2026-09-18 UTC)
 
 Previous turn made progress through 8d36e13 by retaining independent replay
