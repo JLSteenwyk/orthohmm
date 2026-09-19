@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Final Corrected Reconciliation Validated (2026-09-19)
+
+Previous turn was a verified wait. The final native factorial run
+`21760_3` completed successfully in 01:54:14 and admission `21764` passed
+in 00:02:23. Retained the receipt and independently rehashed all 23
+distinct directly embedded file records; all hashes and sizes matched.
+All 984,137 genes are preserved, with 366,068 root HOGs and 5,959,560
+native pairs. [Native counts and limitations](QFO_CORRECTED_FULL_RECONCILIATION_20260919.md).
+
+Conversion `21772` is running; assessment and scoring admission remain
+downstream. These counts do not establish accuracy, tree correctness or
+controlled runtime. Full-factorial uncertainty still awaits `21788`.
+No scientific settings changed and the active DGX quiet window remains
+intact. Publication readiness remains unproven.
+
 ## Seventh Corrected Factorial Cell Scored (2026-09-19)
 
 Previous turn was a verified wait. Reread the objective and followed live
