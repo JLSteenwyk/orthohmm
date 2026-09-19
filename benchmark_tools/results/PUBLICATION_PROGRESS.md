@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Full-Node Control Description Complete (2026-09-19)
+
+Previous turn made progress through actual nine-trial replay (`12256b9`).
+Completed the prespecified all/common-window residual, CPU, pressure,
+creation/context-switch, frontier and observer descriptions. Retained all189
+intervals and signed within-block median contrasts without interval-level
+inference. Twenty-eight focused description tests pass. Report and hashes:
+`FULL_NODE_CONTROL_DESCRIPTION_20260919.md`.
+
+Churn-minus-steady residual medians rise0.07845-0.08762cores; known contention
+rises0.94738-0.94930cores. Churn and contention both raise native pressure,
+so pressure alone is not specific evidence of outside work. The known batch
+competitor appears in hierarchy batch CPU, not outside-target frontier CPU;
+scope distinctions are preserved. No thresholds, flags or eligibility changed.
+
+This control experiment and its descriptive reporting are complete, not the
+publication timing requirement. Next is whole-command/longer-window native
+accounting assessment and collector overhead evidence, not repeating the
+same controls in search of a favorable explanation. Prospective inclusion
+policy and27 matched runs remain outstanding. Corrected full OrthoFinder21706_1
+was confirmed RUNNING at10:34:31; OrthoMCL21713 and strata21896 remain pending.
+
 ## All Nine Full-Node Controls Replayed (2026-09-19)
 
 Previous turn made progress through pinned deployment/submission (`acad793`).
