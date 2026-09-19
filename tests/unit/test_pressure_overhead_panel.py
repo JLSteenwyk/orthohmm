@@ -14,6 +14,17 @@ from tests.unit.test_run_dgx_frontier_overhead import save
 RESULTS = Path(__file__).resolve().parents[2] / 'benchmark_tools/results'
 PARENT = RESULTS / 'dgx_frontier_overhead_plan_20260918.json'
 PLAN = RESULTS / 'dgx_pressure_overhead_plan_20260919.json'
+PLAN_V2 = RESULTS / 'dgx_pressure_overhead_plan_v2_20260919.json'
+
+
+def test_v2_preserves_work_and_pins_interpreter():
+    old = json.loads(PLAN.read_text())
+    new = json.loads(PLAN_V2.read_text())
+    assert hashlib.sha256(PLAN_V2.read_bytes()).hexdigest() == module.PRESSURE_PLAN_V2_SHA
+    relocated = relocate(old, ROOT + '/pressure_frontier_overhead_v1', ROOT + '/pressure_frontier_overhead_v2')
+    assert all(new[k] == v for k,v in relocated.items())
+    assert new['launcher_python'] == ROOT + '/envs/orthohmm/bin/python'
+    assert new['supersedes_failed_array'] == 21869
 
 
 def test_batch_launcher_uses_pinned_environment_for_native_enumerator():
@@ -57,6 +68,32 @@ def test_pressure_selection(pinned, index):
     plan, auth, row = module.select(*pinned, index, module.PRESSURE_PLAN_SHA)
     assert row == plan['runs'][index]
     assert auth['scientific_execution_authorized'] is False
+
+
+@pytest.fixture
+def pinned_v2(pinned):
+    recipe = json.loads(pinned[3].read_text())
+    row = next(r for r in recipe['records'] if r['path'] == str(PLAN))
+    row.update(path=str(PLAN_V2), sha256=hashlib.sha256(PLAN_V2.read_bytes()).hexdigest())
+    pinned[0] = PLAN_V2
+    pinned[4] = save(pinned[3], recipe)
+    auth = json.loads(pinned[1].read_text())
+    auth.update(plan_sha256=module.PRESSURE_PLAN_V2_SHA, recipe_sha256=pinned[4])
+    pinned[2] = save(pinned[1], auth)
+    return pinned
+
+
+@pytest.mark.parametrize('index', range(18))
+def test_v2_task_selection(pinned_v2, index):
+    plan, auth, row = module.select(*pinned_v2, index, module.PRESSURE_PLAN_V2_SHA)
+    assert row == plan['runs'][index]
+    assert not auth['scientific_execution_authorized']
+
+
+def test_v2_rejects_wrong_launcher_interpreter(pinned_v2, monkeypatch):
+    monkeypatch.setattr(module.sys, 'executable', '/usr/bin/python3')
+    with pytest.raises(ValueError, match='interpreter differs'):
+        module.launch(*pinned_v2, 0, module.PRESSURE_PLAN_V2_SHA)
 
 
 @pytest.mark.parametrize('fault', ['unknown_plan', 'old_plan', 'old_purpose', 'missing_probe'])
