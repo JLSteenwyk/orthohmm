@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Root CPU Context Probe And Protocol Prepared (2026-09-19)
+
+Added a read-only root/system/user/init context probe reusing existing
+counter and identity utilities. It retains timestamped host categories,
+root PID membership changes, signed residuals and partial failures, with
+no attribution or timing admission. All 63 focused tests pass.
+
+Frozen a 12-condition engineering panel in
+`ROOT_CPU_CONTEXT_CONTROL_PROTOCOL_20260919.md`: three repetitions each of
+idle, 20-worker steady/churn and known owned user-service contention. Reuse
+the established finite workloads and preserve all outcomes. The panel
+runner/integration/replay still need implementation before DGX deployment.
+No scientific measurement recipe, queued job or default changed. The full
+publication goal remains incomplete.
+
 ## Lifecycle Evidence Integrated Into Manuscript (2026-09-19)
 
 Previous turn completed and independently replayed control 22018, pushed
