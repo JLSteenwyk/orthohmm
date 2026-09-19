@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Corrected QfO Replay Independently Admitted (2026-09-18 UTC)
+
+Previous turn made progress through c02784a with current-source validation.
+Reread the objective and observed replay 21756 completed successfully in
+50:28, followed by admission 21757 completing successfully in 1:17.
+The independent check covers 419 provenance records and confirms that all
+391,908 final groups match the corrected native result, with no unmatched
+groups. All four native clustering boundaries passed. The unmodified
+[receipt and milestone](QFO_CORRECTED_REPLAY_ADMITTED_20260918.md) are retained.
+
+Candidate preparation 21758 started automatically. No redundant execution
+or parameter adjustment was needed. This establishes corrected replay
+equivalence, not an accuracy result or historical-run equivalence. QfO
+assessment, uncertainty and controlled-resource requirements remain open.
+OrthoFinder 21706_1 and DGX task 21838_9 were confirmed running during this
+turn; the DGX quiet window remains undisturbed.
+
 ## Current-Source Suite Refresh (2026-09-18 UTC)
 
 Previous turn did not recover original TreeFam source inputs; repeated
