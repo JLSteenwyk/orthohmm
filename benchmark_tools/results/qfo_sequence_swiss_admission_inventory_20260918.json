@@ -1,0 +1,28 @@
+{
+  "variants": [
+    {
+      "variant": "p0_c0_r0",
+      "admission": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_factorial_score_admission_21774.json",
+        "bytes": 280258,
+        "sha256": "48bad356e7aaadded2cbfe33044b200021e133a8444a15c79170c50049b76545"
+      }
+    },
+    {
+      "variant": "all_hits",
+      "admission": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_sequence_all_hits_assessment_admission_21826.json",
+        "bytes": 733334,
+        "sha256": "dc29e5410a274b5e633674bdf42c6578893bbc47912adc7b23ca6893ed917cd2"
+      }
+    },
+    {
+      "variant": "top100",
+      "admission": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_sequence_top100_assessment_admission_21830.json",
+        "bytes": 732951,
+        "sha256": "439bfb1499e6c1f5e357ec27dc0fd02279d920a6a1a77f9483d008da4849c911"
+      }
+    }
+  ]
+}

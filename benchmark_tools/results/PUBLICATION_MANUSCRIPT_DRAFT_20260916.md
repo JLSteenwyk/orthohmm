@@ -881,9 +881,16 @@ strict-profile groups. Group counts alone are not accuracy endpoints.
 This agreement supports reuse of the corrected intermediate outputs for
 the prespecified ablations. It neither resolves the older historical-input
 replay discrepancy nor establishes general determinism. Candidate
-preparation has started; downstream reconciliation, conversion, scoring and
-independent assessment remain unfinished. The 50:28 replay elapsed time is
+preparation is admitted, as are conversion and scoring for all four R-off
+cells. Reconciliation and R-on assessment remain unfinished. The 50:28 replay elapsed time is
 incremental shared-host execution, not a matched end-to-end runtime result.
+
+The corrected R-off cells p0_c0_r0, p0_c1_r0, p1_c0_r0 and p1_c1_r0 scored
+SwissTrees F1 of 0.689184, 0.685709, 0.685498 and 0.686087, respectively.
+Their group-derived predictions retained 9,009,082, 11,734,021, 9,032,719
+and 11,755,521 cross-species pairs with zero mapping loss. This partial panel
+does not establish expansion/reconciliation interactions or authorize a
+default change. [All six endpoints and admission provenance](QFO_CORRECTED_ROFF_SCORES_20260918.md).
 
 ### Corrected QfO Sequence-Search Control
 
@@ -895,7 +902,8 @@ F1=0.576306 and FAS0.715448. The project-defined secondary mean was0.645978.
 The independently admitted top100diagnostic retained11,285,357mapped pairs
 without loss and scored0.479791/0.874979/0.604172/0.629189/0.573917/0.716734
 on the same six endpoints, with secondary mean0.646464. The same-input corrected
-HMM control and paired uncertainty remain pending. No HMM benefit or
+HMM control is now admitted (SwissTrees F1=0.689184); paired uncertainty is
+being assessed under the frozen protocol. No significant HMM benefit or
 significant difference follows from these point estimates; equal cutoffs do
 not establish matched sensitivity or effort.
 [Both admitted controls](qfo_sequence_scores_20260918_v2/scores.md);

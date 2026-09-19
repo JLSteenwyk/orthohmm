@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Corrected R-Off Assessments Admitted (2026-09-18 UTC)
+
+The previous TreeFam search turn produced no new original inputs. Reread
+the full objective and revalidated scheduler state: all four R-off scoring
+and admission jobs completed 0:0. Retained the exact admission reports and
+exported all six endpoints with explicit missing R-on cells. Historical-input
+scores are unchanged. [Results and interpretation](QFO_CORRECTED_ROFF_SCORES_20260918.md).
+
+The three-arm SwissTrees count audit passed for corrected initial HMM,
+DIAMOND all-hit and top100, binding all 18 families and 10,765 relations.
+The frozen production uncertainty runner is executing its independent
+source-bound reconstruction before 100,000 shared draws (seed 20260923,
+six-endpoint adjustment). Counts alone are not an admitted interval result.
+All 80 focused exporter, count-audit, bootstrap and production-runner tests pass.
+
+OrthoFinder 21706_1 and reconciliation 21760_0 remain running; OrthoMCL
+21713 is pending resources. DGX task13 completed and its scheduler record is
+saved; task14 is live and 15-17 pending. No DGX remote access was made during
+the quiet timing window. Next: finish sequence-control uncertainty, then
+remaining corrected comparisons and the complete DGX measurement audit.
+
 ## Search Decisions Joined To Final Grouping (2026-09-18 UTC)
 
 Previous turn made progress through 157a642 by admitting observed search
