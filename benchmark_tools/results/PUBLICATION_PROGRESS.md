@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Root Context Whole-Panel Audit Implemented (2026-09-19)
+
+Added terminal allocation/command checks, frozen protocol and recipe binding,
+before/after runtime verification, complete fixed-order inventory and immutable
+checkpoint reproduction. The audit invokes raw per-trial replay and checks
+cross-trial boot/scope identity and nonoverlapping observation/service windows.
+Stopped panels retain failed and unrun conditions; workload evidence in a
+purportedly unrun condition is rejected. No scientific timing admission is
+provided. Queue-before-submission evidence remains a separate launch check.
+
+All 461 focused tests pass. The new audit tests use synthetic orchestration
+fixtures alongside existing raw replay tests; no live panel is yet claimed.
+The DGX Slurm queue was checked and was empty. Next: export the committed
+source to a fresh deployment, pin its recipe, recheck the queue immediately
+before submission, and retain all outcomes after the fixed run terminates.
+The full publication objective remains incomplete.
+
 ## Root Context Launcher And Witness Replay Added (2026-09-19)
 
 Added the 12-trial panel runner and exclusive DGX20CPU/96GiB, 15-minute
