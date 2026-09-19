@@ -18,6 +18,7 @@ PANELS = (
     "figures_simulation_tree_robustness_20260917", "figures_wgd_application_20260917",
     "figures_qfo_swiss_comparators_20260917", "figures/swiss_domain_strata_20260917",
     "qfo_factorial_swiss_figure_20260918", "figures_dgx_descriptive_20260918",
+    "figures_qfo_hit_coverage_20260918", "figures_qfo_sequence_search_20260918",
 )
 
 

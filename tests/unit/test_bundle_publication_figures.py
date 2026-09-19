@@ -101,6 +101,20 @@ def test_existing_destination_refused(repository, tmp_path):
         bundle.build(repository, "HEAD", out)
 
 
+def test_cli_selects_alternate_committed_audit(repository, tmp_path):
+    alternate = "benchmark_tools/results/new_audit.json"
+    (repository / bundle.AUDIT).rename(repository / alternate)
+    commit(repository)
+    output = tmp_path / "alternate"
+    run = subprocess.run(["python", "-I", str(repository / bundle.RUNNER), "build",
+        "--repo", str(repository), "--revision", "HEAD", "--audit", alternate,
+        "--output", str(output)], cwd=tmp_path, capture_output=True, text=True, check=True)
+    assert json.loads(run.stdout)["panels"] == 1
+    manifest = json.loads((output / "bundle.json").read_text())
+    assert alternate in manifest["support_files"]
+    assert bundle.AUDIT not in manifest["support_files"]
+
+
 @pytest.mark.parametrize("name", ["../x", "/x", "a/../x", "a//x", "./x", ""])
 def test_unsafe_paths(name):
     with pytest.raises(ValueError):
