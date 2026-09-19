@@ -2,6 +2,14 @@
 
 ## CPM Candidate Import Boundary Corrected (2026-09-19)
 
+Corrected replacement array 21967 is queued from pushed commit 1acc957 in
+`publication_qfo_cpm_candidates_v2`; both tasks confirmed PENDING with
+unchanged 2-CPU/64-GiB limits and afterany/aftercorr:21962 dependencies.
+Updated command/hash/cancellation records are retained in the original
+submission document. Candidate admission code is a local unfinished draft,
+not an admitted or submitted workflow. OrthoFinder scoring 21735_1 remains
+RUNNING (1:00:49), with score admission still pending.
+
 Previous turn was progress: candidate preparation was implemented and
 queued. While implementing its independent validator, code inspection found
 that importing audit_accuracy_checkpoint before selecting the frozen

@@ -13,6 +13,29 @@ score selection occurred. Original submission details are retained below.
 
 ## Original Submission
 
+Replacement array **21967** uses frozen executor
+`benchmarks/work/publication_qfo_cpm_candidates_v2`, commit
+`1acc9579de31d6130a207ae9c0b760e2e07356bb` (pushed). Both tasks are confirmed
+PENDING with 2 CPUs/64 GiB and unchanged afterany:21962 AND aftercorr:21962
+dependencies. The scientific settings, output directories and task order
+are unchanged. Replacement logs/time files use `21967`, not `21964`.
+
+```bash
+sbatch --parsable \
+  benchmarks/work/publication_qfo_cpm_candidates_v2/benchmark_tools/results/qfo_cpm_candidates_batch_20260919.sh \
+  /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_cpm_candidates_v2 \
+  1acc9579de31d6130a207ae9c0b760e2e07356bb
+```
+
+Corrected preparation source SHA-256:
+`6562e56870efb6bbb7fb526b2c1210ca334e5aa37e7692d5ab3faf7bece5e8cb`.
+Batch SHA-256 remains
+`b296891b971b0754892961705278087443b64119d3cf13c24bb6888fb1ef6dbd`.
+The corrected focused suite passed 129 tests in 5.52 seconds. Independent
+candidate admission remains under development and is not queued.
+
+### Original Array Details
+
 Array 21964 has two serial tasks: index 0 cpm_low, index 1 cpm_high.
 Scheduler inspection confirms both PENDING, 2 CPUs/64 GiB, with
 afterany:21962 AND aftercorr:21962 dependencies. Frozen batch specifies
