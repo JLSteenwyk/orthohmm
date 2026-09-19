@@ -1,0 +1,46 @@
+{
+  "evidence": [
+    {
+      "bytes": 231,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/root_context_session_submission_v2/queue.json",
+      "sha256": "ef992e7ca3dc33bf8185007b868d52cb9d551af1cffc566a9c7af7d20c3fae1e"
+    },
+    {
+      "bytes": 747,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/root_context_session_submission_v2/launch.json",
+      "sha256": "b9fa2804d9d8dd589ce7529319bb679811c17302e4d9e7b1d12bf999b436da90"
+    },
+    {
+      "bytes": 560,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/root_context_session_submission_v2/result.json",
+      "sha256": "3b8368a51aa15d638d68854f8a954c50c2afcb2cca0514dc63da60b82c58b454"
+    },
+    {
+      "bytes": 1438,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/root_context_scheduler_22020/scheduler_22020.txt",
+      "sha256": "492e25253356d3712932b6eca92e4c58080854d24a089be7bde6b638c1ce484d"
+    },
+    {
+      "bytes": 155285,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/root_context_session_recipe_20260919.json",
+      "sha256": "a0a2fdbb98fe75b057b2acfb3d9eb94ac1bb6acab903c5a5f71a30ce32a4b627"
+    }
+  ],
+  "job_id": 22020,
+  "limitations": [
+    "One-second scheduler timestamp resolution; local/controller wall clocks assumed consistent.",
+    "Submission receipt and job lifetime only; workload, runtime, manager lifecycle and context replay are separate."
+  ],
+  "printed_job_ended_unix_ns": 1789859000000000000,
+  "printed_job_started_unix_ns": 1789858734000000000,
+  "scheduler_timezone": "America/New_York",
+  "scientific_timings_admitted": false,
+  "source": {
+    "bytes": 4686,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_root_context_session_submission.py",
+    "sha256": "d4979b2a73238a5cf5cdece54946215f90355f1308c950999a563fc083f2703d"
+  },
+  "status": "bounded_session_submission_verified",
+  "wait_finished_unix_ns": 1789859000616962669,
+  "wait_started_unix_ns": 1789858734034796248
+}

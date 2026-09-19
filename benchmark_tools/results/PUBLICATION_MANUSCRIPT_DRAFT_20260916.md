@@ -1524,6 +1524,15 @@ the failed condition and eight unrun conditions are retained. This incomplete
 panel does not establish sensitivity to the intended user-service load or
 scientific timing eligibility. [Failure and raw replay](ROOT_CONTEXT_RESULT_22019.md).
 
+The separately identified held-session follow-up validated all 12 controls.
+All three user-contended trials exceeded the fixed five-CPU-second aggregate
+response criterion, with 57/57 common-work intervals flagged versus 0/171
+idle/native-only intervals. An unrelated restarting user daemon remained
+present and is documented. This supports the tested monitor response under
+the recorded environment, not background-free timing, exact task attribution
+or context-collector overhead on native tools.
+[Complete follow-up and replay](ROOT_CONTEXT_RESULT_22020.md).
+
 ### SwissTrees Comparator Uncertainty
 
 For all eight retained historical comparison outputs, raw SwissTrees counts

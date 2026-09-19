@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Held-Session Panel 22020 Validated (2026-09-19)
+
+Implemented and froze a bounded waiting-session follow-up without enabling
+persistent user services. Source `4c57182` and recipe `bbddb09` were pushed
+before submission. Verified all 512 deployed files. After an empty queue
+check, the separately identified job 22020 completed `0:0` in 4:26.
+
+All 12 trials pass raw and whole-panel replay, including fresh-directory
+archive replay. The submission receipt brackets the scheduler lifetime.
+All three fixed positive responses pass: enclosing user CPU 18.918252,
+19.119470 and 19.038010 seconds. Common-work flags are 57/57 user-contended
+and 0/171 idle/native-only; all-interval flags are 60/63 and 0/189. Panel
+22019 remains incomplete and separately retained, with no replacement rows.
+
+Retained all raw/source data, scheduler/submission receipts, full audit,
+descriptions and journal evidence. The journal shows no manager shutdown
+during the job, but records an unrelated daemon repeatedly failing/restarting.
+No unrelated services were stopped. This is bounded response evidence, not
+a background-free host, native overhead or scientific timing admission.
+The manuscript and claims now reflect the result and its limits; see
+`ROOT_CONTEXT_RESULT_22020.md` for hashes and reproduction.
+
+Tests: 488 focused before deployment; broader unit suite 7,688 passed and
+nine skipped; 49 targeted tests after adding real-result regression fixtures.
+BLAST 21713 remains RUNNING at 10:58:38 on bizon. The corrected-QfO chains,
+native-tool context/overhead validation, scientific resource eligibility and
+remaining publication requirements are still open. The full goal is active.
+
 ## Root Context 22019 Failure Audited And Retained (2026-09-19)
 
 Job 22019 terminated FAILED `1:0` after 1:45. Retrieved all 805 files only

@@ -75,3 +75,16 @@ def test_pinned_report_and_retained_description():
     assert result == retained
     with pytest.raises(ValueError, match="pinned"):
         module.report(AUDIT, "0"*64)
+
+
+def test_complete_session_panel_preserves_all_conditions_and_responses():
+    path = RESULTS / "root_context_audit_22020_20260919.json.gz"
+    result = module.report(path, "9b850ca512ac8988f8cdd8b246bace521cc611d842b1e1da7a52598e2726c1db")
+    assert len(result["trials"]) == 12 and all(row["status"] == "validated" for row in result["trials"])
+    native = [row for row in result["trials"] if row["mode"] != "user-contended"]
+    user = [row for row in result["trials"] if row["mode"] == "user-contended"]
+    assert sum(row["common"]["intervals"] for row in native) == 171
+    assert sum(row["common"]["narrow_flags"] for row in native) == 0
+    assert sum(row["common"]["intervals"] for row in user) == 57
+    assert sum(row["common"]["narrow_flags"] for row in user) == 57
+    assert all(row["positive_control_response"] is True for row in user)

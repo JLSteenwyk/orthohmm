@@ -77,6 +77,14 @@ its first three native-only trials. Its first user-service condition failed
 after the login user manager shut down; eight remaining conditions were
 unrun. No intended-load sensitivity or timing-validity claim follows.
 
+The separately retained [held-session follow-up 22020](ROOT_CONTEXT_RESULT_22020.md)
+validates all 12 controls and the three prespecified aggregate user-load
+responses. Common-work flags are 57/57 in user-contended and 0/171 in
+idle/native-only conditions. A restarting unrelated daemon and the waiting
+session remain documented parts of the environment. This supports only the
+tested monitor response, not prior-flag attribution, zero observer overhead,
+general isolation or scientific comparative timing admission.
+
 The completed [full-node controls](FULL_NODE_CONTROL_RESULT_21918_20260919.md)
 validate all nine injected workloads: zero narrow flags in 126 native-only
 intervals and detection in 63/63 contended intervals. This supports bounded
