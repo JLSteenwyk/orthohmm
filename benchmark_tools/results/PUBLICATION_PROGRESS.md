@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Full-Node Control Workload Validated Locally (2026-09-19)
+
+The preceding retrieval-only response made no new progress: it rechecked
+existing TreeFam downloads and reported the still-missing originals. This
+turn resumed available timing-method work rather than repeating that search.
+Controller state confirms corrected full OrthoFinder21706_1 RUNNING at
+10:07:01; OrthoMCL21713 is resource-pending and strata21896 dependency-pending.
+
+Prepared `FULL_NODE_CPU_CONTROL_PROTOCOL_20260919.md` before any outcomes:
+nine sequential full-node steady/churn/contended controls, unchanged CPU
+screens, bounded work, explicit common-work and competitor-dose checks.
+Added `full_node_control_workload.py` with pinned worker affinities, shared
+start signal, separate self/waited-child CPU witnesses, creation cap, parent
+liveness checks, and owned-child cleanup. Twenty-one focused tests pass
+(`pytest -q tests/unit/test_full_node_control_workload.py`, 0.44 seconds),
+including real short steady/churn runs, capped failure, invalid start,
+partial fork failure and readiness failure with reaping verification.
+
+These tests are local workload validation, not DGX measurements. No control
+job was submitted. Next: integrate the unchanged dual collector, implement
+independent witness validation, pin the recipe/runtime and verify allocation
+before executing the prospective panel. Scientific scaling and publication
+readiness remain unproven; no thresholds or historical outcomes changed.
+
 ## Remaining CPU Flags Localized Descriptively (2026-09-19)
 
 Previous turn completed and retained the three-run audit (`51c7111`). Added
