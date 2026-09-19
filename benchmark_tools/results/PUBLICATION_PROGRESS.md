@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Failure Evidence Retained And First R-On Accuracy Admitted (2026-09-18 UTC)
+
+Previous turn made progress through 9e89534 with automated scheduler capture
+and a real local smoke. Reread the full objective and verified live corrected
+jobs. Added partial snapshot evidence to frontier failures without suppressing
+errors or changing counter acceptance. Both collectors save failed_point.json
+before raising, and retain their worker cleanup behavior. Historical source
+fixtures preserve original recipe hashes. Final full unit suite: 5,711 pass,
+9 skip, 122.89 seconds. Committed and pushed source milestone bf4e102.
+[Implementation, initial failures and final test receipt](FRONTIER_FAILURE_EVIDENCE_20260918.md).
+
+Corrected scoring21775 then completed 0:0 in 30:12; admission21776 completed
+0:0 in 12 seconds. Retained the unchanged admitted p0_c0_r1 receipt and
+generated a version-2 factorial table with five admitted cells and three
+missing. SwissTrees F1 rises from 0.689184 to 0.789574 versus p0_c0_r0;
+VGNC rises while TreeFam-A F1 slightly falls. All three reference endpoints
+show higher precision and lower recall. [Scores and scope](QFO_CORRECTED_FIRST_RECONCILIATION_SCORES_20260918.md).
+No factorial interval, interaction or full-method superiority is established
+by this partial table. Full corrected factorial, controlled resource evidence,
+remaining source/rights gaps and publication packaging remain unfinished.
+
 ## Scheduler Capture Automated And Smoke-Tested (2026-09-18 UTC)
 
 Previous turn made progress through 013a239 with the completed, incomplete-

@@ -83,7 +83,9 @@ now implemented with simulated-expiry tests and a live local smoke:
 [validation and usage](SCHEDULER_CAPTURE_VALIDATION_20260918.md). It does not
 recover the missing records in this panel. Diagnose observation of transient
 service cgroups without deleting their activity or weakening the current
-panel's checks. Validate any revised measurement design separately and freeze
+panel's checks. [Future failed-snapshot evidence retention](FRONTIER_FAILURE_EVIDENCE_20260918.md)
+is now tested but does not recover the missing task-6 inventories or solve
+transient-service accounting. Validate any revised measurement design separately and freeze
 its inclusion rules before a new complete experiment. Do not selectively
 rerun failed arms until the present panel appears to pass. Preserve this
 negative result alongside any future panel.
