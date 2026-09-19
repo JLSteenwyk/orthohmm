@@ -1,5 +1,32 @@
 # Publication Test Refresh
 
+## Current-Source Refresh At c7bce33
+
+Tested `c7bce33c5fedf1af22ece559b15a544119239beb` after the search-routing
+fix, retained-hit witness audit and search-coverage exports. The full unit
+suite passed **5,586 tests**, with **9 skips**, in 123.10 seconds. The native
+module CLI integration passed **1 test** in 6.89 seconds. No tracked changes
+were present in the source, benchmark tools, unit/integration tests or
+`setup.py` before or after execution. Existing sample-output changes were
+left untouched. These runs used the local shared host, not the DGX.
+
+```sh
+python -m pytest -q tests/unit --junitxml=benchmarks/work/publication_unit_c7bce33_20260918.xml
+python -m pytest -q tests/integration/test_module_cli.py --junitxml=benchmarks/work/publication_module_cli_c7bce33_20260918.xml
+```
+
+Raw JUnit SHA-256 values:
+
+- Unit: `8ab7b81cfb41a8a62d1507b441b4c56569d52cedbbe5220b24ebe889eba27715`
+- CLI: `786ffd8272cb2d21ee1eb18f24439cdd9aa57942509fb664287b99feaedb0e6e`
+
+The opt-in legacy checks below were not rerun at this revision. This refresh
+does not establish biological accuracy, GPU execution on physical hardware,
+cross-platform portability or matched-resource performance. The frozen
+scientific executors and running analyses were not modified.
+
+## Earlier Refresh At e13963e
+
 Tested repository revision `e13963e` after the CLI-isolation, wheel-tagging,
 native-build isolation, dependency-diagnostic and failed-output cleanup
 changes. No source changes were made during the test run. Unrelated existing

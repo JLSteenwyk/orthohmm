@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Current-Source Suite Refresh (2026-09-18 UTC)
+
+Previous turn did not recover original TreeFam source inputs; repeated
+searches and checksum confirmation did not change the next retrieval action.
+Classified as no progress toward that unresolved source requirement. Reread
+the full objective and took the available local validation action while
+specific scheduler handles confirmed the scientific jobs remain live.
+
+At c7bce33 the full unit suite passed 5,586 tests with 9 skips in 123.10s;
+native CLI integration passed 1 test in 6.89s. Raw JUnit hashes and commands
+are in [the validation record](PUBLICATION_TEST_REFRESH_20260918.md).
+No scientific executor or result changed, and unrelated edits were preserved.
+
+Replay 21756 now has checked, exit-zero receipts for initial, multipass and
+profile-base clustering. Final validation remains pending. Latest scheduler
+poll: replay running 50:02, OrthoFinder 21706_1 running 51:33, DGX 21838_9
+running 8:12. Downstream replay admissions remain dependency-queued.
+Saved newly completed task 21838_8 accounting locally to
+`benchmarks/work/dgx_frontier_overhead_21838/scheduler_8.txt`, SHA-256
+`3e09f48ac7eab8bcb2a5c9507e079c35b2b4a4d3d58f2371b0dc0aae171e766d`.
+No DGX SSH or remote collection during the timing panel, no selective retry
+and no change to timing gates. Main accuracy, uncertainty, source retrieval
+and controlled-resource requirements remain incomplete.
+
 ## OrthoBench Routing Impact Bounded By Retained Hits (2026-09-18 UTC)
 
 Previous turn made progress through9f75941 by fixing and testing the
