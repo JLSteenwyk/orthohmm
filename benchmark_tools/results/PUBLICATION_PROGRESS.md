@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Integrated Source Validation and Claim Refresh (2026-09-19)
+
+The preceding source-search reply did not recover the missing original
+TreeFam files and made no new scientific progress. Reread the full objective
+and revalidated active jobs through the local controller:21779scoring,
+21760_2reconciliation,21706_1OrthoFinder,21889DGXoverhead and21890recorder
+are live;21713OrthoMCL remains resource-pending. The DGX quiet window is
+respected, with no remote log/file access or partial outcome inspection.
+
+At c3a89a1 the complete unit suite passes5842tests with9opt-in skips; native
+CLI integration passes1test. The9legacy-runtime cases were subsequently
+enabled explicitly and all passed in a separate run. Raw JUnit hashes and precise scope are retained
+in the [test refresh](PUBLICATION_TEST_REFRESH_20260918.md). No executable
+code, frozen scientific settings or historical scores changed. Updated the
+claim checklist's stale corrected-QfO stage descriptions and pressure-panel
+status, including the non-fixed-tree limitation of candidate expansion.
+All145local links (122distinct targets) in that checklist resolve.
+
+Corrected eight-method/factorial completion, uncertainty, controlled resource
+evidence and final publication packaging remain incomplete. Tests alone do
+not establish these scientific requirements or publication readiness.
+
 ## Second Corrected Reconciliation and Tree Diagnostic (2026-09-19)
 
 Previous turn made progress through8ad9254 with corrected DGX deployment.

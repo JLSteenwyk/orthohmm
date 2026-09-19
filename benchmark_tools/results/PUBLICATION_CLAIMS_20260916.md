@@ -1,6 +1,6 @@
 # Publication Claim-To-Evidence Checklist
 
-Status updated 18 September 2026. This is a completion audit, not a replacement
+Status updated 19 September 2026. This is a completion audit, not a replacement
 for the original publication goal. A linked plan or passing unit test is not
 evidence that an experiment completed or a biological hypothesis is true.
 
@@ -61,6 +61,16 @@ evidence that an experiment completed or a biological hypothesis is true.
 | 7. Publication package | Eighteen bundled figure panels including descriptive DGX resources and corrected search controls; [method diagram](figures_publication_method_20260916/publication_method.pdf); evolving [manuscript](PUBLICATION_MANUSCRIPT_DRAFT_20260916.md); [refreshed and relocated direct-evidence bundle](PUBLICATION_FIGURE_BUNDLE_20260918.md); bounded statistical reproduction; [current-source unit and CLI checks](PUBLICATION_TEST_REFRESH_20260918.md) | Completed corrected-QfO results and manuscript integration, verified bibliography, portable executable workflows/dependencies, transitive raw-data provenance and rights clearance, versioned release and external archive. The local figure bundle and statistical exports are not full scientific reproduction |
 
 ## Current Execution Status
+
+- The [replacement pressure-overhead panel21889](DGX_PRESSURE_OVERHEAD_SUBMISSION_21889.md)
+  is running on the dedicated DGX with durable controller recorder21890.
+  This is an engineering overhead experiment, not the27-run scientific
+  scaling panel. No partial native outcomes are inspected, and no overhead
+  budget or comparative timing claim is admitted before the complete-panel
+  audit. The [failed21869deployment](DGX_PRESSURE_OVERHEAD_FAILURE_21869.md)
+  remains retained: all18tasks failed before inference under the wrong
+  interpreter. The replacement uses the pinned environment interpreter and
+  fresh outputs; it does not erase failures or upgrade historical timing.
 
 - [Retained host pressure audit](DGX_PRESSURE_DIAGNOSTIC_21838.md) summarizes
   all 18 overhead tasks without changing their admission. Seventeen observed
@@ -129,7 +139,7 @@ evidence that an experiment completed or a biological hypothesis is true.
   test of the historical mismatch or genome-wide orthology accuracy.
 
 - Corrected Proteinortho has independently admitted six-endpoint scores and
-  4,695,385 mapped native pairs in the [partial corrected table](qfo_corrected_comparison_20260918_v2/scores.md).
+  4,695,385 mapped native pairs in the [partial corrected table](qfo_corrected_comparison_20260918_v3/scores.md).
   Corrected Sonic inference21710 and conversion21726 completed successfully;
   15,248,739 distinct pairs survived reference mapping. Assessment21727 and
   independent admission21728 completed successfully; a fresh frozen admission
@@ -137,13 +147,24 @@ evidence that an experiment completed or a biological hypothesis is true.
   but paired uncertainty and the remaining methods are not. Corrected HMM21706_0,
   native admission21720 and replay preparation21722 completed successfully.
   The [native result](QFO_CORRECTED_HMM_NATIVE_RESULT_20260918.md) covers984137genes
-  in391908groups; accuracy is not yet admitted. The
+  in391908groups; its high-sensitivity point estimates are now admitted in
+  the partial corrected table. The
   hit-coverage analysis21793 has completed. Checked replay21756 and its
   independent admission21757 completed successfully; all391908final groups
   match the corrected native result. [Replay evidence](QFO_CORRECTED_REPLAY_ADMITTED_20260918.md).
-  Candidate preparation21758 is running, as is OrthoFinder21706_1.
-  Candidate admission, reconciliation, conversion, scoring and assessment
-  remain unfinished. [Progress ledger](PUBLICATION_PROGRESS.md).
+  Candidate preparation21758 and admission21759 are complete. The
+  [five-cell score export](qfo_corrected_factorial_scores_20260918_v2/scores.md)
+  admits all four R-off cells and p0_c0_r1, not the full eight-cell factorial.
+  Expanded p0_c1_r1 reconciliation21760_1, independent native admission21762
+  and conversion21768 are also complete, with5,977,100native pairs and zero
+  mapping losses; scoring21779 is running and admission21780 is pending.
+  The [exploratory tree diagnostic](QFO_CORRECTED_EXPANDED_RECONCILIATION_20260919.md)
+  finds38shared nontrivial rooted clades out of76in each78-species tree.
+  Candidate expansion changes downstream tree estimation, so this is an
+  end-to-end contrast, not a fixed-tree causal isolation or evidence that
+  either inferred tree is correct. OrthoFinder21706_1 and the remaining
+  corrected reconciliation/scoring chains remain unfinished.
+  [Progress ledger](PUBLICATION_PROGRESS.md).
 - The [recovered QfO factorial protocol](QFO_FACTORIAL_PROTOCOL_20260917.md)
   freezes eight P/C/R cells and 42 SwissTrees comparison endpoints without
   retuning. Original-release preparation, all four reconciliations, native

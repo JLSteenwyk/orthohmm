@@ -1,5 +1,45 @@
 # Publication Test Refresh
 
+## Current-Source Refresh At c3a89a1
+
+Tested `c3a89a15562f15d07bfeb1c9506b703f11093be0` on 19 September 2026.
+The full unit suite passed **5,842 tests**, with **9 skips**, in122.01seconds;
+the native module CLI integration passed **1 test** in6.89seconds. Both raw
+JUnit reports contain zero failures and errors. The only tracked change in
+source/tool/test/build paths during execution was the claim-checklist prose;
+no executable code changed. Unrelated sample outputs remain untouched.
+
+```sh
+/home/bizon/anaconda3/bin/python -m pytest tests/unit -q \
+  --junitxml=benchmarks/work/publication_unit_c3a89a1_20260919.xml
+env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  /home/bizon/anaconda3/bin/python -m pytest -q tests/integration/test_module_cli.py \
+  --junitxml=benchmarks/work/publication_module_cli_c3a89a1_20260919.xml
+```
+
+Raw JUnit SHA-256 values:
+
+- Unit: `14db6434e6bf86d60dbf0b0b6b7eefbfcea1810829c8e816f7b808a5f46bb54d`
+- CLI: `ac60d1ec6ea60f9bf23569e57f7f2fd82a653e4e6bc25eb3739b1a2ccf98c3b7`
+
+The nine skipped legacy-runtime cases were then explicitly executed and all
+**9 passed in20.42seconds**. This separate run preserves the original unit
+report's skips rather than rewriting its outcome. It used exactly the seven
+test selectors in the earlier opt-in command below, with
+`ORTHOHMM_LEGACY_BLAST_SMOKE=1`, `OPENBLAS_NUM_THREADS=1`,
+`OMP_NUM_THREADS=1`, `MKL_NUM_THREADS=1`, the absolute interpreter above,
+and output `benchmarks/work/publication_legacy_optin_c3a89a1_20260919.xml`.
+SHA-256: `b208c5a1526422a32764fb302d5a167f1efb2705efd0f9f8dfe9f2a88559f9bd`.
+These execute installed BLAST/database/BPO/Perl/OrthoMCL fixture checks,
+not the pending corrected full-data OrthoMCL analysis.
+
+This refresh includes the new native-pressure collector, frozen overhead
+launcher and exploratory inferred-tree comparison tests. It is local shared
+host validation, not a controlled timing measurement or proof of biological
+accuracy, DGX outcome validity, hardware portability or publication readiness.
+The dedicated DGX quiet window remains intact; scientific executors and
+their frozen inputs/settings have not changed.
+
 ## Current-Source Refresh At a41256b
 
 Tested `a41256ba6ab6942b69738b51d1b0ef4fd62d2e04` after the completed
