@@ -1,0 +1,7 @@
+{
+  "job_id": 21992,
+  "observed_unix_ns": 1789838596480749572,
+  "returncode": 0,
+  "stderr": "",
+  "stdout": "JobId=21992 JobName=lineage_native UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=FAILED Reason=NonZeroExitCode Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=1:0 RunTime=00:00:00 TimeLimit=01:00:00 TimeMin=N/A SubmitTime=2026-09-19T13:22:40 EligibleTime=2026-09-19T13:22:58 AccrueTime=2026-09-19T13:22:58 StartTime=2026-09-19T13:22:58 EndTime=2026-09-19T13:22:58 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-19T13:22:58 Scheduler=Main Partition=spark AllocNode:Sid=bizon-link:619005 ReqNodeList=spark-7ff0 ExcNodeList=(null) NodeList=spark-7ff0 BatchHost=spark-7ff0 NumNodes=1 NumCPUs=20 NumTasks=1 CPUs/Task=20 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=20,mem=96G,node=1,billing=20 AllocTRES=cpu=20,mem=96G,node=1,billing=20 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=20 MinMemoryNode=96G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_dgx_lineage_native.sh WorkDir=/home/jlsteenwyk/projects/orthohmm-publication StdErr=/home/jlsteenwyk/projects/orthohmm-publication/lineage_native_21992.log StdIn=/dev/null StdOut=/home/jlsteenwyk/projects/orthohmm-publication/lineage_native_21992.log TresPerTask=cpu=20 \n"
+}

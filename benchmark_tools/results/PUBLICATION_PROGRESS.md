@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Native Lineage Panel Launched (2026-09-19)
+
+Previous turn made progress at 6166b83 with the integrated collector and
+replay. This turn froze the three-method native diagnostic plan at d1462ce,
+passed 74 tests, deployed and verified all 491 source/plan files against Git,
+and launched the complete sequential DGX panel with unchanged native methods.
+
+Initial tasks 21990-21992 failed the loader guard before native work because
+the submission environment included CUDA LD_LIBRARY_PATH. Preserved all
+three logs and terminal records; no output root had been created. Recorder
+21993 failed a package import, then corrected recorder 21994 captured the
+terminal states. Resubmitted all three methods with explicit clean loader
+environment, retaining the same recipe and still-unused output paths.
+
+Corrected high-sensitivity job 21995 is confirmed RUNNING; satellite_v2
+21996 and full OrthoFinder 21997 are dependency-pending. Recorder 21998 is
+confirmed RUNNING on bizon with successful observations before release.
+No SSH/native-output inspection will occur while any diagnostic is active.
+See `LINEAGE_NATIVE_SUBMISSION_21995.md` for hashes, failure details, exact
+jobs and collection gates. Runtime/output validation and measurement replay
+remain pending, as do full overhead, environmental and scientific timing
+admission requirements. The publication goal remains incomplete.
+
 ## Native Lineage Integration And Replay (2026-09-19)
 
 Previous turn was progress: DGX lifecycle controls and raw replay were retained

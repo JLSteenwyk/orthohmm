@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/jlsteenwyk/projects/orthohmm-publication/lineage_native_recipe_v1/benchmark_tools/run_lineage_native_diagnostic.py", line 120, in <module>
+    result = launch(args.plan.resolve(), args.plan_sha, args.recipe.resolve(), args.recipe_sha, args.index)
+  File "/home/jlsteenwyk/projects/orthohmm-publication/lineage_native_recipe_v1/benchmark_tools/run_lineage_native_diagnostic.py", line 76, in launch
+    raise ValueError("Unexpected loader overrides")
+ValueError: Unexpected loader overrides

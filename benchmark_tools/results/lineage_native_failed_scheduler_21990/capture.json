@@ -1,0 +1,30 @@
+{
+  "jobs": [
+    21990,
+    21991,
+    21992
+  ],
+  "missing": [],
+  "observation_errors": 0,
+  "polls": 1,
+  "retained": {
+    "21990": {
+      "path": "scheduler_21990.txt",
+      "sha256": "67598d7dd7ca0ad760e7172a57935d2e26c8daf048e62fced67e1206f95dffe2"
+    },
+    "21991": {
+      "path": "scheduler_21991.txt",
+      "sha256": "b78d5c33cdd2139d6ba64fbcd219e45432d6405b81aeaee0bff0fef43f694ebb"
+    },
+    "21992": {
+      "path": "scheduler_21992.txt",
+      "sha256": "da0cdb8918400cc4c2eb8eb4b2151a55f1c13ecf4e1269d469a7dd314efa96cc"
+    }
+  },
+  "scientific_timings_admitted": false,
+  "sources": {
+    "capture_array_scheduler.py": "c692cb0fc28084558fb4e4f2d21282a94a6a93ceb32255660bbb3e8d8d279c64",
+    "capture_job_scheduler.py": "acf957ad45198b94a1a528551caefa34d55b1a34ffd722a4f689a9fab280dbd1"
+  },
+  "status": "complete"
+}
