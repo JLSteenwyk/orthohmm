@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Four-Method Corrected QfO Table (2026-09-19)
+
+Previous turn made progress with the committed DGX CPU-flag diagnostics.
+Corrected full OrthoFinder 21706_1 remains RUNNING (8:25:41); OrthoMCL
+21713 is resource-pending and strata 21896 dependency-pending.
+
+Used the unchanged exporter to add independently admitted p1_c1_r1 to the
+[versioned main table](qfo_corrected_comparison_20260919_v4/scores.md).
+Four methods are admitted, four remain explicitly missing. All three old
+rows compare exactly equal, all provenance/output hashes recheck, and
+70 exporter tests pass. Updated the manuscript and claim checklist with
+the new point estimates, pair volume and precision-recall trade-offs.
+No comparator paired superiority, complete ranking or publication readiness
+is established. Earlier table versions and scientific settings are intact.
+
 ## DGX CPU Flags Described (2026-09-19)
 
 Previous turn made progress by recording additional TreeFam retrieval

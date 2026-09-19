@@ -1,0 +1,9 @@
+Method	Status	GO similarity	EC similarity	VGNC F1	SwissTrees F1	TreeFam-A F1	FAS	Secondary mean	Submitted pairs	Retained pairs	Mapping losses	Prediction semantics
+OrthoHMM high sensitivity	admitted	0.4722711	0.93203769	0.6659331499541553	0.6854977808857662	0.6050078839081693	0.7765850417998846	0.6895554410913292	9032719	9032719	0	cross-species group-derived clique pairs
+OrthoHMM phylogeny satellite_v2	admitted	0.49034928	0.9656505	0.9016900956268489	0.8335132205147882	0.614863704412014	0.7629933121004577	0.7615100187756848	5959560	5959560	0	native phylogenetically inferred pairs
+OrthoFinder 3.1.5 full	not_admitted											phylogenetically inferred pairs
+OrthoFinder 3.1.5 sequence-only checkpoint	not_admitted											MCL checkpoint group-derived pairs
+SonicParanoid 2.0.9	admitted	0.45438453	0.87276097	0.9827943352356794	0.798459422080563	0.7719558753542073	0.736680187140205	0.7695058866351091	15248739	15248739	0	native species-pair relations
+ProteinOrtho 6.3.6	admitted	0.4863364	0.96316811	0.9548962442119706	0.7181110000474794	0.6431874339159368	0.8135948641193668	0.7632156753824589	4695385	4695385	0	native post-clustering graph
+FastOMA 0.3.5 final orthologous groups	not_admitted											native pairs; supplied OrthoFinder species tree
+OrthoMCL 1.4	not_admitted											final MCL group-derived pairs
