@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Longer-Window Accounting And Overhead Protocol (2026-09-19)
+
+Previous turn completed control descriptions (`1ae4cd7`). Recomputed native
+and control counter differences at fixed5/10/30-sample endpoint grids, keeping
+tails and original flags. Satellite narrow flags become1/164,0/82,0/28;
+OrthoFinder and high sensitivity have none at these longer scales. All known
+competitors remain flagged at every tested scale. Native whole-observation
+residuals are0.068205,0.100014 and0.059319cores. This is evidence of scale
+sensitivity, not identification of accounting noise or absence of brief work.
+Details/hashes: `CPU_WINDOW_SCALES_20260919.md`.
+
+Froze the fresh18-task dual-periodic versus pressure-boundary overhead
+protocol and derived its plan from the prior frozen native panel. No native
+command/input/order or prior5% median/10% pair budget changed. Eighteen
+focused tests pass, including real-plan derivation and endpoint-grid tests.
+Next is pinned launcher/deployment and complete-panel execution. Numerical
+overhead, output equivalence and environmental uncertainty stay separate;
+no scientific inclusion policy or timing admission is adopted here.
+Corrected full OrthoFinder21706_1 remains RUNNING at10:37:55; OrthoMCL21713
+and strata21896 remain pending.
+
 ## Full-Node Control Description Complete (2026-09-19)
 
 Previous turn made progress through actual nine-trial replay (`12256b9`).
