@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Lifecycle Evidence Integrated Into Manuscript (2026-09-19)
+
+Previous turn completed and independently replayed control 22018, pushed
+as `b71900d`. This turn integrated its bounded result and the complete
+5,929-interval description into the manuscript and claim checklist, replacing
+the stale statement that the specific during-read lifecycle check was still
+unresolved. The text distinguishes this completed test from general churn
+robustness, root/user-slice specificity and scientific timing eligibility.
+No native residual is causally attributed and no historical flag is removed.
+
+Next: prospective root/user-slice accounting controls and scientific timing
+inclusion, plus completion of queued corrected-QfO analyses. BLAST 21713
+remains active; FastOMA and robustness work remain queued. The full
+publication goal is incomplete.
+
 ## Read-Crossing Control Completed And Replayed (2026-09-19)
 
 Deployed ten byte-verified committed files from `6599c6e` to a fresh DGX

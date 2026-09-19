@@ -62,6 +62,16 @@ overhead-budget passage or controlled comparative timing. The complete
 budgets pass, but 143 original and 23 narrow interval flags remain. Boundary
 interval coverage is unavailable. No historical timing is upgraded.
 
+The [complete interval description](LINEAGE_OVERHEAD_FLAGS_21999.md)
+retains all 5,929 periodic intervals and all 23 narrow flags. Positive
+root-minus-system.slice differences in flagged intervals do not identify
+outside processes or establish causal interference. The
+[read-crossing control](LINEAGE_READ_CROSSING_RESULT_22018.md) passed all
+three prespecified finite-service trials with independent raw replay.
+This establishes the tested lifecycle/read-window behavior only; it does
+not explain native flags or establish root/user-slice specificity, general
+churn robustness, non-CPU isolation or scientific timing eligibility.
+
 The completed [full-node controls](FULL_NODE_CONTROL_RESULT_21918_20260919.md)
 validate all nine injected workloads: zero narrow flags in 126 native-only
 intervals and detection in 63/63 contended intervals. This supports bounded
@@ -87,6 +97,11 @@ not establish any comparative resource advantage.
 | 7. Publication package | Eighteen bundled figure panels including descriptive DGX resources and corrected search controls; [corrected factorial supplement](PUBLICATION_CORRECTED_FIGURE_BUNDLE_20260919.md); [method diagram](figures_publication_method_20260916/publication_method.pdf); evolving [manuscript](PUBLICATION_MANUSCRIPT_DRAFT_20260916.md); [refreshed and relocated direct-evidence bundle](PUBLICATION_FIGURE_BUNDLE_20260918.md); bounded statistical reproduction including the corrected factorial; [current-source unit and CLI checks](PUBLICATION_TEST_REFRESH_20260918.md) | Complete corrected-QfO comparator results and manuscript integration, verified bibliography, portable executable workflows/dependencies, transitive raw-data provenance and rights clearance, versioned release and external archive. Local figure bundles and statistical exports are not full scientific reproduction |
 
 ## Current Execution Status
+
+- [Read-crossing control 22018](LINEAGE_READ_CROSSING_RESULT_22018.md)
+  completed with all three trials and their replay passing. All signed
+  partial-span values remain, including negative values. No native timing
+  or historical flag was changed.
 
 - [Lineage overhead array 21999](LINEAGE_OVERHEAD_RESULT_21999.md) and
   recorder 22000 completed. Independent replay checked 2,413 polls with zero

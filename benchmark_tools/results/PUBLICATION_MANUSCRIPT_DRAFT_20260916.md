@@ -1495,12 +1495,26 @@ checks passing. Median signed periodic-versus-boundary wall changes were
 full OrthoFinder, respectively. All numerical overhead budgets passed.
 Negative values reflect variability, not acceleration by monitoring.
 The panel retained 143 original and 23 narrow interval flags; boundary-only
-observations explicitly lack interval coverage. Remaining CPU discrepancies,
-during-read lifecycle behavior and prospective scientific timing inclusion
-remain unresolved. No timing correction or scientific speed ranking follows.
+observations explicitly lack interval coverage. Remaining CPU discrepancies
+and prospective scientific timing inclusion remain unresolved. No timing
+correction or scientific speed ranking follows.
 [Completed audit](LINEAGE_OVERHEAD_RESULT_21999.md).
 [Protocol](LINEAGE_COLLECTOR_OVERHEAD_PROTOCOL_20260919.md),
 [deployment and submission](LINEAGE_OVERHEAD_SUBMISSION_21999.md).
+
+Exploratory inspection retained all 5,929 periodic intervals, including the
+23 narrow flags. Flagged root-minus-system.slice CPU differences were
+positive, but non-atomic counters did not identify their cause.
+[Complete interval description](LINEAGE_OVERHEAD_FLAGS_21999.md).
+In a separate prespecified engineering control, three finite owned services
+each consumed approximately 0.75 process-CPU seconds and disappeared between
+the lineage reader's root and next ancestor reads. All three controls and
+their raw evidence replay passed. Full-span signed root-minus-observer
+responses were 0.809154, 0.814570 and 0.811985 CPU seconds; the first partial
+spans were negative and retained. This demonstrates bounded lifecycle
+handling and read-window skew, not the cause of native flags, attribution
+specificity, arbitrary-churn robustness or controlled comparative timing.
+[Read-crossing control and replay](LINEAGE_READ_CROSSING_RESULT_22018.md).
 
 ### SwissTrees Comparator Uncertainty
 
