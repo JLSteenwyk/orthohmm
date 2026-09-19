@@ -70,6 +70,29 @@ These are observations from this search, not proof that no copy exists:
 
 ## Required Next Step
 
+### Additional September 19 Source Check
+
+Re-downloaded the QfO deposit metadata to
+`benchmarks/work/treefam_source_search_20260918/qfo_2020_2_zenodo_recheck_20260919.json`
+(10,303 bytes; SHA-256
+`6eee9d887cbb5508e703e21420cd26964b5bb4284ae3eec2b0efa9f3d7e8ce33`).
+Inspected all 25 file entries: the pooled TreeFam reference is present,
+but the original NHX collection and `treefam2reference.txt` are not listed.
+The general `mapping.json.gz` must not be treated as the missing
+TreeFam-specific reference-generation mapping.
+
+Fresh exact-filename and release-7 searches did not identify a download.
+The original [TreeFam publication](https://pmc.ncbi.nlm.nih.gov/articles/PMC1347480/)
+also identifies a historical Chinese mirror at `treefam.genomics.org.cn`.
+An HTTPS request to that host timed out at connection establishment after
+10 seconds; its contents could not be checked. This does not establish
+that the source archive is absent.
+
+Rehashed the retained pooled reference and supplementary-software ZIP;
+both still match the checksums above. No original tree or mapping was
+recovered, no substitute release was admitted, and no maintainer contact
+was sent. The specific maintainer request below remains the next step.
+
 ### September 19 Retrieval Check
 
 Fresh exact-name and release-7 searches did not recover the original mapping
