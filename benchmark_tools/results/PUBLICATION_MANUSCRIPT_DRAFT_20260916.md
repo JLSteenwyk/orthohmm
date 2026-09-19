@@ -902,10 +902,15 @@ F1=0.576306 and FAS0.715448. The project-defined secondary mean was0.645978.
 The independently admitted top100diagnostic retained11,285,357mapped pairs
 without loss and scored0.479791/0.874979/0.604172/0.629189/0.573917/0.716734
 on the same six endpoints, with secondary mean0.646464. The same-input corrected
-HMM control is now admitted (SwissTrees F1=0.689184); paired uncertainty is
-being assessed under the frozen protocol. No significant HMM benefit or
-significant difference follows from these point estimates; equal cutoffs do
-not establish matched sensitivity or effort.
+HMM control is now admitted (SwissTrees F1=0.689184). In the prespecified
+100,000-replicate paired family bootstrap with six-endpoint adjustment,
+all-hit minus HMM F1 was -0.061092 [-0.188023, 0.028017] and top100 minus
+HMM F1 was -0.059995 [-0.186513, 0.029034]. Both precision differences
+favored HMM (all-hit -0.082110 [-0.181914, -0.001387]; top100 -0.082123
+[-0.181927, -0.001404]); both recall intervals included zero. Thus these
+development-exposed controls support a bounded precision finding, not an
+established F1 improvement. Equal cutoffs do not establish matched sensitivity
+or effort. [Source-bound counts and uncertainty](QFO_SEQUENCE_UNCERTAINTY_RESULT_20260918.md).
 [Both admitted controls](qfo_sequence_scores_20260918_v2/scores.md);
 [top100provenance](QFO_SEQUENCE_TOP100_SCORE_20260918.md).
 
@@ -936,9 +941,10 @@ No universal superiority, arbitrary-dataset generalization, or controlled
 speedup is established. Frozen YGOB evaluation is complete and supports
 novel-taxon transfer, not family-disjoint confirmation. Homolog-family
 overlap remains substantial even after taxon exclusions. The proposed HMM
-contribution is not established by the completed exploratory OrthoBench
-sequence-search control; both QfO sequence arms are now admitted, but their same-input
-HMM comparison and paired uncertainty remain outstanding. The interaction
+contribution to F1 is not established by the completed exploratory OrthoBench
+or corrected QfO sequence-search controls. Corrected SwissTrees precision
+differences favor initial HMM under the prespecified adjustment, but F1 and
+recall intervals include zero; independent confirmation remains required. The interaction
 between broader candidates and reconciliation has completed OrthoBench and
 original-release QfO factorial evidence, with no adjusted F1 benefit or
 QfO C-by-R interaction established. Corrected-input QfO evaluation and

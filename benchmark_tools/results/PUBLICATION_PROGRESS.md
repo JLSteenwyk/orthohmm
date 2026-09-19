@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Corrected Sequence-Control Intervals Complete (2026-09-18 UTC)
+
+Following b3760f4, the frozen runner completed source-bound reconstruction
+and 100,000 shared SwissTrees family draws (seed 20260923). Both DIAMOND
+controls have negative adjusted precision differences versus initial HMM;
+both F1 and recall intervals include zero. No established F1 advantage,
+independent confirmation or matched-efficiency claim follows.
+[Full results and reproduction command](QFO_SEQUENCE_UNCERTAINTY_RESULT_20260918.md).
+
+All 80 focused tests pass. Separate raw-count scalar arithmetic reproduces
+the point estimates; a separate NumPy computation reproduces all 12 interval
+pairs within 1e-12. The manuscript and claim checklist now reflect this
+bounded result. DGX task14 completed 0:0 in 9:22 and its local scheduler record
+is retained; the full timing panel is not yet complete or audited. No remote
+DGX access, scientific retuning, endpoint changes or upstream reruns occurred.
+
 ## Corrected R-Off Assessments Admitted (2026-09-18 UTC)
 
 The previous TreeFam search turn produced no new original inputs. Reread

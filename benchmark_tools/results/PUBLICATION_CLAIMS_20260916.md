@@ -12,7 +12,7 @@ evidence that an experiment completed or a biological hypothesis is true.
 | Satellite_v2 trades higher precision for lower recall on OrthoBench | [Paired analysis](ORTHOBENCH_UNCERTAINTY_20260916.md) | Supported within this benchmark; not selection-adjusted generalization |
 | OrthoHMM outperforms full OrthoFinder overall | [Eight-method comparison](PUBLICATION_COMPARISON_ORTHOMCL_COMPLETE_20260916.md) | Not supported; endpoints and benchmark rankings differ |
 | HMM expansion contributes in historical OrthoBench processing | [Historical component audit](HISTORICAL_PROFILE_ABLATION_20260916.md) | Descriptive +0.595610 F1 points; current factorial intervals include zero |
-| Initial HMM search improves F1 over sequence-search replacement | [Completed sequence controls](OB_SEQUENCE_SEARCH_RESULTS_20260916.md) | Not established: observed HMM F1 higher, both adjusted difference intervals include zero; hit sensitivity/calibration unmatched |
+| Initial HMM search improves F1 over sequence-search replacement | [OrthoBench controls](OB_SEQUENCE_SEARCH_RESULTS_20260916.md), [corrected QfO controls](QFO_SEQUENCE_UNCERTAINTY_RESULT_20260918.md) | Not established: adjusted F1 intervals include zero on both benchmarks. Corrected SwissTrees precision differences favor HMM; recall intervals include zero. Development-exposed evidence with unmatched search sensitivity/calibration/cost |
 | Broad candidates improve reconciliation | [OrthoBench factorial](ORTHOBENCH_FACTORIAL_INTERPRETATION_20260916.md), [original-release QfO factorial](QFO_FACTORIAL_SWISS_RESULTS_20260918.md) | No adjusted candidate-expansion F1 benefit established; original-QfO C-by-R interaction intervals include zero. Corrected-release QfO and additional controls remain pending |
 | The frozen method was evaluated on novel taxa | [YGOB evaluation](YGOB_FROZEN_INTERPRETATION_20260916.md) | Complete bounded transfer evaluation; satellite F1 difference interval includes zero, precision higher and recall lower; not family-disjoint or superiority evidence |
 | Validation is family-disjoint | [Homology screen](ygob_homology_screen_20260916.json) | Not established; substantial detected overlap |
@@ -106,8 +106,11 @@ evidence that an experiment completed or a biological hypothesis is true.
   [Self-hit semantics](QFO_SEQUENCE_SELF_HIT_REVIEW_20260918.md) retain the
   frozen cap with no self exception. Conversion completion does not establish
   matched biological sensitivity or a method advantage. Both sequence arms
-  are independently admitted; the full matched HMM/sequence comparison and
-  paired uncertainty remain pending.
+  and the initial HMM control are independently admitted. The
+  [completed paired SwissTrees analysis](QFO_SEQUENCE_UNCERTAINTY_RESULT_20260918.md)
+  favors initial HMM precision under six-endpoint adjustment; both F1 and
+  recall intervals include zero. Other-endpoint uncertainty and independent
+  confirmation remain unresolved.
 - Three Kingdoms historical normalized-group pair counts independently
   reproduce for all eight methods. Historical Sonic native conversion matches
   all19853 groups/288562 proteins against its retained input copies. The raw
