@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Native Root-Context Task Provenance Verifier (2026-09-19)
+
+Added a separate verifier for the new single-job, three-step diagnostic,
+leaving the historical three-job verifier unchanged. It pins and re-derives
+the plan, validates the supplied recipe hash, rejects duplicate recipe
+records, binds the task receipt to actual verification-file bytes, and checks
+prepared commands/inputs, copied OrthoFinder inputs, before/after runtime
+records, wrapper identity and exact native worker launch. A successful task
+requires a completed exclusive 20CPU/96GiB one-hour allocation with the
+prescribed script and working directory. Failed/unrun tasks cannot pass this
+success verifier; the forthcoming panel audit must retain those outcomes.
+
+All 570 focused collector/control/lineage/native-workflow tests pass,
+including 37 new provenance tests. These checks do not establish raw collector
+replay, native-output equivalence, complete panel/session provenance or timing
+admissibility. No native root-context diagnostic has been submitted. Next:
+whole-panel raw/output audit and bounded one-hour waiting-session submission,
+then freeze and deploy the new recipe. The publication goal remains incomplete.
+
+BLAST 21713 was confirmed RUNNING at 11:28:11. FastOMA 21740, parameter
+array 21932 and CPM control 21956 remain pending; no allocations or existing
+scientific commands were changed. The preceding archive-search turn yielded
+no new original TreeFam inputs and is classified as no progress on that
+retrieval. The unresolved source request does not block the timing workflow.
+
 ## Native Root-Context Serial Executor Implemented (2026-09-19)
 
 Added the pinned three-step executor and exclusive one-hour DGX launch
