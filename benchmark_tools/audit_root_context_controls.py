@@ -19,9 +19,14 @@ from benchmark_tools.verify_dual_native_provenance import same
 ROOT = Path("/home/jlsteenwyk/projects/orthohmm-publication")
 RECIPE = "root_context_controls_recipe_v1"
 OUTPUT = "root_context_controls_v1"
+DEPLOYMENTS = {
+    "v1": (RECIPE, OUTPUT, "run_dgx_root_context_controls.sh"),
+    "v2": ("root_context_controls_recipe_v2", "root_context_controls_v2", "run_dgx_root_context_session.sh"),
+}
 
 
-def scheduler(raw, job):
+def scheduler(raw, job, deployment="v1"):
+    recipe_name, _, script = DEPLOYMENTS[deployment]
     unit_name(job, 0)
     retained = terminal_record(raw, job)
     if retained is None:
@@ -29,24 +34,25 @@ def scheduler(raw, job):
     fields = dict(re.findall(r"(?<!\S)([A-Za-z][^\s=]*)=([^\s]+)", retained))
     expected = dict(JobId=str(job), Restarts="0", Requeue="0", NodeList="spark-7ff0", Partition="spark",
         OverSubscribe="NO", MinMemoryNode="96G", NumNodes="1", NumCPUs="20", NumTasks="1",
-        TimeLimit="00:15:00", WorkDir=str(ROOT / RECIPE),
-        Command=str(ROOT / RECIPE / "benchmark_tools/run_dgx_root_context_controls.sh"))
+        TimeLimit="00:15:00", WorkDir=str(ROOT / recipe_name),
+        Command=str(ROOT / recipe_name / "benchmark_tools" / script))
     expected["CPUs/Task"] = "20"
     if any(fields.get(key) != value for key, value in expected.items()):
         raise ValueError("Root-control scheduler allocation or command differs")
     return fields
 
 
-def bind(plan, recipe, recipe_sha, verification, launch, panel, job):
+def bind(plan, recipe, recipe_sha, verification, launch, panel, job, deployment="v1"):
+    recipe_name, _, _ = DEPLOYMENTS[deployment]
     files = {row["path"]: row for row in recipe["records"] if row["kind"] == "file"}
     if len(files) != sum(row["kind"] == "file" for row in recipe["records"]):
         raise ValueError("Duplicate recipe file")
-    base = ROOT / RECIPE / "benchmark_tools"
+    base = ROOT / recipe_name / "benchmark_tools"
     if files[str(base / "results/ROOT_CPU_CONTEXT_CONTROL_PROTOCOL_20260919.md")]["sha256"] != PROTOCOL_SHA:
         raise ValueError("Frozen protocol differs")
     expected = [dict(row, records=count, status="runtime_tree_identity_matches", scientific_execution_authorized=False)
         for row, count in zip(plan["runtime_manifests"], (26673, 10066))]
-    expected.append(dict(path=str(ROOT / (RECIPE + ".json")), sha256=recipe_sha,
+    expected.append(dict(path=str(ROOT / (recipe_name + ".json")), sha256=recipe_sha,
         records=len(recipe["records"]), status="runtime_tree_identity_matches", scientific_execution_authorized=False))
     if (len(plan["runtime_manifests"]) != 2 or not same(verification["before"], expected)
             or not same(verification["after"], expected) or not same(verification["measurement"], panel)
@@ -60,7 +66,7 @@ def bind(plan, recipe, recipe_sha, verification, launch, panel, job):
             raise ValueError("Invalid runtime-check duration")
     expected_launch = dict(job_id=job, recipe_sha256=recipe_sha, protocol_sha256=PROTOCOL_SHA,
         runtime_plan_sha256=PLAN_SHA, executable=plan["launcher_python"], host="spark-7ff0",
-        manager=panel["manager"], source_directory=str(ROOT / RECIPE), scientific_timings_admitted=False)
+        manager=panel["manager"], source_directory=str(ROOT / recipe_name), scientific_timings_admitted=False)
     if any(not same(launch.get(key), value) for key, value in expected_launch.items()):
         raise ValueError("Launch identity differs")
     if (panel["job_id"] != job or panel["protocol_sha256"] != PROTOCOL_SHA
@@ -83,18 +89,19 @@ def bind(plan, recipe, recipe_sha, verification, launch, panel, job):
         raise ValueError("Panel terminal status differs")
 
 
-def audit(archive, recipe_path, recipe_sha, scheduler_path, job):
+def audit(archive, recipe_path, recipe_sha, scheduler_path, job, deployment="v1"):
+    recipe_name, output_name, _ = DEPLOYMENTS[deployment]
     scheduler_source, recipe_source = record(scheduler_path), record(recipe_path)
-    allocation = scheduler(scheduler_path.read_text(), job)
+    allocation = scheduler(scheduler_path.read_text(), job, deployment)
     recipe = read_pinned(recipe_path, recipe_sha)
-    sources = recipe_evidence(archive, recipe, RECIPE)
-    plan_path = archive / RECIPE / "benchmark_tools/results/dgx_dual_native_plan_20260919.json"
+    sources = recipe_evidence(archive, recipe, recipe_name)
+    plan_path = archive / recipe_name / "benchmark_tools/results/dgx_dual_native_plan_20260919.json"
     plan = read_pinned(plan_path, PLAN_SHA)
-    directory = archive / OUTPUT
+    directory = archive / output_name
     evidence = inventory(directory)
     verification, launch = [read(directory / name) for name in ("verification.json", "launch.json")]
     panel = read(directory / "measurement/result.json")
-    bind(plan, recipe, recipe_sha, verification, launch, panel, job)
+    bind(plan, recipe, recipe_sha, verification, launch, panel, job, deployment)
     expected_exit = "0:0" if (panel["summary"]["all_workloads_valid"]
         and panel["summary"]["all_positive_controls_detected"]) else "1:0"
     if allocation["ExitCode"] != expected_exit or allocation["JobState"] != ("COMPLETED" if expected_exit == "0:0" else "FAILED"):
@@ -116,7 +123,7 @@ def audit(archive, recipe_path, recipe_sha, scheduler_path, job):
             raise ValueError("Cumulative checkpoint differs")
         row = dict(index=index, retained=original)
         if original["status"] == "root_context_workload_validated":
-            result = replay(path, ROOT / OUTPUT / "measurement" / path.name, ROOT / RECIPE,
+            result = replay(path, ROOT / output_name / "measurement" / path.name, ROOT / recipe_name,
                             plan["launcher_python"], original["mode"], job, index, panel["manager"])
             if not same(dict(result["trial"], block=original["block"]), original):
                 raise ValueError("Replayed trial differs from panel")
@@ -159,8 +166,9 @@ if __name__ == "__main__":
         parser.add_argument("--" + name, type=Path, required=True)
     parser.add_argument("--recipe-sha", required=True)
     parser.add_argument("--job", type=int, required=True)
+    parser.add_argument("--deployment", choices=DEPLOYMENTS, default="v1")
     args = parser.parse_args()
-    result = audit(args.archive.resolve(), args.recipe.resolve(), args.recipe_sha, args.scheduler.resolve(), args.job)
+    result = audit(args.archive.resolve(), args.recipe.resolve(), args.recipe_sha, args.scheduler.resolve(), args.job, args.deployment)
     with args.output.open("x") as stream:
         json.dump(result, stream, indent=2, sort_keys=True, allow_nan=False)
         stream.write("\n")

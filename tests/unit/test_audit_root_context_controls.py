@@ -60,6 +60,22 @@ def test_valid_bindings_and_scheduler(context):
     assert module.scheduler(scheduler_text(), JOB)["NumCPUs"] == "20"
 
 
+def test_session_deployment_is_distinct_and_old_identity_rejected(context):
+    plan, recipe, verification, launch, panel = context
+    for row in recipe["records"]:
+        row["path"] = row["path"].replace("recipe_v1", "recipe_v2")
+    for key in ("before", "after"):
+        verification[key][-1]["path"] = verification[key][-1]["path"].replace("recipe_v1", "recipe_v2")
+    launch["source_directory"] = launch["source_directory"].replace("recipe_v1", "recipe_v2")
+    module.bind(plan, recipe, "recipe", verification, launch, panel, JOB, "v2")
+    text = scheduler_text().replace("recipe_v1", "recipe_v2").replace("run_dgx_root_context_controls.sh", "run_dgx_root_context_session.sh")
+    assert module.scheduler(text, JOB, "v2")["TimeLimit"] == "00:15:00"
+    with pytest.raises(ValueError):
+        module.scheduler(text, JOB)
+    with pytest.raises(ValueError):
+        module.scheduler(scheduler_text(), JOB, "v2")
+
+
 @pytest.mark.parametrize("fault", ["recipe", "before", "after", "summary", "launch", "protocol", "duration", "order", "continued"])
 def test_binding_drift_rejected(context, fault):
     plan, recipe, verification, launch, panel = context

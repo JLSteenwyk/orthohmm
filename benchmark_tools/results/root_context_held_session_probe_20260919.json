@@ -1,0 +1,17 @@
+{
+  "command": [
+    "ssh",
+    "-T",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "ConnectTimeout=10",
+    "jlsteenwyk@10.10.10.2",
+    "/usr/bin/python3 -c 'import subprocess,time,json; command=[\"systemctl\",\"--user\",\"show\",\"--property=ControlGroup\",\"--value\"]; start=time.monotonic_ns(); before=subprocess.check_output(command,text=True,timeout=10).strip(); time.sleep(20); after=subprocess.check_output(command,text=True,timeout=10).strip(); assert before==after and before.startswith(\"/user.slice/\"); print(json.dumps(dict(before=before,after=after,started_ns=start,finished_ns=time.monotonic_ns())))'"
+  ],
+  "finished_unix_ns": 1789858440981783790,
+  "returncode": 0,
+  "started_unix_ns": 1789858420204375064,
+  "stderr": "",
+  "stdout": "{\"before\": \"/user.slice/user-1000.slice/user@1000.service\", \"after\": \"/user.slice/user-1000.slice/user@1000.service\", \"started_ns\": 2343683282988355, \"finished_ns\": 2343703293636603}\n"
+}
