@@ -16,6 +16,13 @@ PARENT = RESULTS / 'dgx_frontier_overhead_plan_20260918.json'
 PLAN = RESULTS / 'dgx_pressure_overhead_plan_20260919.json'
 
 
+def test_batch_launcher_uses_pinned_environment_for_native_enumerator():
+    script = (RESULTS.parent / 'run_dgx_pressure_overhead.sbatch').read_text()
+    assert '"$ROOT/envs/orthohmm/bin/python" -B' in script
+    assert '/usr/bin/python3 -B' not in script
+    assert '--plan-sha ' + module.PRESSURE_PLAN_SHA in script
+
+
 def test_plan_only_changes_observation_and_output_locations():
     original = json.loads(PARENT.read_text())
     plan = json.loads(PLAN.read_text())

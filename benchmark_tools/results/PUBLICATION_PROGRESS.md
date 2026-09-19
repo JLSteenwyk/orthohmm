@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Pressure Panel Pre-Inference Failure Diagnosed (2026-09-19)
+
+After release, all21869tasks failed in4-5seconds. Respected the quiet window
+until all18were terminal, then collected logs and verification records.
+Every task failed before preparation/measurement because the submitted
+system Python could not import NumPy for the frozen input enumerator.
+0/18native measurements exist; no overhead statistic is available.
+
+Recorder21870completed0:0 and preserved all18terminal records in39polls
+without errors. Changed the batch interpreter to the already pinned
+OrthoHMM environment, then executed the actual frozen enumerator remotely:
+the four-file order matches. No packages or scientific settings changed.
+84focused tests and shell syntax validation pass. Historical submitted
+script identity, failed outputs and original plan remain retained.
+[Failure evidence and next deployment requirements](DGX_PRESSURE_OVERHEAD_FAILURE_21869.md).
+
+DGX quiet window is closed. A fresh complete-panel output plan and verified
+deployment are required before any replacement submission; do not reuse
+occupied directories. Controlled inference overhead/scaling remains unmet.
+
 ## Pressure Overhead Panel Deployed and Released (2026-09-19)
 
 Previous turn made progress through63d1098 with the tested frozen plan and

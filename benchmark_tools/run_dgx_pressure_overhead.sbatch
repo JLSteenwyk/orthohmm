@@ -14,7 +14,7 @@
 set -euo pipefail
 ROOT=/home/jlsteenwyk/projects/orthohmm-publication
 exec env -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONHASHSEED=0 \
-  /usr/bin/python3 -B "$ROOT/pressure_overhead_recipe_v1/benchmark_tools/run_dgx_frontier_overhead.py" \
+  "$ROOT/envs/orthohmm/bin/python" -B "$ROOT/pressure_overhead_recipe_v1/benchmark_tools/run_dgx_frontier_overhead.py" \
   --plan "$ROOT/pressure_overhead_recipe_v1/benchmark_tools/results/dgx_pressure_overhead_plan_20260919.json" \
   --plan-sha 3950ccfa867c463ccfd7d8693dc331a3c85dc75ba67d9e8db89be4c1dda91c38 \
   --recipe "$ROOT/pressure_overhead_recipe_v1_manifest.json" \

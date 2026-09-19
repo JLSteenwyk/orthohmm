@@ -1,5 +1,10 @@
 # Pressure Overhead Panel Released With Recorder
 
+Subsequent outcome: all18tasks failed before native inference; the recorder
+captured every terminal record. The quiet window is closed. See the
+[failure diagnosis and interpreter repair](DGX_PRESSURE_OVERHEAD_FAILURE_21869.md).
+The submission details below remain historical evidence, not a success claim.
+
 Deployment receiptfae1273 and source/protocol63d1098 were pushed before
 submission. Submitted `run_dgx_pressure_overhead.sbatch` with `--hold` and
 `--begin=now+2minutes`, receiving array21869. It requests18tasks, concurrency1,
