@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Native Lineage Panel Audited (2026-09-19)
+
+Previous turn was a verified wait. All three native jobs 21995/21996/21997
+and recorder 21998 are now terminal, exit 0:0. Collected the complete archive
+only after completion: 109,645 regular files, 749,972,966 bytes. Controller
+capture has 407 polls, zero errors and no missing jobs. The prepared auditor
+passed provenance, raw replay, native-product checks and same-method output
+equivalence for all three tasks, with no temporal-order issues.
+
+See `LINEAGE_NATIVE_RESULT_21995.md` and its retained compressed audit and
+controller capture. High-sensitivity/satellite/full-OrthoFinder have 1/7/0
+narrow CPU flags and 1/56/0 original flags. All remain visible; no settings,
+thresholds or scientific executors changed. Successful native execution does
+not establish controlled timing. The boundary arm remains undeployed, and
+overhead, during-read lifecycle behavior and prospective timing inclusion
+remain unfinished. The publication goal is still active.
+
 ## Lineage Boundary Arm Prepared (2026-09-19)
 
 Previous turn was a verified wait: high-sensitivity and its recorder were
