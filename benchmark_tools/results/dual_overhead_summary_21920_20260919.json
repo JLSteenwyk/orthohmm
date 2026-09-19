@@ -1,0 +1,46 @@
+{
+  "status": "retained_dual_overhead_summary",
+  "source_audit": {
+    "path": "dual_overhead_audit_21920.json.gz",
+    "sha256": "b8ecd2ffbd630a8912bbecdaa7c18822ad94d83112d4ae2f234f38dab55107ed"
+  },
+  "tasks": 18,
+  "validated_tasks": 16,
+  "failed_or_unvalidated_tasks": 2,
+  "complete_numeric_panel": false,
+  "numerical_budget_met": null,
+  "available_pairs": 7,
+  "planned_pairs": 9,
+  "methods": [
+    {
+      "method": "orthohmm_high_sensitivity",
+      "available_pairs": 3,
+      "expected_pairs": 3,
+      "median_percent": 0.6067175792795387,
+      "numerical_budget_met": true
+    },
+    {
+      "method": "orthohmm_satellite_v2",
+      "available_pairs": 1,
+      "expected_pairs": 3,
+      "median_percent": null,
+      "numerical_budget_met": null
+    },
+    {
+      "method": "orthofinder_full",
+      "available_pairs": 3,
+      "expected_pairs": 3,
+      "median_percent": 1.0411311009468454,
+      "numerical_budget_met": true
+    }
+  ],
+  "narrow_flags_in_validated_periodic_tasks": 23,
+  "failed_indices": [
+    3,
+    17
+  ],
+  "temporal_issues": [],
+  "scientific_timings_admitted": false,
+  "environmental_validity_established": false,
+  "publication_ready": false
+}

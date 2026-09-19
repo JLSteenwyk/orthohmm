@@ -146,3 +146,27 @@ followed by a newly frozen complete panel. The present archive cannot
 recover the missing intervals and does not justify relaxing thresholds
 after observing results. The 27-run scientific scaling comparison remains
 unadmitted; this panel does not close the controlled-resource requirement.
+
+## Compact Manuscript Summary
+
+The [compact summary](dual_overhead_summary_21920_20260919.json) is a direct
+projection of this already-audited report, not another admission or replay.
+It retains failed task indices, incomplete-panel/null budgets, per-method
+available-pair counts, numerical medians, all 23 narrow flags in validated
+periodic tasks, and false scientific/environmental admission. The manuscript
+and claim checklist now describe this completed result rather than the
+historical running state.
+
+After verifying the compressed audit SHA-256 against the value above,
+reproduce the projection with jq using a fresh destination:
+
+```sh
+gzip -dc benchmark_tools/results/dual_overhead_audit_21920.json.gz |
+  jq --arg sha256 b8ecd2ffbd630a8912bbecdaa7c18822ad94d83112d4ae2f234f38dab55107ed \
+    -f benchmark_tools/summarize_dual_overhead.jq > /new/path/summary.json
+```
+
+The projection accepts the supplied digest as metadata; it does not itself
+authenticate input bytes. Regeneration was byte-compared with the retained
+summary after separately verifying the archive checksum. Original raw audits,
+counter records and native outputs are unchanged.

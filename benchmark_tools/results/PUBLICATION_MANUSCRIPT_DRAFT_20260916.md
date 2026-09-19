@@ -1447,11 +1447,25 @@ detectable. Every final partial window and original interval flag was retained.
 Aggregation can obscure brief real interference as well as accounting noise;
 it therefore does not establish a cause or justify retrospective acceptance.
 The controls support bounded monitor behavior, not controlled speed rankings.
-[Window-scale diagnostic](CPU_WINDOW_SCALES_20260919.md). A fresh complete
-dual-collector overhead panel has been launched under a frozen protocol;
-its results are not yet available and no scientific timing inclusion rule
-has been adopted from these diagnostics.
-[Prospective protocol](DUAL_COLLECTOR_OVERHEAD_PROTOCOL_20260919.md).
+[Window-scale diagnostic](CPU_WINDOW_SCALES_20260919.md).
+
+The subsequent 18-task dual-collector overhead panel is complete: 16 tasks
+passed native-output/provenance and measurement-replay checks, while two
+periodic satellite_v2 measurements failed when transient service cgroups
+appeared during sampling. Seven of nine assigned pairs are available.
+Median signed periodic-versus-boundary wall-time differences were 0.6067%
+for high-sensitivity OrthoHMM and 1.0411% for full OrthoFinder. Each met its
+5% median numerical budget, but the satellite_v2 median and complete-panel
+budget remain unestimable. All seven available pairs met the 60-second
+duration and 10% per-pair numerical gates and had matching canonical
+outputs. These within-method collector comparisons are not tool speed
+rankings. Twenty-three narrow interval flags remain in the seven validated
+periodic tasks; failed observations were not dropped or selectively retried.
+No scientific timing inclusion rule has been adopted, and controlled
+comparative timing remains unestablished.
+[Completed audit](DUAL_OVERHEAD_RESULT_21920.md),
+[machine-readable summary](dual_overhead_summary_21920_20260919.json),
+[prospective protocol](DUAL_COLLECTOR_OVERHEAD_PROTOCOL_20260919.md).
 
 ### SwissTrees Comparator Uncertainty
 

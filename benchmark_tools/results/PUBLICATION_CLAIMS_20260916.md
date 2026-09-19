@@ -60,8 +60,10 @@ creation and known contention both increase native pressure; pressure alone
 does not identify outside work. [Longer-window diagnostics](CPU_WINDOW_SCALES_20260919.md)
 reduce native-tool flags but can also conceal brief real interference.
 No historical flag is removed, no cause is established and no timing is
-retroactively admitted. The [fresh complete overhead panel](DUAL_OVERHEAD_SUBMISSION_21920_20260919.md)
-is running; its result is not yet evidence for any resource advantage.
+retroactively admitted. The [completed overhead panel](DUAL_OVERHEAD_RESULT_21920.md)
+has 16 validated tasks, two failed periodic measurements, and seven of nine
+available pairs. The complete-panel budget remains null; the result does
+not establish any comparative resource advantage.
 
 | Original work package | Current evidence | What still proves completion |
 | --- | --- | --- |
@@ -75,12 +77,13 @@ is running; its result is not yet evidence for any resource advantage.
 
 ## Current Execution Status
 
-- As of September 19, [dual-collector overhead array 21920](DUAL_OVERHEAD_SUBMISSION_21920_20260919.md)
-  is running sequentially on the DGX, with terminal recorder 21922 on bizon.
-  The [post-run audit](DUAL_OVERHEAD_AUDIT_READY_20260919.md) is prepared and
-  tested but has not evaluated this live panel. All 18 outcomes must be retained;
-  overhead budgets, output equivalence and environmental uncertainty remain
-  distinct conclusions. No SSH inspection during the quiet panel.
+- [Dual-collector overhead array 21920](DUAL_OVERHEAD_RESULT_21920.md) and
+  terminal recorder 21922 are complete. The audit retains all 18 tasks:
+  16 validated, two failed, seven available pairs, and 23 narrow interval
+  flags in validated periodic measurements. Median numerical budgets pass
+  for high-sensitivity OrthoHMM and full OrthoFinder; satellite_v2 and the
+  complete-panel budget remain unestimable. No environmental or scientific
+  timing admission follows. See the [compact audit summary](dual_overhead_summary_21920_20260919.json).
 
 - The [replacement pressure-overhead panel21889](DGX_PRESSURE_OVERHEAD_AUDIT_21889_20260919.md)
   completed with 16 validated tasks and two retained failures. Seven of nine
