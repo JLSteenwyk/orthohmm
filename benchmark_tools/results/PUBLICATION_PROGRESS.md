@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Corrected Candidate Neighborhood Admitted (2026-09-19)
+
+Previous turn prepared/tested independent admission (`6a0258c`). Verified
+preparation 21927 terminal COMPLETED 0:0 at 7:40, bound its completed
+manifest, and ran frozen admission 21929, which completed 0:0 at 1:46.
+All five candidate arms passed; all cover 984,137 proteins from 391,908 seed
+groups, and the control candidate/trace bytes equal the admitted baseline.
+Candidate group counts are 351739, 351199, 352300, 345208 and 355871 in
+fixed control/norm_low/norm_high/margin_low/margin_high order. These are
+intermediate counts, not accuracy. Retained both JSON artifacts and documented
+hashes, merge counts and bounded incremental resources in
+`QFO_PARAMETER_CANDIDATE_RESULT_20260919.md`.
+
+Next is native inferred phylogeny, output/pair admission and scoring for the
+four changed candidates, plus the separately required two CPM variants.
+Code inspection found existing checked clustering workers explicitly bind
+resolution 0.1; CPM variation needs tested explicit provenance support, not
+bypassing the checked constructor path. No endpoint/default changes and no
+claim of full robustness or publication readiness. Primary comparator and
+DGX jobs continue without intervention.
+
 ## Corrected Candidate Admission Tool Prepared (2026-09-19)
 
 Previous turn implemented and launched candidate preparation (`6405da5`,
