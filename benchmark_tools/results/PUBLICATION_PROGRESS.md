@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Third Reconciliation Pair Mapping Verified (2026-09-19)
+
+Previous turn made progress throughd65e1b4. Reread the full objective and
+verified conversion21770 live, then terminal COMPLETED0:0 in3:21.
+The conversion repeats native validation with an identical receipt and
+retains all5113180native pairs with zero reference-mapping losses.
+Independently rehashed106distinct referenced files and retained the
+unchanged conversion receipt. [Evidence](QFO_CORRECTED_PROFILE_RECONCILIATION_20260919.md).
+
+Scoring21783 has started;21784 remains dependent. Final reconciliation and
+OrthoFinder are still running. DGX scheduler accounting reports task5
+FAILED1:0, with its native step COMPLETED0:0. The cause is not yet audited:
+the panel is still live at task6, and the no-access/no-partial-outcome
+protocol remains in force. No failed task was removed or restarted.
+No new accuracy estimate or controlled timing claim is made.
+
 ## Third Corrected Reconciliation Validated (2026-09-19)
 
 The preceding source-retrieval follow-up did not recover the missing

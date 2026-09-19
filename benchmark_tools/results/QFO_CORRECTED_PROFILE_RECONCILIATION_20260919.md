@@ -19,9 +19,19 @@ HOGs, with669source families split and zero cross-source merges. The native
 phylogenetic output contains5113180pairs. These are structural counts, not
 accuracy estimates; pairs must not be replaced by root-HOG cliques.
 
-Conversion21770 has started. Scoring21783 and independent score admission
-21784 remain downstream. Reference mapping loss and benchmark scores are
-not yet admitted. The final reconciliation task21760_3 is running.
+Conversion21770 completed0:0 in3:21. Its fresh native-admission recheck
+matches the original receipt byte-for-byte. All5113180native pairs survive
+reference mapping, with zero mapping losses. Both converted files contain
+78,540,928bytes and have SHA-256
+`45e3bd4ae7a35a517b6de4a599b2a336566862a5e915463a9c14892bdf907c61`.
+The [unchanged conversion receipt](qfo_corrected_factorial_pairs_21770.json)
+has SHA-256 `92ac5604612fbc52a9a5ffeea95f8ad6255d8652f480a0faebec098f33c0ac00`.
+Independently rehashed all106distinct referenced file records, including
+inputs, mapping, both converted pair files and the repeated admission.
+
+Scoring21783 is running; independent score admission21784 remains
+dependent. No accuracy result is admitted yet. The final reconciliation
+task21760_3 is running.
 
 Elapsed times above describe incremental stages on the shared host, not
 dedicated end-to-end efficiency comparisons. The corrected eight-cell
