@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Root Context 22019 Failure Audited And Retained (2026-09-19)
+
+Job 22019 terminated FAILED `1:0` after 1:45. Retrieved all 805 files only
+after terminal scheduler confirmation. The full audit validates the first
+idle/steady/churn trials, retains the failed user-contended trial, and
+confirms the eight remaining conditions were unrun. Each valid trial has
+21 all/19 common intervals, with zero original/narrow flags. No intended
+user-load positive control completed; sensitivity remains untested.
+
+The failed service could not connect to its user bus. Retained historical
+journal evidence shows the user manager stopping ten seconds after the
+submission SSH session; post-run login configuration reports `Linger=no`.
+The coordinator never received competitor readiness or released the start.
+No unrelated services or persistent login configuration were changed.
+
+Retained raw/source and scheduler archives, full audit, all/common descriptive
+summaries and bounded journal evidence. Fresh-directory extraction and full
+replay succeeded. All 473 focused tests pass. See `ROOT_CONTEXT_RESULT_22019.md`
+for hashes, counts, limitations and reproduction. The manuscript and claims
+now explicitly retain this incomplete panel, without upgrading timing claims.
+
+Next: prospectively document a bounded user-session lifetime solution before
+any separately identified complete panel. Do not replace selected failed
+conditions, silently enable lingering services, or weaken response criteria.
+BLAST 21713 remains RUNNING at 10:41:53. No replacement panel has been
+submitted; the publication objective remains active and incomplete.
+
 ## Root Context Panel 22019 Submitted (2026-09-19)
 
 Committed/pushed the whole-panel audit (`02500e3`) and verified deployment

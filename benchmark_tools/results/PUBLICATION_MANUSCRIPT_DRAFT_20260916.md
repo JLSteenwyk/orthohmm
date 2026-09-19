@@ -1516,6 +1516,14 @@ handling and read-window skew, not the cause of native flags, attribution
 specificity, arbitrary-churn robustness or controlled comparative timing.
 [Read-crossing control and replay](LINEAGE_READ_CROSSING_RESULT_22018.md).
 
+A subsequent 12-trial root/user-slice context panel stopped at its first
+user-contended condition when the user-manager session had already shut
+down. The initial idle, steady and churn trials replayed successfully,
+with zero original or narrow flags in their 63 total observation intervals;
+the failed condition and eight unrun conditions are retained. This incomplete
+panel does not establish sensitivity to the intended user-service load or
+scientific timing eligibility. [Failure and raw replay](ROOT_CONTEXT_RESULT_22019.md).
+
 ### SwissTrees Comparator Uncertainty
 
 For all eight retained historical comparison outputs, raw SwissTrees counts

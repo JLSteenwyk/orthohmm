@@ -72,6 +72,11 @@ This establishes the tested lifecycle/read-window behavior only; it does
 not explain native flags or establish root/user-slice specificity, general
 churn robustness, non-CPU isolation or scientific timing eligibility.
 
+The [root-context panel 22019](ROOT_CONTEXT_RESULT_22019.md) validates only
+its first three native-only trials. Its first user-service condition failed
+after the login user manager shut down; eight remaining conditions were
+unrun. No intended-load sensitivity or timing-validity claim follows.
+
 The completed [full-node controls](FULL_NODE_CONTROL_RESULT_21918_20260919.md)
 validate all nine injected workloads: zero narrow flags in 126 native-only
 intervals and detection in 63/63 contended intervals. This supports bounded

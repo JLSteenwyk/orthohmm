@@ -1,0 +1,3035 @@
+{
+  "audit": {
+    "bytes": 390785,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/root_context_audit_22019_20260919.json.gz",
+    "sha256": "06bdeb7334454c4e616fbf783334d33bd5c72b3b3e73aafd7e452f87d24f639f"
+  },
+  "blocks": [
+    {
+      "block": 0,
+      "common_interval_median_differences": {
+        "churn_minus_steady": {
+          "host_enclosing_window_s": 0.00015473999999993104,
+          "host_ticks:guest": 0,
+          "host_ticks:guest_nice": 0,
+          "host_ticks:idle": 0,
+          "host_ticks:iowait": 0,
+          "host_ticks:irq": 0,
+          "host_ticks:nice": 0,
+          "host_ticks:softirq": 0,
+          "host_ticks:steal": 0,
+          "host_ticks:system": 1950,
+          "host_ticks:user": -1949,
+          "root_minus_system_cpu_usec": 62536,
+          "root_minus_three_named_children_cpu_usec": 62536,
+          "scope_cpu_usec:/": 0,
+          "scope_cpu_usec:/init.scope": 0,
+          "scope_cpu_usec:/system.slice": -63870,
+          "scope_cpu_usec:/user.slice": 0,
+          "scope_enclosing_window_s:/": 2.4101000000054107e-05,
+          "scope_enclosing_window_s:/init.scope": 3.349299999988453e-05,
+          "scope_enclosing_window_s:/system.slice": 4.150899999988411e-05,
+          "scope_enclosing_window_s:/user.slice": 3.235699999992736e-05
+        },
+        "idle_minus_steady": {
+          "host_enclosing_window_s": 4.192899999999611e-05,
+          "host_ticks:guest": 0,
+          "host_ticks:guest_nice": 0,
+          "host_ticks:idle": 1998,
+          "host_ticks:iowait": 0,
+          "host_ticks:irq": 0,
+          "host_ticks:nice": 0,
+          "host_ticks:softirq": 0,
+          "host_ticks:steal": 0,
+          "host_ticks:system": -1,
+          "host_ticks:user": -1997,
+          "root_minus_system_cpu_usec": 1416,
+          "root_minus_three_named_children_cpu_usec": 613,
+          "scope_cpu_usec:/": -19988000,
+          "scope_cpu_usec:/init.scope": 0,
+          "scope_cpu_usec:/system.slice": -19989630,
+          "scope_cpu_usec:/user.slice": 0,
+          "scope_enclosing_window_s:/": -1.9305000000024997e-05,
+          "scope_enclosing_window_s:/init.scope": -1.2824999999994091e-05,
+          "scope_enclosing_window_s:/system.slice": -3.0201000000062983e-05,
+          "scope_enclosing_window_s:/user.slice": -1.336900000004082e-05
+        },
+        "user-contended_minus_steady": null
+      }
+    },
+    {
+      "block": 1,
+      "common_interval_median_differences": {
+        "churn_minus_steady": null,
+        "idle_minus_steady": null,
+        "user-contended_minus_steady": null
+      }
+    },
+    {
+      "block": 2,
+      "common_interval_median_differences": {
+        "churn_minus_steady": null,
+        "idle_minus_steady": null,
+        "user-contended_minus_steady": null
+      }
+    }
+  ],
+  "limitations": [
+    "Fixed-block descriptive differences, not confidence intervals or independent-interval tests.",
+    "Scope and host counters have distinct non-atomic enclosing windows; no causal subtraction or timing correction.",
+    "Guest host ticks overlap user/nice ticks and are reported separately, never summed into a total.",
+    "Signed residuals are preserved; root membership changes do not identify task CPU or unobserved transients.",
+    "Failures and unrun conditions remain missing observations; no selective replacement or native timing admission."
+  ],
+  "publication_ready": false,
+  "scientific_timings_admitted": false,
+  "source": {
+    "bytes": 6785,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/describe_root_context_controls.py",
+    "sha256": "368afc99180361e27327983d9b8d949feb67399cd7bd17aa6378e9f5a2e39957"
+  },
+  "status": "root_context_controls_described",
+  "trials": [
+    {
+      "all": {
+        "distributions": {
+          "host_enclosing_window_s": {
+            "maximum": 1.00657561,
+            "median": 1.000310777,
+            "minimum": 0.999691258,
+            "n": 21
+          },
+          "host_ticks:guest": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "host_ticks:guest_nice": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "host_ticks:idle": {
+            "maximum": 2010,
+            "median": 1998,
+            "minimum": 1990,
+            "n": 21
+          },
+          "host_ticks:iowait": {
+            "maximum": 4,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "host_ticks:irq": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "host_ticks:nice": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "host_ticks:softirq": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "host_ticks:steal": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "host_ticks:system": {
+            "maximum": 3,
+            "median": 1,
+            "minimum": 0,
+            "n": 21
+          },
+          "host_ticks:user": {
+            "maximum": 2,
+            "median": 1,
+            "minimum": 0,
+            "n": 21
+          },
+          "root_minus_system_cpu_usec": {
+            "maximum": 33380,
+            "median": 1713,
+            "minimum": -3119,
+            "n": 21
+          },
+          "root_minus_three_named_children_cpu_usec": {
+            "maximum": 6364,
+            "median": 669,
+            "minimum": -6554,
+            "n": 21
+          },
+          "scope_cpu_usec:/": {
+            "maximum": 53000,
+            "median": 12000,
+            "minimum": 7000,
+            "n": 21
+          },
+          "scope_cpu_usec:/init.scope": {
+            "maximum": 9922,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "scope_cpu_usec:/system.slice": {
+            "maximum": 20637,
+            "median": 9440,
+            "minimum": 7671,
+            "n": 21
+          },
+          "scope_cpu_usec:/user.slice": {
+            "maximum": 30012,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "scope_enclosing_window_s:/": {
+            "maximum": 1.006237034,
+            "median": 0.9999867,
+            "minimum": 0.999311546,
+            "n": 21
+          },
+          "scope_enclosing_window_s:/init.scope": {
+            "maximum": 1.006215194,
+            "median": 0.99998662,
+            "minimum": 0.999368586,
+            "n": 21
+          },
+          "scope_enclosing_window_s:/system.slice": {
+            "maximum": 1.006239034,
+            "median": 0.999987564,
+            "minimum": 0.99931337,
+            "n": 21
+          },
+          "scope_enclosing_window_s:/user.slice": {
+            "maximum": 1.006244906,
+            "median": 0.999987292,
+            "minimum": 0.999364538,
+            "n": 21
+          }
+        },
+        "intervals": 21,
+        "narrow_flags": 0,
+        "original_flags": 0,
+        "root_membership_changes": 1
+      },
+      "block": 0,
+      "common": {
+        "distributions": {
+          "host_enclosing_window_s": {
+            "maximum": 1.001172698,
+            "median": 1.000296828,
+            "minimum": 0.999691258,
+            "n": 19
+          },
+          "host_ticks:guest": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "host_ticks:guest_nice": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "host_ticks:idle": {
+            "maximum": 1999,
+            "median": 1998,
+            "minimum": 1990,
+            "n": 19
+          },
+          "host_ticks:iowait": {
+            "maximum": 4,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "host_ticks:irq": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "host_ticks:nice": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "host_ticks:softirq": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "host_ticks:steal": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "host_ticks:system": {
+            "maximum": 3,
+            "median": 1,
+            "minimum": 0,
+            "n": 19
+          },
+          "host_ticks:user": {
+            "maximum": 2,
+            "median": 1,
+            "minimum": 0,
+            "n": 19
+          },
+          "root_minus_system_cpu_usec": {
+            "maximum": 33380,
+            "median": 2363,
+            "minimum": -2315,
+            "n": 19
+          },
+          "root_minus_three_named_children_cpu_usec": {
+            "maximum": 6364,
+            "median": 1560,
+            "minimum": -6554,
+            "n": 19
+          },
+          "scope_cpu_usec:/": {
+            "maximum": 53000,
+            "median": 12000,
+            "minimum": 7000,
+            "n": 19
+          },
+          "scope_cpu_usec:/init.scope": {
+            "maximum": 9922,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "scope_cpu_usec:/system.slice": {
+            "maximum": 20637,
+            "median": 9423,
+            "minimum": 7671,
+            "n": 19
+          },
+          "scope_cpu_usec:/user.slice": {
+            "maximum": 30012,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "scope_enclosing_window_s:/": {
+            "maximum": 1.00083145,
+            "median": 0.999980409,
+            "minimum": 0.999311546,
+            "n": 19
+          },
+          "scope_enclosing_window_s:/init.scope": {
+            "maximum": 1.000797978,
+            "median": 0.999983657,
+            "minimum": 0.999368586,
+            "n": 19
+          },
+          "scope_enclosing_window_s:/system.slice": {
+            "maximum": 1.000830842,
+            "median": 0.999983593,
+            "minimum": 0.99931337,
+            "n": 19
+          },
+          "scope_enclosing_window_s:/user.slice": {
+            "maximum": 1.000845962,
+            "median": 0.999983785,
+            "minimum": 0.999364538,
+            "n": 19
+          }
+        },
+        "intervals": 19,
+        "narrow_flags": 0,
+        "original_flags": 0,
+        "root_membership_changes": 1
+      },
+      "common_interval_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "enclosing_user_cpu_s": 0.033673,
+      "index": 0,
+      "intervals": [
+        {
+          "index": 0,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.00657561,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 2010,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 0,
+            "host_ticks:user": 1,
+            "root_minus_system_cpu_usec": -3119,
+            "root_minus_three_named_children_cpu_usec": -3119,
+            "scope_cpu_usec:/": 9000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 12119,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.006237034,
+            "scope_enclosing_window_s:/init.scope": 1.006215194,
+            "scope_enclosing_window_s:/system.slice": 1.006239034,
+            "scope_enclosing_window_s:/user.slice": 1.006244906
+          }
+        },
+        {
+          "index": 1,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000179176,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 1996,
+            "host_ticks:iowait": 1,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1,
+            "host_ticks:user": 0,
+            "root_minus_system_cpu_usec": 5329,
+            "root_minus_three_named_children_cpu_usec": 5329,
+            "scope_cpu_usec:/": 13000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 7671,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 0.999839416,
+            "scope_enclosing_window_s:/init.scope": 0.99984572,
+            "scope_enclosing_window_s:/system.slice": 0.999838904,
+            "scope_enclosing_window_s:/user.slice": 0.999851448
+          }
+        },
+        {
+          "index": 2,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000372712,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 1998,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 0,
+            "host_ticks:user": 1,
+            "root_minus_system_cpu_usec": 2425,
+            "root_minus_three_named_children_cpu_usec": 2255,
+            "scope_cpu_usec:/": 17000,
+            "scope_cpu_usec:/init.scope": 170,
+            "scope_cpu_usec:/system.slice": 14575,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.000061816,
+            "scope_enclosing_window_s:/init.scope": 1.000052168,
+            "scope_enclosing_window_s:/system.slice": 1.000062888,
+            "scope_enclosing_window_s:/user.slice": 1.000063656
+          }
+        },
+        {
+          "index": 3,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000310777,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 1998,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1,
+            "host_ticks:user": 1,
+            "root_minus_system_cpu_usec": -1298,
+            "root_minus_three_named_children_cpu_usec": -1298,
+            "scope_cpu_usec:/": 7000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 8298,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 0.999980409,
+            "scope_enclosing_window_s:/init.scope": 0.999983657,
+            "scope_enclosing_window_s:/system.slice": 0.999983593,
+            "scope_enclosing_window_s:/user.slice": 0.999983785
+          }
+        },
+        {
+          "index": 4,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 0.999691258,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 1990,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 3,
+            "host_ticks:user": 2,
+            "root_minus_system_cpu_usec": 33380,
+            "root_minus_three_named_children_cpu_usec": -6554,
+            "scope_cpu_usec:/": 53000,
+            "scope_cpu_usec:/init.scope": 9922,
+            "scope_cpu_usec:/system.slice": 19620,
+            "scope_cpu_usec:/user.slice": 30012,
+            "scope_enclosing_window_s:/": 0.999311546,
+            "scope_enclosing_window_s:/init.scope": 0.999368586,
+            "scope_enclosing_window_s:/system.slice": 0.99931337,
+            "scope_enclosing_window_s:/user.slice": 0.999364538
+          }
+        },
+        {
+          "index": 5,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": true,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.001172698,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 1995,
+            "host_ticks:iowait": 2,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 3,
+            "host_ticks:user": 0,
+            "root_minus_system_cpu_usec": 15808,
+            "root_minus_three_named_children_cpu_usec": 2544,
+            "scope_cpu_usec:/": 30000,
+            "scope_cpu_usec:/init.scope": 9603,
+            "scope_cpu_usec:/system.slice": 14192,
+            "scope_cpu_usec:/user.slice": 3661,
+            "scope_enclosing_window_s:/": 1.00083145,
+            "scope_enclosing_window_s:/init.scope": 1.000797978,
+            "scope_enclosing_window_s:/system.slice": 1.000830842,
+            "scope_enclosing_window_s:/user.slice": 1.000845962
+          }
+        },
+        {
+          "index": 6,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000072218,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 1995,
+            "host_ticks:iowait": 2,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1,
+            "host_ticks:user": 1,
+            "root_minus_system_cpu_usec": 1560,
+            "root_minus_three_named_children_cpu_usec": 1560,
+            "scope_cpu_usec:/": 11000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 9440,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 0.999749354,
+            "scope_enclosing_window_s:/init.scope": 0.999734218,
+            "scope_enclosing_window_s:/system.slice": 0.999750154,
+            "scope_enclosing_window_s:/user.slice": 0.999749914
+          }
+        },
+        {
+          "index": 7,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000658073,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 1999,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1,
+            "host_ticks:user": 0,
+            "root_minus_system_cpu_usec": -40,
+            "root_minus_three_named_children_cpu_usec": -40,
+            "scope_cpu_usec:/": 10000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 10040,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.000345497,
+            "scope_enclosing_window_s:/init.scope": 1.000349161,
+            "scope_enclosing_window_s:/system.slice": 1.000347273,
+            "scope_enclosing_window_s:/user.slice": 1.000348153
+          }
+        },
+        {
+          "index": 8,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000267564,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 1998,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 0,
+            "host_ticks:user": 1,
+            "root_minus_system_cpu_usec": 1713,
+            "root_minus_three_named_children_cpu_usec": 1713,
+            "scope_cpu_usec:/": 14000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 12287,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 0.9999375,
+            "scope_enclosing_window_s:/init.scope": 0.999940268,
+            "scope_enclosing_window_s:/system.slice": 0.999938524,
+            "scope_enclosing_window_s:/user.slice": 0.999939212
+          }
+        },
+        {
+          "index": 9,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.00024297,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 1999,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 0,
+            "host_ticks:user": 1,
+            "root_minus_system_cpu_usec": -470,
+            "root_minus_three_named_children_cpu_usec": -470,
+            "scope_cpu_usec:/": 9000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 9470,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 0.999931146,
+            "scope_enclosing_window_s:/init.scope": 0.999929274,
+            "scope_enclosing_window_s:/system.slice": 0.999931338,
+            "scope_enclosing_window_s:/user.slice": 0.999931098
+          }
+        },
+        {
+          "index": 10,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000329179,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 1999,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1,
+            "host_ticks:user": 0,
+            "root_minus_system_cpu_usec": 3317,
+            "root_minus_three_named_children_cpu_usec": 3200,
+            "scope_cpu_usec:/": 12000,
+            "scope_cpu_usec:/init.scope": 117,
+            "scope_cpu_usec:/system.slice": 8683,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.000002235,
+            "scope_enclosing_window_s:/init.scope": 1.000005099,
+            "scope_enclosing_window_s:/system.slice": 1.000002795,
+            "scope_enclosing_window_s:/user.slice": 1.000003563
+          }
+        },
+        {
+          "index": 11,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000296828,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 1996,
+            "host_ticks:iowait": 2,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 0,
+            "host_ticks:user": 1,
+            "root_minus_system_cpu_usec": -2315,
+            "root_minus_three_named_children_cpu_usec": -2315,
+            "scope_cpu_usec:/": 7000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 9315,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 0.9999867,
+            "scope_enclosing_window_s:/init.scope": 0.99998662,
+            "scope_enclosing_window_s:/system.slice": 0.999987564,
+            "scope_enclosing_window_s:/user.slice": 0.999987292
+          }
+        },
+        {
+          "index": 12,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000341996,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 1997,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1,
+            "host_ticks:user": 0,
+            "root_minus_system_cpu_usec": 2705,
+            "root_minus_three_named_children_cpu_usec": 2705,
+            "scope_cpu_usec:/": 12000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 9295,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.000021436,
+            "scope_enclosing_window_s:/init.scope": 1.000031484,
+            "scope_enclosing_window_s:/system.slice": 1.000022524,
+            "scope_enclosing_window_s:/user.slice": 1.000031052
+          }
+        },
+        {
+          "index": 13,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000907421,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 1999,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1,
+            "host_ticks:user": 1,
+            "root_minus_system_cpu_usec": 3687,
+            "root_minus_three_named_children_cpu_usec": 3687,
+            "scope_cpu_usec:/": 13000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 9313,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.000594701,
+            "scope_enclosing_window_s:/init.scope": 1.000588445,
+            "scope_enclosing_window_s:/system.slice": 1.000595437,
+            "scope_enclosing_window_s:/user.slice": 1.000595965
+          }
+        },
+        {
+          "index": 14,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 0.999900892,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 1998,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 0,
+            "host_ticks:user": 0,
+            "root_minus_system_cpu_usec": -1423,
+            "root_minus_three_named_children_cpu_usec": -1423,
+            "scope_cpu_usec:/": 8000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 9423,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 0.99957854,
+            "scope_enclosing_window_s:/init.scope": 0.999581276,
+            "scope_enclosing_window_s:/system.slice": 0.999582364,
+            "scope_enclosing_window_s:/user.slice": 0.99958206
+          }
+        },
+        {
+          "index": 15,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000342477,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 1999,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1,
+            "host_ticks:user": 1,
+            "root_minus_system_cpu_usec": 5600,
+            "root_minus_three_named_children_cpu_usec": 5600,
+            "scope_cpu_usec:/": 14000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 8400,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.000000365,
+            "scope_enclosing_window_s:/init.scope": 1.000010605,
+            "scope_enclosing_window_s:/system.slice": 1.000001389,
+            "scope_enclosing_window_s:/user.slice": 1.000009549
+          }
+        },
+        {
+          "index": 16,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000356796,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 1993,
+            "host_ticks:iowait": 4,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1,
+            "host_ticks:user": 1,
+            "root_minus_system_cpu_usec": 2363,
+            "root_minus_three_named_children_cpu_usec": -3266,
+            "scope_cpu_usec:/": 23000,
+            "scope_cpu_usec:/init.scope": 5629,
+            "scope_cpu_usec:/system.slice": 20637,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.000021004,
+            "scope_enclosing_window_s:/init.scope": 1.000024652,
+            "scope_enclosing_window_s:/system.slice": 1.000024748,
+            "scope_enclosing_window_s:/user.slice": 1.000022604
+          }
+        },
+        {
+          "index": 17,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000261311,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 1997,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1,
+            "host_ticks:user": 1,
+            "root_minus_system_cpu_usec": 6364,
+            "root_minus_three_named_children_cpu_usec": 6364,
+            "scope_cpu_usec:/": 18000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 11636,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 0.999944511,
+            "scope_enclosing_window_s:/init.scope": 0.999934495,
+            "scope_enclosing_window_s:/system.slice": 0.999945023,
+            "scope_enclosing_window_s:/user.slice": 0.999941999
+          }
+        },
+        {
+          "index": 18,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000240332,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 1997,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1,
+            "host_ticks:user": 0,
+            "root_minus_system_cpu_usec": 669,
+            "root_minus_three_named_children_cpu_usec": 669,
+            "scope_cpu_usec:/": 10000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 9331,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 0.999928668,
+            "scope_enclosing_window_s:/init.scope": 0.999930444,
+            "scope_enclosing_window_s:/system.slice": 0.999929724,
+            "scope_enclosing_window_s:/user.slice": 0.999929964
+          }
+        },
+        {
+          "index": 19,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000287887,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 1998,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 0,
+            "host_ticks:user": 1,
+            "root_minus_system_cpu_usec": -401,
+            "root_minus_three_named_children_cpu_usec": -401,
+            "scope_cpu_usec:/": 9000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 9401,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 0.999969455,
+            "scope_enclosing_window_s:/init.scope": 0.999970175,
+            "scope_enclosing_window_s:/system.slice": 0.999970463,
+            "scope_enclosing_window_s:/user.slice": 0.999970031
+          }
+        },
+        {
+          "index": 20,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000329823,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 1998,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1,
+            "host_ticks:user": 0,
+            "root_minus_system_cpu_usec": -1306,
+            "root_minus_three_named_children_cpu_usec": -1420,
+            "scope_cpu_usec:/": 15000,
+            "scope_cpu_usec:/init.scope": 114,
+            "scope_cpu_usec:/system.slice": 16306,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.000009311,
+            "scope_enclosing_window_s:/init.scope": 1.000013375,
+            "scope_enclosing_window_s:/system.slice": 1.000011679,
+            "scope_enclosing_window_s:/user.slice": 1.000012079
+          }
+        }
+      ],
+      "mode": "idle",
+      "positive_control_response": null,
+      "status": "validated"
+    },
+    {
+      "all": {
+        "distributions": {
+          "host_enclosing_window_s": {
+            "maximum": 1.008450002,
+            "median": 1.000256419,
+            "minimum": 0.997047423,
+            "n": 21
+          },
+          "host_ticks:guest": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "host_ticks:guest_nice": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "host_ticks:idle": {
+            "maximum": 1682,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "host_ticks:iowait": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "host_ticks:irq": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "host_ticks:nice": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "host_ticks:softirq": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "host_ticks:steal": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "host_ticks:system": {
+            "maximum": 7,
+            "median": 2,
+            "minimum": 1,
+            "n": 21
+          },
+          "host_ticks:user": {
+            "maximum": 2000,
+            "median": 1998,
+            "minimum": 317,
+            "n": 21
+          },
+          "root_minus_system_cpu_usec": {
+            "maximum": 21038,
+            "median": 947,
+            "minimum": -18031,
+            "n": 21
+          },
+          "root_minus_three_named_children_cpu_usec": {
+            "maximum": 21038,
+            "median": 947,
+            "minimum": -18031,
+            "n": 21
+          },
+          "scope_cpu_usec:/": {
+            "maximum": 20020000,
+            "median": 20000000,
+            "minimum": 3201000,
+            "n": 21
+          },
+          "scope_cpu_usec:/init.scope": {
+            "maximum": 2396,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "scope_cpu_usec:/system.slice": {
+            "maximum": 20019440,
+            "median": 19998876,
+            "minimum": 3206905,
+            "n": 21
+          },
+          "scope_cpu_usec:/user.slice": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "scope_enclosing_window_s:/": {
+            "maximum": 1.008090449,
+            "median": 1.000001235,
+            "minimum": 0.996724703,
+            "n": 21
+          },
+          "scope_enclosing_window_s:/init.scope": {
+            "maximum": 1.008107585,
+            "median": 1.000001267,
+            "minimum": 0.996704495,
+            "n": 21
+          },
+          "scope_enclosing_window_s:/system.slice": {
+            "maximum": 1.008112913,
+            "median": 1.000017795,
+            "minimum": 0.996738159,
+            "n": 21
+          },
+          "scope_enclosing_window_s:/user.slice": {
+            "maximum": 1.008119633,
+            "median": 1.000001795,
+            "minimum": 0.996715231,
+            "n": 21
+          }
+        },
+        "intervals": 21,
+        "narrow_flags": 0,
+        "original_flags": 0,
+        "root_membership_changes": 0
+      },
+      "block": 0,
+      "common": {
+        "distributions": {
+          "host_enclosing_window_s": {
+            "maximum": 1.0005332,
+            "median": 1.000254899,
+            "minimum": 0.997047423,
+            "n": 19
+          },
+          "host_ticks:guest": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "host_ticks:guest_nice": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "host_ticks:idle": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "host_ticks:iowait": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "host_ticks:irq": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "host_ticks:nice": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "host_ticks:softirq": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "host_ticks:steal": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "host_ticks:system": {
+            "maximum": 3,
+            "median": 2,
+            "minimum": 1,
+            "n": 19
+          },
+          "host_ticks:user": {
+            "maximum": 2000,
+            "median": 1998,
+            "minimum": 1992,
+            "n": 19
+          },
+          "root_minus_system_cpu_usec": {
+            "maximum": 21038,
+            "median": 947,
+            "minimum": -18031,
+            "n": 19
+          },
+          "root_minus_three_named_children_cpu_usec": {
+            "maximum": 21038,
+            "median": 947,
+            "minimum": -18031,
+            "n": 19
+          },
+          "scope_cpu_usec:/": {
+            "maximum": 20020000,
+            "median": 20000000,
+            "minimum": 19920000,
+            "n": 19
+          },
+          "scope_cpu_usec:/init.scope": {
+            "maximum": 2396,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "scope_cpu_usec:/system.slice": {
+            "maximum": 20019440,
+            "median": 19999053,
+            "minimum": 19917375,
+            "n": 19
+          },
+          "scope_cpu_usec:/user.slice": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "scope_enclosing_window_s:/": {
+            "maximum": 1.000269312,
+            "median": 0.999999714,
+            "minimum": 0.996724703,
+            "n": 19
+          },
+          "scope_enclosing_window_s:/init.scope": {
+            "maximum": 1.00027256,
+            "median": 0.999996482,
+            "minimum": 0.996704495,
+            "n": 19
+          },
+          "scope_enclosing_window_s:/system.slice": {
+            "maximum": 1.00028696,
+            "median": 1.000013794,
+            "minimum": 0.996738159,
+            "n": 19
+          },
+          "scope_enclosing_window_s:/user.slice": {
+            "maximum": 1.00027112,
+            "median": 0.999997154,
+            "minimum": 0.996715231,
+            "n": 19
+          }
+        },
+        "intervals": 19,
+        "narrow_flags": 0,
+        "original_flags": 0,
+        "root_membership_changes": 0
+      },
+      "common_interval_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "enclosing_user_cpu_s": 0.0,
+      "index": 1,
+      "intervals": [
+        {
+          "index": 0,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.008450002,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 309,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 7,
+            "host_ticks:user": 1702,
+            "root_minus_system_cpu_usec": 16166,
+            "root_minus_three_named_children_cpu_usec": 16166,
+            "scope_cpu_usec:/": 17089000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 17072834,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.008090449,
+            "scope_enclosing_window_s:/init.scope": 1.008107585,
+            "scope_enclosing_window_s:/system.slice": 1.008112913,
+            "scope_enclosing_window_s:/user.slice": 1.008119633
+          }
+        },
+        {
+          "index": 1,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 0.997047423,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 3,
+            "host_ticks:user": 1992,
+            "root_minus_system_cpu_usec": 2625,
+            "root_minus_three_named_children_cpu_usec": 2625,
+            "scope_cpu_usec:/": 19920000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19917375,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 0.996724703,
+            "scope_enclosing_window_s:/init.scope": 0.996704495,
+            "scope_enclosing_window_s:/system.slice": 0.996738159,
+            "scope_enclosing_window_s:/user.slice": 0.996715231
+          }
+        },
+        {
+          "index": 2,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000148799,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1,
+            "host_ticks:user": 1998,
+            "root_minus_system_cpu_usec": 1124,
+            "root_minus_three_named_children_cpu_usec": 1124,
+            "scope_cpu_usec:/": 20000000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19998876,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 0.999892719,
+            "scope_enclosing_window_s:/init.scope": 0.999895711,
+            "scope_enclosing_window_s:/system.slice": 0.999909999,
+            "scope_enclosing_window_s:/user.slice": 0.999896191
+          }
+        },
+        {
+          "index": 3,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000308992,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 3,
+            "host_ticks:user": 1998,
+            "root_minus_system_cpu_usec": 927,
+            "root_minus_three_named_children_cpu_usec": 927,
+            "scope_cpu_usec:/": 20000000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19999073,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.00005104,
+            "scope_enclosing_window_s:/init.scope": 1.00005096,
+            "scope_enclosing_window_s:/system.slice": 1.000067792,
+            "scope_enclosing_window_s:/user.slice": 1.000050896
+          }
+        },
+        {
+          "index": 4,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000192016,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 2,
+            "host_ticks:user": 1997,
+            "root_minus_system_cpu_usec": 3886,
+            "root_minus_three_named_children_cpu_usec": 3886,
+            "scope_cpu_usec:/": 20000000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19996114,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 0.99994072,
+            "scope_enclosing_window_s:/init.scope": 0.999938016,
+            "scope_enclosing_window_s:/system.slice": 0.999956848,
+            "scope_enclosing_window_s:/user.slice": 0.999939472
+          }
+        },
+        {
+          "index": 5,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.0005332,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 3,
+            "host_ticks:user": 2000,
+            "root_minus_system_cpu_usec": 7431,
+            "root_minus_three_named_children_cpu_usec": 5035,
+            "scope_cpu_usec:/": 20000000,
+            "scope_cpu_usec:/init.scope": 2396,
+            "scope_cpu_usec:/system.slice": 19992569,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.000269312,
+            "scope_enclosing_window_s:/init.scope": 1.00027256,
+            "scope_enclosing_window_s:/system.slice": 1.00028696,
+            "scope_enclosing_window_s:/user.slice": 1.00027112
+          }
+        },
+        {
+          "index": 6,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000390097,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 2,
+            "host_ticks:user": 2000,
+            "root_minus_system_cpu_usec": -18031,
+            "root_minus_three_named_children_cpu_usec": -18031,
+            "scope_cpu_usec:/": 20000000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 20018031,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.000123777,
+            "scope_enclosing_window_s:/init.scope": 1.000129505,
+            "scope_enclosing_window_s:/system.slice": 1.000144305,
+            "scope_enclosing_window_s:/user.slice": 1.000129393
+          }
+        },
+        {
+          "index": 7,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000035409,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 2,
+            "host_ticks:user": 1998,
+            "root_minus_system_cpu_usec": 21038,
+            "root_minus_three_named_children_cpu_usec": 21038,
+            "scope_cpu_usec:/": 20000000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19978962,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 0.999774993,
+            "scope_enclosing_window_s:/init.scope": 0.999768049,
+            "scope_enclosing_window_s:/system.slice": 0.999790241,
+            "scope_enclosing_window_s:/user.slice": 0.999769681
+          }
+        },
+        {
+          "index": 8,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000501969,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 2,
+            "host_ticks:user": 1999,
+            "root_minus_system_cpu_usec": 947,
+            "root_minus_three_named_children_cpu_usec": 947,
+            "scope_cpu_usec:/": 20000000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19999053,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.000226785,
+            "scope_enclosing_window_s:/init.scope": 1.000239617,
+            "scope_enclosing_window_s:/system.slice": 1.000255393,
+            "scope_enclosing_window_s:/user.slice": 1.000240465
+          }
+        },
+        {
+          "index": 9,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000392162,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 3,
+            "host_ticks:user": 2000,
+            "root_minus_system_cpu_usec": 560,
+            "root_minus_three_named_children_cpu_usec": 560,
+            "scope_cpu_usec:/": 20020000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 20019440,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.000133826,
+            "scope_enclosing_window_s:/init.scope": 1.000117602,
+            "scope_enclosing_window_s:/system.slice": 1.000148402,
+            "scope_enclosing_window_s:/user.slice": 1.000119442
+          }
+        },
+        {
+          "index": 10,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 0.999984898,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 2,
+            "host_ticks:user": 1997,
+            "root_minus_system_cpu_usec": 8640,
+            "root_minus_three_named_children_cpu_usec": 8640,
+            "scope_cpu_usec:/": 19980000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19971360,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 0.999724882,
+            "scope_enclosing_window_s:/init.scope": 0.999724466,
+            "scope_enclosing_window_s:/system.slice": 0.999739538,
+            "scope_enclosing_window_s:/user.slice": 0.999724274
+          }
+        },
+        {
+          "index": 11,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000155826,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 3,
+            "host_ticks:user": 1997,
+            "root_minus_system_cpu_usec": 371,
+            "root_minus_three_named_children_cpu_usec": 371,
+            "scope_cpu_usec:/": 20000000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19999629,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 0.999882258,
+            "scope_enclosing_window_s:/init.scope": 0.999884226,
+            "scope_enclosing_window_s:/system.slice": 0.999898482,
+            "scope_enclosing_window_s:/user.slice": 0.999883714
+          }
+        },
+        {
+          "index": 12,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000256419,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 2,
+            "host_ticks:user": 1999,
+            "root_minus_system_cpu_usec": 1549,
+            "root_minus_three_named_children_cpu_usec": 1549,
+            "scope_cpu_usec:/": 20000000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19998451,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 0.999999714,
+            "scope_enclosing_window_s:/init.scope": 0.999996482,
+            "scope_enclosing_window_s:/system.slice": 1.000013794,
+            "scope_enclosing_window_s:/user.slice": 0.999997154
+          }
+        },
+        {
+          "index": 13,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000325171,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 2,
+            "host_ticks:user": 1997,
+            "root_minus_system_cpu_usec": 1244,
+            "root_minus_three_named_children_cpu_usec": 1244,
+            "scope_cpu_usec:/": 20000000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19998756,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.000071139,
+            "scope_enclosing_window_s:/init.scope": 1.000072739,
+            "scope_enclosing_window_s:/system.slice": 1.000087027,
+            "scope_enclosing_window_s:/user.slice": 1.000072931
+          }
+        },
+        {
+          "index": 14,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000254899,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 3,
+            "host_ticks:user": 1998,
+            "root_minus_system_cpu_usec": 1394,
+            "root_minus_three_named_children_cpu_usec": 1394,
+            "scope_cpu_usec:/": 20000000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19998606,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.000001235,
+            "scope_enclosing_window_s:/init.scope": 1.000001267,
+            "scope_enclosing_window_s:/system.slice": 1.000017795,
+            "scope_enclosing_window_s:/user.slice": 1.000001795
+          }
+        },
+        {
+          "index": 15,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000240292,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 3,
+            "host_ticks:user": 1997,
+            "root_minus_system_cpu_usec": 861,
+            "root_minus_three_named_children_cpu_usec": 861,
+            "scope_cpu_usec:/": 20000000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19999139,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 0.999987796,
+            "scope_enclosing_window_s:/init.scope": 0.999986964,
+            "scope_enclosing_window_s:/system.slice": 1.000003492,
+            "scope_enclosing_window_s:/user.slice": 0.999987012
+          }
+        },
+        {
+          "index": 16,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000350036,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 2,
+            "host_ticks:user": 1997,
+            "root_minus_system_cpu_usec": 778,
+            "root_minus_three_named_children_cpu_usec": 778,
+            "scope_cpu_usec:/": 20000000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19999222,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.000096452,
+            "scope_enclosing_window_s:/init.scope": 1.000096452,
+            "scope_enclosing_window_s:/system.slice": 1.000111476,
+            "scope_enclosing_window_s:/user.slice": 1.000096516
+          }
+        },
+        {
+          "index": 17,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000174532,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 2,
+            "host_ticks:user": 1998,
+            "root_minus_system_cpu_usec": 191,
+            "root_minus_three_named_children_cpu_usec": 191,
+            "scope_cpu_usec:/": 20000000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19999809,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 0.99991722,
+            "scope_enclosing_window_s:/init.scope": 0.999916452,
+            "scope_enclosing_window_s:/system.slice": 0.999931684,
+            "scope_enclosing_window_s:/user.slice": 0.999916404
+          }
+        },
+        {
+          "index": 18,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000324196,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 2,
+            "host_ticks:user": 1998,
+            "root_minus_system_cpu_usec": 461,
+            "root_minus_three_named_children_cpu_usec": 461,
+            "scope_cpu_usec:/": 20000000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19999539,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.000065012,
+            "scope_enclosing_window_s:/init.scope": 1.000067988,
+            "scope_enclosing_window_s:/system.slice": 1.000082404,
+            "scope_enclosing_window_s:/user.slice": 1.0000677
+          }
+        },
+        {
+          "index": 19,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000209573,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 3,
+            "host_ticks:user": 1997,
+            "root_minus_system_cpu_usec": 519,
+            "root_minus_three_named_children_cpu_usec": 519,
+            "scope_cpu_usec:/": 20000000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19999481,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 0.999948053,
+            "scope_enclosing_window_s:/init.scope": 0.999946213,
+            "scope_enclosing_window_s:/system.slice": 0.999962933,
+            "scope_enclosing_window_s:/user.slice": 0.999945653
+          }
+        },
+        {
+          "index": 20,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.001583254,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 1682,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 3,
+            "host_ticks:user": 317,
+            "root_minus_system_cpu_usec": -5905,
+            "root_minus_three_named_children_cpu_usec": -5905,
+            "scope_cpu_usec:/": 3201000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 3206905,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.001320245,
+            "scope_enclosing_window_s:/init.scope": 1.001316197,
+            "scope_enclosing_window_s:/system.slice": 1.001320933,
+            "scope_enclosing_window_s:/user.slice": 1.001311413
+          }
+        }
+      ],
+      "mode": "steady",
+      "positive_control_response": null,
+      "status": "validated"
+    },
+    {
+      "all": {
+        "distributions": {
+          "host_enclosing_window_s": {
+            "maximum": 1.006238231,
+            "median": 1.000473643,
+            "minimum": 0.998918681,
+            "n": 21
+          },
+          "host_ticks:guest": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "host_ticks:guest_nice": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "host_ticks:idle": {
+            "maximum": 1696,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "host_ticks:iowait": {
+            "maximum": 1,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "host_ticks:irq": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "host_ticks:nice": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "host_ticks:softirq": {
+            "maximum": 1,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "host_ticks:steal": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "host_ticks:system": {
+            "maximum": 1955,
+            "median": 1952,
+            "minimum": 294,
+            "n": 21
+          },
+          "host_ticks:user": {
+            "maximum": 52,
+            "median": 49,
+            "minimum": 9,
+            "n": 21
+          },
+          "root_minus_system_cpu_usec": {
+            "maximum": 74798,
+            "median": 63451,
+            "minimum": 137,
+            "n": 21
+          },
+          "root_minus_three_named_children_cpu_usec": {
+            "maximum": 74798,
+            "median": 63451,
+            "minimum": 137,
+            "n": 21
+          },
+          "scope_cpu_usec:/": {
+            "maximum": 20020000,
+            "median": 19999000,
+            "minimum": 3025000,
+            "n": 21
+          },
+          "scope_cpu_usec:/init.scope": {
+            "maximum": 148,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "scope_cpu_usec:/system.slice": {
+            "maximum": 19961971,
+            "median": 19934549,
+            "minimum": 3024863,
+            "n": 21
+          },
+          "scope_cpu_usec:/user.slice": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 21
+          },
+          "scope_enclosing_window_s:/": {
+            "maximum": 1.005863751,
+            "median": 1.000087482,
+            "minimum": 0.998515963,
+            "n": 21
+          },
+          "scope_enclosing_window_s:/init.scope": {
+            "maximum": 1.005883991,
+            "median": 1.00009041,
+            "minimum": 0.998502363,
+            "n": 21
+          },
+          "scope_enclosing_window_s:/system.slice": {
+            "maximum": 1.005896599,
+            "median": 1.00011873,
+            "minimum": 0.998542763,
+            "n": 21
+          },
+          "scope_enclosing_window_s:/user.slice": {
+            "maximum": 1.005898551,
+            "median": 1.000090138,
+            "minimum": 0.998502843,
+            "n": 21
+          }
+        },
+        "intervals": 21,
+        "narrow_flags": 0,
+        "original_flags": 0,
+        "root_membership_changes": 0
+      },
+      "block": 0,
+      "common": {
+        "distributions": {
+          "host_enclosing_window_s": {
+            "maximum": 1.001870956,
+            "median": 1.000409639,
+            "minimum": 0.998918681,
+            "n": 19
+          },
+          "host_ticks:guest": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "host_ticks:guest_nice": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "host_ticks:idle": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "host_ticks:iowait": {
+            "maximum": 1,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "host_ticks:irq": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "host_ticks:nice": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "host_ticks:softirq": {
+            "maximum": 1,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "host_ticks:steal": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "host_ticks:system": {
+            "maximum": 1955,
+            "median": 1952,
+            "minimum": 1947,
+            "n": 19
+          },
+          "host_ticks:user": {
+            "maximum": 52,
+            "median": 49,
+            "minimum": 44,
+            "n": 19
+          },
+          "root_minus_system_cpu_usec": {
+            "maximum": 74798,
+            "median": 63483,
+            "minimum": 57029,
+            "n": 19
+          },
+          "root_minus_three_named_children_cpu_usec": {
+            "maximum": 74798,
+            "median": 63483,
+            "minimum": 57029,
+            "n": 19
+          },
+          "scope_cpu_usec:/": {
+            "maximum": 20020000,
+            "median": 20000000,
+            "minimum": 19978000,
+            "n": 19
+          },
+          "scope_cpu_usec:/init.scope": {
+            "maximum": 148,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "scope_cpu_usec:/system.slice": {
+            "maximum": 19961971,
+            "median": 19935183,
+            "minimum": 19904202,
+            "n": 19
+          },
+          "scope_cpu_usec:/user.slice": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0,
+            "n": 19
+          },
+          "scope_enclosing_window_s:/": {
+            "maximum": 1.001458939,
+            "median": 1.000023815,
+            "minimum": 0.998515963,
+            "n": 19
+          },
+          "scope_enclosing_window_s:/init.scope": {
+            "maximum": 1.001477755,
+            "median": 1.000029975,
+            "minimum": 0.998502363,
+            "n": 19
+          },
+          "scope_enclosing_window_s:/system.slice": {
+            "maximum": 1.001507499,
+            "median": 1.000055303,
+            "minimum": 0.998542763,
+            "n": 19
+          },
+          "scope_enclosing_window_s:/user.slice": {
+            "maximum": 1.001478331,
+            "median": 1.000029511,
+            "minimum": 0.998502843,
+            "n": 19
+          }
+        },
+        "intervals": 19,
+        "narrow_flags": 0,
+        "original_flags": 0,
+        "root_membership_changes": 0
+      },
+      "common_interval_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "enclosing_user_cpu_s": 0.0,
+      "index": 2,
+      "intervals": [
+        {
+          "index": 0,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.006238231,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 291,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1669,
+            "host_ticks:user": 51,
+            "root_minus_system_cpu_usec": 50295,
+            "root_minus_three_named_children_cpu_usec": 50295,
+            "scope_cpu_usec:/": 17200000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 17149705,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.005863751,
+            "scope_enclosing_window_s:/init.scope": 1.005883991,
+            "scope_enclosing_window_s:/system.slice": 1.005896599,
+            "scope_enclosing_window_s:/user.slice": 1.005898551
+          }
+        },
+        {
+          "index": 1,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 0.999933621,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1952,
+            "host_ticks:user": 49,
+            "root_minus_system_cpu_usec": 69001,
+            "root_minus_three_named_children_cpu_usec": 69001,
+            "scope_cpu_usec:/": 20000000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19930999,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 0.999540133,
+            "scope_enclosing_window_s:/init.scope": 0.999545253,
+            "scope_enclosing_window_s:/system.slice": 0.999570965,
+            "scope_enclosing_window_s:/user.slice": 0.999545573
+          }
+        },
+        {
+          "index": 2,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000495286,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1955,
+            "host_ticks:user": 44,
+            "root_minus_system_cpu_usec": 64704,
+            "root_minus_three_named_children_cpu_usec": 64556,
+            "scope_cpu_usec:/": 20000000,
+            "scope_cpu_usec:/init.scope": 148,
+            "scope_cpu_usec:/system.slice": 19935296,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.000131222,
+            "scope_enclosing_window_s:/init.scope": 1.000129174,
+            "scope_enclosing_window_s:/system.slice": 1.000160134,
+            "scope_enclosing_window_s:/user.slice": 1.000131686
+          }
+        },
+        {
+          "index": 3,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000533671,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1950,
+            "host_ticks:user": 50,
+            "root_minus_system_cpu_usec": 68764,
+            "root_minus_three_named_children_cpu_usec": 68764,
+            "scope_cpu_usec:/": 19999000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19930236,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.000153911,
+            "scope_enclosing_window_s:/init.scope": 1.000157031,
+            "scope_enclosing_window_s:/system.slice": 1.000184375,
+            "scope_enclosing_window_s:/user.slice": 1.000157607
+          }
+        },
+        {
+          "index": 4,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.001232998,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1952,
+            "host_ticks:user": 51,
+            "root_minus_system_cpu_usec": 63108,
+            "root_minus_three_named_children_cpu_usec": 63108,
+            "scope_cpu_usec:/": 20019000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19955892,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.000860966,
+            "scope_enclosing_window_s:/init.scope": 1.000865078,
+            "scope_enclosing_window_s:/system.slice": 1.00089279,
+            "scope_enclosing_window_s:/user.slice": 1.00086511
+          }
+        },
+        {
+          "index": 5,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 0.999426375,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1949,
+            "host_ticks:user": 48,
+            "root_minus_system_cpu_usec": 59828,
+            "root_minus_three_named_children_cpu_usec": 59828,
+            "scope_cpu_usec:/": 19980000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19920172,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 0.999059623,
+            "scope_enclosing_window_s:/init.scope": 0.999056935,
+            "scope_enclosing_window_s:/system.slice": 0.999086743,
+            "scope_enclosing_window_s:/user.slice": 0.999057431
+          }
+        },
+        {
+          "index": 6,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000409639,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1954,
+            "host_ticks:user": 46,
+            "root_minus_system_cpu_usec": 63451,
+            "root_minus_three_named_children_cpu_usec": 63451,
+            "scope_cpu_usec:/": 19998000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19934549,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.000023815,
+            "scope_enclosing_window_s:/init.scope": 1.000029975,
+            "scope_enclosing_window_s:/system.slice": 1.000055303,
+            "scope_enclosing_window_s:/user.slice": 1.000029511
+          }
+        },
+        {
+          "index": 7,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000951496,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 1,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1955,
+            "host_ticks:user": 46,
+            "root_minus_system_cpu_usec": 64973,
+            "root_minus_three_named_children_cpu_usec": 64973,
+            "scope_cpu_usec:/": 20020000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19955027,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.000580088,
+            "scope_enclosing_window_s:/init.scope": 1.000578744,
+            "scope_enclosing_window_s:/system.slice": 1.000609032,
+            "scope_enclosing_window_s:/user.slice": 1.000579224
+          }
+        },
+        {
+          "index": 8,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 0.999841,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1952,
+            "host_ticks:user": 47,
+            "root_minus_system_cpu_usec": 63483,
+            "root_minus_three_named_children_cpu_usec": 63483,
+            "scope_cpu_usec:/": 19980000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19916517,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 0.999452007,
+            "scope_enclosing_window_s:/init.scope": 0.999449591,
+            "scope_enclosing_window_s:/system.slice": 0.999477703,
+            "scope_enclosing_window_s:/user.slice": 0.999450151
+          }
+        },
+        {
+          "index": 9,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000303544,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1949,
+            "host_ticks:user": 52,
+            "root_minus_system_cpu_usec": 58942,
+            "root_minus_three_named_children_cpu_usec": 58942,
+            "scope_cpu_usec:/": 19999000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19940058,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 0.999933592,
+            "scope_enclosing_window_s:/init.scope": 0.999937144,
+            "scope_enclosing_window_s:/system.slice": 0.999961752,
+            "scope_enclosing_window_s:/user.slice": 0.999936952
+          }
+        },
+        {
+          "index": 10,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000779561,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 1,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1949,
+            "host_ticks:user": 51,
+            "root_minus_system_cpu_usec": 59556,
+            "root_minus_three_named_children_cpu_usec": 59556,
+            "scope_cpu_usec:/": 20000000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19940444,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.000395,
+            "scope_enclosing_window_s:/init.scope": 1.000404361,
+            "scope_enclosing_window_s:/system.slice": 1.000430616,
+            "scope_enclosing_window_s:/user.slice": 1.000404313
+          }
+        },
+        {
+          "index": 11,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.001605577,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1954,
+            "host_ticks:user": 50,
+            "root_minus_system_cpu_usec": 61436,
+            "root_minus_three_named_children_cpu_usec": 61436,
+            "scope_cpu_usec:/": 20018000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19956564,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.001137753,
+            "scope_enclosing_window_s:/init.scope": 1.001190264,
+            "scope_enclosing_window_s:/system.slice": 1.001167801,
+            "scope_enclosing_window_s:/user.slice": 1.001135816
+          }
+        },
+        {
+          "index": 12,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 0.998918681,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1947,
+            "host_ticks:user": 50,
+            "root_minus_system_cpu_usec": 69470,
+            "root_minus_three_named_children_cpu_usec": 69470,
+            "scope_cpu_usec:/": 19980000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19910530,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 0.998557177,
+            "scope_enclosing_window_s:/init.scope": 0.998554569,
+            "scope_enclosing_window_s:/system.slice": 0.998584217,
+            "scope_enclosing_window_s:/user.slice": 0.998556025
+          }
+        },
+        {
+          "index": 13,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000319017,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1954,
+            "host_ticks:user": 46,
+            "root_minus_system_cpu_usec": 60811,
+            "root_minus_three_named_children_cpu_usec": 60811,
+            "scope_cpu_usec:/": 20000000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19939189,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 0.999955177,
+            "scope_enclosing_window_s:/init.scope": 0.999958953,
+            "scope_enclosing_window_s:/system.slice": 0.999984521,
+            "scope_enclosing_window_s:/user.slice": 0.999959849
+          }
+        },
+        {
+          "index": 14,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000372265,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1954,
+            "host_ticks:user": 46,
+            "root_minus_system_cpu_usec": 65434,
+            "root_minus_three_named_children_cpu_usec": 65434,
+            "scope_cpu_usec:/": 19997000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19931566,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.000005049,
+            "scope_enclosing_window_s:/init.scope": 1.000007609,
+            "scope_enclosing_window_s:/system.slice": 1.000035577,
+            "scope_enclosing_window_s:/user.slice": 1.000008393
+          }
+        },
+        {
+          "index": 15,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.00100049,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1953,
+            "host_ticks:user": 49,
+            "root_minus_system_cpu_usec": 65871,
+            "root_minus_three_named_children_cpu_usec": 65871,
+            "scope_cpu_usec:/": 20019000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19953129,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.000630874,
+            "scope_enclosing_window_s:/init.scope": 1.00063377,
+            "scope_enclosing_window_s:/system.slice": 1.000660986,
+            "scope_enclosing_window_s:/user.slice": 1.000634058
+          }
+        },
+        {
+          "index": 16,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 0.99978537,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1950,
+            "host_ticks:user": 50,
+            "root_minus_system_cpu_usec": 59301,
+            "root_minus_three_named_children_cpu_usec": 59301,
+            "scope_cpu_usec:/": 19978000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19918699,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 0.999420282,
+            "scope_enclosing_window_s:/init.scope": 0.99941945,
+            "scope_enclosing_window_s:/system.slice": 0.999448186,
+            "scope_enclosing_window_s:/user.slice": 0.999420586
+          }
+        },
+        {
+          "index": 17,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000473643,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1949,
+            "host_ticks:user": 51,
+            "root_minus_system_cpu_usec": 64817,
+            "root_minus_three_named_children_cpu_usec": 64817,
+            "scope_cpu_usec:/": 20000000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19935183,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.000087482,
+            "scope_enclosing_window_s:/init.scope": 1.00009041,
+            "scope_enclosing_window_s:/system.slice": 1.00011873,
+            "scope_enclosing_window_s:/user.slice": 1.000090138
+          }
+        },
+        {
+          "index": 18,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.001870956,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1954,
+            "host_ticks:user": 50,
+            "root_minus_system_cpu_usec": 57029,
+            "root_minus_three_named_children_cpu_usec": 57029,
+            "scope_cpu_usec:/": 20019000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19961971,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.001458939,
+            "scope_enclosing_window_s:/init.scope": 1.001477755,
+            "scope_enclosing_window_s:/system.slice": 1.001507499,
+            "scope_enclosing_window_s:/user.slice": 1.001478331
+          }
+        },
+        {
+          "index": 19,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 0.998920539,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 0,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 1949,
+            "host_ticks:user": 49,
+            "root_minus_system_cpu_usec": 74798,
+            "root_minus_three_named_children_cpu_usec": 74798,
+            "scope_cpu_usec:/": 19979000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 19904202,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 0.998515963,
+            "scope_enclosing_window_s:/init.scope": 0.998502363,
+            "scope_enclosing_window_s:/system.slice": 0.998542763,
+            "scope_enclosing_window_s:/user.slice": 0.998502843
+          }
+        },
+        {
+          "index": 20,
+          "narrow_flagged": false,
+          "original_flagged": false,
+          "root_membership_changed": false,
+          "ticks": 100,
+          "values": {
+            "host_enclosing_window_s": 1.000810171,
+            "host_ticks:guest": 0,
+            "host_ticks:guest_nice": 0,
+            "host_ticks:idle": 1696,
+            "host_ticks:iowait": 0,
+            "host_ticks:irq": 0,
+            "host_ticks:nice": 0,
+            "host_ticks:softirq": 0,
+            "host_ticks:steal": 0,
+            "host_ticks:system": 294,
+            "host_ticks:user": 9,
+            "root_minus_system_cpu_usec": 137,
+            "root_minus_three_named_children_cpu_usec": 137,
+            "scope_cpu_usec:/": 3025000,
+            "scope_cpu_usec:/init.scope": 0,
+            "scope_cpu_usec:/system.slice": 3024863,
+            "scope_cpu_usec:/user.slice": 0,
+            "scope_enclosing_window_s:/": 1.000474059,
+            "scope_enclosing_window_s:/init.scope": 1.000440107,
+            "scope_enclosing_window_s:/system.slice": 1.000474059,
+            "scope_enclosing_window_s:/user.slice": 1.000447883
+          }
+        }
+      ],
+      "mode": "churn",
+      "positive_control_response": null,
+      "status": "validated"
+    },
+    {
+      "all": null,
+      "block": 0,
+      "common": null,
+      "index": 3,
+      "mode": "user-contended",
+      "retained": {
+        "block": 0,
+        "error": "Native control command failed",
+        "error_type": "ValueError",
+        "index": 3,
+        "job_id": 22019,
+        "mode": "user-contended",
+        "scientific_timings_admitted": false,
+        "status": "failed"
+      },
+      "status": "retained_failure"
+    },
+    {
+      "all": null,
+      "block": 1,
+      "common": null,
+      "index": 4,
+      "mode": "steady",
+      "retained": {
+        "block": 1,
+        "failed_index": 3,
+        "index": 4,
+        "job_id": 22019,
+        "mode": "steady",
+        "scientific_timings_admitted": false,
+        "status": "not_run_after_failure"
+      },
+      "status": "retained_unrun"
+    },
+    {
+      "all": null,
+      "block": 1,
+      "common": null,
+      "index": 5,
+      "mode": "user-contended",
+      "retained": {
+        "block": 1,
+        "failed_index": 3,
+        "index": 5,
+        "job_id": 22019,
+        "mode": "user-contended",
+        "scientific_timings_admitted": false,
+        "status": "not_run_after_failure"
+      },
+      "status": "retained_unrun"
+    },
+    {
+      "all": null,
+      "block": 1,
+      "common": null,
+      "index": 6,
+      "mode": "idle",
+      "retained": {
+        "block": 1,
+        "failed_index": 3,
+        "index": 6,
+        "job_id": 22019,
+        "mode": "idle",
+        "scientific_timings_admitted": false,
+        "status": "not_run_after_failure"
+      },
+      "status": "retained_unrun"
+    },
+    {
+      "all": null,
+      "block": 1,
+      "common": null,
+      "index": 7,
+      "mode": "churn",
+      "retained": {
+        "block": 1,
+        "failed_index": 3,
+        "index": 7,
+        "job_id": 22019,
+        "mode": "churn",
+        "scientific_timings_admitted": false,
+        "status": "not_run_after_failure"
+      },
+      "status": "retained_unrun"
+    },
+    {
+      "all": null,
+      "block": 2,
+      "common": null,
+      "index": 8,
+      "mode": "churn",
+      "retained": {
+        "block": 2,
+        "failed_index": 3,
+        "index": 8,
+        "job_id": 22019,
+        "mode": "churn",
+        "scientific_timings_admitted": false,
+        "status": "not_run_after_failure"
+      },
+      "status": "retained_unrun"
+    },
+    {
+      "all": null,
+      "block": 2,
+      "common": null,
+      "index": 9,
+      "mode": "idle",
+      "retained": {
+        "block": 2,
+        "failed_index": 3,
+        "index": 9,
+        "job_id": 22019,
+        "mode": "idle",
+        "scientific_timings_admitted": false,
+        "status": "not_run_after_failure"
+      },
+      "status": "retained_unrun"
+    },
+    {
+      "all": null,
+      "block": 2,
+      "common": null,
+      "index": 10,
+      "mode": "user-contended",
+      "retained": {
+        "block": 2,
+        "failed_index": 3,
+        "index": 10,
+        "job_id": 22019,
+        "mode": "user-contended",
+        "scientific_timings_admitted": false,
+        "status": "not_run_after_failure"
+      },
+      "status": "retained_unrun"
+    },
+    {
+      "all": null,
+      "block": 2,
+      "common": null,
+      "index": 11,
+      "mode": "steady",
+      "retained": {
+        "block": 2,
+        "failed_index": 3,
+        "index": 11,
+        "job_id": 22019,
+        "mode": "steady",
+        "scientific_timings_admitted": false,
+        "status": "not_run_after_failure"
+      },
+      "status": "retained_unrun"
+    }
+  ]
+}
