@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Integrated Regression Refresh (2026-09-19)
+
+Previous turn was a verified wait: the local scheduler showed21889advancing
+from task3to4while scientific inference stayed live. Reread the objective
+and revalidated those handles; did not restart them or classify them blocked.
+
+Ran the full unit suite at a174438 after the new panel auditor and plotter:
+5941passed,9skipped in122.66seconds. Native module CLI integration passed
+1test in6.87seconds. Raw JUnit hashes are retained in the
+[test refresh](PUBLICATION_TEST_REFRESH_20260918.md). No tracked executable
+or test sources changed during validation. Legacy opt-in checks retain their
+separate earlier evidence, not a new execution claim.
+
+Scientific and DGX jobs continue; analysis21894and21896dependencies are
+preserved. Controller-capture code already writes the scheduler filenames
+expected by the auditor. No remote log/file reads occurred, and no benchmark
+result, timing admission or publication-readiness claim follows from tests.
+
 ## Corrected Strata Figure Workflow Prepared (2026-09-19)
 
 Previous turn made progress throughb21bf7b by queuing primary-stratum

@@ -1,5 +1,35 @@
 # Publication Test Refresh
 
+## Current-Source Refresh At a174438
+
+Tested `a17443819695b6467783acf847cb3221a9eb54e9` on19September2026 after
+pressure-panel audit integration, analysis batch orchestration and the
+corrected-strata plotter. The full suite passed **5,941 tests**, with **9
+skips**, in122.66seconds. Native module CLI integration passed **1 test**
+in6.87seconds. Both retained JUnit files contain zero failures or errors.
+No tracked source/tool/test/build changes were present before or after
+execution; unrelated sample outputs were not reverted.
+
+```sh
+env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  /home/bizon/anaconda3/bin/python -m pytest tests/unit -q \
+  --junitxml=benchmarks/work/publication_unit_a174438_20260919.xml
+env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  /home/bizon/anaconda3/bin/python -m pytest -q tests/integration/test_module_cli.py \
+  --junitxml=benchmarks/work/publication_module_cli_a174438_20260919.xml
+```
+
+Raw JUnit SHA-256 values:
+
+- Unit: `badb8318b55745cfaffc87bd40daa20af1a0c458d400bb6dc7e763cc347fe8ec`
+- CLI: `21f4455a378d1d02fef67f12376a32d74ec52459ec41ac74d5897153afbce252`
+
+The nine legacy-runtime opt-in tests were not explicitly enabled in this
+refresh; their earlier9/9execution at c3a89a1 remains separate evidence.
+Testing ran locally onbizon with no DGX access. Passing tests do not admit
+the ongoing timing panel or unfinished QfO analyses, establish general
+portability/biological superiority, or complete publication requirements.
+
 ## Current-Source Refresh At c3a89a1
 
 Tested `c3a89a15562f15d07bfeb1c9506b703f11093be0` on 19 September 2026.
