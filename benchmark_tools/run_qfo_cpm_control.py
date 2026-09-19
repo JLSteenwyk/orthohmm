@@ -11,7 +11,7 @@ import time
 BASELINE_SHA = "1eec5ffb675fff234e5ce0db7e65abfa9bec09bdea8f5bd13ca72ad72d7ec40e"
 
 
-def worker(root):
+def worker(root, arm="control"):
     launcher = root / "benchmarks/work/publication_qfo_replay_native_v1"
     executor = Path(__file__).resolve().parent.parent
     sys.path[0] = str(launcher)
@@ -27,14 +27,14 @@ def worker(root):
     from validate_checked_replay_payload import validate
     plan_path = root / "benchmarks/work/qfo_corrected_replay_commands_20260918.json"
     plan, plan_record, _, _ = corrected_evidence(plan_path, REPLAY_SHA)
-    context = evidence(root, plan, plan_record, "control")
+    context = evidence(root, plan, plan_record, arm)
     output = Path(context["output_root"])
     original = externals.subprocess
     proxy = CheckedReplaySubprocess(original, root, output / "clustering",
         executor / "benchmark_tools/checked_replay_payload_worker.py",
         lambda payload, manifest: validate(payload, manifest, root, executor,
-            corrected_plan=plan_record, cpm_arm="control"),
-        worker_args=["--corrected-plan", str(plan_path), "--corrected-plan-sha256", REPLAY_SHA, "--cpm-arm", "control"])
+            corrected_plan=plan_record, cpm_arm=arm),
+        worker_args=["--corrected-plan", str(plan_path), "--corrected-plan-sha256", REPLAY_SHA, "--cpm-arm", arm])
     report = {"status": "running", "source": record(__file__), "context": context,
               "replay_source": record(replay.__file__), "calls": proxy.calls, "accuracy_evaluated": False}
     externals.subprocess = proxy

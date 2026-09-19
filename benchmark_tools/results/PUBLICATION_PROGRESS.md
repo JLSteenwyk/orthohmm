@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Gated CPM Variant Runner Implemented (2026-09-19)
+
+Previous turn was progress: independent control admission was tested,
+committed/pushed and queued as 21958. Current scheduler inspection confirms
+control/admission 21956/21958 remain pending, OrthoFinder assessment 21735_1
+is running (34:26), and its admission 21736 remains pending. DGX timing and
+OrthoMCL BLAST were confirmed live this turn; no DGX SSH was performed.
+
+Added the two prespecified CPM replay arms (0.08/0.12), with no adaptive
+grid or default change. Both require successful admission job 21958,
+pinned validator source/commit, exact control context/authorization and
+unchanged retained evidence. Before either inference run, the independently
+frozen validator must freshly reproduce the full control admission report.
+Changed inputs, failed validation and replay failures preserve evidence
+without implicit retries or overwrite. All four clustering/profile stages
+are rerun, with fixed scientific settings except CPM and output paths.
+
+The shared checked worker now accepts an explicit arm while retaining its
+control default. Existing queued control/admission executors are unchanged.
+The new worker entry avoids preloading the executor's benchmark package so
+that scientific imports resolve to the frozen launcher. Variant outputs
+remain pending separate admission, candidate building, phylogeny and scoring.
+Shared-host cached runtime is not controlled efficiency evidence.
+
+Validation: 253 focused tests passed in 12.76 seconds, covering scheduler
+and authorization gates, source/input changes, fresh admission disagreement,
+failure preservation, import isolation in a real subprocess, baseline
+behavior, stage audits and actual native payload validation. Batch requests
+two serial 32-CPU/192-GiB tasks, no requeue, afterok:21958.
+
 ## Independent CPM Control Admission Implemented (2026-09-19)
 
 Admission job 21958 is queued from pushed frozen commit 40806f5; confirmed
