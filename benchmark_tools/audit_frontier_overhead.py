@@ -10,6 +10,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from benchmark_tools.verify_frontier_overhead_provenance import load_context, verify, ROOT, panel_spec, PANELS
 from benchmark_tools.replay_frontier_overhead_measurement import replay
 from benchmark_tools.replay_dual_native_measurement import replay as replay_dual
+from benchmark_tools.replay_lineage_native_measurement import replay as replay_lineage
+from benchmark_tools.replay_lineage_boundary_measurement import replay as replay_lineage_boundary
 from benchmark_tools.fingerprint_native_overhead_outputs import fingerprint
 from benchmark_tools.validate_scaling_outputs import validate
 from benchmark_tools.validate_simulation_outputs import NativeOutputFailure
@@ -45,6 +47,17 @@ def recipe_evidence(archive, recipe, recipe_root="frontier_overhead_recipe_v1"):
 
 
 def replay_task(directory, task, job, command, spec):
+    if spec.get("lineage"):
+        if task["mode"] == "boundary":
+            result = replay_lineage_boundary(directory, job, command)
+            return dict(result, lineage_screening=result["screening"], narrow_flagged_intervals=None)
+        result = replay_lineage(directory, job, command)
+        screening = result["screening"]["original_screening"]
+        original = screening["original_threshold_screen"]
+        return dict(result, lineage_screening=result["screening"], screening=screening,
+                    interval_screening_available=True,
+                    whole_command_screen_passed=original["whole_command_screen"]["screen_passed"],
+                    flagged_intervals=original["flagged_intervals"])
     if spec.get("dual") and task["mode"] == "periodic":
         result = replay_dual(directory, job, command)
         screening = result["screening"]["original_screening"]
@@ -63,6 +76,8 @@ def successful_task(archive, context, index, scheduler):
     report = "boundary_report.json" if task["mode"] == "boundary" else "frontier_report.json"
     if spec.get("dual") and task["mode"] == "periodic":
         report = "dual_bracket_report.json"
+    if spec.get("lineage"):
+        report = "lineage_boundary_report.json" if task["mode"] == "boundary" else "lineage_report.json"
     paths = [directory / name for name in ("preparation.json", "verification.json", "overhead_task.json")]
     paths += [directory / "measurement" / report, archive / f"scheduler_{index}.txt"]
     evidence = [record(path) for path in paths]
@@ -91,8 +106,15 @@ def successful_task(archive, context, index, scheduler):
         native_counts={key: checked[key] for key in ("input_genes", "orthogroups", "root_hogs", "checkpoint_groups", "native_pair_rows") if key in checked},
         gnu_time=checked["gnu_time_companion"]["accounting"], memory=replayed["memory"],
         observation_points=len(measured["points"]), started_ns=native["started_ns"], finished_ns=native["finished_ns"],
-        boot_id=measured["points"][0]["frontier"]["boot_id"], scientific_timings_admitted=False)
-    if pressure:
+        boot_id=(measured["points"][0]["lineage"]["boot_before"] if spec.get("lineage")
+                 else measured["points"][0]["frontier"]["boot_id"]), scientific_timings_admitted=False)
+    if spec.get("lineage") and task["mode"] == "periodic":
+        lineage = replayed["lineage_screening"]
+        result["native_pressure"] = dict(
+            observation_window=lineage["observation_window"]["native_pressure"],
+            intervals=[item["native_pressure"] for item in lineage["intervals"]],
+            diagnostic_only=True, environmental_validity_established=False)
+    elif pressure:
         result["native_pressure"] = dict(
             whole_command=replayed["screening"]["native_pressure_whole_command"],
             intervals=replayed["screening"].get("native_pressure_intervals"),
@@ -100,6 +122,10 @@ def successful_task(archive, context, index, scheduler):
     if "dual_screening" in replayed:
         result["dual_screening"] = replayed["dual_screening"]
         result["narrow_flagged_intervals"] = replayed["narrow_flagged_intervals"]
+    if "lineage_screening" in replayed:
+        result["lineage_screening"] = replayed["lineage_screening"]
+        result["narrow_flagged_intervals"] = replayed["narrow_flagged_intervals"]
+        result["interval_screening_available"] = replayed["interval_screening_available"]
     return result
 
 
@@ -107,7 +133,8 @@ def failure_evidence(archive, task):
     directory = archive / Path(task["run"]["measurement_directory"]).parent.relative_to(ROOT)
     paths = [directory / name for name in ("preparation.json", "verification.json", "overhead_task.json", "native.time.tsv")]
     paths += [directory / "measurement" / name for name in (
-        "command.json", "done.json", "frontier_report.json", "dual_bracket_report.json", "boundary_report.json", "step_memory.json", "native.log", "step.log")]
+        "command.json", "done.json", "frontier_report.json", "dual_bracket_report.json", "boundary_report.json",
+        "lineage_report.json", "lineage_boundary_report.json", "failed_point.json", "step_memory.json", "native.log", "step.log")]
     paths.append(archive / f"scheduler_{task['index']}.txt")
     return [record(path) for path in paths if path.is_file()]
 
@@ -118,7 +145,7 @@ def audit(archive, results, accounting_path, *, panel="frontier_21838"):
     # This gate precedes even loading native archive metadata.
     scheduler = terminal_scheduler_rows(accounting_path.read_text(), spec["array_id"])
     detailed_scheduler = []
-    if spec.get("dual"):
+    if spec.get("dual") or spec.get("lineage"):
         for index in range(18):
             path = archive / f"scheduler_{index}.txt"
             detailed_scheduler.append(record(path))
@@ -171,7 +198,8 @@ def audit(archive, results, accounting_path, *, panel="frontier_21838"):
         helpers=[record(Path(__file__).with_name(name)) for name in (
             "verify_frontier_overhead_provenance.py", "replay_frontier_overhead_measurement.py",
             "fingerprint_native_overhead_outputs.py", "summarize_frontier_overhead.py", "validate_scaling_outputs.py",
-            "replay_dual_native_measurement.py", "capture_array_scheduler.py")],
+            "replay_dual_native_measurement.py", "capture_array_scheduler.py",
+            "replay_lineage_native_measurement.py", "replay_lineage_boundary_measurement.py")],
         scientific_timings_admitted=False, environmental_validity_established=False, publication_ready=False,
         limitations=["Every terminal task is retained; no selective retries, exclusions or overhead subtraction.",
             "Numerical budgets are separate from output equivalence, duration, temporal and screening checks.",

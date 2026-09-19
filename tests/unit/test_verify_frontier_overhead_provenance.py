@@ -36,6 +36,8 @@ def fixture(index, panel="frontier_21838"):
     collector = "measure_frontier_boundary_step.py" if task["mode"] == "boundary" else "measure_native_frontier_step.py"
     if spec.get("dual") and task["mode"] == "periodic":
         collector = "measure_native_dual_bracket_step.py"
+    if spec.get("lineage"):
+        collector = "measure_lineage_boundary_step.py" if task["mode"] == "boundary" else "measure_native_lineage_step.py"
     measured = dict(job_id=123, launched=["srun", "--exclusive", "--exact", "--nodes=1", "--ntasks=1", "--cpus-per-task=20",
         str(module.ROOT / "envs/orthohmm/bin/python"), "-B",
         str(module.ROOT / spec["recipe_root"] / "benchmark_tools" / collector), "--worker", run["measurement_directory"]])
@@ -45,7 +47,7 @@ def fixture(index, panel="frontier_21838"):
                     before_check_wall_s=1., after_check_wall_s=1.)
     receipt = dict(task=deepcopy(task), authorization=deepcopy(context["authorization"]),
                    authorization_sha256=spec["auth_sha"], plan_sha256=spec["plan_sha"], scientific_timings_admitted=False)
-    if spec.get("dual"):
+    if spec.get("dual") or spec.get("lineage"):
         receipt["recipe_sha256"] = spec["recipe_sha"]
     scheduler = (f"JobId=123 ArrayJobId={spec['array_id']} ArrayTaskId={index} JobState=COMPLETED ExitCode=0:0 Restarts=0 Requeue=0 "
                  "NodeList=spark-7ff0 OverSubscribe=NO MinMemoryNode=96G NumNodes=1 NumCPUs=20 CPUs/Task=20 "
@@ -122,8 +124,9 @@ def test_retained_completed_scheduler_record_matches_submission():
 
 
 @pytest.mark.parametrize("part", ["plan", "recipe", "authorization", "panel", "scheduler"])
-def test_cross_panel_records_rejected(part):
-    args = fixture(0, "pressure_21889")
+@pytest.mark.parametrize("panel", ["pressure_21889", "dual_21920", "lineage_21999"])
+def test_cross_panel_records_rejected(part, panel):
+    args = fixture(0, panel)
     old = fixture(0)
     if part == "scheduler":
         args[-1] = old[-1]
@@ -134,13 +137,14 @@ def test_cross_panel_records_rejected(part):
 
 
 @pytest.mark.parametrize("key", ["plan_file", "recipe_file", "auth_file"])
-def test_pressure_context_pins_input_bytes(tmp_path, key):
-    spec = module.panel_spec("pressure_21889")
+@pytest.mark.parametrize("panel", sorted(module.PANELS))
+def test_context_pins_input_bytes(tmp_path, key, panel):
+    spec = module.panel_spec(panel)
     for name in ("plan_file", "recipe_file", "auth_file"):
         data = (RESULTS / spec[name]).read_bytes()
         (tmp_path / spec[name]).write_bytes(data + (b" " if name == key else b""))
     with pytest.raises(ValueError):
-        module.load_context(tmp_path, "pressure_21889")
+        module.load_context(tmp_path, panel)
 
 
 def test_unregistered_panel_rejected():

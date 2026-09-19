@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Lineage Overhead Audit Prepared (2026-09-19)
+
+Previous turn made progress by deploying and launching the complete overhead
+array with confirmed controller recording before release. This turn added
+a separate pinned lineage_21999 entry to the existing complete-panel audit.
+It binds the new collector reports and raw replays, retains original/narrow
+flags and null boundary interval coverage, and preserves all 18 outcomes and
+nine paired numerical endpoints without scientific admission.
+
+All 355 focused provenance/orchestration/arithmetic/replay tests pass,
+including historical panels and cross-panel substitution checks. See
+`LINEAGE_OVERHEAD_AUDIT_READY_20260919.md` for the exact post-run command,
+archive layout, terminal-evidence gate and limitations. This local code was
+not deployed into the running recipe. No SSH/native inspection occurred.
+
+Task 21999_0 remains RUNNING at 6:00, recorder 22000 at 6:41 and BLAST 21713
+at 6:12:34. The overhead result, environmental validity and scientific timing
+inclusion remain unproven. The full publication goal stays active.
+
 ## Complete Lineage Overhead Panel Running (2026-09-19)
 
 This turn implemented and validated the dedicated launcher (99 tests plus

@@ -74,7 +74,7 @@ def test_audit_failure_preserved_without_hiding_other_tasks(panel, monkeypatch, 
     assert result["paired"]["numerical_budget_met"] is None
 
 
-@pytest.mark.parametrize("panel_name,array_id", [("frontier_21838", 21838), ("pressure_21889", 21889), ("dual_21920", 21920)])
+@pytest.mark.parametrize("panel_name,array_id", [("frontier_21838", 21838), ("pressure_21889", 21889), ("dual_21920", 21920), ("lineage_21999", 21999)])
 def test_nonterminal_gate_precedes_native_and_context_reads(tmp_path, monkeypatch, panel_name, array_id):
     path = tmp_path / "accounting.txt"
     accounting(path, running=17, array_id=array_id)
@@ -110,7 +110,7 @@ def test_temporal_or_screen_flags_cannot_become_admission(panel, monkeypatch, fa
 
 
 @pytest.mark.parametrize("fault", [None, "changed", "missing", "extra", "symlink"])
-@pytest.mark.parametrize("recipe_root", ["frontier_overhead_recipe_v1", "pressure_overhead_recipe_v2"])
+@pytest.mark.parametrize("recipe_root", ["frontier_overhead_recipe_v1", "pressure_overhead_recipe_v2", "lineage_overhead_recipe_v1"])
 def test_archived_recipe_identity(tmp_path, fault, recipe_root):
     root = tmp_path / recipe_root
     root.mkdir()
@@ -133,18 +133,21 @@ def test_archived_recipe_identity(tmp_path, fault, recipe_root):
         assert module.recipe_evidence(tmp_path, recipe, recipe_root) == [item]
 
 
-@pytest.mark.parametrize("panel_name", sorted(module.PANELS))
-def test_successful_task_invokes_all_independent_components(tmp_path, monkeypatch, panel_name):
+@pytest.mark.parametrize("panel_name,index", [(name, index) for name in sorted(module.PANELS)
+                                             for index in ([0, 1] if name == "lineage_21999" else [0])])
+def test_successful_task_invokes_all_independent_components(tmp_path, monkeypatch, panel_name, index):
     context = module.load_context(RESULTS, panel_name)
-    task = context["plan"]["runs"][0]
+    task = context["plan"]["runs"][index]
+    lineage = module.panel_spec(panel_name).get("lineage", False)
+    report = ("lineage_boundary_report.json" if index == 0 else "lineage_report.json") if lineage else "boundary_report.json"
     directory = tmp_path / Path(task["run"]["measurement_directory"]).parent.relative_to(module.ROOT)
     (directory / "measurement").mkdir(parents=True)
     measured = dict(native=dict(exit_code=0, timed_out=False, started_ns=1, finished_ns=2),
-                    points=[dict(frontier=dict(boot_id="test"))])
+                    points=[dict(lineage=dict(boot_before="test")) if lineage else dict(frontier=dict(boot_id="test"))])
     for name, value in (("preparation.json", {}), ("verification.json", {}), ("overhead_task.json", {}),
-                        ("measurement/boundary_report.json", measured)):
+                        ("measurement/" + report, measured)):
         (directory / name).write_text(json.dumps(value))
-    (tmp_path / "scheduler_0.txt").write_text("synthetic scheduler")
+    (tmp_path / f"scheduler_{index}.txt").write_text("synthetic scheduler")
     timing = directory / "native.time.tsv"
     timing.write_text("synthetic time")
     calls = []
@@ -153,10 +156,21 @@ def test_successful_task_invokes_all_independent_components(tmp_path, monkeypatc
         return dict(job_id=123, run=task["run"], measured_argv=["/frozen"])
     def replay(*args, **kwargs):
         calls.append("replay")
-        assert args[1:3] == ("boundary", 123)
-        assert kwargs == ({"expected_native_pressure": True} if module.panel_spec(panel_name)["pressure"] else {})
+        if lineage:
+            assert args[1:] == (123, ["/frozen"])
+            assert kwargs == {}
+            if index == 1:
+                return dict(evidence=[], native_wall_s=1., memory={}, narrow_flagged_intervals=[0],
+                    screening=dict(original_screening=dict(original_threshold_screen=dict(
+                        whole_command_screen=dict(screen_passed=True), flagged_intervals=[0, 1])),
+                        observation_window=dict(native_pressure={"window": True}),
+                        intervals=[dict(native_pressure={"interval": True})]))
+        else:
+            assert args[1:3] == ("boundary", 123)
+            assert kwargs == ({"expected_native_pressure": True} if module.panel_spec(panel_name)["pressure"] else {})
         return dict(evidence=[], native_wall_s=1., whole_command_screen_passed=True, flagged_intervals=None,
-                    memory={}, screening={"native_pressure_whole_command": {"synthetic": True}})
+                    memory={}, interval_screening_available=False,
+                    screening={"native_pressure_whole_command": {"synthetic": True}})
     def validate(*args):
         calls.append("native")
         assert args[1]["command"] == ["/frozen"]
@@ -164,13 +178,23 @@ def test_successful_task_invokes_all_independent_components(tmp_path, monkeypatc
     def fingerprint(*args):
         calls.append("canonical")
         return dict(identity={"synthetic": "same"}, evidence=[])
-    for name, function in (("verify", binding), ("replay", replay), ("validate", validate), ("fingerprint", fingerprint)):
+    replay_name = ("replay_lineage_boundary" if index == 0 else "replay_lineage") if lineage else "replay"
+    for name, function in (("verify", binding), (replay_name, replay), ("validate", validate), ("fingerprint", fingerprint)):
         monkeypatch.setattr(module, name, function)
-    result = module.successful_task(tmp_path, context, 0, dict(allocated_cpus="20", requested_memory="96Gn", node="spark-7ff0"))
+    result = module.successful_task(tmp_path, context, index, dict(allocated_cpus="20", requested_memory="96Gn", node="spark-7ff0"))
     assert calls == ["provenance", "replay", "native", "canonical"]
     assert result["status"] == "validated"
     assert result["work_identity"] == {"synthetic": "same"}
-    if module.panel_spec(panel_name)["pressure"]:
+    if lineage:
+        assert result["boot_id"] == "test"
+        assert result["interval_screening_available"] is (index == 1)
+        assert result["narrow_flagged_intervals"] == ([0] if index == 1 else None)
+        assert "lineage_screening" in result
+    if lineage and index == 1:
+        assert result["flagged_intervals"] == [0, 1]
+        assert result["native_pressure"] == dict(observation_window={"window": True},
+            intervals=[{"interval": True}], diagnostic_only=True, environmental_validity_established=False)
+    elif module.panel_spec(panel_name)["pressure"]:
         assert result["native_pressure"] == dict(whole_command={"synthetic": True}, intervals=None,
                                                 diagnostic_only=True, environmental_validity_established=False)
     else:
@@ -228,16 +252,17 @@ def test_dual_adapter_preserves_original_and_narrow_flags(tmp_path, monkeypatch)
 
 
 @pytest.mark.parametrize("failed", [None, 4])
-def test_complete_dual_panel_retains_failure_and_numerical_budget(panel, failed):
+@pytest.mark.parametrize("panel_name,array_id", [("dual_21920", 21920), ("lineage_21999", 21999)])
+def test_complete_dual_panel_retains_failure_and_numerical_budget(panel, failed, panel_name, array_id):
     from tests.unit.test_verify_frontier_overhead_provenance import fixture
     archive, path, calls, _ = panel
-    accounting(path, failed=failed, array_id=21920)
+    accounting(path, failed=failed, array_id=array_id)
     for i in range(18):
-        text = fixture(i, "dual_21920")[-1]
+        text = fixture(i, panel_name)[-1]
         if i == failed:
             text = text.replace("JobState=COMPLETED", "JobState=FAILED").replace("ExitCode=0:0", "ExitCode=1:0")
         (archive / f"scheduler_{i}.txt").write_text(text)
-    result = module.audit(archive, RESULTS, path, panel="dual_21920")
+    result = module.audit(archive, RESULTS, path, panel=panel_name)
     assert len(result["detailed_scheduler"]) == 18
     assert len(result["runs"]) == 18
     assert calls == [i for i in range(18) if i != failed]
@@ -245,20 +270,22 @@ def test_complete_dual_panel_retains_failure_and_numerical_budget(panel, failed)
     assert result["scientific_timings_admitted"] is False
 
 
-def test_dual_missing_detailed_record_blocks_native_reads(panel, monkeypatch):
+@pytest.mark.parametrize("panel_name,array_id", [("dual_21920", 21920), ("lineage_21999", 21999)])
+def test_dual_missing_detailed_record_blocks_native_reads(panel, monkeypatch, panel_name, array_id):
     archive, path, calls, _ = panel
-    accounting(path, array_id=21920)
+    accounting(path, array_id=array_id)
     monkeypatch.setattr(module, "load_context", lambda *args: pytest.fail("Native/context read before terminal proof"))
     with pytest.raises(FileNotFoundError):
-        module.audit(archive, RESULTS, path, panel="dual_21920")
+        module.audit(archive, RESULTS, path, panel=panel_name)
     assert not calls
 
 
-def test_dual_scheduler_accounting_disagreement_rejected(panel):
+@pytest.mark.parametrize("panel_name,array_id", [("dual_21920", 21920), ("lineage_21999", 21999)])
+def test_dual_scheduler_accounting_disagreement_rejected(panel, panel_name, array_id):
     from tests.unit.test_verify_frontier_overhead_provenance import fixture
     archive, path, calls, _ = panel
-    accounting(path, failed=0, array_id=21920)
-    (archive / "scheduler_0.txt").write_text(fixture(0, "dual_21920")[-1])
+    accounting(path, failed=0, array_id=array_id)
+    (archive / "scheduler_0.txt").write_text(fixture(0, panel_name)[-1])
     with pytest.raises(ValueError, match="differs from accounting"):
-        module.audit(archive, RESULTS, path, panel="dual_21920")
+        module.audit(archive, RESULTS, path, panel=panel_name)
     assert not calls

@@ -13,6 +13,16 @@ RECIPE_SHA = "64a05b5201e78a9d8d46f302879a49bd5cc470bf7813eb5d16e4c88d79c51edc"
 AUTH_SHA = "77875e0273883454c25fcb697916aedc10f5d0d3081baa77ead997d6f4aa0b47"
 
 PANELS = {
+    "lineage_21999": dict(array_id=21999,
+        plan_sha="90bcdb4b12655270dad2d69a3806174a4c4a63efb6e400b530e671b99938b1ed",
+        recipe_sha="73ee9571228868989dd5e687f7c30af518961885a4fe4dfdc919a7bf1820fe75",
+        auth_sha="0847cb9ba6d09349f823b795e77ff01f3500a9d31f32b457a10180c82ddcf02f",
+        plan_file="dgx_lineage_overhead_plan_20260919.json",
+        recipe_file="dgx_lineage_overhead_recipe_20260919.json",
+        auth_file="dgx_lineage_overhead_authorization_20260919.json",
+        recipe_root="lineage_overhead_recipe_v1", recipe_manifest="lineage_overhead_recipe_v1.json",
+        scheduler_command="/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_dgx_lineage_overhead.sh",
+        protocols=["LINEAGE_COLLECTOR_OVERHEAD_PROTOCOL_20260919.md"], pressure=True, lineage=True),
     "frontier_21838": dict(array_id=21838, plan_sha=PLAN_SHA, recipe_sha=RECIPE_SHA, auth_sha=AUTH_SHA,
         plan_file="dgx_frontier_overhead_plan_20260918.json",
         recipe_file="dgx_frontier_overhead_recipe_v1_20260918.json",
@@ -86,7 +96,7 @@ def verify(context, index, preparation, verification, receipt, measurement, sche
     task = plan["runs"][index]
     expected_receipt = dict(task=task, authorization=authorization, authorization_sha256=spec["auth_sha"],
                             plan_sha256=spec["plan_sha"], scientific_timings_admitted=False)
-    if spec.get("dual"):
+    if spec.get("dual") or spec.get("lineage"):
         expected_receipt["recipe_sha256"] = spec["recipe_sha"]
     if json.dumps(receipt, sort_keys=True, allow_nan=False) != json.dumps(expected_receipt, sort_keys=True, allow_nan=False):
         raise ValueError("Task authorization receipt differs")
@@ -131,6 +141,8 @@ def verify(context, index, preparation, verification, receipt, measurement, sche
     collector = "measure_frontier_boundary_step.py" if task["mode"] == "boundary" else "measure_native_frontier_step.py"
     if spec.get("dual") and task["mode"] == "periodic":
         collector = "measure_native_dual_bracket_step.py"
+    if spec.get("lineage"):
+        collector = "measure_lineage_boundary_step.py" if task["mode"] == "boundary" else "measure_native_lineage_step.py"
     launched = ["srun", "--exclusive", "--exact", "--nodes=1", "--ntasks=1", "--cpus-per-task=20",
                 str(ROOT / "envs/orthohmm/bin/python"), "-B", str(recipe_root / "benchmark_tools" / collector),
                 "--worker", run["measurement_directory"]]
