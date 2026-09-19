@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Complete Lineage Overhead Panel Audited (2026-09-19)
+
+Following verified waits, all 18 tasks and recorder 22000 completed. Collected
+the whole panel after completion and independently replayed 2,413 controller
+polls (zero observation errors, all 18 terminal records). The pinned native
+audit validated every task and all nine paired work/duration comparisons.
+All numerical overhead budgets pass; median signed changes are +0.085529%,
+-0.505169% and +1.614059% for high sensitivity, satellite_v2 and full OrthoFinder.
+
+See `LINEAGE_OVERHEAD_RESULT_21999.md` and its retained audit/compact summary.
+All 143 original and 23 narrow interval flags remain; boundary interval
+coverage is unavailable. No scientific timing admission or speed ranking is
+established. Next: investigate retained CPU discrepancies and during-read
+lifecycle behavior, then freeze scientific inclusion before controlled timing.
+Corrected-QfO BLAST remains running; other queued analyses remain unchanged.
+The full publication goal remains incomplete.
+
 ## Manuscript Timing Evidence Updated (2026-09-19)
 
 Previous turn completed and pushed the local lineage-overhead auditor.

@@ -1489,11 +1489,16 @@ does not establish environmental validity or admit comparative timings.
 
 A complete new 18-task periodic-versus-boundary lineage overhead experiment
 was frozen with the same workloads, paired order and numerical budgets.
-It is running, with controller recording established before release; no
-overhead estimate is available yet. Boundary-only observations explicitly
-lack interval coverage. Collector overhead, remaining CPU discrepancies,
+All 18 tasks completed and validated, with all nine paired work/duration
+checks passing. Median signed periodic-versus-boundary wall changes were
++0.085529%, -0.505169% and +1.614059% for high sensitivity, satellite_v2 and
+full OrthoFinder, respectively. All numerical overhead budgets passed.
+Negative values reflect variability, not acceleration by monitoring.
+The panel retained 143 original and 23 narrow interval flags; boundary-only
+observations explicitly lack interval coverage. Remaining CPU discrepancies,
 during-read lifecycle behavior and prospective scientific timing inclusion
-remain separate unresolved requirements.
+remain unresolved. No timing correction or scientific speed ranking follows.
+[Completed audit](LINEAGE_OVERHEAD_RESULT_21999.md).
 [Protocol](LINEAGE_COLLECTOR_OVERHEAD_PROTOCOL_20260919.md),
 [deployment and submission](LINEAGE_OVERHEAD_SUBMISSION_21999.md).
 

@@ -57,8 +57,10 @@ sibling-inventory failure. It retains 1/7/0 narrow flags in high-sensitivity,
 satellite_v2 and full-OrthoFinder runs, respectively. This supports bounded
 collector operation and output reproduction, not absence of interference,
 overhead-budget passage or controlled comparative timing. The complete
-[new paired overhead experiment](LINEAGE_OVERHEAD_SUBMISSION_21999.md) is
-running; its outcome is not yet available. No historical timing is upgraded.
+[new paired overhead experiment](LINEAGE_OVERHEAD_RESULT_21999.md) now has
+18 validated tasks and nine equivalent-work/duration pairs. All numerical
+budgets pass, but 143 original and 23 narrow interval flags remain. Boundary
+interval coverage is unavailable. No historical timing is upgraded.
 
 The completed [full-node controls](FULL_NODE_CONTROL_RESULT_21918_20260919.md)
 validate all nine injected workloads: zero narrow flags in 126 native-only
@@ -86,12 +88,11 @@ not establish any comparative resource advantage.
 
 ## Current Execution Status
 
-- [Lineage overhead array 21999](LINEAGE_OVERHEAD_SUBMISSION_21999.md) is
-  running with recorder 22000 active. All 18 tasks were submitted before
-  release, after deployment/runtime verification and confirmed controller
-  recording. The [post-run audit](LINEAGE_OVERHEAD_AUDIT_READY_20260919.md)
-  is prepared but has not inspected native outputs. Missing outcomes remain
-  missing; neither overhead nor scientific timing validity is established.
+- [Lineage overhead array 21999](LINEAGE_OVERHEAD_RESULT_21999.md) and
+  recorder 22000 completed. Independent replay checked 2,413 polls with zero
+  observation errors; the full native audit validated all 18 tasks. All nine
+  overhead pairs met numerical budgets. Interval flags remain and scientific
+  timing validity is not established.
 
 - [Dual-collector overhead array 21920](DUAL_OVERHEAD_RESULT_21920.md) and
   terminal recorder 21922 are complete. The audit retains all 18 tasks:

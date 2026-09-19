@@ -1,0 +1,315 @@
+{
+  "status": "retained_lineage_overhead_summary",
+  "source_audit": {
+    "path": "dgx_lineage_overhead_audit_21999_20260919.json.gz",
+    "sha256": "7e4cf99291450c883bf69abe0d984d07737953c2792dcb191bdb5a3cbc73251e"
+  },
+  "tasks": 18,
+  "validated_tasks": 18,
+  "failed_or_unvalidated_tasks": 0,
+  "complete_numeric_panel": true,
+  "numerical_budget_met": true,
+  "equivalent_work_and_duration_met": true,
+  "methods": [
+    {
+      "method": "orthohmm_high_sensitivity",
+      "available_pairs": 3,
+      "expected_pairs": 3,
+      "median_percent": 0.08552941669905184,
+      "numerical_budget_met": true
+    },
+    {
+      "method": "orthohmm_satellite_v2",
+      "available_pairs": 3,
+      "expected_pairs": 3,
+      "median_percent": -0.5051687324568762,
+      "numerical_budget_met": true
+    },
+    {
+      "method": "orthofinder_full",
+      "available_pairs": 3,
+      "expected_pairs": 3,
+      "median_percent": 1.6140592851202327,
+      "numerical_budget_met": true
+    }
+  ],
+  "pairs": [
+    {
+      "method": "orthohmm_high_sensitivity",
+      "pair": 0,
+      "equivalent_work": true,
+      "duration_gate_met": true,
+      "numerical_pair_budget_met": true,
+      "percent": 0.08552941669905184
+    },
+    {
+      "method": "orthohmm_high_sensitivity",
+      "pair": 1,
+      "equivalent_work": true,
+      "duration_gate_met": true,
+      "numerical_pair_budget_met": true,
+      "percent": 0.17631340004262208
+    },
+    {
+      "method": "orthohmm_high_sensitivity",
+      "pair": 2,
+      "equivalent_work": true,
+      "duration_gate_met": true,
+      "numerical_pair_budget_met": true,
+      "percent": -0.37257144575714984
+    },
+    {
+      "method": "orthohmm_satellite_v2",
+      "pair": 0,
+      "equivalent_work": true,
+      "duration_gate_met": true,
+      "numerical_pair_budget_met": true,
+      "percent": 0.6751383229297391
+    },
+    {
+      "method": "orthohmm_satellite_v2",
+      "pair": 1,
+      "equivalent_work": true,
+      "duration_gate_met": true,
+      "numerical_pair_budget_met": true,
+      "percent": -0.6680825406515473
+    },
+    {
+      "method": "orthohmm_satellite_v2",
+      "pair": 2,
+      "equivalent_work": true,
+      "duration_gate_met": true,
+      "numerical_pair_budget_met": true,
+      "percent": -0.5051687324568762
+    },
+    {
+      "method": "orthofinder_full",
+      "pair": 0,
+      "equivalent_work": true,
+      "duration_gate_met": true,
+      "numerical_pair_budget_met": true,
+      "percent": 1.6140592851202327
+    },
+    {
+      "method": "orthofinder_full",
+      "pair": 1,
+      "equivalent_work": true,
+      "duration_gate_met": true,
+      "numerical_pair_budget_met": true,
+      "percent": -0.35287642595157304
+    },
+    {
+      "method": "orthofinder_full",
+      "pair": 2,
+      "equivalent_work": true,
+      "duration_gate_met": true,
+      "numerical_pair_budget_met": true,
+      "percent": 2.6686809929430027
+    }
+  ],
+  "runs": [
+    {
+      "index": 0,
+      "method": "orthohmm_high_sensitivity",
+      "mode": "boundary",
+      "status": "validated",
+      "native_wall_s": 551.336774176,
+      "whole_command_screen_passed": true,
+      "interval_screening_available": false,
+      "original_flags": null,
+      "narrow_flags": null
+    },
+    {
+      "index": 1,
+      "method": "orthohmm_high_sensitivity",
+      "mode": "periodic",
+      "status": "validated",
+      "native_wall_s": 551.808329303,
+      "whole_command_screen_passed": true,
+      "interval_screening_available": true,
+      "original_flags": 1,
+      "narrow_flags": 0
+    },
+    {
+      "index": 2,
+      "method": "orthohmm_satellite_v2",
+      "mode": "boundary",
+      "status": "validated",
+      "native_wall_s": 806.867647412,
+      "whole_command_screen_passed": true,
+      "interval_screening_available": false,
+      "original_flags": null,
+      "narrow_flags": null
+    },
+    {
+      "index": 3,
+      "method": "orthohmm_satellite_v2",
+      "mode": "periodic",
+      "status": "validated",
+      "native_wall_s": 812.315120115,
+      "whole_command_screen_passed": true,
+      "interval_screening_available": true,
+      "original_flags": 44,
+      "narrow_flags": 6
+    },
+    {
+      "index": 4,
+      "method": "orthofinder_full",
+      "mode": "boundary",
+      "status": "validated",
+      "native_wall_s": 608.744517663,
+      "whole_command_screen_passed": true,
+      "interval_screening_available": false,
+      "original_flags": null,
+      "narrow_flags": null
+    },
+    {
+      "index": 5,
+      "method": "orthofinder_full",
+      "mode": "periodic",
+      "status": "validated",
+      "native_wall_s": 618.570015073,
+      "whole_command_screen_passed": true,
+      "interval_screening_available": true,
+      "original_flags": 2,
+      "narrow_flags": 1
+    },
+    {
+      "index": 6,
+      "method": "orthohmm_satellite_v2",
+      "mode": "periodic",
+      "status": "validated",
+      "native_wall_s": 796.372091158,
+      "whole_command_screen_passed": true,
+      "interval_screening_available": true,
+      "original_flags": 49,
+      "narrow_flags": 10
+    },
+    {
+      "index": 7,
+      "method": "orthohmm_satellite_v2",
+      "mode": "boundary",
+      "status": "validated",
+      "native_wall_s": 801.72829794,
+      "whole_command_screen_passed": true,
+      "interval_screening_available": false,
+      "original_flags": null,
+      "narrow_flags": null
+    },
+    {
+      "index": 8,
+      "method": "orthofinder_full",
+      "mode": "periodic",
+      "status": "validated",
+      "native_wall_s": 612.110353567,
+      "whole_command_screen_passed": true,
+      "interval_screening_available": true,
+      "original_flags": 1,
+      "narrow_flags": 0
+    },
+    {
+      "index": 9,
+      "method": "orthofinder_full",
+      "mode": "boundary",
+      "status": "validated",
+      "native_wall_s": 614.277995804,
+      "whole_command_screen_passed": true,
+      "interval_screening_available": false,
+      "original_flags": null,
+      "narrow_flags": null
+    },
+    {
+      "index": 10,
+      "method": "orthohmm_high_sensitivity",
+      "mode": "periodic",
+      "status": "validated",
+      "native_wall_s": 554.183575224,
+      "whole_command_screen_passed": true,
+      "interval_screening_available": true,
+      "original_flags": 2,
+      "narrow_flags": 1
+    },
+    {
+      "index": 11,
+      "method": "orthohmm_high_sensitivity",
+      "mode": "boundary",
+      "status": "validated",
+      "native_wall_s": 553.208195046,
+      "whole_command_screen_passed": true,
+      "interval_screening_available": false,
+      "original_flags": null,
+      "narrow_flags": null
+    },
+    {
+      "index": 12,
+      "method": "orthofinder_full",
+      "mode": "boundary",
+      "status": "validated",
+      "native_wall_s": 606.781665093,
+      "whole_command_screen_passed": true,
+      "interval_screening_available": false,
+      "original_flags": null,
+      "narrow_flags": null
+    },
+    {
+      "index": 13,
+      "method": "orthofinder_full",
+      "mode": "periodic",
+      "status": "validated",
+      "native_wall_s": 622.974732058,
+      "whole_command_screen_passed": true,
+      "interval_screening_available": true,
+      "original_flags": 3,
+      "narrow_flags": 1
+    },
+    {
+      "index": 14,
+      "method": "orthohmm_high_sensitivity",
+      "mode": "boundary",
+      "status": "validated",
+      "native_wall_s": 552.629604455,
+      "whole_command_screen_passed": true,
+      "interval_screening_available": false,
+      "original_flags": null,
+      "narrow_flags": null
+    },
+    {
+      "index": 15,
+      "method": "orthohmm_high_sensitivity",
+      "mode": "periodic",
+      "status": "validated",
+      "native_wall_s": 550.570664348,
+      "whole_command_screen_passed": true,
+      "interval_screening_available": true,
+      "original_flags": 1,
+      "narrow_flags": 0
+    },
+    {
+      "index": 16,
+      "method": "orthohmm_satellite_v2",
+      "mode": "boundary",
+      "status": "validated",
+      "native_wall_s": 810.061205708,
+      "whole_command_screen_passed": true,
+      "interval_screening_available": false,
+      "original_flags": null,
+      "narrow_flags": null
+    },
+    {
+      "index": 17,
+      "method": "orthohmm_satellite_v2",
+      "mode": "periodic",
+      "status": "validated",
+      "native_wall_s": 805.969029783,
+      "whole_command_screen_passed": true,
+      "interval_screening_available": true,
+      "original_flags": 40,
+      "narrow_flags": 4
+    }
+  ],
+  "temporal_issues": [],
+  "observed_screens_all_pass": false,
+  "scientific_timings_admitted": false,
+  "environmental_validity_established": false,
+  "publication_ready": false
+}
