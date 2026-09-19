@@ -10,6 +10,7 @@ from benchmark_tools.audit_qfo_corrected_factorial_swiss import audit as audit_f
 from benchmark_tools.audit_qfo_corrected_swiss import audit as audit_comparator
 from benchmark_tools.audit_qfo_swiss_counts import REFERENCE_SHA
 from benchmark_tools.bootstrap_corrected_swiss_strata import bootstrap, METHODS
+from benchmark_tools.bootstrap_qfo_factorial import CELLS
 from benchmark_tools.prepare_corrected_swiss_sequence_strata import define_strata, PROTOCOL_SHA
 from benchmark_tools.prepare_ob_candidate_neighborhood import record, check
 from benchmark_tools.run_simulation_methods import read_frozen
@@ -56,7 +57,7 @@ def assemble(factorial, comparator, strata):
     if len(families) != 18 or sum(map(len, families.values())) != 563:
         raise ValueError("Changed sequence-stratum reference inventory")
     cells = factorial["cells"]
-    if [r["cell"] for r in cells] != [f"p{p}c{c}r{r}" for p in (0, 1) for c in (0, 1) for r in (0, 1)]:
+    if [r["cell"] for r in cells] != list(CELLS):
         raise ValueError("Changed corrected factorial inventory/order")
     selected = (cells[4], cells[7], comparator)
     counts = {}

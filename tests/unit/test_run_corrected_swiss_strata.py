@@ -19,7 +19,7 @@ def fixture():
     shared = dict(reference=dict(sha256=module.REFERENCE_SHA), shared_represented_genes={},
                   reference_relation_count=10765)
     factorial = dict(**shared, status="corrected_qfo_factorial_swiss_counts_verified", checked_inputs=[],
-                     cells=[dict(cell=f"p{p}c{c}r{r}", families=copy.deepcopy(rows))
+                     cells=[dict(cell=f"p{p}_c{c}_r{r}", families=copy.deepcopy(rows))
                             for p in (0, 1) for c in (0, 1) for r in (0, 1)])
     comparator = dict(**shared, status="corrected_comparator_swiss_counts_verified", checked_records=[],
                       method="orthofinder_full", method_key="orthofinder_3_1_5_full", families=copy.deepcopy(rows))
@@ -34,6 +34,18 @@ def test_real_frozen_input_bins_and_exact_cell_selection():
     assert {f for f, b in membership.items() if b == "lower"} == set(strata["primary_strata"]["lower_entropy"])
     assert list(counts[METHODS[0]].values()) == factorial["cells"][4]["families"]
     assert list(counts[METHODS[1]].values()) == factorial["cells"][7]["families"]
+
+
+def test_cell_labels_match_upstream_count_auditor_contract():
+    from benchmark_tools.audit_qfo_factorial_swiss import CELLS as upstream_cells
+    factorial, comparator, strata = fixture()
+    assert [r["cell"] for r in factorial["cells"]] == list(upstream_cells)
+    assert upstream_cells[4] == "p1_c0_r0" and upstream_cells[7] == "p1_c1_r1"
+    module.assemble(factorial, comparator, strata)
+    for row in factorial["cells"]:
+        row["cell"] = row["cell"].replace("_", "")
+    with pytest.raises(ValueError, match="inventory/order"):
+        module.assemble(factorial, comparator, strata)
 
 
 @pytest.mark.parametrize("change", ["historical", "sequence_only", "reference", "overlap", "relations",
