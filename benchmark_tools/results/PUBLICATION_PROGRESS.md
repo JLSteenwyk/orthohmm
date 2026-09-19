@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Native Root-Context Serial Executor Implemented (2026-09-19)
+
+Added the pinned three-step executor and exclusive one-hour DGX launch
+script. It re-derives the frozen plan, verifies the recipe's source/input
+bindings before and after each successful step, and reuses `measure_run`
+for fresh preparation plus before/after runtime/input checks. Method-specific
+environment and working-directory changes are restored even on exceptions.
+Receipts and cumulative checkpoints are write-once; any failed step prevents
+subsequent launches and leaves explicit unrun entries. Measurement completion
+is not labeled native-output validation or scientific timing admission.
+
+All 533 focused collector/control/lineage/native-workflow tests pass, and
+the new shell script passes `bash -n`. Tests cover exact selection, source
+drift, normal execution, wrapper/native failures, exceptions, state restoration
+and existing-output refusal. No native root-context diagnostic is submitted.
+
+Next: implement the independent native-output/provenance panel audit and
+bounded one-hour waiting-session submission, then freeze/deploy the execution
+recipe. BLAST 21713 was confirmed RUNNING at 11:12:11; the existing scientific
+chains and method settings remain unchanged. The publication goal is active
+and incomplete.
+
 ## Native Root-Context Adapter And Plan Prepared (2026-09-19)
 
 Added the native workflow adapter without changing the control collector's
