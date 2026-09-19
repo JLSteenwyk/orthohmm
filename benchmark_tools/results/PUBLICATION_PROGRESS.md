@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Parameter Pair Conversion Prepared (2026-09-19)
+
+Previous turn was progress: independent native admission implemented, tested,
+pushed and queued. Confirmed live BLAST, corrected OrthoFinder scoring and
+DGX timing handles, and pending parameter dependencies. Added native-pair
+conversion for the four norm/margin variants, gated on corresponding terminal
+admission jobs and a fresh subprocess rerun of the frozen admission tool.
+The fresh report must equal the original before conversion proceeds.
+
+Conversion reuses audited native-pair normalization and QfO reference
+filtering, not RootHOG cliques. It verifies all input/source records, records
+mapping counts before rejecting unexpected losses, preserves failed outputs,
+and refuses implicit retries. Tests include real pair conversion, explicit
+mapping-loss failure, scheduler/admission rejection, and orchestration with
+a mocked frozen recheck. Focused suite: 92 passed; batch shell syntax passed.
+Added a serial 2-CPU/64G/4-hour batch with `aftercorr:21935`; actual deployment
+is recorded separately. Official scoring/admission, paired uncertainty and
+the two CPM variants remain outstanding; no new accuracy claims.
+
 ## Parameter Admission Queued; OrthoFinder Scoring Started (2026-09-19)
 
 Committed and pushed admission implementation/tests/batch as `72eb401`.
