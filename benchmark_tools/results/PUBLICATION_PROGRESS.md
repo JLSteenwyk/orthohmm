@@ -1,5 +1,32 @@
 # Publication Progress
 
+## CPU-Creation Diagnostic Prepared (2026-09-19)
+
+Previous goal turn was progress: independent parameter arithmetic checks
+and the real control-only reproduction were pushed at f17670a. The current
+turn investigated queued work and advanced the unresolved timing diagnosis.
+Slurm reports 180 of 192 CPUs and 900 GiB reserved on bizon by the current
+allocation, leaving insufficient CPUs for the 32-CPU parameter jobs.
+The node is MIXED, not DOWN; the array's broad pending reason should not be
+reported as proof of node failure. No allocation or running job was changed.
+
+Added a bounded Linux steady/fork workload with explicit per-worker CPU,
+child counts, timestamps, affinity and membership evidence. It caps worker
+count, duration and process creation, reaps children and cleans up only its
+own process groups. Seventeen focused tests passed, including real short
+steady/fork execution, count-cap retention and timeout cleanup. The expanded
+workload and existing dual-bracket reader/control suites passed 44 tests.
+An initial expanded-suite command named a nonexistent test file and collected
+no tests; it was corrected before the successful run. These local tests are
+not DGX counter-calibration outcomes.
+
+`CPU_CREATION_CONTROL_PROTOCOL_20260919.md` prospectively defines a balanced
+nine-trial, 18-native-worker DGX diagnostic with a known outside-native
+positive control. All existing screens/failures remain unchanged. The
+integrated collector/launcher is still to be implemented, tested and frozen
+before submission. No full diagnostic was launched and no scientific timing
+was admitted. Transient-cgroup coverage and overhead remain separate gaps.
+
 ## Independent Parameter Checker Prepared (2026-09-19)
 
 Previous goal turn was progress: the expanded corrected figure bundle was
