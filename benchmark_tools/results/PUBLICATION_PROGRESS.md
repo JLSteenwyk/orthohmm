@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Dual Diagnostic Provenance Checks Prepared (2026-09-19)
+
+Previous turn made progress with the raw-evidence replay checker, committed
+and pushed as `369b4df`. Added a separate provenance verifier for the three
+non-array jobs, pinned plan/recipe derivation, exact native preparation,
+before/after runtime records, copied OrthoFinder inputs and collector launch.
+All 84 focused tests passed. The actual retained terminal scheduler record
+for job 21912 passed its identity/allocation check; native evidence remains
+unread during the quiet window. Details: `DUAL_NATIVE_PROVENANCE_20260919.md`.
+
+Latest controller check: 21913 RUNNING at 6:21, 21914 dependency-pending,
+recorder 21915 RUNNING, corrected full OrthoFinder 21706_1 RUNNING at 9:12:26.
+Corrected OrthoMCL 21713 remains resource-pending and strata 21896
+dependency-pending. No frozen code or unrelated work changed. Next is complete
+archive integration, raw replay and canonical native-output comparison after
+all three diagnostics terminate. No timing or publication admission follows.
+
 ## Dual Native Evidence Replay Prepared (2026-09-19)
 
 The preceding user-facing turn rechecked retained TreeFam hashes and restated
