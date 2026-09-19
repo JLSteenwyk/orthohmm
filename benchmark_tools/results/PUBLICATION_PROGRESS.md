@@ -1,5 +1,24 @@
 # Publication Progress
 
+## QfO Parameter Native Admission Prepared (2026-09-19)
+
+Previous turn was progress: committed and pushed the tested runner and
+submitted array 21932. Rechecked its PENDING state and the live BLAST/DGX
+jobs before this work. Added independent parameter-native admission with
+terminal scheduler/resource gates, frozen executor verification, reconstructed
+commands and provenance, full output inventory validation, corrected FASTA
+universe and candidate ownership checks, native metadata/tree/partition
+validation, and native ortholog-pair checks. Baseline artifacts, runtime,
+source and helpers are rechecked; no accuracy is evaluated by admission.
+
+Focused new and inherited admission/runner/native-validator tests: 114 passed.
+Added a serial 2-CPU/64G/4-hour admission array with `aftercorr:21932`, so
+each task requires its corresponding inference task to succeed. Deployment
+is recorded separately after actual submission. Pair conversion, official
+assessment, score admission and the frozen uncertainty analysis still need
+their parameter-panel workflow; CPM variants remain outstanding. These
+changes do not establish publication readiness or new accuracy findings.
+
 ## QfO Parameter Phylogeny Queued (2026-09-19)
 
 Committed and pushed runner/tests/batch as `aa8c0e1`, created the detached
