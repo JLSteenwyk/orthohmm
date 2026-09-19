@@ -1,0 +1,35 @@
+{
+  "status": "protocol_frozen_execution_not_yet_implemented",
+  "accuracy_evaluated": false,
+  "publication_ready": false,
+  "baseline_cell": "p1_c1_r1",
+  "genes": 984137,
+  "species": 78,
+  "arms": [
+    {"label": "control", "delta": {}},
+    {"label": "cpm_low", "delta": {"cpm_resolution": 0.08}},
+    {"label": "cpm_high", "delta": {"cpm_resolution": 0.12}},
+    {"label": "norm_low", "delta": {"min_norm": 0.024}},
+    {"label": "norm_high", "delta": {"min_norm": 0.036}},
+    {"label": "margin_low", "delta": {"min_margin": 1.2}},
+    {"label": "margin_high", "delta": {"min_margin": 1.8}}
+  ],
+  "baseline_parameters": {"cpm_resolution": 0.1, "min_norm": 0.03, "min_margin": 1.5},
+  "swiss_uncertainty": {
+    "families": 18,
+    "replicates": 100000,
+    "seed": 20260925,
+    "rng": "numpy.PCG64",
+    "quantile_method": "linear",
+    "alpha": 0.05,
+    "multiplicity_endpoints": 18,
+    "metrics": ["F1", "PPV", "TPR"]
+  },
+  "inputs": [
+    {"path": "benchmark_tools/results/PARAMETER_NEIGHBORHOOD_PROTOCOL_20260916.md", "sha256": "6f6f98eb2053348499dff7656d90d5ce4f38127b0de966bdb2cdeedfde17eb79"},
+    {"path": "benchmark_tools/results/qfo_corrected_replay_admission_21757.json", "sha256": "1eec5ffb675fff234e5ce0db7e65abfa9bec09bdea8f5bd13ca72ad72d7ec40e"},
+    {"path": "benchmarks/results/qfo_corrected_factorial_v1/manifest.json", "sha256": "d8385c50426e690afd6d32f3c5302e678de6977c9841451d013201b0f75b564a"},
+    {"path": "benchmark_tools/results/qfo_corrected_factorial_native_admission_21764.json", "sha256": "c8a289ac8128711da6c4e93654ce6953e48854b8d21b2adfea074d3feb8c70aa"},
+    {"path": "benchmark_tools/results/qfo_corrected_factorial_score_admission_21788.json", "sha256": "49b7d837b2ba2928b0676c9974e2ec16db5211f1086c366c7bc11805a2ee751f"}
+  ]
+}

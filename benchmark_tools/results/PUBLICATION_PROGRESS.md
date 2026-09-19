@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Corrected QfO Parameter Extension Frozen (2026-09-19)
+
+Previous turn was a verified wait with live gene-tree/capture evidence
+(`1cbc55d`). The original parameter protocol deferred the QfO panel until
+baseline reproducibility. Inspected the corrected replay admission and
+complete factorial: the admitted 391,908-group profile-refined replay equals
+the native partition, and full native/scoring admissions are retained.
+Froze `QFO_PARAMETER_NEIGHBORHOOD_PROTOCOL_20260919.md` and its machine plan
+before any neighborhood execution. All five selected baseline/protocol hashes
+match; the control and six deltas exactly match existing OrthoBench code.
+The SwissTrees plan fixes 100,000 shared draws, seed 20260925 and all 18
+planned endpoints even if variants fail. No new defaults or adaptive grid.
+
+Candidate variants can reuse corrected seeds/hits only after unchanged
+candidate/trace byte-equivalence checks. CPM variants must rebuild grouping
+and profiles, with an unchanged four-stage replay check first. Changed
+candidates require their own inferred phylogeny; native admission/conversion
+must precede scoring. The next action is tested, frozen preparation and
+execution tooling. The plan explicitly records execution as not yet
+implemented; no new parameter result or submission is claimed.
+
+Live controller snapshot: 21920_2 RUNNING at 11:04, recorder 21922 at 30:25,
+corrected OrthoFinder 21706_1 at 11:19:12. OrthoMCL 21713 and strata 21896
+remain pending. No access to the occupied DGX or changes to active jobs.
+
 ## Live Capture And QfO Gene-Tree Tail Verified (2026-09-19)
 
 Previous turn made progress by correcting stale factorial conclusions
