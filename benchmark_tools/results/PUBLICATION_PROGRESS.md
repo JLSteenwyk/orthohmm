@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Native Pressure Interface Verified On DGX (2026-09-18 UTC)
+
+Previous turn made progress through 07cdb4d with a local native-pressure
+smoke and replay. Reread the full objective and checked scheduler state.
+The DGX was idle. Exported the same five committed files from401b20b to a
+fresh directory, verified remote hashes, and submitted two-CPU/256MiB
+interface job21866. Batch and native step both completed0:0. Collected raw
+evidence after terminal accounting and retained the detailed scheduler record.
+
+Independent local replay exactly matches resource deltas and all five
+source hashes. The native step identity is stable and distinct from the
+batch observer. CPU some/full each increased1656us; memory/I/O totals did not
+increase in the short window. [Evidence and command](NATIVE_PRESSURE_PROBE_20260918.md).
+This completes dedicated-host interface verification, not interference
+calibration, overhead validation, or scientific timing inclusion. No native
+inference benchmark was launched and no historical result was changed.
+Corrected reconciliation21760_1 and OrthoFinder21706_1 remain live; OrthoMCL
+21713 remains resource-pending. All broader publication requirements persist.
+
 ## Native-Step Pressure Probe Verified Locally (2026-09-18 UTC)
 
 Previous turn made progress through 6025448 with manuscript integration and
