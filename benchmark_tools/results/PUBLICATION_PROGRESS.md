@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Corrected Primary Strata Queued (2026-09-19)
+
+Previous turn made progress throughbb8cc79 with the sixth corrected factorial
+score and manuscript integration. Reread the objective and verified the
+remaining scientific and timing jobs live. No DGX access was made.
+
+Added frozen batch orchestration for the already prespecified corrected
+SwissTrees primary strata. Rechecked17helper hashes, protocol/descriptors
+and Python3.10.13/NumPy2.2.6. Syntax validation and73focused tests pass.
+Pushedba75fdc, created its clean detached executor, submitted21896held,
+verified resources/command and afterok:21894:21736_0, then released it.
+It remains pending on complete corrected factorial evidence and full
+OrthoFinder score admission, not the sequence-only sibling.
+
+The unchanged driver reconstructs raw counts and uses the frozen100000draws,
+seed20260924and27primary endpoints. Fresh output and exact-input guards
+remain in place; no outcomes were inspected to change strata or endpoints.
+[Submission, hashes and validation scope](CORRECTED_SWISS_STRATA_SUBMISSION_21896.md).
+
+Real result validation, secondary/all-method displays, manuscript integration
+and all wider publication criteria remain unfinished. Scheduled analyses are
+not counted as completed evidence or publication readiness.
+
 ## Sixth Corrected Factorial Cell Admitted (2026-09-19)
 
 Previous turn made progress throughfccf47b by queuing full-factorial
