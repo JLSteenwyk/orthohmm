@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Lineage Overhead Protocol Frozen (2026-09-19)
+
+Previous turn made progress by completing and auditing the native diagnostic
+panel. Prepared a fresh complete 18-task overhead plan using the existing
+paired workload order, inputs, resource limits and numerical budgets. Only
+output/cache roots and collector selections change. Periodic and boundary
+arms both use the aggregate-lineage point reader; no scientific settings or
+existing measurements change. No overhead job has been submitted.
+
+Protocol: `LINEAGE_COLLECTOR_OVERHEAD_PROTOCOL_20260919.md`, SHA-256
+`6107283f87892c801408a1717eaba42d3dc104650b4603875281d3d08ac35893`.
+Plan: `dgx_lineage_overhead_plan_20260919.json`, SHA-256
+`90bcdb4b12655270dad2d69a3806174a4c4a63efb6e400b530e671b99938b1ed`.
+Preparation tests preserve all nine pairs, native commands and budgets,
+reject changed/incomplete parent data, and reproduce the retained plan.
+
+Next: bind and validate the launcher/deployment recipe, then collect the full
+paired panel. Numerical overhead, environmental validity and scientific timing
+eligibility remain separate. During-read lifecycle behavior and unexplained
+CPU differences still require investigation; no flags are dismissed. BLAST
+21713 remains RUNNING at 5:56:46; FastOMA and parameter/CPM work remain pending.
+Publication readiness and the full goal remain incomplete.
+
 ## Native Lineage Panel Audited (2026-09-19)
 
 Previous turn was a verified wait. All three native jobs 21995/21996/21997
