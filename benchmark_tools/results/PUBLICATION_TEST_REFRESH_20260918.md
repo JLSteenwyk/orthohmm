@@ -1,5 +1,42 @@
 # Publication Test Refresh
 
+## Current-Source Refresh At 53f55ff
+
+Tested `53f55ff4666eda39a51b4370a136754e95f4bf5c` on September 19, 2026
+after the parameter-neighborhood workflow and gated CPM replay changes.
+The full unit suite passed **6,736 tests**, with **9 skips**, in 150.35
+seconds. The module CLI integration passed **1 test** in 4.07 seconds.
+Explicit opt-in legacy-runtime checks passed **9 tests** in 20.94 seconds;
+these separate results do not erase the original suite's skips.
+
+```sh
+env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  /home/bizon/anaconda3/bin/python -m pytest -q tests/unit
+env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  /home/bizon/anaconda3/bin/python -m pytest -q tests/integration/test_module_cli.py \
+  --junitxml=benchmarks/work/publication_module_cli_53f55ff_20260919.xml
+```
+
+The opt-in command used the seven exact selectors in the earlier explicit
+legacy command below, `ORTHOHMM_LEGACY_BLAST_SMOKE=1`, all three numerical
+thread limits set to 1, the absolute interpreter above, and JUnit output
+`benchmarks/work/publication_legacy_optin_53f55ff_20260919.xml`.
+
+The unit result is retained here from the completed command output, not a
+JUnit artifact: this unit invocation did not request XML. Both CLI/legacy
+JUnit files were parsed and have zero failures/errors/skips. SHA-256:
+
+- CLI: `24c36418909cd5e11f3c3723ed855d5b85104534f9a67340e734cb59b0549ef3`.
+- Legacy: `808e01efc61c9f12954b502c97d3cf5568aeb17505fa309fed91f422e75b1f05`.
+
+Tracked `orthohmm`, `benchmark_tools`, unit/integration tests and build
+metadata were unchanged after testing. Unrelated sample-output edits were
+preserved. Tests ran locally with numerical thread limits, without accessing
+the DGX or changing frozen scientific executors. Native fixtures do not
+establish full QfO completion, admitted CPM results, biological accuracy,
+cross-platform portability, controlled comparative timing or publication
+readiness. No benchmark score or scientific default changed.
+
 ## Current-Source Refresh At 58373c2
 
 Tested `58373c23c652b2974a2558cb9142027a8a7d06b8` on September 19, 2026

@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Full Regression Refresh Completed (2026-09-19)
+
+Previous turn made progress by freezing/queueing CPM array 21960. Verified
+that its control/admission dependencies remain pending and that OrthoFinder
+assessment 21735_1, OrthoMCL BLAST 21713 and DGX timing/recorder remain live.
+No runs were restarted or resource caps changed. DGX accounting records
+11 completed tasks, one failed task (21920_3, 1:0), task 12 running and five
+pending at inspection; the failure remains retained, with no replacement.
+
+Full current-source unit suite at 53f55ff: 6,736 passed, 9 skipped in 150.35
+seconds. Native CLI integration: 1 passed in 4.07 seconds. Explicit legacy
+opt-in runtime checks: 9 passed in 20.94 seconds. The CLI/legacy JUnit files
+were parsed (zero errors/failures) and hashed; the unit invocation did not
+request XML, so its command-output summary is documented as such. Details
+and reproduction are in `PUBLICATION_TEST_REFRESH_20260918.md`.
+
+No tracked source/tool/test/build changes were produced by these tests;
+unrelated sample outputs and all frozen executors were preserved. This
+refresh covers current regression behavior, not real pending-job admission,
+benchmark superiority, controlled timing or publication completion. The
+next workflow gap is independent CPM variant admission and downstream
+candidate/phylogeny/scoring integration; corrected comparator admission and
+the full DGX terminal panel remain awaited.
+
 ## Gated CPM Variant Runner Implemented (2026-09-19)
 
 Submitted array 21960 (0-1%1) from pushed frozen commit 2913d04. Confirmed
