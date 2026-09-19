@@ -65,3 +65,14 @@ def measure(command, directory, job_id, cpus=20, memory_bytes=96 * 1024**3, time
                   scientific_timings_admitted=False, environmental_validity_established=False)
     save(Path(directory).absolute() / "root_context_report.json", result)
     return measured, result
+
+
+def measure_native_run(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_s,
+                       monitor_host=True, host_interval_s=30.):
+    """Keep the native workflow's dictionary contract and retain both raw reports."""
+    if (type(cpus) is not int or cpus != 20 or type(memory_bytes) is not int
+            or memory_bytes != 96 * 1024**3 or timeout_s != 900 or interval_s != 1.
+            or type(interval_s) is bool or monitor_host is not True or host_interval_s != 30.):
+        raise ValueError("Require frozen native root-context collection settings")
+    measured, _ = measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_s)
+    return measured

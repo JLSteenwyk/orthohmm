@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Native Root-Context Adapter And Plan Prepared (2026-09-19)
+
+Added the native workflow adapter without changing the control collector's
+tuple API. It enforces the 20CPU/96GiB, 900-second, one-second collection
+settings, preserves both report files, and returns the original lineage
+measurement to the existing preparation/runtime/input-verification workflow.
+Failure propagation and before/after checks are covered by integration tests.
+
+Frozen `ROOT_CONTEXT_NATIVE_PROTOCOL_20260919.md` and derived
+`dgx_root_context_native_plan_20260919.json`, SHA-256
+`9b99cd810aaf7e040cda0242dd9b6d1da82bcb231c22657b8dc0108c4c4178ad`.
+The three commands are OrthoHMM high sensitivity, satellite_v2 and full
+OrthoFinder on the existing 73,266-protein input. Tests reverse output-path
+relocation and recover the exact parent tasks, and separately verify all
+runtime, enumeration and environment settings are unchanged. The intended
+new panel uses three serial native steps in one exclusive one-hour allocation
+and retains failures/unrun entries; no native diagnostic has been submitted.
+
+All 520 focused collector, lineage, control, native preparation and new-plan
+tests pass. These are integration/derivation tests, not native runtime or
+overhead results. Next: implement the pinned serial executor and whole-panel
+native-output/provenance audit, then deploy the frozen diagnostic. BLAST
+21713 remains live (11:01:02 at the last check). The full publication goal
+remains incomplete; no method default or historical timing was changed.
+
 ## Held-Session Panel 22020 Validated (2026-09-19)
 
 Implemented and froze a bounded waiting-session follow-up without enabling
