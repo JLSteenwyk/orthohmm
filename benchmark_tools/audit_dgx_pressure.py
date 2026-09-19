@@ -12,7 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from benchmark_tools.summarize_frontier_overhead import terminal_scheduler_rows
 
 
-def parse_pressure(raw, resource):
+def parse_pressure(raw, resource, *, system_scope=True):
     rows = {}
     for line in raw.splitlines():
         parts = line.split()
@@ -32,7 +32,7 @@ def parse_pressure(raw, resource):
                for k in ("avg10", "avg60", "avg300")):
             raise ValueError("Invalid PSI average")
         rows[parts[0]] = int(values["total"])
-    required = {"some"} if resource == "cpu" else {"some", "full"}
+    required = {"some"} if resource == "cpu" and system_scope else {"some", "full"}
     if resource not in ("cpu", "memory", "io") or not required <= rows.keys():
         raise ValueError("Missing PSI category or invalid resource")
     return {key: rows[key] for key in sorted(required)}
