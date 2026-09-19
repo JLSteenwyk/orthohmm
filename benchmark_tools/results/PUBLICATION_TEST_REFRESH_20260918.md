@@ -1,5 +1,37 @@
 # Publication Test Refresh
 
+## Current-Source Refresh At a41256b
+
+Tested `a41256ba6ab6942b69738b51d1b0ef4fd62d2e04` after the completed
+search-decision diagnostic/join, corrected-QfO score exports, sequence-control
+uncertainty and figure integration. The full unit suite passed **5,669 tests**,
+with **9 skips**, in 124.50 seconds. The native module CLI integration passed
+**1 test** in 7.01 seconds. Raw JUnit records report zero failures or errors.
+
+```sh
+env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python -m pytest -q tests/unit \
+  --junitxml=benchmarks/work/publication_unit_a41256b_20260918.xml
+env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python -m pytest -q tests/integration/test_module_cli.py \
+  --junitxml=benchmarks/work/publication_module_cli_a41256b_20260918.xml
+```
+
+Raw JUnit SHA-256 values:
+
+- Unit: `74d84ebe3d4a91a995a36bc2254fab239d2754d3ac71a04753f7e3f0621e09a5`
+- CLI: `bfd233071b987d4d49de1ca58f73e5692c29bf3c64c484ee6aa1b5ff4d478ca9`
+
+The nine skips are installed-runtime opt-in checks for legacy BLAST,
+database normalization, BPO/native OrthoMCL and Perl lookup. They were not
+rerun at this revision; the older explicit execution below remains separate
+evidence. No tracked source, benchmark-tool, unit/integration-test, setup or
+pyproject changes existed before or after these runs. Unrelated sample
+outputs were left untouched. Both runs used the shared local host, not DGX.
+These tests do not establish full-data completion, biological accuracy,
+GPU hardware correctness, cross-platform equivalence or comparative timing.
+Frozen scientific executors and their predictions remain unchanged.
+
 ## Current-Source Refresh At c7bce33
 
 Tested `c7bce33c5fedf1af22ece559b15a544119239beb` after the search-routing

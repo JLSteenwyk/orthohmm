@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Full Regression Refresh And Claim Audit (2026-09-18 UTC)
+
+Previous turn made progress through a41256b with the corrected SwissTrees
+uncertainty figure. Reread the objective and verified ongoing inference and
+DGX task16. Full unit tests at a41256ba6ab6942b69738b51d1b0ef4fd62d2e04
+passed: 5,669 tests, 9 installed-runtime opt-in skips, 124.50s. Native module
+CLI integration passed: 1 test, 7.01s. No tracked source/test/tool changes
+before or after execution; unrelated sample outputs remain untouched.
+[Commands, raw JUnit hashes and limits](PUBLICATION_TEST_REFRESH_20260918.md).
+
+Reconciled the claim checklist with admitted evidence: observed search
+rejection and final-grouping localization are complete but not causal;
+corrected R-off cells and sequence-control intervals are complete while
+R-on cells remain unfinished; newer figures are outside the old 16-panel
+bundle. Preserved historical-input discrepancies and all scientific gaps.
+No benchmark default, frozen executor, timing admission or publication-ready
+claim changed. The remaining jobs were not restarted or interrupted.
+
 ## Corrected Search-Control Figure Complete (2026-09-18 UTC)
 
 Previous turn made progress through bd20a99 by consolidating the corrected
