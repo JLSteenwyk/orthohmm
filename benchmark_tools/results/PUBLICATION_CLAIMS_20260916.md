@@ -74,7 +74,10 @@ evidence that an experiment completed or a biological hypothesis is true.
   completed0:0 in01:56:01, reporting593,510,904 all-hit and321,164,891 top100
   directed rows over984,137genes/78species. Independent tuple validation21792
   completed0:0 in01:42:57 and [admitted both checkpoints](QFO_SEQUENCE_NUMERIC_ADMISSION_20260918.md);
-  hit-coverage21793 still waits for HMM admission. Graph-memory review21798
+  hit-coverage21793 completed0:0 in14:59. Its
+  [label-free result](QFO_CORRECTED_SEARCH_COVERAGE_20260918.md) shows54.1825%
+  of initial HMM non-self hits also occur in DIAMOND all-hits, not matched
+  biological sensitivity or full-pipeline recovery. Graph-memory review21798
   completed; its [resource decision](QFO_SEQUENCE_GRAPH_RESOURCE_REVIEW_20260918.md)
   allocated32CPUs/384GiB per arm. [All-hit graph21813](QFO_SEQUENCE_ALL_HITS_EXECUTION_20260918.md)
   completed0:0 in37:34; independent admission21823 completed0:0 in10:44,
@@ -112,8 +115,9 @@ evidence that an experiment completed or a biological hypothesis is true.
   but paired uncertainty and the remaining methods are not. Corrected HMM21706_0,
   native admission21720 and replay preparation21722 completed successfully.
   The [native result](QFO_CORRECTED_HMM_NATIVE_RESULT_20260918.md) covers984137genes
-  in391908groups; accuracy is not yet admitted. Checked replay21756 and
-  hit-coverage analysis21793 are running, and OrthoFinder21706_1 has started. The corrected
+  in391908groups; accuracy is not yet admitted. The
+  hit-coverage analysis21793 has completed; checked replay21756 remains
+  running, and OrthoFinder21706_1 has started. The corrected
   replay/candidate/reconciliation/conversion/scoring/admission workflows are
   implemented and tested, not completed experiments. [Progress ledger](PUBLICATION_PROGRESS.md).
 - The [recovered QfO factorial protocol](QFO_FACTORIAL_PROTOCOL_20260917.md)

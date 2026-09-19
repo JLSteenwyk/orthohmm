@@ -1,0 +1,175 @@
+{
+  "accuracy_evaluated": false,
+  "checked_records": [
+    {
+      "bytes": 4042779,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_hit_coverage_20260918/report.json",
+      "sha256": "0e2b668fc5b2829f0a73175245e6c491986b0f2b1b89b2a4111776917d521e0f"
+    },
+    {
+      "bytes": 9276,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_hit_coverage_v1/benchmark_tools/compare_qfo_search_coverage.py",
+      "sha256": "9f6c961275dd8b4ed224b78f9e92d29fb1ba65be79673f3fcac3fc4c5f2f6513"
+    },
+    {
+      "bytes": 5589,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_hit_coverage_v1/benchmark_tools/canonicalize_search_checkpoint.py",
+      "sha256": "86a53004f0719da243700cd3b007d0f4ac9407f676436aaa40cc8179004c46c1"
+    },
+    {
+      "bytes": 6475,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_hit_coverage_v1/benchmark_tools/summarize_sorted_search_hits.py",
+      "sha256": "2fd18038710a8557837ef572d56dc4570b1307c1192b16a2e10751fafe8cf650"
+    },
+    {
+      "bytes": 8609,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_hit_coverage_v1/benchmark_tools/admit_qfo_sequence_numeric.py",
+      "sha256": "08b4a77dd36a5b6ae35b6c76c91660fba8d9ede651006474605857d8a322673d"
+    },
+    {
+      "bytes": 6593,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_hit_coverage_v1/benchmark_tools/prepare_qfo_corrected_replay.py",
+      "sha256": "153c5946f25bb90c9aa7eb74430512e7339456b87fd92020365e9550d4d32ea2"
+    },
+    {
+      "bytes": 6558,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_hit_coverage_20260918/hmm_sorted/manifest.json",
+      "sha256": "e805cf8ea2b75bc056da94edba3182760a6bb605f1d6742edae082eaecd7ed47"
+    },
+    {
+      "bytes": 810,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_sequence_numeric_v1/all_hits/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json",
+      "sha256": "0fb94680229891baf06f43ab24c69819d7f92c5a278baab0677276f50588ab7e"
+    },
+    {
+      "bytes": 806,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_hit_coverage_20260918/hmm_sorted/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json",
+      "sha256": "1c1fa4ff959470798cd0914b33e496cb0fb914b095c83f1619bc19cd04d3dfed"
+    },
+    {
+      "bytes": 810,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_sequence_numeric_v1/top100/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json",
+      "sha256": "6e9f831a6ae20d88e69728792442fdb695dc075e6d344fb90a94eb2d13378bd2"
+    }
+  ],
+  "limitations": [
+    "Directed search hits are not ortholog predictions or accuracy estimates.",
+    "Equal E-values do not match sensitivity, calibration or computational effort.",
+    "Top100 is a post-search per-query/per-target-species reporting cap, not an HMM prefilter.",
+    "Only report/source/helper/manifest hashes and summary arithmetic are rechecked here; the full hit arrays are not rescored.",
+    "The source job checks full checkpoint integrity; this export is not an independent replication of its hit-set intersections.",
+    "Missing hits do not distinguish prefilter rejection from scoring rejection."
+  ],
+  "overlaps": {
+    "all_hits_vs_top100": {
+      "all": {
+        "first_only": 272346013,
+        "fraction_of_first_recovered": 0.5411271955333781,
+        "fraction_of_second_recovered": 1.0,
+        "intersection": 321164891,
+        "jaccard": 0.5411271955333781,
+        "second_only": 0,
+        "union": 593510904
+      },
+      "nonself": {
+        "first_only": 272345987,
+        "fraction_of_first_recovered": 0.5403676564434303,
+        "fraction_of_second_recovered": 1.0,
+        "intersection": 320184088,
+        "jaccard": 0.5403676564434303,
+        "second_only": 0,
+        "union": 592530075
+      }
+    },
+    "hmm_vs_all_hits": {
+      "all": {
+        "first_only": 41103010,
+        "fraction_of_first_recovered": 0.5467612580531787,
+        "fraction_of_second_recovered": 0.08354407082637187,
+        "intersection": 49584317,
+        "jaccard": 0.07813304421182293,
+        "second_only": 543926587,
+        "union": 634613914
+      },
+      "nonself": {
+        "first_only": 41099920,
+        "fraction_of_first_recovered": 0.5418247485839236,
+        "fraction_of_second_recovered": 0.08202718148947967,
+        "intersection": 48603572,
+        "jaccard": 0.07670655174712807,
+        "second_only": 543926503,
+        "union": 633629995
+      }
+    },
+    "hmm_vs_top100": {
+      "all": {
+        "first_only": 49580244,
+        "fraction_of_first_recovered": 0.4532836545066545,
+        "fraction_of_second_recovered": 0.1279937009054953,
+        "intersection": 41107083,
+        "jaccard": 0.11087693166897523,
+        "second_only": 280057808,
+        "union": 370745135
+      },
+      "nonself": {
+        "first_only": 49577144,
+        "fraction_of_first_recovered": 0.447322028444556,
+        "fraction_of_second_recovered": 0.1253227424593317,
+        "intersection": 40126348,
+        "jaccard": 0.10851961895237303,
+        "second_only": 280057740,
+        "union": 369761232
+      }
+    }
+  },
+  "publication_ready": false,
+  "rows": [
+    {
+      "cross_species_hits": 80995173,
+      "directed_hits": 90687327,
+      "genes": 984137,
+      "nonself_hits": 89703492,
+      "queries_without_cross_species_hits": 251557,
+      "queries_without_hits": 282,
+      "queries_without_nonself_hits": 154322,
+      "self_hits": 983835,
+      "targets_without_hits": 296,
+      "variant": "hmm"
+    },
+    {
+      "cross_species_hits": 536375270,
+      "directed_hits": 593510904,
+      "genes": 984137,
+      "nonself_hits": 592530075,
+      "queries_without_cross_species_hits": 228520,
+      "queries_without_hits": 3305,
+      "queries_without_nonself_hits": 117956,
+      "self_hits": 980829,
+      "targets_without_hits": 3303,
+      "variant": "all_hits"
+    },
+    {
+      "cross_species_hits": 302314946,
+      "directed_hits": 321164891,
+      "genes": 984137,
+      "nonself_hits": 320184088,
+      "queries_without_cross_species_hits": 228520,
+      "queries_without_hits": 3305,
+      "queries_without_nonself_hits": 117956,
+      "self_hits": 980803,
+      "targets_without_hits": 3329,
+      "variant": "top100"
+    }
+  ],
+  "source": {
+    "bytes": 6002,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_qfo_hit_coverage.py",
+    "sha256": "55d9f0f3b2bbfa6dd330b78979ae67b504c60d2fbbf8b75c08c0b19a76275401"
+  },
+  "status": "source_bound_label_free_coverage_summary",
+  "table": {
+    "bytes": 395,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_hit_coverage_20260918/coverage.tsv",
+    "sha256": "e429a02d79d9d48b2d0b17c88b9f7b338a1ca886c7ef8ee9e9a938e8092c45e5"
+  }
+}

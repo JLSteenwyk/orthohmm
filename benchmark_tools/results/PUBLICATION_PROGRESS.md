@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Corrected QfO Search Coverage Completed (2026-09-18 UTC)
+
+Previous turn made progress throughe07c986 with full-unit and installed
+legacy-runtime validation. Reread the objective and polled local accounting:
+coverage21793 completed0:0 in14:59. Replay21756 and OrthoFinder21706_1
+remain running. DGX21838 task6 failed1:0, task7 is running and8-17 are
+pending; retained task6 scheduler evidence locally without DGX access.
+
+Inspected the completed coverage report and clean frozen executor. Exported
+the [compact result](QFO_CORRECTED_SEARCH_COVERAGE_20260918.md), pinned to
+the full source report hash, with independently checked summary arithmetic,
+species-direction and histogram totals, subset relations and bound source/
+helper/manifest hashes.48focused exporter/streaming-summary tests pass.
+The export does not independently recompute all raw hit intersections.
+
+HMM initial search has90,687,327directed hits; DIAMOND all-hits593,510,904
+and top100321,164,891. Non-self HMM/all-hits intersection48,603,572recovers
+54.1825%of HMM hits. This is neither calibrated sensitivity nor orthology
+accuracy. Confirmed the HMM checkpoint precedes multi-sequence profile
+expansion, so missing initial hits are not full-pipeline recovery failures.
+No accuracy-based tuning, score transfer, native rerun or controlled timing
+claim. Corrected scoring, uncertainty and final release remain incomplete.
+
 ## Full Unit And Installed Legacy Checks Passed (2026-09-18 UTC)
 
 Previous turn made progress throughe13963e with failed native-build output
