@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Second Corrected Reconciliation and Tree Diagnostic (2026-09-19)
+
+Previous turn made progress through8ad9254 with corrected DGX deployment.
+Reread the full objective and confirmed21889native inference and21890recorder
+live; respected the DGX quiet window with controller-only polling.
+
+Retained completed21760_1/21762native evidence for p0_c1_r1 and rehashed
+23referenced files. All984137genes are preserved and5977100native pairs
+validated. Conversion21768 completed with zero mapping losses and a matching
+fresh independent admission recheck. Scoring21779 is running;21780depends on
+it. No new accuracy score is admitted prematurely.
+
+Added a reproducible exploratory comparison: candidate expansion changes
+the inferred species tree as well as candidate families. The same78species
+yield76rooted clades in each tree,38shared, rooted symmetric difference76.
+Independent clade-set calculation matches DendroPy. Eleven focused tests
+pass and the final evaluator exactly reproduces the retained comparison.
+Updated the manuscript to distinguish the end-to-end expansion effect from
+a fixed-tree mechanistic isolation, without assigning either tree correctness.
+[Evidence, conversion and limitations](QFO_CORRECTED_EXPANDED_RECONCILIATION_20260919.md).
+
+Remaining corrected reconciliation/scoring and controlled timing work remain
+live. No default, frozen method, primary endpoint or historical score changed.
+
 ## Corrected Full Overhead Panel Released (2026-09-19)
 
 Previous turn made progress through3bf51e1 by preserving all18pre-inference

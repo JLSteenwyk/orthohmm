@@ -1,0 +1,120 @@
+{
+  "accuracy_evaluated": false,
+  "inputs": [
+    {
+      "path": "benchmark_tools/results/qfo_corrected_factorial_native_admission_21761.json",
+      "sha256": "97341e1b9ef6ac36e6b8c329aa3b5161690ccf00e617895f1d4ccb6ea127b16a"
+    },
+    {
+      "path": "benchmark_tools/results/qfo_corrected_factorial_native_admission_21762.json",
+      "sha256": "27d359b059d3c7589e8f85adf03a00fc5e53d57e6b80f4e8b75727f0749841a8"
+    }
+  ],
+  "limitations": [
+    "Post-outcome descriptive diagnostic, not a prespecified accuracy endpoint.",
+    "Different inferred trees do not establish which is correct or explain an accuracy change causally.",
+    "Candidate expansion contrast includes downstream tree estimation; it is not a fixed-tree isolation.",
+    "Native pair/group/event counts are not biological accuracy or reference coverage."
+  ],
+  "publication_ready": false,
+  "rows": [
+    {
+      "cell": "p0_c0_r1",
+      "counts": {
+        "bypassed_families": 368072,
+        "candidate_families": 394328,
+        "checkpoint_hits": 0,
+        "duplications": 187726,
+        "ortholog_pairs": 5113820,
+        "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_factorial_v1/cells/p0_c0_r1/orthohmm_phylogeny",
+        "reconciled_families": 26256,
+        "remapped_checkpoint_hits": 0,
+        "root_hogs": 397041,
+        "speciations": 227303,
+        "species_tree_checkpoint_hit": false,
+        "species_tree_families": 18,
+        "uncertain_events": 65358
+      },
+      "membership": null,
+      "native_metrics": {
+        "bytes": 7756,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_factorial_v1/cells/p0_c0_r1.json",
+        "sha256": "7c5af1143ff1104a4f486bdaa56c545131292c61ecdbc8bb0896ac0c50c637f6"
+      },
+      "native_pairs": 5113820,
+      "partition": {
+        "all_candidate_genes_preserved": true,
+        "candidate_families": 394328,
+        "candidate_genes": 984137,
+        "cross_source_merges": 0,
+        "root_hog_genes": 984137,
+        "root_hogs": 397041,
+        "split_source_families": 692
+      },
+      "species_tree": {
+        "bytes": 3585,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_factorial_v1/cells/p0_c0_r1/orthohmm_phylogeny/species_tree.rooted.nwk",
+        "sha256": "a95780bc2d03f6af90abe76e65565cf11e294c31c6b08c7aeffc8c5e22a3de7f"
+      }
+    },
+    {
+      "cell": "p0_c1_r1",
+      "counts": {
+        "bypassed_families": 329313,
+        "candidate_families": 353638,
+        "checkpoint_hits": 0,
+        "duplications": 230723,
+        "ortholog_pairs": 5977100,
+        "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_factorial_v1/cells/p0_c1_r1/orthohmm_phylogeny",
+        "reconciled_families": 24325,
+        "remapped_checkpoint_hits": 0,
+        "root_hogs": 368209,
+        "speciations": 252086,
+        "species_tree_checkpoint_hit": false,
+        "species_tree_families": 25,
+        "uncertain_events": 77792
+      },
+      "membership": {
+        "constraints": 40690,
+        "detached_constraints": 11601,
+        "detached_genes": 26477,
+        "ortholog_pairs_removed": 185610,
+        "policy": "high_confidence_pair",
+        "root_hogs_added": 11443,
+        "supported_constraints": 29089
+      },
+      "native_metrics": {
+        "bytes": 8588,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_factorial_v1/cells/p0_c1_r1.json",
+        "sha256": "e39593879242582c650eb1e6660c3d5a2195f3f4cfcc5d13e613f35135272e65"
+      },
+      "native_pairs": 5977100,
+      "partition": {
+        "all_candidate_genes_preserved": true,
+        "candidate_families": 353638,
+        "candidate_genes": 984137,
+        "cross_source_merges": 0,
+        "root_hog_genes": 984137,
+        "root_hogs": 368209,
+        "split_source_families": 7358
+      },
+      "species_tree": {
+        "bytes": 3577,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_factorial_v1/cells/p0_c1_r1/orthohmm_phylogeny/species_tree.rooted.nwk",
+        "sha256": "511b9771461d0f73dc95b4d678a9b62337144b0c71acc14da10fb5e8415068c1"
+      }
+    }
+  ],
+  "status": "exploratory_corrected_native_comparison",
+  "tree_comparison": {
+    "dendropy_version": "5.0.8",
+    "either_tree_is_ground_truth": false,
+    "left_clades": 76,
+    "left_only_clades": 38,
+    "right_clades": 76,
+    "right_only_clades": 38,
+    "rooted_symmetric_difference": 76,
+    "shared_clades": 38,
+    "species": 78
+  }
+}

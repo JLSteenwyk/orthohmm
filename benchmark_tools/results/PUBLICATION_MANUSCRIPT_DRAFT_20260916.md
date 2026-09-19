@@ -899,6 +899,18 @@ and 11,755,521 cross-species pairs with zero mapping loss. This partial panel
 does not establish expansion/reconciliation interactions or authorize a
 default change. [All six endpoints and admission provenance](QFO_CORRECTED_ROFF_SCORES_20260918.md).
 
+Native inference and pair conversion have also completed for p0_c1_r1,
+retaining all 984,137 genes and 5,977,100 native phylogenetic pairs with zero
+mapping loss; its accuracy assessment remains pending. An exploratory
+comparison with p0_c0_r1 found that the inferred species trees differ:
+both have the same 78 species and 76 nontrivial rooted clades, but share
+only 38 clades (rooted symmetric difference 76). The runs used 18 versus
+25 families for species-tree estimation. This contrast therefore includes
+downstream tree estimation, not candidate expansion under a fixed realized
+tree. Neither inferred tree is treated as truth, and the topology difference
+does not establish a cause of an accuracy change.
+[Native evidence and exploratory comparison](QFO_CORRECTED_EXPANDED_RECONCILIATION_20260919.md).
+
 ### First Corrected Reconciliation Contrast
 
 Independent assessment admitted p0_c0_r1 with 5,113,820 native phylogenetic
