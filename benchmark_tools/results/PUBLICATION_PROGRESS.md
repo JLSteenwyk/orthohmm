@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Lineage Native Provenance Audit Prepared (2026-09-19)
+
+Previous turn made progress by freezing and deploying the native diagnostic
+panel, preserving shared preflight failures and launching all corrected jobs.
+This turn verified 21995 and recorder 21998 remain live; 21996/21997 are
+dependency-pending. No native DGX outputs were inspected while jobs ran.
+
+Prepared dedicated provenance and archive checks for the new lineage schema,
+binding corrected job identities, actual local submission script, remote
+recipe, original input order, runtime records, native worker and measurements.
+The archive audit requires all three terminal records before native reads,
+retains failed tasks and original flags, and compares canonical outputs to
+the unchanged pinned pressure-panel reference. Its prior archive checksum
+was verified. All 140 targeted tests pass, including 48 new tests.
+
+The auditor is ready but has not evaluated the running panel. See
+`LINEAGE_NATIVE_AUDIT_READY_20260919.md` for scope, limitations and the exact
+post-collection command. Current last scheduler observation: high-sensitivity
+21995 RUNNING at 3:46, recorder 21998 RUNNING at 4:10; satellite_v2 and full
+OrthoFinder remain queued. Earlier in this turn BLAST 21713 was RUNNING at
+5:17:44. No frozen scientific executor, setting or threshold changed. Native
+results, overhead and scientific timing admission remain unresolved; the
+full publication goal is incomplete.
+
 ## Native Lineage Panel Launched (2026-09-19)
 
 Previous turn made progress at 6166b83 with the integrated collector and
