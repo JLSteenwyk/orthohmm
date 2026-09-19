@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Native CPU Pressure Responds To Frozen Injection Controls (2026-09-18 UTC)
+
+Previous turn made progress through af04ac5 with DGX interface verification.
+Reread the full objective and verified live corrected inference. Froze and
+pushed a nine-trial protocol as b357ead before outcomes, then implemented
+fixed-order quiet/native-only/contended controls. All52 focused tests passed;
+source milestone df9a66b was committed/pushed before deployment. Transferred
+seven committed files with matching local/remote archive hashes to idle DGX.
+
+Job21867 and all nine native steps completed0:0. Independent local replay
+checks every dose/affinity/scope/overlap witness, raw PSI calculation, source
+hash and summary. The three contended-minus-native-only CPU some differences
+were709144,726512,715978us, each above the predefined100000us response check.
+No control was retried, omitted or used to choose a new threshold.
+[Complete evidence and limits](NATIVE_PRESSURE_CONTROL_RESULT_21867.md).
+
+This establishes only the injected same-core CPU-response check, not an
+inference exclusion rule, overhead bound, or scientific timing admission.
+No external workload or service changed. Corrected reconciliation/OrthoFinder
+continue; OrthoMCL waits for resources. Remaining publication work includes
+complete corrected evidence and controlled resource comparisons.
+
 ## Native Pressure Interface Verified On DGX (2026-09-18 UTC)
 
 Previous turn made progress through 07cdb4d with a local native-pressure
