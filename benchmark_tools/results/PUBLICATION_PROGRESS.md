@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Parameter Score Admission and Stable Accounting (2026-09-19)
+
+Previous turn was progress: scoring runner tested, pushed and queued.
+Added independent score admission for array 21944, requiring completed
+eight-CPU tasks, unchanged preflight/report provenance, frozen converter
+and runner, exact scoring command/reference mapping, matching count sidecar,
+complete unchanged output inventory, exactly one valid native task trace,
+and validation of all six native endpoints using the retained scorer checks.
+Focused suite: 106 passed in 0.58 seconds; shell syntax passed.
+
+Code review identified that native recheck equality and score-provenance
+comparison include whole-array accounting text. Capturing that text while
+other tasks remain active can produce a false mismatch later. While all
+affected tasks were still pending, updated each index of admission array
+21935 to `afterany:21932,aftercorr:21932` and scoring array 21944 to
+`afterany:21939,aftercorr:21939`. This requires terminal whole-array
+accounting plus successful corresponding inference/conversion. An interim
+`afterok` whole-array dependency was replaced by these combined gates;
+no affected task ran between updates. Controller output confirmed all eight
+final dependencies. Frozen scripts and inputs were not edited; the scheduler
+overrides are part of deployment provenance. No running job was interrupted.
+
+Score-admission deployment is recorded separately. Paired uncertainty, CPM
+variants and broader publication requirements remain unfinished; no score
+has yet been admitted for this parameter panel.
+
 ## Parameter Six-Endpoint Assessment Queued (2026-09-19)
 
 Committed/pushed the scoring runner and tests as `f5a42ab`, deployed its

@@ -132,3 +132,26 @@ Verification: 99 focused tests passed in 0.50 seconds; batch shell syntax
 passed. No parameter score has been inspected or admitted. Independent
 assessment validation, paired uncertainty and the separately prespecified
 CPM variants remain unfinished.
+
+## Accounting-Stability Dependency Overrides
+
+Before any parameter task executed, code review found that strict fresh
+native-report equality and scoring-provenance checks include whole-array
+`sacct` text. Capturing that text before all array members terminate could
+cause a false difference when another member later completes. On September
+19, the following `scontrol update` was applied separately to each index
+0, 1, 2 and 3 (the commands below show index 0):
+
+```bash
+scontrol update JobId=21935_0 Dependency=afterany:21932,aftercorr:21932
+scontrol update JobId=21944_0 Dependency=afterany:21939,aftercorr:21939
+```
+
+These final combined dependencies replace the original corresponding-only
+dependencies in the submission sections above. Each requires the entire
+upstream array to become terminal AND the corresponding task to succeed.
+All eight tasks were confirmed PENDING with the combined dependencies.
+An interim whole-array `afterok` setting was superseded before execution.
+No frozen script/source/input changed and no running task was interrupted.
+If an upstream failure leaves a dependent task permanently ineligible,
+retain and audit that failure explicitly; do not bypass the success gate.
