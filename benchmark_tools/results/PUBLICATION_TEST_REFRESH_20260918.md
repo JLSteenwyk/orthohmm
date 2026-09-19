@@ -1,5 +1,39 @@
 # Publication Test Refresh
 
+## Current-Source Refresh At 58373c2
+
+Tested `58373c23c652b2974a2558cb9142027a8a7d06b8` on September 19, 2026
+after the full-node control, window-scale and dual-overhead audit changes.
+The full unit suite passed **6,325 tests**, with **9 skips**, in 132.82 seconds.
+Native module CLI integration passed **1 test** in 4.16 seconds. Explicitly
+enabled legacy-runtime cases passed **9 tests** in 20.27 seconds; the original
+unit-suite skips remain recorded separately. Parsed all three JUnit files:
+zero failures and errors. Tracked source/tool/test/build files are unchanged.
+
+```sh
+pytest -q tests/unit \
+  --junitxml=benchmarks/work/publication_unit_58373c2_20260919.xml
+env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  /home/bizon/anaconda3/bin/python -m pytest -q tests/integration/test_module_cli.py \
+  --junitxml=benchmarks/work/publication_module_cli_58373c2_20260919.xml
+```
+
+The opt-in command used the seven exact selectors in the earlier explicit
+legacy command below, `ORTHOHMM_LEGACY_BLAST_SMOKE=1`, the three numerical
+thread limits set to 1, the absolute interpreter above and JUnit output
+`benchmarks/work/publication_legacy_optin_58373c2_20260919.xml`.
+
+Raw JUnit SHA-256:
+
+- Unit: `ffe4682da7b4d9cde88a9a0dfbe472f815875367968dd9d54885b47d255c81a6`.
+- CLI: `083fa15efd0e8091f0e854a197850fa2e68d7d308be6fd00104574a1899cac7a`.
+- Legacy opt-in: `4070c48770ff82e04228d23bc39bd466161aa8f83bfdba1e59060561f936801f`.
+
+These local regression checks did not access the DGX or change its frozen
+executor. They do not establish full corrected OrthoMCL completion, biological
+accuracy, comparative resource validity or publication readiness. Unrelated
+sample outputs were preserved.
+
 ## Current-Source Refresh At c0a8a37
 
 Tested `c0a8a378d197c128f5ce1044eaa777b14de516b2` on19September2026

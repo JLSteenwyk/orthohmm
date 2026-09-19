@@ -51,6 +51,18 @@ evidence that an experiment completed or a biological hypothesis is true.
 
 ## Completion Requirements
 
+The completed [full-node controls](FULL_NODE_CONTROL_RESULT_21918_20260919.md)
+validate all nine injected workloads: zero narrow flags in 126 native-only
+intervals and detection in 63/63 contended intervals. This supports bounded
+monitor response, not controlled comparative timing. [Pressure and residual
+descriptions](FULL_NODE_CONTROL_DESCRIPTION_20260919.md) show that process
+creation and known contention both increase native pressure; pressure alone
+does not identify outside work. [Longer-window diagnostics](CPU_WINDOW_SCALES_20260919.md)
+reduce native-tool flags but can also conceal brief real interference.
+No historical flag is removed, no cause is established and no timing is
+retroactively admitted. The [fresh complete overhead panel](DUAL_OVERHEAD_SUBMISSION_21920_20260919.md)
+is running; its result is not yet evidence for any resource advantage.
+
 | Original work package | Current evidence | What still proves completion |
 | --- | --- | --- |
 | 1. Frozen publication baseline | Comparator table, scoring corrections, OrthoMCL final-group completion and failure audit, prospective method pin | Consolidated raw-output provenance for every retained row; exact commands/versions/resources and complete claim/endpoints freeze |
@@ -62,6 +74,13 @@ evidence that an experiment completed or a biological hypothesis is true.
 | 7. Publication package | Eighteen bundled figure panels including descriptive DGX resources and corrected search controls; [corrected factorial supplement](PUBLICATION_CORRECTED_FIGURE_BUNDLE_20260919.md); [method diagram](figures_publication_method_20260916/publication_method.pdf); evolving [manuscript](PUBLICATION_MANUSCRIPT_DRAFT_20260916.md); [refreshed and relocated direct-evidence bundle](PUBLICATION_FIGURE_BUNDLE_20260918.md); bounded statistical reproduction including the corrected factorial; [current-source unit and CLI checks](PUBLICATION_TEST_REFRESH_20260918.md) | Complete corrected-QfO comparator results and manuscript integration, verified bibliography, portable executable workflows/dependencies, transitive raw-data provenance and rights clearance, versioned release and external archive. Local figure bundles and statistical exports are not full scientific reproduction |
 
 ## Current Execution Status
+
+- As of September 19, [dual-collector overhead array 21920](DUAL_OVERHEAD_SUBMISSION_21920_20260919.md)
+  is running sequentially on the DGX, with terminal recorder 21922 on bizon.
+  The [post-run audit](DUAL_OVERHEAD_AUDIT_READY_20260919.md) is prepared and
+  tested but has not evaluated this live panel. All 18 outcomes must be retained;
+  overhead budgets, output equivalence and environmental uncertainty remain
+  distinct conclusions. No SSH inspection during the quiet panel.
 
 - The [replacement pressure-overhead panel21889](DGX_PRESSURE_OVERHEAD_AUDIT_21889_20260919.md)
   completed with 16 validated tasks and two retained failures. Seven of nine

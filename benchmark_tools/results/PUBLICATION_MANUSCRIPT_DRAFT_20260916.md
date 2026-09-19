@@ -1332,6 +1332,47 @@ competing processes or establish isolation. No pressure threshold was
 selected after observing these outcomes. The original 27 runs remain
 descriptive; controlled speed and memory rankings are not established.
 
+A subsequent pressure-enabled overhead panel retained all 18 detailed
+terminal records and validated 16 tasks, yielding seven of nine complete
+pairs. Three-pair median periodic/boundary changes were -0.710027% for
+high-sensitivity OrthoHMM and +0.077954% for satellite_v2; only one
+OrthoFinder pair was available. Negative differences represent variation,
+not negative measurement cost. The complete-panel overhead budget remained
+unestablished. [Pressure-overhead audit](DGX_PRESSURE_OVERHEAD_AUDIT_21889_20260919.md).
+
+Three prospective native diagnostics then retained two host-counter brackets
+around the same native CPU observations. All native products matched the
+prescribed prior outputs. The narrower bracket flagged 0/551 intervals for
+high sensitivity, 21/819 for satellite_v2 and 1/622 for full OrthoFinder;
+original wider-bracket flags were preserved. These non-atomic residuals do
+not identify foreign CPU activity. [Native diagnostic audit](DUAL_NATIVE_RESULT_21912_20260919.md).
+
+A prespecified nine-trial control experiment compared steady work, repeated
+short-lived process creation and steady work with a known outside-target
+competitor, in three balanced blocks. Twenty native workers were pinned to
+the allocated CPUs for 20 seconds; independent witnesses checked scope,
+affinity, exits, CPU dose and at least 19.5 seconds of common work. All nine
+trials passed those checks. The narrow screen flagged 0/126 native-only
+intervals and 63/63 contended intervals, including all 57 fully enclosed
+common-work intervals. Churn increased within-block median residuals by
+0.07845-0.08762 cores; contention increased them by 0.94738-0.94930 cores.
+Both increased native CPU pressure, so pressure alone was not specific
+evidence of outside work. [Control audit](FULL_NODE_CONTROL_RESULT_21918_20260919.md),
+[descriptive comparisons](FULL_NODE_CONTROL_DESCRIPTION_20260919.md).
+
+Post-outcome recomputation on fixed 5-, 10- and 30-sample endpoint grids
+reduced satellite_v2 narrow flags to one, zero and zero, respectively, and
+OrthoFinder flags to zero at each scale. Known sustained competitors remained
+detectable. Every final partial window and original interval flag was retained.
+Aggregation can obscure brief real interference as well as accounting noise;
+it therefore does not establish a cause or justify retrospective acceptance.
+The controls support bounded monitor behavior, not controlled speed rankings.
+[Window-scale diagnostic](CPU_WINDOW_SCALES_20260919.md). A fresh complete
+dual-collector overhead panel has been launched under a frozen protocol;
+its results are not yet available and no scientific timing inclusion rule
+has been adopted from these diagnostics.
+[Prospective protocol](DUAL_COLLECTOR_OVERHEAD_PROTOCOL_20260919.md).
+
 ### SwissTrees Comparator Uncertainty
 
 For all eight retained historical comparison outputs, raw SwissTrees counts

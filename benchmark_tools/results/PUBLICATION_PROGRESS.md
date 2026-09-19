@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Manuscript Diagnostics And Regression Refresh (2026-09-19)
+
+The previous turn completed the outstanding full unit run (progress), while
+the original TreeFam trees and mapping remain unrecovered. Integrated the
+completed pressure-overhead, dual-native, full-node control and window-scale
+diagnostics into the manuscript and claim ledger. No diagnostic was promoted
+to a controlled timing result. Checked new control/window counts against the
+machine-readable audits and verified all 12 new local evidence links.
+
+At source `58373c2`, full units passed 6,325 with nine skips; CLI integration
+passed one test and explicitly enabled legacy fixtures passed nine. Parsed
+and hashed all three zero-failure JUnit reports; details and commands are in
+`PUBLICATION_TEST_REFRESH_20260918.md`. No tracked executable sources or tests
+changed, and unrelated sample outputs were preserved.
+
+Controller snapshot around 07:30 EDT: array task 21920_1 RUNNING at 5:23,
+tasks 2-17 pending at the array throttle; recorder 21922 RUNNING at 14:06.
+Corrected QfO OrthoFinder 21706_1 RUNNING at 11:02:53; OrthoMCL 21713 pending
+resources and strata 21896 pending dependency. No SSH/native inspection of
+the quiet panel. Next remains complete-panel capture and audit, followed by
+an evidence-based timing decision; corrected comparator results and the
+remaining publication requirements are not yet complete.
+
 ## Dual Overhead Post-Run Audit Prepared (2026-09-19)
 
 Previous turn made progress by launching the full panel (`ced4abe`). Added
