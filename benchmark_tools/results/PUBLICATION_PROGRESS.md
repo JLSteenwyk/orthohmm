@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Parameter QfO Scoring Runner Prepared (2026-09-19)
+
+Previous turn was progress: native-pair conversion implemented, tested,
+pushed and queued. Rechecked live benchmark handles and the parameter
+dependency chain. Added a six-endpoint assessment runner gated on terminal
+conversion 21939, exact participant/variant identity, native pair semantics,
+zero corrected mapping loss, matching count sidecar and pinned converter.
+The runner verifies the frozen scoring environment, preserves failures,
+refuses existing work/result namespaces and explicitly leaves successful
+execution pending independent score admission.
+
+Focused scoring/conversion tests: 99 passed in 0.50 seconds; shell syntax
+passed. Added a serial eight-CPU/96G/24-hour batch with corresponding-task
+dependency on 21939. Actual deployment is recorded separately. Independent
+score admission, paired uncertainty and the two CPM variants are not yet
+finished. No new accuracy result or publication-readiness claim.
+
 ## Parameter Pair Conversion Queued (2026-09-19)
 
 Committed/pushed converter and tests as `0401860`, deployed its detached
