@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Native Waiting Session And Receipt Audit Implemented (2026-09-19)
+
+Added a single-attempt native-panel submitter with an empty-DGX-queue guard,
+3,720-second remote waiting bound, 10-second termination grace and
+3,750-second local bound. The command/bounds are written before submission;
+successes, failures, connection errors and observation timeouts retain receipts.
+No timeout automatically retries or establishes terminal scheduler state.
+The historical control-panel launcher remains unchanged.
+
+Added independent receipt validation against the frozen submission-source
+hash, exact command/bounds, empty queue, Slurm job/exit identity and scheduler
+start/end timestamps. Printed scheduler times have one-second resolution;
+consistent controller/client wall clocks remain an explicit assumption.
+Receipt validity is not native-output validity, manager-lifecycle validation,
+collector overhead or scientific timing admission.
+
+All 629 focused workflow tests pass, including 32 new native-session tests.
+The DGX scheduler queue was confirmed empty during preparation. Next: freeze
+and verify a fresh deployment recipe, then execute and audit the three native
+diagnostics. No new native job is submitted yet. The preceding turn was
+progress (whole-panel audit committed/pushed). Publication readiness remains
+incomplete.
+
 ## Native Root-Context Whole-Panel Audit Implemented (2026-09-19)
 
 Added terminal-first panel auditing with frozen plan/recipe bindings, launch
