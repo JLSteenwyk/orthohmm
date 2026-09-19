@@ -101,3 +101,34 @@ in 0.54 seconds, and batch shell syntax passed.
 
 No pair conversion has executed yet. Official assessment, score admission
 and the frozen paired uncertainty analysis remain required downstream.
+
+## Six-Endpoint Assessment Array 21944
+
+Submitted 2026-09-19 at 08:43 EDT from detached executor
+`benchmarks/work/publication_qfo_parameter_assessment_v1`, commit
+`f5a42ab3fc6ee5076e9dfb2b239b63b131aa0d73` (pushed), passing the exact
+executor path and commit to its frozen batch.
+
+- Runner SHA-256:
+  `e06867181061a19f3e2ef10054653e9f5798cd7b3be27bb3a3ca73da6972e60b`.
+- Batch `qfo_parameter_assessment_batch_20260919.sh` SHA-256:
+  `7bd70c2c3e8a83fae6b2ae6fb11e9b4165bfe8d1a5eadf9490d30145b222e161`.
+- Four tasks, concurrency one, 8 CPUs, 96G, 24 hours, bizon, no requeue.
+- Corresponding-task dependency: `aftercorr:21939`.
+- Execution reports: `benchmarks/results/qfo_parameter_assessment_v1/<variant>/`.
+- Short Darwin-compatible work namespaces: `qfo_benchmark/w/qpv<index>`.
+- Native scoring outputs: `qfo_benchmark/scoring/parameter_v1_<index>`.
+- Batch logs: `benchmarks/work/qfo_parameter_assessment_21944_<index>.log`.
+
+All four tasks confirmed PENDING (Dependency); task 0 has raw job ID 21945.
+The runner requires completed conversion, pinned converter and reference
+mapping, matching count sidecar, unchanged filtered-pair content and the
+fresh-native-admission record. It retains the frozen GO, EC, VGNC,
+SwissTrees, TreeFam-A and FAS assessment command and input environment.
+Success is explicitly pending independent score admission. Existing
+execution/work/result namespaces are refused, not resumed or overwritten.
+
+Verification: 99 focused tests passed in 0.50 seconds; batch shell syntax
+passed. No parameter score has been inspected or admitted. Independent
+assessment validation, paired uncertainty and the separately prespecified
+CPM variants remain unfinished.

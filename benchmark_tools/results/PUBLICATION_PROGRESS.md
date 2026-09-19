@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Parameter Six-Endpoint Assessment Queued (2026-09-19)
+
+Committed/pushed the scoring runner and tests as `f5a42ab`, deployed its
+detached executor and submitted array 21944 with `aftercorr:21939`.
+All four tasks confirmed PENDING (Dependency), 8 CPUs/96G/24 hours,
+serial concurrency and no requeue. Source hashes and output namespaces
+are recorded in `QFO_PARAMETER_PHYLOGENY_SUBMISSION_21932.md`.
+
+Latest controller poll: corrected OrthoFinder scoring 21735_0 RUNNING
+(18:20), BLAST 21713 RUNNING (34:46), DGX timing 21920_7 RUNNING (3:33)
+and recorder 21922 RUNNING. No remote native-output inspection or job
+intervention occurred. Parameter score admission and uncertainty remain
+to be implemented; no new accuracy finding is claimed.
+
 ## Parameter QfO Scoring Runner Prepared (2026-09-19)
 
 Previous turn was progress: native-pair conversion implemented, tested,
