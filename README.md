@@ -79,6 +79,15 @@ existing group member and receive a sequence-supported anchor before they can
 change a cluster. The profile currently requires the built-in search and
 Leiden clustering. The default `standard` profile is unchanged.
 
+High-sensitivity profile expansion also requires the compiled `pair_align.so`
+kernel and its OpenMP runtime. Source installation therefore needs a C
+compiler with OpenMP support. The Numba fallback for standard sequence search
+does not replace this alignment kernel. If it cannot be loaded, rebuild
+OrthoHMM from source on the target machine after installing the compiler and
+OpenMP support; profile expansion is not silently disabled. Locally built
+wheels may use host-specific instructions and are not validated as portable
+across CPU models merely because the operating system matches.
+
 **Phylogeny-aware mode (experimental).** OrthoHMM can reconcile ambiguous
 multi-copy families against a validated rooted species tree. This mode is
 opt-in; `--phylogeny off` remains the default and does not load tree libraries

@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Compilerless Runtime Boundary Verified (2026-09-18 UTC)
+
+Previous turn made progress through442f871 with docs dependency remediation.
+Reread the objective and polled locally: HMM21706_0 running19:31:39;
+overhead21838 tasks0-2complete, task3failed, task4running06:10, restpending.
+No DGX access or retry. GitHub's follow-up still lists the two docs alerts;
+the local patched-range result is not represented as remote closure.
+
+Tested installed execution with native libraries absent in the isolated
+package venv: standard mode completes and matches its native fixture
+partition; high sensitivity fails at MSA-profile alignment. After restoring
+all four libraries, high sensitivity completes on the same input. Retained
+all three outcomes and logs in the [fallback audit](PUBLICATION_COMPILERLESS_CHECK_20260918.md).
+Qualified installation claims and added an actionable, chained alignment-
+dependency error. No silent algorithm substitution was made.23focused checks
+pass; no full-suite or cross-platform-equivalence claim. Running scientific
+executors and benchmark settings remain unchanged.
+
 ## Documentation AnyIO Alerts Remediated Locally (2026-09-18 UTC)
 
 Previous turn made progress throughe775eaa with isolated native wheel builds.

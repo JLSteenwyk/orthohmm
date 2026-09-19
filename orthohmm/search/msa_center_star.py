@@ -33,7 +33,15 @@ def _load_pair_align():
     if _pa_lib is not None:
         return _pa_lib
     so_path = _Path(__file__).resolve().parent / "csrc" / "pair_align.so"
-    lib = ctypes.cdll.LoadLibrary(str(so_path))
+    try:
+        lib = ctypes.cdll.LoadLibrary(str(so_path))
+    except OSError as error:
+        raise RuntimeError(
+            "MSA-profile expansion requires the native pair_align.so kernel. "
+            "Install a C compiler with OpenMP support and rebuild OrthoHMM "
+            "from source on this machine. The Numba search fallback does not "
+            "provide MSA-profile alignment."
+        ) from error
     lib.batch_pair_align_c.restype = None
     lib.batch_pair_align_c.argtypes = [
         ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p,  # seqs_flat, offsets, lengths

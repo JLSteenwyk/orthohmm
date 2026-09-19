@@ -79,7 +79,8 @@ def build_cpu_kernels(csrc_dir: Path) -> list[str]:
     """Compile CPU kernels to .so. Returns list of successfully-built names."""
     if not _have_gcc():
         print("[orthohmm] no C compiler found — skipping CPU kernel build. "
-              "The package will fall back to Numba (slower).", file=sys.stderr)
+              "Standard search can fall back to Numba (slower), but "
+              "high-sensitivity MSA-profile expansion requires native kernels.", file=sys.stderr)
         return []
 
     cc = "gcc" if shutil.which("gcc") else "cc"
@@ -90,8 +91,8 @@ def build_cpu_kernels(csrc_dir: Path) -> list[str]:
     if not _gcc_supports("-fopenmp", cc=cc):
         print("[orthohmm] -fopenmp not supported by this compiler; skipping "
               "CPU kernel build. Install libomp (`brew install libomp` on "
-              "macOS) and reinstall for native-speed kernels. Falling back "
-              "to Numba.", file=sys.stderr)
+              "macOS) and reinstall for native kernels. Standard search can "
+              "fall back to Numba; high-sensitivity MSA-profile expansion cannot.", file=sys.stderr)
         return []
 
     base = [cc, "-O3", "-fopenmp", "-shared", "-fPIC"]
