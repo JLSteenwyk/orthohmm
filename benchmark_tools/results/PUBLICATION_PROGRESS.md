@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Corrected Full Overhead Panel Released (2026-09-19)
+
+Previous turn made progress through3bf51e1 by preserving all18pre-inference
+failures and identifying the wrong interpreter. Reread the objective and
+confirmed corrected scientific jobs remain live. Created a fresh complete
+v2panel retaining all native work/settings/budgets, with explicit interpreter
+binding and rejection. Pushed source/protocol17fb1b5 before deployment.
+
+Transferred426committed files, verified every hash, then checked26673runtime,
+10066system and429recipe records under the correct interpreter. Actual
+native enumeration and original inputs match, and all18tasks select. Pushed
+recipe/authorization/preflighta35ca99;105focused tests pass.
+
+Submitted held array21889 and durable controller recorder21890. Verified
+the recorder live with its first successful poll before release04:36:34Z;
+native eligibility04:37:40Z preserves a two-minute preparation delay.
+[Submission and exact bindings](DGX_PRESSURE_OVERHEAD_SUBMISSION_21889.md).
+
+DGX quiet window is active: no SSH/SCP/remote log reads until all21889tasks
+terminate. Monitor via local controller only. No overhead result or
+scientific timing admission is claimed. Prior failures and all wider
+publication requirements remain retained and active.
+
 ## Pressure Panel Pre-Inference Failure Diagnosed (2026-09-19)
 
 After release, all21869tasks failed in4-5seconds. Respected the quiet window

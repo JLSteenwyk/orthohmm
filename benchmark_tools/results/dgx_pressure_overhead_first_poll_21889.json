@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "scontrol",
+    "show",
+    "job",
+    "21889",
+    "--oneliner"
+  ],
+  "observed_unix_ns": 1789792573579188721,
+  "returncode": 0,
+  "stderr": "",
+  "stdout": "JobId=21889 ArrayJobId=21889 ArrayTaskId=0-17%1 ArrayTaskThrottle=1 JobName=dgx_pressure_overhead_v2 UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=0 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=JobHeldUser Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=01:00:00 TimeMin=N/A SubmitTime=2026-09-19T00:35:40 EligibleTime=2026-09-19T00:37:40 AccrueTime=2026-09-19T00:37:40 StartTime=2026-09-19T00:37:40 EndTime=2026-09-19T01:37:40 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-19T00:35:40 Scheduler=Main Partition=spark AllocNode:Sid=bizon-link:1710737 ReqNodeList=spark-7ff0 ExcNodeList=(null) NodeList= NumNodes=1 NumCPUs=20 NumTasks=1 CPUs/Task=20 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=20,mem=96G,node=1,billing=20 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=20 MinMemoryNode=96G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_dgx_pressure_overhead_v2.sbatch WorkDir=/home/jlsteenwyk/projects/orthohmm-publication/pressure_overhead_recipe_v2 StdErr=/home/jlsteenwyk/projects/orthohmm-publication/pressure_overhead_v2_21889_4294967294.log StdIn=/dev/null StdOut=/home/jlsteenwyk/projects/orthohmm-publication/pressure_overhead_v2_21889_4294967294.log TresPerTask=cpu=20 \n"
+}
