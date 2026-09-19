@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Root Context Integrated And Replayed Locally (2026-09-19)
+
+Connected the supplementary root-context probe through an optional reader
+in the existing lineage loop, without replacing its timer, native worker,
+cadence or original screens. Added distinct context report and independent
+replay, including relative report binding for archive relocation and retained
+partial failures. All 133 focused tests pass; see
+`ROOT_CONTEXT_INTEGRATION_20260919.md` for scope and fixture limitations.
+
+Next: implement the frozen 12-trial workload coordinator and full workload
+audit before DGX deployment. No live native result or added-observer overhead
+is claimed. BLAST 21713 remains live; FastOMA and robustness jobs remain
+queued and unchanged. The full publication goal stays incomplete.
+
 ## Root CPU Context Probe And Protocol Prepared (2026-09-19)
 
 Added a read-only root/system/user/init context probe reusing existing

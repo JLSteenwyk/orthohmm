@@ -101,8 +101,11 @@ def evaluate(points, done, job):
 
 
 def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_s,
-            monitor_host=True, host_interval_s=30.):
+            monitor_host=True, host_interval_s=30., *, point_reader=None):
     validate(command, cpus, timeout_s, interval_s)
+    reader = read_point if point_reader is None else point_reader
+    if not callable(reader):
+        raise ValueError("Point reader must be callable")
     if (int(os.environ["SLURM_JOB_ID"]) != job_id or os.environ.get("SLURM_CPUS_PER_TASK") != "20"
             or os.environ.get("SLURM_MEM_PER_NODE") != "98304"
             or os.uname().nodename != "spark-7ff0" or memory_bytes != 96 * 1024 ** 3):
@@ -116,7 +119,7 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
         process = subprocess.Popen(launched, stdout=log, stderr=subprocess.STDOUT)
         try:
             ready = wait_file(directory / "ready.json")
-            points = [read_point(ready["pid"], ready["cgroup"], job_id, directory / "failed_point.json")]
+            points = [reader(ready["pid"], ready["cgroup"], job_id, directory / "failed_point.json")]
             save(directory / "point_0000.json", points[0])
             save(directory / "go.json", {"go": True})
             start = time.monotonic()
@@ -127,7 +130,7 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
                 completed = (directory / "done.json").exists()
                 if process.poll() is not None:
                     raise RuntimeError("Worker exited before final lineage observation")
-                points.append(read_point(ready["pid"], ready["cgroup"], job_id, directory / "failed_point.json"))
+                points.append(reader(ready["pid"], ready["cgroup"], job_id, directory / "failed_point.json"))
                 save(directory / f"point_{index:04d}.json", points[-1])
                 if completed:
                     break

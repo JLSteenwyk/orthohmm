@@ -35,6 +35,14 @@ def test_lifecycle_matches_existing_collector():
     expected = inspect.getsource(original.measure).replace("final dual observation", "final lineage observation")
     expected = expected.replace("dual_bracket_report.json", "lineage_report.json")
     expected = expected.replace("Complete-command dual-bracket engineering measurement", "Complete-command lineage engineering measurement")
+    expected = expected.replace("host_interval_s=30.):", "host_interval_s=30., *, point_reader=None):")
+    expected = expected.replace("    validate(command, cpus, timeout_s, interval_s)\n",
+        "    validate(command, cpus, timeout_s, interval_s)\n"
+        "    reader = read_point if point_reader is None else point_reader\n"
+        "    if not callable(reader):\n"
+        "        raise ValueError(\"Point reader must be callable\")\n")
+    expected = expected.replace("points = [read_point(", "points = [reader(")
+    expected = expected.replace("points.append(read_point(", "points.append(reader(")
     assert inspect.getsource(module.measure) == expected
 
 
