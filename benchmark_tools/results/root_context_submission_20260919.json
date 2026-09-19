@@ -1,0 +1,27 @@
+{
+  "command": [
+    "ssh",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "ConnectTimeout=10",
+    "jlsteenwyk@10.10.10.2",
+    "sbatch --parsable --chdir=/home/jlsteenwyk/projects/orthohmm-publication/root_context_controls_recipe_v1 /home/jlsteenwyk/projects/orthohmm-publication/root_context_controls_recipe_v1/benchmark_tools/run_dgx_root_context_controls.sh 4f98afeefda23e45b8e88d0a5a748643a8d6cbd73add44226f6dfd57ea4a93e8"
+  ],
+  "observed_unix_ns": 1789857758037116475,
+  "queue": {
+    "finished_unix_ns": 1789857758042946004,
+    "returncode": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  "recipe_sha256": "4f98afeefda23e45b8e88d0a5a748643a8d6cbd73add44226f6dfd57ea4a93e8",
+  "scientific_timings_admitted": false,
+  "source_commit": "02500e3",
+  "submission": {
+    "finished_unix_ns": 1789857758560940061,
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "22019\n"
+  }
+}

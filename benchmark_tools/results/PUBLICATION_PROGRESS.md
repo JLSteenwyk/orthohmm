@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Root Context Panel 22019 Submitted (2026-09-19)
+
+Committed/pushed the whole-panel audit (`02500e3`) and verified deployment
+recipe (`9e3eed0`). All 508 deployed files match the committed source archive;
+the recipe has 511 total records and SHA-256
+`4f98afeefda23e45b8e88d0a5a748643a8d6cbd73add44226f6dfd57ea4a93e8`.
+See `ROOT_CONTEXT_DEPLOYMENT_20260919.md` for identities and boundaries.
+
+The retained `root_context_submission_20260919.json` records a successful,
+empty DGX queue query immediately before the single submission. Slurm job
+22019 was confirmed RUNNING on spark-7ff0 with exclusive 20 CPUs, 96 GiB,
+15-minute limit and no requeue. No SSH inspection or transfers are permitted
+during the panel. Local Slurm queries do not execute on the DGX. No outcome
+or validation is claimed while it runs. BLAST 21713 was also confirmed live
+at 10:33:29 on bizon, separate from the dedicated timing host.
+
+Next: poll job 22019 through Slurm; once terminal, retain its scheduler record
+and retrieve all raw outputs and source files. Run whole-panel replay with
+the frozen recipe, report every outcome and fixed-condition distribution,
+and keep native overhead/scientific timing eligibility separate. The full
+publication goal remains active and incomplete.
+
 ## Root Context Whole-Panel Audit Implemented (2026-09-19)
 
 Added terminal allocation/command checks, frozen protocol and recipe binding,
