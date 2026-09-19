@@ -2,6 +2,10 @@
 
 ## CPM Control Driver Validated (2026-09-19)
 
+Control replay submitted as job 21956 from pushed frozen commit ef5fcd6;
+confirmed PENDING (Priority), 32 CPUs/192 GiB/bizon, no requeue. See
+`QFO_CPM_CONTROL_SUBMISSION_21956.md` for command and file identities.
+
 The preceding archive-search turn yielded no new source files or changed
 next action (no progress on that requirement). Revalidated live scheduler
 state: DGX panel 21920_10, recorder 21922, OrthoFinder assessment 21735_1 and
