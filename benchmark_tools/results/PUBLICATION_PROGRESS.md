@@ -2,6 +2,11 @@
 
 ## CPM Inferred-Phylogeny Runner Implemented (2026-09-19)
 
+Array 21972 is queued from pushed frozen commit f1a2bb8; both tasks confirmed
+PENDING with 32 CPUs/192 GiB and afterany/aftercorr:21969. Exact commands and
+hashes are in `QFO_CPM_PHYLOGENY_SUBMISSION_21972.md`. Batch syntax and staged
+whitespace checks passed. No CPM native result or accuracy is admitted yet.
+
 Previous turn was progress: independent candidate admission was completed,
 tested and queued. Scheduler checks confirm OrthoFinder scoring 21735_1
 remains running (1:10:36), admission pending; BLAST and DGX timing/recorder
