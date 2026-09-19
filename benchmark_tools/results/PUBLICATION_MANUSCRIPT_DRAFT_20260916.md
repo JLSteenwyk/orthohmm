@@ -1467,6 +1467,12 @@ verification after extraction outside the repository. Historical plotter
 identities are not overwritten. This is evidence preservation, not statistical
 or native-inference regeneration, and neither archive has been deposited.
 
+The [corrected factorial statistical reproduction](QFO_CORRECTED_FACTORIAL_REPRODUCTION_20260919.md)
+separately exported committed counts and numerical code outside the checkout.
+All eight cell estimates and all 42 paired endpoints reproduced exactly under
+isolated Python with the frozen 100,000 draws and seed. This does not repeat
+native inference, official scoring or raw-source admission.
+
 A [relocated reproduction workflow](SWISS_RELOCATED_REPRODUCTION_20260917.md)
 exports the SwissTrees comparator analysis from a fixed commit and reruns it in
 a fresh hash-pinned Python environment. Its numerical results and Markdown

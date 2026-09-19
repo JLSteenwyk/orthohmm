@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Corrected Factorial Statistics Reproduced Outside Checkout (2026-09-19)
+
+Previous turn made progress with corrected figure preservation and relocation,
+committed/pushed through `162bdd7`. Added a committed statistics-only exporter
+and runner (`0864f9b`); 18 focused tests passed. An actual outside-repository
+run under isolated Python reproduced all 11 numerical fields exactly from
+the pinned 18-family counts, including eight cells and all 42 endpoints.
+All 15 exported files were rechecked. Details and evidence:
+`QFO_CORRECTED_FACTORIAL_REPRODUCTION_20260919.md`.
+
+Corrected stale claim-table entries: corrected factorial analysis is complete;
+candidate simple-effect F1 intervals include zero, while corrected C-by-R
+F1 interaction intervals exclude zero at both profile settings. No general
+superiority or isolated mechanism is claimed. Historical results remain
+distinct. Added reproduction and corrected-archive links to the manuscript.
+
+Latest controller check: DGX 21914 RUNNING at4:48, recorder21915 RUNNING,
+corrected full OrthoFinder21706_1 RUNNING at9:26:33. Both earlier DGX jobs
+completed scheduler-successfully, but complete native validation remains
+pending. OrthoMCL21713 is resource-pending and strata21896 dependency-pending.
+No DGX native archive reads occurred. Next: collect and audit after all three
+diagnostics terminate; no timing or publication admission has changed.
+
 ## Corrected Factorial Figure Evidence Archived (2026-09-19)
 
 Previous turn made progress with the complete diagnostic audit driver,

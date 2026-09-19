@@ -1,0 +1,132 @@
+{
+  "command": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/swiss_analysis_env_20260917/bin/python",
+    "-I",
+    "-B",
+    "/tmp/orthohmm-corrected-factorial-Mbf9oa/reproduction/source/benchmark_tools/reproduce_corrected_factorial.py",
+    "--worker",
+    "/tmp/orthohmm-corrected-factorial-Mbf9oa/reproduction/source",
+    "--output",
+    "/tmp/orthohmm-corrected-factorial-Mbf9oa/reproduction/reproduced"
+  ],
+  "environment": {
+    "base_prefix": "/home/bizon/anaconda3",
+    "packages": {
+      "contourpy": "1.3.2",
+      "cycler": "0.12.1",
+      "fonttools": "4.61.1",
+      "kiwisolver": "1.4.9",
+      "matplotlib": "3.10.8",
+      "numpy": "2.2.6",
+      "packaging": "26.0",
+      "pillow": "12.3.0",
+      "pyparsing": "3.2.1",
+      "python-dateutil": "2.8.2",
+      "six": "1.16.0"
+    },
+    "prefix": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/swiss_analysis_env_20260917",
+    "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]"
+  },
+  "exit_code": 0,
+  "exported": [
+    {
+      "bytes": 1078,
+      "path": "/tmp/orthohmm-corrected-factorial-Mbf9oa/reproduction/source/LICENSE.md",
+      "sha256": "4b9b0c3ffc73fce4c47734d7ef12bd70b9d2cdc4a3bf76ac0f3a35edbe2c3d9e"
+    },
+    {
+      "bytes": 250,
+      "path": "/tmp/orthohmm-corrected-factorial-Mbf9oa/reproduction/source/benchmark_tools/swiss_analysis_requirements.txt",
+      "sha256": "7e7e9d05af92c24fd4c351f96365ebb9f8121150e1c3027101bd2f471043071f"
+    },
+    {
+      "bytes": 36623,
+      "path": "/tmp/orthohmm-corrected-factorial-Mbf9oa/reproduction/source/benchmark_tools/swiss_analysis_requirements.lock",
+      "sha256": "dc4b01ae88bd0d5b961d1a2027c2149e98c365a15b5e2b112f3184c986fe8863"
+    },
+    {
+      "bytes": 7930,
+      "path": "/tmp/orthohmm-corrected-factorial-Mbf9oa/reproduction/source/benchmark_tools/reproduce_corrected_factorial.py",
+      "sha256": "1350c85556912ed854429cc1e1fb22c7da7d335a99d4e806805f7d3834b501c6"
+    },
+    {
+      "bytes": 9202,
+      "path": "/tmp/orthohmm-corrected-factorial-Mbf9oa/reproduction/source/benchmark_tools/bootstrap_qfo_factorial.py",
+      "sha256": "be09876ae4de31b923818385bd3d40d8d5e7df177215fc45a2101c7d30d1c1fa"
+    },
+    {
+      "bytes": 8531,
+      "path": "/tmp/orthohmm-corrected-factorial-Mbf9oa/reproduction/source/benchmark_tools/bootstrap_qfo_swiss_stages.py",
+      "sha256": "0598773a8bd04846f24e4cb27ab7b3529410c11451cbb399b9148a320fd06435"
+    },
+    {
+      "bytes": 9904,
+      "path": "/tmp/orthohmm-corrected-factorial-Mbf9oa/reproduction/source/benchmark_tools/audit_qfo_swiss_counts.py",
+      "sha256": "ff8e5314c98bdffce54732df94611e9d340d854e70392358c495b636b67452ae"
+    },
+    {
+      "bytes": 7448,
+      "path": "/tmp/orthohmm-corrected-factorial-Mbf9oa/reproduction/source/benchmark_tools/prepare_ob_candidate_neighborhood.py",
+      "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+    },
+    {
+      "bytes": 6224,
+      "path": "/tmp/orthohmm-corrected-factorial-Mbf9oa/reproduction/source/benchmark_tools/report_qfo_recovered_stages.py",
+      "sha256": "c5014afc6c1813584422cde207fce232172e583da3b37d6da18a2b1afc7a617d"
+    },
+    {
+      "bytes": 5577,
+      "path": "/tmp/orthohmm-corrected-factorial-Mbf9oa/reproduction/source/benchmark_tools/validate_qfo_native_assessment.py",
+      "sha256": "4786081a21ce04b8ae25f1f3e83ed8a1766472ff7e4476ae70752fe7f0656da5"
+    },
+    {
+      "bytes": 3214,
+      "path": "/tmp/orthohmm-corrected-factorial-Mbf9oa/reproduction/source/benchmark_tools/qfo_summarize_scores.py",
+      "sha256": "e0b89ddcd99209e8c95b6f8dbd6371be037fea4958fb9ca283b20e940f756688"
+    },
+    {
+      "bytes": 176438,
+      "path": "/tmp/orthohmm-corrected-factorial-Mbf9oa/reproduction/source/benchmark_tools/results/qfo_corrected_factorial_complete_20260919/swiss_counts.json",
+      "sha256": "c9d8bf02ef6f287c56d073fa61f165c982caf834a94fc6e44e6589f03e46eba6"
+    },
+    {
+      "bytes": 73364,
+      "path": "/tmp/orthohmm-corrected-factorial-Mbf9oa/reproduction/source/benchmark_tools/results/qfo_corrected_factorial_complete_20260919/swiss_bootstrap.json",
+      "sha256": "f777dead1294b3810c0479877aade7fb4411c0544696f671226ff198432e9211"
+    },
+    {
+      "bytes": 6050,
+      "path": "/tmp/orthohmm-corrected-factorial-Mbf9oa/reproduction/source/benchmark_tools/results/QFO_FACTORIAL_PROTOCOL_20260917.md",
+      "sha256": "f8946e12cefcf84abbee0fb9492f240c05508e045efe00a3006304d34c1fd115"
+    },
+    {
+      "bytes": 8255,
+      "path": "/tmp/orthohmm-corrected-factorial-Mbf9oa/reproduction/source/benchmark_tools/results/QFO_CORRECTED_RELEASE_PROTOCOL_20260917.md",
+      "sha256": "b3603bc9b51ce1708f49a0ee816eb02d3cb52c66fb00f07eeb0d66f840a03e1e"
+    }
+  ],
+  "generated": [
+    {
+      "bytes": 57421,
+      "path": "/tmp/orthohmm-corrected-factorial-Mbf9oa/reproduction/reproduced/statistics.json",
+      "sha256": "bc59208444abce60df3fe6c6aebbe0f925e42136451244fedc309e286b66b144"
+    }
+  ],
+  "limitations": [
+    "Statistics-only reproduction from pinned family counts, not new raw-source admission.",
+    "The shared numerical engine retains its generic status; these inputs are corrected-release only.",
+    "Native inference, conversion, reference construction and official scoring were not rerun.",
+    "Historical absolute paths are provenance, not accessed inputs.",
+    "Same-host isolated execution is not cross-platform validation, full release or rights clearance."
+  ],
+  "publication_ready": false,
+  "raw_source_admission_repeated": false,
+  "runner": {
+    "bytes": 7930,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/reproduce_corrected_factorial.py",
+    "sha256": "1350c85556912ed854429cc1e1fb22c7da7d335a99d4e806805f7d3834b501c6"
+  },
+  "scientific_results_exact_match": true,
+  "source_commit": "0864f9b22d26a80230b7f306dcaca05ab18b9df9",
+  "status": "relocated_corrected_factorial_statistics_reproduced"
+}
