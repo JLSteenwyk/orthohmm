@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Full-Node Trial Integration And Witness Validation (2026-09-19)
+
+Previous turn made progress by committing/pushing bounded workloads and the
+prospective protocol (`5bf7bff`). This turn adds a single-trial controller
+around the unchanged full-command dual-bracket collector and an independent
+workload-witness validator. Shared start and competitor control stay in the
+observer process; all helper threads are joined and owned competitor
+processes are killed/reaped on failure. Successful collection allows the
+bounded competitor to finish before cleanup, rather than truncating its dose.
+
+Witness validation requires 20 distinct worker CPUs/PIDs, complete readiness
+identities, unchanged cgroups/affinities, zero exit statuses, command-enclosed
+work, the frozen duration/cap, at least19.5seconds common work and, for the
+contended condition, correct outside-target scope and5-21CPU-seconds.
+Intervals in the common-work subset must have their entire original host
+windows inside the witnessed overlap. Positive-control detection is reported
+separately from workload validity; no all-clean assumption is made for churn.
+
+Focused tests:59 passed across workload, witness validator, trial-controller
+and existing collector tests. New controller tests cover release, timeout,
+cancellation and owned-competitor cleanup; they are not a production DGX
+panel or a complete independent raw-archive replay. No control job submitted.
+Next: test the complete successful trial path, add the frozen nine-trial
+driver and archive replay, pin deployment and capture terminal records.
+Corrected OrthoFinder21706_1 was confirmed RUNNING at10:09:20; OrthoMCL21713
+and strata21896 remain pending. All timing-admission requirements remain.
+
 ## Full-Node Control Workload Validated Locally (2026-09-19)
 
 The preceding retrieval-only response made no new progress: it rechecked
