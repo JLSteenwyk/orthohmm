@@ -1,5 +1,14 @@
 # Publication Progress
 
+## QfO Parameter Phylogeny Queued (2026-09-19)
+
+Committed and pushed runner/tests/batch as `aa8c0e1`, created the detached
+executor, and submitted array 21932 (four tasks, concurrency one). Verified
+all tasks PENDING, with the requested 32 CPUs/192G/24 hours and no requeue.
+See `QFO_PARAMETER_PHYLOGENY_SUBMISSION_21932.md` for source hashes and
+remaining output-admission/scoring gates. OrthoMCL and DGX jobs continue;
+no unrelated job was interrupted and no scientific result is claimed yet.
+
 ## QfO Parameter Phylogeny Runner Tested (2026-09-19)
 
 The preceding source-search turn found no original TreeFam inputs and made
