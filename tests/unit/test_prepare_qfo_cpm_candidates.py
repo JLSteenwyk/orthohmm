@@ -1,4 +1,6 @@
 import json
+import subprocess
+import sys
 from pathlib import Path
 from types import SimpleNamespace
 
@@ -98,6 +100,44 @@ def test_unscheduled_preparation_rejected(tmp_path, monkeypatch):
     monkeypatch.delenv("SLURM_JOB_ID", raising=False)
     with pytest.raises(ValueError, match="scheduled"):
         module.prepare(tmp_path, 0)
+
+
+def test_numeric_auditor_cannot_preload_executor_scientific_package(tmp_path):
+    code = r'''
+import os
+from pathlib import Path
+import sys
+sys.path.insert(0, sys.argv[1])
+from benchmark_tools import prepare_qfo_cpm_candidates as m
+from benchmark_tools import checked_replay_payload_worker as payload
+from benchmark_tools import cpm_replay_context as context
+from benchmark_tools import verify_qfo_replay_launcher as runtime
+root = Path(sys.argv[2])
+os.environ['SLURM_ARRAY_TASK_ID'] = '0'
+m.require_environment = lambda env: None
+payload.corrected_evidence = lambda *a: ({'runtime': {}}, {}, {}, {})
+context.evidence = lambda *a: {'cwd': str(root / 'launcher')}
+m.replay_evidence = lambda *a: {}
+m.read_frozen = lambda *a: {'candidate_arms': {'p1_c1': {'expansion': {'parameters': {}}}},
+                          'runtime_before': {}, 'runtime_after': {}}
+runtime.verify = lambda *a: {}
+original = m.importlib.import_module
+def load(name, *args, **kwargs):
+    if name == 'orthohmm.orthohmm':
+        assert 'orthohmm' not in sys.modules, 'scientific package preloaded before launcher selection'
+        assert sys.path[0] == str(root / 'launcher')
+        raise RuntimeError('frozen-import-boundary-reached')
+    return original(name, *args, **kwargs)
+m.importlib.import_module = load
+try:
+    m.prepare(root, 0)
+except RuntimeError as error:
+    assert str(error) == 'frozen-import-boundary-reached'
+else:
+    raise AssertionError('Scientific import boundary not exercised')
+'''
+    subprocess.run([sys.executable, "-I", "-c", code, str(Path(module.__file__).resolve().parent.parent),
+                    str(tmp_path)], check=True)
 
 
 @pytest.mark.parametrize("problem", [None, "fresh", "engine", "runtime", "checkpoint", "import"])

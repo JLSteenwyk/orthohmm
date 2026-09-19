@@ -1,5 +1,27 @@
 # Publication Progress
 
+## CPM Candidate Import Boundary Corrected (2026-09-19)
+
+Previous turn was progress: candidate preparation was implemented and
+queued. While implementing its independent validator, code inspection found
+that importing audit_accuracy_checkpoint before selecting the frozen
+scientific launcher preloaded orthohmm.accuracy from the executor checkout.
+The subsequent source check would reject the run. Mocked orchestration
+tests did not expose this real import-order defect.
+
+Moved numeric/content auditor imports after frozen engine selection and
+added an isolated fresh-process regression test that reaches the scientific
+import boundary and asserts no orthohmm package was preloaded. Focused suite:
+129 passed in 5.52 seconds. No scientific algorithm or parameter changed.
+
+Confirmed both tasks of array 21964 were PENDING with zero elapsed time,
+then administratively cancelled that unstarted array for executor replacement.
+Accounting confirms both CANCELLED by 1000, Start=None, zero allocated CPUs
+and 00:00:00 elapsed. No native outputs or scores were inspected or selected;
+the cancellation is retained, not represented as scientific failure or success.
+All other jobs and frozen executors were left untouched. Candidate admission
+is still under development; no candidate result is admitted.
+
 ## CPM Candidate Preparation Implemented (2026-09-19)
 
 Candidate array 21964 is queued from pushed frozen commit 6e20999; both

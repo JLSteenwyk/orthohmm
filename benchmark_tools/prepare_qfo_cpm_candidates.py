@@ -84,8 +84,6 @@ def prepare(root, index):
     from benchmark_tools.checked_replay_payload_worker import corrected_evidence
     from benchmark_tools.cpm_replay_context import evidence, REPLAY_SHA
     from benchmark_tools.verify_qfo_replay_launcher import verify
-    from benchmark_tools.audit_accuracy_checkpoint import audit
-    from benchmark_tools.audit_candidate_arm import audit as audit_arm
     plan_path = root / "benchmarks/work/qfo_corrected_replay_commands_20260918.json"
     plan, plan_record, _, _ = corrected_evidence(plan_path, REPLAY_SHA)
     context = evidence(root, plan, plan_record, ARMS[index])
@@ -111,6 +109,9 @@ def prepare(root, index):
     for module in (engine, accuracy):
         if Path(module.__file__).resolve().parent != launcher / "orthohmm":
             raise ValueError("Wrong frozen scientific import")
+    # The numeric auditor imports orthohmm.accuracy; pin the scientific package first.
+    from benchmark_tools.audit_accuracy_checkpoint import audit
+    from benchmark_tools.audit_candidate_arm import audit as audit_arm
     checkpoint_record = plan["checkpoint_manifest"]
     checkpoint = Path(checkpoint_record["path"]).parent
     numeric = audit(checkpoint, checkpoint_record["sha256"])

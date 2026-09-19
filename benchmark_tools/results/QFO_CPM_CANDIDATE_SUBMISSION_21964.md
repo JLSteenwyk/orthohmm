@@ -1,5 +1,18 @@
 # CPM Candidate Preparation Submission
 
+## Superseded Before Execution
+
+Array 21964 was administratively cancelled before either task started.
+Accounting confirms both tasks CANCELLED by 1000, Start=None, zero allocated
+CPUs and 00:00:00 elapsed. Code inspection found the numeric auditor imported
+the executor's scientific package before frozen launcher selection. Its
+source guard would reject execution; the mocked tests had missed the import
+order. The corrected executor delays that auditor import and adds a real
+fresh-process regression check. No result-based retry, native output or
+score selection occurred. Original submission details are retained below.
+
+## Original Submission
+
 Array 21964 has two serial tasks: index 0 cpm_low, index 1 cpm_high.
 Scheduler inspection confirms both PENDING, 2 CPUs/64 GiB, with
 afterany:21962 AND aftercorr:21962 dependencies. Frozen batch specifies
