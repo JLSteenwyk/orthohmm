@@ -2,6 +2,12 @@
 
 ## Independent CPM Control Admission Implemented (2026-09-19)
 
+Admission job 21958 is queued from pushed frozen commit 40806f5; confirmed
+PENDING Dependency afterok:21956, 2 CPUs/64 GiB/4 hours/no requeue. Details
+and hashes are in `QFO_CPM_CONTROL_SUBMISSION_21956.md`. Final helper-capture
+adjustment passed another 34 admission tests (3.29 seconds), and batch
+syntax/staged whitespace checks passed. No real control result is admitted.
+
 Previous turn was progress: control driver, tests and frozen job 21956 were
 committed/pushed. Confirmed 21956 remains PENDING; OrthoFinder scoring,
 OrthoMCL BLAST and DGX timing/recorder jobs remain live. No DGX SSH used.
