@@ -18,6 +18,9 @@ adds bounded attribution for TreeFam, SwissTree, FAS, VGNC and GO, including
 a [source-bound annotation citation export](publication_annotation_references_20260918.csl.json).
 Remaining dependency/resource citations and journal-specific
 formatting are incomplete.
+A [metadata-review rendering](publication_bibliography_review_20260919/bibliography.html)
+checks visibility of selected citation fields; it is not a journal-formatted
+bibliography or a complete coverage audit.
 The [consolidated selected bibliography](publication_bibliography_20260919_v3.csl.json)
 contains 37 records from nine pinned exports, using the reviewed bylines
 and an explicitly transcribed official igraph article citation. The original

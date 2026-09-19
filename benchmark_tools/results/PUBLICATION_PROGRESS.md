@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Selected Bibliography Rendered For Review (2026-09-19)
+
+The preceding retrieval-only turn was no progress toward resolving the
+original TreeFam source gap: rechecking the deposit and retained hashes did
+not recover the trees or mapping. This turn resumed an unfinished publication
+artifact rather than repeating the exhausted archive search.
+
+Completed the 37-entry bibliography review render with Pandoc 3.1.3, an
+explicit project CSL style, retained AST/HTML and a source/tool/output-hashed
+manifest. All checked fields are visible and both commands have empty stderr.
+Added 19 passing tests (60 passing with the existing citation tests) covering relocated actual inputs, output checksums,
+inventory mismatch, hidden link targets and removed-field detection. See
+`PUBLICATION_BIBLIOGRAPHY_ASSEMBLY_20260919.md` for reproduction and limits.
+No claim of visual review, complete citation semantics, journal formatting,
+rights clearance or full manuscript citation coverage follows from this.
+
+Live scheduler observation: BLAST 21713 RUNNING at 4:42:25; FastOMA 21740,
+parameter phylogeny 21932 and CPM control 21956 still pending. No native job
+was changed or restarted. Missing TreeFam inputs, unfinished scientific
+comparisons, controlled timing and release requirements remain open. The
+publication goal is not complete.
+
 ## OrthoHMM Citation Suffix Reviewed (2026-09-19)
 
 Previous turn made progress at c5f75a2 by adding the missing igraph CSL

@@ -1,5 +1,44 @@
 # Consolidated Selected Bibliography
 
+## Metadata Review Rendering
+
+The [rendered bibliography](publication_bibliography_review_20260919/bibliography.html)
+contains all 37 current v3 records. Pandoc 3.1.3 citeproc rendered the original
+project `publication-review.csl` style, not an assumed target journal style.
+The retained Pandoc AST and manifest record the commands, tool/source/input
+hashes, output hashes, empty stderr and per-entry field-presence checks.
+
+Reproduce from the repository root with a new output directory:
+
+```sh
+python benchmark_tools/render_publication_bibliography.py \
+  --bibliography benchmark_tools/results/publication_bibliography_20260919_v3.csl.json \
+  --style benchmark_tools/publication-review.csl --output NEW_REVIEW_DIRECTORY
+python -m pytest -q tests/unit/test_render_publication_bibliography.py
+```
+
+All 19 renderer tests pass, including actual 37-record rendering after input
+relocation, unchanged CSL input bytes, output checksums, inventory mismatch
+rejection, hidden link-target exclusion, and detection of missing titles,
+identifiers, consortium names, family names, suffixes, preprint labels and
+dates. The development render initially demoted family-name particles;
+the style now explicitly retains them adjacent to the family name. The
+failed development output remains outside the publication results in
+`benchmarks/work/publication_bibliography_review_initial_20260919/`.
+
+Style SHA-256:
+`8fcc6447a351b2b9b3612af121f9c259eb3bf32a608d0b9548d7d5580e4ef4a8`.
+Rendered HTML SHA-256:
+`8e58768b467b15c01ebce304fe5a041d52c2eb30bbb9bbdb8d1f629eb19cad8b`.
+
+The audit checks inventory and substring visibility, not full citation
+semantics or visual layout. Publisher, volume, issue, pagination and given-name
+typography are rendered but not independently validated by these checks.
+This is not journal formatting, complete manuscript citation coverage, rights
+clearance, or validation of scientific results. No benchmark input or method
+changed. The earlier export-history sections below retain their original
+then-outstanding limitations.
+
 ## Current Author-Reviewed Export
 
 `publication_bibliography_20260919_v3.csl.json` retains all 37 records and
