@@ -8,12 +8,12 @@ from benchmark_tools import audit_frontier_overhead as module
 RESULTS = Path(__file__).resolve().parents[2] / "benchmark_tools/results"
 
 
-def accounting(path, failed=None, running=None):
+def accounting(path, failed=None, running=None, array_id=21838):
     rows = []
     for i in range(18):
         state = "FAILED" if i == failed else "RUNNING" if i == running else "COMPLETED"
         code = "1:0" if i == failed else "0:0"
-        rows.append(f"21838_{i}|{state}|{code}|00:10:00|20|96Gn|spark-7ff0")
+        rows.append(f"{array_id}_{i}|{state}|{code}|00:10:00|20|96Gn|spark-7ff0")
     path.write_text("\n".join(rows) + "\n")
 
 
@@ -74,15 +74,16 @@ def test_audit_failure_preserved_without_hiding_other_tasks(panel, monkeypatch, 
     assert result["paired"]["numerical_budget_met"] is None
 
 
-def test_nonterminal_gate_precedes_native_and_context_reads(tmp_path, monkeypatch):
+@pytest.mark.parametrize("panel_name,array_id", [("frontier_21838", 21838), ("pressure_21889", 21889)])
+def test_nonterminal_gate_precedes_native_and_context_reads(tmp_path, monkeypatch, panel_name, array_id):
     path = tmp_path / "accounting.txt"
-    accounting(path, running=17)
+    accounting(path, running=17, array_id=array_id)
     def forbidden(*args):
         pytest.fail("No native/context inspection before complete terminal inventory")
     monkeypatch.setattr(module, "load_context", forbidden)
     monkeypatch.setattr(module, "successful_task", forbidden)
     with pytest.raises(ValueError, match="nonterminal"):
-        module.audit(tmp_path, RESULTS, path)
+        module.audit(tmp_path, RESULTS, path, panel=panel_name)
 
 
 @pytest.mark.parametrize("fault", ["boot", "overlap", "flags"])
@@ -109,13 +110,14 @@ def test_temporal_or_screen_flags_cannot_become_admission(panel, monkeypatch, fa
 
 
 @pytest.mark.parametrize("fault", [None, "changed", "missing", "extra", "symlink"])
-def test_archived_recipe_identity(tmp_path, fault):
-    root = tmp_path / "frontier_overhead_recipe_v1"
+@pytest.mark.parametrize("recipe_root", ["frontier_overhead_recipe_v1", "pressure_overhead_recipe_v2"])
+def test_archived_recipe_identity(tmp_path, fault, recipe_root):
+    root = tmp_path / recipe_root
     root.mkdir()
     path = root / "source.py"
     path.write_text("pass\n")
     item = module.record(path)
-    recipe = {"records": [dict(item, kind="file", path=str(module.ROOT / "frontier_overhead_recipe_v1/source.py"))]}
+    recipe = {"records": [dict(item, kind="file", path=str(module.ROOT / recipe_root / "source.py"))]}
     if fault == "changed":
         path.write_text("changed\n")
     elif fault == "missing":
@@ -126,15 +128,16 @@ def test_archived_recipe_identity(tmp_path, fault):
         (root / "linked.py").symlink_to(path)
     if fault:
         with pytest.raises(ValueError):
-            module.recipe_evidence(tmp_path, recipe)
+            module.recipe_evidence(tmp_path, recipe, recipe_root)
     else:
-        assert module.recipe_evidence(tmp_path, recipe) == [item]
+        assert module.recipe_evidence(tmp_path, recipe, recipe_root) == [item]
 
 
-def test_successful_task_invokes_all_independent_components(tmp_path, monkeypatch):
-    context = module.load_context(RESULTS)
+@pytest.mark.parametrize("panel_name", sorted(module.PANELS))
+def test_successful_task_invokes_all_independent_components(tmp_path, monkeypatch, panel_name):
+    context = module.load_context(RESULTS, panel_name)
     task = context["plan"]["runs"][0]
-    directory = tmp_path / "frontier_overhead_v1/run_00"
+    directory = tmp_path / Path(task["run"]["measurement_directory"]).parent.relative_to(module.ROOT)
     (directory / "measurement").mkdir(parents=True)
     measured = dict(native=dict(exit_code=0, timed_out=False, started_ns=1, finished_ns=2),
                     points=[dict(frontier=dict(boot_id="test"))])
@@ -148,10 +151,12 @@ def test_successful_task_invokes_all_independent_components(tmp_path, monkeypatc
     def binding(*args):
         calls.append("provenance")
         return dict(job_id=123, run=task["run"], measured_argv=["/frozen"])
-    def replay(*args):
+    def replay(*args, **kwargs):
         calls.append("replay")
         assert args[1:3] == ("boundary", 123)
-        return dict(evidence=[], native_wall_s=1., whole_command_screen_passed=True, flagged_intervals=None, memory={})
+        assert kwargs == ({"expected_native_pressure": True} if panel_name == "pressure_21889" else {})
+        return dict(evidence=[], native_wall_s=1., whole_command_screen_passed=True, flagged_intervals=None,
+                    memory={}, screening={"native_pressure_whole_command": {"synthetic": True}})
     def validate(*args):
         calls.append("native")
         assert args[1]["command"] == ["/frozen"]
@@ -165,3 +170,44 @@ def test_successful_task_invokes_all_independent_components(tmp_path, monkeypatc
     assert calls == ["provenance", "replay", "native", "canonical"]
     assert result["status"] == "validated"
     assert result["work_identity"] == {"synthetic": "same"}
+    if panel_name == "pressure_21889":
+        assert result["native_pressure"] == dict(whole_command={"synthetic": True}, intervals=None,
+                                                diagnostic_only=True, environmental_validity_established=False)
+    else:
+        assert "native_pressure" not in result
+
+
+@pytest.mark.parametrize("failed", [None, 4])
+def test_complete_pressure_panel_retains_all_tasks_and_budget_rules(panel, failed):
+    archive, path, calls, _ = panel
+    accounting(path, failed=failed, array_id=21889)
+    result = module.audit(archive, RESULTS, path, panel="pressure_21889")
+    assert len(result["runs"]) == 18
+    assert calls == [i for i in range(18) if i != failed]
+    assert result["paired"]["numerical_budget_met"] is (True if failed is None else None)
+    assert not result["scientific_timings_admitted"]
+    assert not result["environmental_validity_established"]
+    assert not result["publication_ready"]
+
+
+def test_pressure_panel_rejects_legacy_accounting(panel):
+    archive, path, calls, _ = panel
+    with pytest.raises(ValueError):
+        module.audit(archive, RESULTS, path, panel="pressure_21889")
+    assert not calls
+
+
+@pytest.mark.parametrize("protocol_index", [0, 1])
+def test_pressure_protocol_cannot_change_after_submission(panel, protocol_index):
+    archive, path, calls, _ = panel
+    accounting(path, array_id=21889)
+    spec = module.panel_spec("pressure_21889")
+    results = archive / "results"
+    results.mkdir()
+    names = [spec["plan_file"], spec["recipe_file"], spec["auth_file"], *spec["protocols"]]
+    for name in names:
+        data = (RESULTS / name).read_bytes()
+        (results / name).write_bytes(data + (b"changed" if name == spec["protocols"][protocol_index] else b""))
+    with pytest.raises(ValueError, match="protocol differs"):
+        module.audit(archive, results, path, panel="pressure_21889")
+    assert not calls

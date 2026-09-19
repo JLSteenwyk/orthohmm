@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Frozen Pressure Panel Audit Integration (2026-09-19)
+
+Previous turn made progress through33e738c with required pressure coverage.
+Reread the objective and confirmed live21779scoring,21760_2reconciliation,
+21706_1OrthoFinder,21889DGXpanel and21890recorder using local controller
+polling only.21713remains resource-pending. No DGX files were inspected.
+
+Bound the completed-panel auditor to separate allowlisted21838and21889
+plan/recipe/authorization identities, scheduler commands and protocols.
+The new path requires native-pressure evidence in every successful task,
+retains pressure as diagnostic data and keeps all existing terminal, output,
+equivalence, duration, failure and budget rules. No deployed collector,
+scientific setting, outcome or acceptance threshold changed.
+
+286focused tests pass for both panels, including all18task bindings each,
+cross-panel rejection, changed protocol/checksum rejection, recipe integrity,
+mandatory pressure replay and retained failures. These new panel fixtures
+are synthetic, not validation of the running experiment.
+[Implementation, invocation and limitations](PRESSURE_PANEL_AUDITOR_20260919.md).
+
+Await all18terminal states before collecting DGX outputs. Complete actual
+same-runtime replay, recorder/scheduler validation and panel audit remain
+required; no overhead-budget, scientific-timing or publication-readiness
+claim is made. Corrected-QfO and broader publication requirements remain open.
+
 ## Pressure Replay Coverage Gate (2026-09-19)
 
 Previous turn made progress through0cad101 with integrated validation and

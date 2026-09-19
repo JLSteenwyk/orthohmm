@@ -6,7 +6,7 @@ from pathlib import Path
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from benchmark_tools.verify_frontier_overhead_provenance import load_context, verify, ROOT
+from benchmark_tools.verify_frontier_overhead_provenance import load_context, verify, ROOT, panel_spec, PANELS
 from benchmark_tools.replay_frontier_overhead_measurement import replay
 from benchmark_tools.fingerprint_native_overhead_outputs import fingerprint
 from benchmark_tools.validate_scaling_outputs import validate
@@ -15,8 +15,8 @@ from benchmark_tools.summarize_frontier_overhead import terminal_scheduler_rows,
 from benchmark_tools.prepare_ob_candidate_neighborhood import record, check
 
 
-def recipe_evidence(archive, recipe):
-    root = archive / "frontier_overhead_recipe_v1"
+def recipe_evidence(archive, recipe, recipe_root="frontier_overhead_recipe_v1"):
+    root = archive / recipe_root
     if root.is_symlink():
         raise ValueError("Symlinked archive recipe root")
     expected = {}
@@ -53,7 +53,9 @@ def successful_task(archive, context, index, scheduler):
     if (scheduler["allocated_cpus"] != "20" or scheduler["requested_memory"] not in {"96G", "96Gn"}
             or scheduler["node"] != "spark-7ff0"):
         raise ValueError("Accounting resource allocation differs")
-    replayed = replay(directory / "measurement", task["mode"], binding["job_id"], binding["measured_argv"])
+    pressure = panel_spec(context.get("panel", "frontier_21838"))["pressure"]
+    options = {"expected_native_pressure": True} if pressure else {}
+    replayed = replay(directory / "measurement", task["mode"], binding["job_id"], binding["measured_argv"], **options)
     native = measured["native"]
     adapted = dict(command=binding["measured_argv"], cwd=task["run"]["cwd"],
                    exit_code=native["exit_code"], timed_out=native["timed_out"])
@@ -65,7 +67,7 @@ def successful_task(archive, context, index, scheduler):
     evidence.append(checked["gnu_time_companion"]["source"])
     for item in evidence:
         check(item)
-    return dict(index=index, method=task["method"], mode=task["mode"], pair=task["pair"], status="validated",
+    result = dict(index=index, method=task["method"], mode=task["mode"], pair=task["pair"], status="validated",
         scheduler=scheduler, native_wall_s=replayed["native_wall_s"], work_identity=canonical["identity"],
         whole_command_screen_passed=replayed["whole_command_screen_passed"],
         flagged_intervals=replayed["flagged_intervals"], evidence=evidence,
@@ -73,6 +75,12 @@ def successful_task(archive, context, index, scheduler):
         gnu_time=checked["gnu_time_companion"]["accounting"], memory=replayed["memory"],
         observation_points=len(measured["points"]), started_ns=native["started_ns"], finished_ns=native["finished_ns"],
         boot_id=measured["points"][0]["frontier"]["boot_id"], scientific_timings_admitted=False)
+    if pressure:
+        result["native_pressure"] = dict(
+            whole_command=replayed["screening"]["native_pressure_whole_command"],
+            intervals=replayed["screening"].get("native_pressure_intervals"),
+            diagnostic_only=True, environmental_validity_established=False)
+    return result
 
 
 def failure_evidence(archive, task):
@@ -84,19 +92,20 @@ def failure_evidence(archive, task):
     return [record(path) for path in paths if path.is_file()]
 
 
-def audit(archive, results, accounting_path):
+def audit(archive, results, accounting_path, *, panel="frontier_21838"):
+    spec = panel_spec(panel)
     accounting_record = record(accounting_path)
     # This gate precedes even loading native archive metadata.
-    scheduler = terminal_scheduler_rows(accounting_path.read_text(), 21838)
+    scheduler = terminal_scheduler_rows(accounting_path.read_text(), spec["array_id"])
     sources = [record(results / name) for name in (
-        "dgx_frontier_overhead_plan_20260918.json", "dgx_frontier_overhead_recipe_v1_20260918.json",
-        "dgx_frontier_overhead_authorization_20260918.json", "DGX_NATIVE_FRONTIER_OVERHEAD_PROTOCOL_20260918.md")]
-    context = load_context(results)
-    protocol = next(row for row in context["recipe"]["records"]
-                    if row["path"].endswith("/DGX_NATIVE_FRONTIER_OVERHEAD_PROTOCOL_20260918.md"))
-    if sources[-1]["sha256"] != protocol["sha256"]:
-        raise ValueError("Prospective protocol differs from frozen recipe")
-    recipes = recipe_evidence(archive, context["recipe"])
+        spec["plan_file"], spec["recipe_file"], spec["auth_file"], *spec["protocols"])]
+    context = load_context(results, panel)
+    for source in sources[3:]:
+        protocols = [row for row in context["recipe"]["records"]
+                     if row["path"].endswith("/" + Path(source["path"]).name)]
+        if len(protocols) != 1 or source["sha256"] != protocols[0]["sha256"]:
+            raise ValueError("Prospective protocol differs from frozen recipe")
+    recipes = recipe_evidence(archive, context["recipe"], spec["recipe_root"])
     rows = []
     for task in context["plan"]["runs"]:
         index = task["index"]
@@ -142,10 +151,11 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ("archive", "results", "accounting", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
+    parser.add_argument("--panel", choices=sorted(PANELS), default="frontier_21838")
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError(args.output)
-    result = audit(args.archive.resolve(), args.results.resolve(), args.accounting.resolve())
+    result = audit(args.archive.resolve(), args.results.resolve(), args.accounting.resolve(), panel=args.panel)
     with args.output.open("x") as stream:
         json.dump(result, stream, indent=2, sort_keys=True, allow_nan=False)
         stream.write("\n")

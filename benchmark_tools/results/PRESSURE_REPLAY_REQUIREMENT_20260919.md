@@ -44,6 +44,11 @@ from21889 or evidence that it meets the engineering budget.
 
 ## Remaining Panel Integration
 
+Subsequent implementation: [the panel-specific auditor](PRESSURE_PANEL_AUDITOR_20260919.md)
+now supplies this gate and binds21889's frozen provenance. The remaining
+paragraph records the gap at33e738c, before that integration; actual-panel
+validation still awaits complete terminal evidence.
+
 The old complete-panel auditor is still bound to21838's plan, authorization,
 recipe paths and scheduler command. Do not invoke it unchanged for21889.
 Before auditing the new panel, bind its exact submitted identities and call
