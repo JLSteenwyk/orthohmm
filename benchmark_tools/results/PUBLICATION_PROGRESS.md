@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Root Context Launcher And Witness Replay Added (2026-09-19)
+
+Added the 12-trial panel runner and exclusive DGX20CPU/96GiB, 15-minute
+Slurm launch script. Runtime preflight reuses the existing interpreter and
+manifest checks without running native-method commands from the older plan;
+additional checks bind the frozen root protocol and new launch script.
+Each outcome and cumulative checkpoint is written once. Any trial execution
+or validation failure stops subsequent workload launches, retaining all
+remaining conditions explicitly as unrun. A valid but low positive-control
+response is retained and does not stop the panel or trigger replacement.
+
+Added per-trial archive replay: original lineage and supplementary context
+replay, exact native/service commands, raw versus embedded worker witnesses,
+shared start, service identity/exit/removal chronology, complete workload
+inventory and summary reproduction. Source/runtime/scheduler and whole-panel
+binding remain explicit separate audit requirements. Mocked measurement
+fixtures test witness replay independently; they are not live DGX results.
+
+All 437 focused full-node, lineage and root-context tests pass; the launch
+script passes `bash -n`. An initial checkpoint test caught use of the
+write-once save helper for a repeated filename; checkpoints now use unique
+indexed names. No frozen scientific configuration or queued job changed.
+
+Next: complete and test the whole-panel provenance audit, commit/export the
+deployment recipe, verify the DGX queue is empty, then submit the fixed panel
+once and collect only after termination. No panel has been submitted yet.
+BLAST 21713 was confirmed RUNNING at 10:25:34. The publication goal remains
+incomplete, including prospective controlled resource evidence.
+
 ## Root Context Trial Coordinator Validated Locally (2026-09-19)
 
 Implemented the frozen condition order and per-trial coordinator, reusing
