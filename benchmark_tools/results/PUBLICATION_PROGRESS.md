@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Parameter Uncertainty Numerical Engine Tested (2026-09-19)
+
+Previous turn was progress: independent score admission tested and queued,
+and pending dependency gates corrected for stable accounting. Rechecked
+live jobs before implementing the fixed SwissTrees parameter calculation.
+The new numerical engine retains all seven planned arms, validates 18
+disjoint families with matching reference members/truth totals, recomputes
+the native prior-adjusted family statistics, and uses shared PCG64 draws.
+Defaults are exactly 100,000 replicates and seed 20260925, with linear
+nominal intervals and Bonferroni adjustment over all 18 planned endpoints.
+Unavailable arms remain explicit; missing control yields no paired contrasts.
+
+Tests compare every interval against explicit repeated-family aggregation,
+verify fixed multiplicity/shared draws when arms are missing, reject changed
+counts/membership/statistics, and run the full 100,000-replicate default on
+synthetic counts. All 53 focused numerical tests passed in 0.61 seconds with
+single-thread numerical libraries. F1 is the harmonic mean of macro precision
+and recall, not mean family F1. Identical arms give exact zero contrasts.
+
+This is a numerical engine only: no real parameter counts or intervals have
+been evaluated. It explicitly returns uncertainty unadmitted, has no evidence-
+writing CLI, and still requires a provenance-bound count-audit/integration
+workflow. That workflow, CPM variants and broader publication requirements
+remain open; no publication-ready or superiority claim follows.
+
+Latest scheduler check: corrected OrthoFinder 21735_0 RUNNING (28:49),
+OrthoMCL BLAST 21713 RUNNING (45:15), DGX overhead 21920_8 RUNNING (0:22),
+recorder 21922 RUNNING. Remote native outputs remain uninspected during
+the measurement panel; no running job was interrupted.
+
 ## Parameter Score Admission Queued (2026-09-19)
 
 Committed/pushed independent score admission and tests as `d7baf35`, created
