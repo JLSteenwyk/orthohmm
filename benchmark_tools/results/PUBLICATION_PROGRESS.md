@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Full-Node Controls Deployed And Running (2026-09-19)
+
+Previous turn made progress with raw replay and batch preparation (`dd912c6`).
+Exported and verified447 committed recipe files, verified both DGX runtime
+inventories, and confirmed an empty queue plus two100%-idle current vmstat
+observations. First submission21916 failed before Python because of inherited
+local environment/path settings; terminal evidence is retained by completed
+recorder21917. The output directory was absent, confirming no trial started.
+
+Submitted unchanged recipe/protocol with corrected launch environment and
+remote working directory as21918. Controller confirms RUNNING, exclusive
+20CPU/96GiB,45-minute limit, zero restarts. Recorder21919 captures terminal
+state on bizon using the frozen source export. No SSH inspection during the
+panel. See `FULL_NODE_CONTROL_SUBMISSION_20260919.md` for hashes, failure
+evidence and exact launch corrections. Next is terminal capture, archive
+collection and all-nine-trial replay; no scientific timing admitted.
+
 ## Full-Node Raw Replay And Batch Wrapper (2026-09-19)
 
 Previous turn made progress with the fixed driver (`47e69eb`). Added offline
