@@ -75,3 +75,32 @@ def test_original_qfo_factorial_is_explicitly_retained():
     assert "figures_qfo_sequence_search_20260918" in PANELS
     assert len(set(PANELS)) == len(PANELS)
     assert not any("corrected_factorial" in panel for panel in PANELS)
+
+
+@pytest.mark.parametrize("release", ["corrected", "original", None])
+def test_corrected_scope_is_separate_and_release_checked(tmp_path, monkeypatch, release):
+    from benchmark_tools import audit_publication_figures as module
+    original, data = fixture(tmp_path)
+    directory = tmp_path / "benchmark_tools/results" / module.CORRECTED_PANELS[0]
+    directory.parent.mkdir(parents=True)
+    original.parent.rename(directory)
+    data["input_release"] = release
+    data["outputs"] = [record(directory / Path(row["path"]).name) for row in data["outputs"]]
+    (directory / "manifest.json").write_text(json.dumps(data))
+    monkeypatch.setattr(module.subprocess, "check_output", lambda *a, **k: "")
+    if release != "corrected":
+        with pytest.raises(ValueError, match="corrected-release"):
+            module.audit(tmp_path, "corrected-factorial")
+    else:
+        result = module.audit(tmp_path, "corrected-factorial")
+        assert result["status"] == "retained_figure_bytes_verified"
+        assert result["scope"] == "corrected-factorial"
+        assert len(result["panels"]) == 1
+        assert result["total_output_records"] == 3
+        assert not result["publication_ready"]
+
+
+def test_unknown_audit_scope_rejected(tmp_path):
+    from benchmark_tools.audit_publication_figures import audit
+    with pytest.raises(ValueError, match="scope"):
+        audit(tmp_path, "combined-implicit")

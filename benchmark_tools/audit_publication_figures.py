@@ -20,6 +20,7 @@ PANELS = (
     "qfo_factorial_swiss_figure_20260918", "figures_dgx_descriptive_20260918",
     "figures_qfo_hit_coverage_20260918", "figures_qfo_sequence_search_20260918",
 )
+CORRECTED_PANELS = ("qfo_corrected_factorial_figures_20260919",)
 
 
 def records(value):
@@ -73,14 +74,18 @@ def inspect_manifest(path, repo, tracked):
         "output_count": len(outputs), "files": list(checked.values())}
 
 
-def audit(repo):
+def audit(repo, scope="historical"):
+    if scope not in {"historical", "corrected-factorial"}:
+        raise ValueError("Unknown retained figure scope")
     tracked = set(subprocess.check_output(["git", "ls-files", "-z"], cwd=repo, text=True).split("\0"))
     panels = []
-    for panel in PANELS:
+    for panel in PANELS if scope == "historical" else CORRECTED_PANELS:
         path = repo / "benchmark_tools/results" / panel / "manifest.json"
+        if scope == "corrected-factorial" and json.loads(path.read_text()).get("input_release") != "corrected":
+            raise ValueError("Corrected figure scope requires corrected-release manifest")
         panels.append({"panel": panel, **inspect_manifest(path, repo, tracked)})
     return {"status": "retained_figure_bytes_verified" if all(p["status"] == "all_recorded_bytes_match" for p in panels)
-            else "retained_figure_integrity_failure", "publication_ready": False,
+            else "retained_figure_integrity_failure", "publication_ready": False, "scope": scope,
             "source": record(__file__), "panels": panels,
             "total_output_records": sum(p["output_count"] for p in panels),
             "untracked_dependencies": sorted({r["expected"]["path"] for p in panels for r in p["files"]
@@ -90,19 +95,22 @@ def audit(repo):
                 "Tracked membership does not establish clean committed bytes, licensing or portable execution.",
                 "Manifest source inputs are checked, but their transitive raw-data dependencies are not traversed.",
                 "Fixed-length simulation panel remains a failure diagnostic, not an admitted OrthoFinder accuracy comparison.",
-                "The QfO factorial figure uses original-release SwissTrees results, not corrected-input reruns.",
+                ("The QfO factorial figure uses original-release SwissTrees results, not corrected-input reruns."
+                 if scope == "historical" else "Corrected-release factorial supplement only; historical panels are not included or recertified."),
                 "The DGX resource figure is descriptive; its inclusion does not admit controlled timing comparisons.",
-                "Pending corrected-QfO factorial figures are not certified by this inventory."]}
+                ("Corrected-QfO factorial figures are not certified by this historical inventory."
+                 if scope == "historical" else "Direct corrected figure evidence only; not the complete publication archive.")]}
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--repo", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
+    parser.add_argument("--scope", choices=("historical", "corrected-factorial"), default="historical")
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError(args.output)
-    result = audit(args.repo.resolve())
+    result = audit(args.repo.resolve(), args.scope)
     with args.output.open("x") as stream:
         json.dump(result, stream, indent=2, sort_keys=True)
         stream.write("\n")
