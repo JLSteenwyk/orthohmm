@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Manuscript Integrates Corrected R-On And Resource Audits (2026-09-18 UTC)
+
+Previous turn made progress through 580baa9 with the retained-pressure audit.
+Reread the full objective and verified remaining corrected inference jobs.
+Updated the manuscript's stale R-on status, added the admitted six-endpoint
+contrast and precision-recall limitations, and integrated the completed
+overhead and pressure audits without promoting timing claims. The original
+27 observations and new 18-task engineering panel remain distinct.
+
+Pandoc parsed and rendered the draft successfully. All 129 local link/image
+occurrences resolve to 124 existing targets. A structured AST comparison
+checked all 12 new table values against the source manifest at displayed
+precision. [Scope and checksum evidence](MANUSCRIPT_REFRESH_20260918.md).
+No code, input, inference, endpoint or statistical setting changed. Corrected
+comparators/factorial, controlled resource measurement and final publication
+requirements remain incomplete.
+
 ## Existing Host Pressure Evidence Audited (2026-09-18 UTC)
 
 Previous turn made progress through e52fa47 with first corrected R-on accuracy

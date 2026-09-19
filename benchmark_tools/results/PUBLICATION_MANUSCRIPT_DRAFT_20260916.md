@@ -888,7 +888,8 @@ This agreement supports reuse of the corrected intermediate outputs for
 the prespecified ablations. It neither resolves the older historical-input
 replay discrepancy nor establishes general determinism. Candidate
 preparation is admitted, as are conversion and scoring for all four R-off
-cells. Reconciliation and R-on assessment remain unfinished. The 50:28 replay elapsed time is
+cells and the first R-on cell, p0_c0_r1. The other three R-on cells remain
+unfinished. The 50:28 replay elapsed time is
 incremental shared-host execution, not a matched end-to-end runtime result.
 
 The corrected R-off cells p0_c0_r0, p0_c1_r0, p1_c0_r0 and p1_c1_r0 scored
@@ -897,6 +898,41 @@ Their group-derived predictions retained 9,009,082, 11,734,021, 9,032,719
 and 11,755,521 cross-species pairs with zero mapping loss. This partial panel
 does not establish expansion/reconciliation interactions or authorize a
 default change. [All six endpoints and admission provenance](QFO_CORRECTED_ROFF_SCORES_20260918.md).
+
+### First Corrected Reconciliation Contrast
+
+Independent assessment admitted p0_c0_r1 with 5,113,820 native phylogenetic
+pairs and zero mapping losses. Compared with the matched p0_c0_r0 ablation,
+reconciliation increased precision and reduced recall in all three
+reference-orthology endpoints. These comparisons retain initial HMM search
+but disable multi-sequence profile expansion and candidate-family expansion;
+neither row is the complete satellite_v2 publication configuration.
+
+| Endpoint | Reconciliation off | Reconciliation on |
+| --- | ---: | ---: |
+| GO similarity | 0.472119 | 0.490260 |
+| EC similarity | 0.932114 | 0.967702 |
+| VGNC F1 | 0.666834 | 0.898185 |
+| SwissTrees F1 | 0.689184 | 0.789574 |
+| TreeFam-A F1 | 0.605404 | 0.602508 |
+| FAS | 0.777125 | 0.785212 |
+
+SwissTrees precision increased from 0.643940 to 0.949152 while recall fell
+from 0.741266 to 0.675932. TreeFam-A precision increased from 0.792245 to
+0.956682, but recall fell from 0.489873 to 0.439719, leaving slightly lower
+F1. Thus a precision increase did not imply uniform F1 improvement. The
+project-defined secondary mean increased from 0.690463 to 0.755573; it is
+not a separate primary endpoint or evidence of general superiority.
+
+Five of eight corrected factorial cells are now scored. Their
+[machine-generated table and manifest](qfo_corrected_factorial_scores_20260918_v2/scores.md)
+retain missing cells explicitly. R-off pairs are group-derived cliques;
+R-on pairs are native phylogenetic predictions, not root-HOG clique
+expansions. Pair counts describe prediction volume, not protein coverage.
+The prespecified full-factorial SwissTrees uncertainty analysis awaits all
+eight cells. Historical-input intervals cannot be reused for this contrast,
+and no default was selected from these development-exposed point estimates.
+[Independent score admission and precision-recall details](QFO_CORRECTED_FIRST_RECONCILIATION_SCORES_20260918.md).
 
 ### Corrected QfO Sequence-Search Control
 
@@ -1183,6 +1219,36 @@ aggregate RSS is deliberately not plotted; no speedup or complexity fit is
 implied. Host uncertainty is stated within the figure itself.
 [DGX observation-gap audit](dgx_observation_gaps_20260918.json),
 [post-run validation status](DGX_POSTRUN_ADMISSION_20260918.md).
+
+A separate prospective 18-task observation-overhead experiment subsequently
+finished. It compared periodic and boundary-only monitoring in three paired
+replicates for each principal method on the four-proteome input. Independent
+audit validated six task records; three measurement wrappers failed and
+nine tasks lacked the required detailed scheduler records because accounting
+summaries had been collected instead. Only one of nine planned pairs was
+available. Its 1.986% periodic/boundary wall-time difference does not establish
+the prespecified complete-panel overhead budget or an interference bound.
+No missing pair was imputed and no failed arm selectively replaced.
+[Complete audit and failures](DGX_FRONTIER_OVERHEAD_RESULT_21838.md).
+
+In two failed wrappers, retained snapshots identify transient apt-daily and
+NetworkManager-dispatcher cgroups as the reason for identity-check rejection;
+their effect on native runtime is unquantified. The third failed inside a
+snapshot and lacks the two inventories needed for that diagnosis. All three
+native exit records report success, distinguishing measurement failure from
+demonstrated inference failure. Subsequent engineering changes automate
+scheduler-record capture and preserve partial failed-snapshot evidence, but
+do not retroactively recover these missing records or admit the panel.
+
+An independent [host-pressure audit](DGX_PRESSURE_DIAGNOSTIC_21838.md)
+checked 5,154 retained points and their source hashes. Seventeen observation
+windows enclosed native execution; task 6 covered only 10.038107 seconds
+before monitoring failed. Recorded host memory-stall totals were small
+(0-227 microseconds for the `some` category), while CPU and I/O pressure
+varied. Host-wide pressure includes native work and does not identify
+competing processes or establish isolation. No pressure threshold was
+selected after observing these outcomes. The original 27 runs remain
+descriptive; controlled speed and memory rankings are not established.
 
 ### SwissTrees Comparator Uncertainty
 
