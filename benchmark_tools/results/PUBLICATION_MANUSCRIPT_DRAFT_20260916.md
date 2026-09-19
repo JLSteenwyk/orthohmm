@@ -901,7 +901,7 @@ default change. [All six endpoints and admission provenance](QFO_CORRECTED_ROFF_
 
 Native inference and pair conversion have also completed for p0_c1_r1,
 retaining all 984,137 genes and 5,977,100 native phylogenetic pairs with zero
-mapping loss; its accuracy assessment remains pending. An exploratory
+mapping loss; its accuracy assessment is now independently admitted. An exploratory
 comparison with p0_c0_r1 found that the inferred species trees differ:
 both have the same 78 species and 76 nontrivial rooted clades, but share
 only 38 clades (rooted symmetric difference 76). The runs used 18 versus
@@ -936,8 +936,8 @@ F1. Thus a precision increase did not imply uniform F1 improvement. The
 project-defined secondary mean increased from 0.690463 to 0.755573; it is
 not a separate primary endpoint or evidence of general superiority.
 
-Five of eight corrected factorial cells are now scored. Their
-[machine-generated table and manifest](qfo_corrected_factorial_scores_20260918_v2/scores.md)
+Six of eight corrected factorial cells are now scored. Their
+[machine-generated table and manifest](qfo_corrected_factorial_scores_20260919_v3/scores.md)
 retain missing cells explicitly. R-off pairs are group-derived cliques;
 R-on pairs are native phylogenetic predictions, not root-HOG clique
 expansions. Pair counts describe prediction volume, not protein coverage.
@@ -945,6 +945,22 @@ The prespecified full-factorial SwissTrees uncertainty analysis awaits all
 eight cells. Historical-input intervals cannot be reused for this contrast,
 and no default was selected from these development-exposed point estimates.
 [Independent score admission and precision-recall details](QFO_CORRECTED_FIRST_RECONCILIATION_SCORES_20260918.md).
+
+### Corrected Candidate Expansion With Reconciliation
+
+With profile expansion disabled and reconciliation enabled, candidate
+expansion increased observed SwissTrees F1 from0.789574to0.836354,
+precision from0.949152to0.955781 and recall from0.675932to0.743456.
+VGNC F1 increased from0.898185to0.901626 and TreeFam-A F1 from0.602508
+to0.616864. Other endpoints decreased: GO similarity from0.490260to0.490035,
+EC similarity from0.967702to0.965435 and FAS from0.785212to0.762823.
+The secondary mean increased from0.755573to0.762189. These mixed point
+estimates do not establish significance, a factorial interaction or superiority
+of the complete publication configuration. The species tree also changes
+between these cells, as described above; the contrast is end-to-end, not
+fixed-tree isolation. The corrected paired uncertainty analysis remains
+pending and no historical interval is reused.
+[Independently admitted scores and precision-recall trade-offs](QFO_CORRECTED_EXPANDED_RECONCILIATION_SCORES_20260919.md).
 
 ### Corrected QfO Sequence-Search Control
 

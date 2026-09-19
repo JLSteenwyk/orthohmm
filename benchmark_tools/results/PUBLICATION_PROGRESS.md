@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Sixth Corrected Factorial Cell Admitted (2026-09-19)
+
+Previous turn made progress throughfccf47b by queuing full-factorial
+uncertainty21894. Reread the objective and verified live processes; waited
+for21779scoring, then21780independent admission. Both completed0:0 in30:02
+and13seconds respectively. A fresh frozen admission execution reproduces
+the full retained receipt byte-for-byte (SHA3f3683b893397ad056f85b5161498f4c8afc00f2b33e1ba6324e355ea1e835c1).
+
+Admitted p0_c1_r1 has5,977,100native pairs with zero mapping losses.
+Exported six corrected cells into a fresh versioned table, retaining earlier
+exports and the two absent cells. With P-off/R-on, candidate expansion raises
+observed SwissTrees F1 from0.789574to0.836354 and also VGNC/TreeFam-A F1,
+but lowers GO/EC/FAS. Updated manuscript and claim checklist with these mixed
+point estimates and the existing non-fixed-tree limitation.
+[Scores, repeated validation and provenance](QFO_CORRECTED_EXPANDED_RECONCILIATION_SCORES_20260919.md).
+
+No partial-factorial significance or superiority claim is made.21894remains
+dependent on the final two score admissions, while remaining inference and
+DGX timing continue. DGX quiet window is preserved without remote access.
+All wider publication requirements remain active.
+
 ## Corrected Factorial Uncertainty Queued (2026-09-19)
 
 Previous turn made progress throughdef3009 with the pinned pressure-panel
