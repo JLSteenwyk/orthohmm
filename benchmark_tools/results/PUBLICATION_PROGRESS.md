@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Corrected Candidate Admission Tool Prepared (2026-09-19)
+
+Previous turn implemented and launched candidate preparation (`6405da5`,
+deployment `0857675`). Added a separate completed-output admission tool and
+scheduled batch. It requires successful terminal accounting, pinned source
+revision and manifest, exact arm/parameter inventory, corrected baseline
+provenance and runtime, numeric checkpoint recheck, fresh candidate-content
+audits and independent merge reconstruction. Both control candidate and trace
+hashes must equal the retained baseline. All local admission helpers and
+checked input/output records are retained; no accuracy is evaluated.
+
+78 focused tests pass, including rejection of a live job before artifact
+reads, partial/reordered arms, changed applied/nominal parameters, control
+mismatches and bad runtime metadata. Batch syntax passes. This is prepared
+validation tooling, not an admission result. At 6:05, job 21927 remains
+RUNNING: control, norm_low, norm_high and margin_low are prepared, while
+margin_high is preparing. Completion, postflight and independent admission
+must precede downstream use; CPM/phylogeny/scoring remain required.
+
 ## Corrected Candidate Neighborhood Submitted (2026-09-19)
 
 Committed/tested preparation code at `6405da5`, then deployed a clean detached
