@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Native Lineage Integration And Replay (2026-09-19)
+
+Previous turn was progress: DGX lifecycle controls and raw replay were retained
+and pushed through b740875. This turn added the separate native lineage
+collector and replay implementation without changing existing frozen
+collectors, CPU thresholds, native worker lifecycle or benchmark results.
+
+The new schema keeps both original host windows, the same native CPU sample,
+aggregate lineage diagnostics, pressure, memory, partial failures and original
+screen flags. Replay rejects mismatched or changed raw evidence. All 118
+targeted tests pass, including 48 new tests for integration and replay.
+See `NATIVE_LINEAGE_INTEGRATION_20260919.md` for exact checks, commands and limits.
+No live native measurement has yet used this integrated collector; mock-worker
+and synthetic-point tests do not establish runtime overhead or isolation.
+
+The current local scheduler check found BLAST 21713 RUNNING at 5:02:42,
+with FastOMA 21740, parameter phylogeny 21932 and CPM control 21956 pending.
+No scientific job was restarted. Next freeze/run the integrated DGX native
+control, replay its raw outputs, and complete the prospective lifecycle and
+overhead requirements before any scientific timing admission. Missing TreeFam
+originals and the remaining publication requirements are still open.
+
 ## DGX Completed-Service Controls Executed (2026-09-19)
 
 Previous turn was progress at 993fed5: a tested aggregate lineage reader was
