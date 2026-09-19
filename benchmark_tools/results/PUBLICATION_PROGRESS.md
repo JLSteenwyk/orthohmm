@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Native Pressure Added to Complete-Command Collectors (2026-09-19)
+
+Previous turn made progress through07e5773 with a verified wheel inventory
+and a concrete static-runtime release review item. Reread the objective and
+verified21760_1/21706_1 running and21713 resource-pending. No jobs restarted.
+
+Implemented opt-in native-step PSI collection in both periodic and
+boundary-only frontier measurements. Scope/identity, read enclosure, raw
+counters, interval continuity and complete-command coverage are checked;
+failures retain preceding observations and propagate through worker cleanup.
+Historical defaults, CPU screens, source fixtures and admission flags remain
+unchanged. All167 focused tests passed, including17 new integration cases
+and historical replay/provenance coverage.
+[Implementation, verification and limits](NATIVE_PRESSURE_INTEGRATION_20260919.md).
+
+Next resource step is a freshly exported DGX complete-command integration
+run, followed by separately frozen overhead/inclusion work. No deployment
+or comparative timing conclusion is claimed here. Corrected scientific
+analyses, controlled scaling and final publication packaging remain open.
+
 ## Retained Wheel Inventory and Static Runtime Finding (2026-09-19)
 
 The preceding TreeFam follow-up reverified retained files but recovered no

@@ -1,6 +1,7 @@
 """Boundary-only control for incremental periodic frontier observation cost."""
 
 import argparse
+from functools import partial
 import json
 import os
 from pathlib import Path
@@ -16,6 +17,7 @@ from benchmark_tools.probe_dgx_cpu_hierarchy import compare
 from benchmark_tools.probe_cgroup_frontier import compare as compare_frontier
 from benchmark_tools.probe_dgx_step_separation import save, wait_file
 from benchmark_tools.screen_bracketed_cpu import screen
+from benchmark_tools.probe_native_pressure import compare as compare_pressure
 
 
 def evaluate(points, done, job):
@@ -29,7 +31,7 @@ def evaluate(points, done, job):
     before, after = done["snapshots"]
     whole = screen(points[0]["host"][0], before, after, points[-1]["host"][1],
                    job, points[0]["ticks"], done["started_ns"], done["finished_ns"])
-    return dict(whole_command_screen=whole,
+    result = dict(whole_command_screen=whole,
                 hierarchy_boundary=compare(points[0], points[1], job),
                 frontier_boundary=compare_frontier(points[0]["frontier"], points[1]["frontier"]),
                 interval_screening_available=False, flagged_intervals=None,
@@ -37,10 +39,17 @@ def evaluate(points, done, job):
                 limitations=["Boundary-only observations cannot detect localized competing activity.",
                              "Same worker and completion polling; estimates incremental periodic observation cost only.",
                              "No quiet-host assertion, overhead subtraction, or scientific timing admission."])
+    if any("native_pressure" in point for point in points):
+        if not all("native_pressure" in point for point in points):
+            raise ValueError("Native pressure missing from part of command")
+        result["native_pressure_whole_command"] = compare_pressure(
+            points[0]["native_pressure"], points[1]["native_pressure"], job)
+    return result
 
 
 def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_s,
-            monitor_host=True, host_interval_s=30.):
+            monitor_host=True, host_interval_s=30., *, native_pressure=False):
+    reader = partial(read_frontier_point, native_pressure=True) if native_pressure else read_frontier_point
     validate(command, cpus, timeout_s, interval_s)
     if (int(os.environ["SLURM_JOB_ID"]) != job_id or os.environ.get("SLURM_CPUS_PER_TASK") != "20"
             or os.environ.get("SLURM_MEM_PER_NODE") != "98304"
@@ -55,7 +64,7 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
         process = subprocess.Popen(launched, stdout=log, stderr=subprocess.STDOUT)
         try:
             ready = wait_file(directory / "ready.json")
-            points = [read_frontier_point(ready["pid"], ready["cgroup"], job_id, directory / "failed_point.json")]
+            points = [reader(ready["pid"], ready["cgroup"], job_id, directory / "failed_point.json")]
             save(directory / "point_0000.json", points[0])
             save(directory / "go.json", {"go": True})
             start = time.monotonic()
@@ -67,7 +76,7 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
                 if process.poll() is not None:
                     raise RuntimeError("Worker exited before final frontier observation")
                 if completed:
-                    points.append(read_frontier_point(ready["pid"], ready["cgroup"], job_id, directory / "failed_point.json"))
+                    points.append(reader(ready["pid"], ready["cgroup"], job_id, directory / "failed_point.json"))
                     save(directory / f"point_{index:04d}.json", points[-1])
                     break
                 if time.monotonic() - start > timeout_s + 30:

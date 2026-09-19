@@ -14,11 +14,11 @@ from tests.unit.test_measure_native_frontier_step import extend
 def test_worker_and_cleanup_unchanged_except_periodic_reads():
     expected = inspect.getsource(original.measure)
     expected = expected.replace(
-        'points.append(read_frontier_point(ready["pid"], ready["cgroup"], job_id, directory / "failed_point.json"))\n'
+        'points.append(reader(ready["pid"], ready["cgroup"], job_id, directory / "failed_point.json"))\n'
         '                save(directory / f"point_{index:04d}.json", points[-1])\n'
         '                if completed:\n                    break',
         'if completed:\n'
-        '                    points.append(read_frontier_point(ready["pid"], ready["cgroup"], job_id, directory / "failed_point.json"))\n'
+        '                    points.append(reader(ready["pid"], ready["cgroup"], job_id, directory / "failed_point.json"))\n'
         '                    save(directory / f"point_{index:04d}.json", points[-1])\n'
         '                    break')
     expected = expected.replace("frontier_report.json", "boundary_report.json")

@@ -37,7 +37,8 @@ def extend(points, done):
 
 
 def test_collector_body_preserves_worker_lifecycle():
-    expected = inspect.getsource(original.measure).replace("read_hierarchy(", "read_frontier_point(")
+    expected = inspect.getsource(original.measure).replace("read_hierarchy(", "reader(")
+    expected = expected.replace('host_interval_s=30.):', 'host_interval_s=30., *, native_pressure=False):\n    reader = partial(read_frontier_point, native_pressure=True) if native_pressure else read_frontier_point')
     expected = expected.replace('ready["cgroup"], job_id)', 'ready["cgroup"], job_id, directory / "failed_point.json")')
     expected = expected.replace("hierarchy_report.json", "frontier_report.json")
     expected = expected.replace("final hierarchy observation", "final frontier observation")
