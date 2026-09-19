@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Native Wheel Metadata Corrected (2026-09-18 UTC)
+
+Previous turn made progress throughe76a248 with isolated CLI tests and the
+full unit rerun. Reread the objective; local scheduler confirms HMM21706_0
+running19:23:02 and overhead21838_3 running11:16, tasks0-2 complete and4-17
+pending. No DGX remote calls or partial native-output inspection occurred.
+
+A clean-source wheel build revealed compiled libraries labelled platform-
+independent. Corrected distribution metadata, added a regression test and
+rebuilt/reinstalled locally. Five focused tests pass; installed CLI inference
+outside the checkout exits0 and partitions all38fixture genes into4groups.
+The fixed wheel is taggedcp310-cp310-linux_x86_64. Original and corrected
+wheel artifacts, logs and verification are retained with hashes in the
+[packaging audit](PUBLICATION_WHEEL_PLATFORM_FIX_20260918.md).
+
+This closes the misleading any-platform tag and verifies local installed
+execution, not portable release readiness. Host-native compilation,
+dynamic-library portability and inherited dependencies remain release gates.
+No native algorithm or active scientific executor changed. Nothing uploaded.
+
 ## Full Unit Check And Isolated CLI Coverage (2026-09-18 UTC)
 
 Previous turn made progress throughb3217b0 with resource attribution.

@@ -1,0 +1,13 @@
+{
+  "installed_module": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_package_e76a248/venv/lib/python3.10/site-packages/orthohmm/__init__.py",
+  "genes": 38,
+  "groups": 4,
+  "wheel_sha256": "5348900eb29a39a5b468f6b4bcf9173c79df1504996a59df12d8a2d477d65aaf",
+  "wheel_metadata": "Wheel-Version: 1.0\nGenerator: setuptools (81.0.0)\nRoot-Is-Purelib: false\nTag: cp310-cp310-linux_x86_64\n\n",
+  "native_libraries": [
+    "orthohmm/search/csrc/hmm_viterbi.so",
+    "orthohmm/search/csrc/hmm_viterbi_cuda.so",
+    "orthohmm/search/csrc/kmer_prefilter.so",
+    "orthohmm/search/csrc/pair_align.so"
+  ]
+}

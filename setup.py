@@ -15,7 +15,7 @@ import shutil
 import subprocess
 import sys
 from pathlib import Path
-from setuptools import setup
+from setuptools import Distribution, setup
 from setuptools.command.build_py import build_py
 from setuptools.command.develop import develop
 
@@ -169,6 +169,13 @@ class CustomDevelop(develop, BuildKernelsMixin):
         super().run()
 
 
+class NativeDistribution(Distribution):
+    def has_ext_modules(self):
+        # ctypes libraries are native code even though they are package data.
+        # Keep the wheel platform-specific, including compiler-fallback builds.
+        return True
+
+
 # ─── Package metadata ──────────────────────────────────────────────────
 
 with open(HERE / "README.md", encoding="utf-8") as f:
@@ -194,6 +201,7 @@ REQUIRES = [
 ]
 
 setup(
+    distclass=NativeDistribution,
     name="orthohmm",
     description="HMM-based orthogroups",
     long_description=long_description,
