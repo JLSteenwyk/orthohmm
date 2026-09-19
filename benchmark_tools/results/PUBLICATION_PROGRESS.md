@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Remaining Lineage Flags Described (2026-09-19)
+
+Previous turn completed the full overhead audit and pushed `38994ae`.
+This turn described all 5,929 periodic intervals, retaining all 23 narrow
+flags and 5,906 unflagged intervals. In every flagged interval the signed
+root-minus-system.slice difference is positive (0.186298 to 1.228942 CPU-s).
+Much smaller signed differences occur below system.slice. This localizes
+the next accounting investigation but does not identify a cause or workload.
+
+See `LINEAGE_OVERHEAD_FLAGS_21999.md` and its pinned machine-readable report.
+All 50 focused tests pass. No thresholds, defaults or timing eligibility
+changed. Next: prospective root/user-slice and during-read lifecycle controls;
+do not equate the observed complements with causal interference bounds.
+OrthoMCL BLAST is still live; FastOMA and QfO robustness jobs remain queued.
+The full publication goal remains incomplete.
+
 ## Complete Lineage Overhead Panel Audited (2026-09-19)
 
 Following verified waits, all 18 tasks and recorder 22000 completed. Collected

@@ -1,0 +1,933 @@
+{
+  "all": {
+    "count": 5929,
+    "distributions": {
+      "native_cores": {
+        "maximum": 19.99744166519445,
+        "median": 19.43672316357846,
+        "minimum": 0.0847498984898753
+      },
+      "overhang_s": {
+        "maximum": 0.012156421,
+        "median": 0.001785034,
+        "minimum": 0.00079858
+      },
+      "residual_cores": {
+        "maximum": 1.2697835168748923,
+        "median": 0.027914890727160385,
+        "minimum": -0.2960573422489173
+      },
+      "root_minus_job_cpu_usec": {
+        "maximum": 1242194,
+        "median": 2267,
+        "minimum": -310680
+      },
+      "root_minus_system_cpu_usec": {
+        "maximum": 1228942,
+        "median": 1182,
+        "minimum": -309349
+      },
+      "slurm_minus_job_cpu_usec": {
+        "maximum": 87995,
+        "median": 0,
+        "minimum": -87994
+      },
+      "system_minus_slurm_cpu_usec": {
+        "maximum": 96833,
+        "median": 1138,
+        "minimum": -93132
+      }
+    },
+    "reasons": {
+      "excess_unassigned_cpu": 23
+    }
+  },
+  "audit": {
+    "bytes": 3939045,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/dgx_lineage_overhead_audit_21999_20260919.json.gz",
+    "sha256": "7e4cf99291450c883bf69abe0d984d07737953c2792dcb191bdb5a3cbc73251e"
+  },
+  "boundary_tasks_without_interval_coverage": [
+    0,
+    2,
+    4,
+    7,
+    9,
+    11,
+    12,
+    14,
+    16
+  ],
+  "environmental_validity_established": false,
+  "flagged": {
+    "count": 23,
+    "distributions": {
+      "native_cores": {
+        "maximum": 19.49159892657591,
+        "median": 19.382531935704005,
+        "minimum": 0.20013314761645537
+      },
+      "overhang_s": {
+        "maximum": 0.005595197,
+        "median": 0.002027609,
+        "minimum": 0.00104167
+      },
+      "residual_cores": {
+        "maximum": 1.2697835168748923,
+        "median": 0.2968658659155651,
+        "minimum": 0.25718225735520067
+      },
+      "root_minus_job_cpu_usec": {
+        "maximum": 1242194,
+        "median": 246570,
+        "minimum": 186667
+      },
+      "root_minus_system_cpu_usec": {
+        "maximum": 1228942,
+        "median": 242316,
+        "minimum": 186298
+      },
+      "slurm_minus_job_cpu_usec": {
+        "maximum": 900,
+        "median": -10,
+        "minimum": -11124
+      },
+      "system_minus_slurm_cpu_usec": {
+        "maximum": 12440,
+        "median": 1874,
+        "minimum": -13955
+      }
+    },
+    "reasons": {
+      "excess_unassigned_cpu": 23
+    }
+  },
+  "flagged_intervals": [
+    {
+      "flagged": true,
+      "interval": 555,
+      "method": "orthohmm_satellite_v2",
+      "native_cores": 19.419024071526493,
+      "overhang_s": 0.002067146,
+      "reasons": [
+        "excess_unassigned_cpu"
+      ],
+      "residual_cores": 0.28188602186572403,
+      "root_minus_job_cpu_usec": 246570,
+      "root_minus_system_cpu_usec": 242316,
+      "slurm_minus_job_cpu_usec": 213,
+      "system_minus_slurm_cpu_usec": 4041,
+      "task": 3
+    },
+    {
+      "flagged": true,
+      "interval": 556,
+      "method": "orthohmm_satellite_v2",
+      "native_cores": 19.2971675644127,
+      "overhang_s": 0.002422683,
+      "reasons": [
+        "excess_unassigned_cpu"
+      ],
+      "residual_cores": 0.38479537679731457,
+      "root_minus_job_cpu_usec": 330383,
+      "root_minus_system_cpu_usec": 343103,
+      "slurm_minus_job_cpu_usec": -226,
+      "system_minus_slurm_cpu_usec": -12494,
+      "task": 3
+    },
+    {
+      "flagged": true,
+      "interval": 700,
+      "method": "orthohmm_satellite_v2",
+      "native_cores": 19.27947705484291,
+      "overhang_s": 0.001799097,
+      "reasons": [
+        "excess_unassigned_cpu"
+      ],
+      "residual_cores": 0.34782970562561355,
+      "root_minus_job_cpu_usec": 312511,
+      "root_minus_system_cpu_usec": 302242,
+      "slurm_minus_job_cpu_usec": 0,
+      "system_minus_slurm_cpu_usec": 10269,
+      "task": 3
+    },
+    {
+      "flagged": true,
+      "interval": 728,
+      "method": "orthohmm_satellite_v2",
+      "native_cores": 19.488687370926844,
+      "overhang_s": 0.003938467,
+      "reasons": [
+        "excess_unassigned_cpu"
+      ],
+      "residual_cores": 0.27057483262923027,
+      "root_minus_job_cpu_usec": 186667,
+      "root_minus_system_cpu_usec": 186298,
+      "slurm_minus_job_cpu_usec": 303,
+      "system_minus_slurm_cpu_usec": 66,
+      "task": 3
+    },
+    {
+      "flagged": true,
+      "interval": 733,
+      "method": "orthohmm_satellite_v2",
+      "native_cores": 19.38529631115296,
+      "overhang_s": 0.002064649,
+      "reasons": [
+        "excess_unassigned_cpu"
+      ],
+      "residual_cores": 0.3004805385110339,
+      "root_minus_job_cpu_usec": 241815,
+      "root_minus_system_cpu_usec": 235176,
+      "slurm_minus_job_cpu_usec": -268,
+      "system_minus_slurm_cpu_usec": 6907,
+      "task": 3
+    },
+    {
+      "flagged": true,
+      "interval": 734,
+      "method": "orthohmm_satellite_v2",
+      "native_cores": 19.424918926025427,
+      "overhang_s": 0.002139067,
+      "reasons": [
+        "excess_unassigned_cpu"
+      ],
+      "residual_cores": 0.2968658659155651,
+      "root_minus_job_cpu_usec": 280173,
+      "root_minus_system_cpu_usec": 278304,
+      "slurm_minus_job_cpu_usec": -681,
+      "system_minus_slurm_cpu_usec": 2550,
+      "task": 3
+    },
+    {
+      "flagged": true,
+      "interval": 466,
+      "method": "orthofinder_full",
+      "native_cores": 1.0033150502334545,
+      "overhang_s": 0.001702281,
+      "reasons": [
+        "excess_unassigned_cpu"
+      ],
+      "residual_cores": 0.9551449284715109,
+      "root_minus_job_cpu_usec": 941759,
+      "root_minus_system_cpu_usec": 940656,
+      "slurm_minus_job_cpu_usec": 1,
+      "system_minus_slurm_cpu_usec": 1102,
+      "task": 5
+    },
+    {
+      "flagged": true,
+      "interval": 433,
+      "method": "orthohmm_satellite_v2",
+      "native_cores": 4.0126388785123055,
+      "overhang_s": 0.001509688,
+      "reasons": [
+        "excess_unassigned_cpu"
+      ],
+      "residual_cores": 0.8268688999910505,
+      "root_minus_job_cpu_usec": 809648,
+      "root_minus_system_cpu_usec": 801943,
+      "slurm_minus_job_cpu_usec": 0,
+      "system_minus_slurm_cpu_usec": 7705,
+      "task": 6
+    },
+    {
+      "flagged": true,
+      "interval": 540,
+      "method": "orthohmm_satellite_v2",
+      "native_cores": 19.415916022588547,
+      "overhang_s": 0.001879032,
+      "reasons": [
+        "excess_unassigned_cpu"
+      ],
+      "residual_cores": 0.27137214363653805,
+      "root_minus_job_cpu_usec": 251705,
+      "root_minus_system_cpu_usec": 266183,
+      "slurm_minus_job_cpu_usec": -523,
+      "system_minus_slurm_cpu_usec": -13955,
+      "task": 6
+    },
+    {
+      "flagged": true,
+      "interval": 541,
+      "method": "orthohmm_satellite_v2",
+      "native_cores": 19.36623337702115,
+      "overhang_s": 0.001972937,
+      "reasons": [
+        "excess_unassigned_cpu"
+      ],
+      "residual_cores": 0.4015050652107583,
+      "root_minus_job_cpu_usec": 376690,
+      "root_minus_system_cpu_usec": 369510,
+      "slurm_minus_job_cpu_usec": 106,
+      "system_minus_slurm_cpu_usec": 7074,
+      "task": 6
+    },
+    {
+      "flagged": true,
+      "interval": 710,
+      "method": "orthohmm_satellite_v2",
+      "native_cores": 19.442333238396095,
+      "overhang_s": 0.002773662,
+      "reasons": [
+        "excess_unassigned_cpu"
+      ],
+      "residual_cores": 0.2635260864531939,
+      "root_minus_job_cpu_usec": 216022,
+      "root_minus_system_cpu_usec": 207395,
+      "slurm_minus_job_cpu_usec": 350,
+      "system_minus_slurm_cpu_usec": 8277,
+      "task": 6
+    },
+    {
+      "flagged": true,
+      "interval": 712,
+      "method": "orthohmm_satellite_v2",
+      "native_cores": 19.49159892657591,
+      "overhang_s": 0.005595197,
+      "reasons": [
+        "excess_unassigned_cpu"
+      ],
+      "residual_cores": 0.3116825944877726,
+      "root_minus_job_cpu_usec": 222566,
+      "root_minus_system_cpu_usec": 222256,
+      "slurm_minus_job_cpu_usec": -381,
+      "system_minus_slurm_cpu_usec": 691,
+      "task": 6
+    },
+    {
+      "flagged": true,
+      "interval": 716,
+      "method": "orthohmm_satellite_v2",
+      "native_cores": 19.449862131442348,
+      "overhang_s": 0.002191642,
+      "reasons": [
+        "excess_unassigned_cpu"
+      ],
+      "residual_cores": 0.3000699020029825,
+      "root_minus_job_cpu_usec": 241945,
+      "root_minus_system_cpu_usec": 242198,
+      "slurm_minus_job_cpu_usec": -402,
+      "system_minus_slurm_cpu_usec": 149,
+      "task": 6
+    },
+    {
+      "flagged": true,
+      "interval": 717,
+      "method": "orthohmm_satellite_v2",
+      "native_cores": 19.372308978369535,
+      "overhang_s": 0.002118107,
+      "reasons": [
+        "excess_unassigned_cpu"
+      ],
+      "residual_cores": 0.29098880245953157,
+      "root_minus_job_cpu_usec": 265705,
+      "root_minus_system_cpu_usec": 264033,
+      "slurm_minus_job_cpu_usec": 900,
+      "system_minus_slurm_cpu_usec": 772,
+      "task": 6
+    },
+    {
+      "flagged": true,
+      "interval": 718,
+      "method": "orthohmm_satellite_v2",
+      "native_cores": 19.382531935704005,
+      "overhang_s": 0.001979673,
+      "reasons": [
+        "excess_unassigned_cpu"
+      ],
+      "residual_cores": 0.25718225735520067,
+      "root_minus_job_cpu_usec": 232146,
+      "root_minus_system_cpu_usec": 230320,
+      "slurm_minus_job_cpu_usec": -513,
+      "system_minus_slurm_cpu_usec": 2339,
+      "task": 6
+    },
+    {
+      "flagged": true,
+      "interval": 720,
+      "method": "orthohmm_satellite_v2",
+      "native_cores": 19.435506412619848,
+      "overhang_s": 0.002255306,
+      "reasons": [
+        "excess_unassigned_cpu"
+      ],
+      "residual_cores": 0.26368213840535476,
+      "root_minus_job_cpu_usec": 193947,
+      "root_minus_system_cpu_usec": 199386,
+      "slurm_minus_job_cpu_usec": -444,
+      "system_minus_slurm_cpu_usec": -4995,
+      "task": 6
+    },
+    {
+      "flagged": true,
+      "interval": 722,
+      "method": "orthohmm_satellite_v2",
+      "native_cores": 19.4630688080368,
+      "overhang_s": 0.001946731,
+      "reasons": [
+        "excess_unassigned_cpu"
+      ],
+      "residual_cores": 0.25905352547316157,
+      "root_minus_job_cpu_usec": 206197,
+      "root_minus_system_cpu_usec": 218763,
+      "slurm_minus_job_cpu_usec": -11124,
+      "system_minus_slurm_cpu_usec": -1442,
+      "task": 6
+    },
+    {
+      "flagged": true,
+      "interval": 554,
+      "method": "orthohmm_high_sensitivity",
+      "native_cores": 0.20013314761645537,
+      "overhang_s": 0.00170945,
+      "reasons": [
+        "excess_unassigned_cpu"
+      ],
+      "residual_cores": 0.6899164290350136,
+      "root_minus_job_cpu_usec": 685913,
+      "root_minus_system_cpu_usec": 676781,
+      "slurm_minus_job_cpu_usec": 0,
+      "system_minus_slurm_cpu_usec": 9132,
+      "task": 10
+    },
+    {
+      "flagged": true,
+      "interval": 610,
+      "method": "orthofinder_full",
+      "native_cores": 2.719555198371652,
+      "overhang_s": 0.002027609,
+      "reasons": [
+        "excess_unassigned_cpu"
+      ],
+      "residual_cores": 1.2697835168748923,
+      "root_minus_job_cpu_usec": 1242194,
+      "root_minus_system_cpu_usec": 1228942,
+      "slurm_minus_job_cpu_usec": 812,
+      "system_minus_slurm_cpu_usec": 12440,
+      "task": 13
+    },
+    {
+      "flagged": true,
+      "interval": 550,
+      "method": "orthohmm_satellite_v2",
+      "native_cores": 19.317249565966062,
+      "overhang_s": 0.00104167,
+      "reasons": [
+        "excess_unassigned_cpu"
+      ],
+      "residual_cores": 0.3731332544567359,
+      "root_minus_job_cpu_usec": 353198,
+      "root_minus_system_cpu_usec": 358967,
+      "slurm_minus_job_cpu_usec": -10,
+      "system_minus_slurm_cpu_usec": -5759,
+      "task": 17
+    },
+    {
+      "flagged": true,
+      "interval": 720,
+      "method": "orthohmm_satellite_v2",
+      "native_cores": 19.382964438966415,
+      "overhang_s": 0.001951531,
+      "reasons": [
+        "excess_unassigned_cpu"
+      ],
+      "residual_cores": 0.2680184049405218,
+      "root_minus_job_cpu_usec": 236087,
+      "root_minus_system_cpu_usec": 233250,
+      "slurm_minus_job_cpu_usec": -342,
+      "system_minus_slurm_cpu_usec": 3179,
+      "task": 17
+    },
+    {
+      "flagged": true,
+      "interval": 726,
+      "method": "orthohmm_satellite_v2",
+      "native_cores": 19.340537155143725,
+      "overhang_s": 0.002146235,
+      "reasons": [
+        "excess_unassigned_cpu"
+      ],
+      "residual_cores": 0.28066621325885954,
+      "root_minus_job_cpu_usec": 242461,
+      "root_minus_system_cpu_usec": 240587,
+      "slurm_minus_job_cpu_usec": 0,
+      "system_minus_slurm_cpu_usec": 1874,
+      "task": 17
+    },
+    {
+      "flagged": true,
+      "interval": 727,
+      "method": "orthohmm_satellite_v2",
+      "native_cores": 19.354577144931145,
+      "overhang_s": 0.001982651,
+      "reasons": [
+        "excess_unassigned_cpu"
+      ],
+      "residual_cores": 0.2693123786560446,
+      "root_minus_job_cpu_usec": 235421,
+      "root_minus_system_cpu_usec": 235309,
+      "slurm_minus_job_cpu_usec": -327,
+      "system_minus_slurm_cpu_usec": 439,
+      "task": 17
+    }
+  ],
+  "limitations": [
+    "Post-outcome description of all audited periodic intervals, not causal inference.",
+    "Signed non-atomic complements are not bounds or identified outside-process CPU times.",
+    "Host/native residuals and ancestor complements use different read windows; do not subtract them.",
+    "All original flags remain in the source audit; no thresholds or timing eligibility changed.",
+    "Boundary arms have no interval coverage; no flags are inferred for them."
+  ],
+  "methods": [
+    {
+      "all": {
+        "count": 1855,
+        "distributions": {
+          "native_cores": {
+            "maximum": 19.98528114575319,
+            "median": 4.003275051125447,
+            "minimum": 0.0847498984898753
+          },
+          "overhang_s": {
+            "maximum": 0.012156421,
+            "median": 0.001717848,
+            "minimum": 0.000874119
+          },
+          "residual_cores": {
+            "maximum": 1.2697835168748923,
+            "median": 0.016764744555586682,
+            "minimum": -0.2960573422489173
+          },
+          "root_minus_job_cpu_usec": {
+            "maximum": 1242194,
+            "median": 1981,
+            "minimum": -310680
+          },
+          "root_minus_system_cpu_usec": {
+            "maximum": 1228942,
+            "median": 463,
+            "minimum": -309349
+          },
+          "slurm_minus_job_cpu_usec": {
+            "maximum": 66985,
+            "median": 0,
+            "minimum": -66984
+          },
+          "system_minus_slurm_cpu_usec": {
+            "maximum": 96833,
+            "median": 1257,
+            "minimum": -86402
+          }
+        },
+        "reasons": {
+          "excess_unassigned_cpu": 2
+        }
+      },
+      "flagged": {
+        "count": 2,
+        "distributions": {
+          "native_cores": {
+            "maximum": 2.719555198371652,
+            "median": 1.8614351243025533,
+            "minimum": 1.0033150502334545
+          },
+          "overhang_s": {
+            "maximum": 0.002027609,
+            "median": 0.001864945,
+            "minimum": 0.001702281
+          },
+          "residual_cores": {
+            "maximum": 1.2697835168748923,
+            "median": 1.1124642226732016,
+            "minimum": 0.9551449284715109
+          },
+          "root_minus_job_cpu_usec": {
+            "maximum": 1242194,
+            "median": 1091976.5,
+            "minimum": 941759
+          },
+          "root_minus_system_cpu_usec": {
+            "maximum": 1228942,
+            "median": 1084799.0,
+            "minimum": 940656
+          },
+          "slurm_minus_job_cpu_usec": {
+            "maximum": 812,
+            "median": 406.5,
+            "minimum": 1
+          },
+          "system_minus_slurm_cpu_usec": {
+            "maximum": 12440,
+            "median": 6771.0,
+            "minimum": 1102
+          }
+        },
+        "reasons": {
+          "excess_unassigned_cpu": 2
+        }
+      },
+      "method": "orthofinder_full",
+      "unflagged": {
+        "count": 1853,
+        "distributions": {
+          "native_cores": {
+            "maximum": 19.98528114575319,
+            "median": 4.003280282549271,
+            "minimum": 0.0847498984898753
+          },
+          "overhang_s": {
+            "maximum": 0.012156421,
+            "median": 0.001717848,
+            "minimum": 0.000874119
+          },
+          "residual_cores": {
+            "maximum": 0.24741730625951222,
+            "median": 0.016758458720911387,
+            "minimum": -0.2960573422489173
+          },
+          "root_minus_job_cpu_usec": {
+            "maximum": 214298,
+            "median": 1980,
+            "minimum": -310680
+          },
+          "root_minus_system_cpu_usec": {
+            "maximum": 203002,
+            "median": 460,
+            "minimum": -309349
+          },
+          "slurm_minus_job_cpu_usec": {
+            "maximum": 66985,
+            "median": 0,
+            "minimum": -66984
+          },
+          "system_minus_slurm_cpu_usec": {
+            "maximum": 96833,
+            "median": 1257,
+            "minimum": -86402
+          }
+        },
+        "reasons": {}
+      }
+    },
+    {
+      "all": {
+        "count": 1658,
+        "distributions": {
+          "native_cores": {
+            "maximum": 19.99744166519445,
+            "median": 19.98957514016682,
+            "minimum": 0.20013314761645537
+          },
+          "overhang_s": {
+            "maximum": 0.005931116,
+            "median": 0.0017895915,
+            "minimum": 0.001356966
+          },
+          "residual_cores": {
+            "maximum": 0.6899164290350136,
+            "median": 0.028956501440097794,
+            "minimum": -0.005852085933437513
+          },
+          "root_minus_job_cpu_usec": {
+            "maximum": 685913,
+            "median": 2012.5,
+            "minimum": -98477
+          },
+          "root_minus_system_cpu_usec": {
+            "maximum": 676781,
+            "median": 1075.0,
+            "minimum": -25260
+          },
+          "slurm_minus_job_cpu_usec": {
+            "maximum": 79585,
+            "median": 0.0,
+            "minimum": -79588
+          },
+          "system_minus_slurm_cpu_usec": {
+            "maximum": 95067,
+            "median": 943.0,
+            "minimum": -93132
+          }
+        },
+        "reasons": {
+          "excess_unassigned_cpu": 1
+        }
+      },
+      "flagged": {
+        "count": 1,
+        "distributions": {
+          "native_cores": {
+            "maximum": 0.20013314761645537,
+            "median": 0.20013314761645537,
+            "minimum": 0.20013314761645537
+          },
+          "overhang_s": {
+            "maximum": 0.00170945,
+            "median": 0.00170945,
+            "minimum": 0.00170945
+          },
+          "residual_cores": {
+            "maximum": 0.6899164290350136,
+            "median": 0.6899164290350136,
+            "minimum": 0.6899164290350136
+          },
+          "root_minus_job_cpu_usec": {
+            "maximum": 685913,
+            "median": 685913,
+            "minimum": 685913
+          },
+          "root_minus_system_cpu_usec": {
+            "maximum": 676781,
+            "median": 676781,
+            "minimum": 676781
+          },
+          "slurm_minus_job_cpu_usec": {
+            "maximum": 0,
+            "median": 0,
+            "minimum": 0
+          },
+          "system_minus_slurm_cpu_usec": {
+            "maximum": 9132,
+            "median": 9132,
+            "minimum": 9132
+          }
+        },
+        "reasons": {
+          "excess_unassigned_cpu": 1
+        }
+      },
+      "method": "orthohmm_high_sensitivity",
+      "unflagged": {
+        "count": 1657,
+        "distributions": {
+          "native_cores": {
+            "maximum": 19.99744166519445,
+            "median": 19.989576307933035,
+            "minimum": 0.5680068201919669
+          },
+          "overhang_s": {
+            "maximum": 0.005931116,
+            "median": 0.001789592,
+            "minimum": 0.001356966
+          },
+          "residual_cores": {
+            "maximum": 0.13862125690643204,
+            "median": 0.028954237504112267,
+            "minimum": -0.005852085933437513
+          },
+          "root_minus_job_cpu_usec": {
+            "maximum": 110927,
+            "median": 2011,
+            "minimum": -98477
+          },
+          "root_minus_system_cpu_usec": {
+            "maximum": 109417,
+            "median": 1073,
+            "minimum": -25260
+          },
+          "slurm_minus_job_cpu_usec": {
+            "maximum": 79585,
+            "median": 0,
+            "minimum": -79588
+          },
+          "system_minus_slurm_cpu_usec": {
+            "maximum": 95067,
+            "median": 942,
+            "minimum": -93132
+          }
+        },
+        "reasons": {}
+      }
+    },
+    {
+      "all": {
+        "count": 2416,
+        "distributions": {
+          "native_cores": {
+            "maximum": 19.997316339571732,
+            "median": 19.840336651372986,
+            "minimum": 0.31418257135919664
+          },
+          "overhang_s": {
+            "maximum": 0.005595197,
+            "median": 0.0018177535,
+            "minimum": 0.00079858
+          },
+          "residual_cores": {
+            "maximum": 0.8268688999910505,
+            "median": 0.029222510506299836,
+            "minimum": -0.021929497511021037
+          },
+          "root_minus_job_cpu_usec": {
+            "maximum": 809648,
+            "median": 2687.0,
+            "minimum": -97430
+          },
+          "root_minus_system_cpu_usec": {
+            "maximum": 801943,
+            "median": 1675.5,
+            "minimum": -61664
+          },
+          "slurm_minus_job_cpu_usec": {
+            "maximum": 87995,
+            "median": 0.0,
+            "minimum": -87994
+          },
+          "system_minus_slurm_cpu_usec": {
+            "maximum": 92033,
+            "median": 1088.0,
+            "minimum": -87154
+          }
+        },
+        "reasons": {
+          "excess_unassigned_cpu": 20
+        }
+      },
+      "flagged": {
+        "count": 20,
+        "distributions": {
+          "native_cores": {
+            "maximum": 19.49159892657591,
+            "median": 19.384130375059687,
+            "minimum": 4.0126388785123055
+          },
+          "overhang_s": {
+            "maximum": 0.005595197,
+            "median": 0.0020658975000000003,
+            "minimum": 0.00104167
+          },
+          "residual_cores": {
+            "maximum": 0.8268688999910505,
+            "median": 0.2864374121626278,
+            "minimum": 0.25718225735520067
+          },
+          "root_minus_job_cpu_usec": {
+            "maximum": 809648,
+            "median": 242203.0,
+            "minimum": 186667
+          },
+          "root_minus_system_cpu_usec": {
+            "maximum": 801943,
+            "median": 241392.5,
+            "minimum": 186298
+          },
+          "slurm_minus_job_cpu_usec": {
+            "maximum": 900,
+            "median": -247.0,
+            "minimum": -11124
+          },
+          "system_minus_slurm_cpu_usec": {
+            "maximum": 10269,
+            "median": 1323.0,
+            "minimum": -13955
+          }
+        },
+        "reasons": {
+          "excess_unassigned_cpu": 20
+        }
+      },
+      "method": "orthohmm_satellite_v2",
+      "unflagged": {
+        "count": 2396,
+        "distributions": {
+          "native_cores": {
+            "maximum": 19.997316339571732,
+            "median": 19.84908289680399,
+            "minimum": 0.31418257135919664
+          },
+          "overhang_s": {
+            "maximum": 0.004969432,
+            "median": 0.0018170410000000001,
+            "minimum": 0.00079858
+          },
+          "residual_cores": {
+            "maximum": 0.24738010208729486,
+            "median": 0.02916919017754483,
+            "minimum": -0.021929497511021037
+          },
+          "root_minus_job_cpu_usec": {
+            "maximum": 226593,
+            "median": 2664.0,
+            "minimum": -97430
+          },
+          "root_minus_system_cpu_usec": {
+            "maximum": 218419,
+            "median": 1651.0,
+            "minimum": -61664
+          },
+          "slurm_minus_job_cpu_usec": {
+            "maximum": 87995,
+            "median": 0.0,
+            "minimum": -87994
+          },
+          "system_minus_slurm_cpu_usec": {
+            "maximum": 92033,
+            "median": 1088.0,
+            "minimum": -87154
+          }
+        },
+        "reasons": {}
+      }
+    }
+  ],
+  "periodic_tasks": [
+    1,
+    3,
+    5,
+    6,
+    8,
+    10,
+    13,
+    15,
+    17
+  ],
+  "scientific_timings_admitted": false,
+  "source": {
+    "bytes": 5740,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/describe_lineage_overhead_flags.py",
+    "sha256": "879f4d06b175b02135c37ef81b99986e4274332645426c5be4d70602d694155f"
+  },
+  "status": "lineage_overhead_flags_described_not_causally_attributed",
+  "unflagged": {
+    "count": 5906,
+    "distributions": {
+      "native_cores": {
+        "maximum": 19.99744166519445,
+        "median": 19.442847139139545,
+        "minimum": 0.0847498984898753
+      },
+      "overhang_s": {
+        "maximum": 0.012156421,
+        "median": 0.0017847845,
+        "minimum": 0.00079858
+      },
+      "residual_cores": {
+        "maximum": 0.24741730625951222,
+        "median": 0.027872103457245043,
+        "minimum": -0.2960573422489173
+      },
+      "root_minus_job_cpu_usec": {
+        "maximum": 226593,
+        "median": 2259.5,
+        "minimum": -310680
+      },
+      "root_minus_system_cpu_usec": {
+        "maximum": 218419,
+        "median": 1176.0,
+        "minimum": -309349
+      },
+      "slurm_minus_job_cpu_usec": {
+        "maximum": 87995,
+        "median": 0.0,
+        "minimum": -87994
+      },
+      "system_minus_slurm_cpu_usec": {
+        "maximum": 96833,
+        "median": 1137.5,
+        "minimum": -93132
+      }
+    },
+    "reasons": {}
+  }
+}
