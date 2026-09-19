@@ -8,6 +8,7 @@ from pathlib import Path
 import re
 
 from benchmark_tools.gnu_time_companion import command as time_command
+from benchmark_tools.capture_job_scheduler import terminal_record
 from benchmark_tools.launch_dgx_native_run import read_pinned
 from benchmark_tools.prepare_root_context_native import ROOT, build
 from benchmark_tools.run_root_context_native import PLAN_SHA
@@ -33,7 +34,7 @@ def load_context(results, recipe_path, recipe_sha):
     return dict(plan=plan, recipe=recipe, recipe_sha256=recipe_sha)
 
 
-def scheduler_identity(text, job):
+def scheduler_identity(text, job, require_completed=True):
     if type(job) is not int or job <= 0:
         raise ValueError("Invalid job identity")
     fields = {}
@@ -46,14 +47,20 @@ def scheduler_identity(text, job):
         NumNodes="1", NumCPUs="20", NumTasks="1", TimeLimit="01:00:00",
         Command=str(SUBMISSION_SCRIPT), WorkDir=str(RECIPE_ROOT))
     expected["CPUs/Task"] = "20"
+    if not require_completed:
+        if terminal_record(text, job) is None:
+            raise ValueError("Require terminal allocation")
+        del expected["JobState"]
+        del expected["ExitCode"]
     if any(fields.get(k) != v for k, v in expected.items()) or any(
             k in fields for k in ("ArrayJobId", "ArrayTaskId")):
         raise ValueError("Scheduler identity, resources or completion differs")
     return job
 
 
-def verify(context, index, preparation, verification_path, receipt, measurement, scheduler, job):
-    scheduler_identity(scheduler, job)
+def verify(context, index, preparation, verification_path, receipt, measurement, scheduler, job,
+           require_completed=True):
+    scheduler_identity(scheduler, job, require_completed)
     if type(index) is not int or index not in range(3):
         raise ValueError("Invalid task index")
     plan, recipe = context["plan"], context["recipe"]

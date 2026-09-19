@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Native Root-Context Whole-Panel Audit Implemented (2026-09-19)
+
+Added terminal-first panel auditing with frozen plan/recipe bindings, launch
+identity, exact task order, cumulative checkpoints and stop-after-failure
+validation. The audit retains all three outcomes, including missing/invalid
+panels and explicit failures/unrun tasks. It rejects unexpected top-level
+artifacts and native artifacts for unrun tasks. Successful tasks replay both
+collector reports at the prescribed 900-second limit, validate native products
+and GNU time, and compare canonical outputs to the pinned prior lineage audit
+`0e3a77f785b645f44e0ca5cb8bbaeffbdb7106e2104350045e299c658de9050a`.
+Prior evidence and current archive inventories are checked for changes.
+Scope identity changes and overlapping observation windows remain explicit
+panel issues. Earlier successful tasks can be checked in a terminal allocation
+whose later task failed; the default standalone verifier still requires a
+completed allocation.
+
+All 597 focused collector/control/lineage/native-workflow tests pass. New
+tests cover terminal gating, panel tampering, output mismatch, incomplete and
+failed panels, invalid raw replay, scope changes and observation overlap.
+Native-product/replay orchestration tests use controlled fixtures; no actual
+native root-context panel has yet run or been validated. Held-session binding,
+collector overhead and scientific timing admission remain separate requirements.
+Next: bounded one-hour waiting-session submission and receipt audit, then
+freeze/deploy and execute the native diagnostic. No method settings changed.
+
+BLAST 21713 was confirmed RUNNING at 11:37:05; FastOMA 21740, parameter array
+21932 and CPM control 21956 remain pending. The previous goal turn was progress
+(pushed task provenance verifier); this turn adds the whole-panel audit. The
+publication goal remains active and incomplete.
+
 ## Native Root-Context Task Provenance Verifier (2026-09-19)
 
 Added a separate verifier for the new single-job, three-step diagnostic,
