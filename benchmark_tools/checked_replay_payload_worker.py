@@ -39,7 +39,7 @@ def corrected_evidence(plan_path, expected_sha):
     return plan, plan_record, plan["admission"], matches[0]
 
 
-def validate_payload(manifest, payload, admitted_names):
+def validate_payload(manifest, payload, admitted_names, *, cpm_context=None):
     if (manifest["stage"] not in STAGES or manifest["index"] != STAGES.index(manifest["stage"])
             or manifest["accuracy_evaluated"] is not False
             or manifest["inputs"] != [record(payload / name) for name in FILES]):
@@ -50,6 +50,10 @@ def validate_payload(manifest, payload, admitted_names):
     metadata = json.loads((payload / "metadata.json").read_text())
     expected = {"cpm_resolution": .1, "seed": 4, "include_isolates": True,
                 "output_directory": manifest["output_directory"]}
+    if cpm_context is not None:
+        from cpm_replay_context import settings
+        settings(manifest, metadata, cpm_context)
+        expected = cpm_context["metadata"]
     if metadata != expected or not Path(metadata["output_directory"]).is_absolute():
         raise ValueError("Payload settings or output directory differ")
     for name in ("native_boundary.json", "constructor_adapter.json", "worker_before.json", "checked_payload_provenance.json"):
@@ -69,6 +73,7 @@ def main():
     parser.add_argument("--sequence-plan", type=Path)
     parser.add_argument("--sequence-plan-sha256")
     parser.add_argument("--sequence-variant", choices=("all_hits", "top100"))
+    parser.add_argument("--cpm-arm", choices=("control", "cpm_low", "cpm_high"))
     args = parser.parse_args()
     if (args.corrected_plan is None) != (args.corrected_plan_sha256 is None):
         parser.error("Corrected plan and hash must be supplied together")
@@ -77,6 +82,8 @@ def main():
         parser.error("Sequence plan, hash and variant must be supplied together")
     if args.corrected_plan is not None and args.sequence_plan is not None:
         parser.error("HMM and sequence provenance are mutually exclusive")
+    if args.cpm_arm is not None and args.corrected_plan is None:
+        parser.error("CPM arms require corrected HMM provenance")
     root, payload = args.root.resolve(), args.payload.resolve()
     manifest_record = record(args.manifest)
     if manifest_record["sha256"] != args.manifest_sha256:
@@ -84,6 +91,7 @@ def main():
     manifest = json.loads(args.manifest.read_text())
     corrected_plan_record = None
     sequence_plan_record = None
+    cpm_context = None
     if args.sequence_plan is not None:
         from sequence_graph_evidence import sequence_evidence, sequence_settings
         plan, sequence_plan_record, admission_record, names_record = sequence_evidence(
@@ -93,9 +101,13 @@ def main():
     elif args.corrected_plan is not None:
         plan, corrected_plan_record, admission_record, names_record = corrected_evidence(
             args.corrected_plan.resolve(), args.corrected_plan_sha256)
-        if manifest["output_directory"] != str(Path(plan["output_root"]) / "replay"):
+        if args.cpm_arm is not None:
+            from cpm_replay_context import evidence
+            cpm_context = evidence(root, plan, corrected_plan_record, args.cpm_arm)
+        expected_output = str(Path(plan["output_root"]) / "replay") if cpm_context is None else cpm_context["metadata"]["output_directory"]
+        if manifest["output_directory"] != expected_output:
             raise ValueError("Corrected clustering output outside frozen replay")
-        validate_payload(manifest, payload, names_record)
+        validate_payload(manifest, payload, names_record, cpm_context=cpm_context)
     else:
         admission_path = root / "benchmark_tools/results/qfo_checked_repeats_verified_20260917.json"
         admission_record = record(admission_path)
@@ -134,6 +146,9 @@ def main():
                               ("repeat_qfo_saved_graph.py", "checked_python_pair_worker.py", "probe_leiden_boundary.py")]}
     if corrected_plan_record is not None:
         provenance["corrected_plan"] = corrected_plan_record
+    if cpm_context is not None:
+        provenance["cpm_context"] = cpm_context
+        provenance["helpers"].append(record(Path(__file__).with_name("cpm_replay_context.py")))
     if sequence_plan_record is not None:
         provenance.update(sequence_plan=sequence_plan_record, sequence_variant=args.sequence_variant)
         provenance["helpers"].append(record(Path(__file__).with_name("sequence_graph_evidence.py")))

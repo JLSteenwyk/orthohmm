@@ -11,10 +11,12 @@ from probe_leiden_boundary import saved_fingerprint
 
 
 def validate(payload, manifest, root, executor, corrected_plan=None, retained_partition=None,
-             sequence_plan=None, sequence_variant=None):
+             sequence_plan=None, sequence_variant=None, cpm_arm=None):
     if ((sequence_plan is None) != (sequence_variant is None)
             or (sequence_plan is not None and corrected_plan is not None)):
         raise ValueError("Require exactly one complete provenance mode")
+    if cpm_arm is not None and (corrected_plan is None or sequence_plan is not None):
+        raise ValueError("CPM arms require corrected HMM provenance")
     import numpy as np
     launcher = root / "benchmarks/work/publication_qfo_replay_native_v1"
     observed = json.loads((payload / "worker_before.json").read_text())
@@ -34,6 +36,9 @@ def validate(payload, manifest, root, executor, corrected_plan=None, retained_pa
         if observed["modules"][name] != record(launcher / (name.replace(".", "/") + ".py")):
             raise ValueError("Wrong scientific worker module")
     provenance = json.loads((payload / "checked_payload_provenance.json").read_text())
+    cpm_context = None
+    if cpm_arm is None and "cpm_context" in provenance:
+        raise ValueError("Unexpected CPM context on baseline payload")
     if sequence_plan is not None:
         from sequence_graph_evidence import sequence_evidence, sequence_settings
         plan, plan_record, admission_record, names_record = sequence_evidence(
@@ -60,13 +65,23 @@ def validate(payload, manifest, root, executor, corrected_plan=None, retained_pa
         # only check the preserved names/settings after native execution.
         if any(manifest["inputs"][0][key] != names_record[key] for key in ("bytes", "sha256")):
             raise ValueError("Corrected gene order differs after clustering")
-        if metadata != {"cpm_resolution": .1, "seed": 4, "include_isolates": True,
-                        "output_directory": str(Path(plan["output_root"]) / "replay")}:
+        expected_metadata = {"cpm_resolution": .1, "seed": 4, "include_isolates": True,
+                             "output_directory": str(Path(plan["output_root"]) / "replay")}
+        if cpm_arm is not None:
+            from cpm_replay_context import evidence, settings
+            cpm_context = evidence(root, plan, plan_record, cpm_arm)
+            if provenance.get("cpm_context") != cpm_context:
+                raise ValueError("CPM context provenance differs")
+            settings(manifest, metadata, cpm_context)
+            expected_metadata = cpm_context["metadata"]
+        if metadata != expected_metadata:
             raise ValueError("Corrected output/settings differ")
     helpers = [record(executor / "benchmark_tools" / name) for name in
                ("repeat_qfo_saved_graph.py", "checked_python_pair_worker.py", "probe_leiden_boundary.py")]
     if sequence_plan is not None:
         helpers.append(record(executor / "benchmark_tools/sequence_graph_evidence.py"))
+    if cpm_context is not None:
+        helpers.append(record(executor / "benchmark_tools/cpm_replay_context.py"))
     if (provenance["source"] != record(executor / "benchmark_tools/checked_replay_payload_worker.py")
             or provenance["helpers"] != helpers or observed["observer"] != helpers[0]
             or provenance["manifest"] != record(payload.parent / "payload_manifest.json")
@@ -79,6 +94,8 @@ def validate(payload, manifest, root, executor, corrected_plan=None, retained_pa
     arguments = {"initial_membership": None, "weights": "weight", "n_iterations": 2,
                  "max_comm_size": 0, "seed": 4, "kwargs": {"resolution_parameter": .1},
                  "partition_type": "leidenalg.VertexPartition.CPMVertexPartition"}
+    if cpm_context is not None:
+        arguments["kwargs"]["resolution_parameter"] = cpm_context["resolution"]
     if boundary != {"accuracy_evaluated": False, "calls": [{"arguments": arguments, "before": saved,
             "saved": saved, "after": saved, "status": "optimizer_returned"}]}:
         raise ValueError("Native optimizer graph or settings differ")
@@ -97,6 +114,10 @@ def validate(payload, manifest, root, executor, corrected_plan=None, retained_pa
                     "constructor_adapter.json", "checked_payload_provenance.json")]]
     for item in records:
         check(item)
+    if cpm_context is not None:
+        for item in cpm_context["checked_records"]:
+            check(item)
+        records.extend(cpm_context["checked_records"])
     universe = set((payload / "gene_names.txt").read_text().splitlines())
     partition = Path(metadata["output_directory"]) / "orthohmm_working_res/orthohmm_edges_clustered.txt"
     if retained_partition is not None:

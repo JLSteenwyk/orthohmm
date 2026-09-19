@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Checked CPM Context Implemented (2026-09-19)
+
+Previous turn was progress: the raw-count auditor passed a scheduled real
+control integration check. Added an explicit CPM context to the checked
+payload worker and its independent validator. The context binds the frozen
+neighborhood protocol/plan and corrected baseline replay; only control 0.1,
+cpm_low 0.08 and cpm_high 0.12 are accepted. Derived commands change only
+resolution and isolated output paths. Checkpoint, FASTAs, seed 4, BLOSUM62,
+profile settings, 32-CPU limit, numerical-thread controls and all four replay
+stages remain fixed. No scientific package/default was changed.
+
+Baseline payloads still require resolution 0.1 unless explicit CPM context
+is supplied. Nondefault context requires corrected HMM provenance, not the
+sequence-control path. The independent validator binds the recorded context
+and helper source and checks the actual observed optimizer resolution.
+Frozen worktrees of already queued jobs remain unchanged.
+
+Focused regression/native-boundary tests: 154 passed in 6.38 seconds. Tests
+include small real Leiden calls for all three CPM settings, rejection of
+altered optimizer resolution, existing baseline/sequence paths, preserved
+stage partitions, changed frozen inputs and exact allowed command changes.
+This is not a full-dataset CPM replay. The driver still must enforce a fresh
+control reproducing all four baseline partitions before either changed arm,
+and downstream CPM candidate/phylogeny/scoring admission remains unfinished.
+
+Scheduler accounting confirms OrthoFinder full scoring 21735_0 (raw 21934)
+COMPLETED 0:0 in 36:13; second scoring task 21735_1 RUNNING (6:57), and
+OrthoMCL BLAST 21713 RUNNING (59:36). Score admission remains separate.
+An unscoped whitespace check also reported pre-existing generated sample
+output whitespace; those unrelated files were left unchanged and unstaged.
+
 ## Control Count Integration Completed (2026-09-19)
 
 Job 21953 COMPLETED 0:0 in 12 seconds, bizon/2 CPUs. Retained its 245,132-byte

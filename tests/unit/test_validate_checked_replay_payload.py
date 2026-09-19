@@ -18,10 +18,10 @@ def write_json(path, value):
     path.write_text(json.dumps(value))
 
 
-@pytest.mark.parametrize("problem", [None, "boundary", "input_hash", "metadata", "module", "coverage", "duplicate", "provenance",
+@pytest.mark.parametrize("problem", [None, "boundary", "resolution", "input_hash", "metadata", "module", "coverage", "duplicate", "provenance",
                                      "retained", "retained_hash", "retained_path", "retained_coverage"])
-@pytest.mark.parametrize("corrected", [False, True, "sequence"])
-def test_native_result_gate(tmp_path, problem, corrected):
+@pytest.mark.parametrize("corrected", [False, True, "sequence", "control", "cpm_low", "cpm_high"])
+def test_native_result_gate(tmp_path, monkeypatch, problem, corrected):
     root = tmp_path
     executor = root / "executor"
     launcher = root / "benchmarks/work/publication_qfo_replay_native_v1"
@@ -32,7 +32,9 @@ def test_native_result_gate(tmp_path, problem, corrected):
         np.save(payload / (name + ".npy"), data)
     (payload / "gene_names.txt").write_text("a\nb\nc\nd\n")
     output = root / ("replay" if corrected else "output")
-    metadata = {"cpm_resolution": .1, "seed": 4, "include_isolates": True, "output_directory": str(output)}
+    cpm_arm = corrected if corrected in ("control", "cpm_low", "cpm_high") else None
+    resolution = {"cpm_low": .08, "cpm_high": .12}.get(cpm_arm, .1)
+    metadata = {"cpm_resolution": resolution, "seed": 4, "include_isolates": True, "output_directory": str(output)}
     write_json(payload / "metadata.json", metadata)
     manifest = {"stage": "initial", "index": 0, "output_directory": str(output), "inputs": [record(payload / name) for name in
                 ("gene_names.txt", "sources.npy", "targets.npy", "weights.npy", "metadata.json")]}
@@ -41,7 +43,7 @@ def test_native_result_gate(tmp_path, problem, corrected):
         graph = igraph.Graph(n=4, edges=pairs, directed=False)
         graph.es["weight"] = [1., 1.]
         with observe_partition(leidenalg, payload):
-            leidenalg.find_partition(graph, leidenalg.CPMVertexPartition, weights="weight", seed=4, resolution_parameter=.1)
+            leidenalg.find_partition(graph, leidenalg.CPMVertexPartition, weights="weight", seed=4, resolution_parameter=resolution)
     modules = {}
     for name in ("orthohmm.leiden_worker", "orthohmm.externals", "orthohmm.helpers"):
         path = launcher / (name.replace(".", "/") + ".py")
@@ -100,6 +102,15 @@ def test_native_result_gate(tmp_path, problem, corrected):
             provenance.pop("corrected_plan")
             provenance.update(admission=record(admission), sequence_plan=sequence_plan, sequence_variant="all_hits")
             provenance["helpers"].append(record(source))
+    if cpm_arm is not None:
+        import importlib
+        context_module = importlib.import_module("cpm_replay_context")
+        context = {"arm": cpm_arm, "resolution": resolution, "metadata": dict(metadata), "checked_records": []}
+        monkeypatch.setattr(context_module, "evidence", lambda *a: context)
+        source = executor / "benchmark_tools/cpm_replay_context.py"
+        source.write_text("# fixture\n")
+        provenance["helpers"].append(record(source))
+        provenance["cpm_context"] = context
     worker = {"status": "before_native_clustering", "accuracy_evaluated": False, "metadata": dict(metadata),
               "cwd": str(launcher), "inputs": manifest["inputs"][:4], "cpu_affinity": [0], "modules": modules,
               "native_libraries": [record(igraph._igraph.__file__)], "python": record(__import__("sys").executable), "observer": helpers[0],
@@ -126,6 +137,10 @@ def test_native_result_gate(tmp_path, problem, corrected):
         boundary = json.loads((payload / "native_boundary.json").read_text())
         boundary["calls"][0]["after"]["ordered_endpoints_sha256"] = "changed"
         write_json(payload / "native_boundary.json", boundary)
+    elif problem == "resolution":
+        boundary = json.loads((payload / "native_boundary.json").read_text())
+        boundary["calls"][0]["arguments"]["kwargs"]["resolution_parameter"] = .09
+        write_json(payload / "native_boundary.json", boundary)
     elif problem == "input_hash":
         adapter = json.loads((payload / "constructor_adapter.json").read_text())
         adapter["calls"][0]["ordered_input_bytes_sha256"] = "changed"
@@ -145,10 +160,10 @@ def test_native_result_gate(tmp_path, problem, corrected):
     if problem and problem != "retained":
         with pytest.raises(ValueError):
             validate(payload, manifest, root, executor, corrected_plan=corrected_plan, retained_partition=retained_partition,
-                     sequence_plan=sequence_plan, sequence_variant="all_hits" if sequence_plan else None)
+                     sequence_plan=sequence_plan, sequence_variant="all_hits" if sequence_plan else None, cpm_arm=cpm_arm)
     else:
         result = validate(payload, manifest, root, executor, corrected_plan=corrected_plan, retained_partition=retained_partition,
-                          sequence_plan=sequence_plan, sequence_variant="all_hits" if sequence_plan else None)
+                          sequence_plan=sequence_plan, sequence_variant="all_hits" if sequence_plan else None, cpm_arm=cpm_arm)
         assert result["genes"] == 4 and result["groups"] == 3
         if retained_partition is not None:
             assert retained_partition in result["provenance_checked"]
