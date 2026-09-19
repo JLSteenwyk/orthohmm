@@ -2,6 +2,11 @@
 
 ## Gated CPM Variant Runner Implemented (2026-09-19)
 
+Submitted array 21960 (0-1%1) from pushed frozen commit 2913d04. Confirmed
+PENDING Dependency afterok:21958, 32 CPUs/192 GiB/bizon/24 hours/no requeue.
+See `QFO_CPM_VARIANT_SUBMISSION_21960.md` for exact command and identities.
+Batch syntax and staged whitespace checks passed. No variant has started.
+
 Previous turn was progress: independent control admission was tested,
 committed/pushed and queued as 21958. Current scheduler inspection confirms
 control/admission 21956/21958 remain pending, OrthoFinder assessment 21735_1
