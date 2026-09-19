@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Failed Native Build Outputs Removed (2026-09-18 UTC)
+
+Previous turn made progress through52a90d1 by retaining corrected HMM native
+admission and reproducing it byte-for-byte. Reread the objective and polled
+locally: replay21756, search-coverage21793 and OrthoFinder21706_1 are running;
+DGX21838 task6 is running, tasks3/5 failed and7-17 remain pending. No DGX
+remote access or partial native output inspection occurred.
+
+Found a remaining packaging failure path: CPU and CUDA compiler commands
+wrote to the final shared-library path, and a failed command could leave a
+partial library in the wheel staging directory. Both builders now remove
+the destination after a reported compiler failure. Successful outputs and
+source files are preserved; compiler flags and runtime algorithms are
+unchanged. Six new parameterized cases exercise success, partial-output
+failure and no-output failure for both backends through the existing error
+handler. All15focused packaging/dependency/CLI tests pass in0.95seconds:
+
+```sh
+python -m pytest -q tests/unit/test_setup_native_wheel.py tests/unit/test_msa_native_dependency.py tests/unit/test_entrypoint.py
+```
+
+These are mocked compiler-outcome tests, not cross-platform compilation or
+a full-suite rerun. The patch does not address interrupted/killed builds,
+host-ISA portability or runtime capability detection. Frozen benchmark
+executors and existing native libraries were not rebuilt or modified.
+Publication accuracy, timing and final release gates remain incomplete.
+
 ## Corrected QfO HMM Native Evidence Admitted (2026-09-18 UTC)
 
 Previous turn was no progress toward the publication goal: it rechecked

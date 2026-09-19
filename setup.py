@@ -118,6 +118,8 @@ def build_cpu_kernels(csrc_dir: Path) -> list[str]:
         if _run(cmd):
             built.append(fname.replace(".c", ".so"))
             print(f"[orthohmm] built {dst.name}")
+        else:
+            dst.unlink(missing_ok=True)
     return built
 
 
@@ -144,6 +146,8 @@ def build_cuda_kernels(csrc_dir: Path) -> list[str]:
         if _run(cmd):
             built.append(fname.replace(".cu", ".so"))
             print(f"[orthohmm] built {dst.name}")
+        else:
+            dst.unlink(missing_ok=True)
     return built
 
 

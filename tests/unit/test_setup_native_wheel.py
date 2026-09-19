@@ -1,5 +1,6 @@
 from pathlib import Path
 import runpy
+import subprocess
 
 import setuptools
 from setuptools.command.build_py import build_py
@@ -69,3 +70,37 @@ def test_wheel_build_excludes_stale_native_files(tmp_path, monkeypatch, compiler
         assert (target / "hmm_viterbi.so").read_bytes() == b"fresh binary"
     else:
         assert not list(target.glob("*.so"))
+
+
+@pytest.mark.parametrize("backend", ["cpu", "cuda"])
+@pytest.mark.parametrize("outcome", ["success", "partial_failure", "no_output_failure"])
+def test_kernel_build_discards_failed_outputs(tmp_path, monkeypatch, backend, outcome):
+    monkeypatch.setattr(setuptools, "setup", lambda **kwargs: None)
+    namespace = runpy.run_path(str(Path(__file__).resolve().parents[2] / "setup.py"))
+    builder = namespace[f"build_{backend}_kernels"]
+    globals_ = builder.__globals__
+    monkeypatch.setitem(globals_, "_have_gcc", lambda: True)
+    monkeypatch.setitem(globals_, "_have_nvcc", lambda: True)
+    monkeypatch.setitem(globals_, "_gcc_supports", lambda *args, **kwargs: True)
+    kernels = namespace[f"{backend.upper()}_KERNELS"]
+    expected = []
+    for kernel in kernels:
+        (tmp_path / kernel[0]).write_text("/* fixture */\n")
+        expected.append(Path(kernel[0]).with_suffix(".so").name)
+
+    def compile_command(argv, cwd=None):
+        target = Path(argv[argv.index("-o") + 1])
+        if outcome != "no_output_failure":
+            target.write_bytes(b"complete" if outcome == "success" else b"partial")
+        if outcome != "success":
+            raise subprocess.CalledProcessError(1, argv)
+
+    monkeypatch.setattr(subprocess, "check_call", compile_command)
+    built = builder(tmp_path)
+    if outcome == "success":
+        assert built == expected
+        assert all((tmp_path / name).read_bytes() == b"complete" for name in expected)
+    else:
+        assert built == []
+        assert not list(tmp_path.glob("*.so"))
+    assert all((tmp_path / kernel[0]).is_file() for kernel in kernels)
