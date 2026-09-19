@@ -1,5 +1,16 @@
 # Publication Progress
 
+## Corrected Replay Integrated Into Manuscript (2026-09-18 UTC)
+
+Previous turn made progress through 8d36e13 by retaining independent replay
+admission. Reread the objective and confirmed candidate preparation 21758,
+OrthoFinder 21706_1 and DGX 21838_10 are running. Updated the manuscript and
+claim checklist to distinguish the admitted corrected-input equality result
+from unresolved historical-input equivalence and pending accuracy outcomes.
+The narrative links directly to the retained admission evidence and labels
+cached shared-host elapsed time as noncomparative. No scientific code,
+outputs, parameters or timing rules changed. No DGX access or job restart.
+
 ## Corrected QfO Replay Independently Admitted (2026-09-18 UTC)
 
 Previous turn made progress through c02784a with current-source validation.

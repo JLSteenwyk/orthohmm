@@ -38,6 +38,7 @@ evidence that an experiment completed or a biological hypothesis is true.
 | The package is publication-ready | All sections below | Not achieved |
 | Original QfO inputs match the corrected2020benchmark release | [Corrected archive comparison](QFO_CORRECTED_ARCHIVE_ACQUIRED_20260918.md) | Contradicted for the Xenopus proteome; preserve original results as release-limited |
 | Corrected QfO inputs cover the retained reference identities and sequence content | [Native sequence and staging audits](QFO_CORRECTED_INPUTS_STAGED_20260918.md) | Supported: all 984,137 identities, 983,959 exact sequences and 178 representation-only differences; no unexplained differences. This is input compatibility, not biological annotation validation |
+| Corrected-input cached replay reproduces the native high-sensitivity partition | [Independent replay admission](QFO_CORRECTED_REPLAY_ADMITTED_20260918.md) | Supported for this frozen run: 391,908 identical final groups across 984,137 genes, with 419 provenance records checked. Not historical-input equivalence, general determinism, accuracy or comparative timing |
 | Corrected QfO accuracy or rankings are established | [Admitted partial table](qfo_corrected_comparison_20260918_v2/scores.md), [frozen rerun protocol](QFO_CORRECTED_RELEASE_PROTOCOL_20260917.md) | Proteinortho and SonicParanoid point estimates are admitted; the eight-method comparison and paired differences remain incomplete. Remaining methods and factorial are unfinished. No original predictions or intervals may be relabeled |
 | Original TreeFam family-level uncertainty can be recovered from pooled pairs | [Source retrieval investigation](TREEFAM_SOURCE_RETRIEVAL_20260918.md) | Unsupported: original trees and mapping remain missing; downloaded pooled reference is not an independent-family inventory |
 | Merging overlapping VGNC labels makes ordinary family resampling valid | [Dependency audit](VGNC_DEPENDENCY_STRUCTURE_20260918.md) | Not established: 16,863 labels form 16,844 reference blocks, but almost all scored false positives cross blocks. Outcome-defined prediction components are not independent reference units |
@@ -126,10 +127,12 @@ evidence that an experiment completed or a biological hypothesis is true.
   native admission21720 and replay preparation21722 completed successfully.
   The [native result](QFO_CORRECTED_HMM_NATIVE_RESULT_20260918.md) covers984137genes
   in391908groups; accuracy is not yet admitted. The
-  hit-coverage analysis21793 has completed; checked replay21756 remains
-  running, and OrthoFinder21706_1 has started. The corrected
-  replay/candidate/reconciliation/conversion/scoring/admission workflows are
-  implemented and tested, not completed experiments. [Progress ledger](PUBLICATION_PROGRESS.md).
+  hit-coverage analysis21793 has completed. Checked replay21756 and its
+  independent admission21757 completed successfully; all391908final groups
+  match the corrected native result. [Replay evidence](QFO_CORRECTED_REPLAY_ADMITTED_20260918.md).
+  Candidate preparation21758 is running, as is OrthoFinder21706_1.
+  Candidate admission, reconciliation, conversion, scoring and assessment
+  remain unfinished. [Progress ledger](PUBLICATION_PROGRESS.md).
 - The [recovered QfO factorial protocol](QFO_FACTORIAL_PROTOCOL_20260917.md)
   freezes eight P/C/R cells and 42 SwissTrees comparison endpoints without
   retuning. Original-release preparation, all four reconciliations, native

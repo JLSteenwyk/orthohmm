@@ -840,6 +840,26 @@ pairs are all Xenopus. This separates observed residue representation from
 the input-release issue without normalizing the frozen inputs or assuming
 all inference methods treat nonstandard residues equivalently.
 
+### Corrected QfO Replay Matches Native Grouping
+
+The corrected-input high-sensitivity cached replay passed independent
+admission after all four native clustering boundaries completed successfully.
+Its final partition matched the corrected native result exactly: 391,908
+groups covering 984,137 proteins, with no native-only or replay-only groups.
+The admission workflow independently reread the partitions and checked 419
+provenance records, including the frozen runtime and scheduler identity.
+Retained intermediate outputs contained 308,697 multipass groups, 394,328
+refined multipass groups, 306,051 strict-profile groups and 391,908 refined
+strict-profile groups. Group counts alone are not accuracy endpoints.
+[Independent admission and evidence](QFO_CORRECTED_REPLAY_ADMITTED_20260918.md).
+
+This agreement supports reuse of the corrected intermediate outputs for
+the prespecified ablations. It neither resolves the older historical-input
+replay discrepancy nor establishes general determinism. Candidate
+preparation has started; downstream reconciliation, conversion, scoring and
+independent assessment remain unfinished. The 50:28 replay elapsed time is
+incremental shared-host execution, not a matched end-to-end runtime result.
+
 ### Corrected QfO Sequence-Search Control
 
 Independent validation admitted the DIAMOND all-hit control with frozen
