@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Third Corrected Reconciliation Validated (2026-09-19)
+
+The preceding source-retrieval follow-up did not recover the missing
+TreeFam inputs and made no new scientific progress. Reread the full goal
+and verified live jobs rather than treating the archive limitation as a
+blocker for the broader project. Confirmed a948d83 is pushed to main.
+
+Corrected reconciliation21760_2 completed0:0 in1:14:07; admission21763
+completed0:0 in2:20. Retained its unchanged receipt and independently
+rehashed23distinct referenced files. The p1_c0_r1 output preserves984137
+genes in394559root HOGs and contains5113180native pairs.
+[Evidence and scope](QFO_CORRECTED_PROFILE_RECONCILIATION_20260919.md).
+
+Conversion21770 is live; scoring remains pending. Final reconciliation
+21760_3 and full OrthoFinder21706_1 are live. DGX panel21889 has advanced
+to task6, with recorder21890 live; no DGX access or partial native outcome
+inspection occurred. Accuracy, complete-factorial uncertainty, dedicated
+timing and the wider publication package remain unfinished.
+
 ## Offline Hash-Locked Installation Verified (2026-09-19)
 
 Previous turn made progress through19ab3b3with the CPU-only wheel and
