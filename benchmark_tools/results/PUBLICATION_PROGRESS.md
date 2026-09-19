@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Search Decision Diagnostic Helper Tested (2026-09-18 UTC)
+
+Previous turn identified explicit historical search settings, but did not
+attribute rejected hits. Reread the objective and confirmed QfO scoring,
+reconciliation, OrthoFinder and DGX task 11 remain live. Added
+`benchmark_tools/search_decision_trace.py` to classify directed watched pairs
+from complete unfiltered indexed search output. The three outcomes are not
+selected by prefilter, scored but not significant, and accepted. The helper
+preserves strict E-value comparison and fails on missing candidate records,
+duplicate candidates, invalid identities or invalid numerical scores.
+
+58 focused tests passed across the new helper and existing routing tests,
+including an actual CPU search compared against the engine significance
+filter. No inference code, default, frozen executor or benchmark score
+changed. This is implementation progress only: full OrthoBench diagnostic
+execution, runtime/source pinning and historical-hit comparison remain
+required. Absent historical cache entries still cannot be attributed to a
+particular rejection stage. No DGX access or analysis restart.
+
 ## Corrected Candidates Admitted And Downstream Jobs Started (2026-09-18 UTC)
 
 Previous turn was a verified wait on candidate admission worker 1008174.
