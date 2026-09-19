@@ -1,5 +1,19 @@
 # Publication Progress
 
+## DGX Identity Failures Localized (2026-09-19)
+
+Previous turn completed the corrected factorial. Added a diagnostic with
+five passing tests and scanned all 5,955 retained DGX snapshots. All pass
+individual validation; only failed tasks 5 and 12 have observed transitions.
+Task 5 observes sysstat-collect.service appear/disappear; task 12 observes
+changed cups and cups-browsed cgroup inodes. Boot and benchmark target
+are unchanged. [Evidence and limits](DGX_PRESSURE_IDENTITY_21889_20260919.md).
+
+These explain the wrapper identity exceptions, not causal runtime effects.
+No service was stopped and no failed measurement was repaired or rerun.
+Interval CPU residual flags remain a separate problem; controlled scaling
+is still unadmitted. Corrected full OrthoFinder remains unfinished.
+
 ## Complete Corrected QfO Factorial and Intervals (2026-09-19)
 
 Previous turn completed and pushed the DGX audit. Final scoring 21787,
