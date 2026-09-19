@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Reused Completed Full-Node Controls (2026-09-19)
+
+Previous turn changed authoritative state at a017488, but repository review
+now shows that its planned CPU-creation diagnostic duplicated completed panel
+21918. That panel already passed nine-trial replay and descriptive reporting:
+all steady/churn narrow intervals passed, and all three known-competitor
+trials flagged every common-work interval. Process creation did not reproduce
+the historical native flags. See `FULL_NODE_CONTROL_DESCRIPTION_20260919.md`.
+
+Withdrew the unsubmitted duplicate proposal and removed its unused workload
+and tests; discarded the uncommitted duplicate collector. No replacement
+panel was submitted, no existing results changed, and no historical flag was
+reclassified. Scheduler inspection showed no DGX jobs before a hostname-only
+Ethernet connectivity check; no measurement was active during that check.
+
+Following the completed panel's actual next step, added an exploratory
+endpoint-reaggregation analysis of the three audited native runs 21912.
+It replays every original interval, then recomputes counters from endpoints
+in 5/10/30/60-observation-step blocks, including final partial blocks and
+the whole observation window. It never sums overlapping host residuals,
+drops original flags or grants scientific timing admission. The expanded
+focused suite passed 78 tests. Actual retained-evidence execution is underway;
+its eventual result must be reported separately from synthetic verification.
+
 ## CPU-Creation Diagnostic Prepared (2026-09-19)
 
 Previous goal turn was progress: independent parameter arithmetic checks

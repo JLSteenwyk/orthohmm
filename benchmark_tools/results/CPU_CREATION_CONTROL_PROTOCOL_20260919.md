@@ -1,5 +1,21 @@
 # Prospective Near-Full-Node CPU Controls
 
+## Withdrawn Before Submission
+
+This proposed experiment was redundant with the completed, independently
+audited full-node panel 21918. That earlier panel and its descriptive analysis
+were found during the implementation review; see
+`FULL_NODE_CONTROL_RESULT_21918_20260919.md` and
+`FULL_NODE_CONTROL_DESCRIPTION_20260919.md`. It already tested native steady
+work, high process creation and known competing work in three balanced blocks.
+
+No job was submitted under this proposal and no outcomes were collected.
+The duplicate workload added at a017488 and its tests were removed; the
+uncommitted duplicate collector was also discarded. The proposal below is
+retained solely as a historical record, not an active prospective protocol
+or justification for selective repeat experiments. Continue from the existing
+audited results, retaining all native-tool flags and failed overhead tasks.
+
 ## Status And Question
 
 Protocol prepared before collection. The bounded workload generator is
