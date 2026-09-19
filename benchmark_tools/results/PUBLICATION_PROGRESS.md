@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Complete Dual-Collector Overhead Panel Launched (2026-09-19)
+
+Previous turn made progress through longer-window diagnostics and frozen
+overhead design (`0cc663e`). Implemented/tested pinned launcher and batch,
+committed/pushed as `6e222a4`:39 focused tests pass. Exported452 committed
+files, verified each against Git, verified both DGX runtime inventories and
+confirmed idle preflight. Exact deployment hashes and conditions are in
+`DUAL_OVERHEAD_SUBMISSION_21920_20260919.md`.
+
+Submitted complete18-task array21920 with throttle1, exclusive20CPU/96GiB,
+one-hour per-task limit,900-second native timeout, no requeue. Task0 actual
+job21921 confirmed RUNNING; recorder21922 captures terminal array records
+on bizon from the frozen source export. No SSH inspection during execution.
+Next is complete terminal capture/archive and all-pair audit, not early
+inspection or selective retries. Numerical overhead, output equivalence and
+environmental uncertainty remain separate; no scientific timing admission.
+Corrected full OrthoFinder21706_1 was confirmed RUNNING at10:43:52, while
+OrthoMCL21713 and strata21896 remain pending.
+
 ## Longer-Window Accounting And Overhead Protocol (2026-09-19)
 
 Previous turn completed control descriptions (`1ae4cd7`). Recomputed native
