@@ -9,9 +9,12 @@ from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
 from benchmark_tools.validate_checked_replay_payload import validate
 
 
-def audit(root, executor, directory, worker, replay, plan_record, sequence_variant=None):
+def audit(root, executor, directory, worker, replay, plan_record, sequence_variant=None, *, cpm_arm=None):
     if sequence_variant is not None and sequence_variant not in ("all_hits", "top100"):
         raise ValueError("Unknown sequence variant")
+    if cpm_arm is not None:
+        if cpm_arm not in ("control", "cpm_low", "cpm_high") or sequence_variant is not None:
+            raise ValueError("CPM stage audit requires a recognized corrected HMM arm")
     expected_stages = STAGES if sequence_variant is None else STAGES[:2]
     calls = worker["calls"]
     if (len(calls) != len(expected_stages) or [(c["index"], c["stage"]) for c in calls] != list(enumerate(expected_stages))
@@ -57,6 +60,8 @@ def audit(root, executor, directory, worker, replay, plan_record, sequence_varia
                     "--manifest-sha256", manifest_record["sha256"]]
         if sequence_variant is None:
             expected += ["--corrected-plan", plan_record["path"], "--corrected-plan-sha256", plan_record["sha256"]]
+            if cpm_arm is not None:
+                expected += ["--cpm-arm", cpm_arm]
         else:
             expected += ["--sequence-plan", plan_record["path"], "--sequence-plan-sha256", plan_record["sha256"],
                          "--sequence-variant", sequence_variant]
@@ -71,6 +76,8 @@ def audit(root, executor, directory, worker, replay, plan_record, sequence_varia
             raise ValueError("Retained partition changed")
         provenance = (dict(corrected_plan=plan_record) if sequence_variant is None else
                       dict(sequence_plan=plan_record, sequence_variant=sequence_variant))
+        if cpm_arm is not None:
+            provenance["cpm_arm"] = cpm_arm
         fresh = validate(payload, manifest, root, executor, retained_partition=partition, **provenance)
         # The in-run callback preceded the retained copy. All other evidence
         # must match the fresh retrospective check exactly.
@@ -101,7 +108,10 @@ def audit(root, executor, directory, worker, replay, plan_record, sequence_varia
         unique[item["path"]] = item
     for item in unique.values():
         check(item)
-    return {"status": "corrected_replay_stages_verified" if sequence_variant is None else "sequence_replay_stages_verified",
+    status = "corrected_replay_stages_verified" if sequence_variant is None else "sequence_replay_stages_verified"
+    if cpm_arm is not None:
+        status = "cpm_replay_stages_verified"
+    return {"status": status,
             "accuracy_evaluated": False,
             "clustering": summaries, "checked_records": list(unique.values()),
             "limitations": ["Stage evidence only: parent scheduler, plan, runtime and refined outputs require separate admission.",

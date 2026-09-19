@@ -16,8 +16,10 @@ def write(path, value):
 
 @pytest.mark.parametrize("problem", [None, "missing", "order", "execution", "manifest", "copy",
     "original_command", "command", "threads", "partition", "validation", "genes", "edges", "output"])
-@pytest.mark.parametrize("sequence_variant", [None, "all_hits", "top100"])
-def test_stage_orchestration(tmp_path, monkeypatch, problem, sequence_variant):
+@pytest.mark.parametrize("sequence_variant,cpm_arm", [
+    (None, None), ("all_hits", None), ("top100", None),
+    (None, "control"), (None, "cpm_low"), (None, "cpm_high")])
+def test_stage_orchestration(tmp_path, monkeypatch, problem, sequence_variant, cpm_arm):
     # Real file hashes and stage handoff; native graph validation is mocked here
     # and covered with actual igraph/Leiden in test_validate_checked_replay_payload.
     root, executor, directory = tmp_path, tmp_path / "executor", tmp_path / "output"
@@ -57,6 +59,8 @@ def test_stage_orchestration(tmp_path, monkeypatch, problem, sequence_variant):
         if sequence_variant is not None:
             row["command"] = row["command"][:-4] + ["--sequence-plan", str(plan),
                 "--sequence-plan-sha256", plan_record["sha256"], "--sequence-variant", sequence_variant]
+        if cpm_arm is not None:
+            row["command"] += ["--cpm-arm", cpm_arm]
         write(stage / "execution.json", row)
         worker["calls"].append(row)
     stage_pairs = [("multipass", 1), ("multipass_refined", 1)]
@@ -66,8 +70,11 @@ def test_stage_orchestration(tmp_path, monkeypatch, problem, sequence_variant):
         {"label": label, "output": worker["calls"][index]["partition"]}
         for label, index in stage_pairs]}
     def validate(payload, manifest, root, executor, retained_partition, **provenance):
-        assert provenance == (dict(corrected_plan=plan_record) if sequence_variant is None else
-                              dict(sequence_plan=plan_record, sequence_variant=sequence_variant))
+        expected = (dict(corrected_plan=plan_record) if sequence_variant is None else
+                    dict(sequence_plan=plan_record, sequence_variant=sequence_variant))
+        if cpm_arm is not None:
+            expected["cpm_arm"] = cpm_arm
+        assert provenance == expected
         assert retained_partition == record(payload.parent / "partition.txt")
         result = copy.deepcopy(observations[str(payload)])
         result["provenance_checked"].append(retained_partition)
@@ -110,9 +117,20 @@ def test_stage_orchestration(tmp_path, monkeypatch, problem, sequence_variant):
         write(stage / "execution.json", row)
     if problem:
         with pytest.raises(ValueError):
-            module.audit(root, executor, directory, worker, replay, plan_record, sequence_variant=sequence_variant)
+            module.audit(root, executor, directory, worker, replay, plan_record,
+                         sequence_variant=sequence_variant, cpm_arm=cpm_arm)
     else:
-        result = module.audit(root, executor, directory, worker, replay, plan_record, sequence_variant=sequence_variant)
-        assert result["status"] == ("corrected_replay_stages_verified" if sequence_variant is None else "sequence_replay_stages_verified")
+        result = module.audit(root, executor, directory, worker, replay, plan_record,
+                              sequence_variant=sequence_variant, cpm_arm=cpm_arm)
+        expected_status = "corrected_replay_stages_verified" if sequence_variant is None else "sequence_replay_stages_verified"
+        assert result["status"] == ("cpm_replay_stages_verified" if cpm_arm is not None else expected_status)
         assert len(result["clustering"]) == (4 if sequence_variant is None else 2)
         assert result["accuracy_evaluated"] is False
+
+
+@pytest.mark.parametrize("sequence_variant,cpm_arm", [
+    ("all_hits", "control"), ("top100", "cpm_low"), (None, "unknown")])
+def test_invalid_cpm_context_fails_before_reading_outputs(tmp_path, sequence_variant, cpm_arm):
+    with pytest.raises(ValueError, match="recognized corrected HMM"):
+        module.audit(tmp_path, tmp_path, tmp_path, {}, {}, {},
+                     sequence_variant=sequence_variant, cpm_arm=cpm_arm)

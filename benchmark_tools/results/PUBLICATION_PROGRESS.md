@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Independent CPM Control Admission Implemented (2026-09-19)
+
+Previous turn was progress: control driver, tests and frozen job 21956 were
+committed/pushed. Confirmed 21956 remains PENDING; OrthoFinder scoring,
+OrthoMCL BLAST and DGX timing/recorder jobs remain live. No DGX SSH used.
+
+Extended the retained stage auditor for explicit CPM contexts while keeping
+baseline and sequence-control behavior unchanged. It requires the exact
+arm argument, independently rechecks native payloads/graphs/partitions and
+validates saved stage copies and edge counts. Invalid mixed contexts fail.
+
+Added independent control admission pinned to job 21956 and executor ef5fcd6.
+Scheduler completion precedes output inspection. Parent/source/command,
+checkpoint, runtime, all four stage paths, complete gene coverage and fresh
+partition equality are required, with input/helper hashes rechecked. Only
+successful admission authorizes the prespecified cpm_low/cpm_high experiments;
+it does not admit their results, accuracy or publication readiness.
+
+Focused tests: 269 passed in 11.47 seconds, including actual native payload
+validation, malformed parent evidence, active/failed scheduler gates,
+partition mismatches and mocked orchestration with real artifact hashes.
+This is not evidence that the real control has reproduced the baseline.
+The dedicated admission batch requests 2 CPUs/64 GiB/4 hours, no requeue,
+afterok:21956. Changed-arm execution and downstream assessment remain open.
+
 ## CPM Control Driver Validated (2026-09-19)
 
 Control replay submitted as job 21956 from pushed frozen commit ef5fcd6;
