@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Clean Runtime Dependency Installation Passed (2026-09-18 UTC)
+
+Previous turn made progress through4fe2c28 with source-bound bibliography
+exports. Reread the objective and polled locally: HMM21706_0 running19:39:12;
+overhead21838 tasks0-2/4complete,3failed,5running03:18,6-17pending. Retained
+task4's completed scheduler record locally. No DGX remote access or retries.
+
+Built from a clean4fe2c28archive and installed the wheel plus declared
+phylogeny extra into a new venv without system site packages. `pip check`
+passes. Both standard and high-sensitivity installed CLI fixtures complete,
+cover38genes exactly once and produce matching4-group partitions. Verified
+that every installed distribution and the imported module reside in the
+venv; DendroPy parses a small tree. Full versions and hashes are retained in
+the [clean-install audit](PUBLICATION_CLEAN_INSTALL_20260918.md).
+
+This improves on inherited-dependency installation evidence but is not a
+hermetic build, cross-platform validation or full phylogenetic run. No
+scientific executor/default or existing environment changed; publication
+release and the main analyses remain unfinished.
+
 ## Resource Citations Exported And TreeFam Byline Recovered (2026-09-18 UTC)
 
 Previous turn made progress throughc6e22dc with verified native dependency

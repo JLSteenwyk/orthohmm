@@ -1,0 +1,154 @@
+{
+  "source_commit": "4fe2c28",
+  "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+  "system_site_packages": false,
+  "installed_module": "venv/lib/python3.10/site-packages/orthohmm/__init__.py",
+  "all_distributions_inside_venv": true,
+  "dependencies": [
+    {
+      "name": "DendroPy",
+      "version": "5.1.0"
+    },
+    {
+      "name": "igraph",
+      "version": "1.0.0"
+    },
+    {
+      "name": "leidenalg",
+      "version": "0.12.0"
+    },
+    {
+      "name": "llvmlite",
+      "version": "0.49.0"
+    },
+    {
+      "name": "numba",
+      "version": "0.67.0"
+    },
+    {
+      "name": "numpy",
+      "version": "2.2.6"
+    },
+    {
+      "name": "orthohmm",
+      "version": "0.5.0"
+    },
+    {
+      "name": "pip",
+      "version": "23.0.1"
+    },
+    {
+      "name": "python-igraph",
+      "version": "1.0.0"
+    },
+    {
+      "name": "setuptools",
+      "version": "65.5.0"
+    },
+    {
+      "name": "texttable",
+      "version": "1.7.0"
+    }
+  ],
+  "wheel": {
+    "path": "wheels/orthohmm-0.5.0-cp310-cp310-linux_x86_64.whl",
+    "bytes": 499209,
+    "sha256": "b06264e52edb784a6524a1a3a97c2099dbbd2e3a52cb5cbe57ac32d56b059e5b"
+  },
+  "inputs": [
+    {
+      "path": "inputs/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "bytes": 579,
+      "sha256": "50064647eff0100037ad7bbac97f17088070dc4b14564654ec013e96e2812291"
+    },
+    {
+      "path": "inputs/Canis_familiaris.CanFam3.1.pep.all.fa",
+      "bytes": 3014,
+      "sha256": "ca3a8d53383132409d900a6f1dd579a809ff7e2c0b71794495b47efe173eacee"
+    },
+    {
+      "path": "inputs/Ciona_intestinalis.KH.pep.all.fa",
+      "bytes": 2081,
+      "sha256": "c29aaf490b41cc30e67db427b0d8763ea9afacb8d53716739c89a0ae899a7bc2"
+    },
+    {
+      "path": "inputs/Danio_rerio.GRCz11.pep.all.fa",
+      "bytes": 3809,
+      "sha256": "81cf17808fea78499583a48c418e4bee0699f298f76cc5b98ed76c1078aec8c2"
+    },
+    {
+      "path": "inputs/Gallus_gallus.GRCg6a.pep.all.fa",
+      "bytes": 3229,
+      "sha256": "6632249411dfffc868c5c33809dfe19b010c3f80b66836a8acfcbd85a04d38c3"
+    },
+    {
+      "path": "inputs/Homo_sapiens.GRCh38.pep.all.fa",
+      "bytes": 2895,
+      "sha256": "b09f85624df01694f7141ae2262cf1a12193a4dcc6e2d700603926703a2fd405"
+    },
+    {
+      "path": "inputs/Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "bytes": 2860,
+      "sha256": "4a65f7b0ce6b3c0942f01a7fb472eca01c9fc2ebad10d8420085c025e121f212"
+    },
+    {
+      "path": "inputs/Mus_musculus.GRCm38.pep.all.fa",
+      "bytes": 4101,
+      "sha256": "bf4e1b29865376cff97c076279e2ba278198ac45efdf02ee31b46f3fdcde18fd"
+    },
+    {
+      "path": "inputs/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "bytes": 2904,
+      "sha256": "2f2ef82b3761a202cc92f7f361444817fa79426c78234951aa4542fbc4004fdc"
+    },
+    {
+      "path": "inputs/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "bytes": 1468,
+      "sha256": "8c381738b8a89607eb4be1463c1c27c1c758bf639a1b966238ecda583dadf6a9"
+    },
+    {
+      "path": "inputs/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "bytes": 2861,
+      "sha256": "bb9534cdc0cc585cc50b39f01dabecd6249596d92168dc1f2d462aff91e9e450"
+    }
+  ],
+  "outputs": [
+    {
+      "mode": "standard",
+      "groups": 4,
+      "genes": 38,
+      "partition": {
+        "path": "outputs_standard/orthohmm_orthogroups.txt",
+        "bytes": 729,
+        "sha256": "1115fd8193636510bbc8cc8462d1b874e2a50db662fc0a59d3552d811ffa0885"
+      },
+      "log": {
+        "path": "standard.log",
+        "bytes": 7589,
+        "sha256": "526460c7616f5cb8c7f65621ef93e1f85fb6f0ac21cfea03a10919b692f3ec52"
+      }
+    },
+    {
+      "mode": "high",
+      "groups": 4,
+      "genes": 38,
+      "partition": {
+        "path": "outputs_high/orthohmm_orthogroups.txt",
+        "bytes": 729,
+        "sha256": "1115fd8193636510bbc8cc8462d1b874e2a50db662fc0a59d3552d811ffa0885"
+      },
+      "log": {
+        "path": "high.log",
+        "bytes": 4457,
+        "sha256": "c069403a7085c8ce2b6dbdfaf79fa365a70ab91f713b05b739231241fe2e3bc1"
+      }
+    }
+  ],
+  "dendropy_parse_smoke": true,
+  "limitations": [
+    "Same-host binary build and runtime only; not cross-platform compatibility.",
+    "Build backend uses existing host environment; dependency installation is isolated, build is not hermetic.",
+    "No external MAFFT/FastTree or full phylogenetic pipeline validation.",
+    "Fixture partition checks are not biological accuracy or general dependency-version equivalence."
+  ]
+}
