@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Corrected Comparator Intervals Reconstructed (2026-09-19)
+
+Previous goal turn made progress: the parameter count/uncertainty workflow
+was frozen, tested and verified on real control data. The current turn
+completed the corrected whole-panel SwissTrees analysis for six admitted
+methods, while retaining missing FastOMA/OrthoMCL contrasts. Scheduler
+inspection confirmed BLAST 21713 running at about 3:30; the remaining
+parameter/comparator inference chains were resource/dependency pending.
+
+Frozen executor 10338e2 ran as job 21987, COMPLETED 0:0 in 23 seconds with
+2 CPUs/64 GiB requested. Corrected raw counts reproduce the native scores
+over the same 18 families and 10,765 relations. The original 100,000-draw,
+seed-20260920, eight-contrast/24-endpoint procedure is unchanged. Six
+contrasts are estimated, two unavailable; no complete-panel claim is made.
+
+Phylogenetic minus high-sensitivity F1 is +0.148015 with adjusted interval
+[0.049791, 0.266015]. Phylogenetic minus full OrthoFinder is -0.014900 with
+[-0.087078, 0.072090], supporting neither superiority nor equivalence.
+Eight of 18 available adjusted endpoints exclude zero; all others and
+missing rows remain retained. This is development-exposed configuration
+evidence, not an isolated phylogeny effect or general ranking.
+
+Independent arithmetic reproduction matches all available endpoints and
+family differences within 1e-12. The all-contrast figure and 24-row TSV/table
+are generated and visually checked. Sources were pushed at 87e7a49;
+84 audit/kernel/export tests and 48 reproduction/plot tests passed in
+overlapping suites. See `CORRECTED_SWISS_COMPARISON_RESULT_21987.md` for
+commands, hashes, results, caveats and artifact links. Updated the manuscript
+and claim checklist to distinguish original from corrected intervals.
+
 ## Parameter Uncertainty Workflow Integrated (2026-09-19)
 
 Previous goal turn was progress: DGX timing audit completed and CPM scoring

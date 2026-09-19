@@ -861,7 +861,8 @@ SwissTrees F1 0.798459, TreeFam-A F1 0.771956 and FAS 0.736680, with
 admission reproduced its complete report byte-for-byte. These two rows
 show different point-estimate trade-offs, not a uniform advantage. The
 [partial corrected table](qfo_corrected_comparison_20260919_v5/scores.md)
-does not yet complete the eight-method comparison or establish paired uncertainty.
+does not yet complete the eight-method comparison; paired SwissTrees
+uncertainty for its admitted rows is now reconstructed separately below.
 The admitted high-sensitivity OrthoHMM row now adds GO 0.472271, EC 0.932038,
 VGNC F1 0.665933, SwissTrees F1 0.685498, TreeFam-A F1 0.605008 and FAS
 0.776585 (secondary mean 0.689555), from 9,032,719 mapped group-derived
@@ -890,6 +891,32 @@ and higher recall on both reference-tree tests, not a uniform advantage.
 FastOMA and OrthoMCL comparisons remain unfinished. No paired superiority
 over competitors is inferred from this partial table.
 [Method identity and export checks](QFO_CORRECTED_MAIN_TABLE_20260918.md).
+The prespecified [corrected comparator uncertainty analysis](CORRECTED_SWISS_COMPARISON_RESULT_21987.md)
+now reconstructs raw counts for all six admitted methods. It retains all
+eight contrasts and the full 24-endpoint correction, using 100,000 shared
+family resamples with seed 20260920. Phylogenetic OrthoHMM minus full
+OrthoFinder F1 is -0.014900 (adjusted interval [-0.087078, 0.072090]); its
+precision and recall intervals also include zero. Neither superiority nor
+equivalence is established. Relative to high sensitivity, phylogenetic
+OrthoHMM increases F1 by 0.148015 ([0.049791, 0.266015]) and precision by
+0.314178 ([0.158952, 0.466178]); recall's adjusted interval includes zero.
+This configuration contrast includes candidate expansion, not only phylogeny.
+Full OrthoFinder has higher F1 than high-sensitivity OrthoHMM and Proteinortho
+under the adjustment. The sequence-only checkpoint has lower precision and
+higher recall than full OrthoFinder, while its adjusted F1 interval includes
+zero. SonicParanoid's three adjusted intervals include zero. FastOMA and
+OrthoMCL contrasts remain unestimable, not zero. Independent arithmetic
+reproduction matches all 18 available endpoints within 1e-12.
+
+![Corrected SwissTrees comparator differences with paired intervals](corrected_swiss_comparison_figure_21987/corrected_swiss_comparison.png)
+
+This figure retains every planned contrast. Thick bars are nominal 95%
+intervals and thin bars are adjusted across all 24 endpoints. Values are
+percentage-point differences; the linked data retain raw units. These
+conditional, development-exposed family intervals do not quantify uncertainty
+on other QfO endpoints or the secondary mean, and cannot establish a
+release effect by comparison with historical significance labels.
+
 The prespecified [corrected composition-strata analysis](CORRECTED_SWISS_STRATA_RESULT_21981.md)
 is now complete for the three primary configurations. Nine families fall
 in each input-only entropy bin. With 100,000 paired resamples and adjustment
