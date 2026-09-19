@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Full Regression Refresh After Diagnostic And Archive Work (2026-09-19)
+
+Previous turn made progress with exact corrected factorial reproduction,
+committed/pushed through `c0a8a37`. This turn ran the complete local unit
+suite: 6,137 passed, nine skipped. Native CLI integration passed, and all
+nine legacy-runtime cases passed when explicitly enabled separately. Three
+raw JUnit reports were parsed and hashed; no failures/errors or tracked
+source changes occurred. See `PUBLICATION_TEST_REFRESH_20260918.md`.
+
+Controller checks confirm final DGX diagnostic21914 still RUNNING at10:47
+and recorder21915 RUNNING at35:21. No native DGX evidence was read during
+the quiet window. Corrected full OrthoFinder21706_1 remains RUNNING in its
+alignment/gene-tree stage; its live sstat query returned an unusable CPU
+sentinel and blank memory, which were not admitted as measurements.
+OrthoMCL21713 remains resource-pending and strata21896 dependency-pending.
+Next is terminal capture, archive collection and the prepared diagnostic
+audit. Tests do not establish timing/accuracy admission or publication readiness.
+
 ## Corrected Factorial Statistics Reproduced Outside Checkout (2026-09-19)
 
 Previous turn made progress with corrected figure preservation and relocation,

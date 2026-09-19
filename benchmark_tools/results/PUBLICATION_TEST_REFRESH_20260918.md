@@ -1,5 +1,43 @@
 # Publication Test Refresh
 
+## Current-Source Refresh At c0a8a37
+
+Tested `c0a8a378d197c128f5ce1044eaa777b14de516b2` on19September2026
+after the dual-bracket diagnostics/auditors and corrected factorial archive
+and reproduction work. The full unit suite passed **6,137 tests**, with
+**9 skips**, in135.55seconds. Native module CLI integration passed **1 test**
+in4.17seconds. The nine legacy-runtime opt-in cases were then explicitly
+enabled and all **9 passed in20.44seconds**. These separate results preserve
+the original suite's skips rather than rewriting them as passes.
+
+```sh
+env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  /home/bizon/anaconda3/bin/python -m pytest tests/unit -q \
+  --junitxml=benchmarks/work/publication_unit_c0a8a37_20260919.xml
+env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  /home/bizon/anaconda3/bin/python -m pytest -q tests/integration/test_module_cli.py \
+  --junitxml=benchmarks/work/publication_module_cli_c0a8a37_20260919.xml
+```
+
+The opt-in command used the seven exact test selectors in the earlier
+explicit legacy command below, with `ORTHOHMM_LEGACY_BLAST_SMOKE=1`, all
+three numerical thread limits set to1, the absolute interpreter above, and
+JUnit output `benchmarks/work/publication_legacy_optin_c0a8a37_20260919.xml`.
+All three parsed JUnit reports have zero failures and errors.
+
+Raw SHA-256:
+
+- Unit: `c2082be6b8c9c58762d018729175fff253007afc56aafa556e0e0ce651346c56`.
+- CLI: `076985ca3fa408d19a40883519de6570e8b9a189bfdf0c36096b0f73007f094b`.
+- Legacy opt-in: `78171a2ca95e04d14b4af12c9c82ece6348fba6e136df89ed600fb2bcd972d45`.
+
+Tracked source/tool/test/build files were unchanged before and after testing;
+unrelated sample outputs were not reverted. Execution was local onbizon and
+did not access the DGX. The installed legacy fixtures do not establish full
+corrected OrthoMCL completion. Tests do not admit live diagnostics, biological
+accuracy, controlled comparative timing, cross-platform portability or
+publication readiness. Frozen scientific executors were not modified.
+
 ## Current-Source Refresh At ef3ba74
 
 Tested `ef3ba74379bd251b99578efce0cec60f5cafc51c` on19September2026
