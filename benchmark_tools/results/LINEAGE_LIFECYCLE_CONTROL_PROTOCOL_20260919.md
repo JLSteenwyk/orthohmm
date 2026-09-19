@@ -1,10 +1,12 @@
 # Prospective DGX Lineage Lifecycle Control
 
 Run three sequential, finite engineering controls in an exclusive spark
-allocation with two CPUs and 4 GiB memory. This is not tool timing, collector
+allocation with a two-CPU-bound observer step and 4 GiB memory. The exclusive
+allocation reserves all 20 node CPUs; two is the observer step's affinity,
+not the node allocation size. This is not tool timing, collector
 overhead admission or a replacement for the failed panel 21920.
 
-The observer remains in the batch cgroup. Snapshot the stable user-manager
+The observer remains in its Slurm step cgroup. Snapshot the stable user-manager
 ancestor and the root-to-observer lineage. Start a uniquely named owned user
 service `orthohmm-lineage-JOB-INDEX.service` for each control, with one CPU
 chosen from the allocation affinity, RuntimeMaxSec=10s, MemoryMax=256M and
@@ -41,3 +43,13 @@ test the exact system.slice service identities in the historical failures,
 service churn during a read, attribution specificity, full-node inference,
 non-CPU isolation or overhead. Native integration/replay, a complete new
 overhead panel and a prospective scientific inclusion policy remain separate.
+
+## Preflight Failure And Launch Correction
+
+Attempt 21988 failed before output-directory creation or service launch:
+the exclusive batch allocation exposed all 20 CPUs and the two-CPU affinity
+guard rejected it. The corrected wrapper uses an explicit exact two-CPU
+Slurm step with core binding, a remote-valid working directory and TMPDIR.
+Sources/output paths are new v2 locations; v1 and its failure remain intact.
+All three controls will run afresh with unchanged workload and response
+thresholds. This is a launch correction, not selective outcome-based retry.
