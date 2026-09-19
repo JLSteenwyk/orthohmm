@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Pressure Overhead Panel Deployed and Released (2026-09-19)
+
+Previous turn made progress through63d1098 with the tested frozen plan and
+launcher. Reread the objective and verified corrected jobs still running.
+Transferred425committed files to a fresh DGX recipe, verified every archive
+member against the remote inventory, and selected all18tasks without native
+execution. Pushed recipe/authorization/preflight milestonefae1273 first.
+
+Submitted held array21869 with a two-minute eligibility delay. Submitted
+durable controller recorder21870 onbizon, then verified its RUNNING state
+and first successful poll showing the array still held. Released21869 at
+approximately04:24:30Z, before its04:25:38Zeligibility. At the recorded
+check the array remained BeginTime-pending, not completed.
+[Submission, pins and live recorder evidence](DGX_PRESSURE_OVERHEAD_SUBMISSION_21869.md).
+
+DGX quiet window is now active: no SSH/SCP/remote log reads until every
+21869task is terminal. Use local controller polling and preserve all failures.
+The recorder saves detailed terminal records before expiry; capture success
+does not admit measurements. Corrected QfO jobs remain separate and live;
+all scientific inference, uncertainty, controlled timing and final packaging
+requirements stay active.
+
 ## Pressure-Enabled Overhead Plan and Launcher (2026-09-19)
 
 Previous turn made progress throughcba0662 with dedicated-host integration
