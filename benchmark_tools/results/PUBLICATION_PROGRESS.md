@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Baseline CPU Build Added and Installed (2026-09-19)
+
+Previous turn was a verified wait on live scientific/timing jobs. Reread
+the full objective and revalidated those jobs, then advanced release
+portability without touching the DGX or frozen benchmark executors.
+
+Added opt-in baseline CPU compilation, keeping the native default unchanged.
+Thirty-nine focused tests pass, including real three-library compilation.
+Built a CPU-only wheel from clean committed6fd6df1source and installed it
+offline in a fresh venv. Dependency checks and both installed modes pass:
+4groups/38genes, exact coverage, unchanged inputs; installed Viterbi reports
+AVX2 disabled. [Artifact, commands and limitations](PUBLICATION_BASELINE_CPU_BUILD_20260919.md).
+
+This removes forced host-native flags when explicitly requested, but does
+not prove cross-host portability or release readiness. No scientific
+settings/results changed. QfO scoring, final reconciliation, full
+OrthoFinder and the dedicated engineering timing panel remain active.
+
 ## Third Reconciliation Pair Mapping Verified (2026-09-19)
 
 Previous turn made progress throughd65e1b4. Reread the full objective and
