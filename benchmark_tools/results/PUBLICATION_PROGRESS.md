@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Dual Native Evidence Replay Prepared (2026-09-19)
+
+The preceding user-facing turn rechecked retained TreeFam hashes and restated
+the unresolved archive search; it did not advance publication completion.
+This turn revalidated live jobs and added a separate raw-evidence replay
+checker for the frozen dual-bracket collector, leaving that collector and
+the running recorder unchanged.
+
+The checker recomputes both CPU screens and verifies exact command/resources,
+contiguous observations, raw/report agreement, native status and duration,
+final memory scope/counters, and stable evidence hashes/inventory. It does
+not admit comparative timings or replace scheduler/runtime/output audits.
+See `DUAL_NATIVE_REPLAY_20260919.md` for validation and remaining gates.
+
+Controller evidence now records 21912 COMPLETED, exit 0:0, scheduler elapsed
+10:34. Job 21913 is RUNNING; 21914 remains dependency-pending and recorder
+21915 is RUNNING. No remote reads were made during the quiet window.
+Corrected full OrthoFinder 21706_1 is RUNNING at 9:07:32; OrthoMCL 21713
+remains resource-pending and composition strata 21896 dependency-pending.
+Next: collect all three diagnostic archives only after all are terminal,
+replay their evidence, and check frozen runtimes and native output equivalence.
+The 27 matched scaling measurements and publication package remain unfinished.
+
 ## Three Native Diagnostics Dispatched (2026-09-19)
 
 Previous turn prepared the full-command collector and frozen protocol.
