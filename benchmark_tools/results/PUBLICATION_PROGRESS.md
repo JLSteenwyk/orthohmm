@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Complete Corrected QfO Factorial and Intervals (2026-09-19)
+
+Previous turn completed and pushed the DGX audit. Final scoring 21787,
+independent admission 21788 and uncertainty 21894 all completed0:0.
+Fresh frozen admission, SwissTrees count-audit and bootstrap executions
+reproduced all three JSON outputs byte-for-byte. Retained the final
+receipt and complete eight-cell export/count/interval bundle.
+[Results and limitations](QFO_CORRECTED_FACTORIAL_COMPLETE_20260919.md).
+
+Four of 14 adjusted F1 intervals exclude zero: reconciliation with C1 at
+both P settings and both C-by-R interactions. All profile-refinement F1
+intervals include zero; reconciliation trades recall for precision. Updated
+the manuscript without retuning or claiming superiority over OrthoFinder.
+Corrected competitor comparisons, strata and controlled timing remain
+unfinished; publication readiness is not established.
+
 ## DGX Pressure Panel Audited (2026-09-19)
 
 Previous turn was a verified wait. Confirmed all 18 array tasks terminal

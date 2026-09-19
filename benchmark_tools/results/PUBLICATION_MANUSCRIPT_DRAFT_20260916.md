@@ -936,14 +936,14 @@ F1. Thus a precision increase did not imply uniform F1 improvement. The
 project-defined secondary mean increased from 0.690463 to 0.755573; it is
 not a separate primary endpoint or evidence of general superiority.
 
-Seven of eight corrected factorial cells are now scored. Their
-[machine-generated table and manifest](qfo_corrected_factorial_scores_20260919_v4/scores.md)
-retain missing cells explicitly. R-off pairs are group-derived cliques;
+All eight corrected factorial cells are now scored. Their
+[machine-generated table and manifest](qfo_corrected_factorial_complete_20260919/scores/scores.md)
+retain all corrected-release admissions. R-off pairs are group-derived cliques;
 R-on pairs are native phylogenetic predictions, not root-HOG clique
 expansions. Pair counts describe prediction volume, not protein coverage.
-The prespecified full-factorial SwissTrees uncertainty analysis awaits all
-eight cells. Historical-input intervals cannot be reused for this contrast,
-and no default was selected from these development-exposed point estimates.
+The prespecified full-factorial SwissTrees uncertainty analysis is complete,
+as reported below. Historical-input intervals were not reused, and no
+default was selected from these development-exposed point estimates.
 [Independent score admission and precision-recall details](QFO_CORRECTED_FIRST_RECONCILIATION_SCORES_20260918.md).
 
 ### Corrected Profile Refinement With Reconciliation
@@ -955,8 +955,9 @@ VGNC F10.897844, TreeFam-A F10.602432 and FAS0.784576; the secondary
 mean is0.754954. Five of six point estimates decline slightly and EC
 increases. All5113180native pairs map without loss. These end-to-end
 point estimates do not establish a significant effect or direct mechanism;
-P-off still uses initial HMM search. Complete-factorial uncertainty remains
-pending. [Validated scores and provenance](QFO_CORRECTED_PROFILE_RECONCILIATION_SCORES_20260919.md).
+P-off still uses initial HMM search. All four corrected profile-refinement
+F1 intervals include zero after adjustment.
+[Validated scores and provenance](QFO_CORRECTED_PROFILE_RECONCILIATION_SCORES_20260919.md).
 
 ### Corrected Candidate Expansion With Reconciliation
 
@@ -970,9 +971,31 @@ The secondary mean increased from0.755573to0.762189. These mixed point
 estimates do not establish significance, a factorial interaction or superiority
 of the complete publication configuration. The species tree also changes
 between these cells, as described above; the contrast is end-to-end, not
-fixed-tree isolation. The corrected paired uncertainty analysis remains
-pending and no historical interval is reused.
+fixed-tree isolation. The completed paired analysis below evaluates the
+interaction separately; no historical interval is reused.
 [Independently admitted scores and precision-recall trade-offs](QFO_CORRECTED_EXPANDED_RECONCILIATION_SCORES_20260919.md).
+
+### Complete Corrected Factorial Uncertainty
+
+The full p1_c1_r1 configuration has SwissTrees F1 0.833513, precision
+0.955177 and recall 0.739341. Its six-metric secondary mean is 0.761510.
+All 5,959,560 native pairs map without loss. Using 100,000 shared draws
+over 18 families (seed 20260922), with the actual benchmark statistic
+recomputed per draw and Bonferroni adjustment across 42 endpoints,
+reconciliation at C1 increases F1 by 0.150644 [0.026173, 0.298879] at P0
+and 0.147426 [0.024122, 0.295846] at P1. Candidate-expansion by
+reconciliation F1 interactions are 0.050254 [0.003650, 0.124556] and
+0.046552 [0.001825, 0.121851], respectively. The other ten F1 intervals
+include zero. All four reconciliation precision intervals are positive,
+while all four recall intervals are negative.
+
+These conditional, development-exposed results support an end-to-end
+interaction, not a fixed-tree mechanism or independent generalization.
+Only 18 families are available, and adjustment does not account for prior
+development selection. No corrected full-OrthoFinder superiority is
+established. Fresh frozen admission, count-audit and bootstrap executions
+reproduced the corresponding JSON outputs byte-for-byte.
+[Complete scores, intervals, family effects and provenance](QFO_CORRECTED_FACTORIAL_COMPLETE_20260919.md).
 
 ### Corrected QfO Sequence-Search Control
 
