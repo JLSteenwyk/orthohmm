@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Native Build Isolation And First Panel Failure Retained (2026-09-18 UTC)
+
+Previous turn made progress through2e5cb3a with platform-specific wheel
+metadata. Reread the objective. Initial local polling confirmed corrected
+HMM21706_0 running19:24:14. Latest overhead accounting: tasks0-2 complete,
+task3 FAILED1:0 after13:43, task4 running01:17, remaining5-17pending.
+Retained task3's terminal scontrol record locally. No DGX remote calls,
+partial native-output inspection, retry or selective replacement occurred.
+Failure cause awaits the complete-terminal archive gate, not speculation.
+
+Inspected native loading and library dependencies, then fixed stale-binary
+inheritance in wheel builds: compile into the build directory after removing
+inherited binaries, without modifying source-tree kernels. Seven focused
+tests pass, including available/skipped compiler cases. Actual rebuilt and
+reinstalled CLI inference reproduces the prior38-gene/4-group fixture exactly.
+[Build audit](PUBLICATION_NATIVE_BUILD_ISOLATION_20260918.md) records evidence
+and remaining host-ISA, OpenMP, CUDA and compilerless-runtime limits.
+No inference settings or active scientific executors changed.
+
 ## Native Wheel Metadata Corrected (2026-09-18 UTC)
 
 Previous turn made progress throughe76a248 with isolated CLI tests and the

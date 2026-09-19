@@ -154,13 +154,15 @@ class BuildKernelsMixin:
 
 class CustomBuildPy(build_py, BuildKernelsMixin):
     def run(self):
-        self._build_kernels()
         super().run()
-        # Ensure .so files land in the install tree too
         pkg_csrc_out = Path(self.build_lib) / "orthohmm" / "search" / "csrc"
         pkg_csrc_out.mkdir(parents=True, exist_ok=True)
-        for so in CSRC.glob("*.so"):
-            shutil.copy2(so, pkg_csrc_out / so.name)
+        # Never package binaries inherited from a source or previous build.
+        # Compile against the copied sources without modifying the checkout.
+        for so in pkg_csrc_out.glob("*.so"):
+            so.unlink()
+        build_cpu_kernels(pkg_csrc_out)
+        build_cuda_kernels(pkg_csrc_out)
 
 
 class CustomDevelop(develop, BuildKernelsMixin):
@@ -211,7 +213,7 @@ setup(
     url="https://github.com/jlsteenwyk/orthohmm",
     packages=["orthohmm", "orthohmm.search"],
     package_data={
-        "orthohmm.search": ["csrc/*.c", "csrc/*.cu", "csrc/*.so"],
+        "orthohmm.search": ["csrc/*.c", "csrc/*.cu"],
     },
     classifiers=CLASSIFIERS,
     entry_points={"console_scripts": ["orthohmm = orthohmm.orthohmm:main"]},

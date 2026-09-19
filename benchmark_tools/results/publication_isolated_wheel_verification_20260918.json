@@ -1,0 +1,14 @@
+{
+  "installed_module": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_package_e76a248/venv/lib/python3.10/site-packages/orthohmm/__init__.py",
+  "exact_fixture_groups_match_previous": true,
+  "groups_sha256": "1115fd8193636510bbc8cc8462d1b874e2a50db662fc0a59d3552d811ffa0885",
+  "wheel_sha256": "da53c3eff42692bd74286487f6aa3f0fb9aca6668eb536d90be18c2537d53e14",
+  "native_libraries": [
+    "orthohmm/search/csrc/hmm_viterbi.so",
+    "orthohmm/search/csrc/hmm_viterbi_cuda.so",
+    "orthohmm/search/csrc/kmer_prefilter.so",
+    "orthohmm/search/csrc/pair_align.so"
+  ],
+  "setup_sha256": "048c889775b2f37e226fab3d1ad0bab288a91143b2a8ffc1abef8f51ba8d2f82",
+  "dynamic_report_sha256": "6647a991def72cd51098f2d16de305d0cefeb290963a023f5fcfb6543acf27ea"
+}
