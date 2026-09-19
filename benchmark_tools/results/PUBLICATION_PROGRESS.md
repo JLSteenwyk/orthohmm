@@ -14052,3 +14052,35 @@ Latest live check: HMM 21706_0 RUNNING at 7:04:46, DGX 21656_24 RUNNING at
 21746 dependency-pending. Frozen downstream runtime and conversion/index
 orchestration remain next; corrected results, admitted timing, uncertainty
 and the final publication package remain unfinished.
+
+## Six-Method Corrected QfO And CPM Conversion (2026-09-19)
+
+Previous goal turn made progress by implementing, testing and queuing CPM
+native admission `21976` (230 tests passed; commit `cdbf614`). This turn
+adds lossless native-pair conversion with fresh frozen native validation,
+112 passing tests, and serial array `21978`, pending behind `21976`.
+Code is committed and pushed at `ba4005b`; see
+[submission and provenance](QFO_CPM_PAIR_SUBMISSION_21978.md).
+
+Both corrected OrthoFinder score admissions `21736_0..1` completed with
+exit 0:0. The unchanged exporter produced the
+[six-method table](qfo_corrected_comparison_20260919_v5/scores.md), retaining
+all four previous rows exactly and verifying input/helper/output hashes.
+All 70 exporter tests pass. Full OrthoFinder has higher point-estimate
+VGNC/SwissTrees/TreeFam-A F1 than phylogenetic OrthoHMM; OrthoHMM has
+higher GO/EC similarity and FAS. No paired superiority is established.
+The diagnostic sequence-only MCL output remains explicitly distinguished
+from native phylogenetic pairs. Updated the main table, manuscript and
+claim checklist; preserved earlier table versions and large raw admissions.
+
+Latest scheduler evidence during this work confirmed BLAST `21713` and
+DGX recorder `21922` running. DGX task `21920_16` completed and task 17
+started; the known failed task 3 is retained. No DGX native inspection or
+SSH was performed during the timing panel. CPM chains remain pending.
+
+Next: CPM assessment/score admission and prespecified uncertainty,
+corrected comparator paired analyses, remaining FastOMA/OrthoMCL outputs,
+and the complete DGX post-run audit after all timing tasks are terminal.
+The original TreeFam trees/mapping remain unavailable. Publication
+readiness and controlled comparative resource evidence remain unproven.
+No scientific default, endpoint or unrelated working-tree change was made.

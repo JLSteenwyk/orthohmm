@@ -860,7 +860,7 @@ SwissTrees F1 0.798459, TreeFam-A F1 0.771956 and FAS 0.736680, with
 15,248,739 mapped native pairs and secondary mean 0.769506. A fresh frozen
 admission reproduced its complete report byte-for-byte. These two rows
 show different point-estimate trade-offs, not a uniform advantage. The
-[partial corrected table](qfo_corrected_comparison_20260919_v4/scores.md)
+[partial corrected table](qfo_corrected_comparison_20260919_v5/scores.md)
 does not yet complete the eight-method comparison or establish paired uncertainty.
 The admitted high-sensitivity OrthoHMM row now adds GO 0.472271, EC 0.932038,
 VGNC F1 0.665933, SwissTrees F1 0.685498, TreeFam-A F1 0.605008 and FAS
@@ -872,9 +872,23 @@ EC 0.965650, VGNC F1 0.901690, SwissTrees F1 0.833513, TreeFam-A F1 0.614864
 and FAS 0.762993 (secondary mean 0.761510), from 5,959,560 mapped native
 phylogenetic pairs with zero mapping losses. SwissTrees precision/recall
 are 0.955177/0.739341, versus TreeFam-A 0.959110/0.452464. The table now
-contains four admitted and four missing methods; corrected OrthoFinder,
+contains six admitted and two missing methods. Full OrthoFinder 3.1.5 adds
+GO 0.469548, EC 0.936130, VGNC F1 0.988546, SwissTrees F1 0.848413,
+TreeFam-A F1 0.791918 and FAS 0.691422 (secondary mean 0.787663), from
+14,215,382 native phylogenetic pairs. Its pre-phylogenetic sequence-only
+MCL checkpoint adds GO 0.407043, EC 0.753642, VGNC F1 0.142755,
+SwissTrees F1 0.690515, TreeFam-A F1 0.734407 and FAS 0.561753
+(secondary mean 0.548352), from 163,277,439 group-derived clique pairs.
+Both conversions have zero mapping losses, but their output semantics
+differ. The sequence-only checkpoint is a diagnostic, not native
+pairwise orthology output. Full OrthoFinder has higher point estimates
+on all three F1 endpoints than phylogenetic OrthoHMM, while OrthoHMM
+has higher GO/EC similarity and FAS. Full OrthoFinder SwissTrees
+precision/recall are 0.937853/0.774548, and TreeFam-A precision/recall
+are 0.924527/0.692578. Relative to OrthoHMM, this is lower precision
+and higher recall on both reference-tree tests, not a uniform advantage.
 FastOMA and OrthoMCL comparisons remain unfinished. No paired superiority
-over these competitors is inferred from this partial table.
+over competitors is inferred from this partial table.
 [Method identity and export checks](QFO_CORRECTED_MAIN_TABLE_20260918.md).
 Old groups, trees, scores and confidence intervals cannot
 be relabeled as corrected results. The previously measured 53 legacy BLAST

@@ -1,7 +1,7 @@
 # Corrected QfO Main Comparison
 
-The [fourth corrected comparison export](qfo_corrected_comparison_20260919_v4/scores.md)
-contains four admitted methods and four explicitly missing rows. Its JSON
+The [fifth corrected comparison export](qfo_corrected_comparison_20260919_v5/scores.md)
+contains six admitted methods and two explicitly missing rows. Its JSON
 manifest retains exact admission/conversion hashes, native precision and
 recall, prediction semantics, pair accounting, exporter identity and helpers.
 Earlier table versions and historical-input results are unchanged.
@@ -10,6 +10,8 @@ Earlier table versions and historical-input results are unchanged.
 | --- | ---: | ---: | ---: | ---: |
 | OrthoHMM high sensitivity | 0.665933 | 0.685498 | 0.605008 | 0.689555 |
 | OrthoHMM phylogeny satellite_v2 | 0.901690 | 0.833513 | 0.614864 | 0.761510 |
+| OrthoFinder 3.1.5 full | 0.988546 | 0.848413 | 0.791918 | 0.787663 |
+| OrthoFinder 3.1.5 sequence-only checkpoint | 0.142755 | 0.690515 | 0.734407 | 0.548352 |
 | SonicParanoid 2.0.9 | 0.982794 | 0.798459 | 0.771956 | 0.769506 |
 | Proteinortho 6.3.6 | 0.954896 | 0.718111 | 0.643187 | 0.763216 |
 
@@ -58,3 +60,47 @@ SwissTrees phylogenetic precision/recall are 0.955177/0.739341; TreeFam-A
 precision/recall are 0.959110/0.452464. These expose different precision-recall
 trade-offs; greater SwissTrees F1 than another admitted method is only a
 point-estimate comparison, not a tested superiority claim.
+
+## OrthoFinder Admission And Fifth Export
+
+Both corrected OrthoFinder score validators completed successfully:
+`21736_0` in 3:02 and `21736_1` in 3:28 (two CPUs on `bizon`, exit 0:0).
+These are validation durations, not inference timings. The full reports
+remain under `benchmarks/work/` (approximately 146 MiB each); they are not
+committed as large raw artifacts.
+
+| Admission report | SHA-256 |
+| --- | --- |
+| `qfo_corrected_orthofinder_full_assessment_admission_20260918.json` | `f0c7064413622db6ebe02965d8781b5c6862b5246ad10cdd6b907b3c1815a46c` |
+| `qfo_corrected_orthofinder_sequence_only_assessment_admission_20260918.json` | `ecd8721dc2e8f2399ccf86fd7d89f917447325ee4e812bae29bfaf3b2bbe851e` |
+
+Full OrthoFinder contributes 14,215,382 native phylogenetic pairs;
+sequence-only contributes 163,277,439 cross-species clique pairs from its
+pre-phylogenetic MCL groups. Both have zero mapping losses. The latter is
+a diagnostic checkpoint, not native pairwise orthology output, and its
+pair volume must not be called protein coverage.
+
+Full OrthoFinder has higher point-estimate F1 than phylogenetic OrthoHMM
+on VGNC, SwissTrees and TreeFam-A. OrthoHMM has higher GO/EC similarity
+and FAS. SwissTrees precision/recall are 0.937853/0.774548 for full
+OrthoFinder versus 0.955177/0.739341 for phylogenetic OrthoHMM. TreeFam-A
+precision/recall are 0.924527/0.692578 versus 0.959110/0.452464. These
+observations describe a precision-recall trade-off; they do not establish
+its mechanism or paired statistical significance.
+
+The sequence-only checkpoint has VGNC precision/recall 0.076891/0.995362,
+SwissTrees 0.569068/0.877863 and TreeFam-A 0.620470/0.899600. Reporting only
+its high recall or its secondary mean would obscure that trade-off.
+
+The unchanged exporter completed using all six pinned admission hashes.
+All four previous method rows are identical as complete structured
+records, and all export input/helper/output hashes were independently
+rechecked. All 70 exporter tests pass. The fifth manifest is 19,317 bytes,
+SHA-256 `7256920214d2eeda9cf596c7c39212992c7f3fcc36dd61e1848fa44d5725e01e`.
+Its `checked_records` and per-method `admission` fields give exact inputs
+for reproducing the export with `export_qfo_complete_comparison.py`.
+
+FastOMA and OrthoMCL remain unadmitted in this corrected-release table.
+Paired comparator uncertainty and controlled resource comparisons remain
+unfinished; historical intervals cannot be attached to these corrected
+point estimates. No parameters or endpoints changed after viewing scores.
