@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Corrected Strata Figure Workflow Prepared (2026-09-19)
+
+Previous turn made progress throughb21bf7b by queuing primary-stratum
+analysis21896. Reread the objective and confirmed inference/DGX jobs live;
+21894and21896are dependency-pending, not blocked or complete.
+
+Added a machine-readable corrected-strata plotter preserving all27planned
+endpoints, unavailable values, interaction directions and raw-table units.
+It exports three image formats and a checksum-bound numeric table/manifest,
+without historical domain labels or result-specific conclusions.61focused
+tests pass, including18new plot tests. Visually inspected a clearly labeled
+synthetic preview only; no corrected-strata outcome or real figure exists.
+[Interface, coverage and limitations](CORRECTED_SWISS_STRATA_PLOTTER_20260919.md).
+
+Actual result validation/rendering and integration remain pending. No frozen
+scientific executor, setting, benchmark endpoint or timing threshold changed.
+The DGX quiet window and all wider publication requirements remain intact.
+
 ## Corrected Primary Strata Queued (2026-09-19)
 
 Previous turn made progress throughbb8cc79 with the sixth corrected factorial
