@@ -1,0 +1,1391 @@
+{
+  "accuracy_evaluated": false,
+  "checked_records": [
+    {
+      "bytes": 88615,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ob_search_decisions_audit_20260918.json",
+      "sha256": "8081c8ff005c911b0122ba3a797aaee51c1ac65a1c3f17f551512d3cb47ce730"
+    },
+    {
+      "bytes": 154641,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/report.json",
+      "sha256": "09ab10be8fba1b31917b2903836c55f70de5680e390ea2f47ab88f80a0fb8398"
+    },
+    {
+      "bytes": 1318480,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ob_family_trace_verified_20260916.json",
+      "sha256": "bda00fb593b357bc8f07e43544feae598150ae891ed82c988fb339a92349de0c"
+    },
+    {
+      "bytes": 4390860,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_family_trace_v2/reference_pair_trace.tsv",
+      "sha256": "aabf71d4f79aff06b18890b49996895cd729bd6ac1f6fb0b7f14e79ab5295e4b"
+    },
+    {
+      "bytes": 8848,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_000.tsv",
+      "sha256": "87dea58279ea7295bff02541273148338533d63400f9f8db2120b1d2243ac5fe"
+    },
+    {
+      "bytes": 14355,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_001.tsv",
+      "sha256": "c4b597019969b20799e3b6609f2e1a58bf9809938aa8ad0b7abaae485f9e7595"
+    },
+    {
+      "bytes": 8849,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_002.tsv",
+      "sha256": "74942bbf066be40b9819d0fd21aabd192f11105ad9537be6ed30065ab5a49f35"
+    },
+    {
+      "bytes": 27930,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_003.tsv",
+      "sha256": "d4bd9ccc1ffe51945a5bde55fbe5f10181d2791f9dae0bd75d634ba901f14e2a"
+    },
+    {
+      "bytes": 11248,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_004.tsv",
+      "sha256": "48d6b864a5805001edb1711719f1ec8123bc58d942cdf9d8ae705ab10faefc88"
+    },
+    {
+      "bytes": 14160,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_005.tsv",
+      "sha256": "e3b982b789a3a75c93f3ef9b9441b832a92318bf5760c9d3fbb9256d486cc175"
+    },
+    {
+      "bytes": 13204,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_006.tsv",
+      "sha256": "24e2b70cd85be6f6a3d2b7505afec62111e4886f580fbfb17bbc770b446576d7"
+    },
+    {
+      "bytes": 12171,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_007.tsv",
+      "sha256": "73bfca7585ce12a191d74fe94da6db24fb3960d375c9dbaf8c8ba1aca900e4cf"
+    },
+    {
+      "bytes": 14416,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_008.tsv",
+      "sha256": "da4dec2eef4b07fd562219e602aded2fc1d136d9ad701a8b6f11ac0b2172b225"
+    },
+    {
+      "bytes": 14624,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_009.tsv",
+      "sha256": "72ce06ecda2abe019428494f01467d69f7aabc986bf2904f12a03523832d2331"
+    },
+    {
+      "bytes": 13862,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_010.tsv",
+      "sha256": "4a0711cf36eef24623e63e61d2b3ac1bcdb4a12c887314cf4de0c35c5d98e930"
+    },
+    {
+      "bytes": 16554,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_011.tsv",
+      "sha256": "360d5bdd75452e2570669bd5f46687299083c1c37004a800af8f2c0021d8574c"
+    },
+    {
+      "bytes": 14494,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_012.tsv",
+      "sha256": "14a313d1f707ad4142458012836e5a7fd794621c4989a0dd7a90b037a5ca6b13"
+    },
+    {
+      "bytes": 77352,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_013.tsv",
+      "sha256": "4a2bc4789e61c94e7f5803c8b75ae7a13c62a8a4049b660abd4e0814e6b6b0de"
+    },
+    {
+      "bytes": 15026,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_014.tsv",
+      "sha256": "0c05bccedeb9071cb35871a502a939b6bc4c09492d735f9d9c04d6c56586d514"
+    },
+    {
+      "bytes": 86790,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_015.tsv",
+      "sha256": "e1ac82e0accab15ab28086bae062d1d2241b83dacfd21302da44304794557072"
+    },
+    {
+      "bytes": 11460,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_016.tsv",
+      "sha256": "87c6e0dad77b6ed62c299952ca66f5f5e797897f604347bb4e3e568bbf961b8c"
+    },
+    {
+      "bytes": 62117,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_017.tsv",
+      "sha256": "fc82c7283ef33f224fedd3dd5e6107f8397338e6e8fcca60650bd1a5dc456821"
+    },
+    {
+      "bytes": 86023,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_018.tsv",
+      "sha256": "569bce1b4d3f340ba25f5e5f50ae6a15bc22f6a12707ce601dc2c9077184000a"
+    },
+    {
+      "bytes": 70237,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_019.tsv",
+      "sha256": "d728f9c19be0e96f27c7edb669c4add94313a642646bf99d4695e4e1507f9196"
+    },
+    {
+      "bytes": 84198,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_020.tsv",
+      "sha256": "cc680927c601354a25ba752e14acb29ee49cb0c451a48304699567e981943266"
+    },
+    {
+      "bytes": 96295,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_021.tsv",
+      "sha256": "bca33ddd71a4000b4fe256b03d72eb6fb0d61e4565610246821678140dff3052"
+    },
+    {
+      "bytes": 88321,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_022.tsv",
+      "sha256": "5044267e51c3a63b46ade3b05734444abd1359ed8af1246a9ddb12b59c211f84"
+    },
+    {
+      "bytes": 69600,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_023.tsv",
+      "sha256": "df5cf96eb723e7ce0fc31bf39821ab7a662292c3e8a5bf715a9a28bb7df6d200"
+    },
+    {
+      "bytes": 9062,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_024.tsv",
+      "sha256": "abb1127edf7538ce70cc216f337ea257ac3fe85b0b7f58c0db57f95c0629290f"
+    },
+    {
+      "bytes": 15031,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_025.tsv",
+      "sha256": "ba09f18fbb579a5602b56abfde7a45087e10dceefa830e1b89b1bc3d2736c963"
+    },
+    {
+      "bytes": 8261,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_026.tsv",
+      "sha256": "71395983e46d906b242b9039ab5d27e0983c7f775d00d80399a14fe6e2f23dff"
+    },
+    {
+      "bytes": 20921,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_027.tsv",
+      "sha256": "2913c7bb360c508057028fd6a9edbc23bd34e5620d6f3400e463195a045d4bdc"
+    },
+    {
+      "bytes": 5721,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_028.tsv",
+      "sha256": "ecd4d4ca6ca56b33de0746dfdae22d2b71f7e0e7bdef8658c6f797963e1b2a96"
+    },
+    {
+      "bytes": 13282,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_029.tsv",
+      "sha256": "f8272c19dab04e24e7357d8f0511a1f64d27e10aeca55515a9b77e8b058a08b5"
+    },
+    {
+      "bytes": 16317,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_030.tsv",
+      "sha256": "87724511ec189d41bfec03e872ba10aa6e44bcb1113f4f517235047523cc4e06"
+    },
+    {
+      "bytes": 14048,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_031.tsv",
+      "sha256": "7dfe3e17a69c2f24c4f8e24b14dab4313f756960b257c661612b5a064f2488f0"
+    },
+    {
+      "bytes": 14876,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_032.tsv",
+      "sha256": "ad6e542ea4cce2f0fa8ad323a29843d0f31e7f8ddb17142e934ec50723d7e8e4"
+    },
+    {
+      "bytes": 15309,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_033.tsv",
+      "sha256": "e9eb31eee6cba5a87a23a5287724fccde8f4c39ed5cf853067ff1c6134f055d0"
+    },
+    {
+      "bytes": 14179,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_034.tsv",
+      "sha256": "41af78f4d5fcfd031b5d2decb81c81298ded93c6b1f285adbfb78e2cb5a0713f"
+    },
+    {
+      "bytes": 17242,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_035.tsv",
+      "sha256": "7fd144a13d804466f4d2cf3620a2145b521cd6344dd039562aa31d1f0d509963"
+    },
+    {
+      "bytes": 28209,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_036.tsv",
+      "sha256": "7247b3d5f2228014552136f89593049904dc7b2f6b3ae50768759dba4d3260b1"
+    },
+    {
+      "bytes": 87007,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_037.tsv",
+      "sha256": "e8f3e9d33cb77069d7c0b3c2d92377d679a66608ad43773ec461c358ab47d76c"
+    },
+    {
+      "bytes": 20974,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_038.tsv",
+      "sha256": "d1d376724c050574f8473bb2b84c7709a0012a0fb1a45eaff83b3e2e3df3eb77"
+    },
+    {
+      "bytes": 144796,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_039.tsv",
+      "sha256": "348f23899f70b223c32f7d92ed917976c4189d0d44318cd7e5d4ed30138c4f40"
+    },
+    {
+      "bytes": 16788,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_040.tsv",
+      "sha256": "58d2d5c5e988689f6459255c7a413616ed0a545b2c19c464c77155fc40766bef"
+    },
+    {
+      "bytes": 83248,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_041.tsv",
+      "sha256": "1601bbe2ee899264921661c5791942692ff3c631dfcf7c4eef536ddba0ae0c3e"
+    },
+    {
+      "bytes": 95629,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_042.tsv",
+      "sha256": "e3e3cfc727389073410801d6745907a59c366f324ab48a2fd663a48ebd06bc23"
+    },
+    {
+      "bytes": 76771,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_043.tsv",
+      "sha256": "4c3e4fe7c28005bb40163bd47e81866cca0f98bd6637d9f019f7d59643950930"
+    },
+    {
+      "bytes": 96263,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_044.tsv",
+      "sha256": "21e88391eb8d0b5d7359b308e204ddedfd56ce554e82af3a9ec03411348b76f4"
+    },
+    {
+      "bytes": 98276,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_045.tsv",
+      "sha256": "0493526d8c713646ad51cbc91e277b15ba314401d939a7204984d808dbbc6412"
+    },
+    {
+      "bytes": 92446,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_046.tsv",
+      "sha256": "223be93c09ecb712062615a8e6e7e13e0de189dd0843823b4e87e800a0749dc7"
+    },
+    {
+      "bytes": 109293,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_047.tsv",
+      "sha256": "82d1be14aefa1b80bf546361556f936cdd2ad24b9492832547e6d3cc3a4a555d"
+    },
+    {
+      "bytes": 11231,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_048.tsv",
+      "sha256": "804c7b0c4ec210ded4514ae47e03046b00952385d18475871215dec6c385b16e"
+    },
+    {
+      "bytes": 11411,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_049.tsv",
+      "sha256": "e965bde6dd9eb5772cf84c852be3bf9c015fa96dc6c342624a0e01b7b6415b01"
+    },
+    {
+      "bytes": 5692,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_050.tsv",
+      "sha256": "1fefc4897439c0cb11dd826d847ee7541995c90af23a54d688fc3fa2bddfac89"
+    },
+    {
+      "bytes": 16475,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_051.tsv",
+      "sha256": "462645ba6f16910f691853360a96f7c6e0b797dd3a0c93d5841df963e025e68a"
+    },
+    {
+      "bytes": 42251,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_052.tsv",
+      "sha256": "8f8fdf006236b4c481018802c6934206ddb4c9c86d7786b839ccf5969a01cae2"
+    },
+    {
+      "bytes": 10376,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_053.tsv",
+      "sha256": "6930a0d45e42b8a3534c618f3f95a064461f662769d80c2dca00b457964f0c0c"
+    },
+    {
+      "bytes": 11500,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_054.tsv",
+      "sha256": "9410c1424995eb251302c1161ff1064e913b9a27af9c3691e5dfa2a5ca713745"
+    },
+    {
+      "bytes": 10668,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_055.tsv",
+      "sha256": "b3b44c47f9ade041f63f4ba017829981c1b79d9a93048120057bffd9036c84ea"
+    },
+    {
+      "bytes": 11068,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_056.tsv",
+      "sha256": "79dbcb2432cb255268531a3fcc1b25fe906ef3553ffd68a94ef7fb3d7303c310"
+    },
+    {
+      "bytes": 12882,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_057.tsv",
+      "sha256": "81ed3a482a1cd3bf2526ae5e379b0327f36215333325373268a10cb138e5a592"
+    },
+    {
+      "bytes": 11269,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_058.tsv",
+      "sha256": "90b43f31cc8bf0a9f5c0a1170670d103f6526f00bf71fb99af62848cafe9e08a"
+    },
+    {
+      "bytes": 12992,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_059.tsv",
+      "sha256": "a0e23720e3387f73eaba7be79436ab1392e9a98b8f35193354f78d8dff5caa92"
+    },
+    {
+      "bytes": 14138,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_060.tsv",
+      "sha256": "b31873c41f67cf0e46b2f88065d2b37d8bcb2ca7ba09f46bcc830b94fdfaa38f"
+    },
+    {
+      "bytes": 62402,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_061.tsv",
+      "sha256": "1b0b1ca6f3f8b778e6089b9e6e45414bb1464f983beeea715259aa00a6bc3506"
+    },
+    {
+      "bytes": 13402,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_062.tsv",
+      "sha256": "7223ad39430224d53de7503197a655371f74092dbaed22308679d67e991364e2"
+    },
+    {
+      "bytes": 82905,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_063.tsv",
+      "sha256": "cac42456ea595ad7641c0750ef7ffd5e4fa5612ba8f13146b49a62fd12a36e40"
+    },
+    {
+      "bytes": 10459,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_064.tsv",
+      "sha256": "e96353006375939da2844dd5852c1d41463fccd801bc00a2e4912483d4b2f7b7"
+    },
+    {
+      "bytes": 41992,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_065.tsv",
+      "sha256": "da99cb0d7ca3f044380e53624a6f8c2a9e8fbdcf337def67e10e6e8f451ae80f"
+    },
+    {
+      "bytes": 71799,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_066.tsv",
+      "sha256": "430f2a804ac53cde229749bc75982b700ffe6b654f4ba81ca86e28ee55e9e68c"
+    },
+    {
+      "bytes": 53150,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_067.tsv",
+      "sha256": "1f74adc943592d57293c2ccb30a44822fc8b4d7f5f1f09a32091a1817104af09"
+    },
+    {
+      "bytes": 69702,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_068.tsv",
+      "sha256": "c525c2bad12c73a1d48c0af565dd422ec493f0b67b52c1d51d0671b50d9e55cc"
+    },
+    {
+      "bytes": 75427,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_069.tsv",
+      "sha256": "e51173522c15005314dc5eac48772733fff79ba571dec2a5cf8cdf81c1cc9390"
+    },
+    {
+      "bytes": 66851,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_070.tsv",
+      "sha256": "329a792d394afd053bf2c280246ef35fe3353d69491ba4569d7073266970a609"
+    },
+    {
+      "bytes": 63031,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_071.tsv",
+      "sha256": "382908602b63a5082ce80fbd095c69ec6974f73d3c3b05d8e7e1d11579816879"
+    },
+    {
+      "bytes": 13330,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_072.tsv",
+      "sha256": "48870e668002cfa767d5a8bf1bfae29d9ba13e7beafd6c65cf0a1875452a9e8a"
+    },
+    {
+      "bytes": 85595,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_073.tsv",
+      "sha256": "bf3cf8675d6f2d708f506d4f7310bbdbd424563b962ef0c192d2be64c55399a2"
+    },
+    {
+      "bytes": 16184,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_074.tsv",
+      "sha256": "b6848b01688273831b57a062ffbb02f28b122a2b8df9f72b4c845f501c1da349"
+    },
+    {
+      "bytes": 94951,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_075.tsv",
+      "sha256": "b91aabf674882eb2a686ebbe9e6765d1d8e77dd1cc249a9f0dfc24a5f1e1cae3"
+    },
+    {
+      "bytes": 11649,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_076.tsv",
+      "sha256": "35042f94938a00f9d0501397ca0c1863254781cc6c6f56c42de36ebe1c0b25d2"
+    },
+    {
+      "bytes": 71441,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_077.tsv",
+      "sha256": "c79d3a9cc0ba8a3bf8fe8b30e3ebd048d02800473b4ea88cb437b6c3fe38e794"
+    },
+    {
+      "bytes": 94981,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_078.tsv",
+      "sha256": "28aa6197a020373401b235794e35f444adb731bca2f4cb3f580a09a3bfc81f25"
+    },
+    {
+      "bytes": 71291,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_079.tsv",
+      "sha256": "8dd9988f77df90772a3329fdb55e392db4c5dd81a325f618f9f9d2fa71220b75"
+    },
+    {
+      "bytes": 90800,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_080.tsv",
+      "sha256": "72736c1b66b83e6f1ba0b982fecd18709786d7e1574a6e3d7f752c32a2b30749"
+    },
+    {
+      "bytes": 106623,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_081.tsv",
+      "sha256": "f24df2967e18b277f01bcf8efd6b77c45cc096e61a7904f830eec8ef350731e0"
+    },
+    {
+      "bytes": 88255,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_082.tsv",
+      "sha256": "823731869644c1ea45f72735777f22ed0a4a5c9c6694850e2ea7dcbee777570f"
+    },
+    {
+      "bytes": 77145,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_083.tsv",
+      "sha256": "c1115877da97fb21ca3f4ac25c72b098a712c693d488bc6040dda58c894f2d12"
+    },
+    {
+      "bytes": 12288,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_084.tsv",
+      "sha256": "b1e2368c7f14fca5c994ba9cee8c51e838f580d1267e46a8d2d3befe32011d26"
+    },
+    {
+      "bytes": 70252,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_085.tsv",
+      "sha256": "38b39d4142251077e5e965870240d4a25cc14cdfbf7d1b714eabc7ef41bf04b6"
+    },
+    {
+      "bytes": 14220,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_086.tsv",
+      "sha256": "ca29e5878ec97ce3bcacc29d6fe1dcc98e86b3b12ff89ebd2ba530b346b2ddf2"
+    },
+    {
+      "bytes": 76612,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_087.tsv",
+      "sha256": "bb8a5adc0ea8256a9123bfe8d79cef0a9ae9a70a440b35e8ef9cafa8864db25a"
+    },
+    {
+      "bytes": 10840,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_088.tsv",
+      "sha256": "bfc46ec2f22b64f5d18899b85902248cc6eed6e63c975ca9424e4ff0208e2e9b"
+    },
+    {
+      "bytes": 53207,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_089.tsv",
+      "sha256": "82340ce275a38aced81ec0a2481a63ecde12655ddf7539e2da85b00006fda641"
+    },
+    {
+      "bytes": 71573,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_090.tsv",
+      "sha256": "3bf490565cbd63bbf870cd4754a4df7bfaade28a9050dc5417cf294655c119da"
+    },
+    {
+      "bytes": 49517,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_091.tsv",
+      "sha256": "6ae9981984c74f3dc743bcb9a8979cb62cc6c4f612ee4b9b272d12b37b8bbc9a"
+    },
+    {
+      "bytes": 73115,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_092.tsv",
+      "sha256": "e180c2b56bb72b5df9ac024494df90fe856a3f238579d16c17fa08418da93678"
+    },
+    {
+      "bytes": 80511,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_093.tsv",
+      "sha256": "9894149f46ecfd6344a493b50ab415c59e84ffc685f9bfc26eb11eae6de0b527"
+    },
+    {
+      "bytes": 72019,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_094.tsv",
+      "sha256": "abe5271dd89148cd5430f88d83cee10a44cc0fba15e5a0e5d58d7a1e55b69e78"
+    },
+    {
+      "bytes": 59813,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_095.tsv",
+      "sha256": "23c7083b90d4fe41e822e225c01b1a21e23805e1fe787b24f8d051358e4ae4cb"
+    },
+    {
+      "bytes": 14497,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_096.tsv",
+      "sha256": "37657e34bb76c176c05fe5333225860759dd5a206a3f1b00613aed63f8507a8e"
+    },
+    {
+      "bytes": 84215,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_097.tsv",
+      "sha256": "ea7aaa4bb4fdc5d248fb5a091890b85e1bad923e5868ba6a98ca0f4cadc7b731"
+    },
+    {
+      "bytes": 14791,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_098.tsv",
+      "sha256": "90c4d7e5960e9737e5bfe421f1b54fc0af4f5fa0ece8c47cb3b892d74b9b0e72"
+    },
+    {
+      "bytes": 95681,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_099.tsv",
+      "sha256": "6b37bec1165c2946004d4b21f7c16eb5ece58a80e9e032efbf20e7219aefb532"
+    },
+    {
+      "bytes": 11142,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_100.tsv",
+      "sha256": "bdc67e61e7dff822916a4b3ffdd2cfa3eefb264f70ebac58857c39552cab97e1"
+    },
+    {
+      "bytes": 69366,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_101.tsv",
+      "sha256": "ef09ad3b6fe4f523fd584122440a3d83d5d1ba78addc7591322b2df53a45f51d"
+    },
+    {
+      "bytes": 90952,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_102.tsv",
+      "sha256": "c47b56656696cbca6e1cb51826f91d81d260987f850ece5bedacb3675cc01260"
+    },
+    {
+      "bytes": 72942,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_103.tsv",
+      "sha256": "52ba271cdda6334d2c05df454638039d545aa90216e10c9854d8c72e621a4a24"
+    },
+    {
+      "bytes": 79362,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_104.tsv",
+      "sha256": "a730a3e0f8b3535a40eab7cf922fcadc2813312f2ae09798e5b094c68a16956f"
+    },
+    {
+      "bytes": 100213,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_105.tsv",
+      "sha256": "6d5bef13001470375e969712d41e3361f26b925e851243214dca2be883c90808"
+    },
+    {
+      "bytes": 91871,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_106.tsv",
+      "sha256": "38c4fb4e45346aa8bf6b629ce2663d5e0faed241279f6832f758f0aa0c654239"
+    },
+    {
+      "bytes": 76515,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_107.tsv",
+      "sha256": "8c970361f335da3fe3f6b3e5487188da4fe91c700243e3544979541b29161e12"
+    },
+    {
+      "bytes": 14740,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_108.tsv",
+      "sha256": "440d20123182a28dddb8b115fca9697ef44fb37648e3196c6e9846d835fb7fe5"
+    },
+    {
+      "bytes": 96171,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_109.tsv",
+      "sha256": "26f5476fa699d15faa5ddd37e7d37290acb49efe4a9df5144f1947d058b05585"
+    },
+    {
+      "bytes": 15325,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_110.tsv",
+      "sha256": "e81c2dcb544ddcc3401b59833cc0791f4c8b86d6d874881d2da11c877f26b510"
+    },
+    {
+      "bytes": 97713,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_111.tsv",
+      "sha256": "d4a46029e4df5f6432ca0ef958911f29f38b54315d68ce51cf2294e6c9ed8241"
+    },
+    {
+      "bytes": 13117,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_112.tsv",
+      "sha256": "826d6abcb21970a22c8e2d7cc4da9af858745ea783a1e05a010a792f3b42dbfd"
+    },
+    {
+      "bytes": 75382,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_113.tsv",
+      "sha256": "4154a7b0b4851c2efedf09397aa0ebe71b504785a2d7ad33172a4a6374a08cf6"
+    },
+    {
+      "bytes": 107467,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_114.tsv",
+      "sha256": "2aef3e7bf78f5fa564ff3970023c03038647914855404402a361f766f7472d48"
+    },
+    {
+      "bytes": 80406,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_115.tsv",
+      "sha256": "b8cddb8f6a4ef90c7cf5c893942e06ce349d151bf4df735d07d205d419026dde"
+    },
+    {
+      "bytes": 100542,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_116.tsv",
+      "sha256": "ed3b69debfeb6b068771000c333587cf4ce424879bab2070475345108a9aa07d"
+    },
+    {
+      "bytes": 103928,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_117.tsv",
+      "sha256": "931e1e268e2bab8a56faddcc59ceb0e3c4f52df70b6a63b82badae80ae54b8ac"
+    },
+    {
+      "bytes": 101292,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_118.tsv",
+      "sha256": "76698b402950369e975c2e38b1fb1b6476b85749285a53d0e326fac8492cac7f"
+    },
+    {
+      "bytes": 79906,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_119.tsv",
+      "sha256": "1d9ff88cf6582790b535127140d4b93e89784e036c56332373e5f09ea0d5f9b5"
+    },
+    {
+      "bytes": 13870,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_120.tsv",
+      "sha256": "67e68a980127120e2846adfbc05705af1e142142ae3d362c5eb04645e1ac4fbe"
+    },
+    {
+      "bytes": 88233,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_121.tsv",
+      "sha256": "ea59d8834d3da355be8fd917fac8107c4f0e083cf6beb9ffc03a52098a4cb3dd"
+    },
+    {
+      "bytes": 14121,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_122.tsv",
+      "sha256": "170f342eca61ec8b49381d11966cf80b0f13471f57b5083fd8995e04d513f47d"
+    },
+    {
+      "bytes": 91954,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_123.tsv",
+      "sha256": "f1e585da73fb6598a8383d041f3463831510a2fcf92e5787988cd23eea9e3416"
+    },
+    {
+      "bytes": 11390,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_124.tsv",
+      "sha256": "5b3e501faced35498b56fd1d1370320698fd3854412849b3fe4f05cb1d5e66b2"
+    },
+    {
+      "bytes": 66552,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_125.tsv",
+      "sha256": "8a197e996a83565317e8a244a0e40d6a4299f8e97352d6802a185b4939d22448"
+    },
+    {
+      "bytes": 88387,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_126.tsv",
+      "sha256": "81ac86688fcbd5e6b08e443983f7fd5f5d628ef96d838b66476ca5c29e00086c"
+    },
+    {
+      "bytes": 71840,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_127.tsv",
+      "sha256": "00cfb32ad9029a7300a5e8da0ecefaccde163bb4a146f4ce6b8fd29a5d73e208"
+    },
+    {
+      "bytes": 91959,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_128.tsv",
+      "sha256": "0511e1a0dc7f7e87f8442faebe85db6e28688ec9f33074a9bb11bc37aa5762ec"
+    },
+    {
+      "bytes": 101171,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_129.tsv",
+      "sha256": "2da714ae42eabb9aef82c138d7072c1966e06ffd9693869f72acb0ef1c2dfebb"
+    },
+    {
+      "bytes": 75177,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_130.tsv",
+      "sha256": "8bfc8962f0f325ad8d31da0a2d88ead634f09eac3b077cf91018f95f57bd9f7c"
+    },
+    {
+      "bytes": 73073,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_131.tsv",
+      "sha256": "26d8e788b7ab14285148d8488e6855ca0b5eef2ba636be0e88d39f711b4ab8ae"
+    },
+    {
+      "bytes": 16868,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_132.tsv",
+      "sha256": "12f67f3b0d8ebc29e5a4d3286c8e18eb06ce36d09b9c7a37a156bd401bd6d0e8"
+    },
+    {
+      "bytes": 70194,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_133.tsv",
+      "sha256": "80b469757e834c4e126c99fd0a0c4d8e9d6f8720f122d07dc5a5f00e90f155e1"
+    },
+    {
+      "bytes": 17378,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_134.tsv",
+      "sha256": "2363c13d4f0e963404a0079f3efb4a737184abd4dbad1c835417ec104fa8d570"
+    },
+    {
+      "bytes": 109689,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_135.tsv",
+      "sha256": "861b98f87a64f6e61057a5414f7b2c0138c1fe9cb2ad9006cbce16017a1a705e"
+    },
+    {
+      "bytes": 13218,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_136.tsv",
+      "sha256": "8e4bd5434ec5089814863562133043e335764fa96402267f98957bf6e6e4f5a2"
+    },
+    {
+      "bytes": 63421,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_137.tsv",
+      "sha256": "42d0352ce82da6a0cb46b73da0d01e9a17ee4460280e7b86f060d3744e9e214e"
+    },
+    {
+      "bytes": 77723,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_138.tsv",
+      "sha256": "ba3a670f7b9c921a7dab1c4e30dc08b5e6f0449ca323a8a92f370d8983caa804"
+    },
+    {
+      "bytes": 59961,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_139.tsv",
+      "sha256": "7f55a06a3e6de1836b030c5ac580d15f35a3eccfb9566d140be4b4f60aeecd09"
+    },
+    {
+      "bytes": 77094,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_140.tsv",
+      "sha256": "03eb1cb79646ef833a65b743fa47d0b357ad637c00abe405ecd61b1d4276a9d2"
+    },
+    {
+      "bytes": 80566,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_141.tsv",
+      "sha256": "a1ff5a31922b4530751a2cebaeeed252d960912bb01a9e4b24aa0fd301a5709e"
+    },
+    {
+      "bytes": 73790,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_142.tsv",
+      "sha256": "171d1d645ed07650f42e64d6641186e5dee5fa29c3182a63359718b2823a0749"
+    },
+    {
+      "bytes": 70879,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ob_search_decisions_v1/direction_143.tsv",
+      "sha256": "dfdf7bbb30be5157b864278cab603f1009c8c4e0e8e2077021177faf7d72061f"
+    }
+  ],
+  "counts": {
+    "at_least_one_accepted_direction:grouped:cross_species": 13001,
+    "at_least_one_accepted_direction:grouped:same_species": 1428,
+    "at_least_one_accepted_direction:separated:cross_species": 1704,
+    "at_least_one_accepted_direction:separated:same_species": 267,
+    "both_prefilter_excluded:grouped:cross_species": 7555,
+    "both_prefilter_excluded:grouped:same_species": 831,
+    "both_prefilter_excluded:separated:cross_species": 13418,
+    "both_prefilter_excluded:separated:same_species": 1711,
+    "both_scored_not_significant:grouped:cross_species": 25,
+    "both_scored_not_significant:grouped:same_species": 7,
+    "both_scored_not_significant:separated:cross_species": 186,
+    "both_scored_not_significant:separated:same_species": 32,
+    "one_prefilter_excluded_one_scored_not_significant:grouped:cross_species": 42,
+    "one_prefilter_excluded_one_scored_not_significant:grouped:same_species": 5,
+    "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 459,
+    "one_prefilter_excluded_one_scored_not_significant:separated:same_species": 62
+  },
+  "families": {
+    "RefOG001.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 75,
+      "at_least_one_accepted_direction:grouped:same_species": 4,
+      "at_least_one_accepted_direction:separated:cross_species": 14,
+      "both_prefilter_excluded:grouped:cross_species": 12
+    },
+    "RefOG002.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 18,
+      "at_least_one_accepted_direction:separated:cross_species": 10,
+      "at_least_one_accepted_direction:separated:same_species": 2,
+      "both_prefilter_excluded:grouped:cross_species": 3,
+      "both_prefilter_excluded:separated:cross_species": 127,
+      "both_prefilter_excluded:separated:same_species": 8,
+      "both_scored_not_significant:separated:cross_species": 1,
+      "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 2
+    },
+    "RefOG003.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 413,
+      "at_least_one_accepted_direction:grouped:same_species": 49,
+      "at_least_one_accepted_direction:separated:cross_species": 6,
+      "at_least_one_accepted_direction:separated:same_species": 1,
+      "both_prefilter_excluded:grouped:cross_species": 584,
+      "both_prefilter_excluded:grouped:same_species": 82,
+      "both_prefilter_excluded:separated:cross_species": 82,
+      "both_prefilter_excluded:separated:same_species": 3,
+      "both_scored_not_significant:separated:cross_species": 1,
+      "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 4
+    },
+    "RefOG004.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 49,
+      "both_prefilter_excluded:grouped:cross_species": 5,
+      "both_prefilter_excluded:grouped:same_species": 1,
+      "both_prefilter_excluded:separated:cross_species": 11
+    },
+    "RefOG005.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 403,
+      "at_least_one_accepted_direction:grouped:same_species": 35,
+      "at_least_one_accepted_direction:separated:cross_species": 61,
+      "at_least_one_accepted_direction:separated:same_species": 8,
+      "both_prefilter_excluded:grouped:cross_species": 30,
+      "both_prefilter_excluded:separated:cross_species": 23,
+      "both_prefilter_excluded:separated:same_species": 1
+    },
+    "RefOG006.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 625,
+      "at_least_one_accepted_direction:grouped:same_species": 55,
+      "at_least_one_accepted_direction:separated:cross_species": 63,
+      "at_least_one_accepted_direction:separated:same_species": 9,
+      "both_prefilter_excluded:grouped:cross_species": 204,
+      "both_prefilter_excluded:grouped:same_species": 20,
+      "both_prefilter_excluded:separated:cross_species": 112,
+      "both_prefilter_excluded:separated:same_species": 15,
+      "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 22,
+      "one_prefilter_excluded_one_scored_not_significant:separated:same_species": 3
+    },
+    "RefOG007.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 228,
+      "at_least_one_accepted_direction:grouped:same_species": 16,
+      "at_least_one_accepted_direction:separated:cross_species": 36,
+      "at_least_one_accepted_direction:separated:same_species": 3,
+      "both_prefilter_excluded:grouped:cross_species": 536,
+      "both_prefilter_excluded:grouped:same_species": 68,
+      "both_prefilter_excluded:separated:cross_species": 614,
+      "both_prefilter_excluded:separated:same_species": 73,
+      "both_scored_not_significant:separated:cross_species": 11,
+      "both_scored_not_significant:separated:same_species": 1,
+      "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 8,
+      "one_prefilter_excluded_one_scored_not_significant:separated:same_species": 2
+    },
+    "RefOG008.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 63,
+      "at_least_one_accepted_direction:grouped:same_species": 1,
+      "at_least_one_accepted_direction:separated:cross_species": 11,
+      "both_prefilter_excluded:grouped:cross_species": 2,
+      "both_prefilter_excluded:separated:cross_species": 13,
+      "both_prefilter_excluded:separated:same_species": 1
+    },
+    "RefOG009.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 135,
+      "at_least_one_accepted_direction:grouped:same_species": 5,
+      "at_least_one_accepted_direction:separated:cross_species": 29,
+      "at_least_one_accepted_direction:separated:same_species": 1,
+      "both_prefilter_excluded:grouped:cross_species": 12,
+      "both_prefilter_excluded:grouped:same_species": 2,
+      "both_prefilter_excluded:separated:cross_species": 61,
+      "both_prefilter_excluded:separated:same_species": 5,
+      "both_scored_not_significant:separated:cross_species": 3
+    },
+    "RefOG010.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 2,
+      "at_least_one_accepted_direction:grouped:same_species": 1
+    },
+    "RefOG011.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 348,
+      "at_least_one_accepted_direction:grouped:same_species": 30,
+      "at_least_one_accepted_direction:separated:cross_species": 108,
+      "at_least_one_accepted_direction:separated:same_species": 15,
+      "both_prefilter_excluded:grouped:cross_species": 573,
+      "both_prefilter_excluded:grouped:same_species": 63,
+      "both_prefilter_excluded:separated:cross_species": 2626,
+      "both_prefilter_excluded:separated:same_species": 370,
+      "both_scored_not_significant:grouped:cross_species": 12,
+      "both_scored_not_significant:grouped:same_species": 3,
+      "both_scored_not_significant:separated:cross_species": 111,
+      "both_scored_not_significant:separated:same_species": 15,
+      "one_prefilter_excluded_one_scored_not_significant:grouped:cross_species": 6,
+      "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 76,
+      "one_prefilter_excluded_one_scored_not_significant:separated:same_species": 15
+    },
+    "RefOG012.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 237,
+      "at_least_one_accepted_direction:grouped:same_species": 18,
+      "at_least_one_accepted_direction:separated:cross_species": 7,
+      "both_prefilter_excluded:grouped:cross_species": 547,
+      "both_prefilter_excluded:grouped:same_species": 60,
+      "both_prefilter_excluded:separated:cross_species": 155,
+      "both_prefilter_excluded:separated:same_species": 2,
+      "both_scored_not_significant:separated:cross_species": 7,
+      "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 2
+    },
+    "RefOG013.txt": {
+      "at_least_one_accepted_direction:grouped:same_species": 4,
+      "at_least_one_accepted_direction:separated:same_species": 9,
+      "both_prefilter_excluded:grouped:same_species": 2,
+      "both_prefilter_excluded:separated:cross_species": 70,
+      "both_prefilter_excluded:separated:same_species": 250,
+      "both_scored_not_significant:separated:same_species": 13,
+      "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 2,
+      "one_prefilter_excluded_one_scored_not_significant:separated:same_species": 1
+    },
+    "RefOG014.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 80,
+      "at_least_one_accepted_direction:grouped:same_species": 59,
+      "at_least_one_accepted_direction:separated:cross_species": 31,
+      "at_least_one_accepted_direction:separated:same_species": 50,
+      "both_prefilter_excluded:grouped:cross_species": 53,
+      "both_prefilter_excluded:grouped:same_species": 18,
+      "both_prefilter_excluded:separated:cross_species": 553,
+      "both_prefilter_excluded:separated:same_species": 50,
+      "both_scored_not_significant:separated:cross_species": 10,
+      "one_prefilter_excluded_one_scored_not_significant:grouped:cross_species": 3,
+      "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 36,
+      "one_prefilter_excluded_one_scored_not_significant:separated:same_species": 3
+    },
+    "RefOG015.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 126,
+      "at_least_one_accepted_direction:grouped:same_species": 148,
+      "both_prefilter_excluded:grouped:cross_species": 104,
+      "both_prefilter_excluded:grouped:same_species": 24,
+      "both_prefilter_excluded:separated:cross_species": 26,
+      "both_scored_not_significant:grouped:cross_species": 3,
+      "both_scored_not_significant:separated:cross_species": 3,
+      "one_prefilter_excluded_one_scored_not_significant:grouped:cross_species": 1
+    },
+    "RefOG016.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 96,
+      "at_least_one_accepted_direction:grouped:same_species": 9,
+      "at_least_one_accepted_direction:separated:cross_species": 1,
+      "both_prefilter_excluded:grouped:cross_species": 139,
+      "both_prefilter_excluded:grouped:same_species": 9,
+      "both_prefilter_excluded:separated:cross_species": 42,
+      "both_prefilter_excluded:separated:same_species": 4
+    },
+    "RefOG017.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 235,
+      "at_least_one_accepted_direction:grouped:same_species": 23,
+      "both_prefilter_excluded:grouped:cross_species": 113,
+      "both_prefilter_excluded:grouped:same_species": 7,
+      "both_prefilter_excluded:separated:cross_species": 25,
+      "both_prefilter_excluded:separated:same_species": 2,
+      "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 1
+    },
+    "RefOG018.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 64,
+      "at_least_one_accepted_direction:grouped:same_species": 2
+    },
+    "RefOG019.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 76,
+      "at_least_one_accepted_direction:grouped:same_species": 2
+    },
+    "RefOG020.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 280,
+      "at_least_one_accepted_direction:grouped:same_species": 20,
+      "at_least_one_accepted_direction:separated:cross_species": 69,
+      "at_least_one_accepted_direction:separated:same_species": 5,
+      "both_prefilter_excluded:separated:cross_species": 4
+    },
+    "RefOG021.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 845,
+      "at_least_one_accepted_direction:grouped:same_species": 119,
+      "at_least_one_accepted_direction:separated:cross_species": 173,
+      "at_least_one_accepted_direction:separated:same_species": 30,
+      "both_prefilter_excluded:grouped:cross_species": 1036,
+      "both_prefilter_excluded:grouped:same_species": 119,
+      "both_prefilter_excluded:separated:cross_species": 4702,
+      "both_prefilter_excluded:separated:same_species": 555,
+      "both_scored_not_significant:grouped:same_species": 1,
+      "both_scored_not_significant:separated:cross_species": 5,
+      "both_scored_not_significant:separated:same_species": 2,
+      "one_prefilter_excluded_one_scored_not_significant:grouped:cross_species": 5,
+      "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 139,
+      "one_prefilter_excluded_one_scored_not_significant:separated:same_species": 19
+    },
+    "RefOG022.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 319,
+      "at_least_one_accepted_direction:grouped:same_species": 26,
+      "at_least_one_accepted_direction:separated:cross_species": 5,
+      "both_prefilter_excluded:grouped:cross_species": 158,
+      "both_prefilter_excluded:grouped:same_species": 20,
+      "both_prefilter_excluded:separated:cross_species": 59,
+      "both_scored_not_significant:grouped:cross_species": 4,
+      "one_prefilter_excluded_one_scored_not_significant:grouped:cross_species": 1,
+      "one_prefilter_excluded_one_scored_not_significant:grouped:same_species": 1,
+      "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 2
+    },
+    "RefOG023.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 307,
+      "at_least_one_accepted_direction:grouped:same_species": 34,
+      "at_least_one_accepted_direction:separated:cross_species": 741,
+      "at_least_one_accepted_direction:separated:same_species": 108,
+      "both_prefilter_excluded:grouped:cross_species": 34,
+      "both_prefilter_excluded:grouped:same_species": 3,
+      "both_prefilter_excluded:separated:cross_species": 958,
+      "both_prefilter_excluded:separated:same_species": 105,
+      "both_scored_not_significant:separated:cross_species": 9,
+      "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 44,
+      "one_prefilter_excluded_one_scored_not_significant:separated:same_species": 3
+    },
+    "RefOG024.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 540,
+      "at_least_one_accepted_direction:grouped:same_species": 70,
+      "both_prefilter_excluded:grouped:cross_species": 612,
+      "both_prefilter_excluded:grouped:same_species": 51,
+      "both_scored_not_significant:grouped:cross_species": 1,
+      "one_prefilter_excluded_one_scored_not_significant:grouped:cross_species": 1
+    },
+    "RefOG025.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 74,
+      "at_least_one_accepted_direction:grouped:same_species": 3,
+      "both_prefilter_excluded:grouped:cross_species": 1
+    },
+    "RefOG026.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 317,
+      "at_least_one_accepted_direction:grouped:same_species": 24,
+      "at_least_one_accepted_direction:separated:cross_species": 8,
+      "both_prefilter_excluded:grouped:cross_species": 436,
+      "both_prefilter_excluded:grouped:same_species": 43,
+      "both_prefilter_excluded:separated:cross_species": 73,
+      "both_prefilter_excluded:separated:same_species": 1,
+      "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 1
+    },
+    "RefOG027.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 83,
+      "at_least_one_accepted_direction:grouped:same_species": 3,
+      "at_least_one_accepted_direction:separated:cross_species": 5,
+      "at_least_one_accepted_direction:separated:same_species": 1,
+      "both_prefilter_excluded:grouped:cross_species": 30,
+      "both_prefilter_excluded:grouped:same_species": 5,
+      "both_prefilter_excluded:separated:cross_species": 58,
+      "both_prefilter_excluded:separated:same_species": 4,
+      "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 1
+    },
+    "RefOG028.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 68,
+      "at_least_one_accepted_direction:grouped:same_species": 1,
+      "at_least_one_accepted_direction:separated:cross_species": 18,
+      "at_least_one_accepted_direction:separated:same_species": 1,
+      "both_prefilter_excluded:grouped:cross_species": 30,
+      "both_prefilter_excluded:grouped:same_species": 1,
+      "both_prefilter_excluded:separated:cross_species": 138,
+      "both_prefilter_excluded:separated:same_species": 16,
+      "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 3
+    },
+    "RefOG029.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 53,
+      "at_least_one_accepted_direction:grouped:same_species": 2,
+      "at_least_one_accepted_direction:separated:cross_species": 3,
+      "both_prefilter_excluded:separated:cross_species": 20
+    },
+    "RefOG030.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 63,
+      "at_least_one_accepted_direction:grouped:same_species": 1,
+      "both_prefilter_excluded:grouped:cross_species": 14
+    },
+    "RefOG031.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 163,
+      "at_least_one_accepted_direction:grouped:same_species": 9,
+      "at_least_one_accepted_direction:separated:cross_species": 1,
+      "both_prefilter_excluded:grouped:cross_species": 267,
+      "both_prefilter_excluded:grouped:same_species": 24,
+      "both_prefilter_excluded:separated:cross_species": 30,
+      "one_prefilter_excluded_one_scored_not_significant:grouped:cross_species": 2
+    },
+    "RefOG032.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 81,
+      "at_least_one_accepted_direction:grouped:same_species": 1,
+      "both_prefilter_excluded:grouped:cross_species": 7,
+      "both_prefilter_excluded:grouped:same_species": 2
+    },
+    "RefOG033.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 182,
+      "at_least_one_accepted_direction:grouped:same_species": 20,
+      "at_least_one_accepted_direction:separated:cross_species": 2,
+      "both_prefilter_excluded:grouped:cross_species": 150,
+      "both_prefilter_excluded:grouped:same_species": 26,
+      "both_prefilter_excluded:separated:cross_species": 51,
+      "both_prefilter_excluded:separated:same_species": 4
+    },
+    "RefOG034.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 189,
+      "at_least_one_accepted_direction:grouped:same_species": 16,
+      "both_prefilter_excluded:grouped:cross_species": 5
+    },
+    "RefOG035.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 257,
+      "at_least_one_accepted_direction:grouped:same_species": 24,
+      "at_least_one_accepted_direction:separated:cross_species": 46,
+      "at_least_one_accepted_direction:separated:same_species": 6,
+      "both_prefilter_excluded:grouped:cross_species": 40,
+      "both_prefilter_excluded:grouped:same_species": 5,
+      "both_prefilter_excluded:separated:cross_species": 101,
+      "both_prefilter_excluded:separated:same_species": 14,
+      "both_scored_not_significant:separated:cross_species": 1,
+      "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 2
+    },
+    "RefOG036.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 518,
+      "at_least_one_accepted_direction:grouped:same_species": 44,
+      "at_least_one_accepted_direction:separated:cross_species": 12,
+      "at_least_one_accepted_direction:separated:same_species": 2,
+      "both_prefilter_excluded:grouped:cross_species": 388,
+      "both_prefilter_excluded:grouped:same_species": 38,
+      "both_prefilter_excluded:separated:cross_species": 5,
+      "both_prefilter_excluded:separated:same_species": 1,
+      "one_prefilter_excluded_one_scored_not_significant:grouped:cross_species": 2,
+      "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 24,
+      "one_prefilter_excluded_one_scored_not_significant:separated:same_species": 1
+    },
+    "RefOG037.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 302,
+      "at_least_one_accepted_direction:grouped:same_species": 16,
+      "at_least_one_accepted_direction:separated:cross_species": 2,
+      "both_prefilter_excluded:grouped:cross_species": 130,
+      "both_prefilter_excluded:grouped:same_species": 17,
+      "both_prefilter_excluded:separated:cross_species": 48,
+      "both_prefilter_excluded:separated:same_species": 9,
+      "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 34,
+      "one_prefilter_excluded_one_scored_not_significant:separated:same_species": 3
+    },
+    "RefOG038.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 31,
+      "both_prefilter_excluded:grouped:cross_species": 5
+    },
+    "RefOG039.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 114,
+      "at_least_one_accepted_direction:grouped:same_species": 6,
+      "at_least_one_accepted_direction:separated:cross_species": 40,
+      "at_least_one_accepted_direction:separated:same_species": 2,
+      "both_prefilter_excluded:separated:cross_species": 24,
+      "both_prefilter_excluded:separated:same_species": 3,
+      "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 1
+    },
+    "RefOG040.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 36,
+      "both_prefilter_excluded:grouped:cross_species": 19,
+      "both_prefilter_excluded:separated:cross_species": 21,
+      "both_prefilter_excluded:separated:same_species": 1,
+      "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 1
+    },
+    "RefOG041.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 79,
+      "at_least_one_accepted_direction:grouped:same_species": 3,
+      "both_prefilter_excluded:grouped:cross_species": 51,
+      "both_prefilter_excluded:grouped:same_species": 3
+    },
+    "RefOG042.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 15,
+      "at_least_one_accepted_direction:separated:cross_species": 8,
+      "both_prefilter_excluded:grouped:cross_species": 14,
+      "both_prefilter_excluded:separated:cross_species": 18
+    },
+    "RefOG043.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 112,
+      "at_least_one_accepted_direction:grouped:same_species": 4,
+      "both_prefilter_excluded:grouped:cross_species": 13,
+      "both_prefilter_excluded:grouped:same_species": 3,
+      "both_scored_not_significant:grouped:cross_species": 1,
+      "one_prefilter_excluded_one_scored_not_significant:grouped:cross_species": 2,
+      "one_prefilter_excluded_one_scored_not_significant:grouped:same_species": 1
+    },
+    "RefOG044.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 32,
+      "at_least_one_accepted_direction:grouped:same_species": 3,
+      "both_prefilter_excluded:grouped:cross_species": 43,
+      "both_prefilter_excluded:separated:cross_species": 13
+    },
+    "RefOG045.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 42,
+      "both_prefilter_excluded:grouped:cross_species": 13,
+      "both_prefilter_excluded:separated:cross_species": 22,
+      "both_prefilter_excluded:separated:same_species": 1
+    },
+    "RefOG046.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 372,
+      "at_least_one_accepted_direction:grouped:same_species": 81,
+      "both_prefilter_excluded:grouped:cross_species": 30,
+      "both_prefilter_excluded:grouped:same_species": 6,
+      "both_scored_not_significant:grouped:cross_species": 3,
+      "both_scored_not_significant:grouped:same_species": 3,
+      "one_prefilter_excluded_one_scored_not_significant:grouped:cross_species": 1
+    },
+    "RefOG047.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 332,
+      "at_least_one_accepted_direction:grouped:same_species": 40,
+      "at_least_one_accepted_direction:separated:cross_species": 1,
+      "both_prefilter_excluded:grouped:cross_species": 115,
+      "both_prefilter_excluded:grouped:same_species": 15,
+      "both_prefilter_excluded:separated:cross_species": 127
+    },
+    "RefOG048.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 577,
+      "at_least_one_accepted_direction:grouped:same_species": 80,
+      "at_least_one_accepted_direction:separated:cross_species": 58,
+      "at_least_one_accepted_direction:separated:same_species": 6,
+      "both_prefilter_excluded:grouped:cross_species": 7,
+      "both_prefilter_excluded:grouped:same_species": 3,
+      "both_prefilter_excluded:separated:cross_species": 39,
+      "both_prefilter_excluded:separated:same_species": 7,
+      "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 2,
+      "one_prefilter_excluded_one_scored_not_significant:separated:same_species": 1
+    },
+    "RefOG049.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 28,
+      "at_least_one_accepted_direction:grouped:same_species": 1,
+      "both_prefilter_excluded:separated:cross_species": 16
+    },
+    "RefOG050.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 66,
+      "at_least_one_accepted_direction:separated:cross_species": 2,
+      "both_prefilter_excluded:separated:cross_species": 18,
+      "both_prefilter_excluded:separated:same_species": 3,
+      "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 2
+    },
+    "RefOG051.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 51,
+      "at_least_one_accepted_direction:grouped:same_species": 1,
+      "both_prefilter_excluded:grouped:cross_species": 61,
+      "both_prefilter_excluded:grouped:same_species": 5,
+      "both_prefilter_excluded:separated:cross_species": 15,
+      "both_prefilter_excluded:separated:same_species": 1,
+      "one_prefilter_excluded_one_scored_not_significant:grouped:cross_species": 2
+    },
+    "RefOG052.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 48,
+      "at_least_one_accepted_direction:grouped:same_species": 4,
+      "both_prefilter_excluded:grouped:cross_species": 34,
+      "both_prefilter_excluded:grouped:same_species": 5,
+      "both_prefilter_excluded:separated:cross_species": 14
+    },
+    "RefOG053.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 44,
+      "at_least_one_accepted_direction:grouped:same_species": 1,
+      "at_least_one_accepted_direction:separated:cross_species": 11,
+      "both_prefilter_excluded:separated:cross_species": 21,
+      "both_prefilter_excluded:separated:same_species": 1
+    },
+    "RefOG054.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 198,
+      "at_least_one_accepted_direction:grouped:same_species": 23,
+      "at_least_one_accepted_direction:separated:cross_species": 4,
+      "at_least_one_accepted_direction:separated:same_species": 2,
+      "both_prefilter_excluded:grouped:cross_species": 205,
+      "both_prefilter_excluded:grouped:same_species": 21,
+      "both_prefilter_excluded:separated:cross_species": 424,
+      "both_prefilter_excluded:separated:same_species": 27,
+      "both_scored_not_significant:separated:cross_species": 11,
+      "both_scored_not_significant:separated:same_species": 1,
+      "one_prefilter_excluded_one_scored_not_significant:grouped:same_species": 1,
+      "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 23,
+      "one_prefilter_excluded_one_scored_not_significant:separated:same_species": 6
+    },
+    "RefOG055.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 203,
+      "at_least_one_accepted_direction:grouped:same_species": 24,
+      "both_prefilter_excluded:grouped:cross_species": 117,
+      "both_prefilter_excluded:grouped:same_species": 7,
+      "both_prefilter_excluded:separated:cross_species": 50,
+      "both_prefilter_excluded:separated:same_species": 4,
+      "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 1
+    },
+    "RefOG056.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 30,
+      "both_prefilter_excluded:grouped:cross_species": 4,
+      "one_prefilter_excluded_one_scored_not_significant:grouped:cross_species": 2
+    },
+    "RefOG057.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 68,
+      "at_least_one_accepted_direction:grouped:same_species": 3,
+      "both_prefilter_excluded:grouped:cross_species": 17,
+      "both_prefilter_excluded:grouped:same_species": 2,
+      "both_prefilter_excluded:separated:cross_species": 29,
+      "one_prefilter_excluded_one_scored_not_significant:grouped:cross_species": 1
+    },
+    "RefOG058.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 73,
+      "at_least_one_accepted_direction:grouped:same_species": 9,
+      "at_least_one_accepted_direction:separated:cross_species": 62,
+      "at_least_one_accepted_direction:separated:same_species": 3,
+      "both_prefilter_excluded:grouped:cross_species": 40,
+      "both_prefilter_excluded:grouped:same_species": 6,
+      "both_prefilter_excluded:separated:cross_species": 905,
+      "both_prefilter_excluded:separated:same_species": 104,
+      "both_scored_not_significant:separated:cross_species": 5,
+      "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 13,
+      "one_prefilter_excluded_one_scored_not_significant:separated:same_species": 5
+    },
+    "RefOG059.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 34,
+      "both_prefilter_excluded:grouped:cross_species": 11
+    },
+    "RefOG060.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 1455,
+      "at_least_one_accepted_direction:grouped:same_species": 192,
+      "both_prefilter_excluded:grouped:cross_species": 318,
+      "both_prefilter_excluded:grouped:same_species": 35,
+      "both_prefilter_excluded:separated:cross_species": 248,
+      "both_prefilter_excluded:separated:same_species": 10,
+      "both_scored_not_significant:grouped:cross_species": 1,
+      "both_scored_not_significant:separated:cross_species": 3,
+      "one_prefilter_excluded_one_scored_not_significant:grouped:cross_species": 13,
+      "one_prefilter_excluded_one_scored_not_significant:grouped:same_species": 2,
+      "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 1
+    },
+    "RefOG061.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 174,
+      "at_least_one_accepted_direction:grouped:same_species": 15,
+      "at_least_one_accepted_direction:separated:cross_species": 30,
+      "at_least_one_accepted_direction:separated:same_species": 3,
+      "both_prefilter_excluded:grouped:cross_species": 24,
+      "both_prefilter_excluded:grouped:same_species": 1,
+      "both_prefilter_excluded:separated:cross_species": 161,
+      "both_prefilter_excluded:separated:same_species": 19,
+      "both_scored_not_significant:separated:cross_species": 3,
+      "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 5
+    },
+    "RefOG062.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 44,
+      "both_prefilter_excluded:grouped:cross_species": 11
+    },
+    "RefOG063.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 144,
+      "at_least_one_accepted_direction:grouped:same_species": 8,
+      "both_prefilter_excluded:grouped:cross_species": 16,
+      "both_prefilter_excluded:grouped:same_species": 3,
+      "both_prefilter_excluded:separated:cross_species": 37,
+      "both_prefilter_excluded:separated:same_species": 2
+    },
+    "RefOG064.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 32,
+      "at_least_one_accepted_direction:separated:cross_species": 3,
+      "both_prefilter_excluded:grouped:cross_species": 13,
+      "both_prefilter_excluded:separated:cross_species": 52,
+      "both_prefilter_excluded:separated:same_species": 3,
+      "both_scored_not_significant:separated:cross_species": 2
+    },
+    "RefOG065.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 26,
+      "at_least_one_accepted_direction:separated:cross_species": 2,
+      "both_prefilter_excluded:grouped:cross_species": 2,
+      "both_prefilter_excluded:separated:cross_species": 15
+    },
+    "RefOG066.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 56,
+      "at_least_one_accepted_direction:grouped:same_species": 2,
+      "both_prefilter_excluded:grouped:cross_species": 20,
+      "both_prefilter_excluded:separated:cross_species": 13
+    },
+    "RefOG067.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 62,
+      "at_least_one_accepted_direction:grouped:same_species": 1,
+      "both_prefilter_excluded:grouped:cross_species": 3,
+      "both_prefilter_excluded:separated:cross_species": 12
+    },
+    "RefOG068.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 259,
+      "at_least_one_accepted_direction:grouped:same_species": 20,
+      "at_least_one_accepted_direction:separated:cross_species": 15,
+      "both_prefilter_excluded:grouped:cross_species": 93,
+      "both_prefilter_excluded:grouped:same_species": 6,
+      "both_prefilter_excluded:separated:cross_species": 89,
+      "both_prefilter_excluded:separated:same_species": 7,
+      "one_prefilter_excluded_one_scored_not_significant:separated:cross_species": 7
+    },
+    "RefOG069.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 185,
+      "at_least_one_accepted_direction:grouped:same_species": 12,
+      "at_least_one_accepted_direction:separated:cross_species": 1,
+      "both_prefilter_excluded:grouped:cross_species": 1,
+      "both_prefilter_excluded:separated:cross_species": 241,
+      "both_prefilter_excluded:separated:same_species": 25
+    },
+    "RefOG070.txt": {
+      "at_least_one_accepted_direction:grouped:cross_species": 65,
+      "at_least_one_accepted_direction:grouped:same_species": 1,
+      "at_least_one_accepted_direction:separated:cross_species": 5,
+      "both_prefilter_excluded:separated:cross_species": 7
+    }
+  },
+  "limitations": [
+    "Descriptive reference pair memberships, not official weighted recall or independent units.",
+    "Observed search presence matches historical trace; numerical/runtime equivalence not established.",
+    "Co-membership can arise through indirect paths and later stages; no causal F1 attribution.",
+    "Includes within-species and low-certainty pairs; no counterfactual rescoring or tuning."
+  ],
+  "pair_memberships": 40733,
+  "publication_ready": false,
+  "source": {
+    "bytes": 5727,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/join_ob_search_grouping.py",
+    "sha256": "f6389ac94472762b3df2530145f7efde2cb406c013fcc9018093c4387e1cc2f0"
+  },
+  "status": "admitted_search_grouping_observations_joined",
+  "table": {
+    "bytes": 5702642,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_search_grouping_join_20260918/pairs.tsv",
+    "sha256": "beaaf9eb09409d5f9eb2198a40b09a988d48f8ec30754c07c67e1ff80b6489b8"
+  }
+}

@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Search Decisions Joined To Final Grouping (2026-09-18 UTC)
+
+Previous turn made progress through 157a642 by admitting observed search
+decisions. Reread the objective and confirmed main QfO jobs and DGX task13
+remain live. Joined all40,733 family-pair observations to admitted search
+decisions with per-direction historical-presence checks.13focused tests pass;
+an independent AWK recount reproduces the full eight-cell collapsed table.
+
+Both-direction prefilter exclusions include8,386final-grouped pairs and
+15,129separated pairs. Both-score rejections contribute32/218; mixed
+rejections47/521. These recover8,465/15,868 earlier no-direct-hit totals.
+Accepted-hit pairs contribute14,429grouped and1,971separated observations.
+Retained the [full descriptive join](OB_SEARCH_GROUPING_JOIN_20260918.md),
+70family summaries and source hashes, and integrated its bounded conclusion
+into the manuscript. No causal F1 attribution, new significance test,
+prediction change, method retuning or DGX access.
+
 ## Full Search Decision Diagnostic And Recount Complete (2026-09-18 UTC)
 
 Previous turn was a verified wait at 120/144 directions. Reread the objective

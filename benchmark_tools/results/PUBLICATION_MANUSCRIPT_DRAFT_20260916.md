@@ -384,6 +384,18 @@ official recall, evidence that excluded pairs are true orthologs, or a causal
 explanation of final grouping errors. Excluded pairs were not scored
 counterfactually, and benchmark predictions were not changed.
 
+Joining these decisions to the retained final-root-group trace found8,386
+pairs excluded by the prefilter in both directions that were nonetheless
+grouped together, and15,129 such pairs that remained separated. Pairs scored
+but not significant in both directions contributed32 grouped and218
+separated observations; mixed prefilter/scoring rejection contributed47
+and521. These recover the earlier8,465 grouped and15,868 separated pairs
+without any accepted direct hit. The [complete family-level join](OB_SEARCH_GROUPING_JOIN_20260918.md)
+also retains the1,971 separated pairs with an accepted direct hit. These
+descriptive patterns reinforce that direct search acceptance is neither
+necessary nor sufficient for final co-membership, not that prefilter
+exclusions are harmless or causally responsible for the observed F1 deficit.
+
 ### QfO Results Vary Across Endpoints
 
 The secondary QfO means were 0.782071 for full OrthoFinder, 0.748243 for
