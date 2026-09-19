@@ -123,3 +123,21 @@ def test_detects_point_added_during_replay(archive, monkeypatch):
     monkeypatch.setattr(module, "evaluate", change)
     with pytest.raises(ValueError, match="inventory changed"):
         replay(archive)
+
+
+def test_explicit_control_timeout_preserves_original_default(archive):
+    write(archive)
+    path = archive[0] / "command.json"
+    value = json.loads(path.read_text())
+    value["timeout_s"] = 60
+    save(path, value)
+    with pytest.raises(ValueError, match="command, resources"):
+        replay(archive)
+    result = module.replay(archive[0], 21816, ["/usr/bin/true"], expected_timeout_s=60)
+    assert result["status"] == "dual_native_measurement_replayed"
+
+
+@pytest.mark.parametrize("timeout", [True, 60., 61, 0])
+def test_unknown_timeout_rejected(tmp_path, timeout):
+    with pytest.raises(ValueError, match="frozen diagnostic timeout"):
+        module.replay(tmp_path, 1, [], expected_timeout_s=timeout)

@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Full-Node Raw Replay And Batch Wrapper (2026-09-19)
+
+Previous turn made progress with the fixed driver (`47e69eb`). Added offline
+single-trial replay that binds the expected deployed command and60-second
+timeout, replays both unchanged CPU screens, checks raw worker inventories
+against embedded witnesses, revalidates workload/competitor scope and dose,
+and reproduces the common-window summary. All evidence is hashed before and
+after replay; symlinks, mutations, missing/extra workers and false summaries
+are rejected. A missed positive-control detection stays false, not a replay
+failure or a reason to repeat the trial.
+
+The existing900-second native replay remains the default; only explicit60
+or900-second frozen diagnostic timeouts are accepted. Focused suite:114
+passed. Full-node witness archive tests use a synthetic measurement boundary;
+the separate raw collector replay tests cover actual counter/schema checks.
+The first test attempt had four fixture-write errors because the immutable
+production writer refused deliberate test mutations; a test-only writer
+corrected those fixtures without weakening production evidence handling.
+
+Added `run_dgx_full_node_controls.sh` with exclusive20CPU/96GiB,45-minute
+limit, no requeue, fixed output/cache paths and clean Python/loader startup.
+`bash -n` passes. SSH confirms spark-7ff0 is reachable. No control job was
+submitted. Next: commit-pinned recipe export, runtime/deployment verification,
+idle-host check, submission plus terminal recorder, then full-panel replay
+and descriptive analysis. Corrected OrthoFinder21706_1 remains RUNNING at
+10:22:13; OrthoMCL21713 and strata21896 remain pending. No scientific timing
+admission or publication-readiness claim follows from these engineering tests.
+
 ## Fixed Full-Node Panel Driver Tested (2026-09-19)
 
 Previous turn made progress with trial integration and witness checks

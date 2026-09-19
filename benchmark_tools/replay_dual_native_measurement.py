@@ -8,8 +8,10 @@ from benchmark_tools.measure_native_dual_bracket_step import evaluate, interval_
 from benchmark_tools.prepare_ob_candidate_neighborhood import record, check
 
 
-def replay(directory, job_id, expected_command):
+def replay(directory, job_id, expected_command, expected_timeout_s=900):
     directory = Path(directory)
+    if type(expected_timeout_s) is not int or expected_timeout_s not in (60, 900):
+        raise ValueError("Require a frozen diagnostic timeout")
     if type(job_id) is not int or job_id <= 0:
         raise ValueError("Expected job identity must be a positive integer")
     files = [directory / name for name in (
@@ -20,7 +22,7 @@ def replay(directory, job_id, expected_command):
         raise ValueError("Raw point inventory must be contiguous from zero")
     evidence = [record(path) for path in [*files, *point_files]]
     measured, command, done, memory = [json.loads(path.read_text()) for path in files]
-    if (command != dict(command=expected_command, cpus=20, timeout_s=900, interval_s=1.)
+    if (command != dict(command=expected_command, cpus=20, timeout_s=expected_timeout_s, interval_s=1.)
             or type(command["cpus"]) is not int or type(command["timeout_s"]) is not int
             or type(command["interval_s"]) not in (int, float)):
         raise ValueError("Measured command, resources or cadence differ")
