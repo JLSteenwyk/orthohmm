@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Control Count Integration Completed (2026-09-19)
+
+Job 21953 COMPLETED 0:0 in 12 seconds, bizon/2 CPUs. Retained its 245,132-byte
+count report with SHA-256
+`89ead915b35c90a00daa9664bbef6e0a01db2cf9c515535fd336b4ea1ec2cac7`.
+It checked 733 file identities and reconstructed 18 families/10,765
+reference relations. Independent structured comparison with the prior
+corrected factorial count artifact shows exact equality of all control
+family counts, members, statistics and aggregate. SwissTrees F1 remains
+0.8335132180095781; no score changed. All six variants remain unavailable,
+and no uncertainty/publication readiness is admitted. See the control-audit
+document for provenance and limits. Parameter count integration is now
+validated on real control evidence; completed variant outputs and CPM
+workflow remain required.
+
+## Control-Only Count Integration Running (2026-09-19)
+
+Committed/pushed raw-count audit and tests as `99a0900`, created its frozen
+executor, and submitted control-only integration job 21953. Confirmed
+RUNNING with 2 CPUs/32G/one hour on bizon. Exact input hash and wrapped
+command are recorded in `QFO_PARAMETER_CONTROL_COUNT_AUDIT_21953.md`.
+All six parameter variants remain explicitly unavailable in this inventory;
+this is not completion of parameter analysis. Terminal output validation
+remains required before retaining the integration result.
+
 ## Parameter Raw Family-Count Auditor Prepared (2026-09-19)
 
 Previous turn was progress: paired uncertainty numerical engine implemented
