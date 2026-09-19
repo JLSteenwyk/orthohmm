@@ -21,6 +21,7 @@ def test_transferred_recipe_and_authorization_match_frozen_sources():
     for row in rows:
         path = ROOT / Path(row["path"]).name
         frozen = {"probe_cgroup_frontier.py": "probe_cgroup_frontier_4ce76668.py.txt",
+                  "run_dgx_frontier_overhead.py": "run_dgx_frontier_overhead_cba0662.py.txt",
                   "measure_native_frontier_step.py": "measure_native_frontier_step_9e89534.py.txt",
                   "measure_frontier_boundary_step.py": "measure_frontier_boundary_step_9e89534.py.txt"}
         if path.name in frozen:

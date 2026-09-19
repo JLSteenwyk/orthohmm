@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Pressure-Enabled Overhead Plan and Launcher (2026-09-19)
+
+Previous turn made progress throughcba0662 with dedicated-host integration
+evidence. Reread the full objective and verified corrected scientific jobs
+remain live. Derived a new18task pressure-enabled panel from the pinned
+original without changing native inputs, commands, ordering or budgets.
+All output/cache paths are fresh; previous failed/missing results remain.
+
+Implemented explicit allowlisted plan selection and recipe-bound pressure
+dependencies in the launcher, retaining default old-plan behavior. The
+new authorization purpose cannot authorize the old plan or scientific runs.
+88focused tests pass, including all18newtask selections and plan/recipe
+mismatch rejection. Historical launcher bytes remain available as a fixture.
+[Frozen protocol and deployment conditions](DGX_PRESSURE_OVERHEAD_PROTOCOL_20260919.md).
+
+The new protocol requires held-array release only after a live durable
+controller collector has recorded its first poll, followed by a DGX quiet
+window until all tasks terminate. No new inference outcomes exist yet;
+transfer, exact recipe/authorization, preflight and submission are next.
+Full publication requirements, including corrected evidence and controlled
+resource comparisons, remain active.
+
 ## Complete-Command Pressure Verified on DGX (2026-09-19)
 
 Previous turn made progress through8ffdc40 with integration code and167
