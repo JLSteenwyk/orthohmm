@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Full Unit Check And Isolated CLI Coverage (2026-09-18 UTC)
+
+Previous turn made progress throughb3217b0 with resource attribution.
+Reread the objective and checked live scheduler state: HMM21706_0 running
+19:13:04; overhead21838 tasks0-2 completed0:0, task3 running01:18, tasks4-17
+pending. Retained task2's local terminal scheduler record before expiry
+(13:26,20CPU/96GiB,zero restarts). No DGX remote access or partial native
+output inspection occurred.
+
+The full unit run exposed four PATH-dependent entrypoint failures, with
+5512passed/9skipped. Replaced shell-dependent unit invocations with local
+module checks and isolated dispatch testing. Moved successful native CLI
+coverage to an integration test using temporary FASTAs, verifying complete
+unique gene partitioning and unchanged source/copy bytes. No scientific
+implementation changed and unrelated tracked samples were not reverted.
+
+[Verification record](PUBLICATION_CLI_TEST_ISOLATION_20260918.md): complete
+unit rerun5516passed/9skipped in117.63s; new end-to-end CLI integration1passed
+in3.92s. Both the failed and successful JUnit records are retained and hashed.
+This is not installed-wrapper validation or a rerun of all integration tests.
+Corrected QfO and complete-terminal DGX archive admission remain unfinished.
+
 ## Reference-Resource Attribution Added (2026-09-18 UTC)
 
 Previous turn made progress throughbedeea3, reconciling current claim rows.
