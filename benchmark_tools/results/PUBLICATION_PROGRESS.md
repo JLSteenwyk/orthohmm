@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Parameter Uncertainty Workflow Integrated (2026-09-19)
+
+Previous goal turn was progress: DGX timing audit completed and CPM scoring
+plus independent admission were implemented, tested, frozen and queued.
+Current scheduler checks confirm BLAST 21713 remains RUNNING (about 3:19)
+while both parameter chains remain pending resources/dependencies.
+
+Extended corrected SwissTrees raw-count admission to both CPM arms with
+the frozen independent score-admitter identity and matching context/native
+pair semantics. Added a provenance-bound runner for the existing six-arm,
+100,000-draw, seed-20260925, 18-endpoint bootstrap. Missing arms/control stay
+explicitly unestimable; defaults, contrasts and protocol are unchanged.
+Executor 1975265 is pushed; 199 focused tests passed in 3.62 seconds.
+
+Real-data integration job 21986 COMPLETED 0:0 in 18 seconds, 2 CPUs/32 GiB
+requested. It checked 754 file records and reconstructed 18 families/10,765
+relations. Full control-arm content exactly matches audit 21953. All six
+variants remain unavailable, so there are zero estimated contrasts and no
+uncertainty or publication admission. Exact commands, hashes and retained
+result are in `QFO_PARAMETER_UNCERTAINTY_INTEGRATION_21986.md`.
+
+Next: once genuine admissions exist, freeze a new seven-arm inventory, run
+this executor, independently reproduce contrasts, and render the parameter
+table/figure. Corrected all-method paired uncertainty/figures and the timing
+measurement gap also remain open. The publication goal is not complete.
+
 ## CPM Scoring and Independent Admission Queued (2026-09-19)
 
 CPM scoring 21982 and score admission 21984 are confirmed PENDING, with
