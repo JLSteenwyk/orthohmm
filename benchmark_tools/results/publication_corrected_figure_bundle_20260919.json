@@ -1,0 +1,114 @@
+{
+  "files": [
+    {
+      "bytes": 1078,
+      "git_commit": "706fc03260fd005ea7db02d1e88e45229baa8726",
+      "git_path": "LICENSE.md",
+      "path": "LICENSE.md",
+      "sha256": "4b9b0c3ffc73fce4c47734d7ef12bd70b9d2cdc4a3bf76ac0f3a35edbe2c3d9e"
+    },
+    {
+      "bytes": 4005,
+      "git_commit": "706fc03260fd005ea7db02d1e88e45229baa8726",
+      "git_path": "benchmark_tools/bootstrap_qfo_corrected_factorial.py",
+      "path": "benchmark_tools/bootstrap_qfo_corrected_factorial.py",
+      "sha256": "5561be658ce76703fc7c0b63c7d48994d51c0f6a722750880909fb520a50de69"
+    },
+    {
+      "bytes": 9202,
+      "git_commit": "706fc03260fd005ea7db02d1e88e45229baa8726",
+      "git_path": "benchmark_tools/bootstrap_qfo_factorial.py",
+      "path": "benchmark_tools/bootstrap_qfo_factorial.py",
+      "sha256": "be09876ae4de31b923818385bd3d40d8d5e7df177215fc45a2101c7d30d1c1fa"
+    },
+    {
+      "bytes": 9149,
+      "git_commit": "706fc03260fd005ea7db02d1e88e45229baa8726",
+      "git_path": "benchmark_tools/bundle_publication_figures.py",
+      "path": "benchmark_tools/bundle_publication_figures.py",
+      "sha256": "cfc926e7b969444a87f30a22691b344fea682c67b1289dbd3bb106dd93e49725"
+    },
+    {
+      "bytes": 9162,
+      "git_commit": "706fc03260fd005ea7db02d1e88e45229baa8726",
+      "git_path": "benchmark_tools/plot_qfo_factorial.py",
+      "path": "benchmark_tools/plot_qfo_factorial.py",
+      "sha256": "3fd88d0fd175036d5203995975177c1a740f69b62c5dfa1c81b01f50760d46af"
+    },
+    {
+      "bytes": 7456,
+      "git_commit": "706fc03260fd005ea7db02d1e88e45229baa8726",
+      "git_path": "benchmark_tools/results/publication_corrected_figure_integrity_20260919.json",
+      "path": "benchmark_tools/results/publication_corrected_figure_integrity_20260919.json",
+      "sha256": "f46dab5347a63a3e21a43de0b707a6da9403a32a97990435e21e8a7363f6d4fa"
+    },
+    {
+      "bytes": 73364,
+      "git_commit": "706fc03260fd005ea7db02d1e88e45229baa8726",
+      "git_path": "benchmark_tools/results/qfo_corrected_factorial_complete_20260919/swiss_bootstrap.json",
+      "path": "benchmark_tools/results/qfo_corrected_factorial_complete_20260919/swiss_bootstrap.json",
+      "sha256": "f777dead1294b3810c0479877aade7fb4411c0544696f671226ff198432e9211"
+    },
+    {
+      "bytes": 2015,
+      "git_commit": "706fc03260fd005ea7db02d1e88e45229baa8726",
+      "git_path": "benchmark_tools/results/qfo_corrected_factorial_figures_20260919/manifest.json",
+      "path": "benchmark_tools/results/qfo_corrected_factorial_figures_20260919/manifest.json",
+      "sha256": "133fc7bb1d2404b7c9e5d932486c6134ff1f2fa44e1880dd839e7fa7fe3e4134"
+    },
+    {
+      "bytes": 33149,
+      "git_commit": "706fc03260fd005ea7db02d1e88e45229baa8726",
+      "git_path": "benchmark_tools/results/qfo_corrected_factorial_figures_20260919/qfo_factorial_swiss.pdf",
+      "path": "benchmark_tools/results/qfo_corrected_factorial_figures_20260919/qfo_factorial_swiss.pdf",
+      "sha256": "6a96d0be739725e8ffef78b0a489c19c45a5f99b3bdba4d517bf4e84a6eb7e6d"
+    },
+    {
+      "bytes": 305123,
+      "git_commit": "706fc03260fd005ea7db02d1e88e45229baa8726",
+      "git_path": "benchmark_tools/results/qfo_corrected_factorial_figures_20260919/qfo_factorial_swiss.png",
+      "path": "benchmark_tools/results/qfo_corrected_factorial_figures_20260919/qfo_factorial_swiss.png",
+      "sha256": "21a3dd1aa004b63205e567c60f145c61c2a8c8eaa57ab8fadec13bb6fb9dcc8b"
+    },
+    {
+      "bytes": 173048,
+      "git_commit": "706fc03260fd005ea7db02d1e88e45229baa8726",
+      "git_path": "benchmark_tools/results/qfo_corrected_factorial_figures_20260919/qfo_factorial_swiss.svg",
+      "path": "benchmark_tools/results/qfo_corrected_factorial_figures_20260919/qfo_factorial_swiss.svg",
+      "sha256": "c483b1db5e5fad2154902a35d1bee0f0845cd712a5137960bc45ce2f89da74d4"
+    }
+  ],
+  "limitations": [
+    "Historical absolute paths are provenance; use the explicit relocation mappings.",
+    "No native inference, scoring or plotting is executed by this verification.",
+    "Imports, compiled dependencies and transitive data are not included.",
+    "Repository licensing does not establish third-party data redistribution permission.",
+    "Preserves diagnostic and descriptive figures, not new scientific admissions.",
+    "Not the complete publication archive or a release-readiness claim."
+  ],
+  "panels": [
+    {
+      "manifest": "benchmark_tools/results/qfo_corrected_factorial_figures_20260919/manifest.json",
+      "name": "qfo_corrected_factorial_figures_20260919",
+      "output_count": 3,
+      "relocations": {
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bootstrap_qfo_corrected_factorial.py": "benchmark_tools/bootstrap_qfo_corrected_factorial.py",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bootstrap_qfo_factorial.py": "benchmark_tools/bootstrap_qfo_factorial.py",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_qfo_factorial.py": "benchmark_tools/plot_qfo_factorial.py",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_factorial_complete_20260919/swiss_bootstrap.json": "benchmark_tools/results/qfo_corrected_factorial_complete_20260919/swiss_bootstrap.json",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_factorial_figures_20260919/qfo_factorial_swiss.pdf": "benchmark_tools/results/qfo_corrected_factorial_figures_20260919/qfo_factorial_swiss.pdf",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_factorial_figures_20260919/qfo_factorial_swiss.png": "benchmark_tools/results/qfo_corrected_factorial_figures_20260919/qfo_factorial_swiss.png",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_factorial_figures_20260919/qfo_factorial_swiss.svg": "benchmark_tools/results/qfo_corrected_factorial_figures_20260919/qfo_factorial_swiss.svg"
+      }
+    }
+  ],
+  "publication_ready": false,
+  "schema_version": 1,
+  "scope": "direct_figure_evidence_only",
+  "source_commit": "706fc03260fd005ea7db02d1e88e45229baa8726",
+  "support_files": [
+    "benchmark_tools/results/publication_corrected_figure_integrity_20260919.json",
+    "LICENSE.md",
+    "benchmark_tools/bundle_publication_figures.py"
+  ]
+}

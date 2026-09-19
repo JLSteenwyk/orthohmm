@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Corrected Factorial Figure Evidence Archived (2026-09-19)
+
+Previous turn made progress with the complete diagnostic audit driver,
+committed and pushed as `d3cb6fa`. While the DGX quiet window continues,
+prepared an explicitly corrected-only figure audit, preserving the historical
+default and prior archive. All seven direct dependencies match; 55 focused
+tests passed. Commit `706fc03` supplies the 11-file corrected supplement.
+Its compressed archive was extracted outside the repository and verified
+with isolated Python; initial and relocated results match byte-for-byte.
+Details: `PUBLICATION_CORRECTED_FIGURE_BUNDLE_20260919.md`.
+
+Updated manuscript archive counts to the retained 18-panel historical bundle
+and linked the corrected supplement; removed a stale statement that corrected
+factorial analysis was unfinished. No result, endpoint or scientific claim
+changed. This is not a full raw-data archive, reproduction or external deposit.
+
+Latest controller check: 21913 RUNNING at 15:00, 21914 dependency-pending,
+recorder 21915 RUNNING; corrected OrthoFinder 21706_1 RUNNING at 9:21:05.
+OrthoMCL remains resource-pending and strata dependency-pending. Next is the
+terminal diagnostic archive audit; scaling and publication completion remain
+open. No remote reads were made during the quiet window.
+
 ## Complete Dual Native Audit Driver Prepared (2026-09-19)
 
 Previous turn made progress with execution provenance checks, committed and

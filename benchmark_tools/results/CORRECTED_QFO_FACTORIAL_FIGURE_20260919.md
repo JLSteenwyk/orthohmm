@@ -30,8 +30,9 @@ Source result SHA-256:
 Figure manifest SHA-256:
 `133fc7bb1d2404b7c9e5d932486c6134ff1f2fa44e1880dd839e7fa7fe3e4134`.
 
-The figure is linked in the manuscript but has not yet been incorporated
-into a new complete archival figure bundle. The earlier bundle is preserved.
+The figure is linked in the manuscript and preserved in a
+[separate corrected-release evidence supplement](PUBLICATION_CORRECTED_FIGURE_BUNDLE_20260919.md).
+The earlier bundle is unchanged; a complete publication archive remains unfinished.
 This is development-exposed evidence from 18 families, not independent
 confirmation, selection-adjusted inference or superiority over OrthoFinder.
 P-off retains initial HMM search, and R changes prediction semantics.

@@ -601,7 +601,8 @@ points did not exclude zero after adjustment. All six adjusted C-by-R
 interaction intervals included zero. This comparison changes native pair
 inference versus group-derived prediction semantics, not only group
 splitting. Only 18 development-exposed families were resampled; inference
-for other QfO endpoints and corrected-release reruns remains unfinished.
+for other QfO endpoints remains unfinished. The completed corrected-release
+factorial is reported separately below.
 [Full results and limitations](QFO_FACTORIAL_SWISS_RESULTS_20260918.md),
 [generated 42-endpoint table](qfo_factorial_swiss_bootstrap_20260918.md),
 [six-endpoint cell scores and prediction counts](qfo_factorial_endpoint_table_20260918/scores.md).
@@ -1452,12 +1453,19 @@ No repository-wide license or local archive is treated as blanket clearance
 for acquired material; final file-level and software-notice review is pending.
 
 A [relocatable figure-evidence bundle](PUBLICATION_FIGURE_BUNDLE_20260918.md)
-preserves all 16 retained panels, their 55 outputs, original manifests and
+preserves 18 retained panels, their 61 outputs, original manifests and
 directly recorded dependencies from committed source revisions. Its standalone
 verifier passed after archive extraction outside the repository. This is a
 byte-identity and relocation check, not regeneration of all scientific results,
 native inference, or clearance of redistribution rights. The archive remains
 local and is not the complete publication deposit.
+
+A [corrected-QfO factorial supplement](PUBLICATION_CORRECTED_FIGURE_BUNDLE_20260919.md)
+separately preserves the corrected figure, all three output formats and direct
+dependencies from commit `706fc03`. Its 11-file export passed isolated
+verification after extraction outside the repository. Historical plotter
+identities are not overwritten. This is evidence preservation, not statistical
+or native-inference regeneration, and neither archive has been deposited.
 
 A [relocated reproduction workflow](SWISS_RELOCATED_REPRODUCTION_20260917.md)
 exports the SwissTrees comparator analysis from a fixed commit and reruns it in
