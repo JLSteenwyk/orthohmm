@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Complete Lineage Overhead Panel Running (2026-09-19)
+
+This turn implemented and validated the dedicated launcher (99 tests plus
+batch syntax), committed/pushed it at `9632cc7`, and deployed 496 committed
+files to the DGX. All remote sizes/hashes matched the archive; both pinned
+runtime inventories verified and all 18 task selections passed. Preflight
+queue was empty and both current vmstat intervals were fully idle.
+
+Submitted complete array 21999 on hold. Recorder 22000 was confirmed RUNNING
+with successful controller polls before release. Now task 21999_0 is RUNNING
+on spark-7ff0; remaining tasks are throttle-pending and recording is active.
+See `LINEAGE_OVERHEAD_SUBMISSION_21999.md` for hashes and exact locations.
+No SSH/native inspection is allowed until all 18 tasks are terminal.
+
+Next: prepare lineage-specific complete-panel provenance/replay/overhead
+auditing while native runs proceed. Retain all old failures, current flags
+and missing evidence. Boundary observations do not establish interval-level
+quietness; overhead limits and scientific timing eligibility stay separate.
+No scientific setting or default changed. The full goal remains incomplete.
+
 ## Lineage Overhead Launcher Validated (2026-09-19)
 
 Previous turn froze the complete prospective overhead protocol and plan.
