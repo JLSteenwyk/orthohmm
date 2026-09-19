@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Corrected Figure Export Verified (2026-09-19)
+
+The preceding TreeFam retrieval turn was no progress: it reconfirmed the
+same missing source assets without recovering inputs or changing the next
+action. The current goal continuation re-read the full objective and took
+an independent available action: completing the corrected figure export.
+Scheduler inspection confirmed BLAST 21713 RUNNING at 3:52:07; FastOMA and
+the parameter chains remain resource/priority/dependency pending. No queued
+job was restarted or its scientific settings changed.
+
+Committed scope 5132dda audits the corrected factorial, composition strata
+and comparator figures. The expanded bundle contains 27 files and 12
+outputs, with 1,919,243 bytes excluding its manifest. Extracted-archive
+verification passed under isolated system Python outside the repository;
+checksums and commands are in `PUBLICATION_CORRECTED_FIGURE_BUNDLE_20260919.md`.
+Retained the manifest and relocation report, preserved earlier exports,
+and updated manuscript availability text. This verifies direct-file
+preservation, not native execution, full dependency closure or rights.
+
+Remaining requirements include corrected FastOMA/OrthoMCL admissions,
+parameter results and uncertainty, defensible matched-resource timing,
+remaining error/generalization limitations, and complete release/rights
+review. Original TreeFam family sources remain unavailable. No publication
+readiness or superiority claim is added by this packaging milestone.
+
 ## Corrected Comparator Intervals Reconstructed (2026-09-19)
 
 Previous goal turn made progress: the parameter count/uncertainty workflow

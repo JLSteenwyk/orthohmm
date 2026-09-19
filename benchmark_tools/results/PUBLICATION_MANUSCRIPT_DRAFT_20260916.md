@@ -1581,12 +1581,15 @@ byte-identity and relocation check, not regeneration of all scientific results,
 native inference, or clearance of redistribution rights. The archive remains
 local and is not the complete publication deposit.
 
-A [corrected-QfO factorial supplement](PUBLICATION_CORRECTED_FIGURE_BUNDLE_20260919.md)
-separately preserves the corrected figure, all three output formats and direct
-dependencies from commit `706fc03`. Its 11-file export passed isolated
-verification after extraction outside the repository. Historical plotter
-identities are not overwritten. This is evidence preservation, not statistical
-or native-inference regeneration, and neither archive has been deposited.
+A [corrected-QfO figure supplement](PUBLICATION_CORRECTED_FIGURE_BUNDLE_20260919.md)
+separately preserves the corrected factorial, composition-stratified and
+comparator figures and their direct dependencies from commit `5132dda`.
+Its 27-file export, including 12 outputs, passed isolated verification after
+extraction outside the repository. The earlier 11-file factorial export from
+`706fc03` is retained; historical plotter identities are not overwritten.
+This is evidence preservation, not statistical or native-inference
+regeneration. These archives have not been deposited, and redistribution
+review remains incomplete.
 
 The [corrected factorial statistical reproduction](QFO_CORRECTED_FACTORIAL_REPRODUCTION_20260919.md)
 separately exported committed counts and numerical code outside the checkout.

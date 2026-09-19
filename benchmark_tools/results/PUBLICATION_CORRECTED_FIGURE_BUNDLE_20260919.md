@@ -1,5 +1,52 @@
 # Corrected QfO Figure Supplement
 
+## Current Three-Figure Export
+
+The expanded supplement, frozen at commit
+`5132ddaee322ce51c19c7ac7cb0fe7cb172e0e56`, contains the corrected factorial,
+composition-stratified SwissTrees, and six-admitted-method SwissTrees
+comparison figures. The original single-figure export below is preserved.
+There are 27 files, 12 outputs and 1,919,243 bytes excluding the 16,022-byte
+bundle manifest. Missing comparator results remain explicitly unavailable.
+
+- [Direct-byte audit](publication_corrected_figure_integrity_20260919_v2.json):
+  SHA-256 `3ba8464c42526c513f8e578551d4a64d3ec3a318745f6cc6599558ae7aebc7dd`.
+- [Bundle manifest](publication_corrected_figure_bundle_20260919_v2.json):
+  SHA-256 `a71a3bf4dbdcb13d70110d6dd076ef303791b81bc0db3de700d57c6b2ea25cd2`.
+- [Relocated verification](publication_corrected_figure_bundle_relocation_20260919_v2.json):
+  SHA-256 `42c48bd4cd67b6cadca401cb83340eb4e76ec117e40947a626b2f4058e6a8a50`.
+- Local archive:
+  `benchmarks/work/publication_corrected_figure_evidence_20260919_5132dda.tar.gz`,
+  804,449 bytes, SHA-256
+  `4f64f9bebfe3618a322f501c27f873356a65217c06c79ced6955c76a9c5a8f6b`.
+
+The archive was extracted to `/tmp/orthohmm-corrected-figures-v2.H6fguz`.
+The bundled verifier passed with `/usr/bin/python3 -I`, using that directory
+as its working directory and `.` as the verification target. It resolves
+recorded dependencies within the export, not historical absolute paths.
+The corrected-current audit scope checks all three figures; the historical
+and original corrected-factorial scopes remain separate. Forty-five focused
+audit and bundle tests passed when this scope was added.
+
+Reproduce the expanded export using a fresh output path:
+
+```sh
+python -m benchmark_tools.bundle_publication_figures build \
+  --repo . --revision 5132ddaee322ce51c19c7ac7cb0fe7cb172e0e56 \
+  --audit benchmark_tools/results/publication_corrected_figure_integrity_20260919_v2.json \
+  --output /tmp/corrected-three-figure-evidence
+python -I /tmp/corrected-three-figure-evidence/benchmark_tools/bundle_publication_figures.py \
+  verify /tmp/corrected-three-figure-evidence
+```
+
+This is a direct-file integrity and relocation check only. It does not
+regenerate statistics or plots, rerun native tools, recursively package
+all dependencies, or resolve redistribution rights. The archive remains
+local; no external deposit or DOI has been created. Publication readiness
+remains false.
+
+## Original Single-Figure Export
+
 The corrected-release factorial figure now has a separate relocatable
 direct-evidence bundle, built from commit `706fc03`. The historical 18-panel
 bundle remains unchanged. Separate bundles preserve the distinct historical
