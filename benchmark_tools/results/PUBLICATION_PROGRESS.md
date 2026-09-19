@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Dual Overhead Post-Run Audit Prepared (2026-09-19)
+
+Previous turn made progress by launching the full panel (`ced4abe`). Added
+the separately pinned dual21920 context to existing provenance/audit tooling.
+Periodic replay preserves both screens; boundary replay remains unchanged.
+All18 detailed terminal records must exist and agree with accounting before
+native inspection. Output/canonical checks and failure-preserving budget
+arithmetic remain intact.247 focused tests pass, including all new task
+bindings and legacy-panel regressions. See `DUAL_OVERHEAD_AUDIT_READY_20260919.md`.
+
+Live state verified:21920_0 RUNNING at5:11, recorder21922 RUNNING at4:41;
+remaining17 tasks pending at the array throttle. No SSH/native archive
+inspection, restarts or edits to the frozen running recipe. Corrected QfO
+OrthoFinder21706_1 RUNNING at10:53:28. Next is complete-panel terminal
+capture/collection and actual audit; prepared tests are not production evidence.
+
 ## Complete Dual-Collector Overhead Panel Launched (2026-09-19)
 
 Previous turn made progress through longer-window diagnostics and frozen

@@ -31,6 +31,16 @@ PANELS = {
         scheduler_command="/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_dgx_pressure_overhead_v2.sbatch",
         protocols=["DGX_PRESSURE_OVERHEAD_PROTOCOL_20260919.md", "DGX_PRESSURE_OVERHEAD_V2_20260919.md"],
         pressure=True),
+    "dual_21920": dict(array_id=21920,
+        plan_sha="1160a669a4033c66e7bdde5baddf429e83b9328d3821f99291fd29210cac8ab9",
+        recipe_sha="ba18b0dca91698aa07cb451085c9340346828eaf86be90b7de53cfc2badceeb8",
+        auth_sha="1179b6fc403b146d43aafb2363379c65c1a176afe442914046ec49d84ace4144",
+        plan_file="dgx_dual_overhead_plan_20260919.json",
+        recipe_file="dgx_dual_overhead_recipe_20260919.json",
+        auth_file="dgx_dual_overhead_authorization_20260919.json",
+        recipe_root="dual_overhead_recipe_v1", recipe_manifest="dual_overhead_recipe_v1.json",
+        scheduler_command="/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/dual_overhead_deployment_6e222a4/dual_overhead_recipe_v1/benchmark_tools/run_dgx_dual_overhead.sh",
+        protocols=["DUAL_COLLECTOR_OVERHEAD_PROTOCOL_20260919.md"], pressure=True, dual=True),
 }
 
 
@@ -76,6 +86,8 @@ def verify(context, index, preparation, verification, receipt, measurement, sche
     task = plan["runs"][index]
     expected_receipt = dict(task=task, authorization=authorization, authorization_sha256=spec["auth_sha"],
                             plan_sha256=spec["plan_sha"], scientific_timings_admitted=False)
+    if spec.get("dual"):
+        expected_receipt["recipe_sha256"] = spec["recipe_sha"]
     if json.dumps(receipt, sort_keys=True, allow_nan=False) != json.dumps(expected_receipt, sort_keys=True, allow_nan=False):
         raise ValueError("Task authorization receipt differs")
     job_id = scheduler_identity(scheduler, index, spec["array_id"], expected_command=spec["scheduler_command"])
@@ -117,6 +129,8 @@ def verify(context, index, preparation, verification, receipt, measurement, sche
         if type(value) not in (int, float) or not math.isfinite(value) or value <= 0:
             raise ValueError("Invalid preparation or verification duration")
     collector = "measure_frontier_boundary_step.py" if task["mode"] == "boundary" else "measure_native_frontier_step.py"
+    if spec.get("dual") and task["mode"] == "periodic":
+        collector = "measure_native_dual_bracket_step.py"
     launched = ["srun", "--exclusive", "--exact", "--nodes=1", "--ntasks=1", "--cpus-per-task=20",
                 str(ROOT / "envs/orthohmm/bin/python"), "-B", str(recipe_root / "benchmark_tools" / collector),
                 "--worker", run["measurement_directory"]]

@@ -74,7 +74,7 @@ def test_audit_failure_preserved_without_hiding_other_tasks(panel, monkeypatch, 
     assert result["paired"]["numerical_budget_met"] is None
 
 
-@pytest.mark.parametrize("panel_name,array_id", [("frontier_21838", 21838), ("pressure_21889", 21889)])
+@pytest.mark.parametrize("panel_name,array_id", [("frontier_21838", 21838), ("pressure_21889", 21889), ("dual_21920", 21920)])
 def test_nonterminal_gate_precedes_native_and_context_reads(tmp_path, monkeypatch, panel_name, array_id):
     path = tmp_path / "accounting.txt"
     accounting(path, running=17, array_id=array_id)
@@ -154,7 +154,7 @@ def test_successful_task_invokes_all_independent_components(tmp_path, monkeypatc
     def replay(*args, **kwargs):
         calls.append("replay")
         assert args[1:3] == ("boundary", 123)
-        assert kwargs == ({"expected_native_pressure": True} if panel_name == "pressure_21889" else {})
+        assert kwargs == ({"expected_native_pressure": True} if module.panel_spec(panel_name)["pressure"] else {})
         return dict(evidence=[], native_wall_s=1., whole_command_screen_passed=True, flagged_intervals=None,
                     memory={}, screening={"native_pressure_whole_command": {"synthetic": True}})
     def validate(*args):
@@ -170,7 +170,7 @@ def test_successful_task_invokes_all_independent_components(tmp_path, monkeypatc
     assert calls == ["provenance", "replay", "native", "canonical"]
     assert result["status"] == "validated"
     assert result["work_identity"] == {"synthetic": "same"}
-    if panel_name == "pressure_21889":
+    if module.panel_spec(panel_name)["pressure"]:
         assert result["native_pressure"] == dict(whole_command={"synthetic": True}, intervals=None,
                                                 diagnostic_only=True, environmental_validity_established=False)
     else:
@@ -210,4 +210,55 @@ def test_pressure_protocol_cannot_change_after_submission(panel, protocol_index)
         (results / name).write_bytes(data + (b"changed" if name == spec["protocols"][protocol_index] else b""))
     with pytest.raises(ValueError, match="protocol differs"):
         module.audit(archive, results, path, panel="pressure_21889")
+    assert not calls
+
+
+def test_dual_adapter_preserves_original_and_narrow_flags(tmp_path, monkeypatch):
+    original = dict(original_threshold_screen=dict(whole_command_screen=dict(screen_passed=True), flagged_intervals=[1, 2]))
+    dual = dict(original_screening=original, narrow_flagged_intervals=[2])
+    def replay(*args):
+        assert args == (tmp_path, 123, ["/native"])
+        return dict(screening=dual, narrow_flagged_intervals=[2], native_wall_s=600)
+    monkeypatch.setattr(module, "replay_dual", replay)
+    result = module.replay_task(tmp_path, {"mode": "periodic"}, 123, ["/native"], {"dual": True})
+    assert result["flagged_intervals"] == [1, 2]
+    assert result["narrow_flagged_intervals"] == [2]
+    assert result["dual_screening"] == dual
+    assert result["screening"] == original
+
+
+@pytest.mark.parametrize("failed", [None, 4])
+def test_complete_dual_panel_retains_failure_and_numerical_budget(panel, failed):
+    from tests.unit.test_verify_frontier_overhead_provenance import fixture
+    archive, path, calls, _ = panel
+    accounting(path, failed=failed, array_id=21920)
+    for i in range(18):
+        text = fixture(i, "dual_21920")[-1]
+        if i == failed:
+            text = text.replace("JobState=COMPLETED", "JobState=FAILED").replace("ExitCode=0:0", "ExitCode=1:0")
+        (archive / f"scheduler_{i}.txt").write_text(text)
+    result = module.audit(archive, RESULTS, path, panel="dual_21920")
+    assert len(result["detailed_scheduler"]) == 18
+    assert len(result["runs"]) == 18
+    assert calls == [i for i in range(18) if i != failed]
+    assert result["paired"]["numerical_budget_met"] is (True if failed is None else None)
+    assert result["scientific_timings_admitted"] is False
+
+
+def test_dual_missing_detailed_record_blocks_native_reads(panel, monkeypatch):
+    archive, path, calls, _ = panel
+    accounting(path, array_id=21920)
+    monkeypatch.setattr(module, "load_context", lambda *args: pytest.fail("Native/context read before terminal proof"))
+    with pytest.raises(FileNotFoundError):
+        module.audit(archive, RESULTS, path, panel="dual_21920")
+    assert not calls
+
+
+def test_dual_scheduler_accounting_disagreement_rejected(panel):
+    from tests.unit.test_verify_frontier_overhead_provenance import fixture
+    archive, path, calls, _ = panel
+    accounting(path, failed=0, array_id=21920)
+    (archive / "scheduler_0.txt").write_text(fixture(0, "dual_21920")[-1])
+    with pytest.raises(ValueError, match="differs from accounting"):
+        module.audit(archive, RESULTS, path, panel="dual_21920")
     assert not calls

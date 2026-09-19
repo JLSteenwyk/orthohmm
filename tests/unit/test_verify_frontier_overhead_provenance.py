@@ -34,6 +34,8 @@ def fixture(index, panel="frontier_21838"):
     if copies:
         after["copied_inputs"] = deepcopy(copies)
     collector = "measure_frontier_boundary_step.py" if task["mode"] == "boundary" else "measure_native_frontier_step.py"
+    if spec.get("dual") and task["mode"] == "periodic":
+        collector = "measure_native_dual_bracket_step.py"
     measured = dict(job_id=123, launched=["srun", "--exclusive", "--exact", "--nodes=1", "--ntasks=1", "--cpus-per-task=20",
         str(module.ROOT / "envs/orthohmm/bin/python"), "-B",
         str(module.ROOT / spec["recipe_root"] / "benchmark_tools" / collector), "--worker", run["measurement_directory"]])
@@ -43,6 +45,8 @@ def fixture(index, panel="frontier_21838"):
                     before_check_wall_s=1., after_check_wall_s=1.)
     receipt = dict(task=deepcopy(task), authorization=deepcopy(context["authorization"]),
                    authorization_sha256=spec["auth_sha"], plan_sha256=spec["plan_sha"], scientific_timings_admitted=False)
+    if spec.get("dual"):
+        receipt["recipe_sha256"] = spec["recipe_sha"]
     scheduler = (f"JobId=123 ArrayJobId={spec['array_id']} ArrayTaskId={index} JobState=COMPLETED ExitCode=0:0 Restarts=0 Requeue=0 "
                  "NodeList=spark-7ff0 OverSubscribe=NO MinMemoryNode=96G NumNodes=1 NumCPUs=20 CPUs/Task=20 "
                  f"Command={spec['scheduler_command']}")

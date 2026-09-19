@@ -3,16 +3,19 @@
 import argparse
 import json
 from pathlib import Path
+import re
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from benchmark_tools.verify_frontier_overhead_provenance import load_context, verify, ROOT, panel_spec, PANELS
 from benchmark_tools.replay_frontier_overhead_measurement import replay
+from benchmark_tools.replay_dual_native_measurement import replay as replay_dual
 from benchmark_tools.fingerprint_native_overhead_outputs import fingerprint
 from benchmark_tools.validate_scaling_outputs import validate
 from benchmark_tools.validate_simulation_outputs import NativeOutputFailure
 from benchmark_tools.summarize_frontier_overhead import terminal_scheduler_rows, summarize
 from benchmark_tools.prepare_ob_candidate_neighborhood import record, check
+from benchmark_tools.capture_array_scheduler import terminal_records
 
 
 def recipe_evidence(archive, recipe, recipe_root="frontier_overhead_recipe_v1"):
@@ -41,10 +44,25 @@ def recipe_evidence(archive, recipe, recipe_root="frontier_overhead_recipe_v1"):
     return evidence
 
 
+def replay_task(directory, task, job, command, spec):
+    if spec.get("dual") and task["mode"] == "periodic":
+        result = replay_dual(directory, job, command)
+        screening = result["screening"]["original_screening"]
+        original = screening["original_threshold_screen"]
+        return dict(result, dual_screening=result["screening"], screening=screening,
+                    whole_command_screen_passed=original["whole_command_screen"]["screen_passed"],
+                    flagged_intervals=original["flagged_intervals"])
+    options = {"expected_native_pressure": True} if spec["pressure"] else {}
+    return replay(directory, task["mode"], job, command, **options)
+
+
 def successful_task(archive, context, index, scheduler):
     task = context["plan"]["runs"][index]
+    spec = panel_spec(context.get("panel", "frontier_21838"))
     directory = archive / Path(task["run"]["measurement_directory"]).parent.relative_to(ROOT)
     report = "boundary_report.json" if task["mode"] == "boundary" else "frontier_report.json"
+    if spec.get("dual") and task["mode"] == "periodic":
+        report = "dual_bracket_report.json"
     paths = [directory / name for name in ("preparation.json", "verification.json", "overhead_task.json")]
     paths += [directory / "measurement" / report, archive / f"scheduler_{index}.txt"]
     evidence = [record(path) for path in paths]
@@ -53,9 +71,8 @@ def successful_task(archive, context, index, scheduler):
     if (scheduler["allocated_cpus"] != "20" or scheduler["requested_memory"] not in {"96G", "96Gn"}
             or scheduler["node"] != "spark-7ff0"):
         raise ValueError("Accounting resource allocation differs")
-    pressure = panel_spec(context.get("panel", "frontier_21838"))["pressure"]
-    options = {"expected_native_pressure": True} if pressure else {}
-    replayed = replay(directory / "measurement", task["mode"], binding["job_id"], binding["measured_argv"], **options)
+    pressure = spec["pressure"]
+    replayed = replay_task(directory / "measurement", task, binding["job_id"], binding["measured_argv"], spec)
     native = measured["native"]
     adapted = dict(command=binding["measured_argv"], cwd=task["run"]["cwd"],
                    exit_code=native["exit_code"], timed_out=native["timed_out"])
@@ -80,6 +97,9 @@ def successful_task(archive, context, index, scheduler):
             whole_command=replayed["screening"]["native_pressure_whole_command"],
             intervals=replayed["screening"].get("native_pressure_intervals"),
             diagnostic_only=True, environmental_validity_established=False)
+    if "dual_screening" in replayed:
+        result["dual_screening"] = replayed["dual_screening"]
+        result["narrow_flagged_intervals"] = replayed["narrow_flagged_intervals"]
     return result
 
 
@@ -87,7 +107,7 @@ def failure_evidence(archive, task):
     directory = archive / Path(task["run"]["measurement_directory"]).parent.relative_to(ROOT)
     paths = [directory / name for name in ("preparation.json", "verification.json", "overhead_task.json", "native.time.tsv")]
     paths += [directory / "measurement" / name for name in (
-        "command.json", "done.json", "frontier_report.json", "boundary_report.json", "step_memory.json", "native.log", "step.log")]
+        "command.json", "done.json", "frontier_report.json", "dual_bracket_report.json", "boundary_report.json", "step_memory.json", "native.log", "step.log")]
     paths.append(archive / f"scheduler_{task['index']}.txt")
     return [record(path) for path in paths if path.is_file()]
 
@@ -97,6 +117,17 @@ def audit(archive, results, accounting_path, *, panel="frontier_21838"):
     accounting_record = record(accounting_path)
     # This gate precedes even loading native archive metadata.
     scheduler = terminal_scheduler_rows(accounting_path.read_text(), spec["array_id"])
+    detailed_scheduler = []
+    if spec.get("dual"):
+        for index in range(18):
+            path = archive / f"scheduler_{index}.txt"
+            detailed_scheduler.append(record(path))
+            records = terminal_records(path.read_text(), spec["array_id"], {index})
+            if set(records) != {index}:
+                raise ValueError("Require detailed terminal records for all18 tasks")
+            fields = dict(re.findall(r"(?<!\S)([A-Za-z][^\s=]*)=([^\s]+)", records[index]))
+            if fields["JobState"] != scheduler[index]["state"] or fields["ExitCode"] != scheduler[index]["exit_code"]:
+                raise ValueError("Detailed terminal status differs from accounting")
     sources = [record(results / name) for name in (
         spec["plan_file"], spec["recipe_file"], spec["auth_file"], *spec["protocols"])]
     context = load_context(results, panel)
@@ -129,16 +160,18 @@ def audit(archive, results, accounting_path, *, panel="frontier_21838"):
         if left["boot_id"] != right["boot_id"] or left["finished_ns"] >= right["started_ns"]:
             temporal_issues.append(dict(left=left["index"], right=right["index"], reason="changed clock domain or nonsequential spans"))
     arithmetic = summarize(context["plan"], rows)
-    for item in [accounting_record, *sources, *recipes, *[item for row in rows for item in row["evidence"]]]:
+    for item in [accounting_record, *detailed_scheduler, *sources, *recipes, *[item for row in rows for item in row["evidence"]]]:
         check(item)
     return dict(status="native_overhead_panel_audited_not_scientific_admission", runs=rows, paired=arithmetic,
         validated_tasks=len(valid), failed_or_unvalidated_tasks=len(rows)-len(valid), temporal_issues=temporal_issues,
         observed_screens_all_pass=(all(row["whole_command_screen_passed"] and not row["flagged_intervals"] for row in valid)
                                   if len(valid) == 18 else None),
-        accounting=accounting_record, frozen_sources=sources, archived_recipe=recipes, source=record(__file__),
+        accounting=accounting_record, detailed_scheduler=detailed_scheduler,
+        frozen_sources=sources, archived_recipe=recipes, source=record(__file__),
         helpers=[record(Path(__file__).with_name(name)) for name in (
             "verify_frontier_overhead_provenance.py", "replay_frontier_overhead_measurement.py",
-            "fingerprint_native_overhead_outputs.py", "summarize_frontier_overhead.py", "validate_scaling_outputs.py")],
+            "fingerprint_native_overhead_outputs.py", "summarize_frontier_overhead.py", "validate_scaling_outputs.py",
+            "replay_dual_native_measurement.py", "capture_array_scheduler.py")],
         scientific_timings_admitted=False, environmental_validity_established=False, publication_ready=False,
         limitations=["Every terminal task is retained; no selective retries, exclusions or overhead subtraction.",
             "Numerical budgets are separate from output equivalence, duration, temporal and screening checks.",
