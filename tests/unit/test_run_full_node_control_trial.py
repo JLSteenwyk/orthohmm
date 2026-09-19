@@ -85,3 +85,49 @@ def test_invalid_mode_does_not_create_directory(tmp_path):
     with pytest.raises(ValueError, match="Unknown"):
         module.trial(path, "invalid", 1)
     assert not path.exists()
+
+
+@pytest.mark.parametrize("mode,detected", [("steady", False), ("churn", True),
+                                         ("contended", True), ("contended", False)])
+def test_complete_trial_wiring(tmp_path, monkeypatch, mode, detected):
+    # Synthetic collector/worker evidence tests orchestration, not CPU validity.
+    screens = [dict(screen_passed=not detected,
+                    reasons=["excess_unassigned_cpu"] if detected else [])]
+    report = dict(points=[dict(native_membership="native", host=[dict(raw=dict(cgroup_membership="batch"))])],
+                  native={"fixture": "native"}, screening=dict(narrow_intervals=screens))
+    validation = dict(status="fixture_validation", common_started_ns=1, common_finished_ns=2)
+    calls = []
+
+    def coordinate(directory, condition, stopped, outcome):
+        module.save(directory / "workload_go.json", {"go": True})
+        for name in ("workload_ready", "workload_done"):
+            module.save(directory / f"{name}.json", {"fixture": name})
+        if condition == "contended":
+            for name in ("competitor_ready", "competitor_done"):
+                module.save(directory / f"{name}.json", {"fixture": name})
+            outcome["competitor_exit_code"] = 0
+        outcome["status"] = "completed"
+
+    def measure(command, directory, job, cpus, memory, timeout, interval):
+        assert command[-2:] == ["--worker", "churn" if mode == "churn" else "steady"]
+        assert (job, cpus, memory, timeout, interval) == (17, 20, 96*1024**3, 60, 1.)
+        return report
+
+    def validate(*args):
+        calls.append(args)
+        return validation
+
+    monkeypatch.setattr(module, "coordinate", coordinate)
+    monkeypatch.setattr(module, "measure", measure)
+    monkeypatch.setattr(module, "evaluate", lambda *args: report["screening"])
+    monkeypatch.setattr(module, "validate_witnesses", validate)
+    monkeypatch.setattr(module, "common_intervals", lambda points, witness: [0])
+    result = module.trial(tmp_path / "trial", mode, 17)
+    assert result["positive_control_detected"] == (detected if mode == "contended" else None)
+    assert result["common_narrow_flagged"] == ([0] if detected else [])
+    assert result["status"] == "workload_validated"
+    assert result["scientific_timings_admitted"] is False
+    assert len(calls) == 1
+    assert calls[0][0] == mode
+    assert calls[0][4:6] == ("native", "batch")
+    assert module.read(tmp_path / "trial/trial.json") == result

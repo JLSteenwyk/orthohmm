@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Fixed Full-Node Panel Driver Tested (2026-09-19)
+
+Previous turn made progress with trial integration and witness checks
+(`f5f62ea`). Added the frozen nine-trial sequential driver, retaining every
+failure and reporting missed positive-control responses without retry.
+Steady/churn flags do not automatically fail workload validation or admit
+scientific timing. Existing output directories cannot be reused.
+
+Launch preflight binds the prospective protocol SHA-256
+`76ebeb56b1b7874aa03528064d77fd1c38ec1151a74095204a8393632b0e834d`,
+all deployed Python sources, the prior pinned DGX interpreter/runtime plan,
+20CPU/96GiB resources, disabled bytecode, absent isolated cache and clean
+loader/Python overrides. Existing before/after runtime-manifest checks wrap
+the full panel, outside native command timers. Deployment recipe is not yet
+created; no execution has occurred.
+
+Focused suite:76 passed. Tests now exercise complete trial wiring with
+synthetic collector/witness dependencies, fixed panel order, failed trials,
+missed detections, and launch drift rejection. Synthetic wiring tests do not
+replace real raw-evidence replay or full-node hardware validation. Next is
+archive replay plus pinned deployment and terminal scheduler capture, then
+the prespecified panel. Corrected full OrthoFinder21706_1 was confirmed
+RUNNING at10:14:25; OrthoMCL21713 and strata21896 remain pending.
+
 ## Full-Node Trial Integration And Witness Validation (2026-09-19)
 
 Previous turn made progress by committing/pushing bounded workloads and the
