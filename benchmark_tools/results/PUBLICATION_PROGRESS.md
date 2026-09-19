@@ -2,6 +2,12 @@
 
 ## CPM Candidate Preparation Implemented (2026-09-19)
 
+Candidate array 21964 is queued from pushed frozen commit 6e20999; both
+tasks confirmed PENDING with afterany:21962 AND aftercorr:21962, 2 CPUs/64
+GiB each. Commands/hashes are in `QFO_CPM_CANDIDATE_SUBMISSION_21964.md`.
+Batch syntax and staged whitespace checks passed. No candidate result has
+yet been admitted, and downstream phylogeny/scoring remains unimplemented.
+
 Previous turn was progress: independent CPM replay admission was committed,
 pushed and queued. Current scheduler inspection confirms OrthoFinder scoring
 21735_1 remains running (53:00), with score admission pending; BLAST and DGX
