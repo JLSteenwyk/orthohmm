@@ -1,5 +1,32 @@
 # Publication Progress
 
+## QfO Parameter Phylogeny Runner Tested (2026-09-19)
+
+The preceding source-search turn found no original TreeFam inputs and made
+no change to scientific evidence; it was no progress toward closing that
+gap. Revalidated live scheduler handles before resuming implementation.
+
+Added a runner for the four independently admitted norm/margin variants,
+binding admission 21929, the corrected full-pipeline baseline and frozen
+runtime. It verifies the baseline artifact inventory before and after each
+run, preserves inferred species trees per variant, and delegates exact-input
+checkpoint reuse to the frozen replay implementation. Failure evidence is
+retained; existing output directories cannot be implicitly retried. Successful
+execution remains pending independent native-output admission and scoring.
+
+Focused runner, candidate-admission and inherited command tests: 80 passed;
+batch shell syntax passed. The batch requests a serial four-task array with
+32 CPUs, 192G, 24 hours per task and no requeue. Deployment is not yet claimed
+by this entry. Two CPM variants still need checked-constructor support.
+
+Fresh accounting: native OrthoFinder admission 21731 COMPLETED 0:0 (5:55),
+pair-conversion array remains active and accuracy admission remains pending.
+OrthoMCL BLAST 21713 is RUNNING. DGX overhead panel remains active; raw
+task 21925 FAILED 1:0 while its native step completed 0:0. Preserve this
+failure for the complete-panel audit; do not inspect remote results or
+replace the task during the quiet measurement window. No publication-ready
+or controlled-timing claim follows from these observations.
+
 ## Corrected OrthoFinder Completed; OrthoMCL Started (2026-09-19)
 
 Fresh scheduler accounting after candidate admission confirms corrected
