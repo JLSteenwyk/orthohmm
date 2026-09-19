@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Corrected Candidate Neighborhood Submitted (2026-09-19)
+
+Committed/tested preparation code at `6405da5`, then deployed a clean detached
+executor and submitted 2-CPU/64-GiB job 21927 on bizon. Confirmed RUNNING at
+14 seconds. The first submission 21926 failed at the revision guard because
+of an incorrect invocation hash, before Python or output creation; retained
+that failure and changed only the revision argument. Details, exact source
+hashes, paths and remaining admission gates are in
+`QFO_PARAMETER_CANDIDATE_SUBMISSION_21927.md`. No preparation result or
+completed robustness result is claimed yet.
+
+DGX 21920_3, recorder 21922 and corrected OrthoFinder 21706_1 remain active;
+OrthoMCL 21713 and strata 21896 remain pending. The DGX is untouched. Next
+is terminal candidate validation and CPM/downstream execution tooling, while
+preserving the frozen full-panel timing and primary-comparator workflows.
+
 ## Corrected QfO Candidate Preparation Implemented (2026-09-19)
 
 Previous turn froze the QfO parameter extension (`fd1a215`). Added scheduled
