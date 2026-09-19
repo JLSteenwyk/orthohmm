@@ -1,0 +1,143 @@
+{
+  "all_install_sources_local": true,
+  "checked_inputs": [
+    {
+      "bytes": 137666,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_cpu_wheel_f9b9ce0/offline_install_report.json",
+      "sha256": "9b4332fae3eb95c299237eef359e2c4d63eb61561af9a43cf1fecb60ea3c6e0f"
+    },
+    {
+      "bytes": 35255,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_cpu_wheel_f9b9ce0/offline_verification/verification.json",
+      "sha256": "b7fa7a030d812aa0f4d51131b32e65343ccc4b382db142eeaf6b620077db00b0"
+    },
+    {
+      "bytes": 53135,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_cpu_wheel_f9b9ce0/offline_install.log",
+      "sha256": "6ab6ce7fb856a86e0e437be062297d46ac791af593c982bf5e828505a88ff73a"
+    },
+    {
+      "bytes": 88,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_cpu_wheel_f9b9ce0/offline_venv/pyvenv.cfg",
+      "sha256": "304a0dd3c736510cfb83ee13bcaaaf6fc81ce202d890acdaf82d48c376308a6e"
+    },
+    {
+      "bytes": 1279,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_cpu_wheel_requirements_20260919.txt",
+      "sha256": "60adb55b3647bf785319aec1348486003a28876fb5b656983add37b4cc496e99"
+    }
+  ],
+  "dependency_check": "pip check: No broken requirements found",
+  "limitations": [
+    "Same-host current-development installation, not the frozen scientific executor.",
+    "No-index installation; not a network-namespace or fully hermetic build test.",
+    "Wheelhouse is retained locally, not uploaded or licensed for redistribution by this audit."
+  ],
+  "package_count": 11,
+  "publication_ready": false,
+  "redistribution_clearance": false,
+  "status": "local_hash_locked_cpu_wheel_install_verified",
+  "total_bytes": 92916492,
+  "wheelhouse": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_cpu_wheel_f9b9ce0/wheelhouse",
+  "wheels": [
+    {
+      "file": {
+        "bytes": 505450,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_cpu_wheel_f9b9ce0/wheelhouse/dendropy-5.1.0-py3-none-any.whl",
+        "sha256": "4861d27875cb4bfa0e5a18f64f6b14191d29661a2c92e9a70d6510dd27565dc2"
+      },
+      "name": "DendroPy",
+      "version": "5.1.0"
+    },
+    {
+      "file": {
+        "bytes": 5683134,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_cpu_wheel_f9b9ce0/wheelhouse/igraph-1.0.0-cp39-abi3-manylinux_2_28_x86_64.whl",
+        "sha256": "2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522"
+      },
+      "name": "igraph",
+      "version": "1.0.0"
+    },
+    {
+      "file": {
+        "bytes": 2739255,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_cpu_wheel_f9b9ce0/wheelhouse/leidenalg-0.12.0-cp38-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+        "sha256": "fcbd89655243cc739d28ba23fe894587d8d7235124a9248ba375819585e70090"
+      },
+      "name": "leidenalg",
+      "version": "0.12.0"
+    },
+    {
+      "file": {
+        "bytes": 59890659,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_cpu_wheel_f9b9ce0/wheelhouse/llvmlite-0.49.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+        "sha256": "854941c2267fd4fc5b2ce02b8af8ecdffa79fb7784591d3a89370322039ea09f"
+      },
+      "name": "llvmlite",
+      "version": "0.49.0"
+    },
+    {
+      "file": {
+        "bytes": 3821881,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_cpu_wheel_f9b9ce0/wheelhouse/numba-0.67.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+        "sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+      },
+      "name": "numba",
+      "version": "0.67.0"
+    },
+    {
+      "file": {
+        "bytes": 16801050,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_cpu_wheel_f9b9ce0/wheelhouse/numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+      },
+      "name": "numpy",
+      "version": "2.2.6"
+    },
+    {
+      "file": {
+        "bytes": 166880,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_cpu_wheel_f9b9ce0/wheelhouse/orthohmm-0.5.0-cp310-cp310-linux_x86_64.whl",
+        "sha256": "9584ef2e2b4797e94f50f3b809377708c5aa502b542e6833ce3e58bc7a6c733f"
+      },
+      "name": "orthohmm",
+      "version": "0.5.0"
+    },
+    {
+      "file": {
+        "bytes": 2055563,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_cpu_wheel_f9b9ce0/wheelhouse/pip-23.0.1-py3-none-any.whl",
+        "sha256": "236bcb61156d76c4b8a05821b988c7b8c35bf0da28a4b614e8d6ab5212c25c6f"
+      },
+      "name": "pip",
+      "version": "23.0.1"
+    },
+    {
+      "file": {
+        "bytes": 9157,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_cpu_wheel_f9b9ce0/wheelhouse/python_igraph-1.0.0-py3-none-any.whl",
+        "sha256": "b0bb8d91cce2a1e0550fe45f9ec925bcd04152dfb5be3fa822b9f5f36eb3f380"
+      },
+      "name": "python-igraph",
+      "version": "1.0.0"
+    },
+    {
+      "file": {
+        "bytes": 10768,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_cpu_wheel_f9b9ce0/wheelhouse/texttable-1.7.0-py2.py3-none-any.whl",
+        "sha256": "72227d592c82b3d7f672731ae73e4d1f88cd8e2ef5b075a7a7f01a23a3743917"
+      },
+      "name": "texttable",
+      "version": "1.7.0"
+    },
+    {
+      "file": {
+        "bytes": 1232695,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_cpu_wheel_f9b9ce0/wheelhouse/setuptools-65.5.0-py3-none-any.whl",
+        "sha256": "f62ea9da9ed6289bfe868cd6845968a2c854d1427f8548d52cae02a42b4f0356"
+      },
+      "name": "setuptools",
+      "version": "65.5.0"
+    }
+  ]
+}

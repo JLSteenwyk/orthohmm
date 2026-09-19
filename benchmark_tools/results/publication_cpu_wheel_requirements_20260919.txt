@@ -1,0 +1,14 @@
+# Exact locally retained wheels for the f9b9ce0 CPU development artifact.
+# CPython 3.10 / Linux x86_64 installation evidence, not the benchmark runtime.
+# Use --no-index --find-links WHEELHOUSE --require-hashes --only-binary=:all:.
+DendroPy==5.1.0 --hash=sha256:4861d27875cb4bfa0e5a18f64f6b14191d29661a2c92e9a70d6510dd27565dc2
+igraph==1.0.0 --hash=sha256:2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522
+leidenalg==0.12.0 --hash=sha256:fcbd89655243cc739d28ba23fe894587d8d7235124a9248ba375819585e70090
+llvmlite==0.49.0 --hash=sha256:854941c2267fd4fc5b2ce02b8af8ecdffa79fb7784591d3a89370322039ea09f
+numba==0.67.0 --hash=sha256:d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861
+numpy==2.2.6 --hash=sha256:fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915
+orthohmm==0.5.0 --hash=sha256:9584ef2e2b4797e94f50f3b809377708c5aa502b542e6833ce3e58bc7a6c733f
+pip==23.0.1 --hash=sha256:236bcb61156d76c4b8a05821b988c7b8c35bf0da28a4b614e8d6ab5212c25c6f
+python-igraph==1.0.0 --hash=sha256:b0bb8d91cce2a1e0550fe45f9ec925bcd04152dfb5be3fa822b9f5f36eb3f380
+setuptools==65.5.0 --hash=sha256:f62ea9da9ed6289bfe868cd6845968a2c854d1427f8548d52cae02a42b4f0356
+texttable==1.7.0 --hash=sha256:72227d592c82b3d7f672731ae73e4d1f88cd8e2ef5b075a7a7f01a23a3743917

@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Offline Hash-Locked Installation Verified (2026-09-19)
+
+Previous turn made progress through19ab3b3with the CPU-only wheel and
+clean-install verification. Reread the objective and confirmed scientific
+and dedicated timing jobs live; DGX panel had advanced to task5(indexed
+from0), without inspecting native outcomes.
+
+Collected11exact binary wheels totaling92,916,492bytes locally and added
+SHA-256-locked requirements. A second clean venv installed all packages
+using no-index/require-hashes/binary-only/force-reinstall with cache disabled.
+Pip check passes. Independently checked all11local installer file URLs and
+hashes against the complete wheelhouse, then repeated the actual installed
+CPU smoke: both modes4groups/38genes, exact coverage, unchanged inputs.
+[Manifest, lock, commands and limitations](PUBLICATION_CPU_WHEELHOUSE_20260919.md).
+
+Raw wheels stay local and uncommitted. This remains same-host development
+installation evidence, not a portable public release, frozen-runtime
+replacement, rights clearance or full scientific reproduction. No DGX
+access, running-job change or scientific endpoint change occurred.
+
 ## CPU-Only Development Wheel Verified (2026-09-19)
 
 Previous turn was a verified wait on live jobs. Reread the objective and
