@@ -70,6 +70,22 @@ These are observations from this search, not proof that no copy exists:
 
 ## Required Next Step
 
+### September 19 Retrieval Check
+
+Fresh exact-name and release-7 searches did not recover the original mapping
+or NHX collection. The [Gerstein laboratory resource inventory](https://info.gersteinlab.org/Ortholog_Resources)
+documents an April 2009 download of release-7 MySQL tables and links derived
+human/fly/worm tables, not the QfO mapping or original tree collection. A
+request to its linked archive directory,
+`https://archive.gersteinlab.org/proj/orthologs/Orthologs/TreeFam/`, failed
+TLS verification because the certificate had expired. Verification was not
+disabled; the directory contents remain unverified. A fresh HTTPS request
+to the Sanger release-7 directory returned HTTP 404.
+
+Both previously downloaded reference/software files were rehashed and still
+match the SHA-256 values above. No additional source trees or mapping were
+downloaded, and no benchmark results or uncertainty estimates were changed.
+
 ### Additional Public Leads Checked
 
 - Repeated exact searches for `treefam2reference.txt` and
