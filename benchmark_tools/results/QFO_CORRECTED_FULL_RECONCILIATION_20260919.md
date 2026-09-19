@@ -37,9 +37,20 @@ The inferred species-tree SHA-256 is
 Native pairs are 495,749,756 bytes, SHA-256
 `22916193404283c4257e682529b7012c95a7fd3b14a500d0f086d76a988b65f6`.
 
-Reference conversion job `21772` started after admission. Assessment
-`21787` and independent scoring admission `21788` remain downstream.
-No score is admitted by this report. Reconciliation-on evaluation must
+Reference conversion job `21772` completed with exit `0:0` in `00:03:31`.
+All 5,959,560 native pairs mapped without loss. The
+[conversion receipt](qfo_corrected_factorial_pairs_21772.json) is 32,353
+bytes, SHA-256
+`d5fea582e753aa6efb1421ba3ec0959d03ab31bc5b4d3d778e7370816c633e03`.
+An independent recursive check verified all 106 distinct directly embedded
+file records. The conversion's fresh native-admission check exactly
+reproduced the retained admission receipt. Both mapped pair files have
+91,726,400 bytes and SHA-256
+`e75b14f69637d6c56f9a87debbd9b6915e30bb4bbf462a0be30197910f39293d`.
+
+Assessment `21787` is running; independent scoring admission `21788`
+remains downstream. No score is admitted by this report.
+Reconciliation-on evaluation must
 use native pair predictions, not Root-HOG clique pairs. The complete
 factorial uncertainty job `21894` remains dependent on scoring admission.
 

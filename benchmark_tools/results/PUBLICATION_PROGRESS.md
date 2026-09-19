@@ -1,5 +1,18 @@
 # Publication Progress
 
+## Final Corrected Native Pairs Converted (2026-09-19)
+
+Previous turn made progress with committed native admission `5695f5d`.
+Conversion `21772` completed in 00:03:31 with exit 0:0; all 5,959,560
+native pairs map without loss. Retained the conversion receipt and
+independently verified all 106 distinct directly embedded file hashes
+and byte counts. Its fresh native-admission recheck reproduces the
+retained receipt exactly. [Evidence](QFO_CORRECTED_FULL_RECONCILIATION_20260919.md).
+
+Scoring `21787` is live; no score or complete-factorial uncertainty is
+admitted yet. DGX task 16 completed successfully and final task 17 is
+running. The quiet window remains intact. No scientific settings changed.
+
 ## Final Corrected Reconciliation Validated (2026-09-19)
 
 Previous turn was a verified wait. The final native factorial run
