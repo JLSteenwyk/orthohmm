@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Full Reference Search Diagnostic Scheduled (2026-09-18 UTC)
+
+Previous turn made progress through d5c7429 with the decision classifier.
+Reread the objective and implemented a checksum-bound driver for all 81,466
+distinct directed reference-family pairs across 1,944 genes. Full target
+proteomes, fixed cap and explicit search settings are retained; raw candidate
+arrays and watched-pair decisions are saved separately. Historical presence
+disagreements are retained, not resolved through parameter retries.
+
+The initial native test exposed an invalid noncontiguous query view. Repacked
+queries now preserve input order and native fixture candidate/score/E-value
+equality against full-query search. Final 23 focused tests pass. This tests
+the diagnostic implementation, not historical equivalence or full-data output.
+
+Frozen executor 2a6513d04585decad1afe53dac2e74bf0c7b3968 is at
+`benchmarks/work/publication_ob_search_decisions_v1`; Slurm job 21856 is
+submitted with 4 CPUs, 16 GiB and no requeue. Last scheduler check: pending,
+not running or complete. [Prespecified diagnostic protocol](OB_SEARCH_DECISION_PROTOCOL_20260918.md).
+Independent raw-output audit remains required. Scientific core, native
+runtime and running benchmark executors were not modified.
+
+QfO scoring/reconciliation and OrthoFinder remain live. DGX task 11 completed
+0:0 in 9:32; its terminal scheduler record is retained locally as
+`benchmarks/work/dgx_frontier_overhead_21838/scheduler_11.txt`. Task 12 is
+running. No DGX access or timing-panel intervention.
+
 ## Search Decision Diagnostic Helper Tested (2026-09-18 UTC)
 
 Previous turn identified explicit historical search settings, but did not
