@@ -1,5 +1,27 @@
 # Publication Progress
 
+## CPM Control Driver Validated (2026-09-19)
+
+The preceding archive-search turn yielded no new source files or changed
+next action (no progress on that requirement). Revalidated live scheduler
+state: DGX panel 21920_10, recorder 21922, OrthoFinder assessment 21735_1 and
+OrthoMCL BLAST 21713 are running. No live DGX SSH inspection was performed.
+
+Completed the control-only CPM replay driver and 32-CPU/192-GiB, no-requeue
+batch. It binds the frozen baseline/protocol/context and runtime, reruns
+all four checked clustering/profile stages, validates complete unique gene
+coverage, and compares partition memberships at every stage. Harmless
+member/line order changes are distinguished from membership changes.
+Failures retain their reports; existing outputs cannot be overwritten.
+Successful execution remains pending independent admission and never
+authorizes changed CPM arms by itself. No scientific defaults changed.
+
+Validation: 137 focused tests passed in 6.06 seconds (control driver,
+context, independent payload validation, baseline replay and interceptor);
+batch `bash -n` passed. Full-dataset reproduction is not yet established.
+Independent control admission and changed-arm downstream execution remain
+required. Shared-host replay time is not controlled efficiency evidence.
+
 ## Checked CPM Context Implemented (2026-09-19)
 
 Previous turn was progress: the raw-count auditor passed a scheduled real
