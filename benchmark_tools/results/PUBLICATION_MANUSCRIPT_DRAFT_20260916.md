@@ -260,11 +260,12 @@ cells retain their own membership constraints; independently inferred trees
 are distinguished from supplied-tree diagnostics. A profile-expansion-off
 arm still uses the HMM-centered initial search. A matched sequence-search
 control is required before attributing an overall advantage to HMMs.
-The OrthoBench and original-release QfO factorials are complete; the latter
-has paired SwissTrees intervals across 18 families and 42 adjusted endpoints.
-Corrected-release QfO reruns and additional matched-search controls remain
-unfinished. Original-release results are retained as development-exposed
-evidence, not relabeled as corrected-release validation.
+The OrthoBench, original-release QfO and corrected-release QfO factorials
+are complete. Each QfO factorial has paired SwissTrees intervals across
+18 families and 42 adjusted endpoints. The corrected full-comparator panel
+and better-matched search sensitivity or effort remain unfinished.
+Original-release results are retained as development-exposed evidence, not
+relabeled as corrected-release validation.
 [Ablation protocol](PUBLICATION_ABLATION_PROTOCOL_20260916.md).
 
 ### Evolutionary Simulations And Runtime Admission
@@ -1087,11 +1088,25 @@ overlap remains substantial even after taxon exclusions. The proposed HMM
 contribution to F1 is not established by the completed exploratory OrthoBench
 or corrected QfO sequence-search controls. Corrected SwissTrees precision
 differences favor initial HMM under the prespecified adjustment, but F1 and
-recall intervals include zero; independent confirmation remains required. The interaction
-between broader candidates and reconciliation has completed OrthoBench and
-original-release QfO factorial evidence, with no adjusted F1 benefit or
-QfO C-by-R interaction established. Corrected-input QfO evaluation and
-additional controls remain outstanding. Corrected multi-seed
+recall intervals include zero; independent confirmation remains required.
+
+The corrected-release QfO factorial supports a bounded SwissTrees finding:
+reconciliation at expanded candidates improves F1 at both profile settings,
+and both candidate-expansion-by-reconciliation F1 interaction intervals
+exclude zero under the frozen 42-endpoint adjustment. The interactions are
++0.050254 [0.003650, 0.124556] with profile refinement off and
++0.046552 [0.001825, 0.121851] with it on, in raw 0-to-1 units. All four
+profile-refinement F1 intervals include zero. Reconciliation increases
+precision and reduces recall at each setting. This is conditional evidence
+from 18 development-exposed families, not independent confirmation or a
+mechanistic isolation of reconciliation: candidate expansion can alter tree
+estimation, and reconciliation changes pair-output semantics. The earlier
+original-release QfO interaction intervals included zero; both analyses are
+retained, not conflated. No superiority over corrected full OrthoFinder is
+established. [Complete corrected factorial](QFO_CORRECTED_FACTORIAL_COMPLETE_20260919.md).
+
+Corrected-input comparator evaluation and better-matched search controls
+remain outstanding. Corrected multi-seed
 simulations and their generating-tree/NNI controls are complete but do not
 establish an OrthoHMM advantage or profile-expansion benefit. Tree perturbations
 show bounded sensitivity, not arbitrary-error robustness. QfO and independently

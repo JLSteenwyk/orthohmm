@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Corrected Factorial Conclusions Reconciled (2026-09-19)
+
+Previous turn made progress through the consolidated bibliography (`7c3e59b`).
+Found and corrected two stale manuscript summaries: the component-methods
+overview still called the corrected factorial unfinished, and the remaining-
+requirements section said no QfO C-by-R interaction was established. Checked
+the retained complete corrected SwissTrees JSON rather than transferring the
+historical conclusion. Both corrected F1 interactions exclude zero after the
+frozen 42-endpoint adjustment; reconciliation at expanded candidates also
+has positive adjusted F1 intervals at both profile settings. All four profile
+F1 intervals include zero, and every reconciliation contrast trades higher
+precision for lower recall. Added those bounded conclusions while preserving
+the historical null intervals and development-exposure/semantic limitations.
+No source results, scientific configuration or multiplicity rule changed.
+
+Live controller snapshot: 21920_2 RUNNING at 5:55, recorder 21922 at 25:16,
+corrected QfO OrthoFinder 21706_1 at 11:14:03. OrthoMCL 21713 and strata 21896
+remain pending. No SSH/native access to the quiet DGX panel. Corrected
+comparators, complete timing evidence and wider publication requirements
+remain unfinished; the manuscript correction is not an admission of readiness.
+
 ## Selected Bibliography Consolidated (2026-09-19)
 
 Previous turn made progress by closing ENZYME and SwissTree citation omissions
