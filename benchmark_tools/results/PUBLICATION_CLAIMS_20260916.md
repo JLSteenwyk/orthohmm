@@ -59,6 +59,13 @@ evidence that an experiment completed or a biological hypothesis is true.
 
 ## Current Execution Status
 
+- A [search routing defect](SEARCH_GPU_ROUTING_FIX_20260918.md) was reproduced
+  and fixed in the current tree: CUDA availability with no eligible target
+  could bypass every scoring backend.53focused tests pass. The bound native
+  publication runtime is CPU-only and was reverified; broader historical
+  GPU-run impact remains unaudited. Frozen executors and reported scores
+  were not changed. This is not an explanation of existing search misses.
+
 - [Corrected SwissTrees sequence descriptors](CORRECTED_SWISS_SEQUENCE_STRATA_RESULT_20260918.md)
   cover all563proteins and freeze9/9entropy bins. The14recovered accessions
   and four changed old records are explicit. This is input-only preparation,

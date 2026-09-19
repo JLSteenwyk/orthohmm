@@ -293,7 +293,6 @@ def search_species_pair_indexed(
             scores[gpu_mask] = gpu_scores
         except RuntimeError:
             # GPU failed — route all pairs to CPU
-            scores = _run_cpu(pairs)
             n_gpu = 0
             n_cpu = len(pairs)
 
@@ -301,8 +300,8 @@ def search_species_pair_indexed(
         # Some pairs still need CPU processing (long targets)
         cpu_pairs = pairs[~gpu_mask]
         scores[~gpu_mask] = _run_cpu(cpu_pairs)
-    elif n_cpu > 0 and n_gpu == 0 and not use_gpu:
-        # No GPU available at all
+    elif n_cpu > 0 and n_gpu == 0:
+        # No eligible GPU pairs, CUDA unavailable, or a failed GPU batch.
         scores = _run_cpu(pairs)
 
     # Step 4: Compute E-values

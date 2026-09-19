@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Long-Target Search Routing Defect Fixed (2026-09-18 UTC)
+
+Previous turn made progress through9142b9c with annotation-resource citations.
+Reread the objective and inspected the frozen search implementation to plan
+prefilter-versus-score rejection tracing. Found and reproduced a correctness
+bug when CUDA is available but all candidate targets exceed1998residues:
+neither backend executed. The regression failed2/12cases before the fix.
+
+Current engine now sends every CPU-only batch through its CPU scorer,
+including GPU-failure fallback exactly once. Expanded routing tests cover
+three CPU backends, CUDA availability/failure, length boundaries and order;
+a real CPU-scoring fixture verifies long-target score/E-value equivalence.
+Final53focused tests pass. Failed and successful evidence is retained in
+the [fix audit](SEARCH_GPU_ROUTING_FIX_20260918.md).
+
+Reverified the frozen publication runtime's three CPU libraries and absence
+of a CUDA library; corrected QfO binds this runtime. No broad non-impact claim
+is made for older GPU runs. The evaluated core and active jobs remain unchanged;
+no scientific score transfer or default tuning. Mechanistic rejection tracing
+is still open, not explained by this defect without further evidence.
+
+Latest local scheduler poll: replay21756 running33:02, admission21757pending;
+DGX21838 task7completed0:0, task8running,9-17pending, failures3/5/6retained.
+Saved task7scheduler evidence locally; no DGX remote access or retries.
+
 ## VGNC And GO Resource Citations Added (2026-09-18 UTC)
 
 Previous turn made progress through2d84606 with the corrected search figure
