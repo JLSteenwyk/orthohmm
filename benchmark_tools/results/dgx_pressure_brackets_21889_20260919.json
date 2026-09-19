@@ -1,0 +1,472 @@
+{
+  "evidence": [
+    {
+      "bytes": 28189,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/dgx_pressure_flags_21889_20260919_v2.json",
+      "sha256": "d560fa5d42458cd7914a7ce93dfc87f64ae2d19784a0f26d1c13a8a6ac255781"
+    },
+    {
+      "bytes": 43010093,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/pressure_overhead_archive_21889/pressure_frontier_overhead_v2/run_01/measurement/frontier_report.json",
+      "sha256": "71389c0d7b34df34f58665412e75ebe37140b4004ceb17bffbb40f0d1657d4f0"
+    },
+    {
+      "bytes": 63938917,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/pressure_overhead_archive_21889/pressure_frontier_overhead_v2/run_03/measurement/frontier_report.json",
+      "sha256": "ffa1f39f4580c9773a26399f60345ac53e75dcba8592621ae054062c59f667b3"
+    },
+    {
+      "bytes": 64331803,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/pressure_overhead_archive_21889/pressure_frontier_overhead_v2/run_06/measurement/frontier_report.json",
+      "sha256": "14f768f1a7bcb147a970b42e14e863c69da1cf3efa2129c78368634683df3aeb"
+    },
+    {
+      "bytes": 48412315,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/pressure_overhead_archive_21889/pressure_frontier_overhead_v2/run_08/measurement/frontier_report.json",
+      "sha256": "d886bfbc804ccec4ea1fa13e27eb728982b5272e4fa7b93e8f49ab5bdaa60f83"
+    },
+    {
+      "bytes": 42946126,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/pressure_overhead_archive_21889/pressure_frontier_overhead_v2/run_10/measurement/frontier_report.json",
+      "sha256": "2044b32bd614106612792623566004679a9a3eda40d3be50e5763c2fbf590b87"
+    },
+    {
+      "bytes": 48576654,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/pressure_overhead_archive_21889/pressure_frontier_overhead_v2/run_13/measurement/frontier_report.json",
+      "sha256": "f35a031ae1f941686548b5443761c2c273c1386a48a096398bde69e57c12d656"
+    },
+    {
+      "bytes": 42864971,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/pressure_overhead_archive_21889/pressure_frontier_overhead_v2/run_15/measurement/frontier_report.json",
+      "sha256": "bb0dff38cca32f4d0ea7e1985f47de8f75b7afb23664e0ae64845b0dd22f2e35"
+    },
+    {
+      "bytes": 62013096,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/pressure_overhead_archive_21889/pressure_frontier_overhead_v2/run_17/measurement/frontier_report.json",
+      "sha256": "ec41e935fe271d8f7174d7def8032f7a3d01783f142f35cd9feb5471e01aad3e"
+    }
+  ],
+  "limitations": [
+    "Retrospective diagnostic, not a new eligibility rule or complete frontier re-audit.",
+    "Both bracket choices retain non-atomic counter reads and accounting delay.",
+    "Identical native counters isolate the arithmetic effect of the later host read, not causal runtime interference.",
+    "Failed tasks remain failed; no wall-time correction or scientific timing admission."
+  ],
+  "runs": [
+    {
+      "index": 0,
+      "method": "orthohmm_high_sensitivity",
+      "mode": "boundary",
+      "status": "validated"
+    },
+    {
+      "bracket_diagnostic": {
+        "added_host_cpu_s": {
+          "maximum": 0.46999999999999886,
+          "median": 0.3100000000000023,
+          "minimum": 0.009999999999999787
+        },
+        "added_read_overhang_s": {
+          "maximum": 0.022693144,
+          "median": 0.017181593000000002,
+          "minimum": 0.007765462000000001
+        },
+        "intervals": 548,
+        "narrow_flagged": 0,
+        "narrow_overhang_s": {
+          "maximum": 0.005813738,
+          "median": 0.001720588,
+          "minimum": 0.000726069
+        },
+        "narrow_reasons": {},
+        "narrow_residual_cores": {
+          "maximum": 0.12936264848800375,
+          "median": 0.08377277869406266,
+          "minimum": 0.019241281317153563
+        },
+        "outer_flagged": 358,
+        "outer_residual_cores": {
+          "maximum": 0.5666837841209926,
+          "median": 0.3999027572600382,
+          "minimum": 0.03647322218120213
+        },
+        "scientific_timings_admitted": false,
+        "transitions": {
+          "False->True": 358,
+          "True->True": 190
+        }
+      },
+      "index": 1,
+      "method": "orthohmm_high_sensitivity",
+      "mode": "periodic",
+      "status": "validated"
+    },
+    {
+      "index": 2,
+      "method": "orthohmm_satellite_v2",
+      "mode": "boundary",
+      "status": "validated"
+    },
+    {
+      "bracket_diagnostic": {
+        "added_host_cpu_s": {
+          "maximum": 0.4599999999999973,
+          "median": 0.25,
+          "minimum": 0.0
+        },
+        "added_read_overhang_s": {
+          "maximum": 0.022804562,
+          "median": 0.012521029999999999,
+          "minimum": 0.008176741000000001
+        },
+        "intervals": 815,
+        "narrow_flagged": 14,
+        "narrow_overhang_s": {
+          "maximum": 0.005815972,
+          "median": 0.001530613,
+          "minimum": 0.000823507
+        },
+        "narrow_reasons": {
+          "excess_unassigned_cpu": 14
+        },
+        "narrow_residual_cores": {
+          "maximum": 0.45996589418976347,
+          "median": 0.0834321237639405,
+          "minimum": 0.013515603276171764
+        },
+        "outer_flagged": 527,
+        "outer_residual_cores": {
+          "maximum": 0.6674551824857459,
+          "median": 0.37941722198332734,
+          "minimum": 0.02858431262662714
+        },
+        "scientific_timings_admitted": false,
+        "transitions": {
+          "False->False": 14,
+          "False->True": 513,
+          "True->True": 288
+        }
+      },
+      "index": 3,
+      "method": "orthohmm_satellite_v2",
+      "mode": "periodic",
+      "status": "validated"
+    },
+    {
+      "index": 4,
+      "method": "orthofinder_full",
+      "mode": "boundary",
+      "status": "validated"
+    },
+    {
+      "index": 5,
+      "method": "orthofinder_full",
+      "mode": "periodic",
+      "status": "failed"
+    },
+    {
+      "bracket_diagnostic": {
+        "added_host_cpu_s": {
+          "maximum": 0.46000000000000085,
+          "median": 0.21000000000000085,
+          "minimum": 0.010000000000000009
+        },
+        "added_read_overhang_s": {
+          "maximum": 0.023496674000000002,
+          "median": 0.010829376,
+          "minimum": 0.007813945
+        },
+        "intervals": 820,
+        "narrow_flagged": 16,
+        "narrow_overhang_s": {
+          "maximum": 0.004821137,
+          "median": 0.0010796185,
+          "minimum": 0.000762929
+        },
+        "narrow_reasons": {
+          "excess_unassigned_cpu": 16
+        },
+        "narrow_residual_cores": {
+          "maximum": 0.40525728953755674,
+          "median": 0.07557263377004683,
+          "minimum": 0.014762898355830932
+        },
+        "outer_flagged": 493,
+        "outer_residual_cores": {
+          "maximum": 0.6865751798001549,
+          "median": 0.3139916637156043,
+          "minimum": 0.03474516467395889
+        },
+        "scientific_timings_admitted": false,
+        "transitions": {
+          "False->False": 16,
+          "False->True": 477,
+          "True->True": 327
+        }
+      },
+      "index": 6,
+      "method": "orthohmm_satellite_v2",
+      "mode": "periodic",
+      "status": "validated"
+    },
+    {
+      "index": 7,
+      "method": "orthohmm_satellite_v2",
+      "mode": "boundary",
+      "status": "validated"
+    },
+    {
+      "bracket_diagnostic": {
+        "added_host_cpu_s": {
+          "maximum": 0.48999999999999844,
+          "median": 0.040000000000000036,
+          "minimum": 0.0
+        },
+        "added_read_overhang_s": {
+          "maximum": 0.023916671,
+          "median": 0.008590717000000001,
+          "minimum": 0.008037592000000001
+        },
+        "intervals": 617,
+        "narrow_flagged": 0,
+        "narrow_overhang_s": {
+          "maximum": 0.002453378,
+          "median": 0.000944785,
+          "minimum": 0.000776733
+        },
+        "narrow_reasons": {},
+        "narrow_residual_cores": {
+          "maximum": 0.24036589251208051,
+          "median": 0.03702827383257238,
+          "minimum": -0.20301635455635192
+        },
+        "outer_flagged": 177,
+        "outer_residual_cores": {
+          "maximum": 0.6262734999239107,
+          "median": 0.07703350625374193,
+          "minimum": -0.18099584878209748
+        },
+        "scientific_timings_admitted": false,
+        "transitions": {
+          "False->True": 177,
+          "True->True": 440
+        }
+      },
+      "index": 8,
+      "method": "orthofinder_full",
+      "mode": "periodic",
+      "status": "validated"
+    },
+    {
+      "index": 9,
+      "method": "orthofinder_full",
+      "mode": "boundary",
+      "status": "validated"
+    },
+    {
+      "bracket_diagnostic": {
+        "added_host_cpu_s": {
+          "maximum": 0.4499999999999993,
+          "median": 0.33000000000000185,
+          "minimum": 0.009999999999999787
+        },
+        "added_read_overhang_s": {
+          "maximum": 0.022159197000000002,
+          "median": 0.017052694,
+          "minimum": 0.008285282
+        },
+        "intervals": 547,
+        "narrow_flagged": 0,
+        "narrow_overhang_s": {
+          "maximum": 0.00587868,
+          "median": 0.001687395,
+          "minimum": 0.000813451
+        },
+        "narrow_reasons": {},
+        "narrow_residual_cores": {
+          "maximum": 0.18641511527386415,
+          "median": 0.08395172125335822,
+          "minimum": 0.016201956514906902
+        },
+        "outer_flagged": 380,
+        "outer_residual_cores": {
+          "maximum": 0.6076297908681881,
+          "median": 0.4176063231969358,
+          "minimum": 0.0293016047230466
+        },
+        "scientific_timings_admitted": false,
+        "transitions": {
+          "False->True": 380,
+          "True->True": 167
+        }
+      },
+      "index": 10,
+      "method": "orthohmm_high_sensitivity",
+      "mode": "periodic",
+      "status": "validated"
+    },
+    {
+      "index": 11,
+      "method": "orthohmm_high_sensitivity",
+      "mode": "boundary",
+      "status": "validated"
+    },
+    {
+      "index": 12,
+      "method": "orthofinder_full",
+      "mode": "boundary",
+      "status": "failed"
+    },
+    {
+      "bracket_diagnostic": {
+        "added_host_cpu_s": {
+          "maximum": 0.46000000000000085,
+          "median": 0.040000000000000036,
+          "minimum": 0.0
+        },
+        "added_read_overhang_s": {
+          "maximum": 0.022880538,
+          "median": 0.008547309,
+          "minimum": 0.008203889
+        },
+        "intervals": 619,
+        "narrow_flagged": 1,
+        "narrow_overhang_s": {
+          "maximum": 0.003148655,
+          "median": 0.00091887,
+          "minimum": 0.000831715
+        },
+        "narrow_reasons": {
+          "excess_unassigned_cpu": 1
+        },
+        "narrow_residual_cores": {
+          "maximum": 0.2728758429390749,
+          "median": 0.03547397765139409,
+          "minimum": -0.1922007853457645
+        },
+        "outer_flagged": 175,
+        "outer_residual_cores": {
+          "maximum": 0.5828995233228406,
+          "median": 0.07646642474308672,
+          "minimum": -0.17220111985016973
+        },
+        "scientific_timings_admitted": false,
+        "transitions": {
+          "False->False": 1,
+          "False->True": 174,
+          "True->True": 444
+        }
+      },
+      "index": 13,
+      "method": "orthofinder_full",
+      "mode": "periodic",
+      "status": "validated"
+    },
+    {
+      "index": 14,
+      "method": "orthohmm_high_sensitivity",
+      "mode": "boundary",
+      "status": "validated"
+    },
+    {
+      "bracket_diagnostic": {
+        "added_host_cpu_s": {
+          "maximum": 0.5399999999999991,
+          "median": 0.25,
+          "minimum": 0.0
+        },
+        "added_read_overhang_s": {
+          "maximum": 0.026626897,
+          "median": 0.012609181,
+          "minimum": 0.007908087000000001
+        },
+        "intervals": 546,
+        "narrow_flagged": 0,
+        "narrow_overhang_s": {
+          "maximum": 0.005901065,
+          "median": 0.000955343,
+          "minimum": 0.000771638
+        },
+        "narrow_reasons": {},
+        "narrow_residual_cores": {
+          "maximum": 0.10995916882276681,
+          "median": 0.04258693563959054,
+          "minimum": 0.01701918228395197
+        },
+        "outer_flagged": 333,
+        "outer_residual_cores": {
+          "maximum": 0.6381308807161348,
+          "median": 0.29192032425054076,
+          "minimum": 0.02465335631139698
+        },
+        "scientific_timings_admitted": false,
+        "transitions": {
+          "False->True": 333,
+          "True->True": 213
+        }
+      },
+      "index": 15,
+      "method": "orthohmm_high_sensitivity",
+      "mode": "periodic",
+      "status": "validated"
+    },
+    {
+      "index": 16,
+      "method": "orthohmm_satellite_v2",
+      "mode": "boundary",
+      "status": "validated"
+    },
+    {
+      "bracket_diagnostic": {
+        "added_host_cpu_s": {
+          "maximum": 0.46999999999999886,
+          "median": 0.2799999999999985,
+          "minimum": 0.009999999999999787
+        },
+        "added_read_overhang_s": {
+          "maximum": 0.023550345,
+          "median": 0.0167713385,
+          "minimum": 0.007910835
+        },
+        "intervals": 790,
+        "narrow_flagged": 15,
+        "narrow_overhang_s": {
+          "maximum": 0.005759218,
+          "median": 0.0016356755,
+          "minimum": 0.000771523
+        },
+        "narrow_reasons": {
+          "excess_unassigned_cpu": 15
+        },
+        "narrow_residual_cores": {
+          "maximum": 0.451799432356361,
+          "median": 0.08442837173671738,
+          "minimum": 0.01902090483959639
+        },
+        "outer_flagged": 554,
+        "outer_residual_cores": {
+          "maximum": 0.7191232702652144,
+          "median": 0.3988460896269452,
+          "minimum": 0.038554730760418626
+        },
+        "scientific_timings_admitted": false,
+        "transitions": {
+          "False->False": 15,
+          "False->True": 539,
+          "True->True": 236
+        }
+      },
+      "index": 17,
+      "method": "orthohmm_satellite_v2",
+      "mode": "periodic",
+      "status": "validated"
+    }
+  ],
+  "scientific_timings_admitted": false,
+  "source": {
+    "bytes": 5537,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/diagnose_pressure_brackets.py",
+    "sha256": "64d043c46df3ac651c84b1d6d781e259ded9c7c3740a87a784474bffb3f6f295"
+  },
+  "status": "retained_pressure_brackets_compared"
+}

@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Retained Host-Bracket Hypothesis Tested (2026-09-19)
+
+Previous turn made progress with the corrected factorial figure. Full
+OrthoFinder 21706_1 remains RUNNING (8:32:40); OrthoMCL 21713 and strata
+21896 remain resource/dependency pending.
+
+The archived collector already contains an earlier host snapshot. Replayed
+both brackets with identical native CPU counters and unchanged thresholds;
+all 5,302 outer intervals reproduce their audited dictionaries exactly.
+Flags decrease from 2,997 to 46 solely by using the earlier right host
+snapshot. [Results and limits](DGX_RETAINED_BRACKET_REPLAY_20260919.md).
+This identifies an arithmetic source of flags, not absence of interference.
+Eight new tests and 28 existing tests pass. No original results or timing
+eligibility changed; remaining flags and two failed tasks remain unresolved.
+Next test a prospective narrow-bracket collector under known load controls.
+
 ## Corrected Factorial Figure Rendered (2026-09-19)
 
 Previous turn made progress with the four-method corrected comparison.
