@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Live Capture And QfO Gene-Tree Tail Verified (2026-09-19)
+
+Previous turn made progress by correcting stale factorial conclusions
+(`d4569cf`). This turn is a verified wait with additional live diagnostic
+evidence, not a new scientific result. Array 21920_2 and recorder 21922 remain
+RUNNING. Replayed 342 closed controller-poll files (excluding the potentially
+in-progress latest file): contiguous indices, increasing timestamps, expected
+controller command, no observation errors. First terminal records for tasks
+0 and 1 occur at polls 105 and 232 and match the retained scheduler files.
+Both terminal states are COMPLETED with exit 0:0. No native DGX files were
+read, no overhead comparison was calculated, and full-panel audit is pending.
+
+Around 07:45 EDT, corrected QfO OrthoFinder 21706_1 remained RUNNING. Its
+quiet log still names the remaining-MSA/gene-tree stage. Local process and
+cgroup inspection identifies FastTree PID 2976784 as a descendant of the
+frozen OrthoFinder process, in Slurm job_21706. It is computing OG0000000
+from an alignment with 7,873 sequence headers. CPU time increased from
+08:15:16 to 08:15:38 across observations, with running state and roughly one
+core used. The Trees_ids directory contains 26,446 nonempty .txt files and
+one empty file, OG0000000.txt. File counts are a progress observation, not
+tree validity or full pipeline completion; rooting/reconciliation may remain.
+
+The evidence supports leaving the active computation intact, not treating
+the quiet log as a stopped job. No process, settings, tree engine or frozen
+executor was changed. OrthoMCL 21713 remains pending resources and strata
+21896 pending dependency. Full publication requirements remain open.
+
 ## Corrected Factorial Conclusions Reconciled (2026-09-19)
 
 Previous turn made progress through the consolidated bibliography (`7c3e59b`).
