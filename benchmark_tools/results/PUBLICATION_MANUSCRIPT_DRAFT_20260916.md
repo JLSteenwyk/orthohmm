@@ -14,7 +14,9 @@ adds the QfO2020/2022 updates and igraph. The service papers use a separate
 [reviewed byline export](publication_service_bylines_20260918.csl.json),
 with raw Crossref metadata retained as provenance. A
 [reference-resource supplement](PUBLICATION_RESOURCE_REFERENCES_20260918.md)
-adds bounded attribution for TreeFam, SwissTree and FAS. Remaining dependency/resource citations and journal-specific
+adds bounded attribution for TreeFam, SwissTree, FAS, VGNC and GO, including
+a [source-bound annotation citation export](publication_annotation_references_20260918.csl.json).
+Remaining dependency/resource citations and journal-specific
 formatting are incomplete.
 
 ## Study Objective

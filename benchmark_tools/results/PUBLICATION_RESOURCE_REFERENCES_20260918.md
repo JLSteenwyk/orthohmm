@@ -47,6 +47,62 @@ Our [retained-sample audit](QFO_FAS_SAMPLE_AUDIT_20260917.md) remains the
 evidence for reproduced aggregate arithmetic, not independent feature
 annotation validation or dependency-aware uncertainty.
 
+## VGNC
+
+Jones TEM, Yates B, Braschi B, Gray K, Tweedie S, Seal RL, Bruford EA
+(2023). The VGNC: expanding standardized vertebrate gene nomenclature.
+Genome Biology24:115.
+[DOI:10.1186/s13059-023-02957-2](https://doi.org/10.1186/s13059-023-02957-2).
+The [primary article](https://link.springer.com/article/10.1186/s13059-023-02957-2)
+describes consensus orthology predictions from Ensembl Compara, NCBI Gene,
+PANTHER and OMA informing nomenclature assignment, with manual review in
+specified cases. This is relevant reference-design context, not proof that
+every pair in the retained QfO snapshot used that exact workflow or an
+estimate of comparator-specific circularity. It does not establish independent
+experimental orthology truth. The2023resource paper does not authenticate
+the2020benchmark snapshot.
+
+## Gene Ontology
+
+Ashburner M et al. (2000). Gene Ontology: tool for the unification of biology.
+Nature Genetics25:25-29.
+[DOI:10.1038/75556](https://doi.org/10.1038/75556).
+
+The Gene Ontology Consortium (2026 issue; online18December2025). The Gene
+Ontology knowledgebase in2026. Nucleic Acids Research54(D1):D1779-D1792.
+[DOI:10.1093/nar/gkaf1292](https://doi.org/10.1093/nar/gkaf1292).
+The [current GO citation policy](https://geneontology.org/docs/go-citation-policy/)
+requests the original and current resource papers, together with the actual
+data release/version. These citations do not imply that our QfO2020 scorer
+used current annotations, and are not citations for its similarity formula.
+Exact historical annotation and ontology identities remain a separate
+provenance requirement.
+
+The [publisher's correction](https://academic.oup.com/nar/article/54/12/gkag678/8721936)
+addresses consortium author Daiqing Chen's name. The retrieved Crossref
+record already contains that spelling. It includes a consortium literal
+plus135individual authors; a full author-by-author review is not claimed.
+Its `issued` field is18December2025, whereas the volume issue date is
+6January2026. The raw CSL preserves the online date rather than silently
+changing it to match the title year. Journal-specific rendering remains
+separate.
+
+## Annotation Citation Export
+
+The [three-record annotation export](publication_annotation_references_20260918.csl.json)
+and [provenance](publication_annotation_citation_provenance_20260918.json)
+retain selected DOI metadata, source-response hashes and retrieval times.
+Cached replay reproduces the CSL bytes exactly;16exporter tests pass. No
+benchmark data, scores or method configuration changed.
+
+```sh
+python benchmark_tools/export_publication_citations.py \
+  --manifest benchmark_tools/results/publication_annotation_citation_selection_20260918.json \
+  --raw-directory benchmarks/work/publication_annotation_crossref_20260918 \
+  --output NEW_CSL.json --provenance NEW_PROVENANCE.json \
+  --cached-provenance benchmark_tools/results/publication_annotation_citation_provenance_20260918.json
+```
+
 ## Remaining Work
 
 The [selected Crossref export](publication_resource_references_20260918.csl.json)
@@ -69,7 +125,7 @@ list from `PMC1347480.xml`, and serialize using
 input hashes first; the expected output hash is in the correction provenance.
 This article XML is not the missing TreeFam-A tree/mapping archive.
 
-VGNC, GO/EC and other annotation-resource attribution, complete machine-readable
+EC and other annotation-resource attribution, complete machine-readable
 export of the SwissTree website citation, journal-specific formatting, and exact-version
 and rights review remain separate requirements. No benchmark inputs, scores,
 confidence intervals or method settings changed during this citation review.

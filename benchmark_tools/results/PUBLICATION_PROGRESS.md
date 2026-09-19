@@ -1,5 +1,26 @@
 # Publication Progress
 
+## VGNC And GO Resource Citations Added (2026-09-18 UTC)
+
+Previous turn made progress through2d84606 with the corrected search figure
+and manuscript integration. Reread the objective and confirmed replay21756,
+OrthoFinder21706_1 and DGX21838 task7 remain live. No DGX access or job changes.
+
+Checked official VGNC/GO citation pages and primary publisher material.
+Exported three DOI records with raw-response provenance; checksum-verified
+cached replay reproduces the CSL bytes exactly.16exporter tests pass. The
+[resource supplement](PUBLICATION_RESOURCE_REFERENCES_20260918.md) now
+documents the VGNC consensus-prediction context without assuming exact2020
+snapshot provenance or quantified circularity. GO attribution records both
+the original paper and current update, while separating historical data
+identities from current resource citations.
+
+Checked the2026GO author-name correction: deposited metadata already spells
+Daiqing Chen correctly. Preserved its2025online `issued` date and documented
+the2026issue date; did not silently rewrite the raw byline or claim exhaustive
+author review. EC attribution, remaining source provenance/rights and final
+journal formatting remain open. No scientific result or default changed.
+
 ## Corrected Search Diagnostic Integrated Into Manuscript (2026-09-18 UTC)
 
 Previous turn made progress through9aaa2e0 with the completed corrected QfO
