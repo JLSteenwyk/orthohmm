@@ -14084,3 +14084,34 @@ and the complete DGX post-run audit after all timing tasks are terminal.
 The original TreeFam trees/mapping remain unavailable. Publication
 readiness and controlled comparative resource evidence remain unproven.
 No scientific default, endpoint or unrelated working-tree change was made.
+
+## Corrected SwissTrees Strata Completed (2026-09-19)
+
+Previous turn made progress with the six-method corrected table and CPM
+conversion queue. This turn diagnosed failed strata job `21896`: the
+driver/test fixture expected unseparated labels, unlike the actual audited
+factorial. Commit `6f81958` uses the canonical upstream inventory and adds
+a regression test; 74 relevant tests passed. The failed log/executor remain
+intact. No protocol, input, seed, endpoint or inference setting changed.
+
+After verifying completed prerequisites, retry `21981` completed 0:0 in
+seven seconds. All 27 endpoints are retained in the
+[result and recovery record](CORRECTED_SWISS_STRATA_RESULT_21981.md).
+Commit `71f7032` adds independent family-sum arithmetic reproduction;
+all endpoints match within 1e-12, and 64 reproduction/driver/kernel/figure
+tests pass. Rendered and visually inspected PNG/PDF/SVG; all output hashes
+and the complete 27-row numerical table check. The manuscript and claim
+checklist now reflect the results rather than the earlier pending state.
+
+All adjusted phylogenetic-OrthoHMM versus full-OrthoFinder intervals
+include zero in each entropy bin; all adjusted interactions include zero.
+This establishes neither equivalence nor a causal composition mechanism.
+All-method/secondary displays and the figure-bundle refresh remain open.
+
+Latest accounting confirms all DGX `21920` tasks terminal: 16 COMPLETED,
+two FAILED (`21920_3` and `21920_17`, exit 1:0). Controller recorder `21922`
+completed 0:0. No remote native output has yet been inspected; archive,
+controller replay, failure analysis and full overhead audit are next.
+BLAST `21713` remains RUNNING. CPM downstream assessment/admission and
+parameter uncertainty, remaining comparator results, controlled timing and
+publication packaging are unfinished. The full goal remains active.

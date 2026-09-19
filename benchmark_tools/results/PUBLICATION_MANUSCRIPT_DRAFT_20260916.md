@@ -890,6 +890,21 @@ and higher recall on both reference-tree tests, not a uniform advantage.
 FastOMA and OrthoMCL comparisons remain unfinished. No paired superiority
 over competitors is inferred from this partial table.
 [Method identity and export checks](QFO_CORRECTED_MAIN_TABLE_20260918.md).
+The prespecified [corrected composition-strata analysis](CORRECTED_SWISS_STRATA_RESULT_21981.md)
+is now complete for the three primary configurations. Nine families fall
+in each input-only entropy bin. With 100,000 paired resamples and adjustment
+across 27 endpoints, phylogenetic OrthoHMM minus full OrthoFinder F1 is
+-0.028710 (adjusted interval [-0.154364, 0.147961]) in the lower-entropy bin
+and -0.006102 ([-0.089129, 0.068670]) in the higher-entropy bin. All adjusted
+precision/recall contrasts for that comparison also include zero. Compared
+with high sensitivity, the phylogenetic configuration improves precision
+in both bins and F1 in the higher-entropy bin under the adjustment. All
+adjusted higher-minus-lower interactions include zero. Thus these data do
+not establish equivalence to OrthoFinder or a composition-specific causal
+mechanism. The configuration contrast is not a pure phylogeny ablation.
+All 27 endpoints appear in the linked figure, with an independent numerical
+reproduction from the admitted counts. Broader all-method and secondary
+stratum displays remain unfinished.
 Old groups, trees, scores and confidence intervals cannot
 be relabeled as corrected results. The previously measured 53 legacy BLAST
 query failures also belong to the original run; failures in the corrected

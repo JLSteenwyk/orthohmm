@@ -117,11 +117,13 @@ is running; its result is not yet evidence for any resource advantage.
   cover all563proteins and freeze9/9entropy bins. The14recovered accessions
   and four changed old records are explicit. This is input-only preparation,
   not a corrected stratified accuracy result or validated fragment annotation.
-  The [primary-strata runner](CORRECTED_SWISS_STRATA_EXECUTION_20260918.md)
-  now reconstructs corrected raw counts and applies the frozen27-endpoint
-  bootstrap. It has passed synthetic and input-binding tests, but actual
-  execution awaits admitted corrected predictions. It does not make the
-  all-method or secondary-stratum displays complete.
+  The [primary-strata result](CORRECTED_SWISS_STRATA_RESULT_21981.md)
+  reconstructs corrected raw counts and applies the frozen27-endpoint
+  bootstrap. All27endpoints were independently reproduced numerically.
+  Adjusted phylogenetic-OrthoHMM versus full-OrthoFinder intervals include
+  zero in both bins, and all adjusted interactions include zero. Neither
+  equivalence nor a composition-specific mechanism is established. The
+  all-method and secondary-stratum displays remain incomplete.
 
 - Corrected DIAMOND sequence search21789 completed0:0 in02:14:43 and native
   execution admission21790 completed0:0 in00:01:30. Numeric conversion21791
