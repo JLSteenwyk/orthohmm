@@ -936,8 +936,8 @@ F1. Thus a precision increase did not imply uniform F1 improvement. The
 project-defined secondary mean increased from 0.690463 to 0.755573; it is
 not a separate primary endpoint or evidence of general superiority.
 
-Six of eight corrected factorial cells are now scored. Their
-[machine-generated table and manifest](qfo_corrected_factorial_scores_20260919_v3/scores.md)
+Seven of eight corrected factorial cells are now scored. Their
+[machine-generated table and manifest](qfo_corrected_factorial_scores_20260919_v4/scores.md)
 retain missing cells explicitly. R-off pairs are group-derived cliques;
 R-on pairs are native phylogenetic predictions, not root-HOG clique
 expansions. Pair counts describe prediction volume, not protein coverage.
@@ -945,6 +945,18 @@ The prespecified full-factorial SwissTrees uncertainty analysis awaits all
 eight cells. Historical-input intervals cannot be reused for this contrast,
 and no default was selected from these development-exposed point estimates.
 [Independent score admission and precision-recall details](QFO_CORRECTED_FIRST_RECONCILIATION_SCORES_20260918.md).
+
+### Corrected Profile Refinement With Reconciliation
+
+With candidate expansion disabled and inferred reconciliation enabled,
+multi-sequence profile refinement changes SwissTrees F1 from0.789574to
+0.786372. The corresponding p1_c0_r1 scores are GO0.490229, EC0.968271,
+VGNC F10.897844, TreeFam-A F10.602432 and FAS0.784576; the secondary
+mean is0.754954. Five of six point estimates decline slightly and EC
+increases. All5113180native pairs map without loss. These end-to-end
+point estimates do not establish a significant effect or direct mechanism;
+P-off still uses initial HMM search. Complete-factorial uncertainty remains
+pending. [Validated scores and provenance](QFO_CORRECTED_PROFILE_RECONCILIATION_SCORES_20260919.md).
 
 ### Corrected Candidate Expansion With Reconciliation
 

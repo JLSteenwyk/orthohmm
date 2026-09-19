@@ -153,15 +153,18 @@ evidence that an experiment completed or a biological hypothesis is true.
   independent admission21757 completed successfully; all391908final groups
   match the corrected native result. [Replay evidence](QFO_CORRECTED_REPLAY_ADMITTED_20260918.md).
   Candidate preparation21758 and admission21759 are complete. The
-  [six-cell score export](qfo_corrected_factorial_scores_20260919_v3/scores.md)
-  admits all four R-off cells, p0_c0_r1 and p0_c1_r1, not the full eight-cell factorial.
+  [seven-cell score export](qfo_corrected_factorial_scores_20260919_v4/scores.md)
+  admits all four R-off cells, p0_c0_r1, p0_c1_r1 and p1_c0_r1, not the full eight-cell factorial.
   Expanded p0_c1_r1 reconciliation21760_1, independent native admission21762
   and conversion21768 are also complete, with5,977,100native pairs and zero
   mapping losses. Scoring21779 and admission21780 completed0:0; a fresh
   frozen admission reproduces the retained receipt byte-for-byte.
   [The candidate-expansion contrast](QFO_CORRECTED_EXPANDED_RECONCILIATION_SCORES_20260919.md)
   raises observed SwissTrees/VGNC/TreeFam-A F1 but lowers GO/EC/FAS.
-  Complete-factorial paired uncertainty21894awaits the final two admissions;
+  The [profile-refinement contrast](QFO_CORRECTED_PROFILE_RECONCILIATION_SCORES_20260919.md)
+  has five slightly lower point estimates and higher EC; scoring21783 and
+  admission21784 completed successfully with a byte-identical fresh recheck.
+  Complete-factorial paired uncertainty21894awaits final admission21788;
   no significant interaction or full-method superiority is established.
   The [exploratory tree diagnostic](QFO_CORRECTED_EXPANDED_RECONCILIATION_20260919.md)
   finds38shared nontrivial rooted clades out of76in each78-species tree.

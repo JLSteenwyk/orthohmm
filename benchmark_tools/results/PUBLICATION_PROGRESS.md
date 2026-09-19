@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Seventh Corrected Factorial Cell Scored (2026-09-19)
+
+Previous turn was a verified wait. Reread the objective and followed live
+scoring21783 through COMPLETED0:0 in29:54, then independent admission21784
+through COMPLETED0:0 in13seconds. A fresh frozen admission execution
+reproduced the entire receipt byte-for-byte. Exported seven admitted cells
+to a fresh versioned table; the final cell remains missing, not zero.
+
+With C-off/R-on, profile refinement slightly lowers five of six point
+estimates and raises EC; SwissTrees F1 changes0.789574to0.786372.
+Retained this negative/mixed result and updated manuscript/claim links.
+[Scores, precision/recall and provenance](QFO_CORRECTED_PROFILE_RECONCILIATION_SCORES_20260919.md).
+All5113180native pairs map without loss. No partial-factorial significance,
+default promotion or general superiority claim is made. Complete-factorial
+uncertainty21894 still awaits21788. DGX quiet-window rules and the remaining
+scientific runs are unchanged; publication readiness is not established.
+
 ## Installer Advisory Follow-Up (2026-09-19)
 
 Previous turn was a verified wait. Reread the objective, revalidated live
