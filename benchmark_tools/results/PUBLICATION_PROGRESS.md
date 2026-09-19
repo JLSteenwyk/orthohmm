@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Remaining CPU Flags Localized Descriptively (2026-09-19)
+
+Previous turn completed and retained the three-run audit (`51c7111`). Added
+a pinned descriptive join of all1,992 intervals with host creation/context
+switch counts, native pressure, cgroup activity and conservative OrthoHMM
+stage bounds. All21 satellite_v2 flags lie certainly within phylogeny despite
+allowing every uninstrumented gap and duration-rounding uncertainty. Forty
+focused tests pass; full results: `DUAL_NATIVE_FLAG_DESCRIPTION_20260919.md`.
+
+Within phylogeny, median host process creations are5,695 for21 flagged versus
+1,520.5 for234 unflagged intervals. Named outside-target CPU is not elevated
+at the median. Root residual, native pressure and context switches are higher,
+but their distinct windows prevent causal subtraction. The one OrthoFinder
+flag has only72 process creations, so no single causal explanation is proven.
+
+Next is a prospective full-node steady/process-creation/known-outside-work
+control experiment, not threshold relaxation or scientific scaling admission.
+No live jobs or frozen method settings changed. Corrected OrthoFinder21706_1
+was confirmed RUNNING at9:47:32; OrthoMCL21713 and strata21896 remain pending.
+All prior flags, failures and publication limitations remain retained.
+
 ## All Three Dual Native Diagnostics Audited (2026-09-19)
 
 All three jobs and recorder21915 completed successfully. After the quiet
