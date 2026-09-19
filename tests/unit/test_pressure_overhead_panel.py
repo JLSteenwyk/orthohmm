@@ -34,6 +34,15 @@ def test_batch_launcher_uses_pinned_environment_for_native_enumerator():
     assert '--plan-sha ' + module.PRESSURE_PLAN_SHA in script
 
 
+def test_v2_batch_pins_transferred_recipe_and_authorization():
+    script = (RESULTS.parent / 'run_dgx_pressure_overhead_v2.sbatch').read_text()
+    assert '"$ROOT/envs/orthohmm/bin/python" -B' in script
+    assert '--plan-sha ' + module.PRESSURE_PLAN_V2_SHA in script
+    for name, flag in [('recipe', '--recipe-sha '), ('authorization', '--authorization-sha ')]:
+        path = RESULTS / f'dgx_pressure_overhead_{name}_v2_20260919.json'
+        assert flag + hashlib.sha256(path.read_bytes()).hexdigest() in script
+
+
 def test_plan_only_changes_observation_and_output_locations():
     original = json.loads(PARENT.read_text())
     plan = json.loads(PLAN.read_text())

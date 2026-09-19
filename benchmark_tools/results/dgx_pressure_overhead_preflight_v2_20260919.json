@@ -1,0 +1,123 @@
+{
+  "executable": "/home/jlsteenwyk/projects/orthohmm-publication/envs/orthohmm/bin/python",
+  "python": "3.10.13 | packaged by conda-forge | (main, Dec 23 2023, 15:26:55) [GCC 12.3.0]",
+  "runtime_checks": [
+    {
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/trees.json",
+      "sha256": "2f38fc57683e51a7b6768b4709db16293590983640c41cfe12a56ed6036750ae",
+      "status": "runtime_tree_identity_matches",
+      "records": 26673,
+      "scientific_execution_authorized": false
+    },
+    {
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/runtime_inventory_v1/system_trees.json",
+      "sha256": "4083d15c0ffc40013756c4588763aa8af24ca39165622665ee5074662e4b46ce",
+      "status": "runtime_tree_identity_matches",
+      "records": 10066,
+      "scientific_execution_authorized": false
+    },
+    {
+      "path": "/home/jlsteenwyk/projects/orthohmm-publication/pressure_overhead_recipe_v2_manifest.json",
+      "sha256": "50fc3a14c4d5b53c4eb158a22efcfb8b289b346718fad3c78b300172e319d8a1",
+      "status": "runtime_tree_identity_matches",
+      "records": 429,
+      "scientific_execution_authorized": false
+    }
+  ],
+  "native_order": [
+    "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+    "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+    "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+    "Gallus_gallus.GRCg6a.pep.all.fa"
+  ],
+  "input_checks": [
+    [
+      {
+        "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+        "bytes": 8784620,
+        "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+      },
+      {
+        "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+        "bytes": 12000073,
+        "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+      },
+      {
+        "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+        "bytes": 7778910,
+        "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+      },
+      {
+        "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Gallus_gallus.GRCg6a.pep.all.fa",
+        "bytes": 9883133,
+        "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+      }
+    ],
+    [
+      {
+        "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+        "bytes": 8784620,
+        "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+      },
+      {
+        "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+        "bytes": 12000073,
+        "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+      },
+      {
+        "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+        "bytes": 7778910,
+        "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+      },
+      {
+        "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Gallus_gallus.GRCg6a.pep.all.fa",
+        "bytes": 9883133,
+        "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+      }
+    ],
+    [
+      {
+        "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+        "bytes": 8784620,
+        "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+      },
+      {
+        "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+        "bytes": 12000073,
+        "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+      },
+      {
+        "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+        "bytes": 7778910,
+        "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+      },
+      {
+        "path": "/home/jlsteenwyk/projects/orthohmm-publication/scaling_inputs_v1/4/Gallus_gallus.GRCg6a.pep.all.fa",
+        "bytes": 9883133,
+        "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+      }
+    ]
+  ],
+  "selected_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "archive_sha256": "e4754098bb4210d26645e7189f1069413bbf2fff7fd7fdf90b4255f02e479071",
+  "native_execution_started": false
+}
