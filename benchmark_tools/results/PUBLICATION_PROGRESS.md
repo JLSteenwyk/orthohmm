@@ -1,5 +1,23 @@
 # Publication Progress
 
+## CPM Scoring and Independent Admission Queued (2026-09-19)
+
+CPM scoring 21982 and score admission 21984 are confirmed PENDING, with
+two serial tasks each. Frozen executors 43becaf and e4b1305 are pushed.
+Scoring uses 8 CPUs/96 GiB afterany+aftercorr:21978; admission uses 2 CPUs/
+64 GiB afterany+aftercorr:21982. Exact commands, source/batch hashes,
+namespaces and limitations are in
+`QFO_CPM_ASSESSMENT_SUBMISSIONS_21982_21984.md`.
+
+The runner requires admitted native pair semantics, zero mapping loss and
+frozen context/environment; the independent validator checks terminal
+execution, all outputs and shared six-endpoint raw arithmetic. Neither
+changes defaults, endpoints or the parameter protocol. Focused suites
+passed 115 and 142 tests (overlapping); both frozen CLI imports and batch
+syntax passed. Real CPM scores are still unavailable. The full CPM chain
+is now connected through score admission; corrected family-count extraction
+and the six-arm/18-contrast uncertainty wrapper remain next.
+
 ## DGX Dual-Collector Panel Audited (2026-09-19)
 
 Previous continuation made progress by checking additional public TreeFam
