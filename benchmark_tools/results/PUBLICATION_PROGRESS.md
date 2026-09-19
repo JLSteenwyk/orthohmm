@@ -1,5 +1,21 @@
 # Publication Progress
 
+## DGX CPU Flags Described (2026-09-19)
+
+Previous turn made progress by recording additional TreeFam retrieval
+evidence; originals remain unavailable. Corrected full OrthoFinder 21706_1
+is confirmed RUNNING (8:21:02); OrthoMCL 21713 waits for resources and
+strata 21896 waits for dependencies. No jobs were restarted.
+
+Finished the pressure-flag summary with 13 passing tests, fixing identical
+duplicate evidence references while rejecting conflicts. Eight audited
+periodic reports were hash-verified before and after reading. All flags
+are positive residual flags; retained read overhangs show that overlapping
+host brackets remain a concrete measurement concern, not identified foreign
+CPU. [Results and next test](DGX_PRESSURE_FLAGS_21889_20260919.md).
+No eligibility rules changed; no scientific scaling timings are admitted.
+Publication readiness remains unproven.
+
 ## DGX Identity Failures Localized (2026-09-19)
 
 Previous turn completed the corrected factorial. Added a diagnostic with

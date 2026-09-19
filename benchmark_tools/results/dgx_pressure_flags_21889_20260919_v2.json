@@ -1,0 +1,748 @@
+{
+  "evidence": [
+    {
+      "bytes": 749518,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/dgx_pressure_overhead_audit_21889_20260919.json.gz",
+      "sha256": "d656ae37dcb64d617a132c82391745e33bfd5f078f6c1df7186156f0022ea006"
+    },
+    {
+      "bytes": 43010093,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/pressure_overhead_archive_21889/pressure_frontier_overhead_v2/run_01/measurement/frontier_report.json",
+      "sha256": "71389c0d7b34df34f58665412e75ebe37140b4004ceb17bffbb40f0d1657d4f0"
+    },
+    {
+      "bytes": 63938917,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/pressure_overhead_archive_21889/pressure_frontier_overhead_v2/run_03/measurement/frontier_report.json",
+      "sha256": "ffa1f39f4580c9773a26399f60345ac53e75dcba8592621ae054062c59f667b3"
+    },
+    {
+      "bytes": 64331803,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/pressure_overhead_archive_21889/pressure_frontier_overhead_v2/run_06/measurement/frontier_report.json",
+      "sha256": "14f768f1a7bcb147a970b42e14e863c69da1cf3efa2129c78368634683df3aeb"
+    },
+    {
+      "bytes": 48412315,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/pressure_overhead_archive_21889/pressure_frontier_overhead_v2/run_08/measurement/frontier_report.json",
+      "sha256": "d886bfbc804ccec4ea1fa13e27eb728982b5272e4fa7b93e8f49ab5bdaa60f83"
+    },
+    {
+      "bytes": 42946126,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/pressure_overhead_archive_21889/pressure_frontier_overhead_v2/run_10/measurement/frontier_report.json",
+      "sha256": "2044b32bd614106612792623566004679a9a3eda40d3be50e5763c2fbf590b87"
+    },
+    {
+      "bytes": 48576654,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/pressure_overhead_archive_21889/pressure_frontier_overhead_v2/run_13/measurement/frontier_report.json",
+      "sha256": "f35a031ae1f941686548b5443761c2c273c1386a48a096398bde69e57c12d656"
+    },
+    {
+      "bytes": 42864971,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/pressure_overhead_archive_21889/pressure_frontier_overhead_v2/run_15/measurement/frontier_report.json",
+      "sha256": "bb0dff38cca32f4d0ea7e1985f47de8f75b7afb23664e0ae64845b0dd22f2e35"
+    },
+    {
+      "bytes": 62013096,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/pressure_overhead_archive_21889/pressure_frontier_overhead_v2/run_17/measurement/frontier_report.json",
+      "sha256": "ec41e935fe271d8f7174d7def8032f7a3d01783f142f35cd9feb5471e01aad3e"
+    }
+  ],
+  "limitations": [
+    "Descriptive summaries of audited reports, not an independent raw-counter replay.",
+    "Different counter windows prevent causal subtraction or timing correction.",
+    "No thresholds changed; failed tasks and unavailable intervals remain visible.",
+    "Pressure includes native work and does not identify external interference."
+  ],
+  "runs": [
+    {
+      "index": 0,
+      "method": "orthohmm_high_sensitivity",
+      "mode": "boundary",
+      "status": "validated"
+    },
+    {
+      "diagnostic": {
+        "flagged_intervals": 358,
+        "intervals": 548,
+        "native_pressure_whole_command": {
+          "controlled_workload_verified": false,
+          "limitations": [
+            "Native-step PSI includes all descendants and wrappers, not only one executable.",
+            "Host and native pressure cannot be subtracted to identify foreign interference.",
+            "Reads are non-atomic; no causal attribution, exclusion threshold or timing correction."
+          ],
+          "native_stall_usec": {
+            "cpu": {
+              "full": 892613,
+              "some": 1760557
+            },
+            "io": {
+              "full": 49964,
+              "some": 49965
+            },
+            "memory": {
+              "full": 0,
+              "some": 0
+            }
+          },
+          "scientific_timings_admitted": false,
+          "status": "native_step_pressure_diagnostic"
+        },
+        "outer_read_overhang_s": {
+          "maximum": 0.024619045,
+          "median": 0.018883908499999998,
+          "minimum": 0.00854382
+        },
+        "outside_frontier_cpu_s": {
+          "maximum": 0.024084999999999992,
+          "median": 0.000887,
+          "minimum": 0.000402
+        },
+        "reasons": {
+          "excess_unassigned_cpu": 358
+        },
+        "root_minus_frontier_cpu_s": {
+          "maximum": 0.161443000000002,
+          "median": 0.05544100000000185,
+          "minimum": -0.006617000000000095
+        },
+        "signed_residual_cores": {
+          "maximum": 0.5666837841209926,
+          "median": 0.3999027572600382,
+          "minimum": 0.03647322218120213
+        },
+        "whole_command": {
+          "controlled_workload_verified": false,
+          "host_busy_cpu_s": 9574.35,
+          "limitations": [
+            "Operational thresholds, not calibrated probabilistic or deterministic interference bounds.",
+            "Unassigned CPU includes observer, kernel and launch/exit work; it is not identified foreign CPU.",
+            "Counter accounting granularity/delay and non-CPU interference remain unresolved.",
+            "A run-wide average can hide concentrated bursts; interval-level monitoring remains necessary.",
+            "No subtraction from native wall time or correction of performance results is permitted."
+          ],
+          "maximum_residual_cores": 0.25,
+          "native_cpu_s": 9544.87727,
+          "negative_tolerance_cpu_s": 0.5,
+          "reasons": [],
+          "scientific_timings_admitted": false,
+          "screen_passed": true,
+          "signed_unassigned_average_cores": 0.05381476989952575,
+          "signed_unassigned_cpu_s": 29.4727299999995,
+          "status": "bracketed_cpu_operational_screen",
+          "work_wall_s": 547.669906515
+        }
+      },
+      "index": 1,
+      "method": "orthohmm_high_sensitivity",
+      "mode": "periodic",
+      "status": "validated"
+    },
+    {
+      "index": 2,
+      "method": "orthohmm_satellite_v2",
+      "mode": "boundary",
+      "status": "validated"
+    },
+    {
+      "diagnostic": {
+        "flagged_intervals": 527,
+        "intervals": 815,
+        "native_pressure_whole_command": {
+          "controlled_workload_verified": false,
+          "limitations": [
+            "Native-step PSI includes all descendants and wrappers, not only one executable.",
+            "Host and native pressure cannot be subtracted to identify foreign interference.",
+            "Reads are non-atomic; no causal attribution, exclusion threshold or timing correction."
+          ],
+          "native_stall_usec": {
+            "cpu": {
+              "full": 2033619,
+              "some": 23822815
+            },
+            "io": {
+              "full": 52324,
+              "some": 58788
+            },
+            "memory": {
+              "full": 107,
+              "some": 367
+            }
+          },
+          "scientific_timings_admitted": false,
+          "status": "native_step_pressure_diagnostic"
+        },
+        "outer_read_overhang_s": {
+          "maximum": 0.024489272,
+          "median": 0.01365054,
+          "minimum": 0.009069705
+        },
+        "outside_frontier_cpu_s": {
+          "maximum": 0.016911,
+          "median": 0.001108,
+          "minimum": 0.00036
+        },
+        "reasons": {
+          "excess_unassigned_cpu": 527
+        },
+        "root_minus_frontier_cpu_s": {
+          "maximum": 0.38713700000000273,
+          "median": 0.06058599999999714,
+          "minimum": -0.01168799999999992
+        },
+        "signed_residual_cores": {
+          "maximum": 0.6674551824857459,
+          "median": 0.37941722198332734,
+          "minimum": 0.02858431262662714
+        },
+        "whole_command": {
+          "controlled_workload_verified": false,
+          "host_busy_cpu_s": 13150.8,
+          "limitations": [
+            "Operational thresholds, not calibrated probabilistic or deterministic interference bounds.",
+            "Unassigned CPU includes observer, kernel and launch/exit work; it is not identified foreign CPU.",
+            "Counter accounting granularity/delay and non-CPU interference remain unresolved.",
+            "A run-wide average can hide concentrated bursts; interval-level monitoring remains necessary.",
+            "No subtraction from native wall time or correction of performance results is permitted."
+          ],
+          "maximum_residual_cores": 0.25,
+          "native_cpu_s": 13092.735835,
+          "negative_tolerance_cpu_s": 0.5,
+          "reasons": [],
+          "scientific_timings_admitted": false,
+          "screen_passed": true,
+          "signed_unassigned_average_cores": 0.07129449091044726,
+          "signed_unassigned_cpu_s": 58.064164999999775,
+          "status": "bracketed_cpu_operational_screen",
+          "work_wall_s": 814.427093293
+        }
+      },
+      "index": 3,
+      "method": "orthohmm_satellite_v2",
+      "mode": "periodic",
+      "status": "validated"
+    },
+    {
+      "index": 4,
+      "method": "orthofinder_full",
+      "mode": "boundary",
+      "status": "validated"
+    },
+    {
+      "index": 5,
+      "method": "orthofinder_full",
+      "mode": "periodic",
+      "status": "failed"
+    },
+    {
+      "diagnostic": {
+        "flagged_intervals": 493,
+        "intervals": 820,
+        "native_pressure_whole_command": {
+          "controlled_workload_verified": false,
+          "limitations": [
+            "Native-step PSI includes all descendants and wrappers, not only one executable.",
+            "Host and native pressure cannot be subtracted to identify foreign interference.",
+            "Reads are non-atomic; no causal attribution, exclusion threshold or timing correction."
+          ],
+          "native_stall_usec": {
+            "cpu": {
+              "full": 1903839,
+              "some": 23703046
+            },
+            "io": {
+              "full": 53645,
+              "some": 61549
+            },
+            "memory": {
+              "full": 105,
+              "some": 156
+            }
+          },
+          "scientific_timings_admitted": false,
+          "status": "native_step_pressure_diagnostic"
+        },
+        "outer_read_overhang_s": {
+          "maximum": 0.025463861,
+          "median": 0.012051946000000001,
+          "minimum": 0.008615273
+        },
+        "outside_frontier_cpu_s": {
+          "maximum": 0.02775,
+          "median": 0.0010825000000000001,
+          "minimum": 0.000281
+        },
+        "reasons": {
+          "excess_unassigned_cpu": 493
+        },
+        "root_minus_frontier_cpu_s": {
+          "maximum": 0.36628999999999934,
+          "median": 0.048995499999998415,
+          "minimum": -0.004701999999999984
+        },
+        "signed_residual_cores": {
+          "maximum": 0.6865751798001549,
+          "median": 0.3139916637156043,
+          "minimum": 0.03474516467395889
+        },
+        "whole_command": {
+          "controlled_workload_verified": false,
+          "host_busy_cpu_s": 13140.54,
+          "limitations": [
+            "Operational thresholds, not calibrated probabilistic or deterministic interference bounds.",
+            "Unassigned CPU includes observer, kernel and launch/exit work; it is not identified foreign CPU.",
+            "Counter accounting granularity/delay and non-CPU interference remain unresolved.",
+            "A run-wide average can hide concentrated bursts; interval-level monitoring remains necessary.",
+            "No subtraction from native wall time or correction of performance results is permitted."
+          ],
+          "maximum_residual_cores": 0.25,
+          "native_cpu_s": 13084.208507,
+          "negative_tolerance_cpu_s": 0.5,
+          "reasons": [],
+          "scientific_timings_admitted": false,
+          "screen_passed": true,
+          "signed_unassigned_average_cores": 0.06872483381476936,
+          "signed_unassigned_cpu_s": 56.3314930000015,
+          "status": "bracketed_cpu_operational_screen",
+          "work_wall_s": 819.667213046
+        }
+      },
+      "index": 6,
+      "method": "orthohmm_satellite_v2",
+      "mode": "periodic",
+      "status": "validated"
+    },
+    {
+      "index": 7,
+      "method": "orthohmm_satellite_v2",
+      "mode": "boundary",
+      "status": "validated"
+    },
+    {
+      "diagnostic": {
+        "flagged_intervals": 177,
+        "intervals": 617,
+        "native_pressure_whole_command": {
+          "controlled_workload_verified": false,
+          "limitations": [
+            "Native-step PSI includes all descendants and wrappers, not only one executable.",
+            "Host and native pressure cannot be subtracted to identify foreign interference.",
+            "Reads are non-atomic; no causal attribution, exclusion threshold or timing correction."
+          ],
+          "native_stall_usec": {
+            "cpu": {
+              "full": 355872,
+              "some": 2876031
+            },
+            "io": {
+              "full": 796704,
+              "some": 804588
+            },
+            "memory": {
+              "full": 1,
+              "some": 1
+            }
+          },
+          "scientific_timings_admitted": false,
+          "status": "native_step_pressure_diagnostic"
+        },
+        "outer_read_overhang_s": {
+          "maximum": 0.025824937,
+          "median": 0.009524757,
+          "minimum": 0.008843062
+        },
+        "outside_frontier_cpu_s": {
+          "maximum": 0.023768,
+          "median": 0.0011949999999999999,
+          "minimum": 0.000657
+        },
+        "reasons": {
+          "excess_unassigned_cpu": 177
+        },
+        "root_minus_frontier_cpu_s": {
+          "maximum": 0.20315599999999634,
+          "median": 0.007754999999999956,
+          "minimum": -0.23433600000000032
+        },
+        "signed_residual_cores": {
+          "maximum": 0.6262734999239107,
+          "median": 0.07703350625374193,
+          "minimum": -0.18099584878209748
+        },
+        "whole_command": {
+          "controlled_workload_verified": false,
+          "host_busy_cpu_s": 4529.67,
+          "limitations": [
+            "Operational thresholds, not calibrated probabilistic or deterministic interference bounds.",
+            "Unassigned CPU includes observer, kernel and launch/exit work; it is not identified foreign CPU.",
+            "Counter accounting granularity/delay and non-CPU interference remain unresolved.",
+            "A run-wide average can hide concentrated bursts; interval-level monitoring remains necessary.",
+            "No subtraction from native wall time or correction of performance results is permitted."
+          ],
+          "maximum_residual_cores": 0.25,
+          "native_cpu_s": 4506.376089,
+          "negative_tolerance_cpu_s": 0.5,
+          "reasons": [],
+          "scientific_timings_admitted": false,
+          "screen_passed": true,
+          "signed_unassigned_average_cores": 0.03778769125143936,
+          "signed_unassigned_cpu_s": 23.293910999999753,
+          "status": "bracketed_cpu_operational_screen",
+          "work_wall_s": 616.44176261
+        }
+      },
+      "index": 8,
+      "method": "orthofinder_full",
+      "mode": "periodic",
+      "status": "validated"
+    },
+    {
+      "index": 9,
+      "method": "orthofinder_full",
+      "mode": "boundary",
+      "status": "validated"
+    },
+    {
+      "diagnostic": {
+        "flagged_intervals": 380,
+        "intervals": 547,
+        "native_pressure_whole_command": {
+          "controlled_workload_verified": false,
+          "limitations": [
+            "Native-step PSI includes all descendants and wrappers, not only one executable.",
+            "Host and native pressure cannot be subtracted to identify foreign interference.",
+            "Reads are non-atomic; no causal attribution, exclusion threshold or timing correction."
+          ],
+          "native_stall_usec": {
+            "cpu": {
+              "full": 897582,
+              "some": 1779876
+            },
+            "io": {
+              "full": 30997,
+              "some": 30997
+            },
+            "memory": {
+              "full": 0,
+              "some": 0
+            }
+          },
+          "scientific_timings_admitted": false,
+          "status": "native_step_pressure_diagnostic"
+        },
+        "outer_read_overhang_s": {
+          "maximum": 0.027868611,
+          "median": 0.018812268,
+          "minimum": 0.009161149
+        },
+        "outside_frontier_cpu_s": {
+          "maximum": 0.01844,
+          "median": 0.0008399999999999998,
+          "minimum": 0.000323
+        },
+        "reasons": {
+          "excess_unassigned_cpu": 380
+        },
+        "root_minus_frontier_cpu_s": {
+          "maximum": 0.1752900000000004,
+          "median": 0.06002099999999899,
+          "minimum": -0.010736000000000079
+        },
+        "signed_residual_cores": {
+          "maximum": 0.6076297908681881,
+          "median": 0.4176063231969358,
+          "minimum": 0.0293016047230466
+        },
+        "whole_command": {
+          "controlled_workload_verified": false,
+          "host_busy_cpu_s": 9543.11,
+          "limitations": [
+            "Operational thresholds, not calibrated probabilistic or deterministic interference bounds.",
+            "Unassigned CPU includes observer, kernel and launch/exit work; it is not identified foreign CPU.",
+            "Counter accounting granularity/delay and non-CPU interference remain unresolved.",
+            "A run-wide average can hide concentrated bursts; interval-level monitoring remains necessary.",
+            "No subtraction from native wall time or correction of performance results is permitted."
+          ],
+          "maximum_residual_cores": 0.25,
+          "native_cpu_s": 9513.432737,
+          "negative_tolerance_cpu_s": 0.5,
+          "reasons": [],
+          "scientific_timings_admitted": false,
+          "screen_passed": true,
+          "signed_unassigned_average_cores": 0.05430637672653601,
+          "signed_unassigned_cpu_s": 29.677263000001403,
+          "status": "bracketed_cpu_operational_screen",
+          "work_wall_s": 546.478420931
+        }
+      },
+      "index": 10,
+      "method": "orthohmm_high_sensitivity",
+      "mode": "periodic",
+      "status": "validated"
+    },
+    {
+      "index": 11,
+      "method": "orthohmm_high_sensitivity",
+      "mode": "boundary",
+      "status": "validated"
+    },
+    {
+      "index": 12,
+      "method": "orthofinder_full",
+      "mode": "boundary",
+      "status": "failed"
+    },
+    {
+      "diagnostic": {
+        "flagged_intervals": 175,
+        "intervals": 619,
+        "native_pressure_whole_command": {
+          "controlled_workload_verified": false,
+          "limitations": [
+            "Native-step PSI includes all descendants and wrappers, not only one executable.",
+            "Host and native pressure cannot be subtracted to identify foreign interference.",
+            "Reads are non-atomic; no causal attribution, exclusion threshold or timing correction."
+          ],
+          "native_stall_usec": {
+            "cpu": {
+              "full": 363901,
+              "some": 2840055
+            },
+            "io": {
+              "full": 841740,
+              "some": 849809
+            },
+            "memory": {
+              "full": 1,
+              "some": 1
+            }
+          },
+          "scientific_timings_admitted": false,
+          "status": "native_step_pressure_diagnostic"
+        },
+        "outer_read_overhang_s": {
+          "maximum": 0.024768419,
+          "median": 0.009466804,
+          "minimum": 0.009054388
+        },
+        "outside_frontier_cpu_s": {
+          "maximum": 0.019533000000000002,
+          "median": 0.0013340000000000001,
+          "minimum": 0.000657
+        },
+        "reasons": {
+          "excess_unassigned_cpu": 175
+        },
+        "root_minus_frontier_cpu_s": {
+          "maximum": 0.2882850000000019,
+          "median": 0.007213999999999832,
+          "minimum": -0.22790599999999905
+        },
+        "signed_residual_cores": {
+          "maximum": 0.5828995233228406,
+          "median": 0.07646642474308672,
+          "minimum": -0.17220111985016973
+        },
+        "whole_command": {
+          "controlled_workload_verified": false,
+          "host_busy_cpu_s": 4541.53,
+          "limitations": [
+            "Operational thresholds, not calibrated probabilistic or deterministic interference bounds.",
+            "Unassigned CPU includes observer, kernel and launch/exit work; it is not identified foreign CPU.",
+            "Counter accounting granularity/delay and non-CPU interference remain unresolved.",
+            "A run-wide average can hide concentrated bursts; interval-level monitoring remains necessary.",
+            "No subtraction from native wall time or correction of performance results is permitted."
+          ],
+          "maximum_residual_cores": 0.25,
+          "native_cpu_s": 4518.473991,
+          "negative_tolerance_cpu_s": 0.5,
+          "reasons": [],
+          "scientific_timings_admitted": false,
+          "screen_passed": true,
+          "signed_unassigned_average_cores": 0.03726490175898032,
+          "signed_unassigned_cpu_s": 23.056008999999904,
+          "status": "bracketed_cpu_operational_screen",
+          "work_wall_s": 618.705750229
+        }
+      },
+      "index": 13,
+      "method": "orthofinder_full",
+      "mode": "periodic",
+      "status": "validated"
+    },
+    {
+      "index": 14,
+      "method": "orthohmm_high_sensitivity",
+      "mode": "boundary",
+      "status": "validated"
+    },
+    {
+      "diagnostic": {
+        "flagged_intervals": 333,
+        "intervals": 546,
+        "native_pressure_whole_command": {
+          "controlled_workload_verified": false,
+          "limitations": [
+            "Native-step PSI includes all descendants and wrappers, not only one executable.",
+            "Host and native pressure cannot be subtracted to identify foreign interference.",
+            "Reads are non-atomic; no causal attribution, exclusion threshold or timing correction."
+          ],
+          "native_stall_usec": {
+            "cpu": {
+              "full": 862152,
+              "some": 1580072
+            },
+            "io": {
+              "full": 43335,
+              "some": 43335
+            },
+            "memory": {
+              "full": 0,
+              "some": 0
+            }
+          },
+          "scientific_timings_admitted": false,
+          "status": "native_step_pressure_diagnostic"
+        },
+        "outer_read_overhang_s": {
+          "maximum": 0.028403277,
+          "median": 0.0134409315,
+          "minimum": 0.008699292
+        },
+        "outside_frontier_cpu_s": {
+          "maximum": 0.018614,
+          "median": 0.000879,
+          "minimum": 0.000336
+        },
+        "reasons": {
+          "excess_unassigned_cpu": 333
+        },
+        "root_minus_frontier_cpu_s": {
+          "maximum": 0.16277999999999793,
+          "median": 0.04117099999999674,
+          "minimum": -0.009957999999999911
+        },
+        "signed_residual_cores": {
+          "maximum": 0.6381308807161348,
+          "median": 0.29192032425054076,
+          "minimum": 0.02465335631139698
+        },
+        "whole_command": {
+          "controlled_workload_verified": false,
+          "host_busy_cpu_s": 9509.18,
+          "limitations": [
+            "Operational thresholds, not calibrated probabilistic or deterministic interference bounds.",
+            "Unassigned CPU includes observer, kernel and launch/exit work; it is not identified foreign CPU.",
+            "Counter accounting granularity/delay and non-CPU interference remain unresolved.",
+            "A run-wide average can hide concentrated bursts; interval-level monitoring remains necessary.",
+            "No subtraction from native wall time or correction of performance results is permitted."
+          ],
+          "maximum_residual_cores": 0.25,
+          "native_cpu_s": 9483.016369,
+          "negative_tolerance_cpu_s": 0.5,
+          "reasons": [],
+          "scientific_timings_admitted": false,
+          "screen_passed": true,
+          "signed_unassigned_average_cores": 0.04793346088259179,
+          "signed_unassigned_cpu_s": 26.16363099999944,
+          "status": "bracketed_cpu_operational_screen",
+          "work_wall_s": 545.832295817
+        }
+      },
+      "index": 15,
+      "method": "orthohmm_high_sensitivity",
+      "mode": "periodic",
+      "status": "validated"
+    },
+    {
+      "index": 16,
+      "method": "orthohmm_satellite_v2",
+      "mode": "boundary",
+      "status": "validated"
+    },
+    {
+      "diagnostic": {
+        "flagged_intervals": 554,
+        "intervals": 790,
+        "native_pressure_whole_command": {
+          "controlled_workload_verified": false,
+          "limitations": [
+            "Native-step PSI includes all descendants and wrappers, not only one executable.",
+            "Host and native pressure cannot be subtracted to identify foreign interference.",
+            "Reads are non-atomic; no causal attribution, exclusion threshold or timing correction."
+          ],
+          "native_stall_usec": {
+            "cpu": {
+              "full": 2012952,
+              "some": 23841488
+            },
+            "io": {
+              "full": 60433,
+              "some": 65864
+            },
+            "memory": {
+              "full": 112,
+              "some": 444
+            }
+          },
+          "scientific_timings_admitted": false,
+          "status": "native_step_pressure_diagnostic"
+        },
+        "outer_read_overhang_s": {
+          "maximum": 0.02581668,
+          "median": 0.018397331,
+          "minimum": 0.008706324
+        },
+        "outside_frontier_cpu_s": {
+          "maximum": 0.022593,
+          "median": 0.00105,
+          "minimum": 0.00036700000000000003
+        },
+        "reasons": {
+          "excess_unassigned_cpu": 554
+        },
+        "root_minus_frontier_cpu_s": {
+          "maximum": 0.47864099999999965,
+          "median": 0.06085050000000081,
+          "minimum": -0.007578000000000085
+        },
+        "signed_residual_cores": {
+          "maximum": 0.7191232702652144,
+          "median": 0.3988460896269452,
+          "minimum": 0.038554730760418626
+        },
+        "whole_command": {
+          "controlled_workload_verified": false,
+          "host_busy_cpu_s": 13109.42,
+          "limitations": [
+            "Operational thresholds, not calibrated probabilistic or deterministic interference bounds.",
+            "Unassigned CPU includes observer, kernel and launch/exit work; it is not identified foreign CPU.",
+            "Counter accounting granularity/delay and non-CPU interference remain unresolved.",
+            "A run-wide average can hide concentrated bursts; interval-level monitoring remains necessary.",
+            "No subtraction from native wall time or correction of performance results is permitted."
+          ],
+          "maximum_residual_cores": 0.25,
+          "native_cpu_s": 13050.988776,
+          "negative_tolerance_cpu_s": 0.5,
+          "reasons": [],
+          "scientific_timings_admitted": false,
+          "screen_passed": true,
+          "signed_unassigned_average_cores": 0.07400923408047327,
+          "signed_unassigned_cpu_s": 58.43122399999993,
+          "status": "bracketed_cpu_operational_screen",
+          "work_wall_s": 789.512615905
+        }
+      },
+      "index": 17,
+      "method": "orthohmm_satellite_v2",
+      "mode": "periodic",
+      "status": "validated"
+    }
+  ],
+  "scientific_timings_admitted": false,
+  "source": {
+    "bytes": 4149,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/summarize_pressure_panel_flags.py",
+    "sha256": "99f97e8bce68ec843376d279bffd66985176f5286de3ff4f7dc673f0990dea59"
+  },
+  "status": "audited_pressure_flags_described"
+}
