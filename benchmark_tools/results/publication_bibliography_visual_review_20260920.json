@@ -1,0 +1,72 @@
+{
+  "changes": [
+    {
+      "after": "Computing in Science & Engineering",
+      "before": "Computing in Science &amp; Engineering",
+      "field": "container-title",
+      "id": "matplotlib2007"
+    }
+  ],
+  "chrome_version": "Google Chrome 134.0.6998.35",
+  "input": {
+    "bytes": 48884,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_bibliography_20260919_v3.csl.json",
+    "sha256": "353ff5508b647d8b49bdd5ca64b49f5ec870a4000f2dd0de73a942e234f68c4a"
+  },
+  "limitations": [
+    "One source-supported journal-name correction, not complete citation semantics or manuscript coverage.",
+    "FastME title suffix and TreeFam issue metadata still need source review.",
+    "Original source exports and v3 remain unchanged; new PDF timestamps may vary when regenerated."
+  ],
+  "output": {
+    "bytes": 48880,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_bibliography_20260920_v4.csl.json",
+    "sha256": "f22b41ee5757a656a08b69549a7b303cf22dd61aed9fe04287422f9fe4ab33db"
+  },
+  "review_artifacts": [
+    {
+      "bytes": 26846,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_bibliography_review_20260920/bibliography.html",
+      "sha256": "def754a45503272513fd65dcf9575a65de81399acf9d99a406b0aa17da3b00c7"
+    },
+    {
+      "bytes": 87307,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_bibliography_review_20260920/bibliography.pandoc.json",
+      "sha256": "655e30072340acc1c5d0c57fe0d0213ce4bf350012c1b1128c295ea4113920f9"
+    },
+    {
+      "bytes": 50840,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_bibliography_review_20260920/manifest.json",
+      "sha256": "665268c3a7b6bd93a56c4ef4d87b14d22feb5b8ebdca4714c2131b6dacd6f139"
+    },
+    {
+      "bytes": 125332,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_bibliography_review_20260920/bibliography.pdf",
+      "sha256": "a1237623e2bd30ce209095e0e3a3dfefdb755ceec901885a30f7851b2d33eb51"
+    }
+  ],
+  "source": {
+    "bytes": 16999,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_bibliography_visual_20260920/matplotlib_citing.html",
+    "sha256": "8d9585f874e909c197041b4a6b3426fd16e49fc7582594c7b5b88574863b3888"
+  },
+  "source_url": "https://matplotlib.org/3.4.0/citing.html",
+  "status": "one_field_correction_and_bounded_visual_review",
+  "visual_review": {
+    "corrected_pdf_pages_reviewed": [
+      3
+    ],
+    "findings": [
+      "No visible clipping in the original five-page print review; long author lists split across pages.",
+      "Literal ampersand entity corrected and visibly checked on new page 3.",
+      "Project metadata-review layout, not target-journal typography."
+    ],
+    "original_pdf_pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  }
+}

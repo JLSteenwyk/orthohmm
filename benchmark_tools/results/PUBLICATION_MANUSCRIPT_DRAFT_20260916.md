@@ -1,6 +1,6 @@
 # OrthoHMM: HMM-Centered Orthogroup Inference And Phylogenetic Refinement
 
-Working manuscript, updated 19 September 2026. Not submission-ready. Sections below
+Working manuscript, updated 20 September 2026. Not submission-ready. Sections below
 distinguish completed development-exposed analyses from prospective work.
 Internal evidence links are supplied for audit. An initial
 [verified literature bibliography](PUBLICATION_REFERENCES_20260917.md)
@@ -18,14 +18,16 @@ adds bounded attribution for TreeFam, SwissTree, FAS, VGNC and GO, including
 a [source-bound annotation citation export](publication_annotation_references_20260918.csl.json).
 Remaining dependency/resource citations and journal-specific
 formatting are incomplete.
-A [metadata-review rendering](publication_bibliography_review_20260919/bibliography.html)
+A [metadata-review rendering](publication_bibliography_review_20260920/bibliography.html)
 checks visibility of selected citation fields; it is not a journal-formatted
 bibliography or a complete coverage audit.
-The [consolidated selected bibliography](publication_bibliography_20260919_v3.csl.json)
+The [consolidated selected bibliography](publication_bibliography_20260920_v4.csl.json)
 contains 37 records from nine pinned exports, using the reviewed bylines
 and an explicitly transcribed official igraph article citation. The original
 36-record export is retained unchanged. The current export also restores
-the OrthoHMM author's `III` suffix using the author's publication list,
+the OrthoHMM author's `III` suffix using the author's publication list and
+corrects the visibly escaped Matplotlib journal-name ampersand using official
+citation guidance. V3 and raw exports remain unchanged,
 with the raw Crossref omission preserved and the evidence level documented
 in the [assembly notes](PUBLICATION_BIBLIOGRAPHY_ASSEMBLY_20260919.md).
 [Assembly instructions and limits](PUBLICATION_BIBLIOGRAPHY_ASSEMBLY_20260919.md)

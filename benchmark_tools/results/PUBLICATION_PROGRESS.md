@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Bibliography Print Review And Entity Correction (2026-09-20)
+
+Previous turn made progress reconciling installer alerts (`5401d77`). This
+turn advanced the outstanding bibliography visual review: Chrome printed the
+retained v3 HTML to five pages, all inspected. No visible clipping was found;
+long author lists cross page boundaries. Page 3 visibly rendered a literal
+`&amp;` in the Matplotlib journal name. Official Matplotlib citation guidance
+and IEEE support `Computing in Science & Engineering`.
+
+The new v4 CSL changes exactly that one field and retains all other metadata
+and all 37 entries. Earlier exports/rendering remain unchanged. Reran the
+existing Pandoc renderer, printed a new PDF and visually inspected corrected
+page 3. Committed source/output provenance records the bounded review scope;
+new pages other than page 3 have not been separately visually reviewed.
+The manuscript now links the corrected export and HTML. Full citation
+semantics, journal typography and manuscript coverage remain unverified;
+the observed FastME `Table 1` suffix and TreeFam issue `90001` are explicitly
+queued for primary-source review, not silently changed.
+
+All 63 citation/assembly/rendering tests pass in 1.10 seconds, including three
+new tests for exact one-field change, rendered fields and artifact hashes.
+This is not a scientific benchmark result, complete bibliography clearance or
+publication-ready render. BLAST 21713 remains RUNNING at elapsed 18:01:33.
+No job, scientific configuration or frozen environment changed. Controlled
+timing, pending comparator/robustness results and the full release package
+remain unfinished; the original goal stays active.
+
 ## Current Installer Alerts Reconciled (2026-09-20)
 
 Previous turn made progress with manuscript/status corrections (`ef4adcc`).

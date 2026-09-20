@@ -1,5 +1,46 @@
 # Consolidated Selected Bibliography
 
+## Visual Review And One-Field Correction (v4)
+
+The [current 37-record export](publication_bibliography_20260920_v4.csl.json)
+changes only the Matplotlib `container-title` from literal
+`Computing in Science &amp; Engineering` to `Computing in Science & Engineering`.
+The [official Matplotlib citation guidance](https://matplotlib.org/3.4.0/citing.html)
+and [IEEE article record](https://doi.org/10.1109/MCSE.2007.55) support the latter.
+All other fields, record order and reviewed author corrections are unchanged.
+Raw exports, v3 and its render remain historical evidence. V4 SHA-256:
+`f22b41ee5757a656a08b69549a7b303cf22dd61aed9fe04287422f9fe4ab33db`.
+
+Headless Chrome printed the original HTML to five letter-size pages. All
+five pages were visually inspected: no visible clipping, but long author
+lists split across pages. The literal entity was visible on page 3. After
+the correction, the existing Pandoc renderer produced a new
+[HTML review](publication_bibliography_review_20260920/bibliography.html) and
+[PDF](publication_bibliography_review_20260920/bibliography.pdf); new page 3
+was visually checked and shows the ampersand correctly. Other corrected PDF
+pages have not received a separate visual review. This is a project review
+layout, not journal submission typography or mobile-layout validation.
+
+[Correction and visual-review provenance](publication_bibliography_visual_review_20260920.json)
+records the downloaded official source, original/corrected CSL, rendered
+artifacts, browser version and exact review scope. Regression tests establish
+the one-field difference, all 37 rendered entries/checked fields and committed
+artifact hashes. PDF timestamps may differ on regeneration. Re-render with:
+
+```sh
+python benchmark_tools/render_publication_bibliography.py \
+  --bibliography benchmark_tools/results/publication_bibliography_20260920_v4.csl.json \
+  --style benchmark_tools/publication-review.csl --output NEW_REVIEW_DIRECTORY
+google-chrome --headless --disable-gpu --no-pdf-header-footer \
+  --print-to-pdf=ABSOLUTE_NEW_PDF file:///ABSOLUTE_NEW_REVIEW_DIRECTORY/bibliography.html
+```
+
+Full citation semantics and manuscript coverage remain unverified. The
+render exposes a FastME title ending in `Table 1` and a TreeFam issue of
+`90001`; these require primary-source review rather than silent cleanup.
+Publisher/volume/pagination/date checks, journal style and rights remain open.
+The sections below describe the preserved earlier exports and their scope.
+
 ## Metadata Review Rendering
 
 The [rendered bibliography](publication_bibliography_review_20260919/bibliography.html)
