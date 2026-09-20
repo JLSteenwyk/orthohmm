@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Replacement Scaling Allocation Contract Checked (2026-09-20)
+
+Previous turn made progress with current-source regression evidence and the
+publication reproduction guide (`4c3751f`). Reread the full objective and
+confirmed corrected OrthoMCL BLAST21713 remains RUNNING; comparator and
+robustness jobs remain pending. No inference job or DGX service was changed.
+
+Returned to incomplete per-job executor integration. Added a read-only
+controller-record checker for the v2 plan's exclusive20CPU/96GiB24h allocation,
+with distinct RUNNING and terminal phases, strict job/resource/recipe-path
+checks, retained failures, no retries and no execution/timing authorization.
+It explicitly does not establish task-to-job binding, record freshness,
+environmental validity or session enclosure. The named future submission
+script is a prospective contract, not a deployed or authorized executor.
+
+All199 focused allocation/task-binding/controller/replay tests pass, including
+all27 frozen slots with constructed scheduler records, every terminal state,
+missing/duplicate fields and mutable-evidence/no-overwrite rejection. See
+[scope and usage](SCALING_ALLOCATION_CHECK_20260920.md). These tests are not
+native timing observations. No scientific plan or runtime was changed.
+
+Next remains full executor/session integration and environmental-policy
+authorization before replacement timing, plus pending scientific result
+admissions and manuscript/archive completion. The full goal stays active.
+
 ## Publication Entry Point And Full Regression Check (2026-09-20)
 
 Previous turn made progress by downloading and excluding the PhyloMCL QfO
