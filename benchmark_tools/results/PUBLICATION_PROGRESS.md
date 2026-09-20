@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Authorized DGX Service Maintenance (2026-09-20)
+
+User interrupted a verified wait on live BLAST21713 to request Samwise
+repair, then explicitly approved temporary stop/masking and restoration
+for timing. Created its missing working directory. Its configured Python
+also lacks scientific_openclaw; requested the trusted source location
+rather than installing an unverified similarly named package.
+
+Stopped only this service and briefly verified an effective higher-priority
+runtime mask after the ordinary runtime mask was shadowed by the existing
+home-directory unit. Follow-up found both masks gone and auto-restart active:
+the non-lingering user runtime does not survive between SSH sessions.
+Stopped it again; sustained suppression is NOT established. Timing must
+apply and verify masking inside its held session, then restore before exit.
+Persistent unit bytes and enabled configuration are unchanged.
+[Maintenance and restoration instructions](DGX_SERVICE_MAINTENANCE_20260920.md)
+record this failed persistence check and the outstanding application repair.
+Dedicated replacement timing remains unexecuted. Approval is now received;
+the environment/session/deployment checks still need completion before
+scientific timing can be admitted. Full publication goal remains incomplete.
+
 ## Frozen Scientific Source Archive Prepared (2026-09-20)
 
 Previous turn was a verified wait: the same BLAST job remained RUNNING after
