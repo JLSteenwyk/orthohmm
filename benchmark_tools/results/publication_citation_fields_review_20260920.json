@@ -1,0 +1,67 @@
+{
+  "acquisition_limits": "Direct curl requests to both article URLs returned HTTP403; no HTML source files downloaded and no access restrictions bypassed. Source statements are manual transcriptions from browser-visible publisher evidence, not hash-authenticated raw publisher exports.",
+  "artifacts": [
+    {
+      "bytes": 26839,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_bibliography_review_20260920_v5/bibliography.html",
+      "sha256": "8f39abf7bfbab163383ed2e18d97fad6082625d8d36be98c200b33c730dfb7da"
+    },
+    {
+      "bytes": 87236,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_bibliography_review_20260920_v5/bibliography.pandoc.json",
+      "sha256": "eb1bf60e1b9d2e60a203c2f5ca32175edd1ded87485449cc36638035cae908f1"
+    },
+    {
+      "bytes": 50829,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_bibliography_review_20260920_v5/manifest.json",
+      "sha256": "483680ee850fd79b25851fb4102f4ff9031015483463ce6e19f5ff214d3970da"
+    },
+    {
+      "bytes": 125364,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_bibliography_review_20260920_v5/bibliography.pdf",
+      "sha256": "b10afb610e9da518a0dd2c8fb24350c0cb67d00bc0ae2b7745ff7830e0a8a23b"
+    }
+  ],
+  "changes": [
+    {
+      "after": "FastME 2.0: A Comprehensive, Accurate, and Fast Distance-Based Phylogeny Inference Program",
+      "before": "FastME 2.0: A Comprehensive, Accurate, and Fast Distance-Based Phylogeny Inference Program: Table 1.",
+      "evidence": "Browser-accessed publisher article heading excludes the table suffix; article metadata matches DOI, volume 32, issue 10, pages 2798-2800.",
+      "field": "title",
+      "id": "fastme2015",
+      "source_url": "https://academic.oup.com/mbe/article/32/10/2798/1212138"
+    },
+    {
+      "after": "suppl_1",
+      "before": "90001",
+      "evidence": "Publisher article search result identifies volume 34, issue suppl_1, pages D572-D580 and the matching DOI; browser-accessed issue page confirms volume/issue/date.",
+      "field": "issue",
+      "id": "Li2006TreeFam",
+      "source_url": "https://academic.oup.com/nar/article/34/suppl_1/D572/1133584",
+      "supporting_url": "https://academic.oup.com/nar/issue/34/suppl_1"
+    }
+  ],
+  "input": {
+    "bytes": 48880,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_bibliography_20260920_v4.csl.json",
+    "sha256": "f22b41ee5757a656a08b69549a7b303cf22dd61aed9fe04287422f9fe4ab33db"
+  },
+  "limitations": [
+    "Only two fields corrected; previous exports remain unchanged.",
+    "Full citation semantics, manuscript coverage, journal formatting and rights remain separate unfinished requirements.",
+    "Citation issue correction does not recover original TreeFam benchmark trees or mapping."
+  ],
+  "output": {
+    "bytes": 48872,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_bibliography_20260920_v5.csl.json",
+    "sha256": "bc2669a4c291a86473c88db22cc575b46eca55b6ec6b049c9c2cf860cb372aef"
+  },
+  "reviewed_date": "2026-09-20",
+  "status": "two_publisher_supported_field_corrections",
+  "visual_review": {
+    "pages": [
+      3
+    ],
+    "result": "Both corrected fields visible without clipping on page 3; other v5 pages not separately visually inspected."
+  }
+}

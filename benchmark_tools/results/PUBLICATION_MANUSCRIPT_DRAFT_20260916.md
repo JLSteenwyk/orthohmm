@@ -18,16 +18,18 @@ adds bounded attribution for TreeFam, SwissTree, FAS, VGNC and GO, including
 a [source-bound annotation citation export](publication_annotation_references_20260918.csl.json).
 Remaining dependency/resource citations and journal-specific
 formatting are incomplete.
-A [metadata-review rendering](publication_bibliography_review_20260920/bibliography.html)
+A [metadata-review rendering](publication_bibliography_review_20260920_v5/bibliography.html)
 checks visibility of selected citation fields; it is not a journal-formatted
 bibliography or a complete coverage audit.
-The [consolidated selected bibliography](publication_bibliography_20260920_v4.csl.json)
+The [consolidated selected bibliography](publication_bibliography_20260920_v5.csl.json)
 contains 37 records from nine pinned exports, using the reviewed bylines
 and an explicitly transcribed official igraph article citation. The original
 36-record export is retained unchanged. The current export also restores
 the OrthoHMM author's `III` suffix using the author's publication list and
 corrects the visibly escaped Matplotlib journal-name ampersand using official
-citation guidance. V3 and raw exports remain unchanged,
+citation guidance. Publisher-supported corrections also remove a spurious
+FastME table-label title suffix and identify TreeFam's supplement issue.
+Earlier versions and raw exports remain unchanged,
 with the raw Crossref omission preserved and the evidence level documented
 in the [assembly notes](PUBLICATION_BIBLIOGRAPHY_ASSEMBLY_20260919.md).
 [Assembly instructions and limits](PUBLICATION_BIBLIOGRAPHY_ASSEMBLY_20260919.md)

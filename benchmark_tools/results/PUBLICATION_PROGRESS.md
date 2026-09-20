@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Two Publisher Citation Fields Corrected (2026-09-20)
+
+Previous turn made progress through visual review and the Matplotlib entity
+correction (`e0674ae`). This turn resolves the two specifically flagged fields
+against publisher-visible evidence: FastME's heading excludes the `Table 1`
+suffix, and the TreeFam article/issue metadata identify `suppl_1`, not `90001`.
+The new v5 export retains all 37 records and changes exactly those two fields
+from v4. Earlier exports and raw source metadata remain unchanged.
+
+Direct article HTML downloads returned HTTP403. Provenance explicitly records
+manual transcription from browser-visible publisher content/search metadata,
+not a locally authenticated raw publisher archive. No restriction was bypassed.
+Rebuilt HTML/AST with the existing Pandoc renderer and printed a new PDF;
+both corrected fields were visually inspected on page 3. Other v5 pages were
+not separately visually reviewed. Manuscript links and assembly notes now
+identify v5, while the earlier correction/render history is preserved.
+
+All 66 citation/assembly/rendering tests pass in 1.10 seconds, including exact
+two-field preservation, rendered issue/title checks and artifact identities.
+Scoped whitespace checks pass. Full citation semantics, manuscript coverage,
+journal typography and rights remain separate open requirements. This corrects
+TreeFam citation metadata only; missing original trees/mapping are not recovered.
+BLAST 21713 was verified RUNNING at elapsed 18:02:47; no scheduler, native
+inference or frozen environment changed. Pending corrected scientific results,
+controlled timing and the full publication/release package remain unfinished.
+
 ## Bibliography Print Review And Entity Correction (2026-09-20)
 
 Previous turn made progress reconciling installer alerts (`5401d77`). This

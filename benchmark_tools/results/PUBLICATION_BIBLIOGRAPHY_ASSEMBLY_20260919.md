@@ -1,5 +1,37 @@
 # Consolidated Selected Bibliography
 
+## Publisher Field Review (v5)
+
+The [current v5 export](publication_bibliography_20260920_v5.csl.json)
+resolves the two field questions raised by the v4 visual review:
+
+- FastME: remove the `: Table 1.` title suffix. The
+  [publisher article heading](https://academic.oup.com/mbe/article/32/10/2798/1212138)
+  gives the article title without it, with the same DOI and pages 2798-2800.
+- TreeFam: replace issue `90001` with `suppl_1`. The
+  [publisher article record](https://academic.oup.com/nar/article/34/suppl_1/D572/1133584)
+  and [issue page](https://academic.oup.com/nar/issue/34/suppl_1)
+  identify volume 34, supplement 1, January 2006, retaining pages D572-D580.
+
+These are explicit publisher-supported field corrections, not blanket
+normalization of imported metadata. All 37 entries, other fields and earlier
+exports remain unchanged. V5 SHA-256 is
+`bc2669a4c291a86473c88db22cc575b46eca55b6ec6b049c9c2cf860cb372aef`.
+The [review record](publication_citation_fields_review_20260920.json) states
+the evidence level: browser-visible publisher content/search metadata,
+with both direct article downloads returning HTTP403. No raw HTML archive
+was recovered or is claimed, and no access restriction was bypassed.
+
+The existing renderer produced a new
+[HTML](publication_bibliography_review_20260920_v5/bibliography.html) and
+[PDF](publication_bibliography_review_20260920_v5/bibliography.pdf). Both
+corrected fields were visually checked on PDF page 3; other v5 pages were not
+separately inspected. Regression checks preserve the complete inventory,
+exact two-field delta, rendered fields and committed artifact hashes.
+Use the reproduction command below with the v5 CSL path and a fresh output.
+Full citation coverage/semantics and journal formatting remain incomplete.
+This citation correction does not recover the missing TreeFam benchmark inputs.
+
 ## Visual Review And One-Field Correction (v4)
 
 The [current 37-record export](publication_bibliography_20260920_v4.csl.json)
