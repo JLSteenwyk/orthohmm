@@ -1,0 +1,60 @@
+{
+  "capture": {
+    "elapsed_s": 2.0023198219714686,
+    "jobs": [
+      21713
+    ],
+    "max_seconds": 2.0,
+    "missing": [
+      21713
+    ],
+    "observation_errors": 0,
+    "observation_limit_reached": true,
+    "polls": 1,
+    "retained": {},
+    "scientific_timings_admitted": false,
+    "sources": {
+      "capture_array_scheduler.py": "c692cb0fc28084558fb4e4f2d21282a94a6a93ceb32255660bbb3e8d8d279c64",
+      "capture_job_scheduler.py": "95f13a7488bfdcab18416243c61be74717a3b82d86eec6d87f8b6a02faab0315"
+    },
+    "status": "incomplete"
+  },
+  "command": [
+    "python",
+    "-m",
+    "benchmark_tools.capture_job_scheduler",
+    "--jobs",
+    "21713",
+    "--max-seconds",
+    "2",
+    "--output",
+    "benchmarks/work/scaling_scheduler_bound_smoke_20260920"
+  ],
+  "evidence": [
+    {
+      "bytes": 500,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/scaling_scheduler_bound_smoke_20260920/capture.json",
+      "sha256": "d358164f38fe34942d9c5469ee491874a0f04f1c7057a0644e30b61ce357477e"
+    },
+    {
+      "bytes": 1648,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/scaling_scheduler_bound_smoke_20260920/poll_000000_21713.json",
+      "sha256": "7caf0d0eab7c56a727bbe9d9c3bb704e5fcf5e29908e353d8d38f0fb6efb6f8e"
+    }
+  ],
+  "limitations": [
+    "Read-only two-second local controller observation; not a full-duration DGX test.",
+    "Exit 1 and incomplete are expected because the observed job remained running; no job termination is inferred.",
+    "Deadline bounds query/sleep requests, not OS scheduling or final evidence-writing latency.",
+    "No job submission, cancellation, retry or scientific timing admission occurred."
+  ],
+  "poll": {
+    "job_id": 21713,
+    "observed_unix_ns": 1789886150184637539,
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "JobId=21713 JobName=qfo_corrected_legacy_blast UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=18:26:27 TimeLimit=14-00:00:00 TimeMin=N/A SubmitTime=2026-09-18T01:25:36 EligibleTime=2026-09-18T01:25:36 AccrueTime=2026-09-18T01:25:36 StartTime=2026-09-19T08:09:23 EndTime=2026-10-03T08:09:23 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-19T08:09:23 Scheduler=Backfill Partition=gpu AllocNode:Sid=bizon-link:2008869 ReqNodeList=bizon ExcNodeList=(null) NodeList=bizon BatchHost=bizon NumNodes=1 NumCPUs=180 NumTasks=1 CPUs/Task=180 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=180,mem=900G,node=1,billing=180 AllocTRES=cpu=180,mem=900G,node=1,billing=180 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=180 MinMemoryNode=900G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_corrected_blast_v1/benchmark_tools/results/qfo_corrected_blast_batch_20260918.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_blast_21713.log StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_blast_21713.log TresPerTask=cpu=180 \n"
+  },
+  "process_exit_code": 1,
+  "status": "live_nonterminal_observation_bound_smoke"
+}

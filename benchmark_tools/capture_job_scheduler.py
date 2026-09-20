@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import math
 from pathlib import Path
 import re
 import subprocess
@@ -34,6 +35,8 @@ def terminal_record(raw, job):
 def capture(jobs, output, max_seconds=14400):
     if not jobs or len(set(jobs)) != len(jobs) or any(type(j) is not int or j <= 0 for j in jobs):
         raise ValueError("Require unique positive job IDs")
+    if type(max_seconds) not in (int, float) or not math.isfinite(max_seconds) or max_seconds <= 0:
+        raise ValueError("Require a finite positive observation duration")
     output.mkdir(parents=True, exist_ok=False)
     source = Path(__file__).resolve()
     sources = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in
@@ -43,10 +46,13 @@ def capture(jobs, output, max_seconds=14400):
         for job in jobs:
             if job in retained:
                 continue
+            remaining = max_seconds - (time.monotonic() - start)
+            if remaining <= 0:
+                break
             observation = dict(job_id=job, observed_unix_ns=time.time_ns())
             try:
                 p = subprocess.run(["scontrol", "show", "job", str(job), "--oneliner"],
-                                   capture_output=True, text=True, timeout=10)
+                                   capture_output=True, text=True, timeout=min(10, remaining))
                 observation.update(returncode=p.returncode, stdout=p.stdout, stderr=p.stderr)
                 if p.returncode:
                     errors += 1
@@ -65,22 +71,32 @@ def capture(jobs, output, max_seconds=14400):
                 stream.write("\n")
         poll += 1
         if len(retained) < len(jobs):
-            time.sleep(5)
+            remaining = max_seconds - (time.monotonic() - start)
+            if remaining > 0:
+                time.sleep(min(5, remaining))
     for name, digest in sources.items():
         if hashlib.sha256(source.with_name(name).read_bytes()).hexdigest() != digest:
             raise ValueError("Recorder source changed")
     result = dict(status="complete" if len(retained) == len(jobs) else "incomplete", jobs=jobs,
                   retained=retained, missing=[j for j in jobs if j not in retained], polls=poll,
-                  observation_errors=errors, sources=sources, scientific_timings_admitted=False)
+                  observation_errors=errors, sources=sources, scientific_timings_admitted=False,
+                  max_seconds=max_seconds, elapsed_s=time.monotonic() - start,
+                  observation_limit_reached=len(retained) < len(jobs))
     with (output / "capture.json").open("x") as stream:
         json.dump(result, stream, indent=2, sort_keys=True)
         stream.write("\n")
     return result
 
 
-if __name__ == "__main__":
+def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--jobs", nargs="+", type=int, required=True)
     parser.add_argument("--output", type=Path, required=True)
-    args = parser.parse_args()
-    raise SystemExit(0 if capture(args.jobs, args.output)["status"] == "complete" else 1)
+    parser.add_argument("--max-seconds", type=float, default=14400,
+                        help="Observation limit, not a job timeout (default: 14400 seconds)")
+    args = parser.parse_args(argv)
+    return 0 if capture(args.jobs, args.output, max_seconds=args.max_seconds)["status"] == "complete" else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Long-Run Scheduler Recorder CLI Added (2026-09-20)
+
+Previous turn made progress through the manuscript review artifact
+(`81040b2`). This turn returns to incomplete scaling integration: the recorder's
+Python API accepted longer durations, but its CLI always used four hours,
+shorter than the planned 24-hour allocations. Added explicit `--max-seconds`,
+finite-positive validation before output creation, remaining-budget query and
+sleep limits, and requested/elapsed observation fields. Existing callers
+retain the four-hour default. Historical frozen recipe copies remain unchanged.
+
+The recorder never submits, cancels or retries jobs. Limit expiry preserves
+uncaptured job identities as missing and returns incomplete. Seventeen job
+recorder and twenty array-recorder tests pass; the complete focused workflow
+suite passes 1,139 tests in 46.40 seconds. Simulated-clock coverage crosses
+the old four-hour boundary but is not a real full-duration test.
+
+A real two-second read-only controller smoke observed BLAST 21713 RUNNING,
+returned expected exit 1/incomplete after 2.00232 seconds with zero query
+errors, and retained its missing terminal status. A post-check confirmed
+the same job still RUNNING at elapsed 18:26:46. Full receipt and source
+identities are retained in `scaling_scheduler_bound_smoke_20260920.json`.
+No inference, job resources or service state changed. The observation note
+documents the future CLI and its timing/authority limits.
+
+Remaining scaling work: environmental-policy freeze and authorization,
+per-job launch/session and terminal-evidence integration, then real composed
+validation and native/environmental audits. Pending scientific comparators,
+robustness and the full publication package remain open. The goal stays active.
+
 ## Manuscript Render And Local Figure Access Checked (2026-09-20)
 
 Previous turn made progress with explicit selected-citation coverage
