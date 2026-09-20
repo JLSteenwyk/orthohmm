@@ -1,0 +1,1403 @@
+{
+  "accuracy_admitted": false,
+  "diagnostic_categories": {
+    "selenocysteine_replacement": 105,
+    "setup_failure": 10,
+    "short_query_failure": 2,
+    "statistics_failure": 8
+  },
+  "diagnostic_genes": 87,
+  "diagnostics": [
+    {
+      "gene": "tr|A0A0R4ILF4|A0A0R4ILF4_DANRE",
+      "messages": [
+        {
+          "category": "setup_failure",
+          "level": "WARNING",
+          "line": 1,
+          "message": "SetUpBlastSearch failed."
+        },
+        {
+          "category": "statistics_failure",
+          "level": "ERROR",
+          "line": 2,
+          "message": "BLASTSetUpSearch: Unable to calculate Karlin-Altschul params, check query sequence"
+        }
+      ],
+      "query_failed": true
+    },
+    {
+      "gene": "sp|Q0VFV6|SELS_DANRE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 3,
+          "message": "Blast: Selenocysteine (U) at position 189 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q1LVN8|SELO1_DANRE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 4,
+          "message": "Blast: Selenocysteine (U) at position 690 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q3Y4E2|SELN_DANRE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 5,
+          "message": "Blast: Selenocysteine (U) at position 430 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q502K9|SELT2_DANRE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 6,
+          "message": "Blast: Selenocysteine (U) at position 65 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q568W0|SELW_DANRE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 7,
+          "message": "Blast: Selenocysteine (U) at position 13 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q66I14|SPS3_DANRE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 8,
+          "message": "Blast: Selenocysteine (U) at position 50 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q66I79|SELK_DANRE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 9,
+          "message": "Blast: Selenocysteine (U) at position 92 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q6PBP3|PXL2A_DANRE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 10,
+          "message": "Blast: Selenocysteine (U) at position 74 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q6PHY8|SELTB_DANRE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 11,
+          "message": "Blast: Selenocysteine (U) at position 47 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q802F2|SELTA_DANRE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 12,
+          "message": "Blast: Selenocysteine (U) at position 47 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q802F3|SEP15_DANRE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 13,
+          "message": "Blast: Selenocysteine (U) at position 84 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q802G6|MSB1A_DANRE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 14,
+          "message": "Blast: Selenocysteine (U) at position 93 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q802G7|SELM_DANRE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 15,
+          "message": "Blast: Selenocysteine (U) at position 38 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q98SV0|SELPB_DANRE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 16,
+          "message": "Blast: Selenocysteine (U) at position 64 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q98SV1|SELPA_DANRE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 17,
+          "message": "Blast: Selenocysteine (U) at position 59 replaced by X"
+        },
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 18,
+          "message": "Blast: Selenocysteine (U) at position 267 replaced by X"
+        },
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 19,
+          "message": "Blast: Selenocysteine (U) at position 273 replaced by X"
+        },
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 20,
+          "message": "Blast: Selenocysteine (U) at position 279 replaced by X"
+        },
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 21,
+          "message": "Blast: Selenocysteine (U) at position 290 replaced by X"
+        },
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 22,
+          "message": "Blast: Selenocysteine (U) at position 292 replaced by X"
+        },
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 23,
+          "message": "Blast: Selenocysteine (U) at position 294 replaced by X"
+        },
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 24,
+          "message": "Blast: Selenocysteine (U) at position 310 replaced by X"
+        },
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 25,
+          "message": "Blast: Selenocysteine (U) at position 320 replaced by X"
+        },
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 26,
+          "message": "Blast: Selenocysteine (U) at position 322 replaced by X"
+        },
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 27,
+          "message": "Blast: Selenocysteine (U) at position 336 replaced by X"
+        },
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 28,
+          "message": "Blast: Selenocysteine (U) at position 338 replaced by X"
+        },
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 29,
+          "message": "Blast: Selenocysteine (U) at position 346 replaced by X"
+        },
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 30,
+          "message": "Blast: Selenocysteine (U) at position 353 replaced by X"
+        },
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 31,
+          "message": "Blast: Selenocysteine (U) at position 355 replaced by X"
+        },
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 32,
+          "message": "Blast: Selenocysteine (U) at position 362 replaced by X"
+        },
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 33,
+          "message": "Blast: Selenocysteine (U) at position 364 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|D0EYG3|SELW_CHICK",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 34,
+          "message": "Blast: Selenocysteine (U) at position 13 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|O42411|IOD1_CHICK",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 35,
+          "message": "Blast: Selenocysteine (U) at position 123 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|O42412|IOD3_CHICK",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 36,
+          "message": "Blast: Selenocysteine (U) at position 122 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|P83308|FARP_CHICK",
+      "messages": [
+        {
+          "category": "setup_failure",
+          "level": "WARNING",
+          "line": 37,
+          "message": "SetUpBlastSearch failed."
+        },
+        {
+          "category": "short_query_failure",
+          "level": "ERROR",
+          "line": 38,
+          "message": "Blast: Query must be at least twice wordsize for two hit mode"
+        }
+      ],
+      "query_failed": true
+    },
+    {
+      "gene": "sp|Q5ZI34|PXL2A_CHICK",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 39,
+          "message": "Blast: Selenocysteine (U) at position 85 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q5ZJN8|SELT_CHICK",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 40,
+          "message": "Blast: Selenocysteine (U) at position 53 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q9IAX2|IOD2_CHICK",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 41,
+          "message": "Blast: Selenocysteine (U) at position 132 replaced by X"
+        },
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 42,
+          "message": "Blast: Selenocysteine (U) at position 265 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "tr|A0A1D8PEX7|A0A1D8PEX7_CANAL",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 43,
+          "message": "Blast: Selenocysteine (U) at position 634 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "tr|A0A1D8PGL5|A0A1D8PGL5_CANAL",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 44,
+          "message": "Blast: Selenocysteine (U) at position 81 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "tr|A0A1D8PHT7|A0A1D8PHT7_CANAL",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 45,
+          "message": "Blast: Selenocysteine (U) at position 48 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "tr|Q746S2|Q746S2_GEOSL",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 46,
+          "message": "Blast: Selenocysteine (U) at position 74 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "tr|Q747V2|Q747V2_GEOSL",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 47,
+          "message": "Blast: Selenocysteine (U) at position 49 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "tr|Q74DB1|Q74DB1_GEOSL",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 48,
+          "message": "Blast: Selenocysteine (U) at position 11 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "tr|Q74DK4|Q74DK4_GEOSL",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 49,
+          "message": "Blast: Selenocysteine (U) at position 322 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "tr|Q74DV8|Q74DV8_GEOSL",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 50,
+          "message": "Blast: Selenocysteine (U) at position 32 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "tr|Q74EN2|Q74EN2_GEOSL",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 51,
+          "message": "Blast: Selenocysteine (U) at position 175 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "tr|Q74F32|Q74F32_GEOSL",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 52,
+          "message": "Blast: Selenocysteine (U) at position 191 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q74FK1|SELD_GEOSL",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 53,
+          "message": "Blast: Selenocysteine (U) at position 16 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "tr|Q74H27|Q74H27_GEOSL",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 54,
+          "message": "Blast: Selenocysteine (U) at position 92 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|D3Z2R5|SELN_MOUSE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 55,
+          "message": "Blast: Selenocysteine (U) at position 428 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "tr|F6QE68|F6QE68_MOUSE",
+      "messages": [
+        {
+          "category": "setup_failure",
+          "level": "WARNING",
+          "line": 56,
+          "message": "SetUpBlastSearch failed."
+        },
+        {
+          "category": "statistics_failure",
+          "level": "ERROR",
+          "line": 57,
+          "message": "BLASTSetUpSearch: Unable to calculate Karlin-Altschul params, check query sequence"
+        }
+      ],
+      "query_failed": true
+    },
+    {
+      "gene": "tr|F6ZE74|F6ZE74_MOUSE",
+      "messages": [
+        {
+          "category": "setup_failure",
+          "level": "WARNING",
+          "line": 58,
+          "message": "SetUpBlastSearch failed."
+        },
+        {
+          "category": "statistics_failure",
+          "level": "ERROR",
+          "line": 59,
+          "message": "BLASTSetUpSearch: Unable to calculate Karlin-Altschul params, check query sequence"
+        }
+      ],
+      "query_failed": true
+    },
+    {
+      "gene": "tr|F6ZH14|F6ZH14_MOUSE",
+      "messages": [
+        {
+          "category": "setup_failure",
+          "level": "WARNING",
+          "line": 60,
+          "message": "SetUpBlastSearch failed."
+        },
+        {
+          "category": "statistics_failure",
+          "level": "ERROR",
+          "line": 61,
+          "message": "BLASTSetUpSearch: Unable to calculate Karlin-Altschul params, check query sequence"
+        }
+      ],
+      "query_failed": true
+    },
+    {
+      "gene": "tr|F7BLD2|F7BLD2_MOUSE",
+      "messages": [
+        {
+          "category": "setup_failure",
+          "level": "WARNING",
+          "line": 62,
+          "message": "SetUpBlastSearch failed."
+        },
+        {
+          "category": "statistics_failure",
+          "level": "ERROR",
+          "line": 63,
+          "message": "BLASTSetUpSearch: Unable to calculate Karlin-Altschul params, check query sequence"
+        }
+      ],
+      "query_failed": true
+    },
+    {
+      "gene": "sp|O70325|GPX4_MOUSE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 64,
+          "message": "Blast: Selenocysteine (U) at position 73 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|P11352|GPX1_MOUSE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 65,
+          "message": "Blast: Selenocysteine (U) at position 47 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|P38639|UF01_MOUSE",
+      "messages": [
+        {
+          "category": "setup_failure",
+          "level": "WARNING",
+          "line": 66,
+          "message": "SetUpBlastSearch failed."
+        },
+        {
+          "category": "short_query_failure",
+          "level": "ERROR",
+          "line": 67,
+          "message": "Blast: Query must be at least twice wordsize for two hit mode"
+        }
+      ],
+      "query_failed": true
+    },
+    {
+      "gene": "sp|P46412|GPX3_MOUSE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 68,
+          "message": "Blast: Selenocysteine (U) at position 73 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|P62342|SELT_MOUSE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 69,
+          "message": "Blast: Selenocysteine (U) at position 49 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|P62947|RL41_MOUSE",
+      "messages": [
+        {
+          "category": "setup_failure",
+          "level": "WARNING",
+          "line": 70,
+          "message": "SetUpBlastSearch failed."
+        },
+        {
+          "category": "statistics_failure",
+          "level": "ERROR",
+          "line": 71,
+          "message": "BLASTSetUpSearch: Unable to calculate Karlin-Altschul params, check query sequence"
+        }
+      ],
+      "query_failed": true
+    },
+    {
+      "gene": "sp|P63300|SELW_MOUSE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 72,
+          "message": "Blast: Selenocysteine (U) at position 13 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|P70274|SEPP1_MOUSE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 73,
+          "message": "Blast: Selenocysteine (U) at position 59 replaced by X"
+        },
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 74,
+          "message": "Blast: Selenocysteine (U) at position 259 replaced by X"
+        },
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 75,
+          "message": "Blast: Selenocysteine (U) at position 277 replaced by X"
+        },
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 76,
+          "message": "Blast: Selenocysteine (U) at position 318 replaced by X"
+        },
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 77,
+          "message": "Blast: Selenocysteine (U) at position 330 replaced by X"
+        },
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 78,
+          "message": "Blast: Selenocysteine (U) at position 352 replaced by X"
+        },
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 79,
+          "message": "Blast: Selenocysteine (U) at position 366 replaced by X"
+        },
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 80,
+          "message": "Blast: Selenocysteine (U) at position 368 replaced by X"
+        },
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 81,
+          "message": "Blast: Selenocysteine (U) at position 375 replaced by X"
+        },
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 82,
+          "message": "Blast: Selenocysteine (U) at position 377 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|P97364|SPS2_MOUSE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 83,
+          "message": "Blast: Selenocysteine (U) at position 63 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q3UQA7|SELH_MOUSE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 84,
+          "message": "Blast: Selenocysteine (U) at position 38 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q61153|IOD1_MOUSE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 85,
+          "message": "Blast: Selenocysteine (U) at position 126 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q80TA1|EPT1_MOUSE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 86,
+          "message": "Blast: Selenocysteine (U) at position 388 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q8VHC3|SELM_MOUSE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 87,
+          "message": "Blast: Selenocysteine (U) at position 48 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q91ZI8|IOD3_MOUSE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 88,
+          "message": "Blast: Selenocysteine (U) at position 170 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q99MD6|TRXR3_MOUSE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 89,
+          "message": "Blast: Selenocysteine (U) at position 651 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q9BCZ4|SELS_MOUSE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 90,
+          "message": "Blast: Selenocysteine (U) at position 189 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q9DBC0|SELO_MOUSE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 91,
+          "message": "Blast: Selenocysteine (U) at position 665 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q9ERR7|SEP15_MOUSE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 92,
+          "message": "Blast: Selenocysteine (U) at position 93 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q9JHC0|GPX2_MOUSE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 93,
+          "message": "Blast: Selenocysteine (U) at position 40 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q9JLC3|MSRB1_MOUSE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 94,
+          "message": "Blast: Selenocysteine (U) at position 95 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q9JLJ1|SELK_MOUSE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 95,
+          "message": "Blast: Selenocysteine (U) at position 92 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q9JLT4|TRXR2_MOUSE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 96,
+          "message": "Blast: Selenocysteine (U) at position 523 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q9JMH6|TRXR1_MOUSE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 97,
+          "message": "Blast: Selenocysteine (U) at position 612 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q9Z1Y9|IOD2_MOUSE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 98,
+          "message": "Blast: Selenocysteine (U) at position 130 replaced by X"
+        },
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 99,
+          "message": "Blast: Selenocysteine (U) at position 263 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|P07658|FDHF_ECOLI",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 100,
+          "message": "Blast: Selenocysteine (U) at position 140 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|P24183|FDNG_ECOLI",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 101,
+          "message": "Blast: Selenocysteine (U) at position 196 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|P32176|FDOG_ECOLI",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 102,
+          "message": "Blast: Selenocysteine (U) at position 196 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "tr|B5YFR8|B5YFR8_THEYD",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 103,
+          "message": "Blast: Selenocysteine (U) at position 54 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "tr|B5YFX0|B5YFX0_THEYD",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 104,
+          "message": "Blast: Selenocysteine (U) at position 81 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "tr|B5YFX5|B5YFX5_THEYD",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 105,
+          "message": "Blast: Selenocysteine (U) at position 195 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "tr|B5YKG4|B5YKG4_THEYD",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 106,
+          "message": "Blast: Selenocysteine (U) at position 186 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "tr|B5YL75|B5YL75_THEYD",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 107,
+          "message": "Blast: Selenocysteine (U) at position 194 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|O67139|SELD_AQUAE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 108,
+          "message": "Blast: Selenocysteine (U) at position 13 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "tr|O67146|O67146_AQUAE",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 109,
+          "message": "Blast: Selenocysteine (U) at position 199 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|P18173|DHGL_DROME",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 110,
+          "message": "Blast: Selenocysteine (U) at position 613 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q04652|KELC_DROME",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 111,
+          "message": "Blast: Selenocysteine (U) at position 690 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q7Z2C4|SELG_DROME",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 112,
+          "message": "Blast: Selenocysteine (U) at position 109 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "tr|Q962S2|Q962S2_DROME",
+      "messages": [
+        {
+          "category": "setup_failure",
+          "level": "WARNING",
+          "line": 113,
+          "message": "SetUpBlastSearch failed."
+        },
+        {
+          "category": "statistics_failure",
+          "level": "ERROR",
+          "line": 114,
+          "message": "BLASTSetUpSearch: Unable to calculate Karlin-Altschul params, check query sequence"
+        }
+      ],
+      "query_failed": true
+    },
+    {
+      "gene": "sp|Q9VKY8|SPS2_DROME",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 115,
+          "message": "Blast: Selenocysteine (U) at position 24 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|Q9VYB0|BTHD_DROME",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 116,
+          "message": "Blast: Selenocysteine (U) at position 37 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|P60200|HDRA_METJA",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 117,
+          "message": "Blast: Selenocysteine (U) at position 196 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|P60819|SELD_METJA",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 118,
+          "message": "Blast: Selenocysteine (U) at position 19 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|P61154|FWDB_METJA",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 119,
+          "message": "Blast: Selenocysteine (U) at position 121 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|P61159|FDHA_METJA",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 120,
+          "message": "Blast: Selenocysteine (U) at position 131 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|P81334|VHUD_METJA",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 121,
+          "message": "Blast: Selenocysteine (U) at position 13 replaced by X"
+        },
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 122,
+          "message": "Blast: Selenocysteine (U) at position 64 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "sp|P81335|VHUU_METJA",
+      "messages": [
+        {
+          "category": "selenocysteine_replacement",
+          "level": "WARNING",
+          "line": 123,
+          "message": "Blast: Selenocysteine (U) at position 27 replaced by X"
+        }
+      ],
+      "query_failed": false
+    },
+    {
+      "gene": "tr|A0A3B3HZ76|A0A3B3HZ76_ORYLA",
+      "messages": [
+        {
+          "category": "setup_failure",
+          "level": "WARNING",
+          "line": 124,
+          "message": "SetUpBlastSearch failed."
+        },
+        {
+          "category": "statistics_failure",
+          "level": "ERROR",
+          "line": 125,
+          "message": "BLASTSetUpSearch: Unable to calculate Karlin-Altschul params, check query sequence"
+        }
+      ],
+      "query_failed": true
+    }
+  ],
+  "failed_queries_observed": 10,
+  "historical_failed_queries": 53,
+  "job_id": 21713,
+  "limitations": [
+    "Partial diagnostic counts are lower bounds, not final failure rates or proof of fewer failures.",
+    "Output growth is liveness evidence, not completed-query fraction or a completion-time estimate.",
+    "ps fields describe the observed blastall process, not validated process-tree memory or matched timing.",
+    "Shared identifiers do not establish equal sequence bytes, error consequences or counterfactual scores.",
+    "Dependencies remain queued; final complete log/table/database and output admission are still required."
+  ],
+  "log_snapshot": {
+    "bytes": 13762,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_blast_interim_20260920/blast.log",
+    "sha256": "06ce2eef819902c520b50a9010f96187c90864ffe2e8ee69d018d715b58d4d7e"
+  },
+  "log_source": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_orthomcl_v1/search_execution/blast.log",
+  "not_previously_failed_identifiers": [],
+  "observations": [
+    {
+      "all.blast": {
+        "present": false
+      },
+      "all.blast.partial": {
+        "bytes": 7702831550,
+        "mtime_ns": 1789888082007474399,
+        "present": true
+      },
+      "commands": [
+        {
+          "command": [
+            "scontrol",
+            "show",
+            "job",
+            "21713",
+            "--oneliner"
+          ],
+          "returncode": 0,
+          "stderr": "",
+          "stdout": "JobId=21713 JobName=qfo_corrected_legacy_blast UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=18:58:45 TimeLimit=14-00:00:00 TimeMin=N/A SubmitTime=2026-09-18T01:25:36 EligibleTime=2026-09-18T01:25:36 AccrueTime=2026-09-18T01:25:36 StartTime=2026-09-19T08:09:23 EndTime=2026-10-03T08:09:23 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-19T08:09:23 Scheduler=Backfill Partition=gpu AllocNode:Sid=bizon-link:2008869 ReqNodeList=bizon ExcNodeList=(null) NodeList=bizon BatchHost=bizon NumNodes=1 NumCPUs=180 NumTasks=1 CPUs/Task=180 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=180,mem=900G,node=1,billing=180 AllocTRES=cpu=180,mem=900G,node=1,billing=180 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=180 MinMemoryNode=900G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_corrected_blast_v1/benchmark_tools/results/qfo_corrected_blast_batch_20260918.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_blast_21713.log StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_blast_21713.log TresPerTask=cpu=180 \n"
+        },
+        {
+          "command": [
+            "ps",
+            "-p",
+            "693830",
+            "-o",
+            "pid,lstart,etime,time,pcpu,rss,nlwp,stat"
+          ],
+          "returncode": 0,
+          "stderr": "",
+          "stdout": "    PID                  STARTED     ELAPSED     TIME %CPU   RSS NLWP STAT\n 693830 Sat Sep 19 08:09:48 2026    18:58:19 29-12:30:58 3734 576424 1 R\n"
+        }
+      ],
+      "observed_utc": "2026-09-20T07:08:08.370648+00:00"
+    },
+    {
+      "all.blast": {
+        "present": false
+      },
+      "all.blast.partial": {
+        "bytes": 7707105684,
+        "mtime_ns": 1789888117673200602,
+        "present": true
+      },
+      "commands": [
+        {
+          "command": [
+            "scontrol",
+            "show",
+            "job",
+            "21713",
+            "--oneliner"
+          ],
+          "returncode": 0,
+          "stderr": "",
+          "stdout": "JobId=21713 JobName=qfo_corrected_legacy_blast UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=18:59:15 TimeLimit=14-00:00:00 TimeMin=N/A SubmitTime=2026-09-18T01:25:36 EligibleTime=2026-09-18T01:25:36 AccrueTime=2026-09-18T01:25:36 StartTime=2026-09-19T08:09:23 EndTime=2026-10-03T08:09:23 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-19T08:09:23 Scheduler=Backfill Partition=gpu AllocNode:Sid=bizon-link:2008869 ReqNodeList=bizon ExcNodeList=(null) NodeList=bizon BatchHost=bizon NumNodes=1 NumCPUs=180 NumTasks=1 CPUs/Task=180 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=180,mem=900G,node=1,billing=180 AllocTRES=cpu=180,mem=900G,node=1,billing=180 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=180 MinMemoryNode=900G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_corrected_blast_v1/benchmark_tools/results/qfo_corrected_blast_batch_20260918.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_blast_21713.log StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_blast_21713.log TresPerTask=cpu=180 \n"
+        },
+        {
+          "command": [
+            "ps",
+            "-p",
+            "693830",
+            "-o",
+            "pid,lstart,etime,time,pcpu,rss,nlwp,stat"
+          ],
+          "returncode": 0,
+          "stderr": "",
+          "stdout": "    PID                  STARTED     ELAPSED     TIME %CPU   RSS NLWP STAT\n 693830 Sat Sep 19 08:09:48 2026    18:58:49 29-12:45:28 3734 570236 1 R\n"
+        }
+      ],
+      "observed_utc": "2026-09-20T07:08:38.493786+00:00"
+    }
+  ],
+  "search_admitted": false,
+  "shared_failed_identifiers": [
+    "sp|P38639|UF01_MOUSE",
+    "sp|P62947|RL41_MOUSE",
+    "sp|P83308|FARP_CHICK",
+    "tr|A0A0R4ILF4|A0A0R4ILF4_DANRE",
+    "tr|A0A3B3HZ76|A0A3B3HZ76_ORYLA",
+    "tr|F6QE68|F6QE68_MOUSE",
+    "tr|F6ZE74|F6ZE74_MOUSE",
+    "tr|F6ZH14|F6ZH14_MOUSE",
+    "tr|F7BLD2|F7BLD2_MOUSE",
+    "tr|Q962S2|Q962S2_DROME"
+  ],
+  "source_records": [
+    {
+      "bytes": 212441,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/orthomcl_blast_audit_20260916.json",
+      "sha256": "62eedbdb89cbb3e381ce52a4732391376fcbe249a6ba7f3266882bef347d0797"
+    },
+    {
+      "bytes": 6699,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_orthomcl_blast.py",
+      "sha256": "863ed4a2b1e933d2b68e665aae4ee132125de99ab26bbf3d168afcf6c85bb20e"
+    }
+  ],
+  "status": "interim_running_search_observation_not_admission"
+}

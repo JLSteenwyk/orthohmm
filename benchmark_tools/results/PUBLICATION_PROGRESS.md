@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Corrected BLAST Liveness And Interim Failures Checked (2026-09-20)
+
+Previous turn made progress with the gated scaling executor (`152c146`).
+Reread the full objective. This turn checked the actual pending scientific
+work rather than launching additional diagnostic jobs. Slurm confirms BLAST
+21713 RUNNING at18:59:15 with its existing180CPU/900GiB allocation and14day
+limit. The same native process remained present, and the partial table grew
+4,274,134bytes during a retained30second observation. No terminal state or
+final renamed table exists yet; there is no completion estimate or score.
+
+Parsed a retained immutable running-log snapshot:125diagnostic lines,
+87diagnostic-bearing queries,10distinct failed queries (8statistics and2short
+query failures, each also logged as setup failure), and105selenocysteine
+replacement warnings. All10failed identifiers occur in the historical53-query
+inventory. This is not a reduced failure-rate claim or a completed impact
+analysis. Full observations, source hashes and limitations are in
+[interim evidence](QFO_CORRECTED_BLAST_INTERIM_20260920.md).
+
+Verified all queued OrthoMCL stages and the FastOMA/parameter/CPM dependency
+chains remain present with unfulfilled dependencies, not failed dependencies.
+Reviewed final search admission to confirm it preserves query failures and
+checks complete table/database evidence;71diagnostic/table/admission tests
+pass. No native process, sequence, parameter, job or service was changed.
+
+Next: complete search admission and downstream result/impact analysis after
+the same job terminates; continue outstanding environmental/session/recipe
+integration and publication packaging without claiming controlled timing or
+publication readiness. The original objective remains active and incomplete.
+
 ## Replacement Scaling Single-Task Executor Added (2026-09-20)
 
 Previous turn made progress through the allocation-record checker (`9f52696`).
