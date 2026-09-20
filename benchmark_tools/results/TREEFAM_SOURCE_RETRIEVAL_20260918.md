@@ -70,6 +70,30 @@ These are observations from this search, not proof that no copy exists:
 
 ## Required Next Step
 
+### September 20 PhyloMCL Archive Check
+
+A fresh public search identified the [PhyloMCL materials archive](https://sourceforge.net/projects/phylomcl/files/Materials/),
+including `QfO_data.tar.gz`. Downloaded the complete archive from
+`https://downloads.sourceforge.net/project/phylomcl/Materials/QfO_data.tar.gz`
+to `benchmarks/work/treefam_source_search_20260918/phylomcl_QfO_data.tar.gz`.
+Its SHA-256 is
+`fb3a0a2b6c304fe6fd6b5221a9013c046482f4302c382d6db98c668556e4524a`.
+This is a locally computed identity, not an independently published checksum.
+
+`tar -tzf` completed successfully. The complete inventory contains FASTA
+files, `gene.length`, `gene.idmap`, `66_species.nwk`, and PhyloMCL ortholog
+pairs/groups, but no NHX collection, nested source archive, or
+`treefam2reference.txt`. No archive contents were extracted or executed.
+The archive is retained outside Git and is not admitted as a QfO 2020
+reference-generation source or a substitute mapping.
+
+The existing pooled reference and supplementary software ZIP were rehashed
+and still match their recorded SHA-256 values. Fresh exact-filename searches
+did not locate the missing mapping. The TreeFam homepage still directs
+archive questions to EMBL-EBI support. No maintainer contact was sent; the
+original trees and mapping remain missing, and benchmark scores and
+family-level uncertainty claims remain unchanged.
+
 ### Additional September 19 Source Check
 
 Re-downloaded the QfO deposit metadata to
