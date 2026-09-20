@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Overhead Task Provenance Verifier Implemented (2026-09-19)
+
+Added independent provenance binding for all 18 paired-overhead tasks. The
+verifier pins/re-derives the plan and recipe hash, validates the five-hour
+exclusive 20CPU/96GiB terminal allocation, and binds block/pair/arm/method
+identity to the exact prepared native command, input copies/order, before/
+after runtime checks, wrapper identity and native worker launch. Actual
+verification/lineage/supplementary file bytes must match executor receipt
+hashes, and supplementary reports must refer to the same lineage bytes.
+Lineage-only tasks cannot contain supplementary report artifacts or
+root-context observation fields. Successful earlier tasks remain bindable
+in a later-failed terminal panel through an explicit verifier option.
+
+All 752 focused workflow tests pass, including 54 new tests covering every
+prescribed task identity, arm/report swaps, altered commands/inputs/runtime,
+receipt changes, scheduler drift, source-plan byte drift, missing/symlinked
+reports, duplicate recipes and incomplete execution. Initial fixture failures
+exposed inherited old recipe paths; fixtures were corrected without weakening
+the verifier. No native or overhead commands were rerun.
+
+This is task record binding only, not raw collector replay, complete-panel
+validation, native output equivalence or scientific timing admission. Next:
+wire it into the overhead whole-panel audit and five-hour waiting-session
+receipt validation, then freeze/deploy the execution recipe. No overhead
+panel has been submitted. The previous turn was progress (serial executor
+committed/pushed). BLAST 21713 was confirmed RUNNING at 12:41:01; FastOMA 21740,
+parameter array 21932 and CPM control 21956 remain pending. The publication
+goal remains active and incomplete.
+
 ## Paired Root-Context Overhead Executor Implemented (2026-09-19)
 
 Added the fixed 18-task serial executor and five-hour exclusive DGX Slurm
