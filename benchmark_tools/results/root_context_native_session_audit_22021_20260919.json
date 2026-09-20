@@ -1,0 +1,46 @@
+{
+  "evidence": [
+    {
+      "bytes": 1430,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/root_context_native_scheduler_22021/scheduler_22021.txt",
+      "sha256": "6b74b1962fd8eb079f5a175de5c6c7651ca17aada84301798ca7114a4dcf474b"
+    },
+    {
+      "bytes": 155753,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/dgx_root_context_native_recipe_20260919.json",
+      "sha256": "2190269735646d5996832f841c4439d38e0b7f05fc5b3402af000f8b2bfe73f4"
+    },
+    {
+      "bytes": 231,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/root_context_native_submission_v1/queue.json",
+      "sha256": "e7fedf73ee1ef80ac0f8d1bf3f8ee643924b026dc2f71f3c66cb122c8c45a735"
+    },
+    {
+      "bytes": 742,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/root_context_native_submission_v1/launch.json",
+      "sha256": "0cc569322b7133e9da42dc4aab334248da622a69d810381100866f0ced2a7b67"
+    },
+    {
+      "bytes": 567,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/root_context_native_submission_v1/result.json",
+      "sha256": "c0b0a455fa3a330b1ba377fd6fa377d09e74734e99c00ad9e369d14b64a8b70a"
+    }
+  ],
+  "job_id": 22021,
+  "limitations": [
+    "Scheduler times have second resolution; controller/client wall clocks assumed consistent.",
+    "Receipt binding does not validate native work, user-manager lifecycle, overhead or isolation."
+  ],
+  "printed_job_ended_unix_ns": 1789864052000000000,
+  "printed_job_started_unix_ns": 1789862038000000000,
+  "scheduler_timezone": "America/New_York",
+  "scientific_timings_admitted": false,
+  "source": {
+    "bytes": 5043,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_root_context_native_session.py",
+    "sha256": "2276a2740fde4ea464b845f9db33743eb0bfdc4126694e14b765be974f883ef1"
+  },
+  "status": "native_bounded_session_verified",
+  "wait_finished_unix_ns": 1789864064615254371,
+  "wait_started_unix_ns": 1789862037737752855
+}

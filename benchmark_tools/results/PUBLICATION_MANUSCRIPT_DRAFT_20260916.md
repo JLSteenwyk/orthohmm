@@ -1533,6 +1533,16 @@ the recorded environment, not background-free timing, exact task attribution
 or context-collector overhead on native tools.
 [Complete follow-up and replay](ROOT_CONTEXT_RESULT_22020.md).
 
+The subsequent native integration panel completed all three frozen
+four-proteome commands with replayable supplementary root context and
+canonical outputs equal to the prior lineage diagnostics. Across 1,976
+intervals, 52 original and 11 narrow flags remained; none were removed.
+The bounded waiting session was verified, but an unrelated failing user
+service scheduled 383 restarts during the job window. These results establish
+native collector integration, not background-free measurements, causal
+attribution, collector overhead or comparative timing eligibility.
+[Native integration and retained flags](ROOT_CONTEXT_NATIVE_RESULT_22021.md).
+
 ### SwissTrees Comparator Uncertainty
 
 For all eight retained historical comparison outputs, raw SwissTrees counts

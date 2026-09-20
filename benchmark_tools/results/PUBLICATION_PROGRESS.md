@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Native Diagnostic 22021 Completed And Validated (2026-09-19)
+
+The frozen panel completed 0:0 in 33:34. Independent session receipt auditing
+and whole-panel raw/provenance/native-output auditing pass. All three canonical
+outputs match the pinned prior lineage diagnostics; a fresh relocated archive
+also validates all three tasks and reproduces timing/accounting, screens,
+context, output identities/counts and observation bounds exactly. No panel
+order or scope-identity issues were detected. Waiting and scheduler-recorder
+processes are terminal; no replacement native jobs were launched.
+
+Native wall seconds are 551.830510409 (high), 809.677239777 (satellite_v2)
+and 613.159839346 (full OrthoFinder). All 1,976 intervals are retained:
+original flags 0/51/1 and narrow flags 0/10/1. The user journal records 383
+scheduled restarts of an unrelated missing-working-directory service during
+the printed job window; no service was modified. Signed residuals, distinct
+read windows, host categories, membership changes and empty flag subsets
+remain explicit. Native integration is validated, but collector overhead,
+causal attribution, non-CPU isolation and scientific timing eligibility are
+not established. No scientific scores/defaults/thresholds changed.
+
+Result `ROOT_CONTEXT_NATIVE_RESULT_22021.md` includes the table, hashes,
+reproduction instructions and limitations. Machine-readable audit/description,
+session audit, receipts/journal and relocation comparison are retained; large
+raw/output/input archives remain outside Git on both machines. The manuscript
+and claim checklist link the constrained native-integration result. Initial
+local auditing rejected an incompletely extracted archive, then passed after
+extraction finished; this did not require any method rerun or evidence edit.
+
+The final focused suite passes all 646 tests, including the 17 reporter/
+real-result regression tests. Earlier verification in this turn passed the full collected unit suite
+(7,813 passed, 9 skipped); the three final real-result tests are additional.
+BLAST 21713 remains RUNNING at 12:27:03, with FastOMA 21740, parameter array
+21932 and CPM control 21956 still pending. Next: prespecify the native
+root-context collector overhead comparison and retain the scientific chains.
+The goal remains active and publication readiness incomplete.
+
 ## Native Diagnostic 22021 Running; Descriptive Reporter Added (2026-09-19)
 
 Submitted the frozen source/recipe with the bounded waiting-session launcher.

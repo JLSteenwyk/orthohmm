@@ -85,6 +85,13 @@ session remain documented parts of the environment. This supports only the
 tested monitor response, not prior-flag attribution, zero observer overhead,
 general isolation or scientific comparative timing admission.
 
+The [native root-context integration 22021](ROOT_CONTEXT_NATIVE_RESULT_22021.md)
+validates all three native commands, raw replay and canonical equality to
+prior lineage outputs. It retains 52 original/11 narrow flags in 1,976
+intervals and documents 383 scheduled restarts of an unrelated user service.
+The claim is native integration only: no overhead bound, causal attribution,
+background-free execution or scientific timing admission is established.
+
 The completed [full-node controls](FULL_NODE_CONTROL_RESULT_21918_20260919.md)
 validate all nine injected workloads: zero narrow flags in 126 native-only
 intervals and detection in 63/63 contended intervals. This supports bounded
