@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Paired Overhead Whole-Panel Audit Implemented (2026-09-19)
+
+Added terminal-first auditing of the full 18-task overhead panel. It binds
+the frozen source recipe and plan inputs, launch identity, task/arm/pair
+order, cumulative checkpoints and stop-after-failure outcomes. All failed,
+unrun, missing and invalid outcomes remain in the panel and paired summary.
+Each completed task uses the new task provenance verifier, dispatches to
+the appropriate lineage/root-context raw replay at the fixed 900-second
+limit, validates native output semantics and GNU time, and compares canonical
+outputs with the pinned validated 22021 baseline. Baseline archive evidence
+is independently checked before and after the audit.
+
+Cross-task ordering includes final memory-read completion; common lineage
+identities are compared across both arms, and supplementary named-scope
+identities across root-context tasks. Every original/narrow flag is retained.
+Full per-interval pressure/screen data remain in hashed raw reports rather
+than being duplicated in the derived audit; native accounting, flag lists,
+pressure observation windows and supplementary context remain explicit.
+The prespecified summarizer receives all 18 outcomes; missing/invalid pairs
+or panel issues yield no overall engineering-budget conclusion. Passing
+engineering budgets still does not admit scientific comparative timings.
+
+All 781 focused workflow tests pass, including 29 new panel-audit tests for
+both collector arms, native-output mismatch, full and stopped panels,
+incomplete evidence, raw replay failure, observation overlap and scope drift.
+Orchestration tests use controlled fixtures around the real task binding;
+there is no executed overhead panel or real overhead result yet.
+
+Next: complete the five-hour waiting-session receipt binding, freeze/deploy
+the recipe and execute the paired panel. The waiting-session audit remains
+a separate required provenance check. No native method settings, thresholds,
+historical audit code or scientific scores changed. The previous turn was
+progress (overhead task provenance verifier committed/pushed). BLAST 21713
+was confirmed RUNNING at 12:46:40; FastOMA 21740, parameter array 21932 and
+CPM control 21956 remain pending. Publication readiness remains incomplete.
+
 ## Overhead Task Provenance Verifier Implemented (2026-09-19)
 
 Added independent provenance binding for all 18 paired-overhead tasks. The
