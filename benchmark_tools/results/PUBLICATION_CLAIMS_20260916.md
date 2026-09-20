@@ -16,7 +16,7 @@ evidence that an experiment completed or a biological hypothesis is true.
 | Broad candidates improve reconciliation | [OrthoBench factorial](ORTHOBENCH_FACTORIAL_INTERPRETATION_20260916.md), [original-release QfO factorial](QFO_FACTORIAL_SWISS_RESULTS_20260918.md), [corrected factorial](QFO_CORRECTED_FACTORIAL_COMPLETE_20260919.md) | Candidate-expansion simple-effect F1 intervals include zero. Corrected SwissTrees C-by-R F1 interactions are positive with adjusted intervals excluding zero at both profile settings; original-QfO interaction intervals include zero. Conditional end-to-end interaction, not an isolated mechanism or general superiority |
 | The frozen method was evaluated on novel taxa | [YGOB evaluation](YGOB_FROZEN_INTERPRETATION_20260916.md) | Complete bounded transfer evaluation; satellite F1 difference interval includes zero, precision higher and recall lower; not family-disjoint or superiority evidence |
 | Validation is family-disjoint | [Homology screen](ygob_homology_screen_20260916.json) | Not established; substantial detected overlap |
-| Original-release OrthoMCL final-group QfO scoring is complete | [Verified result snapshot](publication_comparison_orthomcl_complete_20260916.json) | Supported for the original inputs only; corrected-release BLAST is queued and no corrected OrthoMCL score is available |
+| Original-release OrthoMCL final-group QfO scoring is complete | [Verified result snapshot](publication_comparison_orthomcl_complete_20260916.json) | Supported for the original inputs only; corrected-release BLAST 21713 was verified running on September 20 and no corrected OrthoMCL score is available |
 | OrthoMCL BLAST failures have negligible impact | [Failure-impact audit](ORTHOMCL_FAILURE_IMPACT_20260916.md) | Not established; direct exposure is measured, indirect and counterfactual effects are not |
 | Three Kingdoms demonstrates proteome-wide accuracy | [Supplementary score record](three_kingdoms_parity_20260907.json) | Unsupported; restricted BUSCO-reference universe |
 | Every historical Three Kingdoms method used identical input bytes | [Method-input audit](THREE_KINGDOMS_METHOD_INPUTS_20260918.md), [completed matched rerun](THREE_KINGDOMS_SONIC_MATCHED_RESULT_20260918.md) | Not established historically: SonicParanoid native snapshot matches raw Danio rather than the staged stop-marker-stripped version; older high-sensitivity record lacks per-file hashes. Matched inference21795 and assessment21796 completed successfully, admitting contemporary Sonic F1=0.9912758996728462; this does not repair historical provenance or isolate the mismatch's causal effect |
@@ -125,11 +125,24 @@ not establish any comparative resource advantage.
 | 2. Independent generalization | Completed frozen YGOB evaluation with native, command/conversion, independent-reference and overlap gates; pair enumeration and paired uncertainty | Bounded novel-taxon claim only; stronger family independence unproven; any outcome-driven method changes require new independent confirmation |
 | 3. HMM and phylogeny contributions | Completed OrthoBench, original-release QfO and [corrected-QfO eight-cell factorials](QFO_CORRECTED_FACTORIAL_COMPLETE_20260919.md); paired SwissTrees simple effects/interactions; paired sequence controls; unconstrained-membership controls | Better-matched search sensitivity/calibration and controlled resource evidence remain needed. Corrected SwissTrees adjusted F1 intervals support reconciliation at C1 and C-by-R interactions, conditional on development-exposed families; all profile-refinement F1 intervals include zero. Corrected native/replay partition equality is admitted; historical-input scores cannot be transferred |
 | 4. Uncertainty and error explanation | Paired OrthoBench intervals and feature strata; recovered-stage and eight-method SwissTrees intervals; corrected sequence-control intervals; annotation-defined SwissTrees domain strata and figure; native GO/EC/FAS arithmetic audits; VGNC cross-block dependency audit; TreeFam pooled count audit; initial-edge and later-stage traces; observed prefilter/scoring rejection recount and final-grouping join | Appropriate uncertainty for other QfO endpoints/secondary mean; independent duplication and fragment annotations and remaining divergence/composition analyses. Observed rejection localization does not prove causal mechanisms, historical raw-score identity, counterfactual recovery or independent FAS validation |
-| 5. Robustness and practical efficiency | Corrected fixed/variable-length multi-seed simulations, complete generating-tree/NNI simulation controls, six OrthoBench tree perturbations and six parameter variants; all27 DGX repeated runs with native validation, resource replay, descriptive summaries and figure | Controlled resource comparison remains unproven despite completed repeated timing; a new prospective observation/inclusion plan is required before any controlled-speed experiment. QfO robustness and broader evolutionary realism remain limited |
+| 5. Robustness and practical efficiency | Corrected fixed/variable-length multi-seed simulations, complete generating-tree/NNI simulation controls, six OrthoBench tree perturbations and six parameter variants; all27 DGX repeated runs with native validation, resource replay, descriptive summaries and figure; [replacement protocol](DGX_SCALING_REPLACEMENT_PROTOCOL_20260920.md), [long-run amendment](DGX_SCALING_LONG_RUN_AMENDMENT_20260920.md) and tested measurement audit | Controlled resource comparison remains unproven. The replacement plan exists but has not run; environmental-policy freeze, authorization, launch/session integration and complete native/environmental admission remain required. QfO robustness and broader evolutionary realism remain limited |
 | 6. Biological usefulness | [Prospective WGD protocol](BIOLOGICAL_WGD_APPLICATION_PROTOCOL_20260917.md), admitted runs, [results](BIOLOGICAL_WGD_RESULTS_20260917.md), [separate rescore](biological_wgd_rescore_audit_20260917.json), [figure](figures_wgd_application_20260917/wgd_application.pdf), [all six examples](figures_wgd_application_20260917/PRESPECIFIED_EXAMPLES.md), and [completed case trace](BIOLOGICAL_WGD_CASE_TRACE_20260917.md): phylogenetic OrthoHMM improves supported separation over high sensitivity but trails full OrthoFinder and SonicParanoid in separation and coverage | Bounded application and stage localization complete; tree correctness and upstream effects unresolved. Development-exposed, not independent validation or copy-specific orthology truth; YGOB column order does not identify ancestral copies; configurations differ beyond reconciliation |
 | 7. Publication package | Eighteen bundled figure panels including descriptive DGX resources and corrected search controls; [corrected factorial supplement](PUBLICATION_CORRECTED_FIGURE_BUNDLE_20260919.md); [method diagram](figures_publication_method_20260916/publication_method.pdf); evolving [manuscript](PUBLICATION_MANUSCRIPT_DRAFT_20260916.md); [refreshed and relocated direct-evidence bundle](PUBLICATION_FIGURE_BUNDLE_20260918.md); bounded statistical reproduction including the corrected factorial; [current-source unit and CLI checks](PUBLICATION_TEST_REFRESH_20260918.md) | Complete corrected-QfO comparator results and manuscript integration, verified bibliography, portable executable workflows/dependencies, transitive raw-data provenance and rights clearance, versioned release and external archive. Local figure bundles and statistical exports are not full scientific reproduction |
 
 ## Current Execution Status
+
+- The prospective replacement scaling panel is prepared, not executed. Its
+  [v2 plan](dgx_root_context_scaling_plan_v2_20260920.json) retains execution
+  authorization as false and the environmental policy as unresolved.
+  The [non-CPU assessment](DGX_NON_CPU_ASSESSMENT_20260920.md) and positive
+  native pressure observations do not justify an outside-interference claim
+  or outcome-dependent exclusion. The composed measurement audit checks task
+  records, raw replay and native outcomes; it neither validates outputs nor
+  authorizes submissions or admits scientific timings. No service change
+  has been assumed approved. Corrected BLAST 21713 remains running;
+  FastOMA 21740, parameter array 21932 and CPM 21956 remain pending as of
+  the September 20 scheduler check. These states are observations, not
+  predicted completion dates.
 
 - [Read-crossing control 22018](LINEAGE_READ_CROSSING_RESULT_22018.md)
   completed with all three trials and their replay passing. All signed
@@ -375,13 +388,19 @@ not establish any comparative resource advantage.
   The [retained read-only API snapshot](dependency_alerts_claim_audit_20260917.json),
   retrieved2026-09-18T01:38:40Z (17September local), reports zero open repository
   alerts. Earlier snapshots, including13open alerts immediately after the patch,
-  remain historical. This is not a host or inference-runtime security audit.
+  remain historical. This is not a host or inference-runtime security audit
+  or a current zero-alert claim: the September 20 push reports 11 dependency
+  vulnerabilities (3 high, 7 moderate, 1 low). Current alert identities and
+  affected release environments still require reconciliation and review.
   The [strict docs rebuild](docs_strict_build_validation_20260917.json)
   passes with no diagnostics; earlier14-diagnostic output remains historical.
-- The latest full unit-suite run ataf6a8e7 passed5066tests with9skipped in89.12s,
-  recorded in the [progress ledger](PUBLICATION_PROGRESS.md).
-  Regression tests do not admit pending experiments or establish biological
-  validity. The prior5c7c19d and4e2e93c runs remain historical evidence.
+- The [progress ledger](PUBLICATION_PROGRESS.md) records a later full collected
+  unit run with 7,813 passed and 9 skipped in 186.02 seconds, before subsequent
+  reporter/workflow additions. The most recent focused measurement workflow
+  run at `d0b60e6` passed 1,102 tests in 46.95 seconds; it is not a current full
+  suite result. Regression tests do not admit pending experiments or establish
+  biological validity. Earlier full runs, including `af6a8e7` (5,066 passed,
+  9 skipped), remain historical evidence.
 - [Retained figure integrity](PUBLICATION_FIGURE_INTEGRITY_20260918.md)
   now checks16manifests and55outputs with no byte/hash mismatch. The detached
   helper has been exported from its frozen Git revision into the

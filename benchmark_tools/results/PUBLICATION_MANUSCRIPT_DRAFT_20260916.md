@@ -1554,6 +1554,39 @@ these are incremental collector comparisons, not causal overhead estimates,
 method-speed rankings or scientific timing admission.
 [Paired overhead results and provenance](ROOT_CONTEXT_OVERHEAD_RESULT_22022.md).
 
+The retained non-CPU assessment found positive native-step I/O pressure in
+all 18 overhead runs and positive memory pressure in the six satellite_v2
+and six full-OrthoFinder runs; the six high-sensitivity runs recorded zero
+memory pressure. All recorded memory-event counters, including OOM events,
+were zero. These are observation-window counters, not exact command-only
+stall times or evidence identifying outside interference. Neither zero native
+pressure nor absence of sampled foreign processes establishes isolation;
+requiring zero pressure could selectively exclude legitimate native work.
+Device-I/O attribution, GPU activity over the full run, thermal effects and
+memory-bandwidth interference remain uncharacterized.
+[Non-CPU assessment and retained records](DGX_NON_CPU_ASSESSMENT_20260920.md).
+
+A [prospective replacement protocol](DGX_SCALING_REPLACEMENT_PROTOCOL_20260920.md)
+preserves all 27 original method/size/repeat identities, scientific settings,
+nested input bytes and order, with fresh outputs and no automatic retries.
+Each intended allocation is exclusive, with 20 CPUs, 96 GiB, a 24-hour limit
+and a 23-hour-50-minute native timeout. The
+[long-run amendment](DGX_SCALING_LONG_RUN_AMENDMENT_20260920.md) corrects the
+short diagnostic collector's incompatible timeout contract before launch;
+it does not alter scientific parameters or historical measurements. Native
+failures retain consumed resources, while infrastructure or policy failures
+pause further submissions. No fastest-repeat selection, pressure subtraction
+or observed-overhead correction is planned. Complete three-repeat summaries
+require three eligible, output-valid runs, with unavailable outcomes visible.
+
+The replacement panel has not been executed. Task binding, raw replay and
+outcome-classification integration tests do not establish environmental
+validity or native-output correctness. The actual service/workload policy,
+authorization, launch/session integration, terminal scheduler evidence and
+whole-run environmental observations remain required. In particular, the
+known restarting user service has not been silently stopped or assumed absent.
+The original 27-run panel remains descriptive evidence only.
+
 ### SwissTrees Comparator Uncertainty
 
 For all eight retained historical comparison outputs, raw SwissTrees counts

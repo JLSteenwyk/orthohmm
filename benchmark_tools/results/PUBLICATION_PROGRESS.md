@@ -1,5 +1,38 @@
 # Publication Progress
 
+## Manuscript Timing And Execution Status Reconciled (2026-09-20)
+
+Previous turn made progress with the composed measurement audit (`d0b60e6`).
+This turn integrates the completed non-CPU assessment and prospective
+replacement scaling protocol/amendment into the manuscript and claim checklist.
+Positive native pressure is not labeled outside interference; zero pressure
+is not an eligibility rule. The original 27 runs remain descriptive. The new
+27-run plan is explicitly unexecuted, with authorization and environmental
+policy unresolved despite passing component/integration tests.
+
+Corrected stale current-status text that called the corrected BLAST queued
+and the replacement protocol unwritten. The scheduler still reports BLAST
+21713 running and FastOMA 21740, parameter array 21932, CPM 21956 and admission
+21746 pending. No job, service, scientific default, endpoint or score changed.
+The checklist now distinguishes the historical 7,813-pass full collected
+unit run from the newer 1,102-pass focused workflow run. Its historical
+zero-alert API snapshot is no longer liable to be read as a current security
+clearance: recent push output reports 11 vulnerabilities, whose identities
+and affected release environments remain to be reviewed.
+
+Validation: the frozen v2 JSON confirms 27 tasks, 20 CPUs, 96 GiB, 86,400-second
+allocation and 85,800-second native timeout, with authorization false and
+environmental policy unresolved. All four newly cited local artifacts exist.
+The non-CPU reporter, replacement-plan and composed-audit tests pass:
+69 passed in 23.24 seconds. Scoped whitespace checks pass. This documentation
+update does not rerender the full manuscript, reproduce native inference,
+clear dependency alerts or establish publication readiness.
+
+Next work remains actual environmental-policy/launch integration and controlled
+resource evidence, pending corrected comparators and robustness analyses,
+remaining uncertainty/annotation limitations, and the final reproducible
+manuscript/release/archive package. The full goal remains active.
+
 ## Composed Scaling Measurement Audit Added (2026-09-20)
 
 The previous turn made progress with committed task-record binding
