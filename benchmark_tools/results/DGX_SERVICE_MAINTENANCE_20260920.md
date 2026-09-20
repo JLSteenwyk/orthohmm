@@ -1,5 +1,39 @@
 # DGX Samwise Service Maintenance
 
+## Installation Source Search After User Authorization
+
+The user subsequently authorized installation if feasible and said they
+did not know the original source location. No verified installation source
+was found in the September 20 follow-up:
+
+- PyPI `https://pypi.org/pypi/scientific-openclaw/json` returned HTTP 404.
+- Exact GitHub repository search for `"scientific_openclaw"` returned zero
+  repositories; broader web searches did not identify the required Python
+  application. This does not prove that no private or unindexed copy exists.
+- `https://api.github.com/repos/JLSteenwyk/Samwise` returned 404, and
+  noninteractive `git ls-remote` for that candidate returned repository not
+  found. No differently named or private repository was authenticated.
+- Bounded searches of DGX Desktop/projects, trash, caches, `/opt`, and
+  Python library locations found no application source. `/opt/containerd`
+  was inaccessible and was not bypassed. Earlier bounded home searches
+  found only the service, project registry, and newly created directory.
+- A depth-four local host search of `/home/bizon` and the project disk
+  found no matching source; restricted `lost+found` and `docker` directories
+  were not inspected.
+- The surviving `.samwise/projects.json` records `Samwise Demo` at the
+  original Desktop path and demo child projects, but provides no verified
+  source repository. Only relevant project names/paths were inspected.
+- A URL-only search of DGX shell history found
+  `https://github.com/openclaw/openclaw.git`. This is not evidence that that
+  separate project supplies the configured Python module. It was not
+  substituted or installed.
+
+No package was installed, no credentials were requested or disclosed, and
+system Python and the service command remain unchanged. Completing the
+repair requires recovering the original source, backup, or a verified
+repository providing this module and CLI. The short held-session masking
+probe remains usable for timing preparation without that application.
+
 On 2026-09-20 the user requested repair of the missing working directory and
 explicitly approved temporary stopping/runtime masking of this one user
 service for dedicated timing, followed by restoration. Host:

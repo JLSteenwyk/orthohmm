@@ -1,5 +1,16 @@
 # Publication Progress
 
+## Samwise Installation Source Not Recovered (2026-09-20)
+
+User authorized installation if possible but did not know the source.
+Checked exact PyPI/GitHub identities, bounded DGX and local filesystem
+locations, relevant surviving project registry fields, and repository URLs
+in DGX shell history. No verified scientific_openclaw source was recovered.
+[Search limitations and results](DGX_SERVICE_MAINTENANCE_20260920.md)
+are retained. Did not substitute a similarly named package, modify system
+Python, or alter the service command. Application repair remains incomplete;
+approved held-session suppression can still support the timing workflow.
+
 ## Held-Session Service Suppression Tested (2026-09-20)
 
 Previous turn made progress through authorized directory creation, service
