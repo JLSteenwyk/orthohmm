@@ -1,5 +1,42 @@
 # Publication Progress
 
+## Paired Overhead Panel Completed and Reproduced (2026-09-20)
+
+The previous turn made progress by freezing/deploying the recipe. This turn
+submitted job 22022 once and held the bounded SSH session until its successful
+return. Slurm confirms COMPLETED 0:0, 03:21:00, September 19 21:16:17 through
+September 20 00:37:17 America/New_York. The local recorder captured terminal
+evidence with 2,405 polls and zero observation errors. No extra DGX SSH
+connections or transfers were made during execution. Both sessions are now
+terminal; no selective rerun or intervention occurred.
+
+All 18 tasks and nine pairs passed provenance, raw replay, native output
+validation and equality to the pinned 22021 baseline. Complete method median
+signed changes were -0.929631%, +1.342841%, -0.344162% for high sensitivity,
+satellite_v2 and full OrthoFinder. Every pair met +10% and every complete
+method median met +5%, as frozen prospectively. All 344 original and 60
+narrow flags across 11,846 intervals remain. A fresh relocated archive also
+validates all 18 tasks with identical result fields and no panel issues.
+
+[The results report](ROOT_CONTEXT_OVERHEAD_RESULT_22022.md) records all nine
+pairs, hashes, reproduction commands and limitations. The compressed derived
+audit, session audit, receipt archive and relocation result are retained.
+The 1.6-GB raw archive is outside Git on both machines; inputs reuse the
+pinned native-input archive. Manuscript and claim checklist now distinguish
+this completed incremental overhead test from scientific timing admission.
+
+The user journal records 2,297 restarts of an unrelated failing service during
+the printed job window. No service was modified. This is not a background-free
+experiment, causal overhead estimate or method-speed ranking. Next: resolve
+prospective timing eligibility/non-CPU isolation and execute an eligible
+matched-resource scaling panel without promoting historical timings. Continue
+the corrected QfO dependency chains and remaining publication deliverables.
+BLAST 21713 was verified running at 16:51:50; dependent jobs remain intact.
+All 816 focused workflow tests pass in 23.53 seconds, including three retained
+result/session/relocation regressions. `git diff --check` passes for the scoped
+changes. No inference code, frozen plan or historical threshold was changed.
+The full publication goal remains incomplete; no claim of readiness is made.
+
 ## Overhead Recipe Frozen and Deployed (2026-09-19)
 
 Committed source `272a94d` was exported with `git archive` and deployed to

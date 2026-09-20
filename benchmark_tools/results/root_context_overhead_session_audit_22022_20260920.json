@@ -1,0 +1,46 @@
+{
+  "evidence": [
+    {
+      "bytes": 1442,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/root_context_overhead_scheduler_22022/scheduler_22022.txt",
+      "sha256": "a1a6985ee57b858489b602439dd8f23becef6793e555ffdd6fe356c3e99cc0e8"
+    },
+    {
+      "bytes": 159249,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/dgx_root_context_overhead_recipe_20260919.json",
+      "sha256": "ef3c4d0e083e31273a098cb342fa89b797911a84f7fe643ca256b27829c40b82"
+    },
+    {
+      "bytes": 231,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/root_context_overhead_submission_v1/queue.json",
+      "sha256": "994d260b2dc4bb3a481acffec04375f0d00c0fc184d5fd1873ba645df8f207c3"
+    },
+    {
+      "bytes": 751,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/root_context_overhead_submission_v1/launch.json",
+      "sha256": "98fe9693051d20cda4389b798b2c95b29720a11cf0af7fed90c0e9bbe9d8a7fe"
+    },
+    {
+      "bytes": 569,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/root_context_overhead_submission_v1/result.json",
+      "sha256": "d0e38d006c67fad0b62342208f3e89ab9b88c8da2d632f8b2bcf68ba2c4ac101"
+    }
+  ],
+  "job_id": 22022,
+  "limitations": [
+    "Second-resolution scheduler timestamps; consistent controller/client wall clocks assumed.",
+    "Receipt validity does not establish native output validity, manager lifecycle, overhead or isolation."
+  ],
+  "printed_job_ended_unix_ns": 1789879037000000000,
+  "printed_job_started_unix_ns": 1789866977000000000,
+  "scheduler_timezone": "America/New_York",
+  "scientific_timings_admitted": false,
+  "source": {
+    "bytes": 4911,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_root_context_overhead_session.py",
+    "sha256": "9d84b6fb6120966e0febf673539f43f06c80240c4174ededfd68fa83e9cb5d47"
+  },
+  "status": "overhead_bounded_session_verified",
+  "wait_finished_unix_ns": 1789879052516078913,
+  "wait_started_unix_ns": 1789866976535572218
+}

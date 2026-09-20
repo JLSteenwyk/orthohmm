@@ -1,0 +1,24 @@
+{
+  "status": "root_context_overhead_relocation_compared",
+  "same_results": true,
+  "original_audit_sha256": "e4406db12ab525cc5410adc36caf1bec40d0d0c5c464a8539946dfb9076146c4",
+  "relocated_audit_sha256": "a76bbe67f73aceae9c4b45537a628a01e60fc85e6a481560c39d7c8216d0a775",
+  "original_validated_tasks": 18,
+  "relocated_validated_tasks": 18,
+  "original_issues": [],
+  "relocated_issues": [],
+  "excluded_top_level_keys": [
+    "baseline_evidence",
+    "inventory",
+    "source",
+    "sources"
+  ],
+  "excluded_run_keys": [
+    "evidence"
+  ],
+  "excluded_waiting_session_keys": [
+    "evidence",
+    "source"
+  ],
+  "scientific_timings_admitted": false
+}

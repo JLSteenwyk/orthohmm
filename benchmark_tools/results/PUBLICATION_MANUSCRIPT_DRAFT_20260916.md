@@ -1543,6 +1543,17 @@ native collector integration, not background-free measurements, causal
 attribution, collector overhead or comparative timing eligibility.
 [Native integration and retained flags](ROOT_CONTEXT_NATIVE_RESULT_22021.md).
 
+A prospective paired panel subsequently validated all 18 native tasks and
+nine lineage-versus-root-context comparisons against the same-method native
+baseline. Median signed elapsed-time changes were -0.929631%, +1.342841% and
+-0.344162% for high sensitivity, satellite_v2 and full OrthoFinder. All pairs
+met the prespecified +10% limit and all complete method medians met +5%.
+All 344 original and 60 narrow flags across 11,846 intervals were retained.
+Fixed order and an unrelated restarting user service limit interpretation:
+these are incremental collector comparisons, not causal overhead estimates,
+method-speed rankings or scientific timing admission.
+[Paired overhead results and provenance](ROOT_CONTEXT_OVERHEAD_RESULT_22022.md).
+
 ### SwissTrees Comparator Uncertainty
 
 For all eight retained historical comparison outputs, raw SwissTrees counts

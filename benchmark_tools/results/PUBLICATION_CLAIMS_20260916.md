@@ -92,6 +92,13 @@ intervals and documents 383 scheduled restarts of an unrelated user service.
 The claim is native integration only: no overhead bound, causal attribution,
 background-free execution or scientific timing admission is established.
 
+The subsequent [paired overhead panel 22022](ROOT_CONTEXT_OVERHEAD_RESULT_22022.md)
+validates all 18 tasks and nine pairs against the native baseline. Every pair
+and complete method median passes the prospective +10%/+5% engineering
+budgets. All 344 original and 60 narrow flags remain. This supports the bounded
+incremental collector comparison, not causal overhead, background-free
+execution or a native-method speed ranking. Scientific timings remain unadmitted.
+
 The completed [full-node controls](FULL_NODE_CONTROL_RESULT_21918_20260919.md)
 validate all nine injected workloads: zero narrow flags in 126 native-only
 intervals and detection in 63/63 contended intervals. This supports bounded
