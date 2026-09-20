@@ -1,5 +1,37 @@
 # Publication Progress
 
+## Paired Root-Context Overhead Executor Implemented (2026-09-19)
+
+Added the fixed 18-task serial executor and five-hour exclusive DGX Slurm
+script. The executor pins/re-derives the frozen plan and checks all Python
+helpers plus required plan/protocol/shell source records before and after
+each successful task. Explicit collector selection uses periodic lineage
+for the baseline arm and the native root-context adapter for the treatment
+arm, retaining the existing preparation/input/runtime verification workflow.
+Each task has a fresh cache prefix, and method-specific environment/working
+directory changes are restored on success and exceptions.
+
+Receipts retain task/block/pair/arm identity, verification-file hash and
+collector-report hashes. Missing required reports or supplementary reports
+in the lineage-only arm stop the panel. All subsequent tasks receive explicit
+unrun entries and cumulative checkpoints; native/wrapper failures, timeouts,
+cleanup exceptions and source drift do not trigger retries. Measurement
+completion is not labeled native-output validation or scientific admission.
+
+All 698 focused workflow tests pass, including 25 executor tests for exact
+selection, recipe drift, collector dispatch, state restoration, early/middle/
+late failure retention, wrong-arm report artifacts, post-task source drift,
+existing-output refusal and dangling cache-prefix rejection. The new Slurm
+script passes `bash -n`. Historical execution modules and frozen DGX recipes
+were not modified. No overhead job has been submitted or recipe deployed.
+
+Next: overhead-specific whole-panel provenance/raw/output audit and the
+five-hour waiting-session receipt binding, then freeze/deploy and execute
+the panel. The previous turn was progress (design and endpoints frozen).
+BLAST 21713 was confirmed RUNNING at 12:36:07; FastOMA 21740, parameter array
+21932 and CPM control 21956 remain pending. The publication goal is active
+and incomplete, with no new scientific timing or accuracy conclusions.
+
 ## Incremental Root-Context Overhead Design Frozen (2026-09-19)
 
 Prespecified a paired periodic-lineage versus periodic-lineage-plus-root-context
