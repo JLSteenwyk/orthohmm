@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Replacement Scaling Single-Task Executor Added (2026-09-20)
+
+Previous turn made progress through the allocation-record checker (`9f52696`).
+Reread the complete objective and confirmed BLAST21713 still RUNNING at
+18:54:03; FastOMA21740, parameters21932 and CPM21956 remain pending. No
+existing job or service was changed and no DGX deployment/submission occurred.
+
+Added the Python single-task executor and matching24h batch entry point.
+It checks deployed source/plan/recipe identity, allocation, and separately
+pinned per-job authorization/policy/preflight receipts, calls the existing
+measurement adapter once, and preserves failure/interrupt receipts without
+retry. A fresh receipt directory prevents a second invocation for the same
+slot. All timing/output/environmental admission flags remain false pending
+independent audits; wrapper exit is not scientific admission.
+
+304 focused tests pass and batch syntax checks. Tests use constructed
+authorization and mocked controller/native execution, not real approval or
+DGX timing. The development checkout fails the deployed-recipe gate. The
+[executor record](SCALING_SINGLE_TASK_EXECUTOR_20260920.md) explicitly notes
+that genuine environmental policy/preflight/observer production, per-job
+authorization orchestration, bounded submitting sessions, terminal capture
+integration, recipe deployment and real composed validation remain open.
+No passing real authorization has been created. The full goal remains active.
+
 ## Replacement Scaling Allocation Contract Checked (2026-09-20)
 
 Previous turn made progress with current-source regression evidence and the
