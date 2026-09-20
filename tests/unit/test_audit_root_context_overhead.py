@@ -128,7 +128,7 @@ def test_real_binding_dispatches_correct_replay_and_native_validation(tmp_path, 
     assert result["pressure_observation_window"] == {"retained": True}
 
 
-@pytest.mark.parametrize("case", ["complete", "failure", "incomplete", "raw_invalid", "overlap", "scope", "root_scope"])
+@pytest.mark.parametrize("case", ["complete", "failure", "incomplete", "raw_invalid", "overlap", "scope", "root_scope", "session_invalid"])
 def test_whole_audit_retains_all_pairs_and_nulls_invalid_conclusions(tmp_path, monkeypatch, case):
     directory, context, job, raw = panel_fixture(tmp_path, 7 if case == "failure" else None)
     scheduler_path = tmp_path / "scheduler.txt"
@@ -143,6 +143,13 @@ def test_whole_audit_retains_all_pairs_and_nulls_invalid_conclusions(tmp_path, m
         context["recipe"]["records"].append(dict(module.record(RESULTS / name), path=target, kind="file"))
     monkeypatch.setattr(module, "load_context", lambda *a: context)
     monkeypatch.setattr(module, "recipe_evidence", lambda *a: [])
+    def session(directory, scheduler, recipe, sha, actual_job, timezone):
+        assert directory == tmp_path / "session" and scheduler == scheduler_path
+        assert actual_job == job and timezone == "America/New_York"
+        if case == "session_invalid":
+            raise ValueError("Waiting receipt incomplete")
+        return dict(status="overhead_bounded_session_verified", evidence=[])
+    monkeypatch.setattr(module, "audit_session", session)
     called = []
 
     def success(archive, context, task, *args):
@@ -162,7 +169,8 @@ def test_whole_audit_retains_all_pairs_and_nulls_invalid_conclusions(tmp_path, m
     monkeypatch.setattr(module, "successful_task", success)
     if case == "incomplete":
         (directory / "result.json").unlink()
-    result = module.audit(tmp_path, RESULTS, tmp_path / "recipe.json", context["recipe_sha256"], scheduler_path, job, prior_path)
+    result = module.audit(tmp_path, RESULTS, tmp_path / "recipe.json", context["recipe_sha256"], scheduler_path, job, prior_path,
+                          tmp_path / "session", "America/New_York")
     assert len(result["runs"]) == 18 and len(result["comparison"]["pairs"]) == 9
     assert result["scientific_timings_admitted"] is False
     assert result["comparison"]["engineering_budget_passed"] is (True if case == "complete" else None)
@@ -174,6 +182,10 @@ def test_whole_audit_retains_all_pairs_and_nulls_invalid_conclusions(tmp_path, m
         assert called == []
     elif case == "raw_invalid":
         assert result["runs"][1]["status"] == "failed_or_invalid"
+    elif case == "session_invalid":
+        assert result["validated_tasks"] == 18
+        assert result["issues"][0]["stage"] == "waiting_session"
+        assert result["waiting_session"]["status"] == "failed_or_invalid"
 
 
 def test_nonterminal_scheduler_rejected_before_archive_read(tmp_path, monkeypatch):
@@ -182,4 +194,5 @@ def test_nonterminal_scheduler_rejected_before_archive_read(tmp_path, monkeypatc
     path.write_text(raw.replace("JobState=COMPLETED", "JobState=RUNNING"))
     monkeypatch.setattr(module, "inventory", lambda *a: pytest.fail("premature archive read"))
     with pytest.raises(ValueError, match="terminal"):
-        module.audit(tmp_path, RESULTS, tmp_path / "missing", "sha", path, job, tmp_path / "missing")
+        module.audit(tmp_path, RESULTS, tmp_path / "missing", "sha", path, job, tmp_path / "missing",
+                     tmp_path / "session", "America/New_York")

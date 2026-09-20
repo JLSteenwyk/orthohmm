@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Five-Hour Overhead Session Binding Validated (2026-09-19)
+
+Added a single-attempt bounded SSH submission for the frozen 18-task panel,
+with immutable queue, launch and return receipts. Observation timeouts are
+not terminal evidence and never trigger automatic resubmission. Receipt
+validation binds the committed submitter bytes, exact command and five-hour
+bounds, job identity, terminal scheduler exit and timestamp enclosure.
+The whole-panel audit now requires these receipts: an invalid session
+prevents an overall engineering-budget conclusion even with valid outputs.
+
+All 813 focused workflow tests pass (18.54 seconds), including 31 session
+tests and the panel-level invalid-session regression. These are workflow
+tests, not overhead measurements. DGX deployment/output paths remain absent
+and 3.2 TB is available. Next: freeze/deploy the committed recipe, verify its
+inventory and execute the prespecified paired panel without changing its
+thresholds or method settings. No scientific timing has been admitted.
+
+The preceding archive-search turn yielded no new source inputs; the missing
+TreeFam trees/mapping remain unresolved. This continuation makes engineering
+progress. Local Slurm confirms BLAST 21713 running at 13:03:16; its downstream
+jobs and other queued analyses remain intact. Publication scope is unchanged.
+
 ## Paired Overhead Whole-Panel Audit Implemented (2026-09-19)
 
 Added terminal-first auditing of the full 18-task overhead panel. It binds

@@ -7,6 +7,7 @@ from pathlib import Path
 
 from benchmark_tools.audit_frontier_overhead import recipe_evidence
 from benchmark_tools.audit_lineage_native_diagnostics import inventory
+from benchmark_tools.audit_root_context_overhead_session import audit as audit_session
 from benchmark_tools.fingerprint_native_overhead_outputs import fingerprint
 from benchmark_tools.prepare_ob_candidate_neighborhood import record, check
 from benchmark_tools.prepare_root_context_overhead import PROTOCOL_SHA, PRIOR_AUDIT_SHA
@@ -140,10 +141,18 @@ def temporal_issues(rows):
     return issues
 
 
-def audit(archive, results, recipe_path, recipe_sha, scheduler_path, job, prior_path):
+def audit(archive, results, recipe_path, recipe_sha, scheduler_path, job, prior_path,
+          session_directory, scheduler_timezone):
     sources = [record(scheduler_path)]
     scheduler = scheduler_path.read_text()
     allocation = scheduler_identity(scheduler, job, require_completed=False)
+    issues = []
+    try:
+        session = audit_session(session_directory, scheduler_path, recipe_path, recipe_sha, job, scheduler_timezone)
+        sources.extend(session["evidence"])
+    except ERRORS as error:
+        session = dict(status="failed_or_invalid", error_type=type(error).__name__, reason=str(error))
+        issues.append(dict(stage="waiting_session", **session))
     sources.extend((record(recipe_path), record(prior_path)))
     if sources[-1]["sha256"] != PRIOR_AUDIT_SHA:
         raise ValueError("Prior native audit hash differs")
@@ -165,10 +174,11 @@ def audit(archive, results, recipe_path, recipe_sha, scheduler_path, job, prior_
     sources.extend(recipe_evidence(archive, context["recipe"], RECIPE_ROOT.name))
     sources.extend(record(Path(__file__).with_name(name)) for name in (
         "verify_root_context_overhead_provenance.py", "replay_native_root_context.py", "replay_lineage_native_measurement.py",
-        "validate_scaling_outputs.py", "fingerprint_native_overhead_outputs.py", "summarize_root_context_overhead.py"))
+        "validate_scaling_outputs.py", "fingerprint_native_overhead_outputs.py", "summarize_root_context_overhead.py",
+        "audit_root_context_overhead_session.py", "submit_root_context_overhead_session.py"))
     directory = archive / OUTPUT
     evidence = inventory(directory)
-    rows, issues = [], []
+    rows = []
     try:
         panel = bind_panel(directory, context, job, allocation)
     except ERRORS as error:
@@ -197,24 +207,27 @@ def audit(archive, results, recipe_path, recipe_sha, scheduler_path, job, prior_
         raise ValueError("Panel evidence changed during audit")
     return dict(status="root_context_overhead_audited_not_scientific_admission", runs=rows, issues=issues,
         validated_tasks=sum(r["status"] == "validated" for r in rows), comparison=comparison,
+        waiting_session=session,
         sources=sources, inventory=evidence, baseline_evidence=baseline_evidence, source=record(__file__),
         scientific_timings_admitted=False, environmental_validity_established=False, publication_ready=False,
         limitations=["All prescribed outcomes and flags retained; raw interval pressure/screens remain in hashed reports.",
-            "Separate waiting-session validation remains required before accepting full panel provenance.",
+            "Missing/invalid waiting receipts prevent a panel-wide engineering-budget conclusion.",
             "Engineering elapsed-time budgets do not establish causal overhead, isolation or timing eligibility."])
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    for name in ("archive", "results", "recipe", "scheduler", "prior-audit", "output"):
+    for name in ("archive", "results", "recipe", "scheduler", "prior-audit", "session-directory", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
     parser.add_argument("--recipe-sha", required=True)
     parser.add_argument("--job", type=int, required=True)
+    parser.add_argument("--scheduler-timezone", required=True)
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError(args.output)
     result = audit(args.archive.resolve(), args.results.resolve(), args.recipe.resolve(), args.recipe_sha,
-                   args.scheduler.resolve(), args.job, args.prior_audit.resolve())
+                   args.scheduler.resolve(), args.job, args.prior_audit.resolve(),
+                   args.session_directory.resolve(), args.scheduler_timezone)
     with args.output.open("x") as stream:
         json.dump(result, stream, indent=2, sort_keys=True, allow_nan=False)
         stream.write("\n")
