@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Overhead Recipe Frozen and Deployed (2026-09-19)
+
+Committed source `272a94d` was exported with `git archive` and deployed to
+DGX `root_context_overhead_recipe_v1`. The source archive SHA-256 is
+`08e3669c799653684880c203cf305578241e0807fb1c0bf3e85100888127df1b`.
+The retained `dgx_root_context_overhead_recipe_20260919.json` manifest has
+SHA-256 `ef3c4d0e083e31273a098cb342fa89b797911a84f7fe643ca256b27829c40b82`.
+The deployed pinned-plan selector passed, and a separate full inventory
+verification matched all 528 entries; its receipt is retained as
+`dgx_root_context_overhead_recipe_verified_20260919.json`.
+
+The DGX queue is empty, but no overhead job has been submitted. Next action:
+run `benchmark_tools.submit_root_context_overhead_session` with this recipe
+hash and fresh `benchmarks/work/root_context_overhead_submission_v1`, then
+capture terminal scheduler evidence. Keep the submitting session alive and
+avoid additional DGX connections during the paired panel. After completion,
+archive all outcomes, audit receipts/raw measurements/native outputs, and
+repeat the audit from a relocated archive. Fixed thresholds, failed outcomes
+and pressure flags must remain unchanged. Deployment verification is not a
+timing result or scientific admission; the publication goal remains open.
+
 ## Five-Hour Overhead Session Binding Validated (2026-09-19)
 
 Added a single-attempt bounded SSH submission for the frozen 18-task panel,
