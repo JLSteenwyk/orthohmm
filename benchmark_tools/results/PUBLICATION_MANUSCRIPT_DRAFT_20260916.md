@@ -58,7 +58,7 @@ The Leiden optimizer is described by [Traag et al. (2019)](https://doi.org/10.10
 and the CPM objective by [Traag et al. (2011)](https://doi.org/10.1103/PhysRevE.84.016114).
 These clustering references do not imply biological orthology guarantees.
 The graph library is cited separately as
-[Csardi and Nepusz (2006), igraph](https://python.igraph.org/en/0.11.6/);
+[Csardi and Nepusz (2006), igraph](https://igraph.org);
 runtime manifests, not this citation, identify executed library versions.
 The phylogenetic configuration uses satellite_v2 candidate expansion,
 an internally inferred species tree, minimum-variance species-tree rooting,
@@ -102,6 +102,18 @@ Other comparator references are
 and [Majidian et al. (2025), FastOMA](https://doi.org/10.1038/s41592-024-02552-8).
 These method citations do not establish which optional modules or settings
 ran in our experiments; retained execution records govern that attribution.
+
+Companion-method references distinguish protein search
+([DIAMOND](https://doi.org/10.1038/s41592-021-01101-x)), multiple alignment
+([MAFFT](https://doi.org/10.1093/molbev/mst010) and
+[FAMSA](https://doi.org/10.1038/srep33964)), tree inference
+([FastTree](https://doi.org/10.1371/journal.pone.0009490) and
+[FastME](https://doi.org/10.1093/molbev/msv150)), and protein-family clustering
+([MCL](https://doi.org/10.1093/nar/30.7.1575)). These references describe method
+lineages, not proof that every installed companion was invoked in every run.
+Version resolution and actual commands are retained separately in the
+[dependency review](PUBLICATION_DEPENDENCY_REFERENCES_20260918.md) and
+[DGX companion-path audit](DGX_SCALING_MIGRATION_20260917.md).
 
 For QfO, OrthoHMM high sensitivity and the OrthoFinder checkpoint contribute
 group-derived cross-species pairs; OrthoHMM satellite_v2 and full OrthoFinder
@@ -156,6 +168,14 @@ bootstrap; it is not preregistration of method selection. Family
 exchangeability and residual cross-family dependence limit inference.
 [Protocol](ORTHOBENCH_UNCERTAINTY_PROTOCOL_20260916.md).
 
+The numerical and reporting implementations use
+[NumPy](https://doi.org/10.1038/s41586-020-2649-2) for array/bootstrap operations,
+[Biopython](https://doi.org/10.1093/bioinformatics/btp163) for sequence/tree
+validation helpers, and [Matplotlib](https://doi.org/10.1109/MCSE.2007.55) for
+plots. The [analysis-dependency review](PUBLICATION_NUMERIC_REFERENCES_20260918.md)
+links those roles to source modules; per-run manifests determine executed
+versions. Library citations do not validate statistical assumptions or plots.
+
 The [SwissTree resource](https://www.expasy.org/resources/swisstree) and
 [TreeFam resource paper](https://doi.org/10.1093/nar/gkj118) describe curated
 gene-tree references; they do not authenticate our exact retained snapshots.
@@ -167,6 +187,15 @@ enzyme-nomenclature background, not a citation for the QfO EC scoring formula
 or evidence of the source release used for our historical annotations.
 Source checks and machine-readable SwissTree/ENZYME citations are retained
 in the [resource supplement](PUBLICATION_RESOURCE_REFERENCES_20260918.md).
+
+The [VGNC resource paper](https://doi.org/10.1186/s13059-023-02957-2) describes
+vertebrate gene nomenclature, while the QfO service protocol defines its
+benchmark use. Gene Ontology is attributed to its
+[foundational paper](https://doi.org/10.1038/75556); the later
+[2026 knowledgebase update](https://doi.org/10.1093/nar/gkaf1292) is contextual
+resource attribution, not the annotation release or scorer used in QfO2020.
+Neither resource citation establishes historical snapshot identity or supplies
+dependency-aware uncertainty for our functional endpoints.
 
 For QfO we retain individual VGNC, SwissTrees, TreeFam-A, EC, GO, and FAS
 endpoints, their native axes, and source provenance. The unweighted mean of

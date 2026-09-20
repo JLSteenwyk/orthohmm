@@ -1,5 +1,10 @@
 # Consolidated Selected Bibliography
 
+The [explicit manuscript citation inventory](MANUSCRIPT_CITATION_COVERAGE_20260920.md)
+now matches all 37 selected v5 entries after adding role-specific Methods
+citations. This closes selected-entry linkage, not full attribution adequacy,
+dependency completeness or scientific claim support.
+
 ## Publisher Field Review (v5)
 
 The [current v5 export](publication_bibliography_20260920_v5.csl.json)

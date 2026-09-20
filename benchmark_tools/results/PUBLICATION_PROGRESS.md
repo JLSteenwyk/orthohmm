@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Explicit Manuscript Citation Coverage Added (2026-09-20)
+
+Previous turn made progress with publisher-supported metadata corrections
+(`25b9615`). Added a Pandoc-AST citation inventory and applied it to the actual
+manuscript. Initially 24 of 37 selected entries matched explicitly; no DOI
+was unresolved. The igraph documentation link needed a distinct interpretation
+from missing attribution, and the other references were mostly in supplements.
+
+Added the documented companion, numerical-library and annotation-resource
+references at Methods locations, using existing reviewed roles and preserving
+version/snapshot caveats. The new inventory matches 37/37 selected entries
+to 37 explicit citations. Both before/after reports retain source identities.
+No reference was added merely as proof of scientific correctness or historical
+invocation; the GO2026 citation is explicitly contextual, not QfO2020 input.
+
+All 34 auditor/bibliography/rendering tests pass in 1.28 seconds. Nine new
+auditor cases exercise DOI resolver variants, ambiguity, unknown citation IDs,
+section context and actual Markdown parsing that excludes code-block examples.
+The coverage note documents reproduction and limits. Selected-reference linkage
+does not establish full dependency inventory, adequate attribution of every
+claim, citation semantics or journal readiness. No scientific input, score,
+runtime or job changed. Scheduler inspection confirmed BLAST 21713 RUNNING
+at elapsed 18:08:20; FastOMA, parameter and CPM analyses remain pending.
+Controlled resource comparisons and the full publication package remain open.
+
 ## Two Publisher Citation Fields Corrected (2026-09-20)
 
 Previous turn made progress through visual review and the Matplotlib entity

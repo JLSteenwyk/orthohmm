@@ -1,0 +1,494 @@
+{
+  "bibliography_entries": 37,
+  "bibliography_not_explicitly_matched": [],
+  "citation_adequacy_established": false,
+  "command": [
+    "/usr/bin/pandoc",
+    "--from=markdown",
+    "--to=json",
+    "benchmark_tools/results/PUBLICATION_MANUSCRIPT_DRAFT_20260916.md"
+  ],
+  "internal_link_occurrences": 164,
+  "limitations": [
+    "Matches explicit DOI resolver links, exact bibliography URLs and Pandoc citation IDs only.",
+    "Other external links may be citations requiring manual review; unmatched bibliography entries are not automatically irrelevant.",
+    "Does not detect uncited claims or validate attribution, source semantics, versions, rights or linked local evidence.",
+    "Section names locate occurrences; this does not supply exact Markdown line numbers."
+  ],
+  "matched_bibliography_ids": [
+    "Ashburner2000GO",
+    "Bairoch2000ENZYME",
+    "Csardi2006igraph",
+    "Dosch2023FAS",
+    "GO2026Knowledgebase",
+    "Jones2023VGNC",
+    "Li2006TreeFam",
+    "SIBSwissTree",
+    "biopython2009",
+    "busco2021",
+    "cpm2011",
+    "diamond2021",
+    "famsa2016",
+    "fastme2015",
+    "fastoma2025",
+    "fasttree2010",
+    "kuzmin2020",
+    "leiden2019",
+    "mafft2013",
+    "matplotlib2007",
+    "mcl2002",
+    "numpy2020",
+    "orthobench2020",
+    "orthofinder2015",
+    "orthofinder2019",
+    "orthofinder2026",
+    "orthofinder2026correction",
+    "orthohmm2024preprint",
+    "orthomcl2003",
+    "proteinortho2023",
+    "pyvolve2015",
+    "qfo2016",
+    "qfo2020",
+    "qfo2022",
+    "sonicparanoid2024",
+    "ygob2005",
+    "zombi2019online"
+  ],
+  "occurrences": [
+    {
+      "bibliography_ids": [
+        "leiden2019"
+      ],
+      "doi": "10.1038/s41598-019-41695-z",
+      "kind": "link",
+      "label": "Traag et al.\u00a0(2019)",
+      "section": "Configurations And Comparator Outputs",
+      "status": "matched",
+      "url": "https://doi.org/10.1038/s41598-019-41695-z"
+    },
+    {
+      "bibliography_ids": [
+        "cpm2011"
+      ],
+      "doi": "10.1103/physreve.84.016114",
+      "kind": "link",
+      "label": "Traag et al.\u00a0(2011)",
+      "section": "Configurations And Comparator Outputs",
+      "status": "matched",
+      "url": "https://doi.org/10.1103/PhysRevE.84.016114"
+    },
+    {
+      "bibliography_ids": [
+        "Csardi2006igraph"
+      ],
+      "doi": null,
+      "kind": "link",
+      "label": "Csardi and Nepusz (2006), igraph",
+      "section": "Configurations And Comparator Outputs",
+      "status": "matched",
+      "url": "https://igraph.org"
+    },
+    {
+      "bibliography_ids": [
+        "orthohmm2024preprint"
+      ],
+      "doi": "10.1101/2024.12.07.627370",
+      "kind": "link",
+      "label": "Steenwyk et al.\u00a0(2024) preprint",
+      "section": "Configurations And Comparator Outputs",
+      "status": "matched",
+      "url": "https://doi.org/10.1101/2024.12.07.627370"
+    },
+    {
+      "bibliography_ids": [
+        "orthofinder2026"
+      ],
+      "doi": "10.1038/s41592-026-03126-6",
+      "kind": "link",
+      "label": "Emms et al.\u00a0(2026)",
+      "section": "Configurations And Comparator Outputs",
+      "status": "matched",
+      "url": "https://doi.org/10.1038/s41592-026-03126-6"
+    },
+    {
+      "bibliography_ids": [
+        "orthofinder2026correction"
+      ],
+      "doi": "10.1038/s41592-026-03238-z",
+      "kind": "link",
+      "label": "published Figure2 correction",
+      "section": "Configurations And Comparator Outputs",
+      "status": "matched",
+      "url": "https://doi.org/10.1038/s41592-026-03238-z"
+    },
+    {
+      "bibliography_ids": [
+        "orthofinder2015"
+      ],
+      "doi": "10.1186/s13059-015-0721-2",
+      "kind": "link",
+      "label": "Emms and Kelly (2015)",
+      "section": "Configurations And Comparator Outputs",
+      "status": "matched",
+      "url": "https://doi.org/10.1186/s13059-015-0721-2"
+    },
+    {
+      "bibliography_ids": [
+        "orthofinder2019"
+      ],
+      "doi": "10.1186/s13059-019-1832-y",
+      "kind": "link",
+      "label": "Emms and Kelly (2019)",
+      "section": "Configurations And Comparator Outputs",
+      "status": "matched",
+      "url": "https://doi.org/10.1186/s13059-019-1832-y"
+    },
+    {
+      "bibliography_ids": [
+        "orthomcl2003"
+      ],
+      "doi": "10.1101/gr.1224503",
+      "kind": "link",
+      "label": "Li et al.\u00a0(2003), OrthoMCL",
+      "section": "Configurations And Comparator Outputs",
+      "status": "matched",
+      "url": "https://doi.org/10.1101/gr.1224503"
+    },
+    {
+      "bibliography_ids": [
+        "sonicparanoid2024"
+      ],
+      "doi": "10.1186/s13059-024-03298-4",
+      "kind": "link",
+      "label": "Cosentino et al.\u00a0(2024), SonicParanoid2",
+      "section": "Configurations And Comparator Outputs",
+      "status": "matched",
+      "url": "https://doi.org/10.1186/s13059-024-03298-4"
+    },
+    {
+      "bibliography_ids": [
+        "proteinortho2023"
+      ],
+      "doi": "10.3389/fbinf.2023.1322477",
+      "kind": "link",
+      "label": "Klemm et al.\u00a0(2023), Proteinortho6",
+      "section": "Configurations And Comparator Outputs",
+      "status": "matched",
+      "url": "https://doi.org/10.3389/fbinf.2023.1322477"
+    },
+    {
+      "bibliography_ids": [
+        "fastoma2025"
+      ],
+      "doi": "10.1038/s41592-024-02552-8",
+      "kind": "link",
+      "label": "Majidian et al.\u00a0(2025), FastOMA",
+      "section": "Configurations And Comparator Outputs",
+      "status": "matched",
+      "url": "https://doi.org/10.1038/s41592-024-02552-8"
+    },
+    {
+      "bibliography_ids": [
+        "diamond2021"
+      ],
+      "doi": "10.1038/s41592-021-01101-x",
+      "kind": "link",
+      "label": "DIAMOND",
+      "section": "Configurations And Comparator Outputs",
+      "status": "matched",
+      "url": "https://doi.org/10.1038/s41592-021-01101-x"
+    },
+    {
+      "bibliography_ids": [
+        "mafft2013"
+      ],
+      "doi": "10.1093/molbev/mst010",
+      "kind": "link",
+      "label": "MAFFT",
+      "section": "Configurations And Comparator Outputs",
+      "status": "matched",
+      "url": "https://doi.org/10.1093/molbev/mst010"
+    },
+    {
+      "bibliography_ids": [
+        "famsa2016"
+      ],
+      "doi": "10.1038/srep33964",
+      "kind": "link",
+      "label": "FAMSA",
+      "section": "Configurations And Comparator Outputs",
+      "status": "matched",
+      "url": "https://doi.org/10.1038/srep33964"
+    },
+    {
+      "bibliography_ids": [
+        "fasttree2010"
+      ],
+      "doi": "10.1371/journal.pone.0009490",
+      "kind": "link",
+      "label": "FastTree",
+      "section": "Configurations And Comparator Outputs",
+      "status": "matched",
+      "url": "https://doi.org/10.1371/journal.pone.0009490"
+    },
+    {
+      "bibliography_ids": [
+        "fastme2015"
+      ],
+      "doi": "10.1093/molbev/msv150",
+      "kind": "link",
+      "label": "FastME",
+      "section": "Configurations And Comparator Outputs",
+      "status": "matched",
+      "url": "https://doi.org/10.1093/molbev/msv150"
+    },
+    {
+      "bibliography_ids": [
+        "mcl2002"
+      ],
+      "doi": "10.1093/nar/30.7.1575",
+      "kind": "link",
+      "label": "MCL",
+      "section": "Configurations And Comparator Outputs",
+      "status": "matched",
+      "url": "https://doi.org/10.1093/nar/30.7.1575"
+    },
+    {
+      "bibliography_ids": [
+        "qfo2016"
+      ],
+      "doi": "10.1038/nmeth.3830",
+      "kind": "link",
+      "label": "Altenhoff et al.\u00a0(2016)",
+      "section": "Development-Exposed Benchmarks",
+      "status": "matched",
+      "url": "https://doi.org/10.1038/nmeth.3830"
+    },
+    {
+      "bibliography_ids": [
+        "orthobench2020"
+      ],
+      "doi": "10.1093/gbe/evaa211",
+      "kind": "link",
+      "label": "Emms and Kelly (2020)",
+      "section": "Development-Exposed Benchmarks",
+      "status": "matched",
+      "url": "https://doi.org/10.1093/gbe/evaa211"
+    },
+    {
+      "bibliography_ids": [
+        "qfo2020"
+      ],
+      "doi": "10.1093/nar/gkaa308",
+      "kind": "link",
+      "label": "Altenhoff et al.\u00a0(2020)",
+      "section": "Development-Exposed Benchmarks",
+      "status": "matched",
+      "url": "https://doi.org/10.1093/nar/gkaa308"
+    },
+    {
+      "bibliography_ids": [
+        "qfo2022"
+      ],
+      "doi": "10.1093/nar/gkac330",
+      "kind": "link",
+      "label": "Nevers et al.\u00a0(2022)",
+      "section": "Development-Exposed Benchmarks",
+      "status": "matched",
+      "url": "https://doi.org/10.1093/nar/gkac330"
+    },
+    {
+      "bibliography_ids": [
+        "numpy2020"
+      ],
+      "doi": "10.1038/s41586-020-2649-2",
+      "kind": "link",
+      "label": "NumPy",
+      "section": "Development-Exposed Benchmarks",
+      "status": "matched",
+      "url": "https://doi.org/10.1038/s41586-020-2649-2"
+    },
+    {
+      "bibliography_ids": [
+        "biopython2009"
+      ],
+      "doi": "10.1093/bioinformatics/btp163",
+      "kind": "link",
+      "label": "Biopython",
+      "section": "Development-Exposed Benchmarks",
+      "status": "matched",
+      "url": "https://doi.org/10.1093/bioinformatics/btp163"
+    },
+    {
+      "bibliography_ids": [
+        "matplotlib2007"
+      ],
+      "doi": "10.1109/mcse.2007.55",
+      "kind": "link",
+      "label": "Matplotlib",
+      "section": "Development-Exposed Benchmarks",
+      "status": "matched",
+      "url": "https://doi.org/10.1109/MCSE.2007.55"
+    },
+    {
+      "bibliography_ids": [
+        "SIBSwissTree"
+      ],
+      "doi": null,
+      "kind": "link",
+      "label": "SwissTree resource",
+      "section": "Development-Exposed Benchmarks",
+      "status": "matched",
+      "url": "https://www.expasy.org/resources/swisstree"
+    },
+    {
+      "bibliography_ids": [
+        "Li2006TreeFam"
+      ],
+      "doi": "10.1093/nar/gkj118",
+      "kind": "link",
+      "label": "TreeFam resource paper",
+      "section": "Development-Exposed Benchmarks",
+      "status": "matched",
+      "url": "https://doi.org/10.1093/nar/gkj118"
+    },
+    {
+      "bibliography_ids": [
+        "Dosch2023FAS"
+      ],
+      "doi": "10.1093/bioinformatics/btad226",
+      "kind": "link",
+      "label": "FAS",
+      "section": "Development-Exposed Benchmarks",
+      "status": "matched",
+      "url": "https://doi.org/10.1093/bioinformatics/btad226"
+    },
+    {
+      "bibliography_ids": [
+        "Bairoch2000ENZYME"
+      ],
+      "doi": "10.1093/nar/28.1.304",
+      "kind": "link",
+      "label": "ENZYME resource paper",
+      "section": "Development-Exposed Benchmarks",
+      "status": "matched",
+      "url": "https://doi.org/10.1093/nar/28.1.304"
+    },
+    {
+      "bibliography_ids": [
+        "Jones2023VGNC"
+      ],
+      "doi": "10.1186/s13059-023-02957-2",
+      "kind": "link",
+      "label": "VGNC resource paper",
+      "section": "Development-Exposed Benchmarks",
+      "status": "matched",
+      "url": "https://doi.org/10.1186/s13059-023-02957-2"
+    },
+    {
+      "bibliography_ids": [
+        "Ashburner2000GO"
+      ],
+      "doi": "10.1038/75556",
+      "kind": "link",
+      "label": "foundational paper",
+      "section": "Development-Exposed Benchmarks",
+      "status": "matched",
+      "url": "https://doi.org/10.1038/75556"
+    },
+    {
+      "bibliography_ids": [
+        "GO2026Knowledgebase"
+      ],
+      "doi": "10.1093/nar/gkaf1292",
+      "kind": "link",
+      "label": "2026 knowledgebase update",
+      "section": "Development-Exposed Benchmarks",
+      "status": "matched",
+      "url": "https://doi.org/10.1093/nar/gkaf1292"
+    },
+    {
+      "bibliography_ids": [
+        "busco2021"
+      ],
+      "doi": "10.1093/molbev/msab199",
+      "kind": "link",
+      "label": "Manni et al., 2021",
+      "section": "Development-Exposed Benchmarks",
+      "status": "matched",
+      "url": "https://doi.org/10.1093/molbev/msab199"
+    },
+    {
+      "bibliography_ids": [
+        "ygob2005"
+      ],
+      "doi": "10.1101/gr.3672305",
+      "kind": "link",
+      "label": "Byrne and Wolfe, 2005",
+      "section": "Prospective Validation And Ablations",
+      "status": "matched",
+      "url": "https://doi.org/10.1101/gr.3672305"
+    },
+    {
+      "bibliography_ids": [
+        "zombi2019online"
+      ],
+      "doi": "10.1093/bioinformatics/btz710",
+      "kind": "link",
+      "label": "Zombi",
+      "section": "Evolutionary Simulations And Runtime Admission",
+      "status": "matched",
+      "url": "https://doi.org/10.1093/bioinformatics/btz710"
+    },
+    {
+      "bibliography_ids": [
+        "pyvolve2015"
+      ],
+      "doi": "10.1371/journal.pone.0139047",
+      "kind": "link",
+      "label": "Pyvolve",
+      "section": "Evolutionary Simulations And Runtime Admission",
+      "status": "matched",
+      "url": "https://doi.org/10.1371/journal.pone.0139047"
+    },
+    {
+      "bibliography_ids": [
+        "kuzmin2020"
+      ],
+      "doi": "10.1126/science.aaz5667",
+      "kind": "link",
+      "label": "Kuzmin et al.\u00a0(2020)",
+      "section": "Prespecified Whole-Genome-Duplicate Application",
+      "status": "matched",
+      "url": "https://doi.org/10.1126/science.aaz5667"
+    }
+  ],
+  "other_external_links": [],
+  "pandoc_version": "pandoc 3.1.3\nFeatures: -server +lua\nScripting engine: Lua 5.4\nUser data directory: /home/bizon/.local/share/pandoc\nCopyright (C) 2006-2023 John MacFarlane. Web: https://pandoc.org\nThis is free software; see the source for copying conditions. There is no\nwarranty, not even for merchantability or fitness for a particular purpose.\n",
+  "publication_ready": false,
+  "sources": [
+    {
+      "bytes": 117193,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/PUBLICATION_MANUSCRIPT_DRAFT_20260916.md",
+      "sha256": "df8e916d753731ef1d202b92b8ce44c6ec691f70f1bb0579e0621b67cff33075"
+    },
+    {
+      "bytes": 48872,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_bibliography_20260920_v5.csl.json",
+      "sha256": "bc2669a4c291a86473c88db22cc575b46eca55b6ec6b049c9c2cf860cb372aef"
+    },
+    {
+      "bytes": 199114624,
+      "path": "/usr/bin/pandoc",
+      "sha256": "3dd273647f0265cb439f22976d5366a54b071a3783f6fec50838b47fb53d701b"
+    },
+    {
+      "bytes": 5045,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_manuscript_citations.py",
+      "sha256": "d1e058cb0d4f2b4938542ee6fa985a4db4f6207e94c34a51c17c73daa3194a0b"
+    }
+  ],
+  "status": "explicit_citation_inventory",
+  "stderr": "",
+  "unresolved_citations": []
+}
