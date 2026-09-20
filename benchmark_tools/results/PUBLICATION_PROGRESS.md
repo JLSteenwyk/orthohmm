@@ -1,5 +1,38 @@
 # Publication Progress
 
+## Matching Long-Run Raw Replay Implemented (2026-09-20)
+
+The previous turn corrected the collector timeout contract before execution.
+Added `replay_scaling_root_context.py` without modifying historical replay.
+It requires the 85,800-second command contract and contiguous six-digit raw
+observations, binds raw and embedded native/memory records, reproduces both
+lineage and supplementary context with existing evaluators, and verifies
+final memory reads occur after the last supplementary observation. It checks
+memory gauges/events, lineage-report hash binding and exact handoff/release
+gates. Failure/abort markers and changing evidence/inventories are rejected.
+
+Unlike the diagnostic-only replay, it preserves observed native nonzero exits
+and signals rather than dropping their measurement records. Timeout evidence
+must report code124, a true timeout flag, elapsed time at least the frozen
+timeout and no more than its 30-second cleanup allowance. Exit124 without a
+timeout flag remains a nonzero exit, not an inferred timeout. Replay never
+asserts native-output validity, environmental validity or scientific admission.
+
+Tests cover raw-control fixture replay and relocation, contradictions/tampering,
+long point-name ordering, timeout boundaries, and collector-generated reports
+using real evaluators with intercepted worker/sampling interfaces. Full-duration
+timeout behavior and real DGX composed execution are not claimed by these
+tests. No inference was rerun and no original CPU flag or threshold changed.
+All 984 focused workflow tests pass in 44.65 seconds, including 41 new replay
+tests. The scoped `git diff --check` passes.
+
+Next: bind the new replay to authorized per-job launch/outcome and scheduler/
+session provenance, then validate the composed workflow before deployment.
+The long-run observer memory/overhead and whole-run environmental evidence
+requirements remain open. The service decision is still pending; no service
+was changed. BLAST 21713 was verified running at 17:20:12. The publication
+objective remains incomplete.
+
 ## Long-Run Collector Compatibility Corrected Before Launch (2026-09-20)
 
 The previous turn made progress on the adapter, but its intercepted execution
