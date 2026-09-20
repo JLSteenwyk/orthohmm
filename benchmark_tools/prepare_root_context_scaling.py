@@ -19,6 +19,8 @@ OVERHEAD_PLAN_SHA = "02475e4a4290664f776d430b041bd65ccfa640221d07f95b1709b53678a
 OVERHEAD_AUDIT_SHA = "6da8441923e51a404fb2e4fec4c7302593fc1a1bc7e338b8996b9d2d2f24641a"
 OUTPUT_ROOT = ROOT / "scaling_root_context_v1"
 METHOD_IDS = ("orthohmm_high_sensitivity", "orthohmm_satellite_v2", "orthofinder_3_1_5_full")
+AMENDMENT_SHA = "74eefc57da826b4767cfc76019c740cc0f7f91ac708253dce74c00a8dd13c649"
+PREPARED_V1_SHA = "65e0f850f32d09e0049e7e55c8700637588d3b7857aa59a2a70eb942d6c5b348"
 
 
 def assemble(original, order, overhead, audit):
@@ -86,14 +88,33 @@ def build(results):
     return plan
 
 
+def build_long_run(results):
+    plan = build(results)
+    retained = read_pinned(results / "dgx_root_context_scaling_plan_20260920.json", PREPARED_V1_SHA)
+    if plan != retained:
+        raise ValueError("Original prepared plan does not reproduce")
+    amendment = record(results / "DGX_SCALING_LONG_RUN_AMENDMENT_20260920.md")
+    if amendment["sha256"] != AMENDMENT_SHA:
+        raise ValueError("Long-run amendment changed")
+    plan.update(status="prospective_root_context_scaling_v2_prepared_not_authorized",
+        prepared_v1_sha256=PREPARED_V1_SHA, long_run_amendment_sha256=AMENDMENT_SHA)
+    plan["collector"].update(module="benchmark_tools.measure_scaling_root_context", entry="measure")
+    plan["host_observation_scope"] = "counter snapshots, not exhaustive process/GPU/device-I/O inventory"
+    plan["remaining_gates"].extend(["Matching long-run replay and composed lifecycle validation",
+        "Long-run observer memory/overhead assessment; prior four-proteome results are not a general bound"])
+    check(amendment)
+    return plan
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--results", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--long-run-collector", action="store_true")
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError(args.output)
-    plan = build(args.results.resolve())
+    plan = (build_long_run if args.long_run_collector else build)(args.results.resolve())
     with args.output.open("x") as stream:
         json.dump(plan, stream, indent=2, sort_keys=True, allow_nan=False)
         stream.write("\n")

@@ -1,5 +1,46 @@
 # Publication Progress
 
+## Long-Run Collector Compatibility Corrected Before Launch (2026-09-20)
+
+The previous turn made progress on the adapter, but its intercepted execution
+tests missed a real contract mismatch. Read-through integration found that
+the selected historical root-context wrapper and worker reject timeouts above
+900 seconds, whereas scaling requires 85,800 seconds. Historical replay also
+only accepts 60/900 seconds, and four-digit point names do not sort correctly
+after 9,999 samples. No replacement scaling run had been launched.
+
+Added a separate long-run collector and worker, retaining the old collector
+bytes and all historical evidence. It reuses existing raw point readers,
+CPU/pressure evaluators, owned-process-group timeout cleanup and memory reads;
+accepts the exact 20CPU/96GiB/85800s/1s contract; and uses six-digit point names.
+A failed initial observation sends an abort gate rather than starting an
+unobserved native command. Native failures/timeouts and final reads remain.
+
+[The pre-execution amendment](DGX_SCALING_LONG_RUN_AMENDMENT_20260920.md)
+is pinned in `dgx_root_context_scaling_plan_v2_20260920.json`, SHA-256
+`f54790499a48f95e2a866750ebc78433195265591e12c3dc6aff1389e29ed084`.
+It preserves all 27 original runs, input bytes, scientific settings and paths.
+The adapter now pins v2 and checks the collector import identity. V1 remains
+retained; both plans explicitly withhold execution and timing admission.
+
+The amendment also makes a visibility gap explicit: these readers collect
+host counters, not exhaustive process/GPU/device-I/O inventories. A generic
+`monitor_host=True` parameter does not establish that coverage. Point retention
+and end-of-run evaluation consume observer resources; the earlier overhead
+result is not a validated long-run memory/overhead bound.
+
+All 943 focused workflow tests pass in 43.68 seconds. New coverage includes
+actual short success/nonzero subprocesses with the long-timeout worker
+contract, intercepted observer lifecycle/failure cases, old-boundary rejection,
+six-digit ordering and v2 plan reproduction. No full-duration or DGX-native
+scaling smoke is implied by these tests.
+
+Next: implement matching long-run raw replay, then composed launch/outcome
+handling and environmental-policy validation. Do not invoke historical replay
+with relaxed limits or launch the unvalidated composition. The service
+decision remains pending, no service was changed, and BLAST 21713 was verified
+running at 17:11:19. Publication completion remains unproven.
+
 ## Replacement Per-Run Measurement Adapter Implemented (2026-09-20)
 
 The previous turn made progress by preparing the full replacement scaling

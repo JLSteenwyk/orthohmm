@@ -10,17 +10,20 @@ from pathlib import Path
 import re
 
 from benchmark_tools.launch_dgx_native_run import read_pinned, native_enumerator
-from benchmark_tools.measure_native_root_context import measure_native_run
+from benchmark_tools.measure_scaling_root_context import measure as measure_native_run
 from benchmark_tools.measure_native_scaling_run import measure_run
 from benchmark_tools.prepare_root_context_scaling import OUTPUT_ROOT
 
-PLAN_SHA = "65e0f850f32d09e0049e7e55c8700637588d3b7857aa59a2a70eb942d6c5b348"
+PLAN_SHA = "f54790499a48f95e2a866750ebc78433195265591e12c3dc6aff1389e29ed084"
 
 
 def load_task(plan_path, index):
     if type(index) is not int or not 0 <= index < 27:
         raise ValueError("Require original task index in [0, 26]")
     plan = read_pinned(plan_path, PLAN_SHA)
+    if (plan["collector"]["module"] != measure_native_run.__module__
+            or plan["collector"]["entry"] != measure_native_run.__name__):
+        raise ValueError("Collector import differs from frozen specification")
     task = plan["runs"][index]
     if type(task["index"]) is not int or task["index"] != index:
         raise ValueError("Task identity differs")

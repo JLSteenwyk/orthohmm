@@ -6,7 +6,7 @@ import pytest
 
 from benchmark_tools import measure_root_context_scaling as module
 
-PLAN = Path(__file__).resolve().parents[2] / "benchmark_tools/results/dgx_root_context_scaling_plan_20260920.json"
+PLAN = Path(__file__).resolve().parents[2] / "benchmark_tools/results/dgx_root_context_scaling_plan_v2_20260920.json"
 
 
 @pytest.mark.parametrize("index", range(27))
@@ -30,6 +30,14 @@ def test_modified_plan_rejected(tmp_path):
     path.write_text("{}")
     with pytest.raises(ValueError):
         module.load_task(path, 0)
+
+
+def test_selected_collector_accepts_frozen_native_boundary():
+    from benchmark_tools.measure_scaling_root_context import validate
+    plan, task, order = module.load_task(PLAN, 0)
+    assert plan["collector"]["module"] == module.measure_native_run.__module__
+    assert plan["collector"]["entry"] == module.measure_native_run.__name__
+    validate(task["run"]["native_argv"], plan["allocation"]["cpus"], plan["native_timeout_s"], plan["interval_s"])
 
 
 def configured(tmp_path, monkeypatch, index=0):

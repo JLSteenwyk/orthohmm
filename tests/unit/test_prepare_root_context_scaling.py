@@ -74,3 +74,15 @@ def test_protocol_hash_checked_before_other_sources(tmp_path):
     (tmp_path / "DGX_SCALING_REPLACEMENT_PROTOCOL_20260920.md").write_text("changed")
     with pytest.raises(ValueError, match="protocol"):
         module.build(tmp_path)
+
+
+def test_long_run_amendment_changes_only_declared_collector_metadata():
+    original = module.build(RESULTS)
+    updated = module.build_long_run(RESULTS)
+    retained = json.loads((RESULTS / "dgx_root_context_scaling_plan_v2_20260920.json").read_text())
+    assert updated == retained
+    changed = {k for k in original if original[k] != updated[k]}
+    assert changed == {"status", "collector", "remaining_gates"}
+    assert updated["runs"] == original["runs"]
+    assert updated["collector"]["module"] == "benchmark_tools.measure_scaling_root_context"
+    assert updated["execution_authorized"] is False
