@@ -58,6 +58,11 @@ def test_complete_raw_replay_retains_native_failures_and_relocates(archive, code
     assert result["memory_events"]["oom_group_kill"] == 1
     assert result["screening"] == measured["screening"]
     assert result["native_outputs_validated"] is False and result["scientific_timings_admitted"] is False
+    from benchmark_tools.measure_root_context_scaling import classify_measurement
+    disposition = classify_measurement(dict(status=measured["status"], before={}, after={},
+        measurement=measured, scientific_results_admitted=False), result, 21816)
+    assert disposition["status"] == "native_" + result["native_outcome"]
+    assert disposition["next_submission_authorized"] is False
     relocated = directory.parent / (directory.name + "_relocated")
     shutil.copytree(directory, relocated)
     other = module.replay(relocated, 21816, ["/usr/bin/true"])

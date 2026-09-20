@@ -13,8 +13,54 @@ from benchmark_tools.launch_dgx_native_run import read_pinned, native_enumerator
 from benchmark_tools.measure_scaling_root_context import measure as measure_native_run
 from benchmark_tools.measure_native_scaling_run import measure_run
 from benchmark_tools.prepare_root_context_scaling import OUTPUT_ROOT
+from benchmark_tools.replay_scaling_root_context import native_outcome
+from benchmark_tools.verify_lineage_native_provenance import same
 
 PLAN_SHA = "f54790499a48f95e2a866750ebc78433195265591e12c3dc6aff1389e29ed084"
+
+
+def classify_measurement(verification, replayed, expected_job):
+    """Classify retained outcomes; never authorize continuation from wrapper exit alone."""
+    if type(expected_job) is not int or expected_job <= 0:
+        raise ValueError("Require positive expected scheduler job identity")
+    if not isinstance(verification, dict):
+        raise ValueError("Require a retained wrapper record")
+    reported = verification.get("measurement")
+    result = dict(status="measurement_evidence_incomplete", wrapper_status=verification.get("status"),
+        reported_native=reported.get("native") if isinstance(reported, dict) else None,
+        corroborated_native_outcome=None, next_submission_authorized=False, automatic_retry=False,
+        native_outputs_validated=False, runtime_identity_verified=False,
+        scientific_timings_admitted=False, environmental_validity_established=False,
+        required_followup=["Terminal scheduler and bounded-session verification", "Frozen task/runtime/recipe provenance",
+                           "Environmental policy and whole-run evidence", "Native outputs or retained failure audit"])
+    if verification.get("status") in {"verified_wrapper_failed", "runtime_changed_or_unverifiable"}:
+        return dict(result, status="infrastructure_or_provenance_failure",
+                    reason="Wrapper or runtime verification failed; retain any observed native result and pause")
+    if replayed is None:
+        return dict(result, reason="Independent raw replay is missing or failed; do not infer a native-only failure")
+    try:
+        if verification["scientific_results_admitted"] is not False:
+            raise ValueError("Unexpected wrapper admission")
+        if not isinstance(verification["before"], dict) or not isinstance(verification["after"], dict):
+            raise ValueError("Missing before/after verification records")
+        measured = verification["measurement"]
+        if (replayed["status"] != "scaling_root_context_measurement_replayed"
+                or not same(replayed["measured"], measured)):
+            raise ValueError("Replay does not bind the wrapper measurement")
+        if type(measured["job_id"]) is not int or measured["job_id"] != expected_job:
+            raise ValueError("Measured scheduler identity differs")
+        if any(replayed[k] is not False for k in (
+                "scientific_timings_admitted", "environmental_validity_established", "native_outputs_validated", "publication_ready")):
+            raise ValueError("Unexpected replay admission")
+        outcome, wall = native_outcome(measured, measured["native"])
+        if (verification["status"] != measured["status"] or replayed["native_outcome"] != outcome
+                or not same(replayed["native_exit_code"], measured["native"]["exit_code"])
+                or not same(replayed["native_wall_s"], wall)):
+            raise ValueError("Wrapper, native outcome and replay summary disagree")
+    except (KeyError, TypeError, ValueError) as error:
+        return dict(result, status="infrastructure_or_provenance_failure", reason=str(error))
+    return dict(result, status="native_" + outcome, corroborated_native_outcome=outcome,
+                reason="Native outcome corroborated by raw replay; remaining checks still gate continuation")
 
 
 def load_task(plan_path, index):

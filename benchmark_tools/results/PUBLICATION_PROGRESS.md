@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Scaling Outcome Classification Added (2026-09-20)
+
+The previous turn made progress by implementing matching long-run replay.
+Added outcome classification to the existing scaling adapter, preserving
+reported native results while distinguishing corroborated native exits and
+timeouts from wrapper/runtime/provenance failures or missing replay evidence.
+The classifier binds the wrapper measurement to the replay payload, checks
+the expected job and native status/exit/wall summary, and reuses the replay's
+native-boundary validation rather than inventing a second timeout rule.
+
+Wrapper/runtime failures take precedence even when the native child exited
+zero. Missing/contradictory replay cannot justify treating a failure as
+native-only. Exit124 without a true timeout flag stays a nonzero exit. No
+classification authorizes retry or the next submission, validates native
+outputs, establishes runtime/environment identity or admits scientific timing.
+Those require independent frozen-task/recipe, terminal scheduler/session,
+environment and output/failure audits. Checking that before/after records exist
+is not verification of their runtime contents.
+
+Tests cover classification states and contradictory/malformed data, preserve
+inputs, and connect actual raw-replay fixture results to the classifier.
+All 1,013 focused workflow tests pass in 44.97 seconds, including 29 new
+classification tests. The scoped `git diff --check` passes.
+There is no new standalone execution CLI or submitted job. Next: implement
+the per-job provenance binding and launcher/receipt orchestration, then verify
+the complete composition before deployment. Environmental policy and the
+service decision remain pending. BLAST 21713 was verified running at 17:28:12;
+no service or unrelated process was changed. The publication goal remains open.
+
 ## Matching Long-Run Raw Replay Implemented (2026-09-20)
 
 The previous turn corrected the collector timeout contract before execution.
