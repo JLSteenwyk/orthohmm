@@ -1,5 +1,42 @@
 # Publication Progress
 
+## Incremental Root-Context Overhead Design Frozen (2026-09-19)
+
+Prespecified a paired periodic-lineage versus periodic-lineage-plus-root-context
+comparison. The 18 tasks form nine adjacent pairs, three per method; method
+order rotates across three blocks and arm order reverses in the middle block.
+All native commands/settings, 73,266 proteins, runtime/input manifests and
+one-second cadence are inherited unchanged from the validated native plan.
+Only output/cache paths and collector/diagnostic metadata change. This is
+incremental root-context overhead, not total instrumentation overhead or a
+boundary-only-versus-periodic comparison.
+
+Protocol `ROOT_CONTEXT_OVERHEAD_PROTOCOL_20260919.md` SHA-256:
+`079ea021eb9f180143f87a1099d6a852c423f21554f95403b81367970a79220e`.
+Derived plan `dgx_root_context_overhead_plan_20260919.json` SHA-256:
+`02475e4a4290664f776d430b041bd65ccfa640221d07f95b1709b53678a91873`.
+The proposed single exclusive allocation is 20CPU/96GiB with a five-hour
+limit, 900-second native-step limits and 18120/18150-second remote/local
+waiting bounds. It stops after execution/measurement/cleanup failure and
+retains all unrun entries. No overhead run has been submitted.
+
+Added the prespecified complete-pair summarizer: signed root/lineage wall
+ratios, three-pair method medians only, null overall budget conclusion for
+missing/invalid pairs or panel issues, and retained 10% per-pair/5% median
+engineering budgets. A recorded 1e-12 absolute comparison tolerance handles
+floating-point equality at budget boundaries, not substantive threshold
+changes. Negative ratios, invalid output identities and all failures remain
+visible; no corrected scientific times or confidence bounds are produced.
+
+All 673 focused workflow tests pass, including 27 new plan/summary tests.
+Plan tests reverse every output-path relocation and recover exact parent
+native runs. Next: implement the fixed 18-task executor and corresponding
+whole-panel/session audit, freeze the deployment recipe, then run this panel.
+The prior turn was progress (native integration completed and archived).
+BLAST 21713 was confirmed RUNNING at 12:28:47; FastOMA 21740, parameter array
+21932 and CPM control 21956 remain pending. Publication readiness remains
+incomplete, and no scientific scores, defaults or timing eligibility changed.
+
 ## Native Diagnostic 22021 Completed And Validated (2026-09-19)
 
 The frozen panel completed 0:0 in 33:34. Independent session receipt auditing
