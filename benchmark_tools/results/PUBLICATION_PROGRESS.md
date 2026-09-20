@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Held-Session Service Suppression Tested (2026-09-20)
+
+Previous turn made progress through authorized directory creation, service
+control checks, and committed documentation of runtime-mask loss between
+SSH sessions. Reread the objective; local BLAST21713 remained RUNNING at
+25:55:22 with 9,932,801,598 bytes of partial output and other analyses queued.
+
+Added and executed a bounded DGX service-maintenance probe after confirming
+the spark queue empty. Four five-second-spaced samples in one held SSH
+session proved the approved service masked/inactive/PID0; normal cleanup
+removed the mask and restored original start behavior. A separate deliberate
+TERM interruption also executed cleanup successfully. Persistent unit hash
+and enabled link were preserved. Shell syntax check passed. No benchmark
+or other service was launched/changed.
+
+[Probe evidence and limitations](DGX_SERVICE_SESSION_PROBE_20260920.md)
+distinguish these two short real-host checks from full timing integration.
+Post-restoration journal confirms missing scientific_openclaw, not CHDIR,
+is now the failure. Trusted application source remains requested. The
+production session must retain suppression until the actual Slurm job is
+terminal, even when a wait observation expires; this integration and the
+remaining environmental checks are not complete. Scientific settings,
+running jobs, frozen recipes, and timing admission remain unchanged.
+
 ## Authorized DGX Service Maintenance (2026-09-20)
 
 User interrupted a verified wait on live BLAST21713 to request Samwise
