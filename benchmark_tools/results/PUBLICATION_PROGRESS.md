@@ -1,5 +1,42 @@
 # Publication Progress
 
+## Replacement Scaling Specification Prepared (2026-09-20)
+
+The previous turn made progress by assessing retained non-CPU evidence.
+This turn prepared a separate prospective 27-run replacement specification,
+without changing historical measurements or launching inference. It pins the
+original commands, all three native input orders, tested collector settings,
+and the completed overhead audit. All original method/size/repeat identities,
+input bytes and scientific arguments are retained; only output destinations
+move to `scaling_root_context_v1`. Original OrthoFinder identity remains
+`orthofinder_3_1_5_full`, distinct from its diagnostic label.
+
+[The prospective protocol](DGX_SCALING_REPLACEMENT_PROTOCOL_20260920.md) records
+24-hour exclusive 20-CPU/96-GiB allocations, 23h50m native timeouts, bounded
+waiting sessions, no automatic retries, full outcome retention and no partial
+three-repeat medians. Native failures may continue only after verified
+terminal/environment checks; infrastructure or policy breaches pause further
+submissions. Native pressure/CPU flags remain visible, not automatic causal
+exclusion labels. No overhead correction or historical timing promotion occurs.
+
+The prepared plan `dgx_root_context_scaling_plan_20260920.json` has SHA-256
+`65e0f850f32d09e0049e7e55c8700637588d3b7857aa59a2a70eb942d6c5b348`.
+Protocol SHA-256 is
+`2bccc38c7fd830539e1214af070d782cf670485ad6b2e129bea56c9367be0419`.
+Fifteen new tests pass, including exact reverse path mapping to every original
+run, unchanged datasets/settings, drift rejection and full plan reproduction.
+The combined focused workflow suite passes all 847 tests in 35.95 seconds;
+the scoped whitespace/error check passes.
+The first generation rejected the builder's incorrect diagnostic method-name
+assumption; the original method identifiers were preserved, not changed.
+
+Execution and service changes remain explicitly unauthorized. The user's
+decision about the failing DGX service is still pending. Next: freeze the
+actual environment policy, implement/test the replacement launch and audit
+integration, and freeze/deploy its complete source recipe before submission.
+This is preparation evidence, not controlled timing completion. BLAST 21713
+was verified live at 17:01:23; the full publication goal remains incomplete.
+
 ## Non-CPU Evidence Assessed Without Rerunning Inference (2026-09-20)
 
 The previous turn made progress by completing and reproducing panel 22022.
