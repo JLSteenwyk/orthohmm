@@ -1,0 +1,148 @@
+{
+  "absent_packages": 0,
+  "affected_alerts": 0,
+  "comparisons": [
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-qwm4-qh6w-59xr",
+      "locked_versions": [
+        "26.2.1"
+      ],
+      "number": 56,
+      "package": "pip",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-h35f-9h28-mq5c",
+      "locked_versions": [
+        "83.0.0"
+      ],
+      "number": 55,
+      "package": "setuptools",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-wf93-45jw-7689",
+      "locked_versions": [
+        "26.2.1"
+      ],
+      "number": 54,
+      "package": "pip",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-jp4c-xjxw-mgf9",
+      "locked_versions": [
+        "26.2.1"
+      ],
+      "number": 53,
+      "package": "pip",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-58qw-9mgm-455v",
+      "locked_versions": [
+        "26.2.1"
+      ],
+      "number": 52,
+      "package": "pip",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-6vgw-5pg2-w6jp",
+      "locked_versions": [
+        "26.2.1"
+      ],
+      "number": 51,
+      "package": "pip",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-4xh5-x5gv-qwph",
+      "locked_versions": [
+        "26.2.1"
+      ],
+      "number": 50,
+      "package": "pip",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-5rjg-fvgr-3xxf",
+      "locked_versions": [
+        "83.0.0"
+      ],
+      "number": 49,
+      "package": "setuptools",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-cx63-2mw6-8hw5",
+      "locked_versions": [
+        "83.0.0"
+      ],
+      "number": 48,
+      "package": "setuptools",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-mq26-g339-26xf",
+      "locked_versions": [
+        "26.2.1"
+      ],
+      "number": 47,
+      "package": "pip",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-r9hx-vwmv-q579",
+      "locked_versions": [
+        "83.0.0"
+      ],
+      "number": 46,
+      "package": "setuptools",
+      "status": "outside_reported_range"
+    }
+  ],
+  "evaluator": {
+    "bytes": 2783,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_dependency_lock.py",
+    "sha256": "cd1638d3e0f3f40c3a58748a4c77b761a009e97af29844106b6e748bdc31713c"
+  },
+  "install_report": {
+    "bytes": 138275,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_baseline_patched_install/install_report.json",
+    "sha256": "8546a5162a6250293c506b1d61b6b06faea5bcea11eb936ab0ae7e9d2c9c4de7"
+  },
+  "limitations": [
+    "Checks retained install-report versions against this snapshot only; does not inspect the current installed environment.",
+    "Historical vulnerable lock and repository alerts remain unchanged; no alert closure or full secure-build claim.",
+    "Prior wheel-integrity and smoke evidence remain separately bounded; no frozen scientific runtime changed."
+  ],
+  "previous_audit": {
+    "bytes": 8160,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/patched_installer_audit_20260919.json",
+    "sha256": "683db1e54a55d196b71f09b2c2e3e26d244fc2b3e27f6917fa1f660f715b3b19"
+  },
+  "requirements": {
+    "bytes": 1264,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_baseline_patched_requirements_20260919.txt",
+    "sha256": "77054a100352c5e676e660f0846c0ac5f1ad972786d2760f253bf87588ba1847"
+  },
+  "same_alert_records_as_previous": true,
+  "snapshot": {
+    "bytes": 17584,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/dependency_alerts_release_review_20260920.json",
+    "sha256": "a865c336227257c1822edeecedba37b7a25f8d8e5fcc616bfc5b9a361efd57e0"
+  },
+  "status": "retained_install_report_rechecked"
+}

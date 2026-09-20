@@ -390,8 +390,14 @@ not establish any comparative resource advantage.
   alerts. Earlier snapshots, including13open alerts immediately after the patch,
   remain historical. This is not a host or inference-runtime security audit
   or a current zero-alert claim: the September 20 push reports 11 dependency
-  vulnerabilities (3 high, 7 moderate, 1 low). Current alert identities and
-  affected release environments still require reconciliation and review.
+  vulnerabilities (3 high, 7 moderate, 1 low). The authenticated September 20
+  [snapshot and range recheck](PUBLICATION_INSTALLER_SECURITY_20260919.md)
+  reconcile all 11 to the retained historical CPU-wheel lock. Its vulnerable
+  installer versions remain unchanged. The separately tested patched lock's
+  recorded installation versions fall outside all 11 current advisory ranges;
+  this is neither repository-alert closure nor a complete current-environment,
+  build-chain or exploitability audit. Do not use the historical lock for new
+  installations.
   The [strict docs rebuild](docs_strict_build_validation_20260917.json)
   passes with no diagnostics; earlier14-diagnostic output remains historical.
 - The [progress ledger](PUBLICATION_PROGRESS.md) records a later full collected

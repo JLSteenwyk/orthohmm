@@ -1700,6 +1700,18 @@ native eligibility nor establishes generalization or comparator superiority.
 
 ## Data And Code Availability
 
+Historical installation manifests retain their original tool versions and
+must not be interpreted as secure installation recommendations. The original
+CPU-wheel lock pins pip and setuptools versions affected by 11 retained
+repository advisories. A separately tested
+[patched development-installation lock](publication_baseline_patched_requirements_20260919.txt)
+and [local-wheel, smoke and advisory-range evidence](PUBLICATION_INSTALLER_SECURITY_20260919.md)
+are available without altering frozen benchmark environments. The September
+20 recheck finds no affected recorded versions in that patched installation
+for those 11 ranges. This does not establish a secure complete build chain,
+current installed-environment clearance, portable release or closed repository
+alerts; the historical lock remains evidence only, not for new installation.
+
 A [primary-source data-rights register](PUBLICATION_DATA_RIGHTS_20260918.md)
 distinguishes QfO deposit, UniProt, WGD, BUSCO, OrthoBench and YGOB terms.
 In particular, BUSCO software and dataset licenses differ. OrthoBench/YGOB

@@ -1,5 +1,39 @@
 # Patched Installation Tools
 
+## September 20 Recheck
+
+The fresh authenticated, read-only
+[repository snapshot](dependency_alerts_release_review_20260920.json) still
+contains exactly the same 11 advisory records as the September 19 snapshot.
+All refer to the retained historical CPU-wheel requirements file, not the
+patched requirements or docs lock. No alert was dismissed or historical
+requirement changed to suppress detection.
+
+The [fresh range recheck](patched_installer_recheck_20260920.json) verifies
+the retained install-report and patched-requirements identities against the
+previous audit, then applies the existing range evaluator to all 11 current
+alerts. Zero reported installed versions are affected and no alerted package
+is missing from the report. This rechecks recorded installation evidence,
+not the current live environment, all dependencies, build/bootstrap tools,
+or advisory reachability. The earlier local-wheel integrity and installed
+smoke tests remain separate evidence and were not rerun by this recheck.
+
+The snapshot command is:
+
+```sh
+python -m benchmark_tools.snapshot_dependency_alerts --git-credential --output NEW_PATH
+```
+
+For the range comparison, read `install_report` from the previous audit,
+verify its recorded identity, construct the evaluator's `package` inventory
+from each pip-report `install[].metadata.name` and `.version`, and call
+`benchmark_tools.audit_dependency_lock.evaluate` with the fresh `alerts`.
+The new result retains source identities and every comparison. The four
+existing dependency-audit unit tests also pass. Repository alerts remain open;
+the historical vulnerable lock must not be used for new installations.
+
+## Original Patched-Installation Evidence
+
 The authenticated read-only [GitHub snapshot](installer_alerts_before_20260919.json)
 reports11open alerts, all against pip23.0.1/setuptools65.5.0 in
 `publication_cpu_wheel_requirements_20260919.txt`. These versions were

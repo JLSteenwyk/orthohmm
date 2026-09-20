@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Current Installer Alerts Reconciled (2026-09-20)
+
+Previous turn made progress with manuscript/status corrections (`ef4adcc`).
+The authenticated read-only GitHub API now confirms the 11 push-reported
+alerts all target the retained historical CPU-wheel requirements, specifically
+pip23.0.1/setuptools65.5.0. The advisory records exactly match the prior
+September 19 installer snapshot. Existing patched-installation work was
+reused rather than repeated or mistaken for unfinished remediation.
+
+The new `patched_installer_recheck_20260920.json` verifies retained install
+report and patched-requirements identities and applies the existing range
+evaluator to the fresh snapshot: zero affected reported versions, zero absent
+alerted packages. Four dependency-audit unit tests pass. This checks retained
+report versions, not the current installed environment or all vulnerabilities.
+No alert was dismissed, no historical lock changed, no new installation
+performed and no frozen benchmark environment upgraded.
+
+Linked the existing patched lock and bounded installation evidence from the
+manuscript and claim checklist, correcting the implication that these alert
+identities were still unreviewed. The old lock remains available as historical
+evidence and explicitly unsuitable for new installation; repository alerts
+remain open. Full build-chain, release and current-environment review remain
+distinct incomplete requirements. BLAST 21713 was verified RUNNING at elapsed
+17:52:41; no inference or scheduler state was changed. The publication goal
+remains active, including controlled timing and pending corrected analyses.
+
 ## Manuscript Timing And Execution Status Reconciled (2026-09-20)
 
 Previous turn made progress with the composed measurement audit (`d0b60e6`).
