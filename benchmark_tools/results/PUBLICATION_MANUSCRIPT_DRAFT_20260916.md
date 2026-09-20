@@ -280,7 +280,7 @@ gene. No configurations were changed in response to these held-out outcomes.
 [Frozen results](YGOB_FROZEN_RESULTS_20260916.md),
 [machine-readable evidence](ygob_frozen_results_20260916.json).
 
-![Frozen YGOB scores and paired differences](figures_ygob_frozen_20260916/ygob_validation.png)
+[![Frozen YGOB scores and paired differences](figures_ygob_frozen_20260916/ygob_validation.png)](figures_ygob_frozen_20260916/ygob_validation.png "Full-resolution figure")
 
 Figure: observed co-membership scores and paired OrthoHMM-minus-OrthoFinder
 differences. Thick intervals are nominal 95%; thin intervals apply the frozen
@@ -612,7 +612,7 @@ nine divergent and eight divergent-turnover seeds, with ten for other
 comparisons. Failure-conditioned estimates may be biased.
 [Full records and limitations](SIMULATION_TREE_ROBUSTNESS_RESULTS_20260917.md).
 
-![All simulation species-tree effects](figures_simulation_tree_robustness_20260917/simulation_tree_robustness.png)
+[![All simulation species-tree effects](figures_simulation_tree_robustness_20260917/simulation_tree_robustness.png)](figures_simulation_tree_robustness_20260917/simulation_tree_robustness.png "Full-resolution figure")
 
 Figure: all126 exploratory F1, precision and recall endpoints across seven
 conditions, two methods and three tree contrasts. Points are paired-seed mean
@@ -658,7 +658,7 @@ factorial is reported separately below.
 [generated 42-endpoint table](qfo_factorial_swiss_bootstrap_20260918.md),
 [six-endpoint cell scores and prediction counts](qfo_factorial_endpoint_table_20260918/scores.md).
 
-![Original-release QfO SwissTrees factorial](qfo_factorial_swiss_figure_20260918/qfo_factorial_swiss.png)
+[![Original-release QfO SwissTrees factorial](qfo_factorial_swiss_figure_20260918/qfo_factorial_swiss.png)](qfo_factorial_swiss_figure_20260918/qfo_factorial_swiss.png "Full-resolution figure")
 
 Figure: original-release SwissTrees cell scores and all 42 prespecified
 conditional-effect and interaction endpoints. Thick intervals are nominal
@@ -668,7 +668,7 @@ differences. This is not the corrected-input rerun or a comparison against
 OrthoFinder. The [figure manifest](qfo_factorial_swiss_figure_20260918/manifest.json)
 binds the generated PNG/PDF/SVG files to their exact source result and plotter.
 
-![OrthoBench factorial scores and paired conditional effects](figures_orthobench_factorial_20260916/orthobench_factorial.png)
+[![OrthoBench factorial scores and paired conditional effects](figures_orthobench_factorial_20260916/orthobench_factorial.png)](figures_orthobench_factorial_20260916/orthobench_factorial.png "Full-resolution figure")
 
 Figure: all eight cell scores and 36 conditional-effect endpoints. Thick
 intervals are nominal 95% paired RefOG bootstrap intervals; thin intervals
@@ -739,7 +739,7 @@ No variant was selected to change the method. Recorded reconciliation costs
 reuse raw gene trees and are not end-to-end efficiency measurements.
 [Full scores, uncertainty and coverage](OB_SPECIES_TREE_ROBUSTNESS_RESULTS_20260916.md).
 
-![Supplied-tree perturbation scores and all paired effects](figures_species_tree_robustness_20260916/species_tree_robustness.png)
+[![Supplied-tree perturbation scores and all paired effects](figures_species_tree_robustness_20260916/species_tree_robustness.png)](figures_species_tree_robustness_20260916/species_tree_robustness.png "Full-resolution figure")
 
 Figure: control and six fixed topology perturbations, ordered by the frozen
 variant indices. Thick intervals are nominal95% paired RefOG intervals;
@@ -779,7 +779,7 @@ per-family counts without changing the reference or low-certainty conventions.
 Percentile intervals are approximate; the84-endpoint adjusted tails contain
 only about six of20,000 resamples each. [All effects and limitations](OB_STRATIFIED_ERROR_RESULTS_20260916.md).
 
-![All stratified OrthoBench F1, precision and recall effects](figures_ob_stratified_errors_20260916/stratified_errors.png)
+[![All stratified OrthoBench F1, precision and recall effects](figures_ob_stratified_errors_20260916/stratified_errors.png)](figures_ob_stratified_errors_20260916/stratified_errors.png "Full-resolution figure")
 
 Figure: both OrthoHMM configurations minus full OrthoFinder3.1.5 across all14
 prespecified strata, with identical horizontal scales. Filled points show66
@@ -949,7 +949,7 @@ zero. SonicParanoid's three adjusted intervals include zero. FastOMA and
 OrthoMCL contrasts remain unestimable, not zero. Independent arithmetic
 reproduction matches all 18 available endpoints within 1e-12.
 
-![Corrected SwissTrees comparator differences with paired intervals](corrected_swiss_comparison_figure_21987/corrected_swiss_comparison.png)
+[![Corrected SwissTrees comparator differences with paired intervals](corrected_swiss_comparison_figure_21987/corrected_swiss_comparison.png)](corrected_swiss_comparison_figure_21987/corrected_swiss_comparison.png "Full-resolution figure")
 
 This figure retains every planned contrast. Thick bars are nominal 95%
 intervals and thin bars are adjusted across all 24 endpoints. Values are
@@ -1113,7 +1113,7 @@ established. Fresh frozen admission, count-audit and bootstrap executions
 reproduced the corresponding JSON outputs byte-for-byte.
 [Complete scores, intervals, family effects and provenance](QFO_CORRECTED_FACTORIAL_COMPLETE_20260919.md).
 
-![Corrected-release SwissTrees factorial scores and conditional effects](qfo_corrected_factorial_figures_20260919/qfo_factorial_swiss.png)
+[![Corrected-release SwissTrees factorial scores and conditional effects](qfo_corrected_factorial_figures_20260919/qfo_factorial_swiss.png)](qfo_corrected_factorial_figures_20260919/qfo_factorial_swiss.png "Full-resolution figure")
 
 The corrected-release figure shows all eight cells and all 42 effects;
 thick intervals are nominal 95% and thin intervals use the prespecified

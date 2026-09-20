@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Manuscript Render And Local Figure Access Checked (2026-09-20)
+
+Previous turn made progress with explicit selected-citation coverage
+(`56ab41c`). This turn rendered the working manuscript to usable sibling HTML
+with its repository-relative evidence links. Initial AST inspection found
+172 local link/image occurrences and 162 unique existing targets. Chrome
+printed 32 pages and embedded all eight inline figures. The seven pages
+containing them were visually inspected: no obvious clipping, but labels are
+small at default print width. Other pages were not visually reviewed.
+
+Added full-resolution links around all eight Markdown figures, retaining
+scientific captions, alt text and original figure bytes. Regenerated HTML,
+recorded 180 resulting link/image occurrences and hashes of all 162 targets,
+and verified every target was Git-tracked. A new citation inventory retains
+37/37 selected matches. The initial print predates the link wrappers; final
+HTML structure is verified separately, not claimed fully visually reviewed.
+
+All 11 relevant tests pass in 0.60 seconds. Tests check the actual HTML's eight full-resolution image links, dated HTML
+and figure identities, plus citation parsing. The review note records commands,
+source/asset scope and limitations. Direct link presence is not scientific
+validation, fragment checking, rights clearance or a standalone archive.
+Final figure sizing and manuscript copyediting remain open; default-width
+print output is explicitly not submission-ready. No science settings or
+scores changed. BLAST 21713 was verified RUNNING at elapsed 18:14:43.
+Controlled resource evidence, pending analyses and the full publication goal
+remain incomplete.
+
 ## Explicit Manuscript Citation Coverage Added (2026-09-20)
 
 Previous turn made progress with publisher-supported metadata corrections
