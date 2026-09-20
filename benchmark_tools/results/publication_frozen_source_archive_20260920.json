@@ -1,0 +1,336 @@
+{
+  "archive": {
+    "bytes": 126207,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_source_20260920/orthohmm-0.5.0-scientific-7f3a9e4-mode0022.tar.gz",
+    "sha256": "8e8e1ea4839fe0a78c3a6b7410951e65b8ee4311dd99b7a4b00d05275a51b8f4"
+  },
+  "executable_benchmark_reproduced": false,
+  "files": [
+    {
+      "bytes": 1078,
+      "git_blob": "d5ef8fe0e47ce261880c6c25732bbb2d31f41dc1",
+      "mode": 420,
+      "path": "LICENSE.md",
+      "sha256": "4b9b0c3ffc73fce4c47734d7ef12bd70b9d2cdc4a3bf76ac0f3a35edbe2c3d9e"
+    },
+    {
+      "bytes": 11107,
+      "git_blob": "ba36554cb47fe2dd100c928e4619e7face33e912",
+      "mode": 420,
+      "path": "README.md",
+      "sha256": "e0bca1e5f507282321d81484f34fb458f87d36629a23f3df771fb0939be8b4b8"
+    },
+    {
+      "bytes": 0,
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": 420,
+      "path": "orthohmm/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 127,
+      "git_blob": "a518b7a3a975fffdf89e61685052dbe5863d9ae8",
+      "mode": 420,
+      "path": "orthohmm/__main__.py",
+      "sha256": "59690e02073880a5ec60087a93d77e3448a3370bb78fb17ee9ce9d5300d0d45a"
+    },
+    {
+      "bytes": 14046,
+      "git_blob": "aaafe576745777b239b9711b42b3ed5343f0ba38",
+      "mode": 420,
+      "path": "orthohmm/accuracy.py",
+      "sha256": "1a35944ab7fea859143f599b1262aa111272787f6f735b9acc37d299427f2ad6"
+    },
+    {
+      "bytes": 7908,
+      "git_blob": "6c8dabb3684d7306bbbc7bd70851fde009f86713",
+      "mode": 420,
+      "path": "orthohmm/args_processing.py",
+      "sha256": "12648aeaa4e8d0b0af60f707e90ec2c95b6983c4498dacd9bccfade1839f4c54"
+    },
+    {
+      "bytes": 10166,
+      "git_blob": "345da5463a4a6a6eca658f216bf71291d7947aed",
+      "mode": 420,
+      "path": "orthohmm/externals.py",
+      "sha256": "5304b4190b01a53c7c4e3235f9d1df9e7eff1f01d09633d07750103487268115"
+    },
+    {
+      "bytes": 2977,
+      "git_blob": "12f08cd7240f1456284c8c09394b89716366e47e",
+      "mode": 420,
+      "path": "orthohmm/files.py",
+      "sha256": "f1ec2acaea2566615b06b0a37e17b77f76bbd87fe6f2c76560a318343f6871a1"
+    },
+    {
+      "bytes": 32293,
+      "git_blob": "490b8ee0b5e55bb49f98fb94f2755b69971e6a0a",
+      "mode": 420,
+      "path": "orthohmm/helpers.py",
+      "sha256": "faf9e85c6af8ad5f5740c81157e8ce40bbd98c1731991d9f3fbe1f47a05f6149"
+    },
+    {
+      "bytes": 1411,
+      "git_blob": "54b73333397799aed1dcc4f95838716707d18a87",
+      "mode": 420,
+      "path": "orthohmm/leiden_worker.py",
+      "sha256": "7d6d9fa5827bd99dcce28d2248688bbeb762b4b547bbc4e7491c16f0e2090c41"
+    },
+    {
+      "bytes": 6812,
+      "git_blob": "a15e6d010b77c202260aa98918261be1b1c2eba3",
+      "mode": 420,
+      "path": "orthohmm/metrics.py",
+      "sha256": "d19bc9c9777b2dd01943f6421930f9fab02b7153519ab76e6a40272328195a1a"
+    },
+    {
+      "bytes": 30663,
+      "git_blob": "5510d510a9daea3c844eefdc704a989c7990747a",
+      "mode": 420,
+      "path": "orthohmm/orthohmm.py",
+      "sha256": "2afb89b9dc683e64e58208188f720e07701d4760ff09d1ac3a53c7a8075b84bb"
+    },
+    {
+      "bytes": 15939,
+      "git_blob": "bcc70dfc1482f05d79c99d9b5331d7535ef9c2dc",
+      "mode": 420,
+      "path": "orthohmm/parser.py",
+      "sha256": "9a959b9948d944fc5361a661ac3faad55575674993c746800daf6db7eccceba5"
+    },
+    {
+      "bytes": 29732,
+      "git_blob": "c5f0c5e75ed28a06f7f4883ce924cf6dcd5cee3d",
+      "mode": 420,
+      "path": "orthohmm/phylogeny.py",
+      "sha256": "216d97608e6dede8960f3b06fe7036bd23da8fae5677df88583ba9369ec3c1bf"
+    },
+    {
+      "bytes": 41369,
+      "git_blob": "bfaa06e27582113ed8f43292ea0fe13dab373eb1",
+      "mode": 420,
+      "path": "orthohmm/phylogeny_pipeline.py",
+      "sha256": "44e00316546b5df78354badd2b1a6bb595b685e98b86f686f1a32543d7f15e4f"
+    },
+    {
+      "bytes": 61183,
+      "git_blob": "64ec838e0cf8744d479a6698d5014d242003de23",
+      "mode": 420,
+      "path": "orthohmm/refinement.py",
+      "sha256": "991f1eb6a5f73d0442529ed19095a34b7c6ba8bff8dfe43a1127e24ec73fb26d"
+    },
+    {
+      "bytes": 0,
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": 420,
+      "path": "orthohmm/search/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1800,
+      "git_blob": "cda01c2a8dfeca1b802d84fff9fd9d0f1e0f65a4",
+      "mode": 420,
+      "path": "orthohmm/search/_experimental/README.md",
+      "sha256": "2faa6f273dcfc3ffa5be98bda74f27aca5056adbf61a590bb22afd31752bed71"
+    },
+    {
+      "bytes": 0,
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": 420,
+      "path": "orthohmm/search/_experimental/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 7759,
+      "git_blob": "73025a46e4d996619ebfaa3d6181d267314832d5",
+      "mode": 420,
+      "path": "orthohmm/search/_experimental/csrc/hmm_forward.c",
+      "sha256": "f29e0ce42978e43ca2b3a8576e327e536a1ec8537757feff01d756d96045c026"
+    },
+    {
+      "bytes": 15413,
+      "git_blob": "d24364a620dc252f287bb41b4893af6ef5a59e1a",
+      "mode": 420,
+      "path": "orthohmm/search/_experimental/csrc/hmm_viterbi_striped.c",
+      "sha256": "261c1a298663b9c9c46050c9b5a521e8be9cc5997e07b06204e08f4a45a19917"
+    },
+    {
+      "bytes": 7506,
+      "git_blob": "7d455388e6fd072e9c1d70e16002b1b3ee294676",
+      "mode": 420,
+      "path": "orthohmm/search/_experimental/csrc/kmer_merge.c",
+      "sha256": "8dce3c7e882c0ec68195b6dacc96c31d246bfa38c2515a473cd03542a8f28c2a"
+    },
+    {
+      "bytes": 8599,
+      "git_blob": "e1bfd3edb3c43fbdb73060f8e0a8915f81f8bc6e",
+      "mode": 420,
+      "path": "orthohmm/search/_experimental/viterbi_cuda_numba.py",
+      "sha256": "be998cf737f5c468417a84cc42d6f9c288133b6da09989ba1630d2c7d07fbdd2"
+    },
+    {
+      "bytes": 46012,
+      "git_blob": "80dcd5631ca0a2d39f8c32426a677284ad60dd17",
+      "mode": 420,
+      "path": "orthohmm/search/csrc/hmm_viterbi.c",
+      "sha256": "b668f86de525776e939f1c3196b41f3c870dd22cc56e35a93dff6a957d01f67c"
+    },
+    {
+      "bytes": 13696,
+      "git_blob": "e3e41280fe87a82e319b8d3d5c919f2cb06396cd",
+      "mode": 420,
+      "path": "orthohmm/search/csrc/hmm_viterbi_cuda.cu",
+      "sha256": "aa0a7a6fa53da025f28607a055364c08c365e561033a48dcf2c4381d350301d2"
+    },
+    {
+      "bytes": 10657,
+      "git_blob": "739bdb36aef5d9abaa5164504385892c811e661e",
+      "mode": 420,
+      "path": "orthohmm/search/csrc/kmer_prefilter.c",
+      "sha256": "8124e2652cb382549f2a282c3122aaa9f5c393da2b304b5d4f6cb92fae243f01"
+    },
+    {
+      "bytes": 9098,
+      "git_blob": "5a5135ab465ddf7d908f9bcfdd643a782eea16f5",
+      "mode": 420,
+      "path": "orthohmm/search/csrc/pair_align.c",
+      "sha256": "c5a3c2bc869ec59ca8261c976d6e77e5938faf5bfd8571566315b81cf5b08e9a"
+    },
+    {
+      "bytes": 21146,
+      "git_blob": "34c2a1dc26373e0e8902c5aeb774a1c4ed1d9f29",
+      "mode": 420,
+      "path": "orthohmm/search/engine.py",
+      "sha256": "596e6e56b6dd3c2e72bbfa5bb67087285bd22833e4897443df0f9629a2f18b74"
+    },
+    {
+      "bytes": 1865,
+      "git_blob": "3cdf7d782961c88b6dccb41e24739d03611eeec0",
+      "mode": 420,
+      "path": "orthohmm/search/evalue.py",
+      "sha256": "b395cd48874d75963512b5d1e249c5251796f869592a52983c8d55b98fe11841"
+    },
+    {
+      "bytes": 27982,
+      "git_blob": "d23dedac000f6ed0cfb5152678d21c544d3bda75",
+      "mode": 420,
+      "path": "orthohmm/search/matrices.py",
+      "sha256": "36e59a6c649a72f9c3a5d6eca117b7fe84d5ff8e975a1d7561a82ee8d6c29fcb"
+    },
+    {
+      "bytes": 9180,
+      "git_blob": "977dd4309a36fe321b354bfb60a1be9199db0f23",
+      "mode": 420,
+      "path": "orthohmm/search/msa_center_star.py",
+      "sha256": "3790801fc294f2df9ae3c84897de410b1a1bb487b8ea4226d86c388c379f40ab"
+    },
+    {
+      "bytes": 6728,
+      "git_blob": "2cf05da8999ff38ad76dd5a0473ae588ed41a302",
+      "mode": 420,
+      "path": "orthohmm/search/msa_profile.py",
+      "sha256": "d4076b61905325f643dca1f7a6b4dbd6f2833398840fad7b79e3f255f2240468"
+    },
+    {
+      "bytes": 22855,
+      "git_blob": "71be22f4c7726fca93dbeb920bf1bd258f5e9685",
+      "mode": 420,
+      "path": "orthohmm/search/prefilter.py",
+      "sha256": "9842b1787d98a89bd819f9adbe340b6e2a170d63d16057645720a6bc9faf6d06"
+    },
+    {
+      "bytes": 6143,
+      "git_blob": "6c73cd322712b667b15a397cecc5c3e2b429bd37",
+      "mode": 420,
+      "path": "orthohmm/search/profile.py",
+      "sha256": "20dca3dea06a85bdcf99e03e3abfab921fce38b9d7715097b0b4588a7cd7587e"
+    },
+    {
+      "bytes": 25077,
+      "git_blob": "32a7fb8fe960ab891a433e623cc416b0b661c823",
+      "mode": 420,
+      "path": "orthohmm/search/profile_expansion.py",
+      "sha256": "1025cfab4f80e3a85d6eaa3e768ae5e0e25dedb48fdba9deb08cb6e6aa7bb42a"
+    },
+    {
+      "bytes": 4509,
+      "git_blob": "4cbfa028979167bab37f3f35ace50b8c2c475e08",
+      "mode": 420,
+      "path": "orthohmm/search/sequences.py",
+      "sha256": "e083679cb9ea780664943355d260f398a96d93a2db336bb615af1032766f5980"
+    },
+    {
+      "bytes": 5324,
+      "git_blob": "019ae65253721a19f7a652081bd8fd180db7bfb9",
+      "mode": 420,
+      "path": "orthohmm/search/species_prune.py",
+      "sha256": "d729b9aa8ddf311c52e1d46c51d89dc5a6ef5d64ccd979deca90b7d980905b9e"
+    },
+    {
+      "bytes": 17693,
+      "git_blob": "57d7e5f2d9a484cec5032a244fe5e6b60272eae8",
+      "mode": 420,
+      "path": "orthohmm/search/viterbi.py",
+      "sha256": "ba8543538d9bcbd55c5eaf5c7c3d5725a62c071b00d925f5fabaa474001948ba"
+    },
+    {
+      "bytes": 4420,
+      "git_blob": "1ccbd84271353accb5fcad5566fce6e3e2b597aa",
+      "mode": 420,
+      "path": "orthohmm/search/viterbi_cuda_ctypes.py",
+      "sha256": "fba688e77941c92c5e4080ef5de3dc23e4dfee6c5c2dad5d7ccdf876f81f9d20"
+    },
+    {
+      "bytes": 22,
+      "git_blob": "3d187266f146fb216a04537da37dc5df0811acc4",
+      "mode": 420,
+      "path": "orthohmm/version.py",
+      "sha256": "2c12b8ea17aeb6f9f72a6b02aca218bbc4508a46df9e365a8f6c45ad769e0b34"
+    },
+    {
+      "bytes": 2949,
+      "git_blob": "9e7ec695441c1e2448b96807873cf97b3f4512e0",
+      "mode": 420,
+      "path": "orthohmm/writer.py",
+      "sha256": "d3dc7a318166272762395dfcb772d8779286bbf60023b2934a7d7bef0e0003fe"
+    },
+    {
+      "bytes": 57,
+      "git_blob": "6173044958b4089840a67a370a3c9875f3ec285c",
+      "mode": 420,
+      "path": "requirements.txt",
+      "sha256": "e4085d7affc668777fb39f750d27ef7e94d7bc32d21cfc60f0a0fe96c499f943"
+    },
+    {
+      "bytes": 7795,
+      "git_blob": "5b5cc2f8267dc71ed61f5361c55102a21d14a69f",
+      "mode": 420,
+      "path": "setup.py",
+      "sha256": "c0e7b8cd54593eb3d7f28d5490b77999157140f9f03cdff4af283ff6713b8bf1"
+    }
+  ],
+  "limitations": [
+    "Source-byte and mode verification only; syntax compilation does not execute or import code.",
+    "Not a full repository, dependency/runtime archive, installed build or numerical-equivalence test.",
+    "Historical setup/build behavior and dependency declarations remain unchanged.",
+    "No public release, external deposition, complete rights review or publication readiness asserted."
+  ],
+  "prefix": "orthohmm-0.5.0-scientific-7f3a9e4/",
+  "publication_ready": false,
+  "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+  "python_files_syntax_checked": 32,
+  "redistribution_clearance": false,
+  "scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+  "selected_paths": [
+    "LICENSE.md",
+    "README.md",
+    "requirements.txt",
+    "setup.py",
+    "orthohmm"
+  ],
+  "source": {
+    "bytes": 4327,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/verify_frozen_source_archive.py",
+    "sha256": "566c57642dbbf921f80f3d3550fe16a544fc182a2be80715aa492fd43da49c06"
+  },
+  "status": "frozen_source_archive_matches_git"
+}

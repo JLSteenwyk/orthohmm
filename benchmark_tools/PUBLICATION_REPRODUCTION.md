@@ -90,6 +90,13 @@ remain incomplete. Do not claim matched-resource speedups from the old panel.
 
 ## Archive And Outstanding Work
 
+A [verified source-only baseline archive](results/PUBLICATION_FROZEN_SOURCE_ARCHIVE_20260920.md)
+now preserves the43selected source files at scientific revision `7f3a9e4`,
+with exact Git-blob/mode verification and repeat-export checks. It is a local
+source component, not the analysis/data/runtime bundle or a public release.
+Historical build behavior is preserved rather than silently replaced by
+development packaging fixes.
+
 The [rights register](results/PUBLICATION_DATA_RIGHTS_20260918.md) separates
 project code, reference datasets, upstream software and binaries. Local
 availability or inclusion in an evidence bundle is not blanket permission

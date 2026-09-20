@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Frozen Scientific Source Archive Prepared (2026-09-20)
+
+Previous turn was a verified wait: the same BLAST job remained RUNNING after
+a five-minute wait and output grew. Reread the full objective and rechecked
+21713RUNNING at19:12:45, with existing comparator/robustness jobs pending.
+No service approval response was assumed and no job or service changed.
+
+Prepared a source-only baseline archive from immutable scientific commit
+7f3a9e4, distinct from development HEAD. Initial default-mask exports were
+byte-identical but failed strict mode verification; explicit0022exports
+preserve original source permissions and are byte-identical to each other.
+The rejected originals remain retained. The admitted126,207-byte archive
+contains43regular source files; all match Git blobs/modes and32Python files
+pass syntax compilation. No imports, native build or inference were executed.
+
+Added a verifier and10passing tests, including actual Git exports, changed
+content/modes, missing/extra/duplicate/link/traversal rejection and report
+no-overwrite behavior. Existing frozen parser/writer escape-sequence warnings
+remain documented, not edited. [Artifact identity and reproduction](PUBLICATION_FROZEN_SOURCE_ARCHIVE_20260920.md)
+are linked from the publication guide. The raw archive remains local and
+can be recreated from committed objects; it was not uploaded or committed
+as a redundant binary. This is not a complete study archive or new release.
+
+Next: pending scientific admissions, authorized environmental/session/
+deployment integration for timing, and final analysis/runtime/archive rights
+and release assembly. The full publication goal remains active and incomplete.
+
 ## Patched CPU Dependency Notices Inventoried (2026-09-20)
 
 Previous turn made progress with retained BLAST liveness/interim failure
