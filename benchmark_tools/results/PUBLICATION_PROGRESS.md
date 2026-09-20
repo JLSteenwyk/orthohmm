@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Scaling Task Record Binding Added (2026-09-20)
+
+The preceding archive-search turn recovered no original TreeFam inputs and
+did not change the next retrieval action; it was no progress toward source
+recovery. This turn resumes the pending scaling implementation. Scheduler
+inspection confirms BLAST 21713 RUNNING at elapsed 17:41:56; no restart or
+resource change was made.
+
+Added `verify_scaling_task_records.py` to bind each of the 27 frozen v2 tasks
+to its prepared command, native enumeration, original input hashes,
+OrthoFinder-specific copied inputs, runtime check records, recipe identity,
+wrapper source, worker command, job identity and supplementary report hash.
+Evidence is rechecked after binding. Nonzero native exits remain failures
+with bound provenance, not successful inference or admitted timings.
+
+All 1,065 focused workflow tests pass in 45.17 seconds, including 52 new
+record-binding tests covering all task identities, contradictions, changes
+during verification and direct evidence links. The new fixtures test metadata
+binding only: their synthetic observation is not raw collector replay or a
+native-output validation. Earlier raw-replay tests remain in the focused
+suite. This is not a full-repository test run or a real DGX scaling run.
+
+No execution CLI, submission or environmental admission was added. Recipe
+archive verification, authorization, terminal scheduler/session evidence,
+raw replay, native-output/failure audits and whole-run environmental evidence
+remain required. Next: compose per-job launch and receipt orchestration and
+validate that complete workflow before deployment. The service decision is
+still pending; no service was changed. Corrected comparator jobs, controlled
+timing and the full publication package remain unfinished. The goal stays open.
+
 ## Scaling Outcome Classification Added (2026-09-20)
 
 The previous turn made progress by implementing matching long-run replay.
