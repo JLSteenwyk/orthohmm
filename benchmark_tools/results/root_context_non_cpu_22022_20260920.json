@@ -1,0 +1,626 @@
+{
+  "environmental_validity_established": false,
+  "limitations": [
+    "Post-outcome description, not a prospective inclusion rule or a new native experiment.",
+    "Native-step pressure covers the observation window and includes wrappers, not exact command-only stalls.",
+    "Pressure totals cannot identify the cause of stalls or be subtracted from host pressure.",
+    "Zero observed memory stalls/events do not establish memory-bandwidth or cache isolation.",
+    "Cgroup peak includes charged cache/kernel memory; it is not maximum-process RSS.",
+    "GPU activity, device-level I/O attribution and thermal interference are not established by these records.",
+    "All original/narrow flags remain; no thresholds, timings or admission decisions change."
+  ],
+  "nonzero_memory_event_tasks": [],
+  "observed_io_stall_tasks": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "observed_memory_stall_tasks": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    12,
+    13,
+    16,
+    17
+  ],
+  "runs": [
+    {
+      "arm": "lineage",
+      "cgroup_memory_peak_bytes": 2279862272,
+      "final_cgroup_memory_current_bytes": 45268992,
+      "index": 0,
+      "memory_events": {
+        "high": 0,
+        "low": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_group_kill": 0,
+        "oom_kill": 0
+      },
+      "method": "orthohmm_high_sensitivity",
+      "narrow_flags": 1,
+      "native_stall_usec": {
+        "cpu": {
+          "full": 207915,
+          "some": 778738
+        },
+        "io": {
+          "full": 29990,
+          "some": 29990
+        },
+        "memory": {
+          "full": 0,
+          "some": 0
+        }
+      },
+      "original_flags": 1
+    },
+    {
+      "arm": "root_context",
+      "cgroup_memory_peak_bytes": 2271469568,
+      "final_cgroup_memory_current_bytes": 45772800,
+      "index": 1,
+      "memory_events": {
+        "high": 0,
+        "low": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_group_kill": 0,
+        "oom_kill": 0
+      },
+      "method": "orthohmm_high_sensitivity",
+      "narrow_flags": 0,
+      "native_stall_usec": {
+        "cpu": {
+          "full": 282705,
+          "some": 884107
+        },
+        "io": {
+          "full": 19506,
+          "some": 19507
+        },
+        "memory": {
+          "full": 0,
+          "some": 0
+        }
+      },
+      "original_flags": 0
+    },
+    {
+      "arm": "lineage",
+      "cgroup_memory_peak_bytes": 2418810880,
+      "final_cgroup_memory_current_bytes": 267743232,
+      "index": 2,
+      "memory_events": {
+        "high": 0,
+        "low": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_group_kill": 0,
+        "oom_kill": 0
+      },
+      "method": "orthohmm_satellite_v2",
+      "narrow_flags": 7,
+      "native_stall_usec": {
+        "cpu": {
+          "full": 1330933,
+          "some": 22515319
+        },
+        "io": {
+          "full": 14776,
+          "some": 20860
+        },
+        "memory": {
+          "full": 110,
+          "some": 392
+        }
+      },
+      "original_flags": 49
+    },
+    {
+      "arm": "root_context",
+      "cgroup_memory_peak_bytes": 2459566080,
+      "final_cgroup_memory_current_bytes": 266821632,
+      "index": 3,
+      "memory_events": {
+        "high": 0,
+        "low": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_group_kill": 0,
+        "oom_kill": 0
+      },
+      "method": "orthohmm_satellite_v2",
+      "narrow_flags": 8,
+      "native_stall_usec": {
+        "cpu": {
+          "full": 1355135,
+          "some": 22681857
+        },
+        "io": {
+          "full": 59559,
+          "some": 68200
+        },
+        "memory": {
+          "full": 122,
+          "some": 357
+        }
+      },
+      "original_flags": 57
+    },
+    {
+      "arm": "lineage",
+      "cgroup_memory_peak_bytes": 7036567552,
+      "final_cgroup_memory_current_bytes": 760791040,
+      "index": 4,
+      "memory_events": {
+        "high": 0,
+        "low": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_group_kill": 0,
+        "oom_kill": 0
+      },
+      "method": "orthofinder_full",
+      "narrow_flags": 0,
+      "native_stall_usec": {
+        "cpu": {
+          "full": 322125,
+          "some": 2779806
+        },
+        "io": {
+          "full": 1056429,
+          "some": 1063946
+        },
+        "memory": {
+          "full": 1,
+          "some": 1
+        }
+      },
+      "original_flags": 1
+    },
+    {
+      "arm": "root_context",
+      "cgroup_memory_peak_bytes": 7195353088,
+      "final_cgroup_memory_current_bytes": 758595584,
+      "index": 5,
+      "memory_events": {
+        "high": 0,
+        "low": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_group_kill": 0,
+        "oom_kill": 0
+      },
+      "method": "orthofinder_full",
+      "narrow_flags": 1,
+      "native_stall_usec": {
+        "cpu": {
+          "full": 325299,
+          "some": 2769499
+        },
+        "io": {
+          "full": 798603,
+          "some": 804335
+        },
+        "memory": {
+          "full": 1,
+          "some": 1
+        }
+      },
+      "original_flags": 2
+    },
+    {
+      "arm": "root_context",
+      "cgroup_memory_peak_bytes": 2488487936,
+      "final_cgroup_memory_current_bytes": 264908800,
+      "index": 6,
+      "memory_events": {
+        "high": 0,
+        "low": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_group_kill": 0,
+        "oom_kill": 0
+      },
+      "method": "orthohmm_satellite_v2",
+      "narrow_flags": 13,
+      "native_stall_usec": {
+        "cpu": {
+          "full": 1410020,
+          "some": 22628647
+        },
+        "io": {
+          "full": 17387,
+          "some": 25171
+        },
+        "memory": {
+          "full": 114,
+          "some": 264
+        }
+      },
+      "original_flags": 59
+    },
+    {
+      "arm": "lineage",
+      "cgroup_memory_peak_bytes": 2459664384,
+      "final_cgroup_memory_current_bytes": 267419648,
+      "index": 7,
+      "memory_events": {
+        "high": 0,
+        "low": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_group_kill": 0,
+        "oom_kill": 0
+      },
+      "method": "orthohmm_satellite_v2",
+      "narrow_flags": 10,
+      "native_stall_usec": {
+        "cpu": {
+          "full": 1327431,
+          "some": 22545402
+        },
+        "io": {
+          "full": 27335,
+          "some": 36642
+        },
+        "memory": {
+          "full": 107,
+          "some": 261
+        }
+      },
+      "original_flags": 53
+    },
+    {
+      "arm": "root_context",
+      "cgroup_memory_peak_bytes": 7195627520,
+      "final_cgroup_memory_current_bytes": 761483264,
+      "index": 8,
+      "memory_events": {
+        "high": 0,
+        "low": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_group_kill": 0,
+        "oom_kill": 0
+      },
+      "method": "orthofinder_full",
+      "narrow_flags": 0,
+      "native_stall_usec": {
+        "cpu": {
+          "full": 324317,
+          "some": 2775783
+        },
+        "io": {
+          "full": 894404,
+          "some": 904088
+        },
+        "memory": {
+          "full": 1,
+          "some": 1
+        }
+      },
+      "original_flags": 2
+    },
+    {
+      "arm": "lineage",
+      "cgroup_memory_peak_bytes": 6906998784,
+      "final_cgroup_memory_current_bytes": 758771712,
+      "index": 9,
+      "memory_events": {
+        "high": 0,
+        "low": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_group_kill": 0,
+        "oom_kill": 0
+      },
+      "method": "orthofinder_full",
+      "narrow_flags": 1,
+      "native_stall_usec": {
+        "cpu": {
+          "full": 318572,
+          "some": 2776744
+        },
+        "io": {
+          "full": 717410,
+          "some": 723421
+        },
+        "memory": {
+          "full": 2,
+          "some": 2
+        }
+      },
+      "original_flags": 2
+    },
+    {
+      "arm": "root_context",
+      "cgroup_memory_peak_bytes": 2224418816,
+      "final_cgroup_memory_current_bytes": 45084672,
+      "index": 10,
+      "memory_events": {
+        "high": 0,
+        "low": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_group_kill": 0,
+        "oom_kill": 0
+      },
+      "method": "orthohmm_high_sensitivity",
+      "narrow_flags": 0,
+      "native_stall_usec": {
+        "cpu": {
+          "full": 281245,
+          "some": 884750
+        },
+        "io": {
+          "full": 40774,
+          "some": 40775
+        },
+        "memory": {
+          "full": 0,
+          "some": 0
+        }
+      },
+      "original_flags": 0
+    },
+    {
+      "arm": "lineage",
+      "cgroup_memory_peak_bytes": 2220634112,
+      "final_cgroup_memory_current_bytes": 45015040,
+      "index": 11,
+      "memory_events": {
+        "high": 0,
+        "low": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_group_kill": 0,
+        "oom_kill": 0
+      },
+      "method": "orthohmm_high_sensitivity",
+      "narrow_flags": 0,
+      "native_stall_usec": {
+        "cpu": {
+          "full": 205938,
+          "some": 774641
+        },
+        "io": {
+          "full": 29637,
+          "some": 29637
+        },
+        "memory": {
+          "full": 0,
+          "some": 0
+        }
+      },
+      "original_flags": 0
+    },
+    {
+      "arm": "lineage",
+      "cgroup_memory_peak_bytes": 7024836608,
+      "final_cgroup_memory_current_bytes": 758632448,
+      "index": 12,
+      "memory_events": {
+        "high": 0,
+        "low": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_group_kill": 0,
+        "oom_kill": 0
+      },
+      "method": "orthofinder_full",
+      "narrow_flags": 0,
+      "native_stall_usec": {
+        "cpu": {
+          "full": 313286,
+          "some": 2750231
+        },
+        "io": {
+          "full": 1026942,
+          "some": 1034843
+        },
+        "memory": {
+          "full": 1,
+          "some": 1
+        }
+      },
+      "original_flags": 1
+    },
+    {
+      "arm": "root_context",
+      "cgroup_memory_peak_bytes": 7146487808,
+      "final_cgroup_memory_current_bytes": 758882304,
+      "index": 13,
+      "memory_events": {
+        "high": 0,
+        "low": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_group_kill": 0,
+        "oom_kill": 0
+      },
+      "method": "orthofinder_full",
+      "narrow_flags": 2,
+      "native_stall_usec": {
+        "cpu": {
+          "full": 324618,
+          "some": 2737846
+        },
+        "io": {
+          "full": 1137778,
+          "some": 1143527
+        },
+        "memory": {
+          "full": 1,
+          "some": 1
+        }
+      },
+      "original_flags": 4
+    },
+    {
+      "arm": "lineage",
+      "cgroup_memory_peak_bytes": 2268983296,
+      "final_cgroup_memory_current_bytes": 45441024,
+      "index": 14,
+      "memory_events": {
+        "high": 0,
+        "low": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_group_kill": 0,
+        "oom_kill": 0
+      },
+      "method": "orthohmm_high_sensitivity",
+      "narrow_flags": 1,
+      "native_stall_usec": {
+        "cpu": {
+          "full": 217650,
+          "some": 806751
+        },
+        "io": {
+          "full": 20863,
+          "some": 20864
+        },
+        "memory": {
+          "full": 0,
+          "some": 0
+        }
+      },
+      "original_flags": 1
+    },
+    {
+      "arm": "root_context",
+      "cgroup_memory_peak_bytes": 2312904704,
+      "final_cgroup_memory_current_bytes": 45211648,
+      "index": 15,
+      "memory_events": {
+        "high": 0,
+        "low": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_group_kill": 0,
+        "oom_kill": 0
+      },
+      "method": "orthohmm_high_sensitivity",
+      "narrow_flags": 0,
+      "native_stall_usec": {
+        "cpu": {
+          "full": 243499,
+          "some": 831425
+        },
+        "io": {
+          "full": 20520,
+          "some": 20520
+        },
+        "memory": {
+          "full": 0,
+          "some": 0
+        }
+      },
+      "original_flags": 0
+    },
+    {
+      "arm": "lineage",
+      "cgroup_memory_peak_bytes": 2364076032,
+      "final_cgroup_memory_current_bytes": 265003008,
+      "index": 16,
+      "memory_events": {
+        "high": 0,
+        "low": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_group_kill": 0,
+        "oom_kill": 0
+      },
+      "method": "orthohmm_satellite_v2",
+      "narrow_flags": 8,
+      "native_stall_usec": {
+        "cpu": {
+          "full": 1299650,
+          "some": 22480199
+        },
+        "io": {
+          "full": 25304,
+          "some": 34223
+        },
+        "memory": {
+          "full": 114,
+          "some": 272
+        }
+      },
+      "original_flags": 60
+    },
+    {
+      "arm": "root_context",
+      "cgroup_memory_peak_bytes": 2384318464,
+      "final_cgroup_memory_current_bytes": 267292672,
+      "index": 17,
+      "memory_events": {
+        "high": 0,
+        "low": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_group_kill": 0,
+        "oom_kill": 0
+      },
+      "method": "orthohmm_satellite_v2",
+      "narrow_flags": 8,
+      "native_stall_usec": {
+        "cpu": {
+          "full": 1584778,
+          "some": 22565776
+        },
+        "io": {
+          "full": 28398,
+          "some": 35330
+        },
+        "memory": {
+          "full": 111,
+          "some": 304
+        }
+      },
+      "original_flags": 52
+    }
+  ],
+  "scientific_timings_admitted": false,
+  "sources": [
+    {
+      "bytes": 42873747,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/root_context_overhead_audit_22022_20260920.json.gz",
+      "sha256": "6da8441923e51a404fb2e4fec4c7302593fc1a1bc7e338b8996b9d2d2f24641a"
+    },
+    {
+      "bytes": 4895,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/describe_root_context_non_cpu.py",
+      "sha256": "1474016b13ecfebd1dd3c8cd8ca60c8ea3272d9b2a16559142d7239d4bd65911"
+    },
+    {
+      "bytes": 6539,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+      "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+    }
+  ],
+  "status": "retained_non_cpu_observations_described"
+}

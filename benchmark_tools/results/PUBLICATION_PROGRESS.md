@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Non-CPU Evidence Assessed Without Rerunning Inference (2026-09-20)
+
+The previous turn made progress by completing and reproducing panel 22022.
+This turn extracted the existing native-step memory/I/O evidence from its
+pinned full audit. All 18 runs have positive I/O stalls, 12 have positive
+memory stalls, and all recorded memory-limit/OOM events are zero. The
+machine-readable summary retains every outcome, peak charged memory and CPU
+flag count. It neither certifies isolation nor changes any inclusion decision.
+Sixteen tests pass, including actual-audit relocation reproduction, changed
+hash rejection and malformed/missing/negative/boolean counter cases.
+The combined focused workflow suite passes all 832 tests in 28.06 seconds.
+
+[The environmental assessment](DGX_NON_CPU_ASSESSMENT_20260920.md) documents
+the interpretation and remaining gates. A current read-only DGX query
+confirms the enabled failing Samwise user service still auto-restarts.
+Approval was requested to stop/runtime-mask only that service temporarily
+for timing, then restore its prior configuration. No reply has been received
+and no service has been changed. GPU spot fields include unsupported memory
+values, which are not interpreted as zero or historical monitoring evidence.
+
+Next: incorporate the user's service decision, establish the prospective
+DGX workload/contamination policy and corresponding whole-run evidence,
+then freeze and execute the matched scaling panel. Do not require zero
+native PSI, subtract host/native pressure, remove retained flags or upgrade
+historical timings. The original frozen executor recipes remain unchanged.
+BLAST 21713 is still running (16:53:59 at this turn's queue check), with its
+downstream QfO analyses queued. No new inference was launched, no unrelated
+worktree changes were touched, and publication completion remains unproven.
+
 ## Paired Overhead Panel Completed and Reproduced (2026-09-20)
 
 The previous turn made progress by freezing/deploying the recipe. This turn

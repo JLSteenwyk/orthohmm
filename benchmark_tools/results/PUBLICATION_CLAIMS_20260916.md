@@ -99,6 +99,12 @@ budgets. All 344 original and 60 narrow flags remain. This supports the bounded
 incremental collector comparison, not causal overhead, background-free
 execution or a native-method speed ranking. Scientific timings remain unadmitted.
 
+The [non-CPU environmental assessment](DGX_NON_CPU_ASSESSMENT_20260920.md)
+retains positive native-step I/O stalls in all 18 tasks, memory stalls in 12,
+and zero recorded memory-limit/OOM events. These are observed native-step
+conditions, not identified outside interference or evidence of thermal/GPU/
+memory-bandwidth isolation. No pressure-based exclusion rule is introduced.
+
 The completed [full-node controls](FULL_NODE_CONTROL_RESULT_21918_20260919.md)
 validate all nine injected workloads: zero narrow flags in 126 native-only
 intervals and detection in 63/63 contended intervals. This supports bounded
