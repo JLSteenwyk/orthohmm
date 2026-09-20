@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Composed Scaling Measurement Audit Added (2026-09-20)
+
+The previous turn made progress with committed task-record binding
+(`82c010a`). Added a read-only composed audit that binds the selected frozen
+task, replays its raw observations using the bound native command, and
+classifies the native outcome against the wrapper. It rechecks task, recipe,
+plan and raw evidence after replay so a change between stages cannot silently
+pass. Any failed layer rejects the composed audit. Native nonzero exits,
+signals and exit124 without a timeout flag remain failed native outcomes.
+
+The CLI is `python -m benchmark_tools.audit_scaling_root_context_measurement`
+with required `--plan`, `--index`, `--directory`, `--recipe`, `--recipe-sha`,
+`--job` and `--output` arguments. It writes a fresh report only, does not submit
+jobs, and does not infer scientific eligibility from a completed audit.
+
+All 1,102 focused workflow tests pass in 46.95 seconds, including 37 new
+integration/CLI tests. They combine all 27 frozen task metadata identities
+with raw control observations and real replay evaluators, exercise failures,
+relocation and cross-stage changes, and check report overwrite refusal.
+These are constructed integration fixtures, not observations of the 27 real
+native scaling tasks. This is not a full-repository test run, a long-duration
+collector test, or proof of native-output correctness or host isolation.
+
+Scheduler inspection verified BLAST 21713 running at elapsed 17:46:24;
+FastOMA 21740, admission 21746, parameter array 21932 and CPM 21956 remain
+pending. The parameter array's combined scheduler reason includes unavailable
+or reserved resources; direct node inspection shows bizon MIXED, not DOWN,
+with 180/192 CPUs and 900 GiB allocated. No job was restarted or modified.
+
+Next: frozen environmental policy and authorization, per-job launch/session
+orchestration and terminal scheduler binding, followed by real composed-run
+validation and native-output/failure audit. The pending service decision was
+not assumed approved, and no service changed. No new scientific timings are
+admitted. Remaining comparator results and the full publication package are
+still required; the original publication goal remains active.
+
 ## Scaling Task Record Binding Added (2026-09-20)
 
 The preceding archive-search turn recovered no original TreeFam inputs and
