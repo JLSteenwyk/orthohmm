@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Patched CPU Dependency Notices Inventoried (2026-09-20)
+
+Previous turn made progress with retained BLAST liveness/interim failure
+evidence (`7f77a7a`). Reread the full objective and confirmed BLAST21713
+RUNNING at19:01:07 with comparator/robustness jobs still pending. This turn
+advances the package's outstanding software-notice review without changing
+the live scientific jobs, frozen runtimes or DGX services.
+
+Added a read-only report-pinned wheel inventory and applied it to all11wheels
+in the patched CPU development installation. All hashes and distribution/
+version identities match. Recorded79notice candidates,47native members and
+all declared license-file matches; none is unresolved in this artifact set.
+The initial run exposed setuptools'12nested vendored metadata files; fixed
+top-level distribution selection without dropping vendored notice candidates.
+No failed output or changed wheel was substituted.
+
+All21inventory/project-wheel tests pass. The
+[inventory and reproduction record](PUBLICATION_DEPENDENCY_NOTICES_20260920.md)
+preserves provider GPL/BSD/MIT/Apache/LLVM declarations without flattening
+them into the project's MIT license or asserting legal compatibility. Long
+NumPy license prose is hashed, not treated as a single short grant. No wheel
+was installed, executed or redistributed. Updated the rights register with
+this bounded evidence and remaining file-level review requirements.
+
+Next: complete pending scientific admissions when the existing jobs finish,
+the scaling environmental/session/deployment integration, and final artifact
+rights/source-notice review and manuscript/archive assembly. No publication
+readiness, completed release or controlled-resource claim follows. Goal active.
+
 ## Corrected BLAST Liveness And Interim Failures Checked (2026-09-20)
 
 Previous turn made progress with the gated scaling executor (`152c146`).

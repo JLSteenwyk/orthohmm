@@ -77,6 +77,14 @@ retained scientific evidence to resolve a packaging question.
 
 ## Remaining Actions
 
+The [patched CPU wheelhouse notice inventory](PUBLICATION_DEPENDENCY_NOTICES_20260920.md)
+now binds all11local wheel identities to the retained installation report,
+records79notice candidates and47native members, and preserves provider
+metadata without asserting compatibility or redistribution clearance. It
+includes vendored notice candidates but is not a complete static dependency,
+external binary, container or OS-library license review. Final artifact-level
+terms, notices and source obligations remain to be reviewed separately.
+
 The [retained wheel inventory](PUBLICATION_WHEEL_CONTENTS_20260919.md)
 verifies its embedded project license and all RECORD entries, and identifies
 static CUDA runtime code needing separate release review. It does not clear
