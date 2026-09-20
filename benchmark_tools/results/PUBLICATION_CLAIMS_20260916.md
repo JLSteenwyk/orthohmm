@@ -400,11 +400,12 @@ not establish any comparative resource advantage.
   installations.
   The [strict docs rebuild](docs_strict_build_validation_20260917.json)
   passes with no diagnostics; earlier14-diagnostic output remains historical.
-- The [progress ledger](PUBLICATION_PROGRESS.md) records a later full collected
-  unit run with 7,813 passed and 9 skipped in 186.02 seconds, before subsequent
-  reporter/workflow additions. The most recent focused measurement workflow
-  run at `d0b60e6` passed 1,102 tests in 46.95 seconds; it is not a current full
-  suite result. Regression tests do not admit pending experiments or establish
+- The [current-source regression check](PUBLICATION_REGRESSION_VERIFICATION_20260920.md)
+  at `b5a1921` passed 8,314 unit tests with nine skips in 213.47 seconds.
+  The overlapping opt-in native-probe/isolated-CLI suite passed 123 tests
+  without skips, including all nine skipped unit identities. This does not
+  constitute the full integration suite or a new frozen baseline validation.
+  Regression tests do not admit pending experiments or establish
   biological validity. Earlier full runs, including `af6a8e7` (5,066 passed,
   9 skipped), remain historical evidence.
 - [Retained figure integrity](PUBLICATION_FIGURE_INTEGRITY_20260918.md)

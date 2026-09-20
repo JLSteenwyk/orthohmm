@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Publication Entry Point And Full Regression Check (2026-09-20)
+
+Previous turn made progress by downloading and excluding the PhyloMCL QfO
+archive as a source of the missing TreeFam inputs (`b5a1921`). Reread the
+complete objective and confirmed BLAST 21713 remains RUNNING, most recently
+at 18:42:06; FastOMA21740, parameters21932 and CPM21956 remain pending.
+No job, native setting, unrelated file or DGX service was changed.
+
+Added a publication reproduction guide and a prominent README distinction
+between historical launch examples and corrected-input publication recipes.
+The guide links the frozen configuration, admitted results, exact executed
+statistical reproduction commands and unresolved scientific/archive gates.
+All 21 local guide links resolve. No new archive, release or deposition is
+claimed, and existing source acquisition/rights limitations remain explicit.
+
+At current development source b5a1921, the full unit suite passed 8,314 tests
+with nine opt-in skips in 213.47 seconds. The enabled native probes and
+isolated CLI integration passed 123 tests without skips in 27.44 seconds;
+JUnit identity comparison confirms all nine skipped cases passed there.
+These suites overlap. Raw XML hashes, interpreter and scope are retained in
+[verification evidence](PUBLICATION_REGRESSION_VERIFICATION_20260920.md).
+Both runs were limited to two allowed CPUs/numerical threads; their elapsed
+times are not controlled performance evidence. No scientific code changed.
+
+Next: complete pending comparator/robustness admissions when their jobs
+finish, integrate the replacement scaling executor and environmental policy,
+and finish the manuscript/archive package. Original TreeFam inputs remain
+unavailable. The full publication goal remains active and incomplete.
+
 ## Long-Run Scheduler Recorder CLI Added (2026-09-20)
 
 Previous turn made progress through the manuscript review artifact

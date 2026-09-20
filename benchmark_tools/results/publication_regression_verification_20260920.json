@@ -1,0 +1,105 @@
+{
+  "cpu_affinity_requested": [
+    190,
+    191
+  ],
+  "interpreter": "/home/bizon/anaconda3/bin/python",
+  "limitations": [
+    "Current development source, not a new frozen scientific baseline validation.",
+    "JUnit reports retained locally outside Git; source/test fixtures include previously retained evidence.",
+    "Native probe suite overlaps the full unit suite and is not an additional 123 distinct tests.",
+    "No full integration suite, full native comparator rerun, production accuracy admission or controlled timing measurement."
+  ],
+  "native_probes_enabled": true,
+  "numerical_thread_limits": 2,
+  "platform": "Linux-6.8.0-55-generic-x86_64-with-glibc2.39",
+  "publication_ready": false,
+  "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+  "reports": [
+    {
+      "bytes": 1119303,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_units_20260920.xml",
+      "sha256": "1c7812621ae4c55786193fd1b1dd625a308c499ec35c1b0922e460c5a0e6875e",
+      "skips": [
+        {
+          "classname": "tests.unit.test_admit_qfo_corrected_bpo",
+          "name": "test_independent_complete_recheck",
+          "reason": "Installed native runtime"
+        },
+        {
+          "classname": "tests.unit.test_audit_orthomcl_database",
+          "name": "test_installed_formatdb_normalization_is_detected",
+          "reason": "Opt-in installed legacy database round trip"
+        },
+        {
+          "classname": "tests.unit.test_orthomcl_bpo_indexes",
+          "name": "test_installed_native_bpo_parity[False]",
+          "reason": "Opt-in installed OrthoMCL/BioPerl parity probe"
+        },
+        {
+          "classname": "tests.unit.test_orthomcl_bpo_indexes",
+          "name": "test_installed_native_bpo_parity[True]",
+          "reason": "Opt-in installed OrthoMCL/BioPerl parity probe"
+        },
+        {
+          "classname": "tests.unit.test_orthomcl_perl_launcher",
+          "name": "test_installed_perl_probe_has_no_relative_lookup",
+          "reason": "Opt-in native Perl probe"
+        },
+        {
+          "classname": "tests.unit.test_prepare_orthomcl_bpo_checkpoint",
+          "name": "test_installed_checkpoint",
+          "reason": "Opt-in installed frozen OrthoMCL runtime"
+        },
+        {
+          "classname": "tests.unit.test_run_qfo_corrected_blast",
+          "name": "test_installed_legacy_engine_smoke[False]",
+          "reason": "Opt-in installed legacy engine smoke"
+        },
+        {
+          "classname": "tests.unit.test_run_qfo_corrected_blast",
+          "name": "test_installed_legacy_engine_smoke[True]",
+          "reason": "Opt-in installed legacy engine smoke"
+        },
+        {
+          "classname": "tests.unit.test_stage_orthomcl_native_inputs",
+          "name": "test_installed_staged_native_inference",
+          "reason": "Installed dedicated Python and native fixture required"
+        }
+      ],
+      "suites": [
+        {
+          "errors": "0",
+          "failures": "0",
+          "hostname": "bizon",
+          "name": "pytest",
+          "skipped": "9",
+          "tests": "8323",
+          "time": "213.161",
+          "timestamp": "2026-09-20T02:47:53.210685-04:00"
+        }
+      ]
+    },
+    {
+      "bytes": 16344,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_native_probes_20260920.xml",
+      "sha256": "e7f6b3072109680bc6530aa465db40d282b81c1eca1dc2b5d61fe9475591f4b9",
+      "skips": [],
+      "suites": [
+        {
+          "errors": "0",
+          "failures": "0",
+          "hostname": "bizon",
+          "name": "pytest",
+          "skipped": "0",
+          "tests": "123",
+          "time": "27.423",
+          "timestamp": "2026-09-20T02:50:44.045683-04:00"
+        }
+      ]
+    }
+  ],
+  "scientific_timings_admitted": false,
+  "source_revision": "b5a1921327f1d4bb867f25f2ce6b5c38b7e42986",
+  "status": "current_source_regression_tests_completed"
+}

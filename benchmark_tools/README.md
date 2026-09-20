@@ -1,5 +1,19 @@
 # Benchmark Workflows
 
+## Publication Study
+
+Start with the [publication reproduction guide](PUBLICATION_REPRODUCTION.md)
+for the frozen method, corrected QfO release, admitted results, statistical
+reproduction and outstanding release gates. The manuscript is a working draft,
+not a completed publication release.
+
+The FastOMA and OrthoMCL launch examples below describe historical workflows.
+They are **not** the corrected-input publication execution recipe. Do not
+launch them to resume the active corrected-release jobs or transfer their
+historical scores to the corrected input release. Consult the
+[progress ledger](results/PUBLICATION_PROGRESS.md) and verify live scheduler
+state before any submission. An observation timeout is not a failed job.
+
 ## FastOMA comparator
 
 Run FastOMA 0.3.5 on the complete 78-proteome QfO 2020 input and chain the
