@@ -1,5 +1,37 @@
 # Publication Progress
 
+## Replacement Per-Run Measurement Adapter Implemented (2026-09-20)
+
+The previous turn made progress by preparing the full replacement scaling
+specification. Added `measure_root_context_scaling.py`, a library adapter
+without a standalone execution CLI. It pins the complete prepared plan,
+selects the exact native enumeration for each 4/8/12-proteome task, isolates
+per-task child caches and method-specific environments, and passes the frozen
+20-CPU/96-GiB, 23h50m native boundary into the existing verified measurement
+composition with the root-context collector. Recipe paths are resolved before
+changing working directory. Existing or dangling cache paths are rejected.
+
+The adapter restores prior environment and working directory on successful
+return, native failure, exceptions and interrupts. It does not reinterpret a
+native failure as successful, resubmit a task or authorize services/execution.
+The caller must independently validate execution authorization, environmental
+policy, allocation and recipe identity before invoking it. Historical frozen
+measurement/executor modules and prepared specification bytes are unchanged.
+
+All 71 new adapter tests and six existing composition tests pass. Tests cover
+every original task's selection/forwarding, exact dataset order and resources,
+relative recipe paths, state restoration, cache conflicts and invalid inputs.
+Native execution is intercepted in these unit tests; this is not an executed
+scaling smoke or end-to-end launch/audit validation.
+The combined focused workflow suite passes 918 tests in 35.16 seconds;
+the scoped `git diff --check` passes.
+
+Next: implement the per-job launch/receipt and independent audit integration,
+then validate the composed workflow before authorizing deployment. The service
+decision and actual environment-policy freeze remain pending; no new DGX run
+was submitted and no service was changed. BLAST 21713 was verified running at
+17:07:33. The full publication objective remains open.
+
 ## Replacement Scaling Specification Prepared (2026-09-20)
 
 The previous turn made progress by assessing retained non-CPU evidence.
