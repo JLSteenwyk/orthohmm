@@ -214,7 +214,12 @@ not establish any comparative resource advantage.
   have lower descriptive F1 in the lower-identity bin; no subgroup significance
   or mechanism claim follows. OrthoMCL remains missing.
   Sequence identity is not calibrated evolutionary distance; independent
-  fragmentation and duplication annotations remain gaps.
+  duplication annotations remain a gap. The subsequently completed
+  [historical fragment panel](SWISS_HISTORICAL_FRAGMENT_RESULT_20260923.md)
+  matches all 563 proteins and provides descriptive, annotation-defined
+  contrasts with an explicit baseline-only sensitivity analysis. Unflagged
+  is not proven complete; the contrasts do not establish causality or
+  superiority and do not supply new subgroup confidence intervals.
 
 - Corrected DIAMOND sequence search21789 completed0:0 in02:14:43 and native
   execution admission21790 completed0:0 in00:01:30. Numeric conversion21791

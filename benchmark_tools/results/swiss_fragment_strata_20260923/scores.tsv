@@ -1,0 +1,57 @@
+method	stratum	families	status	F1	PPV	TPR	delta_F1	delta_PPV	delta_TPR	prediction_semantics
+orthohmm_high_sensitivity	all	18	descriptive	0.6854977806445889	0.6409984992048368	0.7366364204931364	-0.16291548648187826	-0.29685433052134735	-0.03791110784032414	cross-species group-derived clique pairs
+orthohmm_high_sensitivity	historical_annotation_positive	5	descriptive	0.6359691928174243	0.5810049935555087	0.7024194335927569	-0.24329090256194752	-0.3327695556682082	-0.1448386224494913	cross-species group-derived clique pairs
+orthohmm_high_sensitivity	historical_all_matched_unflagged	13	descriptive	0.7043361140456729	0.6640729244545782	0.7497968000702053	-0.13064033567500877	-0.2830407823879394	0.0032148593170477913	cross-species group-derived clique pairs
+orthohmm_high_sensitivity	historical_missing_without_positive	0	empty_bin	NA	NA	NA	NA	NA	NA	cross-species group-derived clique pairs
+orthohmm_high_sensitivity	baseline_only_annotation_positive	5	descriptive	0.6359691928174243	0.5810049935555087	0.7024194335927569	-0.24329090256194752	-0.3327695556682082	-0.1448386224494913	cross-species group-derived clique pairs
+orthohmm_high_sensitivity	baseline_only_all_matched_unflagged	11	descriptive	0.6832519846551082	0.6080941314231983	0.7796082555349971	-0.15214087225168882	-0.33065847884087685	0.027072106465601875	cross-species group-derived clique pairs
+orthohmm_high_sensitivity	baseline_only_missing_without_positive	2	descriptive	0.7310418092691673	0.9719562861271676	0.5858337950138504	-0.09958005280095772	-0.02114345189678457	-0.1280000000000001	cross-species group-derived clique pairs
+orthohmm_phylogeny_satellite_v2	all	18	descriptive	0.8335132180095781	0.9551767493219016	0.7393412564640668	-0.014900049116889025	0.01732391959571744	-0.035206271869393735	native phylogenetically inferred pairs
+orthohmm_phylogeny_satellite_v2	historical_annotation_positive	5	descriptive	0.8382659854382865	0.9873596909367167	0.7282921120226866	-0.04099410994108532	0.07358514171299979	-0.11896594401956162	native phylogenetically inferred pairs
+orthohmm_phylogeny_satellite_v2	historical_all_matched_unflagged	13	descriptive	0.83142892556799	0.9427986948546649	0.7435909274030591	-0.003547524152691661	-0.004315011987852668	-0.002991013350098437	native phylogenetically inferred pairs
+orthohmm_phylogeny_satellite_v2	historical_missing_without_positive	0	empty_bin	NA	NA	NA	NA	NA	NA	native phylogenetically inferred pairs
+orthohmm_phylogeny_satellite_v2	baseline_only_annotation_positive	5	descriptive	0.8382659854382865	0.9873596909367167	0.7282921120226866	-0.04099410994108532	0.07358514171299979	-0.11896594401956162	native phylogenetically inferred pairs
+orthohmm_phylogeny_satellite_v2	baseline_only_all_matched_unflagged	11	descriptive	0.8456213831812076	0.9343632779147946	0.7722740423829152	0.010228526274410621	-0.004389332349280628	0.01973789331351994	native phylogenetically inferred pairs
+orthohmm_phylogeny_satellite_v2	baseline_only_missing_without_positive	2	descriptive	0.7358640467158827	0.9891934880239521	0.5858337950138504	-0.09475781535424233	-0.00390625	-0.1280000000000001	native phylogenetically inferred pairs
+orthofinder_3_1_5_full	all	18	descriptive	0.8484132671264671	0.9378528297261841	0.7745475283334605	0.0	0.0	0.0	native phylogenetically inferred pairs
+orthofinder_3_1_5_full	historical_annotation_positive	5	descriptive	0.8792600953793718	0.9137745492237169	0.8472580560422482	0.0	0.0	0.0	native phylogenetically inferred pairs
+orthofinder_3_1_5_full	historical_all_matched_unflagged	13	descriptive	0.8349764497206816	0.9471137068425176	0.7465819407531575	0.0	0.0	0.0	native phylogenetically inferred pairs
+orthofinder_3_1_5_full	historical_missing_without_positive	0	empty_bin	NA	NA	NA	NA	NA	NA	native phylogenetically inferred pairs
+orthofinder_3_1_5_full	baseline_only_annotation_positive	5	descriptive	0.8792600953793718	0.9137745492237169	0.8472580560422482	0.0	0.0	0.0	native phylogenetically inferred pairs
+orthofinder_3_1_5_full	baseline_only_all_matched_unflagged	11	descriptive	0.835392856906797	0.9387526102640752	0.7525361490693953	0.0	0.0	0.0	native phylogenetically inferred pairs
+orthofinder_3_1_5_full	baseline_only_missing_without_positive	2	descriptive	0.830621862070125	0.9930997380239521	0.7138337950138505	0.0	0.0	0.0	native phylogenetically inferred pairs
+orthofinder_3_1_5_sequence_only	all	18	descriptive	0.6905148282566244	0.5690678546910205	0.8778629606384184	-0.15789843886984278	-0.3687849750351636	0.10331543230495788	cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)
+orthofinder_3_1_5_sequence_only	historical_annotation_positive	5	descriptive	0.6440984485620824	0.48359068736086847	0.9640868837317809	-0.23516164681728935	-0.43018386186284846	0.11682882768953262	cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)
+orthofinder_3_1_5_sequence_only	historical_all_matched_unflagged	13	descriptive	0.7029537624121657	0.6019436882795406	0.8446999132948174	-0.13202268730851596	-0.345170018562977	0.09811797254165988	cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)
+orthofinder_3_1_5_sequence_only	historical_missing_without_positive	0	empty_bin	NA	NA	NA	NA	NA	NA	cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)
+orthofinder_3_1_5_sequence_only	baseline_only_annotation_positive	5	descriptive	0.6440984485620824	0.48359068736086847	0.9640868837317809	-0.23516164681728935	-0.43018386186284846	0.11682882768953262	cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)
+orthofinder_3_1_5_sequence_only	baseline_only_all_matched_unflagged	11	descriptive	0.6613267440309292	0.5339584432163357	0.8684937529822659	-0.17406611287586782	-0.4047941670477395	0.11595760391287069	cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)
+orthofinder_3_1_5_sequence_only	baseline_only_missing_without_positive	2	descriptive	0.8245311831920643	0.9758625361271676	0.7138337950138505	-0.006090678878060696	-0.01723720189678457	0.0	cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)
+sonicparanoid_2_0_9	all	18	descriptive	0.798459418688303	0.8722787674765307	0.7361595860302458	-0.049953848438164195	-0.06557406224965345	-0.03838794230321474	native species-pair relations
+sonicparanoid_2_0_9	historical_annotation_positive	5	descriptive	0.8145926695937666	0.9323525178789772	0.723244055601149	-0.06466742578560514	0.01857796865526029	-0.12401400044109923	native species-pair relations
+sonicparanoid_2_0_9	historical_all_matched_unflagged	13	descriptive	0.7914799065319353	0.8491734788602051	0.7411270977337444	-0.043496543188746295	-0.0979402279823125	-0.005454843019413125	native species-pair relations
+sonicparanoid_2_0_9	historical_missing_without_positive	0	empty_bin	NA	NA	NA	NA	NA	NA	native species-pair relations
+sonicparanoid_2_0_9	baseline_only_annotation_positive	5	descriptive	0.8145926695937666	0.9323525178789772	0.723244055601149	-0.06466742578560514	0.01857796865526029	-0.12401400044109923	native species-pair relations
+sonicparanoid_2_0_9	baseline_only_all_matched_unflagged	11	descriptive	0.784570893885891	0.8230482703499787	0.7495304632748584	-0.050821963020906025	-0.11570433991409645	-0.003005685794536861	native species-pair relations
+sonicparanoid_2_0_9	baseline_only_missing_without_positive	2	descriptive	0.8175854833896609	0.9928621256664507	0.6949085872576177	-0.013036378680464145	-0.00023761235750141552	-0.018925207756232743	native species-pair relations
+proteinortho_6_3_6	all	18	descriptive	0.7181109993269982	0.9521799364561256	0.5764143603702944	-0.13030226779946896	0.01432710672994153	-0.19813316796316616	native post-clustering graph
+proteinortho_6_3_6	historical_annotation_positive	5	descriptive	0.6478451243896166	0.9777180796592646	0.4844097841105716	-0.23141497098975516	0.06394353043554768	-0.3628482719316766	native post-clustering graph
+proteinortho_6_3_6	historical_all_matched_unflagged	13	descriptive	0.7419257787061748	0.9423575736856875	0.611800735854803	-0.09305067101450681	-0.0047561331568301	-0.13478120489835455	native post-clustering graph
+proteinortho_6_3_6	historical_missing_without_positive	0	empty_bin	NA	NA	NA	NA	NA	NA	native post-clustering graph
+proteinortho_6_3_6	baseline_only_annotation_positive	5	descriptive	0.6478451243896166	0.9777180796592646	0.4844097841105716	-0.23141497098975516	0.06394353043554768	-0.3628482719316766	native post-clustering graph
+proteinortho_6_3_6	baseline_only_all_matched_unflagged	11	descriptive	0.7430756958607658	0.9336857462060827	0.6170966641567843	-0.09231716104603116	-0.005066864057992504	-0.13543948491261093	native post-clustering graph
+proteinortho_6_3_6	baseline_only_missing_without_positive	2	descriptive	0.733601595983554	0.9900526248235143	0.5826731301939058	-0.097020266086571	-0.003047113200437823	-0.1311606648199447	native post-clustering graph
+fastoma_0_3_5	all	18	descriptive	0.7802191350427174	0.9236005462375273	0.6753730129088171	-0.06819413208374969	-0.014252283488656814	-0.0991745154246434	native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree
+fastoma_0_3_5	historical_annotation_positive	5	descriptive	0.7979383500726644	0.9674953250139146	0.6789499685942856	-0.08132174530670733	0.05372077579019763	-0.16830808744796266	native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree
+fastoma_0_3_5	historical_all_matched_unflagged	13	descriptive	0.7732264575498221	0.90671793901584	0.6739972607220983	-0.061749992170859525	-0.04039576782667764	-0.07258468003105922	native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree
+fastoma_0_3_5	historical_missing_without_positive	0	empty_bin	NA	NA	NA	NA	NA	NA	native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree
+fastoma_0_3_5	baseline_only_annotation_positive	5	descriptive	0.7979383500726644	0.9674953250139146	0.6789499685942856	-0.08132174530670733	0.05372077579019763	-0.16830808744796266	native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree
+fastoma_0_3_5	baseline_only_all_matched_unflagged	11	descriptive	0.768270515699575	0.8911459163734669	0.675174299815867	-0.06712234120722194	-0.04760669389060834	-0.07736184925352829	native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree
+fastoma_0_3_5	baseline_only_missing_without_positive	2	descriptive	0.7981581097878646	0.9923640635488924	0.6675235457063712	-0.032463752282260394	-0.0007356744750597333	-0.04631024930747929	native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree
+orthomcl_1_4	all	18	method_not_admitted	NA	NA	NA	NA	NA	NA	NA
+orthomcl_1_4	historical_annotation_positive	5	method_not_admitted	NA	NA	NA	NA	NA	NA	NA
+orthomcl_1_4	historical_all_matched_unflagged	13	method_not_admitted	NA	NA	NA	NA	NA	NA	NA
+orthomcl_1_4	historical_missing_without_positive	0	method_not_admitted	NA	NA	NA	NA	NA	NA	NA
+orthomcl_1_4	baseline_only_annotation_positive	5	method_not_admitted	NA	NA	NA	NA	NA	NA	NA
+orthomcl_1_4	baseline_only_all_matched_unflagged	11	method_not_admitted	NA	NA	NA	NA	NA	NA	NA
+orthomcl_1_4	baseline_only_missing_without_positive	2	method_not_admitted	NA	NA	NA	NA	NA	NA	NA

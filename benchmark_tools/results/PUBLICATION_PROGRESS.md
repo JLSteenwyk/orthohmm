@@ -1,5 +1,45 @@
 # Publication Progress
 
+## Historical Annotation Results Admitted; Low-CPM Scheduling Repaired (2026-09-23)
+
+The preceding short turn acknowledged the DGX deferral without advancing an
+analysis. Re-read the full objective and revalidated scheduler state: BLAST
+recovery 22103_0 and parameter scoring 22043_0 are running. No DGX access;
+controlled comparative timing remains unmet.
+
+Collection 22116 and independent annotation admission 22117 completed 0:0
+in 24:16 and 00:12. All 563 proteins matched; 549 baseline-release and 14
+later-sequence-version entries are explicitly distinguished. The
+[completed fragment analysis](SWISS_HISTORICAL_FRAGMENT_RESULT_20260923.md)
+retains 56 descriptive rows, missing OrthoMCL, empty bins and the baseline-only
+sensitivity view. A fresh export rechecked all input records and reproduced
+both score files byte-for-byte. Fifty-one focused source, collector, verifier,
+exporter and crash-audit tests passed. Manuscript and claim notes now include
+the negative/neutral results without causal or superiority claims. The dated
+rendered manuscript is not silently overwritten and needs a future refresh.
+
+The [read-only high-CPM payload audit](qfo_cpm_high_failed_payload_audit_20260923.json)
+checks 252 identities and 25,501,180 edges over 984,137 vertices. Endpoints
+are valid; weights are positive and finite; the constructor-order digest
+matches the failed worker. No graph construction or optimizer was run.
+The missing native-boundary marker localizes the last observation but does
+not identify the faulting instruction. A fresh isolated constructor diagnostic
+with native traceback remains necessary before considering selective replay.
+
+Low candidate job 22084_0 was blocked by whole-array `afterany:22082` although
+its own admission 22082_0 is COMPLETED 0:0. Attempting to replace that with
+`afterok:22082_0` returned "Job dependency problem" and left the job unchanged.
+After inspecting the frozen executor's mandatory per-arm scheduler, report,
+source and input validation (including a fresh admission run), cleared only
+22084_0's scheduler dependency. The same queued job is now eligible; no job
+was restarted or resubmitted. High-arm 22084_1 and failed admission 22082_1
+remain blocked. Later low-arm whole-array barriers will need equivalent
+per-arm review after their own predecessors succeed; do not bypass admission.
+
+Publication remains incomplete: OrthoMCL recovery, parameter robustness,
+duplication semantics, other uncertainty gaps, controlled timing, final
+manuscript packaging and archival steps remain open.
+
 ## Multiline Trees Resolved; High-CPM Native Failure Retained (2026-09-23)
 
 Previous turn acquired all 18 model sources. Diagnosed four apparent duplicate

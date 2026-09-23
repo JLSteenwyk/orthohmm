@@ -1020,6 +1020,20 @@ are made. Sequence identity is alignment-dependent, not calibrated
 evolutionary divergence; correlated differences in taxa, domains, size and
 composition prevent a causal interpretation.
 
+A separate [historical fragment-annotation analysis](SWISS_HISTORICAL_FRAGMENT_RESULT_20260923.md)
+matched all 563 reference proteins to sequence-identical UniSave entries;
+549 matched the baseline-release interval and 14 required later records.
+Eleven proteins carried fragment/incomplete-sequence annotations across
+five families. Phylogenetic OrthoHMM and full OrthoFinder scored 83.827%
+and 87.926% F1 in these families, versus 83.143% and 83.498% in the thirteen
+all-matched unflagged families. Unflagged is not proven complete. Treating
+later-version annotations as missing leaves eleven unflagged families and
+changes that contrast to 84.562% versus 83.539%; the two excluded families
+score 73.586% versus 83.062%. Both views are retained because the sign change
+depends on family composition. These descriptive, development-exposed
+associations do not establish a causal fragmentation effect or superiority;
+no new subgroup inference is claimed.
+
 Old groups, trees, scores and confidence intervals cannot
 be relabeled as corrected results. The previously measured 53 legacy BLAST
 query failures also belong to the original run; failures in the corrected

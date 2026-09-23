@@ -1,0 +1,1300 @@
+{
+  "accuracy_evaluated": false,
+  "checked_records": [
+    {
+      "bytes": 2883,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_parameter_cpm_replay_v3/cpm_high/clustering/cluster_3_profile_expanded/execution.json",
+      "sha256": "065677c5a91e1327a543b5304cee3f6f3232eba4a6a57db399396ee9894c22d8"
+    },
+    {
+      "bytes": 3718,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_parameter_cpm_replay_v3/cpm_high/clustering/cluster_3_profile_expanded/payload_manifest.json",
+      "sha256": "43469b1a7df0cff1b5d7d0b39118eac1a72b418b774ba20a3a5be7887d225cb2"
+    },
+    {
+      "bytes": 58491,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_parameter_cpm_replay_v3/cpm_high/clustering/cluster_3_profile_expanded/payload/worker_before.json",
+      "sha256": "e87e93d3b92967786bd6c9edbe01673bdc26f269a101a651babebf77095a0e67"
+    },
+    {
+      "bytes": 355,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_parameter_cpm_replay_v3/cpm_high/clustering/cluster_3_profile_expanded/payload/constructor_adapter.json",
+      "sha256": "bc36d84d551a582136ba4fc2770ccaae95e451e006807a50bc356251b113e4d8"
+    },
+    {
+      "bytes": 207,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_parameter_cpm_replay_v3/cpm_high/clustering/cluster_3_profile_expanded/payload/metadata.json",
+      "sha256": "45d3f60509ab445b6489770629b0ff8f64c6cd928461fd690a623590ff21e988"
+    },
+    {
+      "bytes": 4935,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_cpm_high_failed_payload.py",
+      "sha256": "b562276ec35c671c512e74f318ce5fc9594476a2b8b6b8ede833c8abd2a33f27"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_parameter_cpm_replay_v3/cpm_high/clustering/cluster_3_profile_expanded/payload/gene_names.txt",
+      "sha256": "ad6ee208adc2c3e90bab86d68e40c32857c0f93a89989bd1a70d76385ef0edd7"
+    },
+    {
+      "bytes": 102004848,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_parameter_cpm_replay_v3/cpm_high/clustering/cluster_3_profile_expanded/payload/sources.npy",
+      "sha256": "b7ba1120342b9d2becb8281155619d3ae356a8197001decb198061e10c01ba5c"
+    },
+    {
+      "bytes": 102004848,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_parameter_cpm_replay_v3/cpm_high/clustering/cluster_3_profile_expanded/payload/targets.npy",
+      "sha256": "707c679c0c9360282cb0c9a6b1d635c60c284302f5d9916f009d82e0e42f5e42"
+    },
+    {
+      "bytes": 204009568,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_parameter_cpm_replay_v3/cpm_high/clustering/cluster_3_profile_expanded/payload/weights.npy",
+      "sha256": "c78363f7b2a856d8d947e7e2be47616230323839ee7ad43d16914bb33ade3d96"
+    },
+    {
+      "bytes": 207,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_parameter_cpm_replay_v3/cpm_high/clustering/cluster_3_profile_expanded/payload/metadata.json",
+      "sha256": "45d3f60509ab445b6489770629b0ff8f64c6cd928461fd690a623590ff21e988"
+    },
+    {
+      "bytes": 41848,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/__init__.py",
+      "sha256": "3233e11d16443df7e07fb160c4e876a35f9ac913f82aba84ddfe93af31c1eb63"
+    },
+    {
+      "bytes": 13330873,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/_igraph.abi3.so",
+      "sha256": "4cb2b4e7f88005ccd68fe0a20feb086b84335196e884c5bdd13f11d15c8b555d"
+    },
+    {
+      "bytes": 7238,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/adjacency.py",
+      "sha256": "8c8b278ab14374f8c29bb1aaeac85173980cc59c8f4fc708d8b38ab83d4b3e03"
+    },
+    {
+      "bytes": 1506,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/automorphisms.py",
+      "sha256": "d879529fdcf9a6491fa1e3e90da4a56b3a18e2f507e340c618ef34ba6029f1d8"
+    },
+    {
+      "bytes": 7053,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/basic.py",
+      "sha256": "c6a88cfcfe41b230be2339907bf693aab2f60d6b03ff1d5d6ae463047efcbaab"
+    },
+    {
+      "bytes": 5337,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/bipartite.py",
+      "sha256": "17302a856f4746334be8318241bce4fd512c74a3c1b8b1523529e45a02163eab"
+    },
+    {
+      "bytes": 63439,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/clustering.py",
+      "sha256": "3e71f93eb26a98a37e77014a36dfa04c41c34b92d661f7a60c351b9b5fee7004"
+    },
+    {
+      "bytes": 29095,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/community.py",
+      "sha256": "29896475c142a8f1685089097d067f43c2ebd90f125ee6402e5f1511d45aadc6"
+    },
+    {
+      "bytes": 14748,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/configuration.py",
+      "sha256": "98e3f924ac83d6b3bac6a3a50efe82b00d075c541c3e419495f67235b1f9bf52"
+    },
+    {
+      "bytes": 11437,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/cut.py",
+      "sha256": "128ba380377bbd7b65aafcc7a24e2976a8555a7c8060c7c8f10f9483cac58c1a"
+    },
+    {
+      "bytes": 21737,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/datatypes.py",
+      "sha256": "9b47a120e5a05c22a313783a04ef77edf5a1247fa5b22011680c424bafd412da"
+    },
+    {
+      "bytes": 12774,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/__init__.py",
+      "sha256": "2ddf3f68549ec4522577eee168392183d8d68da6650499b5a68fe1c8129e2e41"
+    },
+    {
+      "bytes": 14218,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/baseclasses.py",
+      "sha256": "d17a8e2eaf40cde56463ccda41db8446c7a2f20a8e774b570e536c98abcab33b"
+    },
+    {
+      "bytes": 54,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/cairo/__init__.py",
+      "sha256": "5d2d886c16fdaf1fe70d1a14fe2ab070ede0a1bb7d192a2b7ee0731115b4182a"
+    },
+    {
+      "bytes": 2874,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/cairo/base.py",
+      "sha256": "0f844b0a2106d70fbdde10e65f0ce152c105b9a4187cbbe11f1bb8223aa61a71"
+    },
+    {
+      "bytes": 9736,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/cairo/dendrogram.py",
+      "sha256": "a2b8d0b8893ada5f211d60fd90b304229d4d9013bfc9e5399ba9a7b06f3460a9"
+    },
+    {
+      "bytes": 12437,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/cairo/edge.py",
+      "sha256": "a94021962435621b214ab4242aefa83da286e6fab3acb6d91b1c524e9d332860"
+    },
+    {
+      "bytes": 17776,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/cairo/graph.py",
+      "sha256": "2d38d518fe7f4f839d35ef953949535eb3554157959372177d2c6fa9931ec202"
+    },
+    {
+      "bytes": 1762,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/cairo/histogram.py",
+      "sha256": "cf542f7c0dc6096ed3e3e75a45ca0ac4be981c30c0cd638ae68a3963f5a6a278"
+    },
+    {
+      "bytes": 10456,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/cairo/matrix.py",
+      "sha256": "20d342164069fa70ec179af225d78939a6f64f376ba159a4006cdf2f033adf76"
+    },
+    {
+      "bytes": 1596,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/cairo/palette.py",
+      "sha256": "96a5254b04845472aadad96507010b1ebc902dcb99e843091f745c0f381637ad"
+    },
+    {
+      "bytes": 14240,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/cairo/plot.py",
+      "sha256": "44ee3564091363a223877350e38f30ddc72af7ef20a4561864bfd2febeab641a"
+    },
+    {
+      "bytes": 3311,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/cairo/polygon.py",
+      "sha256": "0914189dcf56b46300a2b7eda6ceb56eff4121c0e80dcb6820627222d1cb27bc"
+    },
+    {
+      "bytes": 12960,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/cairo/text.py",
+      "sha256": "a07a5c0b0cb0bd1c9a6a91d3dd63ab24559646c070d934f92d1052a434ce222e"
+    },
+    {
+      "bytes": 818,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/cairo/utils.py",
+      "sha256": "c58f3076d52a8ffbdc02b8dc3d2aa78f87a3eee1574180ede618a1afa31ecd59"
+    },
+    {
+      "bytes": 3226,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/cairo/vertex.py",
+      "sha256": "da74ffd9f1a9b0e297404088beb2318665a11932ce937a820fc9af7b65e72a16"
+    },
+    {
+      "bytes": 92276,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/colors.py",
+      "sha256": "73eebf540de02ee66b40fd468b509df9b343c5cd307eed257c59cbd0947242bb"
+    },
+    {
+      "bytes": 24725,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/graph.py",
+      "sha256": "d39f8623a1caec9cc83c7de50e293c7517834e6ea473f91fc876eac341bc5df4"
+    },
+    {
+      "bytes": 0,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/matplotlib/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 5989,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/matplotlib/dendrogram.py",
+      "sha256": "7e4cf756fc53e9602cd10dc5b91641c7e304b7a7981ebb6ed6b778133139f577"
+    },
+    {
+      "bytes": 20409,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/matplotlib/edge.py",
+      "sha256": "4fe51b06cc128e9582982ff0077fb5b8d597ed09a0d96990d0a497a6c6c8eb20"
+    },
+    {
+      "bytes": 28591,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/matplotlib/graph.py",
+      "sha256": "bbee424630511f39b8fbf24dc54abeded9f75641dd5861d691a6f161d18a29b8"
+    },
+    {
+      "bytes": 1068,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/matplotlib/histogram.py",
+      "sha256": "ac75a126e91903254631dd1f4d10cdae0d01cf9a9d73d97b68ff02dbaaa912ac"
+    },
+    {
+      "bytes": 762,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/matplotlib/matrix.py",
+      "sha256": "bf9ec66d9ca89dc2aa01a7ea3fd1ecfa3e50daf9d2ab97285e4409dcdac40ed3"
+    },
+    {
+      "bytes": 1409,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/matplotlib/palette.py",
+      "sha256": "f81bf8d230f535902658c48461a4265f5a3111a8b78e2e75fe54aa93beb31156"
+    },
+    {
+      "bytes": 4853,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/matplotlib/polygon.py",
+      "sha256": "ef439c181a6b3cfa49d1fad6cbd347046740889836cbf79be56cf775b6e40d3d"
+    },
+    {
+      "bytes": 701,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/matplotlib/utils.py",
+      "sha256": "443e672242b521461678af94d4a34bdd4057a54065b69c5082276f9fa1435ff3"
+    },
+    {
+      "bytes": 4995,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/matplotlib/vertex.py",
+      "sha256": "e3c670349529f8fce77b5aa05de41b924a4017eeb231f564c1652ac427ddbe54"
+    },
+    {
+      "bytes": 13871,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/metamagic.py",
+      "sha256": "7eae2711d853a319008b8bdc1854644b6c39f2f43cede363dfb17b697d004aa5"
+    },
+    {
+      "bytes": 0,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/plotly/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 9524,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/plotly/edge.py",
+      "sha256": "ced4c4f259645d14aab5e160d10ab1d5c31365b49fba3ba3780f13a1725d4f5f"
+    },
+    {
+      "bytes": 10493,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/plotly/graph.py",
+      "sha256": "96d31547bfd345aa6bdcea3c157063fd40595885c825830286dcc3c66fc363c0"
+    },
+    {
+      "bytes": 3740,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/plotly/polygon.py",
+      "sha256": "956841e5476c76adc1c13d1aa8f2da3e4a5f71e3d62bb32b168bc5d2619acbba"
+    },
+    {
+      "bytes": 1907,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/plotly/utils.py",
+      "sha256": "3999894345715866ee19180b3a86682a48b5ee0b6de1f34ab6aee36285b63dfd"
+    },
+    {
+      "bytes": 2742,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/plotly/vertex.py",
+      "sha256": "e1ac7810f11a3ff5f39ad698d1f539f6d9b066d278c49c23eda11b48fe724536"
+    },
+    {
+      "bytes": 14249,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/shapes.py",
+      "sha256": "fdf21ef61788af1e6c50c52938faf1c05b15c122fa27f150a04f89ee8a7df75f"
+    },
+    {
+      "bytes": 325,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/text.py",
+      "sha256": "be196dec6847916b280d5e25c11a133e2b6a827300d12af43541ae46b8bb6bc4"
+    },
+    {
+      "bytes": 24184,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/drawing/utils.py",
+      "sha256": "7f88bc62b7937ca61180747d58af279da20e08a510578efdbf1fe5657e49b92a"
+    },
+    {
+      "bytes": 8056,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/formula.py",
+      "sha256": "9033cbd409a5303ff5e310e71924cf0249b1c26cd03d807740d46daab4bddb3d"
+    },
+    {
+      "bytes": 998,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/io/__init__.py",
+      "sha256": "4ed9c1da90f72301566976d9c239481c63beefeafd90de7f547827e31529952b"
+    },
+    {
+      "bytes": 5794,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/io/adjacency.py",
+      "sha256": "88b96ecbe1a21576855247fa5f1fecf1ae730f92fd1954e988aeef9e7652c229"
+    },
+    {
+      "bytes": 6818,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/io/bipartite.py",
+      "sha256": "ea9f80850fa34f73dcb96f38a26f10564ad37a0f4028cd040687b6479fe8deea"
+    },
+    {
+      "bytes": 16642,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/io/files.py",
+      "sha256": "b943f6115bd36e051d8691f98a51536937c9426b650997f4a6e8703cae6118b9"
+    },
+    {
+      "bytes": 13019,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/io/images.py",
+      "sha256": "f77f4f02df8a2f2797bb4aa7cff3c0c344ffe76854b4d20951d048ab331b6d3b"
+    },
+    {
+      "bytes": 9900,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/io/libraries.py",
+      "sha256": "95037156589fb5a1840545598590718a5a9054a5ee3d3f13f4c250755f8b0ba4"
+    },
+    {
+      "bytes": 32425,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/io/objects.py",
+      "sha256": "0b214bc51ef219181a0e49ce8ab13740ae14b5d1121718b4849341ffb83f9112"
+    },
+    {
+      "bytes": 652,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/io/random.py",
+      "sha256": "424a7d0a04fdbec7886d1fa041f0f52ea0479fa3e590b9d70d09192efed61ce5"
+    },
+    {
+      "bytes": 29575,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/layout.py",
+      "sha256": "affd6870fffc7bf5d4a8ea00ed2920cc14091f3f1e62d0c513a7b3fffb08495d"
+    },
+    {
+      "bytes": 6036,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/matching.py",
+      "sha256": "8b450913ef3556f9246068e77db7fd436f2deb49a1455dc2fb7f6db40ca2affa"
+    },
+    {
+      "bytes": 800,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/operators/__init__.py",
+      "sha256": "c787d4a46cdb006f8f37eb8d90044b63675aff1d081ae511529cb23362400e30"
+    },
+    {
+      "bytes": 18571,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/operators/functions.py",
+      "sha256": "15ecba5a863b65b77bce966356aa66e78e06afc6b14d8f9fb41da556fd301bd9"
+    },
+    {
+      "bytes": 7443,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/operators/methods.py",
+      "sha256": "035de9d1102fd6500c121618480409dd1e92164f78c58952111ddc4ddb60c5ac"
+    },
+    {
+      "bytes": 932,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/rewiring.py",
+      "sha256": "298f9d26abc16d0273bebcd55b1c71e79196486d41de8ac999d44e4390e5221e"
+    },
+    {
+      "bytes": 30795,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/seq.py",
+      "sha256": "629e04d4c8b343638e583a1d1458eca839fa4cf3fefcd5db063e71750fd1cbe4"
+    },
+    {
+      "bytes": 7539,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/sparse_matrix.py",
+      "sha256": "d9428e9e6cb0f6150257d8ee2b26bb469dbfb23b7e08085236dcbf9ca170c662"
+    },
+    {
+      "bytes": 21709,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/statistics.py",
+      "sha256": "5e3906eeaea9681d883ae6ef5a8b98fe32fbf1ed09f965f413f1fd5f738fdd88"
+    },
+    {
+      "bytes": 2852,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/structural.py",
+      "sha256": "6d1f913a41def6b8ecf89b4ba81476b18e7db97646674deb989d1fae5ca964e2"
+    },
+    {
+      "bytes": 14318,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/summary.py",
+      "sha256": "acbf1eb935d7fc29820a5686696ea4ae68c611d3fdacf7d819a1f607fa1c34df"
+    },
+    {
+      "bytes": 11485,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/utils.py",
+      "sha256": "624a12d7fa3d1ee91e580dbc8a7298183c746d2401b6a38b0294b5c2834ffcb3"
+    },
+    {
+      "bytes": 95,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/version.py",
+      "sha256": "2aa9d86b55a1526faa6ef69c45c7cb82a2ba1a4248daf1b72d335db256bccf88"
+    },
+    {
+      "bytes": 2376,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg/__init__.py",
+      "sha256": "96e4962e15f4df759c322de69a91678fc1657c7bf03ea93925b7a746ea770d2e"
+    },
+    {
+      "bytes": 30725,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg/Optimiser.py",
+      "sha256": "e8504e2a87e681ccb92e9de785cec72e6cb6d44932a7bd25bca0b773c3fd3b0f"
+    },
+    {
+      "bytes": 42005,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg/VertexPartition.py",
+      "sha256": "729b73be92ba5c422018338c70be1a7c0f1ded10ed18c7d041738e72c6566ead"
+    },
+    {
+      "bytes": 637129,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg/_c_leiden.abi3.so",
+      "sha256": "cd22f76ac006ec5273b8177f0f1326019c0e750450114f727f552bce9e44bc7d"
+    },
+    {
+      "bytes": 20259,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg/functions.py",
+      "sha256": "4f83651b97a50f9b5222c813ae543966bd01f0f5f2ccd15bed9aa4b4cd2774f7"
+    },
+    {
+      "bytes": 714,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg/version.py",
+      "sha256": "863b1d8eb739ff5384176cb749d0ee2007eda4d8a9f90c018662ac3c3e3ff928"
+    },
+    {
+      "bytes": 22147,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/__init__.py",
+      "sha256": "6ae17b070c0f70a8e3cad89a510a256942e5a1f37ea5feb120cec167ed2a6236"
+    },
+    {
+      "bytes": 5281,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/__config__.py",
+      "sha256": "e431a2f0837f44a4c4745558df7545087eb72195de072ad797c642709d45f7b1"
+    },
+    {
+      "bytes": 10381,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_array_api_info.py",
+      "sha256": "aa21c90d51b9f2b024d624e55ec16b9e167b63e8213d493206926232f3cada38"
+    },
+    {
+      "bytes": 5612,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/__init__.py",
+      "sha256": "1fde7ecd24f4087ea99e739b8d75175e23e0b6e6fd337e4804669813eab8c2b5"
+    },
+    {
+      "bytes": 208755,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/_add_newdocs.py",
+      "sha256": "b2d295ad95a4587fa0fe6a7b3303be3750e431f2978cbc41b2b96eac15e6780e"
+    },
+    {
+      "bytes": 12603,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/_add_newdocs_scalars.py",
+      "sha256": "78f99ab34988e8e0a9abd5bc66ccd71f212192db01523fe1bc4b7aa336fc6627"
+    },
+    {
+      "bytes": 3912,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/_asarray.py",
+      "sha256": "ee864fa8d8ee0cbd08c48793ed5fd4256d7d96c292dde9f2fa394de076be8680"
+    },
+    {
+      "bytes": 10734,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/_dtype.py",
+      "sha256": "e0fcfa289409472c25b0c85d1fc35b22e833883c908b57a4bf664cc3bce89b3a"
+    },
+    {
+      "bytes": 3718,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/_dtype_ctypes.py",
+      "sha256": "75c647438eaa8d5d27ee5f77e16218c3b92ffb51e81f17a5bb9d282085fb1965"
+    },
+    {
+      "bytes": 5379,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/_exceptions.py",
+      "sha256": "75958aa9f74b46f26f6c0106fdfa1fffc8a410ac636a400332dcb590b0bf97f3"
+    },
+    {
+      "bytes": 29164,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/_internal.py",
+      "sha256": "07cb7a9b1bda0e8bb113e08e474d74bf8fcf507373385f261e015ab513e52569"
+    },
+    {
+      "bytes": 11565,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/_machar.py",
+      "sha256": "dfdf6da6114f1b3272d5ba5b7972c38d45194de6d6b68d65a33075a6b68e45f1"
+    },
+    {
+      "bytes": 9469,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/_methods.py",
+      "sha256": "a6398fd7201bb557ac5d3cadbaea46217a233b9e72f0b052fbc7c440fbac3485"
+    },
+    {
+      "bytes": 10449209,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "c634eaf05367af02b815cf3d2020fbeee9b47426af1fe26cf3189e4798932dc5"
+    },
+    {
+      "bytes": 2837,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/_string_helpers.py",
+      "sha256": "82edf1d1d1274678779a73a4be25f5eebf2b0a66a05606077f120bb7d43d8ab0"
+    },
+    {
+      "bytes": 3489,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/_type_aliases.py",
+      "sha256": "e0053f7157a404a0c85ced544653902ac333f27ac3c35b47aff9c1750cef373a"
+    },
+    {
+      "bytes": 15030,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/_ufunc_config.py",
+      "sha256": "2e51694d49c715e1d094d162b811efaea567fa743b12f2205049f71d4725b7b9"
+    },
+    {
+      "bytes": 64812,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/arrayprint.py",
+      "sha256": "b3994c2efdd6cbf7dade10753aa51a33887525af5207f5fedf3024416d53bb81"
+    },
+    {
+      "bytes": 52820,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/einsumfunc.py",
+      "sha256": "c6c6286b0bf32b8100d9021876d9392b2ac591409ee244ade703ad5c29bfbf5b"
+    },
+    {
+      "bytes": 143907,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/fromnumeric.py",
+      "sha256": "80af26d98de5489e6ab3380d13e17e65d37ab9a6f8d1c5b9041b03e1238d1cb0"
+    },
+    {
+      "bytes": 19733,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/function_base.py",
+      "sha256": "85f71875abcd79e0db8988ef4c1a8303a3891f11f57ee34374cb536548b74598"
+    },
+    {
+      "bytes": 26112,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/getlimits.py",
+      "sha256": "532dd6e9e270bb697b47aa2fa9d7de3b24326c5e638e53c447cf2948cdff24f8"
+    },
+    {
+      "bytes": 12664,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/memmap.py",
+      "sha256": "077939119f10c338cfc16c0eb55455c84a1f409486fe90817160859273be19a5"
+    },
+    {
+      "bytes": 58137,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/multiarray.py",
+      "sha256": "d0fed9047291d26234b5ab72a83087c277dec04122438f1dc2bcd52f63d0024d"
+    },
+    {
+      "bytes": 81726,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/numeric.py",
+      "sha256": "bec88470c8a0e101f031ff473f999aa8e845b1b96a19b87c02d138717d3c0fbc"
+    },
+    {
+      "bytes": 16125,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/numerictypes.py",
+      "sha256": "5be12efc0bf9ccd3411c364718b36598d6f652e301c8a45dc163d3b09c40e684"
+    },
+    {
+      "bytes": 7211,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/overrides.py",
+      "sha256": "733b9bbb924749d89ddf521fd162ea39810cdd6880634ded2e6ca86b4e2c5a38"
+    },
+    {
+      "bytes": 1063,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/printoptions.py",
+      "sha256": "15463efa11b4fa8a1bbed1ce63ae03e7406cffe24599ff8dcdaec2f485ce4456"
+    },
+    {
+      "bytes": 36862,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/records.py",
+      "sha256": "d14bf6676c41bf161052c021a79cd9dbad9814799237a47f6dacc8fc4c91134d"
+    },
+    {
+      "bytes": 32883,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/shape_base.py",
+      "sha256": "08adcbadc7d62a70a1a24526d5e1d8b0be3743b0f9a8fabb4310cfb9860c9c05"
+    },
+    {
+      "bytes": 2093,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/umath.py",
+      "sha256": "3ac6dabe62d1c4a34d6d5f129cf11cde654d93d10856332165e46cf67094b135"
+    },
+    {
+      "bytes": 407,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_distributor_init.py",
+      "sha256": "20acb64c7c26bb9520063b556f06c3f47f80a7cb9a509a0f2766ed43825ab5da"
+    },
+    {
+      "bytes": 3903,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_expired_attrs_2_0.py",
+      "sha256": "653577229784e147094a7d914d92f12808b1125e79ecc90a2b847bc6e6f0d51c"
+    },
+    {
+      "bytes": 3090,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_globals.py",
+      "sha256": "5d5b943e914bb9ea8a513370aa23a35966a19ccfaf1b11b2e2d600de987e1001"
+    },
+    {
+      "bytes": 6325,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_pytesttester.py",
+      "sha256": "8ad5313045dd6104ff98262a75efbb0aa8f1380e7dc222c5c89788ca856d1a02"
+    },
+    {
+      "bytes": 5047,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_typing/__init__.py",
+      "sha256": "d32ef4a2e523dbf94a19c03abc66e6fcd595478f312a8caefdceeba26fc0129e"
+    },
+    {
+      "bytes": 5565,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_typing/_array_like.py",
+      "sha256": "403e2ec53cafb8c11133902113a3f1cdd2f9c8750c6f650e8bb1dd40514d5e82"
+    },
+    {
+      "bytes": 8786,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_typing/_char_codes.py",
+      "sha256": "4494af008032f1300441b15fa03368b9474b7189e0981995e17ec0b7ad9251b5"
+    },
+    {
+      "bytes": 5964,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_typing/_dtype_like.py",
+      "sha256": "deaecc7bf457afbe5b6b8a75bcfcbe9f0e4d44b5ac9c29c7b1fcd51a764c3628"
+    },
+    {
+      "bytes": 632,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_typing/_nbit.py",
+      "sha256": "2e200fb8c3dd749f428d24adc3ccef5d0d66fc56cd23397f88cca03bce753348"
+    },
+    {
+      "bytes": 2880,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_typing/_nbit_base.py",
+      "sha256": "1c79f6cd858dfb7c0bb328a077dedcb3dbb223736f45851c43af4e2ce742fa4b"
+    },
+    {
+      "bytes": 2608,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_typing/_nested_sequence.py",
+      "sha256": "ee274dd04c8423a36dd151fdc675958f8b32a9ebbf2caf0811267073355c2b58"
+    },
+    {
+      "bytes": 1031,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_typing/_scalars.py",
+      "sha256": "f6ffb5c5a842f53660dbc1537c11b5e6f5827270c1d5b7d6cfb7a34f4783ad5c"
+    },
+    {
+      "bytes": 231,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_typing/_shape.py",
+      "sha256": "7d8d6a8ba5031633d6d5be066b185c27db51010bba4972d920d77f572eb45d26"
+    },
+    {
+      "bytes": 153,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_typing/_ufunc.py",
+      "sha256": "53a3827432c7cd74add5f6d295d1c53f4be2587878bb763508306fcc1518f3e3"
+    },
+    {
+      "bytes": 3291,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_utils/__init__.py",
+      "sha256": "7c3b9cd8bb02e28968d2eb685a302cdcb5eec7e80f60714a8538651088b878e4"
+    },
+    {
+      "bytes": 329,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_utils/_convertions.py",
+      "sha256": "d3133175e2cece20e61ec44cffc96e121e12fa441d328320e86c4d0c36acebd9"
+    },
+    {
+      "bytes": 7435,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_utils/_inspect.py",
+      "sha256": "2dc6c7509d8a3c3a4f78d8b1c8878a3945af39168b1b927e1f4b88de21c8b0e0"
+    },
+    {
+      "bytes": 1312,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/dtypes.py",
+      "sha256": "cee3f0802d228c5da80d100e27a23d24a85a26e857140ca00722d06a856d4f9e"
+    },
+    {
+      "bytes": 7838,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/exceptions.py",
+      "sha256": "d841f73b00d5a09b40b11383b869672d603586b8c39e2a25095911f3bf9e1c8a"
+    },
+    {
+      "bytes": 3226,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/lib/__init__.py",
+      "sha256": "22f52848edbb9c75a66930ace1fa892c321621c6a3fae4486d1f587e4ca9b40a"
+    },
+    {
+      "bytes": 1689,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/lib/_array_utils_impl.py",
+      "sha256": "78c19d662edabaeeb6d35878bf87906769a217c2a674c1830296c1160444fba4"
+    },
+    {
+      "bytes": 32326,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/lib/_arraypad_impl.py",
+      "sha256": "c66f0f92e9edec300a016be7c9212ca166e332f72664bf8e0bba9ef8b41aaee4"
+    },
+    {
+      "bytes": 39309,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/lib/_arraysetops_impl.py",
+      "sha256": "0810e81b67d6cf1d0e2136d910a9450f9594a3d1d046a9acc1ea0c3ad1ca423b"
+    },
+    {
+      "bytes": 7186,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/lib/_arrayterator_impl.py",
+      "sha256": "ab1ea0ab12d3358e0b79ae8b87a27e0ae7784722c8aa710b862fa43302bcbca5"
+    },
+    {
+      "bytes": 22729,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/lib/_datasource.py",
+      "sha256": "149ee4d4782144453bb9d87c66e3b96591779c725f3a48fb8968a3868545a884"
+    },
+    {
+      "bytes": 196038,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/lib/_function_base_impl.py",
+      "sha256": "79e65a8b3169b022de8ac2dcc6b43e78ae11fbc7a7c3a60a3d5d637833f00b35"
+    },
+    {
+      "bytes": 38762,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/lib/_histograms_impl.py",
+      "sha256": "2f0ffd2df33f67ba8179fddba1a987e4bb4beea893d748292325b2f548fa953a"
+    },
+    {
+      "bytes": 32179,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/lib/_index_tricks_impl.py",
+      "sha256": "d768868e36a4de188c7f09e1e7347626a03bf3ea2bfaef4fd604c609c8c90f41"
+    },
+    {
+      "bytes": 30941,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/lib/_iotools.py",
+      "sha256": "98c87178606df93f29ae35a93619ffc6f6428fabba3965a69acbca3fabdb339c"
+    },
+    {
+      "bytes": 72150,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/lib/_nanfunctions_impl.py",
+      "sha256": "817e8d50a80240abee15348039b86a7eba9021722cc6728840e73e85e3a7eebb"
+    },
+    {
+      "bytes": 99377,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/lib/_npyio_impl.py",
+      "sha256": "500f386e9385f717c42c1b1a8004a31dfd44e4680b5afb3f63f1a6b69964a2fc"
+    },
+    {
+      "bytes": 44294,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/lib/_polynomial_impl.py",
+      "sha256": "eab0f90b2e264839360acb807493aada17be3d26be662aac760cb2400179ab1d"
+    },
+    {
+      "bytes": 15691,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/lib/_scimath_impl.py",
+      "sha256": "754c5bf570fe0093dba0afcb3b72c0d0a83290549410e1b90551ab8709b642aa"
+    },
+    {
+      "bytes": 39353,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/lib/_shape_base_impl.py",
+      "sha256": "0076d73e9e2c1f48042604b233403dce098cf4cc26ea347fa79a56b545dea95f"
+    },
+    {
+      "bytes": 18025,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/lib/_stride_tricks_impl.py",
+      "sha256": "cb7531a778c5cc3c26210d77ecddb36a9efebd6fe338d5109979db7eaaeceb40"
+    },
+    {
+      "bytes": 33864,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/lib/_twodim_base_impl.py",
+      "sha256": "af7d5a067cc2481a6afde9b81f22e248c793891ce51c09fb05de325d8ab21056"
+    },
+    {
+      "bytes": 19220,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/lib/_type_check_impl.py",
+      "sha256": "0eff5aed0091d5ba811e85e00a398fac611ec06d6fd8106d13ff157dc178c925"
+    },
+    {
+      "bytes": 6309,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/lib/_ufunclike_impl.py",
+      "sha256": "d1e7a67ff11894b9926b88a736bde2b89d5ea1332a2f2211d27e9d4329a06b76"
+    },
+    {
+      "bytes": 23388,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/lib/_utils_impl.py",
+      "sha256": "e31610733a17ee2ff01e3ba09e5d1b6b5544c526d5e3c9dd568c34f12f06d164"
+    },
+    {
+      "bytes": 4854,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/lib/_version.py",
+      "sha256": "9f245a8130ae13af7ed0ff494c870a2bb8dbcd119bb209ea56d148acdcd316c3"
+    },
+    {
+      "bytes": 130,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/lib/array_utils.py",
+      "sha256": "ce868bc3d4efac0151921f67f2e332afc92fba0dc8bd59544fb2dc2730774e4d"
+    },
+    {
+      "bytes": 36200,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/lib/format.py",
+      "sha256": "5cc310cd83af73c2e078da715fb4297eeae58b66c6e68f6301a798e79b4ff390"
+    },
+    {
+      "bytes": 2715,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/lib/introspect.py",
+      "sha256": "4a24393b082f13ed51a103afdabfff58e6d2e5011406885a9f209ded77bcd145"
+    },
+    {
+      "bytes": 7337,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/lib/mixins.py",
+      "sha256": "ff26f78b0c3351f49b37b1e9252a77161164815dd65624c74b94801e42bc2e67"
+    },
+    {
+      "bytes": 62,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/lib/npyio.py",
+      "sha256": "342c6a59e7496d233933ec2bebd4c40fcc7b297732049d31e6ee3dbe3e2c3e42"
+    },
+    {
+      "bytes": 118,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/lib/scimath.py",
+      "sha256": "88ed088838291e4d44bab754bc9204d8aa83cd539fbd2b14dcc148949b2420e1"
+    },
+    {
+      "bytes": 82,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/lib/stride_tricks.py",
+      "sha256": "54647933c272c3c202e12e97101f4d37f1942d3249423ff542b22d222fc12623"
+    },
+    {
+      "bytes": 2106,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/linalg/__init__.py",
+      "sha256": "5cdb5d2e8df74954e341b5de8a62c56b966e773a441309df241368ad56f1bb27"
+    },
+    {
+      "bytes": 114680,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/linalg/_linalg.py",
+      "sha256": "40d795507d435d07bb5f9620a7e2d5f56d6d37bb1bc1b84c5c841b44d3d8257d"
+    },
+    {
+      "bytes": 227657,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/linalg/_umath_linalg.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "c6bc9d5c4db6cea333d46d905e15fbcd8f541ec5b23704ca3c44547ee2ee5187"
+    },
+    {
+      "bytes": 584,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/linalg/linalg.py",
+      "sha256": "25059c12f8d8fdb8e168c1d7639bc393af4e2283335f946f6e7d5e196d850af1"
+    },
+    {
+      "bytes": 1419,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/ma/__init__.py",
+      "sha256": "8aff98c575197b8cfb5b9dd06566349dd89c578dc01ac232800aeca0dded41bf"
+    },
+    {
+      "bytes": 290518,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/ma/core.py",
+      "sha256": "8cddd9d3121bf1ade50403807148469fc6252be2a8e6a9bed5769dcc1a80a759"
+    },
+    {
+      "bytes": 70630,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/ma/extras.py",
+      "sha256": "65bb1e66638a083d5fe70f0d64ff3ae13b643964f0e5ce4acf33cdaa6645791e"
+    },
+    {
+      "bytes": 242,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/matrixlib/__init__.py",
+      "sha256": "04706940aa10bf81234f452958103e0a4e0be4eb0ca9323622e636e29fae7179"
+    },
+    {
+      "bytes": 30800,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/matrixlib/defmatrix.py",
+      "sha256": "046577a15710f7cfa0cea32cdd6342d3ec7be9f99f6864bfd9b0e72c11cf87dd"
+    },
+    {
+      "bytes": 293,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/version.py",
+      "sha256": "a7fcfa08bc3d730a77a7d31ec027bf53a9695812c353a526dd077dc1451b7d7a"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_replay_native_v1/orthohmm/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 10166,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_replay_native_v1/orthohmm/externals.py",
+      "sha256": "5304b4190b01a53c7c4e3235f9d1df9e7eff1f01d09633d07750103487268115"
+    },
+    {
+      "bytes": 2977,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_replay_native_v1/orthohmm/files.py",
+      "sha256": "f1ec2acaea2566615b06b0a37e17b77f76bbd87fe6f2c76560a318343f6871a1"
+    },
+    {
+      "bytes": 32293,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_replay_native_v1/orthohmm/helpers.py",
+      "sha256": "faf9e85c6af8ad5f5740c81157e8ce40bbd98c1731991d9f3fbe1f47a05f6149"
+    },
+    {
+      "bytes": 1411,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_replay_native_v1/orthohmm/leiden_worker.py",
+      "sha256": "7d6d9fa5827bd99dcce28d2248688bbeb762b4b547bbc4e7491c16f0e2090c41"
+    },
+    {
+      "bytes": 83576,
+      "path": "/home/bizon/anaconda3/lib/libbz2.so.1.0.8",
+      "sha256": "2aa4427cfdbae9ef95a402de9291102dd293e58d29409df9812c3c8fa9216ccd"
+    },
+    {
+      "bytes": 5172040,
+      "path": "/home/bizon/anaconda3/lib/libcrypto.so.3",
+      "sha256": "e51457dff39af720f0a88552a93457879db1538a1f87494022ad42e27767aaec"
+    },
+    {
+      "bytes": 72144,
+      "path": "/home/bizon/anaconda3/lib/libffi.so.8.1.2",
+      "sha256": "a5d54aeb8ed2fd5e0ccf9d38b28cad6dec76517f69224a5d9687c1970b57b194"
+    },
+    {
+      "bytes": 475272,
+      "path": "/home/bizon/anaconda3/lib/libgcc_s.so.1",
+      "sha256": "d912bad5e511194c15b506fe7eafe4454bc2dc4073a0fdebc60e86af59a0f2bc"
+    },
+    {
+      "bytes": 218304,
+      "path": "/home/bizon/anaconda3/lib/liblzma.so.5.6.4",
+      "sha256": "6b126e186cc43702dcacb626e0455f8aecf030d969d6d4a407ce4cc35293c503"
+    },
+    {
+      "bytes": 13799640,
+      "path": "/home/bizon/anaconda3/lib/libstdc++.so.6.0.32",
+      "sha256": "31cbe74fef348ed0f1bcaaf0e8b941259bb9232bd635615b157ec4315ba102a8"
+    },
+    {
+      "bytes": 35944,
+      "path": "/home/bizon/anaconda3/lib/libuuid.so.1.3.0",
+      "sha256": "b42fa6cf1dcaca6b84e8155c4649d6bad561eaca2e8fa9473db178dbaa4aec53"
+    },
+    {
+      "bytes": 124744,
+      "path": "/home/bizon/anaconda3/lib/libz.so.1.2.13",
+      "sha256": "0b0e682a9dc7fd4895a6783288f851b793dc89633f28714027974fa4d66f3914"
+    },
+    {
+      "bytes": 62472,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_bisect.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "ea887752eba075d2474bd853e3a5e503bcf032305e5c51cd14028b4e77034b4d"
+    },
+    {
+      "bytes": 251704,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_blake2.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "f421e8df1b7ea5d31515dee9a2684bd36aa67ec685928570988d353a59fdce80"
+    },
+    {
+      "bytes": 88896,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_bz2.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "b19678449d12d9beb6cbbbd33fb555ebfc853871cce5a2a519726e35ab5d7bad"
+    },
+    {
+      "bytes": 27008,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_contextvars.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "6ed0d89ae1638f7b8c0ffcc509636d6915b1c63b72f5152256d0ea08c71ba2c7"
+    },
+    {
+      "bytes": 142696,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_csv.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "df056cebe877d3018dcdfde2e872a00fbffa7fc108179fa7eec15421a3f7bcf6"
+    },
+    {
+      "bytes": 548912,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_ctypes.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "a30a8aed3d972d7bb87069b0936065dd4b6c763e9f6f7f149f12c920bdfbc2b9"
+    },
+    {
+      "bytes": 580080,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_datetime.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "2fc84a2c46a4df59e1a577e3e90697bc70e8823c3c96377ae37fb01f3849d7b8"
+    },
+    {
+      "bytes": 1442104,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_decimal.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "812f13a0c79bf7f1079128f18c58ce3626570eb7fba42fedbf28ff16771c5766"
+    },
+    {
+      "bytes": 334776,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_elementtree.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "b467840fac2c89017c168f4d8f581c0cc3691c95fd8163d9fc6b7f210442b0ad"
+    },
+    {
+      "bytes": 211136,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_hashlib.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "fc629b71bf317522fb415d5d2d922f7a4b5d46b87cd6fa8c57525496e0e3a72a"
+    },
+    {
+      "bytes": 104128,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_heapq.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "786b8377efa7f3c3fa22964dc1a2356313ba5165d31a17632020d6570f50d2d6"
+    },
+    {
+      "bytes": 163064,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_json.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "96e880f7dc1ea92de1274e0c48e68a14ca774e8dc2acc8dfa4298316f1e8a1af"
+    },
+    {
+      "bytes": 145376,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_lzma.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "c290899c3d2ba97ad1c1eca27392dada5d0baf2930e271b8680c60afcc4e335d"
+    },
+    {
+      "bytes": 65648,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_multiprocessing.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "d2788e972576382303d0ada0c63f638e50d03e4b4c35b0f8cbb0e6217b2291d2"
+    },
+    {
+      "bytes": 29720,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_opcode.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "6509bb6108534aa66f5ffa927309997192266c383692034ab55003f0dcf57af9"
+    },
+    {
+      "bytes": 532464,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_pickle.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "e02187f9da864f3b18012db3f8532639e38636e07d4476f945315d1fd4f7b626"
+    },
+    {
+      "bytes": 76248,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_posixsubprocess.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "6504b0340b5b8dab668aeccca4342499d658c79aa04c600cb5677860f1ff5ae2"
+    },
+    {
+      "bytes": 67328,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_random.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "ac1ccbb60ce2006a9c11ee60ec2fc5c05e24c39da941e55f94204d92bb3c1369"
+    },
+    {
+      "bytes": 98040,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_sha512.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "b45b862451f4704e44689acb20375ea6adb7074927cbfcaf0758b3818df9000f"
+    },
+    {
+      "bytes": 283512,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_socket.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "7c91726d7fa1955364a2d7f789800748406d311957d66be94d21862f8e19304c"
+    },
+    {
+      "bytes": 219400,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_struct.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "af2b5503de6cb31de79ec9ce4269ff3bb501fc85fb6b8153bcbbe7515d86f4f4"
+    },
+    {
+      "bytes": 26632,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_uuid.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "f0d7955ed55f2d634833d2adca3dfe9207503cd00dad3a68f19b28bccc039460"
+    },
+    {
+      "bytes": 231120,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/array.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "11002ce4700ab79912a0bb087c5fe23780cc5c30698674cfa0a16974899771ef"
+    },
+    {
+      "bytes": 122768,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/binascii.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "e1e71d3c1634ee3c2b305a574b01a4375b7dd5bf8f1cf91930d03ee2e40ac238"
+    },
+    {
+      "bytes": 57440,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/fcntl.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "9ddc8f3f5e9dc8f9853a84388d334b63a50c7ac837770a9fc7c6044a4258690d"
+    },
+    {
+      "bytes": 259288,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/math.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "81fac6b419fc71268e60e10ccec0410b602db8f71ea94ab4d3efc739aa62d733"
+    },
+    {
+      "bytes": 95568,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/mmap.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "80ef2c703389fc8e681a10ab01bc250be9b433f922a3c2d818d786af0e7494f0"
+    },
+    {
+      "bytes": 955296,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/pyexpat.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "4e5afe86b38c9c78b6de98ec503af8fda22628844e061658b88fc86113496208"
+    },
+    {
+      "bytes": 113568,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/select.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "bef537130c58a31fa345ba20523179ed2df7c30eadc6014b61e2d672d0ac6e6b"
+    },
+    {
+      "bytes": 1208032,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/unicodedata.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "e43f29e1f861dddf5bcaae751720ab4dc3634d9591873003ab2252359d9d5ca2"
+    },
+    {
+      "bytes": 138024,
+      "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/zlib.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "12cd038d0c1875763042aa7ca3fa6b6ded4646770b6c2f8f18ed5fa87ad4f46c"
+    },
+    {
+      "bytes": 3328897,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/PIL/_imaging.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "aecc6213684b9f535d4448cc9c7c4d22cb828b8dbfed450c0a475e3e1988714a"
+    },
+    {
+      "bytes": 13330873,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/_igraph.abi3.so",
+      "sha256": "4cb2b4e7f88005ccd68fe0a20feb086b84335196e884c5bdd13f11d15c8b555d"
+    },
+    {
+      "bytes": 253289,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph.libs/libgomp-e985bcbb.so.1.0.0",
+      "sha256": "a43904e4fa297301d4640dc1bb3c8a3480b406f99e498eba9b1914b68aab604a"
+    },
+    {
+      "bytes": 167585,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph.libs/liblzma-51a76f52.so.5.2.4",
+      "sha256": "dc40ee343b9cfea15aa967eb27c4e36c91f694f9ed547845772232cf12f256e9"
+    },
+    {
+      "bytes": 1597833,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph.libs/libxml2-39f609e7.so.2.9.7",
+      "sha256": "41f94ee221730289d7b67f385478d5b1a31491ce50f3d3db171aff8ef36a8c3d"
+    },
+    {
+      "bytes": 6666144,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/kiwisolver/_cext.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "03d52e27ca281b4c0d797a08d7b48de89d17814514ef31a3071e0ac92dd0e30d"
+    },
+    {
+      "bytes": 637129,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg/_c_leiden.abi3.so",
+      "sha256": "cd22f76ac006ec5273b8177f0f1326019c0e750450114f727f552bce9e44bc7d"
+    },
+    {
+      "bytes": 6389929,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg.libs/libigraph-e2cb8a7d.so.4.0.0",
+      "sha256": "970f6550802406922c355702fc7752e0a35a171dbc869ce946f9c9f13f8d1c1c"
+    },
+    {
+      "bytes": 605881,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg.libs/liblibleidenalg-32f15777.so.0.11.1",
+      "sha256": "137243f81f8b1ccd397905d9665f1886ceb59d3bc88427eb2dd6201b476116dc"
+    },
+    {
+      "bytes": 267216,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/matplotlib/_c_internal_utils.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "a8ae1d3c9dc089dc55cdc22ad377e8858d4df2571739619631d3dd5958295faf"
+    },
+    {
+      "bytes": 586232,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/matplotlib/_image.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "d2b39a3bf71dfaa9a1ce63c651402c550e6362c753b846acfb5e06cf3f8e0ad7"
+    },
+    {
+      "bytes": 506808,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/matplotlib/_path.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "62b043f9c05752b89e1857c5a49f55bd5175e973f13a8ce7c6c77a9d27ca89cd"
+    },
+    {
+      "bytes": 1438856,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/matplotlib/ft2font.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "e879629431d847346995ac5df1eb6e839772f1712e878e0e59f2c4349cde3511"
+    },
+    {
+      "bytes": 10449209,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "c634eaf05367af02b815cf3d2020fbeee9b47426af1fe26cf3189e4798932dc5"
+    },
+    {
+      "bytes": 227657,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/linalg/_umath_linalg.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "c6bc9d5c4db6cea333d46d905e15fbcd8f541ec5b23704ca3c44547ee2ee5187"
+    },
+    {
+      "bytes": 2833617,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0",
+      "sha256": "c6090048eccc763522c12ef016f81da6b627cb3a044f55cf0479a839c41c0980"
+    },
+    {
+      "bytes": 250985,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0",
+      "sha256": "6ed5137f412781ad7863439fb543613f620b43c32b63292a0029246162f5bbc6"
+    },
+    {
+      "bytes": 25021457,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+      "sha256": "0bd815d04b6b54990e3cccc7528fbb696456d09569f533d0390c13f0cdc4dd4a"
+    },
+    {
+      "bytes": 22081,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/pillow.libs/libXau-154567c4.so.6.0.0",
+      "sha256": "05484d24bf78cb8ed03169f1cb067204d829cb7af21de8820400d29d115e4320"
+    },
+    {
+      "bytes": 836273,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/pillow.libs/libjpeg-8296d2fa.so.62.4.0",
+      "sha256": "7d756b9abefcfaffa6e0958931332c1a066f060931e311c811f6a4dff801bdf2"
+    },
+    {
+      "bytes": 266369,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/pillow.libs/liblzma-3c942967.so.5.8.3",
+      "sha256": "6b452ee3bde01d571d8854c42df2d225ff39571d078b13479c4e6f62a5b33e29"
+    },
+    {
+      "bytes": 585849,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/pillow.libs/libopenjp2-f3576751.so.2.5.4",
+      "sha256": "2b534a95b85b3000f3a8ee97b8f1eedecb10ce72f4b8213729500e1206593d10"
+    },
+    {
+      "bytes": 754729,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/pillow.libs/libtiff-f4bc73ff.so.6.2.0",
+      "sha256": "da609a6e8abd0b44d5e160bae614babc0073b311703abdbe69920094c7f06fca"
+    },
+    {
+      "bytes": 251425,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/pillow.libs/libxcb-bac6ebc8.so.1.1.0",
+      "sha256": "dfd64008fd2135a4cd8bb872f2fd70edb4982f25f12b9083983e6057d10c7276"
+    },
+    {
+      "bytes": 1800497,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/pillow.libs/libzstd-6ea785c0.so.1.5.7",
+      "sha256": "e1b3a49bde31c799a932b7f9efd84cd99fb11c0c1c8f85b05424f1a1d3f20045"
+    },
+    {
+      "bytes": 236616,
+      "path": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+      "sha256": "6c5e1b4528b704dc7081aa45b5037bda4ea9cad78ca562b4fb6b0dbdbfc7e7e7"
+    },
+    {
+      "bytes": 2125328,
+      "path": "/usr/lib/x86_64-linux-gnu/libc.so.6",
+      "sha256": "e7a914a33fd4f6d25057b8d48c7c5f3d55ab870ec4ee27693d6c5f3a532e6226"
+    },
+    {
+      "bytes": 14408,
+      "path": "/usr/lib/x86_64-linux-gnu/libdl.so.2",
+      "sha256": "efb09ce48f6ecdf4803547ef500bc371f9485e8c34b80913313c4a7cdb109664"
+    },
+    {
+      "bytes": 952616,
+      "path": "/usr/lib/x86_64-linux-gnu/libm.so.6",
+      "sha256": "c09178edd7fbc58aa8415f4bbe54dd76c5ff6c6398ba3e56e5a4743fd7e9adfc"
+    },
+    {
+      "bytes": 14408,
+      "path": "/usr/lib/x86_64-linux-gnu/libpthread.so.0",
+      "sha256": "8886af025eed1782e4b4675918250bf902206dab45151b6bc7f22b9c7249f6ae"
+    },
+    {
+      "bytes": 14624,
+      "path": "/usr/lib/x86_64-linux-gnu/librt.so.1",
+      "sha256": "5c070d1a8ff908c799bce07f86dadef98512a8aa0643fed917598f96fc1256e1"
+    },
+    {
+      "bytes": 14408,
+      "path": "/usr/lib/x86_64-linux-gnu/libutil.so.1",
+      "sha256": "17a4fca0e7fece307d2bfda63efd3be2051a6d83981be0c3481d63ac6f2a0e96"
+    },
+    {
+      "bytes": 17157264,
+      "path": "/home/bizon/anaconda3/bin/python3.10",
+      "sha256": "ddd8126d3a409c6ad46c718225d853214d0c9dba3657123514172951fa79058b"
+    }
+  ],
+  "cpu_affinity": [
+    1
+  ],
+  "environment": {
+    "LD_LIBRARY_PATH": null,
+    "LD_PRELOAD": null,
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONHASHSEED": "0",
+    "PYTHONPATH": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_replay_native_v1"
+  },
+  "limitations": [
+    "Last marker is before graph construction; no optimizer marker exists. This does not identify the faulting native instruction.",
+    "Current files match saved identities; this cannot prove historical process memory was uncorrupted.",
+    "No graph construction, optimizer, recovery or accuracy scoring runs in this audit."
+  ],
+  "observed": {
+    "constructor_int32_bytes_sha256": "93b36aad4916b85195c4dcc7dccb37d944cb911f7b051cf989ad1479729fded4",
+    "edges": 25501180,
+    "maximum_weight": 6.987804878048781,
+    "minimum_weight": 0.011495640853370806,
+    "negative_weights": 0,
+    "self_edges": 0,
+    "vertices": 984137,
+    "zero_weights": 0
+  },
+  "publication_ready": false,
+  "rerun_authorized": false,
+  "status": "failed_high_cpm_payload_checked_without_execution",
+  "versions": {
+    "igraph": "1.0.0",
+    "leidenalg": "0.11.0",
+    "numpy": "2.2.6"
+  }
+}
