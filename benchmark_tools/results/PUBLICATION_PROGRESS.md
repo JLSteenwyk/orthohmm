@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Recovery Batch Admission Validator Tested (2026-09-23)
+
+Previous turn acknowledged the user's DGX deferral; it made no scientific
+progress. Revalidated live scheduler state and continued local recovery
+validation work without accessing the DGX.
+
+Added `admit_blast_recovery_batch.py`: it requires terminal successful
+22103 task accounting, the frozen executor revision and execution contract,
+unchanged inputs and native output hashes, exact artifact inventory,
+ordered query blocks, valid full-database HSP subjects/numerics/coordinates,
+and explicit diagnostic/no-hit accounting. Failed queries with outgoing
+hits require review. Each admitted batch retains raw block byte offsets
+and hashes; it does not authorize prefix reuse, merging or whole-search
+admission. The execution contract uses the frozen preparer; independent
+block indexing and coverage checks do not constitute an independent
+implementation of the entire execution contract.
+
+All 74 focused tests passed, including end-to-end synthetic admission,
+empty output, altered artifacts/contracts/identity, unfinished artifacts,
+failed status, excessive E-values and unknown subjects. These test fixtures
+do not replace validation of real completed recovery outputs. Validator
+execution/submission remains next; no recovery batch is admitted yet.
+
+Authoritative accounting: 22039_0 and _1 completed 0:0 (6:37, 6:33),
+22039_2 is running, 22081_1 is running, and 22103 remains pending for
+resources. No job restarted and held 21746 remains untouched. DGX and
+controlled timing remain deferred; full publication requirements remain open.
+
 ## Checkpointed OrthoMCL Recovery Submitted (2026-09-23)
 
 Previous turn made progress by validating diagnostic 22055 and preparing
