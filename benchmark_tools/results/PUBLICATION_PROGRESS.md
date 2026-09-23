@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Historical Annotation Admission Queued (2026-09-23)
+
+Previous turn made progress building postflight validation while 22116 began
+collection. Added full-panel synthetic tests with 563 query identities,
+78 FASTA records, 18 families and a real Swiss-Prot flat-file parse. The
+admission path accepts explicit missingness, preserves positive-plus-missing
+family membership, rejects changed raw files/digests/counts and unfinished
+collection, and refuses existing reports. All 37 focused tests passed;
+test milestone committed/pushed at 26fcd04.
+
+Frozen executor at `benchmarks/work/swiss_historical_fragment_admission_v1_20260923`
+pins 26fcd04b4887f7d667850c7c4165e7399727c332. Submitted
+[postflight script](swiss_historical_fragment_admission_20260923.sh) as
+**22117**, afterany:22116, one CPU / 8 GiB / two hours, no requeue.
+Scheduler confirms dependency-pending. The verifier itself requires successful
+terminal collection; failure/timeout cannot admit a partial panel. Output is
+`benchmarks/work/swiss_historical_fragment_admission_20260923.json`.
+
+Authoritative live collection 22116 had 108 sequence-matched entries and no
+failures at inspection, not a completed or independently admitted panel.
+Parameter scoring 22043_0 and CPM 22081_1 remain active; BLAST recovery is
+resource-pending. No restarts, downstream OrthoMCL release or DGX access.
+Next inspect terminal acquisition/validation, review missingness, then join
+the frozen bins to admitted counts for descriptive displays. Full publication
+completion remains unproven; other scientific and resource requirements stay
+open as recorded below.
+
 ## Annotation Collection Running; Postflight Checks Prepared (2026-09-23)
 
 Previous turn made progress implementing/preflighting all 563 annotation
