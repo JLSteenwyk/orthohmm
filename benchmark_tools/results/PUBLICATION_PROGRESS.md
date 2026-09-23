@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Streaming BLAST Merge Component Tested (2026-09-23)
+
+Previous turn added the checked duplication figure and manuscript preview
+(f1dbd3d). Re-read the goal and confirmed live BLAST 22103_2 and parameter
+scoring 22043_3. Low-CPM phylogeny is resource-pending, not restarted.
+
+Implemented the [streaming merge component](QFO_BLAST_MERGE_IMPLEMENTATION_20260923.md)
+needed for recovery consolidation. It interleaves retained/replayed query
+blocks in original order, checks ranges/hashes/row identity, excludes the old
+incomplete block, refuses duplicate or unconsumed inventory, detects changed
+sources and preserves partial output on pre-rename failures. Twenty tests
+pass, including exact merged bytes, corruption and fsync failure.
+
+No production merge or prefix reuse occurred. The full gated driver, explicit
+prefix evidence review, complete twenty-batch admission and final numeric/
+diagnostic audit remain required. Held job 21746 and its chain are untouched.
+Updated the claims narrative to include the now-completed descriptive
+duplication analysis without calling it independent evolutionary history.
+DGX remains deferred and publication completion remains unproven.
+
 ## Duplication Figure and Updated Manuscript Preview (2026-09-23)
 
 Previous turn added the checked descriptive comparison and manuscript text

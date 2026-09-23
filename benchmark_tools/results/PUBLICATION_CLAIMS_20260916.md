@@ -229,8 +229,14 @@ not establish any comparative resource advantage.
   are complete for all 18 families and seven admitted methods. All methods
   have lower descriptive F1 in the lower-identity bin; no subgroup significance
   or mechanism claim follows. OrthoMCL remains missing.
-  Sequence identity is not calibrated evolutionary distance; independent
-  duplication annotations remain a gap. The subsequently completed
+  Sequence identity is not calibrated evolutionary distance. A subsequent
+  [retained-tree duplication protocol](SWISS_DUPLICATION_FEATURE_PROTOCOL_20260923.md)
+  and [dual-implementation feature check](SWISS_DUPLICATION_FEATURE_RESULT_20260923.md)
+  now support [descriptive duplication strata](swiss_duplication_strata_20260923/scores.md).
+  All original reference relationships reconstruct exactly; annotations are
+  reference-derived, not independent evolutionary rates or causal evidence.
+  The higher-stratum positive OrthoHMM contrast does not reverse the overall
+  ordering or establish subgroup superiority. The subsequently completed
   [historical fragment panel](SWISS_HISTORICAL_FRAGMENT_RESULT_20260923.md)
   matches all 563 proteins and provides descriptive, annotation-defined
   contrasts with an explicit baseline-only sensitivity analysis. Unflagged
