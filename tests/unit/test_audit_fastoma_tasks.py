@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pytest
 
-from benchmark_tools.audit_fastoma_tasks import FIXED, IMAGE_DIGEST, PROGRAMS, audit_tasks, inspect_task, task_directory, validate_trace, wrapper_limits
+from benchmark_tools.audit_fastoma_tasks import FIXED, IMAGE_DIGEST, PROGRAMS, audit_tasks, batch_name, collection_links, inspect_task, task_directory, validate_trace, wrapper_limits
 
 
 def wrapper(cpu="1.0", memory="24g"):
@@ -114,6 +114,59 @@ def test_full_synthetic_task_chain(tmp_path):
     report = audit_tasks(path, work, ["a.fa", "b.fa"])
     assert report["status"] == "fresh_fastoma_task_trace_verified"
     assert len(report["tasks"]) == 9
+
+
+def test_absolute_batch_is_bound_to_exact_batching_directory(tmp_path):
+    path, work, paths = task_set(tmp_path)
+    batch = paths["batch_roothogs"] / "rhogs_rest/batch1"
+    script = paths["hog_rest (1)"] / ".command.sh"
+    script.write_text(f"fastoma-infer-subhogs --input-rhog-folder {batch}\n")
+    assert audit_tasks(path, work, ["a.fa", "b.fa"])["process_counts"]["hog_rest"] == 1
+    other = tmp_path / "other/batch1"
+    other.mkdir(parents=True)
+    script.write_text(f"fastoma-infer-subhogs --input-rhog-folder {other}\n")
+    with pytest.raises(ValueError, match="batching output"):
+        audit_tasks(path, work, ["a.fa", "b.fa"])
+
+
+def test_batch_symlink_and_relative_escape_rejected(tmp_path):
+    folder = tmp_path / "batches"
+    folder.mkdir()
+    other = tmp_path / "other"
+    other.mkdir()
+    (folder / "batch").symlink_to(other, target_is_directory=True)
+    for value in (str(folder / "batch"), "../other", "missing"):
+        with pytest.raises(ValueError):
+            batch_name(value, folder)
+
+
+@pytest.mark.parametrize("problem", [None, "missing", "duplicate", "foreign", "not_symlink", "broken"])
+def test_exact_successful_collection(tmp_path, problem):
+    output = tmp_path / "successful/pickle_hogs"
+    output.mkdir(parents=True)
+    collector = tmp_path / "collector"
+    folder = collector / "pickle_folders"
+    folder.mkdir(parents=True)
+    link = folder / "1"
+    link.symlink_to(output, target_is_directory=True)
+    if problem == "missing":
+        link.unlink()
+    elif problem == "duplicate":
+        (folder / "2").symlink_to(output, target_is_directory=True)
+    elif problem in {"foreign", "broken"}:
+        link.unlink()
+        other = tmp_path / "failed/pickle_hogs"
+        if problem == "foreign":
+            other.mkdir(parents=True)
+        link.symlink_to(other, target_is_directory=True)
+    elif problem == "not_symlink":
+        link.unlink()
+        link.mkdir()
+    if problem:
+        with pytest.raises(ValueError):
+            collection_links(collector, {str(output)})
+    else:
+        assert collection_links(collector, {str(output)}) == [{"path": str(link), "target": str(output)}]
 
 
 @pytest.mark.parametrize("change", ["query", "batch", "program", "pair_type", "missing_batch_task"])

@@ -4,6 +4,7 @@ import io
 import pytest
 
 from benchmark_tools.review_fastoma_retries import partition_attempts, review
+from benchmark_tools.audit_fastoma_tasks import audit_tasks, task_directory
 from tests.unit.test_audit_fastoma_tasks import task_set, trace, wrapper
 
 
@@ -69,6 +70,26 @@ def test_file_review_retains_both_attempts_without_admitting(tmp_path):
     assert result["retry_pairs"][0]["failed"]["trace"]["exit"] == "1"
     assert result["native_outputs_admitted"] is False
     assert result["accuracy_evaluated"] is False
+
+
+def test_integrated_explicit_audit_keeps_default_closed(tmp_path):
+    path, work, before, after = fixture(tmp_path)
+    for directory in (before, after):
+        script = directory / ".command.sh"
+        script.write_text(script.read_text().rstrip() + " --output-pickles pickle_hogs\n")
+    (after / "pickle_hogs").mkdir()
+    rows = list(csv.DictReader(io.StringIO(trace()), delimiter="\t"))
+    row = next(r for r in rows if r["name"] == "collect_subhogs")
+    collector = task_directory(work, row["hash"])
+    (collector / "pickle_folders").mkdir()
+    (collector / "pickle_folders/1").symlink_to(after / "pickle_hogs", target_is_directory=True)
+    with pytest.raises(ValueError, match="explicit review"):
+        audit_tasks(path, work, ["a.fa", "b.fa"])
+    report = audit_tasks(path, work, ["a.fa", "b.fa"], retry_pairs=PAIRS)
+    assert report["status"] == "explicitly_reviewed_fastoma_task_trace_verified"
+    assert len(report["tasks"]) == 9
+    assert len(report["retry_review"]["attempts"]) == 10
+    assert len(report["collection"]) == 1
 
 
 @pytest.mark.parametrize("change", ["command", "tree", "exit", "cpu", "memory"])

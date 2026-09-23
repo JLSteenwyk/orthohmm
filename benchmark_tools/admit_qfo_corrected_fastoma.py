@@ -20,6 +20,14 @@ from benchmark_tools.run_simulation_methods import read_frozen
 from benchmark_tools.verify_ygob_validation import require_completed_job
 
 EXECUTOR = "7aa174c3f6bf244144c1940bfa32db2e3ca80d7b"
+REVIEWED_TRACE_SHA = "13def3f70ccadbf806d7f385c3f34c4de2e218eefa59ece945ed071ce5c52c38"
+
+
+def reviewed_tasks(trace, work, species_files):
+    if record(trace)["sha256"] != REVIEWED_TRACE_SHA:
+        raise ValueError("Trace differs from explicitly reviewed corrected FastOMA run")
+    return audit_tasks(trace, work, species_files,
+                       retry_pairs={"88/b76e7a": "86/252823", "ac/a2d49a": "fe/c2a4b8"})
 
 
 def validate_execution(execution, expected, scheduler, runner):
@@ -118,7 +126,7 @@ def admit(root, job, stage_job, destination):
     if not observed or observed != execution["outputs"]:
         raise ValueError("Published native output inventory changed")
     inputs = [row["staged"] for row in stage["copies"] if Path(row["staged"]["path"]).suffix == ".fa"]
-    tasks = audit_tasks(run_root / "run/trace.txt", run_root / "work", [Path(r["path"]).name for r in inputs])
+    tasks = reviewed_tasks(run_root / "run/trace.txt", run_root / "work", [Path(r["path"]).name for r in inputs])
     bindings = bind_task_outputs(tasks, output, inputs)
     owners = input_owners([Path(r["path"]) for r in inputs])
     if len(owners) != 984137 or len(set(owners.values())) != 78:
@@ -132,6 +140,7 @@ def admit(root, job, stage_job, destination):
     checked = [execution_record, execution["source"], *expected["checked_records"], *observed,
                *[execution[key] for key in ("log", "timing", "trace", "nextflow_log")],
                *[r for task in tasks["tasks"] for r in task["files"]],
+               *tasks["retry_review"]["checked_records"],
                *[r for binding in bindings for r in binding.values()]]
     for item in checked:
         check(item)
@@ -143,10 +152,11 @@ def admit(root, job, stage_job, destination):
               "content": content, "native_pairs": record(output / "orthologs.tsv.gz"),
               "input_fastas": inputs, "accuracy_evaluated": False, "publication_ready": False,
               "helpers": [record(Path(__file__).with_name(name)) for name in (
-                  "run_qfo_corrected_fastoma.py", "audit_fastoma_tasks.py", "audit_fastoma_orthoxml.py", "fastoma_to_pairwise.py")],
+                  "run_qfo_corrected_fastoma.py", "audit_fastoma_tasks.py", "review_fastoma_retries.py",
+                  "audit_fastoma_orthoxml.py", "fastoma_to_pairwise.py")],
               "limitations": ["Supplied corrected OrthoFinder tree, not independent FastOMA tree inference.",
                   "Native integrity and scope checks, not biological accuracy or reference-relative coverage.",
-                  "Failed/retried task chains require separate review; no automatic exception applied.",
+                  "Two explicitly reviewed failed/retried task chains are retained; other traces are rejected.",
                   "Distinct native pair conversion and independent QfO scoring still required.",
                   "Shared-host inference is not matched dedicated timing."]}
     with destination.open("x") as stream:

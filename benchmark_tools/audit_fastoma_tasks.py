@@ -86,11 +86,47 @@ def validate_trace(text, species_files):
     return rows, counts
 
 
-def audit_tasks(trace, work, species_files):
+def batch_name(value, directory):
+    path = Path(value)
+    if not path.is_absolute():
+        if path.name != value:
+            raise ValueError("Unexpected relative HOG batch path")
+        path = directory / value
+    if (path.parent != directory or path.is_symlink() or not path.is_dir()
+            or path.resolve().parent != directory.resolve()):
+        raise ValueError("HOG batch is outside the exact batching output")
+    return path.name
+
+
+def collection_links(directory, expected):
+    folder = directory / "pickle_folders"
+    if folder.is_symlink() or not folder.is_dir():
+        raise ValueError("Missing or redirected collection directory")
+    links = sorted(folder.iterdir())
+    if any(not p.is_symlink() or not p.is_dir() for p in links):
+        raise ValueError("Collection requires intact directory symlinks")
+    observed = [{"path": str(p), "target": str(p.resolve(strict=True))} for p in links]
+    targets = [r["target"] for r in observed]
+    if len(set(targets)) != len(targets) or set(targets) != expected:
+        raise ValueError("Collection differs from exact successful HOG outputs")
+    return observed
+
+
+def audit_tasks(trace, work, species_files, *, retry_pairs=None):
     trace_record = record(trace)
-    rows, counts = validate_trace(trace.read_text(), species_files)
+    retry_review = None
+    if retry_pairs is None:
+        rows, counts = validate_trace(trace.read_text(), species_files)
+    else:
+        from benchmark_tools.review_fastoma_retries import review
+        retry_review = review(trace, work, species_files, retry_pairs)
+        rows = [r for r in retry_review["attempts"] if r["status"] == "COMPLETED"]
+        counts = retry_review["successful_process_counts"]
     tasks, queries, batches = [], set(), {"hog_big": set(), "hog_rest": set()}
-    batch_directory = None
+    batch_row = next(r for r in rows if r["name"].split(" (", 1)[0] == "batch_roothogs")
+    batch_directory = task_directory(work, batch_row["hash"])
+    successful_outputs = set()
+    collector = None
     for row in rows:
         name = row["name"].split(" (", 1)[0]
         directory = task_directory(work, row["hash"])
@@ -103,12 +139,20 @@ def audit_tasks(trace, work, species_files):
                 raise ValueError("Duplicate or foreign OMAmer query")
             queries.add(query)
         if name in batches:
-            batch = option(argv, "--input-rhog-folder")
-            if Path(batch).name != batch or batch in batches[name]:
+            folder = "rhogs_big" if name == "hog_big" else "rhogs_rest"
+            batch = batch_name(option(argv, "--input-rhog-folder"), batch_directory / folder)
+            if batch in batches[name]:
                 raise ValueError("Duplicate or unexpected HOG batch")
             batches[name].add(batch)
-        if name == "batch_roothogs":
-            batch_directory = directory
+            if retry_review is not None:
+                if option(argv, "--output-pickles") != "pickle_hogs":
+                    raise ValueError("Unexpected HOG output directory")
+                output = directory / "pickle_hogs"
+                if output.is_symlink() or not output.is_dir():
+                    raise ValueError("Missing or redirected successful HOG output")
+                successful_outputs.add(str(output.resolve(strict=True)))
+        if name == "collect_subhogs":
+            collector = directory
         if name == "extract_pairwise_ortholog_relations" and option(argv, "--type") != "ortholog":
             raise ValueError("Native pair output is not orthology")
         tasks.append({"trace": row, **info})
@@ -118,11 +162,23 @@ def audit_tasks(trace, work, species_files):
         expected = {p.name for p in (batch_directory / folder).glob("*")}
         if expected != batches[name]:
             raise ValueError("Native HOG tasks do not cover batching output")
-    for item in [trace_record, *[r for task in tasks for r in task["files"]]]:
+    collected = collection_links(collector, successful_outputs) if retry_review is not None else None
+    checked = [trace_record, *[r for task in tasks for r in task["files"]]]
+    if retry_review is not None:
+        checked.extend(retry_review["checked_records"])
+    for item in checked:
         check(item)
-    return {"status": "fresh_fastoma_task_trace_verified", "trace": trace_record,
+    if collected is not None and collection_links(collector, successful_outputs) != collected:
+        raise ValueError("Collection changed during audit")
+    result = {"status": "fresh_fastoma_task_trace_verified", "trace": trace_record,
             "process_counts": dict(counts), "tasks": tasks,
             "limitations": ["Failed, cached and retried tasks require separate review; no override is inferred.",
                 "Task coverage, script presence and wrapper limits, not validation of biological contents.",
                 "CPU/memory flags are not measured peak use or aggregate resource accounting.",
                 "Published outputs, staged-data identity and native pair semantics require separate checks."]}
+    if retry_review is not None:
+        result.update(status="explicitly_reviewed_fastoma_task_trace_verified",
+                      retry_review=retry_review, collection=collected)
+        result["limitations"][0] = "Only the explicitly listed retries are reviewed; all attempts remain retained."
+        result["limitations"].append("Collection checks directory targets, not pickle contents or historical input immutability.")
+    return result
