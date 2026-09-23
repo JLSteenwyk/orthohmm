@@ -1,5 +1,45 @@
 # Publication Progress
 
+## FastOMA Conversion and Scoring Reconnected (2026-09-23)
+
+The preceding turn made progress: native FastOMA admission completed and
+the BLAST diagnostic preflight was repaired. Updated only FastOMA's
+downstream admission/converter/executor pins; native pair conversion,
+duplicate handling, reference mapping, six endpoints, and other methods'
+executor pins are unchanged. The supplied corrected OrthoFinder species-
+tree caveat remains in the pair semantics. Replacement chain:
+
+| Stage | Job | Frozen commit | Checkout under `benchmarks/work/` |
+| --- | --- | --- | --- |
+| Pair conversion | 22056 | 411d38254fa374dd27a00e4efa69b5f63cb2bebe | publication_qfo_corrected_fastoma_pairs_v2 |
+| Six-endpoint scoring | 22057 | 0cc0a96c44e377f4e87a1e579ce12012d3478e4e | publication_qfo_corrected_fastoma_assessment_v2 |
+| Independent score admission | 22058 | 926eb714b36c7582aa1d941c5a0ba29002490e7a | publication_qfo_corrected_fastoma_score_admission_v2 |
+
+Conversion uses admission job 22054 and its previously recorded exact
+report checksum, not a newly accepted arbitrary hash. Scoring and score
+admission use `afterok` on their immediate predecessor plus their own
+accounting/provenance checks. Conversion/admission retain 2 CPUs / 64 GiB /
+4 hours; scoring retains 8 CPUs / 64 GiB / 24 hours; no requeue. Original
+unused output namespaces remain protected by no-overwrite checks.
+
+**104 focused comparator/conversion/admission tests passed**, including
+the replacement FastOMA executor pin, source identity, mapping loss, and
+native duplicate handling. The additional distinct-pair suite previously
+passed with conversion (45 tests). New batch syntax and scoped whitespace
+checks pass. Confirmed old jobs 21742/21744/21745 were pending, then cancelled
+only these superseded jobs; accounting shows no start and zero elapsed.
+Their original executors and failed native-admission evidence are retained.
+At latest observation conversion 22056 is RUNNING at 2:21; no score exists.
+
+Both CPM variants **21960_0 and 21960_1 FAILED/1:0**, in 2:22 and 2:25.
+Their `clustering/cluster_0_initial/worker.log` files under
+`benchmarks/results/qfo_parameter_cpm_replay_v1/{cpm_low,cpm_high}` show
+`repeat_qfo_saved_graph.py:77` rejecting `Changed clustering parameters`.
+This is a validator failure, not a timeout or completed negative accuracy
+result. Preserve the partial outputs and inspect the prespecified-variant
+parameter boundary before any selective resubmission. BLAST diagnostic
+22055 remains queued; parameter arm 22034_0 was last observed running.
+
 ## BLAST Preflight Fixed; FastOMA Native Evidence Admitted (2026-09-23)
 
 The preceding turn made progress by launching full FastOMA admission.
