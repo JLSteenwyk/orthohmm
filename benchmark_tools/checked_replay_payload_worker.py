@@ -154,7 +154,8 @@ def main():
         provenance["helpers"].append(record(Path(__file__).with_name("sequence_graph_evidence.py")))
     (payload / "checked_payload_provenance.json").write_text(json.dumps(provenance, indent=2, sort_keys=True) + "\n")
     with python_pair_constructor(igraph, payload / "constructor_adapter.json"):
-        worker(launcher, payload, native_boundary=True)
+        worker(launcher, payload, native_boundary=True,
+               expected_cpm_resolution=.1 if cpm_context is None else cpm_context["resolution"])
     raise RuntimeError("Frozen native worker unexpectedly returned")
 
 

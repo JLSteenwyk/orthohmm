@@ -59,7 +59,16 @@ def set_worker_affinity(requested):
     return inherited
 
 
-def worker(launcher, payload, requested_affinity=None, native_boundary=False):
+def validate_clustering_metadata(metadata, expected_cpm_resolution=.1):
+    if (type(expected_cpm_resolution) is not float or expected_cpm_resolution not in (.08, .1, .12)
+            or type(metadata["cpm_resolution"]) is not float
+            or metadata["cpm_resolution"] != expected_cpm_resolution
+            or type(metadata["seed"]) is not int or metadata["seed"] != 4
+            or metadata["include_isolates"] is not True):
+        raise ValueError("Changed clustering parameters")
+
+
+def worker(launcher, payload, requested_affinity=None, native_boundary=False, *, expected_cpm_resolution=.1):
     inherited_affinity = set_worker_affinity(requested_affinity)
     if native_boundary:
         from probe_leiden_boundary import observe_partition
@@ -73,8 +82,7 @@ def worker(launcher, payload, requested_affinity=None, native_boundary=False):
     if Path(leiden_worker.__file__).resolve() != launcher / "orthohmm/leiden_worker.py":
         raise ValueError("Wrong frozen worker import")
     metadata = json.loads((payload / "metadata.json").read_text())
-    if metadata["cpm_resolution"] != .1 or metadata["seed"] != 4 or metadata["include_isolates"] is not True:
-        raise ValueError("Changed clustering parameters")
+    validate_clustering_metadata(metadata, expected_cpm_resolution)
     modules = {name: record(module.__file__) for name, module in list(sys.modules.items())
                if name.split(".")[0] in {"numpy", "igraph", "leidenalg", "orthohmm"}
                and getattr(module, "__file__", None)}
@@ -98,8 +106,9 @@ def worker(launcher, payload, requested_affinity=None, native_boundary=False):
     raise RuntimeError("Frozen worker unexpectedly returned instead of exiting")
 
 
-def check_worker(snapshot, launcher, payload, overrides):
-    expected = {"cpm_resolution": .1, "seed": 4, "include_isolates": True,
+def check_worker(snapshot, launcher, payload, overrides, *, expected_cpm_resolution=.1):
+    validate_clustering_metadata(snapshot["metadata"], expected_cpm_resolution)
+    expected = {"cpm_resolution": expected_cpm_resolution, "seed": 4, "include_isolates": True,
                 "output_directory": str(payload.parent)}
     if (snapshot["status"] != "before_native_clustering" or snapshot["accuracy_evaluated"] is not False
             or snapshot["metadata"] != expected or snapshot["cwd"] != str(launcher)):

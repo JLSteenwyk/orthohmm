@@ -12,6 +12,30 @@ from benchmark_tools.repeat_qfo_saved_graph import check_worker, mapped_librarie
 from benchmark_tools import repeat_qfo_saved_graph as diagnostic
 
 
+@pytest.mark.parametrize("resolution", [.08, .1, .12])
+def test_resolution_requires_exact_explicit_expectation(resolution):
+    metadata = {"cpm_resolution": resolution, "seed": 4, "include_isolates": True}
+    diagnostic.validate_clustering_metadata(metadata, resolution)
+    if resolution != .1:
+        with pytest.raises(ValueError, match="clustering parameters"):
+            diagnostic.validate_clustering_metadata(metadata)
+
+
+@pytest.mark.parametrize("expected", [True, "0.08", 0, .09, float("nan"), float("inf")])
+def test_unprespecified_resolution_rejected(expected):
+    with pytest.raises(ValueError, match="clustering parameters"):
+        diagnostic.validate_clustering_metadata(
+            {"cpm_resolution": expected, "seed": 4, "include_isolates": True}, expected)
+
+
+@pytest.mark.parametrize("change", [{"seed": 5}, {"seed": 4.0}, {"include_isolates": False},
+                                   {"cpm_resolution": .12}])
+def test_variant_does_not_relax_other_settings(change):
+    with pytest.raises(ValueError, match="clustering parameters"):
+        diagnostic.validate_clustering_metadata(
+            {"cpm_resolution": .08, "seed": 4, "include_isolates": True, **change}, .08)
+
+
 def test_mapped_library_inventory_ignores_addresses_and_duplicates():
     maps = """001-002 r--p 0000 08:01 1 /lib/libx.so.1
 002-003 r-xp 0010 08:01 1 /lib/libx.so.1
@@ -67,7 +91,8 @@ def test_worker_identity_guards(problem):
 @pytest.mark.skipif(not Path("/proc/self/maps").exists(), reason="Linux loaded-library diagnostic")
 @pytest.mark.parametrize("explicit_affinity", [False, True])
 @pytest.mark.parametrize("native_boundary", [False, True])
-def test_instrumented_real_worker_exits_and_preserves_isolate(tmp_path, explicit_affinity, native_boundary):
+@pytest.mark.parametrize("resolution", [.08, .1, .12])
+def test_instrumented_real_worker_exits_and_preserves_isolate(tmp_path, explicit_affinity, native_boundary, resolution):
     root = tmp_path
     launcher = root / "benchmarks/work/publication_qfo_replay_native_v1"
     package = launcher / "orthohmm"
@@ -84,7 +109,7 @@ def test_instrumented_real_worker_exits_and_preserves_isolate(tmp_path, explicit
     np.save(payload / "sources.npy", np.array([0], dtype=np.int32), allow_pickle=False)
     np.save(payload / "targets.npy", np.array([1], dtype=np.int32), allow_pickle=False)
     np.save(payload / "weights.npy", np.array([1.], dtype=np.float64), allow_pickle=False)
-    (payload / "metadata.json").write_text(json.dumps({"cpm_resolution": .1, "seed": 4,
+    (payload / "metadata.json").write_text(json.dumps({"cpm_resolution": resolution, "seed": 4,
         "include_isolates": True, "output_directory": str(directory)}))
     overrides = {"PYTHONPATH": str(launcher), "PYTHONHASHSEED": "0", "OMP_NUM_THREADS": "1",
                  "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"}
@@ -95,6 +120,14 @@ def test_instrumented_real_worker_exits_and_preserves_isolate(tmp_path, explicit
         command += ["--cpu-affinity", str(inherited[0])]
     if native_boundary:
         command += ["--native-boundary"]
+    if resolution != .1:
+        affinity = inherited[:1] if explicit_affinity else None
+        code = (f"import sys; sys.path.insert(0, {str(Path(diagnostic.__file__).parent)!r}); "
+                "from repeat_qfo_saved_graph import worker; from pathlib import Path; "
+                f"worker(Path({str(launcher)!r}), Path({str(payload)!r}), "
+                f"requested_affinity={affinity!r}, native_boundary={native_boundary!r}, "
+                f"expected_cpm_resolution={resolution!r})")
+        command = [sys.executable, "-c", code]
     run = subprocess.run(command, cwd=launcher, env={**os.environ, **overrides},
                          capture_output=True, text=True, timeout=30)
     assert run.returncode == 0, run.stderr
@@ -102,9 +135,10 @@ def test_instrumented_real_worker_exits_and_preserves_isolate(tmp_path, explicit
         calls = json.loads((payload / "native_boundary.json").read_text())["calls"]
         assert len(calls) == 1
         assert calls[0]["status"] == "optimizer_returned"
+        assert calls[0]["arguments"]["kwargs"]["resolution_parameter"] == resolution
         assert calls[0]["before"] == calls[0]["saved"] == calls[0]["after"]
     snapshot = json.loads((payload / "worker_before.json").read_text())
-    check_worker(snapshot, launcher, payload, overrides)
+    check_worker(snapshot, launcher, payload, overrides, expected_cpm_resolution=resolution)
     assert snapshot["inherited_cpu_affinity"] == inherited
     assert snapshot["requested_cpu_affinity"] == (inherited[:1] if explicit_affinity else None)
     assert snapshot["cpu_affinity"] == (inherited[:1] if explicit_affinity else inherited)

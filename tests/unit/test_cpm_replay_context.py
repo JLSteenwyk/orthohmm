@@ -33,6 +33,8 @@ def test_only_prespecified_argument_changes(tmp_path, arm, resolution):
     context = module.derive(tmp_path, plan, arm)
     assert plan == before
     assert context["resolution"] == resolution
+    version = "v1" if arm == "control" else "v2"
+    assert context["output_root"] == str(tmp_path / f"benchmarks/results/qfo_parameter_cpm_replay_{version}" / arm)
     old, new = plan["native_command"], context["native_command"]
     changed = {i for i, (a, b) in enumerate(zip(old, new)) if a != b}
     expected = {old.index(flag) + 1 for flag in ("--output-directory", "--json")}
