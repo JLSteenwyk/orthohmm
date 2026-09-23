@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Descriptive Fragment-Strata Export Prepared (2026-09-23)
+
+Previous turn made progress exercising full-panel annotation admission and
+queuing frozen verifier 22117. Added `export_swiss_fragment_strata.py`, which
+requires a hash-pinned admitted/unscored annotation report and unchanged
+provenance records before joining the already admitted corrected counts.
+It rechecks both family partitions and uses the unchanged SwissTrees
+raw/2+1, macro P/R, harmonic-F1 implementation. All eight methods are retained
+in seven views (all families, three historical bins, three baseline-only
+bins), including empty bins, missing OrthoMCL and differences versus full
+OrthoFinder. It adds no intervals, tests or inferential claims.
+
+All 56 focused tests passed, including real retained count arithmetic with
+synthetic annotation assignments, admission/boundary failures, generated
+TSV/Markdown identities and overwrite rejection. Synthetic export fixtures
+are not scientific fragment-stratified results. No real annotation-count join
+has run: collection and full-panel admission must finish first, then the
+checked report's SHA will be supplied explicitly to the exporter.
+
+Live accounting confirms 22116 running, 22117 dependency-pending, 22043_0
+scoring and 22081_1 replay running. At inspection, collection had 187 matched
+proteins and no acquisition failures; this is partial progress, not complete
+coverage. BLAST recovery 22103 remains pending for resources. No jobs were
+restarted or DGX accessed. Scientific results, failure review and remaining
+publication/resource requirements are still open.
+
 ## Historical Annotation Admission Queued (2026-09-23)
 
 Previous turn made progress building postflight validation while 22116 began
