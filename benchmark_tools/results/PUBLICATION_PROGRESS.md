@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Full Historical Annotation Collection Submitted (2026-09-23)
+
+Previous turn made progress verifying the historical annotation source and
+freezing selection rules. Implemented checked extraction from all 78 staged
+FASTAs, requiring exact retained descriptors, unique accession coverage,
+taxon IDs and sequence versions; real preflight passed for all 563 proteins
+and 18 families. No sequence normalization or prediction reads are performed.
+Collector preserves per-accession failures and intermediate status, pauses
+one second between accessions, forbids existing output directories, and
+never equates collection completion with panel admission. All 18 focused
+collector/source tests passed. Committed/pushed df8a9c0 before execution.
+
+Submitted [collection script](swiss_historical_fragments_20260923.sh) as
+**22116**, frozen executor df8a9c09a8c7a1f4476d1d6a7a9c6ccb538e69b1 at
+`benchmarks/work/swiss_historical_fragments_v1_20260923`; output directory
+`benchmarks/work/swiss_historical_fragment_panel_20260923`. One CPU, 4 GiB,
+no requeue. Initially requested 24 hours; while still pending, shortened the
+same job to four hours to fit scheduler availability. Scheduler node is
+MIXED, not down, despite the generic pending reservation/down-node reason.
+No native job was restarted or unrelated reservation modified. Timeout
+would leave an incomplete collection, not an admitted successful subset.
+
+Three parameter pair-conversion tasks completed; 22039_3 and 22081_1 are
+running. BLAST recovery 22103 remains resource-pending. DGX untouched.
+Next validate complete acquired sequence identities and family membership
+independently before producing descriptive annotation strata. Continue
+OrthoMCL recovery and parameter scoring; broader uncertainty, duplication,
+controlled-resource and final publication requirements remain unfinished.
+
 ## Historical Fragment Source Pilot Verified (2026-09-23)
 
 Previous turn made progress freezing/submitting recovery validation 22105.
