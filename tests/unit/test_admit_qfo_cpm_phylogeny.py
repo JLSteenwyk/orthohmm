@@ -12,7 +12,7 @@ from tests.unit.test_admit_qfo_parameter_phylogeny import execution_fixture
 
 def accounting(state="COMPLETED", exit_code="0:0", node="bizon", cpus="32"):
     return ("JobID|JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS\n"
-            f"21972_0|23000|{state}|{exit_code}|01:00:00|{node}|{cpus}\n")
+            f"22066_0|23000|{state}|{exit_code}|01:00:00|{node}|{cpus}\n")
 
 
 @pytest.mark.parametrize("index", [-1, 2, True, "0", 0.0])
@@ -94,7 +94,7 @@ def test_admission_orchestration(tmp_path, monkeypatch, problem):
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(json.dumps(value))
         return record(path)
-    executor = tmp_path / "benchmarks/work/publication_qfo_cpm_phylogeny_v1"
+    executor = tmp_path / "benchmarks/work/publication_qfo_cpm_phylogeny_v2"
     producer = write(executor / "benchmark_tools/run_qfo_cpm_phylogeny.py", "source")
     helper = write(executor / "benchmark_tools/helper.py", "helper")
     monkeypatch.setattr(module, "EXECUTOR_SHA", "wrong" if problem == "source" else producer["sha256"])
