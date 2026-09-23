@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Annotation Collection Running; Postflight Checks Prepared (2026-09-23)
+
+Previous turn made progress implementing/preflighting all 563 annotation
+queries and submitting 22116. Scheduler now confirms **22116 RUNNING**;
+no retry or replacement was needed. A follow-up scheduler inspection found
+no explicit reservations and a MIXED/up node: the earlier generic pending
+reason was not evidence of node failure or an identified reservation.
+
+Added `verify_swiss_historical_fragments.py` to require terminal successful
+22116 accounting, frozen input/protocol/helper identities and complete
+per-accession accounting. It re-extracts staged sequence identities, checks
+raw annotation receipts, independently selects historical release intervals,
+recomputes structured annotation signals and freezes full-panel and
+baseline-release-only family bins with explicit missingness. It shares
+Bio.SwissProt with acquisition, so it is not independent parser validation;
+missing external-source failures are retained, not independently explained.
+No annotation completeness or causal claim is inferred from unflagged entries.
+
+All 32 focused source/collector/verifier tests passed, including overlapping
+or invalid release histories, later-version sensitivity, positive families
+with missing members, and incomplete family coverage. CLI import passes.
+Real full-panel verification remains pending terminal acquisition and will
+require inspection of raw failures and any discrepancies before score joins.
+
+All four parameter pair conversions 22039 completed 0:0 (last 6:53);
+22043_0 scoring is now running. CPM 22081_1 remains running. BLAST recovery
+remains queued. DGX remains deferred. Annotation/robustness results,
+OrthoMCL completion, broader uncertainty and duplication evidence, controlled
+timing and final manuscript/release requirements remain unfinished.
+
 ## Full Historical Annotation Collection Submitted (2026-09-23)
 
 Previous turn made progress verifying the historical annotation source and
