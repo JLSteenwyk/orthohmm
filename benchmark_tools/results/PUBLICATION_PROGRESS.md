@@ -1,5 +1,32 @@
 # Publication Progress
 
+## SwissTrees Identity Features Verified And Scored Descriptively (2026-09-23)
+
+Previous turn made progress with the frozen protocol, preparation code and
+successful 22102 alignment execution. Added an independent scalar verifier:
+all 18 families, 563 proteins and 10,765 pair identities reproduce, with
+194 checked evidence records and exact preserved 9/9 bin membership. Both
+median calculations equal 0.42912207396202784. Verification re-reads corrected
+FASTA/alignment residues and checks commands, statuses, manifests, hashes
+and completed scheduler accounting; it does not reuse the NumPy identity
+implementation. The shared Biopython parser limitation is explicit.
+
+Generated the prespecified descriptive all-method table from the admitted
+features and corrected counts using the existing macro-P/R harmonic-F1
+arithmetic. All 32 rows are retained, including unavailable OrthoMCL and
+empty bins. All 64 focused tests passed. The manuscript and claim checklist
+now link [results and reproduction](CORRECTED_SWISS_IDENTITY_RESULT_22102.md).
+Phylogenetic OrthoHMM F1 is 73.973% versus full OrthoFinder 76.705% in the
+lower-identity bin, and 91.914% versus 92.600% in the higher bin. All seven
+admitted methods score lower in the lower-identity families. No additional
+inference, equivalence, causal or calibrated-divergence claim is made.
+
+Latest initial accounting: 22034_3 running at 27:13, 22081_0 at 26:47,
+22102 completed 0:0, BLAST 22055 pending. No jobs restarted; DGX remains
+deferred and untouched. Independent fragment/duplication annotations,
+remaining uncertainty, OrthoMCL recovery, robustness outputs, controlled
+timing and final release/archive requirements remain incomplete.
+
 ## Corrected SwissTrees Identity Preparation Started (2026-09-23)
 
 Previous turn made progress by refreshing the manuscript and reproducible

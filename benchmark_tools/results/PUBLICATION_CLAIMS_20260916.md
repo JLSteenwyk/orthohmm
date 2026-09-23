@@ -208,7 +208,11 @@ not establish any comparative resource advantage.
   are now complete for the seven admitted methods; OrthoMCL and empty bins
   remain explicitly missing. These displays add no inferential claims.
   A separate [identity-stratum protocol](CORRECTED_SWISS_IDENTITY_PROTOCOL_20260923.md)
-  is frozen for input-only MAFFT preparation before joining to outcomes.
+  was frozen for input-only MAFFT preparation before joining to outcomes.
+  [Independent verification and descriptive results](CORRECTED_SWISS_IDENTITY_RESULT_22102.md)
+  are complete for all 18 families and seven admitted methods. All methods
+  have lower descriptive F1 in the lower-identity bin; no subgroup significance
+  or mechanism claim follows. OrthoMCL remains missing.
   Sequence identity is not calibrated evolutionary distance; independent
   fragmentation and duplication annotations remain gaps.
 

@@ -1003,6 +1003,23 @@ the corresponding values in the other eleven families were 68.408%,
 claims and do not diagnose fragmentation. Empty concentrated-composition
 and explicit-fragment bins remain missing, not zero. FastOMA's supplied
 tree and sequence-only OrthoFinder's group-clique semantics remain explicit.
+
+An additional [exploratory identity-stratum analysis](CORRECTED_SWISS_IDENTITY_RESULT_22102.md)
+froze the alignment and split protocol before joining the features to
+outcomes. Corrected reference sequences from all 18 families were aligned
+with MAFFT 7.525, with membership and ungapped residues checked against the
+inputs. A separate scalar calculation reproduced all family mean canonical
+pair identities. The median family identity, 0.429122, divides the panel
+into nine lower-identity and nine higher-identity families. All seven admitted
+methods have lower descriptive F1 in the lower-identity bin. Phylogenetic
+OrthoHMM scores 73.973% versus full OrthoFinder's 76.705% in that bin, and
+91.914% versus 92.600% in the higher-identity bin. High-sensitivity OrthoHMM
+scores 64.023% and 72.435%, respectively. The complete table retains missing
+OrthoMCL and empty bins. No new subgroup intervals or significance claims
+are made. Sequence identity is alignment-dependent, not calibrated
+evolutionary divergence; correlated differences in taxa, domains, size and
+composition prevent a causal interpretation.
+
 Old groups, trees, scores and confidence intervals cannot
 be relabeled as corrected results. The previously measured 53 legacy BLAST
 query failures also belong to the original run; failures in the corrected
