@@ -1,5 +1,50 @@
 # Publication Progress
 
+## CPM Replacement Scoring Chain Completed (2026-09-23)
+
+The preceding goal turn was progress: native admission and pair conversion
+were reconnected, tested, frozen, submitted, and pushed. This turn completed
+the replacement orchestration, not the scientific analysis itself.
+
+Scoring now requires conversion array **22072**, converter commit
+`0b3a16983cda04374b136b0e278f672282b3c6bc`, checkout
+`publication_qfo_cpm_pairs_v2`, and producer source SHA-256
+`9544e74ccbe0683fa75fdf093e9f1c7c8fcd8f5adbcf3ec68f8f41ee8b0f43fd`.
+**108 focused tests passed** across conversion, scoring, and admission.
+Submitted scoring array **22074**, frozen executor
+`publication_qfo_cpm_assessment_v2`, commit
+`471f82bb29633b994068c815d05974c8247a6a18`.
+
+Independent score admission now requires 22074, that executor revision,
+and scoring source SHA-256
+`7bb52ec6f74a776b2a650f62a91990fcf2c46fddd43c833ceb26f32e7618e1d1`.
+Its converter checkout was also updated to v2. **121 focused tests passed**
+including native QfO output validation and the shared parameter admission
+helpers. Submitted admission array **22076**, frozen executor
+`publication_qfo_cpm_score_admission_v2`, commit
+`2ca29f59a80367246e80355a662e5cc25ec4c5db`.
+
+Both new launchers unset PYTHONNOUSERSITE to retain the frozen full package
+inventory. Shell syntax and scoped whitespace checks pass. Scoring requests
+8 CPUs / 96 GiB / 24 hours; admission requests 2 CPUs / 64 GiB / 4 hours.
+Both have two arms, concurrency one, no requeue, and afterany plus aftercorr
+dependencies on the immediate upstream array. Endpoints, mapping, native
+pair semantics, scientific settings, and no-overwrite guards are unchanged.
+
+The complete replacement chain is **22059 -> 22060 -> 22062 -> 22064 ->
+22066 -> 22070 -> 22072 -> 22074 -> 22076**. Scheduler inspection confirmed
+these dependencies. All eight superseded downstream arrays (21962, 21967,
+21969, 21972, 21976, 21978, 21982, 21984) were verified PENDING with zero
+elapsed time and no start, then cancelled. Accounting records confirm all
+16 tasks CANCELLED by 1000 at 2026-09-23 15:02:32 with zero elapsed time.
+Original failed variant jobs, outputs, executors, and accounting are retained.
+
+Current state: CPM replay 22059_0, FastOMA scoring 22057, and parameter
+phylogeny 22034_1 are running; BLAST diagnostic 22055 is pending. Parameter
+arm 22034_0 completed successfully in 26:24 but awaits native admission.
+No new scores have been admitted here. Dedicated timing, BLAST recovery,
+downstream analyses, and publication completion requirements remain open.
+
 ## CPM Replacement Chain Through Pair Conversion (2026-09-23)
 
 The preceding Samwise follow-up was no progress toward installation: fresh
