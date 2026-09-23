@@ -10,7 +10,7 @@ from benchmark_tools.prepare_ob_candidate_neighborhood import record
 
 @pytest.mark.parametrize("problem", [None, "missing", "duplicate", "running", "exit", "node", "cpus", "index"])
 def test_scheduler(problem):
-    row = ["22062_0", "22063", "COMPLETED", "0:0", "00:10:00", "bizon", "2"]
+    row = ["22084_0", "22085", "COMPLETED", "0:0", "00:10:00", "bizon", "2"]
     if problem == "running":
         row[2] = "RUNNING"
     elif problem == "exit":
@@ -25,7 +25,7 @@ def test_scheduler(problem):
         with pytest.raises(ValueError):
             module.completed_task(text, True if problem == "index" else 0)
     else:
-        assert module.completed_task(text, 0)["JobIDRaw"] == "22063"
+        assert module.completed_task(text, 0)["JobIDRaw"] == "22085"
 
 
 @pytest.mark.parametrize("index", [0, 1])
@@ -63,7 +63,7 @@ def test_report(index, problem):
 @pytest.mark.parametrize("state", ["PENDING", "RUNNING", "FAILED"])
 def test_active_or_failed_job_precedes_file_access(tmp_path, monkeypatch, state):
     monkeypatch.setattr(module.subprocess, "check_output", lambda *a, **k:
-        f"JobID|JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS\n22062_0|22063|{state}|0:0|00:01:00|bizon|2\n")
+        f"JobID|JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS\n22084_0|22085|{state}|0:0|00:01:00|bizon|2\n")
     output = tmp_path / "admission.json"
     with pytest.raises(ValueError, match="completed"):
         module.admit(tmp_path, 0, output)
@@ -77,7 +77,7 @@ def test_orchestration(tmp_path, monkeypatch, problem):
         path.write_text(json.dumps(value))
         return record(path)
     root = tmp_path
-    executor = root / "benchmarks/work/publication_qfo_cpm_candidates_v3"
+    executor = root / "benchmarks/work/publication_qfo_cpm_candidates_v4"
     source = write(executor / "benchmark_tools/prepare_qfo_cpm_candidates.py", {})
     auditor = write(executor / "benchmark_tools/audit_accuracy_checkpoint.py", {})
     monkeypatch.setattr(module, "SOURCE_SHA", "wrong" if problem == "source" else source["sha256"])
@@ -116,7 +116,7 @@ def test_orchestration(tmp_path, monkeypatch, problem):
         "candidate_arm": arm, "content_audit": {} if problem == "content" else content}
     write(directory / "manifest.json", report)
     write(directory / "admission.log", {})
-    write(root / "benchmarks/work/qfo_cpm_candidates_22062_0.time.txt", {})
+    write(root / "benchmarks/work/qfo_cpm_candidates_22084_0.time.txt", {})
     monkeypatch.setattr(module, "corrected_evidence", lambda *a: (plan, plan_record, {}, record(names)))
     monkeypatch.setattr(module, "evidence", lambda *a: context)
     monkeypatch.setattr(module, "replay_evidence", lambda *a: replay)
@@ -136,7 +136,7 @@ def test_orchestration(tmp_path, monkeypatch, problem):
     monkeypatch.setattr(module, "validate_merge_reconstruction", reconstruct)
     def check_output(command, **kwargs):
         if command[0] == "sacct":
-            return "JobID|JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS\n22062_0|22063|COMPLETED|0:0|00:01:00|bizon|2\n"
+            return "JobID|JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS\n22084_0|22085|COMPLETED|0:0|00:01:00|bizon|2\n"
         return module.EXECUTOR
     monkeypatch.setattr(module.subprocess, "check_output", check_output)
     monkeypatch.setattr(module.subprocess, "run", lambda *a, **k: None)
