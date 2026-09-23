@@ -23,8 +23,13 @@ benchmarks/work/publication_swiss_identity_v1. Scheduler confirms RUNNING,
 Requeue=0 and Restarts=0. Output destination is
 benchmarks/results/corrected_swiss_identity_v1. The protocol SHA-256 is
 aaaeabebb2cb3ec5e95dc38f99b53f6814579e1bbdf7241da5e4391be6a35f55.
-All-family completion and independent feature admission remain next;
-no stratified outcome has yet been calculated from these alignments.
+Final accounting subsequently confirms **22102 COMPLETED 0:0 in 29 seconds**.
+The [preparation report](corrected_swiss_identity_prepared_22102.json)
+records all 18 families / 563 proteins validated, no failed families and
+no missing identity. The median family identity is 0.42912207396202784,
+with nine lower and nine higher families. Independent feature admission
+remains next; no stratified outcome has yet been calculated from these
+alignments. Alignment files remain outside Git.
 
 Live accounting also confirms 22034_3 running at 25:39 and 22081_0 at
 25:13; BLAST 22055 remains pending. No existing job was restarted. DGX
