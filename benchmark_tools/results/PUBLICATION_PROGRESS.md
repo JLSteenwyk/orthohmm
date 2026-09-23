@@ -1,5 +1,42 @@
 # Publication Progress
 
+## Real DGX Collector And Service Lifecycle Probe Passed (2026-09-23)
+
+Previous turn made progress by integrating process-stream replay. Added an
+opt-in scaling-collector mode to the bounded service lifecycle probe and a
+35-second sleep command measured under the full 85,800-second collector
+contract. This is a diagnostic, not an orthology inference or timing run.
+75 collector/guard/replay tests plus six new probe tests passed.
+
+Deployed committed source **40fd89e** to the fresh DGX directory
+scaling_collector_probe_40fd89e. Held SSH session submitted **22099** with
+20 CPUs, 96 GiB, exclusive allocation, a three-minute scheduler limit and
+no requeue. Restoration was rejected while held, then the job was released.
+Local scheduler accounting confirms COMPLETED 0:0, elapsed 37 seconds on
+spark-7ff0. Native sleep wall time was **35.019105946 seconds**.
+
+Three process snapshots bracketed the native command and included the
+30-second sample. On-host full measurement replay succeeded. Service
+suppression was checked throughout the held session; prior persistent unit
+configuration/start behavior was restored only after scheduler terminal
+verification. This does not repair or establish Samwise application health.
+
+Retained receipts: [scaling_collector_probe_22099.tar.gz](scaling_collector_probe_22099.tar.gz),
+SHA-256 `35943b69c4ab6ab81f2ceac2f70574e3e0bce2b456f886741aa1ccc2638e119e`.
+All **543** deployed Python source hashes in the receipt match the local
+committed sources. Raw points, process inventory, service/controller
+observations, native log and replay are included in this small archive.
+
+Environmental status remains **inconclusive**: the first process interval
+has two unmatched kernel-worker identities (kworker/7:0-mm_percpu_wq and
+kworker/u80:0); the second reports no large persistent competitor.
+Maximum observed persistent foreign CPU was 0.008332435578718246 cores;
+zero snapshot errors. No process was silently excluded and no quiet-host
+or timing admission was inferred. The production policy still needs to
+distinguish expected host activity from prohibited workloads, account for
+device contention, and integrate the frozen recipe and long-run lifecycle.
+The 27 inference timing runs have not been launched.
+
 ## Host Process Evidence Replay Integrated (2026-09-23)
 
 Previous turn made progress by adding periodic process observations to the
