@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Recovery Query-Disposition Crosscheck Prepared (2026-09-23)
+
+The preceding user-response turn only acknowledged DGX deferral, so it was
+no progress on the publication objective. Re-read the full objective and
+revalidated live work: all four 22043 scoring tasks are now COMPLETED 0:0;
+22088_0 remains running, and recovery 22103_3 is resource-pending. No DGX
+contact or modification occurred.
+
+Added `check_blast_recovery_dispositions.py`, a component for the still-pending
+independent final candidate admission. It requires an exact retained/replayed
+query partition and independently reconciles full-table missing-query and
+failure identities, outgoing-hit flags, HSP totals and cutoff counts against
+batch inventories. Failed queries and unexplained no-hit queries remain
+distinct; incoming subject hits do not imply successful query searches.
+
+Seventy focused tests pass, including integration with the actual table audit,
+diagnostic parser and batch block/coverage functions. This component does not
+admit a search, verify scheduler/database provenance, or substitute for the
+production full-table audit. No real merge or downstream release occurred.
+The final admission wrapper and completed replay panel remain required.
+
+
 ## Guarded BLAST Recovery Merge Driver Prepared (2026-09-23)
 
 Previous turn retained the successful prefix recheck and conditional reuse
