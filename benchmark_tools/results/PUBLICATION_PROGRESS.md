@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Full Prefix Byte Recheck Running (2026-09-23)
+
+Previous turn implemented the tested merge component and corrected the
+completion matrix (c8287ee, a48d214). Re-read the goal and checked accounting:
+BLAST 22103_0/1/2 and their validators 22105_0/1/2 completed successfully.
+The 15,000 replay queries contain 11,369 with hits, 44 logged failures and
+3,587 no-hit queries without a logged failure. No logged failed query has
+outgoing HSPs. These are three admitted batches, not the full recovery panel.
+Low-CPM phylogeny 22088_0 is now running, as is parameter score 22043_3.
+
+Added the [exhaustive prefix byte recheck](QFO_BLAST_PREFIX_RECHECK_20260923.md)
+with 30 passing scan/merge tests and valid shell syntax. Froze executor
+`benchmarks/work/blast_prefix_recheck_v1_20260923` at
+`d61769462e67151482f2e817dc9926b26cbb33b1`, committed and pushed before launch.
+Submitted **22148**; scheduler confirms RUNNING on bizon, 2 CPUs, 8 GiB,
+4-hour limit, Requeue=0 and Restarts=0. Output will be the new job-specific
+`benchmarks/work/qfo_blast_prefix_recheck_22148.json`.
+
+The scanner rereads all indexed ranges and the entire interrupted file
+without modifying it. Even success leaves prefix reuse/search admission
+false until the combined source/diagnostic/partition review. No real merge,
+scientific retry, held-chain release or DGX action occurred. Publication
+completion remains unproven.
+
 ## Streaming BLAST Merge Component Tested (2026-09-23)
 
 Previous turn added the checked duplication figure and manuscript preview
