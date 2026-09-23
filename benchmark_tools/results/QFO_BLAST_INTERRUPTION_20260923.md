@@ -217,3 +217,36 @@ passed. These are implementation tests, not an executed comparison of real
 replay outputs; no replay compatibility result is yet available. Failed or
 interrupted native stages require separate investigation, not forcing this
 success-only command to admit them. The full recovery plan remains separate.
+
+## Diagnostic Passed And Checkpointed Replay Prepared
+
+Job 22055 completed 0:0 in eight seconds on bizon with 180 allocated CPUs.
+All six native commands finished successfully. The full post-run comparison
+also completed, including before/after hash checks of the 33 GB interrupted
+file. [Comparison](qfo_blast_replay_comparison_22055.json) SHA-256:
+9d49960fd22aaa1b538dcae728b06d0a67802d8d3d1f4296b31c459a98f702e1.
+The [native execution record](qfo_blast_replay_execution_22055.json) is retained.
+
+Combined and isolated query HSP multisets and diagnostics agree for all five
+queries. The first query, selenocysteine-containing query and boundary
+predecessor exactly reproduce the original complete 20, 20 and 126 rows.
+The failed query reproduces zero hits and identical diagnostics despite
+native exit zero. The final query has 73 replay rows versus 47 observed
+complete old rows, which form a subset. This confirms the need to replace
+its whole block, not just the damaged last line.
+
+Froze the [checkpointed recovery protocol](QFO_BLAST_RECOVERY_PROTOCOL_20260923.md)
+and preparer at 5c27cd7 before preparing recovery batches. The
+[batch manifest](qfo_blast_recovery_batches_20260923.json), SHA-256
+5e59e7deedb71feb6453057f0b379bda0e06a3556651b13eb7275b26155f45e0,
+records 19 batches of 5,000 and one of 3,913 exact-byte queries. A separate
+post-generation check validated each batch count, first/last ID and hash,
+98,913 unique query IDs, and concatenated-byte equality to the frozen replay
+FASTA. Inputs remain outside Git in
+benchmarks/work/qfo_blast_recovery_batches_20260923. Ninety focused tests pass.
+
+No recovery search has yet started. The tested durable executor and frozen
+scheduler submission remain next. Diagnostic agreement supports proceeding
+with replay preparation, but search admission and prefix reuse remain false.
+The unchanged full database must be searched for every batch. All original
+partial files, failed attempts and held downstream jobs remain preserved.

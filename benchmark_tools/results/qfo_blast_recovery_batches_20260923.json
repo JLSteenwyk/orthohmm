@@ -1,0 +1,302 @@
+{
+  "batch_size": 5000,
+  "batches": [
+    {
+      "first_query": "sp|P66293|RL361_NEIMB",
+      "index": 0,
+      "input": {
+        "bytes": 1352957,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_00.fa",
+        "sha256": "c0e6f29bf524491c8326b4fa3c0954ed87e7847e1ba7b6121dc376a28d27e0e3"
+      },
+      "last_query": "tr|F1N1R3|F1N1R3_BOVIN",
+      "queries": 5000,
+      "replay_ordinal_end_exclusive": 5000,
+      "replay_ordinal_start": 0
+    },
+    {
+      "first_query": "tr|F1N1R4|F1N1R4_BOVIN",
+      "index": 1,
+      "input": {
+        "bytes": 2488177,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_01.fa",
+        "sha256": "31c9295c35db5bfa2a99c4952851ee44a1275c35d1a951327209161350db7c9f"
+      },
+      "last_query": "tr|Q1L1H6|Q1L1H6_BOVIN",
+      "queries": 5000,
+      "replay_ordinal_end_exclusive": 10000,
+      "replay_ordinal_start": 5000
+    },
+    {
+      "first_query": "tr|Q1LZ70|Q1LZ70_BOVIN",
+      "index": 2,
+      "input": {
+        "bytes": 2174025,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_02.fa",
+        "sha256": "634d2f26a798cfbc13ccb1c68d990c01a9934455d3c785122b549784ef85d20b"
+      },
+      "last_query": "tr|T1EGY1|T1EGY1_HELRO",
+      "queries": 5000,
+      "replay_ordinal_end_exclusive": 15000,
+      "replay_ordinal_start": 10000
+    },
+    {
+      "first_query": "tr|T1EGY2|T1EGY2_HELRO",
+      "index": 3,
+      "input": {
+        "bytes": 1553937,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_03.fa",
+        "sha256": "268891c4efa3ab5ce31301c559a21ed3f5cb9c3098fd034338e4111af0976440"
+      },
+      "last_query": "tr|T1EWB6|T1EWB6_HELRO",
+      "queries": 5000,
+      "replay_ordinal_end_exclusive": 20000,
+      "replay_ordinal_start": 15000
+    },
+    {
+      "first_query": "tr|T1EWB7|T1EWB7_HELRO",
+      "index": 4,
+      "input": {
+        "bytes": 1956595,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_04.fa",
+        "sha256": "07a8bd79efde0393c8633f9745622a886b1d5000a098abb9682906d7b2d8a381"
+      },
+      "last_query": "tr|T1FAM6|T1FAM6_HELRO",
+      "queries": 5000,
+      "replay_ordinal_end_exclusive": 25000,
+      "replay_ordinal_start": 20000
+    },
+    {
+      "first_query": "tr|T1FAM7|T1FAM7_HELRO",
+      "index": 5,
+      "input": {
+        "bytes": 1961807,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_05.fa",
+        "sha256": "440b17d078d66ef58e64d34706997938d2b6e2fbf3e01a3aa13c8413167c28cf"
+      },
+      "last_query": "tr|T1FPZ8|T1FPZ8_HELRO",
+      "queries": 5000,
+      "replay_ordinal_end_exclusive": 30000,
+      "replay_ordinal_start": 25000
+    },
+    {
+      "first_query": "tr|T1FPZ9|T1FPZ9_HELRO",
+      "index": 6,
+      "input": {
+        "bytes": 2574759,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_06.fa",
+        "sha256": "3224911677753d02b7afa024d04980a8e137cf7a2bb5e056b030b4992ba6d6dd"
+      },
+      "last_query": "tr|T1G4B8|T1G4B8_HELRO",
+      "queries": 5000,
+      "replay_ordinal_end_exclusive": 35000,
+      "replay_ordinal_start": 30000
+    },
+    {
+      "first_query": "tr|T1G4B9|T1G4B9_HELRO",
+      "index": 7,
+      "input": {
+        "bytes": 2302188,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_07.fa",
+        "sha256": "38b2fe159ac8d915fb8d44934f017b440302c719fdff7704e139f1a636392cee"
+      },
+      "last_query": "tr|W5M5H8|W5M5H8_LEPOC",
+      "queries": 5000,
+      "replay_ordinal_end_exclusive": 40000,
+      "replay_ordinal_start": 35000
+    },
+    {
+      "first_query": "tr|W5M5H9|W5M5H9_LEPOC",
+      "index": 8,
+      "input": {
+        "bytes": 3122936,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_08.fa",
+        "sha256": "9d67904ee71f600c847ea153440287c377b66819ed1541c747cde2a1ab450790"
+      },
+      "last_query": "tr|W5MN66|W5MN66_LEPOC",
+      "queries": 5000,
+      "replay_ordinal_end_exclusive": 45000,
+      "replay_ordinal_start": 40000
+    },
+    {
+      "first_query": "tr|W5MN67|W5MN67_LEPOC",
+      "index": 9,
+      "input": {
+        "bytes": 3164153,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_09.fa",
+        "sha256": "f1b0219a214a0699287865fd8d568bcd023001e23ea76aa406ed66d89f0c58e8"
+      },
+      "last_query": "tr|W5N693|W5N693_LEPOC",
+      "queries": 5000,
+      "replay_ordinal_end_exclusive": 50000,
+      "replay_ordinal_start": 45000
+    },
+    {
+      "first_query": "tr|W5N694|W5N694_LEPOC",
+      "index": 10,
+      "input": {
+        "bytes": 2956974,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_10.fa",
+        "sha256": "b5c6c664316f1c83e4f1444e70623b550a95c175a1cbeb90d5d9b29eede05eec"
+      },
+      "last_query": "tr|W5NNM0|W5NNM0_LEPOC",
+      "queries": 5000,
+      "replay_ordinal_end_exclusive": 55000,
+      "replay_ordinal_start": 50000
+    },
+    {
+      "first_query": "tr|W5NNM1|W5NNM1_LEPOC",
+      "index": 11,
+      "input": {
+        "bytes": 1345524,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_11.fa",
+        "sha256": "8166070db1dcaf154fda5227860ddcaa387810c0334580303aab167f104a6c4b"
+      },
+      "last_query": "tr|A0A0P0VEA7|A0A0P0VEA7_ORYSJ",
+      "queries": 5000,
+      "replay_ordinal_end_exclusive": 60000,
+      "replay_ordinal_start": 55000
+    },
+    {
+      "first_query": "tr|A0A0P0VEA8|A0A0P0VEA8_ORYSJ",
+      "index": 12,
+      "input": {
+        "bytes": 1346705,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_12.fa",
+        "sha256": "2a96ae0f9bf1550c0cd4a0c8cb4e42d661425fca8cf4de31b4672d307217791d"
+      },
+      "last_query": "tr|A0A0P0WH84|A0A0P0WH84_ORYSJ",
+      "queries": 5000,
+      "replay_ordinal_end_exclusive": 65000,
+      "replay_ordinal_start": 60000
+    },
+    {
+      "first_query": "tr|A0A0P0WH87|A0A0P0WH87_ORYSJ",
+      "index": 13,
+      "input": {
+        "bytes": 1290892,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_13.fa",
+        "sha256": "c666e7ef1d91c2a5a9ac00c962594c1beccdf4d33055bdc6aa75aeb2bab75ded"
+      },
+      "last_query": "tr|A0A0P0XG73|A0A0P0XG73_ORYSJ",
+      "queries": 5000,
+      "replay_ordinal_end_exclusive": 70000,
+      "replay_ordinal_start": 65000
+    },
+    {
+      "first_query": "tr|A0A0P0XG78|A0A0P0XG78_ORYSJ",
+      "index": 14,
+      "input": {
+        "bytes": 1351937,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_14.fa",
+        "sha256": "6374cf684f4ea52029b7e064e257ca0b2b13d8a7c2645dc9928f863dd84a43b4"
+      },
+      "last_query": "tr|A2ZSQ9|A2ZSQ9_ORYSJ",
+      "queries": 5000,
+      "replay_ordinal_end_exclusive": 75000,
+      "replay_ordinal_start": 70000
+    },
+    {
+      "first_query": "tr|A2ZT20|A2ZT20_ORYSJ",
+      "index": 15,
+      "input": {
+        "bytes": 1653903,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_15.fa",
+        "sha256": "66935306833bee116fd21c491ab09d6c6f104f168b7afa0adfa0441f0a0f2e69"
+      },
+      "last_query": "tr|Q0J0G8|Q0J0G8_ORYSJ",
+      "queries": 5000,
+      "replay_ordinal_end_exclusive": 80000,
+      "replay_ordinal_start": 75000
+    },
+    {
+      "first_query": "tr|Q0J0H3|Q0J0H3_ORYSJ",
+      "index": 16,
+      "input": {
+        "bytes": 2108729,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_16.fa",
+        "sha256": "51046f66eb58483cb0151ebf655059917e7ecc39fbf8cd3be9bebe336bc78155"
+      },
+      "last_query": "tr|Q53PY3|Q53PY3_ORYSJ",
+      "queries": 5000,
+      "replay_ordinal_end_exclusive": 85000,
+      "replay_ordinal_start": 80000
+    },
+    {
+      "first_query": "tr|Q53PY7|Q53PY7_ORYSJ",
+      "index": 17,
+      "input": {
+        "bytes": 2105941,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_17.fa",
+        "sha256": "2ae1439962eb409f0bd7e14349b0af9b67feaceeb344adce3ad5859b190fd746"
+      },
+      "last_query": "tr|Q6F382|Q6F382_ORYSJ",
+      "queries": 5000,
+      "replay_ordinal_end_exclusive": 90000,
+      "replay_ordinal_start": 85000
+    },
+    {
+      "first_query": "tr|Q6F383|Q6F383_ORYSJ",
+      "index": 18,
+      "input": {
+        "bytes": 2101360,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_18.fa",
+        "sha256": "b971e2474976d7e74f116f23b8c416748fd40ad35c055a7abf4ffc8346c74eae"
+      },
+      "last_query": "sp|Q7XLR1|PIP26_ORYSJ",
+      "queries": 5000,
+      "replay_ordinal_end_exclusive": 95000,
+      "replay_ordinal_start": 90000
+    },
+    {
+      "first_query": "tr|Q7XLW2|Q7XLW2_ORYSJ",
+      "index": 19,
+      "input": {
+        "bytes": 1621471,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_19.fa",
+        "sha256": "062ef43534c8af3626df198c908a8ec78475d4af1e74d97853a913ab71c93305"
+      },
+      "last_query": "sp|X5HYT8|SMOS1_ORYSJ",
+      "queries": 3913,
+      "replay_ordinal_end_exclusive": 98913,
+      "replay_ordinal_start": 95000
+    }
+  ],
+  "inputs": [
+    {
+      "bytes": 2358,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_blast_recovery_partition_20260923.json",
+      "sha256": "c37381bef1cdb406849f62accde679480a4abe76193cc0fdc65a90e16c8d6a34"
+    },
+    {
+      "bytes": 12378,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_blast_replay_comparison_22055.json",
+      "sha256": "9d49960fd22aaa1b538dcae728b06d0a67802d8d3d1f4296b31c459a98f702e1"
+    },
+    {
+      "bytes": 4269,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/QFO_BLAST_RECOVERY_PROTOCOL_20260923.md",
+      "sha256": "4f120db4cb0733fc8d128461465bab877d91d31f668c03b45a14a05be3bb9410"
+    },
+    {
+      "bytes": 40534970,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_partition_20260923/replay.fa",
+      "sha256": "7215175d4c69c7abe1a2fd51dfcfb2d270d838d6fcad16e30f6e9387a95fc42a"
+    },
+    {
+      "bytes": 3653,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_blast_recovery_batches.py",
+      "sha256": "366ce51689a44a845f172bf4b2a7f2e338e3e711fcebe98e51a7f5c2d1d2cbd0"
+    }
+  ],
+  "limitations": [
+    "Query inputs only; no database reformatted, search launched or prefix admitted.",
+    "Every batch must search the unchanged complete database."
+  ],
+  "publication_ready": false,
+  "replay_executed": false,
+  "reuse_authorized": false,
+  "search_admitted": false,
+  "status": "blast_recovery_batches_prepared_not_executed",
+  "total_queries": 98913
+}

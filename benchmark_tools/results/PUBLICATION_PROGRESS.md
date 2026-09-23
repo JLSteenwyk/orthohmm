@@ -1,5 +1,34 @@
 # Publication Progress
 
+## BLAST Diagnostic Passed; Recovery Batches Prepared (2026-09-23)
+
+Previous turn made progress repairing uncertainty source bindings and
+reproducing the control-only analysis. Now **22055 completed 0:0 in eight
+seconds**. Ran the real postflight comparison: full preserved partial-file
+hash checks pass, all five combined/single HSP multisets and diagnostics
+agree, and three complete original blocks match exactly. The interrupted
+query has 73 replay rows versus 47 retained rows; the old rows are a subset,
+not a complete result. Known query failure reproduces despite native exit
+zero. [Full evidence](QFO_BLAST_INTERRUPTION_20260923.md) is retained.
+
+Committed/pushed the diagnostic, frozen checkpointed recovery protocol and
+batch preparer at 5c27cd7. Prepared 20 exact-byte query batches covering all
+98,913 unresolved queries: 19 x 5,000 plus 3,913. Independent re-read checked
+every batch hash/count/boundary, unique complete query coverage and exact
+concatenated-byte equality to the frozen replay FASTA. All 90 focused tests
+passed. Large query files remain outside Git; the small manifest is retained.
+
+Recovery search execution is not yet launched. Next implement/test/freeze
+the durable per-batch executor, then submit the prescribed serial array
+against the unchanged full database. Prefix reuse and whole-search admission
+remain separate gates; original partial bytes and held 21746 stay unchanged.
+
+CPM 22081_0 completed 0:0 in 52:59; 22081_1 is running. Parameter native
+validation 22035_0..2 completed 0:0 and task 3 is running. Existing downstream
+chains remain intact, with no restart. DGX remains deferred and untouched.
+Robustness results, final OrthoMCL scoring, annotation/uncertainty gaps,
+controlled timing and publication release/archive requirements stay open.
+
 ## Parameter Inference Complete; Uncertainty Bindings Repaired (2026-09-23)
 
 Previous turn made progress implementing BLAST diagnostic comparison checks.
