@@ -17,9 +17,9 @@ from benchmark_tools.run_qfo_cpm_variant import ARMS
 from benchmark_tools.run_qfo_recovered_assessment import command_for, environment_records
 from benchmark_tools.run_simulation_methods import read_frozen
 
-CONVERSION_JOB = "21978"
-CONVERTER_COMMIT = "ba4005be49a050c538306f2d7e64a0c4ac387eeb"
-CONVERTER_SHA = "53124b59b10ee111151d2b4332f643d69306c9c2915736dbcca4a848b6e3a197"
+CONVERSION_JOB = "22072"
+CONVERTER_COMMIT = "0b3a16983cda04374b136b0e278f672282b3c6bc"
+CONVERTER_SHA = "9544e74ccbe0683fa75fdf093e9f1c7c8fcd8f5adbcf3ec68f8f41ee8b0f43fd"
 
 
 def completed_conversion(accounting, index):
@@ -62,7 +62,7 @@ def prepare(root, index):
     pair_record = record(path)
     stage = read_frozen(path, pair_record["sha256"])
     validate_stage(stage, index, scheduler)
-    converter = root / "benchmarks/work/publication_qfo_cpm_pairs_v1"
+    converter = root / "benchmarks/work/publication_qfo_cpm_pairs_v2"
     if subprocess.check_output(["git", "-C", str(converter), "rev-parse", "HEAD"], text=True).strip() != CONVERTER_COMMIT:
         raise ValueError("Frozen CPM converter revision changed")
     subprocess.run(["git", "-C", str(converter), "diff", "--exit-code", "HEAD", "--",

@@ -50,15 +50,15 @@ def test_invalid_index(index):
 @pytest.mark.parametrize("state", ["RUNNING", "FAILED", "PENDING"])
 def test_terminal_gate_precedes_artifact_read(tmp_path, monkeypatch, state):
     monkeypatch.setattr(module.subprocess, "check_output", lambda *a, **k:
-        f"JobID|JobIDRaw|State|ExitCode|NodeList|AllocCPUS\n21978_0|23000|{state}|0:0|bizon|2\n")
+        f"JobID|JobIDRaw|State|ExitCode|NodeList|AllocCPUS\n22072_0|23000|{state}|0:0|bizon|2\n")
     monkeypatch.setattr(module, "record", lambda *a: pytest.fail("Read unfinished conversion"))
     with pytest.raises(ValueError, match="terminal"):
         module.prepare(tmp_path, 0)
 
 
-@pytest.mark.parametrize("row", ["21978_0|23000|COMPLETED|1:0|bizon|2",
-    "21978_0|23000|COMPLETED|0:0|bizon|8", "21978_0|23000|COMPLETED|0:0|other|2",
-    "21978_0.batch|23000|COMPLETED|0:0|bizon|2", "21978_1|23000|COMPLETED|0:0|bizon|2"])
+@pytest.mark.parametrize("row", ["22072_0|23000|COMPLETED|1:0|bizon|2",
+    "22072_0|23000|COMPLETED|0:0|bizon|8", "22072_0|23000|COMPLETED|0:0|other|2",
+    "22072_0.batch|23000|COMPLETED|0:0|bizon|2", "22072_1|23000|COMPLETED|0:0|bizon|2"])
 def test_wrong_scheduler_identity(row):
     with pytest.raises(ValueError, match="terminal"):
         module.completed_conversion("JobID|JobIDRaw|State|ExitCode|NodeList|AllocCPUS\n" + row + "\n", 0)
@@ -67,7 +67,7 @@ def test_wrong_scheduler_identity(row):
 @pytest.mark.parametrize("index", range(2))
 def test_successful_raw_job_binding(index):
     row = module.completed_conversion(
-        f"JobID|JobIDRaw|State|ExitCode|NodeList|AllocCPUS\n21978_{index}|23000|COMPLETED|0:0|bizon|2\n", index)
+        f"JobID|JobIDRaw|State|ExitCode|NodeList|AllocCPUS\n22072_{index}|23000|COMPLETED|0:0|bizon|2\n", index)
     assert row["JobIDRaw"] == "23000"
 
 
@@ -128,7 +128,7 @@ def test_prepare_binds_real_records_and_fresh_namespaces(tmp_path, monkeypatch, 
         path.write_text(content)
         return record(path)
 
-    source = write("benchmarks/work/publication_qfo_cpm_pairs_v1/benchmark_tools/prepare_qfo_cpm_pairs.py", "# converter\n")
+    source = write("benchmarks/work/publication_qfo_cpm_pairs_v2/benchmark_tools/prepare_qfo_cpm_pairs.py", "# converter\n")
     monkeypatch.setattr(module, "CONVERTER_SHA", source["sha256"])
     mapping = write("reference/mapping.json.gz", "mapping")
     pairs = write("pairs.tsv", "a\tb\n")
@@ -168,7 +168,7 @@ def test_prepare_binds_real_records_and_fresh_namespaces(tmp_path, monkeypatch, 
     monkeypatch.setattr(module, "environment_records", lambda *a: [])
     monkeypatch.setattr(module.subprocess, "run", lambda *a, **k: SimpleNamespace(returncode=0))
     monkeypatch.setattr(module.subprocess, "check_output", lambda argv, **k:
-        "JobID|JobIDRaw|State|ExitCode|NodeList|AllocCPUS\n21978_0|23000|COMPLETED|0:0|bizon|2\n"
+        "JobID|JobIDRaw|State|ExitCode|NodeList|AllocCPUS\n22072_0|23000|COMPLETED|0:0|bizon|2\n"
         if argv[0] == "sacct" else module.CONVERTER_COMMIT)
 
     def command(root, converted, environment, work, results):
