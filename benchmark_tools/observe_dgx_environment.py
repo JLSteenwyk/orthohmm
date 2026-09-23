@@ -22,6 +22,29 @@ COMMANDS = {
 STATIC_COMMANDS = {"cpu": ["lscpu", "-J"], "kernel": ["uname", "-a"]}
 
 
+class Recorder:
+    """Stream session evidence without blocking the native one-second collector."""
+
+    def __init__(self, directory):
+        self.directory = Path(directory)
+        self.index = 0
+        self.next_due = 0.
+
+    def observe(self, stage, static=False):
+        self.directory.mkdir(exist_ok=True)
+        result = collect(static)
+        result.update(session_stage=stage, index=self.index)
+        with (self.directory / f"snapshot_{self.index:06d}.json").open("x") as handle:
+            json.dump(result, handle, indent=2, sort_keys=True)
+            handle.write("\n")
+        self.index += 1
+        self.next_due = time.monotonic() + 30.
+
+    def periodic(self):
+        if time.monotonic() >= self.next_due:
+            self.observe("job_wait")
+
+
 def collect(static=False):
     if os.uname().nodename != "spark-7ff0":
         raise ValueError("Require the designated DGX host")

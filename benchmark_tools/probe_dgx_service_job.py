@@ -12,11 +12,14 @@ import time
 
 from benchmark_tools.dgx_service_guard import ServiceGuard
 from benchmark_tools.probe_dgx_step_separation import save
+from benchmark_tools.observe_dgx_environment import Recorder
 
 
-def wait_restore(guard, seconds=90):
+def wait_restore(guard, seconds=90, observe=None):
     deadline = time.monotonic() + seconds
     while True:
+        if observe is not None:
+            observe()
         guard.check()
         try:
             guard.restore()
@@ -31,11 +34,12 @@ def wait_restore(guard, seconds=90):
 
 def run(output, scaling_collector=False):
     guard = ServiceGuard(output)
+    environment = Recorder(output / "environment") if scaling_collector else None
     result = {"status": "prelaunch", "benchmark_submitted": False,
               "scientific_timings_admitted": False}
     paths = [Path(__file__).resolve().with_name(name) for name in (
         "probe_dgx_service_job.py", "dgx_service_guard.py",
-        "probe_dgx_step_separation.py", "probe_host_counters.py")]
+        "probe_dgx_step_separation.py", "probe_host_counters.py", "observe_dgx_environment.py")]
     if scaling_collector:
         paths = sorted(Path(__file__).resolve().parent.glob("*.py"))
     result["sources"] = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}
@@ -46,6 +50,8 @@ def run(output, scaling_collector=False):
     previous = {sig: signal.signal(sig, interrupt) for sig in (signal.SIGHUP, signal.SIGINT, signal.SIGTERM)}
     try:
         guard.begin()
+        if environment is not None:
+            environment.observe("before_submission", static=True)
         if guard.command(["squeue", "-h", "-p", "spark", "-o", "%i %T"]).strip():
             raise ValueError("Require empty spark queue before diagnostic submission")
         guard.before_submission()
@@ -74,7 +80,10 @@ def run(output, scaling_collector=False):
         else:
             raise RuntimeError("Held-job restoration unexpectedly succeeded")
         guard.command(["scontrol", "release", str(job)])
-        wait_restore(guard, seconds=240 if scaling_collector else 90)
+        wait_restore(guard, seconds=240 if scaling_collector else 90,
+                     observe=environment.periodic if environment is not None else None)
+        if environment is not None:
+            environment.observe("after_terminal_restoration", static=True)
         if scaling_collector:
             receipt = json.loads((output / "collector" / "probe.json").read_text())
             if receipt["status"] != "collector_probe_completed" or receipt["job_id"] != job:
