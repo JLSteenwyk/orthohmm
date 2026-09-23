@@ -1,5 +1,30 @@
 # Publication Progress
 
+## DGX Service Guard Real-Host Prelaunch Validation (2026-09-23)
+
+Previous turn was progress: implemented and tested the service lifetime
+guard. This turn deployed that exact code plus a bounded no-submission probe
+to the DGX after verifying the spark queue empty. Ran normal completion and
+deliberate SIGTERM cases in separate held SSH sessions. Both successfully
+masked the approved service and restored its prior start behavior. No other
+service, benchmark job, scientific setting or timing measurement changed.
+
+Normal and interrupted runs retain 11 and 10 successful command receipts
+respectively, with three and two explicit masked/inactive/PID0 samples.
+Independent local inspection checked command exits, intermediate/final states,
+and all copied/current source hashes. The guard's **34 unit tests** passed
+again before deployment. Follow-up host inspection still shows the original
+application failure (ExecMainStatus 1, auto-restart); restoration is not repair.
+
+Receipt archive SHA-256:
+`dbd268367878a2b4ee29f55426d10e8e3a4023fc43eb9cd330292471fa487a1f`.
+See [real-host evidence and limitations](DGX_SERVICE_GUARD_20260923.md).
+Bound-job terminal gating, actual submission/session integration, whole-run
+environment observations and frozen timing recipe remain to be validated.
+The 27 dedicated timing runs remain unlaunched. Latest scheduler inspection
+confirmed parameter 22034_1, FastOMA scoring 22057 and CPM replay 22059_0
+running; BLAST diagnostic 22055 still pending. No new score was admitted.
+
 ## DGX Service Lifetime Guard Implemented (2026-09-23)
 
 Previous turn was progress: the full replacement CPM chain was tested,
