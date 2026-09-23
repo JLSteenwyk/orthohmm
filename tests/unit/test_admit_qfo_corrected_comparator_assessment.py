@@ -37,3 +37,8 @@ def test_reject_preflight_status():
     args[1]["status"] = "prepared_unrun"
     with pytest.raises(ValueError, match="preflight"):
         validate_completion(*args)
+def test_fastoma_replacement_executor_is_explicitly_pinned(tmp_path):
+    from benchmark_tools.admit_qfo_corrected_comparator_assessment import executor_identity
+    path, commit = executor_identity(tmp_path, "fastoma")
+    assert path == tmp_path / "benchmarks/work/publication_qfo_corrected_fastoma_assessment_v2"
+    assert commit == "0cc0a96c44e377f4e87a1e579ce12012d3478e4e"

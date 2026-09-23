@@ -20,7 +20,7 @@ from benchmark_tools.verify_ygob_validation import require_completed_job
 
 EXECUTOR = "74afad5376b7ee11fdabfba386851fd8d3c02857"
 OF_EXECUTOR = "5c34f8baad47a9895659b43696e6887aa29dbaaf"
-FASTOMA_EXECUTOR = "9258bcfd3f90d63ec7f2cfb02122cd20bd7e1214"
+FASTOMA_EXECUTOR = "0cc0a96c44e377f4e87a1e579ce12012d3478e4e"
 ORTHOMCL_EXECUTOR = "5efb206b23a44f85386d8cb7e90f3e815a3d162a"
 
 
@@ -30,7 +30,7 @@ def executor_identity(root, method):
     if method == "orthomcl":
         return root / "benchmarks/work/publication_qfo_corrected_orthomcl_assessment_v1", ORTHOMCL_EXECUTOR
     if method == "fastoma":
-        return root / "benchmarks/work/publication_qfo_corrected_fastoma_assessment_v1", FASTOMA_EXECUTOR
+        return root / "benchmarks/work/publication_qfo_corrected_fastoma_assessment_v2", FASTOMA_EXECUTOR
     if method in OF_SEMANTICS:
         return root / "benchmarks/work/publication_qfo_corrected_of_assessment_v1", OF_EXECUTOR
     return root / "benchmarks/work/publication_qfo_corrected_assessment_v1", EXECUTOR
