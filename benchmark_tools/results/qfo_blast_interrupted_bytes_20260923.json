@@ -1,0 +1,22 @@
+{
+  "content": {
+    "bytes": 33141805056,
+    "ends_with_newline": false,
+    "first_nul_offset": 33141804101,
+    "last_newline_offset": 33141804089,
+    "last_nul_offset": 33141805055,
+    "newline_count": 366012663,
+    "nul_bytes": 955,
+    "nuls_form_single_trailing_run": true,
+    "sha256": "41063f82a09dd6b8ef4b4bbec783d0643e09f44279011dfb2687a1d43fe76f6d"
+  },
+  "input": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_orthomcl_v1/work/all.blast.partial",
+  "limitations": [
+    "No BLAST row, query completion, or ordering validation.",
+    "No-hit queries cannot be recovered from hit rows alone.",
+    "NUL-free bytes do not establish valid or complete results."
+  ],
+  "reuse_authorized": false,
+  "search_admitted": false,
+  "status": "interrupted_blast_byte_inventory_only"
+}

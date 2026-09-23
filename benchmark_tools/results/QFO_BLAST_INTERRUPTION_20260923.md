@@ -62,3 +62,33 @@ held until a reviewed recovery replaces or reconnects that chain.
 
 The scientific configuration and endpoints are unchanged. No final
 OrthoMCL score or comparable timing is claimed from this interrupted run.
+
+## Read-only Byte Audit
+
+The subsequent full-file scan using `audit_interrupted_blast_bytes.py`
+reproduced the preserved SHA-256 and found:
+
+- 366,012,663 newline bytes; the last is at zero-based offset
+  33,141,804,089. Newline count is not a validated HSP-row count.
+- An 11-byte fragment follows that newline, then exactly 955 NUL bytes
+  at offsets 33,141,804,101 through 33,141,805,055 inclusive.
+- All NUL bytes form one trailing run. None were found in earlier bytes.
+- The file does not end in a newline. A bounded tail inspection showed
+  the truncated final row starts `tr|F1MRE1|F`; preceding rows are for
+  query `tr|F1MRE1|F1MRE1_BOVIN`.
+
+[Machine-readable inventory](qfo_blast_interrupted_bytes_20260923.json)
+explicitly sets search admission and reuse authorization false. The audit
+checks file identity/size/timestamps before and after scanning and never
+edits the input. Its 33 focused tests passed, including chunk boundaries,
+interior versus trailing NULs, empty inputs, no-overwrite behavior, and
+input mutation rejection.
+
+This narrows byte corruption to the observed tail but does not certify
+earlier rows, query completion, or durable write ordering. No rows were
+salvaged. The installed legacy documentation does not establish the needed
+query-completion guarantees. Attempts to retrieve source listings from
+`https://ftp.ncbi.nlm.nih.gov/blast/executables/legacy/` and its `2.2.13/`
+child returned HTTP 404. Modern BLAST+ behavior was not substituted as
+proof of legacy behavior. Next: establish a validated query-completion
+boundary and replay strategy, or use a fresh separately recorded search.

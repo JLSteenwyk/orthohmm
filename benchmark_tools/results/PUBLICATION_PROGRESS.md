@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Interrupted BLAST Byte Boundary Audited (2026-09-23)
+
+Previous turn made progress by identifying the vanished worker, preserving
+its output, and clearing only its stale allocation. FastOMA 21740 is now
+running; 21746 remains held. Added a read-only streaming byte inventory
+and 33 passing tests. The full 33,141,805,056-byte scan reproduces the
+preserved SHA-256, finding exactly 955 NUL bytes in one trailing run after
+an 11-byte row fragment. No earlier NUL bytes were found. This is NOT row
+validation or proof of completed queries, and no partial result is admitted.
+
+[Detailed evidence](QFO_BLAST_INTERRUPTION_20260923.md#read-only-byte-audit)
+records offsets, limits, and source-retrieval failures. Recovery still needs
+validated legacy query-completion semantics; no restart, append, or truncation
+was performed. FastOMA has advanced from input checking to OMAmer tasks.
+
 ## BLAST Interrupted; Stale Allocation Cleared (2026-09-23)
 
 After the interrupted monitored wait and Samwise follow-up, revalidated
