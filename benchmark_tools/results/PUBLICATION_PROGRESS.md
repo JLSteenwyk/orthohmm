@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Frozen-Import Constructor Follow-Up Prepared (2026-09-23)
+
+Previous turn added and visually checked the descriptive feature figures,
+committed/pushed as 8df5c9c. Re-read the complete goal and verified live BLAST
+22103_1 and threshold score 22043_1; no restart or DGX action.
+
+Prepared the [frozen-import follow-up](QFO_CPM_FROZEN_IMPORT_PROTOCOL_20260923.md)
+to the successful minimal constructor. The wrapper explicitly selects the
+existing pinned frozen-import helper, requires the hash-bound 22119 success
+and all retained identities, and still forbids optimization or predictions.
+Seventeen tests pass, including small fresh native graphs with both import
+contexts and exact imported-module inventory checks; shell syntax passes.
+The old frozen executor/result remains unchanged. Commit/freeze/submission
+of one full-size diagnostic is the next action, not scientific replay.
+
 ## Descriptive Feature Figures Added (2026-09-23)
 
 Previous turn completed NHX/alias feasibility evidence and pushed 6f76ef4.

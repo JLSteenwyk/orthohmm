@@ -18,6 +18,8 @@ HELPERS = {
     "repeat_qfo_saved_graph.py": "6d80d4e92eccf3f32a62072df39050ccd4573b3bd326e32977302830cbf1f0f4",
 }
 FILES = ("gene_names.txt", "sources.npy", "targets.npy", "weights.npy")
+MODES = ("minimal_imports", "frozen_imports")
+MINIMAL_SHA = "40ca89f64fab8e7ecb88b069a2a45f26f9104dca812445a188d70b232032a25e"
 
 
 def require_audit(report):
@@ -32,9 +34,11 @@ def require_audit(report):
         raise ValueError("Wrong failed-graph audit")
 
 
-def require_result(result):
+def require_result(result, mode="minimal_imports"):
+    if mode not in MODES:
+        raise ValueError("Unknown import mode")
     if (result["status"] != "direct_construction_observed"
-            or result["mode"] != "minimal_imports" or result["edge_format"] != "python_pairs"
+            or result["mode"] != mode or result["edge_format"] != "python_pairs"
             or result["optimizer_called"] is not False or result["accuracy_evaluated"] is not False
             or result["after_weights"]["fingerprint"] != result["saved"]):
         raise ValueError("Constructor observation does not preserve the saved graph")
@@ -45,7 +49,9 @@ def require_result(result):
                 raise ValueError("Native constructor endpoint mismatch")
 
 
-def run(root, output):
+def run(root, output, mode="minimal_imports"):
+    if mode not in MODES:
+        raise ValueError("Unknown import mode")
     if output.exists() or output.is_symlink():
         raise FileExistsError(output)
     audit_path = root / "benchmark_tools/results/qfo_cpm_high_failed_payload_audit_20260923.json"
@@ -58,6 +64,17 @@ def run(root, output):
     if [r["sha256"] for r in helpers] != list(HELPERS.values()):
         raise ValueError("Changed constructor helpers")
     records = [audit_record, record(__file__), *helpers, *audit["checked_records"]]
+    if mode == "frozen_imports":
+        prior_path = root / "benchmark_tools/results/qfo_cpm_high_constructor_22119.json"
+        prior_record = record(prior_path)
+        if prior_record["sha256"] != MINIMAL_SHA:
+            raise ValueError("Changed minimal-import observation")
+        prior = json.loads(prior_path.read_text())
+        if (prior["status"] != "constructor_diagnostic_complete_unscored" or prior["returncode"] != 0
+                or prior["job_id"] != "22119" or prior["rerun_authorized"] is not False):
+            raise ValueError("Require completed minimal-import diagnostic")
+        require_result(prior["result"])
+        records.extend([prior_record, *prior["checked_records"], *prior["observations"], prior["worker_log"]])
     for item in records:
         check(item)
     source = root / "benchmarks/results/qfo_parameter_cpm_replay_v3/cpm_high/clustering/cluster_3_profile_expanded/payload"
@@ -76,12 +93,12 @@ def run(root, output):
     for key in ("PYTHONHOME", "LD_PRELOAD", "LD_LIBRARY_PATH"):
         env.pop(key, None)
     command = [sys.executable, "-B", "-X", "faulthandler", str(Path(__file__).resolve()),
-               "--root", str(root), "--output", str(output), "--worker-payload", str(payload)]
+               "--root", str(root), "--output", str(output), "--worker-payload", str(payload), "--mode", mode]
     report = dict(status="constructor_diagnostic_running", inputs=inputs, checked_records=records,
-                  command=command, job_id=os.environ.get("SLURM_JOB_ID"),
+                  command=command, mode=mode, job_id=os.environ.get("SLURM_JOB_ID"),
                   accuracy_evaluated=False, optimizer_called=False, rerun_authorized=False,
                   publication_ready=False, limitations=[
-                      "One fresh minimal-import constructor; not an exact replay of the failed worker's allocation history.",
+                      "One fresh constructor in the recorded import mode; not an exact replay of the failed worker's allocation history.",
                       "Success cannot rule out intermittent crashes or establish the original cause.",
                       "No optimizer, groups, predictions, default changes or authorization of full replay."])
     def save():
@@ -101,7 +118,7 @@ def run(root, output):
         if completed.returncode:
             raise RuntimeError(f"Constructor subprocess exited {completed.returncode}; preserve its traceback")
         result = json.loads((payload / "result.json").read_text())
-        require_result(result)
+        require_result(result, mode)
         report.update(status="constructor_diagnostic_complete_unscored", result=result,
                       observations=[record(payload / name) for name in
                                     ("worker_before.json", "before_weights.json", "result.json")])
@@ -118,10 +135,11 @@ if __name__ == "__main__":
     for name in ("root", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
     parser.add_argument("--worker-payload", type=Path)
+    parser.add_argument("--mode", choices=MODES, default="minimal_imports")
     args = parser.parse_args()
     if args.worker_payload is not None:
         faulthandler.enable(all_threads=True)
         from probe_qfo_direct_graph import worker
-        worker(args.root.resolve(), args.worker_payload.resolve(), "minimal_imports", "python_pairs")
+        worker(args.root.resolve(), args.worker_payload.resolve(), args.mode, "python_pairs")
     else:
-        run(args.root.resolve(), args.output.absolute())
+        run(args.root.resolve(), args.output.absolute(), args.mode)

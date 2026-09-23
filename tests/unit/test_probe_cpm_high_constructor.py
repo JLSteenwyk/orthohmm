@@ -52,7 +52,8 @@ def test_no_overwrite_or_dangling_symlink(tmp_path):
         run(tmp_path, link)
 
 
-def test_fresh_native_worker_on_small_graph(tmp_path):
+@pytest.mark.parametrize("mode", ["minimal_imports", "frozen_imports"])
+def test_fresh_native_worker_on_small_graph(tmp_path, mode):
     root = Path(__file__).resolve().parents[2]
     payload = tmp_path / "payload"
     payload.mkdir()
@@ -61,13 +62,19 @@ def test_fresh_native_worker_on_small_graph(tmp_path):
                          ("targets", np.array([1, 2, 0], dtype=np.int32)),
                          ("weights", np.array([.3, 1.2, 2.5], dtype=np.float64))):
         np.save(payload / (name + ".npy"), values)
-    env = dict(os.environ, OMP_NUM_THREADS="1", OPENBLAS_NUM_THREADS="1", MKL_NUM_THREADS="1")
+    env = dict(os.environ, OMP_NUM_THREADS="1", OPENBLAS_NUM_THREADS="1", MKL_NUM_THREADS="1", PYTHONNOUSERSITE="1")
     subprocess.run([sys.executable, "-B", str(root / "benchmark_tools/probe_cpm_high_constructor.py"),
-                    "--root", str(root), "--output", str(tmp_path), "--worker-payload", str(payload)],
+                    "--root", str(root), "--output", str(tmp_path), "--worker-payload", str(payload), "--mode", mode],
                    check=True, env=env, capture_output=True, text=True, timeout=60)
     result = json.loads((payload / "result.json").read_text())
-    require_result(result)
+    require_result(result, mode)
     assert result["saved"]["vertices"] == 4
     assert result["saved"]["edges"] == 3
     before = json.loads((payload / "worker_before.json").read_text())
-    assert not any(k.split(".")[0] in {"orthohmm", "leidenalg"} for k in before["modules"])
+    imported = {k.split(".")[0] for k in before["modules"]} & {"orthohmm", "leidenalg"}
+    assert imported == (set() if mode == "minimal_imports" else {"orthohmm", "leidenalg"})
+
+
+def test_unknown_mode_rejected(tmp_path):
+    with pytest.raises(ValueError, match="Unknown import mode"):
+        run(tmp_path, tmp_path / "out", "other")
