@@ -1,5 +1,27 @@
 # Publication Progress
 
+## BLAST Validation Interleaved With Remaining Search Batches (2026-09-23)
+
+Previous turn verified outside-checkout figure reproduction and corrected
+the completion checklist. Re-read the objective and checked live accounting:
+threshold scores 22043_0/1 completed 0:0 in 30:26/31:43; task 2 is running.
+BLAST 22103_1 remains running; constructor 22121 and validators are pending.
+
+Diagnosed a scheduling issue in the recovery pipeline: whole-array waits
+and 900-GiB native reservations can delay 64-GiB batch validators until the
+entire search panel finishes. Applied a [dependency-only amendment](QFO_BLAST_INTERLEAVED_VALIDATION_20260923.md)
+to pending tasks: each remaining validator follows its own successful native
+batch, and native tasks 2..19 follow the preceding successful validator.
+Validator 1 also follows validator 0. Running task 1 was not modified.
+
+Retained before/after scheduler records for 36 bulk changes plus the separate
+validator-1 updates; exact final dependency sets for 38 pending tasks were
+checked and independently traversed with no cycles. Resources, commands,
+input contracts, array limits and no-requeue policy are unchanged. No native
+job was restarted and no admission bypassed. This enables incremental
+validation, not a claim of successful validation, prefix reuse or final scores.
+DGX remains deferred and publication completion remains unproven.
+
 ## Feature Figures Reproduce Outside Checkout; Checklist Corrected (2026-09-23)
 
 Previous turn submitted the frozen-import diagnostic and refreshed the
