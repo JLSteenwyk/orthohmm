@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Exhaustive OrthoMCL Recovery Query Partition Prepared (2026-09-23)
+
+Previous turn made progress with independently verified identity strata and
+descriptive score tables. Revalidated local robustness jobs and queued BLAST
+diagnostic 22055; no restart or DGX action. Prepared a necessary recovery
+input inventory while the diagnostic waits, without authorizing prefix reuse.
+
+The [retained manifest](qfo_blast_recovery_partition_20260923.json) exhaustively
+partitions all 984,137 query IDs: 885,224 earlier blocks remain unadmitted
+candidates; 98,912 absent queries and the entire final incomplete query are
+selected for replay. Query FASTA preserves original record bytes and order.
+The proposed prefix ends at 33,141,800,005, before the incomplete query.
+The preparer validates ordered blocks, contiguous byte ranges, exact source
+and block hashes, final marker and full coverage; failed preparation leaves
+no success manifest. All 38 focused preparer/diagnostic tests passed.
+
+A separate full output cross-check verified every query ID/ordinal, selected
+raw FASTA bytes, counts, order and prefix ranges. Large TSV/FASTA outputs
+remain outside Git. [Recovery evidence and commands](QFO_BLAST_INTERRUPTION_20260923.md)
+explicitly preserve search_admitted=false, reuse_authorized=false and
+replay_executed=false. No partial BLAST bytes were altered, copied, merged
+or re-admitted. Replay must use the unchanged full database. Next: evaluate
+22055, freeze a reviewed recovery execution plan if supported, then validate
+full search completion and reconnect downstream admission. Controlled timing,
+remaining robustness/uncertainty and final publication packaging stay open.
+
 ## SwissTrees Identity Features Verified And Scored Descriptively (2026-09-23)
 
 Previous turn made progress with the frozen protocol, preparation code and

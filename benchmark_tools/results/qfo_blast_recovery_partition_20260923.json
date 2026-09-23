@@ -1,0 +1,54 @@
+{
+  "counts": {
+    "candidate_prefix_not_admitted": 885224,
+    "replay_absent": 98912,
+    "replay_final_incomplete": 1
+  },
+  "inputs": [
+    {
+      "bytes": 3422407,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_prefix_audit_20260923/status.json",
+      "sha256": "a0d024ff33544b64eafcb7ebe88ba3948ad0cffe8aabcb1e4ef2ce300cc71bc9"
+    },
+    {
+      "bytes": 472930503,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_orthomcl_v1/work/all.fa",
+      "sha256": "11c03d6575e22c2f8bb718e59b7a06911637438c2e45181e86548647d49199c0"
+    },
+    {
+      "bytes": 229006947,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_prefix_audit_20260923/query_blocks.jsonl",
+      "sha256": "fc0c4cb91088308b64674adf657ff3df63e234429110bfbd263856395d575ad6"
+    },
+    {
+      "bytes": 5567,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_blast_recovery_partition.py",
+      "sha256": "d9fe98962e3b5d1935b9d48d16caa38a09ec330fe1dde64a5fe1b9e91e9d3b36"
+    }
+  ],
+  "limitations": [
+    "Query partition only; does not authorize reuse or verify native replay equivalence.",
+    "Absent rows include unprocessed, no-hit and failed queries; absence is not a failure label.",
+    "Every replay query must search the unchanged full database, not the replay subset.",
+    "Original partial BLAST bytes are not copied, merged, changed or rehashed by this preparer."
+  ],
+  "outputs": [
+    {
+      "bytes": 79818115,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_partition_20260923/queries.tsv",
+      "sha256": "524dde6544daf4c8e5e3dd6197684a2ddce6649d7c6a94bc9e98f4f2b1dfde5a"
+    },
+    {
+      "bytes": 40534970,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_partition_20260923/replay.fa",
+      "sha256": "7215175d4c69c7abe1a2fd51dfcfb2d270d838d6fcad16e30f6e9387a95fc42a"
+    }
+  ],
+  "proposed_retained_prefix_end": 33141800005,
+  "replay_executed": false,
+  "replay_queries": 98913,
+  "reuse_authorized": false,
+  "search_admitted": false,
+  "status": "proposed_blast_query_partition_prepared",
+  "total_queries": 984137
+}

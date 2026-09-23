@@ -138,3 +138,49 @@ The report explicitly leaves admission and reuse false. The existing
 benchmark failure inventory. Native replay 22029 remains pending; no
 retained prefix was copied, merged, or admitted. FastOMA 21740 remains
 live and has advanced to `hog_rest` tasks.
+
+## Proposed Query Partition Prepared
+
+The earlier 22029 diagnostic failed before native execution and was replaced
+by reviewed diagnostic 22055, which remains resource-pending. Corrected
+FastOMA subsequently completed; the preceding paragraph is historical status.
+
+Prepared an exhaustive, disjoint inventory using the hash-pinned block audit
+and original all.fa, without reading or changing the interrupted BLAST table.
+The [manifest](qfo_blast_recovery_partition_20260923.json) retains explicit
+false values for reuse authorization, search admission and replay execution.
+
+- 984,137 input queries, in original FASTA order.
+- 885,224 earlier observed blocks marked candidate_prefix_not_admitted.
+- 98,912 absent queries plus the one incomplete final query marked for replay.
+- Proposed retained prefix ends at byte 33,141,800,005, before the entire final
+  query block. No prefix was copied or admitted.
+- Replay FASTA has 98,913 exact original records, 40,534,970 bytes,
+  SHA-256 7215175d4c69c7abe1a2fd51dfcfb2d270d838d6fcad16e30f6e9387a95fc42a.
+- Exhaustive query TSV has 79,818,115 bytes,
+  SHA-256 524dde6544daf4c8e5e3dd6197684a2ddce6649d7c6a94bc9e98f4f2b1dfde5a.
+
+Large files are under benchmarks/work/qfo_blast_recovery_partition_20260923,
+not committed. A separate post-generation pass reindexed original/replay
+FASTAs, checked every TSV ordinal and ID, verified contiguous proposed
+prefix ranges, and compared raw bytes for every selected replay record.
+All counts, full coverage, replay order and proposed boundary matched.
+The preparer and related diagnostic tests pass: 38 tests, including missing
+final markers, reordered/duplicate queries, byte-range gaps/overlaps,
+conflicting boundaries and accidental authorization.
+
+Reproduce input preparation only, using a fresh directory:
+
+```sh
+python -m benchmark_tools.prepare_blast_recovery_partition \
+  --audit benchmarks/work/qfo_blast_prefix_audit_20260923/status.json \
+  --output /tmp/qfo-blast-proposed-partition-new
+```
+
+This does not prove native replay equivalence, durable completion or prefix
+reuse. Every selected query must search the unchanged complete database,
+never a database restricted to this query subset. Absent output remains
+ambiguous, not a native-failure label. A reviewed recovery execution plan,
+successful diagnostic, durable completion records, complete merge validation
+and replacement downstream admission are still required. Job 21746 remains
+held. No recovery BLAST execution or merge was launched by this preparation.
