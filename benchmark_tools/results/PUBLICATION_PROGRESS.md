@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Duplication-Stratified Scores Added Without New Inference (2026-09-23)
+
+Previous turn froze and dual-implementation-checked mapped-tree features
+(b288584, 89b4c1a). Re-read the goal and confirmed live BLAST 22103_2 and
+parameter scoring 22043_2; low-CPM phylogeny remains resource-pending.
+
+Added the [32-row descriptive score table](swiss_duplication_strata_20260923/scores.md)
+for eight methods across all/lower/upper/missing bins. Pinned feature/count
+inputs and statistic helpers; rederived fraction/bin consistency and retained
+empty-bin and unadmitted-method NA. An independent exact-rational computation
+agrees on all 192 metric/difference cells, including missing values.
+
+Phylogenetic OrthoHMM versus full OrthoFinder is 86.378% versus 90.453% F1
+in the lower stratum and 80.309% versus 78.991% in the higher stratum.
+All admitted methods have lower absolute F1 in the latter. Added both
+contrasts and precision/recall to the manuscript with the unchanged overall
+ordering, reference-label dependence and no new significance/causal claims.
+Ten exporter tests pass; DGX timing and publication completion remain unmet.
+
 ## Duplication Features Frozen and Cross-Checked Natively (2026-09-23)
 
 Previous turn reconstructed all retained SwissTree relationships (b070e46).

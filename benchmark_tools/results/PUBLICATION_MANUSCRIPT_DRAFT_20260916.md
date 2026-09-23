@@ -1034,6 +1034,27 @@ depends on family composition. These descriptive, development-exposed
 associations do not establish a causal fragmentation effect or superiority;
 no new subgroup inference is claimed.
 
+A [prespecified duplication-annotation analysis](SWISS_DUPLICATION_FEATURE_PROTOCOL_20260923.md)
+used the original trees embedded in the retained reference, with all 563
+mapped memberships and 10,765 reference relationships reconstructed exactly.
+Separate Python and Darwin traversals agreed on 128 explicitly annotated
+duplication nodes among 546 informative mapped nodes. The other 418 nodes
+used the reference's default-S convention, not explicit speciation evidence.
+The median annotation fraction divided the panel into nine lower and nine
+higher families. In the [complete descriptive table](swiss_duplication_strata_20260923/scores.md),
+phylogenetic OrthoHMM scored 86.378% F1 versus full OrthoFinder's 90.453%
+in the lower stratum, and 80.309% versus 78.991% in the higher stratum.
+In the latter, precision/recall were 93.092%/70.613% for OrthoHMM and
+91.320%/69.596% for OrthoFinder. High-sensitivity OrthoHMM scored 69.876%
+and 67.218% F1 in the lower and higher strata. All seven admitted methods
+had lower absolute F1 in the higher stratum. The small positive OrthoHMM
+contrast there does not reverse the full-panel ordering (83.351% versus
+84.841%) or establish subgroup superiority. This annotation fraction is
+reference-derived and related to the benchmark's own pair labels; alias
+collisions, default-S nodes, family composition and development exposure
+limit interpretation. No new subgroup intervals, causal claims or
+duplication-rate interpretation are made. Missing OrthoMCL remains NA.
+
 ![Descriptive identity-stratified differences in F1, precision and recall versus full OrthoFinder.](swiss_descriptive_feature_figures_20260923/swiss_identity_descriptive.png)
 
 **Supplementary Figure: Sequence Identity.** Points show observed differences
