@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Spawn-Corrected CPM Replay Resubmitted (2026-09-23)
+
+Previous turn made progress by identifying the multiprocessing import bug,
+testing its repair, and holding the unstarted second v2 arm. This turn froze
+a fresh variant executor and submitted replacement replay plus admission.
+
+Changed only variant output destinations to `qfo_parameter_cpm_replay_v3`;
+the admitted control remains in v1, and all failed v1/v2 outputs are retained.
+After correcting a nonexistent test filename in the initial invocation
+(no tests ran), the intended focused suite passed **113 tests**, including
+the real-spawn regression and legacy negative control.
+
+Replacement replay array **22081** uses frozen checkout
+`publication_qfo_cpm_variant_v3`, commit
+`a2486a9ef39afc2035c3fd20942696be48c5647d`, incorporating the spawn import
+repair from 9b0c686. Reused the checked September 23 replay launcher with its
+explicit executor/commit arguments: two arms, concurrency one, 32 CPUs,
+192 GiB, 24 hours, no requeue. It still independently validates the admitted
+unchanged control before any changed-arm replay. No scientific parameter,
+native source, compiled kernel, input or scoring endpoint changed.
+
+Replay admission now pins array 22081 and that exact executor revision/path.
+Its focused replay/admission/candidate suite passed **107 tests**; shell
+syntax and scoped whitespace checks pass. Submitted admission array
+**22082**, frozen checkout `publication_qfo_cpm_variant_admission_v3`, commit
+`868d46c2488d37aa2c97c0a9c07e02b094c8500e`, with afterany plus aftercorr
+dependencies on 22081. It uses two arms, concurrency one, 2 CPUs / 64 GiB /
+four hours, no requeue. Native boundary, all-stage and source checks remain.
+
+The held old task 22059_1 remains unstarted; failed 22059_0 and its logs are
+preserved. Candidate construction and all later stages still need replacement
+admission pins; the previous downstream chain is not redirected or claimed
+valid. No new CPM result is admitted by submission alone. Dedicated timing
+integration, BLAST recovery, and remaining publication requirements stay open.
+
 ## CPM Spawn Import Failure Diagnosed And Repaired (2026-09-23)
 
 Previous turn was progress through real DGX bound-job service restoration
