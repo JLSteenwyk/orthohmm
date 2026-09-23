@@ -19,6 +19,8 @@ from benchmark_tools.measure_native_lineage_step import evaluate as evaluate_lin
 from benchmark_tools.measure_native_root_context import read_point, evaluate, lineage_identity
 from benchmark_tools.probe_host_counters import snapshot
 from benchmark_tools.probe_dgx_step_separation import save, wait_file
+from benchmark_tools.command_host_monitor import HostMonitor
+from benchmark_tools.slurm_resource_snapshot import scoped_path
 
 TIMEOUT = 85800
 
@@ -67,12 +69,18 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
     save(directory / "command.json", dict(command=command, cpus=cpus, timeout_s=timeout_s, interval_s=interval_s))
     launched = ["srun", "--exclusive", "--exact", "--nodes=1", "--ntasks=1", "--cpus-per-task=20",
                 sys.executable, "-B", str(Path(__file__).resolve()), "--worker", str(directory)]
-    with (directory / "step.log").open("x") as log:
+    with (directory / "step.log").open("x") as log, (directory / "host_processes.jsonl").open("x") as host_log:
         process = subprocess.Popen(launched, stdout=log, stderr=subprocess.STDOUT)
         try:
             ready = wait_file(directory / "ready.json")
             points = [read_point(ready["pid"], ready["cgroup"], job_id, directory / "failed_point.json")]
             save(directory / "point_000000.json", points[0])
+            scope = scoped_path(ready["cgroup"], job_id)
+            # Exclude all of this job, including its observer and sibling steps.
+            job_scope = next(parent for parent in scope.parents if parent.name == f"job_{job_id}")
+            host = HostMonitor(host_log, str(job_scope))
+            host.observe()
+            next_host = time.monotonic() + host_interval_s
             save(directory / "go.json", {"go": True})
             start = time.monotonic()
             index = 0
@@ -84,11 +92,16 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
                     raise RuntimeError("Worker exited before final observation")
                 points.append(read_point(ready["pid"], ready["cgroup"], job_id, directory / "failed_point.json"))
                 save(directory / f"point_{index:06d}.json", points[-1])
+                if completed or time.monotonic() >= next_host:
+                    host.observe()
+                    next_host = time.monotonic() + host_interval_s
                 if completed:
                     break
                 if time.monotonic() - start > TIMEOUT + 30:
                     raise TimeoutError("Native command exceeded timeout and cleanup allowance")
             done = json.loads((directory / "done.json").read_text())
+            host_summary = host.summary(done["started_ns"] / 1e9, done["finished_ns"] / 1e9)
+            save(directory / "host_process_summary.json", host_summary)
             memory = step_memory(interval_point(points[-1], job_id))
             save(directory / "step_memory.json", memory)
             save(directory / "release.json", {"release": True})
@@ -97,11 +110,12 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
             measured = dict(status="command_exited_zero" if done["exit_code"] == 0 else "command_failed",
                 native=done, native_wall_s=(done["finished_ns"]-done["started_ns"])/1e9,
                 job_id=job_id, launched=launched, points=points, step_memory=memory,
+                host_process_observation=host_summary,
                 screening=evaluate_lineage(points, done, job_id), scientific_timings_admitted=False,
                 controlled_workload_verified=False, publication_ready=False,
                 limitations=["Long-run collector, not controlled comparative timing admission.",
                     "All CPU flags and non-atomic read windows retained; no overhead subtraction.",
-                    "Host reads are counter snapshots, not a full process/GPU/device-I/O inventory.",
+                    "Periodic process CPU observations miss short-lived work and do not establish quiet GPU/device-I/O activity.",
                     "Point retention and final evaluation consume observer resources; long-run overhead remains unvalidated."])
             save(directory / "lineage_report.json", measured)
             context = dict(status="native_root_context_measured", job_id=job_id,

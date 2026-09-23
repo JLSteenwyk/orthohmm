@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Long-Run Host Process Observation Added (2026-09-23)
+
+Previous turn was no progress toward publication: the repeated Samwise
+source search confirmed the already known missing installation without
+recovering a source. Revalidated the scheduler rather than restarting:
+22034_0 and _1 completed, _2 remains running (31:25 at latest check),
+22055 BLAST diagnostic and 22081 CPM replay remain pending.
+
+The current long-run collector now uses the existing HostMonitor before
+the native launch gate, every 30 seconds, and after the native completion
+record. It retains raw process observations in host_processes.jsonl and
+a host_process_summary.json also embedded in the lineage report. The
+scope excludes the complete measured Slurm job, including observer and
+sibling steps, rather than mistakenly classifying those as foreign work.
+Native monotonic start/end timestamps determine observation bracketing.
+
+**200 focused tests passed** across the collector, host monitor, process
+analysis, measurement replay/audit, scaling runner and service guard.
+Collector tests cover short and 65-second simulated observations, success,
+nonzero exit and timeout; existing monitor tests retain sampling errors,
+process churn and incomplete coverage as inconclusive. These are not
+real-host long-run validation or timing admission. Historical frozen
+executors and measurements were not modified.
+
+Outstanding: freeze a new recipe with these sources, independently audit
+the process stream and its summary, integrate service/session lifecycle,
+verify permitted baseline workloads and hardware, and validate observer
+overhead before the 27 sequential timing runs. Periodic CPU observations
+cannot establish absence of short-lived work or GPU/I/O contention.
+No environmental-validity or publication-readiness flag was promoted.
+
 ## Current SwissTrees Runner And Evidence Routing Reconciled (2026-09-23)
 
 Previous turn made progress through FastOMA uncertainty, independent

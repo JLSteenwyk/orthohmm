@@ -61,7 +61,8 @@ def allocation(monkeypatch):
 
 
 @pytest.mark.parametrize("code,timed_out", [(0,False), (7,False), (124,True)])
-def test_observer_retains_reports_final_reads_and_failure_status(tmp_path, monkeypatch, code, timed_out):
+@pytest.mark.parametrize("cycles", [1, 65])
+def test_observer_retains_reports_final_reads_and_failure_status(tmp_path, monkeypatch, code, timed_out, cycles):
     allocation(monkeypatch)
     directory = tmp_path / "measurement"
     waited = []
@@ -79,7 +80,26 @@ def test_observer_retains_reports_final_reads_and_failure_status(tmp_path, monke
         assert argv[-3:] == [str(Path(module.__file__).resolve()), "--worker", str(directory)]
         return process
     monkeypatch.setattr(module.subprocess, "Popen", launch)
-    monkeypatch.setattr(module, "wait_file", lambda path: {"pid": 55, "cgroup": "scope"})
+    monkeypatch.setattr(module, "wait_file", lambda path: {"pid": 55, "cgroup": "0::/slurm/job_123/step_0/user/task_0\n"})
+    observations = []
+    clock = [0.]
+    class Monitor:
+        def __init__(self, handle, scope):
+            assert scope == "/slurm/job_123"
+            self.handle = handle
+        def observe(self):
+            if not observations:
+                assert not (directory / "go.json").exists()
+            observations.append(clock[0])
+            self.handle.write(json.dumps({"time": clock[0]}) + "\n")
+        def summary(self, start, end):
+            assert start == done["started_ns"] / 1e9
+            assert end == done["finished_ns"] / 1e9
+            assert (directory / "done.json").exists()
+            assert observations[-1] == cycles
+            return {"controlled_workload_verified": False, "snapshots": len(observations)}
+    monkeypatch.setattr(module, "HostMonitor", Monitor)
+    monkeypatch.setattr(module.time, "monotonic", lambda: clock[0])
     points = []
     def read(*args):
         value = {"index": len(points)}
@@ -87,7 +107,11 @@ def test_observer_retains_reports_final_reads_and_failure_status(tmp_path, monke
         return value
     monkeypatch.setattr(module, "read_point", read)
     done = dict(exit_code=code, timed_out=timed_out, started_ns=100, finished_ns=1000000100)
-    monkeypatch.setattr(module.time, "sleep", lambda duration: module.save(directory / "done.json", done))
+    def sleep(duration):
+        clock[0] += duration
+        if clock[0] >= cycles:
+            module.save(directory / "done.json", done)
+    monkeypatch.setattr(module.time, "sleep", sleep)
     monkeypatch.setattr(module, "interval_point", lambda point, job: {"final": point["index"]})
     monkeypatch.setattr(module, "step_memory", lambda point: {"observed_after_final_point": point})
     monkeypatch.setattr(module, "evaluate_lineage", lambda p,d,j: {"points": len(p), "done": d})
@@ -95,9 +119,14 @@ def test_observer_retains_reports_final_reads_and_failure_status(tmp_path, monke
     result = module.measure(["/bin/true"], directory, 123, 20, 96*1024**3, 85800, 1.)
     assert result["status"] == ("command_exited_zero" if code == 0 else "command_failed")
     assert result["native"] == done and result["native_wall_s"] == 1.
-    assert result["points"] == points and len(points) == 2
+    assert result["points"] == points and len(points) == cycles + 1
     assert waited == [45]
-    assert [p.name for p in sorted(directory.glob("point_*.json"))] == ["point_000000.json", "point_000001.json"]
+    assert [p.name for p in sorted(directory.glob("point_*.json"))] == [f"point_{i:06d}.json" for i in range(cycles + 1)]
+    assert observations == ([0., 1.] if cycles == 1 else [0., 30., 60., 65.])
+    summary = json.loads((directory / "host_process_summary.json").read_text())
+    assert result["host_process_observation"] == summary
+    assert summary["controlled_workload_verified"] is False
+    assert len((directory / "host_processes.jsonl").read_text().splitlines()) == len(observations)
     context = json.loads((directory / "root_context_report.json").read_text())
     assert context["lineage_report"] == module.lineage_identity(directory)
     assert result["scientific_timings_admitted"] is False
