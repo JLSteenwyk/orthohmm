@@ -1,5 +1,35 @@
 # Publication Progress
 
+## DGX Service And Device Baseline Captured (2026-09-23)
+
+Previous turn made progress through real collector/service lifecycle probe
+22099. Added a bounded read-only environmental snapshot tool covering
+system/user services, timers, container/model inventory, GPU utilization
+and compute processes, scheduler, disk counters, pressure, memory,
+temperature/frequency readings and optional CPU/kernel identity. Every
+command has a ten-second timeout and retains nonzero/missing/timeout errors.
+No service or host configuration is changed. Five focused tests passed.
+
+Executed the tool on spark-7ff0 and retained
+[baseline JSON](dgx_environment_baseline_20260923.json), SHA-256
+`6a92d8d18801e2fd1553782d225f112370234eaa90d1996a565cf453182e62ba`.
+The source hash matches the local tool; collection took 0.112739209 seconds,
+all ten commands returned zero and required file reads had no errors.
+No running containers, loaded Ollama models or GPU compute processes were
+observed. GPU memory usage is **N/A**, explicitly not converted to zero.
+The CPU inventory contains both Cortex-X925 and Cortex-A725 cores; retain
+all 20 CPUs consistently rather than treating this as homogeneous hardware.
+
+Maintenance timers include sysstat, update notification, anacron, firmware
+refresh and apt activity. These are evidence of possible future activity,
+not permission to disable them or proof of interference during a run.
+The baseline cannot establish whole-run isolation. Production integration
+still requires repeated device/service observations, configuration identity,
+a prospective permitted-workload policy, recipe freeze and authorization.
+No inference timing run or environmental admission was issued. Latest
+accounting before this inventory: parameter arm 22034_2 running (39:56),
+BLAST diagnostic 22055 and CPM replay 22081 pending.
+
 ## Real DGX Collector And Service Lifecycle Probe Passed (2026-09-23)
 
 Previous turn made progress by integrating process-stream replay. Added an

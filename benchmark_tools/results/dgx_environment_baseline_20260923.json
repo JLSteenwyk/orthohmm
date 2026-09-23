@@ -1,0 +1,316 @@
+{
+  "commands": {
+    "containers": {
+      "command": [
+        "docker",
+        "ps",
+        "--format",
+        "{{.ID}} {{.Image}} {{.Status}}"
+      ],
+      "finished_monotonic_ns": 2678593313090832,
+      "returncode": 0,
+      "started_monotonic_ns": 2678593300439582,
+      "stderr": "",
+      "stdout": ""
+    },
+    "cpu": {
+      "command": [
+        "lscpu",
+        "-J"
+      ],
+      "finished_monotonic_ns": 2678593392667185,
+      "returncode": 0,
+      "started_monotonic_ns": 2678593386822994,
+      "stderr": "",
+      "stdout": "{\n   \"lscpu\": [\n      {\n         \"field\": \"Architecture:\",\n         \"data\": \"aarch64\"\n      },{\n         \"field\": \"CPU op-mode(s):\",\n         \"data\": \"64-bit\"\n      },{\n         \"field\": \"Byte Order:\",\n         \"data\": \"Little Endian\"\n      },{\n         \"field\": \"CPU(s):\",\n         \"data\": \"20\"\n      },{\n         \"field\": \"On-line CPU(s) list:\",\n         \"data\": \"0-19\"\n      },{\n         \"field\": \"Vendor ID:\",\n         \"data\": \"ARM\"\n      },{\n         \"field\": \"Model name:\",\n         \"data\": \"Cortex-X925\"\n      },{\n         \"field\": \"Model:\",\n         \"data\": \"1\"\n      },{\n         \"field\": \"Thread(s) per core:\",\n         \"data\": \"1\"\n      },{\n         \"field\": \"Core(s) per socket:\",\n         \"data\": \"10\"\n      },{\n         \"field\": \"Socket(s):\",\n         \"data\": \"1\"\n      },{\n         \"field\": \"Stepping:\",\n         \"data\": \"r0p1\"\n      },{\n         \"field\": \"CPU(s) scaling MHz:\",\n         \"data\": \"90%\"\n      },{\n         \"field\": \"CPU max MHz:\",\n         \"data\": \"4004.0000\"\n      },{\n         \"field\": \"CPU min MHz:\",\n         \"data\": \"1378.0000\"\n      },{\n         \"field\": \"BogoMIPS:\",\n         \"data\": \"2000.00\"\n      },{\n         \"field\": \"Flags:\",\n         \"data\": \"fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm dit uscat ilrcpc flagm sb paca pacg dcpodp sve2 sveaes svepmull svebitperm svesha3 svesm4 flagm2 frint svei8mm svebf16 i8mm bf16 dgh bti ecv afp wfxt\"\n      },{\n         \"field\": \"Model name:\",\n         \"data\": \"Cortex-A725\"\n      },{\n         \"field\": \"Model:\",\n         \"data\": \"1\"\n      },{\n         \"field\": \"Thread(s) per core:\",\n         \"data\": \"1\"\n      },{\n         \"field\": \"Core(s) per socket:\",\n         \"data\": \"10\"\n      },{\n         \"field\": \"Socket(s):\",\n         \"data\": \"1\"\n      },{\n         \"field\": \"Stepping:\",\n         \"data\": \"r0p1\"\n      },{\n         \"field\": \"CPU(s) scaling MHz:\",\n         \"data\": \"83%\"\n      },{\n         \"field\": \"CPU max MHz:\",\n         \"data\": \"2860.0000\"\n      },{\n         \"field\": \"CPU min MHz:\",\n         \"data\": \"338.0000\"\n      },{\n         \"field\": \"BogoMIPS:\",\n         \"data\": \"2000.00\"\n      },{\n         \"field\": \"Flags:\",\n         \"data\": \"fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm dit uscat ilrcpc flagm sb paca pacg dcpodp sve2 sveaes svepmull svebitperm svesha3 svesm4 flagm2 frint svei8mm svebf16 i8mm bf16 dgh bti ecv afp wfxt\"\n      },{\n         \"field\": \"L1d cache:\",\n         \"data\": \"1.3 MiB (20 instances)\"\n      },{\n         \"field\": \"L1i cache:\",\n         \"data\": \"1.3 MiB (20 instances)\"\n      },{\n         \"field\": \"L2 cache:\",\n         \"data\": \"25 MiB (20 instances)\"\n      },{\n         \"field\": \"L3 cache:\",\n         \"data\": \"24 MiB (2 instances)\"\n      },{\n         \"field\": \"NUMA node(s):\",\n         \"data\": \"1\"\n      },{\n         \"field\": \"NUMA node0 CPU(s):\",\n         \"data\": \"0-19\"\n      },{\n         \"field\": \"Vulnerability Gather data sampling:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability Itlb multihit:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability L1tf:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability Mds:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability Meltdown:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability Mmio stale data:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability Reg file data sampling:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability Retbleed:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability Spec rstack overflow:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability Spec store bypass:\",\n         \"data\": \"Mitigation; Speculative Store Bypass disabled via prctl\"\n      },{\n         \"field\": \"Vulnerability Spectre v1:\",\n         \"data\": \"Mitigation; __user pointer sanitization\"\n      },{\n         \"field\": \"Vulnerability Spectre v2:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability Srbds:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability Tsx async abort:\",\n         \"data\": \"Not affected\"\n      }\n   ]\n}\n"
+    },
+    "gpu": {
+      "command": [
+        "nvidia-smi",
+        "--query-gpu=name,uuid,driver_version,utilization.gpu,utilization.memory,memory.used,temperature.gpu,power.draw",
+        "--format=csv,noheader,nounits"
+      ],
+      "finished_monotonic_ns": 2678593360876941,
+      "returncode": 0,
+      "started_monotonic_ns": 2678593325537056,
+      "stderr": "",
+      "stdout": "NVIDIA GB10, GPU-af6029d2-886a-1f8b-0123-1710e54c813a, 580.95.05, 0, 0, [N/A], 42, 3.64\n"
+    },
+    "gpu_compute": {
+      "command": [
+        "nvidia-smi",
+        "--query-compute-apps=pid,process_name,used_memory",
+        "--format=csv,noheader,nounits"
+      ],
+      "finished_monotonic_ns": 2678593382250086,
+      "returncode": 0,
+      "started_monotonic_ns": 2678593360879213,
+      "stderr": "",
+      "stdout": ""
+    },
+    "kernel": {
+      "command": [
+        "uname",
+        "-a"
+      ],
+      "finished_monotonic_ns": 2678593394514118,
+      "returncode": 0,
+      "started_monotonic_ns": 2678593392668449,
+      "stderr": "",
+      "stdout": "Linux spark-7ff0 6.11.0-1016-nvidia #16-Ubuntu SMP PREEMPT_DYNAMIC Sun Sep 21 16:52:46 UTC 2025 aarch64 aarch64 aarch64 GNU/Linux\n"
+    },
+    "ollama_models": {
+      "command": [
+        "ollama",
+        "ps"
+      ],
+      "finished_monotonic_ns": 2678593325536256,
+      "returncode": 0,
+      "started_monotonic_ns": 2678593313091632,
+      "stderr": "",
+      "stdout": "NAME    ID    SIZE    PROCESSOR    CONTEXT    UNTIL \n"
+    },
+    "scheduler": {
+      "command": [
+        "squeue",
+        "-h",
+        "-p",
+        "spark",
+        "-o",
+        "%i %T %N"
+      ],
+      "finished_monotonic_ns": 2678593386821890,
+      "returncode": 0,
+      "started_monotonic_ns": 2678593382251382,
+      "stderr": "",
+      "stdout": ""
+    },
+    "system_services": {
+      "command": [
+        "systemctl",
+        "list-units",
+        "--type=service",
+        "--state=running",
+        "--no-pager",
+        "--plain",
+        "--no-legend"
+      ],
+      "finished_monotonic_ns": 2678593288221662,
+      "returncode": 0,
+      "started_monotonic_ns": 2678593284837493,
+      "stderr": "",
+      "stdout": "accounts-daemon.service      loaded active running Accounts Service\navahi-daemon.service         loaded active running Avahi mDNS/DNS-SD Stack\nbluetooth.service            loaded active running Bluetooth service\ncolord.service               loaded active running Manage, Install and Generate Color Profiles\ncontainerd.service           loaded active running containerd container runtime\ncron.service                 loaded active running Regular background program processing daemon\ncups-browsed.service         loaded active running Make remote CUPS printers available locally\ncups.service                 loaded active running CUPS Scheduler\ndbus.service                 loaded active running D-Bus System Message Bus\ndgx-dashboard-admin.service  loaded active running NVIDIA DGX Dashboard Admin Service\ndgx-dashboard.service        loaded active running NVIDIA DGX Dashboard Service\ndocker.service               loaded active running Docker Application Container Engine\nfwupd.service                loaded active running Firmware update daemon\ngnome-remote-desktop.service loaded active running GNOME Remote Desktop\nmariadb.service              loaded active running MariaDB 10.11.14 database server\nModemManager.service         loaded active running Modem Manager\nmultipathd.service           loaded active running Device-Mapper Multipath Device Controller\nmunge.service                loaded active running MUNGE authentication service\nNetworkManager.service       loaded active running Network Manager\nnvidia-persistenced.service  loaded active running NVIDIA Persistence Daemon\nollama.service               loaded active running Ollama Service\npolkit.service               loaded active running Authorization Manager\nrasdaemon.service            loaded active running RAS daemon to log the RAS events\nrdma-ndd.service             loaded active running RDMA Node Description Daemon\nrsyslog.service              loaded active running System Logging Service\nrtkit-daemon.service         loaded active running RealtimeKit Scheduling Policy Service\nserial-getty@ttyS0.service   loaded active running Serial Getty on ttyS0\nslurmd.service               loaded active running Slurm node daemon\nsmartmontools.service        loaded active running Self Monitoring and Reporting Technology (SMART) Daemon\nsnapd.service                loaded active running Snap Daemon\nssh.service                  loaded active running OpenBSD Secure Shell server\nswitcheroo-control.service   loaded active running Switcheroo Control Proxy service\nsystemd-journald.service     loaded active running Journal Service\nsystemd-logind.service       loaded active running User Login Management\nsystemd-networkd.service     loaded active running Network Configuration\nsystemd-resolved.service     loaded active running Network Name Resolution\nsystemd-timesyncd.service    loaded active running Network Time Synchronization\nsystemd-udevd.service        loaded active running Rule-based Manager for Device Events and Files\ntailscaled.service           loaded active running Tailscale node agent\nudisks2.service              loaded active running Disk Manager\nupower.service               loaded active running Daemon for power management\nuser@1000.service            loaded active running User Manager for UID 1000\nwpa_supplicant.service       loaded active running WPA supplicant\n"
+    },
+    "timers": {
+      "command": [
+        "systemctl",
+        "list-timers",
+        "--all",
+        "--no-pager",
+        "--no-legend"
+      ],
+      "finished_monotonic_ns": 2678593300438382,
+      "returncode": 0,
+      "started_monotonic_ns": 2678593291616087,
+      "stderr": "",
+      "stdout": "Wed 2026-09-23 13:00:00 PDT 4min 29s Wed 2026-09-23 12:50:02 PDT          5min ago sysstat-collect.timer          sysstat-collect.service\nWed 2026-09-23 13:06:23 PDT    10min Tue 2026-09-22 13:06:23 PDT           23h ago update-notifier-download.timer update-notifier-download.service\nWed 2026-09-23 13:12:13 PDT    16min Tue 2026-09-22 13:12:13 PDT           23h ago systemd-tmpfiles-clean.timer   systemd-tmpfiles-clean.service\nWed 2026-09-23 13:32:50 PDT    37min Wed 2026-09-23 12:33:53 PDT         21min ago anacron.timer                  anacron.service\nWed 2026-09-23 13:34:41 PDT    39min Wed 2026-09-23 12:23:17 PDT         32min ago fwupd-refresh.timer            fwupd-refresh.service\nWed 2026-09-23 14:03:15 PDT  1h 7min Wed 2026-09-23 07:18:32 PDT      5h 36min ago ua-timer.timer                 ua-timer.service\nWed 2026-09-23 20:57:18 PDT       8h Wed 2026-09-23 04:53:36 PDT            8h ago motd-news.timer                motd-news.service\nThu 2026-09-24 00:00:00 PDT      11h Wed 2026-09-23 00:00:04 PDT           12h ago dpkg-db-backup.timer           dpkg-db-backup.service\nThu 2026-09-24 00:00:00 PDT      11h Wed 2026-09-23 00:00:04 PDT           12h ago logrotate.timer                logrotate.service\nThu 2026-09-24 00:07:00 PDT      11h Wed 2026-09-23 00:07:36 PDT           12h ago sysstat-summary.timer          sysstat-summary.service\nThu 2026-09-24 02:44:26 PDT      13h Wed 2026-09-23 12:24:02 PDT         31min ago apt-daily.timer                apt-daily.service\nThu 2026-09-24 06:57:48 PDT      18h Wed 2026-09-23 06:54:53 PDT            6h ago apt-daily-upgrade.timer        apt-daily-upgrade.service\nThu 2026-09-24 07:01:06 PDT      18h Wed 2026-09-23 00:14:36 PDT           12h ago man-db.timer                   man-db.service\nSat 2026-09-26 07:36:31 PDT   2 days Mon 2026-09-14 07:22:54 PDT 1 week 2 days ago update-notifier-motd.timer     update-notifier-motd.service\nSun 2026-09-27 03:10:13 PDT   3 days Sun 2026-09-20 03:11:14 PDT        3 days ago e2scrub_all.timer              e2scrub_all.service\nMon 2026-09-28 01:15:30 PDT   4 days Mon 2026-09-21 00:08:53 PDT        2 days ago fstrim.timer                   fstrim.service\n-                                  - -                                           - apport-autoreport.timer        apport-autoreport.service\n-                                  - -                                           - snapd.snap-repair.timer        snapd.snap-repair.service\n"
+    },
+    "user_services": {
+      "command": [
+        "systemctl",
+        "--user",
+        "list-units",
+        "--type=service",
+        "--state=running",
+        "--no-pager",
+        "--plain",
+        "--no-legend"
+      ],
+      "finished_monotonic_ns": 2678593291614919,
+      "returncode": 0,
+      "started_monotonic_ns": 2678593288223342,
+      "stderr": "",
+      "stdout": "dbus.service           loaded active running D-Bus User Message Bus\nfilter-chain.service   loaded active running PipeWire filter chain daemon\npipewire-pulse.service loaded active running PipeWire PulseAudio\npipewire.service       loaded active running PipeWire Multimedia Service\nwireplumber.service    loaded active running Multimedia Service Session Manager\n"
+    }
+  },
+  "environmental_validity_established": false,
+  "files": {
+    "/proc/diskstats": {
+      "finished_monotonic_ns": 2678593395475672,
+      "started_monotonic_ns": 2678593395400472,
+      "text": "   7       0 loop0 14 0 34 0 0 0 0 0 0 2 0 0 0 0 0 0 0\n   7       1 loop1 345 0 7140 26 0 0 0 0 0 27 26 0 0 0 0 0 0\n   7       2 loop2 59 0 2194 6 0 0 0 0 0 3 6 0 0 0 0 0 0\n   7       3 loop3 79 0 984 19 0 0 0 0 0 19 19 0 0 0 0 0 0\n   7       4 loop4 359 0 5822 77 0 0 0 0 0 76 77 0 0 0 0 0 0\n   7       5 loop5 84 0 2324 12 0 0 0 0 0 9 12 0 0 0 0 0 0\n   7       6 loop6 50 0 2164 7 0 0 0 0 0 6 7 0 0 0 0 0 0\n   7       7 loop7 692 0 45140 150 0 0 0 0 0 151 150 0 0 0 0 0 0\n 259       0 nvme0n1 185012 68595 16587076 56835 7406609 10525788 277027254 19598985 0 4855841 20186405 114380 0 7278850904 117131 327791 413452\n 259       1 nvme0n1p1 308 473 12296 57 3 0 10 0 0 64 109 15 0 2980160 51 0 0\n 259       2 nvme0n1p2 184610 68122 16571852 56772 7406606 10525788 277027244 19598984 0 5058423 19772838 114365 0 7275870744 117080 0 0\n   7       8 loop8 59 0 2186 8 0 0 0 0 0 5 8 0 0 0 0 0 0\n   7       9 loop9 183 0 2740 17 0 0 0 0 0 17 17 0 0 0 0 0 0\n   7      10 loop10 348 0 5636 40 0 0 0 0 0 39 40 0 0 0 0 0 0\n   7      11 loop11 53 0 2140 7 0 0 0 0 0 7 7 0 0 0 0 0 0\n   7      12 loop12 58 0 2200 5 0 0 0 0 0 5 5 0 0 0 0 0 0\n   7      13 loop13 79 0 974 16 0 0 0 0 0 12 16 0 0 0 0 0 0\n   7      14 loop14 701 0 45420 170 0 0 0 0 0 149 170 0 0 0 0 0 0\n   7      15 loop15 74 0 2262 8 0 0 0 0 0 8 8 0 0 0 0 0 0\n   7      16 loop16 85 0 2270 8 0 0 0 0 0 5 8 0 0 0 0 0 0\n   7      17 loop17 63 0 398 4 0 0 0 0 0 3 4 0 0 0 0 0 0\n   7      18 loop18 10 0 20 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n"
+    },
+    "/proc/meminfo": {
+      "finished_monotonic_ns": 2678593395500761,
+      "started_monotonic_ns": 2678593395476536,
+      "text": "MemTotal:       125513944 kB\nMemFree:        31293272 kB\nMemAvailable:   120604568 kB\nBuffers:         2294772 kB\nCached:         77884280 kB\nSwapCached:            0 kB\nActive:          3215168 kB\nInactive:       77229252 kB\nActive(anon):     275712 kB\nInactive(anon):        0 kB\nActive(file):    2939456 kB\nInactive(file): 77229252 kB\nUnevictable:       26224 kB\nMlocked:           26224 kB\nSwapTotal:      16777212 kB\nSwapFree:       16777212 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:              1920 kB\nWriteback:             0 kB\nAnonPages:        291600 kB\nMapped:           369392 kB\nShmem:              2904 kB\nKReclaimable:   10266864 kB\nSlab:           11859040 kB\nSReclaimable:   10266864 kB\nSUnreclaim:      1592176 kB\nKernelStack:       10304 kB\nShadowCallStack:    2660 kB\nPageTables:         8048 kB\nSecPageTables:      7680 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    79534184 kB\nCommitted_AS:    2653536 kB\nVmallocTotal:   135288315904 kB\nVmallocUsed:      107120 kB\nVmallocChunk:          0 kB\nPercpu:           115680 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nCmaTotal:         131072 kB\nCmaFree:           69304 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\n"
+    },
+    "/proc/pressure/cpu": {
+      "finished_monotonic_ns": 2678593395518217,
+      "started_monotonic_ns": 2678593395501145,
+      "text": "some avg10=0.00 avg60=0.00 avg300=0.00 total=2394756080\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0\n"
+    },
+    "/proc/pressure/io": {
+      "finished_monotonic_ns": 2678593395529865,
+      "started_monotonic_ns": 2678593395518489,
+      "text": "some avg10=0.00 avg60=0.00 avg300=0.00 total=1931901232\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=1908292725\n"
+    },
+    "/proc/pressure/memory": {
+      "finished_monotonic_ns": 2678593395541305,
+      "started_monotonic_ns": 2678593395530025,
+      "text": "some avg10=0.00 avg60=0.00 avg300=0.00 total=11341\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=3561\n"
+    },
+    "/proc/sys/kernel/random/boot_id": {
+      "finished_monotonic_ns": 2678593395560153,
+      "started_monotonic_ns": 2678593395541513,
+      "text": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9\n"
+    },
+    "/sys/class/thermal/thermal_zone0/temp": {
+      "finished_monotonic_ns": 2678593395663721,
+      "started_monotonic_ns": 2678593395644345,
+      "text": "44900\n"
+    },
+    "/sys/class/thermal/thermal_zone1/temp": {
+      "finished_monotonic_ns": 2678593395725769,
+      "started_monotonic_ns": 2678593395708409,
+      "text": "43100\n"
+    },
+    "/sys/class/thermal/thermal_zone2/temp": {
+      "finished_monotonic_ns": 2678593395644169,
+      "started_monotonic_ns": 2678593395560457,
+      "text": "43600\n"
+    },
+    "/sys/class/thermal/thermal_zone3/temp": {
+      "finished_monotonic_ns": 2678593395708265,
+      "started_monotonic_ns": 2678593395685481,
+      "text": "43600\n"
+    },
+    "/sys/class/thermal/thermal_zone4/temp": {
+      "finished_monotonic_ns": 2678593395760521,
+      "started_monotonic_ns": 2678593395743417,
+      "text": "44100\n"
+    },
+    "/sys/class/thermal/thermal_zone5/temp": {
+      "finished_monotonic_ns": 2678593395685289,
+      "started_monotonic_ns": 2678593395663929,
+      "text": "43700\n"
+    },
+    "/sys/class/thermal/thermal_zone6/temp": {
+      "finished_monotonic_ns": 2678593395743257,
+      "started_monotonic_ns": 2678593395726169,
+      "text": "44900\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678593396646812,
+      "started_monotonic_ns": 2678593396549403,
+      "text": "2210000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy1/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678593397447182,
+      "started_monotonic_ns": 2678593397349341,
+      "text": "2236000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy10/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678593396939884,
+      "started_monotonic_ns": 2678593396834716,
+      "text": "2184000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy11/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678593395958010,
+      "started_monotonic_ns": 2678593395760681,
+      "text": "3900000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy12/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678593396749580,
+      "started_monotonic_ns": 2678593396647276,
+      "text": "2158000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy13/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678593397549038,
+      "started_monotonic_ns": 2678593397447374,
+      "text": "2158000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy14/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678593396549211,
+      "started_monotonic_ns": 2678593396447099,
+      "text": "2132000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy15/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678593397349181,
+      "started_monotonic_ns": 2678593397257757,
+      "text": "2886000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy16/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678593396349579,
+      "started_monotonic_ns": 2678593396169834,
+      "text": "3692000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy17/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678593397241725,
+      "started_monotonic_ns": 2678593397223917,
+      "text": "3380000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy18/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678593396152954,
+      "started_monotonic_ns": 2678593396134522,
+      "text": "4004000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy19/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678593397211661,
+      "started_monotonic_ns": 2678593397029165,
+      "text": "3770000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy2/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678593396446939,
+      "started_monotonic_ns": 2678593396349739,
+      "text": "2210000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy3/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678593397257629,
+      "started_monotonic_ns": 2678593397241933,
+      "text": "2808000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy4/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678593396169690,
+      "started_monotonic_ns": 2678593396153130,
+      "text": "3094000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy5/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678593397223789,
+      "started_monotonic_ns": 2678593397211805,
+      "text": "5018000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy6/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678593396134362,
+      "started_monotonic_ns": 2678593396047594,
+      "text": "3068000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy7/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678593397029005,
+      "started_monotonic_ns": 2678593396940044,
+      "text": "3094000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy8/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678593396047466,
+      "started_monotonic_ns": 2678593395958186,
+      "text": "3354000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy9/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678593396834556,
+      "started_monotonic_ns": 2678593396749740,
+      "text": "3302000\n"
+    }
+  },
+  "finished_monotonic_ns": 2678593397550286,
+  "finished_unix_ns": 1790193331062845196,
+  "host": "spark-7ff0",
+  "limitations": [
+    "Sequential snapshots are not atomic and miss activity between observations.",
+    "Device counters do not attribute I/O to the measured job; GPU N/A is not zero.",
+    "Service presence is not permission for arbitrary work; configuration policy is separate."
+  ],
+  "source_sha256": "827df6de253e2f4d542f2fed1fe8d95e5be380806cd420e046411c569caa7f27",
+  "started_monotonic_ns": 2678593284811077,
+  "started_unix_ns": 1790193330950105859,
+  "static": true
+}
