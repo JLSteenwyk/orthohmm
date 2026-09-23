@@ -1,5 +1,46 @@
 # Publication Progress
 
+## Replacement Parameter Chain Reconnected Through Scoring (2026-09-23)
+
+The preceding turn made progress by scheduling replacement native admission.
+This turn reconnects the remaining parameter workflow, without altering
+the frozen inference executor, candidate arms, reference mapping, scoring
+commands, or six endpoints. Each replacement stage has a detached executor,
+exact upstream job/revision checks, fresh-output guards, and the corrected
+Python package visibility policy. Original executors remain unchanged.
+
+| Stage | Array | Frozen executor commit | Checkout under `benchmarks/work/` |
+| --- | --- | --- | --- |
+| Inference | 22034 | aa8c0e1937b898a9da83c69bf36ec342a4e04b89 | publication_qfo_parameter_phylogeny_v1 |
+| Native admission | 22035 | 7f8ff221bb9dd0b2a3213496ba109bd776dfe13f | publication_qfo_parameter_native_admission_v2 |
+| Pair conversion | 22039 | c7481959e85a4db827997dd88928143ec205f975 | publication_qfo_parameter_pairs_v2 |
+| Six-endpoint assessment | 22043 | 163c9214f8a7cc12381c3ebb6802ce5ae35bbcb8 | publication_qfo_parameter_assessment_v2 |
+| Score admission | 22047 | aec68510443c99cb7497384ca919cd8649097a6b | publication_qfo_parameter_score_admission_v2 |
+
+Every downstream submission uses `aftercorr:<upstream>,afterany:<upstream>`.
+All arrays have four arms, concurrency one, and no requeue. Pair conversion
+and score admission retain 2 CPUs / 64 GiB / 4 hours; assessment retains
+8 CPUs / 96 GiB / 24 hours. Output namespaces remain the unused v1 result
+paths, while validator and runner checkouts use v2. No outputs are replaced.
+
+Focused tests across execution, native admission, conversion, assessment,
+score admission, and shared CPM validation: **167 passed**. Tests explicitly
+reject the old upstream arrays and retain checks for unfinished jobs,
+mapping loss, provenance differences, source changes, and output inventory
+changes. All three new shell scripts pass `bash -n`; scoped whitespace
+checks pass. These tests are not a claim that real scientific admission
+has completed.
+
+After confirming all 16 old downstream tasks were pending, cancelled only
+superseded arrays 21935, 21939, 21944, and 21948. Accounting confirms each
+has `Start=None`, elapsed zero, and `CANCELLED by 1000` at 14:20:50 EDT.
+Original inference failures 21932 and all evidence remain preserved.
+At the final observation, replacement inference 22034 is still queued,
+all replacement downstream stages await dependencies, CPM 21956 is running
+at 45:30, and BLAST diagnostic 22029 awaits resources. No new accuracy
+results exist yet. FastOMA retry review, BLAST recovery, CPM environment
+follow-up, dedicated timing, and the remaining publication work are open.
+
 ## Replacement Parameter Native Admission Scheduled (2026-09-23)
 
 The previous turn was progress: it corrected package visibility and
