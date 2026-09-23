@@ -110,7 +110,7 @@ def test_admission_orchestration(tmp_path, monkeypatch, problem):
         path.write_text(json.dumps(value))
         return record(path)
     root, directory, launcher = tmp_path, tmp_path / "output", tmp_path / "launcher"
-    executor = root / "benchmarks/work/publication_qfo_cpm_variant_v1"
+    executor = root / "benchmarks/work/publication_qfo_cpm_variant_v2"
     write(executor / "benchmark_tools/run_qfo_cpm_variant.py", {})
     scientific = write(launcher / "benchmark_tools/replay_high_sensitivity.py", {})
     auditor = write(launcher / "benchmark_tools/audit_accuracy_checkpoint.py", {})
@@ -155,7 +155,8 @@ def test_admission_orchestration(tmp_path, monkeypatch, problem):
         write(directory / name, {})
     def check_output(command, **kwargs):
         if command[0] == "sacct":
-            return "JobID|JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS\n21960_0|21961|COMPLETED|0:0|00:01:00|bizon|32\n"
+            assert command[1:3] == ["-j", "22059"]
+            return "JobID|JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS\n22059_0|22060|COMPLETED|0:0|00:01:00|bizon|32\n"
         return module.EXECUTOR
     monkeypatch.setattr(module.subprocess, "check_output", check_output)
     monkeypatch.setattr(module.subprocess, "run", lambda *a, **k: None)
