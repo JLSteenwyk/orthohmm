@@ -1,5 +1,55 @@
 # Publication Progress
 
+## CPM Replacement Chain Through Pair Conversion (2026-09-23)
+
+The preceding Samwise follow-up was no progress toward installation: fresh
+DGX and exact public-source checks still found no verified package source.
+No substitute package was installed. This does not block continued analysis
+on the local host or the approved temporary service suppression for timing.
+
+Recorded the previously submitted candidate admission and phylogeny stages:
+- Candidate admission **22064**, frozen checkout
+  `publication_qfo_cpm_candidates_admission_v2`, commit
+  `d4db39cc7a1f78a7e63147313c08b837c8bbb6e9`, depends on 22062.
+  Candidate/admission tests passed **81 tests**.
+- Native phylogeny **22066**, frozen checkout
+  `publication_qfo_cpm_phylogeny_v2`, commit
+  `1b8825a9b9ba302fc8f3aaaeb9f20f250ad487f6`, depends on 22064.
+  Phylogeny/admission tests passed **117 tests**. Scientific commands and
+  thresholds remain unchanged. Its launcher unsets PYTHONNOUSERSITE to
+  match the frozen full Python inventory, as in the parameter-phylogeny fix.
+
+Reconnected and submitted two further stages after focused validation:
+- Native admission **22070**, frozen checkout
+  `publication_qfo_cpm_native_admission_v2`, commit
+  `448c87d9330af1822598693c26c9b7dc546d3355`, depends on 22066.
+  Requires the replacement producer source SHA-256
+  `d1879be5c1f7d8e2da25cf8faa6118e03fc24928e73a290532e5d13c4dc544e0`.
+  **97 tests passed**, including the surrounding phylogeny/pair stages.
+- Pair conversion **22072**, frozen checkout `publication_qfo_cpm_pairs_v2`,
+  commit `0b3a16983cda04374b136b0e278f672282b3c6bc`, depends on 22070.
+  Requires native-admission source SHA-256
+  `395cb6ea4dd0c07ebfb55a4c526dbb9d9729c00b80ed24abdae8207daee881fa`.
+  **115 tests passed**, including native admission and scoring interfaces.
+
+New native-admission and pair launchers also unset PYTHONNOUSERSITE;
+shell syntax and scoped whitespace checks pass. Both arrays have two arms,
+concurrency one, 2 CPUs, 64 GiB, four hours, and no requeue. Dependencies
+retain both afterany and aftercorr checks. Full native validation and exact
+source/output identity checks remain intact; native ortholog pairs are not
+replaced by orthogroup cliques. Existing output no-overwrite guards remain.
+Original executors and failed-job evidence are preserved.
+
+CPM scoring and final score admission still require replacement provenance
+pins and submissions. The old pending downstream chain has not been
+redirected. These milestones do not establish successful native execution
+or scoring of the CPM variants.
+
+Current accounting: parameter phylogeny **22034_0 completed 0:0 in 26:24**;
+arm 1 is running, arms 2-3 pending. FastOMA scoring **22057** and CPM replay
+**22059_0** are running. BLAST diagnostic **22055** remains pending.
+No new accuracy result is admitted by this progress entry.
+
 ## CPM Replay Admission and Candidate Construction Reconnected (2026-09-23)
 
 The preceding turn was progress: the worker guard was repaired and fresh
