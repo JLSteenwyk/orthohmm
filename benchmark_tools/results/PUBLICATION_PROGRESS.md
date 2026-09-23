@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Curated Duplication Source Located (2026-09-23)
+
+Previous turn made progress implementing the gated fragment-score exporter.
+Verified running annotation/scoring/CPM jobs and continued another open error
+analysis requirement. Downloaded the official SwissTree 19-family summary;
+structured extraction, explicit 18-family crosswalk and seven tests pass.
+[Source feasibility report](SWISSTREE_DUPLICATION_SOURCE_20260923.md) retains
+hashes, links and limitations. No method-derived duplication calls are used.
+
+Downloaded the linked Transferrin phyloXML pilot: 121 leaves, five explicit
+duplication events matching the published summary, and all 31 retained TRFE
+accessions found by terminal-name suffix. The file is declared unrooted;
+this does not authorize ancestral features or root assumptions. Current
+resource updates, exact leaf mappings and QfO pair-label equivalence remain
+to be checked before feature definitions and outcome joins. No new scores
+or duplication bins were computed, and this source shares benchmark ancestry.
+
+Raw site/tree files remain outside Git pending rights review; small source
+inventory and executable parser are retained. Next acquire and audit the
+complete model-tree panel, preserving unavailable/ambiguous cases. Fragment
+collection 22116, parameter scoring 22043_0 and CPM replay 22081_1 remain
+active; their validation chains remain queued. BLAST recovery waits for
+resources. DGX deferred; no job restarts. Broader publication requirements
+remain incomplete.
+
 ## Descriptive Fragment-Strata Export Prepared (2026-09-23)
 
 Previous turn made progress exercising full-panel annotation admission and
