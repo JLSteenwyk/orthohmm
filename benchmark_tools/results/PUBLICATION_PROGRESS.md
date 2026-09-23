@@ -1,5 +1,21 @@
 # Publication Progress
 
+## High-CPM Constructor Diagnostic Prepared (2026-09-23)
+
+Previous turn made concrete progress: fragment results and the read-only
+crash audit were committed and pushed as 44772fa. Revalidated live jobs:
+BLAST recovery 22103_0 is running and threshold scoring has advanced to
+22043_1. Low-CPM candidates 22084_0 are resource-pending, not dependency-blocked.
+
+Prepared a [single-constructor protocol](QFO_CPM_HIGH_CONSTRUCTOR_PROTOCOL_20260923.md)
+and pinned wrapper on the preserved failed graph. It uses a fresh process
+with fatal-error tracing, validates the audit/source/runtime records, and
+compares all endpoints and weights without calling an optimizer. Fifteen
+focused tests passed, including a small native graph in a subprocess; shell
+syntax passed. Full-scale diagnostic execution remains to be submitted from
+a frozen executor after this commit. No scientific replay, default change,
+DGX access or publication-readiness claim is authorized by these tests.
+
 ## Historical Annotation Results Admitted; Low-CPM Scheduling Repaired (2026-09-23)
 
 The preceding short turn acknowledged the DGX deferral without advancing an
