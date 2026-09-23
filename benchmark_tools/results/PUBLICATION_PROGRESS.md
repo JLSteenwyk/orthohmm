@@ -1,5 +1,41 @@
 # Publication Progress
 
+## CPM Native-Worker Guard Repaired (2026-09-23)
+
+The preceding turn made progress by reconnecting FastOMA scoring and
+locating the CPM worker failure. Both prespecified variants passed the
+outer context validator but hit a second hard-coded `.1` resolution check
+inside `repeat_qfo_saved_graph.worker`, before native clustering. The frozen
+neighborhood calls for `.08` and `.12`; the control `.1` was unaffected.
+
+The checked payload worker now passes its already-validated CPM resolution
+to that inner guard. Default callers still require `.1`; only the three
+prespecified float values are accepted. Seed 4, isolate retention, exact
+requested resolution, and all upstream plan/payload checks remain required.
+No native scientific source, matrix, HMM settings, or endpoints changed.
+Replacement variant output roots are `qfo_parameter_cpm_replay_v2`, while
+the admitted control remains under v1. Failed v1 outputs are preserved.
+
+**232 focused tests passed**, including 12 real native-worker combinations
+covering all three resolutions, with/without explicit affinity and boundary
+instrumentation. Boundary tests assert the actual optimizer resolution;
+negative tests reject mismatched resolutions and other changed settings.
+The output-root assertion was subsequently rerun with all 18 CPM context
+tests passing. Batch syntax and scoped whitespace checks pass.
+
+Committed/froze `b4acb996e8accdcb604a66c95db2f5d8b68ab599` at
+`benchmarks/work/publication_qfo_cpm_variant_v2`. Submitted replacement
+array **22059**, two arms, concurrency one, 32 CPUs / 192 GiB / 24 hours,
+no requeue. The admitted control is not rerun. Before either variant, the
+runner still checks control admission 21958 and reproduces it with its
+original frozen validator. Original variant jobs 21960 and their failures
+remain intact. Downstream CPM jobs are not reattached yet: they require
+explicit replacement job/executor/output provenance updates.
+
+FastOMA pair conversion **22056 COMPLETED/0:0 in 3:49**; scoring 22057 is
+pending. BLAST diagnostic 22055 is pending, and parameter inference 22034
+continues. Completion of these workflow repairs is not publication readiness.
+
 ## FastOMA Conversion and Scoring Reconnected (2026-09-23)
 
 The preceding turn made progress: native FastOMA admission completed and
