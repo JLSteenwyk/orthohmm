@@ -1,0 +1,17 @@
+{
+  "dependency_override": "afterok:22105",
+  "executor": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/blast_recovery_merge_v1_20260923",
+  "executor_commit": "a449ff580aca58e8d1fdc653e7615e007093771a",
+  "job_id": "22150",
+  "prefix_accounting": "JobID|State|ExitCode|NodeList|AllocCPUS\n22148|COMPLETED|0:0|bizon|2\n",
+  "publication_ready": false,
+  "reason": "Initial submission with dependency 22148 rejected because completed job aged out of controller; merge driver still requires successful 22148 accounting and frozen report checks.",
+  "scheduler": "JobId=22150 JobName=qfo_blast_recovery_merge UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=Dependency Dependency=afterok:22105_*(unfulfilled) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=1-00:00:00 TimeMin=N/A SubmitTime=2026-09-23T19:57:11 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-23T19:57:11 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:1577995 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1 NumCPUs=2 NumTasks=1 CPUs/Task=2 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=2,mem=64G,node=1,billing=2 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=2 MinMemoryNode=64G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_blast_recovery_merge_20260923.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_merge_22150.log StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_merge_22150.log TresPerTask=cpu=2 \n",
+  "script": {
+    "bytes": 1021,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_blast_recovery_merge_20260923.sh",
+    "sha256": "53d98ab19a55b0f283cede9faee771b19d7ea6a8b9943a84f26c846e41a4e50b"
+  },
+  "search_admitted": false,
+  "status": "recovery_merge_queued_not_executed"
+}

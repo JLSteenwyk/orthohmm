@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Recovery Candidate Merge Queued Behind Complete Panel (2026-09-23)
+
+Previous turn implemented the integrated content auditor (7ba1a5d), constituting
+progress. Re-read the full objective and verified live low-CPM phylogeny
+22088_0 and resource-pending replay 22103_3. Eighty focused recovery tests
+pass; shell syntax and frozen module imports/helper hashes also pass.
+
+Committed the scheduler wrapper (a449ff5), created detached executor
+`benchmarks/work/blast_recovery_merge_v1_20260923` at full revision
+`a449ff580aca58e8d1fdc653e7615e007093771a`, and submitted **22150**:
+two CPUs, 64 GiB, 24 hours, bizon, no requeue. Verified PENDING with the
+whole-array `afterok:22105_*` dependency. Approximately 12 TB is free.
+The candidate directory was absent before submission.
+
+The first submission was rejected because successful prefix-check job 22148
+has aged out of the controller. `sacct` still confirms COMPLETED 0:0 on bizon
+with two CPUs. The successful submission overrides only the scheduler
+dependency to `afterok:22105`; the frozen driver still requires 22148's
+successful accounting, exact recheck evidence and all twenty native/admission
+successes before copying. No scientific prerequisite was waived.
+[Submission receipt](qfo_blast_recovery_merge_submission_22150.json) records
+the exact override, script identity, executor revision and verified resources.
+
+The queued job writes only a candidate, not a whole-search admission. The
+independent content audit, formatted-database parity and final provenance
+admission remain required before BPO/inference. Existing held downstream jobs
+and DGX remain untouched. No merge has executed yet.
+
+
 ## Full Recovered Candidate Content Auditor Implemented (2026-09-23)
 
 Previous turn integrated validated parameter findings into the manuscript
