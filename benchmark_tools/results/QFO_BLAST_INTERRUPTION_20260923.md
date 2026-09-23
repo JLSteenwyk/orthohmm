@@ -92,3 +92,49 @@ query-completion guarantees. Attempts to retrieve source listings from
 child returned HTTP 404. Modern BLAST+ behavior was not substituted as
 proof of legacy behavior. Next: establish a validated query-completion
 boundary and replay strategy, or use a fresh separately recorded search.
+
+## Retained Row and Query-Order Audit Completed
+
+Job 22030 completed with exit 0:0 in 00:44:28 on September 23. The
+read-only scan applied the existing numerical, alignment-accounting,
+identifier, coordinate, and query/subject-block checks to every complete
+row before the frozen damaged-tail boundary. It also confirmed strictly
+increasing FASTA query ordinals between blocks and reproduced the original
+full-file SHA-256, including the excluded tail.
+
+| Observation | Count |
+| --- | ---: |
+| Structurally validated HSP rows | 366,012,663 |
+| Distinct directed query/subject blocks | 202,743,309 |
+| Observed query blocks (including incomplete final query) | 885,225 |
+| Queries with self hits | 885,225 |
+| Subjects with hits | 958,574 |
+| Input queries without observed hit rows | 98,912 |
+| Logged failed queries | 44 |
+| Logged failed queries with outgoing hits | 0 |
+| Logged failed queries with incoming hits | 16 |
+| HSP rows exceeding the configured 1e-5 cutoff | 0 |
+
+The final query `tr|F1MRE1|F1MRE1_BOVIN` begins at zero-based byte offset
+33,141,800,005. Its 4,085 bytes of complete rows and the following 966
+damaged-tail bytes are NOT a complete query result. All of that query must
+be excluded from any proposed retained prefix. This leaves 885,224 earlier
+observed blocks as candidates for further recovery validation, not accepted
+results. A conservative replay set consisting of all absent queries plus
+the final query would contain 98,913 unique input queries. Absence includes
+unprocessed queries and potentially true no-hit/failed queries; do not call
+98,912 a native search-failure count.
+
+Artifacts remain outside Git under
+`benchmarks/work/qfo_blast_prefix_audit_20260923/`:
+
+- `status.json` SHA-256:
+  `a0d024ff33544b64eafcb7ebe88ba3948ad0cffe8aabcb1e4ef2ce300cc71bc9`.
+- `query_blocks.jsonl`: 229,006,947 bytes, SHA-256
+  `fc0c4cb91088308b64674adf657ff3df63e234429110bfbd263856395d575ad6`.
+
+The report explicitly leaves admission and reuse false. The existing
+44 diagnostic failures are incomplete-run observations, not the final
+benchmark failure inventory. Native replay 22029 remains pending; no
+retained prefix was copied, merged, or admitted. FastOMA 21740 remains
+live and has advanced to `hog_rest` tasks.

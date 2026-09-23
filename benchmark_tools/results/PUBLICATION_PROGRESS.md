@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Retained-Prefix Audit Completed (2026-09-23)
+
+After a verified wait on live audit 22030 and FastOMA 21740, accounting
+confirms audit 22030 COMPLETED/0:0 in 00:44:28. Its report validates all
+366,012,663 complete HSP rows and 885,225 observed query blocks, confirms
+FASTA order and the original full-file checksum, and identifies final-query
+start byte 33,141,800,005. The final query remains incomplete and excluded.
+
+[Full findings and artifact hashes](QFO_BLAST_INTERRUPTION_20260923.md#retained-row-and-query-order-audit-completed)
+record 44 logged query failures, none with outgoing hits and 16 with incoming
+hits. These are partial-run diagnostics, not final failure counts. There
+are 885,224 earlier observed blocks potentially reusable after further
+validation; a conservative all-absent-plus-final replay set has 98,913
+queries. No prefix reuse is authorized yet. Native replay 22029 remains
+pending Priority, and admission 21746 remains held. FastOMA is RUNNING at
+1:21:53 and has progressed to `hog_rest` tasks. The prior running-audit
+entry is now superseded by this completed diagnostic, not by a completed
+OrthoMCL search.
+
 ## Full Retained-Prefix Row Audit Running (2026-09-23)
 
 Previous turn submitted the frozen native replay diagnostic. Added a
