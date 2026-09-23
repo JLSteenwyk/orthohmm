@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Current SwissTrees Runner And Evidence Routing Reconciled (2026-09-23)
+
+Previous turn made progress through FastOMA uncertainty, independent
+arithmetic reproduction and manuscript/figure updates. Investigated the
+three current-checkout runner test failures instead of treating the frozen
+executor's passing tests as evidence that the current checkout was healthy.
+
+Compared the pinned historical FastOMA conversion helper to HEAD: only its
+native-admission revision and checkout path changed. Pair semantics and
+conversion logic are unchanged. Updated the current SwissTrees runner's
+explicit helper hash to
+`4ed1fade9fe59f79c452cfcb4d363d99b229517f358096eab0a7d7253afbac5f`.
+This accepts one reviewed current source, not arbitrary drift. Historical
+executor 10338e2 and result 22098 remain unchanged. **78 focused tests passed**
+in the current checkout across runner, bootstrap, raw audit, arithmetic
+reproduction and FastOMA conversion. This resolves the previously reported
+three source-pin failures; it is not a full-repository test claim.
+
+Updated the reproduction guide and claim checklist from six to seven
+admitted methods and added exact checksummed arithmetic reproduction
+instructions for 22098. Kept the supplied-tree caveat, missing OrthoMCL,
+24-endpoint correction, no-superiority conclusion and unfinished archival
+path relocation explicit. No results were regenerated or silently repinned.
+
+Latest scheduler inspection: parameter arm 22034_2 running; its native
+admissions await the array. BLAST diagnostic 22055 and CPM replay 22081
+pending. Dedicated timing and remaining publication deliverables remain
+incomplete.
+
 ## FastOMA Paired Uncertainty And Manuscript Update (2026-09-23)
 
 Previous turn was progress: FastOMA scores were admitted/exported and the

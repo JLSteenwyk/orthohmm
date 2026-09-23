@@ -27,7 +27,7 @@ SOURCES = {
     "export_qfo_corrected_factorial.py": "8a508b229d6aee560a65c7700d4281f4b8fd550b748ef9062e18bc9f84717ecd",
     "run_qfo_corrected_factorial_assessment.py": "ada6c4b62aef45940c9d8b3d7d670cd5ef224c356d48f8088f9b4892d4c7f164",
     "prepare_qfo_corrected_orthofinder_pairs.py": "c804a4070a8835c98f94b5079184de9123d7c2d179700ecfcc0bb6d4da602cd5",
-    "prepare_qfo_corrected_fastoma_pairs.py": "c4437cd13a61573100d5a3fabdbb2fb3d15c6e2f2570f13b4b4fc60631953069",
+    "prepare_qfo_corrected_fastoma_pairs.py": "4ed1fade9fe59f79c452cfcb4d363d99b229517f358096eab0a7d7253afbac5f",
     "prepare_qfo_corrected_orthomcl_pairs.py": "87b229469466cf330259db7f1ec5cd03609001bbb5d594ef49583bd4f832b23e",
     "publication_comparison.py": "99f55e93ab60b2220663b631980076c79fe99cb9569d8a6596f7afe12fcabb5b",
     "validate_qfo_native_assessment.py": "4786081a21ce04b8ae25f1f3e83ed8a1766472ff7e4476ae70752fe7f0656da5",
