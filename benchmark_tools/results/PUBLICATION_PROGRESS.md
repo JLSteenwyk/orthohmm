@@ -1,5 +1,28 @@
 # Publication Progress
 
+## BLAST Replay Comparison Checks Implemented (2026-09-23)
+
+Previous turn made progress by preparing and independently checking the
+exhaustive recovery query partition. Diagnostic 22055 is still resource-
+pending, so implemented its next required validation step without restarting
+it. The comparator requires terminal successful scheduling/native stages,
+checks complete database and evidence identities, validates hit-table
+structure, compares combined versus isolated query HSP multisets and logs,
+and checks selected retained complete blocks. The incomplete final block
+is only tested for subset consistency, never treated as complete.
+
+All 84 focused comparison, replay, partition and structural tests passed.
+Cases include duplicate HSP loss, row reordering, changed diagnostic text,
+empty failed-query outputs, malformed rows and partial-query mismatch.
+The [documented comparison command](QFO_BLAST_INTERRUPTION_20260923.md)
+does not perform recovery, merge, or authorize prefix reuse. Real replay
+compatibility remains unknown until 22055 executes; no result was fabricated.
+
+Live accounting: 22034_3 running at 41:18, CPM 22081_0 at 40:52, 22055
+pending. No existing job restarted and no DGX access. OrthoMCL completion,
+remaining robustness, uncertainty/annotation gaps, controlled resource
+evidence and final archival publication package remain unfinished.
+
 ## Exhaustive OrthoMCL Recovery Query Partition Prepared (2026-09-23)
 
 Previous turn made progress with independently verified identity strata and

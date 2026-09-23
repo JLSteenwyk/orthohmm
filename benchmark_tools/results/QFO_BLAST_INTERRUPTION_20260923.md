@@ -184,3 +184,36 @@ ambiguous, not a native-failure label. A reviewed recovery execution plan,
 successful diagnostic, durable completion records, complete merge validation
 and replacement downstream admission are still required. Job 21746 remains
 held. No recovery BLAST execution or merge was launched by this preparation.
+
+## Diagnostic Comparison Implementation
+
+The comparison command is implemented and tested while 22055 remains
+resource-pending. It requires terminal successful accounting and all six
+completed native stages, checks recorded inputs/database/output/log identities,
+validates nonempty hit-table structure against the complete FASTA, and compares
+per-query multisets of all twelve printed HSP fields. This preserves duplicate
+HSP multiplicity while tolerating row order; structural contiguity is checked
+separately. Empty output is retained, not fabricated as a hit or automatically
+called a successful query. Log comparisons ignore line numbers but retain
+exact message, level, category and multiplicity.
+
+Earlier complete diagnostic query blocks must match replay HSP multisets.
+The interrupted final block is checked only as a multiset subset of replay;
+even a match cannot certify its old completion. Absent old query output is
+reported as unobserved. The entire preserved partial file and selected block
+hashes are rechecked, with before/after file identity checks. No partial file
+is edited. Every mismatch remains visible, and even compatible diagnostics
+leave reuse_authorized and search_admitted false.
+
+After 22055 completes successfully, with a fresh report destination:
+
+```sh
+python -m benchmark_tools.compare_blast_replay_panel --root . \
+  --output /tmp/qfo-blast-diagnostic-comparison-new.json
+```
+
+Eighty-four focused comparison, diagnostic, partition and hit-table tests
+passed. These are implementation tests, not an executed comparison of real
+replay outputs; no replay compatibility result is yet available. Failed or
+interrupted native stages require separate investigation, not forcing this
+success-only command to admit them. The full recovery plan remains separate.
