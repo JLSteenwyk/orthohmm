@@ -1,5 +1,55 @@
 # Publication Progress
 
+## Corrected CPM Chain Complete; FastOMA Scores Admitted (2026-09-23)
+
+Previous turn made progress through corrected CPM phylogeny/pair stages.
+Completed the remaining orchestration this turn without changing endpoints:
+- Scoring **22094**, checkout `publication_qfo_cpm_assessment_v3`, commit
+  `d388ee7a36fa7e1fc2882a43b43ce358604fd249`, depends on conversion 22092.
+  Pins converter `dc5bb35de6830db9fbb3cc050205bfd0dd1cad53` and source
+  `e12852929d1df7605723a8199ab9f68a97bc86ef2d3cc9c959e4f1c7b5dda0be`.
+  **108 focused tests passed**.
+- Score admission **22096**, checkout `publication_qfo_cpm_score_admission_v3`,
+  commit `520d637e8a0cffb74a044b91535b727be46435fc`, depends on 22094.
+  Pins that scoring executor and source
+  `a8fad35977148e89557132f43362c9c842b602409de3974440dae93f6676c048`.
+  **121 focused tests passed**.
+
+Shell syntax and scoped whitespace checks pass. Both arrays have two arms,
+concurrency one, no requeue, and afterany plus aftercorr dependencies.
+Scoring retains 8 CPUs / 96 GiB / 24 hours; admission 2 CPUs / 64 GiB / four
+hours. Scheduler inspection confirms the full corrected chain:
+**22081 -> 22082 -> 22084 -> 22086 -> 22088 -> 22090 -> 22092 -> 22094 -> 22096**.
+
+Verified old held task 22059_1 and downstream arrays 22060, 22062, 22064,
+22066, 22070, 22072, 22074, 22076 were pending with zero elapsed/no start,
+then cancelled them. Accounting confirms cancellation at 15:29:51 with zero
+elapsed. Failed 22059_0 and all original/v2 outputs and frozen executors are
+preserved. The corrected CPM chain is queued, not scientifically completed.
+
+FastOMA scoring **22057 completed 0:0 in 30:55** and independent admission
+**22058 completed 0:0 in 1:30**. Inspected the admitted corrected report at
+`benchmarks/work/qfo_corrected_fastoma_assessment_admission_20260918.json`
+(filename predates execution), SHA-256
+`e40d1c4aaf89fafc3ea7fed8c198a4cf22e7ffe07a0eb522cf1730f36dada694`.
+Status is corrected_comparator_assessment_admitted. Exported the new frozen
+point-estimate table via the existing exporter to
+`qfo_corrected_comparison_20260923_v6`; its seven other rows are exactly
+unchanged from v5, including the missing OrthoMCL row. **45 exporter tests
+passed**. The report itself remains outside git because it is 31.7 MB.
+
+FastOMA GO/EC/VGNC/SwissTrees/TreeFam-A/FAS are respectively
+0.43689352 / 0.89716752 / 0.9500961370 / 0.7802191344 / 0.6579015590 /
+0.6543663364. Project-defined six-metric secondary mean is 0.7294407012,
+not official QfO F1. All 15,008,180 native pairs were retained with no mapping
+loss. The supplied corrected OrthoFinder species-tree caveat remains visible
+in prediction semantics. Paired uncertainty and manuscript/figure updates
+for this new comparator remain to be completed; no significance is claimed.
+
+Latest accounting still shows parameter 22034_2 running, and BLAST diagnostic
+22055 pending. Dedicated timing, OrthoMCL recovery, and broader publication
+requirements remain incomplete.
+
 ## Corrected CPM Phylogeny Through Pair Conversion Queued (2026-09-23)
 
 Previous turn was progress through candidate construction/admission updates.
