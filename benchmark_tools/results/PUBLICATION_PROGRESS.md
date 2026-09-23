@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Native BLAST Replay Diagnostic Queued (2026-09-23)
+
+Previous turn prepared the actual frozen five-query panel. Added a guarded
+runner and Slurm batch script; 16 panel/command tests passed, and shell
+syntax check passed. Runner verifies panel SHA, frozen plan/runtime,
+query/database records, and exact command equality except the prespecified
+query/output paths. Existing execution or native output files prevent an
+implicit restart. Each native command retains its log, return code, and
+output fingerprint; all six run sequentially. Completion does not admit
+the partial search or authorize prefix reuse. These tests cover guards,
+not a completed native replay or full interrupted-output equivalence.
+
+Committed executor revision `585e2e781bb31e776a2e94524811f34fb00f23cd`
+is deployed in detached worktree
+`benchmarks/work/blast_replay_executor_20260923`. Submitted once:
+
+```text
+sbatch --parsable --partition=gpu \
+  benchmarks/work/blast_replay_executor_20260923/benchmark_tools/run_blast_replay_panel.slurm \
+  /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/blast_replay_executor_20260923 \
+  585e2e781bb31e776a2e94524811f34fb00f23cd
+```
+
+Returned job **22029**, submitted 2026-09-23T09:55:19 EDT. Controller
+confirmed PENDING/Priority, 180 CPUs, 900G RAM, two-hour limit, Requeue=0,
+Restarts=0, requested node bizon. No native diagnostic has run yet.
+Batch log is `benchmarks/work/qfo_blast_replay_22029.log`; native logs and
+status will be under `benchmarks/work/qfo_blast_replay_panel_20260923/execution`.
+Observe this job rather than submitting a duplicate. A timeout or failed
+replay requires inspection of its retained outputs, not automatic rerun.
+
+FastOMA 21740 was RUNNING at 16:02. OrthoMCL admission 21746 remains held;
+no downstream dependency was released. Next: validate retained rows while
+resources are occupied, then compare completed replay HSPs/diagnostics and
+decide whether a separately recorded recovery is justified.
+
 ## Prespecified BLAST Replay Inputs Prepared (2026-09-23)
 
 Previous turn recovered official source and confirmed binary identity.
