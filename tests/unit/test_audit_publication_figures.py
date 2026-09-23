@@ -114,11 +114,13 @@ def test_current_corrected_scope_does_not_change_old_inventories():
     assert not set(CORRECTED_CURRENT_PANELS).intersection(PANELS)
 
 
-@pytest.mark.parametrize("kind", ["strata", "comparison"])
+@pytest.mark.parametrize("kind", ["strata", "comparison", "fastoma"])
 @pytest.mark.parametrize("problem", [None, "status", "admission", "ready", "endpoints", "duplicate"])
 def test_new_corrected_panel_source_binding(tmp_path, kind, problem):
     from benchmark_tools.audit_publication_figures import validate_corrected_panel
     source = tmp_path / "qfo_corrected_comparator_uncertainty_21987.json"
+    if kind == "fastoma":
+        source = tmp_path / "qfo_fastoma_swiss_uncertainty_22098.json"
     result = {"status": "corrected_swiss_primary_stratified_intervals" if kind == "strata"
               else "corrected_swiss_comparison_intervals_audited", "scientific_inputs_admitted": True,
               "uncertainty_admitted": True, "publication_ready": False}
@@ -139,8 +141,20 @@ def test_new_corrected_panel_source_binding(tmp_path, kind, problem):
         else:
             data["inputs"] *= 2
     panel = "corrected_swiss_strata_figure_21981" if kind == "strata" else "corrected_swiss_comparison_figure_21987"
+    if kind == "fastoma":
+        panel = "corrected_swiss_comparison_figure_20260923"
     if problem:
         with pytest.raises(ValueError):
             validate_corrected_panel(panel, data)
     else:
         validate_corrected_panel(panel, data)
+
+
+def test_fastoma_scope_rejects_old_comparator_source(tmp_path):
+    from benchmark_tools.audit_publication_figures import validate_corrected_panel, CORRECTED_FASTOMA_PANELS
+    assert CORRECTED_FASTOMA_PANELS == ("corrected_swiss_comparison_figure_20260923",)
+    data = {"publication_ready": False, "endpoints": 24,
+            "status": "corrected_swiss_comparison_rendered",
+            "inputs": [{"path": str(tmp_path / "qfo_corrected_comparator_uncertainty_21987.json")}]}
+    with pytest.raises(ValueError, match="one corrected comparator"):
+        validate_corrected_panel(CORRECTED_FASTOMA_PANELS[0], data)

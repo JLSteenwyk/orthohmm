@@ -1,0 +1,51 @@
+{
+  "display_scale": 100,
+  "endpoints": 24,
+  "inputs": [
+    {
+      "bytes": 245501,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_fastoma_swiss_uncertainty_22098.json",
+      "sha256": "121cc8adf3cd63878f19006ec5500a13f879d042eccd565e1ae5f5a863f43fb1"
+    },
+    {
+      "bytes": 6346,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_corrected_swiss_comparison.py",
+      "sha256": "79a87fb3eeef898915ed70aabea09ea17b03c7dfee88e1dbdbc007ac61c4ecc8"
+    },
+    {
+      "bytes": 8394,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/reproduce_corrected_swiss_comparison.py",
+      "sha256": "55c4882a1b273c54e3c674f4e52082d6d6ff9a39c47a1d03f12ac314c2fd9fa0"
+    }
+  ],
+  "outputs": [
+    {
+      "bytes": 30716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/corrected_swiss_comparison_figure_20260923/corrected_swiss_comparison.pdf",
+      "sha256": "7b334027a066ce1935e6a6a8a10dfb4e5a3585d742004481e21efb7da8bddec3"
+    },
+    {
+      "bytes": 173879,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/corrected_swiss_comparison_figure_20260923/corrected_swiss_comparison.png",
+      "sha256": "e5330cdd767aee798258da1a162277f5a1f7a3bd320cf59132ad7f579450112c"
+    },
+    {
+      "bytes": 117042,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/corrected_swiss_comparison_figure_20260923/corrected_swiss_comparison.svg",
+      "sha256": "e97446c27517251da3090abafbc725151683c0026bc516502939da8de1e772d1"
+    },
+    {
+      "bytes": 2433,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/corrected_swiss_comparison_figure_20260923/endpoints.md",
+      "sha256": "c29320bff1932a99db021e5479dbf5d995b48a7cdd88a31adb5ac9d7c0a1d07f"
+    },
+    {
+      "bytes": 3938,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/corrected_swiss_comparison_figure_20260923/endpoints.tsv",
+      "sha256": "0bae279d4d4d69b0a43dca2c2b6232025a1418b183aa782384a3ead2999329b5"
+    }
+  ],
+  "publication_ready": false,
+  "status": "corrected_swiss_comparison_rendered",
+  "tsv_scale": 1
+}

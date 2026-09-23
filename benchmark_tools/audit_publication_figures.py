@@ -23,6 +23,7 @@ PANELS = (
 CORRECTED_PANELS = ("qfo_corrected_factorial_figures_20260919",)
 CORRECTED_CURRENT_PANELS = (*CORRECTED_PANELS, "corrected_swiss_strata_figure_21981",
                             "corrected_swiss_comparison_figure_21987")
+CORRECTED_FASTOMA_PANELS = ("corrected_swiss_comparison_figure_20260923",)
 
 
 def validate_corrected_panel(panel, data):
@@ -37,10 +38,12 @@ def validate_corrected_panel(panel, data):
             raise ValueError("Wrong corrected strata endpoint inventory")
         source = data["results"]
         expected = "corrected_swiss_primary_stratified_intervals"
-    elif panel == "corrected_swiss_comparison_figure_21987":
+    elif panel == "corrected_swiss_comparison_figure_21987" or panel in CORRECTED_FASTOMA_PANELS:
         if data.get("status") != "corrected_swiss_comparison_rendered" or data.get("endpoints") != 24:
             raise ValueError("Wrong corrected comparator endpoint inventory")
-        candidates = [r for r in data["inputs"] if Path(r["path"]).name == "qfo_corrected_comparator_uncertainty_21987.json"]
+        filename = ("qfo_fastoma_swiss_uncertainty_22098.json" if panel in CORRECTED_FASTOMA_PANELS
+                    else "qfo_corrected_comparator_uncertainty_21987.json")
+        candidates = [r for r in data["inputs"] if Path(r["path"]).name == filename]
         if len(candidates) != 1:
             raise ValueError("Require one corrected comparator source result")
         source, expected = candidates[0], "corrected_swiss_comparison_intervals_audited"
@@ -104,12 +107,13 @@ def inspect_manifest(path, repo, tracked):
 
 
 def audit(repo, scope="historical"):
-    if scope not in {"historical", "corrected-factorial", "corrected-current"}:
+    if scope not in {"historical", "corrected-factorial", "corrected-current", "corrected-fastoma"}:
         raise ValueError("Unknown retained figure scope")
     tracked = set(subprocess.check_output(["git", "ls-files", "-z"], cwd=repo, text=True).split("\0"))
     panels = []
     selected = {"historical": PANELS, "corrected-factorial": CORRECTED_PANELS,
-                "corrected-current": CORRECTED_CURRENT_PANELS}[scope]
+                "corrected-current": CORRECTED_CURRENT_PANELS,
+                "corrected-fastoma": CORRECTED_FASTOMA_PANELS}[scope]
     for panel in selected:
         path = repo / "benchmark_tools/results" / panel / "manifest.json"
         if scope != "historical":
@@ -137,7 +141,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--repo", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
-    parser.add_argument("--scope", choices=("historical", "corrected-factorial", "corrected-current"), default="historical")
+    parser.add_argument("--scope", choices=("historical", "corrected-factorial", "corrected-current", "corrected-fastoma"), default="historical")
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError(args.output)
