@@ -11,7 +11,7 @@ from tests.unit.test_admit_qfo_corrected_replay import parent_fixture
 
 @pytest.mark.parametrize("problem", [None, "missing", "duplicate", "running", "failed", "exit", "node", "cpus", "index"])
 def test_completed_task(problem):
-    row = ["22059_0", "22060", "COMPLETED", "0:0", "00:10:00", "bizon", "32"]
+    row = ["22081_0", "22082", "COMPLETED", "0:0", "00:10:00", "bizon", "32"]
     if problem in ("running", "failed"):
         row[2] = problem.upper()
     elif problem == "exit":
@@ -26,9 +26,9 @@ def test_completed_task(problem):
         with pytest.raises(ValueError):
             module.completed_task(accounting, True if problem == "index" else 0)
     else:
-        assert module.completed_task(accounting, 0)["JobIDRaw"] == "22060"
+        assert module.completed_task(accounting, 0)["JobIDRaw"] == "22082"
         with pytest.raises(ValueError):
-            module.completed_task(accounting.replace("22059_0", "21960_0"), 0)
+            module.completed_task(accounting.replace("22081_0", "21960_0"), 0)
 
 
 @pytest.mark.parametrize("index", [0, 1])
@@ -110,7 +110,7 @@ def test_admission_orchestration(tmp_path, monkeypatch, problem):
         path.write_text(json.dumps(value))
         return record(path)
     root, directory, launcher = tmp_path, tmp_path / "output", tmp_path / "launcher"
-    executor = root / "benchmarks/work/publication_qfo_cpm_variant_v2"
+    executor = root / "benchmarks/work/publication_qfo_cpm_variant_v3"
     write(executor / "benchmark_tools/run_qfo_cpm_variant.py", {})
     scientific = write(launcher / "benchmark_tools/replay_high_sensitivity.py", {})
     auditor = write(launcher / "benchmark_tools/audit_accuracy_checkpoint.py", {})
@@ -155,8 +155,8 @@ def test_admission_orchestration(tmp_path, monkeypatch, problem):
         write(directory / name, {})
     def check_output(command, **kwargs):
         if command[0] == "sacct":
-            assert command[1:3] == ["-j", "22059"]
-            return "JobID|JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS\n22059_0|22060|COMPLETED|0:0|00:01:00|bizon|32\n"
+            assert command[1:3] == ["-j", "22081"]
+            return "JobID|JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS\n22081_0|22082|COMPLETED|0:0|00:01:00|bizon|32\n"
         return module.EXECUTOR
     monkeypatch.setattr(module.subprocess, "check_output", check_output)
     monkeypatch.setattr(module.subprocess, "run", lambda *a, **k: None)

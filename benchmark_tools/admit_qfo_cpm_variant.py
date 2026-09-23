@@ -21,8 +21,8 @@ from benchmark_tools.run_qfo_cpm_variant import ARMS, control_evidence
 from benchmark_tools.run_simulation_methods import read_frozen
 from benchmark_tools.verify_qfo_replay_launcher import verify
 
-JOB = "22059"
-EXECUTOR = "b4acb996e8accdcb604a66c95db2f5d8b68ab599"
+JOB = "22081"
+EXECUTOR = "a2486a9ef39afc2035c3fd20942696be48c5647d"
 
 
 def completed_task(accounting, index):
@@ -103,7 +103,7 @@ def admit(root, index, destination):
     context = evidence(root, plan, plan_record, ARMS[index])
     authorization = control_evidence(root, evidence(root, plan, plan_record, "control"))
     directory = Path(context["output_root"])
-    executor = root / "benchmarks/work/publication_qfo_cpm_variant_v2"
+    executor = root / "benchmarks/work/publication_qfo_cpm_variant_v3"
     if subprocess.check_output(["git", "-C", str(executor), "rev-parse", "HEAD"], text=True).strip() != EXECUTOR:
         raise ValueError("Variant executor changed")
     subprocess.run(["git", "-C", str(executor), "diff", "--exit-code", "HEAD", "--", "benchmark_tools", "orthohmm"], check=True)
