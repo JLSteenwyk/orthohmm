@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Frozen-Import Diagnostic Checked; Low-CPM Chain Released (2026-09-23)
+
+Previous turn made progress with the original SwissTree inventory (50b7e0c).
+Re-read the full objective and checked scheduler state. Constructor diagnostic
+22121 completed 0:0 in 3:50; BLAST batch 22103_2 and parameter score 22043_2
+remain running. DGX remains deferred.
+
+The [frozen-import observation](QFO_CPM_FROZEN_IMPORT_RESULT_22121.md)
+retains the same 984,137 vertices and 25,501,180 edges with zero endpoint or
+weight discrepancies. Rehashed 265 retained identities. No optimizer ran;
+this does not establish the historical crash cause or admit high-CPM outputs.
+
+Low-CPM candidate validator 22086_0 completed successfully. Its admission
+and the constructor report together contain 3,303 distinct identities, all
+rechecked without conflicts. Updated only five pending low-arm dependencies
+to afterok on their own predecessor, with before/after scheduler receipts and
+unchanged resource/command/requeue invariants. Phylogeny 22088_0 now waits
+for resources instead of the failed high arm. Downstream gates are unchanged;
+no scientific job restarted, no failure hidden, no scores yet admitted.
+Seventy-three constructor, CPM phylogeny runner and admission tests pass.
+
 ## Original SwissTree Trees Located and Inventoried (2026-09-23)
 
 The immediately preceding reply only acknowledged DGX deferral (no analysis
