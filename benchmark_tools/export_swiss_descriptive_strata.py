@@ -73,9 +73,9 @@ def export(counts, strata, output):
     output.mkdir(parents=True)
     with (output / "scores.tsv").open("x") as handle:
         fields = ["method", "stratum", "families", "status", *METRICS, "prediction_semantics"]
-        writer = csv.DictWriter(handle, fieldnames=fields, delimiter="\t", extrasaction="ignore")
+        writer = csv.DictWriter(handle, fieldnames=fields, delimiter="\t", lineterminator="\n", extrasaction="ignore")
         writer.writeheader()
-        writer.writerows(rows)
+        writer.writerows({k: "NA" if v is None else v for k, v in row.items()} for row in rows)
     with (output / "scores.md").open("x") as handle:
         handle.write("# Descriptive Corrected SwissTrees Strata\n\n")
         handle.write("F1 is the harmonic mean of macro precision and recall, not mean family F1. Scores are percentages. Missing is not zero.\n\n")

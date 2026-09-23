@@ -66,4 +66,6 @@ def test_frozen_export_and_no_overwrite(tmp_path):
     assert result["new_inferential_claims"] is False
     assert len(result["outputs"]) == 2
     assert "NA" in (output / "scores.md").read_text()
+    raw = (output / "scores.tsv").read_bytes()
+    assert b"\r" not in raw and b"\t\n" not in raw
     with pytest.raises(FileExistsError): module.export(COUNTS, STRATA, output)
