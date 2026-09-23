@@ -1,0 +1,47 @@
+{
+  "display_conversion": "Raw TSV differences multiplied by 100 for display",
+  "endpoints": 48,
+  "inputs": [
+    {
+      "bytes": 5888,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_duplication_strata_20260923/scores.tsv",
+      "sha256": "e6ec609604d9ab134bb7f7231a155d8d6685c05b44870affd840097752720619"
+    },
+    {
+      "bytes": 9352,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_swiss_descriptive_features.py",
+      "sha256": "d9947a6679117dee52e46153a8b27f3d6bde6c218ffee20ed958d6b54afc7e5e"
+    },
+    {
+      "bytes": 5660,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_swiss_duplication_strata.py",
+      "sha256": "002072c5c7bc5370d37ca8a6a4c97dcf22a0c63a60101954c67f3228be3c5e4f"
+    }
+  ],
+  "matplotlib_version": "3.10.8",
+  "new_inferential_claims": false,
+  "outputs": [
+    {
+      "bytes": 4002,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_duplication_figure_v2_20260923/endpoints.tsv",
+      "sha256": "8afb9ebf8a9eed471e1623c4ed60e29d59f9b13c9a233327dabf709be3731653"
+    },
+    {
+      "bytes": 25185,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_duplication_figure_v2_20260923/swiss_duplication_descriptive.pdf",
+      "sha256": "b0415a37cc2dd5ebfcb73c850567eb56098fdab652bb910905424b16e83556ff"
+    },
+    {
+      "bytes": 220937,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_duplication_figure_v2_20260923/swiss_duplication_descriptive.png",
+      "sha256": "b5b1deeb9a74c43a0dad769ddfaf0929b290b5e2fb62775a9072b767d8513920"
+    },
+    {
+      "bytes": 132509,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_duplication_figure_v2_20260923/swiss_duplication_descriptive.svg",
+      "sha256": "a14ca3a4cee4dac1a05e610ac657ccb7cf6f59ec293bf8ecc132e7d2e2e6dacc"
+    }
+  ],
+  "publication_ready": false,
+  "unavailable_endpoints": 6
+}

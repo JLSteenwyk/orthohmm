@@ -1055,6 +1055,18 @@ collisions, default-S nodes, family composition and development exposure
 limit interpretation. No new subgroup intervals, causal claims or
 duplication-rate interpretation are made. Missing OrthoMCL remains NA.
 
+![Descriptive duplication-annotation differences in F1, precision and recall versus full OrthoFinder.](swiss_duplication_figure_v2_20260923/swiss_duplication_descriptive.png)
+
+**Supplementary Figure: Duplication Annotations.** Points show differences
+for the nine lower and nine higher annotation-fraction families, with a
+common horizontal scale across metrics. These are observed differences,
+not confidence intervals or significance tests. The feature is derived from
+the reference trees, not an evolutionary rate or an independent explanation
+of benchmark errors. Full-panel scores and the empty missing bin remain in
+the source table; unavailable OrthoMCL is not plotted as zero.
+[Figure data and provenance](swiss_duplication_figure_v2_20260923/manifest.json)
+retain all 48 endpoint records, including six unavailable values.
+
 ![Descriptive identity-stratified differences in F1, precision and recall versus full OrthoFinder.](swiss_descriptive_feature_figures_20260923/swiss_identity_descriptive.png)
 
 **Supplementary Figure: Sequence Identity.** Points show observed differences

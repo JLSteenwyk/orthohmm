@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Duplication Figure and Updated Manuscript Preview (2026-09-23)
+
+Previous turn added the checked descriptive comparison and manuscript text
+(a0384fe). Re-read the goal and checked live Slurm state: BLAST 22103_2 and
+fourth parameter score 22043_3 are running; low-CPM phylogeny waits for
+resources. No native job restart or DGX action.
+
+Added a [duplication-stratum figure](SWISS_DUPLICATION_FIGURE_20260923.md)
+from the pinned table with 48 endpoint records, six unavailable for OrthoMCL.
+All three panels share axis limits and retain precision/recall trade-offs.
+Bounds checks rejected an initially too-small positive range; expanded it
+without clipping data. Eleven plot tests pass. Visually inspected the
+2700-by-1620 PNG: nonblank, readable and no overlapping labels/notes.
+Historical figure helpers and source tables remain unchanged.
+
+Added the caption and [refreshed HTML review](MANUSCRIPT_RENDER_REVIEW_20260923_v3.md):
+192 local occurrences, 174 tracked targets, 11 images, no Pandoc stderr.
+Eight renderer tests pass. Only the new PNG received visual inspection;
+no full refreshed browser/PDF review or publication-readiness claim.
+Native SVG whitespace is retained with its generator hashes.
+
 ## Duplication-Stratified Scores Added Without New Inference (2026-09-23)
 
 Previous turn froze and dual-implementation-checked mapped-tree features
