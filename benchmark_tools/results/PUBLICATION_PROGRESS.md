@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Spawn-Corrected CPM Candidate Chain Reconnected (2026-09-23)
+
+Previous turn made progress by freezing/submitting replay 22081 and admission
+22082. This turn reconnected candidate construction and independent candidate
+validation to those identities, without changing candidate thresholds.
+
+Candidate construction now requires admission 22082, validator commit
+`868d46c2488d37aa2c97c0a9c07e02b094c8500e`, checkout
+`publication_qfo_cpm_variant_admission_v3`, and source SHA-256
+`313e8610c6810e1a8e40a09da5a139136fcc2f583f10efdf494fc9ae5ae6146c`.
+**138 focused tests passed**. Submitted candidate array **22084** with frozen
+checkout `publication_qfo_cpm_candidates_v4`, commit
+`4f9a78a552d2f66644f37abc22802e7b2ee4b25f`.
+
+Independent candidate admission now requires that executor, array 22084,
+and candidate producer SHA-256
+`b6f3325e2e6c33eecbf74256e2bd88d339015188e47c9296fedea1155029b978`.
+**112 focused tests passed**, including the downstream phylogeny interface.
+Submitted admission array **22086** with frozen checkout
+`publication_qfo_cpm_candidates_admission_v3`, commit
+`497c54f1de8010482c0aaabd92c2c4e68dff43da`.
+
+Both new launchers pass shell syntax checks; scoped whitespace checks pass.
+Each has two arms, concurrency one, 2 CPUs / 64 GiB / four hours, no requeue,
+and afterany plus aftercorr dependencies on its immediate predecessor.
+Existing candidate output destinations remain unused and no-overwrite checks
+remain intact. Frozen failed attempts and old queued executors are unchanged.
+The current replacement chain is **22081 -> 22082 -> 22084 -> 22086**;
+phylogeny, native validation, pair conversion and scoring still require
+updated downstream pins/submissions before the chain is complete.
+
+Scheduler inspection confirmed parameter arm 22034_2 and FastOMA scoring
+22057 running, with replay 22081 and BLAST diagnostic 22055 pending. No
+new native or accuracy result was admitted. Dedicated timing and other
+publication requirements remain open.
+
 ## Spawn-Corrected CPM Replay Resubmitted (2026-09-23)
 
 Previous turn made progress by identifying the multiprocessing import bug,
