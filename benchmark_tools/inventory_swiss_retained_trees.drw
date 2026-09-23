@@ -1,0 +1,18 @@
+ReadProgram('/benchmark/lib/darwinit'):
+ReadProgram(reference):
+WalkRetained := proc(t, family)
+    if type(t, Leaf) then
+        printf('RETAINED_LEAF\t%s\t%s\n', family, t['Label']):
+    else
+        xtra := If(length(t)=3, [], If(type(t['xtra'],list),t['xtra'], [t['xtra']])):
+        printf('RETAINED_NODE\t%s\t%A\n', family, xtra):
+        WalkRetained(t[Left], family):
+        WalkRetained(t[Right], family):
+    fi:
+end:
+for name in Indices(ReconciledTrees) do
+    printf('RETAINED_CASE\t%s\t%d\n', name,
+           length(ReconciledTrees[name,'MappedProts'])):
+    WalkRetained(ReconciledTrees[name,'Tree'], name):
+od:
+exit(0):

@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Original SwissTree Trees Located and Inventoried (2026-09-23)
+
+The immediately preceding reply only acknowledged DGX deferral (no analysis
+progress). Re-read the full goal and checked live Slurm state before resuming.
+BLAST validators 22105_0/1 completed 0:0 in 17/29 seconds; low-CPM candidate
+validator 22086_0 completed 0:0 in 1:06. Frozen-import diagnostic 22121 is
+running; remaining search tasks retain validation dependencies. No restart.
+
+Found actual curated tree objects inside the pinned QfO 2020 SwissTree
+reference. Added a native Darwin traversal and strict preorder reader;
+15 tests pass. The [inventory](SWISS_RETAINED_TREE_INVENTORY_20260923.md)
+covers all 18 families, 563 mapped memberships and 1,866 tree leaves.
+POP has four repeated labels; GH14 uses compound D=Y annotations. The
+generator defaults unannotated nodes to S, which must not be conflated with
+explicit speciation observations. Corrected an initial exact-string diagnostic
+before retaining the summary; raw trees/stdout are not newly redistributed.
+
+This provides an exact-version route around current-source mismatches,
+not validated duplication strata. Native leaf mapping, pair reconstruction
+and prespecified features remain next. Scores unchanged, DGX deferred,
+publication goal still incomplete.
+
 ## BLAST Validation Interleaved With Remaining Search Batches (2026-09-23)
 
 Previous turn verified outside-checkout figure reproduction and corrected

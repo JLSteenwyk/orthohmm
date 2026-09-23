@@ -1,0 +1,317 @@
+{
+  "checked_inputs": [
+    {
+      "bytes": 318907,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/ReconciledTrees_SwissTrees.drw",
+      "sha256": "40528e3537ba57e345c443c8024f99dc3940a66e2d102703754b41bb29858ecd"
+    },
+    {
+      "bytes": 53297152,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/container_cache/qfobenchmark-darwin-2022.1.img",
+      "sha256": "abed2b0ff8bb033a2372d0cd5282fd1d6c8ab5fa07496afc48c82f54ed65ea21"
+    },
+    {
+      "bytes": 637,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/inventory_swiss_retained_trees.drw",
+      "sha256": "abd0ba27389d766585c9b9ca1f63fc5374b454bac003d2b1d54df0aa83fd066a"
+    },
+    {
+      "bytes": 254,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/lib/RecTree",
+      "sha256": "dc5161d9843fc23586cba2b85358f36fea44f856266e98e3fab1f3a1efdd1cea"
+    },
+    {
+      "bytes": 15312,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/generateData/AddReconciledTree.drw",
+      "sha256": "83892182292bd5cf0cfe6c1bf366ee0ba3a2e7b8c68a20dfea0a669c743d07cf"
+    }
+  ],
+  "command": [
+    "singularity",
+    "exec",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/container_cache/qfobenchmark-darwin-2022.1.img",
+    "darwin",
+    "-E"
+  ],
+  "duplication_strata_admitted": false,
+  "families": {
+    "APP": {
+      "annotation_histogram": {
+        ":D=Y": 3
+      },
+      "duplicate_leaf_labels": {},
+      "empty_annotation_nodes": 121,
+      "explicit_D_Y_nodes": 3,
+      "internal_node_count": 124,
+      "leaf_count": 125,
+      "mapped_proteins": 27
+    },
+    "ASTER": {
+      "annotation_histogram": {
+        ":D=Y": 2
+      },
+      "duplicate_leaf_labels": {},
+      "empty_annotation_nodes": 93,
+      "explicit_D_Y_nodes": 2,
+      "internal_node_count": 95,
+      "leaf_count": 96,
+      "mapped_proteins": 32
+    },
+    "BAMBI": {
+      "annotation_histogram": {
+        ":D=Y": 2
+      },
+      "duplicate_leaf_labels": {},
+      "empty_annotation_nodes": 41,
+      "explicit_D_Y_nodes": 2,
+      "internal_node_count": 43,
+      "leaf_count": 44,
+      "mapped_proteins": 14
+    },
+    "BAR": {
+      "annotation_histogram": {
+        "1[&&NHX:D=Y]": 1,
+        "2[&&NHX:D=Y]": 1,
+        "3[&&NHX:D=Y]": 1,
+        "4[&&NHX:D=Y]": 1,
+        "5[&&NHX:D=Y]": 1,
+        "6[&&NHX:D=Y]": 1,
+        "7[&&NHX:D=Y]": 1,
+        "8[&&NHX:D=Y]": 1,
+        "9[&&NHX:D=Y]": 1,
+        ":D=Y": 11
+      },
+      "duplicate_leaf_labels": {},
+      "empty_annotation_nodes": 193,
+      "explicit_D_Y_nodes": 11,
+      "internal_node_count": 204,
+      "leaf_count": 205,
+      "mapped_proteins": 53
+    },
+    "CASP": {
+      "annotation_histogram": {
+        ":D=Y": 62
+      },
+      "duplicate_leaf_labels": {},
+      "empty_annotation_nodes": 109,
+      "explicit_D_Y_nodes": 62,
+      "internal_node_count": 171,
+      "leaf_count": 172,
+      "mapped_proteins": 63
+    },
+    "CITE": {
+      "annotation_histogram": {
+        ":D=Y": 6
+      },
+      "duplicate_leaf_labels": {},
+      "empty_annotation_nodes": 79,
+      "explicit_D_Y_nodes": 6,
+      "internal_node_count": 85,
+      "leaf_count": 86,
+      "mapped_proteins": 28
+    },
+    "Clusterin": {
+      "annotation_histogram": {
+        ":D=Y": 5
+      },
+      "duplicate_leaf_labels": {},
+      "empty_annotation_nodes": 67,
+      "explicit_D_Y_nodes": 5,
+      "internal_node_count": 72,
+      "leaf_count": 73,
+      "mapped_proteins": 17
+    },
+    "GH14": {
+      "annotation_histogram": {
+        ":GN=10:D=Y": 1,
+        ":GN=11:D=Y": 1,
+        ":GN=12:D=Y": 1,
+        ":GN=13:D=Y": 1,
+        ":GN=14:D=Y": 1,
+        ":GN=15:D=Y": 1,
+        ":GN=16:D=Y": 1,
+        ":GN=17:D=Y": 1,
+        ":GN=18:D=Y": 1,
+        ":GN=19:D=Y": 1,
+        ":GN=1:D=Y": 1,
+        ":GN=20:D=Y": 1,
+        ":GN=21:D=Y": 1,
+        ":GN=22:D=Y": 1,
+        ":GN=23:D=Y": 1,
+        ":GN=24:D=Y": 1,
+        ":GN=25:D=Y": 1,
+        ":GN=26:D=Y": 1,
+        ":GN=27:D=Y": 1,
+        ":GN=28:D=Y": 1,
+        ":GN=29:D=Y": 1,
+        ":GN=2:D=Y": 1,
+        ":GN=30:D=Y": 1,
+        ":GN=31:D=Y": 1,
+        ":GN=32:D=Y": 1,
+        ":GN=33:D=Y": 1,
+        ":GN=34:D=Y": 1,
+        ":GN=35:D=Y": 1,
+        ":GN=36:D=Y": 1,
+        ":GN=37:D=Y": 1,
+        ":GN=38:D=Y": 1,
+        ":GN=39:D=Y": 1,
+        ":GN=3:D=Y": 1,
+        ":GN=4:D=Y": 1,
+        ":GN=5:D=Y": 1,
+        ":GN=6:D=Y": 1,
+        ":GN=7:D=Y": 1,
+        ":GN=8:D=Y": 1,
+        ":GN=9:D=Y": 1
+      },
+      "duplicate_leaf_labels": {},
+      "empty_annotation_nodes": 119,
+      "explicit_D_Y_nodes": 39,
+      "internal_node_count": 158,
+      "leaf_count": 159,
+      "mapped_proteins": 15
+    },
+    "HOX": {
+      "annotation_histogram": {
+        ":D=Y": 25
+      },
+      "duplicate_leaf_labels": {},
+      "empty_annotation_nodes": 64,
+      "explicit_D_Y_nodes": 25,
+      "internal_node_count": 89,
+      "leaf_count": 90,
+      "mapped_proteins": 56
+    },
+    "MAPT": {
+      "annotation_histogram": {
+        ":D=Y": 2
+      },
+      "duplicate_leaf_labels": {},
+      "empty_annotation_nodes": 63,
+      "explicit_D_Y_nodes": 2,
+      "internal_node_count": 65,
+      "leaf_count": 66,
+      "mapped_proteins": 13
+    },
+    "NOX": {
+      "annotation_histogram": {
+        ":D=Y": 10
+      },
+      "duplicate_leaf_labels": {},
+      "empty_annotation_nodes": 150,
+      "explicit_D_Y_nodes": 10,
+      "internal_node_count": 160,
+      "leaf_count": 161,
+      "mapped_proteins": 50
+    },
+    "POP": {
+      "annotation_histogram": {
+        ":D=Y": 3
+      },
+      "duplicate_leaf_labels": {
+        "ENSAMEG00000011433": 2,
+        "ENSECAG00000021367": 2,
+        "ENSMGAG00000013529": 2,
+        "ENSTGUG00000012218": 2
+      },
+      "empty_annotation_nodes": 101,
+      "explicit_D_Y_nodes": 3,
+      "internal_node_count": 104,
+      "leaf_count": 105,
+      "mapped_proteins": 34
+    },
+    "PSEN": {
+      "annotation_histogram": {
+        ":D=Y": 8
+      },
+      "duplicate_leaf_labels": {},
+      "empty_annotation_nodes": 118,
+      "explicit_D_Y_nodes": 8,
+      "internal_node_count": 126,
+      "leaf_count": 127,
+      "mapped_proteins": 35
+    },
+    "RPS": {
+      "annotation_histogram": {
+        ":D=Y": 4
+      },
+      "duplicate_leaf_labels": {},
+      "empty_annotation_nodes": 46,
+      "explicit_D_Y_nodes": 4,
+      "internal_node_count": 50,
+      "leaf_count": 51,
+      "mapped_proteins": 12
+    },
+    "SERC": {
+      "annotation_histogram": {
+        ":D=Y": 16
+      },
+      "duplicate_leaf_labels": {},
+      "empty_annotation_nodes": 95,
+      "explicit_D_Y_nodes": 16,
+      "internal_node_count": 111,
+      "leaf_count": 112,
+      "mapped_proteins": 43
+    },
+    "SUMF": {
+      "annotation_histogram": {
+        "0.342915": 1,
+        "0.932848": 1,
+        "0.959682": 1,
+        "0.966138": 1,
+        "0.983237": 1,
+        "0.992927": 1,
+        "0.993749": 1,
+        "0.995957": 1,
+        "0.998525": 1,
+        "0.998856": 1,
+        "0.999850": 12,
+        ":D=Y": 1
+      },
+      "duplicate_leaf_labels": {},
+      "empty_annotation_nodes": 1,
+      "explicit_D_Y_nodes": 1,
+      "internal_node_count": 23,
+      "leaf_count": 24,
+      "mapped_proteins": 12
+    },
+    "TRFE": {
+      "annotation_histogram": {
+        ":D=Y": 5
+      },
+      "duplicate_leaf_labels": {},
+      "empty_annotation_nodes": 115,
+      "explicit_D_Y_nodes": 5,
+      "internal_node_count": 120,
+      "leaf_count": 121,
+      "mapped_proteins": 31
+    },
+    "VATB": {
+      "annotation_histogram": {
+        ":D=Y": 7
+      },
+      "duplicate_leaf_labels": {},
+      "empty_annotation_nodes": 41,
+      "explicit_D_Y_nodes": 7,
+      "internal_node_count": 48,
+      "leaf_count": 49,
+      "mapped_proteins": 28
+    }
+  },
+  "leaf_mapping_validated": false,
+  "limitations": [
+    "Embedded trees are the retained reference version, not current SwissTree downloads.",
+    "MappedProts counts do not provide a leaf-to-benchmark-protein mapping.",
+    "D_Y counts include all retained tree taxa, not only benchmark taxa.",
+    "Empty annotations are not explicit speciation observations; the native generator defaults to S.",
+    "No pair-relation reconstruction, outcome joins, new strata or confidence intervals performed."
+  ],
+  "prediction_statistics_evaluated": false,
+  "source": {
+    "bytes": 5220,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/inventory_swiss_retained_trees.py",
+    "sha256": "8b618de39bc7e100837dfc5817feb73fb79f5947de812f1e6e3ffc153e77d404"
+  },
+  "status": "retained_native_tree_inventory",
+  "stderr": "",
+  "stdout_sha256": "24ec0227bfab20b45c0b6a3a667a87e1358a309c4eef97beffe2ea6277d3727c"
+}
