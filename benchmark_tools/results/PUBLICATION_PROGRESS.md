@@ -1,5 +1,47 @@
 # Publication Progress
 
+## CPM Spawn Import Failure Diagnosed And Repaired (2026-09-23)
+
+Previous turn was progress through real DGX bound-job service restoration
+validation. Current scheduler inspection found **22059_0 FAILED 1:0 after
+18:53**. The initial and multipass clustering calls were both checked; profile
+construction then failed because a spawned child imported OrthoHMM from
+`publication_qfo_cpm_variant_v2`, which has no compiled pair_align.so, instead
+of the verified `publication_qfo_replay_native_v1` runtime. This is an
+orchestration import failure, not evidence of a CPM accuracy regression.
+
+Python spawn re-executes the variant entry point as `__mp_main__`; its
+unconditional top-level sys.path insertion placed the orchestration root
+ahead of the parent's native launcher. The variant now skips that insertion
+only under `__mp_main__`. The common replay worker also restores the native
+launcher to first position after helper imports, before profile processes
+can spawn. No native scientific source, parameter, kernel or frozen executor
+was modified. No missing kernel was copied into the wrong checkout.
+
+**38 focused tests passed**. A real-spawn regression uses competing package
+trees with the actual variant/control entry points and confirms native
+selection. A legacy-behavior negative control reproduces selection of the
+wrong executor tree. An additional real child loaded the existing native
+`publication_qfo_replay_native_v1/orthohmm/search/csrc/pair_align.so` under
+PYTHONNOUSERSITE=1 successfully. This verifies import/kernel availability,
+not the full remaining profile expansion or scientific result.
+
+Verified 22059_1 still pending, then explicitly held that task to avoid
+running the same known-broken executor. It now reports JobHeldUser. Preserve
+22059_0 and all v2 outputs; no restart or overwrite occurred. Replacement
+replay output paths, frozen executor, submissions and downstream provenance
+pins must be prepared before rerunning; the current chain is not repaired
+merely by changing the working tree.
+
+Failure evidence SHA-256 under `qfo_parameter_cpm_replay_v2/cpm_low`:
+- replay.log: `fa2b3a016eddfb9586539ea0cf133693a6b534a23e1a4ddb07407814c0998dba`
+- checked_worker.json: `24b190f80e83d82bd8990df3547ead515b5334536656fbc726d8b89cec76e6a5`
+- results.json: `ca319329421e521ebc66f5a7ef87934df08e35794efbd0f9b88a7d0a0c963d80`
+
+Parameter phylogeny 22034_1 completed 0:0 in 17:26; arm 2 is running.
+FastOMA scoring 22057 is running, BLAST diagnostic 22055 is pending.
+No new scores or comparative timings were admitted.
+
 ## DGX Bound-Job Service Guard Verified (2026-09-23)
 
 Previous turn was progress through real-host prelaunch/TERM restoration

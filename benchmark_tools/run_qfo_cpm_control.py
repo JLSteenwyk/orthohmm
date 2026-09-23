@@ -39,6 +39,9 @@ def worker(root, arm="control"):
               "replay_source": record(replay.__file__), "calls": proxy.calls, "accuracy_evaluated": False}
     externals.subprocess = proxy
     try:
+        # Helper imports modify sys.path. Spawned profile builders must inherit
+        # the frozen native package (including its compiled alignment kernel).
+        sys.path.insert(0, str(launcher))
         sys.argv = context["native_command"][1:]
         replay.main(context["native_command"][2:])
         if len(proxy.calls) != 4 or any(row["status"] != "checked" for row in proxy.calls):

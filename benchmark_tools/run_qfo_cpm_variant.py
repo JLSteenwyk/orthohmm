@@ -8,7 +8,10 @@ import subprocess
 import sys
 import time
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+# Spawn replays this file as __mp_main__; preserve the parent's verified
+# native import path instead of shadowing it with this orchestration tree.
+if __name__ != "__mp_main__":
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 ARMS = ("cpm_low", "cpm_high")
 ADMISSION_JOB = "21958"
