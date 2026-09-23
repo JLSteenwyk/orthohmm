@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Replacement Parameter Native Admission Scheduled (2026-09-23)
+
+The previous turn was progress: it corrected package visibility and
+submitted replacement inference array 22034 without changing the frozen
+scientific executor. Reinspection confirms CPM 21956 remains running,
+BLAST diagnostic 22029 is queued, and parameter inference is still queued.
+
+Updated the native-admission validator's pinned inference array from
+21932 to 22034. All completion/resource/provenance/native-pair checks are
+unchanged. Added regression tests rejecting the old or unrelated array,
+and asserting that admission queries the replacement scheduler identity
+before reading outputs. Focused parameter execution, admission, conversion,
+and shared CPM admission tests: **110 passed**. New admission batch passes
+`bash -n`; scoped diff whitespace checks pass. Its environment now preserves
+the user-site packages required by the unchanged frozen inventory.
+
+Committed as `7f8ff221bb9dd0b2a3213496ba109bd776dfe13f` and created detached
+executor `benchmarks/work/publication_qfo_parameter_native_admission_v2`.
+Submitted **22035**, four admission arms, concurrency one, 2 CPUs / 64 GiB /
+4 hours each, no requeue. Dependencies are `aftercorr:22034,afterany:22034`:
+each corresponding native task must succeed, and all inference tasks must
+terminate before admission starts. Submission is not evidence of admission.
+
+Original failed inference jobs and the v1 admission executor remain intact.
+Old blocked downstream jobs have not been redirected. Pair conversion still
+pins admission 21935 and the v1 executor; conversion, assessment, and score
+admission need explicit replacement provenance and environment updates.
+No scores or publication claims change at this milestone.
+
 ## Parameter Environment Correction (2026-09-23)
 
 Committed launcher correction as `0a97921` and submitted array **22034**
