@@ -1,5 +1,39 @@
 # Publication Progress
 
+## Periodic Session Environment Recording Tested On DGX (2026-09-23)
+
+Previous turn made progress by capturing the service/device baseline.
+Integrated that observer into the held service-guard session: before-submit
+static evidence, requested 30-second periodic observations during job wait,
+and explicitly labeled post-terminal/post-restoration static evidence.
+The recorder runs outside the native one-second collector. Actual read
+windows are retained; command timeout bounds can lengthen the cadence.
+Observation failures propagate, while cancellation/restoration cleanup
+does not depend on rerunning a failed observer. **51 focused tests passed**.
+
+Deployed committed **af0ac94** to a fresh scaling_environment_probe_v1_20260923
+directory. DGX job **22100** completed 0:0 in 37 seconds, 20 CPUs/96 GiB,
+exclusive/no-requeue. Native diagnostic sleep took **35.017284111 seconds**.
+Its three process snapshots and full measurement replay passed, and the
+service guard restored the prior configuration only after terminal state.
+This is not Samwise application repair or an orthology timing result.
+
+Three environment snapshots were retained, lasting 0.107090660,
+0.105762607 and 0.111539534 seconds. All commands returned zero. Verified
+that the pre-submit snapshot ended before native launch and the final
+snapshot began after native completion. Periodic observation is present.
+All **544** deployed source hashes match local sources.
+
+Receipts: [scaling_environment_probe_22100.tar.gz](scaling_environment_probe_22100.tar.gz),
+494,408 bytes, SHA-256
+`4ea22d4c13375c073727c9e1ac9bdf4b6b2175f7e9c5dee26feda58ab8623bbb`.
+Process status remains inconclusive (one inconclusive interval, one with
+no large persistent competitor, zero observation errors). No environmental
+validity flag was promoted. Remaining work includes service-configuration
+identity, prospective workload classification, frozen production-session
+authorization and long-run validation before the 27 inference timings.
+Latest main-host check: 22034_2 running at 44:32; 22055/22081 pending.
+
 ## DGX Service And Device Baseline Captured (2026-09-23)
 
 Previous turn made progress through real collector/service lifecycle probe
