@@ -850,9 +850,32 @@ adjusted interval[-1.362,4.316]. It does not justify default promotion or
 an OrthoFinder superiority claim. This post-development panel is not independent
 confirmation, and intervals including zero do not establish equivalence.
 Shared-node phylogeny timings are incremental and omit upstream replay/candidate
-costs. The corresponding QfO panel awaits a reproducible native baseline.
+costs.
 [Complete scores and paired intervals](OB_PARAMETER_NEIGHBORHOOD_RESULTS_20260916.md).
 [Parameter sensitivity figure](figures_ob_parameter_neighborhood_20260916/parameter_neighborhood.pdf).
+
+The corrected QfO threshold panel subsequently completed native inference,
+conversion, scoring and independent score validation for all four normalized
+score and margin variants. On the 18 SwissTrees families, control F1 was
+83.3513%. Both normalized-score variants had identical family statistics to
+the control; their zero empirical contrast intervals describe this observed
+reference panel, not equivalence on unobserved families or identical
+whole-proteome predictions. Minimum margins 1.2 and 1.8 yielded F1 values of
+82.8391% and 83.5648%, respectively. Their differences from control were
+-0.5122 percentage points (adjusted interval [-4.1173, 1.3523]) and +0.2134
+points ([-0.9285, 1.9571]); each contrast had one family win, sixteen ties
+and one loss. Precision and recall adjusted intervals also included zero.
+
+These intervals recomputed the native statistic in 100,000 paired family
+draws using the frozen seed and all 18 planned endpoints for multiplicity,
+including the two unavailable CPM contrasts. Independent numerical
+reconstruction reproduced all twelve available endpoints within 1e-12.
+Low-CPM inference remained underway, while high-CPM replay failed with
+SIGSEGV; neither missing result was imputed. The full QfO parameter panel
+therefore remains incomplete. The threshold findings do not justify changing
+frozen defaults and are development-exposed SwissTrees evidence, not a joint
+uncertainty analysis of all QfO metrics or independent confirmation.
+[Threshold results, provenance and reproduction](QFO_THRESHOLD_UNCERTAINTY_20260923.md).
 
 ## Limitations And Unfinished Analyses
 

@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Threshold Findings Integrated Into Manuscript (2026-09-23)
+
+Previous turn completed and pushed the four threshold uncertainty contrasts
+(bb73502), constituting progress. Re-read the goal and revalidated the live
+low-CPM phylogeny 22088_0; BLAST recovery 22103_3 remains resource-pending.
+
+Updated the manuscript's outdated QfO parameter status with audited point
+estimates, paired intervals, family wins/ties/losses and the independently
+reproduced endpoint count. Added the corresponding bounded claim-checklist
+entry. Both missing CPM contrasts, planned multiplicity and development
+exposure remain explicit; no default changes or equivalence claims were made.
+
+[Fresh manuscript review](MANUSCRIPT_RENDER_REVIEW_20260923_v4.md) rendered
+with empty Pandoc stderr: 193 local occurrences, 175 existing tracked targets,
+11 image occurrences. Checked new values/evidence link and removal of stale
+baseline text in HTML. Eight renderer tests pass. Full browser/PDF review and
+standalone archival packaging remain uncompleted. DGX remains untouched.
+
+
 ## Threshold Parameter Uncertainty Completed (2026-09-23)
 
 Previous turn made progress through committed recovery disposition checks
