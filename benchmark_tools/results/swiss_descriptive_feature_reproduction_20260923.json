@@ -1,0 +1,117 @@
+{
+  "clean_environment_unset": [
+    "LD_PRELOAD",
+    "LD_LIBRARY_PATH",
+    "LD_AUDIT",
+    "PYTHONPATH",
+    "PYTHONHOME"
+  ],
+  "endpoint_byte_match": true,
+  "endpoint_rows": 144,
+  "endpoint_sha256": "1e8cabb0bbec77396b04c36fc536cc7562c29f1a36cf0950e79b6acb188c9f38",
+  "exported": [
+    {
+      "bytes": 1078,
+      "path": "/tmp/orthohmm-descriptive-features-20260923/LICENSE.md",
+      "sha256": "4b9b0c3ffc73fce4c47734d7ef12bd70b9d2cdc4a3bf76ac0f3a35edbe2c3d9e"
+    },
+    {
+      "bytes": 9352,
+      "path": "/tmp/orthohmm-descriptive-features-20260923/benchmark_tools/plot_swiss_descriptive_features.py",
+      "sha256": "d9947a6679117dee52e46153a8b27f3d6bde6c218ffee20ed958d6b54afc7e5e"
+    },
+    {
+      "bytes": 7448,
+      "path": "/tmp/orthohmm-descriptive-features-20260923/benchmark_tools/prepare_ob_candidate_neighborhood.py",
+      "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+    },
+    {
+      "bytes": 5617,
+      "path": "/tmp/orthohmm-descriptive-features-20260923/benchmark_tools/results/swiss_identity_strata_20260923/scores.tsv",
+      "sha256": "be8ddb6540b62582ebe53e05c33ffdc5893ed10651bfa57eb374d9791b3af664"
+    },
+    {
+      "bytes": 11217,
+      "path": "/tmp/orthohmm-descriptive-features-20260923/benchmark_tools/results/swiss_fragment_strata_20260923/scores.tsv",
+      "sha256": "4ba79b1e6c9d0f9fabdd0136eddf43fa6ab2c2f9edd2660defe8781ee2aa432b"
+    },
+    {
+      "bytes": 13411,
+      "path": "/tmp/orthohmm-descriptive-features-20260923/benchmark_tools/results/swiss_descriptive_feature_figures_20260923/endpoints.tsv",
+      "sha256": "1e8cabb0bbec77396b04c36fc536cc7562c29f1a36cf0950e79b6acb188c9f38"
+    }
+  ],
+  "generated": [
+    {
+      "bytes": 13411,
+      "path": "/tmp/orthohmm-descriptive-features-20260923/reproduced_clean/endpoints.tsv",
+      "sha256": "1e8cabb0bbec77396b04c36fc536cc7562c29f1a36cf0950e79b6acb188c9f38"
+    },
+    {
+      "bytes": 2525,
+      "path": "/tmp/orthohmm-descriptive-features-20260923/reproduced_clean/manifest.json",
+      "sha256": "5ea4016741c1cfacc4823f304cccbd20908e81adfb49d55aea34c263fc18e766"
+    },
+    {
+      "bytes": 26056,
+      "path": "/tmp/orthohmm-descriptive-features-20260923/reproduced_clean/swiss_fragment_descriptive.pdf",
+      "sha256": "6e5ed7c435194a89d2a5b9b11a2aef017ececca9ea9f707c565132373afda819"
+    },
+    {
+      "bytes": 241761,
+      "path": "/tmp/orthohmm-descriptive-features-20260923/reproduced_clean/swiss_fragment_descriptive.png",
+      "sha256": "bf3087f1723c09eabb0da3ccc588ddb37755b038f15ff58d68d65dc9d4d05d3e"
+    },
+    {
+      "bytes": 145535,
+      "path": "/tmp/orthohmm-descriptive-features-20260923/reproduced_clean/swiss_fragment_descriptive.svg",
+      "sha256": "2b1304e0293aba330cb7d84e14ff938c0c9fda3c15e7d1474a2cf7fdd273199b"
+    },
+    {
+      "bytes": 24952,
+      "path": "/tmp/orthohmm-descriptive-features-20260923/reproduced_clean/swiss_identity_descriptive.pdf",
+      "sha256": "84513444595b452186dd51d0e7f302e246be1ee966b467fe7bbf23665963d87e"
+    },
+    {
+      "bytes": 216652,
+      "path": "/tmp/orthohmm-descriptive-features-20260923/reproduced_clean/swiss_identity_descriptive.png",
+      "sha256": "94a085cdddcaa92077bb1aa20c9287a29c3e5cb535289b408487a2f43f068dda"
+    },
+    {
+      "bytes": 128039,
+      "path": "/tmp/orthohmm-descriptive-features-20260923/reproduced_clean/swiss_identity_descriptive.svg",
+      "sha256": "088e213a065ce8bed1e93c5185cce954addc3caf647e80567ce783f8fff4116e"
+    }
+  ],
+  "images": {
+    "fragment": {
+      "nonblank": true,
+      "pixel_equal": true,
+      "size": [
+        2700,
+        1620
+      ]
+    },
+    "identity": {
+      "nonblank": true,
+      "pixel_equal": true,
+      "size": [
+        2700,
+        1620
+      ]
+    }
+  },
+  "isolated_environment": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/swiss_analysis_env_20260917",
+  "limitations": [
+    "Same-host isolated environment, not cross-platform validation.",
+    "Pinned-table visualization only; input acquisition, annotations, statistical estimation, inference and scoring are not rerun.",
+    "An earlier preserved exploratory rendering inherited CUDA LD_LIBRARY_PATH; the retained clean rendering explicitly unsets it."
+  ],
+  "matplotlib": "3.10.8",
+  "missing_endpoints": 18,
+  "numpy": "2.2.6",
+  "publication_ready": false,
+  "python": "3.10.13",
+  "source_commit": "0e072fce5defeff363c3d0a03176e92f514f2c2c",
+  "status": "relocated_descriptive_feature_render_reproduced"
+}

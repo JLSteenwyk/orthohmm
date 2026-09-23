@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Feature Figures Reproduce Outside Checkout; Checklist Corrected (2026-09-23)
+
+Previous turn submitted the frozen-import diagnostic and refreshed the
+manuscript render. Re-read the full objective and verified live BLAST 22103_1
+and threshold scoring 22043_1; 22121 and validators remain pending, not failed.
+
+Exported six committed files to a fresh directory outside the checkout and
+rendered in the existing isolated analysis virtual environment. A first run
+inherited CUDA LD_LIBRARY_PATH; preserved it and ran a clean follow-up with
+loader/Python environment overrides removed. All 144 endpoint rows (18 NA)
+match byte-for-byte; both nonblank 2700-by-1620 PNG RGB arrays match exactly.
+The [receipt and commands](SWISS_DESCRIPTIVE_FEATURE_REPRODUCTION_20260923.md)
+retain all six exported identities, generated outputs, versions and limits.
+No claim of new inference, raw scoring, annotation or cross-platform validation.
+
+Updated the completion checklist's stale September 20 job states, DGX
+authorization language and fragment/identity gap. Completed descriptive work
+is distinguished from unvalidated duplication histories and other endpoint
+uncertainty. Controlled timing and the full publication goal remain unmet.
+
 ## Frozen-Import Diagnostic Submitted; Manuscript Render Refreshed (2026-09-23)
 
 Submitted **22121** from detached executor

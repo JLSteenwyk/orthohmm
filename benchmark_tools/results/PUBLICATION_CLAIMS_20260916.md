@@ -124,12 +124,12 @@ not establish any comparative resource advantage.
 | 1. Frozen publication baseline | Comparator table, scoring corrections, OrthoMCL final-group completion and failure audit, prospective method pin | Consolidated raw-output provenance for every retained row; exact commands/versions/resources and complete claim/endpoints freeze |
 | 2. Independent generalization | Completed frozen YGOB evaluation with native, command/conversion, independent-reference and overlap gates; pair enumeration and paired uncertainty | Bounded novel-taxon claim only; stronger family independence unproven; any outcome-driven method changes require new independent confirmation |
 | 3. HMM and phylogeny contributions | Completed OrthoBench, original-release QfO and [corrected-QfO eight-cell factorials](QFO_CORRECTED_FACTORIAL_COMPLETE_20260919.md); paired SwissTrees simple effects/interactions; paired sequence controls; unconstrained-membership controls | Better-matched search sensitivity/calibration and controlled resource evidence remain needed. Corrected SwissTrees adjusted F1 intervals support reconciliation at C1 and C-by-R interactions, conditional on development-exposed families; all profile-refinement F1 intervals include zero. Corrected native/replay partition equality is admitted; historical-input scores cannot be transferred |
-| 4. Uncertainty and error explanation | Paired OrthoBench intervals and feature strata; recovered-stage and eight-method SwissTrees intervals; corrected sequence-control intervals; annotation-defined SwissTrees domain strata and figure; native GO/EC/FAS arithmetic audits; VGNC cross-block dependency audit; TreeFam pooled count audit; initial-edge and later-stage traces; observed prefilter/scoring rejection recount and final-grouping join | Appropriate uncertainty for other QfO endpoints/secondary mean; independent duplication and fragment annotations and remaining divergence/composition analyses. Observed rejection localization does not prove causal mechanisms, historical raw-score identity, counterfactual recovery or independent FAS validation |
+| 4. Uncertainty and error explanation | Paired OrthoBench/SwissTrees intervals, factorial and sequence controls; domain/composition strata; completed descriptive [identity](CORRECTED_SWISS_IDENTITY_RESULT_22102.md) and [historical fragment](SWISS_HISTORICAL_FRAGMENT_RESULT_20260923.md) analyses; native GO/EC/FAS arithmetic and VGNC/TreeFam dependency audits; observed search/grouping traces; [curated duplication-source diagnostics](SWISSTREE_DUPLICATION_SOURCE_20260923.md) | Appropriate uncertainty for other QfO endpoints/secondary mean and validated duplication-history features remain unmet. Identity is not calibrated divergence; fragment unflagged is not proven complete. Candidate tree aliases/events are not admitted histories. Observed rejection localization does not prove causal mechanisms, historical raw-score identity, counterfactual recovery or independent FAS validation |
 | 5. Robustness and practical efficiency | Corrected fixed/variable-length multi-seed simulations, complete generating-tree/NNI simulation controls, six OrthoBench tree perturbations and six parameter variants; all27 DGX repeated runs with native validation, resource replay, descriptive summaries and figure; [replacement protocol](DGX_SCALING_REPLACEMENT_PROTOCOL_20260920.md), [long-run amendment](DGX_SCALING_LONG_RUN_AMENDMENT_20260920.md) and tested measurement audit | Controlled resource comparison remains unproven. The replacement plan exists but has not run; environmental-policy freeze, authorization, launch/session integration and complete native/environmental admission remain required. QfO robustness and broader evolutionary realism remain limited |
 | 6. Biological usefulness | [Prospective WGD protocol](BIOLOGICAL_WGD_APPLICATION_PROTOCOL_20260917.md), admitted runs, [results](BIOLOGICAL_WGD_RESULTS_20260917.md), [separate rescore](biological_wgd_rescore_audit_20260917.json), [figure](figures_wgd_application_20260917/wgd_application.pdf), [all six examples](figures_wgd_application_20260917/PRESPECIFIED_EXAMPLES.md), and [completed case trace](BIOLOGICAL_WGD_CASE_TRACE_20260917.md): phylogenetic OrthoHMM improves supported separation over high sensitivity but trails full OrthoFinder and SonicParanoid in separation and coverage | Bounded application and stage localization complete; tree correctness and upstream effects unresolved. Development-exposed, not independent validation or copy-specific orthology truth; YGOB column order does not identify ancestral copies; configurations differ beyond reconciliation |
 | 7. Publication package | Eighteen bundled figure panels including descriptive DGX resources and corrected search controls; [corrected factorial supplement](PUBLICATION_CORRECTED_FIGURE_BUNDLE_20260919.md); [method diagram](figures_publication_method_20260916/publication_method.pdf); evolving [manuscript](PUBLICATION_MANUSCRIPT_DRAFT_20260916.md); [refreshed and relocated direct-evidence bundle](PUBLICATION_FIGURE_BUNDLE_20260918.md); bounded statistical reproduction including the corrected factorial; [current-source unit and CLI checks](PUBLICATION_TEST_REFRESH_20260918.md) | Complete corrected-QfO comparator results and manuscript integration, verified bibliography, portable executable workflows/dependencies, transitive raw-data provenance and rights clearance, versioned release and external archive. Local figure bundles and statistical exports are not full scientific reproduction |
 
-## Current Execution Status
+## Execution and Retained History
 
 - The prospective replacement scaling panel is prepared, not executed. Its
   [v2 plan](dgx_root_context_scaling_plan_v2_20260920.json) retains execution
@@ -138,11 +138,27 @@ not establish any comparative resource advantage.
   native pressure observations do not justify an outside-interference claim
   or outcome-dependent exclusion. The composed measurement audit checks task
   records, raw replay and native outcomes; it neither validates outputs nor
-  authorizes submissions or admits scientific timings. No service change
-  has been assumed approved. Corrected BLAST 21713 remains running;
-  FastOMA 21740, parameter array 21932 and CPM 21956 remain pending as of
-  the September 20 scheduler check. These states are observations, not
-  predicted completion dates.
+  authorizes submissions or admits scientific timings. The user has since
+  deferred DGX work; no further DGX probe, service action or timing submission
+  is authorized by this checklist. Controlled timing remains unmet, not
+  replaced by shared-host timings.
+
+- September 23 execution update: corrected BLAST 21713 was interrupted;
+  recovery array 22103 has its first batch complete and second batch running,
+  with independent batch validation still pending. Corrected FastOMA is
+  admitted in the [seven-method comparison](qfo_corrected_comparison_20260923_v6/scores.md);
+  corrected OrthoMCL remains missing. Threshold score array 22043 continues.
+  Low-CPM candidate preparation 22084_0 completed and its validator is
+  resource-pending. High-CPM 22081_1 failed by SIGSEGV: the
+  [minimal-import constructor diagnostic](QFO_CPM_HIGH_CONSTRUCTOR_RESULT_22119.md)
+  succeeded without resolving its cause; the frozen-import diagnostic 22121
+  is queued. Partial outputs have not been promoted to scientific scores.
+  See the [live progress ledger](PUBLICATION_PROGRESS.md) for later observations.
+
+- [Relocated descriptive feature rendering](SWISS_DESCRIPTIVE_FEATURE_REPRODUCTION_20260923.md)
+  reproduces all 144 figure endpoint records exactly outside the checkout;
+  both PNG pixel arrays match on the same host. This is visualization from
+  pinned tables, not annotation/inference/scoring or cross-platform validation.
 
 - [Read-crossing control 22018](LINEAGE_READ_CROSSING_RESULT_22018.md)
   completed with all three trials and their replay passing. All signed
