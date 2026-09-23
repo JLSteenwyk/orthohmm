@@ -1,0 +1,122 @@
+{
+  "files": [
+    {
+      "bytes": 1078,
+      "git_commit": "27113f40df3c9f21d4e9e294ac1bc079c2b2ba8d",
+      "git_path": "LICENSE.md",
+      "path": "LICENSE.md",
+      "sha256": "4b9b0c3ffc73fce4c47734d7ef12bd70b9d2cdc4a3bf76ac0f3a35edbe2c3d9e"
+    },
+    {
+      "bytes": 9149,
+      "git_commit": "27113f40df3c9f21d4e9e294ac1bc079c2b2ba8d",
+      "git_path": "benchmark_tools/bundle_publication_figures.py",
+      "path": "benchmark_tools/bundle_publication_figures.py",
+      "sha256": "cfc926e7b969444a87f30a22691b344fea682c67b1289dbd3bb106dd93e49725"
+    },
+    {
+      "bytes": 6346,
+      "git_commit": "27113f40df3c9f21d4e9e294ac1bc079c2b2ba8d",
+      "git_path": "benchmark_tools/plot_corrected_swiss_comparison.py",
+      "path": "benchmark_tools/plot_corrected_swiss_comparison.py",
+      "sha256": "79a87fb3eeef898915ed70aabea09ea17b03c7dfee88e1dbdbc007ac61c4ecc8"
+    },
+    {
+      "bytes": 8394,
+      "git_commit": "27113f40df3c9f21d4e9e294ac1bc079c2b2ba8d",
+      "git_path": "benchmark_tools/reproduce_corrected_swiss_comparison.py",
+      "path": "benchmark_tools/reproduce_corrected_swiss_comparison.py",
+      "sha256": "55c4882a1b273c54e3c674f4e52082d6d6ff9a39c47a1d03f12ac314c2fd9fa0"
+    },
+    {
+      "bytes": 30716,
+      "git_commit": "27113f40df3c9f21d4e9e294ac1bc079c2b2ba8d",
+      "git_path": "benchmark_tools/results/corrected_swiss_comparison_figure_20260923/corrected_swiss_comparison.pdf",
+      "path": "benchmark_tools/results/corrected_swiss_comparison_figure_20260923/corrected_swiss_comparison.pdf",
+      "sha256": "7b334027a066ce1935e6a6a8a10dfb4e5a3585d742004481e21efb7da8bddec3"
+    },
+    {
+      "bytes": 173879,
+      "git_commit": "27113f40df3c9f21d4e9e294ac1bc079c2b2ba8d",
+      "git_path": "benchmark_tools/results/corrected_swiss_comparison_figure_20260923/corrected_swiss_comparison.png",
+      "path": "benchmark_tools/results/corrected_swiss_comparison_figure_20260923/corrected_swiss_comparison.png",
+      "sha256": "e5330cdd767aee798258da1a162277f5a1f7a3bd320cf59132ad7f579450112c"
+    },
+    {
+      "bytes": 117042,
+      "git_commit": "27113f40df3c9f21d4e9e294ac1bc079c2b2ba8d",
+      "git_path": "benchmark_tools/results/corrected_swiss_comparison_figure_20260923/corrected_swiss_comparison.svg",
+      "path": "benchmark_tools/results/corrected_swiss_comparison_figure_20260923/corrected_swiss_comparison.svg",
+      "sha256": "e97446c27517251da3090abafbc725151683c0026bc516502939da8de1e772d1"
+    },
+    {
+      "bytes": 2433,
+      "git_commit": "27113f40df3c9f21d4e9e294ac1bc079c2b2ba8d",
+      "git_path": "benchmark_tools/results/corrected_swiss_comparison_figure_20260923/endpoints.md",
+      "path": "benchmark_tools/results/corrected_swiss_comparison_figure_20260923/endpoints.md",
+      "sha256": "c29320bff1932a99db021e5479dbf5d995b48a7cdd88a31adb5ac9d7c0a1d07f"
+    },
+    {
+      "bytes": 3938,
+      "git_commit": "27113f40df3c9f21d4e9e294ac1bc079c2b2ba8d",
+      "git_path": "benchmark_tools/results/corrected_swiss_comparison_figure_20260923/endpoints.tsv",
+      "path": "benchmark_tools/results/corrected_swiss_comparison_figure_20260923/endpoints.tsv",
+      "sha256": "0bae279d4d4d69b0a43dca2c2b6232025a1418b183aa782384a3ead2999329b5"
+    },
+    {
+      "bytes": 2368,
+      "git_commit": "27113f40df3c9f21d4e9e294ac1bc079c2b2ba8d",
+      "git_path": "benchmark_tools/results/corrected_swiss_comparison_figure_20260923/manifest.json",
+      "path": "benchmark_tools/results/corrected_swiss_comparison_figure_20260923/manifest.json",
+      "sha256": "12567086c7b760511c1524a608fbe299363e4dda078fb28aedff0bcb1944a807"
+    },
+    {
+      "bytes": 8484,
+      "git_commit": "27113f40df3c9f21d4e9e294ac1bc079c2b2ba8d",
+      "git_path": "benchmark_tools/results/publication_fastoma_figure_integrity_20260923.json",
+      "path": "benchmark_tools/results/publication_fastoma_figure_integrity_20260923.json",
+      "sha256": "b7a92bfc559c326755d9440cd7352f21831434ffb6b8385b6513a888514926c9"
+    },
+    {
+      "bytes": 245501,
+      "git_commit": "27113f40df3c9f21d4e9e294ac1bc079c2b2ba8d",
+      "git_path": "benchmark_tools/results/qfo_fastoma_swiss_uncertainty_22098.json",
+      "path": "benchmark_tools/results/qfo_fastoma_swiss_uncertainty_22098.json",
+      "sha256": "121cc8adf3cd63878f19006ec5500a13f879d042eccd565e1ae5f5a863f43fb1"
+    }
+  ],
+  "limitations": [
+    "Historical absolute paths are provenance; use the explicit relocation mappings.",
+    "No native inference, scoring or plotting is executed by this verification.",
+    "Imports, compiled dependencies and transitive data are not included.",
+    "Repository licensing does not establish third-party data redistribution permission.",
+    "Preserves diagnostic and descriptive figures, not new scientific admissions.",
+    "Not the complete publication archive or a release-readiness claim."
+  ],
+  "panels": [
+    {
+      "manifest": "benchmark_tools/results/corrected_swiss_comparison_figure_20260923/manifest.json",
+      "name": "corrected_swiss_comparison_figure_20260923",
+      "output_count": 5,
+      "relocations": {
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_corrected_swiss_comparison.py": "benchmark_tools/plot_corrected_swiss_comparison.py",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/reproduce_corrected_swiss_comparison.py": "benchmark_tools/reproduce_corrected_swiss_comparison.py",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/corrected_swiss_comparison_figure_20260923/corrected_swiss_comparison.pdf": "benchmark_tools/results/corrected_swiss_comparison_figure_20260923/corrected_swiss_comparison.pdf",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/corrected_swiss_comparison_figure_20260923/corrected_swiss_comparison.png": "benchmark_tools/results/corrected_swiss_comparison_figure_20260923/corrected_swiss_comparison.png",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/corrected_swiss_comparison_figure_20260923/corrected_swiss_comparison.svg": "benchmark_tools/results/corrected_swiss_comparison_figure_20260923/corrected_swiss_comparison.svg",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/corrected_swiss_comparison_figure_20260923/endpoints.md": "benchmark_tools/results/corrected_swiss_comparison_figure_20260923/endpoints.md",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/corrected_swiss_comparison_figure_20260923/endpoints.tsv": "benchmark_tools/results/corrected_swiss_comparison_figure_20260923/endpoints.tsv",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_fastoma_swiss_uncertainty_22098.json": "benchmark_tools/results/qfo_fastoma_swiss_uncertainty_22098.json"
+      }
+    }
+  ],
+  "publication_ready": false,
+  "schema_version": 1,
+  "scope": "direct_figure_evidence_only",
+  "source_commit": "27113f40df3c9f21d4e9e294ac1bc079c2b2ba8d",
+  "support_files": [
+    "benchmark_tools/results/publication_fastoma_figure_integrity_20260923.json",
+    "LICENSE.md",
+    "benchmark_tools/bundle_publication_figures.py"
+  ]
+}

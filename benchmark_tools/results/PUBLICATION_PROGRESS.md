@@ -1,5 +1,32 @@
 # Publication Progress
 
+## FastOMA Figure Supplement Exported And Relocated (2026-09-23)
+
+Previous turn only acknowledged the DGX deferral (no scientific progress).
+Revalidated live local jobs and continued publication packaging without
+accessing the DGX. Added a separate corrected-fastoma audit scope; historical
+scopes and bundles remain unchanged. Regenerated the seven-method figure
+against the current numerical helper, retaining the original 22098 export.
+PNG and both endpoint tables are byte-identical; visual review passed.
+All recorded files match their manifests; 54 focused tests passed.
+Committed and pushed source, tests, figure and audit at 27113f4.
+
+The [new supplement](PUBLICATION_CORRECTED_FIGURE_BUNDLE_20260919.md)
+contains 12 files and five outputs, 609,328 bytes plus its 7,282-byte
+manifest. Built from committed blobs, archived locally, extracted outside
+the checkout, and verified there with isolated system Python. The included
+portable numerical verifier also reproduced all 21 estimated endpoints to
+1e-12 with the pinned NumPy environment. Three planned OrthoMCL endpoints
+remain unavailable. No native inference, raw scoring, full package export,
+external deposition, or controlled timing admission is claimed.
+
+Live accounting: 22034_0..2 completed 0:0; 22034_3 running at 14:39;
+22081_0 running at 14:13; 22055 resource-pending. No job was restarted.
+Next: admit completed robustness outputs through their frozen queued
+chains, finish OrthoMCL recovery when the diagnostic can run, and continue
+manuscript/archive consolidation. Controlled resource evidence remains
+unmet with DGX work explicitly deferred. Publication goal remains active.
+
 ## OrthoBench Acquisition Reproduced From Upstream (2026-09-23)
 
 Previous turn made progress through verified YGOB reacquisition and

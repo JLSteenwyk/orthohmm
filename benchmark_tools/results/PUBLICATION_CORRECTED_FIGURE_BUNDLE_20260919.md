@@ -1,6 +1,64 @@
 # Corrected QfO Figure Supplement
 
-## Current Three-Figure Export
+## Seven-Method Comparator Supplement (2026-09-23)
+
+The separate FastOMA-inclusive comparison supplement is frozen at
+`27113f40df3c9f21d4e9e294ac1bc079c2b2ba8d`. Earlier bundles below remain
+unchanged. It includes seven admitted methods and the explicitly missing
+OrthoMCL contrast: 21 estimated endpoints out of 24 planned. This supplement
+does not replace or revalidate the factorial and composition-strata bundles.
+
+The numerical helper has gained portable reproduction since the original
+22098 figure was rendered. A new export binds its current source identity;
+the PNG, endpoint TSV and endpoint Markdown remain byte-identical to 22098.
+The PNG was visually inspected. PDF/SVG metadata differ after regeneration.
+Fifty-four focused audit, bundle and plotter tests passed. Whitespace checks
+pass for source, JSON and Markdown; generated SVG path whitespace and empty
+TSV cells for unavailable OrthoMCL values are preserved without rewriting.
+
+- [Direct-byte audit](publication_fastoma_figure_integrity_20260923.json):
+  all recorded identities match, no untracked dependencies.
+- [Bundle manifest](publication_fastoma_figure_bundle_20260923.json):
+  SHA-256 `8f284a1e5387cd107efbfc53bf9614a303657cc417106de236f39d4c8a8d8120`.
+- [Relocated verification](publication_fastoma_figure_bundle_relocation_20260923.json):
+  12 files, five outputs, 609,328 bytes excluding the 7,282-byte manifest.
+- [Bundled arithmetic reproduction](publication_fastoma_bundle_arithmetic_20260923.json):
+  all 21 estimated endpoints reproduced within 1e-12 using Python 3.10.13
+  and NumPy 2.2.6. Historical absolute paths were not accessed.
+- Local archive: benchmarks/work/publication_fastoma_figure_evidence_20260923_27113f4.tar.gz,
+  220,341 bytes, SHA-256
+  `f8f23387a82281350f344ee3b79304bbc7d98bd07d2e6a08f1ddce919047d467`.
+
+Extracted to `/tmp/orthohmm-fastoma-figure-PmU2F5Ho` and checked there with
+`/usr/bin/python3 -I benchmark_tools/bundle_publication_figures.py verify .`.
+The bundled numerical verifier also ran from that directory with `-I -B`,
+using the already pinned Swiss analysis environment. Its output was written
+outside the bundle so the exact file inventory remains intact.
+
+Reproduce with a fresh output path:
+
+```sh
+python -m benchmark_tools.bundle_publication_figures build \
+  --repo . --revision 27113f40df3c9f21d4e9e294ac1bc079c2b2ba8d \
+  --audit benchmark_tools/results/publication_fastoma_figure_integrity_20260923.json \
+  --output /tmp/fastoma-figure-evidence
+python -I /tmp/fastoma-figure-evidence/benchmark_tools/bundle_publication_figures.py \
+  verify /tmp/fastoma-figure-evidence
+python -I -B /tmp/fastoma-figure-evidence/benchmark_tools/reproduce_corrected_swiss_comparison.py \
+  --retained-counts-only \
+  --results /tmp/fastoma-figure-evidence/benchmark_tools/results/qfo_fastoma_swiss_uncertainty_22098.json \
+  --results-sha256 121cc8adf3cd63878f19006ec5500a13f879d042eccd565e1ae5f5a863f43fb1 \
+  --output /tmp/fastoma-figure-arithmetic.json
+```
+
+The final command requires NumPy; use the pinned environment documented in
+the reproduction guide. This is direct evidence preservation and retained
+count arithmetic, not raw scoring, inference, plot regeneration outside the
+checkout, cross-platform validation, full dependency packaging, cleared
+redistribution, external deposition or publication readiness. DGX timing is
+deferred by user request; no timing claim follows from this supplement.
+
+## Earlier Three-Figure Export
 
 The expanded supplement, frozen at commit
 `5132ddaee322ce51c19c7ac7cb0fe7cb172e0e56`, contains the corrected factorial,

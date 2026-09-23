@@ -7,6 +7,11 @@ are statistical reproduction only and do not submit scheduler jobs.
 
 ## Method And Results
 
+- [Corrected figure supplements](results/PUBLICATION_CORRECTED_FIGURE_BUNDLE_20260919.md)
+  include the seven-method FastOMA comparison exported at `27113f4`, with
+  isolated relocated verification and retained-count arithmetic reproduction.
+  Earlier factorial and composition-strata exports are preserved separately;
+  none is a complete publication archive or a controlled timing admission.
 - [Working manuscript](results/PUBLICATION_MANUSCRIPT_DRAFT_20260916.md)
   describes the frozen scientific configuration at `7f3a9e4`. Current
   development source is not interchangeable with that baseline.
