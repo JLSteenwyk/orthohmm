@@ -1,5 +1,37 @@
 # Publication Progress
 
+## Corrected SwissTrees Identity Preparation Started (2026-09-23)
+
+Previous turn made progress by refreshing the manuscript and reproducible
+render workflow. Revalidated live local jobs, then addressed the remaining
+sequence-divergence error-analysis gap without using prediction-derived
+labels. Existing corrected inputs contain all 563 SwissTrees reference
+proteins. Froze a new exploratory input-only protocol and implementation
+at committed/pushed 21cf7bb before any new alignment execution.
+
+The preparer reuses the hash-pinned, tested OrthoBench MAFFT 7.525 helper,
+checks corrected FASTA/accession/length identities and complete membership,
+validates aligned residues, and freezes median family-identity bins with
+explicit missingness. All 31 preparer/helper tests passed. Planned later
+tables are descriptive only: no additional bootstrap, endpoint adjustment,
+method tuning, or claimed calibrated evolutionary distances. This does not
+supply true fragment annotations or duplication histories.
+
+Submitted [batch](corrected_swiss_identity_batch_20260923.sh) as **22102**,
+4 CPUs / 16 GiB / 2 hours, no requeue, frozen detached executor
+benchmarks/work/publication_swiss_identity_v1. Scheduler confirms RUNNING,
+Requeue=0 and Restarts=0. Output destination is
+benchmarks/results/corrected_swiss_identity_v1. The protocol SHA-256 is
+aaaeabebb2cb3ec5e95dc38f99b53f6814579e1bbdf7241da5e4391be6a35f55.
+All-family completion and independent feature admission remain next;
+no stratified outcome has yet been calculated from these alignments.
+
+Live accounting also confirms 22034_3 running at 25:39 and 22081_0 at
+25:13; BLAST 22055 remains pending. No existing job was restarted. DGX
+remains deferred and untouched. Controlled timing, OrthoMCL recovery,
+remaining robustness and uncertainty work, and final release/archive
+requirements remain incomplete; the publication goal stays active.
+
 ## Manuscript Review Refreshed (2026-09-23)
 
 Previous turn made progress with the committed, relocated FastOMA figure

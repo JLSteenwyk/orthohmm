@@ -204,7 +204,13 @@ not establish any comparative resource advantage.
   Adjusted phylogenetic-OrthoHMM versus full-OrthoFinder intervals include
   zero in both bins, and all adjusted interactions include zero. Neither
   equivalence nor a composition-specific mechanism is established. The
-  all-method and secondary-stratum displays remain incomplete.
+  [All-method and secondary descriptive displays](swiss_descriptive_strata_20260923/scores.md)
+  are now complete for the seven admitted methods; OrthoMCL and empty bins
+  remain explicitly missing. These displays add no inferential claims.
+  A separate [identity-stratum protocol](CORRECTED_SWISS_IDENTITY_PROTOCOL_20260923.md)
+  is frozen for input-only MAFFT preparation before joining to outcomes.
+  Sequence identity is not calibrated evolutionary distance; independent
+  fragmentation and duplication annotations remain gaps.
 
 - Corrected DIAMOND sequence search21789 completed0:0 in02:14:43 and native
   execution admission21790 completed0:0 in00:01:30. Numeric conversion21791
