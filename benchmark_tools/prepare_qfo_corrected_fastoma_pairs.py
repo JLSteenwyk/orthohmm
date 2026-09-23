@@ -17,7 +17,7 @@ from benchmark_tools.qfo_filter_pairs import filter_pairs, load_mapping
 from benchmark_tools.run_simulation_methods import read_frozen
 from benchmark_tools.verify_ygob_validation import require_completed_job
 
-ADMITTER = "857bb5e0d6adad9960ea58d98a3037097ee40d5f"
+ADMITTER = "ef42747574c402d932d03ff0f502cefd56a34f40"
 SEMANTICS = "native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree"
 
 
@@ -66,7 +66,7 @@ def prepare(root, admission_path, admission_sha, admission_job):
         raise ValueError("Wrong native admission allocation")
     admission = read_frozen(admission_path, admission_sha)
     validate_admission(admission, root)
-    executor = root / "benchmarks/work/publication_qfo_corrected_fastoma_admission_v1"
+    executor = root / "benchmarks/work/publication_qfo_corrected_fastoma_admission_v2"
     if subprocess.check_output(["git", "-C", str(executor), "rev-parse", "HEAD"], text=True).strip() != ADMITTER:
         raise ValueError("Native admission executor changed")
     subprocess.run(["git", "-C", str(executor), "diff", "--exit-code", "HEAD", "--", "benchmark_tools"], check=True)
