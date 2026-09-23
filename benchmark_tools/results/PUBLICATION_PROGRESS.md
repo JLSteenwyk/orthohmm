@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Constructor Preserves Graph; First BLAST Batch Completed (2026-09-23)
+
+Previous turn made progress by testing/freezing/submitting the isolated
+constructor diagnostic. Re-read the full objective and checked authoritative
+scheduler/native evidence. **22119 completed 0:0 in 2:16**: all 25,501,180
+edges and weights match saved inputs, with zero endpoint differences and
+261 retained records rechecked. See [result](QFO_CPM_HIGH_CONSTRUCTOR_RESULT_22119.md).
+This is one successful minimal-import observation, not a diagnosis or repair
+of the original SIGSEGV. The high-CPM scientific result remains missing;
+next target frozen-import/allocation context without automatic replay.
+
+**22103_0 completed 0:0 in 18:08**, producing a 108,706,759-byte BLAST table.
+Native completion is not query admission. Inspected the frozen batch verifier's
+per-task scheduler/input/output gates, then cleared only 22105_0's whole-array
+dependency so validation can proceed before all remaining batches finish.
+The same queued validator remains resource-pending; no job restart or native
+search retry. Tasks 1-19 retain their original dependencies.
+
+Prepared the [whole-replay coverage gate](QFO_BLAST_RECOVERY_PANEL_GATE_20260923.md)
+with 42 passing panel/batch tests. It requires all twenty native and admission
+successes and exact disjoint ordered coverage, retains failures/no-hit cases,
+and does not admit prefix reuse or a merged search. Full-panel execution is
+not yet possible and no result is fabricated. Low-CPM candidate preparation
+and threshold scoring continue. No DGX access, default change, controlled
+timing claim or publication completion.
+
 ## Isolated Constructor Diagnostic Queued (2026-09-23)
 
 Submitted **22119** from clean detached executor
