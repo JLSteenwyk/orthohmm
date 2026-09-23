@@ -20,8 +20,8 @@ from benchmark_tools.run_qfo_recovered_assessment import command_for, environmen
 from benchmark_tools.run_simulation_methods import read_frozen
 from benchmark_tools.validate_qfo_native_assessment import validate_directory
 
-ASSESSMENT_JOB = "21944"
-EXECUTOR_COMMIT = "f5a42ab3fc6ee5076e9dfb2b239b63b131aa0d73"
+ASSESSMENT_JOB = "22043"
+EXECUTOR_COMMIT = "163c9214f8a7cc12381c3ebb6802ce5ae35bbcb8"
 
 
 def completed_assessment(accounting, index):
@@ -84,11 +84,11 @@ def admit(root, index, output):
     pair_record = record(pairs_path)
     stage = read_frozen(pairs_path, pair_record["sha256"])
     validate_stage(stage, index, conversion_scheduler)
-    converter = root / "benchmarks/work/publication_qfo_parameter_pairs_v1"
+    converter = root / "benchmarks/work/publication_qfo_parameter_pairs_v2"
     verify_checkout(converter, CONVERTER_COMMIT, ["benchmark_tools", "orthohmm", "qfo_benchmark/og_to_pairwise.py"])
     if record(converter / "benchmark_tools/prepare_qfo_parameter_pairs.py") not in stage["checked_records"]:
         raise ValueError("Wrong converter source")
-    executor = root / "benchmarks/work/publication_qfo_parameter_assessment_v1"
+    executor = root / "benchmarks/work/publication_qfo_parameter_assessment_v2"
     verify_checkout(executor, EXECUTOR_COMMIT, ["benchmark_tools", "orthohmm"])
     env_path = root / "benchmark_tools/results/qfo_assessment_environment_20260917.json"
     environment = read_frozen(env_path, ENV_SHA)

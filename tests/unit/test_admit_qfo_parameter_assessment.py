@@ -8,11 +8,16 @@ from benchmark_tools.prepare_ob_candidate_neighborhood import record
 
 def accounting(state="COMPLETED", code="0:0", node="bizon", cpus="8"):
     return ("JobID|JobIDRaw|State|ExitCode|NodeList|AllocCPUS\n"
-            f"21944_0|21945|{state}|{code}|{node}|{cpus}\n")
+            f"22043_0|22044|{state}|{code}|{node}|{cpus}\n")
 
 
 def test_completed_array_binds_raw_id():
-    assert module.completed_assessment(accounting(), 0)["JobIDRaw"] == "21945"
+    assert module.completed_assessment(accounting(), 0)["JobIDRaw"] == "22044"
+
+
+def test_original_assessment_cannot_supply_replacement():
+    with pytest.raises(ValueError):
+        module.completed_assessment(accounting().replace("22043_0", "21944_0"), 0)
 
 
 @pytest.mark.parametrize("change", [{"state": "RUNNING"}, {"state": "FAILED"},
