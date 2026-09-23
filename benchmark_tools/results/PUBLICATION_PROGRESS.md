@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Isolated Constructor Diagnostic Queued (2026-09-23)
+
+Submitted **22119** from clean detached executor
+`benchmarks/work/cpm_high_constructor_v1_20260923`, commit
+`e990f1d013a1baae8d753d1eb0a344aaa88f2d14`, using the committed
+`qfo_cpm_high_constructor_20260923.sh`. Scheduler accepted it pending;
+this is one constructor-only observation, not a high-CPM replay retry.
+Outputs are isolated under `benchmarks/work/qfo_cpm_high_constructor_22119`.
+The 1-CPU, 64-GiB, 2-hour no-requeue request preserves the original failed
+payload and cannot produce scientific predictions. Review terminal accounting,
+worker log and graph checks before interpreting its outcome.
+
+BLAST recovery 22103_0 remains RUNNING (17:33), threshold score 22043_1
+RUNNING (5:01), and low candidates 22084_0 resource-pending. No existing
+job was restarted. DGX remains deferred and all broader publication gaps
+remain open.
+
 ## High-CPM Constructor Diagnostic Prepared (2026-09-23)
 
 Previous turn made concrete progress: fragment results and the read-only
