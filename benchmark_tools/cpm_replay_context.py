@@ -43,8 +43,8 @@ def derive(root, baseline, arm):
             or baseline["cwd"] != str(launcher) or baseline["environment_overrides"] != environment
             or baseline["expected_stages"] != ["multipass", "multipass_refined", "strict_profiles", "strict_profiles_refined"]):
         raise ValueError("Baseline command, stages or environment differs")
-    # Preserve admitted control and failed v1 variants; replacement variants are fresh.
-    version = "v1" if arm == "control" else "v2"
+    # Preserve admitted control and both failed variant attempts.
+    version = "v1" if arm == "control" else "v3"
     output = root / f"benchmarks/results/qfo_parameter_cpm_replay_{version}" / arm
     command = list(expected)
     for flag, value in (("--cpm-resolution", str(RESOLUTIONS[arm])),
