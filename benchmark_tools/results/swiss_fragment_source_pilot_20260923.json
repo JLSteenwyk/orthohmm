@@ -1,0 +1,49 @@
+{
+  "accession": "F7BEF0",
+  "acquired_utc": "2026-09-23T21:32:08.205698+00:00",
+  "annotation_date": "02-DEC-2020",
+  "data_class": "Unreviewed",
+  "entry_version": 62,
+  "flags": [],
+  "fragment_flag": false,
+  "incomplete_sequence_features": [],
+  "length": 351,
+  "limitation": "Unflagged does not prove completeness; these annotations are not experimental ground truth.",
+  "outcome_analysis_performed": false,
+  "records": [
+    {
+      "bytes": 20275,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/swiss_fragment_source_pilot_v2_20260923/F7BEF0/history.json",
+      "sha256": "9be32616c3e19df02113a53ef87e04cdd54a515ad052d2da6a9009330590713a"
+    },
+    {
+      "bytes": 4689,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/swiss_fragment_source_pilot_v2_20260923/F7BEF0/entry.txt",
+      "sha256": "3009806a6c6d5598f8b1bb728adb08c590df95e8b8f7f49b1526b1a522675e25"
+    }
+  ],
+  "selection": {
+    "accession": "F7BEF0",
+    "database": "TrEMBL",
+    "entryVersion": 62,
+    "firstRelease": "2020_06/2020_06",
+    "firstReleaseDate": "02-Dec-2020",
+    "lastRelease": "2020_06/2020_06",
+    "lastReleaseDate": "02-Dec-2020",
+    "name": "F7BEF0_XENTR",
+    "sequenceVersion": 3
+  },
+  "selection_class": "later_sequence_version",
+  "sequence_sha256": "e3c6f54b70d7eb176524cc34efc4ad8d907408d695e1183cc00053fd798abaa6",
+  "sequence_version": 3,
+  "source": {
+    "bytes": 4641,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_unisave_fragment_source.py",
+    "sha256": "0642beeee11199853518b328b15bdb12d297d3a1324bcd3327815ccbc7355680"
+  },
+  "taxid": "8364",
+  "urls": [
+    "https://rest.uniprot.org/unisave/F7BEF0?format=json",
+    "https://rest.uniprot.org/unisave/F7BEF0?format=txt&versions=62"
+  ]
+}

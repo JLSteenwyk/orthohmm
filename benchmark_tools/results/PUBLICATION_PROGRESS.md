@@ -1,5 +1,39 @@
 # Publication Progress
 
+## Historical Fragment Source Pilot Verified (2026-09-23)
+
+Previous turn made progress freezing/submitting recovery validation 22105.
+Revalidated local scheduler accounting: 22039_2 and 22081_1 remain running;
+recovery 22103 and admission 22105 are pending. No restart or DGX access.
+
+Investigated historical fragment annotations while these jobs run. Existing
+FASTA labels/relative lengths alone are not independent completeness evidence.
+UniSave provides historical flat files and separate sequence/entry versions.
+The source-feasibility pilot F7BEF0 exposes a necessary correction: its staged
+351-residue sequence is version 3, first available December 2020, not the
+version 2 present in release 2020_04. Retrieved entry 62, verified accession,
+taxon 8364, both versions and exact staged sequence SHA-256
+e3c6f54b70d7eb176524cc34efc4ad8d907408d695e1183cc00053fd798abaa6.
+The [pilot receipt](swiss_fragment_source_pilot_20260923.json) retains raw
+response hashes/URLs and later-release provenance. It is unreviewed and has
+no fragment flags/features; this does not establish biological completeness.
+
+Added a historical acquisition/parser helper with 11 passing tests covering
+baseline versus later-version selection, missing/ambiguous histories, exact
+identity mismatches and structured fragment/nonterminal/nonadjacent signals.
+The original pilot receipt had a timezone-aware local timestamp under a UTC
+field name; fixed UTC generation and retained a fresh v2 receipt without
+overwriting the original local evidence. No method outcomes were read by
+the acquisition helper.
+
+Froze [full-panel selection/display rules](SWISS_HISTORICAL_FRAGMENT_PROTOCOL_20260923.md)
+before collecting all 563 annotations or joining prediction errors. Next
+implement the checked inventory extraction and rate-limited full-panel
+collector, retain missingness and independently validate acquired memberships.
+This is not completed fragment analysis, experimental ground truth, or
+independent generalization. Duplication annotations, other uncertainty gaps,
+controlled timing, OrthoMCL completion and final publication packaging remain.
+
 ## Recovery Validation Array Queued (2026-09-23)
 
 Previous turn made progress by implementing and testing the recovery batch
