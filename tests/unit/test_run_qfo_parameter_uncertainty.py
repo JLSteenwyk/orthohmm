@@ -9,6 +9,14 @@ from tests.unit.test_audit_qfo_parameter_swiss import fixture
 from benchmark_tools.audit_qfo_parameter_swiss import assemble
 
 
+def test_replacement_execution_bindings_match_retained_sources():
+    from benchmark_tools import audit_qfo_parameter_swiss as auditor
+    directory = Path(module.__file__).parent
+    assert record(directory / "admit_qfo_parameter_assessment.py")["sha256"] == auditor.PARAMETER_ADMITTER_SHA
+    assert record(directory / "admit_qfo_cpm_assessment.py")["sha256"] == auditor.CPM_ADMITTER_SHA
+    assert all(record(directory / name)["sha256"] == digest for name, digest in module.SOURCES.items())
+
+
 def setup(tmp_path, monkeypatch, missing=()):
     entries, baseline = fixture(tmp_path)
     for index in missing:

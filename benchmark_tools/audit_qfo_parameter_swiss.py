@@ -18,8 +18,8 @@ from benchmark_tools.run_simulation_methods import read_frozen
 from benchmark_tools.validate_qfo_native_assessment import validate_records
 
 CONTROL_SHA = "49b7d837b2ba2928b0676c9974e2ec16db5211f1086c366c7bc11805a2ee751f"
-PARAMETER_ADMITTER_SHA = "6574b40cc97624c937eb72e2ed27c0822aff0b6ff69156815b0255055d62d81c"
-CPM_ADMITTER_SHA = "907e5abbf7ec5b60781dfd48d95452bb67578662b1aefa44af8be131b7542c66"
+PARAMETER_ADMITTER_SHA = "09257a359b549da7643c33ecf5345ed9d740ed7ed04d8815203a72c82df5911a"
+CPM_ADMITTER_SHA = "07ffe966591b93ced39d0e24a6a9c17025e44dc88ab20eeb5a79bc8103ca9264"
 
 
 def validate_admission(arm, report, conversion):

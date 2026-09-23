@@ -55,3 +55,37 @@ the existing parameter uncertainty runner, and use this checker against
 the resulting report and its exact checksum. Do not overwrite the
 control-only integration evidence or infer equivalence from null intervals.
 Parameter robustness and publication readiness remain incomplete.
+
+## Replacement-Executor Bindings (2026-09-23)
+
+All four replacement candidate-threshold inference runs, 22034_0..3, have
+completed 0:0. Their 22035 native-validation array has started; conversion,
+scoring and independent score admission remain queued. CPM replay 22081_0
+is still running. No variant score is inferred from native completion.
+
+The current uncertainty runner still pinned superseded executor identities;
+five focused tests reproduced its fail-closed rejection. Reviewed Git diffs
+show that the relevant scorer/admitter changes bind replacement job IDs,
+executor revisions and v2/v3 paths. CPM context keeps control v1 and routes
+replacement variants to v3. Updated only these source bindings in the count
+auditor and uncertainty runner, preserving the frozen protocol, plan, counts,
+statistics, bootstrap kernel, seed, multiplicity and historical executors.
+A source-binding regression test now checks the two admitter identities too.
+
+All 117 focused runner, count-audit, bootstrap and independent-reproduction
+tests passed. A fresh local control-only integration run against the retained
+raw evidence produced the [new report](qfo_parameter_uncertainty_rebound_control_20260923.json),
+441,885 bytes, SHA-256
+0a6e9b2a8001b207b94b45e25f228dddcf810d2168d97602cbe48b72c807ce8b.
+Control point estimates and all comparison records equal the historical
+21986 result. The [independent reproduction](qfo_parameter_uncertainty_rebound_reproduction_20260923.json)
+also passes at 1e-12. There are still zero estimable variant endpoints,
+complete_panel=false and uncertainty_admitted=false. This is repaired
+integration evidence, not completed robustness or new scientific results.
+
+The run used the same control-only inventory SHA-256
+2cad3c5d168c49b4337668f14559f001dc1b7d7cd18b83f69668a208260e88c9,
+baseline qfo_swiss_counts_20260917.json, frozen neighborhood plan/protocol,
+and single-thread OMP/OpenBLAS/MKL settings. No scientific job was resubmitted.
+When real admissions arrive, retain all six planned variants in a new frozen
+inventory and execute the updated runner followed by numerical reproduction.

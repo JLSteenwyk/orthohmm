@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Parameter Inference Complete; Uncertainty Bindings Repaired (2026-09-23)
+
+Previous turn made progress implementing BLAST diagnostic comparison checks.
+All four candidate-threshold inference jobs 22034_0..3 now completed 0:0;
+the last took 42:11. Native-validation job 22035_0 is live, followed by its
+remaining array tasks and existing conversion/scoring/admission chains.
+Native completion alone does not admit accuracy or complete robustness.
+
+Found stale helper and admitter hashes in the current parameter uncertainty
+pipeline, reproducing five failing tests. Reviewed the exact scorer/admitter
+and CPM context diffs: replacement jobs/revisions/paths only. Updated the
+specific bindings, including the count-auditor hash, without changing any
+scientific parameters, statistical kernel, seed, protocol or multiplicity.
+Historical frozen executors and control-only results remain unchanged.
+All 117 focused tests now pass, including a source-binding regression test.
+
+A real local control-only run re-read retained raw evidence and reproduced
+the historical control estimates and comparison records exactly. Independent
+arithmetic reproduction also passed within 1e-12. There are zero variant
+endpoints and uncertainty_admitted=false, not fabricated variant results.
+See [integration evidence](QFO_PARAMETER_INDEPENDENT_REPRODUCTION_20260919.md).
+The 441,885-byte result is retained separately with its exact hash.
+
+Latest accounting: 22035_0 running at 3:40, CPM 22081_0 at 45:25, BLAST
+22055 pending. No queued or running scientific job restarted; DGX untouched
+and deferred. Next: finish queued admissions, freeze actual score inventory,
+execute the prespecified uncertainty analysis, and evaluate BLAST diagnostics
+when available. Remaining publication requirements are not complete.
+
 ## BLAST Replay Comparison Checks Implemented (2026-09-23)
 
 Previous turn made progress by preparing and independently checking the
