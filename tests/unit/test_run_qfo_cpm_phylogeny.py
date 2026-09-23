@@ -44,7 +44,7 @@ def test_select_arm(tmp_path, index, problem):
 @pytest.mark.parametrize("state", ["PENDING", "RUNNING", "FAILED"])
 def test_live_scheduler_precedes_output_reads(tmp_path, monkeypatch, state):
     monkeypatch.setattr(module.subprocess, "check_output", lambda *a, **k:
-        f"JobID|JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS\n21969_0|21970|{state}|0:0|00:01:00|bizon|2\n")
+        f"JobID|JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS\n22064_0|22065|{state}|0:0|00:01:00|bizon|2\n")
     with pytest.raises(ValueError, match="completed"):
         module.verify_sources(tmp_path, 0)
 
@@ -109,7 +109,7 @@ def test_execution_preserves_evidence_and_infers_own_tree(tmp_path, monkeypatch,
 
 @pytest.mark.parametrize("problem", [None, "source", "revision", "file"])
 def test_source_binding(tmp_path, monkeypatch, problem):
-    executor = tmp_path / "benchmarks/work/publication_qfo_cpm_candidates_admission_v1"
+    executor = tmp_path / "benchmarks/work/publication_qfo_cpm_candidates_admission_v2"
     source = executor / "benchmark_tools/admit_qfo_cpm_candidates.py"
     source.parent.mkdir(parents=True)
     source.write_text("fixture")
@@ -121,7 +121,7 @@ def test_source_binding(tmp_path, monkeypatch, problem):
         path.write_text("fixture")
         item.update(record(path))
     report.update(source=record(source), checked_records=[])
-    path = tmp_path / "benchmarks/work/qfo_cpm_candidates_admission_21969_0.json"
+    path = tmp_path / "benchmarks/work/qfo_cpm_candidates_admission_22064_0.json"
     path.write_text(json.dumps(report))
     if problem == "file":
         Path(report["candidate_arm"]["seed_partition"]["path"]).write_text("changed")
@@ -134,7 +134,7 @@ def test_source_binding(tmp_path, monkeypatch, problem):
     monkeypatch.setattr(module, "verify_baseline", lambda *a: ({}, {}, tmp_path, tmp_path, {}, []))
     def check_output(command, **kwargs):
         if command[0] == "sacct":
-            return "JobID|JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS\n21969_0|21970|COMPLETED|0:0|00:01:00|bizon|2\n"
+            return "JobID|JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS\n22064_0|22065|COMPLETED|0:0|00:01:00|bizon|2\n"
         return "wrong" if problem == "revision" else module.ADMISSION_COMMIT
     monkeypatch.setattr(module.subprocess, "check_output", check_output)
     monkeypatch.setattr(module.subprocess, "run", lambda *a, **k: None)

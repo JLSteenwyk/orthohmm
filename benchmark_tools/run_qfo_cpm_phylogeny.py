@@ -19,9 +19,9 @@ from benchmark_tools.run_qfo_parameter_phylogeny import verify_baseline
 from benchmark_tools.run_qfo_factorial_cell import native_command
 from benchmark_tools.run_simulation_methods import read_frozen, execution_environment, execute
 
-ADMISSION_JOB = "21969"
-ADMISSION_COMMIT = "348454c4d59704725479029e34a11b4fc6143b7f"
-ADMISSION_SHA = "d32d932a8c11f203217db6412fb708c25927af1ffae6a3bb0e122ed8a7e48868"
+ADMISSION_JOB = "22064"
+ADMISSION_COMMIT = "d4db39cc7a1f78a7e63147313c08b837c8bbb6e9"
+ADMISSION_SHA = "e207691e0b00b11a56a01ccb532470fbc3f45f9aee897bd1872daf1b6daac21e"
 
 
 def select_arm(report, index, context):
@@ -48,7 +48,7 @@ def verify_sources(root, index):
     if len(rows) != 1 or tuple(rows[0][k] for k in ("State", "ExitCode", "NodeList", "AllocCPUS")) != (
             "COMPLETED", "0:0", "bizon", "2"):
         raise ValueError("Require completed CPM candidate admission")
-    executor = root / "benchmarks/work/publication_qfo_cpm_candidates_admission_v1"
+    executor = root / "benchmarks/work/publication_qfo_cpm_candidates_admission_v2"
     if subprocess.check_output(["git", "-C", str(executor), "rev-parse", "HEAD"], text=True).strip() != ADMISSION_COMMIT:
         raise ValueError("Candidate admission executor changed")
     subprocess.run(["git", "-C", str(executor), "diff", "--exit-code", "HEAD", "--", "benchmark_tools", "orthohmm"], check=True)
