@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Threshold Parameter Uncertainty Completed (2026-09-23)
+
+Previous turn made progress through committed recovery disposition checks
+(25db190). Re-read the objective and confirmed all four score admissions
+22047 completed 0:0. Ran the frozen raw-count audit and 100,000-replicate
+paired family bootstrap for the four available threshold variants, followed
+by independent numerical reproduction: all 12 available endpoints agree
+within 1e-12. All 117 focused parameter-analysis tests pass.
+
+[Results and reproduction commands](QFO_THRESHOLD_UNCERTAINTY_20260923.md)
+retain both missing CPM arms and the planned 18-endpoint correction.
+Normalization variants match the control family statistics. Margin F1
+differences are -0.5122 and +0.2134 percentage points; adjusted intervals
+include zero. Defaults remain unchanged; neither broad equivalence nor a
+general accuracy improvement is established.
+
+Low-CPM phylogeny 22088_0 is still running; BLAST recovery 22103_3 awaits
+resources. No DGX action, recovery merge or held-chain release occurred.
+The CPM contrasts, other QfO uncertainty, final BLAST admission and controlled
+timing remain unfinished, alongside the broader publication requirements.
+
+
 ## Recovery Query-Disposition Crosscheck Prepared (2026-09-23)
 
 The preceding user-response turn only acknowledged DGX deferral, so it was
