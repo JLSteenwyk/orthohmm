@@ -18,9 +18,9 @@ from benchmark_tools.prepare_qfo_candidate_neighborhood import require_environme
 from benchmark_tools.run_simulation_methods import read_frozen
 from benchmark_tools.run_qfo_cpm_variant import ARMS
 
-ADMISSION_JOB = "21962"
-ADMISSION_COMMIT = "cbd59182a59b151933faebd9c41d7803a38f0726"
-ADMISSION_SHA = "96f4129d7ee948fc077ee67e6e4673c61acbb8f56e17cb17777239daa19593d0"
+ADMISSION_JOB = "22060"
+ADMISSION_COMMIT = "e18f891d88eac5e24787c2c41e0563a620d1a102"
+ADMISSION_SHA = "f83302318c7951f077b82eb2adac104e331664adacb407c0dcda17803a6db7de"
 BASELINE_SHA = "d8385c50426e690afd6d32f3c5302e678de6977c9841451d013201b0f75b564a"
 
 
@@ -34,7 +34,7 @@ def replay_evidence(root, index, context):
     if len(rows) != 1 or tuple(rows[0][k] for k in ("State", "ExitCode", "NodeList", "AllocCPUS")) != (
             "COMPLETED", "0:0", "bizon", "2"):
         raise ValueError("Require completed CPM replay admission")
-    executor = root / "benchmarks/work/publication_qfo_cpm_variant_admission_v1"
+    executor = root / "benchmarks/work/publication_qfo_cpm_variant_admission_v2"
     if subprocess.check_output(["git", "-C", str(executor), "rev-parse", "HEAD"], text=True).strip() != ADMISSION_COMMIT:
         raise ValueError("Changed replay admission executor")
     subprocess.run(["git", "-C", str(executor), "diff", "--exit-code", "HEAD", "--", "benchmark_tools", "orthohmm"], check=True)

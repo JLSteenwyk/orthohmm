@@ -44,7 +44,7 @@ def test_engine_failure_restores_function_and_preserves_seed(tmp_path):
 @pytest.mark.parametrize("state", ["RUNNING", "PENDING", "FAILED"])
 def test_scheduler_before_missing_outputs(tmp_path, monkeypatch, state):
     monkeypatch.setattr(module.subprocess, "check_output", lambda *a, **k:
-        f"JobID|JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS\n21962_0|21963|{state}|0:0|00:01:00|bizon|2\n")
+        f"JobID|JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS\n22060_0|22061|{state}|0:0|00:01:00|bizon|2\n")
     with pytest.raises(ValueError, match="completed"):
         module.replay_evidence(tmp_path, 0, {})
 
@@ -57,7 +57,7 @@ def test_bad_index(tmp_path, index):
 
 @pytest.mark.parametrize("problem", [None, "source", "revision", "arm", "context", "seed", "stages", "changed_seed", "cpus"])
 def test_replay_evidence(tmp_path, monkeypatch, problem):
-    executor = tmp_path / "benchmarks/work/publication_qfo_cpm_variant_admission_v1"
+    executor = tmp_path / "benchmarks/work/publication_qfo_cpm_variant_admission_v2"
     source = executor / "benchmark_tools/admit_qfo_cpm_variant.py"
     source.parent.mkdir(parents=True)
     source.write_text("fixture")
@@ -76,14 +76,15 @@ def test_replay_evidence(tmp_path, monkeypatch, problem):
         report["coverage"][-1]["output"]["path"] = str(tmp_path / "baseline.txt")
     elif problem == "stages":
         report["coverage"].reverse()
-    path = tmp_path / "benchmarks/work/qfo_cpm_variant_admission_21962_0.json"
+    path = tmp_path / "benchmarks/work/qfo_cpm_variant_admission_22060_0.json"
     path.write_text(json.dumps(report))
     if problem == "changed_seed":
         seed.write_text("changed")
     def check_output(command, **kwargs):
         if command[0] == "sacct":
             cpus = "32" if problem == "cpus" else "2"
-            return f"JobID|JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS\n21962_0|21963|COMPLETED|0:0|00:01:00|bizon|{cpus}\n"
+            assert command[1:3] == ["-j", "22060"]
+            return f"JobID|JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS\n22060_0|22061|COMPLETED|0:0|00:01:00|bizon|{cpus}\n"
         return "changed" if problem == "revision" else module.ADMISSION_COMMIT
     monkeypatch.setattr(module.subprocess, "check_output", check_output)
     monkeypatch.setattr(module.subprocess, "run", lambda *a, **k: None)
