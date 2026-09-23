@@ -23,7 +23,7 @@ WORK_NAMES = {"proteinortho": "qc_p", "sonic": "qc_s",
               "orthomcl": "qc_mc"}
 METHODS = tuple(WORK_NAMES)
 OF_CONVERTER = "aa8da7800c4801684726151ad249da7c82a3b88d"
-FASTOMA_CONVERTER = "6616e3a7ec4c46962ded0d34ce9b4150073a2210"
+FASTOMA_CONVERTER = "411d38254fa374dd27a00e4efa69b5f63cb2bebe"
 ORTHOMCL_CONVERTER = "b213c3c1087510e7e965afa14ffca35d14b8ca1a"
 BOUND_SEMANTICS = {**OF_SEMANTICS, "fastoma": FASTOMA_SEMANTICS, "orthomcl": ORTHOMCL_SEMANTICS}
 
@@ -35,7 +35,8 @@ def converter_source(root, method):
         return None
     kind = method if method in ("fastoma", "orthomcl") else "orthofinder"
     commit = {"fastoma": FASTOMA_CONVERTER, "orthofinder": OF_CONVERTER, "orthomcl": ORTHOMCL_CONVERTER}[kind]
-    executor = root / f"benchmarks/work/publication_qfo_corrected_{kind}_pairs_v1"
+    version = "v2" if kind == "fastoma" else "v1"
+    executor = root / f"benchmarks/work/publication_qfo_corrected_{kind}_pairs_{version}"
     if subprocess.check_output(["git", "-C", str(executor), "rev-parse", "HEAD"], text=True).strip() != commit:
         raise ValueError("Comparator converter executor changed")
     subprocess.run(["git", "-C", str(executor), "diff", "--exit-code", "HEAD", "--", "benchmark_tools"], check=True)

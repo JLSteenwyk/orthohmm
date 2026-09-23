@@ -278,7 +278,7 @@ def test_fastoma_converter_revision_pinned(tmp_path, monkeypatch):
 
 def test_fastoma_converter_source_is_frozen_worktree(tmp_path, monkeypatch):
     from benchmark_tools import run_qfo_corrected_comparator_assessment as module
-    executor = tmp_path / "benchmarks/work/publication_qfo_corrected_fastoma_pairs_v1"
+    executor = tmp_path / "benchmarks/work/publication_qfo_corrected_fastoma_pairs_v2"
     source = executor / "benchmark_tools/prepare_qfo_corrected_fastoma_pairs.py"
     source.parent.mkdir(parents=True)
     source.write_text("fixture")
