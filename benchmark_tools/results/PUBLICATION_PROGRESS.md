@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Parameter Environment Correction (2026-09-23)
+
+The preceding installation investigation did not recover Samwise source;
+it also retrieved the successful terminal result of parameter arm 0's
+read-only full preflight: `arm_0_full_preflight_passed_no_inference`.
+This evidence changes the next action from environment diagnosis to a
+separately recorded resubmission. No package installation is required.
+
+The September 19 parameter launcher exported `PYTHONNOUSERSITE=1`, hiding
+distributions present in the frozen inventory. With the flag unset, the
+configured interpreter's inventory matches the manifest. The diagnostic
+used the original executor at `aa8c0e1937b898a9da83c69bf36ec342a4e04b89`,
+cleared Python/library path overrides, and retained single-threaded BLAS
+limits. `verify_sources(Path.cwd(), 0)` passed, including candidate and
+baseline provenance checks. This is arm 0 preflight evidence, not a claim
+that all arms have run or passed scientific validation.
+
+`qfo_parameter_phylogeny_batch_20260923.sh` changes only that environment
+policy relative to the September 19 launcher. Scientific commands, frozen
+executor, manifests, resource limits, and strict inventory checks remain
+unchanged. The output root does not exist before submission; the runner
+also refuses existing outputs. Original failed jobs and logs are retained.
+Downstream scripts contain the same environment flag and fixed upstream
+job identities; they must be reviewed and replaced explicitly, not merely
+reattached to the new array. Running CPM 21956 is left untouched. BLAST
+diagnostic 22029 remains queued, and OrthoMCL admission 21746 remains held.
+
 ## FastOMA Native Completion, Admission and Parameter Failures (2026-09-23)
 
 The preceding interval was a verified wait on live FastOMA 21740. After
