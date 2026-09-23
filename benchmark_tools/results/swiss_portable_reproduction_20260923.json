@@ -1,0 +1,18 @@
+{
+  "absolute_tolerance": 1e-12,
+  "endpoints": 21,
+  "historical_paths_accessed": false,
+  "input_sha256": "121cc8adf3cd63878f19006ec5500a13f879d042eccd565e1ae5f5a863f43fb1",
+  "limitations": [
+    "Arithmetic only from hash-pinned retained counts; native inference, conversion and raw scoring were not rerun.",
+    "Historical absolute paths are provenance, not accessed inputs.",
+    "Uses the same NumPy RNG and quantile implementation; this is not cross-platform validation or a full release."
+  ],
+  "numpy_version": "2.2.6",
+  "planned_endpoints": 24,
+  "publication_ready": false,
+  "python_version": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+  "raw_source_admission_repeated": false,
+  "source_sha256": "55c4882a1b273c54e3c674f4e52082d6d6ff9a39c47a1d03f12ac314c2fd9fa0",
+  "status": "retained_corrected_swiss_arithmetic_reproduced"
+}

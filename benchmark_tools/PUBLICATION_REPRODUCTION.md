@@ -54,8 +54,26 @@ python benchmark_tools/reproduce_corrected_swiss_comparison.py \
 The retained reproduction matches 21 available endpoints within `1e-12`;
 the three OrthoMCL endpoints are missing, not zero. This rechecks arithmetic
 and referenced hashes, not a fresh raw-count reconstruction or native run.
-Moving the workflow to another machine requires restoring its referenced
-evidence paths; the archival relocation workflow remains unfinished.
+Repeating that full provenance check on another machine requires restoring
+its referenced evidence paths. For a narrower portable arithmetic check,
+the verifier at commit `5f3088a` can run with only the retained report and
+NumPy; it does not follow those historical paths:
+
+```bash
+python -I -B benchmark_tools/reproduce_corrected_swiss_comparison.py \
+  --retained-counts-only \
+  --results benchmark_tools/results/qfo_fastoma_swiss_uncertainty_22098.json \
+  --results-sha256 121cc8adf3cd63878f19006ec5500a13f879d042eccd565e1ae5f5a863f43fb1 \
+  --output /tmp/orthohmm-swiss-portable-new.json
+```
+
+[Executed relocated evidence](results/swiss_portable_reproduction_20260923.json)
+reproduces all 21 available endpoints within `1e-12` using Python 3.10.13
+and NumPy 2.2.6. The isolated `/tmp` export contained the verifier, count
+report, analysis requirements/lock and project license, all verified against
+committed Git blobs. No sibling analysis modules or historical evidence
+files were needed. This mode explicitly does **not** repeat raw-source
+admission, inference or scoring; it is not the complete archival workflow.
 
 Run from the repository root with Git history available, including the
 explicit revisions below. Use a separate analysis interpreter matching

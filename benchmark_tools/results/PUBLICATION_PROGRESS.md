@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Seven-Method Arithmetic Reproduced Outside Checkout (2026-09-23)
+
+Previous turn made progress by completing descriptive strata and manuscript
+routing. Added an explicit --retained-counts-only mode to the comparator
+arithmetic verifier. Its default mode still checks historical source/input
+provenance. The portable mode uses the same numerical verifier, checks its
+input digest and before/after bytes, and labels raw-source admission as
+not repeated. No inference or benchmark statistic changed. **12 tests passed**,
+including an isolated subprocess supplied only the verifier and real counts.
+
+Committed source **5f3088a** was exported to
+/tmp/orthohmm-swiss-portable-20260923-v1 using git archive. Five files
+(verifier, report, requirements, lock and license) were checked byte-for-byte
+against committed blobs. Export tar SHA-256:
+`5051be457d32df84c9c07493616cbe916fc75f14a657ead332817e04bcc0bc34`.
+Ran the exported verifier with -I -B under the existing isolated analysis
+environment, Python 3.10.13/NumPy 2.2.6. Exit zero; all **21 available
+endpoints** agree within 1e-12, retaining three missing OrthoMCL endpoints.
+
+[Retained report](swiss_portable_reproduction_20260923.json) SHA-256:
+`82292c2c89201721441b6b5abdb781466316990899f86ed1836c059efcc6fee7`.
+The reproduction guide now separates this portable statistical check from
+full historical provenance verification. This same-host relocated execution
+is not cross-platform validation, raw-count reconstruction, rights clearance,
+native reproduction or publication readiness. Latest scheduler check:
+22034_2 running at 54:46; BLAST 22055 and CPM 22081 pending.
+
 ## All-Method Descriptive SwissTrees Strata Completed (2026-09-23)
 
 Previous turn made progress on DGX configuration fingerprints. While the
