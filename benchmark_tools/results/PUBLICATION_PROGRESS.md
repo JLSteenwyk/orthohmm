@@ -1,5 +1,50 @@
 # Publication Progress
 
+## BLAST Preflight Fixed; FastOMA Native Evidence Admitted (2026-09-23)
+
+The preceding turn made progress by launching full FastOMA admission.
+Investigated diagnostic BLAST failure 22029: **all five query files still
+match their recorded byte sizes and SHA-256 hashes**. The error text did
+not indicate actual byte drift. The shared `check` helper compares a whole
+three-field record, but query records also contain `id` and
+`input_ordinal_0based`. Comparing those enriched dictionaries always fails.
+
+Fixed only the replay runner's query-record projection, with exact metadata
+schema/type validation. The manifest hash, query selection, file bytes,
+database, native commands, and resource allocation remain unchanged.
+Added tests that reproduce the original mismatch, accept unchanged files,
+reject byte changes, run all six mocked native stages with real file
+checks, reject post-execution mutation, and preserve no-overwrite behavior.
+**24 focused tests passed**, plus full real read-only preflight of 13 file
+records and the frozen plan/runtime/commands. Confirmed no diagnostic
+execution directory or native outputs existed before resubmission.
+
+Committed runner as `cf47e19f5da572d1e93365ea8d54337b671d38d9`, detached
+checkout `benchmarks/work/blast_replay_executor_v2_20260923`. Submitted
+**22055**, 180 CPUs / 900 GiB / 2 hours, no requeue; pending Resources.
+Original 22029 failure/log and the original executor are preserved.
+The new run is diagnostic only; OrthoMCL admission remains held.
+
+**FastOMA admission 22054 COMPLETED/0:0 in 2:35.** Report
+`benchmarks/work/qfo_corrected_fastoma_admission_22054.json` SHA-256
+`3cd4aac88a6e227493ab963b6a83a248adcde4780dc98d71ba3c401489805b8c`
+has status `corrected_fastoma_native_evidence_admitted`:
+
+- 984,137 input proteins across 78 species; 974,812 declared in OrthoXML,
+  leaving 9,325 input proteins undeclared (retained coverage limitation).
+- 589,718 HOG-referenced proteins in 55,477 RootHOGs; root-table membership
+  agrees. Another 385,094 declared proteins are not HOG-referenced.
+- 15,008,180 native pair rows; 585,247 distinct pair endpoint proteins;
+  4,471 HOG members have no pair endpoint.
+- Native `orthologs.tsv.gz`: 56,529,828 bytes, SHA-256
+  `6eab31e8992132b2982176987facaf9ba11ce92a2da4f178528b3e04c826ef24`.
+
+This is native evidence admission, not QfO accuracy. Pair conversion and
+scoring must now be reconnected to the new admission artifact and frozen
+validator, preserving the old failed-admission chain. At the last scheduler
+check parameter arm 22034_0 and CPM variant 21960_1 are running. No new
+accuracy result is claimed; the full publication goal remains open.
+
 ## Integrated FastOMA Task Audit and New Admission (2026-09-23)
 
 The preceding turn was progress: explicit retry review passed while keeping
