@@ -82,7 +82,11 @@ and [executable instructions](../PUBLICATION_REPRODUCTION.md#native-execution-an
 now support source-acquisition-only packaging for its three frozen inputs.
 Fresh downloads matched their original hashes and regenerated all prepared
 inputs/reference bytes. No raw dataset was newly committed or cleared for
-redistribution. OrthoBench acquisition packaging remains separate work.
+redistribution. OrthoBench now has a [fresh upstream checkout verification](orthobench_source_reacquisition_20260923.json)
+and commands in the same guide: 95 files match fixed Git blobs, with all
+93 benchmark input/reference files also matching historical analysis hashes.
+Its raw files and scorer likewise remain acquisition-only; repository terms
+are not inferred from successful download or verification.
 
 The [patched CPU wheelhouse notice inventory](PUBLICATION_DEPENDENCY_NOTICES_20260920.md)
 now binds all11local wheel identities to the retained installation report,

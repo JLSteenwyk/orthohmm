@@ -122,6 +122,22 @@ environment or cross-platform equivalence.
 
 ## Native Execution And Timing
 
+OrthoBench raw inputs and its upstream scorer are acquired separately:
+
+```bash
+git clone --no-checkout https://github.com/davidemms/Open_Orthobench.git /tmp/orthobench-source-new
+git -C /tmp/orthobench-source-new checkout --detach 872d6f30592ab5ff837224db16a514b3f2bb916a
+python benchmark_tools/verify_orthobench_acquisition.py \
+  --checkout /tmp/orthobench-source-new --output /tmp/orthobench-acquisition-new.json
+```
+
+[Executed reacquisition evidence](results/orthobench_source_reacquisition_20260923.json)
+verifies 95 files against the pinned upstream blobs. The 12 FASTAs, 70
+reference groups and 11 low-certainty files also match the retained
+scientific input manifests. The scorer and README are checked but not
+executed. Raw files and upstream code remain outside the publication bundle;
+these commands do not resolve redistribution rights or rerun inference.
+
 YGOB inputs can be acquired directly from the provider without including raw
 data in the publication bundle. From the repository root, use fresh paths:
 

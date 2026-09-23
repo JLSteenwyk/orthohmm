@@ -1,5 +1,30 @@
 # Publication Progress
 
+## OrthoBench Acquisition Reproduced From Upstream (2026-09-23)
+
+Previous turn made progress through verified YGOB reacquisition and
+preparation. Continued local archive work; DGX remains deferred by user
+request. Added a read-only verifier for upstream OrthoBench revision
+872d6f30592ab5ff837224db16a514b3f2bb916a. It checks the checkout revision,
+working bytes against committed Git blobs, exact input inventory, and
+93 input/reference identities against two hash-pinned historical manifests.
+It does not execute upstream code. **Eight tests passed**, including changed,
+missing, extra and symlinked files, wrong revision and manifest mismatch.
+
+Both the original checkout and a fresh HTTPS clone at
+benchmarks/work/orthobench_reacquired_20260923_v1 passed. Their verification
+reports are identical: 12 FASTAs, 70 reference groups, 11 low-certainty
+files, scorer and README, **95 files / 134,924,318 bytes**. Original unrelated
+__pycache__ was not changed; no acquired data/scorer was added to Git.
+
+[Receipt](orthobench_source_reacquisition_20260923.json) SHA-256:
+`17eaab01a2ee906b77ec388912fa7de88ddcb81bbd28906ce1e438362856032c`.
+The reproduction guide and rights register now document acquisition-only
+commands for both OrthoBench and YGOB. This removes the need to bundle these
+raw inputs for acquisition reproduction; it does not clear redistribution,
+rerun inference/scoring, or complete file-level archive review.
+Latest accounting: 22034_3 and 22081_0 running; 22055 pending.
+
 ## DGX Deferred; YGOB Source Acquisition Reproduced (2026-09-23)
 
 Previous turn made progress through portable comparator arithmetic.
