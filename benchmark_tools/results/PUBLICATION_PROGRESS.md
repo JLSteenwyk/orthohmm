@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Checkpointed OrthoMCL Recovery Submitted (2026-09-23)
+
+Previous turn made progress by validating diagnostic 22055 and preparing
+20 exact-byte replay batches. Implemented the durable batch executor,
+tested it (51 focused tests), and passed a real index-0 preflight against
+the original full database/runtime. Committed/pushed source at
+1a73dc619bf50d5cc37b59f7b7820df3f4787c5d before submission. It preserves
+the full-database search command except query/output paths, refuses existing
+batch directories, and fsyncs native artifacts before atomic completion
+records. Failures remain explicit; native completion never admits search.
+
+Submitted [serial array](qfo_blast_recovery_batch_20260923.sh) as **22103**,
+0-19%1, 180 CPUs / 900 GiB / 24 hours, no requeue. Authoritative scheduler
+state is PENDING(Resources), Requeue=0, Restarts=0. Frozen executor resides
+at benchmarks/work/blast_recovery_executor_v1_20260923; outputs will be
+benchmarks/results/qfo_blast_recovery_v1/batch_00..19. This queues recovery
+for all 98,913 unresolved queries, not a new full-database all-query search.
+
+All four parameter native-admission tasks 22035_0..3 completed 0:0;
+22039_0 pair conversion is running. CPM 22081_0 completed and 22081_1 is
+running. Existing scientific jobs/dependencies remain unchanged. Original
+partial BLAST evidence and held 21746 remain untouched; DGX remains deferred.
+
+Next: inspect completed recovery batches, independently verify search/query
+coverage and diagnostics, then review prefix reuse/merge before reconnecting
+downstream OrthoMCL work. Remaining robustness scores, uncertainty/annotation
+gaps, controlled resource evidence and final publication release/archive are
+still incomplete. See [recovery evidence](QFO_BLAST_INTERRUPTION_20260923.md).
+
 ## BLAST Diagnostic Passed; Recovery Batches Prepared (2026-09-23)
 
 Previous turn made progress repairing uncertainty source bindings and

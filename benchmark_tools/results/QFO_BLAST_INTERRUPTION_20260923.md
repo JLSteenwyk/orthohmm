@@ -250,3 +250,32 @@ scheduler submission remain next. Diagnostic agreement supports proceeding
 with replay preparation, but search admission and prefix reuse remain false.
 The unchanged full database must be searched for every batch. All original
 partial files, failed attempts and held downstream jobs remain preserved.
+
+## Recovery Array Submitted
+
+Implemented and froze the per-batch executor at
+1a73dc619bf50d5cc37b59f7b7820df3f4787c5d. It verifies the batch manifest,
+protocol, original plan/runtime and complete database. Only query and output
+paths change in the native search command. Each fresh batch directory has
+durable preflight/status records; native output, diagnostics and time log
+are fsynced before a completed status is atomically replaced and its directory
+fsynced. Nonzero exit, missing output or changed evidence leaves failure
+status and preserves partial files. Existing batch directories cannot be
+implicitly resumed or overwritten. Native completion is not search admission.
+
+Fifty-one focused executor/preparer/comparison/replay tests pass, including
+nonzero exits, interruption, changed runtime, missing artifacts, command
+scope and durable-status sequencing. A real index-0 --check-only invocation
+passed without creating execution output. This is preflight evidence, not
+a native recovery result or a simulated power-loss test.
+
+Submitted [batch script](qfo_blast_recovery_batch_20260923.sh) as **22103**.
+Scheduler confirms array 0-19%1, 180 CPUs, 900 GiB, 24-hour limit, Requeue=0
+and Restarts=0. Initial state is PENDING(Resources), not running or failed.
+Executor: benchmarks/work/blast_recovery_executor_v1_20260923. New outputs:
+benchmarks/results/qfo_blast_recovery_v1/batch_00 through batch_19.
+
+No old BLAST file, held admission or downstream dependency was modified.
+Independent completed-batch validation and the separately reviewed prefix
+reuse/merge gate are still required. No final OrthoMCL score or controlled
+timing comparison follows from submission.
