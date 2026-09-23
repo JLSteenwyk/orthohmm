@@ -139,3 +139,48 @@ test. The committed v2 run has identical family observations and no warning.
 Further work must validate accession/taxon correspondence and NHX semantics,
 and decide whether the incomplete annotations support a prespecified feature
 without treating missing events as zero or using method outcomes to choose it.
+
+## All NHX Candidates Compared
+
+[NHX candidate comparison](swisstree_nhx_event_comparison_20260923.json)
+retains every nonempty physical-line tree: one NOX candidate and two each for
+POP, VATB, SUMF and APP. All have an unspecified parser rooting value, retained
+as null. Comparisons do not select a candidate or reroot a tree. All 22 input
+and source records were checked. Each two-candidate family has identical
+reference observations, but this does not establish an identical full file
+or biological root.
+
+The [NHX source documentation](https://phylosoft.org/NHX/) illustrates Y/N
+event tags and describes the T/F/? convention; the diagnostic retains raw
+tags and conditionally interprets explicit Y/T as duplication, N/F as
+speciation, and absent/? as unknown. Unsupported or duplicate D tags and
+unreviewed Ev tags fail rather than silently changing interpretation. The
+actual five-family sources contain only Y or absent D tags.
+
+NOX adds 558 explicit-duplication/native-non-ortholog pairs, no explicit-event
+contradictions, 388 unknown-event ortholog pairs and 279 unmapped pairs.
+The other four families have no accession/suffix mapping candidates in this
+pass, so their pairs remain unmapped. APP has no explicit D tags, which is
+not a biological zero-duplication finding. These results complement the XML
+diagnostic; they do not close rooting, mapping or source-version gaps.
+
+## Historical Entry-Name Alias Feasibility
+
+Inspection shows the four updated NHX sources and the SERC XML tree use
+entry-style names, not accession suffixes. An outcome-independent
+[alias inventory](swisstree_entry_alias_candidates_20260923.json) compares
+these labels to exact entry names from the previously admitted historical
+UniSave records. It adds no fuzzy matching, species-code normalization or
+prediction-based choice. All source tree alternatives remain represented;
+1,822 input/source records were checked before and after the inventory.
+
+Historical entry names add 48 unique candidates to the original 366:
+APP 9, POP 11, SERC 12, SUMF 3 and VATB 13. This gives 414 unique candidates
+among 563 proteins, with 149 missing and no ambiguous or shared-leaf
+collisions in this panel. Counts are per family, not multiplied by duplicate
+source candidates; both candidates give the same coverage where present.
+The entry names belong to accession/taxon/sequence-verified historical input
+records, but current tree-leaf sequence versions remain unverified. Therefore
+these remain candidate aliases, not admitted tree identities or newly
+interpreted ancestral histories. No new aliases have yet been joined to
+event/accuracy comparisons. Twenty-three focused XML/NHX/alias tests pass.

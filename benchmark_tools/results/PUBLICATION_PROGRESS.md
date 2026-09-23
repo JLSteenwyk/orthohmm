@@ -1,5 +1,28 @@
 # Publication Progress
 
+## NHX Correspondence and Historical Alias Feasibility (2026-09-23)
+
+Previous turn advanced XML source validation and released only the verified
+low-CPM candidate-admission dependency. Re-read the objective and checked live
+handles: BLAST 22103_1 and threshold score 22043_1 remain running; 22086_0 and
+22105_0 are resource-pending. No observation timeout was treated as failure,
+and no native job was restarted or DGX accessed.
+
+Completed the [NHX and alias follow-up](SWISSTREE_DUPLICATION_SOURCE_20260923.md).
+All five NHX sources and all nine stored candidates are retained without
+selection. NOX adds 558 explicit duplication/native non-ortholog matches and
+no explicit-event contradictions; unavailable events/mappings remain unknown.
+The four updated source families use entry-style names, explaining zero
+coverage from accession-only matching, not absence of relevant proteins.
+
+Exact historical UniSave entry-name comparison adds 48 unique alias
+candidates, increasing coverage from 366 to 414 of 563 proteins. The remaining
+149 stay missing; no fuzzy species-code substitutions or shared-leaf choices
+are made. Input sequence verification does not prove current tree-leaf
+sequence versions, so aliases and ancestral histories are not admitted.
+All 1,822 alias-inventory records passed checks; 23 focused tests passed.
+No feature bins, method scores, defaults or publication claims changed.
+
 ## Native Reference Supports Explicit XML Events, With Gaps (2026-09-23)
 
 Previous turn made progress on full recovery coverage validation and retained
