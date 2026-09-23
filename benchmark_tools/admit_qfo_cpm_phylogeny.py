@@ -23,9 +23,9 @@ from benchmark_tools.validate_factorial_native import validate_native_cell
 from benchmark_tools.validate_simulation_outputs import verify_process
 from benchmark_tools.verify_qfo_replay_launcher import LAUNCHER_COMMIT
 
-JOB = "22066"
-EXECUTOR_COMMIT = "1b8825a9b9ba302fc8f3aaaeb9f20f250ad487f6"
-EXECUTOR_SHA = "d1879be5c1f7d8e2da25cf8faa6118e03fc24928e73a290532e5d13c4dc544e0"
+JOB = "22088"
+EXECUTOR_COMMIT = "62641cfc2d3b2c3a5057d74cd3eb6ded352d42dc"
+EXECUTOR_SHA = "840c6d95adcb94e1d3aea207358965f6996ba7bcdc1c2acf66cae1770009568b"
 
 
 def completed_task(accounting, index):
@@ -71,7 +71,7 @@ def admit(root, index):
     helpers = [record(m.__file__) for n, m in sorted(sys.modules.items())
                if n.startswith("benchmark_tools.") and getattr(m, "__file__", None)]
     verified = verify_sources(root, index)
-    executor = root / "benchmarks/work/publication_qfo_cpm_phylogeny_v2"
+    executor = root / "benchmarks/work/publication_qfo_cpm_phylogeny_v3"
     if subprocess.check_output(["git", "-C", str(executor), "rev-parse", "HEAD"], text=True).strip() != EXECUTOR_COMMIT:
         raise ValueError("Changed CPM phylogeny executor revision")
     subprocess.run(["git", "-C", str(executor), "diff", "--exit-code", "HEAD", "--", "benchmark_tools", "orthohmm"], check=True)
