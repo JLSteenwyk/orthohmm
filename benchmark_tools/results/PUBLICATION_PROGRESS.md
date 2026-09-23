@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Full Recovered Candidate Content Auditor Implemented (2026-09-23)
+
+Previous turn integrated validated parameter findings into the manuscript
+(1dfdaae), constituting progress. Re-read the full objective and confirmed
+22088_0 remains running; recovery 22103_3 remains resource-pending.
+
+Implemented the [integrated candidate content auditor](QFO_RECOVERY_CANDIDATE_AUDIT_20260923.md).
+It independently checks every candidate query block's order, complete bytes,
+row count and hash against retained/replayed inventories, then audits all
+numeric HSP/alignment fields and reconciles exact failed/no-hit dispositions.
+Before/after file identities are checked, with no success report on rejection.
+All 80 focused recovery tests pass, including ten new integration cases.
+
+No production candidate exists yet and no production audit was run. The final
+wrapper still needs native execution/provenance and formatted-database parity
+checks before whole-search admission. No inference authorization, held-chain
+release, replay restart or DGX action occurred. The publication goal remains
+incomplete.
+
+
 ## Threshold Findings Integrated Into Manuscript (2026-09-23)
 
 Previous turn completed and pushed the four threshold uncertainty contrasts
