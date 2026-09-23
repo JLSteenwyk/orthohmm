@@ -1,5 +1,21 @@
 # Publication Progress
 
+## BLAST Interrupted; Stale Allocation Cleared (2026-09-23)
+
+After the interrupted monitored wait and Samwise follow-up, revalidated
+the actual host rather than trusting the controller's RUNNING label.
+The host rebooted at 09:19:58 EDT; BLAST was absent, listpids found no job,
+and slurmd had purged its leftover script. The 33,141,805,056-byte partial
+output last changed September 22 at 15:58:23 EDT. Preserved all files;
+no successful exit or final result exists.
+
+Held downstream admission 21746, then cancelled only stale allocation
+21713. Corrected FastOMA 21740 subsequently started and its native workflow
+was observed. [Incident evidence and recovery requirements](QFO_BLAST_INTERRUPTION_20260923.md)
+supersede earlier live-wait reports. BLAST recovery remains unimplemented;
+the current runner intentionally rejects implicit resume. Do not release
+the held chain or admit the partial search. Publication goal stays active.
+
 ## Samwise Installation Source Not Recovered (2026-09-20)
 
 User authorized installation if possible but did not know the source.
