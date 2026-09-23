@@ -1,5 +1,36 @@
 # Publication Progress
 
+## DGX Service Lifetime Guard Implemented (2026-09-23)
+
+Previous turn was progress: the full replacement CPM chain was tested,
+submitted and pushed, and superseded never-started arrays were cancelled.
+This turn addressed the dedicated-timing integration gap without launching
+an unqualified timing experiment or changing any live service.
+
+Added `dgx_service_guard.ServiceGuard`, scoped to the approved exact Samwise
+unit, persistent source hash and enabled link. It records bounded control
+commands, owns only a fresh runtime mask, checks suppression/configuration,
+and requires authoritative terminal accounting before restoration for a
+bound Slurm job. Submission attempts with unknown identity, polling timeouts,
+and live/missing accounting do not authorize restoration or resubmission.
+The job identity is retained even if the subsequent mask observation fails.
+Prelaunch failures can be cleaned up before any submission attempt.
+
+**81 tests passed** across the new guard, scaling executor and existing
+session submitter. A real local `sacct --parsable2` observation confirmed the
+three-column format used by the terminal parser. The tests otherwise mock
+service/scheduler transport; no DGX deployment, service stop, benchmark
+submission or timing admission occurred. The guard is not a whole-host
+monitor and does not automatically hold an SSH session.
+
+The [integration contract](DGX_SERVICE_GUARD_20260923.md) documents required
+caller sequencing, periodic observations, incomplete deployment/lifecycle
+testing, and interruption limitations. Complete that integration and the
+whole-run environmental evidence before the 27 dedicated timing runs.
+Latest scheduler check still showed FastOMA 22057, CPM 22059_0, and parameter
+phylogeny 22034_1 running; diagnostic BLAST 22055 pending. No new accuracy
+scores or comparative timings were admitted.
+
 ## CPM Replacement Scoring Chain Completed (2026-09-23)
 
 The preceding goal turn was progress: native admission and pair conversion
