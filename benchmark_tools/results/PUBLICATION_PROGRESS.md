@@ -1,5 +1,45 @@
 # Publication Progress
 
+## CPM Replay Admission and Candidate Construction Reconnected (2026-09-23)
+
+The preceding turn was progress: the worker guard was repaired and fresh
+CPM variants submitted. Updated replay admission to replacement array
+22059 and frozen executor `b4acb996e8accdcb604a66c95db2f5d8b68ab599`,
+retaining all native-boundary, graph, scientific-setting, control, and
+coverage checks. First test run found an outdated orchestration fixture
+(1 failed / 98 passed); corrected its old job/path references and added an
+assertion of the queried replacement job. The full rerun passed **99 tests**.
+No admission job was submitted until that rerun passed.
+
+Submitted admission array **22060**, pinned validator commit
+`e18f891d88eac5e24787c2c41e0563a620d1a102`, checkout
+`benchmarks/work/publication_qfo_cpm_variant_admission_v2`. The subsequent
+test-fixture-only commit `bbc17ea` does not change executable validation.
+The validator source SHA-256 is
+`f83302318c7951f077b82eb2adac104e331664adacb407c0dcda17803a6db7de`.
+
+Reconnected candidate construction to admission 22060, that exact source
+hash and executor revision. Candidate thresholds remain unchanged; input
+seeds come from admitted v2 replay paths. Frozen candidate executor
+`b32ced4635a59abd71b25ae2d34efa4f4b29bd51` is at
+`benchmarks/work/publication_qfo_cpm_candidates_v3` (v2 already preserves an
+earlier pre-execution repair). Submitted candidate array **22062**.
+Candidate/admission tests passed **83 tests**, and both new launchers pass
+shell syntax checks. Scoped whitespace checks pass.
+
+Each array has two arms, concurrency one, 2 CPUs / 64 GiB / 4 hours, no
+requeue. Dependencies are `afterany` plus `aftercorr` on their immediate
+upstream array (22059 and 22060 respectively). The original failed/replaced
+jobs and executors remain preserved. Candidate outputs use the still-unused
+`qfo_cpm_candidates_v1` namespace with existing no-overwrite guards.
+Candidate admission, phylogeny, and subsequent scoring still need their
+replacement provenance pins; old downstream jobs have not been redirected.
+
+Latest scheduler observation: parameter arm 22034_0 is running at 19:00;
+CPM variants 22059 and BLAST diagnostic 22055 are queued, FastOMA scoring
+22057 is queued, and replacement CPM admission awaits dependencies. No new
+accuracy results or publication-readiness claim is made.
+
 ## CPM Native-Worker Guard Repaired (2026-09-23)
 
 The preceding turn made progress by reconnecting FastOMA scoring and
