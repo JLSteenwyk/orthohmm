@@ -1,5 +1,42 @@
 # Publication Progress
 
+## Corrected CPM Phylogeny Through Pair Conversion Queued (2026-09-23)
+
+Previous turn was progress through candidate construction/admission updates.
+Reconnected three subsequent stages to the spawn-corrected chain, retaining
+scientific commands, parameters, inputs, native pair semantics, and checks.
+
+- Phylogeny **22088**, checkout `publication_qfo_cpm_phylogeny_v3`, commit
+  `62641cfc2d3b2c3a5057d74cd3eb6ded352d42dc`, depends on admission 22086.
+  Pins candidate-admission commit `497c54f1de8010482c0aaabd92c2c4e68dff43da`
+  and source `afc76384bf31e720f9491659978a403fe38d084fc552f4087a59034e5bd3bde8`.
+  **117 focused tests passed**.
+- Native admission **22090**, checkout `publication_qfo_cpm_native_admission_v3`,
+  commit `374bd10f33cd682b2e5b56820c213565d9ed9e25`, depends on 22088.
+  Pins the exact phylogeny executor and producer SHA-256
+  `840c6d95adcb94e1d3aea207358965f6996ba7bcdc1c2acf66cae1770009568b`.
+  **97 focused tests passed**.
+- Pair conversion **22092**, checkout `publication_qfo_cpm_pairs_v3`, commit
+  `dc5bb35de6830db9fbb3cc050205bfd0dd1cad53`, depends on 22090.
+  Pins that admission executor and source SHA-256
+  `408eb2ae155be4f770fef08bf41d8167fb17697116d841ac0bb150e167c3f7d3`.
+  **115 focused tests passed**.
+
+Each array has two arms and concurrency one; dependencies use both afterany
+and aftercorr on the immediate predecessor. Phylogeny retains 32 CPUs /
+192 GiB / 24 hours, validation/conversion 2 CPUs / 64 GiB / four hours.
+All have no requeue. New launchers preserve the previously corrected Python
+environment behavior; shell syntax and scoped whitespace checks pass.
+Output directories still have no-overwrite guards and no old output was
+removed or replaced. Native validation is not bypassed by scheduler success.
+
+The new chain now reaches **22081 -> 22082 -> 22084 -> 22086 -> 22088 ->
+22090 -> 22092**. Scoring and independent score admission still need their
+replacement pins/submissions. Old executors/jobs remain preserved until the
+replacement chain is complete. No native CPM result or score is admitted by
+this orchestration milestone. Latest scheduler inspection showed parameter
+22034_2 and FastOMA 22057 running, replay 22081 and BLAST 22055 pending.
+
 ## Spawn-Corrected CPM Candidate Chain Reconnected (2026-09-23)
 
 Previous turn made progress by freezing/submitting replay 22081 and admission
