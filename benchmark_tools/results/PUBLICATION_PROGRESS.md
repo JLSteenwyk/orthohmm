@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Recovery Validation Array Queued (2026-09-23)
+
+Previous turn made progress by implementing and testing the recovery batch
+validator (74 focused tests) and pushing 7306c55. Created a clean sparse
+executor at `benchmarks/work/blast_recovery_admission_v1_20260923`, pinned
+to 7306c5540e579854800c7a944b570ad478124485. Its actual module import/CLI,
+tracked helper cleanliness, shell syntax and Slurm submission dry run pass.
+Committed/pushed the [submission script](qfo_blast_recovery_admission_20260923.sh)
+at ac7b1fd before submission.
+
+Submitted **22105**, 20 tasks with concurrency one, 2 CPUs / 64 GiB /
+4 hours each, no requeue. Scheduler confirms pending dependencies
+`afterany:22103,aftercorr:22103`, Requeue=0 and Restarts=0. Consequently
+validation waits for the whole recovery array to terminate and requires
+the corresponding native task to succeed; failed native tasks need explicit
+review and will not produce admission evidence. No automatic retries,
+prefix authorization, merge, or downstream release are part of this job.
+Reports will be `benchmarks/work/qfo_blast_recovery_admission_<index>_20260923.json`.
+
+Recovery 22103 remains PENDING(Resources), with no restart. Parameter pair
+conversion 22039_2 and CPM replay 22081_1 remain active. No DGX access or
+service work occurred. Next inspect terminal native/admission outcomes,
+complete robustness scoring and uncertainty, and prepare the full-query
+recovery merge only after all coverage and prefix-reuse gates are met.
+Controlled timing, uncertainty/annotation gaps, and final publication
+release/archive remain unfinished.
+
 ## Recovery Batch Admission Validator Tested (2026-09-23)
 
 Previous turn acknowledged the user's DGX deferral; it made no scientific
