@@ -1,0 +1,267 @@
+{
+  "checked_inputs": [
+    {
+      "bytes": 29028,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_retained_mapping_v2_20260923.json",
+      "sha256": "0d3e736a350782609c68764bc19387500ea64bd5045c5fcfb41930dd89c1ce9d"
+    },
+    {
+      "bytes": 7736,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_swiss_retained_mapping.py",
+      "sha256": "871acee01b9e21441483230076cdadbc4d0d76df771f0fcfde5e3168683029ae"
+    },
+    {
+      "bytes": 3759,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/SWISS_DUPLICATION_FEATURE_PROTOCOL_20260923.md",
+      "sha256": "2bca0f2b2a0c3a5426be268484bab8302b404d66cfdb29c5872afefd41c79b2f"
+    },
+    {
+      "bytes": 1512,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/check_swiss_duplication_features.drw",
+      "sha256": "f22cf866bb03bc8f41e6bad2504a9a8a711cfa00cc212c953ab7046f4be8c47b"
+    },
+    {
+      "bytes": 318907,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/ReconciledTrees_SwissTrees.drw",
+      "sha256": "40528e3537ba57e345c443c8024f99dc3940a66e2d102703754b41bb29858ecd"
+    },
+    {
+      "bytes": 53297152,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/container_cache/qfobenchmark-darwin-2022.1.img",
+      "sha256": "abed2b0ff8bb033a2372d0cd5282fd1d6c8ab5fa07496afc48c82f54ed65ea21"
+    },
+    {
+      "bytes": 40019520,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/mapping.json.gz",
+      "sha256": "1c10f6ce5e53ebc3148dde02d16268b225c3c8817c952d1274daa41acbf9eb4d"
+    },
+    {
+      "bytes": 391,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_swiss_retained_relations.drw",
+      "sha256": "decb2968a735b5476191c19da3a1256ceec9687af3a3aac1c4722d06e5b95335"
+    },
+    {
+      "bytes": 637,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/inventory_swiss_retained_trees.drw",
+      "sha256": "abd0ba27389d766585c9b9ca1f63fc5374b454bac003d2b1d54df0aa83fd066a"
+    },
+    {
+      "bytes": 5220,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/inventory_swiss_retained_trees.py",
+      "sha256": "8b618de39bc7e100837dfc5817feb73fb79f5947de812f1e6e3ffc153e77d404"
+    },
+    {
+      "bytes": 15312,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/generateData/AddReconciledTree.drw",
+      "sha256": "83892182292bd5cf0cfe6c1bf366ee0ba3a2e7b8c68a20dfea0a669c743d07cf"
+    }
+  ],
+  "families": {
+    "APP": {
+      "child_overlap_nodes": 0,
+      "default_speciation_nodes": 24,
+      "duplication_fraction": "1/13",
+      "explicit_duplication_nodes": 2,
+      "explicit_speciation_nodes": 0,
+      "informative_nodes": 26,
+      "mapped_members": 27
+    },
+    "ASTER": {
+      "child_overlap_nodes": 0,
+      "default_speciation_nodes": 31,
+      "duplication_fraction": "0",
+      "explicit_duplication_nodes": 0,
+      "explicit_speciation_nodes": 0,
+      "informative_nodes": 31,
+      "mapped_members": 32
+    },
+    "BAMBI": {
+      "child_overlap_nodes": 0,
+      "default_speciation_nodes": 12,
+      "duplication_fraction": "1/13",
+      "explicit_duplication_nodes": 1,
+      "explicit_speciation_nodes": 0,
+      "informative_nodes": 13,
+      "mapped_members": 14
+    },
+    "BAR": {
+      "child_overlap_nodes": 0,
+      "default_speciation_nodes": 48,
+      "duplication_fraction": "1/13",
+      "explicit_duplication_nodes": 4,
+      "explicit_speciation_nodes": 0,
+      "informative_nodes": 52,
+      "mapped_members": 53
+    },
+    "CASP": {
+      "child_overlap_nodes": 0,
+      "default_speciation_nodes": 15,
+      "duplication_fraction": "47/62",
+      "explicit_duplication_nodes": 47,
+      "explicit_speciation_nodes": 0,
+      "informative_nodes": 62,
+      "mapped_members": 63
+    },
+    "CITE": {
+      "child_overlap_nodes": 0,
+      "default_speciation_nodes": 24,
+      "duplication_fraction": "1/9",
+      "explicit_duplication_nodes": 3,
+      "explicit_speciation_nodes": 0,
+      "informative_nodes": 27,
+      "mapped_members": 28
+    },
+    "Clusterin": {
+      "child_overlap_nodes": 0,
+      "default_speciation_nodes": 14,
+      "duplication_fraction": "1/8",
+      "explicit_duplication_nodes": 2,
+      "explicit_speciation_nodes": 0,
+      "informative_nodes": 16,
+      "mapped_members": 17
+    },
+    "GH14": {
+      "child_overlap_nodes": 0,
+      "default_speciation_nodes": 4,
+      "duplication_fraction": "5/7",
+      "explicit_duplication_nodes": 10,
+      "explicit_speciation_nodes": 0,
+      "informative_nodes": 14,
+      "mapped_members": 15
+    },
+    "HOX": {
+      "child_overlap_nodes": 1,
+      "default_speciation_nodes": 35,
+      "duplication_fraction": "3/8",
+      "explicit_duplication_nodes": 21,
+      "explicit_speciation_nodes": 0,
+      "informative_nodes": 56,
+      "mapped_members": 56
+    },
+    "MAPT": {
+      "child_overlap_nodes": 0,
+      "default_speciation_nodes": 10,
+      "duplication_fraction": "1/6",
+      "explicit_duplication_nodes": 2,
+      "explicit_speciation_nodes": 0,
+      "informative_nodes": 12,
+      "mapped_members": 13
+    },
+    "NOX": {
+      "child_overlap_nodes": 0,
+      "default_speciation_nodes": 43,
+      "duplication_fraction": "6/49",
+      "explicit_duplication_nodes": 6,
+      "explicit_speciation_nodes": 0,
+      "informative_nodes": 49,
+      "mapped_members": 50
+    },
+    "POP": {
+      "child_overlap_nodes": 0,
+      "default_speciation_nodes": 31,
+      "duplication_fraction": "2/33",
+      "explicit_duplication_nodes": 2,
+      "explicit_speciation_nodes": 0,
+      "informative_nodes": 33,
+      "mapped_members": 34
+    },
+    "PSEN": {
+      "child_overlap_nodes": 0,
+      "default_speciation_nodes": 28,
+      "duplication_fraction": "3/17",
+      "explicit_duplication_nodes": 6,
+      "explicit_speciation_nodes": 0,
+      "informative_nodes": 34,
+      "mapped_members": 35
+    },
+    "RPS": {
+      "child_overlap_nodes": 0,
+      "default_speciation_nodes": 9,
+      "duplication_fraction": "2/11",
+      "explicit_duplication_nodes": 2,
+      "explicit_speciation_nodes": 0,
+      "informative_nodes": 11,
+      "mapped_members": 12
+    },
+    "SERC": {
+      "child_overlap_nodes": 0,
+      "default_speciation_nodes": 33,
+      "duplication_fraction": "3/14",
+      "explicit_duplication_nodes": 9,
+      "explicit_speciation_nodes": 0,
+      "informative_nodes": 42,
+      "mapped_members": 43
+    },
+    "SUMF": {
+      "child_overlap_nodes": 0,
+      "default_speciation_nodes": 10,
+      "duplication_fraction": "1/11",
+      "explicit_duplication_nodes": 1,
+      "explicit_speciation_nodes": 0,
+      "informative_nodes": 11,
+      "mapped_members": 12
+    },
+    "TRFE": {
+      "child_overlap_nodes": 0,
+      "default_speciation_nodes": 25,
+      "duplication_fraction": "1/6",
+      "explicit_duplication_nodes": 5,
+      "explicit_speciation_nodes": 0,
+      "informative_nodes": 30,
+      "mapped_members": 31
+    },
+    "VATB": {
+      "child_overlap_nodes": 0,
+      "default_speciation_nodes": 22,
+      "duplication_fraction": "5/27",
+      "explicit_duplication_nodes": 5,
+      "explicit_speciation_nodes": 0,
+      "informative_nodes": 27,
+      "mapped_members": 28
+    }
+  },
+  "independent_native_counts_checked": true,
+  "independent_native_stderr": "",
+  "independent_native_stdout_sha256": "c10eb828f514b29562f50f63e3639c167dec5f9cec9c05c2d34ceb8bfe5f3df6",
+  "limitations": [
+    "Annotation fraction on mapped informative nodes, not an evolutionary duplication rate.",
+    "Unannotated nodes default to S in reference reconstruction but are separately counted here.",
+    "Reference-derived and development-exposed; not independent of reference pair labels.",
+    "Alias overlaps follow native semantics; informative nodes need not equal unique genes minus one."
+  ],
+  "median_fraction": "7/48",
+  "native_stderr": "",
+  "prediction_statistics_evaluated": false,
+  "primary_strata": {
+    "lower_duplication_fraction": [
+      "APP",
+      "ASTER",
+      "BAMBI",
+      "BAR",
+      "CITE",
+      "Clusterin",
+      "NOX",
+      "POP",
+      "SUMF"
+    ],
+    "missing_duplication_fraction": [],
+    "upper_duplication_fraction": [
+      "CASP",
+      "GH14",
+      "HOX",
+      "MAPT",
+      "PSEN",
+      "RPS",
+      "SERC",
+      "TRFE",
+      "VATB"
+    ]
+  },
+  "publication_ready": false,
+  "source": {
+    "bytes": 8580,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/extract_swiss_duplication_features.py",
+    "sha256": "96355e41e5733dbf049e113e348bd6819cc215448e936b7d0e99070908d4b73e"
+  },
+  "status": "mapped_tree_duplication_features_unscored"
+}

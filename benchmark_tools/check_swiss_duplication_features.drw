@@ -1,0 +1,37 @@
+ReadProgram('/benchmark/lib/darwinit'):
+ReadProgram(reference):
+CountMapped := proc(t, family)
+    global DupCount, SpecCount, DefaultCount, OverlapCount:
+    if type(t, Leaf) then
+        p := MappedLeaves[family.'|'.t['Label']]:
+        return(If(p=unassigned, {}, {p})):
+    fi:
+    a := CountMapped(t[Left], family):
+    b := CountMapped(t[Right], family):
+    if intersect(a,b)<>{} then
+        OverlapCount := OverlapCount+1:
+        a := minus(a,b):
+    fi:
+    if a<>{} and b<>{} then
+        xtra := If(length(t)=3, [], If(type(t['xtra'],list),t['xtra'], [t['xtra']])):
+        category := 'default':
+        for value in xtra do
+            if max(seq(SearchString(tag,value),tag={':D=F',':D=N','D=N',':Ev=speciation',':Ev=SPECIATION'}))>0 then
+                category := 'S': break:
+            elif max(seq(SearchString(tag,value),tag={':D=T',':D=Y','D=Y',':Ev=duplication',':Ev=DUPLICATION'}))>0 then
+                category := 'D': break:
+            fi:
+        od:
+        if category='D' then DupCount := DupCount+1:
+        elif category='S' then SpecCount := SpecCount+1:
+        else DefaultCount := DefaultCount+1: fi:
+    fi:
+    return(union(a,b)):
+end:
+for family in Indices(ReconciledTrees) do
+    DupCount := SpecCount := DefaultCount := OverlapCount := 0:
+    members := CountMapped(ReconciledTrees[family,'Tree'], family):
+    printf('DUPLICATION_FEATURE\t%s\t%d\t%d\t%d\t%d\t%d\n', family,
+           length(members), DupCount, SpecCount, DefaultCount, OverlapCount):
+od:
+exit(0):

@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Duplication Features Frozen and Cross-Checked Natively (2026-09-23)
+
+Previous turn reconstructed all retained SwissTree relationships (b070e46).
+Re-read the goal and confirmed live BLAST 22103_2 and parameter score 22043_2;
+low-CPM phylogeny remains resource-pending. No DGX action or job restart.
+
+Committed/pushed the feature protocol as b288584 before extraction or
+outcome joins. Implemented mapped informative-node counts and exact rational
+median bins. Fresh relationship reconstruction agrees with the pinned
+admission; a separate Darwin recursion agrees on all five count fields for
+all 18 families. Fifty-five focused tests pass.
+
+The [validated features](SWISS_DUPLICATION_FEATURE_RESULT_20260923.md)
+contain 128 explicit duplication annotations among 546 informative nodes;
+418 nodes default to S and none has an explicit S annotation. The 7/48 median
+gives nine lower and nine upper families with no missingness. HOX's alias
+collision remains recorded. No outcome data were loaded, no cutoff was
+optimized, and no scientific scores changed. Next is the prespecified
+descriptive score join, retaining all methods and the empty missing bin.
+
 ## Original SwissTree Relationships Reconstructed Exactly (2026-09-23)
 
 Previous turn checked the constructor diagnostic and released the valid
