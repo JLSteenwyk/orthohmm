@@ -1,5 +1,46 @@
 # Publication Progress
 
+## FastOMA Paired Uncertainty And Manuscript Update (2026-09-23)
+
+Previous turn was progress: FastOMA scores were admitted/exported and the
+corrected CPM chain completed. Reused the unchanged frozen SwissTrees
+executor `10338e2a5046e522f2c1990e791532d3376e8982` in
+`publication_corrected_swiss_comparison_v1` with the new seven-method table.
+No statistic, seed, resampling unit, contrast or multiplicity rule changed.
+Batch **22098 completed 0:0 in 24 seconds**, 2 CPUs / 64 GiB, no requeue.
+Its launcher binds table SHA-256
+`6aec972b23a8ed213e5b0e2f5965bc7a16987e2d1f9a0353383ac7a8c1999c06`.
+
+Raw family counts were reconstructed before 100,000 shared family resamples
+(seed 20260920), retaining all eight contrasts and the 24-endpoint correction.
+Seven contrasts / 21 endpoints are now estimable; OrthoMCL remains missing.
+FastOMA minus full OrthoFinder F1 is -0.068194 with adjusted interval
+[-0.158907, 0.026407]; precision and recall adjusted intervals also include
+zero. No superiority or equivalence is established. Independent arithmetic
+reproduction matched all 21 endpoints within 1e-12. Results are retained in
+`qfo_fastoma_swiss_uncertainty_22098.json` (SHA-256
+`121cc8adf3cd63878f19006ec5500a13f879d042eccd565e1ae5f5a863f43fb1`)
+and `qfo_fastoma_swiss_reproduction_22098.json`.
+
+Generated the updated three-panel figure/table in
+`corrected_swiss_comparison_figure_22098`; visually inspected its PNG for
+labels, intervals and explicit missing OrthoMCL row. Updated manuscript point
+estimates, seven-method status, supplied-tree caveat, uncertainty text and
+figure link. Historical six-method analysis and figure remain preserved.
+
+Testing: main-worktree focused suite reported **3 failed / 52 passed** because
+its historical runner intentionally pins the older FastOMA conversion helper,
+which has since changed orchestration provenance. This is not the executor
+used for 22098. A first frozen-suite invocation named a reproduction test
+not yet present at that old revision (no tests ran); the corrected invocation
+passed **45 tests in the actual frozen executor**. The actual seven-method
+run and independent arithmetic reproduction also passed all source gates.
+No historical source pin was silently relaxed. Whole-main-worktree test
+health is not claimed by these scoped checks.
+
+Dedicated timing, OrthoMCL recovery, CPM/parameter results and remaining
+publication requirements are still incomplete.
+
 ## Corrected CPM Chain Complete; FastOMA Scores Admitted (2026-09-23)
 
 Previous turn made progress through corrected CPM phylogeny/pair stages.

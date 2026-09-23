@@ -1,0 +1,22 @@
+{
+  "absolute_tolerance": 1e-12,
+  "endpoints": 21,
+  "input": {
+    "bytes": 245501,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_fastoma_swiss_uncertainty_22098.json",
+    "sha256": "121cc8adf3cd63878f19006ec5500a13f879d042eccd565e1ae5f5a863f43fb1"
+  },
+  "limitations": [
+    "Recomputes arithmetic from admitted counts, not an independent raw-count or inference audit.",
+    "Uses the same NumPy random generator and quantile implementation."
+  ],
+  "numpy_version": "2.2.6",
+  "planned_endpoints": 24,
+  "publication_ready": false,
+  "source": {
+    "bytes": 6623,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/reproduce_corrected_swiss_comparison.py",
+    "sha256": "1fd53eb91fbb7a2b8a10bf9fcb303ea1c3a4461e9063a9d591d58a7ea3b6d13a"
+  },
+  "status": "corrected_swiss_comparison_numerically_reproduced"
+}

@@ -901,7 +901,7 @@ SwissTrees F1 0.798459, TreeFam-A F1 0.771956 and FAS 0.736680, with
 15,248,739 mapped native pairs and secondary mean 0.769506. A fresh frozen
 admission reproduced its complete report byte-for-byte. These two rows
 show different point-estimate trade-offs, not a uniform advantage. The
-[partial corrected table](qfo_corrected_comparison_20260919_v5/scores.md)
+[partial corrected table](qfo_corrected_comparison_20260923_v6/scores.md)
 does not yet complete the eight-method comparison; paired SwissTrees
 uncertainty for its admitted rows is now reconstructed separately below.
 The admitted high-sensitivity OrthoHMM row now adds GO 0.472271, EC 0.932038,
@@ -914,7 +914,7 @@ EC 0.965650, VGNC F1 0.901690, SwissTrees F1 0.833513, TreeFam-A F1 0.614864
 and FAS 0.762993 (secondary mean 0.761510), from 5,959,560 mapped native
 phylogenetic pairs with zero mapping losses. SwissTrees precision/recall
 are 0.955177/0.739341, versus TreeFam-A 0.959110/0.452464. The table now
-contains six admitted and two missing methods. Full OrthoFinder 3.1.5 adds
+contains seven admitted methods; OrthoMCL remains missing. Full OrthoFinder 3.1.5 adds
 GO 0.469548, EC 0.936130, VGNC F1 0.988546, SwissTrees F1 0.848413,
 TreeFam-A F1 0.791918 and FAS 0.691422 (secondary mean 0.787663), from
 14,215,382 native phylogenetic pairs. Its pre-phylogenetic sequence-only
@@ -929,7 +929,16 @@ has higher GO/EC similarity and FAS. Full OrthoFinder SwissTrees
 precision/recall are 0.937853/0.774548, and TreeFam-A precision/recall
 are 0.924527/0.692578. Relative to OrthoHMM, this is lower precision
 and higher recall on both reference-tree tests, not a uniform advantage.
-FastOMA and OrthoMCL comparisons remain unfinished. No paired superiority
+FastOMA's corrected native pairs are now admitted: GO 0.436894, EC 0.897168,
+VGNC F1 0.950096, SwissTrees F1 0.780219, TreeFam-A F1 0.657902 and FAS
+0.654366 (secondary mean 0.729441), from 15,008,180 native pairs with zero
+mapping losses. SwissTrees precision/recall are 0.923601/0.675373;
+TreeFam-A precision/recall are 0.882105/0.524572. FastOMA used a supplied
+corrected OrthoFinder species tree, not independent species-tree inference.
+Two failed native task attempts were retained and explicitly audited against
+their successful retries; their scientific commands were identical. This
+is accuracy evidence, not controlled runtime evidence. OrthoMCL's corrected
+comparison remains unfinished. No paired superiority
 over competitors is inferred from this partial table.
 [Method identity and export checks](QFO_CORRECTED_MAIN_TABLE_20260918.md).
 The prespecified [corrected comparator uncertainty analysis](CORRECTED_SWISS_COMPARISON_RESULT_21987.md)
@@ -945,11 +954,24 @@ This configuration contrast includes candidate expansion, not only phylogeny.
 Full OrthoFinder has higher F1 than high-sensitivity OrthoHMM and Proteinortho
 under the adjustment. The sequence-only checkpoint has lower precision and
 higher recall than full OrthoFinder, while its adjusted F1 interval includes
-zero. SonicParanoid's three adjusted intervals include zero. FastOMA and
-OrthoMCL contrasts remain unestimable, not zero. Independent arithmetic
+zero. SonicParanoid's three adjusted intervals include zero. In that retained
+six-method analysis, FastOMA and OrthoMCL contrasts were unestimable, not
+zero. Independent arithmetic
 reproduction matches all 18 available endpoints within 1e-12.
 
-[![Corrected SwissTrees comparator differences with paired intervals](corrected_swiss_comparison_figure_21987/corrected_swiss_comparison.png)](corrected_swiss_comparison_figure_21987/corrected_swiss_comparison.png "Full-resolution figure")
+The [seven-method update](qfo_fastoma_swiss_uncertainty_22098.json) reuses the
+same frozen executor, 18 families, 100,000 shared resamples and full
+24-endpoint adjustment. FastOMA minus full OrthoFinder has F1 difference
+-0.068194 (adjusted interval [-0.158907, 0.026407]), precision difference
+-0.014252 ([-0.115839, 0.056552]) and recall difference -0.099175
+([-0.239207, 0.054470]). All three adjusted intervals include zero; neither
+superiority nor equivalence is established. Family-specific F1 differences
+favor FastOMA in one family, tie in one, and favor OrthoFinder in 16.
+These counts are descriptive, not a substitute for the macro-statistic
+bootstrap. [Arithmetic reproduction](qfo_fastoma_swiss_reproduction_22098.json)
+matches all 21 available endpoints within 1e-12. OrthoMCL remains missing.
+
+[![Corrected SwissTrees comparator differences with paired intervals](corrected_swiss_comparison_figure_22098/corrected_swiss_comparison.png)](corrected_swiss_comparison_figure_22098/corrected_swiss_comparison.png "Full-resolution figure")
 
 This figure retains every planned contrast. Thick bars are nominal 95%
 intervals and thin bars are adjusted across all 24 endpoints. Values are
