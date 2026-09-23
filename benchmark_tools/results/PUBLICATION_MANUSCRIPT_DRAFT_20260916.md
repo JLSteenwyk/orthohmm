@@ -1034,6 +1034,27 @@ depends on family composition. These descriptive, development-exposed
 associations do not establish a causal fragmentation effect or superiority;
 no new subgroup inference is claimed.
 
+![Descriptive identity-stratified differences in F1, precision and recall versus full OrthoFinder.](swiss_descriptive_feature_figures_20260923/swiss_identity_descriptive.png)
+
+**Supplementary Figure: Sequence Identity.** Points show observed differences
+in percentage points for the nine lower-identity and nine higher-identity
+families. No subgroup intervals or significance tests are added. Separate
+x-axis ranges are used for each metric. Missing OrthoMCL remains unavailable;
+full OrthoFinder is the zero-difference reference. Configuration differences
+are not isolated phylogeny effects, and identity is not calibrated distance.
+
+![Descriptive historical fragment-annotation differences, including baseline-only sensitivity views.](swiss_descriptive_feature_figures_20260923/swiss_fragment_descriptive.png)
+
+**Supplementary Figure: Fragment Annotations.** Observed differences versus
+full OrthoFinder retain the positive (five families), historical unflagged
+(thirteen), baseline-only unflagged (eleven) and baseline-only missing (two)
+views. The positive family set is unchanged by baseline-only restriction.
+Unflagged does not establish completeness; later-version records become
+missing in the baseline-only view. No causal or inferential claim follows
+from a subgroup sign change. [Figure data and provenance](swiss_descriptive_feature_figures_20260923/manifest.json)
+link both figures to the pinned descriptive tables and all 144 displayed
+endpoint records, including unavailable values.
+
 Old groups, trees, scores and confidence intervals cannot
 be relabeled as corrected results. The previously measured 53 legacy BLAST
 query failures also belong to the original run; failures in the corrected

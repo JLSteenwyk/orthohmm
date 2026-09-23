@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Descriptive Feature Figures Added (2026-09-23)
+
+Previous turn completed NHX/alias feasibility evidence and pushed 6f76ef4.
+Re-read the full objective and verified BLAST 22103_1 and threshold scoring
+22043_1 are still live; validators remain resource-pending. Continued the
+publication-figure requirement without restarting native jobs or accessing DGX.
+
+Added a pinned-table renderer for identity and historical fragment strata.
+It validates the full 32/56-row source tables, family/method inventories,
+availability, harmonic F1 and reference differences before plotting. Both
+figures retain all eight method rows and show F1, precision and recall.
+The fragment panel includes the baseline-only unflagged and missing views;
+empty bins and the unchanged positive-bin sensitivity membership are stated,
+not silently dropped or plotted as zero. No new subgroup inference is made.
+
+Generated PNG/PDF/SVG files and 144 machine-readable endpoint records under
+`swiss_descriptive_feature_figures_20260923`. Visually inspected both PNGs:
+labels, legends, axis ranges and limitations are readable and non-overlapping.
+Nine tests passed, including altered/missing rows, invalid differences,
+nonfinite values and fabricated missing-value zero rejection. Added figures
+and captions to the living manuscript; its older rendered HTML remains a
+historical snapshot pending refresh. Corrected the checklist's stale claim
+that interrupted BLAST 21713 was still running. No publication completion.
+
 ## NHX Correspondence and Historical Alias Feasibility (2026-09-23)
 
 Previous turn advanced XML source validation and released only the verified

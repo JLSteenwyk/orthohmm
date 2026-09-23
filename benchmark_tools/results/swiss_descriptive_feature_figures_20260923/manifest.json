@@ -1,0 +1,61 @@
+{
+  "display_conversion": "TSV raw differences; figures multiply by 100",
+  "endpoints": 144,
+  "inputs": [
+    {
+      "bytes": 9352,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_swiss_descriptive_features.py",
+      "sha256": "d9947a6679117dee52e46153a8b27f3d6bde6c218ffee20ed958d6b54afc7e5e"
+    },
+    {
+      "bytes": 5617,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_identity_strata_20260923/scores.tsv",
+      "sha256": "be8ddb6540b62582ebe53e05c33ffdc5893ed10651bfa57eb374d9791b3af664"
+    },
+    {
+      "bytes": 11217,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_fragment_strata_20260923/scores.tsv",
+      "sha256": "4ba79b1e6c9d0f9fabdd0136eddf43fa6ab2c2f9edd2660defe8781ee2aa432b"
+    }
+  ],
+  "matplotlib_version": "3.10.8",
+  "new_inferential_claims": false,
+  "outputs": [
+    {
+      "bytes": 13411,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_descriptive_feature_figures_20260923/endpoints.tsv",
+      "sha256": "1e8cabb0bbec77396b04c36fc536cc7562c29f1a36cf0950e79b6acb188c9f38"
+    },
+    {
+      "bytes": 26056,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_descriptive_feature_figures_20260923/swiss_fragment_descriptive.pdf",
+      "sha256": "af53e4450b3ca0b7cecdba9e1e030b78327c04ed947be1854f88bedd6e79521e"
+    },
+    {
+      "bytes": 241761,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_descriptive_feature_figures_20260923/swiss_fragment_descriptive.png",
+      "sha256": "bf3087f1723c09eabb0da3ccc588ddb37755b038f15ff58d68d65dc9d4d05d3e"
+    },
+    {
+      "bytes": 145535,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_descriptive_feature_figures_20260923/swiss_fragment_descriptive.svg",
+      "sha256": "69274b922e49f27492a126414883d44fea5a7087d1bd9a31423dd5d8ef553748"
+    },
+    {
+      "bytes": 24952,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_descriptive_feature_figures_20260923/swiss_identity_descriptive.pdf",
+      "sha256": "f707ae82c2cfc14b35334ea93886269e876787e266df9a2ec0f470010a7491a5"
+    },
+    {
+      "bytes": 216652,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_descriptive_feature_figures_20260923/swiss_identity_descriptive.png",
+      "sha256": "94a085cdddcaa92077bb1aa20c9287a29c3e5cb535289b408487a2f43f068dda"
+    },
+    {
+      "bytes": 128039,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_descriptive_feature_figures_20260923/swiss_identity_descriptive.svg",
+      "sha256": "f31059ebbd5872bc0d9ab2d31767bd604b856b184c111e9e102603a76ac6fcea"
+    }
+  ],
+  "publication_ready": false
+}

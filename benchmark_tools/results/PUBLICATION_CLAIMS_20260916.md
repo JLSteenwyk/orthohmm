@@ -1,6 +1,6 @@
 # Publication Claim-To-Evidence Checklist
 
-Status updated 19 September 2026. This is a completion audit, not a replacement
+Status updated 23 September 2026. This is a completion audit, not a replacement
 for the original publication goal. A linked plan or passing unit test is not
 evidence that an experiment completed or a biological hypothesis is true.
 
@@ -16,7 +16,7 @@ evidence that an experiment completed or a biological hypothesis is true.
 | Broad candidates improve reconciliation | [OrthoBench factorial](ORTHOBENCH_FACTORIAL_INTERPRETATION_20260916.md), [original-release QfO factorial](QFO_FACTORIAL_SWISS_RESULTS_20260918.md), [corrected factorial](QFO_CORRECTED_FACTORIAL_COMPLETE_20260919.md) | Candidate-expansion simple-effect F1 intervals include zero. Corrected SwissTrees C-by-R F1 interactions are positive with adjusted intervals excluding zero at both profile settings; original-QfO interaction intervals include zero. Conditional end-to-end interaction, not an isolated mechanism or general superiority |
 | The frozen method was evaluated on novel taxa | [YGOB evaluation](YGOB_FROZEN_INTERPRETATION_20260916.md) | Complete bounded transfer evaluation; satellite F1 difference interval includes zero, precision higher and recall lower; not family-disjoint or superiority evidence |
 | Validation is family-disjoint | [Homology screen](ygob_homology_screen_20260916.json) | Not established; substantial detected overlap |
-| Original-release OrthoMCL final-group QfO scoring is complete | [Verified result snapshot](publication_comparison_orthomcl_complete_20260916.json) | Supported for the original inputs only; corrected-release BLAST 21713 was verified running on September 20 and no corrected OrthoMCL score is available |
+| Original-release OrthoMCL final-group QfO scoring is complete | [Verified result snapshot](publication_comparison_orthomcl_complete_20260916.json), [corrected recovery protocol](QFO_BLAST_RECOVERY_PROTOCOL_20260923.md) | Supported for original inputs only; corrected-release 21713 was interrupted. Checkpointed recovery 22103 is ongoing; no corrected OrthoMCL score or prefix reuse is admitted |
 | OrthoMCL BLAST failures have negligible impact | [Failure-impact audit](ORTHOMCL_FAILURE_IMPACT_20260916.md) | Not established; direct exposure is measured, indirect and counterfactual effects are not |
 | Three Kingdoms demonstrates proteome-wide accuracy | [Supplementary score record](three_kingdoms_parity_20260907.json) | Unsupported; restricted BUSCO-reference universe |
 | Every historical Three Kingdoms method used identical input bytes | [Method-input audit](THREE_KINGDOMS_METHOD_INPUTS_20260918.md), [completed matched rerun](THREE_KINGDOMS_SONIC_MATCHED_RESULT_20260918.md) | Not established historically: SonicParanoid native snapshot matches raw Danio rather than the staged stop-marker-stripped version; older high-sensitivity record lacks per-file hashes. Matched inference21795 and assessment21796 completed successfully, admitting contemporary Sonic F1=0.9912758996728462; this does not repair historical provenance or isolate the mismatch's causal effect |
