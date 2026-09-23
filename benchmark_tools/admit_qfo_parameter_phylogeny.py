@@ -22,7 +22,8 @@ from benchmark_tools.validate_simulation_outputs import verify_process
 from benchmark_tools.verify_qfo_replay_launcher import LAUNCHER_COMMIT
 
 EXECUTOR_COMMIT = "aa8c0e1937b898a9da83c69bf36ec342a4e04b89"
-JOB = "21932"
+# Replacement after the original array failed before inference; executor unchanged.
+JOB = "22034"
 
 
 def completed_task(accounting, index):
