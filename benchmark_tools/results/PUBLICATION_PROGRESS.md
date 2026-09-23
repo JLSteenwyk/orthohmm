@@ -1,5 +1,28 @@
 # Publication Progress
 
+## FastOMA Retry Identity and Collection Review (2026-09-23)
+
+The preceding turn was progress: the replacement parameter workflow was
+reconnected through final score admission. Current scheduler inspection
+confirms CPM 21956 is running (46:22), with BLAST diagnostic 22029 and
+parameter inference 22034 still queued. No duplicate runs were submitted.
+
+Read-only inspection now establishes byte-identical scientific commands
+for both failed FastOMA attempts and their successful retries. The regular
+task's original Docker mount exposes only `work/88`, while its requested
+batch is under `work/b6`; its FileNotFoundError is consistent with that
+visibility defect. The retry mounts the full work directory. Both retries
+double memory limits from 12 to 24 GiB; the killed MAFFT subprocess is not
+therefore asserted to be OOM.
+
+All 40 large and 234 regular batches have exactly one successful task.
+Collector symlinks resolve to exactly the 274 successful HOG output
+directories, without failed-attempt outputs. Details, artifact hashes,
+checks performed, and remaining admission requirements are in
+`QFO_FASTOMA_RETRY_REVIEW_20260923.md`. This is new evidence supporting an
+explicit retry-aware validation path, not scientific admission. Original
+trace, outputs, and strict validator remain unchanged. No new scores exist.
+
 ## Replacement Parameter Chain Reconnected Through Scoring (2026-09-23)
 
 The preceding turn made progress by scheduling replacement native admission.
