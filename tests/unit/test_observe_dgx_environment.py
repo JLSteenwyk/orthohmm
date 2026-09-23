@@ -58,3 +58,34 @@ def test_session_observation_failure_propagates(tmp_path, monkeypatch):
     recorder = module.Recorder(tmp_path / "environment")
     with pytest.raises(OSError): recorder.observe("before_submission")
     assert recorder.index == 0
+
+
+def unit(path, dropins=""):
+    return f"Id=test.service\nLoadState=loaded\nFragmentPath={path}\nDropInPaths={dropins}\nNeedDaemonReload=no\n"
+
+
+def test_fingerprints_detect_content_and_symlink_changes_without_copying_contents(tmp_path):
+    source = tmp_path / "test.service"
+    source.write_text("private configuration")
+    link = tmp_path / "alias.service"
+    link.symlink_to(source)
+    dropin = tmp_path / "override.conf"
+    dropin.write_text("override")
+    first = module.configuration_fingerprints(unit(link, str(dropin)))
+    assert "private configuration" not in json.dumps(first)
+    assert first["test.service"]["files"][0]["symlink_target"] == str(source)
+    source.write_text("changed")
+    second = module.configuration_fingerprints(unit(link, str(dropin)))
+    assert first["test.service"]["files"][0]["sha256"] != second["test.service"]["files"][0]["sha256"]
+    assert first["test.service"]["files"][1] == second["test.service"]["files"][1]
+
+
+@pytest.mark.parametrize("raw", ["", "Id=test.service", "Id=x\nId=y", unit("/tmp/a") + "\n" + unit("/tmp/a")])
+def test_malformed_configuration_rejected(raw):
+    with pytest.raises(ValueError): module.configuration_fingerprints(raw)
+
+
+@pytest.mark.parametrize("path", ["/nonexistent/unit", "/dev/null", "relative", r"/tmp/a\x20b"])
+def test_unreadable_or_unsupported_paths_remain_errors(path):
+    result = module.configuration_fingerprints(unit(path))
+    assert "error_type" in result["test.service"]["files"][0]

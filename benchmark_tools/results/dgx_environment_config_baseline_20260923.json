@@ -1,0 +1,2334 @@
+{
+  "commands": {
+    "containers": {
+      "command": [
+        "docker",
+        "ps",
+        "--format",
+        "{{.ID}} {{.Image}} {{.Status}}"
+      ],
+      "finished_monotonic_ns": 2678973763763287,
+      "returncode": 0,
+      "started_monotonic_ns": 2678973751432440,
+      "stderr": "",
+      "stdout": ""
+    },
+    "cpu": {
+      "command": [
+        "lscpu",
+        "-J"
+      ],
+      "finished_monotonic_ns": 2678974076586123,
+      "returncode": 0,
+      "started_monotonic_ns": 2678974069302713,
+      "stderr": "",
+      "stdout": "{\n   \"lscpu\": [\n      {\n         \"field\": \"Architecture:\",\n         \"data\": \"aarch64\"\n      },{\n         \"field\": \"CPU op-mode(s):\",\n         \"data\": \"64-bit\"\n      },{\n         \"field\": \"Byte Order:\",\n         \"data\": \"Little Endian\"\n      },{\n         \"field\": \"CPU(s):\",\n         \"data\": \"20\"\n      },{\n         \"field\": \"On-line CPU(s) list:\",\n         \"data\": \"0-19\"\n      },{\n         \"field\": \"Vendor ID:\",\n         \"data\": \"ARM\"\n      },{\n         \"field\": \"Model name:\",\n         \"data\": \"Cortex-X925\"\n      },{\n         \"field\": \"Model:\",\n         \"data\": \"1\"\n      },{\n         \"field\": \"Thread(s) per core:\",\n         \"data\": \"1\"\n      },{\n         \"field\": \"Core(s) per socket:\",\n         \"data\": \"10\"\n      },{\n         \"field\": \"Socket(s):\",\n         \"data\": \"1\"\n      },{\n         \"field\": \"Stepping:\",\n         \"data\": \"r0p1\"\n      },{\n         \"field\": \"CPU(s) scaling MHz:\",\n         \"data\": \"89%\"\n      },{\n         \"field\": \"CPU max MHz:\",\n         \"data\": \"4004.0000\"\n      },{\n         \"field\": \"CPU min MHz:\",\n         \"data\": \"1378.0000\"\n      },{\n         \"field\": \"BogoMIPS:\",\n         \"data\": \"2000.00\"\n      },{\n         \"field\": \"Flags:\",\n         \"data\": \"fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm dit uscat ilrcpc flagm sb paca pacg dcpodp sve2 sveaes svepmull svebitperm svesha3 svesm4 flagm2 frint svei8mm svebf16 i8mm bf16 dgh bti ecv afp wfxt\"\n      },{\n         \"field\": \"Model name:\",\n         \"data\": \"Cortex-A725\"\n      },{\n         \"field\": \"Model:\",\n         \"data\": \"1\"\n      },{\n         \"field\": \"Thread(s) per core:\",\n         \"data\": \"1\"\n      },{\n         \"field\": \"Core(s) per socket:\",\n         \"data\": \"10\"\n      },{\n         \"field\": \"Socket(s):\",\n         \"data\": \"1\"\n      },{\n         \"field\": \"Stepping:\",\n         \"data\": \"r0p1\"\n      },{\n         \"field\": \"CPU(s) scaling MHz:\",\n         \"data\": \"96%\"\n      },{\n         \"field\": \"CPU max MHz:\",\n         \"data\": \"2860.0000\"\n      },{\n         \"field\": \"CPU min MHz:\",\n         \"data\": \"338.0000\"\n      },{\n         \"field\": \"BogoMIPS:\",\n         \"data\": \"2000.00\"\n      },{\n         \"field\": \"Flags:\",\n         \"data\": \"fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm dit uscat ilrcpc flagm sb paca pacg dcpodp sve2 sveaes svepmull svebitperm svesha3 svesm4 flagm2 frint svei8mm svebf16 i8mm bf16 dgh bti ecv afp wfxt\"\n      },{\n         \"field\": \"L1d cache:\",\n         \"data\": \"1.3 MiB (20 instances)\"\n      },{\n         \"field\": \"L1i cache:\",\n         \"data\": \"1.3 MiB (20 instances)\"\n      },{\n         \"field\": \"L2 cache:\",\n         \"data\": \"25 MiB (20 instances)\"\n      },{\n         \"field\": \"L3 cache:\",\n         \"data\": \"24 MiB (2 instances)\"\n      },{\n         \"field\": \"NUMA node(s):\",\n         \"data\": \"1\"\n      },{\n         \"field\": \"NUMA node0 CPU(s):\",\n         \"data\": \"0-19\"\n      },{\n         \"field\": \"Vulnerability Gather data sampling:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability Itlb multihit:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability L1tf:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability Mds:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability Meltdown:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability Mmio stale data:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability Reg file data sampling:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability Retbleed:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability Spec rstack overflow:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability Spec store bypass:\",\n         \"data\": \"Mitigation; Speculative Store Bypass disabled via prctl\"\n      },{\n         \"field\": \"Vulnerability Spectre v1:\",\n         \"data\": \"Mitigation; __user pointer sanitization\"\n      },{\n         \"field\": \"Vulnerability Spectre v2:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability Srbds:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability Tsx async abort:\",\n         \"data\": \"Not affected\"\n      }\n   ]\n}\n"
+    },
+    "gpu": {
+      "command": [
+        "nvidia-smi",
+        "--query-gpu=name,uuid,driver_version,utilization.gpu,utilization.memory,memory.used,temperature.gpu,power.draw",
+        "--format=csv,noheader,nounits"
+      ],
+      "finished_monotonic_ns": 2678973810611917,
+      "returncode": 0,
+      "started_monotonic_ns": 2678973776558087,
+      "stderr": "",
+      "stdout": "NVIDIA GB10, GPU-af6029d2-886a-1f8b-0123-1710e54c813a, 580.95.05, 0, 0, [N/A], 42, 3.64\n"
+    },
+    "gpu_compute": {
+      "command": [
+        "nvidia-smi",
+        "--query-compute-apps=pid,process_name,used_memory",
+        "--format=csv,noheader,nounits"
+      ],
+      "finished_monotonic_ns": 2678973833203798,
+      "returncode": 0,
+      "started_monotonic_ns": 2678973810613741,
+      "stderr": "",
+      "stdout": ""
+    },
+    "kernel": {
+      "command": [
+        "uname",
+        "-a"
+      ],
+      "finished_monotonic_ns": 2678974077277853,
+      "returncode": 0,
+      "started_monotonic_ns": 2678974076587771,
+      "stderr": "",
+      "stdout": "Linux spark-7ff0 6.11.0-1016-nvidia #16-Ubuntu SMP PREEMPT_DYNAMIC Sun Sep 21 16:52:46 UTC 2025 aarch64 aarch64 aarch64 GNU/Linux\n"
+    },
+    "ollama_models": {
+      "command": [
+        "ollama",
+        "ps"
+      ],
+      "finished_monotonic_ns": 2678973776556775,
+      "returncode": 0,
+      "started_monotonic_ns": 2678973763764007,
+      "stderr": "",
+      "stdout": "NAME    ID    SIZE    PROCESSOR    CONTEXT    UNTIL \n"
+    },
+    "scheduler": {
+      "command": [
+        "squeue",
+        "-h",
+        "-p",
+        "spark",
+        "-o",
+        "%i %T %N"
+      ],
+      "finished_monotonic_ns": 2678973838798740,
+      "returncode": 0,
+      "started_monotonic_ns": 2678973833204598,
+      "stderr": "",
+      "stdout": ""
+    },
+    "system_configuration": {
+      "command": [
+        "systemctl",
+        "show",
+        "*.service",
+        "*.timer",
+        "--property=Id,LoadState,FragmentPath,DropInPaths,NeedDaemonReload"
+      ],
+      "finished_monotonic_ns": 2678974055430422,
+      "returncode": 0,
+      "started_monotonic_ns": 2678973838799476,
+      "stderr": "",
+      "stdout": "Id=apparmor.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/apparmor.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=console-setup.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/console-setup.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=snapd.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/snapd.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=systemd-update-utmp.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/systemd-update-utmp.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=systemd-user-sessions.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/systemd-user-sessions.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=rpc-statd-notify.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/rpc-statd-notify.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=systemd-modules-load.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/systemd-modules-load.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=srp_daemon.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/srp_daemon.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=multipathd.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/multipathd.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=rdma-load-modules@rdma.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/rdma-load-modules@.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=openvpn.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/openvpn.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=blk-availability.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/blk-availability.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=serial-getty@ttyS0.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/serial-getty@.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=setvtrgb.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/setvtrgb.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=smartmontools.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/smartmontools.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=systemd-tmpfiles-clean.timer\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/systemd-tmpfiles-clean.timer\nDropInPaths=\nNeedDaemonReload=no\n\nId=kmod-static-nodes.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/kmod-static-nodes.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=finalrd.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/finalrd.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=systemd-tmpfiles-setup-dev.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/systemd-tmpfiles-setup-dev.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=docker.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/docker.service\nDropInPaths=/etc/systemd/system/docker.service.d/docker-override.conf\nNeedDaemonReload=no\n\nId=user@1000.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/user@.service\nDropInPaths=/usr/lib/systemd/system/user@.service.d/10-login-barrier.conf /usr/lib/systemd/system/user@.service.d/timeout.conf\nNeedDaemonReload=no\n\nId=plymouth-quit.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/plymouth-quit.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=man-db.timer\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/man-db.timer\nDropInPaths=\nNeedDaemonReload=no\n\nId=rsyslog.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/rsyslog.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=systemd-binfmt.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/systemd-binfmt.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=switcheroo-control.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/switcheroo-control.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=fwupd-refresh.timer\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/fwupd-refresh.timer\nDropInPaths=\nNeedDaemonReload=no\n\nId=motd-news.timer\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/motd-news.timer\nDropInPaths=\nNeedDaemonReload=no\n\nId=plymouth-read-write.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/plymouth-read-write.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=dbus.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/dbus.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=gnome-remote-desktop.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/gnome-remote-desktop.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=systemd-networkd.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/systemd-networkd.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=tailscaled.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/tailscaled.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=update-notifier-download.timer\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/update-notifier-download.timer\nDropInPaths=\nNeedDaemonReload=no\n\nId=apport.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/apport.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=ollama.service\nLoadState=loaded\nFragmentPath=/etc/systemd/system/ollama.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=rasdaemon.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/rasdaemon.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=polkit.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/polkit.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=accounts-daemon.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/accounts-daemon.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=systemd-random-seed.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/systemd-random-seed.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=apt-daily-upgrade.timer\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/apt-daily-upgrade.timer\nDropInPaths=\nNeedDaemonReload=no\n\nId=snapd.apparmor.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/snapd.apparmor.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=fwupd.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/fwupd.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=dgx-dashboard-admin.service\nLoadState=loaded\nFragmentPath=/etc/systemd/system/dgx-dashboard-admin.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=user-runtime-dir@1000.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/user-runtime-dir@.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=systemd-tmpfiles-setup.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/systemd-tmpfiles-setup.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=lvm2-monitor.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/lvm2-monitor.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=systemd-resolved.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/systemd-resolved.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=slurmd.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/slurmd.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=wpa_supplicant.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/wpa_supplicant.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=sysstat-collect.timer\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/sysstat-collect.timer\nDropInPaths=\nNeedDaemonReload=no\n\nId=systemd-journal-flush.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/systemd-journal-flush.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=rdma-ndd.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/rdma-ndd.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=systemd-remount-fs.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/systemd-remount-fs.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=mariadb.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/mariadb.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=logrotate.timer\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/logrotate.timer\nDropInPaths=\nNeedDaemonReload=no\n\nId=alsa-restore.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/alsa-restore.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=systemd-tmpfiles-setup-dev-early.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/systemd-tmpfiles-setup-dev-early.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=dgx-dashboard.service\nLoadState=loaded\nFragmentPath=/etc/systemd/system/dgx-dashboard.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=ufw.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/ufw.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=systemd-logind.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/systemd-logind.service\nDropInPaths=/usr/lib/systemd/system/systemd-logind.service.d/dbus.conf\nNeedDaemonReload=no\n\nId=cron.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/cron.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=udisks2.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/udisks2.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=systemd-sysctl.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/systemd-sysctl.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=systemd-timesyncd.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/systemd-timesyncd.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=e2scrub_all.timer\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/e2scrub_all.timer\nDropInPaths=\nNeedDaemonReload=no\n\nId=rdma-load-modules@infiniband.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/rdma-load-modules@.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=systemd-journald.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/systemd-journald.service\nDropInPaths=/usr/lib/systemd/system/systemd-journald.service.d/nice.conf\nNeedDaemonReload=no\n\nId=ras-mc-ctl.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/ras-mc-ctl.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=rtkit-daemon.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/rtkit-daemon.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=anacron.timer\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/anacron.timer\nDropInPaths=\nNeedDaemonReload=no\n\nId=NetworkManager.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/NetworkManager.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=sysstat-summary.timer\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/sysstat-summary.timer\nDropInPaths=\nNeedDaemonReload=no\n\nId=snapd.seeded.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/snapd.seeded.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=keyboard-setup.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/keyboard-setup.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=colord.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/colord.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=update-notifier-motd.timer\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/update-notifier-motd.timer\nDropInPaths=\nNeedDaemonReload=no\n\nId=kdump-tools.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/kdump-tools.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=ModemManager.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/ModemManager.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=nvidia-persistenced.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/nvidia-persistenced.service\nDropInPaths=/etc/systemd/system/nvidia-persistenced.service.d/nv-persistence-override.conf\nNeedDaemonReload=no\n\nId=ua-timer.timer\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/ua-timer.timer\nDropInPaths=\nNeedDaemonReload=no\n\nId=containerd.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/containerd.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=ssh.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/ssh.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=bluetooth.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/bluetooth.service\nDropInPaths=/etc/systemd/system/bluetooth.service.d/nv-disable-bt-override.conf\nNeedDaemonReload=no\n\nId=sysstat.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/sysstat.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=systemd-udev-trigger.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/systemd-udev-trigger.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=dpkg-db-backup.timer\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/dpkg-db-backup.timer\nDropInPaths=\nNeedDaemonReload=no\n\nId=cups-browsed.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/cups-browsed.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=plymouth-start.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/plymouth-start.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=avahi-daemon.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/avahi-daemon.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=systemd-fsck@dev-disk-by\\x2duuid-9DA2\\x2d3597.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/systemd-fsck@.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=fstrim.timer\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/fstrim.timer\nDropInPaths=\nNeedDaemonReload=no\n\nId=systemd-udevd.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/systemd-udevd.service\nDropInPaths=/usr/lib/systemd/system/systemd-udevd.service.d/syscall-architecture.conf\nNeedDaemonReload=no\n\nId=rdma-load-modules@roce.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/rdma-load-modules@.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=plymouth-quit-wait.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/plymouth-quit-wait.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=munge.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/munge.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=upower.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/upower.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=cups.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/cups.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=nvidia-nvme-interrupt-coalescing.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/nvidia-nvme-interrupt-coalescing.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=apt-daily.timer\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/system/apt-daily.timer\nDropInPaths=\nNeedDaemonReload=no\n"
+    },
+    "system_services": {
+      "command": [
+        "systemctl",
+        "list-units",
+        "--type=service",
+        "--state=running",
+        "--no-pager",
+        "--plain",
+        "--no-legend"
+      ],
+      "finished_monotonic_ns": 2678973734438029,
+      "returncode": 0,
+      "started_monotonic_ns": 2678973729853362,
+      "stderr": "",
+      "stdout": "accounts-daemon.service      loaded active running Accounts Service\navahi-daemon.service         loaded active running Avahi mDNS/DNS-SD Stack\nbluetooth.service            loaded active running Bluetooth service\ncolord.service               loaded active running Manage, Install and Generate Color Profiles\ncontainerd.service           loaded active running containerd container runtime\ncron.service                 loaded active running Regular background program processing daemon\ncups-browsed.service         loaded active running Make remote CUPS printers available locally\ncups.service                 loaded active running CUPS Scheduler\ndbus.service                 loaded active running D-Bus System Message Bus\ndgx-dashboard-admin.service  loaded active running NVIDIA DGX Dashboard Admin Service\ndgx-dashboard.service        loaded active running NVIDIA DGX Dashboard Service\ndocker.service               loaded active running Docker Application Container Engine\nfwupd.service                loaded active running Firmware update daemon\ngnome-remote-desktop.service loaded active running GNOME Remote Desktop\nmariadb.service              loaded active running MariaDB 10.11.14 database server\nModemManager.service         loaded active running Modem Manager\nmultipathd.service           loaded active running Device-Mapper Multipath Device Controller\nmunge.service                loaded active running MUNGE authentication service\nNetworkManager.service       loaded active running Network Manager\nnvidia-persistenced.service  loaded active running NVIDIA Persistence Daemon\nollama.service               loaded active running Ollama Service\npolkit.service               loaded active running Authorization Manager\nrasdaemon.service            loaded active running RAS daemon to log the RAS events\nrdma-ndd.service             loaded active running RDMA Node Description Daemon\nrsyslog.service              loaded active running System Logging Service\nrtkit-daemon.service         loaded active running RealtimeKit Scheduling Policy Service\nserial-getty@ttyS0.service   loaded active running Serial Getty on ttyS0\nslurmd.service               loaded active running Slurm node daemon\nsmartmontools.service        loaded active running Self Monitoring and Reporting Technology (SMART) Daemon\nsnapd.service                loaded active running Snap Daemon\nssh.service                  loaded active running OpenBSD Secure Shell server\nswitcheroo-control.service   loaded active running Switcheroo Control Proxy service\nsystemd-journald.service     loaded active running Journal Service\nsystemd-logind.service       loaded active running User Login Management\nsystemd-networkd.service     loaded active running Network Configuration\nsystemd-resolved.service     loaded active running Network Name Resolution\nsystemd-timesyncd.service    loaded active running Network Time Synchronization\nsystemd-udevd.service        loaded active running Rule-based Manager for Device Events and Files\ntailscaled.service           loaded active running Tailscale node agent\nudisks2.service              loaded active running Disk Manager\nupower.service               loaded active running Daemon for power management\nuser@1000.service            loaded active running User Manager for UID 1000\nwpa_supplicant.service       loaded active running WPA supplicant\n"
+    },
+    "timers": {
+      "command": [
+        "systemctl",
+        "list-timers",
+        "--all",
+        "--no-pager",
+        "--no-legend"
+      ],
+      "finished_monotonic_ns": 2678973751431048,
+      "returncode": 0,
+      "started_monotonic_ns": 2678973737449093,
+      "stderr": "",
+      "stdout": "Wed 2026-09-23 13:06:23 PDT 4min 32s Tue 2026-09-22 13:06:23 PDT           23h ago update-notifier-download.timer update-notifier-download.service\nWed 2026-09-23 13:10:00 PDT     8min Wed 2026-09-23 13:00:08 PDT      1min 42s ago sysstat-collect.timer          sysstat-collect.service\nWed 2026-09-23 13:12:13 PDT    10min Tue 2026-09-22 13:12:13 PDT           23h ago systemd-tmpfiles-clean.timer   systemd-tmpfiles-clean.service\nWed 2026-09-23 13:32:50 PDT    30min Wed 2026-09-23 12:33:53 PDT         27min ago anacron.timer                  anacron.service\nWed 2026-09-23 13:34:41 PDT    32min Wed 2026-09-23 12:23:17 PDT         38min ago fwupd-refresh.timer            fwupd-refresh.service\nWed 2026-09-23 14:03:15 PDT  1h 1min Wed 2026-09-23 07:18:32 PDT      5h 43min ago ua-timer.timer                 ua-timer.service\nWed 2026-09-23 20:57:18 PDT       7h Wed 2026-09-23 04:53:36 PDT            8h ago motd-news.timer                motd-news.service\nThu 2026-09-24 00:00:00 PDT      10h Wed 2026-09-23 00:00:04 PDT           13h ago dpkg-db-backup.timer           dpkg-db-backup.service\nThu 2026-09-24 00:00:00 PDT      10h Wed 2026-09-23 00:00:04 PDT           13h ago logrotate.timer                logrotate.service\nThu 2026-09-24 00:07:00 PDT      11h Wed 2026-09-23 00:07:36 PDT           12h ago sysstat-summary.timer          sysstat-summary.service\nThu 2026-09-24 02:44:26 PDT      13h Wed 2026-09-23 12:24:02 PDT         37min ago apt-daily.timer                apt-daily.service\nThu 2026-09-24 06:57:48 PDT      17h Wed 2026-09-23 06:54:53 PDT            6h ago apt-daily-upgrade.timer        apt-daily-upgrade.service\nThu 2026-09-24 07:01:06 PDT      17h Wed 2026-09-23 00:14:36 PDT           12h ago man-db.timer                   man-db.service\nSat 2026-09-26 07:36:31 PDT   2 days Mon 2026-09-14 07:22:54 PDT 1 week 2 days ago update-notifier-motd.timer     update-notifier-motd.service\nSun 2026-09-27 03:10:13 PDT   3 days Sun 2026-09-20 03:11:14 PDT        3 days ago e2scrub_all.timer              e2scrub_all.service\nMon 2026-09-28 01:15:30 PDT   4 days Mon 2026-09-21 00:08:53 PDT        2 days ago fstrim.timer                   fstrim.service\n-                                  - -                                           - apport-autoreport.timer        apport-autoreport.service\n-                                  - -                                           - snapd.snap-repair.timer        snapd.snap-repair.service\n"
+    },
+    "user_configuration": {
+      "command": [
+        "systemctl",
+        "--user",
+        "show",
+        "*.service",
+        "*.timer",
+        "--property=Id,LoadState,FragmentPath,DropInPaths,NeedDaemonReload"
+      ],
+      "finished_monotonic_ns": 2678974069301337,
+      "returncode": 0,
+      "started_monotonic_ns": 2678974055432614,
+      "stderr": "",
+      "stdout": "Id=wireplumber.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/user/wireplumber.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=dbus.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/user/dbus.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=samwise-daemon-samwise.service\nLoadState=loaded\nFragmentPath=/home/jlsteenwyk/.config/systemd/user/samwise-daemon-samwise.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=filter-chain.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/user/filter-chain.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=launchpadlib-cache-clean.timer\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/user/launchpadlib-cache-clean.timer\nDropInPaths=\nNeedDaemonReload=no\n\nId=pipewire-pulse.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/user/pipewire-pulse.service\nDropInPaths=\nNeedDaemonReload=no\n\nId=pipewire.service\nLoadState=loaded\nFragmentPath=/usr/lib/systemd/user/pipewire.service\nDropInPaths=\nNeedDaemonReload=no\n"
+    },
+    "user_services": {
+      "command": [
+        "systemctl",
+        "--user",
+        "list-units",
+        "--type=service",
+        "--state=running",
+        "--no-pager",
+        "--plain",
+        "--no-legend"
+      ],
+      "finished_monotonic_ns": 2678973737448613,
+      "returncode": 0,
+      "started_monotonic_ns": 2678973734439453,
+      "stderr": "",
+      "stdout": "dbus.service           loaded active running D-Bus User Message Bus\nfilter-chain.service   loaded active running PipeWire filter chain daemon\npipewire-pulse.service loaded active running PipeWire PulseAudio\npipewire.service       loaded active running PipeWire Multimedia Service\nwireplumber.service    loaded active running Multimedia Service Session Manager\n"
+    }
+  },
+  "environmental_validity_established": false,
+  "files": {
+    "/proc/diskstats": {
+      "finished_monotonic_ns": 2678974080973911,
+      "started_monotonic_ns": 2678974080902758,
+      "text": "   7       0 loop0 14 0 34 0 0 0 0 0 0 2 0 0 0 0 0 0 0\n   7       1 loop1 345 0 7140 26 0 0 0 0 0 27 26 0 0 0 0 0 0\n   7       2 loop2 59 0 2194 6 0 0 0 0 0 3 6 0 0 0 0 0 0\n   7       3 loop3 79 0 984 19 0 0 0 0 0 19 19 0 0 0 0 0 0\n   7       4 loop4 359 0 5822 77 0 0 0 0 0 76 77 0 0 0 0 0 0\n   7       5 loop5 84 0 2324 12 0 0 0 0 0 9 12 0 0 0 0 0 0\n   7       6 loop6 50 0 2164 7 0 0 0 0 0 6 7 0 0 0 0 0 0\n   7       7 loop7 692 0 45140 150 0 0 0 0 0 151 150 0 0 0 0 0 0\n 259       0 nvme0n1 185015 68595 16587100 56836 7410824 10527221 277102142 19606326 0 4857065 20193809 114380 0 7278850904 117131 327839 413514\n 259       1 nvme0n1p1 308 473 12296 57 3 0 10 0 0 64 109 15 0 2980160 51 0 0\n 259       2 nvme0n1p2 184613 68122 16571876 56773 7410821 10527221 277102132 19606325 0 5059691 19780180 114365 0 7275870744 117080 0 0\n   7       8 loop8 59 0 2186 8 0 0 0 0 0 5 8 0 0 0 0 0 0\n   7       9 loop9 183 0 2740 17 0 0 0 0 0 17 17 0 0 0 0 0 0\n   7      10 loop10 348 0 5636 40 0 0 0 0 0 39 40 0 0 0 0 0 0\n   7      11 loop11 53 0 2140 7 0 0 0 0 0 7 7 0 0 0 0 0 0\n   7      12 loop12 58 0 2200 5 0 0 0 0 0 5 5 0 0 0 0 0 0\n   7      13 loop13 79 0 974 16 0 0 0 0 0 12 16 0 0 0 0 0 0\n   7      14 loop14 701 0 45420 170 0 0 0 0 0 149 170 0 0 0 0 0 0\n   7      15 loop15 74 0 2262 8 0 0 0 0 0 8 8 0 0 0 0 0 0\n   7      16 loop16 85 0 2270 8 0 0 0 0 0 5 8 0 0 0 0 0 0\n   7      17 loop17 63 0 398 4 0 0 0 0 0 3 4 0 0 0 0 0 0\n   7      18 loop18 10 0 20 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n"
+    },
+    "/proc/meminfo": {
+      "finished_monotonic_ns": 2678974080991991,
+      "started_monotonic_ns": 2678974080974583,
+      "text": "MemTotal:       125513944 kB\nMemFree:        31281064 kB\nMemAvailable:   120608028 kB\nBuffers:         2294880 kB\nCached:         77897992 kB\nSwapCached:            0 kB\nActive:          3215468 kB\nInactive:       77242560 kB\nActive(anon):     275500 kB\nInactive(anon):        0 kB\nActive(file):    2939968 kB\nInactive(file): 77242560 kB\nUnevictable:       26224 kB\nMlocked:           26224 kB\nSwapTotal:      16777212 kB\nSwapFree:       16777212 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:              2264 kB\nWriteback:             0 kB\nAnonPages:        291384 kB\nMapped:           369104 kB\nShmem:              2904 kB\nKReclaimable:   10268712 kB\nSlab:           11861180 kB\nSReclaimable:   10268712 kB\nSUnreclaim:      1592468 kB\nKernelStack:       10304 kB\nShadowCallStack:    2660 kB\nPageTables:         7952 kB\nSecPageTables:      7680 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    79534184 kB\nCommitted_AS:    2654072 kB\nVmallocTotal:   135288315904 kB\nVmallocUsed:      107144 kB\nVmallocChunk:          0 kB\nPercpu:           116160 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nCmaTotal:         131072 kB\nCmaFree:           69304 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\n"
+    },
+    "/proc/pressure/cpu": {
+      "finished_monotonic_ns": 2678974081012855,
+      "started_monotonic_ns": 2678974080992343,
+      "text": "some avg10=0.00 avg60=0.00 avg300=0.00 total=2394913283\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0\n"
+    },
+    "/proc/pressure/io": {
+      "finished_monotonic_ns": 2678974081023863,
+      "started_monotonic_ns": 2678974081013079,
+      "text": "some avg10=0.00 avg60=0.00 avg300=0.00 total=1932363643\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=1908750395\n"
+    },
+    "/proc/pressure/memory": {
+      "finished_monotonic_ns": 2678974081036327,
+      "started_monotonic_ns": 2678974081024087,
+      "text": "some avg10=0.00 avg60=0.00 avg300=0.00 total=11341\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=3561\n"
+    },
+    "/proc/sys/kernel/random/boot_id": {
+      "finished_monotonic_ns": 2678974081053911,
+      "started_monotonic_ns": 2678974081036503,
+      "text": "077b38f6-93a4-4fa2-8a40-08ca3a8599a9\n"
+    },
+    "/sys/class/thermal/thermal_zone0/temp": {
+      "finished_monotonic_ns": 2678974081135047,
+      "started_monotonic_ns": 2678974081114727,
+      "text": "44900\n"
+    },
+    "/sys/class/thermal/thermal_zone1/temp": {
+      "finished_monotonic_ns": 2678974081185015,
+      "started_monotonic_ns": 2678974081167479,
+      "text": "43500\n"
+    },
+    "/sys/class/thermal/thermal_zone2/temp": {
+      "finished_monotonic_ns": 2678974081114519,
+      "started_monotonic_ns": 2678974081054135,
+      "text": "44100\n"
+    },
+    "/sys/class/thermal/thermal_zone3/temp": {
+      "finished_monotonic_ns": 2678974081167255,
+      "started_monotonic_ns": 2678974081151351,
+      "text": "43500\n"
+    },
+    "/sys/class/thermal/thermal_zone4/temp": {
+      "finished_monotonic_ns": 2678974081221079,
+      "started_monotonic_ns": 2678974081203255,
+      "text": "44200\n"
+    },
+    "/sys/class/thermal/thermal_zone5/temp": {
+      "finished_monotonic_ns": 2678974081151207,
+      "started_monotonic_ns": 2678974081135239,
+      "text": "43700\n"
+    },
+    "/sys/class/thermal/thermal_zone6/temp": {
+      "finished_monotonic_ns": 2678974081203079,
+      "started_monotonic_ns": 2678974081185383,
+      "text": "44900\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678974081924409,
+      "started_monotonic_ns": 2678974081826329,
+      "text": "2210000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy1/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678974082799467,
+      "started_monotonic_ns": 2678974082701227,
+      "text": "2288000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy10/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678974082211178,
+      "started_monotonic_ns": 2678974082111289,
+      "text": "2080000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy11/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678974081324695,
+      "started_monotonic_ns": 2678974081221239,
+      "text": "2158000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy12/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678974082024569,
+      "started_monotonic_ns": 2678974081924761,
+      "text": "2106000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy13/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678974082898571,
+      "started_monotonic_ns": 2678974082799611,
+      "text": "2158000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy14/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678974081826185,
+      "started_monotonic_ns": 2678974081808553,
+      "text": "3042000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy15/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678974082701067,
+      "started_monotonic_ns": 2678974082684139,
+      "text": "3874000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy16/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678974081710104,
+      "started_monotonic_ns": 2678974081532536,
+      "text": "3640000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy17/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678974082584123,
+      "started_monotonic_ns": 2678974082407530,
+      "text": "3614000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy18/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678974081517048,
+      "started_monotonic_ns": 2678974081428152,
+      "text": "3328000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy19/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678974082391642,
+      "started_monotonic_ns": 2678974082223226,
+      "text": "5356000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy2/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678974081808361,
+      "started_monotonic_ns": 2678974081710296,
+      "text": "2262000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy3/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678974082684011,
+      "started_monotonic_ns": 2678974082584267,
+      "text": "2262000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy4/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678974081532392,
+      "started_monotonic_ns": 2678974081517240,
+      "text": "2860000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy5/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678974082407370,
+      "started_monotonic_ns": 2678974082391786,
+      "text": "3900000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy6/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678974081427976,
+      "started_monotonic_ns": 2678974081412696,
+      "text": "4550000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy7/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678974082223034,
+      "started_monotonic_ns": 2678974082211322,
+      "text": "5668000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy8/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678974081412520,
+      "started_monotonic_ns": 2678974081324855,
+      "text": "3432000\n"
+    },
+    "/sys/devices/system/cpu/cpufreq/policy9/scaling_cur_freq": {
+      "finished_monotonic_ns": 2678974082111145,
+      "started_monotonic_ns": 2678974082024713,
+      "text": "3380000\n"
+    }
+  },
+  "finished_monotonic_ns": 2678974082899675,
+  "finished_unix_ns": 1790193711748194649,
+  "host": "spark-7ff0",
+  "limitations": [
+    "Sequential snapshots are not atomic and miss activity between observations.",
+    "Device counters do not attribute I/O to the measured job; GPU N/A is not zero.",
+    "Service presence is not permission for arbitrary work; configuration policy is separate.",
+    "Unit fingerprints cover loaded service/timer fragments and drop-ins, not all external service configuration."
+  ],
+  "source_sha256": "3e99c5d47e61c8e1f50d14d2d669a993b56c67d366df8b98880ef4dc6d491f9a",
+  "started_monotonic_ns": 2678973729817281,
+  "started_unix_ns": 1790193711395111743,
+  "static": true,
+  "unit_configurations": {
+    "system_configuration": {
+      "ModemManager.service": {
+        "files": [
+          {
+            "bytes": 515,
+            "path": "/usr/lib/systemd/system/ModemManager.service",
+            "resolved_path": "/usr/lib/systemd/system/ModemManager.service",
+            "sha256": "7440e1296cf610dd3847641c2bc93cadf210b4021964d07b7a59b6cf3d5aee06",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/ModemManager.service",
+          "Id": "ModemManager.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "NetworkManager.service": {
+        "files": [
+          {
+            "bytes": 1477,
+            "path": "/usr/lib/systemd/system/NetworkManager.service",
+            "resolved_path": "/usr/lib/systemd/system/NetworkManager.service",
+            "sha256": "fb33a80bf8c78b3af004d4b294c47a0139e37742c1d0d5a6a7663c7d1f4a2b48",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/NetworkManager.service",
+          "Id": "NetworkManager.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "accounts-daemon.service": {
+        "files": [
+          {
+            "bytes": 1965,
+            "path": "/usr/lib/systemd/system/accounts-daemon.service",
+            "resolved_path": "/usr/lib/systemd/system/accounts-daemon.service",
+            "sha256": "d551d73b16a5cf72cbb2b46613856b1aa1d47d89449926e20c903c34b5559d49",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/accounts-daemon.service",
+          "Id": "accounts-daemon.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "alsa-restore.service": {
+        "files": [
+          {
+            "bytes": 613,
+            "path": "/usr/lib/systemd/system/alsa-restore.service",
+            "resolved_path": "/usr/lib/systemd/system/alsa-restore.service",
+            "sha256": "ad47562bf39044547594b9cb306804820c0a53ae4dda2d2279bd5de4627fe946",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/alsa-restore.service",
+          "Id": "alsa-restore.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "anacron.timer": {
+        "files": [
+          {
+            "bytes": 154,
+            "path": "/usr/lib/systemd/system/anacron.timer",
+            "resolved_path": "/usr/lib/systemd/system/anacron.timer",
+            "sha256": "13cce6a72c725a65ab440b38241bd8f6683b2a4a38f559ba9cad6ecde56f84a6",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/anacron.timer",
+          "Id": "anacron.timer",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "apparmor.service": {
+        "files": [
+          {
+            "bytes": 1191,
+            "path": "/usr/lib/systemd/system/apparmor.service",
+            "resolved_path": "/usr/lib/systemd/system/apparmor.service",
+            "sha256": "281b4d583889077bbd52630d128b790a1502bbabe514d81f36ec17187d2084b1",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/apparmor.service",
+          "Id": "apparmor.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "apport.service": {
+        "files": [
+          {
+            "bytes": 277,
+            "path": "/usr/lib/systemd/system/apport.service",
+            "resolved_path": "/usr/lib/systemd/system/apport.service",
+            "sha256": "c2026a8f813776108e2d91629f51ff0cf5bf013fac03314164cabcda6c9698aa",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/apport.service",
+          "Id": "apport.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "apt-daily-upgrade.timer": {
+        "files": [
+          {
+            "bytes": 184,
+            "path": "/usr/lib/systemd/system/apt-daily-upgrade.timer",
+            "resolved_path": "/usr/lib/systemd/system/apt-daily-upgrade.timer",
+            "sha256": "b804d7bab8eb41202384f9270e25d5383346ace8b3d7c4f5029c150638d77bcd",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/apt-daily-upgrade.timer",
+          "Id": "apt-daily-upgrade.timer",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "apt-daily.timer": {
+        "files": [
+          {
+            "bytes": 156,
+            "path": "/usr/lib/systemd/system/apt-daily.timer",
+            "resolved_path": "/usr/lib/systemd/system/apt-daily.timer",
+            "sha256": "0075e974af4e3a94757e219ba50ccb8348d4d1a8834d938f6cc9b1f4fd1db4e5",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/apt-daily.timer",
+          "Id": "apt-daily.timer",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "avahi-daemon.service": {
+        "files": [
+          {
+            "bytes": 1044,
+            "path": "/usr/lib/systemd/system/avahi-daemon.service",
+            "resolved_path": "/usr/lib/systemd/system/avahi-daemon.service",
+            "sha256": "2e8784f74603b0e7b03147eada1f1f8ec190fdef0c3fa1041201ac71ac2c0a7d",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/avahi-daemon.service",
+          "Id": "avahi-daemon.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "blk-availability.service": {
+        "files": [
+          {
+            "bytes": 360,
+            "path": "/usr/lib/systemd/system/blk-availability.service",
+            "resolved_path": "/usr/lib/systemd/system/blk-availability.service",
+            "sha256": "a0cf6cf47b49190ec2f175896521be84a3a57c3cb454c31082b9dea8fb7428cd",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/blk-availability.service",
+          "Id": "blk-availability.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "bluetooth.service": {
+        "files": [
+          {
+            "bytes": 759,
+            "path": "/usr/lib/systemd/system/bluetooth.service",
+            "resolved_path": "/usr/lib/systemd/system/bluetooth.service",
+            "sha256": "4386f57721502d49bbeffd6acb98437dd58d65419724eb5f6c8af6b78ff6ec86",
+            "symlink_target": null
+          },
+          {
+            "bytes": 82,
+            "path": "/etc/systemd/system/bluetooth.service.d/nv-disable-bt-override.conf",
+            "resolved_path": "/etc/systemd/system/bluetooth.service.d/nv-disable-bt-override.conf",
+            "sha256": "5a5a31d9f8a72ba648dbf2040ed125be24c464cce614854304f5b025ffb52f80",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "/etc/systemd/system/bluetooth.service.d/nv-disable-bt-override.conf",
+          "FragmentPath": "/usr/lib/systemd/system/bluetooth.service",
+          "Id": "bluetooth.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "colord.service": {
+        "files": [
+          {
+            "bytes": 1248,
+            "path": "/usr/lib/systemd/system/colord.service",
+            "resolved_path": "/usr/lib/systemd/system/colord.service",
+            "sha256": "b4dbb7f673b811615d8fa562b90f1a0e8ef07b7e6662d8eeb9425fb28a1b20d0",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/colord.service",
+          "Id": "colord.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "console-setup.service": {
+        "files": [
+          {
+            "bytes": 343,
+            "path": "/usr/lib/systemd/system/console-setup.service",
+            "resolved_path": "/usr/lib/systemd/system/console-setup.service",
+            "sha256": "2e7a84c20b1dd1773d906c3684e96c6c5356eefed1a00b3982899f7ab63b4220",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/console-setup.service",
+          "Id": "console-setup.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "containerd.service": {
+        "files": [
+          {
+            "bytes": 1421,
+            "path": "/usr/lib/systemd/system/containerd.service",
+            "resolved_path": "/usr/lib/systemd/system/containerd.service",
+            "sha256": "4bd69dff64d047d29a53958ff475e07b42105e6796c7497bba87e9f4a4d091a6",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/containerd.service",
+          "Id": "containerd.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "cron.service": {
+        "files": [
+          {
+            "bytes": 339,
+            "path": "/usr/lib/systemd/system/cron.service",
+            "resolved_path": "/usr/lib/systemd/system/cron.service",
+            "sha256": "bbcd656457d22e12d8983ed0c253b5bd8cc6b12308fd16d9324400040de68e6f",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/cron.service",
+          "Id": "cron.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "cups-browsed.service": {
+        "files": [
+          {
+            "bytes": 337,
+            "path": "/usr/lib/systemd/system/cups-browsed.service",
+            "resolved_path": "/usr/lib/systemd/system/cups-browsed.service",
+            "sha256": "97a887b78e25c6e91d6e3331bd5aefbac4d9db4ffa1488177b6a4b6763672769",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/cups-browsed.service",
+          "Id": "cups-browsed.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "cups.service": {
+        "files": [
+          {
+            "bytes": 292,
+            "path": "/usr/lib/systemd/system/cups.service",
+            "resolved_path": "/usr/lib/systemd/system/cups.service",
+            "sha256": "a1cb09c94b44357bc767eeca01c242a6ba88064e6f1af45565975a8fd14f0380",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/cups.service",
+          "Id": "cups.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "dbus.service": {
+        "files": [
+          {
+            "bytes": 528,
+            "path": "/usr/lib/systemd/system/dbus.service",
+            "resolved_path": "/usr/lib/systemd/system/dbus.service",
+            "sha256": "bf7ec47644997441174ef6aac992d34cc46b9d2d7b8dc2feba7074d719fdbef1",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/dbus.service",
+          "Id": "dbus.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "dgx-dashboard-admin.service": {
+        "files": [
+          {
+            "error": "[Errno 13] Permission denied: '/etc/systemd/system/dgx-dashboard-admin.service'",
+            "error_type": "PermissionError",
+            "path": "/etc/systemd/system/dgx-dashboard-admin.service",
+            "resolved_path": "/etc/systemd/system/dgx-dashboard-admin.service",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/etc/systemd/system/dgx-dashboard-admin.service",
+          "Id": "dgx-dashboard-admin.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "dgx-dashboard.service": {
+        "files": [
+          {
+            "bytes": 2277,
+            "path": "/etc/systemd/system/dgx-dashboard.service",
+            "resolved_path": "/etc/systemd/system/dgx-dashboard.service",
+            "sha256": "838244c83f9e8eeeea7e8e30d30e44effe4978b102b43a6d6b3d9a4496304ff2",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/etc/systemd/system/dgx-dashboard.service",
+          "Id": "dgx-dashboard.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "docker.service": {
+        "files": [
+          {
+            "bytes": 1268,
+            "path": "/usr/lib/systemd/system/docker.service",
+            "resolved_path": "/usr/lib/systemd/system/docker.service",
+            "sha256": "a12d90fd03761bf79659a185c4a2c40e08934d7ada9e05130e64bd5eb4d634aa",
+            "symlink_target": null
+          },
+          {
+            "bytes": 67,
+            "path": "/etc/systemd/system/docker.service.d/docker-override.conf",
+            "resolved_path": "/etc/systemd/system/docker.service.d/docker-override.conf",
+            "sha256": "2625091be3742f1586801786f4459a97c3cf3b0ecf18f6ad62c3e5cd39eec20c",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "/etc/systemd/system/docker.service.d/docker-override.conf",
+          "FragmentPath": "/usr/lib/systemd/system/docker.service",
+          "Id": "docker.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "dpkg-db-backup.timer": {
+        "files": [
+          {
+            "bytes": 154,
+            "path": "/usr/lib/systemd/system/dpkg-db-backup.timer",
+            "resolved_path": "/usr/lib/systemd/system/dpkg-db-backup.timer",
+            "sha256": "2e0dd766329313bfabd86b1acbd40069510afcfef3935cdea010168b503afde1",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/dpkg-db-backup.timer",
+          "Id": "dpkg-db-backup.timer",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "e2scrub_all.timer": {
+        "files": [
+          {
+            "bytes": 251,
+            "path": "/usr/lib/systemd/system/e2scrub_all.timer",
+            "resolved_path": "/usr/lib/systemd/system/e2scrub_all.timer",
+            "sha256": "23f20fb6edc9fd54bf4754ef4311f88cba45ba65c6aecfa1885e8fb99531c211",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/e2scrub_all.timer",
+          "Id": "e2scrub_all.timer",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "finalrd.service": {
+        "files": [
+          {
+            "bytes": 419,
+            "path": "/usr/lib/systemd/system/finalrd.service",
+            "resolved_path": "/usr/lib/systemd/system/finalrd.service",
+            "sha256": "0074df722fd46bb47143f47e0ce4151465cd197040afcdf5153b8531ff3678a8",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/finalrd.service",
+          "Id": "finalrd.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "fstrim.timer": {
+        "files": [
+          {
+            "bytes": 283,
+            "path": "/usr/lib/systemd/system/fstrim.timer",
+            "resolved_path": "/usr/lib/systemd/system/fstrim.timer",
+            "sha256": "699161252ffaa35a0272aae055e51332df694ff4d28c39f8b666d47ecced3397",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/fstrim.timer",
+          "Id": "fstrim.timer",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "fwupd-refresh.timer": {
+        "files": [
+          {
+            "bytes": 193,
+            "path": "/usr/lib/systemd/system/fwupd-refresh.timer",
+            "resolved_path": "/usr/lib/systemd/system/fwupd-refresh.timer",
+            "sha256": "8d90cd120f922b7471e47cca994ff3e23860a1975f09af41ca2b22c474f2ad17",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/fwupd-refresh.timer",
+          "Id": "fwupd-refresh.timer",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "fwupd.service": {
+        "files": [
+          {
+            "bytes": 729,
+            "path": "/usr/lib/systemd/system/fwupd.service",
+            "resolved_path": "/usr/lib/systemd/system/fwupd.service",
+            "sha256": "64a6ce37681862f077a72e8e255f68b3e55a85effcca51f431176b272d19bd63",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/fwupd.service",
+          "Id": "fwupd.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "gnome-remote-desktop.service": {
+        "files": [
+          {
+            "bytes": 235,
+            "path": "/usr/lib/systemd/system/gnome-remote-desktop.service",
+            "resolved_path": "/usr/lib/systemd/system/gnome-remote-desktop.service",
+            "sha256": "7db0c57df460ada0479596fea3cc9cf67c55b493e12e61970fa41123a58a7934",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/gnome-remote-desktop.service",
+          "Id": "gnome-remote-desktop.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "kdump-tools.service": {
+        "files": [
+          {
+            "bytes": 427,
+            "path": "/usr/lib/systemd/system/kdump-tools.service",
+            "resolved_path": "/usr/lib/systemd/system/kdump-tools.service",
+            "sha256": "ca444d35d5ad78edbf936c0246141d4e17293bc8861358aff200ff95749cdbda",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/kdump-tools.service",
+          "Id": "kdump-tools.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "keyboard-setup.service": {
+        "files": [
+          {
+            "bytes": 287,
+            "path": "/usr/lib/systemd/system/keyboard-setup.service",
+            "resolved_path": "/usr/lib/systemd/system/keyboard-setup.service",
+            "sha256": "7bfae47456a8ccfd36c05494a6ec80256b4b2454fd737892c09e6c3c83b87e73",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/keyboard-setup.service",
+          "Id": "keyboard-setup.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "kmod-static-nodes.service": {
+        "files": [
+          {
+            "bytes": 711,
+            "path": "/usr/lib/systemd/system/kmod-static-nodes.service",
+            "resolved_path": "/usr/lib/systemd/system/kmod-static-nodes.service",
+            "sha256": "b9b4525566b10f1f2bbd30d86c0c85495c2bab360714c2f4f8e549533fb6a2d7",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/kmod-static-nodes.service",
+          "Id": "kmod-static-nodes.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "logrotate.timer": {
+        "files": [
+          {
+            "bytes": 191,
+            "path": "/usr/lib/systemd/system/logrotate.timer",
+            "resolved_path": "/usr/lib/systemd/system/logrotate.timer",
+            "sha256": "42f723dc5d90247a5fda11a3358d1a67eccceed856192b2264aa222d6aa240f4",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/logrotate.timer",
+          "Id": "logrotate.timer",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "lvm2-monitor.service": {
+        "files": [
+          {
+            "bytes": 586,
+            "path": "/usr/lib/systemd/system/lvm2-monitor.service",
+            "resolved_path": "/usr/lib/systemd/system/lvm2-monitor.service",
+            "sha256": "ac67901163a482de3ffb72aca8057d1c23eff341555f0e115fd652b0b7e33086",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/lvm2-monitor.service",
+          "Id": "lvm2-monitor.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "man-db.timer": {
+        "files": [
+          {
+            "bytes": 171,
+            "path": "/usr/lib/systemd/system/man-db.timer",
+            "resolved_path": "/usr/lib/systemd/system/man-db.timer",
+            "sha256": "3a3a1ca2ab2c92fe74bae1257e4c666e5dd0a31f441221dfa809bc0cf6540774",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/man-db.timer",
+          "Id": "man-db.timer",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "mariadb.service": {
+        "files": [
+          {
+            "bytes": 5909,
+            "path": "/usr/lib/systemd/system/mariadb.service",
+            "resolved_path": "/usr/lib/systemd/system/mariadb.service",
+            "sha256": "9721aa51348b6eb0f5022c531fed6c0dd8df63b6c61ad6fce87484db6d92d25f",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/mariadb.service",
+          "Id": "mariadb.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "motd-news.timer": {
+        "files": [
+          {
+            "bytes": 161,
+            "path": "/usr/lib/systemd/system/motd-news.timer",
+            "resolved_path": "/usr/lib/systemd/system/motd-news.timer",
+            "sha256": "f18dbd0f64344440d7d6e8f1ff302d26fe383921be2a3f13948a8e2e2545ee58",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/motd-news.timer",
+          "Id": "motd-news.timer",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "multipathd.service": {
+        "files": [
+          {
+            "bytes": 742,
+            "path": "/usr/lib/systemd/system/multipathd.service",
+            "resolved_path": "/usr/lib/systemd/system/multipathd.service",
+            "sha256": "0397471e7913c74a3e005e03c833ebf3f1ec83b998210fa32094f5de21a07cd1",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/multipathd.service",
+          "Id": "multipathd.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "munge.service": {
+        "files": [
+          {
+            "bytes": 408,
+            "path": "/usr/lib/systemd/system/munge.service",
+            "resolved_path": "/usr/lib/systemd/system/munge.service",
+            "sha256": "e633d8ebfc5418493a66362aac9c503c9376d45efcf5b78d6d666e5c5c88a333",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/munge.service",
+          "Id": "munge.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "nvidia-nvme-interrupt-coalescing.service": {
+        "files": [
+          {
+            "bytes": 319,
+            "path": "/usr/lib/systemd/system/nvidia-nvme-interrupt-coalescing.service",
+            "resolved_path": "/usr/lib/systemd/system/nvidia-nvme-interrupt-coalescing.service",
+            "sha256": "0849d7072acaad41954d3477680f1e8a59f3c4c7d03d6e6e3b33602e9c7fd949",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/nvidia-nvme-interrupt-coalescing.service",
+          "Id": "nvidia-nvme-interrupt-coalescing.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "nvidia-persistenced.service": {
+        "files": [
+          {
+            "bytes": 316,
+            "path": "/usr/lib/systemd/system/nvidia-persistenced.service",
+            "resolved_path": "/usr/lib/systemd/system/nvidia-persistenced.service",
+            "sha256": "5314d8d3a4575ca714bd3e4a897d7824cccba384858013ac2d5ddc038ae5219c",
+            "symlink_target": null
+          },
+          {
+            "bytes": 132,
+            "path": "/etc/systemd/system/nvidia-persistenced.service.d/nv-persistence-override.conf",
+            "resolved_path": "/etc/systemd/system/nvidia-persistenced.service.d/nv-persistence-override.conf",
+            "sha256": "844694802471ef67c5251e4f421f300d0b7dedd34a02fdb678280c5e86e4c707",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "/etc/systemd/system/nvidia-persistenced.service.d/nv-persistence-override.conf",
+          "FragmentPath": "/usr/lib/systemd/system/nvidia-persistenced.service",
+          "Id": "nvidia-persistenced.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "ollama.service": {
+        "files": [
+          {
+            "bytes": 347,
+            "path": "/etc/systemd/system/ollama.service",
+            "resolved_path": "/etc/systemd/system/ollama.service",
+            "sha256": "2b16830493d2401604330731cfde5a23f2599ab7621c8270ed60dcf1029a78b2",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/etc/systemd/system/ollama.service",
+          "Id": "ollama.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "openvpn.service": {
+        "files": [
+          {
+            "bytes": 328,
+            "path": "/usr/lib/systemd/system/openvpn.service",
+            "resolved_path": "/usr/lib/systemd/system/openvpn.service",
+            "sha256": "91bb8e3cd5efcb1544a3f2a0c7515bc5e00f8c0327faa3b88413011c4f1cdba1",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/openvpn.service",
+          "Id": "openvpn.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "plymouth-quit-wait.service": {
+        "files": [
+          {
+            "bytes": 224,
+            "path": "/usr/lib/systemd/system/plymouth-quit-wait.service",
+            "resolved_path": "/usr/lib/systemd/system/plymouth-quit-wait.service",
+            "sha256": "d8e61c8e77040ba5da5650fa64c5b68a74383f15eda2ddb9310c3e898d108e5d",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/plymouth-quit-wait.service",
+          "Id": "plymouth-quit-wait.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "plymouth-quit.service": {
+        "files": [
+          {
+            "bytes": 218,
+            "path": "/usr/lib/systemd/system/plymouth-quit.service",
+            "resolved_path": "/usr/lib/systemd/system/plymouth-quit.service",
+            "sha256": "762e0f0a47d0e1a334cce34104ad910ff3355ce1bc9f92699a94ded46c99fb46",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/plymouth-quit.service",
+          "Id": "plymouth-quit.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "plymouth-read-write.service": {
+        "files": [
+          {
+            "bytes": 268,
+            "path": "/usr/lib/systemd/system/plymouth-read-write.service",
+            "resolved_path": "/usr/lib/systemd/system/plymouth-read-write.service",
+            "sha256": "da37f940b98d08ba26b48a43dcaba270782c7b757a7c8acc55f19c76f363c403",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/plymouth-read-write.service",
+          "Id": "plymouth-read-write.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "plymouth-start.service": {
+        "files": [
+          {
+            "bytes": 617,
+            "path": "/usr/lib/systemd/system/plymouth-start.service",
+            "resolved_path": "/usr/lib/systemd/system/plymouth-start.service",
+            "sha256": "09169907f5150a161d551e9853e3c2a8df5ee15d86ea18b7ba1c485374a2798f",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/plymouth-start.service",
+          "Id": "plymouth-start.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "polkit.service": {
+        "files": [
+          {
+            "bytes": 748,
+            "path": "/usr/lib/systemd/system/polkit.service",
+            "resolved_path": "/usr/lib/systemd/system/polkit.service",
+            "sha256": "91ff4555bc6c94a6adc8dfb425bb3d4ba1e05decb815d3476dd6a9b5401430dc",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/polkit.service",
+          "Id": "polkit.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "ras-mc-ctl.service": {
+        "files": [
+          {
+            "bytes": 202,
+            "path": "/usr/lib/systemd/system/ras-mc-ctl.service",
+            "resolved_path": "/usr/lib/systemd/system/ras-mc-ctl.service",
+            "sha256": "6212ea603afac41944df3436e1973e88bdc5350594210448331f91f2de3a87b3",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/ras-mc-ctl.service",
+          "Id": "ras-mc-ctl.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "rasdaemon.service": {
+        "files": [
+          {
+            "bytes": 361,
+            "path": "/usr/lib/systemd/system/rasdaemon.service",
+            "resolved_path": "/usr/lib/systemd/system/rasdaemon.service",
+            "sha256": "bbc478c9835d685b8ca9fec1d3f0ecfd80631c7bcadaeb276650c73f0ad9b282",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/rasdaemon.service",
+          "Id": "rasdaemon.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "rdma-load-modules@infiniband.service": {
+        "files": [
+          {
+            "bytes": 881,
+            "path": "/usr/lib/systemd/system/rdma-load-modules@.service",
+            "resolved_path": "/usr/lib/systemd/system/rdma-load-modules@.service",
+            "sha256": "81edfe0984875e3907ec0c4e4efb82c210d74c8d6e6a1e6be8639ec46535b13a",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/rdma-load-modules@.service",
+          "Id": "rdma-load-modules@infiniband.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "rdma-load-modules@rdma.service": {
+        "files": [
+          {
+            "bytes": 881,
+            "path": "/usr/lib/systemd/system/rdma-load-modules@.service",
+            "resolved_path": "/usr/lib/systemd/system/rdma-load-modules@.service",
+            "sha256": "81edfe0984875e3907ec0c4e4efb82c210d74c8d6e6a1e6be8639ec46535b13a",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/rdma-load-modules@.service",
+          "Id": "rdma-load-modules@rdma.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "rdma-load-modules@roce.service": {
+        "files": [
+          {
+            "bytes": 881,
+            "path": "/usr/lib/systemd/system/rdma-load-modules@.service",
+            "resolved_path": "/usr/lib/systemd/system/rdma-load-modules@.service",
+            "sha256": "81edfe0984875e3907ec0c4e4efb82c210d74c8d6e6a1e6be8639ec46535b13a",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/rdma-load-modules@.service",
+          "Id": "rdma-load-modules@roce.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "rdma-ndd.service": {
+        "files": [
+          {
+            "bytes": 902,
+            "path": "/usr/lib/systemd/system/rdma-ndd.service",
+            "resolved_path": "/usr/lib/systemd/system/rdma-ndd.service",
+            "sha256": "0a1811424943fd43f810cfee101caa7f7c61fc3f90c550108242d54af5b9eecf",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/rdma-ndd.service",
+          "Id": "rdma-ndd.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "rpc-statd-notify.service": {
+        "files": [
+          {
+            "bytes": 387,
+            "path": "/usr/lib/systemd/system/rpc-statd-notify.service",
+            "resolved_path": "/usr/lib/systemd/system/rpc-statd-notify.service",
+            "sha256": "8bafcedf65bdbcb2e38843a232df01520513350978a5f0e34297638f5e4c51f6",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/rpc-statd-notify.service",
+          "Id": "rpc-statd-notify.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "rsyslog.service": {
+        "files": [
+          {
+            "bytes": 890,
+            "path": "/usr/lib/systemd/system/rsyslog.service",
+            "resolved_path": "/usr/lib/systemd/system/rsyslog.service",
+            "sha256": "2728f43f3e86d6eb2480d6cbc38a977e185b369c3733351459f40a9fc7581b2c",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/rsyslog.service",
+          "Id": "rsyslog.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "rtkit-daemon.service": {
+        "files": [
+          {
+            "bytes": 1024,
+            "path": "/usr/lib/systemd/system/rtkit-daemon.service",
+            "resolved_path": "/usr/lib/systemd/system/rtkit-daemon.service",
+            "sha256": "49c9001658906e4a7b3c913358cbbfe7c1d62d4c211b5790d06200c13cc86c07",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/rtkit-daemon.service",
+          "Id": "rtkit-daemon.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "serial-getty@ttyS0.service": {
+        "files": [
+          {
+            "bytes": 1571,
+            "path": "/usr/lib/systemd/system/serial-getty@.service",
+            "resolved_path": "/usr/lib/systemd/system/serial-getty@.service",
+            "sha256": "b3ecf20475ea1648da95ea1f30eabcf53eaab2d1bd782478d492b850cf6d0dbf",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/serial-getty@.service",
+          "Id": "serial-getty@ttyS0.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "setvtrgb.service": {
+        "files": [
+          {
+            "bytes": 330,
+            "path": "/usr/lib/systemd/system/setvtrgb.service",
+            "resolved_path": "/usr/lib/systemd/system/setvtrgb.service",
+            "sha256": "32e83e016d68d15c28f1d55f4c25ab742abe11851fbad32ae615d74c82fa63cc",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/setvtrgb.service",
+          "Id": "setvtrgb.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "slurmd.service": {
+        "files": [
+          {
+            "bytes": 739,
+            "path": "/usr/lib/systemd/system/slurmd.service",
+            "resolved_path": "/usr/lib/systemd/system/slurmd.service",
+            "sha256": "a443c67adfecc8560918055f3472be67032cefb3dc5a42e48d087e28e3011a24",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/slurmd.service",
+          "Id": "slurmd.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "smartmontools.service": {
+        "files": [
+          {
+            "bytes": 483,
+            "path": "/usr/lib/systemd/system/smartmontools.service",
+            "resolved_path": "/usr/lib/systemd/system/smartmontools.service",
+            "sha256": "508aa267871a65ad95d0bbd9112826e303624ec9e64a01ac74c3eca4e3287396",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/smartmontools.service",
+          "Id": "smartmontools.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "snapd.apparmor.service": {
+        "files": [
+          {
+            "bytes": 1333,
+            "path": "/usr/lib/systemd/system/snapd.apparmor.service",
+            "resolved_path": "/usr/lib/systemd/system/snapd.apparmor.service",
+            "sha256": "3b5fb24d75fca3c4cd478a45cd6b870219cf0e94f19e5b136e0547c6ba509a61",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/snapd.apparmor.service",
+          "Id": "snapd.apparmor.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "snapd.seeded.service": {
+        "files": [
+          {
+            "bytes": 308,
+            "path": "/usr/lib/systemd/system/snapd.seeded.service",
+            "resolved_path": "/usr/lib/systemd/system/snapd.seeded.service",
+            "sha256": "65a9a57201c69de88b10f3a3201224755dbceb1bb5787ac6aeffc2aedecd45aa",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/snapd.seeded.service",
+          "Id": "snapd.seeded.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "snapd.service": {
+        "files": [
+          {
+            "bytes": 769,
+            "path": "/usr/lib/systemd/system/snapd.service",
+            "resolved_path": "/usr/lib/systemd/system/snapd.service",
+            "sha256": "6974568b779fe42231cc11ed6d05c83f438cf0366737c844631b5fceda668a89",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/snapd.service",
+          "Id": "snapd.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "srp_daemon.service": {
+        "files": [
+          {
+            "bytes": 464,
+            "path": "/usr/lib/systemd/system/srp_daemon.service",
+            "resolved_path": "/usr/lib/systemd/system/srp_daemon.service",
+            "sha256": "354d45e77896f6212ea50659f5a3e64a3c75936cb97c3ba5a11615aa283cccbe",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/srp_daemon.service",
+          "Id": "srp_daemon.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "ssh.service": {
+        "files": [
+          {
+            "bytes": 538,
+            "path": "/usr/lib/systemd/system/ssh.service",
+            "resolved_path": "/usr/lib/systemd/system/ssh.service",
+            "sha256": "35b2858970feb78e985900b33ba8cb84249dfadbf296155e5639cafcf1dd40a3",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/ssh.service",
+          "Id": "ssh.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "switcheroo-control.service": {
+        "files": [
+          {
+            "bytes": 498,
+            "path": "/usr/lib/systemd/system/switcheroo-control.service",
+            "resolved_path": "/usr/lib/systemd/system/switcheroo-control.service",
+            "sha256": "398cbb3e818bae9677efaed8b3030678b21c2e8f363d37c6bc3bcd940507ff70",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/switcheroo-control.service",
+          "Id": "switcheroo-control.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "sysstat-collect.timer": {
+        "files": [
+          {
+            "bytes": 325,
+            "path": "/usr/lib/systemd/system/sysstat-collect.timer",
+            "resolved_path": "/usr/lib/systemd/system/sysstat-collect.timer",
+            "sha256": "241a0094bc117bdbd71e79a3ca1f88920cebac98084aaef89fdb7ac3c72d810b",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/sysstat-collect.timer",
+          "Id": "sysstat-collect.timer",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "sysstat-summary.timer": {
+        "files": [
+          {
+            "bytes": 356,
+            "path": "/usr/lib/systemd/system/sysstat-summary.timer",
+            "resolved_path": "/usr/lib/systemd/system/sysstat-summary.timer",
+            "sha256": "7ff4be8583010655cbde8820e190b8d4329bfce85a0edecddf5e89995b970745",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/sysstat-summary.timer",
+          "Id": "sysstat-summary.timer",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "sysstat.service": {
+        "files": [
+          {
+            "bytes": 525,
+            "path": "/usr/lib/systemd/system/sysstat.service",
+            "resolved_path": "/usr/lib/systemd/system/sysstat.service",
+            "sha256": "dce83b8777f59c5433a4a062a0ff185a3776b5bfaf002dba04ebe70c08f6419c",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/sysstat.service",
+          "Id": "sysstat.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "systemd-binfmt.service": {
+        "files": [
+          {
+            "bytes": 1213,
+            "path": "/usr/lib/systemd/system/systemd-binfmt.service",
+            "resolved_path": "/usr/lib/systemd/system/systemd-binfmt.service",
+            "sha256": "e5ec1652385be97feb387d6125d455146d8c38e1f038b083125f530623a98f8b",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/systemd-binfmt.service",
+          "Id": "systemd-binfmt.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "systemd-fsck@dev-disk-by\\x2duuid-9DA2\\x2d3597.service": {
+        "files": [
+          {
+            "bytes": 760,
+            "path": "/usr/lib/systemd/system/systemd-fsck@.service",
+            "resolved_path": "/usr/lib/systemd/system/systemd-fsck@.service",
+            "sha256": "43be4420263da4e79a7fe33f6b628449cc56cf99ca30cdc4dedc7f53aff7ea7e",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/systemd-fsck@.service",
+          "Id": "systemd-fsck@dev-disk-by\\x2duuid-9DA2\\x2d3597.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "systemd-journal-flush.service": {
+        "files": [
+          {
+            "bytes": 827,
+            "path": "/usr/lib/systemd/system/systemd-journal-flush.service",
+            "resolved_path": "/usr/lib/systemd/system/systemd-journal-flush.service",
+            "sha256": "eb3766378b08bfa70e283126808b78fb4577310181ef1d748b7cc957a022122f",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/systemd-journal-flush.service",
+          "Id": "systemd-journal-flush.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "systemd-journald.service": {
+        "files": [
+          {
+            "bytes": 2449,
+            "path": "/usr/lib/systemd/system/systemd-journald.service",
+            "resolved_path": "/usr/lib/systemd/system/systemd-journald.service",
+            "sha256": "99389b0e3329dad0828df1600cdd31ec271bcc3403bc014018903c5705ec68ef",
+            "symlink_target": null
+          },
+          {
+            "bytes": 81,
+            "path": "/usr/lib/systemd/system/systemd-journald.service.d/nice.conf",
+            "resolved_path": "/usr/lib/systemd/system/systemd-journald.service.d/nice.conf",
+            "sha256": "200fa6d390295aba030295ff1bd0d37090c9bb1903641d6d6df1d439592ac5a4",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "/usr/lib/systemd/system/systemd-journald.service.d/nice.conf",
+          "FragmentPath": "/usr/lib/systemd/system/systemd-journald.service",
+          "Id": "systemd-journald.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "systemd-logind.service": {
+        "files": [
+          {
+            "bytes": 2037,
+            "path": "/usr/lib/systemd/system/systemd-logind.service",
+            "resolved_path": "/usr/lib/systemd/system/systemd-logind.service",
+            "sha256": "528b9c24a93c52385a7c678dd4136f5f316d3ec82e21134dc3be1d2c12fda234",
+            "symlink_target": null
+          },
+          {
+            "bytes": 371,
+            "path": "/usr/lib/systemd/system/systemd-logind.service.d/dbus.conf",
+            "resolved_path": "/usr/lib/systemd/system/systemd-logind.service.d/dbus.conf",
+            "sha256": "2325a2f34185f01f8ca3dc3c77f6e3676cdc08d0f5023db65f4fb19987d31367",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "/usr/lib/systemd/system/systemd-logind.service.d/dbus.conf",
+          "FragmentPath": "/usr/lib/systemd/system/systemd-logind.service",
+          "Id": "systemd-logind.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "systemd-modules-load.service": {
+        "files": [
+          {
+            "bytes": 1019,
+            "path": "/usr/lib/systemd/system/systemd-modules-load.service",
+            "resolved_path": "/usr/lib/systemd/system/systemd-modules-load.service",
+            "sha256": "3339bd38a056593c624e6de4df3f9efa077eb44a800ad983256169078dc636e0",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/systemd-modules-load.service",
+          "Id": "systemd-modules-load.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "systemd-networkd.service": {
+        "files": [
+          {
+            "bytes": 2428,
+            "path": "/usr/lib/systemd/system/systemd-networkd.service",
+            "resolved_path": "/usr/lib/systemd/system/systemd-networkd.service",
+            "sha256": "38ab8b44491353e11502b1eab3a8e67cd1845845397ae09db36e211a6d8bfce7",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/systemd-networkd.service",
+          "Id": "systemd-networkd.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "systemd-random-seed.service": {
+        "files": [
+          {
+            "bytes": 1187,
+            "path": "/usr/lib/systemd/system/systemd-random-seed.service",
+            "resolved_path": "/usr/lib/systemd/system/systemd-random-seed.service",
+            "sha256": "e4b935cc3c5aa680af2addebc0af1507d46c0f0f638bed3497a46b1db0ee51f6",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/systemd-random-seed.service",
+          "Id": "systemd-random-seed.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "systemd-remount-fs.service": {
+        "files": [
+          {
+            "bytes": 787,
+            "path": "/usr/lib/systemd/system/systemd-remount-fs.service",
+            "resolved_path": "/usr/lib/systemd/system/systemd-remount-fs.service",
+            "sha256": "644992444a1ca3650f10f5cf4a6ef0666888d4e677632a15ee76c91b88ffb1b1",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/systemd-remount-fs.service",
+          "Id": "systemd-remount-fs.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "systemd-resolved.service": {
+        "files": [
+          {
+            "bytes": 1898,
+            "path": "/usr/lib/systemd/system/systemd-resolved.service",
+            "resolved_path": "/usr/lib/systemd/system/systemd-resolved.service",
+            "sha256": "db42a5af326aa171d320a3f18f5137c74025f84bf9fa2e58c5c9db335926c432",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/systemd-resolved.service",
+          "Id": "systemd-resolved.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "systemd-sysctl.service": {
+        "files": [
+          {
+            "bytes": 731,
+            "path": "/usr/lib/systemd/system/systemd-sysctl.service",
+            "resolved_path": "/usr/lib/systemd/system/systemd-sysctl.service",
+            "sha256": "67802699b135aa011f76ff08ecaf37b3a5d821de3a1e6f8ee55c3404e6df208a",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/systemd-sysctl.service",
+          "Id": "systemd-sysctl.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "systemd-timesyncd.service": {
+        "files": [
+          {
+            "bytes": 1768,
+            "path": "/usr/lib/systemd/system/systemd-timesyncd.service",
+            "resolved_path": "/usr/lib/systemd/system/systemd-timesyncd.service",
+            "sha256": "f7e5b08e61f52c3fd8fc9d3f96668cc12109499a3e4eb74f0e91cf068e7e063a",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/systemd-timesyncd.service",
+          "Id": "systemd-timesyncd.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "systemd-tmpfiles-clean.timer": {
+        "files": [
+          {
+            "bytes": 539,
+            "path": "/usr/lib/systemd/system/systemd-tmpfiles-clean.timer",
+            "resolved_path": "/usr/lib/systemd/system/systemd-tmpfiles-clean.timer",
+            "sha256": "5d0d5e43fba69a001527d4ef354971c9a089b64d7d88973f2c190f7d80b25c61",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/systemd-tmpfiles-clean.timer",
+          "Id": "systemd-tmpfiles-clean.timer",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "systemd-tmpfiles-setup-dev-early.service": {
+        "files": [
+          {
+            "bytes": 852,
+            "path": "/usr/lib/systemd/system/systemd-tmpfiles-setup-dev-early.service",
+            "resolved_path": "/usr/lib/systemd/system/systemd-tmpfiles-setup-dev-early.service",
+            "sha256": "6c9429db294f317608868337ca1befd1fc961886e0d4accf8997dfd33e1a61de",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/systemd-tmpfiles-setup-dev-early.service",
+          "Id": "systemd-tmpfiles-setup-dev-early.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "systemd-tmpfiles-setup-dev.service": {
+        "files": [
+          {
+            "bytes": 877,
+            "path": "/usr/lib/systemd/system/systemd-tmpfiles-setup-dev.service",
+            "resolved_path": "/usr/lib/systemd/system/systemd-tmpfiles-setup-dev.service",
+            "sha256": "9f0a6b2414d3b398357b7508f6a841acae0d8f0ff079e096c0bed78f0572122e",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/systemd-tmpfiles-setup-dev.service",
+          "Id": "systemd-tmpfiles-setup-dev.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "systemd-tmpfiles-setup.service": {
+        "files": [
+          {
+            "bytes": 1005,
+            "path": "/usr/lib/systemd/system/systemd-tmpfiles-setup.service",
+            "resolved_path": "/usr/lib/systemd/system/systemd-tmpfiles-setup.service",
+            "sha256": "804df64beeb05eca99bfd657cdcfe2c160501b6d1dbe083b1c5e422239b4cc29",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/systemd-tmpfiles-setup.service",
+          "Id": "systemd-tmpfiles-setup.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "systemd-udev-trigger.service": {
+        "files": [
+          {
+            "bytes": 758,
+            "path": "/usr/lib/systemd/system/systemd-udev-trigger.service",
+            "resolved_path": "/usr/lib/systemd/system/systemd-udev-trigger.service",
+            "sha256": "ca17e0b752202606d821f4714736096049ab34f1176fcb2e403808e33d8f3067",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/systemd-udev-trigger.service",
+          "Id": "systemd-udev-trigger.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "systemd-udevd.service": {
+        "files": [
+          {
+            "bytes": 1324,
+            "path": "/usr/lib/systemd/system/systemd-udevd.service",
+            "resolved_path": "/usr/lib/systemd/system/systemd-udevd.service",
+            "sha256": "49c9c1189ff6f112a9907dc1bf01f6fa7e0a7ca74b3a2420874561bbd8a8727d",
+            "symlink_target": null
+          },
+          {
+            "bytes": 251,
+            "path": "/usr/lib/systemd/system/systemd-udevd.service.d/syscall-architecture.conf",
+            "resolved_path": "/usr/lib/systemd/system/systemd-udevd.service.d/syscall-architecture.conf",
+            "sha256": "12cee2f58288f5b89b28d2f56ef29f6b13c58edad7d3c723ecb6cb0702f236e3",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "/usr/lib/systemd/system/systemd-udevd.service.d/syscall-architecture.conf",
+          "FragmentPath": "/usr/lib/systemd/system/systemd-udevd.service",
+          "Id": "systemd-udevd.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "systemd-update-utmp.service": {
+        "files": [
+          {
+            "bytes": 856,
+            "path": "/usr/lib/systemd/system/systemd-update-utmp.service",
+            "resolved_path": "/usr/lib/systemd/system/systemd-update-utmp.service",
+            "sha256": "92ed5c0d5a05ec76076cb41bc4c6318a4ca8f0f21d5179eeb315f0f1f2f7ea4d",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/systemd-update-utmp.service",
+          "Id": "systemd-update-utmp.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "systemd-user-sessions.service": {
+        "files": [
+          {
+            "bytes": 655,
+            "path": "/usr/lib/systemd/system/systemd-user-sessions.service",
+            "resolved_path": "/usr/lib/systemd/system/systemd-user-sessions.service",
+            "sha256": "e6680d505aefa23436ede13f05eba3ca7bc41531cc5f56c20efb340804a088de",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/systemd-user-sessions.service",
+          "Id": "systemd-user-sessions.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "tailscaled.service": {
+        "files": [
+          {
+            "bytes": 632,
+            "path": "/usr/lib/systemd/system/tailscaled.service",
+            "resolved_path": "/usr/lib/systemd/system/tailscaled.service",
+            "sha256": "5ee50b494616ce9b737aac97d92598f7057db42076c6c040e66b51514f76969f",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/tailscaled.service",
+          "Id": "tailscaled.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "ua-timer.timer": {
+        "files": [
+          {
+            "bytes": 322,
+            "path": "/usr/lib/systemd/system/ua-timer.timer",
+            "resolved_path": "/usr/lib/systemd/system/ua-timer.timer",
+            "sha256": "298cb263192451d1db12687202a5db3d849f2335db8bec0fc8d99a89f5897175",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/ua-timer.timer",
+          "Id": "ua-timer.timer",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "udisks2.service": {
+        "files": [
+          {
+            "bytes": 207,
+            "path": "/usr/lib/systemd/system/udisks2.service",
+            "resolved_path": "/usr/lib/systemd/system/udisks2.service",
+            "sha256": "edbe6a50b0f8bdbd29f01fba10e96333c3523c2c1cbb6d91c1326da99b2ff3c2",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/udisks2.service",
+          "Id": "udisks2.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "ufw.service": {
+        "files": [
+          {
+            "bytes": 341,
+            "path": "/usr/lib/systemd/system/ufw.service",
+            "resolved_path": "/usr/lib/systemd/system/ufw.service",
+            "sha256": "efece4d41e747407ed7a02d217420cef9aa60ee84326a145de528400dc63419d",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/ufw.service",
+          "Id": "ufw.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "update-notifier-download.timer": {
+        "files": [
+          {
+            "bytes": 268,
+            "path": "/usr/lib/systemd/system/update-notifier-download.timer",
+            "resolved_path": "/usr/lib/systemd/system/update-notifier-download.timer",
+            "sha256": "78f01ff5be8b01eee4c438d6a7971dcb9f34687cb75bd0d61f754eb5eb42ad22",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/update-notifier-download.timer",
+          "Id": "update-notifier-download.timer",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "update-notifier-motd.timer": {
+        "files": [
+          {
+            "bytes": 301,
+            "path": "/usr/lib/systemd/system/update-notifier-motd.timer",
+            "resolved_path": "/usr/lib/systemd/system/update-notifier-motd.timer",
+            "sha256": "7e5fa1f167ad72cf1bd0421d72ca3017ccb5a62f98d91ec3f9e25efd46c2a9ef",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/update-notifier-motd.timer",
+          "Id": "update-notifier-motd.timer",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "upower.service": {
+        "files": [
+          {
+            "bytes": 994,
+            "path": "/usr/lib/systemd/system/upower.service",
+            "resolved_path": "/usr/lib/systemd/system/upower.service",
+            "sha256": "c6d300b60a7dd2e9186152b8bc4fd1557ec2977027d0a24b06304d31f6e4124c",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/upower.service",
+          "Id": "upower.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "user-runtime-dir@1000.service": {
+        "files": [
+          {
+            "bytes": 674,
+            "path": "/usr/lib/systemd/system/user-runtime-dir@.service",
+            "resolved_path": "/usr/lib/systemd/system/user-runtime-dir@.service",
+            "sha256": "11439fd93c030c3e2c8efdfe918230b995fe728a6eb4a1763ee000ea751a7a17",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/user-runtime-dir@.service",
+          "Id": "user-runtime-dir@1000.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "user@1000.service": {
+        "files": [
+          {
+            "bytes": 834,
+            "path": "/usr/lib/systemd/system/user@.service",
+            "resolved_path": "/usr/lib/systemd/system/user@.service",
+            "sha256": "1855974fab4af1fcba640201e87b1142118c043916df6b8d9e7868773a900cc9",
+            "symlink_target": null
+          },
+          {
+            "bytes": 605,
+            "path": "/usr/lib/systemd/system/user@.service.d/10-login-barrier.conf",
+            "resolved_path": "/usr/lib/systemd/system/user@.service.d/10-login-barrier.conf",
+            "sha256": "1c1452839b609b0609cccaba3c648d780372df6f244deb487da6da5ee002a993",
+            "symlink_target": null
+          },
+          {
+            "bytes": 125,
+            "path": "/usr/lib/systemd/system/user@.service.d/timeout.conf",
+            "resolved_path": "/usr/lib/systemd/system/user@.service.d/timeout.conf",
+            "sha256": "597eac16d8d7a289bb16aeeb01be0191d0c90beca4c6e0dba0f0c2d7c4e0ea81",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "/usr/lib/systemd/system/user@.service.d/10-login-barrier.conf /usr/lib/systemd/system/user@.service.d/timeout.conf",
+          "FragmentPath": "/usr/lib/systemd/system/user@.service",
+          "Id": "user@1000.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "wpa_supplicant.service": {
+        "files": [
+          {
+            "bytes": 436,
+            "path": "/usr/lib/systemd/system/wpa_supplicant.service",
+            "resolved_path": "/usr/lib/systemd/system/wpa_supplicant.service",
+            "sha256": "221bc1d61fc671d790a75373348deb3e159b22ce8b38f6f73de46af25d889c15",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/system/wpa_supplicant.service",
+          "Id": "wpa_supplicant.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      }
+    },
+    "user_configuration": {
+      "dbus.service": {
+        "files": [
+          {
+            "bytes": 410,
+            "path": "/usr/lib/systemd/user/dbus.service",
+            "resolved_path": "/usr/lib/systemd/user/dbus.service",
+            "sha256": "a3156e86c7a5ea0af164a08d971eb6da110ec740a553cb64e2e2cf2cc2d33059",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/user/dbus.service",
+          "Id": "dbus.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "filter-chain.service": {
+        "files": [
+          {
+            "bytes": 451,
+            "path": "/usr/lib/systemd/user/filter-chain.service",
+            "resolved_path": "/usr/lib/systemd/user/filter-chain.service",
+            "sha256": "72baca9f9f13887086c6260ee6c12fe5e2e8f6e393a3e47b02cbc9fc5ef9cb97",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/user/filter-chain.service",
+          "Id": "filter-chain.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "launchpadlib-cache-clean.timer": {
+        "files": [
+          {
+            "bytes": 144,
+            "path": "/usr/lib/systemd/user/launchpadlib-cache-clean.timer",
+            "resolved_path": "/usr/lib/systemd/user/launchpadlib-cache-clean.timer",
+            "sha256": "2aad5faceba1104670893ac332fcd3702d148d6ee32420019bcdf76d184d34d1",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/user/launchpadlib-cache-clean.timer",
+          "Id": "launchpadlib-cache-clean.timer",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "pipewire-pulse.service": {
+        "files": [
+          {
+            "bytes": 1227,
+            "path": "/usr/lib/systemd/user/pipewire-pulse.service",
+            "resolved_path": "/usr/lib/systemd/user/pipewire-pulse.service",
+            "sha256": "ca83270e11979c35e025dee7b450c6c1f9b94ad552bea51666cd6ad6f453e1e8",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/user/pipewire-pulse.service",
+          "Id": "pipewire-pulse.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "pipewire.service": {
+        "files": [
+          {
+            "bytes": 1022,
+            "path": "/usr/lib/systemd/user/pipewire.service",
+            "resolved_path": "/usr/lib/systemd/user/pipewire.service",
+            "sha256": "e312515933755466d46f47211ab9888cb76dd1af346c8e02a5be66c39dd5f3cf",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/user/pipewire.service",
+          "Id": "pipewire.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "samwise-daemon-samwise.service": {
+        "files": [
+          {
+            "bytes": 426,
+            "path": "/home/jlsteenwyk/.config/systemd/user/samwise-daemon-samwise.service",
+            "resolved_path": "/home/jlsteenwyk/.config/systemd/user/samwise-daemon-samwise.service",
+            "sha256": "cd2e76207b56adc59dbdaba796995f59ea7dea1320abc97c8fd2ecf5015cb84a",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/home/jlsteenwyk/.config/systemd/user/samwise-daemon-samwise.service",
+          "Id": "samwise-daemon-samwise.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      },
+      "wireplumber.service": {
+        "files": [
+          {
+            "bytes": 434,
+            "path": "/usr/lib/systemd/user/wireplumber.service",
+            "resolved_path": "/usr/lib/systemd/user/wireplumber.service",
+            "sha256": "6dec189f307b6c6ea5c3aa851bf58baa0c4aa9044ce649e8e8c6c1a6daacc5a0",
+            "symlink_target": null
+          }
+        ],
+        "properties": {
+          "DropInPaths": "",
+          "FragmentPath": "/usr/lib/systemd/user/wireplumber.service",
+          "Id": "wireplumber.service",
+          "LoadState": "loaded",
+          "NeedDaemonReload": "no"
+        }
+      }
+    }
+  }
+}

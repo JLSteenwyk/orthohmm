@@ -18,8 +18,48 @@ COMMANDS = {
     "gpu": ["nvidia-smi", "--query-gpu=name,uuid,driver_version,utilization.gpu,utilization.memory,memory.used,temperature.gpu,power.draw", "--format=csv,noheader,nounits"],
     "gpu_compute": ["nvidia-smi", "--query-compute-apps=pid,process_name,used_memory", "--format=csv,noheader,nounits"],
     "scheduler": ["squeue", "-h", "-p", "spark", "-o", "%i %T %N"],
+    "system_configuration": ["systemctl", "show", "*.service", "*.timer",
+        "--property=Id,LoadState,FragmentPath,DropInPaths,NeedDaemonReload"],
+    "user_configuration": ["systemctl", "--user", "show", "*.service", "*.timer",
+        "--property=Id,LoadState,FragmentPath,DropInPaths,NeedDaemonReload"],
 }
 STATIC_COMMANDS = {"cpu": ["lscpu", "-J"], "kernel": ["uname", "-a"]}
+
+
+def configuration_fingerprints(raw):
+    units = {}
+    for block in raw.strip().split("\n\n"):
+        fields = {}
+        for line in block.splitlines():
+            key, separator, value = line.partition("=")
+            if not separator or key in fields:
+                raise ValueError("Malformed or duplicate unit property")
+            fields[key] = value
+        if set(fields) != {"Id", "LoadState", "FragmentPath", "DropInPaths", "NeedDaemonReload"}:
+            raise ValueError("Incomplete unit configuration properties")
+        name = fields["Id"]
+        if not name.endswith((".service", ".timer")) or name in units:
+            raise ValueError("Invalid or duplicate unit identity")
+        files = []
+        for value in [fields["FragmentPath"], *fields["DropInPaths"].split()]:
+            if not value:
+                continue
+            row = {"path": value}
+            try:
+                path = Path(value)
+                if not path.is_absolute() or any(c in value for c in ('\\', '"', "'")):
+                    raise ValueError("Unsupported escaped unit path")
+                row["resolved_path"] = str(path.resolve(strict=True))
+                row["symlink_target"] = os.readlink(path) if path.is_symlink() else None
+                if not path.is_file() or path.stat().st_size > 1024**2:
+                    raise ValueError("Unit path is not a bounded regular file")
+                data = path.read_bytes()
+                row.update(bytes=len(data), sha256=hashlib.sha256(data).hexdigest())
+            except (OSError, ValueError) as error:
+                row.update(error_type=type(error).__name__, error=str(error))
+            files.append(row)
+        units[name] = {"properties": fields, "files": files}
+    return units
 
 
 class Recorder:
@@ -62,6 +102,15 @@ def collect(static=False):
             row.update(error_type=type(error).__name__, error=str(error))
         row["finished_monotonic_ns"] = time.monotonic_ns()
         result["commands"][key] = row
+    result["unit_configurations"] = {}
+    for key in ("system_configuration", "user_configuration"):
+        command = result["commands"][key]
+        try:
+            if command.get("returncode") != 0:
+                raise ValueError("Configuration command did not succeed")
+            result["unit_configurations"][key] = configuration_fingerprints(command["stdout"])
+        except ValueError as error:
+            result["unit_configurations"][key] = {"error_type": type(error).__name__, "error": str(error)}
     paths = [Path(p) for p in ("/proc/diskstats", "/proc/meminfo", "/proc/pressure/cpu",
         "/proc/pressure/io", "/proc/pressure/memory", "/proc/sys/kernel/random/boot_id")]
     paths.extend(Path("/sys/class/thermal").glob("thermal_zone*/temp"))
@@ -77,7 +126,8 @@ def collect(static=False):
     result.update(finished_unix_ns=time.time_ns(), finished_monotonic_ns=time.monotonic_ns(),
         limitations=["Sequential snapshots are not atomic and miss activity between observations.",
             "Device counters do not attribute I/O to the measured job; GPU N/A is not zero.",
-            "Service presence is not permission for arbitrary work; configuration policy is separate."])
+            "Service presence is not permission for arbitrary work; configuration policy is separate.",
+            "Unit fingerprints cover loaded service/timer fragments and drop-ins, not all external service configuration."])
     return result
 
 

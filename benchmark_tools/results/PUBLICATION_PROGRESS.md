@@ -1,5 +1,38 @@
 # Publication Progress
 
+## DGX Unit Configuration Fingerprints Added (2026-09-23)
+
+Previous turn made progress by validating whole-session environment
+recording in real probe 22100. The environment observer now records
+systemd's Id/LoadState/FragmentPath/DropInPaths/NeedDaemonReload properties
+for loaded services and timers, plus bounded regular-file content hashes,
+resolved paths and symlink targets. Unit contents, command arguments and
+environment values are not copied. Unsupported paths and unreadable files
+remain explicit errors. **60 focused tests passed**, including content drift,
+symlink identity, malformed properties and permission/unsupported paths.
+
+Fresh DGX evidence is retained in
+[configuration baseline](dgx_environment_config_baseline_20260923.json),
+SHA-256 `597a266959dd6a81010e0bbaf3b1af58634e12bc3ab33b277ff15320fb0d1ed6`.
+Verified source hash matches the local observer. Collection took
+0.353082394 seconds: 100 system and seven user units, 115 configuration-file
+references, no missing fragment records and no pending daemon reloads.
+
+One reference could not be hashed:
+/etc/systemd/system/dgx-dashboard-admin.service returned PermissionError.
+A read-only sudo -n sha256sum attempt required a password; none was sought
+or supplied and permissions were not bypassed. Asked whether an administrator
+can grant read-only access, without sending contents or credentials.
+Other configuration references were hashed successfully. The gap is retained,
+not converted into equality or complete configuration coverage. Fingerprints
+still do not cover all external files or executable dependencies used by
+services; a prospective timing policy must state that limitation.
+
+Timing admission remains unissued. Further work remains available on the
+environment policy/session authorization and queued scientific analyses;
+the publication goal is not globally blocked by this one permission gap.
+Latest scheduler check: 22034_2 running at 46:14, 22055/22081 pending.
+
 ## Periodic Session Environment Recording Tested On DGX (2026-09-23)
 
 Previous turn made progress by capturing the service/device baseline.
