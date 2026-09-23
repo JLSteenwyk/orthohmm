@@ -1,0 +1,49 @@
+{
+  "files": [
+    {
+      "downloaded_bytes": 68932999,
+      "expected_bytes": 68932999,
+      "expected_sha256": "f4b8389493b567a688650d6b6c41003a9346649e150efabdf7c8b6f15ac8f356",
+      "final_url": "http://ygob.ucd.ie/data/v7-Aug2012/AA.fsa",
+      "http_status": 200,
+      "name": "AA.fsa",
+      "sha256": "f4b8389493b567a688650d6b6c41003a9346649e150efabdf7c8b6f15ac8f356",
+      "status": "verified",
+      "url": "http://ygob.ucd.ie/data/v7-Aug2012/AA.fsa"
+    },
+    {
+      "downloaded_bytes": 2778211,
+      "expected_bytes": 2778211,
+      "expected_sha256": "162c1919b762f34006d0be8ea00b090531ea6c67be43d63b6bf683c4bc48212b",
+      "final_url": "http://ygob.ucd.ie/data/v7-Aug2012/Pillars.tab",
+      "http_status": 200,
+      "name": "Pillars.tab",
+      "sha256": "162c1919b762f34006d0be8ea00b090531ea6c67be43d63b6bf683c4bc48212b",
+      "status": "verified",
+      "url": "http://ygob.ucd.ie/data/v7-Aug2012/Pillars.tab"
+    },
+    {
+      "downloaded_bytes": 4958,
+      "expected_bytes": 4958,
+      "expected_sha256": "162fb37cf0f7a50b44fae47f0d2c2f9b126b728660b65d9bee8d3175af8317f6",
+      "final_url": "http://ygob.ucd.ie/data/v7-Aug2012/README",
+      "http_status": 200,
+      "name": "README",
+      "sha256": "162fb37cf0f7a50b44fae47f0d2c2f9b126b728660b65d9bee8d3175af8317f6",
+      "status": "verified",
+      "url": "http://ygob.ucd.ie/data/v7-Aug2012/README"
+    }
+  ],
+  "finished_unix_ns": 1790194441705322596,
+  "limitations": [
+    "HTTP transport is unauthenticated; SHA-256 binds the previously retained input bytes.",
+    "Acquisition is not permission to redistribute; raw files remain excluded from the publication bundle.",
+    "Preparation, inference and scoring are separate steps; failures are not silently retried."
+  ],
+  "redistribution_cleared": false,
+  "scientific_results_reproduced": false,
+  "source_sha256": "5dbd2b6fc1011b39436d0d4576166ad97a09ccbfef77444c96a4be8523eefa0d",
+  "source_url": "http://ygob.ucd.ie/data/v7-Aug2012/",
+  "started_unix_ns": 1790194430018055670,
+  "status": "frozen_ygob_inputs_acquired"
+}

@@ -1,5 +1,36 @@
 # Publication Progress
 
+## DGX Deferred; YGOB Source Acquisition Reproduced (2026-09-23)
+
+Previous turn made progress through portable comparator arithmetic.
+The user now requests forgoing the DGX. Further DGX timing work and access
+requests are deferred; no new DGX action followed that instruction. The
+last diagnostic jobs were already terminal with restoration recorded.
+Controlled resource evidence remains unfinished, not waived or replaced
+by uncontrolled local timing. The broader publication goal stays active.
+
+Added a source-acquisition-only YGOB v7 downloader. All three files have
+frozen size/SHA-256 checks from the original candidate audit; overwrite is
+refused and failed/partial downloads are retained without implicit retry.
+Six tests passed, covering truncation, excess bytes, digest mismatch,
+network failure and exact agreement with the retained input manifest.
+
+Live reacquisition into benchmarks/work/ygob_source_reacquisition_20260923_v1
+succeeded. [Receipt](ygob_source_reacquisition_20260923.json) SHA-256:
+`bebb19a50071d2f69fad779920d913d3f0deffd884e1f7eae9153e5863eda617`.
+Ran the existing preparation script in a fresh ygob_reprepared_20260923_v1
+directory. All **16 prepared FASTAs and the reference JSON** match original
+byte counts and SHA-256 values: 83,404 proteins and 10,250 groups. Prepared
+summary SHA-256 `b8a28633c8363027720825c5e352b417904c395cbdd419a1ecf62936e94bedea`.
+No raw files were committed. HTTP and redistribution limitations remain
+explicit; the reproduction guide now includes exact acquisition/preparation
+commands. This does not repeat inference or scoring, or establish rights
+to redistribute raw YGOB material. OrthoBench acquisition remains open.
+
+Live scheduler update: **22034_2 completed 0:0 in 59:23**; 22034_3 is now
+running, as is CPM replay 22081_0. BLAST diagnostic 22055 remains pending.
+No queued or running scientific job was restarted.
+
 ## Seven-Method Arithmetic Reproduced Outside Checkout (2026-09-23)
 
 Previous turn made progress by completing descriptive strata and manuscript

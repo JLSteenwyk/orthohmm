@@ -77,6 +77,13 @@ retained scientific evidence to resolve a packaging question.
 
 ## Remaining Actions
 
+The September 23 [YGOB reacquisition receipt](ygob_source_reacquisition_20260923.json)
+and [executable instructions](../PUBLICATION_REPRODUCTION.md#native-execution-and-timing)
+now support source-acquisition-only packaging for its three frozen inputs.
+Fresh downloads matched their original hashes and regenerated all prepared
+inputs/reference bytes. No raw dataset was newly committed or cleared for
+redistribution. OrthoBench acquisition packaging remains separate work.
+
 The [patched CPU wheelhouse notice inventory](PUBLICATION_DEPENDENCY_NOTICES_20260920.md)
 now binds all11local wheel identities to the retained installation report,
 records79notice candidates and47native members, and preserves provider

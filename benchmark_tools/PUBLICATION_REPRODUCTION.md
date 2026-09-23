@@ -122,6 +122,26 @@ environment or cross-platform equivalence.
 
 ## Native Execution And Timing
 
+YGOB inputs can be acquired directly from the provider without including raw
+data in the publication bundle. From the repository root, use fresh paths:
+
+```bash
+python benchmark_tools/acquire_ygob_publication_inputs.py --output /tmp/ygob-source-new
+python benchmark_tools/prepare_ygob_validation.py \
+  --candidate /tmp/ygob-source-new \
+  --audit benchmark_tools/results/ygob_overlap_20260916.json \
+  --output /tmp/ygob-prepared-new --summary /tmp/ygob-prepared-new.json
+```
+
+The acquisition step uses only the standard library; preparation requires
+the recorded Biopython environment. All three downloaded files must match
+frozen sizes and SHA-256 values. Failed downloads are preserved and are not
+silently retried. [Executed acquisition evidence](results/ygob_source_reacquisition_20260923.json)
+matched the original inputs; regeneration matched all 16 prepared FASTAs
+and the reference file byte-for-byte. HTTP transport is unauthenticated;
+the hashes bind previously retained bytes. Raw YGOB redistribution remains
+uncleared, and this does not repeat native inference or scoring.
+
 Full native reproduction needs the exact input, software, runtime and
 conversion records referenced by each experiment. The
 [CPU baseline build](results/PUBLICATION_BASELINE_CPU_BUILD_20260919.md)
@@ -135,6 +155,9 @@ admits native outputs but retains timings as descriptive only. The
 and [long-run amendment](results/DGX_SCALING_LONG_RUN_AMENDMENT_20260920.md)
 do not authorize a launch: environmental policy and executor integration
 remain incomplete. Do not claim matched-resource speedups from the old panel.
+The user deferred further DGX work on September 23. No further DGX access
+requests or timing submissions are planned without renewed direction;
+controlled comparative timing remains an unmet publication requirement.
 
 ## Archive And Outstanding Work
 
