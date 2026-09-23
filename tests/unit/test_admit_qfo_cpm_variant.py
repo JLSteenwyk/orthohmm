@@ -11,7 +11,7 @@ from tests.unit.test_admit_qfo_corrected_replay import parent_fixture
 
 @pytest.mark.parametrize("problem", [None, "missing", "duplicate", "running", "failed", "exit", "node", "cpus", "index"])
 def test_completed_task(problem):
-    row = ["21960_0", "21961", "COMPLETED", "0:0", "00:10:00", "bizon", "32"]
+    row = ["22059_0", "22060", "COMPLETED", "0:0", "00:10:00", "bizon", "32"]
     if problem in ("running", "failed"):
         row[2] = problem.upper()
     elif problem == "exit":
@@ -26,7 +26,9 @@ def test_completed_task(problem):
         with pytest.raises(ValueError):
             module.completed_task(accounting, True if problem == "index" else 0)
     else:
-        assert module.completed_task(accounting, 0)["JobIDRaw"] == "21961"
+        assert module.completed_task(accounting, 0)["JobIDRaw"] == "22060"
+        with pytest.raises(ValueError):
+            module.completed_task(accounting.replace("22059_0", "21960_0"), 0)
 
 
 @pytest.mark.parametrize("index", [0, 1])
