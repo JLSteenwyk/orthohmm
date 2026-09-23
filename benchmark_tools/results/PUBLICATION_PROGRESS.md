@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Manuscript Review Refreshed (2026-09-23)
+
+Previous turn made progress with the committed, relocated FastOMA figure
+supplement. Local jobs remain live: 22034_3 running at 17:00, CPM 22081_0
+at 16:34; BLAST diagnostic 22055 resource-pending. DGX remains deferred,
+with no access or new timing submissions. No scientific job was restarted.
+
+Updated the living manuscript to record the service diagnostics/restoration
+without claiming environmental admission, and to explicitly disclose the
+user's timing deferral. It now links the bundled, byte-identical comparator
+PNG. Added a reproducible Pandoc render command that checks local assets,
+records identities, preserves relative links and refuses overwrite. A new
+dated HTML retains FastOMA results and secondary strata; the prior dated
+review is unchanged. The new receipt records 183 local occurrences and
+165 unique tracked targets; all eight inline figures link to their sources.
+The refreshed citation audit matches all 37 bibliography entries with no
+unresolved explicit citations. See the
+[review and commands](MANUSCRIPT_RENDER_REVIEW_20260923.md).
+All 21 focused renderer, dated-review and citation tests passed.
+
+This is source/link/citation structure validation, not a new browser/PDF
+review, scientific attribution audit, native rerun or portable full archive.
+Final manuscript condensation, missing results, appropriate uncertainty
+gaps, controlled timing, release and archival review remain incomplete.
+
 ## FastOMA Figure Supplement Exported And Relocated (2026-09-23)
 
 Previous turn only acknowledged the DGX deferral (no scientific progress).

@@ -971,7 +971,7 @@ These counts are descriptive, not a substitute for the macro-statistic
 bootstrap. [Arithmetic reproduction](qfo_fastoma_swiss_reproduction_22098.json)
 matches all 21 available endpoints within 1e-12. OrthoMCL remains missing.
 
-[![Corrected SwissTrees comparator differences with paired intervals](corrected_swiss_comparison_figure_22098/corrected_swiss_comparison.png)](corrected_swiss_comparison_figure_22098/corrected_swiss_comparison.png "Full-resolution figure")
+[![Corrected SwissTrees comparator differences with paired intervals](corrected_swiss_comparison_figure_20260923/corrected_swiss_comparison.png)](corrected_swiss_comparison_figure_20260923/corrected_swiss_comparison.png "Full-resolution figure")
 
 This figure retains every planned contrast. Thick bars are nominal 95%
 intervals and thin bars are adjusted across all 24 endpoints. Values are
@@ -1642,13 +1642,17 @@ pause further submissions. No fastest-repeat selection, pressure subtraction
 or observed-overhead correction is planned. Complete three-repeat summaries
 require three eligible, output-valid runs, with unavailable outcomes visible.
 
-The replacement panel has not been executed. Task binding, raw replay and
-outcome-classification integration tests do not establish environmental
-validity or native-output correctness. The actual service/workload policy,
-authorization, launch/session integration, terminal scheduler evidence and
-whole-run environmental observations remain required. In particular, the
-known restarting user service has not been silently stopped or assumed absent.
-The original 27-run panel remains descriptive evidence only.
+The replacement panel has not been executed. Short collector probes verified
+temporary suppression and restoration of the explicitly authorized failing
+user service, terminal scheduler handling, and relocated raw replay; these
+are infrastructure diagnostics, not method timings or environmental admission.
+The service's missing application remains unrepaired. On 23 September 2026,
+the user deferred further DGX work. Task binding, raw replay and
+outcome-classification tests do not establish whole-run environmental validity
+or native-output correctness. The actual service/workload policy, complete
+environmental observations and controlled replacement timings remain unmet.
+The original 27-run panel remains descriptive evidence only; local queued
+accuracy analyses are not replacements for controlled comparative timing.
 
 ### SwissTrees Comparator Uncertainty
 
