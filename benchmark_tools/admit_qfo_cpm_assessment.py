@@ -22,9 +22,9 @@ from benchmark_tools.run_qfo_recovered_assessment import command_for, environmen
 from benchmark_tools.run_simulation_methods import read_frozen
 from benchmark_tools.validate_qfo_native_assessment import validate_directory
 
-ASSESSMENT_JOB = "21982"
-EXECUTOR_COMMIT = "43becaf4b2505a378edc5ad3111afcbf406e529b"
-EXECUTOR_SHA = "8c5113e6e05d22c2259ce8aa5f22285aa077c4b5fdd7c85c2a5a71f26677a073"
+ASSESSMENT_JOB = "22074"
+EXECUTOR_COMMIT = "471f82bb29633b994068c815d05974c8247a6a18"
+EXECUTOR_SHA = "7bb52ec6f74a776b2a650f62a91990fcf2c46fddd43c833ceb26f32e7618e1d1"
 
 
 def completed_assessment(accounting, index):
@@ -68,7 +68,7 @@ def admit(root, index, output):
     pair_record = record(pairs_path)
     stage = read_frozen(pairs_path, pair_record["sha256"])
     validate_stage(stage, index, conversion_scheduler)
-    converter = root / "benchmarks/work/publication_qfo_cpm_pairs_v1"
+    converter = root / "benchmarks/work/publication_qfo_cpm_pairs_v2"
     verify_checkout(converter, CONVERTER_COMMIT, ["benchmark_tools", "orthohmm", "qfo_benchmark/og_to_pairwise.py"])
     converter_source = record(converter / "benchmark_tools/prepare_qfo_cpm_pairs.py")
     if (converter_source["sha256"] != CONVERTER_SHA or converter_source != stage["source"]
@@ -77,7 +77,7 @@ def admit(root, index, output):
     verified = verify_sources(root, index)
     if stage["context"] != verified["context"] or stage["input_fastas"] != verified["manifest"]["input_fastas"]:
         raise ValueError("CPM assessment context differs from frozen arm")
-    executor = root / "benchmarks/work/publication_qfo_cpm_assessment_v1"
+    executor = root / "benchmarks/work/publication_qfo_cpm_assessment_v2"
     verify_checkout(executor, EXECUTOR_COMMIT, ["benchmark_tools", "orthohmm"])
     executor_source = record(executor / "benchmark_tools/run_qfo_cpm_assessment.py")
     if executor_source["sha256"] != EXECUTOR_SHA:
