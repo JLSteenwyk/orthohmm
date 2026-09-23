@@ -75,3 +75,21 @@ source-version differences and sampling are possibilities, not established
 explanations. Do not replace one source with the other to obtain preferred
 counts. These discrepancies require semantic and benchmark-correspondence
 review before freezing any ancestral-event feature or joining predictions.
+
+## Multiline NHX Diagnostic
+
+The four terminal-label failures are now localized: each source contains two
+complete physical-line trees without semicolon terminators. The initial
+Bio.Phylo whole-file parse combines these into one apparent tree with repeated
+leaves. This is not evidence of biological duplicate identifiers. The original
+failed feasibility report remains preserved rather than overwritten.
+
+[Separate-candidate diagnostic](swisstree_multiline_model_diagnostic_20260923.json)
+uses DendroPy 5.0.8 and appends a terminator only to each parser input, never
+to the retained source bytes. Both candidates in each file have identical
+leaf sets, stored clade sets and D=Y descendant sets. POP has 45 leaves and
+two D=Y clades; VATB 55 and five; SUMF 35 and one; APP 45 and none. The APP
+absence remains unknown event annotation, not a zero-duplication claim.
+Support/color annotations need not be identical. Six focused diagnostic and
+format tests pass. No candidate is chosen, and curated biological rooting,
+accession mapping and benchmark pair-label correspondence remain unvalidated.

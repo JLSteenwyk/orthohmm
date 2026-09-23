@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Multiline Trees Resolved; High-CPM Native Failure Retained (2026-09-23)
+
+Previous turn acquired all 18 model sources. Diagnosed four apparent duplicate
+leaf failures as two unterminated physical-line trees combined by whole-file
+parsing. Separate DendroPy candidate parses preserve both alternatives and
+explicitly record appended parser-only terminators. All four pairs have equal
+leaf, stored-clade and D=Y-clade sets; six focused tests passed. The diagnostic
+does not select a reference candidate or admit rooting/benchmark aliases.
+See [updated source report](SWISSTREE_DUPLICATION_SOURCE_20260923.md).
+
+Authoritative accounting now shows **22081_1 FAILED 1:0 at 48:46**. Preserved
+[native stage failure](qfo_cpm_high_stage_failure_22081_1.json): the
+`profile_expanded` worker (index 3, fourth clustering invocation) died by
+SIGSEGV after 44.04 seconds. The earlier commentary called it the third
+worker; index 3 is the correct identifier. Worker log is empty; three earlier
+stage native-boundary records exist. Outer GNU time reports 46:57.33 and
+8,285,776 KiB maximum RSS against a 192-GiB request; scheduler says FAILED,
+not OUT_OF_MEMORY, so memory exhaustion is not established. Cause remains
+unknown. No automatic retry or reuse of partial groups is authorized.
+
+Low-CPM 22081_0 remains successful and its independent admission **22082_0
+completed 0:0 in 1:37**. Failed high-arm dependencies remain pending and must
+not be released as if successful. Next inspect native/runtime payload evidence
+and design a preserved, isolated diagnostic before deciding whether a selective
+rerun is justified. Do not retune the parameter or scientific baseline.
+
+**BLAST recovery 22103_0 has started**, with tasks 1-19 waiting on the serial
+array limit. Annotation collection 22116 remains live (20:56); verification
+22117 waits. Parameter scoring continues. No jobs restarted or DGX accessed.
+No new accuracy claim or publication completion is supported yet.
+
 ## Complete Curated Model Source Acquired and Inspected (2026-09-23)
 
 Previous turn made progress locating curated duplication summaries and a

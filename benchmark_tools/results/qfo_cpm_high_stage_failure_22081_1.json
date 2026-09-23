@@ -1,0 +1,44 @@
+{
+  "accuracy_evaluated": false,
+  "command": [
+    "/home/bizon/anaconda3/bin/python",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_cpm_variant_v3/benchmark_tools/checked_replay_payload_worker.py",
+    "--root",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+    "--payload",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_parameter_cpm_replay_v3/cpm_high/clustering/cluster_3_profile_expanded/payload",
+    "--manifest",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_parameter_cpm_replay_v3/cpm_high/clustering/cluster_3_profile_expanded/payload_manifest.json",
+    "--manifest-sha256",
+    "43469b1a7df0cff1b5d7d0b39118eac1a72b418b774ba20a3a5be7887d225cb2",
+    "--corrected-plan",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_replay_commands_20260918.json",
+    "--corrected-plan-sha256",
+    "e7657732bc94438fb0602f3246680308a075b9fda1c68909ddfac1138b164c0c",
+    "--cpm-arm",
+    "cpm_high"
+  ],
+  "error": "Command '['/home/bizon/anaconda3/bin/python', '/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_cpm_variant_v3/benchmark_tools/checked_replay_payload_worker.py', '--root', '/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm', '--payload', '/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_parameter_cpm_replay_v3/cpm_high/clustering/cluster_3_profile_expanded/payload', '--manifest', '/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_parameter_cpm_replay_v3/cpm_high/clustering/cluster_3_profile_expanded/payload_manifest.json', '--manifest-sha256', '43469b1a7df0cff1b5d7d0b39118eac1a72b418b774ba20a3a5be7887d225cb2', '--corrected-plan', '/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_replay_commands_20260918.json', '--corrected-plan-sha256', 'e7657732bc94438fb0602f3246680308a075b9fda1c68909ddfac1138b164c0c', '--cpm-arm', 'cpm_high']' died with <Signals.SIGSEGV: 11>.",
+  "error_type": "CalledProcessError",
+  "index": 3,
+  "manifest": {
+    "bytes": 3718,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_parameter_cpm_replay_v3/cpm_high/clustering/cluster_3_profile_expanded/payload_manifest.json",
+    "sha256": "43469b1a7df0cff1b5d7d0b39118eac1a72b418b774ba20a3a5be7887d225cb2"
+  },
+  "stage": "profile_expanded",
+  "status": "failed",
+  "thread_environment": {
+    "child_overrides": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "inherited": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "32",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "wall_s": 44.044602603000385
+}
