@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Prespecified BLAST Replay Inputs Prepared (2026-09-23)
+
+Previous turn recovered official source and confirmed binary identity.
+Added `prepare_blast_replay_panel.py`, which verifies the frozen corrected
+input plan/runtime and formatted database records, indexes the full 984,137
+protein FASTA using Biopython 1.86, and extracts five exact raw records in
+original input order. Six panel-selection tests passed. This is preparation,
+not successful replay or acceptance of retained output.
+
+[Frozen panel manifest](qfo_blast_replay_panel_20260923.json), SHA-256
+`79a809b43d407d4d5ed705e6840873cede64d7b688eee571869b1607f6688872`,
+records the first query, RL41_HUMAN (known statistical failure), SELW_HUMAN
+(selenocysteine), F1MRD9_BOVIN (boundary predecessor), and F1MRE1_BOVIN
+(interrupted query). Their zero-based input ordinals are 0, 655145, 655185,
+888835, and 888836. These ordinals do NOT prove search completion or runtime
+percentage. Five individual FASTAs and combined FASTA are retained under
+`benchmarks/work/qfo_blast_replay_panel_20260923/` without changing originals.
+
+The manifest prepares six commands (one combined, five single-query),
+changing only query/output paths from the frozen search command; each
+still uses 180 threads and the original full database. None were launched.
+Next: execute with resource availability, capture native exits/diagnostics,
+and compare outputs before deciding recovery eligibility. Full retained-row
+validation and recovery execution remain outstanding. FastOMA 21740 was
+RUNNING at 12:38; OrthoMCL admission 21746 remains held.
+
 ## Legacy BLAST Source and Binary Identity Recovered (2026-09-23)
 
 Previous turn made progress by measuring the interrupted output's byte
