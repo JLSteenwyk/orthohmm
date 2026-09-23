@@ -1,0 +1,89 @@
+method	stratum	families	status	F1	PPV	TPR	prediction_semantics
+orthohmm_high_sensitivity	all	18	descriptive	0.6854977806445889	0.6409984992048368	0.7366364204931364	cross-species group-derived clique pairs
+orthohmm_high_sensitivity	higher_entropy	9	descriptive	0.6647147309670625	0.5589187596028707	0.8199135920000789	cross-species group-derived clique pairs
+orthohmm_high_sensitivity	lower_entropy	9	descriptive	0.6864530489104513	0.7230782388068027	0.6533592489861939	cross-species group-derived clique pairs
+orthohmm_high_sensitivity	missing_entropy	0	empty_bin				cross-species group-derived clique pairs
+orthohmm_high_sensitivity	concentrated	0	empty_bin				cross-species group-derived clique pairs
+orthohmm_high_sensitivity	explicit_fragment	0	empty_bin				cross-species group-derived clique pairs
+orthohmm_high_sensitivity	missing	0	empty_bin				cross-species group-derived clique pairs
+orthohmm_high_sensitivity	no_explicit_fragment	18	descriptive	0.6854977806445889	0.6409984992048368	0.7366364204931364	cross-species group-derived clique pairs
+orthohmm_high_sensitivity	not_concentrated	18	descriptive	0.6854977806445889	0.6409984992048368	0.7366364204931364	cross-species group-derived clique pairs
+orthohmm_high_sensitivity	not_short_relative	11	descriptive	0.6840827123840537	0.6289353788849389	0.7498305748294196	cross-species group-derived clique pairs
+orthohmm_high_sensitivity	short_relative	7	descriptive	0.6867912562634881	0.6599548311361046	0.7159027493932627	cross-species group-derived clique pairs
+orthohmm_phylogeny_satellite_v2	all	18	descriptive	0.8335132180095781	0.9551767493219016	0.7393412564640668	native phylogenetically inferred pairs
+orthohmm_phylogeny_satellite_v2	higher_entropy	9	descriptive	0.889985297542093	0.9491278233618243	0.8377810663239571	native phylogenetically inferred pairs
+orthohmm_phylogeny_satellite_v2	lower_entropy	9	descriptive	0.7690412544493112	0.961225675281979	0.6409014466041764	native phylogenetically inferred pairs
+orthohmm_phylogeny_satellite_v2	missing_entropy	0	empty_bin				native phylogenetically inferred pairs
+orthohmm_phylogeny_satellite_v2	concentrated	0	empty_bin				native phylogenetically inferred pairs
+orthohmm_phylogeny_satellite_v2	explicit_fragment	0	empty_bin				native phylogenetically inferred pairs
+orthohmm_phylogeny_satellite_v2	missing	0	empty_bin				native phylogenetically inferred pairs
+orthohmm_phylogeny_satellite_v2	no_explicit_fragment	18	descriptive	0.8335132180095781	0.9551767493219016	0.7393412564640668	native phylogenetically inferred pairs
+orthohmm_phylogeny_satellite_v2	not_concentrated	18	descriptive	0.8335132180095781	0.9551767493219016	0.7393412564640668	native phylogenetically inferred pairs
+orthohmm_phylogeny_satellite_v2	not_short_relative	11	descriptive	0.8331334474400891	0.9421848572833269	0.7467072273104897	native phylogenetically inferred pairs
+orthohmm_phylogeny_satellite_v2	short_relative	7	descriptive	0.8336508905266469	0.9755925796682332	0.7277661594196878	native phylogenetically inferred pairs
+orthofinder_3_1_5_full	all	18	descriptive	0.8484132671264671	0.9378528297261841	0.7745475283334605	native phylogenetically inferred pairs
+orthofinder_3_1_5_full	higher_entropy	9	descriptive	0.8960873256481915	0.9488711064110977	0.8488665936904223	native phylogenetically inferred pairs
+orthofinder_3_1_5_full	lower_entropy	9	descriptive	0.7977514430854858	0.9268345530412707	0.7002284629764988	native phylogenetically inferred pairs
+orthofinder_3_1_5_full	missing_entropy	0	empty_bin				native phylogenetically inferred pairs
+orthofinder_3_1_5_full	concentrated	0	empty_bin				native phylogenetically inferred pairs
+orthofinder_3_1_5_full	explicit_fragment	0	empty_bin				native phylogenetically inferred pairs
+orthofinder_3_1_5_full	missing	0	empty_bin				native phylogenetically inferred pairs
+orthofinder_3_1_5_full	no_explicit_fragment	18	descriptive	0.8484132671264671	0.9378528297261841	0.7745475283334605	native phylogenetically inferred pairs
+orthofinder_3_1_5_full	not_concentrated	18	descriptive	0.8484132671264671	0.9378528297261841	0.7745475283334605	native phylogenetically inferred pairs
+orthofinder_3_1_5_full	not_short_relative	11	descriptive	0.8436004104587286	0.9452978242884268	0.7616592736456066	native phylogenetically inferred pairs
+orthofinder_3_1_5_full	short_relative	7	descriptive	0.855464218290166	0.9261535525569455	0.7948004999858025	native phylogenetically inferred pairs
+orthofinder_3_1_5_sequence_only	all	18	descriptive	0.6905148282566244	0.5690678546910205	0.8778629606384184	cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)
+orthofinder_3_1_5_sequence_only	higher_entropy	9	descriptive	0.6674362352377652	0.5240595854706958	0.9188128070945027	cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)
+orthofinder_3_1_5_sequence_only	lower_entropy	9	descriptive	0.7083834224475213	0.6140761239113454	0.836913114182334	cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)
+orthofinder_3_1_5_sequence_only	missing_entropy	0	empty_bin				cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)
+orthofinder_3_1_5_sequence_only	concentrated	0	empty_bin				cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)
+orthofinder_3_1_5_sequence_only	explicit_fragment	0	empty_bin				cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)
+orthofinder_3_1_5_sequence_only	missing	0	empty_bin				cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)
+orthofinder_3_1_5_sequence_only	no_explicit_fragment	18	descriptive	0.6905148282566244	0.5690678546910205	0.8778629606384184	cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)
+orthofinder_3_1_5_sequence_only	not_concentrated	18	descriptive	0.6905148282566244	0.5690678546910205	0.8778629606384184	cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)
+orthofinder_3_1_5_sequence_only	not_short_relative	11	descriptive	0.6947713567581593	0.5749784902122131	0.8776168775584773	cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)
+orthofinder_3_1_5_sequence_only	short_relative	7	descriptive	0.6837500714568665	0.5597797131577179	0.8782496626211829	cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)
+sonicparanoid_2_0_9	all	18	descriptive	0.798459418688303	0.8722787674765307	0.7361595860302458	native species-pair relations
+sonicparanoid_2_0_9	higher_entropy	9	descriptive	0.8468781319662867	0.8637462977075602	0.8306561854895952	native species-pair relations
+sonicparanoid_2_0_9	lower_entropy	9	descriptive	0.7424545654105115	0.8808112372455013	0.6416629865708962	native species-pair relations
+sonicparanoid_2_0_9	missing_entropy	0	empty_bin				native species-pair relations
+sonicparanoid_2_0_9	concentrated	0	empty_bin				native species-pair relations
+sonicparanoid_2_0_9	explicit_fragment	0	empty_bin				native species-pair relations
+sonicparanoid_2_0_9	missing	0	empty_bin				native species-pair relations
+sonicparanoid_2_0_9	no_explicit_fragment	18	descriptive	0.798459418688303	0.8722787674765307	0.7361595860302458	native species-pair relations
+sonicparanoid_2_0_9	not_concentrated	18	descriptive	0.798459418688303	0.8722787674765307	0.7361595860302458	native species-pair relations
+sonicparanoid_2_0_9	not_short_relative	11	descriptive	0.7983221469241182	0.8481965779125932	0.7539872753730822	native species-pair relations
+sonicparanoid_2_0_9	short_relative	7	descriptive	0.7965289125076194	0.9101222082198611	0.7081446456343599	native species-pair relations
+proteinortho_6_3_6	all	18	descriptive	0.7181109993269982	0.9521799364561256	0.5764143603702944	native post-clustering graph
+proteinortho_6_3_6	higher_entropy	9	descriptive	0.8200692190475977	0.9460012452190826	0.723726488476729	native post-clustering graph
+proteinortho_6_3_6	lower_entropy	9	descriptive	0.5927862015007823	0.9583586276931686	0.42910223226385963	native post-clustering graph
+proteinortho_6_3_6	missing_entropy	0	empty_bin				native post-clustering graph
+proteinortho_6_3_6	concentrated	0	empty_bin				native post-clustering graph
+proteinortho_6_3_6	explicit_fragment	0	empty_bin				native post-clustering graph
+proteinortho_6_3_6	missing	0	empty_bin				native post-clustering graph
+proteinortho_6_3_6	no_explicit_fragment	18	descriptive	0.7181109993269982	0.9521799364561256	0.5764143603702944	native post-clustering graph
+proteinortho_6_3_6	not_concentrated	18	descriptive	0.7181109993269982	0.9521799364561256	0.5764143603702944	native post-clustering graph
+proteinortho_6_3_6	not_short_relative	11	descriptive	0.72877425746367	0.942320884082643	0.5941331478146522	native post-clustering graph
+proteinortho_6_3_6	short_relative	7	descriptive	0.7001999880446899	0.9676727330430269	0.5485705515291606	native post-clustering graph
+fastoma_0_3_5	all	18	descriptive	0.7802191350427174	0.9236005462375273	0.6753730129088171	native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree
+fastoma_0_3_5	higher_entropy	9	descriptive	0.8316871504069718	0.8956230882023759	0.7762713849637108	native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree
+fastoma_0_3_5	lower_entropy	9	descriptive	0.7164332554250634	0.9515780042726788	0.5744746408539233	native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree
+fastoma_0_3_5	missing_entropy	0	empty_bin				native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree
+fastoma_0_3_5	concentrated	0	empty_bin				native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree
+fastoma_0_3_5	explicit_fragment	0	empty_bin				native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree
+fastoma_0_3_5	missing	0	empty_bin				native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree
+fastoma_0_3_5	no_explicit_fragment	18	descriptive	0.7802191350427174	0.9236005462375273	0.6753730129088171	native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree
+fastoma_0_3_5	not_concentrated	18	descriptive	0.7802191350427174	0.9236005462375273	0.6753730129088171	native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree
+fastoma_0_3_5	not_short_relative	11	descriptive	0.7941119576764697	0.9020192524881886	0.7092637344471625	native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree
+fastoma_0_3_5	short_relative	7	descriptive	0.7542081084609313	0.957514007843631	0.6221161647771314	native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree
+orthomcl_1_4	all	18	method_not_admitted				
+orthomcl_1_4	higher_entropy	9	method_not_admitted				
+orthomcl_1_4	lower_entropy	9	method_not_admitted				
+orthomcl_1_4	missing_entropy	0	method_not_admitted				
+orthomcl_1_4	concentrated	0	method_not_admitted				
+orthomcl_1_4	explicit_fragment	0	method_not_admitted				
+orthomcl_1_4	missing	0	method_not_admitted				
+orthomcl_1_4	no_explicit_fragment	18	method_not_admitted				
+orthomcl_1_4	not_concentrated	18	method_not_admitted				
+orthomcl_1_4	not_short_relative	11	method_not_admitted				
+orthomcl_1_4	short_relative	7	method_not_admitted				

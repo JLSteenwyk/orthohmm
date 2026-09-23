@@ -94,5 +94,7 @@ all 27 endpoints. The [TSV](corrected_swiss_strata_figure_21981/endpoints.tsv)
 retains raw-scale values; the display alone multiplies by 100. The PNG was
 visually inspected: no clipped intervals or overlapping labels. The figure
 manifest binds input/source/output hashes. It does not claim publication
-readiness. The all-method and secondary-stratum displays and complete
-publication figure-bundle refresh remain unfinished.
+readiness. The [all-method and secondary-stratum tables](swiss_descriptive_strata_20260923/scores.md)
+were subsequently completed from admitted counts, including FastOMA and
+explicit missing OrthoMCL. They add no inferential claims. Complete
+publication figure-bundle refresh remains unfinished.

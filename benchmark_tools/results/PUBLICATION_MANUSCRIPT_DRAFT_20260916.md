@@ -993,8 +993,16 @@ adjusted higher-minus-lower interactions include zero. Thus these data do
 not establish equivalence to OrthoFinder or a composition-specific causal
 mechanism. The configuration contrast is not a pure phylogeny ablation.
 All 27 endpoints appear in the linked figure, with an independent numerical
-reproduction from the admitted counts. Broader all-method and secondary
-stratum displays remain unfinished.
+reproduction from the admitted counts. The [all-method descriptive tables](swiss_descriptive_strata_20260923/scores.md)
+now include seven admitted methods and explicitly missing OrthoMCL across
+all frozen primary and secondary bins. In seven families containing a member
+shorter than half the family median, F1 was 68.679% for high-sensitivity
+OrthoHMM, 83.365% for phylogenetic OrthoHMM and 85.546% for full OrthoFinder;
+the corresponding values in the other eleven families were 68.408%,
+83.313% and 84.360%. These secondary summaries have no new inferential
+claims and do not diagnose fragmentation. Empty concentrated-composition
+and explicit-fragment bins remain missing, not zero. FastOMA's supplied
+tree and sequence-only OrthoFinder's group-clique semantics remain explicit.
 Old groups, trees, scores and confidence intervals cannot
 be relabeled as corrected results. The previously measured 53 legacy BLAST
 query failures also belong to the original run; failures in the corrected

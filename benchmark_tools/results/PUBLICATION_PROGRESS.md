@@ -1,5 +1,34 @@
 # Publication Progress
 
+## All-Method Descriptive SwissTrees Strata Completed (2026-09-23)
+
+Previous turn made progress on DGX configuration fingerprints. While the
+one permission gap remains, returned to a prespecified scientific deliverable:
+the all-method and secondary-bin displays in the corrected sequence-strata
+protocol. Added a hash-pinned exporter using admitted report 22098 and the
+unchanged September 18 input-only bin inventory. No inference, threshold,
+bin selection, resampling or multiplicity rule changed.
+
+Exported [88 method/bin rows](swiss_descriptive_strata_20260923/scores.md)
+with raw-scale TSV, family memberships, exact prediction semantics and a
+checksummed manifest. Seven methods have counts; OrthoMCL remains missing.
+Empty bins are explicitly missing. Family P/R is reconstructed using the
+native pseudocount convention, then macro P/R and harmonic F1 are computed;
+neither pairs nor per-family F1 values are pooled as substitutes.
+
+**11 tests passed**, including count/status/NaN/membership mutations,
+non-overwrite behavior, reproduction of whole-family published points and
+all 18 primary-bin metric values from the prior admitted 21981 analysis.
+Updated the manuscript and strata-result routing. Secondary relative-length
+F1 for phylogenetic OrthoHMM/full OrthoFinder is 83.365%/85.546% in seven
+short-relative families and 83.313%/84.360% in eleven other families.
+These are development-exposed descriptions, not new significance tests or
+evidence that short sequences are fragments. FastOMA retains its supplied
+tree caveat. Independent fragment/divergence annotations remain separate.
+
+Latest scheduler check: 22034_2 running (49:26), BLAST diagnostic 22055 and
+CPM replay 22081 pending. Publication readiness remains unproven.
+
 ## DGX Unit Configuration Fingerprints Added (2026-09-23)
 
 Previous turn made progress by validating whole-session environment
