@@ -43,14 +43,16 @@ def test_invalid_index_rejected(index):
                                                ("COMPLETED", "32", "0:0"), ("COMPLETED", "2", "1:0")])
 def test_scheduler_gate(state, cpus, exit_code):
     accounting = ("JobID|JobIDRaw|State|ExitCode|NodeList|AllocCPUS\n"
-                  f"21935_0|21936|{state}|{exit_code}|bizon|{cpus}\n")
+                  f"22035_0|22036|{state}|{exit_code}|bizon|{cpus}\n")
     with pytest.raises(ValueError):
         module.completed_admission(accounting, 0)
 
 
 def test_scheduler_selects_array_not_raw_id():
-    accounting = "JobID|JobIDRaw|State|ExitCode|NodeList|AllocCPUS\n21935_0|21936|COMPLETED|0:0|bizon|2\n"
-    assert module.completed_admission(accounting, 0)["JobIDRaw"] == "21936"
+    accounting = "JobID|JobIDRaw|State|ExitCode|NodeList|AllocCPUS\n22035_0|22036|COMPLETED|0:0|bizon|2\n"
+    assert module.completed_admission(accounting, 0)["JobIDRaw"] == "22036"
+    with pytest.raises(ValueError):
+        module.completed_admission(accounting.replace("22035_0", "21935_0"), 0)
 
 
 @pytest.mark.parametrize("missing", [False, True])
@@ -84,7 +86,7 @@ def test_allocation_rejected_before_reading_admission(tmp_path, monkeypatch):
 
 @pytest.mark.parametrize("mismatch", [False, True])
 def test_prepare_with_real_conversion_and_mocked_frozen_recheck(tmp_path, monkeypatch, mismatch):
-    executor = tmp_path / "benchmarks/work/publication_qfo_parameter_native_admission_v1"
+    executor = tmp_path / "benchmarks/work/publication_qfo_parameter_native_admission_v2"
     checker = executor / "benchmark_tools/admit_qfo_parameter_phylogeny.py"
     checker.parent.mkdir(parents=True)
     checker.write_text("# frozen fixture\n")
@@ -95,7 +97,7 @@ def test_prepare_with_real_conversion_and_mocked_frozen_recheck(tmp_path, monkey
     native = fixture()
     native.update(source=record(checker), native_pairs=record(pairs), checked_records=[record(pairs)],
                   helpers=[], native_group_integrity={"native_manifest": record(metadata)})
-    admission = tmp_path / "benchmarks/work/qfo_parameter_native_admission_21935_0.json"
+    admission = tmp_path / "benchmarks/work/qfo_parameter_native_admission_22035_0.json"
     admission.write_text(json.dumps(native))
     mapping = tmp_path / "mapping.json.gz"
     with gzip.open(mapping, "wt") as stream:
@@ -112,7 +114,8 @@ def test_prepare_with_real_conversion_and_mocked_frozen_recheck(tmp_path, monkey
         monkeypatch.setenv(key, value)
     def check_output(command, **kwargs):
         if command[0] == "sacct":
-            return "JobID|JobIDRaw|State|ExitCode|NodeList|AllocCPUS\n21935_0|21936|COMPLETED|0:0|bizon|2\n"
+            assert command[1:3] == ["-j", "22035"]
+            return "JobID|JobIDRaw|State|ExitCode|NodeList|AllocCPUS\n22035_0|22036|COMPLETED|0:0|bizon|2\n"
         return module.ADMITTER_COMMIT + "\n"
     monkeypatch.setattr(module.subprocess, "check_output", check_output)
     def run(command, **kwargs):

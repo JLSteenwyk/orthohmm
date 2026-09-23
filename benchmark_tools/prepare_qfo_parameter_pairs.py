@@ -18,8 +18,8 @@ from benchmark_tools.qfo_filter_pairs import filter_pairs, load_mapping
 from benchmark_tools.run_qfo_parameter_phylogeny import VARIANTS, verify_sources
 from benchmark_tools.run_simulation_methods import read_frozen
 
-ADMITTER_COMMIT = "72eb401ab056772f7f5b85585c8f30dc33bc3c78"
-ADMISSION_JOB = "21935"
+ADMITTER_COMMIT = "7f8ff221bb9dd0b2a3213496ba109bd776dfe13f"
+ADMISSION_JOB = "22035"
 
 
 def completed_admission(accounting, index):
@@ -70,7 +70,7 @@ def prepare(root, index):
     accounting = subprocess.check_output(["sacct", "-j", ADMISSION_JOB, "--parsable2",
         "--format=JobID,JobIDRaw,State,ExitCode,Elapsed,NodeList,AllocCPUS"], text=True)
     scheduler = completed_admission(accounting, index)
-    executor = root / "benchmarks/work/publication_qfo_parameter_native_admission_v1"
+    executor = root / "benchmarks/work/publication_qfo_parameter_native_admission_v2"
     if subprocess.check_output(["git", "-C", str(executor), "rev-parse", "HEAD"], text=True).strip() != ADMITTER_COMMIT:
         raise ValueError("Native admission executor changed")
     subprocess.run(["git", "-C", str(executor), "diff", "--exit-code", "HEAD", "--", "benchmark_tools", "orthohmm"], check=True)
