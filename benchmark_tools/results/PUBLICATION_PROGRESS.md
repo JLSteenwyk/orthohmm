@@ -2,6 +2,17 @@
 
 ## Parameter Environment Correction (2026-09-23)
 
+Committed launcher correction as `0a97921` and submitted array **22034**
+at 14:13:43 EDT, four arms with concurrency one, 32 CPUs / 192 GiB /
+24 hours each, no requeue. The executor remains the original `aa8c0e1`.
+`bash -n` and scoped whitespace checks pass. At the first observation the
+array is pending with Slurm's combined down/drained/reserved-node reason;
+direct node inspection reports `bizon` MIXED, not down or drained, with
+32 CPUs allocated to still-running CPM 21956. No parameter native result
+exists yet. BLAST diagnostic 22029 is pending Resources. No downstream
+dependencies were changed: admission still pins old job 21932 in source,
+and must receive an explicit, tested provenance update before replacement.
+
 The preceding installation investigation did not recover Samwise source;
 it also retrieved the successful terminal result of parameter arm 0's
 read-only full preflight: `arm_0_full_preflight_passed_no_inference`.
