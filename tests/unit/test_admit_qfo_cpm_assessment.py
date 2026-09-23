@@ -8,12 +8,12 @@ from benchmark_tools.prepare_ob_candidate_neighborhood import record
 
 def accounting(index=0, state="COMPLETED", code="0:0", node="bizon", cpus="8"):
     return ("JobID|JobIDRaw|State|ExitCode|NodeList|AllocCPUS\n"
-            f"22074_{index}|22075|{state}|{code}|{node}|{cpus}\n")
+            f"22094_{index}|22095|{state}|{code}|{node}|{cpus}\n")
 
 
 @pytest.mark.parametrize("index", range(2))
 def test_completed_array_binds_raw_id(index):
-    assert module.completed_assessment(accounting(index), index)["JobIDRaw"] == "22075"
+    assert module.completed_assessment(accounting(index), index)["JobIDRaw"] == "22095"
 
 
 @pytest.mark.parametrize("change", [{"state": "RUNNING"}, {"state": "FAILED"},
