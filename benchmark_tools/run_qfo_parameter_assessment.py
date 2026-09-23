@@ -16,8 +16,8 @@ from benchmark_tools.run_qfo_parameter_phylogeny import VARIANTS
 from benchmark_tools.run_qfo_recovered_assessment import command_for, environment_records
 from benchmark_tools.run_simulation_methods import read_frozen
 
-CONVERSION_JOB = "21939"
-CONVERTER_COMMIT = "0401860cede4b1b73e5f6f9d459e0a0daabb1c6f"
+CONVERSION_JOB = "22039"
+CONVERTER_COMMIT = "c7481959e85a4db827997dd88928143ec205f975"
 
 
 def completed_conversion(accounting, index):
@@ -60,7 +60,7 @@ def prepare(root, index):
     pair_record = record(path)
     stage = read_frozen(path, pair_record["sha256"])
     validate_stage(stage, index, scheduler)
-    converter = root / "benchmarks/work/publication_qfo_parameter_pairs_v1"
+    converter = root / "benchmarks/work/publication_qfo_parameter_pairs_v2"
     if subprocess.check_output(["git", "-C", str(converter), "rev-parse", "HEAD"], text=True).strip() != CONVERTER_COMMIT:
         raise ValueError("Frozen converter revision changed")
     subprocess.run(["git", "-C", str(converter), "diff", "--exit-code", "HEAD", "--",

@@ -47,7 +47,7 @@ def test_invalid_index(index):
 
 def test_live_job_gate_precedes_artifact_read(tmp_path, monkeypatch):
     monkeypatch.setattr(module.subprocess, "check_output", lambda *a, **k:
-        "JobID|JobIDRaw|State|ExitCode|NodeList|AllocCPUS\n21939_0|23000|RUNNING|0:0|bizon|2\n")
+        "JobID|JobIDRaw|State|ExitCode|NodeList|AllocCPUS\n22039_0|23000|RUNNING|0:0|bizon|2\n")
     monkeypatch.setattr(module, "record", lambda *a: pytest.fail("Read unfinished conversion"))
     with pytest.raises(ValueError, match="terminal"):
         module.prepare(tmp_path, 0)
@@ -55,8 +55,14 @@ def test_live_job_gate_precedes_artifact_read(tmp_path, monkeypatch):
 
 def test_successful_raw_job_binding():
     row = module.completed_conversion(
-        "JobID|JobIDRaw|State|ExitCode|NodeList|AllocCPUS\n21939_0|23000|COMPLETED|0:0|bizon|2\n", 0)
+        "JobID|JobIDRaw|State|ExitCode|NodeList|AllocCPUS\n22039_0|23000|COMPLETED|0:0|bizon|2\n", 0)
     assert row["JobIDRaw"] == "23000"
+
+
+def test_original_conversion_cannot_supply_replacement():
+    with pytest.raises(ValueError, match="terminal"):
+        module.completed_conversion(
+            "JobID|JobIDRaw|State|ExitCode|NodeList|AllocCPUS\n21939_0|23000|COMPLETED|0:0|bizon|2\n", 0)
 
 
 @pytest.mark.parametrize("outcome", ["success", "exit_failure", "exception", "source_changed"])
