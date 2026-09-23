@@ -1,9 +1,15 @@
 import copy
+import hashlib
+import json
+from pathlib import Path
+import shutil
+import subprocess
+import sys
 
 import pytest
 
 from benchmark_tools.bootstrap_corrected_swiss_comparators import bootstrap
-from benchmark_tools.reproduce_corrected_swiss_comparison import verify
+from benchmark_tools.reproduce_corrected_swiss_comparison import verify, retained_counts_only
 from tests.unit.test_bootstrap_corrected_swiss_comparators import fixture
 
 
@@ -47,3 +53,29 @@ def test_incorrect_arithmetic_or_admission_rejected(result, problem):
         report["estimated_contrasts"] = 8
     with pytest.raises(ValueError):
         verify(report)
+
+
+def test_standalone_isolated_cli_with_only_script_and_retained_counts(tmp_path):
+    root = Path(__file__).resolve().parents[2]
+    script = tmp_path / "verify.py"
+    data = tmp_path / "counts.json"
+    shutil.copyfile(root / "benchmark_tools/reproduce_corrected_swiss_comparison.py", script)
+    shutil.copyfile(root / "benchmark_tools/results/qfo_fastoma_swiss_uncertainty_22098.json", data)
+    digest = hashlib.sha256(data.read_bytes()).hexdigest()
+    output = tmp_path / "result.json"
+    command = [sys.executable, "-I", "-B", str(script), "--retained-counts-only",
+               "--results", str(data), "--results-sha256", digest, "--output", str(output)]
+    subprocess.run(command, cwd=tmp_path, check=True, capture_output=True, text=True, timeout=60)
+    result = json.loads(output.read_text())
+    assert result["endpoints"] == 21 and result["planned_endpoints"] == 24
+    assert result["raw_source_admission_repeated"] is False
+    assert result["historical_paths_accessed"] is False
+    assert result["publication_ready"] is False
+    with pytest.raises(FileExistsError): retained_counts_only(data, digest, output)
+
+
+def test_portable_mode_rejects_bad_hash_before_arithmetic(tmp_path):
+    data = tmp_path / "counts.json"
+    data.write_text("{}")
+    with pytest.raises(ValueError, match="hash"):
+        retained_counts_only(data, "0" * 64, tmp_path / "result.json")

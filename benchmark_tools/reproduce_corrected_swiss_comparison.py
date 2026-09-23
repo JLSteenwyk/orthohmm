@@ -1,6 +1,7 @@
 """Independently reproduce corrected comparator arithmetic from admitted counts."""
 
 import argparse
+import hashlib
 import json
 from pathlib import Path
 import sys
@@ -8,8 +9,6 @@ import sys
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
-from benchmark_tools.run_simulation_methods import read_frozen
 
 METHODS = ("orthohmm_high_sensitivity", "orthohmm_phylogeny_satellite_v2", "orthofinder_3_1_5_full",
            "orthofinder_3_1_5_sequence_only", "sonicparanoid_2_0_9", "proteinortho_6_3_6",
@@ -99,6 +98,9 @@ def verify(report):
 
 
 def run(path, digest, output):
+    from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
+    from benchmark_tools.run_simulation_methods import read_frozen
+
     if output.exists() or output.is_symlink():
         raise FileExistsError(output)
     result = read_frozen(path, digest)
@@ -120,10 +122,39 @@ def run(path, digest, output):
     return report
 
 
+def retained_counts_only(path, digest, output):
+    """Portable arithmetic check; never follow historical source/evidence paths."""
+    if output.exists() or output.is_symlink():
+        raise FileExistsError(output)
+    content = path.read_bytes()
+    if hashlib.sha256(content).hexdigest() != digest:
+        raise ValueError("Retained counts report hash differs")
+    source = Path(__file__).read_bytes()
+    endpoints = verify(json.loads(content))
+    if path.read_bytes() != content or Path(__file__).read_bytes() != source:
+        raise ValueError("Input or verifier changed during reproduction")
+    report = dict(status="retained_corrected_swiss_arithmetic_reproduced",
+        endpoints=endpoints, planned_endpoints=24, input_sha256=digest,
+        source_sha256=hashlib.sha256(source).hexdigest(), python_version=sys.version,
+        numpy_version=np.__version__, absolute_tolerance=1e-12,
+        raw_source_admission_repeated=False, historical_paths_accessed=False,
+        publication_ready=False,
+        limitations=["Arithmetic only from hash-pinned retained counts; native inference, conversion and raw scoring were not rerun.",
+            "Historical absolute paths are provenance, not accessed inputs.",
+            "Uses the same NumPy RNG and quantile implementation; this is not cross-platform validation or a full release."])
+    with output.open("x") as stream:
+        json.dump(report, stream, indent=2, sort_keys=True)
+        stream.write("\n")
+    return report
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--results", type=Path, required=True)
     parser.add_argument("--results-sha256", required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--retained-counts-only", action="store_true",
+                        help="Recheck portable arithmetic without repeating historical source admission")
     args = parser.parse_args()
-    run(args.results.resolve(), args.results_sha256, args.output.absolute())
+    runner = retained_counts_only if args.retained_counts_only else run
+    runner(args.results.resolve(), args.results_sha256, args.output.absolute())
