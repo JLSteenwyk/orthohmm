@@ -16,6 +16,18 @@ from benchmark_tools.run_qfo_corrected_blast import verify, environment
 PANEL_SHA = "79a809b43d407d4d5ed705e6840873cede64d7b688eee571869b1607f6688872"
 
 
+def query_file_records(queries):
+    result = []
+    for query in queries:
+        if (set(query) != {"id", "input_ordinal_0based", "path", "bytes", "sha256"}
+                or not isinstance(query["id"], str) or not query["id"]
+                or type(query["input_ordinal_0based"]) is not int
+                or query["input_ordinal_0based"] < 0):
+            raise ValueError("Unexpected diagnostic query metadata")
+        result.append({key: query[key] for key in ("path", "bytes", "sha256")})
+    return result
+
+
 def validate_commands(panel, original):
     queries = [panel["combined"], *panel["queries"]]
     names = ["combined", *[f"single_{i:02d}" for i in range(5)]]
@@ -39,7 +51,7 @@ def run(panel_path):
     plan = verify(plan_path, runtime_path)
     root = validate_commands(panel, plan["search_commands"]["blast"])
     checked = [panel["source"], panel["plan"], panel["runtime"], panel["input"],
-               panel["combined"], *panel["queries"], *panel["database"]]
+               panel["combined"], *query_file_records(panel["queries"]), *panel["database"]]
     for item in checked:
         check(item)
     execution = root / "execution"
