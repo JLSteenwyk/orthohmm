@@ -1,5 +1,51 @@
 # Publication Progress
 
+## FastOMA Native Completion, Admission and Parameter Failures (2026-09-23)
+
+The preceding interval was a verified wait on live FastOMA 21740. After
+the next one-hour wait, accounting reports native job 21740 COMPLETED/0:0
+in 03:55:57. Nextflow ended at 13:34:44 EDT, native duration 3h54m52s,
+with 358 successful attempts and two failed attempts. Pair extraction and
+report generation ran. This is native workflow completion, NOT scientific
+admission or a corrected FastOMA benchmark score.
+
+Admission job 21741 FAILED/1:0 after 36 seconds. Its strict fresh-task
+validator rejected failed/retried trace entries with "Unrecognized, failed,
+cached or retried task requires explicit review". Do not drop those rows
+or simply disable this guard. Downstream pair job 21742 is pending with
+DependencyNeverSatisfied; score jobs 21744/21745 remain pending. Preserve
+native outputs and audit the two retries, batch coverage, command identity,
+and final collection before replacing admission. No native rerun was made.
+
+Retained corrected FastOMA evidence:
+
+- `benchmarks/results/qfo_corrected_fastoma_v1/run/trace.txt` SHA-256
+  `13def3f70ccadbf806d7f385c3f34c4de2e218eefa59ece945ed071ce5c52c38`.
+- `benchmarks/results/qfo_corrected_fastoma_v1/execution.json` SHA-256
+  `a692f97312b5380b8776852c14d526dde6d1fbfa44f81f91a7d3d1d568ffb87f`;
+  status `process_succeeded_pending_native_admission`, native exit zero.
+- `benchmarks/work/qfo_corrected_fastoma_admit_21741.log` SHA-256
+  `0d7f360d4438ecaa6546d556796278e0f663e0746ea436b091edde134f466420`.
+- Original failed `hog_rest (137)` task directory
+  `work/88/b76e7adadb4e54fb77296fa2491313` reports FileNotFoundError for
+  `rhogs_rest/220`; do not assume task display number equals directory ID.
+- Original failed `hog_big (7)` directory
+  `work/ac/a2d49a1f3a147a55849d7cb9901036` reports a killed MAFFT subprocess.
+  This alone does not prove OOM. Both failed attempts remain retained.
+
+All four parameter array jobs 21932_0 through 21932_3 also FAILED/1:0
+(elapsed 1:20, 0:46, 0:47, 0:47). Every log reports preflight
+`ValueError: Package inventory changed: orthohmm`. Native parameter
+inference was not reached. Their downstream admission tasks have unsatisfied
+dependencies. Resolve the isolated environment against the frozen package
+inventory before a separately recorded resubmission; do not alter a running
+job's environment or relax the inventory check. Cause of the drift has not
+yet been established.
+
+CPM control 21956 is now RUNNING (observed elapsed 29:27). BLAST diagnostic
+22029 is pending Resources; OrthoMCL admission 21746 remains held. These
+failures are new work to resolve, not evidence that publication is ready.
+
 ## Retained-Prefix Audit Completed (2026-09-23)
 
 After a verified wait on live audit 22030 and FastOMA 21740, accounting
