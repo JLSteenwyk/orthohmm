@@ -1,0 +1,11 @@
+ReadProgram('/benchmark/lib/darwinit'):
+ReadProgram(reference):
+for name in Indices(ReconciledTrees) do
+    for p in ReconciledTrees[name,'MappedProts'] do
+        printf('SWISS_MEMBER\t%s\t%d\n', name, p):
+    od:
+    rels := ReconciledTrees[name,'Relations']:
+    for rel in Indices(rels) do
+        printf('SWISS_RELATION\t%s\t%d\t%d\t%A\n', name, rel[1], rel[2], rels[rel]):
+    od:
+od:

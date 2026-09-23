@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Original SwissTree Relationships Reconstructed Exactly (2026-09-23)
+
+Previous turn checked the constructor diagnostic and released the valid
+low-CPM dependency chain (e2912de). Re-read the objective and confirmed live
+BLAST 22103_2 and parameter scoring 22043_2; low-CPM phylogeny awaits resources.
+
+Added native reference-relation export and a separate Python tree traversal
+using the frozen identifier mapping. [All 18 families match exactly](SWISS_RETAINED_MAPPING_20260923.md):
+563 mapped memberships and 10,765 pairs, zero missing/extra members or pairs,
+zero changed event labels. Thirty-nine focused tests pass. Source/reference/
+mapping/container identities are retained and checked before/after execution.
+
+Preserved generator-specific default-S, mapping priority, child-intersection
+and overwrite semantics. HOX has an intersecting mapped identifier despite
+unique leaf names. BAR has nine wrapped NHX annotations missed by the earlier
+literal-token inventory; corrected that report's interpretation explicitly,
+without overwriting historical artifacts. No scores or strata were computed.
+Next: freeze mapped-tree duplication features before outcome joins. DGX
+remains deferred and the publication goal remains incomplete.
+
 ## Frozen-Import Diagnostic Checked; Low-CPM Chain Released (2026-09-23)
 
 Previous turn made progress with the original SwissTree inventory (50b7e0c).

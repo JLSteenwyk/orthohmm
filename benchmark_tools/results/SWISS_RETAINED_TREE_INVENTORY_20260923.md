@@ -1,5 +1,11 @@
 # Original SwissTree Trees Retained in QfO
 
+Follow-up: [native relation reconstruction](SWISS_RETAINED_MAPPING_20260923.md)
+matches every family. It also identifies nine wrapped BAR annotations not
+counted by this inventory's literal colon-token rule. The BAR value below
+is therefore not a complete native duplication count; do not use these
+inventory counts as outcome strata.
+
 The frozen 2020 `ReconciledTrees_SwissTrees.drw` contains a `Tree`
 argument in every `RecTreeCase`, not only the numeric relation table.
 The pinned Darwin container reads these objects directly. The native
