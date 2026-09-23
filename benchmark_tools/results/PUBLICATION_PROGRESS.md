@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Prefix Byte Recheck Passed; Conditional Reuse Reviewed (2026-09-23)
+
+Previous turn submitted the frozen byte recheck (d617694, 19e9fb5).
+Re-read the full goal and confirmed live parameter scoring 22043_3 and
+low-CPM phylogeny 22088_0. Recovery batch 22103_3 is resource-pending.
+Recheck **22148 completed 0:0 in 1:25**: every indexed block agrees, the
+33,141,805,056-byte file hash is unchanged, and 885,224 proposed retained
+blocks contain 366,012,616 complete rows before byte 33,141,800,005.
+Rechecked all seven report source/input identities after completion.
+
+Re-read the archived sequential query/search/printing path and rehashed
+source/release archives and the installed binary. The archived and installed
+BLAST binaries are byte-identical. The [conditional reuse review](QFO_BLAST_PREFIX_REUSE_REVIEW_20260923.md)
+combines this with the exhaustive row audit, five-query diagnostic and exact
+query partition. It supports retaining only complete pre-boundary blocks,
+subject to all twenty replay admissions and fresh merge/final-table checks.
+
+Historical filesystem durability and reproducible source-to-binary equivalence
+remain unproven and explicitly disclosed. This documentary decision is not
+an executable whole-search admission; the gated production driver remains
+to be implemented. No real merge, downstream release, native retry or DGX
+action occurred. The whole publication goal remains incomplete.
+
 ## Full Prefix Byte Recheck Running (2026-09-23)
 
 Previous turn implemented the tested merge component and corrected the
