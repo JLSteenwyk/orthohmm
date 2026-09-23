@@ -1,5 +1,39 @@
 # Publication Progress
 
+## Executable FastOMA Retry Review (2026-09-23)
+
+The preceding turn made progress by identifying the failed task's mount
+visibility problem and exact successful collection. Added
+`review_fastoma_retries.py` to make the attempt-identity portion executable:
+the caller must explicitly supply failed/successful hash pairs; arbitrary
+failures, cached or live tasks, duplicate identities, unmatched retries,
+and non-HOG retries are rejected. Successful process coverage reuses the
+existing strict trace validator. Both failed and successful attempts,
+logs, exit codes, command scripts, checked-tree records, and resource
+limits remain in the review report. No existing admission gate changed.
+
+File checks require identical scientific scripts and the same current
+checked-tree target/content, unchanged CPU limits, and the observed
+twofold memory increase. These checks do not prove historical input-byte
+immutability, container mount coverage, or final biological validity.
+The existing default task audit still rejects failed/retried traces.
+
+**48 focused tests passed**, covering the new review and unchanged default
+audit. Ran the review on retained native evidence using the 78 staged
+proteome filenames and explicit pairs `88/b76e7a -> 86/252823` and
+`ac/a2d49a -> fe/c2a4b8`. Generated
+`qfo_fastoma_retry_attempts_20260923.json` (166,260 bytes): all 360 attempts
+retained, two retry pairs verified, `native_outputs_admitted=false` and
+`accuracy_evaluated=false`. No native task was rerun.
+
+The host FastOMA `conf/base.config` contains a retry policy and attempt-
+scaled memory; pinning and validating that policy through the original
+execution's configuration inventory remains required. Next integrate the
+explicit review with absolute-batch-path and successful-collection checks,
+then run full native-output admission. At the latest scheduler observation,
+CPM 21956 is running at 52:01; BLAST diagnostic 22029 and parameter inference
+22034 remain queued. Publication remains incomplete.
+
 ## FastOMA Retry Identity and Collection Review (2026-09-23)
 
 The preceding turn was progress: the replacement parameter workflow was
