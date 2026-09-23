@@ -13,7 +13,7 @@ configuration drift, or failed state observation invalidates suppression
 evidence and must prevent further benchmark submissions. Do not construct a
 fresh guard to bypass an unresolved submission or an existing mask.
 
-`restore()` queries the bound job with `sacct` and requires its exact raw ID,
+`restore()` queries the bound job with `scontrol show job --oneliner` and requires its exact ID,
 a terminal state, and a parseable terminal timestamp. Failed and timed-out
 jobs also require restoration; successful execution is not a prerequisite.
 An empty result, running/completing state, query failure, timeout, or unknown
@@ -76,3 +76,41 @@ the probe source SHA-256 is
 The guard's 34 unit cases passed again before deployment. These short
 prelaunch tests do not validate bound-job terminal gating on the DGX,
 arbitrary SSH loss, long-duration masking, or whole-host isolation.
+
+## Real Slurm Lifecycle Follow-Up
+
+The first bound-job probe, **22078**, exposed a real environment difference:
+DGX `sacct` connects to localhost:6819, where no accounting database is
+reachable. Restoration correctly refused absent terminal evidence, but the
+cleanup query failed for the same reason. The probe cancelled its own held
+job before execution. Local accounting confirms CANCELLED, zero elapsed,
+no assigned node and zero CPUs. A subsequent SSH inspection confirmed the
+runtime mask had disappeared with the user session and the original enabled
+service was loaded/auto-restarting. No claim of explicit successful cleanup
+is made for this failed case. No Slurm configuration was changed.
+
+Changed only the guard's terminal query to the reachable Slurm controller,
+requiring one non-array/non-heterogeneous job record, unique fields, exact
+job ID, terminal state and valid EndTime. Missing/ambiguous/live records and
+query failures still prevent restoration. **38 guard tests passed**, including
+duplicate fields and grouped-job rejection. Controller timestamps are
+host-local; the raw receipts are retained without timezone reinterpretation.
+
+Deployed a fresh source directory `service_guard_job_v2_20260923`, retaining
+the failed source and receipts. Diagnostic **22080** passed: restoration was
+refused while held, then the same job was released and completed `/bin/sleep
+5` successfully in five seconds on spark-7ff0 with 20 allocated CPUs. The
+guard restored prior service start behavior only after observing COMPLETED.
+Independent receipt inspection verified 23 successful control commands,
+five controller observations (first PENDING, last COMPLETED), and source
+hash equality. Local accounting independently confirmed COMPLETED 0:0.
+
+Both jobs' receipts are retained in `dgx_service_guard_jobs_20260923.tar.gz`,
+SHA-256 `4759ae1d26e1b21d69312baf94e505d80d4b38e1cda0dd3db3042c86f4639236`.
+Corrected guard SHA-256:
+`03aaf1fb0307d71fc7049f1e7da2e92720c7657ce9298794c5c3a4f3dc1a7c1f`.
+Job-probe SHA-256:
+`e7a47441277ccced8d0ecec360be11c126aac6203455018abab0bb2ddb352d1b`.
+This validates a short normal bound-job lifecycle, not long-duration timing,
+whole-host workload monitoring, or loss of the held SSH session during a
+running job. No scientific benchmark task was launched or timing admitted.

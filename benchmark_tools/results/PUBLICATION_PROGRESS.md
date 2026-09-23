@@ -1,5 +1,37 @@
 # Publication Progress
 
+## DGX Bound-Job Service Guard Verified (2026-09-23)
+
+Previous turn was progress through real-host prelaunch/TERM restoration
+tests. This turn exercised an actual Slurm lifecycle and found a configuration
+gap that mocked transport could not reveal: DGX sacct tries an unavailable
+localhost accounting daemon. Diagnostic **22078** was cancelled while held,
+with zero elapsed/allocated CPUs. Failed control and cleanup receipts remain
+preserved. Subsequent service inspection verified that the runtime mask had
+disappeared and original enabled auto-restart behavior returned after session
+exit; this was not successful explicit guard cleanup.
+
+Replaced the terminal query with the reachable controller's oneline record.
+Exact job identity, unique fields, terminal state and EndTime remain required;
+array/heterogeneous identities and missing/live evidence are rejected.
+**38 focused guard tests passed** before deployment in a fresh directory.
+No Slurm configuration or unrelated service was changed.
+
+Diagnostic **22080** then passed: a held job blocked restoration, the same
+job was released, `/bin/sleep 5` completed 0:0 in five seconds on spark-7ff0
+with 20 CPUs, and restoration followed terminal controller evidence. Local
+accounting independently confirms completion. Source hashes and all 23
+successful command receipts were checked; five controller observations span
+PENDING through COMPLETED. Both diagnostic outcomes are retained in archive
+`dgx_service_guard_jobs_20260923.tar.gz`, SHA-256
+`4759ae1d26e1b21d69312baf94e505d80d4b38e1cda0dd3db3042c86f4639236`.
+
+[Detailed results](DGX_SERVICE_GUARD_20260923.md) preserve failure handling and
+scope. This is infrastructure validation, not benchmark runtime evidence.
+Whole-run environmental monitoring, full scaling submission integration,
+long-duration and interrupted-job lifecycle checks remain incomplete. No
+scientific timing run or new accuracy score was admitted.
+
 ## DGX Service Guard Real-Host Prelaunch Validation (2026-09-23)
 
 Previous turn was progress: implemented and tested the service lifetime

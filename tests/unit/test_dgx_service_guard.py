@@ -31,8 +31,11 @@ def guard(tmp_path, monkeypatch):
         state["commands"].append(argv)
         if state["timeout"]:
             raise subprocess.TimeoutExpired(argv, 15)
-        if argv[0] == "sacct":
-            return SimpleNamespace(returncode=0, stdout=state["accounting"], stderr="")
+        if argv[0] == "scontrol":
+            assert argv == ["scontrol", "show", "job", "42", "--oneliner"]
+            lines = [line.split("|") for line in state["accounting"].splitlines()]
+            raw = "\n".join(f"JobId={job} JobState={status} EndTime={end}" for job, status, end in lines)
+            return SimpleNamespace(returncode=0, stdout=state.get("controller", raw), stderr="")
         stdout = ""
         if argv[2] == "show":
             masked = module.MASK.is_symlink()
@@ -132,7 +135,7 @@ def test_no_job_prelaunch_restoration(guard):
     g, state = guard
     g.begin()
     g.restore()
-    assert not any(command[0] == "sacct" for command in state["commands"])
+    assert not any(command[0] == "scontrol" for command in state["commands"])
 
 
 def test_requires_explicit_approval(guard, monkeypatch):
@@ -152,7 +155,7 @@ def test_refuses_preexisting_mask(guard):
     assert not state["commands"]
 
 
-@pytest.mark.parametrize("status", sorted(module.TERMINAL) + ["CANCELLED by 1000"])
+@pytest.mark.parametrize("status", sorted(module.TERMINAL))
 def test_terminal_failures_also_allow_restoration(guard, status):
     g, state = guard
     g.begin()
@@ -160,6 +163,18 @@ def test_terminal_failures_also_allow_restoration(guard, status):
     state["accounting"] = f"42|{status}|2026-09-23T15:00:00\n"
     g.restore()
     assert g.restored
+
+
+@pytest.mark.parametrize("extra", ["JobId=43", "JobState=RUNNING", "EndTime=Unknown",
+                                    "ArrayJobId=42", "HetJobId=42"])
+def test_ambiguous_controller_record_rejected(guard, extra):
+    g, state = guard
+    g.begin()
+    g.bind_job(42)
+    state["controller"] = "JobId=42 JobState=COMPLETED EndTime=2026-09-23T15:00:00 " + extra
+    with pytest.raises(ValueError):
+        g.restore()
+    assert module.MASK.is_symlink()
 
 
 def test_stop_observation_failure_allows_prelaunch_restoration(guard, monkeypatch):

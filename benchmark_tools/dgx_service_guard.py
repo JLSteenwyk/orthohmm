@@ -9,6 +9,7 @@ import hashlib
 from datetime import datetime
 import os
 from pathlib import Path
+import re
 import subprocess
 import time
 
@@ -125,15 +126,17 @@ class ServiceGuard:
         if self.submission_attempted and self.job is None:
             raise ValueError("Submission identity unresolved; retain suppression")
         if self.job is not None:
-            raw = self.command(["sacct", "-X", "-n", "-j", str(self.job),
-                "--parsable2", "--format=JobIDRaw,State,End"])
-            rows = [line.split("|") for line in raw.splitlines() if line.strip()]
-            if (len(rows) != 1 or len(rows[0]) != 3
-                    or rows[0][0] != str(self.job)
-                    or rows[0][1].split(" by ", 1)[0] not in TERMINAL
-                    or rows[0][2] in {"", "Unknown", "None"}):
+            raw = self.command(["scontrol", "show", "job", str(self.job), "--oneliner"])
+            lines = [line for line in raw.splitlines() if line.strip()]
+            pairs = re.findall(r"(?<!\S)([A-Za-z][^\s=]*)=([^\s]+)", raw)
+            fields = dict(pairs)
+            if (len(lines) != 1 or len(fields) != len(pairs)
+                    or fields.get("JobId") != str(self.job)
+                    or fields.get("JobState") not in TERMINAL
+                    or any(key in fields for key in ("ArrayJobId", "ArrayTaskId", "HetJobId"))
+                    or fields.get("EndTime") in {None, "", "Unknown", "None"}):
                 raise ValueError("Bound job is not authoritatively terminal; retain suppression")
-            datetime.strptime(rows[0][2], "%Y-%m-%dT%H:%M:%S")
+            datetime.strptime(fields["EndTime"], "%Y-%m-%dT%H:%M:%S")
         self.persistent_identity()
         if self.owned:
             if not MASK.is_symlink() or os.readlink(MASK) != "/dev/null":
