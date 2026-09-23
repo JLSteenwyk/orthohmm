@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 import shutil
 from types import SimpleNamespace
 
@@ -58,6 +59,7 @@ def test_complete_raw_replay_retains_native_failures_and_relocates(archive, code
     assert result["memory_events"]["oom_group_kill"] == 1
     assert result["screening"] == measured["screening"]
     assert result["native_outputs_validated"] is False and result["scientific_timings_admitted"] is False
+    assert result["host_process_replay"] is None
     from benchmark_tools.measure_root_context_scaling import classify_measurement
     disposition = classify_measurement(dict(status=measured["status"], before={}, after={},
         measurement=measured, scientific_results_admitted=False), result, 21816)
@@ -153,7 +155,8 @@ def test_long_point_inventory_uses_numeric_order_without_loading_raw_content(tmp
 
 
 @pytest.mark.parametrize("code", [0, 7, -9])
-def test_collector_generated_reports_replay_with_real_evaluators(archive, monkeypatch, code):
+@pytest.mark.parametrize("host_fault", [None, "missing_stream", "changed_stream", "changed_summary", "symlink"])
+def test_collector_generated_reports_replay_with_real_evaluators(archive, monkeypatch, code, host_fault):
     from benchmark_tools import measure_scaling_root_context as collector
     root, source = archive
     directory = root / "composed"
@@ -175,8 +178,22 @@ def test_collector_generated_reports_replay_with_real_evaluators(archive, monkey
     monkeypatch.setattr(collector, "step_memory", lambda p: source["step_memory"])
     monkeypatch.setattr(collector.time, "sleep", lambda delay: save(directory / "done.json", done))
     measured = collector.measure(["/usr/bin/true"], directory, 21816, 20, 96*1024**3, 85800, 1.)
+    if host_fault:
+        path = directory / "host_processes.jsonl"
+        if host_fault == "missing_stream": path.unlink()
+        elif host_fault == "changed_stream": path.write_text("")
+        elif host_fault == "changed_summary": save(directory / "host_process_summary.json", {})
+        elif host_fault == "symlink":
+            path.rename(directory / "original.jsonl")
+            path.symlink_to(directory / "original.jsonl")
+        with pytest.raises(ValueError):
+            module.replay(directory, 21816, ["/usr/bin/true"])
+        return
     result = module.replay(directory, 21816, ["/usr/bin/true"])
     assert result["measured"] == measured
     assert result["native_exit_code"] == code
     assert result["screening"] == measured["screening"]
     assert result["scientific_timings_admitted"] is False
+    assert result["host_process_replay"]["controlled_workload_verified"] is False
+    assert result["host_process_replay"]["successful_snapshots"] == 2
+    assert {"host_processes.jsonl", "host_process_summary.json"} <= {Path(item["path"]).name for item in result["evidence"]}

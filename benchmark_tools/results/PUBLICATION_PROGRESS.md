@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Host Process Evidence Replay Integrated (2026-09-23)
+
+Previous turn made progress by adding periodic process observations to the
+long-run collector. Added replay_host_process_observation.py to recompute
+each stored CPU interval and the summary from the raw JSONL snapshots,
+checking observer identity, contiguous successful-observation indices,
+monotonic observation windows, error records, and native boundary coverage.
+This reuses the process-analysis algorithm but does not trust stored
+intervals or summary values. Sampling failures remain inconclusive.
+
+The scaling measurement replay now binds both raw process files into its
+checksummed evidence inventory and rejects incomplete streams, symlinks,
+changed summaries and inconsistent embedded data. Historical measurements
+without these artifacts explicitly return host_process_replay=null;
+that compatibility path does not establish environmental validity.
+Source/recipe authorization remains the separate existing audit's job.
+
+**223 focused tests passed**, including collector-to-replay integration for
+successful and failed commands and deliberate evidence mutations. Existing
+historical executors and measurements remain untouched. A repository-wide
+diff whitespace check reported pre-existing generated sample output issues;
+those unrelated files were left unchanged. Scoped staged checks are used
+for this milestone.
+
+Latest accounting: 22034_2 running at 34:53, first two arms completed;
+22055 and 22081 pending. Remaining timing work includes held-session service
+integration, permitted-workload and device checks, fresh recipe freeze and
+real-host long-run validation before launching the 27-run campaign.
+No timing or publication admission is claimed.
+
 ## Long-Run Host Process Observation Added (2026-09-23)
 
 Previous turn was no progress toward publication: the repeated Samwise

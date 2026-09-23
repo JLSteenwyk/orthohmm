@@ -10,6 +10,8 @@ from benchmark_tools.measure_scaling_root_context import TIMEOUT, validate
 from benchmark_tools.prepare_ob_candidate_neighborhood import record, check
 from benchmark_tools.slurm_resource_snapshot import counters
 from benchmark_tools.verify_lineage_native_provenance import same
+from benchmark_tools.replay_host_process_observation import replay as replay_host
+from benchmark_tools.slurm_resource_snapshot import scoped_path
 
 
 def native_outcome(measured, done):
@@ -67,6 +69,19 @@ def replay(directory, job_id, expected_command):
     points = [json.loads(p.read_text()) for p in point_files]
     if not same(points, measured["points"]):
         raise ValueError("Raw points differ from report")
+    host_paths = [directory / name for name in ("host_processes.jsonl", "host_process_summary.json")]
+    host_replay = None
+    if "host_process_observation" in measured or any(p.exists() or p.is_symlink() for p in host_paths):
+        if any(p.is_symlink() or not p.is_file() for p in host_paths):
+            raise ValueError("Incomplete or indirect host process evidence")
+        evidence.extend(record(p) for p in host_paths)
+        summary = json.loads(host_paths[1].read_text())
+        if not same(summary, measured.get("host_process_observation")):
+            raise ValueError("Embedded host process summary differs")
+        scope = scoped_path(points[0]["native_membership"], job_id)
+        job_scope = next(p for p in scope.parents if p.name == f"job_{job_id}")
+        host_replay = replay_host(host_paths[0], summary, str(job_scope),
+            done["started_ns"] / 1e9, done["finished_ns"] / 1e9)
     screening = evaluate_lineage(points, done, job_id)
     if not same(screening, measured["screening"]):
         raise ValueError("Lineage screening does not reproduce")
@@ -92,6 +107,7 @@ def replay(directory, job_id, expected_command):
         raise ValueError("Raw point inventory changed during replay")
     return dict(status="scaling_root_context_measurement_replayed", native_outcome=outcome,
         native_exit_code=done["exit_code"], native_wall_s=wall, measured=measured, memory=memory,
+        host_process_replay=host_replay,
         memory_events=events, screening=screening, context=reproduced["context"],
         original_flagged_intervals=screening["original_screening"]["original_threshold_screen"]["flagged_intervals"],
         narrow_flagged_intervals=screening["narrow_flagged_intervals"], evidence=evidence,
