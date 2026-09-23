@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Complete Curated Model Source Acquired and Inspected (2026-09-23)
+
+Previous turn made progress locating curated duplication summaries and a
+Transferrin tree pilot. Acquired all 18 linked model files from their official
+family pages with a rate-limited, non-overwriting downloader; no page scripts
+execute. Raw trees/pages remain outside Git, while URL/hash receipts and
+inspection outcomes are retained. All 17 focused tests passed.
+
+[Full source audit](SWISSTREE_DUPLICATION_SOURCE_20260923.md) shows four updated
+NHX families fail terminal-label uniqueness checks; 14 parse, giving 366
+exact-name/suffix mapping candidates. No candidates or duplication labels
+are admitted. Explicit XML counts disagree with the published summary in
+several families, and most XML trees declare themselves unrooted. Unlabeled
+events and uninterpreted NHX labels remain unknown, not inferred speciations
+or zero biological duplication. Preserve discrepancies for semantic review
+and native QfO relationship comparison rather than silently reconciling them.
+
+Live scheduler accounting: 22116 annotation collection remains running
+(16:39), 22117 is pending, and CPM 22081_1 remains running (47:01).
+Parameter scoring continues and BLAST recovery remains resource-pending.
+No job restart, scientific default change, output score join or DGX access.
+Duplication-history validation remains open; acquisition is concrete source
+progress, not completion of the broader error-analysis/publication goal.
+
 ## Curated Duplication Source Located (2026-09-23)
 
 Previous turn made progress implementing the gated fragment-score exporter.

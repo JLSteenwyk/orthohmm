@@ -48,3 +48,30 @@ but share the SwissTrees reference underlying this benchmark. They are not
 independent validation data or experimental ground truth. Published event
 totals also depend on tree size and taxon sampling. A source inventory does
 not close the independent duplication-history analysis requirement.
+
+## Complete Model-Source Acquisition
+
+Subsequently acquired the uniquely linked current model tree from every one
+of the 18 retained family pages. [Acquisition receipt](swisstree_model_acquisition_20260923.json)
+retains URLs and hashes for all pages/trees; raw files remain under
+`benchmarks/work/swisstree_model_sources_20260923`, outside Git. The downloader
+does not execute page scripts, and refuses absent/ambiguous model links.
+All 17 acquisition/inventory/inspection tests passed.
+
+[Format and mapping feasibility](swisstree_model_feasibility_20260923.json)
+retains all outcomes. POP, VATB, SUMF and APP fail the missing-or-duplicate
+terminal-label check after Newick parsing; no deduplication or fabricated
+accession mapping is applied. The other 14 parse successfully, yielding 366
+exact-name/suffix mapping candidates across the 563-protein benchmark universe.
+Those candidates are not admitted aliases. Only CASP and Clusterin phyloXML
+files declare themselves rooted; NHX rooting semantics are not interpreted.
+
+Explicit phyloXML duplication sums differ from the summary for CITE (3 versus
+6), PSEN (8 versus 7), Clusterin (5 versus 4) and MAPT (1 versus 2).
+Several trees contain no explicit duplication-count elements; their sum of
+zero is not a biological claim of zero duplication. NHX event semantics are
+uninterpreted and remain null. Missing implicit/alternative annotations,
+source-version differences and sampling are possibilities, not established
+explanations. Do not replace one source with the other to obtain preferred
+counts. These discrepancies require semantic and benchmark-correspondence
+review before freezing any ancestral-event feature or joining predictions.
