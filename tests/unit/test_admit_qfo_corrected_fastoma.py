@@ -122,6 +122,8 @@ def test_existing_admission_never_overwritten(tmp_path):
     with pytest.raises(FileExistsError):
         admit(tmp_path, 1, 2, path)
     assert path.read_text() == "preserve"
+
+
 def test_reviewed_trace_gate_precedes_task_access(tmp_path, monkeypatch):
     from benchmark_tools import admit_qfo_corrected_fastoma as module
     path = tmp_path / "trace.txt"
@@ -129,4 +131,3 @@ def test_reviewed_trace_gate_precedes_task_access(tmp_path, monkeypatch):
     monkeypatch.setattr(module, "audit_tasks", lambda *a, **k: pytest.fail("Audited unreviewed trace"))
     with pytest.raises(ValueError, match="explicitly reviewed"):
         module.reviewed_tasks(path, tmp_path / "work", ["a.fa"])
-

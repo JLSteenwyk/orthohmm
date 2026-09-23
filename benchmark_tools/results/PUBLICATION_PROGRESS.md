@@ -1,5 +1,48 @@
 # Publication Progress
 
+## Integrated FastOMA Task Audit and New Admission (2026-09-23)
+
+The preceding turn was progress: explicit retry review passed while keeping
+scientific admission closed. Integrated that review into an opt-in task
+audit, retaining default rejection of retries. Absolute HOG input paths
+must be immediate, non-symlink children of the exact batching output;
+relative escapes and foreign same-named directories are rejected. Reviewed
+collection requires unique intact symlinks to exactly successful HOG output
+directories. Failed-attempt evidence remains included and rechecked.
+
+The real retained task audit passed: 358 successful tasks and 274 exact
+collection links. Diagnostic artifact
+`benchmarks/work/qfo_fastoma_reviewed_task_audit_20260923.json` is 984,977
+bytes, SHA-256 `70df1d3adc3d029a13f47f54fc4a1fa9e2c52bb815256e593a76534b7da88074`.
+This is task evidence, not yet full published-output or scientific admission.
+The original execution inventory includes hashed FastOMA base configuration
+and workflow source, so the existing full preflight rechecks their identity.
+
+Connected full native admission to only the reviewed trace SHA-256 and two
+explicit retry pairs; all existing published-output, input, tree, OrthoXML,
+and native-pair checks remain required. **87 focused tests passed**, including
+foreign paths, missing/duplicate/failed collection targets, and default
+rejection. New admission shell syntax passes. A test-file trailing blank
+line flagged by the scoped whitespace check is corrected in this follow-up;
+the frozen executable code is unchanged by that formatting correction.
+
+Frozen validator commit `ef42747574c402d932d03ff0f502cefd56a34f40` lives at
+`benchmarks/work/publication_qfo_corrected_fastoma_admission_v2`.
+Slurm rejected the initial submission with a dependency on old completed
+21740; no job was created by that rejected request. Submitted **22054**
+without that scheduler dependency, retaining the validator's mandatory
+successful accounting checks for inference 21740 and staging 21738. It is
+RUNNING, with 2 CPUs / 64 GiB / 4 hours, no requeue, and a new job-specific
+output report. No native inference was rerun; old admission failure remains.
+
+Scheduler changes: CPM control **21956 COMPLETED/0:0 in 54:28**, control
+admission **21958 COMPLETED/0:0 in 1:35**; CPM variant 21960_0 and parameter
+arm 22034_0 are RUNNING. BLAST diagnostic **22029 FAILED/1:0 in 3 seconds**
+before native execution: preflight reports changed checksum for
+`benchmarks/work/qfo_blast_replay_panel_20260923/query_00.fa`. Preserve all
+panel evidence and investigate exact bytes/provenance before resubmission.
+OrthoMCL admission remains held; no diagnostic BLAST output is admitted.
+
 ## Executable FastOMA Retry Review (2026-09-23)
 
 The preceding turn made progress by identifying the failed task's mount
