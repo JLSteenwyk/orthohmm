@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Guarded BLAST Recovery Merge Driver Prepared (2026-09-23)
+
+Previous turn retained the successful prefix recheck and conditional reuse
+review (3e760f6). Re-read the goal and confirmed parameter scoring 22043_3
+and low-CPM phylogeny 22088_0 remain live; recovery 22103_3 awaits resources.
+
+Added the [gated merge driver](QFO_BLAST_MERGE_DRIVER_20260923.md), binding
+the review, source/binary evidence, prefix recheck, original query partition
+and fresh complete replay-panel verification before copying. It preserves
+query order and selected raw diagnostic lines, rejects repeated diagnostic
+disagreements, writes durable provenance/status and never admits the resulting
+candidate to scientific inference. Forty-five focused tests pass.
+
+A live prerequisite-only check rejected incomplete 22103_3 without creating
+an output directory or reading production BLAST bytes. The driver is not
+submitted; full-scale integration and the independent final-table admission
+remain required. No held-chain release, native retry or DGX action occurred.
+
 ## Prefix Byte Recheck Passed; Conditional Reuse Reviewed (2026-09-23)
 
 Previous turn submitted the frozen byte recheck (d617694, 19e9fb5).
