@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Frozen-Import Diagnostic Submitted; Manuscript Render Refreshed (2026-09-23)
+
+Submitted **22121** from detached executor
+`benchmarks/work/cpm_frozen_constructor_v1_20260923`, commit
+`0ca77ada17d5407de61205683aaf40782c2c3f02`. The scheduler confirms it is
+pending priority. Its 1-CPU/64-GiB/2-hour no-requeue request is a single
+constructor observation, not a retry of high-CPM inference. BLAST 22103_1
+and parameter scoring 22043_1 remain running. All original failed artifacts
+and scientific-output gates remain unchanged; DGX remains deferred.
+
+Generated an [updated manuscript HTML review](MANUSCRIPT_RENDER_REVIEW_20260923_v2.md)
+without overwriting the old snapshot. Pandoc completed with no stderr;
+188 local occurrences resolve to 170 existing tracked targets, including
+ten image occurrences. Eight renderer tests passed. New figures are included. No full refreshed browser
+or PDF layout review, scientific completion, archival deposit or controlled
+timing claim is implied by this render.
+
 ## Frozen-Import Constructor Follow-Up Prepared (2026-09-23)
 
 Previous turn added and visually checked the descriptive feature figures,
