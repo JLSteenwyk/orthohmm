@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Native Reference Supports Explicit XML Events, With Gaps (2026-09-23)
+
+Previous turn made progress on full recovery coverage validation and retained
+the successful constructor diagnostic. Re-read the full goal and verified
+live accounting: BLAST 22103_1 and threshold scoring 22043_1 continue.
+Low candidate 22084_0 completed 0:0 in 3:49. Inspected its frozen admission
+code's exact per-arm completion/provenance gates, then cleared only 22086_0's
+whole-array dependency. That validator is now resource-pending; high-arm
+dependencies are unchanged. No native job was restarted or score promoted.
+
+Implemented and ran an [explicit XML-event correspondence diagnostic](SWISSTREE_DUPLICATION_SOURCE_20260923.md)
+against shared native QfO reference truth. All seven admitted assessment raw
+files agree on truth labels. Across 13 XML sources, 2,992 mapped pairs with
+an explicit duplication at their stored shared node are native non-orthologs,
+with no contradictory explicit-event pairs. But 2,541 mapped pairs have
+unknown events and 2,651 lack complete unique mapping candidates. Five NHX
+sources remain outside this comparison. Rooting and alias limitations remain
+explicit; no complete ancestral labels or stratified accuracy are admitted.
+
+Ten tests passed without warnings after correcting an invalid illustrative
+event type exposed by the first test run. The earlier local diagnostic is
+preserved; v2 has identical family observations. This advances the requested
+duplication-history source validation, not independent generalization or
+publication completion. Next validate aliases/NHX event semantics and retain
+missingness before considering any frozen feature. DGX remains deferred.
+
 ## Constructor Preserves Graph; First BLAST Batch Completed (2026-09-23)
 
 Previous turn made progress by testing/freezing/submitting the isolated

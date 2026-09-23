@@ -93,3 +93,49 @@ absence remains unknown event annotation, not a zero-duplication claim.
 Support/color annotations need not be identical. Six focused diagnostic and
 format tests pass. No candidate is chosen, and curated biological rooting,
 accession mapping and benchmark pair-label correspondence remain unvalidated.
+
+## Explicit XML Event Correspondence
+
+The [native-reference diagnostic](swisstree_explicit_event_comparison_v2_20260923.json)
+compares the 13 phyloXML sources to QfO reference labels, using only unique
+exact-name/final-suffix mapping candidates and the stored tree orientation.
+The other five NHX sources (including NOX, not only the four multiline files)
+remain explicitly outside this XML comparison. Reference truth reconstructed
+as TP/FN versus FP/TN is identical across all seven available native method
+assessments; no method scores, performance contrasts or feature bins are
+computed. All 47 recorded source/input identities were checked before the
+report was written.
+
+| Stored XML comparison | Reference pairs |
+|---|---:|
+| Explicit duplication at shared node; native non-ortholog | 2,992 |
+| Explicit duplication at shared node; native ortholog | 0 |
+| Unknown event at shared node; native ortholog | 1,561 |
+| Unknown event at shared node; native non-ortholog | 980 |
+| At least one endpoint without unique mapping candidate | 2,651 |
+
+No explicit speciation comparisons or contradictory explicit-event pairs
+were found. Absence of contradictions is not complete validation: many
+events and mappings remain unavailable, and most files still declare
+themselves unrooted. Of the two explicitly rooted XML sources, CASP has
+1,903 duplication/non-ortholog matches and 50 unknown-event ortholog pairs;
+Clusterin has 73 and 63, respectively. These are stored-tree correspondences,
+not independent biological test evidence or an inferred history for every
+benchmark gene. No unlabeled node is silently called a speciation.
+
+The [phyloXML specification](https://www.phyloxml.org/1.20/phyloxml.html)
+distinguishes rooting from clade storage and describes duplication/speciation
+counts as events associated with clades. The diagnostic therefore preserves
+`rooted=false`, does not reroot, and uses positive explicit count elements
+only. The event type `speciation_or_duplication` remains unknown, not either
+resolved event. Ten focused tests passed, including unknown-event handling,
+ambiguous mapping, duplicate leaves and contradictory reference labels.
+
+An initial local diagnostic was retained under
+`benchmarks/work/swisstree_explicit_event_comparison_20260923.json`.
+A test warning exposed an invalid illustrative event type; it was removed
+from the implementation and replaced with the valid unresolved type in the
+test. The committed v2 run has identical family observations and no warning.
+Further work must validate accession/taxon correspondence and NHX semantics,
+and decide whether the incomplete annotations support a prespecified feature
+without treating missing events as zero or using method outcomes to choose it.
