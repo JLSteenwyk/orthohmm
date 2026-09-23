@@ -18,9 +18,9 @@ from benchmark_tools.run_qfo_cpm_phylogeny import verify_sources
 from benchmark_tools.run_qfo_cpm_variant import ARMS
 from benchmark_tools.run_simulation_methods import read_frozen
 
-ADMISSION_JOB = "22070"
-ADMITTER_COMMIT = "448c87d9330af1822598693c26c9b7dc546d3355"
-ADMITTER_SHA = "395cb6ea4dd0c07ebfb55a4c526dbb9d9729c00b80ed24abdae8207daee881fa"
+ADMISSION_JOB = "22090"
+ADMITTER_COMMIT = "374bd10f33cd682b2e5b56820c213565d9ed9e25"
+ADMITTER_SHA = "408eb2ae155be4f770fef08bf41d8167fb17697116d841ac0bb150e167c3f7d3"
 
 
 def completed_admission(accounting, index):
@@ -58,7 +58,7 @@ def prepare(root, index):
     accounting = subprocess.check_output(["sacct", "-j", ADMISSION_JOB, "--parsable2",
         "--format=JobID,JobIDRaw,State,ExitCode,Elapsed,NodeList,AllocCPUS"], text=True)
     scheduler = completed_admission(accounting, index)
-    executor = root / "benchmarks/work/publication_qfo_cpm_native_admission_v2"
+    executor = root / "benchmarks/work/publication_qfo_cpm_native_admission_v3"
     if subprocess.check_output(["git", "-C", str(executor), "rev-parse", "HEAD"], text=True).strip() != ADMITTER_COMMIT:
         raise ValueError("CPM native admission executor changed")
     subprocess.run(["git", "-C", str(executor), "diff", "--exit-code", "HEAD", "--", "benchmark_tools", "orthohmm"], check=True)

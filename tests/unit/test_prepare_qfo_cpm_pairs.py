@@ -43,7 +43,7 @@ def test_invalid_index(index):
 
 def accounting(state="COMPLETED", cpus="2", exit_code="0:0", node="bizon"):
     return ("JobID|JobIDRaw|State|ExitCode|NodeList|AllocCPUS\n"
-            f"22070_0|22071|{state}|{exit_code}|{node}|{cpus}\n")
+            f"22090_0|22091|{state}|{exit_code}|{node}|{cpus}\n")
 
 
 @pytest.mark.parametrize("change", [{"state": "RUNNING"}, {"state": "FAILED"}, {"state": "PENDING"},
@@ -54,7 +54,7 @@ def test_scheduler_gate(change):
 
 
 def test_scheduler_unique_array_identity():
-    assert module.completed_admission(accounting(), 0)["JobIDRaw"] == "22071"
+    assert module.completed_admission(accounting(), 0)["JobIDRaw"] == "22091"
     with pytest.raises(ValueError):
         module.completed_admission(accounting(), 1)
     with pytest.raises(ValueError):
@@ -70,7 +70,7 @@ def test_allocation_precedes_input_reads(tmp_path, monkeypatch):
 
 @pytest.mark.parametrize("problem", [None, "fresh", "mapping", "changed", "source", "revision", "live"])
 def test_prepare_real_conversion_with_mocked_native_recheck(tmp_path, monkeypatch, problem):
-    executor = tmp_path / "benchmarks/work/publication_qfo_cpm_native_admission_v2"
+    executor = tmp_path / "benchmarks/work/publication_qfo_cpm_native_admission_v3"
     checker = executor / "benchmark_tools/admit_qfo_cpm_phylogeny.py"
     checker.parent.mkdir(parents=True)
     checker.write_text("# frozen fixture\n")
@@ -83,7 +83,7 @@ def test_prepare_real_conversion_with_mocked_native_recheck(tmp_path, monkeypatc
     native.update(source=record(checker), native_pairs=record(pairs), checked_records=[record(pairs)],
         helpers=[], native_group_integrity={"native_manifest": record(metadata)})
     verified.update(arm={"partition": {"path": "CPM_candidate"}}, manifest={"input_fastas": []}, checked_records=[])
-    admission = tmp_path / "benchmarks/work/qfo_cpm_native_admission_22070_0.json"
+    admission = tmp_path / "benchmarks/work/qfo_cpm_native_admission_22090_0.json"
     admission.write_text(json.dumps(native))
     mapping = tmp_path / "mapping.json.gz"
     with gzip.open(mapping, "wt") as stream:
