@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Legacy BLAST Source and Binary Identity Recovered (2026-09-23)
+
+Previous turn made progress by measuring the interrupted output's byte
+boundary. Followed the official NCBI executable index to its renamed
+`legacy.NOTSUPPORTED/2.2.13/` directory, downloaded source and x64 archives,
+and verified their published MD5 values. The archived blastall binary's
+SHA-256 exactly matches the installed executable. No software was replaced.
+
+[Source evidence and recovery requirements](LEGACY_BLAST_RECOVERY_SOURCE_20260923.md)
+document the default old-engine, one-query-at-a-time BLASTP control flow.
+This supports investigating prefix reuse but does not certify it. Full
+retained-row/order validation and bounded query replay remain necessary;
+no query output was reused, appended, or admitted. FastOMA 21740 remains
+running through OMAmer, and OrthoMCL admission 21746 remains held.
+
 ## Interrupted BLAST Byte Boundary Audited (2026-09-23)
 
 Previous turn made progress by identifying the vanished worker, preserving
