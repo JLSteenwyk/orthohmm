@@ -21,9 +21,9 @@ from benchmark_tools.run_simulation_methods import read_frozen
 from benchmark_tools.trace_ob_families import partition, validate_merge_reconstruction
 from benchmark_tools.verify_qfo_replay_launcher import verify
 
-JOB = "21967"
-EXECUTOR = "1acc9579de31d6130a207ae9c0b760e2e07356bb"
-SOURCE_SHA = "6562e56870efb6bbb7fb526b2c1210ca334e5aa37e7692d5ab3faf7bece5e8cb"
+JOB = "22062"
+EXECUTOR = "b32ced4635a59abd71b25ae2d34efa4f4b29bd51"
+SOURCE_SHA = "192d8e2b96001093d06bd15b82a64cc75a9a4e9cb4eda877d5424776de8e2b9c"
 
 
 def completed_task(accounting, index):
@@ -67,7 +67,7 @@ def admit(root, index, destination):
     plan, plan_record, _, names_record = corrected_evidence(plan_path, REPLAY_SHA)
     context = evidence(root, plan, plan_record, ARMS[index])
     replay = replay_evidence(root, index, context)
-    executor = root / "benchmarks/work/publication_qfo_cpm_candidates_v2"
+    executor = root / "benchmarks/work/publication_qfo_cpm_candidates_v3"
     if subprocess.check_output(["git", "-C", str(executor), "rev-parse", "HEAD"], text=True).strip() != EXECUTOR:
         raise ValueError("Candidate executor changed")
     subprocess.run(["git", "-C", str(executor), "diff", "--exit-code", "HEAD", "--", "benchmark_tools", "orthohmm"], check=True)
