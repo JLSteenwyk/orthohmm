@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Full Retained-Prefix Row Audit Running (2026-09-23)
+
+Previous turn submitted the frozen native replay diagnostic. Added a
+read-only prefix adapter for the existing BLAST row validator, preserving
+its numerical, coordinate, alignment-accounting, and block-contiguity
+checks without changing the existing validator. The adapter also checks
+FASTA query order, inventories per-query byte boundaries/hashes, and
+recomputes the original full-file SHA-256 including the excluded damaged
+tail. The final observed query is flagged and never authorized for reuse.
+Any malformed earlier row, order violation, changed input, or checksum
+mismatch fails the audit. Absence of query hits is not treated as proof
+of a completed no-hit search.
+
+39 new/existing focused tests passed; batch shell syntax passed. Committed
+executor `2d1af8597d335b854e645ee800db56f94e89b958` is deployed in
+`benchmarks/work/blast_prefix_audit_executor_20260923`. Submitted once:
+
+```text
+sbatch --parsable --partition=gpu \
+  benchmarks/work/blast_prefix_audit_executor_20260923/benchmark_tools/run_blast_prefix_audit.slurm \
+  /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/blast_prefix_audit_executor_20260923 \
+  2d1af8597d335b854e645ee800db56f94e89b958
+```
+
+Returned job **22030**, submitted 09:59:19 EDT and started 09:59:31 on
+September 23. Controller confirms RUNNING, one CPU, 8G RAM, eight-hour
+limit, Requeue=0, Restarts=0. Outputs are under
+`benchmarks/work/qfo_blast_prefix_audit_20260923`; batch log is
+`benchmarks/work/qfo_blast_prefix_audit_22030.log`. The full scan is NOT
+finished; unit tests do not substitute for its result. Partial query-block
+inventories are not accepted without successful audit completion.
+
+FastOMA 21740 remains active; native replay 22029 is pending Priority;
+OrthoMCL admission 21746 remains held. Keep observing these exact jobs.
+No native search or timing result was admitted by this audit submission.
+
 ## Native BLAST Replay Diagnostic Queued (2026-09-23)
 
 Previous turn prepared the actual frozen five-query panel. Added a guarded
