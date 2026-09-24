@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Eleventh Recovery Batch Admitted (2026-09-24)
+
+Previous turns were verified waits on live 22103_10, whose output continued
+growing; no restart was attempted. Re-read the objective. Native batch
+22103_10 completed 0:0 in **38:23**, and independent admission 22105_10
+completed 0:0 in **31 seconds**. Batch 22103_11 is now RUNNING automatically.
+Eleven of twenty replay batches have passed their individual admission gates.
+
+`benchmarks/work/qfo_blast_recovery_admission_10_20260923.json` has status
+`recovery_batch_execution_and_rows_verified`, `batch_admitted=true`, and SHA256
+`f2bb2715e23be01aac3b932c22d0eec9bbe0b4e5a3ead2d38b33cf9cec15e872`.
+Of 5,000 batch queries, 4,993 have hits and seven have no hits without logged
+failure; there are **zero logged failed queries**. The completed table has
+3,314,705 HSP rows and 1,754,202 distinct directed pairs. The full-database
+audit denominator is 984,137, not the batch denominator; its unqueried proteins
+must not be counted as batch no-hit queries.
+
+This is partial recovery evidence, not whole-search admission, final native
+groups, accuracy or controlled timing. Merge 22150 and search admission 22151
+remain pending on the remaining batches. No dependencies or scientific
+settings changed, and the DGX remains deferred.
+
 ## Failure-Membership Executor Frozen (2026-09-24)
 
 Previous response only acknowledged the DGX deferral (no analytical progress).
