@@ -495,7 +495,8 @@ phylogenetic reconciliation.
 [Stage results](QFO_RECOVERED_STAGE_RESULTS_20260917.md),
 [paired intervals](QFO_SWISS_INTERVALS_20260917.md).
 
-OrthoMCL final-group scoring completed successfully, with all six endpoint
+On the original-release inputs, OrthoMCL final-group scoring completed
+successfully, with all six endpoint
 tasks and consolidation exiting zero. Its secondary mean was 0.705177.
 The earlier pre-clustering diagnostic mean, 0.724414, is not the final-group
 assessment and is excluded from the principal comparison. The run contained
@@ -504,7 +505,8 @@ absent from final groups. Direct-reference exposure was absent for VGNC,
 SwissTrees, TreeFam-A, and EC, but present for four experimentally annotated
 GO proteins; 46 failed proteins had nonempty FAS features. These observations
 do not bound indirect clustering effects or establish a negligible score
-impact. The unmodified baseline is retained with failures disclosed.
+impact. This historical baseline is retained with failures disclosed; neither
+its scores nor its failure count substitute for the corrected-release run.
 [Failure-impact audit](ORTHOMCL_FAILURE_IMPACT_20260916.md).
 
 ### Conserved-Family Recovery Remains A Weakness
@@ -742,8 +744,8 @@ reuse raw gene trees and are not end-to-end efficiency measurements.
 [![Supplied-tree perturbation scores and all paired effects](figures_species_tree_robustness_20260916/species_tree_robustness.png)](figures_species_tree_robustness_20260916/species_tree_robustness.png "Full-resolution figure")
 
 Figure: control and six fixed topology perturbations, ordered by the frozen
-variant indices. Thick intervals are nominal95% paired RefOG intervals;
-thin intervals retain Bonferroni adjustment over all18 endpoints using20,000
+variant indices. Thick intervals are nominal 95% paired RefOG intervals;
+thin intervals retain Bonferroni adjustment over all 18 endpoints using 20,000
 paired resamples. Gene-tree checkpoints are shared; rooting/reconciliation
 is recomputed against each supplied species tree.
 
@@ -752,32 +754,32 @@ is recomputed against each supplied species tree.
 Fourteen feature strata were frozen before joining the new features to method
 errors. They describe reference-family size, copy number, canonical alignment
 identity, relative sequence length and global composition, not independently
-verified duplication history, fragments or domain architecture. All70 RefOGs
+verified duplication history, fragments or domain architecture. All 70 RefOGs
 remain represented in each dimension. Twelve families have missing identity
 because at least one aligned pair lacks comparable canonical positions.
 
-Both OrthoHMM configurations were compared with full OrthoFinder3.1.5 for
-F1, precision and recall, retaining84 endpoints in multiplicity adjustment.
-Eleven bins had at least five families, yielding66 interval-bearing endpoints;
+Both OrthoHMM configurations were compared with full OrthoFinder 3.1.5 for
+F1, precision and recall, retaining 84 endpoints in multiplicity adjustment.
+Eleven bins had at least five families, yielding 66 interval-bearing endpoints;
 one single-family composition bin was descriptive only and two empty bins
-were explicitly nonestimable. None of the22 adjusted F1 intervals excluded
+were explicitly nonestimable. None of the 22 adjusted F1 intervals excluded
 zero. Nine adjusted precision/recall intervals excluded zero: two precision
 advantages and seven recall deficits for OrthoHMM across overlapping strata.
 These are not independent replications or tests of differences between strata.
 
-In the40-family short-relative stratum, high-sensitivity recall was18.901
-percentage points below OrthoFinder (adjusted interval[-36.475,-5.208]);
-phylogenetic-mode recall was14.833 points lower ([-34.240,-0.370]). In the
-six large families, observed F1 differences were-16.469 and-11.616 points,
+In the 40-family short-relative stratum, high-sensitivity recall was 18.901
+percentage points below OrthoFinder (adjusted interval [-36.475, -5.208]);
+phylogenetic-mode recall was 14.833 points lower ([-34.240, -0.370]). In the
+six large families, observed F1 differences were -16.469 and -11.616 points,
 but both adjusted F1 intervals included zero. These observations do not prove
 a fragmentation mechanism or justify outcome-selected parameter changes.
 
-All three native-format parsers preserved251,378 input genes, and fresh
+All three native-format parsers preserved 251,378 input genes, and fresh
 full-reference sufficient statistics and official-score crosschecks reproduced
 the frozen overall estimates. Stratified estimates restrict those original
 per-family counts without changing the reference or low-certainty conventions.
-Percentile intervals are approximate; the84-endpoint adjusted tails contain
-only about six of20,000 resamples each. [All effects and limitations](OB_STRATIFIED_ERROR_RESULTS_20260916.md).
+Percentile intervals are approximate; the 84-endpoint adjusted tails contain
+only about six of 20,000 resamples each. [All effects and limitations](OB_STRATIFIED_ERROR_RESULTS_20260916.md).
 
 [![All stratified OrthoBench F1, precision and recall effects](figures_ob_stratified_errors_20260916/stratified_errors.png)](figures_ob_stratified_errors_20260916/stratified_errors.png "Full-resolution figure")
 
@@ -980,11 +982,16 @@ corrected OrthoFinder species tree, not independent species-tree inference.
 Two failed native task attempts were retained and explicitly audited against
 their successful retries; their scientific commands were identical. This
 is accuracy evidence, not controlled runtime evidence. OrthoMCL's corrected
-comparison remains unfinished. No paired superiority
+comparison remains unfinished. Its interrupted search is being recovered through
+validated replay batches and an ordered merge; the downstream BPO, native-group,
+pair-conversion and scoring workflow is implemented and frozen, but this is not
+evidence that those production stages have completed. The corrected OrthoMCL
+scores remain unavailable. [Recovery workflow and validation status](QFO_RECOVERY_BPO_HANDOFF_20260923.md).
+No paired superiority
 over competitors is inferred from this partial table.
 [Method identity and export checks](QFO_CORRECTED_MAIN_TABLE_20260918.md).
 The prespecified [corrected comparator uncertainty analysis](CORRECTED_SWISS_COMPARISON_RESULT_21987.md)
-now reconstructs raw counts for all six admitted methods. It retains all
+initially reconstructed raw counts for the six methods then admitted. It retained all
 eight contrasts and the full 24-endpoint correction, using 100,000 shared
 family resamples with seed 20260920. Phylogenetic OrthoHMM minus full
 OrthoFinder F1 is -0.014900 (adjusted interval [-0.087078, 0.072090]); its
@@ -1160,16 +1167,16 @@ strict-profile groups. Group counts alone are not accuracy endpoints.
 This agreement supports reuse of the corrected intermediate outputs for
 the prespecified ablations. It neither resolves the older historical-input
 replay discrepancy nor establishes general determinism. Candidate
-preparation is admitted, as are conversion and scoring for all four R-off
-cells and the first R-on cell, p0_c0_r1. The other three R-on cells remain
-unfinished. The 50:28 replay elapsed time is
+preparation was admitted before the factorial assessments; conversion and
+scoring have since completed for all eight cells, as summarized below.
+The 50:28 replay elapsed time is
 incremental shared-host execution, not a matched end-to-end runtime result.
 
 The corrected R-off cells p0_c0_r0, p0_c1_r0, p1_c0_r0 and p1_c1_r0 scored
 SwissTrees F1 of 0.689184, 0.685709, 0.685498 and 0.686087, respectively.
 Their group-derived predictions retained 9,009,082, 11,734,021, 9,032,719
-and 11,755,521 cross-species pairs with zero mapping loss. This partial panel
-does not establish expansion/reconciliation interactions or authorize a
+and 11,755,521 cross-species pairs with zero mapping loss. These R-off cells
+alone do not establish expansion/reconciliation interactions or authorize a
 default change. [All six endpoints and admission provenance](QFO_CORRECTED_ROFF_SCORES_20260918.md).
 
 Native inference and pair conversion have also completed for p0_c1_r1,

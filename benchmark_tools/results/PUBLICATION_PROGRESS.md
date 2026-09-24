@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Manuscript Historical/Current Status Reconciled (2026-09-23)
+
+Previous turn progressed with explicit grouped failed-query exposure (9c7ead1).
+Re-read the goal and polled BLAST 22103_8 RUNNING 27:45, then 29:40;
+22105_8 remains pending. No jobs or DGX state were changed.
+
+Reviewed the manuscript while production recovery continues. Labeled the
+completed original-release OrthoMCL score/failure audit explicitly historical,
+so its 976504-protein result cannot be mistaken for the corrected run. Added
+a recovery-workflow citation and explicit distinction between implemented
+downstream stages and completed production inference/scoring. Corrected stale
+text saying three factorial cells remain unfinished, and labeled the earlier
+six-method uncertainty analysis as historical rather than current. All eight
+corrected factorial cells were already documented as scored later in the draft;
+this edit reconciles the contradictory prose without changing results.
+
+Fixed adjacent number/word spacing in the OrthoBench strata paragraph and
+supplied-tree figure caption; estimates and intervals are unchanged. Refreshed
+[v7 HTML](PUBLICATION_MANUSCRIPT_REVIEW_20260923_v7.html) and
+[asset receipt](manuscript_asset_review_20260923_v7.json): 197 local occurrences,
+179 targets, none untracked, no Pandoc diagnostics. Renderer/artifact tests:
+**13 passed**. Initial direct-file renderer invocation failed on imports; the
+supported module invocation succeeded. No PDF/browser/full visual review was
+performed this turn; v6 PDF remains the previous snapshot. Full manuscript
+condensation, copyediting and publication completion remain outstanding.
+
 ## Failed Queries Distinguished From Missing Predictions (2026-09-23)
 
 Previous turn progressed by freezing/exercising the downstream executor
