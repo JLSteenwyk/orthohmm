@@ -1,0 +1,884 @@
+{
+  "status": "partial_failed_query_mapping_and_fas_exposure_checked",
+  "input_proteins": 984137,
+  "input_species": 78,
+  "failed_queries_checked": 46,
+  "unique_mapped_targets": 46,
+  "failed_species": [
+    "UP000000437_7955",
+    "UP000000539_9031",
+    "UP000000589_10090",
+    "UP000000803_7227",
+    "UP000001038_8090",
+    "UP000001357_81824",
+    "UP000001519_9595",
+    "UP000001542_5722",
+    "UP000001554_7739",
+    "UP000001555_6945",
+    "UP000001593_45351",
+    "UP000002254_9615",
+    "UP000002277_9598",
+    "UP000002494_10116",
+    "UP000005640_9606",
+    "UP000006548_3702",
+    "UP000006727_3218",
+    "UP000007062_7165",
+    "UP000007266_7070",
+    "UP000007305_4577",
+    "UP000008144_7719",
+    "UP000015101_6412",
+    "UP000018468_7918"
+  ],
+  "fas_files_checked": 23,
+  "mapping": {
+    "bytes": 40019520,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/mapping.json.gz",
+    "sha256": "1c10f6ce5e53ebc3148dde02d16268b225c3c8817c952d1274daa41acbf9eb4d"
+  },
+  "gg": {
+    "bytes": 23877424,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_orthomcl_v1/work/all.gg",
+    "sha256": "0a3d84171661e7cb0f9cf3ebf6e739d78e80965b0e26230b319329639374d26e"
+  },
+  "fas": [
+    {
+      "bytes": 19615165,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000000437_7955.json",
+      "sha256": "50d563b89fd802e0d0ae14f67714d5ed6a81679f024185cb2103dd7761701232"
+    },
+    {
+      "bytes": 12294885,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000000539_9031.json",
+      "sha256": "b7b98c218c69f077c67146e193078fd0e647af3aa67e218c760d14e4fa7f20c5"
+    },
+    {
+      "bytes": 15411163,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000000589_10090.json",
+      "sha256": "631eee1ff5575078af1f6c919abcc23fad13e0f642c3447b28463d33896ac665"
+    },
+    {
+      "bytes": 8310912,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000000803_7227.json",
+      "sha256": "1ac66a0b1779c6994840f0a0b64ee7734084cd1d3b224a050c9117022e40704c"
+    },
+    {
+      "bytes": 15962851,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001038_8090.json",
+      "sha256": "734afa2c75f8ab6e2a3177e8cad559885c3b10158d6eef6e1f18d21c00681cef"
+    },
+    {
+      "bytes": 5683052,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001357_81824.json",
+      "sha256": "c4854679182c3135fe6d883250b567c963423802c98e31b7568b80c3a483a49c"
+    },
+    {
+      "bytes": 14822351,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001519_9595.json",
+      "sha256": "5f346c8916b338acd99f5067c1bc81b52e8558d79173431d86247101e87b3e57"
+    },
+    {
+      "bytes": 19430357,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001542_5722.json",
+      "sha256": "e549deeb2ffb02cb79ff62de44695c2e6fe121c92a2f191f10380b3b64237d2d"
+    },
+    {
+      "bytes": 19448984,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001554_7739.json",
+      "sha256": "26f8e0385fdf16d384e0f340d1f4c7318a84b9e4fe91fecc097780cebbbd8120"
+    },
+    {
+      "bytes": 8124404,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001555_6945.json",
+      "sha256": "939e24c53258efbe90900b71a70b3446205022d2b11b3b7771417ca59c1fd61e"
+    },
+    {
+      "bytes": 11678107,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001593_45351.json",
+      "sha256": "014615e13d150891b17fa7d050f2655183e8c035e1bb107049e7050fba87e98d"
+    },
+    {
+      "bytes": 14450286,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000002254_9615.json",
+      "sha256": "b37527c7f5940932f6ebf72e0e09e0058de4c1e522556d05c4a4bc19ddf38908"
+    },
+    {
+      "bytes": 15878889,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000002277_9598.json",
+      "sha256": "a8d5b7719642855f5b6e0fd5402cdd5f8decc5062cd17e5a25f4de0fb5d30d46"
+    },
+    {
+      "bytes": 14405466,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000002494_10116.json",
+      "sha256": "ddb1adf9452202517f4b214afcdccb2c6ffa4130c64cb8d04b9eacc41cd5a3e9"
+    },
+    {
+      "bytes": 15211666,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000005640_9606.json",
+      "sha256": "5ff67d6cff37b18db33d206669c72665dc5db7bdf1882088f89acf9b364f8d92"
+    },
+    {
+      "bytes": 13779014,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000006548_3702.json",
+      "sha256": "0eb4de7a69c581d64ee6e56bc0fc16137555dcda092771602a38d0f7c29a85a7"
+    },
+    {
+      "bytes": 12450289,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000006727_3218.json",
+      "sha256": "ede5a355e7d873aabdc3a3433b09f0719a5d269f384c3f1bc7e3101abca09a22"
+    },
+    {
+      "bytes": 7635144,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000007062_7165.json",
+      "sha256": "eb1314b29a976ba10fa39caf1ccc84e6be3849c1d973e49027205626eb028dfe"
+    },
+    {
+      "bytes": 8584834,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000007266_7070.json",
+      "sha256": "b0ec830ca0fe6d81ff25729b89695e2f6d8976f22db758b1dc4930eddc8ef63f"
+    },
+    {
+      "bytes": 19000064,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000007305_4577.json",
+      "sha256": "108a85067bbde59a04357d68450438a02ce6d1d20365e4e3be819e9501d168c8"
+    },
+    {
+      "bytes": 7230742,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000008144_7719.json",
+      "sha256": "b37c9f5a0035a5f2523a4f57e41adf4bac0dd4f06be9dd8fe2b28de836853a2f"
+    },
+    {
+      "bytes": 11107169,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000015101_6412.json",
+      "sha256": "0cc7e9cbbff506383006769ddc29aa401c43affea4ff5a66c7f2ba74d6bc430b"
+    },
+    {
+      "bytes": 12517644,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000018468_7918.json",
+      "sha256": "e31d42104f8d5f0db7c893e29dc4aa4d48e4549b1fec097c1b154a6f79d74a88"
+    }
+  ],
+  "accuracy_evaluated": false,
+  "publication_ready": false,
+  "partial_report": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_replay_first9_failure_description_20260923.json",
+    "bytes": 28941,
+    "sha256": "f4d71c3a1d5c10e1974b32f9520bfa872bf2a012c9c33d3663c5ede0cc0e2163"
+  },
+  "prepared_manifest": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_orthomcl_prepared_20260918.json",
+    "bytes": 56777,
+    "sha256": "3106012dc42c053d42e7f9d8d08532168d5826aa6812bab4b4c232f900e3a8ff"
+  },
+  "environment_manifest": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_assessment_environment_20260917.json",
+    "bytes": 172836,
+    "sha256": "e86545fd04cb644ed642cf2a31b4993fb2225ca4c05743cd03e661db129e82bc"
+  },
+  "rows": [
+    {
+      "gene": "sp|P0DKJ0|P160B_ARATH",
+      "accession": "P0DKJ0",
+      "species": "UP000006548_3702",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 0,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 0,
+        "smart": 0,
+        "pfam": 0
+      }
+    },
+    {
+      "gene": "sp|P0DOY5|HD101_HUMAN",
+      "accession": "P0DOY5",
+      "species": "UP000005640_9606",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 0,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 0,
+        "smart": 0,
+        "pfam": 0
+      }
+    },
+    {
+      "gene": "sp|P0DPI4|TDB01_HUMAN",
+      "accession": "P0DPI4",
+      "species": "UP000005640_9606",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 0,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 0,
+        "smart": 0,
+        "pfam": 0
+      }
+    },
+    {
+      "gene": "sp|P0DPR3|TRDD1_HUMAN",
+      "accession": "P0DPR3",
+      "species": "UP000005640_9606",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 0,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 0,
+        "smart": 0,
+        "pfam": 0
+      }
+    },
+    {
+      "gene": "sp|P38639|UF01_MOUSE",
+      "accession": "P38639",
+      "species": "UP000000589_10090",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 0,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 0,
+        "smart": 0,
+        "pfam": 0
+      }
+    },
+    {
+      "gene": "sp|P62120|RL41_ARATH",
+      "accession": "P62120",
+      "species": "UP000006548_3702",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 0,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 1,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 1
+      }
+    },
+    {
+      "gene": "sp|P62945|RL41_HUMAN",
+      "accession": "P62945",
+      "species": "UP000005640_9606",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 1,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 1
+      }
+    },
+    {
+      "gene": "sp|P62947|RL41_MOUSE",
+      "accession": "P62947",
+      "species": "UP000000589_10090",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 1,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 1
+      }
+    },
+    {
+      "gene": "sp|P62948|RL41_RAT",
+      "accession": "P62948",
+      "species": "UP000002494_10116",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 1,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 1
+      }
+    },
+    {
+      "gene": "sp|P80628|UC22_MAIZE",
+      "accession": "P80628",
+      "species": "UP000007305_4577",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 0,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 0,
+        "smart": 0,
+        "pfam": 0
+      }
+    },
+    {
+      "gene": "sp|P83308|FARP_CHICK",
+      "accession": "P83308",
+      "species": "UP000000539_9031",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 0,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 0,
+        "smart": 0,
+        "pfam": 0
+      }
+    },
+    {
+      "gene": "sp|P99503|UHA1_CANLF",
+      "accession": "P99503",
+      "species": "UP000002254_9615",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 0,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 0
+      }
+    },
+    {
+      "gene": "tr|A0A0A0MTA2|A0A0A0MTA2_HUMAN",
+      "accession": "A0A0A0MTA2",
+      "species": "UP000005640_9606",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 0,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 0
+      }
+    },
+    {
+      "gene": "tr|A0A0G2JWA6|A0A0G2JWA6_RAT",
+      "accession": "A0A0G2JWA6",
+      "species": "UP000002494_10116",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 2,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 0
+      }
+    },
+    {
+      "gene": "tr|A0A0G2JXP8|A0A0G2JXP8_RAT",
+      "accession": "A0A0G2JXP8",
+      "species": "UP000002494_10116",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 2,
+        "tmhmm": 1,
+        "signalp": 1,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 0
+      }
+    },
+    {
+      "gene": "tr|A0A0R4ILF4|A0A0R4ILF4_DANRE",
+      "accession": "A0A0R4ILF4",
+      "species": "UP000000437_7955",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 1,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 1
+      }
+    },
+    {
+      "gene": "tr|A0A139WHY7|A0A139WHY7_TRICA",
+      "accession": "A0A139WHY7",
+      "species": "UP000007266_7070",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 1,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 1
+      }
+    },
+    {
+      "gene": "tr|A0A2I2YS91|A0A2I2YS91_GORGO",
+      "accession": "A0A2I2YS91",
+      "species": "UP000001519_9595",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 1,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 1
+      }
+    },
+    {
+      "gene": "tr|A0A2K1IA18|A0A2K1IA18_PHYPA",
+      "accession": "A0A2K1IA18",
+      "species": "UP000006727_3218",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 1,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 0
+      }
+    },
+    {
+      "gene": "tr|A0A2K1JS03|A0A2K1JS03_PHYPA",
+      "accession": "A0A2K1JS03",
+      "species": "UP000006727_3218",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 0,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 1,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 1
+      }
+    },
+    {
+      "gene": "tr|A0A3B3HZ76|A0A3B3HZ76_ORYLA",
+      "accession": "A0A3B3HZ76",
+      "species": "UP000001038_8090",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 3,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 0
+      }
+    },
+    {
+      "gene": "tr|A0A5F4C1W3|A0A5F4C1W3_CANLF",
+      "accession": "A0A5F4C1W3",
+      "species": "UP000002254_9615",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 1,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 1
+      }
+    },
+    {
+      "gene": "tr|A2H533|A2H533_TRIVA",
+      "accession": "A2H533",
+      "species": "UP000001542_5722",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 1,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 2
+      }
+    },
+    {
+      "gene": "tr|A7RKU4|A7RKU4_NEMVE",
+      "accession": "A7RKU4",
+      "species": "UP000001593_45351",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 2,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 0
+      }
+    },
+    {
+      "gene": "tr|A7SJA8|A7SJA8_NEMVE",
+      "accession": "A7SJA8",
+      "species": "UP000001593_45351",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 3,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 0
+      }
+    },
+    {
+      "gene": "tr|A7SN48|A7SN48_NEMVE",
+      "accession": "A7SN48",
+      "species": "UP000001593_45351",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 3,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 1
+      }
+    },
+    {
+      "gene": "tr|A7STN8|A7STN8_NEMVE",
+      "accession": "A7STN8",
+      "species": "UP000001593_45351",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 1,
+        "tmhmm": 0,
+        "signalp": 1,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 1
+      }
+    },
+    {
+      "gene": "tr|A7SZ89|A7SZ89_NEMVE",
+      "accession": "A7SZ89",
+      "species": "UP000001593_45351",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 3,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 1
+      }
+    },
+    {
+      "gene": "tr|A7SZI4|A7SZI4_NEMVE",
+      "accession": "A7SZI4",
+      "species": "UP000001593_45351",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 3,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 0
+      }
+    },
+    {
+      "gene": "tr|A7T2Z8|A7T2Z8_NEMVE",
+      "accession": "A7T2Z8",
+      "species": "UP000001593_45351",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 3,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 0
+      }
+    },
+    {
+      "gene": "tr|A7TAV2|A7TAV2_NEMVE",
+      "accession": "A7TAV2",
+      "species": "UP000001593_45351",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 2,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 1
+      }
+    },
+    {
+      "gene": "tr|A9V7M1|A9V7M1_MONBE",
+      "accession": "A9V7M1",
+      "species": "UP000001357_81824",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 4,
+        "tmhmm": 1,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 0
+      }
+    },
+    {
+      "gene": "tr|A9VEM4|A9VEM4_MONBE",
+      "accession": "A9VEM4",
+      "species": "UP000001357_81824",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 3,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 0
+      }
+    },
+    {
+      "gene": "tr|B7PR94|B7PR94_IXOSC",
+      "accession": "B7PR94",
+      "species": "UP000001555_6945",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 3,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 0
+      }
+    },
+    {
+      "gene": "tr|C3Y834|C3Y834_BRAFL",
+      "accession": "C3Y834",
+      "species": "UP000001554_7739",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 2,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 1
+      }
+    },
+    {
+      "gene": "tr|F1LZG1|F1LZG1_RAT",
+      "accession": "F1LZG1",
+      "species": "UP000002494_10116",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 2,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 1,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 0
+      }
+    },
+    {
+      "gene": "tr|F6QE68|F6QE68_MOUSE",
+      "accession": "F6QE68",
+      "species": "UP000000589_10090",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 1,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 1,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 0
+      }
+    },
+    {
+      "gene": "tr|F6ZE74|F6ZE74_MOUSE",
+      "accession": "F6ZE74",
+      "species": "UP000000589_10090",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 0,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 1,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 0
+      }
+    },
+    {
+      "gene": "tr|F6ZH14|F6ZH14_MOUSE",
+      "accession": "F6ZH14",
+      "species": "UP000000589_10090",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 1,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 0
+      }
+    },
+    {
+      "gene": "tr|F7BLD2|F7BLD2_MOUSE",
+      "accession": "F7BLD2",
+      "species": "UP000000589_10090",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 2,
+        "tmhmm": 1,
+        "signalp": 1,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 0
+      }
+    },
+    {
+      "gene": "tr|H2RE54|H2RE54_PANTR",
+      "accession": "H2RE54",
+      "species": "UP000002277_9598",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 1,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 1
+      }
+    },
+    {
+      "gene": "tr|H2Y2R8|H2Y2R8_CIOIN",
+      "accession": "H2Y2R8",
+      "species": "UP000008144_7719",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 0,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 0
+      }
+    },
+    {
+      "gene": "tr|Q52P89|Q52P89_ANOGA",
+      "accession": "Q52P89",
+      "species": "UP000007062_7165",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 1,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 1
+      }
+    },
+    {
+      "gene": "tr|Q962S2|Q962S2_DROME",
+      "accession": "Q962S2",
+      "species": "UP000000803_7227",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 1,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 1
+      }
+    },
+    {
+      "gene": "tr|T1EKG4|T1EKG4_HELRO",
+      "accession": "T1EKG4",
+      "species": "UP000015101_6412",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 4,
+        "tmhmm": 1,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 0
+      }
+    },
+    {
+      "gene": "tr|W5M3G2|W5M3G2_LEPOC",
+      "accession": "W5M3G2",
+      "species": "UP000018468_7918",
+      "fas_annotation_entry_present": true,
+      "feature_counts": {
+        "flps": 3,
+        "tmhmm": 0,
+        "signalp": 0,
+        "coils2": 0,
+        "seg": 1,
+        "smart": 0,
+        "pfam": 0
+      }
+    }
+  ],
+  "fas_entries": 46,
+  "with_any_feature": 39,
+  "scope": "Only 46 failed queries in the first nine admitted replay batches; not the complete corrected search.",
+  "validation_method": [
+    "Verified the prepared-input and scoring-environment manifests against their frozen source constants.",
+    "Rehashed the native GG, reference mapping and 23 species annotation files.",
+    "Resolved full UniProt sequence IDs to accessions and GG species; required 46 unique positive integer reference targets.",
+    "Read each species annotation JSON feature dictionary; counted accession entries and nonempty dictionary-valued tool features."
+  ],
+  "limitations": [
+    "No final-group membership is available yet; none is inferred.",
+    "Annotation entry or feature presence does not establish a benchmark pair, a correct feature assignment, or an accuracy effect.",
+    "This is not direct SwissTrees, TreeFam-A, VGNC, GO or EC exposure; native reference traversal remains outstanding.",
+    "Replay queries are not a random sample; counts cannot be extrapolated to the full dataset."
+  ]
+}

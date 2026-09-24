@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Partial Failed-Query Mapping And FAS Exposure Checked (2026-09-23)
+
+Previous turn progressed with the failure-membership audit (f38ce3f). Re-read
+the objective; BLAST 22103_9 RUNNING 35:58 then 39:05. Checked compatibility
+between actual corrected GG species/accessions and the reference-exposure
+checker, without fabricating unavailable final-group membership.
+
+Using the frozen prepared-input and scoring-environment manifests, rehashed
+the GG and reference mapping. All **46** failures from the first nine admitted
+replay batches resolve to distinct positive integer reference targets. Their
+species names match **23** frozen FAS annotation files, all hash-verified.
+Read the corresponding feature dictionaries: all **46** accessions have an
+annotation entry, and **39** have at least one dictionary-valued tool feature.
+[Per-query evidence](qfo_first9_failed_query_fas_exposure_20260923.json) retains
+length-independent naming checks, annotation counts and all input hashes.
+Rechecked **28 provenance records** after parsing and verified summary arithmetic.
+
+This is a direct local data check, not a new inference run or a whole-search
+failure audit. It rules out missing accession/species-file naming for this
+partial set only. Annotation presence does not establish a scored pair,
+annotation correctness or counterfactual accuracy impact. Native SwissTrees,
+TreeFam-A, VGNC, GO and EC exposure and final membership remain outstanding.
+No source default, scoring endpoint, job dependency or DGX state changed.
+
 ## Recovered Failure-To-Partition Analysis Implemented (2026-09-23)
 
 Previous turn was a verified wait: batch 22103_9 remained live and growing.
