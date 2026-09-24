@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Combined Real Checkpoint Preflight Passed (2026-09-23)
+
+Previous turn implemented the recovery runner and independently validated the
+full-data refinement (ece9499), making progress. Re-read the objective and checked
+the actual worktree and scheduler: low-CPM assessment 22094_0 and BLAST batch
+22103_4 are running; no recovery optimizer job exists.
+
+Added post-optimizer evidence tests for incomplete observations, changed settings,
+changed graph/constructor hashes, missing artifacts, affinity/input/observer
+mismatches, post-read mutation and invalid partition memberships. Partition
+fixtures retain the full 984,137-gene count; native graph evidence is explicitly
+mocked in these validator tests and covered by the separate real frozen-worker
+subprocess test. All **138** combined recovery tests pass.
+
+Executed the full real preflight to completion, exit 0, in the separate review
+directory `benchmarks/work/qfo_cpm_checkpoint_preflight_review_20260923`, leaving
+the production continuation paths unused. [Reviewed result](qfo_cpm_checkpoint_preflight_review_20260923.json)
+SHA-256 `3984092251ae85e7056d4d76e79a6cc5089d71edadf6caeec1d1f74639e412e3`:
+361 distinct file identities rechecked, predecessors and original refinement
+verified, original scheduler/stage failure preserved, native runtime unchanged.
+Saved graph: 984,137 vertices and 25,501,180 edges; endpoint SHA-256
+`f182b9e9b23f9158e1c36525bf546b58a4a0cf1f67928d3b829ab822833a0382`, weight
+SHA-256 `6c978e4b078c167c33eb9c69fbedef4e239475e2d93c517a296a964806bcb042`.
+
+Preflight passed, but optimizer_executed, accuracy_evaluated and downstream_admitted
+are explicitly false. No recovery clustering was run. Independent completed-recovery
+admission and submission wrapper remain to finish before freezing/submitting the
+single continuation; its parent will perform another fresh preflight. No existing
+job or dependency changed. DGX remains untouched.
+
 ## Full-Data Refinement Reproduced and Independently Verified (2026-09-23)
 
 Previous turn connected/tested the recovery preflight (5b3a0f9), making progress.
