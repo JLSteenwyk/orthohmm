@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Recovery Admission Failure Paths Tested (2026-09-23)
+
+Previous turn froze/submitted single continuation 22154 (0637916, 649013e),
+making progress. Re-read the objective and rechecked authoritative scheduling.
+Latest poll: 22154 PENDING(Resources), low-CPM scoring 22094_0 RUNNING 22:15,
+BLAST 22103_5 RUNNING 6:27. No restart or unrelated-job change occurred.
+
+Added admission orchestration tests for successful validation and fresh-preflight,
+runtime, optimizer, partition-copy, missing-reference, checkpoint, comparison,
+independent-child failure, child metadata/membership, and input-mutation failures.
+These exercise real file hashes and membership comparisons with mocked scientific
+subprocesses, complementing existing real frozen-worker tests. Failures preserve
+seed_admitted=false. All **183** combined recovery tests pass.
+
+Prepared the independent admission wrapper: two CPUs, 64 GiB, four-hour limit,
+no requeue, dependency afterok:22154, fixed native executor commit 0637916 and
+separate admission output root. `bash -n` passes. It will validate/recompute
+refinement before accepting only the seed; downstream benchmarking remains
+separate. The admission executor is being frozen before submission. DGX untouched.
+
 ## Single High-CPM Continuation Queued (2026-09-23)
 
 Committed/pushed reviewed implementation at
