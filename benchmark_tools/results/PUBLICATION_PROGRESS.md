@@ -1,5 +1,16 @@
 # Publication Progress
 
+## Single Allocator Diagnostic Submitted (2026-09-23)
+
+Committed/pushed implementation 7688a5f and created clean detached executor
+`benchmarks/work/cpm_allocator_diagnostic_v1_20260923` at exact revision
+`7688a5f5d4a5ba6b60d2c61c79a28694f3786102`. Submitted **22157** with one CPU,
+64 GiB, one-hour limit and no requeue; verified these settings with Slurm.
+[Receipt](qfo_cpm_allocator_submission_22157.json) binds source, script and
+executor. This is the single planned refinement-only diagnostic, not a resumed
+admission or optimizer retry. Failed admission 22155 and blocked candidate
+22156 remain unchanged. No diagnostic result is available at submission.
+
 ## Allocator Diagnostic Implemented (2026-09-23)
 
 Previous turn made progress by preserving failed admission evidence and checking
