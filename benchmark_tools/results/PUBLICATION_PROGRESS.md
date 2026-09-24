@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Completion Checklist Corrected Against Current Export (2026-09-23)
+
+Previous turn progressed with manuscript status corrections (6f60e78).
+Re-read the objective; BLAST 22103_8 remains RUNNING, observed 30:28 then
+32:15, with 22105_8 and 22103_9 pending. No restart or dependency change.
+
+The completion checklist's baseline row still described OrthoMCL final-group
+completion without marking it historical. Inspected the actual v6 corrected
+comparison manifest/table: seven admitted rows, OrthoMCL explicitly unadmitted.
+Rehashed all **15 checked provenance records (683186621 bytes)** successfully;
+this verifies the export's recorded inputs, not a fresh upstream scientific
+audit. Current exporter unit suite: **26 passed**.
+
+Updated the baseline requirement row to link the current corrected table and
+frozen recovery handoff, explicitly requiring actual corrected search through
+score admissions and failure-impact analysis. Historical OrthoMCL completion
+cannot satisfy that requirement. Updated the efficiency requirement row to
+state the user's DGX deferral, unrun replacement panel and continued absence
+of controlled comparative timing. No score, inference output, method default,
+historical admission or timing classification changed. Publication remains
+incomplete; no completed workflow implementation was counted as a completed
+production result.
+
 ## Manuscript Historical/Current Status Reconciled (2026-09-23)
 
 Previous turn progressed with explicit grouped failed-query exposure (9c7ead1).
