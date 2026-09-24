@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Guarded Frozen Optimizer Continuation Tested (2026-09-23)
+
+Previous turn added the independent reconstruction validator and recorded actual
+low-CPM completion (dca99bd), making progress. Re-read the goal and confirmed
+BLAST 22103_3 live, low-CPM conversion 22092_0 live, and reconstruction 22153
+resources-pending. Latest poll: BLAST running 10:28, reconstruction still pending,
+low-CPM score job 22094_0 dependency-pending. No job was restarted or submitted.
+
+Implemented `guard_cpm_optimizer.py`. Its internal frozen-worker entry composes
+the existing Python-pair adapter and before/after optimizer observer with an
+exhaustive three-way constructor/saved/native endpoint comparison. It requires
+matching full endpoint and weight fingerprints before allowing one optimizer
+call. Repeated calls, missing constructor arrays, changed graph/weights, stale
+observation files, changed settings/output paths and existing working directories
+are rejected. The fresh output directory is explicitly created: the initial
+integration fixture exposed that the frozen worker does not create it itself.
+
+All 63 focused tests pass, including a small actual frozen worker subprocess that
+runs Leiden, records optimizer_returned, and preserves the gene universe, plus
+the reconstruction and previous stop-before-optimizer tests. This is a tested
+internal execution component, not an admitted full-data recovery. The parent
+preflight must still bind the successful reconstruction, failed-stage/runtime
+evidence, and final refinement before the single scientific continuation can
+be submitted. No new full-data high-CPM groups or scores exist. DGX untouched.
+
 ## Low-CPM Native Validation Passed; Reconstruction Gate Added (2026-09-23)
 
 Previous turn froze/submitted refinement reconstruction 22153 (b2d6a87,
