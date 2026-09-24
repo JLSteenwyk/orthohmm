@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Recovered OrthoMCL QfO Assessment Handoff Implemented (2026-09-23)
+
+Previous turn progressed with recovered pair conversion (218d288). Re-read the
+objective and verified BLAST 22103_8 live at 10:23, later 14:40; 22105_8 remains
+pending. No DGX work or unrelated job changes occurred.
+
+Added `run_qfo_recovered_orthomcl_assessment.py` and its eight-CPU/64-GiB,
+24-hour no-requeue wrapper. Preflight requires completed conversion accounting,
+the exact converter source/executor, retained pair identity/counts, native
+admission and partition audit, unchanged failure coverage, and the same pinned
+reference mapping/environment as the comparator assessments. It uses the
+existing `command_for` implementation for the six frozen endpoints, with
+separate recovered participant/work/results paths and no reuse of old outputs.
+
+Assessment success remains pending independent score admission, with accuracy
+and publication flags false. Failures retain reports/logs; changed provenance
+after execution is rejected. `--check-only` neither starts scoring nor creates
+output directories. No production handoff can run before the recovered chain
+has actually completed and passed its preceding checks.
+
+The new conversion/assessment tests and existing assessment suites report
+**141 passed**, including 37 new stage/scheduler/preflight/run/CLI cases.
+The orchestration tests use fixture files and mocked scheduler/scoring; no
+real benchmark score is implied. Shell syntax passes. The launcher remains
+unscheduled, and a recovery-specific independent score-admission adapter is
+still needed. Actual native inference, conversion, assessment and final result
+consolidation remain outstanding. Publication goal remains incomplete.
+
 ## Recovered Native Group Pair Conversion Implemented (2026-09-23)
 
 Previous turn progressed with independent recovered native output admission

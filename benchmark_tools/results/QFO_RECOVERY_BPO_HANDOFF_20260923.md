@@ -196,3 +196,25 @@ no-requeue launcher with exact executor/job/report-digest arguments. It is not
 scheduled. The focused suite passes 115 tests, including 25 new contract/flow
 cases; shell syntax passes. Terminal conversion verification and a recovered
 assessment/scoring handoff are still required before production QfO scoring.
+
+## Frozen QfO Assessment Handoff
+
+`run_qfo_recovered_orthomcl_assessment.py` now checks completed conversion
+accounting and exact converter identity, pair counts/hashes and reference
+retention, native admission and group-audit agreement, unchanged failed-query
+coverage, and the pinned assessment environment/reference mapping. It calls
+the existing assessment command builder without changing endpoints or settings.
+Fresh paths are `qfo_blast_recovery_assessment_v1`, `qfo_benchmark/w/qc_mcr`,
+and `qfo_benchmark/scoring/corrected_orthomcl_recovered`; participant identity
+is `qfo_corrected_orthomcl_recovered`.
+
+The eight-CPU/64-GiB no-requeue wrapper requires explicit conversion job,
+manifest digest and exact clean executors. `--check-only` performs preflight
+without starting scoring or creating output directories. A successful scoring
+process is only `process_succeeded_pending_independent_admission`, with no
+accuracy/publication authorization. The related suites pass 141 tests,
+including 37 new contract/preflight/run cases; shell syntax passes.
+
+No production scoring is scheduled. The recovery-specific independent score
+admission adapter, actual completed upstream results, and final evidence
+consolidation remain outstanding.
