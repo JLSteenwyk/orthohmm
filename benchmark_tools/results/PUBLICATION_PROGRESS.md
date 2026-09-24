@@ -1,5 +1,37 @@
 # Publication Progress
 
+## Recovered Native Final-Output Admission Implemented (2026-09-23)
+
+Previous turn progressed with the native launcher (a356022). Re-read the full
+objective and polled the live search. BLAST 22103_7 completed in **30:46**;
+22105_7 independently admitted it in **30 seconds**. Eight of twenty replay
+batches have completed admission; 22103_8 is RUNNING (last observed 4:10).
+No DGX access, old-job release or failed high-CPM retry occurred.
+
+Added `admit_recovered_orthomcl.py` and a separate isolated two-CPU/64-GiB,
+24-hour no-requeue launcher. It requires the completed 180-CPU/900-GiB native
+job, exact native executor/source, recovery BPO evidence and unchanged failure
+coverage. It verifies commands, timestamps, runtimes, copied input identities
+and mtimes, final output inventory and pair caches. Configured native sources
+are reconstructed from pinned originals plus the approved path/thread/parallel
+changes and compared directly, not trusted from their reported hashes alone.
+
+The independent scientific-content check reuses the existing final-groups vs
+MCL partition/index audit and native staged-index validator. It rechecks
+provenance and runtime identities after validation. Successful admission
+authorizes only cross-species final-group clique conversion, not native pairwise
+ortholog claims, biological accuracy or publication readiness. Failures retain
+a durable report with conversion authorization false.
+
+The new execution/source/output/flow tests plus original admission/group-audit
+and recovered launcher/input-gate suites report **205 passed**. This includes
+47 new cases; expensive operations are mocked in orchestration tests, with
+the actual content parsers covered by the reused audit suite. Wrapper shell
+syntax passes. No production native output yet exists and the validator is
+not scheduled. Actual BPO preparation/admission and native inference remain
+upstream prerequisites; recovered pair-conversion/scoring handoffs and final
+production validation remain required. Goal remains incomplete.
+
 ## Recovered Native OrthoMCL Launcher Implemented (2026-09-23)
 
 Previous turn progressed by binding BPO admission to its own job (7048e4b).

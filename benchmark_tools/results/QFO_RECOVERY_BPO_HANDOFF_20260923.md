@@ -152,3 +152,25 @@ Recovery-focused tests: 105 passed, including 19 new orchestration/preflight
 cases. Reused native staging/configuration/original-runner/pair-parallel tests:
 71 passed with native smoke enabled, no skips. Shell syntax passes. These
 fixture results do not establish production inference success or accuracy.
+
+## Independent Native Output Admission
+
+`admit_recovered_orthomcl.py` binds the completed native job and frozen runner,
+revalidates recovered BPO evidence, and checks command/environment/timestamps,
+runtime identities, staged copies, source reconstruction and final output/cache
+inventories. It uses the existing independent final-group vs MCL partition/index
+audit, then independently rechecks the native BPO indexes. Before success it
+rechecks all provenance, staging, source/output inventories and runtimes.
+
+Only `recovered_orthomcl_native_outputs_admitted` sets conversion authorization.
+The pair semantics are explicitly cross-species final-group cliques; the report
+does not claim these are native pairwise ortholog predictions. Search failures
+remain intact and accuracy/publication flags remain false. Failed content or
+post-validation checks leave a durable failed report, without conversion rights.
+
+The isolated `qfo_blast_recovery_native_admit_20260923.sh` requires exact native
+and BPO-admission executors plus the actual native job. It uses a separate
+two-CPU/64-GiB allocation and fresh output/cache directories, and remains
+unscheduled. The related contract/flow/content suites pass 205 tests, including
+47 new tests. Shell syntax passes. Production validation and the subsequent
+recovery-specific pair-conversion/scoring workflow remain outstanding.
