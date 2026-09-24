@@ -1,0 +1,20 @@
+{
+  "accuracy_evaluated": false,
+  "executor": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cpm_checkpoint_admission_v1_20260923",
+  "executor_commit": "fd91e7432e988b7e462ab9936143fc7252ed10a4",
+  "job_id": "22155",
+  "native_executor_commit": "0637916c14a81e7a3b31f5aeb5fadfc52b103079",
+  "native_job_id": "22154",
+  "scheduler": "JobId=22155 JobName=qfo_cpm_checkpoint_admit\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=PENDING Reason=Dependency Dependency=afterok:22154(unfulfilled)\n   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:00 TimeLimit=04:00:00 TimeMin=N/A\n   SubmitTime=2026-09-23T21:21:06 EligibleTime=Unknown\n   AccrueTime=Unknown\n   StartTime=Unknown EndTime=Unknown Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-23T21:21:06 Scheduler=Main\n   Partition=gpu AllocNode:Sid=bizon-link:761925\n   ReqNodeList=bizon ExcNodeList=(null)\n   NodeList=\n   NumNodes=1 NumCPUs=2 NumTasks=1 CPUs/Task=2 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=2,mem=64G,node=1,billing=2\n   AllocTRES=(null)\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=2 MinMemoryNode=64G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cpm_checkpoint_admission_v1_20260923/benchmark_tools/results/qfo_cpm_checkpoint_admission_20260923.sh\n   WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\n   StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_checkpoint_admit_22155.log\n   StdIn=/dev/null\n   StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_checkpoint_admit_22155.log\n   TresPerTask=cpu=2\n   \n\n",
+  "script": {
+    "bytes": 1196,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cpm_checkpoint_admission_v1_20260923/benchmark_tools/results/qfo_cpm_checkpoint_admission_20260923.sh",
+    "sha256": "bf661a95ed3999b9e5691d6fb711797138d9712be27b1b19c2c6e5296d750145"
+  },
+  "seed_admitted": false,
+  "source": {
+    "bytes": 11917,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cpm_checkpoint_admission_v1_20260923/benchmark_tools/admit_cpm_checkpoint_recovery.py",
+    "sha256": "76a49ce9cc1b65a3839fffdb5a9658220e8bf4f07756f7649573173b4d3d6a02"
+  }
+}

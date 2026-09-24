@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Independent Recovery Admission Queued (2026-09-23)
+
+Committed/pushed validation tests and wrapper at
+`fd91e7432e988b7e462ab9936143fc7252ed10a4`, then created clean detached executor
+`benchmarks/work/cpm_checkpoint_admission_v1_20260923`. Submitted **22155** and
+verified PENDING(Dependency), afterok:22154, two CPUs, 64 GiB, four-hour limit,
+no requeue. [Receipt](qfo_cpm_checkpoint_admission_submission_22155.json) binds
+native job/commit, admission executor/source/script and scheduler request.
+
+No result has been admitted. The dependency only permits validation after native
+success; all content/provenance checks and separate refinement execution remain
+mandatory. No downstream high-CPM candidate or scoring job has been released.
+DGX and unrelated work remain untouched.
+
 ## Recovery Admission Failure Paths Tested (2026-09-23)
 
 Previous turn froze/submitted single continuation 22154 (0637916, 649013e),
