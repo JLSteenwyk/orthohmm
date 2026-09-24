@@ -1,0 +1,49 @@
+{
+  "accuracy_evaluated": false,
+  "byte_identical_to_native_refinement": true,
+  "checked_records": [
+    {
+      "bytes": 299427,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_refinement_allocator_diagnostic_v1/status.json",
+      "sha256": "e773d6ffd9934fd28abcd55be3d68eb879cbcfc03fcc129a8bf4f9c028f5ec30"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_refinement_allocator_diagnostic_v1/refinement_repeat.txt",
+      "sha256": "f4c6f1973bc9636828baf1e6d9be3f416a18fc8ada5302fb502c082495fc1811"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_checkpoint_recovery_v1/orthogroups_profiles_refined.txt",
+      "sha256": "f4c6f1973bc9636828baf1e6d9be3f416a18fc8ada5302fb502c082495fc1811"
+    },
+    {
+      "bytes": 1291,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_refinement_allocator_diagnostic_v1/child.log",
+      "sha256": "9871a362da76c1a56673a321963ec75e833a04ea5ffa99a1da4f73f9c79476e7"
+    },
+    {
+      "bytes": 2629,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_cpm_allocator_submission_22158.json",
+      "sha256": "7acc4e8204d38f69abecb76e9c0f157379f5432cbe496b55d04ce2886a228053"
+    }
+  ],
+  "child_attempts": 1,
+  "child_returncode": -11,
+  "coverage": {
+    "genes": 984137,
+    "groups": 390845
+  },
+  "job_id": "22158",
+  "limitations": [
+    "Second post-write GC-stack SIGSEGV; PYTHONMALLOC=debug did not diagnose an allocation error.",
+    "No completed child metadata; output equality does not admit the seed.",
+    "No Python core report found in /var/crash; coredumpctl unavailable, gdb installed.",
+    "Root cause unresolved; no automatic retry or downstream release."
+  ],
+  "publication_ready": false,
+  "rechecked_input_records": 984,
+  "scheduler": "JobID|State|ExitCode|Elapsed|AllocCPUS|ReqMem|NodeList\n22158|FAILED|1:0|00:00:33|1|64G|bizon\n22158.batch|FAILED|1:0|00:00:33|1||bizon\n",
+  "seed_admitted": false,
+  "status": "allocator_diagnostic_failure_audited_not_admitted"
+}

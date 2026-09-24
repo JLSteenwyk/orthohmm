@@ -25,7 +25,7 @@ evidence that an experiment completed or a biological hypothesis is true.
 | Outer PATH records prove OrthoFinder's historical companion-tool versions | [Child-PATH audit](DGX_SCALING_MIGRATION_20260917.md) | Unsupported: installed OrthoFinder rewrites its subprocess PATH; current reconstruction resolves bundled DIAMOND2.0.13/FastTree2.1.11/MCL14-137 instead of outer versions. Historical exec-path evidence still requires audit |
 | ARM and x86 scoring are generally equivalent | [Portability diagnostic](native_scoring_portability_20260917.json), [development fix](NATIVE_BANDING_FIX_20260917.md), [one pipeline fixture](dgx_orthohmm_pipeline_smoke_20260917.json) | Not established: frozen narrow-band discrepancies remain; tested correction is in development source only, not the baseline; default64 matches tested synthetic fixtures and both OH modes match one simulation fixture only |
 | A nearby parameter choice improves frozen-method OrthoBench F1 | [Six-variant panel](OB_PARAMETER_NEIGHBORHOOD_RESULTS_20260916.md) | Not established: all six adjusted F1 intervals include zero; no default promotion |
-| Threshold changes improve frozen-method corrected QfO SwissTrees F1 | [Four admitted threshold contrasts](QFO_THRESHOLD_UNCERTAINTY_20260923.md) | Not established: normalization variants match observed family statistics; both margin adjusted intervals include zero. Twelve endpoints independently reproduced; both CPM contrasts remain missing in the planned 18-endpoint correction. No default promotion or broad equivalence claim |
+| Parameter changes improve frozen-method corrected QfO SwissTrees F1 | [Four threshold contrasts and low CPM](QFO_PARTIAL_PARAMETER_UNCERTAINTY_20260923.md) | Not established: normalization variants match observed family statistics; margin and low-CPM adjusted intervals include zero. Fifteen endpoints independently reproduced; high CPM remains missing in the planned 18-endpoint correction. No default promotion or broad equivalence claim |
 | The QfO native graph is reproducibly constructed | [Checked initial-graph repeats](QFO_CHECKED_REPEAT_RESULTS_20260917.md) | Three checked Python-pair runs preserve the full graph and yield identical partitions; not general determinism or complete historical replay equivalence |
 | Profile-branch processing improves recovered-stage SwissTrees accuracy | [Paired SwissTrees intervals](QFO_SWISS_INTERVALS_20260917.md) | Not established: both profile contrasts have negative observed F1 differences and adjusted intervals including zero; effects occur in CASP and GH14 only. No superiority or equivalence claim |
 | Recovered-stage QfO uncertainty is fully characterized | [Count audit](qfo_swiss_counts_20260917.json), [paired intervals](qfo_swiss_intervals_20260917.json) | Only SwissTrees completed: 18-family paired resampling, all12 adjusted intervals include zero. Other challenges and secondary mean require separate methods |
@@ -145,15 +145,15 @@ not establish any comparative resource advantage.
   replaced by shared-host timings.
 
 - September 23 execution update: corrected BLAST 21713 was interrupted;
-  recovery array 22103 has its first batch complete and second batch running,
-  with independent batch validation still pending. Corrected FastOMA is
+  recovery array 22103 continues with six batches completed and independently
+  validated. Corrected FastOMA is
   admitted in the [seven-method comparison](qfo_corrected_comparison_20260923_v6/scores.md);
-  corrected OrthoMCL remains missing. Threshold score array 22043 continues.
-  Low-CPM candidate preparation 22084_0 completed and its validator is
-  resource-pending. High-CPM 22081_1 failed by SIGSEGV: the
-  [minimal-import constructor diagnostic](QFO_CPM_HIGH_CONSTRUCTOR_RESULT_22119.md)
-  succeeded without resolving its cause; the frozen-import diagnostic 22121
-  is queued. Partial outputs have not been promoted to scientific scores.
+  corrected OrthoMCL remains missing. All four threshold scores and low CPM
+  are admitted, with [paired uncertainty](QFO_PARTIAL_PARAMETER_UNCERTAINTY_20260923.md).
+  High-CPM checkpoint recovery 22154 completed, but admission 22155 and the
+  [allocator diagnostic 22158](QFO_ALLOCATOR_DIAGNOSTIC_RESULT_22158.md) failed
+  during post-write readback. Root cause remains unresolved; candidate 22156
+  remains blocked. Partial high-CPM outputs have not been promoted to scores.
   See the [live progress ledger](PUBLICATION_PROGRESS.md) for later observations.
 
 - [Relocated descriptive feature rendering](SWISS_DESCRIPTIVE_FEATURE_REPRODUCTION_20260923.md)

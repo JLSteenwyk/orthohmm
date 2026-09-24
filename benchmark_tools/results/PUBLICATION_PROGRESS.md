@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Allocator Diagnostic Reproduced Readback Crash (2026-09-23)
+
+Previous turn made progress by checking 980 records and submitting 22158
+(ea61d5c). Re-read the objective. Authoritative accounting now shows **22158
+FAILED 1:0 in 33 seconds**, one child attempt, return code -11. The fault-handler
+stack again reports garbage collection in post-write read_partition, with no
+allocator diagnostic before SIGSEGV. No automatic retry was made.
+
+Rechecked all **984** recorded diagnostic inputs/sources and independently read
+the written partition: 984,137 unique genes, 390,845 groups, identical bytes to
+both native refinements and failed admission output. Completion metadata remains
+absent. Gdb is installed; coredumpctl is absent, no Python report was found in
+/var/crash, and the bounded kernel query returned no segfault/OOM entry. No
+unrelated crash contents were inspected and no root cause is inferred.
+
+[Diagnostic result](QFO_ALLOCATOR_DIAGNOSTIC_RESULT_22158.md) and its linked
+machine-readable audit retain the failure. Updated manuscript and claims
+checklist to distinguish native recovery completion from failed admission,
+correct stale low-CPM/threshold availability, and keep high CPM missing.
+Future work needs native fault localization or a smaller reproducer, not
+repeated attempts to obtain a successful result. Candidate 22156 stays blocked.
+BLAST 22103_6 remains active (17:11 at initial poll). DGX remains untouched;
+publication completion is not claimed. Existing manuscript renders remain
+historical snapshots and require a later refreshed visual review.
+
 ## Corrected Allocator Diagnostic Running (2026-09-23)
 
 Previous turn made progress by fixing/testing the symlink preflight convention

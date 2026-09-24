@@ -873,13 +873,18 @@ including the CPM contrasts. The subsequent low-CPM result had SwissTrees F1
 interval [-21.9395, 0.7887]). Three families improved, thirteen tied, and two
 worsened; VATB had the largest family-level decline, without an established
 pipeline mechanism. Precision and recall intervals also included zero.
-High-CPM replay failed with SIGSEGV and its checkpoint recovery has not yet
-produced an admitted score; no missing result was imputed. The full QfO
+High-CPM replay failed with SIGSEGV. Its checkpoint continuation completed,
+but independent validation and a subsequent allocator-debug refinement
+diagnostic both failed during post-write partition readback. Written partitions
+were byte-identical and covered the full gene universe, but this did not
+establish safe execution or authorize an accuracy result. The native cause
+remains unresolved; no missing result was imputed. The full QfO
 parameter panel therefore remains incomplete. These findings do not justify changing
 frozen defaults and are development-exposed SwissTrees evidence, not a joint
 uncertainty analysis of all QfO metrics or independent confirmation.
 [Threshold results, provenance and reproduction](QFO_THRESHOLD_UNCERTAINTY_20260923.md).
 [Updated low-CPM uncertainty and provenance](QFO_PARTIAL_PARAMETER_UNCERTAINTY_20260923.md).
+[High-CPM validation failure evidence](QFO_ALLOCATOR_DIAGNOSTIC_RESULT_22158.md).
 
 ## Limitations And Unfinished Analyses
 
