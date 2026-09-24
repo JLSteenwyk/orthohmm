@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Corrected Allocator Diagnostic Running (2026-09-23)
+
+Previous turn made progress by fixing/testing the symlink preflight convention
+(83e6a56). Re-read the full goal. Confirmed 22157 terminal FAILED in one second
+and the diagnostic output directory absent, so no native child ran previously.
+Rechecked all **980** retained input records successfully before submission.
+
+Created a clean detached executor
+`benchmarks/work/cpm_allocator_diagnostic_v2_20260923`, exact revision
+`83e6a564dfaf97ad74128ca274d16914fafe08b9`. Submitted **22158**, one CPU,
+64 GiB, one hour, no requeue. [Receipt](qfo_cpm_allocator_submission_22158.json)
+retains source/script identities, allocation, prior preflight failure and
+prelaunch record count. Confirmed RUNNING at 28 seconds and durable status
+`allocator_diagnostic_running`, `child_attempts=1`, without a child return code
+yet. This is the first planned allocator-debug scientific execution, not an
+optimizer retry. No result is admitted and 22156 remains blocked on failed
+admission 22155. BLAST 22103_6 was RUNNING 15:10 at the turn's initial poll.
+DGX remains untouched; all broader publication requirements remain active.
+
 ## Diagnostic Preflight Path Convention Corrected (2026-09-23)
 
 Job **22157 failed 1:0 in one second before output creation or child launch**.

@@ -1,0 +1,21 @@
+{
+  "accuracy_evaluated": false,
+  "executor": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cpm_allocator_diagnostic_v2_20260923",
+  "executor_commit": "83e6a564dfaf97ad74128ca274d16914fafe08b9",
+  "job_id": "22158",
+  "prelaunch_records_checked": 980,
+  "prior_preflight_failure": "22157",
+  "publication_ready": false,
+  "scheduler": "JobId=22158 JobName=qfo_cpm_allocator_diagnostic\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=RUNNING Reason=None Dependency=(null)\n   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:17 TimeLimit=01:00:00 TimeMin=N/A\n   SubmitTime=2026-09-23T21:50:57 EligibleTime=2026-09-23T21:50:57\n   AccrueTime=2026-09-23T21:50:57\n   StartTime=2026-09-23T21:50:57 EndTime=2026-09-23T22:50:57 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-23T21:50:57 Scheduler=Main\n   Partition=gpu AllocNode:Sid=bizon-link:1687633\n   ReqNodeList=bizon ExcNodeList=(null)\n   NodeList=bizon\n   BatchHost=bizon\n   NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=1,mem=64G,node=1,billing=1\n   AllocTRES=cpu=1,mem=64G,node=1,billing=1\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=1 MinMemoryNode=64G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cpm_allocator_diagnostic_v2_20260923/benchmark_tools/results/qfo_cpm_refinement_allocator_20260923.sh\n   WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\n   StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_allocator_22158.log\n   StdIn=/dev/null\n   StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_allocator_22158.log\n   TresPerTask=cpu=1\n   \n\n",
+  "script": {
+    "bytes": 899,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cpm_allocator_diagnostic_v2_20260923/benchmark_tools/results/qfo_cpm_refinement_allocator_20260923.sh",
+    "sha256": "4e29830a15022ad424ddbd6567ea4ee039e5d09276fb29dd6b47ba7597184003"
+  },
+  "seed_admitted": false,
+  "source": {
+    "bytes": 6919,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cpm_allocator_diagnostic_v2_20260923/benchmark_tools/diagnose_cpm_refinement_allocator.py",
+    "sha256": "8b12e4fa17d257ad73e3b5ff4332db81d52ea99e8d24a041f59dc64afb6e93b2"
+  }
+}
