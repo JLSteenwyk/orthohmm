@@ -1,5 +1,26 @@
 # Publication Progress
 
+## High-CPM Worker-Boundary Diagnostic Prespecified (2026-09-23)
+
+Previous turn verified the isolated BPO launcher (b6a09ce), making progress.
+Re-read the objective and verified 22088_0 remains live; recovery dependencies
+remain pending. Reviewed the failed high-CPM stage and both successful direct
+constructor probes against the actual frozen-worker and adapter source.
+
+The direct probes did not exercise the full worker setup and adapter path.
+Prespecified a [single frozen-worker boundary diagnostic](QFO_CPM_WORKER_BOUNDARY_PROTOCOL_20260923.md)
+on the exact failed graph: stop at optimizer entry, compare every endpoint and
+weight, never invoke Leiden optimization, preserve original payload/failure.
+This is not a full scientific retry or a claim to reproduce historical memory
+state. The native cause remains unknown and high-CPM scores remain missing.
+
+Implemented the stop observer; five real small-igraph tests pass without skips,
+including weight/endpoint/constructor mismatch and missing caller-array cases.
+The original optimizer function is restored on success/failure. Full diagnostic
+parent/worker provenance and frozen scheduling remain to be implemented before
+any full-size execution. No existing scientific jobs or DGX were changed.
+
+
 ## Dedicated Recovery BPO Launcher Verified (2026-09-23)
 
 Previous turn exported all admitted threshold endpoints (a606063), making
