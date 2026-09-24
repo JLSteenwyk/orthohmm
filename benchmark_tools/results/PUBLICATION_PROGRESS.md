@@ -1,5 +1,27 @@
 # Publication Progress
 
+## High-CPM Recovery Boundary Reviewed (2026-09-23)
+
+The preceding user-direction turn only acknowledged DGX deferral, so it made no
+new scientific progress. Re-read the full goal and checked live scheduling:
+low-CPM phylogeny 22088_0 is RUNNING at 1:10:49; BLAST batch 22103_3 waits for
+resources and merge 22150/admission 22151 remain dependency-pending.
+
+Reviewed frozen replay control flow and the actual failed high-CPM files. Three
+clustering stages are recorded checked, the fourth failed, and no final replay
+report or profile partition exists. HMM expansion preceded the saved fourth-stage
+graph; after it, only clustering and frozen refinement are needed for the seed.
+Profile counters and original full-run timings were not saved and cannot be
+reconstructed merely by recovering that graph.
+
+Committed a separate [checkpoint recovery protocol](QFO_CPM_CHECKPOINT_RECOVERY_PROTOCOL_20260923.md)
+before any scientific retry. It requires fresh predecessor and input validation,
+one fixed-setting optimizer continuation, independently reconstructed refinement,
+and explicit recovery-aware downstream admission. Existing validators correctly
+reject the failed original job and must not be bypassed by changing dependencies.
+No scientific retry has been launched; high-CPM accuracy remains missing. Next:
+implement and test the recovery preflight and continuation. DGX remains untouched.
+
 ## Full-Size Frozen Worker Reached Exact Preoptimizer Graph (2026-09-23)
 
 Previous turn tested/froze/submitted diagnostic 22152 (d72ad55, 187d33f), making
