@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Twelfth Recovery Batch And Updated Failure Description (2026-09-24)
+
+Previous turn was a verified wait on 22103_11. Re-read the objective and
+polled the same job: native execution completed 0:0 in **13:19**, independent
+admission 22105_11 completed 0:0 in **15 seconds**, and 22103_12 is RUNNING.
+Twelve of twenty replay batches are individually admitted; whole-search,
+native-group and accuracy admissions remain pending.
+
+Admission `benchmarks/work/qfo_blast_recovery_admission_11_20260923.json`
+has SHA256 `c389d71c87b5388b8ae69ef5c4111e012780430328129aea05d3973b97d3635c`.
+Its 5,000 queries comprise 4,892 with hits, 107 no-hit queries without logged
+failure, and one logged failure: `tr|A0A0N7KME8|A0A0N7KME8_ORYSJ`, length 180,
+with setup/statistics diagnostics (unable to calculate Karlin-Altschul
+parameters). No outgoing, self or incoming hits occur for it in this batch;
+incoming hits elsewhere and eventual group membership are not yet known.
+The table contains 769,225 HSP rows and 486,990 distinct directed pairs.
+
+Executed the existing content-bound failure summarizer across batches 0-11.
+The [updated partial report](qfo_replay_first12_failure_description_20260924.json)
+rechecks selected admission/query/log records against fresh scheduler evidence:
+60,000 queries, 56,148 with hits, 3,805 no-hit without logged failure, and
+**47 failed**. Failure lengths range 2-541 (median 30); overlapping categories
+are 47 setup, 40 statistics and seven short-query failures. The new failed
+sequence has 46 R, 40 A and 37 P residues among 180, with full residue counts
+retained. Composition is descriptive, not an experimentally proven cause.
+
+This is not a random sample or whole-search failure rate, nor a fresh full-HSP
+audit. No inferred recovery, final membership, reference exposure or accuracy
+effect is asserted. Original first-nine reports remain retained. No scientific
+settings or dependencies changed; DGX remains deferred.
+
 ## Eleventh Recovery Batch Admitted (2026-09-24)
 
 Previous turns were verified waits on live 22103_10, whose output continued
