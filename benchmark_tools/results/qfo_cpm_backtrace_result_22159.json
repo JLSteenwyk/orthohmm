@@ -1,0 +1,45 @@
+{
+  "status": "single_backtrace_diagnostic_completed_crash_not_reproduced",
+  "scheduler": "JobID|State|ExitCode|Elapsed|AllocCPUS|ReqMem\n22159|COMPLETED|0:0|00:00:44|1|64G\n",
+  "records_checked": 986,
+  "coverage": {
+    "genes": 984137,
+    "groups": 390845
+  },
+  "output": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_refinement_backtrace_diagnostic_v1/refinement_repeat.txt",
+    "bytes": 23875927,
+    "sha256": "f4c6f1973bc9636828baf1e6d9be3f416a18fc8ada5302fb502c082495fc1811"
+  },
+  "report": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_refinement_backtrace_diagnostic_v1/status.json",
+    "bytes": 331732,
+    "sha256": "cdcc699426390ea26c32b6c009acca90fa5c1bbe60330a88d8869947d6da3aa3"
+  },
+  "child_report": {
+    "bytes": 2996,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_refinement_backtrace_diagnostic_v1/refinement_repeat.json",
+    "sha256": "642498da86d25fa0c3c1a9566d098a35265bc3bd8082c099e9ac16b7f8731366"
+  },
+  "log": {
+    "bytes": 12300,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_refinement_backtrace_diagnostic_v1/child.log",
+    "sha256": "1e1b98499ee14ad2cc5826b8225466e374fae73e4f9fffa14607d16d4f7f286d"
+  },
+  "debugger": {
+    "binary": {
+      "bytes": 11744504,
+      "path": "/usr/bin/gdb",
+      "sha256": "f0068d3b418ae039c309574b33901b82404025eb46c2e983246b9c3976ba7e83"
+    },
+    "version": "GNU gdb (Ubuntu 15.0.50.20240403-0ubuntu1) 15.0.50.20240403-git\nCopyright (C) 2024 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n"
+  },
+  "seed_admitted": false,
+  "accuracy_evaluated": false,
+  "publication_ready": false,
+  "limitations": [
+    "One negative reproduction under instrumentation; no crash backtrace or root cause obtained.",
+    "Identical output and successful diagnostic do not repair failed scientific admission 22155.",
+    "No retry, optimizer, score evaluation or dependency release."
+  ]
+}

@@ -1,5 +1,24 @@
 # Publication Progress
 
+## One-Shot GDB Diagnostic Completed Without Crash (2026-09-23)
+
+Following preparation in 4a414d5, created clean detached executor
+`benchmarks/work/cpm_backtrace_diagnostic_v1_20260923` at
+`4a414d59ac59f4a8a74550758bab47a1ed4b8e84` and repeated all **21 tests** there.
+Submitted exactly one job, **22159**, one CPU/64 GiB/one hour/no requeue.
+It completed 0:0 in 44 seconds. GDB reports normal child exit, not SIGSEGV;
+no crash backtrace was obtained. No retry or scientific admission followed.
+
+Independently rechecked all **986** recorded references, log and completion
+report; repeated output membership/metadata validation: 984137 genes in 390845
+groups, with the same partition hash as prior successful and failed refinement
+outputs. Runtime before/after checks agree. This is a negative reproduction
+under instrumentation, not a root cause or memory-safety finding. The
+[result](QFO_CPM_BACKTRACE_RESULT_22159.md) retains debugger warnings and links
+machine-readable submission/result records. Admission 22155 and blocked
+candidate 22156 remain unchanged; high-CPM accuracy stays missing. BLAST batch
+10 remained live at 18:09 during the diagnostic. DGX remains deferred.
+
 ## Native Backtrace Diagnostic Prepared (2026-09-23)
 
 Previous turn progressed with actual partial replay-failure evidence (5bd5007).
