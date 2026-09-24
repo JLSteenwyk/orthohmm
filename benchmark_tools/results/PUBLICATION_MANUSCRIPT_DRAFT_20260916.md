@@ -1,6 +1,6 @@
 # OrthoHMM: HMM-Centered Orthogroup Inference And Phylogenetic Refinement
 
-Working manuscript, updated 20 September 2026. Not submission-ready. Sections below
+Working manuscript, updated 23 September 2026. Not submission-ready. Sections below
 distinguish completed development-exposed analyses from prospective work.
 Internal evidence links are supplied for audit. An initial
 [verified literature bibliography](PUBLICATION_REFERENCES_20260917.md)
@@ -901,10 +901,10 @@ uncertainty analysis of all QfO metrics or independent confirmation.
 ### SwissTrees Input Coverage
 
 A [frozen numeric-identity audit](SWISS_SEQUENCE_ALIAS_AUDIT_20260917.md)
-found14SwissTrees reference proteins without mapped accessions in the frozen
+found 14 SwissTrees reference proteins without mapped accessions in the frozen
 factorial FASTAs. All belong to the retained Xenopus tropicalis annotation
-resource. Their577incident reference relations have identical native labels
-across all eight retained tools:181false negatives and396true negatives,
+resource. Their 577 incident reference relations have identical native labels
+across all eight retained tools: 181 false negatives and 396 true negatives,
 with no true or false positives. [The relation audit](SWISS_MISSING_INPUT_RELATIONS_20260917.md)
 preserves the full reference denominator and original scores. This common
 component does not establish ranking invariance under removal, historical
@@ -913,10 +913,10 @@ provenance questions and any separately declared sensitivity analysis remain
 outstanding; missing proteins are not relabeled as algorithmic fragment errors.
 
 The subsequent [whole-input mapping audit](QFO_ORIGINAL_MAPPING_COVERAGE_20260917.md)
-localizes a larger original-release mismatch to Xenopus:990input accessions
-are unmapped and8,623reference numeric identities lack an original input
-accession. All78canonical inputs match the original archive. EBI provides a
-separate corrected2020release for this proteome. Subsequent
+localizes a larger original-release mismatch to Xenopus: 990 input accessions
+are unmapped and 8,623 reference numeric identities lack an original input
+accession. All 78 canonical inputs match the original archive. EBI provides a
+separate corrected 2020 release for this proteome. Subsequent
 [archive comparison](QFO_CORRECTED_ARCHIVE_ACQUIRED_20260918.md) and
 [native sequence/staging audits](QFO_CORRECTED_INPUTS_STAGED_20260918.md)
 establish compatibility with the retained scorer: all 984,137 reference

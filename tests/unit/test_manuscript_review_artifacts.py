@@ -10,6 +10,26 @@ from benchmark_tools.prepare_ob_candidate_neighborhood import record
 ROOT = Path(__file__).resolve().parents[2] / "benchmark_tools/results"
 
 
+def test_v6_updated_results_and_pdf_identity():
+    html = ROOT / "PUBLICATION_MANUSCRIPT_REVIEW_20260923_v6.html"
+    text = html.read_text()
+    assert "23 September 2026" in text
+    assert "276 genes" in text
+    assert "found14SwissTrees" not in text
+    assert "QFO_VATB_PARTITION_TRACE_20260923.md" in text
+    report = json.loads((ROOT / "manuscript_asset_review_20260923_v6.json").read_text())
+    assert report["unique_targets"] == 178
+    assert report["local_occurrences"] == 196
+    assert report["untracked_targets"] == []
+    review = json.loads((ROOT / "manuscript_pdf_review_20260923_v6.json").read_text())
+    assert review["embedded_images"] == 11
+    assert review["visually_reviewed_pages"] == [12, 17]
+    assert review["publication_ready"] is False
+    for item in (report["html"], review["pdf"], review["html"], review["asset_report"]):
+        actual = record(ROOT / Path(item["path"]).name)
+        assert (actual["bytes"], actual["sha256"]) == (item["bytes"], item["sha256"])
+
+
 class Images(HTMLParser):
     def __init__(self):
         super().__init__()

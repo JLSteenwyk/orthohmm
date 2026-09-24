@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Updated HTML/PDF Manuscript Review (2026-09-23)
+
+Previous turn made progress by verifying the VATB copy-guard evidence (890f3b2).
+Re-read the goal and scheduler state: BLAST **22103_6 completed in 27:24**,
+**22105_6 admission completed in 27 seconds**, and **22103_7 RUNNING**. Seven of
+twenty batches have completed their independent admission jobs. No failed
+high-CPM retry, dependency release or DGX action occurred.
+
+Refreshed the manuscript render with uncertainty/VATB/failure updates. Initial
+PDF inspection exposed adjacent numeric-spacing errors and an old draft date;
+corrected those without altering values, then produced final v6 HTML/PDF.
+Asset validation reports 196 local occurrences, 178 tracked targets, no
+untracked targets, and empty Pandoc stderr. All eleven images are embedded in
+the 36-page PDF. Visually inspected final pages 12 and 17: ablation figures and
+updated text are present and not visibly clipped. This is a spot review only.
+
+[Review and limitations](MANUSCRIPT_RENDER_REVIEW_20260923_v6.md) link artifacts
+and machine-readable receipts. Added a regression check binding final HTML/PDF
+identities and new content. Broader copyediting, condensation, full visual
+review, scientific completion and archival closure remain outstanding.
+
 ## VATB Copy-Guard Predicate Verified (2026-09-23)
 
 Previous turn progressed by locating VATB separation before phylogeny

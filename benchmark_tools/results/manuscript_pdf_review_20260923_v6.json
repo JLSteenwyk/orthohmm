@@ -1,0 +1,49 @@
+{
+  "asset_report": {
+    "bytes": 85162,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/manuscript_asset_review_20260923_v6.json",
+    "sha256": "71595dc373a2e9391b0a33837e0233fda6e96fe9bf0caef3fd50080251cc248b"
+  },
+  "browser_version": "Google Chrome 134.0.6998.35",
+  "embedded_images": 11,
+  "html": {
+    "bytes": 140008,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/PUBLICATION_MANUSCRIPT_REVIEW_20260923_v6.html",
+    "sha256": "33c974c32ebf6357edb743576d4aaa11153d05b1b1650e43904d768672e91297"
+  },
+  "image_inventory": "page   num  type   width height color comp bpc  enc interp  object ID x-ppi y-ppi size ratio\n--------------------------------------------------------------------------------------------\n   5     0 image    2700  1260  icc     3   8  image  no        84  0   450   450  167K 1.7%\n  11     1 image    2880  2340  icc     3   8  image  no       141  0   480   480  314K 1.6%\n  12     2 image    3420  1620  icc     3   8  image  no       148  0   570   570  261K 1.6%\n  12     3 image    3420  1440  icc     3   8  image  no       149  0   570   571  226K 1.6%\n  14     4 image    3060  1224  icc     3   8  image  no       168  0   510   511  185K 1.7%\n  15     5 image    2880  2070  icc     3   8  image  no       174  0   480   480  261K 1.5%\n  19     6 image    2700  1260  icc     3   8  image  no       208  0   450   450  132K 1.3%\n  21     7 image    2700  1620  icc     3   8  image  no       223  0   523   522  202K 1.6%\n  21     8 image    2700  1620  icc     3   8  image  no       224  0   523   524  210K 1.6%\n  22     9 image    2700  1620  icc     3   8  image  no       229  0   523   522  231K 1.8%\n  25    10 image    3420  1620  icc     3   8  image  no       250  0   570   570  265K 1.6%\n",
+  "limitations": [
+    "Spot review only, not a visual review of every page or verification of scientific claims.",
+    "Local-relative HTML evidence links require repository assets; PDF is not a standalone reproducibility archive.",
+    "Browser PDF metadata and pagination may vary across environments."
+  ],
+  "observations": [
+    "Updated parameter/VATB text and corrected adjacent numeric spacing readable without observed clipping on page 17.",
+    "Two ablation figures render with their surrounding text on page 12; embedded resolution retained.",
+    "36-page working draft requires condensation, broader copyediting and whole-document review."
+  ],
+  "page_images": [
+    {
+      "bytes": 324541,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/manuscript_review_v6_page12.png",
+      "sha256": "7a3e499cd1ef8cd3c9c65cc1061ef8283238149ea3ca4fd7e899d7329784837f"
+    },
+    {
+      "bytes": 471116,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/manuscript_review_v6_page17.png",
+      "sha256": "ab65947e351e52309dccb43e54782c2e6e8d9f61629c8701fc1346cb640b5476"
+    }
+  ],
+  "pdf": {
+    "bytes": 2924373,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/PUBLICATION_MANUSCRIPT_REVIEW_20260923_v6.pdf",
+    "sha256": "5f6dd93520043724a707a56042bb711f12a49251603a9e4ee771a5418972ba7d"
+  },
+  "pdfinfo": "Title:           OrthoHMM publication working draft\nCreator:         Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/134.0.0.0 Safari/537.36\nProducer:        Skia/PDF m134\nCreationDate:    Wed Sep 23 22:05:32 2026 EDT\nModDate:         Wed Sep 23 22:05:32 2026 EDT\nCustom Metadata: no\nMetadata Stream: no\nTagged:          yes\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           36\nEncrypted:       no\nPage size:       612 x 792 pts (letter)\nPage rot:        0\nFile size:       2924373 bytes\nOptimized:       no\nPDF version:     1.4\n",
+  "publication_ready": false,
+  "status": "manuscript_pdf_spot_reviewed",
+  "visually_reviewed_pages": [
+    12,
+    17
+  ]
+}
