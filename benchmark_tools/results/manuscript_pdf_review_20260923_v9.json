@@ -1,0 +1,38 @@
+{
+  "pdf": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/PUBLICATION_MANUSCRIPT_REVIEW_20260923_v9.pdf",
+    "bytes": 2926516,
+    "sha256": "6bcc5b401f8b90a59ccef78a78d77c077ebbd5708514a0087830accdf2608e9b"
+  },
+  "html": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/PUBLICATION_MANUSCRIPT_REVIEW_20260923_v9.html",
+    "bytes": 141200,
+    "sha256": "02ff0e7ffb5060c13728f21df93d34d5005ec602679d6b6c63ed9d3405e98f6a"
+  },
+  "asset_review": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/manuscript_asset_review_20260923_v9.json",
+    "bytes": 85994,
+    "sha256": "c03df978365a1b437f527fa2b4e187870be03fc0fedaafd383763377dc5c6644"
+  },
+  "status": "supplementary_caption_layout_reviewed",
+  "publication_ready": false,
+  "pages": 37,
+  "image_occurrences": 11,
+  "out_of_page_blocks": [],
+  "visually_reviewed_pages": [
+    22,
+    23
+  ],
+  "raster_max_dimension": 1300,
+  "semantic_check": "Pandoc AST equals aee085e manuscript exactly after removing three review-figure Div wrappers.",
+  "observations": [
+    "Duplication and sequence-identity figures and complete supplementary captions share page 22.",
+    "Fragment figure and complete supplementary caption share page 23.",
+    "Figure data and all manuscript text are unchanged."
+  ],
+  "limitations": [
+    "Only changed pages visually inspected for v9; v8 has the full-page overview.",
+    "Small figure labels, manuscript condensation and journal typesetting remain open.",
+    "No scientific or publication-readiness claim follows."
+  ]
+}

@@ -10,6 +10,45 @@ from benchmark_tools.prepare_ob_candidate_neighborhood import record
 ROOT = Path(__file__).resolve().parents[2] / "benchmark_tools/results"
 
 
+class FigureGroups(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.groups = []
+        self.active = None
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag == "div" and "review-figure" in attrs.get("class", "").split():
+            assert self.active is None
+            self.active = dict(style=attrs["style"], images=[], text=[])
+        if tag == "img" and self.active is not None:
+            self.active["images"].append(attrs["src"])
+
+    def handle_data(self, text):
+        if self.active is not None:
+            self.active["text"].append(text)
+
+    def handle_endtag(self, tag):
+        if tag == "div" and self.active is not None:
+            self.groups.append(self.active)
+            self.active = None
+
+
+def test_v9_supplementary_figures_keep_explicit_captions():
+    parsed = FigureGroups()
+    parsed.feed((ROOT / "PUBLICATION_MANUSCRIPT_REVIEW_20260923_v9.html").read_text())
+    assert len(parsed.groups) == 3
+    for group, title in zip(parsed.groups, ("Duplication Annotations", "Sequence Identity", "Fragment Annotations")):
+        assert len(group["images"]) == 1
+        assert "break-inside: avoid" in group["style"]
+        text = " ".join("".join(group["text"]).split())
+        assert "Supplementary Figure: " + title + "." in text
+    report = json.loads((ROOT / "manuscript_asset_review_20260923_v9.json").read_text())
+    actual = record(ROOT / "PUBLICATION_MANUSCRIPT_REVIEW_20260923_v9.html")
+    assert actual["sha256"] == report["html"]["sha256"]
+    assert report["unique_targets"] == 180 and report["local_occurrences"] == 198
+
+
 def test_v6_updated_results_and_pdf_identity():
     html = ROOT / "PUBLICATION_MANUSCRIPT_REVIEW_20260923_v6.html"
     text = html.read_text()

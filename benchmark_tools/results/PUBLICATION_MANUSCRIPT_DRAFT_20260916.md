@@ -1109,6 +1109,8 @@ collisions, default-S nodes, family composition and development exposure
 limit interpretation. No new subgroup intervals, causal claims or
 duplication-rate interpretation are made. Missing OrthoMCL remains NA.
 
+::: {.review-figure style="break-inside: avoid; page-break-inside: avoid;"}
+
 ![Descriptive duplication-annotation differences in F1, precision and recall versus full OrthoFinder.](swiss_duplication_figure_v2_20260923/swiss_duplication_descriptive.png)
 
 **Supplementary Figure: Duplication Annotations.** Points show differences
@@ -1121,6 +1123,10 @@ the source table; unavailable OrthoMCL is not plotted as zero.
 [Figure data and provenance](swiss_duplication_figure_v2_20260923/manifest.json)
 retain all 48 endpoint records, including six unavailable values.
 
+:::
+
+::: {.review-figure style="break-inside: avoid; page-break-inside: avoid;"}
+
 ![Descriptive identity-stratified differences in F1, precision and recall versus full OrthoFinder.](swiss_descriptive_feature_figures_20260923/swiss_identity_descriptive.png)
 
 **Supplementary Figure: Sequence Identity.** Points show observed differences
@@ -1129,6 +1135,10 @@ families. No subgroup intervals or significance tests are added. Separate
 x-axis ranges are used for each metric. Missing OrthoMCL remains unavailable;
 full OrthoFinder is the zero-difference reference. Configuration differences
 are not isolated phylogeny effects, and identity is not calibrated distance.
+
+:::
+
+::: {.review-figure style="break-inside: avoid; page-break-inside: avoid;"}
 
 ![Descriptive historical fragment-annotation differences, including baseline-only sensitivity views.](swiss_descriptive_feature_figures_20260923/swiss_fragment_descriptive.png)
 
@@ -1141,6 +1151,8 @@ missing in the baseline-only view. No causal or inferential claim follows
 from a subgroup sign change. [Figure data and provenance](swiss_descriptive_feature_figures_20260923/manifest.json)
 link both figures to the pinned descriptive tables and all 144 displayed
 endpoint records, including unavailable values.
+
+:::
 
 Old groups, trees, scores and confidence intervals cannot
 be relabeled as corrected results. The previously measured 53 legacy BLAST

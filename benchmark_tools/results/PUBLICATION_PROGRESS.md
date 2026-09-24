@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Supplementary Captions Kept With Figures (2026-09-23)
+
+Previous turn progressed with manuscript v8 and its 37-page overview (aee085e).
+Re-read the objective; BLAST 22103_9 RUNNING 24:41. Fixed the concrete caption
+splits found in that review by placing each of the three supplementary figures
+and its caption in a presentation-only keep-together Div. Pandoc AST comparison
+against aee085e is exact after removing those three wrappers: no scientific
+text, figure, result or link changed. The renderer itself is unchanged.
+
+[V9 review](MANUSCRIPT_RENDER_REVIEW_20260923_v9.md): 37 PDF pages, 11 images,
+no out-of-page blocks; 198 local occurrences/180 targets. Visually checked
+pages 22-23 at 1300 pixels: all three supplementary figures now share a page
+with their complete captions. **14 tests passed**, including new HTML group
+checks. Other pages retain v8 overview evidence, not a claimed fresh v9 visual
+review. Small labels, manuscript condensation and journal formatting remain
+open. No inference/scoring, dependency or DGX change; goal remains incomplete.
+
 ## Manuscript V8 And Full-Page Overview (2026-09-23)
 
 Previous turn progressed with the one-shot GDB result (52eb309). Re-read the

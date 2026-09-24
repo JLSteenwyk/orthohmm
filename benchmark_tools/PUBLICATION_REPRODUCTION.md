@@ -7,11 +7,11 @@ are statistical reproduction only and do not submit scheduler jobs.
 
 ## Method And Results
 
-- [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260923_v8.md)
+- [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260923_v9.md)
   provides the dated HTML, checked local-asset inventory and citation inventory,
   including current FastOMA results and the DGX deferral. It is not a
-  standalone archive or completed typesetting; all pages received an overview
-  layout check, not full-resolution copyediting.
+  standalone archive or completed typesetting; v8 received an all-page overview
+  and v9 a targeted caption-layout check, not full-resolution copyediting.
 - [Corrected figure supplements](results/PUBLICATION_CORRECTED_FIGURE_BUNDLE_20260919.md)
   include the seven-method FastOMA comparison exported at `27113f4`, with
   isolated relocated verification and retained-count arithmetic reproduction.
