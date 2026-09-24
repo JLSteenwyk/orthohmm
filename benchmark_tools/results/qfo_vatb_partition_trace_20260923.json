@@ -1,0 +1,1607 @@
+{
+  "checked_records": [
+    {
+      "bytes": 5159,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/trace_qfo_vatb_partitions.py",
+      "sha256": "3ceba3e217d21d7f8497e1963dbebd64f31b643617aa3ae4b1da7023ef467363"
+    },
+    {
+      "bytes": 3135347,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_parameter_uncertainty_partial_20260923.json",
+      "sha256": "1d6bd4f68a9d6728e0180bdde31f55ca0da7b4fc22e09bcc797dcb8db6cec628"
+    },
+    {
+      "bytes": 774047,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_variant_admission_22082_0.json",
+      "sha256": "32e3bc7aabadcdcff924e32f369937e07b0111ca3b620a9729ecea4b5ab80d40"
+    },
+    {
+      "bytes": 1097800,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_candidates_admission_22086_0.json",
+      "sha256": "3a7602e1bde6fa4e8ba5f393700b112cbac9f63041e48b65578004c92af0a2bf"
+    },
+    {
+      "bytes": 125233,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_factorial_v1/manifest.json",
+      "sha256": "d8385c50426e690afd6d32f3c5302e678de6977c9841451d013201b0f75b564a"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_parameter_cpm_replay_v3/cpm_low/replay/orthogroups_multipass.txt",
+      "sha256": "544211d82ba8b12b2f5ebcfa6fabab6517671d515cc4ce608c51828776670f1e"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_parameter_cpm_replay_v3/cpm_low/replay/orthogroups_multipass_refined.txt",
+      "sha256": "891677a9e2d223d78c545b9d2b6630ceede0ac02ebb8ee892980fe3318c24e73"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_parameter_cpm_replay_v3/cpm_low/replay/orthogroups_profiles.txt",
+      "sha256": "6480b59f51bfe5cc68f7ef3c34155aa2320797c239f5b6d8d7a40e226b4619c8"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_parameter_cpm_replay_v3/cpm_low/replay/orthogroups_profiles_refined.txt",
+      "sha256": "21d3c3c4859de654cd4816fe7b620065e44658c1752b0213cd59df22ca923952"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_candidates_v1/cpm_low/candidate/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "sha256": "a4eccba6f57f2292c701dc975d8ffe6eacaa23279101283783eba2bcf93b3826"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/replay/orthogroups_profiles_refined.txt",
+      "sha256": "d21bf01bae3bf2392818cc23babbc6fc1af0d6a0d1f144831ce05dfa9ec85e77"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_factorial_v1/candidates/p1_c1/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "sha256": "dd1bf10c01a3d5f23f69d4fba566bac7a33f1239b38dab327d548f85fbde32cb"
+    }
+  ],
+  "family": "VATB",
+  "limitations": [
+    "Post-hoc development-exposed error localization, not an independent confirmation or causal intervention.",
+    "Co-grouped pair counts include all reference pairs and are not native ortholog predictions or true positives.",
+    "Reference-accession uniqueness is checked here; full-partition integrity relies on retained stage admissions.",
+    "No fresh search, clustering, refinement, phylogeny or scoring was executed."
+  ],
+  "publication_ready": false,
+  "reference_counts": {
+    "control": {
+      "counts_without_prior": {
+        "FN": 27,
+        "FP": 0,
+        "TN": 21,
+        "TP": 330
+      },
+      "family": "VATB",
+      "represented_genes": [
+        "A8BPV3",
+        "A9SJK8",
+        "A9SP56",
+        "B7QDF5",
+        "D3ZZS8",
+        "F6SX31",
+        "F7A8C2",
+        "P11574",
+        "P11593",
+        "P15313",
+        "P16140",
+        "P21281",
+        "P31409",
+        "P31411",
+        "P62814",
+        "P62815",
+        "Q0VGW2",
+        "Q19626",
+        "Q4Q821",
+        "Q4X0J7",
+        "Q59PT0",
+        "Q5KBW0",
+        "Q76NU1",
+        "Q86WQ0",
+        "Q8W4E2",
+        "Q91YH6",
+        "Q9N5A0",
+        "Q9SZN1"
+      ],
+      "statistics_with_prior": {
+        "F1": 0.9553956834532373,
+        "PPV": 0.9940119760479041,
+        "TPR": 0.9196675900277008
+      }
+    },
+    "cpm_low": {
+      "counts_without_prior": {
+        "FN": 357,
+        "FP": 0,
+        "TN": 21,
+        "TP": 0
+      },
+      "family": "VATB",
+      "represented_genes": [
+        "A8BPV3",
+        "A9SJK8",
+        "A9SP56",
+        "B7QDF5",
+        "D3ZZS8",
+        "F6SX31",
+        "F7A8C2",
+        "P11574",
+        "P11593",
+        "P15313",
+        "P16140",
+        "P21281",
+        "P31409",
+        "P31411",
+        "P62814",
+        "P62815",
+        "Q0VGW2",
+        "Q19626",
+        "Q4Q821",
+        "Q4X0J7",
+        "Q59PT0",
+        "Q5KBW0",
+        "Q76NU1",
+        "Q86WQ0",
+        "Q8W4E2",
+        "Q91YH6",
+        "Q9N5A0",
+        "Q9SZN1"
+      ],
+      "statistics_with_prior": {
+        "F1": 0.010958904109589043,
+        "PPV": 0.5,
+        "TPR": 0.00554016620498615
+      }
+    }
+  },
+  "selection": "post_hoc_largest_low_cpm_family_decline",
+  "stages": [
+    {
+      "arm": "cpm_low",
+      "co_grouped_reference_pairs": 351,
+      "groups": [
+        {
+          "line": 592,
+          "reference_genes": [
+            {
+              "accession": "P11574",
+              "gene": "sp|P11574|VATB1_ARATH"
+            },
+            {
+              "accession": "P11593",
+              "gene": "sp|P11593|VATB_NEUCR"
+            },
+            {
+              "accession": "P15313",
+              "gene": "sp|P15313|VATB1_HUMAN"
+            },
+            {
+              "accession": "P16140",
+              "gene": "sp|P16140|VATB_YEAST"
+            },
+            {
+              "accession": "P21281",
+              "gene": "sp|P21281|VATB2_HUMAN"
+            },
+            {
+              "accession": "P31409",
+              "gene": "sp|P31409|VATB_DROME"
+            },
+            {
+              "accession": "P31411",
+              "gene": "sp|P31411|VATB_SCHPO"
+            },
+            {
+              "accession": "P62814",
+              "gene": "sp|P62814|VATB2_MOUSE"
+            },
+            {
+              "accession": "P62815",
+              "gene": "sp|P62815|VATB2_RAT"
+            },
+            {
+              "accession": "Q19626",
+              "gene": "sp|Q19626|VATB_CAEEL"
+            },
+            {
+              "accession": "Q59PT0",
+              "gene": "sp|Q59PT0|VATB_CANAL"
+            },
+            {
+              "accession": "Q76NU1",
+              "gene": "sp|Q76NU1|VATB_DICDI"
+            },
+            {
+              "accession": "Q8W4E2",
+              "gene": "sp|Q8W4E2|VATB3_ARATH"
+            },
+            {
+              "accession": "Q9SZN1",
+              "gene": "sp|Q9SZN1|VATB2_ARATH"
+            },
+            {
+              "accession": "A8BPV3",
+              "gene": "tr|A8BPV3|A8BPV3_GIAIC"
+            },
+            {
+              "accession": "A9SJK8",
+              "gene": "tr|A9SJK8|A9SJK8_PHYPA"
+            },
+            {
+              "accession": "A9SP56",
+              "gene": "tr|A9SP56|A9SP56_PHYPA"
+            },
+            {
+              "accession": "B7QDF5",
+              "gene": "tr|B7QDF5|B7QDF5_IXOSC"
+            },
+            {
+              "accession": "D3ZZS8",
+              "gene": "tr|D3ZZS8|D3ZZS8_RAT"
+            },
+            {
+              "accession": "F6SX31",
+              "gene": "tr|F6SX31|F6SX31_XENTR"
+            },
+            {
+              "accession": "F7A8C2",
+              "gene": "tr|F7A8C2|F7A8C2_CIOIN"
+            },
+            {
+              "accession": "Q0VGW2",
+              "gene": "tr|Q0VGW2|Q0VGW2_XENTR"
+            },
+            {
+              "accession": "Q4Q821",
+              "gene": "tr|Q4Q821|Q4Q821_LEIMA"
+            },
+            {
+              "accession": "Q4X0J7",
+              "gene": "tr|Q4X0J7|Q4X0J7_ASPFU"
+            },
+            {
+              "accession": "Q5KBW0",
+              "gene": "tr|Q5KBW0|Q5KBW0_CRYNJ"
+            },
+            {
+              "accession": "Q91YH6",
+              "gene": "tr|Q91YH6|Q91YH6_MOUSE"
+            },
+            {
+              "accession": "Q9N5A0",
+              "gene": "tr|Q9N5A0|Q9N5A0_CAEEL"
+            }
+          ],
+          "total_genes": 276
+        },
+        {
+          "line": 791,
+          "reference_genes": [
+            {
+              "accession": "Q86WQ0",
+              "gene": "sp|Q86WQ0|NR2CA_HUMAN"
+            }
+          ],
+          "total_genes": 21
+        }
+      ],
+      "partition": {
+        "bytes": 23875927,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_parameter_cpm_replay_v3/cpm_low/replay/orthogroups_multipass.txt",
+        "sha256": "544211d82ba8b12b2f5ebcfa6fabab6517671d515cc4ce608c51828776670f1e"
+      },
+      "reference_genes": 28,
+      "represented_groups": 2,
+      "singleton_reference_genes": 0,
+      "stage": "multipass"
+    },
+    {
+      "arm": "cpm_low",
+      "co_grouped_reference_pairs": 0,
+      "groups": [
+        {
+          "line": 26167,
+          "reference_genes": [
+            {
+              "accession": "P11574",
+              "gene": "sp|P11574|VATB1_ARATH"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26168,
+          "reference_genes": [
+            {
+              "accession": "P11593",
+              "gene": "sp|P11593|VATB_NEUCR"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26170,
+          "reference_genes": [
+            {
+              "accession": "P15313",
+              "gene": "sp|P15313|VATB1_HUMAN"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26172,
+          "reference_genes": [
+            {
+              "accession": "P16140",
+              "gene": "sp|P16140|VATB_YEAST"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26176,
+          "reference_genes": [
+            {
+              "accession": "P21281",
+              "gene": "sp|P21281|VATB2_HUMAN"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26187,
+          "reference_genes": [
+            {
+              "accession": "P31409",
+              "gene": "sp|P31409|VATB_DROME"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26188,
+          "reference_genes": [
+            {
+              "accession": "P31411",
+              "gene": "sp|P31411|VATB_SCHPO"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26202,
+          "reference_genes": [
+            {
+              "accession": "P62814",
+              "gene": "sp|P62814|VATB2_MOUSE"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26203,
+          "reference_genes": [
+            {
+              "accession": "P62815",
+              "gene": "sp|P62815|VATB2_RAT"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26213,
+          "reference_genes": [
+            {
+              "accession": "Q19626",
+              "gene": "sp|Q19626|VATB_CAEEL"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26215,
+          "reference_genes": [
+            {
+              "accession": "Q59PT0",
+              "gene": "sp|Q59PT0|VATB_CANAL"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26223,
+          "reference_genes": [
+            {
+              "accession": "Q76NU1",
+              "gene": "sp|Q76NU1|VATB_DICDI"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26239,
+          "reference_genes": [
+            {
+              "accession": "Q8W4E2",
+              "gene": "sp|Q8W4E2|VATB3_ARATH"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26249,
+          "reference_genes": [
+            {
+              "accession": "Q9SZN1",
+              "gene": "sp|Q9SZN1|VATB2_ARATH"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26302,
+          "reference_genes": [
+            {
+              "accession": "A8BPV3",
+              "gene": "tr|A8BPV3|A8BPV3_GIAIC"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26306,
+          "reference_genes": [
+            {
+              "accession": "A9SJK8",
+              "gene": "tr|A9SJK8|A9SJK8_PHYPA"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26307,
+          "reference_genes": [
+            {
+              "accession": "A9SP56",
+              "gene": "tr|A9SP56|A9SP56_PHYPA"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26319,
+          "reference_genes": [
+            {
+              "accession": "B7QDF5",
+              "gene": "tr|B7QDF5|B7QDF5_IXOSC"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26329,
+          "reference_genes": [
+            {
+              "accession": "D3ZZS8",
+              "gene": "tr|D3ZZS8|D3ZZS8_RAT"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26345,
+          "reference_genes": [
+            {
+              "accession": "F6SX31",
+              "gene": "tr|F6SX31|F6SX31_XENTR"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26347,
+          "reference_genes": [
+            {
+              "accession": "F7A8C2",
+              "gene": "tr|F7A8C2|F7A8C2_CIOIN"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26369,
+          "reference_genes": [
+            {
+              "accession": "Q0VGW2",
+              "gene": "tr|Q0VGW2|Q0VGW2_XENTR"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26372,
+          "reference_genes": [
+            {
+              "accession": "Q4Q821",
+              "gene": "tr|Q4Q821|Q4Q821_LEIMA"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26378,
+          "reference_genes": [
+            {
+              "accession": "Q4X0J7",
+              "gene": "tr|Q4X0J7|Q4X0J7_ASPFU"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26379,
+          "reference_genes": [
+            {
+              "accession": "Q5KBW0",
+              "gene": "tr|Q5KBW0|Q5KBW0_CRYNJ"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26397,
+          "reference_genes": [
+            {
+              "accession": "Q91YH6",
+              "gene": "tr|Q91YH6|Q91YH6_MOUSE"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26402,
+          "reference_genes": [
+            {
+              "accession": "Q9N5A0",
+              "gene": "tr|Q9N5A0|Q9N5A0_CAEEL"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 29498,
+          "reference_genes": [
+            {
+              "accession": "Q86WQ0",
+              "gene": "sp|Q86WQ0|NR2CA_HUMAN"
+            }
+          ],
+          "total_genes": 21
+        }
+      ],
+      "partition": {
+        "bytes": 23875927,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_parameter_cpm_replay_v3/cpm_low/replay/orthogroups_multipass_refined.txt",
+        "sha256": "891677a9e2d223d78c545b9d2b6630ceede0ac02ebb8ee892980fe3318c24e73"
+      },
+      "reference_genes": 28,
+      "represented_groups": 28,
+      "singleton_reference_genes": 27,
+      "stage": "multipass_refined"
+    },
+    {
+      "arm": "cpm_low",
+      "co_grouped_reference_pairs": 351,
+      "groups": [
+        {
+          "line": 592,
+          "reference_genes": [
+            {
+              "accession": "P11574",
+              "gene": "sp|P11574|VATB1_ARATH"
+            },
+            {
+              "accession": "P11593",
+              "gene": "sp|P11593|VATB_NEUCR"
+            },
+            {
+              "accession": "P15313",
+              "gene": "sp|P15313|VATB1_HUMAN"
+            },
+            {
+              "accession": "P16140",
+              "gene": "sp|P16140|VATB_YEAST"
+            },
+            {
+              "accession": "P21281",
+              "gene": "sp|P21281|VATB2_HUMAN"
+            },
+            {
+              "accession": "P31409",
+              "gene": "sp|P31409|VATB_DROME"
+            },
+            {
+              "accession": "P31411",
+              "gene": "sp|P31411|VATB_SCHPO"
+            },
+            {
+              "accession": "P62814",
+              "gene": "sp|P62814|VATB2_MOUSE"
+            },
+            {
+              "accession": "P62815",
+              "gene": "sp|P62815|VATB2_RAT"
+            },
+            {
+              "accession": "Q19626",
+              "gene": "sp|Q19626|VATB_CAEEL"
+            },
+            {
+              "accession": "Q59PT0",
+              "gene": "sp|Q59PT0|VATB_CANAL"
+            },
+            {
+              "accession": "Q76NU1",
+              "gene": "sp|Q76NU1|VATB_DICDI"
+            },
+            {
+              "accession": "Q8W4E2",
+              "gene": "sp|Q8W4E2|VATB3_ARATH"
+            },
+            {
+              "accession": "Q9SZN1",
+              "gene": "sp|Q9SZN1|VATB2_ARATH"
+            },
+            {
+              "accession": "A8BPV3",
+              "gene": "tr|A8BPV3|A8BPV3_GIAIC"
+            },
+            {
+              "accession": "A9SJK8",
+              "gene": "tr|A9SJK8|A9SJK8_PHYPA"
+            },
+            {
+              "accession": "A9SP56",
+              "gene": "tr|A9SP56|A9SP56_PHYPA"
+            },
+            {
+              "accession": "B7QDF5",
+              "gene": "tr|B7QDF5|B7QDF5_IXOSC"
+            },
+            {
+              "accession": "D3ZZS8",
+              "gene": "tr|D3ZZS8|D3ZZS8_RAT"
+            },
+            {
+              "accession": "F6SX31",
+              "gene": "tr|F6SX31|F6SX31_XENTR"
+            },
+            {
+              "accession": "F7A8C2",
+              "gene": "tr|F7A8C2|F7A8C2_CIOIN"
+            },
+            {
+              "accession": "Q0VGW2",
+              "gene": "tr|Q0VGW2|Q0VGW2_XENTR"
+            },
+            {
+              "accession": "Q4Q821",
+              "gene": "tr|Q4Q821|Q4Q821_LEIMA"
+            },
+            {
+              "accession": "Q4X0J7",
+              "gene": "tr|Q4X0J7|Q4X0J7_ASPFU"
+            },
+            {
+              "accession": "Q5KBW0",
+              "gene": "tr|Q5KBW0|Q5KBW0_CRYNJ"
+            },
+            {
+              "accession": "Q91YH6",
+              "gene": "tr|Q91YH6|Q91YH6_MOUSE"
+            },
+            {
+              "accession": "Q9N5A0",
+              "gene": "tr|Q9N5A0|Q9N5A0_CAEEL"
+            }
+          ],
+          "total_genes": 276
+        },
+        {
+          "line": 791,
+          "reference_genes": [
+            {
+              "accession": "Q86WQ0",
+              "gene": "sp|Q86WQ0|NR2CA_HUMAN"
+            }
+          ],
+          "total_genes": 21
+        }
+      ],
+      "partition": {
+        "bytes": 23875927,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_parameter_cpm_replay_v3/cpm_low/replay/orthogroups_profiles.txt",
+        "sha256": "6480b59f51bfe5cc68f7ef3c34155aa2320797c239f5b6d8d7a40e226b4619c8"
+      },
+      "reference_genes": 28,
+      "represented_groups": 2,
+      "singleton_reference_genes": 0,
+      "stage": "strict_profiles"
+    },
+    {
+      "arm": "cpm_low",
+      "co_grouped_reference_pairs": 0,
+      "groups": [
+        {
+          "line": 26177,
+          "reference_genes": [
+            {
+              "accession": "P11574",
+              "gene": "sp|P11574|VATB1_ARATH"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26178,
+          "reference_genes": [
+            {
+              "accession": "P11593",
+              "gene": "sp|P11593|VATB_NEUCR"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26180,
+          "reference_genes": [
+            {
+              "accession": "P15313",
+              "gene": "sp|P15313|VATB1_HUMAN"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26182,
+          "reference_genes": [
+            {
+              "accession": "P16140",
+              "gene": "sp|P16140|VATB_YEAST"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26186,
+          "reference_genes": [
+            {
+              "accession": "P21281",
+              "gene": "sp|P21281|VATB2_HUMAN"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26197,
+          "reference_genes": [
+            {
+              "accession": "P31409",
+              "gene": "sp|P31409|VATB_DROME"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26198,
+          "reference_genes": [
+            {
+              "accession": "P31411",
+              "gene": "sp|P31411|VATB_SCHPO"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26212,
+          "reference_genes": [
+            {
+              "accession": "P62814",
+              "gene": "sp|P62814|VATB2_MOUSE"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26213,
+          "reference_genes": [
+            {
+              "accession": "P62815",
+              "gene": "sp|P62815|VATB2_RAT"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26223,
+          "reference_genes": [
+            {
+              "accession": "Q19626",
+              "gene": "sp|Q19626|VATB_CAEEL"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26225,
+          "reference_genes": [
+            {
+              "accession": "Q59PT0",
+              "gene": "sp|Q59PT0|VATB_CANAL"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26233,
+          "reference_genes": [
+            {
+              "accession": "Q76NU1",
+              "gene": "sp|Q76NU1|VATB_DICDI"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26249,
+          "reference_genes": [
+            {
+              "accession": "Q8W4E2",
+              "gene": "sp|Q8W4E2|VATB3_ARATH"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26259,
+          "reference_genes": [
+            {
+              "accession": "Q9SZN1",
+              "gene": "sp|Q9SZN1|VATB2_ARATH"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26312,
+          "reference_genes": [
+            {
+              "accession": "A8BPV3",
+              "gene": "tr|A8BPV3|A8BPV3_GIAIC"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26316,
+          "reference_genes": [
+            {
+              "accession": "A9SJK8",
+              "gene": "tr|A9SJK8|A9SJK8_PHYPA"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26317,
+          "reference_genes": [
+            {
+              "accession": "A9SP56",
+              "gene": "tr|A9SP56|A9SP56_PHYPA"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26329,
+          "reference_genes": [
+            {
+              "accession": "B7QDF5",
+              "gene": "tr|B7QDF5|B7QDF5_IXOSC"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26339,
+          "reference_genes": [
+            {
+              "accession": "D3ZZS8",
+              "gene": "tr|D3ZZS8|D3ZZS8_RAT"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26355,
+          "reference_genes": [
+            {
+              "accession": "F6SX31",
+              "gene": "tr|F6SX31|F6SX31_XENTR"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26357,
+          "reference_genes": [
+            {
+              "accession": "F7A8C2",
+              "gene": "tr|F7A8C2|F7A8C2_CIOIN"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26379,
+          "reference_genes": [
+            {
+              "accession": "Q0VGW2",
+              "gene": "tr|Q0VGW2|Q0VGW2_XENTR"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26382,
+          "reference_genes": [
+            {
+              "accession": "Q4Q821",
+              "gene": "tr|Q4Q821|Q4Q821_LEIMA"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26388,
+          "reference_genes": [
+            {
+              "accession": "Q4X0J7",
+              "gene": "tr|Q4X0J7|Q4X0J7_ASPFU"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26389,
+          "reference_genes": [
+            {
+              "accession": "Q5KBW0",
+              "gene": "tr|Q5KBW0|Q5KBW0_CRYNJ"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26407,
+          "reference_genes": [
+            {
+              "accession": "Q91YH6",
+              "gene": "tr|Q91YH6|Q91YH6_MOUSE"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26412,
+          "reference_genes": [
+            {
+              "accession": "Q9N5A0",
+              "gene": "tr|Q9N5A0|Q9N5A0_CAEEL"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 29517,
+          "reference_genes": [
+            {
+              "accession": "Q86WQ0",
+              "gene": "sp|Q86WQ0|NR2CA_HUMAN"
+            }
+          ],
+          "total_genes": 21
+        }
+      ],
+      "partition": {
+        "bytes": 23875927,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_parameter_cpm_replay_v3/cpm_low/replay/orthogroups_profiles_refined.txt",
+        "sha256": "21d3c3c4859de654cd4816fe7b620065e44658c1752b0213cd59df22ca923952"
+      },
+      "reference_genes": 28,
+      "represented_groups": 28,
+      "singleton_reference_genes": 27,
+      "stage": "strict_profiles_refined"
+    },
+    {
+      "arm": "cpm_low",
+      "co_grouped_reference_pairs": 0,
+      "groups": [
+        {
+          "line": 25780,
+          "reference_genes": [
+            {
+              "accession": "P11574",
+              "gene": "sp|P11574|VATB1_ARATH"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 25781,
+          "reference_genes": [
+            {
+              "accession": "P11593",
+              "gene": "sp|P11593|VATB_NEUCR"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 25783,
+          "reference_genes": [
+            {
+              "accession": "P15313",
+              "gene": "sp|P15313|VATB1_HUMAN"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 25785,
+          "reference_genes": [
+            {
+              "accession": "P16140",
+              "gene": "sp|P16140|VATB_YEAST"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 25789,
+          "reference_genes": [
+            {
+              "accession": "P21281",
+              "gene": "sp|P21281|VATB2_HUMAN"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 25800,
+          "reference_genes": [
+            {
+              "accession": "P31409",
+              "gene": "sp|P31409|VATB_DROME"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 25801,
+          "reference_genes": [
+            {
+              "accession": "P31411",
+              "gene": "sp|P31411|VATB_SCHPO"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 25815,
+          "reference_genes": [
+            {
+              "accession": "P62814",
+              "gene": "sp|P62814|VATB2_MOUSE"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 25816,
+          "reference_genes": [
+            {
+              "accession": "P62815",
+              "gene": "sp|P62815|VATB2_RAT"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 25826,
+          "reference_genes": [
+            {
+              "accession": "Q19626",
+              "gene": "sp|Q19626|VATB_CAEEL"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 25828,
+          "reference_genes": [
+            {
+              "accession": "Q59PT0",
+              "gene": "sp|Q59PT0|VATB_CANAL"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 25836,
+          "reference_genes": [
+            {
+              "accession": "Q76NU1",
+              "gene": "sp|Q76NU1|VATB_DICDI"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 25852,
+          "reference_genes": [
+            {
+              "accession": "Q8W4E2",
+              "gene": "sp|Q8W4E2|VATB3_ARATH"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 25862,
+          "reference_genes": [
+            {
+              "accession": "Q9SZN1",
+              "gene": "sp|Q9SZN1|VATB2_ARATH"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 25915,
+          "reference_genes": [
+            {
+              "accession": "A8BPV3",
+              "gene": "tr|A8BPV3|A8BPV3_GIAIC"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 25919,
+          "reference_genes": [
+            {
+              "accession": "A9SJK8",
+              "gene": "tr|A9SJK8|A9SJK8_PHYPA"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 25920,
+          "reference_genes": [
+            {
+              "accession": "A9SP56",
+              "gene": "tr|A9SP56|A9SP56_PHYPA"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 25932,
+          "reference_genes": [
+            {
+              "accession": "B7QDF5",
+              "gene": "tr|B7QDF5|B7QDF5_IXOSC"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 25942,
+          "reference_genes": [
+            {
+              "accession": "D3ZZS8",
+              "gene": "tr|D3ZZS8|D3ZZS8_RAT"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 25958,
+          "reference_genes": [
+            {
+              "accession": "F6SX31",
+              "gene": "tr|F6SX31|F6SX31_XENTR"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 25960,
+          "reference_genes": [
+            {
+              "accession": "F7A8C2",
+              "gene": "tr|F7A8C2|F7A8C2_CIOIN"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 25982,
+          "reference_genes": [
+            {
+              "accession": "Q0VGW2",
+              "gene": "tr|Q0VGW2|Q0VGW2_XENTR"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 25985,
+          "reference_genes": [
+            {
+              "accession": "Q4Q821",
+              "gene": "tr|Q4Q821|Q4Q821_LEIMA"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 25991,
+          "reference_genes": [
+            {
+              "accession": "Q4X0J7",
+              "gene": "tr|Q4X0J7|Q4X0J7_ASPFU"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 25992,
+          "reference_genes": [
+            {
+              "accession": "Q5KBW0",
+              "gene": "tr|Q5KBW0|Q5KBW0_CRYNJ"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26010,
+          "reference_genes": [
+            {
+              "accession": "Q91YH6",
+              "gene": "tr|Q91YH6|Q91YH6_MOUSE"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 26015,
+          "reference_genes": [
+            {
+              "accession": "Q9N5A0",
+              "gene": "tr|Q9N5A0|Q9N5A0_CAEEL"
+            }
+          ],
+          "total_genes": 1
+        },
+        {
+          "line": 29097,
+          "reference_genes": [
+            {
+              "accession": "Q86WQ0",
+              "gene": "sp|Q86WQ0|NR2CA_HUMAN"
+            }
+          ],
+          "total_genes": 21
+        }
+      ],
+      "partition": {
+        "bytes": 23875927,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_candidates_v1/cpm_low/candidate/orthohmm_working_res/orthohmm_edges_clustered.txt",
+        "sha256": "a4eccba6f57f2292c701dc975d8ffe6eacaa23279101283783eba2bcf93b3826"
+      },
+      "reference_genes": 28,
+      "represented_groups": 28,
+      "singleton_reference_genes": 27,
+      "stage": "candidate"
+    },
+    {
+      "arm": "control",
+      "co_grouped_reference_pairs": 351,
+      "groups": [
+        {
+          "line": 20350,
+          "reference_genes": [
+            {
+              "accession": "P11574",
+              "gene": "sp|P11574|VATB1_ARATH"
+            },
+            {
+              "accession": "P11593",
+              "gene": "sp|P11593|VATB_NEUCR"
+            },
+            {
+              "accession": "P15313",
+              "gene": "sp|P15313|VATB1_HUMAN"
+            },
+            {
+              "accession": "P16140",
+              "gene": "sp|P16140|VATB_YEAST"
+            },
+            {
+              "accession": "P21281",
+              "gene": "sp|P21281|VATB2_HUMAN"
+            },
+            {
+              "accession": "P31409",
+              "gene": "sp|P31409|VATB_DROME"
+            },
+            {
+              "accession": "P31411",
+              "gene": "sp|P31411|VATB_SCHPO"
+            },
+            {
+              "accession": "P62814",
+              "gene": "sp|P62814|VATB2_MOUSE"
+            },
+            {
+              "accession": "P62815",
+              "gene": "sp|P62815|VATB2_RAT"
+            },
+            {
+              "accession": "Q19626",
+              "gene": "sp|Q19626|VATB_CAEEL"
+            },
+            {
+              "accession": "Q59PT0",
+              "gene": "sp|Q59PT0|VATB_CANAL"
+            },
+            {
+              "accession": "Q76NU1",
+              "gene": "sp|Q76NU1|VATB_DICDI"
+            },
+            {
+              "accession": "Q8W4E2",
+              "gene": "sp|Q8W4E2|VATB3_ARATH"
+            },
+            {
+              "accession": "Q9SZN1",
+              "gene": "sp|Q9SZN1|VATB2_ARATH"
+            },
+            {
+              "accession": "A8BPV3",
+              "gene": "tr|A8BPV3|A8BPV3_GIAIC"
+            },
+            {
+              "accession": "A9SJK8",
+              "gene": "tr|A9SJK8|A9SJK8_PHYPA"
+            },
+            {
+              "accession": "A9SP56",
+              "gene": "tr|A9SP56|A9SP56_PHYPA"
+            },
+            {
+              "accession": "B7QDF5",
+              "gene": "tr|B7QDF5|B7QDF5_IXOSC"
+            },
+            {
+              "accession": "D3ZZS8",
+              "gene": "tr|D3ZZS8|D3ZZS8_RAT"
+            },
+            {
+              "accession": "F6SX31",
+              "gene": "tr|F6SX31|F6SX31_XENTR"
+            },
+            {
+              "accession": "F7A8C2",
+              "gene": "tr|F7A8C2|F7A8C2_CIOIN"
+            },
+            {
+              "accession": "Q0VGW2",
+              "gene": "tr|Q0VGW2|Q0VGW2_XENTR"
+            },
+            {
+              "accession": "Q4Q821",
+              "gene": "tr|Q4Q821|Q4Q821_LEIMA"
+            },
+            {
+              "accession": "Q4X0J7",
+              "gene": "tr|Q4X0J7|Q4X0J7_ASPFU"
+            },
+            {
+              "accession": "Q5KBW0",
+              "gene": "tr|Q5KBW0|Q5KBW0_CRYNJ"
+            },
+            {
+              "accession": "Q91YH6",
+              "gene": "tr|Q91YH6|Q91YH6_MOUSE"
+            },
+            {
+              "accession": "Q9N5A0",
+              "gene": "tr|Q9N5A0|Q9N5A0_CAEEL"
+            }
+          ],
+          "total_genes": 189
+        },
+        {
+          "line": 23385,
+          "reference_genes": [
+            {
+              "accession": "Q86WQ0",
+              "gene": "sp|Q86WQ0|NR2CA_HUMAN"
+            }
+          ],
+          "total_genes": 21
+        }
+      ],
+      "partition": {
+        "bytes": 23875927,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/replay/orthogroups_profiles_refined.txt",
+        "sha256": "d21bf01bae3bf2392818cc23babbc6fc1af0d6a0d1f144831ce05dfa9ec85e77"
+      },
+      "reference_genes": 28,
+      "represented_groups": 2,
+      "singleton_reference_genes": 0,
+      "stage": "strict_profiles_refined"
+    },
+    {
+      "arm": "control",
+      "co_grouped_reference_pairs": 351,
+      "groups": [
+        {
+          "line": 20025,
+          "reference_genes": [
+            {
+              "accession": "P11574",
+              "gene": "sp|P11574|VATB1_ARATH"
+            },
+            {
+              "accession": "P11593",
+              "gene": "sp|P11593|VATB_NEUCR"
+            },
+            {
+              "accession": "P15313",
+              "gene": "sp|P15313|VATB1_HUMAN"
+            },
+            {
+              "accession": "P16140",
+              "gene": "sp|P16140|VATB_YEAST"
+            },
+            {
+              "accession": "P21281",
+              "gene": "sp|P21281|VATB2_HUMAN"
+            },
+            {
+              "accession": "P31409",
+              "gene": "sp|P31409|VATB_DROME"
+            },
+            {
+              "accession": "P31411",
+              "gene": "sp|P31411|VATB_SCHPO"
+            },
+            {
+              "accession": "P62814",
+              "gene": "sp|P62814|VATB2_MOUSE"
+            },
+            {
+              "accession": "P62815",
+              "gene": "sp|P62815|VATB2_RAT"
+            },
+            {
+              "accession": "Q19626",
+              "gene": "sp|Q19626|VATB_CAEEL"
+            },
+            {
+              "accession": "Q59PT0",
+              "gene": "sp|Q59PT0|VATB_CANAL"
+            },
+            {
+              "accession": "Q76NU1",
+              "gene": "sp|Q76NU1|VATB_DICDI"
+            },
+            {
+              "accession": "Q8W4E2",
+              "gene": "sp|Q8W4E2|VATB3_ARATH"
+            },
+            {
+              "accession": "Q9SZN1",
+              "gene": "sp|Q9SZN1|VATB2_ARATH"
+            },
+            {
+              "accession": "A8BPV3",
+              "gene": "tr|A8BPV3|A8BPV3_GIAIC"
+            },
+            {
+              "accession": "A9SJK8",
+              "gene": "tr|A9SJK8|A9SJK8_PHYPA"
+            },
+            {
+              "accession": "A9SP56",
+              "gene": "tr|A9SP56|A9SP56_PHYPA"
+            },
+            {
+              "accession": "B7QDF5",
+              "gene": "tr|B7QDF5|B7QDF5_IXOSC"
+            },
+            {
+              "accession": "D3ZZS8",
+              "gene": "tr|D3ZZS8|D3ZZS8_RAT"
+            },
+            {
+              "accession": "F6SX31",
+              "gene": "tr|F6SX31|F6SX31_XENTR"
+            },
+            {
+              "accession": "F7A8C2",
+              "gene": "tr|F7A8C2|F7A8C2_CIOIN"
+            },
+            {
+              "accession": "Q0VGW2",
+              "gene": "tr|Q0VGW2|Q0VGW2_XENTR"
+            },
+            {
+              "accession": "Q4Q821",
+              "gene": "tr|Q4Q821|Q4Q821_LEIMA"
+            },
+            {
+              "accession": "Q4X0J7",
+              "gene": "tr|Q4X0J7|Q4X0J7_ASPFU"
+            },
+            {
+              "accession": "Q5KBW0",
+              "gene": "tr|Q5KBW0|Q5KBW0_CRYNJ"
+            },
+            {
+              "accession": "Q91YH6",
+              "gene": "tr|Q91YH6|Q91YH6_MOUSE"
+            },
+            {
+              "accession": "Q9N5A0",
+              "gene": "tr|Q9N5A0|Q9N5A0_CAEEL"
+            }
+          ],
+          "total_genes": 200
+        },
+        {
+          "line": 23033,
+          "reference_genes": [
+            {
+              "accession": "Q86WQ0",
+              "gene": "sp|Q86WQ0|NR2CA_HUMAN"
+            }
+          ],
+          "total_genes": 21
+        }
+      ],
+      "partition": {
+        "bytes": 23875927,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_factorial_v1/candidates/p1_c1/orthohmm_working_res/orthohmm_edges_clustered.txt",
+        "sha256": "dd1bf10c01a3d5f23f69d4fba566bac7a33f1239b38dab327d548f85fbde32cb"
+      },
+      "reference_genes": 28,
+      "represented_groups": 2,
+      "singleton_reference_genes": 0,
+      "stage": "candidate"
+    }
+  ],
+  "status": "vatb_partition_membership_traced"
+}

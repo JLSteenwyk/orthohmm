@@ -871,8 +871,13 @@ draws using the frozen seed and all 18 planned endpoints for multiplicity,
 including the CPM contrasts. The subsequent low-CPM result had SwissTrees F1
 79.1014%, a difference of -4.2499 percentage points from control (adjusted
 interval [-21.9395, 0.7887]). Three families improved, thirteen tied, and two
-worsened; VATB had the largest family-level decline, without an established
-pipeline mechanism. Precision and recall intervals also included zero.
+worsened; VATB had the largest family-level decline. A post-hoc retained-stage
+trace located its separation before phylogeny: low-CPM refinement changed two
+groups containing the 28 reference genes into 28 separate groups, including
+27 singletons, and candidate expansion did not reunite them. The control
+retained two groups. This localizes the first observed loss of co-grouping,
+but does not establish the exact refinement predicate or generalize to other
+families. Precision and recall intervals also included zero.
 High-CPM replay failed with SIGSEGV. Its checkpoint continuation completed,
 but independent validation and a subsequent allocator-debug refinement
 diagnostic both failed during post-write partition readback. Written partitions
@@ -885,6 +890,7 @@ uncertainty analysis of all QfO metrics or independent confirmation.
 [Threshold results, provenance and reproduction](QFO_THRESHOLD_UNCERTAINTY_20260923.md).
 [Updated low-CPM uncertainty and provenance](QFO_PARTIAL_PARAMETER_UNCERTAINTY_20260923.md).
 [High-CPM validation failure evidence](QFO_ALLOCATOR_DIAGNOSTIC_RESULT_22158.md).
+[Post-hoc VATB stage trace](QFO_VATB_PARTITION_TRACE_20260923.md).
 
 ## Limitations And Unfinished Analyses
 

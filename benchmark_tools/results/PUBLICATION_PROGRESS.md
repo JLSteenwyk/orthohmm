@@ -1,5 +1,31 @@
 # Publication Progress
 
+## VATB Loss Localized Before Phylogeny (2026-09-23)
+
+Previous turn progressed by auditing the failed allocator diagnostic and
+correcting publication claims (ef6f543). Re-read the full objective. BLAST
+22103_6 was RUNNING 20:01 at initial accounting; its admission and next batch
+remain dependency-gated. No high-CPM job was retried or released; DGX untouched.
+
+Added and executed a focused post-hoc VATB partition tracer using the 28
+reference accessions in the admitted low-CPM/control counts. Seven stages are
+bound to checked admission/manifest partition hashes. All **7 tests pass**,
+including ambiguous/duplicate/missing-accession rejection and membership-pair
+accounting. No inference or scoring was rerun.
+
+Both low-CPM multipass and strict-profile snapshots contain the reference genes
+in two groups (276 and 21 total genes). Each refined snapshot separates them
+into 28 groups, including 27 singletons; candidate expansion retains this
+separation. Control final seed and candidates retain two groups. Therefore
+phylogeny is not the first observed point of separation in this case. The
+specific refinement predicate and failed reunion mechanism are not yet proven.
+Co-grouping counts are diagnostic opportunities, not native ortholog predictions.
+
+[Trace summary](QFO_VATB_PARTITION_TRACE_20260923.md) and linked machine-readable
+membership evidence preserve all observations and post-hoc selection limits.
+Updated the manuscript's error description without changing defaults or
+generalization claims. Rendered manuscript snapshots remain historical.
+
 ## Allocator Diagnostic Reproduced Readback Crash (2026-09-23)
 
 Previous turn made progress by checking 980 records and submitting 22158
