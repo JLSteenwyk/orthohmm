@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Recovered OrthoMCL Independent Score Admission Implemented (2026-09-23)
+
+Previous turn progressed with the assessment handoff (7ab386a). Re-read the
+objective and confirmed BLAST 22103_8 RUNNING 15:57, later 19:17, with
+22105_8 pending. No DGX activity or unrelated job modifications occurred.
+
+Added `admit_qfo_recovered_orthomcl_assessment.py` and a two-CPU/64-GiB,
+24-hour no-requeue wrapper. Admission requires a completed eight-CPU/64-GiB
+scoring job and the exact frozen runner, compares terminal results to the
+original preflight, reconstructs conversion/command/environment provenance,
+checks the full output inventory and unique native trace, and reuses the
+existing six-endpoint native metric validator. Final provenance/metric hashes
+are checked again before writing the exclusive successful admission artifact.
+Failed validation does not produce an admitted-score file.
+
+Refactored assessment preflight to permit read-only terminal revalidation with
+the explicitly supplied frozen helper directory. Normal launch still requires
+fresh output/work/results directories; CLI does not expose the bypass. This
+avoids relabeling recovered inputs as an original-run comparator. Successful
+score admission retains failed-query/group coverage and clique semantics;
+publication readiness remains false and the six-metric mean remains secondary.
+
+New adapter/run tests plus existing comparator/trace/native-metric suites:
+**97 passed**. This includes 13 adapter cases and a historical-helper preflight
+case; fixture orchestration mocks scoring, while reused tests cover trace and
+metric validation. Shell syntax passes. No production assessment or admission
+has run. Frozen execution snapshots, completed upstream search/BPO/native jobs,
+actual scoring, failure-impact updates and result consolidation remain required.
+The publication objective remains incomplete; dedicated timing is deferred.
+
 ## Recovered OrthoMCL QfO Assessment Handoff Implemented (2026-09-23)
 
 Previous turn progressed with recovered pair conversion (218d288). Re-read the

@@ -113,7 +113,7 @@ def test_pin_and_isolated_cli(tmp_path):
                    check=True, capture_output=True, text=True)
 
 
-@pytest.mark.parametrize("problem", [None, "coverage", "groups", "mapping", "existing", "unbound", "changed_pair"])
+@pytest.mark.parametrize("problem", [None, "coverage", "groups", "mapping", "existing", "unbound", "changed_pair", "historical"])
 def test_prepare(tmp_path, monkeypatch, problem):
     root = tmp_path
     stage, scheduler = fixture()
@@ -121,6 +121,7 @@ def test_prepare(tmp_path, monkeypatch, problem):
     source = executor / "benchmark_tools/prepare_recovered_orthomcl_pairs.py"
     source.parent.mkdir(parents=True)
     shutil.copyfile(Path(module.__file__).with_name(source.name), source)
+    shutil.copyfile(module.__file__, source.parent / Path(module.__file__).name)
     directory = root / "benchmarks/results/qfo_blast_recovery_pairs_v1"
     directory.mkdir(parents=True)
     for key, name in (("pairs", "pairs.tsv"), ("filtered_pairs", "pairs.qfo.tsv")):
@@ -163,19 +164,22 @@ def test_prepare(tmp_path, monkeypatch, problem):
     if problem == "changed_pair":
         (directory / "pairs.tsv").write_text("mutated")
     output = root / "benchmarks/results/qfo_blast_recovery_assessment_v1"
-    if problem == "existing":
+    if problem in {"existing", "historical"}:
         output.mkdir()
     monkeypatch.setattr(module, "completed", lambda job, *a: (scheduler if job == 127 else {}, ""))
     monkeypatch.setattr(module, "frozen", lambda *a: None)
     monkeypatch.setattr(module, "environment_records", lambda m: m["reference_files"])
     monkeypatch.setattr(module, "command_for", lambda r, s, m, w, o: [s["filtered_pairs"]["path"], s["participant"], str(w), str(o)])
-    if problem:
+    if problem and problem != "historical":
         with pytest.raises((ValueError, FileExistsError)):
             module.prepare(root, digest, 127, executor, "commit")
     else:
-        result = module.prepare(root, digest, 127, executor, "commit")
+        kwargs = dict(require_fresh=False, helpers=source.parent) if problem == "historical" else {}
+        result = module.prepare(root, digest, 127, executor, "commit", **kwargs)
         assert result["command"][1] == "qfo_corrected_orthomcl_recovered"
         assert result["work"] == str(root / "qfo_benchmark/w/qc_mcr")
         assert result["accuracy_admitted"] is False
-    if problem != "existing":
+        if problem == "historical":
+            assert result["source"] == module.record(source.parent / Path(module.__file__).name)
+    if problem not in {"existing", "historical"}:
         assert not output.exists()

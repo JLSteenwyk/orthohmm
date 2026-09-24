@@ -218,3 +218,27 @@ including 37 new contract/preflight/run cases; shell syntax passes.
 No production scoring is scheduled. The recovery-specific independent score
 admission adapter, actual completed upstream results, and final evidence
 consolidation remain outstanding.
+
+## Independent Recovered Score Admission
+
+`admit_qfo_recovered_orthomcl_assessment.py` now validates the completed scoring
+job, exact runner source and frozen executor, immutable preflight, rebuilt
+conversion/command/reference provenance, complete output inventory and unique
+native task trace. It uses the existing six-endpoint native metric validator
+and rechecks input/output hashes before writing an admitted-score artifact.
+No artifact is written on rejected validation; existing artifacts are not
+overwritten. Admitted accuracy means validated benchmark scores, not independent
+biological validation or publication readiness.
+
+The assessment preflight can now reconstruct historical records from the frozen
+scoring executor without demanding empty output directories. Launch still uses
+the default fresh-directory requirement, and the historical options are not
+exposed through its CLI. This logic is covered by an additional preflight test.
+The adapter retains group/failure coverage, clique semantics and endpoint-specific
+uncertainty caveats; the six-endpoint mean remains a secondary project summary.
+
+`qfo_blast_recovery_score_admit_20260923.sh` requests two CPUs/64 GiB and requires
+actual scoring/conversion jobs, exact executors and the pinned conversion digest.
+The related suites report 97 passes, including 13 new adapter cases, with shell
+syntax passing. It remains unscheduled. Production execution/admission, source
+failure-impact analysis and final result consolidation are still outstanding.

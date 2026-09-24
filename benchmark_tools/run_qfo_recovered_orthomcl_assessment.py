@@ -42,7 +42,8 @@ def validate_stage(stage, scheduler):
         raise ValueError("Invalid recovered clique/coverage accounting")
 
 
-def prepare(root, digest, job, executor, commit):
+def prepare(root, digest, job, executor, commit, require_fresh=True, helpers=None):
+    helpers = Path(__file__).resolve().parent if helpers is None else helpers
     scheduler, accounting = completed(job, 2, "64G")
     if not executor.resolve().is_relative_to(root / "benchmarks/work"):
         raise ValueError("Require retained conversion executor")
@@ -84,16 +85,17 @@ def prepare(root, digest, job, executor, commit):
     records = unique_records([record(path), record(env_path), *environment_records(manifest),
         source, *stage["checked_records"], stage["pairs"], stage["filtered_pairs"], stage["group_audit"],
         *groups["checked_records"], admission["source"], *admission["checked_records"], *admission["outputs"],
-        *[record(p) for p in sorted(Path(__file__).parent.glob("*.py"))]])
+        *[record(p) for p in sorted(helpers.glob("*.py"))]])
     for item in records:
         check(item)
     output = root / "benchmarks/results/qfo_blast_recovery_assessment_v1"
     work = root / "qfo_benchmark/w/qc_mcr"
     results = root / "qfo_benchmark/scoring/corrected_orthomcl_recovered"
     for destination in (output, work, results):
-        if destination.exists() or destination.is_symlink():
+        if require_fresh and (destination.exists() or destination.is_symlink()):
             raise FileExistsError(destination)
-    return dict(status="prepared_unrun", method="orthomcl", stage=stage, source=record(__file__),
+    return dict(status="prepared_unrun", method="orthomcl", stage=stage,
+        source=record(helpers / "run_qfo_recovered_orthomcl_assessment.py"),
         pairs_manifest=record(path), environment_manifest=record(env_path), conversion_scheduler=scheduler,
         conversion_accounting=accounting, command=command_for(root, stage, manifest, work, results),
         cwd=str(output), work=str(work), results=str(results), verified_records=records,
