@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Manuscript V8 And Full-Page Overview (2026-09-23)
+
+Previous turn progressed with the one-shot GDB result (52eb309). Re-read the
+objective; BLAST 22103_9 RUNNING 20:25. No production job or DGX changes.
+Updated the manuscript to retain the GDB negative reproduction without implying
+a fix, and the reproduction guide to distinguish new consolidation code from
+the historical executor. Scientific estimates and missing-result status remain
+unchanged.
+
+Rendered [v8 HTML/PDF](MANUSCRIPT_RENDER_REVIEW_20260923_v8.md). Asset audit:
+198 occurrences, 180 targets, no untracked targets or Pandoc diagnostics.
+**13 tests passed**. Chrome PDF: 37 pages, 11 embedded figures. PDF block bounds
+show no out-of-page content or empty-text pages. Visually inspected all 37 pages
+as 700-pixel-page contact-sheet overviews: no obvious blank pages or clipping;
+small figure labels and captions spanning page breaks remain. Retained exact
+PDF/contact-sheet hashes and explicit review scope. This is not full-resolution
+copyediting, scientific approval, journal typesetting or a portable archive.
+The original publication goal remains incomplete.
+
 ## One-Shot GDB Diagnostic Completed Without Crash (2026-09-23)
 
 Following preparation in 4a414d5, created clean detached executor

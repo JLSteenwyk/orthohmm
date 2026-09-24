@@ -1,0 +1,73 @@
+{
+  "pdf": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/PUBLICATION_MANUSCRIPT_REVIEW_20260923_v8.pdf",
+    "bytes": 2926362,
+    "sha256": "31154eec72577e3b2c80335980fad584f8348b61620ff033fc5a2c4e881f82f7"
+  },
+  "html": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/PUBLICATION_MANUSCRIPT_REVIEW_20260923_v8.html",
+    "bytes": 140930,
+    "sha256": "6a5a24ba7517b5d73863e72bea1b7000d842061099fb091603afc58c69433871"
+  },
+  "asset_review": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/manuscript_asset_review_20260923_v8.json",
+    "bytes": 85994,
+    "sha256": "14c5e2b935c2e6453bfcc48e695c3aeedae4833a652699cb214271bb9457bd4e"
+  },
+  "contact_sheets": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/manuscript_v8_visual_20260923/sheet-1.png",
+      "bytes": 913943,
+      "sha256": "e85ac87a1efa464be7d672eecb432a733c475a614f8a1f67fe5ff59eccce6d4f"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/manuscript_v8_visual_20260923/sheet-13.png",
+      "bytes": 918132,
+      "sha256": "b661ec8097dffca41ccfedbc2a03d9e816bb2e420a3d664b2a1fddd79e287633"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/manuscript_v8_visual_20260923/sheet-19.png",
+      "bytes": 878462,
+      "sha256": "f22af5ec60ebc37e5082393c70946a4467018536b6b5dba3f81136b45ab92ec7"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/manuscript_v8_visual_20260923/sheet-25.png",
+      "bytes": 953890,
+      "sha256": "e719f1bfcd1274570cda523c0c0f47b90b4cdebe761a5428042f6b2ef879ce98"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/manuscript_v8_visual_20260923/sheet-31.png",
+      "bytes": 429942,
+      "sha256": "d54229b6dcad81dea9ed1b5806f7f6338b77eaf77092b7f68a10a308fedf7774"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/manuscript_v8_visual_20260923/sheet-37.png",
+      "bytes": 23276,
+      "sha256": "c04a03d798a772f792bd7101739938fdecd56284d37f2855c0c992602240308f"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/manuscript_v8_visual_20260923/sheet-7.png",
+      "bytes": 861306,
+      "sha256": "6e3fa4ffdf993fddd1cb1b4ea597e4e7d26bf6403f39aa6d2e57c65e0e0d068b"
+    }
+  ],
+  "status": "working_manuscript_pdf_overview_reviewed",
+  "publication_ready": false,
+  "pages": 37,
+  "image_occurrences": 11,
+  "empty_text_pages": [],
+  "out_of_page_blocks": [],
+  "visual_scope": "All 37 pages viewed in six-page contact sheets, each page rasterized to a 700-pixel maximum dimension; overview, not full-resolution copyediting.",
+  "observations": [
+    "No blank page or obvious page-edge clipping at overview scale.",
+    "All 11 embedded figures present.",
+    "Small figure labels require full-resolution originals.",
+    "Captions span page breaks, including duplication and fragment panels.",
+    "The long working draft still requires condensation and journal-specific typesetting."
+  ],
+  "limitations": [
+    "No scientific-claim, citation, rights or full-resolution typography approval.",
+    "Relative assets remain required; not a standalone archive.",
+    "PDF metadata timestamps are not byte-reproducible."
+  ]
+}

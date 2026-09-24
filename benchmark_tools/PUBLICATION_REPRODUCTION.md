@@ -7,10 +7,11 @@ are statistical reproduction only and do not submit scheduler jobs.
 
 ## Method And Results
 
-- [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260923.md)
+- [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260923_v8.md)
   provides the dated HTML, checked local-asset inventory and citation inventory,
   including current FastOMA results and the DGX deferral. It is not a
-  standalone archive or a completed visual/typesetting review.
+  standalone archive or completed typesetting; all pages received an overview
+  layout check, not full-resolution copyediting.
 - [Corrected figure supplements](results/PUBLICATION_CORRECTED_FIGURE_BUNDLE_20260919.md)
   include the seven-method FastOMA comparison exported at `27113f4`, with
   isolated relocated verification and retained-count arithmetic reproduction.
@@ -45,10 +46,16 @@ the unchanged executor at `10338e2a5046e522f2c1990e791532d3376e8982`.
 Its [batch recipe](results/qfo_fastoma_swiss_comparison_batch_20260923.sh)
 documents the exact source tree, inputs and protocol pins; invoking sbatch
 would submit a job, unlike the arithmetic-only command below. Historical
-six-method results remain retained. The current runner's FastOMA helper pin
-was subsequently updated only for the reviewed admission revision/path
-change; do not substitute it for the historical executor when reproducing
-that executor's byte-level provenance.
+six-method results remain retained. Later reviewed changes update FastOMA
+admission paths and support recovered OrthoMCL admission/provenance without
+changing the statistical kernel. The [new consolidation executor receipt](results/qfo_recovered_swiss_executor_20260923.json)
+pins commit `0b8efa9c6b20b5bdec41f798c136b54132e7db37`, 123 passing tests and a
+seven-method raw-count reconstruction with exactly matching estimates and
+intervals. This executor is prepared for eventual recovered OrthoMCL evidence,
+not evidence that corrected OrthoMCL scores exist. Follow the
+[recovery handoff](results/QFO_RECOVERY_BPO_HANDOFF_20260923.md) only after actual
+score admission. Do not substitute the new executor when reproducing the
+historical executor's byte-level provenance.
 
 Recheck the seven-method arithmetic from its retained audited family counts
 in this workspace, where referenced provenance files are available:

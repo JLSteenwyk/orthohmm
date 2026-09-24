@@ -889,13 +889,18 @@ but independent validation and a subsequent allocator-debug refinement
 diagnostic both failed during post-write partition readback. Written partitions
 were byte-identical and covered the full gene universe, but this did not
 establish safe execution or authorize an accuracy result. The native cause
-remains unresolved; no missing result was imputed. The full QfO
+remains unresolved. One subsequent prespecified refinement-only run under GDB
+completed normally with the same partition and a valid completion report;
+it did not reproduce the crash or provide a crash backtrace. This negative
+reproduction under instrumentation does not repair the failed admission or
+establish memory safety. No missing result was imputed. The full QfO
 parameter panel therefore remains incomplete. These findings do not justify changing
 frozen defaults and are development-exposed SwissTrees evidence, not a joint
 uncertainty analysis of all QfO metrics or independent confirmation.
 [Threshold results, provenance and reproduction](QFO_THRESHOLD_UNCERTAINTY_20260923.md).
 [Updated low-CPM uncertainty and provenance](QFO_PARTIAL_PARAMETER_UNCERTAINTY_20260923.md).
 [High-CPM validation failure evidence](QFO_ALLOCATOR_DIAGNOSTIC_RESULT_22158.md).
+[One-shot GDB diagnostic](QFO_CPM_BACKTRACE_RESULT_22159.md).
 [Post-hoc VATB stage trace](QFO_VATB_PARTITION_TRACE_20260923.md).
 
 ## Limitations And Unfinished Analyses
