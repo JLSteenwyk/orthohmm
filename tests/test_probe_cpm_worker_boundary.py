@@ -66,3 +66,53 @@ def test_small_frozen_worker_stops_without_clusters(tmp_path):
     assert observed["fingerprint"]["vertices"] == 3
     assert (payload / "worker_before.json").is_file()
     assert not (tmp_path / "orthohmm_working_res").exists()
+
+
+@pytest.mark.parametrize("failure", [None, "signal", "missing_stop", "mutation"])
+def test_parent_preserves_failure_and_never_authorizes_retry(tmp_path, monkeypatch, failure):
+    import benchmark_tools.run_simulation_methods as frozen
+    import repeat_qfo_saved_graph as repeat
+    source = tmp_path / "benchmarks/results/qfo_parameter_cpm_replay_v3/cpm_high/clustering/cluster_3_profile_expanded/payload"
+    source.mkdir(parents=True)
+    for name in module.FILES:
+        (source / name).write_text("fixture\n")
+    (source / "metadata.json").write_text(json.dumps(dict(cpm_resolution=.12, seed=4,
+        include_isolates=True, output_directory=str(source.parent))))
+    records = [module.record(source / name) for name in module.FILES]
+    results = tmp_path / "benchmark_tools/results"
+    results.mkdir(parents=True)
+    actual_results = Path(module.__file__).resolve().parent / "results"
+    protocol = "QFO_CPM_WORKER_BOUNDARY_PROTOCOL_20260923.md"
+    (results / protocol).write_bytes((actual_results / protocol).read_bytes())
+    for name in ("qfo_cpm_high_failed_payload_audit_20260923.json", "qfo_cpm_high_frozen_constructor_22121.json"):
+        (results / name).write_text("{}\n")
+    log = tmp_path / "prior.log"
+    log.write_text("")
+    audit = dict(checked_records=records)
+    prior = dict(result={"saved": {"fixture": True}}, checked_records=[], observations=[], worker_log=module.record(log))
+    monkeypatch.setattr(frozen, "read_frozen", lambda path, digest: audit if "failed_payload" in path.name else prior)
+    monkeypatch.setattr(module, "require_audit", lambda *a: None)
+    monkeypatch.setattr(module, "require_result", lambda *a: None)
+    monkeypatch.setattr(repeat, "check_worker", lambda *a, **k: None)
+    def subprocess_run(command, **kwargs):
+        from types import SimpleNamespace
+        payload = tmp_path / "diagnostic/payload"
+        if failure == "signal":
+            return SimpleNamespace(returncode=-11)
+        if failure != "missing_stop":
+            (payload / "preoptimizer_stop.json").write_text(json.dumps(result()))
+        (payload / "constructor_adapter.json").write_text(json.dumps(dict(format="python_pairs", calls=[{"status": "constructor_returned"}])))
+        (payload / "worker_before.json").write_text(json.dumps(dict(modules={}, native_libraries=[], python=module.record(log))))
+        if failure == "mutation":
+            (source / module.FILES[0]).write_text("changed\n")
+        return SimpleNamespace(returncode=0)
+    monkeypatch.setattr(module.subprocess, "run", subprocess_run)
+    if failure:
+        with pytest.raises((RuntimeError, ValueError, FileNotFoundError)):
+            module.run(tmp_path, tmp_path / "diagnostic")
+    else:
+        assert module.run(tmp_path, tmp_path / "diagnostic")["status"] == "frozen_worker_stopped_before_optimizer_unscored"
+    saved = json.loads((tmp_path / "diagnostic/status.json").read_text())
+    assert saved["optimizer_called"] is saved["rerun_authorized"] is saved["publication_ready"] is False
+    if failure:
+        assert saved["status"] == "worker_boundary_diagnostic_failed"
