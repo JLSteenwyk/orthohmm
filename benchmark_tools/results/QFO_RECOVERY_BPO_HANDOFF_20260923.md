@@ -174,3 +174,25 @@ two-CPU/64-GiB allocation and fresh output/cache directories, and remains
 unscheduled. The related contract/flow/content suites pass 205 tests, including
 47 new tests. Shell syntax passes. Production validation and the subsequent
 recovery-specific pair-conversion/scoring workflow remain outstanding.
+
+## Recovered Pair Conversion
+
+`prepare_recovered_orthomcl_pairs.py` now accepts only independently admitted
+recovered native groups with conversion authorization. It binds the admission
+job, source and executor, rechecks native scheduler accounting and all retained
+records, and uses the pinned assessment reference mapping. A separate group
+audit must reproduce the native admission's complete content summary before
+the unchanged clique writer expands cross-species pairs. Pair totals and
+mapping retention must agree exactly; no missing input hit is reconstructed.
+
+The fresh output directory is `benchmarks/results/qfo_blast_recovery_pairs_v1`.
+The successful state remains `recovered_orthomcl_pairs_prepared_unscored`.
+Failed conversions retain reports and partial artifacts; no implicit retry or
+replacement of the original pair workflow occurs. Query-failure coverage is
+carried forward unchanged, and no accuracy/publication claim is authorized.
+
+`qfo_blast_recovery_pairs_20260923.sh` supplies an isolated two-CPU/64-GiB,
+no-requeue launcher with exact executor/job/report-digest arguments. It is not
+scheduled. The focused suite passes 115 tests, including 25 new contract/flow
+cases; shell syntax passes. Terminal conversion verification and a recovered
+assessment/scoring handoff are still required before production QfO scoring.

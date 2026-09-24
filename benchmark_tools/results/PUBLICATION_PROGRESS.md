@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Recovered Native Group Pair Conversion Implemented (2026-09-23)
+
+Previous turn progressed with independent recovered native output admission
+(d2d8281). Re-read the full objective and confirmed BLAST 22103_8 RUNNING 5:31,
+with admission 22105_8 pending. DGX remains deferred and untouched.
+
+Added `prepare_recovered_orthomcl_pairs.py` and a separate isolated two-CPU,
+64-GiB, 24-hour no-requeue wrapper. Conversion requires the recovery-specific
+native admission status/authorization, its exact job/source/executor, completed
+native accounting, pinned reference mapping and unchanged native provenance.
+The converter and native admission sources are checksum-pinned. It requires
+the admitted species mapping, repeats the final-groups vs MCL partition audit,
+then uses the unchanged existing clique writer and reference filter.
+
+Counts must match the independent native group audit, and no reference-mapping
+loss is allowed. Failed conversion retains a durable report; successful output
+remains explicitly unscored. Ungrouped proteins and failed-query accounting
+remain visible; clique pairs are not described as native phylogenetic ortholog
+predictions. Output uses fresh `qfo_blast_recovery_pairs_v1`, without replacing
+the original pair workflow or releasing its held jobs.
+
+New contract/flow/source-pin/isolated-entry tests plus existing clique writer
+and native-group parser tests report **115 passed**, including 25 new cases.
+Orchestration fixtures mock expensive operations, while the reused suites test
+actual pair-generation/content logic. Wrapper shell syntax passes. No production
+conversion is scheduled or run. Recovery-aware terminal conversion validation,
+assessment/scoring handoff, and eventual production results remain outstanding.
+The publication objective is not complete.
+
 ## Recovered Native Final-Output Admission Implemented (2026-09-23)
 
 Previous turn progressed with the native launcher (a356022). Re-read the full
