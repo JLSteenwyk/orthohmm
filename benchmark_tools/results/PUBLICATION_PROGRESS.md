@@ -1,5 +1,36 @@
 # Publication Progress
 
+## High-CPM Retained Predecessors Revalidated (2026-09-23)
+
+Previous turn reviewed the actual checkpoint boundary and committed protocol
+66fc97c, making progress. Re-read the full goal and confirmed low-CPM phylogeny
+22088_0 RUNNING at 1:13:47; BLAST 22103_3 remained resources-pending and
+22150/22151 dependency-pending. No restart or DGX action was performed.
+
+Implemented `audit_cpm_recovery_prefix.py` without modifying existing frozen
+validators. It binds the original failed worker/context/executor, requires the
+three checked predecessors followed by a failed fourth stage, and independently
+rechecks saved payloads, native optimizer observations, partitions, command and
+thread settings, original/copied identities, and the retained multipass copy.
+The 189 focused tests pass, including existing real igraph/Leiden tests and new
+rejection cases for changed evidence, invalid state, post-validation mutation,
+output overwrite and isolated CLI loading.
+
+Ran the new read-only audit against the real checkpoints to completion, exit 0.
+[Result](qfo_cpm_recovery_predecessors_20260923.json), SHA-256
+`f038a84f8dc2429f276a647962435a3b35f4f8b10d5a5a3ed2662c6fb7ef63a4`,
+contains 297 distinct file identities (306 recorded references). All three stages
+cover all 984,137 genes: initial 358,097 groups / 24,555,638 edges; multipass
+316,603 / 25,511,238; profile_base 343,167 / 24,609,544. The saved graph evidence
+and original native validation agree. This audits historical observations; it
+does not reconstruct historical process memory.
+
+The result explicitly leaves recovery authorization, accuracy evaluation and
+publication readiness false. Full preflight still needs failed-stage/runtime
+binding and independent multipass refinement reconstruction; the single resumed
+optimizer and downstream recovery admissions are not implemented or submitted.
+Original failure and all partitions remain untouched. No high-CPM score exists.
+
 ## High-CPM Recovery Boundary Reviewed (2026-09-23)
 
 The preceding user-direction turn only acknowledged DGX deferral, so it made no
