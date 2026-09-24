@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Recovered Search To BPO Handoff Implemented (2026-09-23)
+
+Previous turn tested/froze/queued validator 22151 (a21c65f, da5cdb9), making
+progress. Re-read the objective and confirmed live low-CPM phylogeny 22088_0;
+replay batch 22103_3, merge 22150 and admission 22151 remain pending.
+
+Implemented the [recovery-specific BPO wrapper](QFO_RECOVERY_BPO_HANDOFF_20260923.md),
+binding the future admitted candidate and original FASTA to the unchanged
+converter and native checkpoint audits. It verifies completed frozen validator
+22151, pinned admission bytes, all recorded inputs, database parity and the
+dedicated Python runtime. Output is a separate fresh recovery BPO directory;
+no original partial output or historical execution is relabeled.
+
+All 122 focused recovery tests pass, including new contract and orchestration
+success/failure cases. The wrapper is not scheduled: the actual search-admission
+digest is unavailable, and independent recovery BPO admission/scheduling remains
+to be integrated. No held job release, scientific parameter change or DGX action
+occurred. The overall publication goal remains incomplete.
+
+
 ## Final Recovery Validator Tested And Queued (2026-09-23)
 
 Previous turn implemented the recovery admission wrapper (7e361c5), making
