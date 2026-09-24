@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Recovered Failure-To-Partition Analysis Implemented (2026-09-23)
+
+Previous turn was a verified wait: batch 22103_9 remained live and growing.
+Re-read the objective and polled the same handle, RUNNING 31:23 then 34:41;
+no restart or dependency change. Implemented the remaining content join needed
+to interpret failed queries after recovered native grouping, rather than
+treating failed outgoing search as absence from final predictions.
+
+`audit_orthomcl_failure_membership.py` requires pinned matching whole-search
+and native admissions. It rechecks the group-audit inputs and reconstructs the
+full MCL partition, then attaches species, accession, group line/size and
+distinct final-group/singleton/unindexed states to retained diagnostics.
+Incoming/outgoing/self-hit evidence remains separate, and failed totals must
+match. Its output explicitly does not admit accuracy, redo upstream scheduler
+validation, measure reference exposure or infer counterfactual recovery.
+
+**90 tests passed** across membership, native-group and reference-exposure
+suites, including a real CLI no-overwrite check and grouped-failure compatibility
+with the explicit exposure opt-in. The first test invocation used a nonexistent
+reference-test filename and ran no tests; corrected invocation passed. Updated
+the recovery handoff. Production analysis remains unrun pending actual complete
+search/native admissions; no current failure membership or score was fabricated.
+Scientific settings and DGX state remain unchanged.
+
 ## Supplementary Captions Kept With Figures (2026-09-23)
 
 Previous turn progressed with manuscript v8 and its 37-page overview (aee085e).

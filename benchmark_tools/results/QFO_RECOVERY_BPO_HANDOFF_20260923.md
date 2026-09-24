@@ -285,3 +285,22 @@ The primary stratified-analysis launcher remains tied to its historical sources
 and three primary configurations; it is not an all-method recovery launcher.
 Failure-impact analysis, production recovered scores, complete-panel uncertainty
 and final publication consolidation are still outstanding.
+
+## Failed-Query Membership Analysis
+
+After whole-search and native-group admissions exist, use
+`audit_orthomcl_failure_membership.py --search SEARCH_ADMISSION
+--search-sha256 ACTUAL_SHA --native NATIVE_ADMISSION --native-sha256 ACTUAL_SHA
+--output FRESH_OUTPUT` to join retained search diagnostics to the native
+partition. It verifies matching query coverage, rehashes group-audit inputs,
+reconstructs the full native partition and distinguishes final groups, MCL
+singletons and proteins absent from the native index. It retains incoming,
+outgoing and self-hit flags and does not invent singleton final groups.
+
+This content audit relies on the supplied, pinned upstream admissions; it does
+not rerun scheduler validation or the search. Its records can feed the separate
+reference-exposure checker with `--allow-grouped-failed-queries` when grouped
+failures exist. Mapping validity and reference exposure still require that
+separate analysis. Neither incoming hits nor group membership establishes
+repaired orthology or a counterfactual score. The module has fixture/CLI tests,
+not a production recovered result. Freeze its executor before production use.
