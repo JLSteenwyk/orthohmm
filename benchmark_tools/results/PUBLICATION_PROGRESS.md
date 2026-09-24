@@ -1,5 +1,37 @@
 # Publication Progress
 
+## Downstream Recovery Executor Frozen And Exercised (2026-09-23)
+
+Previous turn progressed with independent score admission (a1dac0f). Re-read
+the objective and verified BLAST 22103_8 RUNNING 20:39, admission 22105_8
+pending. No DGX, old-job release, or failed high-CPM retry occurred.
+
+Created a clean detached sparse worktree at
+`benchmarks/work/publication_blast_recovery_downstream_v1_20260923`, revision
+`a1dac0fd556833643476c77d5f9a5edaa0982fa2`. It retains benchmark_tools,
+orthohmm and tests/unit (plus cone-mode parent files). The initial no-checkout
+test attempt found no files; populated the new sparse index with read-tree,
+then verified clean status. No existing worktree content was reset or reverted.
+
+The first combined checkout test with installed smoke enabled produced
+488 passes, one failure and one skip: the installed native test assumed the
+dedicated Python lived under the new checkout, and the retained pair fixture
+was likewise absent there. Retained the failure XML. The portable subset then
+passed **488 tests with two installed-fixture skips**. Explicitly ran the frozen
+staged native probe with the original data root: native partition/input
+preservation verified, 12 groups. The installed staging/pair suites in the
+original data-root checkout passed **53 tests, no skips**. This separates the
+checkout portability limitation from installed native verification; it is not
+a claim of production recovered inference success.
+
+Recorded eight source hashes, seven syntax-checked launcher hashes, retained
+JUnit records and the actual frozen native probe in
+[executor receipt](qfo_blast_recovery_downstream_executor_20260923.json).
+The executor remains clean. It may serve as the common pinned code snapshot
+for downstream stages, but none is submitted until actual prerequisite
+admissions/report hashes exist. Full production execution, failure-impact
+analysis, consolidated results and the publication package remain incomplete.
+
 ## Recovered OrthoMCL Independent Score Admission Implemented (2026-09-23)
 
 Previous turn progressed with the assessment handoff (7ab386a). Re-read the

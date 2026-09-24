@@ -242,3 +242,21 @@ actual scoring/conversion jobs, exact executors and the pinned conversion digest
 The related suites report 97 passes, including 13 new adapter cases, with shell
 syntax passing. It remains unscheduled. Production execution/admission, source
 failure-impact analysis and final result consolidation are still outstanding.
+
+## Frozen Executor
+
+The common downstream code snapshot is
+`benchmarks/work/publication_blast_recovery_downstream_v1_20260923` at
+`a1dac0fd556833643476c77d5f9a5edaa0982fa2`.
+[The receipt](qfo_blast_recovery_downstream_executor_20260923.json) records
+eight source hashes, seven syntax-checked wrapper hashes and retained test/probe
+artifacts. Sparse checkout status is clean. Use the original project root for
+runtime/data paths, not the executor checkout as the data root.
+
+Combined checkout tests passed 488 with two installed-fixture skips. The first
+smoke-enabled attempt failed one checkout-local runtime lookup; its XML is
+retained. A separate staged native probe executed from frozen code with the
+real data root verified 12 groups and input preservation. Original data-root
+installed staging/pair tests passed 53 with no skips. These fixture checks do
+not admit production outputs. No downstream job is queued; parent jobs and
+admission digests must be verified before each scheduled handoff.
