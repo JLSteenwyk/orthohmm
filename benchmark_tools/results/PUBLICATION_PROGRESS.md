@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Full-Size CPM Worker-Boundary Diagnostic Running (2026-09-23)
+
+Previous turn implemented the frozen-worker boundary wrapper (6d1bc49), making
+progress. Re-read the objective and revalidated live low-CPM phylogeny 22088_0
+and pending recovery chain. Added parent-level success/failure tests for native
+signal return, absent diagnostic-stop artifact and changed source bytes; all
+sixteen diagnostic tests pass, including the actual small frozen-worker subprocess.
+
+Committed scheduler/tests at `d72ad55ab533763ac23e1fb86c511c67678e4a7b` and
+created detached executor `benchmarks/work/cpm_worker_boundary_v1_20260923`.
+Submitted **22152**, verified RUNNING on bizon with one CPU, 64 GiB, two-hour
+limit and no requeue. The [submission receipt](qfo_cpm_worker_boundary_submission_22152.json)
+binds protocol, script and scheduler allocation. Original failed payloads remain
+untouched; the sole permitted success is graph parity followed by the explicit
+stop before optimization. No scientific retry, new accuracy score or default
+change follows from a diagnostic success.
+
+The full-size result is pending review. Recovery merge/admission and downstream
+OrthoMCL work remain incomplete; DGX remains deferred.
+
+
 ## Frozen-Worker Boundary Wrapper Implemented (2026-09-23)
 
 Previous turn prespecified the high-CPM boundary diagnostic (6ecd994), making

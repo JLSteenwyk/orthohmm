@@ -1,0 +1,19 @@
+{
+  "accuracy_evaluated": false,
+  "executor_commit": "d72ad55ab533763ac23e1fb86c511c67678e4a7b",
+  "job_id": "22152",
+  "protocol": {
+    "bytes": 2758,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/QFO_CPM_WORKER_BOUNDARY_PROTOCOL_20260923.md",
+    "sha256": "69425260bfa456036189ea9ae6b272c4025c91889510ff90dec8ee1d7cf2f930"
+  },
+  "publication_ready": false,
+  "rerun_authorized": false,
+  "scheduler": "JobId=22152 JobName=qfo_cpm_worker_boundary UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:16 TimeLimit=02:00:00 TimeMin=N/A SubmitTime=2026-09-23T20:21:36 EligibleTime=2026-09-23T20:21:36 AccrueTime=2026-09-23T20:21:36 StartTime=2026-09-23T20:21:36 EndTime=2026-09-23T22:21:36 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-23T20:21:36 Scheduler=Backfill Partition=gpu AllocNode:Sid=bizon-link:1865095 ReqNodeList=bizon ExcNodeList=(null) NodeList=bizon BatchHost=bizon NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=1,mem=64G,node=1,billing=1 AllocTRES=cpu=1,mem=64G,node=1,billing=1 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=1 MinMemoryNode=64G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_cpm_worker_boundary_20260923.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_worker_boundary_22152.log StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_worker_boundary_22152.log TresPerTask=cpu=1 \n",
+  "script": {
+    "bytes": 1064,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_cpm_worker_boundary_20260923.sh",
+    "sha256": "e5b3d6df1c0012e4445c58e83bb49485756adfa51f9b86bdaa86e5a5fb6f8a72"
+  },
+  "status": "worker_boundary_diagnostic_submitted_unscored"
+}
