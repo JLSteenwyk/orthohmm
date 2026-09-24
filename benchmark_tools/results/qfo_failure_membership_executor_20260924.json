@@ -1,0 +1,30 @@
+{
+  "status": "frozen_executor_fixture_and_cli_tests_passed",
+  "executor": "benchmarks/work/publication_failure_membership_v1_20260924",
+  "commit": "92fd9e5ab6a5bbb2c048b2e4bbd87e25a9859253",
+  "sparse_paths": ["benchmark_tools", "orthohmm", "tests/unit"],
+  "clean_after_tests": true,
+  "source_sha256": {
+    "audit_orthomcl_failure_membership.py": "3a7570cb5af6abb3ad94c83eee731150a393fe57560ed2e48c095381b6e0d012",
+    "audit_orthomcl_native_groups.py": "4d1ab9c453b6a242fbc97ea56363192c2011180880ca28c0f27c5d7e00d216da",
+    "orthomcl_matrix_to_pairwise.py": "105f7703e4a3ab5b8b80b16fbc47ed32c7e6de2bc4d222c59cb291cd616439dc",
+    "prepare_ob_candidate_neighborhood.py": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29",
+    "run_simulation_methods.py": "cccf579c221c51e8d03d512264efc3d0a61f4c0a598863d2423bdbd90f7921be"
+  },
+  "tests": {
+    "passed": 90,
+    "failed": 0,
+    "skipped": 0,
+    "modules": ["test_audit_orthomcl_failure_membership.py", "test_audit_orthomcl_native_groups.py", "test_orthomcl_reference_impact.py"],
+    "junit_path": "benchmarks/work/failure_membership_frozen_20260924.xml",
+    "junit_sha256": "6827011db4a2086a80a45e51c1690cc40c12f8e659624d01a5bb3e6198fc6e9a"
+  },
+  "production_run": false,
+  "publication_ready": false,
+  "limitations": [
+    "Fixture and CLI validation, not actual recovered final-group membership.",
+    "Requires actual complete search and native admissions with verified SHA256 digests.",
+    "Does not establish reference exposure or counterfactual accuracy effects.",
+    "Shared-host tests are not controlled timing measurements."
+  ]
+}

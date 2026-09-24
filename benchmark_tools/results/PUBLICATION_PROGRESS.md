@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Failure-Membership Executor Frozen (2026-09-24)
+
+Previous response only acknowledged the DGX deferral (no analytical progress).
+Re-read the full objective and checked live scheduler state: batch 22103_9
+completed in 41:56, admission 22105_9 completed in 31 seconds, and 22103_10
+is running. Ten of twenty replay batches are now admitted. Batch 9 (zero-based)
+contains 5,000 queries, 4,994 with hits, six no-hit queries without logged
+failure, and zero logged failed queries. Admission report SHA256:
+`2738187150f30888298495420fbd9a6a3bc5dc55677e98faa095fab80cf02534`.
+These are batch results, not whole-search or accuracy admission.
+
+Created a clean detached sparse checkout at 92fd9e5 for the failure-membership
+content audit and ran its membership, native partition and reference-exposure
+test suites there: **90 passed**, no skips. The
+[executor receipt](qfo_failure_membership_executor_20260924.json) pins all five
+source hashes and the JUnit report. Updated production handoff instructions.
+Actual failed-query final membership remains unmeasured until native output
+is independently admitted. No jobs restarted, dependencies changed, scientific
+settings altered, or DGX actions taken. Publication requirements remain open.
+
 ## Partial Failed-Query Mapping And FAS Exposure Checked (2026-09-23)
 
 Previous turn progressed with the failure-membership audit (f38ce3f). Re-read

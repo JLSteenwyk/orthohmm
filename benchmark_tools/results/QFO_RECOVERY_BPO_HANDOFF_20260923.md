@@ -303,4 +303,13 @@ reference-exposure checker with `--allow-grouped-failed-queries` when grouped
 failures exist. Mapping validity and reference exposure still require that
 separate analysis. Neither incoming hits nor group membership establishes
 repaired orthology or a counterfactual score. The module has fixture/CLI tests,
-not a production recovered result. Freeze its executor before production use.
+not a production recovered result.
+
+Its frozen executor is now
+`benchmarks/work/publication_failure_membership_v1_20260924` at
+`92fd9e5ab6a5bbb2c048b2e4bbd87e25a9859253`. The
+[receipt](qfo_failure_membership_executor_20260924.json) records source hashes
+and 90 passing tests from that clean checkout. Recheck checkout identity and
+cleanliness before use. Supply absolute paths to actual main-repository
+admissions and a fresh output path; do not substitute partial batch reports.
+Production execution remains pending complete search and native admissions.
