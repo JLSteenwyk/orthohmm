@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Comparison Export Accepts Explicit Recovered Admission (2026-09-23)
+
+Previous turn progressed with the corrected completion checklist (5a05997).
+Re-read the objective and confirmed BLAST 22103_8 RUNNING 33:09, then 34:33;
+22105_8 remains pending. No production job or DGX change occurred.
+
+Closed an integration gap in the comparison exporter: it previously accepted
+only the original corrected-comparator admission status. Added explicit support
+for `recovered_orthomcl_assessment_admitted`, restricted to OrthoMCL, requiring
+the recovered participant on every endpoint and matching recovered conversion
+status. Native statistics and mean arithmetic remain checked. Group/failure
+coverage remains bound to conversion; the exported row records search recovery
+and the original recovered participant, and human-readable tables disclose
+that this was not an uninterrupted BLAST run. No status relabeling or fallback
+to historical scores is used.
+
+Comparator/complete/factorial/sequence exporter suites: **117 passed**, including
+nine new recovered-admission cases. Re-exported all seven actual v6 admissions
+to `benchmarks/work/qfo_comparison_recovery_adapter_regression_20260923`:
+all eight rows are exactly unchanged and both scores.md and scores.tsv are
+byte-identical to v6. OrthoMCL remains unadmitted in that real table. The
+updated exporter only enables eventual consolidation after actual independent
+score admission; no production recovered scores were supplied or fabricated.
+
 ## Completion Checklist Corrected Against Current Export (2026-09-23)
 
 Previous turn progressed with manuscript status corrections (6f60e78).

@@ -16,6 +16,8 @@ from benchmark_tools.prepare_qfo_corrected_fastoma_pairs import SEMANTICS as FAS
 from benchmark_tools.prepare_qfo_corrected_orthomcl_pairs import SEMANTICS as ORTHOMCL_SEMANTICS
 
 ENDPOINTS = ("GO", "EC", "VGNC", "SwissTrees", "TreeFam-A", "FAS")
+RECOVERY_NOTE = ("OrthoMCL uses admitted recovered-search evidence, not an uninterrupted BLAST run; "
+                 "failed-query and group-coverage diagnostics remain in its manifest row.")
 METHOD_KEYS = {"proteinortho": "proteinortho_6_3_6", "sonic": "sonicparanoid_2_0_9",
                "orthofinder_full": "orthofinder_3_1_5_full",
                "orthofinder_sequence_only": "orthofinder_3_1_5_sequence_only", "fastoma": "fastoma_0_3_5",
@@ -23,17 +25,21 @@ METHOD_KEYS = {"proteinortho": "proteinortho_6_3_6", "sonic": "sonicparanoid_2_0
 
 
 def extract(report, conversion):
-    if (report.get("status") != "corrected_comparator_assessment_admitted"
+    recovered = report.get("status") == "recovered_orthomcl_assessment_admitted"
+    if ((report.get("status") != "corrected_comparator_assessment_admitted" and not recovered)
             or report.get("accuracy_admitted") is not True or report.get("publication_ready") is not False):
         raise ValueError("Require admitted corrected comparator assessment")
     method = report["method"]
     if method not in METHOD_KEYS:
         raise ValueError("Method requires its own audited admission adapter")
-    participant = "qfo_corrected_" + method
+    if recovered and method != "orthomcl":
+        raise ValueError("Recovered assessment status is restricted to OrthoMCL")
+    participant = "qfo_corrected_" + method + ("_recovered" if recovered else "")
     assessment = report["assessment"]
     if assessment["participant"] != participant or set(assessment["endpoints"]) != set(ENDPOINTS):
         raise ValueError("Wrong participant or incomplete endpoint set")
-    status = ("corrected_orthomcl_pairs_prepared_unscored" if method == "orthomcl" else
+    status = ("recovered_orthomcl_pairs_prepared_unscored" if recovered else
+              "corrected_orthomcl_pairs_prepared_unscored" if method == "orthomcl" else
               "corrected_fastoma_pairs_prepared_unscored" if method == "fastoma" else
               "corrected_orthofinder_pairs_prepared_unscored" if method in OF_SEMANTICS
               else "corrected_comparator_pairs_prepared_unscored")
@@ -53,6 +59,10 @@ def extract(report, conversion):
             raise ValueError("Wrong OrthoMCL semantics/coverage binding")
         extra = {"query_coverage": report["query_coverage"], "group_coverage": report["group_coverage"],
                  "group_audit": report["group_audit"]}
+        if recovered:
+            if conversion.get("accuracy_evaluated") is not False or conversion.get("publication_ready") is not False:
+                raise ValueError("Wrong recovered OrthoMCL conversion flags")
+            extra.update(search_recovery=True, participant=participant)
     total, retained, removed = (conversion[k] for k in ("total_pairs", "retained_pairs", "removed_mapping_pairs"))
     if any(type(v) is not int or v < 0 for v in (total, retained, removed)) or total != retained + removed or total == 0:
         raise ValueError("Invalid submitted-pair accounting")
@@ -128,6 +138,8 @@ def export(sources, output):
         "GO/EC similarity and FAS are not F1; the six-metric mean is a project-defined secondary summary.",
         "No paired uncertainty or corrected-release ranking is established by this point-estimate table.",
         "This exporter checks admitted report hashes and native score arithmetic, not the complete inference/scorer workflow again."]
+    if any(r.get("search_recovery") for r in table):
+        limitations.append(RECOVERY_NOTE)
     (output / "scores.md").write_text("\n".join(lines) + "\n\n" + "\n\n".join(limitations) + "\n")
     result = {"status": "corrected_qfo_partial_comparison", "methods": table, "checked_records": checked,
               "source": record(__file__), "method_registry_source": record(Path(__file__).with_name("publication_comparison.py")),

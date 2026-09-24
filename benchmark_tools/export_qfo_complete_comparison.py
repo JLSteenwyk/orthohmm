@@ -7,7 +7,7 @@ from pathlib import Path
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from benchmark_tools.export_qfo_corrected_comparison import ENDPOINTS, extract as comparator
+from benchmark_tools.export_qfo_corrected_comparison import ENDPOINTS, RECOVERY_NOTE, extract as comparator
 from benchmark_tools.export_qfo_corrected_factorial import extract as factorial
 from benchmark_tools.prepare_ob_candidate_neighborhood import record, check
 from benchmark_tools.publication_comparison import METHODS
@@ -85,6 +85,8 @@ def export(sources, replay_path, output):
         "Prediction semantics differ by method and are shown explicitly. Pair volume is not protein coverage.",
         "This table establishes no paired significance, ranking, independent generalization or matched efficiency.",
         "Checks cover report hashes, conversion binding and native score arithmetic; upstream admission audits are not rerun."]
+    if any(r.get("search_recovery") for r in table):
+        limitations.append(RECOVERY_NOTE)
     lines = ["# Corrected-Release QfO Publication Comparison", "",
         "| " + " | ".join(headers) + " |", "| " + " | ".join(["---"] * len(headers)) + " |"]
     for row in values:

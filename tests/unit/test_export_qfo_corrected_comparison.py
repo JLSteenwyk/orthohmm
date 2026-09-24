@@ -51,6 +51,57 @@ def test_orthomcl_export_retains_coverage_and_query_failures():
     assert row["group_audit"] == report["group_audit"]
 
 
+def recovered_fixture():
+    report, conversion = orthomcl_fixture()
+    participant = "qfo_corrected_orthomcl_recovered"
+    report["status"] = "recovered_orthomcl_assessment_admitted"
+    report["assessment"]["participant"] = participant
+    for endpoint in report["assessment"]["endpoints"].values():
+        endpoint["native_participant"]["participant_id"] = participant
+    conversion.update(status="recovered_orthomcl_pairs_prepared_unscored", participant=participant,
+                      accuracy_evaluated=False, publication_ready=False)
+    return report, conversion
+
+
+def test_recovered_orthomcl_export(tmp_path):
+    report, conversion = recovered_fixture()
+    row = extract(report, conversion)
+    assert row["search_recovery"] is True
+    assert row["participant"] == "qfo_corrected_orthomcl_recovered"
+    assert row["query_coverage"]["failed_queries"] == ["retained"]
+    assert row["scores"] == dict.fromkeys(ENDPOINTS, .5)
+    pairs = tmp_path / "pairs.json"
+    pairs.write_text(json.dumps(conversion))
+    report["pairs_manifest"] = record(pairs)
+    path = tmp_path / "admitted.json"
+    path.write_text(json.dumps(report))
+    result = export([(path, record(path)["sha256"])], tmp_path / "table")
+    admitted = [r for r in result["methods"] if r["status"] == "admitted"]
+    assert len(admitted) == 1 and admitted[0]["key"] == "orthomcl_1_4"
+    assert admitted[0]["search_recovery"] is True
+
+
+@pytest.mark.parametrize("problem", ["method", "participant", "endpoint", "conversion", "flags", "coverage", "unadmitted"])
+def test_recovered_export_rejects_mixed_provenance(problem):
+    report, conversion = recovered_fixture()
+    if problem == "method":
+        report["method"] = "fastoma"
+    elif problem == "participant":
+        report["assessment"]["participant"] = "qfo_corrected_orthomcl"
+    elif problem == "endpoint":
+        report["assessment"]["endpoints"]["GO"]["native_participant"]["participant_id"] = "qfo_corrected_orthomcl"
+    elif problem == "conversion":
+        conversion["status"] = "corrected_orthomcl_pairs_prepared_unscored"
+    elif problem == "flags":
+        conversion["accuracy_evaluated"] = True
+    elif problem == "coverage":
+        report["query_coverage"] = {}
+    else:
+        report["accuracy_admitted"] = False
+    with pytest.raises(ValueError):
+        extract(report, conversion)
+
+
 @pytest.mark.parametrize("key,value", [("pair_semantics", "pre-clustering graph edges"),
     ("query_coverage", {}), ("group_coverage", {}), ("group_audit", {})])
 def test_orthomcl_export_refuses_changed_binding(key, value):

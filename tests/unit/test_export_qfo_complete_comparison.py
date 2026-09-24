@@ -5,7 +5,7 @@ import pytest
 from benchmark_tools import export_qfo_complete_comparison as module
 from benchmark_tools.prepare_ob_candidate_neighborhood import record
 from tests.unit.test_export_qfo_corrected_factorial import fixture
-from tests.unit.test_export_qfo_corrected_comparison import fixture as comparator_fixture, orthomcl_fixture
+from tests.unit.test_export_qfo_corrected_comparison import fixture as comparator_fixture, orthomcl_fixture, recovered_fixture
 
 
 @pytest.mark.parametrize("method", ["proteinortho", "sonic", "orthomcl"])
@@ -53,6 +53,23 @@ def test_partial_export(tmp_path, monkeypatch):
     assert "Mapping losses" in (output / "scores.tsv").read_text()
     with pytest.raises(FileExistsError):
         module.export(sources, replay, output)
+
+
+def test_recovered_export_joins_without_relabeling(tmp_path, monkeypatch):
+    replay, existing, _, _ = inputs(tmp_path, monkeypatch)
+    report, conversion = recovered_fixture()
+    pairs = tmp_path / "recovered_pairs.json"
+    pairs.write_text(json.dumps(conversion))
+    report["pairs_manifest"] = record(pairs)
+    path = tmp_path / "recovered_admission.json"
+    path.write_text(json.dumps(report))
+    output = tmp_path / "table"
+    result = module.export([(p, record(p)["sha256"]) for p in (existing, path)], replay, output)
+    assert result["admitted_methods"] == 2
+    recovered = next(r for r in result["methods"] if r["key"] == "orthomcl_1_4")
+    assert recovered["participant"] == "qfo_corrected_orthomcl_recovered"
+    assert recovered["query_coverage"]["failed_queries"] == ["retained"]
+    assert module.RECOVERY_NOTE in (output / "scores.md").read_text()
 
 
 @pytest.mark.parametrize("problem", ["replay", "report", "conversion", "duplicate", "unadmitted", "wrong_cell"])
