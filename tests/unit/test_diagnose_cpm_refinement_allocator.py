@@ -2,7 +2,21 @@ import copy
 
 import pytest
 
-from benchmark_tools.diagnose_cpm_refinement_allocator import environment, record, run, validate_child
+from benchmark_tools.diagnose_cpm_refinement_allocator import check, environment, record, run, validate_child
+
+
+def test_symlink_record_preserves_path_and_checks_target_bytes(tmp_path):
+    target = tmp_path / "target"
+    target.write_text("original")
+    link = tmp_path / "link"
+    link.symlink_to(target)
+    item = record(link)
+    assert item["path"] == str(link)
+    check(item)
+    check(record(target))
+    target.write_text("changed")
+    with pytest.raises(ValueError, match="identity changed"):
+        check(item)
 
 
 def test_diagnostic_environment(monkeypatch, tmp_path):

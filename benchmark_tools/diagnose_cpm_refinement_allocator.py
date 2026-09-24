@@ -10,12 +10,17 @@ import time
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from benchmark_tools.audit_failed_recovery_refinement import coverage, record
-from benchmark_tools.prepare_ob_candidate_neighborhood import check
 from benchmark_tools.run_blast_recovery_batch import save_status
 
 PROTOCOL_SHA = "7ceae6cad1f6806529dead92ee0c978f28df2bdc87b5a379ead4028e84d27577"
 READBACK_SHA = "aef33d04d1bec4dc469e7afc15c196e54174db89c7035650f8beb565942b9aa6"
 RUNNER_SHA = "a277ab01e7fbcbfaa15f7a63a092c78183baaabbbcc25cd23640f6a750eabbe2"
+
+
+def check(item):
+    # Preserve the recorded path spelling; saved graph inputs include symlinks.
+    if record(item["path"]) != item:
+        raise ValueError("Diagnostic input identity changed: " + item["path"])
 
 
 def environment(launcher):

@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Diagnostic Preflight Path Convention Corrected (2026-09-23)
+
+Job **22157 failed 1:0 in one second before output creation or child launch**.
+The readback recorder retains symlink path spelling, whereas the reused checker
+canonicalizes it. This caused an identity rejection on `payload/gene_names.txt`,
+not evidence of changed file bytes. The submission receipt already retains the
+failed scheduler state; the earlier no-result statement describes submission,
+not a claim that this job remained pending.
+
+Corrected the diagnostic to verify records with its own recorder, preserving
+the recorded path and requiring exact size/digest agreement. Added a regression
+test for both direct and symlink records, including rejection after target-byte
+mutation. No scientific child was attempted, no native crash was masked, and
+the single allocator-debug scientific execution remains unperformed. The
+corrected wrapper must be frozen separately before any new submission; 22157
+will remain recorded as a preflight failure.
+
 ## Single Allocator Diagnostic Submitted (2026-09-23)
 
 Committed/pushed implementation 7688a5f and created clean detached executor
