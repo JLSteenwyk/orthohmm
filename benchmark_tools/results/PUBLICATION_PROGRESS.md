@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Full-Size Frozen Worker Reached Exact Preoptimizer Graph (2026-09-23)
+
+Previous turn tested/froze/submitted diagnostic 22152 (d72ad55, 187d33f), making
+progress. Re-read the goal and verified it live, then polled the same job to
+COMPLETED 0:0 in 1:46. No restart was performed.
+
+[Reviewed result](QFO_CPM_WORKER_BOUNDARY_RESULT_22152.md): the frozen worker
+and Python-pair adapter reached optimizer entry with all 984,137 vertices and
+25,501,180 edges exactly preserved. All three exhaustive endpoint comparisons
+have zero differences; complete endpoint/weight fingerprints match saved inputs.
+Optimizer invocation was intercepted and stopped, not executed. The log is empty.
+Rechecked all 279 distinct file identities and the clean frozen executor.
+
+This extends the direct-constructor evidence but does not explain the historical
+SIGSEGV or establish optimizer correctness. No groups or scores were produced;
+high-CPM accuracy remains missing and no scientific retry was launched. Low-CPM
+phylogeny 22088_0 remains live at 1:03; its admission is pending. BLAST recovery
+and publication requirements remain incomplete. DGX remains untouched.
+
+
 ## Full-Size CPM Worker-Boundary Diagnostic Running (2026-09-23)
 
 Previous turn implemented the frozen-worker boundary wrapper (6d1bc49), making
