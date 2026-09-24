@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Combined Uncertainty Recovery Integration Verified (2026-09-23)
+
+Previous goal turn progressed with recovered raw-count auditing (cd4b9b7).
+Re-read the objective and confirmed 22103_9 RUNNING 02:25; later batches,
+merge and search admission remain dependent. DGX remains deferred.
+
+The combined SwissTrees count table now carries recovered participant,
+search-recovery flag, failed-query coverage, group coverage/audit and pair
+semantics from the independently checked comparator audit. Updated four
+source pins in the current comparison launcher for this assembler and the
+previously reviewed recovered count-audit/exporter changes. Historical frozen
+executors and results are unchanged. No statistical kernel or protocol changed.
+
+Focused assembler/launcher/count-audit/exporter/bootstrap suites: **89 passed**.
+The new assembly tests isolate admission/file IO and exercise the real count
+validator; upstream admission contracts remain separately tested.
+
+Ran the current launcher against the actual v6 seven-method comparison,
+rehashing inputs and reconstructing raw family counts before 100000 paired
+replicates. Output:
+`benchmarks/work/qfo_swiss_recovery_adapter_regression_20260923.json`
+(243007 bytes, SHA256
+`88637d8db393e61f4bde3c822d6928f65c317cad98afea453ac85bb5b522757a`).
+All reconstructed method rows, point estimates, comparisons/intervals, seed,
+replicates, multiplicity and completeness fields exactly equal retained
+`qfo_fastoma_swiss_uncertainty_22098.json`. Seven contrasts remain estimable,
+the complete panel remains false, and no recovered OrthoMCL scores exist yet.
+This was a regression analysis on the shared host, not controlled timing.
+Production recovery still needs all BLAST batches through scoring admissions;
+freeze the updated uncertainty executor before its eventual complete-panel run.
+
 ## Recovered SwissTrees Raw-Count Audit Integration (2026-09-23)
 
 The preceding user-directed turn acknowledged DGX deferral without advancing

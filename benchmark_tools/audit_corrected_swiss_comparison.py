@@ -80,6 +80,10 @@ def audit(comparison_path, comparison_sha, baseline_path):
         methods.append({"method": row["key"], "status": "counts_verified", "admission": admission,
             "raw_file": raw, "prediction_semantics": row["prediction_semantics"],
             "families": result["families"], "aggregate": result["aggregate"]})
+        if report["status"] == "recovered_orthomcl_assessment_admitted":
+            methods[-1].update({key: result[key] for key in (
+                "search_recovery", "participant", "query_coverage", "group_coverage",
+                "group_audit", "pair_semantics")})
     result = {"status": "corrected_comparison_swiss_counts_verified", "reference": baseline["reference"],
         "families": baseline["families"], "reference_relation_count": len(anchor[1]),
         "shared_represented_genes": baseline["shared_represented_genes"],
