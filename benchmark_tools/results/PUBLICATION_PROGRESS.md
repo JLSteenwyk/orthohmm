@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Recovered Candidate Preparation Tested (2026-09-23)
+
+Previous turn completed the pending focused test session (59 passed), providing
+verification evidence. Re-read the full goal; DGX remains explicitly deferred.
+Latest accounting: recovery 22154 RUNNING 5:10; admission 22155 PENDING;
+low-CPM scoring 22094_0 COMPLETED 0:0 in 34:32 (score admission still required).
+BLAST batch 22103_5 completed in 14:42 and 22105_5 admission completed in
+15 seconds: six of twenty recovery batches have completed their admission jobs.
+
+Added a recovery-aware seed gate and candidate preparation driver. It requires
+successful independent admission 22155, exact executor/source, all four stage
+records, unchanged checked inputs, and the recovered final refined partition.
+It retains the original failed run in provenance and does not unblock its chain.
+The frozen scientific runtime is verified before import. Candidate construction
+reuses the existing byte-pinned builder and frozen expansion parameters; no
+scientific thresholds change. Before/after checks and durable failure reports
+prevent a prepared candidate from being presented as an admitted result.
+
+All **67** focused tests pass, including existing candidate builder tests and
+new preparation success, changed inputs/runtime/checkpoint, wrong imports,
+short universe, failed build, and refusal to overwrite tests. Scientific work
+in the new orchestration fixtures is mocked; these tests are not a real-data
+candidate result. Prepared a two-CPU, 64-GiB, four-hour no-requeue wrapper
+depending on 22155. It has not yet been submitted. Independent candidate
+admission and downstream recovery-aware phylogeny/scoring remain to implement.
+No controlled timing claim is made and no DGX access occurred.
+
 ## Independent Recovery Admission Queued (2026-09-23)
 
 Committed/pushed validation tests and wrapper at
