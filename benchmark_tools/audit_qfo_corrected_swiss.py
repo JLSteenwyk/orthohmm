@@ -48,11 +48,15 @@ def audit(admission_path, admission_sha, baseline_path):
     conversion = json.loads(Path(report["pairs_manifest"]["path"]).read_text())
     row = extract(report, conversion)
     # The independent admission pins the execution report, which inventories raw outputs.
-    suffix = f"/qfo_corrected_assessment_v1/{report['method']}/results.json"
+    recovered = report["status"] == "recovered_orthomcl_assessment_admitted"
+    suffix = ("/qfo_blast_recovery_assessment_v1/results.json" if recovered else
+              f"/qfo_corrected_assessment_v1/{report['method']}/results.json")
     execution_records = [r for r in report["checked_records"] if r["path"].endswith(suffix)]
     if len(execution_records) != 1:
         raise ValueError("Missing or ambiguous admitted execution record")
     execution_record = execution_records[0]
+    if recovered and execution_record != report["execution_report"]:
+        raise ValueError("Recovered execution record contradicts independent admission")
     check(execution_record)
     execution = json.loads(Path(execution_record["path"]).read_text())
     if (execution["status"] != "process_succeeded_pending_independent_admission"
@@ -62,6 +66,8 @@ def audit(admission_path, admission_sha, baseline_path):
             or report["scheduler"]["ExitCode"] != "0:0"
             or execution["pairs_manifest"] != report["pairs_manifest"]):
         raise ValueError("Execution contradicts independent admission")
+    if recovered and execution["stage"] != conversion:
+        raise ValueError("Recovered execution stage contradicts admitted conversion")
     raw_records = [r for r in execution["outputs"] if
                    Path(r["path"]).parent.name == "SwissTrees" and r["path"].endswith("raw.txt.gz")]
     if len(raw_records) != 1:
@@ -89,6 +95,12 @@ def audit(admission_path, admission_sha, baseline_path):
                       "Historical raw data anchor reference identities and labels only; corrected counts are read afresh.",
                       "Relies on the pinned independent admission for inference and full scoring provenance; does not rerun them.",
                       "Full prespecified eight-method analysis remains required; these are development-exposed families."])
+    if recovered:
+        result.update(search_recovery=True, query_coverage=report["query_coverage"],
+                      group_coverage=report["group_coverage"], group_audit=report["group_audit"],
+                      pair_semantics=report["pair_semantics"])
+        result["limitations"].append(
+            "Recovered BLAST search, not an uninterrupted run; failed-query and group coverage remain in this audit.")
     return result
 
 

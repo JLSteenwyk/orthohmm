@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Recovered SwissTrees Raw-Count Audit Integration (2026-09-23)
+
+The preceding user-directed turn acknowledged DGX deferral without advancing
+analysis (no progress). Re-read the full objective and revalidated live jobs:
+22103_8 completed in 40:55 and 22105_8 independently completed in 00:31,
+both exit 0:0. Batch 10 (22103_9) is now running; merge and full-search
+admission remain dependent on all batches. No DGX or job changes were made.
+
+Updated the corrected comparator SwissTrees count auditor to recognize the
+explicit recovered OrthoMCL assessment directory. It requires the execution
+record to equal the score admission's pinned execution record and the embedded
+conversion stage to equal the admitted conversion. Existing exporter checks
+still validate the recovered method, participant, endpoints and failure/group
+coverage. The count audit retains recovery status, query and group coverage,
+group audit and pair semantics, without modifying reference-family identity,
+native arithmetic, resampling or multiplicity rules.
+
+Focused count-audit/exporter/bootstrap tests: **68 passed**, including eight
+new audit-plumbing cases (the synthetic plumbing fixture stubs extraction;
+separate exporter tests exercise that admission contract). These are not
+production recovered scores. Frozen comparison/strata launchers still pin
+their historical sources; a newly pinned executor and actual recovered score
+admission are required before the complete uncertainty run. The assembled
+comparison retains admission links but does not yet copy the new recovery
+metadata into each count row; review that presentation before consolidation.
+Repository-wide whitespace checking encountered pre-existing generated sample
+changes; unrelated files were left untouched.
+
 ## Comparison Export Accepts Explicit Recovered Admission (2026-09-23)
 
 Previous turn progressed with the corrected completion checklist (5a05997).
