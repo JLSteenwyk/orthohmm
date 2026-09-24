@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Low-CPM Native Validation Passed; Reconstruction Gate Added (2026-09-23)
+
+Previous turn froze/submitted refinement reconstruction 22153 (b2d6a87,
+2d3a686), making progress. Re-read the objective and polled authoritative jobs.
+Low-CPM phylogeny **22088_0 COMPLETED 0:0 in 1:22:02**, and independent native
+admission **22090_0 COMPLETED 0:0 in 5:16**. Pair conversion **22092_0 RUNNING**
+at 0:42. BLAST recovery **22103_3 RUNNING** at 5:58. Reconstruction **22153**
+remains PENDING(Resources); it has not failed and was not restarted.
+
+Read `benchmarks/work/qfo_cpm_native_admission_22090_0.json`, SHA-256
+`17fb338f37b95f6a942dea834643935585f57f039125b6b9b1f56c8f8c79863b`:
+status `cpm_native_pairs_verified_unscored`, 5,959,141 native pairs, 374,407 root
+HOGs retaining all 984,137 candidate genes, no cross-source merges. This reports
+the independent validator's native-output result, not an accuracy score; accuracy,
+scoring admission and publication flags remain false. QfO scoring is still pending.
+
+Added `validate_cpm_refinement_reconstruction.py` for the eventual recovery
+preflight. It requires successful job 22153, its exact clean frozen executor and
+source, complete parent/worker/input bindings, correct imported modules and
+numeric checkpoint, before/after runtime identity, and an independent exact
+membership comparison. Historical numeric auditing and reconstruction use
+identical auditor bytes at different frozen paths; this is checked with the
+expected reconstruction path rather than rejecting that legitimate relocation.
+The validator rejects pending jobs before reading output and never authorizes
+recovery by itself. Forty tests pass across reconstruction and independent checks,
+including the small real frozen refinement subprocess. Full-data validation awaits
+22153; no new job or retry was submitted. DGX remains untouched.
+
 ## Full-Data Refinement Check Queued (2026-09-23)
 
 Committed/pushed the reconstruction implementation at
