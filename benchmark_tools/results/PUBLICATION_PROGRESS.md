@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Recovery-Specific Search Admission Implemented (2026-09-23)
+
+Previous turn froze and queued candidate merge 22150 (a449ff5, 7a9b1f5),
+constituting progress. Re-read the objective and confirmed 22088_0 remains
+live, recovery 22103_3 is resource-pending, and 22150 is dependency-pending.
+
+Added the [recovered-search admission wrapper](QFO_RECOVERY_SEARCH_ADMISSION_20260923.md).
+It validates the completed frozen merge, reruns prefix/replay prerequisites,
+extracts and checks all formatted database sequences, and audits complete
+candidate bytes, numeric HSP semantics, coverage and selected diagnostics.
+It does not relabel the interrupted original job as successful, replace its
+partial output or authorize downstream execution.
+
+All 99 focused recovery tests pass. A live prerequisite-only probe rejected
+pending 22150 before creating output or reading production BLAST bytes.
+Full orchestration/failure-injection tests and frozen scheduled integration
+are still needed before submission; no production search admission occurred.
+Existing held inference jobs and DGX remain untouched.
+
+
 ## Recovery Candidate Merge Queued Behind Complete Panel (2026-09-23)
 
 Previous turn implemented the integrated content auditor (7ba1a5d), constituting
