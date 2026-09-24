@@ -4,6 +4,7 @@ import argparse
 import json
 import os
 from pathlib import Path
+import shutil
 import subprocess
 import sys
 import time
@@ -15,6 +16,15 @@ from benchmark_tools.run_blast_recovery_batch import save_status
 PROTOCOL_SHA = "7ceae6cad1f6806529dead92ee0c978f28df2bdc87b5a379ead4028e84d27577"
 READBACK_SHA = "aef33d04d1bec4dc469e7afc15c196e54174db89c7035650f8beb565942b9aa6"
 RUNNER_SHA = "a277ab01e7fbcbfaa15f7a63a092c78183baaabbbcc25cd23640f6a750eabbe2"
+BACKTRACE_PROTOCOL_SHA = "979b2da0abc5d48a782d4deeec81db2e0f7dea1f136d6343ed76018559fd8cbb"
+
+
+def debugger_command(binary, child):
+    return [str(binary), "--batch", "--nx", "--return-child-result",
+        "-iex", "set auto-load off", "-iex", "set debuginfod enabled off",
+        "-ex", "set pagination off", "-ex", "set disable-randomization off",
+        "-ex", "run", "-ex", "thread apply all bt", "-ex", "info registers",
+        "-ex", "info sharedlibrary", "--args", *child]
 
 
 def check(item):
@@ -42,7 +52,7 @@ def validate_child(child, reference, destination, names):
     return coverage(destination, names, reference["groups"])
 
 
-def run(root, commit):
+def run(root, commit, native_backtrace=False):
     if (os.environ.get("SLURM_CPUS_PER_TASK") != "1" or os.environ.get("SLURM_MEM_PER_NODE") != "65536"
             or os.environ.get("SLURMD_NODENAME") != "bizon" or not os.environ.get("SLURM_JOB_ID")):
         raise ValueError("Require one-CPU 64-GiB bizon diagnostic allocation")
@@ -50,7 +60,8 @@ def run(root, commit):
     if subprocess.check_output(["git", "-C", str(executor), "rev-parse", "HEAD"], text=True).strip() != commit:
         raise ValueError("Diagnostic executor changed")
     subprocess.run(["git", "-C", str(executor), "diff", "--exit-code", "HEAD", "--", "benchmark_tools", "orthohmm"], check=True)
-    output = root / "benchmarks/results/qfo_cpm_refinement_allocator_diagnostic_v1"
+    mode = "backtrace" if native_backtrace else "allocator"
+    output = root / f"benchmarks/results/qfo_cpm_refinement_{mode}_diagnostic_v1"
     if output.exists() or output.is_symlink():
         raise FileExistsError(output)
     results = root / "benchmark_tools/results"
@@ -67,6 +78,17 @@ def run(root, commit):
         *native_report["checked_records"], *reference["modules"],
         *[record(native / "payload" / name) for name in ("gene_names.txt", "sources.npy", "targets.npy", "weights.npy")],
         record(native / "orthogroups_profiles.txt")]
+    debugger = None
+    if native_backtrace:
+        backtrace_protocol = record(results / "QFO_CPM_BACKTRACE_PROTOCOL_20260923.md")
+        if backtrace_protocol["sha256"] != BACKTRACE_PROTOCOL_SHA:
+            raise ValueError("Backtrace protocol changed")
+        binary = shutil.which("gdb")
+        if binary is None:
+            raise ValueError("GDB is unavailable")
+        debugger = dict(binary=record(binary), version=subprocess.check_output(
+            [binary, "--nx", "--version"], text=True))
+        records.extend([backtrace_protocol, debugger["binary"]])
     for item in records:
         check(item)
     from benchmark_tools.verify_qfo_replay_launcher import verify
@@ -80,10 +102,16 @@ def run(root, commit):
     (output / "payload").symlink_to(native / "payload", target_is_directory=True)
     (output / "orthogroups_profiles.txt").symlink_to(native / "orthogroups_profiles.txt")
     command = [sys.executable, "-B", runner["path"], "--root", str(root), "--output", str(output), "--mode", "repeat-refinement"]
-    report = dict(status="allocator_diagnostic_running", job_id=os.environ["SLURM_JOB_ID"],
+    child_command = command
+    if debugger is not None:
+        command = debugger_command(debugger["binary"]["path"], child_command)
+    report = dict(status=f"{mode}_diagnostic_running", job_id=os.environ["SLURM_JOB_ID"],
         executor_commit=commit, command=command, checked_records=records, runtime_before=runtime,
         diagnostic_overrides=dict(PYTHONMALLOC="debug", PYTHONFAULTHANDLER="1"),
         child_attempts=0, seed_admitted=False, accuracy_evaluated=False, publication_ready=False)
+    if debugger is not None:
+        report.update(debugger=debugger, scientific_child_command=child_command,
+                      returncode_scope="GDB --return-child-result; inspect log for signal/debugger failure")
     save_status(output / "status.json", report)
     try:
         report["child_attempts"] = 1
@@ -104,11 +132,11 @@ def run(root, commit):
             raise ValueError("Runtime changed during diagnostic")
         for item in records:
             check(item)
-        report.update(status="allocator_diagnostic_completed_not_admitted",
+        report.update(status=f"{mode}_diagnostic_completed_not_admitted",
             limitations=["One diagnostic execution, not proof of memory safety or a repaired runtime.",
                          "No optimizer execution; original admission failure and blocked candidate remain unchanged."])
     except BaseException as error:
-        report.update(status="allocator_diagnostic_failed", error_type=type(error).__name__, error=str(error))
+        report.update(status=f"{mode}_diagnostic_failed", error_type=type(error).__name__, error=str(error))
         raise
     finally:
         save_status(output / "status.json", report)
@@ -119,5 +147,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, required=True)
     parser.add_argument("--commit", required=True)
+    parser.add_argument("--native-backtrace", action="store_true")
     args = parser.parse_args()
-    run(args.root.resolve(), args.commit)
+    run(args.root.resolve(), args.commit, args.native_backtrace)

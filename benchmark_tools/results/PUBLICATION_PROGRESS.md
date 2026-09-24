@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Native Backtrace Diagnostic Prepared (2026-09-23)
+
+Previous turn progressed with actual partial replay-failure evidence (5bd5007).
+Re-read the objective; BLAST 22103_9 RUNNING 13:53. Inspected retained 22155/
+22158 failure records and crash-directory inventory: no Python core is present;
+unrelated crash contents were not read. Apport remains the configured collector.
+
+Prepared a [bounded backtrace protocol](QFO_CPM_BACKTRACE_PROTOCOL_20260923.md)
+and explicit diagnostic mode in the allocator driver. It runs the same frozen
+refinement child once under GDB, with no optimizer, no scientific-setting change,
+and no garbage-collection bypass. It uses a fresh diagnostic output, preserves
+ordinary ASLR, disables GDB init/auto-load/debuginfod, and requests all-thread
+native stacks, registers and shared-library inventory. GDB identity/version and
+scientific child command are recorded. Every diagnostic result retains false
+seed/accuracy/publication admission; failed scientific admission and blocked
+candidate dependencies are unchanged.
+
+**21 tests passed**, including installed-GDB smoke checks for exit-code
+propagation and SIGSEGV stack capture in an isolated disposable process with
+core output disabled. The one-CPU/64-GiB/one-hour/no-requeue Slurm wrapper passes
+shell syntax checks. No scientific reproduction has launched at this milestone;
+freeze this source before submission. A successful debugger run would not admit
+high-CPM accuracy or prove memory safety. DGX remains deferred.
+
 ## First Nine Replay Batches: Failure Description (2026-09-23)
 
 Previous turn progressed by freezing and testing the consolidation executor
