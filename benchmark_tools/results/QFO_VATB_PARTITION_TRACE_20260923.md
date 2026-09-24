@@ -45,10 +45,25 @@ The strict-profile and multipass snapshots are separate saved stages; their
 sequence must not be interpreted as proof that HMMs recovered a previously
 refined partition without reviewing the replay control flow.
 
-The frozen refinement source includes copy-number-based splitting. Whether
-its exact predicates fired here still requires species-count and call-path
-evidence; larger group size alone is insufficient. No scientific code or
-parameters were changed and no inference was rerun.
+The subsequent [frozen copy-guard evaluation](qfo_vatb_copy_guard_20260923.json)
+uses the checkpoint's checksum-verified gene-to-species array, not species
+inferred from accession spelling. The 276-gene group has a maximum of 12 copies
+from one species in the 78-species dataset. The frozen predicate requires at
+least 150 genes, at least 10 copies from one species, and at least 50 dataset
+species. Evaluating that exact function extracted from the frozen source gives
+true. All **276** group members, not only its 27 VATB reference members, occur
+as singletons in each corresponding refined output. The 21-gene group's
+maximum copy count is one; its predicate is false and none of its members
+becomes a singleton.
+
+This supports the copy-number guard as the explanation for the observed
+atomization, not merely a correlation with larger group size. It remains a
+post-hoc predicate and output check, not a dynamic branch trace or a controlled
+intervention. It does not explain why candidate expansion fails to reunite
+members or quantify a general benefit from changing the guard. No scientific
+code or parameters were changed and no full inference was rerun. Sixteen
+combined tests cover predicate boundaries, full-group singleton verification,
+and the earlier accession-membership trace.
 
 [Machine-readable memberships and input identities](qfo_vatb_partition_trace_20260923.json)
 include all 28 accession-to-gene mappings and the seven selected partitions.

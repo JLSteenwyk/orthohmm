@@ -875,9 +875,13 @@ worsened; VATB had the largest family-level decline. A post-hoc retained-stage
 trace located its separation before phylogeny: low-CPM refinement changed two
 groups containing the 28 reference genes into 28 separate groups, including
 27 singletons, and candidate expansion did not reunite them. The control
-retained two groups. This localizes the first observed loss of co-grouping,
-but does not establish the exact refinement predicate or generalize to other
-families. Precision and recall intervals also included zero.
+retained two groups. The affected low-CPM group contained 276 genes and up to
+12 copies from one species, satisfying the frozen broad-panel copy-split rule
+(at least 150 genes, 10 within-species copies, and 50 dataset species).
+All 276 members were singletons after refinement. This supports the copy-number
+guard as the explanation for this case, but is a post-hoc predicate/output
+check rather than a dynamic branch trace or evidence for changing defaults.
+Precision and recall intervals also included zero.
 High-CPM replay failed with SIGSEGV. Its checkpoint continuation completed,
 but independent validation and a subsequent allocator-debug refinement
 diagnostic both failed during post-write partition readback. Written partitions

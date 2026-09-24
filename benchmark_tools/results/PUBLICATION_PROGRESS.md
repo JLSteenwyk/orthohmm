@@ -1,5 +1,28 @@
 # Publication Progress
 
+## VATB Copy-Guard Predicate Verified (2026-09-23)
+
+Previous turn progressed by locating VATB separation before phylogeny
+(6423b6c). Re-read the objective. BLAST 22103_6 remained RUNNING 24:39 at the
+initial poll; following jobs remain dependency-gated. No failed high-CPM job
+was retried, no inference rerun and no DGX access occurred.
+
+Added a source-pinned predicate evaluator using structured AST extraction of
+the frozen copy-split function and constants, plus the checksum-verified
+984,137-gene species mapping. The affected 276-gene group has maximum species
+copy count **12**. Dataset count 78 and frozen thresholds (150 genes, 10 copies,
+50 species) give predicate=true. Independently checked all **276** members are
+singletons in both refined outputs. The 21-gene comparison group has maximum
+copy count 1, predicate=false and zero observed singletons.
+
+All **16** combined predicate/membership tests pass. Saved
+[machine-readable results](qfo_vatb_copy_guard_20260923.json), updated the
+[VATB trace interpretation](QFO_VATB_PARTITION_TRACE_20260923.md) and manuscript.
+This supports the copy guard explanation but is not a dynamic execution trace,
+a controlled intervention, or evidence to promote changed defaults. Candidate
+reunion failure remains unexplained. Existing rendered manuscript snapshots
+remain historical; publication requirements remain incomplete.
+
 ## VATB Loss Localized Before Phylogeny (2026-09-23)
 
 Previous turn progressed by auditing the failed allocator diagnostic and
