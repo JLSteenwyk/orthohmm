@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Full-Data Refinement Check Queued (2026-09-23)
+
+Committed/pushed the reconstruction implementation at
+`b2d6a877d2fc26dd8b3b857687b74da4a4b1f005` and created clean detached executor
+`benchmarks/work/cpm_refinement_check_v1_20260923`. Submitted **22153** and
+confirmed PENDING(Resources), not a failed or stopped process. The
+[submission receipt](qfo_cpm_refinement_submission_22153.json) records the exact
+source/script, protocol, executor and scheduler request: one CPU, 64 GiB,
+24-hour limit and no requeue. No result is available yet. This reconstructs an
+existing refinement only; it is not the one permitted stage-3 optimizer retry.
+No existing job or dependency was changed, and DGX remains deferred.
+
 ## Frozen Refinement Reconstruction Implemented (2026-09-23)
 
 Previous turn completed the actual predecessor audit and pushed 5036e05, making

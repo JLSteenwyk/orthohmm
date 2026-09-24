@@ -1,0 +1,23 @@
+{
+  "accuracy_evaluated": false,
+  "executor": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cpm_refinement_check_v1_20260923",
+  "executor_commit": "b2d6a877d2fc26dd8b3b857687b74da4a4b1f005",
+  "job_id": "22153",
+  "protocol": {
+    "bytes": 7240,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/QFO_CPM_CHECKPOINT_RECOVERY_PROTOCOL_20260923.md",
+    "sha256": "67615f1d7d66dd208a5e5ad6119fa0bdb282c4e3a5f412f8b95f5a86246aa0ad"
+  },
+  "recovery_authorized": false,
+  "scheduler": "JobId=22153 JobName=qfo_cpm_refinement_check\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=PENDING Reason=Resources Dependency=(null)\n   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:00 TimeLimit=1-00:00:00 TimeMin=N/A\n   SubmitTime=2026-09-23T20:44:29 EligibleTime=2026-09-23T20:44:29\n   AccrueTime=2026-09-23T20:44:29\n   StartTime=2026-09-24T00:42:56 EndTime=2026-09-25T00:42:56 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-23T20:44:31 Scheduler=Main\n   Partition=gpu AllocNode:Sid=bizon-link:2645862\n   ReqNodeList=bizon ExcNodeList=(null)\n   NodeList= SchedNodeList=bizon\n   NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=1,mem=64G,node=1,billing=1\n   AllocTRES=(null)\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=1 MinMemoryNode=64G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cpm_refinement_check_v1_20260923/benchmark_tools/results/qfo_cpm_refinement_reconstruction_20260923.sh\n   WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\n   StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_refinement_check_22153.log\n   StdIn=/dev/null\n   StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_refinement_check_22153.log\n   TresPerTask=cpu=1\n   \n\n",
+  "script": {
+    "bytes": 1069,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cpm_refinement_check_v1_20260923/benchmark_tools/results/qfo_cpm_refinement_reconstruction_20260923.sh",
+    "sha256": "c63d7dc0fbb3af68e5cef9f2dbcd1afa8e6dec94ee8e794df95f33c66dbd380e"
+  },
+  "source": {
+    "bytes": 8457,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cpm_refinement_check_v1_20260923/benchmark_tools/reconstruct_cpm_refinement.py",
+    "sha256": "6935f5f51c04188006d76465ede5647b3c2314b892c3f855e3e10404fba38719"
+  }
+}
