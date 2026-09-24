@@ -1,4 +1,5 @@
 from copy import deepcopy
+import json
 from pathlib import Path
 
 import pytest
@@ -82,3 +83,83 @@ def test_existing_output_preserved(tmp_path):
     output.mkdir()
     with pytest.raises(FileExistsError):
         module.admit(tmp_path, output)
+
+
+def orchestration(tmp_path, monkeypatch, failure=None):
+    executor = tmp_path / "benchmarks/work/blast_recovery_merge_v1_20260923/benchmark_tools"
+    executor.mkdir(parents=True)
+    local = Path(module.__file__).with_name("run_blast_recovery_merge.py")
+    (executor / local.name).write_bytes(local.read_bytes())
+    directory = tmp_path / "benchmarks/results/qfo_blast_recovery_merge_v1"
+    (directory / "table").mkdir(parents=True)
+    candidate = directory / "table/all.blast.candidate"
+    candidate.write_text("fixture candidate\n")
+    log = directory / "selected.blast.log"
+    log.write_text("")
+    report = status(directory)
+    report["source"] = module.record(executor / local.name)
+    report["candidate"].update(module.record(candidate), rows=3, query_blocks=2)
+    report.update(selected_log=module.record(log), checked_inputs=[], diagnostics={}, replay_coverage={})
+    (directory / "status.json").write_text(json.dumps(report))
+    results = tmp_path / "benchmark_tools/results"
+    results.mkdir(parents=True)
+    for name in ("qfo_corrected_orthomcl_prepared_20260918.json", "qfo_corrected_legacy_blast_runtime_20260918.json"):
+        (results / name).write_text("{}\n")
+    def subprocess_output(command, **kwargs):
+        return accounting() if command[0] == "sacct" else module.MERGE_COMMIT + "\n"
+    monkeypatch.setattr(module.subprocess, "check_output", subprocess_output)
+    monkeypatch.setattr(module.subprocess, "run", lambda *a, **k: None)
+    calls = []
+    def prepare(root, output):
+        calls.append("prepare")
+        if failure == "prepare":
+            raise ValueError("Injected prerequisite failure")
+        return dict(selected_diagnostics={}, panel={"coverage": {}, "admissions": []},
+            prefix_audit={"blocks": {"path": "fixture-prefix"}}, records=[])
+    def verify(*args):
+        calls.append("verify")
+        return {"output_root": str(tmp_path / ("changed" if failure == "plan" and calls.count("verify") > 1 else "native"))}
+    def database(fasta, runtime, output):
+        calls.append("database")
+        output.mkdir()
+        (output / "report.json").write_text("{}\n")
+        return dict(status="database_exact_sequence_parity_verified", checked_records=[], outputs=[],
+            content={"input_sequences": 1 if failure == "database" else 984137})
+    def table(blast, fasta, log_path, prefix, batches, output):
+        calls.append("table")
+        output.write_text("{}\n")
+        if failure == "table":
+            raise ValueError("Injected table failure")
+        if failure == "mutation":
+            candidate.write_text("changed after initial validation\n")
+        return dict(content={"input_proteins": 984137, "hsp_rows": 4 if failure == "rows" else 3,
+            "diagnostics": [{"gene": "x", "query_failed": False, "messages": []}] if failure == "diagnostics" else []},
+            query_blocks=2, checked_records=[])
+    monkeypatch.setattr(module, "prepare", prepare)
+    monkeypatch.setattr(module, "verify", verify)
+    monkeypatch.setattr(module, "audit_database", database)
+    monkeypatch.setattr(module, "audit_candidate", table)
+    return calls
+
+
+def test_successful_orchestration_admits_search_not_downstream(tmp_path, monkeypatch):
+    calls = orchestration(tmp_path, monkeypatch)
+    result = module.admit(tmp_path, tmp_path / "admission")
+    assert calls == ["prepare", "verify", "database", "table", "verify"]
+    assert result["status"] == "recovered_orthomcl_search_evidence_verified"
+    assert result["search_admitted"] is True
+    assert result["accuracy_admitted"] is result["publication_ready"] is result["downstream_execution_authorized"] is False
+    assert json.loads((tmp_path / "admission/report.json").read_text()) == result
+
+
+@pytest.mark.parametrize("failure", ["prepare", "database", "table", "rows", "diagnostics", "plan", "mutation"])
+def test_orchestration_failure_never_admits(tmp_path, monkeypatch, failure):
+    calls = orchestration(tmp_path, monkeypatch, failure)
+    with pytest.raises(ValueError):
+        module.admit(tmp_path, tmp_path / "admission")
+    result = json.loads((tmp_path / "admission/report.json").read_text())
+    assert result["status"] == "recovery_search_admission_failed"
+    assert result["error_type"] == "ValueError"
+    assert result["search_admitted"] is result["downstream_execution_authorized"] is False
+    if failure in {"prepare", "database"}:
+        assert "table" not in calls
