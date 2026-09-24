@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Fourteenth Recovery Batch And Failure Description (2026-09-24)
+
+Previous turns were verified waits on live 22103_13. Native execution completed
+0:0 in **11:18**, and independent admission 22105_13 completed 0:0 in
+**14 seconds**. Batch 22103_14 is RUNNING. Fourteen of twenty replay batches
+are individually admitted; whole-search, native-group and accuracy admissions
+remain pending.
+
+Admission `benchmarks/work/qfo_blast_recovery_admission_13_20260923.json`
+has SHA256 `51c6651ac432c697d03cf421548433eec9533f48e925eefd0900630b7c209d81`.
+Its 5,000 queries comprise 4,871 with hits, 126 no-hit queries without logged
+failure and three logged failures. There are 504,743 HSP rows and 354,090
+distinct directed pairs. Failed queries are `tr|A0A0P0WS46|A0A0P0WS46_ORYSJ`
+(117 residues), `tr|A0A0P0WVV8|A0A0P0WVV8_ORYSJ` (218 residues), and
+`tr|A0A0P0XA77|A0A0P0XA77_ORYSJ` (217 residues). Each has setup/statistics
+diagnostics (unable to calculate Karlin-Altschul parameters) and no outgoing,
+self or incoming hits in this batch. Whole-search incoming hits and eventual
+group membership remain unknown.
+
+The existing summarizer rechecked selected admission/query/log records and
+fresh scheduler evidence for batches 0-13. The
+[updated partial report](qfo_replay_first14_failure_description_20260924.json)
+records 70,000 queries: 65,893 with hits, 4,055 no-hit without logged failure
+and **52 failed**. Failure lengths range 2-541 (median 47.5); overlapping
+categories are 52 setup, 45 statistics and seven short-query failures.
+This nonrandom subset is not a whole-search failure-rate estimate or an
+accuracy-effect analysis. Earlier reports and all failures are retained.
+No scientific settings or dependencies changed; DGX remains deferred.
+
 ## Thirteenth Recovery Batch And Failure Description (2026-09-24)
 
 Previous turns were verified waits on live 22103_12. Native execution now
