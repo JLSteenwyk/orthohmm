@@ -39,3 +39,20 @@ python -m benchmark_tools.admit_blast_recovery_search \
   --root /absolute/path/to/orthohmm \
   --output /fresh/recovered_search_admission
 ```
+
+## Scheduled Integration Follow-Up
+
+The orchestration tests subsequently passed: successful sequencing plus seven
+injected failures at prerequisite validation, database parity, table audit,
+row reconciliation, diagnostic selection, repeated plan verification and
+post-validation byte mutation. Every injected failure records a failed report
+with search/downstream authorization false. These use controlled fixtures,
+not production database extraction or native scheduler execution.
+
+All 107 focused tests also pass from the detached executor at
+`a21c65f2b449d828e3fefc86148cbf4fd87b6ade`. Validator **22151** is queued
+with `afterok:22150`, two CPUs, 64 GiB, 24 hours and no requeue.
+[Submission receipt](qfo_blast_recovery_search_admission_submission_22151.json)
+records its frozen script, executor and verified pending scheduler allocation.
+No production admission has executed yet, and the held BPO/inference chain
+remains unchanged.

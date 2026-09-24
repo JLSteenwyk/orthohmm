@@ -1,0 +1,15 @@
+{
+  "downstream_execution_authorized": false,
+  "executor": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/blast_recovery_search_admission_v1_20260923",
+  "executor_commit": "a21c65f2b449d828e3fefc86148cbf4fd87b6ade",
+  "job_id": "22151",
+  "publication_ready": false,
+  "scheduler": "JobId=22151 JobName=qfo_blast_recovery_search_admit UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=Dependency Dependency=afterok:22150(unfulfilled) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=1-00:00:00 TimeMin=N/A SubmitTime=2026-09-23T20:03:02 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-23T20:03:02 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:1631409 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1 NumCPUs=2 NumTasks=1 CPUs/Task=2 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=2,mem=64G,node=1,billing=2 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=2 MinMemoryNode=64G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_blast_recovery_search_admit_20260923.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_search_admit_22151.log StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_search_admit_22151.log TresPerTask=cpu=2 \n",
+  "script": {
+    "bytes": 1043,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_blast_recovery_search_admit_20260923.sh",
+    "sha256": "ebf3f6c63e5c52a082a179cfd22267ac5ac3b9d2dbdb5702b79023529367cc4e"
+  },
+  "search_admitted": false,
+  "status": "recovery_search_admission_queued_not_executed"
+}

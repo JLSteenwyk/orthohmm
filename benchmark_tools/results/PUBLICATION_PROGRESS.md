@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Final Recovery Validator Tested And Queued (2026-09-23)
+
+Previous turn implemented the recovery admission wrapper (7e361c5), making
+progress. Re-read the objective and confirmed low-CPM phylogeny 22088_0 is
+running; BLAST replay and candidate merge dependencies remain pending.
+
+Added complete wrapper orchestration tests with seven injected failures:
+prerequisite, database, table, row totals, diagnostics, changed plan and changed
+candidate bytes. All failures preserve explicit failed reports without search
+or downstream authorization. The success fixture admits search evidence only.
+All 107 focused tests pass both locally and in the frozen executor.
+
+Frozen revision `a21c65f2b449d828e3fefc86148cbf4fd87b6ade` under
+`benchmarks/work/blast_recovery_search_admission_v1_20260923` is queued as
+**22151**, afterok:22150, two CPUs, 64 GiB, 24 hours, no requeue. Verified
+the live pending allocation and retained a
+[submission receipt](qfo_blast_recovery_search_admission_submission_22151.json).
+Thus replay admission -> candidate merge -> independent search admission is
+scheduled, but no production merge/admission has executed. The held downstream
+OrthoMCL chain remains untouched; DGX remains deferred. Publication requirements
+are not complete.
+
+
 ## Recovery-Specific Search Admission Implemented (2026-09-23)
 
 Previous turn froze and queued candidate merge 22150 (a449ff5, 7a9b1f5),
