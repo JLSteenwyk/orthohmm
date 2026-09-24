@@ -1,5 +1,27 @@
 # Publication Progress
 
+## All QfO Threshold Endpoints Exported (2026-09-23)
+
+Previous turn implemented the recovered BPO handoff (04f079e), making progress.
+Re-read the goal and verified 22088_0 remains running; recovery 22103_3,
+merge 22150 and validator 22151 remain pending.
+
+Generated the [seven-arm endpoint table](qfo_threshold_endpoints_20260923/scores.md)
+from frozen threshold admissions, preserving both missing CPM arms and
+distinguishing GO/EC similarity, three F1 metrics, FAS and the project-defined
+secondary mean. The exporter rechecks the uncertainty provenance and validates
+native assessment identities and arithmetic. Eight tests pass; independent
+calculation agrees with all 35 populated score/mean cells within 1e-12.
+
+Normalization variants match SwissTrees but differ on other QfO endpoints;
+the SwissTrees identity must not be generalized to whole-output invariance.
+Mean scores are 0.761510 control, 0.761475/0.761511 normalization low/high,
+and 0.760329/0.762753 margin low/high. These descriptive means do not establish
+improvement; other-endpoint paired uncertainty is absent and FAS sampling is
+unseeded. Frozen defaults remain unchanged. No native jobs restarted, held
+inference released or DGX contacted.
+
+
 ## Recovered Search To BPO Handoff Implemented (2026-09-23)
 
 Previous turn tested/froze/queued validator 22151 (a21c65f, da5cdb9), making

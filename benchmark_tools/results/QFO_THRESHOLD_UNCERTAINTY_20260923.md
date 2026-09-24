@@ -1,5 +1,17 @@
 # Corrected QfO Threshold Neighborhood
 
+The [all-endpoint table](qfo_threshold_endpoints_20260923/scores.md),
+[machine-readable TSV](qfo_threshold_endpoints_20260923/scores.tsv) and
+[provenance manifest](qfo_threshold_endpoints_20260923/manifest.json)
+retain all six native metrics and both missing CPM arms. They were generated
+by `python -m benchmark_tools.export_qfo_threshold_endpoints --root . --output
+<fresh-directory>`, with all linked uncertainty-input records rechecked and
+native assessment identities/score arithmetic validated. Eight exporter tests
+pass; a separate direct calculation agrees with all 35 populated score/mean
+cells within 1e-12. The table is descriptive outside SwissTrees: no additional
+paired intervals are implied, and FAS's retained unseeded sampling prevents
+assigning small FAS changes solely to parameter settings.
+
 All four score jobs 22043_0..3 and independent score admissions 22047_0..3
 completed with exit 0:0. The frozen analysis reconstructed native SwissTrees
 family counts from raw predictions, checked reference identities and native
