@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Failed Queries Distinguished From Missing Predictions (2026-09-23)
+
+Previous turn progressed by freezing/exercising the downstream executor
+(18bb3b6). Re-read the objective; BLAST 22103_8 remains RUNNING, observed at
+24:56 and 26:44, with 22105_8 pending. DGX remains deferred.
+
+Reviewed failure-impact handling before corrected final groups are available.
+The existing reference-impact script required every failed query to be absent
+from final groups. Preserved that default and added explicit
+`--allow-grouped-failed-queries` for reference-exposure analysis that retains
+grouped failed queries. Output now reports grouped/ungrouped failure coverage
+and each target's group line/size. It does not equate group membership or
+incoming hits with repaired outgoing searches or correct orthology.
+
+Target selection rejects inconsistent group metadata, nonboolean failure flags,
+duplicate gene/accession identities, mismatched failed-query totals and invalid
+or noninjective reference mappings. Focused tests: **29 passed**, including
+mixed grouped/ungrouped coverage and rejection cases. A read-only compatibility
+check using the frozen QfO mapping reproduced the historical original-release
+audit's **53 failed queries, 53 mapped targets, zero grouped targets**. No
+native reference-impact rerun was performed and these are not corrected-run
+results. Historical result files and the frozen recovery executor are unchanged.
+
+For the eventual corrected analysis, first require whole-search and native
+output admission; audit selected recovered diagnostics against the corrected
+inputs/final groups, independently count outgoing/incoming search evidence for
+failed targets, then quantify reference exposure with the explicit grouped
+mode if needed. Report direct exposure separately from observed final errors;
+neither is a counterfactual estimate of the effect of repairing BLAST. This
+remaining analysis is necessary before publication claims about failure impact.
+
 ## Downstream Recovery Executor Frozen And Exercised (2026-09-23)
 
 Previous turn progressed with independent score admission (a1dac0f). Re-read

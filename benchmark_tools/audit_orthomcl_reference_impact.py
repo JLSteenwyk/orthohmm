@@ -16,6 +16,36 @@ from benchmark_tools.orthobench_stage_diagnostics import file_provenance
 from benchmark_tools.qfo_filter_pairs import load_mapping
 
 
+def failed_query_targets(audit, mapping, allow_grouped=False):
+    """Keep failed search queries distinct from absence in the final partition."""
+    failed = []
+    genes, accessions = set(), set()
+    for item in audit["records"]:
+        if type(item["query_failed"]) is not bool:
+            raise ValueError("Invalid query failure flag")
+        if not item["query_failed"]:
+            continue
+        gene, accession = item["gene"], item["accession"]
+        if not gene or not accession or gene in genes or accession in accessions:
+            raise ValueError("Missing/duplicate failed-query identity")
+        genes.add(gene)
+        accessions.add(accession)
+        line, size = item["final_group_line"], item["final_group_size"]
+        if (type(size) is not int or (line is None and size != 0)
+                or (line is not None and (type(line) is not int or line < 1 or size < 1))):
+            raise ValueError("Inconsistent failed-query final-group membership")
+        if line is not None and not allow_grouped:
+            raise ValueError("Audit does not establish missing failed-query predictions; opt in to grouped exposure")
+        failed.append(item)
+    if type(audit["failed_queries"]) is not int or len(failed) != audit["failed_queries"]:
+        raise ValueError("Failed-query count differs from records")
+    targets = [mapping[item["accession"]] for item in failed]
+    if (not targets or any(type(p) is not int or p < 1 for p in targets)
+            or len(set(targets)) != len(targets)):
+        raise ValueError("Empty, invalid or non-injective mapped failed-query targets")
+    return failed, set(targets)
+
+
 def parse_native_report(text, targets):
     if re.search(r"^\s*(?:Error|ERROR|error)\b", text, re.MULTILINE):
         raise ValueError("Native interpreter reported an error")
@@ -89,17 +119,14 @@ def main():
     parser.add_argument("--benchmark-repo", type=Path, required=True)
     parser.add_argument("--darwin-image", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--allow-grouped-failed-queries", action="store_true",
+                        help="Measure reference exposure even when failed queries occur in final groups")
     args = parser.parse_args()
     if args.output.exists():
         raise ValueError("Refusing to overwrite existing impact audit")
     audit = json.loads(args.audit.read_text())
-    failed = [r for r in audit["records"] if r["query_failed"]]
-    if len(failed) != audit["failed_queries"] or any(r["final_group_line"] is not None for r in failed):
-        raise ValueError("Audit does not establish missing failed-query predictions")
     mapping = load_mapping(args.reference / "mapping.json.gz")
-    targets = {mapping[r["accession"]] for r in failed}
-    if not targets or any(not isinstance(p, int) or p < 1 for p in targets):
-        raise ValueError("Invalid mapped targets")
+    failed, targets = failed_query_targets(audit, mapping, args.allow_grouped_failed_queries)
     args.output.mkdir(parents=True)
     script = Path(__file__).with_name("orthomcl_reference_impact.drw")
     environment = os.environ.copy()
@@ -134,6 +161,7 @@ def main():
         fas_files.append(file_provenance(path))
     records = [{"accession": r["accession"], "protein_number": mapping[r["accession"]],
                 "length": r["length"], "species": r["species"],
+                "final_group_line": r["final_group_line"], "final_group_size": r["final_group_size"],
                 **annotations[mapping[r["accession"]]],
                 "fas_annotation_entry_present": fas_presence[r["accession"]],
                 "fas_feature_types_by_tool": fas_features[r["accession"]]}
@@ -154,6 +182,10 @@ def main():
         "schema_version": 1, "generated_at": datetime.now(timezone.utc).isoformat(),
         "command": [sys.executable, *sys.argv], "native_command": command,
         "failed_queries": len(failed), "unique_mapped_targets": len(targets),
+        "failed_query_group_coverage": {
+            "grouped": sum(r["final_group_line"] is not None for r in failed),
+            "ungrouped": sum(r["final_group_line"] is None for r in failed),
+            "grouped_exposure_enabled": args.allow_grouped_failed_queries},
         "tree_summary": tree_summary, "vgnc": vgnc, "records": records,
         "tree_cases_with_failed_members": [f for f in families if f["failed_members"]],
         "annotation_summary": {
@@ -170,6 +202,7 @@ def main():
         "fas_inputs": fas_files, "native_log": file_provenance(args.output / "native.log"),
         "limitations": [
             "This is direct reference exposure, not a counterfactual rerun or bound on clustering changes.",
+            "A failed outgoing search can coexist with incoming hits or final-group membership; neither proves repaired orthology.",
             "Incident reference pairs need not become correct predictions after repairing search.",
             "GO counts use the six experimental evidence codes selected by the benchmark configuration.",
             "FAS entry presence is not proof of a scored pair or a nonempty feature architecture.",
