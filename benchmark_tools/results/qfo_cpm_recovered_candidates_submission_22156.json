@@ -1,0 +1,24 @@
+{
+  "accuracy_evaluated": false,
+  "candidate_admitted": false,
+  "executor": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cpm_recovered_candidates_v1_20260923",
+  "executor_commit": "b04ec3e4c5d8d747e68c8d05897cea9f60c5235e",
+  "job_id": "22156",
+  "publication_ready": false,
+  "scheduler": "JobId=22156 JobName=qfo_cpm_recovered_candidates\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=PENDING Reason=Dependency Dependency=afterok:22155(unfulfilled)\n   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:00 TimeLimit=04:00:00 TimeMin=N/A\n   SubmitTime=2026-09-23T21:35:17 EligibleTime=Unknown\n   AccrueTime=Unknown\n   StartTime=Unknown EndTime=Unknown Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-23T21:35:17 Scheduler=Main\n   Partition=gpu AllocNode:Sid=bizon-link:1168797\n   ReqNodeList=bizon ExcNodeList=(null)\n   NodeList=\n   NumNodes=1 NumCPUs=2 NumTasks=1 CPUs/Task=2 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=2,mem=64G,node=1,billing=2\n   AllocTRES=(null)\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=2 MinMemoryNode=64G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cpm_recovered_candidates_v1_20260923/benchmark_tools/results/qfo_cpm_recovered_candidates_20260923.sh\n   WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\n   StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_recovered_candidates_22156.log\n   StdIn=/dev/null\n   StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_recovered_candidates_22156.log\n   TresPerTask=cpu=2\n   \n\n",
+  "script": {
+    "bytes": 1027,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cpm_recovered_candidates_v1_20260923/benchmark_tools/results/qfo_cpm_recovered_candidates_20260923.sh",
+    "sha256": "9ca06eaf88307e7036a29aa69638ad19a1edd510ac970ececd35658846db07f2"
+  },
+  "seed_gate": {
+    "bytes": 4097,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cpm_recovered_candidates_v1_20260923/benchmark_tools/recovered_cpm_seed_evidence.py",
+    "sha256": "7e47f010ffd6340f17074e66e0f29836d48f16db543c94d8f20b88279b6b1046"
+  },
+  "source": {
+    "bytes": 6055,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cpm_recovered_candidates_v1_20260923/benchmark_tools/prepare_recovered_cpm_candidates.py",
+    "sha256": "89d4406eb593af0770bb9280006e599d0eabdf7a3bae12dea3f9908b90aeda2d"
+  }
+}

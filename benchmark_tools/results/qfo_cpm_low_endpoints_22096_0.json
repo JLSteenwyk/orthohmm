@@ -1,0 +1,49 @@
+{
+  "arm": "cpm_low",
+  "checked_records": [
+    {
+      "bytes": 5709577,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_assessment_admission_22096_0.json",
+      "sha256": "54bf2fc4fbeae6ed07fc806902de848906b090b902193fdd6f8416204b3aa08e"
+    },
+    {
+      "bytes": 2246721,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_pairs_v1/cpm_low/results.json",
+      "sha256": "9c323531412614781a30fc73f2d3f847b64ad32468404d0e40cbf60486d81efb"
+    },
+    {
+      "bytes": 8534,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_cpm_score_admission_v3/benchmark_tools/admit_qfo_cpm_assessment.py",
+      "sha256": "07ffe966591b93ced39d0e24a6a9c17025e44dc88ab20eeb5a79bc8103ca9264"
+    },
+    {
+      "bytes": 5475,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_qfo_threshold_endpoints.py",
+      "sha256": "4cc9d2251d4a993786595bf56056588351fa91a4d8e9ff9b3874ebb49c732889"
+    },
+    {
+      "bytes": 10629,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_qfo_parameter_swiss.py",
+      "sha256": "dc166b360e8d94cdd3d29775bd19d178199f9c876fa1b288781624176fd2591a"
+    }
+  ],
+  "limitations": [
+    "GO/EC similarity and FAS are not F1; the mean is a project-defined secondary summary.",
+    "This recheck validates score admission identity and all native endpoint arithmetic; the completed independent admission retains the full content audit.",
+    "Paired parameter uncertainty has not yet been updated for this arm; high-CPM remains unavailable.",
+    "Development-exposed parameter results do not establish independent generalization or promote defaults.",
+    "FAS sampling is unseeded; shared-host times are not controlled efficiency evidence."
+  ],
+  "publication_ready": false,
+  "scheduler": "JobID|State|ExitCode|Elapsed|AllocCPUS|ReqMem|NodeList\n22096_0|COMPLETED|0:0|00:02:49|2|64G|bizon\n22096_0.batch|COMPLETED|0:0|00:02:49|2||bizon\n",
+  "scores": {
+    "EC": 0.967187,
+    "FAS": 0.7610599776678666,
+    "GO": 0.49131629,
+    "SwissTrees": 0.7910137325188569,
+    "TreeFam-A": 0.6081555820446123,
+    "VGNC": 0.8882645242186412,
+    "secondary_mean": 0.7511661844083296
+  },
+  "status": "admitted_cpm_low_endpoint_arithmetic_rechecked"
+}

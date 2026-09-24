@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Low-CPM Scores Admitted; Recovered Candidates Queued (2026-09-23)
+
+Previous turn made progress by implementing/testing candidate preparation and
+pushing b04ec3e. Re-read the full objective. Created a clean detached executor
+at `benchmarks/work/cpm_recovered_candidates_v1_20260923`, exact revision
+`b04ec3e4c5d8d747e68c8d05897cea9f60c5235e`. Submitted **22156**, verified
+PENDING(Dependency), afterok:22155, two CPUs, 64 GiB, four-hour limit, no requeue.
+[Receipt](qfo_cpm_recovered_candidates_submission_22156.json) binds source,
+seed gate, script, executor and scheduler. Independent candidate admission and
+subsequent recovered phylogeny/scoring still need implementation; the original
+failed high-CPM chain remains untouched.
+
+Low-CPM score admission **22096_0 completed 0:0 in 2:49**. Its retained report
+has `accuracy_admitted=true`, `publication_ready=false`, and 11,050 checked
+records. Rechecked admission identity against conversion, source hash, native
+endpoint arithmetic and the six-score mean using existing validators.
+[Compact result](qfo_cpm_low_endpoints_22096_0.json) records this narrower recheck
+and the source admission identity, without claiming to rerun the entire audit.
+
+| Endpoint | Low CPM |
+| --- | ---: |
+| GO similarity | 0.491316290 |
+| EC similarity | 0.967187000 |
+| VGNC F1 | 0.888264524 |
+| SwissTrees F1 | 0.791013733 |
+| TreeFam-A F1 | 0.608155582 |
+| FAS | 0.761059978 |
+| Project-defined secondary mean | 0.751166184 |
+
+SwissTrees is descriptively lower than control (0.833513); paired parameter
+uncertainty still needs updating and the high-CPM arm remains missing. GO/EC
+and FAS are not F1; unseeded FAS sampling limits attribution of small differences.
+No defaults or claims of generalization change. DGX remains deferred and no
+controlled timing result is supplied by these shared-host jobs.
+
 ## Recovered Candidate Preparation Tested (2026-09-23)
 
 Previous turn completed the pending focused test session (59 passed), providing
