@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Allocator Diagnostic Implemented (2026-09-23)
+
+Previous turn made progress by preserving failed admission evidence and checking
+partition readback (1523107). Re-read the objective; authoritative poll confirmed
+BLAST 22103_6 RUNNING 10:42, validation 22105_6 pending, and candidate 22156 still
+blocked. No existing job or DGX state changed.
+
+Implemented the committed one-shot refinement diagnostic. It pins protocol,
+readback and native runner hashes; checks saved inputs and frozen runtime;
+uses a new output directory; and records the sole child's return code/log even
+on failure. Only child allocator debugging/fault handling are added. On success
+it requires exact scientific metadata and output bytes plus complete independent
+membership. No optimizer is invoked and all admission/accuracy flags stay false.
+
+All **17** focused diagnostic/readback tests pass and `bash -n` passes for the
+one-CPU, 64-GiB, one-hour no-requeue wrapper. Tests cover environment isolation,
+metadata/byte/record/member failures and unscheduled-run refusal; they are not
+native memory-safety evidence. This implementation is being frozen before its
+single diagnostic submission. Original failed admission and blocked candidate
+remain unchanged; a successful diagnostic alone cannot release downstream work.
+
 ## Recovery Admission Failed After Partition Write (2026-09-23)
 
 Previous turn progressed by reconstructing/reproducing low-CPM uncertainty and
