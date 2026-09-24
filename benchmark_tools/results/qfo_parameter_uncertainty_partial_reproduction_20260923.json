@@ -1,0 +1,23 @@
+{
+  "absolute_tolerance": 1e-12,
+  "endpoints": 15,
+  "input": {
+    "bytes": 3135347,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_parameter_uncertainty_partial_20260923.json",
+    "sha256": "1d6bd4f68a9d6728e0180bdde31f55ca0da7b4fc22e09bcc797dcb8db6cec628"
+  },
+  "limitations": [
+    "Reconstructs arithmetic from admitted counts, not raw predictions or native inference.",
+    "Uses the same NumPy random generator and quantile implementation.",
+    "Zero endpoints means a control-only or unavailable-control check, not parameter robustness."
+  ],
+  "numpy_version": "2.2.6",
+  "planned_endpoints": 18,
+  "publication_ready": false,
+  "source": {
+    "bytes": 8256,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/reproduce_qfo_parameter_uncertainty.py",
+    "sha256": "6b337c936bf1cf6896fea06de6e1924092c1dc6e5b3871ad621edbdc2138ddf8"
+  },
+  "status": "qfo_parameter_uncertainty_numerically_reproduced"
+}

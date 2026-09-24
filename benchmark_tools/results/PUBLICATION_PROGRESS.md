@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Low-CPM Paired Uncertainty Reconstructed (2026-09-23)
+
+Previous turn made progress by queuing 22156 and recording admitted low-CPM
+endpoints (58bd8fc). Re-read the goal and checked current scheduling. Latest
+accounting: recovery **22154 COMPLETED 0:0 in 11:38**, independent admission
+**22155 RUNNING 1:01**, candidates 22156 PENDING. BLAST batch 22103_6 RUNNING
+5:50. No job was restarted and DGX remains untouched.
+
+Ran the unchanged, source-pinned parameter uncertainty workflow with a new
+inventory including low CPM. Reconstructed raw family counts and rechecked
+retained input identities; 100,000 paired draws use the frozen seed and all
+18 planned endpoints in multiplicity. Five contrasts are now estimable; high
+CPM remains missing. Separate independent arithmetic reconstruction verified
+all **15 available endpoints within 1e-12**. All **117** focused uncertainty
+tests pass. Earlier threshold-only artifacts remain unchanged.
+
+Low-CPM F1 difference is -4.2499 percentage points, adjusted interval
+[-21.9395, 0.7887], with 3 family wins, 13 ties and 2 losses. Precision and
+recall intervals also include zero. VATB shows the largest family decline
+(-0.944437 F1); its pipeline cause remains untested and a trace would be
+explicitly post-hoc. No default or generalization claim changes.
+
+[Result and limitations](QFO_PARTIAL_PARAMETER_UNCERTAINTY_20260923.md) links
+the new inventory, count/interval result and independent reproduction.
+Updated the manuscript's parameter paragraph; existing rendered review files
+are historical snapshots, not refreshed visual reviews of this change.
+Recovery-aware candidate admission and downstream phylogeny/scoring remain
+required, as do the outstanding publication requirements.
+
 ## Low-CPM Scores Admitted; Recovered Candidates Queued (2026-09-23)
 
 Previous turn made progress by implementing/testing candidate preparation and

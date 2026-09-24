@@ -868,14 +868,18 @@ and one loss. Precision and recall adjusted intervals also included zero.
 
 These intervals recomputed the native statistic in 100,000 paired family
 draws using the frozen seed and all 18 planned endpoints for multiplicity,
-including the two unavailable CPM contrasts. Independent numerical
-reconstruction reproduced all twelve available endpoints within 1e-12.
-Low-CPM inference remained underway, while high-CPM replay failed with
-SIGSEGV; neither missing result was imputed. The full QfO parameter panel
-therefore remains incomplete. The threshold findings do not justify changing
+including the CPM contrasts. The subsequent low-CPM result had SwissTrees F1
+79.1014%, a difference of -4.2499 percentage points from control (adjusted
+interval [-21.9395, 0.7887]). Three families improved, thirteen tied, and two
+worsened; VATB had the largest family-level decline, without an established
+pipeline mechanism. Precision and recall intervals also included zero.
+High-CPM replay failed with SIGSEGV and its checkpoint recovery has not yet
+produced an admitted score; no missing result was imputed. The full QfO
+parameter panel therefore remains incomplete. These findings do not justify changing
 frozen defaults and are development-exposed SwissTrees evidence, not a joint
 uncertainty analysis of all QfO metrics or independent confirmation.
 [Threshold results, provenance and reproduction](QFO_THRESHOLD_UNCERTAINTY_20260923.md).
+[Updated low-CPM uncertainty and provenance](QFO_PARTIAL_PARAMETER_UNCERTAINTY_20260923.md).
 
 ## Limitations And Unfinished Analyses
 

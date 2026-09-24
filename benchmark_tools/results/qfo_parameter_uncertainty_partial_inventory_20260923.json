@@ -1,0 +1,65 @@
+{
+  "arms": [
+    {
+      "admission": {
+        "bytes": 248974,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_factorial_score_admission_21788.json",
+        "sha256": "49b7d837b2ba2928b0676c9974e2ec16db5211f1086c366c7bc11805a2ee751f"
+      },
+      "arm": "control",
+      "status": "admitted"
+    },
+    {
+      "admission": {
+        "bytes": 5709577,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_assessment_admission_22096_0.json",
+        "sha256": "54bf2fc4fbeae6ed07fc806902de848906b090b902193fdd6f8416204b3aa08e"
+      },
+      "arm": "cpm_low",
+      "status": "admitted"
+    },
+    {
+      "arm": "cpm_high",
+      "reason": "Original high-CPM replay failed; checkpoint recovery 22154 running, no admitted score",
+      "status": "not_admitted"
+    },
+    {
+      "admission": {
+        "bytes": 358839,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_parameter_score_admission_22047_0.json",
+        "sha256": "791d0607b320ef36175cd7452906652d6b0aee270f01bd1617ee2da4d3936ce2"
+      },
+      "arm": "norm_low",
+      "status": "admitted"
+    },
+    {
+      "admission": {
+        "bytes": 358972,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_parameter_score_admission_22047_1.json",
+        "sha256": "59ac633d787939c097c8e8ce386cd44dea196b68f7f141a8362d57fe4401b333"
+      },
+      "arm": "norm_high",
+      "status": "admitted"
+    },
+    {
+      "admission": {
+        "bytes": 359086,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_parameter_score_admission_22047_2.json",
+        "sha256": "a3b2bceec0ad4511fc5bcffd61eefeb2da278cebcb57972cf0af94d77a6dc304"
+      },
+      "arm": "margin_low",
+      "status": "admitted"
+    },
+    {
+      "admission": {
+        "bytes": 359229,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_parameter_score_admission_22047_3.json",
+        "sha256": "319bc1686c52a30c140d6c1667653ee19e38cd6e3a78f45295f5663535adb08c"
+      },
+      "arm": "margin_high",
+      "status": "admitted"
+    }
+  ],
+  "scope": "Four threshold variants and low CPM admitted; high CPM missing and retained in multiplicity.",
+  "status": "qfo_parameter_score_admission_inventory"
+}
