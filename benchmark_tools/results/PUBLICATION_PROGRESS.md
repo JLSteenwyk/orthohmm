@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Frozen-Worker Boundary Wrapper Implemented (2026-09-23)
+
+Previous turn prespecified the high-CPM boundary diagnostic (6ecd994), making
+progress. Re-read the goal; 22088_0 remains running and the recovery chain
+is pending. Implemented the fresh-payload parent/worker wrapper binding the
+failed graph audit, prior frozen-import observation, protocol and helper hashes.
+It retains metadata settings except the diagnostic output directory, uses the
+Python-pair adapter and accepts only the explicit preoptimizer stop.
+
+A real small frozen-worker subprocess initially rejected development-source
+imports caused by parent-only verification imports at module startup. Moved
+those imports into the parent function; the frozen-source check was not relaxed.
+The corrected subprocess now reaches optimizer entry, verifies all small-graph
+bytes and stops without groups. All twelve diagnostic tests pass without skips.
+The parent additionally checks the worker metadata/environment/source paths and
+rechecks captured module/library identities, rejecting conflicting records.
+
+Full-size parent provenance/failure checks and frozen scheduling remain needed;
+no new full-size graph run, optimizer call or scientific retry occurred. The
+original high-CPM crash remains unexplained and its accuracy result remains
+missing. No DGX actions occurred.
+
+
 ## High-CPM Worker-Boundary Diagnostic Prespecified (2026-09-23)
 
 Previous turn verified the isolated BPO launcher (b6a09ce), making progress.
