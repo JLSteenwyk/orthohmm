@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Frozen Refinement Reconstruction Implemented (2026-09-23)
+
+Previous turn completed the actual predecessor audit and pushed 5036e05, making
+progress. Re-read the goal and rechecked live jobs: 22088_0 RUNNING at 1:19:14,
+22103_3 resources-pending, and 22150/22151 dependency-pending. DGX untouched.
+
+Implemented `reconstruct_cpm_refinement.py`: separate subprocess imports the
+frozen replay, audits/loads the original numeric checkpoint, checks gene order,
+and reconstructs multipass refinement using its retained graph arrays and the
+unchanged production refinement call. It validates full partition coverage and
+compares exact memberships, independent of group/line ordering. The parent pins
+the predecessor report, checks runtime before/after, and retains explicit failure
+status; it cannot authorize optimization or score a result. Existing outputs are
+never overwritten. The new report records initially observed refined-output bytes
+and verifies their consistency, not their historical in-memory state.
+
+Nine tests pass, including a real small frozen-code subprocess, altered groups,
+duplicate/missing/unknown genes, overwrite rejection and CLI loading. Scheduler
+script passes `bash -n`: one CPU, 64 GiB, 24 hours, no requeue. Implementation is
+being frozen before the full-data reconstruction check; no recovered optimizer
+run or high-CPM accuracy result has been produced.
+
 ## High-CPM Retained Predecessors Revalidated (2026-09-23)
 
 Previous turn reviewed the actual checkpoint boundary and committed protocol
