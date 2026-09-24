@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Recovered Native Input Evidence Gate (2026-09-23)
+
+The preceding user-directed turn deferred DGX work and made no analytical
+progress. Re-read the full objective and verified BLAST 22103_7 live, initially
+16:12 and subsequently 20:18; admission 22105_7 remains pending. No DGX access,
+job release, native retry, or unrelated worktree change occurred.
+
+Added `recovered_orthomcl_inputs.py`: a separate evidence-only gate for the
+future recovered native inference launcher. It pins the BPO validator source,
+checks explicit completed admission/preparation jobs and executor revision,
+requires recovery-specific admission flags, revalidates original search
+provenance and failure coverage, and verifies exact BPO/index records.
+The original native runner remains unchanged and is not yet recovery-aware.
+
+Inspection found the BLAST recovery records do not directly include all.gg.
+The gate therefore obtains that record from the checksum-pinned original
+input-preparation manifest instead of assuming it is a BPO validation output.
+An actual checksum/content read verified 984137 proteins and 78 species;
+all.gg SHA256 is
+`0a3d84171661e7cb0f9cf3ebf6e739d78e80965b0e26230b319329639374d26e`.
+
+The combined new input-gate and existing recovered BPO preparation/admission
+tests report **74 passed**. These include 27 new contract/orchestration/isolated
+CLI tests using real fixture hashes with mocked scheduler/expensive search
+validation. No production BPO output has been admitted or inferred. The gate
+explicitly grants no execution permission; native runtime checks, fresh staging,
+launcher integration and terminal group admission remain required. The current
+BPO report lacks its own embedded admission job ID, so the supplied Slurm job
+binding remains an explicitly recorded limitation to address before launch.
+Publication goal remains incomplete; dedicated timing remains deferred.
+
 ## Recovered BPO Flow And Native Fixtures Verified (2026-09-23)
 
 Previous turn progressed by implementing the recovery-specific independent

@@ -93,3 +93,21 @@ isolated imports and a fresh bytecode-cache prefix. It requires explicit future
 preparation job/executor/revision, checks its own frozen executor, and writes
 only to a fresh recovery-specific admission directory. Shell syntax passes.
 It remains unscheduled; the required production inputs are not yet available.
+
+## Native Input Evidence Gate
+
+`recovered_orthomcl_inputs.py` verifies the recovery-specific checkpoint report,
+explicit successful admission/preparation jobs, pinned admission source and
+clean executor, full recovered search provenance and unchanged failure counts.
+BPO/index paths must match the recovered checkpoint, with consistent nonempty
+records. The species mapping comes from the pinned original prepared-input
+manifest: it is not assumed to be present in BLAST recovery's record list.
+The actual mapping checksum and 984137-protein/78-species scope were verified.
+
+The gate's 27 tests and the existing preparation/admission tests total 74 passes.
+This is an evidence-only component, not a native launcher. It authorizes no
+execution and does not overwrite original outputs or release old jobs. Before
+launch, connect dedicated runtime checks and fresh staging to the recovered
+evidence, and add an explicit admission-job identity to the admission report
+(currently the job is supplied by the caller and verified separately in Slurm).
+Native final-group admission remains a separate required step.
