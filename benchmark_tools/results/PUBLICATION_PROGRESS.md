@@ -1,5 +1,37 @@
 # Publication Progress
 
+## Full-Data Refinement Reproduced and Independently Verified (2026-09-23)
+
+Previous turn connected/tested the recovery preflight (5b3a0f9), making progress.
+Re-read the goal and checked live accounting. Reconstruction **22153 COMPLETED
+0:0 in 36 seconds**. Its [result](qfo_cpm_refinement_result_22153.json), SHA-256
+`77579806f666abc00b6a871f0a98484226a792150f430b888ac8f335bf0f323e`, reproduces
+the retained multipass refinement: **984,137 genes, 393,142 groups**, exact
+membership equality. Zero directed refinement hits is the unchanged frozen
+broad-panel branch, not missing checkpoint data.
+
+Ran `validate_cpm_refinement_reconstruction.validate` independently against the
+real scheduler/executor, full numeric/runtime provenance and partitions. It
+completed successfully; [validation](qfo_cpm_refinement_validation_22153.json)
+SHA-256 `a562cc95915d3ae1de4a03f9686ff7a544b5679d8c83f19762ede1909061a7b3`.
+The original output was not overwritten. This validates an existing refinement,
+not a newly recovered high-CPM seed or accuracy score.
+
+Implemented `run_cpm_checkpoint_recovery.py` orchestration: fixed output roots,
+allocation/executor checks, fresh preflight, one guarded optimizer invocation,
+frozen refinement plus a separate repeat, exact membership comparison, original
+input/runtime rechecks and explicit pending-independent-admission result. Reused
+and recovered stages remain distinct; lost original statistics remain missing.
+Failures are retained and never automatically retried. Fifteen parent tests cover
+success and failure handoffs; **119** combined recovery tests pass, including the
+earlier small real frozen optimizer/refinement checks. Detailed post-optimizer
+validator tests and independent completed-recovery admission remain to finish
+before full submission. No recovery optimizer job was submitted this turn.
+
+BLAST **22103_3 COMPLETED 0:0 in 16:03**, admission **22105_3 COMPLETED 0:0 in
+22 seconds**; batch 22103_4 was RUNNING at 4:28. Low-CPM scoring 22094_0 was
+RUNNING at 6:16. Existing jobs/dependencies were unchanged. DGX remains deferred.
+
 ## High-CPM Recovery Preflight Connected (2026-09-23)
 
 Previous turn implemented/tested the guarded frozen optimizer component
