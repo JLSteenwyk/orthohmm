@@ -21,6 +21,8 @@ CACHE="/tmp/orthohmm-recovery-bpo-admission-cache-${SLURM_JOB_ID:?}"
 cd "$ROOT"
 exec env -i HOME="$HOME" USER=bizon LOGNAME=bizon PATH=/usr/bin:/bin LANG=C LC_ALL=C \
   OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  SLURM_JOB_ID="$SLURM_JOB_ID" SLURM_CPUS_PER_TASK="$SLURM_CPUS_PER_TASK" \
+  SLURM_MEM_PER_NODE="$SLURM_MEM_PER_NODE" \
   "$ROOT/benchmarks/work/orthomcl_python_env_20260918/bin/python" -I -B -X "pycache_prefix=$CACHE" \
   "$EXECUTOR/benchmark_tools/admit_blast_recovery_bpo.py" --root "$ROOT" \
   --job "$JOB" --executor "$PREPARER" --commit "$PREPARER_COMMIT" \

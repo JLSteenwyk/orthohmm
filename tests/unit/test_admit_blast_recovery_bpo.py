@@ -42,3 +42,26 @@ def test_cli_help_in_isolation(tmp_path):
     done = subprocess.run([sys.executable, "-I", str(Path(module.__file__).resolve()), "--help"],
                           cwd=tmp_path, capture_output=True, text=True)
     assert done.returncode == 0, done.stderr
+@pytest.mark.parametrize("problem", [None, "missing", "zero", "invalid", "unicode", "cpu", "memory", "node"])
+def test_execution_identity(monkeypatch, problem):
+    from types import SimpleNamespace
+
+    monkeypatch.setenv("SLURM_JOB_ID", "124")
+    monkeypatch.setenv("SLURM_CPUS_PER_TASK", "2")
+    monkeypatch.setenv("SLURM_MEM_PER_NODE", "65536")
+    monkeypatch.setattr(module.os, "uname", lambda: SimpleNamespace(
+        nodename="other" if problem == "node" else "bizon"))
+    if problem == "missing":
+        monkeypatch.delenv("SLURM_JOB_ID")
+    elif problem in {"zero", "invalid", "unicode"}:
+        monkeypatch.setenv("SLURM_JOB_ID", {"zero": "0", "invalid": "124_0", "unicode": "\u0661"}[problem])
+    elif problem == "cpu":
+        monkeypatch.setenv("SLURM_CPUS_PER_TASK", "1")
+    elif problem == "memory":
+        monkeypatch.setenv("SLURM_MEM_PER_NODE", "1024")
+    if problem:
+        with pytest.raises(ValueError, match="scheduled"):
+            module.execution_identity()
+    else:
+        assert module.execution_identity() == dict(admission_job_id="124", node="bizon",
+                                                  allocated_cpus=2, memory_mib=65536)

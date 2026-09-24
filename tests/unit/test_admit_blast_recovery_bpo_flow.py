@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from types import SimpleNamespace
 
 import pytest
 
@@ -9,6 +10,10 @@ from benchmark_tools import admit_blast_recovery_bpo as module
 @pytest.mark.parametrize("problem", [None, "pending", "revision", "checkpoint", "search", "coverage",
     "row_count", "source_record", "recheck", "runtime_after", "changed_input", "native_after"])
 def test_recovered_admission_flow(tmp_path, monkeypatch, problem):
+    monkeypatch.setenv("SLURM_JOB_ID", "124")
+    monkeypatch.setenv("SLURM_CPUS_PER_TASK", "2")
+    monkeypatch.setenv("SLURM_MEM_PER_NODE", "65536")
+    monkeypatch.setattr(module.os, "uname", lambda: SimpleNamespace(nodename="bizon"))
     root = tmp_path
     executor = root / "benchmarks/work/executor"
     source = executor / "benchmark_tools/prepare_blast_recovery_bpo.py"
@@ -97,6 +102,7 @@ def test_recovered_admission_flow(tmp_path, monkeypatch, problem):
             module.admit(root, 123, executor, "fixture", destination)
         if problem in {"recheck", "runtime_after", "changed_input", "native_after"}:
             result = json.loads((destination / "report.json").read_text())
+            assert result["admission_job_id"] == "124"
             assert result["status"] == "recovered_bpo_validation_failed"
             assert result["checkpoint_admitted"] is False
             assert result["downstream_execution_authorized"] is False
@@ -105,6 +111,7 @@ def test_recovered_admission_flow(tmp_path, monkeypatch, problem):
             assert "recheck" not in calls
     else:
         result = module.admit(root, 123, executor, "fixture", destination)
+        assert result["admission_job_id"] == "124"
         assert result == json.loads((destination / "report.json").read_text())
         assert result["checkpoint_admitted"] is True
         assert result["accuracy_admitted"] is False

@@ -13,7 +13,7 @@ from benchmark_tools.run_simulation_methods import read_frozen
 from benchmark_tools.run_qfo_corrected_blast import PLAN_SHA
 from benchmark_tools.verify_ygob_validation import require_completed_job
 
-ADMITTER_SHA = "b1b21e5e0a332c31bdf9b1b21341704a411ad1ecf81b44fd00b32dcb3122c934"
+ADMITTER_SHA = "866974f9b978c30d6eb53faea74aaf136ee1c38923a2f7ea03b51c2da80a6c1d"
 
 
 def completed(job):
@@ -80,6 +80,10 @@ def verify_inputs(root, path, digest, job, executor, commit):
     if source["sha256"] != ADMITTER_SHA:
         raise ValueError("Unreviewed recovered BPO admission source")
     admission = read_frozen(path, digest)
+    if (admission["admission_job_id"] != scheduler["JobIDRaw"]
+            or admission["node"] != "bizon" or admission["allocated_cpus"] != 2
+            or admission["memory_mib"] != 65536):
+        raise ValueError("Recovered BPO report does not match admission job allocation")
     if admission["source"] != source:
         raise ValueError("Recovered BPO report differs from validator source")
     plan_path = root / "benchmark_tools/results/qfo_corrected_orthomcl_prepared_20260918.json"
@@ -110,7 +114,6 @@ def verify_inputs(root, path, digest, job, executor, commit):
                 execution_authorized=False, accuracy_admitted=False, publication_ready=False,
                 limitations=[
                     "Evidence gate only; native launcher must verify runtimes and stage fresh copies.",
-                    "Admission job is supplied explicitly and checked in Slurm; report has no embedded admission job ID.",
                     "Search failures remain retained; successful conversion does not restore missing hits."])
 
 

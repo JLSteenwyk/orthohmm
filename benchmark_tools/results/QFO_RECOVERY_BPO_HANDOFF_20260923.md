@@ -111,3 +111,20 @@ launch, connect dedicated runtime checks and fresh staging to the recovered
 evidence, and add an explicit admission-job identity to the admission report
 (currently the job is supplied by the caller and verified separately in Slurm).
 Native final-group admission remains a separate required step.
+
+## Admission Job Identity Bound
+
+The admission report now embeds its own Slurm job ID, node, CPU allocation and
+memory allocation, distinct from the completed preparation job's accounting.
+Admission refuses unscheduled or incorrectly allocated execution. The isolated
+wrapper explicitly preserves those Slurm variables through `env -i`.
+The native input gate requires the report's identity to match the explicit
+completed admission job and pins the revised admission source hash. This closes
+the job-identity limitation recorded in the preceding section; no production
+admission report existed before this change.
+
+Eight execution-identity cases and four downstream mismatch cases extend the
+focused suite to **86 passing tests**. Both successful and failed validation
+reports retain their own job ID. Shell syntax also passes. The launcher/runtime
+integration and final-group validation for native inference remain outstanding;
+this change does not schedule admission or authorize native inference.

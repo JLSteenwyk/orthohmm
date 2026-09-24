@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Bound Recovered BPO Admission Job Identity (2026-09-23)
+
+Previous turn made progress with the recovered native input gate (aecaac2).
+Re-read the objective and confirmed BLAST 22103_7 RUNNING 22:21, with
+22105_7 and 22103_8 pending. DGX remains deferred and untouched.
+
+Closed the report-to-admission-job gap: recovered BPO admission now requires
+scheduled two-CPU/64-GiB execution on bizon and records its own Slurm ID,
+node, CPUs and memory in both successful and failed validation reports. The
+isolated wrapper forwards these fields explicitly. The downstream evidence
+gate checks them against the separately queried completed admission job;
+preparation job identity remains distinct. Updated the pinned validator hash.
+
+Focused tests report **86 passed** (including eight new execution-context
+cases and four new downstream job/allocation rejection cases); wrapper shell
+syntax passes. No production BPO admission report yet exists, and no old held
+job was released. Native runtime/staging/launcher integration and independent
+final-group validation remain necessary. Timing and the publication package
+remain incomplete; this is workflow validation, not a new biological result.
+
 ## Recovered Native Input Evidence Gate (2026-09-23)
 
 The preceding user-directed turn deferred DGX work and made no analytical

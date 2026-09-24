@@ -75,7 +75,7 @@ def test_reject_input_contract(evidence, problem):
 
 
 @pytest.mark.parametrize("problem", [None, "pending", "allocation", "revision", "source", "search",
-    "coverage", "changed_input", "parent", "digest"])
+    "coverage", "changed_input", "parent", "digest", "job_id", "node", "cpus", "memory"])
 def test_verify_flow(evidence, monkeypatch, problem):
     root, report = evidence
     plan_path = root / "benchmark_tools/results/qfo_corrected_orthomcl_prepared_20260918.json"
@@ -94,6 +94,11 @@ def test_verify_flow(evidence, monkeypatch, problem):
     row = dict(JobIDRaw="123", State="COMPLETED", ExitCode="0:0", Elapsed="00:00:01",
                NodeList="bizon", AllocCPUS="2", ReqMem="64G")
     report.update(source=module.record(source), scheduler=row, recovered_search=search_record)
+    report.update(admission_job_id="124", node="bizon", allocated_cpus=2, memory_mib=65536)
+    for case, key, value in (("job_id", "admission_job_id", "123"), ("node", "node", "other"),
+                             ("cpus", "allocated_cpus", 1), ("memory", "memory_mib", 1024)):
+        if problem == case:
+            report[key] = value
     report["checked_records"].append(search_record)
     if problem == "source":
         report["source"] = {**report["source"], "sha256": "wrong"}

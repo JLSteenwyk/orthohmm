@@ -3,6 +3,7 @@
 import argparse
 import json
 import math
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -20,6 +21,16 @@ from benchmark_tools.verify_ygob_validation import require_completed_job
 
 PREPARER_SHA = "9a30b264bf90aebaf0a517eeed9771b976b6792909208fbd498aa850ae1418bc"
 VALIDATOR_SHA = "848fcfe249b39bd9965a41c7aafd9338ffd18f9ebd6cae4f530ded2e632b805c"
+
+
+def execution_identity():
+    job = os.environ.get("SLURM_JOB_ID", "")
+    if (not job.isascii() or not job.isdigit() or int(job) < 1
+            or os.environ.get("SLURM_CPUS_PER_TASK") != "2"
+            or os.environ.get("SLURM_MEM_PER_NODE") != "65536"
+            or os.uname().nodename != "bizon"):
+        raise ValueError("Require scheduled two-CPU 64-GiB recovered BPO admission on bizon")
+    return dict(admission_job_id=job, node="bizon", allocated_cpus=2, memory_mib=65536)
 
 
 def preparation_contract(report, scheduler, source, checkpoint, runtime_record):
@@ -45,6 +56,7 @@ def preparation_contract(report, scheduler, source, checkpoint, runtime_record):
 def admit(root, job, executor, commit, output):
     if output.exists() or output.is_symlink():
         raise FileExistsError(output)
+    identity = execution_identity()
     runtime = verify_runtime(root)
     accounting = subprocess.check_output(["sacct", "-j", str(job), "--parsable2",
         "--format=JobIDRaw,State,ExitCode,Elapsed,NodeList,AllocCPUS,ReqMem"], text=True)
@@ -87,7 +99,7 @@ def admit(root, job, executor, commit, output):
     for item in checked:
         check(item)
     output.mkdir(parents=True, exist_ok=False)
-    result = dict(status="recovered_bpo_validation_running", source=record(__file__), scheduler=scheduler,
+    result = dict(status="recovered_bpo_validation_running", **identity, source=record(__file__), scheduler=scheduler,
         accounting=accounting, preparation=parent_record, checkpoint=checkpoint_record, checked_records=checked,
         recovered_search=admission_record, query_coverage=admission["query_coverage"], runtime_before=runtime,
         checkpoint_admitted=False, accuracy_admitted=False, publication_ready=False, downstream_execution_authorized=False)
