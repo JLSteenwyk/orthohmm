@@ -260,3 +260,28 @@ real data root verified 12 groups and input preservation. Original data-root
 installed staging/pair tests passed 53 with no skips. These fixture checks do
 not admit production outputs. No downstream job is queued; parent jobs and
 admission digests must be verified before each scheduled handoff.
+
+## Frozen Consolidation And SwissTrees Executor
+
+Use `benchmarks/work/publication_recovered_swiss_v1_20260923` at commit
+`0b8efa9c6b20b5bdec41f798c136b54132e7db37` for comparison export and
+`run_corrected_swiss_comparison.py` after independent recovered score admission.
+This is separate from the native inference/scoring executor above. Its
+[receipt](qfo_recovered_swiss_executor_20260923.json) records 123 passing tests,
+source hashes and a real seven-method regression from the clean checkout.
+All raw family counts, point estimates, comparisons and intervals exactly
+match the retained seven-method analysis. No recovered scores were imputed.
+
+Before a complete-panel run, verify the actual recovered score admission,
+export a fresh comparison manifest using this executor, and pass that manifest's
+actual SHA256 to the uncertainty runner. Keep the existing baseline and both
+protocol files; the launcher checks their frozen hashes and all helper hashes.
+Verify checkout commit and cleanliness again at execution. Use a fresh output
+path, single-thread numerical-library settings and scheduled resources as in
+the historical two-CPU/64-GiB SwissTrees batch. Do not run the historical batch
+wrapper unchanged: it pins the old executor and seven-method manifest.
+
+The primary stratified-analysis launcher remains tied to its historical sources
+and three primary configurations; it is not an all-method recovery launcher.
+Failure-impact analysis, production recovered scores, complete-panel uncertainty
+and final publication consolidation are still outstanding.

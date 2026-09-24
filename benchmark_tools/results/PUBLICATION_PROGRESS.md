@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Consolidation Executor Frozen And Replayed (2026-09-23)
+
+Previous turn progressed with combined uncertainty integration (0b8efa9).
+Re-read the objective and confirmed batch 10, 22103_9, RUNNING 06:06.
+No dependency, inference, scoring or DGX changes were made.
+
+Created a clean detached sparse executor at commit
+`0b8efa9c6b20b5bdec41f798c136b54132e7db37`:
+`benchmarks/work/publication_recovered_swiss_v1_20260923`.
+Eight focused audit/export/bootstrap/reproduction/plot suites passed **123**
+tests with no failures or skips in that checkout; retained the JUnit XML.
+Executed its uncertainty launcher against the actual v6 comparison and original
+baseline/protocols. All reconstructed method rows, point estimates, paired
+comparisons/intervals and analysis controls exactly match retained 22098 output.
+Confirmed the report names the frozen source and checkout remains clean.
+
+[Executor receipt](qfo_recovered_swiss_executor_20260923.json) records source,
+test and replay hashes. Updated the recovery handoff to distinguish this
+consolidation executor from the earlier native inference/scoring executor and
+to require actual score admission plus a freshly hashed eight-method export
+before production uncertainty. No recovered OrthoMCL score or complete panel
+was produced. Controlled timing remains unmet and the goal remains incomplete.
+
 ## Combined Uncertainty Recovery Integration Verified (2026-09-23)
 
 Previous goal turn progressed with recovered raw-count auditing (cd4b9b7).

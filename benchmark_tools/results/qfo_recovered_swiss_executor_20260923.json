@@ -1,0 +1,43 @@
+{
+  "status": "frozen_executor_tests_and_seven_method_regression_verified",
+  "executor": "benchmarks/work/publication_recovered_swiss_v1_20260923",
+  "commit": "0b8efa9c6b20b5bdec41f798c136b54132e7db37",
+  "sparse_paths": ["benchmark_tools", "orthohmm", "tests/unit"],
+  "clean_after_verification": true,
+  "source_sha256": {
+    "run_corrected_swiss_comparison.py": "e59a31654343cc9b4d44e42e4e3e71a84a734cae893ac586fcbc9e31745d70a9",
+    "audit_corrected_swiss_comparison.py": "d24100746bc9db53e85a172ca27d7b1212bc921f960ba18d4021108ab97d711b",
+    "audit_qfo_corrected_swiss.py": "e4a0a8da186aca36519b075782a585e972f5e888f9d2162b959aea727f07ef67",
+    "export_qfo_complete_comparison.py": "6845ecf942af8301f844aaa3d342b8ab41eca52199fdf3067d08aecc84730a04",
+    "export_qfo_corrected_comparison.py": "8fd211aeaaac5765b6f5ffa01812d8e61ac4134b8c1ceb1bada4f497df7d7aa0"
+  },
+  "tests": {
+    "passed": 123,
+    "failed": 0,
+    "skipped": 0,
+    "report": {
+      "path": "benchmarks/work/recovered_swiss_frozen_0b8efa9.xml",
+      "bytes": 17365,
+      "sha256": "46e0a3aad36e3edf6c014388d21471382d8b54c624a00352fafc4728eb09c1df"
+    }
+  },
+  "regression": {
+    "path": "benchmarks/work/qfo_swiss_frozen_executor_regression_20260923.json",
+    "bytes": 245415,
+    "sha256": "bc2352d0a2f2a1ba4ca9163bfa1fa4ec38c308dc5b886ea99b037e094271fa82",
+    "reference": "benchmark_tools/results/qfo_fastoma_swiss_uncertainty_22098.json",
+    "identical_fields": ["point_estimates", "comparisons", "replicates", "seed", "multiplicity_endpoints", "estimated_contrasts", "complete_panel"],
+    "all_reconstructed_method_rows_identical": true,
+    "estimated_contrasts": 7,
+    "complete_panel": false
+  },
+  "production_recovered_uncertainty_run": false,
+  "publication_ready": false,
+  "limitations": [
+    "This verifies a frozen executor against existing seven-method evidence, not recovered OrthoMCL scores.",
+    "Require actual independent recovered score admission and a newly hashed comparison manifest before a complete-panel run.",
+    "Use the main repository as data root; use this detached checkout only for code.",
+    "No scientific protocol or statistical kernel changed; retained executors and historical results are untouched.",
+    "Shared-host regression execution is not controlled timing. DGX remains deferred."
+  ]
+}
