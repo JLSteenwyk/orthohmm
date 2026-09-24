@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Recovery Admission Failed After Partition Write (2026-09-23)
+
+Previous turn progressed by reconstructing/reproducing low-CPM uncertainty and
+updating the manuscript (5ab83d5). Re-read the goal and checked scheduling:
+independent admission **22155 FAILED 1:0 in 1:47**, refinement child SIGSEGV;
+22156 is DependencyNeverSatisfied and has not run. BLAST 22103_6 remains live.
+No optimizer/refinement retry or dependency change was made.
+
+Fault-handler stack places the failure in garbage collection during post-write
+`read_partition`, before child JSON metadata. Added a standard-library-only
+diagnostic reader, with **10 tests passing**, and ran it under system Python
+with `-I -S`. All 984,137 genes appear once in 390,845 groups. The failed-child
+partition is byte-identical to both successful native refinements, and all
+diagnostic inputs were rehashed. This does not authorize seed reuse: admission
+remains failed, accuracy unevaluated, and the root cause is unknown.
+
+[Failure evidence and bounded diagnostic plan](QFO_RECOVERY_ADMISSION_FAILURE_22155.md)
+records exact output identity, missing child metadata, unavailable coredumpctl,
+and a one-shot allocator-debug refinement-only diagnostic for future execution.
+No scientific setting changes, optimizer rerun or automatic retry is proposed.
+DGX and unrelated work remain untouched. High-CPM accuracy remains missing.
+
 ## Low-CPM Paired Uncertainty Reconstructed (2026-09-23)
 
 Previous turn made progress by queuing 22156 and recording admitted low-CPM

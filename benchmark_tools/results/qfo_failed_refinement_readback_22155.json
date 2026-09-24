@@ -1,0 +1,91 @@
+{
+  "accounting": "JobID|State|ExitCode|Elapsed|AllocCPUS|ReqMem|NodeList\n22155|FAILED|1:0|00:01:47|2|64G|bizon\n22155.batch|FAILED|1:0|00:01:47|2||bizon\n",
+  "accuracy_evaluated": false,
+  "byte_identical_to_two_native_refinements": true,
+  "checked_records": [
+    {
+      "bytes": 263372,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_checkpoint_recovery_admission_v1/status.json",
+      "sha256": "ddaf1344fbf1585c6fc2e0ee6351174afafb44e6950ad7c851af75b7812feb10"
+    },
+    {
+      "bytes": 1291,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_checkpoint_recovery_admission_v1/refinement.log",
+      "sha256": "bcd0b7f9905702b58aaedb74628d91b9933784c183dc5c32a902deca4fb83f49"
+    },
+    {
+      "bytes": 353795,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_checkpoint_recovery_v1/status.json",
+      "sha256": "a7c0e4765629c76b9462343c4bbce0880f0831ff239468b11c521d774ad2d1fd"
+    },
+    {
+      "bytes": 2995,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_checkpoint_recovery_v1/refinement.json",
+      "sha256": "12c0f5066768b829504b1266069b69975acff9961c416a0df2b77e9699ef818a"
+    },
+    {
+      "bytes": 2984,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_checkpoint_recovery_v1/refinement_repeat.json",
+      "sha256": "515e0683a303e8eb2b321322ba43d6b5f8fad58f31656a1912a11bc6d1704df5"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_checkpoint_recovery_v1/payload/gene_names.txt",
+      "sha256": "ad6ee208adc2c3e90bab86d68e40c32857c0f93a89989bd1a70d76385ef0edd7"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_checkpoint_recovery_v1/orthogroups_profiles_refined.txt",
+      "sha256": "f4c6f1973bc9636828baf1e6d9be3f416a18fc8ada5302fb502c082495fc1811"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_checkpoint_recovery_v1/refinement_repeat.txt",
+      "sha256": "f4c6f1973bc9636828baf1e6d9be3f416a18fc8ada5302fb502c082495fc1811"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_checkpoint_recovery_admission_v1/refinement/refinement_repeat.txt",
+      "sha256": "f4c6f1973bc9636828baf1e6d9be3f416a18fc8ada5302fb502c082495fc1811"
+    },
+    {
+      "bytes": 1258,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_checkpoint_admit_22155.log",
+      "sha256": "1cfe60f32a8116d6d9ba38111cd8709ad22c82704e6afb48991f53d2edd57034"
+    },
+    {
+      "bytes": 5251,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_failed_recovery_refinement.py",
+      "sha256": "e983ba406c5e1e09181bd8a6123db6908e8f7c6b85a06b40b1ca95e72b363661"
+    }
+  ],
+  "child_metadata_missing": true,
+  "coverage": {
+    "genes": 984137,
+    "groups": 390845
+  },
+  "limitations": [
+    "The child died during post-write readback; matching bytes do not convert its failure to success.",
+    "Garbage collection is the observed stack location, not an established root cause.",
+    "No optimizer or refinement was rerun; no scientific native libraries are imported.",
+    "Independent recovery admission remains failed and candidate job 22156 must remain blocked."
+  ],
+  "publication_ready": false,
+  "retry_authorized": false,
+  "scheduler": {
+    "AllocCPUS": "2",
+    "Elapsed": "00:01:47",
+    "ExitCode": "1:0",
+    "JobID": "22155",
+    "NodeList": "bizon",
+    "ReqMem": "64G",
+    "State": "FAILED"
+  },
+  "seed_admitted": false,
+  "source": {
+    "bytes": 5251,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_failed_recovery_refinement.py",
+    "sha256": "e983ba406c5e1e09181bd8a6123db6908e8f7c6b85a06b40b1ca95e72b363661"
+  },
+  "status": "failed_refinement_output_readback_verified_not_admitted"
+}
