@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Independent Recovery Admission Implemented (2026-09-23)
+
+Previous turn completed the real combined preflight and committed its evidence
+(16651f5), making progress. Re-read the objective and polled low-CPM scoring
+22094_0 (RUNNING 13:51) and BLAST 22103_4 (RUNNING 12:03). No restart or DGX
+action occurred.
+
+Implemented `admit_cpm_checkpoint_recovery.py`. It requires a successful one-CPU,
+64-GiB native job and reviewed clean executor, binds all parent phases and reused
+versus recovered outputs, performs another fresh checkpoint preflight, rechecks
+actual optimizer evidence, and recomputes refinement in a separate process before
+admitting only the recovered seed. Downstream candidate construction, phylogeny,
+pair conversion and scoring remain separate requirements. The original failed
+job and missing historical statistics remain explicit.
+
+Added scheduler/parent-contract rejection tests, output preservation and isolated
+CLI checks. All **170** recovery tests pass, including the existing native worker
+and refinement tests. This does not prove a completed recovery admission before
+its real outputs exist. Submission wrapper passes `bash -n` and requests the
+protocol's one CPU, 64 GiB, 24-hour limit and no requeue. Implementation is being
+frozen before submitting the single continuation; any output remains pending
+independent admission. Existing blocked high-arm dependencies will not be reused.
+
 ## Combined Real Checkpoint Preflight Passed (2026-09-23)
 
 Previous turn implemented the recovery runner and independently validated the
