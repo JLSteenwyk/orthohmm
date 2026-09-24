@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Recovery BPO Independent Gate Implemented (2026-09-23)
+
+Previous turn progressed by refreshing and spot-reviewing manuscript HTML/PDF
+(99ec09a). Re-read the objective. Initial scheduler poll confirmed BLAST
+22103_7 RUNNING 4:51 with admission 22105_7 pending. No unrelated job, failed
+high-CPM chain or DGX state was changed.
+
+Added `admit_blast_recovery_bpo.py`, reusing existing full content and native
+index checks with a distinct recovered-search contract. It requires successful
+scheduled preparation, pinned sources, clean executor, unchanged search/failure
+coverage and checkpoint summaries; validates runtime/input identities; and
+performs a separate native index/content recheck. Successful checkpoint
+admission does not authorize accuracy or release old held inference jobs.
+
+The focused BPO suites report **123 passed, 4 skipped**. New contract tests
+exercise status, allocation, identity, timestamp, runtime and premature
+authorization rejection plus isolated CLI imports and source pins. The first
+test invocation used an incorrect existing-test path and ran no tests; the
+corrected full command produced the result above. Production validation and
+full recovered-admission orchestration coverage remain required before use.
+[Handoff documentation](QFO_RECOVERY_BPO_HANDOFF_20260923.md) records the next
+gates. No BPO conversion or admission has been scheduled, because full recovered
+search admission is still pending. Publication remains incomplete.
+
 ## Updated HTML/PDF Manuscript Review (2026-09-23)
 
 Previous turn made progress by verifying the VATB copy-guard evidence (890f3b2).
