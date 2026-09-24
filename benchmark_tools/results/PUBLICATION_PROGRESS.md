@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Single High-CPM Continuation Queued (2026-09-23)
+
+Committed/pushed reviewed implementation at
+`0637916c14a81e7a3b31f5aeb5fadfc52b103079`, created clean detached executor
+`benchmarks/work/cpm_checkpoint_recovery_v1_20260923`, and submitted **22154**.
+Verified **PENDING(Resources)** with one CPU, 64 GiB, 24-hour limit and no
+requeue. [Submission receipt](qfo_cpm_checkpoint_recovery_submission_22154.json)
+binds executor, runner, script, protocol, reviewed preflight and scheduler request.
+
+This is the single protocol-defined continuation of the saved failed graph, not
+a fresh HMM search or a replacement success record for 22081_1. It performs fresh
+preflight before the one optimizer invocation and stops on failure. No optimizer
+result or accuracy score is available yet. Independent recovery admission and
+recovery-aware downstream stages remain required. Existing jobs/dependencies
+and DGX were not changed.
+
 ## Independent Recovery Admission Implemented (2026-09-23)
 
 Previous turn completed the real combined preflight and committed its evidence

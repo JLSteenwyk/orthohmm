@@ -1,0 +1,28 @@
+{
+  "accuracy_evaluated": false,
+  "downstream_admitted": false,
+  "executor": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cpm_checkpoint_recovery_v1_20260923",
+  "executor_commit": "0637916c14a81e7a3b31f5aeb5fadfc52b103079",
+  "job_id": "22154",
+  "protocol": {
+    "bytes": 7240,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/QFO_CPM_CHECKPOINT_RECOVERY_PROTOCOL_20260923.md",
+    "sha256": "67615f1d7d66dd208a5e5ad6119fa0bdb282c4e3a5f412f8b95f5a86246aa0ad"
+  },
+  "reviewed_preflight": {
+    "bytes": 284290,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_cpm_checkpoint_preflight_review_20260923.json",
+    "sha256": "3984092251ae85e7056d4d76e79a6cc5089d71edadf6caeec1d1f74639e412e3"
+  },
+  "runner": {
+    "bytes": 15387,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cpm_checkpoint_recovery_v1_20260923/benchmark_tools/run_cpm_checkpoint_recovery.py",
+    "sha256": "a277ab01e7fbcbfaa15f7a63a092c78183baaabbbcc25cd23640f6a750eabbe2"
+  },
+  "scheduler": "JobId=22154 JobName=qfo_cpm_checkpoint_recovery\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=PENDING Reason=Resources Dependency=(null)\n   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:00 TimeLimit=1-00:00:00 TimeMin=N/A\n   SubmitTime=2026-09-23T21:16:40 EligibleTime=2026-09-23T21:16:40\n   AccrueTime=2026-09-23T21:16:40\n   StartTime=2026-09-24T20:57:48 EndTime=2026-09-25T20:57:48 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-23T21:16:40 Scheduler=Main\n   Partition=gpu AllocNode:Sid=bizon-link:456634\n   ReqNodeList=bizon ExcNodeList=(null)\n   NodeList= SchedNodeList=bizon\n   NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=1,mem=64G,node=1,billing=1\n   AllocTRES=(null)\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=1 MinMemoryNode=64G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cpm_checkpoint_recovery_v1_20260923/benchmark_tools/results/qfo_cpm_checkpoint_recovery_20260923.sh\n   WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\n   StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_checkpoint_recovery_22154.log\n   StdIn=/dev/null\n   StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_checkpoint_recovery_22154.log\n   TresPerTask=cpu=1\n   \n\n",
+  "script": {
+    "bytes": 1024,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cpm_checkpoint_recovery_v1_20260923/benchmark_tools/results/qfo_cpm_checkpoint_recovery_20260923.sh",
+    "sha256": "2adec6b4a5e7c6a83cd4689a793a2e389a884d76b068c245b4436b167aac7024"
+  }
+}
