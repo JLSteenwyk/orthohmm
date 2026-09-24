@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Thirteenth Recovery Batch And Failure Description (2026-09-24)
+
+Previous turns were verified waits on live 22103_12. Native execution now
+completed 0:0 in **12:32**, and independent admission 22105_12 completed
+0:0 in **14 seconds**. Batch 22103_13 started automatically. Thirteen of
+twenty replay batches are individually admitted; whole-search validation,
+native grouping and accuracy remain pending.
+
+Admission `benchmarks/work/qfo_blast_recovery_admission_12_20260923.json`
+has SHA256 `9f2f14e6781a17c536147f039667d0178b342304c36d606d2dbfafc3b3339352`.
+Its 5,000 queries comprise 4,874 with hits, 124 no-hit queries without logged
+failure and two logged failures. The table contains 597,801 HSP rows and
+392,759 distinct directed pairs. Failures `tr|A0A0P0VWJ1|A0A0P0VWJ1_ORYSJ`
+(285 residues) and `tr|A0A0P0WCL7|A0A0P0WCL7_ORYSJ` (158 residues) have
+setup/statistics diagnostics: unable to calculate Karlin-Altschul parameters.
+Neither has outgoing, self or incoming hits in this batch; incoming hits
+elsewhere and final group membership are not established.
+
+The existing failure summarizer rechecked selected admission/query/log records
+and fresh scheduler evidence for batches 0-12. The
+[updated partial report](qfo_replay_first13_failure_description_20260924.json)
+contains 65,000 queries: 61,022 with hits, 3,929 no-hit without logged failure,
+and **49 failed**. Failure lengths range 2-541 (median 32); overlapping
+categories are 49 setup, 42 statistics and seven short-query failures.
+Residue counts are descriptive, not proof of a causal failure mechanism.
+
+This nonrandom replay subset does not estimate a whole-search failure rate,
+establish final membership or measure an accuracy effect. Earlier reports are
+retained. No scientific settings, job dependencies or DGX state were changed.
+
 ## Twelfth Recovery Batch And Updated Failure Description (2026-09-24)
 
 Previous turn was a verified wait on 22103_11. Re-read the objective and

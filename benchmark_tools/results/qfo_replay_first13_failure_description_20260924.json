@@ -1,0 +1,1381 @@
+{
+  "accuracy_admitted": false,
+  "batches": [
+    {
+      "failed_queries": 44,
+      "index": 0,
+      "input_queries": 5000,
+      "no_hits_without_logged_failure": 3568,
+      "queries_with_hits": 1388,
+      "scheduler": {
+        "AllocCPUS": "180",
+        "Elapsed": "00:18:08",
+        "ExitCode": "0:0",
+        "JobID": "22103_0",
+        "JobIDRaw": "22118",
+        "NodeList": "bizon",
+        "State": "COMPLETED"
+      }
+    },
+    {
+      "failed_queries": 0,
+      "index": 1,
+      "input_queries": 5000,
+      "no_hits_without_logged_failure": 15,
+      "queries_with_hits": 4985,
+      "scheduler": {
+        "AllocCPUS": "180",
+        "Elapsed": "00:32:35",
+        "ExitCode": "0:0",
+        "JobID": "22103_1",
+        "JobIDRaw": "22120",
+        "NodeList": "bizon",
+        "State": "COMPLETED"
+      }
+    },
+    {
+      "failed_queries": 0,
+      "index": 2,
+      "input_queries": 5000,
+      "no_hits_without_logged_failure": 4,
+      "queries_with_hits": 4996,
+      "scheduler": {
+        "AllocCPUS": "180",
+        "Elapsed": "00:25:29",
+        "ExitCode": "0:0",
+        "JobID": "22103_2",
+        "JobIDRaw": "22131",
+        "NodeList": "bizon",
+        "State": "COMPLETED"
+      }
+    },
+    {
+      "failed_queries": 1,
+      "index": 3,
+      "input_queries": 5000,
+      "no_hits_without_logged_failure": 19,
+      "queries_with_hits": 4980,
+      "scheduler": {
+        "AllocCPUS": "180",
+        "Elapsed": "00:16:03",
+        "ExitCode": "0:0",
+        "JobID": "22103_3",
+        "JobIDRaw": "22132",
+        "NodeList": "bizon",
+        "State": "COMPLETED"
+      }
+    },
+    {
+      "failed_queries": 0,
+      "index": 4,
+      "input_queries": 5000,
+      "no_hits_without_logged_failure": 22,
+      "queries_with_hits": 4978,
+      "scheduler": {
+        "AllocCPUS": "180",
+        "Elapsed": "00:13:46",
+        "ExitCode": "0:0",
+        "JobID": "22103_4",
+        "JobIDRaw": "22133",
+        "NodeList": "bizon",
+        "State": "COMPLETED"
+      }
+    },
+    {
+      "failed_queries": 0,
+      "index": 5,
+      "input_queries": 5000,
+      "no_hits_without_logged_failure": 28,
+      "queries_with_hits": 4972,
+      "scheduler": {
+        "AllocCPUS": "180",
+        "Elapsed": "00:14:42",
+        "ExitCode": "0:0",
+        "JobID": "22103_5",
+        "JobIDRaw": "22134",
+        "NodeList": "bizon",
+        "State": "COMPLETED"
+      }
+    },
+    {
+      "failed_queries": 0,
+      "index": 6,
+      "input_queries": 5000,
+      "no_hits_without_logged_failure": 18,
+      "queries_with_hits": 4982,
+      "scheduler": {
+        "AllocCPUS": "180",
+        "Elapsed": "00:27:24",
+        "ExitCode": "0:0",
+        "JobID": "22103_6",
+        "JobIDRaw": "22135",
+        "NodeList": "bizon",
+        "State": "COMPLETED"
+      }
+    },
+    {
+      "failed_queries": 1,
+      "index": 7,
+      "input_queries": 5000,
+      "no_hits_without_logged_failure": 8,
+      "queries_with_hits": 4991,
+      "scheduler": {
+        "AllocCPUS": "180",
+        "Elapsed": "00:30:46",
+        "ExitCode": "0:0",
+        "JobID": "22103_7",
+        "JobIDRaw": "22136",
+        "NodeList": "bizon",
+        "State": "COMPLETED"
+      }
+    },
+    {
+      "failed_queries": 0,
+      "index": 8,
+      "input_queries": 5000,
+      "no_hits_without_logged_failure": 3,
+      "queries_with_hits": 4997,
+      "scheduler": {
+        "AllocCPUS": "180",
+        "Elapsed": "00:40:55",
+        "ExitCode": "0:0",
+        "JobID": "22103_8",
+        "JobIDRaw": "22137",
+        "NodeList": "bizon",
+        "State": "COMPLETED"
+      }
+    },
+    {
+      "failed_queries": 0,
+      "index": 9,
+      "input_queries": 5000,
+      "no_hits_without_logged_failure": 6,
+      "queries_with_hits": 4994,
+      "scheduler": {
+        "AllocCPUS": "180",
+        "Elapsed": "00:41:56",
+        "ExitCode": "0:0",
+        "JobID": "22103_9",
+        "JobIDRaw": "22138",
+        "NodeList": "bizon",
+        "State": "COMPLETED"
+      }
+    },
+    {
+      "failed_queries": 0,
+      "index": 10,
+      "input_queries": 5000,
+      "no_hits_without_logged_failure": 7,
+      "queries_with_hits": 4993,
+      "scheduler": {
+        "AllocCPUS": "180",
+        "Elapsed": "00:38:23",
+        "ExitCode": "0:0",
+        "JobID": "22103_10",
+        "JobIDRaw": "22139",
+        "NodeList": "bizon",
+        "State": "COMPLETED"
+      }
+    },
+    {
+      "failed_queries": 1,
+      "index": 11,
+      "input_queries": 5000,
+      "no_hits_without_logged_failure": 107,
+      "queries_with_hits": 4892,
+      "scheduler": {
+        "AllocCPUS": "180",
+        "Elapsed": "00:13:19",
+        "ExitCode": "0:0",
+        "JobID": "22103_11",
+        "JobIDRaw": "22140",
+        "NodeList": "bizon",
+        "State": "COMPLETED"
+      }
+    },
+    {
+      "failed_queries": 2,
+      "index": 12,
+      "input_queries": 5000,
+      "no_hits_without_logged_failure": 124,
+      "queries_with_hits": 4874,
+      "scheduler": {
+        "AllocCPUS": "180",
+        "Elapsed": "00:12:32",
+        "ExitCode": "0:0",
+        "JobID": "22103_12",
+        "JobIDRaw": "22141",
+        "NodeList": "bizon",
+        "State": "COMPLETED"
+      }
+    }
+  ],
+  "checked_records": [
+    {
+      "bytes": 797762,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_admission_0_20260923.json",
+      "sha256": "64645b5a604291c4dec3ee604b604de2c9229fe7ced3b39fdc44f2081eca09ed"
+    },
+    {
+      "bytes": 1352957,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_00.fa",
+      "sha256": "c0e6f29bf524491c8326b4fa3c0954ed87e7847e1ba7b6121dc376a28d27e0e3"
+    },
+    {
+      "bytes": 9549,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_blast_recovery_v1/batch_00/blast.log",
+      "sha256": "e019be5c386c31def7d63b33a1a1bdc5b499c2bd55346d6cc026ad110b952a0c"
+    },
+    {
+      "bytes": 1359119,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_admission_1_20260923.json",
+      "sha256": "af4a64e75a1c68a12044dbfea2f87315ce0f2156386284c5b6753c89140a6927"
+    },
+    {
+      "bytes": 2488177,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_01.fa",
+      "sha256": "31c9295c35db5bfa2a99c4952851ee44a1275c35d1a951327209161350db7c9f"
+    },
+    {
+      "bytes": 1770,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_blast_recovery_v1/batch_01/blast.log",
+      "sha256": "147173b308fd800bb46837d4c00d918c763e735e90168c5313b284db2063d53a"
+    },
+    {
+      "bytes": 1352240,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_admission_2_20260923.json",
+      "sha256": "8b9e4f9b0bfe828d9f10b5287485ae0be95044d2679d3e70ff41b7fffdff68a9"
+    },
+    {
+      "bytes": 2174025,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_02.fa",
+      "sha256": "634d2f26a798cfbc13ccb1c68d990c01a9934455d3c785122b549784ef85d20b"
+    },
+    {
+      "bytes": 879,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_blast_recovery_v1/batch_02/blast.log",
+      "sha256": "41588e8d4db94c893e4362a24faed36e32da834327e26eb7547ffafd929e99cb"
+    },
+    {
+      "bytes": 1354871,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_admission_3_20260923.json",
+      "sha256": "c361dbdf9c2dab6e0f8717a19f926435187badc7cf17cadc39a6a008951ddcf1"
+    },
+    {
+      "bytes": 1553937,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_03.fa",
+      "sha256": "268891c4efa3ab5ce31301c559a21ed3f5cb9c3098fd034338e4111af0976440"
+    },
+    {
+      "bytes": 218,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_blast_recovery_v1/batch_03/blast.log",
+      "sha256": "21e791735c62696db2e60213c62ff7a8ae35f5835418abb3e5a21f2b426af747"
+    },
+    {
+      "bytes": 1341395,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_admission_4_20260923.json",
+      "sha256": "2218823fc8c4c83a96a3dd178a9d8629e6b2d986a23dda5d857edf2b8bdf1675"
+    },
+    {
+      "bytes": 1956595,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_04.fa",
+      "sha256": "07a8bd79efde0393c8633f9745622a886b1d5000a098abb9682906d7b2d8a381"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_blast_recovery_v1/batch_04/blast.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1341630,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_admission_5_20260923.json",
+      "sha256": "8b3e5d5fd46e2b024a76a766da3cf806ee9dca52f9b499dec940300cfcd45f0b"
+    },
+    {
+      "bytes": 1961807,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_05.fa",
+      "sha256": "440b17d078d66ef58e64d34706997938d2b6e2fbf3e01a3aa13c8413167c28cf"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_blast_recovery_v1/batch_05/blast.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1352609,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_admission_6_20260923.json",
+      "sha256": "582db204751f02d440edb9934700e51445ce4b7a5bc7eb370a1686e99ab23ceb"
+    },
+    {
+      "bytes": 2574759,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_06.fa",
+      "sha256": "3224911677753d02b7afa024d04980a8e137cf7a2bb5e056b030b4992ba6d6dd"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_blast_recovery_v1/batch_06/blast.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1358526,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_admission_7_20260923.json",
+      "sha256": "43a9b750d80f27518294d2b5bb86d5ea54f6101d901ef8bd05b457d905908d4c"
+    },
+    {
+      "bytes": 2302188,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_07.fa",
+      "sha256": "38b2fe159ac8d915fb8d44934f017b440302c719fdff7704e139f1a636392cee"
+    },
+    {
+      "bytes": 218,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_blast_recovery_v1/batch_07/blast.log",
+      "sha256": "ad2073996185431b405c8c3b54a83e3a7f796483a5debad5ace85ff28ac26e0b"
+    },
+    {
+      "bytes": 1358733,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_admission_8_20260923.json",
+      "sha256": "1fc65eed0877f6ef8310d6394ac88b5cc723487829ea1fb75391ba2564fabfa1"
+    },
+    {
+      "bytes": 3122936,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_08.fa",
+      "sha256": "9d67904ee71f600c847ea153440287c377b66819ed1541c747cde2a1ab450790"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_blast_recovery_v1/batch_08/blast.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1358436,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_admission_9_20260923.json",
+      "sha256": "2738187150f30888298495420fbd9a6a3bc5dc55677e98faa095fab80cf02534"
+    },
+    {
+      "bytes": 3164153,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_09.fa",
+      "sha256": "f1b0219a214a0699287865fd8d568bcd023001e23ea76aa406ed66d89f0c58e8"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_blast_recovery_v1/batch_09/blast.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1358022,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_admission_10_20260923.json",
+      "sha256": "f2bb2715e23be01aac3b932c22d0eec9bbe0b4e5a3ead2d38b33cf9cec15e872"
+    },
+    {
+      "bytes": 2956974,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_10.fa",
+      "sha256": "b5c6c664316f1c83e4f1444e70623b550a95c175a1cbeb90d5d9b29eede05eec"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_blast_recovery_v1/batch_10/blast.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1406384,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_admission_11_20260923.json",
+      "sha256": "c389d71c87b5388b8ae69ef5c4111e012780430328129aea05d3973b97d3635c"
+    },
+    {
+      "bytes": 1345524,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_11.fa",
+      "sha256": "8166070db1dcaf154fda5227860ddcaa387810c0334580303aab167f104a6c4b"
+    },
+    {
+      "bytes": 234,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_blast_recovery_v1/batch_11/blast.log",
+      "sha256": "f59b2d4ca406e5de203caa95e30a931a7a07db3e6fd68f2fb98a9bc69b64a9d6"
+    },
+    {
+      "bytes": 1407440,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_admission_12_20260923.json",
+      "sha256": "9f2f14e6781a17c536147f039667d0178b342304c36d606d2dbfafc3b3339352"
+    },
+    {
+      "bytes": 1346705,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_blast_recovery_batches_20260923/queries_12.fa",
+      "sha256": "2a96ae0f9bf1550c0cd4a0c8cb4e42d661425fca8cf4de31b4672d307217791d"
+    },
+    {
+      "bytes": 468,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_blast_recovery_v1/batch_12/blast.log",
+      "sha256": "ff8ddd7de1b7878b81f9b6715f925dc9c6d5f4f9bb29a4cc26f4fecc7e313c0f"
+    }
+  ],
+  "failed_queries": 49,
+  "failed_queries_by_category": {
+    "setup_failure": 49,
+    "short_query_failure": 7,
+    "statistics_failure": 42
+  },
+  "failed_query_lengths": {
+    "max": 541,
+    "median": 32,
+    "min": 2
+  },
+  "helpers": [
+    {
+      "bytes": 8517,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/admit_blast_recovery_batch.py",
+      "sha256": "b8081b449ad17adc0ba16dc964249e5d068a303063e0b7c921a00326b0c4062d"
+    },
+    {
+      "bytes": 6699,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_orthomcl_blast.py",
+      "sha256": "863ed4a2b1e933d2b68e665aae4ee132125de99ab26bbf3d168afcf6c85bb20e"
+    },
+    {
+      "bytes": 7448,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_ob_candidate_neighborhood.py",
+      "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+    }
+  ],
+  "input_queries": 65000,
+  "limitations": [
+    "Only explicitly selected admitted replay batches; not the original prefix or the whole dataset.",
+    "Replay queries are selected by interrupted-search recovery, not a random sample; do not extrapolate failure rates.",
+    "Sequence lengths and logged categories describe failures, not experimentally established causes.",
+    "Categories overlap: setup failure can accompany a more specific diagnostic.",
+    "No-hit without a logged failure is not classified as failure.",
+    "Query-block inventories are reused from admission; HSP bytes and database parity are not revalidated here.",
+    "Incoming hits, final-group membership, reference exposure and counterfactual accuracy require later analysis."
+  ],
+  "no_hits_without_logged_failure": 3929,
+  "publication_ready": false,
+  "queries_with_hits": 61022,
+  "records": [
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "short_query_failure"
+      ],
+      "gene": "sp|P0DKJ0|P160B_ARATH",
+      "has_outgoing_hits": false,
+      "length": 5,
+      "residue_counts": {
+        "F": 1,
+        "M": 1,
+        "P": 1,
+        "Q": 1,
+        "S": 1
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "short_query_failure"
+      ],
+      "gene": "sp|P0DOY5|HD101_HUMAN",
+      "has_outgoing_hits": false,
+      "length": 5,
+      "residue_counts": {
+        "G": 2,
+        "T": 3
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "short_query_failure"
+      ],
+      "gene": "sp|P0DPI4|TDB01_HUMAN",
+      "has_outgoing_hits": false,
+      "length": 4,
+      "residue_counts": {
+        "G": 3,
+        "T": 1
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "short_query_failure"
+      ],
+      "gene": "sp|P0DPR3|TRDD1_HUMAN",
+      "has_outgoing_hits": false,
+      "length": 2,
+      "residue_counts": {
+        "E": 1,
+        "I": 1
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "short_query_failure"
+      ],
+      "gene": "sp|P38639|UF01_MOUSE",
+      "has_outgoing_hits": false,
+      "length": 5,
+      "residue_counts": {
+        "G": 1,
+        "I": 1,
+        "R": 1,
+        "W": 2
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "sp|P62120|RL41_ARATH",
+      "has_outgoing_hits": false,
+      "length": 25,
+      "residue_counts": {
+        "A": 1,
+        "K": 8,
+        "L": 1,
+        "M": 3,
+        "Q": 1,
+        "R": 9,
+        "S": 1,
+        "W": 1
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "sp|P62945|RL41_HUMAN",
+      "has_outgoing_hits": false,
+      "length": 25,
+      "residue_counts": {
+        "A": 1,
+        "K": 7,
+        "L": 1,
+        "M": 3,
+        "Q": 1,
+        "R": 10,
+        "S": 1,
+        "W": 1
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "sp|P62947|RL41_MOUSE",
+      "has_outgoing_hits": false,
+      "length": 25,
+      "residue_counts": {
+        "A": 1,
+        "K": 7,
+        "L": 1,
+        "M": 3,
+        "Q": 1,
+        "R": 10,
+        "S": 1,
+        "W": 1
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "sp|P62948|RL41_RAT",
+      "has_outgoing_hits": false,
+      "length": 25,
+      "residue_counts": {
+        "A": 1,
+        "K": 7,
+        "L": 1,
+        "M": 3,
+        "Q": 1,
+        "R": 10,
+        "S": 1,
+        "W": 1
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "short_query_failure"
+      ],
+      "gene": "sp|P80628|UC22_MAIZE",
+      "has_outgoing_hits": false,
+      "length": 5,
+      "residue_counts": {
+        "E": 1,
+        "F": 2,
+        "I": 1,
+        "V": 1
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "short_query_failure"
+      ],
+      "gene": "sp|P83308|FARP_CHICK",
+      "has_outgoing_hits": false,
+      "length": 5,
+      "residue_counts": {
+        "F": 1,
+        "L": 2,
+        "P": 1,
+        "R": 1
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "sp|P99503|UHA1_CANLF",
+      "has_outgoing_hits": false,
+      "length": 14,
+      "residue_counts": {
+        "A": 10,
+        "E": 1,
+        "P": 3
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|A0A0A0MTA2|A0A0A0MTA2_HUMAN",
+      "has_outgoing_hits": false,
+      "length": 15,
+      "residue_counts": {
+        "A": 2,
+        "G": 5,
+        "L": 5,
+        "R": 2,
+        "V": 1
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|A0A0G2JWA6|A0A0G2JWA6_RAT",
+      "has_outgoing_hits": false,
+      "length": 339,
+      "residue_counts": {
+        "A": 2,
+        "H": 126,
+        "I": 13,
+        "L": 26,
+        "M": 1,
+        "P": 1,
+        "Q": 1,
+        "R": 3,
+        "S": 34,
+        "T": 118,
+        "Y": 14
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|A0A0G2JXP8|A0A0G2JXP8_RAT",
+      "has_outgoing_hits": false,
+      "length": 85,
+      "residue_counts": {
+        "C": 39,
+        "L": 9,
+        "S": 4,
+        "V": 33
+      }
+    },
+    {
+      "batch": 11,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|A0A0N7KME8|A0A0N7KME8_ORYSJ",
+      "has_outgoing_hits": false,
+      "length": 180,
+      "residue_counts": {
+        "A": 40,
+        "C": 5,
+        "G": 17,
+        "P": 37,
+        "R": 46,
+        "S": 18,
+        "T": 13,
+        "V": 1,
+        "W": 3
+      }
+    },
+    {
+      "batch": 12,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|A0A0P0VWJ1|A0A0P0VWJ1_ORYSJ",
+      "has_outgoing_hits": false,
+      "length": 285,
+      "residue_counts": {
+        "A": 39,
+        "D": 1,
+        "E": 1,
+        "F": 8,
+        "G": 209,
+        "K": 1,
+        "L": 21,
+        "S": 3,
+        "T": 2
+      }
+    },
+    {
+      "batch": 12,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|A0A0P0WCL7|A0A0P0WCL7_ORYSJ",
+      "has_outgoing_hits": false,
+      "length": 158,
+      "residue_counts": {
+        "A": 34,
+        "C": 1,
+        "D": 2,
+        "E": 8,
+        "G": 35,
+        "H": 1,
+        "K": 2,
+        "P": 3,
+        "Q": 2,
+        "R": 53,
+        "S": 3,
+        "T": 4,
+        "V": 4,
+        "W": 6
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|A0A0R4ILF4|A0A0R4ILF4_DANRE",
+      "has_outgoing_hits": false,
+      "length": 25,
+      "residue_counts": {
+        "A": 1,
+        "K": 7,
+        "L": 1,
+        "M": 3,
+        "Q": 1,
+        "R": 10,
+        "S": 1,
+        "W": 1
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|A0A139WHY7|A0A139WHY7_TRICA",
+      "has_outgoing_hits": false,
+      "length": 25,
+      "residue_counts": {
+        "A": 2,
+        "K": 7,
+        "L": 1,
+        "M": 3,
+        "R": 10,
+        "S": 1,
+        "W": 1
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|A0A2I2YS91|A0A2I2YS91_GORGO",
+      "has_outgoing_hits": false,
+      "length": 25,
+      "residue_counts": {
+        "A": 1,
+        "K": 7,
+        "L": 1,
+        "M": 3,
+        "Q": 1,
+        "R": 10,
+        "S": 1,
+        "W": 1
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|A0A2K1IA18|A0A2K1IA18_PHYPA",
+      "has_outgoing_hits": false,
+      "length": 76,
+      "residue_counts": {
+        "A": 6,
+        "C": 1,
+        "D": 2,
+        "F": 5,
+        "G": 4,
+        "L": 13,
+        "P": 25,
+        "R": 4,
+        "S": 9,
+        "T": 1,
+        "V": 6
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|A0A2K1JS03|A0A2K1JS03_PHYPA",
+      "has_outgoing_hits": false,
+      "length": 25,
+      "residue_counts": {
+        "A": 1,
+        "K": 8,
+        "L": 1,
+        "M": 3,
+        "Q": 1,
+        "R": 9,
+        "S": 1,
+        "W": 1
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|A0A3B3HZ76|A0A3B3HZ76_ORYLA",
+      "has_outgoing_hits": false,
+      "length": 249,
+      "residue_counts": {
+        "A": 2,
+        "C": 3,
+        "E": 36,
+        "G": 4,
+        "H": 2,
+        "I": 1,
+        "K": 1,
+        "N": 1,
+        "Q": 4,
+        "R": 63,
+        "S": 92,
+        "T": 40
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|A0A5F4C1W3|A0A5F4C1W3_CANLF",
+      "has_outgoing_hits": false,
+      "length": 25,
+      "residue_counts": {
+        "A": 1,
+        "K": 7,
+        "L": 1,
+        "M": 3,
+        "Q": 1,
+        "R": 10,
+        "S": 1,
+        "W": 1
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|A2H533|A2H533_TRIVA",
+      "has_outgoing_hits": false,
+      "length": 123,
+      "residue_counts": {
+        "A": 23,
+        "D": 4,
+        "G": 1,
+        "H": 14,
+        "L": 22,
+        "Q": 15,
+        "S": 44
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|A7RKU4|A7RKU4_NEMVE",
+      "has_outgoing_hits": false,
+      "length": 50,
+      "residue_counts": {
+        "A": 4,
+        "L": 4,
+        "P": 18,
+        "Q": 1,
+        "S": 23
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|A7SJA8|A7SJA8_NEMVE",
+      "has_outgoing_hits": false,
+      "length": 118,
+      "residue_counts": {
+        "C": 11,
+        "F": 1,
+        "L": 34,
+        "P": 30,
+        "S": 33,
+        "V": 9
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|A7SN48|A7SN48_NEMVE",
+      "has_outgoing_hits": false,
+      "length": 124,
+      "residue_counts": {
+        "A": 7,
+        "C": 1,
+        "D": 11,
+        "G": 33,
+        "K": 8,
+        "N": 1,
+        "P": 27,
+        "S": 1,
+        "T": 31,
+        "V": 2,
+        "Y": 2
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|A7STN8|A7STN8_NEMVE",
+      "has_outgoing_hits": false,
+      "length": 102,
+      "residue_counts": {
+        "A": 20,
+        "C": 26,
+        "L": 26,
+        "P": 15,
+        "Q": 1,
+        "R": 8,
+        "S": 1,
+        "V": 5
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|A7SZ89|A7SZ89_NEMVE",
+      "has_outgoing_hits": false,
+      "length": 105,
+      "residue_counts": {
+        "D": 35,
+        "G": 35,
+        "H": 17,
+        "V": 18
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|A7SZI4|A7SZI4_NEMVE",
+      "has_outgoing_hits": false,
+      "length": 160,
+      "residue_counts": {
+        "G": 1,
+        "H": 14,
+        "L": 3,
+        "N": 11,
+        "Q": 3,
+        "R": 43,
+        "S": 40,
+        "T": 44,
+        "V": 1
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|A7T2Z8|A7T2Z8_NEMVE",
+      "has_outgoing_hits": false,
+      "length": 146,
+      "residue_counts": {
+        "A": 17,
+        "E": 1,
+        "K": 1,
+        "L": 24,
+        "P": 40,
+        "T": 42,
+        "Y": 21
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|A7TAV2|A7TAV2_NEMVE",
+      "has_outgoing_hits": false,
+      "length": 84,
+      "residue_counts": {
+        "G": 33,
+        "I": 10,
+        "N": 20,
+        "P": 10,
+        "Q": 11
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|A9V7M1|A9V7M1_MONBE",
+      "has_outgoing_hits": false,
+      "length": 219,
+      "residue_counts": {
+        "F": 19,
+        "H": 3,
+        "I": 4,
+        "L": 89,
+        "P": 16,
+        "S": 27,
+        "T": 60,
+        "Y": 1
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|A9VEM4|A9VEM4_MONBE",
+      "has_outgoing_hits": false,
+      "length": 541,
+      "residue_counts": {
+        "A": 1,
+        "D": 48,
+        "E": 131,
+        "K": 3,
+        "L": 154,
+        "V": 204
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|B7PR94|B7PR94_IXOSC",
+      "has_outgoing_hits": false,
+      "length": 69,
+      "residue_counts": {
+        "D": 1,
+        "E": 3,
+        "G": 1,
+        "H": 2,
+        "I": 2,
+        "K": 8,
+        "L": 1,
+        "N": 15,
+        "P": 1,
+        "Q": 13,
+        "R": 6,
+        "S": 1,
+        "T": 15
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|C3Y834|C3Y834_BRAFL",
+      "has_outgoing_hits": false,
+      "length": 193,
+      "residue_counts": {
+        "A": 21,
+        "E": 25,
+        "G": 83,
+        "L": 42,
+        "S": 21,
+        "V": 1
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|F1LZG1|F1LZG1_RAT",
+      "has_outgoing_hits": false,
+      "length": 136,
+      "residue_counts": {
+        "K": 9,
+        "Q": 100,
+        "R": 27
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|F6QE68|F6QE68_MOUSE",
+      "has_outgoing_hits": false,
+      "length": 24,
+      "residue_counts": {
+        "E": 5,
+        "K": 10,
+        "R": 9
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|F6ZE74|F6ZE74_MOUSE",
+      "has_outgoing_hits": false,
+      "length": 30,
+      "residue_counts": {
+        "A": 3,
+        "D": 1,
+        "E": 6,
+        "K": 11,
+        "R": 7,
+        "S": 2
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|F6ZH14|F6ZH14_MOUSE",
+      "has_outgoing_hits": false,
+      "length": 21,
+      "residue_counts": {
+        "E": 1,
+        "K": 2,
+        "R": 18
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|F7BLD2|F7BLD2_MOUSE",
+      "has_outgoing_hits": false,
+      "length": 45,
+      "residue_counts": {
+        "C": 15,
+        "K": 2,
+        "L": 6,
+        "N": 1,
+        "S": 5,
+        "V": 16
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|H2RE54|H2RE54_PANTR",
+      "has_outgoing_hits": false,
+      "length": 25,
+      "residue_counts": {
+        "A": 1,
+        "K": 7,
+        "L": 1,
+        "M": 3,
+        "Q": 1,
+        "R": 10,
+        "S": 1,
+        "W": 1
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|H2Y2R8|H2Y2R8_CIOIN",
+      "has_outgoing_hits": false,
+      "length": 32,
+      "residue_counts": {
+        "K": 4,
+        "M": 8,
+        "P": 7,
+        "T": 9,
+        "V": 4
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|Q52P89|Q52P89_ANOGA",
+      "has_outgoing_hits": false,
+      "length": 25,
+      "residue_counts": {
+        "A": 2,
+        "K": 7,
+        "L": 1,
+        "M": 3,
+        "R": 10,
+        "S": 1,
+        "W": 1
+      }
+    },
+    {
+      "batch": 0,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|Q962S2|Q962S2_DROME",
+      "has_outgoing_hits": false,
+      "length": 25,
+      "residue_counts": {
+        "A": 2,
+        "K": 7,
+        "L": 1,
+        "M": 3,
+        "R": 10,
+        "S": 1,
+        "W": 1
+      }
+    },
+    {
+      "batch": 3,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|T1EKG4|T1EKG4_HELRO",
+      "has_outgoing_hits": false,
+      "length": 81,
+      "residue_counts": {
+        "C": 24,
+        "L": 1,
+        "M": 16,
+        "R": 1,
+        "V": 24,
+        "Y": 15
+      }
+    },
+    {
+      "batch": 7,
+      "categories": [
+        "setup_failure",
+        "statistics_failure"
+      ],
+      "gene": "tr|W5M3G2|W5M3G2_LEPOC",
+      "has_outgoing_hits": false,
+      "length": 168,
+      "residue_counts": {
+        "A": 34,
+        "F": 1,
+        "G": 2,
+        "I": 9,
+        "K": 1,
+        "L": 1,
+        "M": 4,
+        "P": 2,
+        "R": 3,
+        "S": 54,
+        "T": 49,
+        "V": 8
+      }
+    }
+  ],
+  "search_admitted": false,
+  "source": {
+    "bytes": 5902,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/summarize_blast_recovery_failures.py",
+    "sha256": "f9fc2bcff5ffc820dafa59658c057bfacc75fd87d8b66da858a51c8e33f11527"
+  },
+  "status": "partial_replay_failure_description_not_search_admission"
+}
