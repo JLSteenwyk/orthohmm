@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Recovered Native OrthoMCL Launcher Implemented (2026-09-23)
+
+Previous turn progressed by binding BPO admission to its own job (7048e4b).
+Re-read the full objective. BLAST 22103_7 was RUNNING 25:12, then 29:03;
+22105_7 and 22103_8 remain pending. No DGX or old dependency-chain changes.
+
+Added `run_recovered_orthomcl.py` and an isolated no-requeue Slurm launcher.
+The new run requires completed recovered BPO evidence, the dedicated Python
+runtime, pinned Perl/system-helper manifests, and unchanged original native
+sources/configuration helpers. All eight actual source/helper records matched
+the frozen native-source manifest in a separate read-only check.
+
+Execution uses a fresh `qfo_blast_recovery_native_v1` directory, separate native
+source copies, copied BPO/index/species inputs and native index revalidation.
+It retains mode 4, inflation defaults and 64 pair workers in a scheduled
+180-CPU/900-GiB allocation. Native exit, final group content, pair-cache inventory,
+input bytes/mtimes and post-run runtimes are checked. Failed attempts receive
+a durable report and are not implicitly resumed. Even success remains pending
+independent output admission; search failures and uncontrolled timing remain
+explicit, with no accuracy/publication/downstream authorization.
+
+The recovery workflow subset reports **105 passed**, including 19 new launcher
+and preflight cases. With native smoke enabled, the reused staging, source
+configuration, original runner and pair-parallel suites report **71 passed,
+no skips**. Shell syntax passes. The new launcher is not scheduled: full search
+admission, actual BPO conversion/admission, frozen executors and independent
+recovered final-group admission remain prerequisites/work outstanding. Original
+held jobs and scientific defaults were not modified. Goal remains incomplete.
+
 ## Bound Recovered BPO Admission Job Identity (2026-09-23)
 
 Previous turn made progress with the recovered native input gate (aecaac2).

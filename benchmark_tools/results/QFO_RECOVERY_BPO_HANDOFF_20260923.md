@@ -128,3 +128,27 @@ focused suite to **86 passing tests**. Both successful and failed validation
 reports retain their own job ID. Shell syntax also passes. The launcher/runtime
 integration and final-group validation for native inference remain outstanding;
 this change does not schedule admission or authorize native inference.
+
+## Separate Native Launcher
+
+`run_recovered_orthomcl.py` now connects the evidence gate to dedicated runtime
+verification, the existing source configurator, fresh input staging, native
+mode-4 inference, and existing final-group/cache checks. It writes only under
+`benchmarks/results/qfo_blast_recovery_native_v1`, refuses existing directories
+or symlinks, and retains failure reports without implicit retries. Native
+sources come from the checksum-pinned original manifest; only fresh local
+paths are configured. Scientific defaults and the 64-worker pair patch are
+unchanged. Input hashes and mtimes, runtime identities and expected caches
+are checked after inference.
+
+`qfo_blast_recovery_native_20260923.sh` requests 180 CPUs/900 GiB and no requeue.
+It requires the actual completed BPO admission job, explicitly pinned report
+digest, and exact clean native/admission executors. It remains unscheduled.
+Success is only `recovered_native_exited_zero_pending_admission`; independent
+terminal/final-group validation and scoring remain necessary. The old held
+inference job is not reused or released.
+
+Recovery-focused tests: 105 passed, including 19 new orchestration/preflight
+cases. Reused native staging/configuration/original-runner/pair-parallel tests:
+71 passed with native smoke enabled, no skips. Shell syntax passes. These
+fixture results do not establish production inference success or accuracy.
