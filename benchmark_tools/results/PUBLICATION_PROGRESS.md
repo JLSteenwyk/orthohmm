@@ -1,5 +1,35 @@
 # Publication Progress
 
+## First Nine Replay Batches: Failure Description (2026-09-23)
+
+Previous turn progressed by freezing and testing the consolidation executor
+(4558ed7). Re-read the objective; 22103_9 RUNNING 09:31. No DGX or production
+job changes. The full-search auditor already records incoming/outgoing-hit
+presence for diagnostic queries; retained that existing check unchanged.
+
+Added `summarize_blast_recovery_failures.py` to describe explicitly selected
+admitted batches without claiming whole-search admission. It refreshes native
+task accounting, checks admission status/executor identity, rehashes and rereads
+batch FASTAs and logs, reconstructs diagnostic coverage, rejects overlapping
+queries and records failed-query lengths/composition. It relies on previously
+admitted query-block inventories, not a fresh full HSP/database validation.
+Partial selection, overlapping diagnostic categories, nonrandom replay sampling
+and absence of final-group/accuracy conclusions are explicit limitations.
+
+Focused summarizer/batch-admission suites: **39 passed**. Ran the summarizer on
+the actual first nine admissions and wrote
+[partial description](qfo_replay_first9_failure_description_20260923.json):
+45000 queries, 41269 with hits, 3685 no-hit without logged failure, **46 failed**.
+All 46 have setup-failure diagnostics; seven additionally have short-query
+diagnostics and 39 statistical-parameter failures. Failed lengths range 2-541
+residues (median 27.5). These observations do not establish a compositional or
+length-based causal explanation, nor a whole-dataset failure rate. Forty-four
+failures are in batch 1, one in batch 4 and one in batch 8 (human numbering).
+No-hit queries remain distinct from failures, and incoming hits/group membership
+must be checked after complete recovery. No counterfactual accuracy effect has
+been measured. Scientific baseline, scoring endpoints and recovery execution
+are unchanged; publication remains incomplete.
+
 ## Consolidation Executor Frozen And Replayed (2026-09-23)
 
 Previous turn progressed with combined uncertainty integration (0b8efa9).
