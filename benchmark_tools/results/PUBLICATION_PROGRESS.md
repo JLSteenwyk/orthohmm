@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Recovered BPO Flow And Native Fixtures Verified (2026-09-23)
+
+Previous turn progressed by implementing the recovery-specific independent
+BPO gate (4addb7b). Re-read the goal and checked BLAST 22103_7 RUNNING 8:32,
+with admission 22105_7 pending. No unrelated jobs or DGX state changed.
+
+Added twelve orchestration cases with real fixture file hashes and mocked
+expensive validators. They cover complete success, refusal to overwrite,
+scheduler/revision/checkpoint/search/provenance/coverage/count rejection,
+content failure, input mutation, and post-validation Python/native runtime
+failure. All terminal failures retain checkpoint_admitted=false and downstream
+authorization=false. The flow/contract/preparation subset has **47 passing
+tests**. Enabled installed OrthoMCL/BioPerl native fixtures for the separate
+existing index/preparation/recheck suites: **68 passed, no skips**.
+
+Added the isolated two-CPU, 64-GiB, 24-hour no-requeue admission wrapper;
+`bash -n` passes. It requires the future preparation job and exact executor,
+and does not release old held jobs. [Handoff notes](QFO_RECOVERY_BPO_HANDOFF_20260923.md)
+record scope and remaining production gates. No production BPO job is queued;
+search admission and actual conversion remain prerequisites. Native inference
+still needs recovery-aware provenance and validation. Goal remains incomplete.
+
 ## Recovery BPO Independent Gate Implemented (2026-09-23)
 
 Previous turn progressed by refreshing and spot-reviewing manuscript HTML/PDF

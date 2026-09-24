@@ -70,3 +70,26 @@ the future preparation job, executor and result do not yet exist. Next work is
 orchestration failure-path coverage, then freezing the actual preparation and
 admission executors after search admission. Native inference still needs a
 recovery-aware handoff and separate validation.
+
+## Flow And Native Fixture Checks
+
+Added twelve recovered-admission orchestration cases using real temporary file
+hashes and mocked expensive scientific/runtime operations. They verify success,
+refusal to overwrite, pending/wrong-revision gates, checkpoint/search/coverage
+and source-count failures, missing search provenance, failed content recheck,
+changed input bytes, and post-validation Python/native runtime failure. No
+failed case admits the checkpoint or authorizes downstream execution; successful
+fixtures retain failed-query accounting.
+
+The new flow/contract/preparation subset passes **47 tests**. Separately enabled
+`ORTHOHMM_LEGACY_BLAST_SMOKE=1` for the existing native index, preparation and
+independent-check suites: **68 passed with no skips**, including installed
+OrthoMCL/BioPerl fixture indexing and revalidation. This resolves the earlier
+opt-in test gap; it does not validate a future production checkpoint.
+
+The new `qfo_blast_recovery_bpo_admit_20260923.sh` requests two CPUs, 64 GiB,
+24 hours and no requeue, using the pinned dedicated Python with `env -i`,
+isolated imports and a fresh bytecode-cache prefix. It requires explicit future
+preparation job/executor/revision, checks its own frozen executor, and writes
+only to a fresh recovery-specific admission directory. Shell syntax passes.
+It remains unscheduled; the required production inputs are not yet available.
