@@ -1,5 +1,29 @@
 # Publication Progress
 
+## High-CPM Recovery Preflight Connected (2026-09-23)
+
+Previous turn implemented/tested the guarded frozen optimizer component
+(3bd1144), making progress. Re-read the goal and revalidated live jobs. By the
+latest poll, low-CPM assessment **22094_0 RUNNING** at 0:08 and BLAST recovery
+**22103_3 RUNNING** at 15:00. Reconstruction **22153** remains resources-pending;
+it was not restarted. DGX remains untouched.
+
+Added `prepare_cpm_checkpoint_recovery.py`, composing independent refinement
+validation, pinned recovery protocol and boundary diagnostic, original failed
+scheduler/parent/stage identities, fresh three-stage predecessor audit, fresh
+failed-payload audit, exact graph fingerprint and runtime checks. All identities
+are rechecked after assembly; failures after directory creation are retained as
+explicit non-executed preflight failures. The original failure is never relabeled
+successful. Eighty-one focused tests pass across preflight, optimizer guard and
+refinement checks.
+
+Also exercised the real pending-job gate: current 22153 accounting was rejected
+with `Require completed single-CPU refinement reconstruction`; no recovery output
+directory was created. This verifies the waiting gate only, not a successful
+full-data preflight. Optimizer/refinement orchestration and independent recovery
+admission still need integration before the one permitted continuation can run.
+No high-CPM accuracy score or recovered full-data partition has been produced.
+
 ## Guarded Frozen Optimizer Continuation Tested (2026-09-23)
 
 Previous turn added the independent reconstruction validator and recorded actual
