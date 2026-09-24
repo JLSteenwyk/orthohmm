@@ -9,6 +9,8 @@ import subprocess
 import sys
 import time
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
 from benchmark_tools.prepare_orthomcl_bpo_checkpoint import prepare as checkpoint
 from benchmark_tools.run_blast_recovery_batch import save_status

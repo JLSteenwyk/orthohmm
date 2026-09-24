@@ -28,3 +28,19 @@ conversion or validate a real future report. The new wrapper is not scheduled.
 It requires a real successful search-admission report and pinned digest, plus
 frozen scheduling and an independent recovery checkpoint admission workflow.
 Existing held downstream jobs remain untouched.
+
+## Isolated Launcher Verification
+
+The recovery wrapper now follows the original script's explicit repository
+import-path setup, allowing direct execution with `python -I -B` from outside
+the repository. Its isolated `--help` entry point was tested. A production-style
+runtime probe using the dedicated Python 3.10.13 environment, minimal environment
+variables and an unused `-X pycache_prefix` verified all 2,928 runtime records.
+An initial probe without that cache prefix was correctly rejected; the runtime
+contract was not relaxed.
+
+`qfo_blast_recovery_bpo_prepare_20260923.sh` mirrors those verified launcher
+settings and requires an explicitly supplied future admission digest. Shell
+syntax passes. Additional scheduler/executor/source rejection tests bring the
+focused recovery suite to 128 passing tests. This launcher remains unscheduled;
+the runtime probe did not convert any production BLAST rows or admit a checkpoint.

@@ -1,9 +1,46 @@
 import json
+from pathlib import Path
+import subprocess
+import sys
 from types import SimpleNamespace
 
 import pytest
 
 import benchmark_tools.prepare_blast_recovery_bpo as module
+
+
+def test_isolated_script_entrypoint(tmp_path):
+    result = subprocess.run([sys.executable, "-I", "-B", str(Path(module.__file__).resolve()), "--help"],
+        cwd=tmp_path, capture_output=True, text=True, check=True)
+    assert "--admission-sha256" in result.stdout
+
+
+@pytest.mark.parametrize("problem", ["pending", "duplicate", "memory", "executor", "source"])
+def test_provenance_gate(tmp_path, monkeypatch, problem):
+    report = admission(tmp_path)
+    path = tmp_path / "benchmarks/results/qfo_blast_recovery_search_admission_v1/report.json"
+    path.parent.mkdir(parents=True)
+    executor = tmp_path / "benchmarks/work/blast_recovery_search_admission_v1_20260923/benchmark_tools"
+    executor.mkdir(parents=True)
+    source = executor / "admit_blast_recovery_search.py"
+    source.write_text("fixture source\n")
+    report["checked_records"].append(module.record(source))
+    if problem == "source":
+        report["checked_records"].pop()
+    path.write_text(json.dumps(report))
+    row = "22151|COMPLETED|0:0|bizon|2|64G|00:10:00\n"
+    if problem == "pending":
+        row = row.replace("COMPLETED", "PENDING")
+    if problem == "memory":
+        row = row.replace("64G", "8G")
+    if problem == "duplicate":
+        row *= 2
+    text = "JobID|State|ExitCode|NodeList|AllocCPUS|ReqMem|Elapsed\n" + row
+    monkeypatch.setattr(module.subprocess, "check_output", lambda command, **kw:
+        text if command[0] == "sacct" else "changed" if problem == "executor" else module.ADMITTER)
+    monkeypatch.setattr(module.subprocess, "run", lambda *a, **kw: None)
+    with pytest.raises(ValueError):
+        module.verify_admission(tmp_path, path, module.record(path)["sha256"])
 
 
 def admission(root):

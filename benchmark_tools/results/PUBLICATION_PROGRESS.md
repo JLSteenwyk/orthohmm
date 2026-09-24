@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Dedicated Recovery BPO Launcher Verified (2026-09-23)
+
+Previous turn exported all admitted threshold endpoints (a606063), making
+progress. Re-read the objective and confirmed live 22088_0 plus pending
+recovery, merge and search-admission jobs.
+
+Found and fixed the new BPO wrapper's missing explicit repository import path
+for isolated direct-script invocation. Tested `--help` from outside the repo
+under `-I -B`. The dedicated runtime initially rejected a probe missing its
+required unused cache prefix; repeating with the exact intended launcher
+settings passed: Python 3.10.13 and all 2,928 runtime records verified.
+
+Added the unscheduled recovery BPO scheduler script with minimal environment,
+isolated interpreter, unused cache prefix and explicit future admission SHA256.
+Added pending/duplicate/wrong-resource/wrong-executor/wrong-source tests.
+All 128 focused recovery tests pass; shell syntax passes. No production BPO
+conversion occurred and no held jobs were released. The future successful
+admission digest and independent checkpoint admission remain required.
+
+
 ## All QfO Threshold Endpoints Exported (2026-09-23)
 
 Previous turn implemented the recovered BPO handoff (04f079e), making progress.
