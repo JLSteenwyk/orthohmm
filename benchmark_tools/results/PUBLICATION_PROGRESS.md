@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Manuscript Preview Refreshed To Version 11 (2026-09-25)
+
+Rendered fresh v11 HTML/PDF from the draft containing the corrected-search
+and residue-exposure findings. The asset audit covers 190 occurrences and
+176 tracked targets. PDF inspection found 37 pages, 11 image occurrences,
+and no text/image blocks outside page bounds at one-point tolerance.
+Visually inspected updated pages 18-19 at 1.6x: legible, unclipped and no
+overlap. Other pages were not visually re-reviewed. Detailed identities and
+remaining editorial limitations are in `MANUSCRIPT_RENDER_REVIEW_20260925_v11.md`.
+This supersedes v10 only as a working preview, not as publication approval.
+
+The previous goal turn made progress by updating the manuscript to admitted
+search evidence. BPO job 22167 remained RUNNING at 3:02 on this turn's
+initial scheduler check; no scores or downstream admissions are inferred.
+
 ## Manuscript Corrected Search Evidence Updated (2026-09-25)
 
 The draft now distinguishes the independently measured corrected-search
