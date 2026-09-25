@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Memcheck Post-Failure Integrity Checked (2026-09-25)
+
+Following terminal evidence in the preceding entry, independently ran the
+existing `diagnose_cpm_refinement_allocator.check` over all **990** retained
+record entries, checked the recorded XML and child-log identities, and ran
+`validate_child` against the original recovery `refinement.json` and payload
+gene names. Metadata and bytes match; independent partition coverage is
+**984,137 genes in 390,845 groups**. `verify_qfo_replay_launcher.verify` on
+the frozen core/launcher/runtime manifest returned exactly `runtime_before`.
+Rechecking all 990 record entries after these operations also passed. These
+read-only checks did not rerun inference or modify the failed status report.
+
+Streaming inspection of the completed XML's nine non-leak error records
+(unique IDs 0x0 through 0x8) found `__wcscat_avx2` and Python path-initialization
+frames in each: four InvalidRead and five UninitCondition records. Other
+records are the leak categories reported below. No fatal_signal element was
+present. This instrumented execution produced the expected partition but
+did not reproduce or explain the earlier refinement SIGSEGV. Neither the
+startup findings nor leak records have been established as its cause. No
+suppression, runtime replacement, retry or scientific admission is justified
+by these checks alone; the failed high-CPM parameter result remains retained.
+
+BLAST merge 22162 remains RUNNING (1:34 at observation), with 22163 pending.
+Complete recovered search validation and downstream OrthoMCL inference/scoring
+remain outstanding. DGX remains deferred.
+
 ## All Replay Batches Validated; Merge Running (2026-09-25)
 
 Native final batch 22103_19 completed 0:0 in **16:21**; validator 22105_19
