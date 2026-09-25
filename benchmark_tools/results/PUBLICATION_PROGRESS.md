@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Replacement Merge And Independent Search Audit Queued (2026-09-25)
+
+Frozen merge executor `benchmarks/work/blast_replacement_merge_v1_20260925`
+at `f6ab36db0cbed151ac2b46581345cd187d514e79` is clean; its focused
+admission/panel/merge tests passed **107**. Submitted merge **22162** with
+two CPUs/64 GiB/24 hours afterok 22161 and 22105_19. The merge itself checks
+all twenty native/validator identities and prefix prerequisites, not just the
+two scheduler dependencies. It writes fresh
+`benchmarks/results/qfo_blast_replacement_merge_v1` with `--replacement`.
+
+Independent search admission now has an opt-in replacement path pinned to
+merge 22162, that exact merge checkout, and the new candidate directory.
+It reexecutes replacement-aware prerequisites and retains the existing full
+candidate-table audit, exact database parity check and before/after hashing.
+It does not promote batch coverage to whole-search admission or release BPO.
+Its source SHA256 is
+`fa6d66d6ecd6e3d0e963d8dca0a7c515f12af757a4b65fa41072601f1ae71f27`.
+
+Frozen clean search executor
+`benchmarks/work/blast_replacement_search_admission_v1_20260925` is at
+`198014bbaab12465620f1c6572a03459cdb1759e`. Focused suites passed **133**
+both before and after freezing, including wrong merge ID/source/path,
+allocation, status and premature admission tests. These tests do not replace
+production full-table admission. Submitted **22163**, two CPUs/64 GiB/24 hours,
+afterok 22162, using the absolute executor path and commit above. Fresh output
+is `benchmarks/results/qfo_blast_replacement_search_admission_v1`.
+
+Both wrappers are committed. Superseded jobs 22150/22151 were verified pending
+then cancelled; their histories and frozen executors remain retained. Native
+replacement 22160_14 is still RUNNING and validator 22161 is pending. No native
+search or unrelated job was cancelled. Next: verify replacement admission and
+continuation, update downstream BPO admission pins/paths for search job 22163,
+and wait for actual admitted search evidence before launching BPO. DGX remains
+deferred. No final recovered scores or controlled timing results exist yet.
+
 ## Replacement-Aware Panel And Merge Gates (2026-09-25)
 
 Added opt-in `--replacement` support to full-panel verification and merge
