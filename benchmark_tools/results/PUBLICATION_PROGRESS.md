@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Recovered BPO Validation Queued (2026-09-25)
+
+The preceding turn was a verified wait on preparation job 22167. It remains
+RUNNING; conversion logging reached 222 million BPO hits, which is progress
+output, not a validated final count. Queued independent admission job **22168**
+with `afterok:22167`; `scontrol` confirms PENDING for that dependency, two CPUs,
+64 GiB, 24 hours, and no requeue. This avoids a manual scheduling gap without
+weakening the completed-preparation or content/index validation gates.
+
+Both preparation and admission use the clean frozen executor
+`benchmarks/work/publication_native_representation_downstream_v1_20260925`
+at `296882422f2d70c096c8d5584082c16217f36add`. Rechecked its HEAD, empty
+porcelain status, and the preparer/admitter source hashes before submission.
+The admission output directory did not exist. The frozen admission wrapper
+was submitted with this executor/revision for both source arguments and
+preparation job 22167. Its log is
+`benchmarks/work/qfo_recovery_bpo_admit_22168.log`; expected output is
+`benchmarks/results/qfo_blast_recovery_bpo_admission_v1/report.json`.
+No admission result, native inference, or new accuracy score is claimed.
+Inspect terminal scheduler status and the actual report before the native
+handoff; original held jobs and failed diagnostic dependencies remain untouched.
+
+The user reaffirmed deferring the DGX. No DGX access, service changes, or
+timing runs were attempted. Dedicated matched-resource timing remains an
+unmet publication requirement; local recovery elapsed times are not a
+replacement. The full publication goal remains active.
+
 ## Native-Representation Membership Executor Frozen (2026-09-25)
 
 Created clean sparse executor
