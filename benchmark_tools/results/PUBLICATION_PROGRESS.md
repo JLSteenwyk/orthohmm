@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Seven-Protein Search Trace Completed (2026-09-25)
+
+Job 22169 completed 0:0 in 4:24. The full-table hash and 401908030-row count
+matched the completed search audit. All 17 incident HSPs connect only the
+seven reviewed proteins: seven self and ten non-self directed pairs, with
+no external partners in either direction. Independent subset parsing checked
+counts, distinct pairs and reciprocity; matching earlier reference-exposure
+identities confirmed all seven belong to one species, so no cross-species
+incident search pair was observed. Retained the report and 1360-byte HSP
+subset verbatim; interpretation and identities are in
+`QFO_NATIVE_RESIDUE_HIT_TRACE_20260925.md`. This narrows the observed search
+impact, not the unperformed residue-preserving counterfactual or final-group
+impact. Preparation 22167 and queued validation 22168 remain separate.
+
 ## Seven-Protein Search Trace Launched (2026-09-25)
 
 The preceding turn was a verified wait on 22167 and established that retained

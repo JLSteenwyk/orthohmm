@@ -1,0 +1,172 @@
+{
+  "accuracy_admitted": false,
+  "content": {
+    "proteins": [
+      {
+        "gene": "sp|P58865|MTMB1_METAC",
+        "incoming_hsps": 2,
+        "incoming_partners": [
+          "sp|P58865|MTMB1_METAC",
+          "sp|P58866|MTMB2_METAC"
+        ],
+        "outgoing_hsps": 2,
+        "outgoing_partners": [
+          "sp|P58865|MTMB1_METAC",
+          "sp|P58866|MTMB2_METAC"
+        ],
+        "reciprocal_partners": [
+          "sp|P58865|MTMB1_METAC",
+          "sp|P58866|MTMB2_METAC"
+        ],
+        "self_hsps": 1
+      },
+      {
+        "gene": "sp|P58866|MTMB2_METAC",
+        "incoming_hsps": 2,
+        "incoming_partners": [
+          "sp|P58865|MTMB1_METAC",
+          "sp|P58866|MTMB2_METAC"
+        ],
+        "outgoing_hsps": 2,
+        "outgoing_partners": [
+          "sp|P58865|MTMB1_METAC",
+          "sp|P58866|MTMB2_METAC"
+        ],
+        "reciprocal_partners": [
+          "sp|P58865|MTMB1_METAC",
+          "sp|P58866|MTMB2_METAC"
+        ],
+        "self_hsps": 1
+      },
+      {
+        "gene": "sp|Q8TN68|MTBB3_METAC",
+        "incoming_hsps": 3,
+        "incoming_partners": [
+          "sp|Q8TN68|MTBB3_METAC",
+          "sp|Q8TS72|MTBB2_METAC",
+          "sp|Q8TTA5|MTBB1_METAC"
+        ],
+        "outgoing_hsps": 3,
+        "outgoing_partners": [
+          "sp|Q8TN68|MTBB3_METAC",
+          "sp|Q8TS72|MTBB2_METAC",
+          "sp|Q8TTA5|MTBB1_METAC"
+        ],
+        "reciprocal_partners": [
+          "sp|Q8TN68|MTBB3_METAC",
+          "sp|Q8TS72|MTBB2_METAC",
+          "sp|Q8TTA5|MTBB1_METAC"
+        ],
+        "self_hsps": 1
+      },
+      {
+        "gene": "sp|Q8TS72|MTBB2_METAC",
+        "incoming_hsps": 3,
+        "incoming_partners": [
+          "sp|Q8TN68|MTBB3_METAC",
+          "sp|Q8TS72|MTBB2_METAC",
+          "sp|Q8TTA5|MTBB1_METAC"
+        ],
+        "outgoing_hsps": 3,
+        "outgoing_partners": [
+          "sp|Q8TN68|MTBB3_METAC",
+          "sp|Q8TS72|MTBB2_METAC",
+          "sp|Q8TTA5|MTBB1_METAC"
+        ],
+        "reciprocal_partners": [
+          "sp|Q8TN68|MTBB3_METAC",
+          "sp|Q8TS72|MTBB2_METAC",
+          "sp|Q8TTA5|MTBB1_METAC"
+        ],
+        "self_hsps": 1
+      },
+      {
+        "gene": "sp|Q8TS73|MTTB2_METAC",
+        "incoming_hsps": 2,
+        "incoming_partners": [
+          "sp|Q8TS73|MTTB2_METAC",
+          "sp|Q8TTA9|MTTB1_METAC"
+        ],
+        "outgoing_hsps": 2,
+        "outgoing_partners": [
+          "sp|Q8TS73|MTTB2_METAC",
+          "sp|Q8TTA9|MTTB1_METAC"
+        ],
+        "reciprocal_partners": [
+          "sp|Q8TS73|MTTB2_METAC",
+          "sp|Q8TTA9|MTTB1_METAC"
+        ],
+        "self_hsps": 1
+      },
+      {
+        "gene": "sp|Q8TTA5|MTBB1_METAC",
+        "incoming_hsps": 3,
+        "incoming_partners": [
+          "sp|Q8TN68|MTBB3_METAC",
+          "sp|Q8TS72|MTBB2_METAC",
+          "sp|Q8TTA5|MTBB1_METAC"
+        ],
+        "outgoing_hsps": 3,
+        "outgoing_partners": [
+          "sp|Q8TN68|MTBB3_METAC",
+          "sp|Q8TS72|MTBB2_METAC",
+          "sp|Q8TTA5|MTBB1_METAC"
+        ],
+        "reciprocal_partners": [
+          "sp|Q8TN68|MTBB3_METAC",
+          "sp|Q8TS72|MTBB2_METAC",
+          "sp|Q8TTA5|MTBB1_METAC"
+        ],
+        "self_hsps": 1
+      },
+      {
+        "gene": "sp|Q8TTA9|MTTB1_METAC",
+        "incoming_hsps": 2,
+        "incoming_partners": [
+          "sp|Q8TS73|MTTB2_METAC",
+          "sp|Q8TTA9|MTTB1_METAC"
+        ],
+        "outgoing_hsps": 2,
+        "outgoing_partners": [
+          "sp|Q8TS73|MTTB2_METAC",
+          "sp|Q8TTA9|MTTB1_METAC"
+        ],
+        "reciprocal_partners": [
+          "sp|Q8TS73|MTTB2_METAC",
+          "sp|Q8TTA9|MTTB1_METAC"
+        ],
+        "self_hsps": 1
+      }
+    ],
+    "retained_hsp_rows": 17,
+    "table_bytes": 36360701687,
+    "table_rows": 401908030,
+    "table_sha256": "2d395e39975cbb73c0bd33f016836aa0621e4101b378d809f2579ac37a42f117"
+  },
+  "expected_rows": 401908030,
+  "expected_sha256": "2d395e39975cbb73c0bd33f016836aa0621e4101b378d809f2579ac37a42f117",
+  "limitations": [
+    "Descriptive search trace, not independent search admission.",
+    "HSP rows are not distinct pairs or final ortholog predictions.",
+    "Self hits are included in partner lists and reciprocal counts.",
+    "No final-group membership or counterfactual accuracy effect is established."
+  ],
+  "publication_ready": false,
+  "review": {
+    "bytes": 10411,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_recovery_native_residue_deletions_20260925.json",
+    "sha256": "826e711979f0b262f31964e08b46bc39ff3cd621803074e1f71be213cc153a9e"
+  },
+  "source": {
+    "bytes": 4785,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_residue_hit_trace_v1_20260925/benchmark_tools/trace_native_residue_hits.py",
+    "sha256": "2e2cfcb89b036e3df994cde0436c02aff77d3efde72dca1c83d21baa037f32a4"
+  },
+  "status": "selected_hit_trace_verified_against_supplied_table_identity",
+  "subset": {
+    "bytes": 1360,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_native_residue_hit_trace_20260925/selected.m8",
+    "sha256": "5229ddfa487429ed4058e88bccdb83f43cba49e9f5d49f0a253bb59ec764f99a"
+  },
+  "table_path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_blast_replacement_merge_v1/table/all.blast.candidate"
+}
