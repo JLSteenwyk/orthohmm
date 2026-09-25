@@ -83,9 +83,15 @@ def test_full_database_subject_is_valid_outside_query_subset(tmp_path):
     assert coverage(["a"], blocks, {})["queries_without_hits"] == []
 
 
+@pytest.mark.parametrize("replacement", [False, True])
 @pytest.mark.parametrize("problem", [None, "empty", "changed_output", "wrong_contract",
     "wrong_identity", "partial_file", "failed_status", "above_cutoff", "unknown_subject"])
-def test_admission_contract_end_to_end(tmp_path, monkeypatch, problem):
+def test_admission_contract_end_to_end(tmp_path, monkeypatch, problem, replacement):
+    index = 14 if replacement else 0
+    array = "22160" if replacement else "22103"
+    recovery = dict(original_scheduler={"State": "TIMEOUT"}, records=[],
+                    replacement_task="22160_14", partial_rows_reused=False)
+    monkeypatch.setattr(admission, "interrupted_attempt", lambda *a: recovery)
     directory = tmp_path / "batch_00"
     directory.mkdir()
     fasta, query = tmp_path / "full.fa", tmp_path / "query.fa"
@@ -105,7 +111,7 @@ def test_admission_contract_end_to_end(tmp_path, monkeypatch, problem):
     expected = dict(directory=str(directory), command=["blastall", "-d", str(fasta)],
         checked_records=[record(fasta), record(query)],
         batch=dict(input=record(query), queries=1, first_query="a", last_query="a"))
-    identity = dict(index=0, job_id="22104", array_job_id="22103", node="bizon", started_epoch=1)
+    identity = dict(index=index, job_id="22104", array_job_id=array, node="bizon", started_epoch=1)
     initial = dict(**identity, preflight=expected, status="starting")
     terminal = dict(**identity, preflight=expected, status="native_batch_completed_pending_admission",
         finished_epoch=2, exit_code=0, outputs=[record(p) for p in (log, timing, blast)],
@@ -126,7 +132,7 @@ def test_admission_contract_end_to_end(tmp_path, monkeypatch, problem):
     def check_output(command, **kwargs):
         if command[0] == "sacct":
             return ("JobID|JobIDRaw|State|ExitCode|NodeList|AllocCPUS|Elapsed\n"
-                    "22103_0|22104|COMPLETED|0:0|bizon|180|00:01:00\n")
+                    f"{array}_{index}|22104|COMPLETED|0:0|bizon|180|00:01:00\n")
         if command[0] == "git":
             return admission.EXECUTOR_COMMIT + "\n"
         assert command[:3] == ["/home/bizon/anaconda3/bin/python", "-B", "-c"]
@@ -137,10 +143,11 @@ def test_admission_contract_end_to_end(tmp_path, monkeypatch, problem):
     output = tmp_path / "admission.json"
     if problem not in (None, "empty"):
         with pytest.raises(ValueError):
-            admission.admit(tmp_path, 0, output)
+            admission.admit(tmp_path, index, output, replacement)
         assert not output.exists()
         return
-    result = admission.admit(tmp_path, 0, output)
+    result = admission.admit(tmp_path, index, output, replacement)
+    assert result.get("replacement") == (recovery if replacement else None)
     assert json.loads(output.read_text()) == result
     assert result["batch_admitted"] is True
     assert result["search_admitted"] is result["reuse_authorized"] is False
@@ -148,4 +155,59 @@ def test_admission_contract_end_to_end(tmp_path, monkeypatch, problem):
     if problem == "empty":
         assert result["coverage"]["no_hits_without_logged_failure"] == ["a"]
     with pytest.raises(FileExistsError):
-        admission.admit(tmp_path, 0, output)
+        admission.admit(tmp_path, index, output, replacement)
+
+
+@pytest.mark.parametrize("problem", [None, "wrong_array", "wrong_index", "running", "duplicate", "old_only"])
+def test_replacement_scheduler_identity(problem):
+    header = "JobID|JobIDRaw|State|ExitCode|NodeList|AllocCPUS|Elapsed\n"
+    old = "22103_14|22143|TIMEOUT|0:0|bizon|180|1-10:51:21\n"
+    new = "22160_14|22160|COMPLETED|0:0|bizon|180|00:01:00\n"
+    if problem == "wrong_array":
+        new = new.replace("22160_14", "99999_14")
+    elif problem == "running":
+        new = new.replace("COMPLETED", "RUNNING")
+    elif problem == "duplicate":
+        new *= 2
+    elif problem == "old_only":
+        new = ""
+    index = 15 if problem == "wrong_index" else 14
+    if problem:
+        with pytest.raises(ValueError):
+            completed_task(header + old + new, index, True)
+    else:
+        assert completed_task(header + old + new, 14, True)["JobIDRaw"] == "22160"
+    with pytest.raises(ValueError):
+        completed_task(header + old + new, 14)
+
+
+@pytest.mark.parametrize("problem", [None, "bytes", "extra", "missing", "state", "raw", "duplicate"])
+def test_interrupted_evidence_preserved(tmp_path, monkeypatch, problem):
+    import hashlib
+    directory = tmp_path / "benchmarks/results/qfo_blast_recovery_v1/batch_14_interrupted_22103_14_20260925"
+    directory.mkdir(parents=True)
+    for name in admission.INTERRUPTED_HASHES:
+        (directory / name).write_bytes(b"fixture")
+    hashes = {name: hashlib.sha256(b"fixture").hexdigest() for name in admission.INTERRUPTED_HASHES}
+    monkeypatch.setattr(admission, "INTERRUPTED_HASHES", hashes)
+    if problem == "bytes":
+        (directory / "status.json").write_bytes(b"changed")
+    elif problem == "extra":
+        (directory / "hits.blast").touch()
+    elif problem == "missing":
+        (directory / "status.json").unlink()
+    row = "22103_14|22143|TIMEOUT|0:0|bizon|180\n"
+    if problem == "state":
+        row = row.replace("TIMEOUT", "RUNNING")
+    elif problem == "raw":
+        row = row.replace("22143", "99999")
+    elif problem == "duplicate":
+        row *= 2
+    accounting = "JobID|JobIDRaw|State|ExitCode|NodeList|AllocCPUS\n" + row
+    if problem:
+        with pytest.raises(ValueError):
+            admission.interrupted_attempt(tmp_path, accounting)
+    else:
+        result = admission.interrupted_attempt(tmp_path, accounting)
+        assert len(result["records"]) == 5
+        assert result["partial_rows_reused"] is False

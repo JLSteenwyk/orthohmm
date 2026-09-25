@@ -15,12 +15,44 @@ from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
 
 EXECUTOR_COMMIT = "1a73dc619bf50d5cc37b59f7b7820df3f4787c5d"
 ARRAY_JOB = "22103"
+REPLACEMENT_ARRAY = "22160"
+INTERRUPTED_HASHES = {
+    "hits.blast.partial": "6e22696fd4050d15933401c1d28b4e72c9eb585083c51ea08f5795646b51dabf",
+    "preflight.json": "65c3ef26d3c98ca45a11a0be8e9c0f0f84f5ba36f9a4055fd55a0313aa858dc9",
+    "status.json": "65c3ef26d3c98ca45a11a0be8e9c0f0f84f5ba36f9a4055fd55a0313aa858dc9",
+    "blast.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "blast.time.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+}
 
 
-def completed_task(accounting, index):
+def execution_array(index, replacement=False):
     if type(index) is not int or index not in range(20):
         raise ValueError("Unknown recovery batch")
-    rows = [r for r in csv.DictReader(io.StringIO(accounting), delimiter="|") if r["JobID"] == f"{ARRAY_JOB}_{index}"]
+    if type(replacement) is not bool or (replacement and index != 14):
+        raise ValueError("Replacement authorized only for batch 14")
+    return REPLACEMENT_ARRAY if replacement else ARRAY_JOB
+
+
+def interrupted_attempt(root, accounting):
+    rows = [r for r in csv.DictReader(io.StringIO(accounting), delimiter="|")
+            if r["JobID"] == "22103_14"]
+    if len(rows) != 1 or tuple(rows[0][k] for k in
+            ("JobIDRaw", "State", "ExitCode", "NodeList", "AllocCPUS")) != (
+            "22143", "TIMEOUT", "0:0", "bizon", "180"):
+        raise ValueError("Interrupted original task identity changed")
+    directory = root / "benchmarks/results/qfo_blast_recovery_v1/batch_14_interrupted_22103_14_20260925"
+    if {p.name for p in directory.iterdir()} != set(INTERRUPTED_HASHES):
+        raise ValueError("Interrupted attempt inventory changed")
+    records = [record(directory / name) for name in INTERRUPTED_HASHES]
+    if any(r["sha256"] != INTERRUPTED_HASHES[Path(r["path"]).name] for r in records):
+        raise ValueError("Interrupted attempt bytes changed")
+    return dict(original_scheduler=rows[0], records=records,
+                replacement_task="22160_14", partial_rows_reused=False)
+
+
+def completed_task(accounting, index, replacement=False):
+    array = execution_array(index, replacement)
+    rows = [r for r in csv.DictReader(io.StringIO(accounting), delimiter="|") if r["JobID"] == f"{array}_{index}"]
     if len(rows) != 1 or tuple(rows[0][k] for k in ("State", "ExitCode", "NodeList", "AllocCPUS")) != ("COMPLETED", "0:0", "bizon", "180"):
         raise ValueError("Require uniquely completed matching recovery task")
     return rows[0]
@@ -73,13 +105,15 @@ def coverage(genes, blocks, diagnostics):
         no_hits_without_logged_failure=sorted(universe-hits-failed))
 
 
-def admit(root, index, output):
+def admit(root, index, output, replacement=False):
     root, output = root.resolve(), output.absolute()
     if output.exists() or output.is_symlink():
         raise FileExistsError(output)
-    accounting = subprocess.check_output(["sacct", "-j", ARRAY_JOB, "--parsable2",
+    array = execution_array(index, replacement)
+    accounting = subprocess.check_output(["sacct", "-j", f"{ARRAY_JOB},{array}" if replacement else array, "--parsable2",
         "--format=JobID,JobIDRaw,State,ExitCode,NodeList,AllocCPUS,Elapsed"], text=True)
-    scheduler = completed_task(accounting, index)
+    scheduler = completed_task(accounting, index, replacement)
+    recovery = interrupted_attempt(root, accounting) if replacement else None
     executor = root / "benchmarks/work/blast_recovery_executor_v1_20260923"
     if subprocess.check_output(["git", "-C", str(executor), "rev-parse", "HEAD"], text=True).strip() != EXECUTOR_COMMIT:
         raise ValueError("Recovery executor revision changed")
@@ -93,7 +127,7 @@ def admit(root, index, output):
     status, initial = [json.loads(p.read_text()) for p in (status_path, preflight_path)]
     if (status["status"] != "native_batch_completed_pending_admission" or status["exit_code"] != 0
             or status["preflight"] != expected or initial["preflight"] != expected or initial["status"] != "starting"
-            or status["index"] != index or status["array_job_id"] != ARRAY_JOB
+            or status["index"] != index or status["array_job_id"] != array
             or status["job_id"] != scheduler["JobIDRaw"] or status["node"] != "bizon"
             or status["finished_epoch"] < status["started_epoch"]
             or any(status[k] is not False for k in ("search_admitted", "reuse_authorized", "publication_ready"))):
@@ -110,6 +144,8 @@ def admit(root, index, output):
         *expected["checked_records"], *status["outputs"],
         *[record(Path(__file__).with_name(name)) for name in (
             "audit_orthomcl_blast.py", "audit_orthomcl_search_table.py", "convert_orthomcl_blast.py")]]
+    if recovery:
+        checked.extend(recovery["records"])
     for item in checked:
         check(item)
     genes = [r.id for r in SeqIO.parse(expected["batch"]["input"]["path"], "fasta")]
@@ -138,6 +174,8 @@ def admit(root, index, output):
         limitations=["Single completed batch only; not full recovery coverage, prefix reuse, or whole-search admission.",
             "Logged failed queries remain explicit despite native exit zero; no-hit queries are not automatically failures.",
             "Native execution contract is re-derived using frozen preparer code; row indexing and coverage are independently checked."])
+    if recovery:
+        report["replacement"] = recovery
     with output.open("x") as stream:
         json.dump(report, stream, indent=2, sort_keys=True)
         stream.write("\n")
@@ -149,5 +187,6 @@ if __name__ == "__main__":
     parser.add_argument("--root", type=Path, required=True)
     parser.add_argument("--index", type=int, choices=range(20), required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--replacement", action="store_true")
     args = parser.parse_args()
-    admit(args.root, args.index, args.output)
+    admit(args.root, args.index, args.output, args.replacement)
