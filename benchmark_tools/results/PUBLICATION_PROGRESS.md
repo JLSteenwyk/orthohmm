@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Memcheck Diagnostic 22164 Running (2026-09-25)
+
+Frozen clean executor `benchmarks/work/cpm_memcheck_diagnostic_v1_20260925`
+at `837c31d48a66fb3fad3a6e00bcc69daf252cd002` passed all 30 focused tests,
+including installed Valgrind fixtures, without skips. Submitted exactly once
+using its `qfo_cpm_refinement_memcheck_20260925.sh` wrapper and that full
+executor path/commit; Slurm returned **22164**, now RUNNING.
+
+Runner SHA256 is `50ee4def8c89d4c2cff548aa414f7600521b2dd4419a98985309d1077ee621de`;
+wrapper SHA256 is `fd88e4cb53c889fbd2408644afbcc4c9aedb2c6496a7a664386b66f6cc0e4165`.
+The live status in `qfo_cpm_refinement_memcheck_diagnostic_v1` reports
+`memcheck_diagnostic_running`, exactly one child attempt, 990 checked-record
+entries, and the explicit malloc/faulthandler instrumentation overrides.
+Seed admission, accuracy evaluation and publication readiness remain false.
+The mutable running status is not final diagnostic evidence.
+
+At the latest scheduler check, OrthoMCL 22103_17 was independently RUNNING
+at 13:07. No scientific jobs were released or restarted and DGX remains
+deferred. Inspect 22164's terminal scheduler state, XML, child log, recorded
+input/runtime identities and output/metadata before interpreting its outcome;
+retain nonzero exit or reported errors, with no automatic retry.
+
 ## Refinement-Only Memcheck Diagnostic Prepared (2026-09-25)
 
 Previous turns were verified waits on live recovery batch 22103_17. This
