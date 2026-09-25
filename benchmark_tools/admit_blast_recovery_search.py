@@ -17,11 +17,14 @@ from benchmark_tools.verify_blast_recovery_panel import unique_records
 
 MERGE_COMMIT = "a449ff580aca58e8d1fdc653e7615e007093771a"
 MERGE_JOB = "22150"
+REPLACEMENT_MERGE_JOB = "22162"
+REPLACEMENT_MERGE_COMMIT = "f6ab36db0cbed151ac2b46581345cd187d514e79"
 
 
-def completed_merge(accounting):
+def completed_merge(accounting, replacement=False):
+    job = REPLACEMENT_MERGE_JOB if replacement else MERGE_JOB
     rows = [r for r in csv.DictReader(io.StringIO(accounting), delimiter="|")
-            if r["JobID"] == MERGE_JOB]
+            if r["JobID"] == job]
     if len(rows) != 1 or tuple(rows[0][k] for k in (
             "State", "ExitCode", "NodeList", "AllocCPUS", "ReqMem")) != (
             "COMPLETED", "0:0", "bizon", "2", "64G"):
@@ -29,9 +32,10 @@ def completed_merge(accounting):
     return rows[0]
 
 
-def validate_merge(status, source, directory):
+def validate_merge(status, source, directory, replacement=False):
+    job = REPLACEMENT_MERGE_JOB if replacement else MERGE_JOB
     if (status["status"] != "merged_candidate_pending_full_table_admission"
-            or status["job_id"] != MERGE_JOB or status["source"] != source
+            or status["job_id"] != job or status["source"] != source
             or any(status[k] is not False for k in (
                 "search_admitted", "reuse_authorized", "publication_ready"))):
         raise ValueError("Wrong merge execution identity or status")
@@ -45,25 +49,29 @@ def validate_merge(status, source, directory):
     return {key: candidate[key] for key in ("path", "bytes", "sha256")}
 
 
-def admit(root, output):
+def admit(root, output, replacement=False):
     if output.exists() or output.is_symlink():
         raise FileExistsError(output)
-    accounting = subprocess.check_output(["sacct", "-j", MERGE_JOB, "--parsable2",
+    job = REPLACEMENT_MERGE_JOB if replacement else MERGE_JOB
+    commit = REPLACEMENT_MERGE_COMMIT if replacement else MERGE_COMMIT
+    accounting = subprocess.check_output(["sacct", "-j", job, "--parsable2",
         "--format=JobID,State,ExitCode,NodeList,AllocCPUS,ReqMem,Elapsed"], text=True)
-    scheduler = completed_merge(accounting)
-    executor = root / "benchmarks/work/blast_recovery_merge_v1_20260923"
-    if subprocess.check_output(["git", "-C", str(executor), "rev-parse", "HEAD"], text=True).strip() != MERGE_COMMIT:
+    scheduler = completed_merge(accounting, replacement)
+    executor = root / ("benchmarks/work/blast_replacement_merge_v1_20260925" if replacement
+                       else "benchmarks/work/blast_recovery_merge_v1_20260923")
+    if subprocess.check_output(["git", "-C", str(executor), "rev-parse", "HEAD"], text=True).strip() != commit:
         raise ValueError("Changed merge executor revision")
     subprocess.run(["git", "-C", str(executor), "diff", "--exit-code", "HEAD", "--", "benchmark_tools"], check=True)
     frozen_source = record(executor / "benchmark_tools/run_blast_recovery_merge.py")
     local_source = record(Path(__file__).with_name("run_blast_recovery_merge.py"))
     if local_source["sha256"] != frozen_source["sha256"]:
         raise ValueError("Merge prerequisite revalidator differs from executed source")
-    directory = root / "benchmarks/results/qfo_blast_recovery_merge_v1"
+    directory = root / ("benchmarks/results/qfo_blast_replacement_merge_v1" if replacement
+                        else "benchmarks/results/qfo_blast_recovery_merge_v1")
     status_path = directory / "status.json"
     status_record = record(status_path)
     status = json.loads(status_path.read_text())
-    candidate_record = validate_merge(status, frozen_source, directory)
+    candidate_record = validate_merge(status, frozen_source, directory, replacement)
     checked = unique_records([record(__file__), status_record, frozen_source, local_source,
         candidate_record, status["selected_log"], *status["checked_inputs"]])
     for item in checked:
@@ -77,7 +85,7 @@ def admit(root, output):
         # Re-run the same scientific prerequisites without copying or merging.
         fresh = output / "fresh_prerequisites"
         fresh.mkdir()
-        prepared = prepare(root, fresh)
+        prepared = prepare(root, fresh, replacement)
         expected_diagnostics = {g: diagnostic_signature(d) for g, d in prepared["selected_diagnostics"].items()}
         if {g: diagnostic_signature(d) for g, d in status["diagnostics"].items()} != expected_diagnostics:
             raise ValueError("Merged diagnostic selection differs from fresh prerequisites")
@@ -128,5 +136,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
+    parser.add_argument("--replacement", action="store_true")
     args = parser.parse_args()
-    admit(args.root.resolve(), args.output.absolute())
+    admit(args.root.resolve(), args.output.absolute(), args.replacement)
