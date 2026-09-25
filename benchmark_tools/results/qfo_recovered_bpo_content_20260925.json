@@ -1,0 +1,46 @@
+{
+  "accuracy_admitted": false,
+  "checked_records": [
+    {
+      "bytes": 36360701687,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_blast_replacement_merge_v1/table/all.blast.candidate",
+      "sha256": "2d395e39975cbb73c0bd33f016836aa0621e4101b378d809f2579ac37a42f117"
+    },
+    {
+      "bytes": 472930503,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_orthomcl_v1/work/all.fa",
+      "sha256": "11c03d6575e22c2f8bb718e59b7a06911637438c2e45181e86548647d49199c0"
+    },
+    {
+      "bytes": 23868184819,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_blast_recovery_bpo_v1/checkpoint/all.bpo",
+      "sha256": "5f52f9a298e57099790e1798a9afd73a1ffe329493d1edf50481e270342d588c"
+    },
+    {
+      "bytes": 6313,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_native_representation_downstream_v1_20260925/benchmark_tools/audit_orthomcl_bpo_content.py",
+      "sha256": "4102a644b273fd1d55c6282b521f2683465455fea10de7a2d3b1ff594a315f41"
+    },
+    {
+      "bytes": 6347,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_native_representation_downstream_v1_20260925/benchmark_tools/convert_orthomcl_blast.py",
+      "sha256": "fbd7bcffa07c354fc72a052c87cbd7d2238530348a6d497be250fc7422244931"
+    }
+  ],
+  "content": {
+    "bpo_pair_records": 222903808,
+    "cutoff_excluded_pair_blocks": 0,
+    "input_proteins": 984137,
+    "source_hsp_rows": 401908030,
+    "source_pair_blocks": 222903808
+  },
+  "limitations": [
+    "Complete source-to-BPO field verification, not terminal execution or biological validation.",
+    "Recomputes the reviewed legacy first-HSP E-value and subject-span-weighted identity semantics.",
+    "Uses the same binary floating arithmetic convention as the native-compatible converter; not a proof against shared algorithmic errors.",
+    "The independent native BioPerl fixture comparison is complementary, not a full native parse of production inputs.",
+    "Search provenance/query diagnostics, native index validation and final groups remain separate gates."
+  ],
+  "publication_ready": false,
+  "status": "bpo_content_matches_source_hsps"
+}

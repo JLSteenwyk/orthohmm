@@ -1,5 +1,26 @@
 # Publication Progress
 
+## BPO Content Audit Finished; Native Index Build Active (2026-09-25)
+
+Preparation job 22167 has produced `checkpoint/content.json` with status
+`bpo_content_matches_source_hsps`. Preserved a verbatim copy as
+`qfo_recovered_bpo_content_20260925.json`, SHA256
+`92afd9a7eaf2bf8171680c0dcbbc715baba4f0d036ae2db7bb5bee5cec44d8c6`.
+It reports 984137 input proteins, 401908030 source HSP rows and 222903808
+source pair blocks matching 222903808 BPO records; zero pair blocks were
+excluded by the cutoff. The BPO is 23868184819 bytes, recorded SHA256
+`5f52f9a298e57099790e1798a9afd73a1ffe329493d1edf50481e270342d588c`.
+This is complete source-to-BPO field verification under the reviewed
+converter semantics, not proof against shared algorithmic errors or an
+independent checkpoint admission.
+
+Live scheduler state remains RUNNING. Child PID 1305628 is actively executing
+the frozen `build_orthomcl_bpo_indexes.pl`; index validation and preparation's
+final identity checks remain outstanding. Independent validation job 22168
+is still PENDING afterok:22167. Do not treat the intermediate content report
+as authority to launch inference. The preceding turns were verified waits
+on the same advancing process; no reruns or parameter changes occurred.
+
 ## Seven-Protein Search Trace Completed (2026-09-25)
 
 Job 22169 completed 0:0 in 4:24. The full-table hash and 401908030-row count
