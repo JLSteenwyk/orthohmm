@@ -11,12 +11,12 @@ import sys
 from Bio import SeqIO
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from benchmark_tools.admit_blast_recovery_batch import completed_task, coverage, EXECUTOR_COMMIT
+from benchmark_tools.admit_blast_recovery_batch import completed_task, coverage, EXECUTOR_COMMIT, interrupted_attempt
 from benchmark_tools.audit_orthomcl_blast import parse_diagnostics
 from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
 
 
-def summarize(paths, accounting):
+def summarize(paths, accounting, replacement_root=None):
     if not paths:
         raise ValueError("Require explicit completed batch admissions")
     checked, batches, failed, seen, indices = [], [], [], set(), set()
@@ -28,13 +28,27 @@ def summarize(paths, accounting):
                 or report["batch_admitted"] is not True
                 or report["executor_commit"] != EXECUTOR_COMMIT or index in indices):
             raise ValueError("Wrong or repeated admitted batch")
-        scheduler = completed_task(accounting, index)
+        replacement = "replacement" in report
+        excluded = set()
+        if replacement:
+            if replacement_root is None or index != 14:
+                raise ValueError("Replacement requires explicit root and batch 14")
+            original = interrupted_attempt(replacement_root, accounting)
+            if report["replacement"] != original:
+                raise ValueError("Replacement history differs from preserved attempt")
+            for original_record in original["records"]:
+                if report["records"].count(original_record) != 1:
+                    raise ValueError("Missing or repeated interrupted-attempt record")
+                excluded.add(original_record["path"])
+            checked.extend(original["records"])
+        scheduler = completed_task(accounting, index, replacement=replacement)
         if scheduler != report["scheduler"]:
             raise ValueError("Batch accounting differs from admission")
         indices.add(index)
         selected = []
         for name in (f"queries_{index:02d}.fa", "blast.log"):
-            matches = [r for r in report["records"] if Path(r["path"]).name == name]
+            matches = [r for r in report["records"]
+                       if Path(r["path"]).name == name and r["path"] not in excluded]
             if len(matches) != 1:
                 raise ValueError("Missing or ambiguous batch FASTA/log record")
             check(matches[0])
@@ -87,12 +101,15 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--batch", type=Path, action="append", required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--replacement-root", type=Path,
+                        help="Repository root for preserved batch-14 interruption evidence")
     args = parser.parse_args()
     if args.output.exists() or args.output.is_symlink():
         raise FileExistsError(args.output)
-    accounting = subprocess.check_output(["sacct", "-j", "22103", "--parsable2",
+    accounting = subprocess.check_output(["sacct", "-j", "22103,22160" if args.replacement_root else "22103", "--parsable2",
         "--format=JobID,JobIDRaw,State,ExitCode,NodeList,AllocCPUS,Elapsed"], text=True)
-    result = summarize([p.resolve() for p in args.batch], accounting)
+    result = summarize([p.resolve() for p in args.batch], accounting,
+                       args.replacement_root.resolve() if args.replacement_root else None)
     result.update(source=record(__file__), helpers=[record(Path(__file__).with_name(name)) for name in (
         "admit_blast_recovery_batch.py", "audit_orthomcl_blast.py", "prepare_ob_candidate_neighborhood.py")])
     with args.output.open("x") as stream:

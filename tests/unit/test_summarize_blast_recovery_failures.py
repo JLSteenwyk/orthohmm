@@ -64,3 +64,53 @@ def test_invalid_or_changed_admission_rejected(tmp_path, problem):
 def test_empty_input_rejected():
     with pytest.raises(ValueError):
         module.summarize([], "")
+
+
+def replacement_fixture(tmp_path, monkeypatch):
+    path, report, _ = fixture(tmp_path)
+    fasta = tmp_path / "queries_14.fa"
+    (tmp_path / "queries_00.fa").rename(fasta)
+    original_dir = tmp_path / "interrupted"
+    original_dir.mkdir()
+    original_log = original_dir / "blast.log"
+    original_log.write_text("Preserved interrupted log, not replacement diagnostics")
+    history = dict(records=[module.record(original_log)], partial_rows_reused=False,
+                   replacement_task="22160_14", original_scheduler={"State": "TIMEOUT"})
+    monkeypatch.setattr(module, "interrupted_attempt", lambda root, accounting: history)
+    accounting = "JobID|JobIDRaw|State|ExitCode|NodeList|AllocCPUS|Elapsed\n22160_14|22160|COMPLETED|0:0|bizon|180|00:01:00\n"
+    report.update(index=14, replacement=dict(history),
+                  scheduler=module.completed_task(accounting, 14, replacement=True),
+                  records=[module.record(fasta), module.record(tmp_path / "blast.log"), *history["records"]])
+    path.write_text(json.dumps(report))
+    return path, report, accounting
+
+
+def test_replacement_excludes_only_verified_interrupted_log(tmp_path, monkeypatch):
+    path, _, accounting = replacement_fixture(tmp_path, monkeypatch)
+    result = module.summarize([path], accounting, replacement_root=tmp_path)
+    assert result["failed_queries"] == 1
+    assert result["batches"][0]["scheduler"]["JobID"] == "22160_14"
+    assert sum(r["path"].endswith("blast.log") for r in result["checked_records"]) == 2
+
+
+@pytest.mark.parametrize("problem", ["root", "history", "missing", "duplicate", "changed", "index", "scheduler"])
+def test_invalid_replacement_rejected(tmp_path, monkeypatch, problem):
+    path, report, accounting = replacement_fixture(tmp_path, monkeypatch)
+    root = tmp_path
+    if problem == "root":
+        root = None
+    elif problem == "history":
+        report["replacement"]["partial_rows_reused"] = True
+    elif problem == "missing":
+        report["records"].pop()
+    elif problem == "duplicate":
+        report["records"].append(report["records"][-1])
+    elif problem == "changed":
+        (tmp_path / "interrupted/blast.log").write_text("Changed")
+    elif problem == "index":
+        report["index"] = 0
+    else:
+        accounting = accounting.replace("COMPLETED", "FAILED")
+    path.write_text(json.dumps(report))
+    with pytest.raises(ValueError):
+        module.summarize([path], accounting, replacement_root=root)

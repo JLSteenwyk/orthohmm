@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Replacement-Aware Partial Failure Summary (2026-09-25)
+
+The previous turn completed the progress-record push; this turn confirmed
+22103_16 live (7:06 at latest poll), with merge 22162 and search audit 22163
+pending. No job was restarted, and DGX remains deferred.
+
+Extended `summarize_blast_recovery_failures.py` with an explicit
+`--replacement-root` mode. It verifies batch-14 replacement accounting and
+the preserved interrupted attempt using the existing admission helper,
+requires its records exactly once, and excludes only those verified records
+when selecting the completed batch's diagnostic log. Historical original-only
+reports remain supported. Tests cover missing authorization, changed history,
+missing/duplicate/changed preserved records, wrong index and failed scheduler
+state. Combined summarizer and batch-admission suites passed **69 tests**.
+
+Generated `qfo_replay_first16_failure_description_20260925.json`, SHA256
+`30c6fdfa3c9911c835a989374bb20d3dcbcc2195e13a1cd1b1825b2fb1287496`.
+Across 80,000 explicitly selected queries: 75,758 have hits, 4,189 have no
+hits without logged failure, and 53 have logged failures. All 53 have setup
+diagnostics; 46 have statistics diagnostics and seven have short-query
+diagnostics. Failed-query lengths range 2-541 residues, median 45.
+
+This is a descriptive partial replay report, not whole-search admission.
+It rechecks selected FASTA/log bytes and preserved interruption records,
+but reuses admitted query-block inventories rather than rereading all HSPs.
+Incoming hits elsewhere, final-group membership and accuracy effects remain
+unresolved. Replay selection is nonrandom; no dataset-wide failure rate is
+inferred. No scientific configuration or frozen downstream executor changed.
+
 ## Sixteenth Recovery Batch Admitted (2026-09-25)
 
 Previous turns were verified waits on live 22103_15, with growing output.
