@@ -18,14 +18,17 @@ Its final report status is `recovered_bpo_prepared_pending_admission`, SHA256
 `27f5102ebfb87fdef00d7f90c7e62d785099f9e2d08dd6a72b5007acf7da4cca`;
 the [retained copy](qfo_recovered_bpo_preparation_22167.json) preserves this
 preparation evidence, not independent admission.
-Independent BPO admission **22168** is now RUNNING after `afterok:22167`, using
-the same frozen executor and preparer revision. Do not submit a second
-admission job. It independently verifies terminal preparation accounting,
-content and indexes; its expected report is
-`benchmarks/results/qfo_blast_recovery_bpo_admission_v1/report.json`.
-Inspect both terminal accounting and the actual successful admission report
-before using this executor for the native-through-scoring chain. No native
-inference is yet authorized. Original held jobs remain untouched.
+Independent BPO admission **22168 completed 0:0 in 1:08:13**, using the same
+frozen executor and preparer revision. Its final report is
+`benchmarks/results/qfo_blast_recovery_bpo_admission_v1/report.json`, SHA256
+`8972a12608b126f9d57647356ebe785c04a204214312eca3b9b93edd1ee0b2c2`,
+status `recovered_orthomcl_bpo_checkpoint_admitted`;
+the [retained copy](qfo_recovered_bpo_admission_22168.json) preserves it.
+Native inference **22170** is RUNNING using this exact digest and frozen
+executor, with 180 CPUs / 900 GiB and 64 pair workers. Its destination is
+`benchmarks/results/qfo_blast_recovery_native_v1`. Do not launch duplicates.
+Native completion, separate output admission and scoring remain required.
+Original held jobs remain untouched; DGX timing remains deferred.
 
 The historical membership executor below predates this native-representation
 contract. Use the now-frozen executor

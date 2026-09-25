@@ -1,5 +1,29 @@
 # Publication Progress
 
+## BPO Admitted; Native OrthoMCL Launched (2026-09-25)
+
+Independent admission **22168 completed 0:0 in 1:08:13**. The
+[retained final report](qfo_recovered_bpo_admission_22168.json), SHA256
+`8972a12608b126f9d57647356ebe785c04a204214312eca3b9b93edd1ee0b2c2`,
+has status `recovered_orthomcl_bpo_checkpoint_admitted` and
+`checkpoint_admitted=true`. Content, native indexes, provenance and runtime
+checks passed; this does not admit biological accuracy or publication readiness.
+
+Submitted native inference **22170**, confirmed RUNNING on bizon, with the
+frozen native wrapper/executor at
+`296882422f2d70c096c8d5584082c16217f36add`, admission job 22168 and the exact
+final digest above. Allocation is 180 CPUs, 900 GiB, seven days, no requeue;
+native pair processing uses 64 workers. Output destination is
+`benchmarks/results/qfo_blast_recovery_native_v1`, absent before submission.
+The executor was clean and 12 TiB was available. Its preflight rechecks
+admitted inputs before staging and inference. Original held jobs remain
+untouched. Next: terminal native validation, final-group pair conversion,
+six QfO endpoints, updated comparison and failure/residue membership audits.
+
+The preceding user-response turn made no scientific progress; this turn
+revalidated terminal admission and advanced the execution chain. DGX remains
+deferred. Shared-host times are descriptive, not matched timing evidence.
+
 ## Independent BPO Content Recheck Passed (2026-09-25)
 
 Live admission job 22168 completed its source-to-BPO content recheck with
