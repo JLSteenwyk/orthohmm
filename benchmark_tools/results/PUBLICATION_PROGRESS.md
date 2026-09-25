@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Recovered BLAST Candidate Merged (2026-09-25)
+
+Merge job **22162 completed 0:0 in 14:32**. Its terminal report is
+`benchmarks/results/qfo_blast_replacement_merge_v1/status.json`, SHA256
+`55f8be24d447762169b6961a13bea6c1c39a01f5bd52f6d347133199b93a8dc0`,
+with status `merged_candidate_pending_full_table_admission`.
+
+The candidate `table/all.blast.candidate` has **36,360,701,687 bytes**,
+**401,908,030 rows** and **979,827 query blocks**, with runner-recorded SHA256
+`2d395e39975cbb73c0bd33f016836aa0621e4101b378d809f2579ac37a42f117`.
+Block counts are not the full input query count: no-hit/failure dispositions
+remain separate. The independent whole-table audit must verify coverage,
+rows and database parity before any downstream use.
+
+Whole-search validator **22163 is RUNNING** (2:00 at observation). Candidate
+reuse, search admission and publication readiness are still false. No BPO,
+native inference or score job was launched. Inspect its successful terminal
+report and compute the actual digest before using the frozen replacement
+downstream executor. Original interrupted evidence remains intact; DGX is
+still deferred.
+
 ## Complete Replay Failure Description (2026-09-25)
 
 Ran the existing replacement-aware `summarize_blast_recovery_failures.py`
