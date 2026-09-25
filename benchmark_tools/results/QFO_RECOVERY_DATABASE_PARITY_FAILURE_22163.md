@@ -67,3 +67,28 @@ counterfactual corrected score. Alternatively, normalized-input sensitivity
 runs must be separate and cannot silently replace the frozen comparator.
 Whole-table HSP validation did not run after this gate failure and remains
 required. No new production validation or inference job has been submitted.
+
+## Query-Side Probe And Descriptive Audit
+
+The same three-sequence fixture was searched using installed BLAST 2.2.13
+`blastall -p blastp -i input.fa -d input.fa -F F -e 10 -m 0`.
+The `with_o` query was reported as 20 letters, with alignment sequence
+`ACDEFGHIKLMNPQRSTVWY`; the original input has 21 letters. This demonstrates
+query-side deletion on the fixture, not negligible production score impact.
+
+`tests/unit/test_describe_legacy_residue_deletions.py` adds an opt-in native
+regression with XML output and structured Biopython parsing. It verifies
+query lengths 20, 20 and 21 for the O, deleted-O and X controls, plus native
+database deletion and its warning. Together with the existing database
+auditor suite, **38 tests pass with native smoke enabled and no skips**.
+An initial test assertion incorrectly used position 12 instead of 13 in the
+synthetic fixture and was corrected; the production positions above were
+not changed.
+
+The new `describe_legacy_residue_deletions.py` accepts a caller-pinned database
+difference report, rechecks recorded source/dump/runtime identities, repeats
+the complete database comparison, and checks that each reviewed difference
+is exclusively deletion of O at recorded positions. It rechecks identities
+afterward and refuses unknown changes or an existing output. It is a
+descriptive audit only: exact parity and all admission flags stay false.
+Neither the existing database auditor nor search-admission gate was modified.

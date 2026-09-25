@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Native Residue Transformation Audit And Query Probe (2026-09-25)
+
+Added `describe_legacy_residue_deletions.py` as a separate descriptive audit;
+the exact-parity admission gate is unchanged. Its caller-pinned report and
+source/dump identities are checked before and after a full database comparison.
+Each reviewed difference must be solely O deletion; unknown changes fail.
+The production [audit result](qfo_recovery_native_residue_deletions_20260925.json)
+has SHA256 `826e711979f0b262f31964e08b46bc39ff3cd621803074e1f71be213cc153a9e`:
+seven changed sequences, seven deleted positions, 984,130 exact matches.
+Exact-parity, database/search admission and publication flags remain false.
+
+An installed BLAST query probe and XML-based native regression confirm O
+deletion on both sides for the synthetic fixture; the X control is retained.
+The new suite plus existing database suite passed **38 tests without skips**
+with `ORTHOHMM_LEGACY_BLAST_SMOKE=1`. Tests cover changed reviewed evidence,
+unknown transformations, identity mismatches, no-admission flags, overwrite
+refusal and installed native behavior. See the updated
+[failure note](QFO_RECOVERY_DATABASE_PARITY_FAILURE_22163.md).
+
+Next: explicitly bind any representation-aware acceptance to these exact
+production transformations and native provenance, assess affected-reference
+exposure, then run the still-required whole-table HSP audit in a fresh output.
+Do not claim negligible score impact or exact parity. No production job was
+restarted or downstream job released; DGX remains deferred.
+
 ## Whole-Search Gate Found Seven Native Residue Deletions (2026-09-25)
 
 22163 is terminal FAILED 1:0 after 3:15. The database audit found 984,130
