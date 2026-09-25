@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Independent BPO Content Recheck Passed (2026-09-25)
+
+Live admission job 22168 completed its source-to-BPO content recheck with
+status `bpo_content_matches_source_hsps`. Its production output is
+`benchmarks/results/qfo_blast_recovery_bpo_admission_v1/recheck/content.json`.
+The report is byte-identical to the already retained
+[content report](qfo_recovered_bpo_content_20260925.json), SHA256
+`92afd9a7eaf2bf8171680c0dcbbc715baba4f0d036ae2db7bb5bee5cec44d8c6`;
+no duplicate tracked artifact is needed. It confirms 401908030 source HSPs,
+222903808 source pair blocks and BPO records, 984137 input proteins, and
+zero cutoff-excluded blocks. Input and BPO identities match the preparation
+report. This is agreement under the reviewed conversion semantics, not
+proof against shared algorithmic errors or biological accuracy validation.
+
+Scheduler still reports RUNNING. Native index validator child PID 1377576
+is active under admission PID 1323754. Final index/provenance/runtime checks
+and successful terminal admission remain required before native inference.
+The preceding turns were verified waits through the full source scan;
+this turn records the completed independent content check. DGX remains
+deferred; no controlled timing or publication-readiness claim is made.
+
 ## Search Trace Incorporated Into Manuscript (2026-09-25)
 
 Added the completed seven-protein incident-hit trace to the manuscript:
