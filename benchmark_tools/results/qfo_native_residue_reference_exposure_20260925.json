@@ -1,0 +1,462 @@
+{
+  "accuracy_admitted": false,
+  "checked_records": [
+    {
+      "bytes": 10411,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_recovery_native_residue_deletions_20260925.json",
+      "sha256": "826e711979f0b262f31964e08b46bc39ff3cd621803074e1f71be213cc153a9e"
+    },
+    {
+      "bytes": 23877424,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_orthomcl_v1/work/all.gg",
+      "sha256": "0a3d84171661e7cb0f9cf3ebf6e739d78e80965b0e26230b319329639374d26e"
+    },
+    {
+      "bytes": 53297152,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/container_cache/qfobenchmark-darwin-2022.1.img",
+      "sha256": "abed2b0ff8bb033a2372d0cd5282fd1d6c8ab5fa07496afc48c82f54ed65ea21"
+    },
+    {
+      "bytes": 1991,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/orthomcl_reference_impact.drw",
+      "sha256": "3124d9d86e12414555b04b1bde9c290ca46a6be743a3dd16ca235ff96e6946f3"
+    },
+    {
+      "bytes": 6488,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_native_residue_reference_exposure.py",
+      "sha256": "a402a32172a21fd50d3b06152b3e7140f6cd58466da4cb025d93744b6b3dc294"
+    },
+    {
+      "bytes": 12053,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_orthomcl_reference_impact.py",
+      "sha256": "ed988d5e4c59799f0fffdba1852b59d22a5e50d33bd108c46e5d39ee3294de5a"
+    },
+    {
+      "bytes": 9543,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/orthomcl_matrix_to_pairwise.py",
+      "sha256": "105f7703e4a3ab5b8b80b16fbc47ed32c7e6de2bc4d222c59cb291cd616439dc"
+    },
+    {
+      "bytes": 7448,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_ob_candidate_neighborhood.py",
+      "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+    },
+    {
+      "bytes": 1759,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/qfo_filter_pairs.py",
+      "sha256": "940e0ac78cebf982ad289a9ca96ab8a21ac712dd15666d8f93cd6f0c5a87d5c4"
+    },
+    {
+      "bytes": 2274,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/reviewed_legacy_database.py",
+      "sha256": "e0a37b417331a5f7137fd19952d7bfd797306ff75353fffd872a8eb3fe7ad7b8"
+    },
+    {
+      "bytes": 12030,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_simulation_methods.py",
+      "sha256": "cccf579c221c51e8d03d512264efc3d0a61f4c0a598863d2423bdbd90f7921be"
+    },
+    {
+      "bytes": 40019520,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/mapping.json.gz",
+      "sha256": "1c10f6ce5e53ebc3148dde02d16268b225c3c8817c952d1274daa41acbf9eb4d"
+    },
+    {
+      "bytes": 318907,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/ReconciledTrees_SwissTrees.drw",
+      "sha256": "40528e3537ba57e345c443c8024f99dc3940a66e2d102703754b41bb29858ecd"
+    },
+    {
+      "bytes": 1998195,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/ReconciledTrees_TreeFam-A.drw",
+      "sha256": "6f419f96886e5cf14ac889a1437cdb2655140cb8fd281f6bb5f8e0baa69d23b3"
+    },
+    {
+      "bytes": 140842,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/enzymes.drw.gz",
+      "sha256": "d5fc840c9cf05ec4fccc10c5a42c19b7554284a8ede5754104468e132a324950"
+    },
+    {
+      "bytes": 834612400,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/ServerIndexed.db",
+      "sha256": "f71e282f504d007306a34da98ab717c2c7fad0a28e4d503caa47a042a41ec9a8"
+    },
+    {
+      "bytes": 183364,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/vgnc-orthologs.txt.gz",
+      "sha256": "3f9898487b1b3dab866eaf93255bb25ab7b7699f32753828ba7d2851eafce5dc"
+    },
+    {
+      "bytes": 4634,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/lib/darwinit",
+      "sha256": "5656da7dd1aefa66f42d4e738a200616eac4114997273bb5d542927aeb61069b"
+    },
+    {
+      "bytes": 7495,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_blast_replacement_search_admission_v1/database/report.json",
+      "sha256": "21ac4a1ed5504ab93de3511d190d5cf3b78cadb0ca8898264968d297b9e6faeb"
+    },
+    {
+      "bytes": 472930503,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_orthomcl_v1/work/all.fa",
+      "sha256": "11c03d6575e22c2f8bb718e59b7a06911637438c2e45181e86548647d49199c0"
+    },
+    {
+      "bytes": 17518,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_legacy_blast_runtime_20260918.json",
+      "sha256": "9ce46b5329f34384b03980b62fbfe9522f244dc227ce6506071ce7000b154e42"
+    },
+    {
+      "bytes": 3991083,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/bin/fastacmd",
+      "sha256": "2f3e1ab0a54b2d9472fa4ffcb9ac4943b69705766870e729766466422b9cfd3e"
+    },
+    {
+      "bytes": 86827799,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_orthomcl_v1/work/all.fa.phr",
+      "sha256": "adfa7cdc9c10c735bd20d32b71605709675e671258a412d514477a61ad828c3a"
+    },
+    {
+      "bytes": 7873280,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_orthomcl_v1/work/all.fa.pin",
+      "sha256": "7c1fa9290c0c2ffc81d0f44edd69ff1124cbfc5b7de2dd746aef9e1cbdee06e8"
+    },
+    {
+      "bytes": 441231065,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_orthomcl_v1/work/all.fa.psq",
+      "sha256": "98cb25db02bdc96895c7a1b5e151816343d5afe7e80ce960ea5ce0ca9567ebbb"
+    },
+    {
+      "bytes": 6706,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/blast_replacement_search_admission_v1_20260925/benchmark_tools/audit_orthomcl_database.py",
+      "sha256": "d29ccf7491f1fe24e8ee1477fbece11bef4af1eea3ade347bcfcc9ad609ce0b4"
+    },
+    {
+      "bytes": 5777,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/blast_replacement_search_admission_v1_20260925/benchmark_tools/audit_qfo_input_sequences.py",
+      "sha256": "f3c4be2b29a323ea8262a3892d5aa2c87ae1295e6f5172bd684ff9281c239588"
+    },
+    {
+      "bytes": 6288,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/blast_replacement_search_admission_v1_20260925/benchmark_tools/run_qfo_corrected_blast.py",
+      "sha256": "760eb972977d020592eb528b04bee3de997e14fd7a52ef5d4d4bce6f67d6c93e"
+    },
+    {
+      "bytes": 4083,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/blast_replacement_search_admission_v1_20260925/benchmark_tools/snapshot_runtime_trees.py",
+      "sha256": "ab0008651e75ebadc1be3c87503f09bffd9e5be87f2e6b0c3eec49e552d9bd4c"
+    },
+    {
+      "bytes": 491646944,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_blast_replacement_search_admission_v1/database/database.fasta",
+      "sha256": "220c2cedc66d58b3933dfaa90f3a78ae6a90aba45aa4399dd099d5b26b8bf8bd"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_blast_replacement_search_admission_v1/database/fastacmd.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 3979,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/describe_legacy_residue_deletions.py",
+      "sha256": "f37ecc7bf7eff142cada6de4a113a318dd270c7c37a5ea738b363fa8cbe6bb43"
+    },
+    {
+      "bytes": 6706,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_orthomcl_database.py",
+      "sha256": "d29ccf7491f1fe24e8ee1477fbece11bef4af1eea3ade347bcfcc9ad609ce0b4"
+    },
+    {
+      "bytes": 2145208,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000002487_188937.json",
+      "sha256": "09976fc7b0b5949b2ccba62d7667335b6c8a42d39b21b50a0136095263eace7b"
+    }
+  ],
+  "environment": {
+    "SINGULARITYENV_DARWIN_ORTHOLOG_BENCHMARK_REPO_PATH": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice",
+    "SINGULARITYENV_QFO_AUDIT_TARGETS": "{117647,117648,119802,121203,121204,121585,121589}",
+    "SINGULARITYENV_QFO_REFSET_PATH": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020"
+  },
+  "exact_sequence_parity": false,
+  "limitations": [
+    "Direct reference exposure is not a counterfactual accuracy effect.",
+    "No query failure, hit coverage or final-group membership is inferred.",
+    "Unexposed proteins may still affect clustering indirectly.",
+    "FAS feature presence does not establish membership in a scored pair."
+  ],
+  "native_command": [
+    "singularity",
+    "exec",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/container_cache/qfobenchmark-darwin-2022.1.img",
+    "darwin",
+    "-E"
+  ],
+  "native_log": {
+    "bytes": 3098,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_native_residue_reference_exposure_20260925/native.log",
+    "sha256": "2551b14105361460bae21fe0590310a44afdf17fcf1b7c4398e0e367694a73a4"
+  },
+  "publication_ready": false,
+  "records": [
+    {
+      "accession": "P58865",
+      "ec_terms": 1,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 0,
+        "pfam": 1,
+        "seg": 0,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "gene": "sp|P58865|MTMB1_METAC",
+      "protein_number": 117647,
+      "species": "UP000002487_188937",
+      "transformation": {
+        "database": {
+          "length": 457,
+          "sha256": "e6a553df02c27740aeaf2ede332a652d2ae9b9ccda737836031ca6754e6f730b"
+        },
+        "deleted_residue": "O",
+        "id": "sp|P58865|MTMB1_METAC",
+        "input": {
+          "length": 458,
+          "sha256": "22cbf53b9a5be8b6cf908939a77dbf85584835092fa1a73181d37fad47434d66"
+        },
+        "ordinal": 583643,
+        "positions_one_based": [
+          202
+        ]
+      }
+    },
+    {
+      "accession": "P58866",
+      "ec_terms": 1,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 0,
+        "pfam": 1,
+        "seg": 0,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "gene": "sp|P58866|MTMB2_METAC",
+      "protein_number": 117648,
+      "species": "UP000002487_188937",
+      "transformation": {
+        "database": {
+          "length": 457,
+          "sha256": "f36af2d9cae345939ce52c54f994965dd507b1e42353147a949fcec38101b264"
+        },
+        "deleted_residue": "O",
+        "id": "sp|P58866|MTMB2_METAC",
+        "input": {
+          "length": 458,
+          "sha256": "11fff65cfd5010399ffd43e56aaff1593eaa95ab3914d6efbfc06eb17291840a"
+        },
+        "ordinal": 583644,
+        "positions_one_based": [
+          202
+        ]
+      }
+    },
+    {
+      "accession": "Q8TN68",
+      "ec_terms": 1,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 1,
+        "pfam": 1,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "gene": "sp|Q8TN68|MTBB3_METAC",
+      "protein_number": 119802,
+      "species": "UP000002487_188937",
+      "transformation": {
+        "database": {
+          "length": 466,
+          "sha256": "6dabe5efb2936c2c8f66e47497bc38ee3a63e0ebc19162d8820b8cd9012b26e3"
+        },
+        "deleted_residue": "O",
+        "id": "sp|Q8TN68|MTBB3_METAC",
+        "input": {
+          "length": 467,
+          "sha256": "043149c9ac9d5c29557ae8f84efc4e6aefeaa8a0d0754e4abbb7c014949589ae"
+        },
+        "ordinal": 585798,
+        "positions_one_based": [
+          356
+        ]
+      }
+    },
+    {
+      "accession": "Q8TS72",
+      "ec_terms": 1,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 1,
+        "pfam": 1,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "gene": "sp|Q8TS72|MTBB2_METAC",
+      "protein_number": 121203,
+      "species": "UP000002487_188937",
+      "transformation": {
+        "database": {
+          "length": 467,
+          "sha256": "f7e4b11b8ec16b82dea6174da6252cdf6513992596a2488e9ca841529854cb96"
+        },
+        "deleted_residue": "O",
+        "id": "sp|Q8TS72|MTBB2_METAC",
+        "input": {
+          "length": 468,
+          "sha256": "f4038bfb0cc838c8af7214c3e22dc4148d758dc70a0ba6b8672699a30bcae0f0"
+        },
+        "ordinal": 587199,
+        "positions_one_based": [
+          356
+        ]
+      }
+    },
+    {
+      "accession": "Q8TS73",
+      "ec_terms": 1,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 0,
+        "pfam": 1,
+        "seg": 0,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "gene": "sp|Q8TS73|MTTB2_METAC",
+      "protein_number": 121204,
+      "species": "UP000002487_188937",
+      "transformation": {
+        "database": {
+          "length": 494,
+          "sha256": "a6bd01ca3a782d805c53bb1731ebce0b5c908d8a790c32664e81affbedd9bc81"
+        },
+        "deleted_residue": "O",
+        "id": "sp|Q8TS73|MTTB2_METAC",
+        "input": {
+          "length": 495,
+          "sha256": "24d7618d777b8a2c4c0f43dfe3ff4d10c4fb27a9239b2260c315e8ea1a1ce0b8"
+        },
+        "ordinal": 587200,
+        "positions_one_based": [
+          334
+        ]
+      }
+    },
+    {
+      "accession": "Q8TTA5",
+      "ec_terms": 1,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 1,
+        "pfam": 1,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "gene": "sp|Q8TTA5|MTBB1_METAC",
+      "protein_number": 121585,
+      "species": "UP000002487_188937",
+      "transformation": {
+        "database": {
+          "length": 466,
+          "sha256": "61bb68598557b263a8ff862f5db87612a2e4c600e77d8c67dbaf3fcbca9f8919"
+        },
+        "deleted_residue": "O",
+        "id": "sp|Q8TTA5|MTBB1_METAC",
+        "input": {
+          "length": 467,
+          "sha256": "62d22d6c36d26541f2e6782605255ceccb4bfa7ebc77c9423dfa54890c12b0fd"
+        },
+        "ordinal": 587581,
+        "positions_one_based": [
+          356
+        ]
+      }
+    },
+    {
+      "accession": "Q8TTA9",
+      "ec_terms": 1,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 0,
+        "pfam": 1,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "gene": "sp|Q8TTA9|MTTB1_METAC",
+      "protein_number": 121589,
+      "species": "UP000002487_188937",
+      "transformation": {
+        "database": {
+          "length": 494,
+          "sha256": "52e44fa8596e46e69d735ea3b5caf8183a0397558284d6c7385e4e0b1fa7d7a2"
+        },
+        "deleted_residue": "O",
+        "id": "sp|Q8TTA9|MTTB1_METAC",
+        "input": {
+          "length": 495,
+          "sha256": "bfd39405de304408c6cd2ba566fa261bfd97bbf79b1c2265561c708f215d53a2"
+        },
+        "ordinal": 587585,
+        "positions_one_based": [
+          334
+        ]
+      }
+    }
+  ],
+  "selected_proteins": 7,
+  "status": "native_residue_reference_exposure_described",
+  "tree_cases_with_selected_members": [],
+  "tree_summary": {
+    "SwissTrees": {
+      "eligible_cases": 18,
+      "eligible_cases_with_selected_members": 0,
+      "incident_relation_counts": {},
+      "reference_cases": 18
+    },
+    "TreeFam-A": {
+      "eligible_cases": 1,
+      "eligible_cases_with_selected_members": 0,
+      "incident_relation_counts": {},
+      "reference_cases": 1
+    }
+  },
+  "vgnc": {
+    "incident_pair_fraction": 0.0,
+    "incident_pairs": [],
+    "reference_pairs": 23934
+  }
+}

@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Seven Residue-Altered Proteins: Reference Exposure (2026-09-25)
+
+Completed a separate read-only reference audit for the seven reviewed
+single-O deletions, without calling them failed queries. Native Darwin and
+VGNC evidence finds no direct membership in the 18 SwissTrees cases, pooled
+TreeFam-A case, or 23,934 VGNC pairs. Each protein has one EC annotation,
+no experimental GO annotation under the benchmark filter, and a FAS entry
+with features. Thus possible EC/FAS exposure remains; this does not quantify
+an accuracy effect or exclude indirect effects on grouping.
+
+Report `qfo_native_residue_reference_exposure_20260925.json` SHA256
+`db1db3070eb9886d4a831ea58a057b2c032b4664c875feb67a9c7db72300bfd8`;
+details in `QFO_NATIVE_RESIDUE_REFERENCE_EXPOSURE_20260925.md`.
+Production command and native interpreter completed zero, with input checks
+before/after. All **39** focused tests passed after correcting an initial
+test command that named a nonexistent file and ran no tests.
+Search validator 22166 remains live (45:26 at the last scheduler observation).
+Hit/group tracing and corrected OrthoMCL scoring remain outstanding.
+
 ## Failure Membership Native-Representation Handoff (2026-09-25)
 
 The failure-membership audit previously accepted only the exact-parity search
