@@ -14,13 +14,23 @@ BPO preparation **22167** is running from clean executor
 `benchmarks/work/publication_native_representation_downstream_v1_20260925`
 at `296882422f2d70c096c8d5584082c16217f36add`, using the actual report digest
 and fourth wrapper argument `native-representation`. Do not launch a duplicate.
-Inspect its result before independent BPO admission, then use this executor
-for the native-through-scoring chain. Original held jobs remain untouched.
+Independent BPO admission **22168** is queued with `afterok:22167`, using
+the same frozen executor and preparer revision. Do not submit a second
+admission job. It independently verifies terminal preparation accounting,
+content and indexes; its expected report is
+`benchmarks/results/qfo_blast_recovery_bpo_admission_v1/report.json`.
+Inspect both terminal accounting and the actual successful admission report
+before using this executor for the native-through-scoring chain. No native
+inference is yet authorized. Original held jobs remain untouched.
 
 The historical membership executor below predates this native-representation
-contract. A future membership run must use a newly frozen snapshot including
-`a0b5e70` and explicit `--native-representation-root ROOT`, which rechecks the
-strict search admission and preserves representation caveats. Native-group
+contract. Use the now-frozen executor
+`benchmarks/work/publication_native_failure_membership_v1_20260925` at
+`9b9ab8dc7f56b7dfc29e2eec2f94cc919b06a018`, with explicit
+`--native-representation-root ROOT`, which rechecks the strict search
+admission and preserves representation caveats. Its [receipt](qfo_native_failure_membership_executor_20260925.json)
+records 124 passing focused tests; recheck its HEAD and cleanliness before use.
+Actual search and native-group report digests are required. Native-group
 admission is still required. The [separate seven-protein reference audit](QFO_NATIVE_RESIDUE_REFERENCE_EXPOSURE_20260925.md)
 does not supply final-group membership or counterfactual accuracy evidence.
 

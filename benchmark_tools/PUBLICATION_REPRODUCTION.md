@@ -7,12 +7,13 @@ are statistical reproduction only and do not submit scheduler jobs.
 
 ## Method And Results
 
-- [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260925_v10.md)
+- [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260925_v11.md)
   provides the dated HTML, checked local-asset inventory and citation inventory,
-  including current FastOMA results and the DGX deferral. Version 10 moves
-  bibliography audit history into a linked note without changing the scientific
-  body. It is not a standalone archive or completed typesetting; v8 received
-  an all-page overview and v10 opening/caption checks, not full copyediting.
+  including current FastOMA results and the DGX deferral. Version 11 adds
+  the corrected OrthoMCL search audit and seven-protein residue-change
+  reference exposure, not corrected OrthoMCL scores. Its updated pages 18-19
+  received visual review; other pages were not visually re-reviewed. It is
+  not a standalone archive, completed typesetting or full copyediting.
 - [Corrected figure supplements](results/PUBLICATION_CORRECTED_FIGURE_BUNDLE_20260919.md)
   include the seven-method FastOMA comparison exported at `27113f4`, with
   isolated relocated verification and retained-count arithmetic reproduction.
@@ -195,7 +196,7 @@ controlled comparative timing remains an unmet publication requirement.
 ## Archive And Outstanding Work
 
 A [verified source-only baseline archive](results/PUBLICATION_FROZEN_SOURCE_ARCHIVE_20260920.md)
-now preserves the43selected source files at scientific revision `7f3a9e4`,
+now preserves the 43 selected source files at scientific revision `7f3a9e4`,
 with exact Git-blob/mode verification and repeat-export checks. It is a local
 source component, not the analysis/data/runtime bundle or a public release.
 Historical build behavior is preserved rather than silently replaced by

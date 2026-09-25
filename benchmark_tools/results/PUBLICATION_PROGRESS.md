@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Reproduction Navigation Updated (2026-09-25)
+
+Updated the reproduction guide from manuscript preview v10 to v11, retaining
+the limited visual-review scope and absence of corrected OrthoMCL scores.
+Updated the current recovery handoff to the already frozen membership
+executor and queued BPO validation job 22168, preventing duplicate submission
+or use of the obsolete exact-parity-only membership executor. Checked the
+executor identity against its retained receipt and verified that all 36 local
+Markdown links across the two documents resolve. `git diff --check` passed;
+these documentation edits do not change scientific source or require native
+reruns. Live accounting still shows 22167 RUNNING and 22168 PENDING.
+
 ## Recovered BPO Validation Queued (2026-09-25)
 
 The preceding turn was a verified wait on preparation job 22167. It remains
