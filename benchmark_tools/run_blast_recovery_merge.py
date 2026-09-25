@@ -27,7 +27,7 @@ PINS = {
     "qfo_blast_replay_comparison_22055.json": "9d49960fd22aaa1b538dcae728b06d0a67802d8d3d1f4296b31c459a98f702e1",
 }
 HELPERS = {
-    "verify_blast_recovery_panel.py": "15956e9a912211a5266338b371c77a4a7a5e3b4b2ec2ddc493f54c2b582dca1d",
+    "verify_blast_recovery_panel.py": "8f40db306ccbc567dc1ed5de1a6b9828fb99a26df57991df3db9b3bf16a99465",
     "merge_blast_recovery_blocks.py": "3b9814d13dedfea369e1deb800ce40e86c87f3f83a8b2016a1b64abc48cbb3e1",
 }
 ARCHIVES = {
@@ -38,10 +38,13 @@ ARCHIVES = {
 }
 
 
-def require_completed(accounting):
+def require_completed(accounting, replacement=False):
     rows = list(csv.DictReader(io.StringIO(accounting), delimiter="|"))
     expected = {"22148": "2", **{f"{job}_{i}": cpu for job, cpu in
                 (("22103", "180"), ("22105", "2")) for i in range(20)}}
+    if replacement:
+        del expected["22103_14"], expected["22105_14"]
+        expected.update({"22160_14": "180", "22161": "2"})
     for job, cpu in expected.items():
         selected = [r for r in rows if r["JobID"] == job]
         if len(selected) != 1 or tuple(selected[0][k] for k in ("State", "ExitCode", "NodeList", "AllocCPUS")) != (
@@ -79,10 +82,10 @@ def raw_diagnostics(path):
     return result
 
 
-def prepare(root, output):
-    accounting = subprocess.check_output(["sacct", "-j", "22148,22103,22105", "--parsable2",
+def prepare(root, output, replacement=False):
+    accounting = subprocess.check_output(["sacct", "-j", "22148,22103,22105,22160,22161" if replacement else "22148,22103,22105", "--parsable2",
         "--format=JobID,State,ExitCode,NodeList,AllocCPUS,Elapsed"], text=True)
-    require_completed(accounting)
+    require_completed(accounting, replacement)
     results = root / "benchmark_tools/results"
     records = [record(__file__)]
     for name, digest in {**PINS, **HELPERS}.items():
@@ -124,7 +127,7 @@ def prepare(root, output):
     for item in records:
         check(item)
     # Re-run the complete panel gate, rather than trusting a user-supplied summary.
-    panel = verify(root, output / "replay_panel.json")
+    panel = verify(root, output / "replay_panel.json", replacement)
     reports = [json.loads(Path(row["report"]["path"]).read_text()) for row in panel["admissions"]]
     replay_ids = [g for report in reports for g in report["query_ids"]]
     prefix_audit = read_frozen(Path(partition["inputs"][0]["path"]), partition["inputs"][0]["sha256"])
@@ -169,7 +172,7 @@ def prepare(root, output):
         selected_diagnostics=selected, raw_diagnostics=raw, accounting=accounting)
 
 
-def run(root, output):
+def run(root, output, replacement=False):
     if not os.environ.get("SLURM_JOB_ID") or os.environ.get("SLURM_JOB_NODELIST") != "bizon":
         raise ValueError("Require a scheduled merge job on bizon")
     output.mkdir(exist_ok=False)
@@ -179,7 +182,7 @@ def run(root, output):
         search_admitted=False, reuse_authorized=False, publication_ready=False)
     save_status(output / "status.json", status)
     try:
-        prepared = prepare(root, output)
+        prepared = prepare(root, output, replacement)
         save_status(output / "preflight.json", dict(checked_inputs=prepared["records"],
             accounting=prepared["accounting"], job_id=status["job_id"],
             total_queries=len(prepared["genes"]), replay_queries=len(prepared["replay_ids"]),
@@ -226,5 +229,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--replacement", action="store_true")
     args = parser.parse_args()
-    run(args.root.resolve(), args.output.absolute())
+    run(args.root.resolve(), args.output.absolute(), args.replacement)

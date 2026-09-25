@@ -4,6 +4,8 @@ import pytest
 
 from benchmark_tools.admit_blast_recovery_batch import coverage, EXECUTOR_COMMIT
 from benchmark_tools.verify_blast_recovery_panel import combine, unique_records, verify
+from benchmark_tools.verify_blast_recovery_panel import validate_batch_provenance
+from benchmark_tools.admit_blast_recovery_batch import completed_task
 
 
 def panel():
@@ -73,3 +75,46 @@ def test_provenance_deduplication_and_conflict():
 def test_no_overwrite(tmp_path):
     with pytest.raises(FileExistsError):
         verify(tmp_path, tmp_path)
+
+
+@pytest.mark.parametrize("replaced", [False, True])
+@pytest.mark.parametrize("problem", [None, "validator", "duplicate", "source", "extra_source",
+                                    "native", "recovery", "original_record"])
+def test_batch_provenance_gate(replaced, problem):
+    index = 14 if replaced else 13
+    native = "22160_14" if replaced else "22103_13"
+    validator = "22161" if replaced else "22105_13"
+    accounting = ("JobID|JobIDRaw|State|ExitCode|NodeList|AllocCPUS|Elapsed\n"
+                  f"{native}|100|COMPLETED|0:0|bizon|180|00:01:00\n")
+    row = f"{validator}|101|COMPLETED|0:0|bizon|2|00:00:10\n"
+    if problem == "validator":
+        row = row.replace("COMPLETED", "PENDING")
+    accounting += row * (2 if problem == "duplicate" else 1)
+    source = dict(path="/frozen/admit_blast_recovery_batch.py", sha256="source", bytes=10)
+    original = dict(path="/interrupted/status.json", sha256="old", bytes=20)
+    recovery = dict(records=[original], partial_rows_reused=False)
+    report = dict(records=[source], scheduler=completed_task(accounting, index, replaced))
+    if replaced:
+        report.update(replacement=copy.deepcopy(recovery))
+        report["records"].append(original)
+    if problem == "source":
+        report["records"][0] = dict(source, sha256="changed")
+    elif problem == "extra_source":
+        report["records"].append(dict(source, path="/other/admit_blast_recovery_batch.py"))
+    elif problem == "native":
+        report["scheduler"] = dict(report["scheduler"], JobIDRaw="wrong")
+    elif problem == "recovery":
+        report["replacement"] = dict(recovery, partial_rows_reused=True)
+    elif problem == "original_record":
+        if replaced:
+            report["records"].remove(original)
+        else:
+            report["replacement"] = recovery
+    if problem:
+        with pytest.raises(ValueError):
+            validate_batch_provenance(report, accounting, index, source, True, recovery)
+    else:
+        assert validate_batch_provenance(report, accounting, index, source, True, recovery)["JobID"] == validator
+    if replaced:
+        with pytest.raises(ValueError):
+            validate_batch_provenance(report, accounting, index, source, False, recovery)

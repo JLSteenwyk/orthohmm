@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Replacement-Aware Panel And Merge Gates (2026-09-25)
+
+Added opt-in `--replacement` support to full-panel verification and merge
+preparation. Index 14 requires native task 22160_14, validator 22161, the
+clean frozen replacement validator/source, and an exact match to freshly
+checked original interruption evidence. The other nineteen indices retain
+their original native/validator/source identities. Duplicate admission source
+records, unexpected replacement metadata and missing preserved records fail.
+Merge prerequisites substitute only these two index-14 job identities; the
+prefix check and every other completed prerequisite remain required.
+Scientific row ordering, diagnostic selection and merge algorithms are unchanged.
+
+The focused admission/panel/merge-prerequisite suites passed **107 tests**.
+A real read-only check matched all fourteen historical native, validator and
+source identities to fresh accounting using the new panel helper. This check
+does not repeat their full content audits or admit an incomplete panel.
+
+Panel source SHA256 is
+`8f40db306ccbc567dc1ed5de1a6b9828fb99a26df57991df3db9b3bf16a99465`;
+merge source SHA256 is
+`0e985c5e966960c5813bd31e8a34acc415be880818a1bb982dde1df2d156db46`.
+The merge helper pin was updated to the new panel implementation. These sources
+have not yet been frozen/submitted for production. Next: update the independent
+search-admission contract, freeze the new merge/search executors and replace
+the pending old merge/search jobs with explicit dependencies on the full
+successful panel. Propagate the new search-admission provenance downstream.
+Replacement 22160_14 remains RUNNING; 22161 and 22103_15 remain dependent.
+No old completed reports or unrelated jobs were changed; DGX remains deferred.
+
 ## Replacement Validator Frozen And Queued (2026-09-25)
 
 Implemented an opt-in replacement path in `admit_blast_recovery_batch.py`:
