@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Recovered Native Inference Started (2026-09-25)
+
+Job **22170** passed preflight and fresh input staging. The staged native
+index validator returned `native_bpo_indexes_verified`: 23868184819 BPO
+bytes, 222903808 records, 222903809 offsets including EOF and 979827 queries.
+The parent report now records `recovered_native_running`; live native child
+PID 1413828 and `native.log` confirm within-species inparalog identification.
+Evidence is under `benchmarks/results/qfo_blast_recovery_native_v1`, including
+`inputs/validation/indexes.stdout` and the staging report. This transition
+does not establish successful final groups, pair conversion or accuracy.
+
+Independent output validator **22171** remains queued with `afterok:22170`.
+The preceding turns were verified waits on preflight and staged-index
+validation, not restarts. Cross-species inference, clustering, final output
+admission and QfO scoring remain unfinished. DGX remains deferred.
+
 ## Native Output Validator Queued (2026-09-25)
 
 Native inference **22170** remains RUNNING, observed in input-provenance
