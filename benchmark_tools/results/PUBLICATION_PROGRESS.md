@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Search Trace Incorporated Into Manuscript (2026-09-25)
+
+Added the completed seven-protein incident-hit trace to the manuscript:
+17 alignment rows, seven self pairs, ten reciprocal non-self directed
+pairs, and three within-species isolated components of sizes 2, 3 and 2.
+The text explicitly distinguishes the observed search from an unperformed
+residue-preserving counterfactual and leaves final-group and score effects
+unresolved. Checked the claims against the retained trace report and subset.
+The existing v11 rendered preview predates this addition; it is not an
+updated rendering of this manuscript revision.
+
+The preceding user-response turn was no progress on the scientific work;
+this continuation revalidated job 22168 as RUNNING (14:01 elapsed) and
+advanced the manuscript. DGX work remains deferred at the user's request.
+Independent BPO admission is still required before native inference.
+
 ## BPO Preparation Completed; Independent Validation Started (2026-09-25)
 
 Scheduler confirms **22167 COMPLETED 0:0 in 1:37:27** and dependent **22168

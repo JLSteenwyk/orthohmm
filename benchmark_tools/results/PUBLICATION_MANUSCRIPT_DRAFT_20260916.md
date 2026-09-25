@@ -981,8 +981,17 @@ or VGNC references. All seven have EC annotations and FAS features, and
 none has an experimental GO annotation under the benchmark filter.
 Annotation presence does not establish participation in scored pairs;
 absence from a reference does not exclude indirect clustering effects.
-Neither the score impact nor the effect on final groups has been established.
 [Residue-change reference exposure](QFO_NATIVE_RESIDUE_REFERENCE_EXPOSURE_20260925.md).
+A complete scan of the recovered search table found 17 incident alignment
+rows for these seven proteins: seven self pairs and ten non-self directed
+pairs, all reciprocal. They form three isolated search components of sizes
+two, three and two, all within one species; no observed hit in either
+direction connects them to any other input protein. This describes the
+retained legacy search, not a residue-preserving counterfactual: missing
+cross-species hits could still be recovered under a different residue
+representation. Neither the score impact nor the effect on final groups
+has been established.
+[Seven-protein search trace](QFO_NATIVE_RESIDUE_HIT_TRACE_20260925.md).
 No paired superiority
 over competitors is inferred from this partial table.
 [Method identity and export checks](QFO_CORRECTED_MAIN_TABLE_20260918.md).
