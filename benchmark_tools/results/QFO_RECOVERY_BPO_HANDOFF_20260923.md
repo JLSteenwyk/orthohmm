@@ -1,6 +1,30 @@
 # Recovery BPO Handoff
 
-## Native Representation Handoff (25 September, Pending Audit)
+## Current Execution State (25 September)
+
+Search validator **22166 completed 0:0 in 46:16** with status
+`recovered_search_native_representation_verified`. Its report is
+`benchmarks/results/qfo_blast_native_representation_admission_v1/report.json`,
+SHA256 `b034aef886b4a68a5915f5796a2345fa10bd3668116d8de0b927d6f5bf00e4ff`.
+Full-table coverage includes 53 failed queries, 21 with incoming hits and
+none with outgoing hits. This is search evidence, not completed inference
+or benchmark scoring. The seven reviewed native O deletions remain explicit.
+
+BPO preparation **22167** is running from clean executor
+`benchmarks/work/publication_native_representation_downstream_v1_20260925`
+at `296882422f2d70c096c8d5584082c16217f36add`, using the actual report digest
+and fourth wrapper argument `native-representation`. Do not launch a duplicate.
+Inspect its result before independent BPO admission, then use this executor
+for the native-through-scoring chain. Original held jobs remain untouched.
+
+The historical membership executor below predates this native-representation
+contract. A future membership run must use a newly frozen snapshot including
+`a0b5e70` and explicit `--native-representation-root ROOT`, which rechecks the
+strict search admission and preserves representation caveats. Native-group
+admission is still required. The [separate seven-protein reference audit](QFO_NATIVE_RESIDUE_REFERENCE_EXPOSURE_20260925.md)
+does not supply final-group membership or counterfactual accuracy evidence.
+
+## Native Representation Handoff (25 September, Historical Preparation)
 
 The exact-parity validator 22163 failed on seven native O deletions. Its
 report must not be used. New validator 22166 at frozen revision

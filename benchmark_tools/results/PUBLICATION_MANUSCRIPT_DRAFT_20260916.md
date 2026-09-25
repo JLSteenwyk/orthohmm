@@ -960,11 +960,29 @@ corrected OrthoFinder species tree, not independent species-tree inference.
 Two failed native task attempts were retained and explicitly audited against
 their successful retries; their scientific commands were identical. This
 is accuracy evidence, not controlled runtime evidence. OrthoMCL's corrected
-comparison remains unfinished. Its interrupted search is being recovered through
-validated replay batches and an ordered merge; the downstream BPO, native-group,
-pair-conversion and scoring workflow is implemented and frozen, but this is not
-evidence that those production stages have completed. The corrected OrthoMCL
-scores remain unavailable. [Recovery workflow and validation status](QFO_RECOVERY_BPO_HANDOFF_20260923.md).
+comparison remains unfinished. Its interrupted search was recovered through
+validated replay batches and an ordered merge. The full-table audit verified
+401,908,030 alignment rows and 222,903,808 distinct directed pairs across
+984,137 input proteins. It independently identified 53 failed queries:
+46 statistics failures and seven short-query failures. None had outgoing
+hits, but 21 had incoming hits; these observations do not establish their
+final-group membership. Another 4,257 proteins lacked query hits without a
+logged failure. The downstream BPO, native-group, pair-conversion and scoring
+workflow is implemented and frozen, but implementation is not evidence that
+those production stages have completed. Corrected OrthoMCL scores remain
+unavailable. [Recovery workflow and validation status](QFO_RECOVERY_BPO_HANDOFF_20260923.md).
+
+The search was admitted under an explicit native-representation contract,
+not exact residue parity: legacy BLAST deleted one O residue from each of
+seven proteins while preserving all protein identities and the other
+984,130 sequences exactly. A separate reference audit found no direct
+membership of these seven proteins in the retained SwissTrees, TreeFam-A
+or VGNC references. All seven have EC annotations and FAS features, and
+none has an experimental GO annotation under the benchmark filter.
+Annotation presence does not establish participation in scored pairs;
+absence from a reference does not exclude indirect clustering effects.
+Neither the score impact nor the effect on final groups has been established.
+[Residue-change reference exposure](QFO_NATIVE_RESIDUE_REFERENCE_EXPOSURE_20260925.md).
 No paired superiority
 over competitors is inferred from this partial table.
 [Method identity and export checks](QFO_CORRECTED_MAIN_TABLE_20260918.md).
@@ -1128,9 +1146,10 @@ endpoint records, including unavailable values.
 :::
 
 Old groups, trees, scores and confidence intervals cannot
-be relabeled as corrected results. The previously measured 53 legacy BLAST
-query failures also belong to the original run; failures in the corrected
-OrthoMCL search must be measured independently. Recovery of missing inputs
+be relabeled as corrected results. The corrected OrthoMCL search independently
+yielded 53 failed queries, as described above; this does not transfer the
+original run's group-membership or reference-impact conclusions to the new
+run. Recovery of missing inputs
 does not turn this development-exposed benchmark into independent validation.
 
 A [sequence-content follow-up](QFO_SEQUENCE_DIFFERENCE_CLASSES_20260917.md)

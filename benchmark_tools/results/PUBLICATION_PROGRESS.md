@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Manuscript Corrected Search Evidence Updated (2026-09-25)
+
+The draft now distinguishes the independently measured corrected-search
+53 failures (21 with incoming hits) from historical original-release final
+group and exposure findings. Added whole-table row/pair counts and the
+explicit seven-protein native-residue caveat, with the separate reference
+exposure findings and unresolved indirect/counterfactual effects. Corrected
+OrthoMCL scores remain unavailable. No historical accuracy value changed.
+
+The recovery handoff now leads with completed search admission and live BPO
+job 22167, superseding its historical pending-audit text and warning against
+duplicate launch or use of the obsolete membership executor. The previous
+goal turn made progress (production search admission, BPO submission and
+reference exposure); this turn updates the manuscript to that evidence.
+The existing v10 HTML/PDF predate these edits and remain historical previews;
+they must be rerendered before distributing the updated draft. BPO 22167 was
+confirmed RUNNING at 0:55, with no terminal result inferred.
+
 ## Search Admitted; BPO Preparation 22167 Submitted (2026-09-25)
 
 Validator **22166 COMPLETED 0:0 in 46:16**. Its report status is
