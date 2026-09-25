@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Search Admitted; BPO Preparation 22167 Submitted (2026-09-25)
+
+Validator **22166 COMPLETED 0:0 in 46:16**. Its report status is
+`recovered_search_native_representation_verified`, `search_admitted=true`,
+with accuracy/publication/downstream-execution flags still false. The
+explicit reviewed seven-O-deletion contract is retained, not exact parity.
+Report `benchmarks/results/qfo_blast_native_representation_admission_v1/report.json`
+is 346,063 bytes, SHA256
+`b034aef886b4a68a5915f5796a2345fa10bd3668116d8de0b927d6f5bf00e4ff`.
+
+Full-table evidence: 984,137 input proteins; 401,908,030 HSP rows;
+222,903,808 distinct directed pairs; 979,827 queries with hits;
+4,310 without hits, including 53 failed queries and 4,257 without logged
+failure. No failed query has outgoing hits; **21 have incoming hits**.
+There are 981,211 subjects with hits and 979,821 proteins with self hits.
+No HSP exceeds the 1e-5 threshold. Native diagnostics retain 46 statistics
+failures, seven short-query failures and 212 selenocysteine-replacement
+messages; diagnostic line counts are not unique-protein counts.
+
+Checked frozen downstream executor HEAD
+`296882422f2d70c096c8d5584082c16217f36add` and clean benchmark_tools diff;
+confirmed fresh BPO destination absent. Submitted its
+`qfo_blast_recovery_bpo_prepare_20260923.sh` with the absolute executor path,
+full revision, actual report digest above and `native-representation` mode:
+**22167**, 2 CPUs, 64 GiB, 24 hours, no requeue. The preparer independently
+verifies the completed search job and all source/input identities before
+conversion. This submission is not evidence of completed BPO preparation.
+Inspect its terminal status and actual output digest before BPO admission,
+native inference, pairs or scoring. No accuracy result is available yet.
+
 ## Seven Residue-Altered Proteins: Reference Exposure (2026-09-25)
 
 Completed a separate read-only reference audit for the seven reviewed
