@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Refinement-Only Memcheck Diagnostic Prepared (2026-09-25)
+
+Previous turns were verified waits on live recovery batch 22103_17. This
+turn found Valgrind 3.22.0 available and prepared a different diagnostic for
+the unresolved high-CPM refinement crash: one saved-input refinement under
+Memcheck, no optimizer or scoring. The prespecified protocol is
+`QFO_CPM_MEMCHECK_PROTOCOL_20260925.md`, SHA256
+`b898aa1f7752fb4e05a84e6d7bf200079e14f49524192e529467e769b277ab82`.
+
+An explicit mutually exclusive mode extends the existing diagnostic runner.
+It uses malloc-backed Python allocations for instrumentation, one CPU/64 GiB,
+and a one-hour no-requeue wrapper. XML/raw logs and tool/component identities
+are retained; nonzero exits, incomplete/malformed XML and reported memory
+errors cannot become successful diagnostics. Existing scientific input,
+partition, metadata and runtime checks remain required after a clean exit.
+No result can release candidate 22156 or repair failed admission 22155.
+
+Thirty focused diagnostic/readback tests passed, including real installed
+Memcheck clean and out-of-bounds C fixtures, with no skips. Wrapper shell
+syntax passed. Freeze and recheck the executor before the single submission;
+actual production diagnostic evidence is not yet available. Native-memory
+reports require stack-level attribution, not an assumed OrthoHMM cause.
+DGX remains deferred; OrthoMCL recovery continues independently.
+
 ## Seventeenth Recovery Batch Admitted (2026-09-25)
 
 Previous turn made manuscript progress while 22103_16 was live. Native
