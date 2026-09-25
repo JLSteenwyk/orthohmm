@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Host Interruption And Selective Batch Replacement (2026-09-25)
+
+The last turn was a verified wait on 22103_14, interrupted during sleep.
+Fresh accounting now proves that task terminal: TIMEOUT, batch step CANCELLED.
+The host boot time is 25 September 12:05:20; retained native output stopped
+24 September 01:17:12, and neither a completed status nor timing record exists.
+Recorded scheduler elapsed time must not be treated as native compute time.
+
+[The incident and recovery record](QFO_RECOVERY_INTERRUPTION_20260925.md)
+preserves original file hashes, the failed attempt directory, scheduler
+identity and exact selective resubmission command. Fourteen admitted batches
+are untouched. Only index 14 was resubmitted using the same clean frozen
+executor, query/database/runtime/settings and resources, as **22160_14**.
+It is confirmed RUNNING. No partial rows from the failed attempt are reused.
+
+The replacement needs an explicit tested admission/merge provenance update:
+old validators pin 22103, so they cannot admit 22160 unchanged. Existing
+downstream dependencies remain pending; none were bypassed. Next work is
+replacement identity validation, independent admission and selective chain
+reconnection. Whole-search, native-group and accuracy results remain pending.
+DGX remains deferred, unrelated jobs and working-tree changes untouched.
+
 ## Fourteenth Recovery Batch And Failure Description (2026-09-24)
 
 Previous turns were verified waits on live 22103_13. Native execution completed
