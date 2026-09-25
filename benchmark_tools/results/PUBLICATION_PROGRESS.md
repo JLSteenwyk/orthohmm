@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Complete Replay Failure Description (2026-09-25)
+
+Ran the existing replacement-aware `summarize_blast_recovery_failures.py`
+with explicit admissions for indices 0 through 19 and `--replacement-root .`.
+It rechecked fresh original/replacement scheduler evidence, preserved original
+index-14 records, query FASTAs, diagnostic logs and admitted dispositions.
+Result: [all-20 replay summary](qfo_replay_all20_failure_description_20260925.json),
+SHA256 `bc7741df79735fa7f0b3ba7f9d7fa0b912b3287753f07786db17625f773aaf6e`.
+
+All **98,913 replay queries** are accounted for: **94,603 with hits**, **4,257
+no-hit without logged failure**, and **53 logged failures**. All failures
+include setup failure; 46 also have statistics failure and seven short-query
+failure. Failed sequence lengths span 2 to 541 residues (median 45). An
+independent JSON check confirmed all 20 unique batch indices, exhaustive
+disposition totals and identical failure records to the earlier first-16
+summary; the last four batches added no failures.
+
+This remains a partial-dataset description despite covering the entire replay:
+the original retained prefix is outside its scope. Replay selection is not
+random, so these counts must not be extrapolated to a whole-dataset failure
+rate. The summary reuses admitted query blocks; it does not independently
+rescan HSPs, establish incoming hits or final-group/reference effects, or
+admit the whole search. All admission/publication flags remain false.
+
+Merge 22162 remains RUNNING (2:32 at observation), with whole-search validator
+22163 pending. DGX remains deferred; no new native inference was launched.
+
 ## Memcheck Post-Failure Integrity Checked (2026-09-25)
 
 Following terminal evidence in the preceding entry, independently ran the
