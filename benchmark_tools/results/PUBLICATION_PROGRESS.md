@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Native-Representation Membership Executor Frozen (2026-09-25)
+
+Created clean sparse executor
+`benchmarks/work/publication_native_failure_membership_v1_20260925` at
+`9b9ab8dc7f56b7dfc29e2eec2f94cc919b06a018`. All **124** selected membership,
+native partition, reference-impact and reviewed-admission tests passed from
+that checkout without skips. The source and JUnit identities are retained in
+`qfo_native_failure_membership_executor_20260925.json`.
+
+Use this snapshot, not the older exact-parity-only executor, for the later
+membership audit with `--native-representation-root ROOT`, the actual search
+report digest and a future admitted native-group report digest. Recheck HEAD
+and cleanliness before execution. No production membership audit or native
+group inference has been launched. BPO job 22167 remains running, with
+52 million converted hits at the initial observation. The preceding turn
+was a verified wait on that same live conversion job.
+
 ## Manuscript Preview Refreshed To Version 11 (2026-09-25)
 
 Rendered fresh v11 HTML/PDF from the draft containing the corrected-search

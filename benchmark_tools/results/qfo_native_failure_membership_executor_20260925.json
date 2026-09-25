@@ -1,0 +1,35 @@
+{
+  "status": "frozen_executor_fixture_and_cli_tests_passed",
+  "executor": "benchmarks/work/publication_native_failure_membership_v1_20260925",
+  "commit": "9b9ab8dc7f56b7dfc29e2eec2f94cc919b06a018",
+  "sparse_paths": ["benchmark_tools", "orthohmm", "tests/unit"],
+  "clean_after_tests": true,
+  "source_sha256": {
+    "audit_orthomcl_failure_membership.py": "6ad05f7dee144a6941cac72aefc0e702ae1a9d2aec6ed652e6d6bd075d37e9ca",
+    "prepare_blast_recovery_bpo.py": "86d5ebd70f73611aee47a84567996c3cc2ae77ff3db15a68b25df50345036cf4",
+    "reviewed_legacy_database.py": "e0a37b417331a5f7137fd19952d7bfd797306ff75353fffd872a8eb3fe7ad7b8"
+  },
+  "tests": {
+    "passed": 124,
+    "failed": 0,
+    "skipped": 0,
+    "modules": [
+      "test_audit_orthomcl_failure_membership.py",
+      "test_audit_orthomcl_native_groups.py",
+      "test_orthomcl_reference_impact.py",
+      "test_replacement_bpo_handoff.py",
+      "test_reviewed_legacy_database.py"
+    ],
+    "junit_path": "benchmarks/work/native_failure_membership_frozen_20260925.xml",
+    "junit_sha256": "057e44cdc7d83df0f485afbf23bb47f6b8d584e685e0762adc585ae4d9e30f05"
+  },
+  "required_opt_in": "--native-representation-root ROOT",
+  "production_run": false,
+  "publication_ready": false,
+  "limitations": [
+    "Requires actual complete search and native admissions with verified SHA256 digests.",
+    "Fixture and CLI tests do not establish production failed-query membership.",
+    "Does not establish reference exposure or counterfactual accuracy effects.",
+    "Shared-host tests are not controlled timing measurements."
+  ]
+}
