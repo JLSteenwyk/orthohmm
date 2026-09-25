@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Seventeenth Recovery Batch Admitted (2026-09-25)
+
+Previous turn made manuscript progress while 22103_16 was live. Native
+22103_16 has now completed 0:0 in **20:53**; independent validator 22105_16
+completed 0:0 in **19 seconds**. Batch 22103_17 is RUNNING, bringing the
+individually admitted replay count to **17 of 20**, including replacement
+index 14. Merge 22162 and whole-search admission 22163 remain pending.
+
+Admission `benchmarks/work/qfo_blast_recovery_admission_16_20260923.json`
+has SHA256 `afc26a7fa5fce817583f36b5c108edf7076505d15a813e8c7936a80b445ac14f`.
+Of 5,000 queries, 4,987 have hits and 13 have no hits without a logged
+failure. There are **zero logged failed queries**. The admitted table
+contains 1,485,442 HSP rows and 1,015,466 distinct directed pairs, with
+zero rows above the frozen E-value cutoff. These are single-batch counts;
+whole-database absent-query counts in its structural audit must not be
+interpreted as batch failures or complete-search coverage.
+
+The report retains `search_admitted=false` and `publication_ready=false`.
+No restart, parameter change or new final-group/accuracy claim was made.
+Native elapsed time is operational evidence, not matched-resource comparative
+timing. DGX remains deferred; complete recovery, downstream inference,
+failure-impact analysis and scoring are still required.
+
 ## Manuscript Opening Condensed Without Scientific Changes (2026-09-25)
 
 Previous turns were verified waits on live 22103_16 with growing BLAST
