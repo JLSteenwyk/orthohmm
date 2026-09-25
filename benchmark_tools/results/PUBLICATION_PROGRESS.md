@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Native Representation Downstream Contract Prepared (2026-09-25)
+
+BPO preparation now recognizes only the exact new path, validator job 22166,
+revision 42e6dcf and clean frozen executor for native-representation mode.
+It requires the distinct successful status, matching pinned transformation
+evidence, frozen helper identity and complete checked-record provenance.
+Original/replacement exact-parity contracts remain separate. The wrapper
+adds explicit `native-representation` mode and preserves caveats in BPO
+metadata. Updated preparer/admitter source pins propagate through native
+input verification without changing converter or inference behavior.
+
+All **241** selected BPO-through-scoring/source-pin tests passed. Job 22166
+remains RUNNING (2:33 at observation). Freeze a new downstream executor,
+then wait for a successful actual report and its digest before submission.
+The previous 1580bb9 executor is not compatible with this new contract.
+No BPO or downstream job has been launched; DGX remains deferred.
+
 ## Native Representation Validator Submitted (2026-09-25)
 
 Frozen executor `benchmarks/work/blast_native_representation_admission_v1_20260925`

@@ -19,11 +19,15 @@ from benchmark_tools.verify_orthomcl_python_runtime import verify_runtime
 
 ADMITTER = "a21c65f2b449d828e3fefc86148cbf4fd87b6ade"
 REPLACEMENT_ADMITTER = "198014bbaab12465620f1c6572a03459cdb1759e"
+NATIVE_ADMITTER = "42e6dcff5170d17c490273ab93229833b91a6b23"
 
 
 def admission_contract(root, path):
     original = root / "benchmarks/results/qfo_blast_recovery_search_admission_v1/report.json"
     replacement = root / "benchmarks/results/qfo_blast_replacement_search_admission_v1/report.json"
+    native = root / "benchmarks/results/qfo_blast_native_representation_admission_v1/report.json"
+    if path == native:
+        return True, "22166", NATIVE_ADMITTER, root / "benchmarks/work/blast_native_representation_admission_v1_20260925"
     if path == original:
         return False, "22151", ADMITTER, root / "benchmarks/work/blast_recovery_search_admission_v1_20260923"
     if path == replacement:
@@ -31,8 +35,10 @@ def admission_contract(root, path):
     raise ValueError("Unexpected recovered admission path")
 
 
-def validate_admission(admission, root, replacement=False):
-    if (admission["status"] != "recovered_orthomcl_search_evidence_verified"
+def validate_admission(admission, root, replacement=False, native_representation=False):
+    expected_status = ("recovered_search_native_representation_verified" if native_representation
+                       else "recovered_orthomcl_search_evidence_verified")
+    if (admission["status"] != expected_status
             or admission["search_admitted"] is not True
             or any(admission[k] is not False for k in (
                 "accuracy_admitted", "publication_ready", "downstream_execution_authorized"))):
@@ -41,8 +47,26 @@ def validate_admission(admission, root, replacement=False):
     if any(admission["scheduler"].get(k) != v for k, v in expected.items()):
         raise ValueError("Wrong admitted merge scheduler identity")
     if (admission["query_coverage"]["input_proteins"] != 984137
-            or admission["database_content"]["input_sequences"] != 984137
-            or admission["database_content"]["exact_sequence_parity"] is not True):
+            or admission["database_content"]["input_sequences"] != 984137):
+        raise ValueError("Wrong recovered search universe or database parity")
+    if native_representation:
+        if not replacement:
+            raise ValueError("Native representation requires replacement search")
+        from benchmark_tools.reviewed_legacy_database import verify as verify_representation
+        expected_representation = verify_representation(root, dict(
+            status="database_sequence_differences_require_review", content=admission["database_content"]))
+        actual = admission.get("database_representation", {})
+        # Source paths differ across frozen executors; checked identities remain bound below.
+        if {k: v for k, v in actual.items() if k != "checked_records"} != {
+                k: v for k, v in expected_representation.items() if k != "checked_records"}:
+            raise ValueError("Native representation evidence differs")
+        for item in actual["checked_records"]:
+            if item not in admission["checked_records"]:
+                raise ValueError("Native representation record missing from admission")
+        expected_helper = root / "benchmarks/work/blast_native_representation_admission_v1_20260925/benchmark_tools/reviewed_legacy_database.py"
+        if record(expected_helper) not in actual["checked_records"]:
+            raise ValueError("Native representation not bound to frozen helper")
+    elif admission["database_content"]["exact_sequence_parity"] is not True:
         raise ValueError("Wrong recovered search universe or database parity")
     merge = "qfo_blast_replacement_merge_v1" if replacement else "qfo_blast_recovery_merge_v1"
     paths = [root / f"benchmarks/results/{merge}/table/all.blast.candidate",
@@ -61,7 +85,7 @@ def validate_admission(admission, root, replacement=False):
 def verify_admission(root, path, digest):
     replacement, job, commit, executor = admission_contract(root, path)
     admission = read_frozen(path, digest)
-    inputs = validate_admission(admission, root, replacement)
+    inputs = validate_admission(admission, root, replacement, job == "22166")
     accounting = subprocess.check_output(["sacct", "-j", job, "--parsable2",
         "--format=JobID,State,ExitCode,NodeList,AllocCPUS,ReqMem,Elapsed"], text=True)
     rows = [r for r in csv.DictReader(io.StringIO(accounting), delimiter="|") if r["JobID"] == job]
@@ -97,6 +121,8 @@ def prepare(root, path, digest):
         query_coverage=admission["query_coverage"], recovered_search=record(path),
         job_id=os.environ["SLURM_JOB_ID"], started_epoch=time.time(), runtime_before=runtime_before,
         accuracy_admitted=False, publication_ready=False, downstream_execution_authorized=False)
+    if "database_representation" in admission:
+        report["database_representation"] = admission["database_representation"]
     save_status(output / "report.json", report)
     try:
         result = checkpoint(root, Path(inputs[0]["path"]), Path(inputs[1]["path"]), output / "checkpoint")

@@ -16,7 +16,8 @@ git -C "$EXECUTOR" diff --quiet HEAD -- benchmark_tools
 case ${4:-original} in
   original) ADMISSION="$ROOT/benchmarks/results/qfo_blast_recovery_search_admission_v1/report.json" ;;
   replacement) ADMISSION="$ROOT/benchmarks/results/qfo_blast_replacement_search_admission_v1/report.json" ;;
-  *) printf '%s\n' 'Expected original or replacement admission mode' >&2; exit 2 ;;
+  native-representation) ADMISSION="$ROOT/benchmarks/results/qfo_blast_native_representation_admission_v1/report.json" ;;
+  *) printf '%s\n' 'Expected original, replacement or native-representation admission mode' >&2; exit 2 ;;
 esac
 CACHE="/tmp/orthohmm-recovery-bpo-cache-${SLURM_JOB_ID:?}"
 [[ ! -e "$CACHE" && ! -L "$CACHE" ]]

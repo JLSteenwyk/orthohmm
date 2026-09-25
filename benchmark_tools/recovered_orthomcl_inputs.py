@@ -13,7 +13,7 @@ from benchmark_tools.run_simulation_methods import read_frozen
 from benchmark_tools.run_qfo_corrected_blast import PLAN_SHA
 from benchmark_tools.verify_ygob_validation import require_completed_job
 
-ADMITTER_SHA = "367cd958254524cbd18039c7cacb3133f07a853ed29a231594bfe3cc79631e9d"
+ADMITTER_SHA = "3f31ec3862dc3ae8f2c83eb0178e37d9efc1b4022a5e37ddab3ee1ed196cd21b"
 
 
 def completed(job):

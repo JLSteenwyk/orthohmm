@@ -19,7 +19,7 @@ from benchmark_tools.snapshot_runtime_trees import verify
 from benchmark_tools.verify_orthomcl_python_runtime import verify_runtime
 from benchmark_tools.verify_ygob_validation import require_completed_job
 
-PREPARER_SHA = "211c85f2ffdcf76116a7a54944183a8a0e2a0a21d0d83367a759fe5d6e66d4fb"
+PREPARER_SHA = "86d5ebd70f73611aee47a84567996c3cc2ae77ff3db15a68b25df50345036cf4"
 VALIDATOR_SHA = "848fcfe249b39bd9965a41c7aafd9338ffd18f9ebd6cae4f530ded2e632b805c"
 
 

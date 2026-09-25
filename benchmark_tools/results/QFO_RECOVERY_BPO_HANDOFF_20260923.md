@@ -1,5 +1,27 @@
 # Recovery BPO Handoff
 
+## Native Representation Handoff (25 September, Pending Audit)
+
+The exact-parity validator 22163 failed on seven native O deletions. Its
+report must not be used. New validator 22166 at frozen revision
+`42e6dcff5170d17c490273ab93229833b91a6b23` writes
+`benchmarks/results/qfo_blast_native_representation_admission_v1/report.json`.
+Successful status must be `recovered_search_native_representation_verified`,
+with explicit non-exact parity evidence matching the pinned seven-deletion
+review. Full search validation, completed job accounting and source identities
+are still required. The validator was running when this handoff was prepared.
+
+The preparation wrapper now accepts fourth argument `native-representation`.
+Supply the actual successful report SHA256, never a placeholder. BPO
+preparation retains the representation evidence in its report; subsequent
+admission and native input checks revalidate the search contract. Use a newly
+frozen downstream executor containing these changes, not the older 1580bb9
+executor. The BPO-through-scoring and source-pin suites passed 241 tests.
+No production conversion was launched and no scientific parameter changed.
+
+The remaining sections retain historical handoffs; this section supersedes
+their search-validator identity only for the explicitly reviewed native mode.
+
 `prepare_blast_recovery_bpo.py` accepts only the recovery-specific admitted
 search contract, not the interrupted original search or a candidate-only merge.
 It requires the expected admission path and caller-pinned SHA256, completed

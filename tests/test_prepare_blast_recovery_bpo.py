@@ -60,6 +60,49 @@ def test_recovered_admission_inputs(tmp_path):
     assert module.validate_admission(report, tmp_path) == report["checked_records"]
 
 
+def test_native_admission_path_identity(tmp_path):
+    path = tmp_path / "benchmarks/results/qfo_blast_native_representation_admission_v1/report.json"
+    replacement, job, commit, executor = module.admission_contract(tmp_path, path)
+    assert replacement is True and job == "22166"
+    assert commit == "42e6dcff5170d17c490273ab93229833b91a6b23"
+    assert executor.name == "blast_native_representation_admission_v1_20260925"
+
+
+@pytest.mark.parametrize("problem", [None, "status", "representation", "missing_record", "not_replacement", "universe"])
+def test_native_representation_contract(tmp_path, monkeypatch, problem):
+    from benchmark_tools import reviewed_legacy_database
+    report = admission(tmp_path)
+    report["status"] = "recovered_search_native_representation_verified"
+    report["scheduler"]["JobID"] = "22162"
+    report["database_content"]["exact_sequence_parity"] = False
+    report["checked_records"][0]["path"] = str(tmp_path / "benchmarks/results/qfo_blast_replacement_merge_v1/table/all.blast.candidate")
+    report["candidate"] = dict(report["checked_records"][0])
+    helper = tmp_path / "benchmarks/work/blast_native_representation_admission_v1_20260925/benchmark_tools/reviewed_legacy_database.py"
+    helper.parent.mkdir(parents=True)
+    helper.write_text("fixture helper")
+    expected = dict(status="reviewed_native_representation_verified_not_exact_parity",
+                    exact_sequence_parity=False, transformations=["fixture"],
+                    limitations=["fixture"], checked_records=[module.record(helper)])
+    report["database_representation"] = json.loads(json.dumps(expected))
+    report["checked_records"].extend(expected["checked_records"])
+    monkeypatch.setattr(reviewed_legacy_database, "verify", lambda *a: expected)
+    if problem == "status":
+        report["status"] = "recovery_search_admission_failed"
+    elif problem == "representation":
+        report["database_representation"]["exact_sequence_parity"] = True
+    elif problem == "missing_record":
+        report["checked_records"].pop()
+    elif problem == "universe":
+        report["query_coverage"]["input_proteins"] = 1
+    if problem:
+        with pytest.raises(ValueError):
+            module.validate_admission(report, tmp_path, problem != "not_replacement", True)
+    else:
+        assert len(module.validate_admission(report, tmp_path, True, True)) == 2
+        with pytest.raises(ValueError):
+            module.validate_admission(report, tmp_path, True)
+
+
 @pytest.mark.parametrize("change", ["old_contract", "not_admitted", "wrong_job", "wrong_memory",
     "missing_input", "conflict", "wrong_candidate", "universe", "parity", "downstream"])
 def test_reject_wrong_admission(tmp_path, change):
