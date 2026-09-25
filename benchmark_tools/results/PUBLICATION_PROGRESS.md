@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Whole-Search Gate Found Seven Native Residue Deletions (2026-09-25)
+
+22163 is terminal FAILED 1:0 after 3:15. The database audit found 984,130
+exact matches among 984,137 sequences; seven each lack one `O`. Direct
+source/dump comparison, matching production formatdb warnings and an isolated
+three-sequence native probe identify the formatter's illegal-character removal
+as the transformation. This is not exact parity and its scoring impact is
+not yet known. The gate was not bypassed; no BPO/inference was launched.
+
+See [failure evidence and next checks](QFO_RECOVERY_DATABASE_PARITY_FAILURE_22163.md)
+for IDs, positions, report hashes, probe and required explicit transformation
+contract/query-side audit/reference exposure. The merged table and failed
+report remain preserved. Whole-table HSP validation still needs execution
+after any justified, tested representation-aware admission; the failure was
+before that stage. DGX remains deferred.
+
 ## Recovered BLAST Candidate Merged (2026-09-25)
 
 Merge job **22162 completed 0:0 in 14:32**. Its terminal report is
