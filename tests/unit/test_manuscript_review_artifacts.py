@@ -1,4 +1,5 @@
 from html.parser import HTMLParser
+import hashlib
 import json
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
@@ -8,6 +9,31 @@ import pytest
 from benchmark_tools.prepare_ob_candidate_neighborhood import record
 
 ROOT = Path(__file__).resolve().parents[2] / "benchmark_tools/results"
+
+
+def test_v10_opening_retains_linked_bibliography_history():
+    html = ROOT / "PUBLICATION_MANUSCRIPT_REVIEW_20260925_v10.html"
+    text = html.read_text()
+    assert "25 September 2026" in text
+    assert "PUBLICATION_MANUSCRIPT_BIBLIOGRAPHY_PROVENANCE_20260925.md" in text
+    assert "FastME table-label title suffix" not in text
+    note = (ROOT / "PUBLICATION_MANUSCRIPT_BIBLIOGRAPHY_PROVENANCE_20260925.md").read_text()
+    assert "FastME table-label title suffix" in note
+    report = json.loads((ROOT / "manuscript_asset_review_20260925_v10.json").read_text())
+    assert report["html"]["sha256"] == record(html)["sha256"]
+    assert report["unique_targets"] == 175 and report["local_occurrences"] == 189
+    assert report["untracked_targets"] == []
+    assert hashlib.sha256((ROOT / "PUBLICATION_MANUSCRIPT_REVIEW_20260925_v10.pdf").read_bytes()).hexdigest() == "ee70c37471bc07d5b78fc022d229e4e6e7e9741e89f65442b61b646e71e39bbc"
+
+
+def test_v10_retains_three_caption_groups():
+    parsed = FigureGroups()
+    parsed.feed((ROOT / "PUBLICATION_MANUSCRIPT_REVIEW_20260925_v10.html").read_text())
+    assert len(parsed.groups) == 3
+    for group in parsed.groups:
+        assert len(group["images"]) == 1
+        assert "break-inside: avoid" in group["style"]
+        assert "Supplementary Figure:" in "".join(group["text"])
 
 
 class FigureGroups(HTMLParser):

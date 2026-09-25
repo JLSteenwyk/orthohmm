@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Manuscript Opening Condensed Without Scientific Changes (2026-09-25)
+
+Previous turns were verified waits on live 22103_16 with growing BLAST
+output. This turn still finds that job RUNNING (19:55 at latest poll), with
+22105_16 and subsequent batches waiting. No job restart or scientific
+configuration change was made; DGX remains deferred.
+
+Moved bibliography audit history verbatim from the manuscript opening to
+`PUBLICATION_MANUSCRIPT_BIBLIOGRAPHY_PROVENANCE_20260925.md`, retaining a short
+linked summary and explicit incomplete-publication status. The body from
+Study Objective onward is byte-identical to `f3d6295`; no result, figure or
+scientific citation changed. Generated dated v10 HTML/PDF and asset receipt,
+and updated the reproduction guide. Earlier review versions remain intact.
+
+The asset parser checks 189 occurrences/175 targets and the separate note's
+11 links/10 targets. The PDF has 37 pages and 11 images, with no detected
+out-of-page blocks. Visually checked the opening and all three supplementary
+caption groups on pages 1, 21 and 22; other repaginated pages remain outside
+this visual review. Sixteen renderer/artifact tests pass. The v10 review
+note records hashes, command, scientific-body identity and review limits.
+Small figure labels, further condensation, full copyediting, remaining
+analyses and publication readiness are still unresolved.
+
 ## Replacement-Aware Partial Failure Summary (2026-09-25)
 
 The previous turn completed the progress-record push; this turn confirmed

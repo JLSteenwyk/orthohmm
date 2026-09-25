@@ -1,17 +1,18 @@
 # Publication Reproduction Guide
 
-Status: 23 September 2026, incomplete working package. This guide routes
+Status: 25 September 2026, incomplete working package. This guide routes
 readers to executed workflows and their evidence; it is not an archival
 release or an assertion that every requirement is complete. Commands below
 are statistical reproduction only and do not submit scheduler jobs.
 
 ## Method And Results
 
-- [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260923_v9.md)
+- [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260925_v10.md)
   provides the dated HTML, checked local-asset inventory and citation inventory,
-  including current FastOMA results and the DGX deferral. It is not a
-  standalone archive or completed typesetting; v8 received an all-page overview
-  and v9 a targeted caption-layout check, not full-resolution copyediting.
+  including current FastOMA results and the DGX deferral. Version 10 moves
+  bibliography audit history into a linked note without changing the scientific
+  body. It is not a standalone archive or completed typesetting; v8 received
+  an all-page overview and v10 opening/caption checks, not full copyediting.
 - [Corrected figure supplements](results/PUBLICATION_CORRECTED_FIGURE_BUNDLE_20260919.md)
   include the seven-method FastOMA comparison exported at `27113f4`, with
   isolated relocated verification and retained-count arithmetic reproduction.
