@@ -13,7 +13,11 @@ COMMIT=${2:?Exact executor revision required}
 SHA=${3:?Verified recovery admission SHA256 required}
 [[ $(git -C "$EXECUTOR" rev-parse HEAD) == "$COMMIT" ]]
 git -C "$EXECUTOR" diff --quiet HEAD -- benchmark_tools
-ADMISSION="$ROOT/benchmarks/results/qfo_blast_recovery_search_admission_v1/report.json"
+case ${4:-original} in
+  original) ADMISSION="$ROOT/benchmarks/results/qfo_blast_recovery_search_admission_v1/report.json" ;;
+  replacement) ADMISSION="$ROOT/benchmarks/results/qfo_blast_replacement_search_admission_v1/report.json" ;;
+  *) printf '%s\n' 'Expected original or replacement admission mode' >&2; exit 2 ;;
+esac
 CACHE="/tmp/orthohmm-recovery-bpo-cache-${SLURM_JOB_ID:?}"
 [[ ! -e "$CACHE" && ! -L "$CACHE" ]]
 cd "$ROOT"
