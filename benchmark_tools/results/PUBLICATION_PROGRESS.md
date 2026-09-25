@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Replacement Downstream Executor Frozen (2026-09-25)
+
+Propagated the new BPO validator checksum into the native-input gate. The
+BPO preparation wrapper now accepts explicit fourth-argument `replacement`
+to select the new exact search report; original remains the default and
+unknown modes fail. No inference, conversion or scoring algorithm changed.
+Added six tests checking that downstream source pins match their current
+target modules, preventing stale contracts across the staged handoff.
+
+Focused BPO/native/conversion/scoring suites passed 225 tests in the main
+checkout, and the six pin checks passed separately. Frozen clean executor
+`benchmarks/work/publication_replacement_downstream_v1_20260925` at
+`1580bb9a4398a3c50f237b930c90f62ecccdb7ea` passed **231 tests**, no skips.
+Shell syntax was checked. The handoff guide now identifies this executor,
+the new search admission path and the required wrapper mode, superseding
+the old downstream executor for replacement evidence only.
+
+No BPO job was submitted: actual successful 22163 admission and its inspected
+digest remain required. Batch 22103_15 is RUNNING; validator 22105_15, merge
+22162 and search admission 22163 are pending. Next: admit remaining batches,
+complete merge/search validation, then launch the fresh downstream chain.
+Failure-membership and SwissTrees executors remain separate and unchanged;
+DGX remains deferred.
+
 ## Replacement Admitted And BPO Handoff Updated (2026-09-25)
 
 Replacement native task **22160_14 completed 0:0 in 13:18**; independent

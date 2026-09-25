@@ -313,3 +313,28 @@ and 90 passing tests from that clean checkout. Recheck checkout identity and
 cleanliness before use. Supply absolute paths to actual main-repository
 admissions and a fresh output path; do not substitute partial batch reports.
 Production execution remains pending complete search and native admissions.
+
+## Replacement-Aware Downstream Executor (25 September)
+
+Following the retained index-14 interruption, merge/search jobs 22150/22151
+were superseded by 22162/22163. For the new search evidence, use the clean
+downstream executor `benchmarks/work/publication_replacement_downstream_v1_20260925`
+at `1580bb9a4398a3c50f237b930c90f62ecccdb7ea`, not the earlier a1dac0f checkout.
+Its BPO-through-scoring focused suites passed 231 tests without skips,
+including six current-source pin consistency checks. Native/scoring algorithms
+and parameters are unchanged; these tests are not production admission.
+
+After actual search job 22163 completes successfully, inspect
+`benchmarks/results/qfo_blast_replacement_search_admission_v1/report.json`
+and compute its real digest. The BPO preparation wrapper now takes an optional
+fourth argument, `replacement`, after executor path, full commit and admission
+SHA256. Its default remains `original`; any other mode is rejected. Pass
+`replacement` for this handoff. Preparation binds to the new exact report,
+merge candidate, validator job and frozen search executor. It must not be
+launched with a placeholder or inferred digest.
+
+The canonical fresh BPO, native and scoring output paths remain as above;
+none have been produced by this replacement chain yet. Use this new executor
+for subsequent BPO admission/native preparation so their source pins agree.
+Separate SwissTrees consolidation and failure-membership executors remain
+unchanged. Original failed-attempt evidence and earlier executors are retained.
