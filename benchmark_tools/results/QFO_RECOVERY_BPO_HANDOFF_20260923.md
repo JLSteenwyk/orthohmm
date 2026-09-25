@@ -28,6 +28,12 @@ Native inference **22170** is RUNNING using this exact digest and frozen
 executor, with 180 CPUs / 900 GiB and 64 pair workers. Its destination is
 `benchmarks/results/qfo_blast_recovery_native_v1`. Do not launch duplicates.
 Native completion, separate output admission and scoring remain required.
+Independent output validator **22171** is queued with `afterok:22170`, using
+the same frozen executor for all three revision arguments, two CPUs and
+64 GiB. Its fresh destination is
+`benchmarks/results/qfo_blast_recovery_native_admission_v1`; inspect its
+terminal state and successful report before pair conversion. Do not submit
+a duplicate validator.
 Original held jobs remain untouched; DGX timing remains deferred.
 
 The historical membership executor below predates this native-representation

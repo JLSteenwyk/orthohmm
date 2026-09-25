@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Native Output Validator Queued (2026-09-25)
+
+Native inference **22170** remains RUNNING, observed in input-provenance
+verification with active PID 1392614 and increasing read counters. The
+preceding turns were verified waits; no restart or duplicate was submitted.
+
+Queued independent validator **22171** with `afterok:22170`, two CPUs,
+64 GiB, 24 hours and no requeue, using the frozen wrapper and clean executor
+`296882422f2d70c096c8d5584082c16217f36add` for validator, native runner and BPO
+admission. Validator source SHA256 is
+`3c02b1a701751cf98578107004a85b095f31aeb90041d17459f2caab20212821`.
+Its fresh destination is
+`benchmarks/results/qfo_blast_recovery_native_admission_v1`.
+It requires successful terminal native accounting and independently checks
+group/partition agreement, staged inputs, indexes, source configuration and
+runtime provenance before setting `conversion_authorized=true`. Submission
+is not evidence that those checks passed. Pair conversion still requires
+the actual successful validator report and its digest. DGX remains deferred.
+
 ## BPO Admitted; Native OrthoMCL Launched (2026-09-25)
 
 Independent admission **22168 completed 0:0 in 1:08:13**. The
