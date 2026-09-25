@@ -18,22 +18,34 @@ from benchmark_tools.run_simulation_methods import read_frozen
 from benchmark_tools.verify_orthomcl_python_runtime import verify_runtime
 
 ADMITTER = "a21c65f2b449d828e3fefc86148cbf4fd87b6ade"
+REPLACEMENT_ADMITTER = "198014bbaab12465620f1c6572a03459cdb1759e"
 
 
-def validate_admission(admission, root):
+def admission_contract(root, path):
+    original = root / "benchmarks/results/qfo_blast_recovery_search_admission_v1/report.json"
+    replacement = root / "benchmarks/results/qfo_blast_replacement_search_admission_v1/report.json"
+    if path == original:
+        return False, "22151", ADMITTER, root / "benchmarks/work/blast_recovery_search_admission_v1_20260923"
+    if path == replacement:
+        return True, "22163", REPLACEMENT_ADMITTER, root / "benchmarks/work/blast_replacement_search_admission_v1_20260925"
+    raise ValueError("Unexpected recovered admission path")
+
+
+def validate_admission(admission, root, replacement=False):
     if (admission["status"] != "recovered_orthomcl_search_evidence_verified"
             or admission["search_admitted"] is not True
             or any(admission[k] is not False for k in (
                 "accuracy_admitted", "publication_ready", "downstream_execution_authorized"))):
         raise ValueError("Require independently admitted recovered search evidence")
-    expected = dict(JobID="22150", State="COMPLETED", ExitCode="0:0", NodeList="bizon", AllocCPUS="2", ReqMem="64G")
+    expected = dict(JobID="22162" if replacement else "22150", State="COMPLETED", ExitCode="0:0", NodeList="bizon", AllocCPUS="2", ReqMem="64G")
     if any(admission["scheduler"].get(k) != v for k, v in expected.items()):
         raise ValueError("Wrong admitted merge scheduler identity")
     if (admission["query_coverage"]["input_proteins"] != 984137
             or admission["database_content"]["input_sequences"] != 984137
             or admission["database_content"]["exact_sequence_parity"] is not True):
         raise ValueError("Wrong recovered search universe or database parity")
-    paths = [root / "benchmarks/results/qfo_blast_recovery_merge_v1/table/all.blast.candidate",
+    merge = "qfo_blast_replacement_merge_v1" if replacement else "qfo_blast_recovery_merge_v1"
+    paths = [root / f"benchmarks/results/{merge}/table/all.blast.candidate",
              root / "benchmarks/results/qfo_corrected_orthomcl_v1/work/all.fa"]
     inputs = []
     for path in paths:
@@ -47,20 +59,17 @@ def validate_admission(admission, root):
 
 
 def verify_admission(root, path, digest):
-    expected_path = root / "benchmarks/results/qfo_blast_recovery_search_admission_v1/report.json"
-    if path != expected_path:
-        raise ValueError("Unexpected recovered admission path")
+    replacement, job, commit, executor = admission_contract(root, path)
     admission = read_frozen(path, digest)
-    inputs = validate_admission(admission, root)
-    accounting = subprocess.check_output(["sacct", "-j", "22151", "--parsable2",
+    inputs = validate_admission(admission, root, replacement)
+    accounting = subprocess.check_output(["sacct", "-j", job, "--parsable2",
         "--format=JobID,State,ExitCode,NodeList,AllocCPUS,ReqMem,Elapsed"], text=True)
-    rows = [r for r in csv.DictReader(io.StringIO(accounting), delimiter="|") if r["JobID"] == "22151"]
+    rows = [r for r in csv.DictReader(io.StringIO(accounting), delimiter="|") if r["JobID"] == job]
     if len(rows) != 1 or tuple(rows[0][k] for k in (
             "State", "ExitCode", "NodeList", "AllocCPUS", "ReqMem")) != (
             "COMPLETED", "0:0", "bizon", "2", "64G"):
-        raise ValueError("Require successfully completed recovery validator 22151")
-    executor = root / "benchmarks/work/blast_recovery_search_admission_v1_20260923"
-    if subprocess.check_output(["git", "-C", str(executor), "rev-parse", "HEAD"], text=True).strip() != ADMITTER:
+        raise ValueError("Require successfully completed recovery validator " + job)
+    if subprocess.check_output(["git", "-C", str(executor), "rev-parse", "HEAD"], text=True).strip() != commit:
         raise ValueError("Changed recovery validator executor")
     subprocess.run(["git", "-C", str(executor), "diff", "--exit-code", "HEAD", "--", "benchmark_tools"], check=True)
     source = record(executor / "benchmark_tools/admit_blast_recovery_search.py")

@@ -1,5 +1,39 @@
 # Publication Progress
 
+## Replacement Admitted And BPO Handoff Updated (2026-09-25)
+
+Replacement native task **22160_14 completed 0:0 in 13:18**; independent
+validator **22161 completed 0:0 in 14 seconds**. Its report
+`benchmarks/work/qfo_blast_recovery_admission_14_20260923.json` has SHA256
+`f0ca4955e9fb4b7694903beeffe74e09ae816ac5a19314760f6a726061d500c8`.
+It admits this batch only and retains the original TIMEOUT identity and all
+five interrupted-attempt records, with `partial_rows_reused=false`.
+The 5,000 queries comprise 4,895 with hits, 105 no-hit without logged failure
+and zero logged failures; 674,740 HSP rows and 439,709 directed pairs.
+Fifteen of twenty batches are now admitted. Original task **22103_15** started
+automatically after successful replacement validation. Whole-search merging,
+full-table admission and scores remain pending.
+
+BPO preparation now recognizes exactly two search-admission contracts. The new
+canonical replacement path binds to validator 22163, frozen executor
+`198014bbaab12465620f1c6572a03459cdb1759e`, merge 22162 and its fresh candidate
+path. Original-path checks retain their original identities. Caller-supplied
+report checksum, complete status, exact database parity, scheduler allocation,
+source binding and checked-record hashing remain required. Conversion logic,
+cutoff and canonical fresh BPO output are unchanged.
+
+Preparation source SHA256:
+`211c85f2ffdcf76116a7a54944183a8a0e2a0a21d0d83367a759fe5d6e66d4fb`.
+The independent BPO validator pin was updated; its new SHA256 is
+`367cd958254524cbd18039c7cacb3133f07a853ed29a231594bfe3cc79631e9d`.
+Focused BPO handoff/admission suites passed **52 tests**, including both
+contracts, mixed attempts, missing parity, wrong universe and conflicting
+records. No BPO job was submitted or output admitted. Next: propagate the
+BPO validator/source pins through downstream native/scoring contracts and
+freeze the revised downstream executor; only launch preparation after actual
+search admission 22163 succeeds and its digest is inspected. DGX remains
+deferred; all old failed-attempt evidence remains retained.
+
 ## Replacement Merge And Independent Search Audit Queued (2026-09-25)
 
 Frozen merge executor `benchmarks/work/blast_replacement_merge_v1_20260925`
