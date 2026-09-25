@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Native Representation Validator Submitted (2026-09-25)
+
+Frozen executor `benchmarks/work/blast_native_representation_admission_v1_20260925`
+at `42e6dcff5170d17c490273ab93229833b91a6b23` is clean and passed all
+44 focused tests. Submitted its native-representation wrapper with that
+absolute executor path and full revision. Initial sbatch failed with
+`Job dependency problem` and created no job. Fresh sacct confirmed 22162
+COMPLETED 0:0 in 14:32; resubmission with `--dependency=` cleared only the
+obsolete scheduler dependency and returned **22166**. The validator's own
+completed-merge accounting and all provenance checks remain required.
+
+This is a fresh audit of the preserved candidate, not a BLAST rerun. Inspect
+22166's live/terminal state and new report before drawing any admission
+conclusion. No downstream execution or accuracy result is authorized yet.
+
 ## Explicit Native Representation Validation Path (2026-09-25)
 
 Added replacement-only `--reviewed-native-o` to search admission. Exact parity
