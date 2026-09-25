@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Nineteenth Recovery Batch Admitted (2026-09-25)
+
+The preceding turns were verified waits on live BLAST and Memcheck jobs.
+Native batch 22103_18 completed 0:0 in **20:21** and independent validator
+22105_18 completed 0:0 in **19 seconds**. Its report
+`benchmarks/work/qfo_blast_recovery_admission_18_20260923.json` has SHA256
+`2597e663b648a7f5d90b94902fc034282847a812f8f761e9170660cb0ba143b2`.
+All 5,000 queries are accounted for: 4,976 with hits, 24 without hits and
+without logged failure, and zero logged failed queries. The batch contains
+1,484,142 HSP rows and 1,040,836 distinct directed pairs; no HSP exceeds the
+frozen E-value cutoff. Structural whole-database absent-query counts are not
+batch failures. Batch admission is true; whole-search admission and
+publication readiness remain false.
+
+**19 of 20 batches are individually admitted.** Final native batch 22103_19
+is RUNNING (0:28 at observation); its validator 22105_19, merge 22162 and
+whole-search validator 22163 remain dependent. Memcheck 22164 is still
+RUNNING (28:38), without a terminal diagnostic result. No job was restarted
+or scientific setting changed. DGX remains deferred.
+
+The clean replacement downstream executor at
+`1580bb9a4398a3c50f237b930c90f62ecccdb7ea` was rechecked. The selected
+BPO-through-scoring and source-pin test suites passed **234 tests in 9.48s**.
+These fixture checks do not admit future production outputs. Wait for actual
+successful search admission and its digest before BPO preparation.
+
 ## Eighteenth Recovery Batch Admitted (2026-09-25)
 
 Previous turns were verified waits on live 22103_17 and Memcheck 22164.
