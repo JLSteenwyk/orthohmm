@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Failure Membership Native-Representation Handoff (2026-09-25)
+
+The failure-membership audit previously accepted only the exact-parity search
+status. Added explicit `--native-representation-root` opt-in, delegating to
+the existing strict search admission verifier (pinned path, completed job,
+frozen source, reviewed transformations and checked records). It preserves
+the representation evidence and caveats in the membership report; default
+exact-parity behavior remains separate. This does not change inference,
+score any output, or infer the effect of the seven deleted residues.
+
+All **86** focused membership, reviewed-database and BPO handoff/admission
+tests passed. The first test invocation referenced a nonexistent test file
+and ran no tests; the corrected invocation passed. No production membership
+audit has run. Freeze a new membership executor before that later step;
+the old 92fd9e5 executor does not support this opt-in.
+
+Search validator **22166** remains RUNNING at 41:50. Its live process
+1179797 has accumulated 41:39 CPU at 41:49 elapsed, about 2.5 GiB RSS.
+No terminal result or downstream authorization is inferred. The separately
+prepared downstream executor at `296882422f2d70c096c8d5584082c16217f36add`
+remains the BPO-through-scoring handoff; no job has been submitted from it.
+DGX work remains deferred at the user's request.
+
 ## Native Representation Downstream Contract Prepared (2026-09-25)
 
 BPO preparation now recognizes only the exact new path, validator job 22166,

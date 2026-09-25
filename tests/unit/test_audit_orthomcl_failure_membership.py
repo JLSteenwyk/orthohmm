@@ -112,3 +112,42 @@ def test_cli_writes_content_audit_once(tmp_path):
     before = module.record(output)
     assert subprocess.run(command, capture_output=True).returncode != 0
     assert module.record(output) == before
+
+
+@pytest.mark.parametrize("problem", [None, "no_opt_in", "verification", "changed", "record"])
+def test_native_representation_requires_verified_opt_in(tmp_path, monkeypatch, problem):
+    native, report = admitted_fixture(tmp_path)
+    report.update(status="recovered_search_native_representation_verified",
+                  database_representation=dict(exact_sequence_parity=False,
+                      limitations=["Native O deletions retained; impact not measured."]))
+    paths = [tmp_path / n for n in ("search.json", "native.json")]
+    for path, value in zip(paths, (report, native)):
+        path.write_text(json.dumps(value))
+    evidence = module.record(paths[0])
+    if problem == "record":
+        evidence["sha256"] = "0" * 64
+    calls = []
+
+    def verify(root, path, digest):
+        calls.append((root, path, digest))
+        if problem == "verification":
+            raise ValueError("Representation verification failed")
+        verified = dict(report)
+        if problem == "changed":
+            verified["search_admitted"] = False
+        return verified, [], [evidence], {}, ""
+
+    monkeypatch.setattr(module, "verify_admission", verify)
+    args = (paths[0], module.record(paths[0])["sha256"], paths[1], module.record(paths[1])["sha256"])
+    root = None if problem == "no_opt_in" else tmp_path
+    if problem:
+        with pytest.raises(ValueError):
+            module.audit(*args, native_representation_root=root)
+    else:
+        result = module.audit(*args, native_representation_root=root)
+        assert result["database_representation"]["exact_sequence_parity"] is False
+        assert report["database_representation"]["limitations"][0] in result["limitations"]
+        assert result["failed_queries"] == 3
+        assert result["accuracy_admitted"] is False
+        assert evidence in result["checked_records"]
+    assert calls == ([] if root is None else [(root, paths[0], args[1])])

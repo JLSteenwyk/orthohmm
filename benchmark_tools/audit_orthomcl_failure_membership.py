@@ -11,6 +11,7 @@ from benchmark_tools.audit_orthomcl_native_groups import HEADER, partition, raw_
 from benchmark_tools.orthomcl_matrix_to_pairwise import load_species
 from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
 from benchmark_tools.run_simulation_methods import read_frozen
+from benchmark_tools.prepare_blast_recovery_bpo import verify_admission
 
 
 def describe(search, groups, mcl, index, gg):
@@ -61,10 +62,18 @@ def describe(search, groups, mcl, index, gg):
         records=sorted(rows, key=lambda r: r["gene"]))
 
 
-def audit(search_path, search_sha, native_path, native_sha):
+def audit(search_path, search_sha, native_path, native_sha, native_representation_root=None):
     search = read_frozen(search_path, search_sha)
     native = read_frozen(native_path, native_sha)
-    if (search["status"] != "recovered_orthomcl_search_evidence_verified" or search["search_admitted"] is not True
+    expected_status = "recovered_orthomcl_search_evidence_verified"
+    representation_records = []
+    if native_representation_root is not None:
+        expected_status = "recovered_search_native_representation_verified"
+        verified, _, representation_records, _, _ = verify_admission(
+            native_representation_root, search_path, search_sha)
+        if verified != search:
+            raise ValueError("Search changed during representation verification")
+    if (search["status"] != expected_status or search["search_admitted"] is not True
             or native["status"] != "recovered_orthomcl_native_outputs_admitted"
             or native["conversion_authorized"] is not True
             or native["query_coverage"] != search["query_coverage"]):
@@ -85,7 +94,8 @@ def audit(search_path, search_sha, native_path, native_sha):
         selected.append(matches[0])
     if selected[0] != native["native_groups"]:
         raise ValueError("Final groups differ from admitted output")
-    checked = [record(search_path), record(native_path), group_record, *group_audit["checked_records"]]
+    checked = [record(search_path), record(native_path), group_record,
+               *group_audit["checked_records"], *representation_records]
     for item in checked:
         check(item)
     result = describe(search["query_coverage"], *[Path(r["path"]) for r in selected])
@@ -102,6 +112,11 @@ def audit(search_path, search_sha, native_path, native_sha):
             "Incoming hits and final-group membership do not repair failed outgoing search or prove orthology.",
             "Native singleton clusters are not added to final output; unindexed proteins remain distinct.",
             "No reference exposure, mapping validation or counterfactual accuracy effect is measured here."])
+    if native_representation_root is not None:
+        result["database_representation"] = search["database_representation"]
+        result["limitations"].extend(search["database_representation"]["limitations"])
+        result["helpers"].extend(record(Path(__file__).with_name(n)) for n in (
+            "prepare_blast_recovery_bpo.py", "reviewed_legacy_database.py"))
     return result
 
 
@@ -111,10 +126,13 @@ if __name__ == "__main__":
         parser.add_argument("--" + name, type=Path, required=True)
     for name in ("search", "native"):
         parser.add_argument("--" + name + "-sha256", required=True)
+    parser.add_argument("--native-representation-root", type=Path,
+                        help="Explicitly verify the reviewed legacy-residue search contract")
     args = parser.parse_args()
     if args.output.exists() or args.output.is_symlink():
         raise FileExistsError(args.output)
-    result = audit(args.search.resolve(), args.search_sha256, args.native.resolve(), args.native_sha256)
+    root = args.native_representation_root.resolve() if args.native_representation_root else None
+    result = audit(args.search.resolve(), args.search_sha256, args.native.resolve(), args.native_sha256, root)
     with args.output.open("x") as stream:
         json.dump(result, stream, indent=2, sort_keys=True, allow_nan=False)
         stream.write("\n")
