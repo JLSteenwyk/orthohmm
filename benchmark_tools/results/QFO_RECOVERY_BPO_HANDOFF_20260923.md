@@ -10,11 +10,15 @@ Full-table coverage includes 53 failed queries, 21 with incoming hits and
 none with outgoing hits. This is search evidence, not completed inference
 or benchmark scoring. The seven reviewed native O deletions remain explicit.
 
-BPO preparation **22167** is running from clean executor
+BPO preparation **22167 completed 0:0 in 1:37:27** from clean executor
 `benchmarks/work/publication_native_representation_downstream_v1_20260925`
 at `296882422f2d70c096c8d5584082c16217f36add`, using the actual report digest
 and fourth wrapper argument `native-representation`. Do not launch a duplicate.
-Independent BPO admission **22168** is queued with `afterok:22167`, using
+Its final report status is `recovered_bpo_prepared_pending_admission`, SHA256
+`27f5102ebfb87fdef00d7f90c7e62d785099f9e2d08dd6a72b5007acf7da4cca`;
+the [retained copy](qfo_recovered_bpo_preparation_22167.json) preserves this
+preparation evidence, not independent admission.
+Independent BPO admission **22168** is now RUNNING after `afterok:22167`, using
 the same frozen executor and preparer revision. Do not submit a second
 admission job. It independently verifies terminal preparation accounting,
 content and indexes; its expected report is

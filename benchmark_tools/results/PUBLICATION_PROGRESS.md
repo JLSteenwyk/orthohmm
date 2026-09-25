@@ -1,5 +1,29 @@
 # Publication Progress
 
+## BPO Preparation Completed; Independent Validation Started (2026-09-25)
+
+Scheduler confirms **22167 COMPLETED 0:0 in 1:37:27** and dependent **22168
+RUNNING**. The final preparation report status is
+`recovered_bpo_prepared_pending_admission`, not checkpoint admission.
+Preserved verbatim as `qfo_recovered_bpo_preparation_22167.json` (375921 bytes,
+SHA256 `27f5102ebfb87fdef00d7f90c7e62d785099f9e2d08dd6a72b5007acf7da4cca`).
+The nested checkpoint report is retained as
+`qfo_recovered_bpo_checkpoint_22167.json` (8573 bytes, SHA256
+`bacee37d263d26c51508afe961d6bd6ddc2e8dd01f3f9eeae46ccd46504f7397`),
+matching the parent's recorded identity. It reports
+`bpo_checkpoint_content_and_indexes_verified`: 222903808 records, 979827
+queries and 222903809 offsets including EOF. The parent reports the expected
+frozen preparer source and completed runtime recheck; accuracy admission,
+publication readiness and downstream execution authorization remain false.
+
+Independent job 22168 must complete its own content/index and provenance
+checks before native inference. Its output is
+`benchmarks/results/qfo_blast_recovery_bpo_admission_v1/report.json`.
+Use its actual successful report digest for the frozen native runner; do not
+substitute either preparation report or release old held jobs. The preceding
+turns were verified waits through content, index, and final identity checks.
+No controlled timing claim is made from the shared-host elapsed duration.
+
 ## BPO Content Audit Finished; Native Index Build Active (2026-09-25)
 
 Preparation job 22167 has produced `checkpoint/content.json` with status
