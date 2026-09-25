@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Seven-Protein Search Trace Launched (2026-09-25)
+
+The preceding turn was a verified wait on 22167 and established that retained
+whole-table diagnostics do not contain hit-level traces for the seven reviewed
+native O deletions. Added `trace_native_residue_hits.py`: a read-only, single-pass
+table scan that hashes the same bytes inspected, requires the supplied full
+row count and SHA256, and extracts each incident HSP once. Per-protein summaries
+distinguish incoming/outgoing HSP counts, distinct partners, self hits and
+reciprocal partners. Exact identifiers prevent substring matches. Failed scans
+retain an explicit failure report and unverified partial subset, never success.
+
+Six tests passed in main and in clean frozen executor
+`benchmarks/work/native_residue_hit_trace_v1_20260925` at
+`e1e96f2d058f4cdaa5875119d0e25bd1e07a8226`. Coverage includes repeated HSPs,
+directionality, self/reciprocal hits, absent targets, malformed rows, identity
+mismatch and refusal to overwrite. The scanner uses the pinned seven-deletion
+review. Production job **22169** is RUNNING on bizon with one CPU, 8 GiB,
+two hours, no requeue, and a minimal environment using
+`/home/bizon/anaconda3/bin/python -B -m benchmark_tools.trace_native_residue_hits`.
+It runs from that frozen executor against the recovered `all.blast.candidate`,
+requiring 401908030 rows and SHA256
+`2d395e39975cbb73c0bd33f016836aa0621e4101b378d809f2579ac37a42f117`,
+read directly from the completed search audit's `table.json` records.
+
+Output is `benchmarks/work/qfo_native_residue_hit_trace_20260925` and log is
+`benchmarks/work/qfo_residue_hit_trace_22169.log`. Await terminal accounting,
+verified output and source identity before interpreting counts. This is a
+descriptive trace, not independent search admission, final-group membership,
+or a counterfactual accuracy effect. Preparation 22167 remains RUNNING and
+independent BPO validation 22168 remains PENDING. No DGX work was attempted.
+
 ## Reproduction Navigation Updated (2026-09-25)
 
 Updated the reproduction guide from manuscript preview v10 to v11, retaining
