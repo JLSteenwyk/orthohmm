@@ -49,7 +49,9 @@ def validate_merge(status, source, directory, replacement=False):
     return {key: candidate[key] for key in ("path", "bytes", "sha256")}
 
 
-def admit(root, output, replacement=False):
+def admit(root, output, replacement=False, reviewed_native_o=False):
+    if reviewed_native_o and not replacement:
+        raise ValueError("Reviewed native representation requires replacement recovery")
     if output.exists() or output.is_symlink():
         raise FileExistsError(output)
     job = REPLACEMENT_MERGE_JOB if replacement else MERGE_JOB
@@ -96,7 +98,13 @@ def admit(root, output, replacement=False):
         plan = verify(plan_path, runtime_path)
         fasta = Path(plan["output_root"]) / "work/all.fa"
         database = audit_database(fasta, runtime_path, output / "database")
-        if (database["status"] != "database_exact_sequence_parity_verified"
+        representation = None
+        if reviewed_native_o:
+            from benchmark_tools.reviewed_legacy_database import verify as verify_representation
+            representation = verify_representation(root, database)
+            report["database_representation"] = representation
+            checked = unique_records([*checked, *representation["checked_records"]])
+        elif (database["status"] != "database_exact_sequence_parity_verified"
                 or database["content"]["input_sequences"] != 984137):
             raise ValueError("Recovered search database lacks exact corrected-input parity")
         table = audit_candidate(Path(candidate_record["path"]), fasta,
@@ -124,6 +132,9 @@ def admit(root, output, replacement=False):
                 "Logged failed queries remain explicit; incoming hits do not repair outgoing failures.",
                 "BPO, clustering, failure-impact analysis and scoring require separate admission.",
                 "No downstream job release or matched-resource timing claim is authorized."])
+        if representation is not None:
+            report["status"] = "recovered_search_native_representation_verified"
+            report["limitations"].extend(representation["limitations"])
     except BaseException as error:
         report.update(status="recovery_search_admission_failed", error_type=type(error).__name__, error=str(error))
         raise
@@ -137,5 +148,7 @@ if __name__ == "__main__":
     parser.add_argument("--root", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--replacement", action="store_true")
+    parser.add_argument("--reviewed-native-o", action="store_true",
+                        help="Require the exact pinned seven-deletion native representation review")
     args = parser.parse_args()
-    admit(args.root.resolve(), args.output.absolute(), args.replacement)
+    admit(args.root.resolve(), args.output.absolute(), args.replacement, args.reviewed_native_o)

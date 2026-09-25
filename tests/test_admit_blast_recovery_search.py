@@ -85,18 +85,22 @@ def test_existing_output_preserved(tmp_path):
         module.admit(tmp_path, output)
 
 
-def orchestration(tmp_path, monkeypatch, failure=None):
-    executor = tmp_path / "benchmarks/work/blast_recovery_merge_v1_20260923/benchmark_tools"
+def orchestration(tmp_path, monkeypatch, failure=None, replacement=False):
+    executor = tmp_path / ("benchmarks/work/blast_replacement_merge_v1_20260925/benchmark_tools" if replacement
+                           else "benchmarks/work/blast_recovery_merge_v1_20260923/benchmark_tools")
     executor.mkdir(parents=True)
     local = Path(module.__file__).with_name("run_blast_recovery_merge.py")
     (executor / local.name).write_bytes(local.read_bytes())
-    directory = tmp_path / "benchmarks/results/qfo_blast_recovery_merge_v1"
+    directory = tmp_path / ("benchmarks/results/qfo_blast_replacement_merge_v1" if replacement
+                            else "benchmarks/results/qfo_blast_recovery_merge_v1")
     (directory / "table").mkdir(parents=True)
     candidate = directory / "table/all.blast.candidate"
     candidate.write_text("fixture candidate\n")
     log = directory / "selected.blast.log"
     log.write_text("")
     report = status(directory)
+    if replacement:
+        report["job_id"] = module.REPLACEMENT_MERGE_JOB
     report["source"] = module.record(executor / local.name)
     report["candidate"].update(module.record(candidate), rows=3, query_blocks=2)
     report.update(selected_log=module.record(log), checked_inputs=[], diagnostics={}, replay_coverage={})
@@ -106,11 +110,13 @@ def orchestration(tmp_path, monkeypatch, failure=None):
     for name in ("qfo_corrected_orthomcl_prepared_20260918.json", "qfo_corrected_legacy_blast_runtime_20260918.json"):
         (results / name).write_text("{}\n")
     def subprocess_output(command, **kwargs):
-        return accounting() if command[0] == "sacct" else module.MERGE_COMMIT + "\n"
+        if command[0] == "sacct":
+            return accounting().replace(module.MERGE_JOB, module.REPLACEMENT_MERGE_JOB) if replacement else accounting()
+        return (module.REPLACEMENT_MERGE_COMMIT if replacement else module.MERGE_COMMIT) + "\n"
     monkeypatch.setattr(module.subprocess, "check_output", subprocess_output)
     monkeypatch.setattr(module.subprocess, "run", lambda *a, **k: None)
     calls = []
-    def prepare(root, output):
+    def prepare(root, output, replacement=False):
         calls.append("prepare")
         if failure == "prepare":
             raise ValueError("Injected prerequisite failure")
@@ -163,3 +169,27 @@ def test_orchestration_failure_never_admits(tmp_path, monkeypatch, failure):
     assert result["search_admitted"] is result["downstream_execution_authorized"] is False
     if failure in {"prepare", "database"}:
         assert "table" not in calls
+
+
+@pytest.mark.parametrize("failure", [None, "representation", "table", "rows", "diagnostics", "mutation"])
+def test_reviewed_native_mode_still_requires_whole_table(tmp_path, monkeypatch, failure):
+    from benchmark_tools import reviewed_legacy_database
+    calls = orchestration(tmp_path, monkeypatch, failure, replacement=True)
+    def representation(root, database):
+        calls.append("representation")
+        if failure == "representation":
+            raise ValueError("Unexpected transformation")
+        return dict(exact_sequence_parity=False, checked_records=[], limitations=["Native O deletion retained"])
+    monkeypatch.setattr(reviewed_legacy_database, "verify", representation)
+    if failure:
+        with pytest.raises(ValueError):
+            module.admit(tmp_path, tmp_path / "admission", True, True)
+        result = json.loads((tmp_path / "admission/report.json").read_text())
+        assert result["search_admitted"] is False
+    else:
+        result = module.admit(tmp_path, tmp_path / "admission", True, True)
+        assert result["status"] == "recovered_search_native_representation_verified"
+        assert result["database_representation"]["exact_sequence_parity"] is False
+        assert result["search_admitted"] is True
+        assert result["downstream_execution_authorized"] is False
+        assert "table" in calls

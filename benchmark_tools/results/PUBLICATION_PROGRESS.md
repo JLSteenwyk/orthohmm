@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Explicit Native Representation Validation Path (2026-09-25)
+
+Added replacement-only `--reviewed-native-o` to search admission. Exact parity
+remains the default. The opt-in binds the immutable descriptive report digest,
+rechecks its recorded evidence, and requires the fresh database content to
+match all seven reviewed changes, 984,130 exact sequences and residue totals.
+Unknown differences fail. It retains `exact_sequence_parity=false`, records
+the transformations and uses distinct success status
+`recovered_search_native_representation_verified` only after the unchanged
+full HSP, coverage, diagnostic and provenance checks pass. Downstream
+authorization and accuracy/publication flags remain false.
+
+The 44 focused contract/orchestration tests pass, including table-failure
+paths in the new mode. A stale existing prerequisite mock was updated to
+accept the replacement argument already used by production; no production
+prerequisite was weakened. New wrapper requests two CPUs, 64 GiB, 24 hours,
+no requeue, and fresh `qfo_blast_native_representation_admission_v1` output.
+Freeze and verify its checkout before submission. Original failed job 22163
+and all data remain preserved. No downstream BPO pins have been changed yet.
+
+This is explicit acceptance of documented native comparator representation,
+not a claim of exact input parity or negligible impact. Reference exposure
+and the effects of the seven affected proteins still require analysis.
+
 ## Native Residue Transformation Audit And Query Probe (2026-09-25)
 
 Added `describe_legacy_residue_deletions.py` as a separate descriptive audit;
