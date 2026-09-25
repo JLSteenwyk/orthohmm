@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Sixteenth Recovery Batch Admitted (2026-09-25)
+
+Previous turns were verified waits on live 22103_15, with growing output.
+Native execution completed 0:0 in **16:55** and independent admission
+22105_15 completed 0:0 in **17 seconds**. Batch **22103_16** is now RUNNING.
+Sixteen of twenty replay batches are individually admitted, including the
+explicitly preserved replacement at index 14. Merge 22162 and whole-search
+admission 22163 remain pending; no final native groups or scores are implied.
+
+Admission `benchmarks/work/qfo_blast_recovery_admission_15_20260923.json`
+has SHA256 `d9d6bece071e579a0ff9172dfefc8aac2c01b0c7c663ec5c3054dc1e9ed9e2f5`.
+Its 5,000 queries comprise 4,970 with hits, 29 no-hit queries without logged
+failure and one failed query: `sp|P62125|RL41_ORYSJ`, length 25 residues.
+The failure has setup/statistics diagnostics (unable to calculate
+Karlin-Altschul parameters), with no outgoing, self or incoming hits in this
+batch. Incoming hits elsewhere, final membership and accuracy effects remain
+unknown. The batch contains 1,086,062 HSP rows and 755,790 directed pairs.
+
+The batch admission remains `search_admitted=false` and
+`publication_ready=false`. No search parameters or dependencies changed,
+and no retry was performed. Existing partial failure reports remain historical
+subsets; this entry records the new batch rather than claiming a fresh
+whole-search failure analysis. DGX remains deferred.
+
 ## Replacement Downstream Executor Frozen (2026-09-25)
 
 Propagated the new BPO validator checksum into the native-input gate. The
