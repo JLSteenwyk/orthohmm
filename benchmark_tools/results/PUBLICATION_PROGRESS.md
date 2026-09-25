@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Replacement Validator Frozen And Queued (2026-09-25)
+
+Implemented an opt-in replacement path in `admit_blast_recovery_batch.py`:
+only index 14 and native task `22160_14` are accepted. Original behavior remains
+the default. Replacement admission requires the original `22103_14` TIMEOUT
+identity and five preserved file hashes, as well as the existing full native
+contract, scheduler, output, query-block and row checks. The report retains
+original-attempt provenance and explicitly records no partial-row reuse.
+No whole-search or accuracy admission is implied.
+
+The frozen clean executor is
+`benchmarks/work/blast_replacement_admission_v1_20260925` at
+`55e20ecc4eed86766b42f9c5a6ff1c8cf214f15f`. All **49 tests passed** both in
+the working checkout and the frozen checkout; shell syntax passes. Tests cover
+original/replacement success and failure paths, wrong job/index, live/duplicate
+tasks, changed original bytes/inventory, and output refusal. A real read-only
+check from the frozen executor verified all five preserved files against fresh
+original-task accounting.
+
+Validator source SHA256:
+`5b5d4abb0aaf08d88e56d1df5b74a306445fe522652d8b03282fc43752767c98`.
+Wrapper `qfo_blast_replacement_admit_20260925.sh` SHA256:
+`36f98fcebdb1ffc5abd1107aa4af61490688de9aa7d24e7113365f4881c1231b`.
+Submitted **22161**, two CPUs/64 GiB/four hours, afterok `22160_14`, passing
+the absolute executor path and full commit above. It writes the fresh index-14
+admission at the existing canonical path, refusing any preexisting file.
+
+Only native task `22103_15` was reconnected: dependency now `afterok:22161`.
+Thus the remaining original native/admission chain can continue only after
+replacement validation succeeds. Old `22105_14` remains unsatisfied and its
+history is retained. Merge `22150` and search admission `22151` remain pending;
+their old pinned job/source contracts still need explicit replacement support
+and must not be used unchanged. No completed admissions were overwritten.
+Replacement search remains live. DGX and unrelated jobs remain untouched.
+
 ## Host Interruption And Selective Batch Replacement (2026-09-25)
 
 The last turn was a verified wait on 22103_14, interrupted during sleep.
