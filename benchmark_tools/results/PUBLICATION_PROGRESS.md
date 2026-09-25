@@ -1,5 +1,44 @@
 # Publication Progress
 
+## All Replay Batches Validated; Merge Running (2026-09-25)
+
+Native final batch 22103_19 completed 0:0 in **16:21**; validator 22105_19
+completed 0:0 in **17 seconds**. Admission report
+`benchmarks/work/qfo_blast_recovery_admission_19_20260923.json` has SHA256
+`ed944804d384f17181de854bac88feeef9663fa967972a92b34037075fa7a43d`.
+Its 3,913 queries comprise 3,901 with hits, 12 without hits and without
+logged failure, and zero logged failures. The batch contains 1,237,535 HSPs
+and 872,252 distinct directed pairs, with no HSP above the frozen cutoff.
+All **20 replay batches are individually admitted**, including the verified
+replacement for index 14. This is not yet whole-search admission.
+
+Merge 22162 is RUNNING (0:35 at observation); whole-search admission 22163
+remains dependent. Do not launch BPO conversion before its successful actual
+report and digest are available. Original interrupted evidence is retained.
+
+Memcheck diagnostic 22164 terminated **FAILED 1:0 in 43:41**, with its one
+instrumented child returning **97**. Complete XML parses with RUNNING and
+FINISHED states, no fatal_signal element, and 4 InvalidRead, 5 UninitCondition,
+8,128 Leak_PossiblyLost and 62 Leak_DefinitelyLost error records. These are
+XML record counts, not unique affected allocations or proven causes of the
+earlier crash. No suppression or retry was introduced. The output file hash
+matches the previous GDB diagnostic, but this does not admit the seed or
+establish a fix. Accuracy and publication flags remain false.
+
+Terminal evidence under `benchmarks/results/qfo_cpm_refinement_memcheck_diagnostic_v1`:
+
+- `status.json`: `33d543f8d47b1df8175030aa209a1ea19406545f37401ba1b7c3f467ebea3d3a`.
+- `memcheck.xml` (166,213,125 bytes; digest recorded by runner): `ebf7a23098fcf3f0135083370f783ad010116760ce4c99dab5f3d9c1ee4b53db`.
+- `refinement_repeat.json`: `483b1550b12e51c94d8e389e707b606dbf2f0cace5e7d1f1ff6b0e18afed2cdc`.
+- `refinement_repeat.txt`: `f4c6f1973bc9636828baf1e6d9be3f416a18fc8ada5302fb502c082495fc1811`.
+
+The child metadata reports 984,137 genes, 390,845 groups and zero refinement
+directed hits. Independent post-failure verification of the 990 retained
+record entries, runtime and output partition remains outstanding because the
+runner stopped at nonzero child exit. Full stack interpretation also remains
+open. DGX remains deferred; shared-host elapsed times are not controlled
+comparative timing evidence.
+
 ## Nineteenth Recovery Batch Admitted (2026-09-25)
 
 The preceding turns were verified waits on live BLAST and Memcheck jobs.
