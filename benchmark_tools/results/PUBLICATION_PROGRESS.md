@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Eighteenth Recovery Batch Admitted (2026-09-25)
+
+Previous turns were verified waits on live 22103_17 and Memcheck 22164.
+Native recovery batch 22103_17 completed 0:0 in **19:37**; independent
+validator 22105_17 completed 0:0 in **18 seconds**. Batch 22103_18 is now
+RUNNING, with **18 of 20** replay batches individually admitted. Merge
+22162 and whole-search admission 22163 still await the remaining batches.
+
+Admission `benchmarks/work/qfo_blast_recovery_admission_17_20260923.json`
+has SHA256 `fc11e9ba1eacfe7b0eb27d301bf6e4fcdb37b89a13f5a9cfe7410625697fd8cf`.
+Its 5,000 queries comprise 4,981 with hits, 19 no-hit queries without logged
+failure, and **zero logged failed queries**. It contains 1,346,353 HSP rows
+and 961,035 distinct directed pairs, with zero HSPs above the frozen cutoff.
+Whole-database absent-query counts in the structural audit are not batch
+failures or evidence of complete-search coverage. Search admission and
+publication readiness remain false; no final groups or accuracy scores exist
+from this recovery chain yet.
+
+Memcheck 22164 remains RUNNING (7:47 at latest poll). Its live XML has
+reported invalid reads in Python initialization/path handling, including
+`__wcscat_avx2` and `joinpath2` frames. These provisional reports do not
+establish the later refinement crash's cause; no suppression, retry or fix
+was introduced. Inspect complete terminal evidence before interpretation.
+DGX remains deferred, and shared-host elapsed times are not controlled
+comparative timing evidence.
+
 ## Memcheck Diagnostic 22164 Running (2026-09-25)
 
 Frozen clean executor `benchmarks/work/cpm_memcheck_diagnostic_v1_20260925`
