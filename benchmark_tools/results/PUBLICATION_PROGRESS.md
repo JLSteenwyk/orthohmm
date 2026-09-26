@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Matched-Recall Downstream Protocol and Numeric Inputs Frozen (2026-09-26)
+
+The preceding turn completed the search panel and its prespecified match gate.
+Committed the [downstream graph protocol](MATCHED_SEARCH_GRAPH_PROTOCOL_20260926.md)
+as `59ead04` before creating any graph partitions. It restricts evaluation to
+the 35 reporting datasets, uses identical production profile-off graph/refinement
+settings, fixes the selected search cutoff, and prespecifies paired five-seed
+block uncertainty across all conditions with eight F1 contrasts. It is not a
+full-pipeline or independently validated comparison.
+
+Prepared all 70 label-free numeric arm inputs with strict native-hit validation:
+166,625 HMM and 166,635 DIAMOND directed hits including self/within-species
+edges; 25,831 genes across the 35 dataset instances per arm. HMM scores remain
+unchanged; DIAMOND raw scores are length-normalized exactly once. Isolates are
+retained. [Input manifest](matched_graph_inputs_20260926.json), SHA-256
+`d0012cc2ad65dbd1b5272c340d76edfd6c459c2c98213955495c063acd7ecafb`,
+pins each numeric file, source hit file, original input and protocol.
+
+All 69 focused preparation/search/scoring tests pass. No new graph partition
+or downstream orthology score has been generated. Next implement the isolated
+installed-production graph worker and failure-recording orchestrator, execute
+the two arms, and independently validate partitions before scoring. Job 22179
+remains RUNNING at 1:26:33. Scientific defaults are unchanged; DGX remains
+deferred and all broader publication requirements remain active.
+
 ## Search-Sensitivity Panel Complete and Match Gate Passed (2026-09-26)
 
 The preceding turn launched the complete 70-cell panel. All cells in array
