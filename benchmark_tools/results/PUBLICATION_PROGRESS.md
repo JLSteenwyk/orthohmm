@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Matched-Recall Graph Panel Launched (2026-09-26)
+
+Submitted all 70 graph arms (two searches on each of 35 reporting datasets)
+as array **22250**, with two simultaneous 4-CPU/8-GiB cells at most. The clean
+detached executor is `0e9574b3373a6c893e464f2c53e26098ab36a7ee`.
+[Submission evidence](matched_graph_submission_20260926.json) pins executor
+sources, numeric manifest and installed-runtime receipt. The first six cells
+have native-completion receipts without errors; scheduler snapshot is retained.
+No inference retry or mutable executor is used.
+
+Next independently verify every terminal job, numeric checkpoint, complete
+partition and raw-to-normalized score mapping before computing any orthology
+metric. Then apply the frozen five-seed-block analysis and report all seven
+conditions, including negative results. No downstream accuracy outcome has
+been inspected yet. Main installed OrthoBench job 22179 remains RUNNING at
+1:32:09; the larger publication goal and its remaining gaps stay active.
+
 ## Installed Matched-Graph Executor Verified (2026-09-26)
 
 The preceding turn froze the downstream protocol and numeric inputs. Added

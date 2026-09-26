@@ -1,0 +1,53 @@
+{
+  "array": "0-69%2",
+  "cpus_per_cell": 4,
+  "executor": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_executor_20260926",
+  "executor_commit": "0e9574b3373a6c893e464f2c53e26098ab36a7ee",
+  "installation": {
+    "bytes": 52127,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_frozen_overlay_install_20260926.json",
+    "sha256": "467036ee88d5e6f15d322aea4c94397591ef7ba521ac9f8ddde4b7cb783b97d2"
+  },
+  "job_id": "22250",
+  "manifest": {
+    "bytes": 280869,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/matched_graph_inputs_20260926.json",
+    "sha256": "d0012cc2ad65dbd1b5272c340d76edfd6c459c2c98213955495c063acd7ecafb"
+  },
+  "memory_gib_per_cell": 8,
+  "orthology_scores_inspected": false,
+  "output": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926",
+  "sacct": "22250_0|COMPLETED|0:0|00:00:01\n22250_0.batch|COMPLETED|0:0|00:00:01\n22250_1|COMPLETED|0:0|00:00:00\n22250_1.batch|COMPLETED|0:0|00:00:00\n22250_2|COMPLETED|0:0|00:00:00\n22250_2.batch|COMPLETED|0:0|00:00:00\n22250_3|COMPLETED|0:0|00:00:00\n22250_3.batch|COMPLETED|0:0|00:00:00\n22250_4|COMPLETED|0:0|00:00:00\n22250_4.batch|COMPLETED|0:0|00:00:00\n22250_5|COMPLETED|0:0|00:00:00\n22250_5.batch|COMPLETED|0:0|00:00:00\n22250_6|COMPLETED|0:0|00:00:00\n22250_6.batch|COMPLETED|0:0|00:00:00\n22250_7|COMPLETED|0:0|00:00:00\n22250_7.batch|COMPLETED|0:0|00:00:00\n22250_8|COMPLETED|0:0|00:00:00\n22250_8.batch|COMPLETED|0:0|00:00:00\n22250_9|COMPLETED|0:0|00:00:00\n22250_9.batch|COMPLETED|0:0|00:00:00\n22250_10|COMPLETED|0:0|00:00:00\n22250_10.batch|COMPLETED|0:0|00:00:00\n22250_11|COMPLETED|0:0|00:00:00\n22250_11.batch|COMPLETED|0:0|00:00:00\n22250_12|COMPLETED|0:0|00:00:01\n22250_12.batch|COMPLETED|0:0|00:00:01\n22250_13|COMPLETED|0:0|00:00:01\n22250_13.batch|COMPLETED|0:0|00:00:01\n22250_14|COMPLETED|0:0|00:00:00\n22250_14.batch|COMPLETED|0:0|00:00:00\n22250_15|COMPLETED|0:0|00:00:00\n22250_15.batch|COMPLETED|0:0|00:00:00\n22250_16|COMPLETED|0:0|00:00:00\n22250_16.batch|COMPLETED|0:0|00:00:00\n22250_17|COMPLETED|0:0|00:00:00\n22250_17.batch|COMPLETED|0:0|00:00:00\n22250_18|COMPLETED|0:0|00:00:00\n22250_18.batch|COMPLETED|0:0|00:00:00\n22250_19|COMPLETED|0:0|00:00:00\n22250_19.batch|COMPLETED|0:0|00:00:00\n22250_20|COMPLETED|0:0|00:00:01\n22250_20.batch|COMPLETED|0:0|00:00:01\n22250_21|COMPLETED|0:0|00:00:01\n22250_21.batch|COMPLETED|0:0|00:00:01\n22250_22|COMPLETED|0:0|00:00:00\n22250_22.batch|COMPLETED|0:0|00:00:00\n22250_23|COMPLETED|0:0|00:00:00\n22250_23.batch|COMPLETED|0:0|00:00:00\n22250_24|COMPLETED|0:0|00:00:00\n22250_24.batch|COMPLETED|0:0|00:00:00\n22250_25|COMPLETED|0:0|00:00:00\n22250_25.batch|COMPLETED|0:0|00:00:00\n22250_26|COMPLETED|0:0|00:00:00\n22250_26.batch|COMPLETED|0:0|00:00:00\n22250_27|COMPLETED|0:0|00:00:00\n22250_27.batch|COMPLETED|0:0|00:00:00\n22250_[30-69%2]|PENDING|0:0|00:00:00\n",
+  "scientific_defaults_changed": false,
+  "sources": [
+    {
+      "bytes": 816,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_executor_20260926/benchmark_tools/run_matched_graph.slurm",
+      "sha256": "7335be2fb5b16dcddedf1236cb77bb63824a2bd584776d8dca8440a46af20854"
+    },
+    {
+      "bytes": 4620,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_executor_20260926/benchmark_tools/run_matched_graph_cell.py",
+      "sha256": "8b00b1a984da2026732f174d7c8c2cd22809d4aa27456f1c8da0c1d179198918"
+    },
+    {
+      "bytes": 6056,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_executor_20260926/benchmark_tools/matched_graph_worker.py",
+      "sha256": "b1248e5b50afb34e4c6510ceb552ff051be3dc06af14751abb8cdecfd1c9c4b0"
+    },
+    {
+      "bytes": 7605,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_executor_20260926/benchmark_tools/run_search_sensitivity_cell.py",
+      "sha256": "a5820917b9597658828b7dd30c92852a244193b17bb85ee373a7568a1570a97a"
+    },
+    {
+      "bytes": 7448,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_executor_20260926/benchmark_tools/prepare_ob_candidate_neighborhood.py",
+      "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+    }
+  ],
+  "squeue": "                 JOBID     STATE       TIME   CPUS NODELIST(REASON)\n       22250_[32-69%2]   PENDING       0:00      4 (JobArrayTaskLimit)\n              22250_30   RUNNING       0:00      4 bizon\n              22250_31   RUNNING       0:00      4 bizon\n                 22179   RUNNING    1:32:46     32 bizon\n",
+  "status": "submitted_pending_independent_readback",
+  "timing_comparability": "incremental_shared_host_descriptive_only",
+  "walltime_seconds": 3600
+}
