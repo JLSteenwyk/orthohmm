@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Installed Matched-Graph Executor Verified (2026-09-26)
+
+The preceding turn froze the downstream protocol and numeric inputs. Added
+an isolated installed-package worker calling the production RBNH, singleton
+assignment, Leiden and refinement APIs with identical settings for both arms.
+It preserves the native numeric checkpoint, both graph edge sets, intermediate
+partitions and final partition; all partitions must cover every gene exactly
+once. The orchestrator pins the prepared input/runtime, makes a checked private
+copy, records stage resources and failures, and refuses existing output paths.
+
+All 94 focused tests pass; the Slurm wrapper passes syntax checking. The
+installed-package three-gene fixture produces the expected `{a,b}` and `{c}`
+partition, including the isolated gene. [Fixture receipt](matched_graph_fixture_20260926.json)
+pins installed modules and outputs. This is an integration check, not downstream
+accuracy evidence. Main OrthoBench job 22179 was verified RUNNING at 1:27:29.
+
+Next submit the 70 frozen graph arms from a clean pinned executor, preserve
+all terminal outcomes, and validate numeric checkpoint/partition readback before
+orthology scoring. No downstream benchmark scores have been inspected. The
+full publication goal remains active, including dedicated timing and broader
+uncertainty/generalization requirements. DGX remains deferred.
+
 ## Matched-Recall Downstream Protocol and Numeric Inputs Frozen (2026-09-26)
 
 The preceding turn completed the search panel and its prespecified match gate.
