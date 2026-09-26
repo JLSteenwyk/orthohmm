@@ -268,6 +268,13 @@ copies MAFFT's entrypoint/helper files and FastTree locally, explicitly sets
 access to either original tool prefix. Python and system libraries are not
 relocated, and binary redistribution/complete dependency closure remain open.
 
+The [FastTree source acquisition](results/PUBLICATION_FASTTREE_ACQUISITION_20260926.md)
+now pins six upstream release files, including source and notices, and matches
+the installed executable byte-for-byte to upstream v2.2.0. Its executable
+requires AVX2; this is not a portable source build or complete redistribution
+review. The workflow downloads without execution and leaves installed tools
+unchanged.
+
 The [rights register](results/PUBLICATION_DATA_RIGHTS_20260918.md) separates
 project code, reference datasets, upstream software and binaries. Local
 availability or inclusion in an evidence bundle is not blanket permission

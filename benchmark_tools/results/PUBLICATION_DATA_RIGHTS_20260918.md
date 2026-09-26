@@ -77,6 +77,14 @@ retained scientific evidence to resolve a packaging question.
 
 ## Remaining Actions
 
+The September 26 [FastTree acquisition](PUBLICATION_FASTTREE_ACQUISITION_20260926.md)
+binds the installed v2.2.0 executable to identical upstream release bytes and
+retrieves pinned source, license and documentation. The source header declares
+GPL version 2 or later; upstream's separate LICENSE contains GPL version 3.
+Both are retained locally. This closes that source/notice identification gap,
+not a complete source-build, transitive dependency or redistribution audit.
+No upstream source/binary files were newly committed.
+
 The September 23 [YGOB reacquisition receipt](ygob_source_reacquisition_20260923.json)
 and [executable instructions](../PUBLICATION_REPRODUCTION.md#native-execution-and-timing)
 now support source-acquisition-only packaging for its three frozen inputs.

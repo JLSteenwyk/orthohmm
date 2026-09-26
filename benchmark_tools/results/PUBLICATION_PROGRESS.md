@@ -1,5 +1,20 @@
 # Publication Progress
 
+## FastTree Source and Release Executable Identified (2026-09-26)
+
+The preceding turn was a status response, not analysis progress. Resumed the
+release provenance work: downloaded six checksum-pinned upstream v2.2.0
+files, including source and license notices. The installed FastTree executable
+matches the upstream release binary exactly and matches the prior relocation
+record. All eight acquired/installed/script records were rechecked; seven
+acquisition tests pass. [Receipt, instructions and limits](PUBLICATION_FASTTREE_ACQUISITION_20260926.md).
+The source header and standalone license text are preserved separately.
+No installed tool, scientific score or default changed; no download was
+executed or third-party source/binary uploaded. AVX2 requirements, source-build
+reproduction, MAFFT/transitive notices and final archive compliance remain
+open, alongside controlled timing and scientific-analysis gaps. No acquisition
+process remains running; DGX remains deferred and the full goal remains active.
+
 ## External MAFFT/FastTree Relocation Verified on the Fixture (2026-09-26)
 
 The preceding turn completed installed inferred-phylogeny execution. Identified

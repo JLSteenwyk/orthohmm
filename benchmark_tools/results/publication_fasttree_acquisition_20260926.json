@@ -1,0 +1,76 @@
+{
+  "acquired_files": [
+    {
+      "bytes": 1496928,
+      "final_url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/FastTree",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_source_20260926/acquired/FastTree",
+      "sha256": "55a9d997813aae2208bd4c2081bfa690e0ecdba2d6c491805d8689415c43e38e",
+      "url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/FastTree"
+    },
+    {
+      "bytes": 395674,
+      "final_url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/FastTree.c",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_source_20260926/acquired/FastTree.c",
+      "sha256": "975202a6b74c9996af871404ff043bb2152edcbda539035662514bc12d1f3431",
+      "url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/FastTree.c"
+    },
+    {
+      "bytes": 35149,
+      "final_url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/LICENSE",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_source_20260926/acquired/LICENSE",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/LICENSE"
+    },
+    {
+      "bytes": 662,
+      "final_url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/README.md",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_source_20260926/acquired/README.md",
+      "sha256": "7575f311e6098306079988c9a4933ce21c8c7b8266f655d190b49d85dc539a7b",
+      "url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/README.md"
+    },
+    {
+      "bytes": 17271,
+      "final_url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/ChangeLog.txt",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_source_20260926/acquired/ChangeLog.txt",
+      "sha256": "cb9388cc08330a90417571e708cdb0e2418bb59a67863bdf7772196e5b19ffe7",
+      "url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/ChangeLog.txt"
+    },
+    {
+      "bytes": 49797,
+      "final_url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/index.html",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_source_20260926/acquired/index.html",
+      "sha256": "6b8e5747a9e959127fde76e52636e35dc09105e6817893606f2ee7f55a856326",
+      "url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/index.html"
+    }
+  ],
+  "acquisition": "immutable revision URLs with pinned SHA-256",
+  "benchmarks_rerun": false,
+  "executed_downloads": false,
+  "installed_binary": {
+    "bytes": 1496928,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220/FastTree",
+    "sha256": "55a9d997813aae2208bd4c2081bfa690e0ecdba2d6c491805d8689415c43e38e"
+  },
+  "installed_binary_modified": false,
+  "installed_matches_upstream_binary": true,
+  "license_file": "Upstream LICENSE contains the GNU GPL version 3 text; preserve separately.",
+  "limitations": [
+    "Matching upstream binary bytes does not establish its compiler inputs or a reproducible build.",
+    "TLS/Git content identity is not a cryptographically signed maintainer attestation.",
+    "This acquisition does not include compiler, OS library or all transitive dependency sources.",
+    "No binary or upstream source is newly uploaded by this workflow."
+  ],
+  "observed_utc": "2026-09-26T21:26:52.346575+00:00",
+  "redistribution_compliance_verified": false,
+  "reproducible_build_verified": false,
+  "revision": "29c5e62fbcd93230ee325f9c6a17b81f00e3c72a",
+  "script": {
+    "bytes": 4663,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/acquire_publication_fasttree.py",
+    "sha256": "ef752f1191fb35b915748c0f4168a215b2676336a0ee1ad94d3c07ad1a3b55cf"
+  },
+  "source_notice": "FastTree.c declares GPL version 2 or later; preserve its header.",
+  "status": "source_notices_acquired_and_installed_binary_matched",
+  "tag_label": "v2.2.0",
+  "upstream": "https://github.com/morgannprice/fasttree"
+}
