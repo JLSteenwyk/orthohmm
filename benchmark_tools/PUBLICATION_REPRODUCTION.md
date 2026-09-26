@@ -1,18 +1,19 @@
 # Publication Reproduction Guide
 
-Status: 25 September 2026, incomplete working package. This guide routes
+Status: 26 September 2026, incomplete working package. This guide routes
 readers to executed workflows and their evidence; it is not an archival
 release or an assertion that every requirement is complete. Commands below
 are statistical reproduction only and do not submit scheduler jobs.
 
 ## Method And Results
 
-- [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260925_v11.md)
-  provides the dated HTML, checked local-asset inventory and citation inventory,
-  including current FastOMA results and the DGX deferral. Version 11 adds
-  the corrected OrthoMCL search audit and seven-protein residue-change
-  reference exposure, not corrected OrthoMCL scores. Its updated pages 18-19
-  received visual review; other pages were not visually re-reviewed. It is
+- [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260926_v12.md)
+  provides dated HTML/PDF and a checked local-asset inventory. Version 12 adds
+  corrected OrthoMCL failure membership/exposure, the seven-protein residue
+  group trace, and the forced-candidate diagnostic and figure, not corrected
+  OrthoMCL scores. Pages 7, 8 and 20 received visual review; other pages were
+  not visually re-reviewed. The earlier citation inventory is not a new
+  citation audit of these additions. This remains
   not a standalone archive, completed typesetting or full copyediting.
 - [Corrected figure supplements](results/PUBLICATION_CORRECTED_FIGURE_BUNDLE_20260919.md)
   include the seven-method FastOMA comparison exported at `27113f4`, with
@@ -40,6 +41,29 @@ are statistical reproduction only and do not submit scheduler jobs.
   [Three Kingdoms audit](results/THREE_KINGDOMS_PAIR_COUNT_AUDIT_20260918.md)
   retain their distinct reference universes. Novel taxa do not imply
   family-disjoint validation; BUSCO recovery is not proteome-wide accuracy.
+
+## Verified Search Diagnostics
+
+- [Failed-query membership](results/qfo_recovered_failure_membership_20260926.json)
+  verifies that all 53 failed OrthoMCL queries are absent from the recovered
+  native graph index and final groups. [Reference exposure](results/qfo_recovered_reference_impact_20260926.json)
+  measures direct overlap with benchmark references and annotations; it does
+  not bound repaired-search effects on clustering or accuracy.
+- [Residue-to-group trace](results/qfo_native_residue_group_trace_20260926.json)
+  places the seven legacy residue-deletion proteins in three single-species
+  groups with zero incident submitted cross-species pairs. It does not
+  reconstruct a residue-preserving search.
+- [Forced-candidate protocol](results/OB_FORCED_CANDIDATE_PROTOCOL_20260926.md)
+  and [independent raw-output audit](results/ob_forced_candidates_audit_20260926.json)
+  document 30,496 prefilter-excluded reference pairs passing unchanged HMM
+  scoring. All 33,098 previously scored pairs retain exact scores and E-values.
+  Reference-conditioned selection makes this a mechanism diagnostic, not
+  unbiased recall, matched DIAMOND sensitivity or whole-pipeline F1 evidence.
+- [Figure reproduction](results/FORCED_CANDIDATE_FIGURE_REPRODUCTION_20260926.md)
+  provides the committed source export and isolated plotting command, verified
+  outside the checkout in a fresh venv with a [hash-locked wheel set](results/forced_candidate_plot_linux_py310_requirements_20260926.txt).
+  The PNG is byte-identical on the tested Linux x86_64/Python 3.10 platform.
+  This plotting environment does not supply the native inference toolchain.
 
 ## Reproduce Statistics
 

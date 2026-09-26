@@ -1,5 +1,16 @@
 # Publication Progress
 
+## Main Reproduction Guide Updated (2026-09-26)
+
+Routed the main guide to manuscript preview v12, the three verified search
+diagnostics, and relocated/clean-install plotting instructions. Explicitly
+separated raw-output audits, reference-conditioned mechanism evidence and
+plot reproduction from native inference and matched-sensitivity claims.
+The old citation inventory is not represented as a new audit of additions.
+Previous turn verified the clean plotting install; this turn makes those
+artifacts discoverable from the package entry point. FAS reached 392/1578
+work items with 22174 live and 22176 dependency-pending; scores remain unadmitted.
+
 ## Clean Plotting Environment Verified (2026-09-26)
 
 Created a fresh Python 3.10.13 venv with system site-packages disabled.
