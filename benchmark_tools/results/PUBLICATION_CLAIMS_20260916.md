@@ -8,6 +8,7 @@ evidence that an experiment completed or a biological hypothesis is true.
 
 | Proposed statement | Evidence | Assessment |
 | --- | --- | --- |
+| Loading the frozen refinement modules reproduces the post-write parser crash | [Import-context controls](QFO_CPM_PARSER_IMPORT_RESULT_20260926.md) | Not reproduced by either site-only or frozen-import parsing with active GC. Numerical checkpoint/array/refinement history is omitted; no cause, memory-safety or recovered-admission claim follows |
 | The high-CPM post-refinement crash is caused by the saved partition parser alone | [Frozen parser controls](QFO_CPM_PARSER_CONTROL_RESULT_20260926.md) | Not reproduced: default/debug no-site-import controls both parse the exact partition with active GC. This omits prior imports/native activity and allocation history, does not identify the cause or prove memory safety, and does not repair failed admission |
 | Satellite_v2 has a higher observed OrthoBench aggregate F1 than full OrthoFinder | [Paired analysis](ORTHOBENCH_UNCERTAINTY_20260916.md) | Descriptively supported; interval includes zero; development-exposed |
 | Satellite_v2 trades higher precision for lower recall on OrthoBench | [Paired analysis](ORTHOBENCH_UNCERTAINTY_20260916.md) | Supported within this benchmark; not selection-adjusted generalization |

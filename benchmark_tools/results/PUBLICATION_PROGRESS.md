@@ -1,5 +1,20 @@
 # Publication Progress
 
+## High-CPM Import-Context Parser Controls Completed (2026-09-26)
+
+The preceding turn completed parser-only controls. Inspected the frozen
+refinement path and ran the next two prespecified controls: site-only and
+frozen-replay imports, followed by the same parser. Both complete once with
+984,137 genes in 390,845 groups, active GC and all boundary markers. The
+scientific arm loads NumPy/BioPython/OrthoHMM, not igraph/Leiden. Rechecked 237
+record entries plus logs/scientific sources; 17 related tests pass.
+[Result and next boundary](QFO_CPM_PARSER_IMPORT_RESULT_20260926.md).
+No numerical checkpoint, graph construction, refinement or optimizer executed.
+This negative reproduction leaves checkpoint/array/refinement allocation history
+unresolved and does not admit high-CPM outputs. The original failure and blocked
+candidate remain unchanged. No diagnostic process remains running; DGX remains
+deferred and the full publication goal remains active.
+
 ## High-CPM Frozen Parser Controls Completed (2026-09-26)
 
 The preceding turn connected audited OrthoBench provenance to the score table.
