@@ -1996,6 +1996,38 @@ These dependent deletion ranges are not confidence intervals. This checks
 single-block influence on historical scored tables only; it neither reruns
 native eligibility nor establishes generalization or comparator superiority.
 
+### Additional VGNC Uncertainty Validation
+
+The [corrected eight-method readback](CORRECTED_VGNC_BLOCK_MAPPING_20260926.md)
+maps retained native rows onto the same 16,844 reference-defined blocks and
+reproduces all admitted precision, recall and F1 values. Phylogenetic OrthoHMM
+has 19,660 TP, 13 FP and 4,274 FN, compared with 23,519 TP, 130 FP and 415 FN
+for full OrthoFinder. These counts make the precision-recall trade-off
+explicit; they do not establish method superiority. Most reference blocks
+(14,075) contain just one asserted pair. Supplemental raw-table hashes and
+selected reference mappings were checked, but this is not a requery of every
+prediction edge or full database-content verification.
+
+A [prespecified family-pair variance screen](DYADIC_F1_VARIANCE_RESULT_20260926.md)
+completed 8,000 synthetic replicates. Candidate paired-F1 Wald coverage was
+93.2-95.3% in six in-model cells, but 79.1-82.7% when groups of families shared
+additional effects. A separate [reference-size and rare-error screen](SPARSE_DYADIC_F1_RESULT_20260926.md)
+completed 6,000 replicates using only the reference size histogram as a
+real-data input. Regular unequal-size cases had 93.3-94.9% coverage. With
+perfect recall and fixed expected false-positive counts of two versus one,
+coverage was 61.3-65.1%; zero variance estimates were retained as failures.
+This stress case has a non-vanishing probability of observing identical
+paired counts despite a nonzero population contrast. More families alone
+do not restore a regular Wald approximation when expected errors stay fixed.
+
+These simulations are statistical diagnostics, not evolutionary simulations
+or models fitted to named tools. Their failures do not prove all native
+contrasts invalid, but prevent blanket adoption of the candidate. Biological
+exchangeability and dependence beyond shared family endpoints remain
+unestablished. No new VGNC confidence intervals are admitted, and the
+uncertainty limitation is retained rather than obscured by aggregate variance
+agreement or selectively passing simulation cases.
+
 ## Data And Code Availability
 
 Historical installation manifests retain their original tool versions and

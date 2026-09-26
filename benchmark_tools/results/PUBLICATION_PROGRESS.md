@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Reference-Size Uncertainty Screen Retains Boundary Failure (2026-09-26)
+
+The preceding turn completed the eight-method corrected VGNC count mapping.
+Prespecified its reference-size/rare-error extension in e2a9eb0 and completed
+all six cells and 6,000 replicates. Four regular cases pass the necessary
+coverage gate. Rare-perfect coverage is 61.3-65.1%, with 348-387 zero-variance
+failures per 1,000 draws; no correction or omission was selected afterward.
+Eighteen related tests pass. [Result and interpretation](SPARSE_DYADIC_F1_RESULT_20260926.md).
+Integrated the corrected count trade-off and both statistical screens into
+the manuscript, retaining VGNC's uncertainty limitation. The version-16 HTML/PDF
+review checks 196 distinct tracked assets and all 40 page bounds; the new
+section on page 38 was visually reviewed without clipping or overlap. No benchmark score,
+default or native interval changed. The complete publication objective remains
+active; controlled timing, remaining scientific requirements and release work
+are not resolved by these diagnostics. All simulation processes completed and
+DGX remains deferred.
+
 ## Eight-Method Corrected VGNC Block Decomposition Completed (2026-09-26)
 
 The preceding turn completed the prespecified synthetic uncertainty screen

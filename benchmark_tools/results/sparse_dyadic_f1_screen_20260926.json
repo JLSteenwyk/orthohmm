@@ -1,0 +1,143 @@
+{
+  "all_cells_pass": false,
+  "benchmark_intervals_admitted": false,
+  "helper": {
+    "bytes": 7448,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_dyadic_f1_uncertainty.py",
+    "sha256": "527da6eb2ae84d20fb466f3dc0416cb65699afbdbd24ae841058e73dfe82bad0"
+  },
+  "limitations": [
+    "No native prediction counts or method identities are used to fit simulation parameters.",
+    "Reference-size distribution only; not exact biological eligibility, annotations or evolutionary dependence.",
+    "Sparse computation preserves zero contributions but cannot fix a statistically invalid Wald approximation.",
+    "Rare-perfect case has fixed expected error counts as family count increases; it is a boundary stress case.",
+    "All invalid variances count as noncoverage; no post-hoc clipping or correction."
+  ],
+  "numpy_version": "2.2.6",
+  "reference": {
+    "bytes": 26291,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/corrected_vgnc_blocks_20260926.json",
+    "sha256": "01a51a62a536bcf759f2a0ef83c56196a92022b0bb8290448eacbfefa47d6005"
+  },
+  "reference_only_histogram": {
+    "1": 14075,
+    "13": 1,
+    "15": 1,
+    "2": 2,
+    "3": 2252,
+    "4": 5,
+    "6": 507,
+    "9": 1
+  },
+  "rows": [
+    {
+      "bias": 0.00017750604946402404,
+      "case": "unequal_regular",
+      "coverage": 0.949,
+      "coverage_wilson95": [
+        0.9335645136552383,
+        0.9609990572247332
+      ],
+      "covered": 949,
+      "empirical_variance": 5.0288502233328903e-05,
+      "families": 256,
+      "invalid_variances": 0,
+      "mean_variance": 5.048449105197809e-05,
+      "replicates": 1000,
+      "screen_pass": true,
+      "target": -0.1210057454391758
+    },
+    {
+      "bias": 1.0109093503560262e-05,
+      "case": "unequal_regular",
+      "coverage": 0.947,
+      "coverage_wilson95": [
+        0.9313253831625082,
+        0.9592534947514054
+      ],
+      "covered": 947,
+      "empirical_variance": 8.138839934184115e-07,
+      "families": 16844,
+      "invalid_variances": 0,
+      "mean_variance": 7.783381904387051e-07,
+      "replicates": 1000,
+      "screen_pass": true,
+      "target": -0.12093068664110002
+    },
+    {
+      "bias": 0.00018439183494309286,
+      "case": "unequal_node",
+      "coverage": 0.933,
+      "coverage_wilson95": [
+        0.9157879467581331,
+        0.9468980803933762
+      ],
+      "covered": 933,
+      "empirical_variance": 5.650832976914545e-05,
+      "families": 256,
+      "invalid_variances": 0,
+      "mean_variance": 5.307947127564483e-05,
+      "replicates": 1000,
+      "screen_pass": true,
+      "target": -0.1210057454391758
+    },
+    {
+      "bias": -2.0881858912066842e-05,
+      "case": "unequal_node",
+      "coverage": 0.941,
+      "coverage_wilson95": [
+        0.9246390972285408,
+        0.9539857017871995
+      ],
+      "covered": 941,
+      "empirical_variance": 8.792350363296627e-07,
+      "families": 16844,
+      "invalid_variances": 0,
+      "mean_variance": 8.145492376448708e-07,
+      "replicates": 1000,
+      "screen_pass": true,
+      "target": -0.12093068664110002
+    },
+    {
+      "bias": 2.3721255638033947e-05,
+      "case": "rare_perfect",
+      "coverage": 0.613,
+      "coverage_wilson95": [
+        0.5824343266729659,
+        0.6427008259092986
+      ],
+      "covered": 613,
+      "empirical_variance": 1.8588022160272487e-06,
+      "families": 256,
+      "invalid_variances": 387,
+      "mean_variance": 1.8262882028005662e-06,
+      "replicates": 1000,
+      "screen_pass": false,
+      "target": -0.0013688982141921713
+    },
+    {
+      "bias": -2.3168340276147285e-07,
+      "case": "rare_perfect",
+      "coverage": 0.651,
+      "coverage_wilson95": [
+        0.6209303029513429,
+        0.6799140159860195
+      ],
+      "covered": 651,
+      "empirical_variance": 4.241882308957938e-10,
+      "families": 16844,
+      "invalid_variances": 348,
+      "mean_variance": 4.4105351023107106e-10,
+      "replicates": 1000,
+      "screen_pass": false,
+      "target": -2.0889473775986822e-05
+    }
+  ],
+  "seed": 20260928,
+  "source": {
+    "bytes": 7171,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_sparse_dyadic_f1.py",
+    "sha256": "66836e5fdafcdceb4c04ceb4fb35f7618dbc86deaf5898c13efc3dbcb547e635"
+  },
+  "status": "reference_size_sparse_screen_complete"
+}

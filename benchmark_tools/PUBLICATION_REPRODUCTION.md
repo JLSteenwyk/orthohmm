@@ -13,9 +13,11 @@ are statistical reproduction only and do not submit scheduler jobs.
   Version 2 adds pinned five-comparator OrthoBench readback/upstream evidence
   without changing the score TSV or claiming historical native provenance.
 
-- [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260926_v15.md)
+- [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260926_v16.md)
   provides dated HTML/PDF and a checked local-asset inventory. It remains
   a working preview, not a standalone archive or completed journal layout.
+  Version 16 includes corrected VGNC count decomposition and retained negative
+  statistical-validation results; it adds no native VGNC confidence intervals.
 - [Corrected six-endpoint comparison figure](results/CORRECTED_QFO_ENDPOINT_FIGURE_20260926.md)
   retains all eight methods and distinguishes FAS eligible counts from sample sizes.
 - [Complete-panel figure evidence bundle](results/PUBLICATION_COMPLETE_FIGURE_BUNDLE_20260926.md)
