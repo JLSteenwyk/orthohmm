@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Matched-Control Resource Records Consolidated (2026-09-26)
+
+The preceding turn completed relocated count-level statistical reproduction.
+Main job 22179 was revalidated RUNNING at 1:53:01, with 86.11% of initial
+search complete. A fresh exact-name public TreeFam search did not recover the
+original trees/mapping; that subtask remains unresolved and no replacement
+reference or family-level intervals were admitted.
+
+Consolidated all 35 reporting datasets' checksummed native time logs into
+[stage-level resource results](MATCHED_STAGE_RESOURCES_20260926.md), separating
+DIAMOND database preparation, search and graph inference. All 19 focused tests
+pass. Median HMM/DIAMOND search elapsed observations are 5.18/1.88 seconds;
+graph observations are 0.24/0.23 seconds. These are descriptive shared-host
+measurements, not a speedup comparison; broad DIAMOND search was postfiltered.
+RSS semantics and absent numeric-export/scoring measurements are explicit.
+No inference was rerun, no controlled resource comparison was admitted, and
+the dedicated-machine requirement remains open. Full publication goal active;
+DGX remains deferred.
+
 ## Relocated Matched-Graph Statistical Reproduction Complete (2026-09-26)
 
 The preceding turn integrated and rendered the matched-recall evidence.
