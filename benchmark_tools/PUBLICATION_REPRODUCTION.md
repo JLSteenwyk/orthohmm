@@ -8,6 +8,10 @@ are statistical reproduction only and do not submit scheduler jobs.
 ## Method And Results
 
 - [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260926_v14.md)
+- [Complete-panel relocated arithmetic check](results/SWISS_COMPLETE_PORTABLE_REPRODUCTION_20260926.md)
+  reproduces all 24 endpoints from a three-file committed export using
+  isolated Python; a file-access trace checks that original checkout paths
+  were not accessed. This is not native inference or raw-source admission.
 - [Complete descriptive strata](results/SWISS_COMPLETE_STRATA_20260926.md) and
   [eight-method feature figures](results/SWISS_COMPLETE_STRATA_FIGURES_20260926.md)
   retain the original bins and feature admissions; historical recipes below

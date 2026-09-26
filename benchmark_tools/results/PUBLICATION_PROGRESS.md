@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Complete Comparator Arithmetic Relocated (2026-09-26)
+
+Exported the committed verifier, admitted eight-method count report and
+license to a temporary directory outside the checkout. All 24 endpoints
+reproduced within 1e-12 under isolated Python 3.10.13/NumPy 2.2.6 in the
+existing clean plotting environment. A second file-syscall-traced execution
+produced the identical receipt, with no original-checkout path access in
+the trace. [Commands, archive/trace hashes and limitations](SWISS_COMPLETE_PORTABLE_REPRODUCTION_20260926.md)
+are retained. This extends the prior seven-method portability evidence,
+not native inference or raw-score validation. Full release portability,
+controlled timing and the other scientific completion gaps remain unmet.
+
 ## Complete Strata Integrated into Manuscript (2026-09-26)
 
 Updated manuscript strata prose, captions, table links and three figure links
