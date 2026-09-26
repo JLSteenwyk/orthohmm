@@ -272,12 +272,15 @@ Prospective component experiments cross profile-HMM expansion, candidate
 expansion, and reconciliation in eight cells. Expansion-plus-reconciliation
 cells retain their own membership constraints; independently inferred trees
 are distinguished from supplied-tree diagnostics. A profile-expansion-off
-arm still uses the HMM-centered initial search. A matched sequence-search
-control is required before attributing an overall advantage to HMMs.
+arm still uses the HMM-centered initial search. A subsequent matched-recall
+simulation control tests initial-search evidence under identical graph settings;
+it does not isolate an overall advantage of HMMs on real benchmarks.
 The OrthoBench, original-release QfO and corrected-release QfO factorials
 are complete. Each QfO factorial has paired SwissTrees intervals across
 18 families and 42 adjusted endpoints. The corrected full-comparator panel
-and better-matched search sensitivity or effort remain unfinished.
+is complete. Search-recall matching is now established on the declared
+simulation panel only; real-data matching and matched computational effort
+remain unestablished.
 Original-release results are retained as development-exposed evidence, not
 relabeled as corrected-release validation.
 [Ablation protocol](PUBLICATION_ABLATION_PROTOCOL_20260916.md).
@@ -713,6 +716,62 @@ shows all observed scores and all six paired effects on a common percentage-poin
 axis. Thin intervals retain the six-endpoint correction; thick intervals are
 nominal95% intervals. Search sensitivity/calibration are not matched, and this
 control disables subsequent profile expansion and phylogenetic inference.
+
+### Matched-Recall Simulation Search Control
+
+A separately frozen diagnostic used all 70 retained variable-length simulation
+datasets, splitting seeds 20261101-20261105 for calibration and
+20261106-20261110 for reporting across seven conditions. Search sensitivity
+was directed cross-species ancestral-family homology recall, including
+paralogs: eligible families received equal weight within each dataset, then
+datasets received equal weight. A single DIAMOND cutoff was selected from a
+fixed 15-point grid solely to minimize calibration recall difference from the
+fixed initial HMM search. No orthology score or reporting outcome entered
+selection. The selected reported E-value cutoff was <=1e-40; the HMM search
+retained its native <1e-4 rule. Reporting recall was 77.0904% for DIAMOND and
+76.8033% for HMM. The prespecified gate passed: the overall absolute gap was
+below two percentage points and each condition gap below five points.
+[Protocol and complete grid](SEARCH_SENSITIVITY_RESULT_20260926.md).
+
+After that gate, a second protocol froze downstream inference on the 35
+reporting datasets. Both arms used the installed frozen production graph
+and refinement APIs, Leiden CPM resolution 0.1, seed 4 and retained isolates.
+HMM scores were already length-normalized; DIAMOND raw scores were divided
+by the geometric mean of sequence lengths exactly once. Profile expansion,
+candidate expansion and phylogeny were disabled. All 70 arms completed;
+independent readback verified raw-to-numeric mappings, saved arrays, complete
+partitions and separately reconstructed reciprocal-hit/singleton edges.
+Only final partitions were converted to cross-species pairs and scored against
+speciation-derived orthology truth, not ancestral-family membership.
+[Downstream protocol](MATCHED_SEARCH_GRAPH_PROTOCOL_20260926.md),
+[native validation](matched_graph_readback_20260926.json).
+
+Mean pair F1 was 83.6097% for HMM and 80.5180% for DIAMOND, a +3.0917-point
+difference with an eight-contrast adjusted interval of [+1.6782, +4.5313].
+The 20,000-replicate PCG64 bootstrap (seed 20260927) resampled five paired
+seed blocks, carrying all seven conditions together. The eight F1 contrasts
+were the overall equal-condition mean and seven condition means. Five blocks
+give limited tail resolution and approximate coverage; gene pairs and
+shared-history conditions were not treated as independent replicates.
+The largest differences were under divergence (+9.6223 points) and divergence
+with turnover (+10.6832 points); uneven sampling slightly favored DIAMOND
+(-0.1014 points, adjusted interval spanning zero). The remaining four adjusted
+condition intervals touched zero. Mean precision was 90.7136% versus 91.0967%
+and recall 83.4079% versus 79.9802% (HMM versus DIAMOND). All genes remained
+represented; mean nonsingleton coverage was 94.7839% versus 93.4863%.
+[All effects and intervals](matched_graph_scores_20260926/results.md),
+[machine-readable records](matched_graph_scores_20260926/results.json).
+
+![Matched-recall initial-search graph comparison, all seven conditions and overall; adjusted paired seed-block intervals.](matched_graph_figure_v2_20260926/matched_graph.png)
+
+This supports a bounded advantage of HMM-derived initial-search evidence in
+this graph procedure on these development-exposed simulations, especially
+the divergent conditions. Matching recall does not equalize score distributions,
+hit rankings, hit identities or computational effort. It neither identifies
+a causal mechanism nor establishes real-data sensitivity equivalence,
+independent confirmation, profile-expansion benefit or full-pipeline superiority
+over OrthoFinder. The threshold is not transferred to QfO or OrthoBench;
+shared-host resources remain descriptive. [Claim limits](MATCHED_GRAPH_RESULT_20260926.md).
 
 ### Supplied-Tree Perturbations Had Small Observed Aggregate Effects
 
@@ -1447,6 +1506,9 @@ contribution to F1 is not established by the completed exploratory OrthoBench
 or corrected QfO sequence-search controls. Corrected SwissTrees precision
 differences favor initial HMM under the prespecified adjustment, but F1 and
 recall intervals include zero; independent confirmation remains required.
+The subsequent matched-recall simulation graph control supports a bounded
+initial-search F1 difference, not a reversal of those real-benchmark findings
+or independent confirmation of full-method superiority.
 
 The corrected-release QfO factorial supports a bounded SwissTrees finding:
 reconciliation at expanded candidates improves F1 at both profile settings,
@@ -1464,10 +1526,11 @@ retained, not conflated. No superiority over corrected full OrthoFinder is
 established. [Complete corrected factorial](QFO_CORRECTED_FACTORIAL_COMPLETE_20260919.md).
 
 Corrected-input evaluation now includes all eight retained comparator rows,
-including OrthoMCL, with paired SwissTrees uncertainty. Better-matched search
-sensitivity or effort controls remain outstanding. Corrected multi-seed
+including OrthoMCL, with paired SwissTrees uncertainty. Matched search recall
+and downstream graph controls are complete on the declared simulations;
+real-data sensitivity matching and matched effort remain unestablished. Corrected multi-seed
 simulations and their generating-tree/NNI controls are complete but do not
-establish an OrthoHMM advantage or profile-expansion benefit. Tree perturbations
+establish a full-pipeline OrthoHMM advantage or profile-expansion benefit. Tree perturbations
 show bounded sensitivity, not arbitrary-error robustness. Completed annotation,
 identity, fragment and duplication strata are descriptive; they do not establish
 calibrated evolutionary divergence or causal error mechanisms. The biological

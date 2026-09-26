@@ -7,6 +7,28 @@ are statistical reproduction only and do not submit scheduler jobs.
 
 ## Method And Results
 
+- [Matched-recall simulation graph control](results/MATCHED_GRAPH_RESULT_20260926.md)
+  separates search calibration from downstream orthology scoring. All 70 search
+  datasets and 70 graph arms completed; reporting covers 35 datasets in seven
+  conditions. It supports a bounded initial-search result, not full-pipeline
+  superiority or matched real-data sensitivity. To recompute from the retained
+  admitted local artifacts, use fresh output paths:
+
+  ```bash
+  python -m benchmark_tools.score_matched_graph \
+    --readback benchmark_tools/results/matched_graph_readback_20260926.json \
+    --output /absolute/fresh/matched_graph_scores
+  python -m benchmark_tools.plot_matched_graph \
+    --results /absolute/fresh/matched_graph_scores/results.json \
+    --output /absolute/fresh/matched_graph_figure
+  ```
+
+  This rechecks pinned local truth, input and prediction files; it does not
+  acquire missing datasets, rerun inference or establish portable native
+  reproduction. Exact native commands and resources remain in the
+  [search submission](results/search_sensitivity_submission_20260926.json) and
+  [graph submission](results/matched_graph_submission_20260926.json).
+
 - [Current cross-dataset score table](results/CURRENT_BENCHMARK_SCORES_20260926.md)
   combines retained OrthoBench, corrected QfO and supplementary Three Kingdoms
   scores without mixing QfO input releases or averaging across datasets.
