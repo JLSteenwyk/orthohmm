@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Search-Sensitivity Array Launched (2026-09-26)
+
+Submitted all 70 datasets as Slurm array **22180**, capped at two simultaneous
+4-CPU/8-GiB cells, from clean detached executor
+`ec2d90f44249178196dc3cf0b0dda5daba52ab02`.
+[Submission and scheduler snapshot](search_sensitivity_submission_20260926.json)
+pins the executor sources and plan. The first four cells were independently
+observed COMPLETED/0:0 in accounting, with native-completion receipts and no
+reported errors. Remaining cells continue under the concurrency cap; no
+automatic retries. Main installed OrthoBench job 22179 remains RUNNING.
+
+These completions are execution evidence only: full-panel completeness,
+independent raw-hit validation, calibration-only cutoff selection and reporting
+match-gate evaluation remain to do. No new recall scores have been inspected.
+The immutable executor must not be edited while the array runs. This diagnostic
+does not replace the dedicated-machine timing requirement or establish
+independent biological validation. The complete publication goal remains active.
+
 ## Search-Sensitivity Panel Runner Ready (2026-09-26)
 
 The preceding turn made progress with the verified installed-HMM executor.

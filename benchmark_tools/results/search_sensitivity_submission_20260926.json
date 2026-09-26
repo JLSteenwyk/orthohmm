@@ -1,0 +1,43 @@
+{
+  "array": "0-69%2",
+  "cpus_per_cell": 4,
+  "cutoff_selected": false,
+  "executor": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/search_sensitivity_executor_20260926",
+  "executor_commit": "ec2d90f44249178196dc3cf0b0dda5daba52ab02",
+  "job_id": "22180",
+  "memory_gib_per_cell": 8,
+  "output": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/search_sensitivity_panel_20260926",
+  "plan": {
+    "bytes": 350862,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/search_sensitivity_inputs_20260926.json",
+    "sha256": "b3b19927821f46f0e79fcc444987a51b88f699e7665bd364fa6639a4239323bc"
+  },
+  "sacct": "22180_0|COMPLETED|0:0|00:00:09\n22180_0.batch|COMPLETED|0:0|00:00:09\n22180_1|COMPLETED|0:0|00:00:08\n22180_1.batch|COMPLETED|0:0|00:00:08\n22180_2|COMPLETED|0:0|00:00:08\n22180_2.batch|COMPLETED|0:0|00:00:08\n22180_3|COMPLETED|0:0|00:00:09\n22180_3.batch|COMPLETED|0:0|00:00:09\n22180_4|COMPLETED|0:0|00:00:09\n22180_4.batch|COMPLETED|0:0|00:00:09\n22180_5|COMPLETED|0:0|00:00:11\n22180_5.batch|COMPLETED|0:0|00:00:11\n22180_6|COMPLETED|0:0|00:00:09\n22180_6.batch|COMPLETED|0:0|00:00:09\n22180_7|COMPLETED|0:0|00:00:08\n22180_7.batch|COMPLETED|0:0|00:00:08\n22180_8|COMPLETED|0:0|00:00:09\n22180_8.batch|COMPLETED|0:0|00:00:09\n22180_9|COMPLETED|0:0|00:00:10\n22180_9.batch|COMPLETED|0:0|00:00:10\n22180_10|COMPLETED|0:0|00:00:09\n22180_10.batch|COMPLETED|0:0|00:00:09\n22180_11|COMPLETED|0:0|00:00:09\n22180_11.batch|COMPLETED|0:0|00:00:09\n22180_12|COMPLETED|0:0|00:00:08\n22180_12.batch|COMPLETED|0:0|00:00:08\n22180_13|RUNNING|0:0|00:00:03\n22180_13.batch|RUNNING|0:0|00:00:03\n22180_[14-69%2]|PENDING|0:0|00:00:00\n",
+  "scientific_defaults_changed": false,
+  "sources": [
+    {
+      "bytes": 728,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/search_sensitivity_executor_20260926/benchmark_tools/run_search_sensitivity.slurm",
+      "sha256": "92397e4788be061e434b7e7795514c266408f9cb851e963889446d576b031f93"
+    },
+    {
+      "bytes": 7605,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/search_sensitivity_executor_20260926/benchmark_tools/run_search_sensitivity_cell.py",
+      "sha256": "a5820917b9597658828b7dd30c92852a244193b17bb85ee373a7568a1570a97a"
+    },
+    {
+      "bytes": 6167,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/search_sensitivity_executor_20260926/benchmark_tools/search_sensitivity_hmm.py",
+      "sha256": "267c91de4a75a2b89a5adfb53576fdb30a088205b0920b0ccf8cc3c1e4e8d8d2"
+    },
+    {
+      "bytes": 7448,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/search_sensitivity_executor_20260926/benchmark_tools/prepare_ob_candidate_neighborhood.py",
+      "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+    }
+  ],
+  "squeue": "                 JOBID     STATE       TIME   CPUS NODELIST(REASON)\n       22180_[15-69%2]   PENDING       0:00      4 (JobArrayTaskLimit)\n              22180_14   RUNNING       0:00      4 bizon\n              22180_13   RUNNING       0:03      4 bizon\n                 22179   RUNNING    1:15:26     32 bizon\n",
+  "status": "submitted_partial_native_completion_pending_readback",
+  "timing_comparability": "shared_host_descriptive_only",
+  "walltime_seconds": 3600
+}
