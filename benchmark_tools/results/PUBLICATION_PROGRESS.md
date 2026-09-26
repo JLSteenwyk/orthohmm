@@ -1,5 +1,20 @@
 # Publication Progress
 
+## High-CPM Frozen Parser Controls Completed (2026-09-26)
+
+The preceding turn connected audited OrthoBench provenance to the score table.
+Inspected the unresolved high-CPM post-refinement crash and ran two preplanned
+parser-only controls (default/debug allocator), not new refinement or admission.
+Both read the exact frozen partition: 984,137 unique genes in 390,845 groups,
+with garbage collection enabled and active. No scientific imports or site
+initialization occurred. Ten diagnostic tests pass; all recorded inputs and
+logs were rechecked. [Result and next diagnostic boundary](QFO_CPM_PARSER_CONTROL_RESULT_20260926.md).
+This is a negative reproduction, not a fix or proof of memory safety. Prior
+imports/native activity and allocation history remain untested by these arms;
+failed admission and blocked dependent work remain unchanged. No processes
+from this diagnostic remain running. DGX and controlled timing remain deferred;
+the complete publication goal remains active.
+
 ## Score Table Supplemented With OrthoBench Audit Provenance (2026-09-26)
 
 The preceding turn completed the broad regression refresh. Connected the later
