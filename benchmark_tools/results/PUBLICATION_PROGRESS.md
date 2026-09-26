@@ -1,5 +1,19 @@
 # Publication Progress
 
+## High-CPM Checkpoint and Setup Boundary Completed (2026-09-26)
+
+The preceding turn completed import-context controls. One preplanned child
+now loads/audits the 90,687,327-hit checkpoint, indexes 314,274 seed groups,
+maps 25,501,180 graph edges and parses the retained 390,845-group partition
+while checkpoint/setup objects remain alive. It exits zero at the explicit
+stop before refinement. All 256 recorded entries and output/source records
+were rechecked; 23 related tests pass. [Result and limits](QFO_CPM_CHECKPOINT_SETUP_RESULT_20260926.md).
+Additional parser probes change allocation history; success identifies neither
+the root cause nor memory safety. Refinement and post-refinement writing remain
+untested by this control. Original failed admission/dependent blocking remains;
+no scores or scientific defaults changed. No diagnostic process remains running,
+DGX is deferred, and the full publication goal remains active.
+
 ## High-CPM Import-Context Parser Controls Completed (2026-09-26)
 
 The preceding turn completed parser-only controls. Inspected the frozen

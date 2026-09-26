@@ -8,6 +8,7 @@ evidence that an experiment completed or a biological hypothesis is true.
 
 | Proposed statement | Evidence | Assessment |
 | --- | --- | --- |
+| Checkpoint loading and pre-refinement setup alone reproduce the high-CPM parser crash | [Checkpoint/setup control](QFO_CPM_CHECKPOINT_SETUP_RESULT_20260926.md) | Not reproduced in one bounded observation. Audited loading, seed indexing, graph mapping and hit selection complete before parser readback; refinement/writing and original allocation history remain untested. No causal or admission claim |
 | Loading the frozen refinement modules reproduces the post-write parser crash | [Import-context controls](QFO_CPM_PARSER_IMPORT_RESULT_20260926.md) | Not reproduced by either site-only or frozen-import parsing with active GC. Numerical checkpoint/array/refinement history is omitted; no cause, memory-safety or recovered-admission claim follows |
 | The high-CPM post-refinement crash is caused by the saved partition parser alone | [Frozen parser controls](QFO_CPM_PARSER_CONTROL_RESULT_20260926.md) | Not reproduced: default/debug no-site-import controls both parse the exact partition with active GC. This omits prior imports/native activity and allocation history, does not identify the cause or prove memory safety, and does not repair failed admission |
 | Satellite_v2 has a higher observed OrthoBench aggregate F1 than full OrthoFinder | [Paired analysis](ORTHOBENCH_UNCERTAINTY_20260916.md) | Descriptively supported; interval includes zero; development-exposed |
