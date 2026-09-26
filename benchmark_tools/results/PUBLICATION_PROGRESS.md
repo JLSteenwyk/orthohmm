@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Claims And Manuscript Preview Refreshed (2026-09-26)
+
+Updated the claim-to-evidence checklist to replace obsolete search-recovery
+status and missing-counterfactual statements. It now distinguishes verified
+failed-query membership/exposure, zero observed residue-protein cross-species
+pairs, and the supported reference-conditioned prefilter mechanism from
+unproven downstream accuracy and repaired-search effects.
+
+Generated [version 12 review](MANUSCRIPT_RENDER_REVIEW_20260926_v12.md):
+38 PDF pages, 12 image occurrences, 199 local asset occurrences and 185
+distinct tracked targets. Bounds check passes; visually inspected pages
+7, 8 and 20 including the added figure. No full typography/rights audit
+or publication-completion claim follows. Prior turn added the mechanism
+figure; this turn integrates the evidence into claims and review artifacts.
+QfO jobs 22174/22176 remain the next score/comparison dependency.
+
 ## Prefilter Mechanism Figure Added (2026-09-26)
 
 Generated PNG/PDF/SVG directly from the pinned forced-candidate audit with
