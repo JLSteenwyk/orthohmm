@@ -1,0 +1,44 @@
+{
+  "absolute_tolerance": 1e-12,
+  "f1_adjusted_intervals": 8,
+  "file_trace": {
+    "bytes": 179468,
+    "path": "/tmp/orthohmm-matched-statistics-20260926/files.trace",
+    "sha256": "8c9512a9c3867b0bc0c14e04756009c16df8c2cfbf7daee4c4ce6b38aed9e7db"
+  },
+  "historical_record_paths_accessed": [],
+  "historical_record_paths_checked": 108,
+  "input": {
+    "bytes": 109960,
+    "path": "/tmp/orthohmm-matched-statistics-20260926/results.json",
+    "sha256": "d31dbc0f4e3f02dfb534c8b59b559db00260227f23f2640b4fed13d5aee8ec89"
+  },
+  "limitations": [
+    "Only count-level statistics; does not revalidate predictions, simulation truth or inference.",
+    "Five seed blocks and development exposure remain limitations.",
+    "NumPy and Python are runtime prerequisites, not bundled dependencies."
+  ],
+  "metric_contrasts": 24,
+  "numpy_version": "2.2.6",
+  "original_data_paths_opened": false,
+  "publication_ready": false,
+  "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+  "records": 70,
+  "relocated_result": {
+    "bytes": 109960,
+    "path": "/tmp/orthohmm-matched-statistics-20260926/results.json",
+    "sha256": "d31dbc0f4e3f02dfb534c8b59b559db00260227f23f2640b4fed13d5aee8ec89"
+  },
+  "relocated_script": {
+    "bytes": 4913,
+    "path": "/tmp/orthohmm-matched-statistics-20260926/reproduce_matched_graph_statistics.py",
+    "sha256": "7f28eed73bbdcbb6db280eb47d4bbfc1e9e21e68cf5c81173129934b16b716f4"
+  },
+  "source": {
+    "bytes": 4913,
+    "path": "/tmp/orthohmm-matched-statistics-20260926/reproduce_matched_graph_statistics.py",
+    "sha256": "7f28eed73bbdcbb6db280eb47d4bbfc1e9e21e68cf5c81173129934b16b716f4"
+  },
+  "status": "all_24_metric_contrasts_reproduced_from_counts",
+  "trace_scope": "Exact quoted historical file paths in strace -f -e trace=file; runtime remains installed at its original prefix"
+}

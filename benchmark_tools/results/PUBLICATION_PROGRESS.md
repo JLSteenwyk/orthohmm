@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Relocated Matched-Graph Statistical Reproduction Complete (2026-09-26)
+
+The preceding turn integrated and rendered the matched-recall evidence.
+Added a standalone verifier requiring only the retained result JSON, Python
+and NumPy, without imports from OrthoHMM or the repository. It independently
+reconstructs per-dataset metrics from counts and all 24 paired metric contrasts,
+eight adjusted F1 intervals and seed win/tie/loss counts. All 17 focused tests
+pass, including corrupted-count/interval and incomplete-panel rejection.
+
+The script/result pair was copied outside the repository and executed under
+isolated Python with installed NumPy 2.2.6; all statistics agree within 1e-12.
+A traced second invocation opened none of the exact historical evidence paths
+listed in the result JSON. [Executable check and evidence](MATCHED_GRAPH_STATISTICAL_REPRODUCTION_20260926.md).
+This is count-level statistical portability, not native inference reproduction,
+a relocated runtime or complete release/archive. Main job 22179 was verified
+RUNNING at 1:49:07; full-run readback and broader publication requirements
+remain active. DGX remains deferred and no scientific default changed.
+
 ## Matched-Recall Evidence Integrated into Manuscript v18 (2026-09-26)
 
 The preceding turn completed graph scoring, uncertainty and its figure. The
