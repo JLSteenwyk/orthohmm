@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Failed-Query Membership Audit Launched (2026-09-26)
+
+Submitted **22173** using the
+[pinned launch script](qfo_recovered_failure_membership_20260926.sh) and clean
+frozen audit executor `9b9ab8dc7f56b7dfc29e2eec2f94cc919b06a018`.
+The script pins actual successful search/native admission digests and
+explicitly enables the reviewed native-representation contract. Allocation:
+two CPUs, 64 GiB, 24 hours, no requeue; dedicated Python runs with `-I -B`
+and a minimal environment. Output is
+`benchmarks/work/qfo_recovered_failure_membership_20260926.json`.
+Shell syntax validation passed; existing frozen fixture/CLI coverage is
+documented in the executor receipt. No production membership result is
+claimed until terminal success and report inspection.
+
+Pair conversion **22172** remains active. Membership analysis will identify
+which failed-query proteins enter final groups versus remain unindexed;
+it does not measure reference exposure or a repaired-search counterfactual.
+The preceding turn completed native admission retention and launched pair
+conversion; this turn advances the required failure-impact investigation.
+
 ## Native Groups Admitted; Pair Conversion Submitted (2026-09-26)
 
 Execution access is restored after sandbox startup failures prevented local
