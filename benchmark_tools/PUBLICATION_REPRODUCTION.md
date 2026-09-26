@@ -7,6 +7,10 @@ are statistical reproduction only and do not submit scheduler jobs.
 
 ## Method And Results
 
+- [Current cross-dataset score table](results/CURRENT_BENCHMARK_SCORES_20260926.md)
+  combines retained OrthoBench, corrected QfO and supplementary Three Kingdoms
+  scores without mixing QfO input releases or averaging across datasets.
+
 - [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260926_v15.md)
   provides dated HTML/PDF and a checked local-asset inventory. It remains
   a working preview, not a standalone archive or completed journal layout.

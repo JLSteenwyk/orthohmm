@@ -1,5 +1,16 @@
 # Publication Progress
 
+## Current Scores Consolidated Across Three Benchmarks (2026-09-26)
+
+Exported one eight-method table from hash-pinned OrthoBench, corrected QfO and
+recounted Three Kingdoms reports. It preserves all six QfO endpoints, the
+secondary mean label, prediction semantics and input-consumption caveats;
+historical SonicParanoid and original-release QfO values are not substituted.
+[Table and reproducible commands](CURRENT_BENCHMARK_SCORES_20260926.md).
+Nine tests pass. Five historical OrthoBench source rows lack direct prediction
+hashes; that limitation is explicit and full transitive provenance remains
+unfinished. No scoring, inference, scientific default or runtime changed.
+
 ## Corrected Endpoint Figure Integrated and Preview Reviewed (2026-09-26)
 
 Integrated the 48-point corrected-QfO endpoint figure with explicit relation-set,
