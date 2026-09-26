@@ -1,5 +1,19 @@
 # Recovery BPO Handoff
 
+## Current Execution State (26 September)
+
+Native inference **22170 completed 0:0 in 2:30:47**; independent output
+validator **22171 completed 0:0 in 19:33**. Its
+[retained report](qfo_recovered_native_admission_22171.json), SHA256
+`8d75ac17b0e2d0e27a7b3151c00ac64d6f9cc959976d7a57407cc683b19fb0d6`,
+authorizes conversion of 79862 groups containing 781432 proteins, with
+202705 ungrouped input proteins and 14378089 cross-species clique pairs.
+Pair-conversion **22172** is submitted with that digest and frozen executor
+`296882422f2d70c096c8d5584082c16217f36add`. Do not submit duplicates.
+Inspect its terminal state and
+`benchmarks/results/qfo_blast_recovery_pairs_v1/results.json` before scoring.
+No corrected recovered OrthoMCL accuracy result is admitted yet.
+
 ## Current Execution State (25 September)
 
 Search validator **22166 completed 0:0 in 46:16** with status

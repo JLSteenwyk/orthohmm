@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Native Groups Admitted; Pair Conversion Submitted (2026-09-26)
+
+Execution access is restored after sandbox startup failures prevented local
+reads and scheduler queries. No benchmark jobs were restarted during that
+observation outage. Terminal accounting now confirms **22170 COMPLETED 0:0
+in 2:30:47**, followed by **22171 COMPLETED 0:0 in 19:33**.
+The [retained native admission](qfo_recovered_native_admission_22171.json)
+has SHA256 `8d75ac17b0e2d0e27a7b3151c00ac64d6f9cc959976d7a57407cc683b19fb0d6`,
+status `recovered_orthomcl_native_outputs_admitted` and
+`conversion_authorized=true`. It verifies 79862 final groups, 781432 grouped
+proteins and 202705 ungrouped proteins, covering 984137 inputs / 78 species.
+There are 29857 single-species groups and 14378089 cross-species clique pairs.
+These are structural results, not biological accuracy scores.
+
+Submitted pair conversion **22172** using the clean frozen executor
+`296882422f2d70c096c8d5584082c16217f36add`, completed admission job 22171 and
+the exact final report digest above. Fresh output destination:
+`benchmarks/results/qfo_blast_recovery_pairs_v1`. Allocation: two CPUs,
+64 GiB, 24 hours, no requeue. Conversion independently rechecks group counts
+and requires zero QfO mapping loss. Next: verify terminal conversion and run
+all six QfO endpoints, then update comparison and failure-membership analyses.
+Shared-host times remain descriptive; DGX stays deferred. The preceding
+turn was blocked by execution access; this turn restores concrete progress.
+
 ## Recovered Native Inference Started (2026-09-25)
 
 Job **22170** passed preflight and fresh input staging. The staged native
