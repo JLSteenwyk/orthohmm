@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Complete Swiss Comparator Uncertainty (2026-09-26)
+
+Job 22178 completed with exit 0 in 24 seconds. The retained
+[uncertainty report](qfo_recovered_swiss_uncertainty_22178.json), SHA256
+`a599749d66433ec211ed1ab0e3a6a2a75eb99cb0dc57abc47c2d267930cbbe34`,
+admits all eight contrasts and 24 endpoints under the frozen 18-family,
+100,000-resample, seed-20260920 protocol. All seven previously estimated
+contrasts are exactly unchanged. Separate
+[arithmetic reproduction](qfo_recovered_swiss_reproduction_22178.json)
+matches all 24 endpoints within 1e-12; this is not a second raw-count audit.
+
+Recovered OrthoMCL minus full OrthoFinder SwissTrees F1 is -0.081803525,
+with adjusted interval [-0.159934766, -0.008176966]; adjusted precision and
+recall intervals include zero. Family F1 wins/ties/losses are 3/1/14.
+The [updated figure and endpoint tables](corrected_swiss_comparison_figure_20260926/endpoints.md)
+retain all planned contrasts. The PNG was visually checked for label/interval
+overlap. Draft manuscript point estimates, uncertainty prose and figure link
+are updated; the rendered v12 preview and other integration surfaces still
+need regeneration/update. No scientific defaults or inference results changed.
+
 ## Recovered OrthoMCL Scores Admitted (2026-09-26)
 
 Assessment 22174 completed with exit 0 in 01:09:29; independent admission

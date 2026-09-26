@@ -957,7 +957,7 @@ EC 0.965650, VGNC F1 0.901690, SwissTrees F1 0.833513, TreeFam-A F1 0.614864
 and FAS 0.762993 (secondary mean 0.761510), from 5,959,560 mapped native
 phylogenetic pairs with zero mapping losses. SwissTrees precision/recall
 are 0.955177/0.739341, versus TreeFam-A 0.959110/0.452464. The table now
-contains seven admitted methods; OrthoMCL remains missing. Full OrthoFinder 3.1.5 adds
+contains [eight admitted methods](qfo_corrected_comparison_20260926_v7/scores.md). Full OrthoFinder 3.1.5 adds
 GO 0.469548, EC 0.936130, VGNC F1 0.988546, SwissTrees F1 0.848413,
 TreeFam-A F1 0.791918 and FAS 0.691422 (secondary mean 0.787663), from
 14,215,382 native phylogenetic pairs. Its pre-phylogenetic sequence-only
@@ -981,7 +981,7 @@ corrected OrthoFinder species tree, not independent species-tree inference.
 Two failed native task attempts were retained and explicitly audited against
 their successful retries; their scientific commands were identical. This
 is accuracy evidence, not controlled runtime evidence. OrthoMCL's corrected
-comparison remains unfinished. Its interrupted search was recovered through
+scores are now independently admitted. Its interrupted search was recovered through
 validated replay batches and an ordered merge. The full-table audit verified
 401,908,030 alignment rows and 222,903,808 distinct directed pairs across
 984,137 input proteins. It independently identified 53 failed queries:
@@ -1005,8 +1005,13 @@ BPO and native-group validation yielded 79,862 groups containing 781,432
 proteins, with 202,705 ungrouped inputs. Pair conversion retained all
 14,378,089 cross-species final-group clique pairs with zero QfO mapping loss.
 These are cluster-derived pairs, not native phylogenetic ortholog calls.
-The six-endpoint assessment is running; corrected OrthoMCL scores remain
-unavailable. [Recovery workflow and validation status](QFO_RECOVERY_BPO_HANDOFF_20260923.md).
+The [independently admitted six-endpoint assessment](qfo_recovered_score_admission_22176.json)
+yielded GO 0.463755, EC 0.921326, VGNC F1 0.642027, SwissTrees F1
+0.766610, TreeFam-A F1 0.753685 and FAS 0.733752, with project-defined
+secondary mean 0.713526. SwissTrees precision/recall are 0.874128/0.682644;
+TreeFam-A precision/recall are 0.851985/0.675722. These results retain the
+failed queries and native-representation differences described here; they
+are not an uninterrupted or repaired-query BLAST counterfactual.
 
 The search was admitted under an explicit native-representation contract,
 not exact residue parity: legacy BLAST deleted one O residue from each of
@@ -1034,7 +1039,7 @@ representation. Neither the score impact nor the effect on final groups
 has been established.
 [Seven-protein search trace](QFO_NATIVE_RESIDUE_HIT_TRACE_20260925.md).
 No paired superiority
-over competitors is inferred from this partial table.
+over competitors is inferred from this point-estimate table alone.
 [Method identity and export checks](QFO_CORRECTED_MAIN_TABLE_20260918.md).
 The prespecified [corrected comparator uncertainty analysis](CORRECTED_SWISS_COMPARISON_RESULT_21987.md)
 initially reconstructed raw counts for the six methods then admitted. It retained all
@@ -1064,9 +1069,21 @@ superiority nor equivalence is established. Family-specific F1 differences
 favor FastOMA in one family, tie in one, and favor OrthoFinder in 16.
 These counts are descriptive, not a substitute for the macro-statistic
 bootstrap. [Arithmetic reproduction](qfo_fastoma_swiss_reproduction_22098.json)
-matches all 21 available endpoints within 1e-12. OrthoMCL remains missing.
+matches all 21 endpoints then available within 1e-12.
 
-[![Corrected SwissTrees comparator differences with paired intervals](corrected_swiss_comparison_figure_20260923/corrected_swiss_comparison.png)](corrected_swiss_comparison_figure_20260923/corrected_swiss_comparison.png "Full-resolution figure")
+The [complete eight-method update](qfo_recovered_swiss_uncertainty_22178.json)
+retains the same resamples and adjustment, with all seven existing contrasts
+exactly unchanged. Recovered OrthoMCL minus full OrthoFinder has F1 difference
+-0.081804 (adjusted interval [-0.159935, -0.008177]), precision difference
+-0.063725 ([-0.183279, 0.032099]) and recall difference -0.091903
+([-0.218861, 0.027759]). Thus its adjusted F1 interval is negative, while
+the precision and recall intervals include zero. Family-specific F1 favors
+OrthoMCL in three families, ties in one and favors OrthoFinder in 14.
+[Independent arithmetic reproduction](qfo_recovered_swiss_reproduction_22178.json)
+matches all 24 endpoints within 1e-12. These are conditional family-bootstrap
+results on development-exposed references, not a universal ranking.
+
+[![Corrected SwissTrees comparator differences with paired intervals](corrected_swiss_comparison_figure_20260926/corrected_swiss_comparison.png)](corrected_swiss_comparison_figure_20260926/corrected_swiss_comparison.png "Full-resolution figure")
 
 This figure retains every planned contrast. Thick bars are nominal 95%
 intervals and thin bars are adjusted across all 24 endpoints. Values are
