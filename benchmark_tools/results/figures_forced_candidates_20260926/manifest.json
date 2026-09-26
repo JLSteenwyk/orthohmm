@@ -1,0 +1,50 @@
+{
+  "audit": {
+    "bytes": 213536,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ob_forced_candidates_audit_20260926.json",
+    "sha256": "0cda6c99b7bab61c86f2319653828fe6ada74c118166408dbab3535bf003d4bd"
+  },
+  "counts": [
+    [
+      31479,
+      0
+    ],
+    [
+      0,
+      1619
+    ],
+    [
+      30496,
+      17872
+    ]
+  ],
+  "limitations": [
+    "Reference-conditioned candidate-selection intervention, not unbiased accuracy or matched DIAMOND sensitivity.",
+    "Recounts raw scores; does not independently rescore sequences.",
+    "No downstream grouping or comparative timing claim.",
+    "Numerical disagreements prohibit attributing changes solely to candidate selection."
+  ],
+  "matplotlib": "3.10.8",
+  "outputs": [
+    {
+      "bytes": 122015,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_forced_candidates_20260926/forced_candidates.png",
+      "sha256": "0612cabb4522f653fcc9be672447f73e54666eadf8a49de984fe93af49636a4b"
+    },
+    {
+      "bytes": 67639,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_forced_candidates_20260926/forced_candidates.svg",
+      "sha256": "92de1929d318f3dbb8d945629cd816900b683855fba7c4e15a22a42bf0f9601e"
+    },
+    {
+      "bytes": 18253,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_forced_candidates_20260926/forced_candidates.pdf",
+      "sha256": "a6abc93ea84078de6a1c7e93c22151f2bf663452c4276525b59c3a68efcb168f"
+    }
+  ],
+  "source": {
+    "bytes": 4608,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_forced_candidate_diagnostic.py",
+    "sha256": "0e80db171e7c43529348d5680ccf7cd0d66eebd96d99edb615570fd4080e3c19"
+  }
+}

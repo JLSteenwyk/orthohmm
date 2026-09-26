@@ -421,6 +421,14 @@ mechanistic evidence, not unbiased sensitivity, proof of true orthology,
 matched DIAMOND sensitivity or a downstream precision/F1 improvement.
 No broader-prefilter grouping run is evaluated by this diagnostic.
 
+![Forced scoring of reference-conditioned OrthoBench pairs, stratified by their original search decision.](figures_forced_candidates_20260926/forced_candidates.png)
+
+The stacked counts show unchanged prior acceptances and significance
+rejections, and the split of prefilter-excluded pairs after forced scoring.
+These are directed search-pair counts, not independent ortholog observations
+or confidence intervals. [Vector PDF](figures_forced_candidates_20260926/forced_candidates.pdf)
+and [figure provenance](figures_forced_candidates_20260926/manifest.json).
+
 Joining these decisions to the retained final-root-group trace found8,386
 pairs excluded by the prefilter in both directions that were nonetheless
 grouped together, and15,129 such pairs that remained separated. Pairs scored

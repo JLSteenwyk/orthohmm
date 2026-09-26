@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Prefilter Mechanism Figure Added (2026-09-26)
+
+Generated PNG/PDF/SVG directly from the pinned forced-candidate audit with
+`python -m benchmark_tools.plot_forced_candidate_diagnostic --audit
+benchmark_tools/results/ob_forced_candidates_audit_20260926.json --output
+benchmark_tools/results/figures_forced_candidates_20260926`.
+The plot validates transition marginals and refuses numerical disagreements
+or incomplete direction/pair counts. Fifteen focused plotting/comparison
+tests passed. Visually inspected the 1800x936 PNG: labels, counts, axes and
+limitations fit without clipping. Linked the figure beside the manuscript's
+mechanism result; retained vector outputs and hashed source/input manifest.
+This figure is not an independent accuracy comparison or an uncertainty
+interval. Existing HTML/PDF manuscript previews predate these changes.
+
+Previous turn verified the mechanism; this turn adds its reproducible
+publication figure. Assessment 22174 and dependent score admission 22176
+remain outstanding. No publication-completion claim is made.
+
 ## Forced Candidate Mechanism Verified (2026-09-26)
 
 Job **22177 completed 0:0 in 1:21**. Independent audit of every raw array
