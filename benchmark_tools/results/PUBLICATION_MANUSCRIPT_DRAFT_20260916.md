@@ -965,11 +965,18 @@ validated replay batches and an ordered merge. The full-table audit verified
 401,908,030 alignment rows and 222,903,808 distinct directed pairs across
 984,137 input proteins. It independently identified 53 failed queries:
 46 statistics failures and seven short-query failures. None had outgoing
-hits, but 21 had incoming hits; these observations do not establish their
-final-group membership. Another 4,257 proteins lacked query hits without a
-logged failure. The downstream BPO, native-group, pair-conversion and scoring
-workflow is implemented and frozen, but implementation is not evidence that
-those production stages have completed. Corrected OrthoMCL scores remain
+hits, but 21 had incoming hits. A subsequent audit against the independently
+validated native partition found all 53 absent from the native graph index
+and final groups, including the 21 with incoming hits. Thus incoming hits
+did not result in final-group membership for these failed queries; this
+does not establish the accuracy effect of repairing their outgoing searches.
+[Failed-query membership audit](qfo_recovered_failure_membership_20260926.json).
+Another 4,257 proteins lacked query hits without a logged failure. Completed
+BPO and native-group validation yielded 79,862 groups containing 781,432
+proteins, with 202,705 ungrouped inputs. Pair conversion retained all
+14,378,089 cross-species final-group clique pairs with zero QfO mapping loss.
+These are cluster-derived pairs, not native phylogenetic ortholog calls.
+The six-endpoint assessment is running; corrected OrthoMCL scores remain
 unavailable. [Recovery workflow and validation status](QFO_RECOVERY_BPO_HANDOFF_20260923.md).
 
 The search was admitted under an explicit native-representation contract,

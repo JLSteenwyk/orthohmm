@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Failed-Query Membership Verified (2026-09-26)
+
+Audit **22173 completed 0:0 in 3:32**. The
+[retained report](qfo_recovered_failure_membership_20260926.json), SHA256
+`bf7093d82dff31158fe5474d9576603fef3fcc83a62b7761e27eaa1355cbc79e`,
+has status `recovered_failure_membership_content_verified`. Independently
+recounted its per-protein records: all 53 failed queries are absent from
+the native graph index and final groups; 21 have incoming hits, none has
+outgoing hits. No failed query enters a final group. The report retains
+the native-representation limitations and bound upstream evidence.
+
+Updated the manuscript's previously unresolved membership paragraph and
+its downstream execution status. This establishes observed membership,
+not reference exposure, biological orthology or the score effect of a
+repaired-search counterfactual. Existing rendered previews predate this
+edit. Assessment **22174** remains active; no corrected OrthoMCL score is
+admitted yet. Prior turn advanced conversion into scoring; this turn
+retains and integrates the completed failure audit.
+
 ## Recovered QfO Assessment Launched (2026-09-26)
 
 Pair conversion **22172 completed 0:0 in 4:24**, status
