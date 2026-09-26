@@ -935,8 +935,8 @@ explicitly release-limited. The separately frozen
 [corrected-release protocol](QFO_CORRECTED_RELEASE_PROTOCOL_20260917.md)
 requires fresh affected inference for all eight comparator rows and eight
 factorial cells, with separate prediction identifiers and fresh scoring.
-Corrected inference is in progress. Proteinortho is the first independently
-admitted corrected row: GO 0.486336, EC 0.963168, VGNC F1 0.954896, SwissTrees
+The corrected eight-method comparison is now admitted. Proteinortho yields
+GO 0.486336, EC 0.963168, VGNC F1 0.954896, SwissTrees
 F1 0.718111, TreeFam-A F1 0.643187 and FAS 0.813595, with 4,695,385 mapped native
 pairs. Its project-defined secondary mean is 0.763216. SonicParanoid was
 subsequently admitted with GO 0.454385, EC 0.872761, VGNC F1 0.982794,
@@ -944,9 +944,9 @@ SwissTrees F1 0.798459, TreeFam-A F1 0.771956 and FAS 0.736680, with
 15,248,739 mapped native pairs and secondary mean 0.769506. A fresh frozen
 admission reproduced its complete report byte-for-byte. These two rows
 show different point-estimate trade-offs, not a uniform advantage. The
-[partial corrected table](qfo_corrected_comparison_20260923_v6/scores.md)
-does not yet complete the eight-method comparison; paired SwissTrees
-uncertainty for its admitted rows is now reconstructed separately below.
+[earlier partial table](qfo_corrected_comparison_20260923_v6/scores.md)
+is retained as historical evidence; the complete comparison and paired
+SwissTrees uncertainty are reported below.
 The admitted high-sensitivity OrthoHMM row now adds GO 0.472271, EC 0.932038,
 VGNC F1 0.665933, SwissTrees F1 0.685498, TreeFam-A F1 0.605008 and FAS
 0.776585 (secondary mean 0.689555), from 9,032,719 mapped group-derived
@@ -1012,6 +1012,19 @@ secondary mean 0.713526. SwissTrees precision/recall are 0.874128/0.682644;
 TreeFam-A precision/recall are 0.851985/0.675722. These results retain the
 failed queries and native-representation differences described here; they
 are not an uninterrupted or repaired-query BLAST counterfactual.
+
+![Corrected QfO precision-recall and functional-similarity endpoints for all eight retained methods.](figures_corrected_qfo_endpoints_20260926/corrected_qfo_endpoints.png)
+
+The corrected-input panel shows all 48 method/endpoint points. VGNC,
+SwissTrees and TreeFam-A use precision-recall axes; GO and EC show mean
+functional similarity against assessed relation counts. FAS uses reported
+eligible relations, not the size of its unseeded sample. Different methods
+submit different relation sets and output types, so functional similarity
+does not establish overall orthology accuracy. FastOMA uses a supplied
+OrthoFinder tree; the OrthoFinder sequence checkpoint yields group-derived
+cliques. No cross-endpoint uncertainty is implied. Near-equal points may
+overlap. [Vector PDF](figures_corrected_qfo_endpoints_20260926/corrected_qfo_endpoints.pdf)
+and [point/provenance manifest](figures_corrected_qfo_endpoints_20260926/manifest.json).
 
 The search was admitted under an explicit native-representation contract,
 not exact residue parity: legacy BLAST deleted one O residue from each of

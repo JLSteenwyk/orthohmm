@@ -30,7 +30,6 @@ python -m benchmark_tools.plot_corrected_qfo_endpoints \
 python -m pytest -q tests/unit/test_plot_corrected_qfo_endpoints.py
 ```
 
-The working manuscript still links the original-release figure in its historical
-section. Integration of this additional corrected figure into the corrected
-section and a refreshed manuscript preview remains next. This artifact is not
-a full release or publication-readiness declaration.
+The working manuscript links the original-release figure in its historical
+section and this additional figure in the corrected section. This artifact
+is not a full release or publication-readiness declaration.

@@ -7,7 +7,9 @@ are statistical reproduction only and do not submit scheduler jobs.
 
 ## Method And Results
 
-- [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260926_v14.md)
+- [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260926_v15.md)
+  provides dated HTML/PDF and a checked local-asset inventory. It remains
+  a working preview, not a standalone archive or completed journal layout.
 - [Corrected six-endpoint comparison figure](results/CORRECTED_QFO_ENDPOINT_FIGURE_20260926.md)
   retains all eight methods and distinguishes FAS eligible counts from sample sizes.
 - [Complete-panel figure evidence bundle](results/PUBLICATION_COMPLETE_FIGURE_BUNDLE_20260926.md)
@@ -29,13 +31,6 @@ are statistical reproduction only and do not submit scheduler jobs.
   pins the recovered-score-compatible executor and comparison digest.
   The seven-method recipes below are retained historical stages, not the
   latest complete panel. All seven earlier contrasts remain unchanged.
-  provides dated HTML/PDF and a checked local-asset inventory. Version 12 adds
-  corrected OrthoMCL failure membership/exposure, the seven-protein residue
-  group trace, and the forced-candidate diagnostic and figure, not corrected
-  OrthoMCL scores. Pages 7, 8 and 20 received visual review; other pages were
-  not visually re-reviewed. The earlier citation inventory is not a new
-  citation audit of these additions. This remains
-  not a standalone archive, completed typesetting or full copyediting.
 - [Corrected figure supplements](results/PUBLICATION_CORRECTED_FIGURE_BUNDLE_20260919.md)
   include the seven-method FastOMA comparison exported at `27113f4`, with
   isolated relocated verification and retained-count arithmetic reproduction.

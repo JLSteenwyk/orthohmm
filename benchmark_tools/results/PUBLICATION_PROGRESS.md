@@ -1,5 +1,16 @@
 # Publication Progress
 
+## Corrected Endpoint Figure Integrated and Preview Reviewed (2026-09-26)
+
+Integrated the 48-point corrected-QfO endpoint figure with explicit relation-set,
+FAS sampling and prediction-semantics caveats. Corrected stale in-progress
+wording in the same section and removed the misplaced version-12 description
+from the reproduction guide. [Version 15 review](MANUSCRIPT_RENDER_REVIEW_20260926_v15.md)
+has 39 pages and 193 distinct tracked asset targets; all page bounds pass.
+Pages 19-20 were visually inspected. Sixteen rendering/plotting tests pass.
+The embedded plot needs more space in final journal layout; scientific,
+timing and full-release requirements remain incomplete.
+
 ## Corrected Six-Endpoint Figure Complete (2026-09-26)
 
 Added a pinned plotter for the complete corrected eight-method panel, reusing
