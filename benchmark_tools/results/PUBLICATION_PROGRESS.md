@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Prefilter Counterfactual Diagnostic Implemented (2026-09-26)
+
+Added an opt-in forced-candidate mode to the search-decision runner and
+[protocol](OB_FORCED_CANDIDATE_PROTOCOL_20260926.md). It passes all existing
+watched reference pairs through the frozen engine while retaining complete
+target databases, then restores the candidate-selection function. Default
+search behavior and the publication method are unchanged. Added explicit
+candidate-array validation tests and a frozen-executor job wrapper.
+
+This is a reference-conditioned mechanism diagnostic, not independent
+accuracy evidence or a matched-sensitivity DIAMOND experiment. No production
+diagnostic has run yet. Next: freeze/test the executor, launch the diagnostic,
+and independently join scores to the prior trace, verifying numerical
+agreement for previously scored pairs before interpreting rescued pairs.
+The previous turn completed the residue-group trace; this turn advances
+the unresolved explanation of prefilter losses. QfO scoring/validation
+remain jobs 22174/22176; dedicated timing remains deferred.
+
 ## Reviewed Residue Proteins Traced To Final Groups (2026-09-26)
 
 Added `trace_native_residue_groups.py` and six focused tests for membership,

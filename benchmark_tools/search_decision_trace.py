@@ -7,6 +7,28 @@ candidates from a significant-hit cache or establish historical equivalence.
 import math
 
 
+def watched_candidate_arrays(query_ids, target_ids, pairs):
+    """Construct explicit candidates for a reference-conditioned diagnostic."""
+    import numpy as np
+
+    queries = {gene: i for i, gene in enumerate(query_ids)}
+    targets = {gene: i for i, gene in enumerate(target_ids)}
+    if len(queries) != len(query_ids) or len(targets) != len(target_ids):
+        raise ValueError("Duplicate sequence identities")
+    pairs = list(pairs)
+    if len(set(pairs)) != len(pairs):
+        raise ValueError("Duplicate watched pair")
+    by_query = [[] for _ in query_ids]
+    for q, t in pairs:
+        if q not in queries or t not in targets:
+            raise ValueError("Watched pair outside sequence universe")
+        by_query[queries[q]].append(targets[t])
+    offsets = np.zeros(len(query_ids) + 1, dtype=np.int64)
+    offsets[1:] = np.cumsum([len(items) for items in by_query])
+    candidates = np.array([i for items in by_query for i in sorted(items)], dtype=np.int32)
+    return candidates, offsets
+
+
 def classify_search_result(result, query_ids, target_ids, watched_pairs, threshold):
     """Return directed decisions, requiring complete unfiltered candidate output."""
     if not math.isfinite(threshold) or threshold <= 0:

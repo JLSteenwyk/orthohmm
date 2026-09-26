@@ -16,7 +16,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from benchmark_tools.build_publication_runtime import verify_runtime, COMMIT
 from benchmark_tools.prepare_ob_candidate_neighborhood import record, check
 from benchmark_tools.run_simulation_methods import read_frozen
-from benchmark_tools.search_decision_trace import classify_search_result
+from benchmark_tools.search_decision_trace import classify_search_result, watched_candidate_arrays
 from benchmark_tools.trace_ob_initial_edges import TRACE_SHA
 
 RUNTIME_SHA = "aebea83807356b02307473506fa30c2dbd2c511d7ba75a0655eb12180a474d74"
@@ -53,7 +53,7 @@ def load_watched(path):
     return pairs
 
 
-def run(root, core, output, threads):
+def run(root, core, output, threads, force_watched_candidates=False):
     if output.exists() or threads < 1:
         raise ValueError("Require fresh output and positive thread count")
     if subprocess.check_output(["git", "-C", str(core), "rev-parse", "HEAD"], text=True).strip() != COMMIT:
@@ -104,13 +104,30 @@ def run(root, core, output, threads):
                   "Historical comparison is hit presence only, not numerical score equivalence.",
                   "No counterfactual scoring of candidates excluded by the prefilter.",
                   "Shared-host diagnostic is not a comparative timing run."]}
+    report["forced_watched_candidates"] = force_watched_candidates
+    if force_watched_candidates:
+        report["limitations"] = [
+            "Reference-conditioned diagnostic: not an unbiased search or accuracy benchmark.",
+            "Only candidate selection is overridden; frozen scoring, full target database and E-value calculation remain unchanged.",
+            "Historical hit disagreement is expected and is not a historical reproduction failure.",
+            "No downstream grouping rerun, matched DIAMOND sensitivity, or numerical equivalence to historical scores is established.",
+            "Shared-host diagnostic is not a comparative timing run."]
     try:
         for index, ((qsp, tsp), pairs) in enumerate(sorted(directions.items())):
             pairs = sorted(pairs)
             query = subset_queries(species[qsp], {q for q, _ in pairs})
             target = species[tsp]
-            result = engine.search_species_pair_indexed(query, target, n_threads=threads, **SETTINGS)
+            original_prefilter = engine.prefilter_candidates
+            try:
+                if force_watched_candidates:
+                    candidates = watched_candidate_arrays(query.ids, target.ids, pairs)
+                    engine.prefilter_candidates = lambda *args, **kwargs: candidates
+                result = engine.search_species_pair_indexed(query, target, n_threads=threads, **SETTINGS)
+            finally:
+                engine.prefilter_candidates = original_prefilter
             rows = classify_search_result(result, query.ids, target.ids, pairs, 1e-4)
+            if force_watched_candidates and any(r["decision"] == "not_selected_by_prefilter" for r in rows):
+                raise ValueError("Forced candidate missing from scoring output")
             raw = output / f"direction_{index:03d}.npz"
             np.savez_compressed(raw, query_ids=np.array(query.ids), target_ids=np.array(target.ids),
                                 query_indices=result.query_indices, target_indices=result.target_indices,
@@ -138,7 +155,8 @@ def run(root, core, output, threads):
             check(item)
         if verify_runtime(runtime_path, core) != runtime:
             raise ValueError("Runtime changed during diagnostic")
-        report["status"] = "search_decisions_observed_pending_independent_audit"
+        report["status"] = ("forced_candidate_scores_pending_independent_audit" if force_watched_candidates
+                            else "search_decisions_observed_pending_independent_audit")
     except BaseException as error:
         report.update(status="failed", error_type=type(error).__name__, error=str(error))
         raise
@@ -154,5 +172,7 @@ if __name__ == "__main__":
     for name in ("root", "core", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
     parser.add_argument("--threads", type=int, default=4)
+    parser.add_argument("--force-watched-candidates", action="store_true")
     args = parser.parse_args()
-    run(args.root.resolve(), args.core.resolve(), args.output.resolve(), args.threads)
+    run(args.root.resolve(), args.core.resolve(), args.output.resolve(), args.threads,
+        args.force_watched_candidates)
