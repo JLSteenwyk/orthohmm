@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Search-Sensitivity Calibration Inputs Verified (2026-09-26)
+
+The preceding turn made progress integrating reproducibility evidence into
+the manuscript. Revalidated job 22179 RUNNING at 52:14; its log reached 36.81%
+of the initial all-to-all search stage. Advanced the substantive unmatched-search
+gap with a prespecified simulation diagnostic and executable input validation:
+all 70 retained variable-length datasets pass original truth/FASTA hash checks,
+exact inventory, gene/species/family coverage and directed homology denominators.
+All 13 tests pass. [Protocol and frozen 35/35 seed split](SEARCH_SENSITIVITY_CALIBRATION_PROTOCOL_20260926.md).
+
+The fixed cutoff grid is selected only by ancestral-homology recall on the
+calibration split, never orthology F1 or real-benchmark scores. The reporting
+gate and all-condition failure policy are frozen before new search output.
+These simulations are development-exposed, not independent confirmation; any
+match is bounded to this panel and not effort equivalence. No new searches have
+executed yet. Next implement/pin the worker and run the complete panel, while
+retaining fresh OrthoBench admission, controlled timing, uncertainty and all
+other publication requirements. DGX remains deferred and the full goal is active.
+
 ## Manuscript Reproducibility Integration, Version 17 (2026-09-26)
 
 The preceding turn made progress binding exact installed wheels to notices and
