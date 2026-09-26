@@ -24,6 +24,10 @@ five historical OrthoBench rows lack direct prediction-file hashes in their
 summary objects. The exporter now retains each complete source row and documents
 that provenance gap; it does not invent hashes or call this transitive auditing.
 
+A subsequent [five-comparator prediction readback](RETAINED_OB_COMPARATOR_READBACK_20260926.md)
+now supplies current file hashes and reproduces those retained statistics.
+It does not establish historical consumption or complete native provenance.
+
 ```bash
 /usr/bin/python3 -S -m benchmark_tools.export_current_benchmark_scores \
   --results benchmark_tools/results --output /tmp/current-benchmark-scores-new

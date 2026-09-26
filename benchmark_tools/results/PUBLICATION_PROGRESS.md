@@ -1,5 +1,16 @@
 # Publication Progress
 
+## Five OrthoBench Comparator Inputs Rescored (2026-09-26)
+
+Located and hashed the missing direct prediction inputs and independently
+recomputed their scores with the existing official-formula scorer. All five
+match retained precision/recall/F1 within 1e-8 percentage points and exact
+group counts exactly. [Readback evidence](RETAINED_OB_COMPARATOR_READBACK_20260926.md)
+retains 92 records and per-family counts. The generic FastOMA file was correctly
+identified as the root-HOG diagnostic, not substituted for final OGs. Thirteen
+tests pass. Current-file equivalence does not establish historical consumption,
+native conversion or full provenance; score tables remain unchanged.
+
 ## Current Scores Consolidated Across Three Benchmarks (2026-09-26)
 
 Exported one eight-method table from hash-pinned OrthoBench, corrected QfO and
