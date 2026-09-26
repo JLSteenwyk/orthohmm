@@ -1,5 +1,15 @@
 # Publication Progress
 
+## OrthoMCL Replicate Difference Bounded to Unscored Groups (2026-09-26)
+
+Compared April/July partitions and rescored both under the same reference.
+There are 23,802 identical groups; one April group of ten becomes two July
+groups of seven and two, with one absent gene. None of the ten changed-group
+genes occurs in a RefOG, and all 70 family count records and aggregate scores
+are exactly equal. [Evidence and commands](OB_ORTHOMCL_PARTITION_COMPARISON_20260926.md).
+Ten tests pass. The partitions are not equal; this explains benchmark equality
+without claiming biological equivalence or historical execution parity.
+
 ## Upstream OrthoBench Comparator Scores Cross-Checked (2026-09-26)
 
 The retained upstream evaluator functions return exactly identical precision,

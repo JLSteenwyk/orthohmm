@@ -29,6 +29,12 @@ do not follow from this gene inventory check. SonicParanoid and ProteinOrtho inp
 singleton-padded scoring files, so their 100% recognized coverage is not native
 grouping coverage.
 
+A subsequent [full partition/count comparison](OB_ORTHOMCL_PARTITION_COMPARISON_20260926.md)
+finds 23,802 identical groups and one April group split into two July groups
+with one missing member. No changed-group genes are in the reference; all
+70 family count records and aggregate scores match exactly. Whole-partition
+equivalence is explicitly false.
+
 Twenty focused wrapper/scorer/adapter tests pass. A Python SyntaxWarning from
 the unchanged upstream regex literal was emitted on first import; the pinned
 file was not edited. An inefficient read-only gene-difference probe was stopped
