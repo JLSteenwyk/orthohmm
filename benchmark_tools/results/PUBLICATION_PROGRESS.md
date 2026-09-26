@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Full Historical Event and Pair Semantics Verified (2026-09-26)
+
+The preceding turn made progress validating alignment residues and the species
+supermatrix. Added an independent implementation of the frozen reconciliation
+rules and satellite-membership policy, without changing scientific inference.
+The installed fixture and complete historical OrthoBench p1_c1_r1 pass:
+337,845 node rows, 59,770 final root groups and all 966,439 native pair/confidence
+records match. All 8,440 constraints reproduce the recorded 2,588 detachments,
+8,401 detached genes, 2,117 added groups and 16,885 removed pairs. The sidecar
+matches the original preparation hash; 85 focused tests pass.
+[Evidence, scope and reproduction command](PHYLOGENY_EVENT_READBACK_20260926.md).
+
+Job 22179 remains RUNNING at 30:25 with 32 CPUs/128 GiB allocated. Historical
+rule consistency is not admission of that new run, biological truth or a proof
+of optimal rooting/search. Hierarchy-table and selection checks remain separate.
+After native completion, apply the score, structure, sequence and event readers
+to the fresh output. No score/default changed; controlled timing and the broader
+publication requirements remain open. DGX is deferred and the goal stays active.
+
 ## Full Historical Alignment and Supermatrix Readback (2026-09-26)
 
 The preceding turn made progress with structural tree/pair validation. Added

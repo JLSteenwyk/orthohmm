@@ -1,0 +1,60 @@
+{
+  "checked_record_count": 34745,
+  "constraint_provenance": {
+    "constraint": {
+      "bytes": 13661409,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p1_c1/orthohmm_working_res/phylogeny_candidate_merges.json",
+      "sha256": "55dee278b7feac6cc480c4e88b21adabc7ba093d8c9534501794e7efcb3270a9"
+    },
+    "prepared": {
+      "bytes": 63452,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/orthobench_factorial_prepared_20260916.json",
+      "sha256": "5c325f4d77865e0c7571fe4bb4df0be0959977a49e1d22169f192518700f9382"
+    }
+  },
+  "dendropy_version": "5.0.8",
+  "full_readback": {
+    "bytes": 10748880,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/installed_ob_historical_events_20260926.json",
+    "sha256": "8bcc41ab29b5e84ea4fdbfd8e772c73f8a904bf3900a3a48c0ffb065422161c3"
+  },
+  "limitations": [
+    "Independent rule implementation, but the same DendroPy parser family is used.",
+    "Conditional on saved rooted trees and supplied constraint sidecar; no biological truth claim.",
+    "Does not prove optimal rooting, HMM search correctness or hierarchy-table correctness.",
+    "Constraint historical provenance must be pinned separately by caller."
+  ],
+  "membership_totals": {
+    "constraints": 8440,
+    "detached_constraints": 2588,
+    "detached_genes": 8401,
+    "ortholog_pairs_removed": 16885,
+    "root_hogs_added": 2117,
+    "supported_constraints": 5852
+  },
+  "note": "Historical p1_c1_r1 rule-consistency validation. No new-run admission or biological correctness claim.",
+  "scientific_scores_admitted": false,
+  "sources": [
+    {
+      "bytes": 8605,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_phylogeny_events.py",
+      "sha256": "7190ec019f98100a241b6fa52640147e97e08eaa6c4d124bf659ca2e143ebabe"
+    },
+    {
+      "bytes": 5824,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/derive_phylogeny_events.py",
+      "sha256": "ea27a18ec49fd9a5b01d556587bc68d05aad49db5e454d8b18735dbf6ba2f14c"
+    }
+  ],
+  "status": "frozen_phylogeny_event_pair_semantics_verified",
+  "totals": {
+    "bypassed_families": 45764,
+    "duplications": 59379,
+    "nodes": 337845,
+    "ortholog_pairs": 966439,
+    "reconciled_families": 8681,
+    "root_hogs": 59770,
+    "speciations": 104016,
+    "uncertain_events": 13034
+  }
+}
