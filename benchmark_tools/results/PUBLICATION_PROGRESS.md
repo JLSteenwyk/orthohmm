@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Matched-Recall Evidence Integrated into Manuscript v18 (2026-09-26)
+
+The preceding turn completed graph scoring, uncertainty and its figure. The
+manuscript, claim-to-evidence checklist and reproduction guide now incorporate
+the bounded matched-recall simulation result, separate search and downstream
+protocols, all-condition effects and the precision-recall trade-off. Stale
+statements that all matching work and corrected comparator evaluation remained
+outstanding are corrected without implying real-data matching, independent
+confirmation or superiority over full OrthoFinder.
+
+[Version-18 review](MANUSCRIPT_RENDER_REVIEW_20260926_v18.md) checks 225 local
+link/image occurrences, 211 tracked targets and all 41 page bounds; no bounds
+violations or missing targets. Eight renderer tests pass. New pages 14-15 were
+visually inspected for section/figure fit; no full-document visual or final
+journal-composition claim. Next continue the outstanding scientific and release
+requirements, including main job 22179 readback after its terminal state.
+The full goal remains active and DGX stays deferred.
+
 ## Matched-Recall Graph Accuracy and Uncertainty Complete (2026-09-26)
 
 The preceding turn validated all 70 graph arms. The frozen final-partition
