@@ -1,0 +1,2967 @@
+{
+  "bootstrap": {
+    "f1_contrasts": 8,
+    "numpy_version": "2.2.6",
+    "replicates": 20000,
+    "rng": "PCG64 multinomial",
+    "seed": 20260927,
+    "unit": "paired seed block carrying all seven conditions"
+  },
+  "conditions": [
+    "baseline",
+    "divergent",
+    "divergent_turnover",
+    "missing20",
+    "taxon_count_control",
+    "turnover",
+    "uneven_taxa"
+  ],
+  "contrasts": {
+    "baseline": {
+      "f1": {
+        "bonferroni_8_ci": [
+          0.0,
+          0.8994571289291597
+        ],
+        "diamond_mean": 0.9537487934078666,
+        "difference_percentage_points": 0.34916270737959776,
+        "hmm_mean": 0.9572404204816625,
+        "inference_role": "primary_family",
+        "losses": 0,
+        "marginal_95_percent_ci": [
+          0.0,
+          0.7514261357195262
+        ],
+        "seed_differences_percentage_points": [
+          0.0,
+          0.0,
+          0.0,
+          1.0056585708498211,
+          0.7401549660481677
+        ],
+        "ties": 3,
+        "wins": 2
+      },
+      "precision": {
+        "diamond_mean": 0.9298788875091498,
+        "difference_percentage_points": -0.15782860756726524,
+        "hmm_mean": 0.928300601433477,
+        "inference_role": "exploratory",
+        "losses": 1,
+        "marginal_95_percent_ci": [
+          -0.521190957422577,
+          0.047705134720781306
+        ],
+        "seed_differences_percentage_points": [
+          0.0,
+          0.0,
+          0.0,
+          -0.8686515957042951,
+          0.07950855786796884
+        ],
+        "ties": 3,
+        "wins": 1
+      },
+      "recall": {
+        "diamond_mean": 0.9792704411595523,
+        "difference_percentage_points": 0.9015788084609166,
+        "hmm_mean": 0.9882862292441615,
+        "inference_role": "exploratory",
+        "losses": 0,
+        "marginal_95_percent_ci": [
+          0.0,
+          2.117705708659199
+        ],
+        "seed_differences_percentage_points": [
+          0.0,
+          0.0,
+          0.0,
+          3.0403172504957054,
+          1.4675767918088778
+        ],
+        "ties": 3,
+        "wins": 2
+      }
+    },
+    "divergent": {
+      "f1": {
+        "bonferroni_8_ci": [
+          6.034828828486001,
+          13.716515242117044
+        ],
+        "diamond_mean": 0.4945652685260141,
+        "difference_percentage_points": 9.62234895947658,
+        "hmm_mean": 0.5907887581207799,
+        "inference_role": "primary_family",
+        "losses": 0,
+        "marginal_95_percent_ci": [
+          7.031789681547653,
+          12.382410685870267
+        ],
+        "seed_differences_percentage_points": [
+          5.2055092301447115,
+          10.839048167004217,
+          14.598065678783062,
+          7.278808225997935,
+          10.190313495452974
+        ],
+        "ties": 0,
+        "wins": 5
+      },
+      "precision": {
+        "diamond_mean": 0.983322817537905,
+        "difference_percentage_points": -0.6744654019350094,
+        "hmm_mean": 0.9765781635185551,
+        "inference_role": "exploratory",
+        "losses": 3,
+        "marginal_95_percent_ci": [
+          -1.79502871877546,
+          0.3915532511430553
+        ],
+        "seed_differences_percentage_points": [
+          -2.7246344569092473,
+          -0.4618516235767367,
+          0.6153992939604946,
+          0.5944096456855119,
+          -1.3956498688350694
+        ],
+        "ties": 0,
+        "wins": 2
+      },
+      "recall": {
+        "diamond_mean": 0.3605108366400115,
+        "difference_percentage_points": 9.344775458547701,
+        "hmm_mean": 0.45395859122548854,
+        "inference_role": "exploratory",
+        "losses": 0,
+        "marginal_95_percent_ci": [
+          8.108005928144927,
+          10.478274628609743
+        ],
+        "seed_differences_percentage_points": [
+          9.762532981530336,
+          11.21726822363765,
+          8.977035490605427,
+          7.005948446794447,
+          9.761092150170647
+        ],
+        "ties": 0,
+        "wins": 5
+      }
+    },
+    "divergent_turnover": {
+      "f1": {
+        "bonferroni_8_ci": [
+          5.057659026748709,
+          17.50159075201851
+        ],
+        "diamond_mean": 0.4889690510124122,
+        "difference_percentage_points": 10.683192779646205,
+        "hmm_mean": 0.5958009788088743,
+        "inference_role": "primary_family",
+        "losses": 0,
+        "marginal_95_percent_ci": [
+          6.261795630798801,
+          15.417438793070279
+        ],
+        "seed_differences_percentage_points": [
+          4.420688913020088,
+          10.441371933270549,
+          19.266645456705504,
+          6.01311419734164,
+          13.27414339789324
+        ],
+        "ties": 0,
+        "wins": 5
+      },
+      "precision": {
+        "diamond_mean": 0.923569095116641,
+        "difference_percentage_points": -1.2466333450482427,
+        "hmm_mean": 0.9111027616661584,
+        "inference_role": "exploratory",
+        "losses": 3,
+        "marginal_95_percent_ci": [
+          -3.024187808350094,
+          0.5309211182536089
+        ],
+        "seed_differences_percentage_points": [
+          -3.62281533396539,
+          -2.3240523146407677,
+          1.0899081662881338,
+          -2.775628029589461,
+          1.3994207866662722
+        ],
+        "ties": 0,
+        "wins": 2
+      },
+      "recall": {
+        "diamond_mean": 0.36215858265823836,
+        "difference_percentage_points": 10.687060374200964,
+        "hmm_mean": 0.46902918640024793,
+        "inference_role": "exploratory",
+        "losses": 0,
+        "marginal_95_percent_ci": [
+          8.583074493924453,
+          12.432345107783703
+        ],
+        "seed_differences_percentage_points": [
+          9.41385435168739,
+          11.950549450549447,
+          12.605588044184534,
+          6.965310024583449,
+          12.5
+        ],
+        "ties": 0,
+        "wins": 5
+      }
+    },
+    "missing20": {
+      "f1": {
+        "bonferroni_8_ci": [
+          0.0,
+          0.6384684495526183
+        ],
+        "diamond_mean": 0.9533212555073938,
+        "difference_percentage_points": 0.3016986605081251,
+        "hmm_mean": 0.956338242112475,
+        "inference_role": "primary_family",
+        "losses": 0,
+        "marginal_95_percent_ci": [
+          0.0494522431494171,
+          0.5539450778668331
+        ],
+        "seed_differences_percentage_points": [
+          0.0,
+          0.24726121574708548,
+          0.0,
+          0.5913540126175287,
+          0.6698780741760113
+        ],
+        "ties": 2,
+        "wins": 3
+      },
+      "precision": {
+        "diamond_mean": 0.9301776773946988,
+        "difference_percentage_points": -0.06276950008379023,
+        "hmm_mean": 0.9295499823938609,
+        "inference_role": "exploratory",
+        "losses": 1,
+        "marginal_95_percent_ci": [
+          -0.23849525542133154,
+          0.04474502221188503
+        ],
+        "seed_differences_percentage_points": [
+          0.0,
+          0.013604332395189545,
+          0.0,
+          -0.4020268698339491,
+          0.07457503701980839
+        ],
+        "ties": 2,
+        "wins": 2
+      },
+      "recall": {
+        "diamond_mean": 0.9780635930807924,
+        "difference_percentage_points": 0.6956694345950498,
+        "hmm_mean": 0.9850202874267427,
+        "inference_role": "exploratory",
+        "losses": 0,
+        "marginal_95_percent_ci": [
+          0.09868421052631637,
+          1.2926546586637833
+        ],
+        "seed_differences_percentage_points": [
+          0.0,
+          0.49342105263158187,
+          0.0,
+          1.6614745586708168,
+          1.3234515616728504
+        ],
+        "ties": 2,
+        "wins": 3
+      }
+    },
+    "overall": {
+      "f1": {
+        "bonferroni_8_ci": [
+          1.678243260251413,
+          4.531340381674011
+        ],
+        "diamond_mean": 0.8051798410716886,
+        "difference_percentage_points": 3.0917155986096985,
+        "hmm_mean": 0.8360969970577855,
+        "inference_role": "primary_family",
+        "losses": 0,
+        "marginal_95_percent_ci": [
+          2.0240019673762064,
+          4.159429229843191
+        ],
+        "seed_differences_percentage_points": [
+          1.3751711633092571,
+          3.1039646989332246,
+          4.888184302359207,
+          2.132851405664647,
+          3.958406422782158
+        ],
+        "ties": 0,
+        "wins": 5
+      },
+      "precision": {
+        "diamond_mean": 0.9109672966198022,
+        "difference_percentage_points": -0.3831488977256292,
+        "hmm_mean": 0.9071358076425462,
+        "inference_role": "exploratory",
+        "losses": 3,
+        "marginal_95_percent_ci": [
+          -0.8167658943237249,
+          0.05046809887246643
+        ],
+        "seed_differences_percentage_points": [
+          -0.9067785415535197,
+          -0.393446335322364,
+          0.2534963529603886,
+          -0.9384130265946106,
+          0.06939706188195949
+        ],
+        "ties": 0,
+        "wins": 2
+      },
+      "recall": {
+        "diamond_mean": 0.7998020970961954,
+        "difference_percentage_points": 3.4277046154288855,
+        "hmm_mean": 0.8340791432504844,
+        "inference_role": "exploratory",
+        "losses": 0,
+        "marginal_95_percent_ci": [
+          3.0065669181955528,
+          3.9429818211827183
+        ],
+        "seed_differences_percentage_points": [
+          2.739483904745389,
+          3.437262732345583,
+          3.1846222604956607,
+          3.4005878466277237,
+          4.37656633293007
+        ],
+        "ties": 0,
+        "wins": 5
+      }
+    },
+    "taxon_count_control": {
+      "f1": {
+        "bonferroni_8_ci": [
+          0.0,
+          1.1295488262254505
+        ],
+        "diamond_mean": 0.9516374628857995,
+        "difference_percentage_points": 0.3553210711341048,
+        "hmm_mean": 0.9551906735971405,
+        "inference_role": "primary_family",
+        "losses": 0,
+        "marginal_95_percent_ci": [
+          0.028499004803324013,
+          0.8773469770418441
+        ],
+        "seed_differences_percentage_points": [
+          0.0,
+          0.0,
+          0.25779805487624596,
+          0.14249502401662006,
+          1.376312276777658
+        ],
+        "ties": 2,
+        "wins": 3
+      },
+      "precision": {
+        "diamond_mean": 0.9313076070277873,
+        "difference_percentage_points": -0.19228236407776267,
+        "hmm_mean": 0.9293847833870096,
+        "inference_role": "exploratory",
+        "losses": 1,
+        "marginal_95_percent_ci": [
+          -0.6703783926512386,
+          0.08188075071279943
+        ],
+        "seed_differences_percentage_points": [
+          0.0,
+          0.0,
+          0.029126374262877786,
+          -1.1270061125063568,
+          0.13646791785466572
+        ],
+        "ties": 2,
+        "wins": 2
+      },
+      "recall": {
+        "diamond_mean": 0.9733613420849607,
+        "difference_percentage_points": 0.9422205950657236,
+        "hmm_mean": 0.982783548035618,
+        "inference_role": "exploratory",
+        "losses": 0,
+        "marginal_95_percent_ci": [
+          0.1029601029601035,
+          1.9224326391075564
+        ],
+        "seed_differences_percentage_points": [
+          0.0,
+          0.0,
+          0.5148005148005175,
+          1.4883720930232602,
+          2.7079303675048405
+        ],
+        "ties": 2,
+        "wins": 3
+      }
+    },
+    "turnover": {
+      "f1": {
+        "bonferroni_8_ci": [
+          0.0,
+          1.4301341734385176
+        ],
+        "diamond_mean": 0.8454994170015185,
+        "difference_percentage_points": 0.4316823954473614,
+        "hmm_mean": 0.8498162409559923,
+        "inference_role": "primary_family",
+        "losses": 0,
+        "marginal_95_percent_ci": [
+          0.018956185229928035,
+          1.1277932969366922
+        ],
+        "seed_differences_percentage_points": [
+          0.0,
+          0.0,
+          0.09478092614964018,
+          1.787667716798147,
+          0.27596333428902
+        ],
+        "ties": 2,
+        "wins": 3
+      },
+      "precision": {
+        "diamond_mean": 0.7476943245248576,
+        "difference_percentage_points": 0.09302915502593656,
+        "hmm_mean": 0.748624616075117,
+        "inference_role": "exploratory",
+        "losses": 0,
+        "marginal_95_percent_ci": [
+          0.008008127242242757,
+          0.22241574505920347
+        ],
+        "seed_differences_percentage_points": [
+          0.0,
+          0.0,
+          0.04004063621121379,
+          0.3434867931887742,
+          0.08161834572969484
+        ],
+        "ties": 2,
+        "wins": 3
+      },
+      "recall": {
+        "diamond_mean": 0.9775133652494643,
+        "difference_percentage_points": 1.1715312158226543,
+        "hmm_mean": 0.9892286774076908,
+        "inference_role": "exploratory",
+        "losses": 0,
+        "marginal_95_percent_ci": [
+          0.03898635477582957,
+          3.1757024682579678
+        ],
+        "seed_differences_percentage_points": [
+          0.0,
+          0.0,
+          0.19493177387914784,
+          5.107894018027858,
+          0.5548302872062649
+        ],
+        "ties": 2,
+        "wins": 3
+      }
+    },
+    "uneven_taxa": {
+      "f1": {
+        "bonferroni_8_ci": [
+          -1.5113103263753302,
+          0.9456635318704265
+        ],
+        "diamond_mean": 0.9485176391608159,
+        "difference_percentage_points": -0.10139738332408221,
+        "hmm_mean": 0.9475036653275749,
+        "inference_role": "primary_family",
+        "losses": 1,
+        "marginal_95_percent_ci": [
+          -1.093468429479354,
+          0.7092476489028199
+        ],
+        "seed_differences_percentage_points": [
+          0.0,
+          0.2000715765107186,
+          0.0,
+          -1.8891379079691628,
+          1.1820794148380331
+        ],
+        "ties": 2,
+        "wins": 2
+      },
+      "precision": {
+        "diamond_mean": 0.9308206672275767,
+        "difference_percentage_points": -0.441092220393271,
+        "hmm_mean": 0.9264097450236441,
+        "inference_role": "exploratory",
+        "losses": 1,
+        "marginal_95_percent_ci": [
+          -1.3964499587283452,
+          0.06590319412222545
+        ],
+        "seed_differences_percentage_points": [
+          0.0,
+          0.01817525856576685,
+          0.0,
+          -2.3334750174024976,
+          0.10983865687037575
+        ],
+        "ties": 2,
+        "wins": 2
+      },
+      "recall": {
+        "diamond_mean": 0.9677365188003486,
+        "difference_percentage_points": 0.2510964213091871,
+        "hmm_mean": 0.9702474830134404,
+        "inference_role": "exploratory",
+        "losses": 1,
+        "marginal_95_percent_ci": [
+          -0.7992007992008033,
+          1.3926499032882056
+        ],
+        "seed_differences_percentage_points": [
+          0.0,
+          0.39960039960039717,
+          0.0,
+          -1.465201465201471,
+          2.3210831721470093
+        ],
+        "ties": 2,
+        "wins": 2
+      }
+    }
+  },
+  "direction": "HMM minus DIAMOND",
+  "independent_validation": false,
+  "limitations": [
+    "Development-exposed simulations; not independent confirmation or real-data sensitivity matching.",
+    "Five paired seed blocks give limited tail resolution; percentile intervals have approximate coverage.",
+    "Initial-search graph control only: profile expansion, candidate expansion and phylogeny are off.",
+    "Cluster-derived cross-species pairs are not native reconciled ortholog predictions.",
+    "Matching search recall does not equalize score distributions, computational effort or hit identities.",
+    "Shared-host incremental resources are descriptive, not controlled efficiency evidence."
+  ],
+  "publication_ready": false,
+  "readback": {
+    "bytes": 261575,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/matched_graph_readback_20260926.json",
+    "sha256": "af7a9e0cdba97b7b84c9fc6925e577594802b7bf74c99ac19840baf2e42594f4"
+  },
+  "records": [
+    {
+      "arm": "hmm",
+      "condition": "baseline",
+      "gene_coverage": 1.0,
+      "groups": 98,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 9501,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_0/graph/final.tsv",
+        "sha256": "45ccdeac177fb5f1c8f08a2bc0a6f0ff5d3137b6d7263a90e10dcfa583dab15d"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 3032,
+        "f1": 0.9492798998121478,
+        "fn": 0,
+        "fp": 324,
+        "genes_in_predicted_pairs": 847,
+        "input_genes": 847,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.9034564958283671,
+        "predicted_pairs": 3356,
+        "recall": 1.0,
+        "tp": 3032,
+        "undefined_ratios": []
+      },
+      "seed": 20261106,
+      "truth": {
+        "bytes": 245226,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/baseline_20261106/truth.json",
+        "sha256": "56e598751aa551379529319f5a6e97118f7fc459f7696cc8d11fa2aec6d0210b"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "baseline",
+      "gene_coverage": 1.0,
+      "groups": 98,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 9501,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_1/graph/final.tsv",
+        "sha256": "45ccdeac177fb5f1c8f08a2bc0a6f0ff5d3137b6d7263a90e10dcfa583dab15d"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 3032,
+        "f1": 0.9492798998121478,
+        "fn": 0,
+        "fp": 324,
+        "genes_in_predicted_pairs": 847,
+        "input_genes": 847,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.9034564958283671,
+        "predicted_pairs": 3356,
+        "recall": 1.0,
+        "tp": 3032,
+        "undefined_ratios": []
+      },
+      "seed": 20261106,
+      "truth": {
+        "bytes": 245226,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/baseline_20261106/truth.json",
+        "sha256": "56e598751aa551379529319f5a6e97118f7fc459f7696cc8d11fa2aec6d0210b"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "baseline",
+      "gene_coverage": 1.0,
+      "groups": 99,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 8883,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_2/graph/final.tsv",
+        "sha256": "8c0bb34fd851af63902e9458c07d382f3649f4458ce8ad5bc64307da7aa897ca"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 2826,
+        "f1": 0.9829565217391304,
+        "fn": 0,
+        "fp": 98,
+        "genes_in_predicted_pairs": 804,
+        "input_genes": 804,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.966484268125855,
+        "predicted_pairs": 2924,
+        "recall": 1.0,
+        "tp": 2826,
+        "undefined_ratios": []
+      },
+      "seed": 20261107,
+      "truth": {
+        "bytes": 232650,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/baseline_20261107/truth.json",
+        "sha256": "ffa1cca7531410e7b2ac0cec117d86087d2b717375a84f91f6d84e411b1556d9"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "baseline",
+      "gene_coverage": 1.0,
+      "groups": 99,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 8883,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_3/graph/final.tsv",
+        "sha256": "8c0bb34fd851af63902e9458c07d382f3649f4458ce8ad5bc64307da7aa897ca"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 2826,
+        "f1": 0.9829565217391304,
+        "fn": 0,
+        "fp": 98,
+        "genes_in_predicted_pairs": 804,
+        "input_genes": 804,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.966484268125855,
+        "predicted_pairs": 2924,
+        "recall": 1.0,
+        "tp": 2826,
+        "undefined_ratios": []
+      },
+      "seed": 20261107,
+      "truth": {
+        "bytes": 232650,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/baseline_20261107/truth.json",
+        "sha256": "ffa1cca7531410e7b2ac0cec117d86087d2b717375a84f91f6d84e411b1556d9"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "baseline",
+      "gene_coverage": 1.0,
+      "groups": 99,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 9034,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_4/graph/final.tsv",
+        "sha256": "9c89e0ef326370ee60210460085fadfa63cf601bb476c34badf7d7a1e72e171b"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 2874,
+        "f1": 0.9697992238906699,
+        "fn": 0,
+        "fp": 179,
+        "genes_in_predicted_pairs": 816,
+        "input_genes": 816,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.9413691451031772,
+        "predicted_pairs": 3053,
+        "recall": 1.0,
+        "tp": 2874,
+        "undefined_ratios": []
+      },
+      "seed": 20261108,
+      "truth": {
+        "bytes": 235508,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/baseline_20261108/truth.json",
+        "sha256": "88f38b0a00faa4d4bea99d9eb1012e8d684614336444d627ce6e29bd7f6e3427"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "baseline",
+      "gene_coverage": 1.0,
+      "groups": 99,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 9034,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_5/graph/final.tsv",
+        "sha256": "9c89e0ef326370ee60210460085fadfa63cf601bb476c34badf7d7a1e72e171b"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 2874,
+        "f1": 0.9697992238906699,
+        "fn": 0,
+        "fp": 179,
+        "genes_in_predicted_pairs": 816,
+        "input_genes": 816,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.9413691451031772,
+        "predicted_pairs": 3053,
+        "recall": 1.0,
+        "tp": 2874,
+        "undefined_ratios": []
+      },
+      "seed": 20261108,
+      "truth": {
+        "bytes": 235508,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/baseline_20261108/truth.json",
+        "sha256": "88f38b0a00faa4d4bea99d9eb1012e8d684614336444d627ce6e29bd7f6e3427"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "baseline",
+      "gene_coverage": 1.0,
+      "groups": 111,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 9666,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_6/graph/final.tsv",
+        "sha256": "7f34c874c16ed99fd9830367b54805f181376295ced42855118ee9146bd4f52e"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 3026,
+        "f1": 0.9143588922682888,
+        "fn": 170,
+        "fp": 365,
+        "genes_in_predicted_pairs": 852,
+        "input_genes": 852,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.886681154920832,
+        "predicted_pairs": 3221,
+        "recall": 0.9438202247191011,
+        "tp": 2856,
+        "undefined_ratios": []
+      },
+      "seed": 20261109,
+      "truth": {
+        "bytes": 245440,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/baseline_20261109/truth.json",
+        "sha256": "3bee76d6a915a8b551ff4f5cb82c29713763e2d7e03121aa250c1844741c524a"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "baseline",
+      "gene_coverage": 1.0,
+      "groups": 120,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 9666,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_7/graph/final.tsv",
+        "sha256": "fb4d19cb3c10f5ba042ed923ecb01cbab38c132bc37c52e718cfb6cad126fe66"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 3026,
+        "f1": 0.9043023065597906,
+        "fn": 262,
+        "fp": 323,
+        "genes_in_predicted_pairs": 852,
+        "input_genes": 852,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.8953676708778749,
+        "predicted_pairs": 3087,
+        "recall": 0.913417052214144,
+        "tp": 2764,
+        "undefined_ratios": []
+      },
+      "seed": 20261109,
+      "truth": {
+        "bytes": 245440,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/baseline_20261109/truth.json",
+        "sha256": "3bee76d6a915a8b551ff4f5cb82c29713763e2d7e03121aa250c1844741c524a"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "baseline",
+      "gene_coverage": 1.0,
+      "groups": 100,
+      "nonsingleton_coverage": 0.9975698663426489,
+      "prediction": {
+        "bytes": 9110,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_8/graph/final.tsv",
+        "sha256": "5771b1135ed7f8d15d1220919259d154a417556adb90f1f2ca554402e884854c"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 2930,
+        "f1": 0.9698075646980756,
+        "fn": 7,
+        "fp": 175,
+        "genes_in_predicted_pairs": 821,
+        "input_genes": 823,
+        "pair_endpoint_coverage": 0.9975698663426489,
+        "precision": 0.9435119431891543,
+        "predicted_pairs": 3098,
+        "recall": 0.9976109215017065,
+        "tp": 2923,
+        "undefined_ratios": []
+      },
+      "seed": 20261110,
+      "truth": {
+        "bytes": 238621,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/baseline_20261110/truth.json",
+        "sha256": "dbf9c9d979e4b6c713554e972c534f5c01968a13f2828793d95ab32192d7b8ec"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "baseline",
+      "gene_coverage": 1.0,
+      "groups": 106,
+      "nonsingleton_coverage": 0.9902794653705954,
+      "prediction": {
+        "bytes": 9110,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_9/graph/final.tsv",
+        "sha256": "3f859fdfbfca4fcccd6e3a4d56b2380fff04001eda6afd127ae4675a873ccda0"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 2930,
+        "f1": 0.9624060150375939,
+        "fn": 50,
+        "fp": 175,
+        "genes_in_predicted_pairs": 815,
+        "input_genes": 823,
+        "pair_endpoint_coverage": 0.9902794653705954,
+        "precision": 0.9427168576104746,
+        "predicted_pairs": 3055,
+        "recall": 0.9829351535836177,
+        "tp": 2880,
+        "undefined_ratios": []
+      },
+      "seed": 20261110,
+      "truth": {
+        "bytes": 238621,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/baseline_20261110/truth.json",
+        "sha256": "dbf9c9d979e4b6c713554e972c534f5c01968a13f2828793d95ab32192d7b8ec"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "divergent",
+      "gene_coverage": 1.0,
+      "groups": 178,
+      "nonsingleton_coverage": 0.9374262101534829,
+      "prediction": {
+        "bytes": 9501,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_10/graph/final.tsv",
+        "sha256": "fcb3efc97bbab1f5ae753fb899f583a6ceb908c73d0c79a2f42a09eded8054fb"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 3032,
+        "f1": 0.8728844076341375,
+        "fn": 608,
+        "fp": 98,
+        "genes_in_predicted_pairs": 794,
+        "input_genes": 847,
+        "pair_endpoint_coverage": 0.9374262101534829,
+        "precision": 0.9611419508326725,
+        "predicted_pairs": 2522,
+        "recall": 0.7994722955145118,
+        "tp": 2424,
+        "undefined_ratios": []
+      },
+      "seed": 20261106,
+      "truth": {
+        "bytes": 245226,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/divergent_20261106/truth.json",
+        "sha256": "09874188ba9dfed33a8bcc89f364d7456cb2c753282974547796dc9b73f6698c"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "divergent",
+      "gene_coverage": 1.0,
+      "groups": 224,
+      "nonsingleton_coverage": 0.9067296340023613,
+      "prediction": {
+        "bytes": 9501,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_11/graph/final.tsv",
+        "sha256": "880e13873d82240c971bcae3fc4809ae1041a14ca0660bf1051faa0543c0c50f"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 3032,
+        "f1": 0.8208293153326904,
+        "fn": 904,
+        "fp": 25,
+        "genes_in_predicted_pairs": 768,
+        "input_genes": 847,
+        "pair_endpoint_coverage": 0.9067296340023613,
+        "precision": 0.988388295401765,
+        "predicted_pairs": 2153,
+        "recall": 0.7018469656992085,
+        "tp": 2128,
+        "undefined_ratios": []
+      },
+      "seed": 20261106,
+      "truth": {
+        "bytes": 245226,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/divergent_20261106/truth.json",
+        "sha256": "09874188ba9dfed33a8bcc89f364d7456cb2c753282974547796dc9b73f6698c"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "divergent",
+      "gene_coverage": 1.0,
+      "groups": 227,
+      "nonsingleton_coverage": 0.9415422885572139,
+      "prediction": {
+        "bytes": 8883,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_12/graph/final.tsv",
+        "sha256": "ae344478cceaf0551041bf5ce489a933346cd38f389341ad44de51966e355e56"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 2826,
+        "f1": 0.6458036984352774,
+        "fn": 1464,
+        "fp": 30,
+        "genes_in_predicted_pairs": 755,
+        "input_genes": 804,
+        "pair_endpoint_coverage": 0.9390547263681592,
+        "precision": 0.978448275862069,
+        "predicted_pairs": 1392,
+        "recall": 0.4819532908704883,
+        "tp": 1362,
+        "undefined_ratios": []
+      },
+      "seed": 20261107,
+      "truth": {
+        "bytes": 232650,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/divergent_20261107/truth.json",
+        "sha256": "e12ee3bff8b3ee342fc8527aee1f69a85d71ce3a584eda3e0b654b76d8a8fdcb"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "divergent",
+      "gene_coverage": 1.0,
+      "groups": 254,
+      "nonsingleton_coverage": 0.931592039800995,
+      "prediction": {
+        "bytes": 8883,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_13/graph/final.tsv",
+        "sha256": "04c5afb4286ac70f11d2c80e35d79781107ea77776f5fe77656d90f8dfe5fa10"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 2826,
+        "f1": 0.5374132167652352,
+        "fn": 1781,
+        "fp": 18,
+        "genes_in_predicted_pairs": 747,
+        "input_genes": 804,
+        "pair_endpoint_coverage": 0.9291044776119403,
+        "precision": 0.9830667920978363,
+        "predicted_pairs": 1063,
+        "recall": 0.36978060863411183,
+        "tp": 1045,
+        "undefined_ratios": []
+      },
+      "seed": 20261107,
+      "truth": {
+        "bytes": 232650,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/divergent_20261107/truth.json",
+        "sha256": "e12ee3bff8b3ee342fc8527aee1f69a85d71ce3a584eda3e0b654b76d8a8fdcb"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "divergent",
+      "gene_coverage": 1.0,
+      "groups": 564,
+      "nonsingleton_coverage": 0.4730392156862745,
+      "prediction": {
+        "bytes": 9034,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_14/graph/final.tsv",
+        "sha256": "8ca63d67cbe1818e1b731a9e1bad5251a3f9bf6df06209b3a93b8bfd339d82fc"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 2874,
+        "f1": 0.2674698795180723,
+        "fn": 2430,
+        "fp": 2,
+        "genes_in_predicted_pairs": 362,
+        "input_genes": 816,
+        "pair_endpoint_coverage": 0.44362745098039214,
+        "precision": 0.9955156950672646,
+        "predicted_pairs": 446,
+        "recall": 0.1544885177453027,
+        "tp": 444,
+        "undefined_ratios": []
+      },
+      "seed": 20261108,
+      "truth": {
+        "bytes": 235508,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/divergent_20261108/truth.json",
+        "sha256": "ea8107ad4bb27c0ee3a7afaff17be647967959e66d62c5352d01dd34f58839e5"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "divergent",
+      "gene_coverage": 1.0,
+      "groups": 641,
+      "nonsingleton_coverage": 0.39828431372549017,
+      "prediction": {
+        "bytes": 9034,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_15/graph/final.tsv",
+        "sha256": "6da3f1c28585c7bf741a3fbf57b6e4bc6c13b2bc23d00a23453ce7ec5ea46aac"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 2874,
+        "f1": 0.12148922273024167,
+        "fn": 2688,
+        "fp": 2,
+        "genes_in_predicted_pairs": 306,
+        "input_genes": 816,
+        "pair_endpoint_coverage": 0.375,
+        "precision": 0.9893617021276596,
+        "predicted_pairs": 188,
+        "recall": 0.06471816283924843,
+        "tp": 186,
+        "undefined_ratios": []
+      },
+      "seed": 20261108,
+      "truth": {
+        "bytes": 235508,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/divergent_20261108/truth.json",
+        "sha256": "ea8107ad4bb27c0ee3a7afaff17be647967959e66d62c5352d01dd34f58839e5"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "divergent",
+      "gene_coverage": 1.0,
+      "groups": 273,
+      "nonsingleton_coverage": 0.9776995305164319,
+      "prediction": {
+        "bytes": 9666,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_16/graph/final.tsv",
+        "sha256": "4983cd4505180f2be7af4ffd49527a2e2b7b56679cec2ff0385dd2f8bd1308df"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 3026,
+        "f1": 0.592797783933518,
+        "fn": 1742,
+        "fp": 22,
+        "genes_in_predicted_pairs": 833,
+        "input_genes": 852,
+        "pair_endpoint_coverage": 0.9776995305164319,
+        "precision": 0.9831546707503829,
+        "predicted_pairs": 1306,
+        "recall": 0.42432253800396563,
+        "tp": 1284,
+        "undefined_ratios": []
+      },
+      "seed": 20261109,
+      "truth": {
+        "bytes": 245440,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/divergent_20261109/truth.json",
+        "sha256": "6030653134e44d31fc3353cf64d534728cc8d4dc16f3e64abba16b85c6c244c4"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "divergent",
+      "gene_coverage": 1.0,
+      "groups": 316,
+      "nonsingleton_coverage": 0.9495305164319249,
+      "prediction": {
+        "bytes": 9666,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_17/graph/final.tsv",
+        "sha256": "18c86a5216a5c3631b3be0f14162443aeb0570cbce33a6e6e7a3b7b2f556f899"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 3026,
+        "f1": 0.5200097016735387,
+        "fn": 1954,
+        "fp": 25,
+        "genes_in_predicted_pairs": 809,
+        "input_genes": 852,
+        "pair_endpoint_coverage": 0.9495305164319249,
+        "precision": 0.9772105742935278,
+        "predicted_pairs": 1097,
+        "recall": 0.35426305353602117,
+        "tp": 1072,
+        "undefined_ratios": []
+      },
+      "seed": 20261109,
+      "truth": {
+        "bytes": 245440,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/divergent_20261109/truth.json",
+        "sha256": "6030653134e44d31fc3353cf64d534728cc8d4dc16f3e64abba16b85c6c244c4"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "divergent",
+      "gene_coverage": 1.0,
+      "groups": 375,
+      "nonsingleton_coverage": 0.7083839611178615,
+      "prediction": {
+        "bytes": 9110,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_18/graph/final.tsv",
+        "sha256": "4d59b0ba3994a5daf405d21615f640419cce8ec9bffc25c545080688cb4d9987"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 2930,
+        "f1": 0.5749880210828942,
+        "fn": 1730,
+        "fp": 44,
+        "genes_in_predicted_pairs": 571,
+        "input_genes": 823,
+        "pair_endpoint_coverage": 0.6938031591737546,
+        "precision": 0.9646302250803859,
+        "predicted_pairs": 1244,
+        "recall": 0.40955631399317405,
+        "tp": 1200,
+        "undefined_ratios": []
+      },
+      "seed": 20261110,
+      "truth": {
+        "bytes": 238621,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/divergent_20261110/truth.json",
+        "sha256": "1e756de53780f8fbbdc8a90ee99fb95168ac1d4e290b4f43d0094927a4c91b76"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "divergent",
+      "gene_coverage": 1.0,
+      "groups": 438,
+      "nonsingleton_coverage": 0.6549210206561361,
+      "prediction": {
+        "bytes": 9110,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_19/graph/final.tsv",
+        "sha256": "72040d91db192b13421f06944fe04fcb769f26b6e448fafd79c302df33d40571"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 2930,
+        "f1": 0.4730848861283644,
+        "fn": 2016,
+        "fp": 20,
+        "genes_in_predicted_pairs": 529,
+        "input_genes": 823,
+        "pair_endpoint_coverage": 0.6427703523693803,
+        "precision": 0.9785867237687366,
+        "predicted_pairs": 934,
+        "recall": 0.3119453924914676,
+        "tp": 914,
+        "undefined_ratios": []
+      },
+      "seed": 20261110,
+      "truth": {
+        "bytes": 238621,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/divergent_20261110/truth.json",
+        "sha256": "1e756de53780f8fbbdc8a90ee99fb95168ac1d4e290b4f43d0094927a4c91b76"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "divergent_turnover",
+      "gene_coverage": 1.0,
+      "groups": 158,
+      "nonsingleton_coverage": 0.9489795918367347,
+      "prediction": {
+        "bytes": 8868,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_20/graph/final.tsv",
+        "sha256": "9e6357fef83598aa6526b560a1516c2c81f6d80ec91bfc7c5a10e10cc9a7ba4b"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 2815,
+        "f1": 0.8569248378481495,
+        "fn": 569,
+        "fp": 181,
+        "genes_in_predicted_pairs": 740,
+        "input_genes": 784,
+        "pair_endpoint_coverage": 0.9438775510204082,
+        "precision": 0.9254223320972393,
+        "predicted_pairs": 2427,
+        "recall": 0.7978685612788632,
+        "tp": 2246,
+        "undefined_ratios": []
+      },
+      "seed": 20261106,
+      "truth": {
+        "bytes": 231486,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/divergent_turnover_20261106/truth.json",
+        "sha256": "6c4f8666ab916c8f20d1a3cea33303c68841626e9c4a38cc6490b82ec15bcf8b"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "divergent_turnover",
+      "gene_coverage": 1.0,
+      "groups": 197,
+      "nonsingleton_coverage": 0.9260204081632653,
+      "prediction": {
+        "bytes": 8868,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_21/graph/final.tsv",
+        "sha256": "9484fa25725ae55b97f2c426264a44bcd900cf1081f543be73c5731acfa343d6"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 2815,
+        "f1": 0.8127179487179487,
+        "fn": 834,
+        "fp": 79,
+        "genes_in_predicted_pairs": 716,
+        "input_genes": 784,
+        "pair_endpoint_coverage": 0.9132653061224489,
+        "precision": 0.9616504854368932,
+        "predicted_pairs": 2060,
+        "recall": 0.7037300177619893,
+        "tp": 1981,
+        "undefined_ratios": []
+      },
+      "seed": 20261106,
+      "truth": {
+        "bytes": 231486,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/divergent_turnover_20261106/truth.json",
+        "sha256": "6c4f8666ab916c8f20d1a3cea33303c68841626e9c4a38cc6490b82ec15bcf8b"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "divergent_turnover",
+      "gene_coverage": 1.0,
+      "groups": 214,
+      "nonsingleton_coverage": 0.9498777506112469,
+      "prediction": {
+        "bytes": 9130,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_22/graph/final.tsv",
+        "sha256": "08e3cc74b1ef03e72bb48c42e3de66bd700118534c2d1e640dbf0afdf479f3f3"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 2912,
+        "f1": 0.6316022099447514,
+        "fn": 1483,
+        "fp": 184,
+        "genes_in_predicted_pairs": 773,
+        "input_genes": 818,
+        "pair_endpoint_coverage": 0.9449877750611247,
+        "precision": 0.8859268443893367,
+        "predicted_pairs": 1613,
+        "recall": 0.49072802197802196,
+        "tp": 1429,
+        "undefined_ratios": []
+      },
+      "seed": 20261107,
+      "truth": {
+        "bytes": 237119,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/divergent_turnover_20261107/truth.json",
+        "sha256": "1ea6a36afc28d4d5a24f6db2deff1308101853ce80fd80dd73788d406a04a673"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "divergent_turnover",
+      "gene_coverage": 1.0,
+      "groups": 246,
+      "nonsingleton_coverage": 0.941320293398533,
+      "prediction": {
+        "bytes": 9130,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_23/graph/final.tsv",
+        "sha256": "d1205f48431de55ed81883a8003d1820665380fdb828aa528a0be3c60e61a407"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 2912,
+        "f1": 0.5271884906120459,
+        "fn": 1831,
+        "fp": 108,
+        "genes_in_predicted_pairs": 762,
+        "input_genes": 818,
+        "pair_endpoint_coverage": 0.9315403422982885,
+        "precision": 0.9091673675357443,
+        "predicted_pairs": 1189,
+        "recall": 0.3712225274725275,
+        "tp": 1081,
+        "undefined_ratios": []
+      },
+      "seed": 20261107,
+      "truth": {
+        "bytes": 237119,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/divergent_turnover_20261107/truth.json",
+        "sha256": "1ea6a36afc28d4d5a24f6db2deff1308101853ce80fd80dd73788d406a04a673"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "divergent_turnover",
+      "gene_coverage": 1.0,
+      "groups": 525,
+      "nonsingleton_coverage": 0.5817972350230415,
+      "prediction": {
+        "bytes": 9716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_24/graph/final.tsv",
+        "sha256": "45421921d861b78b95041f380a6122634d0f67096bdc813cf360f57b1911b00b"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 3078,
+        "f1": 0.33101231922870916,
+        "fn": 2460,
+        "fp": 38,
+        "genes_in_predicted_pairs": 458,
+        "input_genes": 868,
+        "pair_endpoint_coverage": 0.5276497695852534,
+        "precision": 0.9420731707317073,
+        "predicted_pairs": 656,
+        "recall": 0.20077972709551656,
+        "tp": 618,
+        "undefined_ratios": []
+      },
+      "seed": 20261108,
+      "truth": {
+        "bytes": 246832,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/divergent_turnover_20261108/truth.json",
+        "sha256": "a37a047dbe7a579c385207b1ea3d1720f3a6f59f5a7f3c9197fc30b61cac4614"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "divergent_turnover",
+      "gene_coverage": 1.0,
+      "groups": 626,
+      "nonsingleton_coverage": 0.4861751152073733,
+      "prediction": {
+        "bytes": 9716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_25/graph/final.tsv",
+        "sha256": "aaa5c8d9368dc281b290824a98b1ef99cce2cf0e77af2ec26571bf2529f08fdb"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 3078,
+        "f1": 0.13834586466165413,
+        "fn": 2848,
+        "fp": 17,
+        "genes_in_predicted_pairs": 339,
+        "input_genes": 868,
+        "pair_endpoint_coverage": 0.39055299539170507,
+        "precision": 0.9311740890688259,
+        "predicted_pairs": 247,
+        "recall": 0.07472384665367121,
+        "tp": 230,
+        "undefined_ratios": []
+      },
+      "seed": 20261108,
+      "truth": {
+        "bytes": 246832,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/divergent_turnover_20261108/truth.json",
+        "sha256": "a37a047dbe7a579c385207b1ea3d1720f3a6f59f5a7f3c9197fc30b61cac4614"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "divergent_turnover",
+      "gene_coverage": 1.0,
+      "groups": 304,
+      "nonsingleton_coverage": 0.9760956175298805,
+      "prediction": {
+        "bytes": 11525,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_26/graph/final.tsv",
+        "sha256": "660a7c9743c212c2df4b25f94f96f93e67fe95848eb42fe64920f203cbfb57c0"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 3661,
+        "f1": 0.5622620989668298,
+        "fn": 2110,
+        "fp": 305,
+        "genes_in_predicted_pairs": 980,
+        "input_genes": 1004,
+        "pair_endpoint_coverage": 0.9760956175298805,
+        "precision": 0.8356681034482759,
+        "predicted_pairs": 1856,
+        "recall": 0.42365473914231083,
+        "tp": 1551,
+        "undefined_ratios": []
+      },
+      "seed": 20261109,
+      "truth": {
+        "bytes": 280505,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/divergent_turnover_20261109/truth.json",
+        "sha256": "5a109a9932a4d4ce688b64dbb494ab04e7f5082b62e61e2667a183345e1ee2a9"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "divergent_turnover",
+      "gene_coverage": 1.0,
+      "groups": 348,
+      "nonsingleton_coverage": 0.9561752988047809,
+      "prediction": {
+        "bytes": 11525,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_27/graph/final.tsv",
+        "sha256": "3c6b8b530a95972aaa8ef6ba7e37e074edbcc67944bd77f799f58307c730686b"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 3661,
+        "f1": 0.5021309569934134,
+        "fn": 2365,
+        "fp": 205,
+        "genes_in_predicted_pairs": 948,
+        "input_genes": 1004,
+        "pair_endpoint_coverage": 0.9442231075697212,
+        "precision": 0.8634243837441705,
+        "predicted_pairs": 1501,
+        "recall": 0.35400163889647634,
+        "tp": 1296,
+        "undefined_ratios": []
+      },
+      "seed": 20261109,
+      "truth": {
+        "bytes": 280505,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/divergent_turnover_20261109/truth.json",
+        "sha256": "5a109a9932a4d4ce688b64dbb494ab04e7f5082b62e61e2667a183345e1ee2a9"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "divergent_turnover",
+      "gene_coverage": 1.0,
+      "groups": 361,
+      "nonsingleton_coverage": 0.7497062279670975,
+      "prediction": {
+        "bytes": 9519,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_28/graph/final.tsv",
+        "sha256": "e1b91305016107ff1718553ed9e296d1c721b916ccd4e1252e743c0830c4258d"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 3064,
+        "f1": 0.5972034280559314,
+        "fn": 1740,
+        "fp": 46,
+        "genes_in_predicted_pairs": 606,
+        "input_genes": 851,
+        "pair_endpoint_coverage": 0.7121034077555817,
+        "precision": 0.9664233576642336,
+        "predicted_pairs": 1370,
+        "recall": 0.4321148825065274,
+        "tp": 1324,
+        "undefined_ratios": []
+      },
+      "seed": 20261110,
+      "truth": {
+        "bytes": 246643,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/divergent_turnover_20261110/truth.json",
+        "sha256": "021c8239ec630c3eaffba0788549151844469c07ca9e26f7a5a5690d3090436c"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "divergent_turnover",
+      "gene_coverage": 1.0,
+      "groups": 425,
+      "nonsingleton_coverage": 0.6956521739130435,
+      "prediction": {
+        "bytes": 9519,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_29/graph/final.tsv",
+        "sha256": "b0a76fb5222acfdd2007f0b10bf121914da7327bd263c2f663295f5ac2da6d96"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 3064,
+        "f1": 0.464461994076999,
+        "fn": 2123,
+        "fp": 47,
+        "genes_in_predicted_pairs": 550,
+        "input_genes": 851,
+        "pair_endpoint_coverage": 0.6462984723854289,
+        "precision": 0.9524291497975709,
+        "predicted_pairs": 988,
+        "recall": 0.3071148825065274,
+        "tp": 941,
+        "undefined_ratios": []
+      },
+      "seed": 20261110,
+      "truth": {
+        "bytes": 246643,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/divergent_turnover_20261110/truth.json",
+        "sha256": "021c8239ec630c3eaffba0788549151844469c07ca9e26f7a5a5690d3090436c"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "missing20",
+      "gene_coverage": 1.0,
+      "groups": 98,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 7592,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_30/graph/final.tsv",
+        "sha256": "be533b448e1f8c2f9818df9ccb9a89f4e3c6fbbe094d7be75626eefd8cae8fd7"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1936,
+        "f1": 0.9485546300832925,
+        "fn": 0,
+        "fp": 210,
+        "genes_in_predicted_pairs": 678,
+        "input_genes": 678,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.902143522833178,
+        "predicted_pairs": 2146,
+        "recall": 1.0,
+        "tp": 1936,
+        "undefined_ratios": []
+      },
+      "seed": 20261106,
+      "truth": {
+        "bytes": 122220,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261106/missing20/truth.json",
+        "sha256": "7efd80b692d08999a58c07600f047a9ba65be0b35d1887610449d5eb77b06bfc"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "missing20",
+      "gene_coverage": 1.0,
+      "groups": 98,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 7592,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_31/graph/final.tsv",
+        "sha256": "be533b448e1f8c2f9818df9ccb9a89f4e3c6fbbe094d7be75626eefd8cae8fd7"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1936,
+        "f1": 0.9485546300832925,
+        "fn": 0,
+        "fp": 210,
+        "genes_in_predicted_pairs": 678,
+        "input_genes": 678,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.902143522833178,
+        "predicted_pairs": 2146,
+        "recall": 1.0,
+        "tp": 1936,
+        "undefined_ratios": []
+      },
+      "seed": 20261106,
+      "truth": {
+        "bytes": 122220,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261106/missing20/truth.json",
+        "sha256": "7efd80b692d08999a58c07600f047a9ba65be0b35d1887610449d5eb77b06bfc"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "missing20",
+      "gene_coverage": 1.0,
+      "groups": 99,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 7113,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_32/graph/final.tsv",
+        "sha256": "4c2f14ea4dc6e8e4b4af9241870ee09e885ce5743a25d728f7e3510a2952d7ee"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1824,
+        "f1": 0.9856795460686301,
+        "fn": 0,
+        "fp": 53,
+        "genes_in_predicted_pairs": 644,
+        "input_genes": 644,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.9717634523175279,
+        "predicted_pairs": 1877,
+        "recall": 1.0,
+        "tp": 1824,
+        "undefined_ratios": []
+      },
+      "seed": 20261107,
+      "truth": {
+        "bytes": 114909,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261107/missing20/truth.json",
+        "sha256": "5abbb26cd99f5bf04246687e7fc0d031184bbef2b918825cd6223bf3e667964f"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "missing20",
+      "gene_coverage": 1.0,
+      "groups": 100,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 7113,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_33/graph/final.tsv",
+        "sha256": "f15c5e7285d70f1805756506f7435559ab589ce7b1b3267bf9e425f420e7f7e6"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1824,
+        "f1": 0.9832069339111592,
+        "fn": 9,
+        "fp": 53,
+        "genes_in_predicted_pairs": 644,
+        "input_genes": 644,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.971627408993576,
+        "predicted_pairs": 1868,
+        "recall": 0.9950657894736842,
+        "tp": 1815,
+        "undefined_ratios": []
+      },
+      "seed": 20261107,
+      "truth": {
+        "bytes": 114909,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261107/missing20/truth.json",
+        "sha256": "5abbb26cd99f5bf04246687e7fc0d031184bbef2b918825cd6223bf3e667964f"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "missing20",
+      "gene_coverage": 1.0,
+      "groups": 99,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 7228,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_34/graph/final.tsv",
+        "sha256": "1fb3a2db7e9a3bdf57ab6083973b528ec07e1e9e577647e1199acf90eca9c4cd"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1849,
+        "f1": 0.9716237519705728,
+        "fn": 0,
+        "fp": 108,
+        "genes_in_predicted_pairs": 653,
+        "input_genes": 653,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.9448134900357691,
+        "predicted_pairs": 1957,
+        "recall": 1.0,
+        "tp": 1849,
+        "undefined_ratios": []
+      },
+      "seed": 20261108,
+      "truth": {
+        "bytes": 116468,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261108/missing20/truth.json",
+        "sha256": "6fcb4ca3822755b8b7095246ebb47e27e8f1949d057b2d7592151597f0234ad8"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "missing20",
+      "gene_coverage": 1.0,
+      "groups": 99,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 7228,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_35/graph/final.tsv",
+        "sha256": "1fb3a2db7e9a3bdf57ab6083973b528ec07e1e9e577647e1199acf90eca9c4cd"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1849,
+        "f1": 0.9716237519705728,
+        "fn": 0,
+        "fp": 108,
+        "genes_in_predicted_pairs": 653,
+        "input_genes": 653,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.9448134900357691,
+        "predicted_pairs": 1957,
+        "recall": 1.0,
+        "tp": 1849,
+        "undefined_ratios": []
+      },
+      "seed": 20261108,
+      "truth": {
+        "bytes": 116468,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261108/missing20/truth.json",
+        "sha256": "6fcb4ca3822755b8b7095246ebb47e27e8f1949d057b2d7592151597f0234ad8"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "missing20",
+      "gene_coverage": 1.0,
+      "groups": 113,
+      "nonsingleton_coverage": 0.9941348973607038,
+      "prediction": {
+        "bytes": 7734,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_36/graph/final.tsv",
+        "sha256": "5db7669a44909e21d338cc02c751db302b5e3bc1691b4b7eb4b52e89a99cc28d"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1926,
+        "f1": 0.9093211752786221,
+        "fn": 131,
+        "fp": 227,
+        "genes_in_predicted_pairs": 678,
+        "input_genes": 682,
+        "pair_endpoint_coverage": 0.9941348973607038,
+        "precision": 0.8877349159248269,
+        "predicted_pairs": 2022,
+        "recall": 0.9319833852544133,
+        "tp": 1795,
+        "undefined_ratios": []
+      },
+      "seed": 20261109,
+      "truth": {
+        "bytes": 122490,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261109/missing20/truth.json",
+        "sha256": "e8f77bf39bc650cdf0392acf300e550bd0b1b0efe708eb1dce1d8f56f26d09af"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "missing20",
+      "gene_coverage": 1.0,
+      "groups": 119,
+      "nonsingleton_coverage": 0.9926686217008798,
+      "prediction": {
+        "bytes": 7734,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_37/graph/final.tsv",
+        "sha256": "22577a4ed3d76a63bea18812a437d86c9a47eac2b1950032e4fd866805924855"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1926,
+        "f1": 0.9034076351524468,
+        "fn": 163,
+        "fp": 214,
+        "genes_in_predicted_pairs": 677,
+        "input_genes": 682,
+        "pair_endpoint_coverage": 0.9926686217008798,
+        "precision": 0.8917551846231664,
+        "predicted_pairs": 1977,
+        "recall": 0.9153686396677051,
+        "tp": 1763,
+        "undefined_ratios": []
+      },
+      "seed": 20261109,
+      "truth": {
+        "bytes": 122490,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261109/missing20/truth.json",
+        "sha256": "e8f77bf39bc650cdf0392acf300e550bd0b1b0efe708eb1dce1d8f56f26d09af"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "missing20",
+      "gene_coverage": 1.0,
+      "groups": 101,
+      "nonsingleton_coverage": 0.9954476479514416,
+      "prediction": {
+        "bytes": 7288,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_38/graph/final.tsv",
+        "sha256": "264c9a73ddbd269c6cda012a08cf347ed423f55d90f40d2db302c4f687a2b1c6"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1889,
+        "f1": 0.9665121071612571,
+        "fn": 13,
+        "fp": 117,
+        "genes_in_predicted_pairs": 656,
+        "input_genes": 659,
+        "pair_endpoint_coverage": 0.9954476479514416,
+        "precision": 0.941294530858003,
+        "predicted_pairs": 1993,
+        "recall": 0.9931180518793012,
+        "tp": 1876,
+        "undefined_ratios": []
+      },
+      "seed": 20261110,
+      "truth": {
+        "bytes": 118753,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261110/missing20/truth.json",
+        "sha256": "0fb0b9eb67ad601ff8b3eaffe957ad45ff4941241b08ff3311d45ad855b5e680"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "missing20",
+      "gene_coverage": 1.0,
+      "groups": 106,
+      "nonsingleton_coverage": 0.9878603945371776,
+      "prediction": {
+        "bytes": 7288,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_39/graph/final.tsv",
+        "sha256": "03453a5b2544c976738183bfbebd72456fbebf7b75476b7d874be2cc6f216d90"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1889,
+        "f1": 0.959813326419497,
+        "fn": 38,
+        "fp": 117,
+        "genes_in_predicted_pairs": 651,
+        "input_genes": 659,
+        "pair_endpoint_coverage": 0.9878603945371776,
+        "precision": 0.9405487804878049,
+        "predicted_pairs": 1968,
+        "recall": 0.9798835362625727,
+        "tp": 1851,
+        "undefined_ratios": []
+      },
+      "seed": 20261110,
+      "truth": {
+        "bytes": 118753,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261110/missing20/truth.json",
+        "sha256": "0fb0b9eb67ad601ff8b3eaffe957ad45ff4941241b08ff3311d45ad855b5e680"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "taxon_count_control",
+      "gene_coverage": 1.0,
+      "groups": 98,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 7184,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_40/graph/final.tsv",
+        "sha256": "6b2a0d111895d1fc81f8670e398569dbd8f0cfb035fcfa41a007f866fd2b1d27"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1629,
+        "f1": 0.9501312335958005,
+        "fn": 0,
+        "fp": 171,
+        "genes_in_predicted_pairs": 636,
+        "input_genes": 636,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.905,
+        "predicted_pairs": 1800,
+        "recall": 1.0,
+        "tp": 1629,
+        "undefined_ratios": []
+      },
+      "seed": 20261106,
+      "truth": {
+        "bytes": 106219,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261106/taxon_count_control/truth.json",
+        "sha256": "cd98279435c8dd12a17f8b1e9058ed307c8dfa1f62c9834227e6bd0e647aa1ba"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "taxon_count_control",
+      "gene_coverage": 1.0,
+      "groups": 98,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 7184,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_41/graph/final.tsv",
+        "sha256": "6b2a0d111895d1fc81f8670e398569dbd8f0cfb035fcfa41a007f866fd2b1d27"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1629,
+        "f1": 0.9501312335958005,
+        "fn": 0,
+        "fp": 171,
+        "genes_in_predicted_pairs": 636,
+        "input_genes": 636,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.905,
+        "predicted_pairs": 1800,
+        "recall": 1.0,
+        "tp": 1629,
+        "undefined_ratios": []
+      },
+      "seed": 20261106,
+      "truth": {
+        "bytes": 106219,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261106/taxon_count_control/truth.json",
+        "sha256": "cd98279435c8dd12a17f8b1e9058ed307c8dfa1f62c9834227e6bd0e647aa1ba"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "taxon_count_control",
+      "gene_coverage": 1.0,
+      "groups": 100,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 5497,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_42/graph/final.tsv",
+        "sha256": "d032c058671a372141a6e0420b1f081aa5455624d0ec595f33d3f52a837f898a"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1011,
+        "f1": 0.9814453125,
+        "fn": 6,
+        "fp": 32,
+        "genes_in_predicted_pairs": 503,
+        "input_genes": 503,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.9691417550626809,
+        "predicted_pairs": 1037,
+        "recall": 0.9940652818991098,
+        "tp": 1005,
+        "undefined_ratios": []
+      },
+      "seed": 20261107,
+      "truth": {
+        "bytes": 71822,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261107/taxon_count_control/truth.json",
+        "sha256": "359f9c9609aa39632629de97e96596f725313ebf3da0354e8e67ae691a5b9e06"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "taxon_count_control",
+      "gene_coverage": 1.0,
+      "groups": 100,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 5497,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_43/graph/final.tsv",
+        "sha256": "d032c058671a372141a6e0420b1f081aa5455624d0ec595f33d3f52a837f898a"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1011,
+        "f1": 0.9814453125,
+        "fn": 6,
+        "fp": 32,
+        "genes_in_predicted_pairs": 503,
+        "input_genes": 503,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.9691417550626809,
+        "predicted_pairs": 1037,
+        "recall": 0.9940652818991098,
+        "tp": 1005,
+        "undefined_ratios": []
+      },
+      "seed": 20261107,
+      "truth": {
+        "bytes": 71822,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261107/taxon_count_control/truth.json",
+        "sha256": "359f9c9609aa39632629de97e96596f725313ebf3da0354e8e67ae691a5b9e06"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "taxon_count_control",
+      "gene_coverage": 1.0,
+      "groups": 99,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 6638,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_44/graph/final.tsv",
+        "sha256": "6eab06004a9cf8f4ad436d78d51214757793ce92fbb8fc91cc181989eed46506"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1554,
+        "f1": 0.9691300280636108,
+        "fn": 0,
+        "fp": 99,
+        "genes_in_predicted_pairs": 615,
+        "input_genes": 615,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.9401088929219601,
+        "predicted_pairs": 1653,
+        "recall": 1.0,
+        "tp": 1554,
+        "undefined_ratios": []
+      },
+      "seed": 20261108,
+      "truth": {
+        "bytes": 99962,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261108/taxon_count_control/truth.json",
+        "sha256": "eedb64a27fe643fc91558941fcd1f21a7560f252669f8cd471f89534a70b0347"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "taxon_count_control",
+      "gene_coverage": 1.0,
+      "groups": 100,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 6638,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_45/graph/final.tsv",
+        "sha256": "75f964fcdf53ff1ec2346cc40c847fbc7efaba03f8456643598a03c846113a69"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1554,
+        "f1": 0.9665520475148484,
+        "fn": 8,
+        "fp": 99,
+        "genes_in_predicted_pairs": 615,
+        "input_genes": 615,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.9398176291793313,
+        "predicted_pairs": 1645,
+        "recall": 0.9948519948519948,
+        "tp": 1546,
+        "undefined_ratios": []
+      },
+      "seed": 20261108,
+      "truth": {
+        "bytes": 99962,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261108/taxon_count_control/truth.json",
+        "sha256": "eedb64a27fe643fc91558941fcd1f21a7560f252669f8cd471f89534a70b0347"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "taxon_count_control",
+      "gene_coverage": 1.0,
+      "groups": 118,
+      "nonsingleton_coverage": 0.9623352165725048,
+      "prediction": {
+        "bytes": 6034,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_46/graph/final.tsv",
+        "sha256": "c2933810e7da68a2c568664c6657bc377f4328c549d63200db0df615d2a98f62"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1075,
+        "f1": 0.9035486806187443,
+        "fn": 82,
+        "fp": 130,
+        "genes_in_predicted_pairs": 509,
+        "input_genes": 531,
+        "pair_endpoint_coverage": 0.9585687382297552,
+        "precision": 0.8842386464826358,
+        "predicted_pairs": 1123,
+        "recall": 0.9237209302325582,
+        "tp": 993,
+        "undefined_ratios": []
+      },
+      "seed": 20261109,
+      "truth": {
+        "bytes": 77276,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261109/taxon_count_control/truth.json",
+        "sha256": "e9d055b97ac654f86365049f26d8bd98e84318b3bde640e44c99063f49f7a8d9"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "taxon_count_control",
+      "gene_coverage": 1.0,
+      "groups": 123,
+      "nonsingleton_coverage": 0.9548022598870056,
+      "prediction": {
+        "bytes": 6034,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_47/graph/final.tsv",
+        "sha256": "d8acfc8405b9f0cfb96e93f3b3dbaf52266592557eaa6de5487524bb723d7748"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1075,
+        "f1": 0.9021237303785781,
+        "fn": 98,
+        "fp": 114,
+        "genes_in_predicted_pairs": 505,
+        "input_genes": 531,
+        "pair_endpoint_coverage": 0.9510357815442562,
+        "precision": 0.8955087076076994,
+        "predicted_pairs": 1091,
+        "recall": 0.9088372093023256,
+        "tp": 977,
+        "undefined_ratios": []
+      },
+      "seed": 20261109,
+      "truth": {
+        "bytes": 77276,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261109/taxon_count_control/truth.json",
+        "sha256": "e9d055b97ac654f86365049f26d8bd98e84318b3bde640e44c99063f49f7a8d9"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "taxon_count_control",
+      "gene_coverage": 1.0,
+      "groups": 100,
+      "nonsingleton_coverage": 0.9960861056751468,
+      "prediction": {
+        "bytes": 5502,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_48/graph/final.tsv",
+        "sha256": "7788a29ffcbecebfcf9b5af221ba9bbf66800da7c7ca7db6f941a07071ae690c"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1034,
+        "f1": 0.9716981132075472,
+        "fn": 4,
+        "fp": 56,
+        "genes_in_predicted_pairs": 509,
+        "input_genes": 511,
+        "pair_endpoint_coverage": 0.9960861056751468,
+        "precision": 0.9484346224677717,
+        "predicted_pairs": 1086,
+        "recall": 0.9961315280464217,
+        "tp": 1030,
+        "undefined_ratios": []
+      },
+      "seed": 20261110,
+      "truth": {
+        "bytes": 73099,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261110/taxon_count_control/truth.json",
+        "sha256": "6b8411b1d5b62980ca46489d1745efccf3273354c52db318b3f78dc340ccf813"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "taxon_count_control",
+      "gene_coverage": 1.0,
+      "groups": 107,
+      "nonsingleton_coverage": 0.9823874755381604,
+      "prediction": {
+        "bytes": 5502,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_49/graph/final.tsv",
+        "sha256": "b44417d0e20ecb961cdde68cb01f3099096d20cdf615fe167e977e502b5db839"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1034,
+        "f1": 0.9579349904397706,
+        "fn": 32,
+        "fp": 56,
+        "genes_in_predicted_pairs": 502,
+        "input_genes": 511,
+        "pair_endpoint_coverage": 0.9823874755381604,
+        "precision": 0.947069943289225,
+        "predicted_pairs": 1058,
+        "recall": 0.9690522243713733,
+        "tp": 1002,
+        "undefined_ratios": []
+      },
+      "seed": 20261110,
+      "truth": {
+        "bytes": 73099,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261110/taxon_count_control/truth.json",
+        "sha256": "6b8411b1d5b62980ca46489d1745efccf3273354c52db318b3f78dc340ccf813"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "turnover",
+      "gene_coverage": 1.0,
+      "groups": 87,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 8868,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_50/graph/final.tsv",
+        "sha256": "1bc73dda921fa69dd0bdfea6d8458e08ffd653f93f8bce08f92df3bee6e318b8"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 2815,
+        "f1": 0.904999196270696,
+        "fn": 0,
+        "fp": 591,
+        "genes_in_predicted_pairs": 784,
+        "input_genes": 784,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.8264826776277158,
+        "predicted_pairs": 3406,
+        "recall": 1.0,
+        "tp": 2815,
+        "undefined_ratios": []
+      },
+      "seed": 20261106,
+      "truth": {
+        "bytes": 231486,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/turnover_20261106/truth.json",
+        "sha256": "38255e67b7442f3a560a0bceb23ae2dcc0affbbf4f9dac367e7fa65a491f01a6"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "turnover",
+      "gene_coverage": 1.0,
+      "groups": 87,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 8868,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_51/graph/final.tsv",
+        "sha256": "1bc73dda921fa69dd0bdfea6d8458e08ffd653f93f8bce08f92df3bee6e318b8"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 2815,
+        "f1": 0.904999196270696,
+        "fn": 0,
+        "fp": 591,
+        "genes_in_predicted_pairs": 784,
+        "input_genes": 784,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.8264826776277158,
+        "predicted_pairs": 3406,
+        "recall": 1.0,
+        "tp": 2815,
+        "undefined_ratios": []
+      },
+      "seed": 20261106,
+      "truth": {
+        "bytes": 231486,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/turnover_20261106/truth.json",
+        "sha256": "38255e67b7442f3a560a0bceb23ae2dcc0affbbf4f9dac367e7fa65a491f01a6"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "turnover",
+      "gene_coverage": 1.0,
+      "groups": 92,
+      "nonsingleton_coverage": 0.9987775061124694,
+      "prediction": {
+        "bytes": 9130,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_52/graph/final.tsv",
+        "sha256": "6ff7522af4566682fffc30da9ba7ae3507b0bb76016e92f464a6a33fb29710d0"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 2912,
+        "f1": 0.8880756328148826,
+        "fn": 0,
+        "fp": 734,
+        "genes_in_predicted_pairs": 817,
+        "input_genes": 818,
+        "pair_endpoint_coverage": 0.9987775061124694,
+        "precision": 0.7986834887547998,
+        "predicted_pairs": 3646,
+        "recall": 1.0,
+        "tp": 2912,
+        "undefined_ratios": []
+      },
+      "seed": 20261107,
+      "truth": {
+        "bytes": 237119,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/turnover_20261107/truth.json",
+        "sha256": "f33890bf494cbb9e0156a6b430ed1e51bb575d6cd7e4dd72a87cd593fb88e81a"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "turnover",
+      "gene_coverage": 1.0,
+      "groups": 92,
+      "nonsingleton_coverage": 0.9987775061124694,
+      "prediction": {
+        "bytes": 9130,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_53/graph/final.tsv",
+        "sha256": "6ff7522af4566682fffc30da9ba7ae3507b0bb76016e92f464a6a33fb29710d0"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 2912,
+        "f1": 0.8880756328148826,
+        "fn": 0,
+        "fp": 734,
+        "genes_in_predicted_pairs": 817,
+        "input_genes": 818,
+        "pair_endpoint_coverage": 0.9987775061124694,
+        "precision": 0.7986834887547998,
+        "predicted_pairs": 3646,
+        "recall": 1.0,
+        "tp": 2912,
+        "undefined_ratios": []
+      },
+      "seed": 20261107,
+      "truth": {
+        "bytes": 237119,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/turnover_20261107/truth.json",
+        "sha256": "f33890bf494cbb9e0156a6b430ed1e51bb575d6cd7e4dd72a87cd593fb88e81a"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "turnover",
+      "gene_coverage": 1.0,
+      "groups": 91,
+      "nonsingleton_coverage": 0.9976958525345622,
+      "prediction": {
+        "bytes": 9716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_54/graph/final.tsv",
+        "sha256": "4f469f9c94e5ed99303bc360fdaf5b1beb3bffe4b1af35a170cc12ca6256b29a"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 3078,
+        "f1": 0.8316671169954066,
+        "fn": 0,
+        "fp": 1246,
+        "genes_in_predicted_pairs": 866,
+        "input_genes": 868,
+        "pair_endpoint_coverage": 0.9976958525345622,
+        "precision": 0.711840888066605,
+        "predicted_pairs": 4324,
+        "recall": 1.0,
+        "tp": 3078,
+        "undefined_ratios": []
+      },
+      "seed": 20261108,
+      "truth": {
+        "bytes": 246832,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/turnover_20261108/truth.json",
+        "sha256": "177ccc9487ac398d145c1310ecda7e8871ec3b75d606bdab47e4fdfb07b849bd"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "turnover",
+      "gene_coverage": 1.0,
+      "groups": 92,
+      "nonsingleton_coverage": 0.9965437788018433,
+      "prediction": {
+        "bytes": 9716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_55/graph/final.tsv",
+        "sha256": "a5a98c116d95ca68cfde4646442e003bcc1178acabc858380bcf29d6f005f4cd"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 3078,
+        "f1": 0.8307193077339102,
+        "fn": 6,
+        "fp": 1246,
+        "genes_in_predicted_pairs": 865,
+        "input_genes": 868,
+        "pair_endpoint_coverage": 0.9965437788018433,
+        "precision": 0.7114404817044928,
+        "predicted_pairs": 4318,
+        "recall": 0.9980506822612085,
+        "tp": 3072,
+        "undefined_ratios": []
+      },
+      "seed": 20261108,
+      "truth": {
+        "bytes": 246832,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/turnover_20261108/truth.json",
+        "sha256": "177ccc9487ac398d145c1310ecda7e8871ec3b75d606bdab47e4fdfb07b849bd"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "turnover",
+      "gene_coverage": 1.0,
+      "groups": 104,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 11525,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_56/graph/final.tsv",
+        "sha256": "bd4bb1bbca0b6c345a268fae9b043480804b6b7a178213e5e89a03d8253da91f"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 3661,
+        "f1": 0.7226733291692692,
+        "fn": 190,
+        "fp": 2474,
+        "genes_in_predicted_pairs": 1004,
+        "input_genes": 1004,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.583851976450799,
+        "predicted_pairs": 5945,
+        "recall": 0.948101611581535,
+        "tp": 3471,
+        "undefined_ratios": []
+      },
+      "seed": 20261109,
+      "truth": {
+        "bytes": 280505,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/turnover_20261109/truth.json",
+        "sha256": "faee452972899aea644b764ea1875fd12f52f7e50a10c9a9bac5c2fad883b390"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "turnover",
+      "gene_coverage": 1.0,
+      "groups": 117,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 11525,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_57/graph/final.tsv",
+        "sha256": "dae85a14917fa56f258f3d45e13ac9ee39dcb3c0ef753ce20c0056328fe583ae"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 3661,
+        "f1": 0.7047966520012877,
+        "fn": 377,
+        "fp": 2374,
+        "genes_in_predicted_pairs": 1004,
+        "input_genes": 1004,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.5804171085189113,
+        "predicted_pairs": 5658,
+        "recall": 0.8970226714012565,
+        "tp": 3284,
+        "undefined_ratios": []
+      },
+      "seed": 20261109,
+      "truth": {
+        "bytes": 280505,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/turnover_20261109/truth.json",
+        "sha256": "faee452972899aea644b764ea1875fd12f52f7e50a10c9a9bac5c2fad883b390"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "turnover",
+      "gene_coverage": 1.0,
+      "groups": 97,
+      "nonsingleton_coverage": 0.9976498237367802,
+      "prediction": {
+        "bytes": 9519,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_58/graph/final.tsv",
+        "sha256": "36c26df34145b72ae5be3715615bba418a2d4e3f6e5f36bb9e0f34ec531e552f"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 3064,
+        "f1": 0.9016659295297066,
+        "fn": 6,
+        "fp": 661,
+        "genes_in_predicted_pairs": 847,
+        "input_genes": 851,
+        "pair_endpoint_coverage": 0.9952996474735605,
+        "precision": 0.8222640494756654,
+        "predicted_pairs": 3719,
+        "recall": 0.9980417754569191,
+        "tp": 3058,
+        "undefined_ratios": []
+      },
+      "seed": 20261110,
+      "truth": {
+        "bytes": 246643,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/turnover_20261110/truth.json",
+        "sha256": "ec2301d8a1068802f1b774cfa68a8559bd09f84c900ee8633cebdfe5829c28c6"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "turnover",
+      "gene_coverage": 1.0,
+      "groups": 100,
+      "nonsingleton_coverage": 0.9941245593419507,
+      "prediction": {
+        "bytes": 9519,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_59/graph/final.tsv",
+        "sha256": "4769818aa6d53aaf17948e63ef8f63d8389b6bd635bacf02ee3b1ad8504a2e74"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 3064,
+        "f1": 0.8989062961868164,
+        "fn": 23,
+        "fp": 661,
+        "genes_in_predicted_pairs": 844,
+        "input_genes": 851,
+        "pair_endpoint_coverage": 0.9917743830787309,
+        "precision": 0.8214478660183685,
+        "predicted_pairs": 3702,
+        "recall": 0.9924934725848564,
+        "tp": 3041,
+        "undefined_ratios": []
+      },
+      "seed": 20261110,
+      "truth": {
+        "bytes": 246643,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/prepared/turnover_20261110/truth.json",
+        "sha256": "ec2301d8a1068802f1b774cfa68a8559bd09f84c900ee8633cebdfe5829c28c6"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "uneven_taxa",
+      "gene_coverage": 1.0,
+      "groups": 98,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 6893,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_60/graph/final.tsv",
+        "sha256": "cf293ca348ee61c3c993597ff3e777ef0556d64a233ab5d1bb4611c02a448e1e"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1592,
+        "f1": 0.9512996713474754,
+        "fn": 0,
+        "fp": 163,
+        "genes_in_predicted_pairs": 628,
+        "input_genes": 628,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.9071225071225071,
+        "predicted_pairs": 1755,
+        "recall": 1.0,
+        "tp": 1592,
+        "undefined_ratios": []
+      },
+      "seed": 20261106,
+      "truth": {
+        "bytes": 103245,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261106/uneven_taxa/truth.json",
+        "sha256": "27296bb3212752262babc1ff2829bfc44707c1f4b7fb6f94e6cedc9281837b39"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "uneven_taxa",
+      "gene_coverage": 1.0,
+      "groups": 98,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 6893,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_61/graph/final.tsv",
+        "sha256": "cf293ca348ee61c3c993597ff3e777ef0556d64a233ab5d1bb4611c02a448e1e"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1592,
+        "f1": 0.9512996713474754,
+        "fn": 0,
+        "fp": 163,
+        "genes_in_predicted_pairs": 628,
+        "input_genes": 628,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.9071225071225071,
+        "predicted_pairs": 1755,
+        "recall": 1.0,
+        "tp": 1592,
+        "undefined_ratios": []
+      },
+      "seed": 20261106,
+      "truth": {
+        "bytes": 103245,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261106/uneven_taxa/truth.json",
+        "sha256": "27296bb3212752262babc1ff2829bfc44707c1f4b7fb6f94e6cedc9281837b39"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "uneven_taxa",
+      "gene_coverage": 1.0,
+      "groups": 99,
+      "nonsingleton_coverage": 0.996,
+      "prediction": {
+        "bytes": 5756,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_62/graph/final.tsv",
+        "sha256": "43aaf337463d3ddc954f0c4a7dae4774fd60bf873333e380cc06c107104093df"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1001,
+        "f1": 0.9756335282651072,
+        "fn": 0,
+        "fp": 50,
+        "genes_in_predicted_pairs": 498,
+        "input_genes": 500,
+        "pair_endpoint_coverage": 0.996,
+        "precision": 0.9524262607040913,
+        "predicted_pairs": 1051,
+        "recall": 1.0,
+        "tp": 1001,
+        "undefined_ratios": []
+      },
+      "seed": 20261107,
+      "truth": {
+        "bytes": 72455,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261107/uneven_taxa/truth.json",
+        "sha256": "ccb5b0da9b103e780de321aa22d3c4c7dc2c01aef3892b789bb59de17a26bec3"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "uneven_taxa",
+      "gene_coverage": 1.0,
+      "groups": 100,
+      "nonsingleton_coverage": 0.994,
+      "prediction": {
+        "bytes": 5756,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_63/graph/final.tsv",
+        "sha256": "eed575be6e26b41eaaa031c7554b08e6252cf11c7f7f0a680e0fb2577f793b4e"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1001,
+        "f1": 0.9736328125,
+        "fn": 4,
+        "fp": 50,
+        "genes_in_predicted_pairs": 497,
+        "input_genes": 500,
+        "pair_endpoint_coverage": 0.994,
+        "precision": 0.9522445081184336,
+        "predicted_pairs": 1047,
+        "recall": 0.996003996003996,
+        "tp": 997,
+        "undefined_ratios": []
+      },
+      "seed": 20261107,
+      "truth": {
+        "bytes": 72455,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261107/uneven_taxa/truth.json",
+        "sha256": "ccb5b0da9b103e780de321aa22d3c4c7dc2c01aef3892b789bb59de17a26bec3"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "uneven_taxa",
+      "gene_coverage": 1.0,
+      "groups": 99,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 6718,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_64/graph/final.tsv",
+        "sha256": "93146edc91178feab3d33b8bfb35214dd2cc6581b4969f5c493b2a43146bd49e"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1544,
+        "f1": 0.9716803020767778,
+        "fn": 0,
+        "fp": 90,
+        "genes_in_predicted_pairs": 613,
+        "input_genes": 613,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.944920440636475,
+        "predicted_pairs": 1634,
+        "recall": 1.0,
+        "tp": 1544,
+        "undefined_ratios": []
+      },
+      "seed": 20261108,
+      "truth": {
+        "bytes": 99943,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261108/uneven_taxa/truth.json",
+        "sha256": "ad076a083d2f819cacf66d38fbfe1367af34c909282573f2e51ebba1df823dcf"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "uneven_taxa",
+      "gene_coverage": 1.0,
+      "groups": 99,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 6718,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_65/graph/final.tsv",
+        "sha256": "93146edc91178feab3d33b8bfb35214dd2cc6581b4969f5c493b2a43146bd49e"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1544,
+        "f1": 0.9716803020767778,
+        "fn": 0,
+        "fp": 90,
+        "genes_in_predicted_pairs": 613,
+        "input_genes": 613,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.944920440636475,
+        "predicted_pairs": 1634,
+        "recall": 1.0,
+        "tp": 1544,
+        "undefined_ratios": []
+      },
+      "seed": 20261108,
+      "truth": {
+        "bytes": 99943,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261108/uneven_taxa/truth.json",
+        "sha256": "ad076a083d2f819cacf66d38fbfe1367af34c909282573f2e51ebba1df823dcf"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "uneven_taxa",
+      "gene_coverage": 1.0,
+      "groups": 122,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 6359,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_66/graph/final.tsv",
+        "sha256": "41c4293bff2151ada8e7bbfeece98503b9368913da9cc03d49deadd6dcf43ae7"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1092,
+        "f1": 0.8673139158576052,
+        "fn": 154,
+        "fp": 133,
+        "genes_in_predicted_pairs": 534,
+        "input_genes": 534,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.8758169934640523,
+        "predicted_pairs": 1071,
+        "recall": 0.8589743589743589,
+        "tp": 938,
+        "undefined_ratios": []
+      },
+      "seed": 20261109,
+      "truth": {
+        "bytes": 79343,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261109/uneven_taxa/truth.json",
+        "sha256": "6821263f8da9b589705fb3c721a10f930301f53c0a010ec3c9404b63a6072019"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "uneven_taxa",
+      "gene_coverage": 1.0,
+      "groups": 121,
+      "nonsingleton_coverage": 1.0,
+      "prediction": {
+        "bytes": 6359,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_67/graph/final.tsv",
+        "sha256": "b06be83588e57bd0ccfbd7d5531fcfa49c29375ff1c4a007871e260c3f1f6e38"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1092,
+        "f1": 0.8862052949372968,
+        "fn": 138,
+        "fp": 107,
+        "genes_in_predicted_pairs": 534,
+        "input_genes": 534,
+        "pair_endpoint_coverage": 1.0,
+        "precision": 0.8991517436380773,
+        "predicted_pairs": 1061,
+        "recall": 0.8736263736263736,
+        "tp": 954,
+        "undefined_ratios": []
+      },
+      "seed": 20261109,
+      "truth": {
+        "bytes": 79343,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261109/uneven_taxa/truth.json",
+        "sha256": "6821263f8da9b589705fb3c721a10f930301f53c0a010ec3c9404b63a6072019"
+      }
+    },
+    {
+      "arm": "hmm",
+      "condition": "uneven_taxa",
+      "gene_coverage": 1.0,
+      "groups": 101,
+      "nonsingleton_coverage": 0.9941176470588236,
+      "prediction": {
+        "bytes": 5870,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_68/graph/final.tsv",
+        "sha256": "1392c9846829bd6555ea51c138b7d4bd250cfc9b58f026b26eca7370c962b045"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1034,
+        "f1": 0.9715909090909091,
+        "fn": 8,
+        "fp": 52,
+        "genes_in_predicted_pairs": 507,
+        "input_genes": 510,
+        "pair_endpoint_coverage": 0.9941176470588236,
+        "precision": 0.9517625231910947,
+        "predicted_pairs": 1078,
+        "recall": 0.9922630560928434,
+        "tp": 1026,
+        "undefined_ratios": []
+      },
+      "seed": 20261110,
+      "truth": {
+        "bytes": 74609,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261110/uneven_taxa/truth.json",
+        "sha256": "78f45237c7f14d4c23f5aa6913f5c93a414cd2f975dd3cecaf477465ede45ccc"
+      }
+    },
+    {
+      "arm": "diamond",
+      "condition": "uneven_taxa",
+      "gene_coverage": 1.0,
+      "groups": 107,
+      "nonsingleton_coverage": 0.9823529411764705,
+      "prediction": {
+        "bytes": 5870,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_graph_panel_20260926/cell_69/graph/final.tsv",
+        "sha256": "88b249bc46e8f25f29171ed28d9b956acf03bbc4027840889b7cc07ff8163848"
+      },
+      "score": {
+        "coverage_definition": "input genes occurring in at least one predicted cross-species pair",
+        "duplicate_prediction_rows": 0,
+        "eligible_true_pairs": 1034,
+        "f1": 0.9597701149425287,
+        "fn": 32,
+        "fp": 52,
+        "genes_in_predicted_pairs": 501,
+        "input_genes": 510,
+        "pair_endpoint_coverage": 0.9823529411764705,
+        "precision": 0.9506641366223909,
+        "predicted_pairs": 1054,
+        "recall": 0.9690522243713733,
+        "tp": 1002,
+        "undefined_ratios": []
+      },
+      "seed": 20261110,
+      "truth": {
+        "bytes": 74609,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_variable_simulation_panel_v2/derived/20261110/uneven_taxa/truth.json",
+        "sha256": "78f45237c7f14d4c23f5aa6913f5c93a414cd2f975dd3cecaf477465ede45ccc"
+      }
+    }
+  ],
+  "scientific_defaults_changed": false,
+  "scoring_dependency": {
+    "bytes": 5297,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/simulation_conditions.py",
+    "sha256": "befe1c6ebb91e216b3029e4bf8ab2ef522a357b3419950a7edfba4d2f4460964"
+  },
+  "seeds": [
+    20261106,
+    20261107,
+    20261108,
+    20261109,
+    20261110
+  ],
+  "source": {
+    "bytes": 8754,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/score_matched_graph.py",
+    "sha256": "1082c97741b4232cfe138596da1ec4c794e7acb589dbb40e17be285f84e982cb"
+  },
+  "statistic": "Equal-weight mean seed pair metrics within condition; equal-condition overall mean",
+  "status": "complete_matched_graph_panel_scored"
+}

@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Matched-Recall Graph Accuracy and Uncertainty Complete (2026-09-26)
+
+The preceding turn validated all 70 graph arms. The frozen final-partition
+scoring and five-seed-block bootstrap are now complete: HMM mean pair F1
+83.6097%, DIAMOND 80.5180%, difference +3.0917 percentage points with the
+eight-contrast adjusted interval [+1.6782, +4.5313]. Divergence conditions show
+the largest differences; uneven sampling slightly favors DIAMOND. HMM mean
+recall is higher and mean precision slightly lower. All conditions, seed effects,
+coverage and marginal/adjusted intervals are retained in the generated artifacts.
+[Result, figures and claim limits](MATCHED_GRAPH_RESULT_20260926.md).
+
+Scoring code was committed before execution. 110 focused tests and two further
+figure tests pass. The figure recomputes effects from score records, and its
+final PNG was visually reviewed. This is a development-exposed initial-search
+graph diagnostic, not a full-pipeline/OrthoFinder result or real-data matching.
+No parameters or defaults changed after outcomes. Next integrate the bounded
+finding into manuscript/claims; preserve all other publication requirements.
+Main installed OrthoBench job 22179 remains running, with its initial search
+log reaching 68.75%. DGX remains deferred and the full goal is active.
+
 ## All Matched-Graph Arms Complete and Independently Read Back (2026-09-26)
 
 The preceding turn launched the graph panel. All 70 arms in array 22250 now
