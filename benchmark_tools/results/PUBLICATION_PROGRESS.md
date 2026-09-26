@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Search-Sensitivity Panel Runner Ready (2026-09-26)
+
+The preceding turn made progress with the verified installed-HMM executor.
+Added a one-attempt per-dataset orchestrator with a pinned 70-dataset plan,
+installed-source/runtime checks, private input copies, exact DIAMOND commands,
+stage logs and GNU time records, bounded process-group timeouts, and failure
+receipts. Existing output directories cannot be reused. Missing required native
+outputs fail explicitly; successful execution still awaits independent readback.
+All 49 focused tests pass and the Slurm wrapper passes shell syntax checking.
+
+The wrapper requests 4 CPUs/8 GiB/one hour per cell and at most two concurrent
+cells for the full 0-69 array. Commands use isolated installed Python and
+separate DIAMOND target-species databases. Native searches never receive truth
+files. Shared-host timings are descriptive, not matched-resource evidence.
+Job 22179 was independently verified RUNNING at 1:13:14 on 32 CPUs.
+
+Next launch from a clean pinned executor, record the array handle and verify
+terminal states before scoring. No calibration cutoff has been chosen or
+reporting outcome inspected. All broader publication requirements remain active;
+DGX remains deferred and scientific defaults are unchanged.
+
 ## Installed Search-Only Executor Verified (2026-09-26)
 
 The preceding status turn was a verified wait: job 22179 was RUNNING at
