@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Reviewed Residue Proteins Traced To Final Groups (2026-09-26)
+
+Added `trace_native_residue_groups.py` and six focused tests for membership,
+cross-species counting, same-species exclusion, malformed rows, duplicate
+membership and digest mismatch. Ran the trace against the pinned search
+trace and native admission, hashing the full final-group file as scanned.
+[Result](qfo_native_residue_group_trace_20260926.json): all seven proteins
+occur in three single-species groups (3/2/2 members), with no outsiders
+and zero incident cross-species pairs. Updated manuscript limitations.
+This extends the observed search trace to final predictions; it does not
+replace the still-unexecuted residue-preserving search counterfactual.
+
+Reproduction from repository root:
+
+```bash
+python -m benchmark_tools.trace_native_residue_groups \
+  --trace benchmark_tools/results/qfo_native_residue_hit_trace_20260925.json \
+  --trace-sha256 a51bf545aa924286e08a205416536596cc14895f4763ba19b45cb39aea538cb4 \
+  --admission benchmark_tools/results/qfo_recovered_native_admission_22171.json \
+  --admission-sha256 8d75ac17b0e2d0e27a7b3151c00ac64d6f9cc959976d7a57407cc683b19fb0d6 \
+  --output /tmp/qfo_native_residue_group_trace.json
+```
+
+Assessment 22174 remains live; 22176 waits on successful assessment.
+Exporter inspection confirms support for recovered admissions, without
+using the old different-input OrthoMCL score. Prior turn retained exposure
+evidence; this turn advances the observed residue-deletion failure trace.
+
 ## Recovered Reference Exposure Verified (2026-09-26)
 
 Job **22175 completed 0:0 in 35 seconds**. Retained its report verbatim as

@@ -1,0 +1,83 @@
+{
+  "admission_sha256": "8d75ac17b0e2d0e27a7b3151c00ac64d6f9cc959976d7a57407cc683b19fb0d6",
+  "content": {
+    "absent_targets": [],
+    "groups": [
+      {
+        "group": "ORTHOMCL50832",
+        "incident_cross_species_pairs": 0,
+        "line": 50833,
+        "members": [
+          {
+            "gene": "sp|Q8TN68|MTBB3_METAC",
+            "species": "UP000002487_188937"
+          },
+          {
+            "gene": "sp|Q8TS72|MTBB2_METAC",
+            "species": "UP000002487_188937"
+          },
+          {
+            "gene": "sp|Q8TTA5|MTBB1_METAC",
+            "species": "UP000002487_188937"
+          }
+        ],
+        "targets": [
+          "sp|Q8TN68|MTBB3_METAC",
+          "sp|Q8TS72|MTBB2_METAC",
+          "sp|Q8TTA5|MTBB1_METAC"
+        ]
+      },
+      {
+        "group": "ORTHOMCL77484",
+        "incident_cross_species_pairs": 0,
+        "line": 77485,
+        "members": [
+          {
+            "gene": "sp|Q8TS73|MTTB2_METAC",
+            "species": "UP000002487_188937"
+          },
+          {
+            "gene": "sp|Q8TTA9|MTTB1_METAC",
+            "species": "UP000002487_188937"
+          }
+        ],
+        "targets": [
+          "sp|Q8TS73|MTTB2_METAC",
+          "sp|Q8TTA9|MTTB1_METAC"
+        ]
+      },
+      {
+        "group": "ORTHOMCL78764",
+        "incident_cross_species_pairs": 0,
+        "line": 78765,
+        "members": [
+          {
+            "gene": "sp|P58865|MTMB1_METAC",
+            "species": "UP000002487_188937"
+          },
+          {
+            "gene": "sp|P58866|MTMB2_METAC",
+            "species": "UP000002487_188937"
+          }
+        ],
+        "targets": [
+          "sp|P58865|MTMB1_METAC",
+          "sp|P58866|MTMB2_METAC"
+        ]
+      }
+    ],
+    "incident_cross_species_pairs": 0
+  },
+  "limitations": [
+    "Observed final-group trace, not a residue-preserving search counterfactual.",
+    "Zero incident cross-species pairs does not exclude counterfactual clustering changes."
+  ],
+  "native_groups": {
+    "bytes": 35946163,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_blast_recovery_native_v1/native_tool/Sep_25/all_orthomcl.out",
+    "sha256": "222e428bba8501b2d65eea88f8df003d60713d99048038e2104772a325564bf1"
+  },
+  "source_sha256": "7897c1b6fee8c53f34695e13256cc63ceddee1f61fb1acd2676ffece33d20a33",
+  "status": "reviewed_residue_final_group_trace_verified",
+  "trace_sha256": "a51bf545aa924286e08a205416536596cc14895f4763ba19b45cb39aea538cb4"
+}

@@ -996,6 +996,11 @@ or VGNC references. All seven have EC annotations and FAS features, and
 none has an experimental GO annotation under the benchmark filter.
 Annotation presence does not establish participation in scored pairs;
 absence from a reference does not exclude indirect clustering effects.
+A [final-group trace](qfo_native_residue_group_trace_20260926.json) places
+all seven proteins in three single-species groups of sizes three, two,
+and two, with no other members. They therefore contribute zero incident
+cross-species pairs to the observed cluster-derived submission. This
+does not establish what a residue-preserving search would have predicted.
 [Residue-change reference exposure](QFO_NATIVE_RESIDUE_REFERENCE_EXPOSURE_20260925.md).
 A complete scan of the recovered search table found 17 incident alignment
 rows for these seven proteins: seven self pairs and ten non-self directed
