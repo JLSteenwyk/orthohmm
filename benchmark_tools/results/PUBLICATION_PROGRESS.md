@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Search-Sensitivity Panel Complete and Match Gate Passed (2026-09-26)
+
+The preceding turn launched the complete 70-cell panel. All cells in array
+22180 now have COMPLETED/0:0 accounting and pass independent native-hit and
+provenance validation. The fixed calibration-only rule selected DIAMOND E <=
+1e-40; reporting mean homology recall is HMM 76.8033% and DIAMOND 77.0904%.
+The +0.2871-percentage-point overall gap and all seven condition gaps pass the
+prespecified matching gate. No retries, grid extension or default changes.
+[Full calibration grid, reporting table and limits](SEARCH_SENSITIVITY_RESULT_20260926.md).
+
+All 64 focused tests pass; a separate NumPy aggregation agrees with the exact
+fraction selection and reporting difference. This is a matched-recall search
+control on development-exposed simulations, not independent validation,
+real-data sensitivity equivalence, matched effort or a downstream orthology
+result. Next prespecify the downstream graph/clustering comparison using the
+retained hits. Main full installed OrthoBench job 22179 remains RUNNING; its
+scientific readback is still pending. Dedicated timing, uncertainty, generalization
+and final publication packaging remain open. DGX stays deferred; full goal active.
+
 ## Search-Sensitivity Array Launched (2026-09-26)
 
 Submitted all 70 datasets as Slurm array **22180**, capped at two simultaneous
