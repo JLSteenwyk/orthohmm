@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Complete Descriptive SwissTrees Strata (2026-09-26)
+
+Added explicit count-hash selection to four existing exporters, preserving
+historical defaults, calculations and fixed bins. The
+[complete strata exports](SWISS_COMPLETE_STRATA_20260926.md) now contain
+recovered OrthoMCL alongside the other seven methods across composition,
+identity, historical fragment and mapped duplication features. All prior
+method rows match exactly, including empty-bin missingness. Twenty-nine
+focused tests passed. New outputs remain descriptive and make no additional
+inferential or causal claims. Strata figures and manuscript prose updates
+remain next; controlled timing and broader publication gaps are unchanged.
+
 ## Eight-Method Claims and Manuscript Preview (2026-09-26)
 
 Updated the main claim rows and frozen-baseline completion row to the

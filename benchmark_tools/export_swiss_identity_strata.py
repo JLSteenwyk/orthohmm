@@ -10,7 +10,7 @@ from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
 from benchmark_tools.run_simulation_methods import read_frozen
 
 ADMISSION_SHA = "cb04162af62fbd58fcfe8f02cbb78bc53bcf49ac20a487aae89911bc3a4e7b2d"
-HELPER_SHA = "65ddc574fb312968b4266bb62476a8f312185104a8d85c75bcf423894e11f728"
+HELPER_SHA = "5c91edf93b0ab0d563a06a7c90826a8a9c144994bff3dffed755930762a1d121"
 REFERENCE = "orthofinder_3_1_5_full"
 
 
@@ -35,7 +35,7 @@ def rows_with_differences(counts, admission):
     return rows
 
 
-def export(counts, admission, output):
+def export(counts, admission, output, *, counts_sha=COUNTS_SHA):
     if output.exists() or output.is_symlink():
         raise FileExistsError(output)
     helper = record(Path(__file__).with_name("export_swiss_descriptive_strata.py"))
@@ -43,7 +43,7 @@ def export(counts, admission, output):
         raise ValueError("Descriptive statistic implementation changed")
     inputs = [record(counts), record(admission), helper, record(__file__)]
     features = read_frozen(admission, ADMISSION_SHA)
-    rows = rows_with_differences(read_frozen(counts, COUNTS_SHA), features)
+    rows = rows_with_differences(read_frozen(counts, counts_sha), features)
     output.mkdir(parents=True)
     fields = ["method", "stratum", "families", "status", *METRICS,
               *["delta_" + k for k in METRICS], "prediction_semantics"]
@@ -79,5 +79,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ("counts", "admission", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
+    parser.add_argument("--counts-sha256", default=COUNTS_SHA)
     args = parser.parse_args()
-    export(args.counts.resolve(), args.admission.resolve(), args.output.absolute())
+    export(args.counts.resolve(), args.admission.resolve(), args.output.absolute(), counts_sha=args.counts_sha256)

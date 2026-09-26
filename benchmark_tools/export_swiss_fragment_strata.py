@@ -10,7 +10,7 @@ from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
 from benchmark_tools.run_simulation_methods import read_frozen
 from benchmark_tools.verify_swiss_historical_fragments import family_bins
 
-HELPER_SHA = "65ddc574fb312968b4266bb62476a8f312185104a8d85c75bcf423894e11f728"
+HELPER_SHA = "5c91edf93b0ab0d563a06a7c90826a8a9c144994bff3dffed755930762a1d121"
 VERIFIER_SHA = "b316148f54992552a187ee9aeea8d5dbae41abf05665a650ced62f0d1f386a50"
 REFERENCE = "orthofinder_3_1_5_full"
 
@@ -40,7 +40,7 @@ def build_rows(counts, admission):
     return rows
 
 
-def export(counts, admission, admission_sha, output):
+def export(counts, admission, admission_sha, output, *, counts_sha=COUNTS_SHA):
     if output.exists() or output.is_symlink():
         raise FileExistsError(output)
     helpers = [record(Path(__file__).with_name(name)) for name in
@@ -51,7 +51,7 @@ def export(counts, admission, admission_sha, output):
     inputs = [record(counts), record(admission), record(__file__), *helpers, *features["records"]]
     for item in inputs:
         check(item)
-    rows = build_rows(read_frozen(counts, COUNTS_SHA), features)
+    rows = build_rows(read_frozen(counts, counts_sha), features)
     output.mkdir(parents=True)
     fields = ["method", "stratum", "families", "status", *METRICS,
               *["delta_" + k for k in METRICS], "prediction_semantics"]
@@ -89,5 +89,6 @@ if __name__ == "__main__":
     for name in ("counts", "admission", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
     parser.add_argument("--admission-sha", required=True)
+    parser.add_argument("--counts-sha256", default=COUNTS_SHA)
     args = parser.parse_args()
-    export(args.counts.resolve(), args.admission.resolve(), args.admission_sha, args.output.absolute())
+    export(args.counts.resolve(), args.admission.resolve(), args.admission_sha, args.output.absolute(), counts_sha=args.counts_sha256)

@@ -1,0 +1,33 @@
+method	stratum	families	status	F1	PPV	TPR	delta_F1	delta_PPV	delta_TPR	prediction_semantics
+orthohmm_high_sensitivity	all	18	descriptive	0.6854977806445889	0.6409984992048368	0.7366364204931364	-0.16291548648187826	-0.29685433052134735	-0.03791110784032414	cross-species group-derived clique pairs
+orthohmm_high_sensitivity	lower_duplication_fraction	9	descriptive	0.6987588365968114	0.6496031465850108	0.7559627973909586	-0.20576962271487242	-0.3129064787933843	-0.09717312094820973	cross-species group-derived clique pairs
+orthohmm_high_sensitivity	upper_duplication_fraction	9	descriptive	0.6721807100965759	0.6323938518246626	0.717310043595314	-0.11773332168677908	-0.28080218224931075	0.021350905267561338	cross-species group-derived clique pairs
+orthohmm_high_sensitivity	missing_duplication_fraction	0	empty_bin	NA	NA	NA	NA	NA	NA	cross-species group-derived clique pairs
+orthohmm_phylogeny_satellite_v2	all	18	descriptive	0.8335132180095781	0.9551767493219016	0.7393412564640668	-0.014900049116889025	0.01732391959571744	-0.035206271869393735	native phylogenetically inferred pairs
+orthohmm_phylogeny_satellite_v2	lower_duplication_fraction	9	descriptive	0.8637805581797967	0.9794349686904051	0.772555099176901	-0.04074790113188709	0.01692534331201001	-0.08058081916226734	native phylogenetically inferred pairs
+orthohmm_phylogeny_satellite_v2	upper_duplication_fraction	9	descriptive	0.8030893653253464	0.9309185299533979	0.7061274137512324	0.013175333541991407	0.017722495879424538	0.010168275423479756	native phylogenetically inferred pairs
+orthohmm_phylogeny_satellite_v2	missing_duplication_fraction	0	empty_bin	NA	NA	NA	NA	NA	NA	native phylogenetically inferred pairs
+orthofinder_3_1_5_full	all	18	descriptive	0.8484132671264671	0.9378528297261841	0.7745475283334605	0.0	0.0	0.0	native phylogenetically inferred pairs
+orthofinder_3_1_5_full	lower_duplication_fraction	9	descriptive	0.9045284593116838	0.9625096253783951	0.8531359183391684	0.0	0.0	0.0	native phylogenetically inferred pairs
+orthofinder_3_1_5_full	upper_duplication_fraction	9	descriptive	0.789914031783355	0.9131960340739733	0.6959591383277527	0.0	0.0	0.0	native phylogenetically inferred pairs
+orthofinder_3_1_5_full	missing_duplication_fraction	0	empty_bin	NA	NA	NA	NA	NA	NA	native phylogenetically inferred pairs
+orthofinder_3_1_5_sequence_only	all	18	descriptive	0.6905148282566244	0.5690678546910205	0.8778629606384184	-0.15789843886984278	-0.3687849750351636	0.10331543230495788	cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)
+orthofinder_3_1_5_sequence_only	lower_duplication_fraction	9	descriptive	0.6934934893663871	0.5639868671053094	0.9002048426065983	-0.2110349699452967	-0.3985227582730857	0.047068924267429924	cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)
+orthofinder_3_1_5_sequence_only	upper_duplication_fraction	9	descriptive	0.6871466338698717	0.5741488422767317	0.8555210786702385	-0.10276739791348322	-0.33904719179724163	0.15956194034248583	cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)
+orthofinder_3_1_5_sequence_only	missing_duplication_fraction	0	empty_bin	NA	NA	NA	NA	NA	NA	cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)
+sonicparanoid_2_0_9	all	18	descriptive	0.798459418688303	0.8722787674765307	0.7361595860302458	-0.049953848438164195	-0.06557406224965345	-0.03838794230321474	native species-pair relations
+sonicparanoid_2_0_9	lower_duplication_fraction	9	descriptive	0.8231359783924372	0.8827259398162958	0.7710826901751405	-0.08139248091924656	-0.07978368556209936	-0.08205322816402782	native species-pair relations
+sonicparanoid_2_0_9	upper_duplication_fraction	9	descriptive	0.773283985049097	0.8618315951367657	0.7012364818853508	-0.01663004673425794	-0.05136443893720766	0.005277343557598124	native species-pair relations
+sonicparanoid_2_0_9	missing_duplication_fraction	0	empty_bin	NA	NA	NA	NA	NA	NA	native species-pair relations
+proteinortho_6_3_6	all	18	descriptive	0.7181109993269982	0.9521799364561256	0.5764143603702944	-0.13030226779946896	0.01432710672994153	-0.19813316796316616	native post-clustering graph
+proteinortho_6_3_6	lower_duplication_fraction	9	descriptive	0.7614524267074982	0.9741029562079488	0.6250102222575177	-0.14307603260418555	0.011593330829553716	-0.22812569608165068	native post-clustering graph
+proteinortho_6_3_6	upper_duplication_fraction	9	descriptive	0.6734998805466563	0.9302569167043025	0.527818498483071	-0.11641415123669863	0.017060882630329233	-0.16814063984468164	native post-clustering graph
+proteinortho_6_3_6	missing_duplication_fraction	0	empty_bin	NA	NA	NA	NA	NA	NA	native post-clustering graph
+fastoma_0_3_5	all	18	descriptive	0.7802191350427174	0.9236005462375273	0.6753730129088171	-0.06819413208374969	-0.014252283488656814	-0.0991745154246434	native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree
+fastoma_0_3_5	lower_duplication_fraction	9	descriptive	0.8129916865931393	0.971337178796464	0.699036173177261	-0.09153677271854455	0.008827553418068845	-0.1540997451619074	native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree
+fastoma_0_3_5	upper_duplication_fraction	9	descriptive	0.7473408547621098	0.8758639136785907	0.6517098526403733	-0.04257317702124519	-0.037332120395382584	-0.0442492856873794	native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree
+fastoma_0_3_5	missing_duplication_fraction	0	empty_bin	NA	NA	NA	NA	NA	NA	native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree
+orthomcl_1_4	all	18	descriptive	0.7666097423043531	0.8741280597331272	0.6826440785636351	-0.08180352482211406	-0.06372476999305687	-0.09190344976982545	cross_species_final_group_cliques
+orthomcl_1_4	lower_duplication_fraction	9	descriptive	0.8025751636717547	0.8793879947382661	0.7381032778485955	-0.10195329563992905	-0.08312163064012901	-0.11503264049057282	cross_species_final_group_cliques
+orthomcl_1_4	upper_duplication_fraction	9	descriptive	0.7285048704252792	0.8688681247279884	0.6271848792786748	-0.061409161358075726	-0.04432790934598496	-0.06877425904907786	cross_species_final_group_cliques
+orthomcl_1_4	missing_duplication_fraction	0	empty_bin	NA	NA	NA	NA	NA	NA	cross_species_final_group_cliques

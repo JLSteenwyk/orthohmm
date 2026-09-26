@@ -65,11 +65,11 @@ def build(report, strata):
     return rows
 
 
-def export(counts, strata, output):
+def export(counts, strata, output, *, counts_sha=COUNTS_SHA):
     if output.exists():
         raise FileExistsError(output)
     inputs = [record(counts), record(strata)]
-    rows = build(read_frozen(counts, COUNTS_SHA), read_frozen(strata, STRATA_SHA))
+    rows = build(read_frozen(counts, counts_sha), read_frozen(strata, STRATA_SHA))
     output.mkdir(parents=True)
     with (output / "scores.tsv").open("x") as handle:
         fields = ["method", "stratum", "families", "status", *METRICS, "prediction_semantics"]
@@ -102,5 +102,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ("counts", "strata", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
+    parser.add_argument("--counts-sha256", default=COUNTS_SHA)
     args = parser.parse_args()
-    export(args.counts.resolve(), args.strata.resolve(), args.output.absolute())
+    export(args.counts.resolve(), args.strata.resolve(), args.output.absolute(), counts_sha=args.counts_sha256)

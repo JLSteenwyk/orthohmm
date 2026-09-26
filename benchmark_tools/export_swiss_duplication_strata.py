@@ -12,7 +12,7 @@ from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
 from benchmark_tools.run_simulation_methods import read_frozen
 
 FEATURE_SHA = "97b0c4755d6a9df258d5c3f60fc0d5d25f1e5c09c42216c754a245a67d1942ec"
-HELPER_SHA = "65ddc574fb312968b4266bb62476a8f312185104a8d85c75bcf423894e11f728"
+HELPER_SHA = "5c91edf93b0ab0d563a06a7c90826a8a9c144994bff3dffed755930762a1d121"
 FEATURE_HELPER_SHA = "96355e41e5733dbf049e113e348bd6819cc215448e936b7d0e99070908d4b73e"
 REFERENCE = "orthofinder_3_1_5_full"
 
@@ -47,7 +47,7 @@ def build_rows(counts, features):
     return rows
 
 
-def export(counts, features_path, output):
+def export(counts, features_path, output, *, counts_sha=COUNTS_SHA):
     if output.exists() or output.is_symlink():
         raise FileExistsError(output)
     features = read_frozen(features_path, FEATURE_SHA)
@@ -59,7 +59,7 @@ def export(counts, features_path, output):
               *features["checked_inputs"]]
     for item in inputs:
         check(item)
-    rows = build_rows(read_frozen(counts, COUNTS_SHA), features)
+    rows = build_rows(read_frozen(counts, counts_sha), features)
     output.mkdir(parents=True)
     fields = ["method", "stratum", "families", "status", *METRICS,
               *["delta_" + k for k in METRICS], "prediction_semantics"]
@@ -95,5 +95,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ("counts", "features", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
+    parser.add_argument("--counts-sha256", default=COUNTS_SHA)
     args = parser.parse_args()
-    export(args.counts.resolve(), args.features.resolve(), args.output.absolute())
+    export(args.counts.resolve(), args.features.resolve(), args.output.absolute(), counts_sha=args.counts_sha256)
