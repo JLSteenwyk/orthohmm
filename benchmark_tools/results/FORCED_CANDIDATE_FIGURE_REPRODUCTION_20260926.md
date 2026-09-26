@@ -42,3 +42,21 @@ from an empty environment. PDF/SVG were generated but are not claimed
 byte-identical because format metadata can differ. The complete publication
 workflow, dependency lock, rights review and external archival deposit remain
 separate requirements.
+
+## Clean Environment Follow-Up
+
+A fresh venv, using Python 3.10.13 with `include-system-site-packages = false`,
+also regenerated the identical PNG and passed `pip check`. Eleven dependencies
+were installed from PyPI wheels with explicit versions. The resulting
+[Linux/Python 3.10 requirements](forced_candidate_plot_linux_py310_requirements_20260926.txt)
+pin the SHA256 of each tested wheel. Install them into a new venv with:
+
+```bash
+python -m pip install --index-url https://pypi.org/simple --only-binary=:all: \
+  --require-hashes -r forced_candidate_plot_linux_py310_requirements_20260926.txt
+```
+
+Use that venv's Python for the isolated plotting command above. This follow-up
+adds a clean plotting-install test; it still does not reproduce HMM inference
+or independently reconstruct raw benchmark counts. The wheel lock is specific
+to the tested CPython/Linux x86_64 platform, not a cross-platform lock.

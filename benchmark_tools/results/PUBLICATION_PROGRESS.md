@@ -1,5 +1,18 @@
 # Publication Progress
 
+## Clean Plotting Environment Verified (2026-09-26)
+
+Created a fresh Python 3.10.13 venv with system site-packages disabled.
+Installed eleven exact-version PyPI wheels, regenerated the diagnostic
+outside the checkout, and verified byte-identical PNG output. `pip check`
+passed. Retained a platform-specific SHA256 wheel lock, then force-reinstalled
+with `--require-hashes` and repeated the successful PNG comparison.
+[Installation/reproduction instructions](FORCED_CANDIDATE_FIGURE_REPRODUCTION_20260926.md).
+This covers the plotting environment only, not inference dependencies or
+cross-platform portability. The original scientific environment was untouched.
+Previous turn was a verified FAS wait; this turn closes the clean-install
+gap for this figure while scoring and its dependent admission remain live/pending.
+
 ## Diagnostic Figure Reproduced Outside Checkout (2026-09-26)
 
 Exported eleven committed files (nine Python modules, audit JSON, license)
