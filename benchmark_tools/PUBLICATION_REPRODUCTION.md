@@ -8,6 +8,8 @@ are statistical reproduction only and do not submit scheduler jobs.
 ## Method And Results
 
 - [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260926_v14.md)
+- [Corrected six-endpoint comparison figure](results/CORRECTED_QFO_ENDPOINT_FIGURE_20260926.md)
+  retains all eight methods and distinguishes FAS eligible counts from sample sizes.
 - [Complete-panel figure evidence bundle](results/PUBLICATION_COMPLETE_FIGURE_BUNDLE_20260926.md)
   verifies outside the checkout and includes reproducible retained-count arithmetic.
 - [Complete-panel relocated arithmetic check](results/SWISS_COMPLETE_PORTABLE_REPRODUCTION_20260926.md)

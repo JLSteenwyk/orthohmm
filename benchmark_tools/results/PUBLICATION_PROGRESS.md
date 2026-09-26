@@ -1,5 +1,15 @@
 # Publication Progress
 
+## Corrected Six-Endpoint Figure Complete (2026-09-26)
+
+Added a pinned plotter for the complete corrected eight-method panel, reusing
+the historical figure style without changing historical outputs. All 48 points
+are retained with precision-recall or functional-score/count axes; FAS eligible
+counts are explicitly distinguished from sample sizes. Eight tests pass and
+the PNG was visually checked. [Figure, commands and limitations](CORRECTED_QFO_ENDPOINT_FIGURE_20260926.md).
+Corrected-section manuscript/preview integration remains next; this adds no
+raw-scoring admission, new inference, uncertainty or comparative timing claim.
+
 ## Memcheck Post-Failure Files and Partition Verified (2026-09-26)
 
 Read-only system-Python checks verified 1,053 distinct retained input/runtime

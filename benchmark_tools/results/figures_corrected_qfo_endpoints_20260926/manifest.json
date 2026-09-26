@@ -1,0 +1,311 @@
+{
+  "inputs": [
+    {
+      "bytes": 323315,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_comparison_20260926_v7/manifest.json",
+      "sha256": "042aa221d01554114a1b0b413ca3e2ff56dad5f8c06362c69a1bf49f2de642fc"
+    },
+    {
+      "bytes": 10357,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_publication_accuracy.py",
+      "sha256": "92322aa7f10c3c3e96af7813b1111ae60e5903b87df04345e7cc822107533380"
+    }
+  ],
+  "limitations": [
+    "Retained-score visualization; no native scoring rerun.",
+    "QfO endpoints assess differing relation sets and prediction semantics.",
+    "FAS uses an unseeded sample; its eligible count is not its sample size.",
+    "No independence-aware uncertainty implied by scatter points."
+  ],
+  "matplotlib_version": "3.10.8",
+  "outputs": [
+    {
+      "bytes": 196330,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_corrected_qfo_endpoints_20260926/corrected_qfo_endpoints.png",
+      "sha256": "8f10f8ec0d0e2b361fd2b3f40d68090faca8a1aa0caf648e8f9c08e50b9c8176"
+    },
+    {
+      "bytes": 22853,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_corrected_qfo_endpoints_20260926/corrected_qfo_endpoints.pdf",
+      "sha256": "b75cc43adf8446ebcc41ff96c89fc29afcfd34f05da7704c79140282f23e216f"
+    },
+    {
+      "bytes": 136685,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_corrected_qfo_endpoints_20260926/corrected_qfo_endpoints.svg",
+      "sha256": "daa4d9ece889c6b4655f65aa7c864c6b7ea21491d7f9df8d34e1c7e2b4ed61b6"
+    }
+  ],
+  "plotted_data": [
+    {
+      "color": "#0072B2",
+      "key": "orthohmm_high_sensitivity",
+      "label": "OrthoHMM sensitive",
+      "marker": "o",
+      "prediction_semantics": "cross-species group-derived clique pairs",
+      "qfo": {
+        "EC": {
+          "x": 185664,
+          "y": 0.93203769
+        },
+        "FAS": {
+          "x": 9032719.0,
+          "y": 0.7765850417998846
+        },
+        "GO": {
+          "x": 145619,
+          "y": 0.4722711
+        },
+        "SwissTrees F": {
+          "x": 0.73663642,
+          "y": 0.6409985
+        },
+        "TreeFam-A F": {
+          "x": 0.48911496,
+          "y": 0.79287496
+        },
+        "VGNC F": {
+          "x": 0.83450321718058,
+          "y": 0.5540206929072703
+        }
+      }
+    },
+    {
+      "color": "#009E73",
+      "key": "orthohmm_phylogeny_satellite_v2",
+      "label": "OrthoHMM satellite_v2",
+      "marker": "s",
+      "prediction_semantics": "native phylogenetically inferred pairs",
+      "qfo": {
+        "EC": {
+          "x": 117460,
+          "y": 0.9656505
+        },
+        "FAS": {
+          "x": 5959560.0,
+          "y": 0.7629933121004577
+        },
+        "GO": {
+          "x": 84211,
+          "y": 0.49034928
+        },
+        "SwissTrees F": {
+          "x": 0.73934126,
+          "y": 0.95517675
+        },
+        "TreeFam-A F": {
+          "x": 0.45246406,
+          "y": 0.95911016
+        },
+        "VGNC F": {
+          "x": 0.8214255870310019,
+          "y": 0.9993391958521832
+        }
+      }
+    },
+    {
+      "color": "#D55E00",
+      "key": "orthofinder_3_1_5_full",
+      "label": "OrthoFinder 3.1.5 full",
+      "marker": "^",
+      "prediction_semantics": "native phylogenetically inferred pairs",
+      "qfo": {
+        "EC": {
+          "x": 175361,
+          "y": 0.93613021
+        },
+        "FAS": {
+          "x": 14215382.0,
+          "y": 0.6914221332471376
+        },
+        "GO": {
+          "x": 163557,
+          "y": 0.46954797
+        },
+        "SwissTrees F": {
+          "x": 0.77454753,
+          "y": 0.93785283
+        },
+        "TreeFam-A F": {
+          "x": 0.69257796,
+          "y": 0.92452715
+        },
+        "VGNC F": {
+          "x": 0.9826606501211665,
+          "y": 0.9945029388134805
+        }
+      }
+    },
+    {
+      "color": "#E69F00",
+      "key": "orthofinder_3_1_5_sequence_only",
+      "label": "OrthoFinder 3.1.5 sequence",
+      "marker": "v",
+      "prediction_semantics": "cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)",
+      "qfo": {
+        "EC": {
+          "x": 1660940,
+          "y": 0.7536416
+        },
+        "FAS": {
+          "x": 163277439.0,
+          "y": 0.5617530837830421
+        },
+        "GO": {
+          "x": 1979084,
+          "y": 0.40704311
+        },
+        "SwissTrees F": {
+          "x": 0.87786296,
+          "y": 0.56906785
+        },
+        "TreeFam-A F": {
+          "x": 0.89960042,
+          "y": 0.6204701
+        },
+        "VGNC F": {
+          "x": 0.9953622461769868,
+          "y": 0.07689129740145306
+        }
+      }
+    },
+    {
+      "color": "#CC79A7",
+      "key": "sonicparanoid_2_0_9",
+      "label": "SonicParanoid 2.0.9",
+      "marker": "D",
+      "prediction_semantics": "native species-pair relations",
+      "qfo": {
+        "EC": {
+          "x": 244356,
+          "y": 0.87276097
+        },
+        "FAS": {
+          "x": 15248739.0,
+          "y": 0.736680187140205
+        },
+        "GO": {
+          "x": 197930,
+          "y": 0.45438453
+        },
+        "SwissTrees F": {
+          "x": 0.73615959,
+          "y": 0.87227877
+        },
+        "TreeFam-A F": {
+          "x": 0.66853442,
+          "y": 0.9132317
+        },
+        "VGNC F": {
+          "x": 0.9713378457424584,
+          "y": 0.9945242984257358
+        }
+      }
+    },
+    {
+      "color": "#6B6B6B",
+      "key": "proteinortho_6_3_6",
+      "label": "ProteinOrtho 6.3.6",
+      "marker": "P",
+      "prediction_semantics": "native post-clustering graph",
+      "qfo": {
+        "EC": {
+          "x": 143135,
+          "y": 0.96316811
+        },
+        "FAS": {
+          "x": 4695385.0,
+          "y": 0.8135948641193668
+        },
+        "GO": {
+          "x": 89609,
+          "y": 0.4863364
+        },
+        "SwissTrees F": {
+          "x": 0.57641436,
+          "y": 0.95217994
+        },
+        "TreeFam-A F": {
+          "x": 0.48711707,
+          "y": 0.94641503
+        },
+        "VGNC F": {
+          "x": 0.9305590373527199,
+          "y": 0.980540635731267
+        }
+      }
+    },
+    {
+      "color": "#5647A6",
+      "key": "fastoma_0_3_5",
+      "label": "FastOMA 0.3.5 (supplied tree)",
+      "marker": "X",
+      "prediction_semantics": "native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree",
+      "qfo": {
+        "EC": {
+          "x": 178598,
+          "y": 0.89716752
+        },
+        "FAS": {
+          "x": 15008180.0,
+          "y": 0.6543663364244952
+        },
+        "GO": {
+          "x": 171132,
+          "y": 0.43689352
+        },
+        "SwissTrees F": {
+          "x": 0.67537301,
+          "y": 0.92360055
+        },
+        "TreeFam-A F": {
+          "x": 0.52457172,
+          "y": 0.88210534
+        },
+        "VGNC F": {
+          "x": 0.9084148073869809,
+          "y": 0.9957863882018869
+        }
+      }
+    },
+    {
+      "color": "#111111",
+      "key": "orthomcl_1_4",
+      "label": "OrthoMCL 1.4",
+      "marker": "*",
+      "prediction_semantics": "cross_species_final_group_cliques",
+      "qfo": {
+        "EC": {
+          "x": 220622,
+          "y": 0.92132599
+        },
+        "FAS": {
+          "x": 14378089.0,
+          "y": 0.7337522155738428
+        },
+        "GO": {
+          "x": 175181,
+          "y": 0.46375473
+        },
+        "SwissTrees F": {
+          "x": 0.68264408,
+          "y": 0.87412806
+        },
+        "TreeFam-A F": {
+          "x": 0.67572222,
+          "y": 0.85198483
+        },
+        "VGNC F": {
+          "x": 0.9827024316871397,
+          "y": 0.47675031418494346
+        }
+      }
+    }
+  ],
+  "publication_ready": false,
+  "source": {
+    "bytes": 4838,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_corrected_qfo_endpoints.py",
+    "sha256": "db12a834f814288b590cd7a0a6f6c325ae5dd6f6e16ae532bed896fbbb90783a"
+  },
+  "status": "corrected_qfo_endpoints_rendered"
+}
