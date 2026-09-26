@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Recovered OrthoMCL Scores Admitted (2026-09-26)
+
+Assessment 22174 completed with exit 0 in 01:09:29; independent admission
+22176 completed with exit 0 in 00:06:02. The retained
+[admission](qfo_recovered_score_admission_22176.json) has SHA256
+`86448fbd694941a6814177d1bd4565467e52554c47d34bb3d65a642687f9dd93`
+and status `recovered_orthomcl_assessment_admitted`, with accuracy admitted.
+The assessment report SHA256 is
+`d3dc7bf84bfd40df3b905931fde9e70e44a1fb9f6076b4c472f40b3ac9e3b9d0`.
+
+The [corrected eight-method comparison](qfo_corrected_comparison_20260926_v7/scores.md)
+now includes recovered OrthoMCL final-group clique predictions, not historical
+different-input results or pre-clustering edges. Its GO/EC/VGNC/SwissTrees/
+TreeFam-A/FAS values are respectively 0.463754730, 0.921325990, 0.642026533,
+0.766609743, 0.753685179 and 0.733752216; the project-defined secondary mean
+is 0.713525732. Recovery failures and group-coverage limitations remain in
+the manifest. The seven previously admitted score rows are unchanged.
+Comparison manifest SHA256:
+`042aa221d01554114a1b0b413ca3e2ff56dad5f8c06362c69a1bf49f2de642fc`.
+
+Submitted Swiss family-level uncertainty job 22178 using the frozen recovered
+Swiss executor `0b8efa9c6b20b5bdec41f798c136b54132e7db37` and
+[pinned wrapper](qfo_recovered_swiss_comparison_batch_20260926.sh).
+Its source/protocol preflight and the prior 76 focused admission/export/
+bootstrap tests passed. Uncertainty, updated figures and manuscript integration
+remain pending; point estimates alone do not establish paired significance.
+Controlled timing and the broader publication completion requirements remain
+unmet. Previous turns were verified waits on scoring and admission; this
+milestone adds the independently admitted eighth corrected comparator.
+
 ## Completion Checklist Reconciled (2026-09-26)
 
 Corrected stale work-package rows in the claim checklist: recovered OrthoMCL
