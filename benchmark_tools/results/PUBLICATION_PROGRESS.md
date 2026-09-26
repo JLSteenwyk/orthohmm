@@ -1,5 +1,18 @@
 # Publication Progress
 
+## Complete Strata Integrated into Manuscript (2026-09-26)
+
+Updated manuscript strata prose, captions, table links and three figure links
+to the admitted eight-method panel; updated corresponding claim-checklist
+entries and the main reproduction guide. Rechecked the all-method directional
+statements against the tables: all eight have lower descriptive F1 in lower
+identity and higher mapped duplication-fraction bins. No significance or
+causal interpretation follows. The [v14 preview](MANUSCRIPT_RENDER_REVIEW_20260926_v14.md)
+has 39 pages, 204 local asset occurrences and 190 tracked targets. All page
+bounds pass; changed pages 22-24 were visually reviewed. Editorial condensation,
+full portability/provenance, controlled timing and broader scientific gaps
+remain outstanding; the publication goal is not complete.
+
 ## Complete Descriptive Strata Figures (2026-09-26)
 
 Added a pinned complete-panel mode to the existing identity/fragment and

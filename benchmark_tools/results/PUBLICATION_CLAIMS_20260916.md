@@ -223,19 +223,20 @@ not establish any comparative resource advantage.
   Adjusted phylogenetic-OrthoHMM versus full-OrthoFinder intervals include
   zero in both bins, and all adjusted interactions include zero. Neither
   equivalence nor a composition-specific mechanism is established. The
-  [All-method and secondary descriptive displays](swiss_descriptive_strata_20260923/scores.md)
-  are now complete for the seven admitted methods; OrthoMCL and empty bins
-  remain explicitly missing. These displays add no inferential claims.
+  [All-method and secondary descriptive displays](swiss_descriptive_strata_20260926/scores.md)
+  are now complete for all eight admitted methods; empty bins remain
+  explicitly missing. These displays add no inferential claims.
   A separate [identity-stratum protocol](CORRECTED_SWISS_IDENTITY_PROTOCOL_20260923.md)
   was frozen for input-only MAFFT preparation before joining to outcomes.
   [Independent verification and descriptive results](CORRECTED_SWISS_IDENTITY_RESULT_22102.md)
-  are complete for all 18 families and seven admitted methods. All methods
+  are extended by the [complete tables](SWISS_COMPLETE_STRATA_20260926.md)
+  to all 18 families and eight admitted methods. All methods
   have lower descriptive F1 in the lower-identity bin; no subgroup significance
-  or mechanism claim follows. OrthoMCL remains missing.
+  or mechanism claim follows. Existing method rows are unchanged.
   Sequence identity is not calibrated evolutionary distance. A subsequent
   [retained-tree duplication protocol](SWISS_DUPLICATION_FEATURE_PROTOCOL_20260923.md)
   and [dual-implementation feature check](SWISS_DUPLICATION_FEATURE_RESULT_20260923.md)
-  now support [descriptive duplication strata](swiss_duplication_strata_20260923/scores.md).
+  now support [descriptive duplication strata](swiss_duplication_strata_20260926/scores.md).
   All original reference relationships reconstruct exactly; annotations are
   reference-derived, not independent evolutionary rates or causal evidence.
   The higher-stratum positive OrthoHMM contrast does not reverse the overall

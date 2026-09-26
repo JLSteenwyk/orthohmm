@@ -1105,8 +1105,8 @@ adjusted higher-minus-lower interactions include zero. Thus these data do
 not establish equivalence to OrthoFinder or a composition-specific causal
 mechanism. The configuration contrast is not a pure phylogeny ablation.
 All 27 endpoints appear in the linked figure, with an independent numerical
-reproduction from the admitted counts. The [all-method descriptive tables](swiss_descriptive_strata_20260923/scores.md)
-now include seven admitted methods and explicitly missing OrthoMCL across
+reproduction from the admitted counts. The [all-method descriptive tables](swiss_descriptive_strata_20260926/scores.md)
+now include all eight admitted methods across
 all frozen primary and secondary bins. In seven families containing a member
 shorter than half the family median, F1 was 68.679% for high-sensitivity
 OrthoHMM, 83.365% for phylogenetic OrthoHMM and 85.546% for full OrthoFinder;
@@ -1115,6 +1115,9 @@ the corresponding values in the other eleven families were 68.408%,
 claims and do not diagnose fragmentation. Empty concentrated-composition
 and explicit-fragment bins remain missing, not zero. FastOMA's supplied
 tree and sequence-only OrthoFinder's group-clique semantics remain explicit.
+Recovered OrthoMCL scores 76.689% F1 in the relatively short bin and
+76.353% in the other bin, and 68.933%/81.541% in lower/higher entropy bins.
+Adding its admitted counts leaves every earlier method row unchanged.
 
 An additional [exploratory identity-stratum analysis](CORRECTED_SWISS_IDENTITY_RESULT_22102.md)
 froze the alignment and split protocol before joining the features to
@@ -1122,12 +1125,13 @@ outcomes. Corrected reference sequences from all 18 families were aligned
 with MAFFT 7.525, with membership and ungapped residues checked against the
 inputs. A separate scalar calculation reproduced all family mean canonical
 pair identities. The median family identity, 0.429122, divides the panel
-into nine lower-identity and nine higher-identity families. All seven admitted
+into nine lower-identity and nine higher-identity families. All eight admitted
 methods have lower descriptive F1 in the lower-identity bin. Phylogenetic
 OrthoHMM scores 73.973% versus full OrthoFinder's 76.705% in that bin, and
 91.914% versus 92.600% in the higher-identity bin. High-sensitivity OrthoHMM
-scores 64.023% and 72.435%, respectively. The complete table retains missing
-OrthoMCL and empty bins. No new subgroup intervals or significance claims
+scores 64.023% and 72.435%, respectively. Recovered OrthoMCL scores 67.222%
+and 83.426%, respectively, in the [complete table](swiss_identity_strata_20260926/scores.md).
+Empty bins remain missing. No new subgroup intervals or significance claims
 are made. Sequence identity is alignment-dependent, not calibrated
 evolutionary divergence; correlated differences in taxa, domains, size and
 composition prevent a causal interpretation.
@@ -1144,7 +1148,10 @@ changes that contrast to 84.562% versus 83.539%; the two excluded families
 score 73.586% versus 83.062%. Both views are retained because the sign change
 depends on family composition. These descriptive, development-exposed
 associations do not establish a causal fragmentation effect or superiority;
-no new subgroup inference is claimed.
+no new subgroup inference is claimed. Recovered OrthoMCL scores 75.863%
+in annotation-positive families and 76.952% in historical unflagged families;
+the baseline-only unflagged and missing subsets score 76.283% and 80.258%.
+[Complete fragment table](swiss_fragment_strata_20260926/scores.md).
 
 A [prespecified duplication-annotation analysis](SWISS_DUPLICATION_FEATURE_PROTOCOL_20260923.md)
 used the original trees embedded in the retained reference, with all 563
@@ -1153,23 +1160,24 @@ Separate Python and Darwin traversals agreed on 128 explicitly annotated
 duplication nodes among 546 informative mapped nodes. The other 418 nodes
 used the reference's default-S convention, not explicit speciation evidence.
 The median annotation fraction divided the panel into nine lower and nine
-higher families. In the [complete descriptive table](swiss_duplication_strata_20260923/scores.md),
+higher families. In the [complete descriptive table](swiss_duplication_strata_20260926/scores.md),
 phylogenetic OrthoHMM scored 86.378% F1 versus full OrthoFinder's 90.453%
 in the lower stratum, and 80.309% versus 78.991% in the higher stratum.
 In the latter, precision/recall were 93.092%/70.613% for OrthoHMM and
 91.320%/69.596% for OrthoFinder. High-sensitivity OrthoHMM scored 69.876%
-and 67.218% F1 in the lower and higher strata. All seven admitted methods
+and 67.218% F1 in the lower and higher strata. Recovered OrthoMCL scores
+80.258% and 72.850%, respectively. All eight admitted methods
 had lower absolute F1 in the higher stratum. The small positive OrthoHMM
 contrast there does not reverse the full-panel ordering (83.351% versus
 84.841%) or establish subgroup superiority. This annotation fraction is
 reference-derived and related to the benchmark's own pair labels; alias
 collisions, default-S nodes, family composition and development exposure
 limit interpretation. No new subgroup intervals, causal claims or
-duplication-rate interpretation are made. Missing OrthoMCL remains NA.
+duplication-rate interpretation are made. Empty bins remain NA.
 
 ::: {.review-figure style="break-inside: avoid; page-break-inside: avoid;"}
 
-![Descriptive duplication-annotation differences in F1, precision and recall versus full OrthoFinder.](swiss_duplication_figure_v2_20260923/swiss_duplication_descriptive.png)
+![Descriptive duplication-annotation differences in F1, precision and recall versus full OrthoFinder.](swiss_duplication_figure_20260926/swiss_duplication_descriptive.png)
 
 **Supplementary Figure: Duplication Annotations.** Points show differences
 for the nine lower and nine higher annotation-fraction families, with a
@@ -1177,20 +1185,20 @@ common horizontal scale across metrics. These are observed differences,
 not confidence intervals or significance tests. The feature is derived from
 the reference trees, not an evolutionary rate or an independent explanation
 of benchmark errors. Full-panel scores and the empty missing bin remain in
-the source table; unavailable OrthoMCL is not plotted as zero.
-[Figure data and provenance](swiss_duplication_figure_v2_20260923/manifest.json)
-retain all 48 endpoint records, including six unavailable values.
+the source table. All eight methods have admitted values in both plotted bins.
+[Figure data and provenance](swiss_duplication_figure_20260926/manifest.json)
+retain all 48 available endpoint records.
 
 :::
 
 ::: {.review-figure style="break-inside: avoid; page-break-inside: avoid;"}
 
-![Descriptive identity-stratified differences in F1, precision and recall versus full OrthoFinder.](swiss_descriptive_feature_figures_20260923/swiss_identity_descriptive.png)
+![Descriptive identity-stratified differences in F1, precision and recall versus full OrthoFinder.](swiss_descriptive_feature_figures_20260926/swiss_identity_descriptive.png)
 
 **Supplementary Figure: Sequence Identity.** Points show observed differences
 in percentage points for the nine lower-identity and nine higher-identity
 families. No subgroup intervals or significance tests are added. Separate
-x-axis ranges are used for each metric. Missing OrthoMCL remains unavailable;
+x-axis ranges are used for each metric. All eight methods are included;
 full OrthoFinder is the zero-difference reference. Configuration differences
 are not isolated phylogeny effects, and identity is not calibrated distance.
 
@@ -1198,7 +1206,7 @@ are not isolated phylogeny effects, and identity is not calibrated distance.
 
 ::: {.review-figure style="break-inside: avoid; page-break-inside: avoid;"}
 
-![Descriptive historical fragment-annotation differences, including baseline-only sensitivity views.](swiss_descriptive_feature_figures_20260923/swiss_fragment_descriptive.png)
+![Descriptive historical fragment-annotation differences, including baseline-only sensitivity views.](swiss_descriptive_feature_figures_20260926/swiss_fragment_descriptive.png)
 
 **Supplementary Figure: Fragment Annotations.** Observed differences versus
 full OrthoFinder retain the positive (five families), historical unflagged
@@ -1206,9 +1214,9 @@ full OrthoFinder retain the positive (five families), historical unflagged
 views. The positive family set is unchanged by baseline-only restriction.
 Unflagged does not establish completeness; later-version records become
 missing in the baseline-only view. No causal or inferential claim follows
-from a subgroup sign change. [Figure data and provenance](swiss_descriptive_feature_figures_20260923/manifest.json)
+from a subgroup sign change. [Figure data and provenance](swiss_descriptive_feature_figures_20260926/manifest.json)
 link both figures to the pinned descriptive tables and all 144 displayed
-endpoint records, including unavailable values.
+endpoint records, all now available for the plotted bins.
 
 :::
 

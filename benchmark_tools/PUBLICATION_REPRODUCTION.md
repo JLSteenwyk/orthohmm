@@ -7,7 +7,11 @@ are statistical reproduction only and do not submit scheduler jobs.
 
 ## Method And Results
 
-- [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260926_v13.md)
+- [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260926_v14.md)
+- [Complete descriptive strata](results/SWISS_COMPLETE_STRATA_20260926.md) and
+  [eight-method feature figures](results/SWISS_COMPLETE_STRATA_FIGURES_20260926.md)
+  retain the original bins and feature admissions; historical recipes below
+  remain available with their original missing-method state.
 - [Complete corrected eight-method table](results/qfo_corrected_comparison_20260926_v7/scores.md),
   [admitted recovered OrthoMCL scores](results/qfo_recovered_score_admission_22176.json),
   [complete SwissTrees uncertainty](results/qfo_recovered_swiss_uncertainty_22178.json),
