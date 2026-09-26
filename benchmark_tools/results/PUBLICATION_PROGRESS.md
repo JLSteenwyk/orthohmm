@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Eight-Method Corrected VGNC Block Decomposition Completed (2026-09-26)
+
+The preceding turn completed the prespecified synthetic uncertainty screen
+and retained its dependence failure. Advanced the real-data prerequisite:
+mapped all eight corrected VGNC raw tables to 16,844 reference-defined blocks.
+Selected protein mappings match across databases; TP/FP/FN decompositions
+reproduce all admitted P/R/F1 values and every 23,934-pair truth partition.
+Independent sparse-table readback and 39 record checks pass; 26 related tests
+pass. [Counts, evidence and limitations](CORRECTED_VGNC_BLOCK_MAPPING_20260926.md).
+Most blocks contain one asserted pair and phylogenetic OrthoHMM has only eight
+nonzero cross-block FP cells, so the equal-size simulation is insufficient
+for native uncertainty validation. No intervals, scores or defaults changed.
+Full database hashes/prediction-edge rescoring were not performed; biological
+exchangeability and rare/imbalanced-count validation remain open. All readback
+processes completed; DGX stays deferred and the full publication goal active.
+
 ## Family-Pair Uncertainty Candidate Screened (2026-09-26)
 
 The preceding turn made progress on MAFFT source-build reproduction. Returned

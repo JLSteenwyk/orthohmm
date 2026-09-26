@@ -2,6 +2,12 @@
 
 ## Subsequent Synthetic Validation
 
+The [corrected eight-method block decomposition](CORRECTED_VGNC_BLOCK_MAPPING_20260926.md)
+now reconstructs all admitted count-based metrics from retained native rows,
+with shared reference mappings and sparse tables that preserve cross-block FP.
+It does not replace the historical stages below or establish valid confidence
+intervals. Reference sizes and rare false positives require further validation.
+
 The [September 26 family-pair variance screen](DYADIC_F1_VARIANCE_RESULT_20260926.md)
 tests a candidate paired F1 linearization on 8,000 synthetic replicates.
 It passes its necessary coverage gate when families are independent but
