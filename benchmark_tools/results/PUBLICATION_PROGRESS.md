@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Recovered QfO Assessment Launched (2026-09-26)
+
+Pair conversion **22172 completed 0:0 in 4:24**, status
+`recovered_orthomcl_pairs_prepared_unscored`. The
+[retained report](qfo_recovered_pairs_22172.json) has SHA256
+`486fc13941a03c0078133cae84a94601f145cd4fe441105607324a1b94ab205e`.
+All 14378089 cross-species final-group clique pairs were retained with zero
+QfO mapping loss. Group coverage remains 781432 grouped / 202705 ungrouped
+of 984137 inputs. These are cluster-derived pairs, not native phylogenetic
+ortholog calls or pre-clustering graph edges.
+
+Submitted six-endpoint QfO assessment **22174**, eight CPUs / 64 GiB /
+24 hours, no requeue, using the clean frozen downstream executor
+`296882422f2d70c096c8d5584082c16217f36add`, completed conversion job 22172
+and the exact digest above. Assessment, work and scoring destinations were
+absent before submission. The output root is
+`benchmarks/results/qfo_blast_recovery_assessment_v1`.
+Failure-membership audit **22173** remains active. Require successful
+terminal assessment and independent score admission before updating the
+publication comparison; no accuracy score is claimed yet. DGX stays deferred.
+
 ## Failed-Query Membership Audit Launched (2026-09-26)
 
 Submitted **22173** using the
