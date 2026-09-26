@@ -1,0 +1,34 @@
+{
+  "accuracy_evaluated": false,
+  "dendropy_module": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/dendropy/__init__.py",
+  "dendropy_version": "5.1.0",
+  "status": "installed_fixture_tree_readback_verified",
+  "trees": [
+    {
+      "leaves": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_phylogeny_smoke_20260926/inference/orthohmm_phylogeny/species_tree.rooted.nwk",
+      "rooted": true,
+      "sha256": "a3d1df2ee9a268009da2c980710e0b021028a22557ba9cda8c37f15b98de54ac"
+    },
+    {
+      "leaves": [
+        "S1_family2",
+        "S1_family2_duplicate",
+        "S2_family2",
+        "S2_family2_duplicate",
+        "S3_family2",
+        "S3_family2_duplicate",
+        "S4_family2",
+        "S4_family2_duplicate"
+      ],
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_phylogeny_smoke_20260926/inference/orthohmm_phylogeny/gene_trees/Family0000002.reconciled.nwk",
+      "rooted": true,
+      "sha256": "1321f440b576ba0b2864ece2bf207d2bfaaf455eb19da317f0b20f675e96f530"
+    }
+  ]
+}

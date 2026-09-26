@@ -255,6 +255,13 @@ Git blobs, and standard/high-sensitivity installed fixtures pass. This is a new
 compiled artifact with its own lock, not the original benchmark runtime or
 full phylogenetic reproduction; the source-only archive remains unchanged.
 
+The subsequent [installed inferred-phylogeny fixture](results/PUBLICATION_FROZEN_PHYLOGENY_INSTALL_20260926.md)
+executes HMM search, candidate expansion, marker-based species-tree inference,
+gene-tree inference and reconciliation on 16 synthetic proteins. It verifies
+fresh tree work, exact input coverage, pair integrity and parsed tree tips.
+This closes the small-fixture pipeline check, not full publication-dataset
+reproduction or packaging of external MAFFT/FastTree installations.
+
 The [rights register](results/PUBLICATION_DATA_RIGHTS_20260918.md) separates
 project code, reference datasets, upstream software and binaries. Local
 availability or inclusion in an evidence bundle is not blanket permission

@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Installed Frozen-Source Phylogeny Pipeline Exercised (2026-09-26)
+
+The preceding turn completed the setup-overlay installation. Ran the installed
+satellite_v2 inferred-phylogeny pipeline on a fixed 16-protein/four-taxon
+synthetic fixture with two marker families and a duplicate-containing family.
+It infers the species tree, reconciles one family, preserves exact coverage
+and produces 36 valid cross-species pairs, with no checkpoint reuse. Separate
+installed-DendroPy parsing verifies rooted trees and expected species/gene tips.
+All 159 record entries were rechecked; ten unit tests pass.
+[Report, commands and scope](PUBLICATION_FROZEN_PHYLOGENY_INSTALL_20260926.md).
+This is same-host synthetic plumbing, not biological accuracy, historical
+runtime equivalence or full dataset reproduction. External tool packaging,
+controlled timing, remaining provenance/rights and uncertainty limitations
+remain open. No process remains running from this check; DGX remains deferred.
+
 ## Frozen Scientific Source Installed With Explicit Packaging Overlay (2026-09-26)
 
 The preceding turn completed the checkpoint/setup crash control. With no fault
