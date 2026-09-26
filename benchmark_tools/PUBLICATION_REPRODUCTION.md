@@ -7,7 +7,16 @@ are statistical reproduction only and do not submit scheduler jobs.
 
 ## Method And Results
 
-- [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260926_v12.md)
+- [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260926_v13.md)
+- [Complete corrected eight-method table](results/qfo_corrected_comparison_20260926_v7/scores.md),
+  [admitted recovered OrthoMCL scores](results/qfo_recovered_score_admission_22176.json),
+  [complete SwissTrees uncertainty](results/qfo_recovered_swiss_uncertainty_22178.json),
+  [24-endpoint arithmetic reproduction](results/qfo_recovered_swiss_reproduction_22178.json),
+  and [figure/endpoint tables](results/corrected_swiss_comparison_figure_20260926/endpoints.md).
+  The [job 22178 batch recipe](results/qfo_recovered_swiss_comparison_batch_20260926.sh)
+  pins the recovered-score-compatible executor and comparison digest.
+  The seven-method recipes below are retained historical stages, not the
+  latest complete panel. All seven earlier contrasts remain unchanged.
   provides dated HTML/PDF and a checked local-asset inventory. Version 12 adds
   corrected OrthoMCL failure membership/exposure, the seven-protein residue
   group trace, and the forced-candidate diagnostic and figure, not corrected

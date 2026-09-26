@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Eight-Method Claims and Manuscript Preview (2026-09-26)
+
+Updated the main claim rows and frozen-baseline completion row to the
+independently admitted eight-method table and complete SwissTrees uncertainty.
+Preserved all recovery, generalization, timing and broader uncertainty gaps.
+The [v13 review](MANUSCRIPT_RENDER_REVIEW_20260926_v13.md) includes the new
+scores and uncertainty figure; its asset audit covers 202 occurrences and
+188 tracked targets. All 38 PDF pages pass text/image bounds checks at one
+point tolerance; updated pages 20 and 21 were visually checked at 1.4x.
+The main reproduction guide now routes readers to these latest artifacts,
+while older seven-method recipes remain explicitly historical. Full editorial
+condensation, broader strata integration, release packaging and scientific
+completion requirements remain outstanding.
+
 ## Complete Swiss Comparator Uncertainty (2026-09-26)
 
 Job 22178 completed with exit 0 in 24 seconds. The retained
