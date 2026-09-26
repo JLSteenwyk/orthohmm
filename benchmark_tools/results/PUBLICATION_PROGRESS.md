@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Installed OrthoBench Input Inventory Gate (2026-09-26)
+
+The preceding status turn was a verified wait: job 22179 was live in squeue.
+Revalidated it RUNNING at 12:04 and strengthened the independent reader without
+changing the immutable executor or scientific configuration. The full audit
+now checks the exact private input-directory inventory before and after
+readback, including frozen content hashes, regular-file/non-symlink status,
+unique planned paths, species count and unique gene count. All directory entries
+must match the plan, so extra FASTAs of any supported extension cannot bypass
+the previous `*.fa`-only scan. Malformed root-HOG row widths are also rejected.
+Twenty-nine reader/runner tests pass, including adversarial inventory cases.
+
+[Live input receipt](installed_ob_input_inventory_20260926.json) confirms 12
+files and 251,378 genes; SHA-256
+`8b429398e6c381fcdec8289c641a7f20969edcad5595e3d3f6930335601571bd`.
+This is a current-state check, not proof against transient mid-run modification
+and not admission of the running inference. The prior baseline-only readback
+and its source receipt remain unchanged. After terminal native success, run
+the updated full audit and complete tree/pair semantic validation. No scores
+or defaults changed. Controlled timing, other uncertainty/provenance gaps and
+release preparation remain open; DGX stays deferred and the goal stays active.
+
 ## Strict OrthoBench Readback Prepared While Job 22179 Runs (2026-09-26)
 
 The previous turn prepared and launched the full installed-package run,

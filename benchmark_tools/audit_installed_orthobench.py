@@ -16,6 +16,27 @@ BASELINE_SHA = "6a0d588b5cb47c60fc6bc8bae8aa0c83e5f2aadb11de970919d8c6527c387141
 PLAN_SHA = "5fd8dc70c337951706fe9246c2bf08d1191196939da066c5b74bba0bd3dd2b12"
 
 
+def verify_input_inventory(directory, plan):
+    directory = directory.absolute()
+    expected = [item for item in plan["checked_records"]
+                if Path(item["path"]).parent == directory]
+    paths = [Path(item["path"]) for item in expected]
+    if (len(paths) != plan["expected_species"] or len(set(paths)) != len(paths)
+            or directory.is_symlink() or not directory.is_dir()):
+        raise ValueError("Invalid planned input inventory")
+    # This private input directory must contain only the frozen FASTA copies.
+    actual = set(directory.iterdir())
+    if (actual != set(paths)
+            or any(path.is_symlink() or not path.is_file() for path in actual)):
+        raise ValueError("Input directory inventory differs from frozen copies")
+    for item in expected:
+        check(item)
+    universe = fasta_ids(sorted(paths))
+    if len(universe) != plan["expected_genes"]:
+        raise ValueError("Wrong full input universe")
+    return universe, expected
+
+
 def read_root_hogs(path, universe):
     groups, seen, labels = [], set(), set()
     with path.open(newline="") as stream:
@@ -23,6 +44,8 @@ def read_root_hogs(path, universe):
         if reader.fieldnames != ["root_hog", "source_family", "genes"]:
             raise ValueError("Unexpected root-HOG columns")
         for row in reader:
+            if None in row or any(value is None for value in row.values()):
+                raise ValueError("Malformed root-HOG row width")
             members = row["genes"].split(",")
             if (not row["root_hog"] or not row["source_family"] or row["root_hog"] in labels
                     or not all(members) or len(set(members)) != len(members)
@@ -96,7 +119,7 @@ def audit(repo, directory, job):
     for item in plan["checked_records"]:
         check(item)
     baseline, refs, uncertain, checked = baseline_inputs(repo)
-    universe = fasta_ids(sorted((directory / "input").glob("*.fa")))
+    universe, input_records = verify_input_inventory(directory / "input", plan)
     previous = read_root_hogs(Path(plan["baseline_partition"]["path"]), universe)
     phylo = directory / "inference/orthohmm_phylogeny"
     groups = read_root_hogs(phylo / "orthohmm_root_hogs.tsv", universe)
@@ -115,7 +138,7 @@ def audit(repo, directory, job):
     partition_comparison = compare_partitions(previous, groups)
     result = dict(status="installed_partition_and_scores_read_back", plan=plan_record,
         execution=record(execution_path), scheduler=scheduler, accounting=accounting,
-        genes=len(universe), score=score, baseline_score=old,
+        genes=len(universe), input_inventory=input_records, score=score, baseline_score=old,
         score_differences={k:score[k]-old[k] for k in ("f_score", "precision", "recall")},
         family_records_equal=score["refog_records"] == old["refog_records"],
         partition_comparison=partition_comparison, summary=summary,
@@ -129,6 +152,7 @@ def audit(repo, directory, job):
                      "Shared-host installation reproduction, not independent validation or controlled timing."])
     for item in result["checked_records"]:
         check(item)
+    verify_input_inventory(directory / "input", plan)
     return result
 
 
