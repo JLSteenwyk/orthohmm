@@ -1,0 +1,2376 @@
+{
+  "accuracy_admitted": false,
+  "error_records_by_kind": {
+    "InvalidRead": 4,
+    "Leak_DefinitelyLost": 62,
+    "Leak_PossiblyLost": 8128,
+    "UninitCondition": 5
+  },
+  "fatal_signal_records": 0,
+  "leak_top_frames": [
+    {
+      "function": "malloc",
+      "kind": "Leak_DefinitelyLost",
+      "object": "/usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so",
+      "records": 61
+    },
+    {
+      "function": "operator new(unsigned long)",
+      "kind": "Leak_DefinitelyLost",
+      "object": "/usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so",
+      "records": 1
+    },
+    {
+      "function": "calloc",
+      "kind": "Leak_PossiblyLost",
+      "object": "/usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so",
+      "records": 57
+    },
+    {
+      "function": "malloc",
+      "kind": "Leak_PossiblyLost",
+      "object": "/usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so",
+      "records": 7909
+    },
+    {
+      "function": "realloc",
+      "kind": "Leak_PossiblyLost",
+      "object": "/usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so",
+      "records": 162
+    }
+  ],
+  "limitations": [
+    "XML record counts are not event counts or unique allocations.",
+    "Stack locations do not prove the cause of earlier crashes or exclude other defects.",
+    "Leak records are summarized, not dismissed; full stacks remain in pinned XML.",
+    "No native execution, input/runtime revalidation or scientific admission performed."
+  ],
+  "nonleak_errors": [
+    {
+      "auxiliary": [
+        "Address 0x4cfb060 is 4 bytes after a block of size 188 alloc'd"
+      ],
+      "kind": "InvalidRead",
+      "stacks": [
+        [
+          {
+            "dir": "./wcsmbs/../sysdeps/x86_64/multiarch",
+            "file": "strcat-strlen-avx2.h.S",
+            "fn": "__wcscat_avx2",
+            "ip": "0x4AFA050",
+            "line": "62",
+            "obj": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+          },
+          {
+            "dir": "/croot/python-split_1694437906621/_build_env/x86_64-conda-linux-gnu/sysroot/usr/include/bits",
+            "file": "wchar2.h",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x5971FA",
+            "line": "250",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "joinpath2",
+            "ip": "0x5971FA",
+            "line": "299",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "ismodule",
+            "ip": "0x597A59",
+            "line": "376",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x435B9D",
+            "line": "531",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "calculate_prefix.cold",
+            "ip": "0x435B9D",
+            "line": "577",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x5894BC",
+            "line": "1514",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x5894BC",
+            "line": "1602",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x5894BC",
+            "line": "354",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "config_init_pathconfig",
+            "ip": "0x5894BC",
+            "line": "369",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "_PyConfig_InitPathConfig",
+            "ip": "0x588FD4",
+            "line": "438",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "init_interp_main",
+            "ip": "0x596951",
+            "line": "1085",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "pyinit_main",
+            "ip": "0x59687D",
+            "line": "1198",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "Py_InitializeFromConfig",
+            "ip": "0x586944",
+            "line": "1229",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_init",
+            "ip": "0x584F60",
+            "line": "70",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_main",
+            "ip": "0x584E90",
+            "line": "1057",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "Py_BytesMain",
+            "ip": "0x584E48",
+            "line": "1090",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "./csu/../sysdeps/nptl",
+            "file": "libc_start_call_main.h",
+            "fn": "(below main)",
+            "ip": "0x49961C9",
+            "line": "58",
+            "obj": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+          }
+        ],
+        [
+          {
+            "fn": "malloc",
+            "ip": "0x4846828",
+            "obj": "/usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "joinpath2",
+            "ip": "0x5971D4",
+            "line": "292",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "ismodule",
+            "ip": "0x597A59",
+            "line": "376",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x435B9D",
+            "line": "531",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "calculate_prefix.cold",
+            "ip": "0x435B9D",
+            "line": "577",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x5894BC",
+            "line": "1514",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x5894BC",
+            "line": "1602",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x5894BC",
+            "line": "354",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "config_init_pathconfig",
+            "ip": "0x5894BC",
+            "line": "369",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "_PyConfig_InitPathConfig",
+            "ip": "0x588FD4",
+            "line": "438",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "init_interp_main",
+            "ip": "0x596951",
+            "line": "1085",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "pyinit_main",
+            "ip": "0x59687D",
+            "line": "1198",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "Py_InitializeFromConfig",
+            "ip": "0x586944",
+            "line": "1229",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_init",
+            "ip": "0x584F60",
+            "line": "70",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_main",
+            "ip": "0x584E90",
+            "line": "1057",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "Py_BytesMain",
+            "ip": "0x584E48",
+            "line": "1090",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "./csu/../sysdeps/nptl",
+            "file": "libc_start_call_main.h",
+            "fn": "(below main)",
+            "ip": "0x49961C9",
+            "line": "58",
+            "obj": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+          }
+        ]
+      ],
+      "unique": "0x0",
+      "what": "Invalid read of size 32"
+    },
+    {
+      "auxiliary": [
+        "Address 0x4cfb060 is 4 bytes after a block of size 188 alloc'd"
+      ],
+      "kind": "InvalidRead",
+      "stacks": [
+        [
+          {
+            "dir": "./wcsmbs/../sysdeps/x86_64/multiarch",
+            "file": "strcat-strlen-avx2.h.S",
+            "fn": "__wcscat_avx2",
+            "ip": "0x4AFA050",
+            "line": "62",
+            "obj": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+          },
+          {
+            "dir": "/croot/python-split_1694437906621/_build_env/x86_64-conda-linux-gnu/sysroot/usr/include/bits",
+            "file": "wchar2.h",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x597206",
+            "line": "250",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "joinpath2",
+            "ip": "0x597206",
+            "line": "301",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "ismodule",
+            "ip": "0x597A59",
+            "line": "376",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x435B9D",
+            "line": "531",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "calculate_prefix.cold",
+            "ip": "0x435B9D",
+            "line": "577",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x5894BC",
+            "line": "1514",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x5894BC",
+            "line": "1602",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x5894BC",
+            "line": "354",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "config_init_pathconfig",
+            "ip": "0x5894BC",
+            "line": "369",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "_PyConfig_InitPathConfig",
+            "ip": "0x588FD4",
+            "line": "438",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "init_interp_main",
+            "ip": "0x596951",
+            "line": "1085",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "pyinit_main",
+            "ip": "0x59687D",
+            "line": "1198",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "Py_InitializeFromConfig",
+            "ip": "0x586944",
+            "line": "1229",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_init",
+            "ip": "0x584F60",
+            "line": "70",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_main",
+            "ip": "0x584E90",
+            "line": "1057",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "Py_BytesMain",
+            "ip": "0x584E48",
+            "line": "1090",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "./csu/../sysdeps/nptl",
+            "file": "libc_start_call_main.h",
+            "fn": "(below main)",
+            "ip": "0x49961C9",
+            "line": "58",
+            "obj": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+          }
+        ],
+        [
+          {
+            "fn": "malloc",
+            "ip": "0x4846828",
+            "obj": "/usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "joinpath2",
+            "ip": "0x5971D4",
+            "line": "292",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "ismodule",
+            "ip": "0x597A59",
+            "line": "376",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x435B9D",
+            "line": "531",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "calculate_prefix.cold",
+            "ip": "0x435B9D",
+            "line": "577",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x5894BC",
+            "line": "1514",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x5894BC",
+            "line": "1602",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x5894BC",
+            "line": "354",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "config_init_pathconfig",
+            "ip": "0x5894BC",
+            "line": "369",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "_PyConfig_InitPathConfig",
+            "ip": "0x588FD4",
+            "line": "438",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "init_interp_main",
+            "ip": "0x596951",
+            "line": "1085",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "pyinit_main",
+            "ip": "0x59687D",
+            "line": "1198",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "Py_InitializeFromConfig",
+            "ip": "0x586944",
+            "line": "1229",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_init",
+            "ip": "0x584F60",
+            "line": "70",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_main",
+            "ip": "0x584E90",
+            "line": "1057",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "Py_BytesMain",
+            "ip": "0x584E48",
+            "line": "1090",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "./csu/../sysdeps/nptl",
+            "file": "libc_start_call_main.h",
+            "fn": "(below main)",
+            "ip": "0x49961C9",
+            "line": "58",
+            "obj": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+          }
+        ]
+      ],
+      "unique": "0x1",
+      "what": "Invalid read of size 32"
+    },
+    {
+      "auxiliary": [
+        "Uninitialised value was created by a heap allocation"
+      ],
+      "kind": "UninitCondition",
+      "stacks": [
+        [
+          {
+            "dir": "./wcsmbs/../sysdeps/x86_64/multiarch",
+            "file": "strcat-strlen-avx2.h.S",
+            "fn": "__wcscat_avx2",
+            "ip": "0x4AFA06A",
+            "line": "68",
+            "obj": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+          },
+          {
+            "dir": "/croot/python-split_1694437906621/_build_env/x86_64-conda-linux-gnu/sysroot/usr/include/bits",
+            "file": "wchar2.h",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x4219AE",
+            "line": "250",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x4219AE",
+            "line": "1378",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x4219AE",
+            "line": "1537",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x4219AE",
+            "line": "1602",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x4219AE",
+            "line": "354",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "config_init_pathconfig.cold",
+            "ip": "0x4219AE",
+            "line": "369",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "_PyConfig_InitPathConfig",
+            "ip": "0x588FD4",
+            "line": "438",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "init_interp_main",
+            "ip": "0x596951",
+            "line": "1085",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "pyinit_main",
+            "ip": "0x59687D",
+            "line": "1198",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "Py_InitializeFromConfig",
+            "ip": "0x586944",
+            "line": "1229",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_init",
+            "ip": "0x584F60",
+            "line": "70",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_main",
+            "ip": "0x584E90",
+            "line": "1057",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "Py_BytesMain",
+            "ip": "0x584E48",
+            "line": "1090",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "./csu/../sysdeps/nptl",
+            "file": "libc_start_call_main.h",
+            "fn": "(below main)",
+            "ip": "0x49961C9",
+            "line": "58",
+            "obj": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+          }
+        ],
+        [
+          {
+            "fn": "malloc",
+            "ip": "0x4846828",
+            "obj": "/usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x58961D",
+            "line": "1369",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x58961D",
+            "line": "1537",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x58961D",
+            "line": "1602",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x58961D",
+            "line": "354",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "config_init_pathconfig",
+            "ip": "0x58961D",
+            "line": "369",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "_PyConfig_InitPathConfig",
+            "ip": "0x588FD4",
+            "line": "438",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "init_interp_main",
+            "ip": "0x596951",
+            "line": "1085",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "pyinit_main",
+            "ip": "0x59687D",
+            "line": "1198",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "Py_InitializeFromConfig",
+            "ip": "0x586944",
+            "line": "1229",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_init",
+            "ip": "0x584F60",
+            "line": "70",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_main",
+            "ip": "0x584E90",
+            "line": "1057",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "Py_BytesMain",
+            "ip": "0x584E48",
+            "line": "1090",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "./csu/../sysdeps/nptl",
+            "file": "libc_start_call_main.h",
+            "fn": "(below main)",
+            "ip": "0x49961C9",
+            "line": "58",
+            "obj": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+          }
+        ]
+      ],
+      "unique": "0x2",
+      "what": "Conditional jump or move depends on uninitialised value(s)"
+    },
+    {
+      "auxiliary": [
+        "Uninitialised value was created by a heap allocation"
+      ],
+      "kind": "UninitCondition",
+      "stacks": [
+        [
+          {
+            "dir": "./wcsmbs/../sysdeps/x86_64/multiarch",
+            "file": "strcat-strlen-avx2.h.S",
+            "fn": "__wcscat_avx2",
+            "ip": "0x4AFA06A",
+            "line": "68",
+            "obj": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+          },
+          {
+            "dir": "/croot/python-split_1694437906621/_build_env/x86_64-conda-linux-gnu/sysroot/usr/include/bits",
+            "file": "wchar2.h",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x589651",
+            "line": "250",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x589651",
+            "line": "1382",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x589651",
+            "line": "1537",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x589651",
+            "line": "1602",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x589651",
+            "line": "354",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "config_init_pathconfig",
+            "ip": "0x589651",
+            "line": "369",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "_PyConfig_InitPathConfig",
+            "ip": "0x588FD4",
+            "line": "438",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "init_interp_main",
+            "ip": "0x596951",
+            "line": "1085",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "pyinit_main",
+            "ip": "0x59687D",
+            "line": "1198",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "Py_InitializeFromConfig",
+            "ip": "0x586944",
+            "line": "1229",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_init",
+            "ip": "0x584F60",
+            "line": "70",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_main",
+            "ip": "0x584E90",
+            "line": "1057",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "Py_BytesMain",
+            "ip": "0x584E48",
+            "line": "1090",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "./csu/../sysdeps/nptl",
+            "file": "libc_start_call_main.h",
+            "fn": "(below main)",
+            "ip": "0x49961C9",
+            "line": "58",
+            "obj": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+          }
+        ],
+        [
+          {
+            "fn": "malloc",
+            "ip": "0x4846828",
+            "obj": "/usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x58961D",
+            "line": "1369",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x58961D",
+            "line": "1537",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x58961D",
+            "line": "1602",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x58961D",
+            "line": "354",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "config_init_pathconfig",
+            "ip": "0x58961D",
+            "line": "369",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "_PyConfig_InitPathConfig",
+            "ip": "0x588FD4",
+            "line": "438",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "init_interp_main",
+            "ip": "0x596951",
+            "line": "1085",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "pyinit_main",
+            "ip": "0x59687D",
+            "line": "1198",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "Py_InitializeFromConfig",
+            "ip": "0x586944",
+            "line": "1229",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_init",
+            "ip": "0x584F60",
+            "line": "70",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_main",
+            "ip": "0x584E90",
+            "line": "1057",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "Py_BytesMain",
+            "ip": "0x584E48",
+            "line": "1090",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "./csu/../sysdeps/nptl",
+            "file": "libc_start_call_main.h",
+            "fn": "(below main)",
+            "ip": "0x49961C9",
+            "line": "58",
+            "obj": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+          }
+        ]
+      ],
+      "unique": "0x3",
+      "what": "Conditional jump or move depends on uninitialised value(s)"
+    },
+    {
+      "auxiliary": [
+        "Address 0x4cfb6e0 is 16 bytes after a block of size 160 alloc'd"
+      ],
+      "kind": "InvalidRead",
+      "stacks": [
+        [
+          {
+            "dir": "./wcsmbs/../sysdeps/x86_64/multiarch",
+            "file": "strcpy-avx2.S",
+            "fn": "__wcscat_avx2",
+            "ip": "0x4AFA19F",
+            "line": "207",
+            "obj": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+          },
+          {
+            "dir": "/croot/python-split_1694437906621/_build_env/x86_64-conda-linux-gnu/sysroot/usr/include/bits",
+            "file": "wchar2.h",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x589651",
+            "line": "250",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x589651",
+            "line": "1382",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x589651",
+            "line": "1537",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x589651",
+            "line": "1602",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x589651",
+            "line": "354",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "config_init_pathconfig",
+            "ip": "0x589651",
+            "line": "369",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "_PyConfig_InitPathConfig",
+            "ip": "0x588FD4",
+            "line": "438",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "init_interp_main",
+            "ip": "0x596951",
+            "line": "1085",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "pyinit_main",
+            "ip": "0x59687D",
+            "line": "1198",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "Py_InitializeFromConfig",
+            "ip": "0x586944",
+            "line": "1229",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_init",
+            "ip": "0x584F60",
+            "line": "70",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_main",
+            "ip": "0x584E90",
+            "line": "1057",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "Py_BytesMain",
+            "ip": "0x584E48",
+            "line": "1090",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "./csu/../sysdeps/nptl",
+            "file": "libc_start_call_main.h",
+            "fn": "(below main)",
+            "ip": "0x49961C9",
+            "line": "58",
+            "obj": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+          }
+        ],
+        [
+          {
+            "fn": "malloc",
+            "ip": "0x4846828",
+            "obj": "/usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "joinpath2",
+            "ip": "0x5971D4",
+            "line": "292",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x4219FA",
+            "line": "1315",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x4219FA",
+            "line": "1519",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x4219FA",
+            "line": "1602",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x4219FA",
+            "line": "354",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "config_init_pathconfig.cold",
+            "ip": "0x4219FA",
+            "line": "369",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "_PyConfig_InitPathConfig",
+            "ip": "0x588FD4",
+            "line": "438",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "init_interp_main",
+            "ip": "0x596951",
+            "line": "1085",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "pyinit_main",
+            "ip": "0x59687D",
+            "line": "1198",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "Py_InitializeFromConfig",
+            "ip": "0x586944",
+            "line": "1229",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_init",
+            "ip": "0x584F60",
+            "line": "70",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_main",
+            "ip": "0x584E90",
+            "line": "1057",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "Py_BytesMain",
+            "ip": "0x584E48",
+            "line": "1090",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "./csu/../sysdeps/nptl",
+            "file": "libc_start_call_main.h",
+            "fn": "(below main)",
+            "ip": "0x49961C9",
+            "line": "58",
+            "obj": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+          }
+        ]
+      ],
+      "unique": "0x4",
+      "what": "Invalid read of size 32"
+    },
+    {
+      "auxiliary": [
+        "Uninitialised value was created by a heap allocation"
+      ],
+      "kind": "UninitCondition",
+      "stacks": [
+        [
+          {
+            "dir": "./wcsmbs/../sysdeps/x86_64/multiarch",
+            "file": "strcat-strlen-avx2.h.S",
+            "fn": "__wcscat_avx2",
+            "ip": "0x4AFA06A",
+            "line": "68",
+            "obj": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+          },
+          {
+            "dir": "/croot/python-split_1694437906621/_build_env/x86_64-conda-linux-gnu/sysroot/usr/include/bits",
+            "file": "wchar2.h",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x5896E3",
+            "line": "250",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x5896E3",
+            "line": "1409",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x5896E3",
+            "line": "1537",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x5896E3",
+            "line": "1602",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x5896E3",
+            "line": "354",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "config_init_pathconfig",
+            "ip": "0x5896E3",
+            "line": "369",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "_PyConfig_InitPathConfig",
+            "ip": "0x588FD4",
+            "line": "438",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "init_interp_main",
+            "ip": "0x596951",
+            "line": "1085",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "pyinit_main",
+            "ip": "0x59687D",
+            "line": "1198",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "Py_InitializeFromConfig",
+            "ip": "0x586944",
+            "line": "1229",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_init",
+            "ip": "0x584F60",
+            "line": "70",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_main",
+            "ip": "0x584E90",
+            "line": "1057",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "Py_BytesMain",
+            "ip": "0x584E48",
+            "line": "1090",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "./csu/../sysdeps/nptl",
+            "file": "libc_start_call_main.h",
+            "fn": "(below main)",
+            "ip": "0x49961C9",
+            "line": "58",
+            "obj": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+          }
+        ],
+        [
+          {
+            "fn": "malloc",
+            "ip": "0x4846828",
+            "obj": "/usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x58961D",
+            "line": "1369",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x58961D",
+            "line": "1537",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x58961D",
+            "line": "1602",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x58961D",
+            "line": "354",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "config_init_pathconfig",
+            "ip": "0x58961D",
+            "line": "369",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "_PyConfig_InitPathConfig",
+            "ip": "0x588FD4",
+            "line": "438",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "init_interp_main",
+            "ip": "0x596951",
+            "line": "1085",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "pyinit_main",
+            "ip": "0x59687D",
+            "line": "1198",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "Py_InitializeFromConfig",
+            "ip": "0x586944",
+            "line": "1229",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_init",
+            "ip": "0x584F60",
+            "line": "70",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_main",
+            "ip": "0x584E90",
+            "line": "1057",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "Py_BytesMain",
+            "ip": "0x584E48",
+            "line": "1090",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "./csu/../sysdeps/nptl",
+            "file": "libc_start_call_main.h",
+            "fn": "(below main)",
+            "ip": "0x49961C9",
+            "line": "58",
+            "obj": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+          }
+        ]
+      ],
+      "unique": "0x5",
+      "what": "Conditional jump or move depends on uninitialised value(s)"
+    },
+    {
+      "auxiliary": [
+        "Uninitialised value was created by a heap allocation"
+      ],
+      "kind": "UninitCondition",
+      "stacks": [
+        [
+          {
+            "dir": "./wcsmbs/../sysdeps/x86_64/multiarch",
+            "file": "strcat-strlen-avx2.h.S",
+            "fn": "__wcscat_avx2",
+            "ip": "0x4AFA06A",
+            "line": "68",
+            "obj": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+          },
+          {
+            "dir": "/croot/python-split_1694437906621/_build_env/x86_64-conda-linux-gnu/sysroot/usr/include/bits",
+            "file": "wchar2.h",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x5896F1",
+            "line": "250",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x5896F1",
+            "line": "1414",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x5896F1",
+            "line": "1537",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x5896F1",
+            "line": "1602",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x5896F1",
+            "line": "354",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "config_init_pathconfig",
+            "ip": "0x5896F1",
+            "line": "369",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "_PyConfig_InitPathConfig",
+            "ip": "0x588FD4",
+            "line": "438",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "init_interp_main",
+            "ip": "0x596951",
+            "line": "1085",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "pyinit_main",
+            "ip": "0x59687D",
+            "line": "1198",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "Py_InitializeFromConfig",
+            "ip": "0x586944",
+            "line": "1229",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_init",
+            "ip": "0x584F60",
+            "line": "70",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_main",
+            "ip": "0x584E90",
+            "line": "1057",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "Py_BytesMain",
+            "ip": "0x584E48",
+            "line": "1090",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "./csu/../sysdeps/nptl",
+            "file": "libc_start_call_main.h",
+            "fn": "(below main)",
+            "ip": "0x49961C9",
+            "line": "58",
+            "obj": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+          }
+        ],
+        [
+          {
+            "fn": "malloc",
+            "ip": "0x4846828",
+            "obj": "/usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x58961D",
+            "line": "1369",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x58961D",
+            "line": "1537",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x58961D",
+            "line": "1602",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x58961D",
+            "line": "354",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "config_init_pathconfig",
+            "ip": "0x58961D",
+            "line": "369",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "_PyConfig_InitPathConfig",
+            "ip": "0x588FD4",
+            "line": "438",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "init_interp_main",
+            "ip": "0x596951",
+            "line": "1085",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "pyinit_main",
+            "ip": "0x59687D",
+            "line": "1198",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "Py_InitializeFromConfig",
+            "ip": "0x586944",
+            "line": "1229",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_init",
+            "ip": "0x584F60",
+            "line": "70",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_main",
+            "ip": "0x584E90",
+            "line": "1057",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "Py_BytesMain",
+            "ip": "0x584E48",
+            "line": "1090",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "./csu/../sysdeps/nptl",
+            "file": "libc_start_call_main.h",
+            "fn": "(below main)",
+            "ip": "0x49961C9",
+            "line": "58",
+            "obj": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+          }
+        ]
+      ],
+      "unique": "0x6",
+      "what": "Conditional jump or move depends on uninitialised value(s)"
+    },
+    {
+      "auxiliary": [
+        "Uninitialised value was created by a heap allocation"
+      ],
+      "kind": "UninitCondition",
+      "stacks": [
+        [
+          {
+            "dir": "./wcsmbs/../sysdeps/x86_64/multiarch",
+            "file": "strcat-strlen-avx2.h.S",
+            "fn": "__wcscat_avx2",
+            "ip": "0x4AFA06A",
+            "line": "68",
+            "obj": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+          },
+          {
+            "dir": "/croot/python-split_1694437906621/_build_env/x86_64-conda-linux-gnu/sysroot/usr/include/bits",
+            "file": "wchar2.h",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x589702",
+            "line": "250",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x589702",
+            "line": "1417",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x589702",
+            "line": "1537",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x589702",
+            "line": "1602",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x589702",
+            "line": "354",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "config_init_pathconfig",
+            "ip": "0x589702",
+            "line": "369",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "_PyConfig_InitPathConfig",
+            "ip": "0x588FD4",
+            "line": "438",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "init_interp_main",
+            "ip": "0x596951",
+            "line": "1085",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "pyinit_main",
+            "ip": "0x59687D",
+            "line": "1198",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "Py_InitializeFromConfig",
+            "ip": "0x586944",
+            "line": "1229",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_init",
+            "ip": "0x584F60",
+            "line": "70",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_main",
+            "ip": "0x584E90",
+            "line": "1057",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "Py_BytesMain",
+            "ip": "0x584E48",
+            "line": "1090",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "./csu/../sysdeps/nptl",
+            "file": "libc_start_call_main.h",
+            "fn": "(below main)",
+            "ip": "0x49961C9",
+            "line": "58",
+            "obj": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+          }
+        ],
+        [
+          {
+            "fn": "malloc",
+            "ip": "0x4846828",
+            "obj": "/usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x58961D",
+            "line": "1369",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x58961D",
+            "line": "1537",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x58961D",
+            "line": "1602",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x58961D",
+            "line": "354",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "config_init_pathconfig",
+            "ip": "0x58961D",
+            "line": "369",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "_PyConfig_InitPathConfig",
+            "ip": "0x588FD4",
+            "line": "438",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "init_interp_main",
+            "ip": "0x596951",
+            "line": "1085",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "pyinit_main",
+            "ip": "0x59687D",
+            "line": "1198",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "Py_InitializeFromConfig",
+            "ip": "0x586944",
+            "line": "1229",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_init",
+            "ip": "0x584F60",
+            "line": "70",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_main",
+            "ip": "0x584E90",
+            "line": "1057",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "Py_BytesMain",
+            "ip": "0x584E48",
+            "line": "1090",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "./csu/../sysdeps/nptl",
+            "file": "libc_start_call_main.h",
+            "fn": "(below main)",
+            "ip": "0x49961C9",
+            "line": "58",
+            "obj": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+          }
+        ]
+      ],
+      "unique": "0x7",
+      "what": "Conditional jump or move depends on uninitialised value(s)"
+    },
+    {
+      "auxiliary": [
+        "Address 0x4cfbc60 is 12 bytes after a block of size 196 alloc'd"
+      ],
+      "kind": "InvalidRead",
+      "stacks": [
+        [
+          {
+            "dir": "./wcsmbs/../sysdeps/x86_64/multiarch",
+            "file": "strcpy-avx2.S",
+            "fn": "__wcscat_avx2",
+            "ip": "0x4AFA19F",
+            "line": "207",
+            "obj": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+          },
+          {
+            "dir": "/croot/python-split_1694437906621/_build_env/x86_64-conda-linux-gnu/sysroot/usr/include/bits",
+            "file": "wchar2.h",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x589702",
+            "line": "250",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x589702",
+            "line": "1417",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x589702",
+            "line": "1537",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x589702",
+            "line": "1602",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x589702",
+            "line": "354",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "config_init_pathconfig",
+            "ip": "0x589702",
+            "line": "369",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "_PyConfig_InitPathConfig",
+            "ip": "0x588FD4",
+            "line": "438",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "init_interp_main",
+            "ip": "0x596951",
+            "line": "1085",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "pyinit_main",
+            "ip": "0x59687D",
+            "line": "1198",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "Py_InitializeFromConfig",
+            "ip": "0x586944",
+            "line": "1229",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_init",
+            "ip": "0x584F60",
+            "line": "70",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_main",
+            "ip": "0x584E90",
+            "line": "1057",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "Py_BytesMain",
+            "ip": "0x584E48",
+            "line": "1090",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "./csu/../sysdeps/nptl",
+            "file": "libc_start_call_main.h",
+            "fn": "(below main)",
+            "ip": "0x49961C9",
+            "line": "58",
+            "obj": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+          }
+        ],
+        [
+          {
+            "fn": "malloc",
+            "ip": "0x4846828",
+            "obj": "/usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Objects",
+            "file": "obmalloc.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x586597",
+            "line": "572",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Objects",
+            "file": "obmalloc.c",
+            "fn": "_PyMem_RawWcsdup",
+            "ip": "0x586597",
+            "line": "644",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "calculate_exec_prefix",
+            "ip": "0x597C2D",
+            "line": "830",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x589545",
+            "line": "1524",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "getpath.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x589545",
+            "line": "1602",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "UnknownInlinedFun",
+            "ip": "0x589545",
+            "line": "354",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "config_init_pathconfig",
+            "ip": "0x589545",
+            "line": "369",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pathconfig.c",
+            "fn": "_PyConfig_InitPathConfig",
+            "ip": "0x588FD4",
+            "line": "438",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "init_interp_main",
+            "ip": "0x596951",
+            "line": "1085",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "pyinit_main",
+            "ip": "0x59687D",
+            "line": "1198",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Python",
+            "file": "pylifecycle.c",
+            "fn": "Py_InitializeFromConfig",
+            "ip": "0x586944",
+            "line": "1229",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_init",
+            "ip": "0x584F60",
+            "line": "70",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "pymain_main",
+            "ip": "0x584E90",
+            "line": "1057",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "/usr/local/src/conda/python-3.10.13/Modules",
+            "file": "main.c",
+            "fn": "Py_BytesMain",
+            "ip": "0x584E48",
+            "line": "1090",
+            "obj": "/home/bizon/anaconda3/bin/python3.10"
+          },
+          {
+            "dir": "./csu/../sysdeps/nptl",
+            "file": "libc_start_call_main.h",
+            "fn": "(below main)",
+            "ip": "0x49961C9",
+            "line": "58",
+            "obj": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+          }
+        ]
+      ],
+      "unique": "0x8",
+      "what": "Invalid read of size 32"
+    }
+  ],
+  "publication_ready": false,
+  "reported_occurrences": {
+    "0x0": 1,
+    "0x1": 1,
+    "0x2": 1,
+    "0x3": 1,
+    "0x4": 1,
+    "0x5": 1,
+    "0x6": 1,
+    "0x7": 1,
+    "0x8": 1
+  },
+  "source_bytes": 166213125,
+  "source_sha256": "ebf7a23098fcf3f0135083370f783ad010116760ce4c99dab5f3d9c1ee4b53db",
+  "states": [
+    "RUNNING",
+    "FINISHED"
+  ],
+  "status": "retained_memcheck_stacks_extracted"
+}

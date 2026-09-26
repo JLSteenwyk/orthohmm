@@ -1,5 +1,17 @@
 # Publication Progress
 
+## High-CPM Memcheck Stacks Localized (2026-09-26)
+
+Rechecked the retained XML digest before and after streaming extraction.
+All nine non-leak reports have libc `__wcscat_avx2` top frames and Python
+initialization/getpath frames, rather than the later admission crash site.
+Preserved full non-leak stacks and separate record/occurrence counts in the
+[stack inventory](QFO_CPM_MEMCHECK_STACKS_22164.md); ten extractor tests pass.
+This narrows the next diagnostic to a minimal interpreter-startup control,
+not another expensive refinement attempt. It does not establish false positives,
+the SIGSEGV cause, or a fix. Leak interpretation and post-failure input/runtime
+checks remain open; high-CPM scoring is still not admitted. No DGX action occurred.
+
 ## Complete Comparator Figure Bundle Relocated (2026-09-26)
 
 Added an explicit complete-comparator audit scope without changing historical
