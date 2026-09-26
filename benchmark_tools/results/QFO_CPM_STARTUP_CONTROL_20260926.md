@@ -2,8 +2,11 @@
 
 One local diagnostic ran the retained interpreter with `-B -S -c pass` under
 the same Memcheck flags as diagnostic 22164. No site initialization, OrthoHMM
-code or scientific-package imports were requested. The runner used the same
-launcher directory and diagnostic environment overrides, checked the retained
+code or scientific-package imports were requested. The runner reused the
+allocator and thread overrides, but used the checkpoint-recovery directory
+for both cwd and PYTHONPATH instead of the original replay directory. This
+recorded difference means the control is not an exact environment match.
+It checked the retained
 Python/libc/Valgrind component identities before and after execution, imposed
 a 120-second timeout, and did not retry. This was not a scientific workload
 or a matched-resource measurement.

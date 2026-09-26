@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Memcheck Post-Failure Files and Partition Verified (2026-09-26)
+
+Read-only system-Python checks verified 1,053 distinct retained input/runtime
+files, log and XML, then 1,056 files including output/readback evidence.
+Independent membership validation confirms 984,137 genes exactly once in
+390,845 groups; bytes and metadata match the successful native refinement.
+[Result and commands](QFO_CPM_MEMCHECK_ARTIFACTS_22164.md) retain original exit 97
+and all no-admission flags. Sixteen artifact/partition tests pass. Runtime
+probes were not rerun and the crash cause remains unresolved. Corrected the
+startup-control prose to disclose its different cwd/PYTHONPATH; the original
+machine-readable report already records the actual checkpoint-recovery path.
+
 ## Minimal Startup Reproduces Memcheck Error Kinds (2026-09-26)
 
 Ran one bounded `-B -S -c pass` control with the retained Python/libc/Valgrind
