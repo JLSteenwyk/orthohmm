@@ -257,6 +257,14 @@ Git blobs, and standard/high-sensitivity installed fixtures pass. This is a new
 compiled artifact with its own lock, not the original benchmark runtime or
 full phylogenetic reproduction; the source-only archive remains unchanged.
 
+The [exact overlay artifact inventory](results/FROZEN_OVERLAY_ARTIFACT_INVENTORY_20260926.md)
+binds all 11 installed wheel identities to provider notice metadata and verifies
+all 42 RECORD entries, the embedded license and direct native linkage of the
+new project wheel. Ten third-party wheels match the prior inventory; the new
+OrthoHMM wheel is not silently treated as the earlier development artifact.
+Full transitive dependencies and selected-archive redistribution review remain
+separate requirements.
+
 The subsequent [installed inferred-phylogeny fixture](results/PUBLICATION_FROZEN_PHYLOGENY_INSTALL_20260926.md)
 executes HMM search, candidate expansion, marker-based species-tree inference,
 gene-tree inference and reconciliation on 16 synthetic proteins. It verifies

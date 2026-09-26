@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Exact Installed-Wheel Notice and Content Inventory (2026-09-26)
+
+The preceding turn made progress with the separate baseline FastTree build.
+Revalidated job 22179 RUNNING at 43:48, then closed an artifact-identity gap:
+inventoried all 11 actual setup-overlay wheels rather than transferring the
+older development-runtime notice report. Ten third-party wheels match the
+earlier bytes; the new project wheel has its own full 42-entry RECORD, embedded
+license and direct native-linkage readback. All 30 focused tests pass.
+[Evidence and limits](FROZEN_OVERLAY_ARTIFACT_INVENTORY_20260926.md).
+
+No inference or installation changed. The 79 notice candidates and 47 native
+members are inventoried, not cleared for redistribution; transitive dependency,
+compiler/OS and final selected-archive obligations remain open. Fresh OrthoBench
+admission awaits completion, with controlled timing, uncertainty and broader
+publication requirements still outstanding. DGX remains deferred and the goal
+stays active.
+
 ## Baseline FastTree Build and Installed Fixture Verified (2026-09-26)
 
 The preceding turn completed hierarchy/selection readback. Advanced a separate

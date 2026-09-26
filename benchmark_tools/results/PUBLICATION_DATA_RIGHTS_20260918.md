@@ -77,6 +77,13 @@ retained scientific evidence to resolve a packaging question.
 
 ## Remaining Actions
 
+The [exact frozen-overlay artifact inventory](FROZEN_OVERLAY_ARTIFACT_INVENTORY_20260926.md)
+now binds the current 11-wheel installed runtime to notice metadata. Its ten
+third-party wheels match the older inventory byte-for-byte, while the separately
+rebuilt project wheel has its own RECORD/license/linkage readback. This records
+79 notice candidates and 47 native members, not a complete notice/compatibility
+or transitive dependency review. No new wheel or license text is redistributed.
+
 The [baseline FastTree source-build result](FASTTREE_BASELINE_BUILD_RESULT_20260926.md)
 adds two locally identical double-precision x86-64-baseline binaries, with libc,
 libm and loader dependencies observed, and a verified installed fixture. It
