@@ -1,5 +1,13 @@
 # VGNC Dependency Structure
 
+## Subsequent Synthetic Validation
+
+The [September 26 family-pair variance screen](DYADIC_F1_VARIANCE_RESULT_20260926.md)
+tests a candidate paired F1 linearization on 8,000 synthetic replicates.
+It passes its necessary coverage gate when families are independent but
+under-covers when groups of families share extra effects. This does not admit
+native VGNC confidence intervals or resolve biological exchangeability.
+
 ## Executed Audit
 
 The reference contains16863 family labels,36986 proteins and23934 asserted

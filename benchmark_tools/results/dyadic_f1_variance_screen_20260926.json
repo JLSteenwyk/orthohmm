@@ -1,0 +1,178 @@
+{
+  "all_in_model_cells_pass": true,
+  "benchmark_intervals_admitted": false,
+  "generator": "PCG64 with SeedSequence([seed, case_index, family_count])",
+  "limitations": [
+    "Candidate delta-method variance, not a theorem for native VGNC F1.",
+    "Synthetic exchangeable families do not establish biological family independence.",
+    "Known target is the difference of ratios of expected counts, not the expectation of sample F1.",
+    "Invalid variances count as noncoverage; no clipping, retries or case omission.",
+    "Coverage screen is necessary exploratory evidence, not authorization to publish benchmark CIs."
+  ],
+  "numpy_version": "2.2.6",
+  "rows": [
+    {
+      "bias": 0.00016128228944391199,
+      "candidate_coverage": 0.937,
+      "candidate_coverage_wilson95": [
+        0.920205076295354,
+        0.9504503367882711
+      ],
+      "candidate_covered": 937,
+      "case": "independent_sparse",
+      "empirical_variance": 2.403251351165488e-05,
+      "families": 64,
+      "invalid_candidate_variances": 0,
+      "known_ratio_of_expected_counts_difference": -0.06154751063651498,
+      "mean_candidate_variance": 2.2846301743789817e-05,
+      "mean_estimate": -0.06138622834707107,
+      "mean_naive_variance": 2.3589205594662806e-05,
+      "naive_coverage": 0.943,
+      "prespecified_screen_pass": true,
+      "replicates": 1000
+    },
+    {
+      "bias": 6.372347843079662e-05,
+      "candidate_coverage": 0.953,
+      "candidate_coverage_wilson95": [
+        0.9380600619184716,
+        0.9644728948936154
+      ],
+      "candidate_covered": 953,
+      "case": "independent_sparse",
+      "empirical_variance": 5.827323672826595e-06,
+      "families": 256,
+      "invalid_candidate_variances": 0,
+      "known_ratio_of_expected_counts_difference": -0.061840634636096126,
+      "mean_candidate_variance": 5.964603697118965e-06,
+      "mean_estimate": -0.06177691115766533,
+      "mean_naive_variance": 5.963530008264195e-06,
+      "naive_coverage": 0.951,
+      "prespecified_screen_pass": true,
+      "replicates": 1000
+    },
+    {
+      "bias": -6.811941553314105e-05,
+      "candidate_coverage": 0.932,
+      "candidate_coverage_wilson95": [
+        0.9146861384770105,
+        0.9460075421914699
+      ],
+      "candidate_covered": 932,
+      "case": "node_sparse",
+      "empirical_variance": 2.8373648034920695e-05,
+      "families": 64,
+      "invalid_candidate_variances": 0,
+      "known_ratio_of_expected_counts_difference": -0.06154751063651498,
+      "mean_candidate_variance": 2.6580956384738355e-05,
+      "mean_estimate": -0.06161563005204812,
+      "mean_naive_variance": 4.0707653805448815e-05,
+      "naive_coverage": 0.978,
+      "prespecified_screen_pass": true,
+      "replicates": 1000
+    },
+    {
+      "bias": -4.322237445217314e-05,
+      "candidate_coverage": 0.95,
+      "candidate_coverage_wilson95": [
+        0.9346861797557492,
+        0.9618697376072513
+      ],
+      "candidate_covered": 950,
+      "case": "node_sparse",
+      "empirical_variance": 6.640834530621327e-06,
+      "families": 256,
+      "invalid_candidate_variances": 0,
+      "known_ratio_of_expected_counts_difference": -0.061840634636096126,
+      "mean_candidate_variance": 6.79408644964037e-06,
+      "mean_estimate": -0.0618838570105483,
+      "mean_naive_variance": 1.024879085811798e-05,
+      "naive_coverage": 0.985,
+      "prespecified_screen_pass": true,
+      "replicates": 1000
+    },
+    {
+      "bias": 7.112491239910645e-05,
+      "candidate_coverage": 0.934,
+      "candidate_coverage_wilson95": [
+        0.9168907240940241,
+        0.9477876495405142
+      ],
+      "candidate_covered": 934,
+      "case": "node_dense",
+      "empirical_variance": 2.6126766854425057e-05,
+      "families": 64,
+      "invalid_candidate_variances": 0,
+      "known_ratio_of_expected_counts_difference": -0.08226939933230704,
+      "mean_candidate_variance": 2.5736924822177412e-05,
+      "mean_estimate": -0.08219827441990793,
+      "mean_naive_variance": 4.0887504463662144e-05,
+      "naive_coverage": 0.981,
+      "prespecified_screen_pass": true,
+      "replicates": 1000
+    },
+    {
+      "bias": 0.00013994551509168007,
+      "candidate_coverage": 0.952,
+      "candidate_coverage_wilson95": [
+        0.936933911349866,
+        0.963606698979192
+      ],
+      "candidate_covered": 952,
+      "case": "node_dense",
+      "empirical_variance": 5.51746022387795e-06,
+      "families": 256,
+      "invalid_candidate_variances": 0,
+      "known_ratio_of_expected_counts_difference": -0.12362874817536357,
+      "mean_candidate_variance": 5.607921509666743e-06,
+      "mean_estimate": -0.12348880266027189,
+      "mean_naive_variance": 6.494459463150876e-06,
+      "naive_coverage": 0.963,
+      "prespecified_screen_pass": true,
+      "replicates": 1000
+    },
+    {
+      "bias": -0.0003513927291952379,
+      "candidate_coverage": 0.791,
+      "candidate_coverage_wilson95": [
+        0.7647095198771304,
+        0.8150633066842766
+      ],
+      "candidate_covered": 791,
+      "case": "clade_sparse",
+      "empirical_variance": 5.979522303419231e-05,
+      "families": 64,
+      "invalid_candidate_variances": 0,
+      "known_ratio_of_expected_counts_difference": -0.06154751063651498,
+      "mean_candidate_variance": 2.628951474971961e-05,
+      "mean_estimate": -0.06189890336571022,
+      "mean_naive_variance": 3.918130935599187e-05,
+      "naive_coverage": 0.881,
+      "prespecified_screen_pass": null,
+      "replicates": 1000
+    },
+    {
+      "bias": -0.00016560021275877773,
+      "candidate_coverage": 0.827,
+      "candidate_coverage_wilson95": [
+        0.8023165344033985,
+        0.8491807655470485
+      ],
+      "candidate_covered": 827,
+      "case": "clade_sparse",
+      "empirical_variance": 1.4471453619159655e-05,
+      "families": 256,
+      "invalid_candidate_variances": 0,
+      "known_ratio_of_expected_counts_difference": -0.061840634636096126,
+      "mean_candidate_variance": 6.796233511674396e-06,
+      "mean_estimate": -0.0620062348488549,
+      "mean_naive_variance": 1.018538714565229e-05,
+      "naive_coverage": 0.895,
+      "prespecified_screen_pass": null,
+      "replicates": 1000
+    }
+  ],
+  "seed": 20260927,
+  "source_sha256": "527da6eb2ae84d20fb466f3dc0416cb65699afbdbd24ae841058e73dfe82bad0",
+  "status": "synthetic_variance_screen_complete"
+}

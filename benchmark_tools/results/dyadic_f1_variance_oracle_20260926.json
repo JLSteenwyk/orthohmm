@@ -1,0 +1,119 @@
+{
+  "benchmark_intervals_admitted": false,
+  "limitations": [
+    "Post-screen algebra audit, not a new coverage gate or exact nonlinear-F1 variance.",
+    "Simulation model assumptions do not establish validity for native VGNC."
+  ],
+  "rows": [
+    {
+      "candidate_to_oracle_variance": 0.9599458810579762,
+      "case": "independent_sparse",
+      "empirical_to_oracle_variance": 1.0097876065763784,
+      "families": 64,
+      "oracle": {
+        "conditional_diagonal_variance": 1.463540794562651e-05,
+        "conditional_poisson_variance": 9.164164712167946e-06,
+        "exact_linearized_variance": 2.3799572657794455e-05,
+        "latent_effect_variance": 0.0,
+        "target": -0.06154751063651498
+      }
+    },
+    {
+      "candidate_to_oracle_variance": 1.0001737993370252,
+      "case": "independent_sparse",
+      "empirical_to_oracle_variance": 0.9771540162228681,
+      "families": 256,
+      "oracle": {
+        "conditional_diagonal_variance": 3.655695232107719e-06,
+        "conditional_poisson_variance": 2.3078720009798295e-06,
+        "exact_linearized_variance": 5.9635672330875485e-06,
+        "latent_effect_variance": 0.0,
+        "target": -0.061840634636096126
+      }
+    },
+    {
+      "candidate_to_oracle_variance": 0.9748768269429202,
+      "case": "node_sparse",
+      "empirical_to_oracle_variance": 1.0406251590315374,
+      "families": 64,
+      "oracle": {
+        "conditional_diagonal_variance": 1.3732542290782598e-05,
+        "conditional_poisson_variance": 9.164164712167946e-06,
+        "exact_linearized_variance": 2.726596391473637e-05,
+        "latent_effect_variance": 4.369256911785825e-06,
+        "target": -0.06154751063651498
+      }
+    },
+    {
+      "candidate_to_oracle_variance": 0.9976933798329146,
+      "case": "node_sparse",
+      "empirical_to_oracle_variance": 0.9751887464012806,
+      "families": 256,
+      "oracle": {
+        "conditional_diagonal_variance": 3.4303676217562645e-06,
+        "conditional_poisson_variance": 2.3078720009798295e-06,
+        "exact_linearized_variance": 6.809794057948131e-06,
+        "latent_effect_variance": 1.0715544352120367e-06,
+        "target": -0.061840634636096126
+      }
+    },
+    {
+      "candidate_to_oracle_variance": 0.9706378564872598,
+      "case": "node_dense",
+      "empirical_to_oracle_variance": 0.9853402903313928,
+      "families": 64,
+      "oracle": {
+        "conditional_diagonal_variance": 1.2788888713070466e-05,
+        "conditional_poisson_variance": 1.2887654946441963e-05,
+        "exact_linearized_variance": 2.6515476034820435e-05,
+        "latent_effect_variance": 8.389323753080045e-07,
+        "target": -0.08226939933230704
+      }
+    },
+    {
+      "candidate_to_oracle_variance": 0.9886788712439797,
+      "case": "node_dense",
+      "empirical_to_oracle_variance": 0.9727305093115286,
+      "families": 256,
+      "oracle": {
+        "conditional_diagonal_variance": 2.0826471416385015e-06,
+        "conditional_poisson_variance": 3.067755628539977e-06,
+        "exact_linearized_variance": 5.672136497274105e-06,
+        "latent_effect_variance": 5.217337270956268e-07,
+        "target": -0.12362874817536357
+      }
+    },
+    {
+      "candidate_to_oracle_variance": 0.4544367905585084,
+      "case": "clade_sparse",
+      "empirical_to_oracle_variance": 1.0336116700928595,
+      "families": 64,
+      "oracle": {
+        "conditional_diagonal_variance": 1.3732542290782598e-05,
+        "conditional_poisson_variance": 9.164164712167946e-06,
+        "exact_linearized_variance": 5.7850762297237144e-05,
+        "latent_effect_variance": 3.49540552942866e-05,
+        "target": -0.06154751063651498
+      }
+    },
+    {
+      "candidate_to_oracle_variance": 0.4749065618553122,
+      "case": "clade_sparse",
+      "empirical_to_oracle_variance": 1.0112348658294583,
+      "families": 256,
+      "oracle": {
+        "conditional_diagonal_variance": 3.4303676217562645e-06,
+        "conditional_poisson_variance": 2.3078720009798295e-06,
+        "exact_linearized_variance": 1.4310675104432388e-05,
+        "latent_effect_variance": 8.572435481696294e-06,
+        "target": -0.061840634636096126
+      }
+    }
+  ],
+  "script_sha256": "e1f5407941e960e90371cb6ca755b0ddf12d536214eb896cd1f39ee24fd337c9",
+  "source": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/dyadic_f1_variance_screen_20260926.json",
+    "sha256": "41088e1efe30d2661cfc8a7364c306ab318610c950d7809e8621242ec2eef66b"
+  },
+  "status": "closed_form_linearized_variance_readback"
+}

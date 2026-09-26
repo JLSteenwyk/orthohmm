@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Family-Pair Uncertainty Candidate Screened (2026-09-26)
+
+The preceding turn made progress on MAFFT source-build reproduction. Returned
+to the missing scientific uncertainty requirement and prespecified a synthetic
+paired-F1 variance screen in commit d49c1a3 before execution. All eight cells
+and 8,000 replicates completed. Six in-model cells meet the necessary coverage
+gate; shared-clade effects reduce coverage to 79.1-82.7%, preventing blanket
+application to biological families. A separate conditional-variance derivation
+checks the known targets and diagnoses the omitted dependence. Twelve tests
+pass. [Results, failures and next requirement](DYADIC_F1_VARIANCE_RESULT_20260926.md).
+No benchmark interval, score or default changed. Native block/count mapping,
+family-size robustness and biological exchangeability remain to be established;
+GO/EC, FAS and secondary-mean uncertainty are separate gaps. No simulation
+process remains running; DGX stays deferred and the full publication goal active.
+
 ## MAFFT Core Rebuilt and Pipeline Outputs Reproduced (2026-09-26)
 
 The preceding turn made concrete progress on FastTree provenance. Reacquired
