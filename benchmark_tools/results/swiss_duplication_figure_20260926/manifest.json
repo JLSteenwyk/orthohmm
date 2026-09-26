@@ -1,0 +1,47 @@
+{
+  "display_conversion": "Raw TSV differences multiplied by 100 for display",
+  "endpoints": 48,
+  "inputs": [
+    {
+      "bytes": 6285,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_duplication_strata_20260926/scores.tsv",
+      "sha256": "02ecd273ee93c8ef42bfdb6d629376052890ab3f3a3b0dc871e649a6430276d5"
+    },
+    {
+      "bytes": 10037,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_swiss_descriptive_features.py",
+      "sha256": "0654fbe8f468d8ff75cc31ae9ba95cafedcea8217b9ba2c513155c5da8556f52"
+    },
+    {
+      "bytes": 6063,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_swiss_duplication_strata.py",
+      "sha256": "cbcaad621a473432205589301470aa06637eb7fa05f3905ef393190ffc6f7b40"
+    }
+  ],
+  "matplotlib_version": "3.10.8",
+  "new_inferential_claims": false,
+  "outputs": [
+    {
+      "bytes": 4063,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_duplication_figure_20260926/endpoints.tsv",
+      "sha256": "1936346a1d2f0bffc17dfdb30533a47c1967b2102a9dab8482ec754f9b304c86"
+    },
+    {
+      "bytes": 25655,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_duplication_figure_20260926/swiss_duplication_descriptive.pdf",
+      "sha256": "e1b9eedb620bf2b021821889f0dac4d9eefc388a28f72cf138b0b6d96cb6ba96"
+    },
+    {
+      "bytes": 214699,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_duplication_figure_20260926/swiss_duplication_descriptive.png",
+      "sha256": "23fe76c61cf9e5130d34c80b1b90f695f9c2dbd7e6ce94c4dc3f2d259928de73"
+    },
+    {
+      "bytes": 128606,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_duplication_figure_20260926/swiss_duplication_descriptive.svg",
+      "sha256": "5770bd2254aa8a3e83952a476cae98f04f3b42e89256b2b560a1f232fef79471"
+    }
+  ],
+  "publication_ready": false,
+  "unavailable_endpoints": 0
+}

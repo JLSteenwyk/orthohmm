@@ -14,23 +14,25 @@ from benchmark_tools.plot_swiss_descriptive_features import validate, METHODS, M
 from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
 
 TABLE_SHA = "e6ec609604d9ab134bb7f7231a155d8d6685c05b44870affd840097752720619"
-HELPER_SHA = "d9947a6679117dee52e46153a8b27f3d6bde6c218ffee20ed958d6b54afc7e5e"
+HELPER_SHA = "0654fbe8f468d8ff75cc31ae9ba95cafedcea8217b9ba2c513155c5da8556f52"
+COMPLETE_TABLE_SHA = "02ecd273ee93c8ef42bfdb6d629376052890ab3f3a3b0dc871e649a6430276d5"
 BINS = dict(all=18, lower_duplication_fraction=9, upper_duplication_fraction=9,
             missing_duplication_fraction=0)
 STRATA = (("lower_duplication_fraction", "Lower annotation fraction (9 families)", "#007f87", "o"),
           ("upper_duplication_fraction", "Higher annotation fraction (9 families)", "#b1394b", "s"))
 
 
-def render(root, output):
+def render(root, output, *, complete=False):
     if output.exists() or output.is_symlink():
         raise FileExistsError(output)
-    table = root / "benchmark_tools/results/swiss_duplication_strata_20260923/scores.tsv"
+    date = "20260926" if complete else "20260923"
+    table = root / f"benchmark_tools/results/swiss_duplication_strata_{date}/scores.tsv"
     helper = Path(__file__).with_name("plot_swiss_descriptive_features.py")
     inputs = [record(table), record(helper), record(__file__)]
-    if [r["sha256"] for r in inputs[:2]] != [TABLE_SHA, HELPER_SHA]:
+    if [r["sha256"] for r in inputs[:2]] != [COMPLETE_TABLE_SHA if complete else TABLE_SHA, HELPER_SHA]:
         raise ValueError("Changed pinned source table or validator")
     with table.open() as stream:
-        indexed = validate(list(csv.DictReader(stream, delimiter="\t")), BINS)
+        indexed = validate(list(csv.DictReader(stream, delimiter="\t")), BINS, complete=complete)
     output.mkdir(parents=True)
     fig, axes = plt.subplots(1, 3, figsize=(15, 9))
     fig.subplots_adjust(left=.23, right=.98, top=.78, bottom=.22, wspace=.13)
@@ -50,10 +52,11 @@ def render(root, output):
                                       difference=value, status=row["status"]))
                 if value is not None:
                     ax.plot(value*100, y+(i-.5)*.18, marker=marker, color=color, markersize=5, linestyle="None")
-            if method == "orthomcl_1_4":
+            if method == "orthomcl_1_4" and not complete:
                 ax.text(.5, y, "Not yet admitted", transform=ax.get_yaxis_transform(), ha="center", va="center", fontsize=9)
         ax.set(xlim=(-45, 20), ylim=(7.6, -.6), xlabel="Difference (percentage points)")
-        ax.set_yticks(range(8), list(METHODS.values()) if column == 0 else [""]*8, fontsize=10)
+        labels = [label.replace(" (unavailable)", "") if complete else label for label in METHODS.values()]
+        ax.set_yticks(range(8), labels if column == 0 else [""]*8, fontsize=10)
         ax.set_title(f"{'ABC'[column]}  " + dict(F1="F1", PPV="Precision", TPR="Recall")[metric], loc="left", fontsize=12)
         ax.grid(axis="x", alpha=.15)
         ax.tick_params(length=0)
@@ -91,5 +94,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--complete", action="store_true")
     args = parser.parse_args()
-    render(args.root.resolve(), args.output.absolute())
+    render(args.root.resolve(), args.output.absolute(), complete=args.complete)

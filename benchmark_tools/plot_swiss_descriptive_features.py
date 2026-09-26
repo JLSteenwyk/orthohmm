@@ -33,6 +33,10 @@ SOURCES = {
     "identity": ("swiss_identity_strata_20260923/scores.tsv", "be8ddb6540b62582ebe53e05c33ffdc5893ed10651bfa57eb374d9791b3af664", IDENTITY_BINS),
     "fragment": ("swiss_fragment_strata_20260923/scores.tsv", "4ba79b1e6c9d0f9fabdd0136eddf43fa6ab2c2f9edd2660defe8781ee2aa432b", FRAGMENT_BINS),
 }
+COMPLETE_SOURCES = {
+    "identity": ("swiss_identity_strata_20260926/scores.tsv", "ccf1e749294663bc8a08e0c9e8ecf4402157e32bc965c795f73a674d8f75222b", IDENTITY_BINS),
+    "fragment": ("swiss_fragment_strata_20260926/scores.tsv", "0ddd62f5d9f6f7d9ef21ec4ed2df3b688ca8c21cdc3c5a609e73ff296691a921", FRAGMENT_BINS),
+}
 PANELS = {
     "identity": [("lower_identity", "Lower identity (9 families)"), ("higher_identity", "Higher identity (9 families)")],
     "fragment": [("historical_annotation_positive", "Annotation-positive (5)"),
@@ -42,14 +46,15 @@ PANELS = {
 }
 
 
-def validate(rows, bins):
+def validate(rows, bins, *, complete=False):
     expected = {(m, b) for m in METHODS for b in bins}
     indexed = {(r["method"], r["stratum"]): r for r in rows}
     if len(indexed) != len(rows) or set(indexed) != expected:
         raise ValueError("Incomplete or duplicated method/stratum table")
     for (method, stratum), row in indexed.items():
-        unavailable = method == "orthomcl_1_4" or bins[stratum] == 0
-        status = "method_not_admitted" if method == "orthomcl_1_4" else "empty_bin" if bins[stratum] == 0 else "descriptive"
+        missing_method = method == "orthomcl_1_4" and not complete
+        unavailable = missing_method or bins[stratum] == 0
+        status = "method_not_admitted" if missing_method else "empty_bin" if bins[stratum] == 0 else "descriptive"
         if row["status"] != status or int(row["families"]) != bins[stratum]:
             raise ValueError("Changed availability or family count")
         for metric in METRICS:
@@ -72,7 +77,7 @@ def validate(rows, bins):
     return indexed
 
 
-def figure(indexed, kind):
+def figure(indexed, kind, *, complete=False):
     strata = PANELS[kind]
     colors, markers = ("#007f87", "#b1394b", "#555555", "#ad7700"), ("o", "s", "^", "D")
     fig, axes = plt.subplots(1, 3, figsize=(15, 9))
@@ -97,10 +102,11 @@ def figure(indexed, kind):
                 if value is not None:
                     offset = (i-(len(strata)-1)/2)*.15
                     ax.plot(value*100, y+offset, marker=markers[i], color=colors[i], markersize=5, linestyle="None")
-            if method == "orthomcl_1_4":
+            if method == "orthomcl_1_4" and not complete:
                 ax.text(.5, y, "Not yet admitted", transform=ax.get_yaxis_transform(), ha="center", va="center", fontsize=9, color="#666666")
         ax.set(xlim=(lower, upper), ylim=(7.6, -.6), xlabel="Difference (percentage points)")
-        ax.set_yticks(range(8), list(METHODS.values()) if column == 0 else [""]*8, fontsize=10)
+        labels = [label.replace(" (unavailable)", "") if complete else label for label in METHODS.values()]
+        ax.set_yticks(range(8), labels if column == 0 else [""]*8, fontsize=10)
         ax.set_title(f"{'ABC'[column]}  " + dict(F1="F1", PPV="Precision", TPR="Recall")[metric], loc="left", fontsize=12)
         ax.grid(axis="x", alpha=.15)
         ax.tick_params(length=0)
@@ -119,22 +125,22 @@ def figure(indexed, kind):
     return fig, endpoints
 
 
-def render(root, output):
+def render(root, output, *, complete=False):
     if output.exists() or output.is_symlink():
         raise FileExistsError(output)
     tables, inputs = {}, [record(__file__)]
-    for kind, (relative, digest, bins) in SOURCES.items():
+    for kind, (relative, digest, bins) in (COMPLETE_SOURCES if complete else SOURCES).items():
         path = root / "benchmark_tools/results" / relative
         item = record(path)
         if item["sha256"] != digest:
             raise ValueError("Changed descriptive source table")
         with path.open() as stream:
-            tables[kind] = validate(list(csv.DictReader(stream, delimiter="\t")), bins)
+            tables[kind] = validate(list(csv.DictReader(stream, delimiter="\t")), bins, complete=complete)
         inputs.append(item)
     output.mkdir(parents=True)
     rows = []
     for kind, table in tables.items():
-        fig, endpoints = figure(table, kind)
+        fig, endpoints = figure(table, kind, complete=complete)
         try:
             for extension in ("png", "pdf", "svg"):
                 fig.savefig(output / f"swiss_{kind}_descriptive.{extension}", dpi=180)
@@ -160,5 +166,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
+    parser.add_argument("--complete", action="store_true")
     args = parser.parse_args()
-    render(args.root.resolve(), args.output.absolute())
+    render(args.root.resolve(), args.output.absolute(), complete=args.complete)

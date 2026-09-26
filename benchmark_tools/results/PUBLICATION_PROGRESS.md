@@ -1,5 +1,16 @@
 # Publication Progress
 
+## Complete Descriptive Strata Figures (2026-09-26)
+
+Added a pinned complete-panel mode to the existing identity/fragment and
+duplication plotters without changing historical defaults. Rendered and
+visually reviewed [all three updated figures](SWISS_COMPLETE_STRATA_FIGURES_20260926.md)
+with 192 available displayed endpoints. Twelve plotting tests passed,
+including inventory, mode-mismatch and stale-unavailable-label checks.
+No subgroup inference or bin selection changed. Manuscript strata links,
+prose, claims and preview still require integration; the broader scientific
+and release requirements remain incomplete.
+
 ## Complete Descriptive SwissTrees Strata (2026-09-26)
 
 Added explicit count-hash selection to four existing exporters, preserving
