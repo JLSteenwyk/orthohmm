@@ -15,6 +15,14 @@ def compile_command():
             "-march=x86-64", "-mtune=generic", "-o", "FastTree", "FastTree.c", "-lm"]
 
 
+def validate_help(code, stdout, stderr):
+    lines = (stdout + stderr).splitlines()
+    if code != 0 or not lines or lines[0] not in {
+        "FastTree 2.2.0 Double precision:", "FastTree Version 2.2.0 Double precision",
+    }:
+        raise ValueError("Unexpected built FastTree identity/precision")
+
+
 def run(repo, source, mafft, output):
     if output.exists() or output.is_symlink():
         raise FileExistsError(output)
@@ -45,8 +53,7 @@ def run(repo, source, mafft, output):
         binary = output / "build_a/FastTree"
         probe = subprocess.run([str(binary), "-help"], env=env, capture_output=True, text=True, timeout=30)
         report["help_probe"] = dict(returncode=probe.returncode, stdout=probe.stdout, stderr=probe.stderr)
-        if probe.returncode != 0 or "FastTree Version 2.2.0 Double precision" not in probe.stdout + probe.stderr:
-            raise ValueError("Unexpected built FastTree identity/precision")
+        validate_help(probe.returncode, probe.stdout, probe.stderr)
         for label, command in (("elf", ["/usr/bin/readelf", "-h", "-n", "-d", str(binary)]),
                                ("runtime_libraries", ["/usr/bin/ldd", str(binary)])):
             report[label] = subprocess.check_output(command, text=True, env=env, timeout=30)

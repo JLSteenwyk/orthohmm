@@ -31,3 +31,15 @@ After successful execution, independently validate outputs with the existing
 structure, sequence, event and hierarchy readers. Full-dataset equivalence,
 performance, cross-platform execution and dependency/source obligations remain
 separate requirements.
+
+## Help-Validator Correction Before Fixture Execution
+
+The two builds completed with identical hashes, but the driver failed before
+inference because it expected `FastTree Version ...` in `-help`. The retained
+source at line 1813 explicitly prints `FastTree ...` for that option, and the
+recorded probe exited zero with the correct version and double precision.
+Preserve that failed report. Correct the banner validator with regression tests;
+do not change compiler flags, rebuild, or overwrite outputs. A separate verifier
+will hash-check the retained binaries and execute the first fixture in a new
+directory, then run all four independent readbacks. This is an explicit harness
+correction, not an automatic retry of failed native inference.
