@@ -14,8 +14,8 @@ def test_method_executor_identity(tmp_path, method):
         assert executor.name == "publication_qfo_corrected_orthomcl_assessment_v1"
         return
     if method == "fastoma":
-        assert commit == module.FASTOMA_EXECUTOR
-        assert executor.name == "publication_qfo_corrected_fastoma_assessment_v1"
+        assert commit == module.FASTOMA_EXECUTOR == "0cc0a96c44e377f4e87a1e579ce12012d3478e4e"
+        assert executor.name == "publication_qfo_corrected_fastoma_assessment_v2"
         return
     is_of = method.startswith("orthofinder_")
     assert commit == (module.OF_EXECUTOR if is_of else module.EXECUTOR)

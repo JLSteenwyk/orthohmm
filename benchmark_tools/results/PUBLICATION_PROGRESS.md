@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Full Regression Suite and Native Checks Refreshed (2026-09-26)
+
+The preceding turn completed the full unit run and exposed one stale FastOMA
+executor-name assertion. Verified production history and the actual replacement
+checkout before updating the test to v2 and asserting its exact frozen commit.
+No production or scientific configuration changed. The rerun has **9,757 passes,
+10 skips, zero failures**; all ten opt-in native cases plus CLI integration
+separately pass (11 tests). The original failed run remains retained.
+[Commands, hashes and scope](PUBLICATION_TEST_REFRESH_20260926.md).
+No test process remains running. The DGX remains deferred. Controlled timing,
+high-CPM failure diagnosis/admission, full provenance and portable native
+reproduction, rights and release preparation remain incomplete; the publication
+goal remains active. Shared-host test durations are not timing benchmarks.
+
 ## OrthoMCL Replicate Difference Bounded to Unscored Groups (2026-09-26)
 
 Compared April/July partitions and rescored both under the same reference.

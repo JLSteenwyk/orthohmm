@@ -1,5 +1,8 @@
 # Publication Test Refresh
 
+Latest refresh: [September 26 full unit and native checks](PUBLICATION_TEST_REFRESH_20260926.md).
+The historical runs below remain unchanged.
+
 ## Current-Source Refresh At 53f55ff
 
 Tested `53f55ff4666eda39a51b4370a136754e95f4bf5c` on September 19, 2026
