@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Recovered Failure Reference Exposure Running (2026-09-26)
+
+Submitted **22175**, confirmed RUNNING, to measure the direct reference
+exposure of the 53 failed queries using the newly verified final-group
+membership report. The [job wrapper](qfo_recovered_reference_impact_20260926.sh)
+checks that report's SHA256 and the clean frozen executor
+`9b9ab8dc7f56b7dfc29e2eec2f94cc919b06a018`; its reference-impact tests
+are included in the retained 124-test executor receipt. Resources are
+two CPUs / 64 GiB / four hours, no requeue, on the shared host.
+Expected output is `benchmarks/work/qfo_recovered_reference_impact_20260926/summary.json`.
+This audits direct SwissTrees, pooled TreeFam-A, VGNC and annotation
+exposure, not a repaired-search counterfactual or an accuracy-effect bound.
+
+Assessment **22174** remains RUNNING (verified at 7:13 elapsed).
+No corrected score is admitted yet. Next: validate reference-exposure
+output; independently admit the completed assessment before updating
+the eight-method comparison and uncertainty analysis. DGX remains deferred.
+The preceding status turn was a verified wait; this turn launches the
+next independent failure analysis. Publication readiness remains unproven.
+
 ## Failed-Query Membership Verified (2026-09-26)
 
 Audit **22173 completed 0:0 in 3:32**. The
