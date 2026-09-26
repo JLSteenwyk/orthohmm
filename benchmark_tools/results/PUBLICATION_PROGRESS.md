@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Upstream OrthoBench Comparator Scores Cross-Checked (2026-09-26)
+
+The retained upstream evaluator functions return exactly identical precision,
+recall and F1 for all five newly traced comparator inputs. Preserved stdout,
+108 records and the 251,378-gene expected universe; twenty tests pass.
+[Cross-check and caveats](RETAINED_OB_UPSTREAM_CROSSCHECK_20260926.md).
+The July OrthoMCL readback has 216,949 unique genes; the historical count of
+216,950 matches April, which additionally contains ENSP00000476467. Both July
+parsers agree, so this is not a parser discrepancy. Gene-inventory comparison
+does not prove partition equality or historical consumption. No inference,
+default, scoring endpoint or controlled timing claim changed.
+
 ## Five OrthoBench Comparator Inputs Rescored (2026-09-26)
 
 Located and hashed the missing direct prediction inputs and independently

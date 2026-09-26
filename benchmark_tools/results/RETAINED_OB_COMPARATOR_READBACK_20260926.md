@@ -38,3 +38,8 @@ these exact files were consumed historically. Commands, versions, native
 conversion provenance, resource evidence and historical input consumption still
 need separate consolidation. Existing score tables are unchanged; this report
 supplements rather than retroactively rewrites their provenance.
+
+The subsequent [upstream-function cross-check](RETAINED_OB_UPSTREAM_CROSSCHECK_20260926.md)
+returns exactly identical precision, recall and F1 for all five rows. It also
+documents a one-gene inventory difference between the retained April and July
+OrthoMCL outputs; current readback uses July and is not a partition-identity claim.

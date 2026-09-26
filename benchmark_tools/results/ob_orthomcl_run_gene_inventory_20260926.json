@@ -1,0 +1,35 @@
+{
+  "counts": {
+    "april": 216950,
+    "july": 216949
+  },
+  "differences": {
+    "april_only": [
+      "ENSP00000476467"
+    ],
+    "july_only": []
+  },
+  "inputs": [
+    {
+      "bytes": 11673310,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/Apr_20/all_orthomcl.out",
+      "sha256": "6234d4fd517826fdf4fd9c25cca14b8d0bf58aef089c407eae7a57324e53e32a"
+    },
+    {
+      "bytes": 11673296,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/Jul_25/all_orthomcl.out",
+      "sha256": "1add0db6640e0451184975b5cbdf085ff404bbf24dadb66402921cd4dfd8a227"
+    }
+  ],
+  "limitations": [
+    "Unique gene inventory comparison only; partition equality and historical execution not established.",
+    "This report does not rescore the April run or bound score effects."
+  ],
+  "parser": {
+    "bytes": 6739,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/normalize_three_kingdoms_orthogroups.py",
+    "sha256": "baf46e5cca5e938269c5cafcd7cd18466c776e3ce175f88cf513df11729cce1d"
+  },
+  "publication_ready": false,
+  "status": "retained_orthomcl_gene_inventory_compared"
+}
