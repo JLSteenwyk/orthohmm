@@ -1,0 +1,26 @@
+{
+  "biopython_version": "1.86",
+  "checked_record_count": 17780,
+  "full_readback": {
+    "bytes": 5475541,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/installed_ob_historical_sequences_20260926.json",
+    "sha256": "ef257beffe65e0047cdfe1bfdfb624b4c9e3fa096a8f51103fd72c062dd1fe50"
+  },
+  "gene_alignments": 8681,
+  "limitations": [
+    "Exact candidate residues; aligned residues compared ignoring case and removing only '-' gaps.",
+    "Validates identity and concatenation, not biological alignment quality or tree optimality.",
+    "Node reconciliation events, pair completeness and native-run admission remain separate."
+  ],
+  "note": "Historical p1_c1_r1 sequence validation, not admission of installed job 22179.",
+  "reader": {
+    "bytes": 7315,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_phylogeny_sequences.py",
+    "sha256": "5345d10e14c16f04e8de2eea1055bbf6351989f8ab3535bbb606599d92aaa6d8"
+  },
+  "reconciliation_semantics_recomputed": false,
+  "scientific_scores_admitted": false,
+  "species_alignments": 200,
+  "status": "phylogeny_sequence_content_verified",
+  "supermatrix_columns": 181089
+}

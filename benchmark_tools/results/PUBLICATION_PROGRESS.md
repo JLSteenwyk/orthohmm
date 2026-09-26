@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Full Historical Alignment and Supermatrix Readback (2026-09-26)
+
+The preceding turn made progress with structural tree/pair validation. Added
+independent sequence-content validation using Biopython, retaining the native
+method and running executor unchanged. The installed fixture and full historical
+OrthoBench p1_c1_r1 both pass: 8,681 gene-family alignments, 200 species-tree
+marker alignments, and an exactly reconstructed 181,089-column supermatrix.
+All 17,780 watched records pass final rehashing and all 66 focused tests pass.
+[Details, receipts, command and limitations](PHYLOGENY_SEQUENCE_READBACK_20260926.md).
+
+Job 22179 remains RUNNING at 22:53 with 32 CPUs/128 GiB allocated; its live log
+has reached 5.56% of the all-to-all search stage. This is not a percentage of
+the complete pipeline. No score or default changed. Event semantics and pair
+completeness remain to be validated, followed by full fresh-run readback after
+native completion. Controlled timing and the other publication requirements
+remain open. DGX stays deferred and the full goal remains active.
+
 ## Full Historical Phylogeny Structural Readback (2026-09-26)
 
 The preceding turn made progress with the committed exact-input inventory
