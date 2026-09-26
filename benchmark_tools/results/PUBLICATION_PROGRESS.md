@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Full Installed OrthoBench Reproduction Started, Job 22179 (2026-09-26)
+
+The preceding turn completed rare-error validation and integrated its failure
+into the manuscript. Advanced full-dataset reproducibility beyond small
+fixtures: [prepared a fresh installed-package run](INSTALLED_ORTHOBENCH_PROTOCOL_20260926.md)
+with 12 privately copied, byte-verified FASTAs and 251,378 unique proteins.
+Installed source/tool identities pass preflight; three focused tests pass.
+Executor 80e3cc227f3e5c2b00f6af03be0614d362498c9d is in a clean detached worktree;
+the submission pins plan SHA-256
+5fd8dc70c337951706fe9246c2bf08d1191196939da066c5b74bba0bd3dd2b12.
+[Submission snapshot](installed_orthobench_submission_22179.json) records job
+22179 RUNNING on bizon, 32 CPUs/128 GiB, and a live log entering fresh builtin
+all-to-all HMM search. No checkpoint or reference labels are passed to inference.
+This is shared-host reproduction, not part of the controlled timing panel.
+Next: poll this exact job, preserve any failure, and after native completion
+independently validate coverage, fresh phylogeny, partitions and all-family
+scores. No new score or reproduction-equivalence claim is admitted yet.
+DGX remains deferred; the full publication objective stays active.
+
 ## Reference-Size Uncertainty Screen Retains Boundary Failure (2026-09-26)
 
 The preceding turn completed the eight-method corrected VGNC count mapping.

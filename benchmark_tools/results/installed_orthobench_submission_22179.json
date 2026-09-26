@@ -1,0 +1,44 @@
+{
+  "executor_commit": "80e3cc227f3e5c2b00f6af03be0614d362498c9d",
+  "job_id": 22179,
+  "log_tail_snapshot": "  ____       _   _           _    _ __  __ __  __\n / __ \\     | | | |         | |  | |  \\/  |  \\/  |\n| |  | |_ __| |_| |__   ___ | |__| | \\  / | \\  / |\n| |  | | '__| __| '_ \\ / _ \\|  __  | |\\/| | |\\/| |\n| |__| | |  | |_| | | | (_) | |  | | |  | | |  | |\n \\____/|_|   \\__|_| |_|\\___/|_|  |_|_|  |_|_|  |_|\n\nVersion: 0.5.0\n\n-------------\n| Arguments |\n-------------\nDirectory of FASTA files: /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/input\nNumber of FASTA files: 12\nDirectory for output files: /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/inference\nStep to start analysis: NA\nStep to stop analysis: NA\nSearch engine: built-in (profile HMM + k-mer prefilter)\nAccuracy profile: high_sensitivity\nE-value threshold: 0.0001\nSubstitution matrix: BLOSUM62\nClustering: Leiden CPM (resolution=0.1)\nSingle-copy threshold: 0.5\nCPUs: 32\n\n\nStep 1/5: Conducting all-to-all comparisons (built-in search).\n",
+  "observed_utc": "2026-09-26T22:03:37.003838+00:00",
+  "plan": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/plan.json",
+    "sha256": "5fd8dc70c337951706fe9246c2bf08d1191196939da066c5b74bba0bd3dd2b12"
+  },
+  "publication_ready": false,
+  "scheduler": {
+    "sacct": {
+      "command": [
+        "sacct",
+        "-j",
+        "22179",
+        "--parsable2",
+        "--format=JobIDRaw,State,ExitCode,Elapsed,AllocCPUS,ReqMem"
+      ],
+      "output": "JobIDRaw|State|ExitCode|Elapsed|AllocCPUS|ReqMem\n22179|RUNNING|0:0|00:01:00|32|128G\n22179.batch|RUNNING|0:0|00:01:00|32|\n"
+    },
+    "scontrol": {
+      "command": [
+        "scontrol",
+        "show",
+        "job",
+        "22179"
+      ],
+      "output": "JobId=22179 JobName=installed_ob_repro\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=RUNNING Reason=None Dependency=(null)\n   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:01:00 TimeLimit=1-00:00:00 TimeMin=N/A\n   SubmitTime=2026-09-26T18:02:37 EligibleTime=2026-09-26T18:02:37\n   AccrueTime=2026-09-26T18:02:37\n   StartTime=2026-09-26T18:02:37 EndTime=2026-09-27T18:02:37 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-26T18:02:37 Scheduler=Main\n   Partition=gpu AllocNode:Sid=bizon-link:2840814\n   ReqNodeList=bizon ExcNodeList=(null)\n   NodeList=bizon\n   BatchHost=bizon\n   NumNodes=1 NumCPUs=32 NumTasks=1 CPUs/Task=32 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=32,mem=128G,node=1,billing=32\n   AllocTRES=cpu=32,mem=128G,node=1,billing=32\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=32 MinMemoryNode=128G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_ob_executor_20260926/benchmark_tools/run_installed_orthobench.slurm\n   WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\n   StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/slurm-22179.log\n   StdIn=/dev/null\n   StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/slurm-22179.log\n   TresPerTask=cpu=32\n   \n\n"
+    },
+    "squeue": {
+      "command": [
+        "squeue",
+        "-j",
+        "22179",
+        "-o",
+        "%i %T %M %C %m %R"
+      ],
+      "output": "JOBID STATE TIME CPUS MIN_MEMORY NODELIST(REASON)\n22179 RUNNING 1:00 32 128G bizon\n"
+    }
+  },
+  "scientific_scores_admitted": false,
+  "timing_scope": "shared-host reproduction, not controlled comparative timing"
+}
