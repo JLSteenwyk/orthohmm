@@ -1,0 +1,152 @@
+{
+  "engine": {
+    "bytes": 21146,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/search/engine.py",
+    "sha256": "596e6e56b6dd3c2e72bbfa5bb67087285bd22833e4897443df0f9629a2f18b74"
+  },
+  "executable": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/bin/python",
+  "hits": {
+    "bytes": 6766,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/search_sensitivity_hmm_fixture_20260926/hits.tsv",
+    "sha256": "41a035655e2a0be3bc1d8cc4faf60af5b35d14fb4d5eb2e95300e54759b71edb"
+  },
+  "includes_same_species_and_self_hits": true,
+  "inputs": [
+    {
+      "bytes": 862,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_phylogeny_smoke_20260926/input/S1.fa",
+      "sha256": "f648f8d56b6e3d351d2da7b5a5d002d75faf978d8c3b2dc5554bd205afe71d86"
+    },
+    {
+      "bytes": 862,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_phylogeny_smoke_20260926/input/S2.fa",
+      "sha256": "c7f3968bd8e6cd6135387fee635f4089138575490422db92c8a899fcfd5a81c1"
+    },
+    {
+      "bytes": 862,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_phylogeny_smoke_20260926/input/S3.fa",
+      "sha256": "a68cb8f4bc8fe5a641f6c9309d587ef27fde0ecdad053fdd1ef3bc00333b55c9"
+    },
+    {
+      "bytes": 862,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_phylogeny_smoke_20260926/input/S4.fa",
+      "sha256": "01b757c656c07b2987a329f0f3fee6ccf1a1bd7c5a2113bc838b3df2ffa6d92b"
+    }
+  ],
+  "isolated": true,
+  "pairs": [
+    {
+      "candidates": 6,
+      "hits": 6,
+      "query": "S1.fa",
+      "target": "S1.fa"
+    },
+    {
+      "candidates": 6,
+      "hits": 6,
+      "query": "S1.fa",
+      "target": "S2.fa"
+    },
+    {
+      "candidates": 6,
+      "hits": 6,
+      "query": "S1.fa",
+      "target": "S3.fa"
+    },
+    {
+      "candidates": 6,
+      "hits": 6,
+      "query": "S1.fa",
+      "target": "S4.fa"
+    },
+    {
+      "candidates": 6,
+      "hits": 6,
+      "query": "S2.fa",
+      "target": "S1.fa"
+    },
+    {
+      "candidates": 6,
+      "hits": 6,
+      "query": "S2.fa",
+      "target": "S2.fa"
+    },
+    {
+      "candidates": 6,
+      "hits": 6,
+      "query": "S2.fa",
+      "target": "S3.fa"
+    },
+    {
+      "candidates": 6,
+      "hits": 6,
+      "query": "S2.fa",
+      "target": "S4.fa"
+    },
+    {
+      "candidates": 6,
+      "hits": 6,
+      "query": "S3.fa",
+      "target": "S1.fa"
+    },
+    {
+      "candidates": 6,
+      "hits": 6,
+      "query": "S3.fa",
+      "target": "S2.fa"
+    },
+    {
+      "candidates": 6,
+      "hits": 6,
+      "query": "S3.fa",
+      "target": "S3.fa"
+    },
+    {
+      "candidates": 6,
+      "hits": 6,
+      "query": "S3.fa",
+      "target": "S4.fa"
+    },
+    {
+      "candidates": 6,
+      "hits": 6,
+      "query": "S4.fa",
+      "target": "S1.fa"
+    },
+    {
+      "candidates": 6,
+      "hits": 6,
+      "query": "S4.fa",
+      "target": "S2.fa"
+    },
+    {
+      "candidates": 6,
+      "hits": 6,
+      "query": "S4.fa",
+      "target": "S3.fa"
+    },
+    {
+      "candidates": 6,
+      "hits": 6,
+      "query": "S4.fa",
+      "target": "S4.fa"
+    }
+  ],
+  "prefix": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean",
+  "settings": {
+    "band_width": 64,
+    "cpus": 4,
+    "evalue_threshold": 0.0001,
+    "kmer_k": 4,
+    "matrix": "BLOSUM62",
+    "max_candidates_per_query": 100,
+    "threads_per_worker": 1
+  },
+  "source": {
+    "bytes": 6167,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/search_sensitivity_hmm.py",
+    "sha256": "267c91de4a75a2b89a5adfb53576fdb30a088205b0920b0ccf8cc3c1e4e8d8d2"
+  },
+  "status": "native_search_completed_pending_independent_readback",
+  "truth_labels_loaded": false
+}

@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Installed Search-Only Executor Verified (2026-09-26)
+
+The preceding status turn was a verified wait: job 22179 was RUNNING at
+1:05:45, with 43.75% of its initial search complete. Implemented the label-free
+HMM executor for the frozen sensitivity protocol. It requires isolated Python
+and installed package paths, calls the native production search with the
+prespecified settings, validates complete directed species-pair coverage and
+local indices, and retains scores, E-values, same-species hits and candidate
+counts. Input hashes and ordered IDs must match before/after execution.
+
+All 40 executor/input-preparation tests pass. A real installed-package search
+on the existing four-species, 16-protein synthetic fixture completed all 16
+species comparisons: 96 retained hits, 72 cross-species, 96 candidates.
+[Execution receipt](search_sensitivity_hmm_fixture_20260926.json) records the
+installed engine and raw-output identity. Independent TSV readback agrees with
+the receipt's total hit count. This is a serialization/integration check, not
+an accuracy result or sensitivity calibration.
+
+The first fixture invocation rejected its `.fa` extension before creating an
+output directory or running search (ValueError: Expected only regular species
+FASTA files). Added `.fa`/`.faa` support alongside `.fasta`, with regression
+tests; one subsequent native invocation completed. No inference failure was
+silently retried, and no calibration/reporting dataset was searched.
+
+Next: implement the failure-recording, hash-pinned per-dataset orchestrator,
+DIAMOND target-species searches and immutable Slurm executor, then run all 70
+datasets before independent scoring. The panel is not yet launched; this
+helper alone does not provide the complete failure/provenance wrapper. Fresh
+OrthoBench readback, controlled timing and broader publication requirements
+remain open. No scientific defaults changed; DGX remains deferred.
+
 ## Search-Sensitivity Calibration Inputs Verified (2026-09-26)
 
 The preceding turn made progress integrating reproducibility evidence into
