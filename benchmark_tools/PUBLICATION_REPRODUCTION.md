@@ -262,6 +262,12 @@ fresh tree work, exact input coverage, pair integrity and parsed tree tips.
 This closes the small-fixture pipeline check, not full publication-dataset
 reproduction or packaging of external MAFFT/FastTree installations.
 
+A [traced external-tool relocation](results/PUBLICATION_RELOCATED_PHYLOGENY_TOOLS_20260926.md)
+copies MAFFT's entrypoint/helper files and FastTree locally, explicitly sets
+`MAFFT_BINARIES`, and obtains byte-identical fixture outputs without traced
+access to either original tool prefix. Python and system libraries are not
+relocated, and binary redistribution/complete dependency closure remain open.
+
 The [rights register](results/PUBLICATION_DATA_RIGHTS_20260918.md) separates
 project code, reference datasets, upstream software and binaries. Local
 availability or inclusion in an evidence bundle is not blanket permission

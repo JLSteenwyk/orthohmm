@@ -1,5 +1,19 @@
 # Publication Progress
 
+## External MAFFT/FastTree Relocation Verified on the Fixture (2026-09-26)
+
+The preceding turn completed installed inferred-phylogeny execution. Identified
+MAFFT's absolute helper default and staged private copies of both entrypoints,
+all 34 MAFFT helper files, two available notices and four synthetic FASTAs.
+One traced run with explicit MAFFT_BINARIES and restricted PATH completes;
+five primary scientific outputs are byte-identical and the trace contains no
+original tool-prefix reference, including failed lookups. All 270 record entries
+were rechecked; 17 related tests pass. [Evidence and boundaries](PUBLICATION_RELOCATED_PHYLOGENY_TOOLS_20260926.md).
+Python/system libraries remain on the same host; this is not complete runtime
+portability or redistribution clearance. No binary was uploaded, no scientific
+default/score changed, no diagnostic remains running, and DGX remains deferred.
+The full publication objective remains active.
+
 ## Installed Frozen-Source Phylogeny Pipeline Exercised (2026-09-26)
 
 The preceding turn completed the setup-overlay installation. Ran the installed
