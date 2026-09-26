@@ -275,6 +275,13 @@ requires AVX2; this is not a portable source build or complete redistribution
 review. The workflow downloads without execution and leaves installed tools
 unchanged.
 
+A [MAFFT core source build](results/PUBLICATION_MAFFT_SOURCE_BUILD_20260926.md)
+now reconstructs all 34 historical helper files byte-for-byte from the pinned
+official 7.525 archive on this host. With its new prefix and explicit helper
+path, the installed phylogeny fixture again produces identical groups, pairs
+and selected trees. Optional RNA extensions were not built; source-archive
+notices and full runtime/environment review remain separate requirements.
+
 The [rights register](results/PUBLICATION_DATA_RIGHTS_20260918.md) separates
 project code, reference datasets, upstream software and binaries. Local
 availability or inclusion in an evidence bundle is not blanket permission

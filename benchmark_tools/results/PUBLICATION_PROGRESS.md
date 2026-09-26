@@ -1,5 +1,21 @@
 # Publication Progress
 
+## MAFFT Core Rebuilt and Pipeline Outputs Reproduced (2026-09-26)
+
+The preceding turn made concrete progress on FastTree provenance. Reacquired
+the official MAFFT 7.525 source archive and matched 172 of 173 source files
+against the retained installation; only the Makefile installation prefix
+differs. A private core-only build reconstructs all 34 helper files exactly.
+The installed frozen OrthoHMM phylogeny fixture passes with the new MAFFT and
+five selected outputs are byte-identical. The readback verifies 719 record
+entries; 19 related tests pass. [Evidence and executable workflow](PUBLICATION_MAFFT_SOURCE_BUILD_20260926.md).
+Retained 147 compiler-warning occurrences without modifying upstream source.
+Optional RNA extensions were not built; acquired archive notices still apply
+to those source files. No historical installation, scientific default or
+benchmark score changed. All build/fixture processes completed; DGX remains
+deferred. Controlled scaling, remaining scientific analyses, full runtime
+packaging and final release review remain open; the full goal stays active.
+
 ## FastTree Source and Release Executable Identified (2026-09-26)
 
 The preceding turn was a status response, not analysis progress. Resumed the

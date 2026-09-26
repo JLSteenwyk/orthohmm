@@ -77,6 +77,14 @@ retained scientific evidence to resolve a packaging question.
 
 ## Remaining Actions
 
+The [MAFFT source build](PUBLICATION_MAFFT_SOURCE_BUILD_20260926.md) now
+reconstructs all 34 installed helpers from the core target without building
+optional RNA extensions. This narrows the observed installed-helper provenance,
+but the acquired full archive still contains separately licensed extension
+source. No blanket BSD-only designation is made for that archive, and no
+third-party source or binaries were newly committed. Final selected-file
+notices and transitive dependencies still require review.
+
 The September 26 [FastTree acquisition](PUBLICATION_FASTTREE_ACQUISITION_20260926.md)
 binds the installed v2.2.0 executable to identical upstream release bytes and
 retrieves pinned source, license and documentation. The source header declares
