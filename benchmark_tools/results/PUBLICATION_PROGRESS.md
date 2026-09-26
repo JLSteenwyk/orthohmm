@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Full Historical Phylogeny Structural Readback (2026-09-26)
+
+The preceding turn made progress with the committed exact-input inventory
+gate. Revalidated job 22179 RUNNING and prepared an independent structural
+reader without modifying that job or its immutable executor. The installed
+synthetic fixture passes, followed by the full retained OrthoBench p1_c1_r1:
+251,378 genes, 54,445 source families, 8,681 reconciled families, 26,044 parsed
+trees and 966,439 native ortholog pairs. All 34,742 recorded files pass final
+identity rechecks; 52 focused tests pass. See
+[checks, receipts and limitations](PHYLOGENY_STRUCTURE_READBACK_20260926.md).
+
+This validates tree leaves/hashes, family membership, pair identities and the
+parallel confidence table, not event inference or pair completeness. No score
+or default changed. Fresh installed-run admission awaits terminal success and
+independent readback. Next complete alignment/node/pair semantic checks while
+preserving the full outstanding publication requirements. DGX remains deferred;
+the publication goal remains active.
+
 ## Installed OrthoBench Input Inventory Gate (2026-09-26)
 
 The preceding status turn was a verified wait: job 22179 was live in squeue.

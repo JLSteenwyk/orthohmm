@@ -1,0 +1,40 @@
+{
+  "baseline_evidence": {
+    "bytes": 199307,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/orthobench_factorial_results_20260916.json",
+    "sha256": "6a0d588b5cb47c60fc6bc8bae8aa0c83e5f2aadb11de970919d8c6527c387141"
+  },
+  "checked_record_count": 34742,
+  "dendropy_version": "5.0.8",
+  "families": 54445,
+  "full_readback": {
+    "bytes": 10747572,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/installed_ob_historical_structure_20260926.json",
+    "sha256": "0300c9e1462943be3efa810d8f6110e75d336e54cdcb930a90a9f389d6679464"
+  },
+  "genes": 251378,
+  "limitations": [
+    "Structural consistency does not prove biological correctness or reproduce event inference.",
+    "Native pairs are validated separately; they are not equated with root-group pairs.",
+    "Candidate sequences, alignment content, node events and pair completeness remain separate checks.",
+    "Caller must gate native completion, exact input inventory and frozen provenance."
+  ],
+  "note": "Readback of retained historical p1_c1_r1, not admission of running installed job 22179. Initial invocation used a nonexistent input path and failed before readback; corrected invocation uses byte-verified private FASTA copies.",
+  "ortholog_pairs": 966439,
+  "pair_confidence_counts": {
+    "high": 849010,
+    "medium": 117429
+  },
+  "parsed_trees": 26044,
+  "reader": {
+    "bytes": 8196,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_phylogeny_structure.py",
+    "sha256": "321770cd145a0a766e7d9816beca42f01be3d24482f02d01dbb178e9e98920aa"
+  },
+  "reconciled_families": 8681,
+  "reconciliation_semantics_recomputed": false,
+  "root_groups": 59770,
+  "scientific_scores_admitted": false,
+  "species": 12,
+  "status": "phylogeny_structure_verified"
+}
