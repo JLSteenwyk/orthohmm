@@ -39,6 +39,14 @@ and E-values. Post-filter at this fixed grid:
 `1e-100, 1e-80, 1e-60, 1e-40, 1e-30, 1e-20, 1e-15, 1e-10, 1e-8,
 1e-6, 1e-4, 1e-3, 1e-2, 1e-1, 1`.
 
+Implementation detail recorded before scoring: DIAMOND post-filtering uses
+its reported E-value **less than or equal to** the grid cutoff; HMM preserves
+the production engine's strict `< 1e-4` filter. DIAMOND text output has finite
+printed precision, so this diagnostic uses reported rather than unprinted
+internal E-values. Exact rational family/dataset averages determine ties.
+This clarification followed inspection of three raw rows for format, not
+inspection of calibration/reporting recall or selection outcomes.
+
 Choose one global cutoff minimizing absolute calibration-split primary-recall
 difference from HMM. Exact ties select the smaller E-value. Do not use
 orthology grouping scores, F1, reporting-split outcomes or computational cost
