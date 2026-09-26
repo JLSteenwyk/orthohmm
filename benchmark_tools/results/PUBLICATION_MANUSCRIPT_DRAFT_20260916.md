@@ -971,6 +971,14 @@ and final groups, including the 21 with incoming hits. Thus incoming hits
 did not result in final-group membership for these failed queries; this
 does not establish the accuracy effect of repairing their outgoing searches.
 [Failed-query membership audit](qfo_recovered_failure_membership_20260926.json).
+The subsequent [direct reference-exposure audit](qfo_recovered_reference_impact_20260926.json)
+found none of these 53 proteins in the 18 SwissTrees cases, pooled
+TreeFam-A case, or 23,934 VGNC reference pairs. None has EC annotations;
+four have experimental GO annotations under the benchmark filter.
+All 53 have FAS annotation entries, of which 46 contain features.
+Annotation presence does not establish participation in a scored pair.
+These observations do not bound indirect clustering effects or estimate
+the accuracy of a counterfactual run with repaired searches.
 Another 4,257 proteins lacked query hits without a logged failure. Completed
 BPO and native-group validation yielded 79,862 groups containing 781,432
 proteins, with 202,705 ungrouped inputs. Pair conversion retained all

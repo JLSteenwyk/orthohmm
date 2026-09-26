@@ -1,0 +1,1343 @@
+{
+  "annotation_summary": {
+    "failed_queries_with_any_fas_feature": 46,
+    "failed_queries_with_ec": 0,
+    "failed_queries_with_experimental_go": 4,
+    "failed_queries_with_fas_entry": 53
+  },
+  "command": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_python_env_20260918/bin/python",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_native_failure_membership_v1_20260925/benchmark_tools/audit_orthomcl_reference_impact.py",
+    "--audit",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_recovered_failure_membership_20260926.json",
+    "--reference",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020",
+    "--benchmark-repo",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice",
+    "--darwin-image",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/container_cache/qfobenchmark-darwin-2022.1.img",
+    "--output",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_recovered_reference_impact_20260926"
+  ],
+  "failed_queries": 53,
+  "failed_query_group_coverage": {
+    "grouped": 0,
+    "grouped_exposure_enabled": false,
+    "ungrouped": 53
+  },
+  "fas_inputs": [
+    {
+      "bytes": 19615165,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000000437_7955.json",
+      "sha256": "50d563b89fd802e0d0ae14f67714d5ed6a81679f024185cb2103dd7761701232"
+    },
+    {
+      "bytes": 12294885,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000000539_9031.json",
+      "sha256": "b7b98c218c69f077c67146e193078fd0e647af3aa67e218c760d14e4fa7f20c5"
+    },
+    {
+      "bytes": 15411163,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000000589_10090.json",
+      "sha256": "631eee1ff5575078af1f6c919abcc23fad13e0f642c3447b28463d33896ac665"
+    },
+    {
+      "bytes": 8310912,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000000803_7227.json",
+      "sha256": "1ac66a0b1779c6994840f0a0b64ee7734084cd1d3b224a050c9117022e40704c"
+    },
+    {
+      "bytes": 15962851,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001038_8090.json",
+      "sha256": "734afa2c75f8ab6e2a3177e8cad559885c3b10158d6eef6e1f18d21c00681cef"
+    },
+    {
+      "bytes": 5683052,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001357_81824.json",
+      "sha256": "c4854679182c3135fe6d883250b567c963423802c98e31b7568b80c3a483a49c"
+    },
+    {
+      "bytes": 14822351,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001519_9595.json",
+      "sha256": "5f346c8916b338acd99f5067c1bc81b52e8558d79173431d86247101e87b3e57"
+    },
+    {
+      "bytes": 19430357,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001542_5722.json",
+      "sha256": "e549deeb2ffb02cb79ff62de44695c2e6fe121c92a2f191f10380b3b64237d2d"
+    },
+    {
+      "bytes": 19448984,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001554_7739.json",
+      "sha256": "26f8e0385fdf16d384e0f340d1f4c7318a84b9e4fe91fecc097780cebbbd8120"
+    },
+    {
+      "bytes": 8124404,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001555_6945.json",
+      "sha256": "939e24c53258efbe90900b71a70b3446205022d2b11b3b7771417ca59c1fd61e"
+    },
+    {
+      "bytes": 11678107,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001593_45351.json",
+      "sha256": "014615e13d150891b17fa7d050f2655183e8c035e1bb107049e7050fba87e98d"
+    },
+    {
+      "bytes": 14450286,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000002254_9615.json",
+      "sha256": "b37527c7f5940932f6ebf72e0e09e0058de4c1e522556d05c4a4bc19ddf38908"
+    },
+    {
+      "bytes": 15878889,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000002277_9598.json",
+      "sha256": "a8d5b7719642855f5b6e0fd5402cdd5f8decc5062cd17e5a25f4de0fb5d30d46"
+    },
+    {
+      "bytes": 14405466,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000002494_10116.json",
+      "sha256": "ddb1adf9452202517f4b214afcdccb2c6ffa4130c64cb8d04b9eacc41cd5a3e9"
+    },
+    {
+      "bytes": 15211666,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000005640_9606.json",
+      "sha256": "5ff67d6cff37b18db33d206669c72665dc5db7bdf1882088f89acf9b364f8d92"
+    },
+    {
+      "bytes": 13779014,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000006548_3702.json",
+      "sha256": "0eb4de7a69c581d64ee6e56bc0fc16137555dcda092771602a38d0f7c29a85a7"
+    },
+    {
+      "bytes": 12450289,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000006727_3218.json",
+      "sha256": "ede5a355e7d873aabdc3a3433b09f0719a5d269f384c3f1bc7e3101abca09a22"
+    },
+    {
+      "bytes": 7635144,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000007062_7165.json",
+      "sha256": "eb1314b29a976ba10fa39caf1ccc84e6be3849c1d973e49027205626eb028dfe"
+    },
+    {
+      "bytes": 8584834,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000007266_7070.json",
+      "sha256": "b0ec830ca0fe6d81ff25729b89695e2f6d8976f22db758b1dc4930eddc8ef63f"
+    },
+    {
+      "bytes": 19000064,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000007305_4577.json",
+      "sha256": "108a85067bbde59a04357d68450438a02ce6d1d20365e4e3be819e9501d168c8"
+    },
+    {
+      "bytes": 7230742,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000008144_7719.json",
+      "sha256": "b37c9f5a0035a5f2523a4f57e41adf4bac0dd4f06be9dd8fe2b28de836853a2f"
+    },
+    {
+      "bytes": 11107169,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000015101_6412.json",
+      "sha256": "0cc7e9cbbff506383006769ddc29aa401c43affea4ff5a66c7f2ba74d6bc430b"
+    },
+    {
+      "bytes": 12517644,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000018468_7918.json",
+      "sha256": "e31d42104f8d5f0db7c893e29dc4aa4d48e4549b1fec097c1b154a6f79d74a88"
+    },
+    {
+      "bytes": 18704168,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000059680_39947.json",
+      "sha256": "035a9c8bf21227f42248def0cfe8c232f42ec157f9095330beedff99d9dd78e1"
+    }
+  ],
+  "generated_at": "2026-09-26T17:59:30.628550+00:00",
+  "inputs": [
+    {
+      "bytes": 231504,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_recovered_failure_membership_20260926.json",
+      "sha256": "bf7093d82dff31158fe5474d9576603fef3fcc83a62b7761e27eaa1355cbc79e"
+    },
+    {
+      "bytes": 1991,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_native_failure_membership_v1_20260925/benchmark_tools/orthomcl_reference_impact.drw",
+      "sha256": "3124d9d86e12414555b04b1bde9c290ca46a6be743a3dd16ca235ff96e6946f3"
+    },
+    {
+      "bytes": 12053,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_native_failure_membership_v1_20260925/benchmark_tools/audit_orthomcl_reference_impact.py",
+      "sha256": "ed988d5e4c59799f0fffdba1852b59d22a5e50d33bd108c46e5d39ee3294de5a"
+    },
+    {
+      "bytes": 53297152,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/container_cache/qfobenchmark-darwin-2022.1.img",
+      "sha256": "abed2b0ff8bb033a2372d0cd5282fd1d6c8ab5fa07496afc48c82f54ed65ea21"
+    },
+    {
+      "bytes": 4634,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/lib/darwinit",
+      "sha256": "5656da7dd1aefa66f42d4e738a200616eac4114997273bb5d542927aeb61069b"
+    },
+    {
+      "bytes": 7629,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/RefPhyloTest.drw",
+      "sha256": "262c8d1f06527461e11391682ccaccc637675f84a5064c1658b80bf1b956bd51"
+    },
+    {
+      "bytes": 8501,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/GoTest.drw",
+      "sha256": "7113707dc53bb59aa5dc6de92f58630c72396a1d4596b3d368cecceab7470f55"
+    },
+    {
+      "bytes": 6902,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/EcTest.drw",
+      "sha256": "8790e09172a8201e36f366d831c5dd2ef6b5f81a4da02dfa70f6ed3f061d3a25"
+    },
+    {
+      "bytes": 6907,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/vgnc_benchmark.py",
+      "sha256": "a9596078850cf0799958f3e1794278b7abd0053a5aad4f1af1e6b24cad369635"
+    },
+    {
+      "bytes": 9930,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/fas_benchmark.py",
+      "sha256": "1045c57f4d0f4787bec3d1f0690799df63c68dcc67ccfd5a925c338e3d33661d"
+    },
+    {
+      "bytes": 2827,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/nextflow.config",
+      "sha256": "2d54126cf945cc5a289c5376a94d9a68fe038c11e035665adb11d68f92bf21f2"
+    },
+    {
+      "bytes": 40019520,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/mapping.json.gz",
+      "sha256": "1c10f6ce5e53ebc3148dde02d16268b225c3c8817c952d1274daa41acbf9eb4d"
+    },
+    {
+      "bytes": 318907,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/ReconciledTrees_SwissTrees.drw",
+      "sha256": "40528e3537ba57e345c443c8024f99dc3940a66e2d102703754b41bb29858ecd"
+    },
+    {
+      "bytes": 1998195,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/ReconciledTrees_TreeFam-A.drw",
+      "sha256": "6f419f96886e5cf14ac889a1437cdb2655140cb8fd281f6bb5f8e0baa69d23b3"
+    },
+    {
+      "bytes": 140842,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/enzymes.drw.gz",
+      "sha256": "d5fc840c9cf05ec4fccc10c5a42c19b7554284a8ede5754104468e132a324950"
+    },
+    {
+      "bytes": 834612400,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/ServerIndexed.db",
+      "sha256": "f71e282f504d007306a34da98ab717c2c7fad0a28e4d503caa47a042a41ec9a8"
+    },
+    {
+      "bytes": 183364,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/vgnc-orthologs.txt.gz",
+      "sha256": "3f9898487b1b3dab866eaf93255bb25ab7b7699f32753828ba7d2851eafce5dc"
+    }
+  ],
+  "limitations": [
+    "This is direct reference exposure, not a counterfactual rerun or bound on clustering changes.",
+    "A failed outgoing search can coexist with incoming hits or final-group membership; neither proves repaired orthology.",
+    "Incident reference pairs need not become correct predictions after repairing search.",
+    "GO counts use the six experimental evidence codes selected by the benchmark configuration.",
+    "FAS entry presence is not proof of a scored pair or a nonempty feature architecture.",
+    "FAS precomputed-pair availability is not assessed here.",
+    "Native tree cases are not necessarily individual biological families; TreeFam-A is a pooled case."
+  ],
+  "native_command": [
+    "singularity",
+    "exec",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/container_cache/qfobenchmark-darwin-2022.1.img",
+    "darwin",
+    "-E"
+  ],
+  "native_log": {
+    "bytes": 4521,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_recovered_reference_impact_20260926/native.log",
+    "sha256": "0f913b4b808a4c5d339f08996eba7cdab31ce018c875bf64b7a470b1a59c2c5c"
+  },
+  "records": [
+    {
+      "accession": "P0DKJ0",
+      "ec_terms": 0,
+      "experimental_go_terms": 3,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 0,
+        "pfam": 0,
+        "seg": 0,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 5,
+      "protein_number": 543136,
+      "species": "UP000006548_3702"
+    },
+    {
+      "accession": "P0DOY5",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 0,
+        "pfam": 0,
+        "seg": 0,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 5,
+      "protein_number": 901341,
+      "species": "UP000005640_9606"
+    },
+    {
+      "accession": "P0DPI4",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 0,
+        "pfam": 0,
+        "seg": 0,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 4,
+      "protein_number": 901382,
+      "species": "UP000005640_9606"
+    },
+    {
+      "accession": "P0DPR3",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 0,
+        "pfam": 0,
+        "seg": 0,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 2,
+      "protein_number": 901390,
+      "species": "UP000005640_9606"
+    },
+    {
+      "accession": "P38639",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 0,
+        "pfam": 0,
+        "seg": 0,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 5,
+      "protein_number": 715941,
+      "species": "UP000000589_10090"
+    },
+    {
+      "accession": "P62120",
+      "ec_terms": 0,
+      "experimental_go_terms": 1,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 1,
+        "flps": 0,
+        "pfam": 1,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 25,
+      "protein_number": 543747,
+      "species": "UP000006548_3702"
+    },
+    {
+      "accession": "P62125",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 1,
+        "flps": 0,
+        "pfam": 1,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 25,
+      "protein_number": 256829,
+      "species": "UP000059680_39947"
+    },
+    {
+      "accession": "P62945",
+      "ec_terms": 0,
+      "experimental_go_terms": 7,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 1,
+        "pfam": 1,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 25,
+      "protein_number": 904165,
+      "species": "UP000005640_9606"
+    },
+    {
+      "accession": "P62947",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 1,
+        "pfam": 1,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 25,
+      "protein_number": 716925,
+      "species": "UP000000589_10090"
+    },
+    {
+      "accession": "P62948",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 1,
+        "pfam": 1,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 25,
+      "protein_number": 409989,
+      "species": "UP000002494_10116"
+    },
+    {
+      "accession": "P80628",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 0,
+        "pfam": 0,
+        "seg": 0,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 5,
+      "protein_number": 214284,
+      "species": "UP000007305_4577"
+    },
+    {
+      "accession": "P83308",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 0,
+        "pfam": 0,
+        "seg": 0,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 5,
+      "protein_number": 936933,
+      "species": "UP000000539_9031"
+    },
+    {
+      "accession": "P99503",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 0,
+        "pfam": 0,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 14,
+      "protein_number": 159051,
+      "species": "UP000002254_9615"
+    },
+    {
+      "accession": "A0A0A0MTA2",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 0,
+        "pfam": 0,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 15,
+      "protein_number": 897265,
+      "species": "UP000005640_9606"
+    },
+    {
+      "accession": "A0A0G2JWA6",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 2,
+        "pfam": 0,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 339,
+      "protein_number": 395051,
+      "species": "UP000002494_10116"
+    },
+    {
+      "accession": "A0A0G2JXP8",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 2,
+        "pfam": 0,
+        "seg": 1,
+        "signalp": 1,
+        "smart": 0,
+        "tmhmm": 1
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 85,
+      "protein_number": 395213,
+      "species": "UP000002494_10116"
+    },
+    {
+      "accession": "A0A0N7KME8",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 3,
+        "pfam": 0,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 180,
+      "protein_number": 235558,
+      "species": "UP000059680_39947"
+    },
+    {
+      "accession": "A0A0P0VWJ1",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 1,
+        "pfam": 0,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 285,
+      "protein_number": 241085,
+      "species": "UP000059680_39947"
+    },
+    {
+      "accession": "A0A0P0WCL7",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 3,
+        "pfam": 0,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 158,
+      "protein_number": 243361,
+      "species": "UP000059680_39947"
+    },
+    {
+      "accession": "A0A0P0WS46",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 2,
+        "pfam": 1,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 117,
+      "protein_number": 245358,
+      "species": "UP000059680_39947"
+    },
+    {
+      "accession": "A0A0P0WVV8",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 3,
+        "pfam": 0,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 218,
+      "protein_number": 245920,
+      "species": "UP000059680_39947"
+    },
+    {
+      "accession": "A0A0P0XA77",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 2,
+        "pfam": 0,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 1
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 217,
+      "protein_number": 248017,
+      "species": "UP000059680_39947"
+    },
+    {
+      "accession": "A0A0R4ILF4",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 1,
+        "pfam": 1,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 25,
+      "protein_number": 669423,
+      "species": "UP000000437_7955"
+    },
+    {
+      "accession": "A0A139WHY7",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 1,
+        "pfam": 1,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 25,
+      "protein_number": 634631,
+      "species": "UP000007266_7070"
+    },
+    {
+      "accession": "A0A2I2YS91",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 1,
+        "pfam": 1,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 25,
+      "protein_number": 72494,
+      "species": "UP000001519_9595"
+    },
+    {
+      "accession": "A0A2K1IA18",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 1,
+        "pfam": 0,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 76,
+      "protein_number": 432616,
+      "species": "UP000006727_3218"
+    },
+    {
+      "accession": "A0A2K1JS03",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 1,
+        "flps": 0,
+        "pfam": 1,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 25,
+      "protein_number": 445379,
+      "species": "UP000006727_3218"
+    },
+    {
+      "accession": "A0A3B3HZ76",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 3,
+        "pfam": 0,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 249,
+      "protein_number": 738026,
+      "species": "UP000001038_8090"
+    },
+    {
+      "accession": "A0A5F4C1W3",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 1,
+        "pfam": 1,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 25,
+      "protein_number": 140259,
+      "species": "UP000002254_9615"
+    },
+    {
+      "accession": "A2H533",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 1,
+        "pfam": 2,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 123,
+      "protein_number": 507356,
+      "species": "UP000001542_5722"
+    },
+    {
+      "accession": "A7RKU4",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 2,
+        "pfam": 0,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 50,
+      "protein_number": 868748,
+      "species": "UP000001593_45351"
+    },
+    {
+      "accession": "A7SJA8",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 3,
+        "pfam": 0,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 118,
+      "protein_number": 880399,
+      "species": "UP000001593_45351"
+    },
+    {
+      "accession": "A7SN48",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 3,
+        "pfam": 1,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 124,
+      "protein_number": 881729,
+      "species": "UP000001593_45351"
+    },
+    {
+      "accession": "A7STN8",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 1,
+        "pfam": 1,
+        "seg": 1,
+        "signalp": 1,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 102,
+      "protein_number": 883646,
+      "species": "UP000001593_45351"
+    },
+    {
+      "accession": "A7SZ89",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 3,
+        "pfam": 1,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 105,
+      "protein_number": 885569,
+      "species": "UP000001593_45351"
+    },
+    {
+      "accession": "A7SZI4",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 3,
+        "pfam": 0,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 160,
+      "protein_number": 885663,
+      "species": "UP000001593_45351"
+    },
+    {
+      "accession": "A7T2Z8",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 3,
+        "pfam": 0,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 146,
+      "protein_number": 886843,
+      "species": "UP000001593_45351"
+    },
+    {
+      "accession": "A7TAV2",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 2,
+        "pfam": 1,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 84,
+      "protein_number": 889471,
+      "species": "UP000001593_45351"
+    },
+    {
+      "accession": "A9V7M1",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 4,
+        "pfam": 0,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 1
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 219,
+      "protein_number": 40840,
+      "species": "UP000001357_81824"
+    },
+    {
+      "accession": "A9VEM4",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 3,
+        "pfam": 0,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 541,
+      "protein_number": 43281,
+      "species": "UP000001357_81824"
+    },
+    {
+      "accession": "B7PR94",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 3,
+        "pfam": 0,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 69,
+      "protein_number": 52320,
+      "species": "UP000001555_6945"
+    },
+    {
+      "accession": "C3Y834",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 2,
+        "pfam": 1,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 193,
+      "protein_number": 356885,
+      "species": "UP000001554_7739"
+    },
+    {
+      "accession": "F1LZG1",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 1,
+        "flps": 2,
+        "pfam": 0,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 136,
+      "protein_number": 404827,
+      "species": "UP000002494_10116"
+    },
+    {
+      "accession": "F6QE68",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 1,
+        "flps": 1,
+        "pfam": 0,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 24,
+      "protein_number": 712662,
+      "species": "UP000000589_10090"
+    },
+    {
+      "accession": "F6ZE74",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 1,
+        "flps": 0,
+        "pfam": 0,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 30,
+      "protein_number": 712768,
+      "species": "UP000000589_10090"
+    },
+    {
+      "accession": "F6ZH14",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 1,
+        "pfam": 0,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 21,
+      "protein_number": 712772,
+      "species": "UP000000589_10090"
+    },
+    {
+      "accession": "F7BLD2",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 2,
+        "pfam": 0,
+        "seg": 1,
+        "signalp": 1,
+        "smart": 0,
+        "tmhmm": 1
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 45,
+      "protein_number": 712804,
+      "species": "UP000000589_10090"
+    },
+    {
+      "accession": "H2RE54",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 1,
+        "pfam": 1,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 25,
+      "protein_number": 345689,
+      "species": "UP000002277_9598"
+    },
+    {
+      "accession": "H2Y2R8",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 0,
+        "pfam": 0,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 32,
+      "protein_number": 708981,
+      "species": "UP000008144_7719"
+    },
+    {
+      "accession": "Q52P89",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 1,
+        "pfam": 1,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 25,
+      "protein_number": 785643,
+      "species": "UP000007062_7165"
+    },
+    {
+      "accession": "Q962S2",
+      "ec_terms": 0,
+      "experimental_go_terms": 3,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 1,
+        "pfam": 1,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 25,
+      "protein_number": 850900,
+      "species": "UP000000803_7227"
+    },
+    {
+      "accession": "T1EKG4",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 4,
+        "pfam": 0,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 1
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 81,
+      "protein_number": 298096,
+      "species": "UP000015101_6412"
+    },
+    {
+      "accession": "W5M3G2",
+      "ec_terms": 0,
+      "experimental_go_terms": 0,
+      "fas_annotation_entry_present": true,
+      "fas_feature_types_by_tool": {
+        "coils2": 0,
+        "flps": 3,
+        "pfam": 0,
+        "seg": 1,
+        "signalp": 0,
+        "smart": 0,
+        "tmhmm": 0
+      },
+      "final_group_line": null,
+      "final_group_size": 0,
+      "length": 168,
+      "protein_number": 218343,
+      "species": "UP000018468_7918"
+    }
+  ],
+  "schema_version": 1,
+  "tree_cases_with_failed_members": [],
+  "tree_summary": {
+    "SwissTrees": {
+      "eligible_cases": 18,
+      "eligible_cases_with_failed_members": 0,
+      "incident_relation_counts": {},
+      "reference_cases": 18
+    },
+    "TreeFam-A": {
+      "eligible_cases": 1,
+      "eligible_cases_with_failed_members": 0,
+      "incident_relation_counts": {},
+      "reference_cases": 1
+    }
+  },
+  "unique_mapped_targets": 53,
+  "vgnc": {
+    "incident_pair_fraction": 0.0,
+    "incident_pairs": [],
+    "reference_pairs": 23934
+  }
+}

@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Recovered Reference Exposure Verified (2026-09-26)
+
+Job **22175 completed 0:0 in 35 seconds**. Retained its report verbatim as
+[qfo_recovered_reference_impact_20260926.json](qfo_recovered_reference_impact_20260926.json),
+SHA256 `3d0bc03b16460f82356359570b0990fe7d10c3c316a9121e8bed9853b2fab067`.
+Independent record checks confirmed 53 unique, ungrouped failed queries,
+zero EC annotations, four with experimental GO, and 46 with FAS features.
+There are no direct failed-query memberships in SwissTrees or pooled
+TreeFam-A and no incident VGNC reference pairs. Updated the manuscript;
+this is not a repaired-search counterfactual or a score-effect bound.
+
+Queued independent score admission **22176**, `afterok:22174`, using the
+existing score-admission wrapper and clean frozen downstream executor
+`296882422f2d70c096c8d5584082c16217f36add` for validator, scorer and converter.
+Assessment job argument is 22174, conversion job 22172, pinned conversion
+manifest SHA256 `486fc13941a03c0078133cae84a94601f145cd4fe441105607324a1b94ab205e`.
+Validator source SHA256 is
+`1c4647eae7d212d7b28997ea95161089f366c74423a7475ad0aad3e29c27c025`.
+Output remains `benchmarks/work/qfo_blast_recovery_score_admission_20260923.json`.
+No scores are admitted at submission. Next: inspect both terminal jobs,
+then regenerate the eight-method comparison and uncertainty analysis.
+Previous turn made progress by launching this completed exposure audit;
+this turn retains verified evidence and advances the scoring workflow.
+
 ## Recovered Failure Reference Exposure Running (2026-09-26)
 
 Submitted **22175**, confirmed RUNNING, to measure the direct reference
