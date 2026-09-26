@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Score Table Supplemented With OrthoBench Audit Provenance (2026-09-26)
+
+The preceding turn completed the broad regression refresh. Connected the later
+five-comparator readback and upstream evaluator audits to the consolidated table
+as a new versioned export. All five supplemental prediction records and score
+comparisons are validated against pinned reports; historical source objects
+remain intact. The new TSV is byte-identical to the original. All 44 focused
+tests pass, including 25 exporter cases. [Evidence and commands](CURRENT_BENCHMARK_SCORES_20260926.md).
+The exporter uses saved audit evidence, not fresh raw-file rescoring, and
+explicitly does not establish historical consumption or native conversion,
+versions, commands or resources. No scientific settings or admissions changed.
+Controlled timing, high-CPM diagnosis, complete native provenance/portability,
+rights and release work remain open; the DGX remains deferred.
+
 ## Full Regression Suite and Native Checks Refreshed (2026-09-26)
 
 The preceding turn completed the full unit run and exposed one stale FastOMA

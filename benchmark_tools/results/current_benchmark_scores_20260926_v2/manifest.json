@@ -1,0 +1,544 @@
+{
+  "inputs": [
+    {
+      "bytes": 67483,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_comparison_orthomcl_complete_20260916.json",
+      "sha256": "094f842ad8211450519d4238c0b3a5020a7969049d4b7306f5465d5acbf914a3"
+    },
+    {
+      "bytes": 323315,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_comparison_20260926_v7/manifest.json",
+      "sha256": "042aa221d01554114a1b0b413ca3e2ff56dad5f8c06362c69a1bf49f2de642fc"
+    },
+    {
+      "bytes": 170905,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/three_kingdoms_comparison_matched_20260918/comparison.json",
+      "sha256": "ba1ed664ad8ee89ba65b72e7d4d4341eed864957b0720ab1ff4fbe91a398945a"
+    },
+    {
+      "bytes": 113184,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/retained_ob_comparator_readback_20260926.json",
+      "sha256": "5dcb4e65f277eb9debf2bbacb1d4e298c678ac13fc981e75c4ba78e4851eeb55"
+    },
+    {
+      "bytes": 29583,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/retained_ob_upstream_crosscheck_20260926.json",
+      "sha256": "6219b06dc263e520b0d33f94e59bbf67a47e81974839d31fb1a945ede0c3d33a"
+    }
+  ],
+  "limitations": [
+    "All displayed values use 0-to-1 units; OrthoBench was converted from percent.",
+    "OrthoBench is weighted orthogroup F1; Three Kingdoms is BUSCO-reference pair F1.",
+    "QfO GO/EC/FAS are similarities, not F1. Its six-endpoint mean is project-defined and secondary.",
+    "No cross-dataset mean or universal ranking is defined; prediction semantics differ.",
+    "Three Kingdoms input-consumption gaps remain; only SonicParanoid uses the contemporary matched-input row.",
+    "FastOMA uses supplied-tree configurations; the OrthoFinder sequence checkpoint is diagnostic.",
+    "Five OrthoBench rows have supplemental prediction hashes and matching local/upstream rescoring; historical consumption and full native provenance are not established.",
+    "Supplemental evidence reads pinned audit reports, not fresh raw-file verification or native conversion/version/resource validation.",
+    "Development-exposed evidence; no inference, raw scoring, uncertainty or resource comparison rerun."
+  ],
+  "outputs": [
+    {
+      "bytes": 1514,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/current_benchmark_scores_20260926_v2/scores.tsv",
+      "sha256": "98a38c0e819eefb23258fa85139fdc7a92a43b0e070c8cf8e7035f93381d01ca"
+    },
+    {
+      "bytes": 2212,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/current_benchmark_scores_20260926_v2/scores.md",
+      "sha256": "9f21cfcb2ea3d237a19faa5a431b3db6d4c45d3358ca9cb22d123b08ff284696"
+    }
+  ],
+  "publication_ready": false,
+  "rows": [
+    {
+      "key": "orthohmm_high_sensitivity",
+      "label": "OrthoHMM high sensitivity",
+      "orthobench_retained_evidence": {
+        "coverage_percent": 100.0,
+        "exact_refogs": 13,
+        "f_score_percent": 70.35899765495243,
+        "genes_in_orthogroups": 251378,
+        "method": "OrthoHMM high sensitivity",
+        "precision_percent": 78.94954395226098,
+        "prediction_provenance": {
+          "bytes": 4567716,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/production_high_sensitivity_replay_profiles_seed4_committed_20260828/orthogroups_profiles_refined.txt",
+          "sha256": "8ee100f4370fef6e3e6a3e0fd36112adcc3aefeb60197331115667c519ca121f"
+        },
+        "recall_percent": 63.45447853618141,
+        "uncertainty": {
+          "family_f1_losses": 39,
+          "family_f1_ties": 11,
+          "family_f1_wins": 20,
+          "metrics": {
+            "f_score": {
+              "bonferroni_percentile_ci": [
+                -10.135345857716494,
+                5.477967052813582
+              ],
+              "difference_percentage_points": -2.3774823492692434,
+              "paired_percentile_ci": [
+                -8.177974547849907,
+                3.348255288562013
+              ]
+            },
+            "precision": {
+              "bonferroni_percentile_ci": [
+                1.2811088222216178,
+                22.626546576866843
+              ],
+              "difference_percentage_points": 12.88444095618307,
+              "paired_percentile_ci": [
+                4.210965087034371,
+                20.220163716591887
+              ]
+            },
+            "recall": {
+              "bonferroni_percentile_ci": [
+                -30.346835567077264,
+                -5.539600768799987
+              ],
+              "difference_percentage_points": -17.4520980949475,
+              "paired_percentile_ci": [
+                -26.96505910463463,
+                -8.214160377709216
+              ]
+            }
+          },
+          "versus": "orthofinder_3_1_5_full"
+        }
+      },
+      "qfo_prediction_semantics": "cross-species group-derived clique pairs",
+      "scores": {
+        "EC": 0.93203769,
+        "FAS": 0.7765850417998846,
+        "GO": 0.4722711,
+        "OrthoBench": 0.7035899765495244,
+        "QfO_secondary_mean": 0.6895554410913292,
+        "SwissTrees": 0.6854977808857662,
+        "ThreeKingdoms": 0.8263090676883781,
+        "TreeFam-A": 0.6050078839081693,
+        "VGNC": 0.6659331499541553
+      },
+      "three_kingdoms": {
+        "groups": {
+          "bytes": 9497035,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/orthohmm_high_sensitivity/orthogroups.txt",
+          "sha256": "28ba45202afc7f51e719d59405674023c9b284a2d5ea18575b03c7b949e13db1"
+        },
+        "input_status": "not_retained; historical consumption not proven",
+        "run": "historical",
+        "semantics": "reference-gene group co-membership, including within-species pairs"
+      }
+    },
+    {
+      "key": "orthohmm_phylogeny_satellite_v2",
+      "label": "OrthoHMM phylogeny satellite_v2",
+      "orthobench_retained_evidence": {
+        "coverage_percent": 100.0,
+        "exact_refogs": 15,
+        "f_score_percent": 74.10607351873405,
+        "genes_in_orthogroups": 251378,
+        "method": "OrthoHMM phylogeny satellite_v2",
+        "precision_percent": 81.77045380181866,
+        "prediction_provenance": {
+          "bytes": 6301075,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/production_phylogeny_satellite_v2_orthobench_20260902/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+          "sha256": "76229249770b1f875c6bd319ec524fb50721b048e68c284c4c3a3dba611ea216"
+        },
+        "recall_percent": 67.75533630827974,
+        "uncertainty": {
+          "family_f1_losses": 37,
+          "family_f1_ties": 10,
+          "family_f1_wins": 23,
+          "metrics": {
+            "f_score": {
+              "bonferroni_percentile_ci": [
+                -6.290356252167301,
+                10.626549791416775
+              ],
+              "difference_percentage_points": 1.369593514512374,
+              "paired_percentile_ci": [
+                -4.503694161614439,
+                7.916757835407342
+              ]
+            },
+            "precision": {
+              "bonferroni_percentile_ci": [
+                2.8023384670841636,
+                28.66332565414097
+              ],
+              "difference_percentage_points": 15.70535080574075,
+              "paired_percentile_ci": [
+                5.98290624161023,
+                25.104626446282573
+              ]
+            },
+            "recall": {
+              "bonferroni_percentile_ci": [
+                -25.247940891722266,
+                -2.241727359912702
+              ],
+              "difference_percentage_points": -13.151240322849176,
+              "paired_percentile_ci": [
+                -22.06428193082825,
+                -4.565683173656999
+              ]
+            }
+          },
+          "versus": "orthofinder_3_1_5_full"
+        }
+      },
+      "qfo_prediction_semantics": "native phylogenetically inferred pairs",
+      "scores": {
+        "EC": 0.9656505,
+        "FAS": 0.7629933121004577,
+        "GO": 0.49034928,
+        "OrthoBench": 0.7410607351873405,
+        "QfO_secondary_mean": 0.7615100187756848,
+        "SwissTrees": 0.8335132205147882,
+        "ThreeKingdoms": 0.872133159469203,
+        "TreeFam-A": 0.614863704412014,
+        "VGNC": 0.9016900956268489
+      },
+      "three_kingdoms": {
+        "groups": {
+          "bytes": 7848775,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthohmm_phylogeny_satellite_v2/orthogroups.txt",
+          "sha256": "07eae3dad852c6376d95e76fb7c7a5f08554342fd44f7bf8a5cf40cf999ca0e3"
+        },
+        "input_status": "all_12_staged_hashes_match; historical consumption not proven",
+        "run": "historical",
+        "semantics": "reference-gene group co-membership, including within-species pairs"
+      }
+    },
+    {
+      "key": "orthofinder_3_1_5_full",
+      "label": "OrthoFinder 3.1.5 full",
+      "orthobench_retained_evidence": {
+        "coverage_percent": 100.0,
+        "exact_refogs": 19,
+        "f_score_percent": 72.73648000422168,
+        "genes_in_orthogroups": 251378,
+        "method": "OrthoFinder 3.1.5 full",
+        "precision_percent": 66.06510299607791,
+        "prediction_provenance": {
+          "bytes": 4957710,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/Orthogroups/Orthogroups.txt",
+          "sha256": "e0bf8d21b7ddc4494f0df1224dc2cd57d964cb92507eb40bd1f058cbc6f47af7"
+        },
+        "recall_percent": 80.90657663112891,
+        "uncertainty": null
+      },
+      "qfo_prediction_semantics": "native phylogenetically inferred pairs",
+      "scores": {
+        "EC": 0.93613021,
+        "FAS": 0.6914221332471376,
+        "GO": 0.46954797,
+        "OrthoBench": 0.7273648000422167,
+        "QfO_secondary_mean": 0.7876629450346928,
+        "SwissTrees": 0.8484132682382873,
+        "ThreeKingdoms": 0.9885816480946485,
+        "TreeFam-A": 0.7919177591512453,
+        "VGNC": 0.9885463295714856
+      },
+      "three_kingdoms": {
+        "groups": {
+          "bytes": 8587216,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/orthogroups.txt",
+          "sha256": "cb730780d6577d446f7f30e155baa2d1800087cbafa54e128d4f52967010f9c4"
+        },
+        "input_status": "all_12_staged_hashes_match; historical consumption not proven",
+        "run": "historical",
+        "semantics": "reference-gene group co-membership, including within-species pairs"
+      }
+    },
+    {
+      "key": "orthofinder_3_1_5_sequence_only",
+      "label": "OrthoFinder 3.1.5 sequence-only checkpoint",
+      "orthobench_retained_evidence": {
+        "coverage_percent": 100.0,
+        "exact_refogs": 18,
+        "f_score_percent": 58.705963184,
+        "genes_in_orthogroups": 251378,
+        "method": "OrthoFinder 3.1.5 sequence-only checkpoint",
+        "precision_percent": 45.706162743,
+        "recall_percent": 82.039827068
+      },
+      "orthobench_supplemental_readback": {
+        "exact_refogs": 18,
+        "historical_consumption_established": false,
+        "parser": "read_clusters",
+        "prediction": {
+          "bytes": 4567716,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_sequence_only_20260830/orthogroups.txt",
+          "sha256": "15fecab99b19751e5bba47ccc53fd7eed16480b16f087f8d8b133e4a7696c182"
+        },
+        "readback_scores": {
+          "f_score": 58.705963183824686,
+          "precision": 45.70616274261108,
+          "recall": 82.03982706835534
+        },
+        "upstream_reader": "upstream.read_orthogroups_smart",
+        "upstream_scores": [
+          58.705963183824686,
+          45.70616274261108,
+          82.03982706835534
+        ]
+      },
+      "qfo_prediction_semantics": "cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)",
+      "scores": {
+        "EC": 0.7536416,
+        "FAS": 0.5617530837830421,
+        "GO": 0.40704311,
+        "OrthoBench": 0.58705963184,
+        "QfO_secondary_mean": 0.5483523991117748,
+        "SwissTrees": 0.6905148246056576,
+        "ThreeKingdoms": 0.9894507588647655,
+        "TreeFam-A": 0.7344069307487682,
+        "VGNC": 0.1427548455331809
+      },
+      "three_kingdoms": {
+        "groups": {
+          "bytes": 7848775,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_sequence_only/orthogroups.txt",
+          "sha256": "e94fb298e8fa7807f5c98038dd55f147d1fdb7fa5491592641049d5fd1988d50"
+        },
+        "input_status": "all_12_staged_hashes_match; historical consumption not proven",
+        "run": "historical",
+        "semantics": "reference-gene group co-membership, including within-species pairs"
+      }
+    },
+    {
+      "key": "sonicparanoid_2_0_9",
+      "label": "SonicParanoid 2.0.9",
+      "orthobench_retained_evidence": {
+        "coverage_percent": 82.1,
+        "exact_refogs": 19,
+        "f_score_percent": 46.75760912,
+        "genes_in_orthogroups": 206466,
+        "method": "SonicParanoid 2.0.9",
+        "precision_percent": 36.535179568,
+        "recall_percent": 64.92280907
+      },
+      "orthobench_supplemental_readback": {
+        "exact_refogs": 19,
+        "historical_consumption_established": false,
+        "parser": "read_clusters",
+        "prediction": {
+          "bytes": 4567716,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthogroups_sonicparanoid.txt",
+          "sha256": "6928198465c6440e40ada9a94efd5df6113a6d83c544355b55118194427684a9"
+        },
+        "readback_scores": {
+          "f_score": 46.757609120430374,
+          "precision": 36.53517956818418,
+          "recall": 64.92280907009535
+        },
+        "upstream_reader": "upstream.read_orthogroups_smart",
+        "upstream_scores": [
+          46.757609120430374,
+          36.53517956818418,
+          64.92280907009535
+        ]
+      },
+      "qfo_prediction_semantics": "native species-pair relations",
+      "scores": {
+        "EC": 0.87276097,
+        "FAS": 0.736680187140205,
+        "GO": 0.45438453,
+        "OrthoBench": 0.4675760912,
+        "QfO_secondary_mean": 0.7695058866351091,
+        "SwissTrees": 0.798459422080563,
+        "ThreeKingdoms": 0.9912758996728462,
+        "TreeFam-A": 0.7719558753542073,
+        "VGNC": 0.9827943352356794
+      },
+      "three_kingdoms": {
+        "groups": {
+          "bytes": 5204624,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/three_kingdoms_sonic_matched_assessment_20260918/orthogroups.txt",
+          "sha256": "c966c07437aa190439fd7885daf40ec152d9b61e50db3a7de904bbac26c28f5a"
+        },
+        "input_status": "matched input verified",
+        "run": "contemporary matched input",
+        "semantics": "reference-gene group co-membership, including within-species pairs"
+      }
+    },
+    {
+      "key": "proteinortho_6_3_6",
+      "label": "ProteinOrtho 6.3.6",
+      "orthobench_retained_evidence": {
+        "coverage_percent": 73.6,
+        "exact_refogs": 6,
+        "f_score_percent": 45.057346674,
+        "genes_in_orthogroups": 184897,
+        "method": "ProteinOrtho 6.3.6",
+        "precision_percent": 97.056207735,
+        "recall_percent": 29.338788906
+      },
+      "orthobench_supplemental_readback": {
+        "exact_refogs": 6,
+        "historical_consumption_established": false,
+        "parser": "read_clusters",
+        "prediction": {
+          "bytes": 4567716,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthogroups_proteinortho.txt",
+          "sha256": "9d781abec4923b9b324f4ee6325ff222e34f9c4954155295fa928e22deecde2a"
+        },
+        "readback_scores": {
+          "f_score": 45.05734667414135,
+          "precision": 97.05620773475113,
+          "recall": 29.338788906172812
+        },
+        "upstream_reader": "upstream.read_orthogroups_smart",
+        "upstream_scores": [
+          45.05734667414135,
+          97.05620773475113,
+          29.338788906172812
+        ]
+      },
+      "qfo_prediction_semantics": "native post-clustering graph",
+      "scores": {
+        "EC": 0.96316811,
+        "FAS": 0.8135948641193668,
+        "GO": 0.4863364,
+        "OrthoBench": 0.45057346674000004,
+        "QfO_secondary_mean": 0.7632156753824589,
+        "SwissTrees": 0.7181110000474794,
+        "ThreeKingdoms": 0.9304626127436718,
+        "TreeFam-A": 0.6431874339159368,
+        "VGNC": 0.9548962442119706
+      },
+      "three_kingdoms": {
+        "groups": {
+          "bytes": 3854242,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/proteinortho/orthogroups.txt",
+          "sha256": "4069a10ce5f302c17a915cc7d2bff8c97b6fc801e314b4743eb34d2b7d3d50b0"
+        },
+        "input_status": "not_retained; historical consumption not proven",
+        "run": "historical",
+        "semantics": "reference-gene group co-membership, including within-species pairs"
+      }
+    },
+    {
+      "key": "fastoma_0_3_5",
+      "label": "FastOMA 0.3.5 final orthologous groups",
+      "orthobench_retained_evidence": {
+        "coverage_percent": 51.7,
+        "exact_refogs": 4,
+        "f_score_percent": 30.906942172,
+        "genes_in_orthogroups": 130010,
+        "method": "FastOMA 0.3.5 final orthologous groups",
+        "precision_percent": 93.631476193,
+        "recall_percent": 18.508163621
+      },
+      "orthobench_supplemental_readback": {
+        "exact_refogs": 4,
+        "historical_consumption_established": false,
+        "parser": "iter_fastoma",
+        "prediction": {
+          "bytes": 3814464,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/fastoma_run/work/15/57adea05f3b88b17c43ee1e856acc3/OrthologousGroups.tsv",
+          "sha256": "7599b5aac0c871be6114e2f845b19c18f736839a655a1aa535a19539918f1dbd"
+        },
+        "readback_scores": {
+          "f_score": 30.906942172395148,
+          "precision": 93.63147619302025,
+          "recall": 18.508163621337527
+        },
+        "upstream_reader": "iter_fastoma",
+        "upstream_scores": [
+          30.906942172395148,
+          93.63147619302025,
+          18.508163621337527
+        ]
+      },
+      "qfo_prediction_semantics": "native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree",
+      "scores": {
+        "EC": 0.89716752,
+        "FAS": 0.6543663364244952,
+        "GO": 0.43689352,
+        "OrthoBench": 0.30906942172,
+        "QfO_secondary_mean": 0.7294407011591449,
+        "SwissTrees": 0.7802191344441686,
+        "ThreeKingdoms": 0.8616551830920492,
+        "TreeFam-A": 0.6579015590472269,
+        "VGNC": 0.9500961370389792
+      },
+      "three_kingdoms": {
+        "groups": {
+          "bytes": 1738026,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/orthogroups.txt",
+          "sha256": "3a8b30791c01b847244dfb86e86bebaec97731275d8bbfbf7517902758adf7ef"
+        },
+        "input_status": "all_12_staged_hashes_match; historical consumption not proven",
+        "run": "historical",
+        "semantics": "reference-gene group co-membership, including within-species pairs"
+      }
+    },
+    {
+      "key": "orthomcl_1_4",
+      "label": "OrthoMCL 1.4",
+      "orthobench_retained_evidence": {
+        "coverage_percent": 86.3,
+        "exact_refogs": 12,
+        "f_score_percent": 55.065342292,
+        "genes_in_orthogroups": 216950,
+        "method": "OrthoMCL 1.4",
+        "precision_percent": 59.078055333,
+        "recall_percent": 51.563064181
+      },
+      "orthobench_supplemental_readback": {
+        "exact_refogs": 12,
+        "historical_consumption_established": false,
+        "parser": "iter_orthomcl",
+        "prediction": {
+          "bytes": 11673296,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/Jul_25/all_orthomcl.out",
+          "sha256": "1add0db6640e0451184975b5cbdf085ff404bbf24dadb66402921cd4dfd8a227"
+        },
+        "readback_scores": {
+          "f_score": 55.06534229215073,
+          "precision": 59.07805533272544,
+          "recall": 51.56306418084255
+        },
+        "upstream_reader": "upstream.read_orthogroups_smart",
+        "upstream_scores": [
+          55.06534229215073,
+          59.07805533272544,
+          51.56306418084255
+        ]
+      },
+      "qfo_prediction_semantics": "cross_species_final_group_cliques",
+      "scores": {
+        "EC": 0.92132599,
+        "FAS": 0.7337522155738428,
+        "GO": 0.46375473,
+        "OrthoBench": 0.55065342292,
+        "QfO_secondary_mean": 0.7135257317724517,
+        "SwissTrees": 0.7666097433127044,
+        "ThreeKingdoms": 0.9889293818331844,
+        "TreeFam-A": 0.7536851790190046,
+        "VGNC": 0.6420265327291587
+      },
+      "three_kingdoms": {
+        "groups": {
+          "bytes": 6804749,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthogroups.txt",
+          "sha256": "e2edb47e56844adcc16f196b530e15c9ca872cbc2fe9b018d8a64b2ddc47b7d8"
+        },
+        "input_status": "all_12_staged_hashes_match; historical consumption not proven",
+        "run": "historical",
+        "semantics": "reference-gene group co-membership, including within-species pairs"
+      }
+    }
+  ],
+  "source": {
+    "bytes": 9405,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_current_benchmark_scores.py",
+    "sha256": "87ad954b9168bf5b5f4b02a67f0f26a16770bfdfbefc5f79427723fc53b3563c"
+  },
+  "status": "current_retained_scores_consolidated"
+}
