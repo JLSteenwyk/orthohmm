@@ -1,5 +1,15 @@
 # Publication Progress
 
+## Completion Checklist Reconciled (2026-09-26)
+
+Corrected stale work-package rows in the claim checklist: recovered OrthoMCL
+search/BPO/native groups/conversion and direct failure exposure are production
+verified; scoring remains pending. The error-analysis row now includes the
+verified forced-scoring mechanism without claiming downstream F1 recovery.
+The original seven-work-package scope and incomplete requirements remain.
+Previous turn was a verified FAS wait; this turn aligns the completion audit
+with current evidence. No scientific defaults or running tasks changed.
+
 ## New Plotting Alerts Remediated Locally (2026-09-26)
 
 Read-only GitHub API snapshot identified the 13 newly surfaced alerts as
