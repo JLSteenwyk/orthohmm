@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Hierarchy and Reconciliation Selection Validated (2026-09-26)
+
+The preceding turn made progress independently verifying all historical node
+events, root groups and native pairs. Added the remaining hierarchy/selection
+reader: all 54,445 historical source families follow the frozen reconciliation
+criterion and all 209,159 hierarchical rows match validated node or bypass
+records. The installed fixture also passes; all 100 related tests pass.
+[Evidence and output-semantics distinction](PHYLOGENY_HIERARCHY_READBACK_20260926.md).
+The hierarchy is pre-membership filtering, unlike final root groups/native pairs;
+the reproduction guide now documents this and the five-stage post-completion
+readback commands. No scoring conversion or scientific defaults changed.
+
+Job 22179 remains RUNNING at 34:21 with 32 CPUs/128 GiB allocated. Fresh-run
+admission still awaits native completion and independent output comparison.
+Initial candidate selection, optimal rooting, biological truth, controlled
+timing and the other full publication requirements are not established by
+these consistency checks. DGX remains deferred and the goal stays active.
+
 ## Full Historical Event and Pair Semantics Verified (2026-09-26)
 
 The preceding turn made progress validating alignment residues and the species

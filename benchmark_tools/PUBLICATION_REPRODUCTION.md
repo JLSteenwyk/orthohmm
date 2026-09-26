@@ -284,6 +284,55 @@ path, the installed phylogeny fixture again produces identical groups, pairs
 and selected trees. Optional RNA extensions were not built; source-archive
 notices and full runtime/environment review remain separate requirements.
 
+### Full Installed OrthoBench Readback
+
+The [fresh installed run](results/INSTALLED_ORTHOBENCH_PROTOCOL_20260926.md)
+is job 22179; consult live scheduler state before reading its outputs. It uses
+the frozen scientific source with the packaging overlay and rebuilt MAFFT.
+It is shared-host reproduction, not controlled comparative timing.
+
+Independent readers have passed on the installed synthetic fixture and retained
+historical OrthoBench p1_c1_r1: [trees and pair structure](results/PHYLOGENY_STRUCTURE_READBACK_20260926.md),
+[sequence content and supermatrix](results/PHYLOGENY_SEQUENCE_READBACK_20260926.md),
+[events, membership filtering and complete pair sets](results/PHYLOGENY_EVENT_READBACK_20260926.md),
+and [hierarchy/selection](results/PHYLOGENY_HIERARCHY_READBACK_20260926.md).
+The hierarchy is pre-membership-filtering; benchmarked final root groups and
+native pairs are post-filtering. None is silently substituted for another.
+
+After successful native completion, run the following from the repository root
+in the audit environment (tested with Python 3.10.13, DendroPy 5.0.8 and
+Biopython 1.86). These are pending fresh-run commands, not a claim that they
+have already passed. Each reader refuses to overwrite a receipt. Stop on any
+failure and preserve it; do not automatically resume or restart inference.
+
+```bash
+set -e
+run=benchmarks/work/publication_installed_orthobench_20260926
+phylo="$run/inference/orthohmm_phylogeny"
+python -m benchmark_tools.audit_installed_orthobench \
+  --repo . --directory "$run" --job 22179 --output "$run/readback_scores.json"
+python -m benchmark_tools.audit_phylogeny_structure \
+  --directory "$phylo" --input "$run/input" --output "$run/readback_structure.json"
+python -m benchmark_tools.audit_phylogeny_sequences \
+  --directory "$phylo" --structure "$run/readback_structure.json" \
+  --output "$run/readback_sequences.json"
+python -m benchmark_tools.audit_phylogeny_events \
+  --directory "$phylo" --structure "$run/readback_structure.json" \
+  --constraints "$run/inference/orthohmm_working_res/phylogeny_candidate_merges.json" \
+  --output "$run/readback_events.json"
+python -m benchmark_tools.audit_phylogeny_hierarchy \
+  --directory "$phylo" --events "$run/readback_events.json" \
+  --output "$run/readback_hierarchy.json"
+```
+
+The first command gates native/scheduler success and frozen input/source/tool
+identity, scores all reference families and compares partitions without group
+label dependence. Explicitly review every score/partition difference and all
+receipts before any reproduction claim. The companion readers establish
+output/rule consistency conditional on saved trees; they do not prove optimal
+rooting, biological truth or correctness of the HMM search. They do not by
+themselves establish publication readiness or overwrite historical scores.
+
 The [rights register](results/PUBLICATION_DATA_RIGHTS_20260918.md) separates
 project code, reference datasets, upstream software and binaries. Local
 availability or inclusion in an evidence bundle is not blanket permission
