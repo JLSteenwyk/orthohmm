@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Swiss Regression Integration Verified (2026-09-26)
+
+The initial broader regression run had 523 passes and one failure: the
+synthetic `run_corrected_swiss_strata` orchestration fixture used historical
+production helper pins against the current checkout. Three helpers differ:
+`prepare_qfo_corrected_fastoma_pairs.py`, `audit_qfo_corrected_swiss.py`, and
+`export_qfo_corrected_comparison.py`. The production rejection is intentional;
+historical analyses require their frozen executor, not silently refreshed pins.
+
+The test fixture now pins its current helper files locally, without changing
+production pins. Each negative test additionally checks its specific error
+and reached audit calls, preventing an earlier source mismatch from masking
+untested protocol, strata, audit, or post-computation integrity checks.
+All 19 driver tests and the broader 524-test Swiss/fragment suite pass.
+Command: `/home/bizon/anaconda3/bin/python -m pytest -q tests/unit/test_*swiss*.py tests/unit/test_audit_unisave_fragment_source.py --junitxml=benchmarks/work/swiss_postintegration_verified_20260926.xml`.
+The broader run completed in 22.66 seconds. No scoring, inference, protocol,
+or retained results changed; this is regression evidence, not a native
+workflow rerun or completion of the remaining publication requirements.
+
 ## Complete Comparator Arithmetic Relocated (2026-09-26)
 
 Exported the committed verifier, admitted eight-method count report and

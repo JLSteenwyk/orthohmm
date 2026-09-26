@@ -79,6 +79,11 @@ def test_mixed_or_changed_evidence_rejected(change):
 
 
 def setup_run(tmp_path, monkeypatch):
+    # Exercise orchestration with synthetic evidence, not historical source admission.
+    monkeypatch.setattr(module, "SOURCES", {
+        name: module.record(Path(module.__file__).with_name(name))["sha256"]
+        for name in module.SOURCES
+    })
     factorial, comparator, strata = fixture()
     evidence = tmp_path / "evidence.json"
     evidence.write_text("{}")
@@ -120,8 +125,14 @@ def test_driver_reconstructs_counts_and_retains_provenance(tmp_path, monkeypatch
         module.run(*args)
 
 
-@pytest.mark.parametrize("change", ["helper", "protocol", "strata", "postcheck", "audit"])
-def test_driver_fails_closed_without_result(tmp_path, monkeypatch, change):
+@pytest.mark.parametrize("change, message, expected_calls", [
+    ("helper", "Changed frozen analysis implementation", []),
+    ("protocol", "Changed frozen protocol", []),
+    ("strata", "Frozen manifest changed", []),
+    ("postcheck", "Frozen input/source identity changed", ["factorial", "comparator"]),
+    ("audit", "raw evidence failed", ["factorial"]),
+])
+def test_driver_fails_closed_without_result(tmp_path, monkeypatch, change, message, expected_calls):
     args, calls = setup_run(tmp_path, monkeypatch)
     if change == "helper":
         monkeypatch.setattr(module, "SOURCES", {"bootstrap_corrected_swiss_strata.py": "wrong"})
@@ -131,6 +142,7 @@ def test_driver_fails_closed_without_result(tmp_path, monkeypatch, change):
         monkeypatch.setattr(module, "STRATA_SHA", "wrong")
     elif change == "audit":
         def fail(*unused):
+            calls.append(("factorial", unused))
             raise ValueError("raw evidence failed")
         monkeypatch.setattr(module, "audit_factorial", fail)
     else:
@@ -140,6 +152,7 @@ def test_driver_fails_closed_without_result(tmp_path, monkeypatch, change):
             args[0].write_text("changed during computation")
             return result
         monkeypatch.setattr(module, "bootstrap", mutate)
-    with pytest.raises((ValueError, RuntimeError)):
+    with pytest.raises(ValueError, match=message):
         module.run(*args)
+    assert [call[0] for call in calls] == expected_calls
     assert not args[-1].exists()
