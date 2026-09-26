@@ -1463,14 +1463,18 @@ original-release QfO interaction intervals included zero; both analyses are
 retained, not conflated. No superiority over corrected full OrthoFinder is
 established. [Complete corrected factorial](QFO_CORRECTED_FACTORIAL_COMPLETE_20260919.md).
 
-Corrected-input comparator evaluation and better-matched search controls
-remain outstanding. Corrected multi-seed
+Corrected-input evaluation now includes all eight retained comparator rows,
+including OrthoMCL, with paired SwissTrees uncertainty. Better-matched search
+sensitivity or effort controls remain outstanding. Corrected multi-seed
 simulations and their generating-tree/NNI controls are complete but do not
 establish an OrthoHMM advantage or profile-expansion benefit. Tree perturbations
-show bounded sensitivity, not arbitrary-error robustness. QfO and independently
-annotated error strata, mechanistic tracing, more realistic evolutionary
-conditions and the QfO parameter panel, matched resource scaling,
-and deeper biological application mechanism tracing remain required.
+show bounded sensitivity, not arbitrary-error robustness. Completed annotation,
+identity, fragment and duplication strata are descriptive; they do not establish
+calibrated evolutionary divergence or causal error mechanisms. The biological
+application trace localizes the focal losses but does not prove topology
+correctness. More realistic evolutionary conditions, completion of the QfO
+parameter panel, appropriate uncertainty for the other QfO endpoints and
+controlled resource scaling remain required.
 
 ### TreeFam-A Pooled Count Audit
 
@@ -2029,6 +2033,44 @@ uncertainty limitation is retained rather than obscured by aggregate variance
 agreement or selectively passing simulation cases.
 
 ## Data And Code Availability
+
+A separate [frozen-source installation](PUBLICATION_FROZEN_OVERLAY_INSTALL_20260926.md)
+uses scientific revision `7f3a9e4` with a versioned setup-only packaging overlay.
+All 33 shipped scientific source files match their frozen Git blobs; the new
+compiled wheel is not represented as the historical benchmark executable.
+The [exact installed-artifact inventory](FROZEN_OVERLAY_ARTIFACT_INVENTORY_20260926.md)
+binds 11 wheels to their installation hashes and notice metadata and verifies
+all 42 entries of the project wheel's RECORD and its embedded license.
+This is not complete transitive dependency or redistribution clearance.
+
+Independent readers additionally checked the historical OrthoBench phylogenetic
+baseline from inputs through output serialization. They validated all 8,681
+gene-family alignments, 200 species-tree marker alignments and the reconstructed
+181,089-column supermatrix; independently derived 337,845 reconciliation node
+records; and reproduced 59,770 final root groups and all 966,439 native
+pair/confidence records under the frozen membership policy. The hierarchy's
+209,159 rows and all reconciliation/bypass selections also agree. The
+hierarchy describes nodes before satellite-membership filtering, unlike the
+final root groups and native pairs. These checks establish consistency with
+the frozen rules conditional on saved rooted trees, not biological truth,
+optimal rooting or correctness of upstream HMM search.
+[Sequence validation](PHYLOGENY_SEQUENCE_READBACK_20260926.md),
+[event and pair validation](PHYLOGENY_EVENT_READBACK_20260926.md), and
+[hierarchy semantics](PHYLOGENY_HIERARCHY_READBACK_20260926.md).
+
+External-tool build evidence includes a [MAFFT source rebuild](PUBLICATION_MAFFT_SOURCE_BUILD_20260926.md)
+whose 34 core helper files match the retained installation and a separate
+[baseline-x86-64 FastTree build](FASTTREE_BASELINE_BUILD_RESULT_20260926.md)
+with identical binaries across two private builds. A help-banner validator
+failure was preserved and corrected without recompilation. Using those
+FastTree bytes with rebuilt MAFFT, the installed OrthoHMM pipeline passes the
+unchanged 16-protein fixture and all independent phylogeny readbacks; five
+primary outputs match the earlier fixture byte-for-byte. These small-fixture
+results do not establish full-dataset equivalence, cross-platform operation
+or controlled runtime performance. The fresh installed full OrthoBench run
+has not yet been admitted; its [protocol and post-completion readback workflow](../PUBLICATION_REPRODUCTION.md#full-installed-orthobench-readback)
+remain separate from the historical validations. No new runtime replaced a
+retained benchmark executable, and no scientific score was changed.
 
 Historical installation manifests retain their original tool versions and
 must not be interpreted as secure installation recommendations. The original

@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Manuscript Reproducibility Integration, Version 17 (2026-09-26)
+
+The preceding turn made progress binding exact installed wheels to notices and
+content inventories. Integrated the completed historical structure, sequence,
+event/pair and hierarchy validations plus source-build and artifact evidence
+into the manuscript. Corrected the stale claim that corrected-input comparator
+evaluation remained incomplete; all eight rows are now distinguished from the
+still-unmet matched-search, uncertainty and controlled-timing requirements.
+[Version-17 rendered review](MANUSCRIPT_RENDER_REVIEW_20260926_v17.md) checks 204
+distinct tracked assets, all 40 page bounds and visually reviews the updated
+page 39 without clipping/overlap. Eight renderer tests pass. This remains a
+working draft, not publication readiness or full visual/editorial approval.
+
+Job 22179 remains RUNNING at 50:41 with 32 CPUs/128 GiB allocated. Historical
+validation and installed small-fixture equivalence are not silently promoted
+to a fresh full-dataset reproduction claim. No score or scientific default
+changed. Full-run readback, controlled timing and the other scientific/release
+requirements remain open. DGX remains deferred and the full goal stays active.
+
 ## Exact Installed-Wheel Notice and Content Inventory (2026-09-26)
 
 The preceding turn made progress with the separate baseline FastTree build.
