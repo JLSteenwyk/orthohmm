@@ -405,8 +405,21 @@ localizes rejection in the observed run but does not authenticate historical
 execution or prove numerical score equivalence. The descriptive pair set
 includes within-species and low-certainty members; these counts are not
 official recall, evidence that excluded pairs are true orthologs, or a causal
-explanation of final grouping errors. Excluded pairs were not scored
-counterfactually, and benchmark predictions were not changed.
+explanation of final grouping errors. Benchmark predictions were not changed.
+
+A subsequent [forced-candidate diagnostic](OB_FORCED_CANDIDATE_PROTOCOL_20260926.md)
+scored the same 81,466 pairs with the frozen HMM engine while overriding
+only candidate selection and retaining full target databases for E-values.
+Of the 48,368 previously excluded pairs, 30,496 passed E<1e-4 and 17,872
+did not. All 33,098 previously scored pairs retained exactly identical
+scores, E-values and decisions; the 1,619 prior significance rejections
+remained rejected. An [independent raw-output audit](ob_forced_candidates_audit_20260926.json)
+verified the pair universe, numerical agreement and transition counts.
+Thus candidate selection prevented significant HMM hits for 30,496 watched
+directed pairs. Reference labels selected the forced pairs, so this is
+mechanistic evidence, not unbiased sensitivity, proof of true orthology,
+matched DIAMOND sensitivity or a downstream precision/F1 improvement.
+No broader-prefilter grouping run is evaluated by this diagnostic.
 
 Joining these decisions to the retained final-root-group trace found8,386
 pairs excluded by the prefilter in both directions that were nonetheless

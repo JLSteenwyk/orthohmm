@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Forced Candidate Mechanism Verified (2026-09-26)
+
+Job **22177 completed 0:0 in 1:21**. Independent audit of every raw array
+and table across 144 directions verifies all 81,466 watched directed pairs.
+Of 48,368 former prefilter exclusions, **30,496 now pass E<1e-4** and
+17,872 remain nonsignificant. All 33,098 previously scored pairs have
+exactly identical scores/E-values/decisions, including 31,479 acceptances
+and 1,619 rejections. No numerical disagreement was discarded.
+
+Retained [audit](ob_forced_candidates_audit_20260926.json), SHA256
+`0cda6c99b7bab61c86f2319653828fe6ada74c118166408dbab3535bf003d4bd`.
+Source report SHA256 is
+`001b9e5339c00aea3a25ccd60548e6ef6911b1209a1ae256eff2c5947d7e8d2c`.
+Audit CLI: `audit_ob_search_decisions.py --forced --root ROOT --report
+benchmarks/results/ob_forced_candidates_v1/report.json --report-sha256
+001b9e5339c00aea3a25ccd60548e6ef6911b1209a1ae256eff2c5947d7e8d2c
+--job 22177 --output FRESH_PATH`. Fifty focused tests passed, including
+numerical disagreement retention and missing/duplicate pair rejection.
+
+Updated the manuscript with this candidate-selection mechanism evidence.
+Reference conditioning prohibits treating it as unbiased search recall,
+matched DIAMOND sensitivity or a demonstrated whole-pipeline F1 gain.
+Frozen defaults and prior benchmark predictions remain unchanged.
+QfO assessment 22174 remains live at 19:21 elapsed, with admission 22176
+waiting. Next: incorporate admitted QfO results and complete the comparison;
+broader search/precision and dedicated timing requirements remain open.
+The previous turn launched the diagnostic; this turn verifies its result.
+
 ## Forced Candidate Diagnostic Submitted (2026-09-26)
 
 Submitted **22177**, four CPUs / 16 GiB / 12 hours / no requeue, using

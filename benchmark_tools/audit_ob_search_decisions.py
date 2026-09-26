@@ -19,6 +19,33 @@ from benchmark_tools.build_publication_runtime import verify_runtime
 from benchmark_tools.verify_ygob_validation import require_completed_job
 
 
+def compare_forced_rows(prior, current):
+    """Retain numerical disagreements rather than calling them rescues."""
+    def keyed(rows):
+        result = {(r["query"], r["target"]): r for r in rows}
+        if len(result) != len(rows):
+            raise ValueError("Duplicate comparison pair")
+        return result
+    before, after = keyed(prior), keyed(current)
+    if before.keys() != after.keys():
+        raise ValueError("Different comparison universes")
+    transitions, differences = Counter(), []
+    previously_scored = 0
+    for pair, old in before.items():
+        new = after[pair]
+        if new["decision"] not in ("accepted", "scored_not_significant"):
+            raise ValueError("Forced pair was not scored")
+        transitions[old["decision"] + ":" + new["decision"]] += 1
+        if old["decision"] != "not_selected_by_prefilter":
+            previously_scored += 1
+            if any(old[k] != new[k] for k in ("score", "evalue", "decision")):
+                differences.append(dict(query=pair[0], target=pair[1],
+                    prior={k: old[k] for k in ("score", "evalue", "decision")},
+                    current={k: new[k] for k in ("score", "evalue", "decision")}))
+    return dict(transitions=dict(transitions), previously_scored=previously_scored,
+                numerical_disagreements=differences)
+
+
 def reconstruct(raw, query_ids, target_ids, watched):
     if raw["query_ids"].tolist() != query_ids or raw["target_ids"].tolist() != target_ids:
         raise ValueError("Raw identities differ from input order/universe")
@@ -51,7 +78,7 @@ def reconstruct(raw, query_ids, target_ids, watched):
     return rows
 
 
-def audit(root, report_path, report_sha, job, output):
+def audit(root, report_path, report_sha, job, output, forced=False):
     if output.exists():
         raise FileExistsError(output)
     accounting = subprocess.check_output(["sacct", "-j", str(job), "--parsable2",
@@ -60,13 +87,19 @@ def audit(root, report_path, report_sha, job, output):
     if (scheduler["State"], scheduler["ExitCode"], scheduler["NodeList"], scheduler["AllocCPUS"]) != ("COMPLETED", "0:0", "bizon", "4"):
         raise ValueError("Wrong diagnostic completion or allocation")
     report = read_frozen(report_path, report_sha)
-    if (report["status"] != "search_decisions_observed_pending_independent_audit"
+    expected_status = ("forced_candidate_scores_pending_independent_audit" if forced
+                       else "search_decisions_observed_pending_independent_audit")
+    if (report["status"] != expected_status
             or report["job_id"] != str(job) or report["settings"] != SETTINGS
             or report["accuracy_evaluated"] is not False or report["publication_ready"] is not False
             or report["threads"] != 4):
         raise ValueError("Wrong diagnostic identity/settings")
-    executor = root / "benchmarks/work/publication_ob_search_decisions_v1"
-    if subprocess.check_output(["git", "-C", str(executor), "rev-parse", "HEAD"], text=True).strip() != "2a6513d04585decad1afe53dac2e74bf0c7b3968":
+    if report.get("forced_watched_candidates", False) is not forced:
+        raise ValueError("Wrong candidate-selection mode")
+    executor = root / ("benchmarks/work/ob_forced_candidate_executor_20260926" if forced
+                       else "benchmarks/work/publication_ob_search_decisions_v1")
+    commit = "e789014fc970980c9c1c4d2d72805f38e2b4b5fc" if forced else "2a6513d04585decad1afe53dac2e74bf0c7b3968"
+    if subprocess.check_output(["git", "-C", str(executor), "rev-parse", "HEAD"], text=True).strip() != commit:
         raise ValueError("Wrong diagnostic executor")
     subprocess.run(["git", "-C", str(executor), "diff", "--exit-code", "HEAD", "--", "benchmark_tools"], check=True)
     if report["source"] != record(executor / "benchmark_tools/trace_ob_search_decisions.py"):
@@ -79,6 +112,15 @@ def audit(root, report_path, report_sha, job, output):
         raise ValueError("Wrong runtime binding")
     verify_runtime(runtime_path, Path(runtime["root"]))
     checked = [record(report_path), record(trace_path), trace["pair_trace"], *report["checked_records"]]
+    baseline = None
+    if forced:
+        baseline_path = root / "benchmark_tools/results/ob_search_decisions_audit_20260918.json"
+        baseline_audit = read_frozen(baseline_path, "8081c8ff005c911b0122ba3a797aaee51c1ac65a1c3f17f551512d3cb47ce730")
+        if baseline_audit["status"] != "search_decisions_independently_recounted":
+            raise ValueError("Unverified baseline")
+        baseline_record = baseline_audit["source_report"]
+        baseline = read_frozen(Path(baseline_record["path"]), baseline_record["sha256"])
+        checked.extend([record(baseline_path), baseline_record, *baseline_audit["checked_records"]])
     for item in checked:
         check(item)
     ids, owners = {}, {}
@@ -99,7 +141,10 @@ def audit(root, report_path, report_sha, job, output):
     observed_keys = [(d["query_species"], d["target_species"]) for d in report["directions"]]
     if observed_keys != sorted(expected) or len(expected) != 144:
         raise ValueError("Incomplete or reordered direction inventory")
+    if baseline is not None and [(d["query_species"], d["target_species"]) for d in baseline["directions"]] != observed_keys:
+        raise ValueError("Different baseline directions")
     counts, transitions, total = Counter(), Counter(), 0
+    forced_transitions, numerical_disagreements, previously_scored = Counter(), [], 0
     for index, direction in enumerate(report["directions"]):
         qsp, tsp = direction["query_species"], direction["target_species"]
         pairs = expected[qsp, tsp]
@@ -115,6 +160,18 @@ def audit(root, report_path, report_sha, job, output):
             rows = reconstruct(raw, query_ids, ids[tsp], pairs)
             if direction["candidate_count"] != int(raw["candidate_count"]):
                 raise ValueError("Candidate count differs")
+        if forced:
+            if direction["candidate_count"] != len(pairs):
+                raise ValueError("Forced candidate universe differs")
+            prior_raw = baseline["directions"][index]["raw"]
+            check(prior_raw)
+            checked.append(prior_raw)
+            with np.load(prior_raw["path"], allow_pickle=False) as raw:
+                prior_rows = reconstruct(raw, query_ids, ids[tsp], pairs)
+            comparison = compare_forced_rows(prior_rows, rows)
+            forced_transitions.update(comparison["transitions"])
+            numerical_disagreements.extend(comparison["numerical_disagreements"])
+            previously_scored += comparison["previously_scored"]
         with Path(direction["table"]["path"]).open(newline="") as stream:
             retained = list(csv.DictReader(stream, delimiter="\t"))
         for row in retained:
@@ -147,6 +204,15 @@ def audit(root, report_path, report_sha, job, output):
                   limitations=["Recounts persisted raw output; does not independently rescore sequences.",
                       "Historical disagreements are retained; no historical execution equivalence claim.",
                       "No counterfactual scoring, causal accuracy conclusion or comparative timing."])
+    if forced:
+        result.update(status="forced_candidate_scores_independently_recounted",
+            forced_transitions=dict(forced_transitions), previously_scored=previously_scored,
+            numerical_disagreements=numerical_disagreements,
+            candidate_only_interpretation_authorized=not numerical_disagreements,
+            limitations=["Reference-conditioned candidate-selection intervention, not unbiased accuracy or matched DIAMOND sensitivity.",
+                         "Recounts raw scores; does not independently rescore sequences.",
+                         "No downstream grouping or comparative timing claim.",
+                         "Numerical disagreements prohibit attributing changes solely to candidate selection."])
     with output.open("x") as stream:
         json.dump(result, stream, indent=2, sort_keys=True)
         stream.write("\n")
@@ -159,5 +225,6 @@ if __name__ == "__main__":
         parser.add_argument("--" + name, type=Path, required=True)
     for name in ("report-sha256", "job"):
         parser.add_argument("--" + name, required=True)
+    parser.add_argument("--forced", action="store_true")
     args = parser.parse_args()
-    audit(args.root.resolve(), args.report.resolve(), args.report_sha256, args.job, args.output.resolve())
+    audit(args.root.resolve(), args.report.resolve(), args.report_sha256, args.job, args.output.resolve(), args.forced)
