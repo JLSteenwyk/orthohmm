@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Minimal Startup Reproduces Memcheck Error Kinds (2026-09-26)
+
+Ran one bounded `-B -S -c pass` control with the retained Python/libc/Valgrind
+identities and diagnostic flags. It returned 97 with eight InvalidRead and
+three UninitCondition records, all at libc wide-string/Python initialization
+frames. Thus OrthoHMM/scientific imports are not necessary for these startup
+reports; counts differ and this does not reproduce or explain the later SIGSEGV.
+[Full outcome and limitations](QFO_CPM_STARTUP_CONTROL_20260926.md) retain the
+negative diagnostic, raw XML identity and command. Fourteen runner/extractor
+tests pass. No retry, scientific run, suppression, scoring admission or DGX
+action occurred. The high-CPM robustness endpoint remains missing.
+
 ## High-CPM Memcheck Stacks Localized (2026-09-26)
 
 Rechecked the retained XML digest before and after streaming extraction.
