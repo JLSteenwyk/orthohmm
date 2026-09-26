@@ -1,0 +1,69 @@
+{
+  "checked_records": [
+    {
+      "bytes": 6408,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_verify_20260926/events.json",
+      "sha256": "8c6c4ebe6c8d24eaa4aca45e4bcf8373e159ab600393a01075b2cdb48657398f"
+    },
+    {
+      "bytes": 2724,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_verify_20260926/phylogeny/inference/orthohmm_phylogeny/provenance_manifest.json",
+      "sha256": "f5fb84984fbe2181c1174e2b734019d4cbe166d0a30c2176bd1930a54bdb58b6"
+    },
+    {
+      "bytes": 862,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_verify_20260926/phylogeny/input/S2.fa",
+      "sha256": "c7f3968bd8e6cd6135387fee635f4089138575490422db92c8a899fcfd5a81c1"
+    },
+    {
+      "bytes": 862,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_verify_20260926/phylogeny/input/S4.fa",
+      "sha256": "01b757c656c07b2987a329f0f3fee6ccf1a1bd7c5a2113bc838b3df2ffa6d92b"
+    },
+    {
+      "bytes": 862,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_verify_20260926/phylogeny/input/S1.fa",
+      "sha256": "f648f8d56b6e3d351d2da7b5a5d002d75faf978d8c3b2dc5554bd205afe71d86"
+    },
+    {
+      "bytes": 862,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_verify_20260926/phylogeny/input/S3.fa",
+      "sha256": "a68cb8f4bc8fe5a641f6c9309d587ef27fde0ecdad053fdd1ef3bc00333b55c9"
+    },
+    {
+      "bytes": 332,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_verify_20260926/phylogeny/inference/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "sha256": "fbe3f59bed47055b17879fe92b3789ecf87d054ce6337e4a98a3c379402ac06d"
+    },
+    {
+      "bytes": 1813,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_verify_20260926/phylogeny/inference/orthohmm_phylogeny/orthohmm_reconciliation_nodes.tsv",
+      "sha256": "73db90151dbf0eb4c934e43e17bdd3a118b55a7be6a3eaf69bcb91dc84fd2bd7"
+    },
+    {
+      "bytes": 1114,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_verify_20260926/phylogeny/inference/orthohmm_phylogeny/orthohmm_hierarchical_orthogroups.tsv",
+      "sha256": "1d939ef6ecfb370d5f7ef47849897f9f97e4b875ef37e49c75cb84cb1110677e"
+    }
+  ],
+  "hierarchy_semantics": "Node hierarchy before satellite-membership filtering, not final root-HOG partition.",
+  "limitations": [
+    "Conditional on prior event/pair readback and frozen family membership.",
+    "Does not establish correctness of initial candidate selection or biological truth.",
+    "Hierarchy is not substituted for the benchmarked root groups or native ortholog pairs."
+  ],
+  "reader": {
+    "bytes": 5516,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_phylogeny_hierarchy.py",
+    "sha256": "0569763fcbbd3485a21b87727b2eb3fc11b01a4028421e2af6ccaa724ff998aa"
+  },
+  "scientific_scores_admitted": false,
+  "status": "phylogeny_selection_and_hierarchy_verified",
+  "totals": {
+    "bypass_rows": 2,
+    "bypassed_families": 2,
+    "hierarchical_groups": 9,
+    "internal_node_rows": 7,
+    "reconciled_families": 1
+  }
+}

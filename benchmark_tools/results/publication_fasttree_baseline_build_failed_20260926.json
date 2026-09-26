@@ -1,0 +1,125 @@
+{
+  "builds": [
+    {
+      "bytes": 413192,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_20260926/build_a/FastTree",
+      "sha256": "e3f5f951d1b8e805eee5efd68b454f046a54be8a9eb91d3b8e2c6e5152aa9a30"
+    },
+    {
+      "bytes": 413192,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_20260926/build_b/FastTree",
+      "sha256": "e3f5f951d1b8e805eee5efd68b454f046a54be8a9eb91d3b8e2c6e5152aa9a30"
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "/usr/bin/gcc",
+        "-Wall",
+        "-O3",
+        "-finline-functions",
+        "-funroll-loops",
+        "-march=x86-64",
+        "-mtune=generic",
+        "-o",
+        "FastTree",
+        "FastTree.c",
+        "-lm"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_20260926/build_a",
+      "timeout_seconds": 240
+    },
+    {
+      "argv": [
+        "/usr/bin/gcc",
+        "-Wall",
+        "-O3",
+        "-finline-functions",
+        "-funroll-loops",
+        "-march=x86-64",
+        "-mtune=generic",
+        "-o",
+        "FastTree",
+        "FastTree.c",
+        "-lm"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_20260926/build_b",
+      "timeout_seconds": 240
+    }
+  ],
+  "compile_command": [
+    "/usr/bin/gcc",
+    "-Wall",
+    "-O3",
+    "-finline-functions",
+    "-funroll-loops",
+    "-march=x86-64",
+    "-mtune=generic",
+    "-o",
+    "FastTree",
+    "FastTree.c",
+    "-lm"
+  ],
+  "compile_environment": {
+    "LC_ALL": "C",
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PATH": "/usr/bin:/bin"
+  },
+  "compiler": {
+    "binary": {
+      "bytes": 1023032,
+      "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+      "sha256": "6117c52522997d2aaccb2b52b3c6bf42c0a6c5edb1d718431fed6b2fc5fec234"
+    },
+    "version": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n"
+  },
+  "cross_platform_verified": false,
+  "error": "Unexpected built FastTree identity/precision",
+  "error_type": "ValueError",
+  "help_probe": {
+    "returncode": 0,
+    "stderr": "FastTree 2.2.0 Double precision:\n  FastTree protein_alignment > tree\n  FastTree < protein_alignment > tree\n  FastTree -out tree protein_alignment\n  FastTree -nt nucleotide_alignment > tree\n  FastTree -nt -gtr < nucleotide_alignment > tree\n  FastTree < nucleotide_alignment > tree\nFastTree accepts alignments in fasta or phylip interleaved formats\n\nCommon options (must be before the alignment file):\n  -quiet to suppress reporting information\n  -nopr to suppress progress indicator\n  -log logfile -- save intermediate trees, settings, and model details\n  -fastest -- speed up the neighbor joining phase & reduce memory usage\n        (recommended for >50,000 sequences)\n  -n <number> to analyze multiple alignments (phylip format only)\n        (use for global bootstrap, with seqboot and CompareToBootstrap.pl)\n  -nosupport to not compute support values\n  -intree newick_file to set the starting tree(s)\n  -intree1 newick_file to use this starting tree for all the alignments\n        (for faster global bootstrap on huge alignments)\n  -pseudo to use pseudocounts (recommended for highly gapped sequences)\n  -gtr -- generalized time-reversible model (nucleotide alignments only)\n  -lg -- Le-Gascuel 2008 model (amino acid alignments only)\n  -wag -- Whelan-And-Goldman 2001 model (amino acid alignments only)\n  -quote -- allow spaces and other restricted characters (but not ' ) in\n           sequence names and quote names in the output tree (fasta input only;\n           FastTree will not be able to read these trees back in)\n  -noml to turn off maximum-likelihood\n  -nome to turn off minimum-evolution NNIs and SPRs\n        (recommended if running additional ML NNIs with -intree)\n  -nome -mllen with -intree to optimize branch lengths for a fixed topology\n  -cat # to specify the number of rate categories of sites (default 20)\n      or -nocat to use constant rates\n  -gamma -- after optimizing the tree under the CAT approximation,\n      rescale the lengths to optimize the Gamma20 likelihood\n  -constraints constraintAlignment to constrain the topology search\n       constraintAlignment should have 1s or 0s to indicates splits\n  -expert -- see more options\nFor more information, see http://www.microbesonline.org/fasttree/\n",
+    "stdout": ""
+  },
+  "historical_binary_modified": false,
+  "linker": {
+    "bytes": 1359128,
+    "path": "/usr/bin/x86_64-linux-gnu-ld.bfd",
+    "sha256": "5b674ea1d7017c2929f3c52c43487478bb240ecdd7197a25cce3813a70329a5c"
+  },
+  "logs": [
+    {
+      "bytes": 1084,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_20260926/build_a.log",
+      "sha256": "92fd8050d582648b65b1713115d3938ee7797b67362a9df93d2b3d050757359c"
+    },
+    {
+      "bytes": 1084,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_20260926/build_b.log",
+      "sha256": "92fd8050d582648b65b1713115d3938ee7797b67362a9df93d2b3d050757359c"
+    }
+  ],
+  "publication_ready": false,
+  "repeat_build_byte_equal": true,
+  "scientific_defaults_changed": false,
+  "script": {
+    "bytes": 5408,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/build_publication_fasttree.py",
+    "sha256": "9900f390426296861d743defe0b7b09751331dd4870be037d4b610df463f8f39"
+  },
+  "sources": [
+    {
+      "bytes": 395674,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_source_20260926/upstream/FastTree.c",
+      "sha256": "975202a6b74c9996af871404ff043bb2152edcbda539035662514bc12d1f3431"
+    },
+    {
+      "bytes": 35149,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_source_20260926/upstream/LICENSE",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    }
+  ],
+  "status": "failed"
+}

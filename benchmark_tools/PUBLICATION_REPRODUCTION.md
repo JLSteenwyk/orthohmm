@@ -277,6 +277,14 @@ requires AVX2; this is not a portable source build or complete redistribution
 review. The workflow downloads without execution and leaves installed tools
 unchanged.
 
+A separate [baseline-x86-64 FastTree source build](results/FASTTREE_BASELINE_BUILD_RESULT_20260926.md)
+now produces byte-identical binaries in two private builds. An initial help-banner
+validator failure is retained; after correcting that harness, the same binaries
+pass the installed fixture and all four phylogeny readbacks, with five primary
+outputs identical to the historical fixture. No old binary or benchmark runtime
+was replaced. Full-dataset equivalence, execution on older CPUs and complete
+dependency/redistribution review remain unproven.
+
 A [MAFFT core source build](results/PUBLICATION_MAFFT_SOURCE_BUILD_20260926.md)
 now reconstructs all 34 historical helper files byte-for-byte from the pinned
 official 7.525 archive on this host. With its new prefix and explicit helper

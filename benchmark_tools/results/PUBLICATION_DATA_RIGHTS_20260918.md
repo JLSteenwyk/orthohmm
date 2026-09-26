@@ -77,6 +77,13 @@ retained scientific evidence to resolve a packaging question.
 
 ## Remaining Actions
 
+The [baseline FastTree source-build result](FASTTREE_BASELINE_BUILD_RESULT_20260926.md)
+adds two locally identical double-precision x86-64-baseline binaries, with libc,
+libm and loader dependencies observed, and a verified installed fixture. It
+preserves both upstream source/license notices locally and does not distribute
+third-party binaries or source. Source compilation is not itself redistribution
+clearance or complete compiler/OS/dependency provenance.
+
 The [MAFFT source build](PUBLICATION_MAFFT_SOURCE_BUILD_20260926.md) now
 reconstructs all 34 installed helpers from the core target without building
 optional RNA extensions. This narrows the observed installed-helper provenance,

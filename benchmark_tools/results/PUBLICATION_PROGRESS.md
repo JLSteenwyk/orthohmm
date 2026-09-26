@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Baseline FastTree Build and Installed Fixture Verified (2026-09-26)
+
+The preceding turn completed hierarchy/selection readback. Advanced a separate
+runtime-packaging requirement while job 22179 runs: prespecified and compiled
+pinned FastTree 2.2.0 twice for baseline x86-64. Both 413,192-byte outputs are
+identical. The driver then failed on an incorrect help-banner expectation before
+inference; that failure is retained. A documented harness correction verified
+the same binaries without recompilation, ran the first installed fixture and
+passed all four independent phylogeny readers. All five primary outputs match
+the prior fixture byte-for-byte; 123 focused tests pass.
+[Result, failed/successful receipts and limits](FASTTREE_BASELINE_BUILD_RESULT_20260926.md).
+
+No historical installation or scientific configuration changed. ELF metadata
+declares x86-64-baseline, but older-CPU execution, full-dataset equivalence and
+complete runtime rights/provenance remain separate. Job 22179 remains RUNNING
+at 42:13 using its originally pinned binary. Fresh full-run readback, controlled
+timing, uncertainty/provenance gaps and release/manuscript work remain open.
+DGX stays deferred and the full publication objective remains active.
+
 ## Hierarchy and Reconciliation Selection Validated (2026-09-26)
 
 The preceding turn made progress independently verifying all historical node

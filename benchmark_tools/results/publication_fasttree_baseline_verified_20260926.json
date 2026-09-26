@@ -1,0 +1,207 @@
+{
+  "builds_repeated": false,
+  "checked_records": [
+    {
+      "bytes": 6446,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_20260926/report.json",
+      "sha256": "353cd5dee4c3e17686722cd0b26c276b5e10614af8bf1d05b3b77f743f26d7a3"
+    },
+    {
+      "bytes": 395674,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_source_20260926/upstream/FastTree.c",
+      "sha256": "975202a6b74c9996af871404ff043bb2152edcbda539035662514bc12d1f3431"
+    },
+    {
+      "bytes": 35149,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_source_20260926/upstream/LICENSE",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "bytes": 413192,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_20260926/build_a/FastTree",
+      "sha256": "e3f5f951d1b8e805eee5efd68b454f046a54be8a9eb91d3b8e2c6e5152aa9a30"
+    },
+    {
+      "bytes": 413192,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_20260926/build_b/FastTree",
+      "sha256": "e3f5f951d1b8e805eee5efd68b454f046a54be8a9eb91d3b8e2c6e5152aa9a30"
+    },
+    {
+      "bytes": 1023032,
+      "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+      "sha256": "6117c52522997d2aaccb2b52b3c6bf42c0a6c5edb1d718431fed6b2fc5fec234"
+    },
+    {
+      "bytes": 1359128,
+      "path": "/usr/bin/x86_64-linux-gnu-ld.bfd",
+      "sha256": "5b674ea1d7017c2929f3c52c43487478bb240ecdd7197a25cce3813a70329a5c"
+    },
+    {
+      "bytes": 109902,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_mafft_source_20260926/build/install/bin/mafft",
+      "sha256": "6595bc4c73f2e22899a11b969eb2ca8fb1ca441a7db67292e96b75af673ae22f"
+    }
+  ],
+  "command": [
+    "/usr/bin/python3",
+    "-S",
+    "-m",
+    "benchmark_tools.verify_frozen_phylogeny_install",
+    "--repo",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+    "--artifact",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926",
+    "--mafft",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_mafft_source_20260926/build/install/bin/mafft",
+    "--fasttree",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_20260926/build_a/FastTree",
+    "--output",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_verify_20260926/phylogeny"
+  ],
+  "comparisons": [
+    {
+      "baseline": {
+        "bytes": 231,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_phylogeny_smoke_20260926/inference/orthohmm_orthogroups.txt",
+        "sha256": "2e492335c12fa09727d601c97033b0429b0f8cc6408cba75f6feb557021ca5e3"
+      },
+      "byte_equal": true,
+      "current": {
+        "bytes": 231,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_verify_20260926/phylogeny/inference/orthohmm_orthogroups.txt",
+        "sha256": "2e492335c12fa09727d601c97033b0429b0f8cc6408cba75f6feb557021ca5e3"
+      },
+      "relative": "orthohmm_orthogroups.txt"
+    },
+    {
+      "baseline": {
+        "bytes": 332,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_phylogeny_smoke_20260926/inference/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+        "sha256": "fbe3f59bed47055b17879fe92b3789ecf87d054ce6337e4a98a3c379402ac06d"
+      },
+      "byte_equal": true,
+      "current": {
+        "bytes": 332,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_verify_20260926/phylogeny/inference/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+        "sha256": "fbe3f59bed47055b17879fe92b3789ecf87d054ce6337e4a98a3c379402ac06d"
+      },
+      "relative": "orthohmm_phylogeny/orthohmm_root_hogs.tsv"
+    },
+    {
+      "baseline": {
+        "bytes": 1282,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_phylogeny_smoke_20260926/inference/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+        "sha256": "dd903cfd473a5307dc29b52a59539688c4d18e5f0c4cf6aa0448393e11f807dd"
+      },
+      "byte_equal": true,
+      "current": {
+        "bytes": 1282,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_verify_20260926/phylogeny/inference/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+        "sha256": "dd903cfd473a5307dc29b52a59539688c4d18e5f0c4cf6aa0448393e11f807dd"
+      },
+      "relative": "orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv"
+    },
+    {
+      "baseline": {
+        "bytes": 82,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_phylogeny_smoke_20260926/inference/orthohmm_phylogeny/species_tree.rooted.nwk",
+        "sha256": "a3d1df2ee9a268009da2c980710e0b021028a22557ba9cda8c37f15b98de54ac"
+      },
+      "byte_equal": true,
+      "current": {
+        "bytes": 82,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_verify_20260926/phylogeny/inference/orthohmm_phylogeny/species_tree.rooted.nwk",
+        "sha256": "a3d1df2ee9a268009da2c980710e0b021028a22557ba9cda8c37f15b98de54ac"
+      },
+      "relative": "orthohmm_phylogeny/species_tree.rooted.nwk"
+    },
+    {
+      "baseline": {
+        "bytes": 345,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_phylogeny_smoke_20260926/inference/orthohmm_phylogeny/gene_trees/Family0000002.reconciled.nwk",
+        "sha256": "1321f440b576ba0b2864ece2bf207d2bfaaf455eb19da317f0b20f675e96f530"
+      },
+      "byte_equal": true,
+      "current": {
+        "bytes": 345,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_verify_20260926/phylogeny/inference/orthohmm_phylogeny/gene_trees/Family0000002.reconciled.nwk",
+        "sha256": "1321f440b576ba0b2864ece2bf207d2bfaaf455eb19da317f0b20f675e96f530"
+      },
+      "relative": "orthohmm_phylogeny/gene_trees/Family0000002.reconciled.nwk"
+    }
+  ],
+  "elf": "ELF Header:\n  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00 \n  Class:                             ELF64\n  Data:                              2's complement, little endian\n  Version:                           1 (current)\n  OS/ABI:                            UNIX - System V\n  ABI Version:                       0\n  Type:                              DYN (Position-Independent Executable file)\n  Machine:                           Advanced Micro Devices X86-64\n  Version:                           0x1\n  Entry point address:               0x5f10\n  Start of program headers:          64 (bytes into file)\n  Start of section headers:          411208 (bytes into file)\n  Flags:                             0x0\n  Size of this header:               64 (bytes)\n  Size of program headers:           56 (bytes)\n  Number of program headers:         13\n  Size of section headers:           64 (bytes)\n  Number of section headers:         31\n  Section header string table index: 30\n\nDynamic section at offset 0x5ac68 contains 28 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x2000\n 0x000000000000000d (FINI)               0x4e72c\n 0x0000000000000019 (INIT_ARRAY)         0x5bc58\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x5bc60\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x3b0\n 0x0000000000000005 (STRTAB)             0x8c8\n 0x0000000000000006 (SYMTAB)             0x3e8\n 0x000000000000000a (STRSZ)              627 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000015 (DEBUG)              0x0\n 0x0000000000000003 (PLTGOT)             0x5be68\n 0x0000000000000002 (PLTRELSZ)           1032 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0xdd8\n 0x0000000000000007 (RELA)               0xc58\n 0x0000000000000008 (RELASZ)             384 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000000000001e (FLAGS)              BIND_NOW\n 0x000000006ffffffb (FLAGS_1)            Flags: NOW PIE\n 0x000000006ffffffe (VERNEED)            0xba8\n 0x000000006fffffff (VERNEEDNUM)         2\n 0x000000006ffffff0 (VERSYM)             0xb3c\n 0x000000006ffffff9 (RELACOUNT)          8\n 0x0000000000000000 (NULL)               0x0\n\nDisplaying notes found in: .note.gnu.property\n  Owner                Data size \tDescription\n  GNU                  0x00000020\tNT_GNU_PROPERTY_TYPE_0\n      Properties: x86 feature: IBT, SHSTK\n\tx86 ISA needed: x86-64-baseline\n\nDisplaying notes found in: .note.gnu.build-id\n  Owner                Data size \tDescription\n  GNU                  0x00000014\tNT_GNU_BUILD_ID (unique build ID bitstring)\n    Build ID: e8354127ed482e7b5fc30d7251530aca72dc91f5\n\nDisplaying notes found in: .note.ABI-tag\n  Owner                Data size \tDescription\n  GNU                  0x00000010\tNT_GNU_ABI_TAG (ABI version tag)\n    OS: Linux, ABI: 3.2.0\n",
+  "environment": {
+    "LC_ALL": "C",
+    "MAFFT_BINARIES": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_mafft_source_20260926/build/install/libexec/mafft",
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PATH": "/usr/bin:/bin"
+  },
+  "fixture_report": {
+    "bytes": 53153,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_verify_20260926/phylogeny/report.json",
+    "sha256": "b83e17c2387e59386f2f2a1d9ae263a704b28bf331c8f797d54ddc81d7728ed9"
+  },
+  "help_probe": {
+    "returncode": 0,
+    "stderr": "FastTree 2.2.0 Double precision:\n  FastTree protein_alignment > tree\n  FastTree < protein_alignment > tree\n  FastTree -out tree protein_alignment\n  FastTree -nt nucleotide_alignment > tree\n  FastTree -nt -gtr < nucleotide_alignment > tree\n  FastTree < nucleotide_alignment > tree\nFastTree accepts alignments in fasta or phylip interleaved formats\n\nCommon options (must be before the alignment file):\n  -quiet to suppress reporting information\n  -nopr to suppress progress indicator\n  -log logfile -- save intermediate trees, settings, and model details\n  -fastest -- speed up the neighbor joining phase & reduce memory usage\n        (recommended for >50,000 sequences)\n  -n <number> to analyze multiple alignments (phylip format only)\n        (use for global bootstrap, with seqboot and CompareToBootstrap.pl)\n  -nosupport to not compute support values\n  -intree newick_file to set the starting tree(s)\n  -intree1 newick_file to use this starting tree for all the alignments\n        (for faster global bootstrap on huge alignments)\n  -pseudo to use pseudocounts (recommended for highly gapped sequences)\n  -gtr -- generalized time-reversible model (nucleotide alignments only)\n  -lg -- Le-Gascuel 2008 model (amino acid alignments only)\n  -wag -- Whelan-And-Goldman 2001 model (amino acid alignments only)\n  -quote -- allow spaces and other restricted characters (but not ' ) in\n           sequence names and quote names in the output tree (fasta input only;\n           FastTree will not be able to read these trees back in)\n  -noml to turn off maximum-likelihood\n  -nome to turn off minimum-evolution NNIs and SPRs\n        (recommended if running additional ML NNIs with -intree)\n  -nome -mllen with -intree to optimize branch lengths for a fixed topology\n  -cat # to specify the number of rate categories of sites (default 20)\n      or -nocat to use constant rates\n  -gamma -- after optimizing the tree under the CAT approximation,\n      rescale the lengths to optimize the Gamma20 likelihood\n  -constraints constraintAlignment to constrain the topology search\n       constraintAlignment should have 1s or 0s to indicates splits\n  -expert -- see more options\nFor more information, see http://www.microbesonline.org/fasttree/\n",
+    "stdout": ""
+  },
+  "helper": {
+    "bytes": 5589,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/build_publication_fasttree.py",
+    "sha256": "19e8bc4c60db9e21f15251be75c1dd2577800a108eb86c8e4671fdaf07fd113c"
+  },
+  "historical_binary_modified": false,
+  "logs": [
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_verify_20260926/fixture_driver.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "publication_ready": false,
+  "readbacks": {
+    "events": {
+      "report": {
+        "bytes": 6408,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_verify_20260926/events.json",
+        "sha256": "8c6c4ebe6c8d24eaa4aca45e4bcf8373e159ab600393a01075b2cdb48657398f"
+      },
+      "status": "frozen_phylogeny_event_pair_semantics_verified"
+    },
+    "hierarchy": {
+      "report": {
+        "bytes": 3595,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_verify_20260926/hierarchy.json",
+        "sha256": "74d8c9db09cf031349ea1ab015db46493bd4eae5665911d7914bf5b63336857d"
+      },
+      "status": "phylogeny_selection_and_hierarchy_verified"
+    },
+    "sequence": {
+      "report": {
+        "bytes": 5918,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_verify_20260926/sequence.json",
+        "sha256": "310c05a786f01552a538c3655831c597a2998947d9acc9fb300d3d0af5a96d08"
+      },
+      "status": "phylogeny_sequence_content_verified"
+    },
+    "structure": {
+      "report": {
+        "bytes": 5391,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_baseline_verify_20260926/structure.json",
+        "sha256": "d39140b3687c8ffb7fea98b177d7449b6a76672198605089c14f8ee26860aa99"
+      },
+      "status": "phylogeny_structure_verified"
+    }
+  },
+  "runtime_libraries": "\tlinux-vdso.so.1 (0x00007ffe97fab000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x000073cb56815000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000073cb56600000)\n\t/lib64/ld-linux-x86-64.so.2 (0x000073cb5697f000)\n",
+  "source": {
+    "bytes": 5508,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/verify_publication_fasttree_build.py",
+    "sha256": "d1bb420ea2df0d9e27589e3d3cec8ab5a6f9454f677e31e078634669c4ba5311"
+  },
+  "status": "retained_baseline_fasttree_fixture_and_semantic_readbacks_verified"
+}
