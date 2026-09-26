@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Forced Candidate Diagnostic Submitted (2026-09-26)
+
+Submitted **22177**, four CPUs / 16 GiB / 12 hours / no requeue, using
+clean sparse executor `benchmarks/work/ob_forced_candidate_executor_20260926`
+at `e789014fc970980c9c1c4d2d72805f38e2b4b5fc`. All 42 focused candidate,
+decision, runner and audit tests passed again inside this executor; it
+remained clean afterward. Output is
+`benchmarks/results/ob_forced_candidates_v1`. Production core remains
+the original frozen `publication_method_native_v2`.
+No forced-candidate scores have yet been admitted. Independent numerical
+comparison with the original trace is required before interpreting results.
+QfO assessment 22174 was confirmed RUNNING at 16:38 elapsed; score admission
+22176 remains dependency-pending. No dedicated timing claim is made.
+
 ## Prefilter Counterfactual Diagnostic Implemented (2026-09-26)
 
 Added an opt-in forced-candidate mode to the search-decision runner and
