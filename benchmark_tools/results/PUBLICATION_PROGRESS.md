@@ -1,5 +1,28 @@
 # Publication Progress
 
+## All Matched-Graph Arms Complete and Independently Read Back (2026-09-26)
+
+The preceding turn launched the graph panel. All 70 arms in array 22250 now
+have COMPLETED/0:0 accounting. The [independent readback](matched_graph_readback_20260926.json)
+verifies original raw-score to numeric mapping, exact saved checkpoint arrays,
+all-gene unique partitions at each stage, installed production module identities,
+fixed commands/settings and complete output checksums. A separate dictionary-
+based implementation reconstructs both the RBNH and singleton-assignment graph
+edges exactly, including reciprocal thresholds and maximum duplicate weights.
+
+All 100 focused tests pass, including deliberately altered checkpoint arrays,
+edge weights, duplicate edges and invalid partitions. The readback does not
+independently rerun Leiden or derive refinement decisions; those remain calls
+to pinned production code. No orthology scores have been calculated. Each arm
+retains all 25,831 genes across the 35 reporting dataset instances.
+
+Next score final cluster-derived cross-species pairs against the retained
+speciation-derived orthology truth, then apply the prespecified five-seed-block
+bootstrap and eight F1 contrasts. Do not score an intermediate partition or
+select further parameters. Main OrthoBench job 22179 remains RUNNING at 1:36:49.
+The full publication goal, dedicated timing, broader uncertainty/generalization
+and release work remain active; DGX remains deferred.
+
 ## Matched-Recall Graph Panel Launched (2026-09-26)
 
 Submitted all 70 graph arms (two searches on each of 35 reporting datasets)
