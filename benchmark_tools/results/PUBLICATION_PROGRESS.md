@@ -1,5 +1,18 @@
 # Publication Progress
 
+## New Plotting Alerts Remediated Locally (2026-09-26)
+
+Read-only GitHub API snapshot identified the 13 newly surfaced alerts as
+Pillow 12.2.0 in the plotting wheel lock; all specify 12.3.0 as patched.
+Installed Pillow 12.3.0 only in the isolated plotting venv, rerendered all
+formats, and verified the PNG remains byte-identical. Updated the lock's
+version/hash and reproduction instructions without changing frozen scientific
+environments. GitHub alert closure is not yet verified. Eleven older alerts
+remain associated with pip/setuptools in the historical CPU wheel manifest.
+The [snapshot](dependency_alerts_release_review_20260926.json) is retained;
+no credentials were written to it. Previous turn updated the reproduction
+entry point; this turn addresses the newly observed release dependency risk.
+
 ## Main Reproduction Guide Updated (2026-09-26)
 
 Routed the main guide to manuscript preview v12, the three verified search

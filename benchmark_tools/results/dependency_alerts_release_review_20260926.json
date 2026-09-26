@@ -1,0 +1,784 @@
+{
+  "alerts": [
+    {
+      "cve_id": "CVE-2026-59205",
+      "dependency": {
+        "manifest_path": "benchmark_tools/results/forced_candidate_plot_linux_py310_requirements_20260926.txt",
+        "package": {
+          "ecosystem": "pip",
+          "name": "pillow"
+        },
+        "relationship": "direct",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "12.3.0"
+      },
+      "ghsa_id": "GHSA-9hw9-ch79-4vh6",
+      "number": 69,
+      "references": [
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-59205",
+        "https://github.com/python-pillow/Pillow/pull/9715",
+        "https://github.com/python-pillow/Pillow/commit/a9ffc42bedf4fc0a7ef8d6486e7f9e81e3397721",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/pillow/PYSEC-2026-3453.yaml",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/advisories/GHSA-9hw9-ch79-4vh6"
+      ],
+      "severity": "high",
+      "state": "open",
+      "summary": "Pillow: Controlled heap out-of-bounds write in Pillow `ImageCmsTransform.apply()` via output mode mismatch",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/69",
+      "vulnerable_version_range": "< 12.3.0"
+    },
+    {
+      "cve_id": "CVE-2026-59204",
+      "dependency": {
+        "manifest_path": "benchmark_tools/results/forced_candidate_plot_linux_py310_requirements_20260926.txt",
+        "package": {
+          "ecosystem": "pip",
+          "name": "pillow"
+        },
+        "relationship": "direct",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "12.3.0"
+      },
+      "ghsa_id": "GHSA-vjc4-5qp5-m44j",
+      "number": 68,
+      "references": [
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-vjc4-5qp5-m44j",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-59204",
+        "https://github.com/python-pillow/Pillow/pull/9704",
+        "https://github.com/python-pillow/Pillow/commit/13ada41172142f2fd9f0906f615a00ea623a11ca",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/advisories/GHSA-vjc4-5qp5-m44j"
+      ],
+      "severity": "high",
+      "state": "open",
+      "summary": "Pillow JPEG2000 tiled decode retains a growing scratch buffer and can be used for denial of service",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/68",
+      "vulnerable_version_range": ">= 8.2.0, < 12.3.0"
+    },
+    {
+      "cve_id": "CVE-2026-59203",
+      "dependency": {
+        "manifest_path": "benchmark_tools/results/forced_candidate_plot_linux_py310_requirements_20260926.txt",
+        "package": {
+          "ecosystem": "pip",
+          "name": "pillow"
+        },
+        "relationship": "direct",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "12.3.0"
+      },
+      "ghsa_id": "GHSA-pg7v-jwj7-p798",
+      "number": 67,
+      "references": [
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-pg7v-jwj7-p798",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-59203",
+        "https://github.com/python-pillow/Pillow/pull/9708",
+        "https://github.com/python-pillow/Pillow/commit/03992618118b4a76b6163cd72ab5ecd684133b83",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/pillow/PYSEC-2026-3452.yaml",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/advisories/GHSA-pg7v-jwj7-p798"
+      ],
+      "severity": "medium",
+      "state": "open",
+      "summary": "Pillow EpsImagePlugin negative %%BeginBinary byte count causes infinite loop denial of service",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/67",
+      "vulnerable_version_range": ">= 12.0.0, < 12.3.0"
+    },
+    {
+      "cve_id": "CVE-2026-59200",
+      "dependency": {
+        "manifest_path": "benchmark_tools/results/forced_candidate_plot_linux_py310_requirements_20260926.txt",
+        "package": {
+          "ecosystem": "pip",
+          "name": "Pillow"
+        },
+        "relationship": "direct",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "12.3.0"
+      },
+      "ghsa_id": "GHSA-jjj6-mw9f-p565",
+      "number": 66,
+      "references": [
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-59200",
+        "https://github.com/python-pillow/Pillow/pull/9718",
+        "https://github.com/python-pillow/Pillow/commit/f7a31ea75e460e108c37126da1f47812f21f6b09",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/advisories/GHSA-jjj6-mw9f-p565"
+      ],
+      "severity": "high",
+      "state": "open",
+      "summary": "Pillow: Decompression Bomb DoS via PdfParser.PdfStream.decode()",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/66",
+      "vulnerable_version_range": ">= 5.1.0, < 12.3.0"
+    },
+    {
+      "cve_id": "CVE-2026-59199",
+      "dependency": {
+        "manifest_path": "benchmark_tools/results/forced_candidate_plot_linux_py310_requirements_20260926.txt",
+        "package": {
+          "ecosystem": "pip",
+          "name": "Pillow"
+        },
+        "relationship": "direct",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "12.3.0"
+      },
+      "ghsa_id": "GHSA-6r8x-57c9-28j4",
+      "number": 65,
+      "references": [
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-6r8x-57c9-28j4",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-59199",
+        "https://github.com/python-pillow/Pillow/pull/9703",
+        "https://github.com/python-pillow/Pillow/commit/ceefc348eb3c3844c7f9796ef2cc3a7dd5fbba7b",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/pillow/PYSEC-2026-3451.yaml",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/advisories/GHSA-6r8x-57c9-28j4"
+      ],
+      "severity": "high",
+      "state": "open",
+      "summary": "Pillow: Heap out-of-bounds write `Image.paste()` / `Image.crop()` via signed coordinate overflow",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/65",
+      "vulnerable_version_range": "< 12.3.0"
+    },
+    {
+      "cve_id": "CVE-2026-59198",
+      "dependency": {
+        "manifest_path": "benchmark_tools/results/forced_candidate_plot_linux_py310_requirements_20260926.txt",
+        "package": {
+          "ecosystem": "pip",
+          "name": "Pillow"
+        },
+        "relationship": "direct",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "12.3.0"
+      },
+      "ghsa_id": "GHSA-fj7v-r99m-22gq",
+      "number": 64,
+      "references": [
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-fj7v-r99m-22gq",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-59198",
+        "https://github.com/python-pillow/Pillow/pull/9709",
+        "https://github.com/python-pillow/Pillow/commit/eada3cbd7fb9963ee90673fb7b5270124a0d5f4b",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/advisories/GHSA-fj7v-r99m-22gq"
+      ],
+      "severity": "medium",
+      "state": "open",
+      "summary": "Pillow TGA RLE encoder can serialize up to ~57 KB of adjacent heap data into generated images",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/64",
+      "vulnerable_version_range": ">= 5.2.0, < 12.3.0"
+    },
+    {
+      "cve_id": "CVE-2026-59197",
+      "dependency": {
+        "manifest_path": "benchmark_tools/results/forced_candidate_plot_linux_py310_requirements_20260926.txt",
+        "package": {
+          "ecosystem": "pip",
+          "name": "Pillow"
+        },
+        "relationship": "direct",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "12.3.0"
+      },
+      "ghsa_id": "GHSA-xj96-63gp-2gmr",
+      "number": 63,
+      "references": [
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-xj96-63gp-2gmr",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-59197",
+        "https://github.com/python-pillow/Pillow/pull/9695",
+        "https://github.com/python-pillow/Pillow/commit/cce3bdb867c77a3420261ed1bfdb6b0787ec8fc1",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/advisories/GHSA-xj96-63gp-2gmr"
+      ],
+      "severity": "high",
+      "state": "open",
+      "summary": "Pillow: Heap out-of-bounds write in `ImageFilter.RankFilter` via integer overflow in `ImagingExpand`",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/63",
+      "vulnerable_version_range": "< 12.3.0"
+    },
+    {
+      "cve_id": "CVE-2026-55798",
+      "dependency": {
+        "manifest_path": "benchmark_tools/results/forced_candidate_plot_linux_py310_requirements_20260926.txt",
+        "package": {
+          "ecosystem": "pip",
+          "name": "Pillow"
+        },
+        "relationship": "direct",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "12.3.0"
+      },
+      "ghsa_id": "GHSA-4x4j-2g7c-83w6",
+      "number": 62,
+      "references": [
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4x4j-2g7c-83w6",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-55798",
+        "https://github.com/python-pillow/Pillow/commit/8404ea5fe5df40fc34aa1e51403dd6fce0778b8a",
+        "https://github.com/python-pillow/Pillow/commit/88194166691b7b603529b8b036ab3ab9cedd2de4",
+        "https://github.com/python-pillow/Pillow/commit/b0e06caa64c1405aa3da0bb1d2bd9a77ca22de7f",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/pillow/PYSEC-2026-2257.yaml",
+        "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+        "https://github.com/advisories/GHSA-4x4j-2g7c-83w6"
+      ],
+      "severity": "medium",
+      "state": "open",
+      "summary": "Pillow: WindowsViewer.get_command() OS command injection via unescaped shell path",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/62",
+      "vulnerable_version_range": "< 12.3.0"
+    },
+    {
+      "cve_id": "CVE-2026-55380",
+      "dependency": {
+        "manifest_path": "benchmark_tools/results/forced_candidate_plot_linux_py310_requirements_20260926.txt",
+        "package": {
+          "ecosystem": "pip",
+          "name": "pillow"
+        },
+        "relationship": "direct",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "12.3.0"
+      },
+      "ghsa_id": "GHSA-phj9-mv4w-65pm",
+      "number": 61,
+      "references": [
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-phj9-mv4w-65pm",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-55380",
+        "https://github.com/python-pillow/Pillow/commit/f39b0ae6624eb2d7c5c5d651d9bb5fdbd96a8675",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/pillow/PYSEC-2026-2256.yaml",
+        "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+        "https://github.com/advisories/GHSA-phj9-mv4w-65pm"
+      ],
+      "severity": "high",
+      "state": "open",
+      "summary": "Pillow `GdImageFile._open()`: image dimensions accepted without `_decompression_bomb_check()`",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/61",
+      "vulnerable_version_range": "< 12.3.0"
+    },
+    {
+      "cve_id": "CVE-2026-55379",
+      "dependency": {
+        "manifest_path": "benchmark_tools/results/forced_candidate_plot_linux_py310_requirements_20260926.txt",
+        "package": {
+          "ecosystem": "pip",
+          "name": "pillow"
+        },
+        "relationship": "direct",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "12.3.0"
+      },
+      "ghsa_id": "GHSA-45hq-cxwh-f6vc",
+      "number": 60,
+      "references": [
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-45hq-cxwh-f6vc",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-55379",
+        "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/pillow/PYSEC-2026-2255.yaml",
+        "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+        "https://github.com/advisories/GHSA-45hq-cxwh-f6vc"
+      ],
+      "severity": "high",
+      "state": "open",
+      "summary": "Pillow `BdfFontFile`: `Image.new()` called without `_decompression_bomb_check()` \u2014 bomb protection bypass via font loading",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/60",
+      "vulnerable_version_range": "< 12.3.0"
+    },
+    {
+      "cve_id": "CVE-2026-54060",
+      "dependency": {
+        "manifest_path": "benchmark_tools/results/forced_candidate_plot_linux_py310_requirements_20260926.txt",
+        "package": {
+          "ecosystem": "pip",
+          "name": "pillow"
+        },
+        "relationship": "direct",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "12.3.0"
+      },
+      "ghsa_id": "GHSA-5x94-69rx-g8h2",
+      "number": 59,
+      "references": [
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5x94-69rx-g8h2",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-54060",
+        "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/pillow/PYSEC-2026-2254.yaml",
+        "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+        "https://github.com/advisories/GHSA-5x94-69rx-g8h2"
+      ],
+      "severity": "high",
+      "state": "open",
+      "summary": "Pillow: `FontFile.compile()`: `Image.new()` called without `_decompression_bomb_check()`",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/59",
+      "vulnerable_version_range": "< 12.3.0"
+    },
+    {
+      "cve_id": "CVE-2026-54059",
+      "dependency": {
+        "manifest_path": "benchmark_tools/results/forced_candidate_plot_linux_py310_requirements_20260926.txt",
+        "package": {
+          "ecosystem": "pip",
+          "name": "pillow"
+        },
+        "relationship": "direct",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "12.3.0"
+      },
+      "ghsa_id": "GHSA-8v84-f9pq-wr9x",
+      "number": 58,
+      "references": [
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-8v84-f9pq-wr9x",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-54059",
+        "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/pillow/PYSEC-2026-2253.yaml",
+        "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+        "https://github.com/advisories/GHSA-8v84-f9pq-wr9x"
+      ],
+      "severity": "high",
+      "state": "open",
+      "summary": "Pillow `PcfFontFile._load_bitmaps()`: `Image.frombytes()` called without `_decompression_bomb_check()` \u2014 bomb protection bypass via PCF font loading",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/58",
+      "vulnerable_version_range": "< 12.3.0"
+    },
+    {
+      "cve_id": "CVE-2026-54058",
+      "dependency": {
+        "manifest_path": "benchmark_tools/results/forced_candidate_plot_linux_py310_requirements_20260926.txt",
+        "package": {
+          "ecosystem": "pip",
+          "name": "pillow"
+        },
+        "relationship": "direct",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "12.3.0"
+      },
+      "ghsa_id": "GHSA-62p4-gmf7-7g93",
+      "number": 57,
+      "references": [
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-62p4-gmf7-7g93",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-54058",
+        "https://github.com/python-pillow/Pillow/pull/9719",
+        "https://github.com/python-pillow/Pillow/commit/6a8de891fb00968e5ea79bfa84368ed90b3cfc1d",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/advisories/GHSA-62p4-gmf7-7g93"
+      ],
+      "severity": "high",
+      "state": "open",
+      "summary": "Pillow: Out-of-bounds read via attacker-controlled row stride on Pillow's mmap path (McIdas AREA files)",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/57",
+      "vulnerable_version_range": "< 12.3.0"
+    },
+    {
+      "cve_id": "CVE-2026-13346",
+      "dependency": {
+        "manifest_path": "benchmark_tools/results/publication_cpu_wheel_requirements_20260919.txt",
+        "package": {
+          "ecosystem": "pip",
+          "name": "pip"
+        },
+        "relationship": "direct",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "26.2.0"
+      },
+      "ghsa_id": "GHSA-qwm4-qh6w-59xr",
+      "number": 56,
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-13346",
+        "https://github.com/pypa/pip/pull/14110",
+        "https://mail.python.org/archives/list/security-announce@python.org/thread/L2BNQGGVQCEV7DROOORQ7WFKKFF2OOQX",
+        "http://www.openwall.com/lists/oss-security/2026/07/29/7",
+        "https://github.com/pypa/pip/commit/10dfb6b9005484578b386f64b9f36982e3dc6679",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/pip/PYSEC-2026-3721.yaml",
+        "https://github.com/advisories/GHSA-qwm4-qh6w-59xr"
+      ],
+      "severity": "medium",
+      "state": "open",
+      "summary": "pip would incorrectly handle doubly-encoded package URLs from indexes",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/56",
+      "vulnerable_version_range": "< 26.2.0"
+    },
+    {
+      "cve_id": "CVE-2026-59890",
+      "dependency": {
+        "manifest_path": "benchmark_tools/results/publication_cpu_wheel_requirements_20260919.txt",
+        "package": {
+          "ecosystem": "pip",
+          "name": "setuptools"
+        },
+        "relationship": "direct",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "83.0.0"
+      },
+      "ghsa_id": "GHSA-h35f-9h28-mq5c",
+      "number": 55,
+      "references": [
+        "https://github.com/pypa/setuptools/security/advisories/GHSA-h35f-9h28-mq5c",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-59890",
+        "https://github.com/pypa/setuptools/commit/dd9f436a36486b4cb8a4c70a2321548b0be09b8f",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/setuptools/PYSEC-2026-3447.yaml",
+        "https://github.com/pypa/setuptools/releases/tag/v83.0.0",
+        "https://github.com/advisories/GHSA-h35f-9h28-mq5c"
+      ],
+      "severity": "medium",
+      "state": "open",
+      "summary": "setuptools: MANIFEST.in exclusion bypass in sdist via Unicode normalization collision (NFC/NFD) on macOS APFS/HFS+",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/55",
+      "vulnerable_version_range": "< 83.0.0"
+    },
+    {
+      "cve_id": "CVE-2026-8643",
+      "dependency": {
+        "manifest_path": "benchmark_tools/results/publication_cpu_wheel_requirements_20260919.txt",
+        "package": {
+          "ecosystem": "pip",
+          "name": "pip"
+        },
+        "relationship": "direct",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "26.1.2"
+      },
+      "ghsa_id": "GHSA-wf93-45jw-7689",
+      "number": 54,
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-8643",
+        "https://github.com/pypa/pip/pull/14000",
+        "https://mail.python.org/archives/list/security-announce@python.org/thread/YV63UET5D3OOJY7O4M5XCVYO2YM4NBYJ",
+        "http://www.openwall.com/lists/oss-security/2026/06/01/5",
+        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-8643.json",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/pip/PYSEC-2026-196.yaml",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=2460927",
+        "https://access.redhat.com/security/cve/CVE-2026-8643",
+        "https://access.redhat.com/errata/RHSA-2026:36315",
+        "https://access.redhat.com/errata/RHSA-2026:36193",
+        "https://access.redhat.com/errata/RHSA-2026:34891",
+        "https://access.redhat.com/errata/RHSA-2026:34780",
+        "https://access.redhat.com/errata/RHSA-2026:34778",
+        "https://access.redhat.com/errata/RHSA-2026:34777",
+        "https://access.redhat.com/errata/RHSA-2026:34776",
+        "https://access.redhat.com/errata/RHSA-2026:34775",
+        "https://access.redhat.com/errata/RHSA-2026:34774",
+        "https://access.redhat.com/errata/RHSA-2026:34773",
+        "https://access.redhat.com/errata/RHSA-2026:34772",
+        "https://access.redhat.com/errata/RHSA-2026:34765",
+        "https://access.redhat.com/errata/RHSA-2026:34760",
+        "https://access.redhat.com/errata/RHSA-2026:34758",
+        "https://access.redhat.com/errata/RHSA-2026:34756",
+        "https://access.redhat.com/errata/RHSA-2026:34752",
+        "https://access.redhat.com/errata/RHSA-2026:34750",
+        "https://access.redhat.com/errata/RHSA-2026:34749",
+        "https://access.redhat.com/errata/RHSA-2026:34748",
+        "https://access.redhat.com/errata/RHSA-2026:34741",
+        "https://access.redhat.com/errata/RHSA-2026:34740",
+        "https://access.redhat.com/errata/RHSA-2026:34739",
+        "https://access.redhat.com/errata/RHSA-2026:34456",
+        "https://access.redhat.com/errata/RHSA-2026:34374",
+        "https://access.redhat.com/errata/RHSA-2026:33313",
+        "https://access.redhat.com/errata/RHSA-2026:37275",
+        "https://access.redhat.com/errata/RHSA-2026:37283",
+        "https://github.com/advisories/GHSA-wf93-45jw-7689"
+      ],
+      "severity": "medium",
+      "state": "open",
+      "summary": " pip: Path traversal in console_scripts/gui_scripts\u00a0entry point names allows installing scripts outside of target directory",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/54",
+      "vulnerable_version_range": "< 26.1.2"
+    },
+    {
+      "cve_id": "CVE-2026-6357",
+      "dependency": {
+        "manifest_path": "benchmark_tools/results/publication_cpu_wheel_requirements_20260919.txt",
+        "package": {
+          "ecosystem": "pip",
+          "name": "pip"
+        },
+        "relationship": "direct",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "26.1"
+      },
+      "ghsa_id": "GHSA-jp4c-xjxw-mgf9",
+      "number": 53,
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-6357",
+        "https://github.com/pypa/pip/pull/13923",
+        "https://ichard26.github.io/blog/2026/04/whats-new-in-pip-26.1/#security-fixes",
+        "http://www.openwall.com/lists/oss-security/2026/04/27/7",
+        "https://github.com/pypa/pip/commit/b369bfc96cc524e00c267e1693290e6599c36bad",
+        "https://github.com/advisories/GHSA-jp4c-xjxw-mgf9"
+      ],
+      "severity": "medium",
+      "state": "open",
+      "summary": "pip Vulnerable to Inclusion of Functionality from Untrusted Control Sphere",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/53",
+      "vulnerable_version_range": "< 26.1"
+    },
+    {
+      "cve_id": "CVE-2026-3219",
+      "dependency": {
+        "manifest_path": "benchmark_tools/results/publication_cpu_wheel_requirements_20260919.txt",
+        "package": {
+          "ecosystem": "pip",
+          "name": "pip"
+        },
+        "relationship": "direct",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "26.1"
+      },
+      "ghsa_id": "GHSA-58qw-9mgm-455v",
+      "number": 52,
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-3219",
+        "https://github.com/pypa/pip/pull/13870",
+        "https://mail.python.org/archives/list/security-announce@python.org/thread/QAJ5JIVWWCAJ4EZL2FP5MOOW35JS7LRJ",
+        "http://www.openwall.com/lists/oss-security/2026/04/20/8",
+        "https://github.com/pypa/pip/issues/13867",
+        "https://github.com/advisories/GHSA-58qw-9mgm-455v"
+      ],
+      "severity": "medium",
+      "state": "open",
+      "summary": "pip has an interpretation conflict due to handling both concatenated tar and ZIP files as ZIP files",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/52",
+      "vulnerable_version_range": "<= 26.0.1"
+    },
+    {
+      "cve_id": "CVE-2026-1703",
+      "dependency": {
+        "manifest_path": "benchmark_tools/results/publication_cpu_wheel_requirements_20260919.txt",
+        "package": {
+          "ecosystem": "pip",
+          "name": "pip"
+        },
+        "relationship": "direct",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "26.0"
+      },
+      "ghsa_id": "GHSA-6vgw-5pg2-w6jp",
+      "number": 51,
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-1703",
+        "https://github.com/pypa/pip/pull/13777",
+        "https://github.com/pypa/pip/commit/8e227a9be4faa9594e05d02ca05a413a2a4e7735",
+        "https://mail.python.org/archives/list/security-announce@python.org/thread/WIEA34D4TABF2UNQJAOMXKCICSPBE2DJ",
+        "https://github.com/advisories/GHSA-6vgw-5pg2-w6jp"
+      ],
+      "severity": "low",
+      "state": "open",
+      "summary": "pip Path Traversal vulnerability",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/51",
+      "vulnerable_version_range": "< 26.0"
+    },
+    {
+      "cve_id": "CVE-2025-8869",
+      "dependency": {
+        "manifest_path": "benchmark_tools/results/publication_cpu_wheel_requirements_20260919.txt",
+        "package": {
+          "ecosystem": "pip",
+          "name": "pip"
+        },
+        "relationship": "direct",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "25.3"
+      },
+      "ghsa_id": "GHSA-4xh5-x5gv-qwph",
+      "number": 50,
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-8869",
+        "https://github.com/pypa/pip/pull/13550",
+        "https://mail.python.org/archives/list/security-announce@python.org/thread/IF5A3GCJY3VH7BVHJKOWOJFKTW7VFQEN",
+        "https://github.com/pypa/pip/commit/f2b92314da012b9fffa36b3f3e67748a37ef464a",
+        "https://pip.pypa.io/en/stable/news/#v25-2",
+        "https://lists.debian.org/debian-lts-announce/2025/10/msg00028.html",
+        "https://github.com/advisories/GHSA-4xh5-x5gv-qwph"
+      ],
+      "severity": "medium",
+      "state": "open",
+      "summary": "pip's fallback tar extraction doesn't check symbolic links point to extraction directory",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/50",
+      "vulnerable_version_range": "<= 25.2"
+    },
+    {
+      "cve_id": "CVE-2025-47273",
+      "dependency": {
+        "manifest_path": "benchmark_tools/results/publication_cpu_wheel_requirements_20260919.txt",
+        "package": {
+          "ecosystem": "pip",
+          "name": "setuptools"
+        },
+        "relationship": "direct",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "78.1.1"
+      },
+      "ghsa_id": "GHSA-5rjg-fvgr-3xxf",
+      "number": 49,
+      "references": [
+        "https://github.com/pypa/setuptools/security/advisories/GHSA-5rjg-fvgr-3xxf",
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-47273",
+        "https://github.com/pypa/setuptools/issues/4946",
+        "https://github.com/pypa/setuptools/commit/250a6d17978f9f6ac3ac887091f2d32886fbbb0b",
+        "https://github.com/pypa/setuptools/blob/6ead555c5fb29bc57fe6105b1bffc163f56fd558/setuptools/package_index.py#L810C1-L825C88",
+        "https://lists.debian.org/debian-lts-announce/2025/05/msg00035.html",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/setuptools/PYSEC-2025-49.yaml",
+        "https://github.com/advisories/GHSA-5rjg-fvgr-3xxf"
+      ],
+      "severity": "high",
+      "state": "open",
+      "summary": "setuptools has a path traversal vulnerability in PackageIndex.download that leads to Arbitrary File Write",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/49",
+      "vulnerable_version_range": "< 78.1.1"
+    },
+    {
+      "cve_id": "CVE-2024-6345",
+      "dependency": {
+        "manifest_path": "benchmark_tools/results/publication_cpu_wheel_requirements_20260919.txt",
+        "package": {
+          "ecosystem": "pip",
+          "name": "setuptools"
+        },
+        "relationship": "direct",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "70.0.0"
+      },
+      "ghsa_id": "GHSA-cx63-2mw6-8hw5",
+      "number": 48,
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-6345",
+        "https://github.com/pypa/setuptools/commit/88807c7062788254f654ea8c03427adc859321f0",
+        "https://huntr.com/bounties/d6362117-ad57-4e83-951f-b8141c6e7ca5",
+        "https://github.com/pypa/setuptools/pull/4332",
+        "https://lists.debian.org/debian-lts-announce/2024/09/msg00018.html",
+        "https://github.com/advisories/GHSA-cx63-2mw6-8hw5"
+      ],
+      "severity": "high",
+      "state": "open",
+      "summary": "setuptools vulnerable to Command Injection via package URL",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/48",
+      "vulnerable_version_range": "< 70.0.0"
+    },
+    {
+      "cve_id": "CVE-2023-5752",
+      "dependency": {
+        "manifest_path": "benchmark_tools/results/publication_cpu_wheel_requirements_20260919.txt",
+        "package": {
+          "ecosystem": "pip",
+          "name": "pip"
+        },
+        "relationship": "direct",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "23.3"
+      },
+      "ghsa_id": "GHSA-mq26-g339-26xf",
+      "number": 47,
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2023-5752",
+        "https://github.com/pypa/pip/pull/12306",
+        "https://github.com/pypa/pip/commit/389cb799d0da9a840749fcd14878928467ed49b4",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/pip/PYSEC-2023-228.yaml",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/YBSB3SUPQ3VIFYUMHPO3MEQI4BJAXKCZ",
+        "https://mail.python.org/archives/list/security-announce@python.org/thread/F4PL35U6X4VVHZ5ILJU3PWUWN7H7LZXL",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KFC2SPFG5FLCZBYY2K3T5MFW2D22NG6E",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/622OZXWG72ISQPLM5Y57YCVIMWHD4C3U",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/65UKKF5LBHEFDCUSPBHUN4IHYX7SRMHH",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/FXUVMJM25PUAZRQZBF54OFVKTY3MINPW",
+        "https://lists.debian.org/debian-lts-announce/2025/10/msg00028.html",
+        "https://github.com/advisories/GHSA-mq26-g339-26xf"
+      ],
+      "severity": "medium",
+      "state": "open",
+      "summary": "Command Injection in pip when used with Mercurial",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/47",
+      "vulnerable_version_range": "< 23.3"
+    },
+    {
+      "cve_id": "CVE-2022-40897",
+      "dependency": {
+        "manifest_path": "benchmark_tools/results/publication_cpu_wheel_requirements_20260919.txt",
+        "package": {
+          "ecosystem": "pip",
+          "name": "setuptools"
+        },
+        "relationship": "direct",
+        "scope": "runtime"
+      },
+      "first_patched_version": {
+        "identifier": "65.5.1"
+      },
+      "ghsa_id": "GHSA-r9hx-vwmv-q579",
+      "number": 46,
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2022-40897",
+        "https://github.com/pypa/setuptools/blob/fe8a98e696241487ba6ac9f91faa38ade939ec5d/setuptools/package_index.py#L200",
+        "https://github.com/pypa/setuptools/issues/3659",
+        "https://github.com/pypa/setuptools/commit/43a9c9bfa6aa626ec2a22540bea28d2ca77964be",
+        "https://github.com/pypa/setuptools/compare/v65.5.0...v65.5.1",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ADES3NLOE5QJKBLGNZNI2RGVOSQXA37R",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/YNA2BAH2ACBZ4TVJZKFLCR7L23BG5C3H",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ADES3NLOE5QJKBLGNZNI2RGVOSQXA37R",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/YNA2BAH2ACBZ4TVJZKFLCR7L23BG5C3H",
+        "https://pyup.io/posts/pyup-discovers-redos-vulnerabilities-in-top-python-packages",
+        "https://pyup.io/vulnerabilities/CVE-2022-40897/52495",
+        "https://security.netapp.com/advisory/ntap-20230214-0001",
+        "https://security.netapp.com/advisory/ntap-20240621-0006",
+        "https://setuptools.pypa.io/en/latest",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/setuptools/PYSEC-2022-43012.yaml",
+        "https://lists.debian.org/debian-lts-announce/2024/09/msg00018.html",
+        "https://github.com/advisories/GHSA-r9hx-vwmv-q579"
+      ],
+      "severity": "high",
+      "state": "open",
+      "summary": "pypa/setuptools vulnerable to Regular Expression Denial of Service (ReDoS)",
+      "url": "https://github.com/JLSteenwyk/orthohmm/security/dependabot/46",
+      "vulnerable_version_range": "< 65.5.1"
+    }
+  ],
+  "endpoint": "https://api.github.com/repos/JLSteenwyk/orthohmm/dependabot/alerts",
+  "limitations": "Repository alerts are not a full installed-environment or reachability audit.",
+  "repository": "JLSteenwyk/orthohmm",
+  "retrieved_utc": "2026-09-26T18:27:01.662594+00:00",
+  "state_filter": "open"
+}

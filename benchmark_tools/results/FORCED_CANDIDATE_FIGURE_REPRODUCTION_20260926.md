@@ -60,3 +60,17 @@ Use that venv's Python for the isolated plotting command above. This follow-up
 adds a clean plotting-install test; it still does not reproduce HMM inference
 or independently reconstruct raw benchmark counts. The wheel lock is specific
 to the tested CPython/Linux x86_64 platform, not a cross-platform lock.
+
+## Pillow Security Update
+
+The [read-only GitHub alert snapshot](dependency_alerts_release_review_20260926.json)
+identified 13 Pillow advisories affecting the initially reproduced 12.2.0
+wheel. All list 12.3.0 as the first patched version. Updated the plotting
+lock to Pillow 12.3.0 and its tested wheel hash, installed that wheel in the
+isolated venv, and regenerated all three formats. PNG comparison against
+the original figure again passed byte-for-byte. This patch does not change
+the scientific benchmark runtime or stored evidence. The initial historical
+installation remains documented, but is no longer the recommended lock.
+The snapshot also lists 11 pip/setuptools alerts in the separate historical
+CPU wheel manifest; this Pillow update does not resolve those alerts or
+constitute a full installed-environment security audit.
