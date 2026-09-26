@@ -248,6 +248,13 @@ source component, not the analysis/data/runtime bundle or a public release.
 Historical build behavior is preserved rather than silently replaced by
 development packaging fixes.
 
+A separate [setup-overlay installation](results/PUBLICATION_FROZEN_OVERLAY_INSTALL_20260926.md)
+now builds and installs the frozen scientific sources with only the tested
+packaging setup replaced. All 33 shipped scientific source files match frozen
+Git blobs, and standard/high-sensitivity installed fixtures pass. This is a new
+compiled artifact with its own lock, not the original benchmark runtime or
+full phylogenetic reproduction; the source-only archive remains unchanged.
+
 The [rights register](results/PUBLICATION_DATA_RIGHTS_20260918.md) separates
 project code, reference datasets, upstream software and binaries. Local
 availability or inclusion in an evidence bundle is not blanket permission

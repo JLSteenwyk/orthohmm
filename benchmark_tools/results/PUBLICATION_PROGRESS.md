@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Frozen Scientific Source Installed With Explicit Packaging Overlay (2026-09-26)
+
+The preceding turn completed the checkpoint/setup crash control. With no fault
+reproduced by the targeted controls, high-CPM remains a documented failure;
+work moved to the independent installed-build gap. Staged 43 frozen source
+files, replaced only setup.py from the tested packaging revision, built a
+baseline CPU wheel and installed it with local hash-locked dependencies.
+All 33 shipped scientific source files match frozen Git blobs and installed
+bytes; standard/high-sensitivity each cover 38 genes in four groups, matching
+the prior fixture hashes. Eighteen focused tests pass. [Evidence and limits](PUBLICATION_FROZEN_OVERLAY_INSTALL_20260926.md).
+The first install correctly rejected an older same-name wheel; its failure is
+retained. A dedicated wheelhouse and second fresh venv resolved ambiguity with
+hash checks unchanged. This is not the original benchmark executable, full
+phylogeny reproduction or cross-host portability. No score/default changed.
+Controlled timing, native workflow portability, remaining provenance/rights,
+uncertainty limitations and final release work remain open; DGX is deferred.
+
 ## High-CPM Checkpoint and Setup Boundary Completed (2026-09-26)
 
 The preceding turn completed import-context controls. One preplanned child
