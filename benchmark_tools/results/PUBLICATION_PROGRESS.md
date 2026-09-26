@@ -1,5 +1,16 @@
 # Publication Progress
 
+## Complete Comparator Figure Bundle Relocated (2026-09-26)
+
+Added an explicit complete-comparator audit scope without changing historical
+inventories; 62 figure-audit/bundle tests pass. The committed-source bundle
+contains 12 files and five outputs, and its standalone verifier succeeds
+outside the checkout. All 24 statistical endpoints reproduce from its
+bundled counts under isolated Python in the existing clean NumPy environment.
+[Commands, receipts and limitations](PUBLICATION_COMPLETE_FIGURE_BUNDLE_20260926.md)
+are retained. This updates the direct comparison evidence export, not native
+workflow reproduction, rights clearance or controlled timing.
+
 ## Swiss Regression Integration Verified (2026-09-26)
 
 The initial broader regression run had 523 passes and one failure: the
