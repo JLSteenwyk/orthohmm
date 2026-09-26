@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Diagnostic Figure Reproduced Outside Checkout (2026-09-26)
+
+Exported eleven committed files (nine Python modules, audit JSON, license)
+at `002340e46943fc38593426b494e952061bbb36c2` to a fresh `/tmp` directory.
+Isolated Python execution regenerated all three figure formats with no
+original-checkout project imports; PNG byte comparison passed.
+[Exact commands, hashes and limits](FORCED_CANDIDATE_FIGURE_REPRODUCTION_20260926.md).
+The export is locally retained under `benchmarks/work`; its bytes can be
+recreated from Git. This is plotting reproducibility in the tested environment,
+not inference reproduction, a clean-install test or a complete archive.
+
+Previous turn refreshed claims and the review; this turn verifies relocated
+execution for the new mechanism figure. QfO assessment 22174 remains live,
+with score admission 22176 dependency-pending. Shared-host scheduler CPU
+accounting returned an implausible value and is not used as resource evidence.
+
 ## Claims And Manuscript Preview Refreshed (2026-09-26)
 
 Updated the claim-to-evidence checklist to replace obsolete search-recovery
