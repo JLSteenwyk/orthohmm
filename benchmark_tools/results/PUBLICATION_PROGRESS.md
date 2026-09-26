@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Strict OrthoBench Readback Prepared While Job 22179 Runs (2026-09-26)
+
+The previous turn prepared and launched the full installed-package run,
+constituting progress. Live squeue revalidation finds the same job 22179
+RUNNING at 4:09, with the log still in fresh builtin HMM search; it was not
+restarted. Added a strict root-HOG parser and label-invariant comparison.
+The [historical baseline readback](INSTALLED_OB_READBACK_PREPARATION_20260926.md)
+reproduces all 251,378-gene coverage, all 70 family records and exact aggregate
+P/R/F1. Eleven focused tests pass. This is preparation, not admission of the
+running job. After completion, coverage/scoring checks must be followed by
+complete tree/pair and input-inventory validation before a full reproduction
+claim. No benchmark score/default changed; DGX remains deferred and the goal
+stays active.
+
 ## Full Installed OrthoBench Reproduction Started, Job 22179 (2026-09-26)
 
 The preceding turn completed rare-error validation and integrated its failure
