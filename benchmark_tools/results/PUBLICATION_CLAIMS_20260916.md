@@ -68,6 +68,8 @@ evidence that an experiment completed or a biological hypothesis is true.
 | All retained OrthoBench methods used identical sequences | [Eight-method provenance register](OB_PROVENANCE_REGISTER_20260926.md) | Not supported: Proteinortho and the scored July OrthoMCL run delete 869 asterisks from 177 proteins. Their accuracy effect is unknown; April OrthoMCL input identity cannot be transferred to July |
 | Retained OrthoBench durations establish a comparative speed ranking | [Resource scopes](orthobench_provenance_register_20260926/register.md) | Unsupported: inference times are missing for some rows and available records mix workflow, native-log and GNU-time scopes. Sequence-checkpoint conversion time is not inference time; shared-host measurements are descriptive |
 
+| The retained Leiden distribution changes downstream candidate formation | [Two-arm replay readback](OB_DEPENDENCY_REPLAY_RESULT_22320.md) | Supported for this fixed checkpoint/source/seed contrast: identical initial graphs lead to 30,788 genes in changed candidate groups. The 0.12.0 arm exactly reproduces fresh installed candidates; the 0.11.0 arm still differs from historical candidates for 93 genes. No final-F1 attribution or general determinism claim |
+
 ## Completion Requirements
 
 The [completed lineage-native diagnostic](LINEAGE_NATIVE_RESULT_21995.md)

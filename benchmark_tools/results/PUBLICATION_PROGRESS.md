@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Dependency Replay Complete and Independently Read Back (2026-09-26)
+
+The preceding turn completed and pushed the provenance register. This turn
+reread the objective, first verified job 22320 RUNNING at 20:09, then observed
+terminal COMPLETED/0:0 at 20:40. Both arms succeeded once. The new independent
+reader validates retained runtime/source identities, fixed commands/settings,
+four graph snapshots, complete partitions, and candidate seed/merge consistency.
+One hundred focused tests pass. No scientific code, defaults or active-run
+inputs were changed and no native inference was restarted.
+
+The [result](OB_DEPENDENCY_REPLAY_RESULT_22320.md) establishes propagation from
+identical initial graphs to different candidate partitions: 54,495 versus
+54,445 families, 30,788 genes in changed groups. Distribution 0.12.0 exactly
+matches fresh installed candidates; 0.11.0 still differs from historical
+candidates for 93 genes in 12 changed groups per side. Equal counts are not
+exact reproduction. The committed readback includes both baseline comparisons;
+the earlier local readback remains preserved. Manuscript source and claims
+now reflect this evidence; rendered v19 remains historical.
+
+Next localize the residual difference using retained intermediate outputs
+before deciding on further native work. Final-F1 causality, publication-wide
+provenance, uncertainty, controlled timing and release requirements remain
+unmet. No dependency pin was selected using scores. DGX remains deferred.
+
 ## Eight-Method OrthoBench Provenance Register (2026-09-26)
 
 The preceding status turn verified job 22320 live. This continuation reread

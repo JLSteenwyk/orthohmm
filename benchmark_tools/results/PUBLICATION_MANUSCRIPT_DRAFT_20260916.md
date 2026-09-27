@@ -2195,8 +2195,16 @@ clean runtime reproduced the exact 58,772-group alternate partition in two
 calls. This isolates that distribution, including its bundled native libraries,
 as sufficient for the initial-clustering change, but does not distinguish its
 individual components or causally account for the full-run score difference.
-Dependency sensitivity therefore remains a reproducibility limitation requiring
-a downstream diagnostic, not evidence supporting a score-selected new default.
+A subsequent fixed-checkpoint replay carried both distributions through profile
+refinement and candidate expansion. Both started from identical graph arrays,
+but yielded 54,495 versus 54,445 candidate families, with changed memberships
+for 30,788 genes. The 0.12.0 result exactly reproduced the fresh installed
+candidate partition. The 0.11.0 result still differed from the historical
+candidate partition for 93 genes, despite an identical total group count.
+Thus the distribution effect propagates downstream but does not fully restore
+historical candidates or establish the cause of the final F1 difference.
+No phylogenetic replay or default change was made in this diagnostic.
+[Downstream readback](OB_DEPENDENCY_REPLAY_RESULT_22320.md).
 [Private distribution control](OB_LEIDEN_OVERLAY_PROBE_20260926.md).
 [Search](INSTALLED_OB_SEARCH_COMPARISON_20260926.md),
 [graph](INSTALLED_OB_GRAPH_PROBE_20260926.md),
