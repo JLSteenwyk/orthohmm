@@ -1,0 +1,29 @@
+{
+  "command": [
+    "sbatch",
+    "--parsable",
+    "--partition=gpu",
+    "--nodelist=bizon",
+    "--cpus-per-task=2",
+    "--mem=128G",
+    "--time=03:00:00",
+    "--no-requeue",
+    "--job-name=qfo_fresh_phylo_readback_v2",
+    "--output=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/readback-v2-%j.log",
+    "--chdir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927",
+    "--wrap=/home/bizon/anaconda3/bin/python -I -c 'import hashlib,json,os,pathlib,sys\np=pathlib.Path('\"'\"'/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/readback_v2_plan.json'\"'\"')\nassert hashlib.sha256(p.read_bytes()).hexdigest()=='\"'\"'d42e759f2d42442f250a440a1138be30660b2d842c2477bb4d44024e54edcdca'\"'\"'\nplan=json.loads(p.read_text())\nassert os.environ.get(\"SLURM_CPUS_PER_TASK\")==\"2\"\ndef check():\n for r in plan[\"checked_records\"]:\n  b=pathlib.Path(r[\"path\"]).read_bytes()\n  assert len(b)==r[\"bytes\"] and hashlib.sha256(b).hexdigest()==r[\"sha256\"],r[\"path\"]\ncheck()\nsys.path.insert(0,plan[\"repo\"])\nfrom benchmark_tools.readback_qfo_fresh_phylogeny import readback,record,save\nreadback(pathlib.Path(plan[\"repo\"]),pathlib.Path(plan[\"directory\"]),pathlib.Path(plan[\"output\"]))\ncheck()\nsave(pathlib.Path(plan[\"directory\"])/\"readback_v2_execution.json\",dict(status=\"readback_complete\",job_id=os.environ[\"SLURM_JOB_ID\"],plan=record(p),result=record(pathlib.Path(plan[\"output\"])/\"result.json\")))\n'"
+  ],
+  "commit": "9465f0e626db356b924b455c53066ea745914800",
+  "dependency_note": "Prior sbatch with afterok returned 1; native job no longer present in scontrol. Accounting confirms native completion; reader independently checks accounting.",
+  "job_id": "22332",
+  "native_accounting_before_submission": "JobIDRaw|State|ExitCode|Elapsed|AllocCPUS\n22329|COMPLETED|0:0|01:53:08|32\n22329.batch|COMPLETED|0:0|01:53:08|32\n",
+  "native_job_id": 22329,
+  "plan": {
+    "bytes": 180101,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/readback_v2_plan.json",
+    "sha256": "d42e759f2d42442f250a440a1138be30660b2d842c2477bb4d44024e54edcdca"
+  },
+  "prior_failed_job": 22330,
+  "prior_submission_rejected": true,
+  "stderr": ""
+}

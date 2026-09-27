@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Corrected Readback Submitted As 22332 (2026-09-27)
+
+Submitted frozen corrected audit as job 22332, 2 CPUs/128 GiB/3 hours,
+no requeue, after commit/push `9465f0e`. The
+[submission receipt](qfo_fresh_phylogeny_readback_v2_submission_20260927.json)
+retains the exact command and native completion accounting. An initial sbatch
+with the old afterok dependency returned exit 1 without an accepted job ID;
+scontrol no longer retained native 22329. After confirming COMPLETED in sacct,
+submitted without that expired dependency; the reader still independently
+requires successful native accounting. Plan remains unchanged. Success requires
+`readback_v2_execution.json` after source rechecks, all scientific readers and
+full prediction comparison. No source files pinned by this attempt may change
+while it runs. Canonical reuse remains disabled by the old failed-audit gate;
+bind it to the new successful receipt only after terminal validation.
+
 ## Corrected QfO Readback Plan Frozen (2026-09-27)
 
 Previous turn corrected and tested explicit metadata admission. Scheduler
