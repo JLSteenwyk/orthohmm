@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Full Recovery OrthoBench Prepared (2026-09-26)
+
+The preceding turn delivered the explicit full-pipeline fixture. This
+continuation reread the objective, verified the full input universe and fresh
+installation, and prepared the
+[full recovery protocol](FULL_RECOVERY_ORTHOBENCH_PROTOCOL_20260926.md) before
+evaluation. It pins the baseline/reference files, native command, source and
+dependency payload, and requires a one-attempt 32-CPU/128-GiB Slurm execution.
+Twenty-seven focused tests pass. Preparation is not scientific completion;
+submission/status receipts will separately record the native job. The broader
+publication goal remains active and DGX stays deferred.
+
 ## Explicit Full-Pipeline Entrypoint Tested (2026-09-26)
 
 The previous continuation made concrete progress by validating fresh installed
