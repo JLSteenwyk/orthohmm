@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Tested Recovery Integrated Into Reproduction Guide (2026-09-26)
+
+The preceding turn established exact historical OrthoBench recovery. This
+continuation reread the objective and incorporated the executed stage chain
+into the [publication reproduction guide](../PUBLICATION_REPRODUCTION.md).
+It distinguishes the differing Leiden 0.12 clean installation from the private
+0.11 distribution, benchmark-only canonical ordering, fresh trees versus reused
+search, native and audit job identities, and shared-host timing scope.
+
+The guide now supplies the tested local readback command and exact plan pin,
+while explicitly retaining the missing portable native entrypoint, distribution
+packaging and workstation-independent restoration requirements. It does not
+claim that documentation closes those engineering gaps. Historical seven-method
+QfO wording and the preview pointer were clarified without replacing evidence.
+Pandoc parsing verified 79 local link occurrences and 78 distinct tracked
+targets; the documented readback CLI loads and accepts the documented flags.
+Both jobs 22324 and 22325 remain terminal-successful. No inference rerun,
+scientific default, score or dependency installation changed. The full goal
+and outstanding scientific/archival requirements remain active; DGX stays deferred.
+
 ## Historical OrthoBench Partition Recovered (2026-09-26)
 
 The preceding continuation was a verified wait. This turn reread the full

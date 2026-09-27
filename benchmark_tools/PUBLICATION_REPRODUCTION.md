@@ -2,8 +2,10 @@
 
 Status: 26 September 2026, incomplete working package. This guide routes
 readers to executed workflows and their evidence; it is not an archival
-release or an assertion that every requirement is complete. Commands below
-are statistical reproduction only and do not submit scheduler jobs.
+release or an assertion that every requirement is complete. Direct commands
+below recompute statistics or audit retained local artifacts; they do not
+submit scheduler jobs. Linked native batch recipes have separate execution
+requirements and must not be confused with these audit commands.
 
 ## Method And Results
 
@@ -38,11 +40,13 @@ are statistical reproduction only and do not submit scheduler jobs.
   Version 2 adds pinned five-comparator OrthoBench readback/upstream evidence
   without changing the score TSV or claiming historical native provenance.
 
-- [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260926_v16.md)
+- [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260926_v20.md)
   provides dated HTML/PDF and a checked local-asset inventory. It remains
   a working preview, not a standalone archive or completed journal layout.
-  Version 16 includes corrected VGNC count decomposition and retained negative
-  statistical-validation results; it adds no native VGNC confidence intervals.
+  Version 20 includes installed-runtime discrepancies and QfO provenance.
+  It predates the completed canonical phylogeny recovery; consult the current
+  manuscript source and result below for that finding. It adds no native VGNC
+  confidence intervals.
 - [Corrected six-endpoint comparison figure](results/CORRECTED_QFO_ENDPOINT_FIGURE_20260926.md)
   retains all eight methods and distinguishes FAS eligible counts from sample sizes.
 - [Complete-panel figure evidence bundle](results/PUBLICATION_COMPLETE_FIGURE_BUNDLE_20260926.md)
@@ -81,7 +85,8 @@ are statistical reproduction only and do not submit scheduler jobs.
   contains admitted point estimates, not a complete eight-method ranking.
   The six-metric mean is a project-defined secondary summary, not a native
   QfO endpoint. FastOMA uses a supplied corrected OrthoFinder species tree;
-  OrthoMCL corrected scores remain unavailable. The updated
+  OrthoMCL corrected scores were unavailable in this historical snapshot,
+  not in the current eight-method table above. The associated
   [paired SwissTrees results](results/qfo_fastoma_swiss_uncertainty_22098.json)
   retain all eight planned contrasts and all 24 endpoints for correction,
   with seven contrasts estimable. No general superiority is established.
@@ -328,7 +333,7 @@ notices and full runtime/environment review remain separate requirements.
 ### Full Installed OrthoBench Readback
 
 The [fresh installed run](results/INSTALLED_ORTHOBENCH_PROTOCOL_20260926.md)
-is job 22179; consult live scheduler state before reading its outputs. It uses
+was completed job 22179. It uses
 the frozen scientific source with the packaging overlay and rebuilt MAFFT.
 It is shared-host reproduction, not controlled comparative timing.
 
@@ -343,7 +348,8 @@ native pairs are post-filtering. None is silently substituted for another.
 Job 22179 subsequently completed successfully. All five commands below passed;
 the [readback](results/INSTALLED_ORTHOBENCH_READBACK_20260926.md) records a
 0.284504-percentage-point F1 decrease and a different partition. Historical
-scores remain unchanged and exact reproduction is not established.
+scores remain unchanged; this particular installed run did not reproduce them.
+The subsequent controlled recovery is documented in the next section.
 
 For a successful native completion, run the following from the repository root
 in the audit environment (tested with Python 3.10.13, DendroPy 5.0.8 and
@@ -378,6 +384,76 @@ receipts before any reproduction claim. The companion readers establish
 output/rule consistency conditional on saved trees; they do not prove optimal
 rooting, biological truth or correctness of the HMM search. They do not by
 themselves establish publication readiness or overwrite historical scores.
+
+### Tested Canonical OrthoBench Recovery
+
+The [completed recovery](results/CANONICAL_OB_PHYLOGENY_RESULT_22324.md)
+reproduces all 59,770 historical root groups and all 70 reference-family score
+records, including F1 74.10607351873405%. This is a same-host, stage-composed
+reproduction, not a claim that the clean wheel alone reproduces historical
+outputs or that a portable one-command publication environment is complete.
+
+| Stage | Retained execution | Evidence and scope |
+| --- | --- | --- |
+| Frozen scientific sources with setup-only packaging overlay | Full installed job 22179 | [Installed readback](results/INSTALLED_ORTHOBENCH_READBACK_20260926.md); scientific revision `7f3a9e4`, independent input/output audits; preserve its differing F1 73.821569% |
+| Fresh search evidence | Checkpoint from 22179 | [Search comparison](results/INSTALLED_OB_SEARCH_COMPARISON_20260926.md); same directed nonself hit keys with tiny score differences; do not normalize the checkpoint again |
+| Clustering/profile replay | Job 22320, private Leiden 0.11 arm | [Downstream readback](results/OB_DEPENDENCY_REPLAY_RESULT_22320.md); identical historical pre-candidate partitions, 62,885 refined seed groups |
+| Canonical candidate formation | Job 22323, `fresh_full_self_control` | [Five-arm experiment](results/OB_CANONICAL_CANDIDATE_RESULT_22323.md); sort by directed query/target indices without changing scores, thresholds or self-hit policy; 54,445 historical candidate families |
+| Membership constraint binding | Independent semantic audit | [Constraint readback](results/CANONICAL_MEMBERSHIP_CONSTRAINTS_20260926.md); 8,440 directed constraints identical to historical consumer inputs and order |
+| Fresh species/gene trees and reconciliation | Job 22324 | [Frozen protocol](results/CANONICAL_OB_PHYLOGENY_PROTOCOL_20260926.md); 32 CPUs, inferred species tree, minimum-variance rooting, species-overlap root rule, positive-paralogy pairs, membership constraints, no old tree checkpoints |
+| Native admission, four scientific readers and frozen scoring | Job 22325 | [Workflow](results/CANONICAL_OB_PHYLOGENY_ADMISSION_20260926.md); exact partition and full score-object agreement after successful terminal accounting |
+
+The private runtime used the retained Leiden 0.11 distribution, including its
+bundled native libraries, with NumPy 2.2.6 and Python igraph 1.0.0. A version
+string alone is not an adequate replacement for the distribution/file pins.
+The clean overlay wheel lock includes Leiden 0.12; do not silently substitute
+that lock for the recovery environment. See the
+[private distribution experiment](results/OB_LEIDEN_OVERLAY_PROBE_20260926.md).
+The canonical-order policy remains benchmark-only, not an enabled production
+default. Do not present this as a new accuracy-tuned method or transfer the
+recovery result to QfO or another platform without validation.
+
+Native phylogeny used rebuilt MAFFT 7.525 and the retained AVX2 FastTree 2.2
+binary. The separate baseline-x86-64 FastTree build was tested on a fixture,
+not substituted into this full-data recovery. Exact interpreter, environment,
+source, tool and input identities are in the local plan
+`benchmarks/work/canonical_ob_phylogeny_20260926/plan.json`, SHA256
+`2ded17c15cf3510e02f1683973edf211dc8b7f7f86037dcf83e121a948dfafdc`.
+The [native submission](results/canonical_ob_phylogeny_submission_22324.json)
+and [audit submission](results/canonical_ob_readback_submission_22325.json)
+retain the executable commands and source/runtime preflight. They are evidence
+of past executions, not portable launchers that acquire all missing artifacts.
+
+To re-audit this completed local experiment without launching inference, choose
+an output directory that does not exist:
+
+```bash
+python -m benchmark_tools.readback_canonical_ob_phylogeny \
+  --repo . \
+  --directory benchmarks/work/canonical_ob_phylogeny_20260926 \
+  --job 22324 \
+  --output /absolute/fresh/canonical_ob_readback
+```
+
+This requires the retained plans, absolute-path inputs, native outputs,
+historical references, scheduler accounting and tested audit dependencies. It
+is not a relocated native reproduction. The original `readback` directory must
+not be overwritten. All audit stages must succeed before claiming a reproduced
+score; a partial receipt or process exit alone is insufficient.
+
+Fresh search/candidate artifacts were reused, so the 1,555.40-second replay is
+phylogeny-stage timing only. Shared-host resources are descriptive. Remaining
+integration work includes packaging the exact dependency distribution, exposing
+a tested full-pipeline reproduction entrypoint with explicit ordering policy,
+and validating its data/tool restoration without relying on workstation paths.
+Do not change the frozen scientific baseline or silently promote the ordering
+policy while doing that integration.
+
+The [OrthoBench provenance register](results/OB_PROVENANCE_REGISTER_20260926.md)
+and [QfO OrthoFinder consolidation](results/QFO_ORTHOFINDER_PROVENANCE_CONSOLIDATED_20260926.md)
+distinguish available historical inference, conversion and scoring evidence.
+The QfO sequence-only row is a full-run checkpoint diagnostic, not a separately
+timed sequence-only inference. Other cross-dataset provenance remains incomplete.
 
 The [rights register](results/PUBLICATION_DATA_RIGHTS_20260918.md) separates
 project code, reference datasets, upstream software and binaries. Local
