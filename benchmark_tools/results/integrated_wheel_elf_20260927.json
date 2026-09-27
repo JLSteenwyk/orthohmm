@@ -1,0 +1,2755 @@
+{
+  "dependency_edges": [
+    {
+      "member": "Bio/cpairwise2.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+    },
+    {
+      "member": "Bio/cpairwise2.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+    },
+    {
+      "member": "Bio/Align/_aligncore.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+    },
+    {
+      "member": "Bio/Align/_aligncore.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+    },
+    {
+      "member": "Bio/Align/_alignmentcounts.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+    },
+    {
+      "member": "Bio/Align/_alignmentcounts.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+    },
+    {
+      "member": "Bio/Align/_codonaligner.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+    },
+    {
+      "member": "Bio/Align/_codonaligner.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+    },
+    {
+      "member": "Bio/Align/_pairwisealigner.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+    },
+    {
+      "member": "Bio/Align/_pairwisealigner.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+    },
+    {
+      "member": "Bio/Align/substitution_matrices/_arraycore.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+    },
+    {
+      "member": "Bio/Align/substitution_matrices/_arraycore.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+    },
+    {
+      "member": "Bio/Cluster/_cluster.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+    },
+    {
+      "member": "Bio/Cluster/_cluster.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+    },
+    {
+      "member": "Bio/Nexus/cnexus.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+    },
+    {
+      "member": "Bio/Nexus/cnexus.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+    },
+    {
+      "member": "Bio/PDB/_bcif_helper.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+    },
+    {
+      "member": "Bio/PDB/_bcif_helper.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+    },
+    {
+      "member": "Bio/PDB/ccealign.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+    },
+    {
+      "member": "Bio/PDB/ccealign.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+    },
+    {
+      "member": "Bio/PDB/kdtrees.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+    },
+    {
+      "member": "Bio/PDB/kdtrees.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+    },
+    {
+      "member": "Bio/SeqIO/_twoBitIO.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+    },
+    {
+      "member": "Bio/SeqIO/_twoBitIO.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+    },
+    {
+      "member": "Bio/motifs/_pwm.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+    },
+    {
+      "member": "Bio/motifs/_pwm.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+    },
+    {
+      "member": "igraph/_igraph.abi3.so",
+      "needed": "libgomp-e985bcbb.so.1.0.0",
+      "selected_wheel_candidates": [
+        {
+          "member": "igraph.libs/libgomp-e985bcbb.so.1.0.0",
+          "wheel_sha256": "2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522"
+        }
+      ],
+      "wheel_sha256": "2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522"
+    },
+    {
+      "member": "igraph/_igraph.abi3.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522"
+    },
+    {
+      "member": "igraph/_igraph.abi3.so",
+      "needed": "libxml2-39f609e7.so.2.9.7",
+      "selected_wheel_candidates": [
+        {
+          "member": "igraph.libs/libxml2-39f609e7.so.2.9.7",
+          "wheel_sha256": "2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522"
+        }
+      ],
+      "wheel_sha256": "2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522"
+    },
+    {
+      "member": "igraph/_igraph.abi3.so",
+      "needed": "libstdc++.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522"
+    },
+    {
+      "member": "igraph/_igraph.abi3.so",
+      "needed": "libm.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522"
+    },
+    {
+      "member": "igraph/_igraph.abi3.so",
+      "needed": "libgcc_s.so.1",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522"
+    },
+    {
+      "member": "igraph/_igraph.abi3.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522"
+    },
+    {
+      "member": "igraph/_igraph.abi3.so",
+      "needed": "ld-linux-x86-64.so.2",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522"
+    },
+    {
+      "member": "igraph.libs/libgomp-e985bcbb.so.1.0.0",
+      "needed": "libdl.so.2",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522"
+    },
+    {
+      "member": "igraph.libs/libgomp-e985bcbb.so.1.0.0",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522"
+    },
+    {
+      "member": "igraph.libs/libgomp-e985bcbb.so.1.0.0",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522"
+    },
+    {
+      "member": "igraph.libs/liblzma-51a76f52.so.5.2.4",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522"
+    },
+    {
+      "member": "igraph.libs/liblzma-51a76f52.so.5.2.4",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522"
+    },
+    {
+      "member": "igraph.libs/libxml2-39f609e7.so.2.9.7",
+      "needed": "libdl.so.2",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522"
+    },
+    {
+      "member": "igraph.libs/libxml2-39f609e7.so.2.9.7",
+      "needed": "libz.so.1",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522"
+    },
+    {
+      "member": "igraph.libs/libxml2-39f609e7.so.2.9.7",
+      "needed": "liblzma-51a76f52.so.5.2.4",
+      "selected_wheel_candidates": [
+        {
+          "member": "igraph.libs/liblzma-51a76f52.so.5.2.4",
+          "wheel_sha256": "2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522"
+        }
+      ],
+      "wheel_sha256": "2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522"
+    },
+    {
+      "member": "igraph.libs/libxml2-39f609e7.so.2.9.7",
+      "needed": "libm.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522"
+    },
+    {
+      "member": "igraph.libs/libxml2-39f609e7.so.2.9.7",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522"
+    },
+    {
+      "member": "leidenalg/_c_leiden.abi3.so",
+      "needed": "liblibleidenalg-32f15777.so.0.11.1",
+      "selected_wheel_candidates": [
+        {
+          "member": "leidenalg.libs/liblibleidenalg-32f15777.so.0.11.1",
+          "wheel_sha256": "571a0934f831a69442d82889d319bdba93de924bd9e09b720cd8cbe6fdc08c17"
+        }
+      ],
+      "wheel_sha256": "571a0934f831a69442d82889d319bdba93de924bd9e09b720cd8cbe6fdc08c17"
+    },
+    {
+      "member": "leidenalg/_c_leiden.abi3.so",
+      "needed": "libigraph-e2cb8a7d.so.4.0.0",
+      "selected_wheel_candidates": [
+        {
+          "member": "leidenalg.libs/libigraph-e2cb8a7d.so.4.0.0",
+          "wheel_sha256": "571a0934f831a69442d82889d319bdba93de924bd9e09b720cd8cbe6fdc08c17"
+        }
+      ],
+      "wheel_sha256": "571a0934f831a69442d82889d319bdba93de924bd9e09b720cd8cbe6fdc08c17"
+    },
+    {
+      "member": "leidenalg/_c_leiden.abi3.so",
+      "needed": "libstdc++.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "571a0934f831a69442d82889d319bdba93de924bd9e09b720cd8cbe6fdc08c17"
+    },
+    {
+      "member": "leidenalg/_c_leiden.abi3.so",
+      "needed": "libm.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "571a0934f831a69442d82889d319bdba93de924bd9e09b720cd8cbe6fdc08c17"
+    },
+    {
+      "member": "leidenalg/_c_leiden.abi3.so",
+      "needed": "libgcc_s.so.1",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "571a0934f831a69442d82889d319bdba93de924bd9e09b720cd8cbe6fdc08c17"
+    },
+    {
+      "member": "leidenalg/_c_leiden.abi3.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "571a0934f831a69442d82889d319bdba93de924bd9e09b720cd8cbe6fdc08c17"
+    },
+    {
+      "member": "leidenalg/_c_leiden.abi3.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "571a0934f831a69442d82889d319bdba93de924bd9e09b720cd8cbe6fdc08c17"
+    },
+    {
+      "member": "leidenalg.libs/libigraph-e2cb8a7d.so.4.0.0",
+      "needed": "libstdc++.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "571a0934f831a69442d82889d319bdba93de924bd9e09b720cd8cbe6fdc08c17"
+    },
+    {
+      "member": "leidenalg.libs/libigraph-e2cb8a7d.so.4.0.0",
+      "needed": "libm.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "571a0934f831a69442d82889d319bdba93de924bd9e09b720cd8cbe6fdc08c17"
+    },
+    {
+      "member": "leidenalg.libs/libigraph-e2cb8a7d.so.4.0.0",
+      "needed": "libgcc_s.so.1",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "571a0934f831a69442d82889d319bdba93de924bd9e09b720cd8cbe6fdc08c17"
+    },
+    {
+      "member": "leidenalg.libs/libigraph-e2cb8a7d.so.4.0.0",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "571a0934f831a69442d82889d319bdba93de924bd9e09b720cd8cbe6fdc08c17"
+    },
+    {
+      "member": "leidenalg.libs/libigraph-e2cb8a7d.so.4.0.0",
+      "needed": "ld-linux-x86-64.so.2",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "571a0934f831a69442d82889d319bdba93de924bd9e09b720cd8cbe6fdc08c17"
+    },
+    {
+      "member": "leidenalg.libs/liblibleidenalg-32f15777.so.0.11.1",
+      "needed": "libigraph-e2cb8a7d.so.4.0.0",
+      "selected_wheel_candidates": [
+        {
+          "member": "leidenalg.libs/libigraph-e2cb8a7d.so.4.0.0",
+          "wheel_sha256": "571a0934f831a69442d82889d319bdba93de924bd9e09b720cd8cbe6fdc08c17"
+        }
+      ],
+      "wheel_sha256": "571a0934f831a69442d82889d319bdba93de924bd9e09b720cd8cbe6fdc08c17"
+    },
+    {
+      "member": "leidenalg.libs/liblibleidenalg-32f15777.so.0.11.1",
+      "needed": "libstdc++.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "571a0934f831a69442d82889d319bdba93de924bd9e09b720cd8cbe6fdc08c17"
+    },
+    {
+      "member": "leidenalg.libs/liblibleidenalg-32f15777.so.0.11.1",
+      "needed": "libm.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "571a0934f831a69442d82889d319bdba93de924bd9e09b720cd8cbe6fdc08c17"
+    },
+    {
+      "member": "leidenalg.libs/liblibleidenalg-32f15777.so.0.11.1",
+      "needed": "libgcc_s.so.1",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "571a0934f831a69442d82889d319bdba93de924bd9e09b720cd8cbe6fdc08c17"
+    },
+    {
+      "member": "leidenalg.libs/liblibleidenalg-32f15777.so.0.11.1",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "571a0934f831a69442d82889d319bdba93de924bd9e09b720cd8cbe6fdc08c17"
+    },
+    {
+      "member": "llvmlite/binding/libllvmlite.so",
+      "needed": "librt.so.1",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "854941c2267fd4fc5b2ce02b8af8ecdffa79fb7784591d3a89370322039ea09f"
+    },
+    {
+      "member": "llvmlite/binding/libllvmlite.so",
+      "needed": "libz.so.1",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "854941c2267fd4fc5b2ce02b8af8ecdffa79fb7784591d3a89370322039ea09f"
+    },
+    {
+      "member": "llvmlite/binding/libllvmlite.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "854941c2267fd4fc5b2ce02b8af8ecdffa79fb7784591d3a89370322039ea09f"
+    },
+    {
+      "member": "llvmlite/binding/libllvmlite.so",
+      "needed": "libdl.so.2",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "854941c2267fd4fc5b2ce02b8af8ecdffa79fb7784591d3a89370322039ea09f"
+    },
+    {
+      "member": "llvmlite/binding/libllvmlite.so",
+      "needed": "libstdc++.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "854941c2267fd4fc5b2ce02b8af8ecdffa79fb7784591d3a89370322039ea09f"
+    },
+    {
+      "member": "llvmlite/binding/libllvmlite.so",
+      "needed": "libm.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "854941c2267fd4fc5b2ce02b8af8ecdffa79fb7784591d3a89370322039ea09f"
+    },
+    {
+      "member": "llvmlite/binding/libllvmlite.so",
+      "needed": "libgcc_s.so.1",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "854941c2267fd4fc5b2ce02b8af8ecdffa79fb7784591d3a89370322039ea09f"
+    },
+    {
+      "member": "llvmlite/binding/libllvmlite.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "854941c2267fd4fc5b2ce02b8af8ecdffa79fb7784591d3a89370322039ea09f"
+    },
+    {
+      "member": "llvmlite/binding/libllvmlite.so",
+      "needed": "ld-linux-x86-64.so.2",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "854941c2267fd4fc5b2ce02b8af8ecdffa79fb7784591d3a89370322039ea09f"
+    },
+    {
+      "member": "orthohmm/search/csrc/hmm_viterbi.so",
+      "needed": "libgomp.so.1",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "cfdfde5ed1be29e4080dd3571f5c0fc5fc5f45b57ebe5ee9b3c7559096c3b93d"
+    },
+    {
+      "member": "orthohmm/search/csrc/hmm_viterbi.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "cfdfde5ed1be29e4080dd3571f5c0fc5fc5f45b57ebe5ee9b3c7559096c3b93d"
+    },
+    {
+      "member": "orthohmm/search/csrc/kmer_prefilter.so",
+      "needed": "libgomp.so.1",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "cfdfde5ed1be29e4080dd3571f5c0fc5fc5f45b57ebe5ee9b3c7559096c3b93d"
+    },
+    {
+      "member": "orthohmm/search/csrc/kmer_prefilter.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "cfdfde5ed1be29e4080dd3571f5c0fc5fc5f45b57ebe5ee9b3c7559096c3b93d"
+    },
+    {
+      "member": "orthohmm/search/csrc/pair_align.so",
+      "needed": "libgomp.so.1",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "cfdfde5ed1be29e4080dd3571f5c0fc5fc5f45b57ebe5ee9b3c7559096c3b93d"
+    },
+    {
+      "member": "orthohmm/search/csrc/pair_align.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "cfdfde5ed1be29e4080dd3571f5c0fc5fc5f45b57ebe5ee9b3c7559096c3b93d"
+    },
+    {
+      "member": "numba/_devicearray.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libstdc++.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/_devicearray.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libm.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/_devicearray.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libgcc_s.so.1",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/_devicearray.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/_devicearray.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/_dispatcher.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libstdc++.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/_dispatcher.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libm.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/_dispatcher.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libgcc_s.so.1",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/_dispatcher.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/_dispatcher.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/_dynfunc.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/_dynfunc.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/_helperlib.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libm.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/_helperlib.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/_helperlib.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/_helperlib.cpython-310-x86_64-linux-gnu.so",
+      "needed": "ld-linux-x86-64.so.2",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/mviewbuf.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/mviewbuf.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/core/runtime/_nrt_python.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libstdc++.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/core/runtime/_nrt_python.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libm.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/core/runtime/_nrt_python.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libgcc_s.so.1",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/core/runtime/_nrt_python.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/core/runtime/_nrt_python.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/core/typeconv/_typeconv.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libstdc++.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/core/typeconv/_typeconv.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libm.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/core/typeconv/_typeconv.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libgcc_s.so.1",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/core/typeconv/_typeconv.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/core/typeconv/_typeconv.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/cuda/cudadrv/_extras.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/cuda/cudadrv/_extras.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/experimental/jitclass/_box.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/experimental/jitclass/_box.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/np/ufunc/_internal.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libm.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/np/ufunc/_internal.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/np/ufunc/_internal.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/np/ufunc/_num_threads.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/np/ufunc/_num_threads.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/np/ufunc/_num_threads.cpython-310-x86_64-linux-gnu.so",
+      "needed": "ld-linux-x86-64.so.2",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/np/ufunc/omppool.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libdl.so.2",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/np/ufunc/omppool.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libstdc++.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/np/ufunc/omppool.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libm.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/np/ufunc/omppool.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libgomp.so.1.0.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/np/ufunc/omppool.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libgcc_s.so.1",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/np/ufunc/omppool.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/np/ufunc/omppool.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/np/ufunc/omppool.cpython-310-x86_64-linux-gnu.so",
+      "needed": "ld-linux-x86-64.so.2",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/np/ufunc/tbbpool.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libtbb.so.12",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/np/ufunc/tbbpool.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libstdc++.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/np/ufunc/tbbpool.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libm.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/np/ufunc/tbbpool.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libgcc_s.so.1",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/np/ufunc/tbbpool.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/np/ufunc/tbbpool.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/np/ufunc/tbbpool.cpython-310-x86_64-linux-gnu.so",
+      "needed": "ld-linux-x86-64.so.2",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/np/ufunc/workqueue.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libstdc++.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/np/ufunc/workqueue.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libm.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/np/ufunc/workqueue.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libgcc_s.so.1",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/np/ufunc/workqueue.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/np/ufunc/workqueue.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numba/np/ufunc/workqueue.cpython-310-x86_64-linux-gnu.so",
+      "needed": "ld-linux-x86-64.so.2",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    {
+      "member": "numpy/linalg/lapack_lite.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libscipy_openblas64_-56d6093b.so",
+      "selected_wheel_candidates": [
+        {
+          "member": "numpy.libs/libscipy_openblas64_-56d6093b.so",
+          "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+        }
+      ],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/linalg/_umath_linalg.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libscipy_openblas64_-56d6093b.so",
+      "selected_wheel_candidates": [
+        {
+          "member": "numpy.libs/libscipy_openblas64_-56d6093b.so",
+          "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+        }
+      ],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/linalg/_umath_linalg.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libm.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/linalg/_umath_linalg.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libgcc_s.so.1",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/linalg/_umath_linalg.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/random/_mt19937.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/random/bit_generator.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/random/_bounded_integers.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libm.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/random/_bounded_integers.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/random/_common.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/random/_sfc64.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/random/mtrand.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libm.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/random/mtrand.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/random/_pcg64.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/random/_generator.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libm.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/random/_generator.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/random/_philox.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libscipy_openblas64_-56d6093b.so",
+      "selected_wheel_candidates": [
+        {
+          "member": "numpy.libs/libscipy_openblas64_-56d6093b.so",
+          "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+        }
+      ],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libstdc++.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libm.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libgcc_s.so.1",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so",
+      "needed": "ld-linux-x86-64.so.2",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/_core/_rational_tests.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/_core/_umath_tests.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libm.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/_core/_umath_tests.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/_core/_simd.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libm.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/_core/_simd.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/_core/_multiarray_tests.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libm.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/_core/_multiarray_tests.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libgcc_s.so.1",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/_core/_multiarray_tests.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/fft/_pocketfft_umath.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libstdc++.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/fft/_pocketfft_umath.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libm.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/fft/_pocketfft_umath.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libgcc_s.so.1",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy/fft/_pocketfft_umath.cpython-310-x86_64-linux-gnu.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0",
+      "needed": "libquadmath-96973f99-934c22de.so.0.0.0",
+      "selected_wheel_candidates": [
+        {
+          "member": "numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0",
+          "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+        }
+      ],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0",
+      "needed": "libz.so.1",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0",
+      "needed": "libm.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0",
+      "needed": "libgcc_s.so.1",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy.libs/libscipy_openblas64_-56d6093b.so",
+      "needed": "libm.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy.libs/libscipy_openblas64_-56d6093b.so",
+      "needed": "libpthread.so.0",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy.libs/libscipy_openblas64_-56d6093b.so",
+      "needed": "libgfortran-040039e1-0352e75f.so.5.0.0",
+      "selected_wheel_candidates": [
+        {
+          "member": "numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0",
+          "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+        }
+      ],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy.libs/libscipy_openblas64_-56d6093b.so",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy.libs/libscipy_openblas64_-56d6093b.so",
+      "needed": "ld-linux-x86-64.so.2",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0",
+      "needed": "libm.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "member": "numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0",
+      "needed": "libc.so.6",
+      "selected_wheel_candidates": [],
+      "wheel_sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    }
+  ],
+  "inputs": [
+    {
+      "bytes": 38019,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/integrated_inference_notices_20260927.json",
+      "sha256": "ad688c76086757457fb6c24e8f7d5b8681a16a95ab64a09476324760cfc96aae"
+    },
+    {
+      "bytes": 28297,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/integrated_reader_notices_20260927.json",
+      "sha256": "1acec3db0d9e6f6ef0513a25acfb4ffb6d2f7766ee0f7d567b47d05b2711d7be"
+    }
+  ],
+  "limitations": [
+    "NEEDED and search paths are declarations, not observed runtime resolution.",
+    "Candidates match basename or SONAME across selected wheels, ignoring loader scope and search order.",
+    "Static libraries, dlopen dependencies, external tools, Python and OS libraries need separate review.",
+    "Wheel notice candidates are not component-level license attribution or compatibility judgments.",
+    "Only ELF content is inspected; no wheel code is loaded or executed."
+  ],
+  "needs_without_selected_wheel_candidate": [
+    "ld-linux-x86-64.so.2",
+    "libc.so.6",
+    "libdl.so.2",
+    "libgcc_s.so.1",
+    "libgomp.so.1",
+    "libgomp.so.1.0.0",
+    "libm.so.6",
+    "libpthread.so.0",
+    "librt.so.1",
+    "libstdc++.so.6",
+    "libtbb.so.12",
+    "libz.so.1"
+  ],
+  "publication_ready": false,
+  "readelf": {
+    "bytes": 789280,
+    "path": "/usr/bin/x86_64-linux-gnu-readelf",
+    "sha256": "6d54602a1ee13f1214973086bd60efe2dae4363f8f5ab7516eaaf3e259dca90e"
+  },
+  "readelf_version": "GNU readelf (GNU Binutils for Ubuntu) 2.42\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis program is free software; you may redistribute it under the terms of\nthe GNU General Public License version 3 or (at your option) any later version.\nThis program has absolutely no warranty.\n",
+  "redistribution_clearance": false,
+  "source": {
+    "bytes": 5861,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/inventory_wheel_elf.py",
+    "sha256": "6f8b712e769d2ee5c2e8981b0d5d66a37ce304ddcdd0001b7b3734127870a47e"
+  },
+  "status": "selected_wheel_elf_inventory",
+  "wheels": [
+    {
+      "filename_candidates_not_elf": [],
+      "name": "biopython",
+      "notice_candidates": [
+        {
+          "bytes": 3267,
+          "path": "biopython-1.87.dist-info/licenses/LICENSE.rst",
+          "sha256": "11d1ebcaad2eb9f0f09a3df1deb4aca99a4da366ae9ae70f828c7447a24de453"
+        }
+      ],
+      "objects": [
+        {
+          "bytes": 65560,
+          "member": "Bio/cpairwise2.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x3de0 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x1000\n 0x000000000000000d (FINI)               0x2bd4\n 0x0000000000000019 (INIT_ARRAY)         0x4dc8\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x4dd0\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x588\n 0x0000000000000006 (SYMTAB)             0x288\n 0x000000000000000a (STRSZ)              546 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x4fe8\n 0x0000000000000002 (PLTRELSZ)           576 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0xa08\n 0x0000000000000007 (RELA)               0x810\n 0x0000000000000008 (RELASZ)             504 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x7f0\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0x7aa\n 0x000000006ffffff9 (RELACOUNT)          14\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "61efc56a3a97a76e4ea2cb24ea838d9803753ffc753c9b5ba1f5b8e6e6336790",
+          "tags": {
+            "NEEDED": [
+              "libpthread.so.0",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 45840,
+          "member": "Bio/Align/_aligncore.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x3de0 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x1000\n 0x000000000000000d (FINI)               0x1cc8\n 0x0000000000000019 (INIT_ARRAY)         0x3dc8\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x3dd0\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x528\n 0x0000000000000006 (SYMTAB)             0x288\n 0x000000000000000a (STRSZ)              496 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x3fe8\n 0x0000000000000002 (PLTRELSZ)           480 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0xa20\n 0x0000000000000007 (RELA)               0x780\n 0x0000000000000008 (RELASZ)             672 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x750\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0x718\n 0x000000006ffffff9 (RELACOUNT)          21\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "8314b813e5689ba61b60817e0ba0610061f35ae6b0db76367c92d92cf65a8a45",
+          "tags": {
+            "NEEDED": [
+              "libpthread.so.0",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 182384,
+          "member": "Bio/Align/_alignmentcounts.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x7dd8 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x2000\n 0x000000000000000d (FINI)               0x58a4\n 0x0000000000000019 (INIT_ARRAY)         0x8dc0\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x8dc8\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x618\n 0x0000000000000006 (SYMTAB)             0x288\n 0x000000000000000a (STRSZ)              713 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x8fe8\n 0x0000000000000002 (PLTRELSZ)           696 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x1790\n 0x0000000000000007 (RELA)               0x950\n 0x0000000000000008 (RELASZ)             3648 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x930\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0x8e2\n 0x000000006ffffff9 (RELACOUNT)          144\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "a54a9ea508a4d5346ef5fcc6778a8dddc46ed9722d862289e1000736591d7ae6",
+          "tags": {
+            "NEEDED": [
+              "libpthread.so.0",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 94472,
+          "member": "Bio/Align/_codonaligner.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x5dc8 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x2000\n 0x000000000000000d (FINI)               0x44ac\n 0x0000000000000019 (INIT_ARRAY)         0x6db0\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x6db8\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x5e8\n 0x0000000000000006 (SYMTAB)             0x288\n 0x000000000000000a (STRSZ)              652 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x6fe8\n 0x0000000000000002 (PLTRELSZ)           576 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x12f8\n 0x0000000000000007 (RELA)               0x8f0\n 0x0000000000000008 (RELASZ)             2568 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x8c0\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0x874\n 0x000000006ffffff9 (RELACOUNT)          96\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "128d16b3cdd4e96749a55ff1446e93d940f18a187f82920de1acd7a019291df0",
+          "tags": {
+            "NEEDED": [
+              "libpthread.so.0",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 918496,
+          "member": "Bio/Align/_pairwisealigner.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x32db8 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x3000\n 0x000000000000000d (FINI)               0x2ec44\n 0x0000000000000019 (INIT_ARRAY)         0x33da0\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x33da8\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x768\n 0x0000000000000006 (SYMTAB)             0x288\n 0x000000000000000a (STRSZ)              968 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x33fe8\n 0x0000000000000002 (PLTRELSZ)           912 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x2490\n 0x0000000000000007 (RELA)               0xbb8\n 0x0000000000000008 (RELASZ)             6360 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0xb98\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0xb30\n 0x000000006ffffff9 (RELACOUNT)          252\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "b94e451fc5274cf46488bbbece8b6e074c0794a8a9fd113a3b57eb1b938bff73",
+          "tags": {
+            "NEEDED": [
+              "libpthread.so.0",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 37400,
+          "member": "Bio/Align/substitution_matrices/_arraycore.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x2dd8 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x1000\n 0x000000000000000d (FINI)               0x190c\n 0x0000000000000019 (INIT_ARRAY)         0x3dc0\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x3dc8\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x510\n 0x0000000000000006 (SYMTAB)             0x288\n 0x000000000000000a (STRSZ)              490 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x3fe8\n 0x0000000000000002 (PLTRELSZ)           432 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x990\n 0x0000000000000007 (RELA)               0x750\n 0x0000000000000008 (RELASZ)             576 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x730\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0x6fa\n 0x000000006ffffff9 (RELACOUNT)          16\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "4194f8a19af940e6aa59eecd9a5da587c15394cc6017acba2cf79806a50237a8",
+          "tags": {
+            "NEEDED": [
+              "libpthread.so.0",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 470720,
+          "member": "Bio/Cluster/_cluster.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x19db8 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x3000\n 0x000000000000000d (FINI)               0x15a2c\n 0x0000000000000019 (INIT_ARRAY)         0x19da0\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x19da8\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x990\n 0x0000000000000006 (SYMTAB)             0x2d0\n 0x000000000000000a (STRSZ)              1022 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x19fe8\n 0x0000000000000002 (PLTRELSZ)           1368 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x1ae0\n 0x0000000000000007 (RELA)               0xe50\n 0x0000000000000008 (RELASZ)             3216 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0xe20\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0xd8e\n 0x000000006ffffff9 (RELACOUNT)          122\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "81ea3538aa424eac58f980ae1ac2017ae0821b21615dd5336267de435b37139d",
+          "tags": {
+            "NEEDED": [
+              "libpthread.so.0",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 27248,
+          "member": "Bio/Nexus/cnexus.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x2df8 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x1000\n 0x000000000000000d (FINI)               0x1414\n 0x0000000000000019 (INIT_ARRAY)         0x3de0\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x3de8\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x3c0\n 0x0000000000000006 (SYMTAB)             0x288\n 0x000000000000000a (STRSZ)              237 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x3fe8\n 0x0000000000000002 (PLTRELSZ)           192 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x608\n 0x0000000000000007 (RELA)               0x4e8\n 0x0000000000000008 (RELASZ)             288 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x4c8\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0x4ae\n 0x000000006ffffff9 (RELACOUNT)          8\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "3043aa73dad3be3feb00b0682fd75a284f1976b6d652ba75e9fbecb7898784b2",
+          "tags": {
+            "NEEDED": [
+              "libpthread.so.0",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 31192,
+          "member": "Bio/PDB/_bcif_helper.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x2de8 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x1000\n 0x000000000000000d (FINI)               0x1564\n 0x0000000000000019 (INIT_ARRAY)         0x3dd0\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x3dd8\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x3d8\n 0x0000000000000006 (SYMTAB)             0x288\n 0x000000000000000a (STRSZ)              281 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x3fe8\n 0x0000000000000002 (PLTRELSZ)           168 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x668\n 0x0000000000000007 (RELA)               0x530\n 0x0000000000000008 (RELASZ)             312 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x510\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0x4f2\n 0x000000006ffffff9 (RELACOUNT)          7\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "09a9b20cb44264948eddea8123aa139863121a63d6df3df304ff61af1acba255",
+          "tags": {
+            "NEEDED": [
+              "libpthread.so.0",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 64272,
+          "member": "Bio/PDB/ccealign.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x4df8 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x1000\n 0x000000000000000d (FINI)               0x2714\n 0x0000000000000019 (INIT_ARRAY)         0x5de0\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x5de8\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x4b0\n 0x0000000000000006 (SYMTAB)             0x288\n 0x000000000000000a (STRSZ)              410 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x5fe8\n 0x0000000000000002 (PLTRELSZ)           432 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x7d0\n 0x0000000000000007 (RELA)               0x698\n 0x0000000000000008 (RELASZ)             312 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x678\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0x64a\n 0x000000006ffffff9 (RELACOUNT)          9\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "f0d48544a3c1673e166559f39ba7f7960a593cdbcb6d9ab8e774d595154e7a35",
+          "tags": {
+            "NEEDED": [
+              "libpthread.so.0",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 205024,
+          "member": "Bio/PDB/kdtrees.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x7de0 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x1000\n 0x000000000000000d (FINI)               0x5eb8\n 0x0000000000000019 (INIT_ARRAY)         0x8dc8\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x8dd0\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x510\n 0x0000000000000006 (SYMTAB)             0x288\n 0x000000000000000a (STRSZ)              479 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x8fe8\n 0x0000000000000002 (PLTRELSZ)           456 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0xc88\n 0x0000000000000007 (RELA)               0x748\n 0x0000000000000008 (RELASZ)             1344 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x728\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0x6f0\n 0x000000006ffffff9 (RELACOUNT)          49\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "3a49075093f85c3fc9a965706449be1e453deb2a3a25f7938e3c625ea391752e",
+          "tags": {
+            "NEEDED": [
+              "libpthread.so.0",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 38952,
+          "member": "Bio/SeqIO/_twoBitIO.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x2df0 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x1000\n 0x000000000000000d (FINI)               0x1a74\n 0x0000000000000019 (INIT_ARRAY)         0x3dd8\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x3de0\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x450\n 0x0000000000000006 (SYMTAB)             0x288\n 0x000000000000000a (STRSZ)              363 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x3fe8\n 0x0000000000000002 (PLTRELSZ)           312 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x7f8\n 0x0000000000000007 (RELA)               0x618\n 0x0000000000000008 (RELASZ)             480 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x5e8\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0x5bc\n 0x000000006ffffff9 (RELACOUNT)          15\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "f50b7c7c0c6c9c201ddf88ecf35a032595591bc7121e2fb33fe341e153dd5334",
+          "tags": {
+            "NEEDED": [
+              "libpthread.so.0",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 31048,
+          "member": "Bio/motifs/_pwm.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x2de0 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x1000\n 0x000000000000000d (FINI)               0x1524\n 0x0000000000000019 (INIT_ARRAY)         0x3dc8\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x3dd0\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x3f0\n 0x0000000000000006 (SYMTAB)             0x288\n 0x000000000000000a (STRSZ)              303 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x3fe8\n 0x0000000000000002 (PLTRELSZ)           168 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x728\n 0x0000000000000007 (RELA)               0x560\n 0x0000000000000008 (RELASZ)             456 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x540\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0x520\n 0x000000006ffffff9 (RELACOUNT)          12\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "f49138ecc959e812572228fae13461d68e23f238ab2da650895d9c4797429d13",
+          "tags": {
+            "NEEDED": [
+              "libpthread.so.0",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        }
+      ],
+      "version": "1.87",
+      "wheel": {
+        "bytes": 3216226,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/reader_wheels/biopython-1.87-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+        "sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+      }
+    },
+    {
+      "filename_candidates_not_elf": [],
+      "name": "setuptools",
+      "notice_candidates": [
+        {
+          "bytes": 1023,
+          "path": "setuptools-83.0.0.dist-info/licenses/LICENSE",
+          "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741"
+        },
+        {
+          "bytes": 7634,
+          "path": "setuptools/_vendor/autocommand-2.2.2.dist-info/LICENSE",
+          "sha256": "ade78d04982d69972d444a8e14a94f87a2334dd3855cc80348ea8e240aa0df2d"
+        },
+        {
+          "bytes": 1023,
+          "path": "setuptools/_vendor/backports.tarfile-1.2.0.dist-info/LICENSE",
+          "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741"
+        },
+        {
+          "bytes": 10278,
+          "path": "setuptools/_vendor/importlib_metadata-8.7.1.dist-info/licenses/LICENSE",
+          "sha256": "458502e12d97bbf64438606a20044aa85eb05fb0a8a807bb35dbec253fd1fc04"
+        },
+        {
+          "bytes": 1023,
+          "path": "setuptools/_vendor/jaraco.text-4.0.0.dist-info/LICENSE",
+          "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741"
+        },
+        {
+          "bytes": 1076,
+          "path": "setuptools/_vendor/jaraco_context-6.1.0.dist-info/licenses/LICENSE",
+          "sha256": "9755a18519666e5f0f4cae3daad3d7012bcae48a600b31237d75e9fe134e6683"
+        },
+        {
+          "bytes": 1076,
+          "path": "setuptools/_vendor/jaraco_functools-4.4.0.dist-info/licenses/LICENSE",
+          "sha256": "5a57cb4db85e2a2dd88c290628908add57e3451449e0a9a71fdfb38776fd759d"
+        },
+        {
+          "bytes": 1053,
+          "path": "setuptools/_vendor/more_itertools-10.8.0.dist-info/licenses/LICENSE",
+          "sha256": "09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46"
+        },
+        {
+          "bytes": 197,
+          "path": "setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+        },
+        {
+          "bytes": 10174,
+          "path": "setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "bytes": 1344,
+          "path": "setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+        },
+        {
+          "bytes": 5819,
+          "path": "setuptools/_vendor/packaging/licenses/__init__.py",
+          "sha256": "4f05cb1d9097c1281d17044b3f15bad364fa99289eba74851cce9fa7ca605bbf"
+        },
+        {
+          "bytes": 51122,
+          "path": "setuptools/_vendor/packaging/licenses/_spdx.py",
+          "sha256": "596ec35e2ca0ebcba9fd8343ff0a51625af548786257815f24b41f7e08613314"
+        },
+        {
+          "bytes": 1089,
+          "path": "setuptools/_vendor/platformdirs-4.4.0.dist-info/licenses/LICENSE",
+          "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6"
+        },
+        {
+          "bytes": 1072,
+          "path": "setuptools/_vendor/tomli-2.4.0.dist-info/licenses/LICENSE",
+          "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+        },
+        {
+          "bytes": 1107,
+          "path": "setuptools/_vendor/wheel-0.46.3.dist-info/licenses/LICENSE.txt",
+          "sha256": "30c23618679108f3e8ea1d2a658c7ca417bdfc891c98ef1a89fa4ff0c9828654"
+        },
+        {
+          "bytes": 1076,
+          "path": "setuptools/_vendor/zipp-3.23.0.dist-info/licenses/LICENSE",
+          "sha256": "5a57cb4db85e2a2dd88c290628908add57e3451449e0a9a71fdfb38776fd759d"
+        },
+        {
+          "bytes": 493,
+          "path": "setuptools/config/NOTICE",
+          "sha256": "2dddf08818297a3b89d43d95ff659d8da85741108c9136dfa3a4d856c0623bd8"
+        },
+        {
+          "bytes": 18737,
+          "path": "setuptools/config/_validate_pyproject/NOTICE",
+          "sha256": "09c9bcea95ca086f8bc5bed174e40bc835b297d40fb5f86bbbb570fe0a5581a7"
+        }
+      ],
+      "objects": [],
+      "version": "83.0.0",
+      "wheel": {
+        "bytes": 1008090,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/assets/wheels/setuptools-83.0.0-py3-none-any.whl",
+        "sha256": "29b23c360f22f414dc7336bb39178cc7bcbf6021ed2733cde173f09dba19abb3"
+      }
+    },
+    {
+      "filename_candidates_not_elf": [],
+      "name": "igraph",
+      "notice_candidates": [
+        {
+          "bytes": 17987,
+          "path": "igraph-1.0.0.dist-info/licenses/LICENSE",
+          "sha256": "ab15fd526bd8dd18a9e77ebc139656bf4d33e97fc7238cd11bf60e2b9b8666c6"
+        }
+      ],
+      "objects": [
+        {
+          "bytes": 13330873,
+          "member": "igraph/_igraph.abi3.so",
+          "readelf_stdout": "\nDynamic section at offset 0xca7000 contains 32 entries:\n  Tag        Type                         Name/Value\n 0x000000000000000f (RPATH)              Library rpath: [$ORIGIN/../igraph.libs]\n 0x0000000000000001 (NEEDED)             Shared library: [libgomp-e985bcbb.so.1.0.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libxml2-39f609e7.so.2.9.7]\n 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [ld-linux-x86-64.so.2]\n 0x000000000000000c (INIT)               0x32000\n 0x000000000000000d (FINI)               0x390520\n 0x0000000000000019 (INIT_ARRAY)         0x49d420\n 0x000000000000001b (INIT_ARRAYSZ)       24 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x49d438\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x4ae028\n 0x0000000000000005 (STRTAB)             0x4bf240\n 0x0000000000000006 (SYMTAB)             0x17d0\n 0x000000000000000a (STRSZ)              63351 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x4a0fe8\n 0x0000000000000002 (PLTRELSZ)           12984 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x2dd78\n 0x0000000000000007 (RELA)               0x188b0\n 0x0000000000000008 (RELASZ)             87240 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x18620\n 0x000000006fffffff (VERNEEDNUM)         8\n 0x000000006ffffff0 (VERSYM)             0x17cf4\n 0x000000006ffffff9 (RELACOUNT)          2836\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "4cb2b4e7f88005ccd68fe0a20feb086b84335196e884c5bdd13f11d15c8b555d",
+          "tags": {
+            "NEEDED": [
+              "libgomp-e985bcbb.so.1.0.0",
+              "libpthread.so.0",
+              "libxml2-39f609e7.so.2.9.7",
+              "libstdc++.so.6",
+              "libm.so.6",
+              "libgcc_s.so.1",
+              "libc.so.6",
+              "ld-linux-x86-64.so.2"
+            ],
+            "RPATH": [
+              "$ORIGIN/../igraph.libs"
+            ],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 253289,
+          "member": "igraph.libs/libgomp-e985bcbb.so.1.0.0",
+          "readelf_stdout": "\nDynamic section at offset 0x36a30 contains 31 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libdl.so.2]\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000e (SONAME)             Library soname: [libgomp-e985bcbb.so.1.0.0]\n 0x000000000000000c (INIT)               0x8548\n 0x000000000000000d (FINI)               0x2d3a4\n 0x0000000000000019 (INIT_ARRAY)         0x2369f8\n 0x000000000000001b (INIT_ARRAYSZ)       24 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x236a10\n 0x000000000000001c (FINI_ARRAYSZ)       24 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x238028\n 0x0000000000000005 (STRTAB)             0x2395a0\n 0x0000000000000006 (SYMTAB)             0x1810\n 0x000000000000000a (STRSZ)              10179 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x236c60\n 0x0000000000000002 (PLTRELSZ)           2520 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x7b70\n 0x0000000000000007 (RELA)               0x7780\n 0x0000000000000008 (RELASZ)             1008 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffc (VERDEF)             0x73a0\n 0x000000006ffffffd (VERDEFNUM)          23\n 0x000000000000001e (FLAGS)              BIND_NOW STATIC_TLS\n 0x000000006ffffffb (FLAGS_1)            Flags: NOW\n 0x000000006ffffffe (VERNEED)            0x76b0\n 0x000000006fffffff (VERNEEDNUM)         3\n 0x000000006ffffff0 (VERSYM)             0x6fa2\n 0x000000006ffffff9 (RELACOUNT)          34\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "a43904e4fa297301d4640dc1bb3c8a3480b406f99e498eba9b1914b68aab604a",
+          "tags": {
+            "NEEDED": [
+              "libdl.so.2",
+              "libpthread.so.0",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": [
+              "libgomp-e985bcbb.so.1.0.0"
+            ]
+          }
+        },
+        {
+          "bytes": 167585,
+          "member": "igraph.libs/liblzma-51a76f52.so.5.2.4",
+          "readelf_stdout": "\nDynamic section at offset 0x25b20 contains 30 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000e (SONAME)             Library soname: [liblzma-51a76f52.so.5.2.4]\n 0x000000000000000c (INIT)               0x2be0\n 0x000000000000000d (FINI)               0x1a518\n 0x0000000000000019 (INIT_ARRAY)         0x2257d0\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x2257d8\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x227028\n 0x0000000000000005 (STRTAB)             0x2273d0\n 0x0000000000000006 (SYMTAB)             0x608\n 0x000000000000000a (STRSZ)              2767 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x225d40\n 0x0000000000000002 (PLTRELSZ)           1872 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x2490\n 0x0000000000000007 (RELA)               0x1f50\n 0x0000000000000008 (RELASZ)             1344 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffc (VERDEF)             0x1e40\n 0x000000006ffffffd (VERDEFNUM)          3\n 0x0000000000000018 (BIND_NOW)           \n 0x000000006ffffffb (FLAGS_1)            Flags: NOW\n 0x000000006ffffffe (VERNEED)            0x1ea0\n 0x000000006fffffff (VERNEEDNUM)         2\n 0x000000006ffffff0 (VERSYM)             0x1d36\n 0x000000006ffffff9 (RELACOUNT)          52\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "dc40ee343b9cfea15aa967eb27c4e36c91f694f9ed547845772232cf12f256e9",
+          "tags": {
+            "NEEDED": [
+              "libpthread.so.0",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": [
+              "liblzma-51a76f52.so.5.2.4"
+            ]
+          }
+        },
+        {
+          "bytes": 1597833,
+          "member": "igraph.libs/libxml2-39f609e7.so.2.9.7",
+          "readelf_stdout": "\nDynamic section at offset 0x1644a8 contains 33 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libdl.so.2]\n 0x0000000000000001 (NEEDED)             Shared library: [libz.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [liblzma-51a76f52.so.5.2.4]\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000e (SONAME)             Library soname: [libxml2-39f609e7.so.2.9.7]\n 0x000000000000000c (INIT)               0x2dae0\n 0x000000000000000d (FINI)               0x1140f0\n 0x0000000000000019 (INIT_ARRAY)         0x35cad0\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x35cad8\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x368028\n 0x0000000000000005 (STRTAB)             0x375000\n 0x0000000000000006 (SYMTAB)             0x36c0\n 0x000000000000000a (STRSZ)              37253 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x3646f8\n 0x0000000000000002 (PLTRELSZ)           4896 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x2c7c0\n 0x0000000000000007 (RELA)               0x19308\n 0x0000000000000008 (RELASZ)             79032 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffc (VERDEF)             0x18c00\n 0x000000006ffffffd (VERDEFNUM)          42\n 0x0000000000000018 (BIND_NOW)           \n 0x000000006ffffffb (FLAGS_1)            Flags: NOW\n 0x000000006ffffffe (VERNEED)            0x191d8\n 0x000000006fffffff (VERNEEDNUM)         5\n 0x000000006ffffff0 (VERSYM)             0x17cea\n 0x000000006ffffff9 (RELACOUNT)          3206\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "41f94ee221730289d7b67f385478d5b1a31491ce50f3d3db171aff8ef36a8c3d",
+          "tags": {
+            "NEEDED": [
+              "libdl.so.2",
+              "libz.so.1",
+              "liblzma-51a76f52.so.5.2.4",
+              "libm.so.6",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": [
+              "libxml2-39f609e7.so.2.9.7"
+            ]
+          }
+        }
+      ],
+      "version": "1.0.0",
+      "wheel": {
+        "bytes": 5683134,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/assets/wheels/igraph-1.0.0-cp39-abi3-manylinux_2_28_x86_64.whl",
+        "sha256": "2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522"
+      }
+    },
+    {
+      "filename_candidates_not_elf": [],
+      "name": "DendroPy",
+      "notice_candidates": [
+        {
+          "bytes": 262,
+          "path": "dendropy-5.1.0.dist-info/AUTHORS.rst",
+          "sha256": "b98c699c17b6468c503fe74c7b321016047b5ee835ec21a9c783e8fafb905a83"
+        },
+        {
+          "bytes": 1524,
+          "path": "dendropy-5.1.0.dist-info/LICENSE.rst",
+          "sha256": "9f904247890a2d1625dda1030335827ad100f912d6785273103632b557108885"
+        },
+        {
+          "bytes": 2699,
+          "path": "dendropy-5.1.0.dist-info/NOTICES.rst",
+          "sha256": "c800e6a96271c3fb86b66872bccf4a7afe9d9f04d3004a5267063000db1b10c9"
+        }
+      ],
+      "objects": [],
+      "version": "5.1.0",
+      "wheel": {
+        "bytes": 505450,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/assets/wheels/dendropy-5.1.0-py3-none-any.whl",
+        "sha256": "4861d27875cb4bfa0e5a18f64f6b14191d29661a2c92e9a70d6510dd27565dc2"
+      }
+    },
+    {
+      "filename_candidates_not_elf": [],
+      "name": "leidenalg",
+      "notice_candidates": [
+        {
+          "bytes": 35141,
+          "path": "leidenalg-0.11.0.dist-info/licenses/LICENSE",
+          "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+        }
+      ],
+      "objects": [
+        {
+          "bytes": 637129,
+          "member": "leidenalg/_c_leiden.abi3.so",
+          "readelf_stdout": "\nDynamic section at offset 0x9a000 contains 31 entries:\n  Tag        Type                         Name/Value\n 0x000000000000000f (RPATH)              Library rpath: [$ORIGIN/../leidenalg.libs]\n 0x0000000000000001 (NEEDED)             Shared library: [liblibleidenalg-32f15777.so.0.11.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libigraph-e2cb8a7d.so.4.0.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x5000\n 0x000000000000000d (FINI)               0x9cb4\n 0x0000000000000019 (INIT_ARRAY)         0xdce8\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0xdcf0\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0xf028\n 0x0000000000000005 (STRTAB)             0x11230\n 0x0000000000000006 (SYMTAB)             0x4d8\n 0x000000000000000a (STRSZ)              5780 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0xdfe8\n 0x0000000000000002 (PLTRELSZ)           2160 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x46a0\n 0x0000000000000007 (RELA)               0x2c60\n 0x0000000000000008 (RELASZ)             6720 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x2bc0\n 0x000000006fffffff (VERNEEDNUM)         3\n 0x000000006ffffff0 (VERSYM)             0x2a74\n 0x000000006ffffff9 (RELACOUNT)          207\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "cd22f76ac006ec5273b8177f0f1326019c0e750450114f727f552bce9e44bc7d",
+          "tags": {
+            "NEEDED": [
+              "liblibleidenalg-32f15777.so.0.11.1",
+              "libigraph-e2cb8a7d.so.4.0.0",
+              "libstdc++.so.6",
+              "libm.so.6",
+              "libgcc_s.so.1",
+              "libpthread.so.0",
+              "libc.so.6"
+            ],
+            "RPATH": [
+              "$ORIGIN/../leidenalg.libs"
+            ],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 6389929,
+          "member": "leidenalg.libs/libigraph-e2cb8a7d.so.4.0.0",
+          "readelf_stdout": "\nDynamic section at offset 0x53d700 contains 29 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [ld-linux-x86-64.so.2]\n 0x000000000000000e (SONAME)             Library soname: [libigraph-e2cb8a7d.so.4.0.0]\n 0x000000000000000c (INIT)               0x60000\n 0x000000000000000d (FINI)               0x42d0b0\n 0x0000000000000019 (INIT_ARRAY)         0x53b050\n 0x000000000000001b (INIT_ARRAYSZ)       32 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x53b070\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x547028\n 0x0000000000000005 (STRTAB)             0x54c2f0\n 0x0000000000000006 (SYMTAB)             0x5560\n 0x000000000000000a (STRSZ)              216503 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x53efe8\n 0x0000000000000002 (PLTRELSZ)           31080 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x58278\n 0x0000000000000007 (RELA)               0x4dad8\n 0x0000000000000008 (RELASZ)             42912 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x4d8f8\n 0x000000006fffffff (VERNEEDNUM)         5\n 0x000000006ffffff0 (VERSYM)             0x4c11c\n 0x000000006ffffff9 (RELACOUNT)          1054\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "970f6550802406922c355702fc7752e0a35a171dbc869ce946f9c9f13f8d1c1c",
+          "tags": {
+            "NEEDED": [
+              "libstdc++.so.6",
+              "libm.so.6",
+              "libgcc_s.so.1",
+              "libc.so.6",
+              "ld-linux-x86-64.so.2"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": [
+              "libigraph-e2cb8a7d.so.4.0.0"
+            ]
+          }
+        },
+        {
+          "bytes": 605881,
+          "member": "leidenalg.libs/liblibleidenalg-32f15777.so.0.11.1",
+          "readelf_stdout": "\nDynamic section at offset 0x54d38 contains 29 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libigraph-e2cb8a7d.so.4.0.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000e (SONAME)             Library soname: [liblibleidenalg-32f15777.so.0.11.1]\n 0x000000000000000c (INIT)               0x21000\n 0x000000000000000d (FINI)               0x4770c\n 0x0000000000000019 (INIT_ARRAY)         0x54978\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x54980\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x57028\n 0x0000000000000005 (STRTAB)             0x6a000\n 0x0000000000000006 (SYMTAB)             0x28d0\n 0x000000000000000a (STRSZ)              65207 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x54fe8\n 0x0000000000000002 (PLTRELSZ)           22560 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x1b058\n 0x0000000000000007 (RELA)               0x1a458\n 0x0000000000000008 (RELASZ)             3072 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x1a3b8\n 0x000000006fffffff (VERNEEDNUM)         4\n 0x000000006ffffff0 (VERSYM)             0x19a20\n 0x000000006ffffff9 (RELACOUNT)          8\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "137243f81f8b1ccd397905d9665f1886ceb59d3bc88427eb2dd6201b476116dc",
+          "tags": {
+            "NEEDED": [
+              "libigraph-e2cb8a7d.so.4.0.0",
+              "libstdc++.so.6",
+              "libm.so.6",
+              "libgcc_s.so.1",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": [
+              "liblibleidenalg-32f15777.so.0.11.1"
+            ]
+          }
+        }
+      ],
+      "version": "0.11.0",
+      "wheel": {
+        "bytes": 2738084,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/assets/wheels/leidenalg-0.11.0-cp38-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+        "sha256": "571a0934f831a69442d82889d319bdba93de924bd9e09b720cd8cbe6fdc08c17"
+      }
+    },
+    {
+      "filename_candidates_not_elf": [],
+      "name": "pip",
+      "notice_candidates": [
+        {
+          "bytes": 12139,
+          "path": "pip-26.2.1.dist-info/licenses/AUTHORS.txt",
+          "sha256": "4eb1fb1705e2def898e81bcba19c3aac80620d27ba3569d6a6df7b4629d1b5c2"
+        },
+        {
+          "bytes": 1093,
+          "path": "pip-26.2.1.dist-info/licenses/LICENSE.txt",
+          "sha256": "634300a669d49aeae65b12c6c48c924c51a4cdf3d1ff086dc3456dc8bcaa2104"
+        },
+        {
+          "bytes": 558,
+          "path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/cachecontrol/LICENSE.txt",
+          "sha256": "86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b"
+        },
+        {
+          "bytes": 989,
+          "path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/certifi/LICENSE",
+          "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7"
+        },
+        {
+          "bytes": 14531,
+          "path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/distlib/LICENSE.txt",
+          "sha256": "808e10c8a6ab8deb149ff9b3fb19f447a808094606d712a9ca57fead3552599d"
+        },
+        {
+          "bytes": 11325,
+          "path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/distro/LICENSE",
+          "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14"
+        },
+        {
+          "bytes": 1541,
+          "path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/idna/LICENSE.md",
+          "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04"
+        },
+        {
+          "bytes": 614,
+          "path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/msgpack/COPYING",
+          "sha256": "492dedba85da5872f78e6091bcd1fea474d660d35acb4dee964b8aab3f007427"
+        },
+        {
+          "bytes": 197,
+          "path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/packaging/LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+        },
+        {
+          "bytes": 10174,
+          "path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/packaging/LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "bytes": 1344,
+          "path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/packaging/LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+        },
+        {
+          "bytes": 1023,
+          "path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/pkg_resources/LICENSE",
+          "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741"
+        },
+        {
+          "bytes": 1089,
+          "path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/platformdirs/LICENSE",
+          "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6"
+        },
+        {
+          "bytes": 1331,
+          "path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/pygments/LICENSE",
+          "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17"
+        },
+        {
+          "bytes": 1081,
+          "path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/pyproject_hooks/LICENSE",
+          "sha256": "1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154"
+        },
+        {
+          "bytes": 10142,
+          "path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/requests/LICENSE",
+          "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b"
+        },
+        {
+          "bytes": 751,
+          "path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/resolvelib/LICENSE",
+          "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d"
+        },
+        {
+          "bytes": 1056,
+          "path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/rich/LICENSE",
+          "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15"
+        },
+        {
+          "bytes": 1072,
+          "path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/tomli/LICENSE",
+          "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+        },
+        {
+          "bytes": 1072,
+          "path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/tomli_w/LICENSE",
+          "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+        },
+        {
+          "bytes": 1086,
+          "path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/truststore/LICENSE",
+          "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca"
+        },
+        {
+          "bytes": 1093,
+          "path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/urllib3/LICENSE.txt",
+          "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686"
+        },
+        {
+          "bytes": 558,
+          "path": "pip/_vendor/cachecontrol/LICENSE.txt",
+          "sha256": "86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b"
+        },
+        {
+          "bytes": 989,
+          "path": "pip/_vendor/certifi/LICENSE",
+          "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7"
+        },
+        {
+          "bytes": 14531,
+          "path": "pip/_vendor/distlib/LICENSE.txt",
+          "sha256": "808e10c8a6ab8deb149ff9b3fb19f447a808094606d712a9ca57fead3552599d"
+        },
+        {
+          "bytes": 11325,
+          "path": "pip/_vendor/distro/LICENSE",
+          "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14"
+        },
+        {
+          "bytes": 1541,
+          "path": "pip/_vendor/idna/LICENSE.md",
+          "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04"
+        },
+        {
+          "bytes": 614,
+          "path": "pip/_vendor/msgpack/COPYING",
+          "sha256": "492dedba85da5872f78e6091bcd1fea474d660d35acb4dee964b8aab3f007427"
+        },
+        {
+          "bytes": 197,
+          "path": "pip/_vendor/packaging/LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+        },
+        {
+          "bytes": 10174,
+          "path": "pip/_vendor/packaging/LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "bytes": 1344,
+          "path": "pip/_vendor/packaging/LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+        },
+        {
+          "bytes": 7293,
+          "path": "pip/_vendor/packaging/licenses/__init__.py",
+          "sha256": "fc9c745d1883ff9f296a5b169f22eb2ee879f59a4608f20f5cb29d668f4e26f4"
+        },
+        {
+          "bytes": 51122,
+          "path": "pip/_vendor/packaging/licenses/_spdx.py",
+          "sha256": "596ec35e2ca0ebcba9fd8343ff0a51625af548786257815f24b41f7e08613314"
+        },
+        {
+          "bytes": 1023,
+          "path": "pip/_vendor/pkg_resources/LICENSE",
+          "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741"
+        },
+        {
+          "bytes": 1089,
+          "path": "pip/_vendor/platformdirs/LICENSE",
+          "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6"
+        },
+        {
+          "bytes": 1331,
+          "path": "pip/_vendor/pygments/LICENSE",
+          "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17"
+        },
+        {
+          "bytes": 1081,
+          "path": "pip/_vendor/pyproject_hooks/LICENSE",
+          "sha256": "1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154"
+        },
+        {
+          "bytes": 10142,
+          "path": "pip/_vendor/requests/LICENSE",
+          "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b"
+        },
+        {
+          "bytes": 751,
+          "path": "pip/_vendor/resolvelib/LICENSE",
+          "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d"
+        },
+        {
+          "bytes": 1056,
+          "path": "pip/_vendor/rich/LICENSE",
+          "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15"
+        },
+        {
+          "bytes": 1072,
+          "path": "pip/_vendor/tomli/LICENSE",
+          "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+        },
+        {
+          "bytes": 1072,
+          "path": "pip/_vendor/tomli_w/LICENSE",
+          "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+        },
+        {
+          "bytes": 1086,
+          "path": "pip/_vendor/truststore/LICENSE",
+          "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca"
+        },
+        {
+          "bytes": 1093,
+          "path": "pip/_vendor/urllib3/LICENSE.txt",
+          "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686"
+        }
+      ],
+      "objects": [],
+      "version": "26.2.1",
+      "wheel": {
+        "bytes": 1816632,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/assets/wheels/pip-26.2.1-py3-none-any.whl",
+        "sha256": "71138adf1f4ca900cdb7d289c21b7494329f2332b6d85f0e1c42108c0384ed3e"
+      }
+    },
+    {
+      "filename_candidates_not_elf": [],
+      "name": "texttable",
+      "notice_candidates": [
+        {
+          "bytes": 1083,
+          "path": "texttable-1.7.0.dist-info/LICENSE",
+          "sha256": "4ba7bdab54504a3bc44eb33ecca873a26a63ab902822101a87bb46235da63594"
+        }
+      ],
+      "objects": [],
+      "version": "1.7.0",
+      "wheel": {
+        "bytes": 10768,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/assets/wheels/texttable-1.7.0-py2.py3-none-any.whl",
+        "sha256": "72227d592c82b3d7f672731ae73e4d1f88cd8e2ef5b075a7a7f01a23a3743917"
+      }
+    },
+    {
+      "filename_candidates_not_elf": [],
+      "name": "llvmlite",
+      "notice_candidates": [
+        {
+          "bytes": 1285,
+          "path": "llvmlite-0.49.0.dist-info/licenses/LICENSE",
+          "sha256": "5d0772f4dc4cb16e6bee2419bfa57c0a129808400e341b87fd9f87cbe6a5963d"
+        },
+        {
+          "bytes": 12561,
+          "path": "llvmlite-0.49.0.dist-info/licenses/LICENSE.thirdparty",
+          "sha256": "dc527293cfc2e4b4d59042e0b204667162845d8548651932f5a9d2f4adfc928b"
+        }
+      ],
+      "objects": [
+        {
+          "bytes": 178881880,
+          "member": "llvmlite/binding/libllvmlite.so",
+          "readelf_stdout": "\nDynamic section at offset 0x98444e0 contains 34 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [librt.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libz.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libdl.so.2]\n 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [ld-linux-x86-64.so.2]\n 0x000000000000000e (SONAME)             Library soname: [libllvmlite.so]\n 0x0000000000000010 (SYMBOLIC)           0x0\n 0x000000000000000c (INIT)               0x366000\n 0x000000000000000d (FINI)               0x539b6b0\n 0x0000000000000019 (INIT_ARRAY)         0x96828d8\n 0x000000000000001b (INIT_ARRAYSZ)       5568 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x9683e98\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x298\n 0x0000000000000005 (STRTAB)             0x5688\n 0x0000000000000006 (SYMTAB)             0xd68\n 0x000000000000000a (STRSZ)              19916 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x9847000\n 0x0000000000000002 (PLTRELSZ)           8472 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x363758\n 0x0000000000000007 (RELA)               0xacd0\n 0x0000000000000008 (RELASZ)             3508872 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0xaa70\n 0x000000006fffffff (VERNEEDNUM)         8\n 0x000000006ffffff0 (VERSYM)             0xa454\n 0x000000006ffffff9 (RELACOUNT)          145125\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "90829145327c8c37ee7a3494e3b20161343efc3357537d558cb006014a1b0f12",
+          "tags": {
+            "NEEDED": [
+              "librt.so.1",
+              "libz.so.1",
+              "libpthread.so.0",
+              "libdl.so.2",
+              "libstdc++.so.6",
+              "libm.so.6",
+              "libgcc_s.so.1",
+              "libc.so.6",
+              "ld-linux-x86-64.so.2"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": [
+              "libllvmlite.so"
+            ]
+          }
+        }
+      ],
+      "version": "0.49.0",
+      "wheel": {
+        "bytes": 59890659,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/assets/wheels/llvmlite-0.49.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+        "sha256": "854941c2267fd4fc5b2ce02b8af8ecdffa79fb7784591d3a89370322039ea09f"
+      }
+    },
+    {
+      "filename_candidates_not_elf": [],
+      "name": "python-igraph",
+      "notice_candidates": [
+        {
+          "bytes": 17987,
+          "path": "python_igraph-1.0.0.dist-info/licenses/LICENSE",
+          "sha256": "ab15fd526bd8dd18a9e77ebc139656bf4d33e97fc7238cd11bf60e2b9b8666c6"
+        }
+      ],
+      "objects": [],
+      "version": "1.0.0",
+      "wheel": {
+        "bytes": 9157,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/assets/wheels/python_igraph-1.0.0-py3-none-any.whl",
+        "sha256": "b0bb8d91cce2a1e0550fe45f9ec925bcd04152dfb5be3fa822b9f5f36eb3f380"
+      }
+    },
+    {
+      "filename_candidates_not_elf": [],
+      "name": "orthohmm",
+      "notice_candidates": [
+        {
+          "bytes": 1078,
+          "path": "orthohmm-0.5.0.dist-info/licenses/LICENSE.md",
+          "sha256": "4b9b0c3ffc73fce4c47734d7ef12bd70b9d2cdc4a3bf76ac0f3a35edbe2c3d9e"
+        }
+      ],
+      "objects": [
+        {
+          "bytes": 21008,
+          "member": "orthohmm/search/csrc/hmm_viterbi.so",
+          "readelf_stdout": "\nDynamic section at offset 0x3df8 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libgomp.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x1000\n 0x000000000000000d (FINI)               0x2344\n 0x0000000000000019 (INIT_ARRAY)         0x4de8\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x4df0\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x2f0\n 0x0000000000000005 (STRTAB)             0x558\n 0x0000000000000006 (SYMTAB)             0x330\n 0x000000000000000a (STRSZ)              515 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x4fe8\n 0x0000000000000002 (PLTRELSZ)           312 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x8b8\n 0x0000000000000007 (RELA)               0x810\n 0x0000000000000008 (RELASZ)             168 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x790\n 0x000000006fffffff (VERNEEDNUM)         2\n 0x000000006ffffff0 (VERSYM)             0x75c\n 0x000000006ffffff9 (RELACOUNT)          3\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "eeb4985e6f35689497a9c6187db56f8094c2cb9d92af18b77c027af0dfbea1d2",
+          "tags": {
+            "NEEDED": [
+              "libgomp.so.1",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 20632,
+          "member": "orthohmm/search/csrc/kmer_prefilter.so",
+          "readelf_stdout": "\nDynamic section at offset 0x3df8 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libgomp.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x1000\n 0x000000000000000d (FINI)               0x220c\n 0x0000000000000019 (INIT_ARRAY)         0x4de8\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x4df0\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x2f0\n 0x0000000000000005 (STRTAB)             0x4b0\n 0x0000000000000006 (SYMTAB)             0x318\n 0x000000000000000a (STRSZ)              371 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x4fe8\n 0x0000000000000002 (PLTRELSZ)           240 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x770\n 0x0000000000000007 (RELA)               0x6c8\n 0x0000000000000008 (RELASZ)             168 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x648\n 0x000000006fffffff (VERNEEDNUM)         2\n 0x000000006ffffff0 (VERSYM)             0x624\n 0x000000006ffffff9 (RELACOUNT)          3\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "4bef1865bccee6c4a5df6237880cf22b272cd567a1dc2d918815a28c86c7ce5c",
+          "tags": {
+            "NEEDED": [
+              "libgomp.so.1",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 20784,
+          "member": "orthohmm/search/csrc/pair_align.so",
+          "readelf_stdout": "\nDynamic section at offset 0x3df8 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libgomp.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x1000\n 0x000000000000000d (FINI)               0x2538\n 0x0000000000000019 (INIT_ARRAY)         0x4de8\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x4df0\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x2f0\n 0x0000000000000005 (STRTAB)             0x4f8\n 0x0000000000000006 (SYMTAB)             0x318\n 0x000000000000000a (STRSZ)              437 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x4fe8\n 0x0000000000000002 (PLTRELSZ)           312 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x800\n 0x0000000000000007 (RELA)               0x758\n 0x0000000000000008 (RELASZ)             168 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x6d8\n 0x000000006fffffff (VERNEEDNUM)         2\n 0x000000006ffffff0 (VERSYM)             0x6ae\n 0x000000006ffffff9 (RELACOUNT)          3\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "1a1036e00730d9548d49819cdd852dc6aca74ace53c27ca2c903720904bc1d02",
+          "tags": {
+            "NEEDED": [
+              "libgomp.so.1",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        }
+      ],
+      "version": "0.5.0",
+      "wheel": {
+        "bytes": 144444,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/assets/wheels/orthohmm-0.5.0-cp310-cp310-linux_x86_64.whl",
+        "sha256": "cfdfde5ed1be29e4080dd3571f5c0fc5fc5f45b57ebe5ee9b3c7559096c3b93d"
+      }
+    },
+    {
+      "filename_candidates_not_elf": [],
+      "name": "numba",
+      "notice_candidates": [
+        {
+          "bytes": 1286,
+          "path": "numba-0.67.0.dist-info/licenses/LICENSE",
+          "sha256": "3a70e0a21cad03147246f6363d07bf76fae216c72779707f4ae5db06bcacf067"
+        },
+        {
+          "bytes": 26322,
+          "path": "numba-0.67.0.dist-info/licenses/LICENSES.third-party",
+          "sha256": "fdc60ca21d827beb3835ffc6b7a99bda14a5cfcb379d0c82c05e3c1ff4a482f2"
+        }
+      ],
+      "objects": [
+        {
+          "bytes": 45800,
+          "member": "numba/_devicearray.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x2dd0 contains 28 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x1000\n 0x000000000000000d (FINI)               0x12d4\n 0x0000000000000019 (INIT_ARRAY)         0x3db8\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x3dc0\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x430\n 0x0000000000000006 (SYMTAB)             0x298\n 0x000000000000000a (STRSZ)              341 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x4000\n 0x0000000000000002 (PLTRELSZ)           216 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x748\n 0x0000000000000007 (RELA)               0x5c8\n 0x0000000000000008 (RELASZ)             384 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x5a8\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0x586\n 0x000000006ffffff9 (RELACOUNT)          9\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "1396a7b608be2e2ed98997bcd05bcd7f0b3e6a7d55fe7ccde7b302eb609a28a2",
+          "tags": {
+            "NEEDED": [
+              "libstdc++.so.6",
+              "libm.so.6",
+              "libgcc_s.so.1",
+              "libpthread.so.0",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 394472,
+          "member": "numba/_dispatcher.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0xbd10 contains 28 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x4000\n 0x000000000000000d (FINI)               0x9e84\n 0x0000000000000019 (INIT_ARRAY)         0xccb8\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0xccc0\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x1250\n 0x0000000000000006 (SYMTAB)             0x410\n 0x000000000000000a (STRSZ)              3438 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0xd000\n 0x0000000000000002 (PLTRELSZ)           2256 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x2800\n 0x0000000000000007 (RELA)               0x2170\n 0x0000000000000008 (RELASZ)             1680 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x20f0\n 0x000000006fffffff (VERNEEDNUM)         3\n 0x000000006ffffff0 (VERSYM)             0x1fbe\n 0x000000006ffffff9 (RELACOUNT)          31\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "b453fc3e472e098a6080c92195deb708906db225c071f412bdf715654a29999b",
+          "tags": {
+            "NEEDED": [
+              "libstdc++.so.6",
+              "libm.so.6",
+              "libgcc_s.so.1",
+              "libpthread.so.0",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 49336,
+          "member": "numba/_dynfunc.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x2e00 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x1000\n 0x000000000000000d (FINI)               0x1b3c\n 0x0000000000000019 (INIT_ARRAY)         0x3de8\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x3df0\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x650\n 0x0000000000000006 (SYMTAB)             0x290\n 0x000000000000000a (STRSZ)              693 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x4000\n 0x0000000000000002 (PLTRELSZ)           744 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0xc88\n 0x0000000000000007 (RELA)               0x988\n 0x0000000000000008 (RELASZ)             768 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x958\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0x906\n 0x000000006ffffff9 (RELACOUNT)          25\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "429d1e300af4cec2238252f0e5e1fe44f955e1ef26ac3d6d0ef96479f40ce6ae",
+          "tags": {
+            "NEEDED": [
+              "libpthread.so.0",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 830320,
+          "member": "numba/_helperlib.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x42cd8 contains 27 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [ld-linux-x86-64.so.2]\n 0x000000000000000c (INIT)               0x4000\n 0x000000000000000d (FINI)               0x1b4bc\n 0x0000000000000019 (INIT_ARRAY)         0x43cc0\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x43cc8\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x298\n 0x0000000000000005 (STRTAB)             0x1698\n 0x0000000000000006 (SYMTAB)             0x408\n 0x000000000000000a (STRSZ)              2704 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x44000\n 0x0000000000000002 (PLTRELSZ)           3840 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x28c8\n 0x0000000000000007 (RELA)               0x2358\n 0x0000000000000008 (RELASZ)             1392 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x22b8\n 0x000000006fffffff (VERNEEDNUM)         4\n 0x000000006ffffff0 (VERSYM)             0x2128\n 0x000000006ffffff9 (RELACOUNT)          20\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "ae1c3ea7de901afd52cfaaef3c963fff9f3995c210bf0583ae9be48c1a25c811",
+          "tags": {
+            "NEEDED": [
+              "libm.so.6",
+              "libpthread.so.0",
+              "libc.so.6",
+              "ld-linux-x86-64.so.2"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 43488,
+          "member": "numba/mviewbuf.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x2df8 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x1000\n 0x000000000000000d (FINI)               0x19fc\n 0x0000000000000019 (INIT_ARRAY)         0x3de0\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x3de8\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x578\n 0x0000000000000006 (SYMTAB)             0x290\n 0x000000000000000a (STRSZ)              529 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x4000\n 0x0000000000000002 (PLTRELSZ)           528 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0xa10\n 0x0000000000000007 (RELA)               0x7e8\n 0x0000000000000008 (RELASZ)             552 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x7c8\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0x78a\n 0x000000006ffffff9 (RELACOUNT)          16\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "394f402e3a4307e499f50ed4dc7f0cc10f714f3451d5c61215a99f9b7a9652a8",
+          "tags": {
+            "NEEDED": [
+              "libpthread.so.0",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 187856,
+          "member": "numba/core/runtime/_nrt_python.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x6d50 contains 28 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x2000\n 0x000000000000000d (FINI)               0x4868\n 0x0000000000000019 (INIT_ARRAY)         0x7cf0\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x7cf8\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x858\n 0x0000000000000006 (SYMTAB)             0x2a0\n 0x000000000000000a (STRSZ)              1065 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x8000\n 0x0000000000000002 (PLTRELSZ)           864 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x1548\n 0x0000000000000007 (RELA)               0xd20\n 0x0000000000000008 (RELASZ)             2088 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0xd00\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0xc82\n 0x000000006ffffff9 (RELACOUNT)          64\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "1d0ad1befee32ba6804ef00c6ae93d65f1a6cf1b0e98fd28d234dfa7941ef28c",
+          "tags": {
+            "NEEDED": [
+              "libstdc++.so.6",
+              "libm.so.6",
+              "libgcc_s.so.1",
+              "libpthread.so.0",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 139272,
+          "member": "numba/core/typeconv/_typeconv.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x4db0 contains 28 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x2000\n 0x000000000000000d (FINI)               0x32d4\n 0x0000000000000019 (INIT_ARRAY)         0x5d58\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x5d60\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x920\n 0x0000000000000006 (SYMTAB)             0x350\n 0x000000000000000a (STRSZ)              1670 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x6000\n 0x0000000000000002 (PLTRELSZ)           840 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x13d8\n 0x0000000000000007 (RELA)               0x10a8\n 0x0000000000000008 (RELASZ)             816 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x1028\n 0x000000006fffffff (VERNEEDNUM)         3\n 0x000000006ffffff0 (VERSYM)             0xfa6\n 0x000000006ffffff9 (RELACOUNT)          16\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "07544a7f3cc94ee887a9a048b18dffaf581916b19b0c9cdf137ba2fc6e11df12",
+          "tags": {
+            "NEEDED": [
+              "libstdc++.so.6",
+              "libm.so.6",
+              "libgcc_s.so.1",
+              "libpthread.so.0",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 25848,
+          "member": "numba/cuda/cudadrv/_extras.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x2e10 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x1000\n 0x000000000000000d (FINI)               0x1214\n 0x0000000000000019 (INIT_ARRAY)         0x3df8\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x3e00\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x3b0\n 0x0000000000000006 (SYMTAB)             0x290\n 0x000000000000000a (STRSZ)              229 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x4000\n 0x0000000000000002 (PLTRELSZ)           144 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x5a8\n 0x0000000000000007 (RELA)               0x4d0\n 0x0000000000000008 (RELASZ)             216 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x4b0\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0x496\n 0x000000006ffffff9 (RELACOUNT)          5\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "b5bcd01683c903763a56a4266ee6e4713bc5c8c4b6776777a20f4175f8d99973",
+          "tags": {
+            "NEEDED": [
+              "libpthread.so.0",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 31256,
+          "member": "numba/experimental/jitclass/_box.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x2e10 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x1000\n 0x000000000000000d (FINI)               0x1438\n 0x0000000000000019 (INIT_ARRAY)         0x3df8\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x3e00\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x488\n 0x0000000000000006 (SYMTAB)             0x290\n 0x000000000000000a (STRSZ)              406 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x4000\n 0x0000000000000002 (PLTRELSZ)           336 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x830\n 0x0000000000000007 (RELA)               0x668\n 0x0000000000000008 (RELASZ)             456 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x648\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0x61e\n 0x000000006ffffff9 (RELACOUNT)          14\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "98412f7d12de4b4ad4e0fbceffc8471c7787127ce53e3601ee35ade898f9ed2d",
+          "tags": {
+            "NEEDED": [
+              "libpthread.so.0",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 91600,
+          "member": "numba/np/ufunc/_internal.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x5d78 contains 26 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x2000\n 0x000000000000000d (FINI)               0x3eec\n 0x0000000000000019 (INIT_ARRAY)         0x6d60\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x6d68\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x840\n 0x0000000000000006 (SYMTAB)             0x2a0\n 0x000000000000000a (STRSZ)              1054 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x7000\n 0x0000000000000002 (PLTRELSZ)           864 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x1500\n 0x0000000000000007 (RELA)               0xd08\n 0x0000000000000008 (RELASZ)             2040 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0xcd8\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0xc5e\n 0x000000006ffffff9 (RELACOUNT)          63\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "f0b98f485566babf578dc16a3813ac50236c23615fa822e70855d0e229afa550",
+          "tags": {
+            "NEEDED": [
+              "libm.so.6",
+              "libpthread.so.0",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 26408,
+          "member": "numba/np/ufunc/_num_threads.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x2df0 contains 26 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [ld-linux-x86-64.so.2]\n 0x000000000000000c (INIT)               0x1000\n 0x000000000000000d (FINI)               0x1244\n 0x0000000000000019 (INIT_ARRAY)         0x3dd8\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x3de0\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x298\n 0x0000000000000005 (STRTAB)             0x400\n 0x0000000000000006 (SYMTAB)             0x2c8\n 0x000000000000000a (STRSZ)              272 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x4000\n 0x0000000000000002 (PLTRELSZ)           168 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x660\n 0x0000000000000007 (RELA)               0x570\n 0x0000000000000008 (RELASZ)             240 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x530\n 0x000000006fffffff (VERNEEDNUM)         2\n 0x000000006ffffff0 (VERSYM)             0x510\n 0x000000006ffffff9 (RELACOUNT)          5\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "c68850e1cf21bd090723f790f66d72d1098c8e1d0722fb441fd5364ebec30b58",
+          "tags": {
+            "NEEDED": [
+              "libpthread.so.0",
+              "libc.so.6",
+              "ld-linux-x86-64.so.2"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 600113,
+          "member": "numba/np/ufunc/omppool.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x90910 contains 31 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libdl.so.2]\n 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libgomp.so.1.0.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [ld-linux-x86-64.so.2]\n 0x000000000000000c (INIT)               0x2000\n 0x000000000000000d (FINI)               0x68c8\n 0x0000000000000019 (INIT_ARRAY)         0x9d38\n 0x000000000000001b (INIT_ARRAYSZ)       16 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x9d48\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0xb028\n 0x0000000000000005 (STRTAB)             0xd000\n 0x0000000000000006 (SYMTAB)             0x378\n 0x000000000000000a (STRSZ)              2094 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0xa000\n 0x0000000000000002 (PLTRELSZ)           1248 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x1588\n 0x0000000000000007 (RELA)               0x1390\n 0x0000000000000008 (RELASZ)             504 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x1280\n 0x000000006fffffff (VERNEEDNUM)         7\n 0x000000006ffffff0 (VERSYM)             0x11f0\n 0x000000006ffffff9 (RELACOUNT)          6\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "b643b2a9ab94f74f2a4b91115de40367f185c76812549424aadbf1f1ad0c7a00",
+          "tags": {
+            "NEEDED": [
+              "libdl.so.2",
+              "libstdc++.so.6",
+              "libm.so.6",
+              "libgomp.so.1.0.0",
+              "libgcc_s.so.1",
+              "libpthread.so.0",
+              "libc.so.6",
+              "ld-linux-x86-64.so.2"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 1054537,
+          "member": "numba/np/ufunc/tbbpool.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0xfd9e0 contains 30 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libtbb.so.12]\n 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [ld-linux-x86-64.so.2]\n 0x000000000000000c (INIT)               0x4000\n 0x000000000000000d (FINI)               0xa28c\n 0x0000000000000019 (INIT_ARRAY)         0xe9e8\n 0x000000000000001b (INIT_ARRAYSZ)       24 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0xea00\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x10028\n 0x0000000000000005 (STRTAB)             0x14000\n 0x0000000000000006 (SYMTAB)             0x530\n 0x000000000000000a (STRSZ)              5954 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0xf000\n 0x0000000000000002 (PLTRELSZ)           1776 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x35e0\n 0x0000000000000007 (RELA)               0x2ba8\n 0x0000000000000008 (RELASZ)             2616 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x2ad8\n 0x000000006fffffff (VERNEEDNUM)         5\n 0x000000006ffffff0 (VERSYM)             0x29b4\n 0x000000006ffffff9 (RELACOUNT)          30\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "80b6a683b6b13be80af10e81b38dd9d31422667e2a22308056903440f8da6adc",
+          "tags": {
+            "NEEDED": [
+              "libtbb.so.12",
+              "libstdc++.so.6",
+              "libm.so.6",
+              "libgcc_s.so.1",
+              "libpthread.so.0",
+              "libc.so.6",
+              "ld-linux-x86-64.so.2"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 604640,
+          "member": "numba/np/ufunc/workqueue.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x9d78 contains 29 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [ld-linux-x86-64.so.2]\n 0x000000000000000c (INIT)               0x2000\n 0x000000000000000d (FINI)               0x760c\n 0x0000000000000019 (INIT_ARRAY)         0xad58\n 0x000000000000001b (INIT_ARRAYSZ)       16 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0xad68\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x298\n 0x0000000000000005 (STRTAB)             0xab8\n 0x0000000000000006 (SYMTAB)             0x380\n 0x000000000000000a (STRSZ)              2154 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0xb000\n 0x0000000000000002 (PLTRELSZ)           1416 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x1698\n 0x0000000000000007 (RELA)               0x14a0\n 0x0000000000000008 (RELASZ)             504 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x13c0\n 0x000000006fffffff (VERNEEDNUM)         5\n 0x000000006ffffff0 (VERSYM)             0x1322\n 0x000000006ffffff9 (RELACOUNT)          6\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "c6847481a6976d8975a9db68157c9dac2eb7aa75d7106bed978fff570009e1bb",
+          "tags": {
+            "NEEDED": [
+              "libstdc++.so.6",
+              "libm.so.6",
+              "libgcc_s.so.1",
+              "libpthread.so.0",
+              "libc.so.6",
+              "ld-linux-x86-64.so.2"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        }
+      ],
+      "version": "0.67.0",
+      "wheel": {
+        "bytes": 3821881,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/assets/wheels/numba-0.67.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+        "sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+      }
+    },
+    {
+      "filename_candidates_not_elf": [],
+      "name": "numpy",
+      "notice_candidates": [
+        {
+          "bytes": 47755,
+          "path": "numpy-2.2.6.dist-info/LICENSE.txt",
+          "sha256": "c002bd26de7dc7aa464250a0de063d58fe55974452e4389e5c21c350a820bf06"
+        },
+        {
+          "bytes": 1018,
+          "path": "numpy/_core/include/numpy/random/LICENSE.txt",
+          "sha256": "fbc539f47d0cf83bc61378080fb873d5c14630126cacbfe754035c3926daa5ec"
+        },
+        {
+          "bytes": 1593,
+          "path": "numpy/ma/LICENSE",
+          "sha256": "05f3b88351988ecfad10abe92c0c50e5875c6452d5009a0084cc291551ffcca6"
+        },
+        {
+          "bytes": 3511,
+          "path": "numpy/random/LICENSE.md",
+          "sha256": "103166b62b80443afb9eb3488e052ea06be0cff566b908f199e561fde49af19f"
+        }
+      ],
+      "objects": [
+        {
+          "bytes": 30009,
+          "member": "numpy/linalg/lapack_lite.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x7000 contains 22 entries:\n  Tag        Type                         Name/Value\n 0x000000000000000f (RPATH)              Library rpath: [$ORIGIN/../../numpy.libs]\n 0x0000000000000001 (NEEDED)             Shared library: [libscipy_openblas64_-56d6093b.so]\n 0x000000000000000c (INIT)               0x1000\n 0x000000000000000d (FINI)               0x241c\n 0x0000000000000019 (INIT_ARRAY)         0x4df0\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x4df8\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x6028\n 0x0000000000000005 (STRTAB)             0x71b0\n 0x0000000000000006 (SYMTAB)             0x6058\n 0x000000000000000a (STRSZ)              901 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x5000\n 0x0000000000000002 (PLTRELSZ)           720 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0xcb8\n 0x0000000000000007 (RELA)               0x9e8\n 0x0000000000000008 (RELASZ)             720 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffff9 (RELACOUNT)          19\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "4a2a11952199df1f6c001de40efb9ed210b72c6dbba34627abadf5693008113d",
+          "tags": {
+            "NEEDED": [
+              "libscipy_openblas64_-56d6093b.so"
+            ],
+            "RPATH": [
+              "$ORIGIN/../../numpy.libs"
+            ],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 227657,
+          "member": "numpy/linalg/_umath_linalg.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x37000 contains 28 entries:\n  Tag        Type                         Name/Value\n 0x000000000000000f (RPATH)              Library rpath: [$ORIGIN/../../numpy.libs]\n 0x0000000000000001 (NEEDED)             Shared library: [libscipy_openblas64_-56d6093b.so]\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x4000\n 0x000000000000000d (FINI)               0x2748c\n 0x0000000000000019 (INIT_ARRAY)         0x2ed80\n 0x000000000000001b (INIT_ARRAYSZ)       16 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x2ed90\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x30028\n 0x0000000000000005 (STRTAB)             0x32210\n 0x0000000000000006 (SYMTAB)             0x30058\n 0x000000000000000a (STRSZ)              1848 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x2f000\n 0x0000000000000002 (PLTRELSZ)           3600 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x2ce0\n 0x0000000000000007 (RELA)               0x1a98\n 0x0000000000000008 (RELASZ)             4680 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x1a38\n 0x000000006fffffff (VERNEEDNUM)         3\n 0x000000006ffffff0 (VERSYM)             0x18ee\n 0x000000006ffffff9 (RELACOUNT)          183\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "c6bc9d5c4db6cea333d46d905e15fbcd8f541ec5b23704ca3c44547ee2ee5187",
+          "tags": {
+            "NEEDED": [
+              "libscipy_openblas64_-56d6093b.so",
+              "libm.so.6",
+              "libgcc_s.so.1",
+              "libc.so.6"
+            ],
+            "RPATH": [
+              "$ORIGIN/../../numpy.libs"
+            ],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 129912,
+          "member": "numpy/random/_mt19937.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x19d30 contains 24 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x4000\n 0x000000000000000d (FINI)               0x13884\n 0x0000000000000019 (INIT_ARRAY)         0x1a790\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x1a798\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0xfc8\n 0x0000000000000006 (SYMTAB)             0x290\n 0x000000000000000a (STRSZ)              2518 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x1b000\n 0x0000000000000002 (PLTRELSZ)           2592 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x2f90\n 0x0000000000000007 (RELA)               0x1ad8\n 0x0000000000000008 (RELASZ)             5304 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x1ab8\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0x199e\n 0x000000006ffffff9 (RELACOUNT)          190\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "6245585dae2024446b9cc6f86f8f5d7ffb90054f2c50be0ede4b05663392f527",
+          "tags": {
+            "NEEDED": [
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 242528,
+          "member": "numpy/random/bit_generator.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x2fd08 contains 24 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x6000\n 0x000000000000000d (FINI)               0x242e0\n 0x0000000000000019 (INIT_ARRAY)         0x30170\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x30178\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x1358\n 0x0000000000000006 (SYMTAB)             0x290\n 0x000000000000000a (STRSZ)              3263 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x31000\n 0x0000000000000002 (PLTRELSZ)           3384 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x4a48\n 0x0000000000000007 (RELA)               0x21b0\n 0x0000000000000008 (RELASZ)             10392 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x2180\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0x2018\n 0x000000006ffffff9 (RELACOUNT)          397\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "fa02602384f668d5551761a14c616893a01ac02965092cdaf52b86fd2584d9c3",
+          "tags": {
+            "NEEDED": [
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 362560,
+          "member": "numpy/random/_bounded_integers.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x4dd50 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x4000\n 0x000000000000000d (FINI)               0x444f0\n 0x0000000000000019 (INIT_ARRAY)         0x4e8d0\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x4e8d8\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x1800\n 0x0000000000000006 (SYMTAB)             0x5e8\n 0x000000000000000a (STRSZ)              3563 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x4f000\n 0x0000000000000002 (PLTRELSZ)           3000 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x3168\n 0x0000000000000007 (RELA)               0x27c0\n 0x0000000000000008 (RELASZ)             2472 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x2770\n 0x000000006fffffff (VERNEEDNUM)         2\n 0x000000006ffffff0 (VERSYM)             0x25ec\n 0x000000006ffffff9 (RELACOUNT)          76\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "4b4ff98f2bb0f7db24091b7996dd4d5c6ba5ae584f3683fcfa72ad8bce926ef1",
+          "tags": {
+            "NEEDED": [
+              "libm.so.6",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 251664,
+          "member": "numpy/random/_common.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x34d40 contains 24 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x4000\n 0x000000000000000d (FINI)               0x2f1f4\n 0x0000000000000019 (INIT_ARRAY)         0x354f0\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x354f8\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x11f8\n 0x0000000000000006 (SYMTAB)             0x298\n 0x000000000000000a (STRSZ)              2991 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x36000\n 0x0000000000000002 (PLTRELSZ)           3096 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x3348\n 0x0000000000000007 (RELA)               0x1f20\n 0x0000000000000008 (RELASZ)             5160 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x1ef0\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0x1da8\n 0x000000006ffffff9 (RELACOUNT)          181\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "209653a11ba1914f706e972fd071be37c3207e182918c81fc7fab43cd66c5c28",
+          "tags": {
+            "NEEDED": [
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 89864,
+          "member": "numpy/random/_sfc64.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x10d60 contains 24 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x4000\n 0x000000000000000d (FINI)               0xc2dc\n 0x0000000000000019 (INIT_ARRAY)         0x11990\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x11998\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0xea8\n 0x0000000000000006 (SYMTAB)             0x290\n 0x000000000000000a (STRSZ)              2335 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x12000\n 0x0000000000000002 (PLTRELSZ)           2376 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x2988\n 0x0000000000000007 (RELA)               0x18f0\n 0x0000000000000008 (RELASZ)             4248 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x18d0\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0x17c8\n 0x000000006ffffff9 (RELACOUNT)          149\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "b335c46d7043db828b7f124957982bc5fa510a780c362ebf02d4d181cba3416c",
+          "tags": {
+            "NEEDED": [
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 797808,
+          "member": "numpy/random/mtrand.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0xadd00 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x9000\n 0x000000000000000d (FINI)               0x58ae4\n 0x0000000000000019 (INIT_ARRAY)         0xaccb0\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0xaccb8\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x1438\n 0x0000000000000006 (SYMTAB)             0x298\n 0x000000000000000a (STRSZ)              3169 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0xaf000\n 0x0000000000000002 (PLTRELSZ)           3624 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x7bf0\n 0x0000000000000007 (RELA)               0x2268\n 0x0000000000000008 (RELASZ)             22920 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x2218\n 0x000000006fffffff (VERNEEDNUM)         2\n 0x000000006ffffff0 (VERSYM)             0x209a\n 0x000000006ffffff9 (RELACOUNT)          920\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "0ef34372d188edcd794777a72a2eb86010f17736d3d7195b4bd6bf848ea7906c",
+          "tags": {
+            "NEEDED": [
+              "libm.so.6",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 136480,
+          "member": "numpy/random/_pcg64.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x1ad40 contains 24 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x4000\n 0x000000000000000d (FINI)               0x14acc\n 0x0000000000000019 (INIT_ARRAY)         0x1b890\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x1b898\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0xf88\n 0x0000000000000006 (SYMTAB)             0x298\n 0x000000000000000a (STRSZ)              2487 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x1c000\n 0x0000000000000002 (PLTRELSZ)           2544 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x30b0\n 0x0000000000000007 (RELA)               0x1a78\n 0x0000000000000008 (RELASZ)             5688 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x1a58\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0x1940\n 0x000000006ffffff9 (RELACOUNT)          207\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "839bd03aa79e83d3aa67733423ca65fd47e4af535145c0f7384d7c88642d3ef8",
+          "tags": {
+            "NEEDED": [
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 996144,
+          "member": "numpy/random/_generator.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0xdabb0 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0xc000\n 0x000000000000000d (FINI)               0x80f28\n 0x0000000000000019 (INIT_ARRAY)         0xd92f0\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0xd92f8\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x2248\n 0x0000000000000006 (SYMTAB)             0x5f8\n 0x000000000000000a (STRSZ)              5558 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0xdc000\n 0x0000000000000002 (PLTRELSZ)           5160 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0xa9c8\n 0x0000000000000007 (RELA)               0x3ab0\n 0x0000000000000008 (RELASZ)             28440 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x3a60\n 0x000000006fffffff (VERNEEDNUM)         2\n 0x000000006ffffff0 (VERSYM)             0x37fe\n 0x000000006ffffff9 (RELACOUNT)          1105\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "b71b3b7481e842a207aa2b06ac7547721ed56366c5bccb7943616591e6075fb9",
+          "tags": {
+            "NEEDED": [
+              "libm.so.6",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 116832,
+          "member": "numpy/random/_philox.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x16d30 contains 24 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x4000\n 0x000000000000000d (FINI)               0x11d7c\n 0x0000000000000019 (INIT_ARRAY)         0x17870\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x17878\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0xfb8\n 0x0000000000000006 (SYMTAB)             0x298\n 0x000000000000000a (STRSZ)              2532 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x18000\n 0x0000000000000002 (PLTRELSZ)           2568 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x2e40\n 0x0000000000000007 (RELA)               0x1ad8\n 0x0000000000000008 (RELASZ)             4968 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x1ab8\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0x199c\n 0x000000006ffffff9 (RELACOUNT)          176\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "b166c0672edb46c1c9cbf720867d95aea2e9a323bc069157c9f0c15884ea5882",
+          "tags": {
+            "NEEDED": [
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 10449209,
+          "member": "numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x9f3000 contains 30 entries:\n  Tag        Type                         Name/Value\n 0x000000000000000f (RPATH)              Library rpath: [$ORIGIN/../../numpy.libs]\n 0x0000000000000001 (NEEDED)             Shared library: [libscipy_openblas64_-56d6093b.so]\n 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [ld-linux-x86-64.so.2]\n 0x000000000000000c (INIT)               0x28000\n 0x000000000000000d (FINI)               0x7c2d48\n 0x0000000000000019 (INIT_ARRAY)         0x955ed0\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x955ed8\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x992028\n 0x0000000000000005 (STRTAB)             0x997230\n 0x0000000000000006 (SYMTAB)             0xc28\n 0x000000000000000a (STRSZ)              16132 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x958000\n 0x0000000000000002 (PLTRELSZ)           13224 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x24798\n 0x0000000000000007 (RELA)               0x9738\n 0x0000000000000008 (RELASZ)             110688 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x9668\n 0x000000006fffffff (VERNEEDNUM)         5\n 0x000000006ffffff0 (VERSYM)             0x909a\n 0x000000006ffffff9 (RELACOUNT)          4382\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "c634eaf05367af02b815cf3d2020fbeee9b47426af1fe26cf3189e4798932dc5",
+          "tags": {
+            "NEEDED": [
+              "libscipy_openblas64_-56d6093b.so",
+              "libstdc++.so.6",
+              "libm.so.6",
+              "libgcc_s.so.1",
+              "libc.so.6",
+              "ld-linux-x86-64.so.2"
+            ],
+            "RPATH": [
+              "$ORIGIN/../../numpy.libs"
+            ],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 16984,
+          "member": "numpy/_core/_operand_flag_tests.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x2e38 contains 20 entries:\n  Tag        Type                         Name/Value\n 0x000000000000000c (INIT)               0x1000\n 0x000000000000000d (FINI)               0x1664\n 0x0000000000000019 (INIT_ARRAY)         0x3e20\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x3e28\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x4f0\n 0x0000000000000006 (SYMTAB)             0x298\n 0x000000000000000a (STRSZ)              428 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x4000\n 0x0000000000000002 (PLTRELSZ)           336 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x808\n 0x0000000000000007 (RELA)               0x6a0\n 0x0000000000000008 (RELASZ)             360 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffff9 (RELACOUNT)          6\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "aba98d25b9ecde5781801beb37bb544aa5468527276ab7904e7f9b2df65e61f9",
+          "tags": {
+            "NEEDED": [],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 59824,
+          "member": "numpy/_core/_rational_tests.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0xbdc8 contains 24 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x2000\n 0x000000000000000d (FINI)               0x963c\n 0x0000000000000019 (INIT_ARRAY)         0xcda0\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0xcda8\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x710\n 0x0000000000000006 (SYMTAB)             0x290\n 0x000000000000000a (STRSZ)              870 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0xd000\n 0x0000000000000002 (PLTRELSZ)           744 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0xff8\n 0x0000000000000007 (RELA)               0xb18\n 0x0000000000000008 (RELASZ)             1248 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0xad8\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0xa76\n 0x000000006ffffff9 (RELACOUNT)          37\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "2b9df2036707f2d58f8531e7f7ca4ae5aa896040148a1dea56bfa30bd313039a",
+          "tags": {
+            "NEEDED": [
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 46416,
+          "member": "numpy/_core/_umath_tests.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x8da0 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x2000\n 0x000000000000000d (FINI)               0x5e10\n 0x0000000000000019 (INIT_ARRAY)         0x99d0\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x99d8\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x878\n 0x0000000000000006 (SYMTAB)             0x2f0\n 0x000000000000000a (STRSZ)              1110 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0xa000\n 0x0000000000000002 (PLTRELSZ)           960 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x1818\n 0x0000000000000007 (RELA)               0xd98\n 0x0000000000000008 (RELASZ)             2688 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0xd48\n 0x000000006fffffff (VERNEEDNUM)         2\n 0x000000006ffffff0 (VERSYM)             0xcce\n 0x000000006ffffff9 (RELACOUNT)          95\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "a0f2b804d7dd8f2c962532315d24f9583d5e1b57467beb6dd26dd90dfaabb8ee",
+          "tags": {
+            "NEEDED": [
+              "libm.so.6",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 17120,
+          "member": "numpy/_core/_struct_ufunc_tests.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x2e30 contains 20 entries:\n  Tag        Type                         Name/Value\n 0x000000000000000c (INIT)               0x1000\n 0x000000000000000d (FINI)               0x18c4\n 0x0000000000000019 (INIT_ARRAY)         0x3e18\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x3e20\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x520\n 0x0000000000000006 (SYMTAB)             0x298\n 0x000000000000000a (STRSZ)              468 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x4000\n 0x0000000000000002 (PLTRELSZ)           360 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x890\n 0x0000000000000007 (RELA)               0x6f8\n 0x0000000000000008 (RELASZ)             408 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffff9 (RELACOUNT)          7\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "80d8f45b654d3f8642bcadb88a935877877d3da1ea92ecc002043205551f2e15",
+          "tags": {
+            "NEEDED": [],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 3038216,
+          "member": "numpy/_core/_simd.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x29adc0 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x3d000\n 0x000000000000000d (FINI)               0x250df0\n 0x0000000000000019 (INIT_ARRAY)         0x2990b0\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x2990b8\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x7f0\n 0x0000000000000006 (SYMTAB)             0x298\n 0x000000000000000a (STRSZ)              932 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x29c000\n 0x0000000000000002 (PLTRELSZ)           1008 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x3c508\n 0x0000000000000007 (RELA)               0xc58\n 0x0000000000000008 (RELASZ)             243888 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0xc08\n 0x000000006fffffff (VERNEEDNUM)         2\n 0x000000006ffffff0 (VERSYM)             0xb94\n 0x000000006ffffff9 (RELACOUNT)          10149\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "49494075a89ff8971bfd46a3302d2296a0a72a822b6851941d5df6617871026f",
+          "tags": {
+            "NEEDED": [
+              "libm.so.6",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 178888,
+          "member": "numpy/_core/_multiarray_tests.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x24d70 contains 26 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x5000\n 0x000000000000000d (FINI)               0x1e33c\n 0x0000000000000019 (INIT_ARRAY)         0x25d58\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x25d60\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x1570\n 0x0000000000000006 (SYMTAB)             0x2b0\n 0x000000000000000a (STRSZ)              2149 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x26000\n 0x0000000000000002 (PLTRELSZ)           4176 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x30d0\n 0x0000000000000007 (RELA)               0x1fd8\n 0x0000000000000008 (RELASZ)             4344 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x1f68\n 0x000000006fffffff (VERNEEDNUM)         3\n 0x000000006ffffff0 (VERSYM)             0x1dd6\n 0x000000006ffffff9 (RELACOUNT)          158\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "8ccbdf116b63f72150c1b1b414221069a4eb500837f735441fc2edce6bf004aa",
+          "tags": {
+            "NEEDED": [
+              "libm.so.6",
+              "libgcc_s.so.1",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 649272,
+          "member": "numpy/fft/_pocketfft_umath.cpython-310-x86_64-linux-gnu.so",
+          "readelf_stdout": "\nDynamic section at offset 0x8ed10 contains 27 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0xa000\n 0x000000000000000d (FINI)               0x8550c\n 0x0000000000000019 (INIT_ARRAY)         0x8fab0\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x8fab8\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x36a0\n 0x0000000000000006 (SYMTAB)             0x1168\n 0x000000000000000a (STRSZ)              20173 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x90000\n 0x0000000000000002 (PLTRELSZ)           2640 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x9400\n 0x0000000000000007 (RELA)               0x8938\n 0x0000000000000008 (RELASZ)             2760 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x8888\n 0x000000006fffffff (VERNEEDNUM)         4\n 0x000000006ffffff0 (VERSYM)             0x856e\n 0x000000006ffffff9 (RELACOUNT)          64\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "bdf266bd798225e5a1fedc24f792b4b45d52bd960adc94fd3cb76108b253d42b",
+          "tags": {
+            "NEEDED": [
+              "libstdc++.so.6",
+              "libm.so.6",
+              "libgcc_s.so.1",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": []
+          }
+        },
+        {
+          "bytes": 2833617,
+          "member": "numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0",
+          "readelf_stdout": "\nDynamic section at offset 0x2a2000 contains 32 entries:\n  Tag        Type                         Name/Value\n 0x000000000000000f (RPATH)              Library rpath: [$ORIGIN]\n 0x0000000000000001 (NEEDED)             Shared library: [libquadmath-96973f99-934c22de.so.0.0.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libz.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000e (SONAME)             Library soname: [libgfortran-040039e1-0352e75f.so.5.0.0]\n 0x000000000000000c (INIT)               0x19a88\n 0x000000000000000d (FINI)               0x246838\n 0x0000000000000019 (INIT_ARRAY)         0x475310\n 0x000000000000001b (INIT_ARRAYSZ)       24 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x475328\n 0x000000000000001c (FINI_ARRAYSZ)       24 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x478028\n 0x0000000000000005 (STRTAB)             0x4a8000\n 0x0000000000000006 (SYMTAB)             0x2b68\n 0x000000000000000a (STRSZ)              36041 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x476000\n 0x0000000000000002 (PLTRELSZ)           11400 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x16e00\n 0x0000000000000007 (RELA)               0x15d68\n 0x0000000000000008 (RELASZ)             4248 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffc (VERDEF)             0x15bd8\n 0x000000006ffffffd (VERDEFNUM)          4\n 0x000000006ffffffe (VERNEED)            0x15c48\n 0x000000006fffffff (VERNEEDNUM)         4\n 0x000000006ffffff0 (VERSYM)             0x14f30\n 0x000000006ffffff9 (RELACOUNT)          165\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "c6090048eccc763522c12ef016f81da6b627cb3a044f55cf0479a839c41c0980",
+          "tags": {
+            "NEEDED": [
+              "libquadmath-96973f99-934c22de.so.0.0.0",
+              "libz.so.1",
+              "libm.so.6",
+              "libgcc_s.so.1",
+              "libc.so.6"
+            ],
+            "RPATH": [
+              "$ORIGIN"
+            ],
+            "RUNPATH": [],
+            "SONAME": [
+              "libgfortran-040039e1-0352e75f.so.5.0.0"
+            ]
+          }
+        },
+        {
+          "bytes": 25021457,
+          "member": "numpy.libs/libscipy_openblas64_-56d6093b.so",
+          "readelf_stdout": "\nDynamic section at offset 0x1769000 contains 30 entries:\n  Tag        Type                         Name/Value\n 0x000000000000000f (RPATH)              Library rpath: [$ORIGIN]\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libgfortran-040039e1-0352e75f.so.5.0.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [ld-linux-x86-64.so.2]\n 0x000000000000000e (SONAME)             Library soname: [libscipy_openblas64_-56d6093b.so]\n 0x000000000000000c (INIT)               0xcf000\n 0x000000000000000d (FINI)               0x13c9c7c\n 0x0000000000000019 (INIT_ARRAY)         0x15b3d00\n 0x000000000000001b (INIT_ARRAYSZ)       16 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x15b3d10\n 0x000000000000001c (FINI_ARRAYSZ)       16 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x15d7028\n 0x0000000000000005 (STRTAB)             0x16d4000\n 0x0000000000000006 (SYMTAB)             0x153b8\n 0x000000000000000a (STRSZ)              236557 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x15bb000\n 0x0000000000000002 (PLTRELSZ)           47232 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0xc3368\n 0x0000000000000007 (RELA)               0x97718\n 0x0000000000000008 (RELASZ)             179280 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x97608\n 0x000000006fffffff (VERNEEDNUM)         5\n 0x000000006ffffff0 (VERSYM)             0x91ce6\n 0x000000006ffffff9 (RELACOUNT)          35\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "0bd815d04b6b54990e3cccc7528fbb696456d09569f533d0390c13f0cdc4dd4a",
+          "tags": {
+            "NEEDED": [
+              "libm.so.6",
+              "libpthread.so.0",
+              "libgfortran-040039e1-0352e75f.so.5.0.0",
+              "libc.so.6",
+              "ld-linux-x86-64.so.2"
+            ],
+            "RPATH": [
+              "$ORIGIN"
+            ],
+            "RUNPATH": [],
+            "SONAME": [
+              "libscipy_openblas64_-56d6093b.so"
+            ]
+          }
+        },
+        {
+          "bytes": 250985,
+          "member": "numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0",
+          "readelf_stdout": "\nDynamic section at offset 0x3add0 contains 28 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000e (SONAME)             Library soname: [libquadmath-96973f99-934c22de.so.0.0.0]\n 0x000000000000000c (INIT)               0x1ef8\n 0x000000000000000d (FINI)               0x25d2c\n 0x0000000000000019 (INIT_ARRAY)         0x23ada0\n 0x000000000000001b (INIT_ARRAYSZ)       16 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x23adb0\n 0x000000000000001c (FINI_ARRAYSZ)       16 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x23c028\n 0x0000000000000005 (STRTAB)             0x23d000\n 0x0000000000000006 (SYMTAB)             0x4c0\n 0x000000000000000a (STRSZ)              1124 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x23b000\n 0x0000000000000002 (PLTRELSZ)           1800 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x17f0\n 0x0000000000000007 (RELA)               0x16e8\n 0x0000000000000008 (RELASZ)             264 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffc (VERDEF)             0x1630\n 0x000000006ffffffd (VERDEFNUM)          2\n 0x000000006ffffffe (VERNEED)            0x1668\n 0x000000006fffffff (VERNEEDNUM)         2\n 0x000000006ffffff0 (VERSYM)             0x1528\n 0x000000006ffffff9 (RELACOUNT)          5\n 0x0000000000000000 (NULL)               0x0\n",
+          "sha256": "6ed5137f412781ad7863439fb543613f620b43c32b63292a0029246162f5bbc6",
+          "tags": {
+            "NEEDED": [
+              "libm.so.6",
+              "libc.so.6"
+            ],
+            "RPATH": [],
+            "RUNPATH": [],
+            "SONAME": [
+              "libquadmath-96973f99-934c22de.so.0.0.0"
+            ]
+          }
+        }
+      ],
+      "version": "2.2.6",
+      "wheel": {
+        "bytes": 16801050,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/assets/wheels/numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+      }
+    }
+  ]
+}

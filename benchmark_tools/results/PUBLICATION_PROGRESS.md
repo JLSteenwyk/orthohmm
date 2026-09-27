@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Selected Wheel Native Dependencies Inspected (2026-09-27)
+
+Previous turn completed the refreshed full unit suite. Reconfirmed full
+job 22337 RUNNING. Added a read-only ELF inventory and inspected all 12
+integrated wheel artifacts: 60 ELF objects, 182 NEEDED edges, eight distinct
+names with bundled candidates and twelve names without selected-wheel
+candidates. Forty-one focused tests pass. The [bounded inventory](INTEGRATED_WHEEL_ELF_20260927.md)
+identifies review targets but does not resolve actual loading, optional
+backends, static components or license obligations. No native object was
+executed or installed; the full inference run remains untouched. Full-run
+admission and the remaining timing, uncertainty and release gates stay open.
+
 ## Full Unit Regression Refreshed (2026-09-27)
 
 Previous turn completed the updated PDF layout review. Reconfirmed full
