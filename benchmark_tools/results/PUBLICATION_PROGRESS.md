@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Base Archive Staging Automated (2026-09-27)
+
+Previous turn was a verified wait on job 22337, which remains RUNNING.
+Added a standard-library staging command that consumes the retained receipt
+and verifies a supplied cache without requiring its historical absolute paths.
+It creates checked archive copies and a destination-specific Conda explicit
+file, refusing existing output and withholding success receipts on failure.
+All 22 focused tests pass. Two real executions staged 19 archives totaling
+51,094,707 bytes, with matching package records after restaging from the first
+output's cache. [Commands and evidence](BASE_ARCHIVE_STAGING_20260927.md)
+distinguish staging from installation, runtime restoration and scientific
+validation. No active job, frozen input or inference code changed. Full-job
+admission and the broader publication requirements remain open.
+
 ## Runtime Reconstruction Added To Manuscript (2026-09-27)
 
 Previous turn was a verified wait on job 22337; the scheduler again reports

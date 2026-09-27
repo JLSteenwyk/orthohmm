@@ -95,6 +95,10 @@ RUNNING observation does not establish current liveness or completion.
   serialization difference remains recorded with matching compiled code
   fields, not silently recategorized as archive-byte equality. These checks
   do not replace OS provenance or validate unobserved runtime paths.
+  The [archive-staging command](results/BASE_ARCHIVE_STAGING_20260927.md)
+  recreates the checked local explicit file from a supplied archive cache;
+  22 focused tests and two real staging executions pass. It performs no
+  download or installation and postdates the latest full unit suite.
 
 - [Observed search libraries](results/INTEGRATED_SEARCH_LIBRARIES_20260927.md)
   and [base package attribution](results/INTEGRATED_BASE_RUNTIME_PACKAGES_20260927.md)
