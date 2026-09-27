@@ -1,5 +1,18 @@
 # Publication Progress
 
+## Canonical Three-Way Audit Queued (2026-09-27)
+
+Submitted independent audit 22334 with afterok:22333, after commit/push
+`32ff167`. The [audit submission](qfo_canonical_phylogeny_readback_submission_20260927.json)
+records its compiled bootstrap, frozen plan SHA and actual native submission
+binding. Submission receipt SHA256:
+`a2b1d4b50fae373028a5d2e434ed879df4a3aa275782aef5f301e5b9592a87b8`.
+Slurm confirms native 22333 RUNNING and audit 22334 PENDING Dependency. Audit
+success requires a post-source-check `readback_execution.json` bound to its
+result, in addition to scheduler completion; partial reports alone are not
+admission. No further inference attempt is submitted. Next monitor these exact
+jobs, retain diagnostics on failure, and inspect all three contrasts on success.
+
 ## Canonical QfO Native Submitted And Readback Frozen (2026-09-27)
 
 Previous turn admitted and froze the canonical plan. Submitted native job

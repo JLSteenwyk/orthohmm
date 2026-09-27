@@ -1,0 +1,26 @@
+{
+  "command": [
+    "sbatch",
+    "--parsable",
+    "--partition=gpu",
+    "--nodelist=bizon",
+    "--cpus-per-task=2",
+    "--mem=128G",
+    "--time=03:00:00",
+    "--no-requeue",
+    "--dependency=afterok:22333",
+    "--job-name=qfo_canonical_readback",
+    "--output=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_canonical_phylogeny_20260927/readback-%j.log",
+    "--chdir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_canonical_phylogeny_20260927",
+    "--wrap=/home/bizon/anaconda3/bin/python -I -c 'import hashlib,json,os,pathlib,sys\np=pathlib.Path('\"'\"'/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_canonical_phylogeny_20260927/readback_plan.json'\"'\"')\nassert hashlib.sha256(p.read_bytes()).hexdigest()=='\"'\"'a268529be36550cc0630714a311cceac20b2634ade79d14d4277b46f566a0de9'\"'\"'\nplan=json.loads(p.read_text())\nassert os.environ.get(\"SLURM_CPUS_PER_TASK\")==\"2\"\ndef check():\n for r in plan[\"checked_records\"]:\n  b=pathlib.Path(r[\"path\"]).read_bytes()\n  assert len(b)==r[\"bytes\"] and hashlib.sha256(b).hexdigest()==r[\"sha256\"],r[\"path\"]\ncheck()\nsys.path.insert(0,plan[\"repo\"])\nfrom benchmark_tools.readback_qfo_canonical_phylogeny import readback,record,save\nreadback(pathlib.Path(plan[\"repo\"]),pathlib.Path(plan[\"directory\"]),plan[\"native_job_id\"],plan[\"native_plan\"][\"sha256\"],plan[\"native_submission\"][\"sha256\"],pathlib.Path(plan[\"output\"]))\ncheck()\nsave(pathlib.Path(plan[\"directory\"])/\"readback_execution.json\",dict(status=\"readback_complete\",job_id=os.environ[\"SLURM_JOB_ID\"],plan=record(p),result=record(pathlib.Path(plan[\"output\"])/\"result.json\")))\n'"
+  ],
+  "commit": "32ff16708c234a6bb04b0982d9460bfc0625bfd1",
+  "job_id": "22334",
+  "native_job_id": 22333,
+  "plan": {
+    "bytes": 178913,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_canonical_phylogeny_20260927/readback_plan.json",
+    "sha256": "a268529be36550cc0630714a311cceac20b2634ade79d14d4277b46f566a0de9"
+  },
+  "stderr": ""
+}
