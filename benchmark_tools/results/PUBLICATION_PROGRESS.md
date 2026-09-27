@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Full End-To-End OrthoBench Recovery Completed (2026-09-27)
+
+After verified waits on the same live jobs, native 22326 completed 0:0 in
+2:37:28 and independent readback 22327 completed 0:0 in 2:20. The
+[full recovery result](FULL_RECOVERY_ORTHOBENCH_RESULT_22326.md) reproduces all
+59,770 root groups over 251,378 genes, exact output bytes and all 70 family
+score records: F1 74.10607351873405%. No checkpoint reuse or default change
+occurred. Four scientific readers passed, and post-completion admission and
+linked artifact identities were rechecked before consolidation. The runtime
+is shared-host descriptive evidence, not controlled comparative timing.
+Historical discrepancies remain retained. Next integrate this result into a
+new manuscript review and address the remaining scientific and release gates;
+v21 remains a dated pre-completion snapshot. The full goal remains active,
+and DGX stays deferred.
+
 ## Recovery Advisory Range Check Completed (2026-09-27)
 
 The previous continuation was a verified wait on live native job 22326. This

@@ -1,6 +1,6 @@
 # Publication Reproduction Guide
 
-Status: 26 September 2026, incomplete working package. This guide routes
+Status: 27 September 2026, incomplete working package. This guide routes
 readers to executed workflows and their evidence; it is not an archival
 release or an assertion that every requirement is complete. Direct commands
 below recompute statistics or audit retained local artifacts; they do not
@@ -8,6 +8,13 @@ submit scheduler jobs. Linked native batch recipes have separate execution
 requirements and must not be confused with these audit commands.
 
 ## Method And Results
+
+- [Completed full OrthoBench recovery](results/FULL_RECOVERY_ORTHOBENCH_RESULT_22326.md)
+  reproduces all 59,770 root groups and all 70 family-score records from raw
+  FASTA in the new recovery installation. Native 22326 and independent audit
+  22327 completed successfully. This is same-host reproducibility, not new
+  accuracy evidence or controlled comparative timing. Manuscript review v21
+  predates this completion.
 
 - [Recovery advisory range review](results/RECOVERY_ADVISORY_REVIEW_20260927.md)
   matches the live recovery package inventory to its install report and checks
@@ -21,14 +28,14 @@ requirements and must not be confused with these audit commands.
 
 - [Full OrthoBench recovery protocol](results/FULL_RECOVERY_ORTHOBENCH_PROTOCOL_20260926.md)
   freezes the 251,378-gene end-to-end run through the new explicit entrypoint.
-  Job 22326 was submitted after protocol commit and entered native search;
-  submission and live-state receipts are not completed reproduction evidence.
+  Job 22326 was submitted after protocol commit; its completed evidence is
+  linked above. Original submission and live-state receipts remain historical.
 
 - [Explicit full-pipeline fixture](results/PUBLICATION_FULL_PIPELINE_FIXTURE_20260926.md)
   runs raw FASTA through the frozen installed HMM pipeline with candidate-only
   canonical ordering and fresh inferred phylogeny. Four independent readers
-  validate the 16-gene result. Full-data validation of this entrypoint is still
-  outstanding; earlier recovery scores are not transferred to it.
+  validate the 16-gene result. The separately executed full-data validation is
+  linked above; its score was recomputed rather than transferred from a fixture.
 
 - [Fresh recovery-install phylogeny fixture](results/PUBLICATION_RECOVERY_PHYLOGENY_20260926.md)
   validates inferred species/gene trees and reconciliation in the new hash-locked

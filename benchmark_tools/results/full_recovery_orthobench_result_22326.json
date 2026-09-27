@@ -1,0 +1,127 @@
+{
+  "artifacts": [
+    {
+      "bytes": 1178303,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_recovery_orthobench_20260926/plan.json",
+      "sha256": "57878c0712b3216376ea1d431b1d8e9e8e3ae8eb58e3bd3069e15cf7dddb7005"
+    },
+    {
+      "bytes": 2242,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_recovery_orthobench_20260926/execution.json",
+      "sha256": "0244d565ef749f876911e8329a6e015195514b208824db65ae27e40915a81506"
+    },
+    {
+      "bytes": 639791,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_recovery_orthobench_20260926/install_after.json",
+      "sha256": "f1636e6e3222c135d2f174bb3f2c247f74e646d8653d087f068960f4926f2559"
+    },
+    {
+      "bytes": 36152,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_recovery_orthobench_20260926/readback/result.json",
+      "sha256": "339dc8e3f72bbfc657a86856f7c5aaa9c29fad1a49537889f1a09e3c3c5acc35"
+    },
+    {
+      "bytes": 3266,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_recovery_orthobench_20260926/readback/scientific/result.json",
+      "sha256": "d11fbb96e0c0a79e88f655eb469197190a8a25f257ac96d4595f50e820f91f89"
+    },
+    {
+      "bytes": 1501,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_recovery_orthobench_20260926/time.txt",
+      "sha256": "36e2d189dbed24011fc1729e239c47f06bdf51ee4fc868e520d524848f1f543c"
+    },
+    {
+      "bytes": 1057,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_recovery_orthobench_20260926/readback_plan.json",
+      "sha256": "cb90ce1254056bc60153b31dd1bdf506e4d695c2fd761175272f716f83cff78d"
+    }
+  ],
+  "comparison": {
+    "changed_reference_families": [],
+    "partitions": {
+      "current_groups": 59770,
+      "current_only_groups": 0,
+      "genes_in_changed_groups": 0,
+      "identical_groups": 59770,
+      "label_invariant_equal": true,
+      "original_groups": 59770,
+      "original_only_groups": 0
+    },
+    "score_differences_percentage_points": {
+      "f_score": 0.0,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "score_objects_equal": true
+  },
+  "genes": 251378,
+  "historical_scores_replaced": false,
+  "job_id": 22326,
+  "limitations": [
+    "Development-exposed same-host reproducibility experiment, not independent generalization.",
+    "Shared-host resources do not establish controlled comparative speed."
+  ],
+  "native_scheduler": {
+    "AllocCPUS": "32",
+    "Elapsed": "02:37:28",
+    "ExitCode": "0:0",
+    "JobIDRaw": "22326",
+    "State": "COMPLETED"
+  },
+  "publication_ready": false,
+  "readback_job": {
+    "allocated_cpus": 2,
+    "elapsed": "00:02:20",
+    "exit_code": "0:0",
+    "id": 22327,
+    "state": "COMPLETED"
+  },
+  "resources": {
+    "maximum_process_rss_kib": 6163636,
+    "memory_caveat": "GNU time maximum process RSS is not simultaneous process-tree peak memory",
+    "scope": "shared-host full inference; not controlled comparative timing",
+    "system_seconds": 3254.68,
+    "user_seconds": 268824.98,
+    "wall_seconds_gnu_time": 9438
+  },
+  "scores": {
+    "current": {
+      "exact_refogs": 15,
+      "f_score": 74.10607351873405,
+      "precision": 81.77045380181866,
+      "recall": 67.75533630827974,
+      "refogs": 70,
+      "weighted_false_negative": 305.5181884790494,
+      "weighted_false_positive": 143.12060832971704,
+      "weighted_true_positive": 641.9818115209503
+    },
+    "historical": {
+      "exact_refogs": 15,
+      "f_score": 74.10607351873405,
+      "precision": 81.77045380181866,
+      "recall": 67.75533630827974,
+      "refogs": 70,
+      "weighted_false_negative": 305.5181884790494,
+      "weighted_false_positive": 143.12060832971704,
+      "weighted_true_positive": 641.9818115209503
+    }
+  },
+  "status": "full_recovery_orthobench_scientific_readback_complete",
+  "summary": {
+    "bypassed_families": 45764,
+    "candidate_families": 54445,
+    "checkpoint_hits": 0,
+    "duplications": 59379,
+    "ortholog_pairs": 966439,
+    "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_recovery_orthobench_20260926/native/inference/orthohmm_phylogeny",
+    "reconciled_families": 8681,
+    "remapped_checkpoint_hits": 0,
+    "root_hogs": 59770,
+    "schema_version": 1,
+    "speciations": 104016,
+    "species_tree_checkpoint_hit": false,
+    "species_tree_families": 200,
+    "uncertain_events": 13034
+  },
+  "verified_readback_record_count": 15
+}
