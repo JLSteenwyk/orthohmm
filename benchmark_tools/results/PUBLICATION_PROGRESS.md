@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Canonical QfO Scoring Submitted As 22336 (2026-09-27)
+
+Submitted the frozen single assessment after commit/push `97a277a`: job 22336,
+8 CPUs, 128 GiB, 12 hours, no requeue. The
+[submission record](qfo_canonical_assessment_submission_20260927.json)
+pins the exact isolated bootstrap, which hashes all plan dependencies before
+importing the runner. Submission SHA256
+`96adc6fd4b6a07dbc16c8d2b31dae27f0927ef78fb11edf76b5800d7613ca9d3`.
+Next monitor this job and independently admit native assessment artifacts
+before publishing scores. Preserve pinned sources while running. FAS remains
+an unseeded native sample; no paired ordering-effect claim from its difference.
+
 ## Canonical Six-Endpoint Scorer Frozen (2026-09-27)
 
 Previous turn independently admitted conversion. Added an assessment adapter

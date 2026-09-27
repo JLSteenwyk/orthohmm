@@ -1,0 +1,24 @@
+{
+  "command": [
+    "sbatch",
+    "--parsable",
+    "--partition=gpu",
+    "--nodelist=bizon",
+    "--cpus-per-task=8",
+    "--mem=128G",
+    "--time=12:00:00",
+    "--no-requeue",
+    "--job-name=qfo_canonical_assess",
+    "--output=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_canonical_assessment_20260927/assessment-%j.log",
+    "--chdir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_canonical_assessment_20260927",
+    "--wrap=/home/bizon/anaconda3/bin/python -I -c 'import hashlib,json,pathlib,sys\np=pathlib.Path('\"'\"'/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_canonical_assessment_20260927/plan.json'\"'\"')\nsha='\"'\"'41910a6cfc113c028bbcbe0bed2bb9d8ca20c05cf8bb530d1868e31c79ca499b'\"'\"'\nassert hashlib.sha256(p.read_bytes()).hexdigest()==sha\nplan=json.loads(p.read_text())\nfor item in plan[\"checked_records\"]:\n h=hashlib.sha256(); size=0\n with open(item[\"path\"],\"rb\") as stream:\n  for chunk in iter(lambda:stream.read(1048576),b\"\"):\n   h.update(chunk); size+=len(chunk)\n assert size==item[\"bytes\"] and h.hexdigest()==item[\"sha256\"],item[\"path\"]\nsys.path.insert(0,plan[\"repo\"])\nfrom benchmark_tools.run_qfo_canonical_assessment import run\nrun(p,sha)\n'"
+  ],
+  "commit": "97a277afe4b2e28a9d1a10bbc8dd905415daccb8",
+  "job_id": "22336",
+  "plan": {
+    "bytes": 745762,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_canonical_assessment_20260927/plan.json",
+    "sha256": "41910a6cfc113c028bbcbe0bed2bb9d8ca20c05cf8bb530d1868e31c79ca499b"
+  },
+  "stderr": ""
+}
