@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Canonical Assessment Source Pins Preserved (2026-09-27)
+
+Previous turn progressed the eight-method provenance register. Checked the
+completed QfO plan's Python pins against the current tree: one distinct source
+had changed, the register assembler. Added a source-only archive builder that
+deduplicates 1,502 records into 762 repository-contained Python sources and
+requires original size/SHA256 for every byte stream. The changed file was
+recovered from the scoring revision; all others match retained bytes. Readback
+validates all 762 tar members, and repeat export is byte-identical. Nine tests
+pass. [Archive record](QFO_CANONICAL_SOURCE_ARCHIVE_20260927.md) explicitly
+preserves original paths/receipts and does not bypass their current-path checks.
+The 1,268,109-byte local archive is a source component, not full runtime/data
+packaging or deposition. Remaining scientific, dedicated-timing, rights and
+release requirements stay open.
+
 ## Eight-Method OrthoBench Register Supplemented (2026-09-27)
 
 Previous turn completed the historical OrthoHMM audit. Added optional,

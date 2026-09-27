@@ -1,0 +1,51 @@
+{
+  "archive": {
+    "bytes": 1268109,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_canonical_python_sources_20260927/qfo-canonical-assessment-python-sources.tar.gz",
+    "sha256": "4951aa49982441e51da980a6e5c9db019137cfc34ba14748b33901a6f1ee0c51"
+  },
+  "independently_read_members": 762,
+  "limitations": [
+    "Python source bytes only; archive modes normalized to 0644, not historical permission evidence",
+    "Does not archive data, references, containers, executables, wheels or complete runtime",
+    "Current-source validators must not silently substitute these paths for original receipt records",
+    "No public deposition, execution reproduction or redistribution rights clearance"
+  ],
+  "manifest": {
+    "bytes": 297102,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_canonical_python_sources_20260927/manifest.json",
+    "sha256": "fc4d4a92629571a10b3e2d90e5ad5a08422012cda1c4b330dea18132995f972d"
+  },
+  "plan": {
+    "bytes": 745762,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_canonical_assessment_20260927/plan.json",
+    "sha256": "41910a6cfc113c028bbcbe0bed2bb9d8ca20c05cf8bb530d1868e31c79ca499b"
+  },
+  "publication_ready": false,
+  "recovered_git_sources": [
+    {
+      "member": "sources/benchmark_tools/assemble_ob_provenance_register.py",
+      "origin": "frozen_git_blob",
+      "original": {
+        "bytes": 9596,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/assemble_ob_provenance_register.py",
+        "sha256": "fe4a74709e08eff451bdc5cc7d3e7b0d1310973751699cae3c01fb2f4128aadb"
+      }
+    }
+  ],
+  "redistribution_clearance": false,
+  "repeat_archive_byte_identical": true,
+  "repeat_manifest": {
+    "bytes": 297109,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_canonical_python_sources_repeat_20260927/manifest.json",
+    "sha256": "bc93637fd44fde299abe28466c2f88b515ba2798a5e58ba0338bba604b420b25"
+  },
+  "revision": "97a277afe4b2e28a9d1a10bbc8dd905415daccb8",
+  "source": {
+    "bytes": 4528,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/archive_qfo_assessment_sources.py",
+    "sha256": "5a7be59703a67f5f80f96201a1d71f7a02823ded5f0b7def6ef132e8d8bba2d3"
+  },
+  "status": "canonical_assessment_python_sources_archived",
+  "uncompressed_bytes": 5429985
+}
