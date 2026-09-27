@@ -1,0 +1,632 @@
+{
+  "all_checks_passed": true,
+  "checked_records": [
+    {
+      "bytes": 4564,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/installed_ob_input_inventory_20260926.json",
+      "sha256": "8b429398e6c381fcdec8289c641a7f20969edcad5595e3d3f6930335601571bd"
+    },
+    {
+      "bytes": 67483,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_comparison_orthomcl_complete_20260916.json",
+      "sha256": "094f842ad8211450519d4238c0b3a5020a7969049d4b7306f5465d5acbf914a3"
+    },
+    {
+      "bytes": 113184,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/retained_ob_comparator_readback_20260926.json",
+      "sha256": "5dcb4e65f277eb9debf2bbacb1d4e298c678ac13fc981e75c4ba78e4851eeb55"
+    },
+    {
+      "bytes": 484,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/SpeciesIDs.txt",
+      "sha256": "6f5e1ae5777fac7fd0c15104c3b70798b9b01bc201aa498d0cbb8f079aa66bbc"
+    },
+    {
+      "bytes": 6738650,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/SequenceIDs.txt",
+      "sha256": "cc326a396bf388b1a2a65f1303b392fb2af4214390a536df60c74a9460cf2356"
+    },
+    {
+      "bytes": 2487193,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/clusters_OrthoFinder_I1.2.txt_id_pairs.txt",
+      "sha256": "ea9eb298600ee0f22cf6244ece14359c5893ec28a0817a1f23fc0513655b9080"
+    },
+    {
+      "bytes": 1518,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/Log.txt",
+      "sha256": "40374e00a831b195a0187c23d326ae28b3307db9400f3663ed7c6babf4310977"
+    },
+    {
+      "bytes": 5478,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/run.log",
+      "sha256": "fe0d60edb5bcc6906c1a66e6f7ebc81a47412657b999136753178b757956982c"
+    },
+    {
+      "bytes": 974,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/time.log",
+      "sha256": "3e79b0c4deb0ce2d09f473a53abb25a45b9a3a718f392673f067f02353b76908"
+    },
+    {
+      "bytes": 19,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/tool_version.txt",
+      "sha256": "ce98f128f54ebbc3bd79bd2f40c4404175e54292346bed575892aa7564390ce4"
+    },
+    {
+      "bytes": 79,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/orthogroups_source.txt",
+      "sha256": "1fa807ccfc684283cab897838425709ecb0f12019d22d4227e2841bc2ca870a4"
+    },
+    {
+      "bytes": 1090,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_sequence_only_20260830/conversion_time.log",
+      "sha256": "c36174cd5dbd428c336e797a0617e9b99448290edd8a728adce8cf9e1f1a544a"
+    },
+    {
+      "bytes": 8784620,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/input/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+    },
+    {
+      "bytes": 8784620,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+    },
+    {
+      "bytes": 8591792,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species0.fa",
+      "sha256": "20c3cfab34e8d8f3916bb57ac9cf23513f390118e0e147eddae6670f8ed6cbd2"
+    },
+    {
+      "bytes": 11973324,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/input/Canis_familiaris.CanFam3.1.pep.all.fa",
+      "sha256": "0d87161a9990b9d8b0d56b4e71dfbe74c6016b0dda3352247b35d85501c33b33"
+    },
+    {
+      "bytes": 11973324,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/Canis_familiaris.CanFam3.1.pep.all.fa",
+      "sha256": "0d87161a9990b9d8b0d56b4e71dfbe74c6016b0dda3352247b35d85501c33b33"
+    },
+    {
+      "bytes": 11739388,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species1.fa",
+      "sha256": "009a12930d8a594200fba0670de2a37308a2e40fc098e37c2442342447c0d423"
+    },
+    {
+      "bytes": 5797677,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/input/Ciona_intestinalis.KH.pep.all.fa",
+      "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+    },
+    {
+      "bytes": 5797677,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/Ciona_intestinalis.KH.pep.all.fa",
+      "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+    },
+    {
+      "bytes": 5603187,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species2.fa",
+      "sha256": "39463b44ab290576918b043b496b48442a7e2bf81655ff7933dab5cfa73fc0b0"
+    },
+    {
+      "bytes": 17020497,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/input/Danio_rerio.GRCz11.pep.all.fa",
+      "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+    },
+    {
+      "bytes": 17020497,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/Danio_rerio.GRCz11.pep.all.fa",
+      "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+    },
+    {
+      "bytes": 16675945,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species3.fa",
+      "sha256": "e442c25dee05df1c11bffbf5dfd0b4600ca261f9c2742df1d9e02c042b8afbc6"
+    },
+    {
+      "bytes": 7778910,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/input/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+    },
+    {
+      "bytes": 7778910,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+    },
+    {
+      "bytes": 7712013,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species4.fa",
+      "sha256": "d14445f598bec754d24aa39cc980a3456db0c873b7eb48b759ddb86728fe4359"
+    },
+    {
+      "bytes": 9883133,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/input/Gallus_gallus.GRCg6a.pep.all.fa",
+      "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+    },
+    {
+      "bytes": 9883133,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/Gallus_gallus.GRCg6a.pep.all.fa",
+      "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+    },
+    {
+      "bytes": 9686366,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species5.fa",
+      "sha256": "c39ed88c7b3343891fe6ad3a5216dfb6476fd218062c9fbdfd895bc2f0517a51"
+    },
+    {
+      "bytes": 13576811,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/input/Homo_sapiens.GRCh38.pep.all.fa",
+      "sha256": "bff5d1f0f259c801dc607045e4c13bfc759098f17d536b307c13a89a523569ac"
+    },
+    {
+      "bytes": 13576811,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/Homo_sapiens.GRCh38.pep.all.fa",
+      "sha256": "bff5d1f0f259c801dc607045e4c13bfc759098f17d536b307c13a89a523569ac"
+    },
+    {
+      "bytes": 13377822,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species6.fa",
+      "sha256": "b8c48cec941b896354abc02292a7b6a56167d657f36dd4ee408653024018fcdb"
+    },
+    {
+      "bytes": 11930628,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/input/Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+    },
+    {
+      "bytes": 11930628,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+    },
+    {
+      "bytes": 11684295,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species7.fa",
+      "sha256": "b62110965cbf2c062d639c6e25e938e3287618df5019a644819ccceb2cd2fb7c"
+    },
+    {
+      "bytes": 12880578,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/input/Mus_musculus.GRCm38.pep.all.fa",
+      "sha256": "3b6e0a68688294135324824e1879de86c1715a9f3c655406f6ec8fcfdd75db1a"
+    },
+    {
+      "bytes": 12880578,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/Mus_musculus.GRCm38.pep.all.fa",
+      "sha256": "3b6e0a68688294135324824e1879de86c1715a9f3c655406f6ec8fcfdd75db1a"
+    },
+    {
+      "bytes": 12617943,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species8.fa",
+      "sha256": "05eb5b81627ea98b0154a91f09bfc4a4ded2d321ef9e612c8c000baf85592835"
+    },
+    {
+      "bytes": 12782304,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/input/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+    },
+    {
+      "bytes": 12782304,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+    },
+    {
+      "bytes": 12512321,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species9.fa",
+      "sha256": "22c37e940826cfc825e5777fac8ca0113f90ef78187b3c808f0c549b07f2e483"
+    },
+    {
+      "bytes": 12000073,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/input/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+    },
+    {
+      "bytes": 12000073,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+    },
+    {
+      "bytes": 11766464,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species10.fa",
+      "sha256": "9bd4d36f7d9f9b04d0d69d0a6092260067b3ac91d10cb672e4d59fc2ba7fbc8f"
+    },
+    {
+      "bytes": 10463972,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/input/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "sha256": "1f6ebacc342da127e4ab9c1a9cf7b627e8169df3cbc0d971d57655d974c8d9b2"
+    },
+    {
+      "bytes": 10463972,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "sha256": "1f6ebacc342da127e4ab9c1a9cf7b627e8169df3cbc0d971d57655d974c8d9b2"
+    },
+    {
+      "bytes": 10256843,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species11.fa",
+      "sha256": "9ac99a9c90de91f68405a93f933df9e32cbb2fa411434a9a51192c9974a147a1"
+    },
+    {
+      "bytes": 4957710,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/Orthogroups/Orthogroups.txt",
+      "sha256": "e0bf8d21b7ddc4494f0df1224dc2cd57d964cb92507eb40bd1f058cbc6f47af7"
+    },
+    {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_sequence_only_20260830/orthogroups.txt",
+      "sha256": "15fecab99b19751e5bba47ccc53fd7eed16480b16f087f8d8b133e4a7696c182"
+    },
+    {
+      "bytes": 10365,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_ob_orthofinder_provenance.py",
+      "sha256": "6f1c5730395c21d90a5ec54066cf1dee2252fda83e3bf0e08dd92f21c60c8dc5"
+    },
+    {
+      "bytes": 4518,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/orthofinder_mcl_to_orthogroups.py",
+      "sha256": "20879a9a041b2a9b48e4bf0d81c895793d8b0a75c8d2e06c777f472e72484eb8"
+    },
+    {
+      "bytes": 6756,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/summarize_matched_resources.py",
+      "sha256": "2f64fe9004dd543f074e4eed9fe378647d1aa6192b5e8ab2ab45f62bca5908c8"
+    },
+    {
+      "bytes": 2020,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+      "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+    }
+  ],
+  "checkpoint_conversion_command": [
+    "python",
+    "benchmark_tools/orthofinder_mcl_to_orthogroups.py",
+    "benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/clusters_OrthoFinder_I1.2.txt_id_pairs.txt",
+    "benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/SequenceIDs.txt",
+    "benchmarks/results/orthofinder_v3_sequence_only_20260830/orthogroups.txt"
+  ],
+  "checkpoint_conversion_resources": {
+    "elapsed_seconds": 0.42,
+    "exit_status": 0,
+    "max_process_rss_kib": 85744,
+    "semantics": {
+      "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+      "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+      "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+      "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+    },
+    "system_seconds": 0.07,
+    "user_seconds": 0.34
+  },
+  "checks": {
+    "checkpoint_conversion_matches": true,
+    "conversion_command_matches": true,
+    "expected_settings": true,
+    "full_command_matches": true,
+    "logged_version_and_completion": true,
+    "processed_sequences_match": true,
+    "staged_inputs_match": true
+  },
+  "command": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/bin/orthofinder",
+    "-f",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input",
+    "-t",
+    "32",
+    "-a",
+    "8",
+    "-S",
+    "diamond"
+  ],
+  "full_groups": 35454,
+  "full_inference_resources": {
+    "elapsed_seconds": 3421.07,
+    "exit_status": 0,
+    "max_process_rss_kib": 4787980,
+    "semantics": {
+      "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+      "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+      "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+      "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+    },
+    "system_seconds": 3743.77,
+    "user_seconds": 64429.47
+  },
+  "genes": 251378,
+  "limitations": [
+    "Retrospective retained-file consistency, not independently attested historical execution or binary identity.",
+    "Checkpoint readback shares the existing converter parser; not an independent MCL parser validation.",
+    "Sequence-only is a checkpoint from the full run; its conversion time is not inference runtime.",
+    "GNU-time resources are descriptive historical process measurements, not controlled comparative or process-tree memory evidence.",
+    "Full output semantics rely on the separately documented version-specific source audit, not filename inference.",
+    "No native inference or benchmark scoring rerun; no changes to retained scores."
+  ],
+  "publication_ready": false,
+  "sequence_groups": 34230,
+  "sequence_only_inference_resources": null,
+  "species": [
+    {
+      "input_genes": 20191,
+      "mapping_ids_match_processed": true,
+      "original_ids_match": true,
+      "processed": {
+        "bytes": 8591792,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species0.fa",
+        "sha256": "20c3cfab34e8d8f3916bb57ac9cf23513f390118e0e147eddae6670f8ed6cbd2"
+      },
+      "processed_genes": 20191,
+      "reference_input": {
+        "bytes": 8784620,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/input/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+        "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+      },
+      "sequence_mismatch_ids": [],
+      "species": "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "staged": {
+        "bytes": 8784620,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+        "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+      },
+      "staged_bytes_match": true
+    },
+    {
+      "input_genes": 20257,
+      "mapping_ids_match_processed": true,
+      "original_ids_match": true,
+      "processed": {
+        "bytes": 11739388,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species1.fa",
+        "sha256": "009a12930d8a594200fba0670de2a37308a2e40fc098e37c2442342447c0d423"
+      },
+      "processed_genes": 20257,
+      "reference_input": {
+        "bytes": 11973324,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/input/Canis_familiaris.CanFam3.1.pep.all.fa",
+        "sha256": "0d87161a9990b9d8b0d56b4e71dfbe74c6016b0dda3352247b35d85501c33b33"
+      },
+      "sequence_mismatch_ids": [],
+      "species": "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "staged": {
+        "bytes": 11973324,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/Canis_familiaris.CanFam3.1.pep.all.fa",
+        "sha256": "0d87161a9990b9d8b0d56b4e71dfbe74c6016b0dda3352247b35d85501c33b33"
+      },
+      "staged_bytes_match": true
+    },
+    {
+      "input_genes": 16671,
+      "mapping_ids_match_processed": true,
+      "original_ids_match": true,
+      "processed": {
+        "bytes": 5603187,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species2.fa",
+        "sha256": "39463b44ab290576918b043b496b48442a7e2bf81655ff7933dab5cfa73fc0b0"
+      },
+      "processed_genes": 16671,
+      "reference_input": {
+        "bytes": 5797677,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/input/Ciona_intestinalis.KH.pep.all.fa",
+        "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+      },
+      "sequence_mismatch_ids": [],
+      "species": "Ciona_intestinalis.KH.pep.all.fa",
+      "staged": {
+        "bytes": 5797677,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/Ciona_intestinalis.KH.pep.all.fa",
+        "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+      },
+      "staged_bytes_match": true
+    },
+    {
+      "input_genes": 30313,
+      "mapping_ids_match_processed": true,
+      "original_ids_match": true,
+      "processed": {
+        "bytes": 16675945,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species3.fa",
+        "sha256": "e442c25dee05df1c11bffbf5dfd0b4600ca261f9c2742df1d9e02c042b8afbc6"
+      },
+      "processed_genes": 30313,
+      "reference_input": {
+        "bytes": 17020497,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/input/Danio_rerio.GRCz11.pep.all.fa",
+        "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+      },
+      "sequence_mismatch_ids": [],
+      "species": "Danio_rerio.GRCz11.pep.all.fa",
+      "staged": {
+        "bytes": 17020497,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/Danio_rerio.GRCz11.pep.all.fa",
+        "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+      },
+      "staged_bytes_match": true
+    },
+    {
+      "input_genes": 13947,
+      "mapping_ids_match_processed": true,
+      "original_ids_match": true,
+      "processed": {
+        "bytes": 7712013,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species4.fa",
+        "sha256": "d14445f598bec754d24aa39cc980a3456db0c873b7eb48b759ddb86728fe4359"
+      },
+      "processed_genes": 13947,
+      "reference_input": {
+        "bytes": 7778910,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/input/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+        "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+      },
+      "sequence_mismatch_ids": [],
+      "species": "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "staged": {
+        "bytes": 7778910,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+        "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+      },
+      "staged_bytes_match": true
+    },
+    {
+      "input_genes": 16878,
+      "mapping_ids_match_processed": true,
+      "original_ids_match": true,
+      "processed": {
+        "bytes": 9686366,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species5.fa",
+        "sha256": "c39ed88c7b3343891fe6ad3a5216dfb6476fd218062c9fbdfd895bc2f0517a51"
+      },
+      "processed_genes": 16878,
+      "reference_input": {
+        "bytes": 9883133,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/input/Gallus_gallus.GRCg6a.pep.all.fa",
+        "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+      },
+      "sequence_mismatch_ids": [],
+      "species": "Gallus_gallus.GRCg6a.pep.all.fa",
+      "staged": {
+        "bytes": 9883133,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/Gallus_gallus.GRCg6a.pep.all.fa",
+        "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+      },
+      "staged_bytes_match": true
+    },
+    {
+      "input_genes": 23485,
+      "mapping_ids_match_processed": true,
+      "original_ids_match": true,
+      "processed": {
+        "bytes": 13377822,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species6.fa",
+        "sha256": "b8c48cec941b896354abc02292a7b6a56167d657f36dd4ee408653024018fcdb"
+      },
+      "processed_genes": 23485,
+      "reference_input": {
+        "bytes": 13576811,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/input/Homo_sapiens.GRCh38.pep.all.fa",
+        "sha256": "bff5d1f0f259c801dc607045e4c13bfc759098f17d536b307c13a89a523569ac"
+      },
+      "sequence_mismatch_ids": [],
+      "species": "Homo_sapiens.GRCh38.pep.all.fa",
+      "staged": {
+        "bytes": 13576811,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/Homo_sapiens.GRCh38.pep.all.fa",
+        "sha256": "bff5d1f0f259c801dc607045e4c13bfc759098f17d536b307c13a89a523569ac"
+      },
+      "staged_bytes_match": true
+    },
+    {
+      "input_genes": 21384,
+      "mapping_ids_match_processed": true,
+      "original_ids_match": true,
+      "processed": {
+        "bytes": 11684295,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species7.fa",
+        "sha256": "b62110965cbf2c062d639c6e25e938e3287618df5019a644819ccceb2cd2fb7c"
+      },
+      "processed_genes": 21384,
+      "reference_input": {
+        "bytes": 11930628,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/input/Monodelphis_domestica.ASM229v1.pep.all.fa",
+        "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+      },
+      "sequence_mismatch_ids": [],
+      "species": "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "staged": {
+        "bytes": 11930628,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/Monodelphis_domestica.ASM229v1.pep.all.fa",
+        "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+      },
+      "staged_bytes_match": true
+    },
+    {
+      "input_genes": 22866,
+      "mapping_ids_match_processed": true,
+      "original_ids_match": true,
+      "processed": {
+        "bytes": 12617943,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species8.fa",
+        "sha256": "05eb5b81627ea98b0154a91f09bfc4a4ded2d321ef9e612c8c000baf85592835"
+      },
+      "processed_genes": 22866,
+      "reference_input": {
+        "bytes": 12880578,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/input/Mus_musculus.GRCm38.pep.all.fa",
+        "sha256": "3b6e0a68688294135324824e1879de86c1715a9f3c655406f6ec8fcfdd75db1a"
+      },
+      "sequence_mismatch_ids": [],
+      "species": "Mus_musculus.GRCm38.pep.all.fa",
+      "staged": {
+        "bytes": 12880578,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/Mus_musculus.GRCm38.pep.all.fa",
+        "sha256": "3b6e0a68688294135324824e1879de86c1715a9f3c655406f6ec8fcfdd75db1a"
+      },
+      "staged_bytes_match": true
+    },
+    {
+      "input_genes": 23534,
+      "mapping_ids_match_processed": true,
+      "original_ids_match": true,
+      "processed": {
+        "bytes": 12512321,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species9.fa",
+        "sha256": "22c37e940826cfc825e5777fac8ca0113f90ef78187b3c808f0c549b07f2e483"
+      },
+      "processed_genes": 23534,
+      "reference_input": {
+        "bytes": 12782304,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/input/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+        "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+      },
+      "sequence_mismatch_ids": [],
+      "species": "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "staged": {
+        "bytes": 12782304,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+        "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+      },
+      "staged_bytes_match": true
+    },
+    {
+      "input_genes": 22250,
+      "mapping_ids_match_processed": true,
+      "original_ids_match": true,
+      "processed": {
+        "bytes": 11766464,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species10.fa",
+        "sha256": "9bd4d36f7d9f9b04d0d69d0a6092260067b3ac91d10cb672e4d59fc2ba7fbc8f"
+      },
+      "processed_genes": 22250,
+      "reference_input": {
+        "bytes": 12000073,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/input/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+        "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+      },
+      "sequence_mismatch_ids": [],
+      "species": "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "staged": {
+        "bytes": 12000073,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+        "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+      },
+      "staged_bytes_match": true
+    },
+    {
+      "input_genes": 19602,
+      "mapping_ids_match_processed": true,
+      "original_ids_match": true,
+      "processed": {
+        "bytes": 10256843,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/Species11.fa",
+        "sha256": "9ac99a9c90de91f68405a93f933df9e32cbb2fa411434a9a51192c9974a147a1"
+      },
+      "processed_genes": 19602,
+      "reference_input": {
+        "bytes": 10463972,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/input/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+        "sha256": "1f6ebacc342da127e4ab9c1a9cf7b627e8169df3cbc0d971d57655d974c8d9b2"
+      },
+      "sequence_mismatch_ids": [],
+      "species": "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "staged": {
+        "bytes": 10463972,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+        "sha256": "1f6ebacc342da127e4ab9c1a9cf7b627e8169df3cbc0d971d57655d974c8d9b2"
+      },
+      "staged_bytes_match": true
+    }
+  ],
+  "status": "retained_orthofinder_ob_provenance_readback"
+}

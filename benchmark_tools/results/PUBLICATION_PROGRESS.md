@@ -1,5 +1,25 @@
 # Publication Progress
 
+## OrthoFinder OrthoBench Native Evidence Consolidated (2026-09-26)
+
+The preceding turn progressed the manuscript. This turn reread the full goal
+and audited retained input, processed sequences, native checkpoints, commands,
+versions and resource logs for both OrthoFinder OrthoBench rows. All 12 staged
+input hashes and 251,378 processed protein sequences match the frozen input
+inventory. The sequence-only partition exactly reproduces the native checkpoint
+conversion; full and sequence prediction hashes match admitted score evidence.
+
+[Complete provenance readback](OB_ORTHOFINDER_PROVENANCE_20260926.md) preserves
+the native 3.1.5 command, 3421.07-second full run and 0.42-second conversion.
+The latter is explicitly not sequence-only inference runtime. All seven native
+consistency gates and 26 focused tests pass. Historical binary identity and
+controlled resource comparability remain unproven; no scores changed.
+
+Job 22179 was revalidated RUNNING at 2:21:58, with initial search complete and
+clustering underway. No native inference was rerun. Remaining tools' transitive
+provenance, full-run readback, controlled timing, uncertainty/generalization
+and release obligations remain active; DGX stays deferred.
+
 ## Stage Trace and Resource Limits Integrated into Manuscript v19 (2026-09-26)
 
 The preceding turn made progress by completing all-cell stage tracing and
