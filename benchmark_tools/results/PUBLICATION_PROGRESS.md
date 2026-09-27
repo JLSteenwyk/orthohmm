@@ -1,5 +1,16 @@
 # Publication Progress
 
+## Integrated Result PDF Checked (2026-09-27)
+
+Previous turn updated the manuscript and v26 HTML with the completed full
+OrthoBench admission. Rendered that unchanged HTML to a new 46-page PDF and
+rechecked all source/asset hashes. No text/image block falls outside page
+bounds at one-point tolerance. Pages 44-45 were visually inspected for the
+new result and reconstructed-base paragraphs; both are legible without
+clipping or overlap. The [review](MANUSCRIPT_PDF_REVIEW_20260927_v26.md)
+retains the targeted scope; this is not full-document review or publication
+readiness. No scientific result, default or previous artifact changed.
+
 ## Admitted Full Run Added To Manuscript (2026-09-27)
 
 Previous turn completed and pushed independent admission of job 22337.
