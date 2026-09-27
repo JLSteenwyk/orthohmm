@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Five Base Archive Gaps Resolved (2026-09-27)
+
+Previous turn attributed observed base-runtime files while leaving five
+installed-file digests unknown. Reconfirmed job 22337 RUNNING. Downloaded
+the five exact package archives, verified their retained SHA256 pins, and
+compared selected regular-file payloads without installation: all five
+installed libraries match byte-for-byte. The [comparison receipt](INTEGRATED_BASE_ARCHIVE_COMPARISON_20260927.md)
+retains commands, URLs, hashes and limits. This closes those file checks,
+not complete runtime restoration, security or rights review. No native
+process or environment changed; full-job admission and other publication
+requirements remain pending.
+
 ## Observed Base Runtime Providers Attributed (2026-09-27)
 
 Previous turn captured live search-stage libraries. Reconfirmed job 22337

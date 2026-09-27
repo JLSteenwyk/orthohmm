@@ -1,0 +1,210 @@
+{
+  "command": [
+    "/home/bizon/anaconda3/bin/python",
+    "-c",
+    "import json,hashlib,urllib.request,zipfile,tarfile,sys;from pathlib import Path;import zstandard;from benchmark_tools.prepare_ob_candidate_neighborhood import record,check; source=Path(\"benchmark_tools/results/integrated_base_runtime_packages_20260927.json\"); original=record(source); data=json.loads(source.read_text()); selected=[r for r in data[\"files\"] if any(o[\"provider\"]==\"conda\" and o[\"installed_sha256_matches\"] is None for o in r[\"owners\"])]; out=Path(\"benchmarks/work/publication_base_runtime_archives_20260927\");out.mkdir(exist_ok=False);results=[]\nfor row in selected:\n owner=row[\"owners\"][0];check(owner[\"metadata\"]);meta=json.loads(Path(owner[\"metadata\"][\"path\"]).read_text());url=meta[\"url\"];assert url==\"https://repo.anaconda.com/pkgs/main/linux-64/\"+meta[\"fn\"];target=out/meta[\"fn\"]\n with urllib.request.urlopen(url,timeout=60) as response,target.open(\"xb\") as dest:\n  assert response.status==200\n  while block:=response.read(1024*1024):dest.write(block)\n archived=record(target);assert archived[\"sha256\"]==meta[\"sha256\"];relative=str(Path(row[\"file\"][\"path\"]).relative_to(\"/home/bizon/anaconda3\"));matches=[];members=[]\n with zipfile.ZipFile(target) as archive:\n  assert len(archive.namelist())==len(set(archive.namelist()));payloads=[n for n in archive.namelist() if n.startswith(\"pkg-\") and n.endswith(\".tar.zst\")];assert len(payloads)==1\n  with archive.open(payloads[0]) as compressed,zstandard.ZstdDecompressor().stream_reader(compressed) as stream,tarfile.open(fileobj=stream,mode=\"r|\") as tar:\n   for member in tar:\n    if member.name!=relative:continue\n    members.append(dict(name=member.name,size=member.size,type=member.type.decode(\"ascii\"),linkname=member.linkname));assert member.isfile();raw=tar.extractfile(member);h=hashlib.sha256();size=0\n    while block:=raw.read(1024*1024):h.update(block);size+=len(block)\n    matches.append(dict(bytes=size,sha256=h.hexdigest()))\n assert len(matches)==1;check(row[\"file\"]);check(owner[\"metadata\"]);m=matches[0];results.append(dict(installed=row[\"file\"],package=owner[\"package\"],metadata=owner[\"metadata\"],url=url,archive=archived,archive_member=members[0],payload=m,installed_matches_archive=all(m[k]==row[\"file\"][k] for k in (\"bytes\",\"sha256\"))))\ncheck(original);result=dict(status=\"selected_base_archives_acquired_and_compared\",input=original,command=sys.orig_argv,zstandard_version=zstandard.__version__,results=results,publication_ready=False,redistribution_clearance=False,limitations=[\"Five previously unverified observed files only, not complete runtime closure\", \"Archives match locally recorded package SHA256; no signed repository metadata validation\", \"Raw archive member comparison does not apply installation prefix transformations\", \"No archive installation or native execution; running workflow unchanged\", \"No license compatibility, security or cross-host reproduction claim\"]);Path(\"benchmark_tools/results/integrated_base_archive_comparison_20260927.json\").open(\"x\").write(json.dumps(result,indent=2,sort_keys=True)+\"\\n\");print([(r[\"package\"][\"name\"],r[\"installed_matches_archive\"],r[\"archive\"][\"bytes\"]) for r in results])"
+  ],
+  "input": {
+    "bytes": 62490,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/integrated_base_runtime_packages_20260927.json",
+    "sha256": "ef6eacc7c877df9ae1e32fdb986732e6d0659b2a4b9203c549e918481a8b899f"
+  },
+  "limitations": [
+    "Five previously unverified observed files only, not complete runtime closure",
+    "Archives match locally recorded package SHA256; no signed repository metadata validation",
+    "Raw archive member comparison does not apply installation prefix transformations",
+    "No archive installation or native execution; running workflow unchanged",
+    "No license compatibility, security or cross-host reproduction claim"
+  ],
+  "publication_ready": false,
+  "redistribution_clearance": false,
+  "results": [
+    {
+      "archive": {
+        "bytes": 80125,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_base_runtime_archives_20260927/bzip2-1.0.8-h7b6447c_0.conda",
+        "sha256": "d3fa503351a53692866182a3819fb28d105e32c25d177bf6a9444c4153215e0d"
+      },
+      "archive_member": {
+        "linkname": "",
+        "name": "lib/libbz2.so.1.0.8",
+        "size": 83576,
+        "type": "0"
+      },
+      "installed": {
+        "bytes": 83576,
+        "path": "/home/bizon/anaconda3/lib/libbz2.so.1.0.8",
+        "sha256": "2aa4427cfdbae9ef95a402de9291102dd293e58d29409df9812c3c8fa9216ccd"
+      },
+      "installed_matches_archive": true,
+      "metadata": {
+        "bytes": 1684,
+        "path": "/home/bizon/anaconda3/conda-meta/bzip2-1.0.8-h7b6447c_0.json",
+        "sha256": "7fbbb8e31aab0bd4edbeede4d94c6e44aa170f38da94a2a6a5a1e0bb432a1f70"
+      },
+      "package": {
+        "build": "h7b6447c_0",
+        "license": "bzip2",
+        "md5": "9303f4af7c004e069bae22bde8d800ee",
+        "name": "bzip2",
+        "sha256": "d3fa503351a53692866182a3819fb28d105e32c25d177bf6a9444c4153215e0d",
+        "version": "1.0.8"
+      },
+      "payload": {
+        "bytes": 83576,
+        "sha256": "2aa4427cfdbae9ef95a402de9291102dd293e58d29409df9812c3c8fa9216ccd"
+      },
+      "url": "https://repo.anaconda.com/pkgs/main/linux-64/bzip2-1.0.8-h7b6447c_0.conda"
+    },
+    {
+      "archive": {
+        "bytes": 5602184,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_base_runtime_archives_20260927/libgcc-ng-11.2.0-h1234567_1.conda",
+        "sha256": "cdcce11f1c6ca57ba686ab92f3a5c122efe1e0630e00c6ad275624ce79008aa7"
+      },
+      "archive_member": {
+        "linkname": "",
+        "name": "lib/libgcc_s.so.1",
+        "size": 475272,
+        "type": "0"
+      },
+      "installed": {
+        "bytes": 475272,
+        "path": "/home/bizon/anaconda3/lib/libgcc_s.so.1",
+        "sha256": "d912bad5e511194c15b506fe7eafe4454bc2dc4073a0fdebc60e86af59a0f2bc"
+      },
+      "installed_matches_archive": true,
+      "metadata": {
+        "bytes": 2074,
+        "path": "/home/bizon/anaconda3/conda-meta/libgcc-ng-11.2.0-h1234567_1.json",
+        "sha256": "6b04ef667b6087bb48ee7c58bfa934f8087f207c67448f51cf9a11e0b853702f"
+      },
+      "package": {
+        "build": "h1234567_1",
+        "license": "GPL-3.0-only WITH GCC-exception-3.1",
+        "md5": "a87728dabf3151fb9cfa990bd2eb0464",
+        "name": "libgcc-ng",
+        "sha256": "cdcce11f1c6ca57ba686ab92f3a5c122efe1e0630e00c6ad275624ce79008aa7",
+        "version": "11.2.0"
+      },
+      "payload": {
+        "bytes": 475272,
+        "sha256": "d912bad5e511194c15b506fe7eafe4454bc2dc4073a0fdebc60e86af59a0f2bc"
+      },
+      "url": "https://repo.anaconda.com/pkgs/main/linux-64/libgcc-ng-11.2.0-h1234567_1.conda"
+    },
+    {
+      "archive": {
+        "bytes": 485145,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_base_runtime_archives_20260927/libgomp-11.2.0-h1234567_1.conda",
+        "sha256": "a1c6e599df45e116af81c36ec4c9efb1793fa3a0b854dd90dd6c8813cd476e90"
+      },
+      "archive_member": {
+        "linkname": "",
+        "name": "lib/libgomp.so.1.0.0",
+        "size": 1265616,
+        "type": "0"
+      },
+      "installed": {
+        "bytes": 1265616,
+        "path": "/home/bizon/anaconda3/lib/libgomp.so.1.0.0",
+        "sha256": "e3b68c5f37afb7b70bd12273b69706ab33a397714e8336910f0e47f8f1cf6854"
+      },
+      "installed_matches_archive": true,
+      "metadata": {
+        "bytes": 1311,
+        "path": "/home/bizon/anaconda3/conda-meta/libgomp-11.2.0-h1234567_1.json",
+        "sha256": "84e4ae4e142d13e33ed5d5f99a1608cd9538393e3dfb8ca6c109603f26146514"
+      },
+      "package": {
+        "build": "h1234567_1",
+        "license": "GPL-3.0-only WITH GCC-exception-3.1",
+        "md5": "b372c0eea9b60732fdae4b817a63c8cd",
+        "name": "libgomp",
+        "sha256": "a1c6e599df45e116af81c36ec4c9efb1793fa3a0b854dd90dd6c8813cd476e90",
+        "version": "11.2.0"
+      },
+      "payload": {
+        "bytes": 1265616,
+        "sha256": "e3b68c5f37afb7b70bd12273b69706ab33a397714e8336910f0e47f8f1cf6854"
+      },
+      "url": "https://repo.anaconda.com/pkgs/main/linux-64/libgomp-11.2.0-h1234567_1.conda"
+    },
+    {
+      "archive": {
+        "bytes": 28110,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_base_runtime_archives_20260927/libuuid-1.41.5-h5eee18b_0.conda",
+        "sha256": "2a401aafabac51b7736cfe12d2ab205d29052640ea8183253c9d0a8e7ed0d49a"
+      },
+      "archive_member": {
+        "linkname": "",
+        "name": "lib/libuuid.so.1.3.0",
+        "size": 35944,
+        "type": "0"
+      },
+      "installed": {
+        "bytes": 35944,
+        "path": "/home/bizon/anaconda3/lib/libuuid.so.1.3.0",
+        "sha256": "b42fa6cf1dcaca6b84e8155c4649d6bad561eaca2e8fa9473db178dbaa4aec53"
+      },
+      "installed_matches_archive": true,
+      "metadata": {
+        "bytes": 1969,
+        "path": "/home/bizon/anaconda3/conda-meta/libuuid-1.41.5-h5eee18b_0.json",
+        "sha256": "94623248e360bb775e693b7365f6e53aeea9b8e31039576cacd9be2670d9ebb9"
+      },
+      "package": {
+        "build": "h5eee18b_0",
+        "license": "BSD-3-Clause",
+        "md5": "4a6a2354414c9080327274aa514e5299",
+        "name": "libuuid",
+        "sha256": "2a401aafabac51b7736cfe12d2ab205d29052640ea8183253c9d0a8e7ed0d49a",
+        "version": "1.41.5"
+      },
+      "payload": {
+        "bytes": 35944,
+        "sha256": "b42fa6cf1dcaca6b84e8155c4649d6bad561eaca2e8fa9473db178dbaa4aec53"
+      },
+      "url": "https://repo.anaconda.com/pkgs/main/linux-64/libuuid-1.41.5-h5eee18b_0.conda"
+    },
+    {
+      "archive": {
+        "bytes": 105851,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_base_runtime_archives_20260927/zlib-1.2.13-h5eee18b_0.conda",
+        "sha256": "4b69b6752e384459b1fc47dfc078598d5b687b3ccffe21591676b640481fb794"
+      },
+      "archive_member": {
+        "linkname": "",
+        "name": "lib/libz.so.1.2.13",
+        "size": 124744,
+        "type": "0"
+      },
+      "installed": {
+        "bytes": 124744,
+        "path": "/home/bizon/anaconda3/lib/libz.so.1.2.13",
+        "sha256": "0b0e682a9dc7fd4895a6783288f851b793dc89633f28714027974fa4d66f3914"
+      },
+      "installed_matches_archive": true,
+      "metadata": {
+        "bytes": 1951,
+        "path": "/home/bizon/anaconda3/conda-meta/zlib-1.2.13-h5eee18b_0.json",
+        "sha256": "450d5fcfd62fe57fb2e4487d9bd55734e1b4e17670966f988d7ec292d619d111"
+      },
+      "package": {
+        "build": "h5eee18b_0",
+        "license": "Zlib",
+        "md5": "333e31fbfbb5057c92fa845ad6adef93",
+        "name": "zlib",
+        "sha256": "4b69b6752e384459b1fc47dfc078598d5b687b3ccffe21591676b640481fb794",
+        "version": "1.2.13"
+      },
+      "payload": {
+        "bytes": 124744,
+        "sha256": "0b0e682a9dc7fd4895a6783288f851b793dc89633f28714027974fa4d66f3914"
+      },
+      "url": "https://repo.anaconda.com/pkgs/main/linux-64/zlib-1.2.13-h5eee18b_0.conda"
+    }
+  ],
+  "status": "selected_base_archives_acquired_and_compared",
+  "zstandard_version": "0.19.0"
+}
