@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Initial Graph Topology Preserved Across Score/Order Controls (2026-09-26)
+
+The preceding turn compared all retained search hits and found matching pair
+presence with tiny score differences. This turn reread the goal and crossed
+historical/fresh hit order and scores under one frozen graph implementation,
+fixed gene indexing and audit runtime. All four arms have exactly the same
+1,803,122 edge keys. Order alone changes nothing; score changes affect 1,031
+weights and 120 gene thresholds by at most 8.881784197001252e-16, without
+changing edge presence. See the [diagnostic](INSTALLED_OB_GRAPH_PROBE_20260926.md).
+
+Sixty focused tests pass. Saved graphs are hashed for a next controlled
+initial-clustering test. No search/clustering/phylogeny rerun, accuracy
+replacement or causal final-score claim was made. Runtime, indexing and
+later-stage effects remain unresolved; broader provenance, uncertainty,
+controlled resources and release requirements remain active. DGX deferred.
+
 ## Installed Run Search Matches in Presence, Candidates Differ (2026-09-26)
 
 The preceding turn completed all fresh-run readbacks and retained the score
