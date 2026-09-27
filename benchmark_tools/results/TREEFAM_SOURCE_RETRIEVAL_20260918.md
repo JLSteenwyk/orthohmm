@@ -189,6 +189,25 @@ match the SHA-256 values above. No newly recovered original TreeFam input
 has been admitted for analysis. The [Sanger archive page](https://www.sanger.ac.uk/tool/treefam/)
 explicitly states that the resource is no longer available at Sanger.
 
+### Release-7 API Archive Inspected (2026-09-27)
+
+Downloaded the [TreeSoft release-7 Perl API archive](https://downloads.sourceforge.net/project/treesoft/TreeFam-Perl-API/7v1/Treefam-7v1.tar.gz)
+to `benchmarks/work/treefam_source_search_20260918/Treefam-7v1.tar.gz`.
+The 40,113-byte archive has SHA-256
+`d862953bf2b4968efc538d700bec3118c5fbc0f608f163020fbafc15fbdfeec6`.
+Its complete tar inventory contains nine Perl modules and Subversion
+metadata/base copies, not NHX trees, a database dump, a nested data archive,
+or `treefam2reference.txt`. No downloaded code was executed or installed.
+
+Reading `Treefam/Config.pm` directly from the archive identifies API version
+7 and the public anonymous database `treefam_7` on
+`vegasrv.sanger.ac.uk:3308`. A local `getent hosts vegasrv.sanger.ac.uk`
+lookup returned no address (exit 2); no database connection was attempted.
+This unsuccessful lookup does not establish permanent database loss.
+The archive therefore closes one previously uninspected software-package
+lead but does not recover the benchmark inputs. No scores or uncertainty
+estimates changed, and no maintainer contact was sent.
+
 Request the QfO 2020/2020.2 reference-generation source bundle from the QfO
 maintainers, and the release-7 archive from TreeFam/EBI if necessary. A draft
 request follows; **no email, issue or support submission has been sent**.

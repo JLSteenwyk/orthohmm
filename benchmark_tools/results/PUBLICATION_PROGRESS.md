@@ -1,5 +1,18 @@
 # Publication Progress
 
+## TreeFam Release-7 API Lead Checked (2026-09-27)
+
+Previous turn was a verified wait on full integrated job 22337; this turn
+again confirmed it RUNNING with 32 CPUs. Downloaded and inspected the
+release-7 Perl API archive without executing it. The complete inventory
+has software and Subversion metadata, not the missing trees or mapping.
+Its configured public database hostname did not resolve locally. The
+[retrieval record](TREEFAM_SOURCE_RETRIEVAL_20260918.md) retains the URL,
+size, digest and bounded conclusion. Original TreeFam family uncertainty
+remains unresolved; maintainer contact has not been sent. Continue the
+full-run admission when job 22337 terminates. DGX work remains deferred;
+no dedicated comparative timing evidence was obtained on this shared host.
+
 ## Integrated Wheel Notice Texts Collected (2026-09-27)
 
 Previous turn implemented independent admission while full job 22337 continued.
