@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Completed QfO Controls Integrated Into Manuscript (2026-09-27)
+
+Previous turn was a verified wait on live assessment 22336. Rechecked the
+publication objective and scheduler; the same job remains running. Updated
+the manuscript source and claim checklist from the completed fresh-retained
+and canonical readbacks: exact retained reproduction, 110 lost/85 gained
+canonical pairs, seven annotation changes, unchanged species trees and the
+joint candidate/constraint causal limitation. Kept accuracy admission pending
+and explicitly retained the unseeded FAS caveat. No scoring-pinned source was
+edited. The v23 rendered review remains a historical snapshot, not a rendering
+of this updated source; regenerate after validated scoring is incorporated.
+Next independently admit job 22336 only after successful terminal completion.
+No new accuracy score, default promotion or publication-readiness claim.
+
 ## Canonical Score Admission Adapter Tested (2026-09-27)
 
 Previous turn launched assessment 22336; scheduler confirms it running and the

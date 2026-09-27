@@ -2316,11 +2316,32 @@ constraint positions, despite preserving both total counts. A
 [dependency trace](QFO_ORDER_DEPENDENCY_TRACE_20260927.md) localized the
 difference to two proteins exchanging singleton/family assignments; all
 351,737 shared families retained their IDs and both arms selected the same
-ordered 26 species-tree marker families. This is not an accuracy comparison:
-unchanged marker inputs do not establish downstream tree or prediction
-equivalence. The frozen downstream comparison remains unfinished. Historical
-QfO scores are therefore not yet attributable to the installed canonical
-end-to-end pipeline, and no score has been replaced or default retuned.
+ordered 26 species-tree marker families.
+
+The completed [fresh retained-order phylogeny replay](QFO_FRESH_PHYLOGENY_RESULT_22329.md)
+rebuilt trees without checkpoint reuse and reproduced all 366,068 historical
+root groups, 5,959,560 native ortholog pairs and their species/confidence
+annotations. The inferred species-tree bytes also matched. The
+[three-way downstream comparison](QFO_CANONICAL_RESULT_22333.md) then evaluated
+canonical candidates, reusing only 24,263 input-identical raw-tree checkpoints
+and rerunning species-tree inference, rooting, reconciliation and membership
+filtering. Relative to either historical or fresh retained order, canonical
+predictions lost 110 pairs, gained 85 pairs and changed seven shared-pair
+annotations. One old root group was replaced by four groups; 44 genes belong
+to the union of changed root groups, not necessarily 44 individual
+reassignments. All three species trees were byte-identical. Candidate
+membership and constraints changed together, so the experiment does not
+isolate their individual causal contributions.
+
+These controls establish retained-order downstream reproducibility, but
+contradict canonical prediction equivalence on QfO. They are not a fresh
+search, independent accuracy confirmation or controlled timing comparison.
+All 5,959,535 canonical native pairs passed independent conversion validation
+with zero mapping loss. Their [six-endpoint scoring protocol](QFO_CANONICAL_SCORING_PROTOCOL_20260927.md)
+is frozen; final accuracy admission remains pending. Historical QfO scores
+must not be transferred to these changed predictions, and no score has been
+replaced or default retuned. Native FAS uses unseeded sampling, preventing
+attribution of its score difference solely to candidate ordering.
 
 Historical installation manifests retain their original tool versions and
 must not be interpreted as secure installation recommendations. The original
