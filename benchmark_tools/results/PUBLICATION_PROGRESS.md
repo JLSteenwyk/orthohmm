@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Corrected QfO Readback Plan Frozen (2026-09-27)
+
+Previous turn corrected and tested explicit metadata admission. Scheduler
+reinspection confirms native 22329 COMPLETED and readback 22330 FAILED. A
+separate `readback_v2_plan.json` in the same native run directory now pins
+738 Python sources, original native plan/submission, failed reader plan/log/
+submission, historical staging audit and staging manifest. Plan: 180,101 bytes,
+SHA256 `d42e759f2d42442f250a440a1138be30660b2d842c2477bb4d44024e54edcdca`.
+It retains the original four scientific readers, full native comparisons and
+2 CPU/128 GiB/3-hour limit, writes a fresh `readback_v2` directory, and explicitly
+records the failed preceding job. This is a new audit attempt, not a native
+retry; no predictions, parameters or scoring endpoints change. Next submit
+once after pushing this freeze, retain the actual job/submission, and require
+post-readback source checks before any reuse admission. Publication gates
+remain open.
+
 ## Explicit QfO Metadata Inventory Correction (2026-09-27)
 
 Previous turn diagnosed the terminal reader failure. Both fresh and canonical
