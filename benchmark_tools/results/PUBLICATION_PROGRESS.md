@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Two-Distribution Replay Submitted as Job 22320 (2026-09-26)
+
+Preparation/protocol committed and pushed as edac1fd. Job 22320 was submitted
+with the pinned v2 plan and verified RUNNING at 0:15 on bizon, 32 CPUs,
+128 GiB, 13 hours. The [submission receipt](ob_dependency_replay_submission_22320.json)
+retains scheduler configuration and code/plan identity. Both private-cwd smoke
+replays passed; the full focused suite has 114 passing tests. Full results
+remain unadmitted pending terminal success and independent stage readback.
+
+Do not edit `run_ob_dependency_replay.py`, `replay_high_sensitivity.py`, the
+private venv path files, copied distribution or frozen inputs while the job
+runs. Poll the existing handle; no retry/resume or score-table replacement.
+Native logs, per-arm execution receipts and stage snapshots are under
+`benchmarks/work/ob_dependency_replay_v2_20260926`. The final execution receipt
+is written only after both arms succeed. A missing receipt while RUNNING is
+not failure. Other goal work remains available; DGX is deferred.
+
 ## Downstream Dependency Replay Prepared and Smoke-Tested (2026-09-26)
 
 The preceding turn isolated the Leiden-distribution effect on initial groups.

@@ -1,0 +1,14 @@
+{
+  "commit": "edac1fd5a69ac5a5946cd30598405dfc88a22b4d",
+  "job_id": 22320,
+  "native_results_admitted": false,
+  "plan": {
+    "bytes": 84422,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_dependency_replay_v2_20260926/plan.json",
+    "sha256": "950a472f1ca767851c69446412edc0b26ea5fc5646160c1d385f6318327b87ba"
+  },
+  "scheduler": "JobId=22320 JobName=ohm-dep-replay\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=RUNNING Reason=None Dependency=(null)\n   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:15 TimeLimit=13:00:00 TimeMin=N/A\n   SubmitTime=2026-09-26T21:31:00 EligibleTime=2026-09-26T21:31:00\n   AccrueTime=2026-09-26T21:31:00\n   StartTime=2026-09-26T21:31:00 EndTime=2026-09-27T10:31:00 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-26T21:31:00 Scheduler=Main\n   Partition=gpu AllocNode:Sid=bizon-link:157118\n   ReqNodeList=(null) ExcNodeList=(null)\n   NodeList=bizon\n   BatchHost=bizon\n   NumNodes=1 NumCPUs=32 NumTasks=1 CPUs/Task=32 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=32,mem=128G,node=1,billing=32\n   AllocTRES=cpu=32,mem=128G,node=1,billing=32\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=32 MinMemoryNode=128G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=(null)\n   WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\n   StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_dependency_replay_v2_20260926/slurm-22320.log\n   StdIn=/dev/null\n   StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_dependency_replay_v2_20260926/slurm-22320.log\n   TresPerTask=cpu=32\n   \n\n",
+  "tests": {
+    "passed": 114
+  }
+}
