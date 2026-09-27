@@ -1,8 +1,8 @@
 {
   "aggregate": {
-    "bytes": 134872527,
-    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/Apr_20/tmp/all.fa",
-    "sha256": "0701c3545ca653586ae276e47e59ddea4229d4fc2c239e6c24412f4459aef5cd"
+    "bytes": 134871658,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/Jul_25/tmp/all.fa",
+    "sha256": "859692e8f1600afa4cd72f6192b0673e56ed082b7b4696cc2233b611a397a0e3"
   },
   "complete_audit_passed": false,
   "error": "Native aggregate sequences differ from frozen inputs",
@@ -12,8 +12,9 @@
     "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/installed_ob_input_inventory_20260926.json",
     "sha256": "8b429398e6c381fcdec8289c641a7f20969edcad5595e3d3f6930335601571bd"
   },
+  "metadata_correction": "Initial record at commit 15e5991 incorrectly labeled Apr_20; subsequent explicit comparison shows April exact and July differing. Original traceback lacked run identity. Strict audit source and failed outcome remain preserved.",
   "requested_output_not_written": true,
-  "run": "Apr_20",
+  "run": "Jul_25",
   "scores_changed": false,
   "source": {
     "bytes": 9053,

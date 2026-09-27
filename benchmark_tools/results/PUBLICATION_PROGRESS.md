@@ -1,5 +1,23 @@
 # Publication Progress
 
+## OrthoMCL Provenance Separates Runs and Exposes July Input Changes (2026-09-26)
+
+The preceding turn launched job 22320. This turn reread the goal, verified it
+still RUNNING, and advanced independent comparator provenance. Both OrthoMCL
+native MCL conversions and species maps agree exactly with their own retained
+outputs. April 2026 aggregate sequences match frozen inputs; July 2025 deletes
+869 asterisks from 177 proteins, including two full RefOG023 members. The
+[audit](OB_ORTHOMCL_PROVENANCE_20260926.md) retains the failed identity gate,
+corrects the initial failure receipt's erroneous April label, and separates
+32-thread/270,555-second April from 8-thread/371,702-second July log evidence.
+
+Thirty-eight focused tests pass. The descriptive audit deliberately exits 1
+after writing both rows because July input identity fails. Historical scores
+remain unchanged; the current table now discloses the limitation. Job 22320
+was revalidated RUNNING at 6:27; do not modify its pinned driver, helpers or
+environments. Readback of that job, remaining provenance, uncertainty,
+controlled timing and release work remain active; DGX stays deferred.
+
 ## Two-Distribution Replay Submitted as Job 22320 (2026-09-26)
 
 Preparation/protocol committed and pushed as edac1fd. Job 22320 was submitted

@@ -5,12 +5,14 @@ from datetime import datetime, timedelta, timezone
 import json
 from pathlib import Path
 import shlex
+import sys
 
 from benchmark_tools.prepare_ob_candidate_neighborhood import record, check
 from benchmark_tools.audit_ob_orthofinder_provenance import fasta
 from benchmark_tools.compare_ob_orthomcl_runs import partition
 from benchmark_tools.normalize_three_kingdoms_orthogroups import iter_orthomcl
 from benchmark_tools.orthofinder_mcl_to_orthogroups import iter_mcl_clusters
+from benchmark_tools.explain_ob_input_differences import differences
 
 OUTPUTS = {"Apr_20":"6234d4fd517826fdf4fd9c25cca14b8d0bf58aef089c407eae7a57324e53e32a",
            "Jul_25":"1add0db6640e0451184975b5cbdf085ff404bbf24dadb66402921cd4dfd8a227"}
@@ -110,9 +112,16 @@ def audit(repo, base):
     if record(inventory_path)["sha256"] != "8b429398e6c381fcdec8289c641a7f20969edcad5595e3d3f6930335601571bd":
         raise ValueError("Changed input inventory")
     inventory = json.loads(inventory_path.read_text())
-    records = [record(inventory_path),*inventory["inputs"]]
+    reference_path = repo / "benchmark_tools/results/orthobench_paired_uncertainty_20260916.json"
+    if record(reference_path)["sha256"] != "660ead29c5b6ac0b8278cd1e62cdcdb0a513db81dda317e634b805e661d70ba9":
+        raise ValueError("Changed reference inventory")
+    reference_records = json.loads(reference_path.read_text())["inputs"]["references"]
+    records = [record(inventory_path),*inventory["inputs"],record(reference_path),*reference_records]
     for item in records:
         check(item)
+    refs = {Path(r["path"]).name:set(Path(r["path"]).read_text().splitlines()) for r in reference_records}
+    if len(refs) != 70:
+        raise ValueError("Wrong reference-family inventory")
     expected, by_species = {}, {}
     for item in inventory["inputs"]:
         path = Path(item["path"])
@@ -133,8 +142,9 @@ def audit(repo, base):
             raise ValueError("Changed native partition")
         records.extend(inputs)
         aggregate = fasta(directory / "tmp/all.fa")
-        if aggregate != expected:
-            raise ValueError("Native aggregate sequences differ from frozen inputs")
+        delta = differences(expected,aggregate,refs)
+        if delta["only_original"] or delta["only_staged"]:
+            raise ValueError("Native aggregate gene universe differs from frozen inputs")
         species = mapping(directory / "tmp/all.gg",by_species)
         index = read_index(directory / "tmp/all_ortho.idx",set(expected))
         translated = ((str(i),tuple(index[g] for g in genes)) for i,genes in
@@ -148,17 +158,21 @@ def audit(repo, base):
         if set(filenames) != set(by_species) or len(filenames) != len(by_species):
             raise ValueError("Command input inventory differs")
         rows.append(dict(run=label,**details,species_mapping=species,input_genes=len(aggregate),
-            sequences_exact=True,mcl_conversion_exact=True,groups=len(native),assigned_genes=len(native_genes),
+            sequences_exact=aggregate == expected,input_differences=delta,
+            mcl_conversion_exact=True,groups=len(native),assigned_genes=len(native_genes),
             unassigned_genes=len(expected)-len(native_genes),input_records=inputs))
     for item in records:
         check(item)
-    return dict(status="retained_orthomcl_inputs_conversion_and_logs_verified",runs=rows,
+    return dict(status="retained_orthomcl_provenance_readback",runs=rows,
+        input_identity_all_runs=all(r["sequences_exact"] for r in rows),
         checked_records=records,source=record(__file__),scores_changed=False,
         limitations=["Retained log timestamps are descriptive wall intervals, not controlled timing or scheduler accounting.",
             "BLAST thread requests are not measured CPU use; peak RSS and CPU time remain unknown.",
             "Executable version-looking paths are not historical binary attestations.",
             "No complete BLAST/BPO/matrix or transitive execution audit; no inference rerun.",
             "Generic MCL parser is shared with another audit; this does not independently validate MCL inference.",
+            "Sequence differences remain a failed identity gate; transformation descriptions do not identify an actor or causal accuracy effect.",
+            "Reference exposure uses full family membership before low-certainty exclusions, not an effect bound.",
             "April 2026 and July 2025 are different retained runs; no metadata or timing transfer between them."])
 
 
@@ -174,3 +188,5 @@ if __name__ == "__main__":
     with a.output.open("x") as stream:
         json.dump(result,stream,indent=2,sort_keys=True)
         stream.write("\n")
+    if not result["input_identity_all_runs"]:
+        sys.exit(1)

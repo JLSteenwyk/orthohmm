@@ -25,6 +25,13 @@ by deletion of 869 `*` symbols; two occur in full RefOG023 membership. The
 retained score is unchanged, but this row must not be described as having
 verified byte-identical input. The effect on accuracy is unmeasured.
 
+The [OrthoMCL run audit](OB_ORTHOMCL_PROVENANCE_20260926.md) identifies the same
+177-protein/869-asterisk transformation in the July 2025 aggregate FASTA used
+with the admitted July partition. April 2026 inputs match exactly, but its
+partition and thread/timing records are distinct. Equal OrthoBench family
+scores do not justify transferring April's exact-input or runtime evidence to
+July. The score table is unchanged; this comparability limitation is retained.
+
 Nine tests pass, covering exact source values/units, corrected-only selection,
 contemporary SonicParanoid selection, duplicate/missing/admission/metric errors,
 source-digest rejection and output preservation. Initial execution exposed that
