@@ -50,13 +50,15 @@ def render(repo, manuscript, output, report):
     binary = shutil.which("pandoc")
     if binary is None:
         raise FileNotFoundError("pandoc")
-    sources = [record(p) for p in (manuscript, binary, __file__)]
+    print_header = Path(__file__).with_name("manuscript_review_print.html")
+    sources = [record(p) for p in (manuscript, binary, __file__, print_header)]
     parse_command = [binary, "--from=markdown", "--to=json", str(manuscript)]
     parsed = subprocess.run(parse_command, capture_output=True, text=True, check=True, timeout=60)
     occurrences, targets = local_assets(json.loads(parsed.stdout), manuscript, repo)
     tracked = set(subprocess.check_output(["git", "ls-files", "-z"], cwd=repo, text=True).split("\0"))
     command = [binary, "--from=markdown", "--to=html5", "--standalone",
-               "--metadata=title:OrthoHMM publication working draft", str(manuscript)]
+               "--metadata=pagetitle:OrthoHMM publication working draft",
+               "--include-in-header", str(print_header), str(manuscript)]
     rendered = subprocess.run(command, capture_output=True, text=True, check=True, timeout=60)
     for item in [*sources, *targets.values()]:
         check(item)

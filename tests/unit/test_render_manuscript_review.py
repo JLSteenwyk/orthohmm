@@ -1,4 +1,5 @@
 import json
+from html.parser import HTMLParser
 from pathlib import Path
 import shutil
 import subprocess
@@ -55,6 +56,19 @@ def test_real_pandoc_render_and_no_overwrite(tmp_path):
     assert result["untracked_targets"] == []
     assert result["publication_ready"] is False
     assert 'href="evidence.json"' in output.read_text()
+    class Headings(HTMLParser):
+        count = 0
+
+        def handle_starttag(self, tag, attrs):
+            if tag == "h1":
+                self.count += 1
+
+    headings = Headings()
+    headings.feed(output.read_text())
+    assert headings.count == 1
+    assert "<title>OrthoHMM publication working draft</title>" in output.read_text()
+    assert "@page { margin: 18mm; }" in output.read_text()
+    assert any(Path(s["path"]).name == "manuscript_review_print.html" for s in result["sources"])
     with pytest.raises(FileExistsError):
         render(tmp_path, draft, output, report)
 

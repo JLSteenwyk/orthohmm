@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Condensed Main Text Rendered And Visually Reviewed (2026-09-27)
+
+Previous turn drafted the concise scientific narrative. Rendered it and fixed
+two observed layout defects: duplicate title and insufficient print margins.
+The renderer records its print-header hash and all eight focused tests pass.
+The fresh [three-page review](PUBLICATION_MAIN_REVIEW_20260927.md) has no
+automated bounds violations; all three pages were visually inspected without
+clipping or overlap. All 12 local evidence targets were rehashed after print.
+Historical renders and scientific text remain unchanged. This completes a
+reviewable main-text artifact, not journal formatting, complete bibliography,
+scientific uncertainty, controlled timing or the archival release.
+
 ## Condensed Scientific Main Text Drafted (2026-09-27)
 
 Previous turn retired obsolete pending jobs. A fresh read-only alert snapshot
