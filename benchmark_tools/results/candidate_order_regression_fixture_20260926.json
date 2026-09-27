@@ -1,0 +1,1470 @@
+{
+  "accuracy_evaluated": false,
+  "directed_hits": 12,
+  "genes": 5,
+  "limitations": [
+    "Synthetic floating-point/order mechanism fixture, not biological accuracy evidence.",
+    "Canonicalization is experimental and not connected to production inference.",
+    "Fixed lexical gene indexing, unique directed hits, fixed score values and runtime.",
+    "Does not address dependency versions, cross-platform arithmetic, seed ordering or score perturbations.",
+    "Full-data candidate and end-to-end validation remain required before any promotion."
+  ],
+  "numpy": "2.2.6",
+  "policy": "canonical_directed_pair_v1",
+  "production_changed": false,
+  "reversed_total": 0.6000000000000001,
+  "rows": [
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "input_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "input_order": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        4,
+        6,
+        7,
+        8,
+        9,
+        11,
+        10
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            4
+          ],
+          [
+            3
+          ]
+        ]
+      },
+      "input_order": [
+        0,
+        1,
+        2,
+        4,
+        3,
+        5,
+        6,
+        7,
+        8,
+        10,
+        9,
+        11
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            4
+          ],
+          [
+            3
+          ]
+        ]
+      },
+      "input_order": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        3,
+        6,
+        7,
+        8,
+        10,
+        11,
+        9
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            4
+          ],
+          [
+            3
+          ]
+        ]
+      },
+      "input_order": [
+        0,
+        1,
+        2,
+        5,
+        3,
+        4,
+        6,
+        7,
+        8,
+        11,
+        9,
+        10
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            4
+          ],
+          [
+            3
+          ]
+        ]
+      },
+      "input_order": [
+        0,
+        1,
+        2,
+        5,
+        4,
+        3,
+        6,
+        7,
+        8,
+        11,
+        10,
+        9
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "input_order": [
+        0,
+        2,
+        1,
+        3,
+        4,
+        5,
+        6,
+        8,
+        7,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "input_order": [
+        0,
+        2,
+        1,
+        3,
+        5,
+        4,
+        6,
+        8,
+        7,
+        9,
+        11,
+        10
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            4
+          ],
+          [
+            3
+          ]
+        ]
+      },
+      "input_order": [
+        0,
+        2,
+        1,
+        4,
+        3,
+        5,
+        6,
+        8,
+        7,
+        10,
+        9,
+        11
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            4
+          ],
+          [
+            3
+          ]
+        ]
+      },
+      "input_order": [
+        0,
+        2,
+        1,
+        4,
+        5,
+        3,
+        6,
+        8,
+        7,
+        10,
+        11,
+        9
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            4
+          ],
+          [
+            3
+          ]
+        ]
+      },
+      "input_order": [
+        0,
+        2,
+        1,
+        5,
+        3,
+        4,
+        6,
+        8,
+        7,
+        11,
+        9,
+        10
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            4
+          ],
+          [
+            3
+          ]
+        ]
+      },
+      "input_order": [
+        0,
+        2,
+        1,
+        5,
+        4,
+        3,
+        6,
+        8,
+        7,
+        11,
+        10,
+        9
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "input_order": [
+        1,
+        0,
+        2,
+        3,
+        4,
+        5,
+        7,
+        6,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "input_order": [
+        1,
+        0,
+        2,
+        3,
+        5,
+        4,
+        7,
+        6,
+        8,
+        9,
+        11,
+        10
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "input_order": [
+        1,
+        0,
+        2,
+        4,
+        3,
+        5,
+        7,
+        6,
+        8,
+        10,
+        9,
+        11
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "input_order": [
+        1,
+        0,
+        2,
+        4,
+        5,
+        3,
+        7,
+        6,
+        8,
+        10,
+        11,
+        9
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "input_order": [
+        1,
+        0,
+        2,
+        5,
+        3,
+        4,
+        7,
+        6,
+        8,
+        11,
+        9,
+        10
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "input_order": [
+        1,
+        0,
+        2,
+        5,
+        4,
+        3,
+        7,
+        6,
+        8,
+        11,
+        10,
+        9
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "input_order": [
+        1,
+        2,
+        0,
+        3,
+        4,
+        5,
+        7,
+        8,
+        6,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "input_order": [
+        1,
+        2,
+        0,
+        3,
+        5,
+        4,
+        7,
+        8,
+        6,
+        9,
+        11,
+        10
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "input_order": [
+        1,
+        2,
+        0,
+        4,
+        3,
+        5,
+        7,
+        8,
+        6,
+        10,
+        9,
+        11
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "input_order": [
+        1,
+        2,
+        0,
+        4,
+        5,
+        3,
+        7,
+        8,
+        6,
+        10,
+        11,
+        9
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "input_order": [
+        1,
+        2,
+        0,
+        5,
+        3,
+        4,
+        7,
+        8,
+        6,
+        11,
+        9,
+        10
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "input_order": [
+        1,
+        2,
+        0,
+        5,
+        4,
+        3,
+        7,
+        8,
+        6,
+        11,
+        10,
+        9
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "input_order": [
+        2,
+        0,
+        1,
+        3,
+        4,
+        5,
+        8,
+        6,
+        7,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "input_order": [
+        2,
+        0,
+        1,
+        3,
+        5,
+        4,
+        8,
+        6,
+        7,
+        9,
+        11,
+        10
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "input_order": [
+        2,
+        0,
+        1,
+        4,
+        3,
+        5,
+        8,
+        6,
+        7,
+        10,
+        9,
+        11
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "input_order": [
+        2,
+        0,
+        1,
+        4,
+        5,
+        3,
+        8,
+        6,
+        7,
+        10,
+        11,
+        9
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "input_order": [
+        2,
+        0,
+        1,
+        5,
+        3,
+        4,
+        8,
+        6,
+        7,
+        11,
+        9,
+        10
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "input_order": [
+        2,
+        0,
+        1,
+        5,
+        4,
+        3,
+        8,
+        6,
+        7,
+        11,
+        10,
+        9
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "input_order": [
+        2,
+        1,
+        0,
+        3,
+        4,
+        5,
+        8,
+        7,
+        6,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "input_order": [
+        2,
+        1,
+        0,
+        3,
+        5,
+        4,
+        8,
+        7,
+        6,
+        9,
+        11,
+        10
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "input_order": [
+        2,
+        1,
+        0,
+        4,
+        3,
+        5,
+        8,
+        7,
+        6,
+        10,
+        9,
+        11
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "input_order": [
+        2,
+        1,
+        0,
+        4,
+        5,
+        3,
+        8,
+        7,
+        6,
+        10,
+        11,
+        9
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "input_order": [
+        2,
+        1,
+        0,
+        5,
+        3,
+        4,
+        8,
+        7,
+        6,
+        11,
+        9,
+        10
+      ]
+    },
+    {
+      "groups": {
+        "canonical_directed_pair_v1": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "unchanged": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "input_order": [
+        2,
+        1,
+        0,
+        5,
+        4,
+        3,
+        8,
+        7,
+        6,
+        11,
+        10,
+        9
+      ]
+    }
+  ],
+  "scientific_source": {
+    "bytes": 61183,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/orthohmm/refinement.py",
+    "sha256": "991f1eb6a5f73d0442529ed19095a34b7c6ba8bff8dfe43a1127e24ec73fb26d"
+  },
+  "sequential_total": 0.6,
+  "source": {
+    "bytes": 4201,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/candidate_hit_order_policy.py",
+    "sha256": "cc70b884e40fe73a3c25ef9ae60a2133508127323a11382a8c610e0d192ec811"
+  },
+  "status": "synthetic_candidate_order_regression_exercised"
+}

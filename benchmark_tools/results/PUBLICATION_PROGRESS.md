@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Small Ordering Regression and Experimental Policy (2026-09-26)
+
+The preceding turn established the full-data hit-order effect. This continuation
+reread the objective, verified the current refinement source exactly matches
+the frozen installation, and built a five-gene/twelve-hit regression fixture.
+The [result](CANDIDATE_ORDER_REGRESSION_20260926.md) records all 36 permutations:
+unchanged candidate merging gives two partitions; experimental canonical
+directed-pair ordering gives one. The fixture uses one attachment per anchor
+to expose the bounded-attachment mechanism and has no biological ground truth.
+
+Forty-eight focused tests pass. Canonicalization changes only order, preserves
+scores/dtypes/self hits and rejects duplicates instead of silently merging
+them. It remains a benchmark-only prototype, not connected to production.
+No scientific default or historical score changed. Next validate canonical
+input identities and all candidate outputs on the retained full-data factorial
+before deciding on a versioned method revision and renewed end-to-end work.
+Dependency sensitivity, final-F1 causality and broader publication requirements
+remain open; no new full-data native job was launched and DGX stays deferred.
+
 ## Candidate Hit Order Explains the Residual (2026-09-26)
 
 The preceding turn preserved job 22321's import failure and fixture-tested a
