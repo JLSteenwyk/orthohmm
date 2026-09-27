@@ -1,5 +1,17 @@
 # Publication Progress
 
+## VGNC Replacement Inference Methods Reviewed (2026-09-27)
+
+Previous turn completed the full unit regression. Reviewed primary sources
+for sparse-network empirical likelihood and ordered-node dyadic inference
+against the retained rare-error and shared-clade failures. The
+[decision record](VGNC_UNCERTAINTY_METHOD_REVIEW_20260927.md) distinguishes
+candidate theory from applicability to paired VGNC F1 and identifies missing
+sampling-target, ratio-statistic and dependence assumptions. No off-the-shelf
+replacement or native CI was promoted. Source-access limits and preprint
+status are explicit. This narrows the next statistical task but does not
+complete uncertainty analysis or publication readiness.
+
 ## Full Unit Regression Refreshed (2026-09-27)
 
 Previous turn integrated the GO/EC interpretation. Ran the complete unit
