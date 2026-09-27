@@ -1,5 +1,16 @@
 # Publication Progress
 
+## Reconstructed Base Notices Exported (2026-09-27)
+
+Previous turn was a verified wait on job 22337; reconfirmed RUNNING. Collected
+32 notice candidates from both streams of the 19 pinned base-package archives,
+with 312,355 bytes verified before/after relocation. The [export record](RECONSTRUCTED_BASE_NOTICES_20260927.md)
+preserves provider declarations and the `_libgcc_mutex` notice/declaration
+gap. It complements the wheel export without asserting component attribution,
+license compatibility or redistribution clearance. No installed runtime or
+native inference changed; full-job admission and broader publication gates
+remain pending.
+
 ## All Prefix-Rewritten Payloads Reproduced (2026-09-27)
 
 Previous turn audited the reconstructed Conda payloads with 195 qualified

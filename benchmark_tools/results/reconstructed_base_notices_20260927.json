@@ -1,0 +1,430 @@
+{
+  "bytes": 312355,
+  "files": 32,
+  "index": {
+    "bytes": 45646,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_base_notices_20260927/NOTICE_INDEX.json",
+    "sha256": "354ae13e199dce29641d42b86b3b4c21e46ba66b891163e8dc641ed51bd7234d"
+  },
+  "input": {
+    "bytes": 20919,
+    "path": "/tmp/orthohmm-base-reconstruction-20260927/acquisition.json",
+    "sha256": "96e75bb68ef68b1f3c6e68b32ebc2f079f725a709a78a4994bbfbbd83570f6cd"
+  },
+  "limitations": [
+    "Filename-based candidate collection, not complete component attribution or license compatibility",
+    "Repeated notice members in info and payload streams retained separately",
+    "No package code or binary redistribution performed",
+    "External tools, system libraries and datasets outside this export"
+  ],
+  "package_summary": [
+    {
+      "archive": {
+        "bytes": 3473,
+        "path": "/tmp/orthohmm-base-reconstruction-20260927/archives/_libgcc_mutex-0.1-main.conda",
+        "sha256": "476626712f60e5ef0fe04c354727152b1ee5285d57ccd3575c7be930122bd051"
+      },
+      "build": "main",
+      "declared_license": null,
+      "embedded_about": [
+        {
+          "license": null,
+          "license_family": null,
+          "member": "info/about.json",
+          "sha256": "c68294bbed7a2787ccc1b95b56afbe029b2efe4ccc07ba4bda6849af203394d8",
+          "stream": "info-_libgcc_mutex-0.1-main.tar.zst"
+        }
+      ],
+      "name": "_libgcc_mutex",
+      "notice_count": 0,
+      "version": "0.1"
+    },
+    {
+      "archive": {
+        "bytes": 21315,
+        "path": "/tmp/orthohmm-base-reconstruction-20260927/archives/_openmp_mutex-5.1-1_gnu.conda",
+        "sha256": "576011048d23f2e03372263493c5529f802286ff53e8426df99a5b11cc2572f3"
+      },
+      "build": "1_gnu",
+      "declared_license": "BSD-3-Clause",
+      "embedded_about": [
+        {
+          "license": "BSD-3-Clause",
+          "license_family": null,
+          "member": "info/about.json",
+          "sha256": "ea881773bc3f462b27de3569f2406287f103090f4633987f3287b98fe70ed215",
+          "stream": "info-_openmp_mutex-5.1-1_gnu.tar.zst"
+        }
+      ],
+      "name": "_openmp_mutex",
+      "notice_count": 1,
+      "version": "5.1"
+    },
+    {
+      "archive": {
+        "bytes": 80125,
+        "path": "/tmp/orthohmm-base-reconstruction-20260927/archives/bzip2-1.0.8-h7b6447c_0.conda",
+        "sha256": "d3fa503351a53692866182a3819fb28d105e32c25d177bf6a9444c4153215e0d"
+      },
+      "build": "h7b6447c_0",
+      "declared_license": "bzip2",
+      "embedded_about": [
+        {
+          "license": "bzip2",
+          "license_family": "BSD",
+          "member": "info/about.json",
+          "sha256": "88b00e7a4b9b295426101bf041fbfb6bf65f5c3c73117b2f890812a66d9c6aa4",
+          "stream": "info-bzip2-1.0.8-h7b6447c_0.tar.zst"
+        }
+      ],
+      "name": "bzip2",
+      "notice_count": 1,
+      "version": "1.0.8"
+    },
+    {
+      "archive": {
+        "bytes": 132323,
+        "path": "/tmp/orthohmm-base-reconstruction-20260927/archives/ca-certificates-2025.2.25-h06a4308_0.conda",
+        "sha256": "a30302efb91584dd31e63e540c735bfe776e1832f163eadceae47f692ab7d4f3"
+      },
+      "build": "h06a4308_0",
+      "declared_license": "MPL-2.0",
+      "embedded_about": [
+        {
+          "license": "MPL-2.0",
+          "license_family": "Other",
+          "member": "info/about.json",
+          "sha256": "b508ae19bf7dda28544ac30d1e05afa3ee55916cb690e30a87dcba927aa96914",
+          "stream": "info-ca-certificates-2025.2.25-h06a4308_0.tar.zst"
+        }
+      ],
+      "name": "ca-certificates",
+      "notice_count": 2,
+      "version": "2025.2.25"
+    },
+    {
+      "archive": {
+        "bytes": 669201,
+        "path": "/tmp/orthohmm-base-reconstruction-20260927/archives/ld_impl_linux-64-2.38-h1181459_1.conda",
+        "sha256": "0c7a6f340f4a9e15cc99b3c7e11f07c7670a9b881161739edd77753e5530fe31"
+      },
+      "build": "h1181459_1",
+      "declared_license": "GPL-3.0-only",
+      "embedded_about": [
+        {
+          "license": "GPL-3.0-only",
+          "license_family": null,
+          "member": "info/about.json",
+          "sha256": "6b26b8a6d8cf272d0f14c0bb04f6772b5b771cc78fcedadd95d842f84384b6f8",
+          "stream": "info-ld_impl_linux-64-2.38-h1181459_1.tar.zst"
+        }
+      ],
+      "name": "ld_impl_linux-64",
+      "notice_count": 4,
+      "version": "2.38"
+    },
+    {
+      "archive": {
+        "bytes": 145364,
+        "path": "/tmp/orthohmm-base-reconstruction-20260927/archives/libffi-3.4.4-h6a678d5_0.conda",
+        "sha256": "2ac2a8507a48fdf8ba71ab38b0843ca373782a4a0c6367775498843c24bbc08c"
+      },
+      "build": "h6a678d5_0",
+      "declared_license": "MIT",
+      "embedded_about": [
+        {
+          "license": "MIT",
+          "license_family": "MIT",
+          "member": "info/about.json",
+          "sha256": "1638c2de1430491530e0e9be9fe2953830a2e776313c53247f4e8b11e5a3e31e",
+          "stream": "info-libffi-3.4.4-h6a678d5_0.tar.zst"
+        }
+      ],
+      "name": "libffi",
+      "notice_count": 1,
+      "version": "3.4.4"
+    },
+    {
+      "archive": {
+        "bytes": 5602184,
+        "path": "/tmp/orthohmm-base-reconstruction-20260927/archives/libgcc-ng-11.2.0-h1234567_1.conda",
+        "sha256": "cdcce11f1c6ca57ba686ab92f3a5c122efe1e0630e00c6ad275624ce79008aa7"
+      },
+      "build": "h1234567_1",
+      "declared_license": "GPL-3.0-only WITH GCC-exception-3.1",
+      "embedded_about": [
+        {
+          "license": "GPL-3.0-only WITH GCC-exception-3.1",
+          "license_family": null,
+          "member": "info/about.json",
+          "sha256": "4a50f7ea3e20055be920f00667bba34ce467fd773bed74171824905da8c3339a",
+          "stream": "info-libgcc-ng-11.2.0-h1234567_1.tar.zst"
+        }
+      ],
+      "name": "libgcc-ng",
+      "notice_count": 1,
+      "version": "11.2.0"
+    },
+    {
+      "archive": {
+        "bytes": 485145,
+        "path": "/tmp/orthohmm-base-reconstruction-20260927/archives/libgomp-11.2.0-h1234567_1.conda",
+        "sha256": "a1c6e599df45e116af81c36ec4c9efb1793fa3a0b854dd90dd6c8813cd476e90"
+      },
+      "build": "h1234567_1",
+      "declared_license": "GPL-3.0-only WITH GCC-exception-3.1",
+      "embedded_about": [
+        {
+          "license": "GPL-3.0-only WITH GCC-exception-3.1",
+          "license_family": null,
+          "member": "info/about.json",
+          "sha256": "add902432612d1b8f659fc7d6df2a49528dd1d5c47bf2211752d52498a5f1f6f",
+          "stream": "info-libgomp-11.2.0-h1234567_1.tar.zst"
+        }
+      ],
+      "name": "libgomp",
+      "notice_count": 1,
+      "version": "11.2.0"
+    },
+    {
+      "archive": {
+        "bytes": 3837704,
+        "path": "/tmp/orthohmm-base-reconstruction-20260927/archives/libstdcxx-ng-13.2.0-hc0a3c3a_7.conda",
+        "sha256": "35f1e08be0a84810c9075f5bd008495ac94e6c5fe306dfe4b34546f11fed850f"
+      },
+      "build": "hc0a3c3a_7",
+      "declared_license": "GPL-3.0-only WITH GCC-exception-3.1",
+      "embedded_about": [
+        {
+          "license": "GPL-3.0-only WITH GCC-exception-3.1",
+          "license_family": null,
+          "member": "info/about.json",
+          "sha256": "471a91f278a9d39edba3addf61a02fc50884bf575a60adbca2368c4011277a4a",
+          "stream": "info-libstdcxx-ng-13.2.0-hc0a3c3a_7.tar.zst"
+        }
+      ],
+      "name": "libstdcxx-ng",
+      "notice_count": 2,
+      "version": "13.2.0"
+    },
+    {
+      "archive": {
+        "bytes": 28110,
+        "path": "/tmp/orthohmm-base-reconstruction-20260927/archives/libuuid-1.41.5-h5eee18b_0.conda",
+        "sha256": "2a401aafabac51b7736cfe12d2ab205d29052640ea8183253c9d0a8e7ed0d49a"
+      },
+      "build": "h5eee18b_0",
+      "declared_license": "BSD-3-Clause",
+      "embedded_about": [
+        {
+          "license": "BSD-3-Clause",
+          "license_family": "BSD",
+          "member": "info/about.json",
+          "sha256": "ff671c65064ced31f1dad1b9a61e1992804a42e350cf6328455677e0d0883f35",
+          "stream": "info-libuuid-1.41.5-h5eee18b_0.tar.zst"
+        }
+      ],
+      "name": "libuuid",
+      "notice_count": 1,
+      "version": "1.41.5"
+    },
+    {
+      "archive": {
+        "bytes": 935878,
+        "path": "/tmp/orthohmm-base-reconstruction-20260927/archives/ncurses-6.4-h6a678d5_0.conda",
+        "sha256": "a3150cb7655d3781b2ff2d8a7f1eea6103dbbd8835adc7429f7377e4886f6129"
+      },
+      "build": "h6a678d5_0",
+      "declared_license": "MIT AND X11",
+      "embedded_about": [
+        {
+          "license": "MIT AND X11",
+          "license_family": "MIT",
+          "member": "info/about.json",
+          "sha256": "c6ff056d9554308aa36fd0d9ab065f2e6346524f5a542f4208d13cc24f1506a5",
+          "stream": "info-ncurses-6.4-h6a678d5_0.tar.zst"
+        }
+      ],
+      "name": "ncurses",
+      "notice_count": 1,
+      "version": "6.4"
+    },
+    {
+      "archive": {
+        "bytes": 5493205,
+        "path": "/tmp/orthohmm-base-reconstruction-20260927/archives/openssl-3.0.16-h5eee18b_0.conda",
+        "sha256": "b1767edf49fe9a2fff321cb42386041d0c7d8ff88acf5e20b4a02d3ccd0a1b97"
+      },
+      "build": "h5eee18b_0",
+      "declared_license": "Apache-2.0",
+      "embedded_about": [
+        {
+          "license": "Apache-2.0",
+          "license_family": "Apache",
+          "member": "info/about.json",
+          "sha256": "9fb76557a774434c59a3e3ffb945b9f960e97aed0d47476a2da455f53f2c483a",
+          "stream": "info-openssl-3.0.16-h5eee18b_0.tar.zst"
+        }
+      ],
+      "name": "openssl",
+      "notice_count": 1,
+      "version": "3.0.16"
+    },
+    {
+      "archive": {
+        "bytes": 28088174,
+        "path": "/tmp/orthohmm-base-reconstruction-20260927/archives/python-3.10.13-h955ad1f_0.conda",
+        "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de"
+      },
+      "build": "h955ad1f_0",
+      "declared_license": "PSF-2.0",
+      "embedded_about": [
+        {
+          "license": "PSF-2.0",
+          "license_family": "PSF",
+          "member": "info/about.json",
+          "sha256": "d986af862c3c718d2b9023b8358cf381ebc405ddafac0d7b6c44f41f5a538900",
+          "stream": "info-python-3.10.13-h955ad1f_0.tar.zst"
+        }
+      ],
+      "name": "python",
+      "notice_count": 3,
+      "version": "3.10.13"
+    },
+    {
+      "archive": {
+        "bytes": 365188,
+        "path": "/tmp/orthohmm-base-reconstruction-20260927/archives/readline-8.2-h5eee18b_0.conda",
+        "sha256": "3bf83c138bf0843b2fdacc5fe6b0956813b11107540d0233c148b97682e894fb"
+      },
+      "build": "h5eee18b_0",
+      "declared_license": "GPL-3.0-only",
+      "embedded_about": [
+        {
+          "license": "GPL-3.0-only",
+          "license_family": "GPL",
+          "member": "info/about.json",
+          "sha256": "75e13e27aa3ba7b939965b8fec2ecf78b2f7d60adf318539cac342906e08e76d",
+          "stream": "info-readline-8.2-h5eee18b_0.tar.zst"
+        }
+      ],
+      "name": "readline",
+      "notice_count": 1,
+      "version": "8.2"
+    },
+    {
+      "archive": {
+        "bytes": 1229749,
+        "path": "/tmp/orthohmm-base-reconstruction-20260927/archives/sqlite-3.41.2-h5eee18b_0.conda",
+        "sha256": "b74eff1c483cb5e308ac499e5f1a29cfe70aa6e4a502470c650708106da5453a"
+      },
+      "build": "h5eee18b_0",
+      "declared_license": "blessing",
+      "embedded_about": [
+        {
+          "license": "blessing",
+          "license_family": "Other",
+          "member": "info/about.json",
+          "sha256": "1d962e287df0e435d3b078053855cdd76712969d59ed71487a90f58628c344dd",
+          "stream": "info-sqlite-3.41.2-h5eee18b_0.tar.zst"
+        }
+      ],
+      "name": "sqlite",
+      "notice_count": 2,
+      "version": "3.41.2"
+    },
+    {
+      "archive": {
+        "bytes": 3173079,
+        "path": "/tmp/orthohmm-base-reconstruction-20260927/archives/tk-8.6.12-h1ccaba5_0.conda",
+        "sha256": "566579b236dff05c97b56857a808e192f2b7d420dad728b3d7e95fb553a3ce02"
+      },
+      "build": "h1ccaba5_0",
+      "declared_license": "TCL",
+      "embedded_about": [
+        {
+          "license": "TCL",
+          "license_family": "BSD",
+          "member": "info/about.json",
+          "sha256": "eadb90c9fa20c42296357ad72b9b68383304c61267c41f885433acef8d99a37b",
+          "stream": "info-tk-8.6.12-h1ccaba5_0.tar.zst"
+        }
+      ],
+      "name": "tk",
+      "notice_count": 2,
+      "version": "8.6.12"
+    },
+    {
+      "archive": {
+        "bytes": 118328,
+        "path": "/tmp/orthohmm-base-reconstruction-20260927/archives/tzdata-2023c-h04d1e81_0.conda",
+        "sha256": "aa653896749686eb15c28c719a57df597bced46f983b1fdbcc9db3e2db9cc795"
+      },
+      "build": "h04d1e81_0",
+      "declared_license": "CC-PDDC OR BSD-3-Clause",
+      "embedded_about": [
+        {
+          "license": "CC-PDDC OR BSD-3-Clause",
+          "license_family": "BSD",
+          "member": "info/about.json",
+          "sha256": "7057e28d20c32711232fa8d43f55efe942149c44dc4bdce455e98a1c91c4d215",
+          "stream": "info-tzdata-2023c-h04d1e81_0.tar.zst"
+        }
+      ],
+      "name": "tzdata",
+      "notice_count": 1,
+      "version": "2023c"
+    },
+    {
+      "archive": {
+        "bytes": 580311,
+        "path": "/tmp/orthohmm-base-reconstruction-20260927/archives/xz-5.6.4-h5eee18b_1.conda",
+        "sha256": "a9445543c2b1a1a96c052ac4535cfceb413cdbb0454a0710f9a4c98e7d5d0b1c"
+      },
+      "build": "h5eee18b_1",
+      "declared_license": "LGPL-2.1-or-later and GPL-2.0-or-later and 0BSD",
+      "embedded_about": [
+        {
+          "license": "LGPL-2.1-or-later and GPL-2.0-or-later and 0BSD",
+          "license_family": "GPL2",
+          "member": "info/about.json",
+          "sha256": "3cea2346c03302ca2ac59727a74b575473d8902b7e93f9dc657592ac8850b310",
+          "stream": "info-xz-5.6.4-h5eee18b_1.tar.zst"
+        }
+      ],
+      "name": "xz",
+      "notice_count": 5,
+      "version": "5.6.4"
+    },
+    {
+      "archive": {
+        "bytes": 105851,
+        "path": "/tmp/orthohmm-base-reconstruction-20260927/archives/zlib-1.2.13-h5eee18b_0.conda",
+        "sha256": "4b69b6752e384459b1fc47dfc078598d5b687b3ccffe21591676b640481fb794"
+      },
+      "build": "h5eee18b_0",
+      "declared_license": "Zlib",
+      "embedded_about": [
+        {
+          "license": "Zlib",
+          "license_family": "Other",
+          "member": "info/about.json",
+          "sha256": "785088744b45cb1dcf021fc171fd43e6edd70c909adae882df6af8fa58a492c4",
+          "stream": "info-zlib-1.2.13-h5eee18b_0.tar.zst"
+        }
+      ],
+      "name": "zlib",
+      "notice_count": 2,
+      "version": "1.2.13"
+    }
+  ],
+  "packages": 19,
+  "publication_ready": false,
+  "redistribution_clearance": false,
+  "relocated_index": {
+    "bytes": 45646,
+    "path": "/tmp/orthohmm-base-notices-20260927/NOTICE_INDEX.json",
+    "sha256": "354ae13e199dce29641d42b86b3b4c21e46ba66b891163e8dc641ed51bd7234d"
+  },
+  "status": "base_notice_export_relocation_verified"
+}
