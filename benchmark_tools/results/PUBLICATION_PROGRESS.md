@@ -1,5 +1,16 @@
 # Publication Progress
 
+## Updated Draft PDF Checked (2026-09-27)
+
+Previous turn integrated the latest reproducibility evidence into the draft.
+Full job 22337 remains RUNNING. Printed the unchanged v25 HTML to a fresh
+PDF, rechecked all recorded source/target hashes and found no text/image
+block bounds violations across 45 pages. Visually inspected updated pages
+44-45 without clipping or overlap; this is not full-document review.
+See the [PDF review](MANUSCRIPT_PDF_REVIEW_20260927_v25.md). No benchmark
+result or frozen run input changed. Full-run independent admission,
+dedicated comparative timing and unresolved uncertainty remain next gates.
+
 ## Reproducibility Evidence Added To Manuscript (2026-09-27)
 
 Previous turn checked a new TreeFam API archive lead. Reconfirmed full job
