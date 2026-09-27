@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Candidate Score/Order Factorial Prepared (2026-09-26)
+
+The preceding turn localized the residual to candidate expansion. This turn
+reread the objective and prepared a fixed-seed, fixed-runtime four-arm
+score/order factorial plus an explicit fresh self-hit control. The
+[protocol](OB_CANDIDATE_ORDER_SCORE_PROTOCOL_20260926.md) records the plan hash,
+resource bounds, one-attempt policy and interpretation limits before native
+execution. Fifty-six focused tests pass. A pre-execution provenance lookup
+failure was corrected by linking the pinned historical search audit; no native
+attempt occurred before that correction.
+
+Submission and terminal readback will be recorded separately. Do not change
+the pinned driver/helpers/environment once submitted. This is a bounded
+candidate mechanism test, not a final-F1 or controlled-timing result. The
+remaining publication requirements stay active, with DGX deferred.
+
 ## Residual Difference Localized to Candidate Expansion (2026-09-26)
 
 The preceding turn completed and pushed job-22320 readback. This continuation
