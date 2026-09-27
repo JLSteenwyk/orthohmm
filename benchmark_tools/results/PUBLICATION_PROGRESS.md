@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Full Recovery OrthoBench Running: 22326 (2026-09-26)
+
+After committing and pushing the frozen protocol (`0b9a0d4`), submitted
+[job 22326](full_recovery_orthobench_submission_22326.json) with 32 CPUs,
+128 GiB, a 24-hour limit and no requeue. The
+[live observation](full_recovery_orthobench_live_22326.json) confirms RUNNING
+and native entry into built-in HMM all-to-all search on all 12 proteomes.
+The pre-run installation audit matches the validated package audit exactly.
+No score is admitted. The current plan pins all existing top-level benchmark
+Python sources; do not edit them during native execution. New readback files
+can be prepared without modifying the pinned modules. Poll this specific job,
+preserve any failure, and require terminal success plus independent full-data
+audits before reporting a reproduction result. Shared-host timings remain
+descriptive only. DGX remains deferred.
+
 ## Full Recovery OrthoBench Prepared (2026-09-26)
 
 The preceding turn delivered the explicit full-pipeline fixture. This

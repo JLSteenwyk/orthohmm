@@ -1,0 +1,23 @@
+{
+  "accounting": "JobIDRaw|State|ExitCode|Elapsed|AllocCPUS\n22326|RUNNING|0:0|00:01:14|32\n22326.batch|RUNNING|0:0|00:01:14|32\n",
+  "execution_started": {
+    "bytes": 291,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_recovery_orthobench_20260926/execution_started.json",
+    "sha256": "88dac668faea4cbc7356a875f42fa7f0e95d0dba94755aa96a862f67cf71635b"
+  },
+  "install_before": {
+    "bytes": 639791,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_recovery_orthobench_20260926/install_before.json",
+    "sha256": "f1636e6e3222c135d2f174bb3f2c247f74e646d8653d087f068960f4926f2559"
+  },
+  "job_id": "22326",
+  "native_log_tail": "  ____       _   _           _    _ __  __ __  __\n / __ \\     | | | |         | |  | |  \\/  |  \\/  |\n| |  | |_ __| |_| |__   ___ | |__| | \\  / | \\  / |\n| |  | | '__| __| '_ \\ / _ \\|  __  | |\\/| | |\\/| |\n| |__| | |  | |_| | | | (_) | |  | | |  | | |  | |\n \\____/|_|   \\__|_| |_|\\___/|_|  |_|_|  |_|_|  |_|\n\nVersion: 0.5.0\n\n-------------\n| Arguments |\n-------------\nDirectory of FASTA files: /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/input\nNumber of FASTA files: 12\nDirectory for output files: /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_recovery_orthobench_20260926/native/inference\nStep to start analysis: NA\nStep to stop analysis: NA\nSearch engine: built-in (profile HMM + k-mer prefilter)\nAccuracy profile: high_sensitivity\nE-value threshold: 0.0001\nSubstitution matrix: BLOSUM62\nClustering: Leiden CPM (resolution=0.1)\nSingle-copy threshold: 0.5\nCPUs: 32\n\n\nStep 1/5: Conducting all-to-all comparisons (built-in search).\n",
+  "native_results_admitted": false,
+  "native_started": {
+    "bytes": 16172,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_recovery_orthobench_20260926/native/started.json",
+    "sha256": "b502225625cca8fa6d4d00b2ff07225cbe897c52f53ea4c3b75a3e78912386b6"
+  },
+  "observation_is_not_terminal": true,
+  "observed_stage": "Built-in HMM all-to-all search"
+}

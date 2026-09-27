@@ -46,3 +46,13 @@ but made no satellite merges; that result alone does not validate this run.
 No new scores are admitted by preparing or launching this experiment. Broader
 generalization, uncertainty, timing and publication-package requirements remain
 open even if exact baseline recovery succeeds.
+
+## Submission
+
+After protocol commit `0b9a0d4` was pushed, submitted
+[job 22326](full_recovery_orthobench_submission_22326.json). Its
+[initial live observation](full_recovery_orthobench_live_22326.json) confirms
+32 allocated CPUs and entry into native HMM all-to-all search. The before-run
+installation audit matches the validated hash. This observation is not a
+terminal result; use scheduler state and new execution/readback receipts to
+establish completion, never this historical RUNNING snapshot.

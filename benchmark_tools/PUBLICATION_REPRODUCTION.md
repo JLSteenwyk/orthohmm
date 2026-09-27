@@ -9,6 +9,11 @@ requirements and must not be confused with these audit commands.
 
 ## Method And Results
 
+- [Full OrthoBench recovery protocol](results/FULL_RECOVERY_ORTHOBENCH_PROTOCOL_20260926.md)
+  freezes the 251,378-gene end-to-end run through the new explicit entrypoint.
+  Job 22326 was submitted after protocol commit and entered native search;
+  submission and live-state receipts are not completed reproduction evidence.
+
 - [Explicit full-pipeline fixture](results/PUBLICATION_FULL_PIPELINE_FIXTURE_20260926.md)
   runs raw FASTA through the frozen installed HMM pipeline with candidate-only
   canonical ordering and fresh inferred phylogeny. Four independent readers

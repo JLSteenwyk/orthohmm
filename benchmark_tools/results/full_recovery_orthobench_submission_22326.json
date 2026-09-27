@@ -1,0 +1,29 @@
+{
+  "command": [
+    "sbatch",
+    "--parsable",
+    "--partition=gpu",
+    "--cpus-per-task=32",
+    "--mem=128G",
+    "--time=24:00:00",
+    "--no-requeue",
+    "--job-name=ohm-full-recovery",
+    "--chdir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_recovery_orthobench_20260926",
+    "--output=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_recovery_orthobench_20260926/slurm-%j.log",
+    "--wrap",
+    "env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONHASHSEED=0 /home/bizon/anaconda3/bin/python -I -c 'import sys;from pathlib import Path;sys.path.insert(0,'\"'\"'/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm'\"'\"');from benchmark_tools.run_full_recovery_orthobench import run;run(Path('\"'\"'/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_recovery_orthobench_20260926/plan.json'\"'\"'),'\"'\"'57878c0712b3216376ea1d431b1d8e9e8e3ae8eb58e3bd3069e15cf7dddb7005'\"'\"')'"
+  ],
+  "commit": "0b9a0d4d2e5101846ae78878ffa74eeadad20ab7",
+  "job_id": "22326",
+  "native_results_admitted": false,
+  "plan": {
+    "bytes": 1178303,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_recovery_orthobench_20260926/plan.json",
+    "sha256": "57878c0712b3216376ea1d431b1d8e9e8e3ae8eb58e3bd3069e15cf7dddb7005"
+  },
+  "protocol": {
+    "bytes": 19705,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/full_recovery_orthobench_protocol_20260926.json",
+    "sha256": "d03a695d670a42d15c265a84eae46881c4908317609bd2fc5b5fa3d3583de8ac"
+  }
+}
