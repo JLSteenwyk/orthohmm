@@ -1,0 +1,76 @@
+{
+  "command": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_recovery_install_20260926/venv/bin/python",
+    "-I",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_canonical_ob_phylogeny.py",
+    "--run",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_recovery_phylogeny_20260926/plan.json",
+    "--plan-sha256",
+    "55064ce8c8a6001215a2d8d8b1b006041cfbacf0999e2fb6a46d0855dcba70b4"
+  ],
+  "full_dataset_reproduced": false,
+  "limitations": [
+    "Same-host 16-gene fixture, not a full benchmark or portability test.",
+    "Historical template and external MAFFT/FastTree remain required."
+  ],
+  "plan": {
+    "bytes": 222837,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_recovery_phylogeny_20260926/plan.json",
+    "sha256": "55064ce8c8a6001215a2d8d8b1b006041cfbacf0999e2fb6a46d0855dcba70b4"
+  },
+  "publication_ready": false,
+  "reports": {
+    "admission": {
+      "bytes": 4066,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_recovery_phylogeny_20260926/admission.json",
+      "sha256": "27c1d0129dba7137a551e3ec10664466c340a00f7e9d78b9ccffb049417233aa"
+    },
+    "events": {
+      "bytes": 6450,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_recovery_phylogeny_20260926/events.json",
+      "sha256": "ca15559c9b2dc69ceb505ecf0eee025a6168fa69f1688159d40b24c9459fd56d"
+    },
+    "hierarchy": {
+      "bytes": 3477,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_recovery_phylogeny_20260926/hierarchy.json",
+      "sha256": "3ac71e449286cf98fba0bb0c4bf442f6d160a25a93afab225df7d8dc6b5ec4b8"
+    },
+    "install_after": {
+      "bytes": 639791,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_recovery_phylogeny_20260926/install_after.json",
+      "sha256": "f1636e6e3222c135d2f174bb3f2c247f74e646d8653d087f068960f4926f2559"
+    },
+    "sequences": {
+      "bytes": 5688,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_recovery_phylogeny_20260926/sequences.json",
+      "sha256": "ce8f3286e83404674f009720ad7288318596108f02f9f79313bb0e3a852e0f25"
+    },
+    "structure": {
+      "bytes": 5183,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_recovery_phylogeny_20260926/structure.json",
+      "sha256": "31e8c1b3a1494fa1530f6074b9b54f991552064ff33be3b20a069af617769f24"
+    }
+  },
+  "source": {
+    "bytes": 5413,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/verify_recovery_phylogeny.py",
+    "sha256": "7d8cb24fe8fc7b07fec2ec55eb58d68849e1db4bf02837cc2de693df205d2573"
+  },
+  "status": "fresh_recovery_phylogeny_fixture_verified",
+  "summary": {
+    "bypassed_families": 2,
+    "candidate_families": 3,
+    "checkpoint_hits": 0,
+    "duplications": 4,
+    "ortholog_pairs": 36,
+    "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_recovery_phylogeny_20260926/inference/orthohmm_phylogeny",
+    "reconciled_families": 1,
+    "remapped_checkpoint_hits": 0,
+    "root_hogs": 3,
+    "schema_version": 1,
+    "speciations": 3,
+    "species_tree_checkpoint_hit": false,
+    "species_tree_families": 2,
+    "uncertain_events": 0
+  }
+}

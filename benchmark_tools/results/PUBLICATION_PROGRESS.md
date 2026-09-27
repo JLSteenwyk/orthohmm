@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Fresh Recovery Phylogeny Validated (2026-09-26)
+
+The preceding user-status turn made no changes; this continuation reread the
+objective and executed the next available validation. The newly installed
+recovery environment now passes the
+[fresh inferred-phylogeny fixture](PUBLICATION_RECOVERY_PHYLOGENY_20260926.md):
+16 genes, four species, three root groups and 36 ortholog pairs. All four
+scientific readbacks pass, no phylogeny checkpoints were reused, and before/
+after package audits match the prior v2 audit exactly. Thirty-nine focused
+tests pass. Native execution is terminal with exit zero; no job remains running
+from this experiment. The runner preserves the historical plan and uses a
+separate new output directory.
+
+This does not transfer full-data accuracy to the new installation. Next
+integrate the explicit canonical-order, full-pipeline reproduction entrypoint
+and validate it without changing historical artifacts or production defaults.
+Independent-validation, uncertainty, provenance, dedicated timing and archive
+requirements remain open. The full goal is active; DGX remains deferred.
+
 ## Fresh Recovery Python Environment Validated (2026-09-26)
 
 The previous turn identified the exact Leiden wheel. This continuation reread

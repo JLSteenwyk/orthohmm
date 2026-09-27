@@ -9,6 +9,12 @@ requirements and must not be confused with these audit commands.
 
 ## Method And Results
 
+- [Fresh recovery-install phylogeny fixture](results/PUBLICATION_RECOVERY_PHYLOGENY_20260926.md)
+  validates inferred species/gene trees and reconciliation in the new hash-locked
+  venv with four independent scientific readbacks. This 16-gene same-host test
+  does not transfer the full OrthoBench recovery score to the new installation
+  or complete portable full-pipeline reproduction.
+
 - [Matched-recall simulation graph control](results/MATCHED_GRAPH_RESULT_20260926.md)
   separates search calibration from downstream orthology scoring. All 70 search
   datasets and 70 graph arms completed; reporting covers 35 datasets in seven
