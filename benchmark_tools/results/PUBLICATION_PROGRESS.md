@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Canonical Six-Endpoint Scorer Frozen (2026-09-27)
+
+Previous turn independently admitted conversion. Added an assessment adapter
+that binds verified conversion 22335, exact native-pair semantics/counts,
+reference mapping and the unchanged six-endpoint command helper. Twenty-six
+focused adapter/conversion tests pass, including altered participant, cliques,
+mapping loss, incomplete receipts and mismatched artifacts. Real preparation
+revalidated dependencies and froze `qfo_canonical_assessment_20260927/plan.json`
+under `benchmarks/work`: 745,762 bytes, SHA256
+`41910a6cfc113c028bbcbe0bed2bb9d8ca20c05cf8bb530d1868e31c79ca499b`.
+It records the exact command, source/input/reference/runtime identities and
+fresh namespaces. Next submit once after commit/push: 8 CPUs, 128 GiB,
+12 hours, no requeue; native process success still requires independent score
+admission. No endpoint result or historical score has changed.
+
 ## Canonical Conversion Independently Verified (2026-09-27)
 
 Previous turn submitted conversion. Job 22335 completed 0:0 in 00:01:41 on
