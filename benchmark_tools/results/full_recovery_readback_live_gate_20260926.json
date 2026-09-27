@@ -1,0 +1,12 @@
+{
+  "accounting": "JobIDRaw|State|ExitCode|Elapsed|AllocCPUS\n22326|RUNNING|0:0|00:04:52|32\n22326.batch|RUNNING|0:0|00:04:52|32\n",
+  "error": "Requested job is not uniquely confirmed COMPLETED with exit 0:0",
+  "job_id": 22326,
+  "scientific_scores_admitted": false,
+  "source": {
+    "bytes": 8759,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_full_recovery_orthobench.py",
+    "sha256": "deb1513738f02f5ff4cff3b3456775b772bcfe4ec79921b11248da9be1884f94"
+  },
+  "status": "live_running_job_rejected_before_readback"
+}

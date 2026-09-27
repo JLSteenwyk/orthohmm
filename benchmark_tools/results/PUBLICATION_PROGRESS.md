@@ -1,5 +1,18 @@
 # Publication Progress
 
+## Full Recovery Readback Gate Prepared (2026-09-26)
+
+The preceding continuation made progress by launching job 22326. This
+continuation reread the objective and verified the same job still RUNNING in
+HMM search. Added a separate
+[post-run admission/scoring workflow](FULL_RECOVERY_READBACK_PROTOCOL_20260926.md)
+without modifying native-plan-pinned sources. Thirty-eight focused tests pass,
+and an actual live-gate check rejects the running job before readback. It binds
+native execution and environment to the frozen plan, then uses all four
+scientific readers and recomputes complete historical/current RefOG scores.
+The workflow will be queued after native success; queued work does not admit
+new scores. The full publication goal remains active and DGX remains deferred.
+
 ## Full Recovery OrthoBench Running: 22326 (2026-09-26)
 
 After committing and pushing the frozen protocol (`0b9a0d4`), submitted
