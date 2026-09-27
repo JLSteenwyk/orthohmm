@@ -9,6 +9,11 @@ requirements and must not be confused with these audit commands.
 
 ## Method And Results
 
+- [Corrected QfO ordering compatibility](results/QFO_CANDIDATE_ORDER_COMPATIBILITY_20260927.md)
+  shows that canonical ordering changes the retained candidate input order.
+  Candidate/group/score effects remain untested; historical QfO scores cannot
+  be transferred to the new entrypoint from OrthoBench or small fixtures.
+
 - [Fresh relocated runtime](results/FRESH_RELOCATED_RUNTIME_20260927.md)
   validates a new offline-installed environment and relocated MAFFT/FastTree
   on the small full-pipeline fixture, with package-byte audits and native

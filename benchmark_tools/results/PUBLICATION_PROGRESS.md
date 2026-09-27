@@ -1,5 +1,18 @@
 # Publication Progress
 
+## Corrected QfO Ordering Compatibility Audited (2026-09-27)
+
+The previous turn validated the fresh relocated small runtime. This turn
+returned to primary-benchmark scientific equivalence and audited the admitted
+corrected-QfO checkpoint. The [ordering result](QFO_CANDIDATE_ORDER_COMPATIBILITY_20260927.md)
+finds 34,986,309 adjacent descents in 90,687,327 hits: canonical ordering is not
+an identity transformation here. Fourteen focused tests pass, and all linked
+checkpoint identities were rechecked before/after inspection. No inference or
+score changed. Next freeze a paired candidate-only replay on identical admitted
+hits and seed groups to test output/constraint effects before expensive fresh
+phylogeny or search. Installed QfO equivalence is unproven; existing scores
+remain historical evidence. Other publication gates and DGX deferral remain.
+
 ## Fresh Relocated Runtime Verified (2026-09-27)
 
 The previous turn verified only harness relocation. This turn added an offline

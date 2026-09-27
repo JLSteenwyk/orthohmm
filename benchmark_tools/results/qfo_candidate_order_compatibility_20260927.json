@@ -1,0 +1,67 @@
+{
+  "accuracy_evaluated": false,
+  "checked_records": [
+    {
+      "bytes": 128164,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_candidate_admission_21759.json",
+      "sha256": "7ae64b1ccd398a7c61c6011f89582c37be91fb9b3954edf85f0cf7d956890f2d"
+    },
+    {
+      "bytes": 125233,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_factorial_v1/manifest.json",
+      "sha256": "d8385c50426e690afd6d32f3c5302e678de6977c9841451d013201b0f75b564a"
+    },
+    {
+      "bytes": 806,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_primary_v1/orthohmm_high_sensitivity/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json",
+      "sha256": "30d1718e0ad1ec080b9783b0f94f3e8855063459c4b2999d86f93eb8d1b4c8e1"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_primary_v1/orthohmm_high_sensitivity/orthohmm_working_res/high_sensitivity_checkpoint/gene_names.txt",
+      "sha256": "ad6ee208adc2c3e90bab86d68e40c32857c0f93a89989bd1a70d76385ef0edd7"
+    },
+    {
+      "bytes": 3936676,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_primary_v1/orthohmm_high_sensitivity/orthohmm_working_res/high_sensitivity_checkpoint/gene_to_species.npy",
+      "sha256": "ac95c21f52c2954a7d18b09f64ccfd2d831a68b99fe284a928803dffeaff229d"
+    },
+    {
+      "bytes": 362749436,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_primary_v1/orthohmm_high_sensitivity/orthohmm_working_res/high_sensitivity_checkpoint/hit_queries.npy",
+      "sha256": "6b5a9f87ebd6f3f344ff15a85f5b45349ac686981cedfc7385534668ed342e3f"
+    },
+    {
+      "bytes": 725498744,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_primary_v1/orthohmm_high_sensitivity/orthohmm_working_res/high_sensitivity_checkpoint/hit_scores.npy",
+      "sha256": "95a797d60b4fd1cddc4172d2e13c4b17766fe996b4e20518392302adf05d8072"
+    },
+    {
+      "bytes": 362749436,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_primary_v1/orthohmm_high_sensitivity/orthohmm_working_res/high_sensitivity_checkpoint/hit_targets.npy",
+      "sha256": "108f7e1d317c06ef779f45b4bdaa4e95305b01e8904ec114943e93d03ba2ba18"
+    }
+  ],
+  "genes": 984137,
+  "limitations": [
+    "Only ordering/array prerequisites at the retained candidate input are checked.",
+    "No equivalence of installed dependencies, upstream inference, candidate outputs or phylogeny follows.",
+    "If descents exist, adjacent duplicate counts do not prove global uniqueness."
+  ],
+  "native_inference_executed": false,
+  "publication_ready": false,
+  "result": {
+    "adjacent_descents": 34986309,
+    "adjacent_duplicates": 0,
+    "canonical_input_unchanged": false,
+    "global_uniqueness_proven": false,
+    "hits": 90687327,
+    "self_hits": 983835
+  },
+  "source": {
+    "bytes": 4886,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_qfo_candidate_order.py",
+    "sha256": "f818b7dab700397ea094226e6fc5381ab3371f32b2be6c8260a37a34f3fa8018"
+  },
+  "status": "admitted_qfo_candidate_input_order_audited"
+}
