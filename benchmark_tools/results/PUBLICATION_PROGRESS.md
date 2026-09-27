@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Ten Opt-In Native Fixture Tests Passed (2026-09-27)
+
+Previous turn completed the full unit run. Inspected all ten skipped tests:
+bounded temporary legacy BLAST/OrthoMCL/BioPerl fixtures, not large benchmark
+reruns. Enabled the existing opt-in flag and ran their eight test files with
+an exact selection and fresh retained temporary root. Ten passed, 128
+deselected, zero skipped/failures/errors, exit zero in 21.39 seconds. JUnit
+names exactly match the original skip set; source is unchanged since the
+full unit run and scoped working tree remains clean. Recorded commands,
+test sources and native fixture reports in the
+[follow-up result](PUBLICATION_NATIVE_TEST_REFRESH_20260927.md). Original
+unit skip/warning records preserved. No score, runtime comparison, historical
+benchmark or DGX action. Scientific, provenance, rights and release gates
+remain separate from this current-host integration coverage.
+
 ## Full Current Unit Suite Passed (2026-09-27)
 
 Previous turn preserved canonical scoring sources. Ran the entire current

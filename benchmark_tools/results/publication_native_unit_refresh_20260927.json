@@ -1,0 +1,179 @@
+{
+  "command": [
+    "/home/bizon/anaconda3/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/unit/test_admit_qfo_corrected_bpo.py",
+    "tests/unit/test_audit_orthomcl_database.py",
+    "tests/unit/test_describe_legacy_residue_deletions.py",
+    "tests/unit/test_orthomcl_bpo_indexes.py",
+    "tests/unit/test_orthomcl_perl_launcher.py",
+    "tests/unit/test_prepare_orthomcl_bpo_checkpoint.py",
+    "tests/unit/test_run_qfo_corrected_blast.py",
+    "tests/unit/test_stage_orthomcl_native_inputs.py",
+    "-k",
+    "test_independent_complete_recheck or test_installed or test_native_query_and_database_delete_o",
+    "--basetemp=benchmarks/work/publication_native_unit_refresh_20260927",
+    "--junitxml=benchmarks/work/publication_native_unit_refresh_20260927.xml"
+  ],
+  "deselected": 128,
+  "environment_override": {
+    "ORTHOHMM_LEGACY_BLAST_SMOKE": "1"
+  },
+  "exact_previous_skip_set": true,
+  "exit_code": 0,
+  "junit": {
+    "bytes": 1499,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_native_unit_refresh_20260927.xml",
+    "sha256": "24db06c4eae7b53191623e8fbaa3a3d612e4a4bcee8ed7f270f81966e54fa0ec"
+  },
+  "limitations": [
+    "Small installed-runtime fixture coverage, not full benchmark rerun",
+    "Does not establish cross-host portability or controlled timing",
+    "Main unit run and opt-in follow-up remain separate records"
+  ],
+  "native_fixture_reports": [
+    {
+      "bytes": 8471,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_native_unit_refresh_20260927/test_independent_complete_rech0/checkpoint/report.json",
+      "sha256": "319b4a30e7b84be8d2e37607a9ff31782c5986ce7124dc564165c77744143ca1"
+    },
+    {
+      "bytes": 8386,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_native_unit_refresh_20260927/test_installed_checkpoint0/checkpoint/report.json",
+      "sha256": "0be05ad68ab940b57feb37a1278373b84145ef69591e158ee43fc7aedc1523fa"
+    },
+    {
+      "bytes": 38847,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_native_unit_refresh_20260927/test_installed_native_bpo_pari0/probe/report.json",
+      "sha256": "92f995726cae8dde06e88ca990e2a3115cc3182d25921865014ff7db17e87814"
+    },
+    {
+      "bytes": 39557,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_native_unit_refresh_20260927/test_installed_native_bpo_pari1/probe/report.json",
+      "sha256": "b368a72e0600929939172ddaf08deb03efde9f57396a7be6410a1ecd64bd3bae"
+    },
+    {
+      "bytes": 46747,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_native_unit_refresh_20260927/test_installed_staged_native_i0/probe/report.json",
+      "sha256": "7f6f7a3bdcbe35b19ee689ff461c166d514269d08c8fcd630b2ee7f269aa84d9"
+    }
+  ],
+  "passed": 10,
+  "previous_unit_report": {
+    "bytes": 3489,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_unit_refresh_20260927.json",
+    "sha256": "0f0709941ddecab8e4bb70852a4fd2c688d20e2f87372c65060ce0bd0c8a9ad1"
+  },
+  "publication_ready": false,
+  "revision": "59df5dafbe50cd4cd7699114c79eaabd0ec86ef5",
+  "skipped": 0,
+  "source_files": [
+    {
+      "bytes": 8928,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_admit_qfo_corrected_bpo.py",
+      "sha256": "6d56bad132a4ddfa975fd97e91e1ce1a5d1a223ef97a366f3b1c0d101438e9eb"
+    },
+    {
+      "bytes": 6059,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_audit_orthomcl_database.py",
+      "sha256": "c92d2d9b17cce40f72c14f30720aa7e70a3a2852a49976a255e8fec61cb11bcc"
+    },
+    {
+      "bytes": 5005,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_describe_legacy_residue_deletions.py",
+      "sha256": "ab9d8473ad07fb8785a4d57b5ff970d8d337249e90f31376e427cc4968c30a8c"
+    },
+    {
+      "bytes": 4724,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_orthomcl_bpo_indexes.py",
+      "sha256": "5b1a465f131e5e0653a93083945fcc500fb261dbd02443347875c5353fa83653"
+    },
+    {
+      "bytes": 2897,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_orthomcl_perl_launcher.py",
+      "sha256": "9b0bac451339af6dab92694fccebac08853f89869e6f63d6981689c6ba8e30a8"
+    },
+    {
+      "bytes": 4935,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_prepare_orthomcl_bpo_checkpoint.py",
+      "sha256": "331cc0408a96338857b3ac506ad6a2623ac366d3c652b395d5d894d75858955b"
+    },
+    {
+      "bytes": 5590,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_run_qfo_corrected_blast.py",
+      "sha256": "6227a04fef3f7991abba44f1fd8b4261b874be45573eb131906acf3551bbd580"
+    },
+    {
+      "bytes": 4630,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_stage_orthomcl_native_inputs.py",
+      "sha256": "f106ca06091c1a38b48ed1f8283e597cf1566bf2915b301af617fdf44402d3d6"
+    }
+  ],
+  "source_unchanged_since_full_unit_run": true,
+  "status": "previously_skipped_native_fixture_tests_passed",
+  "suite": {
+    "errors": "0",
+    "failures": "0",
+    "hostname": "bizon",
+    "name": "pytest",
+    "skipped": "0",
+    "tests": "10",
+    "time": "21.383",
+    "timestamp": "2026-09-27T07:25:44.125834-04:00"
+  },
+  "terminal_elapsed_seconds": 21.39,
+  "tests": [
+    {
+      "classname": "tests.unit.test_admit_qfo_corrected_bpo",
+      "name": "test_independent_complete_recheck",
+      "seconds": 5.82
+    },
+    {
+      "classname": "tests.unit.test_audit_orthomcl_database",
+      "name": "test_installed_formatdb_normalization_is_detected",
+      "seconds": 0.021
+    },
+    {
+      "classname": "tests.unit.test_describe_legacy_residue_deletions",
+      "name": "test_native_query_and_database_delete_o",
+      "seconds": 0.032
+    },
+    {
+      "classname": "tests.unit.test_orthomcl_bpo_indexes",
+      "name": "test_installed_native_bpo_parity[False]",
+      "seconds": 0.231
+    },
+    {
+      "classname": "tests.unit.test_orthomcl_bpo_indexes",
+      "name": "test_installed_native_bpo_parity[True]",
+      "seconds": 0.23
+    },
+    {
+      "classname": "tests.unit.test_orthomcl_perl_launcher",
+      "name": "test_installed_perl_probe_has_no_relative_lookup",
+      "seconds": 0.109
+    },
+    {
+      "classname": "tests.unit.test_prepare_orthomcl_bpo_checkpoint",
+      "name": "test_installed_checkpoint",
+      "seconds": 5.581
+    },
+    {
+      "classname": "tests.unit.test_run_qfo_corrected_blast",
+      "name": "test_installed_legacy_engine_smoke[False]",
+      "seconds": 0.017
+    },
+    {
+      "classname": "tests.unit.test_run_qfo_corrected_blast",
+      "name": "test_installed_legacy_engine_smoke[True]",
+      "seconds": 0.016
+    },
+    {
+      "classname": "tests.unit.test_stage_orthomcl_native_inputs",
+      "name": "test_installed_staged_native_inference",
+      "seconds": 8.173
+    }
+  ]
+}
