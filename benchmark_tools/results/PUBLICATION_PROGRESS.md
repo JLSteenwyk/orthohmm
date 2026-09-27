@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Canonical QfO Native Submitted And Readback Frozen (2026-09-27)
+
+Previous turn admitted and froze the canonical plan. Submitted native job
+22333 once after commit/push `8302889`; Slurm confirms RUNNING on 32 CPUs,
+128 GiB, 6 hours, no requeue. The
+[submission](qfo_canonical_phylogeny_submission_20260927.json) records the
+isolated installed interpreter, clean pinned environment and launcher hash.
+Native submission SHA256 is
+`03fed3426661d4c7aa99768c6e67c54f84fea7bea453784b360d66ebd4452637`.
+Prepared the independent readback plan in the canonical run directory:
+`readback_plan.json`, 178,913 bytes, SHA256
+`a268529be36550cc0630714a311cceac20b2634ade79d14d4277b46f566a0de9`.
+It pins 738 Python files plus native plan/submission, binds actual job 22333,
+and permits one 2 CPU/128 GiB/3-hour audit of the four canonical scientific
+reports and all three prediction contrasts. Next queue afterok readback after
+pushing this freeze; preserve all pinned sources until both jobs terminate.
+No completed canonical prediction or new accuracy claim is made.
+
 ## Canonical QfO Plan Admitted And Frozen (2026-09-27)
 
 Previous turn validated the retained-order result. Reuse now requires successful
