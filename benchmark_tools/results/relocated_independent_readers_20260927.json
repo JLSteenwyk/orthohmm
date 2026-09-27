@@ -1,0 +1,188 @@
+{
+  "explicit_dependency_directory": "/home/bizon/anaconda3/lib/python3.10/site-packages",
+  "export_files": 31,
+  "export_manifest": {
+    "bytes": 5750,
+    "path": "/tmp/orthohmm-independent-readers-20260927/manifest.json",
+    "sha256": "c2a77c7a2635b9193f4321f96db65028a4d5158facd8e52bb4285fe68804f334"
+  },
+  "export_revision": "487d759d29ba2e88eb83346690d7fde047dddfda",
+  "focused_tests_passed": 8,
+  "initial_result": {
+    "bytes": 2465,
+    "path": "/tmp/orthohmm-independent-readback-20260927/result.json",
+    "sha256": "2ecccda53aeddf8d56c71e3fdf8876cdde7967fa678035a2b481b8d82bc4ab28"
+  },
+  "initial_trace": {
+    "bytes": 584906,
+    "path": "/tmp/orthohmm-independent-readers-20260927.strace",
+    "sha256": "450bad78a0a05ab36cdc579bf6caaa0a9ae84bdfe35913f5815196373f8481d5"
+  },
+  "input_native_directory": "/tmp/orthohmm-fresh-runtime-20260927/native",
+  "isolation_flags": [
+    "-I",
+    "-S",
+    "-B"
+  ],
+  "limitations": [
+    "Same-host fixture readback only; inference and scoring not rerun",
+    "Base Python and installed dependency directory shared; no fresh dependency environment",
+    "Literal trace-prefix check is not a filesystem sandbox or universal access proof",
+    "Provenance record paths/hashes change with relocation; scientific fields checked separately",
+    "Fixture has no satellite merges; full-dataset relocation and archive deposition remain open"
+  ],
+  "original_mount_prefix_absent_with_no_site": true,
+  "original_mount_prefix_present_with_site": true,
+  "output_directory": "/tmp/orthohmm-independent-readback-nosite-20260927",
+  "publication_ready": false,
+  "python": "/home/bizon/anaconda3/bin/python",
+  "reports": [
+    {
+      "identical_scientific_fields": [
+        "checked_records",
+        "dendropy_version",
+        "families",
+        "genes",
+        "limitations",
+        "ortholog_pairs",
+        "pair_confidence_counts",
+        "parsed_trees",
+        "reconciled_families",
+        "reconciliation_semantics_recomputed",
+        "root_groups",
+        "scientific_scores_admitted",
+        "species",
+        "status"
+      ],
+      "name": "structure",
+      "original": {
+        "bytes": 4131,
+        "path": "/tmp/orthohmm-fresh-runtime-20260927/readback/structure.json",
+        "sha256": "010e65b34ad09d60402fa27c19807d3ddcc76b473e7711398dd0fc075f716fba"
+      },
+      "relocated": {
+        "bytes": 4114,
+        "path": "/tmp/orthohmm-independent-readback-nosite-20260927/structure.json",
+        "sha256": "bc1debe587f827bd861ad195e89b82ba921582e155b21aa4b9137c0a104f3ab1"
+      },
+      "relocated_provenance_fields": [
+        "reader"
+      ]
+    },
+    {
+      "identical_scientific_fields": [
+        "biopython_version",
+        "gene_alignments",
+        "limitations",
+        "reconciliation_semantics_recomputed",
+        "scientific_scores_admitted",
+        "species_alignments",
+        "status",
+        "supermatrix_columns"
+      ],
+      "name": "sequences",
+      "original": {
+        "bytes": 4494,
+        "path": "/tmp/orthohmm-fresh-runtime-20260927/readback/sequences.json",
+        "sha256": "638888011855e1047a138dc9e97eb4effee4588aa6ae15a7460fc46b335d5fe5"
+      },
+      "relocated": {
+        "bytes": 4482,
+        "path": "/tmp/orthohmm-independent-readback-nosite-20260927/sequences.json",
+        "sha256": "90f57f2834769763ec94feac04677d1dec9ba051e65f2842f1b2f9c2ced152b9"
+      },
+      "relocated_provenance_fields": [
+        "checked_records",
+        "reader"
+      ]
+    },
+    {
+      "identical_scientific_fields": [
+        "dendropy_version",
+        "limitations",
+        "membership_totals",
+        "scientific_scores_admitted",
+        "status",
+        "totals"
+      ],
+      "name": "events",
+      "original": {
+        "bytes": 4984,
+        "path": "/tmp/orthohmm-fresh-runtime-20260927/readback/events.json",
+        "sha256": "e03de6089c379122f886e90722b93037a042954ba34ec7f356f1790533b84af3"
+      },
+      "relocated": {
+        "bytes": 4955,
+        "path": "/tmp/orthohmm-independent-readback-nosite-20260927/events.json",
+        "sha256": "23c8bc88ab86fb65578bce7ff2ec124cd98fcb795bc53655cf5d5ae7adec7296"
+      },
+      "relocated_provenance_fields": [
+        "checked_records",
+        "sources"
+      ]
+    },
+    {
+      "identical_scientific_fields": [
+        "hierarchy_semantics",
+        "limitations",
+        "scientific_scores_admitted",
+        "status",
+        "totals"
+      ],
+      "name": "hierarchy",
+      "original": {
+        "bytes": 2787,
+        "path": "/tmp/orthohmm-fresh-runtime-20260927/readback/hierarchy.json",
+        "sha256": "c33e3d7c956c666972ea7834d8c808d25687a4963b21ce79b5fed794a97d91e1"
+      },
+      "relocated": {
+        "bytes": 2775,
+        "path": "/tmp/orthohmm-independent-readback-nosite-20260927/hierarchy.json",
+        "sha256": "498e07e75c3843c245e1e2091a0dd8e063a653727749ceae742fbd932724b096"
+      },
+      "relocated_provenance_fields": [
+        "checked_records",
+        "reader"
+      ]
+    },
+    {
+      "identical_scientific_fields": [
+        "accuracy_evaluated",
+        "complete",
+        "constraints",
+        "limitations",
+        "publication_ready",
+        "started",
+        "status",
+        "summary"
+      ],
+      "name": "result",
+      "original": {
+        "bytes": 2490,
+        "path": "/tmp/orthohmm-fresh-runtime-20260927/readback/result.json",
+        "sha256": "eab97e28589e787d14c03eb895f773801a13bad2eb607769c2cd79b8b8988ff1"
+      },
+      "relocated": {
+        "bytes": 2493,
+        "path": "/tmp/orthohmm-independent-readback-nosite-20260927/result.json",
+        "sha256": "f11ab5a909221628798d0e5d33a20178dee3a928fb653dcdd38bccf62d3295a1"
+      },
+      "relocated_provenance_fields": [
+        "reports",
+        "source"
+      ]
+    }
+  ],
+  "source": {
+    "bytes": 3705,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_publication_readers.py",
+    "sha256": "686a4a9fee20edc8803694c7d29180615d3092866a4254d488a114aa5856f3d8"
+  },
+  "status": "relocated_independent_readers_fixture_verified",
+  "trace": {
+    "bytes": 573366,
+    "path": "/tmp/orthohmm-independent-readers-nosite-20260927.strace",
+    "sha256": "167e9b43cf10624e3a80db1ed7cfe2e5fabd4227cac3f1e4d297e6de4fe28c6d"
+  },
+  "verified_record_occurrences": 136
+}

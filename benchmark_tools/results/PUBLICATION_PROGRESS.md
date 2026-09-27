@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Independent Readers Executed Outside Checkout (2026-09-27)
+
+Previous turn closed the ten opt-in native test skips. Addressed the fresh
+runtime fixture's remaining checkout-validator dependency: exported its
+31-module static analysis closure from `487d759` and ran all four scientific
+readers outside the checkout. Eight exporter tests pass. Initial `-I -B`
+execution passed scientifically but traced editable-install startup probes
+on the original mount. Preserved it; a separate `-I -S -B` check with explicit
+dependency path passed and has no literal original-mount prefix in its file
+trace. All five report scientific-field comparisons match prior readback;
+136 referenced-file occurrences validate. See
+[relocation record](RELOCATED_INDEPENDENT_READERS_20260927.md). Shared base
+Python/dependencies, tiny fixture, empty merge trace and bounded trace coverage
+remain explicit. No native benchmark/scoring rerun, installation modification,
+DGX action or publication-readiness claim.
+
 ## Ten Opt-In Native Fixture Tests Passed (2026-09-27)
 
 Previous turn completed the full unit run. Inspected all ten skipped tests:
