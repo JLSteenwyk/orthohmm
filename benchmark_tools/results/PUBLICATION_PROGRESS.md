@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Explicit QfO Metadata Inventory Correction (2026-09-27)
+
+Previous turn diagnosed the terminal reader failure. Both fresh and canonical
+readers now check the exact planned FASTAs plus the pinned staging manifest,
+reject extra directory entries, and require the manifest's FASTA records to
+match the plan. The metadata hash is independently retained in
+`qfo_corrected_staged_inventory_20260918.json` (commit `520c977`), not merely
+observed after inference. Seventy focused inventory, reader and reuse-gate
+tests pass. A direct native admission verifies scheduler 22329 COMPLETED,
+145,649 output records and 79 input/metadata records. This is artifact admission
+only, not the four scientific readers or pairwise comparison. Failed audit
+22330 and its frozen plan/log remain preserved; downstream reuse still rejects
+that failed audit. Next freeze a separate corrected readback plan and submission,
+then bind reuse to its actual successful job/receipts. No inference restart,
+canonical submission or score replacement occurred.
+
 ## QfO Native Completed; Readback Inventory Failure (2026-09-27)
 
 Previous turn was a verified wait. Job 22329 now completed successfully in

@@ -10,6 +10,7 @@ from benchmark_tools.readback_qfo_fresh_phylogeny import scientific_readback, ve
 from benchmark_tools.run_installed_orthobench import fasta_ids
 from benchmark_tools.run_qfo_canonical_phylogeny import config_arguments, record, save, validate
 from benchmark_tools.verify_ygob_validation import require_completed_job
+from benchmark_tools.qfo_input_inventory import verify_qfo_inputs
 
 
 def verify_execution(plan, identity, job, started, started_record, complete, cache, cache_record, copies_record):
@@ -92,9 +93,8 @@ def admit(repo, directory, job, plan_sha, submission_sha):
         raise ValueError("Changed canonical output inventory")
     verify_summary(json.loads((native / "inference/orthohmm_phylogeny/reconciliation_summary.json").read_text()),
                    complete["summary"])
-    if [record(p) for p in sorted(Path(plan["input_directory"]).iterdir()) if p.is_file()] != sorted(plan["fastas"], key=lambda r: r["path"]):
-        raise ValueError("Changed input proteome inventory")
-    return dict(plan=record(plan_path), scheduler=scheduler, outputs=outputs,
+    inputs = verify_qfo_inputs(plan)
+    return dict(plan=record(plan_path), scheduler=scheduler, outputs=outputs, inputs=inputs,
         records=[record(native / n) for n in receipt_names] + [record(submission_path),
             record(directory / "time.txt"), record(directory / f"native-{job}.log")])
 

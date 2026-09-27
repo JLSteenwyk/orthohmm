@@ -13,6 +13,7 @@ from benchmark_tools import audit_phylogeny_hierarchy as hierarchy
 from benchmark_tools.audit_installed_orthobench import read_root_hogs, compare_partitions
 from benchmark_tools.run_qfo_fresh_phylogeny import config_arguments, record, save, validate
 from benchmark_tools.verify_ygob_validation import require_completed_job
+from benchmark_tools.qfo_input_inventory import verify_qfo_inputs
 
 JOB = 22329
 PLAN_SHA = "57247bf76d26c1ff54cf13aa4c9d0a9622f0b8a2902c45ef222842513888d030"
@@ -71,11 +72,8 @@ def admit(repo, directory):
         raise ValueError("Changed or missing native outputs")
     summary = json.loads((native / "inference/orthohmm_phylogeny/reconciliation_summary.json").read_text())
     verify_summary(summary, complete["summary"])
-    expected = sorted(plan["fastas"], key=lambda r: r["path"])
-    actual = [record(p) for p in sorted(Path(plan["input_directory"]).iterdir()) if p.is_file()]
-    if actual != expected:
-        raise ValueError("Changed complete input inventory")
-    return dict(plan=record(path), scheduler=scheduler, outputs=outputs,
+    inputs = verify_qfo_inputs(plan)
+    return dict(plan=record(path), scheduler=scheduler, outputs=outputs, inputs=inputs,
         records=[record(p) for p in (frozen, directory / "submission.json", native / "started.json",
             native / "complete.json", directory / "time.txt", directory / f"native-{JOB}.log")])
 
