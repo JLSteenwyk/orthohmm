@@ -340,10 +340,15 @@ and [hierarchy/selection](results/PHYLOGENY_HIERARCHY_READBACK_20260926.md).
 The hierarchy is pre-membership-filtering; benchmarked final root groups and
 native pairs are post-filtering. None is silently substituted for another.
 
-After successful native completion, run the following from the repository root
+Job 22179 subsequently completed successfully. All five commands below passed;
+the [readback](results/INSTALLED_ORTHOBENCH_READBACK_20260926.md) records a
+0.284504-percentage-point F1 decrease and a different partition. Historical
+scores remain unchanged and exact reproduction is not established.
+
+For a successful native completion, run the following from the repository root
 in the audit environment (tested with Python 3.10.13, DendroPy 5.0.8 and
-Biopython 1.86). These are pending fresh-run commands, not a claim that they
-have already passed. Each reader refuses to overwrite a receipt. Stop on any
+Biopython 1.86). Existing receipts for this run must not be overwritten;
+these commands document their creation. Each reader refuses to overwrite a receipt. Stop on any
 failure and preserve it; do not automatically resume or restart inference.
 
 ```bash

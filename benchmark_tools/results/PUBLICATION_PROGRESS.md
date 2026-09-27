@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Fresh Installed OrthoBench Readback Completed With Disagreement (2026-09-26)
+
+The preceding status turn established new terminal evidence: job 22179
+completed successfully. This turn reread the full goal and ran all five
+prespecified readers without restarting inference. Provenance, full coverage,
+scores, trees, sequence content, reconciliation/pair rules and hierarchy pass;
+85 focused tests pass. The [result](INSTALLED_ORTHOBENCH_READBACK_20260926.md)
+preserves a fresh F1 of 73.821569 versus historical 74.106074. Eight of 70
+reference-family records and 26,433 genes' group memberships differ.
+
+Native completion and internally consistent outputs do not establish exact
+reproduction. Historical scores remain unchanged; full local receipts are
+hashed in the tracked compact report. Shared-host time/RSS are descriptive
+only. Next localize the earliest stage of divergence, without automatic reruns
+or tuning. Remaining comparator provenance, controlled resources, uncertainty,
+generalization and release requirements remain active; DGX stays deferred.
+
 ## FastOMA OrthoBench Input, Tree and Task Evidence Verified (2026-09-26)
 
 The preceding turn verified Proteinortho symbol behavior. This turn reread
