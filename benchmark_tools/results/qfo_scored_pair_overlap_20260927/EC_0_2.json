@@ -1,0 +1,50 @@
+{
+  "inputs": [
+    {
+      "bytes": 988713,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_factorial_4/results/EC/EC_ohmm-qfo-corrected-factorial-p1-c0-r0_4ccec9a82745_raw.txt.gz",
+      "sha256": "01423186c032045cfc34abdca5a1d3f4b65a2b37e5f9b6c395ead4f5deee7ec0"
+    },
+    {
+      "bytes": 954863,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_orthofinder_full/results/EC/EC_qfo-corrected-orthofinder-full_7e52803a40be_raw.txt.gz",
+      "sha256": "57e5df5d29b258122c05ead96c7bc6f3e99b86a734da112d6325fb470dfce20e"
+    }
+  ],
+  "limitations": [
+    "Rounded eligible-pair scores only, not all predicted relations.",
+    "Shared-pair conditioning changes the endpoint and is not a replacement benchmark score.",
+    "Decomposition is arithmetic, not causal attribution or independent-unit inference.",
+    "No underlying annotation score recomputation or biological confidence interval."
+  ],
+  "metric": "EC",
+  "result": {
+    "left_mean": 0.9320376948681489,
+    "left_only_pairs": 65506,
+    "left_pairs": 185664,
+    "left_score_sum_millionths": 173045846580,
+    "maximum_shared_absolute_difference_millionths": 0,
+    "original_mean_difference": -0.004092519096187464,
+    "original_mean_difference_components": {
+      "left_only": 0.3055562197141072,
+      "negative_right_only": -0.27284101851608966,
+      "shared_with_original_denominators": -0.03680772029420498
+    },
+    "right_mean": 0.9361302139643364,
+    "right_only_pairs": 55203,
+    "right_pairs": 175361,
+    "right_score_sum_millionths": 164160730451,
+    "shared_conditional_mean_difference": 0.0,
+    "shared_left_sum_millionths": 116315056603,
+    "shared_pairs": 120158,
+    "shared_pairs_with_different_serialized_scores": 0,
+    "shared_right_sum_millionths": 116315056603
+  },
+  "source": {
+    "bytes": 4290,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/compare_qfo_scored_pairs.py",
+    "sha256": "c86184be5a06238d520ff892ffe2b85ca32e2014d432c6051a01bbe48cb37bbc"
+  },
+  "status": "descriptive_scored_pair_comparison",
+  "uncertainty_admitted": false
+}

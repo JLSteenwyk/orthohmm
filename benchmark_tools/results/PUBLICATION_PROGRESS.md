@@ -1,5 +1,18 @@
 # Publication Progress
 
+## Corrected GO/EC Pair Overlap Audited (2026-09-27)
+
+Previous turn completed the targeted PDF review. Returned to unresolved
+uncertainty analysis and added a descriptive raw-pair comparison with 14
+passing tests. Six comparisons among corrected high-sensitivity OrthoHMM,
+phylogenetic OrthoHMM and full OrthoFinder find no differing serialized score
+on any shared GO/EC pair. Counts and rounded means match admitted endpoints;
+input/admission hashes were checked before/after. The [analysis](QFO_SCORED_PAIR_OVERLAP_20260927.md)
+decomposes original endpoint differences without substituting intersection-only
+means. Differing pair membership/denominators explain the arithmetic at retained
+precision, not a causal mechanism. No independent units or valid paired CIs
+are established; broader scientific and timing requirements remain open.
+
 ## Integrated Result PDF Checked (2026-09-27)
 
 Previous turn updated the manuscript and v26 HTML with the completed full

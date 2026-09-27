@@ -1,0 +1,251 @@
+{
+  "checked_records": [
+    {
+      "bytes": 323315,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_comparison_20260926_v7/manifest.json",
+      "sha256": "042aa221d01554114a1b0b413ca3e2ff56dad5f8c06362c69a1bf49f2de642fc"
+    },
+    {
+      "bytes": 280266,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_factorial_score_admission_21782.json",
+      "sha256": "8ba2d51aa48bdfde6580b832f1bfedb0c14ef7cc19c897c238337bb3e96e4e83"
+    },
+    {
+      "bytes": 654,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_factorial_4/results/GO/GO.json",
+      "sha256": "f48bfd23c3af72a7ad78ce3a0d7d9153e8c3549c3f79283f221f9fa0731ffe09"
+    },
+    {
+      "bytes": 656,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_factorial_4/results/EC/EC.json",
+      "sha256": "9fc4701172b938d2ef4dd5fd74cb5030d8ddc2e9ae80bc4c97705df87ae5ee04"
+    },
+    {
+      "bytes": 248974,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_factorial_score_admission_21788.json",
+      "sha256": "49b7d837b2ba2928b0676c9974e2ec16db5211f1086c366c7bc11805a2ee751f"
+    },
+    {
+      "bytes": 654,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_factorial_7/results/GO/GO.json",
+      "sha256": "6bfcd686797e23557547e8c1cb27e8afb29d246eaed4737d87719a60f0af1401"
+    },
+    {
+      "bytes": 655,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_factorial_7/results/EC/EC.json",
+      "sha256": "67e4a68c8c8a6f2701cec70a0b388dc528e13e96b7c450543993d59235c1d13b"
+    },
+    {
+      "bytes": 152067213,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_orthofinder_full_assessment_admission_20260918.json",
+      "sha256": "f0c7064413622db6ebe02965d8781b5c6862b5246ad10cdd6b907b3c1815a46c"
+    },
+    {
+      "bytes": 648,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_orthofinder_full/results/GO/GO.json",
+      "sha256": "5ae5f5fcecad2a58a72e5ffefefc9d3900b2adf27302c1a6fc6f72f850a2d59f"
+    },
+    {
+      "bytes": 649,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_orthofinder_full/results/EC/EC.json",
+      "sha256": "b6f6477f3207939f0dea6e5bc3df92168234254a4fdaafd36e607f649b016faf"
+    }
+  ],
+  "publication_ready": false,
+  "rows": [
+    {
+      "left": "orthohmm_high_sensitivity",
+      "metric": "GO",
+      "report": {
+        "bytes": 2201,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_scored_pair_overlap_20260927/GO_0_2.json",
+        "sha256": "c36a427cfbec52d6520181357dcf33eb6b4f4ad747b680f340097e308dd75db6"
+      },
+      "result": {
+        "left_mean": 0.47227110242482095,
+        "left_only_pairs": 67267,
+        "left_pairs": 145619,
+        "left_score_sum_millionths": 68771645664,
+        "maximum_shared_absolute_difference_millionths": 0,
+        "original_mean_difference": 0.0027231291188786755,
+        "original_mean_difference_components": {
+          "left_only": 0.20757839575192796,
+          "negative_right_only": -0.23388525478579333,
+          "shared_with_original_denominators": 0.02902998815274402
+        },
+        "right_mean": 0.4695479733059423,
+        "right_only_pairs": 85205,
+        "right_pairs": 163557,
+        "right_score_sum_millionths": 76797857870,
+        "shared_conditional_mean_difference": 0.0,
+        "shared_left_sum_millionths": 38544287253,
+        "shared_pairs": 78352,
+        "shared_pairs_with_different_serialized_scores": 0,
+        "shared_right_sum_millionths": 38544287253
+      },
+      "right": "orthofinder_3_1_5_full"
+    },
+    {
+      "left": "orthohmm_phylogeny_satellite_v2",
+      "metric": "GO",
+      "report": {
+        "bytes": 2197,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_scored_pair_overlap_20260927/GO_1_2.json",
+        "sha256": "b6e20a5ea6d02a0ffdaeaf5600c5d37fece4224a6961ff4d7017cf0f15af328a"
+      },
+      "result": {
+        "left_mean": 0.4903492750472029,
+        "left_only_pairs": 8317,
+        "left_pairs": 84211,
+        "left_score_sum_millionths": 41292802801,
+        "maximum_shared_absolute_difference_millionths": 0,
+        "original_mean_difference": 0.020801301741260603,
+        "original_mean_difference_components": {
+          "left_only": 0.045696446069990855,
+          "negative_right_only": -0.24060846364875854,
+          "shared_with_original_denominators": 0.21571331932002824
+        },
+        "right_mean": 0.4695479733059423,
+        "right_only_pairs": 87663,
+        "right_pairs": 163557,
+        "right_score_sum_millionths": 76797857870,
+        "shared_conditional_mean_difference": 0.0,
+        "shared_left_sum_millionths": 37444659381,
+        "shared_pairs": 75894,
+        "shared_pairs_with_different_serialized_scores": 0,
+        "shared_right_sum_millionths": 37444659381
+      },
+      "right": "orthofinder_3_1_5_full"
+    },
+    {
+      "left": "orthohmm_phylogeny_satellite_v2",
+      "metric": "GO",
+      "report": {
+        "bytes": 2200,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_scored_pair_overlap_20260927/GO_1_0.json",
+        "sha256": "9b4bc307b7943bdf54f75ca33c9e3f80bfcac0d18ba664be034c4fac7bd18947"
+      },
+      "result": {
+        "left_mean": 0.4903492750472029,
+        "left_only_pairs": 9217,
+        "left_pairs": 84211,
+        "left_score_sum_millionths": 41292802801,
+        "maximum_shared_absolute_difference_millionths": 0,
+        "original_mean_difference": 0.018078172622381927,
+        "original_mean_difference_components": {
+          "left_only": 0.052641076795193024,
+          "negative_right_only": -0.21914585720956745,
+          "shared_with_original_denominators": 0.18458295303675637
+        },
+        "right_mean": 0.47227110242482095,
+        "right_only_pairs": 70625,
+        "right_pairs": 145619,
+        "right_score_sum_millionths": 68771645664,
+        "shared_conditional_mean_difference": 0.0,
+        "shared_left_sum_millionths": 36859845083,
+        "shared_pairs": 74994,
+        "shared_pairs_with_different_serialized_scores": 0,
+        "shared_right_sum_millionths": 36859845083
+      },
+      "right": "orthohmm_high_sensitivity"
+    },
+    {
+      "left": "orthohmm_high_sensitivity",
+      "metric": "EC",
+      "report": {
+        "bytes": 2203,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_scored_pair_overlap_20260927/EC_0_2.json",
+        "sha256": "d5be87350b95330abafea917ce437220f257d01f52869b8becdb580aa9f402e2"
+      },
+      "result": {
+        "left_mean": 0.9320376948681489,
+        "left_only_pairs": 65506,
+        "left_pairs": 185664,
+        "left_score_sum_millionths": 173045846580,
+        "maximum_shared_absolute_difference_millionths": 0,
+        "original_mean_difference": -0.004092519096187464,
+        "original_mean_difference_components": {
+          "left_only": 0.3055562197141072,
+          "negative_right_only": -0.27284101851608966,
+          "shared_with_original_denominators": -0.03680772029420498
+        },
+        "right_mean": 0.9361302139643364,
+        "right_only_pairs": 55203,
+        "right_pairs": 175361,
+        "right_score_sum_millionths": 164160730451,
+        "shared_conditional_mean_difference": 0.0,
+        "shared_left_sum_millionths": 116315056603,
+        "shared_pairs": 120158,
+        "shared_pairs_with_different_serialized_scores": 0,
+        "shared_right_sum_millionths": 116315056603
+      },
+      "right": "orthofinder_3_1_5_full"
+    },
+    {
+      "left": "orthohmm_phylogeny_satellite_v2",
+      "metric": "EC",
+      "report": {
+        "bytes": 2198,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_scored_pair_overlap_20260927/EC_1_2.json",
+        "sha256": "39c32a9cdf7b466de19defeb09742314417d751879e8105c62d553e57d4e824e"
+      },
+      "result": {
+        "left_mean": 0.9656505026306827,
+        "left_only_pairs": 15748,
+        "left_pairs": 117460,
+        "left_score_sum_millionths": 113425308039,
+        "maximum_shared_absolute_difference_millionths": 0,
+        "original_mean_difference": 0.029520288666346373,
+        "original_mean_difference_components": {
+          "left_only": 0.12451329250808786,
+          "negative_right_only": -0.3727211509400608,
+          "shared_with_original_denominators": 0.2777281470983193
+        },
+        "right_mean": 0.9361302139643364,
+        "right_only_pairs": 73649,
+        "right_pairs": 175361,
+        "right_score_sum_millionths": 164160730451,
+        "shared_conditional_mean_difference": 0.0,
+        "shared_left_sum_millionths": 98799976701,
+        "shared_pairs": 101712,
+        "shared_pairs_with_different_serialized_scores": 0,
+        "shared_right_sum_millionths": 98799976701
+      },
+      "right": "orthofinder_3_1_5_full"
+    },
+    {
+      "left": "orthohmm_phylogeny_satellite_v2",
+      "metric": "EC",
+      "report": {
+        "bytes": 2201,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_scored_pair_overlap_20260927/EC_1_0.json",
+        "sha256": "50a51240ac872efaedbc4c3667e99ed89f404b76dda156bce5b5f3ce3cb5dd8f"
+      },
+      "result": {
+        "left_mean": 0.9656505026306827,
+        "left_only_pairs": 6856,
+        "left_pairs": 117460,
+        "left_score_sum_millionths": 113425308039,
+        "maximum_shared_absolute_difference_millionths": 0,
+        "original_mean_difference": 0.033612807762533836,
+        "original_mean_difference_components": {
+          "left_only": 0.05183939106930019,
+          "negative_right_only": -0.35391671738193725,
+          "shared_with_original_denominators": 0.335690134075171
+        },
+        "right_mean": 0.9320376948681489,
+        "right_only_pairs": 75060,
+        "right_pairs": 185664,
+        "right_score_sum_millionths": 173045846580,
+        "shared_conditional_mean_difference": 0.0,
+        "shared_left_sum_millionths": 107336253164,
+        "shared_pairs": 110604,
+        "shared_pairs_with_different_serialized_scores": 0,
+        "shared_right_sum_millionths": 107336253164
+      },
+      "right": "orthohmm_high_sensitivity"
+    }
+  ],
+  "status": "corrected_scored_pair_overlap_descriptive",
+  "uncertainty_admitted": false
+}
