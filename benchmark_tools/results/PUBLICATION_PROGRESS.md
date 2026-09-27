@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Private Leiden Distribution Overlay Reproduces Runtime Effect (2026-09-26)
+
+The preceding turn established a whole-runtime initial-clustering difference.
+This turn reread the goal and copied the retained leidenalg 0.11.0 distribution
+into a private overlay, validating RECORD and file hashes without modifying
+either existing environment. Two fixed calls in the clean installed runtime
+produce the exact 58,772-group Anaconda partition, versus 58,827 with its
+unchanged 0.12.0 distribution. Both repeats agree and native mappings resolve
+to the private copied libraries. See the [result](OB_LEIDEN_OVERLAY_PROBE_20260926.md).
+
+This isolates the complete leidenalg distribution, including its bundled
+libraries, as sufficient for the observed initial-grouping difference. It is
+not attribution of the full-run F1 decrease or an upstream component-level
+explanation. Next carry both fixed distributions through a stage-resolved
+downstream diagnostic before any runtime pin decision. Eighty-eight focused
+tests pass. Manuscript source is updated; historical scores/defaults and both
+installations are unchanged. Broader publication requirements remain active;
+DGX stays deferred and rendered v19 remains historical.
+
 ## Runtime Contrast Changes Initial Grouping Reproducibly (2026-09-26)
 
 The preceding turn ruled out an initial-clustering effect of observed tiny

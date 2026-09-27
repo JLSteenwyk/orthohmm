@@ -2188,10 +2188,16 @@ scientific worker source fixed while changing from the installed runtime to
 the current Anaconda replay-launcher environment changed initial groupings for
 23,352 genes (58,827 versus 58,772 groups); each runtime's fixed repeat agreed.
 The environments report leidenalg 0.12.0 and 0.11.0, respectively, but this
-whole-runtime contrast neither isolates that dependency nor establishes the
-historical environment's unchanged identity. It does not causally account for
-the full-run score difference. Dependency/runtime sensitivity therefore remains
-an unresolved reproducibility limitation, not evidence supporting a new default.
+whole-runtime contrast alone neither isolates that dependency nor establishes
+the historical environment's unchanged identity. A subsequent private overlay
+of the complete retained leidenalg 0.11.0 distribution in the otherwise unchanged
+clean runtime reproduced the exact 58,772-group alternate partition in two
+calls. This isolates that distribution, including its bundled native libraries,
+as sufficient for the initial-clustering change, but does not distinguish its
+individual components or causally account for the full-run score difference.
+Dependency sensitivity therefore remains a reproducibility limitation requiring
+a downstream diagnostic, not evidence supporting a score-selected new default.
+[Private distribution control](OB_LEIDEN_OVERLAY_PROBE_20260926.md).
 [Search](INSTALLED_OB_SEARCH_COMPARISON_20260926.md),
 [graph](INSTALLED_OB_GRAPH_PROBE_20260926.md),
 [weight control](INSTALLED_OB_CLUSTERING_PROBE_20260926.md), and

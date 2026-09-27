@@ -1,0 +1,504 @@
+{
+  "arms": [
+    {
+      "arm": "overlay",
+      "execution": {
+        "attempts": 1,
+        "command": [
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/bin/python",
+          "-I",
+          "-B",
+          "-c",
+          "import sys,json,importlib.metadata as m; from pathlib import Path; overlay=sys.argv.pop(1); evidence=sys.argv.pop(1); sys.path.insert(0,overlay); import numpy,igraph._igraph,leidenalg._c_leiden; from orthohmm import externals,helpers,leiden_worker; r=dict(python=sys.version,executable=sys.executable,versions={n:m.version(n) for n in ('numpy','igraph','leidenalg')},files=[x.__file__ for x in (numpy,externals,helpers,leiden_worker,igraph._igraph,leidenalg._c_leiden)],maps=Path('/proc/self/maps').read_text()); Path(evidence).write_text(json.dumps(r,indent=2)); leiden_worker.main()",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/overlay/runtime.json",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/overlay/payload"
+        ],
+        "inputs": [
+          {
+            "bytes": 4567716,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/overlay/payload/gene_names.txt",
+            "sha256": "7d00e70589c72c747464e5b6c9840c2744be93ba7752c8fabcd2222bffdca090"
+          },
+          {
+            "bytes": 211,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/overlay/payload/metadata.json",
+            "sha256": "a7e05c6d0e946aa0e3911a267bd70f42c126276fe524095abde7deebfbb80596"
+          },
+          {
+            "bytes": 7212616,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/overlay/payload/sources.npy",
+            "sha256": "32fda97a61cbc4180416c9bad57402eeb80fb779b925be289be1df61f80bca74"
+          },
+          {
+            "bytes": 7212616,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/overlay/payload/targets.npy",
+            "sha256": "d4fe7fdbb36c4d84bff2fc3f9251b34409c6049b7fa161d8cd481fa0cba18c24"
+          },
+          {
+            "bytes": 14425104,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/overlay/payload/weights.npy",
+            "sha256": "c8373a2512fad5d1bf848b8a3b30ac04f797675b589f48bac8729d2af0dc9e5b"
+          }
+        ],
+        "log": {
+          "bytes": 0,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/overlay/native.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "returncode": 0,
+        "timed_out": false,
+        "wall_seconds": 19.507475004997104
+      },
+      "prediction": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/overlay/orthohmm_working_res/orthohmm_edges_clustered.txt",
+        "sha256": "b87ffc233f1862ab5ac958de18e7f13d5377ad73613cdd6a595b4ef45f0b96d7"
+      },
+      "runtime": {
+        "executable": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/bin/python",
+        "files": [
+          {
+            "bytes": 22147,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/numpy/__init__.py",
+            "sha256": "6ae17b070c0f70a8e3cad89a510a256942e5a1f37ea5feb120cec167ed2a6236"
+          },
+          {
+            "bytes": 10166,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/externals.py",
+            "sha256": "5304b4190b01a53c7c4e3235f9d1df9e7eff1f01d09633d07750103487268115"
+          },
+          {
+            "bytes": 32293,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/helpers.py",
+            "sha256": "faf9e85c6af8ad5f5740c81157e8ce40bbd98c1731991d9f3fbe1f47a05f6149"
+          },
+          {
+            "bytes": 1411,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/leiden_worker.py",
+            "sha256": "7d6d9fa5827bd99dcce28d2248688bbeb762b4b547bbc4e7491c16f0e2090c41"
+          },
+          {
+            "bytes": 13330873,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/igraph/_igraph.abi3.so",
+            "sha256": "4cb2b4e7f88005ccd68fe0a20feb086b84335196e884c5bdd13f11d15c8b555d"
+          },
+          {
+            "bytes": 637129,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution/leidenalg/_c_leiden.abi3.so",
+            "sha256": "cd22f76ac006ec5273b8177f0f1326019c0e750450114f727f552bce9e44bc7d"
+          }
+        ],
+        "mapped_leiden_libraries": [
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution/leidenalg.libs/libigraph-e2cb8a7d.so.4.0.0",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution/leidenalg.libs/liblibleidenalg-32f15777.so.0.11.1",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution/leidenalg/_c_leiden.abi3.so"
+        ],
+        "mapping_record": {
+          "bytes": 49928,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/overlay/runtime.json",
+          "sha256": "0deb4ed6cd3ec6c649137ee91775b026a7e9d8b28418ccd80dd46707750a5179"
+        },
+        "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+        "versions": {
+          "igraph": "1.0.0",
+          "leidenalg": "0.11.0",
+          "numpy": "2.2.6"
+        }
+      },
+      "versus_current_anaconda": {
+        "current_groups": 58772,
+        "current_only_groups": 0,
+        "genes_in_changed_groups": 0,
+        "identical_groups": 58772,
+        "label_invariant_equal": true,
+        "original_groups": 58772,
+        "original_only_groups": 0
+      },
+      "versus_installed": {
+        "current_groups": 58772,
+        "current_only_groups": 1032,
+        "genes_in_changed_groups": 23352,
+        "identical_groups": 57740,
+        "label_invariant_equal": false,
+        "original_groups": 58827,
+        "original_only_groups": 1087
+      }
+    },
+    {
+      "arm": "overlay_repeat",
+      "execution": {
+        "attempts": 1,
+        "command": [
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/bin/python",
+          "-I",
+          "-B",
+          "-c",
+          "import sys,json,importlib.metadata as m; from pathlib import Path; overlay=sys.argv.pop(1); evidence=sys.argv.pop(1); sys.path.insert(0,overlay); import numpy,igraph._igraph,leidenalg._c_leiden; from orthohmm import externals,helpers,leiden_worker; r=dict(python=sys.version,executable=sys.executable,versions={n:m.version(n) for n in ('numpy','igraph','leidenalg')},files=[x.__file__ for x in (numpy,externals,helpers,leiden_worker,igraph._igraph,leidenalg._c_leiden)],maps=Path('/proc/self/maps').read_text()); Path(evidence).write_text(json.dumps(r,indent=2)); leiden_worker.main()",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/overlay_repeat/runtime.json",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/overlay_repeat/payload"
+        ],
+        "inputs": [
+          {
+            "bytes": 4567716,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/overlay_repeat/payload/gene_names.txt",
+            "sha256": "7d00e70589c72c747464e5b6c9840c2744be93ba7752c8fabcd2222bffdca090"
+          },
+          {
+            "bytes": 218,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/overlay_repeat/payload/metadata.json",
+            "sha256": "2cb2e786d2b15d033d69c1ad174a0ae9b62a18b4a3dee01674b2cb72dac4dabf"
+          },
+          {
+            "bytes": 7212616,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/overlay_repeat/payload/sources.npy",
+            "sha256": "32fda97a61cbc4180416c9bad57402eeb80fb779b925be289be1df61f80bca74"
+          },
+          {
+            "bytes": 7212616,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/overlay_repeat/payload/targets.npy",
+            "sha256": "d4fe7fdbb36c4d84bff2fc3f9251b34409c6049b7fa161d8cd481fa0cba18c24"
+          },
+          {
+            "bytes": 14425104,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/overlay_repeat/payload/weights.npy",
+            "sha256": "c8373a2512fad5d1bf848b8a3b30ac04f797675b589f48bac8729d2af0dc9e5b"
+          }
+        ],
+        "log": {
+          "bytes": 0,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/overlay_repeat/native.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "returncode": 0,
+        "timed_out": false,
+        "wall_seconds": 21.72098628099775
+      },
+      "prediction": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/overlay_repeat/orthohmm_working_res/orthohmm_edges_clustered.txt",
+        "sha256": "b87ffc233f1862ab5ac958de18e7f13d5377ad73613cdd6a595b4ef45f0b96d7"
+      },
+      "runtime": {
+        "executable": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/bin/python",
+        "files": [
+          {
+            "bytes": 22147,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/numpy/__init__.py",
+            "sha256": "6ae17b070c0f70a8e3cad89a510a256942e5a1f37ea5feb120cec167ed2a6236"
+          },
+          {
+            "bytes": 10166,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/externals.py",
+            "sha256": "5304b4190b01a53c7c4e3235f9d1df9e7eff1f01d09633d07750103487268115"
+          },
+          {
+            "bytes": 32293,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/helpers.py",
+            "sha256": "faf9e85c6af8ad5f5740c81157e8ce40bbd98c1731991d9f3fbe1f47a05f6149"
+          },
+          {
+            "bytes": 1411,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/leiden_worker.py",
+            "sha256": "7d6d9fa5827bd99dcce28d2248688bbeb762b4b547bbc4e7491c16f0e2090c41"
+          },
+          {
+            "bytes": 13330873,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/igraph/_igraph.abi3.so",
+            "sha256": "4cb2b4e7f88005ccd68fe0a20feb086b84335196e884c5bdd13f11d15c8b555d"
+          },
+          {
+            "bytes": 637129,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution/leidenalg/_c_leiden.abi3.so",
+            "sha256": "cd22f76ac006ec5273b8177f0f1326019c0e750450114f727f552bce9e44bc7d"
+          }
+        ],
+        "mapped_leiden_libraries": [
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution/leidenalg.libs/libigraph-e2cb8a7d.so.4.0.0",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution/leidenalg.libs/liblibleidenalg-32f15777.so.0.11.1",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution/leidenalg/_c_leiden.abi3.so"
+        ],
+        "mapping_record": {
+          "bytes": 50028,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/overlay_repeat/runtime.json",
+          "sha256": "29bca413e88f7dadee8325a685ecc62303ed2deb654a365ca383522c4bea9f63"
+        },
+        "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+        "versions": {
+          "igraph": "1.0.0",
+          "leidenalg": "0.11.0",
+          "numpy": "2.2.6"
+        }
+      },
+      "versus_current_anaconda": {
+        "current_groups": 58772,
+        "current_only_groups": 0,
+        "genes_in_changed_groups": 0,
+        "identical_groups": 58772,
+        "label_invariant_equal": true,
+        "original_groups": 58772,
+        "original_only_groups": 0
+      },
+      "versus_installed": {
+        "current_groups": 58772,
+        "current_only_groups": 1032,
+        "genes_in_changed_groups": 23352,
+        "identical_groups": 57740,
+        "label_invariant_equal": false,
+        "original_groups": 58827,
+        "original_only_groups": 1087
+      }
+    }
+  ],
+  "copied": [
+    {
+      "copy": {
+        "bytes": 4,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution/leidenalg-0.11.0.dist-info/INSTALLER",
+        "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+      },
+      "source": {
+        "bytes": 4,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg-0.11.0.dist-info/INSTALLER",
+        "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+      }
+    },
+    {
+      "copy": {
+        "bytes": 10104,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution/leidenalg-0.11.0.dist-info/METADATA",
+        "sha256": "6e6454babce83252ce7093c751a77a562b4e35431fef04559947f93b7dd9e950"
+      },
+      "source": {
+        "bytes": 10104,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg-0.11.0.dist-info/METADATA",
+        "sha256": "6e6454babce83252ce7093c751a77a562b4e35431fef04559947f93b7dd9e950"
+      }
+    },
+    {
+      "copy": {
+        "bytes": 1840,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution/leidenalg-0.11.0.dist-info/RECORD",
+        "sha256": "1aa971ab5c1b07a23286532df6f5a3cbc5cf53c36a27ec9171587774e3158f78"
+      },
+      "source": {
+        "bytes": 1840,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg-0.11.0.dist-info/RECORD",
+        "sha256": "1aa971ab5c1b07a23286532df6f5a3cbc5cf53c36a27ec9171587774e3158f78"
+      }
+    },
+    {
+      "copy": {
+        "bytes": 0,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution/leidenalg-0.11.0.dist-info/REQUESTED",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "source": {
+        "bytes": 0,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg-0.11.0.dist-info/REQUESTED",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "copy": {
+        "bytes": 148,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution/leidenalg-0.11.0.dist-info/WHEEL",
+        "sha256": "814637f4c13e1c1bf4ed1228542c22af63ae278d2d58be425bf8ec28020e078c"
+      },
+      "source": {
+        "bytes": 148,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg-0.11.0.dist-info/WHEEL",
+        "sha256": "814637f4c13e1c1bf4ed1228542c22af63ae278d2d58be425bf8ec28020e078c"
+      }
+    },
+    {
+      "copy": {
+        "bytes": 35141,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution/leidenalg-0.11.0.dist-info/licenses/LICENSE",
+        "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+      },
+      "source": {
+        "bytes": 35141,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg-0.11.0.dist-info/licenses/LICENSE",
+        "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+      }
+    },
+    {
+      "copy": {
+        "bytes": 10,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution/leidenalg-0.11.0.dist-info/top_level.txt",
+        "sha256": "3f710d7e36ccdfa2933b012d951d640122bb441e5af6dc76fc2945d7b6972e4d"
+      },
+      "source": {
+        "bytes": 10,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg-0.11.0.dist-info/top_level.txt",
+        "sha256": "3f710d7e36ccdfa2933b012d951d640122bb441e5af6dc76fc2945d7b6972e4d"
+      }
+    },
+    {
+      "copy": {
+        "bytes": 6389929,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution/leidenalg.libs/libigraph-e2cb8a7d.so.4.0.0",
+        "sha256": "970f6550802406922c355702fc7752e0a35a171dbc869ce946f9c9f13f8d1c1c"
+      },
+      "source": {
+        "bytes": 6389929,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg.libs/libigraph-e2cb8a7d.so.4.0.0",
+        "sha256": "970f6550802406922c355702fc7752e0a35a171dbc869ce946f9c9f13f8d1c1c"
+      }
+    },
+    {
+      "copy": {
+        "bytes": 605881,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution/leidenalg.libs/liblibleidenalg-32f15777.so.0.11.1",
+        "sha256": "137243f81f8b1ccd397905d9665f1886ceb59d3bc88427eb2dd6201b476116dc"
+      },
+      "source": {
+        "bytes": 605881,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg.libs/liblibleidenalg-32f15777.so.0.11.1",
+        "sha256": "137243f81f8b1ccd397905d9665f1886ceb59d3bc88427eb2dd6201b476116dc"
+      }
+    },
+    {
+      "copy": {
+        "bytes": 30725,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution/leidenalg/Optimiser.py",
+        "sha256": "e8504e2a87e681ccb92e9de785cec72e6cb6d44932a7bd25bca0b773c3fd3b0f"
+      },
+      "source": {
+        "bytes": 30725,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg/Optimiser.py",
+        "sha256": "e8504e2a87e681ccb92e9de785cec72e6cb6d44932a7bd25bca0b773c3fd3b0f"
+      }
+    },
+    {
+      "copy": {
+        "bytes": 42005,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution/leidenalg/VertexPartition.py",
+        "sha256": "729b73be92ba5c422018338c70be1a7c0f1ded10ed18c7d041738e72c6566ead"
+      },
+      "source": {
+        "bytes": 42005,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg/VertexPartition.py",
+        "sha256": "729b73be92ba5c422018338c70be1a7c0f1ded10ed18c7d041738e72c6566ead"
+      }
+    },
+    {
+      "copy": {
+        "bytes": 2376,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution/leidenalg/__init__.py",
+        "sha256": "96e4962e15f4df759c322de69a91678fc1657c7bf03ea93925b7a746ea770d2e"
+      },
+      "source": {
+        "bytes": 2376,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg/__init__.py",
+        "sha256": "96e4962e15f4df759c322de69a91678fc1657c7bf03ea93925b7a746ea770d2e"
+      }
+    },
+    {
+      "copy": {
+        "bytes": 637129,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution/leidenalg/_c_leiden.abi3.so",
+        "sha256": "cd22f76ac006ec5273b8177f0f1326019c0e750450114f727f552bce9e44bc7d"
+      },
+      "source": {
+        "bytes": 637129,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg/_c_leiden.abi3.so",
+        "sha256": "cd22f76ac006ec5273b8177f0f1326019c0e750450114f727f552bce9e44bc7d"
+      }
+    },
+    {
+      "copy": {
+        "bytes": 20259,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution/leidenalg/functions.py",
+        "sha256": "4f83651b97a50f9b5222c813ae543966bd01f0f5f2ccd15bed9aa4b4cd2774f7"
+      },
+      "source": {
+        "bytes": 20259,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg/functions.py",
+        "sha256": "4f83651b97a50f9b5222c813ae543966bd01f0f5f2ccd15bed9aa4b4cd2774f7"
+      }
+    },
+    {
+      "copy": {
+        "bytes": 24,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution/leidenalg/pynterface.cpp",
+        "sha256": "01374c1c2e29b4dd6234782045b84f92f36b6ff5806e51b8b10347e8e54681f6"
+      },
+      "source": {
+        "bytes": 24,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg/pynterface.cpp",
+        "sha256": "01374c1c2e29b4dd6234782045b84f92f36b6ff5806e51b8b10347e8e54681f6"
+      }
+    },
+    {
+      "copy": {
+        "bytes": 29102,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution/leidenalg/python_optimiser_interface.cpp",
+        "sha256": "d3ac8662b24ac4f0ce23df3b9534f7576655fe2805ff2b7fc20b7003cb0dc6bc"
+      },
+      "source": {
+        "bytes": 29102,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg/python_optimiser_interface.cpp",
+        "sha256": "d3ac8662b24ac4f0ce23df3b9534f7576655fe2805ff2b7fc20b7003cb0dc6bc"
+      }
+    },
+    {
+      "copy": {
+        "bytes": 36877,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution/leidenalg/python_partition_interface.cpp",
+        "sha256": "26f1a223291e5fcef4bad567f10af89a319ab23063534bcbe034b6af3d2aad6d"
+      },
+      "source": {
+        "bytes": 36877,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg/python_partition_interface.cpp",
+        "sha256": "26f1a223291e5fcef4bad567f10af89a319ab23063534bcbe034b6af3d2aad6d"
+      }
+    },
+    {
+      "copy": {
+        "bytes": 714,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution/leidenalg/version.py",
+        "sha256": "863b1d8eb739ff5384176cb749d0ee2007eda4d8a9f90c018662ac3c3e3ff928"
+      },
+      "source": {
+        "bytes": 714,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg/version.py",
+        "sha256": "863b1d8eb739ff5384176cb749d0ee2007eda4d8a9f90c018662ac3c3e3ff928"
+      }
+    }
+  ],
+  "historical_scores_replaced": false,
+  "limitations": [
+    "Private distribution overlay, not a replacement installation or recommended dependency downgrade.",
+    "Varies the complete leidenalg artifact including bundled libigraph/libleidenalg, not Python version text alone.",
+    "Conditional on this graph, seed, indexing and clean runtime; two planned calls without retries.",
+    "No downstream F1 attribution, historical environment attestation or general determinism claim."
+  ],
+  "plan": {
+    "bytes": 11106,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/plan.json",
+    "sha256": "ee0c8b7814f712b29a98946f9e2d1d60e6158878099123a069ea7549dd01ea41"
+  },
+  "prior": {
+    "bytes": 15046,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ob_clustering_runtime_probe_20260926.json",
+    "sha256": "0cd3e0f86ed1033af1cb65f4759fce38052d1d2a996b1ce5c7e7c3f9f6559fff"
+  },
+  "repeat": {
+    "current_groups": 58772,
+    "current_only_groups": 0,
+    "genes_in_changed_groups": 0,
+    "identical_groups": 58772,
+    "label_invariant_equal": true,
+    "original_groups": 58772,
+    "original_only_groups": 0
+  },
+  "source": {
+    "bytes": 8914,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_ob_leiden_overlay.py",
+    "sha256": "d07fdcc44d064a65193466f05150bf5f9ddc854fa72db67f9d5b4d9c58d9eb46"
+  },
+  "status": "private_leiden_distribution_contrast_complete"
+}
