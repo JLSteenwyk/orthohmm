@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Canonical Conversion Independently Verified (2026-09-27)
+
+Previous turn submitted conversion. Job 22335 completed 0:0 in 00:01:41 on
+2 CPUs, with the final post-source-check execution receipt. Independently
+compared every native/converted row using CSV and zip_longest, requiring
+three-part sp/tr IDs, correct bare-accession ordering, distinct species,
+native pair uniqueness and complete QfO mapping membership. All 5,959,535
+rows match; zero pairs were removed. Raw and filtered conversion files have
+identical 91,725,986-byte contents, SHA256
+`570697414a55760437c8aed48ab32903a490305f2369a16201b6aa7bcb2b5c01`.
+All conversion plan/stage dependency identities were rehashed before and after
+the independent comparison. The [verification receipt](qfo_canonical_conversion_verified_22335.json)
+binds scheduler, source plan, successful execution, result and mapping. Next
+freeze the exact six-endpoint scoring command and admitted input identity,
+then submit the protocol's single eight-CPU assessment. No scoring run or
+new accuracy result exists yet; wider publication requirements remain open.
+
 ## Canonical Conversion Submitted As 22335 (2026-09-27)
 
 Fifty focused adapter, existing converter and canonical-reader tests pass.

@@ -1,0 +1,55 @@
+{
+  "accuracy_evaluated": false,
+  "execution": {
+    "bytes": 570,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_canonical_conversion_20260927/execution.json",
+    "sha256": "55c1cb5105b9a4241ff457c1ac0433af36759decd6fcd0f0c80e403e4b56d392"
+  },
+  "filtered_pairs": {
+    "bytes": 91725986,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_canonical_pairs_20260927/pairs.qfo.tsv",
+    "sha256": "570697414a55760437c8aed48ab32903a490305f2369a16201b6aa7bcb2b5c01"
+  },
+  "mapping": {
+    "bytes": 40019520,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/mapping.json.gz",
+    "sha256": "1c10f6ce5e53ebc3148dde02d16268b225c3c8817c952d1274daa41acbf9eb4d"
+  },
+  "method": "Independent csv zip_longest row comparison; require sp/tr three-part identifiers, bare-accession canonical ordering, complete reference membership, distinct species and native uniqueness; rehash before and after",
+  "native_input": {
+    "bytes": 495747582,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_canonical_phylogeny_20260927/native/inference/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+    "sha256": "f3dbc8cc3a142937370cf324035e55543b12b4091b97c1b51d64daa699a241c0"
+  },
+  "pairs": {
+    "bytes": 91725986,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_canonical_pairs_20260927/pairs.tsv",
+    "sha256": "570697414a55760437c8aed48ab32903a490305f2369a16201b6aa7bcb2b5c01"
+  },
+  "plan": {
+    "bytes": 179356,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_canonical_conversion_20260927/plan.json",
+    "sha256": "ccb3d035dcc5db1e0515c1dabba093dc6982addce041090f8f6ba637aeb0266c"
+  },
+  "publication_ready": false,
+  "removed_mapping_pairs": 0,
+  "result": {
+    "bytes": 203873,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_canonical_pairs_20260927/results.json",
+    "sha256": "7f674cfbdb97cd578e3a40192b6dad561702dea0519384756bee85ab3ac77c7b"
+  },
+  "rows_compared": 5959535,
+  "scheduler": {
+    "AllocCPUS": "2",
+    "Elapsed": "00:01:41",
+    "ExitCode": "0:0",
+    "JobIDRaw": "22335",
+    "State": "COMPLETED"
+  },
+  "status": "canonical_conversion_independently_verified",
+  "submission": {
+    "bytes": 1861,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_canonical_conversion_20260927/submission.json",
+    "sha256": "07f530899101cd20b5851929d2cb1921f1240a69c2fc1c10e70a11c3ad9e4c85"
+  }
+}
