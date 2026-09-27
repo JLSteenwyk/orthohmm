@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Independent Admission Implemented While Job 22337 Runs (2026-09-27)
+
+Previous turn made progress by freezing and submitting the full integrated
+workflow. Reconfirmed job 22337 RUNNING in HMM search. Added the prespecified
+independent admission path: terminal scheduler/resource checks, all eight
+stage bindings, private input inventories, installed package audits, fresh
+four-reader verification and recomputation/comparison of both complete
+partitions and 70-family scores. Thirty-three focused tests pass. Read-only
+live checks confirm the six completed installations, 93 private input files
+and native command match the frozen plan. See
+[admission procedure](INTEGRATED_FULL_OB_ADMISSION_20260927.md). No completed
+result is admitted, no native job was restarted and no inference source was
+changed. Next is this exact job's terminal inspection and independent audit;
+existing scientific/timing/release gates remain open.
+
 ## Full Integrated OrthoBench Job 22337 Running (2026-09-27)
 
 Protocol commit `8ae66d1` was pushed before submission. The

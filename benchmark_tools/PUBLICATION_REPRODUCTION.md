@@ -44,6 +44,8 @@ requirements and must not be confused with these audit commands.
   and [full-data job 22337](results/INTEGRATED_FULL_OB_PROTOCOL_20260927.md)
   is now running under a protocol frozen before submission. No full-data
   result from this controller has yet been admitted.
+  The [independent post-completion admission command](results/INTEGRATED_FULL_OB_ADMISSION_20260927.md)
+  is implemented and tested; it refuses a still-running or failed job.
 
 - [Current unit regression](results/PUBLICATION_TEST_REFRESH_20260927.md)
   records 10,729 passes and ten opt-in skips at revision `9914060`.
