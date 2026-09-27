@@ -2392,6 +2392,22 @@ was frozen before job 22337, which remains running and has no admitted result
 at this manuscript update. Whole-workflow shared-host measurements are not
 inference-only or controlled comparative timings.
 
+A [separately reconstructed base runtime](RECONSTRUCTED_BASE_FIXTURE_20260927.md)
+also completed the eight-stage fixture with identical root-group bytes and
+scientific fields. It used 19 hash-verified Conda archives and an explicit
+pip-wheel overlay, not a solver-complete Conda lock. The traced fixture made
+no recorded file access containing the original interpreter or checkout
+prefix; acquisition and bootstrap still used the original Conda installer,
+and OS libraries remained shared. A [payload audit](RECONSTRUCTED_CONDA_PAYLOADS_20260927.md)
+checked 6,664 declared Conda entries, followed by successful
+[replay of all 195 prefix transformations](RECONSTRUCTED_PREFIX_REPLAY_20260927.md)
+using Conda's own implementation. One Python cache differed in serialized
+bytes; recompiling its installed source reproduced its header and compared
+code-object fields, not byte identity. These checks support same-host fixture
+reconstruction, not cross-host restoration, complete runtime closure or
+full-dataset scientific validation. They do not apply retroactively to job
+22337, which uses the earlier base interpreter.
+
 A [primary-source data-rights register](PUBLICATION_DATA_RIGHTS_20260918.md)
 distinguishes QfO deposit, UniProt, WGD, BUSCO, OrthoBench and YGOB terms.
 In particular, BUSCO software and dataset licenses differ. OrthoBench/YGOB

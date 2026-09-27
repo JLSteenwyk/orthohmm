@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Runtime Reconstruction Added To Manuscript (2026-09-27)
+
+Previous turn was a verified wait on job 22337; the scheduler again reports
+RUNNING and sampled search workers remain active. Added the completed
+separate-base fixture and subsequent payload/transformation checks to the
+manuscript's reproducibility section. The text retains the bytecode mismatch,
+same-implementation replay caveat, original-installer bootstrap dependence
+and same-host scope. It does not extend fixture success to the active full
+run. No scientific result, runtime input or inference default changed.
+The retained v25 HTML/PDF predate this source update; a subsequent manuscript
+render must include it. Pandoc parsed all 261 local references without stderr;
+all 247 unique targets exist and are tracked. Scoped whitespace checks pass;
+unrelated sample-output whitespace warnings were left untouched. Full-job
+admission and publication gates remain open.
+
 ## Reproduction Guide Consolidated (2026-09-27)
 
 Previous turn was a verified wait; reconfirmed job 22337 RUNNING. Updated
