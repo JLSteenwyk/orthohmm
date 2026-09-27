@@ -1,0 +1,24 @@
+{
+  "command": [
+    "sbatch",
+    "--parsable",
+    "--partition=gpu",
+    "--cpus-per-task=32",
+    "--mem=128G",
+    "--time=08:00:00",
+    "--no-requeue",
+    "--job-name=ohm-canonical-phylo",
+    "--chdir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_20260926",
+    "--output=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_20260926/slurm-%j.log",
+    "--wrap",
+    "env -i HOME=/home/bizon LANG=C.UTF-8 MAFFT_BINARIES=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_mafft_source_20260926/build/install/libexec/mafft MKL_NUM_THREADS=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 PATH=/usr/bin:/bin PYTHONHASHSEED=0 /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_dependency_replay_v2_20260926/leiden011_venv/bin/python -I /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_canonical_ob_phylogeny.py --run /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_20260926/plan.json --plan-sha256 2ded17c15cf3510e02f1683973edf211dc8b7f7f86037dcf83e121a948dfafdc"
+  ],
+  "commit": "c0e05415c31464b8cf3d3648084946749ccd4437",
+  "job_id": "22324",
+  "native_results_admitted": false,
+  "plan": {
+    "bytes": 174893,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_20260926/plan.json",
+    "sha256": "2ded17c15cf3510e02f1683973edf211dc8b7f7f86037dcf83e121a948dfafdc"
+  }
+}

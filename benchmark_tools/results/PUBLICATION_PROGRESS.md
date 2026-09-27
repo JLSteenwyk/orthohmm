@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Fresh Canonical Phylogeny Running: 22324 (2026-09-26)
+
+Protocol/launcher commit `c0e0541` was pushed before submission. Job `22324`
+was independently observed RUNNING with 32 CPUs at elapsed 0:05; its
+[submission receipt](canonical_ob_phylogeny_submission_22324.json) binds the
+exact command, eight-hour limit, no-requeue setting, 128-GiB allocation and
+frozen plan hash. No native result or new score is admitted. The private
+environment, driver, input and scientific sources must not change while live.
+
+Next poll this same job to terminal state, then perform provenance, structure,
+sequence, event/pair, hierarchy and frozen scoring audits. Do not interpret
+missing buffered log output as failure or resubmit. Shared-host timing is
+descriptive. Unrelated held/dependency-blocked jobs were left untouched; DGX
+was not accessed. The full publication goal remains active.
+
 ## Fresh Canonical Phylogeny Prepared (2026-09-26)
 
 The preceding status-only turn made no scientific progress. This continuation
