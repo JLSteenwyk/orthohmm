@@ -1,5 +1,17 @@
 # Publication Progress
 
+## All Prefix-Rewritten Payloads Reproduced (2026-09-27)
+
+Previous turn audited the reconstructed Conda payloads with 195 qualified
+prefix-rewrite checks. Reconfirmed full job 22337 RUNNING. Replayed all
+195 transformations from pinned archive bytes and original archive path
+metadata using the recorded new prefix: all match installed length/SHA256.
+The [replay](RECONSTRUCTED_PREFIX_REPLAY_20260927.md) uses Conda's own
+implementation and does not claim independent algorithm validation. No
+installed file or native run changed. The earlier cache serialization
+difference remains retained; runtime closure, rights/security, full-job
+admission and broader scientific/timing requirements remain open.
+
 ## Reconstructed Conda Payloads Audited (2026-09-27)
 
 Previous turn completed the separate-base integrated fixture. Reconfirmed

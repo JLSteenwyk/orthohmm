@@ -1,0 +1,116 @@
+{
+  "by_package_mode": [
+    {
+      "files": 1,
+      "mode": "text",
+      "package": "libffi"
+    },
+    {
+      "files": 1,
+      "mode": "text",
+      "package": "libuuid"
+    },
+    {
+      "files": 152,
+      "mode": "binary",
+      "package": "ncurses"
+    },
+    {
+      "files": 7,
+      "mode": "text",
+      "package": "ncurses"
+    },
+    {
+      "files": 2,
+      "mode": "binary",
+      "package": "openssl"
+    },
+    {
+      "files": 4,
+      "mode": "text",
+      "package": "openssl"
+    },
+    {
+      "files": 2,
+      "mode": "binary",
+      "package": "python"
+    },
+    {
+      "files": 12,
+      "mode": "text",
+      "package": "python"
+    },
+    {
+      "files": 2,
+      "mode": "text",
+      "package": "readline"
+    },
+    {
+      "files": 1,
+      "mode": "text",
+      "package": "sqlite"
+    },
+    {
+      "files": 1,
+      "mode": "binary",
+      "package": "tk"
+    },
+    {
+      "files": 6,
+      "mode": "text",
+      "package": "tk"
+    },
+    {
+      "files": 2,
+      "mode": "binary",
+      "package": "xz"
+    },
+    {
+      "files": 1,
+      "mode": "text",
+      "package": "xz"
+    },
+    {
+      "files": 1,
+      "mode": "text",
+      "package": "zlib"
+    }
+  ],
+  "detail": {
+    "bytes": 177184,
+    "path": "/tmp/orthohmm-base-reconstruction-20260927/prefix_replay.json",
+    "sha256": "f90f16ae44e7da6e780471a04b4abde11ef3414c938ea98d3070e54e3fecb216"
+  },
+  "enum_implementation": {
+    "bytes": 4655,
+    "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/conda/models/enums.py",
+    "sha256": "ebf4266a459ae9c6de3f2456edc04898b2356ab2f7401c9bc78390094050a3fb"
+  },
+  "implementation": {
+    "bytes": 13105,
+    "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/conda/core/portability.py",
+    "sha256": "9719af622434a32e00b0294985997f4647ff3ea44a11d79773c09dd15215734d"
+  },
+  "inputs": [
+    {
+      "bytes": 20919,
+      "path": "/tmp/orthohmm-base-reconstruction-20260927/acquisition.json",
+      "sha256": "96e75bb68ef68b1f3c6e68b32ebc2f079f725a709a78a4994bbfbbd83570f6cd"
+    },
+    {
+      "bytes": 5289181,
+      "path": "/tmp/orthohmm-base-reconstruction-20260927/conda_payload_audit.json",
+      "sha256": "019b396da5d62d81194a90a5aa03fbfddf5c4badeaecb85875399e5882270405"
+    }
+  ],
+  "limitations": [
+    "Uses the same Conda transformation implementation as installation, not an independent implementation",
+    "Inputs and transformation instructions read from pinned archives, not generated installed digests",
+    "No installed files modified; transformations performed in memory",
+    "Does not resolve bytecode serialization mismatch, extra files, OS dependencies, security or rights"
+  ],
+  "matches": 195,
+  "publication_ready": false,
+  "status": "prefix_transformations_replayed_from_archives",
+  "total": 195
+}
