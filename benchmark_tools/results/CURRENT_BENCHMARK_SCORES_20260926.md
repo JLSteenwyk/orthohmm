@@ -1,5 +1,9 @@
 # Current Cross-Dataset Score Table
 
+The [OrthoBench provenance register](OB_PROVENANCE_REGISTER_20260926.md)
+consolidates prediction identities, input limitations and available resource
+evidence for all eight rows. It is partial and is not a runtime ranking.
+
 [Readable scores](current_benchmark_scores_20260926_v2/scores.md),
 [exact TSV](current_benchmark_scores_20260926_v2/scores.tsv), and
 [source/semantics manifest](current_benchmark_scores_20260926_v2/manifest.json)

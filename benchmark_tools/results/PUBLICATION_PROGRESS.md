@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Eight-Method OrthoBench Provenance Register (2026-09-26)
+
+The preceding status turn verified job 22320 live. This continuation reread
+the objective and revalidated it RUNNING at 18:24 with 32 CPUs. The first
+arm has an execution receipt; the second remains underway. No active replay
+source or environment was changed.
+
+The [partial provenance register](OB_PROVENANCE_REGISTER_20260926.md) now
+joins eight unchanged historical F1 values to six hash-pinned reports and
+checked prediction files. It retains sequence-identity failures, native
+coverage, available commands/resources and missing values. OrthoMCL is tied
+to July, not April; checkpoint conversion is not inference time. Claims and
+the score-table introduction now disclose these boundaries. Nine focused
+tests cover duration validation, run selection and missing-time semantics.
+
+Next validate both replay arms after terminal completion, continue remaining
+cross-dataset provenance and uncertainty work, and obtain controlled timing
+on a suitable dedicated host. DGX remains deferred; publication readiness
+and complete transitive provenance are not claimed.
+
 ## OrthoMCL Provenance Separates Runs and Exposes July Input Changes (2026-09-26)
 
 The preceding turn launched job 22320. This turn reread the goal, verified it

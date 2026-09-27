@@ -1,0 +1,411 @@
+{
+  "complete_transitive_provenance": false,
+  "controlled_comparative_resources": false,
+  "inputs": [
+    {
+      "bytes": 22282,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/current_benchmark_scores_20260926_v2/manifest.json",
+      "sha256": "8d56dae74721c4530ab2b86c5008b2d0ebac07878e574fd85b1ad84e4b908f07"
+    },
+    {
+      "bytes": 113184,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/retained_ob_comparator_readback_20260926.json",
+      "sha256": "5dcb4e65f277eb9debf2bbacb1d4e298c678ac13fc981e75c4ba78e4851eeb55"
+    },
+    {
+      "bytes": 33517,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ob_orthofinder_provenance_20260926.json",
+      "sha256": "509195fa01994a148ca0af5403be2a64ba702028b753b5172492505ed3126682"
+    },
+    {
+      "bytes": 41259,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ob_matrix_provenance_20260926.json",
+      "sha256": "f68706495773a015518ef0bea2be73090da79c5baf1a9290a81f7aad95521fb3"
+    },
+    {
+      "bytes": 270067,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ob_fastoma_provenance_20260926.json",
+      "sha256": "516a7d7dc125309e2dbfd2dab89eec7af346b12bf961ac8c3d5e965d98a768b3"
+    },
+    {
+      "bytes": 135528,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ob_orthomcl_provenance_20260926.json",
+      "sha256": "cbbadd37dc35dcf41d07a5b7ce29269dc9c4b0a49ebb0180f16d879bf33182d5"
+    }
+  ],
+  "limitations": [
+    "Consolidates existing retained audits; does not independently attest historical execution.",
+    "Unknown is not zero; process RSS is not aggregate concurrent-process memory.",
+    "Mixed run-duration/conversion/log-interval scopes must not be ranked as speed benchmarks.",
+    "OrthoHMM historical full-run provenance/resources remain separate from fresh reproduction and are not filled by proxy."
+  ],
+  "rows": [
+    {
+      "command": null,
+      "controlled_timing": false,
+      "conversion_wall_seconds": null,
+      "inference_wall_seconds": null,
+      "input_note": "Not consolidated here; retained replay evidence is separate",
+      "input_sequences_equal": null,
+      "key": "orthohmm_high_sensitivity",
+      "label": "OrthoHMM high sensitivity",
+      "limitations": [
+        "Historical score, not the fresh installed reproduction or cached incremental duration"
+      ],
+      "output_semantics": "refined orthogroups",
+      "peak_process_rss_kib": null,
+      "prediction": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/production_high_sensitivity_replay_profiles_seed4_committed_20260828/orthogroups_profiles_refined.txt",
+        "sha256": "8ee100f4370fef6e3e6a3e0fd36112adcc3aefeb60197331115667c519ca121f"
+      },
+      "timing_basis": "No consolidated end-to-end time for this historical score row",
+      "weighted_refog_f1": 0.7035899765495244
+    },
+    {
+      "command": null,
+      "controlled_timing": false,
+      "conversion_wall_seconds": null,
+      "inference_wall_seconds": null,
+      "input_note": "Not consolidated here; retained replay evidence is separate",
+      "input_sequences_equal": null,
+      "key": "orthohmm_phylogeny_satellite_v2",
+      "label": "OrthoHMM phylogeny satellite_v2",
+      "limitations": [
+        "Historical score, not the fresh installed reproduction or cached incremental duration"
+      ],
+      "output_semantics": "post-membership-filter root HOGs",
+      "peak_process_rss_kib": null,
+      "prediction": {
+        "bytes": 6301075,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/production_phylogeny_satellite_v2_orthobench_20260902/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+        "sha256": "76229249770b1f875c6bd319ec524fb50721b048e68c284c4c3a3dba611ea216"
+      },
+      "timing_basis": "No consolidated end-to-end time for this historical score row",
+      "weighted_refog_f1": 0.7410607351873405
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/bin/orthofinder",
+        "-f",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input",
+        "-t",
+        "32",
+        "-a",
+        "8",
+        "-S",
+        "diamond"
+      ],
+      "controlled_timing": false,
+      "conversion_wall_seconds": null,
+      "inference_wall_seconds": 3421.07,
+      "input_note": "Staged bytes and processed protein sequences match",
+      "input_sequences_equal": true,
+      "key": "orthofinder_3_1_5_full",
+      "label": "OrthoFinder 3.1.5 full",
+      "limitations": [],
+      "output_semantics": "final root HOGs",
+      "peak_process_rss_kib": 4787980,
+      "prediction": {
+        "bytes": 4957710,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/Orthogroups/Orthogroups.txt",
+        "sha256": "e0bf8d21b7ddc4494f0df1224dc2cd57d964cb92507eb40bd1f058cbc6f47af7"
+      },
+      "resources": {
+        "elapsed_seconds": 3421.07,
+        "exit_status": 0,
+        "max_process_rss_kib": 4787980,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 3743.77,
+        "user_seconds": 64429.47
+      },
+      "timing_basis": "GNU-time full native run; shared host",
+      "weighted_refog_f1": 0.7273648000422167
+    },
+    {
+      "command": [
+        "python",
+        "benchmark_tools/orthofinder_mcl_to_orthogroups.py",
+        "benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/clusters_OrthoFinder_I1.2.txt_id_pairs.txt",
+        "benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/SequenceIDs.txt",
+        "benchmarks/results/orthofinder_v3_sequence_only_20260830/orthogroups.txt"
+      ],
+      "controlled_timing": false,
+      "conversion_wall_seconds": 0.42,
+      "inference_wall_seconds": null,
+      "input_note": "Staged bytes and processed protein sequences match",
+      "input_sequences_equal": true,
+      "key": "orthofinder_3_1_5_sequence_only",
+      "label": "OrthoFinder 3.1.5 sequence-only checkpoint",
+      "limitations": [],
+      "output_semantics": "pre-phylogeny clustering checkpoint",
+      "peak_process_rss_kib": null,
+      "prediction": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_sequence_only_20260830/orthogroups.txt",
+        "sha256": "15fecab99b19751e5bba47ccc53fd7eed16480b16f087f8d8b133e4a7696c182"
+      },
+      "timing_basis": "Conversion only; sequence-only inference time unknown",
+      "weighted_refog_f1": 0.58705963184
+    },
+    {
+      "command": null,
+      "controlled_timing": false,
+      "conversion_wall_seconds": null,
+      "inference_wall_seconds": 1219.933,
+      "input_note": "Staged bytes match",
+      "input_sequences_equal": true,
+      "key": "sonicparanoid_2_0_9",
+      "label": "SonicParanoid 2.0.9",
+      "limitations": [
+        "Exact argv, CPU time and RSS unavailable"
+      ],
+      "native_assigned_genes": 206466,
+      "native_metadata": {
+        "command_argv": null,
+        "cpu_seconds": null,
+        "peak_rss_kib": null,
+        "reported_version": "2.0.9",
+        "settings": {
+          "Alignment directory:": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/sonicparanoid_run/output/alignments/",
+          "Alignment tool:": "diamond",
+          "CPU architecture:": "x86_64",
+          "Complete alignments:": "False",
+          "Complete overwrite:": "False",
+          "Compress alignments:": "True",
+          "Compression level:": "5",
+          "Create query database indexes:": "False",
+          "Date:": "Mon Apr 20 16:57:44 2026",
+          "Diamond sensitivity:": "very-sensitive",
+          "Directory with ortholog groups:": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/sonicparanoid_run/output/runs/orthobench/ortholog_groups/",
+          "Directory with pairwise orthologs:": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/sonicparanoid_run/output/runs/orthobench/species_to_species_orthologs/",
+          "Input directory:": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/sonicparanoid_run/input",
+          "Input proteomes:": "12",
+          "Installation type:": "Python",
+          "MCL inflation:": "1.5",
+          "Main output directory:": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/sonicparanoid_run/output",
+          "Max length difference for in-paralogs:": "0.75",
+          "Memory per threads (Gigabytes):": "31.47",
+          "Minimum bitscore:": "40",
+          "Minimum memory per threads (Gigabytes):": "1.0",
+          "Operative system:": "Linux",
+          "Ortholog tables-merging threshold:": "0.75",
+          "Overwrite pair-wise ortholog tables:": "False",
+          "Pairwise tables DB directory:": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/sonicparanoid_run/output/orthologs_db",
+          "Perform only graph-based orthology:": "False",
+          "Python executables:": "/home/bizon/anaconda3/bin/python",
+          "Python version:": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+          "Run ID:": "orthobench",
+          "Run directory:": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/sonicparanoid_run/output/runs/orthobench",
+          "Run mode:": "default",
+          "Sequence DB directory:": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/sonicparanoid_run/output/seqs_dbs/",
+          "Skip creation of ortholog groups:": "False",
+          "SonicParanoid installation:": "/home/bizon/anaconda3/lib/python3.10/site-packages/sonicparanoid",
+          "Threads:": "32",
+          "Update run:": "False"
+        },
+        "tool_reported_elapsed_seconds": 1219.933
+      },
+      "output_semantics": "native groups plus explicit singleton padding",
+      "peak_process_rss_kib": null,
+      "prediction": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthogroups_sonicparanoid.txt",
+        "sha256": "6928198465c6440e40ada9a94efd5df6113a6d83c544355b55118194427684a9"
+      },
+      "singleton_padding": 44912,
+      "timing_basis": "Tool-reported run duration",
+      "weighted_refog_f1": 0.4675760912
+    },
+    {
+      "command": null,
+      "controlled_timing": false,
+      "conversion_wall_seconds": null,
+      "inference_wall_seconds": null,
+      "input_note": "177 proteins differ; 869 asterisks deleted",
+      "input_sequences_equal": false,
+      "key": "proteinortho_6_3_6",
+      "label": "ProteinOrtho 6.3.6",
+      "limitations": [
+        "Two retained invocations; accuracy effect of input sanitization not measured"
+      ],
+      "native_assigned_genes": 184897,
+      "native_metadata": {
+        "cpu_seconds": null,
+        "invocation_note": "Multiple retained calls do not establish a single uninterrupted run.",
+        "peak_rss_kib": null,
+        "recorded_invocations": 2,
+        "reported_version": "6.3.6",
+        "system_calls": [
+          [
+            "proteinortho",
+            "input/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "input/Canis_familiaris.CanFam3.1.pep.all.fa",
+            "input/Ciona_intestinalis.KH.pep.all.fa",
+            "input/Danio_rerio.GRCz11.pep.all.fa",
+            "input/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "input/Gallus_gallus.GRCg6a.pep.all.fa",
+            "input/Homo_sapiens.GRCh38.pep.all.fa",
+            "input/Monodelphis_domestica.ASM229v1.pep.all.fa",
+            "input/Mus_musculus.GRCm38.pep.all.fa",
+            "input/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+            "input/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "input/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+            "-cpus=32",
+            "-project=orthobench"
+          ],
+          [
+            "proteinortho",
+            "input/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "input/Canis_familiaris.CanFam3.1.pep.all.fa",
+            "input/Ciona_intestinalis.KH.pep.all.fa",
+            "input/Danio_rerio.GRCz11.pep.all.fa",
+            "input/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "input/Gallus_gallus.GRCg6a.pep.all.fa",
+            "input/Homo_sapiens.GRCh38.pep.all.fa",
+            "input/Monodelphis_domestica.ASM229v1.pep.all.fa",
+            "input/Mus_musculus.GRCm38.pep.all.fa",
+            "input/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+            "input/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "input/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+            "-cpus=32",
+            "-project=orthobench"
+          ]
+        ],
+        "tool_reported_elapsed_seconds": null
+      },
+      "output_semantics": "native groups plus explicit singleton padding",
+      "peak_process_rss_kib": null,
+      "prediction": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthogroups_proteinortho.txt",
+        "sha256": "9d781abec4923b9b324f4ee6325ff222e34f9c4954155295fa928e22deecde2a"
+      },
+      "singleton_padding": 66481,
+      "timing_basis": "No verified per-invocation duration",
+      "weighted_refog_f1": 0.45057346674000004
+    },
+    {
+      "command": null,
+      "controlled_timing": false,
+      "conversion_wall_seconds": null,
+      "inference_wall_seconds": 3023,
+      "input_note": "IDs and residues match; renamed/reordered files",
+      "input_sequences_equal": true,
+      "key": "fastoma_0_3_5",
+      "label": "FastOMA 0.3.5 final orthologous groups",
+      "limitations": [
+        "Supplied species tree",
+        "Ten retained exit-137 tasks; final scored collection succeeded",
+        "Historical image/database identities and peak RSS unresolved"
+      ],
+      "native_assigned_genes": 130010,
+      "native_metadata": [
+        " Cmd line: nextflow run FastOMA.nf -profile docker --input_folder /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/fastoma_run/in_folder --output_folder /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/fastoma_run/output -work-dir /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/fastoma_run/work",
+        " Manifest's pipeline version: 0.3.5",
+        "Completed at    : 2026-04-20T17:11:45.076952933-04:00",
+        "Duration        : 50m 23s",
+        "Processes       : 90 (success), 10 (failed)",
+        "Completed at: 20-Apr-2026 17:11:45",
+        "Duration    : 50m 23s",
+        "CPU hours   : 27.3 (0.2% failed)",
+        "Succeeded   : 90",
+        "Failed      : 10"
+      ],
+      "output_semantics": "final orthologous groups, not root-HOG diagnostic",
+      "peak_process_rss_kib": null,
+      "prediction": {
+        "bytes": 3814464,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/fastoma_run/work/15/57adea05f3b88b17c43ee1e856acc3/OrthologousGroups.tsv",
+        "sha256": "7599b5aac0c871be6114e2f845b19c18f736839a655a1aa535a19539918f1dbd"
+      },
+      "task_exit_counts": {
+        "0": 90,
+        "137": 10
+      },
+      "timing_basis": "Nextflow workflow duration including failed attempts",
+      "weighted_refog_f1": 0.30906942172
+    },
+    {
+      "command": {
+        "blastall": [
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/bin/blastall",
+          "-p",
+          "blastp",
+          "-i",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/Jul_25/tmp/all.fa",
+          "-d",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/Jul_25/tmp/all.fa",
+          "-e",
+          "1e-05",
+          "-o",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/Jul_25/tmp/all.blast",
+          "-m",
+          "8",
+          "-a",
+          "8",
+          "-v",
+          "1000",
+          "-b",
+          "1000"
+        ],
+        "formatdb": [
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/bin/formatdb",
+          "-i",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/Jul_25/tmp/all.fa",
+          "-p",
+          "t"
+        ],
+        "mcl": [
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mcl-02-063/bin/mcl",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/Jul_25/tmp/all_ortho.mtx",
+          "-I",
+          "1.5",
+          "-o",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/Jul_25/tmp/all_ortho.mcl"
+        ],
+        "orthomcl": [
+          "orthomcl.pl",
+          "--mode",
+          "1",
+          "--fa_files",
+          "Caenorhabditis_elegans.WBcel235.pep.all.fa,Canis_familiaris.CanFam3.1.pep.all.fa,Ciona_intestinalis.KH.pep.all.fa,Danio_rerio.GRCz11.pep.all.fa,Drosophila_melanogaster.BDGP6.28.pep.all.fa,Gallus_gallus.GRCg6a.pep.all.fa,Homo_sapiens.GRCh38.pep.all.fa,Monodelphis_domestica.ASM229v1.pep.all.fa,Mus_musculus.GRCm38.pep.all.fa,Pan_troglodytes.Pan_tro_3.0.pep.all.fa,Rattus_norvegicus.Rnor_6.0.pep.all.fa,Tetraodon_nigroviridis.TETRAODON8.pep.all.fa"
+        ]
+      },
+      "controlled_timing": false,
+      "conversion_wall_seconds": null,
+      "inference_wall_seconds": 371702.0,
+      "input_note": "177 proteins differ; 869 asterisks deleted",
+      "input_sequences_equal": false,
+      "key": "orthomcl_1_4",
+      "label": "OrthoMCL 1.4",
+      "limitations": [
+        "Do not substitute April 2026 input identity or 32-thread timing",
+        "CPU time and RSS unknown"
+      ],
+      "native_assigned_genes": 216949,
+      "output_semantics": "July 2025 native OrthoMCL groups",
+      "peak_process_rss_kib": null,
+      "prediction": {
+        "bytes": 11673296,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/Jul_25/all_orthomcl.out",
+        "sha256": "1add0db6640e0451184975b5cbdf085ff404bbf24dadb66402921cd4dfd8a227"
+      },
+      "run": "Jul_25",
+      "timing_basis": "July 2025 native-log interval; 8 BLAST threads",
+      "weighted_refog_f1": 0.55065342292
+    }
+  ],
+  "scores_recomputed": false,
+  "source": {
+    "bytes": 9596,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/assemble_ob_provenance_register.py",
+    "sha256": "fe4a74709e08eff451bdc5cc7d3e7b0d1310973751699cae3c01fb2f4128aadb"
+  },
+  "status": "orthobench_provenance_register_partial"
+}
