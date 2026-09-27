@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Historical OrthoHMM OrthoBench Provenance Audited (2026-09-27)
+
+Previous turn progressed the manuscript review. Returned to the full goal's
+baseline-provenance gap and inspected original high-sensitivity replay and
+phylogeny metrics, not fresh-run proxies. Added a focused auditor: exact scored
+output binding, cached-hit/four-output replay hashes, twelve phylogenetic input
+hashes/eight outputs, completion/time consistency and historical source blobs.
+All 29 recorded files pass before/after checks; all 33 source entries match
+their recorded Git commits despite historical dirty flags. Nine focused tests
+pass. The [result](OB_ORTHOHMM_RETAINED_PROVENANCE_20260927.md) preserves 319.467197
+seconds cached replay versus 3274.102675 seconds full inference as distinct,
+uncontrolled scopes. No speedup claim, fresh-resource substitution or complete
+transitive provenance claim. Historical replay FASTA checksums and external
+runtime identities remain gaps. Next incorporate this supplement into a new
+version of the eight-method register without overwriting its earlier snapshot.
+
 ## Manuscript Review v24 Rendered And Inspected (2026-09-27)
 
 Previous turn completed and committed independent canonical QfO scoring
