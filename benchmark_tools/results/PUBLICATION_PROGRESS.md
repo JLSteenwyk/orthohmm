@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Stage Trace and Resource Limits Integrated into Manuscript v19 (2026-09-26)
+
+The preceding turn made progress by completing all-cell stage tracing and
+reproducing the frozen scores with the stronger readback. This turn reread the
+full objective and added those results to the manuscript and claim checklist,
+retaining the negative final-refinement result and the lack of controlled
+efficiency evidence. No new biological or causal advantage was claimed.
+
+[Version-19 review](MANUSCRIPT_RENDER_REVIEW_20260926_v19.md) covers 229 local
+link/image occurrences and 215 tracked targets, with none missing/untracked;
+eight renderer tests pass. All 42 page bounds pass the one-point check. Pages
+14-16 were visually reviewed for figure, stage-table and resource-paragraph
+fit, without overlap or clipping. This remains a working manuscript, not a
+full visual review or publication-readiness declaration.
+
+Main job 22179 was revalidated RUNNING at 2:12:58, with initial search complete
+and clustering underway. Full-run readback remains pending, as do controlled
+resources, broader uncertainty/generalization and release obligations. Full
+goal active, DGX deferred, no inference rerun or scientific default changed.
+
 ## Matched-Search Errors Traced Across All Graph Stages (2026-09-26)
 
 The preceding turn made progress by strengthening the native readback. This

@@ -741,7 +741,8 @@ by the geometric mean of sequence lengths exactly once. Profile expansion,
 candidate expansion and phylogeny were disabled. All 70 arms completed;
 independent readback verified raw-to-numeric mappings, saved arrays, complete
 partitions and separately reconstructed reciprocal-hit/singleton edges.
-Only final partitions were converted to cross-species pairs and scored against
+For the prespecified contrast, only final partitions were converted to
+cross-species pairs and scored against
 speciation-derived orthology truth, not ancestral-family membership.
 [Downstream protocol](MATCHED_SEARCH_GRAPH_PROTOCOL_20260926.md),
 [native validation](matched_graph_readback_20260926.json).
@@ -772,6 +773,48 @@ a causal mechanism nor establishes real-data sensitivity equivalence,
 independent confirmation, profile-expansion benefit or full-pipeline superiority
 over OrthoFinder. The threshold is not transferred to QfO or OrthoBench;
 shared-host resources remain descriptive. [Claim limits](MATCHED_GRAPH_RESULT_20260926.md).
+
+A subsequent post-hoc diagnostic traced all 70 arms through accepted search
+hits, saved graph edges and connected components, initial clustering,
+singleton-augmented clustering and final refinement. Its protocol was recorded
+after final outcomes were known but before stage-level outcomes were computed.
+Every final-stage score reproduced the frozen result. The diagnostic uses
+the same explicit orthology truth; overlap scores for direct hits, graph edges
+and component closure are not treated as native ortholog prediction accuracy.
+No additional intervals, significance tests or method tuning were performed.
+[Protocol](MATCHED_GRAPH_STAGE_TRACE_PROTOCOL_20260926.md),
+[complete stage trace](matched_graph_stage_trace_v2_20260926/results.md).
+
+| Partition stage | HMM mean F1 (%) | DIAMOND mean F1 (%) |
+|---|---:|---:|
+| Initial clustering | 83.9344 | 80.6939 |
+| Singleton-augmented clustering | 83.9571 | 80.7386 |
+| Final refinement | 83.6097 | 80.5180 |
+
+Most of the observed between-arm difference was present at initial clustering.
+Final refinement reduced mean F1 in both arms: across the 35 dataset instances
+it added 26 true and 1,221 false pairs for HMM, and 8 true and 895 false pairs
+for DIAMOND, removing none. The final HMM partitions contained a mean 170.54
+correct pairs per dataset without a direct accepted hit in either direction,
+versus 50.20 for DIAMOND; false pairs without direct hits were also more common
+(48.74 versus 26.31). Indirect graph paths can support these assignments.
+These observations localize changes but do not isolate the causal effects of
+hit identity, rankings, weights or clustering. Pair counts are descriptive,
+not independent replicates. [Interpretation and negative results](MATCHED_GRAPH_STAGE_TRACE_RESULT_20260926.md).
+
+Checksummed stage-level GNU-time records provide descriptive resource context.
+Across reporting datasets, median elapsed search observations were 5.18 seconds
+for HMM and 1.88 seconds for DIAMOND; median graph observations were 0.24 and
+0.23 seconds. Median reported maximum process RSS was 119,944/21,504 KiB for
+search and 41,472/39,936 KiB for graph inference (HMM/DIAMOND). DIAMOND database
+preparation was separate (median elapsed time rounded to 0.00 seconds, not
+zero cost). Search used four allocated CPUs; library threads in graph inference
+were restricted to one. These shared-host observations are not a speedup or
+memory-efficiency comparison: DIAMOND searched broadly at E=1 before filtering,
+and reported process RSS is not simultaneous process-tree or cgroup memory.
+Numeric export and scoring were not separately timed, so no complete
+end-to-end total is available. Controlled matched-resource scaling remains
+unmet. [Stage resources, CPU times and accounting limitations](MATCHED_STAGE_RESOURCES_20260926.md).
 
 ### Supplied-Tree Perturbations Had Small Observed Aggregate Effects
 
