@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Canonical Candidate Experiment Submitted as Job 22323 (2026-09-26)
+
+Preparation and protocol were committed and pushed as 9725f05. The distinct
+canonical-input plan was submitted as job 22323 with two CPUs, 32 GiB,
+30 minutes and requeue disabled. The
+[submission receipt](ob_canonical_candidate_submission_22323.json) records
+the exact wrapper command and plan identity. Poll this handle; do not edit
+its pinned driver, wrapper, policy, helpers, installed environment or inputs.
+
+Full-data results remain unadmitted until terminal scheduler success and
+independent validation of canonical input identities and candidate outputs.
+Fixture results are not a substitute. This diagnostic does not change the
+production baseline or establish final-F1 behavior; broader publication work
+remains active and DGX stays deferred.
+
 ## Full-Data Canonical Candidate Control Prepared (2026-09-26)
 
 The preceding turn added the regression fixture and experimental policy. This
